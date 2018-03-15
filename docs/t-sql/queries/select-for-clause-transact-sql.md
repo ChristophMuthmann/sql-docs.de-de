@@ -1,5 +1,5 @@
 ---
-title: FOR-Klausel (Transact-SQL) | Microsoft Docs
+title: FOR-Klausel (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 08/09/2017
 ms.prod: sql-non-specified
@@ -35,16 +35,16 @@ ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="select---for-clause-transact-sql"></a>SELECT - FOR-Klausel (Transact-SQL)
+# <a name="select---for-clause-transact-sql"></a>SELECT – FOR Clause (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Verwenden Sie die FOR-Klausel, um eine der folgenden Optionen für Abfrageergebnisse anzugeben.  
+  Mit der FOR-Klausel können Sie eine der folgenden Optionen für Abfrageergebnisse angeben.  
   
--   Beim Anzeigen der Ergebnisse in einem Durchsuchen-Modus-Cursor durch Angeben von Updates zulassen **FOR BROWSE**.  
+-   Zulassen von Updates durch Angabe von **FOR BROWSE**, während Abfrageergebnisse in einem Cursor im Durchsuchenmodus angezeigt werden.  
   
--   Formatieren von Abfrageergebnissen als XML durch Angabe **FOR XML-**.  
+-   Formatieren von Abfrageergebnissen als XML durch Angabe von **FOR XML**.  
   
--   Formatieren von Abfrageergebnissen als JSON durch Angabe **FOR JSON**.  
+-   Formatieren von Abfrageergebnissen als JSON durch Angabe von **FOR JSON**.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -95,31 +95,31 @@ JSON
   
 ## <a name="for-browse"></a>FOR BROWSE  
  BROWSE  
- Gibt an, dass Updates zulässig sind, während Daten in einem DB-Library-Cursor im Durchsuchenmodus angezeigt werden. Eine Tabelle kann in einer Anwendung durchsucht werden, wenn die Tabelle enthält eine **Zeitstempel** Spalte, die Tabelle besitzt einen eindeutigen Index und die FOR BROWSE-Option ist am Ende der SELECT-Anweisungen mit einer Instanz von gesendet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Gibt an, dass Updates zulässig sind, während Daten in einem DB-Library-Cursor im Durchsuchenmodus angezeigt werden. Eine Tabelle kann in einer Anwendung durchsucht werden, wenn sie eine **timestamp**-Spalte enthält, über einen eindeutigen Index verfügt und sich die FOR BROWSE-Option am Ende der an eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz gesendeten SELECT-Anweisungen befindet.  
   
 > [!NOTE]  
->  Sie können keine der \<Lock_hint > HOLDLOCK in einer SELECT-Anweisung, die die FOR BROWSE-Option enthält.
+>  \<lock_hint> HOLDLOCK kann nicht in einer SELECT-Anweisung mit der FOR BROWSE-Option verwendet werden.
   
  FOR BROWSE kann nicht in SELECT-Anweisungen verwendet werden, die durch den UNION-Operator miteinander verknüpft sind.  
   
 > [!NOTE]  
 >  Wenn die eindeutigen Indexschlüsselspalten einer Tabelle NULL-Werte zulassen und sich die Tabelle auf der Innenseite eines äußeren Joins befindet, wird der Durchsuchenmodus vom Index nicht unterstützt.  
   
- Mit dem Durchsuchenmodus können Sie die Zeilen in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Tabelle scannen und die Daten in der Tabelle zeilenweise aktualisieren. Für den Zugriff auf eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Tabelle in der Anwendung im Durchsuchenmodus, müssen Sie eine der beiden folgenden Optionen verwenden:  
+ Mit dem Durchsuchenmodus können Sie die Zeilen in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Tabelle scannen und die Daten in der Tabelle zeilenweise aktualisieren. Sie sollten für den Zugriff im Durchsuchenmodus auf eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Tabelle in der Anwendung eine der beiden folgenden Optionen verwenden:  
   
--   Die SELECT-Anweisung, mit denen Sie Zugriff auf die Daten aus Ihrem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Tabelle mit den Schlüsselwörtern enden **FOR BROWSE**. Wenn Sie aktivieren die **FOR BROWSE** option mithilfe der Durchsuchenmodus, temporäre Tabellen erstellt werden.  
+-   Die von Ihnen für den Zugriff auf die Daten Ihrer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Tabelle verwendete SELECT-Anweisung muss mit den Schlüsselwörtern **FOR BROWSE** enden. Wenn Sie die Option **FOR BROWSE** für die Verwendung des Durchsuchenmodus aktivieren, werden temporäre Tabellen erstellt.  
   
--   Führen Sie die folgende [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung mithilfe der Durchsuchenmodus aktivieren die **NO_BROWSETABLE** Option:  
+-   Sie müssen die folgende [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung ausführen, um den Durchsuchenmodus mit der Option **NO_BROWSETABLE** zu aktivieren:  
   
     ```  
     SET NO_BROWSETABLE ON  
     ```  
   
-     Beim Einschalten der **NO_BROWSETABLE** option, alle SELECT-Anweisungen Verhalten sich wie die **FOR BROWSE** Option wird an die Anweisungen angefügt. Allerdings die **NO_BROWSETABLE** Option erstellt nicht die temporären Tabellen, die die **FOR BROWSE** Option in der Regel verwendet, um die Ergebnisse für Ihre Anwendung zu senden.  
+     Wenn Sie die Option **NO_BROWSETABLE** aktivieren, verhalten sich alle SELECT-Anweisungen so, als würde die Option **FOR BROWSE** an die Anweisungen angefügt. Die Option **NO_BROWSETABLE** erstellt jedoch nicht die temporären Tabellen, welche die Option **FOR BROWSE** im Allgemeinen verwendet, um die Ergebnisse an Ihre Anwendung zu senden.  
   
- Wenn Sie versuchen, Zugriff auf die Daten aus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Tabellen im Durchsuchenmodus mithilfe einer SELECT-Abfrage, die eine äußere joinanweisung enthält, und wenn ein eindeutiger Index für die Tabelle definiert ist, auf der Innenseite einer äußeren Join-Anweisung vorhanden ist, wird der Durchsuchenmodus nicht sup Der eindeutige Index-Port. Der eindeutige Index wird durch den Durchsuchenmodus nur dann unterstützt, wenn alle eindeutigen Indexschlüsselspalten NULL-Werte annehmen können. Der eindeutige Index wird durch den Durchsuchenmodus nicht unterstützt, wenn die folgenden Bedingungen zutreffen:  
+ Wenn Sie versuchen, im Durchsuchenmodus auf die Daten aus den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Tabellen mit einer SELECT-Abfrage zuzugreifen, die eine äußere Verknüpfungsanweisung enthält, und wenn ein eindeutiger Index für die Tabelle definiert ist, die sich innerhalb der äußeren Verknüpfungsanweisung befindet, unterstützt der Durchsuchenmodus den eindeutigen Index nicht. Der eindeutige Index wird durch den Durchsuchenmodus nur dann unterstützt, wenn alle eindeutigen Indexschlüsselspalten NULL-Werte annehmen können. Der eindeutige Index wird durch den Durchsuchenmodus nicht unterstützt, wenn die folgenden Bedingungen zutreffen:  
   
--   Sie versuchen, Zugriff auf die Daten aus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Tabellen im Durchsuchenmodus mithilfe einer SELECT-Abfrage, die eine äußere joinanweisung enthält.  
+-   Sie versuchen, im Durchsuchenmodus auf die Daten aus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Tabellen mit einer SELECT-Anweisung zuzugreifen, die eine äußere Verknüpfungsanweisung enthält.  
   
 -   Es ist ein eindeutiger Index für die Tabelle definiert, die sich innerhalb eines äußeren Joins befindet.  
   
@@ -147,7 +147,7 @@ JSON
     GO  
     ```  
   
-4.  Aktivieren Sie die **NO_BROWSETABLE** Option. Führen Sie hierzu die folgenden [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen in dem Abfragefenster aus:  
+4.  Aktivieren Sie die Option **NO_BROWSETABLE**. Führen Sie hierzu die folgenden [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen in dem Abfragefenster aus:  
   
     ```  
     SET NO_BROWSETABLE ON ;  
@@ -182,22 +182,22 @@ JSON
   
 ## <a name="for-xml"></a>FOR XML  
  XML  
- Gibt an, dass die Ergebnisse einer Abfrage als XLM-Dokument zurückgegeben werden. Einer der folgenden XML-Modi muss angegeben werden: RAW, AUTO oder EXPLICIT. Weitere Informationen zu XML-Daten und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], finden Sie unter [FOR XML &#40; SQLServer &#41; ](../../relational-databases/xml/for-xml-sql-server.md).  
+ Gibt an, dass die Ergebnisse einer Abfrage als XLM-Dokument zurückgegeben werden. Einer der folgenden XML-Modi muss angegeben werden: RAW, AUTO oder EXPLICIT. Weitere Informationen zu XML-Daten und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] finden Sie unter [FOR XML &#40;SQL Server&#41;](../../relational-databases/xml/for-xml-sql-server.md).  
   
  RAW [ **('***ElementName***')** ]  
- Verwendet das Abfrageergebnis und wandelt jede Zeile im Resultset in ein XML-Element mit einem generischen Bezeichner \<Zeile / > als Elementtag. Sie können optional einen Namen für das Zeilenelement angeben. Die resultierende XML-Ausgabe verwendet den angegebenen *ElementName* als das für jede Zeile generierte Zeilenelement. Weitere Informationen finden Sie unter [verwenden RAW-Modus mit FOR XML-](../../relational-databases/xml/use-raw-mode-with-for-xml.md) und [verwenden RAW-Modus mit FOR XML-](../../relational-databases/xml/use-raw-mode-with-for-xml.md).  
+ Verwendet das Abfrageergebnis und transformiert jede Zeile des Resultsets in ein XML-Element mit dem generischen Bezeichner \<row /> als Elementtag. Sie können optional einen Namen für das Zeilenelement angeben. Die resultierende XML-Ausgabe verwendet den angegebenen *ElementName* als das für jede Zeile generierte Zeilenelement. Weitere Informationen finden Sie unter [Verwenden des RAW-Modus mit FOR XML](../../relational-databases/xml/use-raw-mode-with-for-xml.md) und unter [Verwenden des RAW-Modus mit FOR XML](../../relational-databases/xml/use-raw-mode-with-for-xml.md).  
   
  AUTO  
- Gibt Abfrageergebnisse in einer einfachen, geschachtelten XML-Struktur zurück. Jede Tabelle in der FROM-Klausel, die mindestens eine Spalte in der SELECT-Klausel aufgeführt ist, wird als ein XML-Element dargestellt. Die in der SELECT-Klausel aufgelisteten Spalten werden den entsprechenden Elementattributen zugeordnet. Weitere Informationen finden Sie unter [Verwenden des AUTO-Modus mit FOR XML](../../relational-databases/xml/use-auto-mode-with-for-xml.md).  
+ Gibt Abfrageergebnisse in einer einfachen, geschachtelten XML-Struktur zurück. Jede Tabelle in der FROM-Klausel, aus der mindestens eine Spalte in der SELECT-Klausel aufgeführt ist, wird als XML-Element dargestellt. Die in der SELECT-Klausel aufgelisteten Spalten werden den entsprechenden Elementattributen zugeordnet. Weitere Informationen finden Sie unter [Verwenden des AUTO-Modus mit FOR XML](../../relational-databases/xml/use-auto-mode-with-for-xml.md).  
   
  EXPLICIT  
- Gibt an, dass die Form der sich ergebenden XML-Struktur explizit definiert wird. In diesem Modus müssen die Abfragen auf eine bestimmte Weise geschrieben werden, damit zusätzliche Informationen über die gewünschte Schachtelung explizit angegeben werden. Weitere Informationen finden Sie unter [Verwenden des EXPLICIT-Modus mit FOR XML](../../relational-databases/xml/use-explicit-mode-with-for-xml.md).  
+ Gibt an, dass die Form der sich ergebenden XML-Struktur explizit definiert wird. In diesem Modus müssen die Abfragen auf eine bestimmte Weise geschrieben werden, sodass zusätzliche Informationen zur gewünschten Schachtelung explizit angegeben werden. Weitere Informationen finden Sie unter [Verwenden des EXPLICIT-Modus mit FOR XML](../../relational-databases/xml/use-explicit-mode-with-for-xml.md).  
   
  XMLDATA  
  Gibt das XDR-Inlineschema zurück, fügt jedoch das Stammelement dem Ergebnis nicht hinzu. Wenn XMLDATA angegeben ist, wird das XDR-Schema an das Dokument angefügt.  
   
 > [!IMPORTANT]  
->  Die XMLDATA-Direktive ist veraltet. Verwenden Sie XSD-Generierung für RAW- und AUTO-Modus. Es gibt keinen Ersatz für die XMLDATA-Direktive im EXPLICIT-Modus. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
+>  Die XMLDATA-Anweisung ist veraltet. Verwenden Sie XSD-Generierung für RAW- und AUTO-Modus. Es gibt keinen Ersatz für die XMLDATA-Direktive im EXPLICIT-Modus. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
  XMLSCHEMA [ **('***TargetNameSpaceURI***')** ]  
  Gibt das XSD-Inlineschema zurück. Beim Angeben dieser Direktive können Sie optional einen Zielnamespace-URI angeben, der den angegebenen Namespace im Schema zurückgibt. Weitere Informationen finden Sie unter [Generieren eines XSD-Inlineschemas](../../relational-databases/xml/generate-an-inline-xsd-schema.md).  
@@ -206,28 +206,28 @@ JSON
  Gibt an, dass die Spalten als Unterelemente zurückgegeben werden. Andernfalls werden sie XML-Attributen zugeordnet. Diese Option wird nur in den Modi RAW, AUTO und PATH unterstützt. Weitere Informationen finden Sie unter [Verwenden des RAW-Modus mit FOR XML](../../relational-databases/xml/use-raw-mode-with-for-xml.md).  
   
  XSINIL  
- Gibt an, dass ein Element mit **xsi: nil** -Attributsatz zur **"true"** für NULL-Spaltenwerte erstellt werden. Diese Option kann nur mit der ELEMENTS-Direktive angegeben werden. Weitere Informationen finden Sie unter [Generieren von Elementen für NULL-Werten mithilfe des XSINIL-Parameters](../../relational-databases/xml/generate-elements-for-null-values-with-the-xsinil-parameter.md).  
+ Gibt an, dass ein Element, dessen Attribut **xsi:nil** auf **TRUE** festgelegt ist, für NULL-Spaltenwerte erstellt wird. Diese Option kann nur mit der ELEMENTS-Anweisung angegeben werden. Weitere Informationen finden Sie unter [Generieren von Elementen für NULL-Werte mithilfe des XSINIL-Parameters](../../relational-databases/xml/generate-elements-for-null-values-with-the-xsinil-parameter.md).  
   
  ABSENT  
  Gibt an, dass dem XML-Ergebnis für NULL-Spaltenwerte keine entsprechenden XML-Elemente hinzugefügt werden. Diese Option kann nur mit der ELEMENTS-Direktive angegeben werden.  
   
  PATH [ **('***ElementName***')** ]  
- Generiert eine \<Zeile >-elementwrapper für jede Zeile im Resultset. Optional können Sie angeben, den Namen eines Elements, für die \<Zeile >-elementwrapper. Wenn eine leere Zeichenfolge, z. B. FOR XML PATH angegeben wird (**''**)), ein Wrapper-Element wird nicht generiert. Die Verwendung von PATH kann eine einfachere Alternative zu mithilfe der EXPLICIT-Direktive geschriebenen Abfragen darstellen. Weitere Informationen finden Sie unter [Verwenden des PATH-Modus mit FOR XML](../../relational-databases/xml/use-path-mode-with-for-xml.md).  
+ Generiert für jede Zeile im Resultset einen \<row>-Elementwrapper. Sie können optional einen Elementnamen für den \<row>-Elementwrapper angeben. Bei einer leeren Zeichenfolge, wie z.B. FOR XML PATH (**''**) ), wird kein Wrapperelement generiert. Die Verwendung von PATH kann eine einfachere Alternative zu mithilfe der EXPLICIT-Direktive geschriebenen Abfragen darstellen. Weitere Informationen finden Sie unter [Verwenden des PATH-Modus mit FOR XML](../../relational-databases/xml/use-path-mode-with-for-xml.md).  
   
  BINARY BASE64  
  Gibt an, dass die Abfrage die Binärdaten im BINARY BASE64-Format codiert zurückgibt. Zum Abrufen von Binärdaten im RAW- oder EXPLICIT-Modus muss diese Option angegeben werden. Im AUTO-Modus ist sie die Standardeinstellung.  
   
  TYPE  
- Gibt an, dass die Abfrage gibt Ergebnisse als zurück **Xml** Typ. Weitere Informationen finden Sie unter [TYPE Directive in FOR XML Queries](../../relational-databases/xml/type-directive-in-for-xml-queries.md).  
+ Gibt an, dass die Abfrage Ergebnisse als **XML**-Typ zurückgibt. Weitere Informationen finden Sie unter [TYPE Directive in FOR XML Queries](../../relational-databases/xml/type-directive-in-for-xml-queries.md).  
   
- STAMMKNOTEN [ **("***RootName***")** ]  
- Gibt an, dass ein einzelnes Element der obersten Ebene dem als Ergebnis zurückgegebenen XML-Dokument hinzugefügt wird. Optional können Sie den zu generierenden Stammelementnamen angeben. Wenn der optionale Stammelementname nicht angegeben wird, der Standardwert \<Root >-Element hinzugefügt.  
+ ROOT [ **('***RootName***')** ]  
+ Gibt an, dass ein einzelnes Element der obersten Ebene dem als Ergebnis zurückgegebenen XML-Dokument hinzugefügt wird. Optional können Sie den zu generierenden Stammelementnamen angeben. Wenn der optionale Stammelementname angegeben wird, wird das \<root>-Standardelement hinzugefügt.  
   
- Weitere Informationen finden Sie unter [FOR XML &#40; SQLServer &#41; ](../../relational-databases/xml/for-xml-sql-server.md).  
+ Weitere Informationen finden Sie unter [FOR XML &#40;SQL Server&#41;](../../relational-databases/xml/for-xml-sql-server.md).  
   
- **XML-Beispiel**  
+ **Beispiel für FOR XML**  
   
- Im folgenden Beispiel wird `FOR XML AUTO` mit den Optionen `TYPE` und `XMLSCHEMA` angegeben. Aufgrund der der `TYPE` Option das Resultset wird zurückgegeben, an den Client als ein **Xml** Typ. Die `XMLSCHEMA`-Option gibt an, dass das XSD-Inlineschema in den zurückgegebenen XML-Daten enthalten ist, während die `ELEMENTS`-Option angibt, dass das XML-Ergebnis elementzentriert ist.  
+ Im folgenden Beispiel wird `FOR XML AUTO` mit den Optionen `TYPE` und `XMLSCHEMA` angegeben. Aufgrund der `TYPE`-Option wird das Resultset als **XML**-Typ an den Client zurückgegeben. Die `XMLSCHEMA`-Option gibt an, dass das XSD-Inlineschema in den zurückgegebenen XML-Daten enthalten ist, während die `ELEMENTS`-Option angibt, dass das XML-Ergebnis elementzentriert ist.  
   
 ```  
 USE AdventureWorks2012;  
@@ -242,28 +242,28 @@ FOR XML AUTO, TYPE, XMLSCHEMA, ELEMENTS XSINIL;
   
 ## <a name="for-json"></a>FOR JSON  
  JSON  
- Geben Sie FOR JSON, die Ergebnisse einer Abfrage zurückgegeben, die als JSON-Text formatiert werden. Außerdem müssen Sie einen der folgenden JSON-Modi angeben: automatisch oder Pfad. Weitere Informationen zu den **FOR JSON** -Klausel finden Sie unter [Formatieren von Abfrageergebnisse als JSON mit FOR JSON &#40; SQLServer &#41; ](../../relational-databases/json/format-query-results-as-json-with-for-json-sql-server.md).  
+ Geben Sie FOR JSON an, um die Ergebnisse einer als JSON-Text formatierten Abfrage zurückzugeben. Zudem müssen Sie einen der folgenden JSON-Modi angeben: AUTO oder PATH. Weitere Informationen zur **FOR JSON**-Klausel finden Sie unter [Formatieren von Abfrageergebnissen als JSON mit FOR JSON &#40;SQL Server&#41;](../../relational-databases/json/format-query-results-as-json-with-for-json-sql-server.md).  
   
  AUTO  
- Format der JSON-Ausgabe automatisch basierend auf dem die Struktur der **wählen** Anweisung  
-            durch Angabe **FOR JSON AUTO**. Weitere Informationen und Beispiele finden Sie unter [Automatisches Formatieren von JSON-Ausgaben &#40;SQL Server&#41;](../../relational-databases/json/format-json-output-automatically-with-auto-mode-sql-server.md).  
+ Formatieren Sie die JSON-Ausgabe automatisch basierend auf der Struktur der **SELECT**-Anweisung,  
+            indem Sie **FOR JSON AUTO** angeben. Weitere Informationen und Beispiele finden Sie unter [Automatisches Formatieren von JSON-Ausgaben &#40;SQL Server&#41;](../../relational-databases/json/format-json-output-automatically-with-auto-mode-sql-server.md).  
   
  PATH  
- Rufen Sie vollständige Kontrolle über das Format der JSON-Ausgabe, indem Sie angeben   
+ Gewinnen Sie vollständige Kontrolle über das Format der JSON-Ausgabe durch Angabe von   
             **FOR JSON PATH**. Im**PATH** -Modus können Sie Wrapper-Objekte erstellen und komplexe Eigenschaften schachteln. Weitere Informationen und Beispiele finden Sie unter [Formatieren einer geschachtelten JSON-Ausgabe im PATH-Modus &#40;SQL Server&#41;](../../relational-databases/json/format-nested-json-output-with-path-mode-sql-server.md).  
   
  INCLUDE_NULL_VALUES  
- Einschließen von Nullwerten in die JSON-Ausgabe durch Angabe der **INCLUDE_NULL_VALUES** -Option mit der **FOR JSON** Klausel. Wenn Sie diese Option nicht angeben, enthält die Ausgabe von JSON-Eigenschaften für null-Werte in den Abfrageergebnissen keine. Weitere Informationen und Beispiele finden Sie unter [enthalten Null-Werte in JSON-Ausgabe mit der Option INCLUDE_NULL_VALUES &#40; SQLServer &#41; ](../../relational-databases/json/include-null-values-in-json-include-null-values-option.md).  
+ Schließen Sie NULL-Werte in die JSON-Ausgabe ein, indem Sie die Option **INCLUDE_NULL_VALUES** mit der **FOR JSON**-Klausel angeben. Wenn Sie diese Option nicht angeben, enthält die Ausgabe in den Abfrageergebnissen keine JSON-Eigenschaften für NULL-Werte. Weitere Informationen und Beispiele finden Sie unter[Include Null Values in JSON Output with the INCLUDE_NULL_VALUES Option &#40;SQL Server&#41;](../../relational-databases/json/include-null-values-in-json-include-null-values-option.md) (Einschließen von NULL-Werten in die JSON-Ausgabe mit der Option INCLUDE_NULL_VALUES (SQL Server)).  
   
- STAMMKNOTEN [ **("***RootName***")** ]  
- Um die JSON-Ausgabe ein einzelnes Element der obersten Ebene hinzufügen, indem die **Stamm** -Option mit der **FOR JSON** Klausel. Wenn Sie die Option **ROOT** nicht angeben, besitzt die JSON-Ausgabe kein Stammelement. Weitere Informationen und Beispiele finden Sie unter [Hinzufügen eines Stammknotens zur JSON-Ausgabe mithilfe der ROOT-Option &#40; SQLServer &#41; ](../../relational-databases/json/add-a-root-node-to-json-output-with-the-root-option-sql-server.md).  
+ ROOT [ **('***RootName***')** ]  
+ Fügen Sie ein einzelnes Element der obersten Ebene zur JSON-Ausgabe hinzu, indem Sie die Option **ROOT** mit der **FOR JSON**-Klausel angeben. Wenn Sie die Option **ROOT** nicht angeben, besitzt die JSON-Ausgabe kein Stammelement. Weitere Informationen und Beispiele finden Sie unter [Add a Root Node to JSON Output with the ROOT Option &#40;SQL Server&#41;](../../relational-databases/json/add-a-root-node-to-json-output-with-the-root-option-sql-server.md) (Hinzufügen eines Stammknotens zur JSON-Ausgabe mithilfe der ROOT-Option (SQL Server)).  
   
  WITHOUT_ARRAY_WRAPPER  
- Entfernen der rechteckigen Klammern, die die JSON-Ausgabe standardmäßig, durch angeben umgeben der **WITHOUT_ARRAY_WRAPPER** -Option mit der **FOR JSON** Klausel. Wenn Sie diese Option nicht angeben, wird die JSON-Ausgabe in eckige Klammern eingeschlossen. Verwenden der **WITHOUT_ARRAY_WRAPPER** Option aus, um ein einzelnes JSON-Objekt als Ausgabe zu generieren.  Weitere Informationen finden Sie unter [Remove Square Brackets from JSON Output with the WITHOUT_ARRAY_WRAPPER Option &#40;SQL Server&#41; (Entfernen von rechteckigen Klammern von JSON-Ausgabe mit der Option WITHOUT_ARRAY_WRAPPER (SQL Server))](../../relational-databases/json/remove-square-brackets-from-json-without-array-wrapper-option.md).  
+ Entfernen Sie die rechteckigen Klammern, welche die JSON-Ausgabe standardmäßig umgeben, indem Sie die Option **WITHOUT_ARRAY_WRAPPER** mit der **FOR JSON**-Klausel angeben. Wenn Sie diese Option nicht angeben, wird die JSON-Ausgabe in eckige Klammern eingeschlossen. Verwenden Sie die Option **WITHOUT_ARRAY_WRAPPER**, um ein einzelnes JSON-Objekt als Ausgabe zu generieren.  Weitere Informationen finden Sie unter [Remove Square Brackets from JSON Output with the WITHOUT_ARRAY_WRAPPER Option &#40;SQL Server&#41; (Entfernen von rechteckigen Klammern von JSON-Ausgabe mit der Option WITHOUT_ARRAY_WRAPPER (SQL Server))](../../relational-databases/json/remove-square-brackets-from-json-without-array-wrapper-option.md).  
   
  Weitere Informationen finden Sie unter [Formatieren von Abfrageergebnissen als JSON mit FOR JSON &#40;SQL Server&#41;](../../relational-databases/json/format-query-results-as-json-with-for-json-sql-server.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "DROP ausgelegte Anmeldeinformationen für die Datenbank (Transact-SQL) | Microsoft Docs"
+title: DROP DATABASE SCOPED CREDENTIAL (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 02/27/2017
 ms.prod: sql-non-specified
@@ -30,10 +30,10 @@ ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/02/2018
 ---
-# <a name="drop-database-scoped-credential-transact-sql"></a>DROP DATABASE ausgelegte CREDENTIAL (Transact-SQL)
+# <a name="drop-database-scoped-credential-transact-sql"></a>DROP DATABASE SCOPED CREDENTIAL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  Entfernt eine datenbankbezogenen Anmeldeinformationen vom Server an.  
+  Entfernt datenbankbezogene Anmeldeinformationen vom Server.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -46,29 +46,29 @@ DROP DATABASE SCOPED CREDENTIAL credential_name
   
 ## <a name="arguments"></a>Argumente  
  *credential_name*  
- Ist der Name der datenbankweite Anmeldeinformationen vom Server entfernen.  
+ Der Name der datenbankbezogenen Anmeldeinformationen, die für den Server entfernt werden sollen.  
   
-## <a name="remarks"></a>Hinweise  
- Verwenden Sie zum Löschen des geheimen datenbankweit gültigen Anmeldeinformationen zugeordnet, ohne die datenbankbezogenen Anmeldeinformationen selbst löschen [ALTER CREDENTIAL](../../t-sql/statements/alter-credential-transact-sql.md).  
+## <a name="remarks"></a>Remarks  
+ Sie können den geheimen Bereich löschen, der Anmeldeinformationen zugeordnet ist, ohne die Anmeldeinformationen zu löschen, indem Sie [ALTER CREDENTIAL](../../t-sql/statements/alter-credential-transact-sql.md) verwenden.  
   
- Informationen zu datenbankbezogenen Anmeldeinformationen werden in der [database_scoped_credentials](../../relational-databases/system-catalog-views/sys-database-scoped-credentials-transact-sql.md) -Katalogsicht angezeigt.  
+ Informationen zu datenbankweit gültigen Anmeldeinformationen werden in der [sys.database_scoped_credentials](../../relational-databases/system-catalog-views/sys-database-scoped-credentials-transact-sql.md)-Katalogsicht angezeigt.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert `ALTER` -Berechtigung für die Anmeldeinformationen.  
+ Erfordert die `ALTER`-Berechtigung für die Anmeldeinformationen.  
   
 ## <a name="examples"></a>Beispiele  
- Im folgenden Beispiel wird der datenbankweite Anmeldeinformationen namens `SalesAccess`.  
+ Im folgenden Beispiel werden datenbankbezogene gültige Anmeldeinformationen mit der Bezeichnung `SalesAccess` entfernt.  
   
 ```sql  
 DROP DATABASE SCOPED CREDENTIAL AppCred;  
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Anmeldeinformationen &#40; Datenbankmodul &#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)   
- [Erstellen Sie die Datenbank ausgelegte CREDENTIAL &#40; Transact-SQL &#41;](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)   
- [ALTER DATABASE ausgelegte CREDENTIAL &#40; Transact-SQL &#41;](../../t-sql/statements/alter-database-scoped-credential-transact-sql.md)   
- [database_scoped_credentials](../../relational-databases/system-catalog-views/sys-database-scoped-credentials-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Anmeldeinformationen &#40;Datenbank-Engine&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)   
+ [CREATE DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)   
+ [ALTER DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-credential-transact-sql.md)   
+ [sys.database_scoped_credentials](../../relational-databases/system-catalog-views/sys-database-scoped-credentials-transact-sql.md)   
  [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md)   
  [sys.credentials &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)  
   

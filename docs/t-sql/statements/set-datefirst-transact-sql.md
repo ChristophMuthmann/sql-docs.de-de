@@ -1,5 +1,5 @@
 ---
-title: SET DATEFIRST (Transact-SQL) | Microsoft Docs
+title: SET DATEFIRST (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -43,7 +43,7 @@ ms.lasthandoff: 11/21/2017
 
   Legt den ersten Wochentag auf eine Zahl von 1 bis 7 fest.  
   
- Eine Übersicht über alle [!INCLUDE[tsql](../../includes/tsql-md.md)] Datums-und Uhrzeitdatentypen und Funktionen finden Sie unter [Datums- und Uhrzeitdatentypen und-Funktionen &#40; Transact-SQL &#41; ](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).  
+ Eine Übersicht über alle Datums- und Uhrzeitdatentypen und zugehörige Funktionen für [!INCLUDE[tsql](../../includes/tsql-md.md)] finden Sie unter [Datums- und Uhrzeitdatentypen und Funktionen &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -62,10 +62,10 @@ SET DATEFIRST 7 ;
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *Anzahl* | **@***Number_var*  
+ *number* | **@***number_var*  
  Eine ganze Zahl, die den ersten Tag der Woche angibt. Dieses Argument einen der folgenden Werte annehmen.  
   
-|Wert|Erster Tag der Woche ist.|  
+|value|Der erste Tag der Woche ist:|  
 |-----------|------------------------------|  
 |**1**|Montag|  
 |**2**|Dienstag|  
@@ -73,10 +73,10 @@ SET DATEFIRST 7 ;
 |**4**|Donnerstag|  
 |**5**|Freitag|  
 |**6**|Samstag|  
-|**7** (Standard, USA (USA))|Sonntag|  
+|**7** (Standardwert, Englisch (USA))|Sonntag|  
   
-## <a name="remarks"></a>Hinweise  
- Um die aktuelle Einstellung von SET DATEFIRST anzuzeigen, verwenden Sie die [@@DATEFIRST ](../../t-sql/functions/datefirst-transact-sql.md) Funktion.  
+## <a name="remarks"></a>Remarks  
+ Verwenden Sie die Funktion [@@DATEFIRST](../../t-sql/functions/datefirst-transact-sql.md), um die aktuelle Einstellung von SET DATEFIRST anzuzeigen.  
   
  Die Einstellung von SET DATEFIRST wird zur Ausführungszeit und nicht zur Analysezeit festgelegt.  
   
@@ -108,7 +108,7 @@ SELECT CAST('1999-1-1' AS datetime2) AS SelectDate
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SET-Anweisungen &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)  
   
   

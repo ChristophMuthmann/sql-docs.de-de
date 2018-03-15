@@ -1,5 +1,5 @@
 ---
-title: DBCC TRACESTATUS (Transact-SQL) | Microsoft Docs
+title: DBCC TRACESTATUS (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 07/17/2017
 ms.prod: sql-non-specified
@@ -54,13 +54,13 @@ DBCC TRACESTATUS ( [ [ trace# [ ,...n ] ] [ , ] [ -1 ] ] )
   
 ## <a name="arguments"></a>Argumente  
 *trace#*  
-Die Nummer des Ablaufverfolgungsflags, für das der Status angezeigt wird. Wenn *Trace#*, und-1 nicht angegeben werden, alle Ablaufverfolgungsflags, die für die Sitzung aktiviert sind, werden angezeigt.
+Die Nummer des Ablaufverfolgungsflags, für das der Status angezeigt wird. Wenn *trace#* und -1 nicht angegeben werden, werden alle für die Sitzung aktivierten Ablaufverfolgungsflags angezeigt.
   
 *n*  
 Ein Platzhalter, der anzeigt, dass mehrere Ablaufverfolgungsflags angegeben werden können.
   
 -1  
-Zeigt den Status von global aktivierten Ablaufverfolgungsflags an. Wenn-1, ohne angegeben ist *Trace#*, alle globale Ablaufverfolgungsflags, die aktiviert sind, werden angezeigt.
+Zeigt den Status von global aktivierten Ablaufverfolgungsflags an. Wenn -1 ohne *trace#* angegeben wird, werden alle aktivierten Ablaufverfolgungsflags des Typs global angezeigt.
   
 WITH NO_INFOMSGS  
 Unterdrückt alle Informationsmeldungen mit einem Schweregrad von 0 bis 10.
@@ -73,11 +73,11 @@ In der folgenden Tabelle finden Sie eine Beschreibung der Informationen des Resu
 |**TraceFlag**|Name des Ablaufverfolgungsflags|  
 |**Status**|Zeigt an, ob das Ablaufverfolgungsflag entweder global oder für die Sitzung auf ON oder OFF festgelegt wurde.<br /><br /> 1 = ON<br /><br /> 0 = OFF|  
 |**Global**|Zeigt an, ob das Ablaufverfolgungsflag global festgelegt ist.<br /><br /> 1 = True<br /><br /> 0 = False|  
-|**Sitzung**|Zeigt an, ob das Ablaufverfolgungsflag für die Sitzung festgelegt ist.<br /><br /> 1 = True<br /><br /> 0 = False|  
+|**Session**|Zeigt an, ob das Ablaufverfolgungsflag für die Sitzung festgelegt ist.<br /><br /> 1 = True<br /><br /> 0 = False|  
   
-DBCC TRACESTATUS gibt eine Spalte für die Nummer des Ablaufverfolgungsflags und eine Spalte für den Status zurück. Zeigt an, ob das Ablaufverfolgungsflag auf ON (1) oder OFF (0) festgelegt ist. Die Spaltenüberschrift für die Nummer des Ablaufverfolgungsflags entweder ist **Global Trace Flag** oder **Session Trace Flag**, je nachdem, ob Sie den Status für ein globales oder ein Ablaufverfolgungsflag Sitzung einchecken.
+DBCC TRACESTATUS gibt eine Spalte für die Nummer des Ablaufverfolgungsflags und eine Spalte für den Status zurück. Zeigt an, ob das Ablaufverfolgungsflag auf ON (1) oder OFF (0) festgelegt ist. Die Spaltenüberschrift für die Nummer des Ablaufverfolgungsflags lautet entweder **Global Trace Flag** oder **Session Trace Flag**, je nachdem, ob Sie den Status eines Ablaufverfolgungsflags vom Typ „Global“ oder „Session“ überprüfen.
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
 In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gibt es zwei Typen von Ablaufverfolgungsflags: Sitzung und global. Ablaufverfolgungsflags des Typs Session werden für eine Verbindung aktiviert und sind nur für diese Verbindung sichtbar. Globale Ablaufverfolgungsflags werden auf Serverebene festgelegt und sind für jede Verbindung auf dem Server sichtbar.
   
 ## <a name="permissions"></a>Berechtigungen  
@@ -112,7 +112,7 @@ DBCC TRACESTATUS();
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
 [DBCC TRACEOFF &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceoff-transact-sql.md)  
 [DBCC TRACEON &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-transact-sql.md)  

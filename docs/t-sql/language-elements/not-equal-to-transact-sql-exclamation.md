@@ -1,5 +1,5 @@
 ---
-title: '! = (Ungleich) (Transact-SQL) | Microsoft Docs'
+title: '!= (ungleich) (Transact-SQL) | Microsoft-Dokumentation'
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -35,13 +35,13 @@ ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="not-equal-to-transact-sql---exclamation"></a>Nicht gleich (Transact SQL) - Ausrufezeichen
+# <a name="not-equal-to-transact-sql---exclamation"></a>Ungleich (Transact SQL): Hinweis
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Testet, ob zwei Ausdrücke ungleich sind (ein Vergleichsoperator). Wenn einer der Operanden oder beide Operanden NULL sind, wird NULL zurückgegeben. Funktioniert genauso wie die [<> (nicht gleich)](../../t-sql/language-elements/not-equal-to-transact-sql-traditional.md) Vergleichsoperator.  
+  Testet, ob zwei Ausdrücke ungleich sind (ein Vergleichsoperator). Wenn einer der Operanden oder beide Operanden NULL sind, wird NULL zurückgegeben. Verhält sich so wie der Vergleichsoperator [<> (ungleich)](../../t-sql/language-elements/not-equal-to-transact-sql-traditional.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
- [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Ausdrücke &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [Operatoren &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)  
   
   

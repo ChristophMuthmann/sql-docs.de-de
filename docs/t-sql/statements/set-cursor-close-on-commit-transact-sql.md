@@ -1,5 +1,5 @@
 ---
-title: SET CURSOR_CLOSE_ON_COMMIT (Transact-SQL) | Microsoft Docs
+title: SET CURSOR_CLOSE_ON_COMMIT (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
@@ -51,7 +51,7 @@ ms.lasthandoff: 11/21/2017
 SET CURSOR_CLOSE_ON_COMMIT { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Wenn SET CURSOR_CLOSE_ON_COMMIT auf ON festgelegt ist, schließt diese Einstellung alle offenen Cursor bei Ausführung des Commits oder Rollbacks in Übereinstimmung mit ISO. Wenn SET CURSOR_CLOSE_ON_COMMIT auf OFF festgelegt ist, wird der Cursor nicht geschlossen, wenn ein Commit für eine Transaktion ausgeführt wird.  
   
 > [!NOTE]  
@@ -59,9 +59,9 @@ SET CURSOR_CLOSE_ON_COMMIT { ON | OFF }
   
  Wenn SET CURSOR_CLOSE_ON_COMMIT auf OFF festgelegt ist, schließt eine ROLLBACK-Anweisung nur geöffnete asynchrone Cursor ein, die nicht vollständig aufgefüllt sind. STATIC- oder INSENSITIVE-Cursor, die geöffnet wurden, nachdem Änderungen vorgenommen wurden, spiegeln den Datenstatus nicht mehr wider, wenn für die Änderungen ein Rollback ausgeführt wird.  
   
- SET CURSOR_CLOSE_ON_COMMIT steuert das gleiche Verhalten wie die Datenbankoption CURSOR_CLOSE_ON_COMMIT. Wenn CURSOR_CLOSE_ON_COMMIT auf ON oder OFF festgelegt ist, wird diese Einstellung für die Verbindung verwendet. Wenn SET CURSOR_CLOSE_ON_COMMIT nicht angegeben wurde, den Wert in der **Is_cursor_close_on_commit_on** Spalte in der **sys.databases** Katalogsicht gilt.  
+ SET CURSOR_CLOSE_ON_COMMIT steuert das gleiche Verhalten wie die Datenbankoption CURSOR_CLOSE_ON_COMMIT. Wenn CURSOR_CLOSE_ON_COMMIT auf ON oder OFF festgelegt ist, wird diese Einstellung für die Verbindung verwendet. Wenn SET CURSOR_CLOSE_ON_COMMIT nicht angegeben wurde, wird der Wert in der Spalte **is_cursor_close_on_commit_on** der Katalogsicht **sys.databases** angewendet.  
   
- Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber sowohl CURSOR_CLOSE_ON_COMMIT auf OFF festgelegt, wenn sie eine Verbindung herstellen. Die DB-Library legt den Wert von CURSOR_CLOSE_ON_COMMIT nicht automatisch fest.  
+ Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-OLE DB-Anbieter für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiber legen beim Herstellen einer Verbindung CURSOR_CLOSE_ON_COMMIT auf OFF fest. Die DB-Library legt den Wert von CURSOR_CLOSE_ON_COMMIT nicht automatisch fest.  
   
  Ist SET ANSI_DEFAULTS auf ON festgelegt, so ist SET CURSOR_CLOSE_ON_COMMIT aktiviert.  
   
@@ -131,13 +131,13 @@ DROP TABLE t1;
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [BEGIN TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-transaction-transact-sql.md)   
- [Schließen &#40; Transact-SQL &#41;](../../t-sql/language-elements/close-transact-sql.md)   
+ [CLOSE &#40;Transact-SQL&#41;](../../t-sql/language-elements/close-transact-sql.md)   
  [COMMIT TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/commit-transaction-transact-sql.md)   
  [ROLLBACK TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/rollback-transaction-transact-sql.md)   
  [SET-Anweisungen (Transact-SQL)](../../t-sql/statements/set-statements-transact-sql.md)   
- [SET ANSI_DEFAULTS &#40; Transact-SQL &#41;](../../t-sql/statements/set-ansi-defaults-transact-sql.md)  
+ [SET ANSI_DEFAULTS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-defaults-transact-sql.md)  
   
   

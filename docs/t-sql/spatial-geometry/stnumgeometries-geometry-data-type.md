@@ -1,5 +1,5 @@
 ---
-title: STNumGeometries (Geometry-Datentyp) | Microsoft Docs
+title: STNumGeometries (geometry-Datentyp) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stnumgeometries-geometry-data-type"></a>STNumGeometries (geometry-Datentyp)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Gibt die Anzahl von Geometrien zurück eine **Geometrie** Instanz.
+Gibt die Anzahl von Geometrien zurück, die eine **geometry**-Instanz enthalten.
   
 ## <a name="syntax"></a>Syntax  
   
@@ -44,15 +44,15 @@ Gibt die Anzahl von Geometrien zurück eine **Geometrie** Instanz.
 ```  
   
 ## <a name="return-types"></a>Rückgabetypen  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Rückgabetyp: **Int**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Rückgabetyp: **int**  
   
  CLR-Rückgabetyp: **SqlInt32**  
   
-## <a name="remarks"></a>Hinweise  
- Diese Methode gibt 1 zurück, wenn die **Geometrie** -Instanz ist eine **MultiPoint**, **MultiLineString**, **MultiPolygon**, oder  **GeometryCollection** -Instanz, und 0, wenn die **Geometrie** -Instanz leer ist.  
+## <a name="remarks"></a>Remarks  
+ Diese Methode gibt 1 zurück, wenn die **geometry**-Instanz keine **MultiPoint**-, **MultiLineString**-, **MultiPolygon**- oder **GeometryCollection**-Instanz ist. Sie gibt 0 (null) zurück, wenn die **geometry**-Instanz leer ist.  
   
 > [!NOTE]  
->  Wenn eine **GeometryCollection** geschachtelte leere Elemente `STNumGeometries()` nicht 0 zurück. Obwohl die Elemente in der **GeometryCollection** Instanz leer sind, ist die Instanz selbst ist ein leeres Resultset.  
+>  Wenn eine **GeometryCollection** geschachtelte leere Elemente enthält, gibt `STNumGeometries()` nicht 0 (null) zurück. Obwohl die Elemente in der **GeometryCollection**-Instanz leer sind, ist die Instanz selbst keine leere Menge.  
   
   
 

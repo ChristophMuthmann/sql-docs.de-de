@@ -1,5 +1,5 @@
 ---
-title: STLineFromText (Geometry-Datentyp) | Microsoft Docs
+title: STLineFromText (geometry-Datentyp) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -45,23 +45,23 @@ STLineFromText ( 'linestring_tagged_text' , SRID )
   
 ## <a name="arguments"></a>Argumente  
  *linestring_tagged_text*  
- Ist die WKT-Darstellung der **GeometryLineString** Instanz, die Sie zurückgeben möchten. *Linestring_tagged_text* ist ein **nvarchar(max)** Ausdruck.  
+ Die WKT-Darstellung der Instanz von **geometryLineString**, die zurückgegeben werden soll. *linestring_tagged_text* ist ein **nvarchar(max)**-Ausdruck.  
   
  *SRID*  
- Ist ein **Int** Ausdruck darstellt, die räumliche verweisen ID (SRID), der die **GeometryLineString** Instanz, die Sie zurückgeben möchten.  
+ Ein **int**-Ausdruck, der die SRID (Spatial Reference ID) der **geometryLineString**-Instanz darstellt, die Sie zurückgeben möchten.  
   
 ## <a name="return-types"></a>Rückgabetypen  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Rückgabetyp: **Geometrie**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Rückgabetyp: **geometry**  
   
  CLR-Rückgabetyp: **SqlGeometry**  
   
  OGC-Typ: **LineString**  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Diese Methode löst eine **FormatException** aus, wenn die Eingabe nicht korrekt formatiert ist.  
   
 ## <a name="examples"></a>Beispiele  
- Im folgenden Beispiel wird `STLineFromText()` zum Erstellen einer `geometry` Instanz.  
+ Im folgenden Beispiel wird `STLineFromText()` verwendet, um eine `geometry`-Instanz zu erstellen.  
   
 ```  
 DECLARE @g geometry;  
@@ -69,7 +69,7 @@ SET @g = geometry::STLineFromText('LINESTRING (100 100, 200 200)', 0);
 SELECT @g.ToString();  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Statische geometry-Methoden des OGC](../../t-sql/spatial-geometry/ogc-static-geometry-methods.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: IS_MEMBER (Transact-SQL) | Microsoft Docs
+title: IS_MEMBER (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 07/29/2017
 ms.prod: sql-non-specified
@@ -55,36 +55,36 @@ IS_MEMBER ( { 'group' | 'role' } )
 ```  
   
 ## <a name="arguments"></a>Argumente  
- **"** *Gruppe* **"**  
-**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] über[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+ **'** *group* **'**  
+**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
- Ist der Name der Windows-Gruppe, die überprüft wird. muss im Format *Domäne*\\*Gruppe*. *Gruppe* ist **Sysname**.  
+ Der Name der Windows-Gruppe, die überprüft wird. Dieser muss das Format *Domäne*\\*Gruppe* aufweisen. *group* ist vom Datentyp **sysname**.  
   
- **"** *Rolle* **"**  
- Der Name des der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Rolle, die überprüft wird. *Rolle* ist **Sysname** und feste Datenbankrollen oder benutzerdefinierte Rollen, jedoch nicht von Server-Rollen enthalten kann.  
+ **'** *role* **'**  
+ Der Name der zu überprüfenden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Rolle. *role* ist vom Datentyp **sysname** und kann feste Datenbankrollen oder benutzerdefinierte Rollen, nicht jedoch Serverrollen einschließen.  
   
 ## <a name="return-types"></a>Rückgabetypen  
  **int**  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  IS_MEMBER gibt folgende Werte zurück.  
   
 |Rückgabewert|Description|  
 |------------------|-----------------|  
-|0|Aktuelle Benutzer ist kein Mitglied der *Gruppe* oder *Rolle*.|  
-|1|Aktuelle Benutzer ist Mitglied der *Gruppe* oder *Rolle*.|  
-|NULL|Entweder *Gruppe* oder *Rolle* ist ungültig. Bei Abfrage durch eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldung oder eine Anmeldung, die eine Anwendungsrolle verwendet, wird NULL für eine Windows-Gruppe zurückgegeben.|  
+|0|Der aktuelle Benutzer ist kein Mitglied von *group* oder *role*.|  
+|1|Der aktuelle Benutzer ist ein Mitglied von *group* oder *role*.|  
+|NULL|Entweder *group* oder *role* ist ungültig. Bei Abfrage durch eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldung oder eine Anmeldung, die eine Anwendungsrolle verwendet, wird NULL für eine Windows-Gruppe zurückgegeben.|  
   
- IS_MEMBER bestimmt die Windows-Gruppenmitgliedschaft durch Analysieren eines Zugriffstokens, das von Windows erstellt wird. Das Zugriffstoken spiegelt keine Änderungen an der Gruppenmitgliedschaft wider, die vorgenommen werden, nachdem ein Benutzer eine Verbindung mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hergestellt hat. Windows-Gruppenmitgliedschaft kann nicht abgefragt werden, indem eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anmeldung oder eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anwendungsrolle.  
+ IS_MEMBER bestimmt die Windows-Gruppenmitgliedschaft durch Analysieren eines Zugriffstokens, das von Windows erstellt wird. Das Zugriffstoken spiegelt keine Änderungen an der Gruppenmitgliedschaft wider, die vorgenommen werden, nachdem ein Benutzer eine Verbindung mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hergestellt hat. Die Windows-Gruppenmitgliedschaft kann nicht von einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldung oder einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anwendungsrolle abgefragt werden.  
   
- Verwenden Sie zum Hinzufügen und Entfernen von Mitgliedern aus einer Datenbankrolle, [ALTER ROLE &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-role-transact-sql.md). Verwenden Sie zum Hinzufügen und Entfernen von Mitgliedern aus einer Serverrolle, [ALTER SERVER ROLE &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-server-role-transact-sql.md).  
+ Um einer Datenbankrolle Elemente hinzuzufügen bzw. um diese aus ihr zu entfernen, verwenden Sie [ALTER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-role-transact-sql.md). Um einer Serverrolle Elemente hinzuzufügen bzw. um diese aus ihr zu entfernen, verwenden Sie [ALTER SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md).  
   
- Diese Funktion wertet die Rollenmitgliedschaft aus, nicht die zugrunde liegende Berechtigung. Z. B. die **Db_owner** feste Datenbankrolle besitzt die **CONTROL DATABASE** Berechtigung. Wenn der Benutzer hat die **CONTROL DATABASE** Berechtigung, ist aber kein Mitglied der Rolle, die diese Funktion meldet ordnungsgemäß, dass der Benutzer nicht Mitglied der **Db_owner** -Rolle ist, obwohl der Benutzer hat die gleiche Berechtigungen.  
+ Diese Funktion wertet die Rollenmitgliedschaft aus, nicht die zugrunde liegende Berechtigung. Die feste Datenbankrolle **db_owner** besitzt z.B. die Berechtigung **CONTROL DATABASE**. Wenn der Benutzer die **CONTROL DATABASE**-Berechtigung besitzt, aber nicht Mitglied der Rolle ist, meldet diese Funktion ordnungsgemäß, dass der Benutzer nicht Mitglied der **db_owner**-Rolle ist, obwohl er dieselben Berechtigungen besitzt.  
   
- Mitglieder der **Sysadmin** festen Serverrolle "" Geben Sie jede Datenbank als die **Dbo** Benutzer. Berechtigungen für Mitglied überprüft die **Sysadmin** feste Serverrolle, überprüft die Berechtigungen für **Dbo**, nicht den ursprünglichen Anmeldenamen. Da **Dbo** kann eine Datenbankrolle hinzugefügt werden und ist nicht vorhanden, in der Windows-Gruppen **Dbo** gibt immer 0 (oder NULL, wenn die Rolle nicht vorhanden ist).  
+ Mitglieder der festen Serverrolle **sysadmin** treten jeder Datenbank als **dbo**-Benutzer bei. Wenn die Berechtigungen der Mitglieder der festen **sysadmin**-Serverrolle überprüft werden, werden auch die Berechtigungen für **dbo**, aber nicht die ursprünglichen Anmeldeinformationen, überprüft. Da **dbo** nicht zu einer Datenbankrolle hinzugefügt werden kann und in Windows-Gruppen nicht vorhanden ist, gibt **dbo** immer 0 (null) (oder NULL, wenn die Rolle nicht vorhanden ist) zurück.  
   
 ## <a name="related-functions"></a>Verwandte Funktionen  
- Um festzustellen, ob eine andere [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anmeldung ist Mitglied einer Datenbankrolle, verwenden Sie [IS_ROLEMEMBER &#40; Transact-SQL &#41; ](../../t-sql/functions/is-rolemember-transact-sql.md). Um zu bestimmen, ob eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anmeldung ist Mitglied einer Serverrolle, verwenden Sie [IS_SRVROLEMEMBER &#40; Transact-SQL &#41; ](../../t-sql/functions/is-srvrolemember-transact-sql.md).  
+ Um zu bestimmen, ob ein anderer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldename Mitglied einer Datenbankrolle ist, verwenden Sie [IS_ROLEMEMBER &#40;Transact-SQL&#41;](../../t-sql/functions/is-rolemember-transact-sql.md). Zum Bestimmen, ob ein anderer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldename ein Mitglied einer Datenbankrolle ist, verwenden Sie [IS_SRVROLEMEMBER &#40;Transact-SQL&#41;](../../t-sql/functions/is-srvrolemember-transact-sql.md).  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird überprüft, ob der aktuelle Benutzer ein Mitglied einer Datenbankrolle oder einer Windows-Domänengruppe ist.  
@@ -105,8 +105,8 @@ IF IS_MEMBER ('ADVWORKS\Shipping') = 1
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [IS_SRVROLEMEMBER &#40; Transact-SQL &#41;](../../t-sql/functions/is-srvrolemember-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [IS_SRVROLEMEMBER &#40;Transact-SQL&#41;](../../t-sql/functions/is-srvrolemember-transact-sql.md)   
  [Prinzipale &#40;Datenbankmodul&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [Sicherheitskatalogsichten &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [Sicherheitsfunktionen &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)  

@@ -1,5 +1,5 @@
 ---
-title: Datums- und Uhrzeittypen | Microsoft Docs
+title: Datums- und Uhrzeittypen | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 7/23/2017
 ms.prod: sql-non-specified
@@ -29,18 +29,18 @@ ms.lasthandoff: 11/21/2017
 # <a name="date-and-time-types"></a>Datums- und Uhrzeittypen
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]unterstützt die folgenden Datums- und Uhrzeittypen.
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt die folgenden Datums- und Uhrzeittypen.
   
 ## <a name="in-this-section"></a>In diesem Abschnitt
 [date &#40;Transact-SQL&#41;](../../t-sql/data-types/date-transact-sql.md)  
-["DateTime" &#40; Transact-SQL &#41;](../../t-sql/data-types/datetime-transact-sql.md)  
+[datetime &#40;Transact-SQL&#41;](../../t-sql/data-types/datetime-transact-sql.md)  
 [datetime2 &#40;Transact-SQL&#41;](../../t-sql/data-types/datetime2-transact-sql.md)  
 [datetimeoffset &#40;Transact-SQL&#41;](../../t-sql/data-types/datetimeoffset-transact-sql.md)  
-[Smalldatetime &#40; Transact-SQL &#41;](../../t-sql/data-types/smalldatetime-transact-sql.md)  
-[Zeit &#40; Transact-SQL &#41;](../../t-sql/data-types/time-transact-sql.md)
+[smalldatetime &#40;Transact-SQL&#41;](../../t-sql/data-types/smalldatetime-transact-sql.md)  
+[time &#40;Transact-SQL&#41;](../../t-sql/data-types/time-transact-sql.md)
   
 ## <a name="see-also"></a>Siehe auch
-[Datums- und Zeitdaten Typen und-Funktionen &#40; Transact-SQL &#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)  
-[ZEITZONE &#40; Transact-SQL &#41;](../../t-sql/queries/at-time-zone-transact-sql.md)
+[Date and Time Data Types and Functions &#40;Transact-SQL&#41; (Datums- und Uhrzeitdatentypen und zugehörige Funktionen (Transact-SQL))](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)  
+[AT TIME ZONE &#40;Transact-SQL&#41;](../../t-sql/queries/at-time-zone-transact-sql.md)
   
   

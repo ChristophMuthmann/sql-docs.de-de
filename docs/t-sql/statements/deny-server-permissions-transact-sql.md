@@ -1,5 +1,5 @@
 ---
-title: "Verweigern von Serverberechtigungen für (Transact-SQL) | Microsoft Docs"
+title: DENY (Serverberechtigungen) (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 06/09/2017
 ms.prod: sql-non-specified
@@ -62,20 +62,20 @@ DENY permission [ ,...n ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *Berechtigung*  
+ *permission*  
  Gibt eine Berechtigung an, die für einen Server verweigert werden kann. Eine Liste der Berechtigungen finden Sie im Abschnitt zu den Hinweisen weiter unten in diesem Thema.  
   
  CASCADE  
  Gibt an, dass die verweigerte Berechtigung auch anderen Prinzipalen verweigert wird, denen diese Berechtigung von diesem Prinzipal erteilt wurde.  
   
- UM \<Server_principal >  
+ TO \<server_principal>  
  Gibt den Prinzipal an, für den die Berechtigung verweigert wird.  
   
- AS \<Grantor_principal >  
+ AS \<grantor_principal>  
  Gibt den Prinzipal an, von dem der Prinzipal, der diese Abfrage ausführt, sein Recht zum Verweigern der Berechtigung ableitet.  
   
  *SQL_Server_login*  
- Gibt eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anmeldung.  
+ Gibt eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldenamen an.  
   
  *SQL_Server_login_mapped_to_Windows_login*  
  Gibt einen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldenamen an, der einem Windows-Anmeldenamen zugeordnet ist.  
@@ -92,10 +92,10 @@ DENY permission [ ,...n ]
  *server_role*  
  Gibt eine Serverrolle an.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Berechtigungen im Serverbereich können nur verweigert werden, wenn master als aktuelle Datenbank verwendet wird.  
   
- Informationen zu Serverberechtigungen kann angezeigt werden, der [Sys. server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) -Katalogsicht und Informationen zu serverprinzipalen in angezeigt werden können die [Sys. server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) -Katalogsicht angezeigt. Informationen zur Mitgliedschaft von Serverrollen kann angezeigt werden, der [server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md) -Katalogsicht angezeigt.  
+ Informationen zu Serverberechtigungen werden in der [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md)-Katalogsicht und Informationen zu Serverprinzipalen in der [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)-Katalogsicht angezeigt. Informationen zur Mitgliedschaft von Serverrollen werden in der [sys.server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md)-Katalogsicht angezeigt.  
   
  Ein Server stellt die höchste Ebene der Berechtigungshierarchie dar. Die spezifischsten und restriktivsten Berechtigungen, die für einen Server verweigert werden können, sind in der folgenden Tabelle aufgeführt.  
   
@@ -122,7 +122,7 @@ DENY permission [ ,...n ]
 |CONNECT SQL|CONTROL SERVER|  
 |CONTROL SERVER|CONTROL SERVER|  
 |CREATE ANY DATABASE|ALTER ANY DATABASE|  
-|CREATE AVAILABILITY GROUP<br /><br /> **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis zur [aktuellen Version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|ALTER ANY AVAILABILITY GROUP|  
+|Erstellen der Verfügbarkeitsgruppe<br /><br /> **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis zur [aktuellen Version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|ALTER ANY AVAILABILITY GROUP|  
 |CREATE DDL EVENT NOTIFICATION|ALTER ANY EVENT NOTIFICATION|  
 |CREATE ENDPOINT|ALTER ANY ENDPOINT|  
 |CREATE SERVER ROLE<br /><br /> **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis zur [aktuellen Version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|ALTER ANY SERVER ROLE|  
@@ -136,17 +136,17 @@ DENY permission [ ,...n ]
 |VIEW ANY DEFINITION|CONTROL SERVER|  
 |VIEW SERVER STATE|ALTER SERVER STATE|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Die folgenden drei Serverberechtigungen wurden in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] hinzugefügt.  
   
- **Verbinden Sie eine beliebige Datenbank** Berechtigung  
- GRANT **CONNECT ANY DATABASE** eine Anmeldung, die eine Verbindung herstellen müssen, um alle derzeit vorhandenen Datenbanken und alle neuen Datenbanken, die möglicherweise in Zukunft erstellt werden. Gewährt keine Berechtigung für Datenbanken außer der Berechtigung zum Herstellen der Verbindung. Kombinieren mit **SELECT ALL USER SECURABLES** oder **VIEW SERVER STATE** ermöglichen einem Überwachungsprozess das Anzeigen aller Daten oder datenbankstatusangaben für die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ **CONNECT ANY DATABASE**-Berechtigung  
+ Erteilen Sie die **CONNECT ANY DATABASE**-Berechtigung einem Anmeldenamen, der eine Verbindung mit allen derzeit vorhandenen Datenbanken und allen zukünftig erstellten neuen Datenbanken herstellen muss. Gewährt keine Berechtigung für Datenbanken außer der Berechtigung zum Herstellen der Verbindung. Kombinieren Sie diese Berechtigung mit **SELECT ALL USER SECURABLES** oder **VIEW SERVER STATE**, um einem Überwachungsprozess das Anzeigen aller Daten oder aller Datenbankstatus in der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zu ermöglichen.  
   
- **Identität einer beliebigen Anmeldung** Berechtigung  
- Wenn die Berechtigung erteilt wird, kann ein Prozess der mittleren Ebene beim Herstellen der Verbindung mit Datenbanken die Identität des Kontos von Clients annehmen, die eine Verbindung mit ihm herstellen. Wenn die Berechtigung verweigert wird, kann verhindert werden, dass ein Anmeldename mit hohen Privilegien die Identität anderer Anmeldenamen annimmt. Angenommen, eine Anmeldung mit **CONTROL SERVER** Berechtigung kann verhindert werden Identität anderer Anmeldenamen annimmt.  
+ **IMPERSONATE ANY LOGIN**-Berechtigung  
+ Wenn die Berechtigung erteilt wird, kann ein Prozess der mittleren Ebene beim Herstellen der Verbindung mit Datenbanken die Identität des Kontos von Clients annehmen, die eine Verbindung mit ihm herstellen. Wenn die Berechtigung verweigert wird, kann verhindert werden, dass ein Anmeldename mit hohen Privilegien die Identität anderer Anmeldenamen annimmt. Beispielsweise kann verhindert werden, dass ein Anmeldename mit einer **CONTROL SERVER**-Berechtigung die Identität anderer Anmeldenamen annimmt.  
   
- **Wählen Sie alle sicherungsfähigen BENUTZERELEMENTE** Berechtigung  
- Wenn sie erteilt wird, kann ein Anmeldename, z. B. ein Auditor, Daten in allen Datenbanken anzeigen, mit denen der Benutzer eine Verbindung herstellen kann. Wenn verweigert wird, verhindert den Zugriff auf Objekte, sofern werden die **Sys** Schema.  
+ **SELECT ALL USER SECURABLES**-Berechtigung  
+ Wenn sie erteilt wird, kann ein Anmeldename, z. B. ein Auditor, Daten in allen Datenbanken anzeigen, mit denen der Benutzer eine Verbindung herstellen kann. Wenn sie verweigert wird, wird der Zugriff auf alle Objekte, außer auf die Objekte im **sys**-Schema, verhindert.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die CONTROL SERVER-Berechtigung oder den Besitz des sicherungsfähigen Elements. Falls die AS-Klausel verwendet wird, muss der angegebene Prinzipal der Besitzer des sicherungsfähigen Elements sein, für das Berechtigungen verweigert werden.  
@@ -171,14 +171,14 @@ DENY CREATE ENDPOINT TO ArifS AS MandarP;
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
  [DENY &#40;Transact-SQL&#41;](../../t-sql/statements/deny-transact-sql.md)   
- [Verweigern von Serverberechtigungen für (Transact-SQL)](../../t-sql/statements/deny-server-permissions-transact-sql.md)   
- [WIDERRUFEN Sie Serverberechtigungen für &#40; Transact-SQL &#41;](../../t-sql/statements/revoke-server-permissions-transact-sql.md)   
+ [DENY (Serverberechtigungen) (Transact-SQL)](../../t-sql/statements/deny-server-permissions-transact-sql.md)   
+ [REVOKE (Serverberechtigungen) &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-server-permissions-transact-sql.md)   
  [Berechtigungshierarchie &#40;Datenbankmodul&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)   
  [sys.fn_builtin_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)   
- [fn_my_permissions &#40; Transact-SQL &#41;](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)   
+ [sys.fn_my_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)   
  [HAS_PERMS_BY_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/has-perms-by-name-transact-sql.md)  
   
   

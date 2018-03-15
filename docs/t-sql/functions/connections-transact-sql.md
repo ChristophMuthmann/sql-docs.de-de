@@ -1,5 +1,5 @@
 ---
-title: '@@CONNECTIONS (Transact-SQL) | Microsoft Docs'
+title: '@@CONNECTIONS (Transact-SQL) | Microsoft-Dokumentation'
 ms.custom: 
 ms.date: 09/18/2017
 ms.prod: sql-non-specified
@@ -35,7 +35,7 @@ ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="x40x40connections-transact-sql"></a>&#x40;&#x40;VERBINDUNGEN (Transact-SQL)
+# <a name="x40x40connections-transact-sql"></a>&#x40;&#x40;CONNECTIONS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
 Gibt die Anzahl der erfolgreichen oder nicht erfolgreichen versuchten Verbindungen zurück, die seit dem letzten Start von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aufgetreten sind.
@@ -51,12 +51,12 @@ Gibt die Anzahl der erfolgreichen oder nicht erfolgreichen versuchten Verbindung
 ## <a name="return-types"></a>Rückgabetypen
 **integer**
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
 Verbindungen sind nicht von Benutzern abhängig. Anwendungen können z. B. mehrere Verbindungen mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] öffnen, ohne dass der Benutzer diese Verbindungen wahrnimmt.
   
-Zum Anzeigen eines Berichts mit mehreren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Statistiken, einschließlich der Verbindungsversuche, führen Sie **Sp_monitor**.
+Sie können einen Bericht mit mehreren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Statistiken anzeigen, einschließlich der Verbindungsversuche, indem Sie **sp_monitor** ausführen.
   
-@@MAX_CONNECTIONS ist die maximale Anzahl zulässiger Verbindungen gleichzeitig mit dem Server. @@CONNECTIONS wird erhöht, bei jedem Anmeldeversuch daher @@CONNECTIONS kann größer sein als @@MAX_CONNECTIONS .
+@@MAX_CONNECTIONS gibt die maximale Anzahl von Verbindungen mit dem Server an, die gleichzeitig zulässig sind. @@CONNECTIONS wird bei jedem Anmeldeversuch inkrementiert, daher kann @@CONNECTIONS größer sein als @@MAX_CONNECTIONS.
   
 ## <a name="examples"></a>Beispiele  
 Im folgenden Beispiel wird die Anzahl der Anmeldeversuche bis zum aktuellen Datum und der aktuellen Uhrzeit angezeigt.
@@ -76,7 +76,7 @@ Today's Date and Time  Login Attempts
 ```  
   
 ## <a name="see-also"></a>Siehe auch
-[Statistische Systemfunktionen &#40;Transact-SQL&#41;](../../t-sql/functions/system-statistical-functions-transact-sql.md)  
-[Sp_monitor &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md)
+[System Statistical Functions &#40;Transact-SQL&#41; (Statistische Systemfunktionen (Transact-SQL))](../../t-sql/functions/system-statistical-functions-transact-sql.md)  
+[sp_monitor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md)
   
   

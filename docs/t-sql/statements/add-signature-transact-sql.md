@@ -1,5 +1,5 @@
 ---
-title: "Signatur hinzufügen (Transact-SQL) | Microsoft Docs"
+title: ADD SIGNATURE (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 05/15/2017
 ms.prod: sql-non-specified
@@ -61,22 +61,22 @@ ADD [ COUNTER ] SIGNATURE TO module_class::module_name
  *module_class*  
  Die Klasse des Moduls, dem die Signatur hinzugefügt wird. Der Standard für Module, die Schemas als Bereiche besitzen, ist OBJECT.  
   
- *Modulname*  
+ *module_name*  
  Der Name einer gespeicherten Prozedur, einer Funktion, einer Assembly oder eines Triggers, die bzw. der signiert oder gegensigniert werden soll.  
   
- Zertifikat *Cert_name*  
+ CERTIFICATE *cert_name*  
  Der Name eines Zertifikats, mit dem die gespeicherte Prozedur, die Funktion, die Assembly oder der Trigger signiert oder gegensigniert werden soll.  
   
- MIT dem Kennwort = "*Kennwort*"  
+ WITH PASSWORD ='*password*'  
  Das Kennwort, das zum Entschlüsseln des privaten Schlüssels des Zertifikats oder asymmetrischen Schlüssels erforderlich ist. Diese Klausel ist nur erforderlich, wenn der private Schlüssel nicht durch den Hauptschlüssel für die Datenbank geschützt ist.  
   
- Signatur =*Signed_blob*  
- Gibt das signierte BLOB-Element des Moduls an. Diese Klausel ist hilfreich, wenn Sie ein Modul ohne den privaten Schlüssel versenden möchten. Bei Verwendung dieser Klausel sind nur das Modul, die Signatur und der öffentliche Schlüssel erforderlich, um das signierte BLOB-Element für eine Datenbank zu signieren. *Signed_blob* Blob selbst im Hexadezimalformat angegeben ist.  
+ SIGNATURE =*signed_blob*  
+ Gibt das signierte BLOB-Element des Moduls an. Diese Klausel ist hilfreich, wenn Sie ein Modul ohne den privaten Schlüssel versenden möchten. Bei Verwendung dieser Klausel sind nur das Modul, die Signatur und der öffentliche Schlüssel erforderlich, um das signierte BLOB-Element für eine Datenbank zu signieren. Bei *signed_blob* handelt es sich um das BLOB-Element im Hexadezimalformat.  
   
- ASYMMETRISCHE Schlüssel *Asym_Key_Name*  
+ ASYMMETRIC KEY *Asym_Key_Name*  
  Der Name eines asymmetrischen Schlüssels, mit dem die gespeicherte Prozedur, die Funktion, die Assembly oder der Trigger signiert oder gegensigniert werden soll.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Das Modul, das signiert oder gegensigniert wird, und das Zertifikat oder der asymmetrische Schlüssel, das bzw. der zum Signieren verwendet wird, müssen bereits vorhanden sein. Jedes Zeichen im Modul ist in der Signaturberechnung enthalten. Hierzu gehören auch führende Wagenrückläufe und Zeilenvorschübe.  
   
  Ein Modul kann mit einer beliebigen Anzahl von Zertifikaten und asymmetrischen Schlüsseln signiert oder gegensigniert werden.  
@@ -96,9 +96,9 @@ ADD [ COUNTER ] SIGNATURE TO module_class::module_name
 >  Wenn Sie eine Prozedur zur Signatur neu erstellen, müssen alle Anweisungen im ursprünglichen Batch mit dem Neuerstellungsbatch übereinstimmen. Wenn ein Teil des Batches anders ist, selbst wenn es sich nur um die Leerzeichen oder Kommentare handelt, unterscheidet sich auch die daraus resultierende Signatur.  
   
 ## <a name="countersignatures"></a>Gegensignaturen  
- Beim Ausführen eines signierten Moduls die Signaturen werden vorübergehend hinzugefügt werden mit dem SQL-Token, aber die Signaturen verloren, wenn das Modul ein weiteres Modul ausführt oder wenn die Ausführung beendet. Eine Gegensignatur ist eine besondere Form der Signatur. Eine Gegensignatur gewährt selbst keine Berechtigungen, sie lässt jedoch zu, dass Signaturen, die vom selben Zertifikat oder asymmetrischen Schlüssel erstellt wurden, über die Dauer des Aufrufs des gegensignierten Objekts beibehalten werden.  
+ Beim Ausführen eines signierten Moduls werden die Signaturen dem SQL-Token vorübergehend hinzugefügt. Sie gehen jedoch verloren, wenn das Modul ein weiteres Modul ausführt oder die Ausführung beendet. Eine Gegensignatur ist eine besondere Form der Signatur. Eine Gegensignatur gewährt selbst keine Berechtigungen, sie lässt jedoch zu, dass Signaturen, die vom selben Zertifikat oder asymmetrischen Schlüssel erstellt wurden, über die Dauer des Aufrufs des gegensignierten Objekts beibehalten werden.  
   
- Beispiel: Die Benutzerin Alice ruft die Prozedur ProcSelectT1ForAlice auf, die wiederum die Prozedur procSelectT1 aufruft, von der eine Auswahl in Tabelle T1 getroffen wird. Alice verfügt über die EXECUTE-Berechtigung für ProcSelectT1ForAlice und procSelectT1, aber sie verfügt nicht über die SELECT-Berechtigung für T1. Außerdem weist die gesamte Kette keine Besitzverkettung auf. Alice kann weder direkt noch über ProcSelectT1ForAlice und procSelectT1 auf die Tabelle T1 zugreifen. Da Alice soll für den Zugriff immer ProcSelectT1ForAlice verwenden soll, möchten wir nicht gewähren der Berechtigung zur Ausführung von proselectt1. Welche Vorgehensweise empfiehlt sich?  
+ Beispiel: Die Benutzerin Alice ruft die Prozedur ProcSelectT1ForAlice auf, die wiederum die Prozedur procSelectT1 aufruft, von der eine Auswahl in Tabelle T1 getroffen wird. Alice verfügt über die EXECUTE-Berechtigung für ProcSelectT1ForAlice und procSelectT1, aber sie verfügt nicht über die SELECT-Berechtigung für T1. Außerdem weist die gesamte Kette keine Besitzverkettung auf. Alice kann weder direkt noch über ProcSelectT1ForAlice und procSelectT1 auf die Tabelle T1 zugreifen. Alice soll für den Zugriff immer ProcSelectT1ForAlice verwenden und erhält deshalb keine Berechtigung zur Ausführung von proSelectT1. Welche Vorgehensweise empfiehlt sich?  
   
 -   Wenn procSelectT1 signiert wird, sodass procSelectT1 auf T1 zugreifen kann, ist Alice in der Lage, procSelectT1 direkt aufzurufen, ohne ProcSelectT1ForAlice aufzurufen.  
   
@@ -106,7 +106,7 @@ ADD [ COUNTER ] SIGNATURE TO module_class::module_name
   
 -   Das Signieren von ProcSelectT1ForAlice funktioniert alleine nicht, weil die Signatur im Aufruf von procSelectT1 verloren gehen würde.  
   
-Doch durch gegensigniert procSelectT1 mit demselben Zertifikat zum Signieren von ProcSelectT1ForAlice, verwendet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hält die Signatur gesamten Aufrufkette und ermöglicht den Zugriff auf T1. Wenn Alice versucht, procSelectT1 direkt aufzurufen, ist kein Zugriff auf T1 möglich, weil durch die Gegensignatur keine Rechte gewährt werden. In Beispiel C unten wird [!INCLUDE[tsql](../../includes/tsql-md.md)] für dieses Beispiel veranschaulicht.  
+Wenn procSelectT1 jedoch anhand desselben Zertifikats, mit dem ProcSelectT1ForAlice signiert wurde, gegensigniert wird, behält [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Signatur während der gesamten Aufrufkette bei und ermöglicht den Zugriff auf T1. Wenn Alice versucht, procSelectT1 direkt aufzurufen, ist kein Zugriff auf T1 möglich, weil durch die Gegensignatur keine Rechte gewährt werden. In Beispiel C unten wird [!INCLUDE[tsql](../../includes/tsql-md.md)] für dieses Beispiel veranschaulicht.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die ALTER-Berechtigung für das Objekt und die CONTROL-Berechtigung für das Zertifikat oder den asymmetrischen Schlüssel. Falls ein zugeordneter privater Schlüssel mit einem Kennwort geschützt ist, muss der Benutzer zudem das Kennwort kennen.  
@@ -255,8 +255,8 @@ DROP LOGIN Alice;
   
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Sys. crypt_properties &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-crypt-properties-transact-sql.md)   
- [Löschen Sie die Signatur &#40; Transact-SQL &#41;](../../t-sql/statements/drop-signature-transact-sql.md)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [sys.crypt_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-crypt-properties-transact-sql.md)   
+ [DROP SIGNATURE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-signature-transact-sql.md)  
   
   

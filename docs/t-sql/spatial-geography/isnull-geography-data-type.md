@@ -1,5 +1,5 @@
 ---
-title: IsNull (Geography-Datentyp) | Microsoft Docs
+title: IsNull (geography-Datentyp) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -33,7 +33,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="isnull-geography-data-type"></a>IsNull (geography-Datentyp)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Eine Eigenschaft, der angibt, wenn die **Geography** -Instanz null ist. Gibt TRUE zurück, wenn die Instanz NULL ist, und gibt 0 zurück, wenn die Instanz nicht NULL ist.  
+  Eigenschaft, die angibt, ob die **geography**-Instanz NULL ist. Gibt TRUE zurück, wenn die Instanz NULL ist, und gibt 0 zurück, wenn die Instanz nicht NULL ist.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -43,18 +43,18 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Rückgabetypen  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Typ: **Bit**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Typ: **bit**  
   
  CLR-Typ: **SqlBoolean**  
   
-## <a name="remarks"></a>Hinweise  
- `IsNull`kann verwendet werden, um zu testen, ob eine **Geography** -Instanz null ist. Dies kann zu möglicherweise verwirrenden Ergebnissen führen, da 0 zurückgegeben wird, wenn die Instanz nicht NULL ist, aber NULL zurückgegeben wird, wenn die Instanz NULL ist.  
+## <a name="remarks"></a>Remarks  
+ `IsNull` kann verwendet werden, um zu überprüfen, ob eine **geography**-Instanz NULL ist. Dies kann zu möglicherweise verwirrenden Ergebnissen führen, da 0 zurückgegeben wird, wenn die Instanz nicht NULL ist, aber NULL zurückgegeben wird, wenn die Instanz NULL ist.  
   
- Diese Methode wird hauptsächlich von der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Infrastruktur; es wird empfohlen, dass Sie das T-SQL-Prädikat IS NULL verwenden, um zu testen, ob eine **Geography** -Instanz null ist. Weitere Informationen zu den T-SQL-Prädikat IS NULL, finden Sie unter [IS NULL &#40; Transact-SQL &#41; ](../../t-sql/queries/is-null-transact-sql.md).  
+ Diese Methode wird in erster Linie von der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Infrastruktur verwendet. Es wird empfohlen, mit dem T-SQL-Prädikat IS NULL zu prüfen, ob eine **geography**-Instanz NULL ist. Weitere Informationen zum T-SQL-Prädikat IS NULL finden Sie unter [IS NULL &#40;Transact-SQL&#41;](../../t-sql/queries/is-null-transact-sql.md).  
   
 ## <a name="examples"></a>Beispiele  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Erweiterte Methoden für geography-Instanzen](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)  
   
   

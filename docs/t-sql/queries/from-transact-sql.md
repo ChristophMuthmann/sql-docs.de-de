@@ -1,5 +1,5 @@
 ---
-title: AUS (Transact-SQL) | Microsoft Docs
+title: FROM (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 08/09/2017
 ms.prod: sql-non-specified
@@ -167,40 +167,40 @@ FROM { <table_source> [ ,...n ] }
  Gibt eine Tabelle, Sicht, Tabellenvariable oder abgeleitete Tabelle als Quelle mit oder ohne Alias zum Verwenden in der [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung an. In einer Anweisung können bis zu 256 Tabellenquellen verwendet werden. Allerdings variiert das Limit in Abhängigkeit vom verfügbaren Arbeitsspeicher und der Komplexität anderer Ausdrücke in der Abfrage. Einzelne Abfragen unterstützen möglicherweise nicht bis zu 256 Tabellenquellen.  
   
 > [!NOTE]  
->  Durch eine hohe Anzahl an Tabellen, auf die in einer Abfrage verwiesen wird, kann möglicherweise die Abfrageleistung beeinträchtigt werden. Zusätzliche Faktoren haben außerdem Auswirkungen auf die Kompilierungs- und Optimierungszeit. Dazu gehören das Vorhandensein von Indizes und indizierte Sichten auf jedem \<Table_source > und die Größe der \<Select_list > in der SELECT-Anweisung.  
+>  Durch eine hohe Anzahl an Tabellen, auf die in einer Abfrage verwiesen wird, kann möglicherweise die Abfrageleistung beeinträchtigt werden. Zusätzliche Faktoren haben außerdem Auswirkungen auf die Kompilierungs- und Optimierungszeit. Dazu zählt das Vorhandensein von Indizes und indizierten Sichten für das \<table_source>-Argument und die Größe des \<select_list>-Arguments in der SELECT-Anweisung.  
   
  Die Reihenfolge der Tabellenquellen nach dem FROM-Schlüsselwort hat keinen Einfluss auf das Resultset. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gibt Fehler zurück, wenn doppelte Namen in der FROM-Klausel angezeigt werden.  
   
  *table_or_view_name*  
  Der Name einer Tabelle oder Sicht.  
   
- Wenn die Tabelle oder Sicht in einer anderen Datenbank auf derselben Instanz von vorhanden ist [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], verwenden Sie einen vollqualifizierten Namen in der Form *Datenbank*. *Schema*. *Object_name*.  
+ Ist die Tabelle oder Sicht in einer anderen Datenbank der gleichen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vorhanden, verwenden Sie einen vollqualifizierten Namen in der Form *database*.*schema*.*object_name*.  
   
- Wenn die Tabelle oder Sicht außerhalb der Instanz von vorhanden ist [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]l, verwenden Sie einen vierteiligen Namen in der Form *Linked_server*. *Katalog*. *Schema*. *Objekt*. Weitere Informationen finden Sie unter [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)erläutert. Ein vierteiliger Name, mit dem Sie erstellt ist, die [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) Funktion als Serverteil des Namens auch zum Angeben der remotequelltabelle verwendet werden kann. Wenn OPENDATASOURCE angegeben wird, *Database_name* und *Schema_name* gelten möglicherweise nicht für alle Datenquellen und unterliegen den Funktionen des OLE DB-Anbieters, der auf das Remoteobjekt zugreift.  
+ Ist die Tabelle oder die Sicht außerhalb der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vorhanden, verwenden Sie einen vierteiligen Namen in der Form *linked_server*.*catalog*.*schema*.*object*. Weitere Informationen finden Sie unter [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)erläutert. Ein vierteiliger Name mit der [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md)-Funktion als Serverteil des Namens kann ebenfalls zum Angeben der Remotequelltabelle verwendet werden. Wenn OPENDATASOURCE angegeben wird, gelten *database_name* und *schema_name* möglicherweise nicht für alle Datenquellen und unterliegen den Funktionen des OLE DB-Anbieters, der auf das Remoteobjekt zugreift.  
   
  [AS] *table_alias*  
- Ist ein Alias für *Table_source* , entweder zur Vereinfachung oder zur Unterscheidung einer Tabelle oder Sicht in einem selbstjoin oder einer Unterabfrage verwendet werden kann. Ein Alias ist oftmals ein verkürzter Tabellenname, der verwendet wird, um in einem Join auf bestimmte Spalten der beteiligten Tabellen zu verweisen. Falls ein Spaltenname in mehr als einer Tabelle des Joins vorkommt, muss dieser Spaltenname für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] durch einen Tabellennamen, einen Sichtnamen oder einen Alias gekennzeichnet werden. Falls ein Alias definiert ist, kann der Tabellenname nicht verwendet werden.  
+ Ein Alias für*table_source*, der zur Vereinfachung oder zur Unterscheidung einer Tabelle oder Sicht in einem Selbstjoin oder einer Unterabfrage verwendet werden kann. Ein Alias ist oftmals ein verkürzter Tabellenname, der verwendet wird, um in einem Join auf bestimmte Spalten der beteiligten Tabellen zu verweisen. Falls ein Spaltenname in mehr als einer Tabelle des Joins vorkommt, muss dieser Spaltenname für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] durch einen Tabellennamen, einen Sichtnamen oder einen Alias gekennzeichnet werden. Falls ein Alias definiert ist, kann der Tabellenname nicht verwendet werden.  
   
- Wenn eine abgeleitete Tabelle, Rowset oder Tabellenwertfunktion oder operatorklausel (z. B. Pivot- oder UNPIVOT) verwendet wird, ist der erforderliche *Table_alias* am Ende der-Klausel wird die verknüpfte Tabellenname für alle Spalten, einschließlich gruppierter Spalten zurückgegeben.  
+ Wenn eine abgeleitete Tabelle, Rowsetwertfunktion, Tabellenwertfunktion oder Operatorklausel (z.B. PIVOT oder UNPIVOT) verwendet wird, ist der erforderliche *table_alias*-Ausdruck am Ende der Klausel der zurückgegebene verknüpfte Tabellenname für alle Spalten, einschließlich gruppierter Spalten.  
   
- MIT (\<Table_hint >)  
+ WITH (\<table_hint> )  
  Gibt an, dass der Abfrageoptimierer eine Optimierungs- oder Sperrstrategie bei dieser Tabelle und für diese Anweisung verwendet. Weitere Informationen finden Sie unter [Tabellenhinweise &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
   
  *rowset_function*  
 
-**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] und [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] und [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
 
   
- Gibt eine der Rowsetfunktionen (z. B. OPENROWSET) an, die ein Objekt zurückgeben, das statt eines Tabellenverweises verwendet werden kann. Weitere Informationen über eine Liste mit Rowsetfunktionen finden Sie unter [Rowset-Funktionen &#40; Transact-SQL &#41; ](../../t-sql/functions/rowset-functions-transact-sql.md).  
+ Gibt eine der Rowsetfunktionen (z. B. OPENROWSET) an, die ein Objekt zurückgeben, das statt eines Tabellenverweises verwendet werden kann. Weitere Informationen zur Liste mit Rowsetfunktionen finden Sie unter [Rowsetfunktionen &#40;Transact-SQL&#41;](../../t-sql/functions/rowset-functions-transact-sql.md).  
   
  Die Verwendung der OPENROWSET- und OPENQUERY-Funktionen zum Angeben eines Remoteobjekts hängt von den Fähigkeiten des OLE DB-Anbieters ab, der auf das Objekt zugreift.  
   
  *bulk_column_alias*  
 
-**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] und [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] und [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
 
   
- Ein optionaler Alias, der einen Spaltennamen im Resultset ersetzt. Spaltenaliase sind nur in SELECT-Anweisungen zulässig, die die OPENROWSET-Funktion mit der BULK-Option verwenden. Bei Verwendung von *Bulk_column_alias*, geben Sie einen Alias für jede Tabellenspalte in derselben Reihenfolge wie die Spalten in der Datei.  
+ Ein optionaler Alias, der einen Spaltennamen im Resultset ersetzt. Spaltenaliase sind nur in SELECT-Anweisungen zulässig, die die OPENROWSET-Funktion mit der BULK-Option verwenden. Wenn Sie *bulk_column_alias* verwenden, geben Sie einen Alias für jede Tabellenspalte in derselben Reihenfolge wie die Spalten in der Datei an.  
   
 > [!NOTE]  
 >  Dieser Alias überschreibt das NAME-Attribut in den COLUMN-Elementen einer XML-Formatdatei, sofern vorhanden.  
@@ -210,25 +210,25 @@ FROM { <table_source> [ ,...n ] }
   
  OPENXML \<openxml_clause>  
 
-**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] und [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] und [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
 
   
- Stellt eine Rowsetsicht eines XML-Dokuments bereit. Weitere Informationen finden Sie unter [OPENXML &#40; Transact-SQL &#41; ](../../t-sql/functions/openxml-transact-sql.md).  
+ Stellt eine Rowsetsicht eines XML-Dokuments bereit. Weitere Informationen finden Sie unter [OPENXML &#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md).  
   
  *derived_table*  
- Entspricht einer Unterabfrage, die Zeilen von der Datenbank abruft. *Derived_table* als Eingabe für die äußere Abfrage verwendet wird.  
+ Entspricht einer Unterabfrage, die Zeilen von der Datenbank abruft. *derived_table* wird für die äußere Abfrage als Eingabe verwendet.  
   
- *abgeleitete* *_table* können die [!INCLUDE[tsql](../../includes/tsql-md.md)] tabellenwertkonstruktors mehrere Zeilen angeben. Beispiel: `SELECT * FROM (VALUES (1, 2), (3, 4), (5, 6), (7, 8), (9, 10) ) AS MyTable(a, b);`. Weitere Informationen finden Sie unter [Tabellenwertkonstruktor &#40; Transact-SQL &#41; ](../../t-sql/queries/table-value-constructor-transact-sql.md).  
+ *derived* *_table* kann mithilfe des Tabellenwertkonstruktors von [!INCLUDE[tsql](../../includes/tsql-md.md)] mehrere Zeilen angeben. Beispiel: `SELECT * FROM (VALUES (1, 2), (3, 4), (5, 6), (7, 8), (9, 10) ) AS MyTable(a, b);`. Weitere Informationen finden Sie unter [Tabellenwertkonstruktor &#40;Transact-SQL&#41;](../../t-sql/queries/table-value-constructor-transact-sql.md).  
   
  *column_alias*  
  Ein optionaler Alias, der einen Spaltennamen im Resultset der abgeleiteten Tabelle ersetzen soll. Geben Sie für jede Spalte in der Auswahlliste einen Spaltenalias an, und schließen Sie die gesamte Liste der Spaltenaliasnamen in Klammern ein.  
   
- *Table_or_view_name* FOR SYSTEM_TIME \<System_time >  
+ *table_or_view_name* FOR SYSTEM_TIME \<system_time>  
 
-**Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] und [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] und [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
 
   
- Gibt an, dass eine bestimmte Version der Daten aus der angegebenen temporalen Tabelle und ihre verknüpften System versionierte Verlaufstabelle zurückgegeben wird  
+ Gibt an, dass eine bestimmte Version von Daten aus der angegebenen temporalen Tabelle und die verknüpfte Verlaufstabelle mit Systemversionsverwaltung zurückgegeben werden.  
   
 \<tablesample_clause>  
  Gibt an, dass Beispieldaten aus der Tabelle zurückgegeben werden. Die Beispieldaten können ungefähr sein. Diese Klausel kann für eine primäre oder verknüpfte Tabelle in einer SELECT-, UPDATE- oder DELETE-Anweisung verwendet werden. TABLESAMPLE kann nicht für Sichten angegeben werden.  
@@ -240,19 +240,19 @@ FROM { <table_source> [ ,...n ] }
  Eine von der Implementierung abhängige Stichprobenmethode, die durch ISO-Standards angegeben ist. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ist dies die einzige verfügbare Stichprobenmethode. Sie wird standardmäßig angewendet. SYSTEM wendet eine seitenbasierte Stichprobenmethode an, in der eine zufällige Gruppe von Seiten aus der Tabelle für die Stichprobe ausgewählt wird. Alle Zeilen auf diesen Seiten werden als Stichprobenteilmenge zurückgegeben.  
   
  *sample_number*  
- Ein genauer oder ungefährer konstanter numerischer Ausdruck, der den Prozentanteil oder die Anzahl der Zeilen angibt. Wenn mit PERCENT angegeben *Sample_number* wird implizit konvertiert, um eine **"float"** Wert; andernfalls wird es in konvertiert **"bigint"**. PERCENT ist die Standardeinstellung.  
+ Ein genauer oder ungefährer konstanter numerischer Ausdruck, der den Prozentanteil oder die Anzahl der Zeilen angibt. Bei der Angabe für PERCENT wird *sample_number* implizit in einen **float**-Wert konvertiert. Anderenfalls wird das Argument in **bigint** konvertiert. PERCENT ist die Standardeinstellung.  
   
  PERCENT  
- Gibt an, dass eine *Sample_number* Prozent der Zeilen der Tabelle aus der Tabelle abgerufen werden sollen. Wenn PERCENT angegeben wird, gibt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einen ungefähren Wert des angegebenen Prozentanteils zurück. Wenn PERCENT angegeben wird die *Sample_number* Ausdruck muss zu einem Wert von 0 bis 100 ausgewertet.  
+ Gibt an, dass ein *sample_number*-Prozentanteil der Zeilen einer Tabelle aus der Tabelle abgerufen werden soll. Wenn PERCENT angegeben wird, gibt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einen ungefähren Wert des angegebenen Prozentanteils zurück. Wenn PERCENT angegeben wird, muss der *sample_number*-Ausdruck zu einem Wert von 0 bis 100 ausgewertet werden.  
   
  ROWS  
- Gibt an, dass eine ungefähre *Sample_number* Zeilen abgerufen werden soll. Wenn ROWS angegeben ist, gibt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ungefähr die angegebene Zeilenanzahl zurück. Wenn ROWS angegeben ist, die *Sample_number* Ausdruck muss auf einen ganzzahligen Wert größer als 0 (null) ausgewertet.  
+ Gibt an, dass eine ungefähre *sample_number*-Zeilenanzahl abgerufen wird. Wenn ROWS angegeben ist, gibt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ungefähr die angegebene Zeilenanzahl zurück. Wenn ROWS angegeben ist, muss der *sample_number*-Ausdruck zu einem ganzzahligen Wert größer als null ausgewertet werden.  
   
  REPEATABLE  
- Gibt an, dass die ausgewählten Stichprobendaten erneut zurückgegeben werden können. Bei Angabe mit demselben *Repeat_seed* Wert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dieselbe Teilmenge von Zeilen zurück, solange keine Änderungen an den Zeilen in der Tabelle vorgenommen wurden. Bei Angabe mit einem anderen *Repeat_seed* Wert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird wahrscheinlich Return einige andere Stichprobe der Zeilen in der Tabelle. Die folgenden an der Tabelle vorgenommenen Aktionen gelten als Änderungen: Einfügen, Aktualisieren, Löschen, neues Erstellen oder Defragmentieren von Indizes sowie Wiederherstellen oder Anfügen von Datenbanken.  
+ Gibt an, dass die ausgewählten Stichprobendaten erneut zurückgegeben werden können. Bei Angabe mit demselben *repeat_seed*-Wert gibt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dieselbe Teilmenge von Zeilen zurück, wenn noch keine Änderungen an den Zeilen in der Tabelle vorgenommen wurden. Bei Angabe mit einem anderen *repeat_seed*-Wert gibt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] möglicherweise einige andere Stichprobenzeilen in der Tabelle zurück. Die folgenden an der Tabelle vorgenommenen Aktionen gelten als Änderungen: Einfügen, Aktualisieren, Löschen, neues Erstellen oder Defragmentieren von Indizes sowie Wiederherstellen oder Anfügen von Datenbanken.  
   
  *repeat_seed*  
- Ist ein konstanter ganzzahliger Ausdruck, der von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zum Generieren einer Zufallszahl verwendet wird. *Repeat_seed* ist **"bigint"**. Wenn *Repeat_seed* nicht angegeben ist, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] weist einen Wert, nach dem Zufallsprinzip. Für einen bestimmten *Repeat_seed* Wert, der stichprobenergebnis gilt immer, wenn keine Änderungen auf die Tabelle angewendet wurden. Die *Repeat_seed* Ausdruck muss in eine ganze Zahl größer als 0 (null) ausgewertet.  
+ Ist ein konstanter ganzzahliger Ausdruck, der von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zum Generieren einer Zufallszahl verwendet wird. *repeat_seed* ist vom Datentyp **bigint**. Wenn *repeat_seed* nicht angegeben ist, weist [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einen zufälligen Wert zu. Für einen bestimmten *repeat_seed*-Wert ist das Stichprobenergebnis immer gleich, wenn keine Änderungen auf die Tabelle angewendet wurden. Der *repeat_seed*-Ausdruck muss zu einem ganzzahligen Wert größer null ausgewertet werden.  
   
  \<joined_table>  
  Ein Resultset, das das Produkt von zwei oder mehr Tabellen darstellt. Verwenden Sie für mehrere Joins Klammern, um die natürliche Joinreihenfolge zu ändern.  
@@ -260,7 +260,7 @@ FROM { <table_source> [ ,...n ] }
 \<join_type>  
  Gibt den Typ der Joinoperation an.  
   
- **INNERE**  
+ **INNER**  
  Gibt an, dass alle übereinstimmenden Paare von Zeilen zurückgegeben werden. Zeilen, die in den beiden Tabellen nicht übereinstimmen, werden verworfen. Wenn kein Jointyp angegeben wird, ist dies die Standardeinstellung.  
   
  FULL [OUTER]  
@@ -273,18 +273,18 @@ FROM { <table_source> [ ,...n ] }
  Gibt an, dass alle Zeilen der rechten Tabelle, die die angegebene Joinbedingung nicht erfüllen, im Resultset enthalten sind. Die Ausgabespalten der anderen Tabelle werden auf NULL gesetzt. Dies erfolgt zusätzlich zu allen Zeilen, die von INNER JOIN zurückgegeben werden.  
   
 \<join_hint>  
- Für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und [!INCLUDE[ssSDS](../../includes/sssds-md.md)], gibt an, dass die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Abfrage Optimierer verwendet einen Joinhinweis oder Ausführungsalgorithmus pro Join in der FROM-Klausel angegeben. Weitere Informationen finden Sie unter [Join-Abfragehinweise &#40; Transact-SQL &#41; ](../../t-sql/queries/hints-transact-sql-join.md).  
+ Gibt für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und [!INCLUDE[ssSDS](../../includes/sssds-md.md)] an, dass der Abfrageoptimierer von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pro Join genau einen in der FROM-Klausel angegebenen Joinhinweis oder Ausführungsalgorithmus verwendet. Weitere Informationen finden Sie unter [Joinhinweise &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-join.md).  
   
- Für [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], diese joinhinweise gelten, für innere Joins von zwei verteilungsspalten nicht kompatibel. Sie können die abfrageleistung verbessern, indem Sie den Betrag der datenverschiebung, die bei der Verarbeitung einer Abfrage einschränken. Die zulässige joinhinweise für [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] lauten wie folgt:  
+ Bei [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] gelten diese Joinhinweise für INNER Joins in zwei verteilungsinkompatiblen Spalten. Sie können die Abfrageleistung verbessern, indem Sie die Anzahl der Datenverschiebungen bei der Verarbeitung von Abfragen einschränken. Die zulässigen Joinhinweise für [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] lauten wie folgt:  
   
- REDUZIEREN  
- Reduziert die Anzahl der Zeilen, die für die Tabelle auf der rechten Seite des Joins verschoben werden, um zwei inkompatible Verteilungstabellen kompatibel zu machen. REDUCE-Hinweis wird einen Semi-join-Hinweis auch aufgerufen werden.  
+ REDUCE  
+ Reduziert die Anzahl der Zeilen, die für die Tabelle auf der rechten Seite des Joins verschoben werden, um zwei verteilungsinkompatible Tabellen kompatibel zu machen. Der REDUCE-Hinweis wird auch als Semijoinhinweis bezeichnet.  
   
  REPLICATE  
- Bewirkt, dass die Werte in die verknüpfte Spalte aus der Tabelle auf der linken Seite des Joins auf allen Knoten repliziert werden sollen. Die Tabelle auf der rechten Seite ist auf die replizierten Version dieser Spalten verknüpft.  
+ Bewirkt, dass die Werte in der Verknüpfungsspalte aus der Tabelle auf der linken Seite des Joins auf allen Knoten repliziert werden. Die Tabelle auf der rechten Seite wird mit der replizierten Version dieser Spalten verknüpft.  
   
- VOM REDISTRIBUTE-HINWEIS  
- Erzwingt, dass zwei Datenquellen werden für Spalten, die in der JOIN-Klausel angegebenen verteilt werden. Für eine verteilte Tabelle [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] führt eine zufällige Verschiebung. Für eine replizierte Tabelle [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] führt eine Kürzung verschieben. Um zu verstehen, Verschieben dieser Typen, finden Sie im Abschnitt "DMS-Abfrage-Plan-Vorgänge" im Thema "Grundlegendes zu Abfragepläne" in der [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]. Dieser Hinweis kann die Leistung verbessern, wenn der Abfrageplan einen broadcast Verschiebevorgang verwendet, um eine Verteilung inkompatible Join zu beheben.  
+ REDISTRIBUTE  
+ Erzwingt, dass zwei Datenquellen in Spalten verteilt werden, die in der JOIN-Klausel angegeben sind. Bei einer verteilten Tabelle führt [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] eine Verschiebung mit Vermischung durch. Bei einer replizierten Tabelle führt [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] eine Zuschneide-Verschiebung durch. Informationen zu diesen Verschiebungsarten finden Sie im Abschnitt "DMS Query Plan Operations" (DMS-Abfrageplanvorgänge) im Thema "Understanding Query Plans" (Informationen zu Abfrageplänen) in der [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]. Mit diesem Hinweis kann die Leistung verbessert werden, wenn beim Abfrageplan eine Übertragungs-Verschiebung verwendet wird, um einen verteilungsinkompatiblen Join zu beseitigen.  
   
  JOIN  
  Legt fest, dass die angegebene Joinoperation mit den angegebenen Tabellenquellen oder Sichten durchgeführt werden soll.  
@@ -304,17 +304,17 @@ ON (p.ProductID = v.ProductID);
   
  Es kann Prädikate geben, die sich auf nur eine der verknüpften Tabellen beziehen, die in der ON-Klausel angegeben sind. Derartige Prädikate können auch in der WHERE-Klausel der Abfrage stehen. Bei einem inneren Join (INNER JOIN) spielt es keine Rolle, wo diese Prädikate stehen. Bei einem äußeren Join (OUTER JOIN) können derartige Prädikate dagegen zu unterschiedlichen Ergebnissen führen. Dies liegt daran, dass die in der ON-Klausel angegebenen Prädikate vor dem Join auf die Tabelle angewendet werden, während die WHERE-Klausel semantisch auf das Ergebnis des Joins angewendet wird.  
   
- Weitere Informationen zu suchbedingungen und Prädikaten finden Sie unter [Suchbedingung &#40; Transact-SQL &#41; ](../../t-sql/queries/search-condition-transact-sql.md).  
+ Weitere Informationen zu Suchbedingungen und Prädikaten finden Sie unter [Suchbedingung &#40;Transact-SQL&#41;](../../t-sql/queries/search-condition-transact-sql.md).  
   
  CROSS JOIN  
  Gibt das Kreuzprodukt zweier Tabellen an. Gibt dieselben Zeilen wie die frühere Joinanweisung (die nicht SQL-92-gemäß ist) ohne WHERE-Klausel zurück.  
   
  *left_table_source* { CROSS | OUTER } APPLY *right_table_source*  
- Gibt an, dass die *Right_table_source* der Apply-Operators wird ausgewertet, für jede Zeile des der *Left_table_source*. Diese Funktion ist nützlich, wenn die *Right_table_source* enthält eine Tabellenwertfunktion, die Spaltenwerte aus der *Left_table_source* als eines ihrer Argumente.  
+ Gibt an, dass der *right_table_source*-Ausdruck des APPLY-Operators für jede Zeile des *left_table_source*-Ausdrucks ausgewertet wird. Diese Funktionalität ist hilfreich, wenn *right_table_source* eine Tabellenwertfunktion enthält, die Spaltenwerte aus *left_table_source* als eines ihrer Argumente verwendet.  
   
- Mit APPLY muss CROSS oder OUTER angegeben werden. Wenn CROSS angegeben wird, werden keine Zeilen erstellt bei der *Right_table_source* wird ausgewertet, für eine bestimmte Zeile von der *Left_table_source* und gibt ein leeres Resultset zurück.  
+ Mit APPLY muss CROSS oder OUTER angegeben werden. Wenn CROSS angegeben wird, werden keine Zeilen erstellt, wenn *right_table_source* für eine bestimmte Zeile von *left_table_source* ausgewertet wird. Das zurückgegebene Resultset ist leer.  
   
- Wenn OUTER angegeben wird, wird eine Zeile für jede Zeile der erzeugt der *Left_table_source* , auch wenn die *Right_table_source* für diese Zeile ausgewertet, und gibt ein leeres Resultset zurück.  
+ Wenn OUTER angegeben wird, wird für jede Zeile von *left_table_source* eine Zeile erstellt, selbst dann wenn *right_table_source* für diese Zeile ausgewertet wird. Das zurückgegebene Resultset ist leer.  
   
  Weitere Informationen finden Sie im Abschnitt mit Hinweisen.  
   
@@ -325,9 +325,9 @@ ON (p.ProductID = v.ProductID);
  Eine Tabellenquelle gemäß Definition im vorherigen Argument. Weitere Informationen finden Sie im Abschnitt mit Hinweisen.  
   
  *table_source* PIVOT \<pivot_clause>  
- Gibt an, dass die *Table_source* pivotiert wird basierend auf den *Pivot_column*. *Table_source* ist eine Tabelle oder ein Tabellenausdruck. Die Ausgabe ist eine Tabelle, die alle Spalten der enthält die *Table_source* mit Ausnahme der *Pivot_column* und *Value_column*. Die Spalten der *Table_source*, mit Ausnahme der *Pivot_column* und *Value_column*, werden als Gruppierungsspalten des Pivot-Operators bezeichnet. Weitere Informationen zu PIVOT und UNPIVOT, finden Sie unter [mithilfe von PIVOT und UNPIVOT](../../t-sql/queries/from-using-pivot-and-unpivot.md).  
+ Gibt an, dass *table_source* basierend auf *pivot_column* pivotiert wird. *table_source* ist eine Tabelle oder ein Tabellenausdruck. Die Ausgabe ist eine Tabelle, die alle Spalten von *table_source* enthält mit Ausnahme von *pivot_column* und *value_column*. Die Spalten von *table_source* mit Ausnahme von *pivot_column* und *value_column* werden als Gruppierungsspalten des PIVOT-Operators bezeichnet. Weitere Informationen zu PIVOT und UNPIVOT finden Sie unter [Verwenden von PIVOT und UNPIVOT](../../t-sql/queries/from-using-pivot-and-unpivot.md).  
   
- PIVOT führt einen Gruppierungsvorgang für die Eingabetabelle in Bezug auf die Gruppierungsspalten aus und gibt für jede Gruppe eine Zeile zurück. Darüber hinaus enthält die Ausgabe eine Spalte für jeden Wert im angegebenen der *Column_list* , angezeigt wird, der *Pivot_column* von der *Input_table*.  
+ PIVOT führt einen Gruppierungsvorgang für die Eingabetabelle in Bezug auf die Gruppierungsspalten aus und gibt für jede Gruppe eine Zeile zurück. Zusätzlich enthält die Ausgabe eine Spalte für jeden Wert, der in *column_list* angegeben ist. Diese Liste wird in der *pivot_column*-Spalte der *input_table*-Tabelle angezeigt.  
   
  Weitere Informationen finden Sie im nachfolgenden Abschnitt mit Hinweisen.  
   
@@ -337,55 +337,55 @@ ON (p.ProductID = v.ProductID);
  Die systembasierte Aggregatfunktion COUNT(*) ist nicht zulässig.  
   
  *value_column*  
- Die Wertspalte des PIVOT-Operators. Bei Verwendung mit UNPIVOT, *Value_column* kann nicht der Name einer vorhandenen Spalte in der Eingabe *Table_source*.  
+ Die Wertspalte des PIVOT-Operators. Bei Verwendung mit UNPIVOT kann *value_column* nicht der Name einer vorhandenen Spalte in der *table_source*-Eingabe sein.  
   
- FÜR *Pivot_column*  
- Entspricht der Pivotspalte des PIVOT-Operators. *Pivot_column* eines Typs, der implizit oder explizit konvertiert werden kann, muss **nvarchar()**. Diese Spalte darf nicht sein **Image** oder **Rowversion**.  
+ FOR *pivot_column*  
+ Entspricht der Pivotspalte des PIVOT-Operators. *pivot_column* muss einen Typ aufweisen, der implizit oder explizit in **nvarchar()** konvertiert werden kann. Diese Spalte darf nicht vom Typ **image** oder **rowversion** sein.  
   
- Wenn UNPIVOT verwendet wird, *Pivot_column* ist der Name der Ausgabespalte, die eingeschränkt wird die *Table_source*. Es darf nicht in eine vorhandene Spalte sein *Table_source* mit diesem Namen.  
+ Wenn UNPIVOT verwendet wird, ist *pivot_column* der Name der Ausgabespalte, zu der *table_source* eingeschränkt wird. In *table_source* darf es keine vorhandene Spalte mit diesem Namen geben.  
   
- IN (*Column_list* )  
- Führt Sie in der PIVOT-Klausel, die Werte in der *Pivot_column* , die die Spaltennamen der Ausgabetabelle zu. Die Liste kann keine Spaltennamen, die bereits existieren angeben, in der Eingabe *Table_source* pivotiert werden wird.  
+ IN (*column_list* )  
+ Führt in der PIVOT-Klausel die Werte in der *pivot_column*-Spalte auf, die zu den Spaltennamen der Ausgabetabelle werden. In der Liste können keine Spaltennamen angegeben werden, die bereits in der zu pivotierenden *table_source*-Eingabe vorhanden sind.  
   
- In der UNPIVOT-Klausel sind die Spalten *Table_source* ,-Spalte eingeschränkt werden in einem einzelnen *Pivot_column*.  
+ Führt in der UNPIVOT-Klausel die Spalten in *table_source* auf, die zu einer einzelnen *pivoe_column*-Spalte eingeschränkt werden.  
   
  *table_alias*  
- Entspricht dem Aliasnamen der Ausgabetabelle. *Pivot_table_alias* muss angegeben werden.  
+ Entspricht dem Aliasnamen der Ausgabetabelle. *pivot_table_alias* muss angegeben werden.  
   
- UNPIVOT \< Unpivot_clause >  
- Gibt an, dass die Eingabetabelle aus mehreren Spalten in eingeschränkt wird *Column_list* in einer einzelnen Spalte namens *Pivot_column*. Weitere Informationen zu PIVOT und UNPIVOT, finden Sie unter [mithilfe von PIVOT und UNPIVOT](../../t-sql/queries/from-using-pivot-and-unpivot.md).  
+ UNPIVOT \< unpivot_clause >  
+ Gibt an, dass die Eingabetabelle aus mehreren Spalten in *column_list* zu einer einzelnen Spalte namens *pivot_column* eingeschränkt wird. Weitere Informationen zu PIVOT und UNPIVOT finden Sie unter [Verwenden von PIVOT und UNPIVOT](../../t-sql/queries/from-using-pivot-and-unpivot.md).  
   
- ALS der \<Datum_Uhrzeit >  
+ AS OF \<date_time>  
 
-**Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] und [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] und [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
 
   
- Gibt eine Tabelle mit einem einzelnen Datensatz für jede Zeile zurück, die die Werte enthält, die zum angegebenen Zeitpunkt in der Vergangenheit real (aktuell) waren. Intern wird eine Union zwischen der temporalen Tabelle und ihrer Verlaufstabelle ausgeführt, und die Ergebnisse werden gefiltert, dass die Werte in der Zeile zurückgegeben, die vom angegebenen Zeitpunkt gültig war die  *\<Datum_Uhrzeit >* Parameter. Der Wert für eine Zeile wird für gültig befunden Wenn die *System_start_time_column_name* Wert ist kleiner als oder gleich der  *\<Datum_Uhrzeit >* Parameterwert und die *System_end_time_ Column_name* Wert ist größer als die  *\<Datum_Uhrzeit >* Parameterwert.   
+ Gibt eine Tabelle mit einem einzelnen Datensatz für jede Zeile zurück, die die Werte enthält, die zum angegebenen Zeitpunkt in der Vergangenheit real (aktuell) waren. Intern wird eine Union zwischen der temporalen Tabelle und ihrer Verlaufstabelle ausgeführt, und die Ergebnisse werden so gefiltert, dass die Werte in der Zeile zurückgegeben werden, die zu dem durch den Parameter *\<date_time>* angegebenen Zeitpunkt gültig waren. Der Wert für eine Zeile ist gültig, wenn der Wert *system_start_time_column_name* kleiner als oder gleich dem Parameterwert *\<date_time>* und der Wert *system_end_time_column_name* größer als der Parameterwert *\<date_time>* ist.   
   
  FROM \<start_date_time> TO \<end_date_time>
 
-**Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] und [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
+**Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] und [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
 
   
- Gibt eine Tabelle mit den Werten für alle Datensatzversionen, die innerhalb des angegebenen Zeitraums, unabhängig davon, ob sie vor dem aktiv waren die  *\<start_datum_uhrzeit >* Parameterwert für die Argument ist oder nicht mehr aktiviert, wenn die  *\<ende_datum_uhrzeit >* Parameterwert für das TO-Argument. Intern wird eine Union zwischen der temporalen Tabelle und ihrer Verlaufstabelle ausgeführt, und die Ergebnisse werden so gefiltert, dass die Werte für alle Zeilenversionen zurückgegeben werden, die zu irgendeinem Zeitpunkt innerhalb des angegebenen Zeitbereichs aktiv waren. Zeilen, die genau an dem durch die FROM-Endpunkt definierten unteren Grenzwert aktiv wurden, sind enthalten, und Zeilen, die genau an dem durch den TO-Endpunkt definierten oberen Grenzwert aktiv wurden, sind nicht enthalten.  
+ Gibt eine Tabelle mit den Werten für alle Zeilenversionen zurück, die innerhalb des angegebenen Zeitbereichs aktiv waren, unabhängig davon, ob ihre Aktivität vor dem *\<start_date_time>*-Parameterwert für das FROM-Argument begonnen hat oder ihre Aktivität nach dem *\<end_date_time>*-Parameterwert für das TO-Argument geendet hat. Intern wird eine Union zwischen der temporalen Tabelle und ihrer Verlaufstabelle ausgeführt, und die Ergebnisse werden so gefiltert, dass die Werte für alle Zeilenversionen zurückgegeben werden, die zu irgendeinem Zeitpunkt innerhalb des angegebenen Zeitbereichs aktiv waren. Zeilen, die genau an dem durch den FROM-Endpunkt definierten unteren Grenzwert aktiv wurden, sind enthalten, und Datensätze, die genau an dem durch den TO-Endpunkt definierten oberen Grenzwert aktiv wurden, sind nicht enthalten.  
   
  BETWEEN \<start_date_time> AND \<end_date_time>  
 
-**Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] und [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] und [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
- Gleich wie oben in der **FROM \<startdatum_uhrzeit > TO \<ende_datum_uhrzeit >** Beschreibung, außer sie Zeilen, die auf die enthalten durch definierten oberen Grenzwert aktiv wurden die \<enddatum_uhrzeit > Endpunkt.  
+ Gleich wie oben in der Beschreibung zu **FROM \<start_date_time> TO \<end_date_time>**, mit dem Unterschied, dass sie Zeilen enthält, die an dem durch den \<end_date_time>-Endpunkt definierten oberen Grenzwert aktiv wurden.  
   
  CONTAINED IN (\<start_date_time> , \<end_date_time>)  
 
-**Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] und [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] und [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
 
   
  Gibt eine Tabelle mit den Werten für alle Datensatzversionen zurück, die innerhalb des von den zwei Datums-/Uhrzeitwerten für das Argument CONTAINED IN definierten Zeitbereichs geöffnet und geschlossen wurden. Zeilen, die genau beim unteren Grenzwert aktiv wurden, oder deren Aktivität genau beim oberen Grenzwert endete, sind enthalten.  
   
  ALL  
- Gibt eine Tabelle mit den Werten aus der alle Zeilen aus der aktuellen Tabelle und der Verlaufstabelle zurück.  
+ Gibt eine Tabelle mit den Werten aus allen Zeilen aus der aktuellen Tabelle und aus der Verlaufstabelle zurück.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Die FROM-Klausel unterstützt die SQL-Syntax von SQL-92 für verknüpfte und abgeleitete Tabellen. Die SQL-92-Syntax stellt die Joinoperatoren INNER, LEFT OUTER, RIGHT OUTER, FULL OUTER und CROSS zur Verfügung.  
   
  UNION und JOIN in einer FROM-Klausel werden in Sichten, abgeleiteten Tabellen und Unterabfragen unterstützt.  
@@ -395,39 +395,39 @@ ON (p.ProductID = v.ProductID);
  Da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verteilungs- und Kardinalitätsstatistiken von Verbindungsservern berücksichtigt, die Spaltenverteilungsstatistiken bereitstellen, ist der REMOTE-Joinhinweis nicht erforderlich, um eine Remotebewertung eines Joins zu erzwingen. Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Abfrageprozessor berücksichtigt Remotestatistiken und bestimmt, ob eine Remotejoinstrategie geeignet ist. Der REMOTE-Joinhinweis ist für Anbieter nützlich, die keine Spaltenverteilungsstatistiken bereitstellen.  
   
 ## <a name="using-apply"></a>Verwenden von APPLY  
- Der linke und der rechte Operand des APPLY-Operators sind Tabellenausdrücke. Der Hauptunterschied zwischen diesen Operanden besteht darin, die die *Right_table_source* können eine Tabellenwert-Funktion, die eine Spalte aus der *Left_table_source* als eines der Argumente der Funktion. Die *Left_table_source* Tabellenwertfunktionen enthalten jedoch darf keine Argumente, die Spalten aus der *Right_table_source*.  
+ Der linke und der rechte Operand des APPLY-Operators sind Tabellenausdrücke. Der Hauptunterschied zwischen diesen Operanden besteht darin, dass *right_table_source* eine Tabellenwertfunktion verwenden kann, die eine Spalte aus *left_table_source* als eines der Argumente der Funktion verwendet. *left_table_source* kann Tabellenwertfunktionen einschließen. Dieser Operand kann allerdings keine Argumente enthalten, die Spalten aus *right_table_source* sind.  
   
  Der APPLY-Operator funktioniert folgendermaßen, um die Tabellenquelle für die FROM-Klausel zu produzieren:  
   
-1.  Wertet *Right_table_source* für jede Zeile von der *Left_table_source* um Rowsets zu erstellen.  
+1.  Wertet *right_table_source* für alle Zeilen von *left_table_source* aus, um Rowsets zu erstellen.  
   
-     Die Werte in der *Right_table_source* richten sich nach *Left_table_source*. *Right_table_source* etwa folgendermaßen dargestellt werden kann: `TVF(left_table_source.row)`, wobei `TVF` ist eine Funktion mit Tabellenrückgabe.  
+     Die Werte in *right_table_source* hängen von *left_table_source* ab. *right_table_source* lässt sich etwa folgendermaßen darstellen: `TVF(left_table_source.row)`, wobei `TVF` eine Tabellenwertfunktion ist.  
   
-2.  Kombiniert die Resultsets werden für jede Zeile in der Auswertung erzeugt *Right_table_source* mit der *Left_table_source* durch eine UNION ALL-Operation.  
+2.  Kombiniert die Resultsets, die für die einzelnen Zeilen in der Auswertung von *right_table_source* mit *left_table_source* unter Ausführung eines UNION ALL-Vorgangs erstellt werden.  
   
-     Die Liste der Spalten, die durch das Ergebnis des APPLY-Operators erstellt, ist der Satz von Spalten aus der *Left_table_source* kombiniert, die mit der Liste der Spalten aus der *Right_table_source*.  
+     Die Liste der Spalten, die durch das Ergebnis des APPLY-Operators erstellt wurde, ist die Gruppe der Spalten aus *left_table_source*, die mit der Liste der Spalten aus *right_table_source* kombiniert wird.  
   
 ## <a name="using-pivot-and-unpivot"></a>Verwenden von PIVOT und UNPIVOT  
- Die *Pivot_column* und *Value_column* sind Gruppierungsspalten, die vom PIVOT-Operator verwendet werden. PIVOT führt dabei die folgenden Schritte aus, um das Ausgaberesultset zu erhalten:  
+ Bei *pivot_column* und *value_column* handelt es sich um Gruppierungsspalten, die vom PIVOT-Operator verwendet werden. PIVOT führt dabei die folgenden Schritte aus, um das Ausgaberesultset zu erhalten:  
   
-1.  Führt eine GROUP BY-Klausel für die *Input_table* für die Gruppierung und produziert eine Ausgabezeile für jede Gruppe.  
+1.  Führt einen GROUP BY-Vorgang für *input_table* für die Gruppierungsspalten aus und produziert eine Ausgabespalte für jede Gruppe.  
   
-     Das Gruppieren von Spalten in der Ausgabezeile Abrufen der entsprechenden Werte für diese Gruppe in der *Input_table*.  
+     Die Gruppierungsspalten in der Ausgabespalte erhalten für diese Gruppe in *input_table* die entsprechenden Spaltenwerte.  
   
 2.  Generiert folgendermaßen Werte für die Spalten in der Spaltenliste für jede Ausgabezeile:  
   
-    1.  Zusätzliches Gruppieren der Zeilen in der GROUP BY im vorherigen Schritt für generiert die *Pivot_column*.  
+    1.  Zusätzliches Gruppieren der Zeilen für *pivot_column*, die im vorherigen Schritt in GROUP BY generiert wurden.  
   
-         Für jede Spalte in der *Column_list*, Auswählen einer Untergruppe, das die Bedingung erfüllt:  
+         Auswählen einer Untergruppe für jede Ausgabespalte in *column_list*. Die Untergruppe erfüllt folgende Bedingung:  
   
          `pivot_column = CONVERT(<data type of pivot_column>, 'output_column')`  
   
-    2.  *Aggregate_function* erfolgt eine Auswertung anhand der *Value_column* in dieser Untergruppe und das Ergebnis wird zurückgegeben als Wert des entsprechenden *Output_column*. Wenn die Untergruppe leer ist, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] generiert einen null-Wert für diesen *Output_column*. Wenn die Aggregatfunktion COUNT ist und die Untergruppe leer ist, wird null (0) zurückgegeben.  
+    2.  *aggregate_function* wird für *value_column* bei dieser Untergruppe ausgewertet. Das Ergebnis wird als der Wert der entsprechenden *output_column*-Spalte ausgegeben. Wenn die Untergruppe leer ist, generiert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einen NULL-Wert für diese *output_column*-Spalte. Wenn die Aggregatfunktion COUNT ist und die Untergruppe leer ist, wird null (0) zurückgegeben.  
 
 > [!NOTE]
-> Die Spalten-IDs in der `UNPIVOT` -Klausel folgen die katalogsortierung. Für [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], die Sortierung ist immer `SQL_Latin1_General_CP1_CI_AS`. Für [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] teilweise eigenständige Datenbanken, die Sortierung ist immer `Latin1_General_100_CI_AS_KS_WS_SC`. Wenn die Spalte mit den anderen Spalten, und klicken Sie dann auf eine Collate-Klausel kombiniert wird (`COLLATE DATABASE_DEFAULT`) ist erforderlich, um Konflikte zu vermeiden.   
+> Die Spaltenbezeichner in der `UNPIVOT`-Klausel folgen der Katalogsortierung. Bei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] wird immer die Sortierung `SQL_Latin1_General_CP1_CI_AS` verwendet. Bei teilweise eigenständigen [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]-Datenbanken wird immer die Sortierung `Latin1_General_100_CI_AS_KS_WS_SC` verwendet. Wenn die Spalte mit anderen Spalten kombiniert wird, ist eine COLLATE-Klausel (`COLLATE DATABASE_DEFAULT`) erforderlich, um Konflikte zu vermeiden.   
   
- Weitere Informationen zu PIVOT und UNPIVOT, einschließlich Beispielen, finden Sie unter [mithilfe von PIVOT und UNPIVOT](../../t-sql/queries/from-using-pivot-and-unpivot.md).  
+ Weitere Informationen zu PIVOT und UNPIVOT sowie entsprechende Beispiele finden Sie unter [Verwenden von PIVOT und UNPIVOT](../../t-sql/queries/from-using-pivot-and-unpivot.md).  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die Berechtigungen für die DELETE-, SELECT- oder UPDATE-Anweisung.  
@@ -471,7 +471,7 @@ FROM HumanResources.Employee WITH (TABLOCK, HOLDLOCK) ;
 ```  
   
 ### <a name="c-using-the-sql-92-cross-join-syntax"></a>C. Verwenden der SQL-92-CROSS JOIN-Syntax  
- Im folgenden Beispiel wird das Kreuzprodukt der beiden Tabellen `Employee` und `Department` in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Datenbank zurückgegeben. Eine Liste aller möglichen Kombinationen von `BusinessEntityID` Zeilen und alle `Department` -namenspalten wird zurückgegeben.  
+ Im folgenden Beispiel wird das Kreuzprodukt der beiden Tabellen `Employee` und `Department` in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Datenbank zurückgegeben. Eine Liste aller möglichen Kombinationen der `BusinessEntityID`-Zeilen und aller `Department`-Namenszeilen wird zurückgegeben.  
   
 ```wql    
 SELECT e.BusinessEntityID, d.Name AS Department  
@@ -603,11 +603,11 @@ CROSS APPLY sys.dm_exec_query_plan(cp.plan_handle);
 GO  
 ```  
   
-### <a name="m-using-for-systemtime"></a>M. Verwenden FOR SYSTEM_TIME  
+### <a name="m-using-for-systemtime"></a>M. Verwenden von FOR SYSTEM_TIME  
   
-**Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] und [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] und [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
- Im folgenden Beispiel wird das Argument der FOR SYSTEM_TIME AS OF Date_time_literal_or_variable zurückzugebenden Zeilen der Tabelle, die seit dem 1. Januar 2014 tatsächliche (aktuell) waren.  
+ Im folgenden Beispiel wird das Argument FOR SYSTEM_TIME AS OF date_time_literal_or_variable verwendet, um Tabellenzeilen zurückzugeben, die am 1. Januar 2014 aktuell waren.  
   
 ```sql
 SELECT DepartmentNumber,   
@@ -619,7 +619,7 @@ FOR SYSTEM_TIME AS OF '2014-01-01'
 WHERE ManagerID = 5;
 ```  
   
- Im folgenden Beispiel wird die Date_time_literal_or_variable FOR SYSTEM_TIME FROM Date_time_literal_or_variable-Argument, um Zeilen zurückzugeben, die während des Zeitraums definiert, wie mit dem 1. Januar 2013 beginnt und endet mit dem 1. Januar 2014 aktiv waren, exklusive obere Grenze.  
+ Im folgenden Beispiel wird das Argument „FOR SYSTEM_TIME FROM date_time_literal_or_variable TO date_time_literal_or_variable“ verwendet, um alle Zeilen zurückzugeben, die in dem Zeitraum aktiv waren, für dessen Beginn der 1. Januar 2013 und für dessen Ende der 1. Januar 2014 ohne oberen Grenzwert definiert wurde.  
   
 ```sql
 SELECT DepartmentNumber,   
@@ -631,7 +631,7 @@ FOR SYSTEM_TIME FROM '2013-01-01' TO '2014-01-01'
 WHERE ManagerID = 5;
 ```  
   
- Im folgenden Beispiel wird die für SYSTEM_TIME zwischen Date_time_literal_or_variable und Date_time_literal_or_variable-Argument, um zurückzugeben, alle Zeilen, die während des Zeitraums definiert, wie mit dem 1. Januar 2013 beginnt und endet mit dem 1. Januar 2014 aktiv waren, der oberen Grenze liegen.  
+ Im folgenden Beispiel wird das Argument FOR SYSTEM_TIME BETWEEN date_time_literal_or_variable AND date_time_literal_or_variable verwendet, um alle Zeilen zurückzugeben, die in dem Zeitraum aktiv waren, für dessen Beginn der 1. Januar 2013 und für dessen Ende der 1. Januar 2014 mit oberem Grenzwert definiert wurde.  
   
 ```sql
 SELECT DepartmentNumber,   
@@ -643,7 +643,7 @@ FOR SYSTEM_TIME BETWEEN '2013-01-01' AND '2014-01-01'
 WHERE ManagerID = 5;
 ```  
   
- Im folgenden Beispiel wird der FOR SYSTEM_TIME CONTAINED IN (Date_time_literal_or_variable, Date_time_literal_or_variable)-Argument, um Zeilen zurückzugeben, die geöffnet und geschlossen wurden während des Zeitraums, der als "mit dem 1. Januar 2013 beginnt und endet mit" definiert wurden 1. Januar 2014.  
+ Im folgenden Beispiel wird das Argument FOR SYSTEM_TIME CONTAINED IN ( date_time_literal_or_variable, date_time_literal_or_variable ) verwendet, um alle Zeilen zurückzugeben, die in dem Zeitraum geöffnet und geschlossen wurden, für dessen Beginn der 1. Januar 2013 und für dessen Ende der 1. Januar 2014 definiert wurde.  
   
 ```sql
 SELECT DepartmentNumber,   
@@ -655,7 +655,7 @@ FOR SYSTEM_TIME CONTAINED IN ( '2013-01-01', '2014-01-01' )
 WHERE ManagerID = 5;
 ```  
   
- Im folgenden Beispiel wird eine Variable statt ein Literal der Begrenzungswerte des Datums für die Abfrage bereitstellen.  
+ Im folgenden Beispiel wird anstelle eines Literals eine Variable verwendet, um die Datumsgrenzwerte für die Abfrage bereitzustellen.  
   
 ```sql
 DECLARE @AsOfFrom datetime2 = dateadd(month,-12, sysutcdatetime());
@@ -670,10 +670,10 @@ FOR SYSTEM_TIME FROM @AsOfFrom TO @AsOfTo
 WHERE ManagerID = 5;
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
-### <a name="n-using-the-inner-join-syntax"></a>N. Verwenden der INNER JOIN-syntax  
- Das folgende Beispiel gibt die `SalesOrderNumber`, `ProductKey`, und `EnglishProductName` Spalten aus der `FactInternetSales` und `DimProduct` Tabellen Where des Joinschlüssels `ProductKey`, in beiden Tabellen entspricht. Die `SalesOrderNumber` und `EnglishProductName` Spalten jeweils in eine der Tabellen nur vorhanden sein, daher ist es nicht erforderlich, den Tabellenalias mit den folgenden Spalten anzugeben, wie gezeigt; diese Aliase sind aus Gründen der Lesbarkeit. Das Wort **AS** vor dem Alias Name ist nicht erforderlich, jedoch wird empfohlen, zur besseren Lesbarkeit und dem ANSI-Standard entsprechen.  
+### <a name="n-using-the-inner-join-syntax"></a>N. Verwenden der INNER JOIN-Syntax  
+ Im folgenden Beispiel werden die Spalten `SalesOrderNumber`, `ProductKey` und `EnglishProductName` aus den Tabellen `FactInternetSales` und `DimProduct` zurückgegeben, wobei der Joinschlüssel `ProductKey` in beiden Tabellen übereinstimmt. Die Spalten `SalesOrderNumber` und `EnglishProductName` sind nur in einer der Tabellen vorhanden. Daher muss mit diesen Spalten kein Tabellenalias angegeben werden. Diese Aliase werden lediglich aus Gründen der besseren Lesbarkeit eingefügt. Das Wort **AS** vor einem Aliasnamen ist nicht erforderlich, wird jedoch aus Gründen der besseren Lesbarkeit sowie zur Einhaltung des ANSI-Standards empfohlen.  
   
 ```sql
 -- Uses AdventureWorks  
@@ -684,7 +684,7 @@ INNER JOIN DimProduct AS dp
     ON dp.ProductKey = fis.ProductKey;  
 ```  
   
- Da die `INNER` Schlüsselwort ist nicht für innere Verknüpfungen erforderlich, diese Abfrage kann als geschrieben werden:  
+ Da das Schlüsselwort `INNER` für innere Joins nicht benötigt wird, kann diese Abfrage auch wie folgt formuliert werden:  
   
 ```sql
 -- Uses AdventureWorks  
@@ -695,7 +695,7 @@ JOIN DimProduct AS dp
 ON dp.ProductKey = fis.ProductKey;  
 ```  
   
- Ein `WHERE` Klausel kann auch zum Erstellen von dieser Abfrage um zurückgegebenen Ergebnisse zu begrenzen. In diesem Beispiel beschränkt die Ergebnisse auf `SalesOrderNumber` höhere Werte als "SO5000":  
+ Eine `WHERE`-Klausel kann zur Begrenzung der Ergebnisse auch mit der folgenden Abfrage verwendet werden. In diesem Beispiel werden die Ergebnisse auf `SalesOrderNumber`-Werte begrenzt, die größer als 'SO5000' sind:  
   
 ```sql
 -- Uses AdventureWorks  
@@ -708,8 +708,8 @@ WHERE fis.SalesOrderNumber > 'SO50000'
 ORDER BY fis.SalesOrderNumber;  
 ```  
   
-### <a name="o-using-the-left-outer-join-and-right-outer-join-syntax"></a>O. Mithilfe der LEFT OUTER JOIN und RIGHT OUTER JOIN-syntax  
- Das folgende Beispiel verknüpft die `FactInternetSales` und `DimProduct` Tabellen in der `ProductKey` Spalten. Die linker äußerer Join-Syntax wird beibehalten, die nicht entsprechenden Zeilen aus der linken Seite (`FactInternetSales`) Tabelle. Da die `FactInternetSales` Tabelle enthält keine `ProductKey` Werte, die nicht entsprechen der `DimProduct` Tabelle, diese Abfrage gibt dieselben Zeilen wie im ersten inneren Join-Beispiel oben.  
+### <a name="o-using-the-left-outer-join-and-right-outer-join-syntax"></a>O. Verwenden der LEFT OUTER JOIN- und RIGHT OUTER JOIN-Syntax  
+ Im folgenden Beispiel werden die Tabellen `FactInternetSales` und `DimProduct` in den `ProductKey`-Spalten verknüpft. In der LEFT OUTER JOIN-Syntax werden die Zeilen ohne Entsprechung aus der linken Tabelle (`FactInternetSales`) beibehalten. Da die `FactInternetSales`-Tabelle nur `ProductKey`-Werte enthält, die mit der `DimProduct`-Tabelle übereinstimmen, gibt diese Abfrage dieselben Zeilen wie im Beispiel für den inneren Join weiter oben zurück.  
   
 ```sql
 -- Uses AdventureWorks  
@@ -720,9 +720,9 @@ LEFT OUTER JOIN DimProduct AS dp
     ON dp.ProductKey = fis.ProductKey;  
 ```  
   
- Diese Abfrage kann auch ohne formuliert werden die `OUTER` Schlüsselwort.  
+ Diese Abfrage kann auch ohne das Schlüsselwort `OUTER` formuliert werden.  
   
- Rechte äußere Joins werden nicht übereinstimmenden Zeilen aus der rechten Tabelle beibehalten. Im folgende Beispiel gibt dieselben Zeilen wie im obigen linker äußerer Join-Beispiel.  
+ In der RIGHT OUTER JOIN-Syntax werden Zeilen ohne Entsprechung aus der rechten Tabelle beibehalten. Im folgenden Beispiel werden dieselben Zeilen wie im Beispiel für den linken äußeren Join weiter oben zurückgegeben.  
   
 ```sql
 -- Uses AdventureWorks  
@@ -733,7 +733,7 @@ RIGHT OUTER JOIN FactInternetSales AS fis
     ON dp.ProductKey = fis.ProductKey;  
 ```  
   
- Die folgende Abfrage verwendet die `DimSalesTerritory` Tabelle als die linke Tabelle in einem linken äußeren Join. Ruft ab den `SalesOrderNumber` Werte aus der `FactInternetSales` Tabelle. Wenn es keine Aufträge für einen bestimmten sind `SalesTerritoryKey`, die Abfrage eine gibt NULL zurück, für die `SalesOrderNumber` für diese Zeile. Diese Abfrage wird sortiert nach der `SalesOrderNumber` Spalte, sodass alle NULL-Werte in dieser Spalte wird am oberen Rand der Ergebnisse angezeigt.  
+ In der folgenden Abfrage wird die `DimSalesTerritory`-Tabelle als linke Tabelle in einem linken äußeren Join verwendet. Die `SalesOrderNumber`-Werte werden aus der `FactInternetSales`-Tabelle abgerufen. Wenn für einen bestimmten `SalesTerritoryKey`-Schlüssel keine Aufträge vorliegen, gibt die Abfrage für diese Zeile für `SalesOrderNumber` NULL zurück. Diese Abfrage wird nach der `SalesOrderNumber`-Spalte sortiert, sodass NULL-Werte in dieser Spalte oben in den Ergebnissen angezeigt werden.  
   
 ```sql
 -- Uses AdventureWorks  
@@ -745,7 +745,7 @@ LEFT OUTER JOIN FactInternetSales AS fis
 ORDER BY fis.SalesOrderNumber;  
 ```  
   
- Diese Abfrage kann so umgeschrieben werden, mit einem rechten äußeren Join zu dieselben Ergebnisse abrufen:  
+ Diese Abfrage kann mit einem rechten äußeren Join neu geschrieben werden, um dieselben Ergebnisse abzurufen:  
   
 ```sql
 -- Uses AdventureWorks  
@@ -757,8 +757,8 @@ RIGHT OUTER JOIN DimSalesTerritory AS dst
 ORDER BY fis.SalesOrderNumber;  
 ```  
   
-### <a name="p-using-the-full-outer-join-syntax"></a>P. Verwenden der FULL OUTER JOIN-syntax  
- Das folgende Beispiel zeigt einen vollständiger äußeren Join, die alle Zeilen aus beiden verknüpften Tabellen zurückgegeben, aber gibt NULL für Werte, die nicht übereinstimmen, aus der anderen Tabelle.  
+### <a name="p-using-the-full-outer-join-syntax"></a>P. Verwenden der FULL OUTER JOIN-Syntax  
+ Im folgenden Beispiel ist ein vollständiger äußerer Join dargestellt, der alle Zeilen aus beiden verknüpften Tabellen zurückgibt, jedoch für Werte ohne Entsprechung in der anderen Tabelle NULL zurückgibt.  
   
 ```sql
 -- Uses AdventureWorks  
@@ -770,7 +770,7 @@ FULL OUTER JOIN FactInternetSales AS fis
 ORDER BY fis.SalesOrderNumber;  
 ```  
   
- Diese Abfrage kann auch ohne formuliert werden die `OUTER` Schlüsselwort.  
+ Diese Abfrage kann auch ohne das Schlüsselwort `OUTER` formuliert werden.  
   
 ```sql
 -- Uses AdventureWorks  
@@ -782,8 +782,8 @@ FULL JOIN FactInternetSales AS fis
 ORDER BY fis.SalesOrderNumber;  
 ```  
   
-### <a name="q-using-the-cross-join-syntax"></a>Q. Verwenden der CROSS JOIN-syntax  
- Das folgende Beispiel gibt das Kreuzprodukt von der `FactInternetSales` und `DimSalesTerritory` Tabellen. Eine Liste aller möglichen Kombinationen von `SalesOrderNumber` und `SalesTerritoryKey` werden zurückgegeben. Beachten Sie das Fehlen der `ON` -Klausel in der Cross Join-Abfrage.  
+### <a name="q-using-the-cross-join-syntax"></a>Q. Verwenden der CROSS JOIN-Syntax  
+ Im folgenden Beispiel wird das Kreuzprodukt der Tabellen `FactInternetSales` und `DimSalesTerritory` zurückgegeben. Eine Liste aller möglichen Kombinationen von `SalesOrderNumber` und `SalesTerritoryKey` wird zurückgegeben. Beachten Sie, dass in der Cross Join-Abfrage die `ON`-Klausel fehlt.  
   
 ```sql
 -- Uses AdventureWorks  
@@ -795,7 +795,7 @@ ORDER BY fis.SalesOrderNumber;
 ```  
   
 ### <a name="r-using-a-derived-table"></a>R. Verwenden einer abgeleiteten Tabelle  
- Im folgenden Beispiel wird eine abgeleitete Tabelle (eine `SELECT` Anweisung nach der `FROM` Klausel) zurückgeben der `CustomerKey` und `LastName` Spalten aller Kunden in der `DimCustomer` -Tabelle mit `BirthDate` Werte höher als 1. Januar 1970 und dem Nachnamen "Smith".  
+ Im folgenden Beispiel wird eine abgeleitete Tabelle (eine `SELECT`-Anweisung nach der `FROM`-Klausel) verwendet, um die Spalten `CustomerKey` und `LastName` aller Kunden in der Tabelle `DimCustomer` zurückzugeben, bei denen die `BirthDate`-Werte nach dem 1. Januar 1970 liegen und für den Nachnamen "Smith" angegeben ist.  
   
 ```sql
 -- Uses AdventureWorks  
@@ -808,8 +808,8 @@ WHERE LastName = 'Smith'
 ORDER BY LastName;  
 ```  
   
-### <a name="s-reduce-join-hint-example"></a>S. Beispiel für einen Join-Hinweis reduzieren  
- Im folgenden Beispiel wird die `REDUCE` Join-Hinweis, die Verarbeitung der abgeleiteten Tabelle in der Abfrage zu ändern. Bei Verwendung der `REDUCE` Join-Hinweis in der folgenden Abfrage die `fis.ProductKey` projiziert wird, repliziert und unterschiedliche vorgenommen und dann hinzugefügt `DimProduct` während das Mischen von `DimProduct` auf `ProductKey`. Die daraus resultierende abgeleitete Tabelle wird auf verteilt `fis.ProductKey`.  
+### <a name="s-reduce-join-hint-example"></a>S. Beispiel für einen REDUCE-Joinhinweis  
+ Im folgenden Beispiel wird der `REDUCE`-Joinhinweis verwendet, um die Verarbeitung der abgeleiteten Tabelle in der Abfrage zu ändern. Wenn in dieser Abfrage der `REDUCE`-Joinhinweis verwendet wird, wird `fis.ProductKey` projiziert, repliziert und unterscheidbar gemacht und anschließend beim Mischen von `DimProduct` in `ProductKey` mit `DimProduct` verknüpft. Die resultierende abgeleitete Tabelle wird in `fis.ProductKey` verteilt.  
   
 ```sql
 -- Uses AdventureWorks  
@@ -824,8 +824,8 @@ FROM
 ORDER BY SalesOrderNumber;  
 ```  
   
-### <a name="t-replicate-join-hint-example"></a>T. Beispiel für einen replizieren Join-Hinweis  
- Im folgenden Beispiel wird gezeigt, die gleiche Abfrage wie im vorherigen Beispiel, außer dass eine `REPLICATE` Join-Hinweis wird verwendet, statt die `REDUCE` Join-Hinweis. Verwenden der `REPLICATE` Hinweis bewirkt, dass die Werte in der `ProductKey` (verknüpfte) Spalte aus der `FactInternetSales` Tabelle auf allen Knoten repliziert werden sollen. Die `DimProduct` Tabelle ist verknüpft, auf die replizierten Version dieser Werte.  
+### <a name="t-replicate-join-hint-example"></a>T. Beispiel für einen REPLICATE-Joinhinweis  
+ Im folgenden Beispiel wird dieselbe Abfrage wie im vorherigen Beispiel verwendet, jedoch mit der Ausnahme, dass anstelle des `REDUCE`-Joinhinweises ein `REPLICATE`-Joinhinweis verwendet wird. Wenn der `REPLICATE`-Hinweis verwendet wird, werden die Werte in der Verknüpfungsspalte `ProductKey` aus der Tabelle `FactInternetSales` auf allen Knoten repliziert. Die Tabelle `DimProduct` wird mit der replizierten Version dieser Werte verknüpft.  
   
 ```sql
 -- Uses AdventureWorks  
@@ -840,10 +840,10 @@ FROM
 ORDER BY SalesOrderNumber;  
 ```  
   
-### <a name="u-using-the-redistribute-hint-to-guarantee-a-shuffle-move-for-a-distribution-incompatible-join"></a>U. Verwenden REDISTRIBUTE-Hinweis zum eine zufällige Verschiebung für einen Verteilungspunkt inkompatible Join zu gewährleisten.  
- Die folgende Abfrage verwendet den Abfragehinweis Redistribute-Hinweis auf einem Verteilungspunkt nicht kompatibel. Dadurch wird sichergestellt, dass der Abfrageoptimierer eine zufällige Verschiebung im Abfrageplan verwendet wird. Auch gewährleistet ist der Abfrageplan einen Verschiebevorgang Übertragung, der verschiebt eine verteilte Tabelle zu einer replizierten Tabelle sollte nicht verwendet wird.  
+### <a name="u-using-the-redistribute-hint-to-guarantee-a-shuffle-move-for-a-distribution-incompatible-join"></a>U. Verwenden des REDISTRIBUTE-Hinweises zur Gewährleistung einer Verschiebung mit Vermischung für einen verteilungsinkompatiblen Join  
+ In der folgenden Abfrage wird der REDISTRIBUTE-Abfragehinweis in einem verteilungsinkompatiblen Join verwendet. Dadurch wird sichergestellt, dass der Abfrageoptimierer im Abfrageplan eine Verschiebung mit Vermischung verwendet. Ferner wird dadurch sichergestellt, dass im Abfrageplan keine Übertragungs-Verschiebung verwendet wird, bei der eine verteilte Tabelle in eine replizierte Tabelle verschoben wird.  
   
- Im folgenden Beispiel wird der REDISTRIBUTE-Hinweis eine zufällige Verschiebung für die FactInternetSales-Tabelle erzwungen, da es sich bei "ProductKey" ist die verteilungsspalte für DimProduct und nicht die verteilungsspalte für FactInternetSales.  
+ Im folgenden Beispiel erzwingt der REDISTRIBUTE-Hinweis in der FactInternetSales-Tabelle eine Verschiebung mit Vermischung, weil ProductKey die Verteilungsspalte für DimProduct und nicht die Verteilungsspalte für FactInternetSales ist.  
   
 ```sql
 -- Uses AdventureWorks  
@@ -855,11 +855,11 @@ INNER REDISTRIBUTE JOIN FactInternetSales AS fis
     ON dp.ProductKey = fis.ProductKey;  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [CONTAINSTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/containstable-transact-sql.md)   
  [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
  [FREETEXTTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/freetexttable-transact-sql.md)   
- [INSERT &#40; Transact-SQL &#41;](../../t-sql/statements/insert-transact-sql.md)   
+ [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
  [OPENQUERY &#40;Transact-SQL&#41;](../../t-sql/functions/openquery-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
  [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   

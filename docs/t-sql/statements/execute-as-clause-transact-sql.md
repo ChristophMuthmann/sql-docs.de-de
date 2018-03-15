@@ -1,5 +1,5 @@
 ---
-title: EXECUTE AS-Klausel (Transact-SQL) | Microsoft Docs
+title: EXECUTE AS-Klausel (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -79,20 +79,20 @@ DDL Triggers with Database Scope
 ```  
   
 ## <a name="arguments"></a>Argumente  
- **AUFRUFER**  
+ **CALLER**  
  Gibt an, dass die Anweisungen innerhalb des Moduls im Kontext des Aufrufers des Moduls ausgeführt werden. Der Benutzer, der das Modul ausführt, benötigt die entsprechenden Berechtigungen nicht nur für das Modul selbst, sondern auch für alle Datenbankobjekte, auf die das Modul verweist.  
   
  CALLER ist der Standardwert für alle Module außer Warteschlangen, was dem Verhalten von [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] entspricht.  
   
  CALLER kann in einer CREATE QUEUE- oder ALTER QUEUE-Anweisung nicht angegeben werden.  
   
- **SELF-SERVICE**  
- EXECUTE AS SELF ist gleichbedeutend mit EXECUTE AS *User_name*, wobei der angegebene Benutzer die Person, die das Modul erstellt oder ändert. Befindet sich die tatsächlichen Benutzer-ID der Person erstellen oder ändern die Module in der **Execute_as_principal_id** Spalte in der **sql_modules** oder **Sys. service_queues** -Katalogsicht.  
+ **SELF**  
+ EXECUTE AS SELF ist gleichbedeutend mit EXECUTE AS *user_name*, wobei der angegebene Benutzer die Person ist, die das Modul erstellt oder ändert. Die eigentliche Benutzer-ID der Person, die die Module erstellt oder ändert, wird in der **execute_as_principal_id**-Spalte der **sys.sql_modules**- oder **sys.service_queues**-Katalogsicht gespeichert.  
   
  SELF ist der Standardwert für Warteschlangen.  
   
 > [!NOTE]  
->  So ändern Sie die Benutzer-ID, der die **Execute_as_principal_id** in der **Sys. service_queues** Katalogsicht, müssen Sie explizit die EXECUTE AS-Einstellung in der ALTER QUEUE-Anweisung angeben.  
+>  Zum Ändern der Benutzer-ID von **execute_as_principal_id** in der **sys.service_queues**-Katalogsicht müssen Sie explizit die EXECUTE AS-Einstellung in der ALTER QUEUE-Anweisung angeben.  
   
  OWNER  
  Gibt an, dass die Anweisungen innerhalb des Moduls im Kontext des aktuellen Besitzers des Moduls ausgeführt werden. Falls für das Modul kein Besitzer angegeben ist, wird der Besitzer des Modulschemas verwendet. OWNER kann für DDL- oder LOGON-Trigger nicht angegeben werden.  
@@ -100,19 +100,19 @@ DDL Triggers with Database Scope
 > [!IMPORTANT]  
 >  OWNER muss einem Singleton-Konto zugeordnet werden und darf keine Rolle oder Gruppe sein.  
   
- **"** *User_name* **"**  
- Gibt an, führen Sie die Anweisungen innerhalb des Moduls im Kontext des Benutzers im angegebenen *User_name*. Berechtigungen für Objekte innerhalb des Moduls werden gegen überprüft *User_name*. *USER_NAME* kann nicht für DDL-Trigger mit Serverbereich oder Logon-Trigger angegeben werden. Verwendung *Login_name* stattdessen.  
+ **'** *user_name* **'**  
+ Gibt an, dass die Anweisungen innerhalb des Moduls im Kontext des in *user_name* angegebenen Kontexts ausgeführt werden. Berechtigungen für alle Objekte innerhalb des Moduls werden gegen *user_name* geprüft. *user_name* kann nicht für DDL-Trigger im Serverbereich oder für LOGON-Trigger angegeben werden. Verwenden Sie stattdessen *login_name*.  
   
- *USER_NAME* muss in der aktuellen Datenbank vorhanden sein und muss ein Singleton-Konto sein. *USER_NAME* nicht mit einer Gruppe, Rolle, Zertifikat, Schlüssel oder integriertes Konto, z. B. NT AUTHORITY\LocalService, NT AUTHORITY\NetworkService oder NT AUTHORITY\LocalSystem.  
+ *user_name* muss in der aktuellen Datenbank vorhanden und ein Singleton-Konto sein. *user_name* kann kein(e) Gruppe, Rolle, Zertifikat, Schlüssel oder integriertes Konto sein, wie z.B. NT AUTHORITY\LocalService, NT AUTHORITY\NetworkService oder NT AUTHORITY\LocalSystem.  
   
- Die Benutzer-ID des Ausführungskontexts wird in den Metadaten gespeichert und angezeigt werden können, der **Execute_as_principal_id** Spalte in der **sql_modules** oder **Sys. assembly_modules** -Katalogsicht.  
+ Die Benutzer-ID des Ausführungskontexts wird in Metadaten gespeichert und kann in der **execute_as_principal_id**-Spalte der **sys.sql_modules**- oder **sys.assembly_modules**-Katalogsicht angezeigt werden.  
   
- **"** *Login_name* **"**  
- Gibt an, führen Sie die Anweisungen innerhalb des Moduls im Rahmen der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] angegebenen Benutzernamen *Login_name*. Berechtigungen für Objekte innerhalb des Moduls werden gegen überprüft *Login_name*. *Login_name* können nur für DDL-Trigger mit Serverbereich oder Logon-Trigger auf Serverebene angegeben werden.  
+ **'** *login_name* **'**  
+ Gibt an, dass die Anweisungen innerhalb des Moduls im Kontext des in *login_name* angegebenen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldenamens ausgeführt werden. Berechtigungen für alle Objekte innerhalb des Moduls werden gegen *login_name* geprüft. *login_name* kann nur für DDL-Trigger im Serverbereich oder für LOGON-Trigger angegeben werden.  
   
- *Login_name* nicht mit einer Gruppe, Rolle, Zertifikat, Schlüssel oder integriertes Konto, z. B. NT AUTHORITY\LocalService, NT AUTHORITY\NetworkService oder NT AUTHORITY\LocalSystem.  
+ *login_name* kann kein(e) Gruppe, Rolle, Zertifikat, Schlüssel oder integriertes Konto sein, wie z.B. NT AUTHORITY\LocalService, NT AUTHORITY\NetworkService oder NT AUTHORITY\LocalSystem.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Wie [!INCLUDE[ssDE](../../includes/ssde-md.md)] Berechtigungen für Objekte auswertet, auf die im Modul verwiesen wird, hängt von der Besitzkette ab, die zwischen den aufrufenden Objekten und den Objekten vorhanden ist, auf die verwiesen wird. In früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] war die Besitzverkettung die einzig verfügbare Methode, um zu vermeiden, dass dem aufrufenden Benutzer der Zugriff für alle Objekte, auf die verwiesen wird, erteilt werden muss.  
   
  Für die Besitzverkettung gelten die folgenden Einschränkungen:  
@@ -136,11 +136,11 @@ DDL Triggers with Database Scope
 ## <a name="specifying-a-user-or-login-name"></a>Angeben eines Benutzer- oder Anmeldenamens  
  Ein Datenbankbenutzer oder Serveranmeldename, der in der EXECUTE AS-Klausel eines Moduls angegeben ist, kann erst gelöscht werden, wenn das Modul zur Ausführung unter einem anderen Kontext geändert wird.  
   
- In EXECUTE AS-Klausel angegebene Name Benutzer- oder Anmeldename muss vorhanden sein, als Prinzipal in **Sys. database_principals** oder **Sys. server_principals**, bzw. oder anderen erstellen oder Ändern der Modul-Vorgang fehl . Darüber hinaus benötigt der Benutzer, der das Modul erstellt oder ändert, IMPERSONATE-Berechtigungen für den Prinzipal.  
+ Der in der EXECUTE AS-Klausel angegebene Benutzer oder Anmeldename muss als Prinzipal in **sys.database_principals** bzw. **sys.server_principals** vorhanden sein. Andernfalls wird für den Vorgang zum Erstellen oder Ändern des Moduls ein Fehler gemeldet. Darüber hinaus benötigt der Benutzer, der das Modul erstellt oder ändert, IMPERSONATE-Berechtigungen für den Prinzipal.  
   
  Falls der Benutzer impliziten Zugriff auf die Datenbank oder Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] über eine Windows-Gruppenmitgliedschaft hat, wird der in der EXECUTE AS-Klausel angegebene Benutzer beim Erstellen des Moduls implizit erstellt. Dazu muss eine der folgenden Anforderungen erfüllt sein:  
   
--   Der angegebene Benutzer oder Anmeldename ist ein Mitglied der **Sysadmin** festen Serverrolle "".  
+-   Der angegebene Benutzer oder Anmeldename ist ein Mitglied der festen Serverrolle **sysadmin**.  
   
 -   Der Benutzer, der das Modul erstellt, hat die Berechtigung zum Erstellen von Prinzipalen.  
   
@@ -151,9 +151,9 @@ DDL Triggers with Database Scope
   
  Stellen Sie sich z. B. folgende Bedingungen vor:  
   
--   **Die CompanyDomain\SQLUsers** -Gruppe hat Zugriff auf die **Sales** Datenbank.  
+-   Die **CompanyDomain\SQLUsers**-Gruppe verfügt über Zugriff auf die **Sales**-Datenbank.  
   
--   **CompanyDomain\SqlUser1** Mitglied **SQLUsers** und aus diesem Grund hat Zugriff auf die **Sales** Datenbank.  
+-   **CompanyDomain\SqlUser1** ist ein Element von **SQLUsers** und hat deshalb Zugriff auf die **Sales**-Datenbank.  
   
 -   Der Benutzer, der das Modul erstellt oder ändert, hat Berechtigungen zum Erstellen von Prinzipalen.  
   
@@ -189,7 +189,7 @@ GO
 ## <a name="using-execute-as-to-define-custom-permission-sets"></a>Verwenden von EXECUTE AS zum Definieren benutzerdefinierter Berechtigungssätze  
  Das Angeben eines Ausführungskontexts für ein Modul kann äußerst hilfreich sein, wenn Sie benutzerdefinierte Berechtigungssätze definieren möchten. Beispielsweise weisen bestimmte Aktionen wie etwa TRUNCATE TABLE keine erteilbaren Berechtigungen auf. Sie können die TRUNCATE TABLE-Anweisung innerhalb eines Moduls integrieren und angeben, dass dieses Modul als Benutzer mit Berechtigungen zum Ändern der Tabelle ausgeführt wird. Dadurch können Sie die Berechtigungen zum Abschneiden der Tabelle auf den Benutzer erweitern, dem Sie EXECUTE-Berechtigungen für das Modul erteilen.  
   
- Verwenden Sie zum Anzeigen der Definition des Moduls mit dem angegebenen Ausführungskontext der [Sys. sql_modules &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) -Katalogsicht angezeigt.  
+ Verwenden Sie die Katalogsicht [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md), um die Definition des Moduls mit dem angegebenen Ausführungskontext anzuzeigen.  
   
 ## <a name="best-practice"></a>Bewährte Methoden  
  Geben Sie einen Anmeldenamen oder einen Benutzer an, der die mindestens erforderlichen Privilegien zum Ausführen der im Modul definierten Vorgänge aufweist. Geben Sie z. B. kein Datenbankbesitzer-Konto an, außer diese Berechtigungen sind erforderlich.  
@@ -199,9 +199,9 @@ GO
   
  Für die Ausführung eines mit EXECUTE AS angegebenen CLR-Moduls, das auf Ressourcen in einer anderen Datenbank oder auf einem anderen Server zugreift, muss die Zieldatenbank oder der Server dem Authentifikator der Datenbank vertrauen, aus der das Modul stammt (die Quelldatenbank).  
   
- Zum Angeben der EXECUTE AS-Klausel beim Erstellen oder Ändern eines Moduls benötigen Sie IMPERSONATE-Berechtigungen für den angegebenen Prinzipal sowie Berechtigungen zum Erstellen des Moduls. Sie können immer Ihre eigene Identität annehmen. Wenn kein Ausführungskontext angegeben ist, oder EXECUTE AS CALLER angegeben ist, sind keine IMPERSONATE-Berechtigungen erforderlich.  
+ Zum Angeben der EXECUTE AS-Klausel beim Erstellen oder Ändern eines Moduls benötigen Sie IMPERSONATE-Berechtigungen für den angegebenen Prinzipal sowie Berechtigungen zum Erstellen des Moduls. Sie können immer Ihre eigene Identität annehmen. Wenn kein Ausführungskontext angegeben ist oder wenn EXECUTE AS CALLER angegeben ist, sind keine IMPERSONATE-Berechtigungen erforderlich.  
   
- Angeben einer *Login_name* oder *User_name* , der impliziten Zugriff auf die Datenbank über eine Windows-Gruppenmitgliedschaft hat, benötigen Sie CONTROL-Berechtigungen für die Datenbank.  
+ Um *login_name* oder *user_name* impliziten Zugriff auf die Datenbank über eine Windows-Gruppenmitgliedschaft anzugeben, benötigen Sie CONTROL-Berechtigungen für die Datenbank.  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird eine gespeicherte Prozedur in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Datenbank erstellt und der Ausführungskontext `OWNER` zugewiesen.  
@@ -228,11 +228,11 @@ GO
   
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [sys.assembly_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-assembly-modules-transact-sql.md)   
  [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)   
- [Sys. service_queues &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-service-queues-transact-sql.md)   
- [Wiederherstellen &#40; Transact-SQL &#41;](../../t-sql/statements/revert-transact-sql.md)   
- [Führen Sie AS &#40; Transact-SQL &#41;](../../t-sql/statements/execute-as-transact-sql.md)  
+ [sys.service_queues &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-service-queues-transact-sql.md)   
+ [REVERT &#40;Transact-SQL&#41;](../../t-sql/statements/revert-transact-sql.md)   
+ [EXECUTE AS &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-transact-sql.md)  
   
   

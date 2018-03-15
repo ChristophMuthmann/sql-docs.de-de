@@ -1,5 +1,5 @@
 ---
-title: STGeometryN (Geometry-Datentyp) | Microsoft Docs
+title: STGeometryN (geometry-Datentyp) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stgeometryn-geometry-data-type"></a>STGeometryN (geometry-Datentyp)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Gibt die angegebene Geometry-Instanz in eine **geometrieauflistung**.
+Gibt eine angegebene geometry-Instanz in einer **geometry-Collection** zurück.
   
 ## <a name="syntax"></a>Syntax  
   
@@ -45,18 +45,18 @@ Gibt die angegebene Geometry-Instanz in eine **geometrieauflistung**.
   
 ## <a name="arguments"></a>Argumente  
  *expression*  
- Ist ein **Int** -Ausdruck zwischen 1 und die Anzahl der **Geometrie** -Instanzen lautet in der **Geometrycollection**.  
+ Ein **int**-Ausdruck zwischen 1 und der Anzahl der **geometry**-Instanzen in der **geometrycollection**.  
   
 ## <a name="return-types"></a>Rückgabetypen  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Rückgabetyp: **Geometrie**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Rückgabetyp: **geometry**  
   
  CLR-Rückgabetyp: **SqlGeometry**  
   
-## <a name="remarks"></a>Hinweise  
- Diese Methode gibt **null** ist der Parameter größer als das Ergebnis der `STNumGeometries()` und löst eine **ArgumentOutOfRangeException** Wenn die *Ausdruck* -Parameter ist kleiner als 1.  
+## <a name="remarks"></a>Remarks  
+ Diese Methode gibt **NULL** zurück, wenn der Parameter größer als das Ergebnis von `STNumGeometries()` ist und löst eine **ArgumentOutOfRangeException** aus, wenn der *expression*-Parameter kleiner als 1 ist.  
   
 ## <a name="examples"></a>Beispiele  
- Das folgende Beispiel erstellt eine `MultiPoint``geometry collection` und verwendet `STGeometryN()` finden Sie die zweite `geometry` Instanz der Sammlung.  
+ Im folgenden Beispiel wird eine `MultiPoint``geometry collection` erstellt und `STGeometryN()` verwendet, um nach der zweiten `geometry`-Instanz in der Collection zu suchen.  
   
 ```  
 DECLARE @g geometry;  
@@ -64,7 +64,7 @@ SET @g = geometry::STGeomFromText('MULTIPOINT(0 0, 13.5 2, 7 19)', 0);
 SELECT @g.STGeometryN(2).ToString();  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [OGC-Methoden für geometry-Instanzen](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

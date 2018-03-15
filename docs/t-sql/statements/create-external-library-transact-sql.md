@@ -1,7 +1,7 @@
 ---
-title: Erstellen von EXTERNEN Bibliothek (Transact-SQL) | Microsoft Docs
+title: CREATE EXTERNAL LIBRARY (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
-ms.date: 10/05/2017
+ms.date: 02/25/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
@@ -16,28 +16,32 @@ f1_keywords:
 - CREATE_EXTERNAL_LIBRARY_TSQL
 - EXTERNAL LIBRARY
 - EXTERNAL_LIBRARY_TSQL
-dev_langs: TSQL
-helpviewer_keywords: CREATE EXTERNAL LIBRARY
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- CREATE EXTERNAL LIBRARY
 author: jeannt
 ms.author: jeannt
 manager: craigg
-ms.openlocfilehash: fe1cb90bce5717d194defd2c684d7b20fc29a061
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.openlocfilehash: e28716314837225586cf4bd1f80a37c5c6b824ab
+ms.sourcegitcommit: 6e819406554efbd17bbf84cf210d8ebeddcf772d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="create-external-library-transact-sql"></a>CREATE EXTERNAL LIBRARY (Transact-SQL)  
 
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]  
 
-Hochladen von R-Pakete in einer Datenbank aus dem angegebenen Stream oder Dateipfad.
+Lädt R-Pakete vom angegebenen Bytedatenstrom oder Dateipfad in eine Datenbank hoch.
 
-Diese Anweisung dient als einen generischen Mechanismus dar, für den Datenbankadministrator, Artefakte, die für alle neuen externen Language-Laufzeiten (R, Python, Java usw.) erforderlich sind und von unterstützten Betriebssystem-Plattformen hochladen [!INCLUDE[ssnoversion](../../includes/ssnoversion.md)]. Derzeit werden nur die R-Sprache und Windows-Plattform unterstützt.
+Diese Anweisung dient als generischer Mechanismus, mithilfe dessen der Datenbankadministrator Artefakte hochladen kann, die von Runtimes neuer externer Sprachen (R, Python, Java usw.) und Betriebssystemplattformen benötigt werden, die von [!INCLUDE[ssnoversion](../../includes/ssnoversion.md)] unterstützt werden. 
+
+Derzeit werden nur die R-Sprache und die Windows-Plattform unterstützt. Die Unterstützung für Python und Linux ist für ein späteres Release eingeplant.
 
 ## <a name="syntax"></a>Syntax
 
-```
+```text
 CREATE EXTERNAL LIBRARY library_name  
     [ AUTHORIZATION owner_name ]  
 FROM <file_spec> [,…2]  
@@ -63,135 +67,155 @@ WITH ( LANGUAGE = 'R' )
 
 **library_name**
 
-Die Datenbank beschränkt, die dem Benutzer werden Bibliotheken hinzugefügt. D. h. Bibliotheksnamen gelten als innerhalb des Kontexts eines bestimmten Benutzers oder Besitzer eindeutig und Bibliotheksnamen müssen pro Benutzer eindeutig sein. Zum Beispiel zwei Benutzer **RUser1** und **RUser2** können sowohl einzeln und separat hochladen die R-Bibliothek `ggplot2`.
+Bibliotheken werden zu der Datenbank hinzugefügt, die an den Benutzer angepasst ist. Das bedeutet, dass Bibliotheksnamen innerhalb des Kontexts eines bestimmten Benutzers oder Besitzers als eindeutig gelten. Bibliotheksnamen müssen außerdem für jeden Benutzer eindeutig sein. Beispielsweise können zwei Benutzer, **RUser1** und **RUser2**, die R-Bibliothek `ggplot2` individuell und separat hochladen.
+
+Bibliotheksnamen können nicht beliebig zugewiesen werden. Der Bibliotheksname sollte mit dem Namen übereinstimmen, der benötigt wird, um die R-Bibliothek von R zu laden.
 
 **owner_name**
 
-Gibt den Namen des Benutzers oder der Rolle, der die externe Bibliothek besitzt. Wird kein Wert angegeben, wird der aktuelle Benutzer zum Besitzer.
+Gibt den Namen eines Benutzers oder einer Rolle an, der oder die die externe Bibliothek besitzt. Wird kein Wert angegeben, wird der aktuelle Benutzer zum Besitzer.
 
-Der Besitz des Datenbankbesitzers Bibliotheken gelten global für die Datenbank und die Common Language Runtime. Das heißt, können Datenbankbesitzer Bibliotheken erstellen, die enthalten einen gemeinsamen Satz von Bibliotheken oder Pakete, die von vielen Benutzern gemeinsam genutzt werden. Wenn eine externe Bibliothek erstellt wird, die ein Benutzer außer dem `dbo` Benutzer, die externe Bibliothek ist für diesen Benutzer nur privat.
+Bibliotheken, die Datenbankbesitzern gehören, gelten als global für die Datenbank und Runtime. Sprich, Datenbankbesitzer können Bibliotheken erstellen, die eine gemeinsame Menge von Bibliotheken oder Paketen enthalten, die von vielen Benutzern geteilt werden. Wenn eine externe Bibliothek von einem anderen Benutzer als dem `dbo`-Benutzer erstellt wurde, ist die externe Bibliothek nur für diesen Benutzer privat.
 
-Wenn der Benutzer **RUser1** führt ein R-Skript den Wert des `libPath` kann mehrere Pfade enthalten. Der erste Pfad ist immer den Pfad zu der freigegebenen Bibliothek, die vom Datenbankbesitzer erstellt. Der zweite Teil des `libPath` gibt den Pfad mit Paketen, die einzeln nach hochgeladen **RUser1**.
+Wenn der Benutzer **RUser1** ein R-Skript ausführt, kann der Wert von `libPath` mehrere Pfade enthalten. Der erste Pfad ist immer der Pfad zur gemeinsamen Bibliothek, die vom Datenbankbesitzer erstellt wurde. Der zweite Teil von `libPath` gibt den Pfad an, der Pakete enthält, die von **RUser1** individuell hochgeladen wurden.
 
 **file_spec**
 
-Gibt den Inhalt des Pakets für eine bestimmte Plattform. Nur eine Datei Artefakt plattformspezifischen wird unterstützt.
+Gibt den Inhalt des Pakets für eine bestimmte Plattform an. Nur ein Dateiartefakt pro Plattform wird unterstützt.
 
-Die Datei kann in Form von einem lokalen Pfad oder ein Netzwerkpfad angegeben werden.
+Die Datei kann in Form eines lokalen Pfads oder eines Netzwerkpfads angegeben werden.
 
-Optional kann eine Betriebssystemplattform für die Datei angegeben werden. Für jede Betriebssystemplattform für eine bestimmte Sprache oder die Common Language Runtime ist nur eine Datei Artefakt oder Inhalt zulässig.
+Optional kann eine Betriebssystemplattform für die Datei angegeben werden. Für jede Betriebssystemplattform für eine bestimmte Sprache oder Runtime ist nur ein Darteiartefakt oder Inhalt erlaubt.
 
 **library_bits**
 
-Gibt den Inhalt des Pakets als hexadezimale Literal, wie Assemblys an. Diese Option ermöglicht Benutzern das Erstellen einer Bibliothek, um die Bibliothek zu ändern, wenn sie über die erforderlichen Berechtigungen verfügt, jedoch keine dateipfadzugriff einen beliebigen Ordner aus, auf der Server zugreifen kann.
+Gibt den Inhalt des Pakets als Hexadezimalliteral an, vergleichbar mit Assemblys. 
 
-**PLATTFORM = WINDOWS**
+Diese Option ist hilfreich, wenn Sie eine Bibliothek erstellen oder eine bestehende Bibliothek ändern müssen (und über die erforderlichen Berechtigungen dafür verfügen), das Dateisystem auf dem Server jedoch eingeschränkt ist und die Bibliotheksdateien nicht an einen Speicherort kopieren kann, auf den der Server Zugriff hat.
 
-Gibt die Plattform für den Inhalt der Bibliothek. Der Standardwert ist die Hostplattform, auf der SQL Server ausgeführt wird. Aus diesem Grund wird nicht der Benutzer zum Angeben des Werts verfügen. Es ist erforderlich, im Fall einer, in denen mehrere Plattformen unterstützt werden, oder der Benutzer muss eine andere Plattform angeben. Windows ist die einzige unterstützte Plattform.
+**PLATFORM = WINDOWS**
 
-## <a name="remarks"></a>Hinweise
+Gibt die Plattform für den Inhalt der Bibliothek an. Der Standardwert ist die Hostplattform, auf der SQL Server ausgeführt wird. Aus diesem Grund muss der Benutzer den Wert nicht angeben. Dies ist in Fällen erforderlich, in denen mehrere Plattformen unterstützt werden oder in denen der Benutzer eine andere Plattform angeben muss. 
 
-Für die Sprache R, wenn eine Datei zu verwenden, müssen Pakete vorbereitet werden in Form von ZIP-Archivdateien mit der. ZIP-Erweiterung für Windows. Derzeit wird nur die Windows-Plattform unterstützt.
+Bei SQL Server 2017 ist Windows die einzig unterstützte Plattform.
 
-Die `CREATE EXTERNAL LIBRARY` Anweisung uploads nur die Bits für die Bibliothek mit der Datenbank. Die Bibliothek ist nicht tatsächlich installiert, bis ein Benutzer ein externes Skript anschließend durch Ausführen ausführt [Sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).  
+## <a name="remarks"></a>Remarks
 
-Bibliotheken, die hochgeladen werden, um die Instanz können entweder öffentlich oder privat sein. Wenn die Bibliothek, von einem Mitglied der erstellt wird `dbo`, die Bibliothek ist öffentlich und kann mit allen Benutzern gemeinsam verwendet werden. Andernfalls ist die Bibliothek für diesen Benutzer nur privat.
+Bei der R-Sprache müssen bei Verwendung einer Datei Pakete in Form von gezippten Archivdateien mit der Dateiendung .ZIP für Windows vorbereitet werden. Derzeit wird nur die Windows-Plattform unterstützt. 
 
-Sie können keine Blobs als Datenquelle in der SQL Server-2017-Version.
+Die `CREATE EXTERNAL LIBRARY`-Anweisung lädt die Bibliothekbits in die Datenbank hoch. Die Bibliothek wird installiert, wenn ein Benutzer mithilfe von [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) ein externes Skript ausführt und das Paket oder die Bibliothek aufruft.
+
+Bibliotheken, die in die Instanz hochgeladen werden, können entweder öffentlich oder privat sein. Wenn die Bibliothek von einem Mitglied von `dbo` erstellt wird, ist sie öffentlich und kann mit allen Benutzern geteilt werden. Andernfalls ist die Bibliothek für diesen Benutzer privat.
+
+Sie können im SQL Server 2017-Release keine Blobs als Datenquelle verwenden.
 
 ## <a name="permissions"></a>Berechtigungen
 
-Erfordert die `CREATE ANY EXTERNAL LIBRARY` Berechtigung.
+Erfordert die `CREATE ANY EXTERNAL LIBRARY`-Berechtigung.
 
-So ändern Sie eine Bibliothek erfordert der separate Berechtigung `ALTER ANY EXTERNAL LIBRARY`.
+Zum Bearbeiten einer Bibliothek ist die separate Berechtigung `ALTER ANY EXTERNAL LIBRARY` erforderlich.
 
 ## <a name="examples"></a>Beispiele
 
-### <a name="a-add-an-external-library-to-a-database"></a>A. Fügen Sie eine externe Bibliothek in einer Datenbank  
+### <a name="a-add-an-external-library-to-a-database"></a>A. Hinzufügen einer externen Bibliothek zu einer Datenbank  
 
-Im folgenden Beispiel wird eine externe Bibliothek namens CustomPackage in einer Datenbank.
+Im folgenden Beispiel wird eine externe Bibliothek namens `customPackage` zu einer Datenbank hinzugefügt.
 
 ```sql
-CREATE EXTERNAL LIBRARY customPackage 
-FROM 
-  (CONTENT = 'C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\customPackage.zip')
-WITH (LANGUAGE = 'R');
+CREATE EXTERNAL LIBRARY customPackage
+FROM (CONTENT = 'C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\customPackage.zip') WITH (LANGUAGE = 'R');
 ```  
 
-Nachdem die Bibliothek mit der Instanz erfolgreich hochgeladen wurde, ein Benutzer führt die `sp_execute_external_script` so verwenden Sie die Bibliothek zu installieren.
+Nachdem die Bibliothek erfolgreich in die Instanz hochgeladen wurde, führt ein Benutzer den Vorgang `sp_execute_external_script` aus, um die Bibliothek zu installieren.
 
 ```sql
 EXEC sp_execute_external_script 
 @language =N'R', 
-@script=N'
-# load customPackage
-library(customPackage)
-'
+@script=N'library(customPackage)'
 ```
 
 ### <a name="b-installing-packages-with-dependencies"></a>B. Installieren von Paketen mit Abhängigkeiten
 
-Wenn `packageB` abhängt `packageA`, befolgen Sie dann die folgenden allgemeinen Prinzipien:
+Wenn das Paket, das Sie installieren möchten, Abhängigkeiten aufweist, ist es sehr wichtig, dass Sie sowohl Abhängigkeiten der ersten als auch der zweiten Ebene analysieren und sicherstellen, dass alle erforderlichen Pakete verfügbar sind, _bevor_ Sie versuchen, das Zielpaket zu installieren.
 
-+ Hochladen der Zielpaket und seine Abhängigkeiten.
+Nehmen wir beispielsweise an, dass Sie ein neues Paket, `packageA`, installieren möchten:
 
-    Beide Pakete müssen in einem Ordner befinden, die an den Server zugänglich ist.
++ `packageA` ist abhängig von `packageB`.
++ `packageB` ist abhängig von `packageC`.
+
+Damit die Installation von `packageA` erfolgreich ist, müssen Sie Bibliotheken für `packageB` und `packageC` zur selben Zeit erstellen, zu der Sie `packageA` zu SQL Server hinzufügen. Achten Sie darauf, dass Sie auch die erforderlichen Paketversionen überprüfen.
+
+In der Praxis sind Paketabhängigkeiten für häufig verwendete Pakete in der Regel viel komplizierter als in diesem einfachen Beispiel. Beispielsweise könnte „ggplot2“ mehr als 30 Pakete erfordern, und diese Pakete könnten zusätzliche Pakete erfordern, die auf dem Server nicht verfügbar sind. Jedes fehlende Paket und jede falsche Paketversion kann zu einem Fehler bei der Installation führen.
+
+Da es schwierig sein kann, alle Abhängigkeiten nur durch Betrachten des Paketmanifests zu bestimmen, empfehlen wir Ihnen, dass Sie ein Paket wie [miniCRAN](https://cran.r-project.org/web/packages/miniCRAN/index.html) oder [iGraph](http://igraph.org/redirect.html) verwenden, um alle Pakete zu identifizieren, die für eine erfolgreiche Installation erforderlich sein könnten.
+
++ Laden Sie das Zielpaket und dessen Abhängigkeiten hoch. Alle Dateien müssen sich in einem Ordner befinden, auf den der Server Zugriff hat.
 
     ```sql
     CREATE EXTERNAL LIBRARY packageA 
     FROM (CONTENT = 'C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\packageA.zip') 
     WITH (LANGUAGE = 'R'); 
-    
+    GO
+
     CREATE EXTERNAL LIBRARY packageB FROM (CONTENT = 'C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\packageB.zip') 
     WITH (LANGUAGE = 'R');
+    GO
+
+    CREATE EXTERNAL LIBRARY packageC FROM (CONTENT = 'C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\packageC.zip') 
+    WITH (LANGUAGE = 'R');
+    GO
     ```
 
-+ Abhängigkeiten werden zuerst installiert.
++ Installieren Sie zunächst die erforderlichen Pakete.
 
-    Wenn ein erforderliches Paket `packageA` wurde bereits hochgeladen, auf die Instanz, sie müssen nicht installiert wurde getrennt. Erforderliches Paket `packageA` wird installiert werden, wenn `sp_execute_external_script` wird zuerst ausgeführt werden, um die Paketinstallation `packageB`.
+    Wenn ein erforderliches Paket bereits in die Instanz hochgeladen wurde, müssen Sie dieses nicht erneut hinzufügen. Achten Sie nur darauf, zu überprüfen, ob es sich bei der Version des vorhandenen Pakets um die richtige handelt. 
+    
+    Die erforderlichen Pakete `packageC` und `packageB` werden beim ersten Ausführen von `sp_execute_external_script` zur Installation des Pakets `packageA` in der richtigen Reihenfolge installiert.
 
-    Jedoch, wenn das benötigte Paket `packageA`, ist nicht verfügbar, die Installation des Pakets Ziel `packageB` schlägt fehl.
+    Wenn ein erforderliches Paket jedoch nicht verfügbar ist, tritt ein Fehler bei der Installation des Zielpakets `packageA` auf.
 
     ```sql
     EXEC sp_execute_external_script 
     @language =N'R', 
     @script=N'
-    # load packageB
-    library(packageB)
-    # call customPackageBFunc
-    OutputDataSet <- customPackageBFunc()
+    # load the desired package packageA
+    library(packageA)
+    # call function from package
+    OutputDataSet <- packageA.function()
     '
     with result sets (([result] int));    
     ```
 
-### <a name="c-create-a-library-from-a-byte-stream"></a>C. Eine Bibliothek aus einem Bytestream zu erstellen.
+### <a name="c-create-a-library-from-a-byte-stream"></a>C. Erstellen einer Bibliothek aus einem Bytedatenstrom
 
-Das folgende Beispiel erstellt eine Bibliothek durch Übergabe Bits als eine hexadezimale Literale aktualisiert.
+Wenn Sie nicht die Möglichkeit haben, die Paketdateien an einem Speicherort auf dem Server zu speichern, können Sie die Paketinhalte auch in einer Variable übergeben. Im folgenden Beispiel wird eine Bibliothek erstellt, indem die Bits als Hexadezimalliteral übergeben werden.
 
 ```SQL
 CREATE EXTERNAL LIBRARY customLibrary FROM (CONTENT = 0xabc123) WITH (LANGUAGE = 'R');
 ```
 
-### <a name="d-change-an-existing-package-library"></a>D. Ändern einer vorhandenen Paket-Bibliothek
+Hier wurden die Hexadezimalwerte zur besseren Lesbarkeit abgeschnitten.
 
-Die `ALTER EXTERNAL LIBRARY` DDL-Anweisung kann verwendet werden, neue Bibliotheksinhalte hinzufügen oder Ändern von vorhandenen Library-Inhalt. Zum Ändern einer vorhandenen Bibliotheksfreigabe erfordert die `ALTER ANY EXTERNAL LIBRARY` Berechtigung.
+### <a name="d-change-an-existing-package-library"></a>D. Löschen einer vorhandenen Paketbibliothek
 
-Weitere Informationen finden Sie unter [externe Bibliothek ALTER](alter-external-library-transact-sql.md).
+Die `ALTER EXTERNAL LIBRARY`-DDL-Anweisung kann verwendet werden, um neuen Bibliotheksinhalt hinzuzufügen oder bestehenden Bibliotheksinhalt zu ändern. Zum Bearbeiten einer bestehenden Bibliothek ist die Berechtigung `ALTER ANY EXTERNAL LIBRARY` erforderlich.
 
-### <a name="e-delete-a-package-library"></a>E. Löschen einer Paket-Bibliothek
+Weitere Informationen finden Sie unter [ALTER EXTERNAL LIBRARY](alter-external-library-transact-sql.md).
 
-Um eine Bibliothek Paket aus der Datenbank zu löschen, führen Sie die Anweisung aus:
+### <a name="e-delete-a-package-library"></a>E. Löschen einer Paketbibliothek
+
+Um eine Paketbibliothek aus der Datenbank zu löschen, führen Sie die folgende Anweisung aus:
 
 ```sql
 DROP EXTERNAL LIBRARY customPackage <user_name>;
 ```
 
 > [!NOTE]
-> Im Gegensatz zu anderen `DROP` Anweisungen in [!INCLUDE[ssnoversion](../../includes/ssnoversion.md)], diese Anweisung unterstützt einen optionalen Parameter, der angibt, der Autorität für die Benutzer. Diese Option kann Benutzer mit Rollen auf den Besitz von normalen Benutzern hochgeladene Bibliotheken zu löschen.
+> Im Gegensatz zu anderen `DROP`-Anweisungen in [!INCLUDE[ssnoversion](../../includes/ssnoversion.md)] unterstützt diese Anweisung einen optionalen Parameter, der die Benutzerberechtigung angibt. Durch diese Option können Benutzer mit Besitzrollen Bibliotheken löschen, die von regulären Benutzern hochgeladen wurden.
 
 ## <a name="see-also"></a>Siehe auch
 
 [ALTER EXTERNAL LIBRARY (Transact-SQL)](alter-external-library-transact-sql.md)  
-[Löschen von EXTERNEN Bibliothek (Transact-SQL)](drop-external-library-transact-sql.md)  
+[DROP EXTERNAL LIBRARY (Transact-SQL)](drop-external-library-transact-sql.md)  
 [sys.external_library_files](../../relational-databases/system-catalog-views/sys-external-library-files-transact-sql.md)  
 [sys.external_libraries](../../relational-databases/system-catalog-views/sys-external-libraries-transact-sql.md)  

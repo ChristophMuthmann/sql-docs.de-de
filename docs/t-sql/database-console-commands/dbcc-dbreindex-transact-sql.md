@@ -1,5 +1,5 @@
 ---
-title: DBCC DBREINDEX (Transact-SQL) | Microsoft Docs
+title: DBCC DBREINDEX (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 07/16/2017
 ms.prod: sql-non-specified
@@ -37,12 +37,12 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-dbreindex-transact-sql"></a>DBCC DBREINDEX (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]Erstellt ein oder mehrere Indizes einer Tabelle in der angegebenen Datenbank neu.
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] Erstellt einen oder mehrere Indizes einer Tabelle in der angegeben Datenbank neu.
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]Verwendung [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) stattdessen.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Verwenden Sie stattdessen [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md).  
   
-**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] über [aktuelle Version](http://go.microsoft.com/fwlink/p/?LinkId=299658))
+**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis zur [aktuellen Version](http://go.microsoft.com/fwlink/p/?LinkId=299658))
   
 ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -59,7 +59,7 @@ DBCC DBREINDEX
   
 ## <a name="arguments"></a>Argumente  
  *table_name*  
- Der Name der Tabelle, die den angegebenen Index oder die Indizes enthält, die neu zu erstellen sind. Tabellennamen müssen den Regeln für [Bezeichner](../../relational-databases/databases/database-identifiers.md)*.*  
+ Der Name der Tabelle, die den angegebenen Index oder die Indizes enthält, die neu zu erstellen sind. Tabellennamen müssen den Regeln für [Bezeichner](../../relational-databases/databases/database-identifiers.md) *entsprechen.*  
   
  *index_name*  
  Der Name des neu zu erstellenden Indexes. Indexnamen müssen den Regeln für Bezeichner entsprechen. Wenn *index_name* angegeben wird, muss auch *table_name* angegeben werden. Wenn *index_name* nicht oder als " " angegeben wird, werden alle Indizes für die Tabelle neu erstellt.  
@@ -72,16 +72,16 @@ DBCC DBREINDEX
  WITH NO_INFOMSGS  
  Unterdrückt alle Informationsmeldungen mit einem Schweregrad von 0 bis 10.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
 Die DBCC DBREINDEX-Anweisung erstellt einen Index oder alle Indizes für eine Tabelle neu. Aufgrund der Möglichkeit, Indizes dynamisch neu zu erstellen, können Indizes mit PRIMARY KEY- oder UNIQUE-Einschränkungen neu erstellt werden, ohne diese Einschränkungen zu löschen und neu zu erstellen. Das heißt, ein Index kann neu erstellt werden, ohne die Struktur einer Tabelle oder deren Einschränkungen zu kennen. Dies kann nach dem Massenkopieren von Daten in die Tabelle der Fall sein.
 
 DBCC DBREINDEX kann alle Indizes für eine Tabelle in einer einzelnen Anweisung neu erstellen. Dies ist einfacher, als mehrere DROP INDEX- und CREATE INDEX-Anweisungen zu codieren. Da die Arbeit von einer Anweisung ausgeführt wird, ist DBCC DBREINDEX automatisch atomar. Einzelne DROP INDEX- und CREATE INDEX-Anweisungen müssen dagegen in eine Transaktion eingebunden werden, um atomar zu sein. Außerdem bietet DBCC DBREINDEX mehr Optimierungen, als bei einzelnen DROP INDEX- und CREATE INDEX-Anweisungen möglich wären.
 
 Im Gegensatz zu DBCC INDEXDEFRAG, oder ALTER INDEX mit der Option REORGANIZE, ist DBCC DBREINDEX ein Offlinevorgang. Wenn ein nicht gruppierter Index neu erstellt wird, wird für die Dauer des Vorgangs eine freigegebene Sperre für die betreffende Tabelle eingerichtet. Dadurch werden Änderungen an der Tabelle verhindert. Falls der gruppierte Index neu erstellt wird, wird eine exklusive Tabellensperre eingerichtet. Dadurch wird jeglicher Tabellenzugriff verhindert, wodurch die Tabelle offline ist. Verwenden Sie die ALTER INDEX REBUILD-Anweisung mit der Option ONLINE, um eine Indexneuerstellung online auszuführen, oder um den Grad an Parallelität während des Indexneuerstellungsvorgangs zu steuern.
 
-Weitere Informationen zum Auswählen einer Methode zum Neuerstellen oder Neuorganisieren eines Indexes finden Sie unter [Neuorganisieren und Neuerstellen von Indizes](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md) .
+Weitere Informationen zum Auswählen einer Methode zum Neuerstellen oder Neuorganisieren eines Indexes finden Sie unter [Neuorganisieren und Neuerstellen von Indizes](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md).
   
-## <a name="restrictions"></a>Einschränkungen  
+## <a name="restrictions"></a>Restrictions  
 Die Verwendung von DBCC DBREINDEX wird für die folgenden Objekte nicht unterstützt.
 -   Systemtabellen  
 -   Räumlichkeitsindizes  
@@ -118,7 +118,7 @@ DBCC DBREINDEX ('HumanResources.Employee', ' ', 70);
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  
 [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  

@@ -1,5 +1,5 @@
 ---
-title: WIEDERHOLEN SIE DEN... CATCH (Transact-SQL) | Microsoft Docs
+title: TRY...CATCH (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -68,7 +68,7 @@ END CATCH
  *statement_block*  
  Eine beliebige Gruppe von [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen in einem Batch oder in einem BEGIN…END-Block.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Ein TRY…CATCH-Konstrukt fängt alle Ausführungsfehler ab, deren Schweregrad größer als 10 ist und durch die die Datenbankverbindung nicht geschlossen wird.  
   
  Auf einen TRY-Block muss direkt ein dazugehöriger CATCH-Block folgen. Werden andere Anweisungen zwischen die END TRY- und BEGIN CATCH-Anweisungen eingeschlossen, wird dadurch ein Syntaxfehler generiert.  
@@ -96,17 +96,17 @@ END CATCH
 ## <a name="retrieving-error-information"></a>Abrufen von Fehlerinformationen  
  Im Bereich eines CATCH-Blocks können folgende Systemfunktionen verwendet werden, um Informationen zu dem Fehler abzurufen, der zur Ausführung des CATCH-Blocks geführt hat:  
   
--   [ERROR_NUMBER()](../../t-sql/functions/error-number-transact-sql.md) gibt die Anzahl der Fehler zurück.  
+-   [ERROR_NUMBER()](../../t-sql/functions/error-number-transact-sql.md) gibt die Fehlernummer zurück.  
   
 -   [ERROR_SEVERITY()](../../t-sql/functions/error-severity-transact-sql.md) gibt den Schweregrad zurück.  
   
--   [ERROR_STATE()](../../t-sql/functions/error-state-transact-sql.md) gibt die fehlerzustandsnummer zurück.  
+-   [ERROR_STATE()](../../t-sql/functions/error-state-transact-sql.md) gibt die Fehlerzustandsnummer zurück.  
   
--   [ERROR_PROCEDURE()](../../t-sql/functions/error-procedure-transact-sql.md) gibt den Namen der gespeicherten Prozedur oder des Triggers zurück, in dem der Fehler aufgetreten ist.  
+-   [ERROR_PROCEDURE()](../../t-sql/functions/error-procedure-transact-sql.md) gibt den Namen der gespeicherten Prozedur oder des Triggers zurück, in der bzw. in dem der Fehler aufgetreten ist.  
   
--   [ERROR_LINE()](../../t-sql/functions/error-line-transact-sql.md) gibt die Nummer der Zeile in der Routine, die den Fehler verursacht hat.  
+-   [ERROR_LINE()](../../t-sql/functions/error-line-transact-sql.md) gibt die Zeilennummer in der Routine zurück, die den Fehler verursacht hat.  
   
--   [ERROR_MESSAGE()](../../t-sql/functions/error-message-transact-sql.md) gibt den vollständigen Text der Fehlermeldung. Der Text umfasst die Werte, die für alle ersetzbaren Parameter angegeben werden, wie z. B. Längen, Objektnamen oder Zeitangaben.  
+-   [ERROR_MESSAGE()](../../t-sql/functions/error-message-transact-sql.md) gibt den gesamten Text der Fehlermeldung zurück. Der Text umfasst die Werte, die für alle ersetzbaren Parameter angegeben werden, wie z. B. Längen, Objektnamen oder Zeitangaben.  
   
  Diese Funktionen geben NULL zurück, wenn sie außerhalb des Bereichs eines CATCH-Blocks aufgerufen werden. Fehlerinformationen können mithilfe dieser Funktionen an beliebiger Stelle im Bereich des CATCH-Blocks abgerufen werden. Das folgende Skript zeigt beispielsweise eine gespeicherte Prozedur, die Fehlerbehandlungsfunktionen umfasst. Im `CATCH`-Block eines `TRY…CATCH`-Konstrukts wird die gespeicherte Prozedur aufgerufen, und Informationen zum Fehler werden zurückgegeben.  
   
@@ -138,7 +138,7 @@ BEGIN CATCH
 END CATCH;   
 ```  
   
- Der Fehler\_ \* Funktionen funktionieren auch in einem `CATCH` -Block ein [systemintern kompilierte gespeicherte Prozedur](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md).  
+ Die ERROR\_\*-Funktionen können auch in einem `CATCH`-Block in einer [nativ kompilierten gespeicherten Prozedur](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md) ausgeführt werden.  
   
 ## <a name="errors-unaffected-by-a-trycatch-construct"></a>Fehler, auf die sich ein TRY…CATCH-Konstrukt nicht auswirkt  
  TRY…CATCH-Konstrukte fangen folgende Bedingungen nicht auf:  
@@ -206,7 +206,7 @@ END CATCH;
 ## <a name="uncommittable-transactions-and-xactstate"></a>Nicht commitfähige Transaktionen und XACT_STATE  
  Wenn ein Fehler, der in einem TRY-Block generiert wurde, dazu führt, dass der Status der aktuellen Transaktion ungültig wird, dann wird die Transaktion als nicht commitfähige Transaktion klassifiziert. Ein Fehler, der außerhalb eines TRY-Blocks normalerweise zur Beendigung einer Transaktion führt, hat bei Auftreten innerhalb eines TRY-Blocks zur Folge, dass eine Transaktion zu einer nicht commitfähigen Transaktion wird. Eine nicht commitfähige Transaktion kann nur Leseoperationen oder ROLLBACK TRANSACTION durchführen. Die Transaktion kann keine [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen ausführen, die eine Schreiboperation oder COMMIT TRANSACTION generieren. Die XACT_STATE-Funktion gibt den Wert -1 zurück, wenn eine Transaktion als nicht commitfähige Transaktion klassifiziert wurde. Nach Abschluss einer Batchausführung wird für alle aktiven nicht commitfähigen Transaktionen von [!INCLUDE[ssDE](../../includes/ssde-md.md)] ein Rollback ausgeführt. Falls keine Fehlermeldung gesendet wurde, als die Transaktion in den nicht commitfähigen Status überging, wird bei Abschluss des Batches eine Fehlermeldung an die Clientanwendung gesendet. Auf diese Weise wird angezeigt, dass eine nicht commitfähige Transaktion erkannt und ein Rollback für sie ausgeführt wurde.  
   
- Weitere Informationen zu nicht commitfähigen Transaktionen und zur XACT_STATE-Funktion finden Sie unter [XACT_STATE &#40; Transact-SQL &#41; ](../../t-sql/functions/xact-state-transact-sql.md).  
+ Weitere Informationen zu nicht commitfähigen Transaktionen und zur XACT_STATE-Funktion finden Sie unter [XACT_STATE &#40;Transact-SQL&#41;](../../t-sql/functions/xact-state-transact-sql.md).  
   
 ## <a name="examples"></a>Beispiele  
   
@@ -326,7 +326,7 @@ END CATCH;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
 ### <a name="d-using-trycatch"></a>D. Verwenden von TRY…CATCH  
  Das folgende Beispiel zeigt eine `SELECT`-Anweisung, die einen Fehler aufgrund einer Division durch 0 (null) generiert. Der Fehler führt dazu, dass die Ausführung zum dazugehörigen `CATCH`-Block wechselt.  
@@ -347,15 +347,15 @@ END CATCH;
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [THROW &#40;Transact-SQL&#41;](../../t-sql/language-elements/throw-transact-sql.md)   
- [Datenbankmodulfehlern](../../relational-databases/errors-events/database-engine-error-severities.md)   
+ [Database Engine Error Severities (Schweregrad von Datenbank-Engine-Fehlern)](../../relational-databases/errors-events/database-engine-error-severities.md)   
  [ERROR_LINE &#40;Transact-SQL&#41;](../../t-sql/functions/error-line-transact-sql.md)   
  [ERROR_MESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/error-message-transact-sql.md)   
  [ERROR_NUMBER &#40;Transact-SQL&#41;](../../t-sql/functions/error-number-transact-sql.md)   
  [ERROR_PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/functions/error-procedure-transact-sql.md)   
  [ERROR_SEVERITY &#40;Transact-SQL&#41;](../../t-sql/functions/error-severity-transact-sql.md)   
- [ERROR_STATE &#40; Transact-SQL &#41;](../../t-sql/functions/error-state-transact-sql.md)   
+ [ERROR_STATE &#40;Transact-SQL&#41;](../../t-sql/functions/error-state-transact-sql.md)   
  [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)   
  [@@ERROR &#40;Transact-SQL&#41;](../../t-sql/functions/error-transact-sql.md)   
  [GOTO &#40;Transact-SQL&#41;](../../t-sql/language-elements/goto-transact-sql.md)   

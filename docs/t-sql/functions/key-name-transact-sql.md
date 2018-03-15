@@ -1,5 +1,5 @@
 ---
-title: KEY_NAME (Transact-SQL) | Microsoft Docs
+title: KEY_NAME (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -46,7 +46,7 @@ KEY_NAME ( ciphertext | key_guid )
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *Chiffretext*  
+ *ciphertext*  
  Der mit dem symmetrischen Schlüssel verschlüsselte Text. *cyphertext* ist vom Datentyp **varbinary(8000)**.  
   
  *key_guid*  
@@ -61,7 +61,7 @@ KEY_NAME ( ciphertext | key_guid )
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="a-displaying-the-name-of-a-symmetric-key-using-the-keyguid"></a>A. Anzeigen des Namens eines symmetrischen Schlüssels mit der key_guid  
- Die **master** Datenbank enthält einen symmetrischen Schlüssel, die mit der Bezeichnung # #ms_servicemasterkey##. Das folgende Beispiel ruft die GUID dieses Schlüssels aus der dynamischen Verwaltungssicht sys.symmetric_keys ab, weist sie einer Variablen zu und übergibt dann diese Variable an die KEY_NAME-Funktion, um zu veranschaulichen, wie der Name zurückgegeben wird, der der GUID entspricht.  
+ Die **master**-Datenbank enthält einen symmetrischen Schlüssel mit der Bezeichnung ##MS_ServiceMasterKey##. Das folgende Beispiel ruft die GUID dieses Schlüssels aus der dynamischen Verwaltungssicht sys.symmetric_keys ab, weist sie einer Variablen zu und übergibt dann diese Variable an die KEY_NAME-Funktion, um zu veranschaulichen, wie der Name zurückgegeben wird, der der GUID entspricht.  
   
 ```  
 USE master;  
@@ -115,9 +115,9 @@ SELECT KEY_NAME(@ciphertext) AS [Name of Key] ;
   
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Sys. symmetric_keys &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md)   
- [ENCRYPTBYKEY &#40; Transact-SQL &#41;](../../t-sql/functions/encryptbykey-transact-sql.md)   
- [DECRYPTBYKEYAUTOASYMKEY &#40; Transact-SQL &#41;](../../t-sql/functions/decryptbykeyautoasymkey-transact-sql.md)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [sys.symmetric_keys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md)   
+ [ENCRYPTBYKEY &#40;Transact-SQL&#41;](../../t-sql/functions/encryptbykey-transact-sql.md)   
+ [DECRYPTBYKEYAUTOASYMKEY &#40;Transact-SQL&#41;](../../t-sql/functions/decryptbykeyautoasymkey-transact-sql.md)  
   
   

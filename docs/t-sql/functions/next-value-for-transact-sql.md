@@ -1,5 +1,5 @@
 ---
-title: "NEBEN dem Wert für (Transact-SQL) | Microsoft Docs"
+title: NEXT VALUE FOR (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 07/19/2016
 ms.prod: sql-non-specified
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/21/2017
 
   Generiert eine Sequenznummer aus dem angegebenen Sequenzobjekt.  
   
- Eine detaillierte Erläuterung der Erstellung und Verwendung von Sequenzen, finden Sie unter [Sequenznummern](../../relational-databases/sequence-numbers/sequence-numbers.md). Verwendung [Sp_sequence_get_range](../../relational-databases/system-stored-procedures/sp-sequence-get-range-transact-sql.md) generiert einen Bereich von Sequenznummern reservieren.  
+ Eine umfassende Erläuterung der Erstellung und Verwendung von Sequenzen finden Sie unter [Sequenznummern](../../relational-databases/sequence-numbers/sequence-numbers.md). Mit [sp_sequence_get_range](../../relational-databases/system-stored-procedures/sp-sequence-get-range-transact-sql.md) können Sie einen Bereich von Sequenznummern reservieren.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -64,28 +64,28 @@ NEXT VALUE FOR [ database_name . ] [ schema_name . ]  sequence_name
  Der Name des Sequenzobjekts, von dem die Nummer generiert wird.  
   
  *over_order_by_clause*  
- Bestimmt die Reihenfolge, in der der Sequenzwert den Zeilen in einer Partition zugewiesen wird. Weitere Informationen finden Sie unter [Klausel "OVER" &#40; Transact-SQL &#41; ](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ Bestimmt die Reihenfolge, in der der Sequenzwert den Zeilen in einer Partition zugewiesen wird. Weitere Informationen finden Sie unter [OVER-Klausel &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
 ## <a name="return-types"></a>Rückgabetypen  
  Gibt mit dem Typ der Sequenz eine Nummer zurück.  
   
-## <a name="remarks"></a>Hinweise  
- Die **NEXT VALUE FOR** Funktion kann in gespeicherten Prozeduren und Triggern verwendet werden.  
+## <a name="remarks"></a>Remarks  
+ Die **NEXT VALUE FOR**-Funktion kann in gespeicherten Prozeduren und Triggern verwendet werden.  
   
- Wenn die **NEXT VALUE FOR** -Funktion in einer Abfrage oder standardeinschränkung verwendet wird, wenn das gleiche Sequenzobjekt mehr als einmal verwendet wird, oder wenn das gleiche Sequenzobjekt sowohl in der Anweisung, die die Werte angibt und in einer standardeinschränkung verwendet wird ausgeführt wird, wird der gleiche Wert für alle Spalten verweisen auf die gleiche Sequenz innerhalb einer Zeile im Resultset zurückgegeben.  
+ Wird bei Verwendung der **NEXT VALUE FOR**-Funktion in einer Abfrage oder Standardeinschränkung das gleiche Sequenzobjekt mehr als einmal verwendet oder das gleiche Sequenzobjekt sowohl in der Anweisung, die die Werte angibt, als auch in einer ausgeführten Standardeinschränkung verwendet, wird der gleiche Wert für alle Spalten zurückgegeben, die in einer Zeile im Resultset auf die gleiche Sequenz verweisen.  
   
- Die **NEXT VALUE FOR** Funktion nicht deterministisch ist, und wird nur in Kontexten zulässig, wobei die Anzahl der generierten Sequenzwerte klar definiert ist. Nachfolgend finden Sie eine Definition der Anzahl der Werte, die für das jeweilige Sequenzobjekt, auf das verwiesen wird, in einer Anweisung verwendet werden:  
+ Die **NEXT VALUE FOR**-Funktion ist nicht deterministisch und nur in Kontexten zulässig, in denen die Anzahl der generierten Sequenzwerte exakt definiert ist. Nachfolgend finden Sie eine Definition der Anzahl der Werte, die für das jeweilige Sequenzobjekt, auf das verwiesen wird, in einer Anweisung verwendet werden:  
   
--   **Wählen Sie** -für jedes Sequenzobjekt, auf die verwiesen wird, wird ein neuer Wert pro Zeile im Resultset der Anweisung einmal generiert.  
+-   **SELECT**: Für jedes Sequenzobjekt, auf das verwiesen wird, wird im Ergebnis der Anweisung einmal pro Zeile ein neuer Wert generiert.  
   
--   **FÜGEN SIE** ... **Werte** -für jedes Sequenzobjekt, auf die verwiesen wird, wird ein neuer Wert für jede eingefügte Zeile in der Anweisung einmal generiert.  
+-   **INSERT** … **VALUES**: Für jedes Sequenzobjekt, auf das verwiesen wird, wird in der Anweisung einmal pro eingefügte Zeile ein neuer Wert generiert.  
   
--   **UPDATE** -für jedes Sequenzobjekt, auf die verwiesen wird, wird ein neuer Wert generiert, für jede Zeile, die von der Anweisung aktualisiert wird.  
+-   **UPDATE**: Für jedes Sequenzobjekt, auf das verwiesen wird, wird ein neuer Wert für jede Zeile generiert, die von der Anweisung aktualisiert wird.  
   
--   Verfahrensanweisungen (z. B. **DECLARE**, **festgelegt**usw.)-für jedes Sequenzobjekt, auf die verwiesen wird, wird ein neuer Wert für jede Anweisung generiert.  
+-   Verfahrensanweisungen (beispielsweise **DECLARE**, **SET**, usw.): Für jedes Sequenzobjekt, auf das verwiesen wird, wird eine neuer Wert für jede Anweisung generiert.  
   
 ## <a name="limitations-and-restrictions"></a>Einschränkungen  
- Die **NEXT VALUE FOR** Funktion kann nicht in den folgenden Situationen verwendet werden:  
+ Die **NEXT VALUE FOR**-Funktion kann in den folgenden Situationen nicht verwendet werden:  
   
 -   Bei Datenbanken im schreibgeschützten Modus  
   
@@ -97,15 +97,15 @@ NEXT VALUE FOR [ database_name . ] [ schema_name . ]  sequence_name
   
 -   Bei Sichten, in benutzerdefinierten Funktionen oder in berechneten Spalten  
   
--   In einer Anweisung mit der **DISTINCT**, **UNION**, **UNION ALL**, **EXCEPT** oder **INTERSECT** Operator.  
+-   Bei Anweisungen, die den Operator **DISTINCT**, **UNION**, **UNION ALL**, **EXCEPT** oder **INTERSECT** verwenden.  
   
--   In einer Anweisung mit der **ORDER BY** Klausel, wenn **NEXT VALUE FOR** ... **ÜBER** (**ORDER BY** ...) dient.  
+-   Bei Anweisungen, die die **ORDER BY**-Klausel verwenden, außer wenn **NEXT VALUE FOR** … **OVER** (**ORDER BY** …) verwendet wird.  
   
--   In den folgenden Klauseln: **FETCH**, **über**, **Ausgabe**, **ON**, **PIVOT**,  **UNPIVOT**, **GRUPPIEREN nach**, **HAVING**, **berechnen**, **COMPUTE BY**, oder **FOR XML-**.  
+-   Bei den folgenden Klauseln: **FETCH**, **OVER**, **OUTPUT**, **ON**, **PIVOT**, **UNPIVOT**, **GROUP BY**, **HAVING**, **COMPUTE**, **COMPUTE BY** oder **FOR XML**.  
   
--   In bedingten Ausdrücken mit **Fall**, **auswählen**, **COALESCE**, **IIF**, **ISNULL**, oder  **NULLIF**.  
+-   Bei bedingten Ausdrücken mit **CASE**, **CHOOSE**, **COALESCE**, **IIF**, **ISNULL** oder **NULLIF**.  
   
--   In einem **Werte** -Klausel, die nicht Teil einer **einfügen** Anweisung.  
+-   Bei einer **VALUES**-Klausel, die nicht Teil einer **INSERT**-Anweisung ist.  
   
 -   Bei der Definition einer CHECK-Einschränkung  
   
@@ -113,14 +113,14 @@ NEXT VALUE FOR [ database_name . ] [ schema_name . ]  sequence_name
   
 -   Als Standard in einem benutzerdefinierten Tabellentyp.  
   
--   In einer Anweisung mit **oben**, **OFFSET**, oder wenn die **ROWCOUNT** Option festgelegt ist.  
+-   In einer Anweisung mit **TOP**, **OFFSET** oder wenn die **ROWCOUNT**-Option festgelegt ist.  
   
--   In der **, in dem** -Klausel einer Anweisung.  
+-   In der **WHERE**-Klausel einer Anweisung.  
   
--   In einem **MERGE** Anweisung. (Ausnahme: Wenn die **NEXT VALUE FOR** Funktion in Default-Einschränkung in der Zieltabelle verwendet wird und Standard wird verwendet, der **erstellen** -Anweisung die **MERGE** Anweisung.)  
+-   In einer **MERGE**-Anweisung. (Ausnahme: Wenn die **NEXT VALUE FOR**-Funktion in einer Standardeinschränkung in der Zieltabelle und in der **CREATE**-Anweisung der **MERGE**-Anweisung der Standardwert verwendet wird.)  
   
 ## <a name="using-a-sequence-object-in-a-default-constraint"></a>Verwenden eines Sequenzobjekts in einer Standardeinschränkung  
- Bei Verwendung der **NEXT VALUE FOR** Funktion in Default-Einschränkung, gelten die folgenden Regeln:  
+ Wenn Sie die **NEXT VALUE FOR**-Funktion in einer Standardeinschränkung verwenden, gelten die folgenden Regeln:  
   
 -   Standardeinschränkungen in mehreren Tabellen können auf ein einzelnes Sequenzobjekt verweisen.  
   
@@ -132,49 +132,49 @@ NEXT VALUE FOR [ database_name . ] [ schema_name . ]  sequence_name
   
 -   Wenn mehrere Standardeinschränkungen das gleiche Sequenzobjekt verwenden, oder wenn das gleiche Sequenzobjekt sowohl in der Anweisung verwendet wird, die die Werte angibt, als auch in einer Standardeinschränkung, die ausgeführt wird, wird die gleiche Sequenznummer für alle Spalten in einer Zeile zurückgegeben.  
   
--   Verweise auf die **NEXT VALUE FOR** -Funktion in Default-Einschränkung kann nicht angegeben werden. die **über** Klausel.  
+-   Verweise auf die **NEXT VALUE FOR**-Funktion in einer Standardeinschränkung können keine **OVER**-Klausel angeben.  
   
 -   Ein Sequenzobjekt, auf das in einer Standardeinschränkung verwiesen wird, kann geändert werden.  
   
--   Im Fall von ein `INSERT … SELECT` oder `INSERT … EXEC` Anweisung, in denen die Einfügen von Daten stammen aus einer Abfrage mit, einer **ORDER BY** -Klausel, die die Rückgabewerte von der **NEXT VALUE FOR** Funktion generiert in der Reihenfolge gemäß der **ORDER BY** Klausel.  
+-   Bei einer `INSERT … SELECT`- oder `INSERT … EXEC`-Anweisung, bei der die eingefügten Daten aus einer Abfrage mit einer **ORDER BY**-Klausel stammen, werden die von der **NEXT VALUE FOR**-Funktion zurückgegebenen Werte in der von der **ORDER BY**-Klausel angegebenen Reihenfolge generiert.  
   
 ## <a name="using-a-sequence-object-with-an-over-order-by-clause"></a>Verwenden eines Sequenzobjekts mit einer OVER ORDER BY-Klausel  
- Die **NEXT VALUE FOR** Funktion unterstützt das Generieren von sortierten Sequenzwerten durch Anwenden der **über** -Klausel, um die **NEXT VALUE FOR** aufrufen. Mithilfe der **über** -Klausel garantiert dem Benutzer, dass die zurückgegebenen Werte, in der Größenordnung von generiert werden der **über** -Klausel **Reihenfolge B**Y-Unterklausel. Die folgenden zusätzlichen Regeln gelten bei Verwendung der **NEXT VALUE FOR** -Funktion mit dem **über** Klausel:  
+ Die **NEXT VALUE FOR**-Funktion unterstützt das Generieren von sortierten Sequenzwerten durch Verwenden der **OVER**-Klausel für den **NEXT VALUE FOR**-Aufruf. Die Verwendung der **OVER**-Klausel garantiert dem Benutzer, dass die zurückgegebenen Werte in der Reihenfolge generiert werden, die von der **ORDER BY**-Unterklausel der **OVER**-Klausel festgelegt wird. Die Verwendung der **NEXT VALUE FOR**-Funktion mit der **OVER**-Klausel unterliegt folgenden zusätzlichen Regeln:  
   
--   Mehrere Aufrufe der **NEXT VALUE FOR** -Funktion denselben Sequenz-Generator in einer einzelnen Anweisung alle die gleiche verwenden muss **über** -Klauseldefinition.  
+-   Mehrere Aufrufe der **NEXT VALUE FOR**-Funktion für den gleichen Sequenzgenerator in einer einzelnen Anweisung müssen jeweils die gleiche **OVER**-Klauseldefinition verwenden.  
   
--   Mehrere Aufrufe der **NEXT VALUE FOR** Funktion, dass der Verweis unterschiedliche Sequenz-Generatoren in einer einzelnen Anweisung verschiedene sind können **über** -klauseldefinitionen.  
+-   Mehrere Aufrufe der **NEXT VALUE FOR**-Funktion, die auf unterschiedliche Sequenzgeneratoren in einer einzelnen Anweisung verweisen, können verschiedene **OVER**-Klauseldefinitionen aufweisen.  
   
--   Ein **über** Klausel angewendet, um die **NEXT VALUE FOR** -Funktion nicht unterstützt die **PARTITION BY** Sub-Klausel.  
+-   Eine **OVER**-Klausel, die auf die **NEXT VALUE FOR**-Funktion angewendet wird, unterstützt keine **PARTITION BY**-Unterklausel.  
   
--   Wenn alle Aufrufe der **NEXT VALUE FOR** -Funktion in einer **wählen** -Anweisung gibt die **über** -Klausel, ein **ORDER BY** -Klausel kann verwendet werden, die **wählen** Anweisung.  
+-   Wenn alle Aufrufe der **NEXT VALUE FOR**-Funktion in einer **SELECT**-Anweisung die **OVER**-Klausel angeben, kann eine **ORDER BY**-Klausel in der **SELECT**-Anweisung verwendet werden.  
   
--   Die **über** -Klausel kann mit der **NEXT VALUE FOR** funktionieren bei Verwendung in einer **wählen** Anweisung oder `INSERT … SELECT …` Anweisung. Verwenden der **über** -Klausel mit der **NEXT VALUE FOR** Funktion ist nicht zulässig **UPDATE** oder **MERGE** Anweisungen.  
+-   Die **OVER**-Klausel kann mit der **NEXT VALUE FOR**-Funktion in einer **SELECT**-Anweisung oder in einer `INSERT … SELECT …`-Anweisung verwendet werden. Das Verwenden der **OVER**-Klausel mit der **NEXT VALUE FOR**-Funktion ist in **UPDATE**- oder **MERGE**-Anweisungen nicht zulässig.  
   
 -   Wenn ein anderer Prozess zur gleichen Zeit auf das Sequenzobjekt zugreift, weisen die zurückgegebenen Zahlen möglicherweise Lücken auf.  
   
 ## <a name="metadata"></a>Metadaten  
- Weitere Informationen zu Sequenzen, Fragen Sie die [sys.sequences](../../relational-databases/system-catalog-views/sys-sequences-transact-sql.md) -Katalogsicht angezeigt.  
+ Fragen Sie die [sys.sequences](../../relational-databases/system-catalog-views/sys-sequences-transact-sql.md)-Katalogsicht ab, um Informationen zu Sequenzen zu erhalten.  
   
-## <a name="security"></a>Sicherheit  
+## <a name="security"></a>Security  
   
 ### <a name="permissions"></a>Berechtigungen  
- Erfordert **UPDATE** -Berechtigung für das Sequenzobjekt oder das Schema der Sequenz. Ein Beispiel für das Gewähren der Berechtigung finden Sie weiter unten in diesem Thema in Beispiel F.  
+ Erfordert die **UPDATE**-Berechtigung für das Sequenzobjekt oder das Schema der Sequenz. Ein Beispiel für das Gewähren der Berechtigung finden Sie weiter unten in diesem Thema in Beispiel F.  
   
 ### <a name="ownership-chaining"></a>Besitzverkettung  
  Sequenzobjekte unterstützen die Besitzverkettung. Wenn das Sequenzobjekt über den gleichen Besitzer wie die aufrufende gespeicherte Prozedur, der aufrufende Trigger oder die aufrufende Tabelle (mit einem Sequenzobjekt als Standardeinschränkung) verfügt, ist keine Überprüfung der Berechtigung für das Sequenzobjekt erforderlich. Wenn das Sequenzobjekt nicht im Besitz des gleichen Benutzers wie die aufrufende gespeicherte Prozedur, der aufrufende gespeicherte Trigger oder die aufrufende gespeicherte Tabelle ist, muss die Berechtigung für das Sequenzobjekt überprüft werden.  
   
- Wenn die **NEXT VALUE FOR** Funktion als Standardwert in einer Tabelle verwendet wird, Benutzer müssen beide **einfügen** Berechtigung für die Tabelle und **UPDATE** -Berechtigung für das Sequenzobjekt , zum Einfügen von Daten unter Verwendung des standardmäßigen.  
+ Wenn die **NEXT VALUE FOR**-Funktion als Standardwert in einer Tabelle verwendet wird, benötigen Benutzer eine **INSERT**-Berechtigung für die Tabelle sowie eine **UPDATE**-Berechtigung für das Sequenzobjekt, um Daten mithilfe der Standardeinstellung hinzuzufügen.  
   
 -   Wenn die Standardeinschränkung den gleichen Besitzer wie das Sequenzobjekt hat, sind beim Aufrufen der Standardeinschränkung keine Berechtigungen für das Sequenzobjekt erforderlich.  
   
 -   Wenn die Standardeinschränkung und das Sequenzobjekt nicht dem gleichen Benutzer gehören, sind Berechtigungen für das Sequenzobjekt auch beim Aufrufen der Standardeinschränkung erforderlich.  
   
-### <a name="audit"></a>Überwachung  
- So überwachen Sie die **NEXT VALUE FOR** funktionieren, indem Sie die SCHEMA_OBJECT_ACCESS_GROUP überwachen.  
+### <a name="audit"></a>Überwachen von  
+ Sie können die **NEXT VALUE FOR**-Funktion überwachen, indem Sie die SCHEMA_OBJECT_ACCESS_GROUP überwachen.  
   
 ## <a name="examples"></a>Beispiele  
- Beispiele für Sequenzen Erstellung und Verwendung der **NEXT VALUE FOR** Funktion zum Generieren von Sequenznummern finden Sie unter [Sequenznummern](../../relational-databases/sequence-numbers/sequence-numbers.md).  
+ Beispiele zum Erstellen von Sequenzen und Verwenden der **NEXT VALUE FOR**-Funktion für das Generieren von Sequenznummern finden Sie unter [Sequenznummern](../../relational-databases/sequence-numbers/sequence-numbers.md).  
   
  In den folgenden Beispielen wird die Sequenz `CountBy1` im Schema `Test` verwendet. Führen Sie die folgende Anweisung aus, um die `Test.CountBy1`-Sequenz zu erstellen. In den Beispielen C und E wird die Datenbank [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] verwendet; die `CountBy1`-Sequenz wird daher in dieser Datenbank erstellt.  
   
@@ -235,7 +235,7 @@ GO
 ```  
   
 ### <a name="d-using-the-next-value-for-function-in-the-definition-of-a-default-constraint"></a>D. Verwenden der NEXT VALUE FOR-Funktion in der Definition einer Standardeinschränkung  
- Mithilfe der **NEXT VALUE FOR** -Funktion in der Definition einer standardeinschränkung wird unterstützt. Ein Beispiel der Verwendung von **NEXT VALUE FOR** in einem **CREATE TABLE** -Anweisung finden Sie unter Beispiel C[Sequenznummern](../../relational-databases/sequence-numbers/sequence-numbers.md). Im folgenden Beispiel wird `ALTER TABLE` verwendet, um eine Sequenz als Standard einer aktuellen Tabelle hinzuzufügen.  
+ Die Verwendung der **NEXT VALUE FOR**-Funktion in der Definition einer Standardeinschränkung wird unterstützt. Ein Beispiel für die Verwendung der **NEXT VALUE FOR**-Funktion in einer **CREATE TABLE**-Anweisung finden Sie unter Beispiel C [Sequenznummern](../../relational-databases/sequence-numbers/sequence-numbers.md). Im folgenden Beispiel wird `ALTER TABLE` verwendet, um eine Sequenz als Standard einer aktuellen Tabelle hinzuzufügen.  
   
 ```  
 CREATE TABLE Test.MyTable  
@@ -285,7 +285,7 @@ GO
 ```  
   
 ### <a name="e-using-the-next-value-for-function-with-select--into"></a>E. Verwenden der NEXT VALUE FOR-Funktion mit SELECT … INTO  
- Im folgenden Beispiel wird die `SELECT … INTO` Anweisung zum Erstellen einer Tabelle mit dem Namen `Production.NewLocation` und verwendet die `NEXT VALUE FOR` Funktion, um jede Zeile Zahl.  
+ Im folgenden Beispiel wird mit der `SELECT … INTO`-Anweisung eine Tabelle namens `Production.NewLocation` erstellt und mit der `NEXT VALUE FOR`-Funktion jede Zeile nummeriert.  
   
 ```  
 USE AdventureWorks2012 ;   
@@ -301,15 +301,15 @@ GO
 ```  
   
 ### <a name="f-granting-permission-to-execute-next-value-for"></a>F. Erteilen der Berechtigung zum Ausführen von NEXT VALUE FOR  
- Im folgenden Beispiel wird **UPDATE** Berechtigungen für einen Benutzer mit dem Namen `AdventureWorks\Larry` Berechtigung zum Ausführen von `NEXT VALUE FOR` mithilfe der `Test.CounterSeq` Sequenz.  
+ Im folgenden Beispiel wird dem Benutzer `AdventureWorks\Larry` die **UPDATE**-Berechtigung zum Ausführen von `NEXT VALUE FOR` mit der `Test.CounterSeq`-Sequenz gewährt.  
   
 ```  
 GRANT UPDATE ON OBJECT::Test.CounterSeq TO [AdventureWorks\Larry] ;  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Erstellen Sie SEQUENCE &#40; Transact-SQL &#41;](../../t-sql/statements/create-sequence-transact-sql.md)   
- [ALTER SEQUENCE &#40; Transact-SQL &#41;](../../t-sql/statements/alter-sequence-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [CREATE SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-sequence-transact-sql.md)   
+ [ALTER SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-sequence-transact-sql.md)   
  [Sequenznummern](../../relational-databases/sequence-numbers/sequence-numbers.md)  
   
   

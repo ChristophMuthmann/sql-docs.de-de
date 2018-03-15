@@ -1,5 +1,5 @@
 ---
-title: "Erstellen der SERVERÜBERWACHUNG (Transact-SQL) | Microsoft Docs"
+title: CREATE SERVER AUDIT (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 01/22/2018
 ms.prod: sql-non-specified
@@ -81,39 +81,39 @@ CREATE SERVER AUDIT audit_name
   
 ## <a name="arguments"></a>Argumente  
  TO { DATEI | ANWENDUNGSPROTOKOLL | SICHERHEITSPROTOKOLL }  
- Legt den Speicherort des Überwachungsziels fest. Die Optionen sind eine Binärdatei, das Windows-Anwendungsprotokoll oder das Windows-Sicherheitsprotokoll an. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann nicht in das Windows-Sicherheitsprotokoll schreiben, ohne zusätzliche Einstellungen in Windows zu konfigurieren. Weitere Informationen finden Sie unter [Schreiben von SQL-Serverüberwachungsereignissen in das Sicherheitsprotokoll](../../relational-databases/security/auditing/write-sql-server-audit-events-to-the-security-log.md).  
+ Legt den Speicherort des Überwachungsziels fest. Die Optionen sind eine Binärdatei, das Windows-Anwendungsprotokoll oder das Windows-Sicherheitsprotokoll. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann nicht in das Windows-Sicherheitsprotokoll schreiben, ohne zusätzliche Einstellungen in Windows zu konfigurieren. Weitere Informationen finden Sie unter [Schreiben von SQL-Serverüberwachungsereignissen in das Sicherheitsprotokoll](../../relational-databases/security/auditing/write-sql-server-audit-events-to-the-security-log.md).  
   
  FILEPATH ='*os_file_path*'  
  Der Pfad des Überwachungsprotokolls. Der Dateiname wird auf der Grundlage des Überwachungsnamens und des Überwachungs-GUID generiert.  
   
- MAXSIZE = { *Max_size}*  
- Gibt die maximale Größe an, die die Überwachungsdatei annehmen kann. Die *Max_size* Wert muss eine ganze Zahl, gefolgt von MB, GB, TB oder UNLIMITED sein. Die minimale Größe, die Sie angeben können *Max_size* ist 2 MB und der Höchstwert beträgt 2.147.483.647 TB. Wird UNLIMITED angegeben, kann die Größe der Datei so lange zunehmen, bis auf dem Datenträger kein Speicherplatz mehr verfügbar ist. (0 steht ebenfalls für UNLIMITED.) Angabe eines Werts kleiner als 2 MB löst den Fehler MSG_MAXSIZE_TOO_SMALL aus. Der Standardwert ist UNLIMITED.  
+ MAXSIZE = { *max_size }*  
+ Gibt die maximale Größe an, die die Überwachungsdatei annehmen kann. Der Wert von *max_size* muss eine ganze Zahl gefolgt von MB, GB, TB oder UNLIMITED sein. Die minimale Größe, die Sie für *max_size* angeben können, beträgt 2 MB, und die maximale Größe beträgt 2.147.483.647 TB. Wird UNLIMITED angegeben, kann die Größe der Datei so lange zunehmen, bis auf dem Datenträger kein Speicherplatz mehr verfügbar ist. (0 steht ebenfalls für UNLIMITED.) Die Angabe eines Werts kleiner als 2 MB löst den Fehler MSG_MAXSIZE_TOO_SMALL aus. Der Standardwert ist UNLIMITED.  
   
- MAX_ROLLOVER_FILES =*{Ganzzahl* | UNBEGRENZTE}  
- Gibt die maximale Anzahl der Dateien an, die im Dateisystem zusätzlich zur aktuellen Datei beibehalten werden. Die *MAX_ROLLOVER_FILES* Wert muss eine ganze Zahl oder UNLIMITED sein. Der Standardwert ist UNLIMITED. Dieser Parameter wird ausgewertet, sobald die Überwachung neu gestartet wird (der möglich, wenn der Instanz von der [!INCLUDE[ssDE](../../includes/ssde-md.md)] neu gestartet wird oder wenn die Überwachung aktiviert ist deaktiviert, und klicken Sie dann auf erneut) oder wenn eine neue Datei benötigt wird, da MAXSIZE erreicht wurde. Wenn *MAX_ROLLOVER_FILES* ausgewertet wird, wenn die Anzahl der Dateien überschreitet das *MAX_ROLLOVER_FILES* festlegen, wird die älteste Datei gelöscht. Daher, wenn die Einstellung der *MAX_ROLLOVER_FILES* ist 0, die eine neue Datei jedes Mal erstellt die *MAX_ROLLOVER_FILES* -Einstellung ausgewertet wird. Nur eine Datei wird automatisch gelöscht, sobald *MAX_ROLLOVER_FILES* -Einstellung ausgewertet wird daher der Wert der *MAX_ROLLOVER_FILES* wird verringert, die Anzahl der Dateien wird nicht verkleinert, es sei denn, alte Dateien manuell gelöscht. Der Maximalwert für die Anzahl der Dateien beträgt 2.147.483.647.  
+ MAX_ROLLOVER_FILES =*{ integer* | UNLIMITED }  
+ Gibt die maximale Anzahl der Dateien an, die im Dateisystem zusätzlich zur aktuellen Datei beibehalten werden. Der Wert *MAX_ROLLOVER_FILES* muss eine Ganzzahl oder UNLIMITED sein. Der Standardwert ist UNLIMITED. Dieser Parameter wird ausgewertet, sobald die Überwachung neu gestartet wird (z.B. wenn die Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] neu gestartet oder die Überwachung deaktiviert und wieder aktiviert wird) oder wenn eine neue Datei benötigt wird, da MAXSIZE erreicht wurde. Wenn die Anzahl der Dateien bei der Auswertung des Werts von *MAX_ROLLOVER_FILES* die Einstellung für *MAX_ROLLOVER_FILES* überschreitet, wird die älteste Datei gelöscht. Wenn die Einstellung für *MAX_ROLLOVER_FILES* 0 lautet, wird folglich bei jeder Auswertung der Einstellung für *MAX_ROLLOVER_FILES* eine neue Datei erstellt. Bei der Auswertung der Einstellung für *MAX_ROLLOVER_FILES* wird nur eine Datei automatisch gelöscht. Wenn der Wert von *MAX_ROLLOVER_FILES* also sinkt, verringert sich die Anzahl der Dateien nur dann, wenn alte Dateien manuell gelöscht werden. Der Maximalwert für die Anzahl der Dateien beträgt 2.147.483.647.  
   
  MAX_FILES =*integer*  
  **Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Gibt die maximale Anzahl von Überwachungsdateien an, die erstellt werden können. Führt kein Rollover zur ersten Datei aus, wenn die Grenze erreicht wird. Wenn die MAX_FILES-Grenze erreicht wird, verursacht alle Aktionen, die zusätzliche Überwachungsereignisse erzeugt werden kann, verursacht einen Fehler.  
+ Gibt die maximale Anzahl von Überwachungsdateien an, die erstellt werden können. Führt kein Rollover zur ersten Datei aus, wenn die Grenze erreicht wird. Wenn die MAX_FILES-Grenze erreicht wird, schlägt jede Aktion fehl, die zusätzliche Überwachungsereignisse nach sich zieht.  
   
  RESERVE_DISK_SPACE = { ON | OFF }  
  Diese Option ordnet der Datei auf dem Datenträger den MAXSIZE-Wert zu. Sie gilt nur, wenn MAXSIZE nicht gleich UNLIMITED ist. Der Standardwert ist OFF.  
   
  QUEUE_DELAY =*integer*  
- Bestimmt die Zeit in Millisekunden, die verstreichen kann, bevor die Verarbeitung von Überwachungsaktionen erzwungen werden. Der Wert 0 steht für eine synchrone Übermittlung. Der minimale festlegbare Abfrageverzögerungswert ist 1000 (1 Sekunde), was auch der Standardwert ist. Der maximale Wert beträgt 2.147.483.647 (2.147.483,647 Sekunden oder 24 Tage, 20 Stunden, 31 Minuten und 23,647 Sekunden). Angeben eines ungültigen Werts löst den Fehler MSG_INVALID_QUEUE_DELAY aus.  
+ Gibt den Zeitraum in Millisekunden an, der verstreichen kann, bevor die Verarbeitung von Überwachungsaktionen erzwungen wird. Der Wert 0 steht für eine synchrone Übermittlung. Der minimale festlegbare Abfrageverzögerungswert ist 1000 (1 Sekunde), was auch der Standardwert ist. Der maximale Wert beträgt 2.147.483.647 (2.147.483,647 Sekunden oder 24 Tage, 20 Stunden, 31 Minuten und 23,647 Sekunden). Die Angabe einer ungültigen Zahl löst den Fehler MSG_INVALID_QUEUE_DELAY aus.  
   
  ON_FAILURE = { CONTINUE | SHUTDOWN | FAIL_OPERATION }  
  Gibt an, ob die an das Ziel ausgebende Instanz [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fehlschlagen lassen, fortsetzen oder beenden soll, wenn das Ziel keine Daten in das Überwachungsprotokoll schreiben kann. Der Standardwert ist CONTINUE.  
   
  CONTINUE  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Vorgänge werden fortgesetzt. Überwachungsdatensätze werden nicht beibehalten. Die Überwachung weiterhin versucht, Ereignisse und wieder zu protokollieren, wenn die fehlerbedingung aufgelöst wurde. Auswählen der Continue-Option können unter Umständen unüberwachte Aktivitäten, Ihre Sicherheitsrichtlinien verstoßen. Verwenden Sie diese Option, wenn die weitere Verwendung von [!INCLUDE[ssDE](../../includes/ssde-md.md)] wichtiger als die Beibehaltung einer vollständigen Überwachung ist.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Vorgänge werden fortgesetzt. Überwachungsdatensätze werden nicht beibehalten. Bei der Überwachung wird weiterhin versucht, Ereignisse zu protokollieren. Sie wird fortgesetzt, wenn die Fehlerbedingung aufgelöst wurde. Durch Auswählen der Continue-Option können unter Umständen nicht überwachte Aktivitäten ausgeführt werden, die gegen Ihre Sicherheitsrichtlinien verstoßen könnten. Verwenden Sie diese Option, wenn die weitere Verwendung von [!INCLUDE[ssDE](../../includes/ssde-md.md)] wichtiger als die Beibehaltung einer vollständigen Überwachung ist.  
   
 SHUTDOWN  
-Erzwingt, dass die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Herunterfahren, If [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zum Schreiben von Daten in das Überwachungsziel aus irgendeinem Grund fehlschlägt. Der Anmeldung ausgeführten der `CREATE SERVER AUDIT` Anweisung benötigen die `SHUTDOWN` Berechtigung innerhalb [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Das Herunterfahren Verhalten weiterhin besteht auch dann, wenn die `SHUTDOWN` Berechtigung später von der ausgeführten Anmeldung aufgehoben. Wenn der Benutzer nicht über diese Berechtigung verfügt, wird Klicken Sie dann die Anweisung schlägt fehl und die Überwachung nicht erstellt werden. Verwenden Sie die Option, wenn ein Überwachungsfehler die Sicherheit oder die Integrität des Systems beeinträchtigen konnte. Weitere Informationen finden Sie unter [Herunterfahren](../../t-sql/language-elements/shutdown-transact-sql.md).  
+Erzwingt, dass die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] heruntergefahren wird, falls [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aus irgendeinem Grund keine Daten in das Überwachungsziel schreiben kann. Die Anmeldung, bei der die `CREATE SERVER AUDIT`-Anweisung ausgeführt wird, muss über die `SHUTDOWN`-Berechtigung in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verfügen. Das Verhalten für das Herunterfahren besteht auch dann, wenn die `SHUTDOWN`-Berechtigung später von der ausführenden Anmeldung widerrufen wird. Wenn der Benutzer nicht über diese Berechtigung verfügt, schlägt die Anweisung fehl, und die Überwachung wird nicht erstellt. Verwenden Sie die Option, wenn ein Überwachungsfehler die Sicherheit oder die Integrität des Systems beeinträchtigen konnte. Weitere Informationen finden Sie unter [SHUTDOWN](../../t-sql/language-elements/shutdown-transact-sql.md).  
   
  FAIL_OPERATION  
- Datenbankaktionen schlagen fehl, wenn sie überwachte Ereignisse verursachen. Aktionen, die keine überwachten Ereignisse verursachen, können fortgesetzt, aber es können keine überwachten Ereignisse auftreten. Die Überwachung weiterhin versucht, Ereignisse und wieder zu protokollieren, wenn die fehlerbedingung aufgelöst wurde. Verwenden Sie diese Option, wenn die Beibehaltung einer vollständigen Überwachung wichtiger als der Vollzugriff auf [!INCLUDE[ssDE](../../includes/ssde-md.md)] ist.  
+ Datenbankaktionen schlagen fehl, wenn sie überwachte Ereignisse verursachen. Aktionen, die keine überwachten Ereignisse verursachen, können fortgesetzt werden, es können jedoch keine überwachten Ereignisse auftreten. Bei der Überwachung wird weiterhin versucht, Ereignisse zu protokollieren. Sie wird fortgesetzt, wenn die Fehlerbedingung aufgelöst wurde. Verwenden Sie diese Option, wenn die Beibehaltung einer vollständigen Überwachung wichtiger als der Vollzugriff auf [!INCLUDE[ssDE](../../includes/ssde-md.md)] ist.  
 **Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
 
  AUDIT_GUID =*uniqueidentifier*  
@@ -127,10 +127,10 @@ Erzwingt, dass die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion
  event_field_name  
  **Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Ist der Name des Ereignisfelds, das die Prädikatquelle identifiziert. Überwachungsfelder werden in beschrieben [Sys. fn_get_audit_file &#40; Transact-SQL &#41; ](../../relational-databases/system-functions/sys-fn-get-audit-file-transact-sql.md). Alle Felder gefiltert werden können, mit Ausnahme von `file_name`, `audit_file_offset`, und `event_time`.  
+ Ist der Name des Ereignisfelds, das die Prädikatquelle identifiziert. Überwachungsfelder werden in [sys.fn_get_audit_file &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-get-audit-file-transact-sql.md) beschrieben. Mit Ausnahme von `file_name`, `audit_file_offset` und `event_time` können alle Felder gefiltert werden.  
 
 > [!NOTE]  
->  Während der `action_id` und `class_type` Felder sind vom Typ **Varchar** in Sys. fn_get_audit_file, sie können nur verwendet werden mit Zahlen werden eine prädikatquelle zum Filtern. Zum Abrufen der Liste von Werten zu verwendenden `class_type`, führen Sie folgende Abfrage:  
+>  Während die Felder `action_id` und `class_type` in sys.fn_get_audit_file den Datentyp **varchar** aufweisen, können sie nur mit Zahlen verwendet werden, wenn sie eine Prädikatquelle für die Filterung darstellen. Führen Sie die folgende Abfrage aus, um die Liste der mit `class_type` zu verwendenden Werte abzurufen:  
 > ```sql
 > SELECT spt.[name], spt.[number]
 > FROM   [master].[dbo].[spt_values] spt
@@ -142,14 +142,14 @@ Erzwingt, dass die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion
  number  
  **Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Alle numerischen Typen umfassen **decimal**. Einschränkungen stellen der verfügbare physische Speicher oder eine Zahl dar, die zu groß ist, um als 64-Bit-Ganzzahl dargestellt werden zu können.  
+ Ein numerischer Typ einschließlich **decimal**. Einschränkungen stellen der verfügbare physische Speicher oder eine Zahl dar, die zu groß ist, um als 64-Bit-Ganzzahl dargestellt werden zu können.  
   
  ' string '  
  **Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Entweder eine ANSI- oder Unicode-Zeichenfolge, die vom Prädikatvergleich verlangt wird. Für die Prädikatvergleichsfunktionen wird keine implizite Zeichenfolgentypkonvertierung ausgeführt. Die Übergabe des falschen Typs führt zu einem Fehler.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Wenn eine Serverüberwachung erstellt wird, befindet sie sich im deaktivierten Zustand.  
   
  Die CREATE SERVER AUDIT-Anweisung liegt im Bereich einer Transaktion. Wird ein Rollback für die Transaktion ausgeführt, so wird auch für die Anweisung ein Rollback durchgeführt.  
@@ -179,7 +179,7 @@ CREATE SERVER AUDIT HIPAA_Audit
 ```  
   
 ###  <a name="ExampleWhere"></a> C. Erstellen einer Serverüberwachung, die eine WHERE-Klausel enthält  
- Im folgenden Beispiel werden eine Datenbank, ein Schema und zwei Tabellen für das Beispiel erstellt. Die Tabelle mit dem Namen `DataSchema.SensitiveData` vertrauliche Daten enthält und Zugriff auf die Tabelle in der Überwachung aufgezeichnet werden muss. Die Tabelle `DataSchema.GeneralData` beinhaltet keine vertraulichen Daten. Die Datenbank-Überwachungsspezifikation überwacht den Zugriff auf alle Objekte im `DataSchema`-Schema. Die Serverüberwachung wird mit einer WHERE-Klausel erstellt, die die Serverüberwachung ausschließlich auf die `SensitiveData`-Tabelle beschränkt. Die serverüberwachung wird vorausgesetzt, ein Ordner "Audit" vorhanden ist, am `C:\SQLAudit`.  
+ Im folgenden Beispiel werden eine Datenbank, ein Schema und zwei Tabellen für das Beispiel erstellt. Die Tabelle mit dem Namen `DataSchema.SensitiveData` enthält vertrauliche Daten. Der Zugriff auf die Tabelle muss bei der Überwachung aufgezeichnet werden. Die Tabelle `DataSchema.GeneralData` beinhaltet keine vertraulichen Daten. Die Datenbank-Überwachungsspezifikation überwacht den Zugriff auf alle Objekte im `DataSchema`-Schema. Die Serverüberwachung wird mit einer WHERE-Klausel erstellt, die die Serverüberwachung ausschließlich auf die `SensitiveData`-Tabelle beschränkt. Bei der Serverüberwachung wird angenommen, dass unter `C:\SQLAudit` ein Überwachungsordner vorhanden ist.  
   
 ```sql  
 CREATE DATABASE TestDB;  
@@ -218,15 +218,15 @@ SELECT * FROM fn_get_audit_file('C:\SQLAudit\AuditDataAccess_*.sqlaudit',default
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [ALTER SERVER AUDIT  &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-audit-transact-sql.md)   
- [DROP SERVER AUDIT &#40; Transact-SQL &#41;](../../t-sql/statements/drop-server-audit-transact-sql.md)   
- [Erstellen Sie die SERVER AUDIT SPECIFICATION &#40; Transact-SQL &#41;](../../t-sql/statements/create-server-audit-specification-transact-sql.md)   
- [ALTER SERVER AUDIT SPECIFICATION &#40; Transact-SQL &#41;](../../t-sql/statements/alter-server-audit-specification-transact-sql.md)   
- [DROP SERVER AUDIT SPECIFICATION &#40; Transact-SQL &#41;](../../t-sql/statements/drop-server-audit-specification-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [ALTER SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-audit-transact-sql.md)   
+ [DROP SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-audit-transact-sql.md)   
+ [CREATE SERVER AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-specification-transact-sql.md)   
+ [ALTER SERVER AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-audit-specification-transact-sql.md)   
+ [DROP SERVER AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-audit-specification-transact-sql.md)   
  [CREATE DATABASE AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-audit-specification-transact-sql.md)   
  [ALTER DATABASE AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-audit-specification-transact-sql.md)   
- [DROP DATABASE AUDIT SPECIFICATION &#40; Transact-SQL &#41;](../../t-sql/statements/drop-database-audit-specification-transact-sql.md)   
+ [DROP DATABASE AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-audit-specification-transact-sql.md)   
  [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md)   
  [sys.fn_get_audit_file &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-get-audit-file-transact-sql.md)   
  [sys.server_audits &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-audits-transact-sql.md)   

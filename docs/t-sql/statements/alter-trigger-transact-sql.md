@@ -1,5 +1,5 @@
 ---
-title: ALTER TRIGGER (Transact-SQL) | Microsoft Docs
+title: ALTER TRIGGER (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 05/08/2017
 ms.prod: sql-non-specified
@@ -38,7 +38,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="alter-trigger-transact-sql"></a>ALTER TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Diese Anweisung ändert die Definition eines DML-, DDL- oder LOGON-Triggers, der zuvor mit der CREATE TRIGGER-Anweisung erstellt wurde. Trigger werden mit CREATE TRIGGER erstellt. Sie können erstellt werden, direkt aus [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisungen oder aus Methoden von Assemblys, die in erstellt werden die [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] common Language Runtime (CLR) und des Datenuploads für eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Weitere Informationen zu den Parametern, die in der ALTER TRIGGER-Anweisung verwendet werden, finden Sie unter [CREATE TRIGGER &#40; Transact-SQL &#41; ](../../t-sql/statements/create-trigger-transact-sql.md).  
+  Diese Anweisung ändert die Definition eines DML-, DDL- oder LOGON-Triggers, der zuvor mit der CREATE TRIGGER-Anweisung erstellt wurde. Trigger werden mit CREATE TRIGGER erstellt. Sie können direkt aus [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen oder aus Methoden von Assemblys erstellt werden, die in der Common Language Runtime (CLR) von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] erstellt werden und durch Hochladen an eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] übertragen werden. Weitere Informationen zu den in der ALTER TRIGGER-Anweisung verwendeten Parametern finden Sie unter [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md).  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -144,21 +144,21 @@ AS { sql_statement
   
 ## <a name="arguments"></a>Argumente  
  *schema_name*  
- Der Name des Schemas, zu dem ein DML-Trigger gehört. DML-Trigger werden auf das Schema der Tabelle oder der Sicht begrenzt, in denen sie erstellt werden. *Schema**_name* ist nur optional, wenn der DML-Trigger und seine entsprechende Tabelle oder Sicht zum Standardschema gehören. *Schema_name* kann für DDL- oder Logon-Trigger angegeben werden.  
+ Der Name des Schemas, zu dem ein DML-Trigger gehört. DML-Trigger werden auf das Schema der Tabelle oder der Sicht begrenzt, in denen sie erstellt werden. *schema**_name* ist nur optional, wenn der DML-Trigger und die zugehörige Tabelle oder Sicht zum Standardschema gehören. *schema_name* kann für DDL- oder LOGON-Trigger nicht angegeben werden.  
   
- *Form trigger_name*  
+ *trigger_name*  
  Der vorhandene Trigger, der geändert werden soll.  
   
- *Tabelle* | *anzeigen*  
+ *table* | *view*  
  Die Tabelle oder Sicht, für die der DML-Trigger ausgeführt wird. Das Angeben des vollqualifizierten Namens einer Tabelle oder Sicht ist optional.  
   
  DATABASE  
- Wendet den Bereich eines DDL-Triggers auf die aktuelle Datenbank an. Wenn angegeben, der Trigger wird ausgelöst, wenn *Event_type* oder *Event_group* tritt auf, in der aktuellen Datenbank.  
+ Wendet den Bereich eines DDL-Triggers auf die aktuelle Datenbank an. Wenn angegeben, wird der Trigger jedes Mal ausgelöst, wenn in der aktuellen Datenbank *event_type* oder *event_group* auftritt.  
   
  ALL SERVER  
  **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Wendet den Bereich eines DDL- oder LOGON-Triggers auf den aktuellen Server an. Wenn angegeben, der Trigger wird ausgelöst, wenn *Event_type* oder *Event_group* erfolgt an einer beliebigen Stelle auf dem aktuellen Server.  
+ Wendet den Bereich eines DDL- oder LOGON-Triggers auf den aktuellen Server an. Wenn angegeben, wird der Trigger jedes Mal ausgelöst, wenn auf dem aktuellen Server *event_type* oder *event_group* auftritt.  
   
  WITH ENCRYPTION  
  **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -174,14 +174,14 @@ AS { sql_statement
  Weitere Informationen finden Sie unter [EXECUTE AS-Klausel &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-clause-transact-sql.md).  
   
  NATIVE_COMPILATION  
- Gibt an, dass der Trigger systemintern kompiliert wird.  
+ Gibt an, dass der Trigger nativ kompiliert wird.  
   
- Diese Option ist erforderlich für Trigger auf speicheroptimierten Tabellen.  
+ Diese Option ist für Trigger in speicheroptimierten Tabellen erforderlich.  
   
  SCHEMABINDING  
- Stellt sicher, dass Tabellen, die von einem Trigger verwiesen werden, gelöscht oder geändert werden können nicht aus.  
+ Stellt sicher, dass Tabellen, auf die durch einen Trigger verwiesen wird, nicht gelöscht oder geändert werden können.  
   
- Diese Option ist erforderlich für Trigger auf speicheroptimierten Tabellen und wird für Trigger in herkömmlichen Tabellen nicht unterstützt.  
+ Diese Option ist für Trigger in speicheroptimierten Tabellen erforderlich und wird nicht für Trigger in herkömmlichen Tabellen unterstützt.  
   
  AFTER  
  Gibt an, dass der Trigger erst ausgelöst wird, nachdem die auslösende SQL-Anweisung erfolgreich ausgeführt wurde. Vor dem Auslösen dieses Triggers müssen außerdem alle für die referenzielle Integrität erforderlichen kaskadierenden Aktionen und Einschränkungsüberprüfungen erfolgreich abgeschlossen sein.  
@@ -203,10 +203,10 @@ AS { sql_statement
  Für INSTEAD OF-Trigger ist die Option DELETE nicht für Tabellen mit einer referenziellen Beziehung untereinander zulässig, wenn für ON DELETE die Option CASCADE angegeben ist. Ebenso ist die Option UPDATE nicht für Tabellen mit einer referenziellen Beziehung untereinander zulässig, wenn für ON UPDATE die Option CASCADE angegeben ist. Weitere Informationen finden Sie unter [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md).  
   
  *event_type*  
- Der Name eines [!INCLUDE[tsql](../../includes/tsql-md.md)]-Sprachereignisses, nach dessen Ausführung ein DDL-Trigger ausgelöst wird. Gültige Ereignisse für DDL-Trigger sind aufgeführt [DDL-Ereignisse](../../relational-databases/triggers/ddl-events.md).  
+ Der Name eines [!INCLUDE[tsql](../../includes/tsql-md.md)]-Sprachereignisses, nach dessen Ausführung ein DDL-Trigger ausgelöst wird. Gültige Ereignisse für DDL-Trigger werden unter [DDL-Ereignisse](../../relational-databases/triggers/ddl-events.md) aufgeführt.  
   
  *event_group*  
- Der Name einer vordefinierten Gruppe von [!INCLUDE[tsql](../../includes/tsql-md.md)]-Sprachereignissen. Die DDL-Trigger auslöst, nach der Ausführung eines beliebigen [!INCLUDE[tsql](../../includes/tsql-md.md)] Sprachereignis, zu der gehört *Event_group*. Gültige Ereignisgruppen für DDL-Trigger sind in aufgeführt [DDL-Ereignisgruppen](../../relational-databases/triggers/ddl-event-groups.md). Nach dem Ausführen von ALTER TRIGGER hat *Event_group* fungiert außerdem als Makro durch Hinzufügen von Ereignistypen es Ereignistypen der Sys. trigger_events-Katalogsicht.  
+ Der Name einer vordefinierten Gruppe von [!INCLUDE[tsql](../../includes/tsql-md.md)]-Sprachereignissen. Der DDL-Trigger wird nach dem Ausführen eines beliebigen [!INCLUDE[tsql](../../includes/tsql-md.md)]-Sprachereignisses ausgelöst, das zu *event_group* gehört. Gültige Ereignisgruppen für DDL-Trigger werden unter [DDL-Ereignisgruppen](../../relational-databases/triggers/ddl-event-groups.md) aufgeführt. Nach dem Ausführen von ALTER TRIGGER dient *event_group* außerdem als Makro, das der sys.trigger_events-Katalogsicht die verarbeitbaren Ereignistypen hinzufügt.  
   
  NOT FOR REPLICATION  
  **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -216,15 +216,15 @@ AS { sql_statement
  *sql_statement*  
  Die Triggerbedingungen und -aktionen.  
   
- Für Trigger auf speicheroptimierten Tabellen die nur *Sql_statement* auf der obersten Ebene zulässig ist ein ATOMIC-Block. Die T-SQL-innerhalb von ATOMIC-Block zulässig ist durch die T-SQL-innerhalb von nativen Prozeduren zulässig beschränkt.  
+ Bei Triggern in speicheroptimierten Tabellen ist auf der obersten Ebene nur ein ATOMIC-Block als *sql_statement* erlaubt. Das im ATOMIC-Block erlaubte T-SQL ist durch das in nativen Prozeduren zulässige T-SQL beschränkt.  
   
- EXTERNAL NAME \<Method_specifier >  
+ EXTERNAL NAME \<method_specifier>  
  **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Gibt die Methode an, mit der eine Assembly eine Bindung mit dem Trigger herstellt. Die Methode darf keine Argumente enthalten und muss "void" zurückgeben. *CLASS_NAME* muss ein gültiger [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Bezeichner und als Klasse in der Assembly mit Assemblysichtbarkeit vorhanden sein. Bei der Klasse darf es sich nicht um eine geschachtelte Klasse handeln.  
+ Gibt die Methode an, mit der eine Assembly eine Bindung mit dem Trigger herstellt. Die Methode darf keine Argumente enthalten und muss "void" zurückgeben. *class_name* muss ein gültiger [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Bezeichner sein und als Klasse mit Assemblysichtbarkeit in der Assembly vorhanden sein. Bei der Klasse darf es sich nicht um eine geschachtelte Klasse handeln.  
   
-## <a name="remarks"></a>Hinweise  
- Weitere Informationen zu ALTER TRIGGER finden Sie unter "Hinweise" in [CREATE TRIGGER &#40; Transact-SQL &#41; ](../../t-sql/statements/create-trigger-transact-sql.md).  
+## <a name="remarks"></a>Remarks  
+ Weitere Informationen zu ALTER TRIGGER finden Sie in den Hinweisen unter [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md).  
   
 > [!NOTE]  
 >  Die EXTERNAL_NAME- und ON_ALL_SERVER-Optionen sind in einer enthaltenen Datenbank nicht verfügbar.  
@@ -241,7 +241,7 @@ AS { sql_statement
  Wenn eine DELETE-Aktion für eine untergeordnete oder verweisende Tabelle das Ergebnis einer CASCADE-Aktion für eine DELETE-Aktion aus der übergeordneten Tabelle ist und wenn für DELETE ein INSTEAD OF-Trigger für diese untergeordnete Tabelle definiert ist, wird der Trigger ignoriert und die DELETE-Aktion ausgeführt.  
   
 ## <a name="ddl-triggers"></a>DDL-Trigger  
- Im Gegensatz zu DML-Triggern haben DDL-Trigger keinen Schemabereich. Deshalb können OBJECT_ID, OBJECT_NAME, OBJECTPROPERTY und OBJECTPROPERTY(EX) nicht verwendet werden, wenn Metadaten zu DDL-Triggern abgefragt werden. Verwenden Sie stattdessen die Katalogsichten. Weitere Informationen finden Sie unter [erhalten Informationen über DDL-Trigger](../../relational-databases/triggers/get-information-about-ddl-triggers.md).  
+ Im Gegensatz zu DML-Triggern haben DDL-Trigger keinen Schemabereich. Deshalb können OBJECT_ID, OBJECT_NAME, OBJECTPROPERTY und OBJECTPROPERTY(EX) nicht verwendet werden, wenn Metadaten zu DDL-Triggern abgefragt werden. Verwenden Sie stattdessen die Katalogsichten. Weitere Informationen finden Sie unter [Abrufen von Informationen zu DDL-Triggern](../../relational-databases/triggers/get-information-about-ddl-triggers.md).  
   
 ## <a name="logon-triggers"></a>Logon-Trigger  
  [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] unterstützt keine Trigger für Anmeldeereignisse.  
@@ -252,7 +252,7 @@ AS { sql_statement
  Zum Ändern eines DDL-Triggers, der mit einem Serverbereich (ON ALL SERVER) definiert ist, oder eines LOGON-Triggers ist die CONTROL SERVER-Berechtigung auf dem Server erforderlich. Zum Ändern eines DDL-Triggers, der mit einem Datenbankbereich (ON DATABASE ANY) definiert ist, ist die ALTER ANY DATABASE DDL TRIGGER-Berechtigung in der aktuellen Datenbank erforderlich.  
   
 ## <a name="examples"></a>Beispiele  
- Das folgende Beispiel erstellt einen DML-Trigger in der AdventureWorks 2012-Datenbank, die eine benutzerdefinierte Meldung an den Client ausgibt, wenn ein Benutzer versucht, hinzufügen oder Ändern von Daten in der `SalesPersonQuotaHistory` Tabelle. Der Trigger wird dann mit `ALTER TRIGGER` geändert, damit der Trigger nur für `INSERT`-Aktivitäten angewendet wird. Dieser Trigger ist hilfreich, da er den Benutzer beim Aktualisieren oder Einfügen von Zeilen in die Tabelle daran erinnert, dass auch die Abteilung `Compensation` benachrichtigt werden muss.  
+ Im folgenden Beispiel wird in der AdventureWorks 2012-Datenbank ein DML-Trigger erstellt, der eine benutzerdefinierte Meldung an den Client ausgibt, wenn ein Benutzer versucht, der `SalesPersonQuotaHistory`-Tabelle Daten hinzuzufügen oder sie zu ändern. Der Trigger wird dann mit `ALTER TRIGGER` geändert, damit der Trigger nur für `INSERT`-Aktivitäten angewendet wird. Dieser Trigger ist hilfreich, da er den Benutzer beim Aktualisieren oder Einfügen von Zeilen in die Tabelle daran erinnert, dass auch die Abteilung `Compensation` benachrichtigt werden muss.  
   
 ```  
 CREATE TRIGGER Sales.bonus_reminder  
@@ -270,17 +270,17 @@ AS RAISERROR ('Notify Compensation', 16, 10);
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [DROP TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/drop-trigger-transact-sql.md)   
  [ENABLE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/enable-trigger-transact-sql.md)   
  [DISABLE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/disable-trigger-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
  [sp_helptrigger &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptrigger-transact-sql.md)   
  [Erstellen einer gespeicherten Prozedur](../../relational-databases/stored-procedures/create-a-stored-procedure.md)   
- [Sp_addmessage &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md)   
+ [sp_addmessage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md)   
  [Transaktionen](../../relational-databases/native-client-ole-db-transactions/transactions.md)   
  [Abrufen von Informationen zu DML-Triggern](../../relational-databases/triggers/get-information-about-dml-triggers.md)   
- [Abrufen von Informationen zu DDL-Trigger](../../relational-databases/triggers/get-information-about-ddl-triggers.md)   
+ [Abrufen von Informationen zu DDL-Triggern](../../relational-databases/triggers/get-information-about-ddl-triggers.md)   
  [sys.triggers &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md)   
  [sys.trigger_events &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-trigger-events-transact-sql.md)   
  [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)   

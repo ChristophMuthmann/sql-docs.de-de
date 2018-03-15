@@ -1,5 +1,5 @@
 ---
-title: JSON_MODIFY (Transact-SQL) | Microsoft Docs
+title: JSON_MODIFY (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 06/02/2016
 ms.prod: sql-non-specified
@@ -39,63 +39,63 @@ JSON_MODIFY ( expression , path , newValue )
   
 ## <a name="arguments"></a>Argumente  
  *expression*  
- Ein Ausdruck. In der Regel der Name einer Variablen oder eine Spalte, die JSON-Text enthält.  
+ Ein Ausdruck. In der Regel der Name einer Variablen oder einer Spalte, die JSON-Text enthält.  
   
- **JSON_MODIFY** gibt einen Fehler zurück, wenn *Ausdruck* kein gültiges JSON enthält.  
+ **JSON_MODIFY** gibt einen Fehler zurück, wenn *expression* keinen gültigen JSON-Text enthält.  
   
- *Pfad*  
- Ein JSON-Path-Ausdruck, der die zu aktualisierende Eigenschaft angibt.
+ *path*  
+ Ein JSON-Pfadausdruck, der die zu aktualisierende Eigenschaft angibt.
 
- *Pfad* hat die folgende Syntax:  
+ *path* verfügt über die folgende Syntax:  
   
  `[append] [ lax | strict ] $.<json path>`  
   
--   *Anfügen*  
-    Optionaler Modifizierer, der angibt, dass der neue Wert für das Array verweist angefügt werden sollen  *\<Json-Pfad >*.  
+-   *append*  
+    Optionaler Modifizierer, der angibt, dass der neue Wert an das Array angefügt werden sollte, auf das der *\<json path>* verweist.  
   
 -   *lax*  
-    Gibt an, dass die Eigenschaft verweist  *\<Json-Pfad >* noch nicht existieren. Wenn die Eigenschaft nicht vorhanden ist, versucht JSON_MODIFY ab, den neuen Wert für den angegebenen Pfad einfügen. Einfügung kann fehlschlagen, wenn die Eigenschaft auf den Pfad kann nicht eingefügt werden. Wenn Sie keinen *lax* oder *strenge*, *lax* ist der Standardmodus.  
+    Gibt an, dass die Eigenschaft, auf die der *\<json path>* verweist, nicht existieren muss. Wenn die Eigenschaft nicht vorhanden ist, versucht JSON_MODIFY, den neuen Wert für den angegebenen Pfad einzufügen. Dies kann fehlschlagen, wenn die Eigenschaft nicht in den Pfad eingefügt werden kann. Wenn Sie weder *lax* noch *strict* angeben, ist der Standardmodus *lax*.  
   
--   *Strict*  
-    Gibt an, dass die Eigenschaft verweist  *\<Json-Pfad >* muss in der JSON-Ausdruck sein. Wenn die Eigenschaft nicht vorhanden ist, wird von JSON_MODIFY ein Fehler zurückgegeben.  
+-   *strict*  
+    Gibt an, dass die Eigenschaft, auf die *\<json path>* verweist, im JSON-Ausdruck enthalten sein muss. Wenn die Eigenschaft nicht vorhanden ist, gibt JSON_MODIFY einen Fehler zurück.  
   
--   *\<JSON-Pfad >*  
-    Gibt den Pfad für die Eigenschaft zu aktualisieren. Weitere Informationen finden Sie unter [JSON-Pfadausdrücke &#40; SQLServer &#41; ](../../relational-databases/json/json-path-expressions-sql-server.md).  
+-   *\<json path>*  
+    Gibt den Pfad für die zu aktualisierende Eigenschaft an. Weitere Informationen finden Sie unter [JSON-Pfadausdrücke &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md).  
   
-In [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] und [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)], Sie können eine Variable bereitstellen, als Wert des *Pfad*.
+In [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] und [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)] können Sie eine Variable als Wert von *path* bereitstellen.
 
-**JSON_MODIFY** gibt einen Fehler zurück, wenn das Format der *Pfad* ist ungültig.  
+**JSON_MODIFY** gibt einen Fehler zurück, wenn das Format von *path* ungültig ist.  
   
  *newValue*  
- Der neue Wert für die Eigenschaft, die vom angegebenen *Pfad*.  
+ Der neue Wert für die von *path* angegebene Eigenschaft.  
   
- Im Modus "lax" löscht JSON_MODIFY den angegebenen Schlüssel aus, wenn der neue Wert NULL ist.  
+ Im Lax-Modus löscht JSON_MODIFY den angegebenen Schlüssel, wenn der neue Wert NULL ist.  
   
-JSON_MODIFY schützt alle Sonderzeichen in den neuen Wert an, wenn der Typ des Werts vom Typ NVARCHAR oder VARCHAR ist. Ein Textwert ist nicht mit Escapezeichen versehen wird jedoch ordnungsgemäß formatierte JSON durch FOR JSON, JSON_QUERY oder JSON_MODIFY erzeugt.  
+JSON_MODIFY versieht alle Sonderzeichen im neuen Wert mit Escapezeichen, wenn der Typ des Werts NVARCHAR oder VARCHAR ist. Ein Textwert wird nicht mit Escapezeichen versehen, wenn es ein ordnungsgemäß formatierter JSON ist, der von FOR JSON, JSON_QUERY oder JSON_MODIFY erzeugt wurde.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Gibt zurück, den aktualisierten Wert des *Ausdruck* als ordnungsgemäß formatierte JSON-Text.  
+ Gibt den aktualisierten Wert von *expression* als ordnungsgemäß formatierten JSON-Text zurück.  
   
-## <a name="remarks"></a>Hinweise  
- Die JSON_MODIFY-Funktion können Sie den Wert einer vorhandenen Eigenschaft aktualisieren, fügen Sie ein neues Schlüssel-Wert-Paar oder Löschen eines Schlüssels basierend auf einer Kombination von Modi und stellen Werte zur Verfügung.  
+## <a name="remarks"></a>Remarks  
+ Mit der JSON_MODIFY-Funktion können Sie den Wert einer vorhandenen Eigenschaft aktualisieren, ein neues Schlüssel-Wert-Paar einfügen oder einen Schlüssel löschen, der auf einer Kombination von Modi und bereitgestellten Werten basiert.  
   
- Die folgende Tabelle vergleicht das Verhalten des **JSON_MODIFY** im lax Modus und im strict-Modus. Weitere Informationen zu den optionalen Modus Pfadangabe ("lax" oder "strict"), finden Sie unter [JSON-Pfadausdrücke &#40; SQLServer &#41; ](../../relational-databases/json/json-path-expressions-sql-server.md).  
+ Die folgende Tabelle vergleicht das Verhalten von **JSON_MODIFY** im Lax-Modus und im Strict-Modus. Weitere Informationen zu den optionalen Path-Modusangaben (Lax oder Strict) finden Sie unter [JSON Path Expressions &#40;SQL Server&#41; (JSON-Pfadausdrücke (SQL Server))](../../relational-databases/json/json-path-expressions-sql-server.md).  
   
-|Vorhandener Wert|Pfad vorhanden ist.|Lax-Modus|Strict-Modus|  
+|Vorhandener Wert|Pfad ist vorhanden|Lax-Modus|Strict-Modus|  
 |--------------------|-----------------|--------------|-----------------|  
-|NOT NULL|ja|Aktualisieren Sie den vorhandenen Wert.|Aktualisieren Sie den vorhandenen Wert.|  
-|NOT NULL|Nein|Versucht, ein neues Schlüssel-Wert-Paar für den angegebenen Pfad erstellen.<br /><br /> Dies kann fehlschlagen. Angenommen, wenn Sie den Pfad angeben `$.user.setting.theme`, JSON_MODIFY nicht den Schlüssel ein `theme` Wenn die `$.user` oder `$.user.settings` Objekte sind nicht vorhanden, oder wenn Einstellungen ist ein Array oder einen skalaren Wert.|Fehler – INVALID_PROPERTY|  
-|NULL|ja|Löschen Sie die vorhandene Eigenschaft.|Den vorhandenen Wert auf null festgelegt.|  
-|NULL|Nein|Keine Aktion. Das erste Argument als Ergebnis zurückgegeben.|Fehler – INVALID_PROPERTY|  
+|Nicht NULL|ja|Vorhandenen Wert aktualisieren.|Vorhandenen Wert aktualisieren.|  
+|Nicht NULL|nein|Versucht, ein neues Schlüssel-Wert-Paar für den angegebenen Pfad zu erstellen.<br /><br /> Dies kann fehlschlagen. Wenn Sie beispielsweise den Pfad `$.user.setting.theme` angeben, fügt JSON_MODIFY den Schlüssel `theme` nicht ein, wenn die `$.user`- oder `$.user.settings`-Objekte nicht vorhanden sind, oder wenn Einstellungen ein Array oder ein Skalarwert sind.|Fehler – INVALID_PROPERTY|  
+|NULL|ja|Löscht die vorhandene Eigenschaft.|Legt den vorhandenen Wert auf NULL fest.|  
+|NULL|nein|Keine Aktion. Das erste Argument wird als Ergebnis zurückgegeben.|Fehler – INVALID_PROPERTY|  
   
- Im Modus "lax" JSON_MODIFY versucht, ein neues Schlüssel-Wert-Paar zu erstellen, aber in einigen Fällen möglicherweise fehl.  
+ Im Lax-Modus versucht JSON_MODIFY, ein neues Schlüssel-Wert-Paar zu erstellen, aber in einigen Fällen schlägt dies möglicherweise fehl.  
   
 ## <a name="examples"></a>Beispiele  
   
-### <a name="example---basic-operations"></a>Beispiel: grundlegende Vorgänge  
+### <a name="example---basic-operations"></a>Beispiel: Grundlegende Vorgänge  
  Das folgende Beispiel zeigt die grundlegenden Vorgänge, die mit JSON-Text ausgeführt werden können.  
   
- **Abfrage**  
+ **Dataseteigenschaften**  
   
 ```sql  
 
@@ -150,10 +150,10 @@ PRINT @info
 }
 ```  
   
-### <a name="example---multiple-updates"></a>Beispiel – mehrere updates  
+### <a name="example---multiple-updates"></a>Beispiel: Mehrere Updates  
  Mit JSON_MODIFY können Sie nur eine Eigenschaft aktualisieren. Wenn Sie mehrere Updates ausführen müssen, können Sie mehrere Aufrufe von JSON_MODIFY verwenden.  
   
- **Abfrage**  
+ **Dataseteigenschaften**  
   
 ```sql  
 DECLARE @info NVARCHAR(100)='{"name":"John","skills":["C#","SQL"]}'
@@ -180,10 +180,10 @@ PRINT @info
 }
 ```  
   
-### <a name="example---rename-a-key"></a>Beispiel: Umbenennen eines Schlüssels  
- Im folgenden Beispiel wird die Vorgehensweise beim Umbenennen einer Eigenschaft in JSON-Text mit der JSON_MODIFY-Funktion. Zunächst können Sie den Wert einer vorhandenen Eigenschaft annehmen und fügen Sie ihn als neuen Schlüssel-Wert-Paar. Anschließend können Sie den alten Schlüssel löschen, indem der Wert der alten Eigenschaft auf NULL festlegen.  
+### <a name="example---rename-a-key"></a>Beispiel: Einen Schlüssel umbenennen  
+ Im folgenden Beispiel wird die Vorgehensweise beim Umbenennen einer Eigenschaft in JSON-Text mit der JSON_MODIFY-Funktion gezeigt. Zunächst können Sie den Wert einer vorhandenen Eigenschaft annehmen. Fügen Sie ihn als neues Schlüssel-Wert-Paar ein. Anschließend können Sie den alten Schlüssel löschen, indem Sie den Wert der alten Eigenschaft auf NULL festlegen.  
   
- **Abfrage**  
+ **Dataseteigenschaften**  
   
 ```sql  
 DECLARE @product NVARCHAR(100)='{"price":49.99}'
@@ -212,12 +212,12 @@ PRINT @product
 }
 ```  
   
- Wenn den neuen Wert in einen numerischen Typ nicht umgewandelt wird, wird JSON_MODIFY wird als Text behandelt und in doppelte Anführungszeichen umgeben.  
+ Wenn der neue Wert nicht in einen numerischen Typ umgewandelt wird, behandelt JSON_MODIFY ihn als Text und umgibt ihn mit doppelten Anführungszeichen.  
   
-### <a name="example---increment-a-value"></a>Beispiel - Inkrement ein-Wert  
- Im folgende Beispiel zeigt, wie sich den Wert einer Eigenschaft in JSON-Text mit der JSON_MODIFY-Funktion zu erhöhen. Sie können zunächst der Wert der vorhandenen Eigenschaft und fügen Sie ihn als neuen Schlüssel-Wert-Paar. Anschließend können Sie den alten Schlüssel löschen, indem der Wert der alten Eigenschaft auf NULL festlegen.  
+### <a name="example---increment-a-value"></a>Beispiel: Einen Wert erhöhen  
+ Im folgenden Beispiel wird die Vorgehensweise beim Erhöhen eines Eigenschaftswerts in JSON-Text mit der JSON_MODIFY-Funktion gezeigt. Zunächst können Sie den Wert der vorhandenen Eigenschaft annehmen. Fügen Sie ihn als neues Schlüssel-Wert-Paar ein. Anschließend können Sie den alten Schlüssel löschen, indem Sie den Wert der alten Eigenschaft auf NULL festlegen.  
   
- **Abfrage**  
+ **Dataseteigenschaften**  
   
 ```sql  
 DECLARE @stats NVARCHAR(100)='{"click_count": 173}'
@@ -242,10 +242,10 @@ PRINT @stats
 }
 ```  
   
-### <a name="example---modify-a-json-object"></a>Beispiel: Ändern von JSON-Objekt  
- JSON_MODIFY behandelt die *NewValue* Argument als nur-Text auch wenn darin ordnungsgemäß formatierte JSON-Text. Daher die JSON-Ausgabe der Funktion ist in doppelte Anführungszeichen eingeschlossen, und alle Sonderzeichen werden mit Escapezeichen versehen, wie im folgenden Beispiel gezeigt.  
+### <a name="example---modify-a-json-object"></a>Beispiel: Ändern eines JSON-Objekts  
+ JSON_MODIFY behandelt das *newValue*-Argument als Nur-Text, auch wenn ordnungsgemäß formatierter JSON-Text enthalten ist. Daher ist die JSON-Ausgabe der Funktion von doppelten Anführungszeichen eingeschlossen. Alle Sonderzeichen werden mit Escapezeichen versehen, wie im folgenden Beispiel gezeigt.  
   
- **Abfrage**  
+ **Dataseteigenschaften**  
   
 ```sql  
 DECLARE @info NVARCHAR(100)='{"name":"John","skills":["C#","SQL"]}'
@@ -271,9 +271,9 @@ PRINT @info
 }
 ```  
   
- Geben Sie zum Vermeiden der automatischen Schutz *NewValue* mithilfe der JSON_QUERY-Funktion. JSON_MODIFY weiß, dass der Wert von JSON_MODIFY zurückgegebenen ordnungsgemäß formatierte JSON, damit es den Wert mit Escapezeichen versehen nicht.  
+ Geben Sie zum Vermeiden der automatischen Escapezeichen *newValue* mithilfe der JSON_QUERY-Funktion an. JSON_MODIFY weiß, dass der von JSON_MODIFY zurückgegebene Wert ein ordnungsgemäß formatierter JSON ist, damit der Wert nicht mit einem Escapezeichen versehen wird.  
   
- **Abfrage**  
+ **Dataseteigenschaften**  
   
 ```sql  
 DECLARE @info NVARCHAR(100)='{"name":"John","skills":["C#","SQL"]}'
@@ -300,7 +300,7 @@ PRINT @info
 ```  
   
 ### <a name="example---update-a-json-column"></a>Beispiel: Aktualisieren einer JSON-Spalte  
- Das folgende Beispiel aktualisiert den Wert einer Eigenschaft in einer Tabellenspalte, die JSON enthält.  
+ Im folgenden Beispiel wird der Wert einer Eigenschaft in einer Tabellenspalte, die JSON enthält, aktualisiert.  
   
 ```sql  
 UPDATE Employee
@@ -309,8 +309,8 @@ WHERE EmployeeID=17
  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [JSON-Pfadausdrücke &#40; SQLServer &#41;](../../relational-databases/json/json-path-expressions-sql-server.md)   
- [JSON-Daten &#40; SQLServer &#41;](../../relational-databases/json/json-data-sql-server.md)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [JSON-Pfadausdrücke &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)   
+ [JSON-Daten &#40;SQL Server&#41;](../../relational-databases/json/json-data-sql-server.md)  
   
   

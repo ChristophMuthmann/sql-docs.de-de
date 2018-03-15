@@ -1,5 +1,5 @@
 ---
-title: WRITETEXT-Anweisung (Transact-SQL) | Microsoft Docs
+title: WRITETEXT (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 10/23/2017
 ms.prod: sql-non-specified
@@ -40,10 +40,10 @@ ms.lasthandoff: 01/25/2018
 # <a name="writetext-transact-sql"></a>WRITETEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Ermöglicht die minimal protokollierte, interaktive Aktualisierung einer vorhandenen **Text**, **Ntext**, oder **Image** Spalte. WRITETEXT überschreibt alle vorhandenen Daten in der betreffenden Spalte. WRITETEXT kann nicht verwendet werden, auf **Text**, **Ntext**, und **Image** Spalten in den Ansichten.  
+  Ermöglicht das minimal protokollierte, interaktive Aktualisieren einer vorhandenen Spalte vom Typ **text**, **ntext** oder **image**. WRITETEXT überschreibt alle vorhandenen Daten in der betreffenden Spalte. WRITETEXT kann nicht für Spalten vom Datentyp **text**, **ntext** und **image** und in Sichten verwendet werden.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Verwenden Sie die Datentypen mit umfangreichen Werten und die **.** WRITE-Klausel aus, der die [UPDATE](../../t-sql/queries/update-transact-sql.md) Anweisung stattdessen.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Verwenden Sie stattdessen die Datentypen für große Werte und die **.**WRITE-Klausel der [UPDATE](../../t-sql/queries/update-transact-sql.md)-Anweisung.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -64,34 +64,34 @@ WRITETEXT [BULK]
 >  Es wird empfohlen, die BULK-Option nicht in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-basierten Anwendungen zu verwenden. Diese Option kann in einer zukünftigen Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] geändert oder entfernt werden.  
   
  *table* **.column**  
- Der Name der Tabelle und **Text**, **Ntext**, oder **Image** zu aktualisierenden Spalte. Tabellen- und Spaltennamen müssen den Regeln für entsprechen [Bezeichner](../../relational-databases/databases/database-identifiers.md). Das Angeben des Datenbank- und des Besitzernamens ist optional.  
+ Der Name der zu aktualisierenden Tabelle oder der zu aktualisierenden Spalte vom Datentyp **text**, **ntext** oder **image**. Tabellen- und Spaltennamen müssen den Regeln für [Bezeichner](../../relational-databases/databases/database-identifiers.md) entsprechen. Das Angeben des Datenbank- und des Besitzernamens ist optional.  
   
  *text_ptr*  
- Ist ein Wert, der den Zeiger zu speichert die **Text**, **Ntext**, oder **Image** Daten. *Text_ptr* muss **binary(16)**. Führen Sie zum Erstellen eines Textzeigers eine [einfügen](../../t-sql/statements/insert-transact-sql.md) oder [UPDATE](../../t-sql/queries/update-transact-sql.md) -Anweisung mit Daten ungleich null für den **Text**, **Ntext**, oder **Image** Spalte.  
+ Ein Wert, in dem der Zeiger auf die Daten vom Typ **text**, **ntext** oder **image** gespeichert wird. *text_ptr* muss vom Datentyp **binary(16)** sein. Führen Sie zum Erstellen eines Textzeigers eine [INSERT](../../t-sql/statements/insert-transact-sql.md)- oder eine [UPDATE](../../t-sql/queries/update-transact-sql.md)-Anweisung für die Spalte **text**, **ntext** oder **image** mit Daten aus, die nicht NULL ist.  
   
  WITH LOG  
  Wird von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ignoriert. Die Protokollierung wird durch das für die Datenbank wirksame Wiederherstellungsmodell bestimmt.  
   
  *data*  
- Der tatsächliche **Text**, **Ntext** oder **Image** zum Speichern von Daten. *Daten* kann ein Literal oder ein Parameter sein. Die maximale Länge des Texts, die interaktiv mit WRITETEXT eingefügt werden kann, ist etwa 120 KB **Text**, **Ntext**, und **Image** Daten.  
+ Die tatsächlichen Daten vom Typ **text**, **ntext** oder **image**, die gespeichert werden sollen. *data* kann ein Literal oder ein Parameter sein. Die maximale Textlänge, die interaktiv mit WRITETEXT eingefügt werden kann, entspricht für Daten vom Typ **text**, **ntext** und **image** ungefähr 120 KB.  
   
-## <a name="remarks"></a>Hinweise  
- Verwenden Sie WRITETEXT, um ersetzen **Text**, **Ntext**, und **Image** Daten und so ändern Sie UPDATETEXT **Text**, **Ntext**, und **Image** Daten. UPDATETEXT ist flexibler, da sie nur einen Teil des ändert ein **Text**, **Ntext**, oder **Image** Spalte nicht die gesamte Spalte.  
+## <a name="remarks"></a>Remarks  
+ Verwenden Sie WRITETEXT zum Ändern von Daten vom Typ **text**, **ntext** und **image** und UPDATETEXT zum Ändern von Daten vom Typ **text**, **ntext** und **image**. UPDATETEXT ist flexibler, weil damit nicht die gesamte Spalte, sondern nur ein Teil einer **text**-, **ntext**- oder **image**-Spalte geändert wird.  
   
- Für eine optimale Leistung empfehlen wir **Text**, **Ntext**, und **Image** Daten eingefügt oder aktualisiert in Blockgrößen, die ein Vielfaches von 8.040 Byte sind.  
+ Für eine optimale Leistung empfiehlt es sich, Daten vom Typ **text**, **ntext** und **image** in Segmenten mit der Größe eines Vielfachen von 8040 Bytes einzufügen oder zu aktualisieren.  
   
- Wenn das Wiederherstellungsmodell einfach oder Massenprotokolliert ist **Text**, **Ntext**, und **Image** Vorgänge, die WRITETEXT-Anweisung zu verwenden sind minimal protokollierte Vorgänge aus, wenn neue Daten eingefügt oder angefügt.  
+ Wenn Sie das einfache oder massenprotokollierte Wiederherstellungsmodell verwenden, sind Vorgänge vom Typ **text**, **ntext** und **image**, die WRITETEXT verwenden, minimal protokollierte Vorgänge, wenn neue Daten eingefügt oder angefügt werden.  
   
 > [!NOTE]  
 >  Die minimale Protokollierung wird nicht verwendet, wenn vorhandene Werte aktualisiert werden.  
   
  Die Spalte muss bereits einen gültigen Textzeiger enthalten, damit WRITETEXT ordnungsgemäß ausgeführt wird.  
   
- Verfügt die Tabelle nicht Text in Zeilen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird Speicherplatz gespart, indem Sie nicht initialisieren **Text** Spalten, wenn explizite oder implizite null-Werte in hinzugefügt werden **Text** Spalten mit einfügen und keine Textzeiger werden können für diese NULL-Werte abgerufen. Initialisieren **Text** -Spalten mit NULL, verwenden Sie die UPDATE-Anweisung. Wenn die Tabelle über Text in Zeilen verfügt, muss die text-Spalte nicht für NULL-Werte initialisiert werden, und Sie können immer einen Textzeiger erhalten.  
+ Wenn die Tabelle keinen Text in Zeilen enthält, spart [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Speicherplatz, indem Spalten vom Datentyp **text** nicht initialisiert werden, wenn in Spalten vom Datentyp **text** explizite oder implizite NULL-Werte mit INSERT hinzugefügt werden. Für diese NULL-Werte kann kein Textzeiger erhalten werden. Verwenden Sie die UPDATE-Anweisung, um Spalten vom Datentyp **text** für NULL-Werte zu initialisieren. Wenn die Tabelle über Text in Zeilen verfügt, muss die text-Spalte nicht für NULL-Werte initialisiert werden, und Sie können immer einen Textzeiger erhalten.  
   
- Der ODBC-Funktion SQLPutData ist schneller und verwendet weniger dynamischen Arbeitsspeicher als WRITETEXT. Diese Funktion kann bis zu 2 GB an einfügen **Text**, **Ntext**, oder **Image** Daten.  
+ Die ODBC-Funktion SQLPutData ist schneller und verwendet weniger dynamischen Arbeitsspeicher als WRITETEXT. Diese Funktion kann bis zu 2 GB an Daten vom Typ **text**, **ntext** oder **image** einfügen.  
   
- In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]in Zeile Textzeiger auf **Text**, **Ntext**, oder **Image** Daten vorhanden, die jedoch möglicherweise nicht mehr gültig. Informationen zu dem Text in Row-Option finden Sie unter [Sp_tableoption &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md). Weitere Informationen zu den Textzeiger, finden Sie unter [Sp_invalidate_textptr &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-invalidate-textptr-transact-sql.md).  
+ In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] können Textzeiger auf **text**-, **ntext**- oder **image**-Daten in Zeilen zwar vorhanden sein, sie sind aber möglicherweise ungültig. Informationen zur Option „text in row“ finden Sie unter [sp_tableoption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md). Informationen dazu, wie Textzeiger ungültig gemacht werden können, finden Sie unter [sp_invalidate_textptr &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-invalidate-textptr-transact-sql.md).  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die UPDATE-Berechtigung für die angegebene Tabelle. Die Berechtigung ist übertragbar, wenn die UPDATE-Berechtigung übertragen wird.  
@@ -118,12 +118,12 @@ ALTER DATABASE pubs SET RECOVERY SIMPLE;
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
+ [DEKLARIEREN SIE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
  [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [SET-Anweisungen (Transact-SQL)](../../t-sql/statements/set-statements-transact-sql.md)   
- [UPDATETEXT &#40; Transact-SQL &#41;](../../t-sql/queries/updatetext-transact-sql.md)  
+ [UPDATETEXT &#40;Transact-SQL&#41;](../../t-sql/queries/updatetext-transact-sql.md)  
   
   

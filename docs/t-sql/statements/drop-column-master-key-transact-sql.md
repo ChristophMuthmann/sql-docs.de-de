@@ -1,5 +1,5 @@
 ---
-title: DROP COLUMN MASTER KEY (Transact-SQL) | Microsoft Docs
+title: DROP COLUMN MASTER KEY (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 04/20/2016
 ms.prod: sql-non-specified
@@ -36,7 +36,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="drop-column-master-key-transact-sql"></a>DROP COLUMN MASTER KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Einen spaltenhauptschlüssel aus einer Datenbank gelöscht werden. Dies ist ein Metadatenvorgang.  
+  Entfernt einen Spaltenhauptschlüssel aus einer Datenbank. Dies ist ein Metadatenvorgang.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,29 +48,29 @@ DROP COLUMN MASTER KEY key_name;
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *Key_name*  
- Der Name der Hauptschlüssel der Spalte.  
+ *key_name*  
+ Der Namen des Spaltenhauptschlüssels.  
   
-## <a name="remarks"></a>Hinweise  
- Der spaltenhauptschlüssel kann nur gelöscht werden, wenn es keine spaltenverschlüsselung Schlüsselwerte, die mit dem spaltenhauptschlüssel verschlüsselt sind. Um spaltenverschlüsselungsschlüssel-Werte zu löschen, verwenden Sie die [DROP COLUMN ENCRYPTION KEY](../../t-sql/statements/drop-column-encryption-key-transact-sql.md) Anweisung.  
+## <a name="remarks"></a>Remarks  
+ Der Spaltenhauptschlüssel kann nur gelöscht werden, wenn keine Werte des Spaltenverschlüsselungsschlüssels mit dem Spaltenhauptschlüssel verschlüsselt wurden. Verwenden Sie die Anweisung [DROP COLUMN ENCRYPTION KEY](../../t-sql/statements/drop-column-encryption-key-transact-sql.md), um die Werte des Spaltenverschlüsselungsschlüssels zu löschen.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert **ALTER ANY COLUMN MASTER KEY** Berechtigung für die Datenbank.  
+ Erfordert die **ALTER ANY COLUMN MASTER KEY**-Berechtigung auf die Datenbank.  
   
 ## <a name="examples"></a>Beispiele  
   
-### <a name="a-dropping-a-column-master-key"></a>A. Löschen eines spaltenhauptschlüssels  
- Das folgende Beispiel löscht einen spaltenhauptschlüssel namens `MyCMK`.  
+### <a name="a-dropping-a-column-master-key"></a>A. Löschen eines Spaltenhauptschlüssels  
+ Im folgenden Beispiel wird ein Spaltenhauptschlüssel mit der Bezeichnung `MyCMK` entfernt.  
   
 ```  
 DROP COLUMN MASTER KEY MyCMK;  
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [CREATE COLUMN MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-column-master-key-transact-sql.md)   
  [CREATE COLUMN ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-column-encryption-key-transact-sql.md)   
- [DROP COLUMN ENCRYPTION KEY &#40; Transact-SQL &#41;](../../t-sql/statements/drop-column-encryption-key-transact-sql.md)   
+ [DROP COLUMN ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-column-encryption-key-transact-sql.md)   
  [Always Encrypted &#40;Datenbankmodul&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
  [sys.column_master_keys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-master-keys-transact-sql.md)  
   

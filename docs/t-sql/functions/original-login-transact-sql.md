@@ -1,5 +1,5 @@
 ---
-title: ORIGINAL_LOGIN (Transact-SQL) | Microsoft Docs
+title: ORIGINAL_LOGIN (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -52,10 +52,10 @@ ORIGINAL_LOGIN( )
 ## <a name="return-types"></a>Rückgabetypen  
  **sysname**  
   
-## <a name="remarks"></a>Hinweise  
- Diese Funktion kann sich bei der Überwachung der Identität des ursprünglichen Verbindungskontexts als nützlich erweisen. Während Funktionen wie [SESSION_USER](../../t-sql/functions/session-user-transact-sql.md) und [CURRENT_USER](../../t-sql/functions/current-user-transact-sql.md) zurück, die der aktuelle Ausführungskontext ORIGINAL_LOGIN gibt die Identität der Anmeldung, die zuerst mit der Instanz von verbunden[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]in dieser Sitzung.  
+## <a name="remarks"></a>Remarks  
+ Diese Funktion kann sich bei der Überwachung der Identität des ursprünglichen Verbindungskontexts als nützlich erweisen. Während Funktionen wie [SESSION_USER](../../t-sql/functions/session-user-transact-sql.md) und [CURRENT_USER](../../t-sql/functions/current-user-transact-sql.md) den aktuellen Ausführungskontext zurückgeben, gibt ORIGINAL_LOGIN die Identität des Anmeldenamens zurück, mit dem die erste Verbindung mit der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in der Sitzung hergestellt wurde.  
   
- Gibt NULL für [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ Gibt NULL für [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] zurück.  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wechselt der Ausführungskontext der aktuellen Sitzung vom Aufrufer der Anweisungen zu `login1`. Die Funktionen `SUSER_SNAME` und `ORIGINAL_LOGIN` werden verwendet, um den aktuellen Sitzungsbenutzer (der Benutzer, zu dem der Kontext gewechselt hat) und das ursprüngliche Anmeldekonto zurückzugeben.  
@@ -85,8 +85,8 @@ DROP USER user1;
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Führen Sie AS &#40; Transact-SQL &#41;](../../t-sql/statements/execute-as-transact-sql.md)   
- [Wiederherstellen &#40; Transact-SQL &#41;](../../t-sql/statements/revert-transact-sql.md)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [EXECUTE AS &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-transact-sql.md)   
+ [REVERT &#40;Transact-SQL&#41;](../../t-sql/statements/revert-transact-sql.md)  
   
   

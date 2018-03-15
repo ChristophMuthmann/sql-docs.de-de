@@ -1,5 +1,5 @@
 ---
-title: "Verweigern von Berechtigungen für symmetrische Schlüssel (Transact-SQL) | Microsoft Docs"
+title: "DENY (Berechtigungen für symmetrische Schlüssel) (Transact-SQL) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 06/09/2017
 ms.prod: sql-non-specified
@@ -60,19 +60,19 @@ DENY permission [ ,...n ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *Berechtigung*  
+ *permission*  
  Gibt eine Berechtigung an, die für einen symmetrischen Schlüssel verweigert werden kann. Eine Liste der Berechtigungen finden Sie im Abschnitt zu den Hinweisen weiter unten in diesem Thema.  
   
- ON SYMMETRIC KEY::*Asymmetric_key_name*  
+ ON SYMMETRIC KEY ::*asymmetric_key_name*  
  Gibt den symmetrischen Schlüssel an, für den die Berechtigung verweigert wird. Der Bereichsqualifizierer (::) ist erforderlich.  
   
- UM \< *Database_principal*>  
+ TO \<*database_principal*>  
  Gibt den Prinzipal an, für den die Berechtigung aufgehoben wird.  
   
  CASCADE  
  Gibt an, dass die verweigerte Berechtigung auch anderen Prinzipalen verweigert wird, denen diese Berechtigung von diesem Prinzipal erteilt wurde.  
   
- AS \<Database_principal >  
+ AS \<database_principal>  
  Gibt einen Prinzipal an, von dem der Prinzipal, der diese Abfrage ausführt, das Recht zum Verweigern der Berechtigung ableitet.  
   
  *Database_user*  
@@ -99,8 +99,8 @@ DENY permission [ ,...n ]
  *Database_user_with_no_login*  
  Gibt einen Datenbankbenutzer ohne entsprechenden Prinzipal auf Serverebene an.  
   
-## <a name="remarks"></a>Hinweise  
- Informationen zu symmetrischen Schlüsseln werden in der [symmetric_keys](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md) -Katalogsicht angezeigt.  
+## <a name="remarks"></a>Remarks  
+ Informationen zu symmetrischen Schlüsseln werden in der [sys.symmetric_keys](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md)-Katalogsicht angezeigt.  
   
  Ein symmetrischer Schlüssel ist ein sicherungsfähiges Element auf Datenbankebene in der Datenbank, die das übergeordnete Element in der Berechtigungshierarchie ist. Die spezifischsten und restriktivsten Berechtigungen, die für einen symmetrischen Schlüssel verweigert werden können, sind unten aufgeführt. Auch die allgemeineren Berechtigungen sind aufgeführt, die diese implizit enthalten.  
   
@@ -124,10 +124,10 @@ DENY ALTER ON SYMMETRIC KEY::SamInventory42 TO HamidS;
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Sys. symmetric_keys &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md)   
- [Erteilen Sie Berechtigungen für symmetrische Schlüssel &#40; Transact-SQL &#41;](../../t-sql/statements/grant-symmetric-key-permissions-transact-sql.md)   
- [REVOKE-Berechtigungen für symmetrische Schlüssel &#40; Transact-SQL &#41;](../../t-sql/statements/revoke-symmetric-key-permissions-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [sys.symmetric_keys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md)   
+ [GRANT (Berechtigungen für symmetrische Schlüssel) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-symmetric-key-permissions-transact-sql.md)   
+ [REVOKE (Berechtigungen für symmetrische Schlüssel) &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-symmetric-key-permissions-transact-sql.md)   
  [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)   
  [Berechtigungen &#40;Datenbankmodul&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [Prinzipale &#40;Datenbankmodul&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   

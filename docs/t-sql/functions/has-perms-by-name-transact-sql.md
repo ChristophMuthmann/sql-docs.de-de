@@ -1,5 +1,5 @@
 ---
-title: HAS_PERMS_BY_NAME (Transact-SQL) | Microsoft Docs
+title: HAS_PERMS_BY_NAME (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 07/29/2017
 ms.prod: sql-non-specified
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="haspermsbyname-transact-sql"></a>HAS_PERMS_BY_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Wertet die gültige Berechtigung des aktuellen Benutzers für ein sicherungsfähiges Element aus. Eine verwandte Funktion lautet [Fn_my_permissions](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md).  
+  Wertet die gültige Berechtigung des aktuellen Benutzers für ein sicherungsfähiges Element aus. Eine verwandte Funktion ist [fn_my_permissions](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md).  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -52,34 +52,34 @@ HAS_PERMS_BY_NAME ( securable , securable_class , permission
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *sicherungsfähiges Element*  
- Der Name des sicherungsfähigen Elements. Wenn das sicherungsfähige Element der Server selbst ist, sollte dieser Wert auf NULL festgelegt werden. *sicherungsfähige* ist ein Skalarausdruck vom Typ **Sysname**. Es gibt keinen Standardwert.  
+ *securable*  
+ Der Name des sicherungsfähigen Elements. Wenn das sicherungsfähige Element der Server selbst ist, sollte dieser Wert auf NULL festgelegt werden. *securable* ist ein Skalarausdruck vom Typ **sysname**. Es gibt keinen Standardwert.  
   
  *securable_class*  
- Der Name der Klasse des sicherungsfähigen Elements, für das die Berechtigung getestet wird. *Securable_class* ist ein Skalarausdruck vom Typ **nvarchar(60)**.  
+ Der Name der Klasse des sicherungsfähigen Elements, für das die Berechtigung getestet wird. *securable_class* ist ein Skalarausdruck vom Typ **nvarchar(60)**.  
   
- In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], das Securable_class-Argument muss auf einen der folgenden festgelegt werden: **Datenbank**, **Objekt**, **Rolle**, **SCHEMA**, oder **Benutzer**.  
+ In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] muss das securable_class-Argument auf einen der folgenden Werte festgelegt werden: **DATABASE**, **OBJECT**, **ROLE**, **SCHEMA** oder **USER**.  
   
- *Berechtigung*  
- Ein Skalarausdruck vom Typ **Sysname** , die den darstellt überprüft werden soll. Es gibt keinen Standardwert. Der Berechtigungsname ANY ist ein Platzhalter.  
+ *permission*  
+ Ein Skalarausdruck ungleich NULL vom Datentyp **sysname**, der den zu überprüfenden Berechtigungsnamen darstellt. Es gibt keinen Standardwert. Der Berechtigungsname ANY ist ein Platzhalter.  
   
- *untergeordneten sicherungsfähigen Elements*  
- Ein optionaler Skalarausdruck vom Typ **Sysname** , die den Namen der sicherungsfähigen untergeordneten Entität für die die Berechtigung getestet darstellt. Die Standardeinstellung ist NULL.  
+ *sub-securable*  
+ Ein optionaler Skalarausdruck vom Typ **sysname**, der den Namen der sicherungsfähigen untergeordneten Entität darstellt, mit der die Berechtigung getestet wird. Die Standardeinstellung ist NULL.  
   
 > [!NOTE]  
->  In Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], Sub-sicherungsfähige Elemente können keine Klammern in der Form **"[***Sub Name***]"**. Verwendung **"***Sub Name***"** stattdessen.  
+>  In den Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] dürfen in untergeordneten sicherungsfähigen Elementen keine eckigen Klammern in der Form **'[***Name des untergeordneten sicherungsfähigen Elements***]'** verwendet werden. Verwenden Sie stattdessen **'***Name des untergeordneten sicherungsfähigen Elements***'**.  
   
- *Sub-securable_class*  
- Ein optionaler Skalarausdruck vom Typ **nvarchar(60)** , die die Klasse der sicherungsfähigen untergeordneten Entität für die die Berechtigung getestet darstellen. Die Standardeinstellung ist NULL.  
+ *sub-securable_class*  
+ Ein optionaler Skalarausdruck vom Datentyp **nvarchar(60)**, der die Klasse der sicherungsfähigen untergeordneten Entität darstellt, für die die Berechtigung getestet wird. Die Standardeinstellung ist NULL.  
   
- In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], das Sub-Securable_class-Argument gilt nur, wenn das Securable_class-Argument, um festgelegt wird **Objekt**. Wenn das Securable_class-Argument, um festgelegt wird **Objekt**, das Sub-Securable_class-Argument muss festgelegt werden, um **Spalte**.  
+ Das sub-securable_class-Argument ist in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] nur gültig, wenn das securable_class-Argument auf **OBJECT** festgelegt ist. Wenn das securable_class-Argument auf **OBJECT** festgelegt ist, muss das sub-securable_class-Argument auf **COLUMN** festgelegt werden.  
   
 ## <a name="return-types"></a>Rückgabetypen  
  **int**  
   
- Gibt NULL zurück, wenn die Abfrage schlägt fehl.  
+ Gibt NULL zurück, wenn die Abfrage einen Fehler erzeugt.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Diese integrierte Funktion testet, ob der aktuelle Prinzipal eine bestimmte gültige Berechtigung für ein bestimmtes sicherungsfähiges Element aufweist. HAS_PERMS_BY_NAME gibt 1 zurück, wenn der Benutzer über eine gültige Berechtigung für das sicherungsfähige Element verfügt, 0, wenn der Benutzer über keine gültige Berechtigung für das sicherungsfähige Element verfügt, und NULL, wenn die sicherungsfähige Klasse oder die Berechtigung nicht gültig ist. Bei einer gültigen Berechtigung kann es sich um Folgendes handeln:  
   
 -   Eine Berechtigung, die dem Prinzipal direkt gewährt und nicht verweigert wurde.  
@@ -112,7 +112,7 @@ SELECT class_desc FROM sys.fn_builtin_permissions(default);
   
 ### <a name="a-do-i-have-the-server-level-view-server-state-permission"></a>A. Habe ich die VIEW SERVER STATE-Berechtigung auf Serverebene?  
   
-**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] über[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
 ```  
 SELECT HAS_PERMS_BY_NAME(null, null, 'VIEW SERVER STATE');  
@@ -120,7 +120,7 @@ SELECT HAS_PERMS_BY_NAME(null, null, 'VIEW SERVER STATE');
   
 ### <a name="b-am-i-able-to-impersonate-server-principal-ps"></a>B. Kann ich die IMPERSONATE-Anweisung für den Ps-Serverprinzipal ausführen?  
   
-**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] über[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
 ```  
 SELECT HAS_PERMS_BY_NAME('Ps', 'LOGIN', 'IMPERSONATE');  
@@ -186,7 +186,7 @@ SELECT name AS column_name,
     WHERE c.object_id=object_id('T');  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Berechtigungen &#40;Datenbankmodul&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [Securables](../../relational-databases/security/securables.md)   
  [Berechtigungshierarchie &#40;Datenbankmodul&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)   

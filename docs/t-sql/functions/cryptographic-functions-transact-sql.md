@@ -1,5 +1,5 @@
 ---
-title: Kryptografiefunktionen (Transact-SQL) | Microsoft Docs
+title: Kryptografiefunktionen (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -53,10 +53,10 @@ Die folgenden Funktionen unterstützen die Verschlüsselung, die Entschlüsselun
 |||  
 |-|-|  
 |[ENCRYPTBYASYMKEY](../../t-sql/functions/encryptbyasymkey-transact-sql.md)|[DECRYPTBYASYMKEY](../../t-sql/functions/decryptbyasymkey-transact-sql.md)|  
-|[ENCRYPTBYCert](../../t-sql/functions/encryptbycert-transact-sql.md)|[DECRYPTBYCERT](../../t-sql/functions/decryptbycert-transact-sql.md)|  
+|[ENCRYPTBYCERT](../../t-sql/functions/encryptbycert-transact-sql.md)|[DECRYPTBYCERT](../../t-sql/functions/decryptbycert-transact-sql.md)|  
 |[ASYMKEYPROPERTY](../../t-sql/functions/asymkeyproperty-transact-sql.md)|[ASYMKEY_ID](../../t-sql/functions/asymkey-id-transact-sql.md)|  
   
-## <a name="signing-and-signature-verification"></a>Signatur und Signaturverifizierung
+## <a name="signing-and-signature-verification"></a>Signieren und Signaturüberprüfung
   
 |||  
 |-|-|  
@@ -64,11 +64,11 @@ Die folgenden Funktionen unterstützen die Verschlüsselung, die Entschlüsselun
 |[SIGNBYCERT](../../t-sql/functions/signbycert-transact-sql.md)|[VERIGYSIGNEDBYCERT](../../t-sql/functions/verifysignedbycert-transact-sql.md)|  
 |[IS_OBJECTSIGNED](../../t-sql/functions/is-objectsigned-transact-sql.md)||  
   
-## <a name="symmetric-decryption-with-automatic-key-handling"></a>Symmetrische Entschlüsselung mit automatischer schlüsselverarbeitung
+## <a name="symmetric-decryption-with-automatic-key-handling"></a>Symmetrische Entschlüsselung mit automatischer Schlüsselverarbeitung
   
 |||  
 |-|-|  
-|[DecryptByKeyAutoCert](../../t-sql/functions/decryptbykeyautocert-transact-sql.md)||  
+|[DECRYPTBYKEYAUTOCERT](../../t-sql/functions/decryptbykeyautocert-transact-sql.md)||  
   
 ## <a name="encryption-hashing"></a>Verschlüsselungshashverfahren
   
@@ -80,8 +80,8 @@ Die folgenden Funktionen unterstützen die Verschlüsselung, die Entschlüsselun
   
 |||  
 |-|-|  
-|[CERTENCODED &#40; Transact-SQL &#41;](../../t-sql/functions/certencoded-transact-sql.md)||  
-|[CERTPRIVATEKEY &#40; Transact-SQL &#41;](../../t-sql/functions/certprivatekey-transact-sql.md)||  
+|[CERTENCODED &#40;Transact-SQL&#41;](../../t-sql/functions/certencoded-transact-sql.md)||  
+|[CERTPRIVATEKEY &#40;Transact-SQL&#41;](../../t-sql/functions/certprivatekey-transact-sql.md)||  
   
 ## <a name="see-also"></a>Siehe auch
 [Funktionen](../../t-sql/functions/functions.md)  

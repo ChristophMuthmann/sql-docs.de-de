@@ -1,5 +1,5 @@
 ---
-title: Erweiterte statische Geometry-Methoden | Microsoft Docs
+title: Erweiterte statische geometry-Methoden | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -39,7 +39,7 @@ ms.lasthandoff: 01/25/2018
   
  [OGC Specifications, Simple Feature Access Part 2 – SQL Options](http://go.microsoft.com/fwlink/?LinkId=93628)  
   
- [OGC Specifications, Geography Markup Language](http://go.microsoft.com/fwlink/?LinkId=93629)  
+ [OGC Specifications, Geography Markup Language (OGC-Spezifikationen, Geography Markup Language)](http://go.microsoft.com/fwlink/?LinkId=93629)  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
@@ -49,12 +49,12 @@ ms.lasthandoff: 01/25/2018
   
 -   [Analysieren](../../t-sql/spatial-geometry/parse-geometry-data-type.md)  
   
--   [Punkt](../../t-sql/spatial-geometry/point-geometry-data-type.md)  
+-   [Point](../../t-sql/spatial-geometry/point-geometry-data-type.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Statische Geometry-Aggregatmethoden](../../t-sql/spatial-geometry/static-aggregate-geometry-methods.md)   
- [Erweiterte Methoden für Geometry-Instanzen](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)   
- [OGC-Methoden für Geometry-Instanzen](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Statische geometry-Aggregatmethoden](../../t-sql/spatial-geometry/static-aggregate-geometry-methods.md)   
+ [Erweiterte Methoden für geometry-Instanzen](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)   
+ [OGC Methods on Geometry Instances (OGC-Methoden für geometry-Instanzen)](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)   
  [Statische geometry-Methoden des OGC](../../t-sql/spatial-geometry/ogc-static-geometry-methods.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: RENAME (Transact-SQL) | Microsoft Docs
+title: RENAME (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 11/20/2017
 ms.prod: 
@@ -27,10 +27,10 @@ ms.lasthandoff: 01/25/2018
 # <a name="rename-transact-sql"></a>RENAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  Benennt eine benutzerdefinierte Tabelle in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. Benennt eine vom Benutzer erstellten Tabelle oder Datenbank in [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
+  Benennt eine vom Benutzer erstellte Tabelle in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] um. Benennt eine vom Benutzer erstellte Tabelle oder Datenbank in [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] um.  
   
 > [!NOTE]  
->  Umbenennen eine Datenbank in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], verwenden Sie die gespeicherte Prozedur [Sp_renamedb &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-renamedb-transact-sql.md). Um eine Datenbank in Azure SQL-Datenbank umzubenennen, verwenden Sie die Anweisung [ALTER DATABASE (Azure SQL-Datenbank)](/statements/alter-database-azure-sql-database.md). 
+>  Verwenden Sie die gespeicherte Prozedur [sp_renamedb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-renamedb-transact-sql.md), um eine Datenbank in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] umzubenennen. Um eine Datenbank in Azure SQL-Datenbank umzubenennen, verwenden Sie die Anweisung [ALTER DATABASE (Azure SQL-Datenbank)](/statements/alter-database-azure-sql-database.md). 
   
 ## <a name="syntax"></a>Syntax  
   
@@ -56,17 +56,17 @@ RENAME DATABASE [::] database_name TO new_database_name
 ```  
   
 ## <a name="arguments"></a>Argumente  
- BENENNEN SIE OBJEKT [:]   
-          [ [*database_name* . [ *schema_name* ] . ] | [ *Schema_name* . []]*Table_name* TO *New_table_name*  
- **GILT FÜR:**[!INCLUDE[ssSDW](../../includes/sssdw-md.md)],  [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ RENAME OBJECT [::]   
+          [ [*database_name* . [ *schema_name* ] . ] | [ *schema_name* . ] ]*table_name* TO *new_table_name*  
+ **GILT FÜR:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
- Ändern Sie den Namen einer benutzerdefinierten Tabelle. Geben Sie die Tabelle mit einer ein-, zwei- oder dreiteiligen Namen umbenannt werden soll.    Geben Sie die neue Tabelle *New_table_name* als einteiliger Name.  
+ Ändern Sie den Namen einer vom Benutzer erstellten Tabelle. Geben Sie die Tabelle an, die mit einem ein-, zwei-, oder dreiteiligen Namen umbenannt werden soll.    Geben Sie die neue Tabelle *new_table_name* als einteiligen Namen an.  
   
  RENAME DATABASE [::]   
-          [ *Database_name* TO *Name der neuen Datenbank*  
+          [ *database_name* TO *new_database_name*  
  **GILT FÜR:**  [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
- Ändern Sie den Namen einer benutzerdefinierten Datenbank von *Database_name* auf *Name der neuen Datenbank*.  Eine Datenbank kann nicht umbenannt werden, um eines dieser [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]reserviert Datenbanknamen verwendet:  
+ Ändern Sie den Namen einer benutzerdefinierten Datenbank von *database_name* in *new_database_name*.  Sie können eine Datenbank nicht in einen der folgenden für [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] reservierten Datenbanknamen umbenennen:  
   
 -   master  
   
@@ -87,33 +87,33 @@ RENAME DATABASE [::] database_name TO new_database_name
 -   DWQueue  
   
 ## <a name="permissions"></a>Berechtigungen  
- Zum Ausführen dieses Befehls benötigen Sie diese Berechtigung:  
+ Zum Ausführen dieses Befehls benötigen Sie die folgende Berechtigung:  
   
--   **ALTER** Berechtigung für die Tabelle  
+-   **ALTER**-Berechtigung für die Tabelle  
    
   
 ## <a name="limitations-and-restrictions"></a>Einschränkungen  
   
-### <a name="cannot-rename-an-external-table-indexes-or-views"></a>Eine externe Tabelle, Indizes oder Sichten kann nicht umbenannt werden.
-Sie können eine externe Tabelle, Indizes oder Sichten nicht umbenennen. Anstelle der Umbenennung können Sie die externe Tabelle, den Index oder die Sicht löschen und dann mit dem neuen Namen neu erstellen.
+### <a name="cannot-rename-an-external-table-indexes-or-views"></a>Externe Tabellen, Indizes oder Sichten können nicht umbenannt werden
+Sie können keine externe Tabelle, Indizes oder Sichten umbenennen. Anstatt sie umzubenennen können Sie die externe Tabelle, den Index oder die Sicht löschen und dann mit dem neuen Namen erneut erstellen.
 
-### <a name="cannot-rename-a-table-in-use"></a>Eine Tabelle verwendet, kann nicht umbenannt werden.  
- Eine Tabelle oder Datenbank kann nicht umbenannt werden, während es verwendet wird. Umbenennen einer Tabelle erfordert eine exklusive Sperre für die Tabelle. Wenn die Tabelle verwendet wird, müssen Sie möglicherweise zum Beenden von Sitzungen, die in der Tabelle verwenden. Zum Beenden einer Sitzungs können Sie die KILL-Befehl. Verwenden Sie KILL vorsichtig, da beim Beenden einer Sitzungs nicht gespeicherte Arbeit ein Rollback ausgeführt wird. Sitzungen in SQL Data Warehouse werden von "SID" vorangestellt. Sie müssen dies und die Nummer der Sitzung hinzufügen, wenn den KILL-Befehl aufrufen. Dieses Beispiel zeigt eine Liste der aktiven Sitzungen im Leerlauf und beendet dann die Sitzung "SID1234".  
+### <a name="cannot-rename-a-table-in-use"></a>Verwendete Tabelle kann nicht umbenannt werden  
+ Sie können keine Tabelle oder Datenbank umbenennen, während diese verwendet wird. Das Umbenennen einer Tabelle erfordert eine exklusive Sperre für die Tabelle. Wenn die Tabelle verwendet wird, müssen Sie möglicherweise die Sitzungen beenden, die die Tabelle verwenden. Zum Beenden einer Sitzung können Sie den KILL-Befehl verwenden. Verwenden Sie den KILL-Befehl mit Bedacht, da für nicht per Commit festgeschriebene Arbeit ein Rollback ausgeführt wird, wenn eine Sitzung beendet wird. Sitzungen in SQL Data Warehouse wird die „SID“ vorangestellt. Sie müssen die „SID“ und die Sitzungsnummer mit einschließen, wenn Sie den KILL-Befehl aufrufen. Dieses Beispiel zeigt eine Liste der aktiven oder im Leerlauf befindlichen Sitzungen an und beendet dann die Sitzung „SID1234“.  
   
-### <a name="views-are-not-updated"></a>Sichten werden nicht aktualisiert.  
- Wenn Sie eine Datenbank umbenennen, werden alle Ansichten, mit denen der frühere Datenbankname ungültig. Dies gilt für Sichten, die sowohl innerhalb als auch außerhalb der Datenbank. Z. B. wenn die Sales-Datenbank umbenannt wird, eine Ansicht, enthält `SELECT * FROM Sales.dbo.table1` werden dadurch ungültig. Sie können zum Beheben dieses Problems verwenden dreiteilige Namen in den Ansichten oder aktualisieren die Ansichten aus, um den neuen Datenbanknamen zu verweisen.  
+### <a name="views-are-not-updated"></a>Sichten werden nicht aktualisiert  
+ Wenn Sie eine Datenbank umbenennen, werden alle Sichten ungültig, die den vorherigen Datenbanknamen verwenden. Dies gilt für Sichten innerhalb und außerhalb der Datenbank. Wenn z.B. die Sales-Datenbank umbenannt wird, wird eine Sicht ungültig, die `SELECT * FROM Sales.dbo.table1` enthält. Zum Beheben dieses Problems können Sie entweder vermeiden, in Sichten dreiteilige Namen zu verwenden oder die Sicht aktualisieren, damit diese auf den neuen Datenbanknamen verweisen.  
   
- Beim Umbenennen einer Tabellenstatus werden Sichten nicht aktualisiert, um den neuen Tabellennamen verweisen. Jede Ansicht, die innerhalb oder außerhalb der Datenbank, die den Tabellennamen der vorherigen verweist auf werden möglicherweise ungültig. Zum Beheben dieses Problems können Sie jede Ansicht, um den neuen Tabellennamen verweisen aktualisieren.  
+ Beim Umbenennen einer Tabelle werden Sichten nicht aktualisiert, damit diese auf den neuen Tabellennamen verweisen. Jede Sicht (innerhalb oder außerhalb der Datenbank), die auf den vorherigen Tabellennamen verweist, wird ungültig. Zum Beheben dieses Problems können Sie alle Sichten aktualisieren, damit sie auf den neuen Tabellennamen verweist.  
   
 ## <a name="locking"></a>Sperren  
- Umbenennen einer Tabelle verwendet, eine gemeinsame Sperre für das Datenbankobjekt, eine gemeinsame Sperre für das Schemaobjekt und eine exklusive Sperre für die Tabelle.  
+ Das Umbenennen einer Tabelle erfordert eine gemeinsame Sperre für das DATABASE-Objekt und das SCHEMA-Objekt sowie eine exklusive Sperre für die Tabelle.  
   
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="a-rename-a-database"></a>A. Umbenennen einer Datenbank  
- **GILT für:** [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] nur  
+ **GILT NUR FÜR:** [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
- In diesem Beispiel benennt die Datenbank eine benutzerdefinierte Zeichenfolge adworks ein, um AdWorks2.  
+ In diesem Beispiel wird die benutzerdefinierte Datenbank AdWorks in AdWorks2 umbenannt.  
   
 ```  
 -- Rename the user defined database AdWorks  
@@ -121,12 +121,12 @@ RENAME DATABASE AdWorks to AdWorks2;
   
 ```  
   
- Beim Umbenennen einer Tabellenstatus werden alle Objekte und Eigenschaften der Tabelle zugeordneten aktualisiert, um den neuen Tabellennamen verweisen. Die Tabelle z. B. Definitionen, Indizes, Einschränkungen und Berechtigungen aktualisiert werden. Sichten werden nicht aktualisiert.  
+ Beim Umbenennen einer Tabelle werden alle Objekte und Eigenschaften aktualisiert, die der Tabelle zugeordnet sind, damit diese auf den neuen Tabellennamen verweisen. Es werden z.B. Tabellendefinitionen, Indizes, Einschränkungen und Berechtigungen aktualisiert. Sichten werden nicht aktualisiert.  
   
 ### <a name="b-rename-a-table"></a>B. Umbenennen einer Tabelle  
- **GILT FÜR:**[!INCLUDE[ssSDW](../../includes/sssdw-md.md)],  [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ **GILT FÜR:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
- In diesem Beispiel benennt die Customer-Tabelle in Customer1.  
+ In diesem Beispiel wird die Tabelle Customer in Customer1 umbenannt.  
   
 ```  
 -- Rename the customer table  
@@ -135,22 +135,22 @@ RENAME OBJECT Customer TO Customer1;
 RENAME OBJECT mydb.dbo.Customer TO Customer1;  
 ```  
   
- Beim Umbenennen einer Tabellenstatus werden alle Objekte und Eigenschaften der Tabelle zugeordneten aktualisiert, um den neuen Tabellennamen verweisen. Die Tabelle z. B. Definitionen, Indizes, Einschränkungen und Berechtigungen aktualisiert werden. Sichten werden nicht aktualisiert.  
+ Beim Umbenennen einer Tabelle werden alle Objekte und Eigenschaften aktualisiert, die der Tabelle zugeordnet sind, damit diese auf den neuen Tabellennamen verweisen. Es werden z.B. Tabellendefinitionen, Indizes, Einschränkungen und Berechtigungen aktualisiert. Sichten werden nicht aktualisiert.  
    
   
-### <a name="c-move-a-table-to-a-different-schema"></a>C. Eine Tabelle in ein anderes Schema verschieben  
- **GILT FÜR:**[!INCLUDE[ssSDW](../../includes/sssdw-md.md)],  [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+### <a name="c-move-a-table-to-a-different-schema"></a>C. Verschieben einer Tabelle in ein anderes Schema  
+ **GILT FÜR:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
- Wenn Ihre Absicht ist, das Objekt in ein anderes Schema verschieben, verwenden Sie [ALTER SCHEMA &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-schema-transact-sql.md). Verschiebt diesen z. B. das Tabellenelement aus dem Produkt Schema zum Dbo-Schema.  
+ Wenn Sie beabsichtigen, das Objekt in ein anderes Schema zu verschieben, verwenden Sie [ALTER SCHEMA &#40;Transact-SQL&#41;](../../t-sql/statements/alter-schema-transact-sql.md). Hierdurch wird z.B. das Tabellenelement aus dem product-Schema in das dbo-Schema verschoben.  
   
 ```  
 ALTER SCHEMA dbo TRANSFER OBJECT::product.item;  
 ```  
   
 ### <a name="d-terminate-sessions-before-renaming-a-table"></a>D. Beenden von Sitzungen vor dem Umbenennen einer Tabelle  
- **GILT FÜR:**[!INCLUDE[ssSDW](../../includes/sssdw-md.md)],  [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ **GILT FÜR:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
- Es ist wichtig zu beachten, dass Sie eine Tabelle umbenennen können, während es verwendet wird. Umbenennen einer Tabelle erfordert eine exklusive Sperre für die Tabelle. Wenn die Tabelle verwendet wird, müssen Sie möglicherweise zum Beenden der Sitzung, die anhand der folgenden Tabelle. Zum Beenden einer Sitzungs können Sie die KILL-Befehl. Verwenden Sie KILL vorsichtig, da beim Beenden einer Sitzungs nicht gespeicherte Arbeit ein Rollback ausgeführt wird. Sitzungen in SQL Data Warehouse werden von "SID" vorangestellt. Sie müssen dies und die Nummer der Sitzung hinzufügen, wenn den KILL-Befehl aufrufen. Dieses Beispiel zeigt eine Liste der aktiven Sitzungen im Leerlauf und beendet dann die Sitzung "SID1234".  
+ Es ist wichtig, zu beachten, dass Sie eine nicht Tabelle umbenennen können, während diese verwendet wird. Das Umbenennen einer Tabelle erfordert eine exklusive Sperre für die Tabelle. Wenn die Tabelle verwendet wird, müssen Sie möglicherweise die Sitzung beenden, die die Tabelle verwendet. Zum Beenden einer Sitzung können Sie den KILL-Befehl verwenden. Verwenden Sie den KILL-Befehl mit Bedacht, da für nicht per Commit festgeschriebene Arbeit ein Rollback ausgeführt wird, wenn eine Sitzung beendet wird. Sitzungen in SQL Data Warehouse wird die „SID“ vorangestellt. Sie müssen die „SID“ und die Sitzungsnummer mit einschließen, wenn Sie den KILL-Befehl aufrufen. Dieses Beispiel zeigt eine Liste der aktiven oder im Leerlauf befindlichen Sitzungen an und beendet dann die Sitzung „SID1234“.  
   
 ```  
 -- View a list of the current sessions  

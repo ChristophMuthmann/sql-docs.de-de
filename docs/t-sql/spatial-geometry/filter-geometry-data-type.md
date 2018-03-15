@@ -1,5 +1,5 @@
 ---
-title: Filter (Geometry-Datentyp) | Microsoft Docs
+title: Filter (geometry-Datentyp) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -50,14 +50,14 @@ Wenn kein Index verfügbar ist oder verwendet wird, gibt die Methode dieselben W
   
 ## <a name="arguments"></a>Argumente  
  *other_geometry*  
- Eine andere **Geometrie** Instanz, für die Instanz verglichen werden soll, auf dem Filter() aufgerufen wird.  
+ Eine andere **geometry**-Instanz zum Vergleich mit der Instanz, in der Filter() aufgerufen wird.  
   
 ## <a name="return-types"></a>Rückgabetypen  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Rückgabetyp: **Bit**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Rückgabetyp: **bit**  
   
  CLR-Rückgabetyp: **SqlBoolean**  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Diese Methode ist weder deterministisch noch präzise.  
   
 ## <a name="examples"></a>Beispiele  
@@ -81,8 +81,8 @@ FROM sample
 WHERE g.Filter(geometry::Parse('POLYGON((-1 -1, 1 -1, 1 1, -1 1, -1 -1))')) = 1;  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Erweiterte Methoden für Geometry-Instanzen](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Erweiterte Methoden für geometry-Instanzen](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)   
  [STIntersects &#40;geometry-Datentyp&#41;](../../t-sql/spatial-geometry/stintersects-geometry-data-type.md)  
   
   

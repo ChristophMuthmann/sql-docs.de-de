@@ -1,5 +1,5 @@
 ---
-title: STMPolyFromWKB (Geography-Datentyp) | Microsoft Docs
+title: STMPolyFromWKB (geography-Datentyp) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 07/30/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stmpolyfromwkb-geography-data-type"></a>STMPolyFromWKB (geography-Datentyp)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Gibt eine **GeographyMultiPolygon** Instanz aus einer Open Geospatial Consortium (OGC) Well-Known Binary (WKB)-Darstellung.
+Gibt eine **geographyMultiPolygon**-Instanz einer Open Geospatial-Konsortium (OGC) WKB-Darstellung (Well-Known binary)zurück.
   
 ## <a name="syntax"></a>Syntax  
   
@@ -45,20 +45,20 @@ STMPolyFromWKB ( 'WKB_multipolygon' , SRID )
   
 ## <a name="arguments"></a>Argumente  
  *WKB_multipolygon*  
- Ist die WKB-Darstellung der **GeographyMultiPolygon** Instanz, die Sie zurückgeben möchten. *WKB_multipolygon* ist ein **varbinary(max)** Ausdruck.  
+ Die WKB-Darstellung der **geographyMultiPolygon**-Instanz, die zurückgegeben werden soll. *WKB_multipolygon* ist ein **varbinary(max)**-Ausdruck.  
   
  *SRID*  
- Ist ein **Int** Ausdruck darstellt, die räumliche verweisen ID (SRID), der die **GeographyMultiPolygon** Instanz, die Sie zurückgeben möchten.  
+ Ein **int**-Ausdruck, der die SRID (Spatial Reference ID) der **geographyMultiPolygon**-Instanz darstellt, die zurückgegeben werden soll.  
   
 ## <a name="return-types"></a>Rückgabetypen  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Rückgabetyp: **Geography**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Rückgabetyp: **geography**  
   
  CLR-Rückgabetyp: **SqlGeography**  
   
  OGC-Typ: **MultiPolygon**  
   
 ## <a name="examples"></a>Beispiele  
- Im folgenden Beispiel wird `STMPolyFromWKB()` zum Erstellen einer `geography` Instanz.  
+ Im folgenden Beispiel wird `STMPolyFromWKB()` verwendet, um eine `geography`-Instanz zu erstellen.  
   
 ```  
 DECLARE @g geography;  
@@ -66,7 +66,7 @@ SET @g = geography::STMPolyFromWKB(0x0106000000020000000103000000010000000400000
 SELECT @g.ToString();  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Statische geography-Methoden des OGC](../../t-sql/spatial-geography/ogc-static-geography-methods.md)  
   
   

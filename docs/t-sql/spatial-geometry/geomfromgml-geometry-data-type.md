@@ -1,5 +1,5 @@
 ---
-title: GeomFromGml (Geometry-Datentyp) | Microsoft Docs
+title: GeomFromGml (geometry-Datentyp) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,11 +34,11 @@ ms.lasthandoff: 01/25/2018
 # <a name="geomfromgml-geometry-data-type"></a>GeomFromGml (geometry-Datentyp)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Erstellen einer **Geometrie** -Instanz auf Grundlage eine Darstellung der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Teilmenge von Geography Markup Language (GML).
+Erstellen Sie eine **geometry**-Instanz auf Grundlage einer Darstellung in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Teilmenge von GML (Geography Markup Language).
   
 Weitere Informationen über Geography Markup Language finden Sie in der folgenden OGC-Spezifikation:
   
-[OGC Specifications, Geography Markup Language](http://go.microsoft.com/fwlink/?LinkId=93629)
+[OGC Specifications, Geography Markup Language (OGC-Spezifikationen, Geography Markup Language)](http://go.microsoft.com/fwlink/?LinkId=93629)
   
 ## <a name="syntax"></a>Syntax  
   
@@ -55,11 +55,11 @@ GeomFromGml ( GML_input, SRID )
  Ein **int** -Ausdruck, der die SRID (Spatial Reference ID) der **geometry** -Instanz darstellt, die Sie zurückgeben möchten.  
   
 ## <a name="return-types"></a>Rückgabetypen  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Rückgabetyp: **Geometrie**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Rückgabetyp: **geometry**  
   
  CLR-Rückgabetyp: **SqlGeometry**  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Diese Methode löst eine **FormatException** aus, wenn die Eingabe nicht korrekt formatiert ist.  
   
 ## <a name="examples"></a>Beispiele  
@@ -73,7 +73,7 @@ SET @g = geometry::GeomFromGml(@x, 0);
 SELECT @g.ToString();  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Erweiterte statische geometry-Methoden](../../t-sql/spatial-geometry/extended-static-geometry-methods.md)  
   
   

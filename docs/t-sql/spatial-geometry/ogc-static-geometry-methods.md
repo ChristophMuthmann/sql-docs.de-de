@@ -1,5 +1,5 @@
 ---
-title: Statische Geometry-Methoden des OGC | Microsoft Docs
+title: Statische geometry-Methoden von OGC | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -73,9 +73,9 @@ ms.lasthandoff: 01/25/2018
   
 -   [STGeomCollFromWKB &#40;geometry-Datentyp&#41;](../../t-sql/spatial-geometry/stgeomcollfromwkb-geometry-data-type.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [OGC-Methoden für Geometry-Instanzen](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)   
- [Erweiterte Methoden für Geometry-Instanzen](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [OGC Methods on Geometry Instances (OGC-Methoden für geometry-Instanzen)](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)   
+ [Erweiterte Methoden für geometry-Instanzen](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)   
  [Erweiterte statische geometry-Methoden](../../t-sql/spatial-geometry/extended-static-geometry-methods.md)  
   
   

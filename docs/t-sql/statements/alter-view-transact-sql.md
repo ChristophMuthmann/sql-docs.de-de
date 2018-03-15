@@ -1,5 +1,5 @@
 ---
-title: ALTER VIEW (Transact-SQL) | Microsoft Docs
+title: ALTER VIEW (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 05/10/2017
 ms.prod: sql-non-specified
@@ -64,22 +64,22 @@ AS select_statement
  *view_name*  
  Die zu ändernde Sicht.  
   
- *Spalte*  
+ *column*  
  Ist der Name von einer oder von mehreren, durch Trennzeichen voneinander getrennten Spalten, die Teil der angegebenen Sicht sein sollen.  
   
 > [!IMPORTANT]  
 >  Spaltenberechtigungen bleiben nur erhalten, wenn die Spalten vor und nach der Ausführung von ALTER VIEW den gleichen Namen haben.  
   
 > [!NOTE]  
->  In den Spalten für die Sicht gelten die Berechtigungen für einen Spaltennamen über eine CREATE VIEW- oder ALTER VIEW-Anweisung hinaus, unabhängig von der Quelle der zugrunde liegenden Daten. Angenommen, Berechtigungen für die **SalesOrderID** Spalte in einer CREATE VIEW-Anweisung, eine ALTER VIEW-Anweisung kann Umbenennen der **SalesOrderID** -Spalte beispielsweise im Vergleich zu **OrderRef**, und die Ansicht mit zugeordneten Berechtigungen haben weiterhin **SalesOrderID**.  
+>  In den Spalten für die Sicht gelten die Berechtigungen für einen Spaltennamen über eine CREATE VIEW- oder ALTER VIEW-Anweisung hinaus, unabhängig von der Quelle der zugrunde liegenden Daten. Wenn beispielsweise Berechtigungen für die **SalesOrderID**-Spalte in einer CREATE VIEW-Anweisung erteilt werden, kann die **SalesOrderID**-Spalte beispielsweise zu **OrderRef** mithilfe einer ALTER VIEW-Anweisung umbenannt werden und weiterhin über die mithilfe von **SalesOrderID** der Sicht zugeordneten Berechtigungen verfügen.  
   
  ENCRYPTION  
- **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
- Verschlüsselt die Einträge in [sys.syscomments](../../relational-databases/system-compatibility-views/sys-syscomments-transact-sql.md) , die den Text der ALTER VIEW-Anweisung enthalten. Mithilfe von WITH ENCRYPTION kann verhindert werden, dass die Sicht als Teil der SQL Server-Replikation veröffentlicht wird.  
+ Verschlüsselt die [sys.syscomments](../../relational-databases/system-compatibility-views/sys-syscomments-transact-sql.md)-Einträge, die den Text der ALTER VIEW-Anweisung enthalten. Mithilfe von WITH ENCRYPTION kann verhindert werden, dass die Sicht als Teil der SQL Server-Replikation veröffentlicht wird.  
   
  SCHEMABINDING  
- Bindet die Sicht an das Schema der zugrunde liegenden Basistabellen. Wird SCHEMABINDING angegeben, ist es nicht möglich, Änderungen der Basistabellen auszuführen, die sich auf die Sichtdefinition auswirken würden. Die Sichtdefinition muss zuerst geändert oder gelöscht werden, um Abhängigkeiten von der zu ändernden Tabelle zu entfernen. Wenn Sie SCHEMABINDING verwenden die *Select_statement* umfasst die mit dem zweiteiligen Namen (*Schema***.** *Objekt*) von Tabellen, Sichten oder benutzerdefinierten Funktionen, auf die verwiesen werden. Alle Objekte, auf die verwiesen wird, müssen in derselben Datenbank vorhanden sein.  
+ Bindet die Sicht an das Schema der zugrunde liegenden Basistabellen. Wird SCHEMABINDING angegeben, ist es nicht möglich, Änderungen der Basistabellen auszuführen, die sich auf die Sichtdefinition auswirken würden. Die Sichtdefinition muss zuerst geändert oder gelöscht werden, um Abhängigkeiten von der zu ändernden Tabelle zu entfernen. Wenn Sie SCHEMABINDING verwenden, muss *select_statement* die zweiteiligen Namen (*schema***.***object*) der Tabellen, Sicht oder benutzerdefinierten Funktionen einschließen, auf die verwiesen wird. Alle Objekte, auf die verwiesen wird, müssen in derselben Datenbank vorhanden sein.  
   
  Sichten oder Tabellen, die Bestandteil einer mit der SCHEMABINDING-Klausel erstellten Sicht sind, können erst dann gelöscht werden, wenn die entsprechende Sicht gelöscht oder geändert wird, sodass die Schemabindung nicht mehr vorhanden ist. Andernfalls löst [!INCLUDE[ssDE](../../includes/ssde-md.md)] einen Fehler aus. Darüber hinaus schlägt die Ausführung von ALTER TABLE-Anweisungen für Tabellen fehl, die Bestandteil von Sichten mit Schemabindung sind, falls diese Anweisungen die Sichtdefinition betreffen.  
   
@@ -88,7 +88,7 @@ AS select_statement
   
  Bei Sichten, die mit VIEW_METADATA erstellt wurden, geben die Metadaten des Durchsuchenmodus den Sichtnamen anstelle der Basistabellennamen zurück, wenn Spalten aus der Sicht im Resultset beschrieben werden.  
   
- Wenn eine Sicht erstellt wird, mithilfe von WITH VIEW_METADATA alle enthaltenen Spalten außer einem **Zeitstempel** Spalte, aktualisierbar, falls die Sicht INSERT- oder UPDATE INSTEAD OF-Trigger sind. Weitere Informationen finden Sie im Abschnitt "Hinweise" in [CREATE VIEW &#40; Transact-SQL &#41; ](../../t-sql/statements/create-view-transact-sql.md).  
+ Wenn eine Sicht mithilfe von WITH VIEW_METADATA erstellt wurde, sind alle enthaltenen Spalten (außer der **timestamp**-Spalte) aktualisierbar, falls die Sicht INSERT- oder UPDATE INSTEAD OF-Trigger besitzt. Weitere Informationen finden Sie im Abschnitt „Hinweise“ in [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md).  
   
  AS  
  Die Aktionen, die die Sicht ausführen soll.  
@@ -97,10 +97,10 @@ AS select_statement
  Die SELECT-Anweisung, die die Sicht definiert.  
   
  WITH CHECK OPTION  
- Erzwingt, dass alle datenänderungsanweisungen, die ausgeführt werden, für die Sicht, die innerhalb von festgelegten Kriterien folgen *Select_statement*.  
+ Erzwingt, dass alle für die Sicht ausgeführten Datenänderungsanweisungen den Kriterien entsprechen müssen, die innerhalb von *select_statement* festgelegt wurden.  
   
-## <a name="remarks"></a>Hinweise  
- Weitere Informationen zu ALTER VIEW finden Sie unter "Hinweise" in [CREATE VIEW &#40; Transact-SQL &#41; ](../../t-sql/statements/create-view-transact-sql.md).  
+## <a name="remarks"></a>Remarks  
+ Weitere Informationen zu ALTER VIEW finden Sie im Abschnitt „Hinweise“ unter [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md).  
   
 > [!NOTE]  
 >  Wenn die vorherige Sichtdefinition mithilfe von WITH ENCRYPTION oder CHECK OPTION erstellt wurde, sind diese Optionen nur dann aktiviert, wenn sie in der ALTER VIEW-Anweisung enthalten sind.  
@@ -140,10 +140,10 @@ GO
   
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md)   
- [DROP VIEW &#40; Transact-SQL &#41;](../../t-sql/statements/drop-view-transact-sql.md)   
+ [DROP VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/drop-view-transact-sql.md)   
  [Erstellen einer gespeicherten Prozedur](../../relational-databases/stored-procedures/create-a-stored-procedure.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   

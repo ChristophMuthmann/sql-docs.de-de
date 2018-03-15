@@ -1,5 +1,5 @@
 ---
-title: CHECKSUM_AGG (Transact-SQL) | Microsoft Docs
+title: CHECKSUM_AGG (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -36,7 +36,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="checksumagg-transact-sql"></a>CHECKSUM_AGG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Gibt die Prüfsumme der Werte in einer Gruppe zurück. NULL-Werte werden ignoriert. Kann folgen der [OVER-Klausel](../../t-sql/queries/select-over-clause-transact-sql.md).
+Gibt die Prüfsumme der Werte in einer Gruppe zurück. NULL-Werte werden ignoriert. Darauf kann die [OVER-Klausel](../../t-sql/queries/select-over-clause-transact-sql.md) folgen.
   
 ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -54,19 +54,19 @@ DISTINCT
 Gibt an, dass CHECKSUM_AGG die Prüfsumme von eindeutigen Werten zurückgeben soll.
   
 *expression*  
-Eine ganze Zahl [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md). Aggregatfunktionen und Unterabfragen sind nicht zulässig.
+Ein [Integerausdruck](../../t-sql/language-elements/expressions-transact-sql.md). Aggregatfunktionen und Unterabfragen sind nicht zulässig.
   
 ## <a name="return-types"></a>Rückgabetypen
-Gibt die Prüfsumme aller *Ausdruck* -Werte als **Int**.
+Gibt die Prüfsumme aller *Ausdruckswerte* als **int** zurück.
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
 Mithilfe von CHECKSUM_AGG können Änderungen in einer Tabelle erkannt werden.
   
 Die Reihenfolge der Zeilen in einer Tabelle hat keinen Einfluss auf das Ergebnis von CHECKSUM_AGG. CHECKSUM_AGG-Funktionen können auch mit dem DISTINCT-Schlüsselwort und der GROUP BY-Klausel verwendet werden.
   
 Wenn sich einer der Werte in der Liste mit Ausdrücken ändert, ändert sich gewöhnlich auch die Prüfsumme der Liste. Es besteht jedoch eine geringe Möglichkeit, dass sich die Prüfsumme nicht ändert.
   
-CHECKSUM_AGG hat eine ähnliche Funktionalität mit anderen Aggregatfunktionen. Weitere Informationen finden Sie unter [Aggregatfunktionen &#40; Transact-SQL &#41; ](../../t-sql/functions/aggregate-functions-transact-sql.md).
+CHECKSUM_AGG hat eine ähnliche Funktionalität mit anderen Aggregatfunktionen. Weitere Informationen finden Sie unter [Aggregatfunktionen &#40;Transact-SQL&#41;](../../t-sql/functions/aggregate-functions-transact-sql.md).
   
 ## <a name="examples"></a>Beispiele  
 Im folgenden Beispiel wird `CHECKSUM_AGG` verwendet, um Änderungen in der `Quantity`-Spalte der `ProductInventory`-Tabelle in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Datenbank zu erkennen.
@@ -103,7 +103,7 @@ FROM Production.ProductInventory;
 ```  
   
 ## <a name="see-also"></a>Siehe auch
-[CHECKSUM &#40; Transact-SQL &#41;](../../t-sql/functions/checksum-transact-sql.md)  
-[Failover-Klausel &#40; Transact-SQL &#41;](../../t-sql/queries/select-over-clause-transact-sql.md)
+[CHECKSUM &#40;Transact-SQL&#41;](../../t-sql/functions/checksum-transact-sql.md)  
+[OVER-Klausel &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)
   
   

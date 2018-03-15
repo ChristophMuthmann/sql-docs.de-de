@@ -1,5 +1,5 @@
 ---
-title: Tabellenhinweise (Transact-SQL) | Microsoft Docs
+title: Tabellenhinweise (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 08/31/2017
 ms.prod: sql-non-specified
@@ -50,10 +50,10 @@ ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="hints-transact-sql---table"></a>Hinweise (Transact-SQL) - Tabelle
+# <a name="hints-transact-sql---table"></a>Hinweise (Transact-SQL): Tabelle
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Tabellenhinweise überschreiben das Standardverhalten des Abfrageoptimierers für die Dauer von der Anweisung Data Manipulation Language (DML), durch Angeben einer Sperrmethode, eines oder mehrerer Indizes, einen Vorgang abfrageverarbeitung, z. B. eine Tabelle Scan oder Index Seek oder andere Optionen. Tabellenhinweise werden in der FROM-Klausel der DML-Anweisung angegeben und wirken sich nur auf die Tabelle oder Sicht aus, auf die in der betreffenden Klausel verwiesen wird.  
+  Tabellenhinweise überschreiben das Standardverhalten des Abfrageoptimierers für die Dauer der DML-Anweisung (Data Manipulation Language, Datenbearbeitungssprache) durch Angabe einer Sperrmethode, eines Index oder mehrerer Indizes, eines Abfrageverarbeitungsvorgangs, beispielsweise einen Tabellenscan oder eine Indexsuche, oder anderer Optionen. Tabellenhinweise werden in der FROM-Klausel der DML-Anweisung angegeben und wirken sich nur auf die Tabelle oder Sicht aus, auf die in der betreffenden Klausel verwiesen wird.  
   
 > [!CAUTION]  
 >  Da der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Abfrageoptimierer in der Regel den optimalen Ausführungsplan für eine Abfrage auswählt, wird empfohlen, dass erfahrene Entwickler und Datenbankadministratoren Hinweise nur dann verwenden, wenn alle anderen Möglichkeiten sich als unzureichend erwiesen haben.  
@@ -129,13 +129,13 @@ WITH  ( <table_hint> [ [, ]...n ] )
 ```  
   
 ## <a name="arguments"></a>Argumente  
- MIT **(** \<Table_hint > **)** [[**,** ]... *n* ]  
+ WITH **(** \<table_hint> **)** [ [**,** ]...*n* ]  
  Bis auf einige Ausnahmen werden Tabellenhinweise nur dann in der FROM-Klausel unterstützt, wenn die Hinweise mit dem WITH-Schlüsselwort angegeben werden. Tabellenhinweise müssen zudem mit Klammern angegeben werden.  
   
 > [!IMPORTANT]  
 >  Das WITH-Schlüsselwort wegzulassen ist eine veraltete Funktion: [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
- Die folgenden Tabellentipps sind mit und ohne WITH-Schlüsselwort zulässig: NOLOCK, READUNCOMMITTED, UPDLOCK, REPEATABLEREAD, SERIALIZABLE, READCOMMITTED, TABLOCK, TABLOCKX, PAGLOCK, ROWLOCK, NOWAIT, READPAST, XLOCK, SNAPSHOT und NOEXPAND. Wenn diese Tabellenhinweise ohne das WITH-Schlüsselwort angegeben werden, sollten die Hinweise allein angegeben werden. Beispiel:  
+ Die folgenden Tabellentipps sind mit und ohne WITH-Schlüsselwort zulässig: NOLOCK, READUNCOMMITTED, UPDLOCK, REPEATABLEREAD, SERIALIZABLE, READCOMMITTED, TABLOCK, TABLOCKX, PAGLOCK, ROWLOCK, NOWAIT, READPAST, XLOCK, SNAPSHOT und NOEXPAND. Wenn diese Tabellenhinweise ohne das WITH-Schlüsselwort angegeben werden, sollten die Hinweise allein angegeben werden. Zum Beispiel:  
   
 ```  
 FROM t (TABLOCK)  
@@ -155,7 +155,7 @@ FROM t WITH (TABLOCK, INDEX(myindex))
  NOEXPAND  
  Gibt an, dass indizierte Sichten nicht für den Zugriff auf zugrunde liegende Tabellen erweitert werden, wenn der Abfrageoptimierer die Abfrage verarbeitet. Der Abfrageoptimierer behandelt die Sicht wie eine Tabelle mit einem gruppierten Index. NOEXPAND gilt nur für indizierte Sichten. Weitere Informationen finden Sie in den Hinweisen.  
   
- INDEX  **(*** Index_value* [**,**... *n* ] ) | INDEX = ( *Index_value ***)**  
+ INDEX  **(***index_value* [**,**... *n* ] ) | INDEX =  ( *index_value***)**  
  Mit der INDEX()-Syntax werden die Namen oder IDs der Indizes angegeben, die der Abfrageoptimierer beim Verarbeiten der Anweisung verwenden soll. Die alternative INDEX = Syntax gibt einen einzigen Indexwert an. Pro Tabelle ist nur ein Indexhinweis zulässig.  
   
  Falls ein gruppierter Index vorhanden ist, erzwingt INDEX(0) einen Scan des gruppierten Index, und INDEX(1) erzwingt einen Scan des gruppierten Index oder eine Suche im gruppierten Index. Falls kein gruppierter Index vorhanden ist, erzwingt INDEX(0) einen Tabellenscan, und INDEX(1) wird als Fehler interpretiert.  
@@ -168,29 +168,29 @@ FROM t WITH (TABLOCK, INDEX(myindex))
  Die maximale Anzahl nicht gruppierter Indizes im Tabellenhinweis beträgt 250.  
   
  KEEPIDENTITY  
- Gilt nur in einer INSERT-Anweisung bei Verwendung die BULK-Option mit ist [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md).  
+ Gilt nur in einer INSERT-Anweisung, wenn die BULK-Option mit [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) verwendet wird.  
   
  Gibt an, dass der oder die Identitätswerte in der importierten Datendatei für die Identitätsspalte verwendet werden sollen. Wird KEEPIDENTITY nicht angegeben, werden die Identitätswerte für diese Spalte zwar überprüft, nicht jedoch importiert, und der Abfrageoptimierer weist auf der Grundlage von Ausgangswerten und den inkrementellen Werten, die beim Erstellen der Tabelle angegeben wurden, eindeutige Werte zu.  
   
 > [!IMPORTANT]  
->  Wenn die Datendatei keine Werte für die Identitätsspalte in der Tabelle oder Sicht enthält und die Identitätsspalte nicht die letzte Spalte der Tabelle ist, müssen Sie die Identitätsspalte überspringen. Weitere Informationen finden Sie unter [mithilfe einer Formatdatei auslassen eines Datenfelds &#40; SQLServer &#41; ](../../relational-databases/import-export/use-a-format-file-to-skip-a-data-field-sql-server.md). Wenn eine Identitätsspalte erfolgreich übersprungen wird, weist der Abfrageoptimierer automatisch eindeutige Werte für die Identitätsspalte in den importierten Tabellenzeilen.  
+>  Wenn die Datendatei keine Werte für die Identitätsspalte in der Tabelle oder Sicht enthält und die Identitätsspalte nicht die letzte Spalte der Tabelle ist, müssen Sie die Identitätsspalte überspringen. Weitere Informationen finden Sie unter [Auslassen eines Datenfelds mithilfe einer Formatdatei &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-skip-a-data-field-sql-server.md). Wenn eine Identitätsspalte erfolgreich übersprungen wird, weist der Abfrageoptimierer der Identitätsspalte in den importierten Tabellenzeilen automatisch eindeutige Werte zu.  
   
- Ein Beispiel für die Verwendung dieses Hinweises in einer INSERT ... Wählen Sie * FROM OPENROWSET(Bulk...)-Anweisung finden Sie unter [behalten Identität Werte beim Massenimport von Daten &#40; SQLServer &#41; ](../../relational-databases/import-export/keep-identity-values-when-bulk-importing-data-sql-server.md).  
+ Ein Beispiel für die Verwendung dieses Hinweises in einer INSERT ... SELECT * FROM OPENROWSET(BULK...)-Anweisung finden Sie unter [Beibehalten von Identitätswerten beim Massenimport von Daten &#40;SQL Server&#41;](../../relational-databases/import-export/keep-identity-values-when-bulk-importing-data-sql-server.md).  
   
- Informationen zum Überprüfen des Identitätswerts für eine Tabelle finden Sie unter [DBCC CHECKIDENT &#40; Transact-SQL &#41; ](../../t-sql/database-console-commands/dbcc-checkident-transact-sql.md).  
+ Weitere Informationen zum Überprüfen des Identitätswerts für eine Tabelle finden Sie unter [DBCC CHECKIDENT &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkident-transact-sql.md).  
   
  KEEPDEFAULTS  
- Gilt nur in einer INSERT-Anweisung bei Verwendung die BULK-Option mit ist [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md).  
+ Gilt nur in einer INSERT-Anweisung, wenn die BULK-Option mit [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) verwendet wird.  
   
  Gibt an, dass statt NULL der Standardwert einer Tabellenspalte (falls vorhanden) einzufügen ist, wenn der Datensatz keinen Wert für die Spalte aufweist.  
   
- Ein Beispiel für die Verwendung dieses Hinweises in einer INSERT ... Wählen Sie * FROM OPENROWSET(Bulk...)-Anweisung finden Sie unter [beibehalten von NULL-Werten oder verwenden standardmäßig während des Massenimports &#40; SQLServer &#41; ](../../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md).  
+ Ein Beispiel für die Verwendung dieses Hinweises in einer INSERT ... SELECT * FROM OPENROWSET(BULK...)-Anweisung finden Sie unter [Beibehalten von NULL-Werten oder Verwenden von Standardwerten während des Massenimports &#40;SQL Server&#41;](../../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md).  
   
- FORCESEEK [**(***Index_value***(*** Index_column_name* [ **,**... *n* ] **))** ]  
+ FORCESEEK [ **(***index_value***(***index_column_name* [ **,**... *n* ] **))** ]  
  Gibt an, dass der Abfrageoptimierer nur einen Indexsuchvorgang als Zugriffspfad auf die in der Tabelle oder Sicht angegebenen Daten verwenden darf. Ab SQL Server 2008 R2 SP1 können auch Indexparameter angegeben werden. Der Abfrageoptimierer berücksichtigt in diesem Fall nur Indexsuchvorgänge über den angegebenen Index mit mindestens den angegebenen Indexspalten.  
   
  *index_value*  
- Dies ist der Indexname oder der ID-Wert des Indexes. Die Index-ID 0 (Heap) kann nicht angegeben werden. Um der Indexname oder -ID zurückzugeben, Fragen den **sys.indexes** -Katalogsicht angezeigt.  
+ Dies ist der Indexname oder der ID-Wert des Indexes. Die Index-ID 0 (Heap) kann nicht angegeben werden. Wenn der Indexname oder die ID zurückgegeben werden soll, fragen Sie die **sys.indexes**-Katalogsicht ab.  
   
  *index_column_name*  
  Dies ist der Name der Indexspalte, die in den Suchvorgang einbezogen werden soll. Die Angabe von FORCESEEK mit Indexparametern ähnelt der Verwendung von FORCESEEK mit einem INDEX-Hinweis. Sie können jedoch eine genauere Steuerung des vom Abfrageoptimierer verwendeten Zugriffspfads erreichen, indem Sie den Index, in dem die Suche stattfinden soll, und außerdem die Indexspalten angeben, die im Suchvorgang berücksichtigt werden sollen. Der Optimierer kann bei Bedarf zusätzliche Spalten einbeziehen. Wenn beispielsweise ein nicht gruppierter Index angegeben wird, kann der Optimierer neben den angegebenen Spalten auch die Schlüsselspalten gruppierter Indizes verwenden.  
@@ -205,7 +205,7 @@ FROM t WITH (TABLOCK, INDEX(myindex))
   
  Beachten Sie bei Verwendung des FORCESEEK-Hinweises (mit oder ohne Parameter) die folgenden Richtlinien:  
   
--   Der Hinweis kann als Tabellenhinweis oder Abfragehinweis angegeben werden. Weitere Informationen zu Abfragehinweisen finden Sie unter [Abfragehinweise &#40; Transact-SQL &#41; ](../../t-sql/queries/hints-transact-sql-query.md).  
+-   Der Hinweis kann als Tabellenhinweis oder Abfragehinweis angegeben werden. Weitere Informationen zu Abfragehinweisen finden Sie unter [Abfragehinweise &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md).  
   
 -   Zum Anwenden von FORCESEEK auf eine indizierte Sicht muss auch der NOEXPAND-Hinweis angegeben werden.  
   
@@ -265,16 +265,16 @@ FROM t WITH (TABLOCK, INDEX(myindex))
  Entspricht der Option SERIALIZABLE. Weitere Informationen finden Sie unter SERIALIZABLE weiter unten in diesem Thema. HOLDLOCK gilt nur für die Tabelle oder Sicht, für die sie angegeben wurde, und nur für die Dauer der Transaktion, die in der Anweisung definiert ist, in der auch HOLDLOCK verwendet wird. HOLDLOCK kann in einer SELECT-Anweisung mit der Option FOR BROWSE nicht verwendet werden.  
   
  IGNORE_CONSTRAINTS  
- Gilt nur in einer INSERT-Anweisung bei Verwendung die BULK-Option mit ist [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md).  
+ Gilt nur in einer INSERT-Anweisung, wenn die BULK-Option mit [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) verwendet wird.  
   
- Gibt an, dass alle für die Tabelle geltenden Einschränkungen vom Massenimportvorgang ignoriert werden. In der Standardeinstellung überprüft INSERT [Unique Constraints and Check Constraints](../../relational-databases/tables/unique-constraints-and-check-constraints.md) und [Primary and Foreign Key Constraints](../../relational-databases/tables/primary-and-foreign-key-constraints.md). Wenn für einen Massenimportvorgang IGNORE_CONSTRAINTS angegeben ist, müssen diese Einschränkungen für eine Zieltabelle von INSERT ignoriert werden. Beachten Sie, dass Sie die Einschränkungen UNIQUE, PRIMARY KEY oder NOT NULL nicht deaktivieren können.  
+ Gibt an, dass alle für die Tabelle geltenden Einschränkungen vom Massenimportvorgang ignoriert werden. Standardmäßig überprüft INSERT [UNIQUE- und CHECK-Einschränkungen](../../relational-databases/tables/unique-constraints-and-check-constraints.md) und [Primärschlüssel- und Fremdschlüsseleinschränkungen](../../relational-databases/tables/primary-and-foreign-key-constraints.md). Wenn für einen Massenimportvorgang IGNORE_CONSTRAINTS angegeben ist, müssen diese Einschränkungen für eine Zieltabelle von INSERT ignoriert werden. Beachten Sie, dass Sie die Einschränkungen UNIQUE, PRIMARY KEY oder NOT NULL nicht deaktivieren können.  
   
  Sie sollten die Einschränkungen CHECK und FOREIGN KEY z. B. deaktivieren, wenn die Eingabedaten Zeilen enthalten, die Einschränkungen verletzen. Durch das Deaktivieren der Einschränkungen CHECK und FOREIGN KEY können Sie die Daten importieren und dann [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen zum Bereinigen (Cleanup) der Daten verwenden.  
   
- Jedoch wenn Check- und FOREIGN KEY-Einschränkung ignoriert werden, wird jede ignorierte Einschränkung für die Tabelle wird als gekennzeichnet **Is_not_trusted** in der [check_constraints](../../relational-databases/system-catalog-views/sys-check-constraints-transact-sql.md) oder [Sys. Foreign_Keys ](../../relational-databases/system-catalog-views/sys-foreign-keys-transact-sql.md) -Katalogsicht nach Abschluss des Vorgangs. Irgendwann wird es sinnvoll sein, die Einschränkungen für die gesamte Tabelle zu überprüfen. Wenn die Tabelle vor dem Massenimportvorgang nicht leer war, kann der Aufwand einer erneuten Überprüfung der Einschränkung höher sein als das Anwenden der Einschränkungen CHECK und FOREIGN KEY auf die inkrementellen Daten.  
+ Wenn die CHECK-Einschränkung und die FOREIGN KEY-Einschränkung ignoriert werden, wird jede ignorierte Einschränkung der Tabelle nach dem Vorgang jedoch in der Katalogsicht [sys.check_constraints](../../relational-databases/system-catalog-views/sys-check-constraints-transact-sql.md) oder [sys.foreign_keys](../../relational-databases/system-catalog-views/sys-foreign-keys-transact-sql.md) als **is_not_trusted** gekennzeichnet. Irgendwann wird es sinnvoll sein, die Einschränkungen für die gesamte Tabelle zu überprüfen. Wenn die Tabelle vor dem Massenimportvorgang nicht leer war, kann der Aufwand einer erneuten Überprüfung der Einschränkung höher sein als das Anwenden der Einschränkungen CHECK und FOREIGN KEY auf die inkrementellen Daten.  
   
  IGNORE_TRIGGERS  
- Gilt nur in einer INSERT-Anweisung bei Verwendung die BULK-Option mit ist [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md).  
+ Gilt nur in einer INSERT-Anweisung, wenn die BULK-Option mit [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) verwendet wird.  
   
  Gibt an, dass alle für die Tabelle definierten Trigger vom Massenimportvorgang ignoriert werden. Standardmäßig werden Trigger von INSERT angewendet.  
   
@@ -293,16 +293,16 @@ FROM t WITH (TABLOCK, INDEX(myindex))
  Setzt Seitensperren entweder in solchen Fällen ein, in denen normalerweise einzelne Sperren für Zeilen oder Schlüssel gesetzt werden, oder in Fällen, in denen normalerweise eine einzelne Tabelle gesperrt wird. Verwendet standardmäßig den für den Vorgang geeigneten Sperrmodus. Wird das Argument in Transaktionen angegeben, die auf der SNAPSHOT-Isolationsstufe ausgeführt werden, werden Seitensperren nur dann verwendet, wenn PAGLOCK mit anderen Tabellenhinweisen kombiniert ist, die Sperren erfordern, wie beispielsweise UPDLOCK und HOLDLOCK.  
   
  READCOMMITTED  
- Gibt an, dass Lesevorgänge den Regeln für die Isolationsstufe READ COMMITTED entsprechen, indem entweder Sperren gesetzt werden oder die Zeilenversionsverwaltung verwendet wird. Wenn die Datenbankoption READ_COMMITTED_SNAPSHOT auf OFF festgelegt wurde, fordert die [!INCLUDE[ssDE](../../includes/ssde-md.md)] beim Lesen der Daten freigegebene Sperren an und hebt diese Sperren nach Abschluss des Lesevorgangs wieder auf. Wenn die Datenbankoption READ_COMMITTED_SNAPSHOT auf ON festgelegt wurde, fordert die [!INCLUDE[ssDE](../../includes/ssde-md.md)] keine Sperren an und verwendet die Zeilenversionsverwaltung. Weitere Informationen zu Isolationsstufen finden Sie unter [SET TRANSACTION ISOLATION LEVEL &#40; Transact-SQL &#41; ](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
+ Gibt an, dass Lesevorgänge den Regeln für die Isolationsstufe READ COMMITTED entsprechen, indem entweder Sperren gesetzt werden oder die Zeilenversionsverwaltung verwendet wird. Wenn die Datenbankoption READ_COMMITTED_SNAPSHOT auf OFF festgelegt wurde, fordert die [!INCLUDE[ssDE](../../includes/ssde-md.md)] beim Lesen der Daten freigegebene Sperren an und hebt diese Sperren nach Abschluss des Lesevorgangs wieder auf. Wenn die Datenbankoption READ_COMMITTED_SNAPSHOT auf ON festgelegt wurde, fordert die [!INCLUDE[ssDE](../../includes/ssde-md.md)] keine Sperren an und verwendet die Zeilenversionsverwaltung. Weitere Informationen zu Isolationsstufen in SQL Server finden Sie unter [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
   
 > [!NOTE]  
 >  Für UPDATE- oder DELETE-Anweisungen: [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
  READCOMMITTEDLOCK  
- Gibt an, dass Lesevorgänge den Regeln für die Isolationsstufe READ COMMITTED entsprechen, indem Sperren verwendet werden. Die [!INCLUDE[ssDE](../../includes/ssde-md.md)] fordert beim Lesen der Daten freigegebene Sperren an und hebt diese Sperren nach Abschluss des Lesevorgangs wieder auf. Dabei spielt es keine Rolle, welche Einstellung für die Datenbankoption READ_COMMITTED_SNAPSHOT gewählt wurde. Weitere Informationen zu Isolationsstufen finden Sie unter [SET TRANSACTION ISOLATION LEVEL &#40; Transact-SQL &#41; ](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md). Dieser Hinweis kann nicht für die Zieltabelle einer INSERT-Anweisung angegeben werden, in diesem Fall wird der Fehler 4140 zurückgegeben.  
+ Gibt an, dass Lesevorgänge den Regeln für die Isolationsstufe READ COMMITTED entsprechen, indem Sperren verwendet werden. Die [!INCLUDE[ssDE](../../includes/ssde-md.md)] fordert beim Lesen der Daten freigegebene Sperren an und hebt diese Sperren nach Abschluss des Lesevorgangs wieder auf. Dabei spielt es keine Rolle, welche Einstellung für die Datenbankoption READ_COMMITTED_SNAPSHOT gewählt wurde. Weitere Informationen zu Isolationsstufen in SQL Server finden Sie unter [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md). Dieser Hinweis kann nicht für die Zieltabelle einer INSERT-Anweisung angegeben werden, in diesem Fall wird der Fehler 4140 zurückgegeben.  
   
  READPAST  
- Gibt an, dass [!INCLUDE[ssDE](../../includes/ssde-md.md)] keine Zeilen liest, die durch andere Transaktionen gesperrt wurden. Wenn READPAST angegeben wird, werden Sperren auf Zeilenebene übersprungen Sperren auf Seitenebene werden jedoch nicht übersprungen. Das bedeutet: anstatt die aktuelle Transaktion zu blockieren, überspringt das [!INCLUDE[ssDE](../../includes/ssde-md.md)] die Zeilen, bis die Sperren aufgehoben werden. Nehmen Sie z. B. an, die `T1`-Tabelle enthält eine Spalte mit einzelnen ganzen Zahlen und den Werten 1, 2, 3, 4, 5. Wenn Transaktion A die Werte 3 bis 8 ändert, jedoch noch kein Commit für sie ausgeführt wurde, ergibt SELECT * FROM T1 (READPAST) die Werte 1, 2, 4, 5. READPAST wird hauptsächlich verwendet, um die Reduzierung von Sperrkonflikten beim Implementieren einer Arbeitswarteschlange, die verwendet eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Tabelle. Ein Warteschlangenlesevorgang, der READPAST verwendet, lässt durch andere Transaktionen gesperrte Warteschlangeneinträge aus und liest den nächsten verfügbaren Warteschlangeneintrag, ohne warten zu müssen, bis andere Transaktionen ihre Sperren aufheben.  
+ Gibt an, dass [!INCLUDE[ssDE](../../includes/ssde-md.md)] keine Zeilen liest, die durch andere Transaktionen gesperrt wurden. Wenn READPAST angegeben ist, werden Sperren auf Zeilenebene übersprungen, Sperren auf Seitenebene allerdings nicht. Das bedeutet: anstatt die aktuelle Transaktion zu blockieren, überspringt das [!INCLUDE[ssDE](../../includes/ssde-md.md)] die Zeilen, bis die Sperren aufgehoben werden. Nehmen Sie z. B. an, die `T1`-Tabelle enthält eine Spalte mit einzelnen ganzen Zahlen und den Werten 1, 2, 3, 4, 5. Wenn Transaktion A die Werte 3 bis 8 ändert, jedoch noch kein Commit für sie ausgeführt wurde, ergibt SELECT * FROM T1 (READPAST) die Werte 1, 2, 4, 5. READPAST dient hauptsächlich der Reduzierung von Sperrkonflikten beim Implementieren einer Arbeitswarteschlange, die eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Tabelle verwendet. Ein Warteschlangenlesevorgang, der READPAST verwendet, lässt durch andere Transaktionen gesperrte Warteschlangeneinträge aus und liest den nächsten verfügbaren Warteschlangeneintrag, ohne warten zu müssen, bis andere Transaktionen ihre Sperren aufheben.  
   
  READPAST kann für jede Tabelle, auf die in einer UPDATE- oder DELETE-Anweisung verwiesen wird, und für jede Tabelle, auf die in einer FROM-Klausel verwiesen wird, angegeben werden. Wenn Sie den READPAST-Sperrhinweis in einer UPDATE-Anweisung angeben, wird er nur angewendet, wenn Daten gelesen werden, um die Datensätze zu identifizieren, die aktualisiert werden müssen; dabei spielt es keine Rolle, wo in der Anweisung READPAST angegeben wird. READPAST kann nicht für Tabellen in der INTO-Klausel einer INSERT-Anweisung angegeben werden. Aktualisierungs- oder Löschoperationen, die READPAST verwenden, können beim Lesen von Fremdschlüsseln oder indizierten Sichten oder beim Ändern sekundärer Indizes zu Blockierungen führen.  
   
@@ -332,24 +332,24 @@ FROM t WITH (TABLOCK, INDEX(myindex))
   
 -   Verwendung der SNAPSHOT-Isolationsstufe.  
   
- Weitere Informationen zu Isolationsstufen finden Sie unter [SET TRANSACTION ISOLATION LEVEL &#40; Transact-SQL &#41; ](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
+ Weitere Informationen zu Isolationsstufen in SQL Server finden Sie unter [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
   
 > [!NOTE]  
 >  Haben Sie READUNCOMMITTED angegeben und erhalten die Fehlermeldung 601, lösen Sie den Fehler auf wie einen Deadlockfehler (1205), und wiederholen Sie die Anweisung.  
   
  REPEATABLEREAD  
- Legt fest, dass ein Scan mit derselben Sperrsemantik wie eine Transaktion durchgeführt wird, die auf der Isolationsstufe REPEATABLE READ ausgeführt wird. Weitere Informationen zu Isolationsstufen finden Sie unter [SET TRANSACTION ISOLATION LEVEL &#40; Transact-SQL &#41; ](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
+ Legt fest, dass ein Scan mit derselben Sperrsemantik wie eine Transaktion durchgeführt wird, die auf der Isolationsstufe REPEATABLE READ ausgeführt wird. Weitere Informationen zu Isolationsstufen in SQL Server finden Sie unter [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
   
  ROWLOCK  
  Gibt an, das Zeilensperren in solchen Fällen gesetzt werden, in denen normalerweise Seiten- oder Tabellensperren gesetzt werden. Wird das Argument in Transaktionen angegeben, die auf der SNAPSHOT-Isolationsstufe ausgeführt werden, werden Zeilensperren nur dann verwendet, wenn ROWLOCK mit anderen Tabellenhinweisen kombiniert ist, die Sperren erfordern, wie beispielsweise UPDLOCK und HOLDLOCK.  
   
  SERIALIZABLE  
- Entspricht der Option HOLDLOCK. Verstärkt die Einschränkung von freigegebenen Sperren, indem sie aufrechterhalten werden, bis eine Transaktion abgeschlossen ist (anstatt die freigegebene Sperre aufzuheben, sobald die benötigte Tabelle oder Datenseite nicht mehr gebraucht wird, ganz gleich, ob die Transaktion abgeschlossen ist oder nicht). Der Scan wird mit derselben Sperrsemantik wie eine Transaktion durchgeführt, die auf der Isolationsstufe SERIALIZABLE ausgeführt wird. Weitere Informationen zu Isolationsstufen finden Sie unter [SET TRANSACTION ISOLATION LEVEL &#40; Transact-SQL &#41; ](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
+ Entspricht der Option HOLDLOCK. Verstärkt die Einschränkung von freigegebenen Sperren, indem sie aufrechterhalten werden, bis eine Transaktion abgeschlossen ist (anstatt die freigegebene Sperre aufzuheben, sobald die benötigte Tabelle oder Datenseite nicht mehr gebraucht wird, ganz gleich, ob die Transaktion abgeschlossen ist oder nicht). Der Scan wird mit derselben Sperrsemantik wie eine Transaktion durchgeführt, die auf der Isolationsstufe SERIALIZABLE ausgeführt wird. Weitere Informationen zu Isolationsstufen in SQL Server finden Sie unter [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
   
  SNAPSHOT  
 **Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
   
- Auf die speicheroptimierte Tabelle wird unter der SNAPSHOT-Isolation zugegriffen. SNAPSHOT kann nur mit speicheroptimierten Tabellen verwendet werden (nicht mit datenträgerbasierten Tabellen). Weitere Informationen finden Sie unter [Einführung in Speicheroptimierte Tabellen](../../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md).  
+ Auf die speicheroptimierte Tabelle wird unter der SNAPSHOT-Isolation zugegriffen. SNAPSHOT kann nur mit speicheroptimierten Tabellen verwendet werden (nicht mit datenträgerbasierten Tabellen). Weitere Informationen finden Sie unter [Einführung in speicheroptimierte Tabellen](../../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md).  
   
 ```  
 SELECT * FROM dbo.Customers AS c   
@@ -361,7 +361,7 @@ LEFT JOIN dbo.[Order History] AS oh
  SPATIAL_WINDOW_MAX_CELLS = *integer*  
 **Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Gibt die maximale Anzahl der Zellen an, die für die Mosaikbearbeitung eines geometry- oder geography-Objekts verwendet werden sollen. *Anzahl* ist ein Wert zwischen 1 und 8192.  
+ Gibt die maximale Anzahl der Zellen an, die für die Mosaikbearbeitung eines geometry- oder geography-Objekts verwendet werden sollen. *number* muss einen Wert zwischen 1 und 8192 aufweisen.  
   
  Mit dieser Option können Sie die Ausführungszeit von Abfragen optimieren, indem Sie den Zusammenhang zwischen der Ausführungszeit des primären und des sekundären Filters kontrollieren. Ein höherer Wert verringert die Ausführungszeit des sekundären Filters, erhöht jedoch die Ausführungszeit des primären Filters. Ein niedrigerer Wert verringert die Ausführungszeit des primären Filters, erhöht jedoch die Ausführungszeit des sekundären Filters. Bei räumlichen Daten mit größerer Dichte sollte ein höherer Wert durch bessere Angleichung an den primären Filter und Verringerung der Ausführungszeit des sekundären Filters in einer niedrigeren Ausführungszeit resultieren. Bei Daten mit geringer Dichte verringert ein niedrigerer Wert die Ausführungszeit des primären Filters.  
   
@@ -370,9 +370,9 @@ LEFT JOIN dbo.[Order History] AS oh
  TABLOCK  
  Gibt an, dass die abgerufene Sperre auf Tabellenebene aktiviert wird. Der Typ der abgerufenen Sperre hängt von der ausgeführten Anweisung ab. Beispielsweise kann eine SELECT-Anweisung eine gemeinsame Sperre abrufen. Bei Angabe von TABLOCK wird die gemeinsame Sperre auf die gesamte Tabelle statt auf Zeilen- oder Seitenebene angewendet. Wird zusätzlich HOLDLOCK angegeben, wird die Tabellensperre bis zum Transaktionsende aufrechterhalten.  
   
- Beim Importieren von Daten in einem Heap mithilfe der INSERT INTO \<Target_table > Wählen Sie \<Spalten > FROM \<Source_table >-Anweisung können Sie aktivieren optimierter Protokollierung und Sperrung für die Anweisung durch Angeben der TABLOCK-Hinweis für die Zieltabelle. Außerdem muss das Wiederherstellungsmodell der Datenbank auf einfach oder massenprotokolliert festgelegt werden. Weitere Informationen finden Sie unter [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md).  
+ Wenn Sie Daten mit der INSERT INTO \<target_table> SELECT \<columns> FROM \<source_table>-Anweisung in einen Heap importieren, können Sie optimierte Protokollierung und Sperrung für die Anweisung aktivieren, indem Sie den TABLOCK-Hinweis für die Zieltabelle angeben. Außerdem muss das Wiederherstellungsmodell der Datenbank auf einfach oder massenprotokolliert festgelegt werden. Weitere Informationen finden Sie unter [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md).  
   
- Bei Verwendung mit der [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) zum Importieren von Daten in eine Tabelle, TABLOCK Bulk-Rowsetanbieter ermöglicht mehreren Clients das gleichzeitige Laden von Daten in die Zieltabelle mit optimierter Protokollierung und Sperrung. Weitere Informationen finden Sie unter [Prerequisites for Minimal Logging in Bulk Import](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md).  
+ Wenn der TABLOCK-Hinweis mit dem [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md)-Massenrowsetanbieter verwendet wird, um Daten in eine Tabelle zu importieren, ermöglicht er mehreren Clients das gleichzeitige Laden von Daten in die Zieltabelle mit optimierter Protokollierung und Sperrung. Weitere Informationen finden Sie unter [Voraussetzungen für die minimale Protokollierung beim Massenimport](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md).  
   
  TABLOCKX  
  Gibt an, dass für die Tabelle eine exklusive Sperre verwendet wird.  
@@ -385,7 +385,7 @@ LEFT JOIN dbo.[Order History] AS oh
  XLOCK  
  Gibt an, dass exklusive Sperren zu verwenden und aufrechtzuerhalten sind, bis die Transaktion abgeschlossen ist. Wenn die exklusiven Sperren mit ROWLOCK, PAGLOCK oder TABLOCK angegeben werden, werden sie auf die entsprechende Ebene der Granularität angewendet.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Tabellenhinweise werden ignoriert, wenn der Abfrageplan nicht auf die Tabelle zugreift. Dies ist möglicherweise darauf zurückzuführen, dass der Optimierer überhaupt nicht auf die Tabelle oder stattdessen auf eine indizierte Sicht zugreift. In letzterem Fall kann der Zugriff auf eine indizierte Sicht verhindert werden, indem der Abfragehinweis OPTION (EXPAND VIEWS) verwendet wird.  
   
  Alle Sperrhinweise werden an alle Tabellen und Sichten weitergeleitet, auf die der Abfrageplan zugreift, auch an Tabellen und Sichten, auf die in einer Sicht verwiesen wird. Zusätzlich nimmt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die entsprechenden Sperrkonsistenzprüfungen vor.  
@@ -401,7 +401,7 @@ LEFT JOIN dbo.[Order History] AS oh
 -   Isolationsstufenhinweise: HOLDLOCK, NOLOCK, READCOMMITTED, REPEATABLEREAD, SERIALIZABLE.  
   
 ## <a name="filtered-index-hints"></a>Gefilterte Indexhinweise  
- Ein gefilterter Index kann als Tabellenhinweis verwendet werden, jedoch führt dazu, dass den Abfrageoptimierer Fehler 8622 generiert, wenn sie nicht alle Zeilen abdeckt, die die Abfrage auswählt. Es folgt ein Beispiel für einen ungültigen gefilterten Indexhinweis. Im folgenden Beispiel wird der gefilterte Index `FIBillOfMaterialsWithComponentID` erstellt und anschließend als Indexhinweis für eine SELECT-Anweisung verwendet. Das gefilterte Indexprädikat schließt Datenzeilen für die ComponentIDs 533, 324 und 753 ein. Das Abfrageprädikat schließt ebenfalls Datenzeilen für die ComponentIDs 533, 324 und 753 ein, erweitert das Resultset jedoch um die ComponentIDs 855 und 924, die nicht im gefilterten Index enthalten sind. Deshalb kann der Abfrageoptimierer den gefilterten Indexhinweis nicht verwenden und generiert den Fehler 8622. Weitere Informationen finden Sie unter [Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md).  
+ Ein gefilterter Index kann als Tabellenhinweis verwendet werden, bewirkt jedoch, dass der Abfrageoptimierer den Fehler 8622 generiert, wenn er nicht alle Zeilen abdeckt, die durch die Abfrage ausgewählt werden. Es folgt ein Beispiel für einen ungültigen gefilterten Indexhinweis. Im folgenden Beispiel wird der gefilterte Index `FIBillOfMaterialsWithComponentID` erstellt und anschließend als Indexhinweis für eine SELECT-Anweisung verwendet. Das gefilterte Indexprädikat schließt Datenzeilen für die ComponentIDs 533, 324 und 753 ein. Das Abfrageprädikat schließt ebenfalls Datenzeilen für die ComponentIDs 533, 324 und 753 ein, erweitert das Resultset jedoch um die ComponentIDs 855 und 924, die nicht im gefilterten Index enthalten sind. Deshalb kann der Abfrageoptimierer den gefilterten Indexhinweis nicht verwenden und generiert den Fehler 8622. Weitere Informationen finden Sie unter [Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md).  
   
 ```  
 IF EXISTS (SELECT name FROM sys.indexes  
@@ -423,26 +423,26 @@ GO
  Der Abfrageoptimierer berücksichtigt einen Indexhinweis nicht, wenn die SET-Optionen nicht die erforderlichen Werte für die gefilterten Indizes enthalten. Weitere Informationen finden Sie unter [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).  
   
 ## <a name="using-noexpand"></a>Verwenden von NOEXPAND  
- NOEXPAND gilt nur für *indizierte Sichten*. Eine indizierte Sicht ist eine Sicht, auf der ein eindeutiger gruppierter Index erstellt wurde. Wenn eine Abfrage Verweise auf Spalten enthält, die in einer indizierten Sicht und in Basistabellen vorhanden sind, und der Abfrageoptimierer festlegt, dass die Verwendung der indizierten Sicht die beste Methode zum Ausführen der Abfrage darstellt, verwendet der Optimierer den Index der Sicht. Diese Funktion wird aufgerufen, *Abgleich der indizierten Sicht*. Vor [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1, automatische Verwendung einer indizierten Sicht durch den Abfrageoptimierer wird nur in bestimmten Editionen von unterstützt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Eine Liste der Funktionen, die von den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Editionen unterstützt werden, finden Sie unter [Von den SQL Server 2016-Editionen unterstützte Funktionen](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+ NOEXPAND gilt nur für *indizierte Sichten*. Eine indizierte Sicht ist eine Sicht, auf der ein eindeutiger gruppierter Index erstellt wurde. Wenn eine Abfrage Verweise auf Spalten enthält, die in einer indizierten Sicht und in Basistabellen vorhanden sind, und der Abfrageoptimierer festlegt, dass die Verwendung der indizierten Sicht die beste Methode zum Ausführen der Abfrage darstellt, verwendet der Optimierer den Index der Sicht. Diese Funktionalität wird als *Abgleich der indizierten Sicht* bezeichnet. Vor [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1 wurde die automatische Verwendung einer indizierten Sicht durch den Abfrageoptimierer nur in bestimmten Editionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt. Eine Liste der Funktionen, die von den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Editionen unterstützt werden, finden Sie unter [Von den SQL Server 2016-Editionen unterstützte Funktionen](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
- Damit der Optimierer indizierte Sichten für den Abgleich berücksichtigen, oder verwenden eine indizierte Sicht, auf die verwiesen wird, wird mit dem NOEXPAND-Hinweis, müssen die folgenden SET-Optionen auf ON festgelegt werden.  
+ Damit der Optimierer indizierte Sichten für den Abgleich oder die Verwendung einer indizierten Sicht berücksichtigt, auf die mit dem NOEXPAND-Hinweis verwiesen wird, müssen die folgenden SET-Optionen auf ON festgelegt werden.  
  
 > [!NOTE]  
->  Azure SQL-Datenbank unterstützt die automatische Verwendung indizierter Sichten ohne Angabe des NOEXPAND-Hinweis.
+>  Azure SQL-Datenbank unterstützt die automatische Verwendung indizierter Sichten ohne Angabe des NOEXPAND-Hinweises.
   
 ||||  
 |-|-|-|  
 |ANSI_NULLS|ANSI_WARNINGS|CONCAT_NULL_YIELDS_NULL|  
 |ANSI_PADDING|ARITHABORT<sup>1</sup>|QUOTED_IDENTIFIER|  
   
- <sup>1</sup> ARITHABORT wird implizit auf ON festgelegt, wenn ANSI_WARNINGS auf ON festgelegt ist. Es ist daher nicht erforderlich, diese Einstellung manuell anzupassen.  
+ <sup>1</sup> ARITHABORT wird implizit auf ON festgelegt, wenn ANSI_WARNINGS auf ON festgelegt wurde. Es ist daher nicht erforderlich, diese Einstellung manuell anzupassen.  
   
  Auch muss die Option NUMERIC_ROUNDABORT auf OFF festgelegt sein.  
   
  Damit der Optimierer einen Index für eine indizierte Sicht verwendet, geben Sie die Option NOEXPAND an. Dieser Hinweis kann nur dann verwendet werden, wenn die Sicht ebenfalls in der Abfrage angegeben wurde. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt keinen Hinweis zur Verfügung, um die Verwendung einer bestimmten indizierten Sicht in einer Abfrage, die die Sicht nicht direkt in der FROM-Klausel benennt, zu erzwingen. Der Abfrageoptimierer zieht jedoch die Verwendung indizierter Sichten in Erwägung, selbst wenn in der Abfrage nicht direkt auf sie verwiesen wird.  
   
 ## <a name="using-a-table-hint-as-a-query-hint"></a>Verwenden eines Tabellenhinweises als Abfragehinweis  
- *Tabellenhinweise* kann auch als Abfragehinweis mit der OPTION (TABLE HINT)-Klausel angegeben werden. Es wird empfohlen, einen Tabellenhinweis als Abfragehinweis nur im Rahmen einer [Planhinweisliste](../../relational-databases/performance/plan-guides.md). Für Ad-hoc-Abfragen geben Sie diese Hinweise nur als Tabellenhinweise an. Weitere Informationen finden Sie unter [Abfragehinweise &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md).  
+ *Tabellenhinweise* können mit der OPTION (TABLE HINT)-Klausel auch als Abfragehinweis angegeben werden. Es wird empfohlen, einen Tabellenhinweis nur im Kontext einer [Planhinweisliste](../../relational-databases/performance/plan-guides.md) als einen Abfragehinweis zu verwenden. Für Ad-hoc-Abfragen geben Sie diese Hinweise nur als Tabellenhinweise an. Weitere Informationen finden Sie unter [Abfragehinweise &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md).  
   
 ## <a name="permissions"></a>Berechtigungen  
  Für die KEEPIDENTITY, IGNORE_CONSTRAINTS- und IGNORE_TRIGGERS-Hinweise werden ALTER-Berechtigungen für die Tabelle benötigt.  
@@ -501,7 +501,7 @@ WHERE h.TotalDue > 100
 AND (d.OrderQty > 5 OR d.LineTotal < 1000.00);  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
  [Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql.md)   
  [Abfragehinweise &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)  

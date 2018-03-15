@@ -1,5 +1,5 @@
 ---
-title: STNumInteriorRing (Geometry-Datentyp) | Microsoft Docs
+title: STNumInteriorRing (geometry-Datentyp) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stnuminteriorring-geometry-data-type"></a>STNumInteriorRing (geometry-Datentyp)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Gibt die Anzahl innerer Ringe einer **Polygongeometry** Instanz.
+Gibt die Anzahl der inneren Ringe einer **Polygongeometry**-Instanz zurück.
   
 ## <a name="syntax"></a>Syntax  
   
@@ -44,12 +44,12 @@ Gibt die Anzahl innerer Ringe einer **Polygongeometry** Instanz.
 ```  
   
 ## <a name="return-types"></a>Rückgabetypen  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Rückgabetyp: **Int**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Rückgabetyp: **int**  
   
  CLR-Rückgabetyp: **SqlInt32**  
   
-## <a name="remarks"></a>Hinweise  
- Diese Methode gibt Null zurück, wenn die **Geometrie** -Instanz ist ein Polygon.  
+## <a name="remarks"></a>Remarks  
+ Diese Methode gibt NULL zurück, wenn die **geometry**-Instanz kein Polygon ist.  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird eine `Polygon`-Instanz erstellt und `STNumInteriorRing()` verwendet, um festzustellen, wie viele innere Ringe die Instanz enthält.  
@@ -60,7 +60,7 @@ SET @g = geometry::STGeomFromText('POLYGON((0 0, 3 0, 3 3, 0 3, 0 0),(2 2, 2 1, 
 SELECT @g.STNumInteriorRing();  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [OGC-Methoden für geometry-Instanzen](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

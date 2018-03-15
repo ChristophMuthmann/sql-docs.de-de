@@ -1,5 +1,5 @@
 ---
-title: "PRÜFSUMME (Transact-SQL) | Microsoft Docs"
+title: CHECKSUM (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -48,18 +48,18 @@ CHECKSUM ( * | expression [ ,...n ] )
   
 ## <a name="arguments"></a>Argumente  
 \*  
-Gibt an, dass die Berechnung über alle Spalten der Tabelle befindet. CHECKSUM gibt einen Fehler zurück, wenn eine Spalte einen nicht vergleichbaren Datentyp hat. Nicht vergleichbare Datentypen sind **Text**, **Ntext**, **Image**, XML und **Cursor**, sowie **Sql_variant**mit einer der vorstehenden Typen als Basistyp.
+Gibt an, dass die Berechnung für alle Spalten der Tabelle erfolgt. CHECKSUM gibt einen Fehler zurück, wenn eine Spalte einen nicht vergleichbaren Datentyp hat. Nicht vergleichbare Datentypen sind **text**, **ntext**, **image**, XML und **cursor** sowie **sql_variant** mit einem der vorstehenden Typen als Basistyp.
   
 *expression*  
-Ist ein [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) eines beliebigen Typs mit Ausnahme eines nicht vergleichbaren Datentyp hat.
+Ein [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) eines beliebigen Typs mit Ausnahme eines nicht vergleichbaren Datentyps.
   
 ## <a name="return-types"></a>Rückgabetypen
  **int**  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
 CHECKSUM berechnet aus der Liste der Argumente einen Hashwert, der Prüfsumme genannt wird. Der Hashwert wurde zum Verwenden beim Erstellen von Hashindizes konzipiert. Wenn die Argumente für CHECKSUM Spalten sind und ein Index für den berechneten CHECKSUM-Wert erstellt wird, ist das Ergebnis ein Hashindex. Dieser kann für Gleichheitssuchen in den Spalten verwendet werden.
   
-CHECKSUM erfüllt die Eigenschaften einer Hashfunktion: Wenn CHECKSUM auf zwei beliebige Listen mit Ausdrücken angewendet wird, wird immer derselbe Wert zurückgegeben, falls die entsprechenden Elemente der beiden Listen vom gleichen Typ sind und bezüglich des Vergleichs mit dem Gleichheitsoperator (=) gleich sind. Bei dieser Definition wird für NULL-Werte eines angegebenen Typs angenommen, dass sie bei einem Vergleich "gleich" sind. Wenn sich einer der Werte in der Liste mit Ausdrücken ändert, ändert sich gewöhnlich auch die Prüfsumme der Liste. Es besteht jedoch eine geringe Möglichkeit, dass sich die Prüfsumme nicht ändert. Aus diesem Grund wird nicht empfohlen, CHECKSUM für die Überprüfung auf geänderte Werte zu verwenden, außer es spielt für die Anwendung keine große Rolle, wenn gelegentlich eine Änderung nicht erkannt wird. Erwägen Sie [HashBytes](../../t-sql/functions/hashbytes-transact-sql.md) stattdessen. Wenn ein MD5-Hashalgorithmus angegeben wird, ist die Wahrscheinlichkeit, dass HashBytes für zwei verschiedene Eingaben dasselbe Ergebnis zurückgibt, wesentlich geringer als bei CHECKSUM.
+CHECKSUM erfüllt die Eigenschaften einer Hashfunktion: Wenn CHECKSUM auf zwei beliebige Listen mit Ausdrücken angewendet wird, wird immer derselbe Wert zurückgegeben, falls die entsprechenden Elemente der beiden Listen vom gleichen Typ sind und bezüglich des Vergleichs mit dem Gleichheitsoperator (=) gleich sind. Bei dieser Definition wird für NULL-Werte eines angegebenen Typs angenommen, dass sie bei einem Vergleich "gleich" sind. Wenn sich einer der Werte in der Liste mit Ausdrücken ändert, ändert sich gewöhnlich auch die Prüfsumme der Liste. Es besteht jedoch eine geringe Möglichkeit, dass sich die Prüfsumme nicht ändert. Aus diesem Grund wird nicht empfohlen, CHECKSUM für die Überprüfung auf geänderte Werte zu verwenden, außer es spielt für die Anwendung keine große Rolle, wenn gelegentlich eine Änderung nicht erkannt wird. Verwenden Sie stattdessen lieber [HashBytes](../../t-sql/functions/hashbytes-transact-sql.md). Wenn ein MD5-Hashalgorithmus angegeben wird, ist die Wahrscheinlichkeit, dass HashBytes für zwei verschiedene Eingaben dasselbe Ergebnis zurückgibt, wesentlich geringer als bei CHECKSUM.
   
 Die Reihenfolge von Ausdrücken wirkt sich auf den Ergebniswert für CHECKSUM aus. Die Spaltenreihenfolge, die bei CHECKSUM(*) verwendet wird, ist die Spaltenreihenfolge, die in der Tabellen- oder Sichtdefinition angegeben ist. Dies schließt die berechneten Spalten ein.
   
@@ -96,8 +96,8 @@ GO
 Durch Erstellen des Indexes für die berechnete Spalte wird die Prüfsummenspalte materialisiert, und die Änderungen des `ProductName`-Werts werden an die Prüfsummenspalte weitergegeben. Ein Index kann jedoch auch direkt für die indizierte Spalte erstellt werden. Wenn die Schlüsselwerte jedoch lang sind, ist ein normaler Index wahrscheinlich nicht so leistungsfähig wie ein Prüfsummenindex.
   
 ## <a name="see-also"></a>Siehe auch
-[CHECKSUM_AGG &#40; Transact-SQL &#41;](../../t-sql/functions/checksum-agg-transact-sql.md)  
-[HASHBYTES &#40; Transact-SQL &#41;](../../t-sql/functions/hashbytes-transact-sql.md)  
-[BINARY_CHECKSUM &#40; Transact-SQL &#41;](../../t-sql/functions/binary-checksum-transact-sql.md)
+[CHECKSUM_AGG &#40;Transact-SQL&#41;](../../t-sql/functions/checksum-agg-transact-sql.md)  
+[HASHBYTES &#40;Transact-SQL&#41;](../../t-sql/functions/hashbytes-transact-sql.md)  
+[BINARY_CHECKSUM  &#40;Transact-SQL&#41;](../../t-sql/functions/binary-checksum-transact-sql.md)
   
   

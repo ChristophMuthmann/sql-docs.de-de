@@ -1,5 +1,5 @@
 ---
-title: Erstellen von Aggregat (Transact-SQL) | Microsoft Docs
+title: CREATE AGGREGATE (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -68,13 +68,13 @@ EXTERNAL NAME assembly_name [ .class_name ]
  Der Name der Aggregatfunktion, die Sie erstellen möchten.  
   
  **@** *param_name*  
- Ein oder mehrere Parameter im benutzerdefinierten Aggregat. Der Wert eines Parameters muss vom Benutzer angegeben werden, wenn die Aggregatfunktion ausgeführt wird. Geben Sie einen Parameternamen, mit der eine "at"-Zeichen (**@**) als erstes Zeichen. Der Parametername muss den Regeln für entsprechen [Bezeichner](../../relational-databases/databases/database-identifiers.md). Parameter gelten lokal in der jeweiligen Funktion.  
+ Ein oder mehrere Parameter im benutzerdefinierten Aggregat. Der Wert eines Parameters muss vom Benutzer angegeben werden, wenn die Aggregatfunktion ausgeführt wird. Geben Sie einen Parameternamen an, der mit dem Zeichen **@** beginnt. Der Parametername muss den Regeln für [Bezeichner](../../relational-databases/databases/database-identifiers.md) entsprechen. Parameter gelten lokal in der jeweiligen Funktion.  
   
  *system_scalar_type*  
- Einer der skalaren Systemdatentypen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], um den Wert des Eingabeparameters oder Rückgabewerts zu speichern. Alle skalaren Datentypen können verwendet werden als Parameter für ein benutzerdefiniertes Aggregat außer **Text**, **Ntext**, und **Image**. Nicht skalare Typen, wie z. B. **Cursor** und **Tabelle**, kann nicht angegeben werden.  
+ Einer der skalaren Systemdatentypen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], um den Wert des Eingabeparameters oder Rückgabewerts zu speichern. Alle skalaren Datentypen, außer **text**, **ntext** und **image**, können als Parameter für ein benutzerdefiniertes Aggregat verwendet werden. Nicht skalare Typen, wie beispielsweise **cursor** und **table**, können nicht angegeben werden.  
   
  *udt_schema_name*  
- Der Name des Schemas, zu dem der CLR-benutzerdefinierte Typ gehört. Wenn nicht angegeben, die [!INCLUDE[ssDE](../../includes/ssde-md.md)] Verweise *Udt_type_name* in der folgenden Reihenfolge:  
+ Der Name des Schemas, zu dem der CLR-benutzerdefinierte Typ gehört. Wenn der Name des Schemas nicht angegeben ist, verweist [!INCLUDE[ssDE](../../includes/ssde-md.md)] auf *udt_type_name* in der folgenden Reihenfolge:  
   
 -   Der systemeigene SQL-Namespace.  
   
@@ -83,21 +83,21 @@ EXTERNAL NAME assembly_name [ .class_name ]
 -   Das **dbo** -Schema in der aktuellen Datenbank  
   
  *udt_type_name*  
- Der Name eines CLR-benutzerdefinierten Typs, der bereits in der aktuellen Datenbank erstellt wurde. Wenn *Udt_schema_name* nicht angegeben ist, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] geht davon aus, der Typ gehört, auf das Schema des aktuellen Benutzers.  
+ Der Name eines CLR-benutzerdefinierten Typs, der bereits in der aktuellen Datenbank erstellt wurde. Falls *udt_schema_name* nicht angegeben wird, wird in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] davon ausgegangen, dass der Typ zum Schema des aktuellen Benutzers gehört.  
   
  *assembly_name* [ **.***class_name* ]  
- Die Assembly, die an die benutzerdefinierte Aggregatfunktion gebunden werden soll, und optional der Name des Schemas, zu dem die Assembly gehört, sowie der Name der Klasse innerhalb der Assembly, die das benutzerdefinierte Aggregat implementiert. Die Assembly muss bereits mit einer CREATE ASSEMBLY-Anweisung in der Datenbank erstellt worden sein. *CLASS_NAME* muss ein gültiger [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Bezeichner und die Übereinstimmung der Name einer Klasse, die in der Assembly vorhanden ist. *CLASS_NAME* möglicherweise ein Namespace qualifizierten Namen, wenn die zum Erstellen der Klasse verwendete Programmiersprache Namespaces, z. B. c# verwendet. Wenn *Class_name* nicht angegeben ist, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird angenommen, sie entspricht dem *Aggregate_name*.  
+ Die Assembly, die an die benutzerdefinierte Aggregatfunktion gebunden werden soll, und optional der Name des Schemas, zu dem die Assembly gehört, sowie der Name der Klasse innerhalb der Assembly, die das benutzerdefinierte Aggregat implementiert. Die Assembly muss bereits mit einer CREATE ASSEMBLY-Anweisung in der Datenbank erstellt worden sein. *class_name* muss ein gültiger [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Bezeichner sein und mit dem Namen einer Klasse übereinstimmen, die in der Assembly vorhanden ist. *class_name* kann ein mit dem Namespace qualifizierter Name sein, falls die zum Erstellen der Klasse verwendete Programmiersprache Namespaces verwendet, z.B. C#. Wenn *class_name* nicht angegeben ist, geht [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] davon aus, dass der Wert mit *aggregate_name* identisch ist.  
   
-## <a name="remarks"></a>Hinweise  
- Standardmäßig ist die Möglichkeit, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CLR-Code ausführt, deaktiviert. Sie erstellen, ändern und Löschen von Datenbankobjekten, die auf verwaltete Codemodule verweisen, aber der Code in diesen Modulen wird nicht ausgeführt, in einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , sofern die [Option Clr-fähig](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md) aktiviert ist, mithilfe von ["sp_" Konfigurieren Sie](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
+## <a name="remarks"></a>Remarks  
+ Standardmäßig ist die Möglichkeit, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CLR-Code ausführt, deaktiviert. Sie können Datenbankobjekte erstellen, ändern und löschen, die auf Module für verwalteten Code verweisen. Der Code in diesen Modulen wird jedoch nur in einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt, wenn die Option [clr enabled](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md) mithilfe von [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) aktiviert wird.  
   
- Die Klasse Assemblyklasse *Assembly_name* und ihre Methoden sollten alle Anforderungen zum Implementieren einer benutzerdefinierten Aggregatfunktion in einer Instanz von erfüllen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Weitere Informationen finden Sie unter [benutzerdefinierte CLR-Aggregate](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md).  
+ Die in *assembly_name* angegebene Assemblyklasse und die zugehörigen Methoden sollten alle Anforderungen zum Implementieren einer benutzerdefinierten Aggregatfunktion in einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erfüllen. Weitere Informationen finden Sie unter [Benutzerdefinierte CLR-Aggregate](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md).  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die CREATE AGGREGATE-Berechtigungen sowie die REFERENCES-Berechtigung für die Assembly, die in der EXTERNAL NAME-Klausel angegeben ist.  
   
 ## <a name="examples"></a>Beispiele  
- Im folgenden Beispiel wird davon ausgegangen, dass eine StringUtilities.csproj-Beispielanwendung kompiliert wird. Weitere Informationen finden Sie unter [Utility Funktionen Beispiel einer Abfragezeichenfolge](http://msdn.microsoft.com/library/9623013f-15f1-4614-8dac-1155e57c880c).  
+ Im folgenden Beispiel wird davon ausgegangen, dass eine StringUtilities.csproj-Beispielanwendung kompiliert wird. Weitere Informationen finden Sie unter [Beispiel für Zeichenfolgenhilfsprogramm-Funktionen](http://msdn.microsoft.com/library/9623013f-15f1-4614-8dac-1155e57c880c).  
   
  In diesem Beispiel wird das `Concatenate`-Aggregat erstellt. Bevor das Aggregat erstellt wird, wird die `StringUtilities.dll`-Assembly in der lokalen Datenbank registriert.  
   
@@ -122,7 +122,7 @@ EXTERNAL NAME [StringUtilities].[Microsoft.Samples.SqlServer.Concatenate];
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [DROP AGGREGATE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-aggregate-transact-sql.md)  
   
   

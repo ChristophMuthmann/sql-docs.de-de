@@ -1,5 +1,5 @@
 ---
-title: GetRoot (Datenbankmodul) | Microsoft Docs
+title: GetRoot (Datenbank-Engine) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 7/22/2017
 ms.prod: sql-non-specified
@@ -49,11 +49,11 @@ static SqlHierarchyId GetRoot ( )
 ```  
   
 ## <a name="return-types"></a>Rückgabetypen  
-**SQL Server-Typ: Hierarchyid zurück**
+**SQL Server-Rückgabetyp: hierarchyid**
   
-**CLR-Typ: SqlHierarchyId zurück**
+**CLR-Rückgabetyp: SqlHierarchyId**
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
 Wird verwendet, um den Stammknoten in einer Hierarchiestruktur zu bestimmen.
   
 ## <a name="examples"></a>Beispiele  
@@ -68,7 +68,7 @@ WHERE OrgNode = hierarchyid::GetRoot()
 ```  
   
 ### <a name="b-clr-example"></a>B. CLR-Beispiel  
-Der folgende Codeausschnitt Ruft die GetRoot()-Methode:
+Im folgenden Codeausschnitt wird die GetRoot()-Methode aufgerufen:
   
 ```sql
 SqlHierarchyId.GetRoot()  

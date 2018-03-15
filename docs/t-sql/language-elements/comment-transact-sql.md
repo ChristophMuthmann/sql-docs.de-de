@@ -1,5 +1,5 @@
 ---
-title: --(Kommentar) (Transact-SQL) | Microsoft Docs
+title: -- (Kommentar) (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -53,7 +53,7 @@ ms.lasthandoff: 01/25/2018
  *text_of_comment*  
  Die Zeichenfolge mit dem Kommentartext.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Verwenden Sie zwei Bindestriche (--) für einzeilige oder geschachtelte Kommentare. Kommentare, die mit -- eingefügt werden, werden mit dem Neue-Zeile-Zeichen begrenzt. Es gibt keine Maximallänge für Kommentare. In der folgenden Tabelle sind die Tastenkombinationen aufgeführt, die Sie verwenden können, um Text als Kommentar zu kennzeichnen oder auszukommentieren.  
   
 |Aktion|Standard|  
@@ -61,9 +61,9 @@ ms.lasthandoff: 01/25/2018
 |Umwandeln des markierten Texts in einen Kommentar|STRG+K, STRG+C|  
 |Kommentierung des ausgewählten Texts entfernen|STRG+K, STRG+U|  
   
- Weitere Informationen zu diesen Tastenkombinationen finden Sie unter [SQL Server Management Studio Keyboard Shortcuts](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md).  
+ Weitere Informationen zu diesen Tastenkombinationen finden Sie unter [Tastenkombinationen für SQL Server Management Studio](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md).  
   
- Mehrzeilige Kommentare finden Sie unter [Schrägstrich Stern &#40; Blockkommentar &#41; &#40; Transact-SQL &#41; ](../../t-sql/language-elements/slash-star-comment-transact-sql.md).  
+ Mehrzeilige Kommentare finden Sie unter [Slash Star &#40;Block Comment&#41; &#40;Transact-SQL&#41; (Schrägstrich – (Blockkommentar) (Transact-SQL))](../../t-sql/language-elements/slash-star-comment-transact-sql.md).  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel werden die Kommentarzeichen -- verwendet.  
@@ -80,7 +80,7 @@ ORDER BY PostalCode ASC; -- We do not have to specify ASC because
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Control-of-Flow-Sprache &#40; Transact-SQL &#41;](~/t-sql/language-elements/control-of-flow.md)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Ablaufsteuerungssprache &#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md)  
   
   

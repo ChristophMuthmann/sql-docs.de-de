@@ -1,5 +1,5 @@
 ---
-title: FREETEXT (Transact-SQL) | Microsoft Docs
+title: FREETEXT (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 10/23/2017
 ms.prod: sql-non-specified
@@ -38,7 +38,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="freetext-transact-sql"></a>FREETEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Ist ein Prädikat, das verwendet wird, der [!INCLUDE[tsql](../../includes/tsql-md.md)] [WHERE-Klausel](../../t-sql/queries/where-transact-sql.md) von eine [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT-Anweisung zum Ausführen einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Volltextsuche für die Volltext-volltextindizierte Spalten mit zeichenbasierten Datentypen. Dieses Prädikat sucht nach Werten, die der Bedeutung der Suchbedingung entsprechen und nicht genau mit dem Wortlaut der Suchbedingung übereinstimmen. Bei Verwendung von FREETEXT führt das Modul für die Volltextabfrage intern die folgenden Aktionen für die *Freetext_string*weist jedem Begriff eine Gewichtung und sucht dann nach Übereinstimmungen:  
+  Ein Prädikat, das in der [!INCLUDE[tsql](../../includes/tsql-md.md)]-[WHERE-Klausel](../../t-sql/queries/where-transact-sql.md) einer [!INCLUDE[tsql](../../includes/tsql-md.md)]-SELECT-Anweisung verwendet wird, um eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Volltextsuche für volltextindizierte Spalten mit zeichenbasierten Datentypen durchzuführen. Dieses Prädikat sucht nach Werten, die der Bedeutung der Suchbedingung entsprechen und nicht genau mit dem Wortlaut der Suchbedingung übereinstimmen. Bei Verwendung von FREETEXT führt die Volltextabfrage-Engine intern die folgenden Aktionen für *freetext_string* aus, weist jedem Begriff eine Gewichtung zu und sucht dann nach Übereinstimmungen:  
   
 -   Trennt die Zeichenfolge in einzelne Wörter auf der Basis von Wortgrenzen (Wörtertrennung).  
   
@@ -47,9 +47,9 @@ ms.lasthandoff: 01/25/2018
 -   Legt eine Liste mit Erweiterungen oder Ersetzungen für die Begriffe auf der Basis von Übereinstimmungen im Thesaurus fest.  
   
 > [!NOTE]  
->  Informationen zu den Formen der Volltextsuche, die von unterstützt werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], finden Sie unter [Abfragen mit Volltextsuche](../../relational-databases/search/query-with-full-text-search.md).  
+>  Informationen zu den Formen der Volltextsuche, die von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt werden, finden Sie unter [Abfragen mit Volltextsuche](../../relational-databases/search/query-with-full-text-search.md).  
   
-**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [aktuelle Version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).
+**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis zur [aktuellen Version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -63,22 +63,22 @@ FREETEXT ( { column_name | (column_list) | * }
   
 ## <a name="arguments"></a>Argumente  
  *column_name*  
- Der Name einer oder mehrerer volltextindizierten Spalten der in der FROM-Klausel angegebenen Tabelle. Die Spalten des Typs sein **Char**, **Varchar**, **Nchar**, **Nvarchar**, **Text**, **Ntext**, **Image**, **Xml**, **Varbinary**, oder **varbinary(max)**.  
+ Der Name einer oder mehrerer volltextindizierten Spalten der in der FROM-Klausel angegebenen Tabelle. Die Spalten können vom Typ **char**, **varchar**, **nchar**, **nvarchar**, **text**, **ntext**, **image**, **xml**, **varbinary** oder **varbinary(max)** sein.  
   
  *column_list*  
- Gibt an, dass verschiedene, durch Trennzeichen getrennte Spalten angegeben werden können. *Column_list* muss in Klammern eingeschlossen werden. Es sei denn, *Language_term* angegeben wird, die Sprache aller Spalten *Column_list* müssen identisch sein.  
+ Gibt an, dass verschiedene, durch Trennzeichen getrennte Spalten angegeben werden können. *column_list* muss in Klammern stehen. Sofern nicht *language_term* angegeben ist, muss die Sprache aller Spalten von *column_list* identisch sein.  
   
  \*  
- Gibt an, dass alle Spalten, die für die Volltextsuche registriert wurden verwendet werden soll, für die Suche nach der angegebenen *Freetext_string*. Wenn mehr als eine Tabelle in der FROM-Klausel ist \* durch den Tabellennamen gekennzeichnet sein müssen. Es sei denn, *Language_term* angegeben ist, wird die Sprache aller Spalten der Tabelle muss identisch sein.  
+ Gibt an, dass alle für die Volltextsuche registrierten Spalten nach dem angegebenen *freetext_string*-Wert durchsucht werden. Wenn mehr als eine Tabelle in der FROM-Klausel vorhanden ist, muss \* durch den Tabellennamen gekennzeichnet werden. Sofern *language_term* nicht angegeben ist, muss die Sprache aller Spalten in der Tabelle identisch sein.  
   
  *freetext_string*  
- Suchtext in ist die *Column_name*. Es kann hierbei ein beliebiger Text aus Wörtern, Ausdrücken und Sätzen eingegeben werden. Übereinstimmungen werden dann generiert, wenn ein Begriff oder Formen eines Begriffs im Volltextindex gefunden werden.  
+ Der Text, nach dem in *column_name* gesucht werden soll. Es kann hierbei ein beliebiger Text aus Wörtern, Ausdrücken und Sätzen eingegeben werden. Übereinstimmungen werden dann generiert, wenn ein Begriff oder Formen eines Begriffs im Volltextindex gefunden werden.  
   
- Suchen Sie im Gegensatz zur CONTAINS-und CONTAINSTABLE Where-Bedingung AND ist ein Schlüsselwort in *Freetext_string* das Wort 'und' gilt als Füllwort oder [Stoppwort](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md), und werden verworfen.  
+ Im Gegensatz zur CONTAINS- und CONTAINSTABLE-Suchbedingung, in der AND ein Schlüsselwort ist, wird das Wort „and“ in *freetext_string* als Füllwort oder als [Stoppwort](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md) eingestuft und verworfen.  
   
- Die Verwendung von WEIGHT, FORMSOF, Platzhaltern, NEAR und anderer Syntax ist nicht zulässig. *Freetext_string* ist wörtertrennung, bezeichnet, und übergeben den Thesaurus.  
+ Die Verwendung von WEIGHT, FORMSOF, Platzhaltern, NEAR und anderer Syntax ist nicht zulässig. Für *freetext_string* wird eine Worttrennung durchgeführt, und die Wörter werden auf den Stamm zurückgeführt und durchlaufen den Thesaurus.  
   
- *Freetext_string* ist **Nvarchar**. Wird ein anderer Zeichendatentyp als Eingabe verwendet, findet eine implizite Konvertierung statt. Große Zeichenfolge Datentypen nvarchar(max)-Datentyp und varchar(max)-Datentyp können nicht verwendet werden. Im folgenden Beispiel verursacht die `@SearchWord`-Variable, die als `varchar(30)` definiert ist, eine implizite Konvertierung im `FREETEXT`-Prädikat.  
+ *freetext_string* ist **nvarchar**. Wird ein anderer Zeichendatentyp als Eingabe verwendet, findet eine implizite Konvertierung statt. Die großen Zeichenfolgen-Datentypen nvarchar(max) und varchar(max) können nicht verwendet werden. Im folgenden Beispiel verursacht die `@SearchWord`-Variable, die als `varchar(30)` definiert ist, eine implizite Konvertierung im `FREETEXT`-Prädikat.  
   
 ```  
   
@@ -92,7 +92,7 @@ WHERE FREETEXT(Description, @SearchWord);
   
 ```  
   
- Da "parametersniffing" nicht über die Konvertierung erfolgreich ist, verwenden Sie **Nvarchar** für eine bessere Leistung. Im Beispiel deklarieren `@SearchWord` als `nvarchar(30)`.  
+ Da die „Parameterermittlung“ zusammen mit der Konvertierung nicht funktionsfähig ist, sollten Sie aus Leistungsgründen **nvarchar** verwenden. Deklarieren Sie im Beispiel `@SearchWord` als `nvarchar(30)`.  
   
 ```  
   
@@ -106,33 +106,33 @@ WHERE FREETEXT(Description, @SearchWord);
   
 ```  
   
- Sie können auch den OPTIMIZE FOR-Abfragehinweis für Fälle verwenden, in denen ein nicht optimalen Plan generiert wird.  
+ In Fällen, in denen ein nicht optimaler Plan generiert wird, können Sie auch den OPTIMIZE FOR-Abfragehinweis verwenden.  
   
  LANGUAGE *language_term*  
- Die Sprache, deren Ressourcen für die Wörtertrennung, die Wortstammerkennung und den Thesaurus sowie die Entfernung von Stoppwörtern in der Abfrage verwendet werden. Dieser Parameter ist optional und kann als Zeichenfolge, ganze Zahl oder Hexadezimalwert entsprechend dem Gebietsschemabezeichner (Locale Identifier – LCID) einer Sprache angegeben werden. Wenn *Language_term* angegeben ist, wird die entsprechende Sprache gelten für alle Elemente der Suchbedingung. Wird kein Wert angegeben, wird die Volltextsprache der Spalte verwendet.  
+ Die Sprache, deren Ressourcen für die Wörtertrennung, die Wortstammerkennung und den Thesaurus sowie die Entfernung von Stoppwörtern in der Abfrage verwendet werden. Dieser Parameter ist optional und kann als Zeichenfolge, ganze Zahl oder Hexadezimalwert entsprechend dem Gebietsschemabezeichner (Locale Identifier – LCID) einer Sprache angegeben werden. Wird *language_term* angegeben, wird die entsprechende Sprache auf alle Elemente der Suchbedingung angewendet. Wird kein Wert angegeben, wird die Volltextsprache der Spalte verwendet.  
   
- Wenn Dokumente anderer Sprachen zusammen als BLOBs (Binary Large Objects) in einer einzelnen Spalte gespeichert werden, legt der Gebietsschemabezeichner (LCID) eines bestimmten Dokuments die zur Indizierung seines Inhalts zu verwendende Sprache fest. Beim Abfragen einer solchen Spalte Angabe *Sprache ** Language_term* kann die Wahrscheinlichkeit einer hohen Übereinstimmung erhöhen.  
+ Wenn Dokumente anderer Sprachen zusammen als BLOBs (Binary Large Objects) in einer einzelnen Spalte gespeichert werden, legt der Gebietsschemabezeichner (LCID) eines bestimmten Dokuments die zur Indizierung seines Inhalts zu verwendende Sprache fest. Beim Abfragen einer solchen Spalte kann die Angabe von *LANGUAGE**language_term* die Wahrscheinlichkeit einer hohen Übereinstimmung steigern.  
   
- Wenn als eine Zeichenfolge angegeben *Language_term* entspricht der **Alias** Spaltenwert in er [sys.syslanguages &#40; Transact-SQL &#41; ](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) -kompatibilitätssicht angezeigt.  Die Zeichenfolge muss in einfache Anführungszeichen eingeschlossen werden, wie in "*Language_term*". Wenn als eine ganze Zahl angegeben *Language_term* ist der eigentliche Gebietsschemabezeichner, der die Sprache identifiziert. Wenn als hexadezimaler Wert angegeben *Language_term* ist 0 X, gefolgt vom Hexadezimalwert des Gebietsschemabezeichners. Der Hexadezimalwert darf acht Ziffern nicht überschreiten, einschließlich führender Nullen.  
+ In Form einer Zeichenfolge entspricht *language_term* dem Wert der **alias**-Spalte in der [sys.syslanguages &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)-Kompatibilitätsansicht.  Die Zeichenfolge muss in einfache Anführungszeichen eingeschlossen werden, z.B. '*language_term*'. In Form einer ganzen Zahl ist *language_term* der eigentliche Gebietsschemabezeichner, der die Sprache identifiziert. In Form eines Hexadezimalwerts ist *language_term* gleich 0x, gefolgt vom Hexadezimalwert des Gebietsschemabezeichners. Der Hexadezimalwert darf acht Ziffern nicht überschreiten, einschließlich führender Nullen.  
   
- Wenn der Wert im Format Doppelbyte-Zeichensatz (Character Set, DBCS) [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in Unicode konvertiert werden.  
+ Wird der Wert im Format Doppelbyte-Zeichensatz (Double-Byte Character Set, DBCS) angegeben, wird er von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in Unicode konvertiert.  
   
- Wenn die angegebene Sprache nicht gültig, oder es ist keine Ressourcen installiert sind, die dieser Sprache entsprechen [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gibt einen Fehler zurück. Um neutrale Sprachressourcen zu verwenden, geben Sie 0 x 0 als *Language_term*.  
+ Ist die angegebene Sprache ungültig oder sind keine Ressourcen installiert, die dieser Sprache entsprechen, gibt [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einen Fehler zurück. Geben Sie 0x0 als *language_term* an, um neutrale Sprachressourcen zu verwenden.  
   
 ## <a name="general-remarks"></a>Allgemeine Hinweise  
  Volltextprädikate und -funktionen gelten für eine einzelne Tabelle, die im FROM-Prädikat enthalten ist. Um eine Suche in mehreren Tabellen auszuführen, können Sie eine verknüpfte Tabelle in der FROM-Klausel verwenden, um in einem Resultset zu suchen, das aus mindestens zwei Tabellen erstellt wird.  
   
-Volltextabfragen mit FREETEXT sind nicht so genau wie Volltextabfragen mit CONTAINS. Das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Volltextsuchmodul identifiziert wichtige Wörter und Ausdrücke. Keine spezieller Bedeutung zugewiesen von reservierten Schlüsselwörtern und Platzhalterzeichen, die in der Regel haben von Bedeutung, wenn es im angegebenen der \<Contains_search_condition >-Parameter des CONTAINS-Prädikats.
+Volltextabfragen mit FREETEXT sind nicht so genau wie Volltextabfragen mit CONTAINS. Das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Volltextsuchmodul identifiziert wichtige Wörter und Ausdrücke. Reservierten Schlüsselwörtern und Platzhalterzeichen, die normalerweise eine Bedeutung besitzen, wenn sie im \<contains_search_condition>-Parameter des CONTAINS-Prädikats angegeben werden, wird keine spezielle Bedeutung zugewiesen.
   
- Volltextprädikate dürfen nicht der [OUTPUT-Klausel](../../t-sql/queries/output-clause-transact-sql.md) Wenn Datenbank-Kompatibilitätsgrad auf 100 festgelegt ist.  
+ Volltextprädikate sind in der [OUTPUT-Klausel](../../t-sql/queries/output-clause-transact-sql.md) nicht zulässig, wenn der Kompatibilitätsgrad der Datenbank auf 100 festgelegt ist.  
   
 > [!NOTE]  
->  Die FREETEXTTABLE-Funktion eignet sich für dieselben Übereinstimmungen wie das FREETEXT-Prädikat. Sie können diese Funktion z. B. in einen regulären Tabellennamen verweisen die [FROM-Klausel](../../t-sql/queries/from-transact-sql.md) von einer SELECT-Anweisung. Weitere Informationen finden Sie unter [FREETEXTTABLE &#40; Transact-SQL &#41; ](../../relational-databases/system-functions/freetexttable-transact-sql.md).  
+>  Die FREETEXTTABLE-Funktion eignet sich für dieselben Übereinstimmungen wie das FREETEXT-Prädikat. Auf diese Funktion kann in der [FROM-Klausel](../../t-sql/queries/from-transact-sql.md) einer SELECT-Anweisung wie auf einen regulären Tabellennamen verwiesen werden. Weitere Informationen finden Sie unter [FREETEXTTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/freetexttable-transact-sql.md).  
   
 ## <a name="querying-remote-servers"></a>Abfragen von Remoteservern  
- Sie können einen vierteiligen Namen in der [CONTAINS](../../t-sql/queries/contains-transact-sql.md) oder FREETEXT-Prädikat zum Abfragen von volltextindizierten Spalten der Zieltabellen auf einem Verbindungsserver. Erstellen Sie zum Vorbereiten eines Remoteservers für den Empfang von Volltextabfragen einen Volltextindex für die Zieltabellen und -spalten auf dem Remoteserver, und fügen Sie anschließend den Remoteserver als Verbindungsserver hinzu.  
+ Sie können einen vierteiligen Namen im [CONTAINS](../../t-sql/queries/contains-transact-sql.md)- oder FREETEXT-Prädikat zum Abfragen von volltextindizierten Spalten der Zieltabellen auf einem Verbindungsserver verwenden. Erstellen Sie zum Vorbereiten eines Remoteservers für den Empfang von Volltextabfragen einen Volltextindex für die Zieltabellen und -spalten auf dem Remoteserver, und fügen Sie anschließend den Remoteserver als Verbindungsserver hinzu.  
   
-## <a name="comparison-of-like-to-full-text-search"></a>Vergleich von LIKE und der Volltextsuche  
+## <a name="comparison-of-like-to-full-text-search"></a>Vergleich zwischen LIKE und der Volltextsuche  
  Im Gegensatz zur Volltextsuche verarbeitet das [LIKE](../../t-sql/language-elements/like-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)]-Prädikat ausschließlich Zeichenmuster. Darüber hinaus können Sie mit dem LIKE-Prädikat keine formatierten Binärdaten abfragen. Eine LIKE-Abfrage in umfangreichen unstrukturierten Textdaten ist sehr viel langsamer als eine entsprechende Volltextabfrage in denselben Daten. Eine LIKE-Abfrage für Millionen von Zeilen von Textdaten kann Minuten in Anspruch nehmen; eine Volltextabfrage kann dagegen in Sekunden oder weniger für dieselben Daten ein Ergebnis liefern, je nach Anzahl der zurückgegebenen Zeilen.  
   
 ## <a name="examples"></a>Beispiele  
@@ -163,10 +163,10 @@ WHERE FREETEXT(Description, @SearchWord);
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Erste Schritte mit der Volltextsuche](../../relational-databases/search/get-started-with-full-text-search.md)   
  [Erstellen und Verwalten von Volltextkatalogen](../../relational-databases/search/create-and-manage-full-text-catalogs.md)   
- [Erstellen Sie FULLTEXT CATALOG &#40; Transact-SQL &#41;](../../t-sql/statements/create-fulltext-catalog-transact-sql.md)   
+ [CREATE FULLTEXT CATALOG &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-catalog-transact-sql.md)   
  [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md)   
  [Erstellen und Verwalten von Volltextindizes](../../relational-databases/search/create-and-manage-full-text-indexes.md)   
  [Abfragen mit Volltextsuche](../../relational-databases/search/query-with-full-text-search.md)   

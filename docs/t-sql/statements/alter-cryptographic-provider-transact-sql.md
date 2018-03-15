@@ -1,5 +1,5 @@
 ---
-title: ALTER CRYPTOGRAPHIC PROVIDER (Transact-SQL) | Microsoft Docs
+title: ALTER CRYPTOGRAPHIC PROVIDER (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 04/20/2017
 ms.prod: sql-non-specified
@@ -36,7 +36,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="alter-cryptographic-provider-transact-sql"></a>ALTER CRYPTOGRAPHIC PROVIDER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Ändert einen Kryptografieanbieter innerhalb [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] von einem Anbieter (Extensible Key Management, EKM).  
+  Ändert einen Kryptografieanbieter innerhalb von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] von einem EKM-Anbieter (Extensible Key Management) aus.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -53,12 +53,12 @@ ALTER CRYPTOGRAPHIC PROVIDER provider_name
  Der Name des EKM-Anbieters.  
   
  *Path_of_DLL*  
- Pfad der DLL-Datei, die implementiert die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Extensible Key Management-Schnittstelle.  
+ Der Pfad der DLL-Datei, die die EKM-Schnittstelle von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] implementiert.  
   
  ENABLE | DISABLE  
  Aktiviert bzw. deaktiviert einen Anbieter.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Wenn der Anbieter die DLL-Datei ändert, mit der in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die erweiterbare Schlüsselverwaltung implementiert wird, müssen Sie die ALTER CRYPTOGRAPHIC PROVIDER-Anweisung verwenden.  
   
  Wenn der Pfad der DLL-Datei mithilfe der ALTER CRYPTOGRAPHIC PROVIDER-Anweisung aktualisiert wird, führt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] folgende Aktionen aus:  
@@ -83,16 +83,16 @@ Wenn die Headerdatei, mit der die DLL des EKM-Anbieters erstellt wurde, veraltet
  Erfordert die CONTROL-Berechtigung für den Kryptografieanbieter.  
   
 ## <a name="examples"></a>Beispiele  
- Im folgenden Beispiel wird einen Kryptografieanbieter mit aufgerufen `SecurityProvider` in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], auf eine neuere Version einer DLL-Datei. Diese neue Version erhält den Namen `c:\SecurityProvider\SecurityProvider_v2.dll` und wird auf dem Server installiert. Das Zertifikat des Anbieters muss auf dem Server installiert sein.  
+ Im folgenden Beispiel wird ein Kryptografieanbieter mit dem Namen `SecurityProvider` in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]in eine neuere Version einer DLL-Datei geändert. Diese neue Version erhält den Namen `c:\SecurityProvider\SecurityProvider_v2.dll` und wird auf dem Server installiert. Das Zertifikat des Anbieters muss auf dem Server installiert sein.  
   
-1. Deaktivieren Sie den Anbieter aus, um das Upgrade ausführen. Dadurch werden alle geöffneten kryptografische Sitzungen beendet.  
+1. Deaktivieren Sie den Anbieter, um das Upgrade durchzuführen. Dadurch werden alle geöffneten kryptografischen Sitzungen beendet.  
 ```  
 ALTER CRYPTOGRAPHIC PROVIDER SecurityProvider   
 DISABLE;  
 GO  
 ```  
 
-2. Aktualisieren Sie die Anbieter-DLL-Datei. Die GUID muss identisch mit der vorherigen Version, aber die Version kann unterschiedlich sein.  
+2. Aktualisieren Sie die DLL-Datei des Anbieters. Die GUID muss mit der vorherigen Version identisch sein, die Version kann sich jedoch unterscheiden.  
 ```  
 ALTER CRYPTOGRAPHIC PROVIDER SecurityProvider  
 FROM FILE = 'c:\SecurityProvider\SecurityProvider_v2.dll';  
@@ -106,7 +106,7 @@ ENABLE;
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Erweiterbare Schlüsselverwaltung &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)   
  [CREATE CRYPTOGRAPHIC PROVIDER &#40;Transact-SQL&#41;](../../t-sql/statements/create-cryptographic-provider-transact-sql.md)   
  [DROP CRYPTOGRAPHIC PROVIDER &#40;Transact-SQL&#41;](../../t-sql/statements/drop-cryptographic-provider-transact-sql.md)   

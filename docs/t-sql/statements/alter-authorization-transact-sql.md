@@ -1,5 +1,5 @@
 ---
-title: ALTER AUTHORIZATION (Transact-SQL) | Microsoft Docs
+title: ALTER AUTHORIZATION (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 08/07/2017
 ms.prod: sql-non-specified
@@ -127,43 +127,43 @@ ALTER AUTHORIZATION ON
 ```    
     
 ## <a name="arguments"></a>Argumente    
-\<Class_type > ist der sicherungsfähige Klasse der Entität, für die der Besitzer geändert werden. OBJECT ist der Standardwert.    
+\<class_type> ist die sicherungsfähige Klasse der Entität, für die der Besitzer geändert wird. OBJECT ist der Standardwert.    
     
 |||    
 |-|-|    
-|OBJECT|**GILT für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], Azure SQL Datawarehouse, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].|    
-|ASSEMBLY|**GILT für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|    
-|ASYMMETRIC KEY|**GILT für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|    
-|AVAILABILITY GROUP |**GILT für**: SQLServer 2012 durch [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|
-|CERTIFICATE|**GILT für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|    
-|CONTRACT|**GILT für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|    
-|DATABASE|**GILT für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Weitere Informationen finden Sie unter [ALTER AUTHORIZATION für Datenbanken](#AlterDB) Abschnitt weiter unten.|    
-|ENDPOINT|**GILT für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|    
-|FULLTEXT CATALOG|**GILT für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|    
-|FULLTEXT STOPLIST|**GILT für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|    
-|MESSAGE TYPE|**GILT für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|    
-|REMOTE SERVICE BINDING|**GILT für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|    
-|ROLE|**GILT für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|    
-|ROUTE|**GILT für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|    
-|SCHEMA|**GILT für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], Azure SQL Datawarehouse, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].|    
-|SEARCH PROPERTY LIST|**GILT für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|    
-|SERVER ROLE|**GILT für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|    
-|SERVICE|**GILT für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|    
-|SYMMETRIC KEY|**GILT für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|    
-|TYPE|**GILT für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|    
-|XML SCHEMA COLLECTION|**GILT für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|    
+|OBJECT|**GILT FÜR:** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], Azure SQL Data Warehouse, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]|    
+|ASSEMBLY|**GILT FÜR:** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|    
+|ASYMMETRIC KEY|**GILT FÜR:** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|    
+|AVAILABILITY GROUP |**GILT FÜR:** SQL Server 2012 bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|
+|CERTIFICATE|**GILT FÜR:** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|    
+|CONTRACT|**GILT FÜR:** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|    
+|DATABASE|**GILT FÜR:** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Weitere Informationen finden Sie weiter unten im Abschnitt [ALTER AUTHORIZATION für Datenbanken](#AlterDB).|    
+|ENDPOINT|**GILT FÜR:** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|    
+|FULLTEXT CATALOG|**GILT FÜR:** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|    
+|FULLTEXT STOPLIST|**GILT FÜR:** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|    
+|MESSAGE TYPE|**GILT FÜR:** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|    
+|REMOTE SERVICE BINDING|**GILT FÜR:** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|    
+|ROLE|**GILT FÜR:** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|    
+|ROUTE|**GILT FÜR:** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|    
+|SCHEMA|**GILT FÜR:** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], Azure SQL Data Warehouse, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]|    
+|SEARCH PROPERTY LIST|**GILT FÜR:** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|    
+|SERVER ROLE|**GILT FÜR:** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|    
+|SERVICE|**GILT FÜR:** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|    
+|SYMMETRIC KEY|**GILT FÜR:** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|    
+|TYPE|**GILT FÜR:** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|    
+|XML SCHEMA COLLECTION|**GILT FÜR:** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|    
     
  *entity_name*    
  Der Name der Entität.    
     
- *Principal_name* | SCHEMABESITZER    
- Name des Sicherheitsprinzipals, der die Entität besitzt. Datenbankobjekte müssen im Besitz eines Datenbankprinzipals sein, also ein Datenbankbenutzer oder eine Datenbankrolle. Serverobjekte (beispielsweise Datenbanken) müssen im Besitz eines Serverprinzipals (eines Anmeldenamens) sein. Geben Sie **SCHEMABESITZER** als die *Principal_name* um anzugeben, dass der Prinzipal Besitzer des Objekts werden sollte, der das Schema des Objekts besitzt.    
+ *principal_name* | SCHEMA OWNER    
+ Name des Sicherheitsprinzipals, der die Entität besitzt. Datenbankobjekte müssen im Besitz eines Datenbankprinzipals sein, also ein Datenbankbenutzer oder eine Datenbankrolle. Serverobjekte (beispielsweise Datenbanken) müssen im Besitz eines Serverprinzipals (eines Anmeldenamens) sein. Geben Sie **SCHEMA OWNER** als *principal_name* an, um anzugeben, dass das Objekt im Besitz des Prinzipals sein sollte, der das Schema des Objekts besitzt.    
     
-## <a name="remarks"></a>Hinweise    
+## <a name="remarks"></a>Remarks    
  Mit ALTER AUTHORIZATION kann der Besitz einer Entität, die einen Besitzer aufweist, geändert werden. Der Besitz von in der Datenbank enthaltenen Entitäten kann an jeden Prinzipal auf Datenbankebene übertragen werden. Der Besitz von Entitäten auf Serverebene kann nur an Prinzipale auf Serverebene übertragen werden.    
     
 > [!IMPORTANT]    
->  Ab [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] kann der Benutzer Besitzer eines Objekts oder Typs sein, das bzw. der in einem Schema enthalten ist, dessen Besitzer ein anderer Datenbankbenutzer ist. Dieses Verhalten unterscheidet sich von früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Weitere Informationen finden Sie unter [OBJECTPROPERTY &#40; Transact-SQL &#41; ](../../t-sql/functions/objectproperty-transact-sql.md) und [TYPEPROPERTY &#40; Transact-SQL &#41; ](../../t-sql/functions/typeproperty-transact-sql.md).    
+>  Ab [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] kann der Benutzer Besitzer eines Objekts oder Typs sein, das bzw. der in einem Schema enthalten ist, dessen Besitzer ein anderer Datenbankbenutzer ist. Dieses Verhalten unterscheidet sich von früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Weitere Informationen finden Sie unter [OBJECTPROPERTY &#40;Transact-SQL&#41; ](../../t-sql/functions/objectproperty-transact-sql.md) und [TYPEPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/typeproperty-transact-sql.md).    
     
  Der Besitz der folgenden in einem Schema enthaltenen Entitäten vom Typ "object" kann übertragen werden: Tabellen, Sichten, Funktionen, Prozeduren, Warteschlangen und Synonyme.    
     
@@ -176,12 +176,12 @@ ALTER AUTHORIZATION ON
  Falls es sich bei der Zielentität nicht um eine Datenbank handelt und die Entität an einen neuen Besitzer übertragen wird, werden alle Berechtigungen für das Ziel gelöscht.    
     
 > [!CAUTION]    
->  In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], das Verhalten der Schemas geändert wird, vom Verhalten in früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Code, in dem vorausgesetzt wird, dass Schemas Datenbankbenutzern entsprechen, gibt möglicherweise nicht die richtigen Ergebnisse zurück. Alte Katalogsichten, einschließlich Sysobjects, sollten nicht verwendet werden, in einer Datenbank, in denen eine der folgenden DDL jemals Anweisungen verwendet wurde: CREATE SCHEMA, ALTER SCHEMA, DROP SCHEMA, CREATE USER, ALTER USER, DROP USER, CREATE ROLE, ALTER ROLE, DROP ROLE, CREATE APPROLE ALTER APPROLE, DROP APPROLE, ALTER AUTHORIZATION. In einer Datenbank, in der jemals eine dieser Anweisungen verwendet wurde, müssen Sie die neuen Katalogsichten verwenden. Die neuen Katalogsichten berücksichtigen die Trennung zwischen Prinzipalen und Schemas, das in eingeführte [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Weitere Informationen zu Katalogansichten finden Sie unter [Catalog Views &#40;Transact-SQL&#41; (Katalogansichten (Transact-SQL))](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md).    
+>  Das Verhalten der Schemas in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] unterscheidet sich von dem in früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Code, in dem vorausgesetzt wird, dass Schemas Datenbankbenutzern entsprechen, gibt möglicherweise nicht die richtigen Ergebnisse zurück. Alte Katalogsichten, einschließlich sysobjects, sollten nicht in einer Datenbank verwendet werden, in der eine der folgenden DDL-Anweisungen bereits verwendet wurde: CREATE SCHEMA, ALTER SCHEMA, DROP SCHEMA, CREATE USER, ALTER USER, DROP USER, CREATE ROLE, ALTER ROLE, DROP ROLE, CREATE APPROLE, ALTER APPROLE, DROP APPROLE, ALTER AUTHORIZATION. In einer Datenbank, in der jemals eine dieser Anweisungen verwendet wurde, müssen Sie die neuen Katalogsichten verwenden. In den neuen Katalogsichten wird die Trennung zwischen Prinzipalen und Schemas berücksichtigt, die in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] eingeführt wurde. Weitere Informationen zu Katalogansichten finden Sie unter [Catalog Views &#40;Transact-SQL&#41; (Katalogansichten (Transact-SQL))](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md).    
     
  Beachten Sie dabei außerdem Folgendes:    
     
 > [!IMPORTANT]    
->  Die einzig zuverlässige Möglichkeit, den Besitzer eines Objekts zu finden ist, um Abfrage der **sys.objects** -Katalogsicht angezeigt. Die einzige zuverlässige Möglichkeit, den Besitzer eines Typs zu finden, besteht in der Verwendung der TYPEPROPERTY-Funktion.    
+>  Die einzig zuverlässige Möglichkeit, den Besitzer eines Objekts zu finden, besteht darin, die **sys.objects**-Katalogsicht abzufragen. Die einzige zuverlässige Möglichkeit, den Besitzer eines Typs zu finden, besteht in der Verwendung der TYPEPROPERTY-Funktion.    
     
 ## <a name="special-cases-and-conditions"></a>Spezialfälle und Bedingungen    
  In der folgenden Tabelle sind Spezialfälle, Ausnahmen und Bedingungen aufgeführt, die beim Ändern der Autorisierung gelten.    
@@ -196,47 +196,47 @@ ALTER AUTHORIZATION ON
 |CERTIFICATE oder ASYMMETRIC KEY|Der Besitz dieser Entitäten kann nicht an eine Rolle oder Gruppe übertragen werden.|    
 |ENDPOINT|Der Prinzipal muss ein Anmeldename sein.|    
   
-## <a name="AlterDB"></a>ALTER AUTHORIZATION für Datenbanken  
-**GILT FÜR**: [!INCLUDE[ssSQL15](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
-### <a name="for-sql-server"></a>Für SQLServer:  
+## <a name="AlterDB"></a> ALTER AUTHORIZATION für Datenbanken  
+**GILT FÜR:** [!INCLUDE[ssSQL15](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
+### <a name="for-sql-server"></a>Für SQL Server:  
 **Anforderungen für den neuen Besitzer:**   
-Der neue Prinzipal der Besitzer muss eine der folgenden sein:  
--   Eine SQL Server-authentifizierungsanmeldung.  
--   Eine Windows-authentifizierungsanmeldung, die einen Windows-Benutzer (und keiner Gruppe) darstellt.  
--   Ein Windows-Benutzer, der für die Authentifizierung über eine Windows-Anmeldung, Authentifizierung, die eine Windows-Gruppe darstellt.  
+Der neue Besitzerprinzipal muss einer der folgenden sein:  
+-   Ein Anmeldename für die SQL Server-Authentifizierung  
+-   Ein Anmeldename für die Windows-Authentifizierung, der einen Windows-Benutzer (keine Gruppe) darstellt  
+-   Ein Windows-Benutzer, der sich über einen Anmeldenamen für die Windows-Authentifizierung authentifiziert, der eine Windows-Gruppe darstellt  
   
-**Anforderungen für die Person, die die ALTER AUTHORIZATION-Anweisung ausführen:**  
-Wenn Sie nicht Mitglied der sind die **Sysadmin** festen Serverrolle, benötigen Sie mindestens TAKE OWNERSHIP-Berechtigung für die Datenbank und benötigen IMPERSONATE-Berechtigung für den neuen Besitzer Anmeldenamen.   
+**Anforderungen an die Person, die die ALTER AUTHORIZATION-Anweisung ausführt:**  
+Wenn Sie kein Mitglied der festen Serverrolle **sysadmin** sind, benötigen Sie mindestens die Berechtigung TAKE OWNERSHIP für die Datenbank und die Berechtigung IMPERSONATE für den neuen Besitzeranmeldenamen.   
 
 ### <a name="for-azure-sql-database"></a>Für Azure SQL-Datenbank:  
 **Anforderungen für den neuen Besitzer:**   
-Der neue Prinzipal der Besitzer muss eine der folgenden sein:  
--   Eine SQL Server-authentifizierungsanmeldung.  
--   Ein Verbundbenutzer (keine Gruppe) in Azure AD vorhanden.  
--   Ein verwalteter Benutzer (keine Gruppe) oder eine Anwendung in Azure AD vorhanden.    
+Der neue Besitzerprinzipal muss einer der folgenden sein:  
+-   Ein Anmeldename für die SQL Server-Authentifizierung  
+-   Ein Verbundbenutzer (keine Gruppe) in Azure AD  
+-   Ein verwalteter Benutzer (keine Gruppe) oder eine Anwendung in Azure AD    
 
 > [!NOTE]  
-> Wenn der neue Besitzer, Azure Active Directory-Benutzer ist, nicht als Benutzer in der Datenbank vorhanden sein, in dem der neue Besitzer der neuen DBO werden soll. Derartige Azure AD-Benutzer muss vor dem Ausführen der ALTER AUTHORIZATION-Anweisung, die den Datenbankbesitz ändern, auf den neuen Benutzer zunächst aus der Datenbank entfernt werden. Weitere Informationen zum Konfigurieren einer Azure Active Directory-Benutzer mit SQL-Datenbank finden Sie unter [Herstellen einer Verbindung mit SQL-Datenbank oder SQL Data Warehouse durch Verwenden von Azure Active Directory-Authentifizierung](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/).   
+> Wenn der neue Besitzer ein Azure Active Directory-Benutzer ist, darf dieser Benutzer nicht in der Datenbank vorhanden sein, für die der neue Besitzer der DBO werden soll. Der Azure AD-Benutzer muss zunächst aus der Datenbank entfernt werden, bevor die ALTER AUTHORIZATION-Anweisung ausgeführt wird, die den Datenbankbesitz auf den neuen Benutzer überträgt. Weitere Informationen zum Konfigurieren eines Azure Active Directory-Benutzers finden Sie unter [Verwenden der Azure Active Directory-Authentifizierung für die Authentifizierung mit SQL-Datenbank oder SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/).   
   
-**Anforderungen für die Person, die die ALTER AUTHORIZATION-Anweisung ausführen:**  
-Sie müssen in die Zieldatenbank zum Ändern des Besitzers der Datenbank verbinden.  
+**Anforderungen an die Person, die die ALTER AUTHORIZATION-Anweisung ausführt:**  
+Sie müssen eine Verbindung zur Zieldatenbank herstellen, um den Besitzer der Datenbank zu ändern.  
 
 Die folgenden Kontotypen können den Besitzer einer Datenbank ändern. 
-* Der Dienst serverebenenprinzipal-Anmeldung. (Der SQL Azure-Administrator bereitgestellt werden, wenn der logische Server erstellt wurde.)  
-* Der Azure Active Directory-Administrator für den Azure SQL-Server.   
-* Der aktuelle Besitzer der Datenbank.   
+* Der Prinzipalanmeldename auf Serverebene (Der SQL Azure-Administrator, der bei der Erstellung des logischen Servers bereitgestellt wird.)  
+* Der Active Directory-Administrator für den Azure SQL-Server   
+* Der aktuelle Besitzer der Datenbank   
  
   
 In der folgenden Tabelle werden die Anforderungen zusammengefasst:  
   
-Executor  |Target  |Ergebnis    
+Ausführendes Konto  |Ziel  |Ergebnis    
 ---------|---------|---------  
-SQL Server-authentifizierungsanmeldung     |SQL Server-authentifizierungsanmeldung         |Success  
-SQL Server-authentifizierungsanmeldung     |Azure AD-Benutzer         |Fehler           
-Azure AD-Benutzer     |SQL Server-authentifizierungsanmeldung         |Success           
+Ein Anmeldename für die SQL Server-Authentifizierung     |Ein Anmeldename für die SQL Server-Authentifizierung         |Success  
+Ein Anmeldename für die SQL Server-Authentifizierung     |Azure AD-Benutzer         |Fehler           
+Azure AD-Benutzer     |Ein Anmeldename für die SQL Server-Authentifizierung         |Success           
 Azure AD-Benutzer     |Azure AD-Benutzer         |Success           
   
-So überprüfen ein Azure AD-Besitzer der Datenbank, führen Sie den folgenden Transact-SQL-Befehl in einer Benutzerdatenbank (in diesem Beispiel `testdb`).  
+Um den Azure AD-Besitzer der Datenbank zu bestätigen, führen Sie den folgenden Transact-SQL-Befehl in einer Benutzerdatenbank aus (in diesem Beispiel `testdb`).  
     
 ```    
 SELECT CAST(owner_sid as uniqueidentifier) AS Owner_SID   
@@ -244,8 +244,8 @@ FROM sys.databases
 WHERE name = 'testdb';  
 ```    
     
-Die Ausgabe ist ein Bezeichner (z. B. 6D8B81F6-7C79-444C-8858-4AF896C03C67) die zugewiesene Azure AD-ObjectID entspricht`richel@cqclinic.onmicrosoft.com`  
-Wenn eine SQL Server-Authentifizierung angemeldeter Benutzer der Besitzer der Datenbank ist, führen Sie die folgende Anweisung in der Masterdatenbank, um zu überprüfen, ob den Datenbankbesitzer ein:  
+Die Ausgabe besteht aus einem Bezeichner (z.B. 6D8B81F6-7C79-444C-8858-4AF896C03C67), der der `richel@cqclinic.onmicrosoft.com` zugewiesenen Azure AD-ObjectID entspricht.  
+Wenn ein Benutzeranmeldename für die SQL Server-Authentifizierung der Datenbankbesitzer ist, führen Sie die folgende Anweisung in der Masterdatenbank aus, um den Datenbankbesitzer zu bestätigen:  
     
 ```    
 SELECT d.name, d.owner_sid, sl.name   
@@ -257,31 +257,31 @@ ON d.owner_sid = sl.sid;
   
 ### <a name="best-practice"></a>Bewährte Methoden  
   
-Verwenden Sie anstelle von Azure AD-Benutzer als einzelne Besitzer der Datenbank, eine Azure AD-Gruppe als Mitglied der **Db_owner** festen Datenbankrolle "". Die folgenden Schritte zeigen, wie zum Konfigurieren einer deaktivierten Anmeldung als Besitzer der Datenbank, und stellen eine Azure Active Directory-Gruppe (`mydbogroup`) ein Mitglied der **Db_owner** Rolle. 
-1.  Melden Sie sich an SQL Server mit Azure AD-Administrator, und ändern Sie den Besitzer der Datenbank, die ein deaktivierter Anmeldename der SQL Server-Authentifizierung an. Führen Sie z. B. aus der Benutzerdatenbank:  
+Statt Azure AD-Benutzer als einzelne Datenbankbesitzer zu verwenden, verwenden Sie eine Azure AD-Gruppe als Mitglied der festen Datenbankrolle **db_owner**. In den folgenden Schritten wird gezeigt, wie ein deaktivierter Anmeldename als Datenbankbesitzer und eine Azure Active Directory-Gruppe (`mydbogroup`) als Mitglied der **db_owner**-Rolle konfiguriert wird. 
+1.  Melden Sie sich als Azure AD-Administrator bei SQL Server an, und ändern Sie den Datenbankbesitzer in einen deaktivierten Anmeldenamen für die SQL Server-Authentifizierung. Führen Sie über die Benutzerdatenbank z.B. Folgendes aus:  
   ```    
   ALTER AUTHORIZATION ON database::testdb TO DisabledLogin;  
   ```    
-2.  Erstellen einer Azure AD-Gruppe, die Besitzer der Datenbank und als ein Benutzer mit der Benutzerdatenbank hinzufügen sollten. Beispiel:  
+2.  Erstellen Sie eine Azure AD-Gruppe, die Datenbankbesitzer werden soll, und fügen Sie sie als Benutzer zur Benutzerdatenbank hinzu. Zum Beispiel:  
   ```    
   CREATE USER [mydbogroup] FROM EXTERNAL PROVIDER;  
   ```    
-3.  Fügen Sie den Benutzer, die die Azure AD-Gruppe zu darstellt, in der Benutzerdatenbank die **Db_owner** festen Datenbankrolle "". Beispiel:  
+3.  Fügen Sie den Benutzer, der die Azure AD-Gruppe darstellt, in der Benutzerdatenbank zur festen Datenbankrolle **db_owner** hinzu. Zum Beispiel:  
   ```    
   ALTER ROLE db_owner ADD MEMBER mydbogroup;  
   ```    
   
-Jetzt die `mydbogroup` Mitglieder können zentral verwalten die Datenbank als Mitglied der **Db_owner** Rolle.  
-- Mitglieder dieser Gruppe aus der Azure AD-Gruppe entfernt werden, verlieren sie automatisch die Dbo-Berechtigungen für diese Datenbank.  
-- Auf ähnliche Weise, wenn neue Elemente hinzugefügt werden `mydbogroup` Azure AD-Gruppe, sie erhalten automatisch die Dbo-Zugriff für diese Datenbank.  
+Nun können die `mydbogroup`-Mitglieder die Datenbank als Mitglieder der **db_owner**-Rolle zentral verwalten.  
+- Wenn Mitglieder dieser Gruppe aus der Azure AD-Gruppe entfernt werden, verlieren sie automatisch die DBO-Berechtigungen für diese Datenbank.  
+- Auch wenn neue Mitglieder zur `mydbogroup`-Azure AD-Gruppe hinzugefügt werden, erhalten sie automatisch DBO-Zugriff auf diese Datenbank.  
   
-Um festzustellen, ob ein bestimmter Benutzer die effektive Dbo-Berechtigungen verfügt, haben Sie den Benutzer die folgende Anweisung ausführen:  
+Um festzustellen, ob ein bestimmter Benutzer über die effektive DBO-Berechtigung verfügt, muss der Benutzer folgende Anweisung ausführen:  
     
 ```    
 SELECT IS_MEMBER ('db_owner');  
 ```    
   
-Der Rückgabewert 1 gibt an, dass der Benutzer ein Mitglied der Rolle ist.  
+Lautet der Rückgabewert 1, bedeutet dies, dass der Benutzer ein Mitglied der Rolle ist.  
    
     
 ## <a name="permissions"></a>Berechtigungen    
@@ -304,7 +304,7 @@ ALTER AUTHORIZATION ON Parts.Sprockets TO MichikoOsada;
 GO    
 ```    
     
- Wenn das Schema Objekte nicht Bestandteil der Anweisung, ist der [!INCLUDE[ssDE](../../includes/ssde-md.md)] für das Objekt im Standardschema Benutzer sieht. Beispiel:    
+ Wenn das Objektschema kein Bestandteil der Anweisung ist, sucht die [!INCLUDE[ssDE](../../includes/ssde-md.md)] das Objekt im Standardschema des Benutzers. Zum Beispiel:    
     
 ```    
 ALTER AUTHORIZATION ON Sprockets TO MichikoOsada;    
@@ -337,8 +337,8 @@ ALTER AUTHORIZATION ON ENDPOINT::CantabSalesServer1 TO JaePak;
 GO    
 ```    
     
-### <a name="e-changing-the-owner-of-a-table"></a>E. Das Ändern des Besitzers einer Tabelle    
- Jede der in den folgenden Beispielen ändert den Besitzer der `Sprockets` -Tabelle in der `Parts` Datenbank dem Datenbankbenutzer `MichikoOsada`.    
+### <a name="e-changing-the-owner-of-a-table"></a>E. Ändern eines Tabellenbesitzers    
+ In jedem der folgenden Beispiele wird der Besitzer der `Sprockets`-Tabelle in der `Parts`-Datenbank in den Datenbankbenutzer `MichikoOsada` geändert.    
 ```    
 ALTER AUTHORIZATION ON Sprockets TO MichikoOsada;    
 ALTER AUTHORIZATION ON dbo.Sprockets TO MichikoOsada;    
@@ -346,27 +346,27 @@ ALTER AUTHORIZATION ON OBJECT::Sprockets TO MichikoOsada;
 ALTER AUTHORIZATION ON OBJECT::dbo.Sprockets TO MichikoOsada;    
 ```    
     
-### <a name="f-changing-the-owner-of-a-database"></a>F. Das Ändern des Besitzers einer Datenbank    
- **GILT für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].    
+### <a name="f-changing-the-owner-of-a-database"></a>F. Ändern eines Datenbankbesitzers    
+ **GILT FÜR:** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]    
     
- Im folgende Beispiel Ändern des Besitzers der `Parts` Datenbank für die Anmeldung `MichikoOsada`.    
+ Im folgenden Beispiel wird der Besitzer der `Parts`-Datenbank in den Anmeldenamen `MichikoOsada` geändert.    
     
 ```    
 ALTER AUTHORIZATION ON DATABASE::Parts TO MichikoOsada;    
 ```    
   
-### <a name="g-changing-the-owner-of-a-sql-database-to-an-azure-ad-user"></a>G. Das Ändern des Besitzers einer SQL-Datenbank in einem Azure AD-Benutzer  
-Im folgenden Beispiel wird ein Azure Active Directory-Administrator für SQL Server in einer Organisation mit einer active Directory mit dem Namen `cqclinic.onmicrosoft.com`, kann der aktuelle Besitzer einer Datenbank ändern `targetDB` und einen AAD-Benutzer stellen `richel@cqclinic.onmicorsoft.com` die neue Datenbank der Besitzer mit dem folgenden Befehl:  
+### <a name="g-changing-the-owner-of-a-sql-database-to-an-azure-ad-user"></a>G. Ändern des Besitzers einer SQL-Datenbank in einen Azure AD-Benutzer  
+Im folgenden Beispiel kann ein Azure Active Directory-Administrator für SQL Server in einer Organisation mit einer Active Directory namens `cqclinic.onmicrosoft.com` den aktuellen Besitzer der Datenbank `targetDB` ändern und den AAD-Benutzer `richel@cqclinic.onmicorsoft.com` zum neuen Datenbankbesitzer machen. Dazu muss er den folgenden Befehl ausführen:  
     
 ```    
 ALTER AUTHORIZATION ON database::targetDB TO [rachel@cqclinic.onmicrosoft.com];   
 ```    
     
- Beachten Sie, dass für Azure AD-Benutzer die Klammern um den Benutzernamen verwendet werden müssen.  
+ Beachten Sie, dass die Klammern um den Benutzernamen bei Azure AD-Benutzern verwendet werden müssen.  
   
     
-## <a name="see-also"></a>Siehe auch    
+## <a name="see-also"></a>Weitere Informationen finden Sie unter    
  [OBJECTPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/objectproperty-transact-sql.md)     
- [TYPEPROPERTY &#40; Transact-SQL &#41;](../../t-sql/functions/typeproperty-transact-sql.md)     
+ [TYPEPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/typeproperty-transact-sql.md)     
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)    
  

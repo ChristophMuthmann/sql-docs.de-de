@@ -1,5 +1,5 @@
 ---
-title: ALTER REMOTE SERVICE BINDING (Transact-SQL) | Microsoft Docs
+title: ALTER REMOTE SERVICE BINDING (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -53,17 +53,17 @@ ALTER REMOTE SERVICE BINDING binding_name
  *binding_name*  
  Der Name der zu ändernden Remotedienstbindung. Server-, Datenbank- und Schemaname können nicht angegeben werden.  
   
- MIT der Benutzer = \< *Benutzername >*  
+ WITH USER = \<*user_name>*  
  Gibt den Datenbankbenutzer an, der das Zertifikat besitzt, das dem Remotedienst für diese Bindung zugeordnet ist. Der öffentliche Schlüssel dieses Zertifikats wird für die Verschlüsselung und Authentifizierung von Nachrichten verwendet, die mit dem Remotedienst ausgetauscht werden.  
   
  ANONYMOUS  
  Gibt an, ob die anonyme Authentifizierung bei der Kommunikation mit dem Remotedienst verwendet wird. Ist ANONYMOUS = ON, wird die anonyme Authentifizierung verwendet und die Anmeldeinformationen des lokalen Benutzers werden nicht an den Remotedienst übertragen. Ist ANONYMOUS = OFF, werden Benutzeranmeldeinformationen übertragen. Wird diese Klausel nicht angegeben, ist die Standardeinstellung OFF.  
   
-## <a name="remarks"></a>Hinweise  
- Der öffentliche Schlüssel im Zertifikat zugeordneten *User_name* dient zur Authentifizierung von Nachrichten an den Remotedienst gesendet und zur Verschlüsselung eines Sitzungsschlüssels verwendet, die dann zur Verschlüsselung der Konversation verwendet wird. Das Zertifikat für *User_name* muss das Zertifikat für einen Anmeldenamen in der Datenbank, die den Remotedienst hostet entsprechen.  
+## <a name="remarks"></a>Remarks  
+ Der öffentliche Schlüssel des Zertifikats, das *user_name*zugeordnet ist, wird zur Authentifizierung von Nachrichten an den Remotedienst und zur Verschlüsselung eines Sitzungsschlüssels verwendet, der dann zur Verschlüsselung der Konversation verwendet wird. Das Zertifikat für *user_name* muss dem Zertifikat für eine Anmeldung in der Datenbank entsprechen, die als Host für den Remotedienst dient.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Berechtigung zum Ändern einer Remotedienstbindung erhalten standardmäßig der Besitzer der Remotedienstbindung, Mitglieder der der **Db_owner** feste Datenbankrolle und Mitglied der **Sysadmin** festen Serverrolle "".  
+ Die Berechtigung zum Ändern einer Remotedienstbindung erhalten standardmäßig Besitzer der Remotedienstbindung, Mitglieder der festen Datenbankrolle **db_owner** und Mitglieder der festen Serverrolle **sysadmin**.  
   
  Der Benutzer, der die ALTER REMOTE SERVICE BINDING-Anweisung ausführt, muss berechtigt sein, die Identität des in der Anweisung angegebenen Benutzers anzunehmen.  
   
@@ -77,9 +77,9 @@ ALTER REMOTE SERVICE BINDING APBinding
     WITH USER = SecurityAccount ;  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [CREATE REMOTE SERVICE BINDING &#40;Transact-SQL&#41;](../../t-sql/statements/create-remote-service-binding-transact-sql.md)   
- [DROP REMOTE SERVICE BINDING &#40; Transact-SQL &#41;](../../t-sql/statements/drop-remote-service-binding-transact-sql.md)   
+ [DROP REMOTE SERVICE BINDING &#40;Transact-SQL&#41;](../../t-sql/statements/drop-remote-service-binding-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: BEGIN DISTRIBUTED TRANSACTION (Transact-SQL) | Microsoft Docs
+title: BEGIN DISTRIBUTED TRANSACTION (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 11/29/2016
 ms.prod: sql-non-specified
@@ -59,12 +59,12 @@ BEGIN DISTRIBUTED { TRAN | TRANSACTION }
   
 ## <a name="arguments"></a>Argumente  
  *transaction_name*  
- Der benutzerdefinierte Transaktionsname, unter dem die verteilte Transaktion in den MS DTC-Hilfsprogrammen nachverfolgt wird. *Transaction_name* muss den Regeln für Bezeichner entsprechen und muss \<= 32 Zeichen.  
+ Der benutzerdefinierte Transaktionsname, unter dem die verteilte Transaktion in den MS DTC-Hilfsprogrammen nachverfolgt wird. *transaction_name* muss den Regeln für Bezeichner entsprechen, d.h. \<= 32 Zeichen enthalten.  
   
  @*tran_name_variable*  
- Der Name einer benutzerdefinierten Variablen, die einen Transaktionsnamen enthält. Mithilfe dieses Namens wird die verteilte Transaktion in den MS DTC-Hilfsprogrammen nachverfolgt. Die Variable muss deklariert werden, mit einem **Char**, **Varchar**, **Nchar**, oder **Nvarchar** -Datentyp.  
+ Der Name einer benutzerdefinierten Variablen, die einen Transaktionsnamen enthält. Mithilfe dieses Namens wird die verteilte Transaktion in den MS DTC-Hilfsprogrammen nachverfolgt. Die Variable muss mit einem der folgenden Datentypen deklariert werden: **char**, **varchar**, **nchar** oder **nvarchar**.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Die Instanz von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], die die BEGIN DISTRIBUTED TRANSACTION-Anweisung ausführt, wird als Transaktionsurheber bezeichnet und steuert den Abschluss der Transaktion. Wenn im Anschluss eine COMMIT TRANSACTION- oder ROLLBACK TRANSACTION-Anweisung für die Sitzung ausgegeben wird, fordert die steuernde Instanz MS DTC auf, die Beendigung der verteilten Transaktion auf allen beteiligten Instanzen zu verwalten.  
   
  Die Momentaufnahmeisolation auf Transaktionsebene unterstützt keine verteilten Transaktionen.  
@@ -75,11 +75,11 @@ BEGIN DISTRIBUTED { TRAN | TRANSACTION }
   
  Die Sitzungen, die an den verteilten [!INCLUDE[tsql](../../includes/tsql-md.md)]-Transaktionen beteiligt sind, erhalten kein Transaktionsobjekt, das sie an eine andere Sitzung weitergeben können, um explizit in die verteilte Transaktion eingetragen zu werden. Ein Remoteserver kann nur in die Transaktion eingetragen werden, wenn er das Ziel einer verteilten Abfrage oder eines Aufrufs einer remote gespeicherten Prozedur ist.  
   
- Wenn eine verteilte Abfrage in einer lokalen Transaktion ausgeführt wird, wird die Transaktion automatisch zu einer verteilten Transaktion höher gestuft, wenn die OLE DB-Zieldatenquelle ITransactionLocal unterstützt. Wenn die OLE DB-Zieldatenquelle ITransactionLocal nicht unterstützt, sind nur für schreibgeschützte Vorgänge in der verteilten Abfrage zulässig.  
+ Bei Ausführung einer verteilten Abfrage in einer lokalen Transaktion wird diese automatisch zu einer verteilten Transaktion höher gestuft, wenn die OLE DB-Zieldatenquelle ITransactionLocal unterstützt. Unterstützt die OLE DB-Zieldatenquelle ITransactionLocal nicht, sind in der verteilten Abfrage nur Lesezugriffe zulässig.  
   
  Eine in die verteilte Transaktion bereits eingetragene Sitzung führt einen Aufruf einer remote gespeicherten Prozedur aus, die auf einen Remoteserver verweist.  
   
- Die **Sp_configure remote Proc Trans** option steuert, ob Aufrufe remote gespeicherter Prozeduren in einer lokalen Transaktion automatisch bewirken, dass die lokale Transaktion zu einer verteilten Transaktion von MS DTC verwaltet höher gestuft werden. Der Verbindungsebene SET-Option REMOTE_PROC_TRANSACTIONS können verwendet werden, um das Überschreiben der Standardeinstellung der Instanz von **Sp_configure remote Proc Trans**. Wenn diese Option aktiviert ist, bewirkt der Aufruf einer remote gespeicherten Prozedur, dass eine lokale Transaktion zu einer verteilten Transaktion höher gestuft wird. Die Verbindung, die die MS DTC-Transaktion erstellt, wird Urheber der Transaktion. COMMIT TRANSACTION startet einen von MS DTC koordinierten Commit. Wenn die **Sp_configure remote Proc Trans** Option auf ON festgelegt ist, Aufrufe remote gespeicherter Prozeduren in lokalen Transaktionen werden automatisch als Teil einer verteilten Transaktion geschützt, ohne Clientanwendungen mit speziell Problem umgeschrieben werden müssen BEGIN DISTRIBUTED TRANSACTION statt BEGIN TRANSACTION.  
+ Die Option **sp_configure remote proc trans** steuert, ob Aufrufe von remote gespeicherten Prozeduren in einer lokalen Transaktion automatisch bewirken, dass die lokale Transaktion zu einer verteilten Transaktion höher gestuft wird, die von MS DTC verwaltet wird. Mit der SET-Option REMOTE_PROC_TRANSACTIONS auf Verbindungsebene kann die Standardeinstellung der Instanz überschrieben werden, die von **sp_configure remote proc trans** angegeben wird. Wenn diese Option aktiviert ist, bewirkt der Aufruf einer remote gespeicherten Prozedur, dass eine lokale Transaktion zu einer verteilten Transaktion höher gestuft wird. Die Verbindung, die die MS DTC-Transaktion erstellt, wird Urheber der Transaktion. COMMIT TRANSACTION startet einen von MS DTC koordinierten Commit. Ist die Option **sp_configure remote proc trans** aktiviert, werden Aufrufe von remote gespeicherten Prozeduren in lokalen Transaktionen automatisch als Teil einer verteilten Transaktion geschützt, ohne dass Anwendungen derart neu geschrieben werden müssen, dass speziell BEGIN DISTRIBUTED TRANSACTION statt BEGIN TRANSACTION ausgegeben wird.  
   
  Weitere Informationen zur verteilten Transaktionsumgebung und zum verteilten Transaktionsprozess finden Sie in der Dokumentation zu [!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator.  
   
@@ -106,7 +106,7 @@ COMMIT TRANSACTION;
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [BEGIN TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-transaction-transact-sql.md)   
  [COMMIT TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/commit-transaction-transact-sql.md)   
  [COMMIT WORK &#40;Transact-SQL&#41;](../../t-sql/language-elements/commit-work-transact-sql.md)   

@@ -1,5 +1,5 @@
 ---
-title: SOUNDEX (Transact-SQL) | Microsoft Docs
+title: SOUNDEX (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -50,13 +50,13 @@ SOUNDEX ( character_expression )
   
 ## <a name="arguments"></a>Argumente  
  *character_expression*  
- Ein alphanumerischer [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) von Zeichendaten. *Character_expression* kann eine Konstante, Variable oder Spalte sein.  
+ Ein alphanumerischer [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) der Zeichendaten. *character_expression* kann eine Konstante, Variable oder Spalte sein.  
   
 ## <a name="return-types"></a>Rückgabetypen  
  **varchar**  
   
-## <a name="remarks"></a>Hinweise  
- SOUNDEX konvertiert eine alphanumerische Zeichenfolge in einen vierstelligen Code, der auf die Zeichenfolge wie hört, wenn gesprochen basiert. Das erste Zeichen des Codes ist das erste Zeichen des *Character_expression*, umgewandelt in Großbuchstaben. Das zweite bis vierte Zeichen des Codes sind Zahlen, die die Buchstaben im Ausdruck darstellen. Die Buchstaben A, E, I, O, U, STD, W und Y werden ignoriert, es sei denn, sie entsprechen dem ersten Buchstaben der Zeichenfolge. Nullen werden ggf. am Ende hinzugefügt, um einen vier Zeichen langen Code zu erzeugen. Weitere Informationen zum SOUNDEX-Code finden Sie unter [The Soundex Indexing System](https://www.archives.gov/research/census/soundex.html).  
+## <a name="remarks"></a>Remarks  
+ SOUNDEX konvertiert eine alphanumerische Zeichenfolge in einen vierstelligen Code, der davon abhängig ist, wie sich eine Zeichenfolge anhört, wenn diese ausgesprochen wird. Beim ersten Zeichen des Codes handelt es sich um das erste Zeichen von *character_expression*, umgewandelt in Großbuchstaben. Das zweite bis vierte Zeichen des Codes sind Zahlen, die die Buchstaben im Ausdruck darstellen. Die Buchstaben A, E, I, O, U, STD, W und Y werden ignoriert, es sei denn, sie entsprechen dem ersten Buchstaben der Zeichenfolge. Nullen werden ggf. am Ende hinzugefügt, um einen vier Zeichen langen Code zu erzeugen. Weitere Informationen zum SOUNDEX-Code finden Sie unter [The Soundex Indexing System (Das Soundex-Indizierungssystem)](https://www.archives.gov/research/census/soundex.html).  
   
  SOUNDEX-Codes aus verschiedenen Zeichenfolgen können verglichen werden, um Ähnlichkeiten zwischen gesprochenen Zeichenfolgen festzustellen. Die DIFFERENCE-Funktion führt eine SOUNDEX-Funktion für zwei Zeichenfolgen aus und gibt eine ganze Zahl zurück, die die Ähnlichkeit der SOUNDEX-Codes für diese Zeichenfolgen darstellt.  
   
@@ -81,7 +81,7 @@ SOUNDEX ( character_expression )
 SELECT SOUNDEX ('Smith'), SOUNDEX ('Smythe');  
 ```  
   
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]Dies gilt für eine Sortierung Latin1_General.  
+ [!INCLUDE[ssResult](../../includes/ssresult-md.md)] Gültig für eine Latin1_General-Sortierung.  
   
 ```  
   
@@ -99,7 +99,7 @@ SELECT DIFFERENCE('Smithers', 'Smythers');
 GO  
 ```  
   
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]Dies gilt für eine Sortierung Latin1_General.  
+ [!INCLUDE[ssResult](../../includes/ssresult-md.md)] Gültig für eine Latin1_General-Sortierung.  
   
 ```  
 -----------   
@@ -115,7 +115,7 @@ SELECT DIFFERENCE('Anothers', 'Brothers');
 GO  
 ```  
   
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]Dies gilt für eine Sortierung Latin1_General.  
+ [!INCLUDE[ssResult](../../includes/ssresult-md.md)] Gültig für eine Latin1_General-Sortierung.  
   
 ```  
 -----------   
@@ -124,9 +124,9 @@ GO
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Unterschied &#40; Transact-SQL &#41;](../../t-sql/functions/difference-transact-sql.md)   
- [Zeichenfolgenfunktionen &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [DIFFERENCE &#40;Transact-SQL&#41;](../../t-sql/functions/difference-transact-sql.md)   
+ [String Functions &#40;Transact-SQL&#41; (Zeichenfolgenfunktionen (Transact-SQL))](../../t-sql/functions/string-functions-transact-sql.md)   
  [ALTER DATABASE-Kompatibilitätsgrad &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)  
   
   

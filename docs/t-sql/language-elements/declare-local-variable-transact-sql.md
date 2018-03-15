@@ -1,5 +1,5 @@
 ---
-title: Deklarieren Sie @local_variable (Transact-SQL) | Microsoft Docs
+title: DECLARE @local_variable (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="declare-localvariable-transact-sql"></a>Deklarieren Sie @local_variable (Transact-SQL)
+# <a name="declare-localvariable-transact-sql"></a>DECLARE @local_variable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Variablen werden im Hauptteil eines Batchs oder einer Prozedur mit einer DECLARE-Anweisung deklariert. Die Werte werden mithilfe einer SET- oder SELECT-Anweisung zugewiesen. Cursorvariablen können mit dieser Anweisung deklariert und mit anderen cursorspezifischen Anweisungen verwendet werden. Nach der Deklaration werden alle Variablen mit NULL initialisiert, es sei denn, ein Wert wurde als Teil der Deklaration angegeben.  
@@ -90,32 +90,32 @@ DECLARE
   
 ## <a name="arguments"></a>Argumente  
 @*local_variable*  
- Der Name einer Variablen. Variablennamen müssen mit einem at-Zeichen (@) beginnen. Namen lokaler Variable müssen den Regeln für entsprechen [Bezeichner](../../relational-databases/databases/database-identifiers.md).  
+ Der Name einer Variablen. Variablennamen müssen mit einem at-Zeichen (@) beginnen. Die Namen lokaler Variablen müssen den Regeln für [Bezeichner](../../relational-databases/databases/database-identifiers.md) entsprechen.  
   
 *data_type*  
- Ein vom System bereitgestellter, CLR-benutzerdefinierter Tabellentyp (Common Language Runtime) oder Aliasdatentyp. Eine Variable kann nicht vom **Text**, **Ntext**, oder **Image** -Datentyp.  
+ Ein vom System bereitgestellter, CLR-benutzerdefinierter Tabellentyp (Common Language Runtime) oder Aliasdatentyp. Eine Variable kann nicht den Datentyp **text**, **ntext** oder **image** haben.  
   
- Weitere Informationen zu Systemdatentypen finden Sie unter [Datentypen &#40; Transact-SQL &#41; ](../../t-sql/data-types/data-types-transact-sql.md). Weitere Informationen zu benutzerdefinierten CLR-Typen oder Aliasdatentypen finden Sie unter [CREATE TYPE &#40; Transact-SQL &#41; ](../../t-sql/statements/create-type-transact-sql.md).  
+ Weitere Informationen zu Systemdatentypen finden Sie unter [Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md). Weitere Informationen zu CLR-benutzerdefinierten Typen oder Aliasdatentypen finden Sie unter [CREATE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/create-type-transact-sql.md).  
   
  =*value*  
  Weist der Variablen inline einen Wert zu. Der Wert kann eine Konstante oder ein Ausdruck sein; auf jeden Fall muss er mit dem Typ der Variablendeklaration übereinstimmen oder implizit in diesen Typ konvertiert werden können. Weitere Informationen finden Sie unter [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md).  
   
 @*cursor_variable_name*  
- Ist der Name einer Cursorvariablen. Cursorvariablennamen müssen mit einem at-Zeichen (@) beginnen und den Regeln für Bezeichner entsprechen.  
+ Der Name einer Cursorvariablen. Cursorvariablennamen müssen mit einem at-Zeichen (@) beginnen und den Regeln für Bezeichner entsprechen.  
   
 CURSOR  
  Gibt an, dass die Variable eine lokale Cursorvariable ist.  
   
 @*table_variable_name*  
- Der Name einer Variablen des Typs **Tabelle**. Variablennamen müssen mit einem at-Zeichen (@) beginnen und den Regeln für Bezeichner entsprechen.  
+ Der Name einer Variablen vom Typ **table**. Variablennamen müssen mit einem at-Zeichen (@) beginnen und den Regeln für Bezeichner entsprechen.  
   
 <table_type_definition>  
-Definiert die **Tabelle** -Datentyp. Die Tabellendeklaration schließt Spaltendefinitionen, Namen, Datentypen und Einschränkungen ein. Die einzigen zulässigen Einschränkungstypen sind PRIMARY KEY, UNIQUE, NULL und CHECK. Ein Aliasdatentyp kann nicht als Skalar-Spaltendatentyp verwendet werden, wenn eine Regel oder Standarddefinition an den Typ gebunden ist.
+Definiert den Datentyp **table**. Die Tabellendeklaration schließt Spaltendefinitionen, Namen, Datentypen und Einschränkungen ein. Die einzigen zulässigen Einschränkungstypen sind PRIMARY KEY, UNIQUE, NULL und CHECK. Ein Aliasdatentyp kann nicht als Skalar-Spaltendatentyp verwendet werden, wenn eine Regel oder Standarddefinition an den Typ gebunden ist.
   
-\<Table_type_definiton > ist eine Teilmenge der Informationen, die zum Definieren einer Tabelle in CREATE TABLE verwendet. Darin sind Elemente und wichtige Definitionen eingeschlossen. Weitere Informationen finden Sie unter [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md).  
+\<table_type_definition> ist eine Teilmenge von Informationen, die zum Definieren einer Tabelle in CREATE TABLE verwendet werden. Darin sind Elemente und wichtige Definitionen eingeschlossen. Weitere Informationen finden Sie unter [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md).  
   
  *n*  
- Ein Platzhalter, der angibt, dass mehrere Variablen angegeben und ihnen Werte zugewiesen werden können. Beim Deklarieren von **Tabelle** Variablen, die **Tabelle** Variable muss die einzige Variable in der DECLARE-Anweisung deklariert wird.  
+ Ein Platzhalter, der angibt, dass mehrere Variablen angegeben und ihnen Werte zugewiesen werden können. Beim Deklarieren von **table**-Variablen muss die **table**-Variable die einzige Variable sein, die in der DECLARE-Anweisung deklariert wird.  
   
  *column_name*  
  Der Name der Spalte in der Tabelle.  
@@ -124,21 +124,21 @@ Definiert die **Tabelle** -Datentyp. Die Tabellendeklaration schließt Spaltende
  Gibt an, dass die Spalte ein skalarer Datentyp ist.  
   
  *computed_column_expression*  
- Ein Ausdruck, der den Wert einer berechneten Spalte definieren. Sie wird mithilfe anderer Spalten derselben Tabelle mit einem Ausdruck berechnet. Beispielsweise kann eine berechnete Spalte die Definition besitzen **Kosten** AS **Preis \* Qty**. Der Ausdruck kann der Name einer nicht berechneten Spalte, eine Konstante, eine integrierte Funktion, eine Variable oder eine beliebige durch einen oder mehrere Operatoren verbundene Kombination der genannten Möglichkeiten sein. Der Ausdruck kann keine Unterabfrage oder benutzerdefinierte Funktion sein. Der Ausdruck kann nicht auf einen CLR-benutzerdefinierten Typ verweisen.  
+ Ein Ausdruck, der den Wert einer berechneten Spalte definiert. Sie wird mithilfe anderer Spalten derselben Tabelle mit einem Ausdruck berechnet. Eine berechnete Spalte kann beispielsweise die Definition **cost** AS **price \* qty** aufweisen. Der Ausdruck kann der Name einer nicht berechneten Spalte, eine Konstante, eine integrierte Funktion, eine Variable oder eine beliebige durch einen oder mehrere Operatoren verbundene Kombination der genannten Möglichkeiten sein. Der Ausdruck kann keine Unterabfrage oder benutzerdefinierte Funktion sein. Der Ausdruck kann nicht auf einen CLR-benutzerdefinierten Typ verweisen.  
   
- [COLLATE *Collation_name*]  
- Gibt die Sortierung für die Spalte an. *Collation_name* kann entweder der Name einer Windows-Sortierreihenfolge oder ein SQL-Sortierungsname sein und gilt nur für Spalten von der **Char**, **Varchar**, **Text** , **Nchar**, **Nvarchar**, und **Ntext** Datentypen. Wenn collation_name nicht angegeben ist, wird der Spalte die Sortierung des benutzerdefinierten Datentyps zugewiesen, wenn es sich um eine Spalte von einem benutzerdefinierten Datentyp handelt, oder es wird die Sortierung der aktuellen Datenbank zugewiesen.  
+ [ COLLATE *collation_name*]  
+ Gibt die Sortierung für die Spalte an. Als *collation_name* kann entweder der Name einer Windows-Sortierung oder ein SQL-Sortierungsname verwendet werden. Dieses Element gilt nur für Spalten der Datentypen **char**, **varchar**, **text**, **nchar**, **nvarchar** und **ntext**. Wenn collation_name nicht angegeben ist, wird der Spalte die Sortierung des benutzerdefinierten Datentyps zugewiesen, wenn es sich um eine Spalte von einem benutzerdefinierten Datentyp handelt, oder es wird die Sortierung der aktuellen Datenbank zugewiesen.  
   
- Weitere Informationen zu den Windows- und SQL-Sortierungsnamen finden Sie unter [COLLATE &#40; Transact-SQL &#41; ](~/t-sql/statements/collations.md).  
+ Weitere Informationen zu den Windows- und SQL-Sortierungsnamen finden Sie unter [COLLATE &#40;Transact-SQL&#41;](~/t-sql/statements/collations.md).  
   
  DEFAULT  
- Gibt den Wert an, der für die Spalte bereitgestellt wird, wenn kein Wert explizit angegeben wurde. DEFAULT-Definitionen können angewendet werden, um alle Spalten außer den als definierten **Zeitstempel** sowie von Spalten mit der IDENTITY-Eigenschaft. DEFAULT-Definitionen werden entfernt, wenn die Tabelle gelöscht wird. Es kann nur ein konstanter Wert wie eine Zeichenfolge, eine Systemfunktion, z. B. SYSTEM_USER(), oder NULL als Standardwert verwendet werden. Um die Kompatibilität mit früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aufrechtzuerhalten, ist es möglich, einer DEFAULT-Definition einen Einschränkungsnamen zuzuweisen.  
+ Gibt den Wert an, der für die Spalte bereitgestellt wird, wenn kein Wert explizit angegeben wurde. DEFAULT-Definitionen können auf alle Spalten angewendet werden, mit Ausnahme der als **timestamp** definierten Spalten sowie von Spalten mit der IDENTITY-Eigenschaft. DEFAULT-Definitionen werden entfernt, wenn die Tabelle gelöscht wird. Es kann nur ein konstanter Wert wie eine Zeichenfolge, eine Systemfunktion, z. B. SYSTEM_USER(), oder NULL als Standardwert verwendet werden. Um die Kompatibilität mit früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aufrechtzuerhalten, ist es möglich, einer DEFAULT-Definition einen Einschränkungsnamen zuzuweisen.  
   
  *constant_expression*  
- Ist eine Konstante, NULL oder eine Systemfunktion, die für die Spalte als Standardwert verwendet.  
+ Eine Konstante, ein NULL-Wert oder eine Systemfunktion, die bzw. der als Standardwert für die Spalte verwendet wird.  
   
  IDENTITY  
- Gibt an, dass es sich bei der neuen Spalte um eine Identitätsspalte handelt. Wenn die Tabelle eine neue Zeile hinzugefügt wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einen eindeutigen, inkrementellen Wert für die Spalte bereitstellt. Identitätsspalten werden in der Regel in Verbindung mit PRIMARY KEY-Einschränkungen verwendet, um als eindeutiger Zeilenbezeichner für die Tabelle zu dienen. Die IDENTITY-Eigenschaft zugewiesen werden kann **"tinyint"**, **"smallint"**, **Int**, **decimal(p,0)**, oder **numeric(p,0)** Spalten. Es kann nur eine Identitätsspalte pro Tabelle erstellt werden. Gebundene Standardwerte und DEFAULT-Einschränkungen können nicht mit einer Identitätsspalte verwendet werden. Sie müssen entweder den Ausgangswert und den Schrittweitenwert oder keinen von beiden angeben. Wurden Ausgangswert und inkrementeller Wert nicht angegeben, ist der Standardwert (1,1).  
+ Gibt an, dass es sich bei der neuen Spalte um eine Identitätsspalte handelt. Wenn der Tabelle eine neue Zeile hinzugefügt wird, stellt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einen eindeutigen, inkrementellen Wert für die Spalte bereit. Identitätsspalten werden in der Regel in Verbindung mit PRIMARY KEY-Einschränkungen verwendet, um als eindeutiger Zeilenbezeichner für die Tabelle zu dienen. Die IDENTITY-Eigenschaft kann folgenden Spalten zugewiesen werden: **tinyint**, **smallint**, **int**, **decimal(p,0)** oder **numeric(p,0)**. Es kann nur eine Identitätsspalte pro Tabelle erstellt werden. Gebundene Standardwerte und DEFAULT-Einschränkungen können nicht mit einer Identitätsspalte verwendet werden. Sie müssen entweder den Ausgangswert und den Schrittweitenwert oder keinen von beiden angeben. Wurden Ausgangswert und inkrementeller Wert nicht angegeben, ist der Standardwert (1,1).  
   
  *seed*  
  Der Wert, der für die erste in die Tabelle geladene Zeile verwendet wird.  
@@ -147,7 +147,7 @@ Definiert die **Tabelle** -Datentyp. Die Tabellendeklaration schließt Spaltende
  Der Schrittweitenwert, der zum Identitätswert der zuvor geladenen Zeile addiert wird.  
   
  ROWGUIDCOL  
- Gibt an, dass die neue Spalte eine Spalte mit für alle Zeilen global eindeutigen Bezeichnern ist. Nur ein **"uniqueidentifier"** -Spalte pro Tabelle kann als ROWGUIDCOL-Spalte gekennzeichnet werden. Die ROWGUIDCOL-Eigenschaft kann nur für zugewiesen werden eine **"uniqueidentifier"** Spalte.  
+ Gibt an, dass die neue Spalte eine Spalte mit für alle Zeilen global eindeutigen Bezeichnern ist. Nur eine **uniqueidentifier**-Spalte pro Tabelle kann als ROWGUIDCOL-Spalte gekennzeichnet werden. Die ROWGUIDCOL-Eigenschaft kann nur einer **uniqueidentifier**-Spalte zugewiesen werden.  
   
  NULL | NOT NULL  
  Gibt an, ob NULL in der Variablen zulässig ist. Die Standardeinstellung ist NULL.  
@@ -164,14 +164,14 @@ Definiert die **Tabelle** -Datentyp. Die Tabellendeklaration schließt Spaltende
  *logical_expression*  
  Ein logischer Ausdruck, der TRUE oder FALSE zurückgibt.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Variablen werden oft in einem Batch oder einer Prozedur als Zähler für WHILE, LOOP oder für IF...ELSE-Blöcke verwendet.  
   
- Variablen können nur in Ausdrücken kann nicht anstelle von Objektnamen oder Schlüsselwörtern verwendet werden. Um dynamische SQL-Anweisungen zu erstellen, verwenden Sie EXECUTE.  
+ Variablen können nur in Ausdrücken verwendet werden und stellen keinen Ersatz für Objektnamen oder Schlüsselwörter dar. Um dynamische SQL-Anweisungen zu erstellen, verwenden Sie EXECUTE.  
   
  Der Gültigkeitsbereich einer lokalen Variablen ist der Batch, in dem sie deklariert ist.  
  
- Eine Variable für Tabellenname ist nicht notwendigerweise speicherresident. Nicht genügend Arbeitsspeicher vorhanden können der Seiten, die in einer Tabellenvariablen gehören tempdb abgelegt werden.
+ Eine Tabellenvariable ist nicht zwingend speicherresident. Wenn nicht genügend Speicherplatz vorhanden ist, können die Seiten, die einer Tabellenvariablen zugehörig sind, an tempdb gesendet werden.
   
  Auf eine Cursorvariable, der aktuell ein Cursor zugewiesen ist, kann in folgenden Anweisungen als Quelle verwiesen werden:  
   
@@ -191,7 +191,7 @@ Definiert die **Tabelle** -Datentyp. Die Tabellendeklaration schließt Spaltende
   
  Eine Cursorvariable hat folgende Eigenschaften:  
   
--   Sie kann das Ziel eines Cursortyps oder einer anderen Cursorvariablen sein. Weitere Informationen finden Sie unter [festgelegt @local_variable &#40; Transact-SQL &#41; ](../../t-sql/language-elements/set-local-variable-transact-sql.md).  
+-   Sie kann das Ziel eines Cursortyps oder einer anderen Cursorvariablen sein. Weitere Informationen finden Sie unter [SET @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/set-local-variable-transact-sql.md).  
   
 -   Auf sie kann als Ziel eines Ausgabecursorparameters in einer EXECUTE-Anweisung verwiesen werden, wenn der Cursorvariablen aktuell kein Cursor zugewiesen ist.  
   
@@ -247,7 +247,7 @@ WHERE TerritoryGroup = @Group and SalesYTD >= @Sales;
 ```  
   
 ### <a name="c-declaring-a-variable-of-type-table"></a>C. Deklarieren einer Variablen vom Typ "table"  
- Im folgenden Beispiel wird eine `table`-Variable erstellt, die die in der OUTPUT-Klausel der UPDATE-Anweisung angegebenen Werte speichert. Es folgen zwei `SELECT`-Anweisungen, die die Werte in `@MyTableVar` und die Ergebnisse des Updatevorgangs in der `Employee`-Tabelle zurückgeben. Beachten Sie, dass die Ergebnisse in die `INSERTED.ModifiedDate` Spalte unterscheiden sich von den Werten in der `ModifiedDate` Spalte in der `Employee` Tabelle. Der Grund dafür ist, dass der `AFTER UPDATE`-Trigger, der den Wert von `ModifiedDate` auf das aktuelle Datum aktualisiert, in der `Employee`-Tabelle definiert wird. Die von `OUTPUT` zurückgegebenen Spalten spiegeln jedoch die Daten wider, bevor Trigger ausgelöst werden. Weitere Informationen finden Sie unter [OUTPUT-Klausel &#40; Transact-SQL &#41; ](../../t-sql/queries/output-clause-transact-sql.md).  
+ Im folgenden Beispiel wird eine `table`-Variable erstellt, die die in der OUTPUT-Klausel der UPDATE-Anweisung angegebenen Werte speichert. Es folgen zwei `SELECT`-Anweisungen, die die Werte in `@MyTableVar` und die Ergebnisse des Updatevorgangs in der `Employee`-Tabelle zurückgeben. Beachten Sie, dass sich die Ergebnisse in der `INSERTED.ModifiedDate`-Spalte von den Werten in der `ModifiedDate`-Spalte in der `Employee`-Tabelle unterscheiden. Der Grund dafür ist, dass der `AFTER UPDATE`-Trigger, der den Wert von `ModifiedDate` auf das aktuelle Datum aktualisiert, in der `Employee`-Tabelle definiert wird. Die von `OUTPUT` zurückgegebenen Spalten spiegeln jedoch die Daten wider, bevor Trigger ausgelöst werden. Weitere Informationen finden Sie unter [OUTPUT-Klausel &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md).  
   
 ```  
 USE AdventureWorks2012;  
@@ -277,14 +277,14 @@ GO
 ```  
   
 ### <a name="d-declaring-a-variable-of-user-defined-table-type"></a>D. Deklarieren einer Variablen vom Typ 'user-defined table'  
- Im folgenden Beispiel wird ein Tabellenwertparameter oder eine Tabellenvariable mit dem Namen `@LocationTVP` erstellt. Dies erfordert einen entsprechenden benutzerdefinierten Tabellentyp mit dem Namen `LocationTableType`. Weitere Informationen zum Erstellen eines benutzerdefinierten Tabellentyps finden Sie unter [CREATE TYPE &#40; Transact-SQL &#41; ](../../t-sql/statements/create-type-transact-sql.md). Weitere Informationen zu Tabellenwertparametern finden Sie unter [Tabellenwertparametern &#40; Datenbankmodul &#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md).  
+ Im folgenden Beispiel wird ein Tabellenwertparameter oder eine Tabellenvariable mit dem Namen `@LocationTVP` erstellt. Dies erfordert einen entsprechenden benutzerdefinierten Tabellentyp mit dem Namen `LocationTableType`. Weitere Informationen zum Erstellen eines benutzerdefinierten Tabellentyps finden Sie unter [CREATE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/create-type-transact-sql.md). Weitere Informationen zu Tabellenwertparametern finden Sie unter [Use Table-Valued Parameters &#40;Database Engine&#41; (Verwenden von Tabellenwertparametern &#40;Datenbank-Engine&#41;)](../../relational-databases/tables/use-table-valued-parameters-database-engine.md).  
   
 ```  
 DECLARE @LocationTVP   
 AS LocationTableType;  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
 ### <a name="e-using-declare"></a>E. Verwenden von DECLARE  
  Im folgenden Beispiel werden mithilfe der lokalen Variablen `@find` Kontaktinformationen für alle Nachnamen abgerufen, die mit `Walt` beginnen.  
@@ -304,7 +304,7 @@ WHERE LastName LIKE @find;
 ```  
   
 ### <a name="f-using-declare-with-two-variables"></a>F. Verwenden von DECLARE mit zwei Variablen  
- Das folgende Beispiel ruft verwendet Variablen, um anzugeben, die vor- und Nachnamen Namen von Mitarbeitern in der `DimEmployee` Tabelle.  
+ Das folgende Beispiel ruft Variablen ab, um die Vor- und Nachnamen von Mitarbeitern in der `DimEmployee`-Tabelle anzugeben.  
   
 ```  
 -- Uses AdventureWorks  
@@ -319,7 +319,7 @@ FROM DimEmployee
 WHERE LastName LIKE @lastName AND FirstName LIKE @firstName;  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   
  [Integrierte Funktionen &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   

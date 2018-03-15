@@ -1,5 +1,5 @@
 ---
-title: STIsValid (Geography-Datentyp) | Microsoft Docs
+title: STIsValid (geography-Datentyp) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -43,14 +43,14 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Rückgabetypen  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Rückgabetyp: **Bit**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Rückgabetyp: **bit**  
   
  CLR-Rückgabetyp: **SqlBoolean**  
   
-## <a name="remarks"></a>Hinweise  
- Die OGC-Typ, der eine **Geography** Instanz kann bestimmt werden, durch den Aufruf [STGeometryType()](../../t-sql/spatial-geography/stgeometrytype-geography-data-type.md).  
+## <a name="remarks"></a>Remarks  
+ Der OGC-Typ einer **geography**-Instanz kann durch einen Aufruf von [STGeometryType()](../../t-sql/spatial-geography/stgeometrytype-geography-data-type.md) bestimmt werden.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]erzeugt nur gültige **Geography** Instanzen, erlaubt aber für die Speicherung und Abruf Ungültiger Instanzen. Eine gültige Instanz, die die gleiche Punktmenge wie eine ungültige Instanz darstellt, kann mithilfe der `MakeValid()` -Methode abgerufen werden.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erzeugt nur gültige **geography**-Instanzen, erlaubt aber die Speicherung und den Abruf ungültiger Instanzen. Eine gültige Instanz, die die gleiche Punktmenge wie eine ungültige Instanz darstellt, kann mithilfe der `MakeValid()` -Methode abgerufen werden.  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird eine `geography` -Instanz erstellt und `STIsValid()` verwendet, um zu überprüfen, ob die Instanz gültig ist.  
@@ -61,8 +61,8 @@ SELECT @g.STIsValid();
 DECLARE @g geography  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [STGeometryType &#40; Geography-Datentyp &#41;](../../t-sql/spatial-geography/stgeometrytype-geography-data-type.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [STGeometryType &#40;geography-Datentyp&#41;](../../t-sql/spatial-geography/stgeometrytype-geography-data-type.md)   
  [MakeValid &#40;geography-Datentyp&#41;](../../t-sql/spatial-geography/makevalid-geography-data-type.md)   
  [OGC-Methoden für geography-Instanzen](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   

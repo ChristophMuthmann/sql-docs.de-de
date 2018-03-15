@@ -1,5 +1,5 @@
 ---
-title: NULLIF (Transact-SQL) | Microsoft Docs
+title: NULLIF (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 09/08/2017
 ms.prod: sql-non-specified
@@ -37,7 +37,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="nullif-transact-sql"></a>NULLIF (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Gibt einen NULL-Wert zurück, wenn die beiden angegebenen Ausdrücke gleich sind. Beispielsweise `SELECT NULLIF(4,4) AS Same, NULLIF(5,7) AS Different;` für die erste Spalte (4 und 4) gibt NULL zurück, da die beiden Eingabewerte identisch sind. Die zweite Spalte gibt den ersten Wert (5) zurück, da die beiden Eingabewerte unterschiedlich sind. 
+  Gibt einen NULL-Wert zurück, wenn die beiden angegebenen Ausdrücke gleich sind. Beispielsweise gibt `SELECT NULLIF(4,4) AS Same, NULLIF(5,7) AS Different;` für die erste Spalte (4 und 4) NULL zurück, da die zwei Eingabewerte identisch sind. Die zweite Spalte gibt den ersten Wert (5) zurück, da die beiden Werte sich unterscheiden. 
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,17 +49,17 @@ NULLIF ( expression , expression )
   
 ## <a name="arguments"></a>Argumente  
  *expression*  
- Ist gültige Skalarwert [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md).  
+ Alle gültigen [Skalarausdrücke](../../t-sql/language-elements/expressions-transact-sql.md).  
   
 ## <a name="return-types"></a>Rückgabetypen  
- Gibt denselben Typ wie der erste *Ausdruck*.  
+ Gibt denselben Typ wie der erste *Ausdruck* zurück.  
   
- NULLIF gibt das erste *Ausdruck* Wenn die beiden Ausdrücke nicht gleich sind. Wenn die Ausdrücke gleich sind, gibt NULLIF einen null-Wert des Typs des ersten *Ausdruck*.  
+ NULLIF gibt den ersten *Ausdruck* zurück, wenn sich die zwei Ausdrücke voneinander unterscheiden. Wenn die Ausdrücke identisch sind, gibt NULLIF einen NULL-Wert mit dem Typ des ersten *Ausdrucks* zurück.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  NULLIF entspricht einem komplexen CASE-Ausdruck, in dem die beiden Ausdrücke gleich sind und der sich ergebende Ausdruck NULL ist.  
   
- Es empfiehlt sich nicht, zeitabhängige Funktionen wie RAND() innerhalb einer NULLIF-Funktion zu verwenden. Dies kann dazu führen, dass die Funktion zweimal ausgewertet werden und aus den beiden aufrufen unterschiedliche Ergebnisse zurückgeben.  
+ Es empfiehlt sich nicht, zeitabhängige Funktionen wie RAND() innerhalb einer NULLIF-Funktion zu verwenden. Dies könnte dazu führen, dass die Funktion zweimal ausgewertet wird und aus den beiden Aufrufen unterschiedliche Ergebnisse zurückgibt.  
   
 ## <a name="examples"></a>Beispiele  
   
@@ -117,8 +117,8 @@ WHERE ProductID < 10;
 GO  
 ```  
 
-### <a name="c-returning-budget-amounts-that-contain-no-data"></a>"C:" Zurückgeben von Budgetsummen, die keine Daten enthalten  
- Das folgende Beispiel erstellt eine `budgets` Tabelle Daten lädt und verwendet `NULLIF` Null wird zurückgegeben, wenn weder `current_year` noch `previous_year` Daten enthält.  
+### <a name="c-returning-budget-amounts-that-contain-no-data"></a>C: Zurückgeben von Budgetsummen, die keine Daten enthalten  
+ Im folgenden Beispiel wird eine `budgets`-Tabelle erstellt, Daten geladen und `NULLIF` verwendet, um NULL zurückzugeben, wenn weder `current_year` noch `previous_year` Daten enthalten.  
   
 ```sql  
 CREATE TABLE budgets (  
@@ -150,10 +150,10 @@ FROM budgets;
  5      null
  ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)   
- [Decimal und Numeric &#40; Transact-SQL &#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)   
- [System Functions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
+ [decimal und numeric &#40;Transact-SQL&#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)   
+ [Systemfunktionen &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
   
   
 

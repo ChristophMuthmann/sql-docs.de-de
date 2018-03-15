@@ -1,5 +1,5 @@
 ---
-title: STPolyFromText (Geography-Datentyp) | Microsoft Docs
+title: STPolyFromText (geography-Datentyp) | Microsoft-Dokumenatation
 ms.custom: 
 ms.date: 07/30/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stpolyfromtext-geography-data-type"></a>STPolyFromText (geography-Datentyp)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Gibt eine **Geography** Instanz aus einer Open Geospatial Consortium (OGC) Well-Known Text (WKT)-Darstellung getragenen Z-(Höhe) und M (Measure)-Werte von der Instanz getragen.
+Gibt eine **geography**-Instanz einer Open Geospatial Consortium (OGC) WKT-Darstellung (Well-Known Text) zurück, die um alle von der Instanz getragenen Z (Höhe)- und M (Measure)-Werte erweitert ist.
   
 ## <a name="syntax"></a>Syntax  
   
@@ -45,23 +45,23 @@ STPolyFromText ( 'polygon_tagged_text' , SRID )
   
 ## <a name="arguments"></a>Argumente  
  *polygon_tagged_text*  
- Ist die WKT-Darstellung der **GeographyPolygon** Instanz, die Sie zurückgeben möchten. *Polygon_tagged_text* ist ein **nvarchar(max)** Ausdruck.  
+ Die WKT-Darstellung der **geographyPolygon**-Instanz, die zurückgegeben werden soll. *polygon_tagged_text* ist ein **nvarchar(max)**-Ausdruck.  
   
  *SRID*  
- Ist ein **Int** Ausdruck darstellt, die räumliche verweisen ID (SRID), der die **GeographyPolygon** Instanz, die Sie zurückgeben möchten.  
+ Ein **int**-Ausdruck, der die SRID (Spatial Reference ID) der **geographyPolygon**-Instanz darstellt, die Sie zurückgeben möchten.  
   
 ## <a name="return-types"></a>Rückgabetypen  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Rückgabetyp: **Geography**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Rückgabetyp: **geography**  
   
  CLR-Rückgabetyp: **SqlGeography**  
   
  OGC-Typ: **Polygon**  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Diese Methode löst eine **FormatException** aus, wenn die Eingabe nicht korrekt formatiert ist.  
   
 ## <a name="examples"></a>Beispiele  
- Im folgenden Beispiel wird `STPolyFromText()` zum Erstellen einer `geography` Instanz.  
+ Im folgenden Beispiel wird `STPolyFromText()` verwendet, um eine `geography`-Instanz zu erstellen.  
   
 ```  
 DECLARE @g geography;  
@@ -69,7 +69,7 @@ SET @g = geography::STPolyFromText('POLYGON((-122.358 47.653, -122.348 47.649, -
 SELECT @g.ToString();  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Statische geography-Methoden des OGC](../../t-sql/spatial-geography/ogc-static-geography-methods.md)  
   
   

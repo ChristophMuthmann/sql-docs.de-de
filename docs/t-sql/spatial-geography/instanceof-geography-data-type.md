@@ -1,5 +1,5 @@
 ---
-title: InstanceOf (Geography-Datentyp) | Microsoft Docs
+title: InstanceOf (geography-Datentyp) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="instanceof-geography-data-type"></a>InstanceOf (geography-Datentyp)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Testet, ob die **Geography** Instanz ist identisch mit den angegebenen Typ.  
+  Überprüft die Übereinstimmung der **geography**-Instanz mit dem angegebenen Typ.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -45,26 +45,26 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>Argumente  
  *geography_type*  
- Ist ein **nvarchar(4000)** Zeichenfolge, die Angabe einer 16 Datentypen, die verfügbar gemacht werden, der **Geography** Typhierarchie.  
+ Eine **nvarchar(4000)**-Zeichenfolge, die einen von 16 Typen angibt, die in der **geography**-Typhierarchie verfügbar gemacht werden.  
   
 ## <a name="return-types"></a>Rückgabetypen  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Rückgabetyp: **Bit**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Rückgabetyp: **bit**  
   
  CLR-Rückgabetyp: **SqlBoolean**  
   
-## <a name="remarks"></a>Hinweise  
- Gibt 1 zurück, wenn der Typ des eine **Geography** Instanz ist identisch mit den angegebenen Typ, oder wenn der angegebene Typ ein Vorgänger des Instanztyps ist, andernfalls 0.  
+## <a name="remarks"></a>Remarks  
+ Gibt 1 zurück, wenn der Typ einer **geography**-Instanz mit dem angegebenen Typ übereinstimmt oder der angegebene Typ ein Vorgänger des Instanztyps ist. Andernfalls wird 0 zurückgegeben.  
   
  Diese **geography** -Datentypmethode unterstützt Instanzen von **FullGlobe** oder räumliche Instanzen, die größer als eine Hemisphäre sind.  
   
- Die Eingabe für die Methode muss einen der folgenden sein: Geometry, Punkt, Curve, LineString, CircularString, Surface, Polygon, CurvePolygon, **GeometryCollection**, **MultiSurface**,  **MultiPolygon, MultiCurve, MultiLineString**, **MultiPoint**, oder **FullGlobe**.  
+ Die Eingabe für die Methode muss einem der folgenden Typen entsprechen: Geometry, Point, Curve, LineString,CircularString, Surface, Polygon, CurvePolygon, **GeometryCollection**, **MultiSurface**, **MultiPolygon, MultiCurve, MultiLineString**, **MultiPoint** oder **FullGlobe**.  
   
  Diese Methode löst eine `ArgumentException` aus, wenn andere Zeichenfolgen als die genannten für die Eingabe verwendet werden.  
   
  Diese Methode ist nicht exakt.  
   
 ## <a name="examples"></a>Beispiele  
- Das folgende Beispiel erstellt eine `MultiPoint` -Instanz `InstanceOf()` um festzustellen, ob die Instanz ist eine `GeometryCollection`.  
+ Im folgenden Beispiel wird eine `MultiPoint`-Instanz erstellt und `InstanceOf()` verwendet, um zu überprüfen, ob die Instanz eine `GeometryCollection` ist.  
   
 ```  
 DECLARE @g geography;  
@@ -72,7 +72,7 @@ SET @g = geography::STGeomFromText('MULTIPOINT(-122.360 47.656, -122.343 47.656)
 SELECT @g.InstanceOf('GEOMETRYCOLLECTION');  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Erweiterte Methoden für geography-Instanzen](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)  
   
   

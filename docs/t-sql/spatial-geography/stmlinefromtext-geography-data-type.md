@@ -1,5 +1,5 @@
 ---
-title: STMLineFromText (Geography-Datentyp) | Microsoft Docs
+title: STMLineFromText (geography-Datentyp) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 07/30/2017
 ms.prod: sql-non-specified
@@ -45,23 +45,23 @@ STMLineFromText ( 'multilinestring_tagged_text' , SRID )
   
 ## <a name="arguments"></a>Argumente  
  *multilinestring_tagged_text*  
- Ist die WKT-Darstellung der **GeographyMultiLineString** Instanz, die Sie zurückgeben möchten. *Multilinestring_tagged_text* ist ein **nvarchar(max)** Ausdruck.  
+ Die WKT-Darstellung der **geographyMultiLineString**-Instanz, die zurückgegeben werden soll. *multilinestring_tagged_text* ist ein **nvarchar(max)**-Ausdruck.  
   
  *SRID*  
- Ist ein **Int** Ausdruck darstellt, die räumliche verweisen ID (SRID), der die **GeographyMultiLineString** Instanz, die Sie zurückgeben möchten.  
+ Ein **int**-Ausdruck, der die SRID (Spatial Reference ID) der **geographyMultiLineString**-Instanz darstellt, die Sie zurückgeben möchten.  
   
 ## <a name="return-types"></a>Rückgabetypen  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Rückgabetyp: **Geography**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Rückgabetyp: **geography**  
   
  CLR-Rückgabetyp: **SqlGeography**  
   
  OGC-Typ: **MultiLineString**  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Diese Methode löst eine **FormatException** aus, wenn die Eingabe nicht korrekt formatiert ist.  
   
 ## <a name="examples"></a>Beispiele  
- Im folgenden Beispiel wird `STMLineFromText()` zum Erstellen einer `geography` Instanz.  
+ Im folgenden Beispiel wird `STMLineFromText()` verwendet, um eine `geography`-Instanz zu erstellen.  
   
 ```  
 DECLARE @g geography;  
@@ -69,7 +69,7 @@ SET @g = geography::STMLineFromText('MULTILINESTRING ((-122.358 47.653, -122.348
 SELECT @g.ToString();  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Statische geography-Methoden des OGC](../../t-sql/spatial-geography/ogc-static-geography-methods.md)  
   
   

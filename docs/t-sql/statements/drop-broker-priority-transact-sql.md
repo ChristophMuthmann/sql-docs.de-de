@@ -1,5 +1,5 @@
 ---
-title: DROP BROKER PRIORITY (Transact-SQL) | Microsoft Docs
+title: DROP BROKER PRIORITY (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -50,7 +50,7 @@ DROP BROKER PRIORITY ConversationPriorityName
  *ConversationPriorityName*  
  Gibt den Namen der zu entfernenden Konversationspriorität an.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Wenn Sie eine Konversationspriorität löschen, werden vorhandene Konversationen mit den Prioritätsebenen fortgesetzt, die von der Konversationspriorität zugewiesen wurden.  
   
 ## <a name="permissions"></a>Berechtigungen  
@@ -64,7 +64,7 @@ DROP BROKER PRIORITY InitiatorAToTargetPriority;
   
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [ALTER BROKER PRIORITY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-broker-priority-transact-sql.md)   
  [CREATE BROKER PRIORITY &#40;Transact-SQL&#41;](../../t-sql/statements/create-broker-priority-transact-sql.md)   
  [sys.conversation_priorities &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-conversation-priorities-transact-sql.md)  

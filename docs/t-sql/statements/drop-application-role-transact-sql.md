@@ -1,5 +1,5 @@
 ---
-title: DROP APPLICATION ROLE (Transact-SQL) | Microsoft Docs
+title: DROP APPLICATION ROLE (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -50,10 +50,10 @@ DROP APPLICATION ROLE rolename
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *roleName*  
+ *rolename*  
  Gibt den Namen der zu löschenden Anwendungsrolle an.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Wenn die Anwendungsrolle sicherbare Elemente besitzt, kann sie nicht gelöscht werden. Vor dem Löschen einer Anwendungsrolle, die sicherungsfähige Elemente besitzt, muss zunächst der Besitz an den sicherungsfähigen Elementen übertragen werden, oder sie müssen gelöscht werden.  
   
 > [!CAUTION]  
@@ -70,10 +70,10 @@ DROP APPLICATION ROLE weekly_ledger;
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Anwendungsrollen](../../relational-databases/security/authentication-access/application-roles.md)   
- [Erstellen Sie APPLICATION ROLE &#40; Transact-SQL &#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
- [ALTER APPLICATION ROLE &#40; Transact-SQL &#41;](../../t-sql/statements/alter-application-role-transact-sql.md)   
+ [CREATE APPLICATION ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
+ [ALTER APPLICATION ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-application-role-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   

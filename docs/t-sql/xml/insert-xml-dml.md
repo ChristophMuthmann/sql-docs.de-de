@@ -1,5 +1,5 @@
 ---
-title: Insert (XML DML) | Microsoft Docs
+title: insert (XML DML) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="insert-xml-dml"></a>insert (XML DML)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Fügt einen oder mehrere Knoten identifizierten *Expression1* als untergeordnete oder Gleichgeordnete Knoten des Knotens identifiziert durch *Expression2*.  
+  Fügt einen oder mehrere Knoten ein, die durch *Expression1* als unter- oder gleichgeordnete Knoten des Knotens identifiziert werden, der durch *Expression2* angegeben wird.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -49,24 +49,24 @@ insert
   
 ## <a name="arguments"></a>Argumente  
  *Expression1*  
- Gibt einen oder mehrere einzufügende Knoten an. Dies kann eine Konstante XML-Instanz sein. Ein Verweis auf eine typisierte XML-Datentypinstanz der gleichen XML-Schema-Auflistung, die auf der die Modify-Methode angewendet wird; eine nicht typisierte XML-Datentypinstanz mit einer eigenständigen **SQL:Column()**/**SQL:Variable()** Funktion; oder ein XQuery-Ausdruck. Der Ausdruck kann als Ergebnis einen Knoten, einen Textknoten oder eine geordnete Sequenz von Knoten haben. Der Ausdruck kann nicht den Stammknoten (/) auflösen. Wenn das Ergebnis des Ausdrucks ein Wert oder eine Sequenz von Werten ist, werden diese Werte als einzelner Textknoten eingefügt, wobei ein Leerzeichen die einzelnen Werte in der Sequenz trennt. Wenn Sie mehrere Knoten als Konstante angeben, werden die Knoten in Klammern eingeschlossen und durch Kommas getrennt. Sie können keine heterogenen Sequenzen wie z. B. eine Sequenz aus Elementen, Attributen oder Werten einfügen. Wenn *Expression1* in eine leere Sequenz aufgelöst wird, erfolgt keine Einfügung und keine Fehler zurückgegeben.  
+ Gibt einen oder mehrere einzufügende Knoten an. Dabei kann es sich um eine konstante XML-Instanz, einen Verweis auf eine typisierte XML-Datentypinstanz der gleichen XML-Schemaauflistung, auf der die modify-Methode angewendet wird, eine nicht typisierte XML-Datentypinstanz mit einer eigenständigen **sql:column()**/**sql:variable()**-Funktion oder einen XQuery-Ausdruck handeln. Der Ausdruck kann als Ergebnis einen Knoten, einen Textknoten oder eine geordnete Sequenz von Knoten haben. Der Ausdruck kann nicht den Stammknoten (/) auflösen. Wenn das Ergebnis des Ausdrucks ein Wert oder eine Sequenz von Werten ist, werden diese Werte als einzelner Textknoten eingefügt, wobei ein Leerzeichen die einzelnen Werte in der Sequenz trennt. Wenn Sie mehrere Knoten als Konstante angeben, werden die Knoten in Klammern eingeschlossen und durch Kommas getrennt. Sie können keine heterogenen Sequenzen wie z. B. eine Sequenz aus Elementen, Attributen oder Werten einfügen. Wenn *Expression1* in eine leere Sequenz aufgelöst wird, findet kein Einfügevorgang statt, und es werden keine Fehler zurückgegeben.  
   
  into  
- Durch identifizierten Knoten *Expression1* werden als direkte Nachfolger (untergeordnete Knoten) des Knotens identifizierte eingefügt *Expression2*. Wenn der Knoten im *Expression2* bereits über einen oder mehrere untergeordnete Knoten verfügt, müssen Sie entweder **als erstes** oder **zuletzt** angeben, wo den neuen Knoten hinzugefügt werden soll. Beispielsweise am Anfang bzw. Ende der Liste der untergeordneten Knoten. Die **als erstes** und **zuletzt** Schlüsselwörter werden ignoriert, wenn Attribute eingefügt werden.  
+ Knoten, die durch *Expression1* angegeben werden, werden als direkte Nachfolger (untergeordnete Knoten) des Knotens eingefügt, der durch *Expression2* angegeben wird. Wenn der Knoten in *Expression2* bereits über einen oder mehrere untergeordnete Knoten verfügt, müssen Sie **as first** oder **as last** verwenden, wenn Sie angeben möchten, wo der neue Knoten hinzugefügt werden soll. Beispielsweise am Anfang bzw. Ende der Liste der untergeordneten Knoten. Die **as first**- und **as last**-Schlüsselwörter werden ignoriert, wenn Attribute eingefügt werden.  
   
  after  
- Durch identifizierten Knoten *Expression1* werden als gleichgeordnete Knoten direkt hinter dem identifizierten Knoten eingefügt *Expression2*. Die **nach** Schlüsselwort kann nicht zum Einfügen von Attributen verwendet werden. Es kann z. B. nicht zum Einfügen eines Attributkonstruktors oder zum Zurückgeben eines Attributs aus einer XQuery verwendet werden.  
+ Knoten, die durch *Expression1* angegeben werden, werden als gleichgeordnete Knoten direkt hinter dem Knoten eingefügt, der durch *Expression2* angegeben wird. Das **after**-Schlüsselwort kann nicht zum Einfügen von Attributen verwendet werden. Es kann z. B. nicht zum Einfügen eines Attributkonstruktors oder zum Zurückgeben eines Attributs aus einer XQuery verwendet werden.  
   
  before  
- Durch identifizierten Knoten *Expression1* werden als gleichgeordnete Knoten direkt vor dem identifizierten Knoten eingefügt *Expression2*. Die **vor** Schlüsselwort kann nicht verwendet werden, wenn Attribute eingefügt werden. Es kann z. B. nicht zum Einfügen eines Attributkonstruktors oder zum Zurückgeben eines Attributs aus einer XQuery verwendet werden.  
+ Knoten, die durch *Expression1* angegeben werden, werden als gleichgeordnete Knoten direkt vor dem Knoten eingefügt, der durch *Expression2* angegeben wird. Das **before**-Schlüsselwort kann nicht verwendet werden, wenn Attribute eingefügt werden. Es kann z. B. nicht zum Einfügen eines Attributkonstruktors oder zum Zurückgeben eines Attributs aus einer XQuery verwendet werden.  
   
  *Expression2*  
- Identifiziert einen Knoten. Im identifizierten Knoten *Expression1* sind relativ zum identifizierten Knoten eingefügt *Expression2*. Dabei kann es sich um einen XQuery-Ausdruck handeln, der einen Verweis auf einen Knoten zurückgibt, der in dem Dokument vorhanden ist, auf das aktuell verwiesen wird. Wenn mehrere Knoten zurückgegeben werden, schlägt der Einfügevorgang fehl. Wenn *Expression2* zurückgibt, die eine leere Sequenz ist, kein Einfügevorgang tritt auf, und keine Fehler zurückgegeben werden. Wenn *Expression2* ist statisch kein Singleton, wird ein statischer Fehler zurückgegeben. *Expression2* darf keine verarbeitungsanweisung, kommentieren oder Attribut sein. Beachten Sie, dass *Expression2* muss ein Verweis auf einen vorhandenen Knoten im Dokument und kein konstruierter Knoten sein.  
+ Identifiziert einen Knoten. Die in *Expression1* identifizierten Knoten werden relativ zu dem Knoten eingefügt, der durch *Expression2* angegeben wird. Dabei kann es sich um einen XQuery-Ausdruck handeln, der einen Verweis auf einen Knoten zurückgibt, der in dem Dokument vorhanden ist, auf das aktuell verwiesen wird. Wenn mehrere Knoten zurückgegeben werden, schlägt der Einfügevorgang fehl. Wenn *Expression2* eine leere Sequenz zurückgibt, findet kein Einfügevorgang statt, und es werden keine Fehler zurückgegeben. Wenn *Expression2* keine statische SINGLETON-Instanz darstellt, wird ein statischer Fehler zurückgegeben. *Expression2* darf weder eine Verarbeitungsanweisung noch ein Kommentar oder ein Attribut sein. Beachten Sie, dass *Expression2* ein Verweis auf einen vorhandenen Knoten im Dokument, nicht auf einen erstellten Knoten, sein muss.  
   
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="a-inserting-element-nodes-into-the-document"></a>A. Einfügen von Elementknoten in das Dokument  
- Das folgende Beispiel veranschaulicht das Einfügen von Elementen in ein Dokument. Zuerst wird ein XML-Dokument einer Variablen vom zugewiesen **Xml** Typ. Anschließend durch mehrere **einfügen** XML DML-Anweisungen, im Beispiel wird veranschaulicht, wie Elementknoten in das Dokument eingefügt werden. Nach jedem Einfügevorgang zeigt die SELECT-Anweisung das Ergebnis an.  
+ Das folgende Beispiel veranschaulicht das Einfügen von Elementen in ein Dokument. Zuerst wird ein XML-Dokument einer Variablen des Typs **xml** zugewiesen. Das Beispiel zeigt anschließend durch mehrere XML DML **insert**-Anweisungen, wie Elementknoten in das Dokument eingefügt werden. Nach jedem Einfügevorgang zeigt die SELECT-Anweisung das Ergebnis an.  
   
 ```  
 USE AdventureWorks;  
@@ -113,7 +113,7 @@ GO
  Beachten Sie, dass verschiedene path-Ausdrücke in diesem Beispiel "[1]" als Anforderung für die statische Typisierung angeben. Auf diese Weise wird ein einzelner Zielknoten gewährleistet.  
   
 ### <a name="b-inserting-multiple-elements-into-the-document"></a>B. Einfügen von mehreren Elementen in das Dokument  
- Im folgenden Beispiel wird ein Dokument zuerst einer Variablen vom zugewiesen **Xml** Typ. Anschließend wird eine Sequenz von zwei Elementen, die Produktfunktionen darstellen zugewiesen, einer zweiten Variablen des **Xml** Typ. Diese Sequenz wird dann in die erste Variable eingefügt.  
+ Im folgenden Beispiel wird ein Dokument zuerst einer Variablen des Typs **xml** zugewiesen. Anschließend wird eine Sequenz aus zwei Elementen, die Produktfeatures darstellen, einer zweiten Variablen des Typs **xml** zugewiesen. Diese Sequenz wird dann in die erste Variable eingefügt.  
   
 ```  
 USE AdventureWorks;  
@@ -136,7 +136,7 @@ GO
 ```  
   
 ### <a name="c-inserting-attributes-into-a-document"></a>C. Einfügen von Attributen in ein Dokument  
- Im folgende Beispiel wird veranschaulicht, wie Attribute in ein Dokument eingefügt werden. Zuerst wird ein Dokument zugewiesen ist ein **Xml** Typvariablen. Anschließend wird eine Reihe von **einfügen** XML DML-Anweisungen verwendet, um Attribute in das Dokument einzufügen. Nach jeder Attributeinfügung zeigt die SELECT-Anweisung das Ergebnis an.  
+ Das folgende Beispiel zeigt, wie Attribute in ein Dokument eingefügt werden. Zuerst wird ein Dokument einer Variablen des Typs **xml** zugewiesen. Anschließend wird eine Reihe von XML-DML-**insert**-Anweisungen verwendet, um Attribute in das Dokument einzufügen. Nach jeder Attributeinfügung zeigt die SELECT-Anweisung das Ergebnis an.  
   
 ```  
 USE AdventureWorks;  
@@ -175,7 +175,7 @@ GO
 ```  
   
 ### <a name="d-inserting-a-comment-node"></a>D. Einfügen eines Kommentarknotens  
- In dieser Abfrage wird ein XML-Dokument zuerst einer Variablen vom zugewiesen **Xml** Typ. Anschließend wird XML DML zum Einfügen eines Kommentarknotens nach dem ersten <`step`>-Element verwendet.  
+ In dieser Abfrage wird ein XML-Dokument zuerst einer Variablen des Typs **xml** zugewiesen. Anschließend wird XML DML zum Einfügen eines Kommentarknotens nach dem ersten <`step`>-Element verwendet.  
   
 ```  
 USE AdventureWorks;  
@@ -197,7 +197,7 @@ GO
 ```  
   
 ### <a name="e-inserting-a-processing-instruction"></a>E. Einfügen einer Verarbeitungsanweisung  
- In der folgenden Abfrage wird ein XML-Dokument zuerst einer Variablen vom zugewiesen **Xml** Typ. Anschließend wird ein XML DML-Schlüsselwort verwendet, um eine Verarbeitungsanweisung am Anfang des Dokuments einzufügen.  
+ In der folgenden Abfrage wird ein XML-Dokument zuerst einer Variablen des Typs **xml** zugewiesen. Anschließend wird ein XML DML-Schlüsselwort verwendet, um eine Verarbeitungsanweisung am Anfang des Dokuments einzufügen.  
   
 ```  
 USE AdventureWorks;  
@@ -219,7 +219,7 @@ GO
 ```  
   
 ### <a name="f-inserting-data-using-a-cdata-section"></a>F. Einfügen von Daten mit einem CDATA-Abschnitt  
- Wenn Sie Text mit Zeichen einfügen, die in XML nicht verwendet werden können, z. B. < oder >, können Sie die Daten mithilfe von CDATA-Abschnitten einfügen, wie in der folgenden Abfrage veranschaulicht. Die Abfrage gibt einen CDATA-Abschnitt an, wird jedoch als Textknoten hinzugefügt, wobei alle ungültigen Zeichen in Entitäten konvertiert werden. Beispielsweise "<" wird gespeichert als &lt;.  
+ Wenn Sie Text mit Zeichen einfügen, die in XML nicht verwendet werden können, z. B. < oder >, können Sie die Daten mithilfe von CDATA-Abschnitten einfügen, wie in der folgenden Abfrage veranschaulicht. Die Abfrage gibt einen CDATA-Abschnitt an, wird jedoch als Textknoten hinzugefügt, wobei alle ungültigen Zeichen in Entitäten konvertiert werden. '<' wird beispielsweise als &lt; gespeichert.  
   
 ```  
 USE AdventureWorks;  
@@ -250,7 +250,7 @@ GO
 ```  
   
 ### <a name="g-inserting-text-node"></a>G. Einfügen von Textknoten  
- In dieser Abfrage wird ein XML-Dokument zuerst einer Variablen vom zugewiesen **Xml** Typ. Im Anschluss wird mit XML DML ein Textknoten als erstes untergeordnetes Element von <`Root`> eingefügt. Der Textkonstruktor wird zum Angeben des Texts verwendet.  
+ In dieser Abfrage wird ein XML-Dokument zuerst einer Variablen des Typs **xml** zugewiesen. Im Anschluss wird mit XML DML ein Textknoten als erstes untergeordnetes Element von <`Root`> eingefügt. Der Textkonstruktor wird zum Angeben des Texts verwendet.  
   
 ```  
 USE AdventureWorks;  
@@ -272,7 +272,7 @@ SELECT @myDoc;
 ```  
   
 ### <a name="h-inserting-a-new-element-into-an-untyped-xml-column"></a>H. Einfügen eines neuen Elements in eine nicht typisierte XML-Spalte  
- Im folgenden Beispiel wird XML DML zum Aktualisieren einer XML-Instanz gespeichert, ein **Xml** Spalte vom Typ:  
+ Das folgende Beispiel verwendet XML DML zum Aktualisieren einer XML-Instanz, die in einer Spalte vom Typ **xml** gespeichert ist:  
   
 ```  
 USE AdventureWorks;  
@@ -306,7 +306,7 @@ GO
 ```  
   
 ### <a name="i-inserting-based-on-an-if-condition-statement"></a>I. Einfügen anhand einer Bedingungsanweisung  
- Im folgenden Beispiel wird eine IF-Bedingung angegeben, als Teil von Expression1 in der **einfügen** XML DML-Anweisung. Wenn die Bedingung erfüllt ist, wird dem Element <`WorkCenter`> ein Attribut hinzugefügt.  
+ Im folgenden Beispiel wird eine IF-Bedingung als Teil von Expression1 in der XML-DML-**insert**-Anweisung angegeben. Wenn die Bedingung erfüllt ist, wird dem Element <`WorkCenter`> ein Attribut hinzugefügt.  
   
 ```  
 USE AdventureWorks;  
@@ -330,7 +330,7 @@ SELECT @myDoc;
 GO  
 ```  
   
- Im folgende Beispiel ist ähnlich, außer dass die **einfügen** XML DML-Anweisung fügt ein Element im Dokument ein, wenn die Bedingung "true" ergibt. Dies ist der Fall, wenn das Element <`WorkCenter`> nicht mehr als zwei untergeordnete <`step`>-Elemente enthält.  
+ Das folgende Beispiel ist ähnlich, die XML-DML-**insert**-Anweisung fügt jedoch ein Element in das Dokument ein, wenn die Bedingung den Wert True besitzt. Dies ist der Fall, wenn das Element <`WorkCenter`> nicht mehr als zwei untergeordnete <`step`>-Elemente enthält.  
   
 ```  
 USE AdventureWorks;  
@@ -366,9 +366,9 @@ GO
 ```  
   
 ### <a name="j-inserting-nodes-in-a-typed-xml-column"></a>J. Einfügen von Knoten in einer typisierten XML-Spalte  
- In diesem Beispiel fügt ein Element und ein Attribut in einem typisierten gespeicherte XML-fertigungsanweisungen **Xml** Spalte.  
+ Das folgende Beispiel fügt ein Element und ein Attribut in das XML-Dokument mit den Fertigungsanweisungen ein, das in einer typisierten **xml**-Spalte gespeichert ist.  
   
- Im Beispiel erstellen Sie zuerst eine Tabelle (T) mit einer typisierten **Xml** Spalte in der AdventureWorks-Datenbank. Anschließend kopieren Sie eine XML-Instanz mit Fertigungsanweisungen aus der Instructions-Spalte in der ProductModel-Tabelle in Tabelle T. Die Einfügungen werden dann am XML in Tabelle T vorgenommen.  
+ In diesem Beispiel erstellen Sie zuerst eine Tabelle (T) mit einer typisierten **xml**-Spalte in der AdventureWorks-Datenbank. Anschließend kopieren Sie eine XML-Instanz mit Fertigungsanweisungen aus der Instructions-Spalte in der ProductModel-Tabelle in Tabelle T. Die Einfügungen werden dann am XML in Tabelle T vorgenommen.  
   
 ```  
 USE AdventureWorks;  
@@ -415,10 +415,10 @@ DROP TABLE T ;
 GO             
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Vergleichen von typisiertem XML mit nicht typisiertem XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [Erstellen von Instanzen der XML-Daten](../../relational-databases/xml/create-instances-of-xml-data.md)   
- [xml-Datentypmethoden](../../t-sql/xml/xml-data-type-methods.md)   
- [XML Data Modification Language &#40; XML DML &#41;](../../t-sql/xml/xml-data-modification-language-xml-dml.md)  
+ [XML-Datentypmethoden](../../t-sql/xml/xml-data-type-methods.md)   
+ [XML DML (Data Modification Language) &#40;XML DML&#41;](../../t-sql/xml/xml-data-modification-language-xml-dml.md)  
   
   

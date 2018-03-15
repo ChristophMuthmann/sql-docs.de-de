@@ -1,5 +1,5 @@
 ---
-title: "Umgekehrter Schrägstrich (Zeilenfortsetzungszeichen) (Transact-SQL) | Microsoft Docs"
+title: "Umgekehrter Schrägstrich (Zeilenfortsetzung) (Transact-SQL) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 11/09/2017
 ms.prod: sql-non-specified
@@ -44,10 +44,10 @@ ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="backslash-line-continuation-transact-sql"></a>Umgekehrter Schrägstrich (Zeilenfortsetzungszeichen) (Transact-SQL)
+# <a name="backslash-line-continuation-transact-sql"></a>Umgekehrter Schrägstrich (Zeilenfortsetzung) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-`\`teilt eine lange Zeichenfolgenkonstante, die Zeichen oder binär, in zwei oder mehr Zeilen auf.  
+`\` teilt eine lange Zeichenfolgen- oder Binärzeichenfolgenkonstante in mindestens zwei Zeilen auf, um die Lesbarkeit zu erhöhen.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -59,20 +59,20 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="arguments"></a>Argumente  
- \<erster Abschnitt der Zeichenfolge >  
+ \<erster Abschnitt der Zeichenfolge>  
  Ist der Anfang einer Zeichenfolge.  
   
- \<Fortsetzung der Abschnitt der Zeichenfolge >  
+ \<fortgesetzter Abschnitt der Zeichenfolge>  
  Ist die Fortsetzung einer Zeichenfolge.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Dieser Befehl gibt den ersten und den fortgesetzten Abschnitt der Zeichenfolge ohne den umgekehrten Schrägstrich als eine einzige Zeichenfolge zurück.  
 
 ## <a name="examples"></a>Beispiele  
 
-### <a name="a-splitting-a-character-string"></a>A. Aufteilen einer Zeichenfolge  
+### <a name="a-splitting-a-character-string"></a>A. Teilen einer Zeichenfolge  
 
-Im folgenden Beispiel wird ein umgekehrter Schrägstrich und ein Wagenrücklaufzeichen, eine Zeichenfolge in zwei Linien geteilt.  
+Im folgenden Beispiel werden ein umgekehrter Schrägstrich und ein Wagenrücklauf verwendet, um eine Zeichenfolge in zwei Zeilen zu teilen.  
   
 ```  
 SELECT 'abc\  
@@ -88,9 +88,9 @@ def' AS [ColumnResult];
  abcdef
  ```    
 
-### <a name="b-splitting-a-binary-string"></a>B. Teilen eine binäre Zeichenfolge  
+### <a name="b-splitting-a-binary-string"></a>B. Teilen einer Binärzeichenfolge  
 
-Im folgende Beispiel werden ein umgekehrter Schrägstrich und ein Wagenrücklauf verwendet, um eine binäre Zeichenfolge in zwei Linien geteilt.  
+Im folgenden Beispiel werden ein umgekehrter Schrägstrich und ein Wagenrücklauf verwendet, um eine Binärzeichenfolge in zwei Zeilen zu teilen.  
 
 ```  
 SELECT 0xabc\  
@@ -106,12 +106,12 @@ def AS [ColumnResult];
  0xABCDEF
  ```    
 
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [Integrierte Funktionen &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
- [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [Operatoren &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [&#40;Division&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/divide-transact-sql.md)   
- [&#40; Divisionszuweisung &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/divide-equals-transact-sql.md)   
- [Zusammengesetzte Operatoren &#40; Transact-SQL &#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)  
+ [&#40;Division Assignment&#41; &#40;Transact-SQL&#41; ((Divisionszuweisung) (Transact-SQL))](../../t-sql/language-elements/divide-equals-transact-sql.md)   
+ [Compound Operators &#40;Transact-SQL&#41; (Verbundoperatoren (Transact-SQL))](../../t-sql/language-elements/compound-operators-transact-sql.md)  
   
   

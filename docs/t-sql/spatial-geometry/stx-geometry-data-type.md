@@ -1,5 +1,5 @@
 ---
-title: STX (Geometry-Datentyp) | Microsoft Docs
+title: STX (geometry-Datentyp) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stx-geometry-data-type"></a>STX (geometry-Datentyp)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Die X-Koordinate-Eigenschaft von einem **Punkt**Instanz.
+Die Eigenschaft, die die X-Koordinate einer **Point**-Instanz angibt.
   
 ## <a name="syntax"></a>Syntax  
   
@@ -44,12 +44,12 @@ Die X-Koordinate-Eigenschaft von einem **Punkt**Instanz.
 ```  
   
 ## <a name="return-types"></a>Rückgabetypen  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Typ: **"float"**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Typ: **float**  
   
  CLR-Typ: **SqlDouble**  
   
-## <a name="remarks"></a>Hinweise  
- Der Wert dieser Eigenschaft wird null sein, wenn die **Geometry** Instanz ist nicht mit einem Punkt.  
+## <a name="remarks"></a>Remarks  
+ Der Wert dieser Eigenschaft ist NULL, wenn die **geometry**-Instanz kein Punkt ist.  
   
  Diese Eigenschaft ist schreibgeschützt.  
   
@@ -62,9 +62,9 @@ SET @g = geometry::STGeomFromText('POINT(3 8)', 0);
 SELECT @g.STX;  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [STY &#40;geometry-Datentyp&#41;](../../t-sql/spatial-geometry/sty-geometry-data-type.md)   
- [STSrid &#40; Geometry-Datentyp &#41;](../../t-sql/spatial-geometry/stsrid-geometry-data-type.md)   
+ [STSrid &#40;geometry-Datentyp&#41;](../../t-sql/spatial-geometry/stsrid-geometry-data-type.md)   
  [OGC-Methoden für geometry-Instanzen](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

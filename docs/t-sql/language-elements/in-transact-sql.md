@@ -1,5 +1,5 @@
 ---
-title: IN (Transact-SQL) | Microsoft Docs
+title: IN (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 08/29/2016
 ms.prod: sql-non-specified
@@ -53,27 +53,27 @@ test_expression [ NOT ] IN
   
 ## <a name="arguments"></a>Argumente  
  *test_expression*  
- Ist ein beliebiger gültiger [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md).  
+ Ein gültiger [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md).  
   
  *subquery*  
- Ist eine Unterabfrage mit einem Resultset, das aus einer Spalte besteht. Diese Spalte muss denselben Datentyp wie aufweisen *Test_expression*.  
+ Ist eine Unterabfrage mit einem Resultset, das aus einer Spalte besteht. Diese Spalte muss denselben Datentyp besitzen wie *test_expression*.  
   
- *Ausdruck*[ **,**... *n* ]  
- Eine Liste mit Ausdrücken, die auf Übereinstimmungen geprüft werden sollen. Alle Ausdrücke müssen vom gleichen Typ wie sein *Test_expression*.  
+ *expression*[ **,**... *n* ]  
+ Eine Liste mit Ausdrücken, die auf Übereinstimmungen geprüft werden sollen. Alle Ausdrücke müssen denselben Datentyp besitzen wie *test_expression*.  
   
 ## <a name="result-types"></a>Ergebnistypen  
  **Boolean**  
   
 ## <a name="result-value"></a>Ergebniswert  
- Wenn der Wert der *Test_expression* gleich zurückgegebenen Wert *Unterabfrage* oder einem beliebigen anderen *Ausdruck* aus der Liste durch Trennzeichen getrennte ist der Ergebniswert TRUE; der Ergebniswert ist, andernfalls "false".  
+ Wenn der Wert von *test_expression* einem von der *Unterabfrage* zurückgegebenen Wert oder einem *Ausdruck* aus der durch Trennzeichen getrennten Liste entspricht, ist der Ergebniswert TRUE. Andernfalls ist der Ergebniswert FALSE.  
   
- Verwenden von NOT IN negiert die *Unterabfrage* Wert oder *Ausdruck*.  
+ Die Verwendung von NOT IN negiert den Wert der *Unterabfrage* oder den *Ausdruck*.  
   
 > [!CAUTION]  
->  Null-Werten zurückgegebenes *Unterabfrage* oder *Ausdruck* , sind im Vergleich zu *Test_expression* mithilfe von IN oder nicht IN "UNKNOWN" zurückgegeben. Werden NULL-Werte zusammen mit IN oder NOT IN verwendet, kann dies zu unerwarteten Ergebnissen führen.  
+>  Bei von der *Unterabfrage* oder dem *Ausdruck* zurückgegebenen NULL-Werten, die mithilfe von IN oder NOT IN mit *test_expression* verglichen werden, wird UNKNOWN zurückgegeben. Werden NULL-Werte zusammen mit IN oder NOT IN verwendet, kann dies zu unerwarteten Ergebnissen führen.  
   
-## <a name="remarks"></a>Hinweise  
- Einschließlich explizit innerhalb der Klammern eine IN-Klausel eine extrem hohe Zahl von Werten (viele Tausende von Werte durch Kommas getrennt) kann verbrauchen Ressourcen und die Fehler 8623 oder 8632 auftreten. Um dieses Problem zu umgehen, speichern Sie die Elemente in der Liste IN einer Tabelle, und Verwenden einer SELECT-Unterabfrage in einer IN-Klausel.  
+## <a name="remarks"></a>Remarks  
+ Wenn eine IN-Klausel eine extrem hohe Anzahl von Werten (viele Tausende durch Trennzeichen getrennte Werte) explizit in den Klammern enthält, können die Ressourcen überbeansprucht werden und die Fehler 8623 oder 8632 auftreten. Speichern Sie die Elemente in der IN-Liste in einer Tabelle, und verwenden Sie eine SELECT-Unterabfrage in einer IN-Klausel, um dieses Problem zu umgehen.  
   
  Fehler 8623:  
   
@@ -114,7 +114,7 @@ WHERE e.JobTitle IN ('Design Engineer', 'Tool Designer', 'Marketing Assistant');
 GO  
 ```  
   
- Hier ist das Resultset aus beiden Abfragen.  
+ Im Folgenden wird das Resultset der beiden Abfragen aufgeführt.  
   
 ```  
 FirstName   LastName      Title  
@@ -177,10 +177,10 @@ WHERE p.BusinessEntityID NOT IN
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
-### <a name="d-using-in-and-not-in"></a>D. IN und nicht IN Verwendung  
- Das folgende Beispiel findet alle Einträge in der `FactInternetSales` Tabelle, bei denen `SalesReasonKey` Werte in der `DimSalesReason` Tabelle.  
+### <a name="d-using-in-and-not-in"></a>D. Verwenden von IN und NOT IN  
+ Im folgenden Beispiel werden alle Einträge in der Tabelle `FactInternetSales` gefunden, die den Werten von `SalesReasonKey` in der Tabelle `DimSalesReason` entsprechen.  
   
 ```  
 -- Uses AdventureWorks  
@@ -190,7 +190,7 @@ WHERE SalesReasonKey
 IN (SELECT SalesReasonKey FROM DimSalesReason);   
 ```  
   
- Das folgende Beispiel findet alle Einträge in der `FactInternetSalesReason` Tabelle, die nicht übereinstimmen `SalesReasonKey` Werte in der `DimSalesReason` Tabelle.  
+ Im folgenden Beispiel werden alle Einträge in der Tabelle `FactInternetSalesReason` gefunden, die den Werten von `SalesReasonKey` in der Tabelle `DimSalesReason` nicht entsprechen.  
   
 ```  
 -- Uses AdventureWorks  
@@ -200,8 +200,8 @@ WHERE SalesReasonKey
 NOT IN (SELECT SalesReasonKey FROM DimSalesReason);  
 ```  
   
-### <a name="e-using-in-with-an-expression-list"></a>E. Verwenden sich mit einer Liste der Ausdrücke  
- Das folgende Beispiel findet alle IDs der Vertriebsmitarbeiter in die `DimEmployee` Tabelle für Mitarbeiter, die eine erste haben also entweder Namen `Mike` oder `Michael`.  
+### <a name="e-using-in-with-an-expression-list"></a>E. Verwendung von IN mit einer Ausdrucksliste  
+ Im folgenden Beispiel werden alle IDs der Vertriebsmitarbeiter in der Tabelle `DimEmployee` gefunden, die den Vornamen `Mike` oder `Michael` haben.  
   
 ```  
 -- Uses AdventureWorks  
@@ -211,9 +211,9 @@ FROM DimEmployee
 WHERE FirstName IN ('Mike', 'Michael');  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)   
- [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [Ausdrücke &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [Integrierte Funktionen &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
  [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   

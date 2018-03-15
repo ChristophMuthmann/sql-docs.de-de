@@ -1,5 +1,5 @@
 ---
-title: Einbinden relationaler Daten in XML-Daten | Microsoft Docs
+title: Einbinden relationaler Daten in XML-Daten | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
@@ -36,22 +36,22 @@ ms.lasthandoff: 01/25/2018
 # <a name="binding-relational-data-inside-xml-data"></a>Einbinden relationaler Daten in XML-Daten
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Sie können angeben, [Xml-Datentypmethoden](../../t-sql/xml/xml-data-type-methods.md) gegen eine **Xml** -Datentyp, Variable oder Spalte. Z. B. die [Query &#40; &#41; -Methode &#40; Xml-Datentyp &#41; ](../../t-sql/xml/query-method-xml-data-type.md) führt die angegebene XQuery-Abfrage für eine XML-Instanz. Beim Erstellen von XML-Code auf diese Art sollten Sie einen Wert aus einer Nicht-XML-Typspalte oder eine Transact-SQL-Variable einbringen. Dieser Prozess wird als Einbinden relationaler Daten in XML bezeichnet.  
+  Sie können [XML-Datentypmethoden](../../t-sql/xml/xml-data-type-methods.md) für eine **XML**-Datentypvariable oder -spalte angeben. So führt die [&#40;Abfragemethode&#41; &#40;XML-Datentyp&#41;](../../t-sql/xml/query-method-xml-data-type.md) beispielsweise die angegebene XQuery für eine XML-Instanz aus. Beim Erstellen von XML-Code auf diese Art sollten Sie einen Wert aus einer Nicht-XML-Typspalte oder eine Transact-SQL-Variable einbringen. Dieser Prozess wird als Einbinden relationaler Daten in XML bezeichnet.  
   
  Um relationale Nicht-XML-Daten in XML zu binden, bietet das SQL Server-Datenbankmodul folgende Pseudofunktionen:  
   
--   [sql:column&#40;&#41; Function &#40;XQuery&#41;](../../xquery/xquery-extension-functions-sql-column.md) Lets you use the values from a relational column in your XQuery or XML DML expression.  
+-   Mithilfe von [sql:column&#40;&#41; Function &#40;XQuery&#41;](../../xquery/xquery-extension-functions-sql-column.md) können Sie die Werte aus einer relationalen Spalte in Ihrem XQuery- oder XML DML-Ausdruck verwenden.  
   
 -   [sql:variable&#40;&#41; Function &#40;XQuery&#41;](../../xquery/xquery-extension-functions-sql-variable.md) . Gibt Ihnen die Möglichkeit, den Wert einer SQL-Variablen im XQuery- oder XML DML-Ausdruck zu verwenden.  
   
- Sie können diese Funktionen mit **Xml** -Datentypmethoden tritt ein, wenn Sie einen relationalen Werts in XML verfügbar machen möchten.  
+ Sie können diese Funktionen jedes Mal mit **XML**-Datentypmethoden verwenden, wenn Sie einen relationalen Wert in XML verfügbar machen möchten.  
   
- Nicht möglich, verwenden Sie diese Funktionen zum Verweisen auf Daten in Spalten oder Variablen von der **Xml**, benutzerdefinierte CLR-Typen, Datetime, Smalldatetime, **Text**, **Ntext**, **Sql_variant**, und **Image** Typen.  
+ Diese Funktionen können nicht für den Verweis auf Daten in Spalten oder Variablen der benutzerdefinierten CLR-Typen des Datentyps **XML** sowie der Typen datetime, smalldatetime, **text**, **ntext**, **sql_variant** und **image** verwendet werden.  
   
- Das Einbinden ist außerdem nur zur Leseberechtigung. Deshalb können Sie in Spalten keine Daten schreiben, die diese Funktion verwenden. Beispielsweise Sql:variable("@x") = "*einige Ausdruck"* ist nicht zulässig.  
+ Das Einbinden ist außerdem nur zur Leseberechtigung. Deshalb können Sie in Spalten keine Daten schreiben, die diese Funktion verwenden. Beispielsweise ist sql:variable("@x")="*some expression"* nicht zulässig.  
   
 ## <a name="example-cross-domain-query-using-sqlvariable"></a>Beispiel: Domänenübergreifende Abfrage mithilfe von sql:variable()  
- Dieses Beispiel zeigt, wie **SQL:Variable()** kann eine Anwendung eine Abfrage parametrisieren aktiviert. Die ISBN mithilfe einer SQL-Variablen übergeben @isbn. Durch Ersetzen der Konstante mit **SQL:Variable()**, die Abfrage kann für die Suche nach jeder ISBN und nicht nur den, dessen ISBN-Nummer 0-7356-1588-2 ist, verwendet werden.  
+ In diesem Beispiel wird gezeigt, wie eine Anwendung mit **sql:variable()** eine Abfrage parametrisieren kann. Die ISBN wird mit der SQL-Variablen @isbn übergeben. Durch Ersetzen der Konstante durch **sql:variable()** kann die Abfrage für die Suche nach einer beliebigen ISBN verwendet werden, nicht nur für die Suche nach der ISBN 0-7356-1588-2.  
   
 ```  
 DECLARE @isbn varchar(20)  
@@ -61,9 +61,9 @@ FROM    T
 WHERE   xCol.exist ('/book/@ISBN[. = sql:variable("@isbn")]') = 1  
 ```  
   
- **SQL:Column()** können auf ähnliche Weise verwendet werden und bietet zusätzliche Vorteile. Indizes für die Spalte können aus Effizienzgründen verwendet werden, was durch den kostenbasierten Abfrageoptimierer entschieden wird. Außerdem kann die berechnete Spalte zum Speichern einer heraufgestuften Eigenschaft verwendet werden.  
+ **sql:column()** kann auf ähnliche Weise verwendet werden und bietet weitere Vorteile. Indizes für die Spalte können aus Effizienzgründen verwendet werden, was durch den kostenbasierten Abfrageoptimierer entschieden wird. Außerdem kann die berechnete Spalte zum Speichern einer heraufgestuften Eigenschaft verwendet werden.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [xml Data Type Methods (xml-Datentypmethoden)](../../t-sql/xml/xml-data-type-methods.md)  
   
   

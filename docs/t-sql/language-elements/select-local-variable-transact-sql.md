@@ -1,5 +1,5 @@
 ---
-title: "Wählen Sie @local_variable (Transact-SQL) | Microsoft Docs"
+title: SELECT @local_variable (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 09/06/2017
 ms.prod: sql-non-specified
@@ -41,9 +41,9 @@ ms.lasthandoff: 01/25/2018
 # <a name="select-localvariable-transact-sql"></a>SELECT @local_variable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Legt eine lokale Variable auf den Wert eines Ausdrucks.  
+  Legt eine lokale Variable auf den Wert eines Ausdrucks fest.  
   
- Zum Zuweisen von Variablen, empfehlen wir die Verwendung [festgelegt @local_variable ](../../t-sql/language-elements/set-local-variable-transact-sql.md) anstelle von SELECT @*Local_variable*.  
+ Zum Zuweisen von Variablen empfiehlt es sich, dass Sie [SET@local_variable](../../t-sql/language-elements/set-local-variable-transact-sql.md) anstelle von SELECT @*local_variable* verwenden.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -64,23 +64,23 @@ Den Wert auf der rechten Seite der Variablen auf der linken Seite zuweisen.
 Verbundzuweisungsoperator:  
   |Operator |action |   
   |-----|-----|  
-  | = | Weist den Ausdruck, der folgt, der Variablen. |  
-  | += | Hinzufügen und zuweisen |   
+  | = | Weist der Variable den darauf folgenden Ausdruck zu. |  
+  | += | Addition und Zuweisung |   
   | -= | Subtraktion und Zuweisung |  
-  | \*= | "Multiply" und zuweisen |  
+  | \*= | Multiplikation und Zuweisung |  
   | /= | Division und Zuweisung |  
-  | %= | Modulo und zuweisen |  
-  | &= | Bitweises AND und Zuweisung |  
+  | %= | Modulo und Zuweisung |  
+  | &= | Bitweises UND und Zuweisung |  
   | ^= | Bitweises XOR und Zuweisung |  
   | \|= | Bitweises OR und Zuweisung |  
   
  *expression*  
- Ist ein beliebiger gültiger [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md). Er enthält eine skalare Unterabfrage.  
+ Ein beliebiger gültiger [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md). Er enthält eine skalare Unterabfrage.  
   
-## <a name="remarks"></a>Hinweise  
- SELECT @*Local_variable* wird normalerweise verwendet, um einen einzelnen Wert in die Variable zurückzugeben. Jedoch wenn *Ausdruck* ist der Name einer Spalte können sie mehrere Werte zurückgeben. Falls die SELECT-Anweisung mehr als einen Wert zurückgibt, wird der Variablen der zuletzt zurückgegebene Wert zugewiesen.  
+## <a name="remarks"></a>Remarks  
+ SELECT @*local_variable* dient in der Regel dazu, einen einzelnen Wert in die Variable zurückzugeben. Wenn es sich bei *expression* jedoch um den Namen einer Spalte handelt, können auch mehrere Werte zurückgegeben werden. Falls die SELECT-Anweisung mehr als einen Wert zurückgibt, wird der Variablen der zuletzt zurückgegebene Wert zugewiesen.  
   
- Wenn die SELECT-Anweisung keine Zeilen zurückgibt, behält die Variable ihren derzeitigen Wert bei. Wenn *Ausdruck* eine skalare Unterabfrage, gibt keinen Wert, der die Variable auf NULL festgelegt ist.  
+ Wenn die SELECT-Anweisung keine Zeilen zurückgibt, behält die Variable ihren derzeitigen Wert bei. Ist *expression* eine skalare Unterabfrage, die keinen Wert zurückgibt, wird die Variable auf NULL festgelegt.  
   
  Eine SELECT-Anweisung kann mehrere lokale Variablen initialisieren.  
   
@@ -89,7 +89,7 @@ Verbundzuweisungsoperator:
   
 ## <a name="examples"></a>Beispiele  
   
-### <a name="a-use-select-localvariable-to-return-a-single-value"></a>A. SELECT-Anweisung @local_variable auf einen einzelnen Wert zurückgeben  
+### <a name="a-use-select-localvariable-to-return-a-single-value"></a>A. Verwenden von SELECT @local_variable zum Zurückgeben eines einzelnen Wertes  
  Das folgende Beispiel weist der Variable `@var1` den Wert `Generic Name` zu. Die Abfrage der Tabelle `Store` gibt keine Zeilen zurück, da der für `CustomerID` angegebene Wert nicht in der Tabelle enthalten ist. Die Variable behält den Wert `Generic Name` bei.  
   
 ```sql  
@@ -111,7 +111,7 @@ SELECT @var1 AS 'Company Name';
  Generic Name  
  ```  
   
-### <a name="b-use-select-localvariable-to-return-null"></a>B. SELECT-Anweisung @local_variable null zurückgegeben.  
+### <a name="b-use-select-localvariable-to-return-null"></a>B. Verwenden von SELECT @local_variable zum Zurückgeben von NULL  
  Das folgende Beispiel weist der Variable `@var1` mithilfe einer Unterabfrage einen Wert zu. Da der für `CustomerID` angeforderte Wert nicht vorhanden ist, gibt die Unterabfrage keinen Wert zurück, und die Variable wird auf `NULL` gesetzt.  
   
 ```sql  
@@ -133,10 +133,10 @@ Company Name
 NULL  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
- [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
- [Zusammengesetzte Operatoren &#40; Transact-SQL &#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [DEKLARIEREN SIE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
+ [Ausdrücke &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [Verbundoperatoren &#40;Transact-SQL&#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)  
   
   

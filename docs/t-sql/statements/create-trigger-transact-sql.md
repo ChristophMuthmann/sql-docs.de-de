@@ -1,5 +1,5 @@
-﻿---
-title: Erstellen Sie TRIGGER (Transact-SQL) | Microsoft Docs
+---
+title: CREATE TRIGGER (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
@@ -47,13 +47,13 @@ ms.lasthandoff: 11/21/2017
 
   Erstellt einen DML-, DDL- oder LOGON-Trigger. Ein Trigger ist eine spezielle Art von gespeicherter Prozedur, die automatisch ausgeführt wird, wenn ein Ereignis auf dem Datenbankserver auftritt. DML-Trigger werden ausgeführt, wenn ein Benutzer versucht, Daten mithilfe eines DML-Ereignisses (Data Manipulation Language, Datenbearbeitungssprache) zu ändern. DML-Ereignisse sind INSERT-, UPDATE- oder DELETE-Anweisungen für eine Tabelle oder Sicht. Diese Trigger werden ausgelöst, sobald ein beliebiges gültiges Ereignis ausgelöst wird, unabhängig davon, ob Tabellenzeilen betroffen sind oder nicht. Weitere Informationen finden Sie unter [DML Triggers](../../relational-databases/triggers/dml-triggers.md).  
   
- DDL-Trigger werden als Antwort auf eine Vielzahl von Data Definition Language (DDL)-Ereignissen ausgeführt. Diese Ereignisse entsprechen im Wesentlichen den Anweisungen CREATE, ALTER und DROP von [!INCLUDE[tsql](../../includes/tsql-md.md)] sowie bestimmten gespeicherten Systemprozeduren, die DDL-ähnliche Vorgänge ausführen. LOGON-Trigger werden als Reaktion auf das LOGON-Ereignis ausgelöst, das wiederum ausgelöst wird, wenn eine Benutzersitzung eingerichtet wird. Trigger können direkt aus [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisungen oder aus Methoden von Assemblys erstellt werden, welche in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] common Language Runtime (CLR) erstellt wurden, um dann mittels Datenuploads in eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hochgeladen zu werden. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ermöglicht das Erstellen mehrerer Trigger für jede konkrete Anweisung.  
+ DDL-Trigger werden als Reaktion auf verschiedene DDL-Ereignisse (Data Definition Language, Datendefinitionssprache) ausgeführt. Diese Ereignisse entsprechen im Wesentlichen den Anweisungen CREATE, ALTER und DROP von [!INCLUDE[tsql](../../includes/tsql-md.md)] sowie bestimmten gespeicherten Systemprozeduren, die DDL-ähnliche Vorgänge ausführen. LOGON-Trigger werden als Reaktion auf das LOGON-Ereignis ausgelöst, das wiederum ausgelöst wird, wenn eine Benutzersitzung eingerichtet wird. Trigger können direkt aus [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen oder aus Methoden von Assemblys erstellt werden, die in der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Common Language Runtime (CLR) erstellt und auf eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hochgeladen werden. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ermöglicht das Erstellen mehrerer Trigger für jede konkrete Anweisung.  
   
 > [!IMPORTANT]  
->  Bösartiger Code innerhalb von Triggern kann unter ausgeweiteten Privilegien ausgeführt werden. Weitere Informationen zur Abwehr dieses Sicherheitsrisikos finden Sie unter [Verwalten der Triggersicherheit](../../relational-databases/triggers/manage-trigger-security.md).  
+>  Bösartiger Code innerhalb von Triggern kann unter ausgeweiteten Privilegien ausgeführt werden. Weitere Informationen dazu, wie Sie diese Bedrohung minimieren, finden Sie unter [Verwalten der Triggersicherheit](../../relational-databases/triggers/manage-trigger-security.md).  
   
 > [!NOTE]  
->  Die .NET Framework-CLR-Integration in SQL Server wird in diesem Thema erläutert. CLR-Integration gilt nicht für Azure SQL-Datenbank.  
+>  Die Integration der .NET Framework-CLR in SQL Server wird in diesem Thema erläutert. Die Integration der CLR gilt nicht für Azure SQL-Datenbank.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -165,27 +165,27 @@ AS { sql_statement  [ ; ] [ ,...n ]  [ ; ] }
 ```  
   
 ## <a name="arguments"></a>Argumente
-ODER ÄNDERN  
- **Gilt für**: Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (beginnend mit [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1). 
+OR ALTER  
+ **Gilt für**: Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1). 
   
- Bedingt ändert den Trigger nur dann, wenn sie bereits vorhanden ist. 
+ Ändert den Trigger nur, wenn dieser bereits vorhanden ist. 
   
  *schema_name*  
- Der Name des Schemas, zu dem ein DML-Trigger gehört. DML-Trigger werden auf das Schema der Tabelle oder der Sicht begrenzt, in denen sie erstellt werden. *Schema_name* kann für DDL- oder Logon-Trigger angegeben werden.  
+ Der Name des Schemas, zu dem ein DML-Trigger gehört. DML-Trigger werden auf das Schema der Tabelle oder der Sicht begrenzt, in denen sie erstellt werden. *schema_name* kann für DDL- oder LOGON-Trigger nicht angegeben werden.  
   
- *Form trigger_name*  
- Der Name des Triggers. Ein *Form Trigger_name* muss den Regeln für entsprechen [Bezeichner](../../relational-databases/databases/database-identifiers.md), außer dass *Form Trigger_name* darf nicht mit # beginnen oder ##.  
+ *trigger_name*  
+ Der Name des Triggers. Ein *trigger_name* muss den Regeln für [Bezeichner](../../relational-databases/databases/database-identifiers.md) entsprechen, und *trigger_name* darf nicht mit # oder ## beginnen.  
   
- *Tabelle* | *anzeigen*  
+ *table* | *view*  
  Die Tabelle oder Sicht, für die der DML-Trigger ausgeführt wird; zuweilen wird diese als Triggertabelle oder Triggersicht bezeichnet. Die Angabe des vollqualifizierten Namens der Tabelle oder Sicht ist optional. Auf eine Sicht kann nur von einem INSTEAD OF-Trigger verwiesen werden. DML-Trigger können nicht für lokale oder globale temporäre Tabellen definiert werden.  
   
  DATABASE  
- Wendet den Bereich eines DDL-Triggers auf die aktuelle Datenbank an. Wenn angegeben, der Trigger wird ausgelöst, wenn *Event_type* oder *Event_group* tritt auf, in der aktuellen Datenbank.  
+ Wendet den Bereich eines DDL-Triggers auf die aktuelle Datenbank an. Wenn angegeben, wird der Trigger jedes Mal ausgelöst, wenn in der aktuellen Datenbank *event_type* oder *event_group* auftritt.  
   
  ALL SERVER  
  **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Wendet den Bereich eines DDL- oder LOGON-Triggers auf den aktuellen Server an. Wenn angegeben, der Trigger wird ausgelöst, wenn *Event_type* oder *Event_group* erfolgt an einer beliebigen Stelle auf dem aktuellen Server.  
+ Wendet den Bereich eines DDL- oder LOGON-Triggers auf den aktuellen Server an. Wenn angegeben, wird der Trigger jedes Mal ausgelöst, wenn auf dem aktuellen Server *event_type* oder *event_group* auftritt.  
   
  WITH ENCRYPTION  
  **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -195,19 +195,19 @@ ODER ÄNDERN
  EXECUTE AS  
  Gibt den Sicherheitskontext an, unter dem der Trigger ausgeführt wird. Sie können steuern, welches Benutzerkonto die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet, um so die Berechtigungen für beliebige Datenbankobjekte zu überprüfen, auf die der Trigger verweist.  
   
- Diese Option ist erforderlich für Trigger auf speicheroptimierten Tabellen.  
+ Diese Option ist für Trigger in speicheroptimierten Tabellen erforderlich.  
   
- Weitere Informationen finden Sie unter [EXECUTE AS-Klausel &#40; Transact-SQL &#41; ](../../t-sql/statements/execute-as-clause-transact-sql.md).  
+ Weitere Informationen finden Sie unter [EXECUTE AS-Klausel &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-clause-transact-sql.md).  
   
  NATIVE_COMPILATION  
- Gibt an, dass der Trigger systemintern kompiliert wird.  
+ Gibt an, dass die Trigger nativ kompiliert werden.  
   
- Diese Option ist erforderlich für Trigger auf speicheroptimierten Tabellen.  
+ Diese Option ist für Trigger in speicheroptimierten Tabellen erforderlich.  
   
  SCHEMABINDING  
- Stellt sicher, dass Tabellen, die von einem Trigger verwiesen werden, gelöscht oder geändert werden können nicht aus.  
+ Stellt sicher, dass Tabellen, auf die durch einen Trigger verwiesen wird, nicht gelöscht oder geändert werden können.  
   
- Diese Option ist erforderlich für Trigger auf speicheroptimierten Tabellen und wird für Trigger in herkömmlichen Tabellen nicht unterstützt.  
+ Diese Option ist für Trigger in speicheroptimierten Tabellen erforderlich und wird nicht für Trigger in herkömmlichen Tabellen unterstützt.  
   
  FOR | AFTER  
  AFTER gibt an, dass der DML-Trigger nur dann ausgelöst wird, nachdem alle Vorgänge, die in der den Trigger auslösenden SQL-Anweisung festgelegt sind, erfolgreich ausgeführt wurden. Alle referenziellen CASCADE-Aktionen und Einschränkungsüberprüfungen müssen ebenfalls erfolgreich ausgeführt worden sein, bevor dieser Trigger ausgelöst wird.  
@@ -217,14 +217,14 @@ ODER ÄNDERN
  AFTER-Trigger können für Sichten nicht definiert werden.  
   
  INSTEAD OF  
- Gibt an, dass der DML-Trigger ausgeführt wird *anstelle von* der auslösenden SQL-Anweisung aus diesem Grund, die die Aktionen der auslösenden Anweisungen überschrieben. INSTEAD OF kann für DDL- oder LOGON-Trigger nicht angegeben werden.  
+ Gibt an, dass der DML-Trigger *anstelle* der auslösenden SQL-Anweisung ausgeführt wird, wodurch die Aktionen der auslösenden Anweisungen überschrieben werden. INSTEAD OF kann für DDL- oder LOGON-Trigger nicht angegeben werden.  
   
  Es kann nur maximal ein INSTEAD OF-Trigger pro INSERT-, UPDATE- oder DELETE-Anweisung für eine Tabelle oder Sicht definiert werden. Es ist jedoch möglich, Sichten auf Sichten zu definieren, wobei jede Sicht über einen eigenen INSTEAD OF-Trigger verfügt.  
   
  INSTEAD OF-Trigger sind für aktualisierbare Sichten, die WITH CHECK OPTION verwenden, nicht zulässig. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] löst einen Fehler aus, falls ein INSTEAD OF-Trigger zu einer aktualisierbaren Sicht hinzugefügt wird, in der WITH CHECK OPTION angegeben ist. Der Benutzer muss die Option mithilfe von ALTER VIEW entfernen, bevor der INSTEAD OF-Trigger definiert werden kann.  
   
  { [ DELETE ] [ , ] [ INSERT ] [ , ] [ UPDATE ] }   
- Gibt die Anweisungen zur Datenänderung an, die den DML-Trigger aktivieren, wenn Sie ihn für diese Tabelle oder Sicht auszuführen versuchen. Es muss mindestens eine Option angegeben werden. Eine beliebige Kombination dieser Optionen in beliebiger Reihenfolge ist in der Triggerdefinition zulässig.  
+ Gibt die Anweisungen zur Datenänderung an, die den DML-Trigger aktivieren, wenn Sie ihn für diese Tabelle oder Sicht auszuführen versuchen. Es muss mindestens eine Option angegeben werden. Diese Optionen können in beliebiger Kombination und Reihenfolge in der Triggerdefinition angegeben werden.  
   
  Für INSTEAD OF-Trigger ist die Option DELETE nicht für Tabellen mit einer referenziellen Beziehung untereinander zulässig, wenn für ON DELETE die Option CASCADE angegeben ist. Ebenso ist die Option UPDATE nicht für Tabellen mit einer referenziellen Beziehung untereinander zulässig, wenn für ON UPDATE die Option CASCADE angegeben ist.  
   
@@ -234,24 +234,24 @@ ODER ÄNDERN
  Gibt an, dass ein weiterer Trigger eines vorhandenen Typs hinzugefügt werden soll. WITH APPEND kann nicht mit INSTEAD OF-Triggern verwendet werden oder falls der AFTER-Trigger explizit angegeben ist. Aus Gründen der Abwärtskompatibilität kann WITH APPEND nur verwendet werden, wenn FOR angegeben ist, INSTEAD OF oder AFTER jedoch nicht. WITH APPEND kann nicht angegeben werden, wenn EXTERNAL NAME angegeben ist (wenn es sich bei dem Trigger also um einen CLR-Trigger handelt).  
   
  *event_type*  
- Der Name eines [!INCLUDE[tsql](../../includes/tsql-md.md)]-Sprachereignisses, nach dessen Ausführung ein DDL-Trigger ausgelöst wird. Gültige Ereignisse für DDL-Trigger sind aufgeführt [DDL-Ereignisse](../../relational-databases/triggers/ddl-events.md).  
+ Der Name eines [!INCLUDE[tsql](../../includes/tsql-md.md)]-Sprachereignisses, nach dessen Ausführung ein DDL-Trigger ausgelöst wird. Gültige Ereignisse für DDL-Trigger werden unter [DDL-Ereignisse](../../relational-databases/triggers/ddl-events.md) aufgeführt.  
   
  *event_group*  
- Der Name einer vordefinierten Gruppe von [!INCLUDE[tsql](../../includes/tsql-md.md)]-Sprachereignissen. Die DDL-Trigger auslöst, nach der Ausführung eines beliebigen [!INCLUDE[tsql](../../includes/tsql-md.md)] Sprachereignis, zu der gehört *Event_group*. Gültige Ereignisgruppen für DDL-Trigger sind in aufgeführt [DDL-Ereignisgruppen](../../relational-databases/triggers/ddl-event-groups.md).  
+ Der Name einer vordefinierten Gruppe von [!INCLUDE[tsql](../../includes/tsql-md.md)]-Sprachereignissen. Der DDL-Trigger wird nach dem Ausführen eines beliebigen [!INCLUDE[tsql](../../includes/tsql-md.md)]-Sprachereignisses ausgelöst, das zu *event_group* gehört. Gültige Ereignisgruppen für DDL-Trigger werden unter [DDL-Ereignisgruppen](../../relational-databases/triggers/ddl-event-groups.md) aufgeführt.  
   
- Nach dem Ausführen der CREATE TRIGGER hat *Event_group* fungiert außerdem als Makro durch Hinzufügen von Ereignistypen es Ereignistypen der Sys. trigger_events-Katalogsicht.  
+ Nach dem Ausführen von CREATE TRIGGER dient *event_group* außerdem als Makro, das der sys.trigger_events-Katalogsicht die verarbeitbaren Ereignistypen hinzufügt.  
   
  NOT FOR REPLICATION  
  **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Gibt an, dass der Trigger nicht ausgeführt werden soll, wenn ein Replikations-Agent in der Tabelle ändert, die im Trigger beteiligt sind.  
+ Gibt an, dass der Trigger nicht ausgeführt werden soll, wenn ein Replikations-Agent die vom Trigger betroffene Tabelle ändert.  
   
  *sql_statement*  
  Die Triggerbedingungen und -aktionen. Triggerbedingungen geben zusätzliche Kriterien an, die bestimmen, ob der Versuch, DML-, DDL- oder LOGON-Ereignisse auszulösen, die Triggeraktionen auslöst.  
   
  Die in den [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen angegebenen Triggeraktionen treten in Kraft, wenn versucht wird, den Vorgang auszuführen.  
   
- Trigger können beliebig viele [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen jeglicher Art enthalten, einschließlich Ausnahmen. Weitere Informationen finden Sie in den Hinweisen. Ein Trigger ist dafür konzipiert, Daten auf der Grundlage einer Datenänderungs- oder Definitionsanweisung zu prüfen oder zu ändern, jedoch nicht dafür, Daten an den Benutzer zurückzugeben. Die [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisungen in einem Trigger enthalten häufig [Control-of-Flow-Sprache](~/t-sql/language-elements/control-of-flow.md).  
+ Trigger können beliebig viele [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen jeglicher Art enthalten, einschließlich Ausnahmen. Weitere Informationen finden Sie in den Hinweisen. Ein Trigger ist dafür konzipiert, Daten auf der Grundlage einer Datenänderungs- oder Definitionsanweisung zu prüfen oder zu ändern, jedoch nicht dafür, Daten an den Benutzer zurückzugeben. Die [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen in einem Trigger enthalten häufig [Sprachkonstrukte zur Ablaufsteuerung](~/t-sql/language-elements/control-of-flow.md).  
   
  DML-Trigger verwenden die gelöschten und eingefügten logischen (konzeptionellen) Tabellen. Strukturell ähneln sie der Tabelle, für die der Trigger definiert wurde, d. h. der Tabelle, für die versucht wurde, die Benutzeraktion auszuführen. Die gelöschten und eingefügten Tabellen enthalten die alten oder die neuen Werte der Zeilen, die möglicherweise durch die Benutzeraktion geändert werden. Um beispielsweise alle Werte in der `deleted`-Tabelle abzurufen, verwenden Sie:  
   
@@ -259,25 +259,25 @@ ODER ÄNDERN
 SELECT * FROM deleted;  
 ```  
   
- Weitere Informationen finden Sie unter [verwenden Sie die inserted- und deleted-Tabellen](../../relational-databases/triggers/use-the-inserted-and-deleted-tables.md).  
+ Weitere Informationen finden Sie unter [Verwenden der Tabellen „inserted“ und „deleted“](../../relational-databases/triggers/use-the-inserted-and-deleted-tables.md).  
   
- DDL- und Logon-Trigger zeichnen Informationen zu dem auslösenden Ereignis mithilfe der [EVENTDATA &#40; Transact-SQL &#41; ](../../t-sql/functions/eventdata-transact-sql.md) Funktion. Weitere Informationen finden Sie unter [verwenden der EVENTDATA-Funktion](../../relational-databases/triggers/use-the-eventdata-function.md).  
+ DDL- und LOGON-Trigger zeichnen Informationen zu dem auslösenden Ereignis auf, indem sie die Funktion [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md) verwenden. Weitere Informationen finden Sie unter [Verwenden der EVENTDATA-Funktion](../../relational-databases/triggers/use-the-eventdata-function.md).  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ermöglicht das Update von **Text**, **Ntext**, oder **Image** Spalten durch den INSTEAD OF-trigger für Tabellen oder Sichten.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ermöglicht das Aktualisieren der Spalten **text**, **ntext** oder **image** mithilfe des INSTEAD OF-Triggers für Tabellen oder Sichten.  
   
 > [!IMPORTANT]  
->  **Ntext**, **Text**, und **Image** Datentypen werden in einer zukünftigen Version von entfernt [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Vermeiden Sie die Verwendung dieser Datentypen bei neuen Entwicklungen, und planen Sie die Änderung von Anwendungen, in denen sie aktuell verwendet werden. Verwenden Sie stattdessen [nvarchar(max)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md), [varchar(max)](../../t-sql/data-types/char-and-varchar-transact-sql.md)und [varbinary(max)](../../t-sql/data-types/binary-and-varbinary-transact-sql.md) . Sowohl After-als auch INSTEAD OF-Trigger unterstützen **varchar(MAX)**, **nvarchar(MAX)**, und **varbinary(MAX)** Daten in den inserted- und deleted-Tabellen.  
+>  Die Datentypen **ntext**, **text** und **image** werden in einer zukünftigen Version von [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entfernt. Vermeiden Sie die Verwendung dieser Datentypen bei neuen Entwicklungen, und planen Sie die Änderung von Anwendungen, in denen sie aktuell verwendet werden. Verwenden Sie stattdessen [nvarchar(max)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md), [varchar(max)](../../t-sql/data-types/char-and-varchar-transact-sql.md)und [varbinary(max)](../../t-sql/data-types/binary-and-varbinary-transact-sql.md) . Die Trigger AFTER und INSTEAD OF unterstützen die Daten **varchar(max)**, **nvarchar(max)** und **varbinary(max)** in den Tabellen „inserted“ und „deleted“.  
   
- Für Trigger auf speicheroptimierten Tabellen die nur *Sql_statement* auf der obersten Ebene zulässig ist ein ATOMIC-Block. Die T-SQL-innerhalb von ATOMIC-Block zulässig ist durch die T-SQL-innerhalb von nativen Prozeduren zulässig beschränkt.  
+ Bei Triggern in speicheroptimierten Tabellen ist auf der obersten Ebene nur ein ATOMIC-Block als *sql_statement* erlaubt. Das im ATOMIC-Block erlaubte T-SQL ist durch das in nativen Prozeduren zulässige T-SQL beschränkt.  
   
- \<Method_specifier > **betrifft**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ \< method_specifier > **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Gibt für einen CLR-Trigger die Methode einer Assembly an, die an den Trigger gebunden werden soll. Die Methode darf keine Argumente enthalten und muss "void" zurückgeben. *CLASS_NAME* muss ein gültiger [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Bezeichner und als Klasse in der Assembly mit Assemblysichtbarkeit vorhanden sein. Wenn die Klasse über einen mit einem Namespace qualifizierten Namen verfügt, der '.' verwendet, um die einzelnen Bestandteile des Namespace voneinander zu trennen, muss im Klassennamen [ ] oder " " als Trennzeichen verwendet werden. Bei der Klasse darf es sich nicht um eine geschachtelte Klasse handeln.  
+ Gibt für einen CLR-Trigger die Methode einer Assembly an, die an den Trigger gebunden werden soll. Die Methode darf keine Argumente enthalten und muss "void" zurückgeben. *class_name* muss ein gültiger [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Bezeichner sein und als Klasse mit Assemblysichtbarkeit in der Assembly vorhanden sein. Wenn die Klasse über einen mit einem Namespace qualifizierten Namen verfügt, der '.' verwendet, um die einzelnen Bestandteile des Namespace voneinander zu trennen, muss im Klassennamen [ ] oder " " als Trennzeichen verwendet werden. Bei der Klasse darf es sich nicht um eine geschachtelte Klasse handeln.  
   
 > [!NOTE]  
->  Standardmäßig ist die Möglichkeit, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CLR-Code ausführt, deaktiviert. Sie erstellen, ändern und Löschen von Datenbankobjekten, die auf verwaltete Codemodule verweisen, aber diese Verweise werden nicht ausgeführt, in einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , sofern die [Option Clr enabled](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md) wird aktiviert, indem Sie mit ["sp_" Konfigurieren Sie](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
+>  Standardmäßig ist die Möglichkeit, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CLR-Code ausführt, deaktiviert. Sie können Datenbankobjekte erstellen, die auf verwaltete Codemodule verweisen, ändern und löschen. Diese Verweise werden jedoch nur dann in einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt, wenn die Option [clr enabled](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md) mithilfe von [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) aktiviert wird.  
   
-## <a name="remarks-dml-triggers"></a>"Hinweise" DML-Trigger  
+## <a name="remarks-dml-triggers"></a>Hinweise zu DML-Triggern  
  DML-Trigger werden häufig zum Erzwingen von Geschäftsregeln und Datenintegrität verwendet. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bietet deklarative referenzielle Integrität (DRI) durch die ALTER TABLE- und CREATE TABLE-Anweisungen. DRI stellt jedoch keine datenbankübergreifende referenzielle Integrität sicher. Referenzielle Integrität bezieht sich auf die Regeln über die Beziehungen zwischen den Primär- und den Fremdschlüsseln von Tabellen. Um referenzielle Integrität zu erzwingen, verwenden Sie die PRIMARY KEY- und FOREIGN KEY-Einschränkungen in ALTER TABLE und CREATE TABLE. Wenn es für die Triggertabelle Einschränkungen gibt, werden diese geprüft, nachdem der INSTEAD OF-Trigger ausgeführt wurde und bevor der AFTER-Trigger ausgeführt wird. Falls eine Verletzung der Einschränkungen vorliegt, wird für die Aktionen des INSTEAD OF-Triggers ein Rollback ausgeführt. Der AFTER-Trigger wird nicht ausgelöst.  
   
  Der erste und der letzte AFTER-Trigger, die für eine Tabelle ausgeführt werden sollen, können mithilfe von sp_settriggerorder angegeben werden. In einer Tabelle kann für jeden INSERT-, UPDATE- und DELETE-Vorgang nur ein erster und ein letzter AFTER-Trigger angegeben werden. Sind für eine Tabelle weitere AFTER-Trigger vorhanden, werden diese nach dem Zufallsprinzip ausgeführt.  
@@ -288,12 +288,12 @@ SELECT * FROM deleted;
   
  Falls ein für eine Tabelle definierter INSTEAD OF-Trigger eine Anweisung für die Tabelle ausführt, die normalerweise den INSTEAD OF-Trigger erneut auslösen würde, wird der Trigger nicht erneut aufgerufen. Stattdessen wird die Anweisung so verarbeitet, als ob in der Tabelle kein INSTEAD OF-Trigger vorhanden wäre, und die Kette der Einschränkungsvorgänge und AFTER-Triggerausführungen wird gestartet. Wenn z. B. ein Trigger als INSTEAD OF INSERT-Trigger für eine Tabelle definiert ist und der Trigger eine INSERT-Anweisung in derselben Tabelle ausführt, ruft die durch den INSTEAD OF-Trigger ausgeführte INSERT-Anweisung den Trigger nicht erneut auf. Die INSERT-Anweisung, die durch den Trigger ausgeführt wird, startet das Ausführen der Einschränkungsaktionen und löst alle für die Tabelle definierten AFTER INSERT-Trigger aus.  
   
- Falls ein für eine Sicht definierter INSTEAD OF-Trigger eine Anweisung für die Sicht ausführt, die normalerweise den INSTEAD OF-Trigger erneut auslösen würde, wird der Trigger nicht erneut aufgerufen. Stattdessen wird die Anweisung als Änderungen an den zugrunde liegenden Basistabellen der Sicht aufgelöst. In diesem Fall muss die Sichtdefinition alle Einschränkungen für eine aktualisierbare Sicht erfüllen. Eine Definition zu aktualisierbaren Sichten, finden Sie unter [Ändern von Daten über eine Sicht](../../relational-databases/views/modify-data-through-a-view.md).  
+ Falls ein für eine Sicht definierter INSTEAD OF-Trigger eine Anweisung für die Sicht ausführt, die normalerweise den INSTEAD OF-Trigger erneut auslösen würde, wird der Trigger nicht erneut aufgerufen. Stattdessen wird die Anweisung als Änderungen an den zugrunde liegenden Basistabellen der Sicht aufgelöst. In diesem Fall muss die Sichtdefinition alle Einschränkungen für eine aktualisierbare Sicht erfüllen. Eine Definition zu aktualisierbaren Sichten finden Sie unter [Modify Data Through a View (Ändern von Daten über eine Sicht)](../../relational-databases/views/modify-data-through-a-view.md).  
   
  Wenn z. B. ein Trigger als INSTEAD OF UPDATE-Trigger für eine Sicht definiert ist und der Trigger eine UPDATE-Anweisung in derselben Sicht ausführt, ruft die durch den INSTEAD OF-Trigger ausgeführte UPDATE-Anweisung den Trigger nicht erneut auf. Die von dem Trigger ausgeführte UPDATE-Anweisung wird für die Sicht so verarbeitet, als ob in der Sicht kein INSTEAD OF-Trigger vorhanden wäre. Die von der UPDATE-Anweisung geänderten Spalten müssen in eine einzige Basistabelle aufgelöst werden. Jede Änderung an einer zugrunde liegenden Basistabelle startet die Kette der definierten Einschränkungen und löst die für die Tabelle definierten AFTER-Trigger aus.  
   
 ### <a name="testing-for-update-or-insert-actions-to-specific-columns"></a>Testen auf UPDATE- oder INSERT-Aktionen in angegebenen Spalten  
- Sie können einen [!INCLUDE[tsql](../../includes/tsql-md.md)]-Trigger erstellen, der auf der Grundlage von UPDATE- oder INSERT-Änderungen an den angegebenen Spalten bestimmte Aktionen ausführt. Verwendung [UPDATE()](../../t-sql/functions/update-trigger-functions-transact-sql.md) oder [COLUMNS_UPDATED](../../t-sql/functions/columns-updated-transact-sql.md) im Text des Triggers für diesen Zweck. UPDATE() testet auf UPDATE- oder INSERT-Versuche in einer Spalte. COLUMNS_UPDATED testet auf UPDATE- oder INSERT-Aktionen, die für mehrere Spalten durchgeführt wurden, und gibt ein Bitmuster zurück, dem Sie entnehmen können, welche Spalten eingefügt oder aktualisiert wurden.  
+ Sie können einen [!INCLUDE[tsql](../../includes/tsql-md.md)]-Trigger erstellen, der auf der Grundlage von UPDATE- oder INSERT-Änderungen an den angegebenen Spalten bestimmte Aktionen ausführt. Verwenden Sie hierzu [UPDATE()](../../t-sql/functions/update-trigger-functions-transact-sql.md) oder [COLUMNS_UPDATED](../../t-sql/functions/columns-updated-transact-sql.md) innerhalb des Triggertexts. UPDATE() testet auf UPDATE- oder INSERT-Versuche in einer Spalte. COLUMNS_UPDATED testet auf UPDATE- oder INSERT-Aktionen, die für mehrere Spalten durchgeführt wurden, und gibt ein Bitmuster zurück, dem Sie entnehmen können, welche Spalten eingefügt oder aktualisiert wurden.  
   
 ### <a name="trigger-limitations"></a>Beschränkungen bei der Verwendung von Triggern  
  CREATE TRIGGER muss die erste Anweisung in einem Batch sein und kann sich nur auf eine Tabelle beziehen.  
@@ -332,7 +332,7 @@ SELECT * FROM deleted;
 > [!NOTE]  
 >  Da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] benutzerdefinierte Trigger für Systemtabellen nicht unterstützt, sollten Sie für Systemtabellen keine benutzerdefinierten Trigger erstellen.  
   
-## <a name="remarks-ddl-triggers"></a>DDL-Trigger "Hinweise"  
+## <a name="remarks-ddl-triggers"></a>Hinweise zu DDL-Triggern  
  DDL-Trigger führen, ebenso wie Standardtrigger, gespeicherte Prozeduren als Reaktion auf ein Ereignis aus. Im Gegensatz zu Standardtriggern führen sie diese jedoch nicht als Reaktion auf UPDATE-, INSERT- oder DELETE-Anweisungen für eine Tabelle oder Sicht aus, sondern als Reaktion auf DDL-Anweisungen (Data Definition Language, Datendefinitionssprache). Hierzu gehören CREATE-, ALTER-, DROP-, GRANT-, DENY-, REVOKE- und UPDATE STATISTICS-Anweisungen. Bestimmte gespeicherte Systemprozeduren, die DDL-ähnliche Vorgänge ausführen, können ebenfalls DDL-Trigger auslösen.  
   
 > [!IMPORTANT]  
@@ -342,10 +342,10 @@ SELECT * FROM deleted;
   
  DDL-Trigger werden nicht als Antwort auf Ereignisse ausgelöst, die sich auf lokale oder globale temporäre Tabellen und gespeicherte Prozeduren auswirken.  
   
- Im Gegensatz zu DML-Triggern haben DDL-Trigger keinen Schemabereich. Aus diesem Grund können Funktionen wie OBJECT_ID, OBJECT_NAME, OBJECTPROPERTY und OBJECTPROPERTYEX nicht verwendet werden, um Metadaten aus DDL-Triggern abzufragen. Verwenden Sie stattdessen die Katalogsichten. Weitere Informationen finden Sie unter [erhalten Informationen über DDL-Trigger](../../relational-databases/triggers/get-information-about-ddl-triggers.md).  
+ Im Gegensatz zu DML-Triggern haben DDL-Trigger keinen Schemabereich. Aus diesem Grund können Funktionen wie OBJECT_ID, OBJECT_NAME, OBJECTPROPERTY und OBJECTPROPERTYEX nicht verwendet werden, um Metadaten aus DDL-Triggern abzufragen. Verwenden Sie stattdessen die Katalogsichten. Weitere Informationen finden Sie unter [Abrufen von Informationen zu DDL-Triggern](../../relational-databases/triggers/get-information-about-ddl-triggers.md).  
   
 > [!NOTE]  
->  Serverbezogene DDL-Trigger werden in der [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Objekt-Explorer in den **Trigger** Ordner. Dieser Ordner befindet sich unter dem Ordner **Serverobjekte** . DDL-Trigger mit Datenbankbereich angezeigt, der **Datenbanktrigger** Ordner. Dieser Ordner befindet sich unter dem Ordner **Programmierbarkeit** der entsprechenden Datenbank.  
+>  DDL-Trigger mit Serverbereich werden im Ordner **Trigger** vom [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]-Objekt-Explorer angezeigt. Dieser Ordner befindet sich unter dem Ordner **Serverobjekte** . Datenbankbezogene DDL-Trigger werden im Ordner **Datenbanktrigger** angezeigt. Dieser Ordner befindet sich unter dem Ordner **Programmierbarkeit** der entsprechenden Datenbank.  
   
 ## <a name="logon-triggers"></a>Logon-Trigger  
  Logon-Trigger führen gespeicherte Prozeduren als Antwort auf ein LOGON-Ereignis aus. Dieses Ereignis wird ausgelöst, wenn eine Benutzersitzung mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]erstellt wird. Logon-Trigger werden ausgelöst, nachdem die Authentifizierungsphase der Anmeldung abgeschlossen ist und bevor die Benutzersitzung erstellt wird. Aus diesem Grund werden alle Meldungen, die aus dem Trigger stammen und normalerweise den Benutzer erreichen (z. B. Fehlermeldungen und Meldungen aus der PRINT-Anweisung) zum [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Fehlerprotokoll umgeleitet. Weitere Informationen finden Sie unter [Logon-Trigger](../../relational-databases/triggers/logon-triggers.md).  
@@ -360,7 +360,7 @@ SELECT * FROM deleted;
 ## <a name="general-trigger-considerations"></a>Allgemeine Überlegungen zu Triggern  
   
 ### <a name="returning-results"></a>Zurückgeben von Ergebnissen  
- Die Möglichkeit, Ergebnisse aus Triggern zurückzugeben, wird in einer künftigen Version von SQL Server entfernt. Durch Trigger, die Resultsets zurückgeben, kann es in Anwendungen, die hierfür nicht konzipiert wurden, zu unerwartetem Verhalten kommen. Vermeiden Sie deshalb bei Neuentwicklungen, Resultsets aus Triggern zurückzugeben, und planen Sie die Änderung von Anwendungen, in denen dies derzeit verwendet wird. Um zu verhindern, dass Trigger Resultsets zurückgeben, legen Sie die [Ergebnisse von Triggern-Option nicht zulassen](../../database-engine/configure-windows/disallow-results-from-triggers-server-configuration-option.md) auf 1.  
+ Die Möglichkeit, Ergebnisse aus Triggern zurückzugeben, wird in einer künftigen Version von SQL Server entfernt. Durch Trigger, die Resultsets zurückgeben, kann es in Anwendungen, die hierfür nicht konzipiert wurden, zu unerwartetem Verhalten kommen. Vermeiden Sie deshalb bei Neuentwicklungen, Resultsets aus Triggern zurückzugeben, und planen Sie die Änderung von Anwendungen, in denen dies derzeit verwendet wird. Legen Sie die Option [Ergebnisse von Triggern nicht zulassen](../../database-engine/configure-windows/disallow-results-from-triggers-server-configuration-option.md) auf 1 fest, um zu verhindern, dass Trigger Resultsets zurückgeben.  
   
  Logon-Trigger verhindern stets, dass Resultsets zurückgegeben werden. Dies ist ein nicht konfigurierbares Verhalten. Wenn von einem Logon-Trigger ein Resultset generiert wird, kann der Trigger nicht ausgeführt werden, und der Anmeldeversuch, der den Trigger ausgelöst hat, wird abgelehnt.  
   
@@ -394,9 +394,9 @@ SELECT * FROM deleted;
   
  Um geschachtelte Trigger zu deaktivieren, legen Sie die Option "Geschachtelte Trigger" von "sp_configure" auf 0 (deaktiviert) fest. In der Standardkonfiguration sind geschachtelte Trigger zulässig. Wenn geschachtelte Trigger deaktiviert wurden, sind rekursive Trigger ebenfalls deaktiviert, unabhängig von der durch ALTER DATABASE festgelegten RECURSIVE_TRIGGERS-Einstellung.  
   
- Der erste AFTER-Trigger in ein INSTEAD OF-Trigger ausgelöst, selbst wenn geschachtelt die **geschachtelte Trigger** -Serverkonfigurationsoption auf 0 festgelegt ist. Bei dieser Einstellung werden jedoch nachfolgende AFTER-Trigger nicht ausgelöst. Es wird empfohlen, Sie die Anwendungen auf geschachtelte Trigger überprüfen, um zu bestimmen, ob die Anwendungen mit Ihren Geschäftsregeln im Hinblick auf dieses Verhalten kompatibel bei der **geschachtelte Trigger** -Serverkonfigurationsoption auf 0 festgelegt ist und stellen Sie dann geeignete Änderungen vor.  
+ Der erste AFTER-Trigger, der in einem INSTEAD OF-Trigger geschachtelt ist, wird auch dann ausgelöst, wenn die Serverkonfigurationsoption **geschachtelte Trigger** auf 0 (null) festgelegt ist. Bei dieser Einstellung werden jedoch nachfolgende AFTER-Trigger nicht ausgelöst. Überprüfen Sie die Anwendungen auf geschachtelte Trigger, um zu ermitteln, ob die Anwendungen in Bezug auf dieses neue Verhalten bei Festlegung der Serverkonfigurationsoption **geschachtelte Trigger** auf 0 (null) noch Ihren Geschäftsregeln entsprechen. Nehmen Sie dann geeignete Änderungen vor.  
   
-### <a name="deferred-name-resolution"></a>Verzögerte namensauflösung  
+### <a name="deferred-name-resolution"></a>Verzögerte Namensauflösung  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lässt zu, dass gespeicherte [!INCLUDE[tsql](../../includes/tsql-md.md)]-Prozeduren, -Trigger und -Batches auf Tabellen verweisen, die zur Kompilierzeit noch nicht vorhanden sind. Diese Option wird verzögerte Namensauflösung genannt.  
   
 ## <a name="permissions"></a>Berechtigungen  
@@ -436,7 +436,7 @@ GO
 ### <a name="c-using-a-dml-after-trigger-to-enforce-a-business-rule-between-the-purchaseorderheader-and-vendor-tables"></a>C. Verwenden eines DML-AFTER-Triggers zum Erzwingen einer Geschäftsregel zwischen den Tabellen PurchaseOrderHeader und Vendor  
  Da sich CHECK-Einschränkungen nur auf Spalten beziehen können, für die die Einschränkung auf Spalten- oder Tabellenebene definiert wurde, müssen tabellenübergreifende Einschränkungen (in diesem Fall Geschäftsregeln) als Trigger definiert werden.  
   
- Im folgenden Beispiel wird ein DML-Trigger in der AdventureWorks2012-Beispieldatenbank erstellt. Trigger überprüft wird, um sicherzustellen, die Bonität für Herstellers (nicht-5) Wenn es wird versucht, fügen Sie eine neue Bestellung in der `PurchaseOrderHeader` Tabelle. Um die Bonität des Herstellers zu ermitteln, muss auf die `Vendor`-Tabelle verwiesen werden. Ist die Bonität zu niedrig, wird eine Meldung angezeigt, und die Bestellung wird nicht eingefügt.  
+ Im folgenden Beispiel wird ein DML-Trigger in der AdventureWorks2012-Beispieldatenbank erstellt. Der Trigger überprüft, ob die Bonität eines Herstellers gut ist (nicht 5), wenn versucht wird, eine neue Bestellung in die Tabelle `PurchaseOrderHeader` einzufügen. Um die Bonität des Herstellers zu ermitteln, muss auf die `Vendor`-Tabelle verwiesen werden. Ist die Bonität zu niedrig, wird eine Meldung angezeigt, und die Bestellung wird nicht eingefügt.  
   
 ```  
 -- This trigger prevents a row from being inserted in the Purchasing.PurchaseOrderHeader 
@@ -499,7 +499,7 @@ GO
 ```  
   
 ### <a name="e-using-a-server-scoped-ddl-trigger"></a>E. Verwenden eines DDL-Triggers mit Serverbereich  
- Im folgenden Beispiel wird ein DDL-Trigger verwendet, um eine Meldung auszugeben, wenn ein CREATE DATABASE-Ereignis auf der aktuellen Serverinstanz eintritt. Mithilfe der `EVENTDATA`-Funktion wird der Text der entsprechenden [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung abgerufen. Weitere Beispiele, die EVENTDATA in DDL-Trigger verwenden, finden Sie unter [verwenden der EVENTDATA-Funktion](../../relational-databases/triggers/use-the-eventdata-function.md).  
+ Im folgenden Beispiel wird ein DDL-Trigger verwendet, um eine Meldung auszugeben, wenn ein CREATE DATABASE-Ereignis auf der aktuellen Serverinstanz eintritt. Mithilfe der `EVENTDATA`-Funktion wird der Text der entsprechenden [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung abgerufen. Weitere Beispiele für die Verwendung von EVENTDATA in DDL-Triggern finden Sie unter [Verwenden der EVENTDATA-Funktion](../../relational-databases/triggers/use-the-eventdata-function.md).  
   
 **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
@@ -517,7 +517,7 @@ GO
 ```  
   
 ### <a name="f-using-a-logon-trigger"></a>F. Verwenden eines LOGON-Triggers  
- Im folgenden Beispiel der Logon-Trigger ein Anmeldeversuch zum Anmelden bei [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] als Mitglied der *Login_test* Anmeldenamen, wenn bereits drei benutzersitzungen ausgeführt, die unter diesem Anmeldenamen vorhanden sind.  
+ Im folgenden Beispiel für LOGON-Trigger wird ein Anmeldeversuch bei [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] als Mitglied des Anmeldenamens *login_test* abgewiesen, wenn unter diesem Anmeldenamen bereits drei Benutzersitzungen ausgeführt werden.  
   
 **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
@@ -554,15 +554,15 @@ WHERE T.parent_class = 0 AND T.name = 'safety';
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [ALTER TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-trigger-transact-sql.md)   
- [COLUMNS_UPDATED &#40; Transact-SQL &#41;](../../t-sql/functions/columns-updated-transact-sql.md)   
+ [COLUMNS_UPDATED &#40;Transact-SQL&#41;](../../t-sql/functions/columns-updated-transact-sql.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [DROP TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/drop-trigger-transact-sql.md)   
  [ENABLE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/enable-trigger-transact-sql.md)   
  [DISABLE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/disable-trigger-transact-sql.md)   
- [TRIGGER_NESTLEVEL &#40; Transact-SQL &#41;](../../t-sql/functions/trigger-nestlevel-transact-sql.md)   
+ [TRIGGER_NESTLEVEL &#40;Transact-SQL&#41;](../../t-sql/functions/trigger-nestlevel-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
  [sys.dm_sql_referenced_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md)   
  [sys.dm_sql_referencing_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md)   
@@ -571,10 +571,10 @@ GO
  [sp_helptrigger &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptrigger-transact-sql.md)   
  [sp_helptext &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptext-transact-sql.md)   
  [sp_rename &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md)   
- [Sp_settriggerorder &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-settriggerorder-transact-sql.md)   
- [UPDATE &#40; &#41; &#40; Transact-SQL &#41;](../../t-sql/functions/update-trigger-functions-transact-sql.md)   
+ [sp_settriggerorder &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-settriggerorder-transact-sql.md)   
+ [UPDATE&#40;&#41; &#40;Transact-SQL&#41;](../../t-sql/functions/update-trigger-functions-transact-sql.md)   
  [Abrufen von Informationen zu DML-Triggern](../../relational-databases/triggers/get-information-about-dml-triggers.md)   
- [Abrufen von Informationen zu DDL-Trigger](../../relational-databases/triggers/get-information-about-ddl-triggers.md)   
+ [Abrufen von Informationen zu DDL-Triggern](../../relational-databases/triggers/get-information-about-ddl-triggers.md)   
  [sys.triggers &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md)   
  [sys.trigger_events &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-trigger-events-transact-sql.md)   
  [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)   

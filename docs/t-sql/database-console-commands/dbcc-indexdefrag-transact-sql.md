@@ -1,5 +1,5 @@
 ---
-title: DBCC INDEXDEFRAG (Transact-SQL) | Microsoft Docs
+title: DBCC INDEXDEFRAG (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 07/16/2017
 ms.prod: sql-non-specified
@@ -43,9 +43,9 @@ ms.lasthandoff: 01/25/2018
 Defragmentiert Indizes der angegebenen Tabelle oder Sicht.
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]Verwendung [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) stattdessen.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Verwenden Sie stattdessen [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md).  
   
-**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] über [aktuelle Version](http://go.microsoft.com/fwlink/p/?LinkId=299658))
+**Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis zur [aktuellen Version](http://go.microsoft.com/fwlink/p/?LinkId=299658))
   
 ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -63,9 +63,9 @@ DBCC INDEXDEFRAG
   
 ## <a name="arguments"></a>Argumente  
  *database_name* | *database_id* | 0  
- Die Datenbank, die den zu defragmentierenden Index enthält. Wird 0 angegeben, wird die aktuelle Datenbank verwendet. Datenbanknamen müssen den Regeln für entsprechen [Bezeichner](../../relational-databases/databases/database-identifiers.md).  
+ Die Datenbank, die den zu defragmentierenden Index enthält. Wird 0 angegeben, wird die aktuelle Datenbank verwendet. Datenbanknamen müssen den Regeln für [Bezeichner](../../relational-databases/databases/database-identifiers.md) entsprechen.  
   
- *TABLE_NAME* | *Table_id* | *View_name* | *View_id*  
+ *table_name* | *table_id* | *view_name* | *view_id*  
  Die Tabelle oder Sicht, die den zu defragmentierenden Index enthält. Tabellen- und Sichtnamen müssen den Regeln für Bezeichner entsprechen.  
   
  *index_name* | *index_id*  
@@ -77,7 +77,7 @@ DBCC INDEXDEFRAG
  WITH NO_INFOMSGS  
  Unterdrückt alle Informationsmeldungen mit einem Schweregrad von 0 bis 10.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
 DBCC INDEXDEFRAG defragmentiert die Blattebene eines Indexes, sodass die physische Reihenfolge der Seiten mit der logischen Reihenfolge (von links nach rechts) der Blattknoten übereinstimmt. Dadurch wird die Leistung beim Durchsuchen des Indexes verbessert.
   
 > [!NOTE]  
@@ -93,10 +93,10 @@ Im Gegensatz zu DBCC DBREINDEX (oder der Indexerstellung allgemein) ist DBCC IND
   
 Die Defragmentierung wird immer vollständig protokolliert, unabhängig von der Einstellung des Datenbank-Wiederherstellungsmodells. Weitere Informationen zu dieser Einstellung finden Sie unter [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md). Bei der Defragmentierung eines stark fragmentierten Indexes werden möglicherweise mehr Protokolleinträge erstellt als bei der Indexerstellung mit vollständiger Protokollierung. Die Defragmentierung wird jedoch als eine Reihe von kurzen Transaktionen ausgeführt und benötigt somit kein großes Protokoll, wenn häufig eine Protokollsicherung durchgeführt wird oder SIMPLE als Einstellung für das Wiederherstellungsmodell festgelegt ist.
   
-## <a name="restrictions"></a>Einschränkungen  
+## <a name="restrictions"></a>Restrictions  
 DBCC INDEXDEFRAG verschiebt Indexblattseiten an andere Stellen. Daher führt das Ausführen von DBCC INDEXDEFRAG für einen Index, der mit anderen Indizes auf dem Datenträger verzahnt ist, nicht dazu, dass die Blattseiten im Index zusammenhängen. Erstellen Sie den Index neu, um das Gruppieren von Seiten zu verbessern.
 DBCC INDEXDEFRAG kann nicht verwendet werden, um die folgenden Indizes zu defragmentieren:
--   Ein deaktivierter Index.  
+-   Deaktivierte Indizes  
 -   Indizes, für die für das Seitensperren die Einstellung OFF festgelegt ist.  
 -   Räumliche Indizes  
   
@@ -120,7 +120,7 @@ Bei dem Aufrufer muss es sich um den Besitzer der Tabelle oder um ein Mitglied d
   
 ## <a name="examples"></a>Beispiele  
 ### <a name="a-using-dbcc-indexdefrag-to-defragment-an-index"></a>A. Defragmentieren eines Indexes mit DBCC INDEXDEFRAG  
-Im folgende Beispiel werden alle Partitionen des defragmentiert die `PK_Product_ProductID` index in der `Production.Product` -Tabelle in der `AdventureWorks` Datenbank.
+Im folgenden Beispiel werden alle Partitionen des `PK_Product_ProductID`-Index in der `Production.Product`-Tabelle in der `AdventureWorks`-Datenbank defragmentiert.
   
 ```sql  
 DBCC INDEXDEFRAG (AdventureWorks2012, 'Production.Product', PK_Product_ProductID);  
@@ -234,7 +234,7 @@ DROP TABLE #fraglist;
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
 [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)  
 [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)  

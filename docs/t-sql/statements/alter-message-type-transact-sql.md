@@ -1,5 +1,5 @@
 ---
-title: ALTER MESSAGE TYPE (Transact-SQL) | Microsoft Docs
+title: ALTER MESSAGE TYPE (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -61,7 +61,7 @@ ALTER MESSAGE TYPE message_type_name
  Gibt an, wie [!INCLUDE[ssSB](../../includes/sssb-md.md)] den Nachrichtentext für Nachrichten von diesem Typ überprüft.  
   
  Keine  
- Es wird keine Überprüfung ausgeführt. Der Nachrichtentext kann keine Daten enthalten oder kann NULL sein.  
+ Es wird keine Überprüfung ausgeführt. Der Nachrichtentext kann beliebige Daten enthalten oder kann NULL sein.  
   
  EMPTY  
  Der Nachrichtentext muss NULL sein.  
@@ -70,15 +70,15 @@ ALTER MESSAGE TYPE message_type_name
  Der Nachrichtentext muss wohlgeformte XML-Daten enthalten.  
   
  VALID_XML_WITH_SCHEMA = *schema_collection_name*  
- Der Nachrichtentext muss XML-Daten enthalten, die einem Schema in der angegebenen Schemaauflistung entsprechen. Die *Schema_collection_name* muss der Name einer vorhandenen XML-schemaauflistung sein.  
+ Der Nachrichtentext muss XML-Daten enthalten, die einem Schema in der angegebenen Schemaauflistung entsprechen. *schema_collection_name* muss der Name einer vorhandenen XML-Schemaauflistung sein.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Das Ändern der Überprüfung eines Nachrichtentyps hat auf Nachrichten, die bereits an eine Warteschlange übermittelt wurden, keine Auswirkungen.  
   
  Verwenden Sie die ALTER AUTHORIZATION-Anweisung, wenn Sie AUTHORIZATION für einen Nachrichtentyp ändern möchten.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Berechtigung zum Ändern eines Nachrichtentyps standardmäßig verfügen der Besitzer des Nachrichtentyps, der Mitglied der **Db_ddladmin** oder **Db_owner** Datenbankrollen und bei Mitgliedern der festen der **Sysadmin**festen Serverrolle "".  
+ Die Berechtigung zum Ändern eines Nachrichtentyps wird standardmäßig Mitgliedern der festen Datenbankrollen **db_ddladmin** oder **db_owner** sowie Mitgliedern der festen Serverrolle **sysadmin** erteilt.  
   
  Wenn in der ALTER MESSAGE TYPE-Anweisung eine Schemaauflistung angegeben ist, muss der Benutzer, der die Anweisung ausführt, über die REFERENCES-Berechtigung in der angegebenen Schemaauflistung verfügen.  
   
@@ -91,7 +91,7 @@ ALTER MESSAGE TYPE
     VALIDATION = WELL_FORMED_XML ;  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md)   
  [CREATE MESSAGE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/create-message-type-transact-sql.md)   
  [DROP MESSAGE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-message-type-transact-sql.md)   

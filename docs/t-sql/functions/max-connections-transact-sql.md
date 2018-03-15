@@ -1,5 +1,5 @@
 ---
-title: '@@MAX_CONNECTIONS (Transact-SQL) | Microsoft Docs'
+title: '@@MAX_CONNECTIONS (Transact-SQL) | Microsoft-Dokumentation'
 ms.custom: 
 ms.date: 09/18/2017
 ms.prod: sql-non-specified
@@ -51,13 +51,13 @@ ms.lasthandoff: 11/21/2017
 ## <a name="return-types"></a>Rückgabetypen  
  **integer**  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Die tatsächliche Anzahl der zulässigen Benutzerverbindungen hängt außerdem von der installierten Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sowie den Beschränkungen durch Ihre Anwendungen und Hardware ab.  
   
- So konfigurieren Sie neu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für kleinere Anzahl von Verbindungen verwenden **Sp_configure**.  
+ Verwenden Sie **sp_configure**, um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für eine kleinere Anzahl von Verbindungen neu zu konfigurieren.  
   
 ## <a name="examples"></a>Beispiele  
- Das folgende Beispiel zeigt die maximale Anzahl von benutzerverbindungen in einer Instanz von zurückgeben [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Im Beispiel wird vorausgesetzt, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht für eine geringere Anzahl von Benutzerverbindungen neu konfiguriert wurde.  
+ Im folgenden Beispiel wird die maximale Anzahl von Benutzerverbindungen für eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zurückgegeben. Im Beispiel wird vorausgesetzt, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht für eine geringere Anzahl von Benutzerverbindungen neu konfiguriert wurde.  
   
 ```  
 SELECT @@MAX_CONNECTIONS AS 'Max Connections';  
@@ -71,7 +71,7 @@ Max Connections
 32767            
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
  [Konfigurationsfunktionen](../../t-sql/functions/configuration-functions-transact-sql.md)   
  [Konfigurieren der Serverkonfigurationsoption Benutzerverbindungen](../../database-engine/configure-windows/configure-the-user-connections-server-configuration-option.md)  

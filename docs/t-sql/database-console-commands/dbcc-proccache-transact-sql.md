@@ -1,5 +1,5 @@
 ---
-title: DBCC PROCCACHE (Transact-SQL) | Microsoft Docs
+title: DBCC PROCCACHE (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 11/14/2017
 ms.prod: sql-non-specified
@@ -55,7 +55,7 @@ DBCC PROCCACHE [ WITH NO_INFOMSGS ]
  NO_INFOMSGS  
  Unterdrückt alle Informationsmeldungen mit einem Schweregrad von 0 bis 10.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
 Mit dem Prozedurcache werden kompilierte und ausführbare Pläne zwischengespeichert, um die Ausführung von Batches zu beschleunigen. Die Einträge in einem Prozedurcache erfolgen auf Batchebene. Der Prozedurcache schließt die folgenden Einträge ein:
 -   Kompilierte Pläne  
 -   Ausführungsplan  
@@ -67,17 +67,17 @@ In der folgenden Tabelle werden die Spalten des Resultsets beschrieben.
   
 |Spaltenname|Description|  
 |-----------------|-----------------|  
-|**NUM Proc beliebt**|Gesamtanzahl von Seiten, die von allen Einträgen im Prozedurcache verwendet werden.|  
-|**NUM Proc beliebt verwendet**|Gesamtanzahl von Seiten, die von allen zurzeit verwendeten Einträgen verwendet werden.|  
-|**NUM Proc beliebt active**|Nur aus Gründen der Abwärtskompatibilität beibehalten Gesamtanzahl von Seiten, die von allen zurzeit verwendeten Einträgen verwendet werden.|  
-|**Proc-Cachegröße**|Gesamtanzahl von Einträgen im Prozedurcache.|  
-|**Proc-Caches**|Gesamtanzahl von Einträgen, die zurzeit verwendet werden.|  
-|**Proc Cache aktiv**|Nur aus Gründen der Abwärtskompatibilität beibehalten Gesamtanzahl von Einträgen, die zurzeit verwendet werden.|  
+|**num proc buffs**|Gesamtanzahl von Seiten, die von allen Einträgen im Prozedurcache verwendet werden.|  
+|**num proc buffs used**|Gesamtanzahl von Seiten, die von allen zurzeit verwendeten Einträgen verwendet werden.|  
+|**num proc buffs active**|Nur aus Gründen der Abwärtskompatibilität beibehalten Gesamtanzahl von Seiten, die von allen zurzeit verwendeten Einträgen verwendet werden.|  
+|**proc cache size**|Gesamtanzahl von Einträgen im Prozedurcache.|  
+|**proc cache used**|Gesamtanzahl von Einträgen, die zurzeit verwendet werden.|  
+|**proc cache active**|Nur aus Gründen der Abwärtskompatibilität beibehalten Gesamtanzahl von Einträgen, die zurzeit verwendet werden.|  
   
 ## <a name="permissions"></a>Berechtigungen  
 Erfordert die Mitgliedschaft in der festen Serverrolle **sysadmin** oder der festen Datenbankrolle **db_owner** .
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)
   
   

@@ -1,5 +1,5 @@
 ---
-title: "Verweigern von Berechtigungen für Datenbankprinzipal (Transact-SQL) | Microsoft Docs"
+title: "DENY (Berechtigungen für Datenbankprinzipal) (Transact-SQL) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 05/15/2017
 ms.prod: sql-non-specified
@@ -73,24 +73,24 @@ DENY permission [ ,...n ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *Berechtigung*  
+ *permission*  
  Gibt eine Berechtigung an, die für den Datenbankprinzipal verweigert werden kann. Eine Liste der Berechtigungen finden Sie im Abschnitt zu den Hinweisen weiter unten in diesem Thema.  
   
- USER::*Database_user*  
- Gibt die Klasse und den Namen des Benutzers an, für den die Berechtigung verweigert wird. Der bereichsqualifizierer (**::**) ist erforderlich.  
+ USER ::*database_user*  
+ Gibt die Klasse und den Namen des Benutzers an, für den die Berechtigung verweigert wird. Der Bereichsqualifizierer (**::**) ist erforderlich.  
   
- Rolle::*Database_role*  
- Gibt die Klasse und den Namen der Rolle an, für die die Berechtigung verweigert wird. Der bereichsqualifizierer (**::**) ist erforderlich.  
+ ROLE ::*database_role*  
+ Gibt die Klasse und den Namen der Rolle an, für die die Berechtigung verweigert wird. Der Bereichsqualifizierer (**::**) ist erforderlich.  
   
- ANWENDUNGSROLLE::*Application_role*  
- **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+ APPLICATION ROLE ::*application_role*  
+ **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
- Gibt die Klasse und den Namen der Anwendungsrolle an, für die die Berechtigung verweigert wird. Der bereichsqualifizierer (**::**) ist erforderlich.  
+ Gibt die Klasse und den Namen der Anwendungsrolle an, für die die Berechtigung verweigert wird. Der Bereichsqualifizierer (**::**) ist erforderlich.  
   
  CASCADE  
  Gibt an, dass die verweigerte Berechtigung auch anderen Prinzipalen verweigert wird, denen diese Berechtigung von diesem Prinzipal erteilt wurde.  
   
- AS \<Database_principal >  
+ AS \<database_principal>  
  Gibt einen Prinzipal an, von dem der Prinzipal, der diese Abfrage ausführt, sein Recht zum Aufheben der Berechtigung ableitet.  
   
  *Database_user*  
@@ -100,7 +100,7 @@ DENY permission [ ,...n ]
  Gibt eine Datenbankrolle an.  
   
  *Application_role*  
- **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+ **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  Gibt eine Anwendungsrolle an.  
   
@@ -119,7 +119,7 @@ DENY permission [ ,...n ]
  *Database_user_with_no_login*  
  Gibt einen Datenbankbenutzer ohne entsprechenden Prinzipal auf Serverebene an.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="database-user-permissions"></a>Berechtigungen für Datenbankbenutzer  
  Ein Datenbankbenutzer ist ein sicherungsfähiges Element auf Datenbankebene in der Datenbank, die das übergeordnete Element in der Berechtigungshierarchie ist. Die spezifischsten und restriktivsten Berechtigungen, die für einen Datenbankbenutzer verweigert werden können, sind unten aufgeführt. Auch die allgemeineren Berechtigungen sind aufgeführt, die diese implizit enthalten.  
@@ -179,7 +179,7 @@ GO
 ### <a name="c-denying-impersonate-permission-on-a-user-to-an-application-role"></a>C. Verweigern der IMPERSONATE-Berechtigung eines Benutzers für eine Anwendungsrolle  
  Im folgenden Beispiel wird die `IMPERSONATE`-Berechtigung für den Benutzer `HamithaL` der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Anwendungsrolle `AccountsPayable17` verweigert.  
   
-**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
 ```  
 USE AdventureWorks2012;  
@@ -187,14 +187,14 @@ DENY IMPERSONATE ON USER::HamithaL TO AccountsPayable17;
 GO    
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [GRANT-Berechtigungen für Datenbankprinzipal &#40; Transact-SQL &#41;](../../t-sql/statements/grant-database-principal-permissions-transact-sql.md)   
- [REVOKE-Berechtigungen für Datenbankprinzipal &#40; Transact-SQL &#41;](../../t-sql/statements/revoke-database-principal-permissions-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [GRANT (Berechtigungen für Datenbankprinzipal) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-database-principal-permissions-transact-sql.md)   
+ [REVOKE (Berechtigungen für Datenbankprinzipal) &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-database-principal-permissions-transact-sql.md)   
  [sys.database_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)   
- [database_permissions &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)   
+ [sys.database_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)   
  [CREATE USER &#40;Transact-SQL&#41;](../../t-sql/statements/create-user-transact-sql.md)   
- [Erstellen Sie APPLICATION ROLE &#40; Transact-SQL &#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
- [Erstellen Sie die Rolle "" &#40; Transact-SQL &#41;](../../t-sql/statements/create-role-transact-sql.md)   
+ [CREATE APPLICATION ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
+ [CREATE ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-role-transact-sql.md)   
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
  [Berechtigungen &#40;Datenbankmodul&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [Prinzipale &#40;Datenbankmodul&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)  

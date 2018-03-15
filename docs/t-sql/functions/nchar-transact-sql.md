@@ -1,5 +1,5 @@
 ---
-title: NCHAR (Transact-SQL) | Microsoft Docs
+title: NCHAR (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
@@ -47,16 +47,16 @@ NCHAR ( integer_expression )
   
 ## <a name="arguments"></a>Argumente  
  *integer_expression*  
- Wenn die Sortierung der Datenbank das ergänzende Zeichenflag nicht enthält, entspricht dies einer positiven ganzen Zahl von 0 bis 65535 (0 bis 0xFFFF). Wenn ein Wert außerhalb dieses Bereichs angegeben wurde, wird NULL zurückgegeben. Weitere Informationen zu ergänzenden Zeichen finden Sie unter [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).  
+ Wenn die Sortierung der Datenbank das ergänzende Zeichenflag nicht enthält, entspricht dies einer positiven ganzen Zahl von 0 bis 65535 (0 bis 0xFFFF). Wenn ein Wert außerhalb dieses Bereichs angegeben wurde, wird NULL zurückgegeben. Weitere Informationen zu ergänzenden Zeichen finden Sie unter [Collation and Unicode Support (Sortierung und Unicode-Unterstützung)](../../relational-databases/collations/collation-and-unicode-support.md).  
   
  Wenn die Sortierung der Datenbank das ergänzende Zeichenflag unterstützt, entspricht dies einer positiven ganzen Zahl von 0 bis 1114111 (0 bis 0x10FFFF). Wenn ein Wert außerhalb dieses Bereichs angegeben wurde, wird NULL zurückgegeben.  
   
 ## <a name="return-types"></a>Rückgabetypen  
- **NCHAR(1)-Wert** Wenn die standarddatenbanksortierung nicht ergänzende Zeichen unterstützt.  
+ **nchar(1)**, wenn die Standarddatenbanksortierung keine ergänzenden Zeichen unterstützt.  
   
- **nvarchar(2)** Wenn die standarddatenbanksortierung ergänzende Zeichen unterstützt.  
+ **nvarchar(2)**, wenn die Standarddatenbanksortierung ergänzende Zeichen unterstützt.  
   
- Wenn der Parameter *Integer_expression* liegt im Bereich 0 - 0xFFFF liegt, wird nur ein Zeichen zurückgegeben. Bei höheren Werten gibt NCHAR das entsprechende Ersatzzeichenpaar zurück. Erstellen Sie kein Ersatzzeichenpaar mit `NCHAR(<High surrogate>) + NCHAR(\<Low Surrogate>)`. Verwenden Sie stattdessen eine Datenbanksortierung, die ergänzende Zeichen unterstützt, und geben Sie dann den Unicode-Codepunkt für das Ersatzzeichenpaar an. Im folgenden Beispiel werden sowohl die alte Methode zur Erstellung eines Ersatzzeichenpaares sowie die bevorzugte Methode zur Angabe des Unicode-Codepunkts erläutert.  
+ Wenn der Parameter *integer_expression* im Bereich 0 bis 0xFFFF liegt, wird nur ein Zeichen zurückgegeben. Bei höheren Werten gibt NCHAR das entsprechende Ersatzzeichenpaar zurück. Erstellen Sie kein Ersatzzeichenpaar mit `NCHAR(<High surrogate>) + NCHAR(\<Low Surrogate>)`. Verwenden Sie stattdessen eine Datenbanksortierung, die ergänzende Zeichen unterstützt, und geben Sie dann den Unicode-Codepunkt für das Ersatzzeichenpaar an. Im folgenden Beispiel werden sowohl die alte Methode zur Erstellung eines Ersatzzeichenpaares sowie die bevorzugte Methode zur Angabe des Unicode-Codepunkts erläutert.  
   
 ```  
 CREATE DATABASE test COLLATE Finnish_Swedish_100_CS_AS_SC;  
@@ -218,12 +218,12 @@ Character # Unicode Character UNICODE Value
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [ASCII &#40;Transact-SQL&#41;](../../t-sql/functions/ascii-transact-sql.md)  
  [CHAR &#40;Transact-SQL&#41;](../../t-sql/functions/char-transact-sql.md)  
  [UNICODE &#40;Transact-SQL&#41;](../../t-sql/functions/unicode-transact-sql.md)  
  [Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [Zeichenfolgenfunktionen &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)   
+ [String Functions &#40;Transact-SQL&#41; (Zeichenfolgenfunktionen (Transact-SQL))](../../t-sql/functions/string-functions-transact-sql.md)   
   
   
 

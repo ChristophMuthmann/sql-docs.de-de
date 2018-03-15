@@ -1,5 +1,5 @@
 ---
-title: EMPFANGEN (Transact-SQL) | Microsoft Docs
+title: RECEIVE (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
@@ -74,74 +74,74 @@ ms.lasthandoff: 11/21/2017
  WAITFOR  
  Gibt an, dass die RECEIVE-Anweisung darauf wartet, dass eine Nachricht für die Warteschlange eintrifft, wenn derzeit keine Nachrichten vorhanden sind.  
   
- NACH OBEN (  *n*  )  
+ TOP( *n* )  
  Gibt die maximale Anzahl von Nachrichten an, die zurückgegeben werden. Wird diese Klausel nicht angegeben, werden alle Nachrichten zurückgegeben, die die Kriterien der Anweisung erfüllen.  
   
  \*  
  Gibt an, dass das Resultset alle Spalten in der Warteschlange umfasst.  
   
- *Spaltenname*  
+ *column_name*  
  Der Name einer Spalte, die in das Resultset aufgenommen werden soll.  
   
  *expression*  
  Ein Spaltenname, eine Konstante, eine Funktion oder eine beliebige, durch Operatoren verknüpfte Kombination von Spaltennamen, Konstanten und Funktionen.  
   
- *Spaltenalias*  
+ *column_alias*  
  Ein alternativer Name, der den Spaltennamen im Resultset ersetzt.  
   
  FROM  
  Gibt die Warteschlange an, die die Nachrichten enthält, die abgerufen werden sollen.  
   
  *database_name*  
- Der Name der Datenbank, die die Warteschlange enthält, von der Nachrichten empfangen werden. Wenn kein *Datenbankname* angegeben ist, wird der Standardwert ist der aktuellen Datenbank.  
+ Der Name der Datenbank, die die Warteschlange enthält, von der Nachrichten empfangen werden. Wenn *database_name* nicht bereitgestellt wird, wird standardmäßig die aktuelle Datenbank verwendet.  
   
  *schema_name*  
- Der Name des Schemas, das Besitzer der Warteschlange ist, von der Nachrichten empfangen werden. Wenn kein *Schemaname* angegeben ist, wird der Standardwert ist das Standardschema für den aktuellen Benutzer.  
+ Der Name des Schemas, das Besitzer der Warteschlange ist, von der Nachrichten empfangen werden. Wenn *schema_name* nicht angegeben wird, wird standardmäßig das Standardschema für den aktuellen Benutzer verwendet.  
   
- *Warteschlangenname*  
+ *queue_name*  
  Der Name der Warteschlange, von der Nachrichten empfangen werden.  
   
- IN *Table_variable*  
+ INTO *table_variable*  
  Gibt die Tabellenvariable an, in der RECEIVE die Nachrichten platziert. Die Tabellenvariable muss die gleiche Anzahl von Spalten wie die Nachrichten enthalten. Die Datentypen der einzelnen Spalten in der Tabellenvariablen müssen implizit in den Datentyp der entsprechenden Spalte in den Nachrichten konvertiert werden können. Wenn INTO nicht angegeben wird, werden die Nachrichten als Resultset zurückgegeben.  
   
  WHERE  
  Gibt die Konversation oder Konversationsgruppe für die empfangenen Nachrichten an. Wird kein Wert angegeben, werden Nachrichten aus der nächsten verfügbaren Konversationsgruppe zurückgegeben.  
   
- Conversation_handle = *Conversation_handle*  
- Gibt die Konversation für die empfangenen Nachrichten an. Die *Konversationshandle* muss bereitgestellt werden eine **uniqueidentifier**, oder ein Typ, der konvertiert werden kann, **"uniqueidentifier"**.  
+ conversation_handle = *conversation_handle*  
+ Gibt die Konversation für die empfangenen Nachrichten an. Der bereitgestellte *Konversationshandle* muss dem Typ **uniqueidentifer** oder einem Typ entsprechen, der in **uniqueidentifer** konvertierbar ist.  
   
- Conversation_group_id = *Conversation_group_id*  
- Gibt die Konversationsgruppe für die empfangenen Nachrichten an. Die *Konversationsgruppen-ID, die* muss bereitgestellt werden eine **"uniqueidentifier"**, oder ein Typ konvertierbar zu **"uniqueidentifier"**.  
+ conversation_group_id = *conversation_group_id*  
+ Gibt die Konversationsgruppe für die empfangenen Nachrichten an. Der bereitgestellte *Konversationsgruppen-ID* muss dem Typ **uniqueidentifer** oder einem Typ entsprechen, der in **uniqueidentifer** konvertierbar ist.  
   
- TIMEOUT *Timeout*  
- Gibt in Millisekunden an, wie lange die Anweisung auf eine Nachricht warten soll. Diese Klausel kann nur zusammen mit der WAITFOR-Klausel verwendet werden. Wenn diese Klausel nicht angegeben ist, oder des Timeouts -**1**, die Wartezeit ist unbegrenzt. Läuft das Timeout ab, gibt RECEIVE ein leeres Resultset zurück.  
+ TIMEOUT *timeout*  
+ Gibt in Millisekunden an, wie lange die Anweisung auf eine Nachricht warten soll. Diese Klausel kann nur zusammen mit der WAITFOR-Klausel verwendet werden. Wenn die Klausel nicht angegeben wird oder das Timeout den Wert –**1** hat, dann ist die Wartezeit unbegrenzt. Läuft das Timeout ab, gibt RECEIVE ein leeres Resultset zurück.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
   
 > [!IMPORTANT]  
 >  Wenn es sich bei der RECEIVE-Anweisung nicht um die erste Anweisung in einem Batch oder in einer gespeicherten Prozedur handelt, muss die vorhergehende Anweisung mit einem Semikolon (;) abgeschlossen werden.  
   
- Die RECEIVE-Anweisung liest Nachrichten aus einer Warteschlange und gibt ein Resultset zurück. Das zurückgegebene Resultset besteht aus null oder mehr Zeilen, wobei jede Zeile eine Nachricht umfasst. Wenn die INTO-Klausel nicht verwendet wird, und *Column_specifier* weist keine Werte auf lokale Variablen, die Anweisung gibt ein Resultset an das aufrufende Programm zurück.  
+ Die RECEIVE-Anweisung liest Nachrichten aus einer Warteschlange und gibt ein Resultset zurück. Das zurückgegebene Resultset besteht aus null oder mehr Zeilen, wobei jede Zeile eine Nachricht umfasst. Wenn die INTO-Klausel nicht verwendet wird und *column_specifier* die Werte nicht lokalen Variablen zuordnet, dann gibt die Anweisung ein Resultset an das aufrufende Programm zurück.  
   
- Die Nachrichten, die von der RECEIVE-Anweisung zurückgegeben werden, können von anderen Nachrichtentypen sein. Anwendungen können die **Message_type_name** Spalte, um jede Nachricht an code weiterzuleiten behandelt den zugehörigen Nachrichtentyp. Die folgenden zwei Klassen von Nachrichtentypen stehen zur Verfügung:  
+ Die Nachrichten, die von der RECEIVE-Anweisung zurückgegeben werden, können von anderen Nachrichtentypen sein. In Anwendungen kann die Spalte **message_type_name** verwendet werden, um jede Nachricht an Code weiterzuleiten, der den zugehörigen Nachrichtentyp behandelt. Die folgenden zwei Klassen von Nachrichtentypen stehen zur Verfügung:  
   
 -   Anwendungsdefinierte Nachrichtentypen, die mit der CREATE MESSAGE TYPE-Anweisung erstellt wurden. Der in einer Konversation zulässige Satz von anwendungsdefinierten Nachrichtentypen wird durch den für die Konversation angegebenen [!INCLUDE[ssSB](../../includes/sssb-md.md)]-Vertrag definiert.  
   
 -   [!INCLUDE[ssSB](../../includes/sssb-md.md)]-Systemmeldungen, die Status- oder Fehlerinformationen zurückgeben.  
   
- Mit der RECEIVE-Anweisung werden erhaltene Nachrichten aus der Warteschlange entfernt, es sei denn, für die Warteschlange ist die Aufbewahrung von Nachrichten festgelegt. Wenn die beibehaltungseinstellung für die Warteschlange ist, gibt die RECEIVE-Anweisung aktualisiert die **Status** Spalte **0** und belässt die Nachricht in der Warteschlange. Wenn ein Rollback für eine Transaktion erfolgt, die eine RECEIVE-Anweisung enthält, erfolgt auch ein Rollback für alle Änderungen in der Warteschlange innerhalb der Transaktion, und die Nachrichten werden in die Warteschlange zurückgegeben.  
+ Mit der RECEIVE-Anweisung werden erhaltene Nachrichten aus der Warteschlange entfernt, es sei denn, für die Warteschlange ist die Aufbewahrung von Nachrichten festgelegt. Ist als Einstellung für RETENTION für die Warteschlange der Wert ON festgelegt, dann aktualisiert die RECEIVE-Anweisung den Wert in der Spalte **status** auf **0** und belässt die Nachricht in der Warteschlange. Wenn ein Rollback für eine Transaktion erfolgt, die eine RECEIVE-Anweisung enthält, erfolgt auch ein Rollback für alle Änderungen in der Warteschlange innerhalb der Transaktion, und die Nachrichten werden in die Warteschlange zurückgegeben.  
   
- Alle Nachrichten, die von einer RECEIVE-Anweisung zurückgegeben werden, gehören derselben Konversationsgruppe an. Die RECEIVE-Anweisung sperrt die Konversationsgruppe für die zurückgegebenen Nachrichten so lange, bis die Transaktion, die die Anweisung enthält, abgeschlossen ist. Eine RECEIVE-Anweisung gibt Nachrichten mit einem **Status** des **1.** Das Resultset, das von einer RECEIVE-Anweisung zurückgegeben wird, ist implizit geordnet.  
+ Alle Nachrichten, die von einer RECEIVE-Anweisung zurückgegeben werden, gehören derselben Konversationsgruppe an. Die RECEIVE-Anweisung sperrt die Konversationsgruppe für die zurückgegebenen Nachrichten so lange, bis die Transaktion, die die Anweisung enthält, abgeschlossen ist. Eine RECEIVE-Anweisung gibt Nachrichten zurück, die einen **Status** von **1** aufweisen. Das Resultset, das von einer RECEIVE-Anweisung zurückgegeben wird, ist implizit geordnet.  
   
 -   Wenn Nachrichten aus mehreren Konversationen den Bedingungen der WHERE-Klausel entsprechen, gibt die RECEIVE-Anweisung alle Nachrichten aus einer Konversation zurück, bevor Nachrichten für eine andere Konversation zurückgegeben werden. Die Konversationen werden in der Reihenfolge absteigender Priorität verarbeitet.  
   
--   Für eine gegebene Konversation gibt eine RECEIVE-Anweisung Nachrichten in aufsteigender **Message_sequence_number** Reihenfolge.  
+-   Für eine gegebene Konversation gibt eine RECEIVE-Anweisung Nachrichten in aufsteigender **message_sequence_number**-Reihenfolge zurück.  
   
- Die WHERE-Klausel der RECEIVE-Anweisung kann nur eine Suchbedingung enthalten, die entweder verwendet **Conversation_handle** oder **Conversation_group_id**. Die Suchbedingung kann keine der anderen Spalten in der Warteschlange umfassen. Die **Conversation_handle** oder **Conversation_group_id** darf kein Ausdruck sein. Welcher Satz an Nachrichten zurückgegeben wird, hängt von den Bedingungen ab, die in der WHERE-Klausel angegeben sind:  
+ Die WHERE-Klausel der RECEIVE-Anweisung kann nur eine Suchbedingung enthalten, in der entweder **conversation_handle** oder **conversation_group_id** verwendet wird. Die Suchbedingung kann keine der anderen Spalten in der Warteschlange umfassen. Ein Ausdruck kann nicht **conversation_handle** oder **conversation_group_id** enthalten. Welcher Satz an Nachrichten zurückgegeben wird, hängt von den Bedingungen ab, die in der WHERE-Klausel angegeben sind:  
   
--   Wenn **Conversation_handle** angegeben ist, gibt RECEIVE alle Nachrichten zurück, aus der angegebenen Konversation, die in der Warteschlange verfügbar sind.  
+-   Wenn **conversation_handle** angegeben wird, dann gibt RECEIVE alle Nachrichten aus der angegebenen Konversation zurück, die in der Warteschlange verfügbar sind.  
   
--   Wenn **Conversation_group_id** angegeben ist, gibt RECEIVE alle Nachrichten, die in der Warteschlange aus Konversationen verfügbar sind, die Mitglied der angegebenen Konversationsgruppe ist zurück.  
+-   Wenn **conversation_group_id** angegeben wird, dann gibt RECEIVE alle Nachrichten zurück, die in der Warteschlange aus Konversationen verfügbar sind, die der angegebenen Konversationsgruppe angehören.  
   
 -   Wenn keine WHERE-Klausel angegeben wurde, bestimmt RECEIVE die Konversationsgruppe:  
   
@@ -168,20 +168,20 @@ ms.lasthandoff: 11/21/2017
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
-|**status**|**tinyint**|Status der Nachricht. Für Nachrichten, die von der RECEIVE-Befehl zurückgegeben werden, wird der Status immer **0**. Nachrichten in der Warteschlange können einen der folgenden Werte enthalten:<br /><br /> **0**= bereit**1**= Nachricht empfangen**2**= noch nicht abgeschlossen**3**= gesendete Nachricht wurde beibehalten|  
-|**Priorität**|**tinyint**|Die Prioritätsebene der Konversation, die auf die Nachricht angewendet wird.|  
+|**status**|**tinyint**|Status der Nachricht. Für Nachrichten, die vom RECEIVE-Befehl zurückgegeben werden, ist der Status immer **0**. Nachrichten in der Warteschlange können einen der folgenden Werte enthalten:<br /><br /> **0**=Bereit **1**=Nachricht empfangen **2**=Noch nicht abgeschlossen **3**=Gesendete Nachricht wurde beibehalten|  
+|**priority**|**tinyint**|Die Prioritätsebene der Konversation, die auf die Nachricht angewendet wird.|  
 |**queuing_order**|**bigint**|Fortlaufende Nummer der Nachricht in der Warteschlange.|  
 |**conversation_group_id**|**uniqueidentifier**|Bezeichner für die Konversationsgruppe, zu der diese Nachricht gehört.|  
 |**conversation_handle**|**uniqueidentifier**|Handle der Konversation, von der diese Nachricht ein Teil ist.|  
 |**message_sequence_number**|**bigint**|Sequenznummer der Nachricht in der Konversation.|  
-|**Dienstname**|**nvarchar(512)**|Name des Diensts, an den die Konversation gerichtet ist.|  
+|**service_name**|**nvarchar(512)**|Name des Diensts, an den die Konversation gerichtet ist.|  
 |**service_id**|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Objektbezeichner des Diensts, an den die Konversation gerichtet ist.|  
 |**service_contract_name**|**nvarchar(256)**|Name des Vertrags, dem die Konversation entspricht.|  
 |**service_contract_id**|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Objektbezeichner des Vertrags, dem die Konversation entspricht.|  
 |**message_type_name**|**nvarchar(256)**|Name des Nachrichtentyps, der das Format der Nachricht beschreibt. Nachrichten können entweder vom Typ Anwendungsnachricht oder Brokersystemmeldungen sein.|  
 |**message_type_id**|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Objektbezeichner des Nachrichtentyps, der die Nachricht beschreibt.|  
-|**Überprüfung**|**NCHAR(2)**|Für die Nachricht verwendete Überprüfung.<br /><br /> **E**= leer**N**= keine**X**= XML|  
-|**message_body**|**varbinary(max)**|Inhalt der Nachricht.|  
+|**validation**|**nchar(2)**|Für die Nachricht verwendete Überprüfung.<br /><br /> **E**=Empty**N**=None**X**=XML|  
+|**message_body**|**varbinary(MAX)**|Inhalt der Nachricht.|  
   
 ## <a name="permissions"></a>Berechtigungen  
  Um eine Nachricht erhalten zu können, muss der aktuelle Benutzer über eine RECEIVE-Berechtigung für die Warteschlange verfügen.  
@@ -338,15 +338,15 @@ WAITFOR(
 ), TIMEOUT 60000 ;  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [BEGIN DIALOG CONVERSATION &#40; Transact-SQL &#41;](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
- [BEGIN CONVERSATION TIMER &#40; Transact-SQL &#41;](../../t-sql/statements/begin-conversation-timer-transact-sql.md)   
- [END CONVERSATION-Anweisung &#40; Transact-SQL &#41;](../../t-sql/statements/end-conversation-transact-sql.md)   
- [Erstellen Sie Vertrag &#40; Transact-SQL &#41;](../../t-sql/statements/create-contract-transact-sql.md)   
- [Erstellen Sie NACHRICHTENTYP &#40; Transact-SQL &#41;](../../t-sql/statements/create-message-type-transact-sql.md)   
- [SEND &#40; Transact-SQL &#41;](../../t-sql/statements/send-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [BEGIN DIALOG CONVERSATION &#40;Transact-SQL&#41;](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
+ [BEGIN CONVERSATION TIMER &#40;Transact-SQL&#41;](../../t-sql/statements/begin-conversation-timer-transact-sql.md)   
+ [END CONVERSATION &#40;Transact-SQL&#41;](../../t-sql/statements/end-conversation-transact-sql.md)   
+ [CREATE CONTRACT &#40;Transact-SQL&#41;](../../t-sql/statements/create-contract-transact-sql.md)   
+ [CREATE MESSAGE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/create-message-type-transact-sql.md)   
+ [SEND &#40;Transact-SQL&#41;](../../t-sql/statements/send-transact-sql.md)   
  [CREATE QUEUE &#40;Transact-SQL&#41;](../../t-sql/statements/create-queue-transact-sql.md)   
- [ALTER QUEUE &#40; Transact-SQL &#41;](../../t-sql/statements/alter-queue-transact-sql.md)   
- [DROP QUEUE &#40; Transact-SQL &#41;](../../t-sql/statements/drop-queue-transact-sql.md)  
+ [ALTER QUEUE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-queue-transact-sql.md)   
+ [DROP QUEUE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-queue-transact-sql.md)  
   
   

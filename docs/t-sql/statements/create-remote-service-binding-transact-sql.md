@@ -1,5 +1,5 @@
 ---
-title: Erstellen der REMOTEDIENSTBINDUNG (Transact-SQL) | Microsoft Docs
+title: CREATE REMOTE SERVICE BINDING (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -71,35 +71,35 @@ CREATE REMOTE SERVICE BINDING binding_name
   
 ## <a name="arguments"></a>Argumente  
  *binding_name*  
- Der Name der zu erstellenden Remotedienstbindung. Server-, Datenbank- und Schemaname können nicht angegeben werden. Die *Binding_name* muss ein gültiger **Sysname**.  
+ Der Name der zu erstellenden Remotedienstbindung. Server-, Datenbank- und Schemaname können nicht angegeben werden. *binding_name* muss einen gültigen **sysname**-Wert besitzen.  
   
- Autorisierung *Owner_name*  
- Legt den Besitzer der Bindung auf den angegebenen Datenbankbenutzer oder die angegebene Datenbankrolle fest. Wenn der aktuelle Benutzer ist **Dbo** oder **sa**, *Owner_name* kann der Name eines beliebigen gültigen Benutzers oder einer Rolle sein. Andernfalls *Owner_name* kann den Namen des aktuellen Benutzers, den Namen eines Benutzers an, die der aktuelle Benutzer IMPERSONATE-Berechtigungen für verfügt oder der Name einer Rolle, zu der der aktuelle Benutzer gehört.  
+ AUTHORIZATION *owner_name*  
+ Legt den Besitzer der Bindung auf den angegebenen Datenbankbenutzer oder die angegebene Datenbankrolle fest. Ist der aktuelle Benutzer **dbo** oder **sa**, kann *owner_name* der Name eines beliebigen gültigen Benutzers bzw. einer beliebigen gültigen Rolle sein. Andernfalls muss *owner_name* der Name des aktuellen Benutzers, der Name eines Benutzers, für den der aktuelle Benutzer IMPERSONATE-Berechtigungen besitzt, oder der Name einer Rolle sein, der der aktuelle Benutzer angehört.  
   
- Dienst '*Service_name*"  
+ TO SERVICE '*service_name*'  
  Gibt den Remotedienst an, der an den in der WITH USER-Klausel identifizierten Benutzer gebunden werden soll.  
   
- Benutzer = *User_name*  
+ USER = *user_name*  
  Gibt den Datenbankprinzipal an, der das Zertifikat besitzt, das dem von der TO SERVICE-Klausel identifizierten Remotedienst zugeordnet wird. Dieses Zertifikat wird für die Verschlüsselung und Authentifizierung von Nachrichten verwendet, die mit dem Remotedienst ausgetauscht werden.  
   
  ANONYMOUS  
- Gibt an, ob die anonyme Authentifizierung bei der Kommunikation mit dem Remotedienst verwendet wird. Wenn ANONYMOUS = ON, anonyme Authentifizierung verwendet und in der Remotedatenbank erfolgen als Mitglied der **öffentlichen** festen Datenbankrolle "". Wenn ANONYMOUS = OFF angegeben ist, finden Vorgänge in der Remotedatenbank als bestimmte Benutzer dieser Datenbank statt. Wird diese Klausel nicht angegeben, ist die Standardeinstellung OFF.  
+ Gibt an, ob die anonyme Authentifizierung bei der Kommunikation mit dem Remotedienst verwendet wird. Wenn ANONYMOUS = ON angegeben ist, wird die anonyme Authentifizierung verwendet, und Vorgänge in der Remotedatenbank erscheinen als Mitglieder der festen Datenbankrolle **public**. Wenn ANONYMOUS = OFF angegeben ist, finden Vorgänge in der Remotedatenbank als bestimmte Benutzer dieser Datenbank statt. Wird diese Klausel nicht angegeben, ist die Standardeinstellung OFF.  
   
-## <a name="remarks"></a>Hinweise  
- [!INCLUDE[ssSB](../../includes/sssb-md.md)] verwendet eine Remotedienstbindung, um nach dem für eine neue Konversation zu verwendenden Zertifikat zu suchen. Der öffentliche Schlüssel im Zertifikat zugeordneten *User_name* dient zur Authentifizierung von Nachrichten an den Remotedienst gesendet und zur Verschlüsselung eines Sitzungsschlüssels verwendet, die dann zur Verschlüsselung der Konversation verwendet wird. Das Zertifikat für *User_name* muss das Zertifikat für einen Benutzer in der Datenbank, die den Remotedienst hostet entsprechen.  
+## <a name="remarks"></a>Remarks  
+ [!INCLUDE[ssSB](../../includes/sssb-md.md)] verwendet eine Remotedienstbindung, um nach dem für eine neue Konversation zu verwendenden Zertifikat zu suchen. Der öffentliche Schlüssel des Zertifikats, das *user_name*zugeordnet ist, wird zur Authentifizierung von Nachrichten an den Remotedienst und zur Verschlüsselung eines Sitzungsschlüssels verwendet, der dann zur Verschlüsselung der Konversation verwendet wird. Das Zertifikat für *user_name* muss dem Zertifikat für einen Benutzer in der Datenbank entsprechen, die als Host für den Remotedienst dient.  
   
- Eine Remotedienstbindung wird nur zum Initiieren von Diensten benötigt, die mit Zieldiensten außerhalb der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz kommunizieren. Eine Datenbank, die als Host für einen initiierenden Dienst dient, muss Remotedienstbindungen für alle Zieldienste außerhalb der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz enthalten. Eine Datenbank, die als Host für einen Zieldienst dient, muss keine Remotedienstbindungen für die initiierenden Dienste enthalten, die mit dem Zieldienst kommunizieren. Wenn sich der Initiator- und der Zieldienst in der gleichen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] befinden, ist keine Dienstbindung erforderlich. Jedoch, wenn eine Remotedienstbindung vorhanden ist, die *Service_name* angegebene für TO SERVICE dem Namen des lokalen Diensts entspricht [!INCLUDE[ssSB](../../includes/sssb-md.md)] die Bindung.  
+ Eine Remotedienstbindung wird nur zum Initiieren von Diensten benötigt, die mit Zieldiensten außerhalb der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz kommunizieren. Eine Datenbank, die als Host für einen initiierenden Dienst dient, muss Remotedienstbindungen für alle Zieldienste außerhalb der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz enthalten. Eine Datenbank, die als Host für einen Zieldienst dient, muss keine Remotedienstbindungen für die initiierenden Dienste enthalten, die mit dem Zieldienst kommunizieren. Wenn sich der Initiator- und der Zieldienst in der gleichen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] befinden, ist keine Dienstbindung erforderlich. Wenn hingegen eine Remotedienstbindung vorhanden ist, in der *service_name* für TO SERVICE dem Namen des lokalen Diensts entspricht, verwendet [!INCLUDE[ssSB](../../includes/sssb-md.md)] die Bindung.  
   
- Wenn ANONYMOUS = ON, der initiierende Dienst eine Verbindung mit den Zieldienst als Mitglied der **öffentlichen** festen Datenbankrolle "". Standardmäßig haben Mitglieder dieser Rolle keine Berechtigung, eine Verbindung mit einer Datenbank herzustellen. Um eine Nachricht erfolgreich gesendet werden soll, muss die Zieldatenbank gewähren die **öffentlichen** Rolle CONNECT-Berechtigung für die Datenbank und die SEND-Berechtigung für den Zieldienst.  
+ Wenn ANONYMOUS = ON festgelegt wurde, stellt der initiierende Dienst eine Verbindung mit dem Zieldienst als Mitglied der festen Datenbankrolle **public** her. Standardmäßig haben Mitglieder dieser Rolle keine Berechtigung, eine Verbindung mit einer Datenbank herzustellen. Damit eine Nachricht erfolgreich gesendet wird, muss die Zieldatenbank der **public**-Rolle die CONNECT-Berechtigung für die Datenbank und die SEND-Berechtigung für den Zieldienst erteilen.  
   
  Besitzt ein Benutzer mehrere Zertifikate, wählt [!INCLUDE[ssSB](../../includes/sssb-md.md)] das Zertifikat mit dem aktuellsten Ablaufzeitpunkt aus den derzeit gültigen und als AVAILABLE FOR BEGIN_DIALOG gekennzeichneten Zertifikaten aus.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Berechtigungen zum Erstellen einer Remotedienstbindung dienstbindung Standardwert für den Benutzer, die mit dem Namen in der USER-Klausel, Mitglied der **Db_owner** festen Datenbankrolle "", die Mitglieder der der **Db_ddladmin** feste Datenbankrolle und Elemente von der **Sysadmin** festen Serverrolle "".  
+ Die Berechtigung zum Erstellen einer Remotedienstbindung erhalten standardmäßig in der USER-Klausel benannte Benutzer, Mitglieder der festen Datenbankrollen **db_owner** und **db_ddladmin** sowie Mitglieder der festen Serverrolle **sysadmin**.  
   
  Der Benutzer, der die CREATE REMOTE SERVICE BINDING-Anweisung ausführt, muss berechtigt sein, die Identität des in der Anweisung angegebenen Prinzipals anzunehmen.  
   
- Eine Remotedienstbindung ist möglicherweise kein temporäres Objekt. Remote Service Binding Namen ab  **#**  zulässig sind, sind jedoch dauerhafte Objekte.  
+ Eine Remotedienstbindung ist möglicherweise kein temporäres Objekt. Namen von Remotedienstbindungen, die mit **#** beginnen, sind zulässig. Sie sind jedoch dauerhafte Objekte.  
   
 ## <a name="examples"></a>Beispiele  
   
@@ -113,7 +113,7 @@ CREATE REMOTE SERVICE BINDING APBinding
 ```  
   
 ### <a name="b-creating-a-remote-service-binding-using-anonymous-authentication"></a>B. Erstellen einer Remotedienstbindung mit anonymer Authentifizierung  
- Im folgenden Beispiel wird eine Bindung für den Dienst `//Adventure-Works.com/services/AccountsPayable` erstellt. [!INCLUDE[ssSB](../../includes/sssb-md.md)] tauscht mit dem Zertifikat, das sich im Besitz des `APUser`-Datenbankprinzipals befindet, den Verschlüsselungsschlüssel für die Sitzung mit dem Remotedienst aus. Es findet keine Authentifizierung von Service Broker beim Remotedienst statt. In der Datenbank, die den Remotedienst hostet, Nachrichten übermittelt werden, als die **Gast** Benutzer.  
+ Im folgenden Beispiel wird eine Bindung für den Dienst `//Adventure-Works.com/services/AccountsPayable` erstellt. [!INCLUDE[ssSB](../../includes/sssb-md.md)] tauscht mit dem Zertifikat, das sich im Besitz des `APUser`-Datenbankprinzipals befindet, den Verschlüsselungsschlüssel für die Sitzung mit dem Remotedienst aus. Es findet keine Authentifizierung von Service Broker beim Remotedienst statt. In der Datenbank, die als Host für den Remotedienst dient, werden Nachrichten als **guest**-Benutzer übermittelt.  
   
 ```  
 CREATE REMOTE SERVICE BINDING APBinding  
@@ -121,9 +121,9 @@ CREATE REMOTE SERVICE BINDING APBinding
     WITH USER = APUser, ANONYMOUS=ON ;  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [ALTER REMOTE SERVICE BINDING &#40; Transact-SQL &#41;](../../t-sql/statements/alter-remote-service-binding-transact-sql.md)   
- [DROP REMOTE SERVICE BINDING &#40; Transact-SQL &#41;](../../t-sql/statements/drop-remote-service-binding-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [ALTER REMOTE SERVICE BINDING &#40;Transact-SQL&#41;](../../t-sql/statements/alter-remote-service-binding-transact-sql.md)   
+ [DROP REMOTE SERVICE BINDING &#40;Transact-SQL&#41;](../../t-sql/statements/drop-remote-service-binding-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: DROP-Regel (Transact-SQL) | Microsoft Docs
+title: DROP RULE (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 05/11/2017
 ms.prod: sql-non-specified
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/21/2017
   Entfernt eine oder mehrere benutzerdefinierte Regeln aus der aktuellen Datenbank.  
   
 > [!IMPORTANT]  
->  DROP RULE werden in der nächsten Version von entfernt [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Verwenden Sie DROP RULE nicht bei neuen Entwicklungsarbeiten, und planen Sie die Änderung von Anwendungen, die DROP RULE derzeit verwenden. Verwenden Sie stattdessen CHECK-Einschränkungen, die Sie erstellen können, mit dem CHECK-Schlüsselwort von [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) oder [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md). Weitere Informationen finden Sie unter [Unique Constraints and Check Constraints](../../relational-databases/tables/unique-constraints-and-check-constraints.md).  
+>  DROP RULE wird in der nächsten Version von [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht mehr unterstützt. Verwenden Sie DROP RULE nicht bei neuen Entwicklungsarbeiten, und planen Sie die Änderung von Anwendungen, die DROP RULE derzeit verwenden. Verwenden Sie stattdessen CHECK-Einschränkungen, die Sie mithilfe des CHECK-Schlüsselworts von [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) oder [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) erstellen können. Weitere Informationen finden Sie unter [Unique Constraints and Check Constraints](../../relational-databases/tables/unique-constraints-and-check-constraints.md).  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -52,23 +52,23 @@ DROP RULE [ IF EXISTS ] { [ schema_name . ] rule_name } [ ,...n ] [ ; ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *IF VORHANDEN IST*  
+ *IF EXISTS*  
  **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis zur [aktuellen Version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   
- Bedingt löscht die Regel nur, wenn sie bereits vorhanden ist.  
+ Löscht die Regel nur, wenn diese bereits vorhanden ist.  
   
  *schema_name*  
  Der Name des Schemas, zu dem die Regel gehört.  
   
- *Regel*  
- Die zu entfernende Regel. Regelnamen müssen den Regeln für entsprechen [Bezeichner](../../relational-databases/databases/database-identifiers.md). Das Angeben des Regelschemanamens ist optional.  
+ *rule*  
+ Die zu entfernende Regel. Regelnamen müssen den Regeln für [Bezeichner](../../relational-databases/databases/database-identifiers.md) entsprechen. Das Angeben des Regelschemanamens ist optional.  
   
-## <a name="remarks"></a>Hinweise  
- Um eine Regel zu löschen, müssen Sie zuerst eine möglicherweise vorhandene Bindung an eine Spalte oder einen Aliasdatentyp aufheben. Verwenden Sie zum Aufheben der Bindung der Regelnamens, **Sp_unbindrule**. Wenn beim Löschen einer Regel noch eine Bindung besteht, wird eine Fehlermeldung angezeigt, und die DROP RULE-Anweisung wird abgebrochen.  
+## <a name="remarks"></a>Remarks  
+ Um eine Regel zu löschen, müssen Sie zuerst eine möglicherweise vorhandene Bindung an eine Spalte oder einen Aliasdatentyp aufheben. Verwenden Sie **sp_unbindrule**, um die Bindung der Regel aufzuheben. Wenn beim Löschen einer Regel noch eine Bindung besteht, wird eine Fehlermeldung angezeigt, und die DROP RULE-Anweisung wird abgebrochen.  
   
  Nach dem Löschen einer Regel werden auf neue Daten, die Sie in die betreffenden Spalten eingeben, die früheren Einschränkungen der gelöschten Regel nicht mehr angewendet. Dies wirkt sich nicht auf bereits vorhandene Daten aus.  
   
- Die DROP RULE-Anweisung gilt nicht für CHECK-Einschränkungen. Weitere Informationen zum Löschen von CHECK-Einschränkungen finden Sie unter [ALTER TABLE &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-table-transact-sql.md).  
+ Die DROP RULE-Anweisung gilt nicht für CHECK-Einschränkungen. Weitere Informationen zum Löschen von CHECK-Einschränkungen finden Sie unter [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md).  
   
 ## <a name="permissions"></a>Berechtigungen  
  Zum Ausführen von DROP RULE benötigt der Benutzer mindestens die ALTER-Berechtigung für das Schema, zu dem die Regel gehört.  
@@ -82,11 +82,11 @@ DROP RULE VendorID_rule
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [CREATE RULE &#40;Transact-SQL&#41;](../../t-sql/statements/create-rule-transact-sql.md)   
- [Sp_bindrule &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-bindrule-transact-sql.md)   
+ [sp_bindrule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-bindrule-transact-sql.md)   
  [sp_help &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md)   
  [sp_helptext &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptext-transact-sql.md)   
- [Sp_unbindrule &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-unbindrule-transact-sql.md)   
+ [sp_unbindrule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-unbindrule-transact-sql.md)   
  [USE &#40;Transact-SQL&#41;](../../t-sql/language-elements/use-transact-sql.md)  
 

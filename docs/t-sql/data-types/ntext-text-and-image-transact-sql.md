@@ -1,5 +1,5 @@
 ---
-title: Ntext, Text und Image (Transact-SQL) | Microsoft Docs
+title: ntext, text und image (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 7/22/2017
 ms.prod: sql-non-specified
@@ -40,12 +40,12 @@ ms.lasthandoff: 11/21/2017
 
 Datentypen fester und variabler Länge zum Speichern von großen Nicht-Unicode- und Unicode-Zeichendaten sowie Binärdaten. Unicode-Daten verwenden den UNICODE UCS-2-Zeichensatz.
   
->**WICHTIG!**  **Ntext**, **Text**, und **Image** Datentypen werden in einer zukünftigen Version von SQL Server entfernt. Vermeiden Sie die Verwendung dieser Datentypen bei neuen Entwicklungen, und planen Sie die Änderung von Anwendungen, in denen sie aktuell verwendet werden. Verwenden Sie stattdessen [nvarchar(max)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md), [varchar(max)](../../t-sql/data-types/char-and-varchar-transact-sql.md)und [varbinary(max)](../../t-sql/data-types/binary-and-varbinary-transact-sql.md) .  
+>**WICHTIG!**  Die Datentypen **ntext**, **text** und **image** werden in einer zukünftigen Version von SQL Server entfernt. Vermeiden Sie die Verwendung dieser Datentypen bei neuen Entwicklungen, und planen Sie die Änderung von Anwendungen, in denen sie aktuell verwendet werden. Verwenden Sie stattdessen [nvarchar(max)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md), [varchar(max)](../../t-sql/data-types/char-and-varchar-transact-sql.md)und [varbinary(max)](../../t-sql/data-types/binary-and-varbinary-transact-sql.md) .  
   
   
 ## <a name="arguments"></a>Argumente  
 **ntext**  
-Unicode-Daten variabler Länge mit einer maximalen Zeichenfolgenlänge von 2^30 - 1 (1.073.741.823) Bytes. Die Speichergröße in Bytes ist doppelt so groß wie die eingegebene Zeichenfolgenlänge. Das ISO-Synonym für **Ntext** ist **national Text**.
+Unicode-Daten variabler Länge mit einer maximalen Zeichenfolgenlänge von 2^30 - 1 (1.073.741.823) Bytes. Die Speichergröße in Bytes ist doppelt so groß wie die eingegebene Zeichenfolgenlänge. Das ISO-Synonym für **ntext** lautet **national text**.
   
 **text**  
 Nicht-Unicode-Daten variabler Länge in der Codepage des Servers und mit einer maximalen Zeichenfolgenlänge von 2^31 - 1 (2.147.483.647). Auch wenn die Servercodepage Doppelbytezeichen verwendet, ist der Speicherplatz 2.147.483.647 Bytes groß. Abhängig von der Zeichenfolge kann die Speichergröße unter 2.147.483.647 Bytes liegen.
@@ -53,22 +53,22 @@ Nicht-Unicode-Daten variabler Länge in der Codepage des Servers und mit einer m
 **image**  
 Binärdaten variabler Länge von 0 bis 2^31-1 (2.147.483.647) Byte.
   
-## <a name="remarks"></a>Hinweise  
-Die folgenden Funktionen und Anweisungen mit verwendet werden können **Ntext**, **Text**, oder **Image** Daten.
+## <a name="remarks"></a>Remarks  
+Die folgenden Funktionen und Anweisungen können mit **ntext**, **text** oder **image**-Daten verwendet werden.
   
 |Funktionen|Anweisungen|  
 |---|---|
-|[DATALENGTH &#40; Transact-SQL &#41;](../../t-sql/functions/datalength-transact-sql.md)|[READTEXT &#40; Transact-SQL &#41;](../../t-sql/queries/readtext-transact-sql.md)|  
-|[PATINDEX &#40; Transact-SQL &#41;](../../t-sql/functions/patindex-transact-sql.md)|[SET TEXTSIZE &#40; Transact-SQL &#41;](../../t-sql/statements/set-textsize-transact-sql.md)|  
-|[TEILZEICHENFOLGE &#40; Transact-SQL &#41;](../../t-sql/functions/substring-transact-sql.md)|[UPDATETEXT &#40; Transact-SQL &#41;](../../t-sql/queries/updatetext-transact-sql.md)|  
-|[TEXTPTR &#40; Transact-SQL &#41;](../../t-sql/functions/text-and-image-functions-textptr-transact-sql.md)|[WRITETEXT (Transact-SQL)](../../t-sql/queries/writetext-transact-sql.md)|  
-|[TEXTVALID &#40; Transact-SQL &#41;](../../t-sql/functions/text-and-image-functions-textvalid-transact-sql.md)||  
+|[DATALENGTH &#40;Transact-SQL&#41;](../../t-sql/functions/datalength-transact-sql.md)|[READTEXT &#40;Transact-SQL&#41;](../../t-sql/queries/readtext-transact-sql.md)|  
+|[PATINDEX &#40;Transact-SQL&#41;](../../t-sql/functions/patindex-transact-sql.md)|[SET TEXTSIZE &#40;Transact-SQL&#41;](../../t-sql/statements/set-textsize-transact-sql.md)|  
+|[SUBSTRING &#40;Transact-SQL&#41;](../../t-sql/functions/substring-transact-sql.md)|[UPDATETEXT &#40;Transact-SQL&#41;](../../t-sql/queries/updatetext-transact-sql.md)|  
+|[TEXTPTR &#40;Transact-SQL&#41;](../../t-sql/functions/text-and-image-functions-textptr-transact-sql.md)|[WRITETEXT (Transact-SQL)](../../t-sql/queries/writetext-transact-sql.md)|  
+|[TEXTVALID &#40;Transact-SQL&#41;](../../t-sql/functions/text-and-image-functions-textvalid-transact-sql.md)||  
   
 ## <a name="see-also"></a>Siehe auch
 [CAST und CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
-[Datentypkonvertierung &#40; Datenbankmodul &#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)  
+[Datentypkonvertierung &#40;Datenbank-Engine&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)  
 [Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
-[WIE &#40; Transact-SQL &#41;](../../t-sql/language-elements/like-transact-sql.md)  
+[LIKE &#40;Transact-SQL&#41;](../../t-sql/language-elements/like-transact-sql.md)  
 [SET @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/set-local-variable-transact-sql.md)  
 [Sortierung und Unicode-Unterstützung](../../relational-databases/collations/collation-and-unicode-support.md)
 

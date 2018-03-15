@@ -1,5 +1,5 @@
 ---
-title: IsNull (Geometry-Datentyp) | Microsoft Docs
+title: IsNull (geometry-Datentyp) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 09/12/2017
 ms.prod: sql-non-specified
@@ -33,7 +33,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="isnull-geometry-data-type"></a>IsNull (geometry-Datentyp)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Der Typ des eine **Geometrie** -Instanz null ist. Gibt 0 zurück, wenn die Instanz nicht NULL ist.
+Der Typ einer **geometry**-Instanz ist NULL. Gibt 0 zurück, wenn die Instanz nicht NULL ist.
   
 ## <a name="syntax"></a>Syntax  
   
@@ -42,17 +42,17 @@ Der Typ des eine **Geometrie** -Instanz null ist. Gibt 0 zurück, wenn die Insta
 ```  
   
 ## <a name="return-types"></a>Rückgabetypen  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Typ: **Bit**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Typ: **bit**  
   
  CLR-Typ: **SqlBoolean**  
   
-## <a name="remarks"></a>Hinweise  
- `IsNull`kann verwendet werden, um zu testen, ob eine **Geometrie** -Instanz null ist. Dies kann zu möglicherweise verwirrenden Ergebnissen führen, da 0 zurückgegeben wird, wenn die Instanz nicht NULL ist, aber NULL zurückgegeben wird, wenn die Instanz NULL ist.  
+## <a name="remarks"></a>Remarks  
+ `IsNull` kann verwendet werden, um zu überprüfen, ob eine **geometry**-Instanz NULL ist. Dies kann zu möglicherweise verwirrenden Ergebnissen führen, da 0 zurückgegeben wird, wenn die Instanz nicht NULL ist, aber NULL zurückgegeben wird, wenn die Instanz NULL ist.  
   
  Diese Methode wird in erster Linie von der .SQL Server-Infrastruktur verwendet. Es wird nicht empfohlen, mit `IsNull` zu prüfen, ob eine Instanz NULL ist.  
   
 
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Erweiterte Methoden für geometry-Instanzen](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: PATINDEX (Transact-SQL) | Microsoft Docs
+title: PATINDEX (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 07/19/2016
 ms.prod: sql-non-specified
@@ -50,28 +50,28 @@ PATINDEX ( '%pattern%' , expression )
   
 ## <a name="arguments"></a>Argumente  
  *pattern*  
- Ein Zeichenausdruck, der die zu suchende Sequenz enthält. Platzhalterzeichen können verwendet werden. Allerdings muss das Zeichen % ergeben, vor und führen Sie *Muster* (außer wenn Sie nach der ersten oder letzten Zeichen suchen). *Muster* ist ein Ausdruck der Datentypkategorie der Zeichen-Zeichenfolge. *Muster* ist auf 8000 Zeichen beschränkt.  
+ Ein Zeichenausdruck, der die zu suchende Sequenz enthält. Platzhalterzeichen können verwendet werden, jedoch muss das %-Zeichen vorangestellt werden und *pattern* folgen (es sei denn, Sie suchen nach den ersten oder letzten Zeichen). *pattern* ist ein Ausdruck aus der Kategorie der Zeichenfolgen-Datentypen. *pattern* ist auf 8000 Zeichen beschränkt.  
   
  *expression*  
- Ist ein [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md), in der Regel eine Spalte, nach dem angegebenen Muster durchsucht wird. *Ausdruck* der Datentypkategorie der Zeichen-Zeichenfolge ist.  
+ Ein [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md), in der Regel eine Spalte, der nach dem angegebenen Muster durchsucht wird. *expression* ist ein Ausdruck aus der Kategorie der Zeichenfolgen-Datentypen.  
   
 ## <a name="return-types"></a>Rückgabetypen  
- **"bigint"** Wenn *Ausdruck* wird von der **varchar(max)** oder **nvarchar(max)** Datentypen andernfalls **Int**.  
+ **bigint**, wenn *expression* vom Datentyp **varchar(max)** oder **nvarchar(max)** ist; andernfalls **int**.  
   
-## <a name="remarks"></a>Hinweise  
- Wenn entweder *Muster* oder *Ausdruck* NULL ist, gibt PATINDEX NULL zurück.  
+## <a name="remarks"></a>Remarks  
+ Wenn *pattern* oder *expression* NULL ist, gibt PATINDEX NULL zurück.  
   
  PATINDEX führt Vergleiche auf Basis der Sortierung der Eingabe aus. Zum Ausführen eines Vergleichs in einer angegebenen Sortierung können Sie mithilfe von COLLATE eine ausdrückliche Sortierung auf die Eingabe anwenden.  
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>Ergänzende Zeichen (Ersatzpaare)  
- Wenn Sie SC-Sortierungen verwenden zu können, zählen der Rückgabewert UTF-16-Ersatzzeichenpaare der *Ausdruck* Parameter als ein einzelnes Zeichen. Weitere Informationen finden Sie unter [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).  
+ Bei SC-Sortierungen werden UTF-16-Ersatzpaare im *expression*-Parameter vom Rückgabewert als einzelnes Zeichen gezählt. Weitere Informationen finden Sie unter [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).  
   
- 0 x 0000 (**char(0) zurück**) ist ein nicht definiertes Zeichen in Windows-Sortierungen und kann nicht in PATINDEX enthalten sein.  
+ 0x0000 (**char(0)**) ist ein nicht definiertes Zeichen in Windows-Sortierungen und kann nicht in PATINDEX enthalten sein.  
   
 ## <a name="examples"></a>Beispiele  
   
-### <a name="a-simple-patindex-example"></a>A. Einfaches Beispiel für PATINDEX  
- Das folgende Beispiel überprüft eine kurze Zeichenfolge (`interesting data`) für die Startposition der Zeichen `ter`.  
+### <a name="a-simple-patindex-example"></a>A. Ein einfaches Beispiel für PATINDEX  
+ Im folgenden Beispiel wird eine kurze Zeichenfolge (`interesting data`) auf die Startposition der Zeichen `ter` überprüft.  
   
 ```  
 SELECT PATINDEX('%ter%', 'interesting data');  
@@ -130,7 +130,7 @@ GO
 ```  
   
 ### <a name="e-using-a-variable-to-specify-the-pattern"></a>E. Verwenden einer Variable, um das Muster anzugeben  
- Im folgenden Beispiel wird eine Variablen einen Wert zum Übergeben der *Muster* Parameter. Dieses Beispiel verwendet die [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] Datenbank.  
+ Im folgenden Beispiel wird eine Variable verwendet, um einen Wert an den *pattern*-Parameter zu übergeben. In diesem Beispiel wird die [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Datenbank verwendet.  
   
 ```  
 DECLARE @MyValue varchar(10) = 'safety';   
@@ -148,15 +148,15 @@ WHERE DocumentNode = 0x7B40;
   
 
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [CHARINDEX &#40;Transact-SQL&#41;](../../t-sql/functions/charindex-transact-sql.md)  
  [LEN &#40;Transact-SQL&#41;](../../t-sql/functions/len-transact-sql.md)  
  [Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [Zeichenfolgenfunktionen &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)   
- [&#40; Platzhalter - Zeichen &#40; s &#41; Übereinstimmung &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/wildcard-character-s-to-match-transact-sql.md)   
- [&#40; Platzhalter - Zeichen &#40; s &#41; Nicht in Übereinstimmung &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md)   
- [_ &#40; Platzhalterzeichen - einzelnes zu suchendes Zeichen &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/wildcard-match-one-character-transact-sql.md)   
- [Prozentzeichen &#40; Platzhalter - Zeichen &#40; s &#41; Übereinstimmung &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/percent-character-wildcard-character-s-to-match-transact-sql.md)  
+ [Zeichenfolgenfunktionen &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)   
+ [&#40;Wildcard - Character&#40;s&#41; to Match&#41; &#40;Transact-SQL&#41; (% (Platzhalterzeichen – zu suchende(s) Zeichen) (Transact-SQL))](../../t-sql/language-elements/wildcard-character-s-to-match-transact-sql.md)   
+ [&#40;Wildcard - Character&#40;s&#41; to Match&#41; &#40;Transact-SQL&#41; (% (Platzhalterzeichen – nicht zu suchende(s) Zeichen) (Transact-SQL))](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md)   
+ [_ &#40;Wildcard - Match One Character&#41; &#40;Transact-SQL&#41; (_ (Platzhalterzeichen – einzelnes zu suchendes Zeichen) (Transact-SQL))](../../t-sql/language-elements/wildcard-match-one-character-transact-sql.md)   
+ [Percent character &#40;Wildcard - Character&#40;s&#41; to Match&#41; &#40;Transact-SQL&#41; (Prozentzeichen (Platzhalterzeichen – zu suchende(s) Zeichen) (Transact-SQL))](../../t-sql/language-elements/percent-character-wildcard-character-s-to-match-transact-sql.md)  
   
   
 

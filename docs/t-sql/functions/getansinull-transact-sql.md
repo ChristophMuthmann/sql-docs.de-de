@@ -1,5 +1,5 @@
 ---
-title: GETANSINULL (Transact-SQL) | Microsoft Docs
+title: GETANSINULL (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -49,18 +49,18 @@ GETANSINULL ( [ 'database' ] )
 ```  
   
 ## <a name="arguments"></a>Argumente  
- "*Datenbank*"  
- Der Name der Datenbank, für die Informationen zur NULL-Zulässigkeit zurückgegeben werden sollen. *Datenbank*handelt es sich um **Char** oder **Nchar**. Wenn **Char**, *Datenbank* wird implizit in konvertiert **Nchar**.  
+ '*database*'  
+ Der Name der Datenbank, für die Informationen zur NULL-Zulässigkeit zurückgegeben werden sollen. *database* ist entweder vom Datentyp **char** oder vom Datentyp **nchar**. Wenn es sich um **char** handelt, wird *database* implizit in **nchar** konvertiert.  
   
 ## <a name="return-types"></a>Rückgabetypen  
  **int**  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Wenn die NULL-Zulässigkeit der angegebenen Datenbank NULL-Werte zulässt und die NULL-Zulässigkeit von Spalten oder Datentypen nicht explizit definiert wurde, gibt GETANSINULL den Wert 1 zurück. Dies ist der ANSI NULL-Standard.  
   
  Zur Aktivierung des ANSI NULL-Standardverhaltens muss eine der folgenden Bedingungen festgelegt werden:  
   
--   ALTER DATABASE *Database_name* SET ANSI_NULL_DEFAULT ON  
+-   ALTER DATABASE *database_name* SET ANSI_NULL_DEFAULT ON  
   
 -   SET ANSI_NULL_DFLT_ON ON  
   
@@ -85,7 +85,7 @@ GO
 (1 row(s) affected)
  ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Systemfunktionen &#40; Transact-SQL &#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Systemfunktionen &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
   
   

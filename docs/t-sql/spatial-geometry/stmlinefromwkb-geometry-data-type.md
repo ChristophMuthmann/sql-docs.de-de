@@ -1,5 +1,5 @@
 ---
-title: STMLineFromWKB (Geometry-Datentyp) | Microsoft Docs
+title: STMLineFromWKB (geometry-Datentyp) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stmlinefromwkb-geometry-data-type"></a>STMLineFromWKB (geometry-Datentyp)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Gibt eine **GeometryMultiLineString** Instanz aus einer Open Geospatial Consortium (OGC) Well-Known Binary (WKB)-Darstellung.
+Gibt eine **geometryMultiLineString**-Instanz aus einer OGC-WKB-Darstellung (Open Geospatial Consortium, Well-Known Binary) zurück.
   
 ## <a name="syntax"></a>Syntax  
   
@@ -45,23 +45,23 @@ STMLineFromWKB ( 'WKB_multilinestring' , SRID )
   
 ## <a name="arguments"></a>Argumente  
  *WKB_multilinestring*  
- Ist die WKB-Darstellung der **GeometryMultiLineString** Instanz zurückgegeben. *WKB_multilinestring* ist ein **varbinary(max)** Ausdruck.  
+ Die WKB-Darstellung der Instanz von **geometryMultiLineString**, die zurückgegeben werden soll. *WKB_multilinestring* ist ein **varbinary(max)**-Ausdruck.  
   
  *SRID*  
- Ist ein **Int** Ausdruck darstellt, die räumliche verweisen ID (SRID), der die **GeometryMultiLineString** Instanz zurückgegeben.  
+ Ein **int**-Ausdruck, der die SRID (Spatial Reference ID) der **geometryMultiLineString**-Instanz darstellt, die zurückgegeben werden soll.  
   
 ## <a name="return-types"></a>Rückgabetypen  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Rückgabetyp: **Geometrie**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Rückgabetyp: **geometry**  
   
  CLR-Rückgabetyp: **SqlGeometry**  
   
  OGC-Typ: **MultiLineString**  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Diese Methode löst eine **FormatException** aus, wenn die Eingabe nicht korrekt formatiert ist.  
   
 ## <a name="examples"></a>Beispiele  
- Im folgenden Beispiel wird `STMLineFromWKB()` zum Erstellen einer `geometry` Instanz.  
+ Im folgenden Beispiel wird `STMLineFromWKB()` verwendet, um eine `geometry`-Instanz zu erstellen.  
   
 ```  
 DECLARE @g geometry;   
@@ -69,7 +69,7 @@ SET @g = geometry::STMLineFromWKB(0x01050000000200000001020000000200000000000000
 SELECT @g.STAsText();  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Statische geometry-Methoden des OGC](../../t-sql/spatial-geometry/ogc-static-geometry-methods.md)  
   
   

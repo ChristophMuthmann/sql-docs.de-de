@@ -1,5 +1,5 @@
 ---
-title: END CONVERSATION-Anweisung (Transact-SQL) | Microsoft Docs
+title: END CONVERSATION (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
@@ -60,25 +60,25 @@ END CONVERSATION conversation_handle
  *conversation_handle*  
  Bezeichnet das Konversationshandle für die zu beendende Konversation.  
   
- Fehler =*Failure_code*  
- Bezeichnet den Fehlercode. Die *Failure_code* ist vom Typ **Int**. Beim Fehlercode handelt es sich um einen benutzerdefinierten Code, der in der Fehlermeldung eingeschlossen ist, die an die andere Seite der Konversation gesendet wird. Der Fehlercode muss größer als 0 sein.  
+ WITH ERROR =*failure_code*  
+ Bezeichnet den Fehlercode. *failure_code* ist vom Typ **int**. Beim Fehlercode handelt es sich um einen benutzerdefinierten Code, der in der Fehlermeldung eingeschlossen ist, die an die andere Seite der Konversation gesendet wird. Der Fehlercode muss größer als 0 sein.  
   
  DESCRIPTION =*failure_text*  
- Bezeichnet die Fehlermeldung. Die *Failure_text* ist vom Typ **nvarchar(3000)**. Beim Fehlertext handelt es sich um benutzerdefinierten Text, der in der Fehlermeldung eingeschlossen ist, die an die andere Seite der Konversation gesendet wird.  
+ Bezeichnet die Fehlermeldung. *failure_text* ist vom Typ **nvarchar(3000)**. Beim Fehlertext handelt es sich um benutzerdefinierten Text, der in der Fehlermeldung eingeschlossen ist, die an die andere Seite der Konversation gesendet wird.  
   
  WITH CLEANUP  
- Entfernt alle Nachrichten und Katalogsichteinträge für eine Seite einer Konversation, die nicht regulär abgeschlossen werden kann. Die andere Seite der Konversation wird nicht über die Bereinigung informiert. [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] löscht den Konversationsendpunkt, alle Nachrichten für die Konversation in der Übertragungswarteschlange sowie alle Nachrichten für die Konversation in der Dienstwarteschlange. Mithilfe dieser Option können Administratoren Konversationen entfernen, die nicht regulär abgeschlossen werden können. Wenn beispielsweise der Remotedienst dauerhaft entfernt wurde, kann ein Administrator mithilfe von WITH CLEANUP Konversationen mit diesem Dienst entfernen. Verwenden Sie WITH CLEANUP nicht im Code eine [!INCLUDE[ssSB](../../includes/sssb-md.md)] Anwendung. Wenn END CONVERSATION WITH CLEANUP ausgeführt wird, bevor der empfangende Endpunkt den Eingang der Nachricht bestätigt, wird die Nachricht vom sendenden Endpunkt erneut gesendet. Möglicherweise wird dadurch der Dialog erneut ausgeführt.  
+ Entfernt alle Nachrichten und Katalogsichteinträge für eine Seite einer Konversation, die nicht regulär abgeschlossen werden kann. Die andere Seite der Konversation wird nicht über die Bereinigung informiert. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] löscht den Konversationsendpunkt, alle Nachrichten für die Konversation in der Übertragungswarteschlange sowie alle Nachrichten für die Konversation in der Dienstwarteschlange. Mithilfe dieser Option können Administratoren Konversationen entfernen, die nicht regulär abgeschlossen werden können. Wenn beispielsweise der Remotedienst dauerhaft entfernt wurde, kann ein Administrator mithilfe von WITH CLEANUP Konversationen mit diesem Dienst entfernen. Verwenden Sie WITH CLEANUP nicht im Code einer [!INCLUDE[ssSB](../../includes/sssb-md.md)]-Anwendung. Wenn END CONVERSATION WITH CLEANUP ausgeführt wird, bevor der empfangende Endpunkt den Eingang der Nachricht bestätigt, wird die Nachricht vom sendenden Endpunkt erneut gesendet. Möglicherweise wird dadurch der Dialog erneut ausgeführt.  
   
-## <a name="remarks"></a>Hinweise  
- Beenden einer Konversation sperren die Konversationsgruppe, die der bereitgestellten *Conversation_handle* angehört. Wenn eine Konversation beendet wird, entfernt [!INCLUDE[ssSB](../../includes/sssb-md.md)] alle Nachrichten für die Konversation aus der Dienstwarteschlange.  
+## <a name="remarks"></a>Remarks  
+ Durch das Beenden einer Konversation wird die Konversationsgruppe gesperrt, zu der *conversation_handle* gehört. Wenn eine Konversation beendet wird, entfernt [!INCLUDE[ssSB](../../includes/sssb-md.md)] alle Nachrichten für die Konversation aus der Dienstwarteschlange.  
   
  Nach dem Ende einer Konversation kann eine Anwendung keine Nachrichten für diese Konversation mehr senden oder empfangen. Beide Teilnehmer an einer Konversation müssen END CONVERSATION aufrufen, damit die Konversation abgeschlossen wird. Wenn [!INCLUDE[ssSB](../../includes/sssb-md.md)] keine Nachricht über das Beenden des Dialogs oder eine Fehlermeldung des anderen Teilnehmers an der Konversation erhalten hat, benachrichtigt [!INCLUDE[ssSB](../../includes/sssb-md.md)] den anderen Teilnehmer, dass die Konversation beendet wurde. Obwohl das Konversationshandle für die Konversation nicht mehr gültig ist, bleibt in diesem Fall der Konversationsendpunkt so lange aktiv, bis die Instanz, die als Host für den Remotedienst dient, die Nachricht anerkennt.  
   
  Wenn [!INCLUDE[ssSB](../../includes/sssb-md.md)] noch keine Nachricht über das Beenden des Dialogs oder eine Fehlermeldung für die Konversation verarbeitet hat, benachrichtigt [!INCLUDE[ssSB](../../includes/sssb-md.md)] die Remoteseite der Konversation, dass die Konversation beendet wurde. Die von [!INCLUDE[ssSB](../../includes/sssb-md.md)] an den Remotedienst gesendeten Nachrichten hängen von den angegebenen Optionen ab:  
   
--   Beendet die Konversation ohne Fehler und die Konversation mit der Remotedienst weiterhin aktiv ist, wird [!INCLUDE[ssSB](../../includes/sssb-md.md)] sendet eine Nachricht vom Typ `http://schemas.microsoft.com/SQL/ServiceBroker/EndDialog` an den Remotedienst. [!INCLUDE[ssSB](../../includes/sssb-md.md)] fügt diese Meldung der Übertragungswarteschlange in der Reihenfolge der Konversation hinzu. [!INCLUDE[ssSB](../../includes/sssb-md.md)] sendet alle Nachrichten für diese Konversation, die sich derzeit in der Übertragungswarteschlange befinden, bevor diese Nachricht gesendet wird.  
+-   Wenn die Konversation ohne Fehler beendet wird und die Konversation mit dem Remotedienst weiterhin aktiv ist, sendet [!INCLUDE[ssSB](../../includes/sssb-md.md)] eine Nachricht vom Typ `http://schemas.microsoft.com/SQL/ServiceBroker/EndDialog` an den Remotedienst. [!INCLUDE[ssSB](../../includes/sssb-md.md)] fügt diese Meldung der Übertragungswarteschlange in der Reihenfolge der Konversation hinzu. [!INCLUDE[ssSB](../../includes/sssb-md.md)] sendet alle Nachrichten für diese Konversation, die sich derzeit in der Übertragungswarteschlange befinden, bevor diese Nachricht gesendet wird.  
   
--   Wenn die Konversation mit einem Fehler beendet, und die Konversation mit dem Remotedienst weiterhin aktiv ist, wird [!INCLUDE[ssSB](../../includes/sssb-md.md)] sendet eine Nachricht vom Typ `http://schemas.microsoft.com/SQL/ServiceBroker/Error` an den Remotedienst. [!INCLUDE[ssSB](../../includes/sssb-md.md)] löscht alle anderen Nachrichten für diese Konversation, die sich derzeit in der Übertragungswarteschlange befinden.  
+-   Wenn die Konversation mit einem Fehler beendet wird und die Konversation mit dem Remotedienst weiterhin aktiv ist, sendet [!INCLUDE[ssSB](../../includes/sssb-md.md)] eine Nachricht vom Typ `http://schemas.microsoft.com/SQL/ServiceBroker/Error` an den Remotedienst. [!INCLUDE[ssSB](../../includes/sssb-md.md)] löscht alle anderen Nachrichten für diese Konversation, die sich derzeit in der Übertragungswarteschlange befinden.  
   
 -   Die WITH CLEANUP-Klausel ermöglicht einem Datenbankadministrator das Entfernen von Konversationen, die nicht regulär abgeschlossen werden können. Mit dieser Option werden alle Nachrichten und Katalogsichteinträge für die Konversation entfernt. In diesem Fall empfängt die Remoteseite der Konversation keinen Hinweis auf das Ende der Konversation und empfängt möglicherweise Nachrichten nicht, die von einer Anwendung gesendet, jedoch noch nicht über das Netzwerk übermittelt wurden. Sie sollten diese Option nur dann auswählen, wenn die Konversation nicht regulär abgeschlossen werden kann.  
   
@@ -130,15 +130,15 @@ COMMIT TRANSACTION ;
 ```  
   
 ### <a name="c-cleaning-up-a-conversation-that-cannot-complete-normally"></a>C. Bereinigen einer Konversation, die nicht normal abgeschlossen werden kann  
- Im folgenden Beispiel wird der von `@dialog_handle` angegebene Dialog beendet. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entfernt alle Nachrichten unmittelbar aus der Dienstwarteschlange und der Übertragungswarteschlange ohne den Remotedienst zu benachrichtigen. Da Beenden eines Dialogs mit Cleanup den Remotedienst nicht benachrichtigt wird, Sie sollten nur verwenden, dies in Fällen, in denen der Remotedienst nicht verfügbar ist, erhalten eine **"EndDialog"** oder **Fehler** Nachricht.  
+ Im folgenden Beispiel wird der von `@dialog_handle` angegebene Dialog beendet. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entfernt alle Nachrichten unmittelbar aus der Dienstwarteschlange und der Übertragungswarteschlange ohne den Remotedienst zu benachrichtigen. Da beim Beenden eines Dialogs mit Cleanup der Remotedienst nicht benachrichtigt wird, sollten Sie diese Option nur verwenden, wenn der Remotedienst keine **EndDialog**- oder **Error**-Nachricht empfangen kann.  
   
 ```  
 END CONVERSATION @dialog_handle WITH CLEANUP ;  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [BEGIN CONVERSATION TIMER &#40; Transact-SQL &#41;](../../t-sql/statements/begin-conversation-timer-transact-sql.md)   
- [BEGIN DIALOG CONVERSATION &#40; Transact-SQL &#41;](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [BEGIN CONVERSATION TIMER &#40;Transact-SQL&#41;](../../t-sql/statements/begin-conversation-timer-transact-sql.md)   
+ [BEGIN DIALOG CONVERSATION &#40;Transact-SQL&#41;](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
  [sys.conversation_endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-conversation-endpoints-transact-sql.md)  
   
   

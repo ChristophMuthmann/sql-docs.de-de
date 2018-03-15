@@ -1,5 +1,5 @@
 ---
-title: "Ändern der EXTERNEN Datenquelle (Transact-SQL) | Microsoft Docs"
+title: ALTER EXTERNAL DATA SOURCE (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 01/09/2018
 ms.prod: sql-non-specified
@@ -35,7 +35,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="alter-external-data-source-transact-sql"></a>ALTER EXTERNAL DATA SOURCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Ändert eine externe Datenquelle verwendet, um eine externe Tabelle zu erstellen. Die externe Datenquelle kann Hadoop oder Azure Blob Storage (WASB) sein.
+  Ändert eine externe Datenquelle, die zum Erstellen einer externen Tabelle verwendet wird. Bei der externen Datenquelle kann es sich um einen Hadoop oder Azure Blob Storage (WASB) handeln.
   
 ## <a name="syntax"></a>Syntax  
   
@@ -63,30 +63,30 @@ ALTER EXTERNAL DATA SOURCE data_source_name
 ## <a name="arguments"></a>Argumente  
  Data_source_name gibt den benutzerdefinierten Namen für die Datenquelle an. Der Name muss eindeutig sein.
   
- Speicherort = "Server_name_or_IP" gibt den Namen des Servers oder eine IP-Adresse.
+ LOCATION = 'server_name_or_IP' gibt den Namen des Servers oder eine IP-Adresse an.
   
- RESOURCE_MANAGER_LOCATION = "\<IP-Adresse; Port > "gibt den Speicherort der Hadoop-Ressourcen-Manager. Wenn angegeben, kann der Abfrageoptimierer entscheiden, um Daten für eine PolyBase-Abfrage mithilfe Hadoops-Datenverarbeitungsfunktionen vorab zu verarbeiten. Dies ist eine kostenbasierte Entscheidung. Prädikatweitergabe wird aufgerufen, kann dies erheblich reduzieren die Datenmenge, die zwischen Hadoop und SQL übertragen und aus diesem Grund die abfrageleistung.
+ RESOURCE_MANAGER_LOCATION = \<'IP address;Port'> gibt den Speicherort des Hadoop-Ressourcen-Managers an. Wenn angegeben, kann der Abfrageoptimierer festlegen, dass Daten für eine PolyBase-Abfrage mithilfe der Berechnungsfunktionen von Hadoop vorverarbeitet werden. Dies ist eine kostenbasierte Entscheidung. Dies wird Prädikatweitergabe genannt und kann die Menge der zwischen Hadoop und SQL übertragenen Daten deutlich reduzieren und damit die Abfrageleistung verbessern.
   
- Anmeldeinformationen = Credential_Name gibt die benannten Anmeldeinformationen. Finden Sie unter [CREATE DATABASE SCOPED CREDENTIAL &#40; Transact-SQL &#41; ](../../t-sql/statements/create-database-scoped-credential-transact-sql.md).
+ CREDENTIAL = Credential_Name gibt die benannten Anmeldeinformationen an. Informationen hierzu finden Sie unter [CREATE DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-scoped-credential-transact-sql.md).
 
-TYP = BLOB_STORAGE   
+TYPE = BLOB_STORAGE   
 **Gilt für:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].
-Für Massenvorgänge nur `LOCATION` muss gültig sein. die URL in den Azure-Blob-Speicher. Nehmen Sie nicht  **/** , Dateinamen an oder freigegebene Signatur Zugriffsparameter am Ende der `LOCATION` URL.
-Die Anmeldeinformationen verwendet, muss erstellt werden, mithilfe von `SHARED ACCESS SIGNATURE` als Identität. Weitere Informationen zu SAS finden Sie unter [Verwenden von Shared Access Signatures (SAS)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1).
+Nur bei Massenvorgängen muss `LOCATION` die gültige URL für den Azure Blob Storage sein. Fügen Sie weder **/**, Dateinamen noch Shared Access Signature-Parameter am Ende der `LOCATION`-URL ein.
+Die verwendeten Anmeldeinformationen müssen mithilfe von `SHARED ACCESS SIGNATURE` als Identität erstellt werden. Weitere Informationen zu SAS finden Sie unter [Verwenden von Shared Access Signatures (SAS)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1).
 
   
   
-## <a name="remarks"></a>Hinweise
- Nur einzelne Quelle kann zu einem Zeitpunkt geändert werden. Viele gleichzeitige Anforderungen die gleiche Quelle zu ändern dazu führen, dass eine Anweisung, die gewartet wird. Allerdings können die verschiedene Quellen gleichzeitig geändert werden. Diese Anweisung kann gleichzeitig mit anderen Anweisungen ausgeführt.
+## <a name="remarks"></a>Remarks
+ Es kann immer jeweils nur eine Quelle geändert werden. Gleichzeitige Anforderungen zur Änderung derselben Quelle führen dazu, dass eine Anweisung warten muss. Unterschiedliche Quellen können jedoch gleichzeitig geändert werden. Diese Anweisung kann gleichzeitig mit anderen Anweisungen ausgeführt werden.
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert die ALTER ANY EXTERNAL DATA SOURCE-Berechtigung.
+ Erfordert eine ALTER ANY EXTERNAL DATA SOURCE-Berechtigung.
  > [!IMPORTANT]  
- >  Die Berechtigung ALTER ANY EXTERNAL DATA SOURCE gewährt Prinzipal die Fähigkeit zum Erstellen und ändern alle externen Datenquellenobjekt und daher auch erteilt den Zugriff auf alle datenbankweit gültige Anmeldeinformationen für die Datenbank. Diese Berechtigung muss berücksichtigt werden, wie hoch privilegierten und daher im System nur für vertrauenswürdige Prinzipale erteilt werden müssen.
+ >  Mit der Berechtigung ALTER ANY EXTERNAL DATA SOURCE besitzt jeder Prinzipal die Fähigkeit, beliebige externe Datenquellenobjekte zu erstellen und zu ändern. Damit ist auch der Zugriff auf alle datenbankweit gültigen Anmeldeinformationen der Datenbank möglich. Da es sich hierbei um eine weitreichende Berechtigung handelt, darf sie nur vertrauenswürdigen Prinzipalen innerhalb des Systems erteilt werden.
 
   
 ## <a name="examples"></a>Beispiele  
- Im folgenden Beispiel ändert den Speicherort und Ressourcenmanager-Speicherort einer vorhandenen Datenquelle.
+ Im folgenden Beispiel wird der Speicherort und der Ressourcen-Manager-Speicherort einer vorhandenen Datenquelle geändert.
   
 ```  
 ALTER EXTERNAL DATA SOURCE hadoop_eds SET
@@ -96,7 +96,7 @@ ALTER EXTERNAL DATA SOURCE hadoop_eds SET
   
 ```  
 
- Im folgenden Beispiel wird die Anmeldeinformationen zur Verbindung mit einer vorhandenen Datenquelle.
+ Im folgenden Beispiel werden die Anmeldeinformationen zur Verbindung mit einer vorhandenen Datenquelle geändert.
   
 ```  
 ALTER EXTERNAL DATA SOURCE hadoop_eds SET

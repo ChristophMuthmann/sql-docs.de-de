@@ -1,5 +1,5 @@
 ---
-title: Value()-Methode (Xml-Datentyp) | Microsoft Docs
+title: value()-Methode (XML-Datentyp) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
@@ -50,7 +50,7 @@ value (XQuery, SQLType)
  *SQLType*  
  Ist der bevorzugte SQL-Typ (ein Zeichenfolgenliteral), der zurückgegeben werden soll. Der Rückgabetyp dieser Methode entspricht dem *SQLType* -Parameter. *SQLType* kann kein **xml** -Datentyp, benutzerdefinierter CLR-Typ (Common Language Runtime) sowie kein **image**-, **text**-, **ntext**- oder **sql_variant** -Datentyp sein. *SQLType* kann ein benutzerdefinierter SQL-Datentyp sein.  
   
- Die **value()** -Methode verwendet die [!INCLUDE[tsql](../../includes/tsql-md.md)] implizit-Operator CONVERT und versucht, das Ergebnis des XQuery-Ausdrucks die serialisierte Zeichenfolgendarstellung von XSD-Typ mit dem entsprechenden gemäßSQL-Datentypkonvertieren[!INCLUDE[tsql](../../includes/tsql-md.md)] Konvertierung. Weitere Informationen zu Typ Umwandlungsregeln für CONVERT, finden Sie unter [CAST und CONVERT &#40; Transact-SQL &#41; ](../../t-sql/functions/cast-and-convert-transact-sql.md).  
+ Die **value()**-Methode verwendet implizit den [!INCLUDE[tsql](../../includes/tsql-md.md)]-Operator CONVERT und versucht, das Ergebnis des XQuery-Ausdrucks (die serialisierte Zeichenfolgendarstellung) vom XSD-Typ in den entsprechenden SQL-Typ zu konvertieren, der durch die [!INCLUDE[tsql](../../includes/tsql-md.md)]-Konvertierung angegeben wird. Weitere Informationen zu Regeln für die Typumwandlung für CONVERT finden Sie unter [CAST und CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md).  
   
 > [!NOTE]  
 >  Aus Leistungsgründen sollten Sie zum Vergleichen mit einem relationalen Wert die **exist()** -Methode mit **sql:column()** verwenden und nicht die **value()**-Methode in einem Prädikat. Dies wird im folgenden Beispiel D gezeigt.  
@@ -78,7 +78,7 @@ SELECT @ProdID
   
  Als Ergebnis wird Wert 1 zurückgegeben.  
   
- Obwohl es nur ein `ProductID` -Attribut in der XML-Instanz gibt, müssen Sie aufgrund der statischen Typisierungsregeln explizit angeben, dass der Pfadausdruck ein Singleton zurückgibt. Deshalb wird zusätzlich `[1]` am Ende des Pfadausdrucks angegeben. Weitere Informationen zur statischen Typisierung finden Sie unter [XQuery and Static Typing](../../xquery/xquery-and-static-typing.md).  
+ Obwohl es nur ein `ProductID` -Attribut in der XML-Instanz gibt, müssen Sie aufgrund der statischen Typisierungsregeln explizit angeben, dass der Pfadausdruck ein Singleton zurückgibt. Deshalb wird zusätzlich `[1]` am Ende des Pfadausdrucks angegeben. Weitere Informationen zur statischen Typisierung finden Sie unter [XQuery and statische Typisierung](../../xquery/xquery-and-static-typing.md).  
   
 ### <a name="b-using-the-value-method-to-retrieve-a-value-from-an-xml-type-column"></a>B. Verwenden der value()-Methode zum Abrufen eines Werts aus einer Spalte vom Typ XML  
  Die folgende Abfrage wird für eine Spalte vom Typ **xml** (`CatalogDescription`) in der `AdventureWorks` -Datenbank angegeben. Die Abfrage ruft die Werte des Attributs `ProductModelID` aus jeder in der Spalte gespeicherten XML-Instanz ab.  
@@ -108,7 +108,7 @@ ORDER BY Result desc
 ```  
   
 ### <a name="c-using-the-value-and-exist-methods-to-retrieve-values-from-an-xml-type-column"></a>C. Verwenden der value()- und der exist()-Methode zum Abrufen von Werten aus einer Spalte vom Typ XML  
- Das folgende Beispiel zeigt die Verwendung sowohl die `value()` Methode und die [EXIST()-Methode](../../t-sql/xml/exist-method-xml-data-type.md) von der **Xml** -Datentyp. Die `value()` -Methode wird zum Abrufen von `ProductModelID` -Attributwerten aus der XML-Instanz verwendet. Mit der `exist()` -Methode in der `WHERE` -Klausel werden die Zeilen aus der Tabelle gefiltert.  
+ Das folgende Beispiel veranschaulicht die Verwendung der beiden Methoden `value()` und [exist()](../../t-sql/xml/exist-method-xml-data-type.md) des **XML**-Datentyps. Die `value()` -Methode wird zum Abrufen von `ProductModelID` -Attributwerten aus der XML-Instanz verwendet. Mit der `exist()` -Methode in der `WHERE` -Klausel werden die Zeilen aus der Tabelle gefiltert.  
   
  Mit der Abfrage werden Produktmodell-IDs aus XML-Instanzen mit Garantieinformationen (<`Warranty`>-Element) als eine der Funktionen abgerufen. Die Bedingung in der `WHERE` -Klausel verwendet die `exist()` -Methode, um nur solche Zeilen abzurufen, die diese Bedingung erfüllen.  
   
@@ -126,7 +126,7 @@ WHERE CatalogDescription.exist('
   
  Beachten Sie hinsichtlich der vorherigen Abfrage Folgendes:  
   
--   Die `CatalogDescription` -Spalte ist eine typisierte XML-Spalte. Das bedeutet, dass ihr eine Schemaauflistung zugeordnet ist. In der [XQuery-Prolog](../../xquery/modules-and-prologs-xquery-prolog.md), die Namespacedeklaration wird verwendet, um das Präfix, das verwendet wird, wird später im Hauptteil Abfrage definieren.  
+-   Die `CatalogDescription` -Spalte ist eine typisierte XML-Spalte. Das bedeutet, dass ihr eine Schemaauflistung zugeordnet ist. Im [XQuery-Prolog](../../xquery/modules-and-prologs-xquery-prolog.md) wird die Namespacedeklaration für die Definition des Präfix verwendet, das später im Abfragetext verwendet wird.  
   
 -   Wenn die `exist()`-Methode `1` (True) zurückgibt, bedeutet dies, dass die XML-Instanz das untergeordnete <`Warranty`>-Element als eine der Funktionen enthält.  
   
@@ -143,7 +143,7 @@ Result
 ```  
   
 ### <a name="d-using-the-exist-method-instead-of-the-value-method"></a>D. Verwenden der exist()-Methode anstelle der value()-Methode  
- Aus Leistungsgründen sollten Sie zum Vergleichen mit einem relationalen Wert die `value()` -Methode mit `exist()` verwenden und nicht die `sql:column()`-Methode in einem Prädikat. Beispiel:  
+ Aus Leistungsgründen sollten Sie zum Vergleichen mit einem relationalen Wert die `value()` -Methode mit `exist()` verwenden und nicht die `sql:column()`-Methode in einem Prädikat. Zum Beispiel:  
   
 ```  
 CREATE TABLE T (c1 int, c2 varchar(10), c3 xml)  
@@ -164,11 +164,11 @@ WHERE c3.exist( '/root[@a=sql:column("c1")]') = 1
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Hinzufügen von Namespaces zu Abfragen mit WITH XMLNAMESPACES](../../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)   
  [Vergleichen von typisiertem XML mit nicht typisiertem XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [Erstellen von Instanzen der XML-Daten](../../relational-databases/xml/create-instances-of-xml-data.md)   
- [xml-Datentypmethoden](../../t-sql/xml/xml-data-type-methods.md)   
- [XML Data Modification Language &#40; XML DML &#41;](../../t-sql/xml/xml-data-modification-language-xml-dml.md)  
+ [XML-Datentypmethoden](../../t-sql/xml/xml-data-type-methods.md)   
+ [XML-Datenänderungssprache &#40;XML-DML&#41;](../../t-sql/xml/xml-data-modification-language-xml-dml.md)  
   
   

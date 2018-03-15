@@ -1,5 +1,5 @@
 ---
-title: STDistance (Geometry-Datentyp) | Microsoft Docs
+title: STDistance (geometry-Datentyp) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -48,12 +48,12 @@ ms.lasthandoff: 01/25/2018
  Eine andere **geometry** -Instanz, von der aus die Entfernung zur Instanz, in der `STDistance()` aufgerufen wird, gemessen werden soll. Wenn *other_geometry* eine leere Menge ist, gibt `STDistance()` NULL zurück.  
   
 ## <a name="return-types"></a>Rückgabetypen  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Rückgabetyp: **"float"**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Rückgabetyp: **float**  
   
  CLR-Rückgabetyp: **SqlDouble**  
   
-## <a name="remarks"></a>Hinweise  
- `STDistance()`immer null zurück, wenn das spatial Reference IDs (SRIDs) auf, der die **Geometrie** -Instanzen nicht übereinstimmen.  
+## <a name="remarks"></a>Remarks  
+ `STDistance()` gibt immer NULL zurück, wenn die SRIDs (Spatial Reference IDs) der **geometry**-Instanzen nicht übereinstimmen.  
   
 ## <a name="examples"></a>Beispiele  
   
@@ -65,7 +65,7 @@ SET @h = geometry::STGeomFromText('POINT(10 10)', 0);
 SELECT @g.STDistance(@h);  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Übersicht über räumliche Indizes](../../relational-databases/spatial/spatial-indexes-overview.md)   
  [OGC-Methoden für geometry-Instanzen](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   

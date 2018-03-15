@@ -1,5 +1,5 @@
 ---
-title: STCurveN (Geometry-Datentyp) | Microsoft Docs
+title: STCurveN (geometry-Datentyp) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -45,14 +45,14 @@ Gibt die von einer Instanz von **geometry** angegebene Kurve zurück, bei der es
  Ein **int** -Ausdruck zwischen 1 und der Anzahl der Kurven in der **geometry** -Instanz.  
   
 ## <a name="return-types"></a>Rückgabetypen  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Rückgabetyp: **Geometrie**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Rückgabetyp: **geometry**  
   
  CLR-Rückgabetyp: **SqlGeometry**  
   
 ## <a name="exceptions"></a>Ausnahmen  
- Wenn *Curve_index* < 1 ein `ArgumentOutOfRangeException` ausgelöst wird.  
+ Wenn *curve_index* < 1 ist, wird der Fehler `ArgumentOutOfRangeException` ausgelöst.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  **NULL** wird in folgenden Fällen zurückgegeben:  
   
 -   Die **geometry** -Instanz ist deklariert, aber nicht instanziiert.  
@@ -117,8 +117,8 @@ Gibt die von einer Instanz von **geometry** angegebene Kurve zurück, bei der es
  END
  ```  
   
-## <a name="see-also"></a>Siehe auch  
- [STNumCurves &#40; Geometry-Datentyp &#41;](../../t-sql/spatial-geometry/stnumcurves-geometry-data-type.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [STNumCurves &#40;geometry-Datentyp&#41;](../../t-sql/spatial-geometry/stnumcurves-geometry-data-type.md)   
  [OGC-Methoden für geometry-Instanzen](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

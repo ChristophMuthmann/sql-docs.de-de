@@ -1,5 +1,5 @@
 ---
-title: DROP SERVER ROLE (Transact-SQL) | Microsoft Docs
+title: DROP SERVER ROLE (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -48,17 +48,17 @@ DROP SERVER ROLE role_name
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *Rollenname*  
+ *role_name*  
  Gibt die benutzerdefinierte Serverrolle an, die vom Server gelöscht werden soll.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Benutzerdefinierte Serverrollen, die sicherungsfähige Elemente besitze, können nicht vom Server gelöscht werden. Wenn eine benutzerdefinierte Serverrolle mit sicherungsfähigen Elementen gelöscht werden soll, müssen Sie zunächst den Besitz der sicherungsfähigen Elemente übertragen oder sie aus der Datenbank löschen.  
   
- Benutzerdefinierte Serverrollen, die über Elemente verfügen, können nicht gelöscht werden. Um eine benutzerdefinierte Serverrolle zu löschen, die als Member enthält, müssen Sie zuerst Mitglieder der Rolle entfernen, mit [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md).  
+ Benutzerdefinierte Serverrollen, die über Elemente verfügen, können nicht gelöscht werden. Um eine benutzerdefinierte Serverrolle mit Mitgliedern zu löschen, müssen Sie zuerst Mitglieder der Rolle mit [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) entfernen.  
   
  Feste Serverrollen können nicht entfernt werden.  
   
- Sie können Informationen zur Rollenmitgliedschaft anzeigen, indem Sie Abfragen der [server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md) -Katalogsicht angezeigt.  
+ Sie können die [sys.server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md)-Katalogsicht abfragen, um Informationen zu Rollenmitgliedschaften anzuzeigen.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die CONTROL-Berechtigung für die Serverrolle oder die ALTER ANY SERVER ROLE-Berechtigung.  
@@ -74,7 +74,7 @@ GO
 ```  
   
 ### <a name="b-to-view-role-membership"></a>B. Anzeigen der Rollenmitgliedschaft  
- Verwenden Sie zum Anzeigen der Rollenmitgliedschaft der **-Serverrolle (Mitglieder**) auf der Seite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder führen Sie folgende Abfrage:  
+ Um die Rollenmitgliedschaft anzuzeigen, verwenden Sie die Seite **Serverrolle (Mitglieder)** in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], oder führen Sie die folgende Abfrage aus:  
   
 ```  
 SELECT SRM.role_principal_id, SP.name AS Role_Name,   
@@ -98,11 +98,11 @@ JOIN sys.server_principals AS SP2
 ORDER BY SP1.name ;  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [ALTER ROLE &#40; Transact-SQL &#41;](../../t-sql/statements/alter-role-transact-sql.md)   
- [Erstellen Sie die Rolle "" &#40; Transact-SQL &#41;](../../t-sql/statements/create-role-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [ALTER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-role-transact-sql.md)   
+ [CREATE ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-role-transact-sql.md)   
  [Prinzipale &#40;Datenbankmodul&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
- [DROP ROLE &#40; Transact-SQL &#41;](../../t-sql/statements/drop-role-transact-sql.md)   
+ [DROP ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-role-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
  [sp_addrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)   
  [sys.database_role_members &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-role-members-transact-sql.md)   

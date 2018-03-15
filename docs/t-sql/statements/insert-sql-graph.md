@@ -1,6 +1,6 @@
 ---
-title: INSERT (SQL-Diagramm) | Microsoft Docs
-description: "Fügen Sie die Syntax für das Diagramm der SQL-Knoten oder Edge-Tabellen."
+title: INSERT (SQL-Graph) | Microsoft-Dokumentation
+description: "INSERT-Syntax für SQL-Graph-Knoten- oder Edgetabellen."
 ms.date: 05/12/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
@@ -30,18 +30,18 @@ ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="insert-sql-graph"></a>INSERT (SQL-Diagramm)
+# <a name="insert-sql-graph"></a>INSERT (SQL-Graph)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
-  Fügt eine oder mehrere Zeilen auf einer `node` oder `edge` in Tabelle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
+  Fügt einer `node`- oder `edge`-Tabelle in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mindestens eine Zeile hinzu. 
 
 > [!NOTE]   
->  Standard Transact-SQL-Anweisungen finden Sie unter [Tabelle einfügen (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md).
+>  Standard Transact-SQL-Anweisungen finden Sie unter [INSERT TABLE (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md).
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
-## <a name="insert-into-node-table-syntax"></a>Einfügen von Knoten Table-Syntax 
-Die Syntax für das Einfügen in eine Knotentabelle entspricht, die von einer regulären Tabelle. 
+## <a name="insert-into-node-table-syntax"></a>INSERT INTO – Syntax für Knotentabellen 
+Die Syntax für das Einfügen in eine Knotentabelle entspricht der einer regulären Tabelle. 
 
 ```  
 [ WITH <common_table_expression> [ ,...n ] ]  
@@ -107,43 +107,43 @@ INSERT
   
  
 ## <a name="arguments"></a>Argumente  
- Dieses Dokument beschreibt die Argumente, die für SQL-Diagramm. Eine vollständige Liste und Beschreibung der unterstützten Argumente in der INSERT-Anweisung finden Sie unter [Tabelle einfügen (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md)
+ In diesem Dokument werden Argumente für SQL-Graph beschrieben. Eine vollständige Liste und Beschreibung der unterstützten Argumente in der INSERT-Anweisung finden Sie unter [INSERT TABLE (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md).
 
  INTO  
- Ein optionales Schlüsselwort, das zwischen verwendet werden können `INSERT` und die Zieltabelle.  
+ Ein optionales Schlüsselwort, das zwischen `INSERT` und der Zieltabelle verwendet werden kann.  
   
  *search_condition_with_match*   
- `MATCH`Klausel kann beim Einfügen in einen Knoten oder Edge-Tabelle in einer Unterabfrage verwendet werden. Für `MATCH` Anweisungssyntax, finden Sie unter [GRAPH Übereinstimmung (Transact-SQL)](../../t-sql/queries/match-sql-graph.md)
+ Die `MATCH`-Klausel kann während des Einfügens in eine Knoten- oder Edgetabelle in einer geschachtelten Abfrage verwendet werden. Die `MATCH`-Abfragesyntax finden Sie unter [GRAPH MATCH (Transact-SQL)](../../t-sql/queries/match-sql-graph.md).
 
  *graph_search_pattern*   
- Suchmuster bereitgestellt, um `MATCH` -Klausel als Teil des Diagramm-Prädikats.
+ Suchmuster, das der `MATCH`-Klausel als Teil des Graph-Prädikats bereitgestellt wird.
 
  *edge_table_column_list*   
- Benutzer müssen Geben Sie Werte für `$from_id` und `$to_id` beim Einfügen in eine Kante. Wenn kein Wert angegeben ist, oder NULL-Werte in diesen Spalten eingefügt werden, wird ein Fehler zurückgegeben werden. 
+ Benutzer müssen Werte für `$from_id` und `$to_id` angeben, wenn sie etwas in eine Edgetabelle einfügen. Wenn ein Wert nicht angegeben oder in eine dieser Spalten NULL eingefügt wird, wird ein Fehler zurückgegeben. 
   
 
-## <a name="remarks"></a>Hinweise  
-Einfügen in einen Knoten entspricht der in einer relationalen Tabelle eingefügt. Werte für die $ "node_id" Spalte werden automatisch generiert.
+## <a name="remarks"></a>Remarks  
+Das Einfügen in eine Knotentabelle entspricht dem Einfügen in eine relationale Tabelle. Werte für die $node_id-Spalte werden automatisch generiert.
 
-Beim Einfügen in eine Rahmentabelle, müssen Benutzer geben Sie Werte für `$from_id` und `$to_id` Spalten.   
+Beim Einfügen in eine Edgetabelle müssen Benutzer Werte für die Spalten `$from_id` und `$to_id` angeben.   
 
-BULK Insert bleibt für Knotentabelle ist identisch mit der einer relationalen Tabelle.
+Masseneinfügung in Knotentabellen entspricht der Masseneinfügung in eine relationale Tabelle.
 
-Bevor die masseneinfügung in eine Rahmentabelle eingefügt müssen die Knoten Tabellen importiert werden. Werte für `$from_id` und `$to_id` können dann extrahiert werden, aus der `$node_id` -Spalte der Knotentabelle und als Ränder eingefügt. 
+Vor der Masseneinfügung in eine Edgetabelle müssen die Knotentabellen importiert werden. Anschließend können Werte für `$from_id` und `$to_id` aus der `$node_id`-Spalte der Knotentabelle extrahiert werden und als Edges eingefügt werden. 
 
   
 ### <a name="permissions"></a>Berechtigungen  
  Die INSERT-Berechtigung ist für die Zieltabelle erforderlich.  
   
- Legen Sie Berechtigungen erhalten standardmäßig Mitglieder der der **Sysadmin** festen Serverrolle, die **Db_owner** und **Db_datawriter** festen Datenbankrollen und der Besitzer der Tabelle. Mitglieder der **Sysadmin**, **Db_owner**, und die **Db_securityadmin** Rollen sowie der Tabellenbesitzer können Berechtigungen an andere Benutzer übertragen.  
+ Mitglieder der festen Serverrolle **sysadmin**, der festen Datenbankrollen **db_owner** und **db_datawriter** und der Tabellenbesitzer erhalten standardmäßig INSERT-Berechtigungen. Mitglieder der Rollen **sysadmin**, **db_owner** und **db_securityadmin** sowie der Tabellenbesitzer können Berechtigungen an andere Benutzer übertragen.  
   
- Zum Ausführen von INSERT mit der Option BULK der OPENROWSET-Funktion muss ein Mitglied der **Sysadmin** feste Serverrolle oder die **Bulkadmin** festen Serverrolle.  
+ Zum Ausführen von INSERT mit der Option BULK der OPENROWSET-Funktion müssen Sie Mitglied der festen Serverrolle **sysadmin** oder der festen Serverrolle **bulkadmin** sein.  
   
 
 ## <a name="examples"></a>Beispiele  
   
-#### <a name="a--insert-into-node-table"></a>A.  Knotentabelle einfügen  
- Im folgende Beispiel wird eine Tabelle der Person-Knoten erstellt und 2 Zeilen in dieser Tabelle eingefügt.
+#### <a name="a--insert-into-node-table"></a>A.  Einfügen in Knotentabellen  
+ Im folgenden Beispiel wird eine Knotentabelle für Personen erstellt, und es werden zwei Reihen in diese Tabelle eingefügt.
 
  ```
  -- Create person node table
@@ -154,8 +154,8 @@ Bevor die masseneinfügung in eine Rahmentabelle eingefügt müssen die Knoten T
  INSERT INTO dbo.Person VALUES (2,'John');
  ```
   
-#### <a name="b--insert-into-edge-table"></a>B.  Legen Sie in der Rahmentabelle  
- Im folgende Beispiel wird eine "Friend" Edge-Tabelle erstellt und eine Kante in die Tabelle eingefügt.
+#### <a name="b--insert-into-edge-table"></a>B.  Einfügen in Edgetabellen  
+ Im folgenden Beispiel wird eine Edgetabelle für Freunde erstellt und ein Edge in diese Tabelle eingefügt.
 
  ```
  -- Create friend edge table
@@ -167,8 +167,8 @@ Bevor die masseneinfügung in eine Rahmentabelle eingefügt müssen die Knoten T
  ```
 
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [INSERT TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
- [Diagramm mit SQL Server-2017 verarbeiten](../../relational-databases/graphs/sql-graph-overview.md)  
+ [Graph Processing with SQL Server 2017 (Graph-Verarbeitung mit SQL Server-2017)](../../relational-databases/graphs/sql-graph-overview.md)  
 
 

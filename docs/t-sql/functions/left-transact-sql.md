@@ -1,5 +1,5 @@
 ---
-title: LEFT (Transact-SQL) | Microsoft Docs
+title: LEFT (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
@@ -49,20 +49,20 @@ LEFT ( character_expression , integer_expression )
   
 ## <a name="arguments"></a>Argumente  
  *character_expression*  
- Ist ein [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) von Zeichen- oder Binärdaten darstellen. *Character_expression* kann eine Konstante, Variable oder Spalte sein. *Character_expression* kann einen beliebigen Datentyp aufweisen, mit Ausnahme von **Text** oder **Ntext**, implizit zu konvertiert werden können **Varchar** oder  **Nvarchar**. Verwenden Sie andernfalls die [Umwandlung](../../t-sql/functions/cast-and-convert-transact-sql.md) Funktion explizit konvertieren *Character_expression*.  
+ Ein [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) aus Zeichen- oder Binärdaten. *character_expression* kann eine Konstante, Variable oder Spalte sein. *character_expression* kann von einem beliebigen Datentyp sein, ausschließlich **text** oder **ntext**, der implizit in **varchar** oder **nvarchar** konvertiert werden kann. Verwenden Sie in allen anderen Fällen die [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md)-Funktion zur expliziten Konvertierung von *character_expression*.  
   
  *integer_expression*  
- Eine positive ganze Zahl, die angibt, wie viele Zeichen von der *Character_expression* zurückgegeben werden. Wenn *Integer_expression* ist negativ ist, wird ein Fehler zurückgegeben. Wenn *Integer_expression* Typ **"bigint"** und enthält einen hohen Wert *Character_expression* muss einen Datentyp mit umfangreichen wie z. B. **varchar(max)**.  
+ Ein positiver Integer, der angibt, wie viele Zeichen von *character_expression* zurückgegeben werden. Wenn *integer_expression* negativ ist, wird ein Fehler zurückgegeben. Wenn *integer_expression* vom Typ **bigint** ist und einen hohen Wert hat, muss *character_expression* von einem umfangreicheren Datentyp wie z.B. **varchar(max)** sein.  
   
- Die *Integer_expression* Parameter wird ein UTF-16-Ersatzzeichen als ein Zeichen gezählt.  
+ Für den *integer_expression*-Parameter wird ein UTF-16-Ersatzzeichen als ein Zeichen gezählt.  
   
 ## <a name="return-types"></a>Rückgabetypen  
- Gibt **Varchar** Wenn *Character_expression* ein nicht-Unicode-Zeichendatentyp ist.  
+ Gibt **varchar** zurück, wenn es sich bei *character_expression* um einen Zeichendatentyp handelt, der Unicode nicht unterstützt.  
   
- Gibt **Nvarchar** Wenn *Character_expression* ein Unicode-Zeichendatentyp ist.  
+ Gibt **nvarchar** zurück, wenn es sich bei *character_expression* um einen Zeichendatentyp handelt, der Unicode nicht unterstützt.  
   
-## <a name="remarks"></a>Hinweise  
- Bei Verwendung von SC-Sortierungen der *Integer_expression* Parameter wird ein UTF-16-Ersatzpaar als ein Zeichen gezählt. Weitere Informationen finden Sie unter [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).  
+## <a name="remarks"></a>Remarks  
+ Bei Verwendung von SC-Sortierungen zählt der *integer_expression*-Parameter ein UTF-16-Ersatzpaar als ein Zeichen. Weitere Informationen finden Sie unter [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).  
   
 ## <a name="examples"></a>Beispiele  
   
@@ -93,7 +93,7 @@ ab
 (1 row(s) affected)  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
 ### <a name="c-using-left-with-a-column"></a>C. Verwenden von LEFT mit einer Spalte  
  Im folgenden Beispiel werden die ersten fünf Zeichen der Produktnamen zurückgegeben.  
@@ -122,16 +122,16 @@ SELECT LEFT('abcdefg',2) FROM dbo.DimProduct;
 ab  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [LTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/ltrim-transact-sql.md)  
  [RIGHT &#40;Transact-SQL&#41;](../../t-sql/functions/right-transact-sql.md)  
  [RTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/rtrim-transact-sql.md)  
  [STRING_SPLIT &#40;Transact-SQL&#41;](../../t-sql/functions/string-split-transact-sql.md)  
  [SUBSTRING &#40;Transact-SQL&#41;](../../t-sql/functions/substring-transact-sql.md)  
  [TRIM &#40;Transact-SQL&#41;](../../t-sql/functions/trim-transact-sql.md)  
- [CAST und CONVERT &#40; Transact-SQL &#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
+ [CAST and CONVERT &#40;Transact-SQL&#41; (CAST und CONVERT (Transact-SQL))](../../t-sql/functions/cast-and-convert-transact-sql.md)   
  [Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [Zeichenfolgenfunktionen &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
+ [String Functions &#40;Transact-SQL&#41; (Zeichenfolgenfunktionen &#40;Transact-SQL&#41;)](../../t-sql/functions/string-functions-transact-sql.md)  
   
   
 

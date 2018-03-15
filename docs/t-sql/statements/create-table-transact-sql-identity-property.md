@@ -1,5 +1,5 @@
 ---
-title: IDENTITY (Eigenschaft) (Transact-SQL) | Microsoft Docs
+title: IDENTITY (Eigenschaft) (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,13 +34,13 @@ ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="create-table-transact-sql-identity-property"></a>Erstellen der Tabelle (Transact-SQL) IDENTITY (Eigenschaft)
+# <a name="create-table-transact-sql-identity-property"></a>CREATE TABLE (Transact-SQL) IDENTITY (Eigenschaft)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
   Erstellt eine Identitätsspalte in einer Tabelle. Diese Eigenschaft wird in den [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen CREATE TABLE und ALTER TABLE verwendet.  
   
 > [!NOTE]  
->  Die IDENTITY-Eigenschaft unterscheidet sich von der SQL-DMO **Identität** Eigenschaft, die die Zeile Identity-Eigenschaft einer Spalte verfügbar macht.  
+>  Die IDENTITY-Eigenschaft unterscheidet sich von der SQL-DMO-Eigenschaft **IDENTITY**, die die IDENTITY-Eigenschaft für Zeilen einer Spalte verfügbar macht.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -52,15 +52,15 @@ IDENTITY [ (seed , increment) ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *Startwert*  
+ *seed*  
  Der Wert, der für die erste in die Tabelle geladene Zeile verwendet wird.  
   
- *Inkrement*  
+ *increment*  
  Der inkrementelle Wert, der zum Identitätswert der zuvor geladenen Zeile addiert wird.  
   
  Sie müssen entweder sowohl den Ausgangswert als auch den inkrementellen Wert oder keinen von beiden angeben. Wurden Ausgangswert und inkrementeller Wert nicht angegeben, ist der Standardwert (1,1).  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Identitätsspalten können zum Generieren von Schlüsselwerten verwendet werden. Die Identitätseigenschaft für eine Spalte garantiert Folgendes:  
   
 -   Jeder neue Wert wird auf Grundlage des aktuellen Ausgangswerts und Inkrements generiert.  
@@ -69,13 +69,13 @@ IDENTITY [ (seed , increment) ]
   
  Die Identitätseigenschaft für eine Spalte garantiert nicht Folgendes:  
   
--   **Eindeutigkeit des Werts** – Eindeutigkeit muss erzwungen werden, mithilfe einer **PRIMÄRSCHLÜSSEL** oder **UNIQUE** Einschränkung oder **UNIQUE** Index.  
+-   **Eindeutigkeit des Werts**: Eindeutigkeit muss mit einer **PRIMARY KEY**- oder **UNIQUE**-Einschränkung bzw. einem **UNIQUE**-Index erzwungen werden.  
   
--   **Aufeinanderfolgende Werte innerhalb einer Transaktion** – eine Transaktion Einfügen mehrerer Zeilen ist nicht unbedingt aufeinander folgender Werte für die Zeilen abgerufen werden, da andere gleichzeitigen einfügungen für die Tabelle auftreten können. Wenn Werte fortlaufend sein müssen, wird die Transaktion verwenden Sie eine exklusive Sperre für die Tabelle oder die **SERIALIZABLE** Isolationsstufe.  
+-   **Aufeinanderfolgende Werte innerhalb einer Transaktion**: Bei einer Transaktion, durch die mehrere Zeilen eingefügt werden, ist nicht sichergestellt, dass Sie aufeinanderfolgende Werte für die Zeilen erhalten, da für die Tabelle möglicherweise andere gleichzeitige Einfügungsvorgänge stattfinden. Wenn Werte fortlaufend sein müssen, sollte die Transaktion eine exklusive Sperre für die Tabelle oder die Isolationsstufe **SERIALIZABLE** verwenden.  
   
--   **Aufeinanderfolgende Werte nach Serverneustart oder anderen Fehlern** –[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann Identitätswerte aus Leistungsgründen Zwischenspeichern und einige der zugewiesenen Werte ist möglich während einer Datenbank Datenbankausfalls oder Serverneustarts verloren gehen. Dies kann zu Lücken im Identitätswert beim Einfügen führen. Wenn Lücken nicht zulässig sind, sollte die Anwendung ihren eigenen Mechanismus verwenden, um Schlüsselwerte zu generieren. Verwendung eines sequenzgenerators mit der **NOCACHE** Option kann einschränken, die Lücken auf Transaktionen, die nie ein Commit ausgeführt werden.  
+-   **Aufeinanderfolgende Werte nach Serverneustart oder anderen Fehlern**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann Identitätswerte aus Leistungsgründen zwischenspeichern. Einige der zugewiesenen Werte können während eines Datenbankausfalls oder Serverneustarts verloren gehen. Dies kann zu Lücken im Identitätswert beim Einfügen führen. Wenn Lücken nicht zulässig sind, sollte die Anwendung ihren eigenen Mechanismus verwenden, um Schlüsselwerte zu generieren. Die Verwendung eines Sequenzgenerators mit der **NOCACHE**-Option kann die Lücken auf Transaktionen beschränken, für die nie ein Commit ausgeführt wird.  
   
--   **Wiederverwendung von Werten** – für eine bestimmte Identitätseigenschaft mit spezifischem Ausgangswert/Inkrement, die Identität, die Werte werden vom Modul nicht wiederverwendet. Wenn eine bestimmte INSERT-Anweisung fehlschlägt oder für die INSERT-Anweisung ein Rollback ausgeführt wird, gehen die verwendeten Identitätswerte verloren und werden nicht erneut generiert. Es können Lücken entstehen, wenn die nachfolgenden Identitätswerte generiert werden.  
+-   **Wiederverwendung von Werten**: Für eine bestimmte Identitätseigenschaft mit spezifischem Ausgangswert/Inkrement werden die Identitätswerte von der Engine nicht wiederverwendet. Wenn eine bestimmte INSERT-Anweisung fehlschlägt oder für die INSERT-Anweisung ein Rollback ausgeführt wird, gehen die verwendeten Identitätswerte verloren und werden nicht erneut generiert. Es können Lücken entstehen, wenn die nachfolgenden Identitätswerte generiert werden.  
   
  Diese Einschränkungen sind beabsichtigt, um die Leistung zu verbessern. Ferner sind sie in vielen Situationen akzeptabel. Wenn Sie Identitätswerte aufgrund dieser Einschränkungen nicht verwenden können, sollten Sie eine separate Tabelle mit einem aktuellen Wert erstellen und den Zugriff auf die Tabelle und die Nummernzuweisung für die Anwendung verwalten.  
   
@@ -83,7 +83,7 @@ IDENTITY [ (seed , increment) ]
   
  Es kann nur eine Identitätsspalte pro Tabelle erstellt werden.  
   
- In speicheroptimierten Tabellen müssen sowohl der Ausgangswert als auch das Inkrement auf 1,1 festgelegt werden. Festlegen der Ausgangswert oder Inkrement auf einen anderen Wert als 1 Ergebnisse in den folgenden Fehler: die Verwendung von Ausgangswerten und den inkrementellen Werte als 1 werden mit speicheroptimierten Tabellen nicht unterstützt.  
+ In speicheroptimierten Tabellen müssen sowohl der Ausgangswert als auch das Inkrement auf 1,1 festgelegt werden. Wenn Sie den Seed oder das Inkrement auf einen Wert festlegen, der nicht 1 ist, wird der folgende Fehler ausgelöst: The use of seed and increment values other than 1 is not supported with memory optimized tables. (Die Verwendung von Seed- und Inkrementwerten, die nicht 1 betragen, wird für arbeitsspeicheroptimierte Tabellen nicht unterstützt.)  
   
 ## <a name="examples"></a>Beispiele  
   
@@ -173,16 +173,16 @@ SELECT @minidentval = MIN($IDENTITY) FROM img
 SET IDENTITY_INSERT img OFF;  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [DBCC CHECKIDENT &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkident-transact-sql.md)   
- [IDENT_INCR &#40; Transact-SQL &#41;](../../t-sql/functions/ident-incr-transact-sql.md)   
+ [IDENT_INCR &#40;Transact-SQL&#41;](../../t-sql/functions/ident-incr-transact-sql.md)   
  [@@IDENTITY &#40;Transact-SQL&#41;](../../t-sql/functions/identity-transact-sql.md)   
- [IDENTITY &#40; Function &#41; &#40; Transact-SQL &#41;](../../t-sql/functions/identity-function-transact-sql.md)   
- [IDENT_SEED &#40; Transact-SQL &#41;](../../t-sql/functions/ident-seed-transact-sql.md)   
+ [IDENTITY &#40;Funktion&#41; &#40;Transact-SQL&#41;](../../t-sql/functions/identity-function-transact-sql.md)   
+ [IDENT_SEED &#40;Transact-SQL&#41;](../../t-sql/functions/ident-seed-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [SET IDENTITY_INSERT &#40; Transact-SQL &#41;](../../t-sql/statements/set-identity-insert-transact-sql.md)   
+ [SET IDENTITY_INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/set-identity-insert-transact-sql.md)   
  [Replizieren von Identitätsspalten](../../relational-databases/replication/publish/replicate-identity-columns.md)  
   
   

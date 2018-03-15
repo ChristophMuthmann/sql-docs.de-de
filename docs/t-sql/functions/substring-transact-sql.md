@@ -1,5 +1,5 @@
 ---
-title: SUBSTRING (Transact-SQL) | Microsoft Docs
+title: SUBSTRING (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 10/21/2016
 ms.prod: sql-non-specified
@@ -52,16 +52,16 @@ SUBSTRING ( expression ,start , length )
   
 ## <a name="arguments"></a>Argumente  
  *expression*  
- Ist eine **Zeichen**, **binäre**, **Text**, **Ntext**, oder **Image**[Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md).  
+ ist ein **character**-, **binary**-, **text**-, **ntext**- oder **image**-[Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md).  
   
  *start*  
- Eine ganze Zahl oder **"bigint"** Ausdruck, der angibt, wo die zurückgegebenen Zeichen beginnen. (Die Nummerierung ist 1 basierend, was bedeutet, dass das erste Zeichen im Ausdruck 1 ist). Wenn *starten* ist kleiner als 1 ist, beginnt der zurückgegebene Ausdruck beim ersten Zeichen, die im angegebenen *Ausdruck*. In diesem Fall wird die Anzahl der Zeichen, die zurückgegeben werden den größten Wert der Summe der *starten* + *Länge*– 1 oder 0. Wenn *starten* ist größer als die Anzahl der Zeichen im Wertausdruck, wird ein Ausdruck mit der Länge 0 (null) zurückgegeben.  
+ ist eine ganze Zahl oder ein **bigint**-Ausdruck, der angibt, wo die zurückgegebenen Zeichen beginnen. (Die Nummerierung basiert auf 1, das bedeutet, dass das erste Zeichen im Ausdruck 1 ist.) Wenn *start* kleiner als 1 ist, beginnt der zurückgegebene Ausdruck beim ersten Zeichen, das in *expression* angegeben wird. In diesem Fall handelt es sich bei der Anzahl von zurückgegebenen Zeichen um den größten Wert der Summe von *start* + *length*- 1 oder 0. Wenn *start* größer ist als die Anzahl der Zeichen in dem Werteausdruck, wird eine Zeichenfolge der Länge 0 zurückgegeben.  
   
  *length*  
- Eine positive ganze Zahl oder **"bigint"** Ausdruck, der angibt, wie viele Zeichen von der *Ausdruck* zurückgegeben werden. Wenn *Länge* ist negativ ist, wird ein Fehler generiert, und die Anweisung wird beendet. Wenn die Summe der *starten* und *Länge* ist größer als die Anzahl der Zeichen in *Ausdruck*, der gesamte Wertausdruck, beginnend bei *starten*zurückgegeben wird.  
+ Eine positive ganze Zahl, oder ein **bigint**-Ausdruck, die angeben, wie viele Zeichen des *Ausdrucks* zurückgegeben werden. Wenn *length* negativ ist, wird ein Fehler generiert, und die Anweisung wird beendet. Wenn die Summe von *start* und *length* größer ist als die Anzahl der Zeichen in *expression*, wird der gesamte Wertausdruck, beginnend bei *start*, zurückgegeben.  
   
 ## <a name="return-types"></a>Rückgabetypen  
- Gibt Zeichendaten zurück, wenn *Ausdruck* ist einer der unterstützten Zeichendatentypen. Gibt Binärdaten zurück, wenn *Ausdruck* ist einer der unterstützten **binäre** Datentypen. Die zurückgegebene Zeichenfolge hat denselben Typ wie der angegebene Ausdruck, mit den folgenden Ausnahmen:  
+ Gibt Zeichendaten zurück, wenn *expression* einer der unterstützten Zeichendatentypen ist. Gibt Binärdaten zurück, wenn *expression* einer der unterstützten **Binärdatentypen** ist. Die zurückgegebene Zeichenfolge hat denselben Typ wie der angegebene Ausdruck, mit den folgenden Ausnahmen:  
   
 |Angegebener Ausdruck|Rückgabetyp|  
 |--------------------------|-----------------|  
@@ -69,18 +69,18 @@ SUBSTRING ( expression ,start , length )
 |**nchar**/**nvarchar**/**ntext**|**nvarchar**|  
 |**binary**/**varbinary**/**image**|**varbinary**|  
   
-## <a name="remarks"></a>Hinweise  
- Die Werte für *starten* und *Länge* muss angegeben werden, in der Anzahl der Zeichen für **Ntext**, **Char**, oder **Varchar**  Datentypen und Bytes für **Text**, **Image**, **binäre**, oder **Varbinary** Datentypen.  
+## <a name="remarks"></a>Remarks  
+ Die Werte für *start* und *length* müssen als Anzahl der Zeichen für die Datentypen **ntext**, **char** oder **varchar** und Bytes für die Datentypen **text**, **image**, **binary** oder **varbinary** angegeben werden.  
   
- Die *Ausdruck* muss **varchar(max)** oder **varbinary(max)** bei der *starten* oder *Länge* enthält einen Wert größer als 2147483647.  
+ Der *Ausdruck* muss **varchar(max)** oder **varbinary(max)** sein, wenn *start* oder *length* einen Wert enthält, der größer als 2.147.483.647 ist.  
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>Ergänzende Zeichen (Ersatzpaare)  
- Bei Verwendung von (SC Supplementary) Characters Sortierungen beide *starten* und *Länge* alle Ersatzzeichenpaare *Ausdruck* als einzelnes Zeichen. Weitere Informationen finden Sie unter [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).  
+ Bei SC (Supplementary Characters)-Sortierungen werden alle Ersatzzeichenpaare in *expression* von *start* und *length* als einzelne Zeichen behandelt. Weitere Informationen finden Sie unter [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).  
   
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="a-using-substring-with-a-character-string"></a>A. Verwenden von SUBSTRING mit einer Zeichenfolge  
- Im folgenden Beispiel wird gezeigt, wie Sie nur einen Teil einer Zeichenfolge zurückgeben können. Aus der `sys.databases` Tabelle, diese Abfrage wird das System wieder Datenbanknamen in der ersten Spalte, die den ersten Buchstaben der Datenbank in der zweiten Spalte und der dritten und vierten Zeichen in die letzte Spalte.  
+ Im folgenden Beispiel wird gezeigt, wie Sie nur einen Teil einer Zeichenfolge zurückgeben können. Diese Abfrage gibt aus der Tabelle `sys.databases` in der ersten Spalte die Namen der Systemdatenbank zurück, in der zweiten Spalten den ersten Buchstaben der Datenbank und in der letzten Spalte den dritten und vierten Buchstaben.  
   
 ```  
 SELECT name, SUBSTRING(name, 1, 1) AS Initial ,
@@ -91,7 +91,7 @@ WHERE database_id < 5;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
 
-|name |Initial |ThirdAndFourthCharacters|
+|NAME |Initial |ThirdAndFourthCharacters|
 |---|--|--|
 |master  |m  |st |
 |tempdb  |t  |mp |
@@ -119,9 +119,9 @@ bcd
 ### <a name="b-using-substring-with-text-ntext-and-image-data"></a>B. Verwenden von SUBSTRING mit text-, ntext- und image-Daten  
   
 > [!NOTE]  
->  Um die folgenden Beispiele auszuführen, müssen Sie installieren die **Pubs** Datenbank.  
+>  Sie müssen die **pubs**-Datenbank installieren, um die folgenden Beispiele auszuführen.  
   
- Im folgende Beispiel wird gezeigt, wie die ersten 10 Zeichen aus jeder der zurückzugebenden eine **Text** und **Image** -Datenspalte in der `pub_info` Tabelle mit der `pubs` Datenbank. **Text** Daten werden zurückgegeben, als **Varchar**, und **Image** Daten werden zurückgegeben, als **Varbinary**.  
+ Im folgenden Beispiel wird gezeigt, wie die ersten 10 Zeichen aus allen **text**- und **image**-Datenspalten in der `pub_info`-Tabelle der `pubs`-Datenbank zurückgegeben werden. **text**-Daten werden als **varchar** zurückgegeben, und **image**-Daten werden als **varbinary** zurückgegeben.  
   
 ```  
 USE pubs;  
@@ -141,7 +141,7 @@ WHERE pub_id = '1756';
 (1 row(s) affected)
 ```  
   
- Das folgende Beispiel zeigt die Wirkung von SUBSTRING auf beiden **Text** und **Ntext** Daten. Zunächst wird in diesem Beispiel eine neue Tabelle in der `pubs`-Datenbank namens `npub_info` erstellt. Im nächsten Schritt wird die Spalte `pr_info` in der `npub_info`-Tabelle aus den ersten 80 Zeichen der `pub_info.pr_info`-Spalte erstellt und ein `ü` als erstes Zeichen hinzugefügt. Abschließend wird eine `INNER JOIN` Ruft alle Verleger-IDs und die `SUBSTRING` beider der **Text** und **Ntext** -Spalten mit Verlegerinformationen.  
+ Im folgenden Beispiel wird die Wirkung von SUBSTRING auf **text**- und auf **ntext**-Daten gezeigt. Zunächst wird in diesem Beispiel eine neue Tabelle in der `pubs`-Datenbank namens `npub_info` erstellt. Im nächsten Schritt wird die Spalte `pr_info` in der `npub_info`-Tabelle aus den ersten 80 Zeichen der `pub_info.pr_info`-Spalte erstellt und ein `ü` als erstes Zeichen hinzugefügt. Abschließend ruft ein `INNER JOIN` alle Verleger-IDs sowie den `SUBSTRING` der **text**- und **ntext**-Spalten mit Verlegerinformationen ab.  
   
 ```  
 IF EXISTS (SELECT table_name FROM INFORMATION_SCHEMA.TABLES   
@@ -183,7 +183,7 @@ FROM pub_info pr INNER JOIN npub_info npr
 ORDER BY pr.pub_id ASC;  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
 ### <a name="c-using-substring-with-a-character-string"></a>C. Verwenden von SUBSTRING mit einer Zeichenfolge  
  Im folgenden Beispiel wird gezeigt, wie Sie nur einen Teil einer Zeichenfolge zurückgeben können. Diese Abfrage gibt aus der `dbo.DimEmployee`-Tabelle den Nachnamen eines jeden Autors in einer Spalte und den ersten Buchstaben des entsprechenden Vornamens in der zweiten Spalte zurück.  
@@ -207,7 +207,7 @@ Barber               D
 Barreto de Mattos    P
 ```  
   
- Im folgende Beispiel wird gezeigt, wie das zweite zurückzugebenden dritten und vierten Buchstaben der Zeichenfolgenkonstanten `abcdef`.  
+ Das folgende Beispiel stellt dar, wie die zweiten, dritten und vierten Buchstaben der Zeichenfolgenkonstanten `abcdef` zurückgegeben werden.  
   
 ```  
 USE ssawPDW;  
@@ -223,14 +223,14 @@ x
 bcd
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [LEFT &#40;Transact-SQL&#41;](../../t-sql/functions/left-transact-sql.md)  
  [LTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/ltrim-transact-sql.md)  
  [RIGHT &#40;Transact-SQL&#41;](../../t-sql/functions/right-transact-sql.md)  
  [RTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/rtrim-transact-sql.md)  
  [STRING_SPLIT &#40;Transact-SQL&#41;](../../t-sql/functions/string-split-transact-sql.md)  
  [TRIM &#40;Transact-SQL&#41;](../../t-sql/functions/trim-transact-sql.md)  
- [Zeichenfolgenfunktionen &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
+ [Zeichenfolgenfunktionen &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)  
   
   
 

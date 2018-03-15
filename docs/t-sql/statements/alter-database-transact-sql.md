@@ -1,5 +1,5 @@
 ---
-title: ALTER_DATABASE (Transact-SQL) | Microsoft Docs
+title: ALTER DATABASE (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 04/20/2017
 ms.prod: sql-non-specified
@@ -43,33 +43,33 @@ ms.lasthandoff: 11/21/2017
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Ändert eine Datenbank bzw. die zu dieser Datenbank gehörenden Dateien und Dateigruppen. Fügt einer Datenbank Dateien und Dateigruppen hinzu oder entfernt diese, ändert die Attribute einer Datenbank oder ihrer Dateien und Dateigruppen, ändert die Datenbanksortierung und legt Datenbankoptionen fest. Datenbankmomentaufnahmen können nicht geändert werden. Verwenden Sie zum Ändern von Datenbankoptionen, die mit der Replikation verbundenen [Sp_replicationdboption](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md).  
+  Ändert eine Datenbank bzw. die zu dieser Datenbank gehörenden Dateien und Dateigruppen. Fügt einer Datenbank Dateien und Dateigruppen hinzu oder entfernt diese, ändert die Attribute einer Datenbank oder ihrer Dateien und Dateigruppen, ändert die Datenbanksortierung und legt Datenbankoptionen fest. Datenbankmomentaufnahmen können nicht geändert werden. Verwenden Sie zum Ändern von Datenbankoptionen für die Replikation [sp_replicationdboption](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md).  
    
  Aufgrund seiner Länge wird die ALTER DATABASE-Syntax in folgende Themen aufgeteilt:  
   
  ALTER DATABASE  
  Das aktuelle Thema behandelt die Syntax zum Ändern des Namens und der Sortierung einer Datenbank.  
   
- [ALTER DATABASE-Datei und Dateigruppe-Optionen](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)  
+ [ALTER DATABASE-Optionen für Dateien und Dateigruppen](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)  
  Stellt die Syntax zum Hinzufügen und Entfernen von Dateien und Dateigruppen in einer Datenbank sowie zum Ändern der Datei- und Dateigruppenattribute bereit.  
   
  [ALTER DATABASE SET-Optionen](../../t-sql/statements/alter-database-transact-sql-set-options.md)  
  Stellt die Syntax zum Ändern der Datenbankattribute mithilfe der SET-Optionen von ALTER DATABASE bereit.  
   
- [ALTER DATABASE Database Mirroring](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md)  
+ [ALTER DATABASE-Datenbankspiegelung](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md)  
  Stellt die Syntax für die SET-Optionen von ALTER DATABASE bereit, die sich auf die Datenbankspiegelung beziehen.  
   
  [ALTER DATABASE SET HADR](../../t-sql/statements/alter-database-transact-sql-set-hadr.md)  
- Stellt die Syntax für die [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] Optionen von ALTER DATABASE zum Konfigurieren einer sekundären Datenbank auf einem sekundären Replikat einer Always On-verfügbarkeitsgruppe.  
+ Stellt die Syntax der ALTER DATABASE-Optionen für [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] zum Konfigurieren einer sekundären Datenbank auf einem sekundären Replikat einer Always On-Verfügbarkeitsgruppe bereit.  
   
- [ALTER DATABASE Kompatibilitätsgrad](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)  
+ [ALTER DATABASE-Kompatibilitätsgrad](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)  
  Stellt die Syntax für die SET-Optionen von ALTER DATABASE in Bezug auf die Kompatibilitätsgrade von Datenbanken bereit.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
  
-Azure SQL-Datenbank finden Sie unter [ALTER DATABASE &#40; Azure SQL-Datenbank &#41;](../../t-sql/statements/alter-database-azure-sql-database.md)  
-Azure SQL Data Warehouse finden Sie unter [ALTER DATABASE &#40; Azure SQL Datawarehouse &#41; ](../../t-sql/statements/alter-database-azure-sql-data-warehouse.md).  
-Parallel Data Warehouse finden Sie unter [ALTER DATABASE &#40; Parallel Datawarehouse &#41; ](../../t-sql/statements/alter-database-azure-sql-data-warehouse.md).
+Informationen zu Azure SQL-Datenbank finden Sie unter [ALTER DATABASE &#40;Azure SQL Database&#41;](../../t-sql/statements/alter-database-azure-sql-database.md).  
+Informationen zu Azure SQL Data Warehouse finden Sie unter [ALTER DATABASE &#40;Azure SQL Data Warehouse&#41;](../../t-sql/statements/alter-database-azure-sql-data-warehouse.md).  
+Informationen zu Parallel Data Warehouse finden Sie unter [ALTER DATABASE &#40;Parallel Data Warehouse&#41;](../../t-sql/statements/alter-database-azure-sql-data-warehouse.md).
   
 ## <a name="syntax"></a>Syntax  
   
@@ -125,32 +125,32 @@ ALTER DATABASE { database_name  | CURRENT }
   
  Legt fest, dass die zurzeit verwendete Datenbank geändert werden soll.  
   
- Ändern von Namen  **=**  *Name der neuen Datenbank*  
- Benennt die Datenbank mit dem angegebenen als Namen *Name der neuen Datenbank*.  
+ MODIFY NAME **=***new_database_name*  
+ Benennt die Datenbank in den angegebenen Namen *new_database_name* um.  
   
- COLLATE *Collation_name*  
- Gibt die Sortierung für die Datenbank an. *Collation_name* kann entweder ein Windows-Sortierungsname oder ein SQL-Sortierungsname sein. Wenn keine Sortierung angegeben ist, wird der Datenbank die Sortierung der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zugewiesen.  
+ COLLATE *collation_name*  
+ Gibt die Sortierung für die Datenbank an. *collation_name* kann entweder der Name einer Windows-Sortierung oder ein SQL-Sortierungsname sein. Wenn keine Sortierung angegeben ist, wird der Datenbank die Sortierung der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zugewiesen.  
   
- Beim Erstellen von Datenbanken mit einer von der Standardsortierung abweichenden Sortierung folgen die Daten in der Datenbank immer der angegebenen Sortierung. Für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], wenn Sie eine eigenständige Datenbank zu erstellen, die internen Kataloginformationen bleibt mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -standardsortierung **Latin1_General_100_CI_AS_WS_KS_SC**.  
+ Beim Erstellen von Datenbanken mit einer von der Standardsortierung abweichenden Sortierung folgen die Daten in der Datenbank immer der angegebenen Sortierung. Bei der Erstellung einer eigenständigen Datenbank in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden die internen Kataloginformationen mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Standardsortierung **Latin1_General_100_CI_AS_WS_KS_SC** verwaltet.  
   
- Weitere Informationen zu den Windows- und SQL-Sortierungsnamen finden Sie unter [COLLATE &#40; Transact-SQL &#41; ](~/t-sql/statements/collations.md).  
+ Weitere Informationen zu den Windows- und SQL-Sortierungsnamen finden Sie unter [COLLATE &#40;Transact-SQL&#41;](~/t-sql/statements/collations.md).  
   
- **\<Delayed_durability_option >:: =**  
+ **\<delayed_durability_option> ::=**  
  **Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Weitere Informationen finden Sie unter [ALTER DATABASE SET-Optionen &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-database-transact-sql-set-options.md) und [Steuern der Transaktionsdauerhaftigkeit](../../relational-databases/logs/control-transaction-durability.md).  
+ Weitere Informationen finden Sie unter [ALTER DATABASE SET-Optionen &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md) und [Steuern der Transaktionsdauerhaftigkeit](../../relational-databases/logs/control-transaction-durability.md).  
   
- **\<File_and_filegroup_options >:: =**  
- Weitere Informationen finden Sie unter [ALTER DATABASE File und Filegroup-Optionen &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).  
+ **\<file_and_filegroup_options>::=**  
+ Weitere Informationen finden Sie unter [ALTER DATABASE-Optionen FILE und FILEGROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).  
   
-## <a name="remarks"></a>Hinweise  
- Verwenden Sie zum Entfernen einer Datenbank [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md).  
+## <a name="remarks"></a>Remarks  
+ Verwenden Sie [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md), um Datenbanken zu entfernen.  
   
- Um die Größe einer Datenbank zu reduzieren, verwenden Sie [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md).  
+ Verwenden Sie [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md), um die Größe einer Datenbank zu reduzieren.  
   
  Die ALTER DATABASE-Anweisung muss im Autocommitmodus (dem Standardmodus für die Transaktionsverwaltung) ausgeführt werden und ist in einer expliziten oder impliziten Transaktion nicht zugelassen.  
   
- Der Status einer Datenbankdatei (z. B. online oder offline) wird unabhängig vom Status der Datenbank verwaltet. Weitere Informationen finden Sie unter [Dateistatus](../../relational-databases/databases/file-states.md). Der Status der Dateien in einer Dateigruppe bestimmt die Verfügbarkeit der gesamten Dateigruppe. Damit eine Dateigruppe verfügbar ist, müssen alle Dateien in der Dateigruppe online sein. Ist eine Dateigruppe offline, verursacht jeder Versuch, über eine SQL-Anweisung auf die Dateigruppe zuzugreifen, einen Fehler. Wenn Sie Abfragepläne für SELECT-Anweisungen erstellen, vermeidet der Abfrageoptimierer nicht gruppierte Indizes und indizierte Sichten, die sich in Offlinedateigruppen befinden. Dadurch wird ein erfolgreiches Ausführen der Anweisungen ermöglicht. Enthält die Offlinedateigruppe jedoch den Heap oder gruppierten Index der Zieltabelle, schlagen die SELECT-Anweisungen fehl. Auch alle INSERT-, UPDATE- oder DELETE-Anweisungen, die eine Tabelle mit einem Index in einer Offlinedateigruppe ändern, schlagen fehl.  
+ Der Status einer Datenbankdatei (z. B. online oder offline) wird unabhängig vom Status der Datenbank verwaltet. Weitere Informationen finden Sie im Abschnitt [Dateistatus](../../relational-databases/databases/file-states.md). Der Status der Dateien in einer Dateigruppe bestimmt die Verfügbarkeit der gesamten Dateigruppe. Damit eine Dateigruppe verfügbar ist, müssen alle Dateien in der Dateigruppe online sein. Ist eine Dateigruppe offline, verursacht jeder Versuch, über eine SQL-Anweisung auf die Dateigruppe zuzugreifen, einen Fehler. Wenn Sie Abfragepläne für SELECT-Anweisungen erstellen, vermeidet der Abfrageoptimierer nicht gruppierte Indizes und indizierte Sichten, die sich in Offlinedateigruppen befinden. Dadurch wird ein erfolgreiches Ausführen der Anweisungen ermöglicht. Enthält die Offlinedateigruppe jedoch den Heap oder gruppierten Index der Zieltabelle, schlagen die SELECT-Anweisungen fehl. Auch alle INSERT-, UPDATE- oder DELETE-Anweisungen, die eine Tabelle mit einem Index in einer Offlinedateigruppe ändern, schlagen fehl.  
   
  Wenn eine Datenbank sich im Status RESTORING befindet, erzeugen die meisten ALTER DATABASE-Anweisungen einen Fehler. Eine Ausnahme bildet das Festlegen von Datenbank-Spiegelungsoptionen. Eine Datenbank kann den Status RESTORING aufweisen, während ein Wiederherstellungsvorgang aktiv ist oder wenn ein Wiederherstellungsvorgang einer Datenbank oder Protokolldatei aufgrund einer beschädigten Sicherungsdatei fehlschlägt.  
   
@@ -187,7 +187,7 @@ ALTER DATABASE { database_name  | CURRENT }
   
 -   Von der Sortierung der Datenbank hängt kein schemagebundenes Objekt ab.  
   
-     Wenn Sie die folgenden Objekte, die von der datenbanksortierung abhängen, in der Datenbank, die ALTER DATABASE vorhanden*Database_name*COLLATE-Anweisung erzeugt einen Fehler. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gibt eine Fehlermeldung für jedes Objekt zurück, das die ALTER-Aktion blockiert:  
+     Wenn die folgenden Objekte, die von der Datenbanksortierung abhängen, in der Datenbank vorhanden sind, schlägt die ALTER DATABASE*database_name*COLLATE-Anweisung fehl. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gibt eine Fehlermeldung für jedes Objekt zurück, das die ALTER-Aktion blockiert:  
   
     -   Benutzerdefinierte Funktionen und Sichten, die mit SCHEMABINDING erstellt wurden.  
   
@@ -254,20 +254,20 @@ COLLATE French_CI_AI ;
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
-- [ALTER DATABASE &#40; Azure SQL-Datenbank &#41;](alter-database-azure-sql-database.md)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+- [ALTER DATABASE &#40;Azure SQL-Datenbank&#41;](alter-database-azure-sql-database.md)  
 - [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
 - [DATABASEPROPERTYEX &#40;Transact-SQL&#41;](../../t-sql/functions/databasepropertyex-transact-sql.md)   
 - [DROP DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-transact-sql.md)   
 - [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)   
 - [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
 - [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
-- [Sp_spaceused &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)   
+- [sp_spaceused &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)   
 - [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
 - [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
-- [Sys. database_mirroring_witnesses &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/database-mirroring-witness-catalog-views-sys-database-mirroring-witnesses.md)   
-- [Sys. data_spaces &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)   
-- ["Sys.FileGroups" &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
+- [sys.database_mirroring_witnesses &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/database-mirroring-witness-catalog-views-sys-database-mirroring-witnesses.md)   
+- [sys.data_spaces &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)   
+- [sys.filegroups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
 - [sys.master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
 - [Systemdatenbanken](../../relational-databases/databases/system-databases.md)  
   

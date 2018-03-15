@@ -1,5 +1,5 @@
 ---
-title: (Division) (Transact-SQL) | Microsoft Docs
+title: (Division) (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -48,17 +48,17 @@ dividend / divisor
   
 ## <a name="arguments"></a>Argumente  
  *dividend*  
- Der zu dividierende numerische Ausdruck. *Dividend* kann jeder gültige [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) von einem der Datentypen der numerischen Datentypkategorie, mit Ausnahme der **"DateTime"** und **Smalldatetime** Datentypen.  
+ Der zu dividierende numerische Ausdruck. *dividend* kann ein gültiger [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) eines Datentyps der numerischen Datentypkategorie sein. Dies gilt allerdings nicht für die Datentypen **datetime** und **smalldatetime**.  
   
  *divisor*  
- Ist der numerische Ausdruck, durch den der Dividend geteilt werden soll. *Divisor* kann jeder gültiger Ausdruck eines beliebigen Datentyps der numerischen Datentypkategorie sein, mit Ausnahme der **"DateTime"** und **Smalldatetime** Datentypen.  
+ Der numerische Ausdruck, durch den der Dividend geteilt werden soll. *divisor* kann ein gültiger Ausdruck eines Datentyps der numerischen Datentypkategorie sein. Dies gilt allerdings nicht für die Datentypen **datetime** und **smalldatetime**.  
   
 ## <a name="result-types"></a>Ergebnistypen  
  Gibt einen Wert vom Datentyp des Arguments zurück, das in der Rangfolge höher steht. Weitere Informationen finden Sie unter [Rangfolge der Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
   
- Wenn eine ganze Zahl *Dividend* wird durch eine ganze Zahl dividiert *Divisor*, das Ergebnis ist eine ganze Zahl, die Nachkommastellen abgeschnitten wurde.  
+ Wenn ein *dividend*-Integer durch einen *divisor*-Integer geteilt wird, ist das Ergebnis ein Integer, dessen Dezimalstellen abgeschnitten werden.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Der Ist-Wert, der vom Operator / zurückgegeben wird, ist der Quotient aus dem ersten Ausdruck geteilt durch den zweiten.  
   
 ## <a name="examples"></a>Beispiele  
@@ -88,8 +88,8 @@ SalesPersonID FirstName    LastName          SalesQuota  Sales Target Per Month
   
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- Im folgenden Beispiel wird der arithmetische Operator für die Division zum Berechnen von eines einfachen Verhältnis von Urlaubsstunden für jeden Mitarbeiter krank Stunden.  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
+ Im folgenden Beispiel wird der Operator für die arithmetische Division dazu verwendet, das einfache Verhältnis von Urlaubs- und Krankheitszeit für jeden Mitarbeiter zu berechnen.  
   
 ```  
 -- Uses AdventureWorks  
@@ -99,14 +99,14 @@ FROM DimEmployee;
   
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [Integrierte Funktionen &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
- [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [Operatoren &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)   
- [/ = &#40; Divisionszuweisung &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/divide-equals-transact-sql.md)   
- [Zusammengesetzte Operatoren &#40; Transact-SQL &#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)  
+ [/= &#40;Division Assignment&#41; &#40;Transact-SQL&#41; (/= &#40;Divisionszuweisung&#41; &#40;Transact-SQL&#41;)](../../t-sql/language-elements/divide-equals-transact-sql.md)   
+ [Compound Operators &#40;Transact-SQL&#41; (Verbundoperatoren (Transact-SQL))](../../t-sql/language-elements/compound-operators-transact-sql.md)  
   
   
 

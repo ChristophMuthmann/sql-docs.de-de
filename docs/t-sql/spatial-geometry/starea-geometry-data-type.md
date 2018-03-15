@@ -1,5 +1,5 @@
 ---
-title: STArea (Geometry-Datentyp) | Microsoft Docs
+title: STArea (geometry-Datentyp) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="starea-geometry-data-type"></a>STArea (geometry-Datentyp)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  Gibt die gesamte Oberfläche einer **Geometrie** Instanz.  
+  Gibt die gesamte Oberfläche einer **geometry**-Instanz zurück.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -44,17 +44,17 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Rückgabetypen  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Rückgabetyp: **"float"**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Rückgabetyp: **float**  
   
  CLR-Rückgabetyp: **SqlDouble**  
   
-## <a name="remarks"></a>Hinweise  
- `STArea()`Gibt 0 zurück, wenn eine **Geometrie** -Instanz nur 0- und 1-dimensionale Abbildungen enthält oder wenn sie leer ist. `STArea()`Gibt **NULL** Wenn die **Geometrie** Instanz wurde nicht initialisiert.  
+## <a name="remarks"></a>Remarks  
+ `STArea()` gibt 0 (null) zurück, wenn eine **geometry**-Instanz nur null- und eindimensionale Abbildungen enthält oder leer ist. `STArea()` gibt **NULL** zurück, wenn die **geometry**-Instanz nicht initialisiert wurde.  
   
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="a-computing-the-area-of-a-polygon-instance"></a>A. Berechnen der Fläche einer Polygoninstanz  
- Das folgende Beispiel erstellt eine `Polygon``geometry` -Instanz und die Fläche des Polygons berechnet.  
+ Im folgenden Beispiel wird eine `Polygon``geometry`-Instanz erstellt, und die Fläche des Polygons wird berechnet.  
   
 ```  
 DECLARE @g geometry;  
@@ -71,7 +71,7 @@ SELECT @g.STArea();
  SELECT @g.STArea() AS Area;
  ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [OGC-Methoden für geometry-Instanzen](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

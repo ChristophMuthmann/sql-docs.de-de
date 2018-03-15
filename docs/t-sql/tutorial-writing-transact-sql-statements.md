@@ -1,5 +1,5 @@
 ---
-title: 'Lernprogramm: Schreiben von Transact-SQL-Anweisungen | Microsoft Docs'
+title: 'Tutorial: Schreiben von Transact-SQL-Anweisungen | Microsoft-Dokumentation'
 ms.custom: 
 ms.date: 08/03/2016
 ms.prod: sql-non-specified
@@ -29,7 +29,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---
 # <a name="tutorial-writing-transact-sql-statements"></a>Lernprogramm: Schreiben von Transact-SQL-Anweisungen
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]Willkommen zum Schreiben von [!INCLUDE[tsql](../includes/tsql-md.md)] Anweisungen Lernprogramm. Dieses Lernprogramm richtet sich an Benutzer, die noch keine Erfahrung mit dem Schreiben von SQL-Anweisungen haben. Neuen Benutzern wird der Einstieg erleichtert, indem einige einfache Anweisungen zum Erstellen von Tabellen und Einfügen von Daten behandelt werden. In diesem Lernprogramm wird [!INCLUDE[tsql](../includes/tsql-md.md)]- die Implementierung des SQL-Standards durch [!INCLUDE[msCoName](../includes/msconame-md.md)] - verwendet. Dieses Lernprogramm ist als kurze Einführung in die [!INCLUDE[tsql](../includes/tsql-md.md)] -Sprache und nicht als Ersatz für eine [!INCLUDE[tsql](../includes/tsql-md.md)] -Schulung gedacht. Die Anweisungen in diesem Lernprogramm wurden absichtlich einfach gestaltet und geben nicht die Komplexität einer typischen Produktionsdatenbank wieder.  
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]Willkommen beim Tutorial zum Schreiben von [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisungen. Dieses Lernprogramm richtet sich an Benutzer, die noch keine Erfahrung mit dem Schreiben von SQL-Anweisungen haben. Neuen Benutzern wird der Einstieg erleichtert, indem einige einfache Anweisungen zum Erstellen von Tabellen und Einfügen von Daten behandelt werden. In diesem Lernprogramm wird [!INCLUDE[tsql](../includes/tsql-md.md)]- die Implementierung des SQL-Standards durch [!INCLUDE[msCoName](../includes/msconame-md.md)] - verwendet. Dieses Lernprogramm ist als kurze Einführung in die [!INCLUDE[tsql](../includes/tsql-md.md)] -Sprache und nicht als Ersatz für eine [!INCLUDE[tsql](../includes/tsql-md.md)] -Schulung gedacht. Die Anweisungen in diesem Lernprogramm wurden absichtlich einfach gestaltet und geben nicht die Komplexität einer typischen Produktionsdatenbank wieder.  
   
 >**HINWEIS:** Wenn Sie ein Anfänger auf diesem Gebiet sind, ist es möglicherweise einfacher für Sie [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] zu verwenden, anstatt [!INCLUDE[tsql](../includes/tsql-md.md)] -Anweisungen zu schreiben.  
   

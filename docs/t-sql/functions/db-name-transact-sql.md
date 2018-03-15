@@ -1,5 +1,5 @@
 ---
-title: Db_name (Transact-SQL) | Microsoft Docs
+title: DB_NAME (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 07/30/2017
 ms.prod: sql-non-specified
@@ -53,13 +53,13 @@ DB_NAME ( [ database_id ] )
 Die ID der Datenbank, die zurückgegeben werden soll. *database_id* ist vom Datentyp **int**und hat keinen Standardwert. Wenn keine ID angegeben ist, wird der Name der aktuellen Datenbank zurückgegeben.
   
 ## <a name="return-types"></a>Rückgabetypen
-**vom Datentyp nvarchar(128)**
+**nvarchar(128)**
   
 ## <a name="permissions"></a>Berechtigungen  
-Wenn der Aufrufer **DB_NAME** ist nicht der Besitzer der Datenbank und die Datenbank ist nicht **master** oder **Tempdb**, mindestens die Berechtigung zum Anzeigen der entsprechenden Zeile erforderlich ALTER ANY DATABASE oder VIEW ANY DATABASE auf Serverebene-Berechtigung oder die CREATE DATABASE-Berechtigung in den **master** Datenbank. Die Datenbank, mit der der Aufrufer eine Verbindung hergestellt hat, kann immer in **sys.databases**angezeigt werden.
+Wenn der Aufrufer von **DB_NAME** nicht der Besitzer der Datenbank und die Datenbank keine **master**- oder **tempdb**-Datenbank ist, ist zum Anzeigen der entsprechenden Zeile mindestens die Berechtigung ALTER ANY DATABASE oder VIEW ANY DATABASE auf Serverebene bzw. die Berechtigung CREATE DATABASE für die **master**-Datenbank erforderlich. Die Datenbank, mit der der Aufrufer eine Verbindung hergestellt hat, kann immer in **sys.databases**angezeigt werden.
   
 > [!IMPORTANT]  
->  Standardmäßig verfügt die public-Rolle die VIEW ANY DATABASE-Berechtigung, alle Anmeldungen, die Datenbankinformationen finden Sie unter. Um eine Anmeldung über die Möglichkeit zur Erkennung von einer Datenbank zu blockieren, Aufheben der VIEW ANY DATABASE-Berechtigung aus öffentlichen oder für einzelne Anmeldenamen die VIEW ANY DATABASE-Berechtigung zu verweigern.  
+>  Standardmäßig verfügt die öffentliche Rolle über die Berechtigung VIEW ANY DATABASE, sodass alle Anmeldenamen auf Datenbankinformationen zugreifen können. Um zu verhindern, dass ein bestimmter Anmeldename eine Datenbank ermitteln kann, widerrufen Sie die VIEW ANY DATABASE-Berechtigung „Öffentlich“ über die REVOKE-Anweisung, oder Verweigern Sie die VIEW ANY DATABASE-Berechtigung für einzelne Anmeldenamen über die DENY-Anweisung.  
   
 ## <a name="examples"></a>Beispiele  
   
@@ -81,7 +81,7 @@ SELECT DB_NAME(3)AS [Database Name];
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
 ### <a name="c-return-the-current-database-name"></a>C. Zurückgeben des aktuellen Datenbanknamens  
   
@@ -89,8 +89,8 @@ GO
 SELECT DB_NAME() AS [Current Database];  
 ```  
   
-### <a name="d-return-the-name-of-a-database-by-using-the-database-id"></a>D. Geben Sie den Namen einer Datenbank mit der Datenbank-ID zurück.  
-Das folgende Beispiel gibt den Datenbanknamen und Database_id für jede Datenbank zurück.
+### <a name="d-return-the-name-of-a-database-by-using-the-database-id"></a>D. Zurückgeben des Namens einer Datenbank unter Verwendung der Datenbank-ID  
+Das folgende Beispiel gibt den Datenbanknamen für die database_id für jede Datenbank zurück.
   
 ```sql
 SELECT DB_NAME(database_id) AS [Database], database_id  
@@ -98,8 +98,8 @@ FROM sys.databases;
 ```  
   
 ## <a name="see-also"></a>Siehe auch
-[Db_id &#40; Transact-SQL &#41;](../../t-sql/functions/db-id-transact-sql.md)  
-[Metadatenfunktionen &#40; Transact-SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)  
+[DB_ID &#40;Transact-SQL&#41;](../../t-sql/functions/db-id-transact-sql.md)  
+[Metadata Functions &#40;Transact-SQL&#41; (Metadatenfunktionen (Transact-SQL))](../../t-sql/functions/metadata-functions-transact-sql.md)  
 [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)
   
   

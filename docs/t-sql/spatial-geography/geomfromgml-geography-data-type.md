@@ -1,5 +1,5 @@
 ---
-title: GeomFromGML (Geography-Datentyp) | Microsoft Docs
+title: GeomFromGML (geography-Datentyp) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 07/30/2017
 ms.prod: sql-non-specified
@@ -35,9 +35,9 @@ ms.lasthandoff: 01/25/2018
 # <a name="geomfromgml-geography-data-type"></a>GeomFromGML (geography-Datentyp)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Erstellt eine **Geography** -Instanz auf Grundlage eine Darstellung der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Teilmenge von Geography Markup Language (GML).
+Erstellt eine **geography**-Instanz auf der Grundlage einer Darstellung in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Teilmenge von GML (Geography Markup Language).
   
-Weitere Informationen zu GML finden Sie unter den folgenden OGC-Spezifikation: [OGC Specifications, Geography Markup Language](http://go.microsoft.com/fwlink/?LinkId=93629)
+Weitere Informationen über GML finden Sie in den folgenden OGC-Spezifikationen (Open Geospatial Consortium): [OGC Specifications, Geography Markup Language (OGC-Spezifikationen, Geography Markup Language)](http://go.microsoft.com/fwlink/?LinkId=93629)
   
 Diese **geography** -Datentypmethode unterstützt Instanzen von **FullGlobe** oder räumliche Instanzen, die größer als eine Hemisphäre sind.
   
@@ -56,17 +56,17 @@ GeomFromGml ( GML_input, SRID )
  Ein **int** -Ausdruck, der die SRID (Spatial Reference ID) der Instanz von **geography** darstellt, die zurückgegeben wird.  
   
 ## <a name="return-types"></a>Rückgabetypen  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Rückgabetyp: **Geography**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Rückgabetyp: **geography**  
   
  CLR-Rückgabetyp: **SqlGeography**  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Diese Methode löst eine **FormatException** aus, wenn die Eingabe nicht korrekt formatiert ist.  
   
- Diese Methode löst **ArgumentException** , wenn die Eingabe gegenüberliegende Kante enthält.  
+ Diese Methode löst **ArgumentException** aus, wenn die Eingabe einen gegenüberliegenden Edge enthält.  
   
 ## <a name="examples"></a>Beispiele  
- Im folgenden Beispiel wird `GeomFromGml()` zum Erstellen einer `geography` Instanz.  
+ Im folgenden Beispiel wird `GeomFromGml()` verwendet, um eine `geography`-Instanz zu erstellen.  
   
 ```  
 DECLARE @g geography;  
@@ -76,7 +76,7 @@ SET @g = geography::GeomFromGml(@x, 4326);
 SELECT @g.ToString();  
 ```  
   
- Im folgenden Beispiel wird `GeomFromGml()` zum Erstellen einer `FullGlobe``geography` Instanz.  
+ Im folgenden Beispiel wird `GeomFromGml()` verwendet, um eine `FullGlobe``geography`-Instanz zu erstellen.  
   
 ```  
 DECLARE @g geography;  
@@ -86,7 +86,7 @@ SET @g = geography::GeomFromGml(@x, 4326);
 SELECT @g.ToString();  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Erweiterte statische geography-Methoden](../../t-sql/spatial-geography/extended-static-geography-methods.md)  
   
   

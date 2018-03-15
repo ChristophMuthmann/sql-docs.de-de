@@ -1,5 +1,5 @@
 ---
-title: DATABASE_PRINCIPAL_ID (Transact-SQL) | Microsoft Docs
+title: DATABASE_PRINCIPAL_ID (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 07/29/2017
 ms.prod: sql-non-specified
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="databaseprincipalid-transact-sql"></a>DATABASE_PRINCIPAL_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Gibt die ID-Nummer eines Prinzipals in der aktuellen Datenbank zurück. Weitere Informationen zu Prinzipalen finden Sie unter [Prinzipale &#40; Datenbankmodul &#41;](../../relational-databases/security/authentication-access/principals-database-engine.md).
+Gibt die ID-Nummer eines Prinzipals in der aktuellen Datenbank zurück. Weitere Informationen finden Sie unter [Prinzipale &#40;Datenbank-Engine&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md).
   
 ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -49,14 +49,14 @@ DATABASE_PRINCIPAL_ID ( 'principal_name' )
   
 ## <a name="arguments"></a>Argumente  
 *principal_name*  
-Ist ein Ausdruck vom Typ **Sysname** , den Prinzipal darstellt.  
-Wenn *Principal_name* wird weggelassen wird, wird die ID des aktuellen Benutzers zurückgegeben. Die Klammern sind erforderlich.
+Ein Ausdruck vom Typ **sysname**, der den Prinzipal darstellt.  
+Wird *principal_name* weggelassen, wird die ID des aktuellen Benutzers zurückgegeben. Die Klammern sind erforderlich.
   
 ## <a name="return-types"></a>Rückgabetypen
 **int**  
 NULL, wenn der Datenbankprinzipal nicht vorhanden ist.
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
 DATABASE_PRINCIPAL_ID kann in einer Auswahlliste, einer WHERE-Klausel oder überall sonst verwendet werden, wo ein Ausdruck zulässig ist. Weitere Informationen finden Sie unter [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md).
   
 ## <a name="examples"></a>Beispiele  

@@ -1,5 +1,5 @@
 ---
-title: "Löschen (XML DML) | Microsoft Docs"
+title: delete (XML DML) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
@@ -45,7 +45,7 @@ delete Expression
   
 ## <a name="arguments"></a>Argumente  
  *Ausdruck*  
- Ein XQuery-Ausdruck, der die zu löschenden Knoten identifiziert. Alle durch den Ausdruck ausgewählten Knoten sowie alle Knoten oder Werte, die darin enthalten sind, werden gelöscht. Wie in beschrieben [insert (XML DML)](../../t-sql/xml/insert-xml-dml.md), dies muss ein Verweis auf einen vorhandenen Knoten im Dokument sein. Es darf sich nicht um einen konstruierten Knoten handeln. Der Ausdruck darf nicht der Stammknoten (/) sein. Wenn der Ausdruck eine leere Sequenz zurückgibt, wird nichts gelöscht, und es werden keine Fehler zurückgegeben.  
+ Ein XQuery-Ausdruck, der die zu löschenden Knoten identifiziert. Alle durch den Ausdruck ausgewählten Knoten sowie alle Knoten oder Werte, die darin enthalten sind, werden gelöscht. Wie unter [insert (XML DML)](../../t-sql/xml/insert-xml-dml.md) beschrieben, muss dabei auf einen im Dokument vorhandenen Knoten verwiesen werden. Es darf sich nicht um einen konstruierten Knoten handeln. Der Ausdruck darf nicht der Stammknoten (/) sein. Wenn der Ausdruck eine leere Sequenz zurückgibt, wird nichts gelöscht, und es werden keine Fehler zurückgegeben.  
   
 ## <a name="examples"></a>Beispiele  
   
@@ -92,7 +92,7 @@ SELECT @myDoc
 ```  
   
 ### <a name="b-deleting-nodes-from-a-document-stored-in-an-untyped-xml-column"></a>B. Löschen von Knoten aus einem in einer nicht typisierten XML-Spalte gespeicherten Dokument  
- Im folgenden Beispiel ein **löschen** XML DML-Anweisung entfernt das zweite untergeordnete Element des <`Features`> aus dem in der Spalte gespeicherten Dokument.  
+ Im folgenden Beispiel entfernt die XML DML-Anweisung für **delete** das zweite untergeordnete Element von <`Features`> aus dem in der Spalte gespeicherten Dokument.  
   
 ```  
 CREATE TABLE T (i int, x xml)  
@@ -119,9 +119,9 @@ FROM T
   
  Beachten Sie hinsichtlich der vorherigen Abfrage Folgendes:  
   
--   Die [Modify()-Methode (Xml-Datentyp)](../../t-sql/xml/modify-method-xml-data-type.md) dient zum Angeben der **löschen** XML DML-Schlüsselwort.  
+-   Die [modify()-Methode (XML-Datentyp)](../../t-sql/xml/modify-method-xml-data-type.md) wird verwendet, um das XML DML-Schlüsselwort für **delete** anzugeben.  
   
--   Die [Query()-Methode (Xml-Datentyp)](../../t-sql/xml/query-method-xml-data-type.md) wird verwendet, um das Dokument abzufragen.  
+-   Die [query()-Methode (xml-Datentyp)](../../t-sql/xml/query-method-xml-data-type.md) wird verwendet, um das Dokument abzufragen.  
   
 ### <a name="c-deleting-nodes-from-a-typed-xml-column"></a>C. Löschen von Knoten aus einer typisierten XML-Spalte  
  Im folgenden Beispiel werden Knoten aus dem in einer typisierten **xml** -Spalte gespeicherten XML-Dokument mit den Fertigungsanweisungen gelöscht.  
@@ -192,10 +192,10 @@ drop table T
 go  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Vergleichen von typisiertem XML mit nicht typisiertem XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [Erstellen von Instanzen der XML-Daten](../../relational-databases/xml/create-instances-of-xml-data.md)   
- [xml-Datentypmethoden](../../t-sql/xml/xml-data-type-methods.md)   
- [XML Data Modification Language &#40; XML DML &#41;](../../t-sql/xml/xml-data-modification-language-xml-dml.md)  
+ [XML-Datentypmethoden](../../t-sql/xml/xml-data-type-methods.md)   
+ [XML-Datenänderungssprache &#40;XML DML&#41;](../../t-sql/xml/xml-data-modification-language-xml-dml.md)  
   
   

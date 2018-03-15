@@ -1,5 +1,5 @@
 ---
-title: Abrufen von Daten (Transact-SQL) | Microsoft Docs
+title: FETCH (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -73,24 +73,24 @@ FETCH
  Gibt die letzte Zeile im Cursor zurück und macht sie zur aktuellen Zeile.  
   
  ABSOLUTE { *n*| @*nvar*}  
- Wenn  *n*  oder @*Nvar* positive Zahl ist, wird die Zeile zurückgegeben  *n*  ausgehend vom Anfang des Cursors-te. der zurückgegebenen Zeile der aktuelle Zeile. Wenn  *n*  oder @*Nvar* ist ein negativer Wert ist, wird die Zeile  *n*  vor dem Ende des Cursors-te. der zurückgegebenen Zeile der aktuelle Zeile. Wenn  *n*  oder @*Nvar* gleich 0 ist, werden keine Zeilen zurückgegeben. *n*muss eine ganzzahlige Konstante und @*Nvar* muss **"smallint"**, **"tinyint"**, oder **Int**.  
+ Wenn *n* oder @*nvar* eine positive Zahl ist, wird die *n*-te Zeile – ausgehend vom Anfang des Cursors – zurückgegeben. Die zurückgegebene Zeile wird zur aktuellen Zeile. Wenn *n* oder @*var* eine negative Zahl ist, wird die *n*-te Zeile – ausgehend von der letzten Zeile des Cursors – zurückgegeben. Die zurückgegebene Zeile wird zur aktuellen Zeile. Wenn *n* oder @*nvar* gleich 0 ist, werden keine Zeilen zurückgegeben. *n* muss eine ganzzahlige Konstante und @*nvar* vom Typ **smallint**, **tinyint** oder **int** sein.  
   
- RELATIVE {  *n* | @*Nvar*}  
- Wenn  *n*  oder @*Nvar* positive Zahl ist, wird die Zeile zurückgegeben  *n*  der aktuellen Zeile-te. der zurückgegebenen Zeile der aktuelle Zeile. Wenn  *n*  oder @*Nvar* ist ein negativer Wert ist, wird die Zeile  *n*  Zeilen vor der aktuellen Zeile und macht der zurückgegebenen Zeile der aktuelle Zeile. Wenn  *n*  oder @*Nvar* gleich 0 ist, wird die aktuelle Zeile zurückgegeben. Wenn Sie mit FETCH RELATIVE angegeben wird  *n*  oder @*Nvar* 0 oder auf der ersten Datenabruf vom Cursor negative Zahl festgelegt, werden keine Zeilen zurückgegeben. *n*muss eine ganzzahlige Konstante und @*Nvar* muss **"smallint"**, **"tinyint"**, oder **Int**.  
+ RELATIVE { *n*| @*nvar*}  
+ Wenn *n* oder @*nvar* eine positive Zahl ist, wird die *n*-te Zeile nach der aktuellen Zeile zurückgegeben. Die zurückgegebene Zeile wird zur aktuellen Zeile. Wenn *n* oder @*nvar* eine negative Zahl ist, wird die *n*-te Zeile vor der aktuellen Zeile zurückgegeben. Die zurückgegebene Zeile wird zur aktuellen Zeile. Wenn *n* oder @*nvar* gleich 0 ist, wird die aktuelle Zeile zurückgegeben. Wenn beim ersten Datenabruf vom Cursor FETCH RELATIVE auf *n* oder @*nvar* auf 0 oder auf eine negative Zahl festgelegt wird, werden keine Zeilen zurückgegeben. *n* muss eine ganzzahlige Konstante und @*nvar* vom Typ **smallint**, **tinyint** oder **int** sein.  
   
  GLOBAL  
- Gibt an, dass *Cursor_name* auf einen globalen Cursor verweist.  
+ Gibt an, dass *cursor_name* auf einen globalen Cursor verweist.  
   
  *cursor_name*  
- Der Name des geöffneten Cursors, von dem der Abruf erfolgen soll. Wenn sowohl ein globaler als auch ein lokaler Cursor mit vorhanden *Cursor_name* als Buchstabenfolge, *Cursor_name* auf den globalen Cursor, wenn GLOBAL angegeben ist und auf den lokalen Cursor GLOBAL nicht angegeben ist.  
+ Der Name des geöffneten Cursors, von dem der Abruf erfolgen soll. Falls sowohl ein lokaler als auch ein globaler Cursor namens *cursor_name* vorhanden ist, bezieht sich *cursor_name* nur dann auf den globalen Cursor, wenn GLOBAL angegeben ist. Wird GLOBAL nicht angegeben, bezieht es sich auf den lokalen Cursor.  
   
  @*cursor_variable_name*  
  Der Name einer Cursorvariablen, die sich auf den geöffneten Cursor bezieht, von dem der Abruf erfolgen soll.  
   
- INTO @*Variable_name*[,... *n*]  
+ INTO @*variable_name*[ ,...*n*]  
  Ermöglicht die Zuweisung von Daten aus den Spalten, die durch einen Abruf zurückgegeben werden, an lokale Variablen. Jeder Variablen in der Liste wird (von links nach rechts) die entsprechende Spalte im Cursorresultset zugeordnet. Die Datentypen aller Variablen müssen mit dem Datentyp der entsprechenden Resultsetspalte übereinstimmen oder implizit in diesen Datentyp konvertiert werden können. Die Anzahl von Variablen muss mit der Anzahl von Spalten in der SELECT-Liste des Cursors übereinstimmen.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Wird SCROLL in der ISO-Anweisung DECLARE CURSOR nicht angegeben, wird lediglich die FETCH-Option NEXT unterstützt. Wird SCROLL in der ISO-Anweisung DECLARE CURSOR angegeben, werden alle FETCH-Optionen unterstützt.  
   
  Wenn die DECLARE CURSOR-Erweiterungen von [!INCLUDE[tsql](../../includes/tsql-md.md)] verwendet werden, gelten folgende Regeln:  
@@ -101,7 +101,7 @@ FETCH
   
 -   DYNAMIC SCROLL-Cursor unterstützen alle FETCH-Optionen außer ABSOLUTE.  
   
- Der @@FETCH_STATUS -Funktion meldet den Status der letzten FETCH-Anweisung. Die gleichen Informationen werden in der fetch_status-Spalte des Cursors gespeichert, der von sp_describe_cursor zurückgegeben wird. Mit diesen Statusinformationen kann die Gültigkeit von Daten einer vorangehenden FETCH-Anweisung überprüft werden, bevor diese Daten weiterverarbeitet werden. Weitere Informationen finden Sie unter [@@FETCH_STATUS &#40; Transact-SQL &#41; ](../../t-sql/functions/fetch-status-transact-sql.md).  
+ Die @@FETCH_STATUS-Funktion meldet den Status der letzten FETCH-Anweisung. Die gleichen Informationen werden in der fetch_status-Spalte des Cursors gespeichert, der von sp_describe_cursor zurückgegeben wird. Mit diesen Statusinformationen kann die Gültigkeit von Daten einer vorangehenden FETCH-Anweisung überprüft werden, bevor diese Daten weiterverarbeitet werden. Weitere Informationen finden Sie unter [@@FETCH_STATUS &#40;Transact-SQL&#41;](../../t-sql/functions/fetch-status-transact-sql.md).  
   
 ## <a name="permissions"></a>Berechtigungen  
  FETCH-Berechtigungen erhalten standardmäßig alle gültigen Benutzer.  
@@ -214,7 +214,7 @@ DEALLOCATE contact_cursor;
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [CLOSE &#40;Transact-SQL&#41;](../../t-sql/language-elements/close-transact-sql.md)   
  [DEALLOCATE &#40;Transact-SQL&#41;](../../t-sql/language-elements/deallocate-transact-sql.md)   
  [DECLARE CURSOR &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-cursor-transact-sql.md)   

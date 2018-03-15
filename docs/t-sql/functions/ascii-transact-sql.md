@@ -1,5 +1,5 @@
 ---
-title: ASCII (Transact-SQL) | Microsoft Docs
+title: ASCII (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -49,16 +49,16 @@ ASCII ( character_expression )
   
 ## <a name="arguments"></a>Argumente  
 *character_expression*  
-Ist ein [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) des Typs **Char** oder **Varchar**.
+Ein [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) des Typs **char** oder **varchar**.
   
 ## <a name="return-types"></a>Rückgabetypen
  **int**  
   
-## <a name="remarks"></a>Hinweise
-ASCII ist eine Abkürzung für American Standardcode für den Austausch von Informationen. Es ist ein Zeichen, die Codierung von Computern verwendet werden. Eine Liste der ASCII-Zeichen, finden Sie unter der **druckbare Zeichen** Abschnitt [ASCII](https://www.wikipedia.org/wiki/ASCII).
+## <a name="remarks"></a>Remarks
+Die Abkürzung ASCII steht für American Standard Code for Information Interchange. Dabei handelt es sich um einen Zeichencodierungsstandard, der von Computern verwendet wird. Eine Liste mit ASCII-Zeichen finden Sie im Abschnitt **Printable characters (Darstellbare Zeichen)** des [ASCII](https://www.wikipedia.org/wiki/ASCII)-Artikels.
 
 ## <a name="examples"></a>Beispiele  
-Das folgende Beispiel geht davon aus einem ASCII-Zeichensatz und gibt die `ASCII` Wert 6 Zeichen enthalten.
+Im folgenden Beispiel, in dem von einem ASCII-Zeichensatz ausgegangen wird, wird der Wert `ASCII` für sechs Zeichen zurückgegeben.
   
 ```sql
 SELECT ASCII('A') AS A, ASCII('B') AS B,   
@@ -78,7 +78,7 @@ A           B           a           b           1           2
  [CHAR &#40;Transact-SQL&#41;](../../t-sql/functions/char-transact-sql.md)  
  [NCHAR &#40;Transact-SQL&#41;](../../t-sql/functions/nchar-transact-sql.md)  
  [UNICODE &#40;Transact-SQL&#41;](../../t-sql/functions/unicode-transact-sql.md)  
- [Zeichenfolgenfunktionen &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)
+ [String Functions &#40;Transact-SQL&#41; (Zeichenfolgenfunktionen (Transact-SQL))](../../t-sql/functions/string-functions-transact-sql.md)
   
   
 

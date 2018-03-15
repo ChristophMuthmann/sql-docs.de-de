@@ -1,5 +1,5 @@
 ---
-title: ReorientObject (Geography-Datentyp) | Microsoft Docs
+title: ReorientObject (geography-Datentyp) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -50,11 +50,11 @@ ms.lasthandoff: 01/25/2018
  Eine andere Instanz von **geography** , für die `ReorientObject()` aufgerufen wird.  
   
 ## <a name="return-value"></a>Rückgabewert  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Rückgabetyp: **Geography**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Rückgabetyp: **geography**  
   
  CLR-Rückgabetyp: **SqlGeography**  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Mit dieser Methode wird die Ringausrichtung aller **Polygons** in eine **GeometryCollection** geändert, ohne **Points** oder **Linestrings** in der angegebenen Auflistung zu ändern.  
   
  Wenn eine **GeometryCollection** an die Methode übergeben wird, werden alle Instanzen in der Auflistung neu ausgerichtet, die Auflistung als Ganzes wird jedoch nicht neu ausgerichtet.  
@@ -67,7 +67,7 @@ SELECT @R.ReorientObject().STAsText();
 --Result: POLYGON ((10 10, -10 10, -10 -10, 10 -10, 10 10))  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Erweiterte Methoden für geography-Instanzen](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)  
   
   

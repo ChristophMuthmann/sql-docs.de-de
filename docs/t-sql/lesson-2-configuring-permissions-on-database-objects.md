@@ -1,5 +1,5 @@
 ---
-title: "Lektion 2: Konfigurieren von Berechtigungen für Datenbankobjekte | Microsoft Docs"
+title: "Lektion 2: Konfigurieren von Berechtigungen für Datenbankobjekte | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -29,7 +29,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---
 # <a name="lesson-2-configuring-permissions-on-database-objects"></a>Lektion 2: Konfigurieren von Berechtigungen für Datenbankobjekte
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]Gewähren von Benutzerzugriff auf eine Datenbank umfasst drei Schritte. Zuerst erstellen Sie einen Anmeldenamen. Dieser Anmeldename ermöglicht es dem Benutzer, eine Verbindung mit [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]herzustellen. Anschließend konfigurieren Sie den Anmeldenamen als Benutzer in der angegebenen Datenbank. Im letzten Schritt erteilen Sie diesem Benutzer Berechtigungen für Datenbankobjekte. In dieser Lektion werden diese drei Schritte beschrieben, und es wird gezeigt, wie eine Sicht und eine gespeicherte Prozedur als Objekt erstellt werden.  
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)] Wenn Sie einem Benutzer Zugriff auf eine Datenbank gewähren möchten, müssen drei Schritte ausgeführt werden. Zuerst erstellen Sie einen Anmeldenamen. Dieser Anmeldename ermöglicht es dem Benutzer, eine Verbindung mit [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]herzustellen. Anschließend konfigurieren Sie den Anmeldenamen als Benutzer in der angegebenen Datenbank. Im letzten Schritt erteilen Sie diesem Benutzer Berechtigungen für Datenbankobjekte. In dieser Lektion werden diese drei Schritte beschrieben, und es wird gezeigt, wie eine Sicht und eine gespeicherte Prozedur als Objekt erstellt werden.  
   
 Diese Lektion enthält die folgenden Themen:  
   
@@ -43,7 +43,7 @@ Diese Lektion enthält die folgenden Themen:
   
 -   [Zusammenfassung: Konfigurieren von Berechtigungen für Datenbankobjekte](../t-sql/lesson-2-5-summary-configuring-permissions-on-database-objects.md)  
   
-## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
+## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
 [Erstellen einer Anmeldung](../t-sql/lesson-2-1-creating-a-login.md)  
   
   

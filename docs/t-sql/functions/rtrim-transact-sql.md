@@ -1,5 +1,5 @@
 ---
-title: RTRIM (Transact-SQL) | Microsoft Docs
+title: RTRIM (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 07/05/2017
 ms.prod: sql-non-specified
@@ -37,7 +37,7 @@ ms.lasthandoff: 01/18/2018
 # <a name="rtrim-transact-sql"></a>RTRIM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Gibt eine Zeichenfolge zurück, nachdem alle nachfolgenden Leerzeichen abgeschnitten.  
+  Gibt eine Zeichenfolge zurück, aus der alle nachfolgenden Leerzeichen entfernt wurden.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,12 +49,12 @@ RTRIM ( character_expression )
   
 ## <a name="arguments"></a>Argumente  
  *character_expression*  
- Ist ein [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) von Zeichendaten. *Character_expression* kann eine Konstante, Variable oder Spalte mit Zeichen- oder Binärdaten sein.  
+ Ein [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) von Zeichendaten. *character_expression* kann eine Konstante, Variable oder Spalte mit Zeichen- oder Binärdaten darstellen.  
   
- *Character_expression* muss einen Datentyp, der implizit in **Varchar**. Verwenden Sie andernfalls [Umwandlung](../../t-sql/functions/cast-and-convert-transact-sql.md) zur expliziten Konvertierung *Character_expression*.  
+ *character_expression* muss einen Datentyp aufweisen, der implizit nach **varchar** konvertiert werden kann. Verwenden Sie in allen anderen Fällen [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) zur expliziten Konvertierung von *character_expression*.  
   
 ## <a name="return-types"></a>Rückgabetypen  
- **Varchar** oder **Nvarchar**  
+ **varchar** oder **nvarchar**  
   
 ## <a name="examples"></a>Beispiele  
   
@@ -69,8 +69,8 @@ SELECT RTRIM('Removes trailing spaces.   ');
   
   `Removes trailing spaces.`  
   
-### <a name="b-simple-example"></a>B: Beispiel einfache  
- Im folgenden Beispiel wird veranschaulicht, wie `RTRIM` nachfolgende Leerzeichen entfernt werden sollen. Ist die Zeit gibt es eine andere Zeichenfolge verkettet wird, an die erste Zeichenfolge an, dass die Leerzeichen entfernt sind.  
+### <a name="b-simple-example"></a>B: Einfaches Beispiel  
+ Im folgenden Beispiel wird verdeutlicht, wie nachgestellten Leerzeichen mit `RTRIM` aus einer Zeichenvariablen entfernt werden können. In diesem Beispiel ist eine andere Zeichenfolge an die erste Zeichenfolge gekettet, um darzustellen, dass die Leerzeichen entfernt wurden.  
   
 ```  
 SELECT RTRIM('Four spaces are after the period in this sentence.    ') + 'Next string.';  
@@ -107,16 +107,16 @@ GO
   
 
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [LEFT &#40;Transact-SQL&#41;](../../t-sql/functions/left-transact-sql.md)  
  [LTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/ltrim-transact-sql.md)  
  [RIGHT &#40;Transact-SQL&#41;](../../t-sql/functions/right-transact-sql.md)  
  [STRING_SPLIT &#40;Transact-SQL&#41;](../../t-sql/functions/string-split-transact-sql.md)  
  [SUBSTRING &#40;Transact-SQL&#41;](../../t-sql/functions/substring-transact-sql.md)  
  [TRIM &#40;Transact-SQL&#41;](../../t-sql/functions/trim-transact-sql.md)  
- [CAST und CONVERT &#40; Transact-SQL &#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
+ [CAST and CONVERT &#40;Transact-SQL&#41; (CAST und CONVERT (Transact-SQL))](../../t-sql/functions/cast-and-convert-transact-sql.md)   
  [Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [Zeichenfolgenfunktionen &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
+ [String Functions &#40;Transact-SQL&#41; (Zeichenfolgenfunktionen (Transact-SQL))](../../t-sql/functions/string-functions-transact-sql.md)  
   
   
 

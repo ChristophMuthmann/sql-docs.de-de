@@ -1,5 +1,5 @@
 ---
-title: GRANT Full-Text-Berechtigungen (Transact-SQL) | Microsoft Docs
+title: "GRANT-Berechtigungen für Volltext (Transact-SQL) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 06/17/2017
 ms.prod: sql-non-specified
@@ -60,11 +60,11 @@ GRANT permission [ ,...n ] ON
  *permission*  
  Der Name einer Berechtigung. Die gültigen Zuordnungen von Berechtigungen zu sicherungsfähigen Elementen werden im Abschnitt mit den Hinweisen weiter unten in diesem Thema beschrieben.  
   
- AUF FULLTEXT CATALOG **:: *** vollständige Text_catalog_name*  
- Gibt den Volltextkatalog an, für den die Berechtigung erteilt wird. Der bereichsqualifizierer **::** ist erforderlich.  
+ ON FULLTEXT CATALOG **::***full-text_catalog_name*  
+ Gibt den Volltextkatalog an, für den die Berechtigung erteilt wird. Der Bereichsqualifizierer **::** ist erforderlich.  
   
- AUF FULLTEXT STOPLIST **:: *** vollständige Text_stoplist_name*  
- Gibt die Volltextstoppliste an, für die die Berechtigung erteilt wird. Der bereichsqualifizierer **::** ist erforderlich.  
+ ON FULLTEXT STOPLIST **::***full-text_stoplist_name*  
+ Gibt die Volltextstoppliste an, für die die Berechtigung erteilt wird. Der Bereichsqualifizierer **::** ist erforderlich.  
   
  *database_principal*  
  Gibt den Prinzipal an, für den die Berechtigung erteilt wird. Einer der folgenden Typen:  
@@ -93,7 +93,7 @@ AS *granting_principal*
 -   Einem asymmetrischen Schlüssel zugeordneter Datenbankbenutzer  
 -   Keinem Serverprinzipal zugeordneter Datenbankbenutzer.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="fulltext-catalog-permissions"></a>FULLTEXT CATALOG-Berechtigungen  
  Ein Volltextkatalog ist ein auf der Datenbankebene sicherungsfähiges Element, das in der Datenbank enthalten ist, die das übergeordnete Element in der Berechtigungshierarchie darstellt. Die spezifischsten und restriktivsten Berechtigungen, die für einen Volltextkatalog erteilt werden können, sind unten aufgeführt. Auch die allgemeineren Berechtigungen sind aufgeführt, die diese implizit enthalten.  
@@ -157,12 +157,12 @@ GRANT VIEW DEFINITION
     TO Mary ;  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [CREATE APPLICATION ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
  [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)   
  [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)   
- [Erstellen Sie FULLTEXT CATALOG &#40; Transact-SQL &#41;](../../t-sql/statements/create-fulltext-catalog-transact-sql.md)   
- [Erstellen Sie FULLTEXT STOPLIST &#40; Transact-SQL &#41;](../../t-sql/statements/create-fulltext-stoplist-transact-sql.md)   
+ [CREATE FULLTEXT CATALOG &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-catalog-transact-sql.md)   
+ [CREATE FULLTEXT STOPLIST &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-stoplist-transact-sql.md)   
  [Verschlüsselungshierarchie](../../relational-databases/security/encryption/encryption-hierarchy.md)   
  [sys.fn_my_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)   
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   

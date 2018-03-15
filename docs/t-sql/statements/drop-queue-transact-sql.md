@@ -1,5 +1,5 @@
 ---
-title: DROP QUEUE (Transact-SQL) | Microsoft Docs
+title: DROP QUEUE (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -58,29 +58,29 @@ DROP QUEUE <object>
   
 ## <a name="arguments"></a>Argumente  
  *database_name*  
- Der Name der Datenbank, die die zu löschende Warteschlange enthält. Wenn kein *Database_name* angegeben ist, wird der Standardwert ist der aktuellen Datenbank.  
+ Der Name der Datenbank, die die zu löschende Warteschlange enthält. Wenn *database_name* nicht bereitgestellt wird, wird standardmäßig die aktuelle Datenbank verwendet.  
   
- *schema_name (object)*  
- Der Name des Schemas, das die zu löschende Warteschlange besitzt. Wenn kein *Schema_name* angegeben ist, wird der Standardwert ist das Standardschema für den aktuellen Benutzer.  
+ *schema_name (Objekt)*  
+ Der Name des Schemas, das die zu löschende Warteschlange besitzt. Wenn *schema_name* nicht angegeben wird, wird standardmäßig das Standardschema für den aktuellen Benutzer verwendet.  
   
  *queue_name*  
  Der Name der zu löschenden Warteschlange.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Sie können eine Warteschlange nicht löschen, wenn Dienste auf sie verweisen.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Berechtigung zum Löschen einer Warteschlange wird standardmäßig beim Besitzer der Warteschlange, bei Mitgliedern der der **Db_ddladmin** oder **Db_owner** festen Datenbankrollen und Mitglieder der **Sysadmin** behoben Serverrolle.  
+ Standardmäßig verfügen der Besitzer der Warteschlange, Mitglieder der festen Datenbankrollen **db_ddladmin** oder **db_owner** und Mitglieder der festen Datenbankrolle **sysadmin** über die Berechtigung zum Löschen einer Warteschlange.  
   
 ## <a name="examples"></a>Beispiele  
- Das folgende Beispiel löscht die **ExpenseQueue** Warteschlange aus der aktuellen Datenbank.  
+ Im folgenden Beispiel wird die Warteschlange **ExpenseQueue** aus der aktuellen Datenbank gelöscht.  
   
 ```  
 DROP QUEUE ExpenseQueue ;  
   
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [CREATE QUEUE &#40;Transact-SQL&#41;](../../t-sql/statements/create-queue-transact-sql.md)   
  [ALTER QUEUE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-queue-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  

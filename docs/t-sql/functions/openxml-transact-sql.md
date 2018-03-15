@@ -1,5 +1,5 @@
 ---
-title: OPENXML (Transact-SQL) | Microsoft Docs
+title: OPENXML (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -50,47 +50,47 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
   
 ## <a name="arguments"></a>Argumente  
  *idoc*  
- Das Dokumenthandle für die interne Darstellung eines XML-Dokuments. Die interne Darstellung eines XML-Dokuments wird durch den Aufruf erstellt **Sp_xml_preparedocument**.  
+ Das Dokumenthandle für die interne Darstellung eines XML-Dokuments. Die interne Darstellung eines XML-Dokuments wird durch Aufrufen von **sp_xml_preparedocument** erstellt.  
   
  *rowpattern*  
- Der XPath-Muster zur Identifizierung der Knoten verwendet wird (im XML-Dokument, dessen Handle übergeben, der *Idoc* Parameter) als Zeilen verarbeitet werden.  
+ Das XPath-Muster, das zum Identifizieren der Knoten (im XML-Dokument, dessen Handle im *idoc*-Parameter übergeben wird) verwendet wird, die als Zeilen verarbeitet werden sollen.  
   
  *flags*  
- Gibt die zwischen den XML-Daten und dem relationalen Rowset zu verwendende Zuordnung an und legt fest, wie die Überlaufspalte ausgefüllt wird. *Flags* ist ein optionaler Eingabeparameter und kann einen der folgenden Werte sein.  
+ Gibt die zwischen den XML-Daten und dem relationalen Rowset zu verwendende Zuordnung an und legt fest, wie die Überlaufspalte ausgefüllt wird. *flags* ist ein optionaler Eingabeparameter, wobei folgende Werte möglich sind.  
   
 |Bytewert|Description|  
 |----------------|-----------------|  
-|**0**|Standardmäßig **attributzentrierte** Zuordnung.|  
-|**1**|Verwenden der **attributzentrierte** Zuordnung. Kann mit XML_ELEMENTS kombiniert werden. In diesem Fall **attributzentrierte** Zuordnung wird zuerst angewendet, und klicken Sie dann **elementzentrierte** Zuordnung gilt für alle Spalten, die noch nicht mit behandelt werden.|  
-|**2**|Verwenden der **elementzentrierte** Zuordnung. Kann mit XML_ATTRIBUTES kombiniert werden. In diesem Fall **attributzentrierte** Zuordnung wird zuerst angewendet, und klicken Sie dann **elementzentrierte** Zuordnung gilt für alle Spalten noch nicht behandelt.|  
-|**8**|Kann mit XML_ATTRIBUTES oder XML_ELEMENTS kombiniert werden (logisches OR). In den Kontext des Abrufens dieses Flag gibt an, dass die verwendeten Daten nicht in die Überlaufeigenschaft kopiert werden sollten  **@mp:xmltext** .|  
+|**0**|**Attributzentrierte** Zuordnung als Standard verwenden.|  
+|**1**|Verwenden der **attributzentrierten** Zuordnung. Kann mit XML_ELEMENTS kombiniert werden. In diesem Fall wird zuerst die **attributzentrierte** Zuordnung und anschließend die **elementzentrierte** Zuordnung auf alle noch nicht verarbeiteten Spalten angewendet.|  
+|**2**|Verwenden der **elementzentrierten** Zuordnung. Kann mit XML_ATTRIBUTES kombiniert werden. In diesem Fall wird zuerst die **attributzentrierte** Zuordnung und anschließend die **elementzentrierte** Zuordnung auf alle noch nicht verarbeiteten Spalten angewendet.|  
+|**8**|Kann mit XML_ATTRIBUTES oder XML_ELEMENTS kombiniert werden (logisches OR). Im Kontext des Abrufens zeigt dieses Flag an, dass die verwendeten Daten nicht in die Überlaufeigenschaft **@mp:xmltext** kopiert werden sollen.|  
   
  *SchemaDeclaration*  
- Ist die Schemadefinition im Format: *ColName ** ColType* [*ColPattern* | *Metaeigenschaft*] [**, *** ColNameColType* [*ColPattern * | *Metaeigenschaft*]...]  
+ Die Schemadefinition im folgenden Format: *ColName**ColType* [*ColPattern* | *MetaProperty*] [**,***ColNameColType* [*ColPattern* | *MetaProperty*]...]  
   
  *ColName*  
  Der Name einer Spalte des Rowsets.  
   
  *ColType*  
- Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentyp der Spalte des Rowsets. Wenn die Spaltentypen aus der zugrunde liegenden unterscheiden **Xml** -Datentyp des Attributs, typkoersion auftritt.  
+ Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentyp der Spalte des Rowsets. Wenn der Spaltentyp vom zugrunde liegenden **xml**-Datentyp des Attributs abweicht, tritt eine erzwungene Typkoersion auf.  
   
  *ColPattern*  
- Ein optionales allgemeines XPath-Muster, das beschreibt, wie die XML-Knoten den Spalten zugeordnet werden sollten. Wenn *ColPattern* nicht angegeben wird, die standardzuordnung (**attributzentrierte** oder **elementzentrierte** entsprechend den Angaben von Zuordnung *Flags* ) erfolgt.  
+ Ein optionales allgemeines XPath-Muster, das beschreibt, wie die XML-Knoten den Spalten zugeordnet werden sollten. Wenn *ColPattern* nicht angegeben ist, wird die Standardzuordnung (**attributzentrierte** oder **elementzentrierte** Zuordnung, wie von *flags* angegeben) verwendet.  
   
- XPath-Muster als *ColPattern* dient zum Angeben der besonderen Eigenheit der Zuordnung (im Fall von **attributzentrierte** und **elementzentrierte** Zuordnung), überschreibt oder erweitert die standardzuordnung erkennbar *Flags*.  
+ Das als *ColPattern* angegebene XPath-Muster wird zum Angeben der besonderen Eigenheit der Zuordnung (im Fall der **attributzentrierten** und **elementzentrierten** Zuordnung) verwendet, die die von *flags* angegebene Standardzuordnung überschreibt oder erweitert.  
   
- Als allgemeine XPath-Muster *ColPattern* unterstützt auch die Metaeigenschaften.  
+ Das allgemeine, als *ColPattern* angegebene XPath-Muster unterstützt auch die Metaeigenschaften.  
   
  *MetaProperty*  
- Eine der von OPENXML bereitgestellten Metaeigenschaften. Wenn *Metaeigenschaft* angegeben ist, wird die Spalte enthält, von der Metaeigenschaft bereitgestellte Informationen. Die Metaeigenschaften ermöglichen es Ihnen, zum Extrahieren von Informationen (z. B. relativen Position und Namespaceinformationen) über XML-Knoten. Dies bietet mehr Informationen, als in der Textdarstellung zu sehen sind.  
+ Eine der von OPENXML bereitgestellten Metaeigenschaften. Wenn *MetaProperty* angegeben ist, enthält die Spalte von der Metaeigenschaft bereitgestellte Informationen. Die Metaeigenschaften ermöglichen es Ihnen, Informationen (wie etwa die relative Position oder Namespaceinformationen) über XML-Knoten zu extrahieren. Dies bietet mehr Informationen, als in der Textdarstellung zu sehen sind.  
   
  *TableName*  
- Ist der Tabellenname, die zugewiesen werden kann (anstelle von *SchemaDeclaration*), wenn bereits eine Tabelle mit dem gewünschten Schema vorhanden ist und keine Spaltenmuster erforderlich sind.  
+ Der Tabellenname, der (anstelle von *SchemaDeclaration*) angegeben werden kann, wenn bereits eine Tabelle mit dem gewünschten Schema vorhanden ist und keine Spaltenmuster erforderlich sind.  
   
-## <a name="remarks"></a>Hinweise  
- Die WITH-Klausel enthält, ein Rowset-Format (und nach Bedarf auch zusätzliche Zuordnungsinformationen) entweder *SchemaDeclaration* oder das Angeben einer vorhandenen *TableName*. Wenn die optionale WITH-Klausel nicht angegeben ist, werden die Ergebnisse zurückgegeben, eine **Edge** Tabellenformat. Rahmentabellen geben die differenzierte XML-Dokumentstruktur (z. B. Element-/Attributnamen, die Dokumenthierarchie, Namespaces, Verarbeitungsanweisungen usw.) in einer einzelnen Tabelle wieder.  
+## <a name="remarks"></a>Remarks  
+ Die WITH-Klausel stellt ein Rowsetformat bereit (und bei Bedarf auch zusätzliche Zuordnungsinformationen) und verwendet dazu *SchemaDeclaration* oder die Angabe eines vorhandenen Tabellennamens (*TableName*). Wenn die optionale WITH-Klausel nicht angegeben ist, werden die Ergebnisse in einem Rahmentabellenformat (**edge**) zurückgegeben. Rahmentabellen geben die differenzierte XML-Dokumentstruktur (z. B. Element-/Attributnamen, die Dokumenthierarchie, Namespaces, Verarbeitungsanweisungen usw.) in einer einzelnen Tabelle wieder.  
   
- Die folgende Tabelle beschreibt die Struktur der **Edge** Tabelle.  
+ In der folgenden Tabelle wird die Struktur der Rahmentabelle (**edge**) beschrieben.  
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
@@ -102,16 +102,16 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
 |**namespaceuri**|**nvarchar**|Der Namespace-URI (Universal Resource Identifier) des Knotens. Ist der Wert NULL, ist kein Namespace vorhanden.|  
 |**datatype**|**nvarchar**|Der eigentliche Datentyp der Element- oder Attributzeile, der andernfalls NULL ist. Der Datentyp wird aus der Inline-DTD (Document Type Definition) oder aus dem Inlineschema abgeleitet.|  
 |**prev**|**bigint**|Die XML-ID des vorhergehenden gleichgeordneten Elements. Ist NULL, wenn kein direktes vorhergehendes gleichgeordnetes Element vorhanden ist.|  
-|**text**|**ntext**|Enthält den Attributwert oder den Elementinhalt in Textform (oder ist NULL, wenn die **Edge** Eintrag der Hashtabelle ist kein Wert erforderlich).|  
+|**text**|**ntext**|Enthält den Attributwert oder den Elementinhalt in Textform (oder ist NULL, wenn der Rahmentabelleneintrag (**edge**) keinen Wert benötigt).|  
   
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="a-using-a-simple-select-statement-with-openxml"></a>A. Verwenden einer einfachen SELECT-Anweisung mit OPENXML  
  Im folgenden Beispiel wird eine interne Darstellung eines XML-Images mithilfe von `sp_xml_preparedocument` erstellt. Es wird dann eine `SELECT`-Anweisung, die einen `OPENXML`-Rowsetanbieter verwendet, für die interne Darstellung des XML-Dokuments ausgeführt.  
   
- Die *Flag* Wert wird festgelegt, um `1`. Dies weist darauf hin **attributzentrierte** Zuordnung. Daher werden die XML-Attribute den Spalten im Rowset zugeordnet. Die *Rowpattern* als angegebenen `/ROOT/Customer` identifiziert die `<Customers>` Knoten verarbeitet werden.  
+ Der *flag*-Wert wird auf `1` festgelegt. Dies zeigt die Verwendung der **attributzentrierten** Zuordnung an. Daher werden die XML-Attribute den Spalten im Rowset zugeordnet. Mit *rowpattern*, das als `/ROOT/Customer` angegeben ist, werden die zu verarbeitenden `<Customers>`-Knoten identifiziert.  
   
- Das optionale *ColPattern* -Parameter (Spaltenmuster) wird nicht angegeben werden, da der Spaltenname mit die XML-Attributnamen übereinstimmt.  
+ Der optionale *ColPattern*-Parameter (Spaltenmuster) wird nicht angegeben, da der Spaltenname mit den XML-Attributnamen übereinstimmt.  
   
  Der `OPENXML`-Rowsetanbieter erstellt ein zweispaltiges Rowset (`CustomerID` und `ContactName`), aus dem die `SELECT`-Anweisung die benötigten Spalten abruft (in diesem Fall alle Spalten).  
   
@@ -150,7 +150,7 @@ VINET      Paul Henriot
 LILAS      Carlos Gonzlez  
 ```  
   
- Wenn die gleiche `SELECT` -Anweisung ausgeführt wird, mit *Flags* festgelegt `2`gibt an, **elementzentrierte** zuordnen, die Werte der `CustomerID` und `ContactName` für beide die Kunden im XML-Dokument werden als NULL zurückgegeben, weil keine Elemente, die mit dem Namen sind `CustomerID` oder `ContactName` im XML-Dokument.  
+ Wenn dieselbe `SELECT`-Anweisung mit dem Wert `2` für *flags* ausgeführt wird, wodurch die **elementzentrierte** Zuordnung angezeigt wird, werden die Werte von `CustomerID` und `ContactName` für beide Kunden im XML-Dokument als NULL zurückgegeben, da das XML-Dokument keine Elemente mit dem Namen `CustomerID` oder `ContactName` enthält.  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
@@ -162,15 +162,15 @@ NULL       NULL
 ```  
   
 ### <a name="b-specifying-colpattern-for-mapping-between-columns-and-the-xml-attributes"></a>B. Angeben von ColPattern für die Zuordnung zwischen Spalten und den XML-Attributen  
- Die folgende Abfrage gibt die Attribute für die Kunden-ID, das Bestelldatum, die Produkt-ID und die Menge aus dem XML-Dokument zurück. Die *Rowpattern* identifiziert die `<OrderDetails>` Elemente. `ProductID` und `Quantity` sind die Attribute des `<OrderDetails>`-Elements. `OrderID`, `CustomerID` und `OrderDate` sind jedoch die Attribute des übergeordneten Elements (`<Orders>`).  
+ Die folgende Abfrage gibt die Attribute für die Kunden-ID, das Bestelldatum, die Produkt-ID und die Menge aus dem XML-Dokument zurück. *rowpattern* identifiziert die `<OrderDetails>`-Elemente. `ProductID` und `Quantity` sind die Attribute des `<OrderDetails>`-Elements. `OrderID`, `CustomerID` und `OrderDate` sind jedoch die Attribute des übergeordneten Elements (`<Orders>`).  
   
- Das optionale *ColPattern* angegeben ist. Dies zeigt Folgendes an:  
+ Der optionale *ColPattern*-Wert wird angegeben. Dies zeigt Folgendes an:  
   
--   Die `OrderID`, `CustomerID`, und `OrderDate` in der Rowset-Karte, um die Attribute des übergeordneten Elements der identifizierten Knoten *Rowpattern* im XML-Dokument.  
+-   Die Spalten `OrderID`, `CustomerID` und `OrderDate` des Rowsets werden den Attributen des übergeordneten Knotens der Knoten zugeordnet, die von *rowpattern* im XML-Dokument identifiziert werden.  
   
--   Die `ProdID` Spalte im Rowset ordnet die `ProductID` -Attribut, und die `Qty` -Spalte im Rowset zugeordnet der `Quantity` Attribut des im identifizierten Knoten *Rowpattern*.  
+-   Die `ProdID`-Spalte des Rowsets wird dem `ProductID`-Attribut und die `Qty`-Spalte des Rowsets wird dem `Quantity`-Attribut der Knoten zugeordnet, die in *rowpattern* identifiziert sind.  
   
- Obwohl die **elementzentrierte** Zuordnung wird angegeben, indem die *Flags* -Parameter angegebene Zuordnung *ColPattern* dieser Zuordnung überschrieben.  
+ Zwar ist durch den *flags*-Parameter die **elementzentrierte** Zuordnung angegeben, die im *ColPattern*-Parameter angegebene Zuordnung überschreibt jedoch diese Zuordnung.  
   
 ```  
 DECLARE @idoc int, @doc varchar(1000);   
@@ -215,12 +215,12 @@ OrderID CustomerID           OrderDate                 ProdID    Qty
 10283      LILAS       1996-08-16 00:00:00.000   72      3  
 ```  
   
-### <a name="c-obtaining-results-in-an-edge-table-format"></a>C. Abrufen von Ergebnissen im Rahmentabellenformat  
- Das XML-Dokument in diesem Beispiel setzt sich aus den Elementen `<Customers>`, `<Orders>` und `<Order_0020_Details>` zusammen. Erstens **Sp_xml_preparedocument** aufgerufen, um ein Dokumenthandle zu erhalten. Dieses Dokumenthandle wird an `OPENXML` übergeben.  
+### <a name="c-obtaining-results-in-an-edge-table-format"></a>C. Abrufen von Ergebnissen in einem Rahmentabellenformat  
+ Das XML-Dokument in diesem Beispiel setzt sich aus den Elementen `<Customers>`, `<Orders>` und `<Order_0020_Details>` zusammen. Zunächst wird **sp_xml_preparedocument** aufgerufen, um ein Dokumenthandle abzurufen. Dieses Dokumenthandle wird an `OPENXML` übergeben.  
   
- In der `OPENXML` -Anweisung, die *Rowpattern* (`/ROOT/Customers`) identifiziert die `<Customers>` Knoten verarbeitet. Da die WITH-Klausel nicht angegeben ist, `OPENXML` gibt das Rowset in eine **Edge** Tabellenformat.  
+ In der `OPENXML`-Anweisung identifiziert *rowpattern* (`/ROOT/Customers`) die zu verarbeitenden `<Customers>`-Knoten. Da die WITH-Klausel nicht angegeben ist, wird das Rowset von `OPENXML` in einem Rahmentabellenformat (**edge**) zurückgegeben.  
   
- Schließlich die `SELECT` -Anweisung ruft alle Spalten in der **Edge** Tabelle.  
+ Schließlich ruft die `SELECT`-Anweisung alle Spalten in der Rahmentabelle (**edge**) ab.  
   
 ```  
 DECLARE @idoc int, @doc varchar(1000);   
@@ -251,7 +251,7 @@ EXEC sp_xml_removedocument @idoc;
   
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Beispiele: Verwenden von OPENXML](../../relational-databases/xml/examples-using-openxml.md)  
   
   

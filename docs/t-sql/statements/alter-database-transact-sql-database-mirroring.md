@@ -1,5 +1,5 @@
 ---
-title: ALTER DATABASE Database Mirroring (Transact-SQL) | Microsoft Docs
+title: ALTER DATABASE-Datenbankspiegelung (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 08/17/2017
 ms.prod: sql-non-specified
@@ -31,19 +31,19 @@ ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="alter-database-transact-sql-database-mirroring"></a>ALTER DATABASE (Transact-SQL) Database Mirroring 
+# <a name="alter-database-transact-sql-database-mirroring"></a>ALTER DATABASE- (Transact-SQL)-Datenbankspiegelung 
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
     
 > [!NOTE]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Verwendung [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] stattdessen.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Verwenden Sie stattdessen [!INCLUDE[ssHADR](../../includes/sshadr-md.md)].  
   
- Steuert die Datenbankspiegelung für eine Datenbank. Werte, die mit den Optionen für die Datenbankspiegelung angegeben werden, gelten für Kopien der Datenbank sowie für die gesamte Sitzung zur Datenbankspiegelung. Nur ein \<Database_mirroring_option > pro ALTER DATABASE-Anweisung zulässig ist.  
+ Steuert die Datenbankspiegelung für eine Datenbank. Werte, die mit den Optionen für die Datenbankspiegelung angegeben werden, gelten für Kopien der Datenbank sowie für die gesamte Sitzung zur Datenbankspiegelung. Pro ALTER DATABASE-Anweisung ist nur eine \<database_mirroring_option> erlaubt.  
   
 > [!NOTE]  
->  Es wird empfohlen, dass die Konfiguration der datenbankspiegelung Spitzenzeiten, da die Konfiguration die Leistung auswirken kann.  
+>  Es empfiehlt sich, die Konfiguration der Datenbankspiegelung außerhalb der Spitzenbetriebszeiten durchzuführen, da sich die Konfiguration auf die Leistung auswirken kann.  
   
- ALTER DATABASE-Optionen finden Sie unter [ALTER DATABASE &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-database-transact-sql.md). ALTER DATABASE SET-Optionen finden Sie unter [ALTER DATABASE SET-Optionen &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
+ Informationen zu ALTER DATABASE-Optionen finden Sie unter [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md). Informationen zu ALTER DATABASE SET-Optionen finden Sie unter [ALTER DATABASE SET-Optionen &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -84,7 +84,7 @@ SET { <partner_option> | <witness_option> }
  PARTNER \<partner_option>  
  Steuert die Datenbankeigenschaften, die die Failoverpartner einer Datenbank-Spiegelungssitzung und deren Verhalten definieren. Einige Optionen von SET PARTNER können auf einem beliebigen der Partner festgelegt werden, andere sind auf den Prinzipal- oder den Spiegelserver beschränkt. Weitere Informationen finden Sie unter den jeweiligen Optionen von PARTNER weiter unten. Eine SET PARTNER-Klausel wirkt sich auf beide Kopien der Datenbank aus, unabhängig davon, für welchen Partner sie angegeben ist.  
   
- Zum Ausführen der SET PARTNER-Anweisung muss die Option STATE der Endpunkte beider Partner auf STARTED festgelegt sein. Außerdem muss ROLE für den Datenbank-Spiegelungsendpunkt jeder Partnerserverinstanz auf PARTNER oder ALL festgelegt sein. Weitere Informationen dazu, wie einen Endpunkt angegeben wird, finden Sie unter [Erstellen eines Datenbankspiegelungs-Endpunkt für Windows-Authentifizierung &#40; Transact-SQL &#41; ](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md). Verwenden Sie folgende [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung, um die Rolle und den Status des Datenbank-Spiegelungsendpunkts einer Serverinstanz zu erfahren:  
+ Zum Ausführen der SET PARTNER-Anweisung muss die Option STATE der Endpunkte beider Partner auf STARTED festgelegt sein. Außerdem muss ROLE für den Datenbank-Spiegelungsendpunkt jeder Partnerserverinstanz auf PARTNER oder ALL festgelegt sein. Weitere Informationen zum Angeben eines Endpunkts finden Sie unter [Erstellen eines Endpunkts der Datenbankspiegelung für Windows-Authentifizierung &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md). Verwenden Sie folgende [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung, um die Rolle und den Status des Datenbank-Spiegelungsendpunkts einer Serverinstanz zu erfahren:  
   
 ```  
 SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints  
@@ -93,26 +93,26 @@ SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints
  **\<partner_option> ::=**  
   
 > [!NOTE]  
->  Nur ein \<Partner_option > pro SET PARTNER-Klausel zulässig ist.  
+>  Pro SET PARTNER-Klausel ist nur eine \<partner_option> zugelassen.  
   
  **'** *partner_server* **'**  
  Gibt die Server-Netzwerkadresse einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] an, die als Failoverpartner in einer neuen Datenbank-Spiegelungssitzung agiert. Jede Sitzung erfordert zwei Partner, von denen einer als Prinzipalserver, der andere als Spiegelserver beginnt. Die beiden Partner sollten sich auf unterschiedlichen Computern befinden.  
   
- Diese Option wird einmal pro Sitzung für jeden Partner angegeben. Initiieren eine Datenbank-spiegelungssitzung erfordert zwei ALTER DATABASE *Datenbank* SET PARTNER **= "***Partner_server***"** Anweisungen. Ihre Reihenfolge ist wichtig. Zunächst Herstellen einer Verbindung mit dem Spiegelserver, und geben Sie die Prinzipalserverinstanz als *Partner_server* (SET PARTNER **= "***Principal_server***"**). Zweitens, Herstellen einer Verbindung mit dem Prinzipalserver her, und geben Sie die Spiegelserverinstanz als *Partner_server* (SET PARTNER **= "***Mirror_server***"**); Dadurch wird eine Datenbank gestartet. spiegelungssitzung zwischen diesen beiden Partnern. Weitere Informationen finden Sie weiter unten in diesem Thema unter [Einrichten der Datenbankspiegelung &#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md).  
+ Diese Option wird einmal pro Sitzung für jeden Partner angegeben. Für das Starten einer Datenbank-Spiegelungssitzung sind zwei ALTER DATABASE *Datenbank* SET PARTNER **='***partner_server***'**-Anweisungen erforderlich. Ihre Reihenfolge ist wichtig. Stellen Sie zuerst eine Verbindung mit dem Spiegelserver her, und geben Sie die Prinzipalserverinstanz als *partner_server* (SET PARTNER **='***principal_server***'**) an. Stellen Sie dann eine Verbindung mit dem Prinzipalserver her, und geben Sie die Spiegelserverinstanz als *partner_server* (SET PARTNER **='***mirror_server***'**) an; auf diese Weise wird eine Datenbank-Spiegelungssitzung zwischen diesen beiden Partnern gestartet. Weitere Informationen finden Sie weiter unten in diesem Thema unter [Einrichten der Datenbankspiegelung &#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md).  
   
- Der Wert der *Partner_server* ist eine Server-Netzwerkadresse. Diese hat folgende Syntax:  
+ Der Wert von *partner_server* ist eine Server-Netzwerkadresse. Diese hat folgende Syntax:  
   
- TCP **://***\<Systemadresse >***: ***\<Port >*  
+ TCP**://***\<Systemadresse>***:***\<Port>*  
   
  Dabei gilt:  
   
--   *\<System-Address >* ist eine Zeichenfolge, z. B. ein Systemname, einen vollqualifizierten Domänennamen oder eine IP-Adresse, die das Zielsystem für den Computer eindeutig identifiziert.  
+-   *\<system-address>* ist eine Zeichenfolge, z.B. ein Systemname, ein vollqualifizierter Domänenname oder eine IP-Adresse, die das Zielcomputersystem eindeutig identifiziert.  
   
--   *\<Port >* ist eine Portnummer, die dem Spiegelungsendpunkt der Partnerserverinstanz zugeordnet ist.  
+-   *\<port>* ist eine Portnummer, die dem Spiegelungsendpunkt der Partnerserverinstanz zugeordnet ist.  
   
- Weitere Informationen finden Sie unter [Angeben einer Servernetzwerkadresse &#40;Datenbankspiegelung&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md).  
+ Weitere Informationen finden Sie unter [Angeben einer Servernetzwerkadresse &#40;Datenbankspiegelung&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)verwendet.  
   
- Das folgende Beispiel veranschaulicht die SET PARTNER **= "***Partner_server***"** Klausel:  
+ Das folgende Beispiel veranschaulicht die SET PARTNER **='***partner_server***'**-Klausel:  
   
 ```  
 'TCP://MYSERVER.mydomain.Adventure-Works.com:7777'  
@@ -142,7 +142,7 @@ SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints
  Durch das Erzwingen des Diensts wird die Sitzung ausgesetzt, und alle Daten werden vorübergehend in der ursprünglichen Prinzipaldatenbank beibehalten. Sobald der ursprüngliche Prinzipalserver in Betrieb und zur Kommunikation mit dem neuen Prinzipalserver in der Lage ist, kann der Datenbankadministrator den Dienst fortsetzen. Wenn die Sitzung fortgesetzt wird, gehen alle nicht gesendeten Protokolldatensätze sowie die entsprechenden Updates verloren.  
   
  OFF  
- Entfernt eine Datenbank-Spiegelungssitzung und entfernt die Spiegelung von der Datenbank. Sie können OFF auf beiden Partnern festlegen. Informationen finden Sie über die Auswirkungen des Entfernens der Spiegelung, finden Sie unter [Entfernen der Datenbankspiegelung &#40; SQLServer &#41; ](../../database-engine/database-mirroring/removing-database-mirroring-sql-server.md).  
+ Entfernt eine Datenbank-Spiegelungssitzung und entfernt die Spiegelung von der Datenbank. Sie können OFF auf beiden Partnern festlegen. Weitere Informationen zu den Auswirkungen des Entfernens der Datenbankspiegelung finden Sie unter [Entfernen der Datenbankspiegelung &#40;SQL Server&#41;](../../database-engine/database-mirroring/removing-database-mirroring-sql-server.md).  
   
  RESUME  
  Setzt eine ausgesetzte Datenbank-Spiegelungssitzung fort. Sie können RESUME nur auf dem Hauptserver angeben.  
@@ -150,7 +150,7 @@ SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints
  SAFETY { FULL | OFF }  
  Legt die Sicherheitsstufe für Transaktionen fest. Sie können SAFETY nur auf dem Hauptserver angeben.  
   
- Der Standardwert ist FULL. Mit der vollständigen Sicherheit, die von Datenbank-spiegelungssitzung synchron ausgeführt werden (in *Hochsicherheitsmodus*). Wenn SAFETY auf OFF festgelegt ist, führt den Datenbank-spiegelungssitzung asynchron (im *Modus für hohe Leistung*).  
+ Der Standardwert ist FULL. Bei vollständiger Sicherheit (FULL) wird die Datenbank-Spiegelungssitzung synchron (im *Modus für hohe Sicherheit*) ausgeführt. Ist SAFETY auf OFF festgelegt, wird die Datenbank-Spiegelungssitzung asynchron (im *Modus für hohe Leistung*) ausgeführt.  
   
  Das Verhalten des Modus für hohe Sicherheit hängt teilweise folgendermaßen vom Zeugen ab:  
   
@@ -170,7 +170,7 @@ SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints
   
  Sie können SUSPEND auf beiden Partnern angeben.  
   
- TIMEOUT *ganze Zahl*  
+ TIMEOUT *integer*  
  Gibt den Timeoutzeitraum in Sekunden an. Der Timeoutzeitraum ist die Zeit, die eine Serverinstanz maximal auf den Empfang einer PING-Nachricht von einer anderen Instanz in der Spiegelungssitzung wartet, bevor davon ausgegangen wird, dass die Verbindung der anderen Instanz getrennt wurde.  
   
  Sie können die Option TIMEOUT nur auf dem Prinzipalserver angeben. Wenn Sie die Option nicht angeben, beträgt der Timeoutzeitraum standardmäßig 10 Sekunden. Wenn Sie 5 oder höher angeben, wird der Timeoutzeitraum auf die angegebene Anzahl von Sekunden festgelegt. Wenn Sie einen Timeoutzeitwert von 0 bis 4 Sekunden angeben, wird der Timeoutzeitraum automatisch auf 5 Sekunden festgelegt.  
@@ -181,11 +181,11 @@ SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints
  Weitere Informationen finden Sie unter [Possible Failures During Database Mirroring](../../database-engine/database-mirroring/possible-failures-during-database-mirroring.md).  
   
  WITNESS \<witness_option>  
- Steuert die Datenbankeigenschaften, die einen Datenbank-Spiegelungszeugen definieren. Eine SET WITNESS-Klausel wirkt sich auf beide Kopien der Datenbank aus, Sie können SET WITNESS jedoch nur auf dem Prinzipalserver angeben. Wenn für eine Sitzung ein Zeuge festgelegt ist, ist die Datenbank, unabhängig von der SAFETY-Einstellung ein Quorum erforderlich; Weitere Informationen finden Sie unter [Quorum: Auswirkungen eines Zeugen Datenbankverfügbarkeit &#40; Datenbankspiegelung &#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
+ Steuert die Datenbankeigenschaften, die einen Datenbank-Spiegelungszeugen definieren. Eine SET WITNESS-Klausel wirkt sich auf beide Kopien der Datenbank aus, Sie können SET WITNESS jedoch nur auf dem Prinzipalserver angeben. Wenn ein Zeuge für eine Sitzung festgelegt wird, ist unabhängig von der SAFETY-Einstellung ein Quorum zum Anbieten der Datenbank erforderlich. Weitere Informationen finden Sie unter [Quorum: Auswirkungen eines Zeugen auf die Datenbankverfügbarkeit &#40;Database Mirroring&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
   
- Zeuge und Failoverpartner sollten sich auf separaten Computern befinden. Informationen zum Zeugen finden Sie unter [Database Mirroring Witness](../../database-engine/database-mirroring/database-mirroring-witness.md).  
+ Zeuge und Failoverpartner sollten sich auf separaten Computern befinden. Informationen zum Hinzufügen oder Entfernen eines Zeugen finden Sie unter [Datenbank-Spiegelungszeuge](../../database-engine/database-mirroring/database-mirroring-witness.md).  
   
- Für die Endpunkte von Prinzipal- und Zeugenserverinstanz muss STATE auf STARTED festgelegt werden, um eine SET WITNESS-Anweisung auszuführen. Außerdem muss ROLE für den Datenbank-Spiegelungsendpunkt einer Zeugenserverinstanz auf WITNESS oder ALL festgelegt sein. Informationen zum Angeben eines Endpunkts finden Sie unter [der Datenbankspiegelungs-Endpunkt &#40; SQLServer &#41; ](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md).  
+ Für die Endpunkte von Prinzipal- und Zeugenserverinstanz muss STATE auf STARTED festgelegt werden, um eine SET WITNESS-Anweisung auszuführen. Außerdem muss ROLE für den Datenbank-Spiegelungsendpunkt einer Zeugenserverinstanz auf WITNESS oder ALL festgelegt sein. Informationen zum Angeben eines Endpunkts finden Sie unter [der Datenbankspiegelungs-Endpunkt &#40;SQL Server&#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md).  
   
  Verwenden Sie folgende [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung, um die Rolle und den Status des Datenbank-Spiegelungsendpunkts einer Serverinstanz zu erfahren:  
   
@@ -199,22 +199,22 @@ SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints
  **\<witness_option> ::=**  
   
 > [!NOTE]  
->  Nur ein \<Witness_option > pro SET WITNESS-Klausel zulässig ist.  
+>  Pro SET WITNESS-Klausel ist nur eine \<witness_option> zugelassen.  
   
  **'** *witness_server* **'**  
  Gibt eine Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] an, die als Zeugenserver für die Datenbank-Spiegelungssitzung agiert. Sie können SET WITNESS-Anweisungen nur auf dem Prinzipalserver angeben.  
   
- In einer SET WITNESS **= "***Witness_server***"** -Anweisung ist die Syntax von *Witness_server* ist identisch mit der Syntax der *Partner_server*.  
+ In einer SET WITNESS **='***witness_server***'**-Anweisung ist die Syntax von *witness_server* mit der Syntax von *partner_server* identisch.  
   
  OFF  
  Entfernt den Zeugen aus einer Datenbank-Spiegelungssitzung. Durch das Festlegen des Zeugen auf OFF wird das automatische Failover deaktiviert. Ist die Datenbank auf FULL SAFETY festgelegt und der Zeuge auf OFF, führt ein Fehler auf dem Spiegelserver dazu, dass der Prinzipalserver die Datenbank nicht verfügbar macht.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="a-creating-a-database-mirroring-session-with-a-witness"></a>A. Erstellen einer Datenbank-Spiegelungssitzung mit einem Zeugen  
- Das Einrichten einer Datenbankspiegelung mit einem Zeugen erfordert das Konfigurieren von Sicherheit und Vorbereiten der Spiegeldatenbank sowie das Verwenden von ALTER DATABASE zum Festlegen der Partner. Ein Beispiel des vollständigen Setupprozesses finden Sie unter [Einrichten der Datenbankspiegelung &#40; SQLServer &#41; ](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md).  
+ Das Einrichten einer Datenbankspiegelung mit einem Zeugen erfordert das Konfigurieren von Sicherheit und Vorbereiten der Spiegeldatenbank sowie das Verwenden von ALTER DATABASE zum Festlegen der Partner. Ein Beispiel des vollständigen Setupprozesses finden Sie unter [Einrichten der Datenbankspiegelung &#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md).  
   
 ### <a name="b-manually-failing-over-a-database-mirroring-session"></a>B. Manuelles Ausführen eines Failovers für eine Datenbank-Spiegelungssitzung  
  Ein manuelles Failover kann von beiden Datenbank-Spiegelungspartnern initiiert werden. Vor dem Failover sollten Sie sicherstellen, dass es sich bei dem aktuellen Prinzipalserver auch tatsächlich um den Prinzipalserver handelt. Führen Sie z. B. für die [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]-Datenbank auf der Serverinstanz, die Sie für den aktuellen Prinzipalserver halten, die folgende Abfrage aus:  
@@ -252,7 +252,7 @@ GO
   
      Der aktuelle Wert von `mirroring_role_desc` ist jetzt `Mirror`.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
  [DATABASEPROPERTYEX &#40;Transact-SQL&#41;](../../t-sql/functions/databasepropertyex-transact-sql.md)   
  [sys.database_mirroring_witnesses &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/database-mirroring-witness-catalog-views-sys-database-mirroring-witnesses.md)  

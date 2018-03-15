@@ -1,5 +1,5 @@
 ---
-title: GRANT (Endpunktberechtigungen) (Transact-SQL) | Microsoft Docs
+title: GRANT (Endpunktberechtigungen) (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 06/17/2017
 ms.prod: sql-non-specified
@@ -55,13 +55,13 @@ GRANT permission  [ ,...n ] ON ENDPOINT :: endpoint_name
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *Berechtigung*  
+ *permission*  
  Gibt eine Berechtigung an, die für einen Endpunkt erteilt werden kann. Eine Liste der Berechtigungen finden Sie im Abschnitt zu den Hinweisen weiter unten in diesem Thema.  
   
- AUF dem ENDPUNKT **::***Endpoint_name*  
- Gibt den Endpunkt an, für den die Berechtigung erteilt wird. Der bereichsqualifizierer (**::**) ist erforderlich.  
+ ON ENDPOINT **::***endpoint_name*  
+ Gibt den Endpunkt an, für den die Berechtigung erteilt wird. Der Bereichsqualifizierer (**::**) ist erforderlich.  
   
- UM \<Server_principal >  
+ TO \<server_principal>  
  Gibt den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldenamen an, dem die Berechtigung erteilt wird.  
   
  *SQL_Server_login*  
@@ -82,10 +82,10 @@ GRANT permission  [ ,...n ] ON ENDPOINT :: endpoint_name
  AS *SQL_Server_login*  
  Gibt den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldenamen an, von dem der Prinzipal, der diese Abfrage ausführt, sein Recht zum Erteilen der Berechtigung ableitet.  
   
-## <a name="remarks"></a>Hinweise  
- Berechtigungen im Serverbereich können erteilt werden, nur, wenn die aktuelle Datenbank ist **master**.  
+## <a name="remarks"></a>Remarks  
+ Berechtigungen im Serverbereich können nur erteilt werden, wenn **master** als aktuelle Datenbank verwendet wird.  
   
- Informationen zu Endpunkten werden in der [sys.endpoints](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md) -Katalogsicht angezeigt. Informationen zu Serverberechtigungen werden in der [server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) -Katalogsicht und Informationen zu serverprinzipalen werden in der [Sys. server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) -Katalogsicht angezeigt.  
+ Informationen zu Endpunkten werden in der Katalogsicht [sys.endpoints](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md) angezeigt. Informationen zu Serverberechtigungen sind in der Katalogsicht [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) sichtbar, Informationen zu Serverprinzipalen sind in der Katalogsicht [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) sichtbar.  
   
  Ein Endpunkt ist ein sicherungsfähiges Element auf Serverebene. Die spezifischsten und restriktivsten Berechtigungen, die für einen Endpunkt erteilt werden können, sind unten aufgeführt. Auch die allgemeineren Berechtigungen sind aufgeführt, die diese implizit enthalten.  
   
@@ -121,12 +121,12 @@ GRANT TAKE OWNERSHIP ON ENDPOINT::Shipping83 TO PKomosinski
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [DENY (Endpunktberechtigungen) &#40; Transact-SQL &#41;](../../t-sql/statements/deny-endpoint-permissions-transact-sql.md)   
- [REVOKE (Endpunktberechtigungen) &#40; Transact-SQL &#41;](../../t-sql/statements/revoke-endpoint-permissions-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [DENY (Endpunktberechtigungen) &#40;Transact-SQL&#41;](../../t-sql/statements/deny-endpoint-permissions-transact-sql.md)   
+ [REVOKE (Endpunktberechtigungen) &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-endpoint-permissions-transact-sql.md)   
  [CREATE ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/create-endpoint-transact-sql.md)   
- [Endpunkte-Katalogsichten &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md)   
- [Sys.Endpoints &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md)   
+ [Endpoints Catalog Views &#40;Transact-SQL&#41; (Katalogsichten für Endpunkte &#40;Transact-SQL&#41;)](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md)   
+ [sys.endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md)   
  [Berechtigungen &#40;Datenbankmodul&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [Prinzipale &#40;Datenbankmodul&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)  
   

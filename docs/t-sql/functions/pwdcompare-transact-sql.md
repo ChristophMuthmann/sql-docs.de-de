@@ -1,5 +1,5 @@
 ---
-title: PWDCOMPARE (Transact-SQL) | Microsoft Docs
+title: PWDCOMPARE (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -50,24 +50,24 @@ PWDCOMPARE ( 'clear_text_password'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- **"** *Clear_text_password* **"**  
- Das unverschlüsselte Kennwort. *Clear_text_password* ist **Sysname** (**vom Datentyp nvarchar(128)**).  
+ **'** *clear_text_password* **'**  
+ Das unverschlüsselte Kennwort. *clear_text_password* ist vom Datentyp **sysname** (**nvarchar(128)**).  
   
  *password_hash*  
- Der Verschlüsselungshash eines Kennworts. *Password_hash* ist **varbinary(128)**.  
+ Der Verschlüsselungshash eines Kennworts. *password_hash* ist vom Datentyp **varbinary(128)**.  
   
- *Version*  
- Veralteter Parameter, der auf 1 festgelegt werden kann *Password_hash* stellt einen Wert von einer Anmeldung vor [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] , migriert [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] oder höher, aber nie in konvertiert die [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] System. *Version* ist **Int**.  
+ *version*  
+ Veralteter Parameter, der auf 1 festgelegt werden kann, wenn *password_hash* einen Wert einer Anmeldung von einer Version vor [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] darstellt, der in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] oder höher migriert, aber nie in das [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]-System konvertiert wurde. *version* ist vom Datentyp **int**  
   
 > [!CAUTION]  
->  Dieser Parameter wird für Abwärtskompatibilität bereitgestellt, jedoch wird ignoriert, da Kennworthash-Blobs nun eigene versionsbeschreibungen enthalten. [!INCLUDE[ssNoteDepNextDontUse](../../includes/ssnotedepnextdontuse-md.md)]  
+>  Dieser Parameter wird für die Abwärtskompatibilität bereitgestellt, wird jedoch ignoriert, da Kennworthash-BLOBs nun eigene Versionsbeschreibungen enthalten. [!INCLUDE[ssNoteDepNextDontUse](../../includes/ssnotedepnextdontuse-md.md)]  
   
 ## <a name="return-types"></a>Rückgabetypen  
  **int**  
   
- Gibt 1 zurück, wenn der Hash der *Clear_text_password* entspricht der *Password_hash* Parameter, und 0, wenn dies nicht der Fall.  
+ Gibt 1 zurück, wenn der Hash von *clear_text_password* mit dem Parameter *password_hash* übereinstimmt und gibt 0 (null) zurück, wenn dies nicht der Fall ist.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Die PWDCOMPARE-Funktion stellt keine Bedrohung der Sicherheit von Kennworthashs dar, da der gleiche Test ausgeführt werden kann, indem sich ein Benutzer mit dem als erstem Parameter bereitgestellten Kennwort anmeldet.  
   
  **PWDCOMPARE** kann nicht mit den Kennwörtern der Benutzer eigenständiger Datenbanken verwendet werden. Es gibt keine Entsprechung für eigenständige Datenbanken.  
@@ -95,8 +95,8 @@ SELECT name FROM sys.sql_logins
 WHERE PWDCOMPARE('password', password_hash) = 1 ;  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [PWDENCRYPT &#40; Transact-SQL &#41;](../../t-sql/functions/pwdencrypt-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [PWDENCRYPT &#40;Transact-SQL&#41;](../../t-sql/functions/pwdencrypt-transact-sql.md)   
  [Sicherheitsfunktionen &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)  
   
   

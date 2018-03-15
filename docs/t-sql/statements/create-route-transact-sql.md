@@ -1,5 +1,5 @@
 ---
-title: Erstellen Sie die ROUTE (Transact-SQL) | Microsoft Docs
+title: CREATE ROUTE (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -43,7 +43,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="create-route-transact-sql"></a>CREATE ROUTE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Fügt der Routingtabelle der aktuellen Datenbank eine neue Route hinzu. Bei ausgehenden Nachrichten bestimmt [!INCLUDE[ssSB](../../includes/sssb-md.md)] das Routing durch eine Prüfung der Routingtabelle in der lokalen Datenbank. Nachrichten in Konversationen, die in einer anderen Instanz stammen, darunter Nachrichten weitergeleitet werden, [!INCLUDE[ssSB](../../includes/sssb-md.md)] überprüft die Routen **Msdb**.  
+  Fügt der Routingtabelle der aktuellen Datenbank eine neue Route hinzu. Bei ausgehenden Nachrichten bestimmt [!INCLUDE[ssSB](../../includes/sssb-md.md)] das Routing durch eine Prüfung der Routingtabelle in der lokalen Datenbank. Bei Nachrichten in Konversationen, die aus einer anderen Instanz stammen, sowie bei Nachrichten, die weitergeleitet werden sollen, prüft [!INCLUDE[ssSB](../../includes/sssb-md.md)] die Routen in **msdb**.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -64,19 +64,19 @@ WITH
   
 ## <a name="arguments"></a>Argumente  
  *route_name*  
- Der Name der zu erstellenden Route. Eine neue Route wird in der aktuellen Datenbank erstellt. Ihr Besitzer ist der in der AUTHORIZATION-Klausel angegebene Prinzipal. Server-, Datenbank- und Schemaname können nicht angegeben werden. Die *Route_name* muss ein gültiger **Sysname**.  
+ Der Name der zu erstellenden Route. Eine neue Route wird in der aktuellen Datenbank erstellt. Ihr Besitzer ist der in der AUTHORIZATION-Klausel angegebene Prinzipal. Server-, Datenbank- und Schemaname können nicht angegeben werden. *route_name* muss einen gültigen **sysname**-Wert besitzen.  
   
- Autorisierung *Owner_name*  
- Legt den Benutzer oder die Rolle der angegebenen Datenbank als Besitzer der Route fest. Die *Owner_name* kann der Name eines beliebigen gültigen Benutzers oder einer Rolle sein, wenn der aktuelle Benutzer ein Mitglied ist die **Db_owner** festen Datenbankrolle oder der **Sysadmin** festen Serverrolle "". Andernfalls *Owner_name* kann den Namen des aktuellen Benutzers, den Namen eines Benutzers, der der aktuelle Benutzer IMPERSONATE-Berechtigungen verfügt oder der Name einer Rolle, zu der der aktuelle Benutzer gehört. Wird diese Klausel weggelassen, gehört die Route dem aktuellen Benutzer.  
+ AUTHORIZATION *owner_name*  
+ Legt den Benutzer oder die Rolle der angegebenen Datenbank als Besitzer der Route fest. Für *owner_name* kann der Name eines beliebigen gültigen Benutzers oder einer beliebigen Rolle verwendet werden, wenn der aktuelle Benutzer Mitglied der festen Datenbankrolle **db_owner** oder der festen Serverrolle **sysadmin** ist. Andernfalls muss *owner_name* der Name des aktuellen Benutzers, der Name eines Benutzers, für den der aktuelle Benutzer IMPERSONATE-Berechtigungen besitzt, oder der Name einer Rolle sein, der der aktuelle Benutzer angehört. Wird diese Klausel weggelassen, gehört die Route dem aktuellen Benutzer.  
   
  mit  
  Führt die Klauseln ein, über die die zurzeit erstellte Route definiert wird.  
   
  SERVICE_NAME = **'***service_name***'**  
- Gibt den Namen des Remotediensts an, auf den diese Route zeigt. Die *Service_name* müssen genau übereinstimmen, die den Namen der Remotedienst verwendet. [!INCLUDE[ssSB](../../includes/sssb-md.md)]Führt einen Byte-pro-Byte-Vergleich mit der *Service_name*. Anders ausgedrückt: Bei dem Vergleich wird die Groß-/Kleinschreibung beachtet, die aktuelle Sortierung hingegen wird nicht berücksichtigt. Wenn SERVICE_NAME weggelassen wird, stimmt die Route mit jedem Dienstnamen überein, weist jedoch eine niedrigere Übereinstimmungspriorität als eine Route auf, die SERVICE_NAME angibt. Eine Route mit dem Dienstnamen **' SQL/ServiceBroker/BrokerConfiguration'** ist eine Route zu einem Broker-Konfigurationsdienst. Eine Route zu diesem Dienst kann keine Broker-Instanz angeben.  
+ Gibt den Namen des Remotediensts an, auf den diese Route zeigt. Der *service_name* muss genau mit dem Namen übereinstimmen, der vom Remotedienst verwendet wird. [!INCLUDE[ssSB](../../includes/sssb-md.md)] führt einen bitweisen Vergleich mit der *service_name*-Zeichenfolge aus. Anders ausgedrückt: Bei dem Vergleich wird die Groß-/Kleinschreibung beachtet, die aktuelle Sortierung hingegen wird nicht berücksichtigt. Wenn SERVICE_NAME weggelassen wird, stimmt die Route mit jedem Dienstnamen überein, weist jedoch eine niedrigere Übereinstimmungspriorität als eine Route auf, die SERVICE_NAME angibt. Eine Route mit dem Dienstnamen **'SQL/ServiceBroker/BrokerConfiguration'** ist eine Route zu einem Broker-Konfigurationsdienst. Eine Route zu diesem Dienst kann keine Broker-Instanz angeben.  
   
- BROKER_INSTANCE = **"***Broker_instance_identifier***"**  
- Gibt die Datenbank an, auf der sich der Zieldienst befindet. Die *Broker_instance_identifier* Parameter muss den Broker-Instanzbezeichner für die Remotedatenbank an, die durch Ausführen der folgenden Abfrage in der ausgewählten Datenbank abgerufen werden kann:  
+ BROKER_INSTANCE = **'***broker_instance_identifier***'**  
+ Gibt die Datenbank an, auf der sich der Zieldienst befindet. Bei dem *broker_instance_identifier*-Parameter muss es sich um den Broker-Instanzbezeichner für die Remotedatenbank handeln, der durch das Ausführen der folgenden Abfrage in der ausgewählten Datenbank abgerufen werden kann:  
   
 ```  
 SELECT service_broker_guid  
@@ -87,14 +87,14 @@ WHERE database_id = DB_ID()
  Wenn die BROKER_INSTANCE-Klausel weggelassen wird, stimmt diese Route mit jeder Broker-Instanz überein. Eine Route, die mit jeder Broker-Instanz übereinstimmt, weist eine höhere Übereinstimmungspriorität auf als Routen mit einer expliziten Broker-Instanz, wenn die Konversation keine Broker-Instanz angibt. Bei Konversationen, in denen eine Broker-Instanz angegeben wird, weist eine Route mit einer Broker-Instanz eine höhere Priorität auf als eine Route, die mit jeder Broker-Instanz übereinstimmt.  
   
  LIFETIME **=***route_lifetime*  
- Gibt die Zeitspanne in Sekunden an, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Route in der Routingtabelle aufbewahrt. Am Ende ihrer Lebensdauer läuft die Route ab, und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] berücksichtigt die Route nicht bei der Auswahl einer Route für eine neue Konversation. Wenn diese Klausel weggelassen wird, die *Route_lifetime* NULL ist und die Route läuft nie ab.  
+ Gibt die Zeitspanne in Sekunden an, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Route in der Routingtabelle aufbewahrt. Am Ende ihrer Lebensdauer läuft die Route ab, und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] berücksichtigt die Route nicht bei der Auswahl einer Route für eine neue Konversation. Wird diese Klausel ausgelassen, wird für *route_lifetime* der Wert NULL festgelegt, und die Route läuft nie ab.  
   
- Adresse **= "***Next_hop_address***"**  
- Gibt die Netzwerkadresse für diese Route an. Die *Next_hop_address* gibt eine TCP/IP-Adresse in folgendem Format an:  
+ ADDRESS **='***next_hop_address***'**  
+ Gibt die Netzwerkadresse für diese Route an. *next_hop_address* gibt eine TCP/IP-Adresse mit folgendem Format an:  
   
- **TCP: / /**{ *Dns_name* | *Netbios_name* | *Ip_address* } **: *** Port_number*  
+ **TCP://**{ *dns_name* | *netbios_name* | *ip_address* } **:***port_number*  
   
- Das angegebene *Port_number* übereinstimmen, dass die Portnummer für die [!INCLUDE[ssSB](../../includes/sssb-md.md)] Endpunkt einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf dem angegebenen Computer. Dieser kann durch Ausführen der folgenden Abfrage in der ausgewählten Datenbank abgerufen werden:  
+ Der angegebene Wert für *port_number* muss mit der Portnummer für den [!INCLUDE[ssSB](../../includes/sssb-md.md)]-Endpunkt einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf dem angegebenen Computer übereinstimmen. Dieser kann durch Ausführen der folgenden Abfrage in der ausgewählten Datenbank abgerufen werden:  
   
 ```  
 SELECT tcpe.port  
@@ -106,16 +106,16 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
   
  Wenn eine gespiegelte Datenbank für den Dienst als Host dient, müssen Sie MIRROR_ADDRESS auch für die andere Instanz angeben, für die eine gespiegelte Datenbank als Host dient. Andernfalls führt die Route kein Failover zum Spiegel durch.  
   
- Gibt eine Route **'LOCAL'** für die *Next_hop_address*, übermittelt die Nachricht an einen Dienst innerhalb der aktuellen Instanz der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Gibt eine Route **'LOCAL'** für *next_hop_address* an, wird die Nachricht an einen Dienst innerhalb der aktuellen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] übermittelt.  
   
- Gibt eine Route **'TRANSPORT'** für die *Next_hop_address*, die Netzwerkadresse wird basierend auf der der Netzwerkadresse des Diensts bestimmt. Eine Route, der angibt, **'TRANSPORT'** eine Dienst oder eine Broker-Instanz möglicherweise nicht angeben.  
+ Gibt eine Route **'TRANSPORT'** für *next_hop_address* an, wird die Netzwerkadresse auf der Basis der Netzwerkadresse im Dienstnamen ermittelt. Eine Route, die **'TRANSPORT'** angibt, kann keinen Dienstnamen und keine Broker-Instanz angeben.  
   
- MIRROR_ADDRESS **= "***Next_hop_mirror_address***"**  
- Gibt die Netzwerkadresse für eine gespiegelte Datenbank mit einer gespiegelten Datenbank gehostet wird, auf die *Next_hop_address*. Die *Next_hop_mirror_address* gibt eine TCP/IP-Adresse in folgendem Format an:  
+ MIRROR_ADDRESS **='***next_hop_mirror_address***'**  
+ Gibt die Netzwerkadresse für eine gespiegelte Datenbank an, wobei *next_hop_address* als Host für die gespiegelte Datenbank dient. *next_hop_mirror_address* gibt eine TCP/IP-Adresse mit folgendem Format an:  
   
- **TCP: / /**{ *Dns_name* | *Netbios_name* | *Ip_address* } **:**  *Portnummer*  
+ **TCP://**{ *dns_name* | *netbios_name* | *ip_address* } **:** *port_number*  
   
- Das angegebene *Port_number* übereinstimmen, dass die Portnummer für die [!INCLUDE[ssSB](../../includes/sssb-md.md)] Endpunkt einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf dem angegebenen Computer. Dieser kann durch Ausführen der folgenden Abfrage in der ausgewählten Datenbank abgerufen werden:  
+ Der angegebene Wert für *port_number* muss mit der Portnummer für den [!INCLUDE[ssSB](../../includes/sssb-md.md)]-Endpunkt einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf dem angegebenen Computer übereinstimmen. Dieser kann durch Ausführen der folgenden Abfrage in der ausgewählten Datenbank abgerufen werden:  
   
 ```  
 SELECT tcpe.port  
@@ -125,23 +125,23 @@ INNER JOIN sys.service_broker_endpoints AS ssbe
 WHERE ssbe.name = N'MyServiceBrokerEndpoint';  
 ```  
   
- Wird MIRROR_ADDRESS angegeben, muss die Route die SERVICE_NAME-Klausel und die BROKER_INSTANCE-Klausel angeben. Eine Route, der angibt, **'LOCAL'** oder **'TRANSPORT'** für die *Next_hop_address* möglicherweise keine spiegeladresse.  
+ Wird MIRROR_ADDRESS angegeben, muss die Route die SERVICE_NAME-Klausel und die BROKER_INSTANCE-Klausel angeben. Eine Route, die **'LOCAL'** oder **'TRANSPORT'** für *next_hop_address* angibt, gibt möglicherweise keine Spiegeladresse an.  
   
-## <a name="remarks"></a>Hinweise  
- Die Routingtabelle, die Routen gespeichert, ist eine Metadatentabelle, die gelesen werden kann, durch die **sys.routes** -Katalogsicht angezeigt. Diese Katalogsicht kann nur durch CREATE ROUTE-, ALTER ROUTE- und DROP ROUTE-Anweisungen aktualisiert werden.  
+## <a name="remarks"></a>Remarks  
+ Bei der Routingtabelle, in der die Routen gespeichert werden, handelt es sich um eine Metadatentabelle, die über die Katalogsicht **sys.routes** gelesen werden kann. Diese Katalogsicht kann nur durch CREATE ROUTE-, ALTER ROUTE- und DROP ROUTE-Anweisungen aktualisiert werden.  
   
- Standardmäßig enthält die Routingtabelle in jeder Benutzerdatenbank eine Route. Diese Route heißt **AutoCreatedLocal**. Gibt die Route **'LOCAL'** für die *Next_hop_address* und alle Service Broker Namen und die Instanz-ID übereinstimmt.  
+ Standardmäßig enthält die Routingtabelle in jeder Benutzerdatenbank eine Route. Diese Route wird **AutoCreatedLocal** genannt. Die Route gibt **'LOCAL'** für *next_hop_address* an und ordnet Dienstname und Broker-Instanzbezeichner zu.  
   
- Gibt eine Route **'TRANSPORT'** für die *Next_hop_address*, die Netzwerkadresse wird basierend auf den Namen des Diensts bestimmt. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]kann erfolgreich Dienstnamen, die mit einer Netzwerkadresse in einem Format beginnen, die für gültig ist Verarbeiten einer *Next_hop_address*.  
+ Gibt eine Route **'TRANSPORT'** für *next_hop_address* an, wird die Netzwerkadresse auf der Basis der Netzwerkadresse im Dienstnamen ermittelt. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann Dienstnamen erfolgreich verarbeiten, die mit einer Netzwerkadresse in einem für eine *next_hop_address* gültigen Format beginnen.  
   
  Die Routingtabelle kann eine beliebige Anzahl von Routen enthalten, die den gleichen Dienst, die gleiche Netzwerkadresse und Broker-Instanz-ID angeben. In diesem Fall wählt [!INCLUDE[ssSB](../../includes/sssb-md.md)] eine Route mithilfe einer Prozedur aus, die darauf ausgerichtet ist, eine möglichst genaue Übereinstimmung zwischen den in der Konversation angegebenen Informationen und den Informationen in der Routingtabelle festzustellen.  
   
  Abgelaufene Routen werden von [!INCLUDE[ssSB](../../includes/sssb-md.md)]nicht aus der Routingtabelle entfernt. Mit der ALTER ROUTE-Anweisung kann eine abgelaufene Route aktiviert werden.  
   
- Eine Route kann kein temporäres Objekt sein. Routennamen, die mit beginnt  **#**  zulässig sind, sind jedoch dauerhafte Objekte.  
+ Eine Route kann kein temporäres Objekt sein. Routennamen, die mit **#** beginnen, sind zulässig. Es handelt sich dabei jedoch um dauerhafte Objekte.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Die Berechtigung zum Erstellen einer Route verfügen standardmäßig Mitglieder der der **Db_ddladmin** oder **Db_owner** festen Datenbankrollen und die **Sysadmin** festen Serverrolle "".  
+ Über die Berechtigung zum Erstellen einer Route verfügen standardmäßig Mitglieder der festen Datenbankrollen **db_ddladmin** und **db_owner** sowie der festen Serverrolle **sysadmin**.  
   
 ## <a name="examples"></a>Beispiele  
   
@@ -228,7 +228,7 @@ CREATE ROUTE TransportRoute
     WITH ADDRESS = 'TRANSPORT' ;  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [ALTER ROUTE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-route-transact-sql.md)   
  [DROP ROUTE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-route-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  

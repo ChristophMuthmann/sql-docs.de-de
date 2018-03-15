@@ -1,5 +1,5 @@
 ---
-title: INDEX_COL (Transact-SQL) | Microsoft Docs
+title: INDEX_COL (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -58,16 +58,16 @@ INDEX_COL ( '[ database_name . [ schema_name ] .| schema_name ]
  Ist der Name des Schemas, zu dem der Index gehört.  
   
  *table_or_view_name*  
- Ist der Name der Tabelle oder indizierten Sicht. *Table_or_view_name* durch einfache Anführungszeichen begrenzt werden, und kann durch Datenbank- und Schemanamen voll qualifiziert werden.  
+ Der Name der Tabelle oder indizierten Sicht. *table_or_view_name* muss in einfache Anführungszeichen gesetzt werden und kann durch Datenbank- und Schemanamen voll qualifiziert werden.  
   
  *index_id*  
- Die ID des Indexes. *Index_id* ist **Int**.  
+ Die ID des Indexes. *index_ID* ist vom Datentyp **int**.  
   
- *key_ID*  
- Die Position der Indexschlüsselspalte. *Key_ID* ist **Int**.  
+ *key_id*  
+ Die Position der Indexschlüsselspalte. *key_ID* ist vom Datentyp **int**.  
   
 ## <a name="return-types"></a>Rückgabetypen  
- **Nvarchar (128** **)**  
+ **nvarchar (128** **)**  
   
 ## <a name="exceptions"></a>Ausnahmen  
  Gibt NULL bei einem Fehler zurück oder wenn ein Aufrufer nicht über Berechtigungen zum Anzeigen des Objekts verfügt.  
@@ -99,9 +99,9 @@ Index Column 1      Index Column 2
 SalesOrderID        SalesOrderDetailID  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Ausdrücke &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
- [Metadatenfunktionen &#40; Transact-SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Ausdrücke &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [Metadata Functions &#40;Transact-SQL&#41; (Metadatenfunktionen &#40;Transact-SQL&#41;)](../../t-sql/functions/metadata-functions-transact-sql.md)   
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
  [sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: ALTER SYMMETRIC KEY (Transact-SQL) | Microsoft Docs
+title: ALTER SYMMETRIC KEY (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -72,26 +72,26 @@ ALTER SYMMETRIC KEY Key_name <alter_option>
  DROP ENCRYPTION BY  
  Löscht die Verschlüsselung mithilfe der angegebenen Methode. Es können nicht alle Verschlüsselungen für einen symmetrischen Schlüssel entfernt werden.  
   
- Zertifikat *Name*  
+ CERTIFICATE *certificate_name*  
  Gibt das zum Verschlüsseln des symmetrischen Schlüssels verwendete Zertifikat an. Dieses Zertifikat muss bereits in der Datenbank vorhanden sein.  
   
- Kennwort **= "***Kennwort***"**  
- Gibt das zum Verschlüsseln des symmetrischen Schlüssels verwendete Kennwort an. *Kennwort* erfüllt die Anforderungen der Windows-Kennwortrichtlinien des Computers, der die Instanz ausgeführt wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ PASSWORD **='***password***'**  
+ Gibt das zum Verschlüsseln des symmetrischen Schlüssels verwendete Kennwort an. *password* muss den Anforderungen der Windows-Kennwortrichtlinien des Computers entsprechen, auf dem die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt wird.  
   
- SYMMETRISCHE Schlüssel *Symmetric_Key_Name*  
+ SYMMETRIC KEY *Symmetric_Key_Name*  
  Gibt den symmetrischen Schlüssel an, der zum Verschlüsseln des zu ändernden symmetrischen Schlüssels verwendet wird. Dieser symmetrische Schlüssel muss bereits in der Datenbank vorhanden und geöffnet sein.  
   
- ASYMMETRISCHE Schlüssel *Asym_Key_Name*  
+ ASYMMETRIC KEY *Asym_Key_Name*  
  Gibt den asymmetrischen Schlüssel an, der zum Verschlüsseln des zu ändernden symmetrischen Schlüssels verwendet wird. Dieser asymmetrische Schlüssel muss bereits in der Datenbank vorhanden sein.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
   
 > [!CAUTION]  
 >  Wenn ein symmetrischer Schlüssel mit einem Kennwort anstatt mit einem öffentlichen Schlüssel des Datenbank-Hauptschlüssels verschlüsselt ist, wird der TRIPLE_DES-Verschlüsselungsalgorithmus verwendet. Daher werden Schlüssel, die mit einem starken Verschlüsselungsalgorithmus wie z. B. AES erstellt werden, selbst mit einem schwächeren Algorithmus verschlüsselt.  
   
  Sie können die Verschlüsselung des symmetrischen Schlüssels ändern, indem Sie die Ausdrücke ADD ENCRYPTION und DROP ENCRYPTION verwenden. Ein Schlüssel kann nicht unverschlüsselt vorhanden sein. Daher ist es die bewährte Methode, die neue Form der Verschlüsselung hinzuzufügen, bevor die alte Form der Verschlüsselung entfernt wird.  
   
- Verwenden Sie zum Ändern des Besitzers eines symmetrischen Schlüssels [ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md).  
+ Wenn Sie den Besitzer eines symmetrischen Schlüssels ändern möchten, können Sie [ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md) verwenden.  
   
 > [!NOTE]  
 >  Der RC4-Algorithmus wird nur aus Gründen der Abwärtskompatibilität unterstützt. Neues Material kann nur mit RC4 oder RC4_128 verschlüsselt werden, wenn die Datenbank den Kompatibilitätsgrad 90 oder 100 besitzt. (Nicht empfohlen.) Verwenden Sie stattdessen einen neueren Algorithmus, z. B. einen der AES-Algorithmen. In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] kann mit RC4 oder RC4_128 verschlüsseltes Material in jedem Kompatibilitätsgrad entschlüsselt werden.  
@@ -117,10 +117,10 @@ ALTER SYMMETRIC KEY JanainaKey043
 CLOSE SYMMETRIC KEY JanainaKey043;  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)   
  [OPEN SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/open-symmetric-key-transact-sql.md)   
- [CLOSE SYMMETRIC KEY &#40; Transact-SQL &#41;](../../t-sql/statements/close-symmetric-key-transact-sql.md)   
+ [CLOSE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/close-symmetric-key-transact-sql.md)   
  [DROP SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-symmetric-key-transact-sql.md)   
  [Verschlüsselungshierarchie](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   

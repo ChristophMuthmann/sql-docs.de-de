@@ -1,5 +1,5 @@
 ---
-title: "Prädikate | Microsoft Docs"
+title: "Prädikate | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -38,7 +38,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="predicates"></a>Prädikate
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Ein Ausdruck, der zu TRUE, FALSE oder UNKNOWN aufgelöst wird. Prädikate werden verwendet, in der Suchbedingung der [, in denen](../../t-sql/queries/where-transact-sql.md) Klauseln und [HAVING](../../t-sql/queries/select-having-transact-sql.md) -Klauseln sowie in den Joinbedingungen von [FROM](../../t-sql/queries/from-transact-sql.md) Klauseln und andere Konstrukte, in denen ein boolescher Wert ist, Erforderlich.  
+  Ein Ausdruck, der zu TRUE, FALSE oder UNKNOWN aufgelöst wird. Prädikate werden in der Suchbedingung von [WHERE](../../t-sql/queries/where-transact-sql.md)-Klauseln und [HAVING](../../t-sql/queries/select-having-transact-sql.md)-Klauseln sowie in den Verknüpfungsbedingung von [FROM](../../t-sql/queries/from-transact-sql.md)-Klauseln und in anderen Konstrukten verwendet, in denen ein boolescher Wert erforderlich ist.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt die folgenden Prädikate bereit.  
@@ -49,11 +49,11 @@ ms.lasthandoff: 01/25/2018
 |[FREETEXT](../../t-sql/queries/freetext-transact-sql.md)|  
 |[IS &#91;NOT&#93; NULL](../../t-sql/queries/is-null-transact-sql.md)|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [BETWEEN &#40;Transact-SQL&#41;](../../t-sql/language-elements/between-transact-sql.md)   
  [EXISTS &#40;Transact-SQL&#41;](../../t-sql/language-elements/exists-transact-sql.md)   
  [IN &#40;Transact-SQL&#41;](../../t-sql/language-elements/in-transact-sql.md)   
  [LIKE &#40;Transact-SQL&#41;](../../t-sql/language-elements/like-transact-sql.md)   
- [Search Condition &#40;Transact-SQL&#41;](../../t-sql/queries/search-condition-transact-sql.md)  
+ [Search Condition &#40;Transact-SQL&#41; (Suchbedingung (Transact-SQL))](../../t-sql/queries/search-condition-transact-sql.md)  
   
   

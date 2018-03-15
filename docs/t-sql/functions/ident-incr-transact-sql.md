@@ -1,5 +1,5 @@
 ---
-title: IDENT_INCR (Transact-SQL) | Microsoft Docs
+title: IDENT_INCR (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -36,7 +36,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="identincr-transact-sql"></a>IDENT_INCR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Gibt den inkrementellen Wert (als zurückgegeben **numerischen** (**@@**MAXPRECISION, 0)) während des Erstellens einer Identitätsspalte in einer Tabelle oder Sicht, die eine Identity-Spalte wurde angegeben.  
+  Gibt den inkrementellen Wert (als **numeric** (**@@**MAXPRECISION,0)) zurück, der beim Erstellen einer Identitätsspalte in einer Tabelle oder Sicht mit Identitätsspalte angegeben wurde.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,8 +48,8 @@ IDENT_INCR ( 'table_or_view' )
 ```  
   
 ## <a name="arguments"></a>Argumente  
- **"** *tabelle_oder_ansicht* **"**  
- Ist ein [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) angeben, die Tabelle oder Sicht für eine gültige Identität Inkrementwert überprüfen. *tabelle_oder_ansicht* kann eine Zeichenfolgenkonstante in Anführungszeichen, eine Variable, eine Funktion oder ein Spaltenname sein. *tabelle_oder_ansicht* ist **Char**, **Nchar**, **Varchar**, oder **Nvarchar**.  
+ **'** *table_or_view* **'**  
+ Ein [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md), der die Tabelle oder Sicht angibt, die auf einen gültigen inkrementellen Wert für die Identitätsspalte überprüft werden soll. *table_or_view* kann eine Zeichenfolgenkonstante in Anführungszeichen, eine Variable, eine Funktion oder ein Spaltenname sein. *table_or_view* ist vom Datentyp **char**, **nchar**, **varchar** oder **nvarchar**.  
   
 ## <a name="return-types"></a>Rückgabetypen  
  **numeric**  
@@ -98,12 +98,12 @@ dbo                 AWBuildVersion                     1
 Production          BillOfMaterials                    1
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Ausdrücke &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Ausdrücke &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [Systemfunktionen &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)   
  [IDENT_CURRENT &#40;Transact-SQL&#41;](../../t-sql/functions/ident-current-transact-sql.md)   
- [IDENT_SEED &#40; Transact-SQL &#41;](../../t-sql/functions/ident-seed-transact-sql.md)   
+ [IDENT_SEED &#40;Transact-SQL&#41;](../../t-sql/functions/ident-seed-transact-sql.md)   
  [DBCC CHECKIDENT &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkident-transact-sql.md)   
- [Sys. identity_columns &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-identity-columns-transact-sql.md)  
+ [sys.identity_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-identity-columns-transact-sql.md)  
   
   

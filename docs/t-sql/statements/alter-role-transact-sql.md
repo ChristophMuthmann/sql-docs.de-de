@@ -1,5 +1,5 @@
 ---
-title: ALTER ROLE (Transact-SQL) | Microsoft Docs
+title: ALTER ROLE (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 05/01/2017
 ms.prod: sql-non-specified
@@ -38,10 +38,10 @@ ms.lasthandoff: 01/02/2018
 # <a name="alter-role-transact-sql"></a>ALTER ROLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Fügt Elemente an, oder aus einer Datenbankrolle entfernt oder ändert den Namen einer benutzerdefinierten Datenbankrolle.  
+  Fügt Mitglieder zu einer Datenbankrolle hinzu, entfernt Mitglieder einer Datenbankrolle oder ändert den Namen einer benutzerdefinierten Datenbankrolle.  
   
 > [!NOTE]  
->  Zum Ändern der Rollen in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] oder [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], verwenden Sie [Sp_addrolemember &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md) und [Sp_droprolemember &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md).  
+>  Wenn Sie Rollen in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] oder [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ändern möchten, können Sie [sp_addrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md) und [sp_droprolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md) verwenden.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -70,52 +70,52 @@ ALTER ROLE role_name
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *Rollenname*  
- **GILT für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab 2008)  [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
+ *role_name*  
+ **Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008 oder höher, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
- Gibt die Datenbankrolle zu ändern.  
+ Gibt die Datenbankrolle an, die geändert werden soll.  
   
- Mitglied hinzufügen *Database_principal*l  
- **GILT für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab 2012)  [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
+ ADD MEMBER *database_principal*  
+ **Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 oder höher, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
- Gibt an, um der Datenbankprinzipal, der Mitglied einer Datenbankrolle hinzuzufügen.  
+ Legt fest, dass der Datenbankprinzipal einer Datenbankrolle als Mitglied hinzugefügt werden soll.  
   
--   *Database_principal* einen Datenbankbenutzer oder eine benutzerdefinierte Datenbankrolle ist.  
+-   *database_principal* ist ein Datenbankbenutzer oder eine benutzerdefinierte Datenbankrolle.  
   
--   *Database_principal* nicht mit einer festen Datenbankrolle oder ein Serverprinzipal.  
+-   *database_principal* darf keine feste Datenbankrolle oder ein Serverprinzipal sein.  
   
-DROP MEMBER *Database_principal*  
- **GILT für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab 2012)  [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
+DROP MEMBER *database_principal*  
+ **Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 oder höher, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
- Gibt an, um einen Datenbankprinzipal aus der Mitgliedschaft einer Datenbankrolle zu entfernen.  
+ Legt fest, dass für den Datenbankprinzipal die Mitgliedschaft einer Datenbankrolle gelöscht werden soll.  
   
--   *Database_principal* einen Datenbankbenutzer oder eine benutzerdefinierte Datenbankrolle ist.  
+-   *database_principal* ist ein Datenbankbenutzer oder eine benutzerdefinierte Datenbankrolle.  
   
--   *Database_principal* nicht mit einer festen Datenbankrolle oder ein Serverprinzipal.  
+-   *database_principal* darf keine feste Datenbankrolle oder ein Serverprinzipal sein.  
   
-MIT dem Namen = *Neuer_Name*  
- **GILT für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab 2008)  [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
+WITH NAME = *new_name*  
+ **Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008 oder höher, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
- Gibt an, um den Namen einer benutzerdefinierten Datenbankrolle ändern. Der neue Name darf nicht bereits in der Datenbank vorhanden sein.  
+ Legt fest, dass der Name einer benutzerdefinierten Datenbankrolle geändert werden soll. Der neue Name darf nicht bereits in der Datenbank vorhanden sein.  
   
  Durch das Ändern des Namens einer Datenbankrolle werden die ID-Nummer, der Besitzer oder Berechtigungen der Rolle nicht geändert.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Zum Ausführen dieses Befehls benötigen Sie mindestens eine dieser Berechtigungen oder Gruppenmitgliedschaften:  
+ Zum Ausführen dieses Befehls benötigen Sie mindestens eine der folgenden Berechtigungen oder Gruppenmitgliedschaften:  
   
--   **ALTER** -Berechtigung für die Rolle ""  
--   **ALTER ANY ROLE** Berechtigung für die Datenbank  
--   Mitgliedschaft in der **Db_securityadmin** festen Datenbankrolle ""  
+-   die **ALTER**-Berechtigung für die Rolle  
+-   die **ALTER ANY ROLE**-Berechtigung für die Datenbank  
+-   die Mitgliedschaft in der festen Datenbankrolle **db_securityadmin**  
   
-So ändern Sie die Mitgliedschaft in einer festen Datenbankrolle müssen Sie darüber hinaus:  
+Zum Ändern der Mitgliedschaft einer festen Datenbankrolle benötigen Sie darüber hinaus:  
   
--   Mitgliedschaft in der **Db_owner** festen Datenbankrolle ""  
+-   die Mitgliedschaft in der festen Datenbankrolle **db_owner**  
   
 ## <a name="limitations-and-restrictions"></a>Einschränkungen  
- Sie können nicht den Namen einer festen Datenbankrolle ändern.  
+ Sie können den Namen einer festen Datenbankrolle nicht ändern.  
   
 ## <a name="metadata"></a>Metadaten  
- Diese Systemsichten enthalten Informationen zu Datenbankrollen und datenbankprinzipale.  
+ Die folgenden Systemsichten enthalten Informationen zu Datenbankrollen und Datenbankprinzipalen:  
   
 -   [sys.database_role_members &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-role-members-transact-sql.md)  
   
@@ -123,8 +123,8 @@ So ändern Sie die Mitgliedschaft in einer festen Datenbankrolle müssen Sie dar
   
 ## <a name="examples"></a>Beispiele  
   
-### <a name="a-change-the-name-of-a-database-role"></a>A. Ändern Sie den Namen einer Datenbankrolle  
- **GILT für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab 2008)  [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
+### <a name="a-change-the-name-of-a-database-role"></a>A. Ändern eines Datenbankrollennamens  
+ **Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008 oder höher, [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
   
  Im folgenden Beispiel wird der Name der `buyers`-Rolle in `purchasing` geändert. [!INCLUDE[AdWorks-example](../../includes/adworks-example-md.md)]  
   
@@ -132,10 +132,10 @@ So ändern Sie die Mitgliedschaft in einer festen Datenbankrolle müssen Sie dar
 ALTER ROLE buyers WITH NAME = purchasing;  
 ```  
   
-### <a name="b-add-or-remove-role-members"></a>B. Hinzufügen oder Entfernen von Mitgliedern der Rolle  
- **GILT für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab 2012)  [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
+### <a name="b-add-or-remove-role-members"></a>B. Hinzufügen oder Entfernen von Rollenmitgliedern  
+ **Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 oder höher, [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
   
- Dieses Beispiel erstellt eine Datenbankrolle mit dem Namen `Sales`. Es fügt einen Datenbankbenutzer mit dem Namen "Barry", um die Mitgliedschaft, und anschließend wird gezeigt, wie das Element "Barry" zu entfernen. [!INCLUDE[AdWorks-example](../../includes/adworks-example-md.md)]  
+ In folgendem Beispiel wird eine neue Datenbankrolle mit dem Namen `Sales` erstellt. Dieser wird der Datenbankbenutzer Barry als Mitglied hinzugefügt. Anschließend wird dieses Mitglied wieder entfernt. [!INCLUDE[AdWorks-example](../../includes/adworks-example-md.md)]  
   
 ```sql  
 CREATE ROLE Sales;  
@@ -143,10 +143,10 @@ ALTER ROLE Sales ADD MEMBER Barry;
 ALTER ROLE Sales DROP MEMBER Barry;  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Erstellen Sie die Rolle "" &#40; Transact-SQL &#41;](../../t-sql/statements/create-role-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [CREATE ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-role-transact-sql.md)   
  [Prinzipale &#40;Datenbankmodul&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
- [DROP ROLE &#40; Transact-SQL &#41;](../../t-sql/statements/drop-role-transact-sql.md)   
+ [DROP ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-role-transact-sql.md)   
  [sp_addrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)   
  [sys.database_role_members &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-role-members-transact-sql.md)   
  [sys.database_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)  

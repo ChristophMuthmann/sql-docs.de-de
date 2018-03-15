@@ -1,5 +1,5 @@
 ---
-title: ENCRYPTBYPASSPHRASE (Transact-SQL) | Microsoft Docs
+title: ENCRYPTBYPASSPHRASE (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -51,17 +51,17 @@ EncryptByPassPhrase ( { 'passphrase' | @passphrase }
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *Passphrase*  
+ *passphrase*  
  Eine Passphrase, aus der ein symmetrischer Schlüssel generiert wird.  
   
  @passphrase  
- Eine Variable vom Typ **Nvarchar**, **Char**, **Varchar**, **binäre**, **Varbinary**, oder **Nchar** , die eine Passphrase aus dem generiert eines symmetrischen Schlüssels enthält.  
+ Eine Variable vom Typ **nvarchar**, **char**, **varchar**, **binary**, **varbinary** oder **nchar**, die eine Passphrase enthält, aus der ein symmetrischer Schlüssel generiert wird.  
   
  *Klartext*  
  Der zu verschlüsselnde Klartext.  
   
  @cleartext  
- Eine Variable vom Typ **Nvarchar**, **Char**, **Varchar**, **binäre**, **Varbinary**, oder **Nchar** , die Klartext enthält. Die maximale Größe beträgt 8.000 Bytes.  
+ Eine Variable vom Typ **nvarchar**, **char**, **varchar**, **binary**, **varbinary** oder **nchar**, die den Klartext enthält. Die maximale Größe beträgt 8.000 Bytes.  
   
  *add_authenticator*  
  Gibt an, ob ein Authentifikator zusammen mit dem Klartext verschlüsselt wird. Mit dem Wert 1 wird ein Authentifikator hinzugefügt. **int**.  
@@ -69,16 +69,16 @@ EncryptByPassPhrase ( { 'passphrase' | @passphrase }
  @add_authenticator  
  Gibt an, ob ein Hash zusammen mit dem Klartext verschlüsselt wird.  
   
- *Authenticator*  
+ *authenticator*  
  Daten, von denen ein Authentifikator abgeleitet wird. **sysname**.  
   
  @authenticator  
  Eine Variable, die Daten enthält, von denen ein Authentifikator abgeleitet wird.  
   
 ## <a name="return-types"></a>Rückgabetypen  
- **Varbinary** mit einer maximalen Größe von 8.000 Bytes.  
+ **varbinary** mit einer maximalen Größe von 8.000 Byte.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Eine Passphrase ist ein Kennwort, das Leerzeichen enthält. Die Verwendung eines Passphrases bietet den Vorteil, dass ein aussagekräftiger Ausdruck oder Satz leichter zu merken ist als eine vergleichsweise lange Zeichenfolge.  
   
  Die Kennwortkomplexität wird mit dieser Funktion nicht überprüft.  
@@ -107,8 +107,8 @@ WHERE CreditCardID = '3681';
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [DECRYPTBYPASSPHRASE &#40; Transact-SQL &#41;](../../t-sql/functions/decryptbypassphrase-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [DECRYPTBYPASSPHRASE &#40;Transact-SQL&#41;](../../t-sql/functions/decryptbypassphrase-transact-sql.md)   
  [Verschlüsselungshierarchie](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   
   

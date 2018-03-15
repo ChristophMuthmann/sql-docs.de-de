@@ -1,5 +1,5 @@
 ---
-title: Metadatenfunktionen (Transact-SQL) | Microsoft Docs
+title: Metadatenfunktionen (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -60,7 +60,7 @@ ms.lasthandoff: 11/21/2017
   
  Alle Metadatenfunktionen sind nicht deterministisch. Das heißt, dass diese Funktionen nicht stets dasselbe Ergebnis zurückgeben, selbst wenn sie mit denselben Eingabewerten aufgerufen werden.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Integrierte Funktionen &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: PERCENTILE_DISC (Transact-SQL) | Microsoft Docs
+title: PERCENTILE_DISC (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 10/20/2015
 ms.prod: sql-non-specified
@@ -35,9 +35,9 @@ ms.lasthandoff: 11/21/2017
 # <a name="percentiledisc-transact-sql"></a>PERCENTILE_DISC (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-  Berechnet für sortierte Werte in einem gesamten Rowset oder innerhalb bestimmter Partitionen eines Rowsets in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ein bestimmtes Quantil. Für einen angegebenen Prozentwert *P*, PERCENTILE_DISC die Werte des Ausdrucks in der ORDER BY-Klausel sortiert, und gibt den Wert mit dem kleinsten CUME_DIST-Wert (in Bezug auf die gleiche sortierspezifikation), die größer als oder gleich *P*. Beispiel: PERCENTILE_DISC (0.5) berechnet das 50. Quantil (d. h. den Mittelwert) eines Ausdrucks. PERCENTILE_DISC berechnet das Quantil auf Grundlage einer diskreten Verteilung der Spaltenwerte. Das Ergebnis entspricht einem bestimmten Wert in der Spalte.  
+  Berechnet für sortierte Werte in einem gesamten Rowset oder innerhalb bestimmter Partitionen eines Rowsets in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ein bestimmtes Quantil. Für den angegebenen Quantilwert *P* sortiert PERCENTILE_DISC die Werte des Ausdrucks in der ORDER BY-Klausel und gibt den Wert mit dem kleinsten CUME_DIST-Wert (in Bezug auf die gleiche Sortierspezifikation) zurück, der größer oder gleich *P* ist. Beispiel: PERCENTILE_DISC (0.5) berechnet das 50. Quantil (d. h. den Mittelwert) eines Ausdrucks. PERCENTILE_DISC berechnet das Quantil auf Grundlage einer diskreten Verteilung der Spaltenwerte. Das Ergebnis entspricht einem bestimmten Wert in der Spalte.  
   
- ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Thema Linksymbol") [Transact-SQL-Syntaxkonventionen &#40; Transact-SQL &#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol zum Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions &#40;Transact-SQL&#41; (Transact-SQL-Syntaxkonventionen (Transact-SQL))](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -47,17 +47,17 @@ PERCENTILE_DISC ( numeric_literal ) WITHIN GROUP ( ORDER BY order_by_expression 
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *Zeichenfolgenliterale*  
+ *literal*  
  Das zu berechnende Quantil. Der Wert muss zwischen 0,0 und 1,0 liegen.  
   
- IN den Gruppen **(** ORDER BY *Order_by_expression* [ **ASC** | "DESC"]**)**  
- Gibt eine Liste von Werten zu sortieren und Berechnung des Quantils an. Nur ein *Order_by_expression* ist zulässig. Die Standardsortierreihenfolge ist Aufsteigend. Die Liste der Werte kann eines der Datentypen, die für den Sortiervorgang gültig sind.  
+ WITHIN GROUP **(** ORDER BY *order_by_expression* [ **ASC** | DESC ]**)**  
+ Gibt eine Liste von numerischen Werten für die Sortierung und Berechnung des Quantils an. Es ist nur ein *order_by_expression*-Element zulässig. Standardmäßig wird die Sortierung in aufsteigender Reihenfolge vorgenommen. Die Liste der Werte kann von einem beliebigen Datentyp sein, der für den Sortierungsvorgang gültig sein kann.  
   
- ÜBER **(** \<Partition_by_clause > **)**  
- Teilt das von der FROM-Klausel erzeugte Resultset in Partitionen, auf die die Quantilfunktion angewendet wird. Weitere Informationen finden Sie unter [Klausel "OVER" &#40; Transact-SQL &#41; ](../../t-sql/queries/select-over-clause-transact-sql.md). Die \<ORDER BY-Klausel > und \<Zeilen- oder Bereichsklausel > können nicht in einer PERCENTILE_DISC-Funktion angegeben werden.  
+ OVER **(** \<partition_by_clause> **)**  
+ Teilt das von der FROM-Klausel erzeugte Resultset in Partitionen, auf die die Quantilfunktion angewendet wird. Weitere Informationen finden Sie unter [OVER-Klausel &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md). Die \<ORDER BY-Klausel> und die \<Zeilen- oder Bereichsklausel> können nicht in einer PERCENTILE_DISC-Funktion angegeben werden.  
   
 ## <a name="return-types"></a>Rückgabetypen  
- Der Rückgabetyp wird bestimmt, indem die *Order_by_expression* Typ.  
+ Der Rückgabetyp wird durch den *order_by_expression*-Typ bestimmt.  
   
 ## <a name="compatibility-support"></a>Kompatibilitätsunterstützung  
  Unter Kompatibilitätsgrad 110 und höher ist WITHIN GROUP ein reserviertes Schlüsselwort. Weitere Informationen finden Sie unter [ALTER DATABASE-Kompatibilitätsgrad &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
@@ -99,7 +99,7 @@ Executive              54.32695     48.5577
 Human Resources        17.427850    16.5865
 ```
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
 ### <a name="b-basic-syntax-example"></a>B. Einfaches Syntaxbeispiel  
  Im folgenden Beispiel wird das durchschnittliche Mitarbeitergehalt in jeder Abteilung mithilfe von PERCENTILE_CONT und PERCENTILE_DISC ermittelt. Beachten Sie, dass diese Funktionen möglicherweise nicht den gleichen Wert zurückgeben. Ursache hierfür ist, dass PERCENTILE_CONT den geeigneten Wert interpoliert, unabhängig davon, ob dieser im Dataset vorhanden ist oder nicht, während PERCENTILE_DISC immer einen Istwert aus dem Dataset zurückgibt.  
@@ -127,8 +127,8 @@ Human Resources        17.427850    16.5865
 Shipping and Receiving  9.250000     9.0000
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [PERCENTILE_CONT &#40; Transact-SQL &#41;](../../t-sql/functions/percentile-cont-transact-sql.md)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [PERCENTILE_CONT &#40;Transact-SQL&#41;](../../t-sql/functions/percentile-cont-transact-sql.md)  
   
   
 

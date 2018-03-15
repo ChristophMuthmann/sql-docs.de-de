@@ -1,5 +1,5 @@
 ---
-title: IS_OBJECTSIGNED (Transact-SQL) | Microsoft Docs
+title: IS_OBJECTSIGNED (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/10/2016
 ms.prod: sql-non-specified
@@ -48,11 +48,11 @@ IS_OBJECTSIGNED (
 ```  
   
 ## <a name="arguments"></a>Argumente  
- **"OBJECT"**  
+ **'OBJECT'**  
  Der Typ der sicherbaren Klasse.  
   
  *@object_id*  
- Die object_id des Objekts, das getestet wird. *@object_id*Typ **Int**.  
+ Die object_id des Objekts, das getestet wird. *@object_id* ist vom Typ **int**.  
   
  *@class*  
  Klasse des Objekts:  
@@ -61,21 +61,21 @@ IS_OBJECTSIGNED (
   
 -   ‚asymmetrischer Schlüssel’  
   
- *@class*ist **Sysname**.  
+ *@class* ist vom Typ **sysname**.  
   
  *@thumbprint*  
- Der SHA-Fingerabdruck des Objekts. *@thumbprint*Typ **varbinary(32)**.  
+ Der SHA-Fingerabdruck des Objekts. *@thumbprint* ist vom Datentyp **varbinary(32)**.  
   
 ## <a name="returned-types"></a>Rückgabetypen  
  **int**  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  IS_OBJECTSIGNED gibt folgende Werte zurück.  
   
 |Rückgabewert|Description|  
 |------------------|-----------------|  
-|NULL|Das Objekt ist nicht signiert, oder das Objekt ist ungültig.|  
-|0|Das Objekt ist signiert, aber die Signatur ist ungültig.|  
+|NULL|Das Objekt wurde nicht signiert oder ist nicht gültig.|  
+|0|Das Objekt wurde signiert, die Signatur ist jedoch nicht gültig.|  
 |1|Das Objekt ist signiert.|  
   
 ## <a name="permissions"></a>Berechtigungen  
@@ -84,7 +84,7 @@ IS_OBJECTSIGNED (
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="a-displaying-extended-properties-on-a-database"></a>A. Anzeigen erweiterter Eigenschaften für eine Datenbank  
- Das folgende Beispiel testet, wenn die Tabelle Spt_fallback_db in der **master** Datenbank durch das schemasignaturzertifikat signiert ist.  
+ Im folgenden Beispiel wird getestet, ob die Tabelle spt_fallback_db in der **master**-Datenbank vom Schemasignaturzertifikat signiert wird.  
   
 ```  
 USE master;  
@@ -107,7 +107,7 @@ IS_OBJECTSIGNED(
 ) AS [Is the object signed?] ;  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Sys. fn_check_object_signatures &#40; Transact-SQL &#41;](../../relational-databases/system-functions/sys-fn-check-object-signatures-transact-sql.md)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [sys.fn_check_object_signatures &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-check-object-signatures-transact-sql.md)  
   
   

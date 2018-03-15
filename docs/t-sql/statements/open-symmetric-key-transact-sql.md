@@ -1,5 +1,5 @@
 ---
-title: OPEN SYMMETRIC KEY (Transact-SQL) | Microsoft Docs
+title: OPEN SYMMETRIC KEY (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -59,31 +59,31 @@ OPEN SYMMETRIC KEY Key_name DECRYPTION BY <decryption_mechanism>
  *Key_name*  
  Der Name des zu öffnenden symmetrischen Schlüssels.  
   
- Zertifikat *Name*  
+ CERTIFICATE *certificate_name*  
  Der Name eines Zertifikats, mit dessen privatem Schlüssel der symmetrische Schlüssel entschlüsselt wird.  
   
- ASYMMETRISCHE Schlüssel *Asym_key_name*  
+ ASYMMETRIC KEY *asym_key_name*  
  Der Name eines asymmetrischen Schlüssels, mit dessen privatem Schlüssel der symmetrische Schlüssel entschlüsselt wird.  
   
- MIT dem Kennwort = "*Kennwort*"  
+ WITH PASSWORD ='*password*'  
  Das Kennwort, mit dem der private Schlüssel des Zertifikats oder des asymmetrischen Schlüssels verschlüsselt wurde.  
   
- SYMMETRISCHE Schlüssel *Decrypting_key_name*  
+ SYMMETRIC KEY *decrypting_key_name*  
  Der Name eines symmetrischen Schlüssels, mit dem der symmetrische Schlüssel, der geöffnet wird, entschlüsselt wird.  
   
- Kennwort = "*Kennwort*"  
+ PASSWORD ='*password*'  
  Das Kennwort, mit dem der symmetrische Schlüssel geschützt wurde.  
   
-## <a name="remarks"></a>Hinweise  
- Geöffnete symmetrische Schlüssel werden an die Sitzung gebunden und nicht an den Sicherheitskontext. Ein geöffneter Schlüssel ist weiterhin verfügbar, bis er entweder explizit geschlossen oder die Sitzung beendet wird. Wenn Sie einen symmetrischen Schlüssel öffnen und dann den Kontext wechseln, bleibt der Schlüssel geöffnet und in dem durch Identitätswechsel übernommenen Kontext verfügbar. Informationen zu offenen symmetrischen Schlüsseln werden in der [sys.openkeys &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-openkeys-transact-sql.md) -Katalogsicht angezeigt.  
+## <a name="remarks"></a>Remarks  
+ Geöffnete symmetrische Schlüssel werden an die Sitzung gebunden und nicht an den Sicherheitskontext. Ein geöffneter Schlüssel ist weiterhin verfügbar, bis er entweder explizit geschlossen oder die Sitzung beendet wird. Wenn Sie einen symmetrischen Schlüssel öffnen und dann den Kontext wechseln, bleibt der Schlüssel geöffnet und in dem durch Identitätswechsel übernommenen Kontext verfügbar. Informationen zu offenen symmetrischen Schlüsseln werden in der Katalogsicht [sys.openkeys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-openkeys-transact-sql.md) angezeigt.  
   
  Falls der symmetrische Schlüssel mit einem anderen Schlüssel verschlüsselt wurde, muss zuerst dieser Schlüssel geöffnet werden.  
   
- Wenn der symmetrische Schlüssel bereits geöffnet ist, wird die Abfrage eine **NO_OP**.  
+ Falls der symmetrische Schlüssel bereits geöffnet ist, ist die Abfrage **NO_OP**.  
   
  Falls das falsche Kennwort, das falsche Zertifikat oder der falsche Schlüssel zum Entschlüsseln des symmetrischen Schlüssels bereitgestellt wurde, erzeugt die Abfrage einen Fehler.  
   
- Symmetrische Schlüssel, die von Kryptografieanbietern erstellt wurden, können nicht geöffnet werden. Verschlüsselung und Entschlüsselung-Vorgänge, die mit dieser Art von symmetrischem Schlüssel erfolgreich ausgeführt werden, ohne die **öffnen** Anweisung, da die Verschlüsselungsanbieter öffnen und schließen den Schlüssel ist.  
+ Symmetrische Schlüssel, die von Kryptografieanbietern erstellt wurden, können nicht geöffnet werden. Verschlüsselungs- und Entschlüsselungsverfahren, die diese Art von symmetrischem Schlüssel verwenden, können ohne die **OPEN**-Anweisung erfolgreich verwendet werden, da der Kryptografieanbieter den Schlüssel öffnet und schließt.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Der Aufrufer benötigt bestimmte Berechtigungen für den Schlüssel, und die VIEW DEFINITION-Berechtigung für den Schlüssel darf ihm nicht verweigert worden sein. Zusätzliche Anforderungen hängen vom Entschlüsselungsmechanismus ab:  
@@ -120,10 +120,10 @@ OPEN SYMMETRIC KEY MarketingKey11
 GO   
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)   
  [ALTER SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-symmetric-key-transact-sql.md)   
- [CLOSE SYMMETRIC KEY &#40; Transact-SQL &#41;](../../t-sql/statements/close-symmetric-key-transact-sql.md)   
+ [CLOSE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/close-symmetric-key-transact-sql.md)   
  [DROP SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-symmetric-key-transact-sql.md)   
  [Verschlüsselungshierarchie](../../relational-databases/security/encryption/encryption-hierarchy.md)   
  [Erweiterbare Schlüsselverwaltung &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)  

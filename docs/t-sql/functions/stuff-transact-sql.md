@@ -1,5 +1,5 @@
 ---
-title: STUFF (Transact-SQL) | Microsoft Docs
+title: STUFF (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 11/17/2017
 ms.prod: sql-non-specified
@@ -52,27 +52,27 @@ STUFF ( character_expression , start , length , replaceWith_expression )
   
 ## <a name="arguments"></a>Argumente  
  *character_expression*  
- Ist ein [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) von Zeichendaten. *Character_expression* kann eine Konstante, Variable oder Spalte mit Zeichen- oder Binärdaten sein.  
+ Ein [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) von Zeichendaten. *character_expression* kann eine Konstante, Variable oder Spalte mit Zeichen- oder Binärdaten darstellen.  
   
  *start*  
- Ein ganzzahliger Wert, der die Position angibt, ab der Zeichen gelöscht werden sollen und an der anschließend eine andere Zeichenfolge eingefügt werden soll. Wenn *starten* ist negativ oder 0 (null), eine null-Zeichenfolge zurückgegeben. Wenn *starten* ist länger als der erste *Character_expression*, eine null-Zeichenfolge zurückgegeben. *Starten Sie* kann vom Typ **"bigint"**.  
+ Ein ganzzahliger Wert, der die Position angibt, ab der Zeichen gelöscht werden sollen und an der anschließend eine andere Zeichenfolge eingefügt werden soll. Falls *start* negativ oder 0 (null) ist, wird eine NULL-Zeichenfolge zurückgegeben. Wenn *start* länger als das erste *character_expression*-Element ist, wird eine NULL-Zeichenfolge zurückgegeben. *start* kann vom Typ **bigint** sein.  
   
  *length*  
- Eine ganze Zahl, die festlegt, wie viele Zeichen gelöscht werden sollen. Wenn *Länge* ist negativ ist, wird eine Nullzeichenfolge zurückgegeben. Wenn *Länge* ist länger als der erste *Character_expression*, Löschung bis zum letzten Zeichen in den letzten *Character_expression*.  Wenn *Länge* ist 0 (null), Einfügen tritt auf, bevor Sie das erste Zeichen in der Zeichenfolge. *Länge* kann vom Typ **"bigint"**.
+ Eine ganze Zahl, die festlegt, wie viele Zeichen gelöscht werden sollen. Falls *length* negativ ist, wird eine NULL-Zeichenfolge zurückgegeben. Wenn *length* länger als das erste *character_expression*-Element ist, wird bis zum letzten Zeichen im letzten *character_expression*-Element alles gelöscht.  Wenn *length* 0 (null) ist, wird das Element vor dem ersten Zeichen der Zeichenfolge vorgenommen. *length* kann vom Datentyp **bigint** sein.
 
  *replaceWith_expression*  
- Ist ein [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) von Zeichendaten. *Character_expression* kann eine Konstante, Variable oder Spalte mit Zeichen- oder Binärdaten sein. Dieser Ausdruck ersetzt *Länge* Zeichen des *Character_expression* beginnend *starten*. Bereitstellen von `NULL` als die *ReplaceWith_expression*, werden Zeichen entfernt, ohne etwas einzufügen.   
+ Ein [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) von Zeichendaten. *character_expression* kann eine Konstante, Variable oder Spalte mit Zeichen- oder Binärdaten darstellen. Dieser Ausdruck ersetzt ab *start* *length*-Zeichen durch *character_expression*. Wenn `NULL` als *replaceWith_expression* angegeben ist, werden die Zeichen entfernt, ohne zusätzliche Zeichen einzufügen.   
   
 ## <a name="return-types"></a>Rückgabetypen  
- Gibt Zeichendaten zurück, wenn *Character_expression* ist einer der unterstützten Zeichendatentypen. Gibt Binärdaten zurück, wenn *Character_expression* eines der unterstützten Binärdatentypen ist.  
+ Gibt Zeichendaten zurück, wenn *character_expression* einer der unterstützten Zeichendatentypen ist. Gibt Binärdaten zurück, wenn *character_expression* einer der unterstützten Binärdatentypen ist.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Falls die Startposition oder die Länge negativ oder die Startposition größer als die Länge der ersten Zeichenfolge ist, wird eine Nullzeichenfolge zurückgegeben. Wenn die Startposition 0 ist, wird ein NULL-Wert zurückgegeben. Wenn es sich um mehr zu löschende Zeichen handelt als die erste Zeichenfolge aufweist, wird die erste Zeichenfolge bis auf das erste Zeichen gelöscht.  
 
 Wenn der Ergebniswert größer als der vom Rückgabetyp unterstützte Höchstwert ist, wird ein Fehler ausgegeben.  
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>Ergänzende Zeichen (Ersatzpaare)  
- Bei Verwendung von SC-Sortierungen beide *Character_expression* und *ReplaceWith_expression* können auch Ersatzpaare enthalten. Der Length-Parameter zählt jedes Ersatzzeichen *Character_expression* als einzelnes Zeichen.  
+ Wenn SC-Sortierungen verwendet werden, kann sowohl *character_expression* als auch *replaceWith_expression* Ersatzzeichenpaare enthalten. Der Längenparameter betrachtet jedes Ersatzzeichen in *character_expression* als einzelnes Zeichen.  
   
 ## <a name="examples"></a>Beispiele  
  In diesem Beispiel wird eine neue Zeichenfolge zurückgegeben, indem zunächst drei Zeichen aus der ersten Zeichenfolge (`abcdef`) ab der Position `2`, (also bei `b`) gelöscht werden. Anschließend wird die zweite Zeichenfolge an der Löschposition eingefügt.  
@@ -91,7 +91,7 @@ aijklmnef
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [CONCAT &#40;Transact-SQL&#41;](../../t-sql/functions/concat-transact-sql.md)  
  [CONCAT_WS &#40;Transact-SQL&#41;](../../t-sql/functions/concat-ws-transact-sql.md)  
  [FORMATMESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/formatmessage-transact-sql.md)  
@@ -102,4 +102,4 @@ aijklmnef
  [STRING_ESCAPE &#40;Transact-SQL&#41;](../../t-sql/functions/string-escape-transact-sql.md)  
  [TRANSLATE &#40;Transact-SQL&#41;](../../t-sql/functions/translate-transact-sql.md)  
  [Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [Zeichenfolgenfunktionen &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
+ [String Functions &#40;Transact-SQL&#41; (Zeichenfolgenfunktionen (Transact-SQL))](../../t-sql/functions/string-functions-transact-sql.md)  

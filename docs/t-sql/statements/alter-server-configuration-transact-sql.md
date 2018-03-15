@@ -1,5 +1,5 @@
 ---
-title: ALTER SERVER CONFIGURATION (Transact-SQL) | Microsoft Docs
+title: ALTER SERVER CONFIGURATION (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 05/01/2017
 ms.prod: sql-non-specified
@@ -109,33 +109,33 @@ SET <optionspec>
 ```  
   
 ## <a name="arguments"></a>Argumente  
- **\<Process_affinity >:: =**  
+ **\<process_affinity> ::=**  
   
  PROCESS AFFINITY  
  Ermöglicht das Zuordnen von Hardwarethreads zu CPUs.  
   
- CPU = {AUTOMATISCH | \<CPU_range_spec >}  
+ CPU = { AUTO | \<CPU_range_spec> }  
  Verteilt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Arbeitsthreads auf alle im angegebenen Bereich enthaltenen CPUs. CPUs außerhalb des angegebenen Bereichs werden keine Threads zugewiesen.  
   
  AUTO  
  Gibt an, dass einer CPU kein Thread zugewiesen ist. Das Betriebssystem kann Threads auf der Grundlage der Serverarbeitsauslastung beliebig zwischen CPUs verschieben. Dies ist die Standardeinstellung und die empfohlene Einstellung.  
   
- \<CPU_range_spec >:: =  
+ \<CPU_range_spec> ::=  
  Gibt die CPU oder den Bereich von CPUs an, der bzw. denen Threads zugewiesen werden sollen.  
   
  { CPU_ID | CPU_ID TO CPU_ID } [ ,...n ]  
- Eine Liste mit mindestens einer CPU. CPU-IDs beginnen bei 0 und sind **Ganzzahl** Werte.  
+ Eine Liste mit mindestens einer CPU. CPU-IDs beginnen bei 0 und sind **integer**-Werte.  
   
- NUMANODE = \<NUMA_node_range_spec >  
+ NUMANODE = \<NUMA_node_range_spec>  
  Weist allen CPUs, die um angegebenen NUMA-Knoten oder Bereich von Konten gehören, Threads zu.  
   
- \<NUMA_node_range_spec >:: =  
+ \<NUMA_node_range_spec> ::=  
  Gibt den NUMA-Knoten oder den Bereich von NUMA-Knoten an.  
   
  { NUMA_node_ID | NUMA_node_ID  TO NUMA_node_ID } [ ,...n ]  
- Eine Liste mit mindestens einem NUMA-Knoten. NUMA-Knoten-IDs beginnen bei 0 und sind **Ganzzahl** Werte.  
+ Eine Liste mit mindestens einem NUMA-Knoten. NUMA-Knoten-IDs beginnen bei 0 und sind **integer**-Werte.  
   
- **\<Diagnostic_log >:: =**  
+ **\<diagnostic_log> ::=**  
   
 **Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
@@ -149,7 +149,7 @@ SET <optionspec>
  Beendet die Protokollierung von Diagnosedaten.  
   
  PATH = { 'os_file_path' | DEFAULT }  
- Pfad, der den Speicherort für die Diagnoseprotokolle angibt. Der Standardspeicherort ist \<\MSSQL\Log > im Installationsordner von der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Failoverclusterinstanz.  
+ Pfad, der den Speicherort für die Diagnoseprotokolle angibt. Der Standardspeicherort ist \<\MSSQL\Log> im Installationsordner der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Failoverclusterinstanz.  
   
  MAX_SIZE = { 'log_max_size' MB | DEFAULT }  
  Die maximale Größe (in MB) für jedes Diagnoseprotokoll. Die Standardeinstellung ist 100 MB.  
@@ -157,7 +157,7 @@ SET <optionspec>
  MAX_FILES = { 'max_file_count' | DEFAULT }  
  Maximale Anzahl von Diagnoseprotokolldateien, die auf dem Computer gespeichert werden können, bevor sie für neue Diagnoseprotokolle wiederverwendet werden.  
   
- **\<Failover_cluster_property >:: =**  
+ **\<failover_cluster_property> ::=**  
   
 **Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
@@ -174,26 +174,26 @@ SET <optionspec>
 -   2 – Fehler und Warnungen  
   
 SQLDUMPEREDUMPFLAGS  
- Bestimmt den Typ der Dumpdateien, die vom SQL Server-Hilfsprogramm SQLDumper generiert werden. Die Standardeinstellung ist 0. Weitere Informationen finden Sie unter [SQL Server Dumper-Hilfsprogramm Knowledge Base-Artikel](http://go.microsoft.com/fwlink/?LinkId=206173).  
+ Bestimmt den Typ der Dumpdateien, die vom SQL Server-Hilfsprogramm SQLDumper generiert werden. Die Standardeinstellung ist 0. Weitere Informationen finden Sie im [Knowledge Base-Artikel zum SQL Server Dumper-Hilfsprogramm](http://go.microsoft.com/fwlink/?LinkId=206173).  
   
  SQLDUMPERDUMPPATH = { 'os_file_path' | DEFAULT }  
- Der Speicherort, an dem das Hilfsprogramm SQLDumper die Dumpdateien speichert. Weitere Informationen finden Sie unter [SQL Server Dumper-Hilfsprogramm Knowledge Base-Artikel](http://go.microsoft.com/fwlink/?LinkId=206173).  
+ Der Speicherort, an dem das Hilfsprogramm SQLDumper die Dumpdateien speichert. Weitere Informationen finden Sie im [Knowledge Base-Artikel zum SQL Server Dumper-Hilfsprogramm](http://go.microsoft.com/fwlink/?LinkId=206173).  
   
  SQLDUMPERDUMPTIMEOUT = { 'dump_time-out' | DEFAULT }  
- Der Timeoutwert in Millisekunden für die Generierung eines Dumps durch das Hilfsprogramm SQLDumper bei einem SQL Server-Fehler. Der Standardwert ist 0; das bedeutet, dass das Fertigstellen des Dumps nicht zeitlich begrenzt ist. Weitere Informationen finden Sie unter [SQL Server Dumper-Hilfsprogramm Knowledge Base-Artikel](http://go.microsoft.com/fwlink/?LinkId=206173).  
+ Der Timeoutwert in Millisekunden für die Generierung eines Dumps durch das Hilfsprogramm SQLDumper bei einem SQL Server-Fehler. Der Standardwert ist 0; das bedeutet, dass das Fertigstellen des Dumps nicht zeitlich begrenzt ist. Weitere Informationen finden Sie im [Knowledge Base-Artikel zum SQL Server Dumper-Hilfsprogramm](http://go.microsoft.com/fwlink/?LinkId=206173).  
   
  FAILURECONDITIONLEVEL = { 'failure_condition_level' | DEFAULT }  
- Die Bedingungen, unter denen für die SQL Server-Failoverclusterinstanz ein Failover oder Neustart durchgeführt werden soll. Der Standardwert ist 3; das bedeutet, dass für die SQL Server-Ressource bei kritischen Serverfehlern ein Failover oder Neustart durchgeführt wird. Weitere Informationen zu diesen und anderen fehlerbedingungsebenen finden Sie unter [Configure FailureConditionLevel Property Settings](../../sql-server/failover-clusters/windows/configure-failureconditionlevel-property-settings.md).  
+ Die Bedingungen, unter denen für die SQL Server-Failoverclusterinstanz ein Failover oder Neustart durchgeführt werden soll. Der Standardwert ist 3; das bedeutet, dass für die SQL Server-Ressource bei kritischen Serverfehlern ein Failover oder Neustart durchgeführt wird. Weitere Informationen zum Konfigurieren dieser Eigenschaft finden Sie unter [Configure FailureConditionLevel Property Settings (Konfigurieren von FailureConditionLevel-Eigenschafteneinstellungen)](../../sql-server/failover-clusters/windows/configure-failureconditionlevel-property-settings.md).  
   
  HEALTHCHECKTIMEOUT = { 'health_check_time-out' | DEFAULT }  
  Der Timeoutwert, der festlegt, wie lange die Ressourcen-DLL des SQL Server-Datenbankmoduls auf Informationen über den Serverzustand warten soll, bevor eine Instanz von SQL Server als nicht reagierend eingestuft wird. Der Timeoutwert wird in Millisekunden angegeben. Der Standardwert beträgt 60.000 Millisekunden (60 Sekunden).  
   
- **\<Hadr_cluster_context >:: =**  
+ **\<hadr_cluster_context> ::=**  
   
 **Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- HADR-CLUSTERKONTEXT  **=**  { **"***Remote_windows_cluster***"** | LOKALE}  
- Wechselt mit dem HADR-Clusterkontext der Serverinstanz zum angegebenen Windows Server Failover Clustering-Cluster (WSFC). Die *HADR-Clusterkontext* bestimmt, welche Cluster Windows Server Failover Clustering (WSFC) die Metadaten für von der Serverinstanz gehostete verfügbarkeitsreplikate verwaltet. Verwenden Sie die SET HADR CLUSTER CONTEXT-Option nur während einer clusterübergreifenden Migration von [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] zu einer Instanz von [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] oder höher auf einem neuen WSFC-Cluster.  
+ HADR CLUSTER CONTEXT **=** { **'***remote_windows_cluster***'** | LOCAL }  
+ Wechselt mit dem HADR-Clusterkontext der Serverinstanz zum angegebenen Windows Server Failover Clustering-Cluster (WSFC). Der *HADR-Clusterkontext* bestimmt, welcher Windows Server Failover Clustering-Cluster (WSFC) die Metadaten für die von der Serverinstanz gehosteten Verfügbarkeitsreplikate verwaltet. Verwenden Sie die SET HADR CLUSTER CONTEXT-Option nur während einer clusterübergreifenden Migration von [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] zu einer Instanz von [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] oder höher auf einem neuen WSFC-Cluster.  
   
  Sie können mit dem HADR-Clusterkontext nur vom lokalen WSFC-Cluster zu einem Remotecluster und dann zurück vom Remotecluster zum lokalen Cluster wechseln. Der HADR-Clusterkontext kann nur zu einem Remotecluster wechseln, wenn die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] keine Verfügbarkeitsreplikate hostet.  
   
@@ -207,20 +207,20 @@ SQLDUMPEREDUMPFLAGS
  LOCAL  
  Der lokale WSFC-Cluster.  
   
- Weitere Informationen finden Sie unter [ändern die HADR Cluster Context des Server-Instanz &#40; SQLServer &#41; ](../../database-engine/availability-groups/windows/change-the-hadr-cluster-context-of-server-instance-sql-server.md).  
+ Weitere Informationen finden Sie unter [Ändern des HADR-Clusterkontexts der Serverinstanz &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/change-the-hadr-cluster-context-of-server-instance-sql-server.md).  
   
- **\<Buffer_pool_extension >:: =**  
+ **\<buffer_pool_extension>::=**  
   
 **Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  ON  
- Aktiviert die Pufferpoolerweiterungsoption. Diese Option erweitert die Größe des Pufferpools, indem sie nicht flüchtigen Speicher wie Solid State Drives (SSD) verwendet, um nicht modifizierte Datenseiten im Pool beizubehalten. Weitere Informationen zu diesem Feature finden Sie unter [Buffer Pool Extension](../../database-engine/configure-windows/buffer-pool-extension.md). Die pufferpoolerweiterung ist nicht in jeder Edition von SQL Server verfügbar. Weitere Informationen finden Sie unter [Editionen und unterstützte Funktionen für SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+ Aktiviert die Pufferpoolerweiterungsoption. Diese Option erweitert die Größe des Pufferpools, indem sie nicht flüchtigen Speicher wie Solid State Drives (SSD) verwendet, um nicht modifizierte Datenseiten im Pool beizubehalten. Weitere Informationen zu diesem Feature finden Sie im Artikel zur [Pufferpoolerweiterung](../../database-engine/configure-windows/buffer-pool-extension.md). Die Pufferpoolerweiterung ist nicht in jeder Edition von SQL Server verfügbar. Weitere Informationen finden Sie unter [Von den SQL Server 2016-Editionen unterstützte Features](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
  FILENAME = 'os_file_path_and_name'  
  Definiert den Verzeichnispfad und den Namen der Cachedatei der Pufferpoolerweiterung. Die Dateierweiterung muss als .BPE angegeben werden. Sie müssen BUFFER POOL EXTENSION deaktivieren, bevor Sie FILENAME ändern können.  
   
- Größe = *Größe* [ **KB** | MB | GB]  
- Definiert die Größe des Caches. Die Standardgröße wird in KB angegeben. Die Mindestgröße ist die Größe des max. Serverarbeitsspeichers. Die maximale Anzahl ist die 32fache Größe von Max. Serverarbeitsspeicher. Weitere Informationen zu max. Serverarbeitsspeicher finden Sie unter [Sp_configure &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
+ SIZE = *size* [ **KB** | MB | GB ]  
+ Definiert die Größe des Caches. Die Standardgröße wird in KB angegeben. Die Mindestgröße ist die Größe des max. Serverarbeitsspeichers. Die maximale Anzahl ist die 32fache Größe von Max. Serverarbeitsspeicher. Weitere Informationen zum maximalen Serverarbeitsspeicher finden Sie unter [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
   
  Sie müssen BUFFER POOL EXTENSION deaktivieren, bevor Sie die Größe der Datei ändern können. Um eine Größe anzugeben, die kleiner als die aktuelle Größe ist, muss die Instanz von SQL Server neu gestartet werden, um Arbeitsspeicher freizugeben. Andernfalls muss die angegebene Größe größer oder gleich der aktuellen Größe sein.  
   
@@ -230,27 +230,27 @@ SQLDUMPEREDUMPFLAGS
 > [!WARNING]  
 >  Das Deaktivieren der Pufferpoolerweiterung könnte eine negative Auswirkung auf die Serverleistung haben, da die Größe des Pufferpools erheblich reduziert wird.  
   
- **\<Soft-NUMA verwenden >**  
+ **\<soft_numa>**  
 
 **Gilt für**: [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  ON  
- Ermöglicht die automatische Partitionierung zum Aufteilen von großer Hardware-NUMA-Knoten auf kleinere NUMA-Knoten. Ändern des laufenden Werts erfordert einen Neustart des Datenbankmoduls.  
+ Aktiviert die automatische Partitionierung, um große NUMA-Hardwareknoten in kleine NUMA-Knoten aufzuteilen. Das Ändern des ausgeführten Werts erfordert einen Neustart der Datenbank-Engine.  
   
  OFF  
- Deaktiviert die automatische Partitionierung von großen Hardware-NUMA-Knoten in kleinere NUMA-Knoten. Ändern des laufenden Werts erfordert einen Neustart des Datenbankmoduls.  
+ Deaktiviert die automatische Softwarepartitionierung, um große NUMA-Hardwareknoten in kleine NUMA-Knoten aufzuteilen. Das Ändern des ausgeführten Werts erfordert einen Neustart der Datenbank-Engine.  
 
 > [!WARNING]  
-> Es sind Probleme mit dem Verhalten der ALTER SERVER CONFIGURATION-Anweisung mit der SOFT-NUMA-Option und die SQL Server-Agent bezeichnet.  Im folgenden finden die empfohlenen Abfolge der Vorgänge:  
-> 1) Beenden Sie die Instanz von SQL Server-Agent.  
-> 2) Führen Sie die ALTER SERVER CONFGURATION SOFT-NUMA-Option.  
-> 3) Starten Sie SQL Server-Instanz neu.  
-> 4) Starten Sie die Instanz von SQL Server-Agent.  
+> Es gibt bekannte Probleme beim Verhalten der ALTER SERVER CONFIGURATION-Anweisung mit der SOFT NUMA-Option und dem SQL Server-Agent.  Es wird empfohlen, dass Sie folgendermaßen vorgehen:  
+> 1) Beenden Sie die Instanz des SQL Server-Agents.  
+> 2) Führen Sie die Option ALTER SERVER CONFIGURATION SOFT NUMA aus.  
+> 3) Starten Sie die SQL Server-Instanz neu.  
+> 4) Starten Sie die Instanz des SQL Server-Agents wieder.  
   
-**Weitere Informationen:** Wenn eine ALTER SERVER CONFIGURATION SET SOFTNUMA-Befehl ausgeführt wird, bevor der SQL Server-Dienst, klicken Sie dann neu gestartet wird, wenn der SQL Server-Agent-Dienst beendet wird, führen Sie einen Konfigurieren von T-SQL-Befehl, der zurückgesetzt wird die SOFTNUMA Einstellungen sichern, bevor Sie die ALTER SERVER CONFIGURATION Originalwerts. 
+**Weitere Informationen:** Wenn ALTER SERVER CONFIGURATION mit dem Befehl SET SOFTNUMA ausgeführt wird, bevor SQL Server neu gestartet wird, führt der SQL Server Agent beim Beenden den Befehl T-SQL RECONFIGURE aus, der die SOFTNUMA-Einstellung auf die Einstellung vor ALTER SERVER CONFIGURATION zurücksetzt. 
   
 ## <a name="general-remarks"></a>Allgemeine Hinweise  
- Diese Anweisung erfordert keinen Neustart von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], sofern nicht ausdrücklich anders angegeben. Im Fall einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Failoverclusterinstanz ist kein Neustart der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Clusterressource erforderlich.  
+ Diese Anweisung erfordert keinen Neustart von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], wenn dies nicht explizit angegeben wird. Im Fall einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Failoverclusterinstanz ist kein Neustart der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Clusterressource erforderlich.  
   
 ## <a name="limitations-and-restrictions"></a>Einschränkungen  
  Diese Anweisung unterstützt keine DDL-Trigger.  
@@ -260,24 +260,24 @@ SQLDUMPEREDUMPFLAGS
   
  Erfordert die ALTER SERVER STATE-Berechtigung für die Pufferpoolerweiterungsoption.  
   
- Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] Ressourcen-DLL, die unter dem lokalen Systemkonto ausgeführt wird. Aus diesem Grund muss das lokale Systemkonto über Lese- und Schreibzugriff auf den in der Diagnoseprotokolloption angegebenen Pfad verfügen.  
+ Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../../includes/ssde-md.md)]-Ressourcen-DLL wird unter dem lokalen Systemkonto ausgeführt. Aus diesem Grund muss das lokale Systemkonto über Lese- und Schreibzugriff auf den in der Diagnoseprotokolloption angegebenen Pfad verfügen.  
   
 ## <a name="examples"></a>Beispiele  
   
 |Kategorie|Funktionssyntaxelemente|  
 |--------------|------------------------------|  
 |[Festlegen der Prozessaffinität](#Affinity)|CPU • NUMANODE • AUTO|  
-|[Festlegen von diagnoseprotokolloptionen](#Diagnostic)|ON • OFF • PATH • MAX_SIZE|  
-|[Festlegen der failoverclustereigenschaften](#Failover)|HealthCheckTimeout|  
-|[Ändern des clusterkontexts eines verfügbarkeitsreplikats](#ChangeClusterContextExample)|**"** *Windows-Cluster* **"**|  
-|[Festlegen der pufferpoolerweiterung](#BufferPoolExtension)|BUFFER POOL EXTENSION|  
+|[Festlegen der Optionen des Diagnoseprotokolls](#Diagnostic)|ON • OFF • PATH • MAX_SIZE|  
+|[Festlegen der Failoverclustereigenschaften](#Failover)|HealthCheckTimeout|  
+|[Ändern des Clusterkontexts eines Verfügbarkeitsreplikats](#ChangeClusterContextExample)|**'** *windows_cluster* **'**|  
+|[Festlegen der Pufferpoolerweiterung](#BufferPoolExtension)|BUFFER POOL EXTENSION|  
   
-###  <a name="Affinity"></a>Festlegen der Prozessaffinität  
+###  <a name="Affinity"></a> Festlegen der Prozessaffinität  
  Die Beispiele in diesem Abschnitt veranschaulichen, wie die Prozessaffinität für CPUs und NUMA-Knoten festgelegt wird. In den Beispielen wird davon ausgegangen, dass der Server 256 CPUs umfasst, die in vier Gruppen von jeweils 16 NUMA-Knoten unterteilt sind. Den NUMA-Knoten oder CPUs sind keine Threads zugewiesen.  
   
--   Gruppe "0": NUMA-Knoten 0 bis 3, CPUs 0 bis 63  
--   Gruppe 1: 4 bis 7, CPUs 64 bis 127 NUMA-Knoten  
--   Gruppe 2: 8 bis 12, CPUs 128 bis 191 NUMA-Knoten  
+-   Gruppe 0: NUMA-Knoten 0 bis 3, CPUs 0 bis 63  
+-   Gruppe 1: NUMA-Knoten 4 bis 7, CPUs 64 bis 127  
+-   Gruppe 2: NUMA-Knoten 8 bis 12, CPUs 128 bis 191  
 -   Gruppe 3: NUMA-Knoten 13 bis 16, CPUs 192 bis 255  
   
 #### <a name="a-setting-affinity-to-all-cpus-in-groups-0-and-2"></a>A. Festlegen der Affinität für alle CPUs in den Gruppen 0 und 2  
@@ -289,7 +289,7 @@ SET PROCESS AFFINITY CPU=0 TO 63, 128 TO 191;
 ```  
   
 #### <a name="b-setting-affinity-to-all-cpus-in-numa-nodes-0-and-7"></a>B. Festlegen der Affinität für alle CPUs in den NUMA-Knoten 0 und 7  
- Im folgenden Beispiel wird die CPU-Affinität für Knoten `0` und `7` nur.  
+ Im folgenden Beispiel wird veranschaulicht, wie die CPU-Affinität lediglich auf die Knoten `0` und `7` festgelegt wird.  
   
 ```  
 ALTER SERVER CONFIGURATION   
@@ -355,7 +355,7 @@ ALTER SERVER CONFIGURATION
 SET DIAGNOSTICS LOG MAX_SIZE = 10 MB;  
 ```  
   
-###  <a name="Failover"></a>Festlegen der failoverclustereigenschaften  
+###  <a name="Failover"></a> Festlegen der Failoverclustereigenschaften  
   
 **Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
@@ -370,7 +370,7 @@ SET FAILOVER CLUSTER PROPERTY HealthCheckTimeout = 15000;
 ```  
   
 ###  <a name="ChangeClusterContextExample"></a> B. Ändern des Clusterkontexts eines Verfügbarkeitsreplikats  
- Im folgenden Beispiel wird der HADR-Clusterkontext der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] geändert. Angeben des wsfc-zielclusters `clus01`, im Beispiel wird der vollständige clusterobjektname, `clus01.xyz.com`.  
+ Im folgenden Beispiel wird der HADR-Clusterkontext der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] geändert. Im Beispiel wird der vollständige Clusterobjektname, `clus01`, angegeben, um den Ziel-WSFC-Cluster `clus01.xyz.com` anzugeben.  
   
 ```  
 ALTER SERVER CONFIGURATION SET HADR CLUSTER CONTEXT = 'clus01.xyz.com';  
@@ -408,12 +408,12 @@ GO
   
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Soft-NUMA &#40; SQLServer &#41;](../../database-engine/configure-windows/soft-numa-sql-server.md)   
- [Ändern des HADR-Clusterkontexts der Serverinstanz &#40; SQLServer &#41;](../../database-engine/availability-groups/windows/change-the-hadr-cluster-context-of-server-instance-sql-server.md)   
- [DM_OS_SCHEDULERS &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md)   
- [dm_os_memory_nodes &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-nodes-transact-sql.md)   
- [Sys.dm_os_buffer_pool_extension_configuration &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-buffer-pool-extension-configuration-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Soft-NUMA &#40;SQL Server&#41;](../../database-engine/configure-windows/soft-numa-sql-server.md)   
+ [Ändern des HADR-Clusterkontexts der Serverinstanz &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/change-the-hadr-cluster-context-of-server-instance-sql-server.md)   
+ [sys.dm_os_schedulers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md)   
+ [sys.dm_os_memory_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-nodes-transact-sql.md)   
+ [sys.dm_os_buffer_pool_extension_configuration &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-buffer-pool-extension-configuration-transact-sql.md)   
  [Pufferpoolerweiterung](../../database-engine/configure-windows/buffer-pool-extension.md)  
   
   

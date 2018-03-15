@@ -1,5 +1,5 @@
 ---
-title: DROP FULLTEXT STOPLIST (Transact-SQL) | Microsoft Docs
+title: DROP FULLTEXT STOPLIST (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -57,23 +57,23 @@ DROP FULLTEXT STOPLIST stoplist_name
  *stoplist_name*  
  Der Name der Volltextstoppliste, die aus der Datenbank gelöscht werden soll.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  DROP FULLTEXT STOPLIST schlägt fehl, wenn Volltextindizes auf die Volltextstoppliste verweisen, die gelöscht wird.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Zum Löschen einer Stoppliste benötigt eine DROP-Berechtigung für die Stoppliste oder die Mitgliedschaft in der **Db_owner** oder **Db_ddladmin** festen Datenbankrollen.  
+ Zum Löschen einer Stoppliste ist eine DROP-Berechtigung für die Stoppliste oder eine Mitgliedschaft in der festen Datenbankrolle **db_owner** oder **db_ddladmin** erforderlich.  
   
 ## <a name="examples"></a>Beispiele  
- Das folgende Beispiel löscht eine Volltext-Stoppliste mit dem Namen `myStoplist`.  
+ Im folgenden Beispiel wird eine Volltextstoppliste mit dem Namen `myStoplist` gelöscht.  
   
 ```  
 DROP FULLTEXT STOPLIST myStoplist;  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [ALTER FULLTEXT STOPLIST &#40; Transact-SQL &#41;](../../t-sql/statements/alter-fulltext-stoplist-transact-sql.md)   
- [Erstellen Sie FULLTEXT STOPLIST &#40; Transact-SQL &#41;](../../t-sql/statements/create-fulltext-stoplist-transact-sql.md)   
- [fulltext_stoplists &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-fulltext-stoplists-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [ALTER FULLTEXT STOPLIST &#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-stoplist-transact-sql.md)   
+ [CREATE FULLTEXT STOPLIST &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-stoplist-transact-sql.md)   
+ [sys.fulltext_stoplists &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-stoplists-transact-sql.md)   
  [sys.fulltext_stopwords &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-stopwords-transact-sql.md)  
   
   

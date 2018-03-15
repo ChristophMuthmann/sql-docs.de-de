@@ -1,5 +1,5 @@
 ---
-title: '@@PACK_RECEIVED (Transact-SQL) | Microsoft Docs'
+title: '@@PACK_RECEIVED (Transact-SQL) | Microsoft-Dokumentation'
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -49,8 +49,8 @@ ms.lasthandoff: 11/21/2017
 ## <a name="return-types"></a>Rückgabetypen  
  **integer**  
   
-## <a name="remarks"></a>Hinweise  
- Zum Anzeigen eines Berichts mit mehreren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Statistiken, wie Pakete gesendet und empfangen, führen **Sp_monitor**.  
+## <a name="remarks"></a>Remarks  
+ Führen Sie **sp_monitor** aus, um einen Bericht anzuzeigen, der mehrere [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Statistiken enthält, einschließlich versandter und erhaltener Pakete.  
   
 ## <a name="examples"></a>Beispiele  
  Das folgende Beispiel zeigt die Verwendung von `@@PACK_RECEIVED`.  
@@ -67,7 +67,7 @@ Packets Received
 128  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [@@PACK_SENT](../../t-sql/functions/pack-sent-transact-sql.md)   
  [sp_monitor](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md)   
  [Statistische Systemfunktionen](../../t-sql/functions/system-statistical-functions-transact-sql.md)  

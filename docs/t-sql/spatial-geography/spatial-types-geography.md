@@ -1,5 +1,5 @@
 ---
-title: Geography (Transact-SQL) | Microsoft Docs
+title: geography (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -31,14 +31,14 @@ ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="spatial-types---geography"></a>Räumliche Typen - Geographie
+# <a name="spatial-types---geography"></a>Räumliche Typen - geography
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Der räumlichkeitsdatentyp **Geography**, wird als .NET common Language Runtime (CLR)-Datentyp in implementiert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Dieser Typ stellt Daten in einem Erdkugel-Koordinatensystem dar. Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **geography** data type stores ellipsoidal (round-earth) data, such as GPS latitude and longitude coordinates.  
+  Der Räumlichkeitsdatentyp **geography** wird in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] als .NET-CLR-Datentyp (Common Language Runtime) implementiert. Dieser Typ stellt Daten in einem Erdkugel-Koordinatensystem dar. Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **geography** data type stores ellipsoidal (round-earth) data, such as GPS latitude and longitude coordinates.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]unterstützt einen Satz von Methoden für die **Geography** räumlichen Datentyp. Dazu gehören Methoden für **Geography** durch den Standard Open Geospatial Consortium (OGC) und einen Satz von definiert sind, [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Erweiterungen dieses Standards.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt einen Satz von Methoden für den räumlichen **geography**-Datentyp. Dazu gehören Methoden für **geography**, die im OGC-Standard (Open Geospatial Consortium) sowie in einer Gruppe von [!INCLUDE[msCoName](../../includes/msconame-md.md)]-Erweiterungen dieses Standards definiert sind.  
  
- Die Fehlertoleranz für die **Geography** Methoden kann so groß wie 1. 0e-7 * Blöcke. Die Wertebereiche finden Sie in die ungefähre maximale Entfernung zwischen Punkten von der **Geography**Objekt.
+ Die Fehlertoleranz für die **geography**-Methoden kann bis zu 1,0e-7 * Erweiterungen groß sein. Die Erweiterungen verweisen auf den ungefähren maximalen Abstand zwischen Punkten des **geography**-Objekts.
   
 
 ## <a name="registering-the-geography-type"></a>Registrieren des geography-Datentyps  
@@ -47,7 +47,7 @@ ms.lasthandoff: 01/25/2018
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="a-showing-how-to-add-and-query-geography-data"></a>A. Darstellung des Hinzufügens und Abfragens von Geografiedaten  
- Die folgenden Beispiele zeigen, wie Geografiedaten hinzugefügt und abgefragt werden. Im erste Beispiel erstellt eine Tabelle mit einer Identity-Spalte und eine `geography` Spalte `GeogCol1`. Eine dritte Spalte rendert die `geography` -Spalte als Darstellung im Open Geospatial Consortium (OGC) WKT-Format und verwendet die `STAsText()` -Methode. Dann werden zwei Zeilen eingefügt: Eine Zeile enthält eine `LineString` -Instanz des Typs `geography`und die andere eine `Polygon` -Instanz.  
+ Die folgenden Beispiele zeigen, wie Geografiedaten hinzugefügt und abgefragt werden. Im ersten Beispiel wird eine Tabelle mit einer Identitätsspalte und der `geography`-Spalte `GeogCol1` erstellt. Eine dritte Spalte rendert die `geography` -Spalte als Darstellung im Open Geospatial Consortium (OGC) WKT-Format und verwendet die `STAsText()` -Methode. Dann werden zwei Zeilen eingefügt: Eine Zeile enthält eine `LineString` -Instanz des Typs `geography`und die andere eine `Polygon` -Instanz.  
   
 ```  
 IF OBJECT_ID ( 'dbo.SpatialTable', 'U' ) IS NOT NULL   
@@ -83,7 +83,7 @@ SELECT @result.STAsText();
 ```  
   
 ### <a name="c-using-geography-in-a-computed-column"></a>C. Verwenden des geography-Typs in einer berechneten Spalte  
- Das folgende Beispiel erstellt eine Tabelle mit einer permanenten berechneten Spalte mit einem **Geography** Typ.  
+ Im folgenden Beispiel wird eine Tabelle mit einer persistierten berechneten Spalte mit einem **geography**-Typ erstellt.  
   
 ```  
 IF OBJECT_ID ( 'dbo.SpatialTable', 'U' ) IS NOT NULL   
@@ -98,7 +98,7 @@ CREATE TABLE SpatialTable
 )  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Räumliche Daten &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md)   
 
   

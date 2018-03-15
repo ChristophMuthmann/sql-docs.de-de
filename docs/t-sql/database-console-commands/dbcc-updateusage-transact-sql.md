@@ -1,5 +1,5 @@
 ---
-title: DBCC UPDATEUSAGE (Transact-SQL) | Microsoft Docs
+title: DBCC UPDATEUSAGE (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 11/14/2017
 ms.prod: sql-non-specified
@@ -66,9 +66,9 @@ DBCC UPDATEUSAGE
   
 ## <a name="arguments"></a>Argumente  
 *database_name* | *database_id* | 0  
-Name oder ID der Datenbank, deren Statistiken zur Speicherverwendung mitgeteilt und korrigiert werden sollen. Wird 0 angegeben, wird die aktuelle Datenbank verwendet. Datenbanknamen müssen den Regeln für entsprechen [Bezeichner](../../relational-databases/databases/database-identifiers.md).  
+Name oder ID der Datenbank, deren Statistiken zur Speicherverwendung mitgeteilt und korrigiert werden sollen. Wird 0 angegeben, wird die aktuelle Datenbank verwendet. Datenbanknamen müssen den Regeln für [Bezeichner](../../relational-databases/databases/database-identifiers.md) entsprechen.  
   
-*TABLE_NAME* | *Table_id* | *View_name* | *View_id*  
+*table_name* | *table_id* | *view_name* | *view_id*  
 Name oder ID der Tabelle oder indizierten Sicht, deren Statistiken zur Speicherverwendung mitgeteilt und korrigiert werden sollen. Tabellen- und Sichtnamen müssen den Regeln für Bezeichner entsprechen.  
   
 *index_id* | *index_name*  
@@ -83,7 +83,7 @@ Alle Informationsmeldungen werden unterdrückt.
 COUNT_ROWS  
 Gibt an, dass die row count-Spalte mit der aktuellen Anzahl von Tabellen- oder Sichtzeilen aktualisiert wird.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
 DBCC UPDATEUSAGE korrigiert die Anzahl der Zeilen, verwendeten Seiten, reservierten Seiten, Blattseiten und Datenseiten jeder Partition in Tabellen und Indizes. Wurden keine Ungenauigkeiten in den Systemtabellen festgestellt, werden von DBCC UPDATEUSAGE keine Daten zurückgegeben. Wurden Ungenauigkeiten gefunden und korrigiert und wurde WITH NO_INFOMSGS nicht verwendet, gibt DBCC UPDATEUSAGE die Zeilen und Spalten zurück, die in den Systemtabellen aktualisiert wurden.
   
 DBCC CHECKDB wurde verbessert, sodass nun erkannt wird, wenn Seiten- oder Zeilenzähler negativ werden. Wenn dies festgestellt wird, enthält die Ausgabe von DBCC CHECKDB eine Warnung und die Empfehlung, DBCC UPDATEUSAGE auszuführen, um das Problem zu beseitigen.
@@ -120,7 +120,7 @@ GO
 ```  
   
 ### <a name="c-updating-page-or-row-counts-or-both-for-the-employee-table"></a>C. Aktualisieren von Seiten- oder Zeilenzahlen oder beidem für die Employee-Tabelle  
-Das folgende Beispiel meldet aktualisierte Seiten- oder Count-Informationen für die `Employee` -Tabelle in der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] Datenbank.
+Im folgenden Beispiel werden aktualisierte Informationen zur Seiten- oder Zeilenzahl für die `Employee`-Tabelle in der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]-Datenbank gemeldet.
   
 ```sql
 DBCC UPDATEUSAGE (AdventureWorks2012,'HumanResources.Employee');  
@@ -135,7 +135,7 @@ DBCC UPDATEUSAGE (AdventureWorks2012, 'HumanResources.Employee', IX_Employee_Org
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
 [sp_spaceused &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)  
 [UPDATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md)

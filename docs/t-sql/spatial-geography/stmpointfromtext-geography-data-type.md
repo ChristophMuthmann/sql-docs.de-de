@@ -1,5 +1,5 @@
 ---
-title: STMPointFromText (Geography-Datentyp) | Microsoft Docs
+title: STMPointFromText (geography-Datentyp) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 07/30/2017
 ms.prod: sql-non-specified
@@ -45,23 +45,23 @@ STMPointFromText ( 'multipoint_tagged_text', SRID )
   
 ## <a name="arguments"></a>Argumente  
  *multipoint_tagged_text*  
- Ist die WKT-Darstellung der **GeographyMultiPoint** Instanz, die Sie zurückgeben möchten. *Multipoint_tagged_text* ist ein **nvarchar(max)** Ausdruck.  
+ Die WKT-Darstellung der **geographyMultiPoint**-Instanz, die zurückgegeben werden soll. *multipoint_tagged_text* ist ein **nvarchar(max)**-Ausdruck.  
   
  *SRID*  
- Ist ein **Int** Ausdruck darstellt, die räumliche verweisen ID (SRID), der die **GeographyMultiPoint** Instanz, die Sie zurückgeben möchten.  
+ Ein **int**-Ausdruck, der die SRID (Spatial Reference ID) der **geographyMultiPoint**-Instanz darstellt, die Sie zurückgeben möchten.  
   
 ## <a name="return-types"></a>Rückgabetypen  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Rückgabetyp: **Geography**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Rückgabetyp: **geography**  
   
  CLR-Rückgabetyp: **SqlGeography**  
   
  OGC-Typ: **MultiPoint**  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Diese Methode löst eine **FormatException** aus, wenn die Eingabe nicht korrekt formatiert ist.  
   
 ## <a name="examples"></a>Beispiele  
- Im folgenden Beispiel wird `STMPointFromText()` zum Erstellen einer `geography` Instanz.  
+ Im folgenden Beispiel wird `STMPointFromText()` verwendet, um eine `geography`-Instanz zu erstellen.  
   
 ```  
 DECLARE @g geography;   
@@ -69,7 +69,7 @@ SET @g = geography::STMPointFromText('MULTIPOINT(-122.360 47.656, -122.343 47.65
 SELECT @g.ToString();  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Statische geography-Methoden des OGC](../../t-sql/spatial-geography/ogc-static-geography-methods.md)  
   
   

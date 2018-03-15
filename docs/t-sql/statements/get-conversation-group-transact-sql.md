@@ -1,5 +1,5 @@
 ---
-title: GET CONVERSATION GROUP (Transact-SQL) | Microsoft Docs
+title: GET CONVERSATION GROUP (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
@@ -66,27 +66,27 @@ ms.lasthandoff: 01/25/2018
  Gibt an, dass die GET CONVERSATION GROUP-Anweisung darauf wartet, dass eine Nachricht in der Warteschlange eintrifft, wenn zurzeit keine Nachrichten vorhanden sind.  
   
  *@conversation_group_id*  
- Eine Variable zum Speichern der Konversationsgruppen-ID, die von der GET CONVERSATION GROUP-Anweisung zurückgegeben wird. Die Variable muss vom Typ **"uniqueidentifier"**. Sind keine Konversationsgruppen verfügbar, wird die Variable auf NULL festgelegt.  
+ Eine Variable zum Speichern der Konversationsgruppen-ID, die von der GET CONVERSATION GROUP-Anweisung zurückgegeben wird. Die Variable muss vom Typ **uniqueidentifier** sein. Sind keine Konversationsgruppen verfügbar, wird die Variable auf NULL festgelegt.  
   
  FROM  
  Gibt die Warteschlange an, aus der die Konversationsgruppe abgerufen werden soll.  
   
  *database_name*  
- Der Name der Datenbank, die die Warteschlange enthält, aus der die Konversationsgruppe abgerufen werden soll. Wenn kein *Database_name* angegeben ist, wird der Standardwert ist der aktuellen Datenbank.  
+ Der Name der Datenbank, die die Warteschlange enthält, aus der die Konversationsgruppe abgerufen werden soll. Wenn *database_name* nicht bereitgestellt wird, wird standardmäßig die aktuelle Datenbank verwendet.  
   
  *schema_name*  
- Der Name des Schemas, das die Warteschlange besitzt, aus der die Konversationsgruppe abgerufen werden soll. Wenn kein *Schema_name* angegeben ist, wird der Standardwert ist das Standardschema für den aktuellen Benutzer.  
+ Der Name des Schemas, das die Warteschlange besitzt, aus der die Konversationsgruppe abgerufen werden soll. Wenn *schema_name* nicht angegeben wird, wird standardmäßig das Standardschema für den aktuellen Benutzer verwendet.  
   
  *queue_name*  
  Der Name der Warteschlange, aus der die Konversationsgruppe abgerufen werden soll.  
   
- TIMEOUT *Timeout*  
- Gibt die Zeitdauer (in Millisekunden) an, die Service Broker auf das Eintreffen einer Nachricht in der Warteschlange wartet. Diese Klausel darf nur zusammen mit der WAITFOR-Klausel verwendet werden. Wenn eine Anweisung, die WAITFOR verwendet diese Klausel nicht enthalten ist oder die *Timeout* ist-1, die Wartezeit ist unbegrenzt. Wenn es sich bei Ablauf des Timeouts legt GET CONVERSATION GROUP die  *@conversation_group_id*  -Variable auf NULL.  
+ TIMEOUT *timeout*  
+ Gibt die Zeitdauer (in Millisekunden) an, die Service Broker auf das Eintreffen einer Nachricht in der Warteschlange wartet. Diese Klausel darf nur zusammen mit der WAITFOR-Klausel verwendet werden. Wenn eine Anweisung, die WAITFOR verwendet, diese Klausel nicht einschließt, oder wenn *timeout* den Wert -1 aufweist, unterliegt die Wartezeit keiner Begrenzung. Nach Ablauf des Timeouts legt GET CONVERSATION GROUP den Wert der *@conversation_group_id*-Variablen auf NULL fest.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
   
 > [!IMPORTANT]  
->  Wenn die GET CONVERSATION GROUP-Anweisung nicht die erste Anweisung in einem Batch oder einer gespeicherten Prozedur ist, muss die vorhergehende Anweisung mit einem Semikolon abgeschlossen werden (**;**), wird die [!INCLUDE[tsql](../../includes/tsql-md.md)] anweisungsabschlusszeichen.  
+>  Falls die GET CONVERSATION GROUP-Anweisung nicht die erste Anweisung in einem Batch oder einer gespeicherten Prozedur ist, muss die vorherige Anweisung mit einem Semikolon (**;**) enden, dem Abschlusszeichen für [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen.  
   
  Steht die in der Warteschlange angegebene GET CONVERSATION GROUP-Anweisung nicht zur Verfügung, wird für die Anweisung ein [!INCLUDE[tsql](../../includes/tsql-md.md)]-Fehler erzeugt.  
   
@@ -143,8 +143,8 @@ GET CONVERSATION GROUP @conversation_group_id
 FROM AdventureWorks.dbo.ExpenseQueue ;  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [BEGIN DIALOG CONVERSATION &#40; Transact-SQL &#41;](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
- [MOVE CONVERSATION &#40; Transact-SQL &#41;](../../t-sql/statements/move-conversation-transact-sql.md)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [BEGIN DIALOG CONVERSATION &#40;Transact-SQL&#41;](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
+ [MOVE CONVERSATION &#40;Transact-SQL&#41;](../../t-sql/statements/move-conversation-transact-sql.md)  
   
   

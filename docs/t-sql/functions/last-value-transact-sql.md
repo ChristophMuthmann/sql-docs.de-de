@@ -1,5 +1,5 @@
 ---
-title: LAST_VALUE (Transact-SQL) | Microsoft Docs
+title: LAST_VALUE (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 10/20/2015
 ms.prod: sql-non-specified
@@ -48,16 +48,16 @@ LAST_VALUE ( [scalar_expression )
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *"scalar_expression"*  
- Der zurückzugebende Wert. *"scalar_expression"* kann eine Spalte, Unterabfrage oder ein anderer Ausdruck, der sich in einem einzelnen Wert ergibt. Andere analytische Funktionen sind nicht zulässig.  
+ *scalar_expression*  
+ Der zurückzugebende Wert. *scalar_expression* kann eine Spalte, eine Unterabfrage oder ein anderer Ausdruck sein, durch die sich ein einzelner Wert ergibt. Andere analytische Funktionen sind nicht zulässig.  
   
- ÜBER **(** [ *Partition_by_clause* ] *Order_by_clause* [ *Rows_range_clause* ] **)**  
- *Partition_by_clause* teilt das Resultset, das von der FROM-Klausel erstellt wird, in Partitionen, die auf die die Funktion angewendet wird. Wird dies nicht angegeben, verarbeitet die Funktion alle Zeilen des Abfrageresultsets als einzelne Gruppe.  
+ OVER **(**[*partition_by_clause*] *order_by_clause* [*rows_range_clause*] **)**  
+ *partition_by_clause* unterteilt das von der FROM-Klausel erzeugte Resultset in Partitionen, auf die die Funktion angewendet wird. Wird dies nicht angegeben, verarbeitet die Funktion alle Zeilen des Abfrageresultsets als einzelne Gruppe.  
   
- *Order_by_clause* bestimmt die Reihenfolge der Daten, bevor die Funktion angewendet wird. Die *Order_by_clause* ist erforderlich. *Rows_range_clause* weiter schränkt die Zeilen in der Partition durch Angabe der Start- und Endpunkt. Weitere Informationen finden Sie unter [Klausel "OVER" &#40; Transact-SQL &#41; ](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ *order_by_clause* bestimmt die Reihenfolge der Daten, bevor die Funktion angewendet wird. *order_by_clause* ist erforderlich. *rows_range_clause* schränkt die Zeilen innerhalb der Partition weiter ein, indem Ausgangs- und Endpunkte angegeben werden. Weitere Informationen finden Sie unter [OVER-Klausel &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
 ## <a name="return-types"></a>Rückgabetypen  
- Ist vom selben Typ wie *"scalar_expression"*.  
+ Entspricht dem Typ von *scalar_expression*.  
   
 ## <a name="general-remarks"></a>Allgemeine Hinweise  
  LAST_VALUE ist nicht deterministisch. Weitere Informationen finden Sie unter [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).  
@@ -108,7 +108,7 @@ Information Services        Trenary                 50.4808      2003-01-12   20
 ### <a name="b-using-firstvalue-and-lastvalue-in-a-computed-expression"></a>B. Verwenden von FIRST_VALUE und LAST_VALUE in einem berechneten Ausdruck  
  Im folgenden Beispiel werden die FIRST_VALUE-Funktion und die LAST_VALUE-Funktion in berechneten Ausdrücken verwendet, um den Unterschied zwischen den Verkaufszahlen für das laufende Quartal und das erste bzw. letzte Quartal des Jahres für eine bestimmte Anzahl von Mitarbeitern aufzuzeigen. Die FIRST_VALUE-Funktion gibt den Verkaufszahlenwert für das erste Quartal des Jahres zurück und subtrahiert diesen von den Verkaufszahlen für das aktuelle Quartal. Der Wert wird in der abgeleiteten Spalte mit dem Titel "DifferenceFromFirstQuarter" zurückgegeben. Für das erste Quartal eines Jahres ist der Wert der Spalte "DifferenceFromFirstQuarter" 0. Die LAST_VALUE-Funktion gibt den Verkaufszahlenwert für das letzte Quartal des Jahres zurück und subtrahiert diesen von den Verkaufszahlen für das aktuelle Quartal. Der Wert wird in der abgeleiteten Spalte mit dem Titel "DifferenceFromLastQuarter" zurückgegeben. Für das letzte Quartal eines Jahres ist der Wert der Spalte "DifferenceFromLastQuarter" 0.  
   
- Die Klausel "RANGE BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING" muss in diesem Beispiel für die Werte ungleich NULL in der Spalte "DifferenceFromLastQuarter" zurückgegeben werden, wie unten dargestellt. Der Standardbereich lautet "RANGE BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW". In diesem Beispiel führt die Verwendung dieses Standardbereichs (oder ausschließlich eines Bereichs, wodurch der Standardbereich verwendet wird) dazu, dass Nullen (0) in der Spalte "DifferenceFromLastQuarter" zurückgegeben werden. Weitere Informationen finden Sie unter [Klausel "OVER" &#40; Transact-SQL &#41; ](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ Die Klausel "RANGE BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING" muss in diesem Beispiel für die Werte ungleich NULL in der Spalte "DifferenceFromLastQuarter" zurückgegeben werden, wie unten dargestellt. Der Standardbereich lautet "RANGE BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW". In diesem Beispiel führt die Verwendung dieses Standardbereichs (oder ausschließlich eines Bereichs, wodurch der Standardbereich verwendet wird) dazu, dass Nullen (0) in der Spalte "DifferenceFromLastQuarter" zurückgegeben werden. Weitere Informationen finden Sie unter [OVER-Klausel &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
 ```  
 USE AdventureWorks2012;  

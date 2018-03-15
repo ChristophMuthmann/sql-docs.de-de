@@ -1,5 +1,5 @@
 ---
-title: Point (Geography-Datentyp) | Microsoft Docs
+title: Point (geography-Datentyp) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 07/30/2017
 ms.prod: sql-non-specified
@@ -35,7 +35,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="point-geography-data-type"></a>Point (geography-Datentyp)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Erstellt eine **Geography** Instanz darstellt eine **Punkt** Instanz ihren Werten Breiten- und Längengrad sowie spatial Reference ID (SRID)).
+Erstellt eine **geography**-Instanz, die mit ihren Breitengrad- und Längengradwerten sowie der SRID (Spatial Reference ID) eine **Point**-Instanz darstellt.
   
 ## <a name="syntax"></a>Syntax  
   
@@ -46,16 +46,16 @@ Point ( Lat, Long, SRID )
   
 ## <a name="arguments"></a>Argumente  
  *Lat*  
- Ist eine **"float"** Ausdruck, der die X-Koordinate des darstellt der **Punkt** generiert wird.  
+ Ein **float**-Ausdruck, der die X-Koordinate der zu erstellenden **Point**-Instanz darstellt.  
   
  *Long*  
- Ist eine **"float"** Ausdruck, der die y-Koordinate des darstellt der **Punkt** generiert wird. Weitere Informationen zu gültigen Breiten- und längengradwerte finden Sie unter [Punkt](../../relational-databases/spatial/point.md).  
+ Ein **float**-Ausdruck, der die Y-Koordinate der zu erstellenden **Point**-Instanz darstellt. Weitere Informationen zu gültigen Breiten- und Längenwerten finden Sie unter [Point](../../relational-databases/spatial/point.md).  
   
  *SRID*  
- Ist ein **Int** Ausdruck, der die SRID der darstellt, die **Geography** Instanz, die Sie zurückgeben möchten.  
+ Ein **int**-Ausdruck, der die SRID der **geography**-Instanz darstellt, die Sie zurückgeben möchten.  
   
 ## <a name="return-types"></a>Rückgabetypen  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Rückgabetyp: **Geography**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Rückgabetyp: **geography**  
   
  CLR-Rückgabetyp: **SqlGeography**  
   
@@ -63,7 +63,7 @@ Point ( Lat, Long, SRID )
 >  Argumente für die Punktemethode (Geography-Datentyp) besitzen umgekehrte Koordinaten im Vergleich zu WKT.  
   
 ## <a name="examples"></a>Beispiele  
- Im folgenden Beispiel wird `Point()` zum Erstellen einer `geography` Instanz.  
+ Im folgenden Beispiel wird `Point()` verwendet, um eine `geography`-Instanz zu erstellen.  
   
 ```  
 DECLARE @g geography;   
@@ -71,7 +71,7 @@ SET @g = geography::Point(47.65100, -122.34900, 4326)
 SELECT @g.ToString();  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Erweiterte statische geography-Methoden](../../t-sql/spatial-geography/extended-static-geography-methods.md)  
   
   

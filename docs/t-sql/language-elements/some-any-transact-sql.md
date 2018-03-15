@@ -1,5 +1,5 @@
 ---
-title: EINIGE | Alle (Transact-SQL) | Microsoft Docs
+title: SOME | ANY (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -55,7 +55,7 @@ scalar_expression { = | < > | ! = | > | > = | ! > | < | < = | ! < }
   
 ## <a name="arguments"></a>Argumente  
  *scalar_expression*  
- Ist ein beliebiger gültiger [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md).  
+ Ein gültiger [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md)  
   
  { = | <> | != | > | >= | !> | < | <= | !< }  
  Ein gültiger Vergleichsoperator.  
@@ -64,16 +64,16 @@ scalar_expression { = | < > | ! = | > | > = | ! > | < | < = | ! < }
  Legt fest, dass ein Vergleich durchgeführt werden soll.  
   
  *subquery*  
- Ist eine Unterabfrage mit einem Resultset, das aus einer Spalte besteht. Der Datentyp der zurückgegebenen Spalte muss denselben Datentyp wie *"scalar_expression"*.  
+ Ist eine Unterabfrage mit einem Resultset, das aus einer Spalte besteht. Der Datentyp der zurückgegebenen Spalte muss mit dem Datentyp von *scalar_expression* übereinstimmen.  
   
 ## <a name="result-types"></a>Ergebnistypen  
  **Boolean**  
   
 ## <a name="result-value"></a>Ergebniswert  
- SOME oder ANY gibt **"true"** Wenn der angegebene Vergleich "true" ist für ein beliebiges Paar (*"scalar_expression"***,***x*), in denen *x* ist ein Wert in der einspaltigen Resultset; andernfalls gibt **"false"**.  
+ SOME oder ANY geben **TRUE** zurück, wenn der angegebene Vergleich für ein Paar (*scalar_expression***,***x*) TRUE ergibt, wenn *x* ein Wert im Einspaltensatz ist. Andernfalls wird **FALSE** zurückgegeben.  
   
-## <a name="remarks"></a>Hinweise  
- SOME erfordert, dass die *"scalar_expression"* auf mindestens ein von der Unterabfrage zurückgegebenen Wert positiv verglichen. Für Anweisungen, benötigen die *"scalar_expression"* positiv zu den einzelnen Werten verglichen, die von der Unterabfrage zurückgegeben wird, finden Sie unter [alle &#40; Transact-SQL &#41; ](../../t-sql/language-elements/all-transact-sql.md). Für die Instanz, wenn die Unterabfrage die Werte 2 und 3 zurückgibt *"scalar_expression"* = SOME (Unterabfrage) für "true" ausgewertet einen *Scalar_express* von 2. Wenn die Unterabfrage die Werte 2 und 3 zurückgibt *"scalar_expression"* = ALL (Unterabfrage) als "false" ausgewertet, da einige der Werte der Unterabfrage (der Wert von 3) die Kriterien des Ausdrucks nicht erfüllen.  
+## <a name="remarks"></a>Remarks  
+ SOME erfordert, dass *scalar_expression* mit mindestens einem von der Unterabfrage zurückgegebenen Wert positiv verglichen wird. Anweisungen, die erfordern, dass *scalar_expression* mit jedem von der Unterabfrage zurückgegebenen Wert positiv verglichen wird, finden Sie unter [ALL &#40;Transact-SQL&#41;](../../t-sql/language-elements/all-transact-sql.md). Wenn die Unterabfrage beispielsweise die Werte 2 und 3 zurückgibt, ergibt *scalar_expression* = SOME (Unterabfrage) für *scalar_express* = 2 TRUE. Wenn die Unterabfrage beispielsweise die Werte 2 und 3 zurückgibt, ergibt *scalar_expression* = ALL (Unterabfrage) FALSE, da einige Werte der Unterabfrage (der Wert 3) die Kriterien des Ausdrucks nicht erfüllen.  
   
 ## <a name="examples"></a>Beispiele  
   
@@ -109,7 +109,7 @@ PRINT 'FALSE' ;
 ```  
   
 ### <a name="b-running-a-practical-example"></a>B. Ausführen eines praktischen Beispiels  
- Das folgende Beispiel erstellt eine gespeicherte Prozedur, der bestimmt, ob alle Komponenten einer angegebenen `SalesOrderID` in der `AdventureWorks2012` Datenbank in die angegebene Anzahl von Tagen gefertigt werden kann. Im Beispiel wird eine Unterabfrage verwendet, um eine Liste mit der Anzahl der `DaysToManufacture`-Werte für alle Komponenten einer bestimmten `SalesOrderID` zu erstellen. Anschließend wird geprüft, ob einer der von der Unterabfrage zurückgegebenen Werte größer ist als die Anzahl der angegebenen Tage. Wenn jeder Wert von `DaysToManufacture`, der zurückgegeben wird, kleiner ist als die angegebene Anzahl, ist die Bedingung TRUE, und die erste Meldung wird ausgegeben.  
+ Im folgenden Beispiel wird eine gespeicherte Prozedur erstellt, die bestimmt, ob alle Komponenten einer angegebenen `SalesOrderID` in der `AdventureWorks2012`-Datenbank innerhalb der angegebenen Anzahl von Tagen gefertigt werden können. Im Beispiel wird eine Unterabfrage verwendet, um eine Liste mit der Anzahl der `DaysToManufacture`-Werte für alle Komponenten einer bestimmten `SalesOrderID` zu erstellen. Anschließend wird geprüft, ob einer der von der Unterabfrage zurückgegebenen Werte größer ist als die Anzahl der angegebenen Tage. Wenn jeder Wert von `DaysToManufacture`, der zurückgegeben wird, kleiner ist als die angegebene Anzahl, ist die Bedingung TRUE, und die erste Meldung wird ausgegeben.  
   
 ```  
 -- Uses AdventureWorks  
@@ -131,7 +131,7 @@ PRINT 'All items for this order can be manufactured in the specified number of d
   
 ```  
   
- Zum Testen der Prozedur führen Sie die Prozedur mit der `SalesOrderID``49080`, die eine Komponente, die benötigt wurde `2` Tage und zwei Komponenten, die 0 Tage erfordern. Die erste Anweisung erfüllt die Kriterien. Die zweite Abfrage erfüllt sie nicht.  
+ Zum Testen der Prozedur führen Sie diese aus, indem Sie die `SalesOrderID``49080` verwenden, die über eine Komponente verfügt, die `2` Tage erfordert, und über zwei Komponenten, die 0 Tage erfordern. Die erste Anweisung erfüllt die Kriterien. Die zweite Abfrage erfüllt sie nicht.  
   
 ```  
 EXECUTE ManyDaysToComplete 49080, 2 ;  
@@ -149,7 +149,7 @@ EXECUTE ManyDaysToComplete 49080, 1 ;
   
  `At least one item for this order cannot be manufactured in specified number of days.`  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [ALL &#40;Transact-SQL&#41;](../../t-sql/language-elements/all-transact-sql.md)   
  [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)   
  [Integrierte Funktionen &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   

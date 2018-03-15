@@ -1,5 +1,5 @@
 ---
-title: '@@TOTAL_READ (Transact-SQL) | Microsoft Docs'
+title: '@@TOTAL_READ (Transact-SQL) | Microsoft-Dokumentation'
 ms.custom: 
 ms.date: 09/17/2017
 ms.prod: sql-non-specified
@@ -52,11 +52,11 @@ ms.lasthandoff: 11/21/2017
 ## <a name="return-types"></a>Rückgabetypen  
  **integer**  
   
-## <a name="remarks"></a>Hinweise  
- Zum Anzeigen eines Berichts mit mehreren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Statistiken, einschließlich Lese- und Schreibvorgänge ausführen **Sp_monitor**.  
+## <a name="remarks"></a>Remarks  
+ Wenn Sie einen Bericht anzeigen möchten, der mehrere [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Statistiken enthält (einschließlich Lese- und Schreibaktivitäten), führen Sie **sp_monitor** aus.  
   
 ## <a name="examples"></a>Beispiele  
- Das folgende Beispiel zeigt die Rückgabe der Gesamtzahl der Lese- und Schreibzugriffen auf das aktuelle Datum und die Uhrzeit.  
+ Im folgenden Beispiel wird die Rückgabe der Gesamtanzahl von Lese- und Schreibzugriffen auf den Datenträger bis zum aktuellen Datum und der aktuellen Uhrzeit angezeigt.  
   
 ```  
 SELECT @@TOTAL_READ AS 'Reads', @@TOTAL_WRITE AS 'Writes', GETDATE() AS 'As of';  
@@ -70,9 +70,9 @@ Reads       Writes      As of
 7760        97263       12/5/2006 10:23:00 PM   
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [sp_monitor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md)   
- [Statistische Systemfunktionen &#40; Transact-SQL &#41;](../../t-sql/functions/system-statistical-functions-transact-sql.md)   
+ [System Statistical Functions &#40;Transact-SQL&#41; (Statistische Systemfunktionen (Transact-SQL))](../../t-sql/functions/system-statistical-functions-transact-sql.md)   
  [@@TOTAL_WRITE &#40;Transact-SQL&#41;](../../t-sql/functions/total-write-transact-sql.md)  
   
   

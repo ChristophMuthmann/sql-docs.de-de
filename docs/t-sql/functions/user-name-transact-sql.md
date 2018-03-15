@@ -1,5 +1,5 @@
 ---
-title: Benutzername (Transact-SQL) | Microsoft Docs
+title: USER_NAME (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -52,13 +52,13 @@ USER_NAME ( [ id ] )
   
 ## <a name="arguments"></a>Argumente  
  *id*  
- Die ID, die einem Datenbankbenutzer zugeordnet ist. *ID* ist **Int**. Die Klammern sind erforderlich.  
+ Die ID, die einem Datenbankbenutzer zugeordnet ist. *id* ist vom Datentyp **int**. Die Klammern sind erforderlich.  
   
 ## <a name="return-types"></a>Rückgabetypen  
  **nvarchar(256)**  
   
-## <a name="remarks"></a>Hinweise  
- Wenn *Id* wird weggelassen wird, wird der aktuelle Benutzer im aktuellen Kontext verwendet. Wenn der Parameter das Wort NULL enthalten ist, wird NULL zurückgegeben. Wenn USER_NAME aufgerufen wird, ohne eine *Id* nach einer EXECUTE AS-Anweisung gibt USER_NAME den Namen der Identität eines Benutzers zurück. Falls ein Windows-Prinzipal über eine Mitgliedschaft in einer Gruppe auf die Datenbank zugreift, gibt USER_NAME den Namen des Windows-Prinzipals anstelle der Gruppe zurück.  
+## <a name="remarks"></a>Remarks  
+ Wenn *id* nicht angegeben ist, wird der aktuelle Benutzer im aktuellen Kontext vermutet. Wenn der Parameter das Wort NULL enthalten ist, wird NULL zurückgegeben. Wenn USER_NAME aufgerufen wird, ohne nach einer EXECUTE AS-Anweisung eine *d* anzugeben, gibt USER_NAME den Namen des Benutzers zurück, dessen Identität angenommen wurde. Falls ein Windows-Prinzipal über eine Mitgliedschaft in einer Gruppe auf die Datenbank zugreift, gibt USER_NAME den Namen des Windows-Prinzipals anstelle der Gruppe zurück.  
   
 ## <a name="examples"></a>Beispiele  
   
@@ -129,7 +129,7 @@ Zelig
 DBO
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
 ### <a name="e-using-username-without-an-id"></a>E. Verwenden von USER_NAME ohne ID  
  Das folgende Beispiel sucht nach dem Namen des aktuellen Benutzers, ohne eine ID anzugeben.  
@@ -138,7 +138,7 @@ DBO
 SELECT USER_NAME();  
 ```  
   
- Hier wird das Resultset für einen derzeit angemeldeten Benutzer ein.  
+ Nachfolgend finden Sie das Resultset für einen zum aktuellen Zeitpunkt angemeldeten Benutzer.  
   
 ```  
 ------------------------------   
@@ -160,14 +160,14 @@ name
 User7                              
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
- [CURRENT_TIMESTAMP &#40; Transact-SQL &#41;](../../t-sql/functions/current-timestamp-transact-sql.md)   
- [CURRENT_USER &#40; Transact-SQL &#41;](../../t-sql/functions/current-user-transact-sql.md)   
- [SESSION_USER &#40; Transact-SQL &#41;](../../t-sql/functions/session-user-transact-sql.md)   
+ [CURRENT_TIMESTAMP &#40;Transact-SQL&#41;](../../t-sql/functions/current-timestamp-transact-sql.md)   
+ [CURRENT_USER &#40;Transact-SQL&#41;](../../t-sql/functions/current-user-transact-sql.md)   
+ [SESSION_USER &#40;Transact-SQL&#41;](../../t-sql/functions/session-user-transact-sql.md)   
  [Systemfunktionen &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)   
- [SYSTEM_USER &#40; Transact-SQL &#41;](../../t-sql/functions/system-user-transact-sql.md)  
+ [SYSTEM_USER &#40;Transact-SQL&#41;](../../t-sql/functions/system-user-transact-sql.md)  
   
   
 

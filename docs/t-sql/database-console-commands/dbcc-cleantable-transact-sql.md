@@ -1,5 +1,5 @@
 ---
-title: DBCC CLEANTABLE (Transact-SQL) | Microsoft Docs
+title: DBCC CLEANTABLE (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 11/14/2017
 ms.prod: sql-non-specified
@@ -41,7 +41,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-cleantable-transact-sql"></a>DBCC CLEANTABLE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]Freigeben von Speicherplatz aus gelöschten Spalten mit variabler Länge in Tabellen oder indizierte Sichten.
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)] Gibt Speicherplatz wieder frei, der von gelöschten Spalten mit variabler Länge in Tabellen oder indizierten Sichten belegt wurde.
 ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Syntax  
@@ -59,9 +59,9 @@ DBCC CLEANTABLE
   
 ## <a name="arguments"></a>Argumente  
  *database_name* | *database_id* | 0  
- Die Datenbank, zu der die Tabelle gehört, für die ein Cleanup ausgeführt werden soll. Wird 0 angegeben, wird die aktuelle Datenbank verwendet. Datenbanknamen müssen den Regeln für [Bezeichner](../../relational-databases/databases/database-identifiers.md).  
+ Die Datenbank, zu der die Tabelle gehört, für die ein Cleanup ausgeführt werden soll. Wird 0 angegeben, wird die aktuelle Datenbank verwendet. Datenbanknamen müssen den Regeln für [Bezeichner](../../relational-databases/databases/database-identifiers.md) entsprechen.  
   
- *TABLE_NAME* | *Table_id* | *View_name*| *View_id*  
+ *table_name* | *table_id* | *view_name*| *view_id*  
  Die Tabelle oder indizierte Sicht, für die ein Cleanup ausgeführt werden soll.  
   
  *batch_size*  
@@ -70,8 +70,8 @@ DBCC CLEANTABLE
  WITH NO_INFOMSGS  
  Alle Informationsmeldungen werden unterdrückt.  
   
-## <a name="remarks"></a>Hinweise  
-DBCC CLEANTABLE gibt Speicherplatz wieder frei, nachdem eine Spalte mit variabler Länge gelöscht wurde. Eine Spalte mit variabler Länge kann eine der folgenden Datentypen: **Varchar**, **Nvarchar**, **varchar(max)**, **nvarchar(max)**, **Varbinary**, **varbinary(max)**, **Text**, **Ntext**, **Image**,  **Sql_variant**, und **Xml**. Nach dem Löschen einer Spalte mit fester Länge wird jedoch kein Speicherplatz geschaffen.
+## <a name="remarks"></a>Remarks  
+DBCC CLEANTABLE gibt Speicherplatz wieder frei, nachdem eine Spalte mit variabler Länge gelöscht wurde. Eine Spalte mit variabler Länge kann einem der folgenden Datentypen entsprechen: **varchar**, **nvarchar**, **varchar(max)**, **nvarchar(max)**, **varbinary**, **varbinary(max)**, **text**, **ntext**, **image**, **sql_variant** und **xml**. Nach dem Löschen einer Spalte mit fester Länge wird jedoch kein Speicherplatz geschaffen.
 Falls die gelöschten Spalten innerhalb von Zeilen gespeichert waren, gibt DBCC CLEANTABLE Speicherplatz aus der IN_ROW_DATA-Zuordnungseinheit der Tabelle frei. Waren die Spalten außerhalb von Zeilen gespeichert, wird Speicherplatz je nach dem Datentyp der gelöschten Spalte aus einer der Zuordnungseinheiten ROW_OVERFLOW_DATA oder LOB_DATA freigegeben. Falls durch das Freigeben von Speicherplatz aus einer ROW_OVERFLOW_DATA- oder LOB_DATA-Seite eine leere Seite entsteht, wird diese durch DBCC CLEANTABLE entfernt.
 DBCC CLEANTABLE wird als eine oder mehrere Transaktionen ausgeführt. Wird keine Batchgröße angegeben, verarbeitet der Befehl die gesamte Tabelle in einer Transaktion, und die Tabelle wird während des Vorgangs exklusiv gesperrt. Für einige große Tabellen sind eine einzige Transaktion und der erforderliche Protokollspeicherplatz möglicherweise zu groß. Wenn eine Batchgröße angegeben wurde, wird der Befehl in einer Reihe von Transaktionen ausgeführt, wobei jede die angegebene Zeilenanzahl einschließt. DBCC CLEANTABLE kann nicht als eine Transaktion innerhalb einer anderen Transaktion ausgeführt werden.
 Diese Operation wird vollständig protokolliert.
@@ -88,7 +88,7 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 ```  
   
 ## <a name="permissions"></a>Berechtigungen  
- Aufrufer muss Besitzer der Tabelle oder indizierten Sicht oder ein Mitglied der **Sysadmin** festen Serverrolle, die **Db_owner** feste Datenbankrolle oder der **Db_ddladmin** festen Datenbankrolle "".  
+ Bei dem Aufrufer muss es sich um den Besitzer der Tabelle bzw. der indizierten Sicht oder um ein Mitglied der festen Serverrolle **sysadmin**, der festen Datenbankrolle **db_owner** oder der festen Datenbankrolle **db_ddladmin** handeln.  
   
 ## <a name="examples"></a>Beispiele  
 ### <a name="a-using-dbcc-cleantable-to-reclaim-space"></a>A. Freigeben von Speicherplatz mit DBCC CLEANTABLE  
@@ -165,7 +165,7 @@ FROM sys.dm_db_index_physical_stats(@db_id, @object_id, NULL, NULL , 'Detailed')
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
  [sys.allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)  
   

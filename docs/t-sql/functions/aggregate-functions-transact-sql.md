@@ -1,5 +1,5 @@
 ---
-title: Aggregatfunktionen (Transact-SQL) | Microsoft Docs
+title: Aggregatfunktionen (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 01/16/2018
 ms.prod: sql-non-specified
@@ -36,7 +36,7 @@ ms.lasthandoff: 01/18/2018
 
 Aggregatfunktionen führen Berechnungen für eine Wertemenge durch und geben einen einzelnen Wert zurück. Alle Aggregatfunktionen, außer COUNT, ignorieren NULL-Werte. Aggregatfunktionen werden häufig mit der GROUP BY-Klausel der SELECT-Anweisung verwendet.
   
-Alle Aggregatfunktionen sind deterministisch. Dies bedeutet, dass Aggregatfunktionen bei jedem Aufrufen mit bestimmten Eingabewerten immer das gleiche Ergebnis zurückgeben. Weitere Informationen zum Funktionsdeterminismus finden Sie unter [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md). Die [OVER-Klausel](../../t-sql/queries/select-over-clause-transact-sql.md) kann alle Aggregatfunktionen außer GROUPING und GROUPING_ID folgen.
+Alle Aggregatfunktionen sind deterministisch. Dies bedeutet, dass Aggregatfunktionen bei jedem Aufrufen mit bestimmten Eingabewerten immer das gleiche Ergebnis zurückgeben. Weitere Informationen zu Funktionsdeterminismus finden Sie unter [Deterministische und nicht deterministische Funktionen](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md). Die [OVER-Klausel](../../t-sql/queries/select-over-clause-transact-sql.md) folgt möglicherweise allen Aggregatfunktionen außer GROUPING und GROUPING_ID.
   
 Aggregatfunktionen können nur in folgenden Fällen als Ausdrücke verwendet werden:
 -   In der Auswahlliste einer SELECT-Anweisung (Unterabfrage oder äußere Abfrage)  
@@ -56,6 +56,6 @@ Aggregatfunktionen können nur in folgenden Fällen als Ausdrücke verwendet wer
   
 ## <a name="see-also"></a>Siehe auch
 [Integrierte Funktionen &#40;Transact-SQL&#41;](../../t-sql/functions/functions.md)  
-[OVER Clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)
+[OVER-Klausel &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)
   
   

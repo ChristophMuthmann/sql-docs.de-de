@@ -1,5 +1,5 @@
 ---
-title: ORIGINAL_DB_NAME (Transact-SQL) | Microsoft Docs
+title: ORIGINAL_DB_NAME (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="originaldbname-transact-sql"></a>ORIGINAL_DB_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Gibt den Datenbanknamen zurück, der vom Benutzer in der Datenbankverbindungszeichenfolge angegeben wird. Dies ist die Datenbank, die mithilfe des Parameters der **Sqlcmd-d** Option (Verwendung *Datenbank*) oder dem ODBC-Datenquellenausdruck (Anfangskatalog =*Databasename*).  
+  Gibt den Datenbanknamen zurück, der vom Benutzer in der Datenbankverbindungszeichenfolge angegeben wird. Hierbei handelt es sich um die Datenbank, die mit der **sqlcmd-d**-Option (USE *Datenbank*) oder dem ODBC-Datenquellenausdruck (Anfangskatalog =*Datenbankname*) angegeben wird.  
   
  Diese Datenbank ist nicht mit der standardmäßigen Benutzerdatenbank identisch.  
   
@@ -47,12 +47,12 @@ ms.lasthandoff: 11/21/2017
 ORIGINAL_DB_NAME ()  
 ```  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Wenn die ursprüngliche Datenbank nicht angegeben wird, gibt die Funktion eine leere Zeichenfolge zurück.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [sqlcmd (Hilfsprogramm)](../../tools/sqlcmd-utility.md)   
- [Osql (Hilfsprogramm)](../../tools/osql-utility.md)   
- [SQL Server Native Client &#40; ODBC &#41;](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)  
+ [osql Utility (osql-Hilfsprogramm)](../../tools/osql-utility.md)   
+ [SQL Server Native Client &#40;ODBC&#41;](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)  
   
   

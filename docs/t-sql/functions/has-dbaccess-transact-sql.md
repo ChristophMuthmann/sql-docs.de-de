@@ -1,5 +1,5 @@
 ---
-title: HAS_DBACCESS (Transact-SQL) | Microsoft Docs
+title: HAS_DBACCESS (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 10/23/2017
 ms.prod: sql-non-specified
@@ -52,13 +52,13 @@ HAS_DBACCESS ( 'database_name' )
 ```  
   
 ## <a name="arguments"></a>Argumente  
- "*Database_name*"  
+ '*database_name*'  
  Der Name der Datenbank, für die der Benutzer Zugriffsinformationen wünscht. *database_name* ist **sysname**  
   
 ## <a name="return-types"></a>Rückgabetypen  
  **int**  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  HAS_DBACCESS gibt 1 zurück, wenn der Benutzer Zugriff auf die Datenbank hat, 0, wenn der Benutzer keinen Zugriff auf die Datenbank hat, und NULL, wenn der Datenbankname ungültig ist.  
   
  HAS_DBACCESS gibt 0 zurück, wenn die Datenbank offline oder fehlerverdächtig ist.  
@@ -76,7 +76,7 @@ SELECT HAS_DBACCESS('AdventureWorks2012');
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
  Im folgenden Beispiel wird getestet, ob der aktuelle Benutzer Zugriff auf die `AdventureWorksPDW2012`-Datenbank hat.  
   
 ```  
@@ -84,8 +84,8 @@ SELECT HAS_DBACCESS('AdventureWorksPDW2012');
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [IS_MEMBER &#40; Transact-SQL &#41;](../../t-sql/functions/is-member-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [IS_MEMBER &#40;Transact-SQL&#41;](../../t-sql/functions/is-member-transact-sql.md)   
  [IS_SRVROLEMEMBER &#40;Transact-SQL&#41;](../../t-sql/functions/is-srvrolemember-transact-sql.md)  
   
   

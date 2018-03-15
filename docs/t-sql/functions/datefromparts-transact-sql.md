@@ -1,5 +1,5 @@
 ---
-title: DATEFROMPARTS (Transact-SQL) | Microsoft Docs
+title: DATEFROMPARTS (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 07/29/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="datefromparts-transact-sql"></a>DATEFROMPARTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-Gibt eine **Datum** Wert für den angegebenen Werten für Jahr, Monat und Tag.
+Gibt einen **date**-Wert für das angegebene Jahr, den Monat und den Tag zurück.
   
 ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -45,25 +45,25 @@ DATEFROMPARTS ( year, month, day )
 ```  
   
 ## <a name="arguments"></a>Argumente  
-*Jahr*  
+*year*  
 Ganzzahliger Ausdruck, der ein Jahr angibt.
   
-*Monat*  
+*month*  
 Ganzzahliger Ausdruck, der einen Monat angibt (von 1 bis 12).
   
-*Tag*  
+*day*  
 Ganzzahliger Ausdruck, der einen Tag angibt.
   
 ## <a name="return-types"></a>Rückgabetypen
 **Datum**
   
-## <a name="remarks"></a>Hinweise  
-**DATEFROMPARTS** gibt eine **Datum** Wert mit den Datumsteil legen Sie auf den angegebenen Werten für Jahr, Monat und Tag und den Zeitbereich, der auf den Standardwert festgelegt. Wenn die Argumente nicht gültig sind, wird ein Fehler ausgelöst. Wenn erforderliche Argumente den Wert NULL haben, wird NULL zurückgegeben.
+## <a name="remarks"></a>Remarks  
+**DATEFROMPARTS** gibt einen **date**-Wert zurück, bei dem die Datumskomponente auf das angegebene Jahr, den Monat und den Tag sowie die Uhrzeitkomponente auf den Standardwert festgelegt sind. Wenn die Argumente nicht gültig sind, wird ein Fehler ausgelöst. Wenn erforderliche Argumente den Wert NULL haben, wird NULL zurückgegeben.
   
 Diese Funktion kann remote auf [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]-Servern oder höher ausgeführt werden. Eine Remoteausführung auf Servern mit einer Version unter [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ist nicht möglich.
   
 ## <a name="examples"></a>Beispiele  
-Das folgende Beispiel veranschaulicht die **DATEFROMPARTS** Funktion.
+Das folgende Beispiel zeigt die Verwendung dieser **DATEFROMPARTS**-Funktion.
   
 ```sql
 SELECT DATEFROMPARTS ( 2010, 12, 31 ) AS Result;  

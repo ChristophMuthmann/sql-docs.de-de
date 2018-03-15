@@ -1,5 +1,5 @@
 ---
-title: DROP-Standard (Transact-SQL) | Microsoft Docs
+title: DROP DEFAULT (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 05/10/2017
 ms.prod: sql-non-specified
@@ -38,7 +38,7 @@ ms.lasthandoff: 11/21/2017
   Entfernt einen oder mehrere benutzerdefinierte Standardwerte aus der aktuellen Datenbank.  
   
 > [!IMPORTANT]  
->  DROP DEFAULT werden in der nächsten Version von entfernt [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Verwenden Sie DROP DEFAULT nicht bei neuen Entwicklungsarbeiten, und planen Sie die Änderung von Anwendungen, die DROP DEFAULT derzeit verwenden. Verwenden Sie stattdessen Standarddefinitionen, die Sie erstellen können, mit dem DEFAULT-Schlüsselwort der [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) oder [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md).  
+>  DROP DEFAULT wird in der nächsten Version von [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht mehr unterstützt. Verwenden Sie DROP DEFAULT nicht bei neuen Entwicklungsarbeiten, und planen Sie die Änderung von Anwendungen, die DROP DEFAULT derzeit verwenden. Verwenden Sie stattdessen Standarddefinitionen, die mit dem DEFAULT-Schlüsselwort von [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) oder [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) erstellt werden können.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,19 +49,19 @@ DROP DEFAULT [ IF EXISTS ] { [ schema_name . ] default_name } [ ,...n ] [ ; ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *IF VORHANDEN IST*  
+ *IF EXISTS*  
  **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis zur [aktuellen Version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   
- Bedingt löscht die Standardeinstellung, wenn es bereits vorhanden ist.  
+ Löscht die Standardeinstellung nur, wenn diese bereits vorhanden ist.  
   
  *schema_name*  
  Der Name des Schemas, zu dem der Standardwert gehört.  
   
  *default_name*  
- Der Name eines vorhandenen Standardwerts. Führen Sie zum Anzeigen einer Liste von Standardwerten, die vorhanden sind, **Sp_help**. Standardwerte müssen den Regeln für entsprechen [Bezeichner](../../relational-databases/databases/database-identifiers.md). Das Angeben des Standardschemanamens ist optional.  
+ Der Name eines vorhandenen Standardwerts. Führen Sie **sp_help** aus, um eine Liste von vorhandenen Standardwerten anzuzeigen. Standardwerte müssen den Regeln für [Bezeichner](../../relational-databases/databases/database-identifiers.md) entsprechen. Das Angeben des Standardschemanamens ist optional.  
   
-## <a name="remarks"></a>Hinweise  
- Vor dem Löschen eines Standardwerts, Standardwerts durch Ausführen **Sp_unbindefault** , wenn der Standardwert aktuell an eine Spalte oder einen Aliasdatentyp gebunden ist.  
+## <a name="remarks"></a>Remarks  
+ Bevor ein Standardwert gelöscht wird, muss die Bindung des Standardwerts durch Ausführen von **sp_unbindefault** aufgehoben werden, wenn der Standardwert aktuell an eine Spalte oder an einen Aliasdatentyp gebunden ist.  
   
  Nachdem ein Standardwert aus einer Spalte gelöscht wurde, die NULL-Werte zulässt, wird NULL an dessen Stelle eingefügt, wenn Zeilen hinzugefügt und keine Werte explizit angegeben werden. Nachdem ein Standardwert einer Spalte gelöscht wurde, in der keine NULL-Werte zulässig sind, wird eine Fehlermeldung zurückgegeben, wenn Zeilen hinzugefügt und keine Werte explizit angegeben werden. Diese Zeilen werden später als Teil des typischen Verhaltens der INSERT-Anweisung hinzugefügt.  
   
@@ -83,7 +83,7 @@ IF EXISTS (SELECT name FROM sys.objects
 GO  
 ```  
   
- Beginnend mit [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] können Sie die folgende Syntax.  
+ Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] können Sie folgende Syntax verwenden.  
   
 ```  
 DROP DEFAULT IF EXISTS datedflt;  
@@ -103,10 +103,10 @@ GO
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [CREATE DEFAULT &#40;Transact-SQL&#41;](../../t-sql/statements/create-default-transact-sql.md)   
  [sp_helptext &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptext-transact-sql.md)   
  [sp_help &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md)   
- [Sp_unbindefault &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-unbindefault-transact-sql.md)  
+ [sp_unbindefault &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-unbindefault-transact-sql.md)  
   
   

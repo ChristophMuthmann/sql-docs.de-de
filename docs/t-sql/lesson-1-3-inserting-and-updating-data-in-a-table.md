@@ -1,5 +1,5 @@
 ---
-title: "Einfügen und Aktualisieren von Daten in einer Tabelle (Lernprogramm) | Microsoft Docs"
+title: "Einfügen von Daten in eine Tabelle und Aktualisieren der Daten (Tutorial) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -28,8 +28,8 @@ ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="lesson-1-3---inserting-and-updating-data-in-a-table"></a>Lektion 1 bis 3-einfügen und Aktualisieren von Daten in einer Tabelle
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]Nun, dass Sie erstellt haben die **Produkte** auswählen, sollten Sie zum Einfügen von Daten in die Tabelle mit der INSERT-Anweisung bereit. Nach dem Einfügen der Daten ändern Sie den Inhalt einer Zeile mithilfe einer UPDATE-Anweisung. Mithilfe der WHERE-Klausel der UPDATE-Anweisung schränken Sie das Update auf eine einzelne Zeile ein. Durch die vier Anweisungen werden die folgenden Daten eingegeben.  
+# <a name="lesson-1-3---inserting-and-updating-data-in-a-table"></a>Lektion 1.3: Einfügen von Daten in eine Tabelle und Aktualisieren der Daten
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]Nachdem Sie nun die **Products**-Tabelle erstellt haben, können Sie Daten mithilfe der INSERT-Anweisung in die Tabelle einfügen. Nach dem Einfügen der Daten ändern Sie den Inhalt einer Zeile mithilfe einer UPDATE-Anweisung. Mithilfe der WHERE-Klausel der UPDATE-Anweisung schränken Sie das Update auf eine einzelne Zeile ein. Durch die vier Anweisungen werden die folgenden Daten eingegeben.  
   
 |ProductID|ProductName|Price|ProductDescription|  
 |-------------|---------------|---------|----------------------|  
@@ -92,10 +92,10 @@ Die grundlegende Syntax lautet: INSERT, Tabellenname, Spaltenliste, VALUES und d
     GO  
     ```  
   
-## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
+## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
 [Lesen der Daten in einer Tabelle &#40;Tutorial&#41;](../t-sql/lesson-1-4-reading-the-data-in-a-table.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [INSERT &#40;Transact-SQL&#41;](../t-sql/statements/insert-transact-sql.md)  
 [UPDATE &#40;Transact-SQL&#41;](../t-sql/queries/update-transact-sql.md)  
   

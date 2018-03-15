@@ -1,5 +1,5 @@
 ---
-title: ToString (Geometry-Datentyp) | Microsoft Docs
+title: ToString (geometry-Datentyp) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -43,11 +43,11 @@ Gibt die Open Geospatial Consortium (OGC) Well-Known Text (WKT)-Darstellung eine
 ```  
   
 ## <a name="return-types"></a>Rückgabetypen  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Rückgabetyp: **nvarchar(max)**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Rückgabetyp: **nvarchar(max)**  
   
  CLR-Rückgabetyp: **SqlString**  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Diese Methode gibt die Zeichenfolge "NULL" zurück, wenn sie für NULL-Instanzen aufgerufen wird.  
   
  Bei Instanzen, die nicht NULL sind, entspricht diese Methode der Verwendung von `AsTextZM().`.  
@@ -61,8 +61,8 @@ SET @g = geometry::STGeomFromText('LINESTRING(0 0, 0 1, 1 0)', 0);
 SELECT @g.ToString();  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [STAsText &#40; Geometry-Datentyp &#41;](../../t-sql/spatial-geometry/stastext-geometry-data-type.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [STAsText &#40;geometry-Datentyp&#41;](../../t-sql/spatial-geometry/stastext-geometry-data-type.md)   
  [Erweiterte Methoden für geometry-Instanzen](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)  
   
   

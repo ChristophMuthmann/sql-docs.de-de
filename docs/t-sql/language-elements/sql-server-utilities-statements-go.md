@@ -1,5 +1,5 @@
 ---
-title: GO (Transact-SQL) | Microsoft Docs
+title: GO (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 07/27/2017
 ms.prod: sql-non-specified
@@ -38,9 +38,9 @@ ms.lasthandoff: 01/25/2018
 # <a name="sql-server-utilities-statements---go"></a>Anweisungen für SQL Server-Hilfsprogramme - GO
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]enthält Befehle, die nicht [!INCLUDE[tsql](../../includes/tsql-md.md)] sind aber -Anweisungen erkannt, durch die **Sqlcmd** und **Osql** Hilfsprogramme und [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Code-Editor. Die Befehle können zur Vereinfachung der Lesbarkeit und Ausführung von Batches und Skripts verwendet werden.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt Befehle zur Verfügung, die keine [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen sind, aber von den Hilfsprogrammen **sqlcmd** und **osql** und dem [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]-Code-Editor erkannt werden. Die Befehle können zur Vereinfachung der Lesbarkeit und Ausführung von Batches und Skripts verwendet werden.  
   
-  GO signalisiert das Ende eines Batches von [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisungen, die die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Hilfsprogramme.  
+  GO signalisiert das Ende eines Batches von [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen an die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Hilfsprogramme.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -55,8 +55,8 @@ GO [count]
  *count*  
  Eine positive ganze Zahl. Der Batch, der GO vorausgeht, wird so oft wie angegeben ausgeführt.  
   
-## <a name="remarks"></a>Hinweise  
- GO ist keine [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisung; Es wird ein Befehl erkannt durch die **Sqlcmd** und **Osql** Hilfsprogramme und [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Code-Editor.  
+## <a name="remarks"></a>Remarks  
+ GO ist keine [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung, sondern ein Befehl, der von den Hilfsprogrammen **sqlcmd** und **osql** und dem [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]-Code-Editor erkannt wird.  
   
  Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Hilfsprogramme interpretieren GO als ein Signal zum Senden des aktuellen Batches von [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen an eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Der aktuelle Anweisungsbatch besteht aus allen Anweisungen, die seit dem letzten GO eingegeben wurden. Wenn dies das erste GO ist, besteht er aus allen Anweisungen, die seit dem Beginn der Ad-hoc-Sitzung oder des Skripts eingegeben wurden.  
   
@@ -98,7 +98,7 @@ GO;
 ```  
   
 ## <a name="examples"></a>Beispiele  
- Im folgenden Beispiel werden zwei Batches erstellt. Der erste Batch enthält nur eine `USE``AdventureWorks2012` Anweisung, um den Datenbankkontext festzulegen. Die verbleibenden Anweisungen verwenden eine lokale Variable. Daher müssen alle Deklarationen von lokalen Variablen in einem einzelnen Batch gruppiert werden. Dies wird erreicht, indem ein `GO`-Befehl erst nach der letzten Anweisung, die auf die Variable verweist, ausgeführt wird.  
+ Im folgenden Beispiel werden zwei Batches erstellt. Der erste Batch enthält nur eine `USE``AdventureWorks2012`-Anweisung zum Festlegen des Datenbankkontexts. Die verbleibenden Anweisungen verwenden eine lokale Variable. Daher müssen alle Deklarationen von lokalen Variablen in einem einzelnen Batch gruppiert werden. Dies wird erreicht, indem ein `GO`-Befehl erst nach der letzten Anweisung, die auf die Variable verweist, ausgeführt wird.  
   
 ```  
 USE AdventureWorks2012;  

@@ -1,5 +1,5 @@
 ---
-title: CREATE TABLE AS SELECT (Azure SQL Data Warehouse) | Microsoft Docs
+title: CREATE TABLE AS SELECT (Azure SQL Data Warehouse) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 10/07/2016
 ms.prod: 
@@ -29,17 +29,17 @@ ms.lasthandoff: 01/25/2018
 # <a name="create-table-as-select-azure-sql-data-warehouse"></a>CREATE TABLE AS SELECT (Azure SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-Erstellen Sie Tabelle AS auswählen (CTAS) ist eine der wichtigsten T-SQL-Funktionen verfügbar. Es ist ein vollständig parallelisierte Vorgang, der eine neue Tabelle basierend auf der Ausgabe von einer SELECT-Anweisung erstellt. CTAS ist die schnellste und einfachste Möglichkeit, eine Kopie einer Tabelle zu erstellen.   
+CREATE TABLE AS SELECT (CTAS) ist eins der wichtigsten verfügbaren T-SQL-Features. Es handelt sich um einen vollständig parallelisierten Vorgang, der basierend auf der Ausgabe einer SELECT-Anweisung eine neue Tabelle erstellt. CTAS ist die schnellste und einfachste Möglichkeit, eine Kopie einer Tabelle zu erstellen.   
  
- Verwenden Sie z. B. CTAS an:  
+ Verwenden Sie CTAS z.B., um:  
   
--   Erstellen Sie eine Tabelle mit einem anderen Hash-verteilungsspalte erneut.
--   Neuerstellen einer Tabellenstatus als repliziert.   
--   Erstellen Sie einen columnstore-Index auf nur einige der Spalten in der Tabelle.  
--   Abfragen oder externe Daten zu importieren.  
+-   eine Tabelle mit einer anderen Hashverteilungsspalte neu zu erstellen.
+-   eine Tabelle als Replikat neu zu erstellen.   
+-   einen Columnstore-Index für ausgewählte Spalten in der Tabelle zu erstellen.  
+-   externe Daten abzufragen oder zu importieren.  
 
 > [!NOTE]  
-> Da die Funktionen zum Erstellen einer Tabellenstatus CTAS hinzufügt, versucht, in diesem Thema nicht die CREATE TABLE-Thema zu wiederholen. Stattdessen wird hier beschrieben, die Unterschiede zwischen der CTAS und CREATE TABLE-Anweisung. Die CREATE TABLE-Details finden Sie unter [CREATE TABLE (Azure SQL Data Warehouse)](https://msdn.microsoft.com/library/mt203953/) Anweisung. 
+> Da CTAS auf den Funktionen zum Erstellen einer Tabelle aufbaut, wird in diesem Artikel nicht der Artikel CREATE TABLE wiederholt. Stattdessen werden die Unterschiede zwischen den Anweisungen CTAS und CREATE TABLE beschrieben. Weitere Informationen zu CREATE TABLE finden Sie unter der [CREATE TABLE (Azure SQL Data Warehouse)](https://msdn.microsoft.com/library/mt203953/)-Anweisung. 
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -82,78 +82,78 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
 <a name="arguments-bk"></a>
   
 ## <a name="arguments"></a>Argumente  
-Einzelheiten finden Sie in der [Abschnitt "Argumente"](https://msdn.microsoft.com/library/mt203953/#Arguments) in CREATE TABLE.  
+Einzelheiten finden Sie im Abschnitt [Arguments (Argumente)](https://msdn.microsoft.com/library/mt203953/#Arguments) im Artikel CREATE TABLE.  
 
 <a name="column-options-bk"></a>
 
 ### <a name="column-options"></a>Spaltenoptionen
 `column_name` [ ,...`n` ]   
- Spaltennamen dürfen keine der [Spaltenoptionen](https://msdn.microsoft.com/library/mt203953/#ColumnOptions) erwähnt in CREATE TABLE.  Stattdessen können Sie eine optionale Liste mit mindestens einem Spaltennamen für die neue Tabelle bereitstellen. Die Spalten in der neuen Tabelle werden die Namen verwenden, die Sie angeben. Wenn Sie den Spaltennamen angeben, muss die Anzahl der Spalten in der Spaltenliste der Anzahl der Spalten in der select-Ergebnisse überein. Wenn Sie alle Spaltennamen angeben, wird die neue Zieltabelle die Spaltennamen in den Ergebnissen des select-Anweisung verwenden. 
+ Spaltennamen lassen die in CREATE TABLE erwähnten [Spaltenoptionen](https://msdn.microsoft.com/library/mt203953/#ColumnOptions) nicht zu.  Sie können stattdessen eine optionale Liste mit mindestens einem Spaltennamen für die neue Tabelle bereitstellen. Die Spalten in der neuen Tabelle verwenden die von Ihnen angegebenen Namen. Wenn Sie Spaltennamen angeben, muss die Anzahl der Spalten in der Spaltenliste mit der Anzahl der Spalten in den SELECT-Ergebnissen übereinstimmen. Wenn Sie keine Spaltennamen angeben, verwendet die neue Zieltabelle die Spaltennamen, die in den Ergebnissen einer SELECT-Anweisung verwendet werden. 
   
- Sie können keine anderen Spaltenoptionen z. B. Datentypen, Sortierung oder NULL-Zulässigkeit angeben. Jedem dieser Attribute aus den Ergebnissen der stammt die `SELECT` Anweisung. Die SELECT-Anweisung können Sie jedoch um die Attribute zu ändern. Ein Beispiel finden Sie unter [CTAS verwenden, so ändern Sie die Spaltenattribute](#ctas-change-column-attributes-bk).   
+ Sie können keine anderen Spaltenoptionen wie z.B. Datentypen, Sortierung oder NULL-Zulässigkeit angeben. Jedes dieser Attribute wird aus den Ergebnissen der `SELECT`-Anweisung abgeleitet. Sie können die SELECT-Anwendung allerdings zum Ändern der Attribute verwenden. Ein Beispiel finden Sie unter [Verwenden von CTAS zum Ändern von Spaltenattributen](#ctas-change-column-attributes-bk).   
 
 <a name="table-distribution-options-bk"></a>
 
-### <a name="table-distribution-options"></a>Tabelle Verteilungsoptionen
+### <a name="table-distribution-options"></a>Tabellenverteilungsoptionen
 
-`DISTRIBUTION` = `HASH`( *Distribution_column_name* ) | ROUND_ROBIN | REPLIZIEREN      
-Die CTAS-Anweisung erfordert eine Option zur Verteilung und keine Standardwerte. Dies unterscheidet sich von CREATE TABLE die Standardwerte aufweist. 
+`DISTRIBUTION` = `HASH` ( *distribution_column_name* ) | ROUND_ROBIN | REPLICATE      
+Die CTAS-Anweisung erfordert eine Verteilungsoption und verfügt nicht über Standardwerte. Hierin unterscheidet sie sich von CREATE TABLE, da letztere Standardwerte aufweist. 
 
-Weitere Informationen und erfahren, wie die optimale verteilungsspalte auswählen, finden Sie unter der [Tabelle Verteilungsoptionen](https://msdn.microsoft.com/library/mt203953/#TableDistributionOptions) Abschnitt in CREATE TABLE. 
+Weitere Informationen und Hilfe bei der Auswahl der besten Verteilungsspalte finden Sie im Abschnitt [Table distribution options (Tabellenverteilungsoptionen)](https://msdn.microsoft.com/library/mt203953/#TableDistributionOptions) im Artikel CREATE TABLE. 
 
 <a name="table-partition-options-bk"></a>
 
-### <a name="table-partition-options"></a>Tabellenoptionen für die partition
-Die CTAS-Anweisung erstellt eine nicht partitionierte Tabelle wird standardmäßig, selbst wenn die Quelltabelle partitioniert ist. Um eine partitionierte Tabelle mit der CTAS-Anweisung zu erstellen, müssen Sie die Partitionsoption angeben. 
+### <a name="table-partition-options"></a>Tabellenpartitionsoptionen
+Standardmäßig erstellt die CTAS-Anweisung eine nicht partitionierte Tabelle, selbst wenn die Quelltabelle partitioniert ist. Sie müssen die Partitionsoptionen angeben, um mit der CTAS-Anweisung eine partitionierte Tabelle zu erstellen. 
 
-Einzelheiten finden Sie in der [Tabelle Partitionsoptionen](https://msdn.microsoft.com/library/mt203953/#TablePartitionOptions) Abschnitt in CREATE TABLE.
+Einzelheiten finden Sie im Abschnitt [Table partition options (Tabellenpartitionsoptionen)](https://msdn.microsoft.com/library/mt203953/#TablePartitionOptions) im Artikel CREATE TABLE.
 
 <a name="select-options-bk"></a>
 
-### <a name="select-options"></a>Wählen Sie Optionen
-Die select-Anweisung ist der wesentliche Unterschied zwischen CTAS und CREATE TABLE.  
+### <a name="select-options"></a>SELECT-Optionen
+Die SELECT-Anweisung ist der wesentliche Unterschied zwischen CTAS und CREATE TABLE.  
 
  `WITH` *common_table_expression*  
- Gibt ein temporäres benanntes Resultset an, das als allgemeiner Tabellenausdruck (CTE, Common Table Expression) bekannt ist. Weitere Informationen finden Sie unter [WITH Common_table_expression &#40; Transact-SQL &#41; ](../../t-sql/queries/with-common-table-expression-transact-sql.md).  
+ Gibt ein temporäres benanntes Resultset an, das als allgemeiner Tabellenausdruck (CTE, Common Table Expression) bekannt ist. Weitere Informationen finden Sie unter [WITH common_table_expression &#40;Transact-SQL&#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md).  
   
  `SELECT` *select_criteria*  
- Füllt die neue Tabelle mit den Ergebnissen einer SELECT-Anweisung. *Select_criteria* ist der Hauptteil der SELECT-Anweisung, der bestimmt, welche Daten in die neue Tabelle kopieren. Informationen zur SELECT-Anweisungen finden Sie unter [SELECT &#40; Transact-SQL &#41; ](../../t-sql/queries/select-transact-sql.md).  
+ Füllt die neue Tabelle mit den Ergebnissen einer SELECT-Anweisung auf. *Select_criteria* ist der Hauptteil der SELECT-Anweisung, der bestimmt, welche Daten in die neue Tabelle kopiert werden sollen. Informationen zu SELECT-Anweisungen finden Sie unter [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md).  
   
 <a name="permissions-bk"></a>  
   
 ## <a name="permissions"></a>Berechtigungen  
-Erfordert CTAS `SELECT` -Berechtigung für alle Objekte der *Select_criteria*.
+CTAS erfordert eine `SELECT`-Berechtigung für alle Objekte, auf die in *select_criteria* verwiesen wird.
 
-Berechtigungen für eine Tabelle zu erstellen, finden Sie unter [Berechtigungen](https://msdn.microsoft.com/library/mt203953/#Permissions) in CREATE TABLE. 
+Berechtigungen zum Erstellen einer Tabelle finden Sie unter [Permissions (Berechtigungen)](https://msdn.microsoft.com/library/mt203953/#Permissions) im Artikel CREATE TABLE. 
   
 <a name="general-remarks-bk"></a>
   
 ## <a name="general-remarks"></a>Allgemeine Hinweise
-Weitere Informationen finden Sie unter [allgemeine Hinweise](https://msdn.microsoft.com/library/mt203953/#GeneralRemarks) in CREATE TABLE.
+Weitere Informationen finden Sie unter [Allgemeine Hinweise](https://msdn.microsoft.com/library/mt203953/#GeneralRemarks) im Artikel CREATE TABLE.
 
 <a name="limitations-bk"></a>
 
 ## <a name="limitations-and-restrictions"></a>Einschränkungen  
-Azure SQL Data Warehouse ist noch nicht Unterstützung automatisch erstellen bzw. die automatische Update Statistics.  Um die beste Leistung von Abfragen zu erhalten, ist es wichtig, die Statistiken für alle Spalten aller Tabellen zu erstellen, nachdem Sie CTAS ausführen und wesentlichen Änderungen in der Datenquelle auftreten. Weitere Informationen finden Sie unter [CREATE STATISTICS (Transact-SQL)](../../t-sql/statements/create-statistics-transact-sql.md).
+Azure SQL Data Warehouse bietet noch keine Unterstützung für das automatische Erstellen oder Aktualisieren von Statistiken.  Um die beste Leistung Ihrer Abfragen zu erhalten, ist es wichtig für alle Spalten aller Tabellen Statistiken zu erstellen, nachdem Sie CTAS ausgeführt haben oder in den Daten umfangreiche Änderungen vorgenommen wurden. Weitere Informationen finden Sie unter [CREATE STATISTICS (Transact-SQL)](../../t-sql/statements/create-statistics-transact-sql.md).
 
-[SET ROWCOUNT &#40; Transact-SQL &#41; ](../../t-sql/statements/set-rowcount-transact-sql.md) hat keine Auswirkung auf CTAS. Um ein ähnliches Verhalten zu erzielen, verwenden [nach oben &#40; Transact-SQL &#41; ](../../t-sql/queries/top-transact-sql.md).  
+[SET ROWCOUNT &#40;Transact-SQL&#41;](../../t-sql/statements/set-rowcount-transact-sql.md) hat keine Auswirkung auf CTAS. Verwenden Sie [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md), um ein ähnliches Verhalten zu erzielen.  
  
-Weitere Informationen finden Sie unter [Einschränkungen](https://msdn.microsoft.com/library/mt203953/#LimitationsRestrictions) in CREATE TABLE.
+Weitere Informationen finden Sie unter [Limitations and Restrictions (Einschränkungen)](https://msdn.microsoft.com/library/mt203953/#LimitationsRestrictions) im Artikel CREATE TABLE.
 
 <a name="locking-behavior-bk"></a>
   
 ## <a name="locking-behavior"></a>Sperrverhalten  
- Weitere Informationen finden Sie unter [Sperrverhalten](https://msdn.microsoft.com/library/mt203953/#LockingBehavior) in CREATE TABLE.
+ Weitere Informationen finden Sie unter [Locking Behavior (Sperrverhalten)](https://msdn.microsoft.com/library/mt203953/#LockingBehavior) im Artikel CREATE TABLE.
  
 <a name="performance-bk"></a>
  
  ## <a name="performance"></a>Leistung 
 
-Für eine Tabelle Hash distributed können Sie CTAS zum Auswählen einer anderen Verteilungspunkt Spalte um eine bessere Leistung für Joins und Aggregationen zu erzielen. Wenn auswählen, dass eine andere Verteilung-Spalte nicht Ihr Ziel ist, müssen Sie die beste CTAS-Leistung, wenn Sie die gleichen verteilungsspalte angeben, da dies vermieden werden, erneut verteilen von Zeilen. 
+Bei einer Tabelle mit Hashverteilung können Sie CTAS verwenden, um eine andere Verteilungsspalte auszuwählen. Hierdurch kann die Leistung für Joins und Aggregationen verbessert werden. Wenn Sie keine andere Verteilungsspalte auswählen möchten, erreichen Sie die beste CTAS-Leistung, wenn Sie dieselbe Verteilungsspalte auswählen. Hierdurch wird die Neuverteilung von Zeilen vermieden. 
 
-Wenn Sie CTAS verwenden, um die Tabelle zu erstellen und die Leistung kein Faktor ist, können Sie angeben `ROUND_ROBIN` zu vermeiden, dass eine verteilungsspalte festlegen.
+Wenn Sie CTAS verwenden, um eine Tabelle zu erstellen und die Leistung unwichtig ist, können Sie `ROUND_ROBIN` angeben, damit Sie sich nicht für eine Verteilungsspalte entscheiden müssen.
 
-Um die datenverschiebung in nachfolgenden Abfragen zu vermeiden, können Sie angeben `REPLICATE` wird mehr Speicher für eine vollständige Kopie der Tabelle auf jeder Serverknoten laden.  
+Um die Datenverschiebung in nachfolgenden Abfragen zu vermeiden, können Sie `REPLICATE` angeben. Dies erfolgt auf Kosten der höheren Speicherkapazität für das Laden einer vollständigen Kopie der Tabelle auf jedem Computeknoten.  
 
 
 <a name="examples-copy-table-bk"></a>
@@ -162,12 +162,12 @@ Um die datenverschiebung in nachfolgenden Abfragen zu vermeiden, können Sie ang
 
 <a name="ctas-copy-table-bk"></a>
 
-### <a name="a-use-ctas-to-copy-a-table"></a>A. Verwenden Sie CTAS, um eine Tabelle kopieren 
-Gilt für: Azure SQL Datawarehouse und Parallel Datawarehouse
+### <a name="a-use-ctas-to-copy-a-table"></a>A. Kopieren einer Tabelle mit CTAS 
+Gilt für: SQL Data Warehouse und Parallel Data Warehouse
 
-Vielleicht eine der am häufigsten verwendeten verwendet der `CTAS` ist das Erstellen einer Kopie einer Tabelle, damit Sie die DDL-Anweisungen ändern können. Wenn z. B. ursprünglich die Tabelle als erstellt `ROUND_ROBIN` und jetzt möchten, ändern Sie ihn in eine Tabelle, die auf eine Spalte verteilt `CTAS` ist, wie Sie die verteilungsspalte ändern würde. `CTAS`kann auch so ändern Sie die Partitionierung, Indizierung oder Spalte Typen verwendet werden.
+Eine der häufigsten Anwendungen von `CTAS` ist wahrscheinlich das Erstellen einer Kopie einer Tabelle, damit Sie die DLL verändern können. Wenn Sie Ihre Tabelle z.B. ursprünglich als `ROUND_ROBIN` erstellt haben und sie jetzt in eine Tabelle ändern wollen, die auf eine Spalte verteilt wird, können Sie mit `CTAS` die Verteilungsspalte ändern. `CTAS` kann auch zur Änderung der Partitionierung, des Index oder der Spaltentypen verwendet werden.
 
-Nehmen wir an diese Tabelle mit den Standardtyp für die Verteilung der Erstellung `ROUND_ROBIN` verteilt werden, da keine verteilungsspalte, in angegeben wurde der `CREATE TABLE`.
+Nehmen wir an, dass Sie diese Tabelle mithilfe des Standardverteilungstyps von `ROUND_ROBIN` erstellt haben, da in `CREATE TABLE` keine Verteilungsspalte angegeben wurde.
 
 ```sql
 CREATE TABLE FactInternetSales
@@ -198,7 +198,7 @@ CREATE TABLE FactInternetSales
 );
 ```
 
-Nun möchten Sie eine neue Kopie dieser Tabelle mit einem gruppierten columnstore-Index zu erstellen, sodass Sie die Leistung von gruppierten columnstore-Tabellen nutzen können. Außerdem soll in der Tabelle auf "ProductKey" verteilt werden, da Sie von Joins für diese Spalte vorhersehen und Verschieben von Daten während des Joins auf "ProductKey" vermeiden möchten. Abschließend möchten auch Partitionierung für OrderDateKey, sodass Sie schnell alte Daten löschen können, durch das Löschen der ALTER Partitionen hinzufügen. Hier ist die CTAS-Anweisung, die die alten Tabelle in eine neue Tabelle kopieren möchten.
+Jetzt möchten Sie eine neue Kopie dieser Tabelle mit einem gruppierten Columnstore-Index erstellen, damit Sie die Leistungsvorteile von gruppierten Columnstore-Tabellen nutzen können. Außerdem soll diese Tabelle über ProductKey verteilt werden, da Sie für diese Spalte Joins erwarten und Datenverschiebungen während Joins auf ProductKey vermeiden möchten. Außerdem soll eine Partitionierung für OrderDateKey hinzugefügt werden, damit Sie alte Daten schnell durch Ablegen alter Partitionen löschen können. Hier finden Sie die CTAS-Anweisung, mit der die Kopie Ihrer alten Tabelle in eine neue Tabelle kopiert wird.
 
 ```sql
 CREATE TABLE FactInternetSales_new
@@ -219,7 +219,7 @@ WITH
 AS SELECT * FROM FactInternetSales;
 ```
 
-Schließlich können Sie die Tabellen aus, um den Austausch in der neuen Tabelle aus, und löschen die alte Tabelle umbenennen.
+Schließlich können Sie Ihre Tabellen umbenennen, um die Namen mit Ihrer neuen Tabelle zu tauschen. Anschließend können Sie die alte Tabelle ablegen.
 
 ```sql
 RENAME OBJECT FactInternetSales TO FactInternetSales_old;
@@ -234,10 +234,10 @@ DROP TABLE FactInternetSales_old;
 
 <a name="ctas-change-column-attributes-bk"></a>
 
-### <a name="b-use-ctas-to-change-column-attributes"></a>B. Verwenden Sie so ändern Sie die Spaltenattribute CTAS 
-Gilt für: Azure SQL Datawarehouse und Parallel Datawarehouse
+### <a name="b-use-ctas-to-change-column-attributes"></a>B. Verwenden von CTAS zum Ändern von Spaltenattributen 
+Gilt für: SQL Data Warehouse und Parallel Data Warehouse
 
-Dieses Beispiel verwendet die CTAS-Datentypen, die NULL-Zulässigkeit und die Sortierung für mehrere Spalten in der Tabelle DimCustomer2 ändern.  
+Dieses Beispiel verwendet CTAS, um die Datentypen, NULL-Zulässigkeit und Sortierung für mehrere Spalten in der Tabelle DimCustomer2 zu ändern.  
   
 ```  
 -- Original table 
@@ -280,7 +280,7 @@ CREATE TABLE [dbo].[test] (
 WITH (DISTRIBUTION = ROUND_ROBIN);
 ```
  
-Als letzten Schritt können Sie [&#40; umbenennen Transact-SQL &#41; ](../../t-sql/statements/rename-transact-sql.md) um den Tabellennamen zu wechseln. Auf diese Weise werden die neue Tabelle DimCustomer2.
+Als letzten Schritt können Sie [RENAME &#40;Transact-SQL&#41;](../../t-sql/statements/rename-transact-sql.md) verwenden, um die Tabellennamen zu tauschen. Dadurch wird DimCustomer2 zur neuen Tabelle.
 
 ```
 RENAME OBJECT DimCustomer2 TO DimCustomer2_old;
@@ -291,18 +291,18 @@ DROP TABLE DimCustomer2_old;
 
 <a name="examples-table-distribution-bk"></a>
 
-## <a name="examples-for-table-distribution"></a>Beispiele für die Verteilung der Tabelle
+## <a name="examples-for-table-distribution"></a>Beispiele für die Verteilung von Tabellen
 
 <a name="ctas-change-distribution-method-bk"></a>
 
-### <a name="c-use-ctas-to-change-the-distribution-method-for-a-table"></a>C. Verwenden Sie CTAS, um die Verteilungsmethode für eine Tabelle zu ändern
-Gilt für: Azure SQL Datawarehouse und Parallel Datawarehouse
+### <a name="c-use-ctas-to-change-the-distribution-method-for-a-table"></a>C. Verwenden von CTAS zum Ändern der Verteilungsmethode für eine Tabelle
+Gilt für: SQL Data Warehouse und Parallel Data Warehouse
 
-Dieses einfache Beispiel zeigt, wie die Verteilungsmethode für eine Tabelle zu ändern. Um die Funktionsweise der hierzu anzuzeigen, eine Tabelle mit Hash distributed Roundrobin-ändert und anschließend wieder in Hash verteilt die Roundrobin-Tabelle geändert. Die endgültige Tabelle entspricht die ursprüngliche Tabelle. 
+Dieses einfache Beispiel zeigt, wie die Verteilungsmethode für eine Tabelle geändert wird. Um die Funktionsweise hinter diesem Vorgang zu zeigen, wird eine Tabelle mit Hashverteilung in RoundRobin geändert. Anschließend wird die RoundRobin-Tabelle wieder in eine Tabelle mit Hashverteilung geändert. Die finale Tabelle entspricht der ursprünglichen Tabelle. 
 
-In den meisten Fällen müssen Sie wird keine Hash-distributed-Tabelle in eine Roundrobin-Tabelle zu ändern. Je öfter, müssen Sie eine Roundrobin-Tabelle in einer verteilten Hashtabelle zu ändern. Z. B. möglicherweise Sie zunächst eine neue Tabelle als Round-Robin-Prinzip laden und dann später zu einer Tabelle Hash distributed abzurufenden Leistungssteigerung Join verschieben.
+In den meisten Fällen müssen Sie keine Tabelle mit Hashverteilung in eine RoundRobin-Tabelle ändern. Es kommt häufiger vor, dass Sie eine RoundRobin-Tabelle in eine Tabelle mit Hashverteilung ändern müssen. Dies ist z.B. der Fall, wenn Sie eine neue Tabelle ursprünglich als RoundRobin laden und sie später in eine Tabelle mit Hashverteilung ändern möchten, um eine Leistungssteigerung bei Joins zu erzielen.
 
-Dieses Beispiel verwendet die AdventureWorksDW-Beispieldatenbank. Um die SQL Data Warehouse-Version zu laden, verwenden Sie [Laden Sie Beispieldaten in SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-load-sample-databases/)
+In diesem Beispiel wird die AdventureWorksDW-Beispieldatenbank verwendet. Informationen zum Laden der SQL Data Warehouse-Version finden Sie unter [Tutorial: Verwenden von PolyBase zum Laden von Daten aus Azure Blob Storage in Azure SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-load-sample-databases/).
  
 ```
 -- DimSalesTerritory is hash-distributed.
@@ -323,7 +323,7 @@ RENAME OBJECT [dbo].[myTable] TO [DimSalesTerritory];
 DROP TABLE [dbo].[DimSalesTerritory_old];
 
 ```  
-Als Nächstes ändern Sie ihn wieder zu einer verteilten Hashtabelle.
+Ändern Sie sie nun wieder zurück in eine Tabelle mit Hashverteilung.
 
 ```
 -- You just made DimSalesTerritory a round-robin table.
@@ -346,10 +346,10 @@ DROP TABLE [dbo].[DimSalesTerritory_old];
  
 <a name="ctas-change-to-replicated-bk"></a>
 
-### <a name="d-use-ctas-to-convert-a-table-to-a-replicated-table"></a>D. Verwenden Sie CTAS, um eine Tabelle in einer replizierten Tabelle konvertieren  
-Gilt für: Azure SQL Datawarehouse und Parallel Datawarehouse 
+### <a name="d-use-ctas-to-convert-a-table-to-a-replicated-table"></a>D. Verwenden von CTAS zur Konvertierung in eine replizierte Tabelle  
+Gilt für: SQL Data Warehouse und Parallel Data Warehouse 
 
-In diesem Beispiel gilt für das Konvertieren von Roundrobin-Verfahren oder Hash verteilte Tabellen in einer replizierten Tabelle. In diesem Beispiel wird der vorherigen Methode zum Ändern der Verteilung Typ einen Schritt weiter.  Da DimSalesTerritory einer Dimension und wahrscheinlich auf eine kleinere Tabelle ist, können Sie auswählen, um die Tabelle neu zu erstellen, als zum Verschieben von Daten zu vermeiden, bei der Verknüpfung mit anderen Tabellen repliziert. 
+Dieses Beispiel gilt für die Konvertierung von RoundRobin-Tabellen oder Tabellen mit Hashverteilung in eine replizierte Tabelle. In diesem Beispiel geht die vorherige Methode zum Ändern des Verteilungstyps noch einen Schritt weiter.  Da es sich bei DimSalesTerritory um eine Dimension und vermutlich um eine kleinere Tabelle handelt, können Sie die Tabelle als repliziert neu erstellen, um Datenverschiebungen bei der Verknüpfung zu anderen Tabellen zu vermeiden. 
 
 ```
 -- DimSalesTerritory is hash-distributed.
@@ -370,10 +370,10 @@ RENAME OBJECT [dbo].[myTable] TO [DimSalesTerritory];
 DROP TABLE [dbo].[DimSalesTerritory_old];
 ```
  
-### <a name="e-use-ctas-to-create-a-table-with-fewer-columns"></a>E. Verwenden Sie zum Erstellen einer Tabelle mit weniger Spalten CTAS
-Gilt für: Azure SQL Datawarehouse und Parallel Datawarehouse 
+### <a name="e-use-ctas-to-create-a-table-with-fewer-columns"></a>E. Verwenden von CTAS zum Erstellen einer Tabelle mit weniger Spalten
+Gilt für: SQL Data Warehouse und Parallel Data Warehouse 
 
-Das folgende Beispiel erstellt eine verteilte Round-Robin-Tabelle namens `myTable (c, ln)`. Die neue Tabelle hat nur zwei Spalten. Die Spaltenaliase verwendet für die Namen der Spalten in der SELECT-Anweisung.  
+Das folgende Beispiel erstellt eine verteilte RoundRobin-Tabelle mit dem Namen `myTable (c, ln)`. Die neue Tabelle hat nur zwei Spalten. Sie verwendet die Spaltenaliase in der SELECT-Anweisung für die Spaltennamen.  
   
 ```  
 CREATE TABLE myTable  
@@ -393,10 +393,10 @@ AS SELECT CustomerKey AS c, LastName AS ln
 
 <a name="ctas-query-hint-bk"></a>
 
-### <a name="f-use-a-query-hint-with-create-table-as-select-ctas"></a>F. Verwenden mit CREATE für Tabelle als Abfragehinweis auswählen (CTAS)  
-Gilt für: Azure SQL Datawarehouse und Parallel Datawarehouse
+### <a name="f-use-a-query-hint-with-create-table-as-select-ctas"></a>F. Verwenden eines Abfragehinweises mit CREATE TABLE AS SELECT (CTAS)  
+Gilt für: SQL Data Warehouse und Parallel Data Warehouse
   
-Diese Abfrage zeigt die grundlegende Syntax für die Verwendung eines Join-Abfragehinweis mit der CTAS-Anweisung. Nachdem die Abfrage gesendet wird, [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] gilt die Hash-Join-Strategie beim Generieren des Abfrageplans für jede einzelne Verteilung. Weitere Informationen zu den Hash Join-Abfragehinweis, finden Sie unter [OPTION-Klausel &#40; Transact-SQL &#41; ](../../t-sql/queries/option-clause-transact-sql.md).  
+Diese Abfrage zeigt die grundlegende Syntax für die Verwendung eines Join-Abfragehinweis mit der CTAS-Anweisung. Nach dem Senden der Abfrage verwendet [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] die Hashjoinstrategie beim Generieren des Abfrageplans für jede einzelne Verteilung. Weitere Informationen zum Hashjoin-Abfragehinweis finden Sie unter [OPTION-Klausel &#40;Transact-SQL&#41;](../../t-sql/queries/option-clause-transact-sql.md).  
   
 ```  
 CREATE TABLE dbo.FactInternetSalesNew  
@@ -416,12 +416,12 @@ OPTION ( HASH JOIN );
 
 <a name="ctas-azure-blob-storage-bk"></a>
 
-### <a name="g-use-ctas-to-import-data-from-azure-blob-storage"></a>G. Verwenden Sie zum Importieren von Daten aus dem Azure-Blob-Speicher CTAS  
-Gilt für: Azure SQL Datawarehouse und Parallel Datawarehouse  
+### <a name="g-use-ctas-to-import-data-from-azure-blob-storage"></a>G. Verwenden von CTAS zum Importieren von Daten aus Azure Blob Storage  
+Gilt für: SQL Data Warehouse und Parallel Data Warehouse  
 
-Zum Importieren von Daten aus einer externen Tabelle einfach mit der CREATE TABLE AS SELECT in der externen Tabelle auswählen. Die Syntax zum Auswählen von Daten aus einer externen Tabelle in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] ist identisch mit der Syntax zum Auswählen von Daten aus einer regulären Tabelle.  
+Verwenden Sie zum Importieren von Daten aus einer externen Tabelle einfach CREATE TABLE AS SELECT, um die Daten aus der externen Tabelle auszuwählen. Die Syntax zum Auswählen von Daten aus einer externen Tabelle in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] entspricht der Syntax zum Auswählen von Daten aus einer regulären Tabelle.  
   
- Das folgende Beispiel definiert eine externe Tabelle, auf Daten in einem Azure Blob Storage-Konto. Er verwendet dann CREATE TABLE AS SELECT in der externen Tabelle auswählen. Dadurch werden die Daten aus Azure-Blob-Speicher Texttrennzeichen Dateien importiert und speichert die Daten in eine neue [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] Tabelle.  
+ Das folgende Beispiel definiert eine externe Tabelle basierend auf Daten in einem Azure Blob Storage-Konto. Anschließend wird CREATE TABLE AS SELECT verwendet, um Daten aus der externen Tabelle auszuwählen. Dadurch werden die Daten aus Dateien mit Texttrennzeichen aus Azure Blob Storage importiert und in einer neuen [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]-Tabelle gespeichert.  
   
 ```  
 --Use your own processes to create the text-delimited files on Azure blob storage.  
@@ -451,12 +451,12 @@ AS SELECT * FROM ClickStreamExt
 
 <a name="ctas-import-Hadoop-bk"></a>
   
-### <a name="h-use-ctas-to-import-hadoop-data-from-an-external-table"></a>H. Verwenden Sie zum Importieren von Hadoop-Daten aus einer externen Tabelle CTAS  
-Gilt für:[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+### <a name="h-use-ctas-to-import-hadoop-data-from-an-external-table"></a>H. Verwenden von CTAS zum Importieren von Hadoop-Daten aus einer externen Tabelle  
+Gilt für: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-Zum Importieren von Daten aus einer externen Tabelle einfach mit der CREATE TABLE AS SELECT in der externen Tabelle auswählen. Die Syntax zum Auswählen von Daten aus einer externen Tabelle in [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ist identisch mit der Syntax zum Auswählen von Daten aus einer regulären Tabelle.  
+Verwenden Sie zum Importieren von Daten aus einer externen Tabelle einfach CREATE TABLE AS SELECT, um die Daten aus der externen Tabelle auszuwählen. Die Syntax zum Auswählen von Daten aus einer externen Tabelle in [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] entspricht der Syntax zum Auswählen von Daten aus einer regulären Tabelle.  
   
- Das folgende Beispiel definiert eine externe Tabelle in einem Hadoop-Cluster. Er verwendet dann CREATE TABLE AS SELECT in der externen Tabelle auswählen. Dadurch werden die Daten aus Hadoop Texttrennzeichen Dateien importiert und speichert die Daten in eine neue [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] Tabelle.  
+ Das folgende Beispiel definiert eine externe Tabelle auf einem Hadoop-Cluster. Anschließend wird CREATE TABLE AS SELECT verwendet, um Daten aus der externen Tabelle auszuwählen. Dadurch werden die Daten aus Dateien mit Texttrennzeichen aus Hadoop importiert und in einer neuen [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]-Tabelle gespeichert.  
   
 ```  
 -- Create the external table called ClickStream.  
@@ -488,20 +488,20 @@ AS SELECT * FROM ClickStreamExt
  
 <a name="examples-workarounds-bk"></a>
  
-## <a name="examples-using-ctas-to-replace-sql-server-code"></a>Beispiele für die Verwendung von CTAS zum Ersetzen des SQL Server
+## <a name="examples-using-ctas-to-replace-sql-server-code"></a>Beispiele für die Verwendung von CTAS zum Ersetzen von SQL Server-Code
 
-Verwenden Sie CTAS, um einige nicht unterstützten Funktionen umgehen. Der Code für das Datawarehouse ausgeführt, sondern verbessert umschreiben vorhandener Code, um CTAS in der Regel Leistung. Dies ist das Ergebnis von dem vollständig parallelisierte Entwurf. 
+Verwenden Sie CTAS, um einige nicht unterstützte Features zu umgehen. Sie können nicht nur Code für das Data Warehouse ausführen – das Umschreiben von vorhandenem Code für die Verwendung von CTAS verbessert normalerweise auch die Leistung. Das liegt am vollständig parallelisierten Design dieser Anweisung. 
 
 > [!NOTE]
-> Denken Sie daran "CTAS erste". Wenn Sie vermuten, Sie lösen können dass, ein Problem mit `CTAS` , die ist, in der Regel die beste Methode für die - Vorgehensweise selbst wenn Sie daher mehr Daten schreiben.
+> Versuchen Sie, die Denkweise „CTAS zuerst“ zu verinnerlichen. Wenn Sie denken, dass Sie ein Problem mithilfe von `CTAS` lösen können, ist es in der Regel der beste Weg, das Problem anzugehen, selbst wenn Sie dann möglicherweise mehr Daten schreiben müssen.
 >
 
 <a name="ctas-replace-select-into-bk"></a>
 
-### <a name="i-use-ctas-instead-of-selectinto"></a>I. Verwenden Sie CTAS anstelle von SELECT... IN  
-Gilt für: Azure SQL Datawarehouse und Parallel Datawarehouse
+### <a name="i-use-ctas-instead-of-selectinto"></a>I. Verwenden von CTAS anstelle von SELECT..INTO  
+Gilt für: SQL Data Warehouse und Parallel Data Warehouse
 
-SQL Server-Code verwendet in der Regel auswählen... INTO zum Auffüllen einer Tabelle mit den Ergebnissen einer SELECT-Anweisung. Dies ist ein Beispiel für eine SQL Server-SELECT... INTO-Anweisung.
+SQL Server-Code verwendet in der Regel SELECT..INTO, um eine Tabelle mit den Ergebnissen einer SELECT-Anweisung aufzufüllen. Dies ist ein Beispiel für eine SELECT..INTO-Anweisung von SQL Server.
 
 ```sql
 SELECT *
@@ -509,7 +509,7 @@ INTO    #tmp_fct
 FROM    [dbo].[FactInternetSales]
 ```
 
-Diese Syntax wird in SQL Data Warehouse und Parallel Data Warehouse nicht unterstützt. Dieses Beispiel zeigt, wie die vorherige SELECT-Anweisung zu schreiben... INTO-Anweisung als CTAS-Anweisung. Sie können eine der Optionen für die Verteilung in der CTAS-Syntax beschrieben. Dieses Beispiel verwendet die Verteilungsmethode ROUND_ROBIN.
+Diese Syntax wird in SQL Data Warehouse und Parallel Data Warehouse nicht unterstützt. Dieses Beispiel stellt das erneute Generieren der vorherigen SELECT..INTO-Anweisung als CTAS-Anweisung dar. Sie können eine der DISTRIBUTION-Optionen verwenden, die in der CTAS-Syntax beschrieben werden. Dieses Beispiel verwendet die Verteilungsmethode ROUND_ROBIN.
 
 ```sql
 CREATE TABLE #tmp_fct
@@ -525,12 +525,12 @@ FROM    [dbo].[FactInternetSales]
 
 <a name="ctas-replace-implicit-joins-bk"></a>
 
-### <a name="j-use-ctas-and-implicit-joins-to-replace-ansi-joins-in-the-from-clause-of-an-update-statement"></a>J. Verwenden Sie zum Ersetzen von ANSI-Joins in CTAS und impliziten Joins der `FROM` -Klausel eine `UPDATE` Anweisung  
-Gilt für: Azure SQL Datawarehouse und Parallel Datawarehouse  
+### <a name="j-use-ctas-and-implicit-joins-to-replace-ansi-joins-in-the-from-clause-of-an-update-statement"></a>J. Verwenden von CTAS und implizierten Joins zum Ersetzen von ANSI-Joins in der `FROM`-Klausel einer `UPDATE`-Anweisung  
+Gilt für: SQL Data Warehouse und Parallel Data Warehouse  
 
-Sie können möglicherweise, dass Sie ein komplexes Update verfügen, das mehr als zwei Tabellen, die zusammen mit ANSI-Syntax verknüpfen die Update- oder DELETE ausführen verknüpft.
+Möglicherweise liegt ein komplexes Update vor, das mithilfe der ANSI-Verknüpfungssyntax mehr als zwei Tabellen verknüpft, um UPDATE oder DELETE durchzuführen.
 
-Stellen Sie sich vor, dass mussten Sie diese Tabelle zu aktualisieren:
+Stellen Sie sich vor, dass Sie die folgende Tabelle aktualisieren müssen:
 
 ```sql
 CREATE TABLE [dbo].[AnnualCategorySales]
@@ -545,7 +545,7 @@ WITH
 ;
 ```
 
-Die ursprüngliche Abfrage könnte etwa so aussehen besprochen haben:
+Die ursprüngliche Abfrage könnte in etwa wie folgt ausgesehen haben:
 
 ```sql
 UPDATE  acs
@@ -570,9 +570,9 @@ AND [acs].[CalendarYear]                = [fis].[CalendarYear]
 ;
 ```
 
-Da SQL Data Warehouse nicht unterstützt ANSI-joins in der `FROM` -Klausel eine `UPDATE` -Anweisung können nicht Sie dieser SQL Server-Code über verwenden, ohne ihn leicht ändern.
+Da SQL Data Warehouse keine ANSI-Joins in der `FROM`-Klausel einer `UPDATE`-Anweisung unterstützt, können Sie diesen SQL Server-Code nicht verwenden, ohne ihn leicht zu ändern.
 
-Sie können eine Kombination aus einer `CTAS` und eines impliziten Joins mit diesem Code ersetzen:
+Sie können eine Kombination aus einer `CTAS`-Anweisung und einem impliziten Join verwenden, um diesen Code zu ersetzen:
 
 ```sql
 -- Create an interim table
@@ -608,12 +608,12 @@ DROP TABLE CTAS_acs
 
 <a name="ctas-replace-ansi-joins-bk"></a>
 
-### <a name="k-use-ctas-to-specify-which-data-to-keep-instead-of-using-ansi-joins-in-the-from-clause-of-a-delete-statement"></a>K. Verwenden Sie CTAS, um anzugeben, welche Daten behalten anstelle von ANSI in der FROM-Klausel einer DELETE-Anweisung verknüpft  
-Gilt für: Azure SQL Datawarehouse und Parallel Datawarehouse  
+### <a name="k-use-ctas-to-specify-which-data-to-keep-instead-of-using-ansi-joins-in-the-from-clause-of-a-delete-statement"></a>K. Verwenden von CTAS zum Angeben der beizubehaltenden Daten statt der Verwendung von ANSI-Joins in der FROM-Klausel einer DELETE-Anweisung  
+Gilt für: SQL Data Warehouse und Parallel Data Warehouse  
 
-Der beste Ansatz zum Löschen von Daten in einigen Fällen ist die Verwendung `CTAS`. Wählen Sie die Daten, die Sie beibehalten möchten, anstatt die Daten einfach löschen. Diese gilt insbesondere für `DELETE` Anweisungen, die Ansi verknüpfen Syntax verwenden, da SQL Data Warehouse nicht ANSI unterstützt, in verknüpft der `FROM` -Klausel eine `DELETE` Anweisung.
+Manchmal ist die Verwendung von `CTAS` der beste Ansatz zum Löschen von Daten. Anstatt die Daten zu löschen, wählen Sie einfach die Daten aus, die Sie behalten möchten. Diese gilt insbesondere für `DELETE`-Anweisungen, die die ANSI-Verknüpfungssyntax verwenden, da SQL Data Warehouse keine ANSI-Joins in der `FROM`-Klausel einer `DELETE`-Anweisung unterstützt.
 
-Ein Beispiel für eine konvertierte DELETE-Anweisung ist verfügbar unter:
+Ein Beispiel für eine konvertierte DELETE-Anweisung sehen Sie hier:
 
 ```sql
 CREATE TABLE dbo.DimProduct_upsert
@@ -636,12 +636,12 @@ RENAME OBJECT dbo.DimProduct_upsert TO DimProduct;
 
 <a name="ctas-simplify-merge-bk"></a>
 
-### <a name="l-use-ctas-to-simplify-merge-statements"></a>L. Verwenden Sie CTAS zur Vereinfachung der Merge-Anweisungen  
-Gilt für: Azure SQL Datawarehouse und Parallel Datawarehouse  
+### <a name="l-use-ctas-to-simplify-merge-statements"></a>L. Verwenden von CTAS zur Vereinfachung von MERGE-Anweisungen  
+Gilt für: SQL Data Warehouse und Parallel Data Warehouse  
 
-Merge-Anweisungen können ersetzt werden, mindestens im Webpart mit `CTAS`. Sie konsolidieren können die `INSERT` und `UPDATE` in einer einzigen Anweisung. Alle gelöschten Datensätze müssten deaktivieren, die in einer zweiten Anweisung geschlossen werden.
+MERGE-Anweisungen können zumindest teilweise durch `CTAS` ersetzt werden. Sie können `INSERT` und `UPDATE` in eine einzige Anweisung konsolidieren. Alle gelöschten Datensätze müssten in einer zweiten Anweisung geschlossen werden.
 
-Ein Beispiel für eine `UPSERT` ist verfügbar unter:
+Hier sehen Sie ein Beispiel für `UPSERT`:
 
 ```sql
 CREATE TABLE dbo.[DimProduct_upsert]
@@ -675,10 +675,10 @@ RENAME OBJECT dbo.[DimpProduct_upsert]  TO [DimProduct];
 
 <a name="ctas-data-type-and-nullability-bk"></a>
 
-### <a name="m-explicitly-state-data-type-and-nullability-of-output"></a>M. Datentyp und NULL-Zulässigkeit der Ausgabe explizit  
-Gilt für: Azure SQL Datawarehouse und Parallel Datawarehouse  
+### <a name="m-explicitly-state-data-type-and-nullability-of-output"></a>M. Explizites Angeben von Datentyp und NULL-Zulässigkeit der Ausgabe  
+Gilt für: SQL Data Warehouse und Parallel Data Warehouse  
 
-Wenn SQL Server-Code zu SQL Data Warehouse zu migrieren, finden Sie möglicherweise, dass Sie über diese Art von Codierungsmuster ausgeführt werden:
+Beim Migrieren von SQL Server-Code zu SQL Data Warehouse stoßen Sie möglicherweise auf die folgende Art von Codierungsmuster:
 
 ```sql
 DECLARE @d decimal(7,2) = 85.455
@@ -694,9 +694,9 @@ SELECT @d*@f
 ;
 ```
 
-Sie können instinktiv vorstellen, Migrieren von dieser Code sollte in einer CTAS und Sie das richtige werden würde. Es ist jedoch ein ausgeblendetes Problem hier.
+Sie denken vermutlich instinktiv, dass Sie diesen Code zu einer CTAS-Anweisung migrieren sollten und damit richtig liegen. Hier gibt es jedoch ein verstecktes Problem.
 
-Der folgende Code ist nicht das gleiche Ergebnis erzielt:
+Der folgende Code erzielt NICHT das gleiche Ergebnis:
 
 ```sql
 DECLARE @d decimal(7,2) = 85.455
@@ -710,9 +710,9 @@ SELECT @d*@f as result
 ;
 ```
 
-Beachten Sie, dass die Spalte "Ergebnis" Vorwärts die Datenwerte Type und NULL-Zulässigkeit des Ausdrucks führt. Dies kann auf geringfügige abweichungen in Werten führen, wenn Sie nicht sorgfältig sind.
+Beachten Sie, dass die Spalte „result“ (Ergebnis) die Werte des Datentyps und der NULL-Zulässigkeit des Ausdrucks übernimmt. Dies kann zu geringfügigen Abweichungen bei Werten führen, wenn Sie nicht vorsichtig sind.
 
-Versuchen Sie Folgendes Beispiel:
+Versuchen Sie als Beispiel einmal Folgendes:
 
 ```sql
 SELECT result,result*@d
@@ -724,17 +724,17 @@ from ctas_r
 ;
 ```
 
-Der Wert für das Ergebnis gespeichert ist unterschiedlich. Der beibehaltene Wert in der Ergebnisspalte in anderen Ausdrücken verwendet wird wird der Fehler sogar wichtiger.
+Der für „result“ gespeicherte Wert unterscheidet sich. Da der gespeicherte Wert in der Spalte „result“ auch in anderen Ausdrücken verwendet wird, hat dieser Fehler eine noch größere Bedeutung.
 
 ![CREATE TABLE AS SELECT-Ergebnisse](../../t-sql/statements/media/create-table-as-select-results.png)
 
-Dies ist besonders wichtig für die Datenmigration. Obwohl die zweite Abfrage wohl genauere ist ein Problem vorliegt. Daten wären unterschiedlich im Vergleich zu dem Quellsystem und Fragen der Integrität der Migration führt. Dies ist eine von den seltenen Fällen, in denen die Antwort "falsche" tatsächlich richtig ist.
+Dies ist besonders wichtig für die Datenmigration. Obwohl die zweite Abfrage wohl genauer ist, gibt es hier ein Problem. Die Daten würden sich zum Quellsystem unterscheiden, was Fragen zur Integrität in der Migration aufwirft. Dies ist einer der seltenen Fällen, in denen die „falsche“ Antwort tatsächlich die richtige ist!
 
-Der Grund, dass wir sehen, dass diese Abweichung zwischen den zwei Ergebnissen ist auf implizite Typumwandlung. Im ersten Beispiel definiert die Tabelle die Spaltendefinition. Tritt auf, eine implizite Konvertierung, wenn die Zeile eingefügt wird. Im zweiten Beispiel wird keine implizite Typumwandlung wie der Ausdruck den Datentyp der Spalte definiert. Beachten Sie außerdem, dass die Spalte im zweiten Beispiel während der im ersten Beispiel ist es nicht als eine NULL zulassende Spalte definiert wurde. Bei der Erstellung der Tabelle in der ersten Beispiel Spalte NULL-Zulässigkeit wurde explizit definiert. In der zweiten würde z. B. sie einfach auf den Ausdruck und standardmäßig dies angehalten wurde in der Definition eines NULL.  
+Der Grund für die Abweichung zwischen beiden Ergebnissen ist die implizite Typumwandlung. Im ersten Beispiel definiert die Tabelle die Spaltendefinition. Wenn die Zeile eingefügt wird, tritt eine implizite Typkonvertierung ein. Im zweiten Beispiel tritt keine implizite Typkonvertierung ein, da der Ausdruck den Datentyp der Spalte definiert. Beachten Sie außerdem, dass die Spalte im zweiten Beispiel als Spalte definiert wurde, für die NULL zulässig ist. Dies ist im ersten Beispiel nicht der Fall. Bei der Erstellung der Tabelle im ersten Beispiel wurde die NULL-Zulässigkeit der Spalte explizit definiert. Im zweiten Beispiel wurde es dem Ausdruck überlassen, was standardmäßig zur Definition von NULL führt.  
 
-Zum Beheben dieser Probleme müssen Sie explizit die typkonvertierung und NULL-Zulässigkeit in Festlegen der `SELECT` Teil der `CTAS` Anweisung. Diese Eigenschaften können nicht in den Bereich der erstellen-Tabelle festgelegt werden.
+Zum Beheben dieser Probleme müssen Sie die Typkonvertierung und NULL-Zulässigkeit im Teil `SELECT` der `CTAS`-Anweisung explizit festlegen. Diese Eigenschaften können nicht im Teil CREATE TABLE festgelegt werden.
 
-Im folgenden Beispiel wird veranschaulicht, wie den Code diesen Fehler beheben:
+Im folgenden Beispiel wird veranschaulicht, wie Sie den Code korrigieren:
 
 ```sql
 DECLARE @d decimal(7,2) = 85.455
@@ -747,15 +747,15 @@ SELECT ISNULL(CAST(@d*@f AS DECIMAL(7,2)),0) as result
 ```
 
 Beachten Sie Folgendes:
-- CAST oder CONVERT konnte verwendet wurden
-- ISNULL wird verwendet, um NULL-Zulässigkeit nicht COALESCE erzwingen
+- CAST oder CONVERT hätten verwendet werden können
+- ISNULL wird anstelle von COALESCE verwendet, um die NULL-Zulässigkeit zu erzwingen
 - ISNULL ist die äußerste Funktion
-- Der zweite Teil der ISNULL ist eine Konstante d. h. 0
+- Der zweite Teil von ISNULL ist eine Konstante, d.h. 0 (null)
 
 > [!NOTE]
-> Für die NULL-Zulässigkeit ordnungsgemäß festzulegenden ist ausschlaggebend, verwenden Sie `ISNULL` und nicht `COALESCE`. `COALESCE`ist keine deterministische Funktion und daher das Ergebnis des Ausdrucks ist immer NULL-Werte zulässt. `ISNULL`unterscheidet. Es ist deterministisch. Daher bei der zweite Teil der `ISNULL` -Funktion ist eine Konstante oder ein Literal wird der resultierende Wert nicht NULL.
+> Damit die NULL-Zulässigkeit korrekt festgelegt wird, ist es wichtig, `ISNULL` und nicht `COALESCE` zu verwenden. `COALESCE` ist keine deterministische Funktion. Daher lässt das Ergebnis des Ausdrucks immer NULL-Werte zu. `ISNULL` ist anders. ISNULL ist deterministisch. Wenn der zweite Teil der `ISNULL`-Funktion eine Konstante oder ein Literal ist, ergibt sich daraus der Wert NOT NULL.
 
-Dieser Tipp eignet sich nicht nur zum Sicherstellen der Integrität von Berechnungen. Es ist auch wichtig für den partitionswechsel Tabelle. Stellen Sie sich vor, dass Sie diese Tabelle wie die Tatsache definiert haben:
+Dieser Tipp eignet sich nicht nur zum Sicherstellen der Integrität von Berechnungen. Er ist auch wichtig für den Partitionswechsel von Tabellen. Angenommen, Sie haben diese Tabelle als Fakt definiert:
 
 ```sql
 CREATE TABLE [dbo].[Sales]
@@ -778,9 +778,9 @@ WITH
 ;
 ```
 
-Allerdings ist das Wertfeld berechneteter Ausdruck er nicht Teil der Quelldaten ist.
+Allerdings ist das Wertfeld ein berechneter Ausdruck und kein Teil der Quelldaten.
 
-So erstellen Sie Ihre partitionierte Dataset dazu werden sollen:
+Um Ihr partitioniertes Dataset zu erstellen, sollten Sie Folgendes tun:
 
 ```sql
 CREATE TABLE [dbo].[Sales_in]
@@ -804,7 +804,7 @@ OPTION (LABEL = 'CTAS : Partition IN table : Create')
 ;
 ```
 
-Die Abfrage würde hervorragenden ausgeführt werden. Das Problem tritt beim Versuch der partitionswechsel ausführen. Die Tabellendefinitionen stimmen nicht überein. Um die Tabellendefinitionen entsprechen den CTAS Stellen geändert werden müssen.
+Die Abfrage sollte ganz normal ausgeführt werden. Das Problem tritt auf, wenn Sie versuchen, den Partitionswechsel durchzuführen. Die Tabellendefinitionen stimmen nicht überein. Damit die Tabellendefinitionen übereinstimmen, muss die CTAS-Anweisung geändert werden.
 
 ```sql
 CREATE TABLE [dbo].[Sales_in]
@@ -827,14 +827,14 @@ FROM [stg].[source]
 OPTION (LABEL = 'CTAS : Partition IN table : Create');
 ```
 
-Sie können daher sehen, dass typkonsistenz und Verwalten von NULL-Zulässigkeit Eigenschaften auf einer CTAS gute engineering empfohlen. Sie können Sie um in Ihren Berechnungen Integrität zu wahren und stellt zudem sicher, dass der partitionswechsel möglich ist.
+Sie sehen, dass die Typkonsistenz und das Aufrechterhalten von NULL-Zulässigkeitseigenschaften für CTAS bewährte Methoden für gute Softwareentwicklung sind. Sie können somit die Integrität in Ihren Berechnungen aufrecht erhalten und gleichzeitig sicherstellen, dass Partitionswechsel möglich sind.
  
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md)   
  [CREATE EXTERNAL FILE FORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-file-format-transact-sql.md)   
  [CREATE EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-transact-sql.md)   
  [CREATE EXTERNAL TABLE AS SELECT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-as-select-transact-sql.md)   
- [Erstellen von Tabellen &#40; Azure SQL Datawarehouse &#41; ](../../t-sql/statements/create-table-azure-sql-data-warehouse.md) [DROP TABLE &#40; Transact-SQL &#41;](../../t-sql/statements/drop-table-transact-sql.md)   
+ [CREATE TABLE &#40;Azure SQL Data Warehouse&#41;](../../t-sql/statements/create-table-azure-sql-data-warehouse.md) [DROP TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-table-transact-sql.md)   
  [DROP EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-external-table-transact-sql.md)   
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [ALTER EXTERNAL TABLE &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/4ae1b23c-67f6-41d0-b614-7a8de914d145)  

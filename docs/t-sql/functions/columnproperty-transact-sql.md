@@ -1,5 +1,5 @@
 ---
-title: COLUMNPROPERTY (Transact-SQL) | Microsoft Docs
+title: COLUMNPROPERTY (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -48,41 +48,41 @@ COLUMNPROPERTY ( id , column , property )
   
 ## <a name="arguments"></a>Argumente  
 *id*  
-Ist ein [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) , die den Bezeichner (ID) der Tabelle oder Prozedur enthält.
+Ein [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md), der den Bezeichner (ID) der Tabelle oder Prozedur enthält.
   
-*Spalte*  
+*column*  
 Ein Ausdruck, der den Namen der Spalte oder des Parameters enthält.
   
-*Eigenschaft*  
-Ist ein Ausdruck, der für die zurückgegebenen Informationen enthält *Id*, und kann einen der folgenden Werte sein.
+*property*  
+Ein Ausdruck, der die Informationen enthält, die für *id* zurückgegeben werden. Die folgenden Werte sind möglich:
   
-|Wert|Description|Rückgabewert|  
+|value|Description|Zurückgegebener Wert|  
 |---|---|---|
-|**AllowsNull**|Null-Werte zulässt.|1 = "TRUE"<br /><br /> 0 = FALSE<br /><br /> NULL = Eingabe ist nicht gültig.|  
-|**ColumnId**|Spalten-ID-Wert entspricht **column_id**.|Column ID<br /><br /> **Hinweis:** mehrere Spalten abgefragt werden, können Lücken in der Reihenfolge der Spalten-ID-Werte angezeigt.|  
-|**FullTextTypeColumn**|Der TYPE-Spalte in der Tabelle, die die Dokumenttypinformationen enthält die *Spalte*.|Die ID der Volltexttypspalte TYPE COLUMN für die Spalte, die als zweiter Parameter dieser Eigenschaft übergeben wurde.|  
-|**Ist berechnet**|Die Spalte ist eine berechnete Spalte.|1 = "TRUE"<br /><br /> 0 = FALSE<br /><br /> NULL = Eingabe ist nicht gültig.|  
-|**IsCursorType**|Der Prozedurparameter ist vom Typ CURSOR.|1 = "TRUE"<br /><br /> 0 = FALSE<br /><br /> NULL = Eingabe ist nicht gültig.|  
-|**IsDeterministic**|Die Spalte ist deterministisch. Diese Eigenschaft gilt nur für berechnete Spalten und Sichtspalten.|1 = "TRUE"<br /><br /> 0 = FALSE<br /><br /> NULL = Eingabe ist nicht gültig. Keine berechnete Spalte oder Sichtspalte.|  
-|**IsFulltextIndexed**|Die Spalte wurde für die Volltextindizierung registriert.|1 = "TRUE"<br /><br /> 0 = FALSE<br /><br /> NULL = Eingabe ist nicht gültig.|  
-|**IsIdentity**|Die Spalte verwendet die IDENTITY-Eigenschaft.|1 = "TRUE"<br /><br /> 0 = FALSE<br /><br /> NULL = Eingabe ist nicht gültig.|  
-|**IsIdNotForRepl**|In der Spalte wird die IDENTITY_INSERT-Einstellung überprüft.|1 = "TRUE"<br /><br /> 0 = FALSE<br /><br /> NULL = Eingabe ist nicht gültig.|  
-|**IsIndexable**|Diese Spalte kann indiziert werden.|1 = "TRUE"<br /><br /> 0 = FALSE<br /><br /> NULL = Eingabe ist nicht gültig.|  
-|**IsOutParam**|Der Prozedurparameter ist ein Ausgabeparameter.|1 = "TRUE"<br /><br /> 0 = False NULL = Eingabe ist nicht gültig|  
-|**IsPrecise**|Diese Spalte ist eine genaue Spalte. Diese Eigenschaft wird nur auf deterministische Spalten angewendet.|1 = "TRUE"<br /><br /> 0 = False NULL = Eingabe ist nicht gültig Keine deterministische Spalte|  
-|**IsRowGuidCol**|Spalte hat die **"uniqueidentifier"** -Datentyp und mit der ROWGUIDCOL-Eigenschaft definiert ist.|1 = "TRUE"<br /><br /> 0 = FALSE<br /><br /> NULL = Eingabe ist nicht gültig.|  
-|**IsSystemVerified**|Die Determinismus- und Genauigkeitseigenschaften der Spalte können von [!INCLUDE[ssDE](../../includes/ssde-md.md)] überprüft werden. Diese Eigenschaft gilt nur für berechnete Spalten und Spalten von Sichten.|1 = "TRUE"<br /><br /> 0 = FALSE<br /><br /> NULL = Eingabe ist nicht gültig.|  
-|**IsXmlIndexable**|Die XML-Spalte kann in einem XML-Index verwendet werden.|1 = "TRUE"<br /><br /> 0 = FALSE<br /><br /> NULL = Eingabe ist nicht gültig.|  
-|**Genauigkeit**|Die Länge des Datentyps der Spalte oder des Parameters.|Die Länge des angegebenen Spaltendatentyps.<br /><br /> -1 = **Xml** oder große Werttypen<br /><br /> NULL = Eingabe ist nicht gültig.|  
+|**AllowsNull**|Lässt NULL-Werte zu.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = Eingabe ist nicht gültig.|  
+|**ColumnId**|Der Wert der Spalten-ID, der **sys.columns.column_id** entspricht.|Column ID<br /><br /> **Hinweis:** Wenn mehrere Spalten abgefragt werden, können Lücken in der Abfolge von Werten für Spalten-IDs auftreten.|  
+|**FullTextTypeColumn**|Der TYPE COLUMN-Wert in der Tabelle, der die Dokumenttypinformationen der *Spalte* enthält.|Die ID der Volltexttypspalte TYPE COLUMN für die Spalte, die als zweiter Parameter dieser Eigenschaft übergeben wurde.|  
+|**IsComputed**|Die Spalte ist eine berechnete Spalte.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = Eingabe ist nicht gültig.|  
+|**IsCursorType**|Der Prozedurparameter ist vom Typ CURSOR.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = Eingabe ist nicht gültig.|  
+|**IsDeterministic**|Die Spalte ist deterministisch. Diese Eigenschaft gilt nur für berechnete Spalten und Sichtspalten.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = Eingabe ist nicht gültig. Keine berechnete Spalte oder Sichtspalte.|  
+|**IsFulltextIndexed**|Die Spalte wurde für die Volltextindizierung registriert.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = Eingabe ist nicht gültig.|  
+|**IsIdentity**|Die Spalte verwendet die IDENTITY-Eigenschaft.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = Eingabe ist nicht gültig.|  
+|**IsIdNotForRepl**|In der Spalte wird die IDENTITY_INSERT-Einstellung überprüft.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = Eingabe ist nicht gültig.|  
+|**IsIndexable**|Diese Spalte kann indiziert werden.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = Eingabe ist nicht gültig.|  
+|**isoutparam**|Der Prozedurparameter ist ein Ausgabeparameter.|1 = TRUE<br /><br /> 0 = False NULL = Eingabe ist nicht gültig|  
+|**IsPrecise**|Diese Spalte ist eine genaue Spalte. Diese Eigenschaft wird nur auf deterministische Spalten angewendet.|1 = TRUE<br /><br /> 0 = False NULL = Eingabe ist nicht gültig Keine deterministische Spalte|  
+|**IsRowGuidCol**|Die Spalte hat den Datentyp **uniqueidentifier** und wird über die ROWGUIDCOL-Eigenschaft definiert.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = Eingabe ist nicht gültig.|  
+|**IsSystemVerified**|Die Determinismus- und Genauigkeitseigenschaften der Spalte können von [!INCLUDE[ssDE](../../includes/ssde-md.md)] überprüft werden. Diese Eigenschaft gilt nur für berechnete Spalten und Spalten von Sichten.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = Eingabe ist nicht gültig.|  
+|**IsXmlIndexable**|Die XML-Spalte kann in einem XML-Index verwendet werden.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = Eingabe ist nicht gültig.|  
+|**Genauigkeit**|Die Länge des Datentyps der Spalte oder des Parameters.|Die Länge des angegebenen Spaltendatentyps.<br /><br /> –1 = **xml** oder ein Typ für hohe Werte.<br /><br /> NULL = Eingabe ist nicht gültig.|  
 |**Dezimalstellen**|Dezimalstellen des Datentyps der Spalte oder des Parameters.|Die Dezimalstellen<br /><br /> NULL = Eingabe ist nicht gültig.|  
-|**StatisticalSemantics**|Spalte ist für die semantische Indizierung aktiviert.|1 = "TRUE"<br /><br /> 0 = FALSE|  
+|**StatisticalSemantics**|Spalte ist für die semantische Indizierung aktiviert.|1 = TRUE<br /><br /> 0 = FALSE|  
 |**SystemDataAccess**|Die Spalte wird von einer Funktion abgeleitet, die auf Daten in den Systemkatalogen oder virtuellen Tabellen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zugreift. Diese Eigenschaft gilt nur für berechnete Spalten und Spalten von Sichten.|1 = True (gibt schreibgeschützten Zugriff an)<br /><br /> 0 = FALSE<br /><br /> NULL = Eingabe ist nicht gültig.|  
 |**UserDataAccess**|Die Spalte wird von einer Funktion abgeleitet, die auf Daten in Benutzertabellen zugreift, einschließlich Sichten und temporäre Tabellen, die in der lokalen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gespeichert sind. Diese Eigenschaft gilt nur für berechnete Spalten und Spalten von Sichten.|1 = True (gibt schreibgeschützten Zugriff an)<br /><br /> 0 = FALSE<br /><br /> NULL = Eingabe ist nicht gültig.|  
-|**UsesAnsiTrim**|Bei der Erstellung der Tabelle wurde für ANSI_PADDING die Einstellung ON festgelegt. Diese Eigenschaft gilt nur für Spalten oder Parameter vom Typ **Char** oder **Varchar**.|1 = "TRUE"<br /><br /> 0 = "FALSE"<br /><br /> NULL = Eingabe ist nicht gültig.|  
-|**IsSparse**|Spalte ist eine Sparsespalte. Weitere Informationen finden Sie unter [Verwenden von Spalten mit geringer Dichte](../../relational-databases/tables/use-sparse-columns.md).|1 = "TRUE"<br /><br /> 0 = "FALSE"<br /><br /> NULL = Eingabe ist nicht gültig.|  
-|**IsColumnSet**|Spalte ist ein Spaltensatz. Weitere Informationen finden Sie unter [Verwenden von Spaltensätzen](../../relational-databases/tables/use-column-sets.md).|1 = "TRUE"<br /><br /> 0 = "FALSE"<br /><br /> NULL = Eingabe ist nicht gültig.|  
-|**"Generatedalwaystype"**|Spaltenwert wird vom System generiert werden. Entspricht **sys.columns.generated_always_type**|**Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 0 = nicht immer generierten<br /><br /> 1 = Generated always as Zeile starten<br /><br /> 2 – generated always als Zeilenende|  
-|**"IsHidden"**|Spaltenwert wird vom System generiert werden. Entspricht **sys.columns.is_hidden**|**Gilt für**: [!INCLUDE[ssCurrentLong](../../includes/sscurrentlong-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 0 = nicht ausgeblendete<br /><br /> 1 = ausgeblendet|  
+|**UsesAnsiTrim**|Bei der Erstellung der Tabelle wurde für ANSI_PADDING die Einstellung ON festgelegt. Diese Eigenschaft gilt nur für Spalten oder Parameter vom Typ **char** oder **varchar**.|1= TRUE<br /><br /> 0= FALSE<br /><br /> NULL = Eingabe ist nicht gültig.|  
+|**IsSparse**|Spalte ist eine Sparsespalte. Weitere Informationen finden Sie unter [Verwenden von Spalten mit geringer Dichte](../../relational-databases/tables/use-sparse-columns.md).|1= TRUE<br /><br /> 0= FALSE<br /><br /> NULL = Eingabe ist nicht gültig.|  
+|**IsColumnSet**|Spalte ist ein Spaltensatz. Weitere Informationen finden Sie unter [Verwenden von Spaltensätzen](../../relational-databases/tables/use-column-sets.md).|1= TRUE<br /><br /> 0= FALSE<br /><br /> NULL = Eingabe ist nicht gültig.|  
+|**GeneratedAlwaysType**|Entspricht dem vom System generierten Spaltenwert. Entspricht **sys.columns.generated_always_type**|**Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 0 = Nicht immer generiert<br /><br /> 1 = Immer als Zeilenanfang generiert<br /><br /> 2 = Immer als Zeilenende generiert|  
+|**IsHidden**|Entspricht dem vom System generierten Spaltenwert. Entspricht **sys.columns.is_hidden**|**Gilt für**: [!INCLUDE[ssCurrentLong](../../includes/sscurrentlong-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 0 = Nicht ausgeblendet<br /><br /> 1 = Ausgeblendet|  
   
 ## <a name="return-types"></a>Rückgabetypen
  **int**  
@@ -92,7 +92,7 @@ Gibt NULL bei einem Fehler zurück oder wenn ein Aufrufer nicht über Berechtigu
   
 Ein Benutzer kann nur die Metadaten sicherungsfähiger Elemente anzeigen, bei denen der Benutzer entweder der Besitzer ist oder für die dem Benutzer eine Berechtigung erteilt wurde. Dies bedeutet, dass Metadaten ausgebende integrierte Funktionen, z. B. COLUMNPROPERTY, möglicherweise NULL zurückgeben, wenn dem Benutzer für das Objekt keine Berechtigung erteilt wurde. Weitere Informationen finden Sie unter [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
 Beim Prüfen einer deterministischen Eigenschaft einer Spalte prüfen Sie zuerst, ob die Spalte eine berechnete Spalte ist. **IsDeterministic** gibt für nicht berechnete Spalten NULL zurück. Berechnete Spalten können als Indexspalten angegeben werden.
   
 ## <a name="examples"></a>Beispiele  
@@ -114,7 +114,7 @@ Column Length
 ```  
   
 ## <a name="see-also"></a>Siehe auch
-[Metadatenfunktionen &#40; Transact-SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)  
-[TYPEPROPERTY &#40; Transact-SQL &#41;](../../t-sql/functions/typeproperty-transact-sql.md)
+[Metadata Functions &#40;Transact-SQL&#41; (Metadatenfunktionen (Transact-SQL))](../../t-sql/functions/metadata-functions-transact-sql.md)  
+[TYPEPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/typeproperty-transact-sql.md)
   
   

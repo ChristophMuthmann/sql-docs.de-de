@@ -1,5 +1,5 @@
 ---
-title: DATEDIFF (Transact-SQL) | Microsoft Docs
+title: DATEDIFF (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 07/29/2017
 ms.prod: sql-non-specified
@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - DATEDIFF_TSQL
 - DATEDIFF
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - dates [SQL Server], functions
 - DATEDIFF function [SQL Server]
@@ -31,23 +33,23 @@ helpviewer_keywords:
 - crossing date time boundaries [SQL Server]
 - calculating dates times [SQL Server]
 ms.assetid: eba979f2-1a8d-4cce-9d75-b74f9b519b37
-caps.latest.revision: "52"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: cbbe6e93122cb69253b960afe067635ee0a852d8
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.openlocfilehash: c7eaab4807f87aca3de9d4fb318c9069f5efdc67
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="datediff-transact-sql"></a>DATEDIFF (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Gibt die Anzahl (Ganzzahl mit Vorzeichen) der angegebenen *Datepart* Grenzen überschritten, zwischen dem angegebenen *"StartDate"* und *Enddate*.
+Gibt die Anzahl (ganze Zahl mit Vorzeichen) der angegebenen *datepart*-Begrenzungen zurück, die zwischen den angegebenen Werten für *startdate* und *enddate* überschritten wurden.
   
-Größere Unterschiede finden Sie unter [DATEDIFF_BIG &#40; Transact-SQL &#41; ](../../t-sql/functions/datediff-big-transact-sql.md). Eine Übersicht über alle [!INCLUDE[tsql](../../includes/tsql-md.md)] Datums-und Uhrzeitdatentypen und Funktionen finden Sie unter [Datums- und Uhrzeitdatentypen und-Funktionen &#40; Transact-SQL &#41; ](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).
+Größere Unterschiede finden Sie unter [DATEDIFF_BIG &#40;Transact-SQL&#41;](../../t-sql/functions/datediff-big-transact-sql.md). Eine Übersicht über alle Datums- und Uhrzeitdatentypen und zugehörige Funktionen für [!INCLUDE[tsql](../../includes/tsql-md.md)] finden Sie unter [Datums- und Uhrzeitdatentypen und zugehörige Funktionen &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).
   
 ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -59,52 +61,52 @@ DATEDIFF ( datepart , startdate , enddate )
   
 ## <a name="arguments"></a>Argumente  
 *datepart*  
-Ist der Teil des *"StartDate"* und *Enddate* , die den Typ der überschrittenen Begrenzung angibt. Die folgende Tabelle enthält alle gültigen *Datepart* Argumente. Benutzerdefinierte Variablenentsprechungen sind nicht gültig.
+Der Teil von *startdate* und *enddate*, der den Typ der überschrittenen Begrenzung angibt. In der folgenden Tabelle werden alle gültigen *datepart*-Argumente aufgeführt. Benutzerdefinierte Variablenentsprechungen sind nicht gültig.
   
 |*datepart*|Abkürzungen|  
 |---|---|
-|**Jahr**|**Yy, yyyy**|  
-|**Quartal**|**Qq, q**|  
-|**Monat**|**mm, m**|  
-|**DayOfYear**|**dy, y**|  
-|**Tag**|**tt, d**|  
-|**Woche**|**wk weltweit**|  
-|**Stunde**|**hh**|  
-|**Minute**|**Mi, n**|  
-|**Sekunde**|**ss, s**|  
-|**Millisekunde**|**MS**|  
-|**in Mikrosekunden**|**MCS**|  
-|**Nanosekunden**|**Notification Services**|  
+|**year**|**yy, yyyy**|  
+|**quarter**|**qq, q**|  
+|**month**|**mm, m**|  
+|**dayofyear**|**dy, y**|  
+|**day**|**dd, d**|  
+|**week**|**wk, ww**|  
+|**hour**|**hh**|  
+|**minute**|**mi, n**|  
+|**second**|**ss, s**|  
+|**millisecond**|**ms**|  
+|**microsecond**|**mcs**|  
+|**nanosecond**|**ns**|  
   
 *startdate*  
-Ist ein Ausdruck, der in aufgelöst werden kann ein **Zeit**, **Datum**, **Smalldatetime**, **"DateTime"**, **datetime2**, oder **"DateTimeOffset"** Wert. *Datum* kann ein Ausdruck, Spaltenausdruck, eine benutzerdefinierte Variable oder Zeichenfolge literal. *"StartDate"* abgezogen *Enddate*.
+Ein Ausdruck, der in einen der folgenden Werte aufgelöst werden kann: **time**, **date**, **smalldatetime**, **datetime**, **datetime2** oder **datetimeoffset**. *date* kann ein Ausdruck, ein Spaltenausdruck, eine benutzerdefinierte Variable oder ein Zeichenfolgenliteral sein. *startdate* wird von *enddate* abgezogen.
   
-Um Mehrdeutigkeiten zu vermeiden, sollten Sie vierstellige Jahreszahlen verwenden. Informationen zu zweistelligen Jahreszahlen finden Sie unter [konfigurieren two Digit Year cutoff Server Configuration Option](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md).
+Um Mehrdeutigkeiten zu vermeiden, sollten Sie vierstellige Jahreszahlen verwenden. Informationen zu zweistelligen Jahreszahlen finden Sie unter [Konfigurieren der Serverkonfigurationsoption „Umstellungsjahr für Angaben mit zwei Ziffern“](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md).
   
-*EndDate*  
-Finden Sie unter *"StartDate"*.
+*enddate*  
+Weitere Informationen finden Sie unter *startdate*.
   
 ## <a name="return-type"></a>Rückgabetyp  
  **int**  
   
 ## <a name="return-value"></a>Rückgabewert  
   
--   Jede *Datepart* und zugehörigen Abkürzungen geben denselben Wert zurück.  
+-   Jedes *datepart*-Argument und die zugehörigen Abkürzungen geben denselben Wert zurück.  
   
-Wenn der Rückgabewert außerhalb des gültigen Bereichs für **Int** (-2,147,483,648 bis + 2,147,483,647), wird ein Fehler zurückgegeben. Für **Millisekunde**, der maximale Unterschied zwischen *"StartDate"* und *Enddate* beträgt 24 Tage, 20 Stunden, 31 Minuten und 23,647 Sekunden. Für **zweite**, der maximale Unterschied 68 Jahre liegt.
+Wenn der Rückgabewert außerhalb des Bereichs für **int** liegt (-2,147,483,648 to +2,147,483,647), wird ein Fehler zurückgegeben. Der maximale Unterschied zwischen *startdate* und *enddate* beträgt für **millisecond** 24 Tage, 20 Stunden, 31 Minuten und 23,647 Sekunden. Für **second** beträgt der maximale Unterschied 68 Jahre.
   
-Wenn *"StartDate"* und *Enddate* sowohl nur einen Uhrzeitwert zugeordnet werden und die *Datepart* ist nicht *Datepart*, wird 0 zurückgegeben.
+Wenn *startdate* und *enddate* jeweils nur einen Uhrzeitwert zugeordnet ist und *datepart* kein Zeit-*datepart* ist, wird 0 (null) zurückgegeben.
   
-Ein Zeitzonenoffset Komponente des *"StartDate"* oder *Endate* wird bei der Berechnung des Rückgabewerts nicht verwendet.
+Beim Berechnen des Rückgabewerts wird keine Komponente von *startdate* oder *enddate* für den Zeitzonenoffset verwendet.
   
-Da [Smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md) wird nur auf die Minute, wenn eine **Smalldatetime** Wert wird zum *"StartDate"* oder *Enddate*, Sekunden und Millisekunden immer in der zurückgegebene Wert auf 0 festgelegt sind.
+Da [smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md) nur auf die Minute genaue Werte zurückgibt, wenn bei einem **smalldatetime**-Wert *startdate* oder *enddate* verwendet wird, werden im Rückgabewert die Sekunden und die Millisekunden immer auf 0 (null) festgelegt.
   
-Wenn zu einer Variablen eines Datumsdatentyps nur ein Uhrzeitwert zugeordnet wird, wird für den Wert des fehlenden Datumsteils der Standardwert festgelegt: 1900-01-01. Wenn zu einer Variablen eines Uhrzeit- oder Datumsdatentyps nur ein Datumswert zugeordnet wird, wird für den Wert des fehlenden Uhrzeitteils der Standardwert festgelegt: 00-00-00. Wenn entweder *"StartDate"* oder *Enddate* haben nur einen Uhrzeitteil und der andere nur einen Date-Teil, die fehlenden Uhrzeit- und Datumsteile werden auf die Standardwerte festgelegt.
+Wenn zu einer Variablen eines Datumsdatentyps nur ein Uhrzeitwert zugeordnet wird, wird für den Wert des fehlenden Datumsteils der Standardwert festgelegt: 1900-01-01. Wenn zu einer Variablen eines Uhrzeit- oder Datumsdatentyps nur ein Datumswert zugeordnet wird, wird für den Wert des fehlenden Uhrzeitteils der Standardwert festgelegt: 00-00-00. Wenn entweder *startdate* oder *enddate* nur über einen Uhrzeitteil und der andere nur über einen Datumsteil verfügen, werden für die fehlenden Uhrzeit- und Datumstypen die Standardwerte festgelegt.
   
-Wenn *"StartDate"* und *Enddate* sind von anderen Date-Datentypen und eine mehr Uhrzeitteile oder die Genauigkeit der Sekundenbruchteile als das andere ist, werden die fehlenden Teile des anderen auf 0 festgelegt.
+Wenn *startdate* und *enddate* unterschiedliche Datumsdatentypen darstellen und ein Datentyp mehr Uhrzeitteile oder eine höhere Genauigkeit bezüglich der Bruchteile von Sekunden aufweist als der andere Teil, wird für die fehlenden Teile des anderen Datentyps 0 (null) festgelegt.
   
-## <a name="datepart-boundaries"></a>DatePart-Begrenzungen  
-Die folgenden Anweisungen verfügen über denselben *"StartDate"* und demselben *Endate*. Die Datumsangaben folgen aufeinander und unterscheiden sich in der Uhrzeit um 0,0000001 Sekunden. Der Unterschied zwischen der *"StartDate"* und *Endate* in jeder Anweisung überschreitet eine Kalender- oder uhrzeitbegrenzung des seine *Datepart*. Jede Anweisung gibt 1 zurück. Wenn für dieses Beispiel unterschiedliche Jahre verwendet werden, und wenn die beiden *"StartDate"* und *Endate* befinden sich in derselben Kalenderwoche, der Rückgabewert für **Woche** würde "0" sein.
+## <a name="datepart-boundaries"></a>datepart-Begrenzungen  
+Die folgenden Anweisungen verfügen über denselben Wert für *startdate* und denselben Wert für *enddate*. Die Datumsangaben folgen aufeinander und unterscheiden sich in der Uhrzeit um 0,0000001 Sekunden. Der Unterschied zwischen *startdate* und *enddate* in jeder Anweisung überschreitet eine Kalender- oder Uhrzeitbegrenzung des zugehörigen *datepart*. Jede Anweisung gibt 1 zurück. Wenn für dieses Beispiel unterschiedliche Jahre verwendet werden und sowohl *startdate* als auch *enddate* in derselben Kalenderwoche liegen, entspricht der Rückgabewert für **week** dem Wert 0 (null).
   
 ```sql
 SELECT DATEDIFF(year, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
@@ -119,15 +121,15 @@ SELECT DATEDIFF(second, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000
 SELECT DATEDIFF(millisecond, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
 ```
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
 DATEDIFF kann in den Klauseln WHERE, HAVING, GROUP BY und ORDER BY der Auswahlliste verwendet werden.
   
-DATEDIFF wandelt Zeichenfolgenliterale als implizit eine **datetime2** Typ. Daher unterstützt DATEDIFF das Format YDM nicht, wenn das Datum als Zeichenfolge übergeben wird. Sie müssen die Zeichenfolge, die explizit Umwandeln einer **"DateTime"** oder **Smalldatetime** Typ das YDM-Format verwendet.
+DATEPART wandelt Zeichenfolgenliterale implizit in den **datetime2**-Typ um. Daher unterstützt DATEDIFF das Format YDM nicht, wenn das Datum als Zeichenfolge übergeben wird. Sie müssen die Zeichenfolge explizit in den Typ **datetime** oder **smalldatetime** umwandeln, um das YDM-Format zu verwenden.
   
 Das Angeben von SET DATEFIRST hat keine Auswirkungen auf DATEDIFF. DATEDIFF verwendet immer Sonntag als ersten Wochentag, um zu gewährleisten, dass die Funktion deterministisch ist.
   
 ## <a name="examples"></a>Beispiele  
-In den folgenden Beispielen wird mit verschiedenen Arten von Ausdrücken als Argumente für die *"StartDate"* und *Enddate* Parameter.
+In den folgenden Beispielen werden verschiedene Typen von Ausdrücken als Argumente für den *startdate*-Parameter und den *enddate*-Parameter verwendet.
   
 ### <a name="a-specifying-columns-for-startdate-and-enddate"></a>A. Angeben von Spalten für startdate und enddate  
 Im folgenden Beispiel wird die Anzahl der Tagesbegrenzungen berechnet, die von den Datumsangaben in zwei Spalten in einer Tabelle überschritten wurden.
@@ -146,7 +148,7 @@ FROM dbo.Duration;
 ```  
   
 ### <a name="b-specifying-user-defined-variables-for-startdate-and-enddate"></a>B. Angeben von benutzerdefinierten Variablen für startdate und enddate  
-Im folgenden Beispiel wird eine benutzerdefinierte Variablen als Argumente für *"StartDate"* und *Enddate*.
+Im folgenden Beispiel werden benutzerdefinierte Variablen als Argumente für *startdate* und *enddate* verwendet.
   
 ```sql
 DECLARE @startdate datetime2 = '2007-05-05 12:10:09.3312722';  
@@ -155,14 +157,14 @@ SELECT DATEDIFF(day, @startdate, @enddate);
 ```  
   
 ### <a name="c-specifying-scalar-system-functions-for-startdate-and-enddate"></a>C. Angeben von skalaren Systemfunktionen für startdate und enddate  
-Im folgenden Beispiel wird die skalaren Systemfunktionen als Argumente für *"StartDate"* und *Enddate*.
+Im folgenden Beispiel werden skalare Systemfunktionen als Argumente für *startdate* und *enddate* verwendet.
   
 ```sql
 SELECT DATEDIFF(millisecond, GETDATE(), SYSDATETIME());  
 ```  
   
 ### <a name="d-specifying-scalar-subqueries-and-scalar-functions-for-startdate-and-enddate"></a>D. Angeben von skalaren Unterabfragen und skalaren Funktionen für startdate und enddate  
-Im folgende Beispiel werden skalare Unterabfragen und skalaren Funktionen als Argumente für verwendet *"StartDate"* und *Enddate*.
+Im folgenden Beispiel werden skalare Unterabfragen und skalare Funktionen als Argumente für *startdate* und *enddate* verwendet.
   
 ```sql
 USE AdventureWorks2012;  
@@ -172,7 +174,7 @@ SELECT DATEDIFF(day,(SELECT MIN(OrderDate) FROM Sales.SalesOrderHeader),
 ```  
   
 ### <a name="e-specifying-constants-for-startdate-and-enddate"></a>E. Angeben von Konstanten für startdate und enddate  
-Im folgenden Beispiel wird Zeichenkonstanten als Argumente für *"StartDate"* und *Enddate*.
+Im folgenden Beispiel werden Zeichenkonstanten als Argumente für *startdate* und *enddate* verwendet.
   
 ```sql
 SELECT DATEDIFF(day, '2007-05-07 09:53:01.0376635'  
@@ -180,7 +182,7 @@ SELECT DATEDIFF(day, '2007-05-07 09:53:01.0376635'
 ```  
   
 ### <a name="f-specifying-numeric-expressions-and-scalar-system-functions-for-enddate"></a>F. Angeben von numerischen Ausdrücken und skalaren Systemfunktionen für enddate  
-Im folgenden Beispiel wird einen numerischen Ausdruck `(GETDATE ()+ 1)`, und skalare Systemfunktionen `GETDATE` und `SYSDATETIME`, als Argumente für *Enddate*.
+Im folgenden Beispiel werden ein numerischer Ausdruck, `(GETDATE ()+ 1)`, und skalare Systemfunktionen, `GETDATE` und `SYSDATETIME`, als Argumente für *enddate* verwendet.
   
 ```sql
 USE AdventureWorks2012;  
@@ -197,7 +199,7 @@ GO
 ```  
   
 ### <a name="g-specifying-ranking-functions-for-startdate"></a>G. Angeben von Rangfolgefunktionen für startdate  
-Im folgende Beispiel wird eine rangfolgefunktion als Argument für *"StartDate"*.
+Im folgenden Beispiel wird eine Rangfolgefunktion als Argument für *startdate* verwendet.
   
 ```sql
 USE AdventureWorks2012;  
@@ -215,7 +217,7 @@ WHERE TerritoryID IS NOT NULL
 ```  
   
 ### <a name="h-specifying-an-aggregate-window-function-for-startdate"></a>H. Angeben einer Aggregatfensterfunktion für startdate  
-Im folgenden Beispiel wird eine aggregatfensterfunktion als Argument für *"StartDate"*.
+Im folgenden Beispiel wird eine Aggregatfensterfunktion als Argument für *startdate* verwendet.
   
 ```sql
 USE AdventureWorks2012;  
@@ -230,8 +232,8 @@ WHERE soh.SalesOrderID IN(43659,58918);
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-In den folgenden Beispielen wird mit verschiedenen Arten von Ausdrücken als Argumente für die *"StartDate"* und *Enddate* Parameter.
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
+In den folgenden Beispielen werden verschiedene Typen von Ausdrücken als Argumente für den *startdate*-Parameter und den *enddate*-Parameter verwendet.
   
 ### <a name="i-specifying-columns-for-startdate-and-enddate"></a>I. Angeben von Spalten für startdate und enddate  
 Im folgenden Beispiel wird die Anzahl der Tagesbegrenzungen berechnet, die von den Datumsangaben in zwei Spalten in einer Tabelle überschritten wurden.
@@ -249,7 +251,7 @@ FROM dbo.Duration;
 ```  
   
 ### <a name="j-specifying-scalar-subqueries-and-scalar-functions-for-startdate-and-enddate"></a>J. Angeben von skalaren Unterabfragen und skalaren Funktionen für startdate und enddate  
-Im folgende Beispiel werden skalare Unterabfragen und skalaren Funktionen als Argumente für verwendet *"StartDate"* und *Enddate*.
+Im folgenden Beispiel werden skalare Unterabfragen und skalare Funktionen als Argumente für *startdate* und *enddate* verwendet.
   
 ```sql
 -- Uses AdventureWorks  
@@ -261,7 +263,7 @@ FROM dbo.DimEmployee;
 ```  
   
 ### <a name="k-specifying-constants-for-startdate-and-enddate"></a>K. Angeben von Konstanten für startdate und enddate  
-Im folgenden Beispiel wird Zeichenkonstanten als Argumente für *"StartDate"* und *Enddate*.
+Im folgenden Beispiel werden Zeichenkonstanten als Argumente für *startdate* und *enddate* verwendet.
   
 ```sql
 -- Uses AdventureWorks  
@@ -271,7 +273,7 @@ SELECT TOP(1) DATEDIFF(day, '2007-05-07 09:53:01.0376635'
 ```  
   
 ### <a name="l-specifying-ranking-functions-for-startdate"></a>L. Angeben von Rangfolgefunktionen für startdate  
-Im folgende Beispiel wird eine rangfolgefunktion als Argument für *"StartDate"*.
+Im folgenden Beispiel wird eine Rangfolgefunktion als Argument für *startdate* verwendet.
   
 ```sql
 -- Uses AdventureWorks  
@@ -283,7 +285,7 @@ FROM dbo.DimEmployee;
 ```  
   
 ### <a name="m-specifying-an-aggregate-window-function-for-startdate"></a>M. Angeben einer Aggregatfensterfunktion für startdate  
-Im folgenden Beispiel wird eine aggregatfensterfunktion als Argument für *"StartDate"*.
+Im folgenden Beispiel wird eine Aggregatfensterfunktion als Argument für *startdate* verwendet.
   
 ```sql
 -- Uses AdventureWorks  
@@ -295,7 +297,7 @@ FROM dbo.DimEmployee
 ```  
   
 ## <a name="see-also"></a>Siehe auch
-[DATEDIFF_BIG &#40; Transact-SQL &#41;](../../t-sql/functions/datediff-big-transact-sql.md)  
+[DATEDIFF_BIG &#40;Transact-SQL&#41;](../../t-sql/functions/datediff-big-transact-sql.md)  
 [CAST und CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)
   
   

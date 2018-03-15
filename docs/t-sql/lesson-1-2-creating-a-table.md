@@ -1,5 +1,5 @@
 ---
-title: Erstellen einer Tabelle (Lernprogramm) | Microsoft Docs
+title: Erstellen einer Tabelle (Tutorial) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 04/18/2016
 ms.prod: sql-non-specified
@@ -26,7 +26,7 @@ ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="lesson-1-2---creating-a-table"></a>Lektion 1-2: Erstellen einer Tabelle
+# <a name="lesson-1-2---creating-a-table"></a>Lektion 1.2: Erstellen einer Tabelle
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Zum Erstellen einer Tabelle müssen Sie einen Tabellennamen sowie die Namen und Datentypen jeder Spalte in der Tabelle angeben. Außerdem empfiehlt es sich, anzugeben, ob NULL-Werte in den einzelnen Spalten zulässig sind. Zum Erstellen der Tabelle müssen Sie über die Berechtigung `CREATE TABLE` verfügen sowie über die Berechtigung `ALTER SCHEMA` für das Schema, das die Tabelle enthalten wird. Die feste Datenbankrolle `db_ddladmin` verfügt über folgende Berechtigungen.  
@@ -79,10 +79,10 @@ Eine Liste der Datentypen sowie Links zu Beschreibungen der einzelnen Datentypen
     GO  
     ```  
   
-## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
+## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
 [Einfügen und Aktualisieren von Daten in einer Tabelle &#40;Tutorial&#41;](../t-sql/lesson-1-3-inserting-and-updating-data-in-a-table.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [CREATE TABLE &#40;Transact-SQL&#41;](../t-sql/statements/create-table-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: DBCC FREEPROCCACHE (Transact-SQL) | Microsoft Docs
+title: DBCC FREEPROCCACHE (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 10/13/2017
 ms.prod: sql-non-specified
@@ -44,18 +44,18 @@ ms.lasthandoff: 01/25/2018
 Entfernt alle Elemente aus dem Plancache, entfernt einen bestimmten Plan aus dem Plancache durch Angabe eines Planhandles oder SQL-Handles oder entfernt alle einem angegebenen Ressourcenpool zugeordneten Cacheinträge.
 
 >[!NOTE]
->Die Ausführungsstatistik für systemintern kompilierte gespeicherte Prozeduren wird durch DBCC FREEPROCCACHE nicht gelöscht. Der Prozedurcache enthält keine Informationen zu systemintern kompilierten gespeicherten Prozeduren. Jede Ausführungsstatistik, die Prozedur erfasst wird in die Ausführungsstatistik DMVs angezeigt: [Sys. dm_exec_procedure_stats &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md) und [dm_exec_query_plan &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md).  
+>Die Ausführungsstatistik für systemintern kompilierte gespeicherte Prozeduren wird durch DBCC FREEPROCCACHE nicht gelöscht. Der Prozedurcache enthält keine Informationen zu systemintern kompilierten gespeicherten Prozeduren. Jede Ausführungsstatistik, die aus Prozedurausführungen erfasst wird, wird in den DMVs der Ausführungsstatistik angezeigt: [sys.dm_exec_procedure_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md) und [sys.dm_exec_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md).  
   
 ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Syntax  
-Die Syntax für SQLServer:
+Syntax für SQL Server:
 
 ```sql
 DBCC FREEPROCCACHE [ ( { plan_handle | sql_handle | pool_name } ) ] [ WITH NO_INFOMSGS ]  
 ```  
 
-Die Syntax für Azure SQL Datawarehouse und Parallel Datawarehouse:
+Syntax für Azure SQL Data Warehouse und Parallel Data Warehouse:
   
 ```sql
 DBCC FREEPROCCACHE [ ( COMPUTE | ALL ) ] 
@@ -65,39 +65,39 @@ DBCC FREEPROCCACHE [ ( COMPUTE | ALL ) ]
   
 ## <a name="arguments"></a>Argumente  
  ( { *plan_handle* | *sql_handle* | *pool_name* } )  
-*Plan_handle* identifiziert eindeutig einen Abfrageplan für einen Batch, die ausgeführt wurde, dessen Plan sich im Plancache befindet. *Plan_handle* ist **varbinary(64)** und kann aus den folgenden dynamischen Verwaltungsobjekten abgerufen werden:  
+*plan_handle* führt eine eindeutige Identifizierung eines Abfrageplans für einen ausgeführten Batch aus, dessen Plan sich im Plancache befindet. *plan_handle* ist vom Datentyp **varbinary(64)** und kann von den folgenden dynamischen Verwaltungsobjekten abgerufen werden:  
  -   [sys.dm_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)  
  -   [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
  -   [sys.dm_exec_query_memory_grants](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)  
  -   [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)  
 
-*Sql_handle* ist der SQL-Handle der zu löschenden Batch. *sql_handle* is **varbinary(64)** and can be obtained from the following dynamic management objects:  
+*sql_handle* das SQL-Handle für den zu löschenden Batch. *sql_handle* ist vom Datentyp **varbinary(64)** und kann von den folgenden dynamischen Verwaltungsobjekten abgerufen werden:  
  -   [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)  
  -   [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
  -   [sys.dm_exec_cursors](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cursors-transact-sql.md)  
  -   [sys.dm_exec_xml_handles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-xml-handles-transact-sql.md)  
  -   [sys.dm_exec_query_memory_grants](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)  
 
-*Pool_name* ist der Name eines Ressourcenpools der Ressourcenkontrolle. *Pool_name* ist **Sysname** und abgerufen werden können, indem Sie Abfragen der [dm_resource_governor_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md) -verwaltungssicht.  
- Um einen Ressourcenpool eine Arbeitsauslastungsgruppe der Ressourcenkontrolle zuzuordnen, Fragen Sie die [dm_resource_governor_workload_groups](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md) -verwaltungssicht. Informationen über die Arbeitsauslastungsgruppe für eine Sitzung durch Abfragen der [Sys. dm_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md) -verwaltungssicht.  
+*pool_name* ist der Name eines Ressourcenpools für die Ressourcenkontrolle. *pool_name* ist vom Datentyp **sysname** und kann durch Abfragen der dynamischen Verwaltungssicht [sys.dm_resource_governor_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md) abgerufen werden.  
+ Fragen Sie die dynamische Verwaltungssicht [sys.dm_resource_governor_workload_groups](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md) ab, um einem Ressourcenpool eine Arbeitsauslastungsgruppe zur Ressourcenkontrolle zuzuordnen. Informationen über die Arbeitsauslastungsgruppe für eine Sitzung können Sie über die dynamische Verwaltungssicht [sys.dm_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md) abfragen.  
 
   
  WITH NO_INFOMSGS  
  Alle Informationsmeldungen werden unterdrückt.  
   
  COMPUTE  
- Löschen Sie von jeder Serverknoten Abfrageplancache befinden. Dies ist der Standardwert.  
+ Alle Serverknoten werden aus dem Abfrageplancache gelöscht. Dies ist der Standardwert.  
   
  ALL  
- Löschen Sie auf jedem Knoten der COMPUTE- und aus dem Knoten "Zugriffssteuerung" Abfrageplancache befinden.  
+ Alle Computerknoten und Steuerknoten werden aus dem Abfrageplancache gelöscht.  
 
 > [!NOTE]
-> Beginnend mit [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], die `ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE` der Prozedurcache (Plan) für die Datenbank im Bereich zu löschen.
+> Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ist `ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE` verfügbar, um den Prozedur-/Plancache für die Datenbank im Bereich zu löschen.
 
-## <a name="remarks"></a>Hinweise  
-Verwenden Sie DBCC FREEPROCCACHE, um den Plancache sorgfältig zu leeren. Löschen die Prozedur (Plan), dass der Cache bewirkt, dass alle Pläne zur Entfernung und eingehenden Abfrageprotokolls Ausführungen einen neuen Plan kompiliert werden, statt alle zuvor zwischengespeicherten Plan erneut zu. 
+## <a name="remarks"></a>Remarks  
+Verwenden Sie DBCC FREEPROCCACHE, um den Plancache sorgfältig zu leeren. Durch das Löschen des Prozedur-/Plancaches werden alle Pläne entfernt, und eingehende Abfrageausführungen werden mit einem neuen Plan kompiliert, statt dass alle zuvor zwischengespeicherten Pläne wieder verwendet werden. 
 
-Dies kann dazu führen, dass eine plötzliche, vorübergehenden Abnahme der Leistung von Abfragen, die Anzahl der neuen Kompilierungen steigt. Für jeden geleerten Cachespeicher im Plancache die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Fehlerprotokoll enthält die folgende Meldung zur Information: "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wurden %d Leerungen des Cachespeichers für die '%s'-Cachespeicher (Bestandteil des Plancache) aufgrund von ' DBCC FREEPROCCACHE' oder 'DBCC FREESYSTEMCACHE'-Vorgängen. " Diese Meldung wird alle fünf Minuten protokolliert, solange der Cache innerhalb dieses Zeitintervalls geleert wird.
+Bei steigender Anzahl von Kompilierungen kann es zu einer plötzlichen, vorübergehenden Abnahme der Abfrageleistung kommen. Das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Fehlerprotokoll enthält für jeden geleerten Cachespeicher im Plancache folgende Meldung zur Information: „[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hat für den '%2!s!'-Cachespeicher (Bestandteil des Plancache) %1!s! Leerungen des Cachespeichers gefunden, die von 'DBCC FREEPROCCACHE'- oder 'DBCC FREESYSTEMCACHE'-Vorgängen ausgelöst wurden.“ Diese Meldung wird alle fünf Minuten protokolliert, solange der Cache innerhalb dieses Zeitintervalls geleert wird.
 
 Der Prozedurcache wird außerdem durch die folgenden Neukonfigurierungsvorgänge gelöscht:
 -   access check cache bucket count  
@@ -118,33 +118,33 @@ Der Prozedurcache wird außerdem durch die folgenden Neukonfigurierungsvorgänge
 -   user options  
   
 ## <a name="result-sets"></a>Resultsets  
-Wenn die WITH NO_INFOMSGS-Klausel nicht angegeben ist, gibt DBCC FREEPROCCACHE zurück: "DBCC-Ausführung wurde abgeschlossen. Falls DBCC Fehlermeldungen ausgegeben hat, wenden Sie sich an den Systemadministrator."
+Wenn die WITH NO_INFOMSGS-Klausel nicht angegeben ist, gibt DBCC FREEPROCCACHE folgende Meldung zurück: „Die DBCC-Ausführung wurde abgeschlossen. Falls DBCC Fehlermeldungen ausgegeben hat, wenden Sie sich an den Systemadministrator."
   
 ## <a name="permissions"></a>Berechtigungen  
-Gilt für: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 
+Gilt für: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 
 - Erfordert die ALTER SERVER STATE-Berechtigung auf dem Server.  
 
-Gilt für:[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]
-- Erfordert die Mitgliedschaft in der festen Serverrolle "DB_OWNER".  
+Gilt für: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]
+- Erfordert die Mitgliedschaft in der festen Serverrolle DB_OWNER.  
 
-## <a name="general-remarks-for-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Allgemeine Hinweise für [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] und[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-DBCC FREEPROCCACHE Befehlsfolge können gleichzeitig ausgeführt werden.
-In [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] oder [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], das Löschen des Zwischenspeichers Plan kann eine temporäre Verringerung der abfrageleistung verursachen, wie eingehende Abfragen einen neuen Plan zu kompilieren, statt erneut zu einem zuvor Plan zwischengespeichert. 
+## <a name="general-remarks-for-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Allgemeine Hinweise zu [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+Viele DBCC FREEPROCCACHE-Befehle können gleichzeitig ausgeführt werden.
+In [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] oder [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] kann das Löschen des Plancaches eine vorübergehende Abnahme der Abfrageleistung verursachen, da eingehende Abfragen einen neuen Plan kompilieren, statt einen zuvor zwischengespeicherten Plan zu verwenden. 
 
-DBCC FREEPROCCACHE (RECHENLOGIK) nur bewirkt, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Abfragen neu kompiliert, wenn sie auf den Serverknoten ausgeführt werden. Er führt nicht dazu, dass [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] oder [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] So kompilieren Sie den parallelen Abfrageplan, der generiert wird, auf den Knoten "Zugriffssteuerung".
+DBCC FREEPROCCACHE (COMPUTE) bewirkt nur, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Abfragen neu kompiliert werden, wenn sie auf den Compute-Knoten ausgeführt werden. Es führt nicht dazu, dass [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] oder [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] den parallelen Abfrageplan kompilieren, der auf dem Control-Knoten generiert wird.
 DBCC FREEPROCCACHE kann während der Ausführung abgebrochen werden.
   
-## <a name="limitations-and-restrictions-for-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Einschränkungen für [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] und[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-DBCC FREEPROCCACHE kann nicht innerhalb einer Transaktion ausgeführt.
-DBCC FREEPROCCAHCE wird in einer EXPLAIN-Anweisung nicht unterstützt.
+## <a name="limitations-and-restrictions-for-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beschränkungen für [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+DBCC FREEPROCCACHE kann nicht ohne eine Transaktion ausgeführt werden.
+DBCC FREEPROCCAHCE wird in EXPLAIN-Anweisungen nicht unterstützt.
   
-## <a name="metadata-for-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Metadaten für [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] und[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-Die Systemsicht sys.pdw_exec_requests wird eine neue Zeile hinzugefügt, wenn DBCC FREEPROCCACHE ausgeführt wird.
+## <a name="metadata-for-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Metadaten für [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+Der Systemsicht sys.pdw_exec_requests wird eine neue Zeile hinzugefügt, wenn DBCC FREEPROCCACHE ausgeführt wird.
 
-## <a name="examples-includessnoversionincludesssnoversion-mdmd"></a>Beispiele:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+## <a name="examples-includessnoversionincludesssnoversion-mdmd"></a>Beispiele: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 ### <a name="a-clearing-a-query-plan-from-the-plan-cache"></a>A. Löschen eines Abfrageplans im Plancache  
-Im folgenden Beispiel wird ein Abfrageplan im Plancache gelöscht, indem das Abfrageplanhandle angegeben wird. Um sicherzustellen, dass die Beispielabfrage im Plancache vorhanden ist, wird die Abfrage zuerst ausgeführt. Die `sys.dm_exec_cached_plans` und `sys.dm_exec_sql_text` dynamische Verwaltungssichten werden abgefragt, um das planhandle für die Abfrage zurückgeben. 
+Im folgenden Beispiel wird ein Abfrageplan im Plancache gelöscht, indem das Abfrageplanhandle angegeben wird. Um sicherzustellen, dass die Beispielabfrage im Plancache vorhanden ist, wird die Abfrage zuerst ausgeführt. Durch Abfrage der dynamischen Verwaltungssichten `sys.dm_exec_cached_plans` und `sys.dm_exec_sql_text` wird das Planhandle für die Abfrage ermittelt. 
 
 Der Planhandlewert aus dem Resultset wird dann in die `DBCC FREEPROCACHE`-Anweisung eingefügt, sodass nur dieser Plan aus dem Plancache entfernt wird.
   
@@ -177,14 +177,14 @@ GO
 ```  
   
 ### <a name="b-clearing-all-plans-from-the-plan-cache"></a>B. Löschen aller Pläne im Plancache  
-Im folgenden Beispiel werden alle Elemente im Plancache gelöscht. Die WITH `NO_INFOMSGS` -Klausel angegeben ist, um zu verhindern, dass die Meldung angezeigt wird.
+Im folgenden Beispiel werden alle Elemente im Plancache gelöscht. Die WITH `NO_INFOMSGS`-Klausel wird angegeben, um die Anzeige der Informationsmeldung zu verhindern.
   
 ```sql  
 DBCC FREEPROCCACHE WITH NO_INFOMSGS;  
 ```  
   
 ### <a name="c-clearing-all-cache-entries-associated-with-a-resource-pool"></a>C. Löschen aller einem Ressourcenpool zugeordneten Cacheeinträge  
-Im folgenden Beispiel werden alle einem angegebenen Ressourcenpool zugeordneten Cacheeinträge gelöscht. Die `sys.dm_resource_governor_resource_pools` Ansicht wird zuerst abgefragt, um Abrufen des Werts für *Pool_name*.
+Im folgenden Beispiel werden alle einem angegebenen Ressourcenpool zugeordneten Cacheeinträge gelöscht. Zunächst wird die `sys.dm_resource_governor_resource_pools`-Sicht abgefragt, um den Wert für *pool_name* zu erhalten.
   
 ```sql  
 SELECT * FROM sys.dm_resource_governor_resource_pools;  
@@ -193,34 +193,34 @@ DBCC FREEPROCCACHE ('default');
 GO  
 ```  
   
-## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] und[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
-### <a name="d-dbcc-freeproccache-basic-syntax-examples"></a>D. Beispiele für DBCC FREEPROCCACHE die grundlegende Syntax  
-Im folgende Beispiel entfernt alle vorhandenen Caches für die Abfrage-Plan von den Computeknoten. Obwohl der Kontext auf UserDbSales festgelegt ist, werden die Compute-Knoten Abfrage Plan Caches für alle Datenbanken entfernt werden wird. Die WITH NO_INFOMSGS-Klausel wird verhindert, dass informationsmeldungen in die Ergebnisse angezeigt werden.  
+### <a name="d-dbcc-freeproccache-basic-syntax-examples"></a>D. Beispiele für die grundlegende DBCC FREEPROCCACHE-Syntax  
+Im folgende Beispiel werden alle vorhandenen Abfrageplancaches aus den Compute-Knoten entfernt. Obwohl der Kontext auf UserDbSales festgelegt ist, werden die Abfrageplancaches des Compute-Knotens für alle Datenbanken entfernt. Die WITH NO_INFOMSGS-Klausel verhindert, dass Informationsmeldungen in den Ergebnissen angezeigt werden.  
   
 ```sql
 USE UserDbSales;  
 DBCC FREEPROCCACHE (COMPUTE) WITH NO_INFOMSGS;
 ```  
   
- Das folgende Beispiel enthält die gleichen Ergebnisse wie im vorherigen Beispiel, außer dass informationsmeldungen in die Ergebnisse angezeigt werden.  
+ Das folgende Beispiel ergibt dieselben Ergebnisse wie im vorherigen Beispiel, außer dass die Ergebnisse Informationsmeldungen enthalten.  
   
 ```sql
 USE UserDbSales;  
 DBCC FREEPROCCACHE (COMPUTE);  
 ```  
   
-Wenn informationsmeldungen angefordert werden, und die Ausführung erfolgreich ist, müssen die Ergebnisse der Abfrage eine Zeile pro Compute-Knoten.
+Wenn Informationsmeldungen angefordert werden und die Ausführung erfolgreich ist, enthalten die Abfrageergebnisse eine Zeile pro Compute-Knoten.
   
 ### <a name="e-granting-permission-to-run-dbcc-freeproccache"></a>E. Erteilen von Berechtigungen zum Ausführen von DBCC FREEPROCCACHE  
-Im folgenden Beispiel wird die Anmeldung David Berechtigung zum Ausführen von DBCC FREEPROCCACHE.  
+Im folgenden Beispiel wird dem Benutzer David die Berechtigung zum Auszuführen von DBCC FREEPROCCACHE erteilt.  
   
 ```sql
 GRANT ALTER SERVER STATE TO David; 
 GO
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
 [Ressourcenkontrolle](../../relational-databases/resource-governor/resource-governor.md)  
 [ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)

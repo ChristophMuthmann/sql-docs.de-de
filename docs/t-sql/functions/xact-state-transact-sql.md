@@ -1,5 +1,5 @@
 ---
-title: XACT_STATE (Transact-SQL) | Microsoft Docs
+title: XACT_STATE (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -52,7 +52,7 @@ XACT_STATE()
 ## <a name="return-type"></a>Rückgabetyp  
  **smallint**  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  XACT_STATE gibt folgende Werte zurück.  
   
 |Rückgabewert|Bedeutung|  
@@ -61,7 +61,7 @@ XACT_STATE()
 |0|Für die aktuelle Anforderung liegt keine aktive Benutzertransaktion vor.|  
 |-1|Für die aktuelle Anforderung liegt eine aktive Benutzertransaktion vor, allerdings ist ein Fehler aufgetreten, durch den die Transaktion als nicht commitfähig klassifiziert wurde. Die Anforderung kann für die Transaktion weder einen Commit noch ein Rollback zu einem Sicherungspunkt ausführen. Es ist lediglich möglich, ein vollständiges Rollback für die Transaktion anzufordern. Die Anforderung kann erst wieder Schreibvorgänge ausführen, wenn für die Transaktion ein Rollback ausgeführt wurde. Bis für die Transaktion ein Rollback ausgeführt wird, kann die Anforderung nur Lesevorgänge ausführen. Nachdem für die Transaktion ein Rollback ausgeführt worden ist, kann die Anforderung sowohl Lese- als auch Schreibvorgänge ausführen und eine neue Transaktion starten.<br /><br /> Nach Abschluss einer Batchausführung wird für alle aktiven nicht commitfähigen Transaktionen automatisch von [!INCLUDE[ssDE](../../includes/ssde-md.md)] ein Rollback ausgeführt. Falls keine Fehlermeldung gesendet wurde, als die Transaktion in den nicht commitfähigen Status überging, wird bei Abschluss des Batches eine Fehlermeldung an die Clientanwendung gesendet. Durch diese Meldung wird angezeigt, dass eine nicht commitfähige Transaktion erkannt und ein Rollback für sie ausgeführt wurde.|  
   
- Sowohl die XACT_STATE und @@TRANCOUNT Funktionen können verwendet werden, um festzustellen, ob die aktuelle Anforderung eine aktive Benutzertransaktion vorliegt. @@TRANCOUNT kann nicht verwendet werden, um zu bestimmen, ob diese Transaktion als nicht commitfähige Transaktion klassifiziert wurde. Mit XACT_STATE kann nicht bestimmt werden, ob geschachtelte Transaktionen vorhanden sind.  
+ Sowohl über die XACT_STATE-Funktion als auch über die @@TRANCOUNT-Funktion kann ermittelt werden, ob für die aktuelle Anforderung eine aktive Benutzertransaktion vorliegt. Mit @@TRANCOUNT kann nicht bestimmt werden, ob die betreffende Transaktion als nicht commitfähig klassifiziert wurde. Mit XACT_STATE kann nicht bestimmt werden, ob geschachtelte Transaktionen vorhanden sind.  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird `XACT_STATE` im `CATCH`-Block eines `TRY…CATCH`-Konstrukts verwendet, um zu bestimmen, ob für eine Transaktion ein Commit- oder Rollback-Vorgang ausgeführt werden soll. Da `SET XACT_ABORT` auf den Wert `ON` festgelegt ist, wird die Transaktion wegen des aufgrund der Einschränkungsverletzung aufgetretenen Fehlers in einen nicht commitfähigen Zustand versetzt.  
@@ -112,7 +112,7 @@ END CATCH;
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [@@TRANCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/trancount-transact-sql.md)   
  [BEGIN TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-transaction-transact-sql.md)   
  [COMMIT TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/commit-transaction-transact-sql.md)   

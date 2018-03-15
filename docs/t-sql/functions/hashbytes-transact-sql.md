@@ -1,5 +1,5 @@
 ---
-title: HASHBYTES (Transact-SQL) | Microsoft Docs
+title: HASHBYTES (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 07/29/2016
 ms.prod: sql-non-specified
@@ -48,28 +48,28 @@ HASHBYTES ( '<algorithm>', { @input | 'input' } )
 ```  
   
 ## <a name="arguments"></a>Argumente  
- **"**\<Algorithmus >**"**  
- Identifiziert den für das Hashing der Eingabe zu verwendenden Hashalgorithmus. Dies ist ein erforderliches Argument ohne Standardwert. Die einfachen Anführungszeichen müssen eingegeben werden. Beginnend mit [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], alle anderen Algorithmen als SHA2_256 oder SHA2_512 sind veraltet. Ältere Algorithmen (nicht empfohlen) werden weiterhin ausgeführt, aber sie werden eine veraltungsereignis ausgelöst.  
+ **'**\<algorithm>**'**  
+ Identifiziert den für das Hashing der Eingabe zu verwendenden Hashalgorithmus. Dies ist ein erforderliches Argument ohne Standardwert. Die einfachen Anführungszeichen müssen eingegeben werden. Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] gelten alle anderen Algorithmen als SHA2_256 und SHA2_512 als veraltet. Ältere Algorithmen (nicht empfohlen) funktionieren weiterhin, lösen jedoch ein Veraltungsereignis aus.  
   
  **@input**  
- Gibt eine Variable mit den Daten an, für die das Hashing ausgeführt werden soll. **@input**ist **Varchar**, **Nvarchar**, oder **Varbinary**.  
+ Gibt eine Variable mit den Daten an, für die das Hashing ausgeführt werden soll. **@input** ist **varchar**, **nvarchar** oder **varbinary**.  
   
- **"** *input* **"**  
+ **'** *input* **'**  
  Gibt einen Ausdruck an, der zu einer Zeichenfolge oder Binärzeichenfolge ausgewertet wird, für die das Hashing ausgeführt werden soll.  
   
  Die Ausgabe entspricht dem Algorithmusstandard: 128 Bits (16 Bytes) für MD2, MD4 und MD5; 160 Bits (20 Bytes) für SHA und SHA1; 256 Bits (32 Bytes) für SHA2_256 und 512 Bits (64 Bytes) für SHA2_512.  
   
-**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] über[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
- Für [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und früher: zulässige Eingabewerte sind auf 8.000 Bytes beschränkt.  
+ Bei [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und früher sind zulässige Eingabewerte auf 8.000 Byte beschränkt.  
   
 ## <a name="return-value"></a>Rückgabewert  
- **Varbinary** (maximal 8.000 Byte)  
+ **varbinary** (maximal 8.000 Byte)  
   
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="a-return-the-hash-of-a-variable"></a>A: Zurückgeben des Hashcodes einer Variablen  
- Das folgende Beispiel gibt die `SHA1` -Hash der **Nvarchar** in Variablen gespeicherten Daten `@HashThis`.  
+ Im folgenden Beispiel wird der `SHA1`-Hash der in der `@HashThis`-Variablen gespeicherten **nvarchar**-Daten zurückgegeben.  
   
 ```  
 DECLARE @HashThis nvarchar(4000);  
@@ -101,7 +101,7 @@ SELECT HASHBYTES('SHA1', c1) FROM dbo.Test1;
   
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Auswählen eines Verschlüsselungsalgorithmus](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)  
   
   

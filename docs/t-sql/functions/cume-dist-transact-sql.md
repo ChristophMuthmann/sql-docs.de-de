@@ -1,5 +1,5 @@
 ---
-title: CUME_DIST (Transact-SQL) | Microsoft Docs
+title: CUME_DIST (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -35,7 +35,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="cumedist-transact-sql"></a>CUME_DIST (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
 
-Berechnet die kumulierte Verteilung eines Werts innerhalb einer Gruppe von Werte in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. CUME_DIST berechnet somit die relative Position eines angegebenen Werts in einer Gruppe von Werten. Für eine Zeile *r*eine aufsteigende Reihenfolge der CUME_DIST davon ausgegangen, dass *r* ist die Anzahl der Zeilen mit Werten, kleiner als oder gleich dem Wert der *r*, dividiert durch die Anzahl von Zeilen im Resultset Partition oder Abfrage ausgewertet. CUME_DIST ähnelt der PERCENT_RANK-Funktion.
+Berechnet die kumulierte Verteilung eines Werts innerhalb einer Gruppe von Werte in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. CUME_DIST berechnet somit die relative Position eines angegebenen Werts in einer Gruppe von Werten. Für eine Zeile *r* bei aufsteigender Reihenfolge entspricht der CUME_DIST-Wert von *r* der Anzahl der Zeilen mit Werten, die niedriger oder gleich dem Wert von *r*, geteilt durch die Anzahl der in der Partition oder dem Abfrageresultset ausgewerteten Zeilen sind. CUME_DIST ähnelt der PERCENT_RANK-Funktion.
   
 ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -48,13 +48,13 @@ CUME_DIST( )
 ```  
   
 ## <a name="arguments"></a>Argumente  
-ÜBER **(** [ *Partition_by_clause* ] *Order_by_clause***)**  
-*Partition_by_clause* teilt das Resultset, das von der FROM-Klausel erstellt wird, in Partitionen, die auf die die Funktion angewendet wird. Wird dies nicht angegeben, verarbeitet die Funktion alle Zeilen des Abfrageresultsets als einzelne Gruppe. *Order_by_clause* bestimmt die logische Reihenfolge, in dem der Vorgang ausgeführt wird. *Order_by_clause* ist erforderlich. Die \<Zeilen- oder Bereichsklausel > der OVER-Syntax kann nicht in einer CUME_DIST-Funktion angegeben werden. Weitere Informationen finden Sie unter [Klausel "OVER" &#40; Transact-SQL &#41; ](../../t-sql/queries/select-over-clause-transact-sql.md).
+OVER **(** [ *partition_by_clause* ] *order_by_clause***)**  
+*partition_by_clause* unterteilt das von der FROM-Klausel erzeugte Resultset in Partitionen, auf die die Funktion angewendet wird. Wird dies nicht angegeben, verarbeitet die Funktion alle Zeilen des Abfrageresultsets als einzelne Gruppe. *order_by_clause* bestimmt die logische Reihenfolge, in der der Vorgang ausgeführt wird. *order_by_clause* ist erforderlich. Die \<Zeilen- oder Bereichsklausel> der OVER-Syntax kann für die CUME_DIST-Funktion nicht angegeben werden. Weitere Informationen finden Sie unter [OVER-Klausel &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).
   
 ## <a name="return-types"></a>Rückgabetypen
 **float(53)**
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
 Der von CUME_DIST zurückgegebene Wertebereich ist größer als 0 und kleiner oder gleich 1. Gleichwertige Werte ergeben immer den gleichen kumulierten Verteilungswert. NULL-Werte sind standardmäßig eingeschlossen und werden als niedrigste mögliche Werte behandelt.
   
 CUME_DIST ist nicht deterministisch. Weitere Informationen finden Sie unter [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).
@@ -100,6 +100,6 @@ Information Services   Bueno                  27.4038               0.4         
 ```  
   
 ## <a name="see-also"></a>Siehe auch
-[PERCENT_RANK &#40; Transact-SQL &#41;](../../t-sql/functions/percent-rank-transact-sql.md)
+[PERCENT_RANK &#40;Transact-SQL&#41;](../../t-sql/functions/percent-rank-transact-sql.md)
   
   

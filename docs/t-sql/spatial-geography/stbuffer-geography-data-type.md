@@ -1,5 +1,5 @@
 ---
-title: STBuffer (Geography-Datentyp) | Microsoft Docs
+title: STBuffer (geography-Datentyp) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stbuffer-geography-data-type"></a>STBuffer (geography-Datentyp)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  Gibt eine Geography-Objekt, das die Vereinigung aller darstellt verweist, deren Abstand zu einer **Geography** Instanz ist kleiner oder gleich einem angegebenen Wert.  
+  Gibt ein geography-Objekt zurück, dass die Vereinigung aller Punkte darstellt, deren Abstand zu einer Instanz von **geography** kleiner oder gleich einem angegebenen Wert ist.  
   
  Diese geography-Datentypmethode unterstützt Instanzen von **FullGlobe** oder räumliche Instanzen, die größer als eine Hemisphäre sind.  
   
@@ -47,32 +47,32 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>Argumente  
  *distance*  
- Ist ein Wert vom Typ **"float"** (**doppelte** in .NET Framework) angeben des Abstands zwischen den **Geography** Instanz, die der Puffer berechnet werden soll.  
+ Ein Wert vom Typ **float** (**double** in .NET-Framework), der den Abstand zu der **geography**-Instanz angibt, um die der Puffer berechnet werden soll.  
   
- Der maximale Abstand des Puffers darf 0.999 nicht überschreiten \* *π* * MinorAxis \* MinorAxis / MajorAxis (~0.999 \* 1/2 kugelumfang) oder die vollständige Kugel.  
+ Der maximale Abstand des Puffers darf 0,999 \* *π* * minorAxis \* minorAxis / majorAxis (~0.999 \* 1/2 Kugelumfang) oder die vollständige Kugel nicht überschreiten.  
   
 ## <a name="return-types"></a>Rückgabetypen  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Rückgabetyp: **Geography**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Rückgabetyp: **geography**  
   
  CLR-Rückgabetyp: **SqlGeography**  
   
-## <a name="remarks"></a>Hinweise  
- STBuffer() berechnet einen Puffer auf die gleiche Weise wie [BufferWithTolerance](../../t-sql/spatial-geography/bufferwithtolerance-geography-data-type.md), wobei *Toleranz* = abs(distance) \* .001 und *relative*  =  **"false"**.  
+## <a name="remarks"></a>Remarks  
+ STBuffer() berechnet einen Puffer auf die gleiche Weise wie [BufferWithTolerance](../../t-sql/spatial-geography/bufferwithtolerance-geography-data-type.md), wobei *Toleranz* = abs(distance) \* 0,001 und *relativ* = **false** ist.  
   
- Ein negativer Puffer entfernt alle Punkte innerhalb des angegebenen Abstands von der Begrenzung der **Geography** Instanz.  
+ Ein negativer Puffer entfernt alle Punkte innerhalb des angegebenen Abstands von der Begrenzung der **geography**-Instanz.  
   
- `STBuffer()`Gibt zurück, eine **FullGlobe** Instanz in bestimmten Fällen; z. B. `STBuffer()` gibt eine **FullGlobe** -Instanz auf, wenn der Pufferabstand größer als der Abstand vom Äquator bis zu den Polen ist. Ein Puffer kann nicht über die vollständige Kugel hinausgehen.  
+ `STBuffer()` gibt in bestimmten Fällen eine Instanz von **FullGlobe** zurück. Beispielsweise gibt `STBuffer()` eine **FullGlobe**-Instanz zurück, wenn der Pufferabstand größer als der Abstand vom Äquator zu den Polen ist. Ein Puffer kann nicht über die vollständige Kugel hinausgehen.  
   
- Diese Methode löst eine **ArgumentException** in **FullGlobe** Instanzen, in denen der Abstand des Puffers die folgende Einschränkung überschreitet:  
+ Diese Methode löst in **FullGlobe**-Instanzen eine **ArgumentException** aus, bei denen der Abstand des Puffers die folgende Einschränkung überschreitet:  
   
- 0,999 \* *π* * MinorAxis \* MinorAxis / MajorAxis (~0.999 \* 1/2 kugelumfang)  
+ 0,999 \* *π* * minorAxis \* minorAxis / majorAxis (~0.999 \* 1/2 Kugelumfang)  
   
  Die Begrenzung des maximal möglichen Abstands ermöglicht das Erstellen von äußerst flexiblen Puffern.  
   
- Die Abweichung zwischen dem theoretischen und dem berechnetem Puffer ist max (Toleranz, Blöcke * 1.E-7), in denen Toleranz = Distance \* .001. Weitere Informationen zu Blöcken, finden Sie unter [Geography-Datentyp-Methodenverweis](http://msdn.microsoft.com/library/028e6137-7128-4c74-90a7-f7bdd2d79f5e).  
+ Die Abweichung zwischen dem theoretischen und dem berechnetem Puffer beträgt max(tolerance, extents * 1,0E-7), wobei tolerance = distance \* 0,001 ist. Weitere Informationen zu Erweiterungen finden Sie unter [geography-Datentyp-Methodenverweis](http://msdn.microsoft.com/library/028e6137-7128-4c74-90a7-f7bdd2d79f5e).  
   
 ## <a name="examples"></a>Beispiele  
- Das folgende Beispiel erstellt eine `LineString``geography` Instanz. Anschließend wird `STBuffer()` verwendet, um den Bereich innerhalb von 1 Meter Umkreis um die Instanz zurückzugeben.  
+ Im folgenden Beispiel wird eine `LineString``geography`-Instanz erstellt. Anschließend wird `STBuffer()` verwendet, um den Bereich innerhalb von 1 Meter Umkreis um die Instanz zurückzugeben.  
   
 ```  
 DECLARE @g geography;  
@@ -80,8 +80,8 @@ SET @g = geography::STGeomFromText('LINESTRING(-122.360 47.656, -122.343 47.656)
 SELECT @g.STBuffer(1).ToString();  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [BufferWithTolerance &#40; Geography-Datentyp &#41;](../../t-sql/spatial-geography/bufferwithtolerance-geography-data-type.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [BufferWithTolerance &#40;geography-Datentyp&#41;](../../t-sql/spatial-geography/bufferwithtolerance-geography-data-type.md)   
  [OGC-Methoden für geography-Instanzen](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: RETURN (Transact-SQL) | Microsoft Docs
+title: RETURN (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -57,12 +57,12 @@ RETURN [ integer_expression ]
  Der zurückgegebene ganzzahlige Wert. Gespeicherte Prozeduren können einen ganzzahligen Wert an eine aufrufende Prozedur oder Anwendung zurückgeben.  
   
 ## <a name="return-types"></a>Rückgabetypen  
- Optional gibt **Int**.  
+ Gibt optional **int** zurück.  
   
 > [!NOTE]  
 >  Sofern nicht anders angegeben, geben alle gespeicherten Systemprozeduren den Wert 0 zurück. Dieser Wert zeigt einen erfolgreichen Verlauf an. Ein Wert ungleich 0 zeigt einen Fehler an.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Wenn Sie RETURN in einer gespeicherten Prozedur verwenden, kann RETURN keinen NULL-Wert zurückgeben. Falls eine Prozedur versucht, einen NULL-Wert zurückzugeben (z. B. wenn RETURN @status verwendet wird, und @status den Wert NULL hat), wird eine Warnmeldung generiert und der Wert 0 zurückgegeben.  
   
  Der Rückgabestatuswert kann in nachfolgenden [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen des Batches oder der Prozedur verwendet werden, von der die aktuelle Prozedur ausgeführt wurde, der Aufruf muss jedoch in der folgenden Form eingegeben werden: `EXECUTE @return_status = <procedure_name>`.  
@@ -159,10 +159,10 @@ GO
  2
  ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [ALTER PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-procedure-transact-sql.md)   
  [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)   
- [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
+ [DEKLARIEREN SIE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
  [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   
  [SET @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/set-local-variable-transact-sql.md)   
  [THROW &#40;Transact-SQL&#41;](../../t-sql/language-elements/throw-transact-sql.md)  

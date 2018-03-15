@@ -1,5 +1,5 @@
 ---
-title: ENCRYPTBYKEY (Transact-SQL) | Microsoft Docs
+title: ENCRYPTBYKEY (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -52,21 +52,21 @@ EncryptByKey ( key_GUID , { 'cleartext' | @cleartext }
   
 ## <a name="arguments"></a>Argumente  
  *key_GUID*  
- Ist die GUID des Schlüssels zum Verschlüsseln zu verwendende der *Klartext*. **"uniqueidentifier"**.  
+ Bezeichnet die GUID des zum Verschlüsseln von *cleartext* verwendeten Schlüssels. **uniqueidentifier**.  
   
- "*Klartext*"  
+ '*Klartext*'  
  Bezeichnet die mithilfe des Schlüssels zu verschlüsselnden Daten.  
   
  @cleartext  
- Eine Variable vom Typ **Nvarchar**, **Char**, **Varchar**, **binäre**, **Varbinary**, oder **Nchar** , die Daten enthält, die mit dem Schlüssel verschlüsselt werden soll.  
+ Eine Variable vom Typ **nvarchar**, **char**, **varchar**, **binary**, **varbinary** oder **nchar** mit Daten, die mit dem Schlüssel verschlüsselt werden sollen.  
   
  *add_authenticator*  
- Gibt an, ob ein Authentifikator zusammen mit verschlüsselt werden, die *Klartext*. Muss beim Verwenden eines Authentifikators 1 sein. **int**.  
+ Gibt an, ob ein Authentifikator zusammen mit dem *Klartext* verschlüsselt wird. Muss beim Verwenden eines Authentifikators 1 sein. **int**.  
   
  @add_authenticator  
- Gibt an, ob ein Authentifikator zusammen mit verschlüsselt werden, die *Klartext*. Muss beim Verwenden eines Authentifikators 1 sein. **int**.  
+ Gibt an, ob ein Authentifikator zusammen mit dem *Klartext* verschlüsselt wird. Muss beim Verwenden eines Authentifikators 1 sein. **int**.  
   
- *Authenticator*  
+ *authenticator*  
  Bezeichnet die Daten, aus denen ein Authentifikator abgeleitet wird. **sysname**.  
   
  @authenticator  
@@ -77,7 +77,7 @@ EncryptByKey ( key_GUID , { 'cleartext' | @cleartext }
   
  Gibt NULL zurück, wenn der Schlüssel nicht geöffnet, nicht vorhanden oder ein veralteter RC4-Schlüssel ist und die Datenbank nicht mindestens den Kompatibilitätsgrad 110 aufweist.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  EncryptByKey verwendet einen symmetrischen Schlüssel. Dieser Schlüssel muss geöffnet sein. Wenn der symmetrische Schlüssel in der aktuellen Sitzung bereits geöffnet ist, ist es nicht notwendig, ihn im Kontext der Abfrage erneut zu öffnen.  
   
  Mit dem Authentifikator kann verhindert werden, dass ganze Werte in verschlüsselten Feldern ersetzt werden. Betrachten Sie dazu beispielsweise die folgende Tabelle mit Daten zu Gehältern.  
@@ -97,10 +97,10 @@ EncryptByKey ( key_GUID , { 'cleartext' | @cleartext }
  Die symmetrische Ver- und Entschlüsselung erfolgt relativ schnell und kann auch bei großen Datenmengen verwendet werden.  
   
 > [!IMPORTANT]  
->  Das Verwenden der Veschlüsselungsfunktionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zusammen mit der ANSI_PADDING OFF-Einstellung kann aufgrund implizierter Konvertierungen zu Datenverlust führen. Weitere Informationen zu ANSI_PADDING finden Sie unter [SET ANSI_PADDING &#40; Transact-SQL &#41; ](../../t-sql/statements/set-ansi-padding-transact-sql.md).  
+>  Das Verwenden der Veschlüsselungsfunktionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zusammen mit der ANSI_PADDING OFF-Einstellung kann aufgrund implizierter Konvertierungen zu Datenverlust führen. Weitere Informationen zu ANSI_PADDING finden Sie unter [SET ANSI_PADDING &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-padding-transact-sql.md).  
   
 ## <a name="examples"></a>Beispiele  
- In den folgenden Beispielen veranschaulichte Funktionalität beruht auf Schlüsseln und Zertifikaten, [Vorgehensweise: Verschlüsseln einer Datenspalte](../../relational-databases/security/encryption/encrypt-a-column-of-data.md).  
+ Die in den folgenden Beispielen veranschaulichte Funktionalität beruht auf Schlüsseln und Zertifikaten, die unter [Vorgehensweise: Verschlüsseln einer Spalte mit Daten](../../relational-databases/security/encryption/encrypt-a-column-of-data.md) erstellt werden.  
   
 ### <a name="a-encrypting-a-string-with-a-symmetric-key"></a>A. Verschlüsseln einer Zeichenfolge mithilfe eines symmetrischen Schlüssels  
  Im folgenden Beispiel wird der `Employee`-Tabelle eine Spalte hinzugefügt und dann der Wert der Sozialversicherungsnummer in der `NationalIDNumber`-Spalte verschlüsselt.  
@@ -149,12 +149,12 @@ SET CardNumber_Encrypted = EncryptByKey(Key_GUID('CreditCards_Key11'),
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [DECRYPTBYKEY &#40; Transact-SQL &#41;](../../t-sql/functions/decryptbykey-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [DECRYPTBYKEY &#40;Transact-SQL&#41;](../../t-sql/functions/decryptbykey-transact-sql.md)   
  [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)   
  [ALTER SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-symmetric-key-transact-sql.md)   
  [DROP SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-symmetric-key-transact-sql.md)   
  [Verschlüsselungshierarchie](../../relational-databases/security/encryption/encryption-hierarchy.md)   
- [HASHBYTES &#40; Transact-SQL &#41;](../../t-sql/functions/hashbytes-transact-sql.md)  
+ [HASHBYTES &#40;Transact-SQL&#41;](../../t-sql/functions/hashbytes-transact-sql.md)  
   
   

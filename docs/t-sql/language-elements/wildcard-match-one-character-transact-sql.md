@@ -1,5 +1,5 @@
 ---
-title: _ (Platzhalterzeichen-einzelnes zu suchendes Zeichen) (Transact-SQL) | Microsoft Docs
+title: "_ (Platzhalterzeichen – einzelnes zu suchendes Zeichen) (Transact-SQL) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 12/06/2016
 ms.prod: sql-non-specified
@@ -41,13 +41,13 @@ ms.lasthandoff: 01/25/2018
 # <a name="-wildcard---match-one-character-transact-sql"></a>_ (Platzhalterzeichen - einzelnes zu suchendes Zeichen) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Verwenden Sie den Unterstrich _ mit jedem beliebigen einzelnes Zeichen in einem Zeichenfolgenvergleich übereinstimmen, den Mustervergleich, z. B. umfasst `LIKE` und `PATINDEX`.  
+Verwenden Sie den Unterstrich _ zum Abgleichen eines beliebigen einzelnen Zeichen bei einem Zeichenfolgenvergleich, der einen Mustervergleich wie `LIKE` oder `PATINDEX` umfasst.  
   
 ## <a name="examples"></a>Beispiele  
 
-## <a name="a-simple-example"></a>A: einfaches Beispiel   
+## <a name="a-simple-example"></a>A: Einfaches Beispiel   
 
-Das folgende Beispiel gibt alle Datenbank-Name mit dem Buchstaben beginnt `m` und haben den Buchstaben `d` als dritten Buchstaben. Der Unterstrich gibt an, dass das zweite Zeichen des Namens beliebigen Buchstaben kann. Die `model` und `msdb` Datenbanken, die diese Kriterien erfüllen. Die `master` Datenbank nicht vorhanden.
+Das folgende Beispiel gibt alle Datenbanknamen zurück, die mit dem Buchstaben `m` beginnen und `d` als dritten Buchstaben haben. Der Unterstrich gibt an, dass das zweite Zeichen ein beliebiger Buchstabe sein kann. Die Datenbanken `model` und `msdb` erfüllen diese Kriterien. Die Datenbank `master` erfüllt die Kriterien nicht.
 
 ```sql
 SELECT name FROM sys.databases
@@ -60,12 +60,12 @@ name
 model
 msdb
 ```   
-Sie müssen möglicherweise zusätzliche Datenbanken verbunden werden, die diese Kriterien erfüllen.
+Sie verfügen möglicherweise über zusätzliche Datenbanken, die diese Kriterien erfüllen.
 
-Mehrere Unterstriche können Sie mehrere Zeichen darstellen. Ändern der `LIKE` Kriterien zwei Unterstriche `'m__%` schließt den master-Datenbank in das Ergebnis.
+Mehrere Unterstriche können mehrere Zeichen darstellen. Wenn Sie die `LIKE`-Kriterien ändern, um zwei Unterstriche einzuschließen, fügt `'m__%` dem Ergebnis die Masterdatenbank hinzu.
 
-### <a name="b-more-complex-example"></a>B: Beispiel komplexere
- Im folgenden Beispiel wird den Operator _ finden aller Personen in der `Person` -Tabelle verwendet, die einen drei Buchstaben bestehenden Vornamen haben, die mit enden `an`.  
+### <a name="b-more-complex-example"></a>B: Komplexeres Beispiel
+ Im folgenden Beispiel wird der Operator _ zum Suchen aller Personen in der `Person`-Tabelle verwendet, die über einen aus drei Buchstaben bestehenden Vornamen verfügen, der auf `an` endet.  
   
 ```sql  
 -- USE AdventureWorks2012
@@ -75,21 +75,21 @@ FROM Person.Person
 WHERE FirstName LIKE '_an'  
 ORDER BY FirstName;  
 ```  
-## <a name="c-escaping-the-underscore-character"></a>"C:" Escapezeichen Unterstrich   
-Das folgende Beispiel gibt die Namen von festen Datenbankrollen wie `db_owner` und `db_ddladmin`, aber sie gibt überdies die `dbo` Benutzer. 
+## <a name="c-escaping-the-underscore-character"></a>C: Versehen von Unterstrichen mit Escapezeichen   
+Im folgenden Beispiel werden die Namen von festen Datenbankrollen wie `db_owner` und `db_ddladmin` zurückgegeben, aber auch der Benutzer `dbo`. 
 
 ```sql
 SELECT name FROM sys.database_principals
 WHERE name LIKE 'db_%';
 ```
 
-Der Unterstrich in der dritten Zeichenposition stammt als Platzhalter, und ist nicht für nur Prinzipale, die beginnend mit den Buchstaben gefiltert `db_`. Escapezeichen für der Unterstrich Einschließung in Klammern `[_]`. 
+Der Unterstrich an der dritten Zeichenposition wird als Platzhalter verwendet und filtert nicht nur nach Prinzipalen, die mit den Buchstaben `db_` beginnen. Setzen Sie den Unterstrich in Klammern (`[_]`), um ihn mit dem Escapezeichen zu versehen. 
 
 ```sql
 SELECT name FROM sys.database_principals
 WHERE name LIKE 'db[_]%';
 ```   
-Jetzt die `dbo` Benutzer ausgeschlossen wird.   
+Jetzt wird der Benutzer `dbo` ausgeschlossen.   
 [!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]   
 ```
 name
@@ -101,10 +101,10 @@ db_securityadmin
 ```
 
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [LIKE &#40;Transact-SQL&#41;](../../t-sql/language-elements/like-transact-sql.md)   
  [PATINDEX &#40;Transact-SQL&#41;](../../t-sql/functions/patindex-transact-sql.md)   
   [% (Platzhalterzeichen – zu suchende(s) Zeichen)](../../t-sql/language-elements/percent-character-wildcard-character-s-to-match-transact-sql.md)   
-  [&#91; &#93; (Platzhalterzeichen – zu suchende(s) Zeichen)](../../t-sql/language-elements/wildcard-character-s-to-match-transact-sql.md)   
- [&#91; ^ &#93; (Platzhalterzeichen - nicht zu suchende(s) Zeichen)](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md)     
+  [&#91; &#93; (Wildcard - Character(s) to Match) ([ ] (Platzhalterzeichen – zu suchende[s] Zeichen))](../../t-sql/language-elements/wildcard-character-s-to-match-transact-sql.md)   
+ [&#91;^&#93; (Wildcard - Character(s) Not to Match) ([^] (Platzhalterzeichen – nicht zu suchende[s] Zeichen))](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md)     
   

@@ -1,5 +1,5 @@
 ---
-title: "Verzögerung (Transact-SQL) | Microsoft Docs"
+title: LAG (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 11/09/2017
 ms.prod: sql-non-specified
@@ -35,9 +35,9 @@ ms.lasthandoff: 01/02/2018
 # <a name="lag-transact-sql"></a>LAG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-  Greift auf Daten aus einer vorherigen Zeile in das gleiche Ergebnis festzulegen, ohne die Verwendung von einem selbstjoin beginnend mit [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. LAG ermöglicht den Zugriff auf eine Zeile mit einem bestimmten physischen Offset vor der aktuellen Zeile. Verwenden Sie diese analytische Funktion in einer SELECT-Anweisung, um Werte in der aktuellen Zeile mit Werten in einer vorherigen Zeile zu vergleichen.  
+  Greift im selben Resultset auf Daten in einer vorherigen Zeile zu, ohne dass ein Selbstjoin ab [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] verwendet wird. LAG ermöglicht den Zugriff auf eine Zeile mit einem bestimmten physischen Offset vor der aktuellen Zeile. Verwenden Sie diese analytische Funktion in einer SELECT-Anweisung, um Werte in der aktuellen Zeile mit Werten in einer vorherigen Zeile zu vergleichen.  
   
- ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Thema Linksymbol") [Transact-SQL-Syntaxkonventionen &#40; Transact-SQL &#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol zum Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions &#40;Transact-SQL&#41; (Transact-SQL-Syntaxkonventionen (Transact-SQL))](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -47,20 +47,20 @@ LAG (scalar_expression [,offset] [,default])
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *"scalar_expression"*  
- Der zurückzugebende Wert auf Grundlage des angegebenen Offsets. Dies ist ein Ausdruck eines beliebigen Typs, der einen einzelnen Skalarwert zurückgibt. *"scalar_expression"* darf nicht keine analytische Funktion sein.  
+ *scalar_expression*  
+ Der zurückzugebende Wert auf Grundlage des angegebenen Offsets. Dies ist ein Ausdruck eines beliebigen Typs, der einen einzelnen Skalarwert zurückgibt. *scalar_expression* darf keine analytische Funktion sein.  
   
- *Offset*  
- Die Anzahl der Zeilen vor der aktuellen Zeile, aus der ein Wert abgerufen werden soll. Wenn nichts angegeben ist, wird der Standardwert 1 verwendet. *Offset* kann eine Spalte, Unterabfrage oder ein anderer Ausdruck, der eine positive ganze Zahl ergibt oder implizit umgewandelt werden kann **"bigint"**. *Offset* darf nicht negativ oder keine analytische Funktion sein.  
+ *offset*  
+ Die Anzahl der Zeilen vor der aktuellen Zeile, aus der ein Wert abgerufen werden soll. Wenn nichts angegeben ist, wird der Standardwert 1 verwendet. *offset* kann eine Spalte, eine Unterabfrage oder ein anderer Ausdruck sein, der eine positive ganze Zahl ergibt, kann aber auch implizit in einen Wert vom Typ **bigint** konvertiert werden. *offset* darf kein negativer Wert bzw. keine analytische Funktion sein.  
   
- *Standardwert*  
- Der zurückzugebende Wert, wenn *"scalar_expression"* am *Offset* ist NULL. Wenn kein Standardwert angegeben ist, wird NULL zurückgegeben. *standardmäßige* kann eine Spalte, Unterabfrage oder ein anderer Ausdruck sein, jedoch keine analytische Funktion. *standardmäßige* typkompatibel sein muss mit *"scalar_expression"*.  
+ *default*  
+ Der zurückzugebende Wert, wenn *scalar_expression* bei *offset* NULL ist. Wenn kein Standardwert angegeben ist, wird NULL zurückgegeben. *default* kann eine Spalte, eine Unterabfrage oder ein anderer Ausdruck sein, jedoch keine analytische Funktion. *default* muss mit *scalar_expression* typkompatibel sein.  
   
- ÜBER **(** [ *Partition_by_clause* ] *Order_by_clause***)**  
- *Partition_by_clause* teilt das Resultset, das von der FROM-Klausel erstellt wird, in Partitionen, die auf die die Funktion angewendet wird. Wird dies nicht angegeben, verarbeitet die Funktion alle Zeilen des Abfrageresultsets als einzelne Gruppe. *Order_by_clause* bestimmt die Reihenfolge der Daten, bevor die Funktion angewendet wird. Wenn *Partition_by_clause* angegeben wird, bestimmt die Reihenfolge der Daten in der Partition. Die *Order_by_clause* ist erforderlich. Weitere Informationen finden Sie unter [Klausel "OVER" &#40; Transact-SQL &#41; ](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ OVER **(** [ *partition_by_clause* ] *order_by_clause***)**  
+ *partition_by_clause* unterteilt das von der FROM-Klausel erzeugte Resultset in Partitionen, auf die die Funktion angewendet wird. Wird dies nicht angegeben, verarbeitet die Funktion alle Zeilen des Abfrageresultsets als einzelne Gruppe. *order_by_clause* bestimmt die Reihenfolge der Daten, bevor die Funktion angewendet wird. Wenn *partition_by_clause* angegeben wird, wird hierdurch die Reihenfolge der Daten in der Partition bestimmt. *order_by_clause* ist erforderlich. Weitere Informationen finden Sie unter [OVER-Klausel &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
 ## <a name="return-types"></a>Rückgabetypen  
- Der Datentyp des angegebenen *"scalar_expression"*. NULL wird zurückgegeben, wenn *"scalar_expression"* NULL-Werte zulässt oder *Standard* auf NULL festgelegt ist.  
+ Der Datentyp des angegebenen *scalar_expression*-Ausdrucks. NULL wird zurückgegeben, wenn *scalar_expression* auf NULL festgelegt werden kann oder *default* auf NULL festgelegt ist.  
   
 ## <a name="general-remarks"></a>Allgemeine Hinweise  
  LAG ist nicht deterministisch. Weitere Informationen finden Sie unter [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).  
@@ -145,10 +145,10 @@ b           c           i
 1           5           NULL  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
-### <a name="d-compare-values-between-quarters"></a>D: vergleicht Werte verschiedener Quartale  
- Das folgende Beispiel veranschaulicht die LAG-Funktion. Die Abfrage verwendet die LAG-Funktion, um die Differenz der Verkaufszahlen für einen bestimmten Mitarbeiter über vorherige Kalenderquartale zurückzugeben. Beachten Sie, dass der Standardwert 0 (null) zurückgegeben wird, da für die erste Zeile kein LAG-Wert verfügbar ist.  
+### <a name="d-compare-values-between-quarters"></a>D: Vergleichen von Werten aus verschiedenen Quartalen  
+ Im folgenden Beispiel wird die LAG-Funktion vorgestellt. Die Abfrage verwendet die LAG-Funktion, um die Differenz der Sollvorgaben für den Verkauf für einen bestimmten Mitarbeiter im Verlauf der vorherigen Kalenderquartale zurückgegeben. Beachten Sie, dass der Standardwert 0 (null) zurückgegeben wird, da für die erste Zeile kein LAG-Wert verfügbar ist.  
   
 ```sql   
 -- Uses AdventureWorks  
@@ -174,8 +174,8 @@ Year Quarter  SalesQuota  PrevQuota  Diff
 2002 4       154000.0000   7000.0000   84000.0000
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [LEAD &#40; Transact-SQL &#41;](../../t-sql/functions/lead-transact-sql.md)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [LEAD &#40;Transact-SQL&#41;](../../t-sql/functions/lead-transact-sql.md)  
   
   
 

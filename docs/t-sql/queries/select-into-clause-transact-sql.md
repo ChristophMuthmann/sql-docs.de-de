@@ -1,5 +1,5 @@
 ---
-title: INTO-Klausel (Transact-SQL) | Microsoft Docs
+title: INTO-Klausel (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 05/23/2017
 ms.prod: sql-non-specified
@@ -45,7 +45,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="select---into-clause-transact-sql"></a>SELECT - INTO-Klausel (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Mit SELECT…INTO wird eine neue Tabelle in der Standarddateigruppe erstellt, und die Ergebniszeilen aus der Abfrage werden darin eingefügt. Die vollständige SELECT-Syntax finden Sie unter [SELECT &#40; Transact-SQL &#41; ](../../t-sql/queries/select-transact-sql.md).  
+  Mit SELECT…INTO wird eine neue Tabelle in der Standarddateigruppe erstellt, und die Ergebniszeilen aus der Abfrage werden darin eingefügt. Die vollständige SELECT-Syntax finden Sie unter [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md).  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -62,16 +62,16 @@ ms.lasthandoff: 01/25/2018
  
   *filegroup*
  
- Gibt den Namen der Dateigruppe, in der neue Tabelle erstellt wird. Die angegebene Dateigruppe sollten für die Datenbank, die andernfalls löst das Modul für die SQL Server einen Fehler vorhanden sein. Diese Option wird nur unterstützt ab [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)].
+ Gibt den Namen der Dateigruppe an, in der die neue Tabelle erstellt wird. Die angegebene Dateigruppe muss in der Datenbank vorhanden sein, andernfalls löst die SQL Server-Engine einen Fehler aus. Diese Option wird erst ab [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] unterstützt.
  
- Das Format der *New_table* wird bestimmt durch das Auswerten der Ausdrücke in der select-Liste. Die Spalten in *New_table* werden in der von der select-Liste angegebenen Reihenfolge erstellt. Jede Spalte in *New_table* hat die gleichen Namen, Datentyp, NULL-Zulässigkeit und Wert wie der entsprechende Ausdruck in der Auswahlliste. Die IDENTITY-Eigenschaft einer Spalte wird übertragen. Dies gilt mit Ausnahme der unter "Arbeiten mit Identitätsspalten" im Abschnitt "Hinweise" angegebenen Bedingungen.  
+ Das Format von *new_table* wird bestimmt, indem die Ausdrücke in der Auswahlliste ausgewertet werden. Die Spalten in *new_table* werden in der durch die Auswahlliste angegebenen Reihenfolge erstellt. Jede Spalte in *new_table* besitzt den gleichen Namen, Datentyp, NULL-Zulässigkeit und Wert wie der entsprechende Ausdruck in der Auswahlliste. Die IDENTITY-Eigenschaft einer Spalte wird übertragen. Dies gilt mit Ausnahme der unter "Arbeiten mit Identitätsspalten" im Abschnitt "Hinweise" angegebenen Bedingungen.  
   
- Zum Erstellen der Tabelle in einer anderen Datenbank auf derselben Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], geben Sie *New_table* als einen vollqualifizierten Namen im Format *Database.Schema*.  
+ Um die Tabelle in einer anderen Datenbank für die gleiche Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zu erstellen, geben Sie *new_table* als vollqualifizierten Namen in der Form *database.schema.table_name* an.  
   
- Sie können keine erstellen *New_table* auf einem Remoteserver; allerdings Sie Auffüllen *New_table* aus einer Remotedatenquelle. Zum Erstellen *New_table* aus einer Remotequelle-Tabelle, geben Sie die Quelltabelle, die mithilfe eines vierteiligen Namens in der Form *Linked_server*. *Katalog*. *Schema*. *Objekt* in der FROM-Klausel der SELECT-Anweisung. Alternativ können Sie die [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md) Funktion oder die [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) -Funktion in der FROM-Klausel, um die Remotedatenquelle anzugeben.  
+ *new_table* kann nicht für einen Remoteserver erstellt werden; Sie können *new_table* jedoch anhand einer Remotedatenquelle auffüllen. Um *new_table* anhand einer Remotequelltabelle zu erstellen, geben Sie die Quelltabelle als vierteiligen Namen in der Form *linked_server*.*catalog*.*schema*.*object* in der FROM-Klausel der SELECT-Anweisung an. Alternativ können Sie die [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md)-Funktion oder die [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md)-Funktion in der FROM-Klausel verwenden, um die Remotedatenquelle anzugeben.  
   
 ## <a name="data-types"></a>Datentypen  
- Beim FILESTREAM-Attribut werden keine Daten in die neue Tabelle übertragen. FILESTREAM-BLOBs werden kopiert und in der neuen Tabelle als gespeicherte **varbinary(max)** BLOBs. Ohne das FILESTREAM-Attribut der **varbinary(max)** Datentyp gilt eine Beschränkung von 2 GB. Wenn ein FILESTREAM-BLOB diesen Wert überschreitet, wird Fehler 7119 ausgelöst, und die Anweisung wird beendet.  
+ Beim FILESTREAM-Attribut werden keine Daten in die neue Tabelle übertragen. FILESTREAM-BLOBs werden kopiert und in der neuen Tabelle als **varbinary(max)**-BLOBs gespeichert. Ohne das FILESTREAM-Attribut verfügt der **varbinary(max)**-Datentyp über eine Einschränkung von 2 GB. Wenn ein FILESTREAM-BLOB diesen Wert überschreitet, wird Fehler 7119 ausgelöst, und die Anweisung wird beendet.  
   
  Bei der Auswahl einer vorhandenen Identitätsspalte in einer neuen Tabelle erbt die neue Spalte die IDENTITY-Eigenschaft, es sein denn, eine der folgenden Bedingungen trifft zu:  
   
@@ -90,7 +90,7 @@ Falls eine dieser Bedingungen erfüllt ist, wird die Spalte mit NOT NULL erstell
 ## <a name="limitations-and-restrictions"></a>Einschränkungen  
  Tabellenvariablen und Tabellenwertparameter können nicht als neue Tabelle angegeben werden.  
   
- Sie können mit SELECT…INTO keine partitionierte Tabelle erstellen, auch dann nicht, wenn die Quelltabelle partitioniert ist. Für SELECT…INTO wird nicht das Partitionsschema der Quelltabelle verwendet; die neue Tabelle wird stattdessen in der standardmäßigen Dateigruppe erstellt. Zum Einfügen von Zeilen in eine partitionierte Tabelle, müssen Sie zuerst die partitionierte Tabelle erstellen und dann mithilfe der INSERT INTO... SELECT FROM-Anweisung.  
+ Sie können mit SELECT…INTO keine partitionierte Tabelle erstellen, auch dann nicht, wenn die Quelltabelle partitioniert ist. Für SELECT…INTO wird nicht das Partitionsschema der Quelltabelle verwendet; die neue Tabelle wird stattdessen in der standardmäßigen Dateigruppe erstellt. Um Zeilen in eine partitionierte Tabelle einfügen zu können, müssen Sie zuerst die partitionierte Tabelle erstellen und dann die INSERT INTO...SELECT FROM-Anweisung verwenden.  
   
  Indizes, Einschränkungen und Trigger, die in der Quelltabelle definiert wurden, werden nicht in die neue Tabelle übertragen; sie können auch nicht in der SELECT...INTO-Anweisung angegeben werden. Wenn diese Objekte erforderlich sind, müssen Sie sie nach dem Ausführen der SELECT...INTO-Anweisung erstellen.  
   
@@ -101,7 +101,7 @@ Falls eine dieser Bedingungen erfüllt ist, wird die Spalte mit NOT NULL erstell
  Wenn eine berechnete Spalte in die Auswahlliste eingeschlossen ist, ist die entsprechende Spalte in der neuen Tabelle keine berechnete Spalte. Die Werte in der neuen Spalte entsprechen den Werten, die zum Zeitpunkt der Ausführung der SELECT...INTO-Anweisung berechnet wurden.  
   
 ## <a name="logging-behavior"></a>Protokollierungsverhalten  
- Der Grad der Protokollierung für SELECT...INTO hängt von dem Wiederherstellungsmodell ab, das für die Datenbank aktiv ist. Unter dem einfachen Wiederherstellungsmodell und dem massenprotokollierten Wiederherstellungsmodell werden Massenvorgänge minimal protokolliert. Bei minimaler Protokollierung mithilfe der SELECT... INTO-Anweisung kann effizienter als das Erstellen einer Tabelle, und klicken Sie dann Auffüllen der Tabelle mit einer INSERT-Anweisung sein. Weitere Informationen finden Sie unter [Das Transaktionsprotokoll &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md).  
+ Der Grad der Protokollierung für SELECT...INTO hängt von dem Wiederherstellungsmodell ab, das für die Datenbank aktiv ist. Unter dem einfachen Wiederherstellungsmodell und dem massenprotokollierten Wiederherstellungsmodell werden Massenvorgänge minimal protokolliert. Bei minimaler Protokollierung kann es effizienter sein, die SELECT… INTO-Anweisung zu verwenden, anstatt eine Tabelle zu erstellen und diese dann mithilfe einer INSERT-Anweisung aufzufüllen. Weitere Informationen finden Sie unter [Das Transaktionsprotokoll &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md).  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die CREATE TABLE-Berechtigung in der Zieldatenbank.  
@@ -171,9 +171,9 @@ WHERE name = 'AddressID';
 ```  
   
 ### <a name="d-creating-a-table-by-specifying-columns-from-a-remote-data-source"></a>D. Erstellen einer Tabelle durch Angeben von Spalten aus einer Remotedatenquelle  
- Im folgenden Beispiel werden drei Methoden beschrieben, um eine neue Tabelle für den lokalen Server von einer Remotedatenquelle aus zu erstellen. Zunächst wird im Beispiel ein Link zur Remotedatenquelle erstellt. Der Name des Verbindungsservers `MyLinkServer,` klicken Sie dann in der FROM-Klausel die erste SELECT-Anweisung angegeben ist... INTO-Anweisung und in der OPENQUERY-Funktion der zweiten SELECT... INTO-Anweisung. Die dritte SELECT...INTO-Anweisung verwendet die OPENDATASOURCE-Funktion, die die Remotedatenquelle direkt angibt, anstatt den Namen des Verbindungsservers zu verwenden.  
+ Im folgenden Beispiel werden drei Methoden beschrieben, um eine neue Tabelle für den lokalen Server von einer Remotedatenquelle aus zu erstellen. Zunächst wird im Beispiel ein Link zur Remotedatenquelle erstellt. Der Name des Verbindungsservers `MyLinkServer,` wird dann in der FROM-Klausel der ersten SELECT...INTO-Anweisung und der OPENQUERY-Funktion der zweiten SELECT...INTO-Anweisung angegeben. Die dritte SELECT...INTO-Anweisung verwendet die OPENDATASOURCE-Funktion, die die Remotedatenquelle direkt angibt, anstatt den Namen des Verbindungsservers zu verwenden.  
   
- **Gilt für:** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Gilt für:** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 ```sql
 USE master;  
@@ -213,8 +213,8 @@ FROM OPENDATASOURCE('SQLNCLI',
 GO  
 ```  
   
-### <a name="e-import-from-an-external-table-created-with--polybase"></a>E. Importieren Sie aus einer externen Tabelle erstellt, die mit PolyBase  
- Importieren Sie Daten aus Hadoop oder Azure Storage in SQL Server für den beständigen Speicher. Verwendung `SELECT INTO` zum Importieren von Daten, die von einer externen Tabelle für den beständigen Speicher in SQL Server verwiesen wird. Erstellen Sie dynamisch eine relationale Tabelle, und erstellen Sie dann in einem zweiten Schritt einen Columnstore-Index am oberen Rand der Tabelle.  
+### <a name="e-import-from-an-external-table-created-with--polybase"></a>E. Importieren aus einer externen mit PolyBase erstellten Tabelle  
+ Importieren Sie Daten aus Hadoop oder Azure Storage in SQL Server für den beständigen Speicher. Verwenden Sie `SELECT INTO`, um Daten, auf die eine externe Tabelle verweist, zu importieren und dauerhaft in SQL Server zu speichern. Erstellen Sie dynamisch eine relationale Tabelle, und erstellen Sie dann in einem zweiten Schritt einen Columnstore-Index am oberen Rand der Tabelle.  
   
  **Gilt für:** [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
@@ -231,10 +231,10 @@ ON Insured_Customers.CustomerKey = SensorD.CustomerKey
 ORDER BY YearlyIncome  
   
 ```  
-### <a name="f-creating-a-new-table-as-a-copy-of-another-table-and-loading-it-a-specified-filegroup"></a>F. Erstellen einer neuen Tabelle als eine Kopie einer anderen Tabelle aus, und Laden es mit einer angegebenen Dateigruppe
-Im folgende Beispiel wird veranschaulicht, eine Kopie einer anderen Tabelle eine neue Tabelle erstellen, und Laden es in einer angegebenen Dateigruppe die Standarddateigruppe des Benutzers unterscheiden.
+### <a name="f-creating-a-new-table-as-a-copy-of-another-table-and-loading-it-a-specified-filegroup"></a>F. Erstellen einer neuen Tabelle als Kopie einer anderen Tabelle und Laden der Tabelle in eine angegebene Dateigruppe
+Das folgende Beispiel zeigt, wie eine neue Tabelle als Kopie einer anderen Tabelle erstellt und in eine angegebene Dateigruppe geladen wird, bei der es sich nicht um die Standarddateigruppe des Benutzers handelt.
 
- **Gilt für:**[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]
+ **Gilt für:** [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]
 
 ```sql
 ALTER DATABASE [AdventureWorksDW2016] ADD FILEGROUP FG2;
@@ -249,10 +249,10 @@ GO
 SELECT *  INTO [dbo].[FactResellerSalesXL] ON FG2 from [dbo].[FactResellerSales]
 ```
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [Wählen Sie die Beispiele &#40; Transact-SQL &#41;](../../t-sql/queries/select-examples-transact-sql.md)   
- [INSERT &#40; Transact-SQL &#41;](../../t-sql/statements/insert-transact-sql.md)   
- [IDENTITY &#40; Function &#41; &#40; Transact-SQL &#41;](../../t-sql/functions/identity-function-transact-sql.md)  
+ [Beispiele für SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-examples-transact-sql.md)   
+ [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
+ [IDENTITY &#40;Funktion&#41; &#40;Transact-SQL&#41;](../../t-sql/functions/identity-function-transact-sql.md)  
   
   

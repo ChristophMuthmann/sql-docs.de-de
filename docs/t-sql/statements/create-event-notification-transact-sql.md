@@ -1,5 +1,5 @@
 ---
-title: Erstellen von EVENT NOTIFICATION (Transact-SQL) | Microsoft Docs
+title: CREATE EVENT NOTIFICATION (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -58,7 +58,7 @@ TO SERVICE 'broker_service' , { 'broker_instance_specifier' | 'current database'
   
 ## <a name="arguments"></a>Argumente  
  *event_notification_name*  
- Ist der Name der ereignisbenachrichtigung. Ein Name der serverereignisbenachrichtigung muss den Regeln für entsprechen [Bezeichner](../../relational-databases/databases/database-identifiers.md) muss eindeutig innerhalb des Bereichs, in dem sie erstellt werden: SERVER, DATABASE oder *Object_name*.  
+ Der Name der Ereignisbenachrichtigung. Der Name der Ereignisbenachrichtigung muss den Regeln für [Bezeichner](../../relational-databases/databases/database-identifiers.md) entsprechen und innerhalb seines Bereichs (SERVER, DATABASE oder *object_name*) eindeutig sein.  
   
  SERVER  
  Wendet den Bereich der Ereignisbenachrichtigung auf die aktuelle Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] an. Ist dieser Bereich angegeben, wird die Benachrichtigung jedes Mal ausgelöst, wenn das angegebene Ereignis in der FOR-Klausel irgendwo in der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auftritt.  
@@ -72,8 +72,8 @@ TO SERVICE 'broker_service' , { 'broker_instance_specifier' | 'current database'
  QUEUE  
  Wendet den Bereich der Benachrichtigung auf eine bestimmte Warteschlange in der aktuellen Datenbank an. QUEUE kann nur angegeben werden, wenn auch FOR QUEUE_ACTIVATION oder FOR BROKER_QUEUE_DISABLED angegeben ist.  
   
- *Warteschlangenname*  
- Der Name der Warteschlange, auf die die Ereignisbenachrichtigung angewendet wird. *Warteschlangenname* kann nur angegeben werden, wenn QUEUE angegeben ist.  
+ *queue_name*  
+ Der Name der Warteschlange, auf die die Ereignisbenachrichtigung angewendet wird. *queue_name* kann nur angegeben werden, wenn QUEUE angegeben wird.  
   
  WITH FAN_IN  
  Weist [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] an, nur eine Nachricht pro Ereignis an einen beliebigen angegebenen Dienst zu senden, wenn für Ereignisbenachrichtigungen Folgendes gilt:  
@@ -82,32 +82,32 @@ TO SERVICE 'broker_service' , { 'broker_instance_specifier' | 'current database'
   
 -   Sie werden vom selben Prinzipal erstellt (erkennbar an der identischen Sicherheits-ID).  
   
--   Geben Sie denselben Dienst und *Broker_instance_specifier*.  
+-   Geben Sie denselben Dienst und *broker_instance_specifier*-Bezeichner an.  
   
 -   Sie geben WITH FAN_IN an.  
   
  Beispielsweise werden drei Ereignisbenachrichtigungen erstellt. Bei allen Ereignisbenachrichtigungen wird FOR ALTER_TABLE, WITH FAN_IN und dieselbe TO SERVICE-Klausel angegeben, und alle werden von derselben SID erstellt. Wenn eine ALTER TABLE-Anweisung ausgeführt wird, werden die durch diese drei Ereignisbenachrichtigungen erstellten Nachrichten in eine Nachricht zusammengeführt. Daher empfängt der Zieldienst nur eine Nachricht bezüglich des Ereignisses.  
   
  *event_type*  
- Der Name eines Ereignistyps, der die Ausführung der Ereignisbenachrichtigung verursacht. *Event_type* kann eine [!INCLUDE[tsql](../../includes/tsql-md.md)] DDL-Ereignis des Typs, einer SQL-Ablaufverfolgungs-Ereignistyp oder ein [!INCLUDE[ssSB](../../includes/sssb-md.md)] -Ereignis des Typs. Eine Liste aller qualifizierenden [!INCLUDE[tsql](../../includes/tsql-md.md)] DDL-Ereignistypen finden Sie unter [DDL-Ereignisse](../../relational-databases/triggers/ddl-events.md). [!INCLUDE[ssSB](../../includes/sssb-md.md)]-Ereignistypen sind QUEUE_ACTIVATION und BROKER_QUEUE_DISABLED. Weitere Informationen finden Sie unter [Event Notifications](../../relational-databases/service-broker/event-notifications.md).  
+ Der Name eines Ereignistyps, der die Ausführung der Ereignisbenachrichtigung verursacht. *event_type* kann ein [!INCLUDE[tsql](../../includes/tsql-md.md)]-DDL-Ereignistyp, ein SQL-Ablaufverfolgungsereignistyp oder ein [!INCLUDE[ssSB](../../includes/sssb-md.md)]-Ereignistyp sein. Eine Liste aller qualifizierenden [!INCLUDE[tsql](../../includes/tsql-md.md)]-DDL-Ereignistypen finden Sie unter [DDL-Ereignisse](../../relational-databases/triggers/ddl-events.md). [!INCLUDE[ssSB](../../includes/sssb-md.md)]-Ereignistypen sind QUEUE_ACTIVATION und BROKER_QUEUE_DISABLED. Weitere Informationen finden Sie unter [Event Notifications](../../relational-databases/service-broker/event-notifications.md).  
   
  *event_group*  
- Der Name einer vordefinierten Gruppe von [!INCLUDE[tsql](../../includes/tsql-md.md)]- oder SQL-Ablaufverfolgungs-Ereignistypen. Eine Ereignisbenachrichtigung kann nach der Ausführung eines beliebigen Ereignisses ausgelöst werden, das zu einer Ereignisgruppe gehört. Eine Liste der DDL-Ereignisgruppen die [!INCLUDE[tsql](../../includes/tsql-md.md)] abgedeckten Ereignisse sowie den Bereich an, an dem sie definiert werden können, finden Sie unter [DDL-Ereignisgruppen](../../relational-databases/triggers/ddl-event-groups.md).  
+ Der Name einer vordefinierten Gruppe von [!INCLUDE[tsql](../../includes/tsql-md.md)]- oder SQL-Ablaufverfolgungs-Ereignistypen. Eine Ereignisbenachrichtigung kann nach der Ausführung eines beliebigen Ereignisses ausgelöst werden, das zu einer Ereignisgruppe gehört. Eine Liste der DDL-Ereignisgruppen, der von diesen abgedeckten [!INCLUDE[tsql](../../includes/tsql-md.md)]-Ereignisse und der Bereiche, für die sie definiert werden können, finden Sie unter [DDL-Ereignisgruppen](../../relational-databases/triggers/ddl-event-groups.md).  
   
- *Event_group* auch fungiert als ein Makro, wenn die CREATE EVENT NOTIFICATION-Anweisung abgeschlossen ist, durch die Ereignistypen hinzufügen Ereignistypen die **sys.events** -Katalogsicht angezeigt.  
+ *event_group* fungiert außerdem als Makro, indem dieser Parameter beim Abschließen der CREATE EVENT NOTIFICATION-Anweisung die betroffenen Ereignistypen der **sys.events**-Katalogsicht hinzufügt.  
   
- **"** *Broker_service* **"**  
+ **'** *broker_service* **'**  
  Gibt den Zieldienst an, der die Ereignisinstanzdaten empfängt. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] öffnet eine oder mehrere Konversationen für den Zieldienst der Ereignisbenachrichtigung. Der Dienst muss denselben [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Ereignismeldungstyp und Vertrag berücksichtigen, wie sie zum Senden der Nachricht verwendet werden.  
   
  Die Konversationen bleiben geöffnet, bis die Ereignisbenachrichtigung gelöscht wird. Bestimmte Fehler können dazu führen, dass Konversationen früher geschlossen werden. Das explizite Beenden einiger oder aller Konversationen kann verhindern, dass der Zieldienst weitere Nachrichten empfängt.  
   
- { **"***Broker_instance_specifier***"** | **'current Database'** }  
- Gibt an, für die Service Broker-Instanz *Broker_service* aufgelöst wird. Der Wert für einen bestimmten Service Broker kann durch Abfragen abgerufen werden die **Service_broker_guid** Spalte die **sys.databases** -Katalogsicht angezeigt. Verwendung **'current Database'** an die Service Broker-Instanz in der aktuellen Datenbank. **'current Database'** ist ein Groß-/Kleinschreibung Zeichenfolgenliteral.  
+ { **'***broker_instance_specifier***'** | **'current database'** }  
+ Gibt die Service Broker-Instanz an, für die *broker_service* aufgelöst wird. Der Wert für einen bestimmten Service Broker kann durch Abfragen der **service_broker_guid**-Spalte der **sys.databases**-Katalogsicht ermittelt werden. Verwenden Sie **'current database'**, um die Service Broker-Instanz in der aktuellen Datenbank anzugeben. **'current database'** ist ein Zeichenfolgenliteral, das nicht nach Groß-/Kleinschreibung unterscheidet.  
   
 > [!NOTE]  
 >  Diese Option ist in einer enthaltenen Datenbank nicht verfügbar.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] beinhaltet einen speziellen Nachrichtentyp und Vertrag für Ereignisbenachrichtigungen. Es muss also kein initiierender Dienst für Service Broker erstellt werden; dieser ist bereits vorhanden und gibt den folgenden Vertragsnamen an: `http://schemas.microsoft.com/SQL/Notifications/PostEventNotification`  
   
  Der Zieldienst, der Ereignisbenachrichtigungen empfängt, muss diesen bereits vorhandenen Vertrag berücksichtigen.  
@@ -137,7 +137,7 @@ TO SERVICE 'broker_service' , { 'broker_instance_specifier' | 'current database'
 > [!NOTE]  
 >  In den nachfolgenden Beispielen A und B entspricht der GUID in der `TO SERVICE 'NotifyService'`-Klausel ('8140a771-3c4b-4479-8ac0-81008ab17984') dem Computer, auf dem das Beispiel eingerichtet wurde. Für diese Instanz handelt es sich dabei um den GUID für die [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Datenbank.  
 >   
->  Zum Kopieren und Ausführen dieser Beispiele müssen Sie diesen GUID durch einen GUID von Ihrem Computer und Ihrer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz ersetzen. Wie im obigen Abschnitt "Argumente" erläutert, können Sie erwerben der **"***Broker_instance_specifier***"** durch Abfragen der Service_broker_guid-Spalte der sys.databases -Katalogsicht.  
+>  Zum Kopieren und Ausführen dieser Beispiele müssen Sie diesen GUID durch einen GUID von Ihrem Computer und Ihrer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz ersetzen. Wie im obigen Abschnitt zu den Argumenten erläutert, kann **'***broker_instance_specifier***'** durch Abfragen der service_broker_guid-Spalte der sys.databases-Katalogsicht ermittelt werden.  
   
 ### <a name="a-creating-an-event-notification-that-is-server-scoped"></a>A. Erstellen einer Ereignisbenachrichtigung mit dem Server als Bereich  
  Im folgenden Beispiel werden die zum Einrichten eines Zieldiensts mit [!INCLUDE[ssSB](../../includes/sssb-md.md)] erforderlichen Objekte erstellt. Der Zieldienst verweist auf den Nachrichtentyp und den Vertrag des initiierenden Diensts speziell für Ereignisbenachrichtigungen. Dann wird auf dem Zieldienst eine Ereignisbenachrichtigung erstellt, die eine Benachrichtigung sendet, sobald ein `Object_Created`-Ablaufverfolgungsereignis auf der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vorliegt.  
@@ -193,13 +193,13 @@ SELECT * FROM sys.event_notifications
 WHERE name = 'Notify_ALTER_T1';  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Ereignisbenachrichtigungen](../../relational-databases/service-broker/event-notifications.md)   
- [DROP EVENT NOTIFICATION &#40; Transact-SQL &#41;](../../t-sql/statements/drop-event-notification-transact-sql.md)   
+ [DROP EVENT NOTIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-event-notification-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
- [Sys. event_notifications &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-event-notifications-transact-sql.md)   
- [Sys. server_event_notifications &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-server-event-notifications-transact-sql.md)   
- [Sys.Events &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-events-transact-sql.md)   
- [Sys. server_events &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-server-events-transact-sql.md)  
+ [sys.event_notifications &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-event-notifications-transact-sql.md)   
+ [sys.server_event_notifications &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-event-notifications-transact-sql.md)   
+ [sys.events &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-events-transact-sql.md)   
+ [sys.server_events &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-events-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "Ausdrücke (Transact-SQL) | Microsoft Docs"
+title: "Ausdrücke (Transact-SQL) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -89,28 +89,28 @@ ms.lasthandoff: 01/25/2018
   
 |Begriff|Definition|  
 |----------|----------------|  
-|*constant*|Ein Symbol, das einen einzelnen bestimmten Datenwert darstellt. Weitere Informationen finden Sie unter [Konstanten &#40; Transact-SQL &#41; ](../../t-sql/data-types/constants-transact-sql.md).|  
-|*scalar_function*|Ist eine Einheit der [!INCLUDE[tsql](../../includes/tsql-md.md)] Syntax, die einen bestimmten Dienst bereitstellt und einen einzelnen Wert zurückgibt. *Scalar_function* integrierte Skalarfunktion, z. B. der Funktionen SUM, GETDATE oder CAST oder skalare benutzerdefinierte Funktionen werden können.|  
+|*constant*|Ein Symbol, das einen einzelnen bestimmten Datenwert darstellt. Weitere Informationen finden Sie unter [Konstanten &#40;Transact-SQL&#41;](../../t-sql/data-types/constants-transact-sql.md).|  
+|*scalar_function*|Eine Einheit der [!INCLUDE[tsql](../../includes/tsql-md.md)]-Syntax, die einen bestimmten Dienst bereitstellt und einen einzelnen Wert zurückgibt. Bei *scalar_function* kann es sich um integrierte Skalarfunktionen wie die SUM-, GETDATE- oder CAST-Funktionen oder um benutzerdefinierte Skalarfunktionen handeln.|  
 |[ *table_name***.** ]|Der Name oder Alias einer Tabelle.|  
-|*column*|Ist der Name einer Spalte. Nur der Name der Spalte ist in einem Ausdruck zulässig.|  
+|*column*|Der Name einer Spalte. Nur der Name der Spalte ist in einem Ausdruck zulässig.|  
 |*variable*|Der Name einer Variablen oder eines Parameters. Weitere Informationen finden Sie unter [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md).|  
-|**(** *Ausdruck***)** |Ein beliebiger gültiger Ausdruck, wie er in diesem Thema definiert ist. Die Klammern sind gruppierende Operatoren, die sicherstellen, dass alle Operatoren in dem in Klammern stehenden Ausdruck ausgewertet werden, bevor der resultierende Ausdruck mit einem weiteren Ausdruck kombiniert wird.|  
-|**(** *scalar_subquery* **)**|Eine Unterabfrage, die einen Wert zurückgibt. Beispiel:<br /><br /> `SELECT MAX(UnitPrice)`<br /><br /> `FROM Products`|  
+|**(** *expression*  **)**|Ein beliebiger gültiger Ausdruck, wie er in diesem Thema definiert ist. Die Klammern sind gruppierende Operatoren, die sicherstellen, dass alle Operatoren in dem in Klammern stehenden Ausdruck ausgewertet werden, bevor der resultierende Ausdruck mit einem weiteren Ausdruck kombiniert wird.|  
+|**(** *scalar_subquery* **)**|Eine Unterabfrage, die einen Wert zurückgibt. Zum Beispiel:<br /><br /> `SELECT MAX(UnitPrice)`<br /><br /> `FROM Products`|  
 |{ *unary_operator* }|Unäre Operatoren können nur auf Ausdrücke angewendet werden, die zu einem der Datentypen in der numerischen Datentypkategorie ausgewertet werden. Ein Operator, der nur einen numerischen Operanden besitzt:<br /><br /> + zeigt eine positive Zahl an.<br /><br /> - zeigt eine negative Zahl an.<br /><br /> ~ zeigt den Einserkomplementoperator an.|  
-|{ *binary_operator* }|Ein Operator, der die Art und Weise definiert, in der zwei Ausdrücke kombiniert werden, um ein einzelnes Resultat zu liefern. *Binary_operator* kann ein arithmetischer Operator, der Zuweisungsoperator (=), ein bitweiser Operator, ein Vergleichsoperator, ein logischer Operator, der Operator für zeichenfolgenverkettung (+) oder ein unäroperator sein. Weitere Informationen zu Operatoren finden Sie unter [Operatoren &#40; Transact-SQL &#41; ](../../t-sql/language-elements/operators-transact-sql.md).|  
-|*ranking_windowed_function*|Eine beliebige [!INCLUDE[tsql](../../includes/tsql-md.md)]-Rangfolgefunktion. Weitere Informationen finden Sie unter [Rangfolge Funktionen &#40; Transact-SQL &#41; ](../../t-sql/functions/ranking-functions-transact-sql.md).|  
-|*aggregate_windowed_function*|Eine beliebige [!INCLUDE[tsql](../../includes/tsql-md.md)]-Aggregatfunktion mit der OVER-Klausel. Weitere Informationen finden Sie unter [Klausel "OVER" &#40; Transact-SQL &#41; ](../../t-sql/queries/select-over-clause-transact-sql.md).|  
+|{ *binary_operator* }|Ein Operator, der die Art und Weise definiert, in der zwei Ausdrücke kombiniert werden, um ein einzelnes Resultat zu liefern. *binary_operator* kann ein arithmetischer Operator, der Zuweisungsoperator (=), ein bitweiser Operator, ein Vergleichsoperator, ein logischer Operator, der Operator für Zeichenfolgenverkettung (+) oder ein unärer Operator sein. Weitere Informationen zu Operatoren finden Sie unter [Operatoren &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md).|  
+|*ranking_windowed_function*|Eine beliebige [!INCLUDE[tsql](../../includes/tsql-md.md)]-Rangfolgefunktion. Weitere Informationen finden Sie unter [Rangfolgefunktionen &#40;Transact-SQL&#41;](../../t-sql/functions/ranking-functions-transact-sql.md).|  
+|*aggregate_windowed_function*|Eine beliebige [!INCLUDE[tsql](../../includes/tsql-md.md)]-Aggregatfunktion mit der OVER-Klausel. Weitere Informationen finden Sie unter [OVER-Klausel &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).|  
   
 ## <a name="expression-results"></a>Ergebnisse von Ausdrücken  
  Bei einfachen Ausdrücken, die aus einer einzelnen Konstante, Variablen, Skalarfunktion oder einem Spaltennamen bestehen, entsprechen Datentyp, Sortierung, Genauigkeit, Anzahl der Dezimalstellen und Wert des Ausdrucks den jeweiligen Eigenschaften (Datentyp, Sortierung, Genauigkeit usw.) des Elements, auf das verwiesen wird.  
   
- Werden zwei Ausdrücke mithilfe von Vergleichs- oder logischen Operatoren kombiniert, ist das Ergebnis vom booleschen Datentyp. Das Ergebnis nimmt einen der folgenden Werte an: TRUE, FALSE oder UNKNOWN. Weitere Informationen zu booleschen Datentypen finden Sie unter [Vergleichsoperatoren &#40; Transact-SQL &#41; ](../../t-sql/language-elements/comparison-operators-transact-sql.md).  
+ Werden zwei Ausdrücke mithilfe von Vergleichs- oder logischen Operatoren kombiniert, ist das Ergebnis vom booleschen Datentyp. Das Ergebnis nimmt einen der folgenden Werte an: TRUE, FALSE oder UNKNOWN. Weitere Informationen zu booleschen Datentypen finden Sie unter [Vergleichsoperatoren &#40;Transact-SQL&#41;](../../t-sql/language-elements/comparison-operators-transact-sql.md).  
   
  Werden zwei Ausdrücke mithilfe von arithmetischen Operatoren, bitweisen Operatoren oder Zeichenfolgenoperatoren kombiniert, bestimmt der Operator den resultierenden Datentyp.  
   
  Komplexe Ausdrücke, die aus vielen Symbolen und Operatoren bestehen, werden zu einem Ergebnis mit genau einem Wert ausgewertet. Der Datentyp, die Sortierung, die Genauigkeit und der Wert des resultierenden Ausdrucks werden bestimmt, indem immer jeweils zwei Teilausdrücke kombiniert und ausgewertet werden, bis ein Endergebnis erreicht ist. Die Reihenfolge, in der die Ausdrücke kombiniert werden, ist durch die Rangfolge der Operatoren im Ausdruck definiert.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Zwei Ausdrücke können mit einem Operator kombiniert werden, wenn die Datentypen beider Ausdrücke vom Operator unterstützt werden und mindestens eine der folgenden Bedingungen erfüllt ist:  
   
 -   Die Ausdrücke besitzen den gleichen Datentyp.  
@@ -121,9 +121,9 @@ ms.lasthandoff: 01/25/2018
   
  Falls weder die implizite noch die explizite Konvertierung unterstützt wird, können die beiden Ausdrücke nicht kombiniert werden.  
   
- Die Sortierung eines Ausdrucks, der zu einer Zeichenfolge ausgewertet wird, wird entsprechend den Regeln zur Sortierungsrangfolge festgelegt. Weitere Informationen finden Sie unter [Rangfolge von Sortierungen &#40; Transact-SQL &#41; ](../../t-sql/statements/collation-precedence-transact-sql.md).  
+ Die Sortierung eines Ausdrucks, der zu einer Zeichenfolge ausgewertet wird, wird entsprechend den Regeln zur Sortierungsrangfolge festgelegt. Weitere Informationen finden Sie unter [Rangfolge von Sortierungen &#40;Transact-SQL&#41;](../../t-sql/statements/collation-precedence-transact-sql.md).  
   
- In einer Programmiersprache wie C oder [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)], ein Ausdruck immer zu einem einzelnen Ergebnis ausgewertet wird. Für Ausdrücke in einer [!INCLUDE[tsql](../../includes/tsql-md.md)]-Auswahlliste gilt eine Abwandlung dieser Regel: Der Ausdruck wird für jede Zeile des Resultsets einzeln ausgewertet. Ein einzelner Ausdruck kann für jede Zeile im Resultset einen anderen Wert annehmen, aber jede Zeile hat nur genau einen Wert für den Ausdruck. In der folgenden `SELECT`-Anweisung sind beispielsweise sowohl der Verweis auf `ProductID` als auch der Term `1+2` in der Auswahlliste Ausdrücke:  
+ In einer Programmiersprache wie beispielsweise C oder [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] wird ein Ausdruck immer zu einem einzelnen Ergebnis ausgewertet. Für Ausdrücke in einer [!INCLUDE[tsql](../../includes/tsql-md.md)]-Auswahlliste gilt eine Abwandlung dieser Regel: Der Ausdruck wird für jede Zeile des Resultsets einzeln ausgewertet. Ein einzelner Ausdruck kann für jede Zeile im Resultset einen anderen Wert annehmen, aber jede Zeile hat nur genau einen Wert für den Ausdruck. In der folgenden `SELECT`-Anweisung sind beispielsweise sowohl der Verweis auf `ProductID` als auch der Term `1+2` in der Auswahlliste Ausdrücke:  
   
 ```  
 USE AdventureWorks2012;  
@@ -135,13 +135,13 @@ GO
   
  Der Ausdruck `1+2` wird für jede Zeile des Resultsets zu `3` ausgewertet. Obwohl der Ausdruck `ProductID` für jede Zeile des Resultsets einen eindeutigen Wert erzeugt, besitzt jede Zeile nur genau einen Wert für `ProductID`.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [AT TIME ZONE &#40;Transact-SQL&#41;](../../t-sql/queries/at-time-zone-transact-sql.md)   
  [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)   
- [CAST und CONVERT &#40; Transact-SQL &#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
+ [CAST und CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
  [COALESCE &#40;Transact-SQL&#41;](../../t-sql/language-elements/coalesce-transact-sql.md)   
- [Datentypkonvertierung &#40; Datenbankmodul &#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)   
- [Die Rangfolge der Datentypen &#40; Transact-SQL &#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md)   
+ [Datentypkonvertierung &#40;Datenbank-Engine&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)   
+ [Rangfolge der Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md)   
  [Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [Integrierte Funktionen &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
  [LIKE &#40;Transact-SQL&#41;](../../t-sql/language-elements/like-transact-sql.md)   

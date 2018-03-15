@@ -1,5 +1,5 @@
 ---
-title: GetReparentedValue (Datenbankmodul) | Microsoft Docs
+title: GetReparentedValue (Datenbank-Engine) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 7/22/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="getreparentedvalue-database-engine"></a>GetReparentedValue (Datenbankmodul)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Gibt einen Knoten zurück, dessen Pfad vom Stamm des Pfads zum *"newroot"*, gefolgt vom Pfad von *OldRoot* auf *dies*.
+Gibt den Knoten zurück, dessen Pfad im Stamm der Pfad zu *newRoot* gefolgt von dem Pfad von *oldRoot* zu *this* ist.
   
 ## <a name="syntax"></a>Syntax  
   
@@ -50,23 +50,23 @@ SqlHierarchyId GetReparentedValue ( SqlHierarchyId oldRoot , SqlHierarchyId newR
   
 ## <a name="arguments"></a>Argumente  
 *oldRoot*  
-Ein **Hierarchyid** also der Knoten, der die Ebene der Hierarchie darstellt, die geändert werden soll.
+Ein **hierarchyid**-Wert, der den Knoten der zu ändernden Hierarchieebene angibt.
   
-*"newroot"*  
-Ein **Hierarchyid** , die den Knoten, der ersetzt darstellt der *OldRoot* Abschnitt des aktuellen Knotens zur Verschiebung des Knotens.
+*newRoot*  
+Ein **hierarchyid**-Wert, der den Knoten angibt, der den *oldRoot*-Abschnitt des aktuellen Knotens zur Verschiebung des Knotens ersetzt.
   
 ## <a name="return-types"></a>Rückgabetypen  
-**SQL Server-Typ: Hierarchyid zurück**
+**SQL Server-Rückgabetyp: hierarchyid**
   
-**CLR-Typ: SqlHierarchyId zurück**
+**CLR-Rückgabetyp: SqlHierarchyId**
   
-## <a name="remarks"></a>Hinweise  
-Kann verwendet werden, um die Struktur zu ändern, indem Sie Knoten aus verschieben *OldRoot* auf *"newroot"*. Mit GetReparentedValue können Sie einen Knoten einer Hierarchie an eine neue Position in der Hierarchie verschieben. Die **Hierarchyid** Datentyp darstellt, aber die hierarchische Struktur wird nicht erzwungen. Benutzer müssen sicherstellen, dass der hierarchyid-Wert für die neue Position angemessen strukturiert ist. Ein eindeutiger Index für die **Hierarchyid** -Datentyp kann doppelte Einträge vermeiden. Ein Beispiel für das Verschieben von einer kompletten Teilstruktur, finden Sie unter [hierarchische Daten &#40; SQLServer &#41; ](../../relational-databases/hierarchical-data-sql-server.md).
+## <a name="remarks"></a>Remarks  
+Kann verwendet werden, um die Struktur durch Verschieben von Knoten von *oldRoot* nach *newRoot* zu ändern. Mit GetReparentedValue können Sie einen Knoten einer Hierarchie an eine neue Position in der Hierarchie verschieben. Der **hierarchyid**-Datentyp stellt die hierarchische Struktur dar, setzt sie jedoch nicht durch. Benutzer müssen sicherstellen, dass der hierarchyid-Wert für die neue Position angemessen strukturiert ist. Mit einem eindeutigen Index für den **hierarchyid**-Datentyp können Sie doppelte Einträge vermeiden. Ein Beispiel für die Verschiebung einer vollständigen Teilstruktur finden Sie unter [Hierarchische Daten &#40;SQL Server&#41;](../../relational-databases/hierarchical-data-sql-server.md).
   
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="a-comparing-two-node-locations"></a>A. Vergleichen von zwei Knotenpositionen  
-Im folgenden Beispiel wird der aktuelle hierarchyid-Wert eines Knotens gezeigt. Außerdem wird gezeigt, was die **Hierarchyid** des Knotens wäre, wenn der Knoten verschoben des Nachfolgers die  **@NewParent**  Knoten. Zur Darstellung der hierarchischen Beziehungen wird die `ToString()`-Methode verwendet.
+Im folgenden Beispiel wird der aktuelle hierarchyid-Wert eines Knotens gezeigt. Des Weiteren wird der **hierarchyid**-Wert gezeigt, den der Knoten aufweist, wenn er an die Position des Nachfolgers des **@NewParent**-Knotens verschoben wird. Zur Darstellung der hierarchischen Beziehungen wird die `ToString()`-Methode verwendet.
   
 ```sql
 DECLARE @SubjectEmployee hierarchyid , @OldParent hierarchyid, @NewParent hierarchyid  
@@ -110,7 +110,7 @@ WHERE LoginID = 'adventure-works\gail0' ; -- Now node /2/3/2/
 ```  
   
 ### <a name="c-clr-example"></a>C. CLR-Beispiel  
-Der folgende Codeausschnitt Ruft die GetReparentedValue ()-Methode:
+Im folgenden Codeausschnitt wird die GetReparentedValue ()-Methode aufgerufen:
   
 ```sql
 this. GetReparentedValue(oldParent, newParent)  

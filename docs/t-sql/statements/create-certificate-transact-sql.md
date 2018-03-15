@@ -1,5 +1,5 @@
 ---
-title: Erstellen von CERTIFICATE (Transact-SQL) | Microsoft Docs
+title: CREATE CERTIFICATE (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 06/13/2017
 ms.prod: sql-non-specified
@@ -116,23 +116,23 @@ CREATE CERTIFICATE certificate_name
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *Name*  
- Ist der Name für das Zertifikat in der Datenbank.  
+ *certificate_name*  
+ Der Name eines Zertifikats in der Datenbank.  
   
- Autorisierung *User_name*  
- Ist der Name des Benutzers, der Besitzer dieses Zertifikats ist.  
+ AUTHORIZATION *user_name*  
+ Der Name des Benutzers, der das Zertifikat besitzt.  
   
- ASSEMBLY *Assembly_name*  
+ ASSEMBLY *assembly_name*  
  Gibt eine signierte Assembly an, die bereits in die Datenbank geladen wurde.  
   
- [AUSFÜHRBARE DATEI] Datei ='*Dateipfad*"  
- Gibt den vollständigen Pfad einschließlich des Dateinamens zur DER-codierten Datei an, die das Zertifikat enthält. Falls die EXECUTABLE-Option verwendet wird, handelt es sich bei der Datei um eine DLL-Datei, die mit dem Zertifikat signiert wurde. *Dateipfad* kann ein lokaler Pfad oder einen UNC-Pfad zu einem Netzwerkspeicherort sein. Die Datei wird im Sicherheitskontext des zugegriffen der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienstkonto. Dieses Konto muss über die erforderlichen Dateisystemberechtigungen verfügen.  
+ [ EXECUTABLE ] FILE ='*path_to_file*'  
+ Gibt den vollständigen Pfad einschließlich des Dateinamens zur DER-codierten Datei an, die das Zertifikat enthält. Falls die EXECUTABLE-Option verwendet wird, handelt es sich bei der Datei um eine DLL-Datei, die mit dem Zertifikat signiert wurde. *path_to_file* kann ein lokaler Pfad oder ein UNC-Pfad zu einem Netzwerkspeicherort sein. Die Datei wird im Sicherheitskontext des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Dienstkontos ausgeführt. Dieses Konto muss über die erforderlichen Dateisystemberechtigungen verfügen.  
   
  WITH PRIVATE KEY  
- Gibt an, dass der private Schlüssel des Zertifikats in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] geladen wird. Diese Klausel ist nur gültig, wenn das Zertifikat aus einer Datei erstellt wird. Um den privaten Schlüssel einer Assembly zu laden, verwenden [ALTER CERTIFICATE](../../t-sql/statements/alter-certificate-transact-sql.md).  
+ Gibt an, dass der private Schlüssel des Zertifikats in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] geladen wird. Diese Klausel ist nur gültig, wenn das Zertifikat aus einer Datei erstellt wird. Zum Laden des privaten Schlüssels einer Assembly können Sie [ALTER CERTIFICATE](../../t-sql/statements/alter-certificate-transact-sql.md) verwenden.  
   
- Datei ='*Path_to_private_key*"  
- Gibt den vollständigen Pfad einschließlich des Dateinamens für den privaten Schlüssel an. *Path_to_private_key* kann ein lokaler Pfad oder einen UNC-Pfad zu einem Netzwerkspeicherort sein. Die Datei wird im Sicherheitskontext des zugegriffen der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienstkonto. Dieses Konto muss über die erforderlichen Dateisystemberechtigungen verfügen.  
+ FILE ='*path_to_private_key*'  
+ Gibt den vollständigen Pfad einschließlich des Dateinamens für den privaten Schlüssel an. *path_to_private_key* kann ein lokaler Pfad oder ein UNC-Pfad zu einem Netzwerkspeicherort sein. Die Datei wird im Sicherheitskontext des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Dienstkontos ausgeführt. Dieses Konto muss über die erforderlichen Dateisystemberechtigungen verfügen.  
   
 > [!NOTE]  
 >  Diese Option ist in einer enthaltenen Datenbank nicht verfügbar.  
@@ -140,53 +140,53 @@ CREATE CERTIFICATE certificate_name
  asn_encoded_certificate  
  Mit ASN verschlüsselte Zertifikatbits, die als binäre Konstante angegeben sind.  
   
- BINÄRE =*Private_key_bits*  
+ BINARY =*private_key_bits*  
  **Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Private Schlüsselbits, die als binäre Konstante angegeben sind. Diese Bits können in verschlüsselter Form vorhanden sein. Bei Verschlüsselung muss der Benutzer ein Entschlüsselungskennwort bereitstellen. Kennwortrichtlinienüberprüfungen werden für dieses Kennwort nicht ausgeführt. Die privaten Schlüsselbits müssen in einem PVK-Dateiformat vorliegen.  
   
- DECRYPTION BY PASSWORD = "*Key_password*"  
- Gibt das Kennwort an, das zum Entschlüsseln eines privaten Schlüssels erforderlich ist, der aus einer Datei abgerufen wird. Diese Klausel ist optional, wenn der private Schlüssel nicht durch ein Kennwort geschützt ist. Das Speichern eines privaten Schlüssels in einer Datei ohne Kennwortschutz wird nicht empfohlen. Wenn ein Kennwort erforderlich ist, jedoch kein Kennwort angegeben ist, schlägt die Anweisung fehl.  
+ DECRYPTION BY PASSWORD ='*key_password*'  
+ Gibt das Kennwort an, das zum Entschlüsseln eines privaten Schlüssels erforderlich ist, der aus einer Datei abgerufen wird. Diese Klausel ist optional, wenn der private Schlüssel nicht durch ein Kennwort geschützt ist. Das Speichern eines privaten Schlüssels in einer Datei ohne Kennwortschutz wird nicht empfohlen. Falls zwar ein Kennwort erforderlich ist, jedoch keins angegeben wurde, löst die Anweisung einen Fehler aus.  
   
- ENCRYPTION BY PASSWORD = "*Kennwort*"  
- Gibt an, das zum Verschlüsseln des privaten Schlüssels verwendete Kennwort. Verwenden Sie diese Option nur, wenn Sie das Zertifikat mit einem Kennwort verschlüsseln möchten. Wenn diese Klausel weggelassen wird, wird der private Schlüssel mit dem Datenbank-Hauptschlüssel verschlüsselt. *Kennwort* erfüllt die Anforderungen der Windows-Kennwortrichtlinien des Computers, der die Instanz ausgeführt wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Weitere Informationen finden Sie unter [Password Policy](../../relational-databases/security/password-policy.md).  
+ ENCRYPTION BY PASSWORD ='*password*'  
+ Gibt das Kennwort an, mit dem der private Schlüssel verschlüsselt werden soll. Verwenden Sie diese Option nur, wenn Sie das Zertifikat mit einem Kennwort verschlüsseln möchten. Falls diese Klausel ausgelassen wird, wird der private Schlüssel mit dem Datenbank-Hauptschlüssel verschlüsselt. *password* muss den Anforderungen der Windows-Kennwortrichtlinien des Computers entsprechen, auf dem die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt wird. Weitere Informationen finden Sie unter [Password Policy](../../relational-databases/security/password-policy.md).  
   
- SUBJECT = "*Zertifikatantragstellername ein*"  
- Der Begriff *Betreff* bezieht sich auf ein Feld in den Metadaten des Zertifikats im x. 509-Standard definiert. Das Thema sollte nicht mehr als 64 Zeichen lang sein und wird dieser Grenzwert für erzwungen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unter Linux. Für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unter Windows der Antragsteller kann bis zu 128 Zeichen lang sein. Themen, die mehr 128 Zeichen als werden abgeschnitten, wenn sie die im Katalog gespeichert sind, aber binary large Object (BLOB), die das Zertifikat enthält, der vollständige Name des Antragstellers behält.  
+ SUBJECT ='*certificate_subject_name*'  
+ Der Begriff *subject* (Betreff) bezieht sich auf ein Feld in den Metadaten des Zertifikats, wie es im X.509-Standard definiert ist. Er sollte nicht länger als 64 Zeichen sein. Diese Beschränkung wird für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unter Linux erzwungen. Der Antragsteller kann für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unter Windows bis zu 128 Zeichen lang sein. Betreffe mit mehr als 128 Zeichen werden abgeschnitten, wenn sie im Katalog gespeichert werden. In den BLOB-Daten (Binary Large Object), die das Zertifikat enthalten, ist jedoch der vollständige Name des Antragstellers gespeichert.  
   
- Start_date = "*" DateTime "*"  
- Das Datum, an dem das Zertifikat gültig wird. Wenn nicht angegeben, wird die START_DATE gleich dem aktuellen Datum festgelegt. START_DATE ist in UTC-Zeit und kann in jedem Format angegeben werden, das in ein Datum und eine Uhrzeit konvertiert werden kann.  
+ START_DATE ='*datetime*'  
+ Das Datum, an dem das Zertifikat gültig wird. Falls nicht anders angegeben, wird das aktuelle Datum für START_DATE festgelegt. START_DATE ist in UTC-Zeit und kann in jedem Format angegeben werden, das in ein Datum und eine Uhrzeit konvertiert werden kann.  
   
- EXPIRY_DATE = "*" DateTime "*"  
- Das Datum, an dem das Zertifikat abläuft. Wenn nicht angegeben, wird EXPIRY_DATE auf ein Datum ein Jahr nach START_DATE festgelegt. EXPIRY_DATE ist in UTC-Zeit und kann in jedem Format angegeben werden, das in ein Datum und eine Uhrzeit konvertiert werden kann. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Service Broker prüft das Ablaufdatum. Ablauf wird jedoch nicht erzwungen, wenn das Zertifikat für die Verschlüsselung verwendet wird.  
+ EXPIRY_DATE ='*datetime*'  
+ Das Datum, an dem das Zertifikat abläuft. Falls nicht anders angegeben, wird EXPIRY_DATE auf das Datum ein Jahr nach START_DATE festgelegt. EXPIRY_DATE ist in UTC-Zeit und kann in jedem Format angegeben werden, das in ein Datum und eine Uhrzeit konvertiert werden kann. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Broker überprüft das Ablaufdatum. Der Ablauf wird jedoch nicht erzwungen, wenn das Zertifikat für die Verschlüsselung verwendet wird.  
   
- ACTIVE FOR BEGIN_DIALOG = { **ON** | {OFF}  
+ ACTIVE FOR BEGIN_DIALOG = { **ON** | OFF }  
  Stellt das Zertifikat für den Initiator einer [!INCLUDE[ssSB](../../includes/sssb-md.md)]-Dialogkonversation zur Verfügung. Der Standardwert ist ON.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Ein Zertifikat ist ein sicherungsfähiges Element auf Datenbankebene, das dem X.509-Standard entspricht und X.509 V1-Felder unterstützt. CREATE CERTIFICATE kann ein Zertifikat aus einer Datei oder Assembly laden. Mit dieser Anweisung kann auch ein Schlüsselpaar generiert und ein selbstsigniertes Zertifikat erstellt werden.  
   
- Der Private Schlüssel muss \<= 2500 Bytes in einem verschlüsselten Format. Vom generierten privaten Schlüssel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sind 1024 Bits lang über [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und 2048 Bits lang beginnen mit [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. Private Schlüssel, die aus einer externen Quelle importiert werden, haben eine minimale Länge von 384 Bits und eine maximale Länge von 4.096 Bits. Die Länge eines importierten privaten Schlüssels muss ein ganzzahliges Produkt von 64 Bits sein. Die für TDE verwendeten Zertifikate sind auf die private Schlüsselgröße von 3456 Bits beschränkt.  
+ Der private Schlüssel muss \<= 2500 Byte in einem verschlüsselten Format betragen. Private Schlüssel, die von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] generiert werden, umfassen 1024 Bit bis [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 2048 Bit. Private Schlüssel, die aus einer externen Quelle importiert werden, haben eine minimale Länge von 384 Bits und eine maximale Länge von 4.096 Bits. Die Länge eines importierten privaten Schlüssels muss ein ganzzahliges Produkt von 64 Bits sein. Die für TDE verwendeten Zertifikate sind auf die private Schlüsselgröße von 3456 Bits beschränkt.  
   
- Die gesamte Seriennummer des Zertifikats gespeichert ist, aber nur die ersten 16 Bytes, die in der sys.certificates-Katalogsicht angezeigt werden.  
+ Die vollständige Seriennummer des Zertifikats wird gespeichert, aber nur die ersten 16 Byte werden in der sys.certificates-Katalogsicht angezeigt.  
   
- Das gesamte Feld Aussteller desselben Zertifikats gespeichert ist, aber nur die ersten 884 Bytes in der sys.certificates-Katalogsicht.  
+ Das vollständige Feld „Zertifikataussteller“ wird zwar gespeichert, aber nur die ersten 884 Byte werden in der sys.certificates-Katalogsicht angezeigt.  
   
- Der private Schlüssel muss dem öffentlichen Schlüssel gemäß entsprechen *Name*.  
+ Der private Schlüssel muss dem öffentlichen Schlüssel entsprechen, der mit *certificate_name* angegeben ist.  
   
- Beim Erstellen eines Zertifikats aus einem Container ist das Laden des privaten Schlüssels optional. Wenn von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] jedoch ein selbstsigniertes Zertifikat generiert wird, wird der private Schlüssel immer erstellt. Standardmäßig ist der private Schlüssel mit dem Datenbank-Hauptschlüssel verschlüsselt. Wenn die Datenbank-Hauptschlüssel ist nicht vorhanden, und kein Kennwort angegeben ist, schlägt die Anweisung fehl.  
+ Beim Erstellen eines Zertifikats aus einem Container ist das Laden des privaten Schlüssels optional. Wenn von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] jedoch ein selbstsigniertes Zertifikat generiert wird, wird der private Schlüssel immer erstellt. Standardmäßig ist der private Schlüssel mit dem Datenbank-Hauptschlüssel verschlüsselt. Falls kein Datenbank-Hauptschlüssel vorhanden und kein Kennwort angegeben ist, erzeugt die Anweisung einen Fehler.  
   
- Die ENCRYPTION BY PASSWORD-Option ist nicht erforderlich, wenn der private Schlüssel mit dem Datenbank-Hauptschlüssel verschlüsselt ist. Verwenden Sie diese Option nur, wenn der private Schlüssel mit einem Kennwort verschlüsselt ist. Falls kein Kennwort angegeben ist, wird der private Schlüssel des Zertifikats mit dem Datenbank-Hauptschlüssel verschlüsselt. Wenn der Hauptschlüssel der Datenbank nicht geöffnet werden kann, verursacht diese Klausel ausgelassen einen Fehler.  
+ Die ENCRYPTION BY PASSWORD-Option ist nicht erforderlich, wenn der private Schlüssel mit dem Datenbank-Hauptschlüssel verschlüsselt wird. Verwenden Sie diese Option nur, wenn der private Schlüssel mit einem Kennwort verschlüsselt wird. Falls kein Kennwort angegeben ist, wird der private Schlüssel des Zertifikats mit dem Datenbank-Hauptschlüssel verschlüsselt. Wenn der Datenbank-Hauptschlüssel nicht geöffnet werden kann, wird ein Fehler ausgelöst, wenn Sie diese Klausel auslassen.  
   
  Sie müssen kein Entschlüsselungskennwort angeben, wenn der private Schlüssel mit dem Datenbank-Hauptschlüssel verschlüsselt ist.  
   
 > [!NOTE]  
 >  Die Ablaufdaten von Zertifikaten werden von integrierten Funktionen für die Verschlüsselung und Signierung nicht überprüft. Benutzer dieser Funktionen müssen entscheiden, wann die Ablaufdaten der Zertifikate überprüft werden sollen.  
   
- Eine binäre Beschreibung eines Zertifikats kann erstellt werden, mithilfe der [CERTENCODED &#40; Transact-SQL &#41; ](../../t-sql/functions/certencoded-transact-sql.md) und [CERTPRIVATEKEY &#40; Transact-SQL &#41; ](../../t-sql/functions/certprivatekey-transact-sql.md) Funktionen. Ein Beispiel, verwendet **CERTPRIVATEKEY** und **CERTENCODED** zum Kopieren eines Zertifikats in eine andere Datenbank finden Sie unter Beispiel B im Thema [CERTENCODED &#40; Transact-SQL &#41; ](../../t-sql/functions/certencoded-transact-sql.md).  
+ Sie können über die Funktionen [CERTENCODED &#40;Transact-SQL&#41;](../../t-sql/functions/certencoded-transact-sql.md) und [CERTPRIVATEKEY &#40;Transact-SQL&#41;](../../t-sql/functions/certprivatekey-transact-sql.md) eine binäre Beschreibung eines Zertifikats erstellen. Ein Beispiel für die Verwendung von **CERTPRIVATEKEY** und **CERTENCODED** zum Kopieren eines Zertifikats in eine andere Datenbank finden Sie in Beispiel B im Artikel [CERTENCODED &#40;Transact-SQL&#41;](../../t-sql/functions/certencoded-transact-sql.md).  
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert die CREATE CERTIFICATE-Berechtigung für die Datenbank. Nur Windows-Anmeldungen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anmeldenamen und Anwendungsrollen können Zertifikate besitzen. Gruppen und Rollen können keine Zertifikate besitzen.  
+ Erfordert die CREATE CERTIFICATE-Berechtigung für die Datenbank. Nur Windows-Anmeldenamen, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldenamen und Anwendungsrollen können Zertifikate besitzen. Gruppen und Rollen können keine Zertifikate besitzen.  
   
 ## <a name="examples"></a>Beispiele  
   
@@ -232,7 +232,7 @@ GO
 ```  
   
 ### <a name="d-creating-a-self-signed-certificate"></a>D. Erstellen eines selbstsignierten Zertifikats  
- Das folgende Beispiel erstellt ein Zertifikat namens `Shipping04` ohne ein Verschlüsselungskennwort. Dieses Beispiel kann verwendet werden, mit [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
+ Das folgende Beispiel erstellt ein Zertifikat mit dem Namen `Shipping04`, ohne ein Verschlüsselungskennwort anzugeben. Dieses Beispiel kann mit [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] verwendet werden.
   
 ```  
 CREATE CERTIFICATE Shipping04   
@@ -241,14 +241,14 @@ GO
 ```  
   
   
-## <a name="see-also"></a>Siehe auch  
- [ALTER CERTIFICATE &#40; Transact-SQL &#41;](../../t-sql/statements/alter-certificate-transact-sql.md)   
- [DROP CERTIFICATE &#40; Transact-SQL &#41;](../../t-sql/statements/drop-certificate-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [ALTER CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-certificate-transact-sql.md)   
+ [DROP CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-certificate-transact-sql.md)   
  [BACKUP CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/backup-certificate-transact-sql.md)   
  [Verschlüsselungshierarchie](../../relational-databases/security/encryption/encryption-hierarchy.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
- [CERTENCODED &#40; Transact-SQL &#41;](../../t-sql/functions/certencoded-transact-sql.md)   
- [CERTPRIVATEKEY &#40; Transact-SQL &#41;](../../t-sql/functions/certprivatekey-transact-sql.md)  
+ [CERTENCODED &#40;Transact-SQL&#41;](../../t-sql/functions/certencoded-transact-sql.md)   
+ [CERTPRIVATEKEY &#40;Transact-SQL&#41;](../../t-sql/functions/certprivatekey-transact-sql.md)  
   
   
 

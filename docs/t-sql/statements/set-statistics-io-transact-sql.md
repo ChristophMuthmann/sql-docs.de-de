@@ -1,5 +1,5 @@
 ---
-title: Festlegen von STATISTICS IO (Transact-SQL) | Microsoft Docs
+title: SET STATISTICS IO (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 11/10/2016
 ms.prod: sql-non-specified
@@ -53,7 +53,7 @@ ms.lasthandoff: 01/23/2018
 SET STATISTICS IO { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Wenn STATISTICS IO auf ON festgelegt ist, werden statistische Informationen angezeigt. Bei OFF werden die Informationen nicht angezeigt.  
   
  Wenn diese Option auf ON festgelegt wird, geben alle nachfolgenden [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen so lange statistische Informationen zurück, bis die Option auf OFF festgelegt wird.  
@@ -63,13 +63,13 @@ SET STATISTICS IO { ON | OFF }
 |Ausgabeelement|Bedeutung|  
 |-----------------|-------------|  
 |**Tabelle**|Der Name der Tabelle.|  
-|**Scananzahl**|Die Anzahl von Suchen/Scans, die nach Erreichen der Blattebene in beliebiger Richtung gestartet wurden, um alle Werte zum Erstellen des abschließende Datasets für die Ausgabe abzurufen.<br /><br /> Die Scananzahl beträgt 0, wenn der verwendete Index ein eindeutiger Index oder ein gruppierter Index für eine Primärschlüsselspalte ist und Sie nur einen Wert suchen. Beispiel: `WHERE Primary_Key_Column = <value>`.<br /><br /> Scananzahl ist 1, bei der Suche nach einem Wert, der über einen nicht eindeutigen gruppierten Index auf einer Nichtprimär-Schlüsselspalte definiert. Auf diese Weise wird nach doppelten Werten eines Schlüsselwerts gesucht, der als Suchwert verwendet wird. Beispiel: `WHERE Clustered_Index_Key_Column = <value>`.<br /><br /> Die Scananzahl ist N, wenn N der Anzahl unterschiedlicher Suchen/Scans entspricht, die auf der Blattebene nach links oder rechts gestartet wurden, nachdem ein Schlüsselwert anhand des Indexschlüssels ermittelt wurde.|  
-|**logische Lesevorgänge**|Anzahl der aus dem Datencache gelesenen Seiten|  
-|**physische Lesevorgänge**|Anzahl der vom Datenträger gelesenen Seiten|  
-|**Read-ahead-Lesevorgänge**|Anzahl der Seiten, die für die Abfrage im Cache platziert wurden|  
-|**logische LOB-Lesevorgänge**|Anzahl der **Text**, **Ntext**, **Image**, oder großer Werttyp (**varchar(max)**, **nvarchar(max)**, **varbinary(max)**) Seiten aus dem Datencache gelesen.|  
-|**physische LOB-Lesevorgänge**|Anzahl der **Text**, **Ntext**, **Image** oder großen Wert Typ Seiten vom Datenträger gelesen.|  
-|**LOB-Read-ahead-Lesevorgänge**|Anzahl der **Text**, **Ntext**, **Image** oder großen Wert Geben Sie die Seiten im Cache für die Abfrage platziert wurden.|  
+|**Scananzahl**|Die Anzahl von Suchen/Scans, die nach Erreichen der Blattebene in beliebiger Richtung gestartet wurden, um alle Werte zum Erstellen des abschließende Datasets für die Ausgabe abzurufen.<br /><br /> Die Scananzahl beträgt 0, wenn der verwendete Index ein eindeutiger Index oder ein gruppierter Index für eine Primärschlüsselspalte ist und Sie nur einen Wert suchen. Beispiel: `WHERE Primary_Key_Column = <value>`.<br /><br /> Die Scananzahl beträgt 1, wenn Sie anhand eines nicht eindeutig gruppierten Index, der für eine Nicht-Primärschlüsselspalte definiert ist, nach einem Wert suchen. Auf diese Weise wird nach doppelten Werten eines Schlüsselwerts gesucht, der als Suchwert verwendet wird. Beispiel: `WHERE Clustered_Index_Key_Column = <value>`.<br /><br /> Die Scananzahl ist N, wenn N der Anzahl unterschiedlicher Suchen/Scans entspricht, die auf der Blattebene nach links oder rechts gestartet wurden, nachdem ein Schlüsselwert anhand des Indexschlüssels ermittelt wurde.|  
+|**Logische Lesevorgänge**|Anzahl der aus dem Datencache gelesenen Seiten|  
+|**Physische Lesevorgänge**|Anzahl der vom Datenträger gelesenen Seiten|  
+|**Read-Ahead-Lesevorgänge**|Anzahl der Seiten, die für die Abfrage im Cache platziert wurden|  
+|**Logische LOB-Lesevorgänge**|Anzahl der aus dem Datencache gelesenen Seiten des Typs **text**, **ntext**, **image** oder eines Typs für umfangreiche Werte (z.B. **varchar(max)**, **nvarchar(max)** und **varbinary(max)**).|  
+|**Physische LOB-Lesevorgänge**|Anzahl der Seiten des Typs **text**, **ntext**, **image** oder eines Typs für umfangreiche Werte, die vom Datenträger gelesen wurden.|  
+|**Read-Ahead-LOB-Lesevorgänge**|Anzahl der Seiten des Typs **text**, **ntext**, **image** oder eines Typs für umfangreiche Wertdaten, die für die Abfrage im Cache platziert wurden.|  
   
  Die Einstellung von SET STATISTICS IO wird zur Ausführungszeit und nicht zur Analysezeit festgelegt.  
   
@@ -103,7 +103,7 @@ reads 0, read-ahead reads 0, lob logical reads 0, lob physical reads 0,
 lob read-ahead reads 0.  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SET-Anweisungen (Transact-SQL)](../../t-sql/statements/set-statements-transact-sql.md)   
  [SET SHOWPLAN_ALL &#40;Transact-SQL&#41;](../../t-sql/statements/set-showplan-all-transact-sql.md)   
  [SET STATISTICS TIME &#40;Transact-SQL&#41;](../../t-sql/statements/set-statistics-time-transact-sql.md)  

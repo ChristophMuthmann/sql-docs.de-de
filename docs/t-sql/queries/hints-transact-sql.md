@@ -1,5 +1,5 @@
 ---
-title: Hinweise (Transact-SQL) | Microsoft Docs
+title: Hinweise (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 08/09/2017
 ms.prod: sql-non-specified
@@ -40,7 +40,7 @@ ms.lasthandoff: 01/25/2018
   Hinweise sind Optionen oder Strategien, die angegeben werden, um bei Bedarf durch den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Abfrageoptimierer für SELECT-, INSERT-, UPDATE- oder DELETE-Anweisungen erzwungen werden zu können. Diese Hinweise überschreiben jeden Ausführungsplan, den der Abfrageoptimierer möglicherweise für eine Abfrage auswählt.  
   
 > [!CAUTION]  
->  Da die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Abfrageoptimierer in der Regel den optimalen Ausführungsplan für eine Abfrage auswählt, wird empfohlen, die \<Join_hint >, \<Query_hint >, und \<Table_hint > nur als letzte Möglichkeit verwendet werden, die von erfahrenen Entwickler und Datenbankadministratoren.
+>  Da der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Abfrageoptimierer in der Regel den optimalen Ausführungsplan für eine Abfrage auswählt, wird empfohlen, dass erfahrene Entwickler und Datenbankadministratoren \<join_hint>, \<query_hint> und \<table_hint> nur dann verwenden, wenn alle anderen Möglichkeiten sich als unbefriedigend erwiesen haben.
   
  In diesem Abschnitt werden die folgenden Hinweise beschrieben:  
   

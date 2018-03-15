@@ -1,5 +1,5 @@
 ---
-title: '&lt;= (Kleiner als oder gleich) (Transact-SQL) | Microsoft Docs'
+title: '&lt;= (Kleiner als oder gleich) (Transact-SQL) | Microsoft-Dokumentation'
 ms.custom: 
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
@@ -53,14 +53,14 @@ expression <= expression
   
 ## <a name="arguments"></a>Argumente  
  *expression*  
- Ist ein beliebiger gültiger [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md). Beide Ausdrücke müssen implizit konvertierbare Datentypen besitzen. Die Konvertierung folgt den Regeln der [Rangfolge der Datentypen](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
+ Ist ein beliebiger gültiger [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md). Beide Ausdrücke müssen implizit konvertierbare Datentypen besitzen. Die Konvertierung hängt von den [Rangfolgeregeln für Datentypen](../../t-sql/data-types/data-type-precedence-transact-sql.md) ab.  
   
 ## <a name="result-types"></a>Ergebnistypen  
  **Boolean**  
   
 ## <a name="examples"></a>Beispiele  
   
-### <a name="a-using--in-a-simple-query"></a>A. Mithilfe von < = in einer einfachen Abfrage  
+### <a name="a-using--in-a-simple-query"></a>A. Verwenden von <= in einer einfachen Abfrage  
  Im folgenden Beispiel werden alle Zeilen in der `HumanResources.Department`-Tabelle zurückgegeben, die in `DepartmentID` über einen Wert kleiner oder gleich 3 verfügen.  
   
 ```  
@@ -86,8 +86,8 @@ DepartmentID Name
   
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)  
+ [Operators &#40;Transact-SQL&#41; (Operatoren &#40;Transact-SQL&#41;)](../../t-sql/language-elements/operators-transact-sql.md)  
   
   

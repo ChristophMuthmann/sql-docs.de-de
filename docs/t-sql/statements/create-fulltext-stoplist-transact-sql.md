@@ -1,5 +1,5 @@
 ---
-title: Erstellen von FULLTEXT STOPLIST (Transact-SQL) | Microsoft Docs
+title: CREATE FULLTEXT STOPLIST (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -44,7 +44,7 @@ ms.lasthandoff: 11/21/2017
 
   Erstellt eine neue Volltextstoppliste in der aktuellen Datenbank.  
   
- Stoppwörter werden über Objekte mit dem Namen in Datenbanken verwaltet *Stopplisten*. Eine Stoppliste ist eine Liste mit Stoppwörtern, die, wenn sie einem Volltextindex zugeordnet ist, auf Volltextabfragen für diesen Index angewendet wird. Weitere Informationen finden sie unter [Konfigurieren und Verwalten von Stoppwörtern und Stopplisten für Volltextsuche](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md).  
+ Stoppwörter werden über Objekte mit dem Namen *Stopplisten* in Datenbanken verwaltet. Eine Stoppliste ist eine Liste mit Stoppwörtern, die, wenn sie einem Volltextindex zugeordnet ist, auf Volltextabfragen für diesen Index angewendet wird. Weitere Informationen finden sie unter [Konfigurieren und Verwalten von Stoppwörtern und Stopplisten für Volltextsuche](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md).  
   
 > [!IMPORTANT]  
 >  CREATE FULLTEXT STOPLIST, ALTER FULLTEXT STOPLIST und DROP FULLTEXT STOPLIST werden nur bei einem Kompatibilitätsgrad von 100 unterstützt. Bei Kompatibilitätsgraden von 80 und 90 werden diese Anweisungen nicht unterstützt. Bei allen Kompatibilitätsgraden wird die Systemstopliste jedoch automatisch neuen Volltextindizes zugeordnet.  
@@ -63,23 +63,23 @@ CREATE FULLTEXT STOPLIST stoplist_name
   
 ## <a name="arguments"></a>Argumente  
  *stoplist_name*  
- Der Name der Stoppliste. *Stoplist_name* kann maximal 128 Zeichen sein. *Stoplist_name* muss innerhalb aller Stopplisten in der aktuellen Datenbank eindeutig sein und den Regeln für Bezeichner entsprechen.  
+ Der Name der Stoppliste. *stoplist_name* darf maximal 128 Zeichen lang sein. *stoplist_name* muss innerhalb aller Stopplisten in der aktuellen Datenbank eindeutig sein und den Regeln für Bezeichner entsprechen.  
   
- *Stoplist_name* wird verwendet, wenn der Volltextindex erstellt wird.  
+ *stoplist_name* wird verwendet, wenn der Volltextindex erstellt wird.  
   
  *database_name*  
- Der Name der Datenbank, in denen die Stoppliste gemäß *Source_stoplist_name* befindet. Wenn nicht angegeben, *Database_name* Standardwerte auf die aktuelle Datenbank.  
+ Der Name der Datenbank, in der sich die durch *source_stoplist_name* festgelegte Stoppliste befindet. Wird *database_name* nicht angegeben, wird standardmäßig die aktuelle Datenbank verwendet.  
   
  *source_stoplist_name*  
- Gibt an, dass die neue Stoppliste durch Kopieren einer vorhandenen Stoppliste erstellt wird. Wenn *Source_stoplist_name* ist nicht vorhanden, oder der Datenbankbenutzer verfügt nicht über die richtigen Berechtigungen, CREATE FULLTEXT STOPLIST schlägt fehl. Wenn eine in den Stoppwörtern der Quellstoppliste angegebene Sprache in der aktuellen Datenbank nicht registriert ist, wird CREATE FULLTEXT STOPLIST erfolgreich ausgeführt. Allerdings werden Warnungen zurückgegeben, und die entsprechenden Stoppwörter werden nicht hinzugefügt.  
+ Gibt an, dass die neue Stoppliste durch Kopieren einer vorhandenen Stoppliste erstellt wird. Wenn *source_stoplist_name* nicht vorhanden ist oder der Datenbankbenutzer nicht die entsprechende Berechtigung besitzt, wird für CREATE FULLTEXT STOPLIST ein Fehler ausgegeben. Wenn eine in den Stoppwörtern der Quellstoppliste angegebene Sprache in der aktuellen Datenbank nicht registriert ist, wird CREATE FULLTEXT STOPLIST erfolgreich ausgeführt. Allerdings werden Warnungen zurückgegeben, und die entsprechenden Stoppwörter werden nicht hinzugefügt.  
   
  SYSTEM STOPLIST  
- Gibt an, dass die neue Stoppliste aus der Stoppliste erstellt wird, wird standardmäßig in der [Ressourcendatenbank](../../relational-databases/databases/resource-database.md).  
+ Gibt an, dass die neue Stoppliste aus der Stoppliste erstellt wird, die standardmäßig in der [Ressourcendatenbank](../../relational-databases/databases/resource-database.md) enthalten ist.  
   
- Autorisierung *Owner_name*  
- Gibt den Namen eines Datenbankprinzipals als Besitzer der Stoppliste an. *Owner_name* muss der Name eines Prinzipals, der der aktuelle Benutzer angehört, oder der aktuelle Benutzer muss IMPERSONATE-Berechtigung verfügen, auf *Owner_name*. Wird kein Wert angegeben, wird der aktuelle Benutzer zum Besitzer.  
+ AUTHORIZATION *owner_name*  
+ Gibt den Namen eines Datenbankprinzipals als Besitzer der Stoppliste an. *owner_name* muss der Name eines Prinzipals sein, dessen Mitglied der aktuelle Benutzer ist, oder der aktuelle Benutzer benötigt die IMPERSONATE-Berechtigung für *owner_name*. Wird kein Wert angegeben, wird der aktuelle Benutzer zum Besitzer.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Der Ersteller einer Stoppliste ist deren Besitzer.  
   
 ## <a name="permissions"></a>Berechtigungen  
@@ -114,12 +114,12 @@ CREATE FULLTEXT STOPLIST myStoplist3 FROM SYSTEM STOPLIST;
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [ALTER FULLTEXT STOPLIST &#40; Transact-SQL &#41;](../../t-sql/statements/alter-fulltext-stoplist-transact-sql.md)   
- [DROP FULLTEXT STOPLIST &#40; Transact-SQL &#41;](../../t-sql/statements/drop-fulltext-stoplist-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [ALTER FULLTEXT STOPLIST &#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-stoplist-transact-sql.md)   
+ [DROP FULLTEXT STOPLIST &#40;Transact-SQL&#41;](../../t-sql/statements/drop-fulltext-stoplist-transact-sql.md)   
  [Konfigurieren und Verwalten von Stoppwörtern und Stopplisten für Volltextsuche](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)   
- [fulltext_stoplists &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-fulltext-stoplists-transact-sql.md)   
- [fulltext_stopwords &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-fulltext-stopwords-transact-sql.md)   
+ [sys.fulltext_stoplists &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-stoplists-transact-sql.md)   
+ [sys.fulltext_stopwords &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-stopwords-transact-sql.md)   
  [Konfigurieren und Verwalten von Stoppwörtern und Stopplisten für Volltextsuche](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)  
   
   

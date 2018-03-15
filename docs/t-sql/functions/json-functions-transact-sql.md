@@ -1,5 +1,5 @@
 ---
-title: JSON-Funktionen (Transact-SQL) | Microsoft Docs
+title: JSON-Funktionen (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 07/17/2017
 ms.prod: sql-non-specified
@@ -29,7 +29,7 @@ ms.lasthandoff: 11/17/2017
 # <a name="json-functions-transact-sql"></a>JSON-Funktionen (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-Verwenden Sie die Funktionen, die auf den Seiten in diesem Abschnitt beschrieben zu überprüfen oder Ändern von JSON-Text oder einfacher oder komplexer Werte zu extrahieren.  
+Verwenden Sie die Funktionen, die auf den Seiten in diesem Abschnitt beschrieben werden, um JSON-Text zu überprüfen oder zu ändern sowie um einfache oder komplexe Werte zu extrahieren.  
   
 |Funktion|Description|  
 |--------------|-----------------|  
@@ -38,11 +38,11 @@ Verwenden Sie die Funktionen, die auf den Seiten in diesem Abschnitt beschrieben
 |[JSON_QUERY](../../t-sql/functions/json-query-transact-sql.md)|Extrahiert ein Objekt oder ein Array aus einer JSON-Zeichenfolge.|  
 |[JSON_MODIFY](../../t-sql/functions/json-modify-transact-sql.md)|Aktualisiert den Wert einer Eigenschaft in einer JSON-Zeichenfolge und gibt die aktualisierte JSON-Zeichenfolge zurück.|
 
- Weitere Informationen über die integrierte Unterstützung für JSON in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], finden Sie unter [JSON-Daten &#40; SQLServer &#41; ](../../relational-databases/json/json-data-sql-server.md).  
+ Weitere Informationen zur integrierten Unterstützung für JSON in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] finden Sie unter [JSON-Daten &#40;SQL Server&#41;](../../relational-databases/json/json-data-sql-server.md).  
     
-## <a name="see-also"></a>Siehe auch  
- [Überprüfen, Abfragen und Ändern von JSON-Daten mit integrierten Funktionen &#40; SQLServer &#41;](../../relational-databases/json/validate-query-and-change-json-data-with-built-in-functions-sql-server.md)   
- [JSON-Pfadausdrücke &#40; SQLServer &#41;](../../relational-databases/json/json-path-expressions-sql-server.md)   
- [JSON-Daten &#40; SQLServer &#41;](../../relational-databases/json/json-data-sql-server.md)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Überprüfen, Abfragen und Ändern von JSON-Daten mit integrierten Funktionen &#40;SQL Server&#41;](../../relational-databases/json/validate-query-and-change-json-data-with-built-in-functions-sql-server.md)   
+ [JSON-Pfadausdrücke &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)   
+ [JSON-Daten &#40;SQL Server&#41;](../../relational-databases/json/json-data-sql-server.md)  
   
   

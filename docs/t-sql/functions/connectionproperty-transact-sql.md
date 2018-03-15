@@ -1,5 +1,5 @@
 ---
-title: CONNECTIONPROPERTY (Transact-SQL) | Microsoft Docs
+title: CONNECTIONPROPERTY (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -45,24 +45,24 @@ CONNECTIONPROPERTY ( property )
 ```  
   
 ## <a name="arguments"></a>Argumente  
-*Eigenschaft*  
+*property*  
 Die Eigenschaft der Verbindung. Für*property* sind die folgenden Werte möglich.
   
-|Wert|Datentyp|Description|  
+|value|Datentyp|Description|  
 |---|---|---|
-|net_transport|**nvarchar(40)**|Gibt das physische Transportprotokoll zurück, das von dieser Verbindung verwendet wird. Lässt keine NULL-Werte zu.<br /><br /> Rückgabewerte sind: **HTTP**, **Named pipe**, **Session**, **Shared memory**, **SSL**, **TCP**und **VIA**.<br /><br /> Hinweis: Gibt immer **Sitzung** Wenn eine Verbindung besteht, mehrere aktive Resultsets (MARS) aktiviert und Verbindungspooling aktiviert ist.|  
+|net_transport|**nvarchar(40)**|Gibt das physische Transportprotokoll zurück, das von dieser Verbindung verwendet wird. Lässt keine NULL-Werte zu.<br /><br /> Rückgabewerte sind: **HTTP**, **Named pipe**, **Session**, **Shared memory**, **SSL**, **TCP**und **VIA**.<br /><br /> Hinweis: Es wird stets **Session** zurückgegeben, wenn für eine Verbindung „mehrere aktive Resultsets“ (MARS) und Verbindungs-Pooling aktiviert ist.|  
 |protocol_type|**nvarchar(40)**|Gibt den Protokolltyp der Nutzlast zurück. Zurzeit wird zwischen TDS (TSQL) und SOAP unterschieden. Lässt NULL-Werte zu.|  
-|auth_scheme|**nvarchar(40)**|Gibt die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierungsschema für eine Verbindung. Das Authentifizierungsschema ist entweder Windows-Authentifizierung (NTLM, KERBEROS, DIGEST, BASIC, NEGOTIATE) oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung. Lässt keine NULL-Werte zu.|  
+|auth_scheme|**nvarchar(40)**|Gibt das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierungsschema für eine Verbindung zurück. Das Authentifizierungsschema ist entweder Windows-Authentifizierung (NTLM, KERBEROS, DIGEST, BASIC, NEGOTIATE) oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung. Lässt keine NULL-Werte zu.|  
 |local_net_address|**varchar(48)**|Gibt die IP-Adresse auf dem Server zurück, die die Zieladresse dieser Verbindung ist. Ist nur für Verbindungen verfügbar, die den TCP-Transportanbieter verwenden. Lässt NULL-Werte zu.|  
 |local_tcp_port|**int**|Gibt den Server-TCP-Port zurück, der der Zielport dieser Verbindung ist, falls die Verbindung den TCP-Transport verwendet. Lässt NULL-Werte zu.|  
 |client_net_address|**varchar(48)**|Fragt nach der Adresse des Clients, der die Verbindung mit diesem Server herstellt. Lässt NULL-Werte zu.|  
 |physical_net_transport|**nvarchar(40)**|Gibt das physische Transportprotokoll zurück, das von dieser Verbindung verwendet wird. Genau, wenn für eine Verbindung Multiple Active Result Sets (MARS) aktiviert sind.|  
-|\<Eine beliebige andere Zeichenfolge >||Gibt NULL zurück, wenn die Eingabe nicht gültig ist.|  
+|\<beliebige andere Zeichenfolge>||Gibt NULL zurück, wenn die Eingabe nicht gültig ist.|  
   
-## <a name="remarks"></a>Hinweise  
-**Local_net_address** und **Local_tcp_port** NULL in zurückgeben [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
+## <a name="remarks"></a>Remarks  
+**local_net_address** und **local_tcp_port** geben in [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] NULL zurück.
   
-Die zurückgegebenen Werte sind identisch mit den Optionen für die entsprechenden Spalten in der [Sys. dm_exec_connections](../../relational-databases/system-dynamic-management-views/sys-dm-exec-connections-transact-sql.md) -verwaltungssicht. Beispiel:
+Die zurückgegebenen Werte sind mit den Optionen identisch, die für die entsprechenden Spalten in der dynamischen Verwaltungssicht [sys.dm_exec_connections](../../relational-databases/system-dynamic-management-views/sys-dm-exec-connections-transact-sql.md) angezeigt werden. Zum Beispiel:
   
 ```sql
 SELECT   
@@ -72,6 +72,6 @@ ConnectionProperty('protocol_type') AS 'Protocol type';
   
 ## <a name="see-also"></a>Siehe auch
 [sys.dm_exec_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)  
-[Sys. dm_exec_requests &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)
+[sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)
   
   

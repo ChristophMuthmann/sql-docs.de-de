@@ -1,5 +1,5 @@
 ---
-title: RESTORE LABELONLY (Transact-SQL) | Microsoft Docs
+title: RESTORE LABELONLY (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -34,13 +34,13 @@ ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="restore-statements---labelonly-transact-sql"></a>RESTORE-Anweisungen - LABELONLY (Transact-SQL)
+# <a name="restore-statements---labelonly-transact-sql"></a>RESTORE-Anweisungen: LABELONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Gibt ein Resultset mit Informationen zu den durch das gegebene Sicherungsmedium identifizierten Sicherungsmedien zurück.  
   
 > [!NOTE]  
->  Die Beschreibungen der Argumente finden Sie [RESTORE-Argumente &#40; Transact-SQL &#41; ](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
+>  Eine Beschreibung der Argumente finden Sie unter [RESTORE-Argumente &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -78,7 +78,7 @@ FROM <backup_device>
 ```  
   
 ## <a name="arguments"></a>Argumente  
- Beschreibungen der RESTORE LABELONLY-Argumente finden Sie unter [RESTORE-Argumente &#40; Transact-SQL &#41; ](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
+ Eine Beschreibung der RESTORE LABELONLY-Argumente finden Sie unter [RESTORE-Argumente &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
   
 ## <a name="result-sets"></a>Resultsets  
  Das Resultset von RESTORE LABELONLY besteht aus einer Zeile mit diesen Informationen.  
@@ -87,17 +87,17 @@ FROM <backup_device>
 |-----------------|---------------|-----------------|  
 |**MediaName**|**nvarchar(128)**|Name des Mediums.|  
 |**MediaSetId**|**uniqueidentifier**|Eindeutige ID des Mediensatzes.|  
-|**FamilyCount**|**int**|Die Anzahl der Medienfamilien im Mediensatz.|  
+|**FamilyCount**|**int**|Anzahl der Medienfamilien im Mediensatz.|  
 |**FamilySequenceNumber**|**int**|Sequenznummer dieser Familie.|  
 |**MediaFamilyId**|**uniqueidentifier**|Eindeutige ID für die Medienfamilie.|  
 |**MediaSequenceNumber**|**int**|Sequenznummer dieses Mediums in der Medienfamilie.|  
-|**MediaLabelPresent**|**tinyint**|Gibt an, ob die Medienbeschreibung Folgendes enthält:<br /><br /> **1**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] medienbezeichnung von Tape Format<br /><br /> **0** = medienbeschreibung|  
+|**MediaLabelPresent**|**tinyint**|Gibt an, ob die Medienbeschreibung Folgendes enthält:<br /><br /> **1** = [!INCLUDE[msCoName](../../includes/msconame-md.md)] Medienbezeichnung von Tape Format<br /><br /> **0** = Medienbeschreibung|  
 |**MediaDescription**|**nvarchar(255)**|Medienbeschreibung als Text oder die Medienbezeichnung von Tape Format.|  
 |**SoftwareName**|**nvarchar(128)**|Name der Sicherungssoftware, die die Bezeichnung geschrieben hat.|  
 |**SoftwareVendorId**|**int**|Eindeutige ID des Softwareanbieters, der die Sicherung geschrieben hat.|  
 |**MediaDate**|**datetime**|Datum und Uhrzeit des Zeitpunkts, an dem die Bezeichnung geschrieben wurde.|  
-|**Mirror_Count**|**int**|Die Anzahl von Spiegeln in einem Spiegelsatz (1-4).<br /><br /> Hinweis: Die Bezeichnungen für verschiedene Spiegel in einem Satz geschrieben sind identisch.|  
-|**IsCompressed**|**bit**|Gibt an, ob die Sicherung komprimiert ist:<br /><br /> 0 = nicht komprimiert<br /><br /> 1 = komprimierte|  
+|**Mirror_Count**|**int**|Die Anzahl von Spiegeln in einem Spiegelsatz (1-4).<br /><br /> Hinweis: Für verschiedene Spiegel in einem Satz werden identische Bezeichnungen geschrieben.|  
+|**IsCompressed**|**bit**|Gibt an, ob die Sicherung komprimiert ist:<br /><br /> 0 = Nicht komprimiert<br /><br /> 1 = komprimiert|  
   
 > [!NOTE]  
 >  Wenn für den Mediensatz Kennwörter definiert sind, gibt RESTORE LABELONLY nur dann Informationen zurück, wenn im Befehl in der Option MEDIAPASSWORD das richtige Kennwort angegeben ist.  
@@ -105,16 +105,16 @@ FROM <backup_device>
 ## <a name="general-remarks"></a>Allgemeine Hinweise  
  Die Ausführung von RESTORE LABELONLY stellt eine schnelle Möglichkeit dar, den Inhalt des Sicherungsmediums herauszufinden. Da RESTORE LABELONLY nur den Medienheader liest, wird diese Anweisung schnell abgeschlossen, auch wenn Bandmedien mit hoher Kapazität verwendet werden.  
   
-## <a name="security"></a>Sicherheit  
- In einem Sicherungsvorgang können optional Kennwörter für einen Mediensatz angegeben werden. Wenn ein Kennwort für einen Mediensatz definiert wurde, müssen Sie in der RESTORE-Anweisung das richtige Kennwort angeben. Das Kennwort verhindert nicht autorisierte Wiederherstellungsoptionen und Unbefugtes Anfügen von Sicherungssätzen an Medien mit [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Tools. Mit einem Kennwort kann jedoch das Überschreiben eines Mediums mithilfe der Option FORMAT der BACKUP-Anweisung nicht verhindert werden.  
+## <a name="security"></a>Security  
+ In einem Sicherungsvorgang können optional Kennwörter für einen Mediensatz angegeben werden. Wenn ein Kennwort für einen Mediensatz definiert wurde, müssen Sie in der RESTORE-Anweisung das richtige Kennwort angeben. Das Kennwort verhindert nicht autorisierte Wiederherstellungsoptionen und unbefugtes Anfügen von Sicherungssätzen an Medien mithilfe der Tools von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Mit einem Kennwort kann jedoch das Überschreiben eines Mediums mithilfe der Option FORMAT der BACKUP-Anweisung nicht verhindert werden.  
   
 > [!IMPORTANT]  
->  Dieses Kennwort bietet also nur unzureichenden Schutz. Es soll vermeiden, dass autorisierte wie nicht autorisierte Benutzer mithilfe von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Tools fehlerhafte Wiederherstellungen durchführen. Es verhindert jedoch nicht das Lesen der Sicherungsdaten mit anderen Mitteln oder das Ersetzen des Kennworts. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Die bewährte Methode für den Schutz von Sicherungen werden verwahren von Sicherungsbändern an einem sicheren Ort oder Sichern in Datenträgerdateien, die durch ausreichend Zugriffssteuerungslisten (ACLs) geschützt sind. Die ACLs sollten für den Verzeichnisstamm eingerichtet werden, unter dem die Sicherungen erstellt werden.  
+>  Dieses Kennwort bietet also nur unzureichenden Schutz. Es soll vermeiden, dass autorisierte wie nicht autorisierte Benutzer mithilfe von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Tools fehlerhafte Wiederherstellungen durchführen. Es verhindert jedoch nicht das Lesen der Sicherungsdaten mit anderen Mitteln oder das Ersetzen des Kennworts. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Eine bewährte Methode für den Schutz von Sicherungen ist das Verwahren von Sicherungsbändern an einem sicheren Ort oder das Sichern in Datenträgerdateien, die durch eine adäquate Zugriffssteuerungsliste (ACL, Access Control List) geschützt sind. Die ACLs sollten für den Verzeichnisstamm eingerichtet werden, unter dem die Sicherungen erstellt werden.  
   
 ### <a name="permissions"></a>Berechtigungen  
  In [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höheren Versionen benötigen Sie die CREATE DATABASE-Berechtigung, um Informationen zu Sicherungssätzen oder Sicherungsmedien abzurufen. Weitere Informationen finden Sie unter [GRANT (Datenbankberechtigungen) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-database-permissions-transact-sql.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [Mediensätze, Medienfamilien und Sicherungssätze &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)   
  [RESTORE REWINDONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md)   

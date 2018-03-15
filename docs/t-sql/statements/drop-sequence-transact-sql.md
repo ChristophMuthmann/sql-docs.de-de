@@ -1,5 +1,5 @@
 ---
-title: DROP SEQUENCE (Transact-SQL) | Microsoft Docs
+title: DROP SEQUENCE (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 05/11/2017
 ms.prod: sql-non-specified
@@ -47,10 +47,10 @@ DROP SEQUENCE [ IF EXISTS ] { [ database_name . [ schema_name ] . | schema_name.
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *IF VORHANDEN IST*  
+ *IF EXISTS*  
  **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis zur [aktuellen Version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   
- Bedingt löscht die Sequenz nur, wenn sie bereits vorhanden ist.  
+ Löscht die Sequenz nur, wenn diese bereits vorhanden ist.  
   
  *database_name*  
  Der Name der Datenbank, in der das Sequenzobjekt erstellt wurde.  
@@ -59,9 +59,9 @@ DROP SEQUENCE [ IF EXISTS ] { [ database_name . [ schema_name ] . | schema_name.
  Der Name des Schemas, zu dem das Sequenzobjekt gehört.  
   
  *sequence_name*  
- Der Name der Sequenz, die gelöscht werden soll. Der Typ ist **Sysname**.  
+ Der Name der Sequenz, die gelöscht werden soll. Der Typ ist **sysname**.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Sequenzobjekte weisen keine andauernde Beziehung zur generierten Zahl auf. Daher können Sequenzobjekte gelöscht werden, auch wenn die generierte Zahl noch verwendet wird.  
   
  Ein Sequenzobjekt kann gelöscht werden, während eine gespeicherte Prozedur oder ein Trigger darauf verweisen, da es nicht schemagebunden ist. Ein Sequenzobjekt kann nicht gelöscht werden, wenn als Standardwert in einer Tabelle darauf verwiesen wird. Das Objekt, das auf die Sequenz verweist, ist in der Fehlermeldung aufgeführt.  
@@ -76,13 +76,13 @@ SELECT sch.name + '.' + seq.name AS [Sequence schema and name]
 GO  
 ```  
   
-## <a name="security"></a>Sicherheit  
+## <a name="security"></a>Security  
   
 ### <a name="permissions"></a>Berechtigungen  
  Erfordert die ALTER- oder CONTROL-Berechtigung für das Schema.  
   
-### <a name="audit"></a>Überwachung  
- Überwachen der **DROP SEQUENCE**, Überwachen der **SCHEMA_OBJECT_CHANGE_GROUP**.  
+### <a name="audit"></a>Überwachen von  
+ Überwachen Sie **SCHEMA_OBJECT_CHANGE_GROUP**, um **DROP SEQUENCE** zu überwachen.  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird das Sequenzobjekt `CountBy1` aus der aktuellen Datenbank entfernt.  
@@ -92,10 +92,10 @@ DROP SEQUENCE CountBy1 ;
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [ALTER SEQUENCE &#40; Transact-SQL &#41;](../../t-sql/statements/alter-sequence-transact-sql.md)   
- [Erstellen Sie SEQUENCE &#40; Transact-SQL &#41;](../../t-sql/statements/create-sequence-transact-sql.md)   
- [NÄCHSTEN Wert für &#40; Transact-SQL &#41;](../../t-sql/functions/next-value-for-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [ALTER SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-sequence-transact-sql.md)   
+ [CREATE SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-sequence-transact-sql.md)   
+ [NEXT VALUE FOR &#40;Transact-SQL&#41;](../../t-sql/functions/next-value-for-transact-sql.md)   
  [Sequenznummern](../../relational-databases/sequence-numbers/sequence-numbers.md)  
   
   

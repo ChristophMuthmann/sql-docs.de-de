@@ -1,5 +1,5 @@
 ---
-title: SET IDENTITY_INSERT (Transact-SQL) | Microsoft Docs
+title: SET IDENTITY_INSERT (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -60,7 +60,7 @@ SET IDENTITY_INSERT [ database_name . [ schema_name ] . ] table { ON | OFF }
  *table*  
  Name einer Tabelle mit einer Identitätsspalte.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Die IDENTITY_INSERT-Eigenschaft kann in einer Sitzung zu jedem Zeitpunkt nur für eine einzige Tabelle auf ON festgelegt sein. Wenn diese Eigenschaft bereits für eine Tabelle auf ON festgelegt ist und eine SET IDENTITY_INSERT ON-Anweisung für eine andere Tabelle ausgegeben wird, gibt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eine Fehlermeldung zurück, die besagt, dass SET IDENTITY_INSERT bereits den Wert ON hat, und die angibt, für welche Tabelle der Wert ON festgelegt ist.  
   
  Wenn der eingefügte Wert größer als der aktuelle Identitätswert für die Tabelle ist, verwendet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] automatisch den neu eingefügten Wert als aktuellen Identitätswert.  
@@ -119,7 +119,7 @@ DROP TABLE dbo.Tool;
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [IDENTITY &#40;Eigenschaft&#41; &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql-identity-property.md)   
  [SCOPE_IDENTITY &#40;Transact-SQL&#41;](../../t-sql/functions/scope-identity-transact-sql.md)   

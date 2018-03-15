@@ -1,5 +1,5 @@
 ---
-title: "RESTORE-Anweisungen für wiederherstellen, wiederherstellen und Verwalten von Sicherungen (T-SQL) | Microsoft Docs"
+title: "RESTORE-Anweisungen für das Wiederherstellen und Verwalten von Sicherungen (T-SQL) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
@@ -55,7 +55,7 @@ ms.lasthandoff: 01/25/2018
 |[RESTORE REWINDONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md)|Beschreibt die Transact-SQL-Anweisung RESTORE REWINDONLY, mit deren Hilfe Bandmedien, die nach dem Ausführen der Anweisungen BACKUP oder RESTORE mit der NOREWIND-Option geöffnet blieben, zurückgespult und geschlossen werden.|  
 |[RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)|Beschreibt die Transact-SQL-Anweisung RESTORE VERIFYONLY, mit deren Hilfe die Sicherung überprüft, aber nicht wiederhergestellt wird. Außerdem wird überprüft, ob der Sicherungssatz vollständig ist und die gesamte Sicherung gelesen werden kann. Diese Anweisung versucht nicht, die Struktur der Daten zu überprüfen.|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Sichern und Wiederherstellen von SQL Server-Datenbanken](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)  
   
   

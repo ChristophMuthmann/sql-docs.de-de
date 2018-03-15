@@ -1,5 +1,5 @@
 ---
-title: CHAR (Transact-SQL) | Microsoft Docs
+title: CHAR (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -43,7 +43,7 @@ ms.lasthandoff: 01/18/2018
 # <a name="char-transact-sql"></a>CHAR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Konvertiert eine **Int** ASCII-Code in ein Zeichen.
+Wandelt einen **int**-ASCII-Code in ein Zeichen um.
   
 ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -55,15 +55,15 @@ CHAR ( integer_expression )
   
 ## <a name="arguments"></a>Argumente  
 *integer_expression*  
-Eine ganze Zahl zwischen 0 und 255. `NULL`wird zurückgegeben, wenn der ganzzahlige Ausdruck nicht in diesem Bereich ist.
+Eine ganze Zahl zwischen 0 und 255. `NULL` wird zurückgegeben, wenn der Integerausdruck außerhalb dieses Bereichs liegt.
   
 ## <a name="return-types"></a>Rückgabetypen
 **char(1)**
   
-## <a name="remarks"></a>Hinweise  
-`CHAR`kann verwendet werden, um die Steuerzeichen in Zeichenfolgen eingefügt. In der folgenden Tabelle finden Sie einige häufig verwendete Steuerzeichen.
+## <a name="remarks"></a>Remarks  
+Mit `CHAR` können Steuerzeichen in Zeichenfolgen eingefügt werden. In der folgenden Tabelle finden Sie einige häufig verwendete Steuerzeichen.
   
-|Steuerzeichen|Wert|  
+|Steuerzeichen|value|  
 |---|---|
 |Registerkarte|**char(9)**|  
 |Zeilenvorschub|**char(10)**|  
@@ -132,10 +132,10 @@ ken0@adventure-works.com
 (1 row(s) affected)
 ```
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
 ### <a name="c-using-ascii-and-char-to-print-ascii-values-from-a-string"></a>C. Verwenden von ASCII und CHAR, um die ASCII-Werte einer Zeichenfolge auszugeben  
-Im folgende Beispiel wird angenommen, ein ASCII-Zeichen festgelegt und gibt den Zeichenwert für 6 Ziffern von ASCII-Zeichen.
+Im folgenden Beispiel, in dem von einem ASCII-Zeichensatz ausgegangen wird, wird der Zeichenwert für sechs ASCII-Zeichennummern zurückgegeben.
   
 ```sql
 SELECT CHAR(65) AS [65], CHAR(66) AS [66],   
@@ -152,7 +152,7 @@ A    B    a    b    1    2
 ```
   
 ### <a name="d-using-char-to-insert-a-control-character"></a>D. Verwenden von CHAR, um ein Steuerzeichen einzufügen  
-Im folgenden Beispiel wird `CHAR(13)` Informationen zu den Datenbanken in separaten Zeilen zurückgegeben, wenn die Ergebnisse in Text zurückgegeben werden.
+Im folgenden Beispiel wird `CHAR(13)` verwendet, um Informationen zu den Datenbanken auf unterschiedlichen Zeilen zurückzugeben, wenn die Ergebnisse in Textform zurückgegeben werden.
   
 ```sql
 SELECT name, 'was created on ', create_date, CHAR(13), name, 'is currently ', state_desc   
@@ -177,8 +177,8 @@ AdventureWorksPDW2012    is currently  ONLINE
  [ASCII &#40;Transact-SQL&#41;](../../t-sql/functions/ascii-transact-sql.md)  
  [NCHAR &#40;Transact-SQL&#41;](../../t-sql/functions/nchar-transact-sql.md)  
  [UNICODE &#40;Transact-SQL&#41;](../../t-sql/functions/unicode-transact-sql.md)  
- [+ &#40; Verketten von Zeichenfolgen &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/string-concatenation-transact-sql.md)  
- [Zeichenfolgenfunktionen &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)
+ [+ &#40;String Concatenation&#41; &#40;Transact-SQL&#41; (+ (Verketten von Zeichenfolgen) (Transact-SQL))](../../t-sql/language-elements/string-concatenation-transact-sql.md)  
+ [String Functions &#40;Transact-SQL&#41; (Zeichenfolgenfunktionen (Transact-SQL))](../../t-sql/functions/string-functions-transact-sql.md)
   
   
 

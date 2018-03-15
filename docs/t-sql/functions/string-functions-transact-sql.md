@@ -1,5 +1,5 @@
 ---
-title: Zeichenfolgenfunktionen (Transact-SQL) | Microsoft Docs
+title: Zeichenfolgenfunktionen (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 08/15/2016
 ms.prod: sql-non-specified
@@ -52,11 +52,11 @@ ms.lasthandoff: 11/21/2017
 
 
   
- Alle integrierten Zeichenfolgenfunktionen außer `FORMAT` sind deterministisch. Das bedeutet, dass sie stets denselben Wert zurückgeben, wenn sie mit bestimmten Eingabewerten aufgerufen werden. Weitere Informationen zum Funktionsdeterminismus finden Sie unter [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).  
+ Alle integrierten Zeichenfolgenfunktionen außer `FORMAT` sind deterministisch. Das bedeutet, dass sie stets denselben Wert zurückgeben, wenn sie mit bestimmten Eingabewerten aufgerufen werden. Weitere Informationen zu Funktionsdeterminismus finden Sie unter [Deterministische und nicht deterministische Funktionen](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).  
   
- Wenn an Zeichenfolgenfunktionen Argumente übergeben werden, die keine Zeichenfolgenwerte sind, wird der Eingabetyp implizit in einen Textdatentyp konvertiert. Weitere Informationen finden Sie unter [Datentypkonvertierung &#40; Datenbankmodul &#41;](../../t-sql/data-types/data-type-conversion-database-engine.md).  
+ Wenn an Zeichenfolgenfunktionen Argumente übergeben werden, die keine Zeichenfolgenwerte sind, wird der Eingabetyp implizit in einen Textdatentyp konvertiert. Weitere Informationen finden Sie unter [Datentypkonvertierung &#40;Datenbank-Engine&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Integrierte Funktionen &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)  
   
   

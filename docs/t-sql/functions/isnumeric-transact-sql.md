@@ -1,5 +1,5 @@
 ---
-title: ISNUMERIC (Transact-SQL) | Microsoft Docs
+title: ISNUMERIC (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
@@ -51,12 +51,12 @@ ISNUMERIC ( expression )
   
 ## <a name="arguments"></a>Argumente  
  *expression*  
- Ist die [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) ausgewertet werden soll.  
+ Stellt den auszuwertenden [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) dar.  
   
 ## <a name="return-types"></a>Rückgabetypen  
  **int**  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  ISNUMERIC gibt 1 zurück, wenn der Eingabeausdruck zu einem gültigen numerischen Datentyp ausgewertet wird; andernfalls wird 0 zurückgegeben. Beispiele für gültige numerische Datentypen:  
   
 |||  
@@ -68,7 +68,7 @@ ISNUMERIC ( expression )
 |**decimal**|**real**|  
   
 > [!NOTE]  
->  ISNUMERIC gibt für einige Zeichen, die keine Zahlen darstellen, 1 zurück, beispielsweise für Plus (+), Minus (-) und für die gültigen Währungssymbole, z. B. das Dollarzeichen ($). Eine vollständige Liste der Währungssymbole finden Sie unter [Money und Smallmoney &#40; Transact-SQL &#41; ](../../t-sql/data-types/money-and-smallmoney-transact-sql.md).  
+>  ISNUMERIC gibt für einige Zeichen, die keine Zahlen darstellen, 1 zurück, beispielsweise für Plus (+), Minus (-) und für die gültigen Währungssymbole, z. B. das Dollarzeichen ($). Eine vollständige Liste der Währungssymbole finden Sie unter [money und smallmoney &#40;Transact-SQL&#41;](../../t-sql/data-types/money-and-smallmoney-transact-sql.md).  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel werden mit `ISNUMERIC` alle Postleitzahlen zurückgegeben, die keine numerischen Werte sind.  
@@ -82,7 +82,7 @@ WHERE ISNUMERIC(PostalCode)<> 1;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
  Im folgenden Beispiel werden mit `ISNUMERIC` alle Postleitzahlen zurückgegeben, die keine numerischen Werte sind.  
   
 ```  
@@ -93,8 +93,8 @@ FROM sys.databases;
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Ausdrücke &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Ausdrücke &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [Systemfunktionen &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)   
  [Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
   

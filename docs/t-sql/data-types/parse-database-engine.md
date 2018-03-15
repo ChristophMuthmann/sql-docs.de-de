@@ -1,5 +1,5 @@
 ---
-title: Parse (Datenbankmodul) | Microsoft Docs
+title: Parse (Datenbank-Engine) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 7/22/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="parse-database-engine"></a>Parse (Datenbankmodul)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-Parse konvertiert die kanonische Zeichenfolgendarstellung einer **Hierarchyid** zu einem **Hierarchyid** Wert. Analyse wird implizit aufgerufen, wenn eine Konvertierung von einem Zeichenfolgentyp in **Hierarchyid** auftritt. Dient als Gegenstück des [ToString](../../t-sql/data-types/tostring-database-engine.md). Parse() ist eine statische Methode.
+Parse konvertiert die kanonische Zeichenfolgendarstellung einer **hierarchyid** in einen **hierarchyid**-Wert. Parse wird implizit aufgerufen, wenn eine Konvertierung von einem Zeichenfolgentyp in einen **hierarchyid**-Typ stattfindet. Dient als Gegenstück zu [ToString](../../t-sql/data-types/tostring-database-engine.md). Parse() ist eine statische Methode.
   
 ## <a name="syntax"></a>Syntax  
   
@@ -52,23 +52,23 @@ static SqlHierarchyId Parse ( SqlString input )
 ```  
   
 ## <a name="arguments"></a>Argumente  
-*Eingabe*  
+*input*  
 [!INCLUDE[tsql](../../includes/tsql-md.md)]: Der Wert des Zeichendatentyps, der konvertiert wird.
   
 CLR: Der Zeichenfolgenwert, der ausgewertet wird.
   
 ## <a name="return-types"></a>Rückgabetypen  
-**SQL Server-Typ: Hierarchyid zurück**
+**SQL Server-Rückgabetyp: hierarchyid**
   
-**CLR-Typ: SqlHierarchyId zurück**
+**CLR-Rückgabetyp: SqlHierarchyId**
   
-## <a name="remarks"></a>Hinweise  
-Wenn die Analyse einen Wert empfängt, die nicht auf eine gültige Darstellung der Zeichenfolge ist ein **Hierarchyid**, wird eine Ausnahme ausgelöst. Z. B. wenn **Char** -Datentypen nachfolgende Leerzeichen enthalten, wird eine Ausnahme ausgelöst.
+## <a name="remarks"></a>Remarks  
+Wenn Parse einen Wert erhält, der keine gültige Zeichenfolgendarstellung einer **hierarchyid** ist, wird eine Ausnahme ausgelöst. Wenn beispielsweise **char**-Datentypen nachfolgende Leerzeichen enthalten, wird eine Ausnahme ausgelöst.
   
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="a-converting-transact-sql-values-without-a-table"></a>A. Konvertieren von Transact-SQL-Werten ohne Tabelle  
-Im folgenden Codebeispiel wird mit `ToString` Konvertieren einer **Hierarchyid** Wert in eine Zeichenfolge und `Parse` zum Umwandeln eines Zeichenfolgenwertes in einen **Hierarchyid**.
+Im folgenden Codebeispiel wird mithilfe von `ToString` ein **hierarchyid**-Wert in eine Zeichenfolge und mithilfe von `Parse` ein Zeichenfolgenwert in eine **hierarchyid** konvertiert.
   
 ```sql
 DECLARE @StringValue AS nvarchar(4000), @hierarchyidValue AS hierarchyid  
@@ -89,7 +89,7 @@ hierarchyidRepresentation    StringRepresentation
 ```
   
 ### <a name="b-clr-example"></a>B. CLR-Beispiel  
-Der folgende Codeausschnitt Ruft die Parse()-Methode:
+Im folgenden Codeausschnitt wird die Parse()-Methode aufgerufen:
   
 ```sql
 string input = “/1/2/”;  

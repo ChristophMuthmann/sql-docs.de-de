@@ -1,5 +1,5 @@
 ---
-title: COL_LENGTH (Transact-SQL) | Microsoft Docs
+title: COL_LENGTH (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -48,11 +48,11 @@ COL_LENGTH ( 'table' , 'column' )
 ```  
   
 ## <a name="arguments"></a>Argumente  
-**"** *Tabelle* **"**  
-Der Name der Tabelle, für die Spaltenlängeninformationen bestimmt werden sollen. *Tabelle* ist ein Ausdruck vom Typ **Nvarchar**.
+**'** *table* **'**  
+Der Name der Tabelle, für die Spaltenlängeninformationen bestimmt werden sollen. *table*: Ein Ausdruck vom Typ **nvarchar**.
   
-**"** *Spalte* **"**  
-Der Name der Spalte, für die Spaltenlängeninformationen bestimmt werden sollen. *Spalte* ist ein Ausdruck vom Typ **Nvarchar**.
+**'** *column* **'**  
+Der Name der Spalte, für die Spaltenlängeninformationen bestimmt werden sollen. *column*: Ein Ausdruck vom Typ **nvarchar**.
   
 ## <a name="return-type"></a>Rückgabetyp
 **smallint**
@@ -62,8 +62,8 @@ Gibt NULL bei einem Fehler zurück oder wenn ein Aufrufer nicht über Berechtigu
   
 In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann ein Benutzer nur die Metadaten sicherungsfähiger Elemente anzeigen, bei denen der Benutzer entweder der Besitzer ist oder für die dem Benutzer eine Berechtigung erteilt wurde. Dies bedeutet, dass Metadaten ausgebende integrierte Funktionen, z. B. COL_LENGTH, möglicherweise NULL zurückgeben, wenn dem Benutzer für das Objekt keine Berechtigung erteilt wurde. Weitere Informationen finden Sie unter [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).
   
-## <a name="remarks"></a>Hinweise  
-Für Spalten vom Typ **Varchar** deklariert, mit der **max** Spezifizierer (**varchar(max)**), COL_LENGTH gibt den Wert – 1 zurück.
+## <a name="remarks"></a>Remarks  
+Für Spalten vom Typ **varchar**, die mit dem Bezeichner **max** deklariert wurden (**varchar(max)**), gibt COL_LENGTH den Wert –1 zurück.
   
 ## <a name="examples"></a>Beispiele  
 Das folgende Beispiel zeigt die Rückgabewerte für eine Spalte vom Typ `varchar(40)` und eine Spalte vom Typ `nvarchar(40)`.
@@ -88,8 +88,8 @@ VarChar     NVarChar
   
 ## <a name="see-also"></a>Siehe auch
 [Ausdrücke &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)  
-[Metadatenfunktionen &#40; Transact-SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)  
-[COL_NAME &#40; Transact-SQL &#41;](../../t-sql/functions/col-name-transact-sql.md)  
+[Metadata Functions &#40;Transact-SQL&#41; (Metadatenfunktionen (Transact-SQL))](../../t-sql/functions/metadata-functions-transact-sql.md)  
+[COL_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/col-name-transact-sql.md)  
 [COLUMNPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/columnproperty-transact-sql.md)
   
   

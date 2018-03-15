@@ -1,5 +1,5 @@
 ---
-title: "Löschen von EXTERNEN Bibliothek (Transact-SQL) | Microsoft Docs"
+title: DROP EXTERNAL LIBRARY (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 08/17/2017
 ms.prod: sql-non-specified
@@ -27,10 +27,10 @@ ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="drop-external-library-transact-sql"></a>Löschen von EXTERNEN Bibliothek (Transact-SQL)  
+# <a name="drop-external-library-transact-sql"></a>DROP EXTERNAL LIBRARY (Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
-Löscht eine vorhandenes Paket-Bibliothek.
+Löscht eine vorhandene Paketbibliothek.
 
 ## <a name="syntax"></a>Syntax  
 
@@ -43,34 +43,34 @@ DROP EXTERNAL LIBRARY library_name
 
 **library_name**
 
-Gibt den Namen einer vorhandenen Paket-Bibliothek.
+Gibt den Namen einer vorhandenen Paketbibliothek an.
 
-Bibliotheken beziehen sich auf den Benutzer. D. h. gelten Bibliotheksnamen innerhalb des Kontexts eines bestimmten Benutzers oder Besitzer eindeutig.
+Bibliotheken umfassen nur den Benutzer. D.h., Bibliotheksnamen gelten innerhalb des Kontexts eines bestimmten Benutzers oder Besitzers als eindeutig.
 
 **owner_name**
 
-Gibt den Namen des Benutzers oder der Rolle, der die externe Bibliothek besitzt.
+Gibt den Namen eines Benutzers oder einer Rolle an, der oder die die externe Bibliothek besitzt.
 
-Datenbankbesitzer können Bibliotheken, die von anderen Benutzern erstellt löschen.
+Datenbankbesitzer können Bibliotheken löschen, die von anderen Benutzern erstellt wurden.
 
 ### <a name="return-values"></a>Rückgabewerte
 
-Eine informative Meldung wird zurückgegeben, wenn die Anweisung erfolgreich war.
+Eine Informationsmeldung wird zurückgegeben, wenn die Anweisung erfolgreich war.
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Remarks
 
-Im Gegensatz zu anderen `DROP` Anweisungen in SQL Server, die diese Anweisung unterstützt eine optionale Authorization-Klausel angegeben. Dadurch können **Dbo** oder Benutzer in der **Db_owner** Rolle So löschen Sie eine Paket-Bibliothek hochgeladen werden, durch ein normaler Benutzer in der Datenbank.
+Im Gegensatz zu anderen `DROP`-Anweisungen in SQL Server unterstützt diese Anweisung das Angeben einer optionalen Autorisierungsklausel. Dies ermöglicht einem **dbo** oder Benutzer mit der Rolle **db_owner**, eine Paketbibliothek zu löschen, die von einem normalen Benutzer in die Datenbank hochgeladen wurde.
 
 ## <a name="examples"></a>Beispiele
 
-Fügen Sie ein benutzerdefiniertes R-Paket, mit dem Namen `customPackage`, in einer Datenbank:
+Hinzufügen eines benutzerdefinierten R-Pakets namens `customPackage` in eine Datenbank:
 
 ```sql
 CREATE EXTERNAL LIBRARY customPackage 
 FROM 'C:\Users\Username\CustomPackages\customPackage.zip';
 ```
 
-Löschen der `customPackage` Bibliothek.
+Löschen der `customPackage`-Bibliothek:
 
 ```sql
 DROP EXTERNAL LIBRARY customPackage <user_name>;

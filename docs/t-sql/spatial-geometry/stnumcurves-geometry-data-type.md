@@ -1,5 +1,5 @@
 ---
-title: STNumCurves (Geometry-Datentyp) | Microsoft Docs
+title: STNumCurves (geometry-Datentyp) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -31,7 +31,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stnumcurves-geometry-data-type"></a>STNumCurves (geometry-Datentyp)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Mit dieser Methode wird die Anzahl der Kurven in einer Instanz von **geometry** zurückgegeben, wenn es sich dabei um einen eindimensionalen räumlichen Datentyp handelt. Eindimensionale räumliche Datentypen schließen **LineString**, **CircularString**und **CompoundCurve**ein. `STNumCurves`() funktioniert nur für einfache Typen. Es funktioniert nicht mit **Geometrie** -Auflistungen wie **MultiLineString**.
+Mit dieser Methode wird die Anzahl der Kurven in einer Instanz von **geometry** zurückgegeben, wenn es sich dabei um einen eindimensionalen räumlichen Datentyp handelt. Eindimensionale räumliche Datentypen schließen **LineString**, **CircularString**und **CompoundCurve**ein. `STNumCurves`() funktioniert nur mit einfachen Typen; **geometry**-Collections wie **MultiLineString** gehören nicht dazu.
   
 ## <a name="syntax"></a>Syntax  
   
@@ -41,11 +41,11 @@ Mit dieser Methode wird die Anzahl der Kurven in einer Instanz von **geometry** 
 ```  
   
 ## <a name="return-types"></a>Rückgabetypen  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Rückgabetyp: **Geometrie**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Rückgabetyp: **geometry**  
   
  CLR-Rückgabetyp: **SqlGeometry**  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Eine leere eindimensionale Instanz von **geometry** gibt 0 zurück. **NULL** wird zurückgegeben, wenn die **geometry** -Instanz keine eindimensionale oder eine nicht initialisierte Instanz ist.  
   
 ## <a name="examples"></a>Beispiele  
@@ -68,7 +68,7 @@ Mit dieser Methode wird die Anzahl der Kurven in einer Instanz von **geometry** 
  SELECT @g.STNumCurves();
  ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Übersicht über räumliche Datentypen](../../relational-databases/spatial/spatial-data-types-overview.md)   
  [OGC-Methoden für geometry-Instanzen](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   

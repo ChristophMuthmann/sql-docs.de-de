@@ -1,5 +1,5 @@
 ---
-title: CLOSE MASTER KEY (Transact-SQL) | Microsoft Docs
+title: CLOSE MASTER KEY (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 05/15/2017
 ms.prod: sql-non-specified
@@ -51,7 +51,7 @@ CLOSE MASTER KEY
 ## <a name="arguments"></a>Argumente  
  Besitzt keine Argumente.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Diese Anweisung kehrt den von OPEN MASTER KEY ausgeführten Vorgang um. CLOSE MASTER KEY wird nur erfolgreich ausgeführt, wenn der Datenbank-Hauptschlüssel mit der OPEN MASTER KEY-Anweisung in der aktuellen Sitzung geöffnet wurde.  
   
 ## <a name="permissions"></a>Berechtigungen  
@@ -65,7 +65,7 @@ CLOSE MASTER KEY;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
 ```  
 USE master;  
@@ -75,9 +75,9 @@ CLOSE MASTER KEY;
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [CREATE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-master-key-transact-sql.md)   
- [Öffnen Sie MASTER KEY &#40; Transact-SQL &#41;](../../t-sql/statements/open-master-key-transact-sql.md)   
+ [OPEN MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/open-master-key-transact-sql.md)   
  [Verschlüsselungshierarchie](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   
   

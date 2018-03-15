@@ -1,5 +1,5 @@
 ---
-title: ALTER PROCEDURE (Transact-SQL) | Microsoft Docs
+title: ALTER PROCEDURE (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 05/01/2017
 ms.prod: sql-non-specified
@@ -41,7 +41,7 @@ ms.lasthandoff: 01/02/2018
 
   Ändert eine zuvor durch Ausführen der CREATE PROCEDURE-Anweisung erstellte Prozedur in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Thema Linksymbol") [Transact-SQL-Syntaxkonventionen (Transact-SQL)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol zum Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL-Syntaxkonventionen (Transact-SQL)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -89,48 +89,48 @@ AS { [ BEGIN ] sql_statement [ ; ] [ ,...n ] [ END ] }
  Der Name des Schemas, zu dem die Prozedur gehört.  
   
  *procedure_name*  
- Der Name der Prozedur zu ändern. Prozedurnamen müssen den Regeln für [Bezeichner](../../relational-databases/databases/database-identifiers.md)entsprechen.  
+ Der Name der zu ändernden Prozedur. Prozedurnamen müssen den Regeln für [Bezeichner](../../relational-databases/databases/database-identifiers.md)entsprechen.  
   
- **;**  *Anzahl*  
- Eine vorhandene optionale ganze Zahl ist, die zum Gruppieren von Prozeduren mit dem gleichen Namen verwendet, sodass sie zusammen mit einer DROP PROCEDURE-Anweisung gelöscht werden können.  
+ **;** *number*  
+ Ein vorhandener, optionaler Integer, der zum Gruppieren von Prozeduren mit dem gleichen Namen verwendet wird, damit diese mit einer einzigen DROP PROCEDURE-Anweisung gelöscht werden können.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
- **@***Parameter*  
+ **@** *parameter*  
  Ein Parameter in der Prozedur. Es können bis zu 2.100 Parameter angegeben werden.  
   
- [ *Type_schema_name***.** ] *Data_type*  
+ [ *type_schema_name***.** ] *data_type*  
  Der Datentyp des Parameters und des Schemas, zu dem dieser gehört.  
   
- Informationen zu datentypeinschränkungen finden Sie unter [CREATE PROCEDURE &#40; Transact-SQL &#41; ](../../t-sql/statements/create-procedure-transact-sql.md).  
+ Informationen zu Datentypeinschränkungen finden Sie unter [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md).  
   
  VARYING  
  Gibt das als Ausgabeparameter unterstützte Resultset an. Dieser Parameter wird durch die gespeicherte Prozedur dynamisch erstellt, und sein Inhalt kann variieren. Gilt nur für cursor-Parameter. Diese Option ist für CLR-Prozeduren nicht gültig.  
   
- *Standardwert*  
+ *default*  
  Ein Standardwert für den Parameter.  
   
  OUT | OUTPUT  
  Zeigt an, dass es sich bei dem Parameter um einen Rückgabeparameter handelt.  
   
  READONLY  
- Gibt an, dass der Parameter darf nicht aktualisiert oder innerhalb der Textkörper der Prozedur geändert. Wenn der Parametertyp ein Tabellenwerttyp ist, muss READONLY angegeben werden.  
+ Gibt an, dass der Parameter nicht aktualisiert oder innerhalb des Texts der Prozedur geändert werden kann. Wenn der Parametertyp ein Tabellenwerttyp ist, muss READONLY angegeben werden.  
   
  RECOMPILE  
  Zeigt an, dass [!INCLUDE[ssDE](../../includes/ssde-md.md)] den Plan für diese Prozedur nicht zwischenspeichert und die Prozedur zur Laufzeit neu kompiliert wird.  
   
  ENCRYPTION  
- **Gilt für**: SQLServer ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) und [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)].  
+ **Gilt für:** SQL Server ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) und [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)].  
   
- Gibt an, dass [!INCLUDE[ssDE](../../includes/ssde-md.md)] den Originaltext der ALTER PROCEDURE-Anweisung in ein verborgenes Format umwandelt. Die Ausgabe der Verbergung ist nicht direkt in den Katalogsichten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sichtbar. Benutzer, die keinen Zugriff auf Systemtabellen oder Datenbankdateien haben, können den verborgenen Text nicht abrufen. Jedoch der Text stehen berechtigten Benutzern, die entweder Systemtabellen, über zugreifen können die [DAC-Port](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md) oder direkt auf die Datenbankdateien zugreifen. Des Weiteren können Benutzer, die einen Debugger an den Serverprozess anfügen können, die Originalprozedur zur Laufzeit vom Arbeitsspeicher abrufen. Weitere Informationen zum Zugreifen auf Systemmetadaten finden Sie unter [die Konfiguration der Metadatensichtbarkeit](../../relational-databases/security/metadata-visibility-configuration.md).  
+ Gibt an, dass [!INCLUDE[ssDE](../../includes/ssde-md.md)] den Originaltext der ALTER PROCEDURE-Anweisung in ein verborgenes Format umwandelt. Die Ausgabe der Verbergung ist nicht direkt in den Katalogsichten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sichtbar. Benutzer, die keinen Zugriff auf Systemtabellen oder Datenbankdateien haben, können den verborgenen Text nicht abrufen. Der Text ist jedoch für berechtigte Benutzer verfügbar, die entweder auf die Systemtabellen über den [DAC-Port](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md) oder direkt auf die Datenbankdateien zugreifen. Des Weiteren können Benutzer, die einen Debugger an den Serverprozess anfügen können, die Originalprozedur zur Laufzeit vom Arbeitsspeicher abrufen. Weitere Informationen zu Berechtigungen zum Zugreifen auf Systemmetadaten finden Sie unter [Konfigurieren der Sichtbarkeit von Metadaten](../../relational-databases/security/metadata-visibility-configuration.md).  
   
  Prozeduren, die mit dieser Option erstellt wurden, können nicht als Teil der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Replikation veröffentlicht werden.  
   
  Die Option kann nicht für CLR-gespeicherte Prozeduren (Common Language Runtime) angegeben werden.  
   
 > [!NOTE]  
->  Während eines Upgrades der [!INCLUDE[ssDE](../../includes/ssde-md.md)] verwendet die verborgenen Kommentare, die in gespeicherten **sql_modules** Prozeduren neu zu erstellen.  
+>  Während eines Upgrades verwendet [!INCLUDE[ssDE](../../includes/ssde-md.md)] die verschleierten Kommentare, die in **sys.sql_modules** gespeichert sind, um Prozeduren neu zu erstellen.  
   
  EXECUTE AS  
  Gibt den Sicherheitskontext an, unter dem die gespeicherte Prozedur ausgeführt wird, nachdem auf sie zugegriffen wurde.  
@@ -145,15 +145,15 @@ AS { [ BEGIN ] sql_statement [ ; ] [ ,...n ] [ END ] }
 > [!NOTE]  
 >  Diese Option ist in einer enthaltenen Datenbank nicht verfügbar.  
   
- {[BEGIN] *Sql_statement* [;] [ ...  *n*  ] [END]}  
- Eine oder mehrere [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen, die den Textkörper der Prozedur umfassen. Sie können die optionalen BEGIN- und END-Schlüsselwörter zum Einschließen der Anweisungen verwenden. Weitere Informationen finden Sie in den Abschnitten bewährte Methoden, allgemeinen hinweisen und Einschränkungen in [CREATE PROCEDURE &#40; Transact-SQL &#41; ](../../t-sql/statements/create-procedure-transact-sql.md).  
+ { [ BEGIN ] *sql_statement* [;] [ ...*n* ] [ END ] }  
+ Eine oder mehrere [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen, die den Textkörper der Prozedur umfassen. Sie können die optionalen BEGIN- und END-Schlüsselwörter zum Einschließen der Anweisungen verwenden. Weitere Informationen hierzu erhalten Sie in den folgenden Abschnitten zu bewährten Methoden, allgemeinen Hinweisen und Einschränkungen in [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md).  
   
- EXTERNAL NAME *Assembly_name***.** *Class_name***.** *keine Variablenargumentlisten verwenden*  
+ EXTERNAL NAME *assembly_name***.***class_name***.***method_name*  
  **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Gibt die Methode eine [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Assembly für eine CLR-gespeicherte Prozedur zu verweisen. *CLASS_NAME* muss ein gültiger [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Bezeichner und als Klasse in der Assembly vorhanden sein. Wenn die Klasse hat ein Namespace qualifizierten Namen ein Punkt verwendet (**.**) um die einzelnen Bestandteile des Namespace voneinander zu trennen, muss der Klassenname durch eckige Klammern begrenzt werden (**[]**) oder Anführungszeichen (**""**). Bei der angegebenen Methode muss es sich um eine statische Methode der Klasse handeln.  
+ Gibt für eine gespeicherte CLR-Prozedur, auf die verwiesen werden soll, die Methode einer [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]-Assembly an. *class_name* muss ein gültiger [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Bezeichner und als Klasse in der Assembly vorhanden sein. Wenn die Klasse über einen mit einem Namespace qualifizierten Namen verfügt und die einzelnen Bestandteile des Namespace durch einen Punkt (**.**) voneinander getrennt werden, muss der Klassenname durch Klammern (**[]**) oder Anführungszeichen (**""**) getrennt werden. Bei der angegebenen Methode muss es sich um eine statische Methode der Klasse handeln.  
   
- Standardmäßig kann [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] keinen CLR-Code ausführen. Sie können erstellen, ändern und Löschen von Datenbankobjekten, die common Language Runtime-Module verweisen; Allerdings kann nicht Ausführen dieser Verweise in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erst nach Aktivierung der [Option Clr-fähig](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md). Verwenden Sie zum Aktivieren der Option [Sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
+ Standardmäßig kann [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] keinen CLR-Code ausführen. Sie können Datenbankobjekte, die auf CLR-Module (Common Language Runtime) verweisen, erstellen, ändern und löschen. Bevor Sie diese Verweise in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausführen können, müssen Sie jedoch die Option [clr enabled](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md) aktivieren. Verwenden Sie [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md), um die Option zu aktivieren.  
   
 > [!NOTE]  
 >  CLR-Prozeduren werden in einer enthaltenen Datenbank nicht unterstützt.  
@@ -165,12 +165,12 @@ AS { [ BEGIN ] sql_statement [ ; ] [ ,...n ] [ END ] }
   
  Wenn eine vorherige Prozedurdefinition mit WITH ENCRYPTION oder WITH RECOMPILE erstellt wurde, sind diese Optionen nur dann aktiviert, wenn sie in der ALTER PROCEDURE-Anweisung enthalten sind.  
   
- Weitere Informationen zu gespeicherten Prozeduren finden Sie unter [CREATE PROCEDURE &#40; Transact-SQL &#41; ](../../t-sql/statements/create-procedure-transact-sql.md).  
+ Weitere Informationen zu gespeicherten Prozeduren finden Sie unter [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md).  
   
 ## <a name="security"></a>Security  
   
 ### <a name="permissions"></a>Berechtigungen  
- Erfordert **ALTER** Berechtigung für die Prozedur oder die Mitgliedschaft in der **Db_ddladmin** festen Datenbankrolle "".  
+ Erfordert die **ALTER**-Berechtigung für die Prozedur oder die Mitgliedschaft in der festen Datenbankrolle **db_ddladmin**.  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird die gespeicherte `uspVendorAllInfo`-Prozedur erstellt. Diese Prozedur gibt die Namen, die gelieferten Produkte, die Bonität und die Verfügbarkeit aller Hersteller, die [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] beliefern, zurück. Nachdem diese Prozedur erstellt wurde, wird sie so geändert, dass ein anderes Resultset zurückgegeben wird.  
@@ -197,7 +197,7 @@ GO
   
 ```  
   
- Im folgenden Beispiel wird die gespeicherte `uspVendorAllInfo`-Prozedur geändert. Die EXECUTE AS CALLER-Klausel entfernt, und ändert den Textkörper der Prozedur nur Hersteller zurückgegeben, die das angegebene Produkt liefern. Mit den Funktionen `LEFT` und `CASE` wird die Darstellung des Resultsets angepasst.  
+ Im folgenden Beispiel wird die gespeicherte `uspVendorAllInfo`-Prozedur geändert. Die EXECUTE AS CALLER-Klausel wird entfernt, und der Textkörper der Prozedur wird so geändert, dass nur Hersteller zurückgegeben werden, die das angegebene Produkt liefern. Mit den Funktionen `LEFT` und `CASE` wird die Darstellung des Resultsets angepasst.  
   
 ```  
 USE AdventureWorks2012;  
@@ -240,13 +240,13 @@ Vision Cycles, Inc.  LL Crankarm   Superior  Yes
 (2 row(s) affected)`  
 ```  
 
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)   
- [DROP PROCEDURE &#40; Transact-SQL &#41;](../../t-sql/statements/drop-procedure-transact-sql.md)   
+ [DROP PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-procedure-transact-sql.md)   
  [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   
- [Führen Sie AS &#40; Transact-SQL &#41;](../../t-sql/statements/execute-as-transact-sql.md)   
+ [EXECUTE AS &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
  [Gespeicherte Prozeduren &#40;Datenbankmodul&#41;](../../relational-databases/stored-procedures/stored-procedures-database-engine.md)   
- [Sys.Procedures &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-procedures-transact-sql.md)  
+ [sys.procedures &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-procedures-transact-sql.md)  
   
   

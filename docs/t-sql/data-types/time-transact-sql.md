@@ -1,5 +1,5 @@
 ---
-title: Zeitpunkt (Transact-SQL) | Microsoft Docs
+title: time (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 6/7/2017
 ms.prod: sql-non-specified
@@ -41,45 +41,45 @@ ms.lasthandoff: 11/21/2017
   Definiert eine Uhrzeit. Die Uhrzeit basiert auf einem 24-Stunden-Format und beachtet keine Zeitzonen.  
   
   > [!NOTE]  
-  > Informatica – Informationen werden für PDW-Kunden, die mit dem Informatica-Connector bereitgestellt. 
+  > PDW-Benutzer, die den Informatica Connector verwenden, erhalten Informationen zu Informatica. 
   
 ## <a name="time-description"></a>Beschreibung des time-Datentyps  
   
-|Eigenschaft|Wert|  
+|Eigenschaft|value|  
 |--------------|-----------|  
-|Syntax|**Zeit** [(*Bruchteilen zweite Skala*)]|  
-|Verwendung|Deklarieren Sie @MyTime **time(7)**<br /><br /> Erstellen der Tabelle Table1 (Column1 **time(7)** )|  
-|*Sekundenbruchteile*|Definiert die Anzahl der Stellen für den Bruchteil der Sekunden.<br /><br /> Dies kann eine ganze Zahl zwischen 0 und 7 sein. Bei Informatica – kann dies eine Ganzzahl zwischen 0 und 3 sein.<br /><br /> Der Standardwert für die Sekundenbruchteile Dezimalstellen ist 7 (100 NS).|  
-|Standardmäßiges Format der Zeichenfolgenliterale<br /><br /> (wird für Downlevelclients verwendet)|ss [.nnnnnnn] für Informatica –)<br /><br /> Weitere Informationen finden Sie im nachfolgenden Abschnitt "Abwärtskompatibilität für Downlevelclients".|  
-|Bereich|00:00:00.0000000 über 23:59:59.9999999 (00:00:00.000 über 23:59:59.999 für Informatica –)|  
-|Elementbereiche|Bei hh handelt es sich um zwei Ziffern im Bereich von 0 bis 23, die die Stunde darstellen.<br /><br /> Bei mm handelt es sich um zwei Ziffern im Bereich von 0 bis 59, die die Minute darstellen.<br /><br /> Bei ss handelt es sich um zwei Ziffern im Bereich von 0 bis 59, die die Sekunde darstellen.<br /><br /> n\*ist null bis sieben Ziffern im Bereich von 0 bis 9999999, die die Sekundenbruchteile darstellen. Für Informatica n\* ist null bis drei Ziffern im Bereich von 0 bis 999.|  
-|Zeichenlänge|Mindestens 8 Positionen (hh:mm:ss) bis maximal 16 Positionen (hh:mm:ss.nnnnnnn) Für Informatica – ist die maximal 12 (hh:mm:ss.nnn).|  
-|Genauigkeit, Dezimalstellen<br /><br /> (Benutzer gibt nur Dezimalstellen an)|Finden Sie in der folgenden Tabelle aus.|  
-|Speichergröße|Standardmäßig 5 Bytes fest, wobei die Standardgenauigkeit in Sekundenbruchteilen 100 ns beträgt. Im Informatica –, die Standardeinstellung ist 4 Bytes fest, der Standardwert ist 1 ms Bruchteilen zweiter mit einfacher Genauigkeit.|  
-|Genauigkeit|100 Nanosekunden (1 Millisekunde im Informatica –)|  
-|Standardwert|00:00:00<br /><br /> Dieser Wert wird verwendet, für den angefügten Zeitteil für eine implizite Konvertierung von **Datum** auf **datetime2** oder **"DateTimeOffset"**.|  
+|Syntax|**time** [ (*fractional second scale*) ]|  
+|Verwendung|DECLARE @MyTime **time(7)**<br /><br /> CREATE TABLE Table1 ( Column1 **time(7)** )|  
+|*fractional seconds scale*|Definiert die Anzahl der Stellen für den Bruchteil der Sekunden.<br /><br /> Dies kann eine ganze Zahl zwischen 0 und 7 sein. Im Zusammenhang mit Informatica kann dies eine ganze Zahl zwischen 0 und 3 sein.<br /><br /> Der Standardwert für den Bruchteil beträgt 7 (100 ns).|  
+|Standardmäßiges Format der Zeichenfolgenliterale<br /><br /> (wird für Downlevelclients verwendet)|hh:mm:ss[.nnnnnnn] für Informatica)<br /><br /> Weitere Informationen finden Sie im nachfolgenden Abschnitt "Abwärtskompatibilität für Downlevelclients".|  
+|Bereich|00:00:00.0000000 bis 23:59:59.9999999 (00:00:00.000 bis 23:59:59.999 für Informatica)|  
+|Elementbereiche|Bei hh handelt es sich um zwei Ziffern im Bereich von 0 bis 23, die die Stunde darstellen.<br /><br /> Bei mm handelt es sich um zwei Ziffern im Bereich von 0 bis 59, die die Minute darstellen.<br /><br /> Bei ss handelt es sich um zwei Ziffern im Bereich von 0 bis 59, die die Sekunde darstellen.<br /><br /> Bei n\* handelt es sich um bis zu sieben Ziffern im Bereich von 0 bis 9999999, die die Sekundenbruchteile darstellen. Für Informatica umfasst n\* bis zu drei Ziffern im Bereich von 0 bis 999.|  
+|Zeichenlänge|Mindestens 8 Positionen (hh:mm:ss) bis maximal 16 Positionen (hh:mm:ss.nnnnnnn). Für Informatica sind es höchstens 12 Positionen (hh:mm:ss.nnn).|  
+|Genauigkeit, Dezimalstellen<br /><br /> (Benutzer gibt nur Dezimalstellen an)|Siehe Tabelle unten.|  
+|Speichergröße|Standardmäßig 5 Bytes fest, wobei die Standardgenauigkeit in Sekundenbruchteilen 100 ns beträgt. In Informatica sind es standardmäßig 4 Byte (fest), wobei die Standardgenauigkeit in Sekundenbruchteilen 1 ms beträgt.|  
+|Genauigkeit|100 ns (1 ms in Informatica)|  
+|Standardwert|00:00:00<br /><br /> Dieser Wert wird für den angefügten Datumsteil für eine implizite Konvertierung von **date** in **datetime2** oder **datetimeoffset** verwendet.|  
 |Benutzerdefinierte Genauigkeit in Sekundenbruchteilen|ja|  
-|Beachtung und Beibehaltung des Zeitzonenoffsets|Nein|  
-|Beachtung der Sommerzeit|Nein|  
+|Beachtung und Beibehaltung des Zeitzonenoffsets|nein|  
+|Beachtung der Sommerzeit|nein|  
   
 |Angegebene Dezimalstelle|Ergebnis (Genauigkeit, Dezimalstellen)|Spaltenlänge (in Bytes)|Bruchteil<br /><br /> Sekunden<br /><br /> precision|  
 |---------------------|---------------------------------|-----------------------------|------------------------------------------|  
-|**Uhrzeit**|(16,7) [(12,3) im Informatica]|5 (im Informatica – 4)|7 (im Informatica – 3)|  
-|**time(0)**|(8,0)|3|0-2|  
-|**Time(1)**|(10,1)|3|0-2|  
-|**Time(2)**|(11,2)|3|0-2|  
-|**Time(3)**|(12,3)|4|3-4|  
-|**Time(4)**<br /><br /> Informatica – unterstützt nicht.|(13,4)|4|3-4|  
-|**Time(5)**<br /><br /> Informatica – unterstützt nicht.|(14,5)|5|5-7|  
-|**Time(6)**<br /><br /> Informatica – unterstützt nicht.|(15,6)|5|5-7|  
-|**time(7)**<br /><br /> Informatica – unterstützt nicht.|(16,7)|5|5-7|  
+|**Uhrzeit**|(16,7) [(12,3) in Informatica]|5 (4 in Informatica)|7 (3 in Informatica)|  
+|**time(0)**|(8,0)|3|0–2|  
+|**time(1)**|(10,1)|3|0–2|  
+|**time(2)**|(11,2)|3|0–2|  
+|**time(3)**|(12,3)|4|3–4|  
+|**time(4)**<br /><br /> Wird in Informatica nicht unterstützt.|(13,4)|4|3–4|  
+|**time(5)**<br /><br /> Wird in Informatica nicht unterstützt.|(14,5)|5|5–7|  
+|**time(6)**<br /><br /> Wird in Informatica nicht unterstützt.|(15,6)|5|5–7|  
+|**time(7)**<br /><br /> Wird in Informatica nicht unterstützt.|(16,7)|5|5–7|  
   
 ## <a name="supported-string-literal-formats-for-time"></a>Unterstützte Formate der Zeichenfolgenliterale für time  
- Die folgende Tabelle zeigt die gültigen Zeichenfolge Formate der Zeichenfolgenliterale für die **Zeit** -Datentyp.  
+ In der folgenden Tabelle werden die gültigen Formate der Zeichenfolgenliterale für den **time**-Datentyp aufgeführt.  
   
-|SQL Server|Description|  
+|SQL Server|Description|  
 |----------------|-----------------|  
-|hh:mm[:ss][:Sekundenbruchteile][AM][PM]<br /><br /> hh:mm[:ss][.Sekundenbruchteile][AM][PM]<br /><br /> hhAM[PM]<br /><br /> hh AM[PM]|Der Stundenwert von 0 stellt die Stunde nach Mitternacht (AM) dar, unabhängig davon, ob AM angegeben ist. Wenn für die Stunde der Wert 0 festgelegt ist, kann PM nicht angegeben werden.<br /><br /> Stundenwerte von 01 bis 11 stellen die Stunden vor 12 Uhr mittags dar, wenn weder AM noch PM angegeben wurde. Die Werte stellen die Stunden vor 12 Uhr mittags dar, wenn AM angegeben wurde. Sie stellen die Stunden nach 12 Uhr mittags dar, wenn PM angegeben wurde.<br /><br /> Der Stundenwert 12 stellt die Stunde, beginnend mit 12 Uhr mittags, dar, wenn weder AM noch PM angegeben wurde. Wurde AM angegeben, stellt der Wert die Stunde dar, die um Mitternacht beginnt. Wurde PM angegeben, stellt der Wert die Stunde dar, die um 12 Uhr mittags beginnt. 12:01 ist z. B. 1 Minute nach Mittag, 12:01 Uhr ist; und 12:01 AM 1 Minute nach Mitternacht. Die Angabe 12:01 AM ist identisch mit der Angabe 00:01 oder 00:01 AM.<br /><br /> Stundenwerte von 13 bis 23 stellen die Stunden nach 12 Uhr mittags dar, wenn weder AM noch PM angegeben wurde. Die Werte stellen darüber hinaus die Stunden nach 12 Uhr mittags dar, wenn PM angegeben wurde. AM kann nicht angegeben werden, wenn der Stundenwert zwischen 13 und 23 liegt.<br /><br /> Ein Stundenwert von 24 ist ungültig. Um Mitternacht darzustellen, verwenden Sie 12:00 AM oder 00:00.<br /><br /> Vor Millisekundenangaben kann entweder ein Doppelpunkt (:) oder ein Punkt (.) stehen. Wenn ein Doppelpunkt verwendet wird, bedeutet die Anzahl Tausendstel-der Sekunde. Wenn ein Punkt verwendet wird, bedeutet, dass eine einzelne folgende Ziffer Zehntelsekunden des zweiten, zwei Ziffern bedeuten Hundertstelsekunden der Sekunde und drei Ziffern Mittelwert Tausendstel-des zweiten. Beispielsweise zeigt 12:30:20:1 zwanzig Sekunden und eine Tausendstelsekunde nach 12:30 an, während 12:30:20.1 zwanzig Sekunden und eine Zehntelsekunde nach 12:30 anzeigt.|  
+|hh:mm[:ss][:Sekundenbruchteile][AM][PM]<br /><br /> hh:mm[:ss][.Sekundenbruchteile][AM][PM]<br /><br /> hhAM[PM]<br /><br /> hh AM[PM]|Der Stundenwert von 0 stellt die Stunde nach Mitternacht (AM) dar, unabhängig davon, ob AM angegeben ist. Wenn für die Stunde der Wert 0 festgelegt ist, kann PM nicht angegeben werden.<br /><br /> Stundenwerte von 01 bis 11 stellen die Stunden vor 12 Uhr mittags dar, wenn weder AM noch PM angegeben wurde. Die Werte stellen die Stunden vor 12 Uhr mittags dar, wenn AM angegeben wurde. Sie stellen die Stunden nach 12 Uhr mittags dar, wenn PM angegeben wurde.<br /><br /> Der Stundenwert 12 stellt die Stunde, beginnend mit 12 Uhr mittags, dar, wenn weder AM noch PM angegeben wurde. Wurde AM angegeben, stellt der Wert die Stunde dar, die um Mitternacht beginnt. Wurde PM angegeben, stellt der Wert die Stunde dar, die um 12 Uhr mittags beginnt. Beispiel: 12:01 ist eine Minute nach 12 Uhr mittags, genauso wie 12:01 PM, während 12:01 AM eine Minute nach Mitternacht ist. Die Angabe 12:01 AM ist identisch mit der Angabe 00:01 oder 00:01 AM.<br /><br /> Stundenwerte von 13 bis 23 stellen die Stunden nach 12 Uhr mittags dar, wenn weder AM noch PM angegeben wurde. Die Werte stellen darüber hinaus die Stunden nach 12 Uhr mittags dar, wenn PM angegeben wurde. AM kann nicht angegeben werden, wenn der Stundenwert zwischen 13 und 23 liegt.<br /><br /> Ein Stundenwert von 24 ist ungültig. Um Mitternacht darzustellen, verwenden Sie 12:00 AM oder 00:00.<br /><br /> Vor Millisekundenangaben kann entweder ein Doppelpunkt (:) oder ein Punkt (.) stehen. Wenn ein Doppelpunkt verwendet wird, bedeutet das, dass die folgende Zahl Tausendstelsekunden darstellt. Wenn ein Punkt verwendet wird, bedeutet das, dass eine einzelne folgende Ziffer Zehntelsekunden, zwei Folgeziffern Hundertstelsekunden und drei Folgeziffern Tausendstelsekunden darstellen. Beispielsweise zeigt 12:30:20:1 zwanzig Sekunden und eine Tausendstelsekunde nach 12:30 an, während 12:30:20.1 zwanzig Sekunden und eine Zehntelsekunde nach 12:30 anzeigt.|  
   
 |ISO 8601|Hinweise|  
 |--------------|-----------|  
@@ -94,23 +94,23 @@ ms.lasthandoff: 11/21/2017
   
  Das standardmäßige Format der Zeichenfolgenliterale (wird für Downlevelclients verwendet) entspricht dem SQL-Standard, der als hh:mm:ss[.nnnnnnn] definiert ist. Dieses Format ähnelt der ISO 8601-Definition für TIME unter Ausschluss der Sekundenbruchteile.  
   
-##  <a name="BackwardCompatibilityforDownlevelClients"></a>Abwärtskompatibilität für Downlevelclients  
- Einige Clients früherer unterstützen nicht die **Zeit**, **Datum**, **datetime2** und **"DateTimeOffset"** -Datentypen. In der folgenden Tabelle wird die Typzuordnung zwischen einer Instanz höherer Ebene in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und Downlevelclients gezeigt.  
+##  <a name="BackwardCompatibilityforDownlevelClients"></a> Abwärtskompatibilität für Clients aus Vorgängerversionen  
+ Einige Downlevelclients unterstützen nicht die Datentypen **time**, **date**, **datetime2** und **datetimeoffset**. In der folgenden Tabelle wird die Typzuordnung zwischen einer Instanz höherer Ebene in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und Downlevelclients gezeigt.  
   
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Datentyp|Standardmäßiges Format des an Downlevelclients übergebenen Zeichenfolgenliterals|ODBC früherer Versionen|OLEDB früherer Versionen|JDBC früherer Versionen|SQLCLIENT früherer Versionen|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentyp|Standardmäßiges Format des an Downlevelclients übergebenen Zeichenfolgenliterals|ODBC früherer Versionen|OLEDB früherer Versionen|JDBC früherer Versionen|SQLCLIENT früherer Versionen|  
 |-----------------------------------------|----------------------------------------------------------------|----------------------|-----------------------|----------------------|---------------------------|  
 |**Uhrzeit**|hh:mm:ss[.nnnnnnn]|SQL_WVARCHAR oder SQL_VARCHAR|DBTYPE_WSTR oder DBTYPE_STR|Java.sql.String|Zeichenfolge oder SqString|  
 |**Datum**|YYYY-MM-DD|SQL_WVARCHAR oder SQL_VARCHAR|DBTYPE_WSTR oder DBTYPE_STR|Java.sql.String|Zeichenfolge oder SqString|  
 |**datetime2**|YYYY-MM-DD hh:mm:ss[.nnnnnnn]|SQL_WVARCHAR oder SQL_VARCHAR|DBTYPE_WSTR oder DBTYPE_STR|Java.sql.String|Zeichenfolge oder SqString|  
-|**datetimeoffset**|JJJJ-MM-TT HH: mm: [.nnnnnnn] [+ &#124;-] hh: mm|SQL_WVARCHAR oder SQL_VARCHAR|DBTYPE_WSTR oder DBTYPE_STR|Java.sql.String|Zeichenfolge oder SqString|  
+|**datetimeoffset**|YYYY-MM-DD hh:mm:ss[.nnnnnnn] [+&#124;-]hh:mm|SQL_WVARCHAR oder SQL_VARCHAR|DBTYPE_WSTR oder DBTYPE_STR|Java.sql.String|Zeichenfolge oder SqString|  
   
 ## <a name="converting-date-and-time-data"></a>Konvertieren von Datums- und Zeitdaten  
- Beim Konvertieren in date- und time-Datentypen lehnt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alle Werte ab, die nicht als Datum oder Uhrzeit erkannt werden. Informationen zum Verwenden von CAST und CONVERT-Funktionen mit Datums-und Uhrzeitdaten finden Sie unter [CAST und CONVERT &#40; Transact-SQL &#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
+ Beim Konvertieren in date- und time-Datentypen lehnt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alle Werte ab, die nicht als Datum oder Uhrzeit erkannt werden. Informationen zur Verwendung der CAST-Funktion und der CONVERT-Funktion mit Datums- und Uhrzeitdaten finden Sie unter [CAST und CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md).  
   
 ### <a name="converting-timen-data-type-to-other-date-and-time-types"></a>Konvertieren des time(n)-Datentyps in andere Datums- und Uhrzeittypen  
- In diesem Abschnitt wird beschrieben, was geschieht, wenn eine **Zeit** -Datentyp in andere Datentypen für Datum und Uhrzeit konvertiert wird.  
+ Der folgende Abschnitt veranschaulicht die Abläufe bei der Konvertierung des **time**-Datentyps in andere Datums- und Uhrzeittypen.  
   
- Wenn die Konvertierung erfolgt in **Time(n)-Werte**, Stunden, Minuten und Sekunden werden kopiert. Wenn die Genauigkeit des Quellwerts die Genauigkeit des Zielwerts übersteigt, werden die Sekundenbruchteile entsprechend der Genauigkeit des Zielwerts aufgerundet. Das folgende Beispiel zeigt die Ergebnisse der Konvertierung eines `time(4)`-Werts in einen `time(3)`-Wert.  
+ Beim Konvertieren in **time(n)** werden die Stunde, die Minute und die Sekunden kopiert. Wenn die Genauigkeit des Quellwerts die Genauigkeit des Zielwerts übersteigt, werden die Sekundenbruchteile entsprechend der Genauigkeit des Zielwerts aufgerundet. Das folgende Beispiel zeigt die Ergebnisse der Konvertierung eines `time(4)`-Werts in einen `time(3)`-Wert.  
   
 ```  
 DECLARE @timeFrom time(4) = '12:34:54.1237';  
@@ -126,10 +126,10 @@ SELECT @timeTo AS 'time(3)', @timeFrom AS 'time(4)';
 --(1 row(s) affected)  
 ```  
   
- Wenn die Konvertierung zu ist  
-                    **Datum**, die Konvertierung schlägt fehl und wird die Fehlermeldung 206 ausgegeben: "operandentypkollision: Date ist inkompatibel mit Time".  
+ Wenn eine Konvertierung in  
+                    **date** vorgenommen wird, schlägt die Konvertierung fehl, und die Fehlermeldung 206 "Operand type clash: date is incompatible with time." (Operandentypkollision: date ist inkompatibel mit time.) wird ausgegeben.  
   
- Wenn die Konvertierung erfolgt in **"DateTime"**, Stunde, Minute und Sekunde Werte kopiert werden; und die Datumskomponente wird festgelegt, um "1900-01-01". Wenn die Genauigkeit der Sekundenbruchteile von der **Time(n)-Werte** -Werts größer ist als drei Ziffern, die **"DateTime"** -Ergebnis gekürzt. Der folgende Code zeigt die Ergebnisse der Konvertierung eines `time(4)`-Werts in einen `datetime`-Wert.  
+ Wenn eine Konvertierung in **datetime** vorgenommen wird, werden die Werte für Stunden, Minuten und Sekunden kopiert, und die Datumskomponente wird auf 1900-01-01 festgelegt. Wenn die Genauigkeit des **time(n)**-Werts größer ist als drei Sekundenbruchteile, wird das **datetime**-Ergebnis gekürzt. Der folgende Code zeigt die Ergebnisse der Konvertierung eines `time(4)`-Werts in einen `datetime`-Wert.  
   
 ```  
 DECLARE @time time(4) = '12:15:04.1237';  
@@ -145,7 +145,7 @@ SELECT @time AS '@time', @datetime AS '@datetime';
   
 ```  
   
- Wenn die Konvertierung erfolgt in **Smalldatetime**, Festlegen des Datums wird auf 1900-01-01' und die Werte für Stunden und Minuten werden aufgerundet. Die Sekunden und die Sekundenbruchteile werden auf 0 festgelegt. Der folgende Code zeigt die Ergebnisse der Konvertierung eines `time(4)`-Werts in einen `smalldatetime`-Wert.  
+ Wenn eine Konvertierung in **smalldatetime** vorgenommen wird, wird das Datum auf 1900-01-01 festgelegt, und die Werte für Stunden und Minuten werden aufgerundet. Die Sekunden und die Sekundenbruchteile werden auf 0 festgelegt. Der folgende Code zeigt die Ergebnisse der Konvertierung eines `time(4)`-Werts in einen `smalldatetime`-Wert.  
   
 ```  
 -- Shows rounding up of the minute value.  
@@ -172,7 +172,7 @@ SELECT @time AS '@time', @smalldatetime AS '@smalldatetime';
   
 ```  
   
- Ist die Konvertierung **DateTimeOffset (n)**, Festlegen des Datums wird auf 1900-01-01' und die Zeit wird kopiert. Der Zeitzonenoffset wird auf +00:00 festgelegt. Wenn die Genauigkeit der Sekundenbruchteile von der **Time(n)-Werte** Wert ist größer als die Genauigkeit des der **DateTimeOffset (n)** Wert, der Wert wird aufgerundet. Das folgende Beispiel zeigt die Ergebnisse der Konvertierung eines `time(4)`-Werts in einen `datetimeoffset(3)`-Typ.  
+ Wenn eine Konvertierung in **datetimeoffset(n)** vorgenommen wird, wird das Datum auf 1900-01-01 festgelegt und die Uhrzeit kopiert. Der Zeitzonenoffset wird auf +00:00 festgelegt. Wenn die Genauigkeit in Sekundenbruchteilen des **time(n)**-Werts größer ist als die Genauigkeit des **datetimeoffset(n)**-Werts, wird der Wert entsprechend aufgerundet. Das folgende Beispiel zeigt die Ergebnisse der Konvertierung eines `time(4)`-Werts in einen `datetimeoffset(3)`-Typ.  
   
 ```  
 DECLARE @time time(4) = '12:15:04.1237';  
@@ -189,7 +189,7 @@ SELECT @time AS '@time', @datetimeoffset AS '@datetimeoffset';
   
 ```  
   
- Beim Konvertieren in **datetime2(n)**, Festlegen des Datums wird auf 1900-01-01', die Zeitkomponente wird kopiert, und der Zeitzonenoffset wird auf 00:00 festgelegt. Wenn die Genauigkeit der Sekundenbruchteile von der **datetime2(n)** Wert ist größer als die **Time(n)-Werte** Wert, der Wert aufgerundet anpassen.  Das folgende Beispiel zeigt die Ergebnisse der Konvertierung eines `time(4)`-Werts in einen `datetime2(2)`-Wert.  
+ Wenn eine Konvertierung in **datetime2(n)** vorgenommen wird, wird das Datum auf 1900-01-01 festgelegt, die Zeitkomponente wird kopiert, und der Zeitzonenoffset wird auf 00:00 festgelegt. Wenn die Genauigkeit in Sekundenbruchteilen des **datetime2(n)**-Werts größer ist als die Genauigkeit des **time(n)**-Werts, wird der Wert entsprechend aufgerundet.  Das folgende Beispiel zeigt die Ergebnisse der Konvertierung eines `time(4)`-Werts in einen `datetime2(2)`-Wert.  
   
 ```  
 DECLARE @time time(4) = '12:15:04.1237';  
@@ -206,11 +206,11 @@ SELECT @datetime2 AS '@datetime2', @time AS '@time';
 ```  
   
 ### <a name="converting-string-literals-to-timen"></a>Konvertieren von Zeichenfolgenliteralen in time(n)-Werte  
- Konvertierungen von Zeichenfolgenliteralen in Datums- und Zeitwerte sind erlaubt, wenn alle Teile der Zeichenfolge in gültigen Formaten vorliegen. Andernfalls wird ein Laufzeitfehler ausgelöst. Wird bei impliziten oder expliziten Konvertierungen von Datums- und Zeitwerten in Zeichenfolgenliterale kein Stil angegeben, wird das Standardformat der aktuellen Sitzung verwendet. Die folgende Tabelle zeigt die Regeln zum Konvertieren einer Zeichenfolge Zeichenfolgenliteral an die **Zeit** -Datentyp.  
+ Konvertierungen von Zeichenfolgenliteralen in Datums- und Zeitwerte sind erlaubt, wenn alle Teile der Zeichenfolge in gültigen Formaten vorliegen. Andernfalls wird ein Laufzeitfehler ausgelöst. Wird bei impliziten oder expliziten Konvertierungen von Datums- und Zeitwerten in Zeichenfolgenliterale kein Stil angegeben, wird das Standardformat der aktuellen Sitzung verwendet. In der folgenden Tabelle werden die Regeln zum Konvertieren eines Zeichenfolgenliterals in den **time**-Datentyp dargestellt.  
   
 |Eingabezeichenfolgenliteral|Konvertierungsregel|  
 |--------------------------|---------------------|  
-|ODBC DATE|ODBC-Zeichenfolgenliterale zugeordnet sind, um die **"DateTime"** -Datentyp. Jede Zuweisungsoperation von ODBC DATETIME-literalen zu **Zeit**Typen führt dazu, dass eine implizite Konvertierung zwischen **"DateTime"** und dieses Typs gemäß den Konvertierungsregeln.|  
+|ODBC DATE|Dem **datetime**-Datentyp werden ODBC-Zeichenfolgenliterale zugeordnet. Jede Zuweisungsoperation von ODBC DATETIME-Literalen zu **time**-Typen bewirkt eine in den Konvertierungsregeln definierte implizite Konvertierung zwischen **datetime** und diesen Typen.|  
 |ODBC TIME|Weitere Informationen enthält die ODBC DATE-Regel weiter oben.|  
 |ODBC DATETIME|Weitere Informationen enthält die ODBC DATE-Regel weiter oben.|  
 |Nur DATE|Standardwerte werden festgelegt.|  
@@ -224,7 +224,7 @@ SELECT @datetime2 AS '@datetime2', @time AS '@time';
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="a-comparing-date-and-time-data-types"></a>A. Vergleichen des date-Datentyps mit dem time-Datentyp  
- Das folgende Beispiel vergleicht die Ergebnisse der Umwandlung einer Zeichenfolge in alle **Datum** und **Zeit** -Datentyp.  
+ Im folgenden Beispiel werden die Ergebnisse der Umwandlung von einer Zeichenfolge in alle **date**- und **time**-Datentypen verglichen.  
   
 ```  
 SELECT   
@@ -249,7 +249,7 @@ SELECT
 |**datetimeoffset**|2007-05-08 12:35:29.1234567 +12:15|  
   
 ###  <a name="ExampleB"></a> B. Einfügen von gültigen time-Zeichenfolgenliteralen in eine time(7)-Spalte  
- Die folgende Tabelle enthält die unterschiedlichen Zeichenfolgenliteralen, die in einer Spalte des Datentyps eingefügt werden können **time(7)** mit den Werten, die dann in dieser Spalte gespeichert sind.  
+ In der folgenden Tabelle werden neben den unterschiedlichen Zeichenfolgenliteralen, die in eine Spalte des Datentyps **time(7)** eingefügt werden können, auch die Werte aufgelistet, die anschließend in der entsprechenden Spalte gespeichert werden.  
   
 |Formattyp des Zeichenfolgenliterals|Eingefügtes Zeichenfolgenliteral|Gespeicherter time(7)-Wert|Description|  
 |--------------------------------|-----------------------------|------------------------------------|-----------------|  
@@ -258,7 +258,7 @@ SELECT
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|'01:01:01.1234567 PM'|13:01:01.1234567|Wenn AM oder PM angegeben ist, wird die Uhrzeit im 24-Stunden-Format ohne das Literal AM oder PM gespeichert.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|'01:01:01.1234567PM'|13:01:01.1234567|Ein Leerzeichen vor AM oder PM ist optional.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|'01AM'|01:00:00.0000000|Wenn nur die Stunde angegeben wird, sind alle anderen Werte 0.|  
-|SQL Server|'01 AM'|01:00:00.0000000|Ein Leerzeichen vor AM oder PM ist optional.|  
+|SQL Server|'01 AM'|01:00:00.0000000|Ein Leerzeichen vor AM oder PM ist optional.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|'01:01:01'|01:01:01.0000000|Wenn keine Genauigkeit der Sekundenbruchteile angegeben wird, wird jede Position, die durch den Datentyp definiert ist, auf 0 festgelegt.|  
 |ISO 8601|'01:01:01.1234567'|01:01:01.1234567|Zur Erfüllung des ISO 8601-Standards verwenden Sie das 24-Stunden-Format ohne Angabe von AM oder PM.|  
 |ISO 8601|'01:01:01.1234567 +01:01'|01:01:01.1234567|Der optionale Zeitzonenunterschied (TZD) ist bei der Eingabe zugelassen, wird aber nicht gespeichert.|  
@@ -273,9 +273,9 @@ SELECT
 |'12:12:12'|**smalldatetime**|1900-01-01 12:12:00|Jeder Wert für die Genauigkeit der Sekundenbruchteile führt zu einer fehlerhaften INSERT-Anweisung.|  
 |'12:12:12.123'|**datetime**|1900-01-01 12:12:12.123|Jede Sekundengenauigkeit, die mehr als 3 Stellen umfasst, führt zu einer fehlerhaften INSERT-Anweisung.|  
 |'12:12:12.1234567'|**datetime2(7)**|1900-01-01 12:12:12.1234567|Wenn die Genauigkeit der Sekundenbruchteile den für die Spalte angegebenen Wert überschreitet, wird die Zeichenfolge abgeschnitten, ohne einen Fehler zu verursachen.|  
-|'12:12:12.1234567'|**DateTimeOffset(7)**|1900-01-01 12:12:12.1234567 +00:00|Wenn die Genauigkeit der Sekundenbruchteile den für die Spalte angegebenen Wert überschreitet, wird die Zeichenfolge abgeschnitten, ohne einen Fehler zu verursachen.|  
+|'12:12:12.1234567'|**datetimeoffset(7)**|1900-01-01 12:12:12.1234567 +00:00|Wenn die Genauigkeit der Sekundenbruchteile den für die Spalte angegebenen Wert überschreitet, wird die Zeichenfolge abgeschnitten, ohne einen Fehler zu verursachen.|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [CAST und CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
   
   

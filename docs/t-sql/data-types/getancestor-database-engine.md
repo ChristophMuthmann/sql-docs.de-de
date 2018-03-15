@@ -1,5 +1,5 @@
 ---
-title: GetAncestor (Datenbankmodul) | Microsoft Docs
+title: GetAncestor (Datenbank-Engine) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 7/22/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="getancestor-database-engine"></a>GetAncestor (Datenbankmodul)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Gibt eine **Hierarchyid** darstellt der  *n* ten Vorgänger von *dies*.
+Gibt eine **hierarchyid** zurück, die den *n*-ten Vorgänger von *this* darstellt.
   
 ## <a name="syntax"></a>Syntax  
   
@@ -50,17 +50,17 @@ SqlHierarchyId GetAncestor ( int n )
   
 ## <a name="arguments"></a>Argumente  
 *n*  
-Ein **Int**, welche die Anzahl der Ebenen in der Hierarchie nach oben.
+Ein **int**-Wert, der die Anzahl der Hierarchieebenen nach oben darstellt.
   
 ## <a name="return-types"></a>Rückgabetypen
-**SQL Server-Typ: Hierarchyid zurück**
+**SQL Server-Rückgabetyp: hierarchyid**
   
-**CLR-Typ: SqlHierarchyId zurück**
+**CLR-Rückgabetyp: SqlHierarchyId**
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
 Hiermit wird getestet, ob jeder Knoten in der Ausgabe den aktuellen Knoten als Vorgänger auf der angegebenen Ebene aufweist.
   
-Wenn eine Zahl größer als [getlevel ()](../../t-sql/data-types/getlevel-database-engine.md) wird übergeben, wird NULL zurückgegeben.
+Wenn eine Zahl größer als [GetLevel ()](../../t-sql/data-types/getlevel-database-engine.md) übergeben wird, wird NULL zurückgegeben.
   
 Wenn eine negative Zahl übergeben wird, wird eine Ausnahme ausgelöst.
   
@@ -93,7 +93,7 @@ WHERE OrgNode.GetAncestor(2) = @CurrentEmployee ;
 ```  
   
 ### <a name="c-returning-the-current-row"></a>C. Zurückgeben der aktuellen Zeile  
-Mit den aktuellen Knoten zurückzugebenden `GetAncestor(0)`, führen Sie den folgenden Code.
+Um den aktuellen Knoten mit `GetAncestor(0)` zurückzugeben, führen Sie den folgenden Code aus.
   
 ```sql
 DECLARE @CurrentEmployee hierarchyid  
@@ -124,7 +124,7 @@ this.GetAncestor(1)
 ```  
   
 ## <a name="see-also"></a>Siehe auch
-[IsDescendantOf &#40; Datenbankmodul &#41;](../../t-sql/data-types/isdescendantof-database-engine.md)  
+[IsDescendantOf &#40;Database Engine&#41; (IsDescendantOf (Datenbank-Engine))](../../t-sql/data-types/isdescendantof-database-engine.md)  
 [hierarchyid-Datentyp-Methodenverweis](http://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)  
 [Hierarchische Daten &#40;SQL Server&#41;](../../relational-databases/hierarchical-data-sql-server.md)  
 [hierarchyid &#40;Transact-SQL&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)

@@ -1,5 +1,5 @@
 ---
-title: ISJSON (Transact-SQL) | Microsoft Docs
+title: ISJSON (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 07/17/2017
 ms.prod: sql-non-specified
@@ -48,17 +48,17 @@ ISJSON ( expression )
  Die zu testende Zeichenfolge.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Gibt 1, wenn die Zeichenfolge eine gültige JSON; enthält Andernfalls wird 0 zurückgegeben. Gibt null zurück, wenn *Ausdruck* ist null.  
+ Gibt 1 zurück, wenn die Zeichenfolge gültiges JSON enthält. Andernfalls wird 0 zurückgegeben. Gibt NULL zurück, wenn der *Ausdruck* NULL ist.  
   
- Gibt keinen Fehler zurück.  
+ Gibt keine Fehler zurück.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  **ISJSON** überprüft nicht die Eindeutigkeit der Schlüssel auf derselben Ebene.  
   
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="example-1"></a>Beispiel 1  
-Im folgende Beispiel führt einen Anweisungsblock bedingt, wenn der Wert des Parameters `@param` gültige JSON enthält.  
+Im folgenden Beispiel wird ein Anweisungsblock bedingt ausgeführt, wenn der Parameterwert `@param` gültiges JSON enthält.  
   
 ```sql  
 DECLARE @param <data type>
@@ -80,7 +80,7 @@ FROM tab1
 WHERE ISJSON(json_col) > 0 
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [JSON-Daten &#40; SQLServer &#41;](../../relational-databases/json/json-data-sql-server.md)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [JSON-Daten &#40;SQL Server&#41;](../../relational-databases/json/json-data-sql-server.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Operatorrangfolge (Transact-SQL) | Microsoft Docs
+title: Operatorrangfolge (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -42,8 +42,8 @@ ms.lasthandoff: 01/25/2018
 |-----------|---------------|  
 |1|~ (Bitweises NOT)|  
 |2|* (Multiplikation) / (Division), % (Modulo)|  
-|3|+ (Positiv), - (negativ) + (Addition) (+ verketten),-(Subtraktion), & (bitweises AND), ^ (Bitweises exklusives OR), &#124; (Bitweises OR)|  
-|4|=, >, \<, > =, < =, <>,! =,! >,! < (Vergleichsoperatoren)|  
+|3|+ (Positiv), - (Negativ), + (Addition), (+ Verkettung), - (Subtraktion), & (Bitweises UND), ^ (Bitweises exklusives ODER), &#124; (Bitweises ODER)|  
+|4|=, >, \<, >=, <=, <>, !=, !>, !< (Vergleichsoperatoren)|  
 |5|NICHT|  
 |6|AND|  
 |7|ALL, ANY, BETWEEN, IN, LIKE, OR, SOME|  
@@ -88,9 +88,9 @@ SET @MyNumber = 2 * (4 + (5 - 3) );
 SELECT @MyNumber;  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Logische Operatoren &#40; Transact-SQL &#41;](../../t-sql/language-elements/logical-operators-transact-sql.md)   
- [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Logische Operatoren &#40;Transact-SQL&#41;](../../t-sql/language-elements/logical-operators-transact-sql.md)   
+ [Operatoren &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [Integrierte Funktionen &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)  
   
   

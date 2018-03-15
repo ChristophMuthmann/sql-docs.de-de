@@ -1,5 +1,5 @@
 ---
-title: "Löschen von Datenbankobjekten | Microsoft Docs"
+title: "Löschen von Datenbankobjekten | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -28,8 +28,8 @@ ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="lesson-3-1---deleting-database-objects"></a>Lektion 3-1: Löschen von Datenbankobjekten
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]Um dieses Lernprogramm vollständig zu entfernen, könnten Sie nur die Datenbank löschen. In diesem Thema führen Sie jedoch die erforderlichen Schritte aus, um jede Aktion rückgängig zu machen, die Sie im Lernprogramm ausgeführt haben.  
+# <a name="lesson-3-1---deleting-database-objects"></a>Lektion 3.1: Löschen von Datenbankobjekten
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)] Sie könnten einfach die Datenbank löschen, um dieses Tutorial vollständig zu entfernen. In diesem Thema führen Sie jedoch die erforderlichen Schritte aus, um jede Aktion rückgängig zu machen, die Sie im Lernprogramm ausgeführt haben.  
   
 ### <a name="removing-permissions-and-objects"></a>Entfernen von Berechtigungen und Objekten  
   
@@ -111,7 +111,7 @@ Damit ist das Lernprogramm zum Schreiben von [!INCLUDE[tsql](../includes/tsql-md
 ## <a name="return-to-sql-server-tools-portal"></a>Zurück zum Portal für SQL Server-Tools  
 [Lernprogramm: Schreiben von Transact-SQL-Anweisungen](../t-sql/tutorial-writing-transact-sql-statements.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [REVOKE &#40;Transact-SQL&#41;](../t-sql/statements/revoke-transact-sql.md)  
 [DROP USER &#40;Transact-SQL&#41;](../t-sql/statements/drop-user-transact-sql.md)  
 [DROP LOGIN &#40;Transact-SQL&#41;](../t-sql/statements/drop-login-transact-sql.md)  

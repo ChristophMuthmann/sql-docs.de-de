@@ -1,5 +1,5 @@
 ---
-title: Logische Operatoren (Transact-SQL) | Microsoft Docs
+title: Logische Operatoren (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -36,7 +36,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="logical-operators-transact-sql"></a>Logische Operatoren (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Logische Operatoren testen den Wahrheitswert einer Bedingung. Logische Operatoren, wie Vergleichsoperatoren, Zurückgeben einer **booleschen** -Datentyp, mit dem Wert TRUE, FALSE oder UNKNOWN.  
+  Logische Operatoren testen den Wahrheitswert einer Bedingung. Logische Operatoren wie Vergleichsoperatoren geben einen **booleschen** Datentyp mit dem Wert TRUE, FALSE oder UNKNOWN zurück.  
   
 |Operator|Bedeutung|  
 |--------------|-------------|  
@@ -48,10 +48,10 @@ ms.lasthandoff: 01/25/2018
 |[IN](../../t-sql/language-elements/in-transact-sql.md)|TRUE, falls der Operand mit einem der Elemente in einer Liste von Ausdrücken übereinstimmt.|  
 |[LIKE](../../t-sql/language-elements/like-transact-sql.md)|TRUE, falls der Operand einem Muster entspricht.|  
 |[NOT](../../t-sql/language-elements/not-transact-sql.md)|Kehrt den Wert eines booleschen Operators um.|  
-|[OR](../../t-sql/language-elements/or-transact-sql.md)|TRUE, falls mindestens einer der beiden booleschen Ausdrücke TRUE ergibt.|  
-|[EINIGE](../../t-sql/language-elements/some-any-transact-sql.md)|TRUE, falls mindestens einer der Vergleiche in der Menge TRUE ergibt.|  
+|[ ODER ](../../t-sql/language-elements/or-transact-sql.md)|TRUE, falls mindestens einer der beiden booleschen Ausdrücke TRUE ergibt.|  
+|[SOME](../../t-sql/language-elements/some-any-transact-sql.md)|TRUE, falls mindestens einer der Vergleiche in der Menge TRUE ergibt.|  
   
-## <a name="see-also"></a>Siehe auch  
- [Rangfolge von Operatoren &#40; Transact-SQL &#41;](../../t-sql/language-elements/operator-precedence-transact-sql.md)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Operator Precedence &#40;Transact-SQL&#41; (Operatorrangfolge (Transact-SQL))](../../t-sql/language-elements/operator-precedence-transact-sql.md)  
   
   

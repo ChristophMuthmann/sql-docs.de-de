@@ -1,5 +1,5 @@
 ---
-title: Aliasing (Azure SQL Data Warehouse, Parallel Data Warehouse) | Microsoft Docs
+title: Aliasing (Azure SQL Data Warehouse, Parallel Data Warehouse) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -27,9 +27,9 @@ ms.lasthandoff: 01/25/2018
 # <a name="aliasing-azure-sql-data-warehouse-parallel-data-warehouse"></a>Aliasing (Azure SQL Data Warehouse, Parallel Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  Aliasing ermöglicht es, den temporären Ersatz einer kurz und leicht zu merkenden Zeichenfolge anstelle eines Tabellen- oder Spaltennamens Verzeichnisnamens [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] oder [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] [!INCLUDE[DWsql](../../includes/dwsql-md.md)] Abfragen. Tabellenaliase werden häufig in JOIN-Abfragen verwendet werden, da die JOIN-Syntax vollqualifizierten Objektnamen erforderlich ist, wenn Sie auf Spalten verweisen.  
+  Aliasing ermöglicht das temporäre Ersetzen eines Tabellen- oder Spaltennamens in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]- oder [!INCLUDE[ssPDW](../../includes/sspdw-md.md)][!INCLUDE[DWsql](../../includes/dwsql-md.md)]-Abfragen durch eine kurze und leicht zu merkenden Zeichenfolge. Tabellenaliase werden häufig in JOIN-Abfragen verwendet, da die JOIN-Syntax vollqualifizierte Objektnamen erfordert, wenn sie auf Spalten verweist.  
   
- Aliase müssen es sich um einzelne Wörter mit Benennungsregeln Objekt sein. Weitere Informationen finden Sie unter "Benennungsregeln für Objekt" in der [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]. Aliase darf keine Leerzeichen enthalten und können nicht in einfache oder doppelte Anführungszeichen eingeschlossen werden.  
+ Aliase müssen einzelne Wörter sein, die die Objektbenennungsregeln erfüllen. Weitere Informationen finden Sie unter „Object Naming Rules“ (Objektbenennungsregeln) in [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]. Aliase dürfen keine Leerzeichen enthalten und nicht in einfache oder doppelte Anführungszeichen gesetzt werden.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,20 +39,20 @@ object_source [ AS ] alias
   
 ## <a name="arguments"></a>Argumente  
  *object_source*  
- Der Name der Quelltabelle oder Spalte.  
+ Der Name der Quelltabelle oder -spalte.  
   
  AS  
- Ein optionaler Alias Präposition. Bei der Arbeit mit Variablen Aliasing Bereich ist das AS-Schlüsselwort nicht zulässig.  
+ Eine optionale Aliaspräposition. Beim Aliasing von Bereichsvariablen ist das Schlüsselwort AS nicht zulässig.  
   
  *alias*  
- Der Name der gewünschten temporären Verweis für die Tabelle oder Spalte. Alle gültigen Objektnamen ein kann verwendet werden. Weitere Informationen finden Sie unter "Benennungsregeln für Objekt" in der [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].  
+ Der gewünschte temporäre Verweisname für die Tabelle oder Spalte. Alle gültigen Objektnamen können verwendet werden. Weitere Informationen finden Sie unter „Object Naming Rules“ (Objektbenennungsregeln) in [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].  
   
-## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] und[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- Das folgende Beispiel zeigt eine Abfrage mit mehreren Joins. Tabellen- und Spaltennamen Aliasing werden in diesem Beispiel veranschaulicht.  
+## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
+ Das folgende Beispiel zeigt eine Abfrage mit mehreren Joins. In diesem Beispiel wird das Aliasing sowohl von Tabellen als auch von Spalten veranschaulicht.  
   
--   Spaltenaliasing: Beide Spalten und Ausdrücke, die im Zusammenhang mit Spalten in der Auswahlliste sind als Alias in diesem Beispiel. `SalesTerritoryRegion AS SalesTR`Zeigt einen einfache Spaltenalias an. `Sum(SalesAmountQuota) AS TotalSales`Zeigt  
+-   Spaltenaliasing: In diesem Beispiel wird sowohl Spalten als auch Ausdrücken, die Spalten in der ausgewählten Liste haben, ein Alias zugeordnet. `SalesTerritoryRegion AS SalesTR` stellt einen einfachen Spaltenalias dar. `Sum(SalesAmountQuota) AS TotalSales` veranschaulicht  
   
--   Tabelle Aliasing: `dbo.DimSalesTerritory AS st` zeigt die Erstellung von der `st` alias für die `dbo.DimSalesTerritory` Tabelle.  
+-   Tabellenaliasing: `dbo.DimSalesTerritory AS st` zeigt die Erstellung des `st`-Alias für die `dbo.DimSalesTerritory`-Tabelle.  
   
 ```  
 -- Uses AdventureWorks  
@@ -67,7 +67,7 @@ GROUP BY LastName, SalesTerritoryRegion;
   
 ```  
   
- Das AS-Schlüsselwort kann ausgeschlossen werden, wie unten dargestellt, aber Sie wird häufig aus Gründen der Lesbarkeit.  
+ Das AS-Schlüsselwort kann wie unten dargestellt ausgeschlossen werden, wird aber häufig aus Gründen der Lesbarkeit verwendet.  
   
 ```  
 -- Uses AdventureWorks  
@@ -81,9 +81,9 @@ WHERE SalesPersonFlag = 1 AND SalesTerritoryRegion != N'NA'
 GROUP BY LastName, SalesTerritoryRegion;  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [INSERT &#40; Transact-SQL &#41;](../../t-sql/statements/insert-transact-sql.md)   
+ [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
  [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: SET CONTEXT_INFO (Transact-SQL) | Microsoft Docs
+title: SET CONTEXT_INFO (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
@@ -49,13 +49,13 @@ SET CONTEXT_INFO { binary_str | @binary_var }
   
 ## <a name="arguments"></a>Argumente  
  *binary_str*  
- Ist eine **binäre** -Konstante oder eine Konstante, die implizit in **binäre**, der aktuellen Sitzung oder Verbindung zugeordnet werden soll.  
+ Eine Konstante vom Typ **binary** oder eine implizit in **binary** konvertierbare Konstante, die der aktuellen Sitzung oder Verbindung zugeordnet werden soll.  
   
- **@***Binary_var*  
- Ist eine **Varbinary** oder **binäre** Variablen mit einem Kontextwert, der aktuellen Sitzung oder Verbindung zugeordnet werden soll.  
+ **@** *binary_var*  
+ Eine Variable vom Typ **varbinary** oder **binary** mit einem Kontextwert, der der aktuellen Sitzung oder Verbindung zugeordnet werden soll.  
   
-## <a name="remarks"></a>Hinweise  
- Die bevorzugte Vorgehensweise zum Abrufen von Kontextinformationen für die aktuelle Sitzung stellt die Verwendung der CONTEXT_INFO-Funktion dar. Informationen zum Sitzungskontext befindet sich auch in der **Context_info** Spalten in der folgenden Systemsichten:  
+## <a name="remarks"></a>Remarks  
+ Die bevorzugte Vorgehensweise zum Abrufen von Kontextinformationen für die aktuelle Sitzung stellt die Verwendung der CONTEXT_INFO-Funktion dar. Informationen zum Sitzungskontext werden zudem in den **context_info**-Spalten der folgenden Systemsichten gespeichert:  
   
 -   **sys.dm_exec_requests**  
   
@@ -65,7 +65,7 @@ SET CONTEXT_INFO { binary_str | @binary_var }
   
  SET CONTEXT_INFO kann nicht in einer benutzerdefinierten Funktion angegeben werden. Sie können mit SET CONTEXT_INFO keinen NULL-Wert angeben, da in den Sichten, die diese Werte enthalten, keine NULL-Werte zugelassen sind.  
   
- SET CONTEXT_INFO akzeptiert keine Ausdrücke, bei denen es sich nicht um Konstanten oder Variablennamen handelt. Die Kontextinformationen auf das Ergebnis eines Funktionsaufrufes festlegen möchten, müssen Sie zuerst das Ergebnis des Funktionsaufrufs in auch eine **binäre** oder **Varbinary** Variable.  
+ SET CONTEXT_INFO akzeptiert keine Ausdrücke, bei denen es sich nicht um Konstanten oder Variablennamen handelt. Wenn Sie die Kontextinformationen für das Ergebnis eines Funktionsaufrufes festlegen möchten, müssen Sie das Ergebnis des Funktionsaufrufes zuerst in einer Variablen vom Datentyp **binary** oder **varbinary** platzieren.  
   
  Wenn Sie SET CONTEXT_INFO in einer gespeicherten Prozedur oder einem Trigger ausführen, ist im Gegensatz zu anderen SET-Anweisungen der neue Wert für die Kontextinformationen persistent, nachdem die gespeicherte Prozedur oder der Trigger beendet wurden.  
   
@@ -84,7 +84,7 @@ GO
 ```  
   
 ### <a name="b-setting-context-information-by-using-a-function"></a>B. Festlegen von Kontextinformationen durch Verwenden einer Funktion  
- Im folgenden Beispiel wird veranschaulicht, wie mit der Ausgabe einer Funktion den Kontextwert festgelegt, in dem der Wert von der Funktion zuerst werden in platziert muss einem **binäre** Variable.  
+ Im folgenden Beispiel wird die Verwendung der Ausgabe einer Funktion zum Festlegen des Kontextwertes gezeigt, wobei der Wert aus der Funktion zunächst in einer Variablen vom Typ **binary** platziert werden muss.  
   
 ```  
 DECLARE @BinVar varbinary(128);  
@@ -95,10 +95,10 @@ SELECT CONTEXT_INFO() AS MyContextInfo;
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SET-Anweisungen (Transact-SQL)](../../t-sql/statements/set-statements-transact-sql.md)   
- [Sys. dm_exec_requests &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)   
- [Sys. dm_exec_sessions &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)   
- [CONTEXT_INFO &#40; Transact-SQL &#41;](../../t-sql/functions/context-info-transact-sql.md)  
+ [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)   
+ [sys.dm_exec_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)   
+ [CONTEXT_INFO &#40;Transact-SQL&#41;](../../t-sql/functions/context-info-transact-sql.md)  
   
   

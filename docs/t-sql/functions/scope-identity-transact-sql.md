@@ -1,5 +1,5 @@
 ---
-title: SCOPE_IDENTITY (Transact-SQL) | Microsoft Docs
+title: SCOPE_IDENTITY (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 07/06/2017
 ms.prod: sql-non-specified
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="scopeidentity-transact-sql"></a>SCOPE_IDENTITY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Gibt den letzten Identitätswert zurück, der in eine Identitätsspalte im selben Gültigkeitsbereich eingefügt wurde. Ein Gültigkeitsbereich ist ein Modul: eine gespeicherte Prozedur, ein Trigger, eine Funktion oder ein Batch. Wenn zwei Anweisungen in der gleichen gespeicherten Prozedur, Funktion oder -Batches befinden, sind sie daher im selben Bereich.  
+  Gibt den letzten Identitätswert zurück, der in eine Identitätsspalte im selben Gültigkeitsbereich eingefügt wurde. Ein Gültigkeitsbereich ist ein Modul: eine gespeicherte Prozedur, ein Trigger, eine Funktion oder ein Batch. Wenn sich daher zwei Anweisungen in der selben gespeicherten Prozedur, in derselben Funktion oder im selben Batch befinden, bindenden sie sich im selben Gültigkeitsbereich.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -50,22 +50,22 @@ SCOPE_IDENTITY()
 ## <a name="return-types"></a>Rückgabetypen  
  **numeric(38,0)**  
   
-## <a name="remarks"></a>Hinweise  
- SCOPE_IDENTITY, IDENT_CURRENT, und @@IDENTITY ähnliche Funktionen sind, da sie keine Werte zurückgeben, die in Identitätsspalten eingefügt werden.  
+## <a name="remarks"></a>Remarks  
+ Bei SCOPE_IDENTITY, IDENT_CURRENT und @@IDENTITY handelt es sich um ähnliche Funktionen, denn sie geben Werte zurück, die in Identitätsspalten eingefügt wurden.  
   
- IDENT_CURRENT ist nicht durch einen Gültigkeitsbereich oder eine Sitzung begrenzt, sondern auf eine angegebene Tabelle. IDENT_CURRENT gibt den für eine bestimmte Tabelle in einer beliebigen Sitzung und einem beliebigen Gültigkeitsbereich generierten Wert zurück. Weitere Informationen finden Sie unter [IDENT_CURRENT &#40; Transact-SQL &#41; ](../../t-sql/functions/ident-current-transact-sql.md).  
+ IDENT_CURRENT ist nicht durch einen Gültigkeitsbereich oder eine Sitzung begrenzt, sondern auf eine angegebene Tabelle. IDENT_CURRENT gibt den für eine bestimmte Tabelle in einer beliebigen Sitzung und einem beliebigen Gültigkeitsbereich generierten Wert zurück. Weitere Informationen finden Sie unter [IDENT_CURRENT &#40;Transact-SQL&#41;](../../t-sql/functions/ident-current-transact-sql.md).  
   
- SCOPE_IDENTITY und @@IDENTITY Zurückgeben der letzten Identity-Werte, die in einer beliebigen Tabelle in der aktuellen Sitzung generiert werden. SCOPE_IDENTITY gibt jedoch nur innerhalb des aktuellen Gültigkeitsbereichs eingefügten Werte. @@IDENTITY ist nicht auf einen bestimmten Gültigkeitsbereich begrenzt.  
+ SCOPE_IDENTITY und @@IDENTITY geben die letzten Identitätswerte zurück, die in einer beliebigen Tabelle in der aktuellen Sitzung generiert wurden. SCOPE_IDENTITY gibt jedoch nur im aktuellen Gültigkeitsbereich eingefügte Werte zurück, @@IDENTITY ist nicht auf einen bestimmten Gültigkeitsbereich begrenzt.  
   
  Beispiel: Es gibt zwei Tabellen, T1 und T2, und für T1 wurde ein INSERT-Trigger definiert. Wenn eine Zeile in T1 eingefügt wird, wird der Trigger ausgelöst und fügt eine Zeile in T2 ein. Dieses Szenario veranschaulicht zwei Gültigkeitsbereiche: die Einfügung für T1 und die Einfügung für T2 durch den Trigger.  
   
- Vorausgesetzt, dass T1 und T2 Identitätsspalten aufweisen,@IDENTITY und SCOPE_IDENTITY verschiedene Werte am Ende einer INSERT-Anweisung für T1 zurückgeben. @@IDENTITY gibt den letzten identitätsspaltenwert in einem beliebigen Gültigkeitsbereich in der aktuellen Sitzung eingefügt. Das ist der Wert, der in T2 eingefügt wurde. SCOPE_IDENTITY() gibt den IDENTITY-Wert, der in T1 eingefügt. Dies war die letzte Einfügung, die im selben Gültigkeitsbereich durchgeführt wurde. Die SCOPE_IDENTITY()-Funktion gibt den null-Wert zurück, wenn die Funktion aufgerufen wird, bevor INSERT-Anweisungen für eine Identitätsspalte im Gültigkeitsbereich auftreten.  
+ Wenn T1 und T2 Identitätsspalten aufweisen, geben @@IDENTITY und SCOPE_IDENTITY nach einer INSERT-Anweisung für T1 verschiedene Werte zurück. @@IDENTITY gibt den letzten Identitätsspaltenwert zurück, der in einem beliebigen Gültigkeitsbereich in der aktuellen Sitzung eingefügt wurde. Das ist der Wert, der in T2 eingefügt wurde. SCOPE_IDENTITY() gibt den IDENTITY-Wert zurück, der in T1 eingefügt wurde. Dies war die letzte Einfügung, die im selben Gültigkeitsbereich durchgeführt wurde. Die SCOPE_IDENTITY()-Funktion gibt den NULL-Wert zurück, wenn sie aufgerufen wird, bevor INSERT-Anweisungen für eine Identitätsspalte im Gültigkeitsbereich auftreten.  
   
  Fehlgeschlagene Anweisungen oder Transaktionen können die aktuelle Identität für eine Tabelle ändern und zu Lücken in den Identitätsspaltenwerten führen. Für den Identitätswert erfolgt kein Rollback, auch wenn für die Transaktion, die versuchte, den Wert in die Tabelle einzufügen, kein Commit ausgeführt wird. Wenn beispielsweise eine INSERT-Anweisung aufgrund einer IGNORE_DUP_KEY-Verletzung fehlschlägt, wird der aktuelle Identitätswert für die Tabelle trotzdem inkrementiert.  
   
 ## <a name="examples"></a>Beispiele  
   
-### <a name="a-using-identity-and-scopeidentity-with-triggers"></a>A. Mit@IDENTITY und SCOPE_IDENTITY mit Triggern  
+### <a name="a-using-identity-and-scopeidentity-with-triggers"></a>A. Verwenden von @@IDENTITY und SCOPE_IDENTITY mit Triggern  
  Im folgenden Beispiel werden zwei Tabellen, `TZ` und `TY`, sowie ein INSERT-Trigger für `TZ` erstellt. Wenn eine Zeile in die Tabelle `TZ` eingefügt wird, wird der Trigger (`Ztrig`) ausgelöst und fügt eine Zeile in `TY` ein.  
   
 ```sql  
@@ -80,7 +80,7 @@ INSERT TZ
   
 SELECT * FROM TZ;  
 ```     
-Resultset: Dies ist eine Tabelle TZ wie sieht.  
+Resultset: So sieht die Tabelle TZ aus.  
   
 ```  
 Z_id   Z_name  
@@ -99,7 +99,7 @@ INSERT TY (Y_name)
   
 SELECT * FROM TY;  
 ```   
-Resultset: Dies ist die Darstellung von "ty":  
+Resultset: So sieht die TY aus:  
 ```  
 Y_id  Y_name  
 ---------------  
@@ -108,7 +108,7 @@ Y_id  Y_name
 110   elevator  
 ```  
 
-Erstellen Sie den Trigger, der eine Zeile in Tabelle "ty" einfügt, wenn eine Zeile in Tabelle TZ eingefügt wird.  
+Erstellen Sie den Trigger, der eine Zeile in die Tabelle TY einfügt, wenn eine Zeile in Tabelle TZ eingefügt wird.  
 ```sql  
 CREATE TRIGGER Ztrig  
 ON TZ  
@@ -117,7 +117,7 @@ FOR INSERT AS
    INSERT TY VALUES ('')  
    END;  
 ```  
-Der Trigger ausgelöst, und ermitteln Sie welche Identity-Werte, die Sie abrufen, mit dem @@IDENTITY und SCOPE_IDENTITY-Funktionen.   
+Lösen Sie den Trigger aus, und bestimmen Sie, welche Identitätswerte Sie mit den @@IDENTITY and SCOPE_IDENTITY-Funktionen abrufen.   
 ```sql
 INSERT TZ VALUES ('Rosalie');  
   
@@ -139,10 +139,10 @@ SCOPE_IDENTITY
 115  
 ```  
   
-### <a name="b-using-identity-and-scopeidentity-with-replication"></a>B. Mit@IDENTITY und SCOPE_IDENTITY() mit Replikation  
+### <a name="b-using-identity-and-scopeidentity-with-replication"></a>B. Verwenden von @@IDENTITY und SCOPE_IDENTITY() mit Replikation  
  In den folgenden Beispielen wird veranschaulicht, wie `@@IDENTITY` und `SCOPE_IDENTITY()` für Einfügungen in einer Datenbank verwendet werden, die für die Mergereplikation veröffentlicht wird. Beide Tabellen in den Beispielen befinden sich in der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]-Beispieldatenbank: `Person.ContactType` wird nicht veröffentlicht, und `Sales.Customer` wird veröffentlicht. Mit der Mergereplikation werden Tabellen, die veröffentlicht werden, Trigger hinzugefügt. Aus diesem Grund kann `@@IDENTITY` den Wert aus dem Einfügevorgang in eine Replikationssystemtabelle zurückgeben statt aus dem Einfügevorgang in eine Benutzertabelle.  
   
- Die `Person.ContactType` Tabelle besitzt den maximalen Identitätswert von 20. Wenn Sie eine Zeile in die Tabelle einfügen, wird von `@@IDENTITY` und `SCOPE_IDENTITY()` derselbe Wert zurückgegeben.  
+ Die `Person.ContactType`-Tabelle besitzt den maximalen Identitätswert 20. Wenn Sie eine Zeile in die Tabelle einfügen, wird von `@@IDENTITY` und `SCOPE_IDENTITY()` derselbe Wert zurückgegeben.  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -182,7 +182,7 @@ GO
  89
  ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [@@IDENTITY &#40;Transact-SQL&#41;](../../t-sql/functions/identity-transact-sql.md)  
   
   

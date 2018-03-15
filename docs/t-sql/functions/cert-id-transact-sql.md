@@ -1,5 +1,5 @@
 ---
-title: CERT_ID (Transact-SQL) | Microsoft Docs
+title: CERT_ID (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -48,14 +48,14 @@ Cert_ID ( 'cert_name' )
 ```  
   
 ## <a name="arguments"></a>Argumente  
-**"** *Cert_name* **"**  
+**'** *cert_name* **'**  
 Der Name eines Zertifikats in der Datenbank.
   
 ## <a name="return-types"></a>Rückgabetypen
  **int**  
   
-## <a name="remarks"></a>Hinweise  
-Zertifikatsnamen werden in der [sys.certificates](../../relational-databases/system-catalog-views/sys-certificates-transact-sql.md) -Katalogsicht angezeigt.
+## <a name="remarks"></a>Remarks  
+Zertifikatsnamen werden in der [sys.certificates](../../relational-databases/system-catalog-views/sys-certificates-transact-sql.md)-Katalogsicht angezeigt.
   
 ## <a name="permissions"></a>Berechtigungen  
 Erfordert bestimmte Berechtigungen für das Zertifikat, und dem Aufrufer darf die VIEW DEFINITION-Berechtigung für das Zertifikat nicht verweigert worden sein.

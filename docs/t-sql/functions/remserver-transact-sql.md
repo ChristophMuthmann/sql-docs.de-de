@@ -1,5 +1,5 @@
 ---
-title: '@@REMSERVER (Transact-SQL) | Microsoft Docs'
+title: '@@REMSERVER (Transact-SQL) | Microsoft-Dokumentation'
 ms.custom: 
 ms.date: 09/18/2017
 ms.prod: sql-non-specified
@@ -51,10 +51,10 @@ ms.lasthandoff: 11/21/2017
 ```  
   
 ## <a name="return-types"></a>Rückgabetypen  
- **vom Datentyp nvarchar(128)**  
+ **nvarchar(128)**  
   
-## <a name="remarks"></a>Hinweise  
- @@REMSERVER ermöglicht eine gespeicherten Prozedur den Namen des Datenbankservers zu überprüfen, von dem die Prozedur ausgeführt wird.  
+## <a name="remarks"></a>Remarks  
+ @@REMSERVER ermöglicht einer gespeicherten Prozedur die Überprüfung des Namens des Datenbankservers, von dem aus die Prozedur ausgeführt wird.  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird die `usp_CheckServer`-Prozedur erstellt, die den Namen des Remoteservers zurückgibt.  
@@ -78,7 +78,7 @@ EXEC SEATTLE1...usp_CheckServer;
 LONDON2  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Konfigurationsfunktionen (Transact-SQL)](../../t-sql/functions/configuration-functions-transact-sql.md)   
  [Remoteserver](../../database-engine/configure-windows/remote-servers.md)  
   

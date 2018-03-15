@@ -1,5 +1,5 @@
 ---
-title: "Löschen von EXTERNEN DATEIFORMATS (Transact-SQL) | Microsoft Docs"
+title: DROP EXTERNAL FILE FORMAT (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-non-specified
@@ -29,7 +29,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="drop-external-file-format-transact-sql"></a>DROP EXTERNAL FILE FORMAT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
-  Entfernt ein externes Dateiformat PolyBase an.  
+  Entfernt ein externes PolyBase-Dateiformat.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,33 +43,33 @@ DROP EXTERNAL FILE FORMAT external_file_format_name
   
 ## <a name="arguments"></a>Argumente  
  *external_file_format_name*  
- Der Name des externen Dateiformats gelöscht.  
+ Der Name des zu löschenden externen Dateiformats.  
   
 ## <a name="metadata"></a>Metadaten  
- Zum Anzeigen einer Liste der externen Datei Formate verwenden die [sys.external_file_formats &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-external-file-formats-transact-sql.md) -Systemsicht.  
+ In der Systemansicht [sys.external_file_formats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-external-file-formats-transact-sql.md) finden Sie eine Liste mit den externen Dateiformaten.  
   
 ```  
 SELECT * FROM sys.external_file_formats;  
 ```  
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert ALTER eines beliebigen EXTERNEN DATEIFORMATS.  
+ Macht das ALTER ANY EXTERNAL FILE FORMAT erforderlich.  
   
 ## <a name="general-remarks"></a>Allgemeine Hinweise  
- Löschen ein externes Dateiformat, werden die externen Daten nicht entfernt.  
+ Durch das Löschen eines externen Dateiformats werden die externen Daten nicht entfernt.  
   
 ## <a name="locking"></a>Sperren  
- Akzeptiert eine gemeinsame Sperre für das Objekt der externen Datei-Format an.  
+ Akzeptiert eine gemeinsame Sperre für das Objekt im externen Dateiformat.  
   
 ## <a name="examples"></a>Beispiele  
   
-### <a name="a-using-basic-syntax"></a>A. Verwenden die grundlegende syntax  
+### <a name="a-using-basic-syntax"></a>A. Verwenden einer grundlegenden Syntax  
   
 ```  
 DROP EXTERNAL FILE FORMAT myfileformat;  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [CREATE EXTERNAL FILE FORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-file-format-transact-sql.md)  
   
   

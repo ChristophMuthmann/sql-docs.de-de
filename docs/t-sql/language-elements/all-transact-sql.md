@@ -1,5 +1,5 @@
 ---
-title: Alle (Transact-SQL) | Microsoft Docs
+title: ALL (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -51,13 +51,13 @@ scalar_expression { = | <> | != | > | >= | !> | < | <= | !< } ALL ( subquery )
   
 ## <a name="arguments"></a>Argumente  
  *scalar_expression*  
- Ist ein beliebiger gültiger [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md).  
+ Ein gültiger [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md)  
   
  { = | <> | != | > | >= | !> | < | <= | !< }  
- Ist ein Vergleichsoperator.  
+ Ein Vergleichsoperator  
   
  *subquery*  
- Eine Unterabfrage, die ein Resultset einer Spalte zurückgibt. Der Datentyp der zurückgegebenen Spalte muss den gleichen Datentyp wie der Datentyp des *"scalar_expression"*.  
+ Eine Unterabfrage, die ein Resultset einer Spalte zurückgibt. Der Datentyp der zurückgegebenen Spalte muss dem Datentyp von *scalar_expression* entsprechen.  
   
  Ist eine beschränkte SELECT-Anweisung, in der die ORDER BY-Klausel und das INTO-Schlüsselwort nicht zulässig sind.  
   
@@ -65,17 +65,17 @@ scalar_expression { = | <> | != | > | >= | !> | < | <= | !< } ALL ( subquery )
  **Boolean**  
   
 ## <a name="result-value"></a>Ergebniswert  
- Gibt "true" zurück, wenn der angegebene Vergleich "true" ist für alle Paare (*"scalar_expression"***,***X)*Wenn *x* ist ein Wert in der einspaltigen Resultset zurück, andernfalls "false".  
+ Gibt TRUE zurück, wenn der angegebene Vergleich für alle Paare (*scalar_expression***,***x)* TRUE ergibt, wenn *x* ein Wert im Einspaltensatz ist. Andernfalls wird FALSE zurückgegeben.  
   
-## <a name="remarks"></a>Hinweise  
- ALL erfordert die *"scalar_expression"* zu jedem Wert positiv verglichen, die von der Unterabfrage zurückgegeben wird. Für die Instanz, wenn die Unterabfrage die Werte 2 und 3 zurückgibt *"scalar_expression"* < = ALL (Unterabfrage) für "true" ausgewertet einen *"scalar_expression"* von 2. Wenn die Unterabfrage die Werte 2 und 3 zurückgibt *"scalar_expression"* = ALL (Unterabfrage) als "false" ausgewertet, da einige der Werte der Unterabfrage (der Wert von 3) die Kriterien des Ausdrucks nicht erfüllen.  
+## <a name="remarks"></a>Remarks  
+ ALL erfordert, dass der Vergleich von *scalar_expression* mit jedem der von der Unterabfrage zurückgegebenen Wert positiv ausfällt. Wenn die Unterabfrage beispielsweise die Werte 2 und 3 zurückgibt, ergibt *scalar_expression* <= ALL (Unterabfrage) für *scalar_expression* = 2 TRUE. Wenn die Unterabfrage beispielsweise die Werte 2 und 3 zurückgibt, ergibt *scalar_expression* = ALL (Unterabfrage) FALSE, da einige Werte der Unterabfrage (der Wert 3) die Kriterien des Ausdrucks nicht erfüllen.  
   
- Für Anweisungen, benötigen die *"scalar_expression"* zum einzigen Wert positiv verglichen, die von der Unterabfrage zurückgegeben wird, finden Sie unter [einige &#124; Alle &#40; Transact-SQL &#41; ](../../t-sql/language-elements/some-any-transact-sql.md).  
+ Anweisungen, die erfordern, dass *scalar_expression* mit nur einem von der Unterabfrage zurückgegebenen Wert positiv verglichen wird, finden Sie unter [SOME &#124; ANY &#40;Transact-SQL&#41;](../../t-sql/language-elements/some-any-transact-sql.md).  
   
- Dieses Thema bezieht sich auf ALL bei Verwendung mit einer Unterabfrage. Alle auch verwendet werden können [UNION](../../t-sql/language-elements/set-operators-union-transact-sql.md) und [wählen](../../t-sql/queries/select-transact-sql.md).  
+ Dieses Thema bezieht sich auf ALL bei Verwendung mit einer Unterabfrage. ALL kann auch mit [UNION](../../t-sql/language-elements/set-operators-union-transact-sql.md) und [SELECT](../../t-sql/queries/select-transact-sql.md) verwendet werden.  
   
 ## <a name="examples"></a>Beispiele  
- Das folgende Beispiel erstellt eine gespeicherte Prozedur, der bestimmt, ob alle Komponenten einer angegebenen `SalesOrderID` in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] Datenbank in die angegebene Anzahl von Tagen gefertigt werden kann. Im Beispiel wird eine Unterabfrage verwendet, um eine Liste mit der Anzahl des `DaysToManufacture`-Wertes für alle Komponenten der bestimmten `SalesOrderID` zu erstellen. Anschließend wird bestätigt, dass alle `DaysToManufacture` innerhalb der Anzahl der angegebenen Tage liegen.  
+ Im folgenden Beispiel wird eine gespeicherte Prozedur erstellt, die bestimmt, ob alle Komponenten einer angegebenen `SalesOrderID` in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Datenbank innerhalb der angegebenen Anzahl von Tagen gefertigt werden können. Im Beispiel wird eine Unterabfrage verwendet, um eine Liste mit der Anzahl des `DaysToManufacture`-Wertes für alle Komponenten der bestimmten `SalesOrderID` zu erstellen. Anschließend wird bestätigt, dass alle `DaysToManufacture` innerhalb der Anzahl der angegebenen Tage liegen.  
   
 ```  
 -- Uses AdventureWorks  
@@ -115,9 +115,9 @@ EXECUTE DaysToBuild 49080, 1 ;
   
  `Some items for this order cannot be manufactured in specified number of days or less.`  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)   
- [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [Ausdrücke &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [Integrierte Funktionen &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
  [LIKE &#40;Transact-SQL&#41;](../../t-sql/language-elements/like-transact-sql.md)   
  [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   

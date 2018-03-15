@@ -1,5 +1,5 @@
 ---
-title: Erstellen Sie TYPE (Transact-SQL) | Microsoft Docs
+title: CREATE TYPE (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 04/11/2017
 ms.prod: sql-non-specified
@@ -43,12 +43,12 @@ ms.lasthandoff: 11/21/2017
 # <a name="create-type-transact-sql"></a>CREATE TYPE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Erstellt einen Aliasdatentyp oder einen benutzerdefinierten Typ in der aktuellen Datenbank in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Die Implementierung eines Aliasdatentyps basiert auf einem systemeigenen Typ von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ein benutzerdefinierten Typ wird durch eine Klasse einer Assembly im implementiert die [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] common Language Runtime (CLR). Um einen benutzerdefinierten Typ an seine Implementierung zu binden, muss die CLR-Assembly, die die Implementierung des Typs enthält zunächst in registriert werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mit [CREATE ASSEMBLY](../../t-sql/statements/create-assembly-transact-sql.md).  
+  Erstellt einen Aliasdatentyp oder einen benutzerdefinierten Typ in der aktuellen Datenbank in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Die Implementierung eines Aliasdatentyps basiert auf einem systemeigenen Typ von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ein benutzerdefinierter Typ wird durch eine Klasse einer Assembly in der Common Language Runtime (CLR) von [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] implementiert. Um einen benutzerdefinierten Typ an seine Implementierung zu binden, muss die CLR-Assembly, die die Implementierung des Typs enthält, zuerst in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mit [CREATE ASSEMBLY](../../t-sql/statements/create-assembly-transact-sql.md) registriert werden.  
   
- Die Option zum Ausführen von CLR-Code ist standardmäßig in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deaktiviert. Erstellen, ändern und Löschen von Datenbankobjekten, die auf verwaltete Codemodule verweisen, aber diese Verweise werden nicht ausgeführt, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , sofern die [Option Clr enabled](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md) aktiviert ist, mithilfe von [Sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
+ Die Option zum Ausführen von CLR-Code ist standardmäßig in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deaktiviert. Sie können Datenbankobjekte, die auf verwaltete Codemodule verweisen, erstellen, ändern und löschen. Diese Verweise werden jedoch nur dann in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt, wenn die Option [clr enabled](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md) mithilfe von [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) aktiviert wird.  
  
 > [!NOTE]  
->  Die .NET Framework-CLR-Integration in SQL Server wird in diesem Thema erläutert. CLR-Integration gilt nicht für Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
+>  Die Integration der .NET Framework-CLR in SQL Server wird in diesem Thema erläutert. Die Integration der CLR gilt nicht für Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -168,108 +168,108 @@ column_name <data_type>
  *schema_name*  
  Der Name des Schemas, dem der Aliasdatentyp oder benutzerdefinierte Typ angehört.  
   
- *TYPE_NAME*  
- Der Name des Aliasdatentyps oder benutzerdefinierten Datentyps. Typnamen müssen den Regeln für entsprechen [Bezeichner](../../relational-databases/databases/database-identifiers.md).  
+ *type_name*  
+ Der Name des Aliasdatentyps oder benutzerdefinierten Datentyps. Typnamen müssen den Regeln für [Bezeichner](../../relational-databases/databases/database-identifiers.md) entsprechen.  
   
  *base_type*  
- Ist die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bereitgestellte Datentyp, auf denen der Aliasdatentyp basiert. *Base_type* ist **Sysname**, hat keinen Standardwert und kann die folgenden Werte sind möglich:  
+ Ist der von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bereitgestellte Datentyp, auf dem der Aliasdatentyp basiert. *base_type* ist vom Datentyp **sysname** und hat keinen Standardwert. Folgende Werte sind möglich:  
   
 |||||  
 |-|-|-|-|  
-|**bigint**|**Binär (**  *n*  **)**|**bit**|**Char (**  *n*  **)**|  
+|**bigint**|**binary(** *n* **)**|**bit**|**char(** *n* **)**|  
 |**Datum**|**datetime**|**datetime2**|**datetimeoffset**|  
 |**decimal**|**float**|**image**|**int**|  
-|**money**|**NCHAR (**  *n*  **)**|**ntext**|**numeric**|  
-|**Nvarchar (**  *n*  &#124; **max)**|**real**|**smalldatetime**|**smallint**|  
+|**money**|**nchar(** *n* **)**|**ntext**|**numeric**|  
+|**nvarchar(** *n* &#124; **max)**|**real**|**smalldatetime**|**smallint**|  
 |**smallmoney**|**sql_variant**|**text**|**Uhrzeit**|  
-|**tinyint**|**uniqueidentifier**|**Varbinary (**  *n*  &#124; **max)**|**Varchar (**  *n*  &#124; **max)**|  
+|**tinyint**|**uniqueidentifier**|**varbinary(** *n* &#124; **max)**|**varchar(** *n* &#124; **max)**|  
   
- *Base_type* kann außerdem jedes Synonym für Datentypen, das einem dieser Systemdatentypen zugeordnet, sein.  
+ *base_type* kann außerdem jedes Synonym für Datentypen sein, das einem dieser Systemdatentypen zugeordnet wird.  
   
  *precision*  
- Für **decimal** oder **numerischen**, ist eine nicht Negative ganze Zahl, die die maximale Gesamtanzahl von Dezimalstellen angibt, nach links und rechts vom Dezimaltrennzeichen gespeichert werden können. Weitere Informationen finden Sie unter ["Decimal und Numeric" &#40; Transact-SQL &#41; ](../../t-sql/data-types/decimal-and-numeric-transact-sql.md).  
+ Für **decimal** oder **numeric**: Eine nicht negative ganze Zahl, die die maximale Anzahl von Dezimalstellen angibt, die vor und nach dem Dezimaltrennzeichen gespeichert werden können. Weitere Informationen finden Sie unter [decimal und numeric &#40;Transact-SQL&#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md).  
   
  *scale*  
- Für **decimal** oder **numerischen**, ist eine nicht Negative ganze Zahl, der die maximale Anzahl von Dezimalstellen angibt, die rechts neben dem Dezimalzeichen gespeichert werden können, und er muss kleiner oder gleich der Genauigkeit . Weitere Informationen finden Sie unter ["Decimal und Numeric" &#40; Transact-SQL &#41; ](../../t-sql/data-types/decimal-and-numeric-transact-sql.md).  
+ Für **decimal** oder **numeric**: Eine nicht negative ganze Zahl, die die maximale Anzahl von Dezimalstellen angibt, die nach dem Dezimalzeichen gespeichert werden können. Diese Zahl muss kleiner oder gleich der Gesamtzahl der Stellen sein. Weitere Informationen finden Sie unter [decimal und numeric &#40;Transact-SQL&#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md).  
   
  **NULL** | NOT NULL  
  Gibt an, ob für den Typ NULL-Werte zulässig sind. Wird keine Angabe gemacht, ist NULL der Standardwert.  
   
- *AssemblyName*  
+ *assembly_name*  
  **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Gibt an, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Assembly, die die Implementierung des benutzerdefinierten Typs in der common Language Runtime verweist. *Assembly_name* übereinstimmen, eine vorhandene Assembly in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in der aktuellen Datenbank.  
+ Gibt die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Assembly an, die auf die Implementierung des benutzerdefinierten Typs in der Common Language Runtime (CLR) verweist. *assembly_name* sollte einer vorhandenen Assembly in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in der aktuellen Datenbank entsprechen.  
   
 > [!NOTE]  
 >  EXTERNAL_NAME ist in einer eigenständigen Datenbank nicht verfügbar.  
   
- **[.** *CLASS_NAME***]**   
+ **[.** *class_name*  **]**  
  **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Gibt die Klasse innerhalb der Assembly an, die den benutzerdefinierten Typ implementiert. *CLASS_NAME* muss ein gültiger Bezeichner sein und als Klasse in der Assembly mit Assemblysichtbarkeit vorhanden sein. *CLASS_NAME* wird Groß-/Kleinschreibung beachtet, unabhängig von der datenbanksortierung, und muss genau dem Klassennamen in der entsprechenden Assembly entsprechen. Der Klassenname einen Namespace qualifizierten Namen in eckige Klammern eingeschlossen sein kann (**[]**) Wenn die Programmiersprache ab, die zum Schreiben der Klasse verwendet wird, das Konzept von Namespaces, z. B. c# verwendet. Wenn *Class_name* nicht angegeben ist, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird angenommen, sie entspricht dem *Type_name*.  
+ Gibt die Klasse innerhalb der Assembly an, die den benutzerdefinierten Typ implementiert. *class_name* muss ein gültiger Bezeichner sein und als Klasse mit Assemblysichtbarkeit in der Assembly vorhanden sein. Bei *class_name* muss unabhängig von der Datenbanksortierung die Groß-/Kleinschreibung beachtet werden, und der Wert muss genau dem Klassennamen in der entsprechenden Assembly entsprechen. Der Klassenname kann ein mit einem Namespace qualifizierter Name sein, der in eckigen Klammern (**[ ]**) steht, wenn die Programmiersprache, die zum Schreiben der Klasse verwendet wird, das Konzept von Namespaces verwendet, wie z.B. C#. Wenn *class_name* nicht angegeben ist, geht [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] davon aus, dass der Wert mit *type_name* identisch ist.  
   
- \<Column_definition >  
+ \<column_definition>  
  Definiert die Spalten für einen benutzerdefinierten Tabellentyp.  
   
- \<Datentyp >  
- Definiert die Datentypen in einer Spalten für einen benutzerdefinierten Tabellentyp. Weitere Informationen zu Datentypen finden Sie unter [Datentypen &#40; Transact-SQL &#41; ](../../t-sql/data-types/data-types-transact-sql.md). Weitere Informationen zu Tabellen finden Sie unter [CREATE TABLE &#40; Transact-SQL &#41; ](../../t-sql/statements/create-table-transact-sql.md).  
+ \<data type>  
+ Definiert die Datentypen in einer Spalten für einen benutzerdefinierten Tabellentyp. Weitere Informationen zu Datentypen finden Sie unter [Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md). Weitere Informationen zu Tabellen finden Sie unter [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md).  
   
- \<Column_constraint >  
- Definiert die Spalteneinschränkungen für einen benutzerdefinierten Tabellentyp. Unterstützte Einschränkungen schließen PRIMARY KEY, UNIQUE und CHECK ein. Weitere Informationen zu Tabellen finden Sie unter [CREATE TABLE &#40; Transact-SQL &#41; ](../../t-sql/statements/create-table-transact-sql.md).  
+ \<column_constraint>  
+ Definiert die Spalteneinschränkungen für einen benutzerdefinierten Tabellentyp. Unterstützte Einschränkungen schließen PRIMARY KEY, UNIQUE und CHECK ein. Weitere Informationen zu Tabellen finden Sie unter [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md).  
   
- \<Computed_column_definition >  
- Definiert einen berechneten Spaltenausdruck in einem benutzerdefinierten Tabellentyp als Spalte. Weitere Informationen zu Tabellen finden Sie unter [CREATE TABLE &#40; Transact-SQL &#41; ](../../t-sql/statements/create-table-transact-sql.md).  
+ \<computed_column_definition>  
+ Definiert einen berechneten Spaltenausdruck in einem benutzerdefinierten Tabellentyp als Spalte. Weitere Informationen zu Tabellen finden Sie unter [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md).  
   
- \<Table_constraint >  
+ \<table_constraint>  
  Definiert eine Spalteneinschränkung für einen benutzerdefinierten Tabellentyp. Unterstützte Einschränkungen schließen PRIMARY KEY, UNIQUE und CHECK ein.  
   
- \<Index_option >  
- Gibt die Fehlerantwort auf doppelte Schlüsselwerte beim Einfügen mehrerer Zeilen für einen eindeutigen gruppierten oder einen eindeutigen nicht gruppierten Index an. Weitere Informationen zu Indexoptionen finden Sie unter [CREATE INDEX &#40; Transact-SQL &#41; ](../../t-sql/statements/create-index-transact-sql.md).  
+ \<index_option>  
+ Gibt die Fehlerantwort auf doppelte Schlüsselwerte beim Einfügen mehrerer Zeilen für einen eindeutigen gruppierten oder einen eindeutigen nicht gruppierten Index an. Weitere Informationen zu Indexoptionen finden Sie unter [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).  
   
  INDEX  
  Sie müssen Spalten- und Tabellenindizes als Teil der CREATE TABLE-Anweisung angeben. CREATE INDEX und DROP INDEX werden für speicheroptimierte Tabellen nicht unterstützt.  
   
  MEMORY_OPTIMIZED  
- **Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **Gilt für:** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Gibt an, ob der Tabellentyp speicheroptimiert ist. Diese Option ist standardmäßig deaktiviert; die Tabelle (der Tabellentyp) ist keine speicheroptimierte Tabelle (kein speicheroptimierter Tabellentyp). Speicheroptimierte Tabellentypen sind speicheroptimierte Benutzertabellen, deren Schema auf dem Datenträger ähnlich anderen Benutzertabellen beibehalten wird.  
   
  BUCKET_COUNT  
- **Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **Gilt für:** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
- Gibt die Anzahl der Buckets an, die im Hashindex erstellt werden sollen. Der maximale Wert für BUCKET_COUNT in Hashindizes beträgt 1.073.741.824. Weitere Informationen zu bucketanzahlen finden Sie unter [Indizes für Speicheroptimierte Tabellen](../../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md). *Bucket_count* ist ein erforderliches Argument.  
+ Gibt die Anzahl der Buckets an, die im Hashindex erstellt werden sollen. Der maximale Wert für BUCKET_COUNT in Hashindizes beträgt 1.073.741.824. Weitere Informationen zu Indizes für speicheroptimierte Tabellen finden Sie unter [Indexes for Memory-Optimized Tables (Indizes für speicheroptimierte Tabellen)](../../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md). *bucket_count* ist ein erforderliches Argument.  
   
  HASH  
- **Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **Gilt für:** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
- Gibt an, dass ein HASH-Index erstellt wird. Hash-Indizes werden nur für Speicheroptimierte Tabellen unterstützt.  
+ Gibt an, dass ein HASH-Index erstellt wird. Hashindizes werden nur für speicheroptimierte Tabellen unterstützt.  
   
-## <a name="remarks"></a>Hinweise  
- Die Klasse der Assembly, auf das verweist *Assembly_name*, und ihre Methoden sollten alle Anforderungen zum Implementieren eines benutzerdefinierten Typs in erfüllen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Weitere Informationen zu diesen Anforderungen finden Sie unter [benutzerdefinierte CLR-Typen](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md).  
+## <a name="remarks"></a>Remarks  
+ Die Klasse der Assembly, auf die in *assembly_name* verwiesen wird, und ihre Methoden sollten alle Anforderungen zum Implementieren eines benutzerdefinierten Typs in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erfüllen. Weitere Informationen zu diesen Anforderungen finden Sie unter [CLR User-Defined Types (Benutzerdefinierte CLR-Typen)](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md).  
   
  Noch einige zusätzliche Überlegungen:  
   
 -   Die Klasse kann überlastete Methoden umfassen, aber diese Methoden können nur innerhalb von verwaltetem Code aufgerufen werden und nicht aus [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
--   Irgendwelche statischen Member müssen deklariert werden, als **const** oder **Readonly** Wenn *Assembly_name* SAFE oder EXTERNAL_ACCESS festgelegt ist.  
+-   Alle statischen Elemente müssen als **const** oder **readonly** deklariert werden, wenn für *assembly_name* entweder SAFE oder EXTERNAL_ACCESS festgelegt wurde.  
   
  Innerhalb einer Datenbank kann nur ein benutzerdefinierter Typ für einen angegebenen Typ registriert werden, der in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] von der CLR hochgeladen wurde. Wenn ein benutzerdefinierter Typ für einen CLR-Typ erstellt wurde, für den in der Datenbank bereits ein benutzerdefinierter Typ vorhanden ist, schlägt CREATE TYPE fehl und gibt einen Fehler aus. Diese Einschränkung ist erforderlich, um eine Mehrdeutigkeit bei der Zuordnung des SQL-Typs zu vermeiden, wenn ein CLR-Typ mehr als einem benutzerdefinierten Typ zugeordnet werden kann.  
   
- Wenn eine Mutatormethode im Typ nicht zurückgibt *"void"*, die CREATE TYPE-Anweisung wird nicht ausgeführt.  
+ Gibt eine Mutatormethode im Typ nicht *void* zurück, wird die CREATE TYPE-Anweisung nicht ausgeführt.  
   
  Zum Ändern eines benutzerdefinierten Typs müssen Sie den Typ mit einer DROP TYPE-Anweisung löschen und ihn dann erneut erstellen.  
   
- Im Gegensatz zu benutzerdefinierten Typen, die mit erstellt werden **Sp_addtype**, **öffentlichen** Datenbankrolle wird nicht automatisch gewährt, REFERENCES-Berechtigung für Typen, die mithilfe von CREATE TYPE erstellt werden. Diese Berechtigung muss separat erteilt werden.  
+ Im Gegensatz zu benutzerdefinierten Typen, die mit **sp_addtype** erstellt wurden, wird der Datenbankrolle **public** nicht automatisch die REFERENCES-Berechtigung für Typen erteilt, die mit CREATE TYPE erstellt wurden. Diese Berechtigung muss separat erteilt werden.  
   
- In benutzerdefinierten Tabellentypen strukturierte benutzerdefinierte Typen, die in verwendet werden *Column_name* \<Datentyp > sind Teil des Datenbankbereichs-Schema in dem der Tabellentyp definiert wird. Um auf strukturierte benutzerdefinierte Typen in einem anderen Bereich innerhalb der Datenbank zuzugreifen, verwenden Sie zweiteilige Namen.  
+ Strukturierte benutzerdefinierte Typen, die in *column_name* \<data type> verwendet werden, gehören in benutzerdefinierten Tabellentypen zum Bereich des Datenbankschemas, in dem der Tabellentyp definiert wird. Um auf strukturierte benutzerdefinierte Typen in einem anderen Bereich innerhalb der Datenbank zuzugreifen, verwenden Sie zweiteilige Namen.  
   
  In benutzerdefinierten Tabellentypen muss der Primärschlüssel für berechnete Spalten PERSISTED und NOT NULL sein.  
   
 ## <a name="memory-optimized-table-types"></a>Speicheroptimierte Tabellentypen  
- Ab [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] kann die Verarbeitung von Daten in einem Tabellentyp im Primärspeicher und nicht auf dem Datenträger erfolgen. Weitere Informationen finden Sie unter [In-Memory OLTP &#40;Arbeitsspeicheroptimierung&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md). Codebeispiele, die zum Erstellen von speicheroptimierten Tabellentypen veranschaulichen, finden Sie unter [Erstellen einer speicheroptimierten Tabelle und einer systemintern kompilierten gespeicherten Prozedur](../../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md).  
+ Ab [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] kann die Verarbeitung von Daten in einem Tabellentyp im Primärspeicher und nicht auf dem Datenträger erfolgen. Weitere Informationen finden Sie unter [In-Memory OLTP &#40;Arbeitsspeicheroptimierung&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md). Codebeispiele, die das Erstellen speicheroptimierter Tabellentypen veranschaulichen, finden Sie unter [Erstellen einer speicheroptimierten Tabelle und einer systemintern kompilierten gespeicherten Prozedur](../../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md).  
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert die CREATE TYPE-Berechtigung für die aktuelle Datenbank und die ALTER-Berechtigung für *schema_name*. Wenn *schema_name* nicht angegeben wird, gelten die Standardregeln für die Namensauflösung, um das Schema für den aktuellen Benutzer zu bestimmen. Wenn *Assembly_name* angegeben wird, ein Benutzer muss Besitzer der Assembly oder darauf REFERENCES-Berechtigung haben.  
+ Erfordert die CREATE TYPE-Berechtigung für die aktuelle Datenbank und die ALTER-Berechtigung für *schema_name*. Wenn *schema_name* nicht angegeben wird, gelten die Standardregeln für die Namensauflösung, um das Schema für den aktuellen Benutzer zu bestimmen. Wird *assembly_name* angegeben, muss ein Benutzer entweder Besitzer der Assembly sein oder die REFERENCES-Berechtigung für die Assembly besitzen.  
   
 ## <a name="examples"></a>Beispiele  
   
@@ -282,7 +282,7 @@ FROM varchar(11) NOT NULL ;
 ```  
   
 ### <a name="b-creating-a-user-defined-type"></a>B. Erstellen eines benutzerdefinierten Typs  
- Das folgende Beispiel erstellt einen Typ `Utf8String` , die auf Klasse verweist `utf8string` in der Assembly `utf8string`. Vor dem Erstellen des Typs wird die Assembly `utf8string` in der lokalen Datenbank registriert. Ersetzen Sie den binären Teil der CREATE ASSEMBLY-Anweisung durch eine gültige Beschreibung.  
+ Im folgenden Beispiel wird der Typ `Utf8String` erstellt, der auf die Klasse `utf8string` in der Assembly `utf8string` verweist. Vor dem Erstellen des Typs wird die Assembly `utf8string` in der lokalen Datenbank registriert. Ersetzen Sie den binären Teil der CREATE ASSEMBLY-Anweisung durch eine gültige Beschreibung.  
   
 **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
@@ -297,7 +297,7 @@ GO
 ```  
   
 ### <a name="c-creating-a-user-defined-table-type"></a>C. Erstellen eines benutzerdefinierten Tabellentyps  
- Das folgende Beispiel zeigt, wie ein benutzerdefinierter Tabellentyp mit zwei Spalten erstellt wird: Weitere Informationen zum Erstellen und Verwenden von Tabellenwertparametern finden Sie unter [Tabellenwertparametern &#40; Datenbankmodul &#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md).  
+ Das folgende Beispiel zeigt, wie ein benutzerdefinierter Tabellentyp mit zwei Spalten erstellt wird: Weitere Informationen zum Erstellen und Verwenden von Tabellenwertparametern finden Sie unter [Use Table-Valued Parameters &#40;Database Engine&#41; (Verwenden von Tabellenwertparametern &#40;Datenbank-Engine&#41;)](../../relational-databases/tables/use-table-valued-parameters-database-engine.md).  
   
 ```  
 CREATE TYPE LocationTableType AS TABLE   
@@ -306,9 +306,9 @@ CREATE TYPE LocationTableType AS TABLE
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Erstellen Sie die ASSEMBLY &#40; Transact-SQL &#41;](../../t-sql/statements/create-assembly-transact-sql.md)   
- [DROP-Typ &#40; Transact-SQL &#41;](../../t-sql/statements/drop-type-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [CREATE ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/create-assembly-transact-sql.md)   
+ [DROP TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-type-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   

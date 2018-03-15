@@ -1,5 +1,5 @@
 ---
-title: REVOKE-Datenbankweiter Anmeldeinformationen (Transact-SQL) | Microsoft Docs
+title: "REVOKE (Datenbankweit gültige Anmeldeinformationen) (Transact-SQL) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 12/16/2016
 ms.prod: sql-non-specified
@@ -32,10 +32,10 @@ ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="revoke-database-scoped-credential-transact-sql"></a>REVOKE-Datenbankweiter Anmeldeinformationen (Transact-SQL)
+# <a name="revoke-database-scoped-credential-transact-sql"></a>REVOKE (Datenbankweit gültige Anmeldeinformationen) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
-  Hebt Berechtigungen für datenbankweit gültigen Anmeldeinformationen.  
+  Widerruft Berechtigungen für datenbankweit gültige Anmeldeinformationen.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -57,11 +57,11 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 > [!IMPORTANT]  
 >  Falls der Prinzipal die angegebene Berechtigung ohne GRANT OPTION besitzt, wird die Berechtigung selbst aufgehoben.  
   
- *Berechtigung*  
- Gibt eine Berechtigung aufgehoben werden kann, die datenbankweit gültigen Anmeldeinformationen. Unten aufgeführt.  
+ *permission*  
+ Gibt eine Berechtigung an, die für die datenbankweit gültige Anmeldeinformationen aufgehoben werden kann. Unten aufgeführt.  
   
- ON Zertifikat **::***Credential_name*  
- Gibt die datenbankweite Anmeldeinformationen für die die Berechtigung aufgehoben wird. Der Bereichsqualifizierer "::" ist erforderlich.  
+ ON CERTIFICATE **::***credential_name*  
+ Gibt die datenbankweit gültigen Anmeldeinformationen an, für die die Berechtigung aufgehoben wird. Der Bereichsqualifizierer "::" ist erforderlich.  
   
  *database_principal*  
  Gibt den Prinzipal an, für den die Berechtigung aufgehoben wird. Einer der folgenden Typen:  
@@ -88,7 +88,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 > [!CAUTION]  
 >  Durch ein kaskadiertes Aufheben einer Berechtigung, die mit GRANT OPTION erteilt wurde, werden sowohl GRANT als auch DENY für diese Berechtigung aufgehoben.  
   
- AS *Revoking_principal*  
+ AS *revoking_principal*  
  Gibt einen Prinzipal an, von dem der Prinzipal, der diese Abfrage ausführt, sein Recht zum Aufheben der Berechtigung ableitet. Einer der folgenden Typen:  
   
 -   Datenbankbenutzer  
@@ -107,10 +107,10 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
   
 -   Keinem Serverprinzipal zugeordneter Datenbankbenutzer.  
   
-## <a name="remarks"></a>Hinweise  
- Datenbankweit gültigen Anmeldeinformationen ist eine Datenbankebene sicherungsfähiges Element in der Datenbank, die das übergeordnete Element in der Berechtigungshierarchie ist enthalten. Die spezifischsten und restriktivsten Berechtigungen, die für datenbankweit gültigen Anmeldeinformationen aufgehoben werden können sind aufgeführt, zusammen mit den allgemeineren Berechtigungen, die sie implizit enthalten.  
+## <a name="remarks"></a>Remarks  
+ Datenbankweit gültige Anmeldeinformationen sind ein sicherungsfähiges Element auf Datenbankebene in der Datenbank, die das übergeordnete Element in der Berechtigungshierarchie ist. Die spezifischsten und restriktivsten Berechtigungen, die für datenbankweit gültige Anmeldeinformationen aufgehoben werden können, sind im Folgenden aufgeführt, zusammen mit den allgemeineren Berechtigungen, die sie implizit enthalten.  
   
-|Datenbankweit gültige Credential-Berechtigung|Impliziert durch die datenbankweite Credential-Berechtigung|Impliziert durch Datenbankberechtigung|  
+|Berechtigung für datenbankweit gültige Anmeldeinformationen|Impliziert durch die Berechtigung für datenbankweit gültige Anmeldeinformationen|Impliziert durch Datenbankberechtigung|  
 |----------------------------|---------------------------------------|------------------------------------|  
 |CONTROL|CONTROL|CONTROL|  
 |TAKE OWNERSHIP|CONTROL|CONTROL|  
@@ -119,12 +119,12 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert die CONTROL-Berechtigung für die datenbankbezogenen Anmeldeinformationen.  
+ Erfordert die CONTROL-Berechtigung für die datenbankweit gültigen Anmeldeinformationen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [REVOKE (Transact-SQL)](../../t-sql/statements/revoke-transact-sql.md)      
- [GRANT datenbankweit gültige Anmeldeinformationen (Transact-SQL)](../../t-sql/statements/grant-database-scoped-credential-transact-sql.md)   
- [VERWEIGERTE datenbankweit gültige Anmeldeinformationen (Transact-SQL)](../../t-sql/statements/deny-database-scoped-credential-transact-sql.md)   
+ [GRANT (Datenbankweit gültige Anmeldeinformationen) (Transact-SQL)](../../t-sql/statements/grant-database-scoped-credential-transact-sql.md)   
+ [DENY (Datenbankweit gültige Anmeldeinformationen) (Transact-SQL)](../../t-sql/statements/deny-database-scoped-credential-transact-sql.md)   
  [Berechtigungen &#40;Datenbankmodul&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [Prinzipale &#40;Datenbankmodul&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [Verschlüsselungshierarchie](../../relational-databases/security/encryption/encryption-hierarchy.md)  

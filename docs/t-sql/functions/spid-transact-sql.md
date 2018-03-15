@@ -1,5 +1,5 @@
 ---
-title: '@@SPID (Transact-SQL) | Microsoft Docs'
+title: '@@SPID (Transact-SQL) | Microsoft-Dokumentation'
 ms.custom: 
 ms.date: 09/18/2017
 ms.prod: sql-non-specified
@@ -53,8 +53,8 @@ ms.lasthandoff: 11/21/2017
 ## <a name="return-types"></a>Rückgabetypen  
  **smallint**  
   
-## <a name="remarks"></a>Hinweise  
- @@SPID dienen zum Identifizieren des aktuellen Benutzerprozesses in der Ausgabe von **Sp_who**.  
+## <a name="remarks"></a>Remarks  
+ @@SPID kann zur Identifikation des aktuellen Benutzerprozesses in der Ausgabe von **sp_who** verwendet werden.  
   
 ## <a name="examples"></a>Beispiele  
  Dieses Beispiel gibt die Sitzungs-ID, den Anmeldenamen und den Benutzernamen für den aktuellen Benutzerprozess zurück.  
@@ -71,16 +71,16 @@ ID     Login Name                     User Name
 54     SEATTLE\joanna                 dbo                             
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- In diesem Beispiel gibt die [!INCLUDE[ssDW](../../includes/ssdw-md.md)] Sitzungs-ID, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Sitzungs-ID von Knoten, Anmeldename und Benutzernamen für den aktuellen Benutzerprozess zu steuern.  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
+ Dieses Beispiel gibt die [!INCLUDE[ssDW](../../includes/ssdw-md.md)]-Sitzungs-ID, die Sitzungs-ID des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Steuerknotens, den Anmeldenamen und den Benutzernamen für den aktuellen Benutzerprozess zurück.  
   
 ```  
 SELECT SESSION_ID() AS ID, @@SPID AS 'Control ID', SYSTEM_USER AS 'Login Name', USER AS 'User Name';  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Konfigurationsfunktionen](../../t-sql/functions/configuration-functions-transact-sql.md)   
- [' sp_lock ' &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-lock-transact-sql.md)   
+ [sp_lock &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-lock-transact-sql.md)   
  [sp_who](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)  
   
   

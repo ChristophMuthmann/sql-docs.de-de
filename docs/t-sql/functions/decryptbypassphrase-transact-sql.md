@@ -1,5 +1,5 @@
 ---
-title: DECRYPTBYPASSPHRASE (Transact-SQL) | Microsoft Docs
+title: DECRYPTBYPASSPHRASE (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -51,7 +51,7 @@ DecryptByPassPhrase ( { 'passphrase' | @passphrase }
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *Passphrase*  
+ *passphrase*  
  Die Passphrase, die zum Generieren des Schlüssels für die Entschlüsselung verwendet wird.  
   
  @passphrase  
@@ -69,7 +69,7 @@ DecryptByPassPhrase ( { 'passphrase' | @passphrase }
  @add_authenticator  
  Gibt an, ob zusammen mit dem Nur-Text auch ein Authentifikator verschlüsselt wurde. Hat den Wert 1, wenn ein Authentifikator verwendet wurde. **int**.  
   
- *Authenticator*  
+ *authenticator*  
  Die Authentifikatordaten. **sysname**.  
   
  @authenticator  
@@ -78,7 +78,7 @@ DecryptByPassPhrase ( { 'passphrase' | @passphrase }
 ## <a name="return-types"></a>Rückgabetypen  
  **varbinary** mit einer maximalen Größe von 8.000 Bytes.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Zum Ausführen dieser Funktion sind keine Berechtigungen erforderlich.  
   
  Gibt NULL zurück, wenn der falsche Passphrase oder falsche Authentifikatorinformationen verwendet werden.  
@@ -88,7 +88,7 @@ DecryptByPassPhrase ( { 'passphrase' | @passphrase }
  Falls beim Verschlüsseln des verschlüsselten Texts ein Authentifikator eingeschlossen wurde, muss der Authentifikator zur Entschlüsselungszeit bereitgestellt werden. Falls der zur Entschlüsselungszeit bereitgestellte Authentifikatorwert nicht mit dem mit den Daten verschlüsselten Authentifikatorwert übereinstimmt, kann die Entschlüsselung nicht ausgeführt werden.  
   
 ## <a name="examples"></a>Beispiele  
- Im folgenden Beispiel wird die im aktualisierte Datensatz entschlüsselt [EncryptByPassPhrase](../../t-sql/functions/encryptbypassphrase-transact-sql.md).  
+ Im folgenden Beispiel wird der unter [EncryptByPassPhrase](../../t-sql/functions/encryptbypassphrase-transact-sql.md) aktualisierte Datensatz entschlüsselt.  
   
 ```  
 USE AdventureWorks2012;  
@@ -107,7 +107,7 @@ SELECT CardNumber, CardNumber_EncryptedbyPassphrase
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Auswählen eines Verschlüsselungsalgorithmus](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)   
  [ENCRYPTBYPASSPHRASE &#40;Transact-SQL&#41;](../../t-sql/functions/encryptbypassphrase-transact-sql.md)  
   

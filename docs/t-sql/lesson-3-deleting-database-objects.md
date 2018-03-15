@@ -1,5 +1,5 @@
 ---
-title: "Lektion 3: Löschen von Datenbankobjekten | Microsoft Docs"
+title: "Lektion 3: Löschen von Datenbankobjekten | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -29,13 +29,13 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---
 # <a name="lesson-3-deleting-database-objects"></a>Lektion 3: Löschen von Datenbankobjekten
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]In dieser kurzen Lektion entfernt die Objekte, die Sie in Lektion 1 und Lektion 2 erstellt haben, und dann die Datenbank gelöscht.  
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)] In dieser kurzen Lektion werden die Objekte entfernt, die Sie in Lektion 1 und Lektion 2 erstellt haben. Anschließend wird die Datenbank gelöscht.  
   
 Diese Lektion enthält ein Thema:  
   
 -   [Deleting Database Objects](../t-sql/lesson-3-1-deleting-database-objects.md)  
   
-## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
+## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
 [Deleting Database Objects](../t-sql/lesson-3-1-deleting-database-objects.md)  
   
   

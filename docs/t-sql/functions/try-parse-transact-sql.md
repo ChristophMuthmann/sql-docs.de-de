@@ -1,5 +1,5 @@
 ---
-title: TRY_PARSE (Transact-SQL) | Microsoft Docs
+title: TRY_PARSE (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -46,53 +46,53 @@ TRY_PARSE ( string_value AS data_type [ USING culture ] )
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *Zeichenfolgenwert*  
- **nvarchar(4000)** Wert, der den formatierten Wert in den angegebenen Datentyp analysiert darstellt.  
+ *string_value*  
+ **nvarchar**(4000)-Wert, der den formatierten Wert darstellt, der als angegebener Datentyp analysiert werden soll.  
   
- *Zeichenfolgenwert* muss eine gültige Darstellung des angeforderten Datentyps oder TRY_PARSE Null zurück.  
+ *string_value* muss eine gültige Darstellung des angeforderten Datentyps sein. Andernfalls gibt TRY_PARSE NULL zurück.  
   
  *data_type*  
- Literal, das für das Ergebnis angeforderten Datentyp darstellt.  
+ Literal, das den für das Ergebnis angeforderten Datentyp darstellt.  
   
- *Kultur*  
- Optionale Zeichenfolge, die identifiziert die Kultur, in der *Zeichenfolgenwert* formatiert ist.  
+ *culture*  
+ Optionale Zeichenfolge, die die Kultur angibt, in der *string_value* formatiert wird.  
   
- Wenn das *culture* -Argument nicht angegeben wurde, wird die Sprache der aktuellen Sitzung verwendet. Diese Sprache wird entweder implizit oder explizit mithilfe der Anweisung SET LANGUAGE festgelegt. *Kultur* lässt alle von .NET Framework unterstützten Kulturen es gibt keine Beschränkung, die explizit von unterstützten Sprachen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Wenn die *Kultur* Argument ist ungültig, Analyse löst einen Fehler aus.  
+ Wenn das *culture* -Argument nicht angegeben wurde, wird die Sprache der aktuellen Sitzung verwendet. Diese Sprache ist entweder implizit definiert oder wird explizit mit der Anweisung SET LANGUAGE festgelegt. *culture* lässt alle von .NET Framework unterstützten Kulturen zu und ist auf die explizit durch [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützten Sprachen beschränkt. Wenn das *culture*-Argument nicht gültig ist, löst PARSE einen Fehler aus.  
   
 ## <a name="return-types"></a>Rückgabetypen  
  Gibt das Ergebnis des Ausdrucks zurück, das in den angeforderten Datentyp übersetzt wurde. Schlägt die Umwandlung fehl, wird NULL zurückgegeben.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Verwenden Sie TRY_PARSE nur, um eine Zeichenfolge in ein Datum und eine Uhrzeit oder in eine Zahl zu konvertieren. Für die allgemeine Typkonvertierungen sollten Sie auch weiterhin CAST oder CONVERT verwenden. Bedenken Sie, dass die Analyse des Zeichenfolgenwerts mit gewissen Leistungseinbußen verbunden ist.  
   
  Für TRY_PARSE muss .NET Framework Common Language Runtime (CLR) vorhanden sein.  
   
  Diese Funktion wird nicht remote ausgeführt, da sie die Existenz der CLR voraussetzt. Die Remoteausführung einer Funktion, die die CLR erfordert, würde einen Fehler auf dem Remoteserver auslösen.  
   
- **Weitere Informationen zum Data_type-parameter**  
+ **Weitere Informationen zum data_type-Parameter**  
   
- Die Werte für die *Data_type* Parameter sind auf die Typen in der folgenden Tabelle sowie die zugehörigen Formate beschränkt. Die Formatinformationen werden bereitgestellt, um die Ermittlung der zulässigen Mustertypen zu unterstützen. Weitere Informationen zu Formaten finden Sie unter .NET Framework-Dokumentation für die **System.Globalization.NumberStyles** und **DateTimeStyles** Enumerationen.  
+ Die Werte für den *data_type*-Parameter sind auf die in der folgenden Tabelle dargestellten Typen sowie die zugehörigen Formate beschränkt. Die Formatinformationen werden bereitgestellt, um die Ermittlung der zulässigen Mustertypen zu unterstützen. Weitere Informationen zu Formaten finden Sie in der .NET Framework-Dokumentation für die Enumerationen **System.Globalization.NumberStyles** und **DateTimeStyles**.  
   
 |Kategorie|Typ|.NET-Typ|Verwendete Formate|  
 |--------------|----------|---------------|-----------------|  
 |Numerisch|bigint|Int64|NumberStyles.Number|  
-|Numerisch|int|Int32|NumberStyles.Number|  
-|Numerisch|smallint|Int16|NumberStyles.Number|  
-|Numerisch|tinyint|Byte|NumberStyles.Number|  
-|Numerisch|decimal|Decimal|NumberStyles.Number|  
-|Numerisch|numeric|Decimal|NumberStyles.Number|  
-|Numerisch|float|Double|NumberStyles.Float|  
-|Numerisch|real|Single|NumberStyles.Float|  
+|Numerisch|ssNoversion|Int32|NumberStyles.Number|  
+|Numerisch|SMALLINT|Int16|NumberStyles.Number|  
+|Numerisch|TINYINT|Byte|NumberStyles.Number|  
+|Numerisch|Decimal|Decimal|NumberStyles.Number|  
+|Numerisch|NUMERIC|Decimal|NumberStyles.Number|  
+|Numerisch|FLOAT|Double|NumberStyles.Float|  
+|Numerisch|REAL|Single|NumberStyles.Float|  
 |Numerisch|smallmoney|Decimal|NumberStyles.Currency|  
 |Numerisch|money|Decimal|NumberStyles.Currency|  
-|Datum und Uhrzeit|Datum|DateTime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
+|Datum und Uhrzeit|date|datetime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
 |Datum und Uhrzeit|Uhrzeit|TimeSpan|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
-|Datum und Uhrzeit|DateTime|DateTime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
-|Datum und Uhrzeit|smalldatetime|DateTime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
-|Datum und Uhrzeit|datetime2|DateTime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
+|Datum und Uhrzeit|DateTime|datetime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
+|Datum und Uhrzeit|smalldatetime|datetime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
+|Datum und Uhrzeit|datetime2|datetime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
 |Datum und Uhrzeit|datetimeoffset|DateTimeOffset|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
   
- **Weitere Informationen zum Culture-parameter**  
+ **Weitere Informationen zum culture-Parameter**  
   
  In der folgenden Tabelle werden die Zuordnungen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Sprachen zu .NET Framework-Kulturen angezeigt.  
   
@@ -110,16 +110,16 @@ TRY_PARSE ( string_value AS data_type [ USING culture ] )
 |Português|Portugiesisch|2070|pt-PT|  
 |Suomi|Finnisch|1035|fi|  
 |Svenska|Schwedisch|1053|sv-SE|  
-|Čeština|Tschechisch|1029|Cs-CZ|  
+|čeština|Tschechisch|1029|Cs-CZ|  
 |magyar|Ungarisch|1038|Hu-HU|  
 |polski|Polnisch|1045|Pl-PL|  
 |română|Rumänisch|1048|Ro-RO|  
 |hrvatski|Kroatisch|1050|hr-HR|  
 |slovenčina|Slowakisch|1051|Sk-SK|  
 |slovenski|Slowenisch|1060|Sl-SI|  
-|ΕΛΛΗΝΙΚΆ|Griechisch|1032|El-GR|  
-|БЪЛГАРСКИ|Bulgarisch|1026|bg-BG|  
-|РУССКИЙ|Russisch|1049|Ru-RU|  
+|ελληνικά|Griechisch|1032|El-GR|  
+|български|Bulgarisch|1026|bg-BG|  
+|русский|Russisch|1049|Ru-RU|  
 |Türkçe|Türkisch|1055|Tr-TR|  
 |British|Englisch (britisch)|2057|en-GB|  
 |eesti|Estnisch|1061|Et-EE|  
@@ -189,10 +189,10 @@ False
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [PARSE &#40; Transact-SQL &#41;](../../t-sql/functions/parse-transact-sql.md)   
- [Konvertierungsfunktionen &#40; Transact-SQL &#41;](../../t-sql/functions/conversion-functions-transact-sql.md)   
- [TRY_CONVERT &#40; Transact-SQL &#41;](../../t-sql/functions/try-convert-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [PARSE &#40;Transact-SQL&#41;](../../t-sql/functions/parse-transact-sql.md)   
+ [Konvertierungsfunktionen &#40;Transact-SQL&#41;](../../t-sql/functions/conversion-functions-transact-sql.md)   
+ [TRY_CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/try-convert-transact-sql.md)   
  [CAST und CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
   
   

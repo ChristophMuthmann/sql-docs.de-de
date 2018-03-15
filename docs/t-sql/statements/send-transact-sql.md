@@ -1,5 +1,5 @@
 ---
-title: SEND (Transact-SQL) | Microsoft Docs
+title: SEND (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
@@ -57,21 +57,21 @@ SEND
 ```  
   
 ## <a name="arguments"></a>Argumente  
- IN der KONVERSATION *Conversation_handle [... @conversation_handle_n]*  
- Gibt die Konversationen an, zu der die Nachricht gehört. Die *Conversation_handle* muss eine gültige Konversations-ID enthalten. Das gleiche Konversationshandle kann jeweils nur einmal verwendet werden.  
+ ON CONVERSATION *conversation_handle [.. @conversation_handle_n]*  
+ Gibt die Konversationen an, zu der die Nachricht gehört. *conversation_handle* muss eine gültige Konversations-ID enthalten. Das gleiche Konversationshandle kann jeweils nur einmal verwendet werden.  
   
- NACHRICHTENTYP *Message_type_name*  
+ MESSAGE TYPE *message_type_name*  
  Gibt den Nachrichtentyp der gesendeten Nachricht an. Der Nachrichtentyp muss in den von den Konversationen verwendeten Dienstverträgen enthalten sein. Diese Verträge müssen das Senden des Nachrichtentyps von dieser Seite der Konversation zulassen. Die Zieldienste der Konversationen können beispielsweise nur Nachrichten senden, die im Vertrag als SENT BY TARGET oder SENT BY ANY angegeben sind. Wird diese Klausel ausgelassen, ist die Nachricht vom Nachrichtentyp DEFAULT.  
   
  *message_body_expression*  
- Stellt einen Ausdruck bereit, der den Nachrichtentext darstellt. Die *Message_body_expression* ist optional. Jedoch, wenn die *Message_body_expression* vorhanden ist der Ausdruck muss ein Typ, der konvertiert werden kann **varbinary(max)**. Der Ausdruck kann nicht NULL sein. Wird diese Klausel ausgelassen, ist der Nachrichtentext leer.  
+ Stellt einen Ausdruck bereit, der den Nachrichtentext darstellt. *message_body_expression* ist optional. Wenn *message_body_expression* jedoch angegeben wird, muss der Ausdruck von einem Typ sein, der in **varbinary(max)** konvertiert werden kann. Der Ausdruck kann nicht NULL sein. Wird diese Klausel ausgelassen, ist der Nachrichtentext leer.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
   
 > [!IMPORTANT]  
 >  Wenn es sich bei der SEND-Anweisung nicht um die erste Anweisung in einem Batch oder in einer gespeicherten Prozedur handelt, muss die vorhergehende Anweisung mit einem Semikolon (;) abgeschlossen werden.  
   
- Die SEND-Anweisung sendet eine Meldung von der Dienste an einem Ende einen oder mehrere [!INCLUDE[ssSB](../../includes/sssb-md.md)] Konversationen an die Dienste am anderen Ende dieser Konversationen. Mit der RECEIVE-Anweisung wird die gesendete Nachricht dann aus den Warteschlangen abgerufen, die den Zieldiensten zugeordnet sind.  
+ Mit der SEND-Anweisung wird eine Nachricht vom Dienst an einem Ende von mindestens einer [!INCLUDE[ssSB](../../includes/sssb-md.md)]-Konversation zum Dienst am anderen Ende dieser Konversation übermittelt. Mit der RECEIVE-Anweisung wird die gesendete Nachricht dann aus den Warteschlangen abgerufen, die den Zieldiensten zugeordnet sind.  
   
  Die in der ON CONVERSATION-Klausel angegebenen Konversationshandles stammt aus einer der folgenden Quellen:  
   
@@ -81,9 +81,9 @@ SEND
   
  In vielen Fällen liegt der Code, der die SEND-Anweisung enthält, getrennt von dem Code vor, der die BEGIN DIALOG-Anweisung bzw. die RECEIVE–Anweisung enthält, welche das Konversationshandle liefert. In diesen Fällen muss das Konversationshandle als Datenelement der Statusinformationen an den Code übergeben werden, der die SEND-Anweisung enthält.  
   
- Nachrichten, die an Dienste in anderen Instanzen von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] gesendet werden, werden in einer Übertragungswarteschlange in der aktuellen Datenbank gespeichert, bis sie an die Dienstwarteschlangen in den Remoteinstanzen übertragen werden können. Nachrichten, die an Dienste in derselben Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] gesendet werden, werden direkt in den Warteschlangen abgelegt, die den betreffenden Diensten zugeordnet sind. Wenn eine Bedingung verhindert, dass der eine Nachricht direkt in der Ziel-Service-Warteschlange abgelegt wird, können in der Übertragungswarteschlange gespeichert werden, bis die Bedingung behoben ist. Dies kann beispielsweise auftreten, wenn bestimmte Typen von Fehlern vorliegen oder wenn die Zieldienstwarteschlange inaktiv ist. Sie können die **Sys. transmission_queue** -Systemsicht die in der Übertragungswarteschlange vorhandenen Nachrichten anzeigen.  
+ Nachrichten, die an Dienste in anderen Instanzen von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] gesendet werden, werden in einer Übertragungswarteschlange in der aktuellen Datenbank gespeichert, bis sie an die Dienstwarteschlangen in den Remoteinstanzen übertragen werden können. Nachrichten, die an Dienste in derselben Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] gesendet werden, werden direkt in den Warteschlangen abgelegt, die den betreffenden Diensten zugeordnet sind. Wenn eine Bedingung verhindert, dass eine lokale Nachricht direkt in die Warteschlange des Zieldiensts eingefügt wird, kann sie solange in der Übertragungswarteschlange gespeichert werden, bis die Bedingung beseitigt wurde. Dies kann beispielsweise auftreten, wenn bestimmte Typen von Fehlern vorliegen oder wenn die Zieldienstwarteschlange inaktiv ist. Sie können in der **sys.transmission_queue**-Systemsicht die in der Übertragungswarteschlange vorhandenen Nachrichten anzeigen.  
   
- Senden ist ein atomic-Anweisung, d. h., wenn eine SEND-Anweisung, die Senden einer Nachricht an mehrere Konversationen z. B. ein Fehler auftritt, da eine Konversation in einem fehlerhaften Zustand ist, keine Nachrichten in der Übertragungswarteschlange gespeichert oder werden in den zieldienstwarteschlangen abgelegt.  
+ SEND ist eine unteilbare Anweisung. Dies bedeutet, dass bei einem Fehler einer SEND-Anweisung zum Senden einer Nachricht an mehrere Konversationen, weil beispielsweise eine Konversation einen Fehlerzustand aufweist, keine Meldungen in der Übertragungswarteschlange gespeichert oder in den Zieldienstwarteschlangen abgelegt werden.  
   
  Mit Service Broker wird das Speichern und Übertragen von Nachrichten an mehrere Konversationen in der gleichen SEND-Anweisung optimiert.  
   
@@ -103,7 +103,7 @@ SEND
  Um eine Nachricht zu senden, muss der aktuelle Benutzer über die RECEIVE-Berechtigung für die Warteschlange aller Dienste verfügen, mit denen die Nachricht gesendet wird.  
   
 ## <a name="examples"></a>Beispiele  
- Im folgenden Beispiel wird ein Dialog gestartet und eine XML-Nachricht im Dialog gesendet. Zum Senden der Nachricht im Beispiel wird das XML-Objekt, das konvertiert **varbinary(max)**.  
+ Im folgenden Beispiel wird ein Dialog gestartet und eine XML-Nachricht im Dialog gesendet. Zum Senden der Nachricht wird das XML-Objekt in **varbinary(max)** konvertiert.  
   
 ```  
 DECLARE @dialog_handle UNIQUEIDENTIFIER,  
@@ -151,10 +151,10 @@ SEND ON CONVERSATION (@dialog_handle1, @dialog_handle2, @dialog_handle3)
     (@OrderMsg) ;  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [BEGIN DIALOG CONVERSATION &#40; Transact-SQL &#41;](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
- [END CONVERSATION-Anweisung &#40; Transact-SQL &#41;](../../t-sql/statements/end-conversation-transact-sql.md)   
- [Empfangen von &#40; Transact-SQL &#41;](../../t-sql/statements/receive-transact-sql.md)   
- [Sys. transmission_queue &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-transmission-queue-transact-sql.md)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [BEGIN DIALOG CONVERSATION &#40;Transact-SQL&#41;](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
+ [END CONVERSATION &#40;Transact-SQL&#41;](../../t-sql/statements/end-conversation-transact-sql.md)   
+ [RECEIVE &#40;Transact-SQL&#41;](../../t-sql/statements/receive-transact-sql.md)   
+ [sys.transmission_queue &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-transmission-queue-transact-sql.md)  
   
   

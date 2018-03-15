@@ -1,5 +1,5 @@
 ---
-title: RESTORE DATABASE (Parallel Datawarehouse) | Microsoft Docs
+title: RESTORE DATABASE (Parallel Data Warehouse) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
@@ -27,14 +27,14 @@ ms.lasthandoff: 01/25/2018
 # <a name="restore-database-parallel-data-warehouse"></a>RESTORE DATABASE (Parallel Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
-  Wiederhergestellt eine [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] Benutzerdatenbank von einer datenbanksicherung auf einer [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] Appliance. Wiederherstellung der Datenbank aus einer Sicherung, die zuvor von erstellt die [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] [BACKUP DATABASE &#40; Parallel Datawarehouse &#41; ](../../t-sql/statements/backup-database-parallel-data-warehouse.md) Befehl. Das Sichern und Wiederherstellen in einen Notfallwiederherstellungsplan erstellen oder Datenbanken aus einer Anwendung auf einen anderen verschoben.  
+  Wiederherstellen einer [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]-Benutzerdatenbank von einer Datenbanksicherung auf einer [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]-Appliance. Die Datenbank wird von einer Sicherung wiederhergestellt, die zuvor mithilfe des [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]-Befehls [BACKUP DATABASE &#40;Parallel Data Warehouse&#41;](../../t-sql/statements/backup-database-parallel-data-warehouse.md) erstellt wurde. Mit BACKUP- und RESTORE-Vorgängen können Sie einen Notfallwiederherstellungsplan erstellen oder Datenbanken von einer Appliance zur anderen verschieben.  
   
 > [!NOTE]  
->  Wiederherstellen der Master enthält Anmeldeinformationen Appliance wiederherstellen. Verwenden Sie zum Wiederherstellen der Master der [Wiederherstellen der master-Datenbank &#40; Transact-SQL &#41; ](../../relational-databases/backup-restore/restore-the-master-database-transact-sql.md) auf der Seite der **Configuration Manager** Tool. Ein Administrator mit Zugriff auf den Knoten "Zugriffssteuerung" kann diesen Vorgang ausführen.  
+>  Zum Wiederherstellen der Masterdatenbank müssen die Anmeldeinformationen der Appliance wiederhergestellt werden. Verwenden Sie zum Wiederherstellen der Masterdatenbank im Tool **Configuration Manager** die Seite [Wiederherstellen der Masterdatenbank &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/restore-the-master-database-transact-sql.md). Dieser Vorgang kann von einem Administrator mit Zugriff auf den Steuerknoten ausgeführt werden.  
   
- Weitere Informationen zu [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] datenbanksicherungen, finden Sie unter "Sichern und Wiederherstellen" in der [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].  
+ Weitere Informationen zu [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]-Datenbanksicherungen finden Sie unter „Sichern und Wiederherstellen“ in der [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].  
   
- ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Thema Linksymbol") [Transact-SQL-Syntaxkonventionen &#40; Transact-SQL &#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol zum Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions &#40;Transact-SQL&#41; (Transact-SQL-Syntaxkonventionen (Transact-SQL))](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -61,108 +61,108 @@ RESTORE HEADERONLY
 ```  
   
 ## <a name="arguments"></a>Argumente  
- RESTORE DATABASE *Database_name*  
- Gibt an, dass eine Datenbank mit dem Namen eine Benutzerdatenbank wiederherstellen *Database_name*. Die wiederhergestellte Datenbank kann einen anderen Namen als die Quelldatenbank verfügen, die gesichert wurde. *Database_name* kann nicht als eine Datenbank auf dem Gerät Ziel bereits vorhanden. Weitere Informationen zu den Datenbanknamen zulässig "Benennungsregeln für Objekt" finden Sie unter der [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].  
+ RESTORE DATABASE *database_name*  
+ Gibt an, dass eine Benutzerdatenbank in einer Datenbank mit dem Namen *database_name* wiederhergestellt wird. Die wiederhergestellte Datenbank kann anders benannt werden als die Quelldatenbank, die gesichert wurde. *database_name* darf nicht bereits als Datenbank auf der Zielappliance vorhanden sein. Weitere Informationen zu zulässigen Datenbanknamen finden Sie in der [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)] unter „Objektbenennungsregeln“.  
   
- Eine Benutzerdatenbank wiederherstellen eine vollständigen datenbanksicherung wiederhergestellt und anschließend optional eine differenzielle Sicherung in der Einheit wiederhergestellt. Eine Wiederherstellung einer Benutzerdatenbank enthält wiederherstellen, Datenbankbenutzer und Datenbankrollen.  
+ Beim Wiederherstellen einer Benutzerdatenbank wird eine vollständige Datenbanksicherung wiederhergestellt. Anschließend kann optional eine differenzielle Sicherung auf der Appliance wiederhergestellt werden. Das Wiederherstellen einer Benutzerdatenbank beinhaltet das Wiederherstellen von Datenbankbenutzern und Datenbankrollen.  
   
  FROM DISK = '\\\\*UNC_path*\\*backup_directory*'  
- Der Netzwerkpfad und das Verzeichnis, aus dem [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] werden die Sicherungsdateien wiederherstellen. Beispielsweise FROM DISK = '\\\xxx.xxx.xxx.xxx\backups\2012\Monthly\08.2012.Mybackup ".  
+ Netzwerkpfad und Verzeichnis, aus denen [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] die Sicherungsdateien wiederherstellt. Ein Beispiel: FROM DISK = '\\\xxx.xxx.xxx.xxx\backups\2012\Monthly\08.2012.Mybackup‘.  
   
  *backup_directory*  
- Gibt den Namen eines Verzeichnisses an, die das vollständige oder differenzielle Sicherung enthält. Beispielsweise können Sie eine RESTORE HEADERONLY-Operation für eine vollständige oder differenzielle Sicherung ausführen.  
+ Gibt den Namen eines Verzeichnisses an, das die vollständige oder differenzielle Sicherung enthält. Beispielsweise kann für eine vollständige oder differenzielle Sicherung ein RESTORE HEADERONLY-Vorgang ausgeführt werden.  
   
  *full_backup_directory*  
- Gibt den Namen eines Verzeichnisses, das die vollständige Sicherung enthält.  
+ Gibt den Namen eines Verzeichnisses an, das die vollständige Sicherung enthält.  
   
  *differential_backup_directory*  
- Gibt den Namen des Verzeichnisses, das die differenzielle Sicherung enthält.  
+ Gibt den Namen eines Verzeichnisses an, das die differenzielle Sicherung enthält.  
   
--   Das Verzeichnis Pfad und der Sicherung muss bereits vorhanden sein und muss als eine vollqualifizierte Universal naming Convention (UNC)-Pfad angegeben werden.  
+-   Pfad und Sicherungsverzeichnis müssen bereits vorhanden sein und als vollqualifizierter UNC-Pfad (Universal Naming Convention) angegeben werden.  
   
--   Der Pfad zum Sicherungsverzeichnis handelt es sich nicht um einen lokalen Pfad und keinen Ort auf jedem der [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] Appliance-Knoten.  
+-   Beim Pfad zum Sicherungsverzeichnis darf es sich nicht um einen lokalen Pfad handeln, und der Speicherort darf sich nicht auf einem [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]-Applianceknoten befinden.  
   
--   Die maximale Länge des UNC-Pfad und Name der Sicherungsverzeichnis ist 200 Zeichen lang sein.  
+-   Die maximale Länge des UNC-Pfads und des Sicherungsverzeichnisnamens beträgt 200 Zeichen.  
   
--   Der Server oder Host muss eine IP-Adresse angegeben werden.  
+-   Der Server oder Host muss als IP-Adresse angegeben werden.  
   
  RESTORE HEADERONLY  
- Gibt an, um nur die Headerinformationen für eine Benutzerdatenbank-Sicherung zurückzugeben. Zwischen anderen Feldern enthält die Kopfzeile der Beschreibungstext für die Sicherung und der Name der Sicherungskopie. Der Name der Sicherungskopie muss nicht den Namen des Verzeichnisses identisch sein, in dem die Sicherungsdateien gespeichert.  
+ Gibt an, dass nur die Headerinformationen für die Sicherung einer Benutzerdatenbank zurückgegeben werden sollen. Der Header enthält u.a. die Textbeschreibung für die Sicherung und den Sicherungsnamen. Der Sicherungsname und der Name des Verzeichnisses, in dem die Sicherungsdateien gespeichert werden, müssen nicht identisch sein.  
   
- RESTORE HEADERONLY Ergebnisse Standardressource der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] RESTORE HEADERONLY führt. Das Ergebnis hat mehr als 50 Spalten, die nicht alle verwendeten [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]. Eine Beschreibung der Spalten in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] RESTORE HEADERONLY führt, finden Sie unter [RESTORE HEADERONLY &#40; Transact-SQL &#41; ](../../t-sql/statements/restore-statements-headeronly-transact-sql.md).  
+ Die RESTORE HEADERONLY-Ergebnisse entsprechen dem Muster der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-RESTORE HEADERONLY-Ergebnisse. Das Ergebnis enthält mehr als 50 Spalten, die nicht alle von [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] verwendet werden. Eine Beschreibung der Spalten der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-RESTORE HEADERONLY-Ergebnisse finden Sie unter [RESTORE HEADERONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-headeronly-transact-sql.md).  
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert die **CREATE ANY DATABASE** Berechtigung.  
+ Erfordert die **CREATE ANY DATABASE**-Berechtigung.  
   
- Erfordert ein Windows-Konto die Berechtigung zum Zugreifen auf und aus dem Sicherungsverzeichnis lesen besitzt. Sie müssen auch speichern, den Windows-Kontoname und das Kennwort in [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
+ Es ist ein Windows-Konto mit der Berechtigung erforderlich, auf das Sicherungsverzeichnis zuzugreifen und es zu lesen. Der Name des Windows-Kontos und das Kennwort müssen in [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] gespeichert werden.  
   
-1.  So überprüfen die Anmeldeinformationen sind bereits vorhanden ist, verwenden Sie [sys.dm_pdw_network_credentials &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-network-credentials-transact-sql.md).  
+1.  Überprüfen Sie mit [sys.dm_pdw_network_credentials &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-network-credentials-transact-sql.md), ob die Anmeldeinformationen bereits vorhanden sind.  
   
-2.  Verwenden Sie zum Hinzufügen oder aktualisieren Sie die Anmeldeinformationen, [Sp_pdw_add_network_credentials &#40; SQL Datawarehouse &#41; ](../../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md).  
+2.  Verwenden Sie [sp_pdw_add_network_credentials &#40;SQL Data Warehouse&#41;](../../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md) zum Hinzufügen oder Aktualisieren der Anmeldeinformationen.  
   
-3.  So entfernen Sie die Anmeldeinformationen von [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], verwenden Sie [Sp_pdw_remove_network_credentials &#40; SQL Datawarehouse &#41; ](../../relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse.md).  
+3.  Mit [sp_pdw_remove_network_credentials &#40;SQL Data Warehouse&#41;](../../relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse.md) können Sie Anmeldeinformationen aus [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] entfernen.  
   
 ## <a name="error-handling"></a>Fehlerbehandlung  
- Die RESTORE DATABASE-Befehl führt zu Fehlern in den folgenden Situationen:  
+ Der RESTORE DATABASE-Befehl führt unter den folgenden Bedingungen zu einem Fehler:  
   
--   Der Name der Datenbank bereits vorhanden ist, auf dem Zielgerät. Um dies zu vermeiden, wählen Sie einen eindeutigen Datenbanknamen an, oder löschen Sie die vorhandene Datenbank, bevor Sie die Wiederherstellung ausführen.  
+-   Der Name der Datenbank, die wiederhergestellt werden soll, ist auf der Zielappliance bereits vorhanden. Wählen Sie daher einen eindeutigen Datenbanknamen, oder löschen Sie die vorhandene Datenbank, bevor Sie die Wiederherstellung ausführen.  
   
--   Es gibt ein ungültiger Satz von Sicherungsdateien im Sicherungsverzeichnis.  
+-   Im Sicherungsverzeichnis befinden sich mehrere ungültige Sicherungsdateien.  
   
--   Die Login-Berechtigungen sind nicht ausreichend, um eine Datenbank wiederherstellen.  
+-   Die Anmeldeberechtigungen reichen zum Wiederherstellen einer Datenbank nicht aus.  
   
--   [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]die richtigen Berechtigungen für den Netzwerkspeicherort, an keinen, in dem die Sicherungsdateien gespeichert sind.  
+-   [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] verfügt nicht über die erforderlichen Berechtigungen für den Netzwerkspeicherort, an dem die Sicherungsdateien gespeichert sind.  
   
--   Die Netzwerkadresse für das Sicherungsverzeichnis ist nicht vorhanden oder ist nicht verfügbar.  
+-   Der Netzwerkspeicherort für das Sicherungsverzeichnis ist nicht vorhanden oder nicht verfügbar.  
   
--   Es ist nicht genügend Speicherplatz auf dem Serverknoten oder den Knoten "Zugriffssteuerung" ein. [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]nicht bestätigt, dass genügend freier Speicherplatz auf dem Gerät vorhanden ist, bevor die Wiederherstellung initiiert. Aus diesem Grund ist es möglich, einen Fehler außerhalb von Speicherplatz während der Ausführung von RESTORE DATABASE-Anweisung zu generieren. Wenn nicht genügend Speicherplatz auftritt, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] die Wiederherstellung wird ein Rollback ausgeführt.  
+-   Es ist nicht genügend Speicherplatz auf den Computeknoten oder auf dem Steuerknoten vorhanden. [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] bestätigt nicht, dass auf der Appliance genügend Speicherplatz vorhanden ist, bevor das Wiederherstellen gestartet wird. Daher kann beim Ausführen der RESTORE DATABASE-Anweisung ein Fehler wegen unzureichendem Speicherplatz generiert werden. Wenn nicht genügend Speicherplatz vorhanden ist, führt [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ein Rollback für die Wiederherstellung aus.  
   
--   Die Ziel-Appliance, zu der die Datenbank wiederhergestellt wird, hat weniger Computerknoten als die Quelle-Appliance, die von der die Datenbank gesichert wurde.  
+-   Die Zielappliance, auf der die Datenbank wiederhergestellt wird, verfügt über weniger Computeknoten als die Quellappliance, von der die Datenbank gesichert wurde.  
   
--   Die Wiederherstellung der Datenbank wird von innerhalb einer Transaktion ausgeführt.  
+-   Die Wiederherstellung der Datenbank wird aus einer Transaktion heraus ausgeführt.  
   
 ## <a name="general-remarks"></a>Allgemeine Hinweise  
- [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]überwacht den Erfolg der datenbankwiederherstellung. Vor dem Wiederherstellen einer differenziellen datenbanksicherung [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] überprüft, ob die vollständige datenbankwiederherstellung wurde erfolgreich abgeschlossen.  
+ [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] verfolgt, ob die Wiederherstellung der Datenbank erfolgreich ist. Vor dem Wiederherstellen einer differenziellen Datenbanksicherung wird durch [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] überprüft, ob die vollständige Datenbankwiederherstellung erfolgreich abgeschlossen wurde.  
   
- Nach einer Wiederherstellung müssen die Benutzerdatenbank, Datenbank-Kompatibilitätsgrad 120. Dies gilt für alle Datenbanken, unabhängig von ihren ursprünglichen Kompatibilitätsgrad.  
+ Nach der Wiederherstellung verfügt die Benutzerdatenbank über einen Datenbank-Kompatibilitätsgrad von 120. Dies gilt für alle Datenbanken, unabhängig vom ursprünglichen Kompatibilitätsgrad.  
   
- **Wiederherstellen in einer Anwendung mit einer größeren Anzahl von Serverknoten**  
-Führen Sie [DBCC SHRINKLOG (Azure SQL Data Warehouse)](../../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md) nach dem Wiederherstellen einer Datenbank von einem Gerät mit größerer, da neuverteilung Transaktionsprotokoll vergrößert wird.  
+ **Wiederherstellen auf einer Appliance mit einer größeren Anzahl von Computeknoten**  
+Führen Sie nach dem Wiederherstellen einer Datenbank von einer kleineren auf eine größere Appliance [DBCC SHRINKLOG (Azure SQL Data Warehouse)](../../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md) aus, da das Transaktionsprotokoll durch die Umverteilung vergrößert wird.  
 
-Wiederherstellen einer Sicherung in einer Anwendung mit einer größeren Anzahl von Serverknoten, wächst die Größe der belegten Datenbank relativ zur Anzahl von Compute-Knoten.  
+Beim Wiederherstellen einer Sicherung auf einer Appliance mit einer größeren Anzahl von Computeknoten wächst die Größe der zugeordneten Datenbank entsprechend der Anzahl der Computeknoten.  
   
-Z. B. beim Wiederherstellen einer 60 GB Datenbank von einem 2-Knoten-Gerät (30 GB pro Knoten) in einer Anwendung 6 Knoten [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] eine 180 GB-Datenbank (6 Knoten mit 30 GB pro Knoten) auf dem Gerät 6 Knoten erstellt. [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]Stellt anfänglich 2 Knoten entsprechend die Quellkonfiguration der Datenbank wieder her, und klicken Sie dann die Daten für alle 6 Knoten neu verteilt.  
+Beispiel: Wenn Sie eine 60-GB-Datenbank von einer 2-Knoten-Appliance (30 GB pro Knoten) auf einer 6-Knoten-Appliance wiederherstellen, erstellt [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] auf der 6-Knoten-Appliance eine 180-GB-Datenbank (6 Knoten à 30 GB). Zunächst stellt [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] die Datenbank entsprechend der Quellkonfiguration auf 2 Knoten wieder her und verteilt sie anschließend auf alle 6 Knoten.  
   
- Nach der Weitergabe enthält jeder Serverknoten weniger tatsächlichen Daten und mehr freien Speicher als jeder Compute-Knoten auf der kleinere Source-Anwendung. Verwenden Sie den zusätzlichen Speicherplatz, um die Datenbank weitere Daten hinzuzufügen. Wenn die wiederhergestellte Datenbank größer ist, als Sie benötigen, können Sie [ALTER DATABASE &#40; Parallel Datawarehouse &#41; ](../../t-sql/statements/alter-database-parallel-data-warehouse.md) zum Verkleinern der Datenbank-Dateigrößen.  
+ Nach der Umverteilung enthält jeder Computeknoten weniger tatsächliche Daten und mehr freien Speicherplatz als die einzelnen Computeknoten auf der kleineren Quellappliance. Dank des zusätzlichen Speicherplatzes können Sie der Datenbank weitere Daten hinzufügen. Ist die wiederhergestellte Datenbank größer als erforderlich, können Sie mit [ALTER DATABASE &#40;Parallel Data Warehouse&#41;](../../t-sql/statements/alter-database-parallel-data-warehouse.md) die Größe der Datenbank verringern.  
   
 ## <a name="limitations-and-restrictions"></a>Einschränkungen  
- Für diese Einschränkungen ist die Einheit für die Quelle der Appliance, von dem die Sicherung der Datenbank erstellt wurde, und Zielgerät ist das Gerät, an dem die Datenbank wiederhergestellt wird.  
+ Für diese Einschränkungen gilt: Die Quellappliance ist die Appliance, von der aus die Sicherung der Datenbank erstellt wurde, und die Zielappliance ist die Appliance, auf der die Datenbank wiederhergestellt wird.  
   
- Wiederherstellen einer Datenbank wird nicht automatisch neu erstellt Statistiken.  
+ Beim Wiederherstellen einer Datenbank wird nicht automatisch die Statistik neu erstellt.  
   
- Nur eine Datenbank wiederherstellen oder BACKUP DATABASE-Anweisung kann zu jedem Zeitpunkt auf dem Gerät ausgeführt werden. Wenn mehrere Backup- und Restore-Anweisungen gleichzeitig gesendet werden, die Appliance einer Warteschlange abgelegt und verarbeiten sie eine zu einem Zeitpunkt.  
+ Auf der Appliance kann nur eine RESTORE DATABASE- oder BACKUP DATABASE-Anweisung gleichzeitig ausgeführt werden. Werden mehrere BACKUP- und RESTORE-Anweisungen gleichzeitig gesendet, werden sie in eine Warteschlange eingereiht und nacheinander verarbeitet.  
   
- Sie können nur eine datenbanksicherung Wiederherstellen einer [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] Zielgerät, der die gleiche Anzahl und weitere Serverknoten als die Einheit für die Quelle hat. Zielgerät weniger Computerknoten als das Quell-Gerät nicht möglich.  
+ Eine Datenbanksicherung kann nur auf einer [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]-Zielappliance wiederhergestellt werden, die eine gleiche oder höhere Anzahl von Computeknoten besitzt wie die Quellappliance. Die Zielappliance darf nicht über weniger Computeknoten verfügen als die Quellappliance.  
   
- Sie können keine Sicherung wiederherstellen, die auf eine Anwendung erstellt wurde, SQL Server 2012 PDW-Hardware in einer Anwendung, die SQL Server 2008 R2-Hardware verfügt. Dies gilt auch, wenn das Gerät ursprünglich mit der SQL Server 2008 R2-PDW-Hardware gekauft wurde und jetzt SQL Server 2012 PDW-Software ausgeführt wird.  
+ Es ist nicht möglich, eine Sicherung, die auf einer Appliance mit SQL Server 2012 PDW-Hardware erstellt wurde, auf einer Appliance mit SQL Server 2008 R2-Hardware wiederherzustellen. Dies gilt auch, wenn die Appliance ursprünglich mit der SQL Server 2008 R2-PDW-Hardware gekauft wurde und mittlerweile mit SQL Server 2012 PDW-Software ausgeführt wird.  
   
 ## <a name="locking"></a>Sperren  
- Akzeptiert eine exklusive Sperre für das Datenbankobjekt.  
+ Sperrt exklusiv das DATABASE-Objekt.  
   
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="a-simple-restore-examples"></a>A. Einfache Beispiele für RESTORE  
- Im folgende Beispiel wird eine vollständige Sicherung wiederhergestellt. die `SalesInvoices2013` Datenbank. Die Sicherungsdateien gespeichert sind, der \\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full-Verzeichnis. Die SalesInvoices2013-Datenbank kann nicht auf dem Zielgerät bereits vorhanden, oder dieser Befehl schlägt fehl mit Fehler.  
+ Im folgenden Beispiel wird eine vollständige Sicherung auf einer `SalesInvoices2013`-Datenbank wiederhergestellt. Die Sicherungsdateien werden im Verzeichnis „\\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full“ gespeichert. Die Datenbank „SalesInvoices2013“ darf auf der Zielappliance nicht bereits vorhanden sein. Andernfalls erzeugt dieser Befehl einen Fehler.  
   
 ```  
 RESTORE DATABASE SalesInvoices2013  
 FROM DISK = '\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full';  
 ```  
   
-### <a name="b-restore-a-full-and-differential-backup"></a>B. Stellen Sie eine vollständige und differenzielle Sicherung wieder her.  
- Im folgende Beispiel wird eine vollständige, und klicken Sie dann eine differenzielle Sicherung wiederhergestellt, in der Datenbank SalesInvoices2013  
+### <a name="b-restore-a-full-and-differential-backup"></a>B. Wiederherstellen einer vollständigen und differenziellen Sicherung  
+ Im folgenden Beispiel wird zunächst eine vollständige, anschließend eine differenzielle Sicherung auf der Datenbank „SalesInvoices2013“ wiederhergestellt.  
   
- Die vollständige Sicherung der Datenbank wird wiederhergestellt, von der vollständigen Sicherung, die in gespeichert ist die "\\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full" Verzeichnis. Wenn die Wiederherstellung erfolgreich abgeschlossen wurde, wird die differenzielle Sicherung der SalesInvoices2013-Datenbank wiederhergestellt.  Die differenzielle Sicherung befindet sich in der "\\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Diff" Verzeichnis.  
+ Die vollständige Sicherung der Datenbank wird von der vollständigen Sicherung im Verzeichnis „\\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full“ wiederhergestellt. Nach der erfolgreichen Wiederherstellung wird die differenzielle Sicherung auf der Datenbank „SalesInvoices2013“ wiederhergestellt.  Die differenzielle Sicherung wird im Verzeichnis „\\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Diff“ gespeichert.  
   
 ```  
 RESTORE DATABASE SalesInvoices2013  
@@ -172,8 +172,8 @@ RESTORE DATABASE SalesInvoices2013
   
 ```  
   
-### <a name="c-restoring-the-backup-header"></a>C. Den Sicherungsheader wiederherstellen  
- In diesem Beispiel wird die Headerinformationen für die datenbanksicherung "\\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full". Der Befehl ergibt sich eine Zeile mit Informationen für die Sicherung Invoices2013Full.  
+### <a name="c-restoring-the-backup-header"></a>C. Wiederherstellen des Sicherungsheaders  
+ In diesem Beispiel werden die Headerinformationen für die Datenbanksicherung „\\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full“ wiederhergestellt. Der Befehl ergibt eine Zeile mit Informationen für die Sicherung von „Invoices2013Full“.  
   
 ```  
 RESTORE HEADERONLY  
@@ -181,9 +181,9 @@ RESTORE HEADERONLY
 [;]  
 ```  
   
- Sie können die Headerinformationen verwenden, um den Inhalt einer Sicherung zu überprüfen oder um sicherzustellen, dass das Zielgerät für die Wiederherstellung mit der Quelle backup Appliance kompatibel ist, vor dem Wiederherstellen der Sicherung.  
+ Sie können die Headerinformationen verwenden, um den Inhalt einer Sicherung zu überprüfen. Sie können damit auch sicherstellen, dass die Zielappliance für die Wiederherstellung mit der Quellappliance der Sicherung kompatibel ist, bevor Sie mit dem Wiederherstellen der Sicherung beginnen.  
   
-## <a name="see-also"></a>Siehe auch  
- [Datenbank sichern &#40; Parallel Datawarehouse &#41;](../../t-sql/statements/backup-database-parallel-data-warehouse.md)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [BACKUP DATABASE &#40;Parallel Data Warehouse&#41;](../../t-sql/statements/backup-database-parallel-data-warehouse.md)  
   
   

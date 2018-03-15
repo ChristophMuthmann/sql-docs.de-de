@@ -1,7 +1,7 @@
 ---
 title: Arbeiten mit JSON-Daten in SQL Server | Microsoft-Dokumentation
 ms.custom: 
-ms.date: 01/31/2017
+ms.date: 02/19/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
 ms.component: json
@@ -20,16 +20,21 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: a59a53bb9c279a8f66a4aa259212269179d477b1
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: ec68e7b254c10d4025b7cee61d47db033757516b
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="json-data-in-sql-server"></a>JSON-Daten in SQL Server
 [!INCLUDE[appliesto-ss2016-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
 JSON ist ein beliebtes Textdatenformat, das zum Austauschen von Daten in modernen Webanwendungen und mobilen Anwendungen verwendet wird. JSON wird auch zum Speichern von unstrukturierten Daten in Protokolldateien oder NoSQL-Datenbanken wie Microsoft Azure Cosmos DB verwendet. Viele REST-Webdienste geben Ergebnisse zurück, die als JSON-Text formatiert sind, oder akzeptieren Daten, die im JSON-Format formatiert sind. Beispielsweise verfügen die meisten Azure-Dienste wie Azure Search, Azure Storage und Azure Cosmos DB über REST-Endpunkte, die JSON zurückgeben oder verarbeiten. JSON ist auch das hauptsächliche Format zum Austauschen von Daten zwischen Webseiten und Webservern über AJAX-Aufrufe. 
+
+JSON-Funktionen in SQL Server ermöglichen Ihnen, NoSQL und relationale Konzepte in der gleichen Datenbank zu kombinieren. Sie können übliche relationale Spalten mit anderen Spalten kombinieren, die Dokumente enthalten, die als JSON-Text in der gleichen Tabelle formatiert sind, JSON-Dokumente analysieren und in relationale Strukturen importieren oder relationale Daten zu JSON-Text formatieren. Im folgenden Video sehen Sie, wie NoSQL- und relationale Konzepte in SQL Server und Azure SQL-Datenbanken durch JSON-Funktionen verbunden werden:
+
+*JSON as a bridge between NoSQL and relational worlds*
+> [!VIDEO https://channel9.msdn.com/events/DataDriven/SQLServer2016/JSON-as-a-bridge-betwen-NoSQL-and-relational-worlds/player]
  
 Hier ist ein Beispiel des JSON-Texts: 
  
@@ -53,7 +58,10 @@ Durch Verwenden von integrierten SQL Server-Funktionen und -Operatoren können S
 ![Übersicht über die integrierte Unterstützung für JSON](../../relational-databases/json/media/jsonslides1overview.png "Overview of built-in JSON support")  
   
 ## <a name="key-json-capabilities-of-sql-server-and-sql-database"></a>Wichtige JSON-Funktionen von SQL Server und SQL-Datenbank
-In den nächsten Abschnitten werden die wichtigsten Funktionen erläutert, die SQL Server durch die integrierte Unterstützung für JSON bereitstellt.
+In den nächsten Abschnitten werden die wichtigsten Funktionen erläutert, die SQL Server durch die integrierte Unterstützung für JSON bereitstellt. Im folgenden Video sehen Sie, wie JSON-Funktionen und Operatoren verwenden werden:
+
+*SQL Server 2016 and JSON Support*
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-2016-and-JSON-Support/player]
 
 ### <a name="extract-values-from-json-text-and-use-them-in-queries"></a>Extrahieren von Werten aus JSON-Text und Verwenden dieser Werte in Abfragen
 Wenn Sie JSON-Text verwenden, der in Datenbanktabellen gespeichert ist, können Sie Werte in dem JSON-Text lesen oder ändern, indem Sie die folgenden integrierten Funktionen verwenden:  
@@ -312,15 +320,12 @@ Spezielle Lösungen, Anwendungsfälle und Empfehlungen finden Sie in den [Blogbe
 
 Eine visuelle Einführung in die JSON-Unterstützung, die in SQL Server und Azure SQL-Datenbank integriert ist, finden Sie in den folgenden Videos:
 
-*SQL Server 2016 and JSON Support*
-> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-2016-and-JSON-Support/player]
-
 *Using JSON in SQL Server 2016 and Azure SQL Database*
 > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Using-JSON-in-SQL-Server-2016-and-Azure-SQL-Database/player]
 
-*JSON as a bridge between NoSQL and relational worlds*
-> [!VIDEO https://channel9.msdn.com/events/DataDriven/SQLServer2016/JSON-as-a-bridge-betwen-NoSQL-and-relational-worlds/player]
-   
+*Building REST API with SQL Server using JSON functions (Erstellen einer REST-API mithilfe von JSON-Funktionen mit SQL Server)*
+> [!VIDEO https://www.youtube.com/watch?v=0m6GXF3-5WI]
+
 ### <a name="reference-articles"></a>Referenzartikel  
   
 -   [FOR-Klausel (Transact-SQL)](../../t-sql/queries/select-for-clause-transact-sql.md) (FOR JSON)  
@@ -330,5 +335,3 @@ Eine visuelle Einführung in die JSON-Unterstützung, die in SQL Server und Azur
     -   [JSON_VALUE (Transact-SQL)](../../t-sql/functions/json-value-transact-sql.md)  
     -   [JSON_QUERY (Transact-SQL)](../../t-sql/functions/json-query-transact-sql.md)  
     -   [JSON_MODIFY (Transact-SQL)](../../t-sql/functions/json-modify-transact-sql.md)  
-  
-  

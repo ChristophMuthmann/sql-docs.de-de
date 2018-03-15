@@ -1,5 +1,5 @@
 ---
-title: "Erstellen des SYMMETRISCHEN Schlüssels (Transact-SQL) | Microsoft Docs"
+title: CREATE SYMMETRIC KEY (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 09/12/2017
 ms.prod: sql-non-specified
@@ -77,70 +77,70 @@ CREATE SYMMETRIC KEY key_name
   
 ## <a name="arguments"></a>Argumente  
  *Key_name*  
- Gibt den eindeutigen Namen an, unter dem der symmetrische Schlüssel in der Datenbank bekannt ist. Die Namen von temporären Schlüsseln müssen mit einem Nummernzeichen (#) beginnen. Beispielsweise **#temporarykey900007**. Das Erstellen eines symmetrischen Schlüssels, dessen Name mit mehreren Nummernzeichen (#) beginnt, ist nicht möglich. Sie können keinen temporären symmetrischen Schlüssel mit einem EKM-Anbieter erstellen.  
+ Gibt den eindeutigen Namen an, unter dem der symmetrische Schlüssel in der Datenbank bekannt ist. Die Namen von temporären Schlüsseln müssen mit einem Nummernzeichen (#) beginnen. Ein Beispiel: **#temporaryKey900007**. Das Erstellen eines symmetrischen Schlüssels, dessen Name mit mehreren Nummernzeichen (#) beginnt, ist nicht möglich. Sie können keinen temporären symmetrischen Schlüssel mit einem EKM-Anbieter erstellen.  
   
- Autorisierung *Owner_name*  
+ AUTHORIZATION *owner_name*  
  Gibt den Namen des Datenbankbenutzers oder der Anwendungsrolle an, der bzw. die diesen Schlüssel besitzen wird.  
   
- VOM Anbieter *Provider_name*  
- Gibt einen Anbieter für erweiterte Schlüsselverwaltung (Extensible Key Management, EKM) und einen Namen an. Der Schlüssel wird nicht vom EKM-Gerät exportiert. Der Anbieter muss zuerst mit der CREATE PROVIDER-Anweisung definiert werden. Weitere Informationen zum Erstellen von externer Schlüsselanbietern finden Sie unter [erweiterbare Schlüsselverwaltung &#40; Erweiterbare Schlüsselverwaltung &#41; ](../../relational-databases/security/encryption/extensible-key-management-ekm.md).  
+ FROM PROVIDER *provider_name*  
+ Gibt einen Anbieter für erweiterte Schlüsselverwaltung (Extensible Key Management, EKM) und einen Namen an. Der Schlüssel wird nicht vom EKM-Gerät exportiert. Der Anbieter muss zuerst mit der CREATE PROVIDER-Anweisung definiert werden. Weitere Informationen zum Erstellen von externen Schlüsselanbietern finden Sie unter [Erweiterbare Schlüsselverwaltung &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md).  
   
 > [!NOTE]  
 >  Diese Option ist in einer enthaltenen Datenbank nicht verfügbar.  
   
- KEY_SOURCE **= "***Pass_phrase***"**  
+ KEY_SOURCE **='***pass_phrase***'**  
  Gibt einen Passphrase an, aus dem der Schlüssel abgeleitet werden soll.  
   
- IDENTITY_VALUE **= "***Identity_phrase***"**  
+ IDENTITY_VALUE **='***identity_phrase***'**  
  Gibt einen Identity-Ausdruck an, aus dem ein GUID zum Kennzeichnen von Daten generiert wird, die mit einem temporären Schlüssel verschlüsselt werden.  
   
- PROVIDER_KEY_NAME**= "***Key_name_in_provider***"**  
+ PROVIDER_KEY_NAME**='***key_name_in_provider***'**  
  Gibt den Namen an, auf den der Anbieter für erweiterte Schlüsselverwaltung (Extensible Key Management, EKM) verweist.  
   
 > [!NOTE]  
 >  Diese Option ist in einer enthaltenen Datenbank nicht verfügbar.  
   
- CREATION_DISPOSITION  **=**  CREATE_NEW  
+ CREATION_DISPOSITION **=** CREATE_NEW  
  Erstellt einen neuen Schlüssel auf dem Extensible Key Management-Gerät.  Wenn bereits ein Schlüssel auf dem Gerät vorhanden ist, gibt die Anweisung eine Fehlermeldung zurück.  
   
- CREATION_DISPOSITION  **=**  OPEN_EXISTING  
+ CREATION_DISPOSITION **=** OPEN_EXISTING  
  Ordnet einen symmetrischen Schlüssel von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einem vorhandenen Extensible Key Management-Schlüssel zu. Wenn CREATION_DISPOSITION = OPEN_EXISTING nicht bereitgestellt wird, wird der Standardwert CREATE_NEW angenommen.  
   
- *Name*  
+ *certificate_name*  
  Gibt den Namen des Zertifikats an, das zum Verschlüsseln des symmetrischen Schlüssels verwendet wird. Das Zertifikat muss bereits in der Datenbank vorhanden sein.  
   
- **"** *Kennwort* **"**  
- Gibt ein Kennwort an, von dem ein TRIPLE_DES-Schlüssel zum Sichern des symmetrischen Schlüssels abgeleitet wird. *Kennwort* erfüllt die Anforderungen der Windows-Kennwortrichtlinien des Computers, der die Instanz ausgeführt wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Verwenden Sie immer sichere Kennwörter.  
+ **'** *password* **'**  
+ Gibt ein Kennwort an, von dem ein TRIPLE_DES-Schlüssel zum Sichern des symmetrischen Schlüssels abgeleitet wird. *password* muss den Anforderungen der Windows-Kennwortrichtlinien des Computers entsprechen, auf dem die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt wird. Verwenden Sie immer sichere Kennwörter.  
   
  *symmetric_key_name*  
- Gibt einen symmetrischen Schlüssel zum Verschlüsseln des Schlüssels, der erstellt wird. Der angegebene Schlüssel muss bereits in der Datenbank vorhanden und geöffnet sein.  
+ Gibt einen symmetrischen Schlüssel an, der zum Verschlüsseln des erstellten Schlüssels verwendet wird. Der angegebene Schlüssel muss bereits in der Datenbank vorhanden und geöffnet sein.  
   
- *asym_key_name*  
- Gibt einen asymmetrischen Schlüssel zum Verschlüsseln des Schlüssels, der erstellt wird. Dieser asymmetrische Schlüssel muss bereits in der Datenbank vorhanden sein.  
+ *Asym_Key_Name*  
+ Gibt einen asymmetrischen Schlüssel an, der zum Verschlüsseln des erstellten Schlüssels verwendet wird. Dieser asymmetrische Schlüssel muss bereits in der Datenbank vorhanden sein.  
   
- \<Algorithmus >  
+ \<algorithm>  
 Geben Sie den Verschlüsselungsalgorithmus an.   
 > [!WARNING]  
-> Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]gelten alle anderen Algorithmen als AES_128, AES_192 und AES_256 als veraltet. Um ältere Algorithmen (nicht empfohlen) zu verwenden, müssen Sie den Kompatibilitätsgrad der Datenbanken auf höchsten 120 festlegen.  
+> Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]gelten alle anderen Algorithmen als AES_128, AES_192 und AES_256 als veraltet. Sie müssen den Kompatibilitätsgrad zwischen Datenbanken auf maximal 120 festlegen, um ältere Algorithmen zu verwenden (nicht empfohlen).  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Beim Erstellen eines symmetrischen Schlüssels muss der symmetrische Schlüssel mithilfe mindestens eines der folgenden Elemente verschlüsselt werden: Zertifikat, Kennwort, symmetrischer Schlüssel, asymmetrischer Schlüssel oder PROVIDER. Der Schlüssel kann mehrere Verschlüsselungen jedes Typs aufweisen. Ein einzelner symmetrischer Schlüssel kann demnach mit mehreren Zertifikaten, Kennwörtern, symmetrischen Schlüsseln und asymmetrischen Schlüsseln gleichzeitig verschlüsselt sein.  
   
 > [!CAUTION]  
->  Wenn ein symmetrischer Schlüssel mit einem Kennwort anstelle eines Zertifikats (oder eines anderen Schlüssels) verschlüsselt ist, wird der TRIPLE DES-Verschlüsselungsalgorithmus zum Verschlüsseln des Kennworts verwendet. Daher werden Schlüssel, die mit einem starken Verschlüsselungsalgorithmus wie z. B. AES erstellt werden, selbst mit einem schwächeren Algorithmus verschlüsselt.  
+>  Wenn ein symmetrischer Schlüssel mit einem Kennwort anstatt mit einem Zertifikat (oder einem anderen Schlüssel) verschlüsselt ist, wird der TRIPLE_DES-Verschlüsselungsalgorithmus verwendet, um das Kennwort zu verschlüsseln. Daher werden Schlüssel, die mit einem starken Verschlüsselungsalgorithmus wie z. B. AES erstellt werden, selbst mit einem schwächeren Algorithmus verschlüsselt.  
   
  Mit dem optionalen Kennwort kann der symmetrische Schlüssel verschlüsselt werden, bevor der Schlüssel an mehrere Benutzer verteilt wird.  
   
  Temporäre Schlüssel befinden sich im Besitz des Benutzers, der sie erstellt. Temporäre Schlüssel gelten nur für die aktuelle Sitzung.  
   
- Von IDENTITY_VALUE wird ein GUID generiert, mit dem Daten gekennzeichnet werden, die mit dem neuen symmetrischen Schlüssel verschlüsselt werden. Mithilfe dieser Kennzeichnung können Schlüssel den verschlüsselten Daten zugeordnet werden. Die GUID, die von einem bestimmten Ausdruck generiert ist immer gleich. Nachdem ein Ausdruck zum Generieren eines GUIDs verwendet wurde, kann der Ausdruck nicht mehr wiederverwendet werden, es sei denn, es ist mindestens eine Sitzung vorhanden, in der der Ausdruck aktiv verwendet wird. IDENTITY_VALUE ist eine optionale Klausel. Die Verwendung dieser Klausel wird jedoch empfohlen, wenn Sie mit einem temporären Schlüssel verschlüsselte Daten speichern.  
+ Von IDENTITY_VALUE wird ein GUID generiert, mit dem Daten gekennzeichnet werden, die mit dem neuen symmetrischen Schlüssel verschlüsselt werden. Mithilfe dieser Kennzeichnung können Schlüssel den verschlüsselten Daten zugeordnet werden. Von einem spezifischen Ausdruck wird immer dieselbe GUID generiert. Nachdem ein Ausdruck zum Generieren eines GUIDs verwendet wurde, kann der Ausdruck nicht mehr wiederverwendet werden, es sei denn, es ist mindestens eine Sitzung vorhanden, in der der Ausdruck aktiv verwendet wird. IDENTITY_VALUE ist eine optionale Klausel. Die Verwendung dieser Klausel wird jedoch empfohlen, wenn Sie mit einem temporären Schlüssel verschlüsselte Daten speichern.  
   
  Es gibt keinen Standardverschlüsselungsalgorithmus.  
   
 > [!IMPORTANT]  
 >  Die Verwendung der RC4- und RC4_128-Datenstromchiffren wird zum Schutz vertraulicher Daten nicht empfohlen. Die Verschlüsselung mit solchen Schlüsseln wird von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht weiter codiert.  
   
- Informationen zu symmetrischen Schlüsseln werden in der [symmetric_keys](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md) -Katalogsicht angezeigt.  
+ Informationen zu symmetrischen Schlüsseln werden in der [sys.symmetric_keys](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md)-Katalogsicht angezeigt.  
   
  Symmetrische Schlüssel können nicht mit symmetrischen Schlüsseln, die mit dem Verschlüsselungsanbieter erstellt wurden, verschlüsselt werden.  
   
@@ -152,7 +152,7 @@ Geben Sie den Verschlüsselungsalgorithmus an.
   
  **Veraltung des RC4-Algorithmus:**  
   
- Wiederholte Verwendung des gleichen RC4 oder RC4_128-KEY_GUID für unterschiedliche Datenblocks, führt in der gleichen RC4-Schlüssel, da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird nicht automatisch eine Salt bereitstellt. Die wiederholte Verwendung des gleichen RC4-Schlüssels stellt einen bekannter Fehler dar, der zu einer sehr schwachen Verschlüsselung führt. Deshalb wurden das RC4-Schlüsselwort und das RC4_128-Schlüsselwort als veraltet festgelegt. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]  
+ Die wiederholte Verwendung der gleichen RC4- oder RC4_128-KEY_GUID für unterschiedliche Datenblocks führt zum gleichen RC4-Schlüssel, da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht automatisch eine Salt bereitstellt. Die wiederholte Verwendung des gleichen RC4-Schlüssels stellt einen bekannter Fehler dar, der zu einer sehr schwachen Verschlüsselung führt. Deshalb wurden das RC4-Schlüsselwort und das RC4_128-Schlüsselwort als veraltet festgelegt. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]  
   
 > [!WARNING]  
 >  Der RC4-Algorithmus wird nur aus Gründen der Abwärtskompatibilität unterstützt. Neues Material kann nur mit RC4 oder RC4_128 verschlüsselt werden, wenn die Datenbank den Kompatibilitätsgrad 90 oder 100 besitzt. (Nicht empfohlen.) Verwenden Sie stattdessen einen neueren Algorithmus, z. B. einen der AES-Algorithmen. In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] kann mit RC4 oder RC4_128 verschlüsseltes Material in jedem Kompatibilitätsgrad entschlüsselt werden.  
@@ -199,12 +199,12 @@ CREATION_DISPOSITION=OPEN_EXISTING;
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Auswählen eines Verschlüsselungsalgorithmus](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)   
  [ALTER SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-symmetric-key-transact-sql.md)   
  [DROP SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-symmetric-key-transact-sql.md)   
  [Verschlüsselungshierarchie](../../relational-databases/security/encryption/encryption-hierarchy.md)   
- [Sys. symmetric_keys &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md)   
+ [sys.symmetric_keys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md)   
  [Erweiterbare Schlüsselverwaltung &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)   
  [Erweiterbare Schlüsselverwaltung mit Azure Key Vault &#40;SQL Server&#41;](../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Vergleichsoperatoren (Transact-SQL) | Microsoft Docs
+title: Vergleichsoperatoren (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -37,7 +37,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="comparison-operators-transact-sql"></a>Vergleichsoperatoren (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Vergleichsoperatoren testen, ob zwei Ausdrücke gleichwertig sind. Vergleichsoperatoren können für alle Ausdrücke, mit Ausnahme der Ausdrücke verwendet werden die **Text**, **Ntext**, oder **Image** -Datentypen. In der folgenden Tabelle werden die [!INCLUDE[tsql](../../includes/tsql-md.md)]-Vergleichsoperatoren aufgelistet.  
+  Vergleichsoperatoren testen, ob zwei Ausdrücke gleichwertig sind. Vergleichsoperatoren können für alle Ausdrücke angewendet werden, außer für Ausdrücke der Datentypen **text**, **ntext** oder **image**. In der folgenden Tabelle werden die [!INCLUDE[tsql](../../includes/tsql-md.md)]-Vergleichsoperatoren aufgelistet.  
   
 |Operator|Bedeutung|  
 |--------------|-------------|  
@@ -47,18 +47,18 @@ ms.lasthandoff: 01/25/2018
 |[>= (Greater Than or Equal To) (>= (Größer als oder gleich)](../../t-sql/language-elements/greater-than-or-equal-to-transact-sql.md)|Größer als oder gleich|  
 |[<= (Less Than or Equal To) (<= (Kleiner als oder gleich))](../../t-sql/language-elements/less-than-or-equal-to-transact-sql.md)|Kleiner als oder gleich|  
 |[<> (Not Equal To) (<> (Ungleich))](../../t-sql/language-elements/not-equal-to-transact-sql-traditional.md)|Ungleich|  
-|[\!= (Ungleich)](../../t-sql/language-elements/not-equal-to-transact-sql-exclamation.md)|Nicht gleich (kein ISO-Standard)|  
-|[\!< (Nicht kleiner als)](../../t-sql/language-elements/not-less-than-transact-sql.md)|Nicht kleiner als (kein ISO-Standard)|  
-|[\!> (Nicht größer als)](../../t-sql/language-elements/not-greater-than-transact-sql.md)|Nicht größer als (kein ISO-Standard)|  
+|[!= (Ungleich)](../../t-sql/language-elements/not-equal-to-transact-sql-exclamation.md)|Nicht gleich (kein ISO-Standard)|  
+|[!< (Nicht kleiner als)](../../t-sql/language-elements/not-less-than-transact-sql.md)|Nicht kleiner als (kein ISO-Standard)|  
+|[!> (Nicht größer als)](../../t-sql/language-elements/not-greater-than-transact-sql.md)|Nicht größer als (kein ISO-Standard)|  
   
 ## <a name="boolean-data-type"></a>Boolesche Datentypen  
- Das Ergebnis eines Vergleichsoperators hat die **booleschen** -Datentyp. Es kann drei Werte annehmen: TRUE, FALSE und UNKNOWN. Ausdrücke, die Zurückgeben einer **booleschen** -Datentyp werden als boolesche Ausdrücke bezeichnet.  
+ Das Ergebnis eines Vergleichsoperators weist den Datentyp **Boolean** auf. Es kann drei Werte annehmen: TRUE, FALSE und UNKNOWN. Ausdrücke, die einen Wert vom Datentyp **Boolean** zurückgeben, werden auch als boolesche Ausdrücke bezeichnet.  
   
- Im Gegensatz zu anderen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datentypen, eine **booleschen** -Datentyp kann nicht mit dem Datentyp einer Spalte oder Variable angegeben werden, und kann nicht in einem Resultset zurückgegeben werden.  
+ Ein **Boolean**-Datentyp kann nicht wie die anderen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentypen als Datentyp für eine Tabellenspalte oder eine Variable angegeben werden. Boolesche Werte können auch nicht in einem Resultset zurückgegeben werden.  
   
  Wenn SET ANSI_NULLS auf ON festgelegt ist, gibt ein Operator mit einem oder zwei NULL-Ausdrücken UNKNOWN zurück. Wenn SET ANSI_NULLS auf OFF festgelegt ist, gelten die gleichen Regeln; allerdings gibt der Gleichheitsoperator (=) TRUE zurück, wenn beide Ausdrücke NULL sind. So gibt beispielsweise NULL = NULL den Wert TRUE zurück, wenn SET ANSI_NULLS auf OFF festgelegt ist.  
   
- Ausdrücke mit **booleschen** -Datentypen werden in der WHERE-Klausel zum Filtern der Zeilen, die für die suchbedingungen und sprachanweisungen Kontrollfluss z. B. IF und WHILE, z. B. infrage kommen verwendet:  
+ Ausdrücke mit **Boolean**-Datentypen werden in drt WHERE-Klausel zum Filtern von Zeilen verwendet, die bestimmten Suchbedingungen entsprechen. Außerdem werden sie in den Sprachkonstrukten zur Ablaufsteuerung, wie IF und WHILE, verwendet. Beispiel:  
   
 ```  
 -- Uses AdventureWorks  
@@ -71,8 +71,8 @@ IF (@MyProduct <> 0)
    WHERE ProductID = @MyProduct;  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Ausdrücke &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)  
- [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)  
+ [Operatoren &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)  
   
   

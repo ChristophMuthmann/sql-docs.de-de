@@ -1,5 +1,5 @@
 ---
-title: Erstellen von COLUMN ENCRYPTION KEY (Transact-SQL) | Microsoft Docs
+title: CREATE COLUMN ENCRYPTION KEY (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 07/18/2016
 ms.prod: sql-non-specified
@@ -45,7 +45,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="create-column-encryption-key-transact-sql"></a>CREATE COLUMN ENCRYPTION KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Erstellt einen Verschlüsselungsschlüssel für die Spalte mit den anfänglichen Satz von Werten, mit der angegebenen spaltenhauptschlüssel verschlüsselt. Dies ist ein Metadatenvorgang. Ein CEK kann bis zu zwei Werte, die für eine Rotation der spaltenhauptschlüssel ermöglicht haben. Erstellen eines CEK ist erforderlich, damit jede Spalte in der Datenbank verschlüsselt werden kann, mithilfe der [Always Encrypted &#40; Datenbankmodul &#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md) Funktion. Der CEK kann auch erstellt werden, mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Vor dem Erstellen eines CEK, müssen Sie mithilfe ein CMK definieren [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] oder [CREATE COLUMN MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md) Anweisung.  
+  Erstellt einen Spaltenverschlüsselungsschlüssel (column encryption key, CEK) mit den Anfangswerten, die mit den angegebenen Spaltenhauptschlüsseln verschlüsselt wurden. Dies ist ein Metadatenvorgang. Ein CEK kann maximal zwei Werte enthalten, was die Rotation des Spaltenhauptschlüssels ermöglicht. Das Erstellen eines CEK ist die Voraussetzung dafür, dass Spalten in der Datenbank mit der [Always Encrypted-Feature und der Datenbank-Engine](../../relational-databases/security/encryption/always-encrypted-database-engine.md) verschlüsselt werden können. CEKs können auch mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] erstellt werden. Vor dem Erstellen eines CEK, müssen Sie mithilfe von [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] oder der [CREATE COLUMN MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md)-Anweisung ein CEK definieren.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -68,39 +68,39 @@ WITH VALUES
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *Key_name*  
- Ist der Name, mit dem der spaltenverschlüsselungsschlüssel in der Datenbank bekannt ist.  
+ *key_name*  
+ Der Name des CEK in der Datenbank.  
   
  *column_master_key_name*  
- Gibt den Namen der benutzerdefinierten spaltenhauptschlüssels (CMK) zum Verschlüsseln des Verschlüsselungsschlüssels für die Spalte (CEK) verwendet.  
+ Der Name des benutzerdefinierten Spaltenhauptschlüssels (custom column master key, CMK), der zur Verschlüsselung des CEK verwendet wird.  
   
  *algorithm_name*  
- Der Name des Verschlüsselungsalgorithmus verwendet, um den Wert des spaltenverschlüsselungsschlüssels zu verschlüsseln. Der Algorithmus für die Systemanbieter muss **RSA_OAEP**.  
+ Der Name des Algorithmus, der verwendet wurde, um den Wert des CEK zu verschlüsseln. Der Algorithmus für die Systemanbieter muss auf **RSA_OAEP** festgelegt sein  
   
  *varbinary_literal*  
- Der verschlüsselte CEK-Wert BLOB.  
+ Der verschlüsselte CEK-Wert-BLOB.  
   
 > [!WARNING]  
->  Übergeben Sie nur-Text nie CEK-Werte in dieser Anweisung an. Auf diese Weise wird der Vorteil dieser Funktion besteht.  
+>  Verwenden Sie diese Anweisung nie mit CEK-Werten im Klartext. Hierdurch wird die Wirksamkeit des Features beeinträchtigt.  
   
-## <a name="remarks"></a>Hinweise  
- Die Anweisung CREATE COLUMN ENCRYPTION KEY muss mindestens eine VALUES-Klausel enthalten und kann bis zu zwei haben. Wenn nur einer angegeben wird, können Sie die Anweisung ALTER COLUMN ENCRYPTION KEY, einen zweiten Wert später hinzufügen. Die ALTER COLUMN ENCRYPTION KEY-Anweisung können auch um eine VALUES-Klausel zu entfernen.  
+## <a name="remarks"></a>Remarks  
+ Die CREATE COLUMN ENCRYPTION KEY-Anweisung muss mindestens eine VALUES-Klausel enthalten und darf maximal über zwei Klauseln verfügen. Wenn nur eine angegeben wird, können Sie mit der ALTER COLUMN ENCRYPTION KEY-Anweisung später einen zweiten Wert hinzufügen. Mit derselben Anweisung können Sie auch eine VALUES-Klausel entfernen.  
   
- In der Regel wird ein spaltenverschlüsselungsschlüssel mit nur einen verschlüsselten Wert erstellt. Wenn muss ein spaltenhauptschlüssel werden gedreht (die aktuelle Spalte Hauptschlüssel mit dem neuen spaltenhauptschlüssel ersetzt werden muss), können Sie einen neuen Wert des spaltenverschlüsselungsschlüssels, hinzufügen, mit dem neuen spaltenhauptschlüssel verschlüsselt. Dadurch können Sie sicherstellen, dass Clientanwendungen auf Daten zugreifen können mit der spaltenverschlüsselungsschlüssel verschlüsselt werden, solange der neue spaltenhauptschlüssel für Clientanwendungen verfügbar bereitgestellt werden. Ein Always Encrypted aktiviert der Treiber in einer Clientanwendung, die keinen Zugriff auf dem neuen Hauptschlüssel, wird in der Lage, die spaltenverschlüsselungsschlüssel verschlüsselt mit dem alten spaltenhauptschlüssel zu verwenden, um sensible Daten zuzugreifen.  
+ In der Regel wird ein CEK nur mit einem verschlüsselten Wert erstellt. Wenn der aktuelle CMK rotiert, also mit dem neuen CMK ersetzt werden muss, können Sie einen neuen CEK-Wert hinzufügen, der mit dem neuen CMK verschlüsselt wird. Dadurch wird sichergestellt, dass Clientanwendungen auf Daten zugreifen können, die mit dem CEK verschlüsselt wurden, während der neue CMK Clientanwendungen zur Verfügung gestellt wird. Ein Treiber, für den Always Encrypted aktiviert ist, kann in einer Clientanwendung, die keinen Zugriff auf den neuen Hauptschlüssel hat, zum Zugriff auf vertrauliche Daten den CEK-Wert verwenden, der mit dem alten CMK verschlüsselt wurde.  
   
- Verschlüsselungsalgorithmen, Always Encrypted unterstützt werden, erfordern die Klartextwert 256 Bits aufweisen.  
+ Von Always Encrypted unterstützte Verschlüsselungsalgorithmen erfordern einen Klartextwert von 256 Bit.  
   
- Ein verschlüsselter Wert soll mit einem Schlüsselspeicher-Anbieter, der den Schlüsselspeicher mit dem spaltenhauptschlüssel kapselt generiert werden. Weitere Informationen finden Sie unter [Always Encrypted &#40; Cliententwicklung &#41;](../../relational-databases/security/encryption/always-encrypted-client-development.md).  
+ Ein verschlüsselter Wert soll mit einem Schlüsselspeicheranbieter erstellt werden, der den Schlüsselspeicher mit dem CMK enthält. Weitere Informationen finden Sie unter [Always Encrypted &#40;Cliententwicklung&#41;](../../relational-databases/security/encryption/always-encrypted-client-development.md).  
   
- Verwendung [sys.columns &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md), [column_encryption_keys &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md) und [column_encryption_key_values &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md) zum Anzeigen von Informationen zur Verschlüsselung von spaltenverschlüsselungsschlüsseln.  
+ Mit [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md), [sys.column_encryption_keys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md) und [sys.column_encryption_key_values &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md) können Sie sich Informationen zu CEKs anzeigen lassen.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert die **ALTER ANY COLUMN ENCRYPTION KEY** Berechtigung.  
+ Erfordert die **ALTER ANY COLUMN ENCRYPTION KEY**-Berechtigung.  
   
 ## <a name="examples"></a>Beispiele  
   
-### <a name="a-creating-a-column-encryption-key"></a>A. Erstellen eines spaltenverschlüsselungsschlüssels  
- Das folgende Beispiel erstellt einen spaltenverschlüsselungsschlüssel namens `MyCEK`.  
+### <a name="a-creating-a-column-encryption-key"></a>A. Erstellen eines CEK  
+ Im folgenden Beispiel wird ein CEK mit der Bezeichnung `MyCEK` erstellt.  
   
 ```  
 CREATE COLUMN ENCRYPTION KEY MyCEK   
@@ -113,8 +113,8 @@ WITH VALUES
 GO  
 ```  
   
-### <a name="creating-a-column-encryption-key-with-2-values"></a>Erstellen einen Verschlüsselungsschlüssel für die Spalte mit 2 Werte  
- Das folgende Beispiel erstellt einen spaltenverschlüsselungsschlüssel namens `TwoValueCEK` mit zwei Werten.  
+### <a name="creating-a-column-encryption-key-with-2-values"></a>Erstellen eines CEK mit zwei Werten  
+ Im folgenden Beispiel wird ein CEK mit der Bezeichnung `TwoValueCEK` und zwei Werten erstellt.  
   
 ```  
   
@@ -133,9 +133,9 @@ WITH VALUES
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [ALTER COLUMN ENCRYPTION KEY &#40; Transact-SQL &#41;](../../t-sql/statements/alter-column-encryption-key-transact-sql.md)   
- [DROP COLUMN ENCRYPTION KEY &#40; Transact-SQL &#41;](../../t-sql/statements/drop-column-encryption-key-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [ALTER COLUMN ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-column-encryption-key-transact-sql.md)   
+ [DROP COLUMN ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-column-encryption-key-transact-sql.md)   
  [CREATE COLUMN MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-column-master-key-transact-sql.md)   
  [Always Encrypted &#40;Datenbankmodul&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
  [sys.column_encryption_keys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md)   

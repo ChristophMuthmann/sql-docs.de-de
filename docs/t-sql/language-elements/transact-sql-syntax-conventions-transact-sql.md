@@ -1,5 +1,5 @@
 ---
-title: Transact-SQL-Syntaxkonventionen (Transact-SQL) | Microsoft Docs
+title: Transact-SQL-Syntaxkonventionen (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -55,10 +55,10 @@ ms.lasthandoff: 01/25/2018
 |&#124; (Senkrechter Strich)|Trennt in eckigen oder geschweiften Klammern eingeschlossene Syntaxelemente. Sie können nur eines der Elemente verwenden.|  
 |`[ ]` (eckige Klammern)|Optionale Syntaxelemente. Geben Sie die eckigen Klammern nicht ein.|  
 |{ } (geschweifte Klammern)|Erforderliche Syntaxelemente. Geben Sie die geschweiften Klammern nicht ein.|  
-|[**,**...*n*]|Gibt an, das vorherige Element kann wiederholt werden  *n*  -Mal. Die einzelnen Vorkommen werden durch Kommas voneinander getrennt.|  
-|[...*n*]|Gibt an, das vorherige Element kann wiederholt werden  *n*  -Mal. Die einzelnen Vorkommen werden durch Leerzeichen voneinander getrennt.|  
+|[**,**...*n*]|Zeigt an, dass das vorherige Element *n* -mal wiederholt werden kann. Die einzelnen Vorkommen werden durch Kommas voneinander getrennt.|  
+|[...*n*]|Zeigt an, dass das vorherige Element *n* -mal wiederholt werden kann. Die einzelnen Vorkommen werden durch Leerzeichen voneinander getrennt.|  
 |;|[!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisungsabschlusszeichen.Dieses Abschlusszeichen ist für die meisten Anweisungen in dieser Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht zwingend erforderlich, in zukünftigen Versionen kann sich dies jedoch ändern.|  
-|\<label> ::=|Der Name eines Syntaxblockes. Diese Konvention dient zur Gruppierung und Bezeichnung von Abschnitten einer langen Syntax oder einer Syntaxeinheit, die an mehreren Stellen innerhalb einer Anweisung verwendet werden kann. Jeder Standort in der die Syntax kann verwendet werden, wird angegeben, mit der Bezeichnung in spitzen Klammern eingeschlossen: \<Bezeichnung >.<br /><br /> Eine Gruppe ist eine Auflistung von Ausdrücken, z. B. \<gruppierungssatz >; und eine Liste ist eine Auflistung von Sets, z. B. \<Liste zusammengesetzter Elemente >.|  
+|\<label> ::=|Der Name eines Syntaxblockes. Diese Konvention dient zur Gruppierung und Bezeichnung von Abschnitten einer langen Syntax oder einer Syntaxeinheit, die an mehreren Stellen innerhalb einer Anweisung verwendet werden kann. Jede Stelle, an der der Syntaxblock verwendet werden kann, wird durch die in spitze Klammern eingeschlossene Bezeichnung angezeigt: \<label>.<br /><br /> Ein Set ist eine Collection von Ausdrücken, z.B. \<Gruppierungssatz>. Eine Liste ist eine Collection von Sets, z.B. \<Liste zusammengesetzter Elemente>.|  
   
 ## <a name="multipart-names"></a>Mehrteilige Namen  
  Wenn keine anderen Angaben vorliegen, können alle [!INCLUDE[tsql](../../includes/tsql-md.md)]-Referenzen auf den Namen eines Datenbankobjekts aus vier Teilen bestehende Namen im folgenden Format sein:  
@@ -75,15 +75,15 @@ ms.lasthandoff: 01/25/2018
  Gibt den Namen eines Verbindungs- oder Remoteservers an.  
   
  *database_name*  
- Gibt den Namen einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank an, wenn sich das Objekt in einer lokalen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] befindet. Wenn das Objekt in einem verknüpften Server ist *Database_name* gibt einen OLE DB-Katalog.  
+ Gibt den Namen einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank an, wenn sich das Objekt in einer lokalen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] befindet. Wenn sich das Objekt auf einem verknüpften Server befindet, wird mit *database_name* ein OLE DB-Katalog angegeben.  
   
  *schema_name*  
- Gibt den Namen des Schemas an, das das Objekt enthält, wenn sich das Objekt in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank befindet. Wenn das Objekt in einem verknüpften Server ist *Schema_name* gibt einen OLE DB-Schema an.  
+ Gibt den Namen des Schemas an, das das Objekt enthält, wenn sich das Objekt in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank befindet. Wenn sich das Objekt auf einem Verbindungsserver befindet, wird mit *schema_name* ein OLE DB-Schemaname angegeben.  
   
  *object_name*  
  Gibt den Namen des Objekts an.  
   
- Wenn Sie auf ein bestimmtes Objekt verweisen, müssen Sie nicht immer den Server, die Datenbank und das Schema angeben, damit das Objekt vom [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] identifiziert werden kann. Wenn das Objekt nicht gefunden wird, wird jedoch ein Fehler zurückgegeben.  
+ Wenn Sie auf ein bestimmtes Objekt verweisen, müssen Sie nicht immer den Server, die Datenbank und das Schema angeben, damit das Objekt vom [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] identifiziert werden kann. Wenn das Objekt jedoch nicht gefunden werden kann, wird ein Fehler zurückgegeben.  
   
 > [!NOTE]  
 >  Um Fehler bei der Namensauflösung zu vermeiden, wird empfohlen, den Schemanamen bei jeder Angabe eines Objekts anzugeben, das Schemas als Bereiche besitzt.  
@@ -92,14 +92,14 @@ ms.lasthandoff: 01/25/2018
   
 |Objektverweisformat|Description|  
 |-----------------------------|-----------------|  
-|*server* **.** *database* **.** *schema* **.** *Objekt*|Vierteiliger Name.|  
-|*server* **.** *database* **..** *Objekt*|Der Schemaname wird weggelassen.|  
-|*server* **..** *schema* **.** *Objekt*|Der Datenbankname wird weggelassen.|  
-|*Server* **...**  *Objekt*|Der Datenbank- und der Schemaname werden weggelassen.|  
-|*database* **.** *schema* **.** *Objekt*|Der Servername wird weggelassen.|  
-|*database* **..** *Objekt*|Der Server- und der Schemaname werden weggelassen.|  
-|*schema* **.** *Objekt*|Der Server- und der Datenbankname werden weggelassen.|  
-|*Objekt*|Der Server-, der Datenbank- und der Schemaname werden weggelassen.|  
+|*server* **.** *database* **.** *schema* **.** *object*|Vierteiliger Name.|  
+|*server* **.** *database* **..** *object*|Der Schemaname wird weggelassen.|  
+|*server* **..** *schema* **.** *object*|Der Datenbankname wird weggelassen.|  
+|*server* **...** *object*|Der Datenbank- und der Schemaname werden weggelassen.|  
+|*database* **.** *schema* **.** *object*|Der Servername wird weggelassen.|  
+|*database* **..** *object*|Der Server- und der Schemaname werden weggelassen.|  
+|*schema* **.** *object*|Der Server- und der Datenbankname werden weggelassen.|  
+|*object*|Der Server-, der Datenbank- und der Schemaname werden weggelassen.|  
   
 ## <a name="code-example-conventions"></a>Konventionen für Codebeispiele  
  Wenn nicht anders angegeben, wurden die Beispiele in der [!INCLUDE[tsql](../../includes/tsql-md.md)]-Referenz anhand von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] und den Standardeinstellungen für die folgenden Optionen getestet:  
@@ -118,14 +118,14 @@ ms.lasthandoff: 01/25/2018
   
  Die meisten Codebeispiele in der [!INCLUDE[tsql](../../includes/tsql-md.md)]-Referenz wurden auf Servern getestet, auf denen eine Sortierreihenfolge gilt, bei der die Groß-/Kleinschreibung beachtet wird. Auf den Testservern wurde in der Regel die ANSI/ISO-Codepage 1252 verwendet.  
   
- Vielen Codebeispielen Präfix Unicode-Zeichenfolgenkonstanten mit dem Buchstaben **N**. Ohne die **N** -Präfix wird die Zeichenfolge wird in die Standardcodepage der Datenbank konvertiert. Diese Standardcodepage erkennt möglicherweise bestimmte Zeichen nicht.  
+ Vielen Codebeispielen gehen Unicode-Zeichenfolgenkonstanten mit dem Buchstaben **N** voran. Ohne das **N**-Präfix wird die Zeichenfolge in die Standardcodepage der Datenbank konvertiert. Diese Standardcodepage erkennt möglicherweise bestimmte Zeichen nicht.  
   
 ## <a name="applies-to-references"></a>„Applies to“-Verweise  
- Die [!INCLUDE[tsql](../../includes/tsql-md.md)] Verweis enthält Artikel, die im Zusammenhang mit [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], und [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]. Im oberen Bereich der einzelnen Artikel ist ein, der angibt, welche Produkte den Betreff des Artikels unterstützen. Wenn ein Produkt fehlt, ist die vom Artikel beschriebene Funktion nicht in diesem Produkt verfügbar. Beispielsweise wurden Verfügbarkeitsgruppen in eingeführt [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. Die **CREATE AVAILABILITY GROUP** Artikel gibt an, es gilt für **SQL Server (SQL Server 2012 bis aktuelle Version)** , da es nicht für gilt [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], oder [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ Der [!INCLUDE[tsql](../../includes/tsql-md.md)]-Verweis enthält Artikel im Zusammenhang mit [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] und [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]. Am oberen Rand jedes Artikels befindet sich ein Abschnitt, der angibt, welche Produkte den Betreff des Artikels unterstützen. Wenn ein Produkt fehlt, ist das im Artikel beschriebene Feature in diesem Produkt nicht verfügbar. Beispielsweise wurden Verfügbarkeitsgruppen in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] eingeführt. Im Artikel **CREATE AVAILABILITY GROUP** wird darauf hingewiesen, dass er sich auf **SQL Server (SQL Server 2012 bis zur aktuellen Version)** bezieht, da er sich nicht auf [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] oder [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] bezieht.  
   
- In einigen Fällen kann der allgemeine Gegenstand des Artikels in einem Produkt verwendet werden, aber alle Argumente werden nicht unterstützt. Beispielsweise wurden Benutzer für eigenständige Datenbank in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] eingeführt. Die **CREATE USER** Anweisung kann verwendet werden, in einem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Produkt, jedoch die **WITH PASSWORD** Syntax kann nicht mit älteren Versionen verwendet werden. In diesem Fall werden zusätzliche **betrifft** -Abschnitte in die entsprechenden argumentbeschreibungen im Text des Artikels eingefügt.  
+ In einigen Fällen kann der allgemeine Gegenstand eines Artikels in einem Produkt verwendet werden, aber es werden nicht alle Argumente unterstützt. Beispielsweise wurden Benutzer für eigenständige Datenbank in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] eingeführt. Die Anweisung **CREATE USER** kann in einem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Produkt verwendet werden, die Syntax **WITH PASSWORD** kann jedoch nicht mit älteren Versionen verwendet werden. In diesem Fall werden zusätzliche **Applies to**-Abschnitte in den Beschreibungen der entsprechenden Arguments in den Text des Artikels eingefügt.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Transact-SQL-Referenz &#40;Datenbankmodul&#41;](../../t-sql/transact-sql-reference-database-engine.md)  
   
   

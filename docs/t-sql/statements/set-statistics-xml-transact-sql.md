@@ -1,5 +1,5 @@
 ---
-title: SET STATISTICS XML (Transact-SQL) | Microsoft Docs
+title: SET STATISTICS XML (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -49,12 +49,12 @@ ms.lasthandoff: 01/25/2018
 SET STATISTICS XML { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Die Einstellung von SET STATISTICS XML wird zur Ausführungszeit und nicht zur Analysezeit festgelegt.  
   
  Wenn SET STATISTICS XML auf ON festgelegt ist, gibt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Ausführungsinformationen für jede Anweisung nach deren Ausführung zurück. Nachdem diese Option auf ON festgelegt wird, werden Informationen zu allen weiteren [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen zurückgegeben, bis die Option auf OFF festgelegt wird. SET STATISTICS XML muss nicht die einzige Anweisung in einem Batch sein.  
   
- SET STATISTICS XML gibt die Ausgabe als **nvarchar(max)** für Anwendungen, wie z. B. die **Sqlcmd** , in dem die XML-Ausgabe wird anschließend verwendet von anderen Tools zur Anzeige und Verarbeitung des Abfrageplans-Hilfsprogramm Informationen.  
+ SET STATISTICS XML gibt eine Ausgabe als **nvarchar(max)** für Anwendungen zurück, wie z.B. das Dienstprogramm **sqlcmd**, wobei die XML-Ausgabe nachfolgend von weiteren Tools für die Anzeige und Verarbeitung der Abfrageplaninformationen verwendet wird.  
   
  SET STATISTICS XML gibt Informationen als eine Gruppe von XML-Dokumenten zurück. Jede Anweisung nach der SET STATISTICS XML ON-Anweisung ist in der Ausgabe als einzelnes Dokument enthalten. Jedes Dokument enthält den Text der Anweisung, gefolgt von den Informationen zu den Ausführungsschritten. Die Ausgabe zeigt Laufzeitinformationen an, wie z. B. Kosten, zugegriffene Indizes und Typen der ausgeführten Vorgänge, Joinreihenfolge, Anzahl von Ausführungen eines physischen Vorgangs sowie die Anzahl der von einem physischen Operator erstellten Zeilen usw.  
   
@@ -62,12 +62,12 @@ SET STATISTICS XML { ON | OFF }
   
  \Microsoft SQL Server\100\Tools\Binn\schemas\sqlserver\2004\07\showplan\showplanxml.xsd  
   
- Das Showplanschema auch finden Sie unter [diese Website](http://go.microsoft.com/fwlink/?linkid=43100&clcid=0x409).  
+ Das Showplanschema kann auf [dieser Website](http://go.microsoft.com/fwlink/?linkid=43100&clcid=0x409) gefunden werden.  
   
  SET STATISTICS PROFILE und SET STATISTICS XML sind Gegenstücke zueinander. SET STATISTICS PROFILE erstellt Textausgaben, während SET STATISTICS XML XML-Ausgaben erstellt. In künftigen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Versionen werden neue Informationen zum Abfrageausführungsplan nur über die SET STATISTICS XML-Anweisung und nicht die SET STATISTICS PROFILE-Anweisung angezeigt.  
   
 > [!NOTE]  
->  Wenn **tatsächlichen Ausführungsplan einschließen** ausgewählt ist, im [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], gibt diese SET-Option wird kein XML-Showplan-Ausgabe erzeugt. Deaktivieren der **tatsächlichen Ausführungsplan einschließen** Schaltfläche vor der Verwendung dieser Option festgelegt.  
+>  Wenn **Tatsächlichen Ausführungsplan einschließen** in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ausgewählt ist, generiert diese SET-Option keine XML-Showplanausgabe mehr. Deaktivieren Sie das Kontrollkästchen **Tatsächlichen Ausführungsplan einschließen**, bevor Sie diese SET-Option verwenden.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Für die Verwendung von SET STATISTICS XML und die Anzeige der Ausgabe benötigen Benutzer die folgenden Berechtigungen:  
@@ -79,7 +79,7 @@ SET STATISTICS XML { ON | OFF }
  Für [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen, die keine STATISTICS XML-Resultsets erstellen, werden nur die Berechtigungen zum Ausführen der [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen benötigt. Für [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen, die STATISTICS XML-Resultsets erstellen, werden sowohl die Ausführungsberechtigung für [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen als auch die SHOWPLAN-Berechtigung benötigt, da die Ausführung der [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung andernfalls abgebrochen und keine Showplaninformationen generiert werden.  
   
 ## <a name="examples"></a>Beispiele  
- In den beiden folgenden Anweisungen werden die SET STATISTICS XML-Einstellungen verwendet, um zu zeigen, wie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Verwendung von Indizes in Abfragen analysiert und optimiert. In der ersten Abfrage wird der Vergleichsoperator Gleich (=) in der WHERE-Klausel auf eine indizierte Spalte angewendet. In der zweiten Abfrage wird der LIKE-Operator in der WHERE-Klausel verwendet. Deshalb muss [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einen Scan des gruppierten Indexes durchführen, um die Daten zu finden, die die Bedingung in der WHERE-Klausel erfüllen. Die Werte in der **EstimateRows** und **EstimatedTotalSubtreeCost** Attribute sind bei der ersten indizierten Abfrage gibt an, dass sie viel schneller verarbeitet wurde, und weniger Ressourcen als verwendet der nicht indizierten Abfrage.  
+ In den beiden folgenden Anweisungen werden die SET STATISTICS XML-Einstellungen verwendet, um zu zeigen, wie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Verwendung von Indizes in Abfragen analysiert und optimiert. In der ersten Abfrage wird der Vergleichsoperator Gleich (=) in der WHERE-Klausel auf eine indizierte Spalte angewendet. In der zweiten Abfrage wird der LIKE-Operator in der WHERE-Klausel verwendet. Deshalb muss [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einen Scan des gruppierten Indexes durchführen, um die Daten zu finden, die die Bedingung in der WHERE-Klausel erfüllen. Die Werte in den Attributen **EstimateRows** und **EstimatedTotalSubtreeCost** sind bei der ersten indizierten Abfrage kleiner, was auf eine deutlich schnellere Verarbeitung und die Verwendung weniger Ressourcen als bei der nicht indizierten Abfrage hinweist.  
   
 ```  
 USE AdventureWorks2012;  
@@ -100,8 +100,8 @@ SET STATISTICS XML OFF;
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SET SHOWPLAN_XML &#40;Transact-SQL&#41;](../../t-sql/statements/set-showplan-xml-transact-sql.md)   
- [sqlcmd (Hilfsprogramm)](../../tools/sqlcmd-utility.md)  
+ [sqlcmd Utility](../../tools/sqlcmd-utility.md)  
   
   

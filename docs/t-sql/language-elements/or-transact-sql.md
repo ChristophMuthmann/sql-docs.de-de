@@ -1,5 +1,5 @@
 ---
-title: ODER (Transact-SQL) | Microsoft Docs
+title: OR (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -48,7 +48,7 @@ boolean_expression OR boolean_expression
   
 ## <a name="arguments"></a>Argumente  
  *boolean_expression*  
- Ist ein beliebiger gültiger [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) , TRUE, FALSE oder UNKNOWN zurückgibt.  
+ Ein gültiger [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md), der TRUE, FALSE oder UNKNOWN zurückgibt.  
   
 ## <a name="result-types"></a>Ergebnistypen  
  **Boolean**  
@@ -56,14 +56,14 @@ boolean_expression OR boolean_expression
 ## <a name="result-value"></a>Ergebniswert  
  OR gibt TRUE zurück, falls der Wert für mindestens eine der Bedingungen TRUE ist.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Die folgende Tabelle zeigt das Ergebnis des OR-Operators.  
   
 ||TRUE|FALSE|UNKNOWN|  
 |------|----------|-----------|-------------|  
-|**"TRUE"**|TRUE|TRUE|TRUE|  
+|**TRUE**|TRUE|TRUE|TRUE|  
 |**FALSE**|TRUE|FALSE|UNKNOWN|  
-|**UNBEKANNT**|TRUE|UNKNOWN|UNKNOWN|  
+|**UNKNOWN**|TRUE|UNKNOWN|UNKNOWN|  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel werden mithilfe der `vEmployeeDepartmentHistory`-Sicht die Namen der `Quality Assurance`-Mitarbeiter abgerufen, die in der Abend- oder Nachtschicht arbeiten. Ohne die Angabe der Klammern gibt die Abfrage `Quality Assurance`-Mitarbeiter zurück, die in der Abendschicht arbeiten, und alle Mitarbeiter, die in der Nachtschicht arbeiten.  
@@ -86,8 +86,8 @@ WHERE Department = 'Quality Assurance'
  Sootha       Charncherngkha   Night
  ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- Das folgende Beispiel ruft die Namen aller Mitarbeiter, die entweder verdienen eine `BaseRate` weniger als 20 oder über eine `HireDate` Januar 1, 2001 oder höher.  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
+ Im folgenden Beispiel werden die Namen aller Mitarbeiter abgerufen, deren `BaseRate`-Verdienst entweder kleiner als 20 ist oder deren `HireDate`-Datumswert auf den 1. Januar 2001 oder einen späteren Tag fällt.  
   
 ```  
 -- Uses AdventureWorks  
@@ -97,10 +97,10 @@ FROM DimEmployee
 WHERE BaseRate < 10 OR HireDate >= '2001-01-01';  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Ausdrücke &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [Integrierte Funktionen &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
- [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [Operatoren &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)  
   

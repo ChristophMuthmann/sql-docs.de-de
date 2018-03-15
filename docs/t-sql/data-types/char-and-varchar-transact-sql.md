@@ -1,5 +1,5 @@
 ---
-title: Char und Varchar (Transact-SQL) | Microsoft Docs
+title: char und varchar (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 7/23/2017
 ms.prod: sql-non-specified
@@ -39,49 +39,49 @@ ms.lasthandoff: 11/21/2017
 # <a name="char-and-varchar-transact-sql"></a>char und varchar (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Diese Datentypen sind der fester oder variabler Länge.  
+Diese Datentypen sind entweder mit fester Länge oder mit variabler Länge.  
   
 ## <a name="arguments"></a>Argumente  
-**Char** [(  *n*  )] fester Länge, nicht-Unicode-Zeichenfolgendaten. *n*definiert die Zeichenfolgenlänge und muss ein Wert zwischen 1 und 8.000 sein. Die Speichergröße beträgt  *n*  Bytes. Das ISO-Synonym für **Char** ist **Zeichen**.
+**char** [ ( *n* ) ]: Nicht-Unicode-Zeichenfolgendaten mit fester Länge. *n* definiert die Zeichenfolgenlänge und muss ein Wert von 1 bis 8.000 sein. Die Speichergröße beträgt *n* Bytes. Das ISO-Synonym für **char** lautet **character**.
   
-**Varchar** [(  *n*   |  **max** )] variabler Länge, nicht-Unicode-Zeichenfolgendaten. *n*definiert die Zeichenfolgenlänge und kann ein Wert zwischen 1 und 8.000 sein. **Max.** gibt an, dass die maximale Speichergröße 2 ^ 31-1 Bytes (2 GB). Die Speicherplatzgröße ist die tatsächliche Länge der eingegebenen Daten + 2 Byte. Die ISO-Synonyme für **Varchar** sind **Charvarying** oder **Charactervarying**.
+**varchar** [ ( *n* | **max** ) ]: Nicht-Unicode-Zeichenfolgendaten mit variabler Länge. *n* definiert die Zeichenfolgenlänge und kann ein Wert von 1 bis 8.000 sein. **max** gibt an, dass die maximale Speichergröße 2^31-1 Byte (2 GB) beträgt. Die Speicherplatzgröße ist die tatsächliche Länge der eingegebenen Daten + 2 Byte. Die ISO-Synonyme für **varchar** lauten **charvarying** oder **charactervarying**.
   
-## <a name="remarks"></a>Hinweise  
-Wenn  *n*  ist nicht angegeben in einer Datendefinitions- oder variablendeklarationsanweisung, die Standardlänge 1. Wenn  *n*  nicht angegeben wird, wenn die Funktionen CAST und CONVERT verwenden die Standardlänge 30.
+## <a name="remarks"></a>Remarks  
+Wenn *n* in einer Datendefinitions- oder Variablendeklarationsanweisung nicht angegeben ist, beträgt die Standardlänge 1. Wenn *n* für die Verwendung der CAST- und CONVERT-Funktionen nicht angegeben ist, beträgt die Standardlänge 30.
   
-Objekten, **Char** oder **Varchar** werden die standardsortierung der Datenbank zugewiesen, es sei denn, eine bestimmte Sortierung zugewiesen ist, mithilfe der COLLATE-Klausel. Die Sortierung bestimmt die Codepage, die zum Speichern der Zeichendaten verwendet wird.
+Objekten, die **char** oder **varchar** verwenden, wird die Standardsortierung der Datenbank zugewiesen, es sei denn, mithilfe der COLLATE-Klausel wird eine bestimmte Sortierung zugewiesen. Die Sortierung bestimmt die Codepage, die zum Speichern der Zeichendaten verwendet wird.
   
-Wenn Sie Standorte, die mehrere Sprachen zu unterstützen haben, erwägen Sie die Unicode **Nchar** oder **Nvarchar** Datentypen, um Probleme mit der zeichenkonvertierung zu minimieren. Bei Verwendung von **Char** oder **Varchar**, empfehlen wir Folgendes:
-- Verwendung **Char** Wenn die Größen der spaltendateneinträge konsistent sind.  
-- Verwendung **Varchar** Wenn die Größen der spaltendateneinträge erheblich variieren.  
-- Verwendung **varchar(max)** Wenn die Größen der spaltendateneinträge unterschliedlich lang und die Größe möglicherweise 8.000 Byte überschreiten.  
+Für Websites, die mehrere Sprachen unterstützen, sollte erwogen werden, den Unicode-Datentyp **nchar** oder **nvarchar** zu verwenden, um Probleme bei der Zeichenkonvertierung zu minimieren. Wenn Sie **char** oder **varchar** verwenden, wird Folgendes empfohlen:
+- Verwenden Sie **char**, wenn die Dateneinträge einer Spalte jeweils gleich lang sind.  
+- Verwenden Sie **varchar**, wenn sich die Dateneinträge einer Spalte in ihrer Größe erheblich unterscheiden.  
+- Verwenden Sie **varchar(max)**, wenn die Dateneinträge einer Spalte unterschiedlich lang und größer als 8.000 Byte sein können.  
   
-Wenn SET ANSI_PADDING auf OFF festgelegt ist, bei der CREATE TABLE- oder ALTER TABLE ausgeführt wird, eine **Char** als NULL, als behandelt wird definierte Spalte **Varchar**.
+Wenn OFF für SET ANSI_PADDING festgelegt ist, während CREATE TABLE oder ALTER TABLE ausgeführt wird, wird eine als NULL definierte Spalte vom Typ **char** als **varchar** behandelt.
   
-Wenn die Codeseite der zielsortierung Doppelbytezeichen verwendet, ist immer noch die Speichergröße  *n*  Bytes. Abhängig von der Zeichenfolge, die Speichergröße der  *n*  Bytes kann weniger als  *n*  Zeichen.
+Auch wenn die Sortierungscodepage Doppelbytezeichen verwendet, beträgt die Speichergröße weiterhin *n* Byte. Abhängig von der Zeichenfolge kann die Speichergröße von *n* Byte weniger als *n* Zeichen betragen.
 
 > [!WARNING]
-> Jeder nicht-Null-varchar(max) bzw. nvarchar(max)-Spalte erfordert 24 Byte zusätzliche feste Verteilung, das für das Zeilenlimit von 8.060 Byte während eines Sortiervorgangs zählt. Dies kann zur Erstellung einer impliziten Beschränkung der Anzahl der nicht-Null-varchar(max) bzw. nvarchar(max)-Spalten, die in einer Tabelle erstellt werden können.  
+> Jede varchar(max)- oder nvarchar(max)-Spalte, die ungleich NULL ist, erfordert 24 Byte an zusätzlicher fester Verteilung, die während eines Sortiervorgangs hinsichtlich des Zeilenlimits von 8.060 Byte gelten. Dies kann zur Erstellung einer impliziten Beschränkung der Anzahl der varchar(max)- oder nvarchar(max)-Spalten führen, die ungleich NULL sind und in einer Tabelle erstellt werden können.  
 Beim Erstellen der Tabelle (außerhalb der üblichen Warnung darüber, dass die maximale Zeilengröße das zulässige Maximum von 8.060 Bytes überschreitet) oder zum Zeitpunkt der Dateneinfügung wird kein spezieller Fehler ausgegeben. Diese große Zeilengröße kann während einiger normaler Vorgänge Fehler (z. B. Fehler 512) verursachen. Dazu gehören z. B. die Aktualisierung des gruppierten Indexschlüssels oder Teile des vollständigen Spaltensatzes. Bis zum Ausführen eines Vorgangs können Benutzer diese Fehler nicht vorhersehen.
   
-##  <a name="_character"></a>Konvertieren von Zeichendaten  
+##  <a name="_character"></a> Konvertieren von Zeichendaten  
 Werden Zeichenausdrücke in einen Zeichendatentyp mit einer anderen Größe konvertiert, dann werden Werte, die für den neuen Datentyp zu lang sind, abgeschnitten. Der **uniqueidentifier** -Typ wird bei der Konvertierung von Zeichenausdrücken als Zeichentyp behandelt und unterliegt daher den Kürzungsregeln für die Konvertierung in einen Zeichentyp. Weitere Informationen finden Sie im Abschnitt "Beispiele" weiter unten.
   
-Wenn ein Zeichenausdruck konvertiert in einen Zeichenausdruck eines anderen Datentyp oder die Größe, wie z. B. aus **char(5)** auf **varchar(5)**, oder **char(20)** auf **char(15)**, wird die Sortierung des Eingabewerts dem konvertierten Wert zugewiesen. Wird ein Nichtzeichenausdruck zu einem Zeichendatentyp konvertiert, wird die Standardsortierung der aktuellen Datenbank dem konvertierten Wert zugewiesen. In beiden Fällen können Sie eine bestimmte Sortierung zuweisen, indem Sie mit der [COLLATE](http://msdn.microsoft.com/library/4ba6b7d8-114a-4f4e-bb38-fe5697add4e9) Klausel.
+Wenn ein Zeichenausdruck in einen Zeichenausdruck eines anderen Datentyps oder einer anderen Größe konvertiert wird (z.B. **char(5)** in **varchar(5)** oder **char(20)** in **char(15)**), wird die Sortierung des Eingabewerts dem konvertierten Wert zugewiesen. Wird ein Nichtzeichenausdruck zu einem Zeichendatentyp konvertiert, wird die Standardsortierung der aktuellen Datenbank dem konvertierten Wert zugewiesen. In beiden Fällen können Sie mithilfe der [COLLATE](http://msdn.microsoft.com/library/4ba6b7d8-114a-4f4e-bb38-fe5697add4e9)-Klausel auch eine bestimmte Sortierung zuweisen.
   
 > [!NOTE]  
->  Codepageübersetzungen werden für unterstützt **Char** und **Varchar** Datentypen, jedoch nicht für **Text** -Datentyp. Wie auch bei früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird der Datenverlust während der Codepageübersetzung nicht gemeldet.  
+>  Codepageübersetzungen werden für die Datentypen **char** und **varchar**, nicht jedoch für den **text**-Datentyp unterstützt. Wie auch bei früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird der Datenverlust während der Codepageübersetzung nicht gemeldet.  
   
-Zeichenausdrücke, die in einen ungefähren konvertiert werden **numerischen** -Datentyp kann optionale Exponentialschreibweise enthalten (den Kleinbuchstaben e oder E Großbuchstaben gefolgt, ein optionales Plus-(+) oder Minuszeichen (-) und dann eine Zahl).
+Zeichenausdrücke, die in einen ungefähren **numerischen** Datentyp konvertiert werden, können die optionale Exponentialschreibweise enthalten (den Kleinbuchstaben e oder den Großbuchstaben E, auf den ein optionales Plus- (+) oder Minuszeichen (-) und dann eine Zahl folgt).
   
-Zeichenausdrücke, die in einen exakten konvertiert werden **numerischen** Datentyp bestehen muss aus Ziffern, einem Dezimaltrennzeichen und einem optionalen Plus-(+) oder Minuszeichen (-). Führende Leerzeichen werden ignoriert. Kommas als Trennzeichen (z. B. das Trennzeichen in 123.456,00) sind in der Zeichenfolge nicht zulässig.
+Zeichenausdrücke, die in einen exakten **numerischen** Datentyp konvertiert werden, müssen aus Ziffern, einem Dezimaltrennzeichen und einem optionalen Plus- (+) oder Minuszeichen (-) zusammengesetzt sein. Führende Leerzeichen werden ignoriert. Kommas als Trennzeichen (z. B. das Trennzeichen in 123.456,00) sind in der Zeichenfolge nicht zulässig.
   
-Zeichenausdrücke, die er konvertiert **Money** oder **Smallmoney** Datentypen können auch einen optionalen Dezimaltrennzeichen und ein Dollarzeichen ($) enthalten. Kommas als Trennzeichen (wie in 123.456,00 $) sind zulässig.
+Zeichenausdrücke, die in die Datentypen **money** oder **smallmoney** konvertiert werden, können außerdem ein optionales Dezimaltrennzeichen und ein Dollarzeichen ($) enthalten. Kommas als Trennzeichen (wie in 123.456,00 $) sind zulässig.
   
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="a-showing-the-default-value-of-n-when-used-in-variable-declaration"></a>A. Anzeigen des Standardwerts von n bei Verwendung in einer Variablendeklaration.  
-Das folgende Beispiel zeigt den Standardwert  *n*  ist 1 für die `char` und `varchar` -Datentypen, wenn sie in einer Variablendeklaration verwendet werden.
+Das folgende Beispiel zeigt, dass der Standardwert von *n* für die Datentypen `char` und `varchar` 1 ist, wenn diese in einer Variablendeklaration verwendet werden.
   
 ```sql
 DECLARE @myVariable AS varchar = 'abc';  
@@ -92,7 +92,7 @@ GO
 ```  
   
 ### <a name="b-showing-the-default-value-of-n-when-varchar-is-used-with-cast-and-convert"></a>B. Anzeigen des Standardwerts von n, wenn varchar mit CAST und CONVERT verwendet wird.  
-Das folgende Beispiel zeigt, dass den Wert von  *n*  30 bei der `char` oder `varchar` Datentypen verwendet werden, mit der `CAST` und `CONVERT` Funktionen.
+Das folgende Beispiel zeigt, dass 30 der Standardwert von *n* ist, wenn der Datentyp `char` oder `varchar` in den Funktionen `CAST` und `CONVERT` verwendet wird.
   
 ```sql
 DECLARE @myVariable AS varchar(40);  
@@ -104,7 +104,7 @@ SELECT DATALENGTH(CONVERT(char, @myVariable)) AS 'VarcharDefaultLength';
 ```  
   
 ### <a name="c-converting-data-for-display-purposes"></a>C. Konvertieren von Daten zu Anzeigezwecken  
-Im folgenden Beispiel werden zwei Spalten in Zeichentypen konvertiert und ein bestimmtes Format auf die angezeigten Daten angewendet. Ein **Money** Typ wird in Zeichendaten konvertiert und Format 1 wird angewendet, woraufhin die Werte durch Kommas jeder dritten Ziffer links vom Dezimaltrennzeichen und zwei Ziffern rechts vom Dezimaltrennzeichen an. Ein **"DateTime"** Typ wird in Zeichendaten konvertiert und Format 3 wird angewendet, die die Daten im Format tt/mm/jj angezeigt. In der WHERE-Klausel einer **Money** Typ in einen Zeichentyp auszuführenden Zeichenfolgenvergleich umgewandelt wird.
+Im folgenden Beispiel werden zwei Spalten in Zeichentypen konvertiert und ein bestimmtes Format auf die angezeigten Daten angewendet. Ein **money**-Typ wird in Zeichendaten konvertiert, und das Format 1 wird angewendet. Bei diesem werden für die Werte zwei Ziffern rechts vom Dezimalpunkt und links vom Dezimalpunkt nach jeder dritten Ziffer ein Trennzeichen angezeigt. Ein **datetime**-Typ wird in Zeichendaten konvertiert, und das Format 3 wird angewendet, durch das die Daten im Format dd/mm/yy anzeigt werden. In der WHERE-Klausel wird ein **money**-Typ in einen Zeichentyp umgewandelt, um einen Vergleichsvorgang für die Zeichenfolgen ausführen zu können.
   
 ```sql
 USE AdventureWorks2012;  
@@ -160,8 +160,8 @@ String                                       TruncatedValue
 ## <a name="see-also"></a>Siehe auch
 [nchar und nvarchar &#40;Transact-SQL&#41;](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)  
 [CAST und CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
-[COLLATE &#40; Transact-SQL &#41;](http://msdn.microsoft.com/library/4ba6b7d8-114a-4f4e-bb38-fe5697add4e9)  
-[Datentypkonvertierung &#40; Datenbankmodul &#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)  
+[COLLATE &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/4ba6b7d8-114a-4f4e-bb38-fe5697add4e9)  
+[Datentypkonvertierung &#40;Datenbank-Engine&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)  
 [Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
 [Schätzen der Größe einer Datenbank](../../relational-databases/databases/estimate-the-size-of-a-database.md)
   

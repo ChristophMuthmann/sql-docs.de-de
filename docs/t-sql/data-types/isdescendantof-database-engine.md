@@ -1,5 +1,5 @@
 ---
-title: IsDescendantOf (Datenbankmodul) | Microsoft Docs
+title: IsDescendantOf (Datenbank-Engine) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 7/22/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="isdescendantof-database-engine"></a>IsDescendantOf (Datenbankmodul)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Gibt "true" zurück, wenn *dies* ein Nachfolger des übergeordneten Elements.
+Gibt TRUE zurück, wenn *this* ein Nachfolger von „parent“ ist.
   
 ## <a name="syntax"></a>Syntax  
   
@@ -49,15 +49,15 @@ SqlHierarchyId IsDescendantOf (SqlHierarchyId parent )
 ```  
   
 ## <a name="arguments"></a>Argumente  
-*übergeordnete*  
-Die **Hierarchyid** Knoten für die die IsDescendantOf-Test ausgeführt werden soll.
+*parent*  
+Der **hierarchyid**-Knoten, für den der IsDescendantOf-Test ausgeführt werden sollte.
   
 ## <a name="return-types"></a>Rückgabetypen  
-**SQL Server-Typ: Bit zurück**
+**SQL Server-Rückgabetyp: bit**
   
-**CLR-Typ: SqlBoolean zurück**
+**CLR-Rückgabetyp: SqlBoolean**
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
 Gibt true für alle Knoten in der Teilstruktur zurück, die die übergeordnete Struktur als Stamm aufweisen, und false für alle anderen Knoten.
   
 Das übergeordnete Element wird als sein eigener Nachfolger behandelt.

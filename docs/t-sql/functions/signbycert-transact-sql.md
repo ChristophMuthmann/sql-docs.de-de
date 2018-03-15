@@ -1,5 +1,5 @@
 ---
-title: SIGNBYCERT (Transact-SQL) | Microsoft Docs
+title: SIGNBYCERT (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -52,23 +52,23 @@ SignByCert ( certificate_ID , @cleartext [ , 'password' ] )
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *Zertifikat-ID*  
- Die ID eines Zertifikats in der aktuellen Datenbank. *Zertifikat-ID* ist **Int**.  
+ *certificate_ID*  
+ Die ID eines Zertifikats in der aktuellen Datenbank. *certificate_ID* ist vom Datentyp **int**.  
   
  *@cleartext*  
- Eine Variable vom Typ **Nvarchar**, **Char**, **Varchar**, oder **Nchar** , das die zu signierende Daten enthält.  
+ Eine Variable vom Typ **nvarchar**, **char**, **varchar**oder **nchar**, die mit einem Zertifikat signierte Daten enthält.  
   
- **"** *Kennwort* **"**  
- Das Kennwort, mit dem der private Schlüssel des Zertifikats verschlüsselt wurde. *Kennwort* ist **vom Datentyp nvarchar(128)**.  
+ **'** *password* **'**  
+ Das Kennwort, mit dem der private Schlüssel des Zertifikats verschlüsselt wurde. *password* ist vom Datentyp **nvarchar(128)**.  
   
 ## <a name="return-types"></a>Rückgabetypen  
  **varbinary** mit einer maximalen Größe von 8.000 Bytes.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Erfordert die CONTROL-Berechtigung für das Zertifikat.  
   
 ## <a name="examples"></a>Beispiele  
- Im folgenden Beispiel wird den Text anmeldet `@SensitiveData` zertifizierungsstandard `ABerglundCert07`, das Zertifikat mit dem Kennwort "pGFD4bb925DGvbd2439587y" entschlüsselt. Anschließend werden der Klartext und die Signatur in die `SignedData04`-Tabelle eingefügt.  
+ Im folgenden Beispiel wird der Text in `@SensitiveData` mit dem Zertifikat `ABerglundCert07` signiert, nachdem zuvor das Zertifikat mit dem Kennwort "pGFD4bb925DGvbd2439587y" entschlüsselt wurde. Anschließend werden der Klartext und die Signatur in die `SignedData04`-Tabelle eingefügt.  
   
 ```  
 DECLARE @SensitiveData nvarchar(max);  
@@ -81,12 +81,12 @@ INSERT INTO [SignedData04]
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [VERIFYSIGNEDBYCERT &#40; Transact-SQL &#41;](../../t-sql/functions/verifysignedbycert-transact-sql.md)   
- [CERT_ID &#40; Transact-SQL &#41;](../../t-sql/functions/cert-id-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [VERIFYSIGNEDBYCERT &#40;Transact-SQL&#41;](../../t-sql/functions/verifysignedbycert-transact-sql.md)   
+ [CERT_ID &#40;Transact-SQL&#41;](../../t-sql/functions/cert-id-transact-sql.md)   
  [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)   
- [ALTER CERTIFICATE &#40; Transact-SQL &#41;](../../t-sql/statements/alter-certificate-transact-sql.md)   
- [DROP CERTIFICATE &#40; Transact-SQL &#41;](../../t-sql/statements/drop-certificate-transact-sql.md)   
+ [ALTER CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-certificate-transact-sql.md)   
+ [DROP CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-certificate-transact-sql.md)   
  [Verschlüsselungshierarchie](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: STCurveToLine (Geography-Datentyp) | Microsoft Docs
+title: STCurveToLine (geography-Datentyp) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -44,18 +44,18 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Rückgabetypen  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Rückgabetyp: **Geography**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Rückgabetyp: **geography**  
   
  CLR-Rückgabetyp: **SqlGeography**  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Gibt eine **LineString** -Instanz für eine **CircularString** - oder **CompoundCurve** -Instanz zurück.  
   
  Gibt eine **Polygon** -Instanz für eine **CurvePolygon** -Instanz zurück.  
   
  Gibt eine Kopie von **geography** -Instanzen zurück, die keine **CircularString**, **CompoundCurve**-Instanz und keine **CurvePolygon** -Instanz enthalten.  
   
- Im Gegensatz zur SQL MM-Spezifikation verwendet diese Methode nicht die Z-Koordinate Werte bei der Berechnung der polygonalen Näherung verwendet. Z-Koordinate Werte vorhanden, in der aufrufenden **Geography** Instanz werden ignoriert.  
+ Im Gegensatz zur SQL MM-Spezifikation werden bei dieser Methode keine Werte der Z-Koordinate zur Berechnung der polygonalen Näherung verwendet. In der aufrufenden **geography**-Instanz enthaltene Werte der Z-Koordinate werden ignoriert.  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird eine `LineString` -Instanz zurückgegeben, die eine polygonale Näherung einer `CircularString` -Instanz ist:  
@@ -67,9 +67,9 @@ ms.lasthandoff: 01/25/2018
  SELECT @g1.STNumPoints() AS G1, @g2.STNumPoints() AS G2;
  ```  
   
-## <a name="see-also"></a>Siehe auch  
- [STLength &#40; Geography-Datentyp &#41;](../../t-sql/spatial-geography/stlength-geography-data-type.md)   
- [STNumPoints &#40; Geography-Datentyp &#41;](../../t-sql/spatial-geography/stnumpoints-geography-data-type.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [STLength &#40;geography-Datentyp&#41;](../../t-sql/spatial-geography/stlength-geography-data-type.md)   
+ [STNumPoints &#40;geography-Datentyp&#41;](../../t-sql/spatial-geography/stnumpoints-geography-data-type.md)   
  [Übersicht über räumliche Datentypen](../../relational-databases/spatial/spatial-data-types-overview.md)  
   
   

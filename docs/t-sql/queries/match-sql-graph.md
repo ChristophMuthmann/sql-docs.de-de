@@ -1,5 +1,5 @@
 ---
-title: "Übereinstimmung (SQL-Diagramm) | Microsoft Docs"
+title: MATCH (SQL-Graph) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 05/05/2017
 ms.prod: sql-non-specified
@@ -35,7 +35,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="match-transact-sql"></a>MATCH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
-  Gibt eine Suchbedingung für ein Diagramm an. Übereinstimmung kann nur mit Graph Knoten und Rand Tabellen in der SELECT-Anweisung als Teil der WHERE-Klausel verwendet werden. 
+  Gibt eine Suchbedingung für einen Graph an. MATCH kann in der SELECT-Anweisung nur mit dem Diagrammknoten und Edgetabellen als Teil der WHERE-Klausel verwendet werden. 
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -63,24 +63,24 @@ MATCH (<graph_search_pattern>)
 
 ## <a name="arguments"></a>Argumente  
 *graph_search_pattern*  
-Gibt das Muster für Suchen oder einen Pfad im Diagramm zu durchlaufen. Dieses Muster wird ASCII-Grafiken Syntax verwendet, um einen Pfad im Diagramm zu durchlaufen. Das Muster wird von einem Knoten zu einem anderen über eine Kante, in die Richtung des Pfeils bereitgestellt. Edge-Namen oder Aliase werden in Parantheses bereitgestellt. Node Names oder Aliase werden an beiden Enden des Pfeils angezeigt. Der Pfeil gelangen in beide Richtungen im Muster.
+Gibt das Suchmuster oder den Pfad an, das bzw. der im Graph durchlaufen werden soll. Dieses Muster verwenden eine ASCII-Syntax, um den Pfad im Graph zu durchlaufen. Dieses Muster läuft in der Richtung des angegebenen Pfeils über einen Edge von einem Knoten zum anderen. Edge-Namen und -Aliase werden in Klammern bereitgestellt. Namen oder Aliase von Knoten werden an den beiden Enden des Pfeils angezeigt. Der Pfeil kann im Muster in beide Richtungen zeigen.
 
 *node_alias*  
-Name oder Alias, der eine Knotentabelle in der FROM-Klausel angegeben.
+Name oder Alias einer Knotentabelle, die in der FROM-Klausel angegeben ist.
 
 *edge_alias*  
-Name oder Alias einer Edge-Tabelle in der FROM-Klausel angegeben.
+Name oder Alias einer Edgetabelle, die in der FROM-Klausel angegeben ist.
 
 
-## <a name="remarks"></a>Hinweise  
-Die Knotennamen in Übereinstimmung können wiederholt werden.  Ein Knoten kann sein, also eine beliebige Anzahl von Zeiten in der gleichen Abfrage durchlaufen.  
-Ein Edge-Name kann nicht in Übereinstimmung wiederholt werden.  
-Ein Rand in beide Richtungen zeigen kann muss, jedoch eine explizite Richtung.  
-ODER und NOT-Operatoren werden in das Muster nicht unterstützt. Übereinstimmung kann mit anderen Ausdrücken verwenden und in der WHERE-Klausel kombiniert werden. Kombinieren sie jedoch mit anderen Ausdrücken, die mit OR oder nicht wird nicht unterstützt. 
+## <a name="remarks"></a>Remarks  
+Die Knotennamen können in MATCH wiederholt werden.  D.h., ein Knoten kann beliebig oft in der gleichen Abfrage durchlaufen werden.  
+Der Name von einem Edge kann nicht in MATCH wiederholt werden.  
+Ein Edge kann in beide Richtungen zeigen, muss jedoch über eine explizite Richtung verfügen.  
+Die Operatoren OR und NOT werden nicht im Muster von MATCH unterstützt. MATCH kann mithilfe von AND in der WHERE-Klausel mit anderen Ausdrücken kombiniert werden. Allerdings wird das Verbinden mit Ausdrücken mithilfe von OR oder NOT nicht unterstützt. 
 
 ## <a name="examples"></a>Beispiele  
-### <a name="a--find-a-friend"></a>A.  Suchen Sie einen "Friend" 
- Das folgende Beispiel erstellt eine Tabelle der Person-Knoten und Freunde Rahmentabelle, einige Daten einfügt und verwendet dann Übereinstimmung Friends von Alice, eine Person im Diagramm gefunden.
+### <a name="a--find-a-friend"></a>A.  Finden von Freunden 
+ Im folgenden Beispiel werden eine Knotentabelle für Personen und eine Edgetabelle für Freunde erstellt, Daten eingefügt und dann MATCH verwendet, um die Freunde von Alice (eine Person im Graph) zu finden.
 
  ```
  -- Create person node table
@@ -110,8 +110,8 @@ AND Person1.name = 'Alice';
 
  ```
 
- ### <a name="b--find-friend-of-a-friend"></a>B.  Suchen Sie einen "Friend" "Friend"
- Im folgenden Beispiel wird versucht, einen "Friend" Alice "Friend" zu finden. 
+ ### <a name="b--find-friend-of-a-friend"></a>B.  Finden von Freundne von Freunden
+ Im folgenden Beispiel wird versucht, einen Freund des Freundes von Alice zu finden. 
 
  ```
 SELECT Person3.name AS FriendName 
@@ -121,8 +121,8 @@ AND Person1.name = 'Alice';
 
  ```
 
-### <a name="c--more-match-patterns"></a>C.  Weitere `MATCH` Muster
- Im folgenden werden einige weitere Möglichkeiten, die in denen ein Muster in Übereinstimmung angegeben werden kann.
+### <a name="c--more-match-patterns"></a>C.  Weitere `MATCH`-Muster
+ Im Folgenden werden einige weitere Möglichkeiten dargestellt, durch die ein Muster in MATCH angegeben werden kann.
 
  ```
  -- Find a friend
@@ -152,7 +152,7 @@ AND Person1.name = 'Alice';
  ```
  
 
-## <a name="see-also"></a>Siehe auch  
- [Erstellen von Tabellen &#40; Diagramm der SQL &#41;](../../t-sql/statements/create-table-sql-graph.md)   
- [INSERT (SQL Graph)](../../t-sql/statements/insert-sql-graph.md)]  
- [Diagramm mit SQL Server-2017 verarbeiten](../../relational-databases/graphs/sql-graph-overview.md)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [CREATE TABLE &#40;SQL-Graph&#41;](../../t-sql/statements/create-table-sql-graph.md)   
+ [INSERT (SQL-Graph)](../../t-sql/statements/insert-sql-graph.md)]  
+ [Graph Processing with SQL Server 2017 (Graph-Verarbeitung mit SQL Server-2017)](../../relational-databases/graphs/sql-graph-overview.md)  

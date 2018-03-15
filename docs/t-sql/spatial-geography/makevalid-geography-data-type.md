@@ -1,5 +1,5 @@
 ---
-title: MakeValid (Geography-Datentyp) | Microsoft Docs
+title: MakeValid (geography-Datentyp) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -31,9 +31,9 @@ ms.lasthandoff: 01/25/2018
 # <a name="makevalid-geography-data-type"></a>MakeValid (geography-Datentyp)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  Konvertiert eine **Geography** -Instanz, die nicht in eine gültige ist **Geography** Instanz mit einem gültigen Open Geospatial Consortium (OGC)-Typ.  
+  Konvertiert eine ungültige **geography**-Instanz in eine gültige **geography**-Instanz mit einem gültigen Open Geospatial-Consortium-Typ (OGC).  
   
- Wenn ein Eingabeobjekt für STIsValid(), "false" zurückgibt `MakeValid()` konvertiert die Instanz, die auf eine gültige Instanz ungültig ist.  
+ Wenn von einem Eingabeobjekt FALSE für STIsValid() zurückgegeben wird, konvertiert `MakeValid()` die ungültige in eine gültige Instanz.  
   
  Diese geography-Datentypmethode unterstützt Instanzen von **FullGlobe** oder räumliche Instanzen, die größer als eine Hemisphäre sind.  
   
@@ -45,22 +45,22 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Rückgabetypen  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Rückgabetyp: **Geography**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Rückgabetyp: **geography**  
   
  CLR-Rückgabetyp: **SqlGeography**  
   
-## <a name="remarks"></a>Hinweise  
- Diese Methode ändert möglicherweise den Typ, der die **Geography** Instanz. Darüber hinaus die Punkte einer **Geography** Instanz möglicherweise geringfügige Verschiebung. Die Ergebnisse einiger Methoden wie z. B. NumPoint() können geändert werden.  
+## <a name="remarks"></a>Remarks  
+ Diese Methode ändert möglicherweise den Typ der Instanz von **geography**. Darüber hinaus ist eine geringfügige Verschiebung der Punkte der Instanz von **geography** möglich. Die Ergebnisse einiger Methoden wie NumPoint() können sich ändern.  
   
- In Fällen, bei denen die ungültige räumliche Instanz den Äquator und eine EnvelopeAngle() = 180, eine **FullGlobe** Instanz zurückgegeben werden. Die `MakeValid()` **Geography** -Datentypmethode wird versucht, gültige Instanzen zurückzugeben, aber die Ergebnisse sind nicht unbedingt genau oder präzise sein.  
+ In Fällen, in denen die ungültige räumliche Instanz den Äquator schneidet und einen EnvelopeAngle() = 180 aufweist, wird eine Instanz von **FullGlobe** zurückgegeben. Die `MakeValid()`**geography**-Datentypmethode versucht, gültige Instanzen zurückzugeben. Die Richtigkeit oder Vollständigkeit der Ergebnisse kann jedoch nicht garantiert werden.  
   
 > [!NOTE]  
->  Objekte, die nicht gültig sind, können in der Datenbank gespeichert werden. Die Methoden, die für ungültige Instanzen ausgeführt werden kann (diese Instanzen für die STIsValid() "false" zurück) werden, die Gültigkeit überprüfen oder Exporte ermöglichen: STIsValid(), MakeValid() STAsText(), STAsBinary(), ToString(), AsTextZM() und AsGml().  
+>  Objekte, die nicht gültig sind, können in der Datenbank gespeichert werden. Für ungültige Instanzen (für die von STIsValid() FALSE zurückgegeben wird) können Methoden verwendet werden, die die Gültigkeit überprüfen oder Exporte ermöglichen: STIsValid(), MakeValid(), STAsText(), STAsBinary(), ToString(), AsTextZM() und AsGml().  
   
  Diese Methode ist nicht exakt.  
   
 ## <a name="examples"></a>Beispiele  
- Im ersten Beispiel wird eine ungültige `LineString` -Instanz erstellt, die sich selbst überlappt. Mithilfe von `STIsValid()` wird die Ungültigkeit dieser Instanz bestätigt. `STIsValid()`Gibt den Wert 0 für eine ungültige Instanz.  
+ Im ersten Beispiel wird eine ungültige `LineString` -Instanz erstellt, die sich selbst überlappt. Mithilfe von `STIsValid()` wird die Ungültigkeit dieser Instanz bestätigt. `STIsValid()` gibt für eine ungültige Instanz den Wert 0 (null) zurück.  
   
 ```  
 DECLARE @g geography;  
@@ -68,7 +68,7 @@ SET @g = geography::STGeomFromText('LINESTRING(0 2, 1 1, 1 0, 1 1, 2 2)', 4326);
 SELECT @g.STIsValid();  
 ```  
   
- Im zweiten Beispiel wird die Instanz mit `MakeValid()` gültig gemacht, und die tatsächliche Gültigkeit wird überprüft. `STIsValid()`Gibt den Wert 1 für eine gültige Instanz zurück.  
+ Im zweiten Beispiel wird die Instanz mit `MakeValid()` gültig gemacht, und die tatsächliche Gültigkeit wird überprüft. `STIsValid()` gibt für eine gültige Instanz den Wert 1 zurück.  
   
 ```  
 SET @g = @g.MakeValid();  
@@ -87,7 +87,7 @@ SELECT @g.ToString();
 MULTILINESTRING ((0 2, 1 1, 2 2), (1 1, 1 0))  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [STIsValid &#40;geometry-Datentyp&#41;](../../t-sql/spatial-geometry/stisvalid-geometry-data-type.md)   
  [Erweiterte Methoden für geography-Instanzen](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)  
   

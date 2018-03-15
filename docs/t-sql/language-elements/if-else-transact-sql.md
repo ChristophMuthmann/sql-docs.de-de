@@ -1,5 +1,5 @@
 ---
-title: IF... ELSE (Transact-SQL) | Microsoft Docs
+title: IF...ELSE (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 07/11/2016
 ms.prod: sql-non-specified
@@ -59,7 +59,7 @@ IF Boolean_expression
   
  Um einen Anweisungsblock zu definieren, verwenden Sie die Schlüsselwörter zur Ablaufsteuerung BEGIN und END.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Ein IF...ELSE-Konstrukt kann in Batches, gespeicherten Prozeduren und Ad-hoc-Abfragen verwendet werden. Wenn dieses Konstrukt in einer gespeicherten Prozedur verwendet wird, wird damit das Vorhandensein bestimmter Parameter getestet.  
   
  IF-Tests können nach einem anderen IF oder auf ein ELSE folgend geschachtelt werden. Das Limit für die Anzahl geschachtelter Ebenen hängt vom verfügbaren Arbeitsspeicher ab.  
@@ -73,10 +73,10 @@ ELSE
        SELECT 'Weekday';
 ```  
   
- Weitere Beispiele finden Sie unter [ELSE &#40; IF... ELSE &#41; &#40; Transact-SQL &#41; ](../../t-sql/language-elements/else-if-else-transact-sql.md).  
+ Weitere Beispiele finden Sie unter [ELSE &#40;IF...ELSE&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/else-if-else-transact-sql.md).  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- Im folgenden Beispiel wird `IF…ELSE` bestimmt, welche der beiden Antworten auf dem Benutzer anzuzeigen, basierend auf die Gewichtung eines Elements in der `DimProduct` Tabelle.  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
+ Im folgenden Beispiel wird `IF…ELSE` verwendet, um basierend auf der Gewichtung eines Elements in der `DimProduct`-Tabelle festzulegen, welche Antwort von zwei Antworten dem Benutzer angezeigt wird.  
   
 ```  
 -- Uses AdventureWorksDW  
@@ -97,13 +97,13 @@ ELSE
     FROM DimProduct WHERE ProductKey = @productKey);  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [BEGIN...END &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-end-transact-sql.md)   
  [END &#40;BEGIN...END&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/end-begin-end-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [WHILE &#40;Transact-SQL&#41;](../../t-sql/language-elements/while-transact-sql.md)   
  [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)   
- [Control-of-Flow-Sprache &#40; Transact-SQL &#41; ](~/t-sql/language-elements/control-of-flow.md) [ELSE &#40; IF... ELSE &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/else-if-else-transact-sql.md) 
+ [Sprachkonstrukte zur Ablaufsteuerung &#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md) [ELSE &#40;IF...ELSE&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/else-if-else-transact-sql.md) 
   
   
 

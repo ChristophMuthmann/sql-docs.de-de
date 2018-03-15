@@ -1,5 +1,5 @@
 ---
-title: ALTER LOGIN (Transact-SQL) | Microsoft Docs
+title: ALTER LOGIN (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 05/01/2017
 ms.prod: sql-non-specified
@@ -133,14 +133,14 @@ ALTER LOGIN login_name
  Gibt den Namen der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldung an, die geändert wird. Domänenanmeldungen müssen in Klammern eingeschlossen werden: [Domäne\Benutzer].  
   
  ENABLE | DISABLE  
- Aktiviert oder deaktiviert diese Anmeldung. Das Deaktivieren einer Anmeldung wirkt sich nicht auf das Verhalten der bereits verbundenen Anmeldungen aus. (Verwenden der `KILL` Anweisung um eine vorhandene Verbindungen zu beenden.) Deaktivierte Anmeldungen behalten ihre Berechtigungen bei und sind weiterhin für den Identitätswechsel verfügbar.  
+ Aktiviert oder deaktiviert diese Anmeldung. Das Deaktivieren einer Anmeldung wirkt sich nicht auf das Verhalten der bereits verbundenen Anmeldungen aus. (Verwenden Sie die `KILL`-Anweisung, um eine vorhandene Verbindung zu beenden.) Deaktivierte Anmeldungen behalten ihre Berechtigungen bei und sind weiterhin für den Identitätswechsel verfügbar.  
   
- Kennwort **= "***Kennwort***"**  
+ PASSWORD **='***password***'**  
  Gilt nur für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldungen. Gibt das Kennwort für die Anmeldung an, die geändert wird. Bei Kennwörtern wird nach Groß- und Kleinschreibung unterschieden.  
   
- Aktive Verbindungen zur SQL-Datenbank erfordern fortlaufend erneute Autorisierung (die vom Datenbankmodul ausgeführt wird) mindestens alle 10 Stunden. Das Datenbankmodul versucht erneute Autorisierung mit dem ursprünglich gesendeten Kennwort, und keine Benutzereingaben erforderlich sind. Aus Gründen der Leistung beim Zurücksetzen eines Kennworts in SQL-Datenbank wird die Verbindung werden nicht erneut authentifiziert, auch wenn die Verbindung aufgrund von Verbindungspooling zurückgesetzt wird. Dies unterscheidet sich vom Verhalten von einer lokalen SQL Server. Wenn das Kennwort geändert wurde, da die Verbindung ursprünglich autorisiert wurde, muss die Verbindung beendet und eine neue Verbindung hergestellt werden mit dem neuen Kennwort. Ein Benutzer mit der KILL DATABASE CONNECTION-Berechtigung kann explizit eine Verbindung mit SQL-Datenbank mithilfe des KILL-Befehls beendet werden. Weitere Informationen finden Sie unter [KILL &#40; Transact-SQL &#41; ](../../t-sql/language-elements/kill-transact-sql.md).  
+ Ständig aktive Verbindungen mit SQL-Datenbank erfordern alle 10 Stunden eine erneute Authentifizierung, die von der Datenbank-Engine durchgeführt. Die Datenbank-Engine versucht, eine erneute Authentifizierung mit dem ursprünglich übermittelten Kennwort durchzuführen. Dabei ist keine Eingabe des Benutzers erforderlich. Aus Leistungsgründen wird die Verbindung nicht erneut authentifiziert, wenn ein Kennwort in SQL-Datenbank zurückgesetzt wird. Dies ist auch nicht der Fall, wenn die Verbindung aufgrund von Verbindungspooling zurückgesetzt wird. Dies unterscheidet sich von dem Verhalten von SQL Server (lokal). Wenn das Kennwort nach der ersten Authentifizierung der Verbindung geändert wurde, muss diese Verbindung beendet und eine neue unter Verwendung des neuen Kennworts hergestellt werden. Ein Benutzer mit der KILL DATABASE CONNECTION-Berechtigung kann eine Verbindung mit SQL-Datenbank mit dem Befehl KILL explizit beenden. Weitere Informationen finden Sie unter [KILL &#40;Transact-SQL&#41;](../../t-sql/language-elements/kill-transact-sql.md).  
   
- Kennwort  **=**  *Hashed_password*  
+ PASSWORD **=***hashed_password*  
  **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Gilt nur für das HASHED-Schlüsselwort. Gibt den Hashwert des Kennworts für den Anmeldenamen an, der erstellt wird.  
@@ -154,7 +154,7 @@ ALTER LOGIN login_name
   
  Gilt nur für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldenamen. Gibt an, dass das nach dem PASSWORD-Argument eingegebene Kennwort bereits einen Hashwert darstellt. Wenn diese Option nicht ausgewählt wird, wird aus dem Kennwort vor dem Speichern in der Datenbank ein Hashwert erstellt. Diese Option sollte nur für die Anmeldungssynchronisierung zwischen zwei Servern verwendet werden. Verwenden Sie die HASHED-Option nicht, um Kennwörter routinemäßig zu ändern.  
   
- OLD_PASSWORD **= "***Oldpassword***"**  
+ OLD_PASSWORD **='***oldpassword***'**  
  Gilt nur für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldungen. Das aktuelle Kennwort der Anmeldung, der ein neues Kennwort zugewiesen wird. Bei Kennwörtern wird nach Groß- und Kleinschreibung unterschieden.  
   
  MUST_CHANGE  
@@ -162,39 +162,39 @@ ALTER LOGIN login_name
   
  Gilt nur für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldungen. Falls diese Option angegeben wird, fordert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zur Eingabe eines aktualisierten Kennworts auf, wenn die geänderte Anmeldung zum ersten Mal verwendet wird.  
   
- DEFAULT_DATABASE  **=**  *Datenbank*  
+ DEFAULT_DATABASE **=***database*  
 **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Gibt eine Standarddatenbank an, die der Anmeldung zugewiesen werden soll.  
   
- DEFAULT_LANGUAGE  **=**  *Sprache*  
+ DEFAULT_LANGUAGE **=***language*  
  
  **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Gibt eine Standardsprache an, die der Anmeldung zugewiesen werden soll. Die Standardsprache für alle SQL-Datenbank-Anmeldenamen steht für Englisch und kann nicht geändert werden. Die Standardsprache der `sa` Anmeldung auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unter Linux steht für Englisch, jedoch geändert werden kann.  
+ Gibt eine Standardsprache an, die der Anmeldung zugewiesen werden soll. Die Standardsprache für alle SQL-Datenbank-Anmeldungen ist Englisch und kann nicht geändert werden. Die Standardsprache der `sa`-Anmeldung bei [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unter Linux ist Englisch. Diese kann jedoch geändert werden.  
   
- NAME = *Login_name*  
- Der neue Name der Anmeldung, die umbenannt wird. Falls es sich dabei um eine Windows-Anmeldung handelt, muss die SID des entsprechenden Windows-Prinzipals für den neuen Namen mit der SID übereinstimmen, die der Anmeldung in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zugeordnet ist. Der neue Name des eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anmeldung kann keinen umgekehrten Schrägstrich enthalten (\\).  
+ NAME = *login_name*  
+ Der neue Name der Anmeldung, die umbenannt wird. Falls es sich dabei um eine Windows-Anmeldung handelt, muss die SID des entsprechenden Windows-Prinzipals für den neuen Namen mit der SID übereinstimmen, die der Anmeldung in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zugeordnet ist. Der neue Name einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldung darf keinen umgekehrten Schrägstrich (\\) enthalten.  
   
- CHECK_EXPIRATION = {ON | **OFF** }  
+ CHECK_EXPIRATION = { ON | **OFF** }  
  **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Gilt nur für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldungen. Gibt an, ob die Richtlinie für das Ablaufen von Kennwörtern für diesen Anmeldenamen erzwungen werden soll. Der Standardwert ist OFF.  
   
- CHECK_POLICY  **=**  { **ON** | {OFF}  
+ CHECK_POLICY **=** { **ON** | OFF }  
  **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Gilt nur für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldungen. Gibt an, dass die Windows-Kennwortrichtlinien des Computers, auf dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt wird, für diesen Anmeldenamen erzwungen werden sollen. Der Standardwert ist ON.  
   
- Anmeldeinformationen = *Credential_name*  
+ CREDENTIAL = *credential_name*  
  **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Die Anmeldeinformationen, die einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldung zugeordnet werden sollen. Die Anmeldeinformationen müssen bereits auf dem Server vorhanden sein. Weitere Informationen finden Sie unter [Anmeldeinformationen &#40; Datenbankmodul &#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md). Anmeldeinformationen kann nicht für die sa-Anmeldung zugeordnet werden.  
+ Die Anmeldeinformationen, die einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldung zugeordnet werden sollen. Die Anmeldeinformationen müssen bereits auf dem Server vorhanden sein. Weitere Informationen finden Sie unter [Anmeldeinformationen &#40;Datenbank-Engine&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md). Der sa-Anmeldung können keine Anmeldeinformationen zugeordnet werden.  
   
  NO CREDENTIAL  
  **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Entfernt vorhandene Zuordnungen der Anmeldung zu Serveranmeldeinformationen. Weitere Informationen finden Sie unter [Anmeldeinformationen &#40; Datenbankmodul &#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md).  
+ Entfernt vorhandene Zuordnungen der Anmeldung zu Serveranmeldeinformationen. Weitere Informationen finden Sie unter [Anmeldeinformationen &#40;Datenbank-Engine&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md).  
   
  UNLOCK  
  **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -204,14 +204,14 @@ ALTER LOGIN login_name
  ADD CREDENTIAL  
  **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Fügt der Anmeldung Anmeldeinformationen eines EKM-Anbieters (Extensible Key Management, erweiterbare Schlüsselverwaltung) hinzu. Weitere Informationen finden Sie unter [erweiterbare Schlüsselverwaltung &#40; Erweiterbare Schlüsselverwaltung &#41; ](../../relational-databases/security/encryption/extensible-key-management-ekm.md).  
+ Fügt der Anmeldung Anmeldeinformationen eines EKM-Anbieters (Extensible Key Management, erweiterbare Schlüsselverwaltung) hinzu. Weitere Informationen über die erweiterbare Schlüsselverwaltung finden Sie unter [Erweiterbare Schlüsselverwaltung &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md).  
   
  DROP CREDENTIAL  
  **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-Entfernt die Anmeldeinformationen eines Extensible Key Management (EKM)-Anbieters von der Anmeldung. Weitere Informationen finden Sie unter [erweiterbare Schlüsselverwaltung &#40; Erweiterbare Schlüsselverwaltung &#41; ](../../relational-databases/security/encryption/extensible-key-management-ekm.md).  
+Entfernt Anmeldeinformationen eines EKM-Anbieters (Extensible Key Management, erweiterbare Schlüsselverwaltung) aus der Anmeldung. Weitere Informationen über die erweiterbare Schlüsselverwaltung finden Sie unter [Erweiterbare Schlüsselverwaltung &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md).  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Wenn CHECK_POLICY auf ON festgelegt ist, kann das HASHED-Argument nicht verwendet werden.  
   
  Wenn CHECK_POLICY in ON geändert wird, passiert Folgendes:  
@@ -224,28 +224,28 @@ Entfernt die Anmeldeinformationen eines Extensible Key Management (EKM)-Anbieter
   
 -   Der Kennwortverlauf wird gelöscht.  
   
--   Der Wert der *Lockout_time* wird zurückgesetzt.  
+-   Der Wert von *lockout_time* wird zurückgesetzt.  
   
 Falls MUST_CHANGE angegeben wird, müssen CHECK_EXPIRATION und CHECK_POLICY auf ON festgelegt werden. Andernfalls erzeugt die Anweisung einen Fehler.  
   
 Falls CHECK_POLICY auf OFF festgelegt ist, kann CHECK_EXPIRATION nicht auf ON festgelegt werden. Eine ALTER LOGIN-Anweisung mit dieser Kombination von Optionen erzeugt einen Fehler.  
   
-Sie können ALTER_LOGIN mit dem DISABLE-Argument nicht dazu verwenden, den Zugriff auf eine Windows-Gruppe zu verweigern. Beispielsweise ALTER_LOGIN [*Domain\group*] DISABLE Gibt die folgende Fehlermeldung zurück:  
+Sie können ALTER_LOGIN mit dem DISABLE-Argument nicht dazu verwenden, den Zugriff auf eine Windows-Gruppe zu verweigern. ALTER_LOGIN [*domain\group*] DISABLE gibt zum Beispiel die folgende Fehlermeldung zurück:  
   
  "Meldung 15151, Ebene 16, Status 1, Zeile 1"  
   
- "Die Anmeldung kann nicht geändert werden"*Domain\Group*", da er nicht vorhanden, oder Sie keine Berechtigung haben."  
+ "Der Anmeldename '*Domain\Group*' kann nicht geändert werden, da er nicht vorhanden ist oder Sie keine entsprechende Berechtigung besitzen."  
   
  Dies ist beabsichtigt.  
   
-In [!INCLUDE[ssSDS](../../includes/sssds-md.md)], Anmeldedaten erforderlich, um eine Verbindung zu authentifizieren und Firewallregeln auf Serverebene werden in jeder Datenbank vorübergehend zwischengespeichert. Dieser Cache wird in regelmäßigen Abständen aktualisiert. Führen Sie zum Erzwingen einer Aktualisierung des Authentifizierungscache und stellen Sie sicher, dass eine Datenbank die aktuelle Version der Tabelle Anmeldungen verfügt, [DBCC FLUSHAUTHCACHE &#40; Transact-SQL &#41; ](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md).  
+In [!INCLUDE[ssSDS](../../includes/sssds-md.md)] werden Anmeldedaten, die für die Authentifizierung einer Verbindung und Firewallregeln auf Serverebene erforderlich sind, über einen gewissen Zeitraum in jeder Datenbank gespeichert. Dieser Cache wird regelmäßig aktualisiert. Führen Sie [DBCC FLUSHAUTHCACHE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md) aus, um das Aktualisieren der Authentifizierungsdatenbank zu erzwingen und sicherzustellen, dass die Datenbank über die aktuelle Version der Anmeldungstabelle verfügt.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die ALTER ANY LOGIN-Berechtigung.  
   
  Falls die CREDENTIAL-Option verwendet wird, ist auch die ALTER ANY CREDENTIAL-Berechtigung erforderlich.  
   
- Wenn der Anmeldename, der geändert wird, ein Mitglied ist die **Sysadmin** feste Serverrolle oder Empfänger der CONTROL SERVER-Berechtigung erfordert CONTROL SERVER-Berechtigung auch wenn Sie die folgenden Änderungen vornehmen:  
+ Wenn die zu ändernde Anmeldung Mitglied der festen Serverrolle **sysadmin** oder Empfänger der CONTROL SERVER-Berechtigung ist, ist auch die CONTROL SERVER-Berechtigung für die folgenden Änderungen erforderlich:  
   
 -   Zurücksetzen des Kennworts ohne Eingabe des alten Kennworts.  
   
@@ -332,10 +332,10 @@ GO
   
  
   
-## <a name="see-also"></a>Siehe auch  
- [Anmeldeinformationen &#40; Datenbankmodul &#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Anmeldeinformationen &#40;Datenbank-Engine&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)   
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
- [DROP LOGIN &#40; Transact-SQL &#41;](../../t-sql/statements/drop-login-transact-sql.md)   
+ [DROP LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/drop-login-transact-sql.md)   
  [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
  [Erweiterbare Schlüsselverwaltung &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)  

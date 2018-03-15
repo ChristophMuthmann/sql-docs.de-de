@@ -1,5 +1,5 @@
 ---
-title: Beim (Transact-SQL) | Microsoft Docs
+title: WHILE (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -62,18 +62,18 @@ WHILE Boolean_expression
   
 ## <a name="arguments"></a>Argumente  
  *Boolean_expression*  
- Ist ein [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) zurückgibt **"true"** oder **"false"**. Wenn der boolesche Ausdruck eine SELECT-Anweisung enthält, muss die SELECT-Anweisung in Klammern eingeschlossen werden.  
+ Ein [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md), der **TRUE** oder **FALSE** zurückgibt. Wenn der boolesche Ausdruck eine SELECT-Anweisung enthält, muss die SELECT-Anweisung in Klammern eingeschlossen werden.  
   
  {*sql_statement* | *statement_block*}  
  Ist eine beliebige [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung oder -Anweisungsgruppe, die als Anweisungsblock definiert wurde. Um einen Anweisungsblock zu definieren, verwenden Sie die Schlüsselwörter zur Ablaufsteuerung BEGIN und END.  
   
  BREAK  
- Bewirkt das Beenden der innersten WHILE-Schleife. Alle Anweisungen, die nach dem END-Schlüsselwort, markiert das Ende der Schleife auftreten, werden ausgeführt.  
+ Bewirkt das Beenden der innersten WHILE-Schleife. Alle Anweisungen nach dem END-Schlüsselwort, das das Ende der Schleife markiert, werden ausgeführt.  
   
  CONTINUE  
  Bewirkt, dass die WHILE-Schleife neu gestartet wird und alle Anweisungen nach dem CONTINUE-Schlüsselwort ignoriert werden.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Wenn zwei oder mehr WHILE-Schleifen geschachtelt sind, wird mit der inneren BREAK-Anweisung zur nächsten äußersten Schleife gesprungen. Alle Anweisungen nach dem Ende der inneren Schleife werden zuerst ausgeführt, und dann wird die nächste äußerste Schleife neu gestartet.  
   
 ## <a name="examples"></a>Beispiele  
@@ -116,10 +116,10 @@ DEALLOCATE Employee_Cursor;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
-### <a name="c-simple-while-loop"></a>"C:" einfache While-Schleife  
- Im folgenden Beispiel verdoppelt die `$300`-Schleife die Preise und wählt dann den Höchstpreis aus, wenn der durchschnittliche Listenpreis eines Produkts unter `WHILE` liegt. Ist der Höchstpreis niedriger als oder gleich `$500`, wird die `WHILE`-Schleife erneut gestartet und der Preis erneut verdoppelt. Diese Schleife verdoppelt die Preise, bis der Höchstpreis größer ist `$500`, und wird dann beendet die `WHILE` Schleife.  
+### <a name="c-simple-while-loop"></a>C: Einfache WHILE-Schleife  
+ Im folgenden Beispiel verdoppelt die `$300`-Schleife die Preise und wählt dann den Höchstpreis aus, wenn der durchschnittliche Listenpreis eines Produkts unter `WHILE` liegt. Ist der Höchstpreis niedriger als oder gleich `$500`, wird die `WHILE`-Schleife erneut gestartet und der Preis erneut verdoppelt. Diese Schleife verdoppelt die Preise so lange, bis der Höchstpreis mehr als `$500` beträgt; dann wird die `WHILE`-Schleife beendet.  
   
 ```  
 -- Uses AdventureWorks  
@@ -135,9 +135,9 @@ END
   
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [ALTER TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-trigger-transact-sql.md)   
- [Control-of-Flow-Sprache &#40; Transact-SQL &#41;](~/t-sql/language-elements/control-of-flow.md)   
+ [Control-of-Flow Language &#40;Transact-SQL&#41; (Sprachkonstrukte zur Ablaufsteuerung (Transact-SQL))](~/t-sql/language-elements/control-of-flow.md)   
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [Cursors &#40;Transact-SQL&#41;](../../t-sql/language-elements/cursors-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)  

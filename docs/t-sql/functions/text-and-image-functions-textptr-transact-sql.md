@@ -1,5 +1,5 @@
 ---
-title: TEXTPTR (Transact-SQL) | Microsoft Docs
+title: TEXTPTR (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 10/23/2017
 ms.prod: sql-non-specified
@@ -34,10 +34,10 @@ ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="text-and-image-functions---textptr-transact-sql"></a>Text- und Bildfunktionen - TEXTPTR (Transact-SQL)
+# <a name="text-and-image-functions---textptr-transact-sql"></a>Text- und Bildfunktionen: TEXTPTR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Gibt den Textzeiger-Wert, entspricht einer **Text**, **Ntext**, oder **Image** Spalte **Varbinary** Format. Der abgerufene Textzeigerwert kann in READTEXT-, WRITETEXT- und UPDATE-Anweisungen verwendet werden.  
+  Gibt den Textzeigerwert zurück, der einer **text**-, **ntext**- oder **image**-Spalte im Format **varbinary** entspricht. Der abgerufene Textzeigerwert kann in READTEXT-, WRITETEXT- und UPDATE-Anweisungen verwendet werden.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Es steht keine alternative Funktionalität zur Verfügung.  
@@ -52,35 +52,35 @@ TEXTPTR ( column )
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *Spalte*  
- Ist die **Text**, **Ntext**, oder **Image** Spalte, die verwendet werden.  
+ *column*  
+ Entspricht der **text**-, **ntext**- oder **image**-Spalte, die verwendet wird.  
   
 ## <a name="return-types"></a>Rückgabetypen  
  **varbinary**  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  TEXTPTR gibt für Tabellen mit Text in Zeilen ein Handle für den zu verarbeitenden Text zurück. Sie können selbst dann einen gültigen Textzeiger erhalten, wenn der Textwert gleich NULL ist.  
   
- Sie können die Funktion TEXTPTR nicht für Spalten von Sichten verwenden. Sie können sie nur für Spalten von Tabellen verwenden. Um die Funktion TEXTPTR für eine Spalte einer Sicht zu verwenden, müssen Sie den Kompatibilitätsgrad auf 80 festgelegt, mit [ALTER DATABASE Kompatibilitätsgrad](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md). Wenn die Tabelle keinen Text in Zeilen und einer **Text**, **Ntext**, oder **Image** Spalte nicht von einer UPDATETEXT-Anweisung initialisiert wurde, gibt TEXTPTR einen null-Zeiger zurück.  
+ Sie können die Funktion TEXTPTR nicht für Spalten von Sichten verwenden. Sie können sie nur für Spalten von Tabellen verwenden. Wenn Sie die Funktion TEXTPTR für eine Spalte einer Sicht verwenden möchten, müssen Sie den Kompatibilitätsgrad mithilfe von [ALTER DATABASE Compatibility Level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md) auf 80 setzen. Wenn eine Tabelle keinen Text in Zeilen hat und wenn eine **text**-, **ntext**- oder **image**-Spalte nicht mit einer UPDATETEXT-Anweisung initialisiert wurde, gibt TEXTPTR einen NULL-Zeiger zurück.  
   
  Verwenden Sie TEXTVALID, um zu testen, ob ein Textzeiger vorhanden ist. Sie können UPDATETEXT, WRITETEXT oder READTEXT nicht ohne einen gültigen Textzeiger verwenden.  
   
- Diese Funktionen und Anweisungen sind auch nützlich, bei der Arbeit mit **Text**, **Ntext**, und **Image** Daten.  
+ Diese Funktionen und Anweisungen sind auch bei Daten vom Typ **text**, **ntext** oder **image** hilfreich.  
   
 |Funktion oder Anweisung|Description|  
 |---------------------------|-----------------|  
-|PATINDEX**("***" % Muster "***",** *Ausdruck***)**|Gibt die Zeichenposition einer angegebenen Zeichenfolge in **Text** oder **Ntext** Spalten.|  
-|DATALENGTH**(***Ausdruck***)**|Gibt die Länge der Daten in **Text**, **Ntext**, und **Image** Spalten.|  
-|SET TEXTSIZE|Gibt den Grenzwert, in Bytes, der die **Text**, **Ntext**, oder **Image** Daten, die mit einer SELECT-Anweisung zurückgegeben werden.|  
-|TEILZEICHENFOLGE**(***Text_column*, *starten*, *Länge***)**|Gibt eine **Varchar** jener, die durch das angegebene *starten* Offset und *Länge*. Die Länge sollte kleiner als 8 KB sein.|  
+|PATINDEX**('***%pattern%***' ,** *expression***)**|Gibt die Zeichenposition einer angegebenen Zeichenfolge in Spalten von Typ **text** oder **ntext** zurück.|  
+|DATALENGTH**(***expression***)**|Gibt die Länge der Daten in den **text**-, **ntext**- und **image**-Spalten zurück.|  
+|SET TEXTSIZE|Gibt das Limit der **text**-, **ntext**- oder **image**-Daten, die von einer SELECT-Anweisung zurückgegeben werden sollen, in Byte zurück.|  
+|SUBSTRING**(***text_column*, *start*, *length***)**|Gibt eine **varchar**-Zeichenfolge zurück, die durch den Offset *start* und *length* angegeben wird. Die Länge sollte kleiner als 8 KB sein.|  
   
 ## <a name="examples"></a>Beispiele  
   
 > [!NOTE]  
->  Um die folgenden Beispiele auszuführen, müssen Sie installieren die **Pubs** Datenbank.  
+>  Sie müssen die **pubs**-Datenbank installieren, um die folgenden Beispiele auszuführen.  
   
 ### <a name="a-using-textptr"></a>A. Verwenden von TEXTPTR  
- Im folgenden Beispiel wird die `TEXTPTR` Funktion zum Suchen der **Image** Spalte `logo` zugeordnet `New Moon Books` in der `pub_info` Tabelle mit den `pubs` Datenbank. Der Textzeiger wird in der lokalen Variablen `@ptrval.` abgelegt.  
+ Im folgenden Beispiel wird die Funktion `TEXTPTR` verwendet, um die **image**-Spalte `logo`, die mit `New Moon Books` verknüpft ist, in der `pub_info`-Tabelle der `pubs`-Datenbank zu suchen. Der Textzeiger wird in der lokalen Variablen `@ptrval.` abgelegt.  
   
 ```  
 USE pubs;  
@@ -170,7 +170,7 @@ This is sample text data for Lucerne Publishing, publisher 9999 in the pubs data
 ```  
   
 ### <a name="d-returning-specific-text-data"></a>D. Zurückgeben von bestimmten Textdaten  
- Das folgende Beispiel sucht nach der `text` Spalte (`pr_info`) zugeordneten `pub_id``0736` in der `pub_info` Tabelle mit der `pubs` Datenbank. Es wird zunächst die lokale Variable `@val` deklariert. Der Textzeiger (eine lange Binärzeichenfolge) wird dann in der Variablen `@val` abgelegt und als Parameter der `READTEXT`-Anweisung übergeben. Diese Anweisung gibt beginnend beim fünften Byte (Offset 4) 10 Byte zurück.  
+ Im folgenden Beispiel wird die Spalte `text` (`pr_info`), die mit `pub_id``0736` verknüpft ist, in der Tabelle `pub_info` der `pubs`-Datenbank gesucht. Es wird zunächst die lokale Variable `@val` deklariert. Der Textzeiger (eine lange Binärzeichenfolge) wird dann in der Variablen `@val` abgelegt und als Parameter der `READTEXT`-Anweisung übergeben. Diese Anweisung gibt beginnend beim fünften Byte (Offset 4) 10 Byte zurück.  
   
 ```  
 USE pubs;  
@@ -192,12 +192,12 @@ pr_info
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [DATALENGTH &#40; Transact-SQL &#41;](../../t-sql/functions/datalength-transact-sql.md)   
- [PATINDEX &#40; Transact-SQL &#41;](../../t-sql/functions/patindex-transact-sql.md)   
- [READTEXT &#40; Transact-SQL &#41;](../../t-sql/queries/readtext-transact-sql.md)   
- [SET TEXTSIZE &#40; Transact-SQL &#41;](../../t-sql/statements/set-textsize-transact-sql.md)   
- [Text und Image-Funktionen &#40; Transact-SQL &#41;](http://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [DATALENGTH &#40;Transact-SQL&#41;](../../t-sql/functions/datalength-transact-sql.md)   
+ [PATINDEX &#40;Transact-SQL&#41;](../../t-sql/functions/patindex-transact-sql.md)   
+ [READTEXT &#40;Transact-SQL&#41;](../../t-sql/queries/readtext-transact-sql.md)   
+ [SET TEXTSIZE &#40;Transact-SQL&#41;](../../t-sql/statements/set-textsize-transact-sql.md)   
+ [Text- und Bildfunktionen &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)   
  [UPDATETEXT (Transact-SQL)](../../t-sql/queries/updatetext-transact-sql.md)   
  [WRITETEXT (Transact-SQL)](../../t-sql/queries/writetext-transact-sql.md)  
   

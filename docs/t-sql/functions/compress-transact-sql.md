@@ -1,5 +1,5 @@
 ---
-title: KOMPRIMIEREN (Transact-SQL) | Microsoft Docs
+title: COMPRESS (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -29,10 +29,10 @@ ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="compress-transact-sql"></a>KOMPRIMIEREN (Transact-SQL)
+# <a name="compress-transact-sql"></a>COMPRESS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-Den eingegebenen Ausdruck mithilfe des GZIP-Algorithmus komprimiert werden. Das Ergebnis der Komprimierung ist Byte-Array des Typs **varbinary(max)**.
+Komprimiert den Eingabeausdruck mit dem GZIP-Algorithmus. Durch die Komprimierung wird ein Bytearray des Typs **varbinary(max)** zurückgegeben.
   
 ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -44,20 +44,20 @@ COMPRESS ( expression )
   
 ## <a name="arguments"></a>Argumente  
 *expression*  
-Ist eine **Nvarchar (***n***)**, **nvarchar(max)**, **Varchar (**  *n*  **)**, **varchar(max)**, **Varbinary (**  *n*  **)**, **varbinary(max)**, **Char (***n***)**, **Nchar ()**   *n*  **)**, oder **binäre (***n***)** Ausdruck. Weitere Informationen finden Sie unter [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md).
+Die Ausdrücke **nvarchar(***n***)**, **nvarchar(max)**, **varchar(***n***)**, **varchar(max)**, **varbinary(***n***)**, **varbinary(max)**, **char(***n***)**, **nchar(***n***)** oder **binary(***n***)**. Weitere Informationen finden Sie unter [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md).
   
 ## <a name="return-types"></a>Rückgabetypen
-Gibt den Datentyp der **varbinary(max)** , die am komprimierten Inhalt der Eingabe darstellt.
+Gibt den Datentyp von **varbinary(max)** zurück, der den komprimierten Inhalt der Eingabe darstellt.
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
 Komprimierte Daten können nicht indiziert werden.
   
-Die Funktion COMPRESS komprimiert die Daten als der eingegebene Ausdruck bereitgestellt und für jeden Bereich, der die zu komprimierenden Daten aufgerufen werden muss. Automatische Komprimierung auf der Zeilen- oder Seitenebene während der Speicher, finden Sie unter [Datenkomprimierung](../../relational-databases/data-compression/data-compression.md).
+Über die COMPRESS-Funktion werden die Daten komprimiert, die als Eingabeausdrücke bereitgestellt und für jeden Datenabschnitt ausgelöst werden, der komprimiert werden soll. Informationen zur automatischen Komprimierung beim Speichern auf der Zeilen- oder Seitenebene finden Sie unter [Datenkomprimierung](../../relational-databases/data-compression/data-compression.md).
   
 ## <a name="examples"></a>Beispiele  
   
-### <a name="a-compress-data-during-the-table-insert"></a>A. Daten komprimieren, während die Tabelle einfügen  
-Im folgende Beispiel wird gezeigt, wie beim Komprimieren von Daten in die Tabelle eingefügt wird:
+### <a name="a-compress-data-during-the-table-insert"></a>A. Komprimieren von Daten beim Einfügen einer Tabelle  
+Das folgende Beispiel zeigt, wie Daten aus einer Tabelle komprimiert werden können, die in einer Tabelle enthalten sind:
   
 ```sql
 INSERT INTO player (name, surname, info )  
@@ -68,8 +68,8 @@ INSERT INTO player (name, surname, info )
 VALUES (N'Michael', N'Raheem', compress(@info));  
 ```  
   
-### <a name="b-archive-compressed-version-of-deleted-rows"></a>B. Archivieren Sie komprimierte Version der gelöschten Zeilen  
-Die folgende Anweisung löscht alte Player-Datensätze aus der `player` Tabelle und speichert die Datensätze in der `inactivePlayer` Tabelle in einem komprimierten Format, um Platz zu sparen.
+### <a name="b-archive-compressed-version-of-deleted-rows"></a>B. Archivieren einer komprimierten Version von gelöschten Zeilen  
+Die folgende Anweisung löscht alte Playerzeilen aus der `player`-Tabelle und speichert diese in einem komprimierten Format in der `inactivePlayer`-Tabelle, um so Speicherplatz einzusparen.
   
 ```sql
 DELETE player  
@@ -79,7 +79,7 @@ INTO dbo.inactivePlayers ;
 ```  
   
 ## <a name="see-also"></a>Siehe auch
-[Zeichenfolgenfunktionen &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
-[DEKOMPRIMIEREN &#40; Transact-SQL &#41;](../../t-sql/functions/decompress-transact-sql.md)
+[String Functions &#40;Transact-SQL&#41; (Zeichenfolgenfunktionen (Transact-SQL))](../../t-sql/functions/string-functions-transact-sql.md)  
+[DECOMPRESS &#40;Transact-SQL&#41;](../../t-sql/functions/decompress-transact-sql.md)
   
   

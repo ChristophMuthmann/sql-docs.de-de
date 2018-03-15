@@ -1,5 +1,5 @@
 ---
-title: + (Verketten von Zeichenfolgen) (Transact-SQL) | Microsoft Docs
+title: + (Verketten von Zeichenfolgen) (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 12/06/2016
 ms.prod: sql-non-specified
@@ -37,7 +37,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="-string-concatenation-transact-sql"></a>+ (Verketten von Zeichenfolgen) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Ein Operator in einem Zeichenfolgenausdruck, der zwei oder mehr Zeichenfolgen, binäre Zeichenfolgen oder Spalten oder eine Kombination aus Zeichenfolgen und Spaltennamen zu einem Ausdruck verkettet (ein Zeichenfolgenoperator).  Z. B. `SELECT 'book'+'case';` gibt `bookcase`.
+  Ein Operator in einem Zeichenfolgenausdruck, der zwei oder mehr Zeichenfolgen, binäre Zeichenfolgen oder Spalten oder eine Kombination aus Zeichenfolgen und Spaltennamen zu einem Ausdruck verkettet (ein Zeichenfolgenoperator).  `SELECT 'book'+'case';` gibt beispielsweise `bookcase` zurück.
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,9 +49,9 @@ expression + expression
   
 ## <a name="arguments"></a>Argumente  
  *expression*  
- Ist ein beliebiger gültiger [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) eines beliebigen Datentyps Typen in der Zeichen- und binären Datentypkategorie, mit Ausnahme der **Image**, **Ntext**, oder **Text**-Datentypen. Beide Ausdrücke müssen denselben Datentyp haben, oder es muss möglich sein, einen Ausdruck implizit in den Datentyp des anderen Ausdrucks zu konvertieren.  
+ Ein beliebiger gültiger [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) aus der binären Datentypkategorie oder der Datentypkategorie der Zeichen, mit Ausnahme der Datentypen **image**, **ntext** oder **text**. Beide Ausdrücke müssen denselben Datentyp haben, oder es muss möglich sein, einen Ausdruck implizit in den Datentyp des anderen Ausdrucks zu konvertieren.  
   
- Bei der Verkettung binärer Zeichenfolgen und Zeichen zwischen den binären Zeichenfolgen muss eine explizite Konvertierung in Zeichendaten erfolgen. Das folgende Beispiel zeigt den Zeitpunkt `CONVERT`, oder `CAST`, muss bei binärer Verkettung verwendet werden und wann `CONVERT`, oder `CAST`, müssen nicht verwendet werden.  
+ Bei der Verkettung binärer Zeichenfolgen und Zeichen zwischen den binären Zeichenfolgen muss eine explizite Konvertierung in Zeichendaten erfolgen. Das folgende Beispiel zeigt, wann `CONVERT` (oder `CAST`) bei binärer Verkettung zu verwenden ist und wann `CONVERT` (oder `CAST`) nicht verwendet werden muss.  
   
 ```  
 DECLARE @mybin1 varbinary(5), @mybin2 varbinary(5)  
@@ -73,8 +73,8 @@ SELECT CAST(@mybin1 AS varchar(5)) + ' '
 ## <a name="result-types"></a>Ergebnistypen  
  Gibt einen Wert vom Datentyp des Arguments zurück, das in der Rangfolge am höchsten steht. Weitere Informationen finden Sie unter [Rangfolge der Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
   
-## <a name="remarks"></a>Hinweise  
- Der +-Operator (Verketten von Zeichenfolgen) verhält sich anders, wenn er zusammen mit einer leeren Zeichenfolge verwendet wird, als wenn er mit einem NULL-Wert oder unbekannten Werten verwendet wird. Eine leere Zeichenfolge lässt sich als zwei einfache Anführungszeichen ohne Zeichen innerhalb der Anführungszeichen angeben. Eine leere binäre Zeichenfolge lässt sich als 0x ohne Bytewerte in der hexadezimalen Konstante angeben. Beim Verketten einer leeren Zeichenfolge werden immer die beiden angegebenen Zeichenfolgen verkettet. Wenn Sie mit Zeichenfolgen mit einem NULL-Wert arbeiten, hängt das Ergebnis der Verkettung von den Sitzungseinstellungen ab. Bei arithmetischen Operationen, die für NULL-Werte ausgeführt werden, ist das Ergebnis beim Hinzufügen eines NULL-Wertes zu einem bekannten Wert in der Regel ein unbekannter Wert. Parallel dazu führt eine Zeichenfolgenverkettungsoperation, die mit einem NULL-Wert ausgeführt wird, in der Regel zu einem NULL-Ergebnis. Sie können dieses Verhalten jedoch ändern, durch Ändern der Einstellung der `CONCAT_NULL_YIELDS_NULL` für die aktuelle Sitzung. Weitere Informationen finden Sie unter [SET CONCAT_NULL_YIELDS_NULL &#40;Transact-SQL&#41;](../../t-sql/statements/set-concat-null-yields-null-transact-sql.md).  
+## <a name="remarks"></a>Remarks  
+ Der +-Operator (Verketten von Zeichenfolgen) verhält sich anders, wenn er zusammen mit einer leeren Zeichenfolge verwendet wird, als wenn er mit einem NULL-Wert oder unbekannten Werten verwendet wird. Eine leere Zeichenfolge lässt sich als zwei einfache Anführungszeichen ohne Zeichen innerhalb der Anführungszeichen angeben. Eine leere binäre Zeichenfolge lässt sich als 0x ohne Bytewerte in der hexadezimalen Konstante angeben. Beim Verketten einer leeren Zeichenfolge werden immer die beiden angegebenen Zeichenfolgen verkettet. Wenn Sie mit Zeichenfolgen mit einem NULL-Wert arbeiten, hängt das Ergebnis der Verkettung von den Sitzungseinstellungen ab. Bei arithmetischen Operationen, die für NULL-Werte ausgeführt werden, ist das Ergebnis beim Hinzufügen eines NULL-Wertes zu einem bekannten Wert in der Regel ein unbekannter Wert. Parallel dazu führt eine Zeichenfolgenverkettungsoperation, die mit einem NULL-Wert ausgeführt wird, in der Regel zu einem NULL-Ergebnis. Sie können dieses Verhalten jedoch ändern, indem Sie die `CONCAT_NULL_YIELDS_NULL`-Einstellung für die aktuelle Sitzung ändern. Weitere Informationen finden Sie unter [SET CONCAT_NULL_YIELDS_NULL &#40;Transact-SQL&#41;](../../t-sql/statements/set-concat-null-yields-null-transact-sql.md).  
   
  Wenn das Ergebnis der Verkettung von Zeichenfolgen den Grenzwert von 8.000 Byte übersteigt, wird das Ergebnis abgeschnitten. Wenn jedoch mindestens eine der verketteten Zeichenfolgen einen umfangreichen Wert hat, wird das Ergebnis nicht abgeschnitten.  
   
@@ -92,7 +92,7 @@ ORDER BY LastName ASC, FirstName ASC;
 ```  
   
 ### <a name="b-combining-numeric-and-date-data-types"></a>B. Kombinieren von numerischen Datentypen und Datumsdatentypen  
- Im folgenden Beispiel wird die `CONVERT` -Funktion zum Verketten **numerischen** und **Datum** -Datentypen.  
+ Im folgenden Beispiel werden die Datentypen **numeric** und **date** mithilfe der `CONVERT`-Funktion verkettet.  
   
 ```  
 -- Uses AdventureWorks  
@@ -138,8 +138,8 @@ GO
  (3 row(s) affected)
  ```  
  
-### <a name="d-using-large-strings-in-concatenation"></a>D. Verwenden große Zeichenfolgen in Verkettung
-Im folgenden Beispiel werden mehrere Zeichenfolgen zu einer langen Zeichenfolge verkettet und versucht dann, um die Länge der endgültigen Zeichenfolge zu berechnen. Die endgültige Länge des Resultset 16000: Da beginnt mit Ausdruck der Auswertung, die Links, @x + @z + @y = > (@x + @z) + @y. In diesem Fall das Ergebnis (@x + @z) ist auf 8000 Byte abgeschnitten und dann @y Resultset, dadurch ist die endgültige Zeichenfolgenlänge 16000 hinzugefügt wird. Da @y ist eine Typzeichenfolge hohen Wert nicht abgeschnitten.
+### <a name="d-using-large-strings-in-concatenation"></a>D. Verwenden von langen Zeichenfolgen bei Verkettungen
+Im folgenden Beispiel werden mehrere Zeichenfolgen zu einer langen Zeichenfolge verkettet. Anschließend wird versucht, die Länge der endgültigen Zeichenfolge zu berechnen. Die endgültige Länge des Resultsets beträgt 16000, da die Auswertung des Ausdrucks links beginnt, d.h. @x + @z + @y = > (@x + @z) + @y. In diesem Fall wird das Ergebnis von (@x + @z) bei 8000 Byte abgeschnitten. Anschließend wird @y dem Resultset hinzugefügt, sodass sich die endgültige Zeichenfolgenlänge 16000 ergibt. Da @y eine Zeichenfolge vom Typ für hohe Werte ist, werden keine Daten abgeschnitten.
 
 ```
 DECLARE @x varchar(8000) = replicate('x', 8000)
@@ -159,10 +159,10 @@ GO
   
  (1 row(s) affected)
  ```  
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
 ### <a name="e-using-multiple-string-concatenation"></a>E. Verwenden der Verkettung mehrerer Zeichenfolgen  
- Im folgende Beispiel verkettet mehrere Zeichenfolgen, um eine lange Zeichenfolge zum Anzeigen der Nachname und dem ersten Buchstaben der Vizepräsidenten in einer Beispieldatenbank bilden. Nach dem Nachnamen wird ein Komma hinzugefügt. Nach dem Anfangsbuchstaben des Vornamens wird ein Punkt hinzugefügt.  
+ Im folgenden Beispiel werden mehrere Zeichenfolgen verkettet, um eine lange Zeichenfolge zu bilden. Dabei wird der Nachname und der Anfangsbuchstabe des Vornamens der Vizepräsidenten in einer Beispieldatenbank angezeigt. Nach dem Nachnamen wird ein Komma hinzugefügt. Nach dem Anfangsbuchstaben des Vornamens wird ein Punkt hinzugefügt.  
   
 ```  
 -- Uses AdventureWorks  
@@ -183,13 +183,13 @@ Hamilton, J.       Vice President of Production
 Welcker, B.        Vice President of Sales  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [+= &#40; Zeichenfolge verketten Zuweisung &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/string-concatenation-equal-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [+= &#40;Zeichenfolgenverkettungszuweisung&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/string-concatenation-equal-transact-sql.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
- [CAST und CONVERT &#40; Transact-SQL &#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
- [Datentypkonvertierung &#40; Datenbankmodul &#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)   
+ [CAST und CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
+ [Datentypkonvertierung &#40;Datenbank-Engine&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)   
  [Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [Ausdrücke &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [Integrierte Funktionen &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
  [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   

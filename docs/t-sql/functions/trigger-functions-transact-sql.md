@@ -1,5 +1,5 @@
 ---
-title: "Auslösen von Funktionen (Transact-SQL) | Microsoft Docs"
+title: Triggerfunktionen (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/08/2017
 ms.prod: sql-non-specified

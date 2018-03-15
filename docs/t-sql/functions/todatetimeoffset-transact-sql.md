@@ -1,5 +1,5 @@
 ---
-title: TODATETIMEOFFSET (Transact-SQL) | Microsoft Docs
+title: TODATETIMEOFFSET (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
@@ -40,7 +40,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="todatetimeoffset-transact-sql"></a>TODATETIMEOFFSET (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Gibt eine **"DateTimeOffset"** -Wert, der aus übersetzt werden eine **datetime2** Ausdruck.  
+  Gibt einen **datetimeoffset**-Wert zurück, der von einem **datetime2**-Ausdruck übersetzt wird.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -52,10 +52,10 @@ TODATETIMEOFFSET ( expression , time_zone )
   
 ## <a name="arguments"></a>Argumente  
  *expression*  
- Ist ein [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) , die aufgelöst wird, um eine [datetime2](../../t-sql/data-types/datetime2-transact-sql.md) Wert.  
+ Ein [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md), der zu einem [datetime2](../../t-sql/data-types/datetime2-transact-sql.md)-Wert aufgelöst wird.  
   
 > [!NOTE]  
->  Der Ausdruck kann nicht vom Typ **Text**, **Ntext**, oder **Image** , da diese Typen implizit konvertiert werden können **Varchar** oder **Nvarchar**.  
+>  Ein Ausdruck kann nicht vom Typ **text**, **ntext** oder **image** sein, da diese Typen nicht implizit in **varchar** oder **nvarchar** konvertiert werden können.  
   
  *time_zone*  
  Ein Ausdruck, der den Zeitzonenoffset in Minuten (bei einer ganzen Zahl), z. B. -120, oder in Stunden und Minuten (bei einer Zeichenfolge), z. B. '+13.00' darstellt. Der Bereich liegt zwischen +14 und -14 (in Stunden). Der Ausdruck wird in Ortszeit für die angegebene time_zone interpretiert.  
@@ -64,7 +64,7 @@ TODATETIMEOFFSET ( expression , time_zone )
 >  Wenn der Ausdruck eine Zeichenfolge ist, muss er folgendes Format aufweisen: {+ | -} TZH:THM.  
   
 ## <a name="return-type"></a>Rückgabetyp  
- **"DateTimeOffset"**. Die Genauigkeit von Bruchteile ist identisch mit der *"DateTime"* Argument.  
+ **datetimeoffset**. Die Genauigkeit der Bruchteile entspricht der des *datetime*-Arguments.  
   
 ## <a name="examples"></a>Beispiele  
   
@@ -97,10 +97,10 @@ SELECT TODATETIMEOFFSET (@dateTime, '+13:00');
 -- RETURNS 2007-08-28 18:00:30.0000000 +13:00  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [CAST und CONVERT &#40; Transact-SQL &#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
- [Datums- und Zeitdaten Typen und-Funktionen &#40; Transact-SQL &#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)   
- [ZEITZONE &#40; Transact-SQL &#41;](../../t-sql/queries/at-time-zone-transact-sql.md)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [CAST and CONVERT &#40;Transact-SQL&#41; (CAST und CONVERT &#40;Transact-SQL&#41;)](../../t-sql/functions/cast-and-convert-transact-sql.md)   
+ [Date and Time Data Types and Functions &#40;Transact-SQL&#41; (Datums- und Uhrzeitdatentypen und zugehörige Funktionen &#40;Transact-SQL&#41;)](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)   
+ [AT TIME ZONE &#40;Transact-SQL&#41;](../../t-sql/queries/at-time-zone-transact-sql.md)  
   
   
 

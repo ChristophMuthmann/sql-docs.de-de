@@ -1,5 +1,5 @@
 ---
-title: CREATE-Funktion (SQL Datawarehouse) | Microsoft Docs
+title: CREATE FUNCTION (SQL Data Warehouse) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
@@ -29,7 +29,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="create-function-sql-data-warehouse"></a>CREATE FUNCTION (SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  Erstellt eine benutzerdefinierte Funktion in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. Eine benutzerdefinierte Funktion ist ein [!INCLUDE[tsql](../../includes/tsql-md.md)] Routine, die Parameter annehmen, eine Aktion, z. B. eine komplexe Berechnung, und gibt das Ergebnis dieser Aktion als Wert zurück. Der Rückgabewert muss einen skalaren (Einzelwert). Verwenden Sie diese Anweisung zum Erstellen einer wiederverwendbaren Routine, die auf folgende Weise verwendet werden kann:  
+  Erstellt eine benutzerdefinierte Funktion in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. Eine benutzerdefinierte Funktion ist eine [!INCLUDE[tsql](../../includes/tsql-md.md)]-Routine, die Parameter annimmt, eine Aktion ausführt (z.B. eine komplexe Berechnung) und das Ergebnis dieser Aktion als Wert zurückgeben kann. Der Rückgabewert muss ein Skalarwert (Einzelwert) sein. Verwenden Sie diese Anweisung zum Erstellen einer wiederverwendbaren Routine, die auf folgende Weise verwendet werden kann:  
   
 -   In [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen, wie z. B. SELECT  
   
@@ -88,23 +88,23 @@ RETURNS return_data_type
  Geben Sie einen Parameternamen an, der mit dem Zeichen (@) beginnt. Der Parametername muss den Regeln für Bezeichner entsprechen. Parameter gelten lokal in der jeweiligen Funktion. Dieselben Parameternamen können in anderen Funktionen verwendet werden. Parameter können nur den Platz von Konstanten einnehmen. Sie können nicht anstelle von Tabellennamen, Spaltennamen oder Namen anderer Datenbankobjekte verwendet werden.  
   
 > [!NOTE]  
->  ANSI_WARNINGS wird bei der Übergabe von Parametern in einer gespeicherten Prozedur oder in einer benutzerdefinierten Funktion oder beim Deklarieren und Festlegen von Variablen in einer Batchanweisung nicht berücksichtigt. Angenommen, eine Variable definiert ist, als **char(3)**, und klicken Sie dann auf einen Wert größer als 3 Zeichen festgelegt, die Daten auf die definierte Größe und die Einfügung abgeschnitten oder UPDATE-Anweisung erfolgreich ausgeführt wird.  
+>  ANSI_WARNINGS wird bei der Übergabe von Parametern in einer gespeicherten Prozedur oder in einer benutzerdefinierten Funktion oder beim Deklarieren und Festlegen von Variablen in einer Batchanweisung nicht berücksichtigt. Wird beispielsweise eine Variable als **char(3)** definiert und dann auf einen Wert festgelegt, der länger als drei Zeichen ist, werden die Daten auf die definierte Größe abgeschnitten, und die Anweisung INSERT oder UPDATE wird erfolgreich ausgeführt.  
   
  *parameter_data_type*  
- Ist der Datentyp des Parameters an. Für [!INCLUDE[tsql](../../includes/tsql-md.md)] Funktionen, die alle skalaren Datentypen, die in unterstützt [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] sind zulässig. Der Datentyp Timestamp (Rowversion) ist kein unterstützter Typ.  
+ Der Parameterdatentyp. Für [!INCLUDE[tsql](../../includes/tsql-md.md)]-Funktionen sind alle skalaren Datentypen zulässig, die in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] unterstützt werden. Der Datentyp timestamp (rowversion) wird nicht unterstützt.  
   
  [ =*default* ]  
- Ein Standardwert für den Parameter. Wenn eine *Standardwert* Wert definiert ist, kann die Funktion ausgeführt werden, ohne einen Wert für diesen Parameter anzugeben.  
+ Ein Standardwert für den Parameter. Wenn ein *default*-Wert definiert ist, kann die Funktion ausgeführt werden, ohne dass ein Wert für diesen Parameter angegeben werden muss.  
   
  Wenn ein Parameter der Funktion über einen Standardwert verfügt, muss beim Aufrufen der Funktion das DEFAULT-Schlüsselwort angegeben werden, um den Standardwert abzurufen. In diesem Punkt gibt es einen Unterschied zum Verwenden von Parametern in einer gespeicherten Prozedur. Fehlt im Aufruf einer gespeicherten Prozedur ein Parameter, der einen Standardwert hat, wird automatisch dieser Standardwert verwendet.  
   
  *return_data_type*  
- Der Rückgabewert einer benutzerdefinierten Skalarfunktion. Für [!INCLUDE[tsql](../../includes/tsql-md.md)] Funktionen, die alle skalaren Datentypen, die in unterstützt [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] sind zulässig. Der Datentyp Timestamp (Rowversion) ist kein unterstützter Typ. Der Cursor und die Tabelle nicht skalaren Typen sind nicht zulässig.  
+ Der Rückgabewert einer benutzerdefinierten Skalarfunktion. Für [!INCLUDE[tsql](../../includes/tsql-md.md)]-Funktionen sind alle skalaren Datentypen zulässig, die in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] unterstützt werden. Der Datentyp timestamp (rowversion) wird nicht unterstützt. Der Cursor und die Tabelle von nicht skalaren Typen sind nicht zulässig.  
   
  *function_body*  
- Reihe von [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisungen.  Die Function_body keine SELECT-Anweisung enthalten und kann nicht auf Datenbankdaten verweisen.  Die Function_body kann nicht auf Tabellen oder Sichten verweisen. Hauptteil der Funktion kann andere deterministischen Funktionen aufrufen, jedoch nicht deterministische Funktionen aufrufen. 
+ Reihe von [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen.  function_body kann keine SELECT-Anweisung enthalten und kann nicht auf Datenbankdaten verweisen.  function_body kann nicht auf Tabellen oder Sichten verweisen. function_body kann andere deterministische Funktionen aufrufen, jedoch keine nicht deterministischen Funktionen aufrufen. 
   
- In Skalarfunktionen *Function_body* ist eine Reihe von [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisungen, die einen skalaren Wert ergeben.  
+ In Skalarfunktionen entspricht *function_body* einer Reihe von [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen, die zusammen einen Skalarwert ergeben.  
   
  *scalar_expression*  
  Gibt den skalaren Wert an, den die Skalarfunktion zurückgibt.  
@@ -124,18 +124,18 @@ RETURNS return_data_type
   
  Eine Funktion kann nur dann schemagebunden sein, wenn die folgenden Bedingungen erfüllt sind:  
   
--   Alle benutzerdefinierten Funktionen, die von der Funktion verwiesen werden ebenfalls schemagebunden.  
+-   Alle benutzerdefinierten Funktionen, auf die die Funktion verweist, sind ebenfalls schemagebunden.  
   
--   Die Funktionen und andere benutzerdefinierte Funktionen, die von der Funktion verwiesen werden mit einem einteiligen oder zweiteiligen Namen verwiesen.  
+-   Auf die Funktionen und die anderen benutzerdefinierten Funktionen, auf die die Funktion verweist, wird unter Verwendung eines einteiligen oder zweiteiligen Namens verwiesen.  
   
--   Integrierte Funktionen und andere benutzerdefinierte Funktionen in der gleichen Datenbank können nur im Text der benutzerdefinierten Funktionen verwiesen werden.  
+-   Nur auf integrierte Funktionen und andere benutzerdefinierte Funktionen in der gleichen Datenbank kann im Text der benutzerdefinierten Funktionen verwiesen werden.  
   
 -   Der Benutzer, der die CREATE FUNCTION-Anweisung ausgeführt hat, besitzt REFERENCES-Berechtigungen für die Datenbankobjekte, auf die die Funktion verweist.  
   
- So entfernen Sie SCHEMABINDING verwenden ALTER  
+ Zum Entfernen von SCHEMABINDING verwenden Sie ALTER  
   
- GIBT NULL ZURÜCK, AUF NULL INPUT | **FÜR NULL-EINGABE AUFGERUFEN**  
- Gibt an, die **OnNULLCall** Attribut des eine Skalarwertfunktion. Wenn das Attribut nicht angegeben ist, wird standardmäßig CALLED ON NULL INPUT verwendet. Dies bedeutet, dass der Hauptteil der Funktion ausgeführt wird, selbst wenn NULL als ein Argument übergeben wird.  
+ RETURNS NULL ON NULL INPUT | **CALLED ON NULL INPUT**  
+ Gibt das **OnNULLCall**-Attribut einer Skalarwertfunktion an. Wenn das Attribut nicht angegeben ist, wird standardmäßig CALLED ON NULL INPUT verwendet. Dies bedeutet, dass der Hauptteil der Funktion ausgeführt wird, selbst wenn NULL als ein Argument übergeben wird.  
   
 ## <a name="best-practices"></a>Bewährte Methoden  
  Wenn eine benutzerdefinierte Funktion nicht mit der SCHEMABINDING-Klausel erstellt wurde, können sich die an zugrunde liegenden Objekten vorgenommenen Änderungen auf die Definition der Funktion auswirken und bei Aufruf der Funktion zu unerwarteten Ergebnissen führen. Es wird empfohlen, eine der folgenden Methoden zu implementieren, damit die Funktion aufgrund von Änderungen an den zugrunde liegenden Objekten nicht veraltet ist:  
@@ -149,7 +149,7 @@ RETURNS return_data_type
   
 -   Anweisungen zur Ablaufsteuerung, mit Ausnahme von TRY...CATCH-Anweisungen  
   
--   Anweisungen zum Definieren lokaler Datenbankvariablen zu deklarieren.  
+-   DECLARE-Anweisungen zum Definieren lokaler Datenbankvariablen.  
   
 ## <a name="limitations-and-restrictions"></a>Einschränkungen  
  Mit benutzerdefinierten Funktionen können keine Aktionen ausgeführt werden, die den Status einer Datenbank ändern.  
@@ -157,9 +157,9 @@ RETURNS return_data_type
  Benutzerdefinierte Funktionen können geschachtelt werden. Dies bedeutet, dass eine benutzerdefinierte Funktion eine andere aufrufen kann. Die Schachtelungsebene wird um eins erhöht, wenn die aufgerufene Funktion mit der Ausführung beginnt, und wird wieder um eins erniedrigt, wenn die aufgerufene Funktion die Ausführung beendet. Benutzerdefinierte Funktionen unterstützen bis zu 32 geschachtelte Ebenen. Ein Überschreiten der maximalen Schachtelungsebenen verursacht das Fehlschlagen der gesamten Funktionsaufrufskette.   
   
 ## <a name="metadata"></a>Metadaten  
- Dieser Abschnitt enthält die systemkatalogsichten, die Sie verwenden können, um Metadaten zu benutzerdefinierten Funktionen zurückzugeben.  
+ In diesem Abschnitt werden die Systemkatalogsichten aufgelistet, die Sie verwenden können, um Metadaten zu benutzerdefinierten Funktionen zurückzugeben.  
   
- [Sys. sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) : Zeigt die Definition der [!INCLUDE[tsql](../../includes/tsql-md.md)] von benutzerdefinierten Funktionen. Beispiel:  
+ [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md): Zeigt die Definition von [!INCLUDE[tsql](../../includes/tsql-md.md)] benutzerdefinierten Funktionen an. Zum Beispiel:  
   
 ```  
 SELECT definition, type   
@@ -171,17 +171,17 @@ GO
   
 ```  
   
- [Sys.Parameters](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md) : Zeigt Informationen zu den in benutzerdefinierten Funktionen definierten Parametern.  
+ [sys.parameters](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md): Zeigt Informationen zu den Parametern an, die in benutzerdefinierten Funktionen definiert sind.  
   
- [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) : Displays the underlying objects referenced by a function.  
+ [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md): Zeigt die zugrunde liegenden Objekte an, auf die eine Funktion verweist.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die CREATE FUNCTION-Berechtigung in der Datenbank und die ALTER-Berechtigung für das Schema, in dem die Funktion erstellt wird.  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
-### <a name="a-using-a-scalar-valued-user-defined-function-to-change-a-data-type"></a>A. Verwenden eine skalarwertige benutzerdefinierte Funktion zum Ändern des Datentyps  
- Diese einfache Funktion nimmt eine **Int** Datentyp als Eingabe und gibt eine **dann decimal(10,2)** Datentyp als Ausgabe.  
+### <a name="a-using-a-scalar-valued-user-defined-function-to-change-a-data-type"></a>A. Verwenden einer benutzerdefinierten Skalarwertfunktion zum Ändern eines Datentyps  
+ Diese einfache Funktion verwendet einen **int**-Datentyp als Eingabe und gibt einen **decimal(10,2)**-Datentyp als Ausgabe zurück.  
   
 ```  
 CREATE FUNCTION dbo.ConvertInput (@MyValueIn int)  
@@ -197,9 +197,9 @@ GO
 SELECT dbo.ConvertInput(15) AS 'ConvertedValue';  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [ALTER FUNCTION (SQLServer PDW)](http://msdn.microsoft.com/en-us/25ff3798-eb54-4516-9973-d8f707a13f6c)   
- [DROP-Funktion (SQLServer PDW)](http://msdn.microsoft.com/en-us/1792a90d-0d06-4852-9dec-6de1b9cd229e)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [ALTER FUNCTION (SQL Server PDW)](http://msdn.microsoft.com/en-us/25ff3798-eb54-4516-9973-d8f707a13f6c)   
+ [DROP FUNCTION (SQL Server PDW)](http://msdn.microsoft.com/en-us/1792a90d-0d06-4852-9dec-6de1b9cd229e)  
   
   
 

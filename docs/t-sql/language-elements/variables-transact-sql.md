@@ -1,5 +1,5 @@
 ---
-title: Variablen (Transact-SQL) | Microsoft Docs
+title: Variablen (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 09/12/2017
 ms.prod: sql-non-specified
@@ -36,7 +36,7 @@ Eine lokale Transact-SQL-Variable ist ein Objekt, das einen einzelnen Datenwert 
 * Zum Speichern eines Datenwerts, der vom Rückgabecode einer gespeicherten Prozedur oder vom Funktionsrückgabewert zurückgegeben werden soll.
 
 > [!NOTE]
-> Die Namen einiger Funktionen der Transact-SQL-System beginnen mit zwei *am* -Zeichen (@@). Obwohl in früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], die @@functions bezeichnet werden, als globale Variablen, sie sind keine Variablen und verfügen nicht über die gleichen Verhaltensweisen wie Variablen. Der @@functions sind Systemfunktionen und deren Syntaxverwendung der Regeln für Funktionen.
+> Die Namen einiger Transact-SQL-Systemfunktionen beginnen mit zwei *@*-Zeichen (@@). Obwohl die @@functions in früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] als globale Variablen bezeichnet wurden, handelt es sich dabei keineswegs um Variablen, und sie verhalten sich auch nicht wie Variablen. Die @@functions sind Systemfunktionen, deren Syntaxverwendung den Regeln für Funktionen entspricht.
 
 Das folgende Skript erstellt eine kleine Testtabelle, die mit 26 Zeilen aufgefüllt wird. Das Skript verwendet eine Variable zur Durchführung von drei Aufgaben: 
 
@@ -86,23 +86,23 @@ GO
 ```
 
 ## <a name="declaring-a-transact-sql-variable"></a>Deklarieren einer Transact-SQL-Variablen
-DECLARE-Anweisung initialisiert eine Transact-SQL-Variable durch: 
+Die DECLARE-Anweisung initialisiert eine Transact-SQL-Variable auf die folgende Weise: 
 * Zuweisen eines Namens. Der Name muss ein einzelnes @-Zeichen als erstes Zeichen enthalten.
 * Zuweisen eines vom System bereitgestellten oder benutzerdefinierten Datentyps und einer Länge. Für numerische Variablen werden außerdem die Genauigkeit und die Dezimalstellen zugewiesen. Für Variablen des Typs XML kann eine optionale Schemaauflistung zugewiesen werden.
 * Festlegen des Werts auf NULL.
 
-Beispielsweise die folgenden **DECLARE** -Anweisung erstellt eine lokale Variable namens  **@mycounter**  mit einem Int-Datentyp.  
+Beispielsweise erstellt die folgende **DECLARE**-Anweisung eine lokale Variable namens **@mycounter** vom int-Datentyp.  
 ```sql
 DECLARE @MyCounter int;
 ```
 Zum Deklarieren von mehreren lokalen Variablen verwenden Sie ein Komma nach der ersten definierten lokalen Variablen und geben dann den Namen und den Datentyp der nächsten lokalen Variablen an.
 
-Beispielsweise die folgenden **DECLARE** -Anweisung erstellt drei lokale Variablen namens  **@LastName** ,  **@FirstName**  und  **@StateProvince** , und alle mit NULL initialisiert:  
+Die folgende **DECLARE**-Anweisung erstellt z.B. drei lokale Variablen mit den Namen **@LastName**, **@FirstName** und **@StateProvince** und initialisiert alle mit NULL:  
 ```sql
 DECLARE @LastName nvarchar(30), @FirstName nvarchar(20), @StateProvince nchar(2);
 ```
 
-Der Gültigkeitsbereich einer Variablen ist der Bereich der Transact-SQL-Anweisungen, die die Variable verweisen können. Der Gültigkeitsbereich einer Variablen reicht von dem Punkt, an dem sie deklariert wurde, bis zum Ende des Batches oder der gespeicherten Prozedur, in dem bzw. der sie deklariert wurde. Das folgende Skript generiert z. B. einen Syntaxfehler, weil die Variable in einem Batch deklariert wird und dann in einem anderen Batch auf sie verwiesen wird:  
+Der Gültigkeitsbereich einer Variablen ist der Bereich von Transact-SQL-Anweisungen, die auf die Variable verweisen können. Der Gültigkeitsbereich einer Variablen reicht von dem Punkt, an dem sie deklariert wurde, bis zum Ende des Batches oder der gespeicherten Prozedur, in dem bzw. der sie deklariert wurde. Das folgende Skript generiert z. B. einen Syntaxfehler, weil die Variable in einem Batch deklariert wird und dann in einem anderen Batch auf sie verwiesen wird:  
 ```sql
 USE AdventureWorks2014;
 GO
@@ -152,7 +152,7 @@ WHERE FirstName = @FirstNameVariable
 GO
 ```
 
-Einer Variablen kann außerdem ein Wert zugewiesen werden, indem auf sie in einer Auswahlliste verwiesen wird. Wenn auf eine Variable in einer Auswahlliste verwiesen wird, sollte ihr ein Skalarwert zugewiesen werden, oder die SELECT-Anweisung sollte nur eine Zeile zurückgeben. Beispiel:  
+Einer Variablen kann außerdem ein Wert zugewiesen werden, indem auf sie in einer Auswahlliste verwiesen wird. Wenn auf eine Variable in einer Auswahlliste verwiesen wird, sollte ihr ein Skalarwert zugewiesen werden, oder die SELECT-Anweisung sollte nur eine Zeile zurückgeben. Zum Beispiel:  
 
 ```sql
 USE AdventureWorks2014;
@@ -167,7 +167,7 @@ GO
 > [!WARNING]
 > Wenn es in einer einzelnen SELECT-Anweisung mehrere Zuordnungsklauseln gibt, kann SQL Server die Bewertungsreihenfolge der Ausdrücke nicht sicherstellen. Beachten Sie, dass die Auswirkungen nur dann sichtbar sind, wenn es Verweise zwischen den Zuordnungen gibt.
 
-Wenn eine SELECT-Anweisung gibt mehr als eine Zeile zurück, und die Variable auf einen nicht skalaren Ausdruck verweist, wird die Variable für den Ausdruck in der letzten Zeile des Resultsets zurückgegebenen Wert festgelegt. Z. B. in den folgenden Batch  **@EmpIDVariable**  festgelegt ist, um die **BusinessEntityID** Wert der letzten Zeile zurückgegeben, das 1 ist:  
+Wenn eine SELECT-Anweisung mehrere Zeilen zurückgibt und die Variable auf einen nicht skalaren Ausdruck verweist, wird die Variable auf den Wert festgelegt, der für den Ausdruck in der letzten Zeile des Resultsets zurückgegeben wurde. Im folgenden Batch wird z.B. **@EmpIDVariable** auf den **BusinessEntityID**-Wert der zuletzt zurückgegebenen Zeile festgelegt, der 1 ist:  
 
 ```sql
 USE AdventureWorks2014;
@@ -182,11 +182,11 @@ SELECT @EmpIDVariable;
 GO
 ```
 
-## <a name="see-also"></a>Siehe auch  
- [Deklarieren@local_variable](../../t-sql/language-elements/declare-local-variable-transact-sql.md)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Declare @local_variable](../../t-sql/language-elements/declare-local-variable-transact-sql.md)  
  [SET@local_variable](../../t-sql/language-elements/set-local-variable-transact-sql.md)  
  [SELECT @local_variable](../../t-sql/language-elements/select-local-variable-transact-sql.md)  
- [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
- [Zusammengesetzte Operatoren &#40; Transact-SQL &#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   
+ [Ausdrücke &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [Verbundoperatoren &#40;Transact-SQL&#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   
   
   

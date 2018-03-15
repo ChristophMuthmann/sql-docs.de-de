@@ -1,5 +1,5 @@
 ---
-title: RESTORE SERVICE MASTER KEY (Transact-SQL) | Microsoft Docs
+title: RESTORE SERVICE MASTER KEY (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -53,16 +53,16 @@ RESTORE SERVICE MASTER KEY FROM FILE = 'path_to_file'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- Datei **= "***Dateipfad***"**  
- Gibt den vollständigen Pfad, einschließlich des Dateinamens, zum gespeicherten Diensthauptschlüssel an. *Dateipfad* kann ein lokaler Pfad oder einen UNC-Pfad zu einem Netzwerkspeicherort sein.  
+ FILE **='***path_to_file***'**  
+ Gibt den vollständigen Pfad, einschließlich des Dateinamens, zum gespeicherten Diensthauptschlüssel an. *path_to_file* kann ein lokaler Pfad oder ein UNC-Pfad zu einem Netzwerkspeicherort sein.  
   
- Kennwort **= "***Kennwort***"**  
+ PASSWORD **='***password***'**  
  Gibt das Kennwort an, das zum Entschlüsseln des aus einer Datei importierten Diensthauptschlüssels erforderlich ist.  
   
  FORCE  
  Erzwingt die Ersetzung des Diensthauptschlüssels, auch wenn Daten bei diesem Vorgang verloren gehen können.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Bei der Wiederherstellung des Diensthauptschlüssels werden alle Schlüssel und geheimen Bereiche von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entschlüsselt, die mit dem aktuellen Diensthauptschlüssel verschlüsselt wurden. Diese Schlüssel werden dann mit dem aus der Sicherungsdatei geladenen Diensthauptschlüssel verschlüsselt.  
   
  Falls einer dieser Entschlüsselungsvorgänge nicht erfolgreich ausgeführt werden kann, tritt bei der Wiederherstellung ein Fehler auf. Sie können die FORCE-Option verwenden, um Fehler zu ignorieren, dies kann jedoch zum Verlust von Daten führen, die nicht entschlüsselt werden können.  
@@ -85,10 +85,10 @@ RESTORE SERVICE MASTER KEY
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Diensthauptschlüssel](../../relational-databases/security/encryption/service-master-key.md)   
- [ALTER SERVICE MASTER KEY &#40; Transact-SQL &#41;](../../t-sql/statements/alter-service-master-key-transact-sql.md)   
- [BACKUP SERVICE MASTER KEY &#40; Transact-SQL &#41;](../../t-sql/statements/backup-service-master-key-transact-sql.md)   
+ [ALTER SERVICE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-service-master-key-transact-sql.md)   
+ [BACKUP SERVICE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/backup-service-master-key-transact-sql.md)   
  [Verschlüsselungshierarchie](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   
   

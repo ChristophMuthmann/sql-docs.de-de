@@ -1,5 +1,5 @@
 ---
-title: UNTERE (Transact-SQL) | Microsoft Docs
+title: LOWER (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
@@ -51,10 +51,10 @@ LOWER ( character_expression )
   
 ## <a name="arguments"></a>Argumente  
  *character_expression*  
- Ist ein [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) von Zeichen- oder Binärdaten darstellen. *Character_expression* kann eine Konstante, Variable oder Spalte sein. *Character_expression* muss einen Datentyp, der implizit in **Varchar**. Verwenden Sie andernfalls [Umwandlung](../../t-sql/functions/cast-and-convert-transact-sql.md) zur expliziten Konvertierung *Character_expression*.  
+ Ein [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) aus Zeichen- oder Binärdaten. *character_expression* kann eine Konstante, Variable oder Spalte sein. *character_expression* muss einen Datentyp aufweisen, der implizit nach **varchar** konvertiert werden kann. Verwenden Sie in allen anderen Fällen [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) zur expliziten Konvertierung von *character_expression*.  
   
 ## <a name="return-types"></a>Rückgabetypen  
- **Varchar** oder **Nvarchar**  
+ **varchar** oder **nvarchar**  
   
 ## <a name="examples"></a>Beispiele  
  In diesem Beispiel werden die `LOWER`- und die `UPPER`-Funktion sowie eine Schachtelung der `UPPER`-Funktion in der `LOWER`-Funktion verwendet, um die Produktnamen auszuwählen, deren Preis zwischen 11 $ und 20 $ liegt.  
@@ -79,9 +79,9 @@ minipump              MINIPUMP               minipump
 taillights – battery  TAILLIGHTS – BATTERY   taillights - battery
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [Zeichenfolgenfunktionen &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
+ [Zeichenfolgenfunktionen &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)  
  [UPPER &#40;Transact-SQL&#41;](../../t-sql/functions/upper-transact-sql.md)  
   
   

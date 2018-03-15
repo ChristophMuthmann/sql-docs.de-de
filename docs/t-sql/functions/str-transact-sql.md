@@ -1,5 +1,5 @@
 ---
-title: STR (Transact-SQL) | Microsoft Docs
+title: STR (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -49,22 +49,22 @@ STR ( float_expression [ , length [ , decimal ] ] )
   
 ## <a name="arguments"></a>Argumente  
  *float_expression*  
- Ist ein Ausdruck der ungefähren numerischen (**"float"**)-Datentyp mit einem Dezimaltrennzeichen.  
+ Ein Ausdruck der ungefähren numerischen Datentypkategorie (**float**) mit einem Dezimalpunkt.  
   
  *length*  
- Die Gesamtlänge. Dazu gehören Dezimaltrennzeichen, Zeichen, Ziffern und Leerzeichen. Der Standardwert lautet 10.  
+ Die Gesamtlänge. Dazu gehören Dezimaltrennzeichen, Zeichen, Ziffern und Leerzeichen. Der Standardwert ist 10.  
   
  *decimal*  
- Die Anzahl der Stellen nach dem Dezimaltrennzeichen. *Decimal* muss kleiner oder gleich 16 sein. Wenn *decimal* mehr als 16 ist, und klicken Sie dann das Ergebnis bei sechzehn Stellen rechts vom Dezimaltrennzeichen abgeschnitten wird.  
+ Die Anzahl der Stellen nach dem Dezimaltrennzeichen. *decimal* muss kleiner als oder gleich 16 sein. Wenn *decimal* größer als 16 ist, wird das Ergebnis bei sechzehn Stellen nach dem Dezimaltrennzeichen abgeschnitten.  
   
 ## <a name="return-types"></a>Rückgabetypen  
  **varchar**  
   
-## <a name="remarks"></a>Hinweise  
- Wenn angegeben, die Werte für *Länge* und *decimal* an str Übergebenen Parameter müssen positiv sein. Die Zahl wird standardmäßig, oder wenn der Dezimalstellenparameter 0 beträgt, auf eine ganze Zahl gerundet. Die angegebene Länge sollte größer oder gleich dem Teil der Zahl vor dem Dezimalpunkt plus dem Vorzeichen (falls vorhanden) sein. Ein kurzer *Float_expression* wird rechtsbündig in der angegebenen Länge und ein langer *Float_expression* auf die angegebene Anzahl von Dezimalstellen abgeschnitten. Beispielsweise STR (12**,**10) ergibt das Ergebnis 12. Dieser Wert wird im Resultset rechtsbündig ausgerichtet. Allerdings STR (1223**,**2) schneidet das Resultset zu **. Zeichenfolgenfunktionen können geschachtelt werden.  
+## <a name="remarks"></a>Remarks  
+ Falls angegeben, sollten die Werte für die Parameter *length* und *decimal* der STR-Funktion positiv sein. Die Zahl wird standardmäßig, oder wenn der Dezimalstellenparameter 0 beträgt, auf eine ganze Zahl gerundet. Die angegebene Länge sollte größer oder gleich dem Teil der Zahl vor dem Dezimalpunkt plus dem Vorzeichen (falls vorhanden) sein. Ein kurzer *float_expression*-Ausdruck wird in der angegebenen Länge rechtsbündig ausgerichtet, während ein langer *float_expression*-Ausdruck auf die angegebene Anzahl der Dezimalstellen gekürzt wird. Beispielsweise ergibt STR(12**,**10) den Wert 12. Dieser Wert wird im Resultset rechtsbündig ausgerichtet. STR(1223**,**2) schneidet das Resultset zu ** hingegen ab. Zeichenfolgenfunktionen können geschachtelt werden.  
   
 > [!NOTE]  
->  Zum Konvertieren in Unicode-Daten verwenden Sie STR innerhalb einer Convert- oder [Umwandlung](../../t-sql/functions/cast-and-convert-transact-sql.md) Konvertierungsfunktion.  
+>  Wenn Sie Daten in das Unicodeformat konvertieren wollen, verwenden Sie STR innerhalb einer CONVERT- oder [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md)-Konvertierungsfunktion.  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird ein Ausdruck, der aus fünf Ziffern und einem Dezimaltrennzeichen besteht, in eine Zeichenfolge mit sechs Stellen konvertiert. Die Stellen hinter dem Dezimalpunkt werden auf eine Dezimalstelle gerundet.  
@@ -115,10 +115,10 @@ GO
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [CAST und CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
  [FORMAT &#40;Transact-SQL&#41;](../../t-sql/functions/format-transact-sql.md)  
- [Zeichenfolgenfunktionen &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
+ [String Functions &#40;Transact-SQL&#41; (Zeichenfolgenfunktionen (Transact-SQL))](../../t-sql/functions/string-functions-transact-sql.md)  
   
   
 

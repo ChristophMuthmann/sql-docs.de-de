@@ -1,5 +1,5 @@
 ---
-title: Vorhanden ist (Transact-SQL) | Microsoft Docs
+title: EXISTS (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -53,7 +53,7 @@ EXISTS ( subquery )
   
 ## <a name="arguments"></a>Argumente  
  *subquery*  
- Eine eingeschränkte SELECT-Anweisung. Das INTO-Schlüsselwort ist nicht zulässig. Weitere Informationen finden Sie die Informationen zu Unterabfragen in [SELECT &#40; Transact-SQL &#41; ](../../t-sql/queries/select-transact-sql.md).  
+ Eine eingeschränkte SELECT-Anweisung. Das INTO-Schlüsselwort ist nicht zulässig. Weitere Informationen zu Unterabfragen finden Sie unter [SELECT &#40;Transact-SQL&#41](../../t-sql/queries/select-transact-sql.md).  
   
 ## <a name="result-types"></a>Ergebnistypen  
  **Boolean**  
@@ -106,7 +106,7 @@ WHERE a.LastName IN
 GO  
 ```  
   
- Hier wird das Resultset für die beiden Abfragen.  
+ Im Folgenden wird das Resultset der beiden Abfragen aufgeführt.  
   
  ```
 FirstName                                          LastName
@@ -119,7 +119,7 @@ Willis                                             Johnson
  ```  
   
 ### <a name="c-comparing-queries-by-using-exists-and--any"></a>C. Vergleichen von Abfragen mit EXISTS und = ANY  
- Das folgende Beispiel zeigt zwei Abfragen zum Ermitteln von Läden, deren Namen dem Namen eines Lieferanten entsprechen. Die erste Abfrage verwendet `EXISTS` und die zweite verwendet `=``ANY`.  
+ Das folgende Beispiel zeigt zwei Abfragen zum Ermitteln von Läden, deren Namen dem Namen eines Lieferanten entsprechen. Die erste Abfrage verwendet `EXISTS`, die zweite verwendet `=``ANY`.  
   
 ```  
 -- Uses AdventureWorks  
@@ -302,10 +302,10 @@ Peng                           Wu                             Quality Assurance 
 (91 row(s) affected)
  ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
 ### <a name="f-using-exists"></a>F. Verwenden von EXISTS  
- Das folgende Beispiel gibt an, ob alle Zeilen in der `ProspectiveBuyer` Tabelle möglicherweise Übereinstimmungen, die Zeilen in der `DimCustomer` Tabelle. Die Abfrage gibt Zeilen zurück nur, wenn sowohl die `LastName` und `BirthDate` Werte in den beiden Tabellen übereinstimmen.  
+ Das folgende Beispiel gibt an, ob Zeilen in der `ProspectiveBuyer`-Tabelle möglicherweise mit Zeilen in der `DimCustomer`-Tabelle übereinstimmen. Die Abfrage gibt nur Zeilen zurück, wenn die Werte `LastName` und `BirthDate` in beiden Tabellen übereinstimmen.  
   
 ```  
 -- Uses AdventureWorks  
@@ -319,7 +319,7 @@ WHERE EXISTS
 ```  
   
 ### <a name="g-using-not-exists"></a>G. Verwenden von NOT EXISTS  
- NOT EXISTS funktioniert als als EXISTS Gegenstück. Die WHERE-Klausel in NOT EXISTS wird erfüllt, wenn die Unterabfrage keine Zeilen zurückgibt. Das folgende Beispiel sucht nach Zeilen in der `DimCustomer` Tabelle die `LastName` und `BirthDate` entsprechen keine Einträge in der `ProspectiveBuyers` Tabelle.  
+ NOT EXISTS funktioniert genau umgekehrt wie EXISTS. Die WHERE-Klausel in NOT EXISTS wird erfüllt, wenn die Unterabfrage keine Zeilen zurückgibt. Im folgenden Beispiel werden Zeilen in der Tabelle `DimCustomer` gesucht, bei denen die Werte `LastName` und `BirthDate` nicht mit Einträgen in der Tabelle `ProspectiveBuyers` übereinstimmen.  
   
 ```  
 -- Uses AdventureWorks  
@@ -332,8 +332,8 @@ WHERE NOT EXISTS
     WHERE (a.LastName = b.LastName) AND (a.BirthDate = b.BirthDate));  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Ausdrücke &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [Integrierte Funktionen &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
  [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)  
   

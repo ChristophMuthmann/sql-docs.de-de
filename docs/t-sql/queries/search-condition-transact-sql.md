@@ -1,5 +1,5 @@
 ---
-title: Suchbedingung (Transact-SQL) | Microsoft Docs
+title: Suchbedingung (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 01/15/2018
 ms.prod: sql-non-specified
@@ -104,24 +104,24 @@ ms.lasthandoff: 01/25/2018
  Gibt die Bedingungen für die Zeilen an, die im Resultset einer SELECT-Anweisung, eines Abfrageausdrucks oder einer Unterabfrage zurückgegeben werden sollen. Bei einer UPDATE-Anweisung gibt dieses Argument die Bedingungen für die Zeilen an, die aktualisiert werden sollen. Bei einer DELETE-Anweisung gibt dieses Argument die Bedingungen für die Zeilen an, die gelöscht werden sollen. Es gibt keine Begrenzung für die Anzahl der Prädikate, die in einer Suchbedingung einer [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung enthalten sein können.  
   
  NICHT  
- Negiert den vom Prädikat festgelegten booleschen Ausdruck. Weitere Informationen finden Sie unter [nicht &#40; Transact-SQL &#41; ](../../t-sql/language-elements/not-transact-sql.md).  
+ Negiert den vom Prädikat festgelegten booleschen Ausdruck. Weitere Informationen finden Sie unter [NOT &#40;Transact-SQL&#41;](../../t-sql/language-elements/not-transact-sql.md).  
   
  AND  
- Kombiniert zwei Bedingungen und gibt TRUE zurück, wenn beide Bedingungen TRUE sind. Weitere Informationen finden Sie unter [und &#40; Transact-SQL &#41; ](../../t-sql/language-elements/and-transact-sql.md).  
+ Kombiniert zwei Bedingungen und gibt TRUE zurück, wenn beide Bedingungen TRUE sind. Weitere Informationen finden Sie unter [AND &#40;Transact-SQL&#41;](../../t-sql/language-elements/and-transact-sql.md).  
   
- OR  
- Kombiniert zwei Bedingungen und gibt TRUE zurück, wenn eine der Bedingungen TRUE ist. Weitere Informationen finden Sie unter [oder &#40; Transact-SQL &#41; ](../../t-sql/language-elements/or-transact-sql.md).  
+ oder  
+ Kombiniert zwei Bedingungen und gibt TRUE zurück, wenn eine der Bedingungen TRUE ist. Weitere Informationen finden Sie unter [OR &#40;Transact-SQL&#41;](../../t-sql/language-elements/or-transact-sql.md).  
   
- \<Prädikat >  
+ \< predicate >  
  Ein Ausdruck, der TRUE, FALSE oder UNKNOWN zurückgibt.  
   
  *expression*  
  Ein Spaltenname, eine Konstante, eine Funktion, eine Variable, eine skalare Unterabfrage oder eine Kombination aus Spaltennamen, Konstanten und Funktionen, die durch einen Operator bzw. Operatoren oder eine Unterabfrage miteinander verbunden sind. Der Ausdruck kann auch den CASE-Ausdruck enthalten.  
   
 > [!NOTE]  
->  Nicht-Unicode-Zeichenfolgenkonstanten und Variablen verwenden die Codepage, die die standardsortierung der Datenbank entspricht. Seite Konvertierungen können sicherheitsbezogener Code, bei der Arbeit mit nur-Unicode-Zeichendaten und verweisen auf die nicht-Unicode-Zeichendatentypen **Char**, **Varchar**, und **Text**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Konvertiert von nicht-Unicode-Zeichenfolgenkonstanten und Variablen in die Codepage, die entspricht der Sortierung der Spalte, auf die verwiesen wird, oder Verwenden von COLLATE, angegeben, wenn diese Codepage von der Codepage unterscheidet, das die standardsortierung der Datenbank entspricht. Alle Zeichen in der neuen Codepage nicht gefunden werden zu einem ähnlichen Zeichen übersetzt werden, wenn eine [Zuordnung mit ähnlichen](http://www.unicode.org/Public/MAPPINGS/VENDORS/MICSFT/WindowsBestFit/) befinden, ansonsten werden in das standardersetzungszeichen der konvertiert wird "?".  
+>  Nicht-Unicode-Zeichenfolgenkonstanten und -Variablen verwenden die Zeichenfolge in die Codepage, die der Standardsortierung der Datenbank entspricht. Codepagekonvertierungen können auftreten, wenn nur Nicht-Unicode-Zeichendaten verwendet und die Nicht-Unicode-Zeichendatentypen **char**, **varchar** und **text** referenziert werden. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] konvertiert Nicht-Unicode-Zeichenkonstanten und -Variablen in die Codepage, die der Sortierung der referenzierten Spalte entspricht oder die mit COLLATE angegeben ist, sofern sich diese Codepage von der Codepage unterscheidet, die der Standardsortierung der Datenbank entspricht. Zeichen, die in der neuen Codepage nicht gefunden werden, werden in ein ähnliches Zeichen übersetzt, falls eine [optimierte Zuordnung](http://www.unicode.org/Public/MAPPINGS/VENDORS/MICSFT/WindowsBestFit/) gefunden wird. Andernfalls werden sie in das Standardersetzungszeichen "?" konvertiert.  
 >  
-> Bei der Arbeit mit mehreren Codepages Zeichenkonstanten können vorangestellt werden der Großbuchstabe n ", und Unicode-Variablen können verwendet werden, und um codepagekonvertierungen zu vermeiden.  
+> Bei Verwendung mehrerer Codepages kann Zeichenkonstanten der Großbuchstabe 'N' vorangestellt werden. Zudem können Unicode-Variablen verwendet werden, um Codepagekonvertierungen zu vermeiden.  
   
  =  
  Der Operator, mit dem die Gleichheit zwischen zwei Ausdrücken getestet wird.  
@@ -154,45 +154,45 @@ ms.lasthandoff: 01/25/2018
  Eine Zeichenfolge mit Zeichen und Platzhalterzeichen  
   
  [ NOT ] LIKE  
- Zeigt an, dass die nachfolgende Zeichenfolge in Mustervergleichen verwendet werden soll. Weitere Informationen finden Sie unter [wie &#40; Transact-SQL &#41; ](../../t-sql/language-elements/like-transact-sql.md).  
+ Zeigt an, dass die nachfolgende Zeichenfolge in Mustervergleichen verwendet werden soll. Weitere Informationen finden Sie unter [LIKE &#40;Transact-SQL&#41;](../../t-sql/language-elements/like-transact-sql.md).  
   
- ESCAPE- **"***Escape_ Zeichen***"**  
- Ermöglicht einem Platzhalterzeichen, dass es in einer Zeichenfolge gesucht werden kann, statt als Platzhalter zu fungieren. *Escape_character* ist das Zeichen, das vor dem Platzhalterzeichen, um diese besondere Verwendung anzugeben eingefügt wird.  
+ ESCAPE **'***escape_ character***'**  
+ Ermöglicht einem Platzhalterzeichen, dass es in einer Zeichenfolge gesucht werden kann, statt als Platzhalter zu fungieren. *escape_character* ist das Zeichen, das vor das Platzhalterzeichen gesetzt wird, um diese besondere Verwendung anzugeben.  
   
  [ NOT ] BETWEEN  
- Gibt einen Inklusivbereich von Werten an. Verwenden Sie AND, um den Anfangs- und den Endwert voneinander zu trennen. Weitere Informationen finden Sie unter [BETWEEN &#40; Transact-SQL &#41; ](../../t-sql/language-elements/between-transact-sql.md).  
+ Gibt einen Inklusivbereich von Werten an. Verwenden Sie AND, um den Anfangs- und den Endwert voneinander zu trennen. Weitere Informationen finden Sie unter [BETWEEN &#40;Transact-SQL&#41;](../../t-sql/language-elements/between-transact-sql.md).  
   
- IS [NOT] NULL  
+ IS [ NOT ] NULL  
  Gibt eine Suche nach NULL-Werten oder nach Werten ungleich Null in Abhängigkeit von den verwendeten Schlüsselwörtern an. Ein Ausdruck mit einem bitweisen oder arithmetischen Operator gibt NULL zurück, wenn einer der Operanden gleich NULL ist.  
   
  CONTAINS  
- Sucht Spalten mit zeichenbasierten Daten für präzise oder weniger präzise (*fuzzy*) Übereinstimmungen mit einzelnen Wörtern und Satzteilen, für den Abstand von Wörtern in einer bestimmten Entfernung voneinander sowie gewichtete Übereinstimmungen. Diese Option kann nur in Verbindung mit SELECT-Anweisungen verwendet werden. Weitere Informationen finden Sie unter [CONTAINS &#40; Transact-SQL &#41; ](../../t-sql/queries/contains-transact-sql.md).  
+ Sucht Spalten, die zeichenbasierte Daten für genaue oder ungenaue (*Fuzzy*-)Übereinstimmungen mit einzelnen Wörtern und Satzteilen enthalten, die innerhalb einer bestimmten Entfernung angrenzenden Wörter sowie gewichtete Übereinstimmungen. Diese Option kann nur in Verbindung mit SELECT-Anweisungen verwendet werden. Weitere Informationen finden Sie unter [CONTAINS &#40;Transact-SQL&#41;](../../t-sql/queries/contains-transact-sql.md).  
   
  FREETEXT  
- Stellt eine einfache Form der Abfrage in natürlicher Sprache dar, indem Spalten mit zeichenbasierten Daten im Hinblick auf Werte untersucht werden, die mit der Bedeutung übereinstimmen, statt dass die genauen Wörter im Prädikat gesucht werden. Diese Option kann nur in Verbindung mit SELECT-Anweisungen verwendet werden. Weitere Informationen finden Sie unter [FREETEXT &#40; Transact-SQL &#41; ](../../t-sql/queries/freetext-transact-sql.md).  
+ Stellt eine einfache Form der Abfrage in natürlicher Sprache dar, indem Spalten mit zeichenbasierten Daten im Hinblick auf Werte untersucht werden, die mit der Bedeutung übereinstimmen, statt dass die genauen Wörter im Prädikat gesucht werden. Diese Option kann nur in Verbindung mit SELECT-Anweisungen verwendet werden. Weitere Informationen finden Sie unter [FREETEXT &#40;Transact-SQL&#41;](../../t-sql/queries/freetext-transact-sql.md).  
   
  [ NOT ] IN  
- Gibt die Suche nach einem Ausdruck an, die auf dem Einschluss oder Ausschluss des Ausdrucks in eine bzw. aus einer Liste basiert. Bei dem Suchausdruck kann es sich um eine Konstante oder einen Spaltennamen handeln. Die Liste kann eine Reihe von Konstanten oder in der Regel eine Unterabfrage sein. Schließen Sie die Liste der Werte in Klammern ein. Weitere Informationen finden Sie unter [IN &#40;Transact-SQL&#41;](../../t-sql/language-elements/in-transact-sql.md).  
+ Gibt die Suche nach einem Ausdruck an, die auf dem Einschluss oder Ausschluss des Ausdrucks in eine bzw. aus einer Liste basiert. Bei dem Suchausdruck kann es sich um eine Konstante oder einen Spaltennamen handeln. Die Liste kann eine Reihe von Konstanten oder in der Regel eine Unterabfrage sein. Schließen Sie die Liste der Werte in Klammern ein. Weitere Informationen finden Sie unter [IN (Transact-SQL)](../../t-sql/language-elements/in-transact-sql.md).  
   
  *subquery*  
- Kann eine eingeschränkte SELECT-Anweisung betrachtet werden und ähnelt \<Query_expresssion > in der SELECT-Anweisung. Die ORDER BY-Klausel und das INTO-Schlüsselwort sind nicht zulässig. Weitere Informationen finden Sie unter [SELECT &#40; Transact-SQL &#41; ](../../t-sql/queries/select-transact-sql.md).  
+ Kann als eine eingeschränkte SELECT-Anweisung betrachtet werden, die \<query_expresssion> in der SELECT-Anweisung ähnelt. Die ORDER BY-Klausel und das INTO-Schlüsselwort sind nicht zulässig. Weitere Informationen finden Sie unter [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md).  
   
  ALL  
- Wird mit einem Vergleichsoperator und einer Unterabfrage verwendet. Gibt "true" für \<Prädikat > Wenn alle für die Unterabfrage abgerufenen Werte die Vergleichsoperation erfüllen, oder "false", wenn nicht alle Werte dem Vergleich entsprechen oder wenn die Unterabfrage keine Zeilen an die äußere Anweisung zurückgibt. Weitere Informationen finden Sie unter [alle &#40; Transact-SQL &#41; ](../../t-sql/language-elements/all-transact-sql.md).  
+ Wird mit einem Vergleichsoperator und einer Unterabfrage verwendet. Gibt TRUE für \<predicate> zurück, wenn alle für die Unterabfrage abgerufenen Werte die Vergleichsoperation erfüllen, bzw. FALSE, wenn nicht alle Werte dem Vergleich entsprechen oder die Unterabfrage keine Zeilen an die äußere Anweisung zurückgibt. Weitere Informationen finden Sie unter [ALL &#40;Transact-SQL&#41;](../../t-sql/language-elements/all-transact-sql.md).  
   
  { SOME | ANY }  
- Wird mit einem Vergleichsoperator und einer Unterabfrage verwendet. Gibt "true" für \<Prädikat > Wenn ausnahmslos abgerufen, für die Unterabfrage die Vergleichsoperation erfüllt, oder "false", wenn die Unterabfrage keine Werte dem Vergleich entsprechen oder wenn die Unterabfrage keine Zeilen an die äußere Anweisung zurückgibt. Der Ausdruck ist andernfalls UNKNOWN. Weitere Informationen finden Sie unter [einige &#124; Alle &#40; Transact-SQL &#41; ](../../t-sql/language-elements/some-any-transact-sql.md).  
+ Wird mit einem Vergleichsoperator und einer Unterabfrage verwendet. Gibt TRUE für \<predicate> zurück, wenn einer der für die Unterabfrage abgerufenen Werte die Vergleichsoperation erfüllt, bzw. FALSE, wenn keine Werte dem Vergleich entsprechen oder die Unterabfrage keine Zeilen an die äußere Anweisung zurückgibt. Der Ausdruck ist andernfalls UNKNOWN. Weitere Informationen finden Sie unter [SOME &#124; ANY &#40;Transact-SQL&#41;](../../t-sql/language-elements/some-any-transact-sql.md).  
   
  EXISTS  
- Wird mit einer Unterabfrage verwendet, um Tests im Hinblick auf das Vorhandensein von Zeilen durchzuführen, die von der Unterabfrage zurückgegeben wurden. Weitere Informationen finden Sie unter [EXISTS &#40; Transact-SQL &#41; ](../../t-sql/language-elements/exists-transact-sql.md).  
+ Wird mit einer Unterabfrage verwendet, um Tests im Hinblick auf das Vorhandensein von Zeilen durchzuführen, die von der Unterabfrage zurückgegeben wurden. Weitere Informationen finden Sie unter [EXISTS &#40;Transact-SQL&#41;](../../t-sql/language-elements/exists-transact-sql.md).  
   
-## <a name="remarks"></a>Hinweise  
- Die Rangfolge der logischen Operatoren beginnt mit NOT (höchster Operator). Darauf folgt AND und anschließend OR. Mithilfe von Klammern kann diese Rangfolge in einer Suchbedingung überschrieben werden. Die Reihenfolge der Auswertung logischer Operatoren kann variieren, abhängig von den vom Abfrageoptimierer gewählten Optionen. Weitere Informationen dazu, wie die logischen Operatoren logischen Werten ausgeführt werden, finden Sie unter [und &#40; Transact-SQL &#41; ](../../t-sql/language-elements/and-transact-sql.md), [Oder &#40; Transact-SQL &#41; ](../../t-sql/language-elements/or-transact-sql.md), und [nicht &#40; Transact-SQL &#41; ](../../t-sql/language-elements/not-transact-sql.md).  
+## <a name="remarks"></a>Remarks  
+ Die Rangfolge der logischen Operatoren beginnt mit NOT (höchster Operator). Darauf folgt AND und anschließend OR. Mithilfe von Klammern kann diese Rangfolge in einer Suchbedingung überschrieben werden. Die Reihenfolge der Auswertung logischer Operatoren kann variieren, abhängig von den vom Abfrageoptimierer gewählten Optionen. Weitere Informationen zur Verarbeitung von logischen Werten durch logische Operatoren finden Sie unter [AND &#40;Transact-SQL&#41;](../../t-sql/language-elements/and-transact-sql.md), [OR &#40;Transact-SQL&#41;](../../t-sql/language-elements/or-transact-sql.md) und [NOT &#40;Transact-SQL&#41;](../../t-sql/language-elements/not-transact-sql.md).  
   
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="a-using-where-with-like-and-escape-syntax"></a>A. Verwenden von WHERE mit der LIKE- und ESCAPE-Syntax  
- Das folgende Beispiel sucht der Zeilen, in denen die `LargePhotoFileName` Spalte hat die Zeichen `green_`, und verwendet die `ESCAPE` option, da _ ein Platzhalterzeichen ist. Ohne Angabe der `ESCAPE` -Option würde die Abfrage nach allen Beschreibungswerten mit dem Wort suchen `green` gefolgt von einem einzelnen Zeichen _ enthalten.  
+ Im folgenden Beispiel wird nach den Zeilen gesucht, in denen die `LargePhotoFileName`-Spalte die Zeichen `green_` aufweist, und es wird die `ESCAPE`-Option verwendet, da es sich bei _ um ein Platzhalterzeichen handelt. Ohne Angeben der `ESCAPE`-Option würde die Abfrage nach allen Beschreibungswerten suchen, die das Wort `green` gefolgt von einem anderen Zeichen als _ enthalten.  
   
 ```  
 USE AdventureWorks2012 ;  
@@ -215,10 +215,10 @@ WHERE CountryRegionCode NOT IN ('US')
 AND City LIKE N'Pa%' ;  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
-### <a name="c-using-where-with-like"></a>C. Verwenden von WHERE mit der LIKE-  
- Das folgende Beispiel sucht der Zeilen, in denen die `LastName` Spalte hat die Zeichen `and`.  
+### <a name="c-using-where-with-like"></a>C. Verwenden von WHERE mit LIKE  
+ Im folgenden Beispiel wird nach den Zeilen gesucht, in denen die `LastName`-Spalte die Zeichen `and` aufweist.  
   
 ```  
 -- Uses AdventureWorks  
@@ -229,7 +229,7 @@ WHERE LastName LIKE '%and%';
 ```  
   
 ### <a name="d-using-where-and-like-syntax-with-unicode-data"></a>D. Verwenden der WHERE- und LIKE-Syntax mit Unicodedaten  
- Im folgenden Beispiel wird die `WHERE` -Klausel, um eine Unicode-Suchvorgänge auf der `LastName` Spalte.  
+ Im folgenden Beispiel wird die `WHERE`-Klausel verwendet, um einen Unicode-Suchvorgang in der `LastName`-Spalte durchzuführen.  
   
 ```  
 -- Uses AdventureWorks  
@@ -239,13 +239,13 @@ FROM DimEmployee
 WHERE LastName LIKE N'%and%';  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Aggregatfunktionen &#40; Transact-SQL &#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Aggregate Functions &#40;Transact-SQL&#41; (Aggregatfunktionen (Transact-SQL))](../../t-sql/functions/aggregate-functions-transact-sql.md)   
  [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)   
  [CONTAINSTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/containstable-transact-sql.md)   
  [Cursors &#40;Transact-SQL&#41;](../../t-sql/language-elements/cursors-transact-sql.md)   
  [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
- [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [Ausdrücke &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [FREETEXTTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/freetexttable-transact-sql.md)   
  [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)   
  [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   

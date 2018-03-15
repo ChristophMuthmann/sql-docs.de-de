@@ -1,5 +1,5 @@
 ---
-title: Decimal und Numeric (Transact-SQL) | Microsoft Docs
+title: decimal und numeric (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 7/23/2017
 ms.prod: sql-non-specified
@@ -39,44 +39,44 @@ ms.lasthandoff: 11/21/2017
 # <a name="decimal-and-numeric-transact-sql"></a>decimal und numeric (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Numerische Datentypen mit fester Genauigkeit und fester Anzahl von Dezimalstellen. Decimal und Numeric sind Synonyme und austauschbar.
+Numerische Datentypen mit fester Genauigkeit und fester Anzahl von Dezimalstellen. decimal und numeric sind Synonyme und können austauschbar verwendet werden.
   
 ## <a name="arguments"></a>Argumente  
-**Decimal**[ **(***p*[ **,***s*] **)**] und **numerische** [ **(***p*[ **,***s*] **)**]  
-Zahlen mit fester Genauigkeit und mit fester Anzahl von Dezimalstellen. Wenn maximale Genauigkeit verwendet wird, liegen gültige Werte zwischen - 10^38 +1 und 10^38 - 1. Die ISO-Synonyme für **decimal** sind **Dec** und **Dec (***p*, *s***)**. **numerische** ist funktionell gleichwertig mit **decimal**.
+**decimal**[ **(***p*[ **,***s*] **)**] und **numeric**[ **(***p*[ **,***s*] **)**]  
+Zahlen mit fester Genauigkeit und mit fester Anzahl von Dezimalstellen. Wenn maximale Genauigkeit verwendet wird, liegen gültige Werte zwischen - 10^38 +1 und 10^38 - 1. Die ISO-Synonyme für **decimal** lauten **dec** und **dec(***p*, *s***)**. **numeric** ist die funktionelle Entsprechung von **decimal**.
   
 p (Precision = Genauigkeit)  
 Die maximale Gesamtanzahl von Dezimalstellen, sowohl links als auch rechts vom Dezimalkomma, die gespeichert wird. Die Genauigkeit muss ein Wert zwischen 1 und der maximalen Genauigkeit von 38 sein. Die Standardgenauigkeit beträgt 18.
   
 > [!NOTE]  
->  Informatica – unterstützt nur 16 signifikanten Ziffern, unabhängig von der Genauigkeit und Dezimalstellenanzahl angegeben.  
+>  Informatica unterstützt unabhängig von der angegebenen Präzision und dem Dezimalstellenwert nur 16 signifikante Ziffern.  
   
-*s* (skalieren)  
-Die Anzahl von Dezimalstellen rechts vom Dezimalkomma, die gespeichert wird. Diese Zahl subtrahiert *p* bestimmt die maximale Anzahl von Ziffern links vom Dezimaltrennzeichen an. Die maximal speicherbare Zahl an Dezimalstellen rechts vom Dezimalkomma. Skalierung muss einen Wert zwischen 0 und *p*. Der Dezimalstellenwert kann nur angegeben werden, wenn eine Genauigkeit angegeben ist. Der Standardwert ist 0; aus diesem Grund 0 < = *s* \< =  *p*. Die maximalen Speichergrößen variieren abhängig von der Genauigkeit.
+*s* (Dezimalstellenwert)  
+Die Anzahl von Dezimalstellen rechts vom Dezimalkomma, die gespeichert wird. Diese Anzahl wird von *p* subtrahiert, um die maximale Anzahl der Stellen links von der Dezimalstelle zu bestimmen. Die maximal speicherbare Zahl an Dezimalstellen rechts vom Dezimalkomma. Der Dezimalstellenwert muss in einem Bereich zwischen 0 und *p* liegen. Der Dezimalstellenwert kann nur angegeben werden, wenn eine Genauigkeit angegeben ist. Der Standardwert ist 0 (null). Daher gilt: 0 <= *s* \<= *p*. Die maximalen Speichergrößen variieren abhängig von der Genauigkeit.
   
 |Genauigkeit|Speicherplatz in Bytes|  
 |---|---|
-|1 - 9|5|  
-|10-19|9|  
-|20-28|13|  
-|29-38|17|  
+|1 – 9|5|  
+|10–19|9|  
+|20–28|13|  
+|29–38|17|  
   
 > [!NOTE]  
->  Informatica – (über den SQL Server PDW Informatica-Connector verbunden) unterstützt nur 16 signifikanten Ziffern, unabhängig von der Genauigkeit und Dezimalstellenanzahl angegeben.  
+>  Informatica (über den SQL Server PDW-Informatica-Connector verbunden) unterstützt unabhängig von der angegebenen Präzision und dem Dezimalstellenwert nur 16 signifikante Ziffern.  
   
 ## <a name="converting-decimal-and-numeric-data"></a>Konvertieren von decimal- und numeric-Daten
-Für die **decimal** und **numerischen** Datentypen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] jede auftretende Kombination aus Genauigkeit und Dezimalstellenanzahl als einen anderen Datentyp betrachtet. Beispielsweise **decimal(5,5)** und **decimal(5,0)** gelten als unterschiedliche Datentypen.
+Im Fall der Datentypen **decimal** und **numeric** sieht [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] jede auftretende Kombination aus Genauigkeit und Anzahl der Dezimalstellen als einen anderen Datentyp an. **decimal(5,5)** und **decimal(5,0)** werden beispielsweise als unterschiedliche Datentypen erachtet.
   
-In [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisungen die, eine Konstante mit einem Dezimaltrennzeichen automatisch in konvertiert eine **numerischen** Daten Wert, mit die minimale Genauigkeit und Skalierung erforderlich. Die Konstante 12.345 wird z. B. in konvertiert eine **numerischen** Wert mit einer Genauigkeit von 5 und 3 Dezimalstellen.
+In [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen wird eine Konstante mit einem Dezimaltrennzeichen automatisch in einen Wert des **numeric**-Datentyps konvertiert. Hierbei werden die mindestens erforderliche Genauigkeit und die Anzahl von Dezimalstellen verwendet. Die Konstante 12.345 wird z.B. in einen **numeric**-Wert mit einer Genauigkeit von 5 und 3 Dezimalstellen konvertiert.
   
-Konvertieren von **decimal** oder **numerischen** auf **"float"** oder **echte** kann Genauigkeitsverlust führen. Konvertieren von **Int**, **"smallint"**, **"tinyint"**, **"float"**, **echte**, **Money** , oder **Smallmoney** entweder **decimal** oder **numerischen** einen Überlauf verursachen.
+Wenn Sie eine Konvertierung von **decimal** oder **numeric** in **float** oder **real** vornehmen, kann ein gewisses Maß an Genauigkeit verloren gehen. Wenn Sie eine Konvertierung von **int**, **smallint**, **tinyint**, **float**, **real**, **money** oder **smallmoney** in **decimal** oder **numeric** vornehmen, kann es zu einem Überlauf kommen.
   
-Standardmäßig [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gerundet wird beim Konvertieren einer Zahl in einem **decimal** oder **numerischen** Wert mit einer geringeren Genauigkeit und Dezimalstellen. Wenn allerdings die Option SET ARITHABORT auf ON festgelegt ist, löst [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bei Auftreten eines Überlaufs einen Fehler aus. Eine Verringerung der Genauigkeit und der Anzahl der Dezimalstellen reicht zum Auslösen eines Fehlers nicht aus.
+Bei der Konvertierung einer Zahl in einen Wert des Typs **decimal** oder **numeric** mit einer geringeren Genauigkeit und einer geringeren Anzahl von Dezimalstellen wird der Wert standardmäßig von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gerundet. Wenn allerdings die Option SET ARITHABORT auf ON festgelegt ist, löst [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bei Auftreten eines Überlaufs einen Fehler aus. Eine Verringerung der Genauigkeit und der Anzahl der Dezimalstellen reicht zum Auslösen eines Fehlers nicht aus.
   
 Beim Konvertieren von float- oder real-Werten in decimal oder numeric umfasst der decimal-Wert nie mehr als 17 Dezimalstellen. float-Werte < 5E-18 werden immer in 0 konvertiert.
   
 ## <a name="examples"></a>Beispiele  
-Im folgende Beispiel wird eine Tabelle mit den **decimal** und **numerischen** Datentypen.  Werte werden in jede Spalte eingefügt, und die Ergebnisse werden mithilfe einer SELECT-Anweisung zurückgegeben.
+Im folgenden Beispiel wird eine Tabelle mit **decimal**- und **numeric**-Datentypen erstellt.  Werte werden in jede Spalte eingefügt, und die Ergebnisse werden mithilfe einer SELECT-Anweisung zurückgegeben.
   
 ```sql
 CREATE TABLE dbo.MyTable  
@@ -111,6 +111,6 @@ MyDecimalColumn                         MyNumericColumn
 [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)  
 [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)  
 [SET @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/set-local-variable-transact-sql.md)  
-[Sys.Types &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)
+[sys.types &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)
   
   

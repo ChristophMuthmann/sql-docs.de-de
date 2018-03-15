@@ -1,5 +1,5 @@
 ---
-title: ALTER SECURITY POLICY (Transact-SQL) | Microsoft Docs
+title: ALTER SECURITY POLICY (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 05/01/2017
 ms.prod: sql-non-specified
@@ -67,10 +67,10 @@ ALTER SECURITY POLICY schema_name.security_policy_name
  Der Name der Sicherheitsrichtlinie. Namen von Sicherheitsrichtlinien müssen den Regeln für Bezeichner entsprechen und innerhalb der Datenbank und für jedes Schema eindeutig sein.  
   
  schema_name  
- Der Name des Schemas, zu dem die Sicherheitsrichtlinie gehört. *Schema_name* aufgrund der schemabindung erforderlich ist.  
+ Der Name des Schemas, zu dem die Sicherheitsrichtlinie gehört. *schema_name* ist aufgrund der Schemabindung erforderlich.  
   
- [FILTER | BLOCK]  
- Der Typ des sicherheitsprädikat für die Funktion, die an die Zieltabelle gebunden wird. FILTER-Prädikate Filtern automatisch die Zeilen, die für Lesevorgänge verfügbar sind. BLOCK-Prädikate explizit Block-Schreibvorgänge, die die Prädikatfunktion verletzen.  
+ [ FILTER | BLOCK ]  
+ Der Typ des Sicherheitsprädikats für die Funktion, die an die Zieltabelle gebunden wird. FILTER-Prädikate filtern automatisch die Zeilen, die für Lesevorgänge zur Verfügung stehen. BLOCK-Prädikate blockieren explizit Schreibvorgänge, die die Prädikatfunktion verletzen.  
   
  tvf_schema_name.security_predicate_function_name  
  Die Inline-Tabellenwertfunktion, die als Prädikat verwendet wird und bei Abfragen für eine Zieltabelle erzwungen wird. Für einen bestimmten DML-Vorgang für eine bestimmte Tabelle kann höchstens ein Sicherheitsprädikat definiert werden. Die Inline-Tabellenwertfunktion muss mit der SCHEMABINDING-Option erstellt worden sein.  
@@ -79,12 +79,12 @@ ALTER SECURITY POLICY schema_name.security_policy_name
  Der Spaltenname oder Ausdruck, der als Parameter für die Sicherheitsprädikatfunktion verwendet wird. Alle Spalten in der Zieltabelle können als Argumente für die Prädikatfunktion verwendet werden. Ausdrücke, die Literale, vordefinierte Elemente und arithmetische Operatoren enthalten, können verwendet werden.  
   
  *table_schema_name.table_name*  
- Die Zieltabelle, auf die das Sicherheitsprädikat angewendet wird. Mehrere deaktivierte Sicherheitsrichtlinien können für einen bestimmten DML-Vorgang eine einzelne Tabelle abzielen, aber zu jedem Zeitpunkt kann nur eine aktiviert werden.  
+ Die Zieltabelle, auf die das Sicherheitsprädikat angewendet wird. Mehrere deaktivierte Sicherheitsrichtlinien können sich auf eine einzelne Tabelle für einen DML-Vorgang beziehen. Es kann allerdings immer nur eine Sicherheitsrichtlinie aktiv sein.  
   
- *\<Block_dml_operation >*  
- Die bestimmten DML-Vorgang für den der Block-Prädikat angewendet werden soll. Nach dem gibt an, dass das Prädikat für die Werte der Zeilen ausgewertet werden soll, nachdem der DML-Vorgang durchgeführt (INSERT- oder UPDATE) wurde. Vor dem gibt an, dass das Prädikat auf die Werte der Zeilen ausgewertet wird vor der DML-Vorgang durchgeführt (Update- oder DELETE). Wenn kein Vorgang angegeben ist, gilt das Prädikat für alle Vorgänge.  
+ *\<block_dml_operation>*  
+ Der DML-Vorgang, auf den das BLOCK-Prädikat angewendet werden soll. AFTER legt fest, dass das Prädikat für die Zeilenwerte ausgewertet werden soll, nachdem der DML-Vorgang (INSERT oder UPDATE) durchgeführt wurde. BEFORE legt fest, dass das Prädikat für die Zeilenwerte ausgewertet werden soll, bevor der DML-Vorgang (UPDATE oder DELETE) durchgeführt wird. Wenn kein Vorgang angegeben ist, gilt das Prädikat für alle Vorgänge.  
   
- Den Vorgang für den ein Block-Prädikat angewendet werden, kann nicht geändert werden, da der Vorgang verwendet wird, um das Prädikat eindeutig zu identifizieren. Stattdessen müssen Sie das Prädikat löschen und Hinzufügen eines neuen Kontos für den neuen Vorgang.  
+ Sie können mit ALTER den Vorgang, auf den ein BLOCK-Prädikat angewendet wird, nicht verändern, da dieser Vorgang zur eindeutigen Identifizierung des Prädikats verwendet wird. Stattdessen müssen Sie das Prädikat löschen und für den neuen Vorgang ein neues erstellen.  
   
  WITH ( STATE = { ON | OFF } )  
  Aktiviert oder deaktiviert das Erzwingen der Sicherheitsprädikate der Sicherheitsrichtlinie für die Zieltabellen. Wenn nichts angegeben ist, wird die erstellte Sicherheitsrichtlinie deaktiviert.  
@@ -95,12 +95,12 @@ ALTER SECURITY POLICY schema_name.security_policy_name
  table_schema_name.table_name  
  Die Zieltabelle, auf die das Sicherheitsprädikat angewendet wird. Mehrere deaktivierte Sicherheitsrichtlinien können auf eine einzelne Tabelle abzielen, aber zu jedem Zeitpunkt kann nur eine aktiviert werden.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Die ALTER SECURITY POLICY-Anweisung liegt im Bereich einer Transaktion. Wird ein Rollback für die Transaktion ausgeführt, so wird auch für die Anweisung ein Rollback durchgeführt.  
   
- Wenn prädikatfunktionen mit speicheroptimierten Tabellen verwenden, müssen die Sicherheitsrichtlinien umfassen **SCHEMABINDING** und Verwenden der **WITH NATIVE_COMPILATION** Kompilierung-Hinweis. SCHEMABINDING-Argument kann nicht mit der ALTER-Anweisung geändert werden, da es für alle Prädikate gilt. Zum Ändern der Bindung des Schemas müssen Sie löschen und erstellen die Sicherheitsrichtlinie.  
+ Wenn Sie Prädikatfunktionen mit speicheroptimierten Tabellen verwenden, müssen die Sicherheitsrichtlinien **SCHEMABINDING** umfassen und den Kompilierungshinweis **WITH NATIVE_COMPILATION** verwenden. Das SCHEMABINDING-Argument kann nicht mit der ALTER-Anweisung geändert werden, da es auf alle Prädikate angewendet wird. Zum Ändern der Schemabindung müssen Sie die Sicherheitsrichtlinie löschen und neu erstellen.  
   
- Block-Prädikate werden ausgewertet, nachdem der entsprechende DML-Vorgang ausgeführt wird. Aus diesem Grund kann eine READ UNCOMMITTED Abfrage vorübergehender Werte anzuzeigen, die ein Rollback.  
+ BLOCK-Prädikate werden ausgewertet, nachdem der entsprechende DML-Vorgang ausgeführt wurde. Aus diesem Grund kann eine READ UNCOMMITTED-Abfrage vorübergehende Werte lesen, für die später ein Rollback ausgeführt wird.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die ALTER ANY SECURITY POLICY-Berechtigung.  
@@ -112,7 +112,7 @@ ALTER SECURITY POLICY schema_name.security_policy_name
 -   REFERENCES-Berechtigung für jede Spalte in der Zieltabelle, die als Argument verwendet wird.  
   
 ## <a name="examples"></a>Beispiele  
- Die folgenden Beispiele veranschaulichen die Verwendung der **ALTER SECURITY POLICY** Syntax. Ein Beispiel einer vollständigen Szenarios für Sicherheitsrichtlinien finden Sie unter [Sicherheit auf Zeilenebene](../../relational-databases/security/row-level-security.md).  
+ Die folgenden Beispiele veranschaulichen die Verwendung der **ALTER SECURITY POLICY**-Syntax. Ein Beispiel eines vollständigen Szenarios für Sicherheitsrichtlinien finden Sie unter [Sicherheit auf Zeilenebene](../../relational-databases/security/row-level-security.md).  
   
 ### <a name="a-adding-an-additional-predicate-to-a-policy"></a>A. Hinzufügen eines zusätzlichen Prädikats zu einer Richtlinie  
  Die folgende Syntax ändert eine Sicherheitsrichtlinie, indem ein Filterprädikat zur `mytable`-Tabelle hinzugefügt wird.  
@@ -152,8 +152,8 @@ ALTER SECURITY POLICY pol1
         ON myschema.mytable;  
 ```  
   
-### <a name="e-changing-a-block-predicate"></a>E. Ein Block-Prädikat ändern  
- Ändern die Block-Prädikat-Funktion für einen Vorgang für eine Tabelle an.  
+### <a name="e-changing-a-block-predicate"></a>E. Ändern eines BLOCK-Prädikats  
+ Im folgenden Beispiel wird die BLOCK-Prädikatfunktion für einen Tabellenvorgang geändert.  
   
 ```  
 ALTER SECURITY POLICY rls.SecPol  
@@ -161,11 +161,11 @@ ALTER SECURITY POLICY rls.SecPol
     ON dbo.Sales AFTER INSERT;  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Sicherheit auf Zeilenebene](../../relational-databases/security/row-level-security.md)   
  [CREATE SECURITY POLICY &#40;Transact-SQL&#41;](../../t-sql/statements/create-security-policy-transact-sql.md)   
  [DROP SECURITY POLICY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-security-policy-transact-sql.md)   
  [sys.security_policies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-security-policies-transact-sql.md)   
- [Sys. security_predicates &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-security-predicates-transact-sql.md)  
+ [sys.security_predicates &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-security-predicates-transact-sql.md)  
   
   

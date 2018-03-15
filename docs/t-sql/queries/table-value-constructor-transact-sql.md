@@ -1,5 +1,5 @@
 ---
-title: Tabellenwertkonstruktor (Transact-SQL) Tabelle | Microsoft Docs
+title: Tabellenwertkonstruktor (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 08/15/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="table-value-constructor-transact-sql"></a>Tabellenwertkonstruktor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Gibt eine Gruppe mit Zeilenwertausdrücken an, die in einer Tabelle erstellt werden sollen. Der [!INCLUDE[tsql](../../includes/tsql-md.md)]-Tabellenwertkonstruktor ermöglicht das Angeben mehrerer Datenzeilen in nur einer DML-Anweisung. Der tabellenwertkonstruktor kann angegeben werden, in der VALUES-Klausel der INSERT-Anweisung, in der USING \<Quelltabelle >-Klausel der MERGE-Anweisung und in der Definition einer abgeleiteten Tabelle in der FROM-Klausel.  
+  Gibt eine Gruppe mit Zeilenwertausdrücken an, die in einer Tabelle erstellt werden sollen. Der [!INCLUDE[tsql](../../includes/tsql-md.md)]-Tabellenwertkonstruktor ermöglicht das Angeben mehrerer Datenzeilen in nur einer DML-Anweisung. Der Tabellenwertkonstruktor kann in der VALUES-Klausel der INSERT-Anweisung, in der USING \<source table>-Klausel der MERGE-Anweisung und in der Definition einer abgeleiteten Tabelle in der FROM-Klausel angegeben werden.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -64,13 +64,13 @@ VALUES ( <row value expression list> ) [ ,...n ]
  Eine Konstante, eine Variable oder ein Ausdruck. Der Ausdruck darf keine EXECUTE-Anweisung enthalten.  
   
 ## <a name="limitations-and-restrictions"></a>Einschränkungen  
- Tabellenwertkonstruktoren können auf zwei Arten verwendet werden: direkt in der VALUES-Liste einer INSERT... Anweisung Werte oder als abgeleitete Tabelle überall, die abgeleitete Tabellen zulässig sind. Fehler 10738 wird zurückgegeben, wenn die Anzahl der Zeilen die maximale Größe überschreitet. Verwenden Sie zum Einfügen von mehr Zeilen als die Grenze ermöglicht, eine der folgenden Methoden aus:  
+ Tabellenwertkonstruktoren können auf zwei Arten verwendet werden: direkt in der VALUES-Liste einer INSERT... VALUES-Anweisung oder als abgeleitete Tabelle an einem beliebigen Ort, an dem abgeleitete Tabellen zulässig sind. Fehler 10738 wird zurückgegeben, wenn die Anzahl der Zeilen in diesem Fall das Maximum übersteigt. Um mehr Zeilen als gemäß Limit zulässig einzufügen, verwenden Sie eine der folgenden Methoden:  
   
 -   Erstellen mehrerer INSERT-Anweisungen  
   
--   Verwenden Sie eine abgeleitete Tabelle  
+-   Verwenden einer abgeleiteten Tabelle  
   
--   Massenimport der Daten mithilfe der **Bcp** Hilfsprogramm oder BULK INSERT-Anweisung  
+-   Massenimport der Daten mithilfe des **bcp**-Hilfsprogramms oder der BULK INSERT-Anweisung  
   
  Nur einzelne Skalarwerte sind als Zeilenwertausdruck zulässig. Eine Unterabfrage, die mehrere Spalten umfasst, ist nicht als Zeilenwertausdruck zulässig. Der folgende Code verursacht z. B. einen Syntaxfehler, weil die dritte Zeilenwertausdrucksliste eine Unterabfrage mit mehreren Spalten enthält.  
   
@@ -101,7 +101,7 @@ GO
 ```  
   
 ## <a name="data-types"></a>Datentypen  
- Die in einer aus mehreren Zeilen bestehenden INSERT-Anweisung angegebenen Werte befolgen die Datentypkonvertierungseigenschaften der UNION ALL-Syntax. Dies führt zur impliziten Konvertierung nicht übereinstimmender Typen in den Typ der höheren [Rangfolge](../../t-sql/data-types/data-type-precedence-transact-sql.md). Wenn es sich bei der Konvertierung nicht um eine unterstützte implizite Konvertierung handelt, gibt das System einen Fehler zurück. Z. B. die folgende Anweisung fügt einen ganzzahligen Wert und ein Zeichenwert in eine Spalte vom Typ **Char**.  
+ Die in einer aus mehreren Zeilen bestehenden INSERT-Anweisung angegebenen Werte befolgen die Datentypkonvertierungseigenschaften der UNION ALL-Syntax. Dies führt zur impliziten Konvertierung nicht übereinstimmender Typen in den Typ, der in der [Rangfolge](../../t-sql/data-types/data-type-precedence-transact-sql.md) höher steht. Wenn es sich bei der Konvertierung nicht um eine unterstützte implizite Konvertierung handelt, gibt das System einen Fehler zurück. In der folgenden Anweisung werden beispielsweise ein ganzzahliger Wert und ein Zeichenwert in eine Spalte vom Typ **char** eingefügt.  
   
 ```  
 CREATE TABLE dbo.t (a int, b char);  
@@ -149,7 +149,7 @@ SELECT * FROM Sales.MySalesReason;
 ```  
   
 ### <a name="c-specifying-multiple-values-as-a-derived-table-in-a-from-clause"></a>C. Angeben mehrerer Werte als abgeleitete Tabelle in einer FROM-Klausel  
- Die folgenden Beispiele verwenden des tabellenwertkonstruktors mehrere Werte in der FROM-Klausel einer SELECT-Anweisung angeben.  
+ In den folgenden Beispielen dient der Tabellenwertkonstruktor zur Angabe mehrerer Werte in der FROM-Klausel einer SELECT-Anweisung.  
   
 ```  
 SELECT a, b FROM (VALUES (1, 2), (3, 4), (5, 6), (7, 8), (9, 10) ) AS MyTable(a, b);  
@@ -188,8 +188,8 @@ GROUP BY Change;
   
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [INSERT &#40; Transact-SQL &#41;](../../t-sql/statements/insert-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
  [MERGE &#40;Transact-SQL&#41;](../../t-sql/statements/merge-transact-sql.md)   
  [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: STBuffer (Geometry-Datentyp) | Microsoft Docs
+title: STBuffer (geometry-Datentyp) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -48,21 +48,21 @@ Gibt ein geometrisches Objekt zurück, dass die Vereinigung aller Punkte darstel
  Ein Wert vom Typ **float** (**double** in .NET-Framework), der den Abstand zu der geometry-Instanz angibt, um die der Puffer berechnet werden soll.  
   
 ## <a name="return-types"></a>Rückgabetypen  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Rückgabetyp: **Geometrie**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Rückgabetyp: **geometry**  
   
  CLR-Rückgabetyp: **SqlGeometry**  
   
-## <a name="remarks"></a>Hinweise  
- `STBuffer()`berechnet einen Puffer wie [BufferWithTolerance](../../t-sql/spatial-geometry/bufferwithtolerance-geometry-data-type.md), wobei *Toleranz* = Distance \* .001 und *relative*  =   **"false"**.  
+## <a name="remarks"></a>Remarks  
+ `STBuffer()` berechnet einen Puffer wie [BufferWithTolerance](../../t-sql/spatial-geometry/bufferwithtolerance-geometry-data-type.md), wobei *tolerance* = distance \* 0,001 und *relative* = **false** ist.  
   
- Wenn *Abstand* > 0 dann entweder eine **Polygon** oder **MultiPolygon** Instanz zurückgegeben.  
+ Wenn *distance* > 0, wird eine **Polygon**- oder **MultiPolygon**-Instanz zurückgegeben.  
   
 > [!NOTE]  
->  Da der Abstand ein **float**-Wert ist, kann ein sehr kleiner Wert in den Berechnungen mit 0 gleichgesetzt werden.  In diesem Fall wird eine Kopie der aufrufenden Instanz von **geometry** zurückgegeben.  Finden Sie unter [Float und Real &#40; Transact-SQL &#41;](../../t-sql/data-types/float-and-real-transact-sql.md)  
+>  Da der Abstand ein **float**-Wert ist, kann ein sehr kleiner Wert in den Berechnungen mit 0 gleichgesetzt werden.  In diesem Fall wird eine Kopie der aufrufenden Instanz von **geometry** zurückgegeben.  Informationen hierzu finden Sie unter [float und real &#40;Transact-SQL&#41;](../../t-sql/data-types/float-and-real-transact-sql.md)  
   
  Wenn *distance* = 0 ist, wird eine Kopie der aufrufenden Instanz von **geometry** zurückgegeben.  
   
- Wenn *Abstand* < 0, dann  
+ Wenn *distance* < 0, gilt Folgendes:  
   
 -   wird eine leere Instanz von **GeometryCollection** zurückgegeben, wenn die Dimensionen der Instanz 0 oder 1 betragen.  
   
@@ -73,7 +73,7 @@ Gibt ein geometrisches Objekt zurück, dass die Vereinigung aller Punkte darstel
   
  Ein negativer Puffer entfernt alle Punkte innerhalb des gegebenen Abstands der Begrenzung der geometry-Instanz.  
   
- Die Abweichung zwischen dem theoretischen und dem berechnetem Puffer ist max (Toleranz, Blöcke * 1.E-7), in denen Toleranz = Distance \* .001. Weitere Informationen zu Blöcken, finden Sie unter [Geometry-Datentyp-Methodenverweis](http://msdn.microsoft.com/library/d88e632b-6b2f-4466-a15f-9fbef1a347a7).  
+ Die Abweichung zwischen dem theoretischen und dem berechnetem Puffer beträgt max(tolerance, extents * 1,0E-7), wobei tolerance = distance \* 0,001 ist. Weitere Informationen zu Erweiterungen finden Sie unter [geometry-Datentyp-Methodenverweis](http://msdn.microsoft.com/library/d88e632b-6b2f-4466-a15f-9fbef1a347a7).  
   
 ## <a name="examples"></a>Beispiele  
   
@@ -102,7 +102,7 @@ Gibt ein geometrisches Objekt zurück, dass die Vereinigung aller Punkte darstel
  ```  
   
 > [!NOTE]  
->  Anstelle einer Instanz von `Polygon` wird eine Instanz von `CurvePolygon` zurückgegeben.  Zurückgeben einer `CurvePolygon` Instanz ist, finden Sie unter [BufferWithCurves &#40; Geometry-Datentyp &#41;](../../t-sql/spatial-geometry/bufferwithcurves-geometry-data-type.md)  
+>  Anstelle einer Instanz von `Polygon` wird eine Instanz von `CurvePolygon` zurückgegeben.  Informationen zum Zurückgeben einer `CurvePolygon`-Instanz finden Sie unter [BufferWithCurves &#40;geometry-Datentyp&#41;](../../t-sql/spatial-geometry/bufferwithcurves-geometry-data-type.md)  
   
 ### <a name="d-calling-stbuffer-with-a-negative-parameter-value-that-returns-an-empty-instance"></a>D. Aufrufen von STBuffer() mit einem negativen Parameterwert zur Rückgabe einer leeren Instanz  
  Im folgenden Beispiel wird gezeigt, was geschieht, wenn der *distance* -Parameter aus dem vorangehenden Beispiel -2 entspricht.  
@@ -112,7 +112,7 @@ Gibt ein geometrisches Objekt zurück, dass die Vereinigung aller Punkte darstel
  SELECT @g.STBuffer(-2).ToString();
  ```  
   
- Dies **wählen** Anweisung gibt ein`GEOMETRYCOLLECTION EMPTY.`  
+ Diese **SELECT**-Anweisung gibt `GEOMETRYCOLLECTION EMPTY.` zurück.  
   
 ### <a name="e-calling-stbuffer-with-parametervalue--0"></a>E. Aufrufen von STBuffer() mit parameter_value = 0  
  Im folgenden Beispiel wird eine Kopie der aufrufenden Instanz von `geometry` zurückgegeben:  
@@ -169,8 +169,8 @@ Gibt ein geometrisches Objekt zurück, dass die Vereinigung aller Punkte darstel
   
  Von den ersten beiden **SELECT** -Anweisungen wird eine Instanz von `MultiPolygon` zurückgegeben, da der *distance* -Parameter kleiner oder gleich 1/2 des Abstands zwischen den beiden Punkten (1 1) und (1 4) ist. Von der dritten **SELECT** -Anweisung gibt `Polygon` zurückgegeben, da sich die zwischengespeicherten Instanzen der beiden Punkte (1 1) und (1 4) überschneiden.  
   
-## <a name="see-also"></a>Siehe auch  
- [BufferWithTolerance &#40; Geometry-Datentyp &#41;](../../t-sql/spatial-geometry/bufferwithtolerance-geometry-data-type.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [BufferWithTolerance &#40;geometry-Datentyp&#41;](../../t-sql/spatial-geometry/bufferwithtolerance-geometry-data-type.md)   
  [OGC-Methoden für geometry-Instanzen](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

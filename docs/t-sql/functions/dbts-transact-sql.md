@@ -1,5 +1,5 @@
 ---
-title: '@@DBTS (Transact-SQL) | Microsoft Docs'
+title: '@@DBTS (Transact-SQL) | Microsoft-Dokumentation'
 ms.custom: 
 ms.date: 09/18/2017
 ms.prod: sql-non-specified
@@ -48,13 +48,13 @@ Gibt den aktuellen Wert vom Datentyp **timestamp** für die aktuelle Datenbank z
 ## <a name="return-types"></a>Rückgabetypen
 **varbinary**
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
 @@DBTS gibt den zuletzt verwendeten Timestampwert der aktuellen Datenbank zurück. Ein neuer Timestampwert wird generiert, wenn eine Zeile mit einer **timestamp** -Spalte eingefügt oder aktualisiert wird.
   
-Der @@DBTS Funktion ist nicht von Änderungen in den Transaktionsisolationsstufen betroffen.
+Die Funktion @@DBTS ist nicht von Änderungen der Transaktionsisolationsstufen betroffen.
   
 ## <a name="examples"></a>Beispiele  
-Das folgende Beispiel gibt die aktuelle **Zeitstempel** aus der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] Datenbank.
+Das folgende Beispiel gibt den aktuellen **timestamp**-Wert aus der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Datenbank zurück.
   
 ```sql
 USE AdventureWorks2012;  
@@ -63,9 +63,9 @@ SELECT @@DBTS;
 ```  
   
 ## <a name="see-also"></a>Siehe auch
-[Konfigurationsfunktionen &#40; Transact-SQL &#41;](../../t-sql/functions/configuration-functions-transact-sql.md)  
-[Cursorparallelität &#40; ODBC &#41;](../../relational-databases/native-client-odbc-cursors/properties/cursor-concurrency-odbc.md)  
+[Configuration Functions &#40;Transact-SQL&#41; (Konfigurationsfunktionen (Transact-SQL))](../../t-sql/functions/configuration-functions-transact-sql.md)  
+[Cursor Concurrency &#40;ODBC&#41; (Cursorparallelität (ODBC))](../../relational-databases/native-client-odbc-cursors/properties/cursor-concurrency-odbc.md)  
 [Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
-[MIN_ACTIVE_ROWVERSION &#40; Transact-SQL &#41;](../../t-sql/functions/min-active-rowversion-transact-sql.md)
+[MIN_ACTIVE_ROWVERSION &#40;Transact-SQL&#41;](../../t-sql/functions/min-active-rowversion-transact-sql.md)
   
   

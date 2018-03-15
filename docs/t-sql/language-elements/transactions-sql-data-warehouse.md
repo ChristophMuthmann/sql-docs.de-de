@@ -1,5 +1,5 @@
 ---
-title: Transaktionen (SQL Datawarehouse) | Microsoft Docs
+title: Transaktionen (SQL Data Warehouse) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -26,18 +26,18 @@ ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="transactions-sql-data-warehouse"></a>Transaktionen (SQL Datawarehouse)
+# <a name="transactions-sql-data-warehouse"></a>Transaktionen (SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  Eine Transaktion ist eine Gruppe von einer oder mehreren Datenbank-Anweisungen, die entweder vollständig zugesichert oder vollständig ein Rollback. Jede Transaktion wird atomic, konsistent, isoliert und dauerhaft (ACID-Eigenschaften). Wenn die Transaktion erfolgreich ausgeführt wird, sind alle Anweisungen darin ein Commit ausgeführt wurde. Beim Fehlschlagen die Transaktion ist, die mindestens eine der Anweisungen in der Gruppe ein Fehler auftritt, und klicken Sie dann die gesamte Gruppe, ein Rollback ausgeführt wird.  
+  Eine Transaktion ist eine Gruppe von mindestens einer Datenbankanweisung, für die als Ganzes entweder ein Commit oder ein Rollback ausgeführt wird. Alle Transaktionen sind unteilbar, konsistent, isoliert und von Dauer (atomic, consistent, isolated, durable: ACID). Wenn die Transaktion erfolgreich ist, wird für alle Anweisungen darin ein Commit ausgeführt. Wenn die Transaktion fehlschlägt, d.h. bei mindestens einer Anweisung in der Gruppe ein Fehler auftritt, wird für die gesamte Gruppe ein Rollback ausgeführt.  
   
- Anfang und Ende von Transaktionen, hängt von der AUTOCOMMIT-Einstellung und die Anweisungen BEGIN TRANSACTION, COMMIT und ROLLBACK. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]unterstützt die folgenden Typen von Transaktionen:  
+ Start und Ende von Transaktionen hängen von der Einstellung AUTOCOMMIT, sowie den Anweisungen BEGIN TRANSACTION, COMMIT und ROLLBACK ab. In [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] werden die folgenden Typen von Transaktionen unterstützt:  
   
--   *Explizite Transaktionen* beginnen Sie mit der BEGIN TRANSACTION-Anweisung und mit dem COMMIT oder ROLLBACK-Anweisung enden.  
+-   *Explizite Transaktionen* beginnen mit der BEGIN TRANSACTION-Anweisung und enden mit der COMMIT- oder ROLLBACK-Anweisung.  
   
--   *Autocommit-Transaktionen* automatisch innerhalb einer Sitzung zu initiieren und können nicht gestartet werden, mit der BEGIN TRANSACTION-Anweisung. Wenn die AUTOCOMMIT-Einstellung auf ON festgelegt ist, jede Anweisung in einer Transaktion ausgeführt wird und keine explizite Commit- oder ROLLBACK ist erforderlich. Wenn die AUTOCOMMIT-Einstellung auf OFF festgelegt ist, wird eine COMMIT oder ROLLBACK-Anweisung erforderlich, um das Ergebnis der Transaktion zu bestimmen. In [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], autocommittransaktionen beginnt unmittelbar nach einem COMMIT oder ROLLBACK-Anweisung oder nach einer AUTOCOMMIT SET OFF-Anweisung.  
+-   *Autocommit-Transaktionen* werden automatisch innerhalb einer Sitzung initiiert und beginnen nicht mit der BEGIN TRANSACTION-Anweisung. Wenn die AUTOCOMMIT-Einstellung auf ON festgelegt ist, wird jede Anweisung in einer Transaktion ausgeführt, und es ist kein explizites COMMIT oder ROLLBACK notwendig. Wenn die AUTOCOMMIT-Einstellung auf OFF festgelegt ist, ist eine COMMIT- oder ROLLBACK-Anweisung erforderlich, um das Ergebnis der Transaktion zu bestimmen. In [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] beginnen AUTOCOMMIT-Transaktionen sofort nach einer COMMIT- oder ROLLBACK-Anweisung oder nach einer SET AUTOCOMMIT OFF-Anweisung.  
   
- ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Thema Linksymbol") [Transact-SQL-Syntaxkonventionen &#40; Transact-SQL &#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol zum Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions &#40;Transact-SQL&#41; (Transact-SQL-Syntaxkonventionen (Transact-SQL))](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -51,64 +51,64 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF } [;]
   
 ## <a name="arguments"></a>Argumente  
  BEGIN TRANSACTION  
- Markiert den Anfangspunkt einer expliziten Transaktion.  
+ Markiert den Startpunkt einer expliziten Transaktion.  
   
- COMMIT [ARBEIT]  
- Markiert das Ende einer expliziten oder Autocommit-Transaktion. Diese Anweisung bewirkt, dass die Änderungen in der Transaktion endgültig an die Datenbank übergeben werden. Die Anweisung COMMIT ist identisch mit COMMIT TRAN, COMMIT WORK und COMMIT TRANSACTION.  
+ COMMIT [ WORK ]  
+ Markiert das Ende einer expliziten oder AUTOCOMMIT-Transaktion. Diese Anweisung bewirkt, dass die Änderungen in der Transaktion endgültig an die Datenbank übergeben werden. Die Anweisung COMMIT ist identisch mit COMMIT WORK, COMMIT TRAN und COMMIT TRANSACTION.  
   
- ROLLBACK [ARBEIT]  
- Rollback einer Transaktion an den Anfang der Transaktion. Es sind keine Änderungen für die Transaktion ein Commit in der Datenbank ausgeführt. Die Anweisung ROLLBACK ist identisch mit der ROLLBACK WORK, ROLLBACK TRAN und ROLLBACK TRANSACTION.  
+ ROLLBACK [ WORK ]  
+ Führt für eine Transaktion einen Rollback zum Anfang der Transaktion aus. Es werden keine Änderungen der Transaktion an die Datenbank übergeben. Die Anweisung ROLLBACK ist identisch mit ROLLBACK WORK, ROLLBACK TRAN und ROLLBACK TRANSACTION.  
   
- SET-AUTOCOMMIT { **ON** | {OFF}  
- Bestimmt, wie Transaktionen starten und beenden können.  
+ SET AUTOCOMMIT { **ON** | OFF }  
+ Bestimmt, wie Transaktionen gestartet und beendet werden können.  
   
  ON  
- Jede Anweisung, die unter einer eigenen Transaktion ausgeführt wird, und keine explizite Commit- oder ROLLBACK-Anweisung ist erforderlich. Explizite Transaktionen sind zulässig, wenn der AUTOCOMMIT auf ON festgelegt ist.  
+ Jede Anweisung wird unter ihrer eigenen Transaktion ausgeführt, und keine explizite COMMIT- oder ROLLBACK-Anweisung ist erforderlich. Explizite Transaktionen sind zulässig, wenn AUTOCOMMIT auf ON festgelegt ist.  
   
  OFF  
- [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]automatisch initiiert eine Transaktion auf, wenn eine Transaktion nicht bereits ausgeführt wird. Alle nachfolgenden Anweisungen als Teil der Transaktion ausgeführt werden, und ein COMMIT oder ROLLBACK ist erforderlich, das Ergebnis der Transaktion zu ermitteln. Sobald eine Transaktion ein Commit oder Rollback unter dieser Betriebsmodus, bleibt der Modus OFF und [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] eine neue Transaktion initiiert. Explizite Transaktionen sind nicht zulässig, wenn der AUTOCOMMIT auf OFF festgelegt ist.  
+ [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] initiiert automatisch eine Transaktion, wenn nicht bereits eine ausgeführt wird. Alle nachfolgenden Anweisungen werden als Teil der Transaktion ausgeführt, und ein COMMIT oder ROLLBACK ist erforderlich, um das Ergebnis der Transaktion zu ermitteln. Sobald eine Transaktion ein Commit oder Rollback unter diesem Betriebsmodus ausführt, bleibt der Modus auf OFF festgelegt, und [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] initialisiert eine neue Transaktion. Explizite Transaktionen sind nicht zulässig, wenn AUTOCOMMIT auf OFF festgelegt ist.  
   
- Wenn Sie die Einstellung AUTOCOMMIT innerhalb einer aktiven Transaktions ändern, wird diese Einstellung wirkt sich die aktuelle Transaktion und ist nicht wirksam, bis die Transaktion abgeschlossen ist.  
+ Wenn Sie die AUTOCOMMIT-Einstellung innerhalb einer aktiven Transaktion verändern, wirkt sich die Einstellung nicht auf die laufende Transaktion aus und wird erst aktiv, wenn die Transaktion abgeschlossen ist.  
   
- Wenn AUTOCOMMIT auf ON festgelegt ist, wirkt sich mit einem anderen Satz AUTOCOMMIT ON-Anweisung nicht. Ebenso, wenn AUTOCOMMIT auf OFF festgelegt ist, hat eine andere SET AUTOCOMMIT OFF ausgeführt keine Auswirkungen.  
+ Wenn AUTOCOMMIT auf ON festgelegt ist, hat das Ausführen einer anderen SET AUTOCOMMIT ON-Anweisung keine Auswirkung. Dementsprechend hat das Ausführen einer anderen SET AUTOCOMMIT OFF-Anweisung keine Auswirkung, wenn AUTOCOMMIT auf OFF festgelegt ist.  
   
  SET IMPLICIT_TRANSACTIONS { ON | **OFF** }  
- Diese Funktion schaltet die gleichen Modi als AUTOCOMMIT festgelegt. Wenn auf ON gesetzt SET IMPLICIT_TRANSACTIONS die Verbindung in den impliziten Transaktionsmodus. Bei OFF wird die Verbindung zurück in den Autocommitmodus.  Weitere Informationen finden Sie unter [SET IMPLICIT_TRANSACTIONS &#40; Transact-SQL &#41; ](../../t-sql/statements/set-implicit-transactions-transact-sql.md).  
+ Diese Funktion aktiviert die gleichen Modi wie AUTOCOMMIT. Wenn SET IMPLICIT_TRANSACTIONS auf ON festgelegt ist, so wird für die Verbindung der implizite Transaktionsmodus festgelegt. Bei OFF wechselt die Verbindung wieder in den Autocommitmodus zurück.  Weitere Informationen finden Sie unter [SET IMPLICIT_TRANSACTIONS &#40;Transact-SQL&#41;](../../t-sql/statements/set-implicit-transactions-transact-sql.md).  
   
 ## <a name="permissions"></a>Berechtigungen  
- Keine speziellen Berechtigungen sind erforderlich, um die transaktionsbezogene Anweisungen ausgeführt. Berechtigungen sind erforderlich, um die Anweisungen innerhalb der Transaktion ausgeführt.  
+ Es sind keine speziellen Berechtigungen erforderlich, um die transaktionsbezogenen Anweisungen auszuführen. Berechtigungen sind erforderlich, um die Anweisungen innerhalb der Transaktion auszuführen.  
   
 ## <a name="error-handling"></a>Fehlerbehandlung  
- Wenn ein COMMIT oder ROLLBACK ausgeführt werden und keine aktive Transaktion vorhanden ist, wird ein Fehler ausgelöst.  
+ Wenn COMMIT oder ROLLBACK ausgeführt werden und keine aktive Transaktion vorhanden ist, wird ein Fehler ausgelöst.  
   
- Wenn eine BEGIN TRANSACTION ausgeführt wird, während eine Transaktion bereits ausgeführt wird, wird ein Fehler ausgelöst. Dies kann auftreten, wenn eine BEGIN TRANSACTION tritt nach einer erfolgreichen BEGIN TRANSACTION-Anweisung, oder wenn die Sitzung unter AUTOCOMMIT SET OFF ist.  
+ Wenn BEGIN TRANSACTION ausgeführt wird, während bereits eine Transaktion ausgeführt wird, wird ein Fehler ausgelöst. Dies kann auftreten, wenn BEGIN TRANSACTION nach einer erfolgreichen BEGIN TRANSACTION-Anweisung auftritt oder sich die Sitzung unter SET AUTOCOMMIT OFF befindet.  
   
- Wenn ein Fehler als ein Anweisungsfehler zur Laufzeit Fehler vom erfolgreichen Abschluss einer expliziten Transaktion verhindert [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] automatisch ein Rollback der Transaktion und gibt alle Ressourcen, die von der Transaktion aufrecht. Z. B. wenn der Client-Netzwerkverbindung mit einer Instanz von [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] unterbrochen oder der Client von der Anwendung abmeldet, alle Transaktionen ohne Commit für die Verbindung werden zurückgesetzt, wenn das Netzwerk die Instanz über die Unterbrechung benachrichtigt.  
+ Wenn eine explizite Transaktion aufgrund eines anderen Fehlers als eines Anweisungsfehlers zur Laufzeit nicht erfolgreich beendet werden kann, führt [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] automatisch ein Rollback für die Transaktion aus und gibt alle Ressourcen frei, die von der Transaktion beansprucht wurden. Wenn z.B. die Netzwerkverbindung des Clients mit einer Instanz von [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] unterbrochen ist oder sich der Client von der Anwendung abmeldet, wird für alle Transaktionen dieser Verbindung, für die noch kein Commit ausgeführt wurde, ein Rollback ausgeführt, sobald das Netzwerk die Instanz über die Unterbrechung benachrichtigt.  
   
- Wenn ein Anweisungsfehler zur Laufzeit Fehler in einem Batch auftritt [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] verhält sich konsistent mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **XACT_ABORT** festgelegt **ON** und die gesamte Transaktion zurückgesetzt wird. Weitere Informationen zu den **XACT_ABORT** finden Sie unter [SET XACT_ABORT (Transact-SQL)](http://msdn.microsoft.com/library/ms188792.aspx).  
+ Wenn ein Anwendungsfehler zur Laufzeit in einem Batch auftritt, verhält sich [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] konsistent mit der auf **ON** festgelegten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**XACT_ABORT**-Einstellung, und für die gesamte Transaktion wird ein Rollback ausgeführt. Weitere Informationen zur **XACT_ABORT**-Einstellung finden Sie unter [SET XACT_ABORT (Transact-SQL)](http://msdn.microsoft.com/library/ms188792.aspx).  
   
 ## <a name="general-remarks"></a>Allgemeine Hinweise  
- Eine Sitzung kann nur eine Transaktion zu einem bestimmten Zeitpunkt ausgeführt; Punkte speichern und geschachtelten Transaktionen werden nicht unterstützt.  
+ Eine Sitzung kann jeweils nur eine Transaktion zu einem bestimmten Zeitpunkt ausführen. Sicherungspunkte und geschachtelte Transaktionen werden nicht unterstützt.  
   
- Es liegt in der Verantwortung des der [!INCLUDE[DWsql](../../includes/dwsql-md.md)] Programmierers, COMMIT nur zu einem Zeitpunkt auszugeben, wenn alle Daten von der Transaktion verwiesen logisch richtig ist.  
+ Es liegt in der Verantwortung des [!INCLUDE[DWsql](../../includes/dwsql-md.md)]-Programmierers, COMMIT nur zu einem Zeitpunkt auszugeben, zu dem alle Daten, auf die die Transaktion verweist, logisch richtig sind.  
   
  Wenn eine Sitzung beendet wird, bevor eine Transaktion abgeschlossen ist, wird für die Transaktion ein Rollback ausgeführt.  
   
- Transaktionsmodi werden auf Sitzungsebene verwaltet. Wenn eine Sitzung eine explizite Transaktion beginnt oder AUTOCOMMIT auf OFF festgelegt oder Set auf ON IMPLICIT_TRANSACTIONS, hat es z. B. keine Auswirkungen auf die Transaktionsmodi einer anderen Sitzung.  
+ Die Transaktionsmodi werden auf der Sitzungsebene verwaltet. Wenn eine Sitzung z.B. eine explizite Transaktion startet oder AUTOCOMMIT auf OFF oder IMPLICIT_TRANSACTIONS auf ON festlegt ist, hat dies keine Auswirkung auf die Transaktionsmodi einer anderen Sitzung.  
   
 ## <a name="limitations-and-restrictions"></a>Einschränkungen  
- Kann eine Transaktion kein Rollback, nachdem eine COMMIT-Anweisung ausgegeben wurde, da die datenänderungen einem dauerhaften Bestandteil der Datenbank vorgenommen wurden.  
+ Nach der Ausgabe einer COMMIT-Anweisung kann kein Rollback für eine Transaktion ausgeführt werden, da die Datenänderungen zu einem dauerhaften Bestandteil der Datenbank geworden sind.  
   
- Die [Datenbank erstellen &#40; Azure SQL Datawarehouse &#41; ](../../t-sql/statements/create-database-azure-sql-data-warehouse.md) und [DROP DATABASE &#40; Transact-SQL &#41; ](../../t-sql/statements/drop-database-transact-sql.md) Befehle können nicht innerhalb einer expliziten Transaktion verwendet werden.  
+ Die Befehle [CREATE DATABASE &#40;Azure SQL Data Warehouse&#41;](../../t-sql/statements/create-database-azure-sql-data-warehouse.md) und [DROP DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-transact-sql.md) können nicht innerhalb einer expliziten Transaktion verwendet werden.  
   
- [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]eine Transaktion, die Freigabe Mechanismus besitzt nicht. Dies bedeutet, dass zu jedem gegebenen Zeitpunkt zeitlich nur eine Sitzung für jede Transaktion im System bearbeitet werden kann.  
+ [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] verfügt nicht über einen Mechanismus für die Freigabe von Transaktionen. Das bedeutet, dass zu einem bestimmten Zeitpunkt nur eine Sitzung an einer Transaktion im System arbeiten kann.  
   
 ## <a name="locking-behavior"></a>Sperrverhalten  
- [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]verwendet sperren, um die Integrität von Transaktionen sicherzustellen und die Konsistenz der Datenbanken beizubehalten, wenn mehrere Benutzer gleichzeitig auf Daten zugreifen. Sperren wird durch implizite und explizite Transaktionen verwendet. Jede Transaktion fordert Sperren verschiedener Typen für die Ressourcen, z. B. Tabellen oder Datenbanken, von denen die Transaktion abhängt. Alle [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] Sperren sind Tabelle oder einem höheren. Diese Sperren verhindern, dass die Ressourcen durch andere Transaktionen in einer Weise geändert werden, die zu Problemen für die Transaktion führen würde, die die Sperre angefordert hat. Jede Transaktion hebt ihre Sperren wieder, wenn er nicht mehr eine Abhängigkeit von den gesperrten Ressourcen verfügt; explizite Transaktionen beibehalten sperren, bis die Transaktion abgeschlossen ist, wenn er ist entweder ein Commit oder Rollback.  
+ [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] verwendet Sperren, um die Integrität von Transaktionen sicherzustellen und die Konsistenz der Datenbanken beizubehalten, wenn mehrere Benutzer gleichzeitig auf Daten zugreifen. Sperren werden sowohl von impliziten als auch von expliziten Transaktionen verwendet. Jede Transaktion fordert Sperren verschiedener Typen für die Ressourcen, z.B. Tabellen oder Datenbanken an, von denen die Transaktion abhängt. Alle [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]-Sperren befinden sich auf Tabellenebene oder höher. Diese Sperren verhindern, dass die Ressourcen durch andere Transaktionen in einer Weise geändert werden, die zu Problemen für die Transaktion führen würde, die die Sperre angefordert hat. Jede Transaktion hebt ihre Sperren wieder auf, wenn sie nicht mehr über eine Abhängigkeit von den gesperrten Ressourcen verfügt. Explizite Transaktionen behalten Sperren bis zum Abschluss der Transaktion bei, wenn für diese entweder ein Commit oder ein Rollback ausgeführt wird.  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
-### <a name="a-using-an-explicit-transaction"></a>A. Verwenden eine explizite Transaktion  
+### <a name="a-using-an-explicit-transaction"></a>A. Verwenden expliziter Transaktionen  
   
 ```  
 BEGIN TRANSACTION;  
@@ -117,8 +117,8 @@ DELETE FROM HumanResources.JobCandidate
 COMMIT;  
 ```  
   
-### <a name="b-rolling-back-a-transaction"></a>B. Rollback einer Transaktion  
- Das folgende Beispiel zeigt die Auswirkung von Rollback einer Transaktion.  In diesem Beispiel wird die ROLLBACK-Anweisung wird ein Rollback der INSERT-Anweisung, die erstellte Tabelle sind jedoch weiterhin vorhanden.  
+### <a name="b-rolling-back-a-transaction"></a>B. Ausführen eines Rollbacks für eine Transaktion  
+ Im folgenden Beispiel werden die Auswirkungen des Rollbacks einer Transaktion veranschaulicht.  In diesem Beispiel führt die ROLLBACK-Anweisung ein Rollback der INSERT-Anweisung aus, die erstellte Tabelle bleibt jedoch weiterhin vorhanden.  
   
 ```  
 CREATE TABLE ValueTable (id int);  
@@ -129,19 +129,19 @@ ROLLBACK;
 ```  
   
 ### <a name="c-setting-autocommit"></a>C. AUTOCOMMIT-Einstellung  
- Im folgenden Beispiel wird die Einstellung AUTOCOMMIT auf `ON`.  
+ Im folgenden Beispiel wird die Einstellung AUTOCOMMIT auf `ON` festgelegt.  
   
 ```  
 SET AUTOCOMMIT ON;  
 ```  
   
- Im folgenden Beispiel wird die Einstellung AUTOCOMMIT auf `OFF`.  
+ Im folgenden Beispiel wird die Einstellung AUTOCOMMIT auf `OFF` festgelegt.  
   
 ```  
 SET AUTOCOMMIT OFF;  
 ```  
   
-### <a name="d-using-an-implicit-multi-statement-transaction"></a>D. Verwenden eine implizite Transaktion mit mehreren Anweisungen  
+### <a name="d-using-an-implicit-multi-statement-transaction"></a>D. Verwenden einer impliziten Transaktion mit mehreren Anweisungen  
   
 ```  
 SET AUTOCOMMIT OFF;  
@@ -151,9 +151,9 @@ INSERT INTO ValueTable VALUES(2);
 COMMIT;  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SET IMPLICIT_TRANSACTIONS &#40;Transact-SQL&#41;](../../t-sql/statements/set-implicit-transactions-transact-sql.md)   
- [SET TRANSACTION ISOLATION LEVEL &#40; Transact-SQL &#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)   
+ [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)   
  [@@TRANCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/trancount-transact-sql.md)  
   
   

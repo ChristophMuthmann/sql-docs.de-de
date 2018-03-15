@@ -1,5 +1,5 @@
 ---
-title: "Erstellen Sie die BROKERPRIORITÄT (Transact-SQL) | Microsoft Docs"
+title: CREATE BROKER PRIORITY (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -42,7 +42,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="create-broker-priority-transact-sql"></a>CREATE BROKER PRIORITY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Definiert eine Prioritätsebene und die Gruppe von Kriterien, anhand derer bestimmt wird, welchen [!INCLUDE[ssSB](../../includes/sssb-md.md)]-Konversationen die Prioritätsebene zugeordnet wird. Die Prioritätsebene wird jedem Konversationsendpunkt zugewiesen, die verwendet die gleiche Kombination aus Verträgen und Diensten, die die konversationspriorität angegeben sind. Die Prioritätswerte liegen zwischen 1 (niedrig) und 10 (hoch). Der Standardwert ist 5.  
+  Definiert eine Prioritätsebene und die Gruppe von Kriterien, anhand derer bestimmt wird, welchen [!INCLUDE[ssSB](../../includes/sssb-md.md)]-Konversationen die Prioritätsebene zugeordnet wird. Die Prioritätsebene wird jedem Konversationsendpunkt zugeordnet, der die gleiche Kombination aus Verträgen und Diensten verwendet, die für die Konversationspriorität angegeben sind. Die Prioritätswerte liegen zwischen 1 (niedrig) und 10 (hoch). Der Standardwert ist 5.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -64,16 +64,16 @@ FOR CONVERSATION
   
 ## <a name="arguments"></a>Argumente  
  *ConversationPriorityName*  
- Gibt den Namen für diese Konversationspriorität an. Der Name muss in der aktuellen Datenbank eindeutig sein und muss den Regeln für entsprechen [!INCLUDE[ssDE](../../includes/ssde-md.md)] [Bezeichner](../../relational-databases/databases/database-identifiers.md).  
+ Gibt den Namen für diese Konversationspriorität an. Der Name muss in der aktuellen Datenbank eindeutig sein und den Regeln für [!INCLUDE[ssDE](../../includes/ssde-md.md)] [Bezeichner](../../relational-databases/databases/database-identifiers.md) entsprechen.  
   
  SET  
  Gibt die Kriterien an, anhand derer bestimmt wird, ob die Konversationspriorität für eine Konversation übernommen wird. Wenn angegeben, muss SET mindestens ein Kriterium enthalten: CONTRACT_NAME, LOCAL_SERVICE_NAME, REMOTE_SERVICE_NAME oder PRIORITY_LEVEL. Wenn SET nicht angegeben wird, werden für alle drei Kriterien die Standardwerte festgelegt.  
   
  CONTRACT_NAME = {*ContractName* | **ANY**}  
- Gibt den Namen eines Vertrags an, der als Kriterium für die Festlegung verwendet wird, ob die Konversationspriorität für eine Konversation gelten soll. *ContractName* ist eine [!INCLUDE[ssDE](../../includes/ssde-md.md)] Bezeichner, und geben Sie den Namen eines Vertrags müssen in der aktuellen Datenbank.  
+ Gibt den Namen eines Vertrags an, der als Kriterium für die Festlegung verwendet wird, ob die Konversationspriorität für eine Konversation gelten soll. *ContractName* ist ein [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Bezeichner und muss den Namen eines Vertrags in der aktuellen Datenbank angeben.  
   
  *ContractName*  
- Gibt an, dass die konversationspriorität nur für Konversationen angewendet werden kann, wobei die BEGIN DIALOG-Anweisung, die die Konversation gestartet ON CONTRACT angegeben *ContractName*.  
+ Gibt an, dass die Konversationspriorität nur für Konversationen übernommen werden kann, bei denen die BEGIN DIALOG-Anweisung, mit der die Konversation gestartet wurde, auf ON CONTRACT *ContractName* festgelegt ist.  
   
  ANY  
  Gibt an, dass die Konversationspriorität für jede Konversation unabhängig vom verwendeten Vertrag übernommen werden kann.  
@@ -83,14 +83,14 @@ FOR CONVERSATION
  LOCAL_SERVICE_NAME = {*LocalServiceName* | **ANY**}  
  Gibt den Namen eines Diensts an, der als Kriterium verwendet werden kann, um zu bestimmen, ob die Konversationspriorität für einen Konversationsendpunkt übernommen wird.  
   
- *"LocalServiceName"* ist eine [!INCLUDE[ssDE](../../includes/ssde-md.md)] Bezeichner. Mit diesem muss der Name eines Diensts in der aktuellen Datenbank angegeben werden.  
+ *LocalServiceName* ist ein [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Bezeichner. Mit diesem muss der Name eines Diensts in der aktuellen Datenbank angegeben werden.  
   
  *LocalServiceName*  
  Gibt an, dass die Konversationspriorität für Folgendes übernommen werden kann:  
   
--   Jeden Konversationsendpunkt für Initiator, dessen initiatordienstname entspricht *"LocalServiceName"*.  
+-   Jeden Konversationsendpunkt für den Initiator, dessen Initiatordienstname *LocalServiceName* entspricht.  
   
--   Jeden Konversationsendpunkt für Ziel, dessen Zieldienstname entspricht *"LocalServiceName"*.  
+-   Jeden Konversationsendpunkt für das Ziel, dessen Zieldienstname *LocalServiceName* entspricht.  
   
  ANY  
  -   Gibt an, dass die Konversationspriorität unabhängig vom Namen des vom Endpunkt verwendeten lokalen Diensts für jeden Konversationsendpunkt übernommen werden kann.  
@@ -100,24 +100,24 @@ FOR CONVERSATION
  REMOTE_SERVICE_NAME = {'*RemoteServiceName*' | **ANY**}  
  Gibt den Namen eines Diensts an, der als Kriterium verwendet werden kann, um zu bestimmen, ob die Konversationspriorität für einen Konversationsendpunkt übernommen wird.  
   
- *"RemoteServiceName"* ist ein Literal vom Typ **nvarchar(256)**. [!INCLUDE[ssSB](../../includes/sssb-md.md)]Führt einen Byte-pro-Byte-Vergleich mit der *"RemoteServiceName"* Zeichenfolge. Bei dem Vergleich wird die Groß-/Kleinschreibung beachtet, die aktuelle Sortierung hingegen wird nicht berücksichtigt. Der Zieldienst kann in der aktuellen Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] oder in einer Remoteinstanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] vorhanden sein.  
+ *RemoteServiceName* ist ein Literal vom Typ **nvarchar(256)**. [!INCLUDE[ssSB](../../includes/sssb-md.md)] verwendet einen bitweisen Vergleich für den Abgleich der *RemoteServiceName*-Zeichenfolge. Bei dem Vergleich wird die Groß-/Kleinschreibung beachtet, die aktuelle Sortierung hingegen wird nicht berücksichtigt. Der Zieldienst kann in der aktuellen Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] oder in einer Remoteinstanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] vorhanden sein.  
   
- "*" RemoteServiceName "*"  
+ '*RemoteServiceName*'  
  Gibt an, dass die Konversationspriorität für Folgendes übernommen werden kann:  
   
--   Jeden Konversationsendpunkt für Initiator, dessen zugeordneter Zieldienstname entspricht *"RemoteServiceName"*.  
+-   Jeden Konversationsendpunkt für den Initiator, dessen zugeordneter Zieldienstname *RemoteServiceName* entspricht.  
   
--   Jeden Konversationsendpunkt für Ziel, dessen zugeordneter initiatordienstname entspricht *"RemoteServiceName"*.  
+-   Jeden Konversationsendpunkt für das Ziel, dessen zugeordneter Initiatordienstname *RemoteServiceName* entspricht.  
   
  ANY  
  Gibt an, dass die Konversationspriorität unabhängig vom Namen des dem Endpunkt zugeordneten Remotediensts für jeden Konversationsendpunkt übernommen werden kann.  
   
  Der Standardwert ist ANY.  
   
- PRIORITY_LEVEL = { *PriorityValue* | **Standard** }  
- Gibt die Priorität an, die jedem Konversationsendpunkt zugeordnet werden soll, der die für die Konversationspriorität angegebenen Verträge und Dienste verwendet. *PriorityValue* muss eine ganze Zahl zwischen 1 (niedrigste Priorität) und 10 (höchste Priorität) Zeichenfolgenliteral sein. Der Standardwert ist 5.  
+ PRIORITY_LEVEL = { *PriorityValue* | **DEFAULT** }  
+ Gibt die Priorität an, die jedem Konversationsendpunkt zugeordnet werden soll, der die für die Konversationspriorität angegebenen Verträge und Dienste verwendet. *PriorityValue* muss ein ganzahliges Literal zwischen 1 (niedrigste Priorität) und 10 (höchste Priorität) sein. Der Standardwert ist 5.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  In [!INCLUDE[ssSB](../../includes/sssb-md.md)] werden Prioritätsebenen Konversationsendpunkte zugeordnet. Mithilfe der Prioritätsebene wird die Priorität der dem Endpunkt zugeordneten Vorgänge gesteuert. Jede Konversation verfügt über zwei Konversationsendpunkte:  
   
 -   Der Konversationsendpunkt für den Initiator ordnet eine Seite der Konversation dem Initiatordienst und der Initiatorwarteschlange zu. Der Konversationsendpunkt für den Initiator wird beim Ausführen der BEGIN DIALOG-Anweisung erstellt. Zu den dem Konversationsendpunkt für den Initiator zugeordneten Vorgängen zählen folgende:  
@@ -138,7 +138,7 @@ FOR CONVERSATION
   
  In [!INCLUDE[ssSB](../../includes/sssb-md.md)] werden Konversationsprioritätsebenen beim Erstellen von Endpunkten zugeordnet. Der Konversationsendpunkt behält die Prioritätsstufe bei, bis die Konversation beendet ist. Neue Prioritäten oder Änderungen an vorhandenen Prioritäten werden nicht für vorhandene Konversationen übernommen.  
   
- [!INCLUDE[ssSB](../../includes/sssb-md.md)]Ordnet einem Konversationsendpunkt die Prioritätsebene von der konversationspriorität, deren Vertrags- und dienstkriterien die größte mit den Eigenschaften des Endpunkts übereinstimmen. In der folgenden Tabelle wird die Rangfolge bei Übereinstimmungen angezeigt:  
+ [!INCLUDE[ssSB](../../includes/sssb-md.md)] ordnet einem Konversationsendpunkt die Prioritätsebene von der Konversationspriorität zu, deren Vertrags- und Dienstkriterien die größte Übereinstimmung mit den Eigenschaften des Endpunkts aufweisen. In der folgenden Tabelle wird die Rangfolge bei Übereinstimmungen angezeigt:  
   
 |Vertrag des Vorgangs|Lokaler Dienst des Vorgangs|Remotedienst des Vorgangs|  
 |------------------------|-----------------------------|------------------------------|  
@@ -163,7 +163,7 @@ FOR CONVERSATION
   
 -   Nachrichten werden zwischen Diensten in der gleichen Instanz des Datenbankmoduls übermittelt.  
   
--   Alle [!INCLUDE[ssSB](../../includes/sssb-md.md)] Vorgänge in einer Datenbank sind Standardprioritäten von 5 zugewiesen, wenn keine konversationsprioritäten in der Datenbank erstellt wurden.  
+-   Allen [!INCLUDE[ssSB](../../includes/sssb-md.md)]-Vorgängen in einer Datenbank wird die Standardpriorität 5 zugewiesen, wenn in der Datenbank keine Konversationsprioritäten erstellt wurden.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Die Berechtigung zum Erstellen einer Konversationspriorität erhalten standardmäßig die Mitglieder der festen Datenbankrolle db_ddladmin oder db_owner und die feste Serverrolle sysadmin. Erfordert die ALTER-Berechtigung für die Datenbank.  
@@ -290,13 +290,13 @@ CREATE BROKER PRIORITY BronzePriority
          PRIORITY_LEVEL = 2);  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [ALTER BROKER PRIORITY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-broker-priority-transact-sql.md)   
- [BEGIN DIALOG CONVERSATION &#40; Transact-SQL &#41;](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
+ [BEGIN DIALOG CONVERSATION &#40;Transact-SQL&#41;](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
  [CREATE CONTRACT &#40;Transact-SQL&#41;](../../t-sql/statements/create-contract-transact-sql.md)   
  [CREATE QUEUE &#40;Transact-SQL&#41;](../../t-sql/statements/create-queue-transact-sql.md)   
  [CREATE SERVICE &#40;Transact-SQL&#41;](../../t-sql/statements/create-service-transact-sql.md)   
- [DROP BROKER PRIORITY &#40; Transact-SQL &#41;](../../t-sql/statements/drop-broker-priority-transact-sql.md)   
+ [DROP BROKER PRIORITY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-broker-priority-transact-sql.md)   
  [GET CONVERSATION GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/get-conversation-group-transact-sql.md)   
  [RECEIVE &#40;Transact-SQL&#41;](../../t-sql/statements/receive-transact-sql.md)   
  [SEND &#40;Transact-SQL&#41;](../../t-sql/statements/send-transact-sql.md)   

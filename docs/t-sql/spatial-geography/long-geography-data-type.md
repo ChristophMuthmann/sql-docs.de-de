@@ -1,5 +1,5 @@
 ---
-title: Long (Geography-Datentyp) | Microsoft Docs
+title: Long (geography-Datentyp) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 06/02/2016
 ms.prod: sql-non-specified
@@ -44,12 +44,12 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-value"></a>Rückgabewert  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Typ: **"float"**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Typ: **float**  
   
  CLR-Typ: **SqlDouble**  
   
-## <a name="remarks"></a>Hinweise  
- Im OpenGIS-Modell lange ist definiert nur auf **Geography** Instanzen aus einem einzelnen Punkt bestehen. Diese Eigenschaft gibt NULL zurück, wenn **geography** -Instanzen mehr als nur einen Punkt enthalten. Diese Eigenschaft exakt und ist schreibgeschützt.  
+## <a name="remarks"></a>Remarks  
+ Im OpenGIS-Modell ist Long nur für **geography**-Instanzen definiert, die aus einem einzelnen Punkt bestehen. Diese Eigenschaft gibt NULL zurück, wenn **geography** -Instanzen mehr als nur einen Punkt enthalten. Diese Eigenschaft exakt und ist schreibgeschützt.  
   
 ## <a name="examples"></a>Beispiele  
  In diesem Beispiel wird eine **Point** -Instanz erstellt und der Längengrad des Punkts abgerufen.  
@@ -60,7 +60,7 @@ SET @g = geography::STGeomFromText('POINT(-122.34900 47.65100)', 4326);
 SELECT @g.Long;  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Erweiterte Methoden für geography-Instanzen](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)  
   
   

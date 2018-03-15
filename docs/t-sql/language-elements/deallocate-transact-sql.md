@@ -1,5 +1,5 @@
 ---
-title: Aufheben der ZUORDNUNG (Transact-SQL) | Microsoft Docs
+title: DEALLOCATE (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -38,7 +38,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="deallocate-transact-sql"></a>DEALLOCATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Entfernt einen Cursorverweis. Wenn die letzten Cursorverweises den Cursor alle Datenstrukturen werden freigegeben [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  Entfernt einen Cursorverweis. Nachdem die Zuordnung des letzten Cursorverweises aufgehoben wurde, werden alle Datenstrukturen, die den Cursor bilden, von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] freigegeben.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,12 +51,12 @@ DEALLOCATE { { [ GLOBAL ] cursor_name } | @cursor_variable_name }
   
 ## <a name="arguments"></a>Argumente  
  *cursor_name*  
- Der Name eines bereits deklarierten Cursors. Wenn sowohl ein globaler als auch ein lokaler Cursor mit vorhanden *Cursor_name* als Buchstabenfolge, *Cursor_name* bezieht sich auf den globalen Cursor, wenn GLOBAL angegeben ist und auf den lokalen Cursor GLOBAL nicht angegeben ist.  
+ Der Name eines bereits deklarierten Cursors. Falls sowohl ein lokaler als auch ein globaler Cursor namens *cursor_name* vorhanden ist, bezieht sich *cursor_name* nur dann auf den globalen Cursor, wenn GLOBAL angegeben ist. Wird GLOBAL nicht angegeben, bezieht es sich auf den lokalen Cursor.  
   
  @*cursor_variable_name*  
- Der Name des eine **Cursor** Variable. @*Cursor_variable_name* muss vom Typ **Cursor**.  
+ Der Name einer **cursor**-Variablen. @*cursor_variable_name* muss vom Typ **cursor** sein.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Anweisungen, die auf Cursor angewendet werden, verwenden entweder einen Cursornamen oder eine Cursorvariable, um auf den Cursor zu verweisen. DEALLOCATE entfernt die Zuordnung zwischen einem Cursor und dem Cursornamen oder der Cursorvariablen. Ist dies der letzte Name bzw. die letzte Variable, die auf den Cursor verweist, wird die Zuordnung des Cursors aufgehoben, und alle vom Cursor verwendeten Ressourcen werden freigegeben. Durch DEALLOCATE werden alle Scrollsperren freigegeben, die zum Schützen der Isolierung der Abrufvorgänge verwendet werden. Transaktionssperren, mit denen vom Cursor vorgenommene Updates, einschließlich positionierter Updates, geschützt werden, bleiben bis zum Ende der Transaktion wirksam.  
   
  Die DECLARE CURSOR-Anweisung ordnet einem Cursor einen Cursornamen zu.  
@@ -85,7 +85,7 @@ SELECT * FROM Person.Person;
     SELECT * FROM Person.Person;  
     ```  
   
- Eine DEALLOCATE @*Cursor_variable_name* -Anweisung entfernt nur den Verweis der benannten Variablen auf den Cursor. Die Zuordnung der Variablen wird erst dann aufgehoben, wenn sie am Ende des Batches, der gespeicherten Prozedur oder des Triggers den Gültigkeitsbereich verlässt. Nach einer DEALLOCATE @*Cursor_variable_name* -Anweisung, die Variable zugeordnet werden mithilfe der SET-Anweisung einem anderen Cursor.  
+ Eine DEALLOCATE @*cursor_variable_name*-Anweisung entfernt nur den Verweis der benannten Variablen auf den Cursor. Die Zuordnung der Variablen wird erst dann aufgehoben, wenn sie am Ende des Batches, der gespeicherten Prozedur oder des Triggers den Gültigkeitsbereich verlässt. Nach einer DEALLOCATE @*cursor_variable_name*-Anweisung kann die Variable mithilfe einer SET-Anweisung einem anderen Cursor zugeordnet werden.  
   
 ```  
 USE AdventureWorks2012;  
@@ -147,10 +147,10 @@ DEALLOCATE @MyCursor;
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [CLOSE &#40;Transact-SQL&#41;](../../t-sql/language-elements/close-transact-sql.md)   
  [Cursor](../../relational-databases/cursors.md)   
- [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
+ [DEKLARIEREN SIE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
  [FETCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/fetch-transact-sql.md)   
  [OPEN &#40;Transact-SQL&#41;](../../t-sql/language-elements/open-transact-sql.md)  
   

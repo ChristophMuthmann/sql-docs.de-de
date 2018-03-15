@@ -1,5 +1,5 @@
 ---
-title: DROP ENDPOINT (Transact-SQL) | Microsoft Docs
+title: DROP ENDPOINT (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -53,11 +53,11 @@ DROP ENDPOINT endPointName
  *endPointName*  
  Der Name des Endpunkts, der entfernt werden soll.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  ENDPOINT DDL-Anweisungen können nicht innerhalb einer Benutzertransaktion ausgeführt werden.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Benutzer muss ein Mitglied der **Sysadmin** festen Serverrolle, der Besitzer des Endpunktes sein, oder die CONTROL-Berechtigung für den Endpunkt erteilt worden.  
+ Der Benutzer muss ein Mitglied der festen Serverrolle **sysadmin** sein, er muss der Besitzer des Endpunkts sein, oder ihm muss die CONTROL-Berechtigung für den Endpunkt erteilt worden sein.  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird ein zuvor erstellter Endpunkt namens `sql_endpoint` entfernt.  
@@ -66,7 +66,7 @@ DROP ENDPOINT endPointName
 DROP ENDPOINT sql_endpoint;  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [CREATE ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/create-endpoint-transact-sql.md)   
  [ALTER ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-endpoint-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  

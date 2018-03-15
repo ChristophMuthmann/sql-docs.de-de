@@ -1,5 +1,5 @@
 ---
-title: "Löschen der EXTERNEN Datenquelle (Transact-SQL) | Microsoft Docs"
+title: DROP EXTERNAL DATA SOURCE (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -26,10 +26,10 @@ ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="drop-external-data-source-transact-sql"></a>Löschen der EXTERNEN Datenquelle (Transact-SQL)
+# <a name="drop-external-data-source-transact-sql"></a>DROP EXTERNAL DATA SOURCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
-  Entfernt eine externe Datenquelle PolyBase an.  
+  Entfernt eine externe PolyBase-Datenquelle.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,33 +43,33 @@ DROP EXTERNAL DATA SOURCE external_data_source_name
   
 ## <a name="arguments"></a>Argumente  
  *external_data_source_name*  
- Der Name der externen Datenquelle zu löschen.  
+ Der Name der zu entfernenden externen Datenquelle.  
   
 ## <a name="metadata"></a>Metadaten  
- Verwenden Sie zum Anzeigen einer Liste von externen Daten Quellen sys.external_data_sources-Systemsicht.  
+ Verwenden Sie die Systemansicht sys.external_data_sources, um eine Liste mit externen Datenquellen anzuzeigen.  
   
 ```  
 SELECT * FROM sys.external_data_sources;  
 ```  
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert ALTER jede externe Datenquelle.  
+ Erfordert ALTER ANY EXTERNAL DATA SOURCE.  
   
 ## <a name="locking"></a>Sperren  
- Akzeptiert eine gemeinsame Sperre für das Quellobjekt für den externen Daten.  
+ Akzeptiert eine gemeinsame Sperre für das externe Datenquellenobjekt.  
   
 ## <a name="general-remarks"></a>Allgemeine Hinweise  
- Löschen einer externen Datenquelle werden die externen Daten nicht entfernt werden.  
+ Durch das Löschen einer externen Datenquelle werden die externen Daten nicht entfernt.  
   
 ## <a name="examples"></a>Beispiele  
   
-### <a name="a-using-basic-syntax"></a>A. Verwenden die grundlegende syntax  
+### <a name="a-using-basic-syntax"></a>A. Verwenden einer grundlegenden Syntax  
   
 ```  
 DROP EXTERNAL DATA SOURCE mydatasource;  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md)  
   
   

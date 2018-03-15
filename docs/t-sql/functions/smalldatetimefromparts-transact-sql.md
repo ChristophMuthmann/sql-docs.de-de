@@ -1,5 +1,5 @@
 ---
-title: SMALLDATETIMEFROMPARTS (Transact-SQL) | Microsoft Docs
+title: SMALLDATETIMEFROMPARTS (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="smalldatetimefromparts-transact-sql"></a>SMALLDATETIMEFROMPARTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-  Gibt eine **Smalldatetime** Wert für das angegebene Datum und die Uhrzeit.  
+  Gibt einen **smalldatetime**-Wert für das angegebene Datum und die Uhrzeit zurück.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,28 +45,28 @@ SMALLDATETIMEFROMPARTS ( year, month, day, hour, minute )
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *Jahr*  
+ *year*  
  Ganzzahliger Ausdruck, der ein Jahr angibt.  
   
- *Monat*  
+ *month*  
  Ganzzahliger Ausdruck, der einen Monat angibt.  
   
- *Tag*  
+ *day*  
  Ganzzahliger Ausdruck, der einen Tag angibt.  
   
- *Stunde*  
+ *hour*  
  Ganzzahliger Ausdruck, der die Stunden angibt.  
   
- *Minute*  
+ *minute*  
  Ganzzahliger Ausdruck, der die Minuten angibt.  
   
 ## <a name="return-types"></a>Rückgabetypen  
  **smalldatetime**  
   
-## <a name="remarks"></a>Hinweise  
- Diese Funktion verhält sich wie einen Konstruktor für einen vollständig initialisierten **Smalldatetime** Wert. Wenn die Argumente nicht gültig sind, wird ein Fehler ausgegeben. Wenn erforderliche Argumente den Wert NULL haben, wird NULL zurückgegeben.  
+## <a name="remarks"></a>Remarks  
+ Diese Funktion dient als Konstruktor für einen vollständig initialisierten **smalldatetime**-Wert. Wenn die Argumente nicht gültig sind, wird ein Fehler ausgegeben. Wenn erforderliche Argumente den Wert NULL haben, wird NULL zurückgegeben.  
   
- Diese Funktion kann remote auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]-Servern oder höher ausgeführt werden. Es ist nicht Remoteausführung auf Servern, auf denen eine Version unter [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ Diese Funktion kann remote auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]-Servern oder höher ausgeführt werden. Eine Remoteausführung auf Servern mit einer Version vor [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ist nicht möglich.  
   
 ## <a name="examples"></a>Beispiele  
   

@@ -1,5 +1,5 @@
 ---
-title: ORDER BY-Klausel (Transact-SQL) | Microsoft Docs
+title: ORDER BY-Klausel (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 12/13/2017
 ms.prod: sql-non-specified
@@ -52,19 +52,19 @@ ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="select---order-by-clause-transact-sql"></a>Wählen SIE - ORDER BY-Klausel (Transact-SQL)
+# <a name="select---order-by-clause-transact-sql"></a>SELECT - ORDER BY-Klausel (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Sortiert die von einer Abfrage zurückgegebene Daten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Verwenden Sie diese Klausel, um:  
+  Sortiert von einer Abfrage in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zurückgegebene Daten. Verwenden Sie diese Klausel wie folgt:  
   
 -   Sortieren Sie das Resultset einer Abfrage anhand der angegebenen Spaltenliste und schränken Sie optional die für einen angegebenen Bereich zurückgegebenen Zeilen ein. Die Reihenfolge, in der Zeilen in einem Resultset zurückgegeben werden, ist nicht garantiert, es sei denn, eine ORDER BY-Klausel wird angegeben.  
   
--   Bestimmt die Reihenfolge, in der [rangfolgefunktion](../../t-sql/functions/ranking-functions-transact-sql.md) Werte werden auf das Resultset angewendet.  
+-   Bestimmen Sie die Reihenfolge, in der Werte der [Rangfolgenfunktion](../../t-sql/functions/ranking-functions-transact-sql.md) auf das Resultset angewendet werden.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 > [!NOTE]  
->  ORDER BY wird nicht unterstützt, wählen Sie im / in oder erstellen Sie Tabelle AS auswählen (CTAS)-Anweisungen in [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] oder [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
+>  ORDER BY wird in SELECT/INTO- oder CREATE TABLE AS SELECT (CTAS)-Anweisungen in [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] oder [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] nicht unterstützt.
 
 ## <a name="syntax"></a>Syntax  
   
@@ -105,40 +105,40 @@ ORDER BY order_by_expression
   
  Die Spaltennamen, auf die in der ORDER BY-Klausel verwiesen wird, müssen entweder einer Spalte in der Auswahlliste oder einer Spalte aus einer Tabelle in der FROM-Klausel entsprechen, ohne dass dabei Zweideutigkeiten zulässig sind.  
   
- COLLATE *Collation_name*  
- Gibt an, dass die ORDER BY-Vorgang soll, entsprechend der im angegebenen Sortierung ausgeführt werden *Collation_name*, und nicht gemäß der Sortierung der Spalte in der Tabelle oder Sicht definiert. *Collation_name* kann entweder ein Windows-Sortierungsname oder ein SQL-Sortierungsname sein. Weitere Informationen finden Sie unter [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md). COLLATE ist nur für Spalten vom Typ **Char**, **Varchar**, **Nchar**, und **Nvarchar**.  
+ COLLATE *collation_name*  
+ Gibt an, dass der ORDER BY-Vorgang gemäß der in *collation_name* angegebenen Sortierung und nicht gemäß der in der Tabelle oder Sicht definierten Sortierung der Spalte ausgeführt werden soll. *collation_name* kann entweder der Name einer Windows-Sortierreihenfolge oder ein SQL-Sortierungsname sein. Weitere Informationen finden Sie unter [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md). COLLATE ist nur für Spalten vom Typ **char**, **varchar**, **nchar** und **nvarchar** anwendbar.  
   
  **ASC** | DESC  
  Gibt an, dass die Werte in der angegebenen Spalte in aufsteigender oder absteigender Reihenfolge sortiert werden sollen. ASC sortiert vom niedrigsten Wert zum höchsten Wert. DESC sortiert vom höchsten Wert zum niedrigsten Wert. ASC ist die Standardsortierreihenfolge. NULL-Werte werden als die niedrigsten Werte behandelt, die möglich sind.  
   
- OFFSET { *Integer_constant* | *Offset_row_count_expression* } {Zeile | ZEILEN}  
+ OFFSET { *integer_constant* | *offset_row_count_expression* } { ROW | ROWS }  
  Gibt die Anzahl der Zeilen an, die übersprungen werden soll, bevor Zeilen vom Abfrageausdruck zurückgegeben werden. Der Wert kann eine ganzzahlige Konstante oder ein Ausdruck größer oder gleich 0 sein.  
   
-**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].s  
+**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
- *Offset_row_count_expression* kann einer Variablen, Parameter oder Konstanten skalaren Unterabfrage sein. Bei einer Unterabfrage sind keine Verweise auf Spalten möglich, die im äußeren Abfragebereich definiert wurden. Dies bedeutet, das keine Korrelation mit der äußeren Abfrage möglich ist.  
+ *offset_row_count_expression* kann eine Variable, ein Parameter oder eine konstante skalare Unterabfrage sein. Bei einer Unterabfrage sind keine Verweise auf Spalten möglich, die im äußeren Abfragebereich definiert wurden. Dies bedeutet, das keine Korrelation mit der äußeren Abfrage möglich ist.  
   
  ROW und ROWS sind Synonyme und werden mit ANSI-Kompatibilität bereitgestellt.  
   
- In Abfrageausführungsplänen wird der Wert für die offsetzeilenanzahl angezeigt, der **Offset** -Attribut des TOP-Abfrageoperators.  
+ In Abfrageausführungsplänen wird der Wert für die Offsetzeilenanzahl im **Offset**-Attribut des TOP-Abfrageoperators angezeigt.  
   
- ABRUFEN VON {ERSTE | NÄCHSTE} { *Integer_constant* | *Fetch_row_count_expression* } {Zeile | } NUR ZEILEN  
+ FETCH { FIRST | NEXT } { *integer_constant* | *fetch_row_count_expression* } { ROW | ROWS } ONLY  
  Gibt die Anzahl der Zeilen an, die zurückgegeben werden sollen, nachdem die OFFSET-Klausel verarbeitet wurde. Der Wert kann eine ganzzahlige Konstante oder ein Ausdruck größer oder gleich 1 sein.  
   
-**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
- *Fetch_row_count_expression* kann einer Variablen, Parameter oder Konstanten skalaren Unterabfrage sein. Bei einer Unterabfrage sind keine Verweise auf Spalten möglich, die im äußeren Abfragebereich definiert wurden. Dies bedeutet, das keine Korrelation mit der äußeren Abfrage möglich ist.  
+ *fetch_row_count_expression* kann eine Variable, ein Parameter oder eine konstante skalare Unterabfrage sein. Bei einer Unterabfrage sind keine Verweise auf Spalten möglich, die im äußeren Abfragebereich definiert wurden. Dies bedeutet, das keine Korrelation mit der äußeren Abfrage möglich ist.  
   
  FIRST und NEXT sind Synonyme und werden mit ANSI-Kompatibilität bereitgestellt.  
   
  ROW und ROWS sind Synonyme und werden mit ANSI-Kompatibilität bereitgestellt.  
   
- In Abfrageausführungsplänen wird der Wert für die offsetzeilenanzahl angezeigt, der **Zeilen** oder **oben** -Attribut des TOP-Abfrageoperators.  
+ In Abfrageausführungsplänen wird der Wert für die Offsetzeilenanzahl im Attribut **Rows** oder **Top** des TOP-Abfrageoperators angezeigt.  
   
 ## <a name="best-practices"></a>Bewährte Methoden  
- Geben Sie in der ORDER BY-Klausel keine ganzen Zahlen als Positionsangaben der Spalten in der Auswahlliste an. Auch wenn eine Anweisung wie `SELECT ProductID, Name FROM Production.Production ORDER BY 2` nicht ungültig ist, wird dadurch im Vergleich zur Angabe des tatsächlichen Spaltennamens das Verständnis durch andere erschwert. Außerdem ändert sich in der select-Liste, z. B. das Ändern der Spaltenreihenfolge oder neue Spalten hinzufügen, erfordert das Ändern der ORDER BY-Klausel, um unerwartete Ergebnisse zu vermeiden.  
+ Geben Sie in der ORDER BY-Klausel keine ganzen Zahlen als Positionsangaben der Spalten in der Auswahlliste an. Auch wenn eine Anweisung wie `SELECT ProductID, Name FROM Production.Production ORDER BY 2` nicht ungültig ist, wird dadurch im Vergleich zur Angabe des tatsächlichen Spaltennamens das Verständnis durch andere erschwert. Außerdem erfordern Änderungen an der Auswahlliste, etwa eine Änderung der Spaltenreihenfolge oder das Hinzufügen neuer Spalten, auch Änderungen an der ORDER BY-Klausel, um unerwartete Ergebnisse zu vermeiden.  
   
- In einer SELECT TOP (*N*)-Anweisung immer eine ORDER BY-Klausel verwenden. Dies ist die einzige Möglichkeit, zuverlässig anzugeben, welche Zeilen von TOP betroffen sind. Weitere Informationen finden Sie unter [nach oben &#40; Transact-SQL &#41; ](../../t-sql/queries/top-transact-sql.md).  
+ Verwenden Sie in einer SELECT TOP (*N*)-Anweisung immer eine ORDER BY-Klausel. Dies ist die einzige Möglichkeit, zuverlässig anzugeben, welche Zeilen von TOP betroffen sind. Weitere Informationen finden Sie unter [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md).  
   
 ## <a name="interoperability"></a>Interoperabilität  
  Wenn sie mit einer SELECT...INTO-Anweisung zum Einfügen von Zeilen aus einer anderen Quelle verwendet wird, garantiert die ORDER BY-Klausel nicht, dass die Zeilen in der angegebenen Reihenfolge eingefügt werden.  
@@ -148,9 +148,9 @@ ORDER BY order_by_expression
 ## <a name="limitations-and-restrictions"></a>Einschränkungen  
  Die Anzahl der Spalten in der ORDER BY-Klausel ist nicht begrenzt. Die Gesamtgröße der Spalten, die in einer ORDER BY-Klausel angegeben wurden, darf jedoch 8.060 Bytes nicht übersteigen.  
   
- Spalten vom Typ **Ntext**, **Text**, **Image**, **Geography**, **Geometrie**, und  **XML** kann nicht in einer ORDER BY-Klausel verwendet werden.  
+ Spalten vom Typ **ntext**, **text**, **image**, **geography**, **geometry** und **xml** können nicht in einer ORDER BY-Klausel verwendet werden.  
   
- Eine ganze Zahl oder Konstante nicht angegeben, wann *Order_by_expression* in einer rangfolgefunktion angezeigt wird. Weitere Informationen finden Sie unter [Klausel "OVER" &#40; Transact-SQL &#41; ](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ Eine Ganzzahl oder Konstante kann nicht angegeben werden, wenn *order_by_expression* in einer Rangfolgefunktion angezeigt wird. Weitere Informationen finden Sie unter [OVER-Klausel &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
  Wenn Tabellennamen in der FROM-Klausel ein Alias zugeordnet ist, können nur die Aliasnamen verwendet werden, um ihre Spalten in der ORDER BY-Klausel anzugeben.  
   
@@ -164,9 +164,9 @@ ORDER BY order_by_expression
   
 -   SELECT DISTINCT  
   
- Darüber hinaus, wenn die Anweisung eine UNION enthält, EXCEPT oder INTERSECT-Operator, Spaltennamen oder Spaltenaliasnamen in der Auswahlliste der ersten (linken) Abfrage angegeben werden müssen.  
+ Wenn die Anweisung einen UNION-, EXCEPT- oder INTERSECT-Operator enthält, gilt außerdem, dass die Spaltennamen oder Spaltenaliasnamen in der Auswahlliste der ersten (linken) Abfrage angegeben werden müssen.  
   
- In einer Abfrage, die die Operatoren UNION, EXCEPT oder INTERSECT verwendet, wird ORDER BY nur am Ende der Anweisung zugelassen. Diese Einschränkung gilt nur für auf, wenn Sie angeben UNION, EXCEPT und INTERSECT in einer Abfrage der obersten Ebene nicht in einer Unterabfrage. Weitere Informationen finden Sie im Abschnitt "Beispiele" weiter unten.  
+ In einer Abfrage, die die Operatoren UNION, EXCEPT oder INTERSECT verwendet, wird ORDER BY nur am Ende der Anweisung zugelassen. Diese Einschränkung ist nur gültig, wenn UNION, EXCEPT und INTERSECT in einer Abfrage der obersten Ebene verwendet werden, nicht in einer Unterabfrage. Weitere Informationen finden Sie im Abschnitt "Beispiele" weiter unten.  
   
  Die ORDER BY-Klausel ist in Sichten, Inlinefunktionen, abgeleiteten Tabellen und Unterabfragen nicht gültig, es sei denn, die TOP- oder die OFFSET- und die FETCH-Klausel werden ebenfalls angegeben. Wenn ORDER BY in diesen Objekten verwendet wird, werden mit der Klausel nur die Zeilen bestimmt, die von der TOP-Klausel oder von der OFFSET- und der FETCH-Klausel zurückgegeben werden. Durch die ORDER BY-Klausel wird keine bestimmte Ergebnisreihenfolge bei der Abfrage dieser Konstrukte sichergestellt, es sei denn, in der Abfrage selbst ist ebenfalls ORDER BY angegeben.  
   
@@ -187,27 +187,27 @@ ORDER BY order_by_expression
   
  Wenn Sie OFFSET und FETCH als Auslagerungslösung verwenden, muss die Abfrage einmal für jede "Seite" der Daten ausgeführt werden, die an die Clientanwendung zurückgegebenen werden. Um beispielsweise die Ergebnisse der Abfrage in Schritten von 10 Zeilen zurückzugeben, müssen Sie die Abfrage einmal ausführen, damit die Zeilen 1 bis 10 zurückgegeben werden. Wenn Sie die Abfrage erneut ausführen, werden die Zeilen 11 bis 20 zurückgegeben usw. Jede Abfrage ist unabhängig und weist keinen Bezug zur anderen auf. Dies bedeutet, dass im Gegensatz zur Verwendung eines Cursors, bei dem die Abfrage einmal ausgeführt und der Status auf dem Server beibehalten wird, die Clientanwendung für das Nachverfolgen des Status zuständig ist. Um stabile Ergebnisse zwischen Abfrageanforderungen mit OFFSET und FETCH zu erreichen, müssen die folgenden Bedingungen erfüllt werden:  
   
-1.  Die zugrunde liegenden Daten, die von der Abfrage verwendet werden, dürfen sich nicht ändern. Dies bedeutet, dass die von der Abfrage erfassten Zeilen nicht aktualisiert werden oder alle Anforderungen für Seiten von der Abfrage mit einer Momentaufnahme in einer einzelnen Transaktion oder einer serialisierbare Transaktionsisolationsstufe ausgeführt werden. Weitere Informationen zu diesen Transaktionsisolationsstufen finden Sie unter [SET TRANSACTION ISOLATION LEVEL &#40; Transact-SQL &#41; ](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
+1.  Die zugrunde liegenden Daten, die von der Abfrage verwendet werden, dürfen sich nicht ändern. Dies bedeutet, dass die von der Abfrage erfassten Zeilen nicht aktualisiert werden oder alle Anforderungen für Seiten von der Abfrage mit einer Momentaufnahme in einer einzelnen Transaktion oder einer serialisierbare Transaktionsisolationsstufe ausgeführt werden. Weitere Informationen zu Transaktionsisolationsstufen finden Sie unter [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
   
 2.  Die ORDER BY-Klausel enthält eine Spalte oder eine Kombination von Spalten, die garantiert nur einmal vorhanden sind.  
   
  Weitere Informationen finden Sie im Beispiel "Ausführen von mehreren Abfragen in einer einzelnen Transaktion" im Abschnitt "Beispiele" weiter unten in diesem Thema.  
   
- Wenn konsistente Ausführungspläne in der Auslagerungslösung wichtig sind, können Sie den OPTIMIZE FOR-Abfragehinweis für den OFFSET-Parameter und den FETCH-Parameter verwenden. Weitere Informationen finden Sie unter "Angeben von Ausdrücken für OFFSET- und FETCH-Werten" im Abschnitt "Beispiele" weiter unten in diesem Thema. Weitere Informationen zu OPTIMZE FOR finden Sie unter [Abfragehinweise &#40; Transact-SQL &#41; ](../../t-sql/queries/hints-transact-sql-query.md).  
+ Wenn konsistente Ausführungspläne in der Auslagerungslösung wichtig sind, können Sie den OPTIMIZE FOR-Abfragehinweis für den OFFSET-Parameter und den FETCH-Parameter verwenden. Weitere Informationen finden Sie unter "Angeben von Ausdrücken für OFFSET- und FETCH-Werten" im Abschnitt "Beispiele" weiter unten in diesem Thema. Weitere Informationen zu OPTIMZE FOR finden Sie unter [Abfragehinweise &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md).  
   
 ## <a name="examples"></a>Beispiele  
   
 |Kategorie|Funktionssyntaxelemente|  
 |--------------|------------------------------|  
-|[Grundlegende syntax](#BasicSyntax)|ORDER BY|  
-|[Angeben der auf- und absteigender Reihenfolge](#SortOrder)|DESC • ASC|  
+|[Grundlegende Syntax](#BasicSyntax)|ORDER BY|  
+|[Angeben der auf- und absteigenden Sortierreihenfolge](#SortOrder)|DESC • ASC|  
 |[Angeben einer Sortierung](#Collation)|COLLATE|  
 |[Angeben einer bedingten Reihenfolge](#Case)|CASE-Ausdruck|  
-|[Verwenden von ORDER BY in einer rangfolgefunktion](#Rank)|Rangfolgefunktionen|  
-|[Beschränken der Anzahl von Zeilen zurückgegeben](#Offset)|OFFSET • FETCH|  
+|[Verwenden von ORDER BY in einer Rangfolgefunktion](#Rank)|Rangfolgefunktionen|  
+|[Beschränken der Anzahl der zurückgegebenen Zeilen](#Offset)|OFFSET • FETCH|  
 |[Verwenden von ORDER BY mit UNION, EXCEPT und INTERSECT](#Union)|UNION|  
   
-###  <a name="BasicSyntax"></a>Grundlegende syntax  
+###  <a name="BasicSyntax"></a> Grundlegende Syntax  
  Anhand von Beispielen in diesem Abschnitt wird die grundlegende Funktion der ORDER BY-Klausel mithilfe der mindestens erforderlichen Syntax veranschaulicht.  
   
 #### <a name="a-specifying-a-single-column-defined-in-the-select-list"></a>A. Angeben einer einzelnen Spalte, die in der Auswahlliste definiert ist  
@@ -258,7 +258,7 @@ ORDER BY DATEPART(year, HireDate);
   
 ```  
   
-###  <a name="SortOrder"></a>Angeben der auf- und absteigender Sortierreihenfolge  
+###  <a name="SortOrder"></a> Angeben der auf- und absteigenden Sortierreihenfolge  
   
 #### <a name="a-specifying-a-descending-order"></a>A. Angeben einer absteigenden Reihenfolge  
  Im folgenden Beispiel wird das Resultset anhand der numerischen `ProductID`-Spalte in absteigender Reihenfolge sortiert.  
@@ -272,8 +272,8 @@ ORDER BY ProductID DESC;
   
 ```  
   
-#### <a name="b-specifying-an-ascending-order"></a>B. Angeben einen aufsteigenden Reihenfolge  
- Im folgenden Beispiel wird das Resultset anhand der `Name`-Spalte in aufsteigender Reihenfolge sortiert. Die Zeichen alphabetisch und nicht numerisch sortiert. Das heißt, 10 steht in der Sortierreihenfolge vor 2.  
+#### <a name="b-specifying-an-ascending-order"></a>B. Angeben einer aufsteigenden Reihenfolge  
+ Im folgenden Beispiel wird das Resultset anhand der `Name`-Spalte in aufsteigender Reihenfolge sortiert. Die Zeichen sind alphabetisch und nicht numerisch sortiert. Das heißt, 10 steht in der Sortierreihenfolge vor 2.  
   
 ```  
 USE AdventureWorks2012;  
@@ -296,7 +296,7 @@ ORDER BY FirstName ASC, LastName DESC ;
   
 ```  
   
-###  <a name="Collation"></a>Angeben einer Sortierung  
+###  <a name="Collation"></a> Angeben einer Sortierung  
  Im folgenden Beispiel wird gezeigt, wie sich die Reihenfolge, in der die Abfrageergebnisse zurückgegeben werden, durch Angeben einer Sortierung in der ORDER BY-Klausel ändern kann. Es wird eine Tabelle mit einer Spalte erstellt, bei deren Sortierung weder die Groß- und Kleinschreibung beachtet noch nach Akzent unterschieden wird. Werte werden mit Groß- und Kleinschreibung sowie unterschiedlichen Akzenten eingefügt. Da in der ORDER BY-Klausel keine Sortierung angegeben wurde, wird von der ersten Abfrage die Sortierung der Spalte beim Sortieren der Werte verwendet. In der zweiten Abfrage wird in der ORDER BY-Klausel eine Sortierung angegeben, bei der die Groß- und Kleinschreibung beachtet und Akzente unterschieden werden; dadurch ändert sich die Reihenfolge, in der die Zeilen zurückgegeben werden.  
   
 ```  
@@ -317,8 +317,8 @@ ORDER BY name COLLATE Latin1_General_CS_AS;
   
 ```  
   
-###  <a name="Case"></a>Angeben einer bedingten Reihenfolge  
- Die folgenden Beispiele verwenden den CASE-Ausdruck in einer ORDER BY-Klausel, um die Sortierreihenfolge der Zeilen auf Grundlage eines angegebenen Spaltenwerts bedingt zu bestimmen. Im ersten Beispiel wird der Wert in der `SalariedFlag`-Spalte der `HumanResources.Employee`-Tabelle ausgewertet. Mitarbeiter, deren `SalariedFlag` auf 1 festgelegt wurde, werden nach `BusinessEntityID` in absteigender Folge zurückgegeben. Mitarbeiter, deren `SalariedFlag` auf 0 festgelegt wurde, werden nach `BusinessEntityID` in aufsteigender Folge zurückgegeben. Im zweiten Beispiel wird das Resultset nach der `TerritoryName`-Spalte sortiert, wenn die `CountryRegionName`-Spalte gleich 'United States' ist, und bei allen anderen Zeilen nach `CountryRegionName`.  
+###  <a name="Case"></a> Angeben einer bedingten Reihenfolge  
+ In den folgenden Beispielen wird der CASE-Ausdruck in einer ORDER BY-Klausel verwendet, um die Sortierreihenfolge der Zeilen auf Grundlage eines angegebenen Spaltenwerts bedingt zu bestimmen. Im ersten Beispiel wird der Wert in der `SalariedFlag`-Spalte der `HumanResources.Employee`-Tabelle ausgewertet. Mitarbeiter, deren `SalariedFlag` auf 1 festgelegt wurde, werden nach `BusinessEntityID` in absteigender Folge zurückgegeben. Mitarbeiter, deren `SalariedFlag` auf 0 festgelegt wurde, werden nach `BusinessEntityID` in aufsteigender Folge zurückgegeben. Im zweiten Beispiel wird das Resultset nach der `TerritoryName`-Spalte sortiert, wenn die `CountryRegionName`-Spalte gleich 'United States' ist, und bei allen anderen Zeilen nach `CountryRegionName`.  
   
 ```  
 SELECT BusinessEntityID, SalariedFlag  
@@ -338,7 +338,7 @@ ORDER BY CASE CountryRegionName WHEN 'United States' THEN TerritoryName
   
 ```  
   
-###  <a name="Rank"></a>Verwenden von ORDER BY in einer rangfolgefunktion  
+###  <a name="Rank"></a> Verwenden von ORDER BY in einer Rangfolgefunktion  
  Im folgenden Beispiel wird die ORDER BY-Klausel in den Rangfolgefunktionen ROW_NUMBER, RANK, DENSE_RANK und NTILE verwendet.  
   
 ```  
@@ -359,10 +359,10 @@ WHERE TerritoryID IS NOT NULL AND SalesYTD <> 0;
   
 ```  
   
-###  <a name="Offset"></a>Beschränken der Anzahl von Zeilen zurückgegeben  
+###  <a name="Offset"></a> Beschränken der Anzahl der zurückgegebenen Zeilen  
  In den folgenden Beispielen wird die Anzahl der Zeilen, die von einer Abfrage zurückgegeben werden, mit OFFSET und FETCH eingeschränkt.  
   
-**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
 #### <a name="a-specifying-integer-constants-for-offset-and-fetch-values"></a>A. Angeben von ganzzahligen Konstanten für OFFSET- und FETCH-Werte  
  Im folgenden Beispiel wird eine ganzzahlige Konstante als Wert für die OFFSET- und die FETCH-Klausel angegeben. Die erste Abfrage gibt alle Zeilen nach der `DepartmentID`-Spalte sortiert zurück. Vergleichen Sie die von dieser Abfrage zurückgegebenen Ergebnisse mit denen der beiden folgenden Abfragen. In der folgenden Abfrage werden mit der `OFFSET 5 ROWS`-Klausel die ersten 5 Zeilen übersprungen und alle verbleibenden Zeilen zurückgegeben. In der letzten Abfrage wird mit der `OFFSET 0 ROWS`-Klausel bei der ersten Zeile begonnen, und anschließend wird mit `FETCH NEXT 10 ROWS ONLY` die Anzahl der zurückgegebenen Zeilen vom sortierten Resultset auf 10 begrenzt.  
@@ -489,7 +489,7 @@ GO
   
 ```  
   
-###  <a name="Union"></a>Verwenden von ORDER BY mit UNION, EXCEPT und INTERSECT  
+###  <a name="Union"></a> Verwenden von ORDER BY mit UNION, EXCEPT und INTERSECT  
  Wenn eine Abfrage die Operatoren UNION, EXCEPT oder INTERSECT verwendet, muss die ORDER BY-Klausel am Ende der Anweisung angegeben werden, und die Ergebnissen der kombinierten Abfragen werden sortiert. Im folgenden Beispiel werden alle Produkte zurückgegeben, die rot oder gelb sind, und die kombinierte Liste wird anhand der Spalte `ListPrice` sortiert.  
   
 ```  
@@ -507,8 +507,8 @@ ORDER BY ListPrice ASC;
   
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- Das folgende Beispiel veranschaulicht ein Resultset nach der numerischen Reihenfolge `EmployeeKey` Spalte in aufsteigender Reihenfolge.  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
+ Das folgende Beispiel veranschaulicht ein Resultset sortiert nach der numerischen `EmployeeKey`-Spalte in aufsteigender Reihenfolge.  
   
 ```  
 -- Uses AdventureWorks  
@@ -518,7 +518,7 @@ WHERE LastName LIKE 'A%'
 ORDER BY EmployeeKey;  
 ```  
   
- Das folgende Beispiel ordnet ein Resultset nach der numerischen `EmployeeKey` Spalte in absteigender Reihenfolge.  
+ Im folgenden Beispiel wird ein Resultset anhand der numerischen `EmployeeKey`-Spalte in absteigender Reihenfolge sortiert.  
   
 ```  
 -- Uses AdventureWorks  
@@ -528,7 +528,7 @@ WHERE LastName LIKE 'A%'
 ORDER BY EmployeeKey DESC;  
 ```  
   
- Das folgende Beispiel ordnet einem Ergebnissatz durch die `LastName` Spalte.  
+ Im folgenden Beispiel wird das Resultset anhand der `LastName`-Spalte sortiert.  
   
 ```  
 -- Uses AdventureWorks  
@@ -538,7 +538,7 @@ WHERE LastName LIKE 'A%'
 ORDER BY LastName;  
 ```  
   
- Das folgende Beispiel Aufträge nach zwei Spalten. Diese Abfrage werden zuerst in aufsteigender Reihenfolge nach sortiert die `FirstName` Spalte und dann sortiert allgemeine `FirstName` Werte in absteigender Reihenfolge nach der `LastName` Spalte.  
+ Im folgenden Beispiel wird das Resultset anhand von zwei Spalten sortiert. In dieser Abfrage wird zuerst nach der `FirstName`-Spalte in aufsteigender Reihenfolge sortiert, und anschließend werden `FirstName`-Werte nach der `LastName`-Spalte in absteigender Reihenfolge sortiert.  
   
 ```  
 -- Uses AdventureWorks  
@@ -548,14 +548,14 @@ WHERE LastName LIKE 'A%'
 ORDER BY LastName, FirstName;  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Ausdrücke &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)   
- [Rangfolge Funktionen &#40; Transact-SQL &#41;](../../t-sql/functions/ranking-functions-transact-sql.md)   
+ [Rangfolgefunktionen &#40;Transact-SQL&#41;](../../t-sql/functions/ranking-functions-transact-sql.md)   
  [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md)   
  [Abfragehinweise (Transact-SQL)](../../t-sql/queries/hints-transact-sql-query.md)   
- [Mit Ausnahme von und INTERSECT &#40; Transact-SQL &#41;](../../t-sql/language-elements/set-operators-except-and-intersect-transact-sql.md)   
+ [EXCEPT und INTERSECT &#40;Transact-SQL&#41;](../../t-sql/language-elements/set-operators-except-and-intersect-transact-sql.md)   
  [UNION &#40;Transact-SQL&#41;](../../t-sql/language-elements/set-operators-union-transact-sql.md)   
  [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)  
   

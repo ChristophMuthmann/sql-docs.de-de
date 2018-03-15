@@ -1,5 +1,5 @@
 ---
-title: "OGC-Methoden für Geometry-Instanzen | Microsoft Docs"
+title: "OGC-Methoden für geometry-Instanzen | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -31,7 +31,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="ogc-methods-on-geometry-instances"></a>OGC-Methoden für geomety-Instanzen
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]unterstützt die Open Geospatial Consortium (OGC)-Methoden für Geometry-Instanzen.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt die Open Geospatial Consortium (OGC)-Methoden für geometry-Instanzen.  
   
  Weitere Informationen zu den OGC-Spezifikationen finden Sie in den folgenden Themen:  
   
@@ -59,9 +59,9 @@ ms.lasthandoff: 01/25/2018
   
 -   [STCrosses](../../t-sql/spatial-geometry/stcrosses-geometry-data-type.md)  
   
--   [STCurveN &#40; Geometry-Datentyp &#41;](../../t-sql/spatial-geometry/stcurven-geometry-data-type.md)  
+-   [STCurve &#40;geometry-Datentyp&#41;](../../t-sql/spatial-geometry/stcurven-geometry-data-type.md)  
   
--   [STCurveToLine &#40; Geometry-Datentyp &#41;](../../t-sql/spatial-geometry/stcurvetoline-geometry-data-type.md)  
+-   [STCurveToLine &#40;geometry-Datentyp&#41;](../../t-sql/spatial-geometry/stcurvetoline-geometry-data-type.md)  
   
 -   [STDifference](../../t-sql/spatial-geometry/stdifference-geometry-data-type.md)  
   
@@ -133,9 +133,9 @@ ms.lasthandoff: 01/25/2018
   
 -   [STY](../../t-sql/spatial-geometry/sty-geometry-data-type.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Erweiterte Methoden für Geometry-Instanzen](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)   
- [Statische Geometry-Methoden des OGC](../../t-sql/spatial-geometry/ogc-static-geometry-methods.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Erweiterte Methoden für geometry-Instanzen](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)   
+ [Statische geometry-Methoden des OGC](../../t-sql/spatial-geometry/ogc-static-geometry-methods.md)   
  [Erweiterte statische geometry-Methoden](../../t-sql/spatial-geometry/extended-static-geometry-methods.md)  
   
   

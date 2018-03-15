@@ -1,5 +1,5 @@
 ---
-title: "Verfügbarkeitsgruppe REVOKE-Berechtigungen (Transact-SQL) | Microsoft Docs"
+title: "Aufheben von Verfügbarkeitsgruppenberechtigungen mit REVOKE (Transact-SQL) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="revoke-availability-group-permissions-transact-sql"></a>Aufheben von Verfügbarkeitsgruppenberechtigungen mit REVOKE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  Hebt Berechtigungen für eine Always On-verfügbarkeitsgruppe. 
+  Hebt Berechtigungen für eine Always On-Verfügbarkeitsgruppe auf. 
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -56,13 +56,13 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *Berechtigung*  
+ *permission*  
  Gibt eine Berechtigung an, die für eine Verfügbarkeitsgruppe aufgehoben werden kann. Eine Liste der Berechtigungen finden Sie im Abschnitt zu den Hinweisen weiter unten in diesem Thema.  
   
- FÜR die VERFÜGBARKEITSGRUPPE **::***Availability_group_name*  
- Gibt die Verfügbarkeitsgruppe an, für die die Berechtigung aufgehoben wird. Der bereichsqualifizierer (**::**) ist erforderlich.  
+ ON AVAILABILITY GROUP **::***availability_group_name*  
+ Gibt die Verfügbarkeitsgruppe an, für die die Berechtigung aufgehoben wird. Der Bereichsqualifizierer (**::**) ist erforderlich.  
   
- {AUS | AN} \<Server_principal > Gibt die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anmeldung, die für die die Berechtigung aufgehoben wird.  
+ { FROM | TO } \<server_principal> Gibt den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldenamen an, dessen Berechtigung aufgehoben wird.  
   
  *SQL_Server_login*  
  Gibt einen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldenamen an.  
@@ -91,10 +91,10 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
  AS *SQL_Server_login*  
  Gibt den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldenamen an, von dem der Prinzipal, der diese Abfrage ausführt, sein Recht zum Aufheben der Berechtigung ableitet.  
   
-## <a name="remarks"></a>Hinweise  
- Berechtigungen im Serverbereich können nur, wenn die aktuelle Datenbank ist gesperrt werden **master**.  
+## <a name="remarks"></a>Remarks  
+ Berechtigungen im Serverbereich können nur aufgehoben werden, wenn **master** als aktuelle Datenbank verwendet wird.  
   
- Informationen zu Verfügbarkeitsgruppen werden in der [availability_groups &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md) -Katalogsicht angezeigt. Informationen zu Serverberechtigungen werden in der [server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) -Katalogsicht und Informationen zu serverprinzipalen werden in der [Sys. server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) -Katalogsicht angezeigt.  
+ Informationen zu Verfügbarkeitsgruppen sind in der [sys.availability_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md)-Katalogsicht sichtbar. Informationen zu Serverberechtigungen sind in der Katalogsicht [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) sichtbar, Informationen zu Serverprinzipalen sind in der Katalogsicht [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) sichtbar.  
   
  Eine Verfügbarkeitsgruppe ist ein sicherungsfähiges Element auf Serverebene. Die spezifischsten und restriktivsten Berechtigungen, die für eine Verfügbarkeitsgruppe aufgehoben werden können, sind unten aufgeführt. Auch die allgemeineren Berechtigungen sind aufgeführt, die diese implizit enthalten.  
   
@@ -131,7 +131,7 @@ GO
 ```  
   
 ### <a name="c-revoking-a-previously-granted-with-grant-option-clause"></a>C. Aufheben einer zuvor mit der WITH GRANT OPTION-Klausel erteilten Berechtigung  
- Wenn eine Berechtigung mit der WITH GRANT OPTION erteilt wurde, verwenden Sie REVOKE GRANT OPTION FOR... So entfernen Sie die WITH GRANT OPTION Im folgenden Beispiel wird die Berechtigung erteilt, und dann wird der WITH GRANT-Teil der Berechtigung entfernt.  
+ Wenn eine Berechtigung mit der WITH GRANT OPTION erteilt wurde, verwenden Sie die REVOKE GRANT OPTION FOR ... um die WITH GRANT OPTION zu entfernen. Im folgenden Beispiel wird die Berechtigung erteilt, und dann wird der WITH GRANT-Teil der Berechtigung entfernt.  
   
 ```  
 USE master;  
@@ -143,11 +143,11 @@ CASCADE
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Erteilen von Verfügbarkeitsgruppenberechtigungen &#40; Transact-SQL &#41;](../../t-sql/statements/grant-availability-group-permissions-transact-sql.md)   
- [Verweigern von Verfügbarkeitsgruppenberechtigungen &#40; Transact-SQL &#41;](../../t-sql/statements/deny-availability-group-permissions-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [GRANT (Verfügbarkeitsgruppenberechtigungen) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-availability-group-permissions-transact-sql.md)   
+ [DENY (Verfügbarkeitsgruppenberechtigungen) &#40;Transact-SQL&#41;](../../t-sql/statements/deny-availability-group-permissions-transact-sql.md)   
  [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-availability-group-transact-sql.md)   
- [availability_groups &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md)   
+ [sys.availability_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md)   
  [Katalogsichten Always On-Verfügbarkeitsgruppen &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)   
  [Berechtigungen &#40;Datenbankmodul&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [Prinzipale &#40;Datenbankmodul&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)  

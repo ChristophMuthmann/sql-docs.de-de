@@ -1,5 +1,5 @@
 ---
-title: "Erklären Sie (Transact-SQL) | Microsoft Docs"
+title: EXPLAIN (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 08/09/2017
 ms.prod: sql-non-specified
@@ -27,9 +27,9 @@ ms.lasthandoff: 01/25/2018
 # <a name="explain-transact-sql"></a>EXPLAIN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  Gibt den Abfrageplan für eine [!INCLUDE[ssDW](../../includes/ssdw-md.md)] [!INCLUDE[DWsql](../../includes/dwsql-md.md)] -Anweisung ohne die Anweisung ausführen. Verwendung **Erklärung** Preview, welche Vorgänge die datenverschiebung erfordern, und die geschätzten Kosten der Abfragevorgänge anzeigen.  
+  Gibt den Abfrageplan für eine [!INCLUDE[ssDW](../../includes/ssdw-md.md)] [!INCLUDE[DWsql](../../includes/dwsql-md.md)]-Anweisung an, ohne die Anweisung auszuführen. Verwenden Sie **EXPLAIN**, um eine Vorschau der Vorgänge zu erhalten, die Datenverschiebungen erfordern, und um die ungefähren Kosten der Abfragevorgänge anzuzeigen.  
   
- Weitere Informationen zu Abfragen finden Sie unter "Grundlegendes zu Abfragepläne" in der [!INCLUDE[pdw-product-documentation_md](../../includes/pdw-product-documentation-md.md)].  
+ Weitere Informationen zu Abfrageplänen finden Sie unter „Understanding Query Plans“ (Informationen zu Abfrageplänen) in der [!INCLUDE[pdw-product-documentation_md](../../includes/pdw-product-documentation-md.md)].  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -41,15 +41,15 @@ EXPLAIN SQL_statement
   
 ## <a name="arguments"></a>Argumente  
  *SQL_statement*  
- Die [!INCLUDE[DWsql](../../includes/dwsql-md.md)] Anweisung auf dem **Erklärung** wird ausgeführt. *SQL_statement* kann einen der folgenden Befehle: **wählen**, **einfügen**, **UPDATE**, **löschen**,  **Wählen Sie erstellen für Tabelle als**, **CREATE REMOTE TABLE**.  
+ Die [!INCLUDE[DWsql](../../includes/dwsql-md.md)]-Anweisung, auf der **EXPLAIN** ausgeführt wird. *SQL_statement* kann einer der folgenden Befehle sein: **SELECT**, **INSERT**, **UPDATE**, **DELETE**, **CREATE TABLE AS SELECT**, **CREATE REMOTE TABLE**.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert die **SHOWPLAN** Berechtigung und die Berechtigung zum Ausführen von *SQL_statement*. Finden Sie unter [Berechtigungen: GRANT, DENY, REVOKE &#40; Azure SQL Datawarehouse, Parallel Datawarehouse &#41; ](../../t-sql/statements/permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse.md).  
+ Erfordert die **SHOWPLAN**-Berechtigung und die Berechtigung zum Ausführen von *SQL_statement*. Weitere Informationen finden Sie unter [Permissions: GRANT, DENY, REVOKE &#40;Azure SQL Data Warehouse, Parallel Data Warehouse&#41; (Berechtigungen: GRANT, DENY, REVOKE &#40;Azure SQL Data Warehouse, Parallel Data Warehouse&#41;)](../../t-sql/statements/permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse.md).  
   
 ## <a name="return-value"></a>Rückgabewert  
- Der Rückgabewert der **Erklärung** Befehl ist ein XML-Dokument mit der Struktur unten angezeigt. Dieses XML-Dokument enthält alle Vorgänge im Abfrageplan für die angegebene Abfrage, die jede eingeschlossen, durch die `<dsql_operation>` Tag. Der Rückgabewert ist vom Typ **nvarchar(max)**.  
+ Der Rückgabewert des Befehls **EXPLAIN** ist ein XML-Dokument mit der unten gezeigten Struktur. Dieses XML-Dokument listet alle Vorgänge im Abfrageplan für die angegebene Abfrage auf, die alle durch den Tag `<dsql_operation>` eingeschlossen werden. Der Typ des Rückgabewerts ist **nvarchar(max)**.  
   
- Der zurückgegebene Abfrageplan Steuerelementansicht sequenzielle SQL-Anweisungen; Beim Ausführen der Abfrage kann es parallelisierte Vorgänge umfassen, damit einige der sequenziellen Anweisungen gezeigt zur gleichen Zeit ausgeführt werden kann.  
+ Der zurückgegebene Abfrageplan zeigt sequenzielle SQL-Anweisungen. Das Ausführen der Abfrage kann parallelisierte Vorgänge erfordern, weshalb einige der angezeigten sequenziellen Anweisungen möglicherweise zur gleichen Zeit ausgeführt werden.  
   
 ```  
 \<?xml version="1.0" encoding="utf-8"?>  
@@ -65,35 +65,35 @@ EXPLAIN SQL_statement
 </dsql_query>  
 ```  
   
- Die XML-Tags werden diese Informationen enthalten:  
+ Die XML-Tags enthalten folgende Informationen:  
   
 |XML Tag|Zusammenfassungen, Attribute und Inhalt|  
 |-------------|--------------------------------------|  
-|\<dsql_query>|Oberste Ebene/Dokumentelement.|
-|\<sql>|Als Echo *SQL_statement*.|  
-|\<params>|Dieses Tag ist zu diesem Zeitpunkt nicht verwendet.|  
-|\<dsql_operations>|Fasst zusammen und enthält die Abfrageschritte für die und Kosteninformationen für die Abfrage enthält. Enthält auch alle von der `<dsql_operation>` blockiert. Dieses Tag enthält Informationen zur Anzahl für die gesamte Abfrage:<br /><br /> `<dsql_operations total_cost=total_cost total_number_operations=total_number_operations>`<br /><br /> *Grenzwerte* die geschätzte Gesamtzeit für die Abfrage in Millisekunden ausgeführt wird.<br /><br /> *Total_number_operations* ist die Gesamtanzahl von Vorgängen für die Abfrage. Ein Vorgang, der parallelisiert wird, und führen Sie auf mehreren Knoten wird als einzelner Vorgang gezählt.|  
-|\<dsql_operation>|Beschreibt einen einzelnen Vorgang innerhalb des Abfrageplans. Die \<Dsql_operation >-Tag enthält den Vorgangstyp als Attribut:<br /><br /> `<dsql_operation operation_type=operation_type>`<br /><br /> *Operation_type* ist einer der Werte in den [Abfragen von Daten (SQL Server PDW)](http://msdn.microsoft.com/en-us/3f4f5643-012a-4c36-b5ec-691c4bbe668c).<br /><br /> Der Inhalt der `\<dsql_operation>` Block ist abhängig von den Vorgangstyp.<br /><br /> Finden Sie in der folgenden Tabelle aus.|  
+|\<dsql_query>|Element auf der obersten Ebene/Dokumentelement.|
+|\<sql>|Wiederholt *sql_statement*.|  
+|\<params>|Dieses Tag wird zu diesem Zeitpunkt nicht verwendet.|  
+|\<dsql_operations>|Enthält Abfrageschritte, fasst diese zusammen und enthält Informationen zu den Kosten der Abfrage. Enthält auch alle `<dsql_operation>`-Blöcke. Dieses Tag enthält Informationen zur Anzahl für die gesamte Abfrage:<br /><br /> `<dsql_operations total_cost=total_cost total_number_operations=total_number_operations>`<br /><br /> *total_cost* ist die geschätzte Gesamtzeit für die Ausführung der Abfrage in Millisekunden.<br /><br /> *total_number_operations* ist die Gesamtzahl von Vorgängen in einer Abfrage. Ein Vorgang, der parallelisiert wird und auf mehreren Knoten ausgeführt wird, wird als einzelner Vorgang gezählt.|  
+|\<dsql_operation>|Beschreibt einen einzelnen Vorgang innerhalb des Abfrageplans. Das Tag \<dsql_operation> enthält den Vorgangstyp als Attribut:<br /><br /> `<dsql_operation operation_type=operation_type>`<br /><br /> *operation_type* ist einer der Vorgänge, der in [Querying Data (SQL Server PDW) (Abfragen von Daten (SQL Server PDW))](http://msdn.microsoft.com/en-us/3f4f5643-012a-4c36-b5ec-691c4bbe668c) beschrieben wird.<br /><br /> Der Inhalt des `\<dsql_operation>`-Blocks ist abhängig vom Vorgangstyp.<br /><br /> Siehe Tabelle unten.|  
   
 |Vorgangstyp|Inhalt|Beispiel|  
 |--------------------|-------------|-------------|  
-|BROADCAST_MOVE, DISTRIBUTE_REPLICATED_TABLE_MOVE MASTER_TABLE_MOVE, PARTITION_MOVE, SHUFFLE_MOVE und TRIM_MOVE|`<operation_cost>`Element mit diesen Attributen. Berücksichtigt nur den lokalen Vorgang:<br /><br /> -   *Kosten* sind die Kosten für die lokalen Operator und zeigt die geschätzte Zeit für den Vorgang zum Ausführen in ms.<br />-   *Accumulative_cost* ist die Summe aller betrachtete Vorgänge im Plan einschließlich addierten Werte für parallele Vorgänge in ms.<br />-   *Average_rowsize* ist die geschätzte durchschnittliche Zeilengröße (in Byte) von Zeilen abgerufen, und übergeben während des Vorgangs.<br />-   *Output_rows* ist die Ausgabe (Knoten) Kardinalität und zeigt die Anzahl der Ausgabezeilen.<br /><br /> `<location>`: Der Knoten oder Verteilungen, in dem der Vorgang wiederholt werden soll. Optionen sind: "Control", "ComputeNode", "AllComputeNodes", "AllDistributions", "SubsetDistributions", "Vertrieb" und "SubsetNodes".<br /><br /> `<source_statement>`: Die Quelldaten für die zufällige verschieben.<br /><br /> `<destination_table>`: Die interne temporäre Tabelle werden in die Daten verschoben werden.<br /><br /> `<shuffle_columns>`: (Gilt nur für SHUFFLE_MOVE Vorgänge). Eine oder mehrere Spalten, die als verteilungsspalten für die temporäre Tabelle verwendet werden.|`<operation_cost cost="40" accumulative_cost="40" average_rowsize = "50" output_rows="100"/>`<br /><br /> `<location distribution="AllDistributions" />`<br /><br /> `<source_statement type="statement">SELECT [TableAlias_3b77ee1d8ccf4a94ba644118b355db9d].[dist_date] FROM [qatest].[dbo].[flyers] [TableAlias_3b77ee1d8ccf4a94ba644118b355db9d]       </source_statement>`<br /><br /> `<destination_table>Q_[TEMP_ID_259]_[PARTITION_ID]</destination_table>`<br /><br /> `<shuffle_columns>dist_date;</shuffle_columns>`|  
-|CopyOperation|`<operation_cost>`: Finden Sie unter `<operation_cost>` oben.<br /><br /> `<DestinationCatalog>`: Der Zielknoten oder Knoten.<br /><br /> `<DestinationSchema>`: Das Zielschema in Zielkatalog.<br /><br /> `<DestinationTableName>`: Der Name der Zieltabelle oder "TableName".<br /><br /> `<DestinationDatasource>`: Der Name oder die Verbindungszeichenfolge der Informationen für die Ziel-Datenquelle.<br /><br /> `<Username>`und `<Password>`: Diese Felder anzugeben, dass Benutzername und Kennwort für das Ziel möglicherweise erforderlich.<br /><br /> `<BatchSize>`: Die Batchgröße für den Kopiervorgang.<br /><br /> `<SelectStatement>`: Die select-Anweisung verwendet, um die Kopie auszuführen.<br /><br /> `<distribution>`: Die Verteilung, in dem der Kopiervorgang ausgeführt wird.|`<operation_cost cost="0" accumulative_cost="0" average_rowsize="4" output_rows="1" />`<br /><br /> `<DestinationCatalog>master</DestinationCatalog>`<br /><br /> `<DestinationSchema>dbo</DestinationSchema>`<br /><br /> `<DestinationTableName>[TableName]</DestinationTableName>`<br /><br /> `<DestinationDatasource>localhost, 8080</DestinationDatasource>`<br /><br /> `<Username>...</Username>`<br /><br /> `<Password>...</Password>`<br /><br /> `<BatchSize>6000</BatchSize>`<br /><br /> `<SelectStatement>SELECT T1_1.c1 AS c1 FROM [qatest].[dbo].[gigs] AS T1_1</SelectStatement>`<br /><br /> `<distribution>ControlNode</distribution>`|  
+|BROADCAST_MOVE, DISTRIBUTE_REPLICATED_TABLE_MOVE, MASTER_TABLE_MOVE, PARTITION_MOVE, SHUFFLE_MOVE und TRIM_MOVE|`<operation_cost>`-Element mit diesen Attributen. Die Werte spiegeln nur den lokalen Vorgang wieder:<br /><br /> -   *cost* sind die Kosten für den lokalen Operator und zeigen die geschätzte Zeit für die Ausführung des Vorgangs in Millisekunden an.<br />-   *accumulative_cost* ist die Summe aller betrachteten Vorgänge im Plan einschließlich der addierten Werte für parallele Vorgänge in Millisekunden.<br />-   *average_rowsize* ist die geschätzte durchschnittliche Zeilengröße von Zeilen (in Byte), die während des Vorgangs abgerufen und übergeben werden.<br />-   *output_rows* ist die Ausgabekardinalität (Knoten) und zeigt die Anzahl der ausgegebenen Zeilen an.<br /><br /> `<location>`: Die Knoten oder Verteilungen, in denen der Vorgang stattfindet. Optionen sind: „Control“, „ComputeNode“, „AllComputeNodes“, „AllDistributions“, „SubsetDistributions“, „Distribution“ und „SubsetNodes“.<br /><br /> `<source_statement>`: Die Quelldaten für die zufällige Verschiebung.<br /><br /> `<destination_table>`: Die interne temporäre Tabelle, in die die Daten verschoben werden.<br /><br /> `<shuffle_columns>`: (Gilt nur für SHUFFLE_MOVE-Vorgänge). Eine oder mehrere Spalten, die als Verteilungsspalten für die temporäre Tabelle verwendet werden.|`<operation_cost cost="40" accumulative_cost="40" average_rowsize = "50" output_rows="100"/>`<br /><br /> `<location distribution="AllDistributions" />`<br /><br /> `<source_statement type="statement">SELECT [TableAlias_3b77ee1d8ccf4a94ba644118b355db9d].[dist_date] FROM [qatest].[dbo].[flyers] [TableAlias_3b77ee1d8ccf4a94ba644118b355db9d]       </source_statement>`<br /><br /> `<destination_table>Q_[TEMP_ID_259]_[PARTITION_ID]</destination_table>`<br /><br /> `<shuffle_columns>dist_date;</shuffle_columns>`|  
+|CopyOperation|`<operation_cost>`: Siehe `<operation_cost>` weiter oben.<br /><br /> `<DestinationCatalog>`: Der oder die Zielknoten.<br /><br /> `<DestinationSchema>`: Das Zielschema in DestinationCatalog.<br /><br /> `<DestinationTableName>`: Name der Zieltabelle oder „TableName“.<br /><br /> `<DestinationDatasource>`: Der Name oder die Verbindungsinformationen für die Zieldatenquelle.<br /><br /> `<Username>` und `<Password>`: Diese Felder geben an, dass möglicherweise Benutzername und Kennwort für das Ziel erforderlich sind.<br /><br /> `<BatchSize>`: Die Batchgröße für den Kopiervorgang.<br /><br /> `<SelectStatement>`: Die SELECT-Anweisung, die zum Ausführen der Kopie verwendet wird.<br /><br /> `<distribution>`: Die Verteilung, an der die Kopie ausgeführt wird.|`<operation_cost cost="0" accumulative_cost="0" average_rowsize="4" output_rows="1" />`<br /><br /> `<DestinationCatalog>master</DestinationCatalog>`<br /><br /> `<DestinationSchema>dbo</DestinationSchema>`<br /><br /> `<DestinationTableName>[TableName]</DestinationTableName>`<br /><br /> `<DestinationDatasource>localhost, 8080</DestinationDatasource>`<br /><br /> `<Username>...</Username>`<br /><br /> `<Password>...</Password>`<br /><br /> `<BatchSize>6000</BatchSize>`<br /><br /> `<SelectStatement>SELECT T1_1.c1 AS c1 FROM [qatest].[dbo].[gigs] AS T1_1</SelectStatement>`<br /><br /> `<distribution>ControlNode</distribution>`|  
 |MetaDataCreate_Operation|`<source_table>`: Die Quelltabelle für den Vorgang.<br /><br /> `<destionation_table>`: Die Zieltabelle für den Vorgang.|`<source_table>databases</source_table>`<br /><br /> `<destination_table>MetaDataCreateLandingTempTable</destination_table>`|  
-|ON|`<location>`: Finden Sie unter `<location>` oben.<br /><br /> `<sql_operation>`: Gibt die SQL-Befehl, der auf einem Knoten ausgeführt werden.|`<location permanent="false" distribution="AllDistributions">Compute</location>`<br /><br /> `<sql_operation type="statement">CREATE TABLE [tempdb].[dbo]. [Q_[TEMP_ID_259]]_ [PARTITION_ID]]]([dist_date] DATE) WITH (DISTRIBUTION = HASH([dist_date]),) </sql_operation>`|  
-|RemoteOnOperation|`<DestinationCatalog>`: Der Zielkatalog.<br /><br /> `<DestinationSchema>`: Das Zielschema in Zielkatalog.<br /><br /> `<DestinationTableName>`: Der Name der Zieltabelle oder "TableName".<br /><br /> `<DestinationDatasource>`: Der Name der Ziel-Datenquelle.<br /><br /> `<Username>`und `<Password>`: Diese Felder anzugeben, dass Benutzername und Kennwort für das Ziel möglicherweise erforderlich.<br /><br /> `<CreateStatement>`: Der Table-Anweisung der Erstellung für die Zieldatenbank.|`<DestinationCatalog>master</DestinationCatalog>`<br /><br /> `<DestinationSchema>dbo</DestinationSchema>`<br /><br /> `<DestinationTableName>TableName</DestinationTableName>`<br /><br /> `<DestinationDatasource>DestDataSource</DestinationDatasource>`<br /><br /> `<Username>...</Username>`<br /><br /> `<Password>...</Password>`<br /><br /> `<CreateStatement>CREATE TABLE [master].[dbo].[TableName] ([col1] BIGINT) ON [PRIMARY] WITH(DATA_COMPRESSION=PAGE);</CreateStatement>`|  
+|ON|`<location>`: Siehe `<location>` weiter oben.<br /><br /> `<sql_operation>`: Identifiziert den SQL-Befehl, der auf einem Knoten ausgeführt wird.|`<location permanent="false" distribution="AllDistributions">Compute</location>`<br /><br /> `<sql_operation type="statement">CREATE TABLE [tempdb].[dbo]. [Q_[TEMP_ID_259]]_ [PARTITION_ID]]]([dist_date] DATE) WITH (DISTRIBUTION = HASH([dist_date]),) </sql_operation>`|  
+|RemoteOnOperation|`<DestinationCatalog>`: Der Zielkatalog.<br /><br /> `<DestinationSchema>`: Das Zielschema in DestinationCatalog.<br /><br /> `<DestinationTableName>`: Name der Zieltabelle oder „TableName“.<br /><br /> `<DestinationDatasource>`: Der Name der Zieldatenquelle.<br /><br /> `<Username>` und `<Password>`: Diese Felder geben an, dass möglicherweise Benutzername und Kennwort für das Ziel erforderlich sind.<br /><br /> `<CreateStatement>`: Die Anweisung zum Erstellen der Tabelle für die Zieldatenbank.|`<DestinationCatalog>master</DestinationCatalog>`<br /><br /> `<DestinationSchema>dbo</DestinationSchema>`<br /><br /> `<DestinationTableName>TableName</DestinationTableName>`<br /><br /> `<DestinationDatasource>DestDataSource</DestinationDatasource>`<br /><br /> `<Username>...</Username>`<br /><br /> `<Password>...</Password>`<br /><br /> `<CreateStatement>CREATE TABLE [master].[dbo].[TableName] ([col1] BIGINT) ON [PRIMARY] WITH(DATA_COMPRESSION=PAGE);</CreateStatement>`|  
 |RETURN|`<resultset>`: Der Bezeichner für das Resultset.|`<resultset>RS_19</resultset>`|  
 |RND_ID|`<identifier>`: Der Bezeichner für das erstellte Objekt.|`<identifier>TEMP_ID_260</identifier>`|  
   
 ## <a name="limitations-and-restrictions"></a>Einschränkungen  
- **Erklären Sie** angewendet werden können, um *optimierbarer* Abfragen nur Abfragen, die verbessert oder geändert werden können basierend auf den Ergebnissen des ein **ERLÄUTERN** Befehl. Die unterstützten **Erklärung** Befehle sind oben aufgeführt. Bei dem Versuch, verwenden Sie **Erklärung** mit einer Abfrage mit nicht unterstützten Typ entweder einen Fehler zurück oder echo die Abfrage.  
+ **EXPLAIN** kann nur auf *optimierbare* Abfragen angewendet werden. Dies sind Abfragen, die auf Basis der Ergebnisse eines **EXPLAIN**-Befehls verbessert oder geändert werden können. Die unterstützten **EXPLAIN**-Befehle sind oben aufgeführt. Der Versuch, **EXPLAIN** mit einem nicht unterstützen Abfragetyp zu verwenden, führt entweder zu einem Fehler oder wiederholt die Abfrage.  
   
- **Erklären Sie** wird in einer Benutzertransaktion nicht unterstützt.  
+ **EXPLAIN** wird in einer Benutzertransaktion nicht unterstützt.  
   
 ## <a name="examples"></a>Beispiele  
- Das folgende Beispiel zeigt eine **Erklärung** Befehl ausführen, auf eine **wählen** -Anweisung und das XML-Ergebnis.  
+ Das folgende Beispiel zeigt einen **EXPLAIN**-Befehl, der in einer **SELECT**-Anweisung ausgeführt wird, sowie das XML-Ergebnis.  
   
- **Senden einer EXPLAIN-Anweisung**  
+ **Übermitteln einer EXPLAIN-Anweisung**  
   
  Der übermittelte Befehl in diesem Beispiel lautet:  
   
@@ -118,21 +118,21 @@ EXPLAIN
 GO  
 ```  
   
- Nach der Ausführung der Anweisung mit der **Erklärung** Option, die Registerkarte "Message" stellt eine einzelne Zeile mit dem Titel **erläutern**, und den XML-Text ab `\<?xml version="1.0" encoding="utf-8"?>` klicken Sie auf der öffnen Sie des gesamten Texts in XML-Code ein XML-Fenster. Um die folgenden Kommentare besser zu verstehen, sollten Sie die Anzeige von Zeilennummern im SSDT aktivieren.  
+ Nach der Ausführung der Anweisung mit der **EXPLAIN**-Option zeigt die Registerkarte „Message“ (Meldung) eine einzelne Zeile mit dem Titel **explain** an, die mit dem XML-Text `\<?xml version="1.0" encoding="utf-8"?>` beginnt. Klicken Sie auf die XML, um den gesamten Text in einem XML-Fenster zu öffnen. Um die folgenden Kommentare besser zu verstehen, sollten Sie die Anzeige von Zeilennummern in SSDT aktivieren.  
   
 #### <a name="to-turn-on-line-numbers"></a>So aktivieren Sie Zeilennummern  
   
-1.  Mit der Ausgabe angezeigt werden der **erläutern** Registerkarte SSDT, die **TOOLS** klicken Sie im Menü **Optionen**.  
+1.  Wenn die Ausgabe auf der SSDT-Registerkarte **explain** angezeigt wird, wählen Sie im Menü **TOOLS** **Options** (Optionen) aus.  
   
-2.  Erweitern Sie die **Texteditor** Abschnitt, erweitern Sie **XML**, und klicken Sie dann auf **allgemeine**.  
+2.  Erweitern Sie den Abschnitt **Text-Editor** sowie **XML**, und klicken Sie anschließend auf **General** (Allgemein).  
   
-3.  In der **Anzeige** Bereich Kontrollkästchen **Zeilennummern**.  
+3.  Überprüfen Sie im Bereich **Anzeige** die **Zeilennummern**.  
   
 4.  Klicken Sie auf **OK**.  
   
- **Beispielausgabe für die Erklärung**  
+ **Beispiel EXPLAIN-Ausgabe**  
   
- Das XML-Ergebnis der **Erklärung** Befehl mit Zeilennummern aktiviert ist:  
+ Das XML-Ergebnis des **EXPLAIN**-Befehls mit aktivierten Zeilennummern lautet:  
   
 ```  
 1  \<?xml version="1.0" encoding="utf-8"?>  
@@ -282,31 +282,31 @@ GO
   
 ```  
   
- **Bedeutung der Ausgabe erklären**  
+ **Bedeutung der EXPLAIN-Ausgabe**  
   
- Die oben angezeigten Ausgabe enthält 144 nummerierte Zeilen. Die Ausgabe dieser Abfrage kann sich geringfügig unterscheiden. Die folgende Liste beschreibt wichtige Abschnitte.  
+ Die oben angezeigte Ausgabe enthält 144 nummerierte Zeilen. Ihre Ausgabe für diese Abfrage kann sich geringfügig unterscheiden. Die folgende Liste beschreibt wichtige Abschnitte.  
   
 -   Zeilen 3 bis 16 enthalten eine Beschreibung der Abfrage, die analysiert wird.  
   
--   Zeile 17, gibt an, dass die Gesamtanzahl von Vorgängen 9 ist. Sie können ermittelt den Beginn jedes Vorgangs durch die Suche nach den Wörtern **Dsql_operation**.  
+-   Zeile 17 gibt an, dass die Gesamtanzahl von Vorgängen 9 ist. Sie können den Beginn jeder Operation ermitteln, indem Sie nach den Worten **dsql_operation** suchen.  
   
--   Zeile 18 startet 1-Vorgang. Linien 18 und 19 darauf hinweisen, dass eine **RND_ID** Vorgang erstellt eine zufällige ID-Nummer, die für eine Beschreibung des Objekts verwendet werden. Das Objekt in der Ausgabe, die oben beschriebenen **TEMP_ID_16893**. Ihre wird unterschiedlich sein.  
+-   Zeile 18 startet Vorgang 1. Zeilen 18 und 19 weisen darauf hin, dass ein **RND_ID**-Vorgang eine zufällige ID erstellt, die für eine Objektbeschreibung verwendet wird. Das Objekt, das in der Ausgabe beschrieben wird, ist **TEMP_ID_16893**. Sie werden eine andere Zahl erhalten.  
   
--   Zeile 20 startet 2-Vorgang. Zeilen 21 bis 25: Klicken Sie auf allen Serverknoten, erstellen Sie eine temporäre Tabelle namens **TEMP_ID_16893**.  
+-   Zeile 20 startet Vorgang 2. Zeilen 21 bis 25: Erstellen temporärer Tabellen mit dem Namen **TEMP_ID_16893** auf allen Computeknoten.  
   
--   Zeile 26 startet 3-Vorgang. Zeilen 27 bis 37: Verschieben von Daten auf **TEMP_ID_16893** mithilfe einer broadcast verschieben. An jede Serverknoten gesendete Abfrage wird bereitgestellt. Zeile 37 gibt an, die Zieltabelle ist **TEMP_ID_16893**.  
+-   Zeile 26 startet Vorgang 3. Zeilen 27 bis 37: Verschieben von Daten mittels externer Übertragung nach **TEMP_ID_16893**. Die an jeden Computeknoten gesendete Abfrage ist angegeben. Zeile 37 gibt an, dass die Zieltabelle **TEMP_ID_16893** ist.  
   
--   Zeile 38 wird die 4-Vorgang gestartet. Zeilen 39 bis 40: eine Zufalls-ID für eine Tabelle erstellen. **TEMP_ID_16894** ist die ID-Nummer im obigen Beispiel. Ihre wird unterschiedlich sein.  
+-   Zeile 38 startet Vorgang 4. Zeilen 39 bis 40: Erstellen einer zufälligen ID für eine Tabelle. **TEMP_ID_16894** ist die ID im oben gezeigten Beispiel. Sie werden eine andere Zahl erhalten.  
   
--   Zeile 41 startet 5-Vorgang. Zeilen 42 bis 46: Erstellen Sie auf allen Knoten eine temporäre Tabelle namens **TEMP_ID_16894**.  
+-   Zeile 41 startet Vorgang 5. Zeilen 42 bis 46: Erstellen temporärer Tabellen mit dem Namen **TEMP_ID_16894** auf allen Computeknoten.  
   
--   Zeile 47 startet 6-Vorgang. Zeilen 48 bis 91 sein: Verschieben von Daten aus verschiedenen Tabellen (einschließlich **TEMP_ID_16893**) zu Tabelle **TEMP_ID_16894**, mithilfe einer zufälligen Verschiebevorgang. An jede Serverknoten gesendete Abfrage wird bereitgestellt. 90-Zeile gibt an, die Zieltabelle als **TEMP_ID_16894**. Zeile 91 gibt die Spalten an.  
+-   Zeile 47 startet Vorgang 6. Zeilen 48 bis 91: Verschieben von Daten aus verschiedenen Tabellen (einschließlich **TEMP_ID_16893**) in Tabelle **TEMP_ID_16894** mithilfe eines zufälligen Verschiebevorgangs. Die an jeden Computeknoten gesendete Abfrage ist angegeben. Zeile 90 gibt **TEMP_ID_16894** als Zieltabelle an. Linie 91 gibt die Spalten an.  
   
--   Zeile 92 startet 7-Vorgang. Zeilen 93 über 97: auf allen Serverknoten, löschen Sie temporäre Tabelle **TEMP_ID_16893**.  
+-   Zeile 92 startet Vorgang 7. Zeilen 93 bis 97: Löschen der temporären Tabelle **TEMP_ID_16893** auf allen Computeknoten.  
   
--   Zeile 98 startet 8-Vorgang. Zeilen 99 über 135: Ergebnisse an den Client zurückzugeben. Verwendet die Abfrage zur Verfügung gestellt, um Ergebnisse zu erhalten.  
+-   Zeile 98 startet Vorgang 8. Zeilen 99 bis 135: Zurückgeben von Ergebnissen an den Client. Verwendet die zur Verfügung gestellte Abfrage, um Ergebnisse abzurufen.  
   
--   Zeile 136 startet 9-Vorgang. Zeilen 137 bis 140: Löschen Sie temporäre Tabelle, auf allen Knoten **TEMP_ID_16894**.  
+-   Zeile 136 startet Vorgang 9. Zeilen 137 bis 140: Löschen der temporären Tabelle **TEMP_ID_16894** auf allen Knoten.  
   
   
 

@@ -1,5 +1,5 @@
 ---
-title: CREATE XML SCHEMA COLLECTION (Transact-SQL) | Microsoft Docs
+title: CREATE XML SCHEMA COLLECTION (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 11/25/2015
 ms.prod: sql-non-specified
@@ -61,12 +61,12 @@ CREATE XML SCHEMA COLLECTION [ <relational_schema>. ]sql_identifier AS Expressio
  Der SQL-Bezeichner für die XML-Schemaauflistung.  
   
  *Ausdruck*  
- Eine Zeichenfolgenkonstante oder eine skalare Variable. Ist **Varchar**, **Varbinary**, **Nvarchar**, oder **Xml** Typ.  
+ Eine Zeichenfolgenkonstante oder eine skalare Variable. Ist vom Typ **Varchar**, **Varbinary**, **Nvarchar** oder **xml**.  
   
-## <a name="remarks"></a>Hinweise  
- Sie können auch neue Namespaces auf die Auflistung oder hinzufügen neue Komponenten zu vorhandenen Namespaces in der Auflistung mit [ALTER XML SCHEMA COLLECTION](../../t-sql/statements/alter-xml-schema-collection-transact-sql.md).  
+## <a name="remarks"></a>Remarks  
+ Mithilfe von [ALTER XML SCHEMA COLLECTION](../../t-sql/statements/alter-xml-schema-collection-transact-sql.md) können Sie der Collection auch neue Namespaces bzw. vorhandenen Namespaces in der Auflistung auch neue Komponenten hinzufügen.  
   
- Verwenden Sie zum Entfernen von Sammlungen [DROP XML SCHEMA COLLECTION &#40; Transact-SQL &#41; ](../../t-sql/statements/drop-xml-schema-collection-transact-sql.md).  
+ Informationen zum Entfernen von Collections finden Sie unter [DROP XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-xml-schema-collection-transact-sql.md).  
   
 ## <a name="permissions"></a>Berechtigungen  
  Zum Erstellen von XML SCHEMA COLLECTION ist zumindest eine der folgenden Berechtigungsgruppen erforderlich:  
@@ -165,20 +165,20 @@ Set @MySchemaCollection  = N' copy the schema collection here'
 CREATE XML SCHEMA COLLECTION MyCollection AS @MySchemaCollection   
 ```  
   
- Die Variable im Beispiel ist vom Datentyp `nvarchar(max)`. Die Variable kann auch der **Xml** -Datentyp, in diesem Fall wird es implizit in eine Zeichenfolge konvertiert.  
+ Die Variable im Beispiel ist vom Datentyp `nvarchar(max)`. Möglich ist auch der Datentyp **xml**. In diesem Fall wird die Variable implizit in eine Zeichenfolge konvertiert.  
   
  Weitere Informationen finden Sie unter [Anzeigen einer gespeicherten XML-Schemaauflistung](../../relational-databases/xml/view-a-stored-xml-schema-collection.md).  
   
- Sie speichern möglicherweise-schemaauflistungen in einer **Xml** Typspalte. Führen Sie in diesem Fall Folgendes aus, um eine XML-Schemaauflistung zu erstellen:  
+ Schemaauflistungen können in einer Spalte vom Typ **xml** gespeichert werden. Führen Sie in diesem Fall Folgendes aus, um eine XML-Schemaauflistung zu erstellen:  
   
-1.  Rufen Sie die schemaauflistung aus der Spalte mithilfe einer SELECT-Anweisung, und weisen sie Sie einer Variablen des **Xml** Typ oder eine **Varchar** Typ.  
+1.  Rufen Sie die Schemaauflistung mithilfe einer SELECT-Anweisung aus der Spalte ab, und weisen Sie sie einer Variablen vom Datentyp **xml** oder **varchar** zu.  
   
 2.  Geben Sie den Variablennamen in der CREATE XML SCHEMA COLLECTION-Anweisung an.  
   
  CREATE XML SCHEMA COLLECTION speichert nur die Schemakomponenten, die SQL Server versteht; es wird nicht der gesamte Inhalt des XML-Schemas in der Datenbank gespeichert. Wenn Sie den ursprünglichen Zustand der XML-Schemaauflistung wiederherstellen möchten, sollten Sie daher Ihre XML-Schemas in einer Datenbankspalte oder in einem anderen Ordner auf dem Computer speichern.  
   
 ### <a name="b-specifying-multiple-schema-namespaces-in-a-schema-collection"></a>B. Angeben mehrerer Schemanamespaces in einer Schemaauflistung  
- Sie können mehrere XML-Schemas angeben, wenn Sie eine XML-Schemaauflistung erstellen. Beispiel:  
+ Sie können mehrere XML-Schemas angeben, wenn Sie eine XML-Schemaauflistung erstellen. Zum Beispiel:  
   
 ```  
 CREATE XML SCHEMA COLLECTION MyCollection AS N'  
@@ -236,7 +236,7 @@ GO
 ```  
   
 ### <a name="c-importing-a-schema-that-does-not-specify-a-target-namespace"></a>C. Importieren eines Schemas ohne Zielnamespaceangabe  
- Wenn ein Schema, das keine enthält eine **TargetNamespace** Attribut in einer Auflistung importiert wird, werden dessen Komponenten die leere Zeichenfolge Zielnamespace zugeordnet, wie im folgenden Beispiel gezeigt. Ist nicht mindestens ein in der Auflistung importiertes Schema zugeordnet, hat dies zur Folge, dass mehrere (potenziell unzusammenhängende) Schemakomponenten dem leeren Standard-Zeichenfolgennamespace zugeordnet werden.  
+ Falls ein Schema, das kein **targetNamespace**-Attribut enthält, in eine Collection importiert wird, werden dessen Komponenten wie im folgenden Beispiel dem Zielnamespace mit einer leeren Zeichenfolge zugeordnet. Ist nicht mindestens ein in der Auflistung importiertes Schema zugeordnet, hat dies zur Folge, dass mehrere (potenziell unzusammenhängende) Schemakomponenten dem leeren Standard-Zeichenfolgennamespace zugeordnet werden.  
   
 ```  
 -- Create a collection that contains a schema with no target namespace.  
@@ -269,7 +269,7 @@ CREATE TABLE T (Col1 xml (mySC));
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [ALTER XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-xml-schema-collection-transact-sql.md)   
  [DROP XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-xml-schema-collection-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   

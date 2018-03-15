@@ -1,5 +1,5 @@
 ---
-title: MOVE CONVERSATION (Transact-SQL) | Microsoft Docs
+title: MOVE CONVERSATION (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
@@ -55,18 +55,18 @@ MOVE CONVERSATION conversation_handle
   
 ## <a name="arguments"></a>Argumente  
  *conversation_handle*  
- Eine Variable oder Konstante mit dem Handle der Konversation, die verschoben werden soll. *Conversation_handle* muss vom Typ **"uniqueidentifier"**.  
+ Eine Variable oder Konstante mit dem Handle der Konversation, die verschoben werden soll. *conversation_handle* muss dem Typ **uniqueidentifier** entsprechen.  
   
- UM *Conversation_group_id*  
- Eine Variable oder Konstante mit dem Bezeichner der Konversationsgruppe, in die die Konversation verschoben werden soll. *Conversation_group_id* muss vom Typ **"uniqueidentifier"**.  
+ TO *conversation_group_id*  
+ Eine Variable oder Konstante mit dem Bezeichner der Konversationsgruppe, in die die Konversation verschoben werden soll. *conversation_group_id* muss dem Typ **uniqueidentifier** entsprechen.  
   
-## <a name="remarks"></a>Hinweise  
- Die MOVE CONVERSATION-Anweisung geht die Konversation, die vom angegebenen *Conversation_handle* auf die identifizierte Konversationsgruppe *Conversation_group_id*. Dialoge können nur zwischen Konversationsgruppen umgeleitet werden, die derselben Warteschlange zugeordnet sind.  
+## <a name="remarks"></a>Remarks  
+ Mit der MOVE CONVERSATION-Anweisung wird die durch *conversation_handle* angegebene Konversation in die durch *conversation_group_id* identifizierte Konversationsgruppe verschoben. Dialoge können nur zwischen Konversationsgruppen umgeleitet werden, die derselben Warteschlange zugeordnet sind.  
   
 > [!IMPORTANT]  
->  Wenn die MOVE CONVERSATION-Anweisung nicht die erste Anweisung in einem Batch oder einer gespeicherten Prozedur ist, muss die vorhergehende Anweisung mit einem Semikolon abgeschlossen werden (**;**), wird die [!INCLUDE[tsql](../../includes/tsql-md.md)] anweisungsabschlusszeichen.  
+>  Falls die MOVE CONVERSATION-Anweisung nicht die erste Anweisung in einem Batch oder einer gespeicherten Prozedur ist, muss die vorherige Anweisung mit einem Semikolon (**;**) enden, dem Abschlusszeichen für [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen.  
   
- Die MOVE CONVERSATION-Anweisung sperrt die Konversationsgruppe zugeordnete *Conversation_handle* und der Konversationsgruppe gemäß *Conversation_group_id* bis die Transaktion mit der Anweisung ein Commit oder Rollback.  
+ Mit der MOVE CONVERSATION-Anweisung werden die *conversation_handle* zugeordnete Konversationsgruppe sowie die durch *conversation_group_id* angegebene Konversationsgruppe gesperrt, bis ein Commit oder ein Rollback für die Transaktion, die die Anweisung enthält, ausgeführt wird.  
   
  MOVE CONVERSATION ist in einer benutzerdefinierten Funktion ungültig.  
   
@@ -88,8 +88,8 @@ SET @conversation_group_id =
 MOVE CONVERSATION @conversation_handle TO @conversation_group_id ;  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [BEGIN DIALOG CONVERSATION &#40; Transact-SQL &#41;](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [BEGIN DIALOG CONVERSATION &#40;Transact-SQL&#41;](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
  [GET CONVERSATION GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/get-conversation-group-transact-sql.md)   
  [END CONVERSATION &#40;Transact-SQL&#41;](../../t-sql/statements/end-conversation-transact-sql.md)   
  [sys.conversation_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-conversation-groups-transact-sql.md)   

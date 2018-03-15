@@ -1,5 +1,5 @@
 ---
-title: EXIST()-Methode (Xml-Datentyp) | Microsoft Docs
+title: exist()-Methode (xml Data Type) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
@@ -51,7 +51,7 @@ exist (XQuery)
  XQuery  
  Ein XQuery-Ausdruck, ein Zeichenfolgenliteral.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
   
 > [!NOTE]  
 >  Die **exist()** -Methode gibt 1 für den XQuery-Ausdruck zurück, der ein nicht leeres Ergebnis zurückgibt. Wenn Sie die **true()** - oder **false()** -Funktionen in der **exist()** -Methode angeben, gibt die **exist()** -Methode 1 zurück, da die Funktionen **true()** und **false()** den booleschen Wert True bzw. False zurückgeben. D. h., sie geben ein nicht leeres Ergebnis zurück. Daher gibt **exist()** den Wert 1 (True) zurück, wie im folgenden Beispiel gezeigt:  
@@ -66,7 +66,7 @@ select @x.exist('true()');
  In den folgenden Beispielen wird veranschaulicht, wie die **exist()** -Methode angegeben wird.  
   
 ### <a name="example-specifying-the-exist-method-against-an-xml-type-variable"></a>Beispiel: Angeben der exist()-Methode für eine Variable vom Typ xml  
- Im folgenden Beispiel @x ist ein **Xml** Typvariablen (nicht typisiertes Xml) und @f ist eine Ganzzahlvariable für den Typ, der den Rückgabewert von speichert die **exist()** Methode. Die **exist()** -Methode gibt True zurück (1), wenn der in der XML-Instanz gespeicherte Datumswert `2002-01-01`ist.  
+ Im folgenden Beispiel stellt @x eine Variable vom Typ **XML** dar (nicht typisiertes XML) und @f eine Variable vom Typ „Integer“, die den von der **exist()**-Methode zurückgegebenen Wert speichert. Die **exist()** -Methode gibt True zurück (1), wenn der in der XML-Instanz gespeicherte Datumswert `2002-01-01`ist.  
   
 ```  
 declare @x xml;  
@@ -80,11 +80,11 @@ select @f;
   
 -   Zum Vergleichen der Werte wird der Code `cast as xs:date?` verwendet, um die Werte in Werte vom Typ **xs:date** umzuwandeln.  
   
--   Der Wert, der die  **@Somedate**  -Attributs ist nicht typisiert. Beim Vergleichen wird der Wert implizit in den Typ auf der rechten Seite des Vergleichs, den **xs:date** -Datentyp, umgewandelt.  
+-   Der Wert des Attributs **@Somedate** ist nicht typisiert. Beim Vergleichen wird der Wert implizit in den Typ auf der rechten Seite des Vergleichs, den **xs:date** -Datentyp, umgewandelt.  
   
--   Anstelle von **cast as xs:date()**können Sie die **xs:date()** -Konstruktorfunktion verwenden. Weitere Informationen finden Sie unter [Konstruktorfunktionen &#40; XQuery &#41; ](../../xquery/constructor-functions-xquery.md).  
+-   Anstelle von **cast as xs:date()**können Sie die **xs:date()** -Konstruktorfunktion verwenden. Weitere Informationen finden Sie unter [Konstruktorfunktionen &#40;XQuery&#41;](../../xquery/constructor-functions-xquery.md).  
   
- Im folgende Beispiel ähnelt der vorherigen Abfrage, außer dass es wurde eine <`Somedate`> Element.  
+ Das folgende Beispiel ähnelt dem vorherigen Beispiel, verwendet aber ein <`Somedate`>-Element.  
   
 ```  
 DECLARE @x xml;  
@@ -96,14 +96,14 @@ SELECT @f;
   
  Beachten Sie hinsichtlich der vorherigen Abfrage Folgendes:  
   
--   Die **text()** -Methode gibt einen Textknoten zurück, der den nicht typisierten Wert `2002-01-01`enthält (Der XQuery-Typ ist **xdt: UntypedAtomic**.) Sie müssen explizit umwandeln dieser typisierten Wert von **x** auf **xsd: Date**, da das implizite Umwandeln in diesem Fall nicht unterstützt wird.  
+-   Die **text()** -Methode gibt einen Textknoten zurück, der den nicht typisierten Wert `2002-01-01`enthält (Der XQuery-Typ lautet **xdt:untypedAtomic**.) Sie müssen diesen Typ explizit von **x** in **xsd:date** umwandeln, da das implizite Umwandeln in diesem Fall nicht unterstützt wird.  
   
 ### <a name="example-specifying-the-exist-method-against-a-typed-xml-variable"></a>Beispiel: Angeben der exist()-Methode für eine typisierte xml-Variable  
  Das folgende Beispiel veranschaulicht die Verwendung der **exist()** -Methode für eine Variable vom Typ **xml** . Es handelt sich hier um eine typisierte XML-Variable, da sie den Namen des Namespace der Schemaauflistung angibt: `ManuInstructionsSchemaCollection`.  
   
- Im Beispiel mit den fertigungsanweisungen Dokument zuerst diese Variablen zugewiesen und dann die **exist()** Methode dient zum Ermitteln, ob das Dokument enthält ein <`Location`> Element, dessen **LocationID**  Attributwert lautet "50".  
+ Im Beispiel wird dieser Variablen zunächst ein Dokument mit Produktionsanweisungen zugewiesen und dann die **exist()**-Methode aufgerufen, um zu ermitteln, ob das Dokument ein <`Location`>-Element enthält, dessen Attributwert für die **LocationID** 50 beträgt.  
   
- Die **exist()** Methode, die auf die mit der @x Variable gibt 1 (True) zurück, wenn die produktionsanweisungen Dokument enthält ein <`Location`> Element mit `LocationID=50`. Anderenfalls gibt sie 0 (False) zurück.  
+ Die für die @x-Variable angegebene **exist()**-Methode gibt 1 (TRUE) zurück, wenn das Dokument mit den Produktionsanweisungen ein <`Location`>-Element mit `LocationID=50` enthält. Anderenfalls gibt sie 0 (False) zurück.  
   
 ```  
 DECLARE @x xml (Production.ManuInstructionsSchemaCollection);  
@@ -119,7 +119,7 @@ SELECT @f;
 ```  
   
 ### <a name="example-specifying-the-exist-method-against-an-xml-type-column"></a>Beispiel: Angeben der exist()-Methode für eine Spalte vom Typ xml  
- Die folgende Abfrage ruft Produktmodell-IDs, deren katalogbeschreibungen nicht die Spezifikationen enthalten <`Specifications`> Element:  
+ Die folgende Abfrage ruft Produktmodell-IDs ab, deren Katalogbeschreibungen nicht das Spezifikationselement <`Specifications`> umfassen:  
   
 ```  
 SELECT ProductModelID, CatalogDescription.query('  
@@ -139,9 +139,9 @@ WHERE CatalogDescription.exist('
   
 -   Die WHERE-Klausel wählt nur diejenigen Zeilen aus der **ProductDescription** -Tabelle aus, die die für die **CatalogDescription** -Spalte vom Typ XML angegebene Bedingung erfüllen.  
   
--   Die **exist()** Methode in die WHERE-Klausel 1 (True) zurück, wenn der XML-Code nicht einschließt <`Specifications`> Element. Beachten Sie die Verwendung der [NOT()-Funktion (XQuery)](../../xquery/functions-on-boolean-values-not-function.md).  
+-   Die **exist()**-Methode in der WHERE-Klausel gibt 1 (TRUE) zurück, wenn das XML kein <`Specifications`>-Element enthält. Beachten Sie die Verwendung der [not()-Funktion (XQuery)](../../xquery/functions-on-boolean-values-not-function.md).  
   
--   Die [SQL:Column()-Funktion (XQuery)](../../xquery/xquery-extension-functions-sql-column.md) Funktion wird verwendet, um den Wert aus einer nicht-XML-Spalte zu importieren.  
+-   Die [sql:column()-Funktion (XQuery)](../../xquery/xquery-extension-functions-sql-column.md) wird zum Einbinden eines Werts aus einer Spalte verwendet, die nicht vom Typ XML ist.  
   
 -   Diese Abfrage gibt ein leeres Rowset zurück.  
   
@@ -160,11 +160,11 @@ WHERE CatalogDescription.exist('
     ) = 1;  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Hinzufügen von Namespaces zu Abfragen mit WITH XMLNAMESPACES](../../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)   
  [Vergleichen von typisiertem XML mit nicht typisiertem XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [Erstellen von Instanzen der XML-Daten](../../relational-databases/xml/create-instances-of-xml-data.md)   
- [xml-Datentypmethoden](../../t-sql/xml/xml-data-type-methods.md)   
- [XML Data Modification Language &#40; XML DML &#41;](../../t-sql/xml/xml-data-modification-language-xml-dml.md)  
+ [XML-Datentypmethoden](../../t-sql/xml/xml-data-type-methods.md)   
+ [XML-Datenänderungssprache &#40;XML-DML&#41;](../../t-sql/xml/xml-data-modification-language-xml-dml.md)  
   
   

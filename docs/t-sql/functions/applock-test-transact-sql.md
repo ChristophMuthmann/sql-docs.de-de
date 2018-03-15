@@ -1,5 +1,5 @@
 ---
-title: APPLOCK_TEST (Transact-SQL) | Microsoft Docs
+title: APPLOCK_TEST (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -49,17 +49,17 @@ APPLOCK_TEST ( 'database_principal' , 'resource_name' , 'lock_mode' , 'lock_owne
 ```  
   
 ## <a name="arguments"></a>Argumente  
-**"** *Database_principal* **"**  
-Der Benutzer, die Rolle oder die Anwendungsrolle, dem bzw. der Berechtigungen für Objekte in einer Datenbank erteilt werden können. Der Aufrufer der Funktion muss ein Mitglied sein *Database_principal*, **Dbo**, oder die **Db_owner** festen Datenbankrollen die Funktion erfolgreich aufzurufen.
+**'** *database_principal* **'**  
+Der Benutzer, die Rolle oder die Anwendungsrolle, dem bzw. der Berechtigungen für Objekte in einer Datenbank erteilt werden können. Um eine Funktion erfolgreich aufzurufen, muss der Aufrufer der Funktion Mitglied einer der folgenden festen Datenbankrollen sein: *database_principal*, **dbo** oder **db_owner**.
   
-**"** *Resource_name* **"**  
-Der Name einer Sperrressource, der von der Clientanwendung angegeben wird. In der Anwendung muss sichergestellt sein, dass die Ressource eindeutig ist. Der angegebene Name wird intern als Hashwert in einem Wert gespeichert, der im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Sperren-Manager gespeichert werden kann. *Resource_name*ist **nvarchar(255)** hat keinen Standardwert. *Resource_name* Binärvergleich ist und die Groß-/Kleinschreibung beachtet, unabhängig von den sortierungseinstellungen der aktuellen Datenbank.
+**'** *resource_name* **'**  
+Der Name einer Sperrressource, der von der Clientanwendung angegeben wird. In der Anwendung muss sichergestellt sein, dass die Ressource eindeutig ist. Der angegebene Name wird intern als Hashwert in einem Wert gespeichert, der im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Sperren-Manager gespeichert werden kann. *resource_name* ist vom Datentyp **nvarchar(255)** und besitzt keinen Standardwert. *resource_name* unterliegt dem Binärvergleich. Daher muss die Groß-/Kleinschreibung unabhängig von den Sortierungseinstellungen der aktuellen Datenbank berücksichtigt werden.
   
-**"** *_mode* **"**  
-Der Sperrmodus, der für eine bestimmte Ressource abgerufen werden soll. *_mode* ist **nvarchar(32)** und hat keinen Standardwert. Der Wert kann eine der folgenden sein: **Shared**, **Update**, **IntentShared**, **IntentExclusive**, **exklusive** .
+**'** *lock_mode* **'**  
+Der Sperrmodus, der für eine bestimmte Ressource abgerufen werden soll. *lock_mode* ist vom Datentyp **nvarchar(32)** und verfügt nicht über einen Standardwert. Die folgenden Werte sind möglich: **Shared**, **Update**, **IntentShared**, **IntentExclusive** und **Exclusive**.
   
-**"** *Lock_owner* **"**  
-Der Besitzer der Sperre ist die *Lock_owner* Wert, der beim Anfordern der Sperre. *Lock_owner* ist **nvarchar(32)**. Der Wert kann **Transaktion** (Standard) oder **Sitzung**. Wenn Standard oder **Transaktion** explizit angegeben wird, muss APPLOCK_TEST aus innerhalb einer Transaktion ausgeführt werden.
+**'** *lock_owner* **'**  
+Der Besitzer der Sperre. Dabei handelt es sich um den Wert von *lock_owner* beim Anfordern der Sperre. *lock_owner* ist vom Datentyp **nvarchar(32)**. Der Wert kann **Transaction** (Standard) oder **Session** sein. Wird der Standard oder **Transaction** explizit angegeben, muss APPLOCK_TEST aus einer Transaktion heraus ausgeführt werden.
   
 ## <a name="return-types"></a>Rückgabetypen
 **smallint**
@@ -68,16 +68,16 @@ Der Besitzer der Sperre ist die *Lock_owner* Wert, der beim Anfordern der Sperre
 Gibt 0 zurück, wenn die Sperre dem angegebenen Besitzer nicht erteilt werden kann. Wenn die Sperre erteilt werden kann, wird 1 zurückgegeben.
   
 ## <a name="function-properties"></a>Funktionseigenschaften
-**Nicht deterministisch**
+**Nondeterministic**
   
 **Nonindexable**
   
 **Nonparallelizable**
   
 ## <a name="examples"></a>Beispiele  
-Im folgenden Beispiel zwei Benutzer (**Benutzer A** und **User B**) führen die folgende Sequenz von in getrennten Sitzungen [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisungen.
+Im folgenden Beispiel führen zwei Benutzer (**Benutzer A** und **Benutzer B**) in getrennten Sitzungen die folgende Sequenz von [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen aus.
   
-**Benutzer A** ausgeführt wird:
+**Benutzer A** führt Folgendes aus:
   
 ```sql
 USE AdventureWorks2012;  
@@ -93,7 +93,7 @@ SELECT APPLOCK_MODE('public', 'Form1', 'Transaction');
 GO  
 ```  
   
-**Benutzer B** führt dann:
+**Benutzer B** führt dann Folgendes aus:
   
 ```sql
 Use AdventureWorks2012;  
@@ -110,14 +110,14 @@ SELECT APPLOCK_TEST('public', 'Form1', 'Exclusive', 'Transaction');
 GO  
 ```  
   
-**Benutzer A** führt dann:
+**Benutzer A** führt dann Folgendes aus:
   
 ```sql
 EXEC sp_releaseapplock @Resource='Form1', @DbPrincipal='public';  
 GO  
 ```  
   
-**Benutzer B** führt dann:
+**Benutzer B** führt dann Folgendes aus:
   
 ```sql
 SELECT APPLOCK_TEST('public', 'Form1', 'Exclusive', 'Transaction');  
@@ -125,7 +125,7 @@ SELECT APPLOCK_TEST('public', 'Form1', 'Exclusive', 'Transaction');
 GO  
 ```  
   
-**Benutzer A** und **User B** beide führen:
+**Benutzer A** und **Benutzer B** führen dann Folgendes aus:
   
 ```sql
 COMMIT TRAN;  
@@ -133,8 +133,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>Siehe auch
-[APPLOCK_MODE &#40; Transact-SQL &#41;](../../t-sql/functions/applock-mode-transact-sql.md)  
-[Sp_getapplock &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-getapplock-transact-sql.md)  
-[Sp_releaseapplock &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-releaseapplock-transact-sql.md)
+[APPLOCK_MODE &#40;Transact-SQL&#41;](../../t-sql/functions/applock-mode-transact-sql.md)  
+[sp_getapplock &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-getapplock-transact-sql.md)  
+[sp_releaseapplock &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-releaseapplock-transact-sql.md)
   
   

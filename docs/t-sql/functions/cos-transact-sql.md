@@ -1,5 +1,5 @@
 ---
-title: COS (Transact-SQL) | Microsoft Docs
+title: COS (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -47,7 +47,7 @@ COS ( float_expression )
   
 ## <a name="arguments"></a>Argumente  
 *float_expression*  
-Ist ein [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) des Typs **"float"**.
+Ein [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) vom Typ **float**.
   
 ## <a name="return-types"></a>Rückgabetypen
 **float**
@@ -72,7 +72,7 @@ The COS of the angle is: -0.599465
 
 ## <a name="examples"></a>Beispiele
   
-[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]und[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 
 
 Im folgenden Beispiel wird der Kosinus des angegebenen Winkels zurückgegeben.
@@ -90,7 +90,7 @@ cosCalc1  cosCalc2
 ```
   
 ## <a name="see-also"></a>Siehe auch
-[Mathematische Funktionen &#40; Transact-SQL &#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)
+[Mathematische Funktionen &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)
   
   
 

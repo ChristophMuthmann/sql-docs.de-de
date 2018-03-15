@@ -1,5 +1,5 @@
 ---
-title: UND (Transact-SQL) | Microsoft Docs
+title: AND (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -38,7 +38,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="and-transact-sql"></a>AND (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Kombiniert zwei boolesche Ausdrücke und gibt **"true"** Wenn beide Ausdrücke sind **"true"**. Wenn in einer Anweisung mehrere logische Operatoren verwendet wird die **AND** Operatoren werden zuerst ausgewertet. Sie können die Auswertungsreihenfolge ändern, indem Sie Klammern verwenden.  
+  Kombiniert zwei boolesche Ausdrücke und gibt **TRUE** zurück, wenn beide Ausdrücke **TRUE** sind. Werden in einer Anweisung mehrere logische Operatoren verwendet, werden zuerst die **AND**-Operatoren ausgewertet. Sie können die Auswertungsreihenfolge ändern, indem Sie Klammern verwenden.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -50,7 +50,7 @@ boolean_expression AND boolean_expression
   
 ## <a name="arguments"></a>Argumente  
  *boolean_expression*  
- Ist ein beliebiger gültiger [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) , die einen booleschen Wert zurückgibt: **"true"**, **"false"**, oder **unbekannte**.  
+ Ein beliebiger gültiger [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md), der **TRUE**, **FALSE** oder **UNKNOWN** zurückgibt.  
   
 ## <a name="result-types"></a>Ergebnistypen  
  **Boolean**  
@@ -58,14 +58,14 @@ boolean_expression AND boolean_expression
 ## <a name="result-value"></a>Ergebniswert  
  Gibt TRUE zurück, wenn beide Ausdrücke TRUE sind.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Das folgende Diagramm zeigt die Ergebnisse des Vergleichs von TRUE- und FALSE-Werten mit dem AND-Operator.  
   
 ||TRUE|FALSE|UNKNOWN|  
 |------|----------|-----------|-------------|  
-|**"TRUE"**|TRUE|FALSE|UNKNOWN|  
+|**TRUE**|TRUE|FALSE|UNKNOWN|  
 |**FALSE**|FALSE|FALSE|FALSE|  
-|**UNBEKANNT**|UNKNOWN|FALSE|UNKNOWN|  
+|**UNKNOWN**|UNKNOWN|FALSE|UNKNOWN|  
   
 ## <a name="examples"></a>Beispiele  
   
@@ -100,9 +100,9 @@ ELSE PRINT 'Second Example is FALSE' ;
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Integrierte Funktionen &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
- [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [Operatoren &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)  
   

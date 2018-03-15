@@ -1,5 +1,5 @@
 ---
-title: Cursor (Transact-SQL) | Microsoft Docs
+title: cursor (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 7/23/2017
 ms.prod: sql-non-specified
@@ -33,9 +33,9 @@ ms.lasthandoff: 11/21/2017
 
 Ein Datentyp für Variablen oder für OUTPUT-Parameter von gespeicherten Prozeduren, die einen Verweis auf einen Cursor enthalten.
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
 Folgende Vorgänge können auf Variablen und Parameter vom Datentyp **cursor** verweisen:
--   Die DECLARE  *@local_variable*  und festgelegte  *@local_variable*  Anweisungen.  
+-   Die Anweisungen DECLARE *@local_variable* und SET *@local_variable*.  
 -   Die Cursoranweisungen OPEN, FETCH, CLOSE und DEALLOCATE.  
 -   Ausgabeparameter der gespeicherten Prozedur.  
 -   Die CURSOR_STATUS-Funktion.  
@@ -49,10 +49,10 @@ Der **cursor** -Datentyp kann nicht für eine Spalte in einer CREATE TABLE-Anwei
   
 ## <a name="see-also"></a>Siehe auch
 [CAST und CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
-[CURSOR_STATUS &#40; Transact-SQL &#41;](../../t-sql/functions/cursor-status-transact-sql.md)  
-[Datentypkonvertierung &#40; Datenbankmodul &#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)  
+[CURSOR_STATUS &#40;Transact-SQL&#41;](../../t-sql/functions/cursor-status-transact-sql.md)  
+[Datentypkonvertierung &#40;Datenbank-Engine&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)  
 [Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
-[Deklarieren Sie die CURSORPOSITION &#40; Transact-SQL &#41;](../../t-sql/language-elements/declare-cursor-transact-sql.md)  
+[DECLARE CURSOR &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-cursor-transact-sql.md)  
 [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)  
 [SET @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/set-local-variable-transact-sql.md)
   

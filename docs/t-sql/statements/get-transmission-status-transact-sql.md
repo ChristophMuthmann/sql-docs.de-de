@@ -1,5 +1,5 @@
 ---
-title: GET_TRANSMISSION_STATUS (Transact-SQL) | Microsoft Docs
+title: GET_TRANSMISSION_STATUS (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
@@ -55,13 +55,13 @@ GET_TRANSMISSION_STATUS ( conversation_handle )
   
 ## <a name="arguments"></a>Argumente  
  *conversation_id*  
- Bezeichnet das Konversationshandle für die Konversation. Dieser Parameter ist vom Typ **"uniqueidentifier"**.  
+ Bezeichnet das Konversationshandle für die Konversation. Der Parameter weist den Typ **uniqueidentifier** auf.  
   
 ## <a name="return-types"></a>Rückgabetypen  
  **nchar**  
   
-## <a name="remarks"></a>Hinweise  
- Gibt eine Zeichenfolge zurück, die eine Beschreibung des Status des letzten Übermittlungsversuchs für eine angegebene Konversation enthält. Eine leere Zeichenfolge zurückgegeben, wenn der letzte Übermittlungsversuch erfolgreich war, wenn noch kein Übermittlungsversuch vorgenommen wurde, oder wenn die *Conversation_handle* ist nicht vorhanden.  
+## <a name="remarks"></a>Remarks  
+ Gibt eine Zeichenfolge zurück, die eine Beschreibung des Status des letzten Übermittlungsversuchs für eine angegebene Konversation enthält. Gibt eine leere Zeichenfolge zurück, wenn der letzte Übermittlungsversuch erfolgreich war, falls noch kein Übermittlungsversuch ausgeführt wurde oder falls *conversation_handle* nicht vorhanden ist.  
   
  Die von dieser Funktion zurückgegebenen Informationen sind mit den in der last_transmission_error-Spalte der Verwaltungssicht sys.transmission_queue angezeigten Informationen identisch. Diese Funktion kann jedoch zum Suchen nach dem Übermittlungsstatus von Konversationen verwendet werden, für die zurzeit keine Meldungen in der Übermittlungswarteschlange vorhanden sind.  
   
@@ -86,8 +86,8 @@ SELECT Status =
   
  In diesem Fall ist [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] so konfiguriert, dass [!INCLUDE[ssSB](../../includes/sssb-md.md)] nicht über das Netzwerk kommunizieren darf.  
   
-## <a name="see-also"></a>Siehe auch  
- [Sys. conversation_endpoints &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-conversation-endpoints-transact-sql.md)   
- [Sys. transmission_queue &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-transmission-queue-transact-sql.md)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [sys.conversation_endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-conversation-endpoints-transact-sql.md)   
+ [sys.transmission_queue &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-transmission-queue-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: OBJECTPROPERTY (Transact-SQL) | Microsoft Docs
+title: OBJECTPROPERTY (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -38,7 +38,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="objectproperty-transact-sql"></a>OBJECTPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Gibt Informationen zu schemabezogenen Objekten in der aktuellen Datenbank zurück. Eine Liste der Objekte mit Schemabereich, finden Sie unter [sys.objects &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md). Diese Funktion kann nicht für Objekte ohne Schemabereich verwendet werden, wie z. B. DDL-Trigger (DDL, Data Definition Language) und Ereignisbenachrichtigungen.  
+  Gibt Informationen zu schemabezogenen Objekten in der aktuellen Datenbank zurück. Eine Liste der schemabezogenen Objekte finden Sie unter [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md). Diese Funktion kann nicht für Objekte ohne Schemabereich verwendet werden, wie z. B. DDL-Trigger (DDL, Data Definition Language) und Ereignisbenachrichtigungen.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -50,15 +50,15 @@ OBJECTPROPERTY ( id , property )
   
 ## <a name="arguments"></a>Argumente  
  *id*  
- Ein Ausdruck, der die ID des Objekts in der aktuellen Datenbank darstellt. *ID* ist **Int** und wird davon ausgegangen, dass ein Objekt mit Schemabereich in der aktuellen Datenbank verwendet werden.  
+ Ein Ausdruck, der die ID des Objekts in der aktuellen Datenbank darstellt. *id* ist vom Datentyp **int**, und es wird davon ausgegangen, dass es ein schemabezogenes Objekt im aktuellen Datenbankkontext ist.  
   
- *Eigenschaft*  
- Ist ein Ausdruck, der die Informationen darstellt, die für das angegebene vom Objekt zurückgegeben werden *Id*. *Eigenschaft* kann einen der folgenden Werte sein.  
+ *property*  
+ Ein Ausdruck, der die Informationen darstellt, die für das Objekt zurückgeben werden, das mit *id* angegeben wird. *property* kann einen der folgenden Werte besitzen.  
   
 > [!NOTE]  
->  Sofern nicht anders angegeben, NULL zurückgegeben, wenn *Eigenschaft* ist kein gültiger Eigenschaftsname *Id* ist keine gültige ObjectID, *Id* ist ein nicht unterstützter Objekttyp für den angegebenen *Eigenschaft*, oder der Aufrufer verfügt nicht über die Berechtigung zum Anzeigen der Metadaten des Objekts.  
+>  Wenn nicht anders angegeben, wird NULL zurückgegeben, wenn *property* kein gültiger Eigenschaftsname ist, *id* keine gültige Objekt-ID ist, *id* ein nicht unterstützter Objekttyp für die angegebene *Eigenschaft* ist oder der Aufrufer nicht über die Berechtigung zum Anzeigen der Metadaten des Objekts verfügt.  
   
-|Eigenschaftsname|Objekttyp|Beschreibung und Rückgabewerte|  
+|Eigenschaftenname|Objekttyp|Beschreibung und Rückgabewerte|  
 |-------------------|-----------------|-------------------------------------|  
 |CnstIsClustKey|Einschränkung|PRIMARY KEY-Einschränkung mit einem gruppierten Index.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |CnstIsColumn|Einschränkung|Einschränkung CHECK, DEFAULT oder FOREIGN KEY für eine einzelne Spalte.<br /><br /> 1 = True<br /><br /> 0 = False|  
@@ -71,8 +71,8 @@ OBJECTPROPERTY ( id , property )
 |ExecIsAfterTrigger|Trigger|AFTER-Trigger.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |ExecIsAnsiNullsOn|[!INCLUDE[tsql](../../includes/tsql-md.md)]-Funktion, [!INCLUDE[tsql](../../includes/tsql-md.md)]-Prozedur, [!INCLUDE[tsql](../../includes/tsql-md.md)]-Trigger, Sicht|Einstellung von ANSI_NULLS zum Zeitpunkt der Erstellung.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |ExecIsDeleteTrigger|Trigger|DELETE-Trigger.<br /><br /> 1 = True<br /><br /> 0 = False|  
-|ExecIsFirstDeleteTrigger|Trigger|Erste Trigger, die ausgelöst wird, wenn ein Löschvorgang für die Tabelle ausgeführt wird.<br /><br /> 1 = True<br /><br /> 0 = False|  
-|ExecIsFirstInsertTrigger|Trigger|Erste Trigger, die ausgelöst wird, wenn eine Einfügung für die Tabelle ausgeführt wird.<br /><br /> 1 = True<br /><br /> 0 = False|  
+|ExecIsFirstDeleteTrigger|Trigger|Der erste Trigger, der beim Ausführen einer DELETE-Anweisung für die Tabelle ausgelöst wird.<br /><br /> 1 = True<br /><br /> 0 = False|  
+|ExecIsFirstInsertTrigger|Trigger|Der erste Trigger, der beim Ausführen einer INSERT-Anweisung für die Tabelle ausgelöst wird.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |ExecIsFirstUpdateTrigger|Trigger|Der erste Trigger, der beim Ausführen einer UPDATE-Anweisung für die Tabelle ausgelöst wird.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |ExecIsInsertTrigger|Trigger|INSERT-Trigger.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |ExecIsInsteadOfTrigger|Trigger|INSTEAD OF-Trigger.<br /><br /> 1 = True<br /><br /> 0 = False|  
@@ -84,7 +84,7 @@ OBJECTPROPERTY ( id , property )
 |ExecIsTriggerDisabled|Trigger|Deaktivierter Trigger.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |ExecIsTriggerNotForRepl|Trigger|Als NOT FOR REPLICATION definierter Trigger.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |ExecIsUpdateTrigger|Trigger|UPDATE-Trigger.<br /><br /> 1 = True<br /><br /> 0 = False|  
-|ExecIsWithNativeCompilation|[!INCLUDE[tsql](../../includes/tsql-md.md)]-Prozedur|**Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Die Prozedur wird systemintern kompiliert.<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> Basisdatentyp: **Int**|  
+|ExecIsWithNativeCompilation|[!INCLUDE[tsql](../../includes/tsql-md.md)]-Prozedur|**Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Die Prozedur wird systemintern kompiliert.<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> Basisdatentyp: **int**|  
 |HasAfterTrigger|Tabelle, Sicht|Die Tabelle oder Sicht besitzt einen AFTER-Trigger.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |HasDeleteTrigger|Tabelle, Sicht|Die Tabelle oder Sicht besitzt einen DELETE-Trigger.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |HasInsertTrigger|Tabelle, Sicht|Die Tabelle oder Sicht besitzt einen INSERT-Trigger.<br /><br /> 1 = True<br /><br /> 0 = False|  
@@ -96,7 +96,7 @@ OBJECTPROPERTY ( id , property )
 |IsDefault|Ein beliebiges schemabezogenes Objekt|**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Gebundener Standard.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsDefaultCnst|Ein beliebiges schemabezogenes Objekt|DEFAULT-Einschränkung.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsDeterministic|Funktion, Sicht|Die Determinismuseigenschaft der Funktion oder Sicht.<br /><br /> 1 = Deterministisch<br /><br /> 0 = Nicht deterministisch|  
-|IsEncrypted|[!INCLUDE[tsql](../../includes/tsql-md.md)]-Funktion, [!INCLUDE[tsql](../../includes/tsql-md.md)]-Prozedur, Tabelle, [!INCLUDE[tsql](../../includes/tsql-md.md)]-Trigger, Sicht|Gibt an, dass der Originaltext der Modulanweisung in ein verborgenes Format umgewandelt wurde. Die Ausgabe der Verbergung ist nicht direkt in den Katalogsichten in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] sichtbar. Benutzer ohne Zugriff auf Systemtabellen oder Datenbankdateien können den verborgenen Text nicht abrufen. Der Text ist jedoch verfügbar für Benutzer, die entweder Systemtabellen, über zugreifen können die [DAC-Port](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md) oder direkt auf die Datenbankdateien zugreifen. Des Weiteren können Benutzer, die einen Debugger an den Serverprozess anfügen können, die ursprüngliche Prozedur zur Laufzeit aus dem Arbeitsspeicher abrufen.<br /><br /> 1 = Verschlüsselt.<br /><br /> 0 = nicht verschlüsselt<br /><br /> Basisdatentyp: **Int**|  
+|IsEncrypted|[!INCLUDE[tsql](../../includes/tsql-md.md)]-Funktion, [!INCLUDE[tsql](../../includes/tsql-md.md)]-Prozedur, Tabelle, [!INCLUDE[tsql](../../includes/tsql-md.md)]-Trigger, Sicht|Gibt an, dass der Originaltext der Modulanweisung in ein verborgenes Format umgewandelt wurde. Die Ausgabe der Verbergung ist nicht direkt in den Katalogsichten in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] sichtbar. Benutzer, die keinen Zugriff auf Systemtabellen oder Datenbankdateien haben, können den verborgenen Text nicht abrufen. Der Text ist jedoch für Benutzer verfügbar, die entweder auf die Systemtabellen über den [DAC-Port](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md) oder direkt auf die Datenbankdateien zugreifen können. Des Weiteren können Benutzer, die einen Debugger an den Serverprozess anfügen können, die ursprüngliche Prozedur zur Laufzeit aus dem Arbeitsspeicher abrufen.<br /><br /> 1 = Verschlüsselt.<br /><br /> 0 = Nicht verschlüsselt<br /><br /> Basisdatentyp: **int**|  
 |IsExecuted|Ein beliebiges schemabezogenes Objekt|Das Objekt kann ausgeführt werden (Sicht, Prozedur, Funktion oder Trigger).<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsExtendedProc|Ein beliebiges schemabezogenes Objekt|Erweiterte Prozedur.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsForeignKey|Ein beliebiges schemabezogenes Objekt|FOREIGN KEY-Einschränkung.<br /><br /> 1 = True<br /><br /> 0 = False|  
@@ -118,16 +118,16 @@ OBJECTPROPERTY ( id , property )
 |IsTrigger|Ein beliebiges schemabezogenes Objekt|Trigger.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsUniqueCnst|Ein beliebiges schemabezogenes Objekt|UNIQUE-Einschränkung.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsUserTable|Tabelle|Benutzerdefinierte Tabelle.<br /><br /> 1 = True<br /><br /> 0 = False|  
-|IsView|Sicht|Sicht.<br /><br /> 1 = True<br /><br /> 0 = False|  
-|OwnerId|Ein beliebiges schemabezogenes Objekt|Besitzer des Objekts.<br /><br /> **Hinweis:** der schemabesitzer ist nicht notwendigerweise der Objektbesitzer. Z. B. untergeordnete Objekte (solche, auf denen *"parent_object_id"* ist ungleich null) gibt stets den gleichen Besitzer-ID als übergeordnetes Element.<br /><br /> Nicht NULL = Die Datenbankbenutzer-ID des Objektbesitzers.|  
+|IsView|Anzeigen|Sicht.<br /><br /> 1 = True<br /><br /> 0 = False|  
+|OwnerId|Ein beliebiges schemabezogenes Objekt|Besitzer des Objekts.<br /><br /> **Hinweis:** Der Schemabesitzer ist nicht notwendigerweise der Objektbesitzer. Beispielsweise geben untergeordnete Objekte (Objekte, bei denen der Wert von *parent_object_id* ungleich NULL ist) immer die gleiche Besitzer-ID zurück wie das übergeordnete Objekt.<br /><br /> Nicht NULL = Die Datenbankbenutzer-ID des Objektbesitzers.|  
 |TableDeleteTrigger|Tabelle|Die Tabelle besitzt einen DELETE-Trigger.<br /><br /> >1 = ID des ersten Triggers vom angegebenen Typ.|  
 |TableDeleteTriggerCount|Tabelle|Die Tabelle besitzt die angegebene Anzahl DELETE-Trigger.<br /><br /> >0 = Die Anzahl DELETE-Trigger.|  
 |TableFullTextMergeStatus|Tabelle|**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Gibt an, ob eine Tabelle über einen Volltextindex verfügt, der gerade zusammengeführt wird.<br /><br /> 0 = Tabelle hat keinen Volltextindex, oder der Volltextindex wird derzeit nicht zusammengeführt.<br /><br /> 1 = Der Volltextindex wird derzeit zusammengeführt.|  
-|TableFullTextBackgroundUpdateIndexOn|Tabelle|**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Updates im Hintergrund für den Volltextindex der Tabelle sind aktiviert (automatisches Nachverfolgen von Änderungen).<br /><br /> 1 = "TRUE"<br /><br /> 0 = FALSE|  
+|TableFullTextBackgroundUpdateIndexOn|Tabelle|**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Updates im Hintergrund für den Volltextindex der Tabelle sind aktiviert (automatisches Nachverfolgen von Änderungen).<br /><br /> 1 = TRUE<br /><br /> 0 = FALSE|  
 |TableFulltextCatalogId|Tabelle|**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> ID des Volltextkatalogs, in dem die Daten des Volltextindexes für die Tabelle gespeichert sind.<br /><br /> Ungleich 0 = ID des Volltextkatalogs, die dem eindeutigen Index zugeordnet ist, der die Zeilen in einer volltextindizierten Tabelle identifiziert.<br /><br /> 0 = Die Tabelle besitzt keinen Volltextindex.|  
-|TableFulltextChangeTrackingOn|Tabelle|**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Die Volltext-Änderungsnachverfolgung ist für die Tabelle aktiviert.<br /><br /> 1 = "TRUE"<br /><br /> 0 = FALSE|  
-|TableFulltextDocsProcessed|Tabelle|**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Die Anzahl der seit dem Start der Volltextindizierung verarbeiteten Zeilen. In einer Tabelle, die für die Volltextsuche indiziert wird, werden alle Spalten einer Zeile als Teil eines zu indizierenden Dokuments betrachtet.<br /><br /> 0 = Keine aktive Durchforstungs- oder Volltextindizierung wurde abgeschlossen.<br /><br /> > 0 = eine der folgenden (A oder B): A) die Anzahl von verarbeiteten Dokumenten einfügen oder Aktualisieren der Operationen seit dem Start vollständig, inkrementell oder manuellen änderungsnachverfolgung der Auffüllung. (B) die Anzahl der Zeilen, die von INSERT- oder Update-Vorgänge, da die änderungsnachverfolgung mit indexupdate im Hintergrund aktiviert wurde, die Volltextindex-Schema geändert, der Volltextkatalog neu erstellt oder die Instanz von verarbeitet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Neustart und so weiter.<br /><br /> NULL = Die Tabelle besitzt keinen Volltextindex.<br /><br /> Diese Eigenschaft überwacht die Anzahl gelöschter Zeilen nicht und zählt sie auch nicht.|  
-|TableFulltextFailCount|Tabelle|**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Die Anzahl von Zeilen, für die die Volltextsuche keinen Index erstellt hat.<br /><br /> 0 = Die Auffüllung ist abgeschlossen.<br /><br /> > 0 = eine der folgenden (A oder B): A) die Anzahl der Dokumente, die seit dem Start des Full, Incremental und manuelle Aktualisierung änderungsnachverfolgung der Auffüllung nicht indiziert wurden. B) aktualisieren Sie die Anzahl der Zeilen, die seit dem Start der Auffüllung oder dem Neustart der Auffüllung nicht indiziert wurden, für die änderungsnachverfolgung mit Hintergrund. Ursache dafür kann eine Schemaänderung, eine Neuerstellung des Katalogs, ein Neustart des Servers usw. sein.<br /><br /> NULL = Die Tabelle besitzt keinen Volltextindex.|  
+|TableFulltextChangeTrackingOn|Tabelle|**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Die Volltext-Änderungsnachverfolgung ist für die Tabelle aktiviert.<br /><br /> 1 = TRUE<br /><br /> 0 = FALSE|  
+|TableFulltextDocsProcessed|Tabelle|**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Die Anzahl der seit dem Start der Volltextindizierung verarbeiteten Zeilen. In einer Tabelle, die für die Volltextsuche indiziert wird, werden alle Spalten einer Zeile als Teil eines zu indizierenden Dokuments betrachtet.<br /><br /> 0 = Keine aktive Durchforstungs- oder Volltextindizierung wurde abgeschlossen.<br /><br /> >0 = Eine der folgenden Möglichkeiten (A oder B): A) Die Anzahl der seit dem Start der vollständigen, inkrementellen oder manuellen Änderungsnachverfolgung mithilfe von Einfüge- und Updatevorgängen verarbeiteten Dokumente. B) Die Anzahl der Zeilen, die mithilfe von Einfüge- und Updatevorgängen verarbeitet wurden, seit die Änderungsnachverfolgung mit Auffüllung mithilfe von Indexupdates im Hintergrund aktiviert wurde, das Schema für den Volltextindex geändert wurde, der Volltextkatalog erneut erstellt wurde oder die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] neu gestartet wurde usw.<br /><br /> NULL = Die Tabelle besitzt keinen Volltextindex.<br /><br /> Diese Eigenschaft überwacht die Anzahl gelöschter Zeilen nicht und zählt sie auch nicht.|  
+|TableFulltextFailCount|Tabelle|**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Die Anzahl von Zeilen, für die die Volltextsuche keinen Index erstellt hat.<br /><br /> 0 = Die Auffüllung ist abgeschlossen.<br /><br /> >0 = Eine der folgenden Möglichkeiten (A oder B): A) Die Anzahl der Dokumente, die seit dem Start der Auffüllung mithilfe der vollständigen, inkrementellen und manuellen Änderungsnachverfolgung für Updates nicht indiziert wurden. B) Bei der Änderungsnachverfolgung mit Indexupdate im Hintergrund die Anzahl der Zeilen, die seit dem Start der Auffüllung oder dem Neustart der Auffüllung nicht indiziert wurden. Ursache dafür kann eine Schemaänderung, eine Neuerstellung des Katalogs, ein Neustart des Servers usw. sein.<br /><br /> NULL = Die Tabelle besitzt keinen Volltextindex.|  
 |TableFulltextItemCount|Tabelle|**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Die Anzahl von Zeilen, für die ein Volltextindex erfolgreich erstellt wurde.|  
 |TableFulltextKeyColumn|Tabelle|**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> ID der Spalte, die dem eindeutigen einspaltigen Index zugeordnet ist, der Teil der Definition des Volltextindexes ist.<br /><br /> 0 = Die Tabelle besitzt keinen Volltextindex.|  
 |TableFulltextPendingChanges|Tabelle|**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Anzahl der zu verarbeitenden ausstehenden Änderungsnachverfolgungseinträge.<br /><br /> 0 = Änderungsnachverfolgung ist nicht aktiviert.<br /><br /> NULL = Die Tabelle besitzt keinen Volltextindex.|  
@@ -144,23 +144,23 @@ OBJECTPROPERTY ( id , property )
 |TableHasInsertTrigger|Tabelle|Das Objekt besitzt einen INSERT-Trigger.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |TableHasNonclustIndex|Tabelle|Die Tabelle besitzt einen nicht gruppierten Index.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |TableHasPrimaryKey|Tabelle|Die Tabelle besitzt einen Primärschlüssel.<br /><br /> 1 = True<br /><br /> 0 = False|  
-|TableHasRowGuidCol|Tabelle|Tabelle besitzt eine ROWGUIDCOL-Eigenschaft für eine **"uniqueidentifier"** Spalte.<br /><br /> 1 = True<br /><br /> 0 = False|  
-|TableHasTextImage|Tabelle|Tabelle besitzt eine **Text**, **Ntext**, oder **Image** Spalte.<br /><br /> 1 = True<br /><br /> 0 = False|  
-|TableHasTimestamp|Tabelle|Tabelle besitzt eine **Zeitstempel** Spalte.<br /><br /> 1 = True<br /><br /> 0 = False|  
+|TableHasRowGuidCol|Tabelle|Die Tabelle besitzt eine ROWGUIDCOL-Eigenschaft für eine **uniqueidentifier**-Spalte.<br /><br /> 1 = True<br /><br /> 0 = False|  
+|TableHasTextImage|Tabelle|Die Tabelle besitzt eine **text**-, **ntext**- oder **image**-Spalte.<br /><br /> 1 = True<br /><br /> 0 = False|  
+|TableHasTimestamp|Tabelle|Die Tabelle besitzt eine **timestamp**-Spalte.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |TableHasUniqueCnst|Tabelle|Die Tabelle besitzt eine UNIQUE-Einschränkung.<br /><br /> 1 = True<br /><br /> 0 = False|  
-|TableHasUpdateTrigger|Tabelle|Objekt besitzt einen updatetrigger.<br /><br /> 1 = True<br /><br /> 0 = False|  
-|TableHasVarDecimalStorageFormat|Tabelle|Für die Tabelle aktiviert ist **Vardecimal** Speicherformat.<br /><br /> 1 = True<br /><br /> 0 = False|  
+|TableHasUpdateTrigger|Tabelle|Das Objekt besitzt einen UPDATE-Trigger.<br /><br /> 1 = True<br /><br /> 0 = False|  
+|TableHasVarDecimalStorageFormat|Tabelle|Die Tabelle lässt das **vardecimal**-Speicherformat zu.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |TableInsertTrigger|Tabelle|Die Tabelle besitzt einen INSERT-Trigger.<br /><br /> >1 = ID des ersten Triggers vom angegebenen Typ.|  
 |TableInsertTriggerCount|Tabelle|Die Tabelle besitzt die angegebene Anzahl INSERT-Trigger.<br /><br /> >0 = Die Anzahl von INSERT-Triggern.|  
 |TableIsFake|Tabelle|Die Tabelle ist in Wirklichkeit nicht vorhanden. Sie wird bei Bedarf durch [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] intern materialisiert.<br /><br /> 1 = True<br /><br /> 0 = False|  
-|TableIsLockedOnBulkLoad|Tabelle|Tabelle wird gesperrt, da eine **Bcp** oder BULK INSERT-Auftrags.<br /><br /> 1 = True<br /><br /> 0 = False|  
-|TableIsMemoryOptimized|Tabelle|**Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Tabelle ist speicheroptimiert<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> Basisdatentyp: **Int**<br /><br /> Weitere Informationen finden Sie unter [In-Memory OLTP &#40;Arbeitsspeicheroptimierung&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).|  
+|TableIsLockedOnBulkLoad|Tabelle|Die Tabelle ist aufgrund eines **bcp**- oder BULK INSERT-Auftrags gesperrt.<br /><br /> 1 = True<br /><br /> 0 = False|  
+|TableIsMemoryOptimized|Tabelle|**Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Tabelle ist speicheroptimiert<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> Basisdatentyp: **int**<br /><br /> Weitere Informationen finden Sie unter [In-Memory OLTP &#40;Arbeitsspeicheroptimierung&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).|  
 |TableIsPinned|Tabelle|Die Tabelle ist fixiert, damit sie im Datencache gespeichert wird.<br /><br /> 0 = False<br /><br /> Diese Funktion wird in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] und höheren Versionen nicht unterstützt.|  
 |TableTextInRowLimit|Tabelle|Die maximal zulässige Anzahl Byte für text in row.<br /><br /> Hat den Wert 0, wenn die Option text in row nicht festgelegt wurde.|  
 |TableUpdateTrigger|Tabelle|Die Tabelle besitzt einen UPDATE-Trigger.<br /><br /> > 1 = ID des ersten Triggers vom angegebenen Typ.|  
 |TableUpdateTriggerCount|Tabelle|Die Tabelle besitzt die angegebene Anzahl UPDATE-Trigger.<br /><br /> > 0 = Die Anzahl von UPDATE-Triggern.|  
 |TableHasColumnSet|Tabelle|Die Tabelle besitzt einen Spaltensatz.<br /><br /> 0 = False<br /><br /> 1 = True<br /><br /> Weitere Informationen finden Sie unter [Verwenden von Spaltensätzen](../../relational-databases/tables/use-column-sets.md).|  
-|TableTemporalType|Tabelle|**Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Gibt den Typ der Tabelle.<br /><br /> 0 = nicht temporalen Tabelle<br /><br /> 1 = Verlaufstabelle für die Tabelle mit systemversionsverwaltung<br /><br /> 2 = temporale Tabelle mit systemversionsverwaltung|  
+|TableTemporalType|Tabelle|**Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Gibt den Typ der Tabelle an.<br /><br /> 0 = Nicht temporale Tabelle<br /><br /> 1 = Verlaufstabelle für die Tabelle mit Systemversionsverwaltung<br /><br /> 2 = Temporale Tabelle mit Systemversionsverwaltung|  
   
 ## <a name="return-types"></a>Rückgabetypen  
  **int**  
@@ -170,8 +170,8 @@ OBJECTPROPERTY ( id , property )
   
  Ein Benutzer kann nur die Metadaten sicherungsfähiger Elemente anzeigen, bei denen der Benutzer entweder der Besitzer ist oder für die dem Benutzer eine Berechtigung erteilt wurde. Dies bedeutet, dass Metadaten ausgebende integrierte Funktionen, z. B. OBJECTPROPERTY, möglicherweise NULL zurückgeben, wenn dem Benutzer für das Objekt keine Berechtigung erteilt wurde. Weitere Informationen finden Sie unter [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="remarks"></a>Hinweise  
- Die [!INCLUDE[ssDE](../../includes/ssde-md.md)] setzt voraus, dass *Object_id* befindet sich im Kontext aktuellen Datenbank. Eine Abfrage, die verweist auf ein *Object_id* in einer anderen Datenbank NULL oder falsche Ergebnisse zurück. In der folgenden Abfrage wird z. B. im aktuellen Datenbankkontext der master-Datenbank an. Die [!INCLUDE[ssDE](../../includes/ssde-md.md)] versucht, den Eigenschaftswert für das angegebene zurückzusetzen *Object_id* in dieser Datenbank statt in der Abfrage angegebenen Datenbank. Die Abfrage gibt falsche Ergebnisse zurück, da die Sicht `vEmployee` befindet sich nicht in der master-Datenbank.  
+## <a name="remarks"></a>Remarks  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)] setzt voraus, dass sich *object_id* im aktuellen Datenbankkontext befindet. Eine Abfrage, die auf *object_id* in einer anderen Datenbank verweist, gibt NULL oder falsche Ergebnisse zurück. Beispielsweise ist der aktuelle Datenbankkontext in der folgenden Abfrage die Masterdatenbank. [!INCLUDE[ssDE](../../includes/ssde-md.md)] versucht, den Eigenschaftenwert für die angegebene *object_id* in dieser Datenbank zurückzugeben und nicht in der Datenbank, die in der Abfrage angegeben ist. Die Abfrage gibt falsche Ergebnisse zurück, da sich die `vEmployee`-Sicht nicht in der Masterdatenbank befindet.  
   
 ```  
 USE master;  
@@ -180,11 +180,11 @@ SELECT OBJECTPROPERTY(OBJECT_ID(N'AdventureWorks2012.HumanResources.vEmployee'),
 GO  
 ```  
   
- OBJECTPROPERTY (*View_id*, 'IsIndexable') beanspruchen möglicherweise Computerressourcen, da die Auswertung der IsIndexable-Eigenschaft das Analysieren der Sichtdefinition, die Normalisierung und die partielle Optimierung erfordert. Obwohl die IsIndexable-Eigenschaft Tabellen oder Sichten identifiziert, die indiziert werden können, kann die tatsächliche Erstellung des Indexes dennoch fehlschlagen, wenn bestimmte Indexschlüsselanforderungen nicht erfüllt sind. Weitere Informationen finden Sie unter [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).  
+ OBJECTPROPERTY(*view_id*, 'IsIndexable') hat möglicherweise einen hohen Verbrauch an Computerressourcen, da die Auswertung der IsIndexable-Eigenschaft das Analysieren der Sichtdefinition, die Normalisierung und die partielle Optimierung erfordert. Obwohl die IsIndexable-Eigenschaft Tabellen oder Sichten identifiziert, die indiziert werden können, kann die tatsächliche Erstellung des Indexes dennoch fehlschlagen, wenn bestimmte Indexschlüsselanforderungen nicht erfüllt sind. Weitere Informationen finden Sie unter [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).  
   
- OBJECTPROPERTY (*Table_id*, 'TableHasActiveFulltextIndex') gibt einen Wert von 1 (True) zurück, wenn mindestens eine Spalte einer Tabelle für die Indizierung hinzugefügt wird. Die Volltextindizierung wird für das Auffüllen aktiviert, sobald die erste Spalte für die Indizierung hinzugefügt wird.  
+ OBJECTPROPERTY(*table_id*, 'TableHasActiveFulltextIndex') gibt den Wert 1 (TRUE) zurück, wenn mindestens eine Spalte einer Tabelle für die Indizierung hinzugefügt wurde. Die Volltextindizierung wird für das Auffüllen aktiviert, sobald die erste Spalte für die Indizierung hinzugefügt wird.  
   
- Beim Erstellen einer Tabelle wird die Option QUOTED IDENTIFIER immer als ON in den Metadaten der Tabelle gespeichert, selbst wenn die Option beim Erstellen der Tabelle auf OFF festgelegt war. Deshalb gibt OBJECTPROPERTY (*Table_id*, 'IsQuotedIdentOn') werden immer den Wert 1 (True) zurück.  
+ Beim Erstellen einer Tabelle wird die Option QUOTED IDENTIFIER immer als ON in den Metadaten der Tabelle gespeichert, selbst wenn die Option beim Erstellen der Tabelle auf OFF festgelegt war. Deshalb gibt OBJECTPROPERTY(*table_id*, 'IsQuotedIdentOn') immer den Wert 1 (TRUE) zurück.  
   
 ## <a name="examples"></a>Beispiele  
   
@@ -205,7 +205,7 @@ GO
 ```  
   
 ### <a name="b-verifying-that-a-scalar-valued-user-defined-function-is-deterministic"></a>B. Überprüfen, ob eine benutzerdefinierte Skalarwertfunktion deterministisch ist  
- Im folgenden Beispiel wird getestet, ob die benutzerdefinierte skalarwertige Funktion `ufnGetProductDealerPrice`, welche gibt eine **Money** Wert, deterministisch ist.  
+ Im folgenden Beispiel wird getestet, ob die benutzerdefinierte Skalarwertfunktion `ufnGetProductDealerPrice`, die einen Wert vom Typ **money** zurückgibt, deterministisch ist.  
   
 ```  
 USE AdventureWorks2012;  
@@ -221,8 +221,8 @@ GO
 0
 ```  
   
-### <a name="c-finding-the-tables-that-belong-to-a-specific-schema"></a>"C:" Suchen in den Tabellen, die zu einem bestimmten Schema gehören  
- Im folgenden Beispiel werden alle Tabellen im Dbo-Schema zurückgegeben.  
+### <a name="c-finding-the-tables-that-belong-to-a-specific-schema"></a>C: Suchen der Tabellen, die zu einem bestimmten Schema gehören  
+ Im folgenden Beispiel werden alle Tabellen im DBO-Schema zurückgegeben.  
   
 ```  
 -- Uses AdventureWorks  
@@ -234,9 +234,9 @@ ORDER BY type_desc, name;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
-### <a name="d-verifying-that-an-object-is-a-table"></a>Überprüfen, dass ein Objekt eine Tabelle D:  
+### <a name="d-verifying-that-an-object-is-a-table"></a>D: Überprüfen, ob ein Objekt eine Tabelle ist  
  Im folgenden Beispiel wird getestet, ob `dbo.DimReseller` in der [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)]-Datenbank eine Tabelle ist.  
   
 ```  
@@ -249,13 +249,13 @@ ELSE
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [COLUMNPROPERTY &#40; Transact-SQL &#41;](../../t-sql/functions/columnproperty-transact-sql.md)   
- [Metadatenfunktionen &#40; Transact-SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
- [OBJECTPROPERTYEX &#40; Transact-SQL &#41;](../../t-sql/functions/objectpropertyex-transact-sql.md)   
- [ALTER AUTHORIZATION &#40; Transact-SQL &#41;](../../t-sql/statements/alter-authorization-transact-sql.md)   
- [TYPEPROPERTY &#40; Transact-SQL &#41;](../../t-sql/functions/typeproperty-transact-sql.md)   
- [Sys.Objects &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [COLUMNPROPERTY (Transact-SQL)](../../t-sql/functions/columnproperty-transact-sql.md)   
+ [Metadata Functions &#40;Transact-SQL&#41; (Metadatenfunktionen &#40;Transact-SQL&#41;)](../../t-sql/functions/metadata-functions-transact-sql.md)   
+ [OBJECTPROPERTYEX &#40;Transact-SQL&#41;](../../t-sql/functions/objectpropertyex-transact-sql.md)   
+ [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md)   
+ [TYPEPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/typeproperty-transact-sql.md)   
+ [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)  
   
   
 

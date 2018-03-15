@@ -1,5 +1,5 @@
 ---
-title: CREATE-Funktion (Transact-SQL) | Microsoft Docs
+title: CREATE FUNCTION (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
@@ -68,10 +68,10 @@ ms.lasthandoff: 01/02/2018
   
 -   Zum Ersetzen einer gespeicherten Prozedur  
   
--   Verwenden Sie eine Inline-Funktion als Filterprädikat für eine Sicherheitsrichtlinie  
+-   Zum Verwenden einer Inlinefunktion als Filterprädikat für eine Sicherheitsrichtlinie  
   
 > [!NOTE]  
->  Die .NET Framework-CLR-Integration in SQL Server wird in diesem Thema erläutert. CLR-Integration gilt nicht für Azure SQL-Datenbank.  
+>  In diesem Thema wird die Integration der .NET Framework-CLR in SQL Server erläutert. Die Integration der CLR gilt nicht für Azure SQL-Datenbank.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -266,24 +266,24 @@ RETURNS return_data_type
 ```  
   
 ## <a name="arguments"></a>Argumente
-*ODER ÄNDERN*  
- **Gilt für**: Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (beginnend mit [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1).  
+*OR ALTER*  
+ **Gilt für:** Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1).  
   
- Bedingt ändert die Funktion nur dann, wenn sie bereits vorhanden ist. 
+ Ändert die Funktion bedingt, sofern diese bereits vorhanden ist. 
  
 > [!NOTE]  
->  Optionale [oder ALTER] Syntax für die CLR-steht ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU1.   
+>  Eine optionale [OR ALTER]-Syntax für die CLR-ist ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU1 verfügbar.   
  
  *schema_name*  
  Der Name des Schemas, zu dem die benutzerdefinierte Funktion gehört.  
   
- *Funktionsname*  
- Der Name der benutzerdefinierten Funktion. Funktionsnamen müssen den Regeln für entsprechen [Bezeichner](../../relational-databases/databases/database-identifiers.md) und muss innerhalb der Datenbank und für jedes Schema eindeutig sein.  
+ *function_name*  
+ Der Name der benutzerdefinierten Funktion. Funktionsnamen müssen den Regeln für [Bezeichner](../../relational-databases/databases/database-identifiers.md) entsprechen und innerhalb der Datenbank und für jedes Schema eindeutig sein.  
   
 > [!NOTE]  
 >  Auf den Funktionsnamen müssen Klammern folgen, selbst wenn kein Parameter angegeben ist.  
   
- @*Parametername*  
+ @*parameter_name*  
  Ein Parameter in der benutzerdefinierten Funktion. Ein oder mehrere Parameter können deklariert werden.  
   
  Eine Funktion kann maximal 2.100 Parameter haben. Der Benutzer muss beim Ausführen einer Funktion den Wert jedes deklarierten Parameters angeben (sofern kein Standardwert für den betreffenden Parameter definiert ist).  
@@ -291,12 +291,12 @@ RETURNS return_data_type
  Geben Sie einen Parameternamen an, der mit dem Zeichen (@) beginnt. Der Parametername muss den Regeln für Bezeichner entsprechen. Parameter gelten lokal in der jeweiligen Funktion. Dieselben Parameternamen können in anderen Funktionen verwendet werden. Parameter können nur den Platz von Konstanten einnehmen. Sie können nicht anstelle von Tabellennamen, Spaltennamen oder Namen anderer Datenbankobjekte verwendet werden.  
   
 > [!NOTE]  
->  ANSI_WARNINGS wird bei der Übergabe von Parametern in einer gespeicherten Prozedur oder in einer benutzerdefinierten Funktion oder beim Deklarieren und Festlegen von Variablen in einer Batchanweisung nicht berücksichtigt. Angenommen, eine Variable definiert ist, als **char(3)**, und klicken Sie dann auf einen Wert größer als 3 Zeichen festgelegt, die Daten auf die definierte Größe und die Einfügung abgeschnitten oder UPDATE-Anweisung erfolgreich ausgeführt wird.  
+>  ANSI_WARNINGS wird bei der Übergabe von Parametern in einer gespeicherten Prozedur oder in einer benutzerdefinierten Funktion oder beim Deklarieren und Festlegen von Variablen in einer Batchanweisung nicht berücksichtigt. Wird beispielsweise eine Variable als **char(3)** definiert und dann auf einen Wert festgelegt, der länger als drei Zeichen ist, werden die Daten auf die definierte Größe abgeschnitten, und die Anweisung INSERT oder UPDATE wird erfolgreich ausgeführt.  
   
- [ *Type_schema_name*. ] *Parameter_data_type*  
- Der Parameterdatentyp und optional das Schema, zu dem der Datentyp gehört. Für [!INCLUDE[tsql](../../includes/tsql-md.md)] Funktionen, alle Datentypen, einschließlich CLR-benutzerdefinierte Typen und benutzerdefinierte Tabellentypen sind zulässig, mit Ausnahme der **Zeitstempel** -Datentyp. Für CLR-Funktionen sind alle Datentypen, einschließlich CLR-benutzerdefinierte Typen, mit Ausnahme der zugelassen **Text**, **Ntext**, **Image**benutzerdefinierte Tabellentypen und  **Zeitstempel** Datentypen. Die nicht skalaren Typen **Cursor** und **Tabelle**, kann nicht angegeben werden, als Datentyp eines Parameters in einem [!INCLUDE[tsql](../../includes/tsql-md.md)] oder CLR-Funktionen.  
+ [ *type_schema_name*. ] *parameter_data_type*  
+ Der Parameterdatentyp und optional das Schema, zu dem der Datentyp gehört. Für [!INCLUDE[tsql](../../includes/tsql-md.md)]-Funktionen sind abgesehen vom **timestamp**-Datentyp alle Datentypen zulässig, einschließlich CLR-benutzerdefinierter Typen und benutzerdefinierte Tabellentypen. Für CLR-Funktionen sind abgesehen von den Datentypen **text**, **ntext**, **image**, und **timestamp** sowie benutzerdefinierten Tabellentypen alle Datentypen zulässig, einschließlich benutzerdefinierter CLR-Typen. Die nicht skalaren Typen **cursor** und **table** können weder in [!INCLUDE[tsql](../../includes/tsql-md.md)]- noch in CLR-Funktionen als Parameterdatentyp angegeben werden.  
   
- Wenn *Type_schema_name* nicht angegeben wird, die [!INCLUDE[ssDE](../../includes/ssde-md.md)] sucht nach der *Scalar_parameter_data_type* in der folgenden Reihenfolge:  
+ Wenn *type_schema_name* nicht angegeben ist, sucht die [!INCLUDE[ssDE](../../includes/ssde-md.md)] nach *scalar_parameter_data_type* in der folgenden Reihenfolge:  
   
 -   Das Schema, das die Namen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Systemdatentypen enthält  
   
@@ -304,11 +304,11 @@ RETURNS return_data_type
   
 -   Das **dbo** -Schema in der aktuellen Datenbank  
   
- [=*Standard* ]  
- Ein Standardwert für den Parameter. Wenn eine *Standardwert* Wert definiert ist, kann die Funktion ausgeführt werden, ohne einen Wert für diesen Parameter anzugeben.  
+ [ =*default* ]  
+ Ein Standardwert für den Parameter. Wenn ein *default*-Wert definiert ist, kann die Funktion ausgeführt werden, ohne dass ein Wert für diesen Parameter angegeben werden muss.  
   
 > [!NOTE]  
->  Standardparameterwerte können angegeben werden, für die CLR-Funktionen mit Ausnahme der **varchar(max)** und **varbinary(max)** Datentypen.  
+>  Standardparameterwerte können mit Ausnahme der Datentypen **varchar(max)** und **varbinary(max)** für CLR-Funktionen angegeben werden.  
   
  Wenn ein Parameter der Funktion über einen Standardwert verfügt, muss beim Aufrufen der Funktion das DEFAULT-Schlüsselwort angegeben werden, um den Standardwert abzurufen. In diesem Punkt gibt es einen Unterschied zum Verwenden von Parametern in einer gespeicherten Prozedur. Fehlt im Aufruf einer gespeicherten Prozedur ein Parameter, der einen Standardwert hat, wird automatisch dieser Standardwert verwendet. Beim Aufrufen einer Skalarfunktion mit der EXECUTE-Anweisung ist das DEFAULT-Schlüsselwort jedoch nicht erforderlich.  
   
@@ -316,46 +316,46 @@ RETURNS return_data_type
  Gibt an, dass der Parameter nicht aktualisiert oder innerhalb der Definition der Funktion geändert werden kann. Wenn der Parametertyp ein benutzerdefinierter Tabellentyp ist, sollte READONLY angegeben werden.  
   
  *return_data_type*  
- Der Rückgabewert einer benutzerdefinierten Skalarfunktion. Für [!INCLUDE[tsql](../../includes/tsql-md.md)] Funktionen, alle Datentypen, einschließlich von benutzerdefinierten CLR-Typen sind zulässig, mit Ausnahme der **Zeitstempel** -Datentyp. Für CLR-Funktionen sind alle Datentypen, einschließlich CLR-benutzerdefinierte Typen, zulässig, außer die **Text**, **Ntext**, **Image**, und **Zeitstempel**-Datentypen. Die nicht skalaren Typen **Cursor** und **Tabelle**, kann nicht angegeben werden, als Rückgabedatentyp entweder [!INCLUDE[tsql](../../includes/tsql-md.md)] oder CLR-Funktionen.  
+ Der Rückgabewert einer benutzerdefinierten Skalarfunktion. Für [!INCLUDE[tsql](../../includes/tsql-md.md)]-Funktionen sind abgesehen vom **timestamp**-Datentyp alle Datentypen zulässig, einschließlich benutzerdefinierter CLR-Typen. Für CLR-Funktionen sind abgesehen von den Datentypen **text**, **ntext**, **image** und **timestamp** alle Datentypen zulässig, einschließlich benutzerdefinierter CLR-Typen. Die nicht skalaren Typen **cursor** und **table** können weder in [!INCLUDE[tsql](../../includes/tsql-md.md)]- noch in CLR-Funktionen als Rückgabedatentyp angegeben werden.  
   
  *function_body*  
- Gibt an, dass eine Reihe von [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen, die zusammen keine Nebeneffekte erzeugen, z. B. Ändern einer Tabelle, den Wert der Funktion definiert. *Function_body* wird nur in Skalarfunktionen und Tabellenwertfunktionen mit mehreren Anweisungen verwendet.  
+ Gibt an, dass eine Reihe von [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen, die zusammen keine Nebeneffekte erzeugen, z. B. Ändern einer Tabelle, den Wert der Funktion definiert. *function_body* wird nur in Skalarfunktionen sowie in Tabellenwertfunktionen mit mehreren Anweisungen verwendet.  
   
- In Skalarfunktionen *Function_body* ist eine Reihe von [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisungen, die einen skalaren Wert ergeben.  
+ In Skalarfunktionen entspricht *function_body* einer Reihe von [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen, die zusammen einen skalaren Wert ergeben.  
   
- In mit mehreren Anweisungen Tabellenwertfunktionen *Function_body* ist eine Reihe von [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisungen, die eine Tabelle Auffüllen gibt Variable zurück.  
+ In Tabellenwertfunktionen mit mehreren Anweisungen entspricht *function_body* einer Reihe von [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen, die eine TABLE-Rückgabevariable auffüllen.  
   
- *"scalar_expression"*  
+ *scalar_expression*  
  Gibt den skalaren Wert an, den die Skalarfunktion zurückgibt.  
   
  TABLE  
- Gibt an, dass der Rückgabewert der Tabellenwertfunktion eine Tabelle ist. Nur Konstanten und @*Local_variables* können an Tabellenwertfunktionen übergeben werden.  
+ Gibt an, dass der Rückgabewert der Tabellenwertfunktion eine Tabelle ist. Nur Konstanten und @*local_variables* können an Tabellenwertfunktionen übergeben werden.  
   
  In Inline-Tabellenwertfunktionen wird der TABLE-Rückgabewert durch eine einzige SELECT-Anweisung definiert. Inlinefunktionen haben keine zugeordneten Rückgabevariablen.  
   
- In mit mehreren Anweisungen Tabellenwertfunktionen @*Return_variable* wird eine Tabellenvariable zum Speichern und Sammeln der Zeilen, die als Wert der Funktion zurückgegeben werden sollen. @*Return_variable* kann angegeben werden, nur für [!INCLUDE[tsql](../../includes/tsql-md.md)] Funktionen, nicht für CLR-Funktionen.  
+ In Tabellenwertfunktionen mit mehreren Anweisungen ist @*return_variable* eine TABLE-Variable, die zum Speichern und Sammeln der Zeilen verwendet wird, die als Wert der Funktion zurückgegeben werden sollen. @*return_variable* kann nur für [!INCLUDE[tsql](../../includes/tsql-md.md)]-Funktionen, nicht für CLR-Funktionen angegeben werden.  
   
 > [!WARNING]  
->  Verknüpfen mit einer Tabellenwertfunktion Tabellenwertfunktion in einem **FROM** -Klausel ist möglich, aber es kann zu einer schlechten Leistung. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann für einige Anweisungen, die in einer Funktion mit mehreren Anweisungen enthalten sein können, nicht alle optimierten Techniken verwenden, was zu einem suboptimalen Abfrageplan führt. Um die bestmögliche Leistung zu erzielen, sollten nach Möglichkeit anstelle von Funktionen Joins zwischen Basistabellen verwendet werden.  
+>  Das Verknüpfen mit einer Tabellenwertfunktion mit mehreren Anweisungen in einer **FROM**-Klausel ist möglich, kann aber zu einer schlechten Leistung führen. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann für einige Anweisungen, die in einer Funktion mit mehreren Anweisungen enthalten sein können, nicht alle optimierten Techniken verwenden, was zu einem suboptimalen Abfrageplan führt. Um die bestmögliche Leistung zu erzielen, sollten nach Möglichkeit anstelle von Funktionen Joins zwischen Basistabellen verwendet werden.  
   
  *select_stmt*  
  Einzelne SELECT-Anweisung, die den Rückgabewert einer Inline-Tabellenwertfunktion definiert.  
   
- Reihenfolge (\<Order_clause >) gibt die Reihenfolge, in der Ergebnisse von der Funktion mit Tabellenrückgabe zurückgegeben wird werden. Weitere Informationen finden Sie im Abschnitt "Leitfaden zur Verwendung der Sortierreihenfolge" weiter unten in diesem Thema.  
+ ORDER (\<order_clause>) gibt die Reihenfolge an, in der Ergebnisse von der Tabellenwertfunktion zurückgegeben werden. Weitere Informationen finden Sie im Abschnitt "Leitfaden zur Verwendung der Sortierreihenfolge" weiter unten in diesem Thema.  
   
- EXTERNAL NAME \<Method_specifier > *Assembly_name*. *CLASS_NAME*. *keine Variablenargumentlisten verwenden* **betrifft**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ EXTERNAL NAME \<method_specifier> *assembly_name*.*class_name*.*method_name* **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Gibt die Assembly und die Methode an, auf die der erstellte Funktionsname verweisen soll.  
   
--   *Assembly_name* -übereinstimmen, dass einen Wert in der `name` Spalte   
+-   *assembly_name* muss einem Wert in der Spalte `name` der folgenden Anweisung entsprechen   
     `SELECT * FROM sys.assemblies;`installiert haben.  
     Dies ist der Name, der für die `CREATE ASSEMBLY`-Anweisung verwendet wurde.  
   
--   *CLASS_NAME* -übereinstimmen, dass einen Wert in der `assembly_name` Spalte  
+-   *class_name* muss einem Wert in der Spalte `assembly_name` der folgenden Anweisung entsprechen  
     `SELECT * FROM sys.assembly_modules;`installiert haben.  
-    Häufig enthält der Wert einen Punkt. In solchen Fällen das Transact-SQL-Syntax erfordert, dass der Wert mit ein Paar von gerade Klammern oder ein Paar von Anführungszeichen umschlossen werden "".  
+    Häufig enthält der Wert einen Punkt. In solchen Fällen muss der Wert aufgrund der Transact-SQL-Syntax von eckigen Klammern [] oder doppelten Anführungszeichen "" umschlossen werden.  
   
--   *keine Variablenargumentlisten verwenden* -übereinstimmen, dass einen Wert in der `method_name` Spalte   
+-   *method_name* muss einem Wert in der Spalte `method_name` der folgenden Anweisung entsprechen   
     `SELECT * FROM sys.assembly_modules;`installiert haben.  
     Die Methode muss statisch sein.  
   
@@ -363,40 +363,40 @@ RETURNS return_data_type
 `MyFood.[MyFood.MyClass].MyStaticMethod`  
   
 > [!NOTE]  
->  Standardmäßig kann [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] keinen CLR-Code ausführen. Sie können erstellen, ändern und Löschen von Datenbankobjekten, die common Language Runtime-Module verweisen; Allerdings kann nicht Ausführen dieser Verweise in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erst nach Aktivierung der [Option Clr-fähig](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md). Verwenden Sie zum Aktivieren dieser Option [Sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
+>  Standardmäßig kann [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] keinen CLR-Code ausführen. Sie können Datenbankobjekte, die auf CLR-Module (Common Language Runtime) verweisen, erstellen, ändern und löschen. Bevor Sie diese Verweise in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausführen können, müssen Sie jedoch die Option [clr enabled](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md) aktivieren. Verwenden Sie dazu [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
   
 > [!NOTE]  
 >  Diese Option ist in einer enthaltenen Datenbank nicht verfügbar.  
   
- *\<*Table_type_definition *>*  ({ \<Column_definition > \<Column_constraint > | \<Computed_column_definition >}    [ \<Table_constraint >] [,...  *n*  ]) Definiert, die der Tabelle für Datentyp eine [!INCLUDE[tsql](../../includes/tsql-md.md)] Funktion. Die Tabellendeklaration schließt Spaltendefinitionen und Spalten- oder Tabelleneinschränkungen ein. Die Tabelle wird immer in der primären Dateigruppe abgelegt.  
+ *\<*table_type_definition*>* ( { \<column_definition> \<column_constraint>    | \<computed_column_definition> }    [ \<table_constraint> ] [ ,...*n* ] ) Definiert den Tabellendatentyp für einer [!INCLUDE[tsql](../../includes/tsql-md.md)]-Funktion. Die Tabellendeklaration schließt Spaltendefinitionen und Spalten- oder Tabelleneinschränkungen ein. Die Tabelle wird immer in der primären Dateigruppe abgelegt.  
   
- \<Clr_table_type_definition > ({ *Column_name**Data_type* } [,...  *n*  ]) **Betrifft**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([Vorschau in einigen Regionen](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)). |  
+ \< clr_table_type_definition >  ( { *column_name**data_type* } [ ,...*n* ] ) **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([Vorschauversion in einigen Regionen](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).|  
   
  Definiert die Tabellendatentypen für eine CLR-Funktion. Die Tabellendeklaration schließt nur Spaltennamen und Datentypen ein. Die Tabelle wird immer in der primären Dateigruppe abgelegt.  
   
- NULL | NOT NULL  
- Nur für systemintern kompilierte, skalare benutzerdefinierte Funktionen unterstützt. Weitere Informationen finden Sie unter [Skalarfunktionen für In-Memory OLTP](../../relational-databases/in-memory-oltp/scalar-user-defined-functions-for-in-memory-oltp.md).  
+ NULL|NOT NULL  
+ Nur für nativ kompilierte, benutzerdefinierte Skalarfunktionen unterstützt. Weitere Informationen dazu finden Sie unter [Benutzerdefinierte Skalarfunktionen für In-Memory-OLTP](../../relational-databases/in-memory-oltp/scalar-user-defined-functions-for-in-memory-oltp.md).  
   
  NATIVE_COMPILATION  
- Gibt an, ob eine benutzerdefinierte Funktion systemintern kompiliert wird. Dieses Argument ist erforderlich für systemintern kompilierte, skalare benutzerdefinierte Funktionen.  
+ Gibt an, ob eine benutzerdefinierte Funktion nativ kompiliert wird. Dieses Argument ist für nativ kompilierte, benutzerdefinierte Skalarfunktionen erforderlich.  
   
- BEGIN ATOMIC MIT  
- Unterstützt nur für systemintern kompilierte, skalare benutzerdefinierte Funktionen und erforderlich ist. Weitere Informationen finden Sie unter [ATOMIC-Blöcke](../../relational-databases/in-memory-oltp/atomic-blocks-in-native-procedures.md).  
+ BEGIN ATOMIC WITH  
+ Nur für nativ kompilierte, benutzerdefinierte Skalarfunktionen unterstützt und erforderlich. Weitere Informationen finden Sie unter [ATOMIC-Blöcke](../../relational-databases/in-memory-oltp/atomic-blocks-in-native-procedures.md).  
   
  SCHEMABINDING  
- Die SCHEMABINDING-Argument ist erforderlich für systemintern kompilierte, skalare benutzerdefinierte Funktionen.  
+ Das Argument SCHEMABINDING ist für nativ kompilierte, benutzerdefinierte Skalarfunktionen erforderlich.  
   
  EXECUTE AS  
- EXECUTE AS ist erforderlich für systemintern kompilierte, skalare benutzerdefinierte Funktionen.  
+ EXECUTE AS ist für nativ kompilierte, benutzerdefinierte Skalarfunktionen erforderlich.  
   
- **\<Function_option >:: = und \<Clr_function_option >:: =** 
+ **\<function_option>::= and \<clr_function_option>::=** 
   
  Gibt an, dass die Funktion mindestens über eine der folgenden Optionen verfügen wird.  
   
  ENCRYPTION  
  **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Gibt an, dass [!INCLUDE[ssDE](../../includes/ssde-md.md)] den ursprünglichen Text der CREATE FUNCTION-Anweisung in ein verborgenes Format konvertiert. Die Ausgabe der Verbergung ist nicht direkt in den Katalogsichten sichtbar. Benutzer, die keinen Zugriff auf Systemtabellen oder Datenbankdateien haben, können den verborgenen Text nicht abrufen. Jedoch der Text stehen berechtigten Benutzern, die entweder Systemtabellen, über zugreifen können die [DAC-Port](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md) oder direkt auf die Datenbankdateien zugreifen. Des Weiteren können Benutzer, die einen Debugger an den Serverprozess anfügen können, die Originalprozedur zur Laufzeit vom Arbeitsspeicher abrufen. Weitere Informationen zum Zugreifen auf Systemmetadaten finden Sie unter [die Konfiguration der Metadatensichtbarkeit](../../relational-databases/security/metadata-visibility-configuration.md).  
+ Gibt an, dass [!INCLUDE[ssDE](../../includes/ssde-md.md)] den ursprünglichen Text der CREATE FUNCTION-Anweisung in ein verborgenes Format konvertiert. Die Ausgabe der Verbergung ist nicht direkt in den Katalogsichten sichtbar. Benutzer, die keinen Zugriff auf Systemtabellen oder Datenbankdateien haben, können den verborgenen Text nicht abrufen. Der Text ist jedoch für berechtigte Benutzer verfügbar, die entweder auf die Systemtabellen über den [DAC-Port](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md) oder direkt auf die Datenbankdateien zugreifen. Des Weiteren können Benutzer, die einen Debugger an den Serverprozess anfügen können, die Originalprozedur zur Laufzeit vom Arbeitsspeicher abrufen. Weitere Informationen zum Zugreifen auf Systemmetadaten finden Sie unter [Konfigurieren der Sichtbarkeit von Metadaten](../../relational-databases/security/metadata-visibility-configuration.md).  
   
  Mit dieser Option verhindern Sie, dass die Funktion als Teil der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Replikation veröffentlicht wird. Diese Option kann nicht für CLR-Funktionen angegeben werden.  
   
@@ -421,10 +421,10 @@ RETURNS return_data_type
   
 -   Der Benutzer, der die CREATE FUNCTION-Anweisung ausgeführt hat, besitzt REFERENCES-Berechtigungen für die Datenbankobjekte, auf die die Funktion verweist.  
   
- GIBT NULL ZURÜCK, AUF NULL INPUT | **FÜR NULL-EINGABE AUFGERUFEN**  
- Gibt an, die **OnNULLCall** Attribut des eine Skalarwertfunktion. Wenn das Attribut nicht angegeben ist, wird standardmäßig CALLED ON NULL INPUT verwendet. Dies bedeutet, dass der Hauptteil der Funktion ausgeführt wird, selbst wenn NULL als ein Argument übergeben wird.  
+ RETURNS NULL ON NULL INPUT | **CALLED ON NULL INPUT**  
+ Gibt das **OnNULLCall**-Attribut einer Skalarwertfunktion an. Wenn das Attribut nicht angegeben ist, wird standardmäßig CALLED ON NULL INPUT verwendet. Dies bedeutet, dass der Hauptteil der Funktion ausgeführt wird, selbst wenn NULL als ein Argument übergeben wird.  
   
- Wenn RETURNS NULL ON NULL INPUT in einer CLR-Funktion angegeben wird, bedeutet dies, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NULL zurückgeben kann, wenn eines der ihm zugestellten Argumente NULL ist, ohne den eigentlichen Hauptteil der Funktion aufzurufen. Wenn die Methode einer CLR-Funktion in angegebenen \<Method_specifier > wurde bereits ein benutzerdefiniertes Attribut, das RETURNS NULL ON NULL INPUT angibt, aber die CREATE FUNCTION-Anweisung gibt CALLED ON NULL INPUT, dauert der CREATE FUNCTION-Anweisung an. Rangfolge. Die **OnNULLCall** Attribut kann nicht für CLR-Tabellenwertfunktionen angegeben werden. 
+ Wenn RETURNS NULL ON NULL INPUT in einer CLR-Funktion angegeben wird, bedeutet dies, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NULL zurückgeben kann, wenn eines der ihm zugestellten Argumente NULL ist, ohne den eigentlichen Hauptteil der Funktion aufzurufen. Wenn die Methode einer in \<method_specifier> angegebenen CLR-Funktion bereits über ein benutzerdefiniertes Attribut verfügt, das RETURNS NULL ON NULL INPUT anzeigt, die CREATE FUNCTION-Anweisung jedoch CALLED ON NULL INPUT anzeigt, hat die CREATE FUNCTION-Anweisung Vorrang. Das **OnNULLCall**-Attribut kann nicht für CLR-Tabellenwertfunktionen angegeben werden. 
   
  EXECUTE AS-Klausel  
  Gibt den Sicherheitskontext an, in dem die benutzerdefinierte Funktion ausgeführt wird. Deshalb können Sie steuern, welches Benutzerkonto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet, um Berechtigungen für eines der Datenbankobjekte, auf die in der Funktion verwiesen wird, zu überprüfen.  
@@ -434,43 +434,43 @@ RETURNS return_data_type
   
  Weitere Informationen finden Sie unter [EXECUTE AS-Klausel &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-clause-transact-sql.md).  
   
- **\<Column_definition >:: =** 
+ **\< column_definition >::=** 
   
- Definiert den Tabellendatentyp. Die Tabellendeklaration schließt Spaltendefinitionen und Einschränkungen ein. Für CLR-Funktionen können nur *Column_name* und *Data_type* kann angegeben werden.  
+ Definiert den Tabellendatentyp. Die Tabellendeklaration schließt Spaltendefinitionen und Einschränkungen ein. Für CLR-Funktionen können nur *column_name* und *data_type* angegeben werden.  
   
  *column_name*  
- Der Name einer Spalte in der Tabelle. Spaltennamen müssen den Regeln für Bezeichner entsprechen und in der Tabelle eindeutig sein. *Column_name* kann zwischen 1 und 128 Zeichen bestehen.  
+ Der Name einer Spalte in der Tabelle. Spaltennamen müssen den Regeln für Bezeichner entsprechen und in der Tabelle eindeutig sein. *column_name* kann zwischen 1 und 128 Zeichen haben.  
   
  *data_type*  
- Gibt den Datentyp der Spalte an. Für [!INCLUDE[tsql](../../includes/tsql-md.md)] Funktionen, alle Datentypen, einschließlich von benutzerdefinierten CLR-Typen sind zulässig, außer **Zeitstempel**. Für CLR-Funktionen sind alle Datentypen, einschließlich CLR-benutzerdefinierte Typen, mit Ausnahme der zugelassen **Text**, **Ntext**, **Image**, **Char**, **Varchar**, **varchar(max)**, und **Zeitstempel**. Die nicht skalaren Typ **Cursor** kann nicht angegeben werden, als Datentyp entweder in Spalte [!INCLUDE[tsql](../../includes/tsql-md.md)] oder CLR-Funktionen.  
+ Gibt den Datentyp der Spalte an. Für [!INCLUDE[tsql](../../includes/tsql-md.md)]-Funktionen sind abgesehen von **timestamp** alle Datentypen zulässig, einschließlich benutzerdefinierter CLR-Typen. Für CLR-Funktionen sind abgesehen von **text**, **ntext**, **image**, **char**, **varchar**, **varchar(max)** und **timestamp** alle Datentypen zulässig, einschließlich benutzerdefinierter CLR-Typen. Der nicht skalare Typ **cursor** kann weder in [!INCLUDE[tsql](../../includes/tsql-md.md)]- noch in CLR-Funktionen als Spaltendatentyp angegeben werden.  
   
- Standard *Constant_expression*  
- Gibt den Wert an, der für die Spalte bereitgestellt wird, wenn kein Wert explizit angegeben wurde. *Constant_expression* ist eine Konstante, NULL oder ein systemfunktionswert. DEFAULT-Definitionen können auf alle Spalten angewendet werden, mit Ausnahme von Spalten mit der IDENTITY-Eigenschaft. DEFAULT kann nicht für CLR-Tabellenwertfunktionen angegeben werden.  
+ DEFAULT *constant_expression*  
+ Gibt den Wert an, der für die Spalte bereitgestellt wird, wenn kein Wert explizit angegeben wurde. *constant_expression* ist ein konstanter Wert, ein NULL-Wert oder ein Systemfunktionswert. DEFAULT-Definitionen können auf alle Spalten angewendet werden, mit Ausnahme von Spalten mit der IDENTITY-Eigenschaft. DEFAULT kann nicht für CLR-Tabellenwertfunktionen angegeben werden.  
   
- COLLATE *Collation_name*  
- Gibt die Sortierung für die Spalte an. Wenn keine Sortierung angegeben ist, wird der Spalte die Standardsortierung der Datenbank zugewiesen. Als Sortierungsname kann entweder der Name einer Windows-Sortierreihenfolge oder ein SQL-Sortierungsname verwendet werden. Eine Liste und Weitere Informationen zu Sortierungen finden Sie unter [Windows-Sortierungsname &#40; Transact-SQL &#41; ](../../t-sql/statements/windows-collation-name-transact-sql.md) und [SQL Server-Sortierungsname &#40; Transact-SQL &#41; ](../../t-sql/statements/sql-server-collation-name-transact-sql.md).  
+ COLLATE *collation_name*  
+ Gibt die Sortierung für die Spalte an. Wenn keine Sortierung angegeben ist, wird der Spalte die Standardsortierung der Datenbank zugewiesen. Als Sortierungsname kann entweder der Name einer Windows-Sortierreihenfolge oder ein SQL-Sortierungsname verwendet werden. Eine Liste und weitere Informationen zu Sortierungen finden Sie unter [Name der Windows-Sortierung &#40;Transact-SQL&#41;](../../t-sql/statements/windows-collation-name-transact-sql.md) und [SQL Server-Sortierungsname &#40;Transact-SQL&#41;](../../t-sql/statements/sql-server-collation-name-transact-sql.md).  
   
- Die COLLATE-Klausel kann verwendet werden, so ändern Sie nur die Sortierungen von Spalten von der **Char**, **Varchar**, **Nchar**, und **Nvarchar** Datentypen.  
+ Mit der COLLATE-Klausel können Sie nur die Sortierungen von Spalten der Datentypen **char**, **varchar**, **nchar** und **nvarchar** ändern.  
   
  COLLATE kann nicht für CLR-Tabellenwertfunktionen angegeben werden.  
   
  ROWGUIDCOL  
- Gibt an, dass die neue Spalte eine Spalte mit für alle Zeilen global eindeutigen Bezeichnern ist. Nur ein **"uniqueidentifier"** -Spalte pro Tabelle kann als ROWGUIDCOL-Spalte gekennzeichnet werden. Die ROWGUIDCOL-Eigenschaft kann nur für zugewiesen werden eine **"uniqueidentifier"** Spalte.  
+ Gibt an, dass die neue Spalte eine Spalte mit für alle Zeilen global eindeutigen Bezeichnern ist. Nur eine **uniqueidentifier**-Spalte pro Tabelle kann als ROWGUIDCOL-Spalte gekennzeichnet werden. Die ROWGUIDCOL-Eigenschaft kann nur einer **uniqueidentifier**-Spalte zugewiesen werden.  
   
  Die ROWGUIDCOL-Eigenschaft erzwingt keine Eindeutigkeit der in der Spalte gespeicherten Werte. Sie erzeugt auch nicht automatisch Werte für neue Zeilen, die in die Tabelle eingefügt werden. Um eindeutige Werte für jede Spalte zu erzeugen, verwenden Sie die NEWID-Funktion in INSERT-Anweisungen. Ein Standardwert kann angegeben werden, NEWID wird jedoch nicht als Standardwert unterstützt.  
   
  IDENTITY  
- Gibt an, dass es sich bei der neuen Spalte um eine Identitätsspalte handelt. Wenn der Tabelle eine neue Zeile hinzugefügt wird, stellt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einen eindeutigen, inkrementellen Wert für die Spalte bereit. Identitätsspalten werden normalerweise zusammen mit PRIMARY KEY-Einschränkungen verwendet, um als eindeutiger Zeilenbezeichner für die Tabelle zu dienen. Die IDENTITY-Eigenschaft zugewiesen werden kann **"tinyint"**, **"smallint"**, **Int**, **"bigint"**, **decimal(p,0)**, oder **numeric(p,0)** Spalten. Es kann nur eine Identitätsspalte pro Tabelle erstellt werden. Gebundene Standardwerte und DEFAULT-Einschränkungen können nicht mit einer Identitätsspalte verwendet werden. Geben Sie sowohl die *Ausgangswert* und *Inkrement* oder keines von beiden. Wurden Ausgangswert und inkrementeller Wert nicht angegeben, ist der Standardwert (1,1).  
+ Gibt an, dass es sich bei der neuen Spalte um eine Identitätsspalte handelt. Wenn der Tabelle eine neue Zeile hinzugefügt wird, stellt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einen eindeutigen, inkrementellen Wert für die Spalte bereit. Identitätsspalten werden normalerweise zusammen mit PRIMARY KEY-Einschränkungen verwendet, um als eindeutiger Zeilenbezeichner für die Tabelle zu dienen. Die IDENTITY-Eigenschaft kann folgenden Spalten zugewiesen werden: **tinyint**, **smallint**, **int**, **bigint**, **decimal(p,0)** oder **numeric(p,0)**. Es kann nur eine Identitätsspalte pro Tabelle erstellt werden. Gebundene Standardwerte und DEFAULT-Einschränkungen können nicht mit einer Identitätsspalte verwendet werden. Sie müssen entweder *seed* und den *increment* oder keinen von beiden angeben. Wurden Ausgangswert und inkrementeller Wert nicht angegeben, ist der Standardwert (1,1).  
   
  IDENTITY kann nicht für CLR-Tabellenwertfunktionen angegeben werden.  
   
- *Startwert*  
+ *seed*  
  Der ganzzahlige Wert, der der ersten Zeile in der Tabelle zugewiesen werden soll.  
   
- *Inkrement*  
- Ist der ganzzahlige Wert hinzufügen zu den *Ausgangswert* -Wert nachfolgende Zeilen in der Tabelle.  
+ *increment*  
+ Der ganzzahlige Wert, der dem *seed*-Wert für nachfolgende Zeilen in der Tabelle hinzugefügt werden soll.  
   
- **\<Column_constraint >:: = und \< Table_constraint >:: =** 
+ **\< column_constraint >::= and \< table_constraint>::=** 
   
  Definiert die Einschränkung für eine bestimmte Spalte oder Tabelle. Für CLR-Funktionen ist der einzige zulässige Einschränkungstyp NULL. Benannte Einschränkungen sind nicht zulässig.  
   
@@ -493,12 +493,12 @@ RETURNS return_data_type
  CHECK  
  Eine Einschränkung, die Domänenintegrität erzwingt, indem die möglichen Eingabewerte für eine oder mehrere Spalten beschränkt wird. CHECK-Einschränkungen können nicht für CLR-Tabellenwertfunktionen angegeben werden.  
   
- *Logical_Expression*  
+ *logical_expression*  
  Ein logischer Ausdruck, der TRUE oder FALSE zurückgibt.  
   
- **\<Computed_column_definition >:: =**  
+ **\<computed_column_definition>::=**  
   
- Gibt eine berechnete Spalte an. Weitere Informationen zu berechneten Spalten finden Sie unter [CREATE TABLE &#40; Transact-SQL &#41; ](../../t-sql/statements/create-table-transact-sql.md).  
+ Gibt eine berechnete Spalte an. Weitere Informationen zu berechneten Spalten finden Sie unter [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md).  
   
  *column_name*  
  Der Name der berechneten Spalte.  
@@ -506,26 +506,26 @@ RETURNS return_data_type
  *computed_column_expression*  
  Ein Ausdruck, der den Wert einer berechneten Spalte definiert.  
   
- **\<Index_option >:: =**  
+ **\<index_option>::=**  
   
- Gibt die Indexoptionen für den PRIMARY KEY- oder UNIQUE-Index an. Weitere Informationen zu Indexoptionen finden Sie unter [CREATE INDEX &#40; Transact-SQL &#41; ](../../t-sql/statements/create-index-transact-sql.md).  
+ Gibt die Indexoptionen für den PRIMARY KEY- oder UNIQUE-Index an. Weitere Informationen zu Indexoptionen finden Sie unter [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).  
   
- PAD_INDEX = {ON | **OFF** }  
+ PAD_INDEX = { ON | **OFF** }  
  Gibt die Auffüllung von Indizes an. Der Standardwert ist OFF.  
   
- FILLFACTOR = *Fillfactor*  
- Gibt einen Prozentsatz an, der anzeigt, wie weit [!INCLUDE[ssDE](../../includes/ssde-md.md)] die Blattebene jeder Indexseite während der Indexerstellung oder -änderung füllen soll. *FILLFACTOR* muss ein ganzzahliger Wert zwischen 1 und 100 sein. Die Standardeinstellung ist 0.  
+ FILLFACTOR = *fillfactor*  
+ Gibt einen Prozentsatz an, der anzeigt, wie weit [!INCLUDE[ssDE](../../includes/ssde-md.md)] die Blattebene jeder Indexseite während der Indexerstellung oder -änderung füllen soll. *fillfactor* muss ein ganzzahliger Wert zwischen 1 und 100 sein. Die Standardeinstellung ist 0.  
   
- IGNORE_DUP_KEY = {ON | **OFF** }  
+ IGNORE_DUP_KEY = { ON | **OFF** }  
  Gibt die Fehlermeldung an, wenn ein Einfügevorgang versucht, doppelte Schlüsselwerte in einen eindeutigen Index einzufügen. Die IGNORE_DUP_KEY-Option gilt nur für Einfügevorgänge nach dem Erstellen oder Neuerstellen des Index. Der Standardwert ist OFF.  
   
- STATISTICS_NORECOMPUTE = {ON | **OFF** }  
+ STATISTICS_NORECOMPUTE = { ON | **OFF** }  
  Gibt an, ob Verteilungsstatistiken neu berechnet werden. Der Standardwert ist OFF.  
   
- ALLOW_ROW_LOCKS = { **ON** | {OFF}  
+ ALLOW_ROW_LOCKS = { **ON** | OFF }  
  Gibt an, ob Zeilensperren zulässig sind. Der Standardwert ist ON.  
   
- ALLOW_PAGE_LOCKS = { **ON** | {OFF}  
+ ALLOW_PAGE_LOCKS = { **ON** | OFF }  
  Gibt an, ob Seitensperren zulässig sind. Der Standardwert ist ON.  
   
 ## <a name="best-practices"></a>Bewährte Methoden  
@@ -533,25 +533,25 @@ RETURNS return_data_type
   
 -   Geben Sie beim Erstellen der Funktion die WITH SCHEMABINDING-Klausel an. Hiermit wird sichergestellt, dass die Objekte, auf die in der Funktionsdefinition verwiesen wird, nicht geändert werden können, es sei denn, die Funktion wird auch geändert.  
   
--   Führen Sie die [Sp_refreshsqlmodule](../../relational-databases/system-stored-procedures/sp-refreshsqlmodule-transact-sql.md) gespeicherte Prozedur nach dem Ändern der jedes Objekt, das in der Definition der Funktion angegeben wird.  
+-   Führen Sie die gespeicherte Prozedur [sp_refreshsqlmodule](../../relational-databases/system-stored-procedures/sp-refreshsqlmodule-transact-sql.md) aus, nachdem Sie ein Objekt geändert haben, das in der Definition der Funktion angegeben ist.  
   
 ## <a name="data-types"></a>Datentypen  
- Wenn der Parameter in einer CLR-Funktion angegeben werden, werden sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Typen wie zuvor definierter für *Scalar_parameter_data_type*. Informationen zum Vergleichen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Systemdatentypen mit CLR-integrationsdatentypen oder [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] common Language Runtime-Datentypen finden Sie unter [Zuordnen von CLR-Parameterdaten](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md).  
+ Wenn Parameter in einer CLR-Funktion angegeben werden, sollte es sich dabei um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Typen handeln, wie weiter oben für *scalar_parameter_data_type* definiert. Weitere Informationen zum Vergleichen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Systemdatentypen mit CLR-Integrationsdatentypen oder Datentypen der [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Common Language Runtime finden Sie unter [Zuordnen von CLR-Parameterdaten](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md).  
   
- Für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] um die richtige Methode verweisen, wenn es in einer Klasse überlastet ist, wird die Methode im angegebenen \<Method_specifier > muss die folgenden Merkmale aufweisen: 
+ Damit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] beim Überladen in einer Klasse auf die richtige Methode verweist, muss die in \<method_specifier> angegebene Methode folgende Merkmale aufweisen: 
   
--   Empfangen Sie die gleiche Anzahl von Parametern wie in [,... *n* ].  
+-   Die gleiche Anzahl von Parametern erhalten wie in [ ,...*n* ] angegeben.  
   
 -   Alle Parameter nach Wert erhalten, nicht nach Verweis.  
   
 -   Parametertypen verwenden, die mit den in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Funktion angegebenen kompatibel sind.  
   
- Wenn der Rückgabedatentyp der CLR-Funktion einen Tabellentyp (RETURNS TABLE), der Rückgabedatentyp der Methode im gibt \<Method_specifier > muss vom Typ **IEnumerator** oder **IEnumerable**, und es wird davon ausgegangen, dass die Schnittstelle vom Ersteller der Funktion implementiert wird. Im Gegensatz zu [!INCLUDE[tsql](../../includes/tsql-md.md)] Funktionen, CLR-Funktionen können nicht in PRIMARY KEY-, UNIQUE- oder CHECK-Einschränkungen enthalten \<Table_type_definition >. Die Datentypen der Spalten im angegebenen \<Table_type_definition > übereinstimmen, dass die Typen der entsprechenden Spalten des Resultsets zurückgegeben werden, von der-Methode in \<Method_specifier > zum Zeitpunkt der Ausführung. Diese Typprüfung wird zum Zeitpunkt der Funktionserstellung nicht durchgeführt. 
+ Wenn der Rückgabedatentyp der CLR-Funktion einen Tabellentyp (RETURNS TABLE) angibt, sollte der Rückgabedatentyp der Methode in \<method_specifier> dem **IEnumerator**-Typ oder **IEnumerable**-Typ entsprechen. Es wird zudem angenommen, dass die Schnittstelle vom Ersteller der Funktion implementiert wird. Im Gegensatz zu [!INCLUDE[tsql](../../includes/tsql-md.md)]-Funktionen können CLR-Funktionen keine PRIMARY KEY-, UNIQUE- oder CHECK-Einschränkungen in \<table_type_definition> einschließen. Die Datentypen der Spalten, die in \<table_type_definition> angegeben werden, müssen mit den Typen der entsprechenden Spalten des Resultsets übereinstimmen, das von der in \<method_specifier> angegebenen Methode zur Ausführungszeit zurückgegeben wird. Diese Typprüfung wird zum Zeitpunkt der Funktionserstellung nicht durchgeführt. 
   
- Weitere Informationen zum Programmieren von CLR-Funktionen finden Sie unter [benutzerdefinierte CLR-Funktionen](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md).  
+ Weitere Informationen zum Programmieren von CLR-Funktionen finden Sie unter [CLR-benutzerdefinierte Funktionen](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md).  
   
 ## <a name="general-remarks"></a>Allgemeine Hinweise  
- Skalarwertfunktionen können dort aufgerufen werden, wo Skalarausdrücke verwendet werden. Hierzu gehören berechnete Spalten und CHECK-Einschränkungsdefinitionen. Skalarwertfunktionen können auch ausgeführt werden, mithilfe der [EXECUTE](../../t-sql/language-elements/execute-transact-sql.md) Anweisung. Skalarwertfunktionen müssen mindestens mit dem zweiteiligen Namen der Funktion aufgerufen werden. Weitere Informationen zu mehrteiligen Namen finden Sie unter [Transact-SQL-Syntaxkonventionen &#40; Transact-SQL &#41; ](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md). Tabellenwertfunktionen können dort aufgerufen werden, wo Tabellenausdrücke in der FROM-Klausel der Anweisungen SELECT, INSERT, UPDATE oder DELETE zulässig sind. Weitere Informationen finden Sie unter [Ausführen von benutzerdefinierten Funktionen](../../relational-databases/user-defined-functions/execute-user-defined-functions.md).  
+ Skalarwertfunktionen können dort aufgerufen werden, wo Skalarausdrücke verwendet werden. Hierzu gehören berechnete Spalten und CHECK-Einschränkungsdefinitionen. Skalarwertfunktionen können auch mithilfe der [EXECUTE](../../t-sql/language-elements/execute-transact-sql.md)-Anweisung ausgeführt werden. Skalarwertfunktionen müssen mindestens mit dem zweiteiligen Namen der Funktion aufgerufen werden. Weitere Informationen zu mehrteiligen Namen finden Sie unter [Transact-SQL-Syntaxkonventionen &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md). Tabellenwertfunktionen können dort aufgerufen werden, wo Tabellenausdrücke in der FROM-Klausel der Anweisungen SELECT, INSERT, UPDATE oder DELETE zulässig sind. Weitere Informationen zu benutzerdefinierten Funktionen finden Sie unter [Ausführen von benutzerdefinierten Funktionen](../../relational-databases/user-defined-functions/execute-user-defined-functions.md).  
   
 ## <a name="interoperability"></a>Interoperabilität  
  Die folgenden Anweisungen sind in einer Funktion zulässig:  
@@ -570,7 +570,7 @@ RETURNS return_data_type
   
 -   EXECUTE-Anweisungen, die erweiterte gespeicherte Prozeduren aufrufen.  
   
--   Weitere Informationen finden Sie unter [erstellen Sie eine benutzerdefinierte Funktionen &#40; Datenbankmodul &#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md).  
+-   Weitere Informationen finden Sie unter [Erstellen von benutzerdefinierten Funktionen &#40;Datenbank-Engine&#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md).  
   
 ### <a name="computed-column-interoperability"></a>Interoperabilität bei berechneten Spalten  
  Funktionen verfügen über die folgenden Eigenschaften. Die Werte dieser Eigenschaften bestimmen, ob Funktionen in permanent berechneten oder indizierten berechneten Spalten verwendet werden können.  
@@ -583,21 +583,21 @@ RETURNS return_data_type
 |**SystemDataAccess**|Die Funktion greift auf Systemdaten (Systemkataloge oder virtuelle Systemtabellen) in der lokalen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zu.||  
 |**UserDataAccess**|Die Funktion greift auf Benutzerdaten in der lokalen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zu.|Schließt benutzerdefinierte Tabellen und temporäre Tabellen ein, jedoch keine Tabellenvariablen.|  
   
- Die Präzisions- und Determinismuseigenschaften von [!INCLUDE[tsql](../../includes/tsql-md.md)]-Funktionen werden automatisch von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bestimmt. Die Datenzugriffs- und Determinismuseigenschaften von CLR-Funktionen können vom Benutzer angegeben werden. Weitere Informationen finden Sie unter [Übersicht der CLR-Integration benutzerdefinierte Attribute](http://msdn.microsoft.com/library/ecf5c097-0972-48e2-a9c0-b695b7dd2820).  
+ Die Präzisions- und Determinismuseigenschaften von [!INCLUDE[tsql](../../includes/tsql-md.md)]-Funktionen werden automatisch von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bestimmt. Die Datenzugriffs- und Determinismuseigenschaften von CLR-Funktionen können vom Benutzer angegeben werden. Weitere Informationen finden Sie unter [Übersicht über benutzerdefinierte Attribute der CLR-Integration](http://msdn.microsoft.com/library/ecf5c097-0972-48e2-a9c0-b695b7dd2820).  
   
- Um die aktuellen Werte für diese Eigenschaften anzuzeigen, verwenden [OBJECTPROPERTYEX](../../t-sql/functions/objectpropertyex-transact-sql.md).  
+ Verwenden Sie [OBJECTPROPERTYEX](../../t-sql/functions/objectpropertyex-transact-sql.md), um die aktuellen Werte für diese Eigenschaften anzuzeigen.  
   
  Damit Funktionen deterministisch sind, müssen sie mit der Schemabindung erstellt werden.  
   
  Eine berechnete Spalte, die eine benutzerdefinierte Funktion aufruft, kann in einem Index verwendet werden, sofern die benutzerdefinierte Funktion über folgende Eigenschaftswerte verfügt:  
   
--   **IsDeterministic** = "true"  
+-   **IsDeterministic** = TRUE  
   
--   **IsSystemVerified** = "true" (sofern es sich um eine permanent berechnete Spalte)  
+-   **IsSystemVerified** = TRUE (es sei denn, eine berechnete Spalte wird beibehalten)  
   
--   **UserDataAccess** = "false"  
+-   **UserDataAccess** = FALSE  
   
--   **SystemDataAccess** = "false"  
+-   **SystemDataAccess** = FALSE  
   
  Weitere Informationen finden Sie unter [Indexes on Computed Columns](../../relational-databases/indexes/indexes-on-computed-columns.md).  
   
@@ -646,14 +646,14 @@ RETURNS return_data_type
   
     -   Bei DISTINCT-Aggregaten, bei denen verschiedene Spalten mit der ORDER-Klausel kompatibel sind.  
   
- Durch die ORDER-Klausel wird keine bestimmte Ergebnisreihenfolge bei der Ausführung einer SELECT-Abfrage sichergestellt, es sei denn, in der Abfrage selbst ist ebenfalls ORDER BY angegeben. Finden Sie unter [Sys. function_order_columns &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-function-order-columns-transact-sql.md) Informationen zum Abfragen von Spalten, die in der Sortierreihenfolge für Tabellenwertfunktionen enthalten.  
+ Durch die ORDER-Klausel wird keine bestimmte Ergebnisreihenfolge bei der Ausführung einer SELECT-Abfrage sichergestellt, es sei denn, in der Abfrage selbst ist ebenfalls ORDER BY angegeben. Informationen zu Abfragen nach Spalten, die in der Sortierreihenfolge für Tabellenwertfunktionen enthalten sind, finden Sie unter [sys.function_order_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-function-order-columns-transact-sql.md).  
   
 ## <a name="metadata"></a>Metadaten  
  In der folgenden Tabelle werden die Systemkatalogsichten aufgelistet, die Sie verwenden können, um Metadaten zu benutzerdefinierten Funktionen zurückzugeben.  
   
 |Systemsicht|Description|  
 |-----------------|-----------------|  
-|[sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)|Siehe Beispiel E im Abschnitt "Beispiele" weiter unten.|  
+|[sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)|Weitere Informationen finden Sie im Beispiel E weiter unten im Abschnitt „Beispiele“.|  
 |[sys.assembly_modules](../../relational-databases/system-catalog-views/sys-assembly-modules-transact-sql.md)|Zeigt Informationen zu benutzerdefinierten CLR-Funktionen an.|  
 |[sys.parameters](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md)|Zeigt Informationen zu den Parametern an, die in benutzerdefinierten Funktionen definiert sind.|  
 |[sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)|Zeigt die zugrunde liegenden Objekte an, auf die von einer Funktion verwiesen wird.|  
@@ -666,7 +666,7 @@ RETURNS return_data_type
 ### <a name="a-using-a-scalar-valued-user-defined-function-that-calculates-the-iso-week"></a>A. Verwenden einer benutzerdefinierten Skalarwertfunktion zur Berechnung der ISO-Woche  
  Im folgenden Beispiel wird die benutzerdefinierte Funktion `ISOweek` erstellt. Diese Funktion nimmt ein Datumsargument und berechnet die Nummer der ISO-Woche. Damit diese Funktion richtig rechnet, muss `SET DATEFIRST 1` aufgerufen werden, bevor die Funktion aufgerufen wird.  
   
- Das Beispiel zeigt auch das Verwenden der [EXECUTE AS](../../t-sql/statements/execute-as-clause-transact-sql.md) -Klausel, um den Sicherheitskontext angeben, in dem eine gespeicherte Prozedur ausgeführt werden kann. In dem gezeigten Beispiel gibt die Option `CALLER` an, dass die Prozedur im Kontext des Benutzers, der die Prozedur aufruft, ausgeführt wird. Die anderen Optionen, die Sie angeben können, sind SELF, OWNER und *User_name*.  
+ In diesem Beispiel wird auch das Verwenden der [EXECUTE AS](../../t-sql/statements/execute-as-clause-transact-sql.md)-Klausel zur Angabe des Sicherheitskontexts gezeigt, in dem eine gespeicherte Prozedur ausgeführt werden kann. In dem gezeigten Beispiel gibt die Option `CALLER` an, dass die Prozedur im Kontext des Benutzers, der die Prozedur aufruft, ausgeführt wird. Zusätzlich können Sie die Optionen SELF, OWNER und *user_name* angeben.  
   
  Im Folgenden wird der Funktionsaufruf aufgeführt. Beachten Sie, dass `DATEFIRST` auf `1` festgelegt ist.  
   
@@ -703,7 +703,7 @@ ISO Week
 ```  
   
 ### <a name="b-creating-an-inline-table-valued-function"></a>B. Erstellen einer Inline-Tabellenwertfunktion  
- Das folgende Beispiel gibt eine Inline-Tabellenwertfunktion in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Datenbank zurück. Es gibt drei Spalten `ProductID`, `Name` sowie das Aggregat der Jahr-bis-heute Summen nach Geschäft als `YTD Total` für jedes Produkt, das an das Geschäft verkauft wurde.  
+ Das folgende Beispiel gibt eine Inline-Tabellenwertfunktion in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Datenbank zurück. Die Funktion gibt drei Spalten `ProductID`, `Name` und das Aggregat der gesamten Verkäufe des Jahres (nach Filiale sortiert) als `YTD Total` für jedes Produkt zurück, das an die Filiale verkauft wurde.  
   
 ```sql  
 CREATE FUNCTION Sales.ufn_SalesByStore (@storeid int)  
@@ -729,7 +729,7 @@ SELECT * FROM Sales.ufn_SalesByStore (602);
 ```  
   
 ### <a name="c-creating-a-multi-statement-table-valued-function"></a>C. Erstellen einer Tabellenwertfunktion mit mehreren Anweisungen  
- Im folgenden Beispiel wird die Tabellenwertfunktion `fn_FindReports(InEmpID)` in der AdventureWorks2012-Datenbank erstellt. Wenn der Funktion eine gültige Mitarbeiter-ID bereitgestellt wird, gibt sie eine Tabelle zurück, die allen Mitarbeitern entspricht, die dem Mitarbeiter entweder direkt oder indirekt unterstellt sind. Die Funktion verwendet eine rekursive Abfrage (Common Table Expression, CTE), um eine hierarchische Mitarbeiterliste zu erstellen. Weitere Informationen zu rekursiven CTEs finden Sie unter [WITH Common_table_expression &#40; Transact-SQL &#41; ](../../t-sql/queries/with-common-table-expression-transact-sql.md).  
+ Im folgenden Beispiel wird die Tabellenwertfunktion `fn_FindReports(InEmpID)` in der AdventureWorks2012-Datenbank erstellt. Wenn der Funktion eine gültige Mitarbeiter-ID bereitgestellt wird, gibt sie eine Tabelle zurück, die allen Mitarbeitern entspricht, die dem Mitarbeiter entweder direkt oder indirekt unterstellt sind. Die Funktion verwendet eine rekursive Abfrage (Common Table Expression, CTE), um eine hierarchische Mitarbeiterliste zu erstellen. Weitere Informationen zu rekursiven CTEs finden Sie unter [WITH common_table_expression &#40;Transact-SQL&#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md).  
   
 ```sql  
 CREATE FUNCTION dbo.ufn_FindReports (@InEmpID INTEGER)  
@@ -777,7 +777,7 @@ GO
 ```  
   
 ### <a name="d-creating-a-clr-function"></a>D. Erstellen einer CLR-Funktion  
- Das Beispiel erstellt die CLR-Funktion `len_s`. Bevor die Funktion erstellt wird, wird die Assembly `SurrogateStringFunction.dll` in der lokalen Datenbank registriert.  
+ In diesem Beispiel wird die CLR-Funktion `len_s` erstellt. Bevor die Funktion erstellt wird, wird die Assembly `SurrogateStringFunction.dll` in der lokalen Datenbank registriert.  
   
 **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
@@ -801,9 +801,9 @@ AS EXTERNAL NAME [SurrogateStringFunction].[Microsoft.Samples.SqlServer.Surrogat
 GO  
 ```  
   
- Ein Beispiel zum Erstellen einer CLR-Tabellenwertfunktion, finden Sie unter [Tabellenfunktionen](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-table-valued-functions.md).  
+ Ein Beispiel zum Erstellen einer CLR-Tabellenwertfunktionen finden Sie unter [CLR-Tabellenwertfunktionen](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-table-valued-functions.md).  
   
-### <a name="e-displaying-the-definition-of-includetsqlincludestsql-mdmd-user-defined-functions"></a>E. Anzeigen der Definition [!INCLUDE[tsql](../../includes/tsql-md.md)] von benutzerdefinierten Funktionen  
+### <a name="e-displaying-the-definition-of-includetsqlincludestsql-mdmd-user-defined-functions"></a>E. Zeigt die Definition von benutzerdefinierten [!INCLUDE[tsql](../../includes/tsql-md.md)]-Funktionen an.  
   
 ```sql  
 SELECT definition, type   
@@ -815,16 +815,16 @@ GO
   
  Die Definition von Funktionen, die mithilfe der ENCRYPTION-Option erstellt wurden, können nicht mit sys.sql_modules angezeigt werden. Im Gegensatz dazu werden andere Informationen zu den verschlüsselten Funktionen jedoch angezeigt.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [ALTER FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-function-transact-sql.md)   
- [DROP FUNCTION &#40; Transact-SQL &#41;](../../t-sql/statements/drop-function-transact-sql.md)   
- [OBJECTPROPERTYEX &#40; Transact-SQL &#41;](../../t-sql/functions/objectpropertyex-transact-sql.md)   
+ [DROP FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-function-transact-sql.md)   
+ [OBJECTPROPERTYEX &#40;Transact-SQL&#41;](../../t-sql/functions/objectpropertyex-transact-sql.md)   
  [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)   
  [sys.assembly_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-assembly-modules-transact-sql.md)   
  [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   
- [Benutzerdefinierte CLR-Funktionen](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md)   
+ [CLR-benutzerdefinierte Funktionen](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
- [Erstellen Sie die SICHERHEITSRICHTLINIE &#40; Transact-SQL &#41;](../../t-sql/statements/create-security-policy-transact-sql.md)  
+ [CREATE SECURITY POLICY &#40;Transact-SQL&#41;](../../t-sql/statements/create-security-policy-transact-sql.md)  
   
  
 
