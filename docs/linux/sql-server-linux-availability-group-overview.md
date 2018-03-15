@@ -15,11 +15,11 @@ ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: e37742d4-541c-4d43-9ec7-a5f9b2c0e5d1
 ms.workload: On Demand
-ms.openlocfilehash: b9dd4b05cf69b8556c4c021e2ede576b1a805c5e
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: 54fec5a177d5edf463853d230a56c28eeb1b0f7c
+ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="always-on-availability-groups-on-linux"></a>Always On-Verfügbarkeitsgruppen unter Linux
 
@@ -75,7 +75,7 @@ So ändern Sie den Wert der `required_synchronized_secondaries_to_commit`, verwe
 **Red Hat Enterprise Linux (RHEL) und Ubuntu**
 
 ```bash
-sudo pcs resource update <AGResourceName>-master required_synchronized_secondaries_to_commit=<Value>
+sudo pcs resource update <AGResourceName> required_synchronized_secondaries_to_commit=<Value>
 ```
 
 **SUSE Linux Enterprise Server (SLES)**

@@ -1,7 +1,7 @@
 ---
 title: "Übersicht über Data Migration Assistant (SQLServer) | Microsoft Docs"
 ms.custom: 
-ms.date: 02/07/2018
+ms.date: 03/15/2018
 ms.prod: sql-non-specified
 ms.prod_service: dma
 ms.service: 
@@ -21,11 +21,11 @@ author: HJToland3
 ms.author: jtoland
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c23ed7d07474cc763da951e782badd42458dacdb
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: c387e5bb2a0b5cef10217b32807f88a8aee6c627
+ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="overview-of-data-migration-assistant"></a>Übersicht über Data-Migrations-Assistenten
 
@@ -45,27 +45,20 @@ Die Daten Migration Assistant (DMA) können Sie zum Aktualisieren auf eine moder
 - Ermitteln Sie Probleme, die ein Upgrade auf eine lokale SQL Server auswirken können. Diese werden als Kompatibilitätsprobleme beschrieben und werden in den folgenden Kategorien organisiert:
 
   - Wichtige Änderungen
-
   - Verändertes Programmverhalten
-
   - Als veraltet markierte Funktionen
 
 - Entdecken Sie neue Funktionen in die Zielplattform für das SQL Server, die die Datenbank nach einem Upgrade von profitieren kann. Diese werden als Funktion Empfehlungen beschrieben und werden in den folgenden Kategorien organisiert:
 
   - Leistung
-
   - Sicherheit
-
   - Speicherung
 
 - Migrieren einer lokalen SQL Server-Instanz zu einem modernen SQL Server-Instanz gehostet wird, lokal oder auf einem virtuellen Azure-Computer (VM), der von Ihrem lokalen Netzwerk aus zugänglich ist. Die Azure-VM kann über eine VPN- oder anderen Technologien zugegriffen werden. Workflow bei der Migration können Sie die folgenden Komponenten migrieren:
 
   - Schema der Datenbanken
-
   - Daten und Benutzer
-
   - Serverrollen
-
   - SQL Server und Windows-Anmeldungen
 
 - Nach der erfolgreichen Migration können Anwendungen nahtlos mit den Zieldatenbanken für SQL Server verbinden.
@@ -89,6 +82,9 @@ DMA ersetzt alle vorherige Versionen von SQL Server Upgrade Advisor und Upgrades
 - SQL Server 2016
 - SQLServer 2017 unter Windows und Linux
 - Azure SQL Database
+
+> [!NOTE] 
+> DMA unterstützt Azure SQL-Datenbank verwaltete Instanz als Ziel augenblicklich nicht.
 
 ## <a name="installation"></a>Installation
 

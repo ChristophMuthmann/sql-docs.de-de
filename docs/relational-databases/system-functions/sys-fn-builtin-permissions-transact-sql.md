@@ -34,16 +34,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 41e53169a20ff3082afc0e4b8f10ab76e79ca87d
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: f0aeedb143b94958e949466ea84def760614478c
+ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="sysfnbuiltinpermissions-transact-sql"></a>sys.fn_builtin_permissions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Gibt eine Beschreibung der integrierten Berechtigungshierarchie des Servers zurück. `sys.fn_builtin_permissions`kann nur aufgerufen werden, auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], und es gibt alle Berechtigungen, unabhängig davon, ob sie auf der aktuellen Plattform unterstützt werden. Die meisten Berechtigungen – jedoch nicht alle – gelten für alle Plattformen. Beispielsweise können keine Berechtigungen auf Serverebene für SQL-Datenbank erteilt werden. Informationen darüber, welche Plattformen jede Berechtigung unterstützt finden Sie unter [Berechtigungen &#40; Datenbankmodul &#41;](../../relational-databases/security/permissions-database-engine.md).  
+  Gibt eine Beschreibung der integrierten Berechtigungshierarchie des Servers zurück. `sys.fn_builtin_permissions` kann nur aufgerufen werden, auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], und es gibt alle Berechtigungen, unabhängig davon, ob sie auf der aktuellen Plattform unterstützt werden. Die meisten Berechtigungen – jedoch nicht alle – gelten für alle Plattformen. Beispielsweise können keine Berechtigungen auf Serverebene für SQL-Datenbank erteilt werden. Informationen darüber, welche Plattformen jede Berechtigung unterstützt finden Sie unter [Berechtigungen &#40;Datenbankmodul&#41;](../../relational-databases/security/permissions-database-engine.md).  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -340,7 +340,7 @@ Die folgende Grafik zeigt die Berechtigungen und ihre Beziehungen zueinander. Ei
 ![Datenbankmodulberechtigungen](../../relational-databases/security/media/database-engine-permissions.PNG) 
 
 >[!NOTE]
-> Als Bestandteil dieses Themas ist das Poster viel zu klein zum Lesen. Laden Sie daher das Poster zu den Datenbankmodul-Berechtigungen unter [http://go.microsoft.com/fwlink/?LinkId=229142](http://go.microsoft.com/fwlink/?LinkId=229142)herunter.  
+> Als Bestandteil dieses Themas ist das Poster viel zu klein zum Lesen. Herunterladen der Poster Datenbankmodul-Berechtigungen unter [ https://aka.ms/sql-permissions-poster ](https://aka.ms/sql-permissions-poster).  
    
   
 ## <a name="permissions"></a>Berechtigungen  
