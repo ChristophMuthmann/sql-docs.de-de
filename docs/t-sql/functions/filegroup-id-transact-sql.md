@@ -1,5 +1,5 @@
 ---
-title: Filegroup_id (Transact-SQL) | Microsoft Docs
+title: FILEGROUP_ID (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -50,14 +50,14 @@ FILEGROUP_ID ( 'filegroup_name' )
 ```  
   
 ## <a name="arguments"></a>Argumente  
- **"** *Filegroup_name* **"**  
- Ist ein Ausdruck vom Typ **Sysname** , die den Namen der Dateigruppe, für die die Dateigruppen-ID zurückgegeben darstellt  
+ **'***filegroup_name***'**  
+ Ein Ausdruck vom Typ **sysname** für den Namen der Dateigruppe, für die die Dateigruppen-ID zurückgegeben werden soll.  
   
 ## <a name="return-types"></a>Rückgabetypen  
  **int**  
   
-## <a name="remarks"></a>Hinweise  
- *Filegroup_name* entspricht der **Namen** Spalte in der **"Sys.FileGroups"** -Katalogsicht angezeigt.  
+## <a name="remarks"></a>Remarks  
+ *filegroup_name* entspricht der **name**-Spalte der **sys.filegroups**-Katalogsicht.  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird die Dateigruppen-ID für die Dateigruppe mit dem Namen `PRIMARY` in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Datenbank zurückgegeben.  
@@ -78,9 +78,9 @@ Filegroup ID
 (1 row(s) affected)
  ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Filegroup_name &#40; Transact-SQL &#41;](../../t-sql/functions/filegroup-name-transact-sql.md)   
- [Metadatenfunktionen &#40; Transact-SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
- ["Sys.FileGroups" &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [FILEGROUP_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/filegroup-name-transact-sql.md)   
+ [Metadata Functions &#40;Transact-SQL&#41; (Metadatenfunktionen &#40;Transact-SQL&#41;)](../../t-sql/functions/metadata-functions-transact-sql.md)   
+ [sys.filegroups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)  
   
   

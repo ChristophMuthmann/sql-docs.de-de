@@ -1,5 +1,5 @@
 ---
-title: ISNULL (Transact-SQL) | Microsoft Docs
+title: ISNULL (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -49,20 +49,20 @@ ISNULL ( check_expression , replacement_value )
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *"check_expression"*  
- Ist die [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) auf NULL überprüft werden soll. *"check_expression"* kann einen beliebigen Typ sein.  
+ *check_expression*  
+ Dies ist der [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md), der auf NULL überprüft werden soll. *check_expression* kann ein beliebiger Typ sein.  
   
- *"replacement_value"*  
- Der Ausdruck, der zurückgegeben werden, wenn *"check_expression"* ist NULL. *"replacement_value"* muss ein Typ, der implizit in den Typ des *Check_expresssion*.  
+ *replacement_value*  
+ Der Ausdruck, der zurückgegeben werden soll, wenn *Prüfausdruck* NULL ist. *replacement_value* (Ersatzwert) muss einen Typ aufweisen, der implizit in den Typ von *Prüfausdruck* konvertiert werden kann.  
   
 ## <a name="return-types"></a>Rückgabetypen  
- Gibt den gleichen Typ wie *"check_expression"*. Wenn eine literale NULL, als angegeben wird *"check_expression"*, gibt den Datentyp der *"replacement_value"*. Wenn eine literale NULL, als angegeben wird *"check_expression"* und keine *"replacement_value"* bereitgestellt wird, gibt ein **Int**.  
+ Gibt denselben Typ wie der Ausdruck *check_expression* zurück. Wenn ein literaler NULL-Wert als *check_expression* bereitgestellt wird, wird der Datentyp des Ersatzwerts *replacement_value* zurückgegeben. Wenn ein literaler NULL-Wert als *check_expression* bereitgestellt wird und kein *replacement_value* bereitgestellt wird, wird **int** zurückgegeben.  
   
-## <a name="remarks"></a>Hinweise  
- Der Wert der *"check_expression"* zurückgegeben wird, ist er nicht NULL ist, andernfalls *"replacement_value"* wird zurückgegeben, nachdem es implizit in den Typ konvertiert wird *"check_expression"*, wenn die Typen unterschiedlich sind. *"replacement_value"* können abgeschnitten werden, wenn *"replacement_value"* ist länger als *"check_expression"*.  
+## <a name="remarks"></a>Remarks  
+ Der Wert von *check_expression* wird zurückgegeben, wenn er nicht NULL ist, andernfalls wird *replacement_value* zurückgegeben, nachdem er implizit in den Typ von *check_expression* konvertiert wurde, falls die Typen unterschiedlich sind. *replacement_value* kann gekürzt werden, wenn *replacement_value* länger als *check_expression* ist.  
   
 > [!NOTE]  
->  Verwendung [COALESCE &#40; Transact-SQL &#41; ](../../t-sql/language-elements/coalesce-transact-sql.md) der erste Wert ungleich Null zurückgegeben.  
+>  Verwenden Sie [COALESCE &#40;Transact-SQL&#41;](../../t-sql/language-elements/coalesce-transact-sql.md), um den ersten Wert zurückzugeben, der nicht NULL ist.  
   
 ## <a name="examples"></a>Beispiele  
   
@@ -99,24 +99,24 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-|  Description       |  DiscountPct    |   MinQty    |   Maximale Menge       |
+|  Description       |  DiscountPct    |   MinQty    |   Höchstmenge       |
 |  ---------------   |  -------------  |   --------  |   ---------------    |
 |  No Discount       |  0.00           |   0         |   0                  |
-|  Volume Discount   |  0.02           |   11        |   14                 |
+|  Volume Discount   |  0,02           |   11        |   14                 |
 |  Volume Discount   |  0.05           |   15        |   4                  |
-|  Volume Discount   |  0.10           |   25        |   0                  |
+|  Volume Discount   |  0,10           |   25        |   0                  |
 |  Volume Discount   |  0.15           |   41        |   0                  |
-|  Volume Discount   |  0.20           |   61        |   0                  |
-|  Mountain-100 Cl   |  0.35           |   0         |   0                  |
-|  Sport Helmet Di   |  0.10           |   0         |   0                  |
-|  Road-650 Overst   |  0.30           |   0         |   0                  |
-|  Mountain Tire, S   |  0.50           |   0         |   0                  |
+|  Volume Discount   |  0,20           |   61        |   0                  |
+|  Mountain-100 Cl   |  0,35           |   0         |   0                  |
+|  Sport Helmet Di   |  0,10           |   0         |   0                  |
+|  Road-650 Overst   |  0,30           |   0         |   0                  |
+|  Mountain Tire S   |  0.50           |   0         |   0                  |
 |  Sport Helmet Di   |  0.15           |   0         |   0                  |
-|  LL Road Frame S   |  0.35           |   0         |   0                  |
+|  LL Road Frame S   |  0,35           |   0         |   0                  |
 |  Touring-3000 Pr   |  0.15           |   0         |   0                  |
-|  Touring-1000 Pr   |  0.20           |   0         |   0                  |
-|  Halben Preis Peda   |  0.50           |   0         |   0                  |
-|  Mountain-500 Si   |  0.40           |   0         |   0                  |
+|  Touring-1000 Pr   |  0,20           |   0         |   0                  |
+|  Half-Price Peda   |  0.50           |   0         |   0                  |
+|  Mountain-500 Si   |  0,40           |   0         |   0                  |
 
  `(16 row(s) affected)`  
   
@@ -132,10 +132,10 @@ WHERE Weight IS NULL;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
 ### <a name="d-using-isnull-with-avg"></a>D. Verwenden von ISNULL mit AVG  
- Das folgende Beispiel sucht den Durchschnitt der Gewichtung aller Produkte in eine Beispieltabelle enthält. Alle NULL-Einträge in der `50`-Spalte der `Weight`-Tabelle werden durch den Wert `Product` ersetzt.  
+ Im folgenden Beispiel wird das Durchschnittsgewicht aller Produkte in der selben Tabelle gesucht. Alle NULL-Einträge in der `50`-Spalte der `Weight`-Tabelle werden durch den Wert `Product` ersetzt.  
   
 ```  
 -- Uses AdventureWorks  
@@ -152,7 +152,7 @@ FROM dbo.DimProduct;
 ```  
   
 ### <a name="e-using-isnull"></a>E. Verwenden von ISNULL  
- Im folgenden Beispiel wird die ISNULL So testen Sie für NULL-Werte in der Spalte `MinPaymentAmount` und zeigt den Wert `0.00` für die Zeilen.  
+ Im folgenden Beispiel wird ISNULL verwendet, um auf NULL-Werte in der Spalte `MinPaymentAmount` zu prüfen, und um den Wert `0.00` für diese Zeilen anzuzeigen.  
   
 ```  
 -- Uses AdventureWorks  
@@ -168,15 +168,15 @@ ORDER BY ResellerName;
   
 |  ResellerName                |  MinimumPayment    |
 |  -------------------------   |  --------------    |
-|  Ein Fahrrad-Zuordnung       |     0.0000         |
-|  Eine Bike Store                |     0.0000         |
-|  Ein Zyklus kaufen                |     0.0000         |
-|  Eine gute Bicycle Unternehmen     |     0.0000         |
-|  Eine Typische Fahrrad kaufen         |   200.0000         |
-|  Akzeptable Vertriebs- und Dienst  |     0.0000         |
+|  A Bicycle Association       |     0,0000         |
+|  A Bike Store                |     0,0000         |
+|  A Cycle Shop                |     0,0000         |
+|  A Great Bicycle Company     |     0,0000         |
+|  A Typical Bike Shop         |   200,0000         |
+|  Acceptable Sales & Service  |     0,0000         |
   
-### <a name="f-using-is-null-to-test-for-null-in-a-where-clause"></a>F. Verwenden Sie IS NULL für NULL-Zeichen in einer WHERE-Klausel testen  
- Das folgende Beispiel findet alle Produkte mit `NULL` in der `Weight` Spalte. Beachten Sie den Leerraum zwischen `IS` und `NULL`.  
+### <a name="f-using-is-null-to-test-for-null-in-a-where-clause"></a>F. Verwenden von IS NULL für die Überprüfung auf NULL in einer WHERE-Klausel  
+ Im folgenden Beispiel werden alle Produkte gesucht, die in der `Weight`-Spalte `NULL` enthalten. Beachten Sie den Leerraum zwischen `IS` und `NULL`.  
   
 ```  
 -- Uses AdventureWorks  
@@ -186,12 +186,12 @@ FROM dbo.DimProduct
 WHERE Weight IS NULL;  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Ausdrücke &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
- [IST NULL &#40; Transact-SQL &#41;](../../t-sql/queries/is-null-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Ausdrücke &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [IS NULL &#40;Transact-SQL&#41;](../../t-sql/queries/is-null-transact-sql.md)   
  [Systemfunktionen &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)   
- [WOBEI &#40; Transact-SQL &#41;](../../t-sql/queries/where-transact-sql.md)   
- [COALESCE &#40; Transact-SQL &#41;](../../t-sql/language-elements/coalesce-transact-sql.md)  
+ [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)   
+ [COALESCE &#40;Transact-SQL&#41;](../../t-sql/language-elements/coalesce-transact-sql.md)  
   
   
 

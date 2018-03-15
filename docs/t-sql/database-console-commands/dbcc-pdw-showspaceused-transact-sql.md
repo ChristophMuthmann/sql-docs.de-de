@@ -1,5 +1,5 @@
 ---
-title: DBCC PDW_SHOWSPACEUSED (Transact-SQL) | Microsoft Docs
+title: DBCC PDW_SHOWSPACEUSED (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 07/17/2017
 ms.prod: 
@@ -29,9 +29,9 @@ ms.lasthandoff: 01/25/2018
 # <a name="dbcc-pdwshowspaceused-transact-sql"></a>DBCC PDW_SHOWSPACEUSED (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-Zeigt die Anzahl der Zeilen, reservierte Speicherplatz und Speicherplatz für eine bestimmte Tabelle oder für alle Tabellen in einem [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] oder [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] Datenbank.
+Zeigt die Anzahl von Reihen, den reservierten Speicherplatz und den durch eine bestimmte Tabelle oder durch alle Tabellen in einer [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]- oder [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]-Datenbank belegten Speicherplatz an.
   
-![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Thema Linksymbol") [Transact-SQL-Syntaxkonventionen &#40; Transact-SQL &#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Symbol zum Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions &#40;Transact-SQL&#41; (Transact-SQL-Syntaxkonventionen (Transact-SQL))](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Syntax  
   
@@ -47,37 +47,37 @@ DBCC PDW_SHOWSPACEUSED ( " [ database_name . [ schema_name ] . ] | [ schema_name
   
 ## <a name="arguments"></a>Argumente  
  [ *database_name* . [ *schema_name* ] . | *schema_name* . ] *table_name*  
- Der ein-, zwei- oder dreiteiligen Name der Tabelle angezeigt werden. Für zwei oder dreiteiligen Tabellennamen, Spaltennamen, der Name müssen in doppelte Anführungszeichen eingeschlossen werden (""). Verwenden Anführungszeichen ein einteiliger Tabellenname ist optional. Wenn kein Tabellenname angegeben wird, werden die Informationen für die aktuelle Datenbank angezeigt.  
+ Der ein-, zwei- oder dreiteilige Name der Tabelle, die angezeigt werden soll. Bei zwei- oder dreiteiligen Tabellennamen muss der Name in doppelte Anführungszeichen ("") gesetzt werden. Einteilige Tabellennamen müssen nicht unbedingt in Anführungszeichen gesetzt werden. Wenn kein Tabellenname angegeben wird, werden die Informationen für die aktuelle Datenbank angezeigt.  
   
 ## <a name="permissions"></a>Berechtigungen  
 Erfordert die VIEW SERVER STATE-Berechtigung.
   
 ## <a name="result-sets"></a>Resultsets  
-Dies ist das Resultset für alle Tabellen.
+Im Folgenden wird das Resultset für alle Tabellen aufgeführt.
   
-|Column|Datentyp|Description|  
+|Spalte|Datentyp|Description|  
 |------------|---------------|-----------------|  
-|reserved_space|bigint|Für die Datenbank, in KB belegter Gesamtspeicherplatz.|  
-|data_space|bigint|Speicherplatz für Daten in KB verwendet wird.|  
-|index_space|bigint|Speicherplatz für Indizes in KB verwendet wird.|  
-|unused_space|bigint|Speicherplatz, der den reservierten Speicherplatz Teil und wird nicht verwendet, in KB ist.|  
-|pdw_node_id|int|Computeknoten, der für die Daten verwendet wird.|  
+|reserved_space|BIGINT|Insgesamt durch die Datenbank belegter Speicherplatz in KB.|  
+|data_space|BIGINT|Durch die Daten belegter Speicherplatz in KB.|  
+|index_space|BIGINT|Durch die Daten belegter Speicherplatz in KB.|  
+|unused_space|BIGINT|Speicherplatz in KB, der zum reservierten Speicherplatz gehört und nicht verwendet wird.|  
+|pdw_node_id|ssNoversion|Computeknoten, der für die Daten verwendet wird.|  
   
-Dies ist das Resultset für eine Tabelle.
+Im Folgenden wird das Resultset für eine Tabelle aufgeführt.
   
-|Column|Datentyp|Description|Bereich|  
+|Spalte|Datentyp|Description|Bereich|  
 |------------|---------------|-----------------|-----------|  
-|rows|bigint|Anzahl der Zeilen.||  
-|reserved_space|bigint|Gesamtspeicherplatz, der für das Objekt, in KB reserviert ist.||  
-|data_space|bigint|Speicherplatz verwendet wird, für die Daten in KB.||  
-|index_space|bigint|Speicherplatz für Indizes in KB verwendet wird.||  
-|unused_space|bigint|Speicherplatz, der den reservierten Speicherplatz Teil und wird nicht verwendet, in KB ist.||  
-|pdw_node_id|int|Computeknoten, die für die Speicherplatzverwendung reporting verwendet wird.||  
-|distribution_id|int|Verteilung, die für die Speicherplatzverwendung reporting verwendet wird.|Wert ist 1 für replizierte Tabellen.|  
+|rows|BIGINT|Anzahl von Zeilen.||  
+|reserved_space|BIGINT|Gesamtspeicherplatz in KB, der für das Objekt reserviert ist.||  
+|data_space|BIGINT|Durch die Daten belegter Speicherplatz in KB.||  
+|index_space|BIGINT|Durch die Daten belegter Speicherplatz in KB.||  
+|unused_space|BIGINT|Speicherplatz in KB, der zum reservierten Speicherplatz gehört und nicht verwendet wird.||  
+|pdw_node_id|ssNoversion|Computeknoten, der zum Erstellen von Berichten zum Speicherplatz verwendet wird.||  
+|distribution_id|ssNoversion|Verteilung, die zum Erstellen von Berichten zum Speicherplatz verwendet wird.|Der Wert für replizierte Tabellen ist –1.|  
   
-## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] und[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-### <a name="a-dbcc-pdwshowspaceused-basic-syntax"></a>A. DBCC PDW_SHOWSPACEUSED grundlegende Syntax  
-In den folgenden Beispielen zeigen die Anzahl der Zeilen, die reserviert Speicherplatz auf Datenträger auf verschiedene Weisen anzuzeigen und Speicherplatz verwendet wird, indem Sie die FactInternetSales-Tabelle in der [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)] Datenbank.
+## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
+### <a name="a-dbcc-pdwshowspaceused-basic-syntax"></a>A. Grundlegende DBCC-PDW_SHOWSPACEUSED-Syntax  
+Das folgende Beispiel zeigt verschiedene Möglichkeiten zum Anzeigen der Anzahl von Reihen, des reservierten Speicherplatzes und des Speicherplatzes, der durch die FactInternetSales-Tabellen in der [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)]-Datenbank belegt ist.
   
 ```sql
 -- Uses AdventureWorks  
@@ -88,8 +88,8 @@ DBCC PDW_SHOWSPACEUSED ( "dbo.FactInternetSales" );
 DBCC PDW_SHOWSPACEUSED ( FactInternetSales );  
 ```  
   
-### <a name="b-show-the-disk-space-used-by-all-tables-in-the-current-database"></a>B. Anzeigen des von allen Tabellen in der aktuellen Datenbank verwendeten Speicherplatzes  
- Das folgende Beispiel zeigt den Speicherplatz reserviert und verwendet, die von allen Benutzertabellen und Systemtabellen in der [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)] Datenbank.  
+### <a name="b-show-the-disk-space-used-by-all-tables-in-the-current-database"></a>B. Anzeigen des durch alle Tabellen in der aktuellen Datenbank belegten Speicherplatzes  
+ Das folgende Beispiel zeigt den Speicherplatz, der reserviert und durch sämtliche Benutzer- und Systemtabellen in der [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)]-Datenbank belegt ist.  
   
 ```sql
 -- Uses AdventureWorks  

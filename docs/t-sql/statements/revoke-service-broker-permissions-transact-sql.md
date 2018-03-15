@@ -1,5 +1,5 @@
 ---
-title: Widerrufen der Berechtigungen von Service Broker (Transact-SQL) | Microsoft Docs
+title: REVOKE (Service Broker-Berechtigungen) (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -61,7 +61,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
   
 ## <a name="arguments"></a>Argumente  
  GRANT OPTION FOR  
- Gibt an, dass das Recht zum Erteilen des angegebenen Rechts für andere Prinzipale aufgehoben wird. Die Berechtigung selbst wird nicht widerruft.  
+ Gibt an, dass das Recht zum Erteilen des angegebenen Rechts für andere Prinzipale aufgehoben wird. Die Berechtigung selbst wird nicht aufgehoben.  
   
 > [!IMPORTANT]  
 >  Falls der Prinzipal die angegebene Berechtigung ohne GRANT OPTION besitzt, wird die Berechtigung selbst aufgehoben.  
@@ -69,23 +69,23 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
  *permission*  
  Gibt eine Berechtigung an, die für ein sicherbares Element von [!INCLUDE[ssSB](../../includes/sssb-md.md)] aufgehoben werden kann. Eine Liste dieser Berechtigungen finden Sie unter Hinweise weiter unten in diesem Thema.  
   
- Vertrag **:: *** Contract_name*  
- Gibt den Vertrag an, für den die Berechtigung aufgehoben wird. Der bereichsqualifizierer **::** ist erforderlich.  
+ CONTRACT **::***contract_name*  
+ Gibt den Vertrag an, für den die Berechtigung aufgehoben wird. Der Bereichsqualifizierer **::** ist erforderlich.  
   
- NACHRICHTENTYP **:: *** Message_type_name*  
- Gibt den Nachrichtentyp an, für den die Berechtigung aufgehoben wird. Der bereichsqualifizierer **::** ist erforderlich.  
+ MESSAGE TYPE **::***message_type_name*  
+ Gibt den Nachrichtentyp an, für den die Berechtigung aufgehoben wird. Der Bereichsqualifizierer **::** ist erforderlich.  
   
- REMOTE SERVICE BINDING **:: *** Remote_binding_name*  
- Gibt die Remotedienstbindung an, für die die Berechtigung aufgehoben wird. Der bereichsqualifizierer **::** ist erforderlich.  
+ REMOTE SERVICE BINDING **::***remote_binding_name*  
+ Gibt die Remotedienstbindung an, für die die Berechtigung aufgehoben wird. Der Bereichsqualifizierer **::** ist erforderlich.  
   
  ROUTE **::***route_name*  
- Gibt die Route an, für die die Berechtigung aufgehoben wird. Der bereichsqualifizierer **::** ist erforderlich.  
+ Gibt die Route an, für die die Berechtigung aufgehoben wird. Der Bereichsqualifizierer **::** ist erforderlich.  
   
- Dienst **:: *** Message_type_name*  
- Gibt den Dienst an, für den die Berechtigung aufgehoben wird. Der bereichsqualifizierer **::** ist erforderlich.  
+ SERVICE **::***message_type_name*  
+ Gibt den Dienst an, für den die Berechtigung aufgehoben wird. Der Bereichsqualifizierer **::** ist erforderlich.  
   
  *database_principal*  
- Gibt den Prinzipal an, für den die Berechtigung aufgehoben wird. *Database_principal* kann eines der folgenden sein:  
+ Gibt den Prinzipal an, für den die Berechtigung aufgehoben wird. *database_principal* kann die folgenden Werte aufweisen:  
   
 -   Datenbankbenutzer  
   
@@ -110,7 +110,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
 >  Durch ein kaskadiertes Aufheben einer Berechtigung, die mit GRANT OPTION erteilt wurde, werden sowohl GRANT als auch DENY für diese Berechtigung aufgehoben.  
   
  AS *revoking_principal*  
- Gibt einen Prinzipal an, von dem der Prinzipal, der diese Abfrage ausführt, sein Recht zum Aufheben der Berechtigung ableitet. *Revoking_principal* kann eines der folgenden sein:  
+ Gibt einen Prinzipal an, von dem der Prinzipal, der diese Abfrage ausführt, sein Recht zum Aufheben der Berechtigung ableitet. *revoking_principal* kann die folgenden Werte aufweisen:  
   
 -   Datenbankbenutzer  
   
@@ -128,10 +128,10 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
   
 -   Keinem Serverprinzipal zugeordneter Datenbankbenutzer.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="service-broker-contracts"></a>Service Broker-Verträge  
- Ein [!INCLUDE[ssSB](../../includes/sssb-md.md)] Vertrag ist eine Datenbankebene sicherungsfähiges Element, das von der Datenbank enthalten ist, das das übergeordnete Element in der Berechtigungshierarchie ist. Die spezifischsten und restriktivsten Berechtigungen, die für aufgehoben werden können ein [!INCLUDE[ssSB](../../includes/sssb-md.md)] Vertrag sind aufgeführt, in der folgenden Tabelle die allgemeineren Berechtigungen, die sie implizit enthalten.  
+ Ein [!INCLUDE[ssSB](../../includes/sssb-md.md)]-Vertrag ist ein sicherungsfähiges Element auf Datenbankebene in der Datenbank, die das übergeordnete Element in der Berechtigungshierarchie ist. Die spezifischsten und am meisten beschränkten Berechtigungen, die für einen [!INCLUDE[ssSB](../../includes/sssb-md.md)]-Vertrag widerrufen werden können, sind unten aufgeführt. Auch die allgemeineren Berechtigungen sind aufgeführt, die diese implizit enthalten.  
   
 |Service Broker-Vertragsberechtigung|Impliziert durch Service Broker-Vertragsberechtigung|Impliziert durch Datenbankberechtigung|  
 |----------------------------------------|---------------------------------------------------|------------------------------------|  
@@ -163,7 +163,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
 ## <a name="service-broker-routes"></a>Service Broker-Routen  
- Eine [!INCLUDE[ssSB](../../includes/sssb-md.md)]-Route ist ein sicherbares Element auf Datenbankebene in der Datenbank, die das übergeordnete Element in der Berechtigungshierarchie ist. Die spezifischsten und restriktivsten Berechtigungen, die für aufgehoben werden können eine [!INCLUDE[ssSB](../../includes/sssb-md.md)] Route sind aufgeführt, in der folgenden Tabelle die allgemeineren Berechtigungen, die sie implizit enthalten.  
+ Eine [!INCLUDE[ssSB](../../includes/sssb-md.md)]-Route ist ein sicherbares Element auf Datenbankebene in der Datenbank, die das übergeordnete Element in der Berechtigungshierarchie ist. Die spezifischsten und am meisten beschränkten Berechtigungen, die für eine [!INCLUDE[ssSB](../../includes/sssb-md.md)]-Route widerrufen werden können, sind unten aufgeführt. Auch die allgemeineren Berechtigungen sind aufgeführt, die diese implizit enthalten.  
   
 |Service Broker-Routenberechtigung|Impliziert durch Service Broker-Routenberechtigung|Impliziert durch Datenbankberechtigung|  
 |-------------------------------------|------------------------------------------------|------------------------------------|  
@@ -173,7 +173,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
 ### <a name="service-broker-services"></a>Service Broker-Dienste  
- Ein [!INCLUDE[ssSB](../../includes/sssb-md.md)]-Dienst ist ein sicherbares Element auf Datenbankebene in der Datenbank, die das übergeordnete Element in der Berechtigungshierarchie ist. Die spezifischsten und restriktivsten Berechtigungen, die für aufgehoben werden können eine [!INCLUDE[ssSB](../../includes/sssb-md.md)] Dienst sind aufgeführt, in der folgenden Tabelle die allgemeineren Berechtigungen, die sie implizit enthalten.  
+ Ein [!INCLUDE[ssSB](../../includes/sssb-md.md)]-Dienst ist ein sicherbares Element auf Datenbankebene in der Datenbank, die das übergeordnete Element in der Berechtigungshierarchie ist. Die spezifischsten und am meisten beschränkten Berechtigungen, die für einen [!INCLUDE[ssSB](../../includes/sssb-md.md)]-Dienst widerrufen werden können, sind unten aufgeführt. Auch die allgemeineren Berechtigungen sind aufgeführt, die diese implizit enthalten.  
   
 |Service Broker-Dienstberechtigung|Impliziert durch Service Broker-Dienstberechtigung|Impliziert durch Datenbankberechtigung|  
 |---------------------------------------|--------------------------------------------------|------------------------------------|  
@@ -186,9 +186,9 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die CONTROL-Berechtigung für den Vertrag, Nachrichtentyp, die Remotedienstbindung, Route oder den Dienst von [!INCLUDE[ssSB](../../includes/sssb-md.md)].  
   
-## <a name="see-also"></a>Siehe auch  
- [Berechtigungen von GRANT Service Broker &#40; Transact-SQL &#41;](../../t-sql/statements/grant-service-broker-permissions-transact-sql.md)   
- [Verweigern von Berechtigungen von Service Broker &#40; Transact-SQL &#41;](../../t-sql/statements/deny-service-broker-permissions-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [GRANT (Service Broker-Berechtigungen) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-service-broker-permissions-transact-sql.md)   
+ [DENY (Service Broker-Berechtigungen) &#40;Transact-SQL&#41;](../../t-sql/statements/deny-service-broker-permissions-transact-sql.md)   
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
  [Berechtigungen &#40;Datenbankmodul&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [Prinzipale &#40;Datenbankmodul&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)  

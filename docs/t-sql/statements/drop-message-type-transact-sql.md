@@ -1,5 +1,5 @@
 ---
-title: DROP MESSAGE TYPE (Transact-SQL) | Microsoft Docs
+title: DROP MESSAGE TYPE (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -57,7 +57,7 @@ DROP MESSAGE TYPE message_type_name
 ## <a name="permissions"></a>Berechtigungen  
  Standardmäßig verfügen Mitglieder der festen Datenbankrollen db_ddladmin oder db_owner sowie Mitglieder der festen Serverrolle sysadmin über die Berechtigung zum Löschen eines Nachrichtentyps.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Sie können einen Nachrichtentyp nicht löschen, wenn sich Verträge auf diesen Nachrichtentyp beziehen.  
   
 ## <a name="examples"></a>Beispiele  
@@ -67,7 +67,7 @@ DROP MESSAGE TYPE message_type_name
 DROP MESSAGE TYPE [//Adventure-Works.com/Expenses/SubmitExpense] ;  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [ALTER MESSAGE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-message-type-transact-sql.md)   
  [CREATE MESSAGE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/create-message-type-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  

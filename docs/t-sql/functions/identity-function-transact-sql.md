@@ -1,5 +1,5 @@
 ---
-title: IDENTITY (Funktion) (Transact-SQL) | Microsoft Docs
+title: IDENTITY (Funktion) (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -38,7 +38,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="identity-function-transact-sql"></a>IDENTITY (Funktion) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Wird nur in einer SELECT-Anweisung mit einer INTO verwendet *Tabelle* -Klausel, um eine Identitätsspalte in eine neue Tabelle einzufügen. Die IDENTITY-Funktion ähnelt der mit CREATE TABLE und ALTER TABLE verwendeten IDENTITY-Eigenschaft, ist jedoch nicht mit ihr identisch.  
+  Wird nur in einer SELECT-Anweisung mit einer INTO *table*-Klausel verwendet, um eine Identitätsspalte in eine neue Tabelle einzufügen. Die IDENTITY-Funktion ähnelt der mit CREATE TABLE und ALTER TABLE verwendeten IDENTITY-Eigenschaft, ist jedoch nicht mit ihr identisch.  
   
 > [!NOTE]  
 >  Weitere Informationen zu einer automatisch inkrementierten Zahl, die in mehreren Tabellen verwendet oder aus Anwendungen aufgerufen werden kann, ohne dass auf eine Tabelle verwiesen wird, finden Sie unter [Sequenznummern](../../relational-databases/sequence-numbers/sequence-numbers.md).  
@@ -54,21 +54,21 @@ IDENTITY (data_type [ , seed , increment ] ) AS column_name
   
 ## <a name="arguments"></a>Argumente  
  *data_type*  
- Der Datentyp der Identitätsspalte. Gültige Datentypen für eine Identitätsspalte sind beliebige Datentypen aus der ganzzahligen Datentypkategorie, mit Ausnahme von der **Bit** -Datentyp oder **decimal** -Datentyp.  
+ Der Datentyp der Identitätsspalte. Gültige Datentypen für eine Identitätsspalte sind beliebige Datentypen aus der Integerdatentypkategorie (mit Ausnahme des **bit**-Datentyps) oder der **decimal**-Datentyp.  
   
- *Startwert*  
- Der ganzzahlige Wert, der der ersten Zeile in der Tabelle zugewiesen werden soll. Jede weitere Zeile hat den nächsten Identitätswert, was identisch mit den letzten Identitätswert ist sowie die *Inkrement* Wert. Wenn weder *Ausgangswert* noch *Inkrement* angegeben ist, wird standardmäßig auf 1.  
+ *seed*  
+ Der ganzzahlige Wert, der der ersten Zeile in der Tabelle zugewiesen werden soll. Jeder nachfolgenden Zeile wird jeweils der nächste Identitätswert zugewiesen, der sich aus dem letzten IDENTITY-Wert plus dem *increment*-Wert ergibt. Ist weder der Ausgangswert (*seed*) noch der inkrementelle Wert (*increment*) angegeben, gilt für beide der Standardwert 1.  
   
- *Inkrement*  
- Ist der ganzzahlige Wert hinzufügen zu den *Ausgangswert* -Wert nachfolgende Zeilen in der Tabelle.  
+ *increment*  
+ Der ganzzahlige Wert, der dem *seed*-Wert für nachfolgende Zeilen in der Tabelle hinzugefügt werden soll.  
   
- *Spaltenname*  
+ *column_name*  
  Der Name der Spalte, die in die neue Tabelle eingefügt werden soll.  
   
 ## <a name="return-types"></a>Rückgabetypen  
- Gibt dem *Data_type*.  
+ Gibt denselben Wert zurück wie *data_type*.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Da diese Funktion eine Spalte in einer Tabelle erstellt, muss für die Spalte ein Name in der Auswahlliste angegeben werden. Dies kann auf zwei Arten geschehen:  
   
 ```  
@@ -108,12 +108,12 @@ GO
   
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [@@IDENTITY &#40;Transact-SQL&#41;](../../t-sql/functions/identity-transact-sql.md)   
  [IDENTITY &#40;Eigenschaft&#41; &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql-identity-property.md)   
- [Wählen Sie @local_variable &#40; Transact-SQL &#41;](../../t-sql/language-elements/select-local-variable-transact-sql.md)   
+ [SELECT @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/select-local-variable-transact-sql.md)   
  [DBCC CHECKIDENT &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkident-transact-sql.md)   
- [Sys. identity_columns &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-identity-columns-transact-sql.md)  
+ [sys.identity_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-identity-columns-transact-sql.md)  
   
   

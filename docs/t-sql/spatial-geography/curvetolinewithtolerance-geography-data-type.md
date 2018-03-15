@@ -1,5 +1,5 @@
 ---
-title: CurveToLineWithTolerance (Geography-Datentyp) | Microsoft Docs
+title: CurveToLineWithTolerance (geography-Datentyp) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -51,14 +51,14 @@ ms.lasthandoff: 01/25/2018
  Ein **bool** -Ausdruck, der angibt, ob ein relatives Maximum für die Abweichung verwendet werden soll. Wenn der relativer Wert auf false (0) festgelegt wird, wird ein absolutes Maximum für die Abweichung verwendet, die eine lineare Näherung aufweisen kann.  Wenn der relative Wert auf true (1) festgelegt wird, wird die Toleranz als Produkt des tolerance-Parameters und des Durchmessers des Begrenzungsrahmens für das räumliche Objekt berechnet.  
   
 ## <a name="return-types"></a>Rückgabetypen  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Rückgabetyp: **Geography**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Rückgabetyp: **geography**  
   
  CLR-Rückgabetyp: **SqlGeography**  
   
 ## <a name="exceptions"></a>Ausnahmen  
- Festlegen der Toleranz < = 0 löst eine **ArgumentOutOfRange** Ausnahme.  
+ Festlegen der Toleranz < = 0 löst eine **ArgumentOutOfRange**-Ausnahme aus.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Mit dieser Methode kann ein Umfang für die Fehlertoleranz in der resultierenden **LineString**angegeben werden.  
   
  Die**CurveToLineWithTolerance** -Methode gibt eine **LineString** -Instanz für eine **CircularString** oder eine **CompoundCurve** -Instanz und eine **Polygon** -Instanz für eine **CurvePolygon** -Instanz zurück.  
@@ -100,7 +100,7 @@ ms.lasthandoff: 01/25/2018
  SELECT @g.CurveToLineWithTolerance(.5,1).ToString();
  ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Erweiterte Methoden für geography-Instanzen](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)  
   
   

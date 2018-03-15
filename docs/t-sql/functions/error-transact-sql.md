@@ -1,5 +1,5 @@
 ---
-title: '@@ERROR (Transact-SQL) | Microsoft Docs'
+title: '@@ERROR (Transact-SQL) | Microsoft-Dokumentation'
 ms.custom: 
 ms.date: 08/29/2017
 ms.prod: sql-non-specified
@@ -33,7 +33,7 @@ ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/18/2018
 ---
-# <a name="x40x40error-transact-sql"></a>&#x40;&#x40; Fehler (Transact-SQL)
+# <a name="x40x40error-transact-sql"></a>&#x40;&#x40;ERROR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Gibt die Fehlernummer für die zuletzt ausgeführte [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung zurück.  
@@ -49,18 +49,18 @@ ms.lasthandoff: 01/18/2018
 ## <a name="return-types"></a>Rückgabetypen  
  integer  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Gibt 0 zurück, wenn bei der vorherigen [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung keine Fehler auftraten.  
   
- Gibt eine Fehlernummer zurück, wenn bei der vorherigen Anweisung ein Fehler auftrat. Wenn der Fehler einer der Fehler in der sys.messages-Katalogsicht, dann wurde@ERROR enthält den Wert aus der message_id-Spalte für diesen Fehler. Sie können den zugeordneten Text anzeigen ein @@ERROR Fehlernummer in sys.messages.  
+ Gibt eine Fehlernummer zurück, wenn bei der vorherigen Anweisung ein Fehler auftrat. Wenn es sich bei dem Fehler um einen der Fehler in der sys.messages-Katalogsicht handelt, enthält @@ERROR den Wert der sys.messages.message_id-Spalte dieses Fehlers. Sie können den zu einer @@ERROR-Fehlernummer gehörenden Text in sys.messages anzeigen.  
   
- Da @@ERROR deaktiviert ist und nach jeder ausgeführten Anweisung zurücksetzen checken Sie es sofort nach der Anweisung, die überprüft wird, oder speichern Sie sie an eine lokale Variable, die später aktiviert werden kann.  
+ Da @@ERROR nach jeder ausgeführten Anweisung gelöscht und zurückgesetzt wird, sollten Sie den Fehler sofort nach der Überprüfung der Anweisung überprüfen oder ihn in einer lokalen Variablen speichern, die zu einem späteren Zeitpunkt überprüft werden kann.  
   
- Verwenden Sie das TRY...CATCH-Konstrukt zur Behandlung von Fehlern. Wiederholen Sie dann... CATCH erstellen auch unterstützt zusätzliche Systemfunktionen (ERROR_LINE, ERROR_MESSAGE, ERROR_PROCEDURE, ERROR_SEVERITY und ERROR_STATE), die mehr Fehlerinformationen als zurückgeben @@ERROR . TRY...CATCH unterstützt darüber hinaus eine ERROR_NUMBER-Funktion, die nicht darauf beschränkt ist, die Fehlernummer in der Anweisung zurückzugeben, die unmittelbar auf die Anweisung folgt, die einen Fehler generiert hat. Weitere Informationen finden Sie unter [TRY...CATCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/try-catch-transact-sql.md).  
+ Verwenden Sie das TRY...CATCH-Konstrukt zur Behandlung von Fehlern. Das TRY...CATCH-Konstrukt unterstützt auch zusätzliche Systemfunktionen (ERROR_LINE, ERROR_MESSAGE, ERROR_PROCEDURE, ERROR_SEVERITY und ERROR_STATE), die mehr Fehlerinformationen als @@ERROR zurückgeben. TRY...CATCH unterstützt darüber hinaus eine ERROR_NUMBER-Funktion, die nicht darauf beschränkt ist, die Fehlernummer in der Anweisung zurückzugeben, die unmittelbar auf die Anweisung folgt, die einen Fehler generiert hat. Weitere Informationen finden Sie unter [TRY...CATCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/try-catch-transact-sql.md).  
   
 ## <a name="examples"></a>Beispiele  
   
-### <a name="a-using-error-to-detect-a-specific-error"></a>A. Mit@ERROR zum Erkennen eines bestimmten Fehlers  
+### <a name="a-using-error-to-detect-a-specific-error"></a>A. Verwenden von @@ERROR zum Erkennen eines bestimmten Fehlers  
  Im folgenden Beispiel wird `@@ERROR` verwendet, um nach einer Verletzung einer CHECK-Einschränkung (Fehlernr. 547) in einer `UPDATE`-Anweisung zu suchen.  
   
 ```  
@@ -74,8 +74,8 @@ IF @@ERROR = 547
 GO  
 ```  
   
-### <a name="b-using-error-to-conditionally-exit-a-procedure"></a>B. Mit@ERROR zur bedingten Beendigung eine Prozedur  
- Im folgenden Beispiel wird `IF...ELSE` Anweisungen zum Testen `@@ERROR` nach einer `DELETE` -Anweisung in einer gespeicherten Prozedur. Der Wert der `@@ERROR`-Variablen bestimmt den an das aufrufende Programm gesendeten Rückgabecode und gibt damit den Erfolg oder das Fehlschlagen der Prozedur an.  
+### <a name="b-using-error-to-conditionally-exit-a-procedure"></a>B. Verwenden von @@ERROR zur bedingten Beendigung einer Prozedur  
+ In den folgenden Beispielen werden `IF...ELSE`-Anweisungen verwendet, um `@@ERROR` nach einer `DELETE`-Anweisung in einer gespeicherten Prozedur zu testen. Der Wert der `@@ERROR`-Variablen bestimmt den an das aufrufende Programm gesendeten Rückgabecode und gibt damit den Erfolg oder das Fehlschlagen der Prozedur an.  
   
 ```  
 USE AdventureWorks2012;  
@@ -109,7 +109,7 @@ ELSE
 GO  
 ```  
   
-### <a name="c-using-error-with-rowcount"></a>C. Mit@ERROR mit @@ROWCOUNT   
+### <a name="c-using-error-with-rowcount"></a>C. Verwenden von @@ERROR mit @@ROWCOUNT  
  Im folgenden Beispiel wird `@@ERROR` mit `@@ROWCOUNT` verwendet, um den Vorgang einer `UPDATE`-Anweisung zu überprüfen. Der Wert von `@@ERROR` wird auf Fehler überprüft, und `@@ROWCOUNT` wird verwendet, um sicherzustellen, dass das Update erfolgreich auf eine Zeile in der Tabelle angewendet wurde.  
   
 ```  
@@ -172,16 +172,16 @@ GO
 ```  
 
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [TRY...CATCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/try-catch-transact-sql.md)   
  [ERROR_LINE &#40;Transact-SQL&#41;](../../t-sql/functions/error-line-transact-sql.md)   
  [ERROR_MESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/error-message-transact-sql.md)   
  [ERROR_NUMBER &#40;Transact-SQL&#41;](../../t-sql/functions/error-number-transact-sql.md)   
  [ERROR_PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/functions/error-procedure-transact-sql.md)   
  [ERROR_SEVERITY &#40;Transact-SQL&#41;](../../t-sql/functions/error-severity-transact-sql.md)   
- [ERROR_STATE &#40; Transact-SQL &#41;](../../t-sql/functions/error-state-transact-sql.md)   
+ [ERROR_STATE &#40;Transact-SQL&#41;](../../t-sql/functions/error-state-transact-sql.md)   
  [@@ROWCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/rowcount-transact-sql.md)   
- [Sys.Messages &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)  
+ [sys.messages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)  
   
   
 

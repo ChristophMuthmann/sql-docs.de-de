@@ -1,5 +1,5 @@
 ---
-title: USER_ID (Transact-SQL) | Microsoft Docs
+title: USER_ID (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -42,7 +42,7 @@ ms.lasthandoff: 11/21/2017
   Gibt die ID eines Datenbankbenutzers zurück.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Verwendung [DATABASE_PRINCIPAL_ID](../../t-sql/functions/database-principal-id-transact-sql.md) stattdessen.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Verwenden Sie stattdessen [DATABASE_PRINCIPAL_ID](../../t-sql/functions/database-principal-id-transact-sql.md).  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -54,14 +54,14 @@ USER_ID ( [ 'user' ] )
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *Benutzer*  
- Der zu verwendende Benutzername. *Benutzer* ist **Nchar**. Wenn eine **Char** -Wert angegeben wird, wird es implizit in konvertiert **Nchar**. Die Klammern sind erforderlich.  
+ *user*  
+ Der zu verwendende Benutzername. *user* ist vom Datentyp **nchar**. Falls ein **char**-Wert angegeben wird, wird dieser implizit in **nchar** konvertiert. Die Klammern sind erforderlich.  
   
 ## <a name="return-types"></a>Rückgabetypen  
  **int**  
   
-## <a name="remarks"></a>Hinweise  
- Wenn *Benutzer* wird weggelassen wird, wird der aktuelle Benutzer verwendet. Wenn der Parameter das Wort NULL enthält, wird NULL zurückgegeben. Wird USER_ID nach der Ausführung von EXECUTE AS aufgerufen, gibt USER_ID die ID des Kontexts nach dem Identitätswechsel zurück.  
+## <a name="remarks"></a>Remarks  
+ Wenn *user* nicht angegeben ist, wird der aktuelle Benutzer verwendet. Wenn der Parameter das Wort NULL enthält, wird NULL zurückgegeben. Wird USER_ID nach der Ausführung von EXECUTE AS aufgerufen, gibt USER_ID die ID des Kontexts nach dem Identitätswechsel zurück.  
   
  Wenn ein Windows-Prinzipal, der keinem spezifischen Datenbankbenutzer zugeordnet ist, über die Mitgliedschaft in einer Gruppe auf eine Datenbank zugreift, gibt USER_ID den Wert 0 (die ID von public) zurück. Falls ein solcher Prinzipal ein Objekt ohne Angabe eines Schemas erstellt, erstellt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einen impliziten Benutzer und ein Schema, das dem Windows-Prinzipal zugeordnet ist. Der in diesem Szenario erstellte Benutzer kann nicht zum Herstellen einer Verbindung mit der Datenbank verwendet werden. Bei Aufrufen von USER_ID durch einen Windows-Prinzipal, der einem impliziten Benutzer zugeordnet ist, wird die ID des impliziten Benutzers zurückgegeben.  
   
@@ -76,10 +76,10 @@ SELECT USER_ID('Harold');
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [USER_NAME &#40; Transact-SQL &#41;](../../t-sql/functions/user-name-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [USER_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/user-name-transact-sql.md)   
  [sys.database_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)   
- [DATABASE_PRINCIPAL_ID &#40; Transact-SQL &#41;](../../t-sql/functions/database-principal-id-transact-sql.md)   
+ [DATABASE_PRINCIPAL_ID &#40;Transact-SQL&#41;](../../t-sql/functions/database-principal-id-transact-sql.md)   
  [Sicherheitsfunktionen &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)  
   
   

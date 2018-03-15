@@ -1,5 +1,5 @@
 ---
-title: FILEPROPERTY (Transact-SQL) | Microsoft Docs
+title: FILEPROPERTY (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -51,24 +51,24 @@ FILEPROPERTY ( file_name , property )
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *Dateiname*  
- Ein Ausdruck, der den Namen der Datei enthält, die der aktuellen Datenbank zugeordnet ist, für die Eigenschaftsinformationen zurückgegeben werden sollen. *File_name* ist **vom Typ nchar(128)**.  
+ *file_name*  
+ Ein Ausdruck, der den Namen der Datei enthält, die der aktuellen Datenbank zugeordnet ist, für die Eigenschaftsinformationen zurückgegeben werden sollen. *file_name* ist vom Datentyp **nchar(128)**.  
   
- *Eigenschaft*  
- Ein Ausdruck, der den Namen der zurückzugebenden Dateieigenschaft enthält. *Eigenschaft* ist **varchar(128)**, und kann einen der folgenden Werte.  
+ *property*  
+ Ein Ausdruck, der den Namen der zurückzugebenden Dateieigenschaft enthält. *property* ist vom Datentyp **varchar(128)**. Die folgenden Werte sind möglich.  
   
-|Wert|Description|Rückgabewert|  
+|value|Description|Zurückgegebener Wert|  
 |-----------|-----------------|--------------------|  
 |**IsReadOnly**|Dateigruppe ist schreibgeschützt.|1 = True<br /><br /> 0 = False<br /><br /> NULL = Eingabe ist nicht gültig.|  
 |**IsPrimaryFile**|Datei ist die primäre Datei.|1 = True<br /><br /> 0 = False<br /><br /> NULL = Eingabe ist nicht gültig.|  
-|**Von IsLogFile**|Datei ist eine Protokolldatei.|1 = True<br /><br /> 0 = False<br /><br /> NULL = Eingabe ist nicht gültig.|  
+|**IsLogFile**|Datei ist eine Protokolldatei.|1 = True<br /><br /> 0 = False<br /><br /> NULL = Eingabe ist nicht gültig.|  
 |**SpaceUsed**|Speicherplatz, der von der angegebenen Datei verwendet wird.|Anzahl der in der Datei zugeordneten Seiten.|  
   
 ## <a name="return-types"></a>Rückgabetypen  
  **int**  
   
-## <a name="remarks"></a>Hinweise  
- *File_name* entspricht der **Namen** Spalte in der **Sys. master_files** oder **Sys. database_files** -Katalogsicht angezeigt.  
+## <a name="remarks"></a>Remarks  
+ *file_name* entspricht der **name**-Spalte in den Katalogsichten **sys.master_files** oder **sys.database_files**.  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird die Einstellung für die `IsPrimaryFile`-Eigenschaft des `AdventureWorks_Data`-Dateinamens in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Datenbank zurückgegeben.  
@@ -88,9 +88,9 @@ Primary File
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [FILEGROUPPROPERTY &#40; Transact-SQL &#41;](../../t-sql/functions/filegroupproperty-transact-sql.md)   
- [Metadatenfunktionen &#40; Transact-SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [FILEGROUPPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/filegroupproperty-transact-sql.md)   
+ [Metadata Functions &#40;Transact-SQL&#41; (Metadatenfunktionen (Transact-SQL))](../../t-sql/functions/metadata-functions-transact-sql.md)   
  [sp_spaceused &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)   
  [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
  [sys.master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  

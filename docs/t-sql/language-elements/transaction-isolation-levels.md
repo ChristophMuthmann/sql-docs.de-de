@@ -1,5 +1,5 @@
 ---
-title: Isolationsstufen von Transaktionen | Microsoft Docs
+title: Transaktionsisolationsstufen | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -44,13 +44,13 @@ ms.lasthandoff: 01/25/2018
   
 -   Metadaten ausgebende integrierte Funktionen  
   
--   **Sp_help** -Gruppe gespeicherter Prozeduren  
+-   Die **sp_help**-Gruppe gespeicherter Prozeduren  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client-Katalogprozeduren  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-Katalogprozeduren  
   
 -   Dynamische Verwaltungssichten (DMVs, Dynamic Management Views) und -funktionen  
   
- Weitere Informationen zu Isolationsstufen finden Sie unter [SET TRANSACTION ISOLATION LEVEL &#40; Transact-SQL &#41; ](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
+ Weitere Informationen zu Isolationsstufen in SQL Server finden Sie unter [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
   
  Die folgende Tabelle fasst den Zugriff auf Metadaten bei verschiedenen Isolationsstufen zusammen.  
   

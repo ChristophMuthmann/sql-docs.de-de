@@ -1,5 +1,5 @@
 ---
-title: BACKUP MASTER KEY (Transact-SQL) | Microsoft Docs
+title: BACKUP MASTER KEY (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -54,13 +54,13 @@ BACKUP MASTER KEY TO FILE = 'path_to_file'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- Datei ='*Dateipfad*"  
+ FILE ='*path_to_file*'  
  Gibt den vollständigen Pfad, einschließlich des Dateinamens, zu der Datei an, in die der Hauptschlüssel exportiert wird. Dies kann ein lokaler Pfad oder ein UNC-Pfad zu einem Netzwerkspeicherort sein.  
   
- Kennwort = "*Kennwort*"  
+ PASSWORD ='*password*'  
  Das zum Verschlüsseln des Hauptschlüssels in der Datei verwendete Kennwort. Dieses Kennwort unterliegt Komplexitätsüberprüfungen. Weitere Informationen finden Sie unter [Password Policy](../../relational-databases/security/password-policy.md).  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Der Hauptschlüssel muss geöffnet und entschlüsselt sein, bevor er gesichert wird. Wenn er mit dem Diensthauptschlüssel verschlüsselt ist, muss der Hauptschlüssel nicht explizit geöffnet werden. Falls der Hauptschlüssel jedoch nur mit einem Kennwort verschlüsselt ist, muss er explizit geöffnet werden.  
   
  Es wird empfohlen, dass Sie sofort nach der Erstellung eine Sicherung des Hauptschlüssels anlegen und diese an einem sicheren Ort außerhalb Ihrer Geschäftsräume aufbewahren.  
@@ -79,13 +79,13 @@ BACKUP MASTER KEY TO FILE = 'c:\temp\exportedmasterkey'
 GO   
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [CREATE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-master-key-transact-sql.md)   
- [Öffnen Sie MASTER KEY &#40; Transact-SQL &#41;](../../t-sql/statements/open-master-key-transact-sql.md)   
- [CLOSE MASTER KEY &#40; Transact-SQL &#41;](../../t-sql/statements/close-master-key-transact-sql.md)   
- [RESTORE MASTER KEY &#40; Transact-SQL &#41;](../../t-sql/statements/restore-master-key-transact-sql.md)   
+ [OPEN MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/open-master-key-transact-sql.md)   
+ [CLOSE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/close-master-key-transact-sql.md)   
+ [RESTORE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-master-key-transact-sql.md)   
  [ALTER MASTER KEY (Transact-SQL)](../../t-sql/statements/alter-master-key-transact-sql.md)   
- [DROP MASTER KEY &#40; Transact-SQL &#41;](../../t-sql/statements/drop-master-key-transact-sql.md)   
+ [DROP MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-master-key-transact-sql.md)   
  [Verschlüsselungshierarchie](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   
   

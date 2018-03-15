@@ -1,5 +1,5 @@
 ---
-title: "Verweigern datenbankweit gültige Anmeldeinformationen (Transact-SQL) | Microsoft Docs"
+title: "DENY (Datenbankweit gültige Anmeldeinformationen) (Transact-SQL) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 12/16/2016
 ms.prod: sql-non-specified
@@ -32,10 +32,10 @@ ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="deny-database-scoped-credential-transact-sql"></a>VERWEIGERTE datenbankweit gültige Anmeldeinformationen (Transact-SQL)
+# <a name="deny-database-scoped-credential-transact-sql"></a>DENY (Datenbankweit gültige Anmeldeinformationen) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
-  Verweigert Berechtigungen für datenbankweit gültigen Anmeldeinformationen.  
+  Verweigert Berechtigungen für datenbankweit gültige Anmeldeinformationen.  
 
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -52,11 +52,11 @@ DENY permission  [ ,...n ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *Berechtigung*  
- Gibt eine Berechtigung verweigert werden kann, die datenbankweit gültigen Anmeldeinformationen. Unten aufgeführt.  
+ *permission*  
+ Gibt eine Berechtigung an, die für die datenbankweit gültigen Anmeldeinformationen verweigert werden kann. Unten aufgeführt.  
   
- AUF der DATENBANKWEITEN Anmeldeinformationen **::***Credential_name*  
- Gibt die datenbankweite Anmeldeinformationen für die die Berechtigung verweigert wird. Der Bereichsqualifizierer "::" ist erforderlich.  
+ ON DATABASE SCOPED CREDENTIAL **::***credential_name*  
+ Gibt die datenbankweit gültigen Anmeldeinformationen an, für die die Berechtigung verweigert wird. Der Bereichsqualifizierer "::" ist erforderlich.  
   
  *database_principal*  
  Gibt den Prinzipal an, für den die Berechtigung verweigert wird. Einer der folgenden Typen:  
@@ -99,10 +99,10 @@ DENY permission  [ ,...n ]
   
 -   Keinem Serverprinzipal zugeordneter Datenbankbenutzer.  
   
-## <a name="remarks"></a>Hinweise  
- Datenbankweit gültigen Anmeldeinformationen ist eine Datenbankebene sicherungsfähiges Element in der Datenbank, die das übergeordnete Element in der Berechtigungshierarchie ist enthalten. Die spezifischsten und restriktivsten Berechtigungen, die für datenbankweit gültigen Anmeldeinformationen verweigert werden können sind aufgeführt, zusammen mit den allgemeineren Berechtigungen, die sie implizit enthalten.  
+## <a name="remarks"></a>Remarks  
+ Datenbankweit gültige Anmeldeinformationen sind ein sicherungsfähiges Element auf Datenbankebene in der Datenbank, die das übergeordnete Element in der Berechtigungshierarchie ist. Die spezifischsten und restriktivsten Berechtigungen, die für datenbankweit gültige Anmeldeinformationen verweigert werden können, sind im Folgenden aufgeführt, zusammen mit den allgemeineren Berechtigungen, die sie implizit enthalten.  
   
-|Datenbankweit gültige Credential-Berechtigung|Impliziert durch die datenbankweite Credential-Berechtigung|Impliziert durch Datenbankberechtigung|  
+|Berechtigung für datenbankweit gültige Anmeldeinformationen|Impliziert durch die Berechtigung für datenbankweit gültige Anmeldeinformationen|Impliziert durch Datenbankberechtigung|  
 |----------------------------|---------------------------------------|------------------------------------|  
 |CONTROL|CONTROL|CONTROL|  
 |TAKE OWNERSHIP|CONTROL|CONTROL|  
@@ -111,12 +111,12 @@ DENY permission  [ ,...n ]
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert die CONTROL-Berechtigung für die datenbankbezogenen Anmeldeinformationen. Falls die AS-Klausel verwendet wird, muss der angegebene Prinzipal die datenbankbezogenen Anmeldeinformationen besitzen.  
+ Erfordert die CONTROL-Berechtigung für die datenbankweit gültigen Anmeldeinformationen. Wenn Sie die AS-Klausel verwenden, muss der angegebene Prinzipal Besitzer der datenbankweiten Anmeldeinformationen sein.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [DENY &#40;Transact-SQL&#41;](../../t-sql/statements/deny-transact-sql.md)   
- [GRANT datenbankweit gültige Anmeldeinformationen (Transact-SQL)](../../t-sql/statements/grant-database-scoped-credential-transact-sql.md)   
- [WIDERRUFEN Sie die datenbankbezogenen Anmeldeinformationen (Transact-SQL)](../../t-sql/statements/revoke-database-scoped-credential-transact-sql.md)   
+ [GRANT (Datenbankweit gültige Anmeldeinformationen) (Transact-SQL)](../../t-sql/statements/grant-database-scoped-credential-transact-sql.md)   
+ [REVOKE (Datenbankweit gültige Anmeldeinformationen) (Transact-SQL)](../../t-sql/statements/revoke-database-scoped-credential-transact-sql.md)   
  [Berechtigungen &#40;Datenbankmodul&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [Prinzipale &#40;Datenbankmodul&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [Verschlüsselungshierarchie](../../relational-databases/security/encryption/encryption-hierarchy.md)  

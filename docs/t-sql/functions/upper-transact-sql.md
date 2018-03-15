@@ -1,5 +1,5 @@
 ---
-title: UPPER (Transact-SQL) | Microsoft Docs
+title: UPPER (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
@@ -51,15 +51,15 @@ UPPER ( character_expression )
   
 ## <a name="arguments"></a>Argumente  
  *character_expression*  
- Ist ein [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) von Zeichendaten. *Character_expression* kann eine Konstante, Variable oder Spalte mit Zeichen- oder Binärdaten sein.  
+ Ein [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) von Zeichendaten. *character_expression* kann eine Konstante, Variable oder Spalte mit Zeichen- oder Binärdaten darstellen.  
   
- *Character_expression* muss einen Datentyp, der implizit in **Varchar**. Verwenden Sie andernfalls [Umwandlung](../../t-sql/functions/cast-and-convert-transact-sql.md) zur expliziten Konvertierung *Character_expression*.  
+ *character_expression* muss einen Datentyp aufweisen, der implizit nach **varchar** konvertiert werden kann. Verwenden Sie in allen anderen Fällen [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) zur expliziten Konvertierung von *character_expression*.  
   
 ## <a name="return-types"></a>Rückgabetypen  
- **Varchar** oder **Nvarchar**  
+ **varchar** oder **nvarchar**  
   
 ## <a name="examples"></a>Beispiele  
- Im folgenden Beispiel wird die `UPPER` und `RTRIM` Funktionen zum Zurückgeben der Nachname von Personen in der `dbo.DimEmployee` Tabelle, sodass sie in Großbuchstaben, gekürzt und mit dem Vornamen verketteten ist.  
+ Im folgenden Beispiel wird mithilfe der Funktionen `UPPER` und `RTRIM` der Nachname von Personen in der `dbo.DimEmployee`-Tabelle zurückgegeben, damit der Nachname in Großbuchstaben, gekürzt und mit dem Vornamen verkettet angezeigt wird.  
   
 ```  
 -- Uses AdventureWorks  
@@ -79,9 +79,9 @@ ABERCROMBIE, Kim
 ABOLROUS, Hazem
  ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [Zeichenfolgenfunktionen &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
+ [String Functions &#40;Transact-SQL&#41; (Zeichenfolgenfunktionen (Transact-SQL))](../../t-sql/functions/string-functions-transact-sql.md)  
  [LOWER &#40;Transact-SQL&#41;](../../t-sql/functions/lower-transact-sql.md)  
   
   

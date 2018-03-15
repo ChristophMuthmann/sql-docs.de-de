@@ -1,5 +1,5 @@
 ---
-title: Erstellen von VIEW (Transact-SQL) | Microsoft Docs
+title: CREATE VIEW (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
@@ -95,24 +95,24 @@ AS <select_statement>
 ```  
   
 ## <a name="arguments"></a>Argumente
-ODER ÄNDERN  
- **Gilt für**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (beginnend mit [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1).   
+OR ALTER  
+ **Gilt für**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1).   
   
- Bedingt ändert die Ansicht nur, wenn sie bereits vorhanden ist. 
+ Ändert die Sicht nur, sofern diese bereits vorhanden ist. 
  
  *schema_name*  
  Ist der Name des Schemas, zu dem die Sicht gehört.  
   
  *view_name*  
- Ist der Name der Sicht. Sichtnamen müssen den Regeln für Bezeichner entsprechen. Das Angeben des Sichtbesitzernamens ist optional.  
+ Der Name der Sicht. Sichtnamen müssen den Regeln für Bezeichner entsprechen. Das Angeben des Sichtbesitzernamens ist optional.  
   
- *Spalte*  
+ *column*  
  Der Name, den eine Spalte in einer Sicht erhalten soll. Das Angeben eines Spaltennamens ist nur erforderlich, wenn eine Spalte von einem arithmetischen Ausdruck, einer Funktion oder einer Konstanten abgeleitet wird oder wenn zwei oder mehr Spalten sonst denselben Namen haben können (gewöhnlich aufgrund eines Joins) oder aber wenn für die Spalte in einer Sicht ein anderer Name angegeben ist als die Spalte, von der sie abgeleitet wurde. Spaltennamen können auch in der SELECT-Anweisung zugewiesen werden.  
   
- Wenn *Spalte* nicht angegeben ist, werden die Spalten der Sicht abzurufen, die gleichen Namen wie die Spalten in der SELECT-Anweisung.  
+ Wenn *column* nicht angegeben ist, erhalten die Spalten der Sicht dieselben Namen wie die in der SELECT-Anweisung angegebenen Spalten.  
   
 > [!NOTE]  
->  In den Spalten für die Sicht gelten die Berechtigungen für einen Spaltennamen über eine CREATE VIEW- oder ALTER VIEW-Anweisung hinaus, unabhängig von der Quelle der zugrunde liegenden Daten. Z. B. Berechtigungen für die **SalesOrderID** Spalte in einer CREATE VIEW-Anweisung, eine ALTER VIEW-Anweisung können Sie benennen die **SalesOrderID** Spalte mit einem anderen Spaltennamen, z. B. **OrderRef**, und die Ansicht mit zugeordneten Berechtigungen haben weiterhin **SalesOrderID**.  
+>  In den Spalten für die Sicht gelten die Berechtigungen für einen Spaltennamen über eine CREATE VIEW- oder ALTER VIEW-Anweisung hinaus, unabhängig von der Quelle der zugrunde liegenden Daten. Wenn beispielsweise Berechtigungen für die **SalesOrderID**-Spalte in einer CREATE VIEW-Anweisung erteilt werden, kann die **SalesOrderID**-Spalte beispielsweise zu **OrderRef** mithilfe einer ALTER VIEW-Anweisung umbenannt werden und weiterhin über die mithilfe von **SalesOrderID** der Sicht zugeordneten Berechtigungen verfügen.  
   
  AS  
  Gibt die Aktionen an, die die Sicht ausführen soll.  
@@ -137,23 +137,23 @@ ODER ÄNDERN
   
 -   Ein Verweis auf eine temporäre Tabelle oder auf eine Tabellenvariable  
   
- Da *Select_statement* verwendet die SELECT-Anweisung, es ist zulässig, verwenden Sie \<Join_hint > und \<Table_hint > Hinweise, wie in der FROM-Klausel angegeben. Weitere Informationen finden Sie unter [FROM &#40; Transact-SQL &#41; ](../../t-sql/queries/from-transact-sql.md) und [SELECT &#40; Transact-SQL &#41; ](../../t-sql/queries/select-transact-sql.md). 
+ Da *select_statement* die SELECT-Anweisung verwendet, ist es zulässig, die Hinweise \<join_hint> und \<table_hint> zu verwenden, wie in der FROM-Klausel angegeben. Weitere Informationen finden Sie unter [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md) und [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md). 
   
- Funktionen und mehrere SELECT-Anweisungen, die durch UNION oder UNION ALL getrennt in verwendet werden können *Select_statement*.  
+ In *select_statement* können Funktionen und mehrere SELECT-Anweisungen verwendet werden, die durch UNION oder UNION ALL getrennt sind.  
   
  CHECK OPTION  
- Erzwingt, dass alle datenänderungsanweisungen, die für die Sicht, die innerhalb von festgelegten Kriterien folgen ausgeführten *Select_statement*. Wenn durch eine Sicht eine Zeile geändert wird, stellt WITH CHECK OPTION sicher, dass die Daten nach dem Ausführen eines Commits für die Änderung in der Sicht weiterhin angezeigt werden.  
+ Erzwingt, dass alle für die Sicht ausgeführten Datenänderungsanweisungen den Kriterien entsprechen müssen, die innerhalb von *select_statement* festgelegt wurden. Wenn durch eine Sicht eine Zeile geändert wird, stellt WITH CHECK OPTION sicher, dass die Daten nach dem Ausführen eines Commits für die Änderung in der Sicht weiterhin angezeigt werden.  
   
 > [!NOTE]  
 >  Alle Updates, die direkt für die zugrunde liegenden Tabellen einer Sicht durchgeführt werden, werden nicht anhand der Sicht geprüft, auch wenn CHECK OPTION angegeben ist.  
   
  ENCRYPTION  
- **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
- Verschlüsselt die Einträge in [sys.syscomments](../../relational-databases/system-compatibility-views/sys-syscomments-transact-sql.md) , die den Text der CREATE VIEW-Anweisung enthalten. Mit WITH ENCRYPTION kann verhindert werden, dass die Sicht als Teil der SQL Server-Replikation veröffentlicht wird.  
+ Verschlüsselt die Einträge in [sys.syscomments](../../relational-databases/system-compatibility-views/sys-syscomments-transact-sql.md), die den Text der CREATE VIEW-Anweisung enthalten. Mit WITH ENCRYPTION kann verhindert werden, dass die Sicht als Teil der SQL Server-Replikation veröffentlicht wird.  
   
  SCHEMABINDING  
- Bindet die Sicht an das Schema der zugrunde liegenden Basistabellen. Wenn SCHEMABINDING angegeben ist, können an der/den Basistabelle(n) keine Änderungen vorgenommen werden, die die Sichtdefinition betreffen können. Zunächst muss die Sichtdefinition selbst geändert oder gelöscht werden, um Abhängigkeiten in der zu ändernden Tabelle zu entfernen. Wenn Sie SCHEMABINDING verwenden die *Select_statement* umfasst die mit dem zweiteiligen Namen (*Schema***.** *Objekt*) von Tabellen, Sichten oder benutzerdefinierten Funktionen, auf die verwiesen werden. Alle Objekte, auf die verwiesen wird, müssen in derselben Datenbank vorhanden sein.  
+ Bindet die Sicht an das Schema der zugrunde liegenden Basistabellen. Wenn SCHEMABINDING angegeben ist, können an der/den Basistabelle(n) keine Änderungen vorgenommen werden, die die Sichtdefinition betreffen können. Zunächst muss die Sichtdefinition selbst geändert oder gelöscht werden, um Abhängigkeiten in der zu ändernden Tabelle zu entfernen. Wenn Sie SCHEMABINDING verwenden, muss *select_statement* die zweiteiligen Namen (*schema***.***object*) der Tabellen, Sicht oder benutzerdefinierten Funktionen einschließen, auf die verwiesen wird. Alle Objekte, auf die verwiesen wird, müssen in derselben Datenbank vorhanden sein.  
   
  Sichten oder Tabellen, die Bestandteil einer mit der SCHEMABINDING-Klausel erstellten Sicht sind, können erst dann gelöscht werden, wenn diese Sicht gelöscht oder geändert wurde, sodass keine Schemabindung mehr vorhanden ist. Andernfalls löst [!INCLUDE[ssDE](../../includes/ssde-md.md)] einen Fehler aus. Darüber hinaus schlagen ALTER TABLE-Anweisungen für Tabellen fehl, die Bestandteil von Sichten mit Schemabindung sind, wenn diese Anweisungen die Sichtdefinition betreffen.  
   
@@ -162,20 +162,20 @@ ODER ÄNDERN
   
  Bei Sichten, die mit VIEW_METADATA erstellt wurden, geben die Metadaten des Durchsuchenmodus den Sichtnamen anstelle der Basistabellennamen zurück, wenn Spalten aus der Sicht im Resultset beschrieben werden.  
   
- Wenn eine Sicht erstellt wird, mithilfe von WITH VIEW_METADATA alle enthaltenen Spalten außer einem **Zeitstempel** Spalte, aktualisierbar, falls die Sicht INSTEAD OF INSERT hat oder INSTEAD OF UPDATE-Trigger sind. Weitere Informationen zu aktualisierbaren Sichten finden Sie unter Hinweise.  
+ Wenn eine Sicht mit WITH VIEW_METADATA erstellt wird, sind alle enthaltenen Spalten außer der Spalte **timestamp** aktualisierbar, wenn die Sicht den Trigger INSTEAD OF INSERT oder INSTEAD OF UPDATE aufweist. Weitere Informationen zu aktualisierbaren Sichten finden Sie unter Hinweise.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Eine Sicht kann nur in der aktuellen Datenbank erstellt werden. Bei CREATE VIEW muss es sich um die erste Anweisung in einem Abfragebatch handeln. Für eine Sicht sind maximal 1.024 Spalten zulässig.  
   
- Bei der Abfrage über eine Sicht der [!INCLUDE[ssDE](../../includes/ssde-md.md)] überprüft, um sicherzustellen, dass alle Datenbankobjekte, die an einer beliebigen Stelle in der Anweisung verwiesen vorhanden sind und dass sie im Kontext der Anweisung gültig sind, und Anweisungen zur Datenänderung keinen Daten verletzen Regeln der Datenintegrität. Schlägt eine Überprüfung fehl, wird eine Fehlermeldung zurückgegeben. Andernfalls wird die Aktion in eine Aktion für die zugrunde liegende Tabelle bzw. Tabellen übersetzt.  
+ Wenn eine Abfrage für eine Sicht durchgeführt wird, überprüft [!INCLUDE[ssDE](../../includes/ssde-md.md)], ob alle Datenbankobjekte, auf die in der Anweisung verwiesen wird, vorhanden sind, ob sie im Kontext der Anweisung gültig sind und ob Datenänderungsanweisungen gegen die Regeln der Datenintegrität verstoßen. Schlägt eine Überprüfung fehl, wird eine Fehlermeldung zurückgegeben. Andernfalls wird die Aktion in eine Aktion für die zugrunde liegende Tabelle bzw. Tabellen übersetzt.  
   
  Wenn eine Sicht von einer Tabelle oder Sicht abhängt, die gelöscht wurde, erzeugt [!INCLUDE[ssDE](../../includes/ssde-md.md)] eine Fehlermeldung, wenn jemand versucht, die Sicht zu verwenden. Wenn eine neue Tabelle oder Sicht, deren Struktur sich nicht von der vorherigen Basistabelle unterscheidet, erstellt wird, um die gelöschte zu ersetzen, wird die Sicht wieder verwendbar. Wenn sich die Struktur der neuen Tabelle oder Sicht ändert, muss die Sicht gelöscht und neu erstellt werden.  
   
- Wenn eine Sicht nicht mit der SCHEMABINDING-Klausel erstellt wird [Sp_refreshview](../../relational-databases/system-stored-procedures/sp-refreshview-transact-sql.md) sollte ausgeführt werden, wenn Änderungen an den der Sicht zugrunde liegenden Objekten vorgenommen werden, die die Definition der Sicht betreffen. Andernfalls liefert die Abfrage der Sicht möglicherweise unerwartete Ergebnisse.  
+ Wenn eine Sicht nicht mit der SCHEMABINDING-Klausel erstellt wurde, sollte [sp_refreshview](../../relational-databases/system-stored-procedures/sp-refreshview-transact-sql.md) ausgeführt werden, nachdem Änderungen an den der Sicht zugrunde liegenden Objekten vorgenommen wurden, die die Definition der Sicht betreffen. Andernfalls liefert die Abfrage der Sicht möglicherweise unerwartete Ergebnisse.  
   
- Wenn eine Sicht erstellt wird, wird der Informationen über die Ansicht in den folgenden Katalogsichten gespeichert: [sys.views](../../relational-databases/system-catalog-views/sys-views-transact-sql.md), [sys.columns](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md), und [Sys. sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md). Der Text der CREATE VIEW-Anweisung befindet sich in der [sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) -Katalogsicht angezeigt.  
+ Beim Erstellen einer Sicht werden die Informationen zu dieser in den folgenden Katalogsichten gespeichert: [sys.views](../../relational-databases/system-catalog-views/sys-views-transact-sql.md), [sys.columns](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md) und [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md). Der Text der CREATE VIEW-Anweisung wird in der Katalogsicht [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) gespeichert.  
   
- Eine Abfrage, die einen Index für eine Sicht verwendet, die mit definierten **numerischen** oder **"float"** Ausdrücke möglicherweise als Ergebnis einer ähnlichen Abfrage unterscheiden, die den Index für die Sicht nicht verwendet. Dieser Unterschied kann durch Rundungsfehler während INSERT-, DELETE- oder UPDATE-Aktionen in den zugrunde liegenden Tabellen verursacht werden.  
+ Das Ergebnis einer Abfrage, die einen Index für eine mit den Ausdrücken **numeric** oder **float** definierte Sicht verwendet, kann sich von einer ähnlichen Abfrage unterscheiden, die nicht den Index für die Sicht verwendet. Dieser Unterschied kann durch Rundungsfehler während INSERT-, DELETE- oder UPDATE-Aktionen in den zugrunde liegenden Tabellen verursacht werden.  
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] speichert die Einstellungen für SET QUOTED_IDENTIFIER und SET ANSI_NULLS, wenn eine Sicht erstellt wird. Diese Originaleinstellungen werden zum Analysieren der Sicht wiederhergestellt, wenn die Sicht verwendet wird. Deshalb haben alle Clientsitzungseinstellungen für SET QUOTED_IDENTIFIER und SET ANSI_NULLS keine Auswirkungen auf die Sichtdefinition, wenn auf die Sicht zugegriffen wird.  
   
@@ -192,15 +192,15 @@ ODER ÄNDERN
   
 -   Die geänderten Spalten sind von den GROUP BY-, HAVING- oder DISTINCT-Klauseln nicht betroffen.  
   
--   Nach oben werden nicht an einer beliebigen Stelle in der *Select_statement* der Sicht zusammen mit der WITH CHECK OPTION-Klausel.  
+-   In der Anweisung *select_statement* der Sicht wird TOP nicht zusammen mit der Klausel WITH CHECK OPTION verwendet.  
   
- Die vorigen Einschränkungen gelten, so wie für die Sicht selbst, für alle Unterabfragen in der FROM-Klausel der Sicht. Im Allgemeinen muss [!INCLUDE[ssDE](../../includes/ssde-md.md)] Änderungen von der Sichtdefinition an einer Basistabelle eindeutig nachverfolgen können. Weitere Informationen finden Sie unter [Ändern von Daten über eine Sicht](../../relational-databases/views/modify-data-through-a-view.md).  
+ Die vorigen Einschränkungen gelten, so wie für die Sicht selbst, für alle Unterabfragen in der FROM-Klausel der Sicht. Im Allgemeinen muss [!INCLUDE[ssDE](../../includes/ssde-md.md)] Änderungen von der Sichtdefinition an einer Basistabelle eindeutig nachverfolgen können. Weitere Informationen finden Sie unter [Modify Data Through a View (Ändern von Daten über eine Sicht)](../../relational-databases/views/modify-data-through-a-view.md).  
   
  Wenn Sie aufgrund der vorigen Einschränkungen die Daten nicht direkt über eine Sicht ändern können, sollten Sie die folgenden Optionen berücksichtigen:  
   
 -   **INSTEAD OF-Trigger**  
   
-     Für eine Sicht können INSTEAD OF-Trigger erstellt werden, um sie aktualisierbar zu machen. Der INSTEAD OF-Trigger wird anstelle der Datenänderungsanweisung ausgeführt, für die der Trigger definiert ist. Mithilfe dieses Triggers kann der Benutzer die Gruppe von Aktionen angeben, die erforderlich sind, um die Datenänderungsanweisung zu verarbeiten. Wenn also ein INSTEAD OF-Trigger einer Sicht für eine angegebene Datenänderungsanweisung (INSERT, UPDATE oder DELETE) vorhanden ist, ist die entsprechende Sicht über diese Anweisung aktualisierbar. Weitere Informationen zu INSTEAD OF-Trigger finden Sie unter [DML-Triggern](../../relational-databases/triggers/dml-triggers.md).  
+     Für eine Sicht können INSTEAD OF-Trigger erstellt werden, um sie aktualisierbar zu machen. Der INSTEAD OF-Trigger wird anstelle der Datenänderungsanweisung ausgeführt, für die der Trigger definiert ist. Mithilfe dieses Triggers kann der Benutzer die Gruppe von Aktionen angeben, die erforderlich sind, um die Datenänderungsanweisung zu verarbeiten. Wenn also ein INSTEAD OF-Trigger einer Sicht für eine angegebene Datenänderungsanweisung (INSERT, UPDATE oder DELETE) vorhanden ist, ist die entsprechende Sicht über diese Anweisung aktualisierbar. Weitere Informationen zu INSTEAD OF-Triggern finden Sie unter [DML-Trigger](../../relational-databases/triggers/dml-triggers.md).  
   
 -   **Partitionierte Sichten**  
   
@@ -269,7 +269,7 @@ FROM Tn;
         < col > { < | <= } < value2 >  
         ```  
   
-    -   Die Einschränkungen müssen so festgelegt sein, dass jeder angegebene Wert von `<col>` höchstens eine der Einschränkungen `C1, ..., Cn` erfüllt, sodass die Einschränkungen eine Gruppe von getrennten oder nicht überlappenden Intervallen bilden. Die `<col>`-Spalte, für die die getrennten Einschränkungen definiert sind, wird Partitionierungsspalte genannt. Beachten Sie, dass die Partitionierungsspalte in den zugrunde liegenden Tabellen unterschiedliche Namen haben kann. Die Einschränkungen sollten sich im enabled- und trusted-Status befinden, damit sie die zuvor genannten Bedingungen für die Partitionierungsspalte erfüllen. Ist die Einschränkungen deaktiviert sind, erneut aktivieren, die einschränkungsüberprüfung mithilfe der CHECK-Einschränkung *Constraint_name* -Option von ALTER TABLE, und verwenden die WITH CHECK Option um zu überprüfen.  
+    -   Die Einschränkungen müssen so festgelegt sein, dass jeder angegebene Wert von `<col>` höchstens eine der Einschränkungen `C1, ..., Cn` erfüllt, sodass die Einschränkungen eine Gruppe von getrennten oder nicht überlappenden Intervallen bilden. Die `<col>`-Spalte, für die die getrennten Einschränkungen definiert sind, wird Partitionierungsspalte genannt. Beachten Sie, dass die Partitionierungsspalte in den zugrunde liegenden Tabellen unterschiedliche Namen haben kann. Die Einschränkungen sollten sich im enabled- und trusted-Status befinden, damit sie die zuvor genannten Bedingungen für die Partitionierungsspalte erfüllen. Wenn die Einschränkungen deaktiviert sind, aktivieren Sie die Einschränkungsprüfung erneut mit der Option CHECK CONSTRAINT *constraint_name* von ALTER TABLE. Verwenden Sie die Option WITH CHECK, um die Einschränkungen zu überprüfen.  
   
          Die folgenden Beispiele zeigen gültige Einschränkungsgruppen:  
   
@@ -284,7 +284,7 @@ FROM Tn;
   
     -   Die Partitionierungsspalte ist Teil der PRIMARY KEY-Einschränkung der Tabelle.  
   
-    -   Eine Identitätspalte, in der Standardeinstellung kann nicht mehr oder **Zeitstempel** Spalte.  
+    -   Eine berechnete Spalte, eine Identitätspalte, eine Standardspalte oder eine **timestamp**-Spalte darf hierfür nicht verwendet werden.  
   
     -   Wenn es für eine Spalte einer Mitgliedstabelle mehrere Einschränkungen gibt, ignoriert das Datenbankmodul alle diese Einschränkungen und berücksichtigt sie nicht, wenn ermittelt wird, ob die Sicht eine partitionierte Sicht ist. Damit die Bedingungen für partitionierte Sichten erfüllt werden, sollte es für die Partitionierungsspalte nur eine Partitionierungseinschränkung geben.  
   
@@ -292,7 +292,7 @@ FROM Tn;
   
 3.  Mitgliedstabellen oder zugrunde liegende Tabellen `T1, ..., Tn`  
   
-    -   Bei den Tabellen kann es sich entweder um lokale Tabellen oder um Tabellen von anderen Computern handeln, auf denen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt wird, auf die entweder über einen vierteiligen Namen oder einen OPENDATASOURCE- oder OPENROWSET-basierten Namen verwiesen wird. Die OPENDATASOURCE- und OPENROWSET-Syntax kann zwar einen Tabellennamen angeben, nicht jedoch eine Pass-Through-Abfrage. Weitere Informationen finden Sie unter [OPENDATASOURCE &#40; Transact-SQL &#41; ](../../t-sql/functions/opendatasource-transact-sql.md) und [OPENROWSET &#40; Transact-SQL &#41; ](../../t-sql/functions/openrowset-transact-sql.md).  
+    -   Bei den Tabellen kann es sich entweder um lokale Tabellen oder um Tabellen von anderen Computern handeln, auf denen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt wird, auf die entweder über einen vierteiligen Namen oder einen OPENDATASOURCE- oder OPENROWSET-basierten Namen verwiesen wird. Die OPENDATASOURCE- und OPENROWSET-Syntax kann zwar einen Tabellennamen angeben, nicht jedoch eine Pass-Through-Abfrage. Weitere Informationen finden Sie unter [OPENDATASOURCE &#40;Transact-SQL&#41;](../../t-sql/functions/opendatasource-transact-sql.md) und [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md).  
   
          Falls eine oder mehrere Mitgliedstabellen Remotetabellen sind, wird die Sicht verteilte partitionierte Sicht genannt, und es gelten zusätzliche Bedingungen. Diese werden weiter unten in diesem Abschnitt beschrieben.  
   
@@ -302,7 +302,7 @@ FROM Tn;
   
     -   Für alle Mitgliedstabellen sollte gelten, dass ihre PRIMARY KEY-Einschränkungen auf gleich vielen Spalten basieren.  
   
-    -   Alle Mitgliedstabellen einer Sicht sollten dieselbe Einstellung für die ANSI-Auffüllung aufweisen. Dies kann festgelegt werden, indem Sie entweder die **Benutzeroptionen** option **Sp_configure** oder SET-Anweisung.  
+    -   Alle Mitgliedstabellen einer Sicht sollten dieselbe Einstellung für die ANSI-Auffüllung aufweisen. Diese Einstellung kann entweder mit der Option **Benutzeroptionen** in **sp_configure** oder mit der SET-Anweisung festgelegt werden.  
   
 ## <a name="conditions-for-modifying-data-in-partitioned-views"></a>Bedingungen für das Ändern von Daten in partitionierten Sichten  
  Die folgenden Einschränkungen gelten für Anweisungen, die Daten in partitionierten Sichten ändern:  
@@ -315,13 +315,13 @@ FROM Tn;
   
 -   Die in der Sicht enthaltenen Spalten, bei denen es sich um eine IDENTITY-Spalte in einer oder mehreren Mitgliedstabellen handelt, können nicht mit der INSERT- oder UPDATE-Anweisung geändert werden.  
   
--   Wenn eine der Mitgliedstabellen enthält eine **Zeitstempel** Spalte, die Daten können nicht mithilfe einer INSERT- oder UPDATE-Anweisung geändert werden.  
+-   Wenn eine der Mitgliedstabellen eine **timestamp**-Spalte enthält, können die Daten nicht durch eine INSERT- oder UPDATE-Anweisung geändert werden.  
   
 -   Wenn eine der Mitgliedstabellen einen Trigger oder eine ON UPDATE CASCADE/SET NULL/SET DEFAULT- oder ON DELETE CASCADE/SET NULL/SET DEFAULT-Einschränkung hat, kann die Sicht nicht geändert werden.  
   
 -   INSERT-, UPDATE- und DELETE-Aktionen für eine partitionierte Sicht sind nicht zulässig, wenn ein Selbstjoin mit derselben Sicht oder mit einer der Mitgliedstabelle in der Anweisung vorhanden ist.  
   
--   Massenimport von Daten in eine partitionierte Sicht wird nicht unterstützt, **Bcp** BULK INSERT oder INSERT... SELECT * FROM OPENROWSET(BULK...)-Anweisungen per Massenimport übertragen werden. Sie können jedoch mehrere Zeilen in eine partitionierte Sicht einfügen, mit der [einfügen](../../t-sql/statements/insert-transact-sql.md) Anweisung.  
+-   Der Massenimport von Daten in eine partitionierte Sicht wird nicht unterstützt, wenn **bcp**, BULK INSERT oder INSERT ... SELECT * FROM OPENROWSET(BULK...)-Anweisungen per Massenimport übertragen werden. Sie können mit der [INSERT](../../t-sql/statements/insert-transact-sql.md)-Anweisung jedoch mehrere Zeilen in eine partitionierte Sicht einfügen.  
   
     > [!NOTE]  
     >  Zum Aktualisieren einer partitionierten Sicht benötigt der Benutzer INSERT-, UPDATE- und DELETE-Berechtigungen für die Mitgliedstabellen.  
@@ -329,13 +329,13 @@ FROM Tn;
 ## <a name="additional-conditions-for-distributed-partitioned-views"></a>Zusätzliche Bedingungen für verteilte partitionierte Sichten  
  Für verteilte partitionierte Sichten (bei denen eine oder mehrere Mitgliedstabellen Remotetabellen sind), gelten zusätzlich die folgenden Bedingungen:  
   
--   Eine verteilte Transaktion wird in allen Knoten, die vom Update betroffenen Unteilbarkeit garantieren gestartet werden.  
+-   Eine verteilte Transaktion wird gestartet, um die Unteilbarkeit bei allen durch die Aktualisierung betroffenen Knoten sicherzustellen.  
   
 -   Die Option XACT_ABORT SET sollte auf ON festgelegt werden, damit INSERT-, UPDATE- oder DELETE-Anweisungen funktionieren.  
   
--   Alle Spalten in Remotetabellen vom Typ **Smallmoney** verwiesen wird, werden in einer partitionierten Sicht zugeordnet sind, als **Money**. Aus diesem Grund müssen die entsprechenden Spalten (in derselben Ordnungsposition in der Auswahlliste) in den lokalen Tabellen auch werden vom Typ **Money**.  
+-   Alle Spalten in Remotetabellen des Typs **smallmoney**, auf die in einer partitionierten Sicht verwiesen wird, werden als **money** zugeordnet. Daher müssen die entsprechenden Spalten (in der gleichen Ordnungsposition in der Auswahlliste) in den lokalen Tabellen auch den Typ **money** aufweisen.  
   
--   Unter Datenbank-Kompatibilitätsgrad 110 und höher werden alle Spalten in Remotetabellen vom Typ **Smalldatetime** verwiesen wird, werden in einer partitionierten Sicht zugeordnet sind, als **Smalldatetime**. Entsprechende Spalten (in derselben Ordnungsposition in der Auswahlliste) in den lokalen Tabellen muss **Smalldatetime**. Dies ist eine Änderung im Verhalten unterscheidet sich von früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in dem alle Spalten in Remotetabellen vom Typ **Smalldatetime** verwiesen wird, werden in einer partitionierten Sicht zugeordnet sind, als **"DateTime"** und entsprechende Spalten in lokalen Tabellen muss vom Typ **"DateTime"**. Weitere Informationen finden Sie unter [ALTER DATABASE-Kompatibilitätsgrad &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
+-   Unter Datenbankkompatibilitätsgrad 110 und höher werden alle Spalten in Remotetabellen vom Typ **smalldatetime**, auf die in einer partitionierten Sicht verwiesen wird, als **smalldatetime** zugeordnet. Entsprechende Spalten in den lokalen Tabellen (in derselben Ordnungsposition in der Auswahlliste) müssen den Typ **smalldatetime** aufweisen. Dies ist eine Änderung des Verhaltens früherer Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], in denen sämtliche Spalten in Remotetabellen vom Typ **smalldatetime**, auf die in einer partitionierten Sicht verwiesen wird, als **datetime** zugeordnet werden. Die entsprechenden Spalten in lokalen Tabellen müssen den Typ **datetime** aufweisen. Weitere Informationen finden Sie unter [ALTER DATABASE-Kompatibilitätsgrad &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   
 -   Ein an der partitionierten Sicht beteiligter Verbindungsserver kann kein Loopback-Verbindungsserver sein. Dies ist ein Verbindungsserver, der auf dieselbe Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verweist.  
   
@@ -346,9 +346,9 @@ FROM Tn;
 ## <a name="considerations-for-replication"></a>Überlegungen zur Replikation  
  Die folgenden Überlegungen sind erforderlich, wenn Sie partitionierte Sichten für Mitgliedstabellen erstellen, die an der Replikation beteiligt sind:  
   
--   Wenn die zugrunde liegenden Tabellen Merge- oder Transaktionsreplikation mit updateabonnements beteiligt sind die **"uniqueidentifier"** Spalte auch in der select-Liste eingeschlossen werden soll.  
+-   Wenn die zugrunde liegenden Tabellen an der Merge- oder Transaktionsreplikation mit Updateabonnements beteiligt sind, sollte die Spalte **uniqueidentifier** ebenfalls in der Auswahlliste enthalten sein.  
   
-     Alle INSERT-Aktionen in der partitionierten Sicht müssen einen NEWID()-Wert für Bereitstellen der **"uniqueidentifier"** Spalte. UPDATE-Aktionen für die **"uniqueidentifier"** -Spalte muss NEWID() als Wert angeben, da das DEFAULT-Schlüsselwort verwendet werden kann.  
+     Alle INSERT-Aktionen für die partitionierte Sicht müssen einen NEWID()-Wert für die Spalte **uniqueidentifier** bereitstellen. Alle UPDATE-Aktionen für die Spalte **uniqueidentifier** müssen NEWID() als Wert bereitstellen, da das DEFAULT-Schlüsselwort nicht verwendet werden kann.  
   
 -   Die Replikation von Updates, die mithilfe der Sicht ausgeführt werden, entspricht der Replikation von Tabellen in zwei verschiedenen Datenbanken: Die Tabellen werden von unterschiedlichen Replikations-Agents bedient, und die Reihenfolge der Updates ist nicht sichergestellt.  
   
@@ -357,7 +357,7 @@ FROM Tn;
   
 ## <a name="examples"></a>Beispiele  
 
-Die folgenden Beispiele verwenden die AdventureWorks 2012 oder AdventureWorksDW-Datenbank.  
+In den folgenden Beispielen werden die Datenbanken „AdventureWorks 2012“ und „AdventureWorksDW“ verwendet.  
 
 ### <a name="a-using-a-simple-create-view"></a>A. Verwenden einer einfachen CREATE VIEW-Anweisung  
  Im folgenden Beispiel wird mithilfe einer einfachen `SELECT`-Anweisung eine Sicht erstellt. Eine einfache Sicht ist hilfreich, wenn eine Kombination mehrerer Spalten häufig abgefragt wird. Die Daten dieser Sicht stammen aus den `HumanResources.Employee`- und `Person.Person`-Tabellen der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Datenbank. Mit diesen Daten werden Name und Einstellungsdatum der Mitarbeiter von [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] bereitgestellt. Die Sicht könnte für die Person erstellt werden, die für die Nachverfolgung von Jubiläen verantwortlich ist. Dabei wird dieser Person nicht der Zugriff auf alle Daten dieser Tabellen gewährt.  
@@ -375,7 +375,7 @@ GO
 ### <a name="b-using-with-encryption"></a>B. Verwenden von WITH ENCRYPTION  
  Das folgende Beispiel verwendet die Option `WITH ENCRYPTION` und zeigt berechnete, umbenannte und mehrfache Spalten.  
   
-**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] und [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] und [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
 ```  
 CREATE VIEW Purchasing.PurchaseOrderReject  
@@ -469,10 +469,10 @@ SELECT supplyID, supplier
   FROM dbo.SUPPLY4;  
 ```  
   
-## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] und[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
-### <a name="f-creating-a-simple-view"></a>F. Erstellen eine einfache Sicht  
- Im folgende Beispiel erstellt eine Ansicht, indem Sie nur einige Spalten aus der Quelltabelle auswählen.  
+### <a name="f-creating-a-simple-view"></a>F. Erstellen einer einfachen Sicht  
+ Im folgenden Beispiel wird eine Sicht erstellt, in dem nur einige Spalten aus der Quelltabelle gewählt werden.  
   
 ```  
 CREATE VIEW DimEmployeeBirthDates AS  
@@ -480,8 +480,8 @@ SELECT FirstName, LastName, BirthDate
 FROM DimEmployee;  
 ```  
   
-### <a name="g-create-a-view-by-joining-two-tables"></a>G. Erstellen Sie eine Ansicht, indem Sie zwei Tabellen verknüpfen  
- Das folgende Beispiel erstellt eine Sicht mit einem `SELECT` -Anweisung mit einer `OUTER JOIN`. Die Ergebnisse der Abfrage Joins füllen Sie die Ansicht.  
+### <a name="g-create-a-view-by-joining-two-tables"></a>G. Erstellen einer Sicht durch Verknüpfen von zwei Tabellen  
+ Im folgenden Beispiel wird eine Sicht mithilfe der Anweisung `SELECT` mit `OUTER JOIN` erstellt. Die Ergebnisse der JOIN-Abfrage füllen die Sicht auf.  
   
 ```  
 CREATE VIEW view1  
@@ -493,20 +493,20 @@ LEFT OUTER JOIN DimSalesTerritory AS dst
 ON (fis.SalesTerritoryKey=dst.SalesTerritoryKey);  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [ALTER VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/alter-view-transact-sql.md)   
  [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
- [DROP VIEW &#40; Transact-SQL &#41;](../../t-sql/statements/drop-view-transact-sql.md)   
+ [DROP VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/drop-view-transact-sql.md)   
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
  [Erstellen einer gespeicherten Prozedur](../../relational-databases/stored-procedures/create-a-stored-procedure.md)   
  [sys.dm_sql_referenced_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md)   
  [sys.dm_sql_referencing_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md)   
  [sp_help &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md)   
  [sp_helptext &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptext-transact-sql.md)   
- [Sp_refreshview &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-refreshview-transact-sql.md)   
+ [sp_refreshview &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-refreshview-transact-sql.md)   
  [sp_rename &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md)   
- [Sys.Views &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-views-transact-sql.md)   
+ [sys.views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-views-transact-sql.md)   
  [UPDATE (Transact-SQL)](../../t-sql/queries/update-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   

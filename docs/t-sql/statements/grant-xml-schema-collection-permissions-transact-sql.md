@@ -1,5 +1,5 @@
 ---
-title: GRANT-XML-Auflistung-Schemaberechtigungen (Transact-SQL) | Microsoft Docs
+title: "GRANT (Berechtigungen für XML-Schemaauflistungen) (Transact-SQL) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
@@ -65,14 +65,14 @@ GRANT permission  [ ,...n ] ON
  Gibt eine Berechtigung an, die für eine XML-Schemaauflistung erteilt werden kann. Eine Liste der Berechtigungen finden Sie im Abschnitt zu den Hinweisen weiter unten in diesem Thema.  
   
  ON XML SCHEMA COLLECTION :: [ *schema_name*. ] *XML_schema_collection_name*  
- Gibt die XML-Schemaauflistung an, für die die Berechtigung erteilt wird. Der Bereichsqualifizierer (::) ist erforderlich. Wenn *Schema_name* nicht angegeben ist, wird das Standardschema verwendet werden. Wenn *Schema_name* angegeben ist, ist der schemabereichsqualifizierer (.) ist erforderlich.  
+ Gibt die XML-Schemaauflistung an, für die die Berechtigung erteilt wird. Der Bereichsqualifizierer (::) ist erforderlich. Wenn *schema_name* nicht angegeben ist, wird das Standardschema verwendet. Wenn *schema_name* angegeben ist, ist der Schemabereichsqualifizierer (.) erforderlich.  
   
- \<Database_principal > Gibt den Prinzipal an, die die Berechtigung erteilt wird.  
+ \<database_principal> Gibt den Prinzipal an, für den die Berechtigung erteilt wird.  
   
  WITH GRANT OPTION  
  Gibt an, dass der Prinzipal die angegebene Berechtigung auch anderen Prinzipalen erteilen kann.  
   
- AS \<Database_principal > Gibt einen Prinzipal aus dem der Prinzipal, der diese Abfrage ausführt, sein Recht zum Erteilen der Berechtigung ableitet.  
+ AS \<database_principal> Gibt einen Prinzipal an, von dem der Prinzipal, der diese Abfrage ausführt, sein Recht zum Erteilen der Berechtigung ableitet.  
   
  *Database_user*  
  Gibt einen Datenbankbenutzer an.  
@@ -98,8 +98,8 @@ GRANT permission  [ ,...n ] ON
  *Database_user_with_no_login*  
  Gibt einen Datenbankbenutzer ohne entsprechenden Prinzipal auf Serverebene an.  
   
-## <a name="remarks"></a>Hinweise  
- Informationen zu XML-schemaauflistungen werden in der [xml_schema_collections](../../relational-databases/system-catalog-views/sys-xml-schema-collections-transact-sql.md) -Katalogsicht angezeigt.  
+## <a name="remarks"></a>Remarks  
+ Informationen zu XML-Schemaauflistungen werden in der Katalogsicht [sys.xml_schema_collections](../../relational-databases/system-catalog-views/sys-xml-schema-collections-transact-sql.md) angezeigt.  
   
  Eine XML-Schemaauflistung ist ein sicherungsfähiges Element auf Schemaebene in dem Schema, das das übergeordnete Element in der Berechtigungshierarchie ist. Die spezifischsten und restriktivsten Berechtigungen, die für eine XML-Schemaauflistung erteilt werden können, sind unten aufgeführt. Auch die allgemeineren Berechtigungen sind aufgeführt, die diese implizit enthalten.  
   
@@ -137,9 +137,9 @@ GRANT permission  [ ,...n ] ON
  GO
  ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Verweigern von Berechtigungen für XML-Schemaauflistungen &#40; Transact-SQL &#41;](../../t-sql/statements/deny-xml-schema-collection-permissions-transact-sql.md)   
- [WIDERRUFEN Sie Berechtigungen für XML-Schemaauflistungen &#40; Transact-SQL &#41;](../../t-sql/statements/revoke-xml-schema-collection-permissions-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [DENY (Berechtigungen für XML-Schemaauflistungen) &#40;Transact-SQL&#41;](../../t-sql/statements/deny-xml-schema-collection-permissions-transact-sql.md)   
+ [REVOKE (Berechtigungen für XML-Schemaauflistungen) &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-xml-schema-collection-permissions-transact-sql.md)   
  [sys.xml_schema_collections &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-xml-schema-collections-transact-sql.md)   
  [CREATE XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-xml-schema-collection-transact-sql.md)   
  [Berechtigungen &#40;Datenbankmodul&#41;](../../relational-databases/security/permissions-database-engine.md)   

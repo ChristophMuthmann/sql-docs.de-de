@@ -1,5 +1,5 @@
 ---
-title: (Transact-SQL) mit | Microsoft Docs
+title: HAVING (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 11/28/2017
 ms.prod: sql-non-specified
@@ -34,10 +34,10 @@ ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="select---having-transact-sql"></a>SELECT - müssen (Transact-SQL)
+# <a name="select---having-transact-sql"></a>SELECT – HAVING (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Gibt eine Suchbedingung für eine Gruppe oder ein Aggregat an. HAVING kann nur mit der SELECT-Anweisung verwendet werden. HAVING wird in der Regel mit einer GROUP BY-Klausel verwendet. Wenn GROUP BY nicht verwendet wird, wird eine implizite einzelne, aggregierte-Gruppe.   
+  Gibt eine Suchbedingung für eine Gruppe oder ein Aggregat an. HAVING kann nur mit der SELECT-Anweisung verwendet werden. HAVING wird in der Regel mit einer GROUP BY-Klausel verwendet. Wenn GROUP BY nicht verwendet wird, gibt es eine implizite einzelne, aggregierte Gruppe.   
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,9 +48,9 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="arguments"></a>Argumente  
-\<Search_condition > Gibt eine oder mehrere Prädikate für Gruppen und Aggregate zu erfüllen. Weitere Informationen zu suchbedingungen und Prädikaten finden Sie unter [Suchbedingung &#40; Transact-SQL &#41; ](../../t-sql/queries/search-condition-transact-sql.md).  
+\<search_condition> gibt ein oder mehrere Prädikate für Gruppen und Aggregate an, die erfüllt werden müssen. Weitere Informationen zu Suchbedingungen und Prädikaten finden Sie unter [Suchbedingung &#40;Transact-SQL&#41;](../../t-sql/queries/search-condition-transact-sql.md).  
   
- Die **Text**, **Image**, und **Ntext** Datentypen können nicht in einer HAVING-Klausel verwendet werden.  
+ Die Datentypen **text**, **image** und **ntext** können in einer HAVING-Klausel nicht verwendet werden.  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel, in dem eine einfache `HAVING`-Klausel verwendet wird, werden die Gesamtsummen für `SalesOrderID` aus der `SalesOrderDetail`-Tabelle abgerufen, die `$100000.00` überschreiten.  
@@ -65,8 +65,8 @@ HAVING SUM(LineTotal) > 100000.00
 ORDER BY SalesOrderID ;  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- Im folgenden Beispiel wird eine `HAVING` -Klausel, um die Gesamtsumme für jeden rufen `SalesAmount` aus der `FactInternetSales` bei Verwendung der `OrderDateKey` im Jahr 2004 oder höher ist.  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
+ Im folgenden Beispiel wird mit einer `HAVING`-Klausel die Gesamtsumme für jeden `SalesAmount` aus der `FactInternetSales`-Tabelle abgerufen, wenn `OrderDateKey` im Jahr 2004 oder später ist.  
   
 ```  
 -- Uses AdventureWorks  
@@ -78,7 +78,7 @@ HAVING SUM(SalesAmount) > 80000
 ORDER BY OrderDateKey;  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [GROUP BY &#40;Transact-SQL&#41;](../../t-sql/queries/select-group-by-transact-sql.md)   
  [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)  
   

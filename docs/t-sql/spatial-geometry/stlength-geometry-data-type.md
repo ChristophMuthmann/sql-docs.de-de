@@ -1,5 +1,5 @@
 ---
-title: STLength (Geometry-Datentyp) | Microsoft Docs
+title: STLength (geometry-Datentyp) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stlength-geometry-data-type"></a>STLength (geometry-Datentyp)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Gibt die Gesamtlänge der Elemente in einem **Geometrie** Instanz.
+Gibt die Gesamtlänge der Elemente in einer **geometry**-Instanz zurück.
   
 ## <a name="syntax"></a>Syntax  
   
@@ -44,12 +44,12 @@ Gibt die Gesamtlänge der Elemente in einem **Geometrie** Instanz.
 ```  
   
 ## <a name="return-types"></a>Rückgabetypen  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Rückgabetyp: **"float"**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Rückgabetyp: **float**  
   
  CLR-Rückgabetyp: **SqlDouble**  
   
-## <a name="remarks"></a>Hinweise  
- Wenn eine **Geometrie** -Instanz geschlossen ist, wird ihre Länge als Gesamtlänge um die Instanz herum berechnet; die Länge eines Polygons entspricht seinem Umfang und die Länge eines Punkts ist 0. Die Länge eines beliebigen **Geometrycollection** Typ ist die Summe der Längen der in ihm enthaltenen **Geometrie** Instanzen.  
+## <a name="remarks"></a>Remarks  
+ Wenn eine **geometry**-Instanz geschlossen ist, wird ihre Länge als Gesamtlänge um die Instanz herum berechnet. Die Länge eines Polygons entspricht seinem Umfang, und die Länge eines Punkts ist 0. Die Länge eines beliebigen **geometrycollection**-Typs ist die Summe der Längen der in ihm enthaltenen **geometry**-Instanzen.  
   
  STLength() funktioniert sowohl für gültige als auch für ungültige LineStrings. In der Regel ist ein LineString aufgrund überlappender Segmente ungültig, die möglicherweise durch Anomalien wie ungenaue GPS-Ablaufverfolgungen verursacht werden. STLength() entfernt keine überlappenden oder ungültigen Segmente. Sie schließt überlappende und ungültige Segmente in den zurückgegebenen Längenwert ein. Die MakeValid()-Methode kann überlappende Segmente aus einem LineString entfernen.  
   
@@ -62,7 +62,7 @@ SET @g = geometry::STGeomFromText('LINESTRING(0 0, 2 2, 1 0)', 0);
 SELECT @g.STLength();  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [OGC-Methoden für geometry-Instanzen](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

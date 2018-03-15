@@ -1,5 +1,5 @@
 ---
-title: DECRYPTBYASYMKEY (Transact-SQL) | Microsoft Docs
+title: DECRYPTBYASYMKEY (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -52,7 +52,7 @@ DecryptByAsymKey (Asym_Key_ID , { 'ciphertext' | @ciphertext }
  *Asym_Key_ID*  
  Die ID eines asymmetrischen Schlüssels in der Datenbank. *Asym_Key_ID* ist vom Datentyp **int**.  
   
- *Chiffretext*  
+ *ciphertext*  
  Eine Zeichenfolge mit Daten, die mit dem asymmetrischen Schlüssel verschlüsselt wurden.  
   
  @ciphertext  
@@ -64,7 +64,7 @@ DecryptByAsymKey (Asym_Key_ID , { 'ciphertext' | @ciphertext }
 ## <a name="return-types"></a>Rückgabetypen  
  **varbinary** mit einer maximalen Größe von 8.000 Bytes.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Das Verschlüsseln/Entschlüsseln mit einem asymmetrischen Schlüssel ist im Vergleich zum Verschlüsseln/Entschlüsseln mit einem symmetrischen Schlüssel sehr teuer. Von einem asymmetrischen Schlüssel wird abgeraten, wenn Sie große Datasets wie z. B. Benutzerdaten in Tabellen verwenden.  
   
 ## <a name="permissions"></a>Berechtigungen  
@@ -83,8 +83,8 @@ WHERE Description = N'encrypted by asym key''JanainaAsymKey02''';
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [ENCRYPTBYASYMKEY &#40; Transact-SQL &#41;](../../t-sql/functions/encryptbyasymkey-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [ENCRYPTBYASYMKEY &#40;Transact-SQL&#41;](../../t-sql/functions/encryptbyasymkey-transact-sql.md)   
  [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)   
  [ALTER ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-asymmetric-key-transact-sql.md)   
  [DROP ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-asymmetric-key-transact-sql.md)   

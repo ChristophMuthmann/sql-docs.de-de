@@ -1,5 +1,5 @@
 ---
-title: DBCC TRACEON (Transact-SQL) | Microsoft Docs
+title: DBCC TRACEON (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 07/17/2017
 ms.prod: sql-non-specified
@@ -60,14 +60,14 @@ Schaltet die angegebenen Ablaufverfolgungsflags global ein.
 WITH NO_INFOMSGS  
 Alle Informationsmeldungen werden unterdrückt.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
 Auf einem Produktionsserver wird zur Vermeidung unvorhergesehenen Verhaltens empfohlen, dass Sie Ablaufverfolgungsflags nur mithilfe einer der folgenden Methoden serverweit aktivieren:
--   Verwenden der **-T** Befehlszeilen-Startoption von Sqlservr.exe. Dies wird als bewährte Methode empfohlen, da hiermit sichergestellt wird, dass alle Anweisungen bei aktiviertem Ablaufverfolgungsflag ausgeführt werden. Hierzu gehören auch Befehle in Startskripts. Weitere Informationen finden Sie unter [sqlservr Application](../../tools/sqlservr-application.md).  
--   Verwenden Sie DBCC TRACEON  **(*** Trace#* [**,**... *...n*]**, -1)** nur während der Benutzer oder Anwendungen nicht gleichzeitig Anweisungen auf dem System ausgeführt werden.  
+-   Verwenden Sie die Befehlszeilenstartoption **-T** von Sqlservr.exe. Dies wird als bewährte Methode empfohlen, da hiermit sichergestellt wird, dass alle Anweisungen bei aktiviertem Ablaufverfolgungsflag ausgeführt werden. Hierzu gehören auch Befehle in Startskripts. Weitere Informationen finden Sie unter [sqlservr Application](../../tools/sqlservr-application.md).  
+-   Verwenden Sie DBCC TRACEON **(***trace#* [**,** ...*.n*]**,-1)** nur, solange keine Benutzer oder Anwendungen mehrere Anweisungen gleichzeitig auf dem System ausführen.  
 
 Mithilfe von Ablaufverfolgungsflags können Sie die Funktionsweise von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] beeinflussen und bestimmte Merkmale anpassen. Nach dem Aktivieren bleiben Ablaufverfolgungsflags auf dem Server aktiviert, bis sie durch die Ausführung der DBCC TRACEOFF-Anweisung deaktiviert werden. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gibt es zwei Typen von Ablaufverfolgungsflags: Sitzung und global. Ablaufverfolgungsflags des Typs Session werden für eine Verbindung aktiviert und sind nur für diese Verbindung sichtbar. Globale Ablaufverfolgungsflags werden auf Serverebene festgelegt und sind für jede Verbindung auf dem Server sichtbar. Mithilfe von DBCC TRACESTATUS können Sie den Status der Ablaufverfolgungsflags bestimmen. Verwenden Sie DBCC TRACEOFF, um Ablaufverfolgungsflags zu deaktivieren.
   
-Führen Sie nach dem Einschalten auf, die Abfragepläne wirkt sich auf das Ablaufverfolgungsflag, `DBCC FREEPROCCACHE;` so, dass zwischengespeicherte Pläne neu kompiliert werden, mit dem neuen Plan beeinflussenden Verhalten.
+Führen Sie nach der Aktivierung eines Ablaufverfolgungsflags, das Abfragepläne beeinflusst, `DBCC FREEPROCCACHE;` aus, um zwischengespeicherte Pläne durch das neue den Plan beeinflussende Verhalten erneut zu kompilieren.
   
 ## <a name="result-sets"></a>Resultsets  
  DBCC TRACEON gibt das folgende Resultset zurück (Meldung):  
@@ -101,11 +101,11 @@ DBCC TRACEON (3205, 260, -1);
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
 [DBCC TRACEOFF &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceoff-transact-sql.md)  
 [DBCC TRACESTATUS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-tracestatus-transact-sql.md)  
 [Ablaufverfolgungsflags &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)  
-[Aktivieren Sie den Plan beeinflussende SQL Server-Optimierer Verhaltens der Abfrage, die über verschiedene Ablaufverfolgungsflags auf einer spezifischen Abfrageebene gesteuert werden kann](https://support.microsoft.com/kb/2801413)
+[Aktivieren eines SQL Server-Abfrageoptimiererverhaltens, das Pläne beeinflusst und über verschiedene Ablaufverfolgungsflags auf einer spezifischen Abfrageebene gesteuert werden kann.](https://support.microsoft.com/kb/2801413)
   
   

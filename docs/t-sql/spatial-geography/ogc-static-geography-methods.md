@@ -1,5 +1,5 @@
 ---
-title: Statische Geography-Methoden des OGC | Microsoft Docs
+title: Statische geography-Methoden des OGC | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -29,7 +29,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="ogc-static-geography-methods"></a>Statische geography-Methoden des OGC
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]unterstützt die statischen Geography-Methoden des Open Geospatial Consortium (OGC).  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt die statischen geography-Methoden des Open Geospatial Consortium (OGC).  
   
  Weitere Informationen zu den OGC-Spezifikationen finden Sie in den folgenden Ressourcen:  
   
@@ -71,9 +71,9 @@ ms.lasthandoff: 01/25/2018
   
 -   [STMPolyFromWKB](../../t-sql/spatial-geography/stmpolyfromwkb-geography-data-type.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [OGC-Methoden für Geography-Instanzen](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)   
- [Erweiterte Methoden für Geography-Instanzen](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [OGC-Methoden für geography-Instanzen](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)   
+ [Erweiterte Methoden für geography-Instanzen](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
  [Erweiterte statische geography-Methoden](../../t-sql/spatial-geography/extended-static-geography-methods.md)  
   
   

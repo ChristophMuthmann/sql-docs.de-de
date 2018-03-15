@@ -1,5 +1,5 @@
 ---
-title: HOST_NAME (Transact-SQL) | Microsoft Docs
+title: HOST_NAME (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 09/21/2017
 ms.prod: sql-non-specified
@@ -47,9 +47,9 @@ HOST_NAME ()
 ```  
   
 ## <a name="return-types"></a>Rückgabetypen  
- **vom Datentyp nvarchar(128)**  
+ **nvarchar(128)**  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Wenn der Parameter für eine Systemfunktion optional ist, wird von der aktuellen Datenbank, dem aktuellen Hostcomputer, dem aktuellen Serverbenutzer oder dem aktuellen Datenbankbenutzer ausgegangen. Auf integrierte Funktionen müssen immer runde Klammern folgen.  
   
  Systemfunktionen können in der SELECT-Liste, in einer WHERE-Klausel und überall dort verwendet werden, wo ein Ausdruck zulässig ist.  
@@ -71,8 +71,8 @@ CREATE TABLE Orders
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Ausdrücke &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
- [Systemfunktionen &#40; Transact-SQL &#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Ausdrücke &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [Systemfunktionen &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
   
   

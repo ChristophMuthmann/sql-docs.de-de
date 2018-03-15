@@ -1,5 +1,5 @@
 ---
-title: XML-Datenbearbeitungssprache (XML DML) | Microsoft Docs
+title: XML Data Modification Language (XML DML) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -38,42 +38,42 @@ ms.lasthandoff: 01/25/2018
 # <a name="xml-data-modification-language-xml-dml"></a>XML DML (Data Modification Language)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  XML DML (Data Modification Language) ist eine Erweiterung der XQuery-Sprache. Gemäß der Definition durch W3C fehlt der XQuery-Sprache der DML-Anteil (Data Manipulation). XML DML eingeführt, die in diesem Thema und auch die XQuery-Sprache bietet eine voll funktionsfähige Abfrage- und Datenbearbeitungssprache, mit denen Sie anhand der **Xml** -Datentyp.  
+  XML DML (Data Modification Language) ist eine Erweiterung der XQuery-Sprache. Gemäß der Definition durch W3C fehlt der XQuery-Sprache der DML-Anteil (Data Manipulation). XML DML wird in diesem Thema vorgestellt; diese Sprache stellt ebenso wie die XQuery-Sprache eine voll funktionsfähige Abfrage- und Datenbearbeitungssprache bereit, die mit dem **xml**-Datentyp verwendet werden kann.  
   
  XML DML fügt XQuery die folgenden Schlüsselwörter hinzu, für die zwischen Groß- und Kleinschreibung unterschieden wird:  
   
 -   **insert**  
   
--   **Löschen**  
+-   **delete**  
   
--   **Ersetzen Sie Wert des**  
+-   **replace value of**  
   
- Wie in beschrieben [XML-Datentyp und-Spalten &#40; SQLServer &#41; ](../../relational-databases/xml/xml-data-type-and-columns-sql-server.md), Sie können Variablen und Spalten des Erstellen der **Xml** geben und XML-Dokumente oder-Fragmente zuweisen. Gehen Sie folgendermaßen vor, um diese XML-Instanzen zu ändern oder zu aktualisieren:    
+ Wie unter [XML-Datentyp und-Spalten &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-type-and-columns-sql-server.md) beschrieben, können Sie Variablen und Spalten des **xml**-Datentyps erstellen und diesen dann XML-Dokumente oder -Fragmente zuweisen. Gehen Sie folgendermaßen vor, um diese XML-Instanzen zu ändern oder zu aktualisieren:    
   
--   Verwenden Sie die [modify() Methode Xml-Datentyp)](../../t-sql/xml/modify-method-xml-data-type.md) von der **Xml** -Datentyp.  
+-   Verwenden Sie die [modify() xml Data Type](../../t-sql/xml/modify-method-xml-data-type.md)-Methode des **xml**-Datentyps.  
   
--   Geben Sie die entsprechenden XML DML-Anweisungen innerhalb der **modify()** Methode.  
+-   Geben Sie die entsprechenden XML DML-Anweisungen in der **modify()**-Methode an.  
   
- Beachten Sie, dass einige Attribute nicht eingefügt, gelöscht oder einer Wertänderung unterzogen werden können. Beispiel:  
+ Beachten Sie, dass einige Attribute nicht eingefügt, gelöscht oder einer Wertänderung unterzogen werden können. Zum Beispiel:  
   
--   Für typisiertes oder nicht typisiertes **Xml** die Attribute sind **Xmlns**, **Xmlns:\***, und **XML: Base**.  
+-   Für typisiertes oder nicht typisiertes **xml** lauten die Attribute **xmlns**, **xmlns:\*** und **xml:base**.  
   
--   Für typisiertes **Xml** nur die Attribute sind **xsi: nil**, und **xsi: Type**.  
+-   Nur für typisiertes **xml** lauten die Attribute **xsi:nil** und **xsi:type**.  
   
  Außerdem gelten die folgenden Einschränkungen:  
   
--   Für typisiertes oder nicht typisiertes **Xml**, Einfügen des Attributs **XML: Base** schlägt fehl.  
+-   Für typisiertes oder nicht typisiertes **xml** schlägt das Einfügen des Attributs **xml:base** fehl.  
   
--   Für typisiertes **Xml**, löschen und Ändern der **xsi: nil** -Attributs fehl. Für nicht typisiertes **Xml**, können Sie dieses Attribut löschen oder seinen Wert ändern.  
+-   Für typisiertes **xml** schlägt das Löschen und Ändern des Attributs **xsi:nil** fehl. Für nicht typisiertes **xml** können Sie dieses Attribut löschen oder seinen Wert ändern.  
   
--   Für typisiertes **Xml**, Ändern des Werts der **xs: Type** -Attributs fehl. Für nicht typisiertes **Xml**, können Sie diesen Attributwert ändern.  
+-   Für typisiertes **xml** schlägt das Ändern des Werts des **xs:type**-Attributs fehl. Für nicht typisiertes **xml** können Sie diesen Attributwert ändern.  
   
  Wenn Sie eine typisierte XML-Instanz ändern, muss das endgültige Format eine gültige Instanz des betreffenden Typs sein. Anderenfalls wird ein Überprüfungsfehler zurückgegeben.  
   
-## <a name="see-also"></a>Siehe auch  
- [INSERT &#40; XML DML &#41;](../../t-sql/xml/insert-xml-dml.md)   
- [Delete &#40; XML DML &#41;](../../t-sql/xml/delete-xml-dml.md)   
- [Replace-Wert, der &#40; XML DML &#41;](../../t-sql/xml/replace-value-of-xml-dml.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [insert &#40;XML DML&#41;](../../t-sql/xml/insert-xml-dml.md)   
+ [delete &#40;XML DML&#41;](../../t-sql/xml/delete-xml-dml.md)   
+ [replace value of &#40;XML DML&#41;](../../t-sql/xml/replace-value-of-xml-dml.md)   
  [Vergleichen von typisiertem XML mit nicht typisiertem XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [Erstellen von Instanzen der XML-Daten](../../relational-databases/xml/create-instances-of-xml-data.md)   
  [xml Data Type Methods (xml-Datentypmethoden)](../../t-sql/xml/xml-data-type-methods.md)  

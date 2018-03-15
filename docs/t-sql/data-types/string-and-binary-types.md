@@ -1,5 +1,5 @@
 ---
-title: "Zeichenfolgen- und Binärtypen | Microsoft Docs"
+title: "Zeichenfolgen- und Binärtypen | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 7/23/2017
 ms.prod: sql-non-specified
@@ -38,6 +38,6 @@ ms.lasthandoff: 11/21/2017
 [binary und varbinary &#40;Transact-SQL&#41;](../../t-sql/data-types/binary-and-varbinary-transact-sql.md)  
 [char und varchar &#40;Transact-SQL&#41;](../../t-sql/data-types/char-and-varchar-transact-sql.md)  
 [nchar und nvarchar &#40;Transact-SQL&#41;](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)  
-[Ntext, Text und Bild &#40; Transact-SQL &#41;](../../t-sql/data-types/ntext-text-and-image-transact-sql.md)
+[ntext, text und image &#40;Transact-SQL&#41;](../../t-sql/data-types/ntext-text-and-image-transact-sql.md)
   
   

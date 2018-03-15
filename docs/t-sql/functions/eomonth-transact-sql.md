@@ -1,5 +1,5 @@
 ---
-title: EOMONTH (Transact-SQL) | Microsoft Docs
+title: EOMONTH (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -45,18 +45,18 @@ EOMONTH ( start_date [, month_to_add ] )
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *' Startdatum '.*  
+ *start_date*  
  Datumsausdruck, der das Datum angibt, für das der letzte Tag des Monats zurückgegeben werden soll.  
   
  *month_to_add*  
- Angeben der Anzahl von Monaten für das Hinzufügen optionaler Ganzzahlausdruck *Start_date*.  
+ Optionaler Integerausdruck, der die Anzahl der Monate angibt, die *start_date* hinzugefügt werden soll.  
   
- Wenn dieses Argument, klicken Sie dann angegeben wird **EOMONTH** fügt die angegebene Anzahl von Monaten für das *Start_date*, und gibt dann den letzten Tag des Monats für das resultierende Datum zurück. Wenn durch das Hinzufügen der gültige Datumsbereich überschritten wird, wird ein Fehler ausgegeben.  
+ Wenn dieses Argument angegeben wurde, fügt **EOMONTH** die angegebene Anzahl von Monaten *start_date* hinzu und gibt dann den letzten Tag des Monats für das sich ergebende Datum zurück. Wenn durch das Hinzufügen der gültige Datumsbereich überschritten wird, wird ein Fehler ausgegeben.  
   
 ## <a name="return-type"></a>Rückgabetyp  
  **Datum**  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Diese Funktion kann remote auf Servern mit [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] oder einer höheren Version ausgeführt werden. Sie kann nicht remote mit einer Version vor [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ausgeführt werden.  
   
 ## <a name="examples"></a>Beispiele  

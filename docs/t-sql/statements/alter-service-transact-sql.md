@@ -1,5 +1,5 @@
 ---
-title: ALTER SERVICE (Transact-SQL) | Microsoft Docs
+title: ALTER SERVICE (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -55,25 +55,25 @@ ALTER SERVICE service_name
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *Dienstname*  
+ *service_name*  
  Der Name des zu ändernden Diensts. Server-, Datenbank- und Schemaname können nicht angegeben werden.  
   
- ON-Warteschlange [ *Schema_name***.** ] *Warteschlangenname*  
+ ON QUEUE [ *schema_name***.** ] *queue_name*  
  Gibt die neue Warteschlange für diesen Dienst an. [!INCLUDE[ssSB](../../includes/sssb-md.md)] verschiebt alle Meldungen für diesen Dienst aus der aktuellen Warteschlange in die neue.  
   
- Vertrag hinzufügen *Contract_name*  
+ ADD CONTRACT *contract_name*  
  Gibt einen Vertrag an, der dem durch diesen Dienst verfügbar gemachten Vertragssatz hinzugefügt werden soll.  
   
- DROP CONTRACT *Contract_name*  
+ DROP CONTRACT *contract_name*  
  Gibt einen Vertrag an, der aus dem von diesem Dienst verfügbar gemachten Vertragssatz gelöscht werden soll. [!INCLUDE[ssSB](../../includes/sssb-md.md)] sendet eine Fehlermeldung die vorhandene Konversationen mit diesem Dienst, die diesen Vertrag verwenden.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Wenn mithilfe der ALTER SERVICE-Anweisung ein Vertrag aus einem Dienst gelöscht wird, kann der Dienst kein Ziel für Konversationen mehr sein, die diesen Vertrag verwenden. Deshalb lässt [!INCLUDE[ssSB](../../includes/sssb-md.md)] keine neuen Konversationen mit dem Dienst für diesen Vertrag zu. Bestehende Konversationen, die den Vertrag verwenden, sind davon nicht betroffen.  
   
  Verwenden Sie die ALTER AUTHORIZATION-Anweisung, wenn Sie AUTHORIZATION für einen Dienst ändern möchten.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Berechtigung zum Ändern eines Diensts erhalten standardmäßig der Besitzer des Diensts, Mitglieder der der **Db_ddladmin** oder **Db_owner** festen Datenbankrollen und Mitglieder der **Sysadmin** feste Serverrolle.  
+ Die Berechtigung zum Ändern eines Diensts erhalten standardmäßig die Besitzer des Diensts, Mitglieder der festen Datenbankrollen **db_ddladmin** oder **db_owner** sowie Mitglieder der festen Serverrolle **sysadmin**.  
   
 ## <a name="examples"></a>Beispiele  
   
@@ -102,9 +102,9 @@ ALTER SERVICE [//Adventure-Works.com/Expenses]
      DROP CONTRACT [//Adventure-Works.com/Expenses/ExpenseSubmission]) ;  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [CREATE SERVICE &#40;Transact-SQL&#41;](../../t-sql/statements/create-service-transact-sql.md)   
- [DROP SERVICE &#40; Transact-SQL &#41;](../../t-sql/statements/drop-service-transact-sql.md)   
+ [DROP SERVICE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-service-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   

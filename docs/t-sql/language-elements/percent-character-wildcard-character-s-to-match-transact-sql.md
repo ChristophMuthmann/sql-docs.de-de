@@ -1,5 +1,5 @@
 ---
-title: "Prozentzeichen (Platzhalterzeichen – zu suchende(s) Zeichen) (Transact-SQL) | Microsoft Docs"
+title: "Prozentzeichen (Platzhalterzeichen – zu suchende(s) Zeichen) (Transact-SQL) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 12/06/2016
 ms.prod: sql-non-specified
@@ -57,12 +57,12 @@ WHERE FirstName LIKE 'Dan%';
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [LIKE &#40;Transact-SQL&#41;](../../t-sql/language-elements/like-transact-sql.md)   
- [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [Operatoren &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [Ausdrücke &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)  
- [&#91; &#93; (Platzhalterzeichen – zu suchende(s) Zeichen)](../../t-sql/language-elements/wildcard-character-s-to-match-transact-sql.md)   
-  [&#91; ^ &#93; (Platzhalterzeichen - nicht zu suchende(s) Zeichen)](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md)     
+ [&#91; &#93; (Wildcard - Character(s) to Match) ([ ] (Platzhalterzeichen – zu suchende[s] Zeichen))](../../t-sql/language-elements/wildcard-character-s-to-match-transact-sql.md)   
+  [&#91;^&#93; (Wildcard - Character(s) Not to Match) ([^] (Platzhalterzeichen – nicht zu suchende[s] Zeichen))](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md)     
  [_ (Platzhalterzeichen – einzelnes zu suchendes Zeichen)](../../t-sql/language-elements/wildcard-match-one-character-transact-sql.md)  
     
   

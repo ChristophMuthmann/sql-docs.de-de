@@ -1,5 +1,5 @@
 ---
-title: Drucken (Transact-SQL) | Microsoft Docs
+title: PRINT (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -51,16 +51,16 @@ PRINT msg_str | @local_variable | string_expr
   
 ## <a name="arguments"></a>Argumente  
  *msg_str*  
- Eine Zeichen- oder Unicode-Zeichenfolgenkonstante. Weitere Informationen finden Sie unter [Konstanten &#40; Transact-SQL &#41; ](../../t-sql/data-types/constants-transact-sql.md).  
+ Eine Zeichen- oder Unicode-Zeichenfolgenkonstante. Weitere Informationen finden Sie unter [Konstanten &#40;Transact-SQL&#41;](../../t-sql/data-types/constants-transact-sql.md).  
   
  **@** *local_variable*  
- Dies ist eine Variable eines beliebigen gültigen Zeichendatentyps. **@*** Local_variable* muss **Char**, **Nchar**, **Varchar**, oder **Nvarchar**, oder es muss in der Lage sein implizit konvertiert in diese Datentypen.  
+ Dies ist eine Variable eines beliebigen gültigen Zeichendatentyps. **@***local_variable* muss auf **char**, **nchar**, **varchar** oder **nvarchar** festgelegt sein oder implizit in diese Datentypen konvertierbar sein.  
   
  *string_expr*  
  Ein Ausdruck, der eine Zeichenfolge zurückgibt. Er kann verkettete Literalwerte, Funktionen und Variablen enthalten. Weitere Informationen finden Sie unter [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md).  
   
-## <a name="remarks"></a>Hinweise  
- Eine Meldungszeichenfolge kann bis zu 8.000 Zeichen lang sein, wenn es sich um eine Nicht-Unicode-Zeichenfolge handelt, und 4.000 Zeichen, wenn es sich um eine Unicode-Zeichenfolge handelt. Längere Zeichenfolgen werden abgeschnitten. Die **varchar(max)** und **nvarchar(max)** Datentypen werden abgeschnitten, um Datentypen, die nicht als größer **vom Datentyp varchar(8000)** und **nvarchar(4000)**.  
+## <a name="remarks"></a>Remarks  
+ Eine Meldungszeichenfolge kann bis zu 8.000 Zeichen lang sein, wenn es sich um eine Nicht-Unicode-Zeichenfolge handelt, und 4.000 Zeichen, wenn es sich um eine Unicode-Zeichenfolge handelt. Längere Zeichenfolgen werden abgeschnitten. Die Datentypen**varchar(max)** und **nvarchar(max)** werden abgeschnitten und ergeben Datentypen, die nicht größer sind als **varchar(8000)** und **nvarchar(4000)**.  
   
  RAISERROR kann auch zum Zurückgeben von Meldungen verwendet werden. RAISERROR hat im Vergleich zu PRINT die folgenden Vorteile:  
   
@@ -68,7 +68,7 @@ PRINT msg_str | @local_variable | string_expr
   
 -   RAISERROR kann neben der Textmeldung eine eindeutige Fehlernummer, einen Schweregrad und einen Statuscode angeben.  
   
--   RAISERROR kann verwendet werden, zum Zurückgeben von benutzerdefinierten Meldungen, die mithilfe der gespeicherten Systemprozedur Sp_addmessage erstellt.  
+-   Mit RAISERROR lassen sich mithilfe der gespeicherten Systemprozedur sp_addmessage benutzerdefinierte Meldungen zurückgeben.  
   
 ## <a name="examples"></a>Beispiele  
   
@@ -104,9 +104,9 @@ PRINT @PrintMessage;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
-### <a name="c-conditionally-executing-print"></a>C. Bedingt ausgeführte Print-Anweisung  
+### <a name="c-conditionally-executing-print"></a>C. Bedingt ausgeführte PRINT-Anweisung  
  Das folgende Beispiel verwendet die `PRINT`-Anweisung zur bedingten Rückgabe einer Meldung.  
   
 ```  
@@ -117,10 +117,10 @@ ELSE
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
- [RAISERROR &#40; Transact-SQL &#41;](../../t-sql/language-elements/raiserror-transact-sql.md)  
+ [DEKLARIEREN SIE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
+ [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)  
   
   
 

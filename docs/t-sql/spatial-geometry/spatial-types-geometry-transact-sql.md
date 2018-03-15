@@ -1,5 +1,5 @@
 ---
-title: die Geometrie (Transact-SQL) | Microsoft Docs
+title: geometry (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -31,14 +31,14 @@ ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="spatial-types---geometry-transact-sql"></a>Räumliche Typen - Geometrie (Transact-SQL)
+# <a name="spatial-types---geometry-transact-sql"></a>Räumliche Typen - geometry (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Der planare räumliche Datentyp **Geometrie**, wird als common Language Runtime (CLR)-Datentyp in implementiert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Dieser Typ stellt Daten in einem euklidischen (flachen) Koordinatensystem dar.  
+  Der planare Typ für räumliche Daten, **geometry**, wird als CLR-Datentyp (Common Language Runtime) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] implementiert. Dieser Typ stellt Daten in einem euklidischen (flachen) Koordinatensystem dar.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]unterstützt einen Satz von Methoden für die **Geometrie** räumlichen Datentyp. Dazu gehören Methoden für **Geometrie** durch den Standard Open Geospatial Consortium (OGC) und einen Satz von definiert sind, [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Erweiterungen dieses Standards.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt einen Satz von Methoden für den räumlichen **geometry**-Datentyp. Dazu gehören Methoden zur **geometry**, die im OGC-Standard (Open Geospatial Consortium) und in einer Gruppe von [!INCLUDE[msCoName](../../includes/msconame-md.md)]-Erweiterungen dieses Standards definiert sind.  
  
- Die Fehlertoleranz für den Geometry-Methoden kann so groß wie 1. 0e-7 * Blöcke. Die Wertebereiche finden Sie in die ungefähre maximale Entfernung zwischen Punkten von der **Geometrie**Objekt.
+ Die Fehlertoleranz für die geometry-Methoden kann bis zu 1,0e-7 * Blöcke groß sein. Die Blöcke verweisen auf die ungefähre maximale Entfernung zwischen Punkten des **geometry**-Objekts.
   
 ## <a name="registering-the-geometry-type"></a>Registrieren des geometry-Datentyps  
  Der **geometry** -Typ ist vordefiniert und in jeder Datenbank verfügbar. Sie können Tabellenspalten des **geometry** -Typs in der gleichen Weise erstellen und **geometry** -Daten in der gleichen Weise verwenden wie andere CLR-Typen. Kann in persistierten und nicht persistierten berechneten Spalten verwendet werden.  
@@ -46,7 +46,7 @@ ms.lasthandoff: 01/25/2018
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="a-showing-how-to-add-and-query-geometry-data"></a>A. Darstellung des Hinzufügens und Abfragens von Geometriedaten  
- Die folgenden zwei Beispiele zeigen, wie Geometriedaten hinzugefügt und abgefragt werden. Im erste Beispiel erstellt eine Tabelle mit einer Identity-Spalte und eine `geometry` Spalte `GeomCol1`. Eine dritte Spalte rendert die `geometry` -Spalte als Darstellung im Open Geospatial Consortium (OGC) WKT-Format und verwendet die `STAsText()` -Methode. Dann werden zwei Zeilen eingefügt: Eine Zeile enthält eine `LineString` -Instanz des Typs `geometry`und die andere eine `Polygon` -Instanz.  
+ Die folgenden zwei Beispiele zeigen, wie Geometriedaten hinzugefügt und abgefragt werden. Im ersten Beispiel wird eine Tabelle mit einer Identitätsspalte und einer `geometry`-Spalte `GeomCol1` erstellt. Eine dritte Spalte rendert die `geometry` -Spalte als Darstellung im Open Geospatial Consortium (OGC) WKT-Format und verwendet die `STAsText()` -Methode. Dann werden zwei Zeilen eingefügt: Eine Zeile enthält eine `LineString` -Instanz des Typs `geometry`und die andere eine `Polygon` -Instanz.  
   
 ```sql 
 IF OBJECT_ID ( 'dbo.SpatialTable', 'U' ) IS NOT NULL   
@@ -82,7 +82,7 @@ SELECT @result.STAsText();
 ```  
   
 ### <a name="c-using-geometry-in-a-computed-column"></a>C. Verwenden des geometry-Typs in einer berechneten Spalte  
- Das folgende Beispiel erstellt eine Tabelle mit einer permanenten berechneten Spalte mit einem **Geometrie** Typ.  
+ Im folgenden Beispiel wird eine Tabelle mit einer persistierten berechneten Spalte mit einem **geometry**-Typ erstellt.  
   
 ```sql  
 IF OBJECT_ID ( 'dbo.SpatialTable', 'U' ) IS NOT NULL   
@@ -97,7 +97,7 @@ CREATE TABLE SpatialTable
 )  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
   [Räumliche Daten &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: ALTER RESOURCE GOVERNOR (Transact-SQL) | Microsoft Docs
+title: ALTER RESOURCE GOVERNOR (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 05/01/2017
 ms.prod: sql-non-specified
@@ -37,9 +37,9 @@ ms.lasthandoff: 01/25/2018
 # <a name="alter-resource-governor-transact-sql"></a>ALTER RESOURCE GOVERNOR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Diese Anweisung wird verwendet, um die folgenden Aktionen für die Ressourcenkontrolle in ausführen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
+  Diese Anweisung wird für die folgenden Ressourcenkontrollaktionen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet:  
   
--   Übernehmen Sie die konfigurationsänderungen angegeben, wenn der CREATE | ALTER | DROP WORKLOAD GROUP oder der CREATE | ALTER | DROP RESOURCE POOL oder der CREATE | ALTER | DROP EXTERNAL RESOURCE POOL-Anweisungen ausgegeben werden.  
+-   Anwenden der Konfigurationsänderungen, die beim Ausgeben der Anweisungen CREATE|ALTER|DROP WORKLOAD GROUP oder CREATE|ALTER|DROP RESOURCE POOL oder CREATE|ALTER|DROP EXTERNAL RESOURCE POOL angegeben wurden.  
   
 -   Aktivieren bzw. Deaktivieren der Ressourcenkontrolle.  
   
@@ -64,7 +64,7 @@ ALTER RESOURCE GOVERNOR
   
 ## <a name="arguments"></a>Argumente  
  DISABLE  
- Deaktiviert die Ressourcenkontrolle. Das Deaktivieren der Ressourcenkontrolle hat die folgenden Ergebnisse:  
+ Deaktiviert die Ressourcenkontrolle. Wenn Sie Resource Governor deaktivieren, geschieht Folgendes:  
   
 -   Die Klassifizierungsfunktion wird nicht ausgeführt.  
   
@@ -76,39 +76,39 @@ ALTER RESOURCE GOVERNOR
   
 -   Die reguläre Systemüberwachung bleibt unbeeinflusst.  
   
--   Änderungen an der Konfiguration vorgenommen werden können, aber die Änderungen werden wirksam, bis die Ressourcenkontrolle aktiviert ist.  
+-   Sie können die Konfiguration ändern, die Änderungen treten jedoch erst in Kraft, wenn Resource Governor wieder aktiviert wird.  
   
 -   Beim Neustart von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lädt die Ressourcenkontrolle nicht ihre Konfiguration, sondern enthält lediglich die Standardgruppen und -pools sowie die internen Gruppen und Pools.  
   
  RECONFIGURE  
- Wenn die Ressourcenkontrolle nicht aktiviert ist, wird sie durch RECONFIGURE aktiviert. Das Aktivieren der Ressourcenkontrolle hat die folgenden Ergebnisse:  
+ Wenn die Ressourcenkontrolle nicht aktiviert ist, wird sie durch RECONFIGURE aktiviert. Wenn Sie Resource Governor deaktivieren, geschieht Folgendes:  
   
 -   Die Klassifizierungsfunktion wird für neue Verbindungen ausgeführt, damit deren Arbeitsauslastung Arbeitsauslastungsgruppen zugeordnet werden kann.  
   
 -   Die in der Konfiguration der Ressourcenkontrolle angegebenen Ressourcengrenzwerte werden überprüft und durchgesetzt.  
   
--   Anforderungen, die bereits bestanden, bevor die Ressourcenkontrolle sind alle konfigurationsänderungen betroffen, die vorgenommen wurden, wenn die Ressourcenkontrolle deaktiviert wurde.  
+-   Alle Konfigurationsänderungen, die bei deaktivierte Resource Governor vorgenommen wurden, wirken sich auf Anforderungen aus, die bereits bestanden, bevor Resource Governor aktiviert wurde.  
   
- Wenn die Ressourcenkontrolle ausgeführt wird, gilt RECONFIGURE Konfiguration Änderungen erforderlich, wenn der CREATE | ALTER | DROP WORKLOAD GROUP oder der CREATE | ALTER | DROP RESOURCE POOL oder der CREATE | ALTER | DROP EXTERNAL RESOURCE POOL-Anweisungen werden ausgeführt.  
+ Wenn RECONFIGURE beim Ausführen von Resource Governor verwendet wird, werden alle Konfigurationsanforderungen angewendet, die beim Ausführen der Anweisungen CREATE|ALTER|DROP WORKLOAD GROUP oder CREATE|ALTER|DROP RESOURCE POOL oder CREATE|ALTER|DROP EXTERNAL RESOURCE POOL angefordert wurden.  
   
 > [!IMPORTANT]  
 >  ALTER RESOURCE GOVERNOR RECONFIGURE muss ausgegeben werden, damit Konfigurationsänderungen wirksam werden.  
   
- CLASSIFIER_FUNCTION = { *Schema_name***.*** Funktionsname* | NULL}  
- Registriert die Klassifizierungsfunktion durch angegebenen *function_name*. Diese Funktion klassifiziert jede neue Sitzung und weist die Sitzungsanforderungen und Abfragen einer Arbeitsauslastungsgruppe zu. Bei Verwendung von NULL werden neue Sitzungen automatisch der Standardarbeitsauslastungsgruppe zugewiesen.  
+ CLASSIFIER_FUNCTION = { *schema_name***.***function_name* | NULL }  
+ Registriert die Klassifizierungsfunktion, die durch *schema_name.function_name* angegeben wird. Diese Funktion klassifiziert jede neue Sitzung und weist die Sitzungsanforderungen und Abfragen einer Arbeitsauslastungsgruppe zu. Bei Verwendung von NULL werden neue Sitzungen automatisch der Standardarbeitsauslastungsgruppe zugewiesen.  
   
  RESET STATISTICS  
- Setzt die Statistik für alle Arbeitsauslastungsgruppen und Ressourcenpools zurück. Weitere Informationen finden Sie unter [dm_resource_governor_workload_groups &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md) und [dm_resource_governor_resource_pools &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md).  
+ Setzt die Statistik für alle Arbeitsauslastungsgruppen und Ressourcenpools zurück. Weitere Informationen finden Sie unter [sys.dm_resource_governor_workload_groups &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md) und [sys.dm_resource_governor_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md).  
   
  MAX_OUTSTANDING_IO_PER_VOLUME = *value*  
  **Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Legt die maximale Anzahl an E/A-Vorgängen in der Warteschlange pro Datenträgervolume fest. Bei diesen E/A-Vorgängen kann es sich um Lese- oder Schreibvorgänge beliebiger Größe handeln.  Der Maximalwert für MAX_OUTSTANDING_IO_PER_VOLUME ist 100. Der Wert ist kein Prozentsatz. Diese Einstellung ist so konzipiert, dass sie die E/A-Ressourcenkontrolle auf die E/A-Eigenschaften eines Datenträgervolumes abstimmt. Es wird empfohlen, verschiedene Werte auszuprobieren und ggf. ein Kalibrierungstool wie IOMeter, [DiskSpd](https://gallery.technet.microsoft.com/DiskSpd-a-robust-storage-6cd2f223), oder SQLIO (veraltet), um den Maximalwert für das Speichersubsystem festzulegen. Diese Einstellung bietet eine Sicherheitsprüfung auf Systemebene, die es SQL Server ermöglicht, den minimalen IOPS-Wert für Ressourcenpools einzuhalten, auch wenn die MAX_IOPS_PER_VOLUME-Einstellung anderer Pools auf einen unbegrenzten Wert festgelegt ist. Weitere Informationen zu MAX_IOPS_PER_VOLUME finden Sie unter [CREATE RESOURCE POOL](../../t-sql/statements/create-resource-pool-transact-sql.md).  
+ Legt die maximale Anzahl an E/A-Vorgängen in der Warteschlange pro Datenträgervolume fest. Bei diesen E/A-Vorgängen kann es sich um Lese- oder Schreibvorgänge beliebiger Größe handeln.  Der Maximalwert für MAX_OUTSTANDING_IO_PER_VOLUME ist 100. Der Wert ist kein Prozentsatz. Diese Einstellung ist so konzipiert, dass sie die E/A-Ressourcenkontrolle auf die E/A-Eigenschaften eines Datenträgervolumes abstimmt. Es empfiehlt sich, verschiedene Werte auszuprobieren und ggf. ein Kalibrierungstool wie IOMeter, [DiskSpd](https://gallery.technet.microsoft.com/DiskSpd-a-robust-storage-6cd2f223) oder SQLIO (veraltet) zu verwenden, um den Maximalwert für das Speichersubsystem festzulegen. Diese Einstellung bietet eine Sicherheitsprüfung auf Systemebene, die es SQL Server ermöglicht, den minimalen IOPS-Wert für Ressourcenpools einzuhalten, auch wenn die MAX_IOPS_PER_VOLUME-Einstellung anderer Pools auf einen unbegrenzten Wert festgelegt ist. Weitere Informationen zu MAX_IOPS_PER_VOLUME finden Sie unter [CREATE RESOURCE POOL](../../t-sql/statements/create-resource-pool-transact-sql.md).  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  ALTER RESOURCE GOVERNOR DISABLE, ALTER RESOURCE GOVERNOR RECONFIGURE und ALTER RESOURCE GOVERNOR RESET STATISTICS können nicht in einer Benutzertransaktion verwendet werden.  
   
- Die RECONFIGURE-Parameter ist Teil der Syntax der Ressourcenkontrolle und darf nicht mit verwechselt werden [RECONFIGURE](../../t-sql/language-elements/reconfigure-transact-sql.md), dies ist eine separate DDL-Anweisung.  
+ Der RECONFIGURE-Parameter ist Teil der Syntax von Resource Governor und darf nicht mit [RECONFIGURE](../../t-sql/language-elements/reconfigure-transact-sql.md) verwechselt werden, die eine eigene DDL-Anweisung ist.  
   
  Sie sollten mit den Status der Ressourcenkontrolle vertraut sein, bevor Sie DDL-Anweisungen ausführen. Weitere Informationen finden Sie unter [Resource Governor](../../relational-databases/resource-governor/resource-governor.md).  
   
@@ -193,18 +193,18 @@ ALTER RESOURCE GOVERNOR
 WITH (MAX_OUTSTANDING_IO_PER_VOLUME = 20);   
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [CREATE RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/create-resource-pool-transact-sql.md)   
  [ALTER RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-pool-transact-sql.md)   
  [DROP RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/drop-resource-pool-transact-sql.md)   
  [CREATE EXTERNAL RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-resource-pool-transact-sql.md)   
  [DROP EXTERNAL RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/drop-external-resource-pool-transact-sql.md)   
- [ALTER EXTERNAL RESOURCE POOL &#40; Transact-SQL &#41;](../../t-sql/statements/alter-external-resource-pool-transact-sql.md)   
+ [ALTER EXTERNAL RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/alter-external-resource-pool-transact-sql.md)   
  [CREATE WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-workload-group-transact-sql.md)   
  [ALTER WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-workload-group-transact-sql.md)   
  [DROP WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/drop-workload-group-transact-sql.md)   
  [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)   
- [Sys. dm_resource_governor_workload_groups &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md)   
+ [sys.dm_resource_governor_workload_groups &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md)   
  [sys.dm_resource_governor_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "Schrägstrich Stern (Blockkommentar) (Transact-SQL) | Microsoft Docs"
+title: "Schrägstrich-Stern (Blockkommentar) (Transact-SQL) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 07/27/2017
 ms.prod: sql-non-specified
@@ -35,11 +35,11 @@ ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="slash-star-block-comment-transact-sql"></a>Schrägstrich Stern (Blockkommentar) (Transact-SQL)
+# <a name="slash-star-block-comment-transact-sql"></a>Schrägstrich-Stern (Blockkommentar) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 
-  Gibt vom Benutzer bereitgestellten Text an. Der Text zwischen den / * und \*/ wird vom Server nicht ausgewertet.  
+  Gibt vom Benutzer bereitgestellten Text an. Der Text zwischen den Kommentarzeichen /* und *\* wird vom Server nicht ausgewertet.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -56,12 +56,12 @@ text_of_comment
  *text_of_comment*  
  Bezeichnet den Text des Kommentars. Dieser besteht aus einer oder mehreren Zeichenfolgen.  
   
-## <a name="remarks"></a>Hinweise  
- Kommentare können sowohl in einer gesonderten Zeile als auch innerhalb einer [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung eingefügt werden. Mehrzeilige Kommentare müssen angegeben werden, indem Sie / * und \*/. Für mehrzeilige Kommentare häufig werden diese mehrzeiligen ist die erste Zeile beginnt /\*, die nachfolgenden Zeilen mit \* \*, und enden mit \*/.  
+## <a name="remarks"></a>Remarks  
+ Kommentare können sowohl in einer gesonderten Zeile als auch innerhalb einer [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung eingefügt werden. Kommentare, die sich über mehrere Zeilen erstrecken, müssen in /* und \*/ eingeschlossen sein. Oft werden diese mehrzeiligen Kommentare folgendermaßen gekennzeichnet: Die erste Zeile beginnt mit /\*, die nachfolgenden Zeilen mit \*\*, und die letzte Zeile endet mit \*/.  
   
  Es gibt keine Maximallänge für Kommentare.  
   
- Geschachtelte Kommentare werden unterstützt. Wenn die / * tritt das Zeichenmuster an einer beliebigen Stelle in einem vorhandenen Kommentar, es wird als Anfang eines geschachtelten Kommentars behandelt und benötigt deshalb das schließende \*/ Kommentarzeichen. Fehlt das schließende Kommentarzeichen, wird ein Fehler generiert.  
+ Geschachtelte Kommentare werden unterstützt. Tritt das Zeichenmuster /* an einer beliebigen Stelle in einem vorhandenen Kommentar auf, wird es als Anfang eines geschachtelten Kommentars behandelt und benötigt deshalb das schließende Kommentarzeichen \*/. Fehlt das schließende Kommentarzeichen, wird ein Fehler generiert.  
   
  So generiert beispielsweise der folgende Code einen Fehler.  
   
@@ -108,9 +108,9 @@ JOIN Person.Address AS a ON ea.AddressID = a.AddressID;
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [-- &#40;Comment&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/comment-transact-sql.md)   
- [Control-of-Flow-Sprache &#40; Transact-SQL &#41;](~/t-sql/language-elements/control-of-flow.md)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [-- &#40;Kommentar&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/comment-transact-sql.md)   
+ [Control-of-Flow Language &#40;Transact-SQL&#41; (Sprachkonstrukte zur Ablaufsteuerung (Transact-SQL))](~/t-sql/language-elements/control-of-flow.md)  
   
   
 

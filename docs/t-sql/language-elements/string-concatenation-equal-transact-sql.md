@@ -1,5 +1,5 @@
 ---
-title: += (Verketten von Zeichenfolgen und Zuweisung) (Transact-SQL) | Microsoft Docs
+title: += (Verketten von Zeichenfolgen) (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 12/07/2016
 ms.prod: sql-non-specified
@@ -30,10 +30,10 @@ ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="-string-concatenation-assignment-transact-sql"></a>+= (Zeichenfolge verketten Zuweisung) (Transact-SQL)
+# <a name="-string-concatenation-assignment-transact-sql"></a>+= (Zeichenfolgenverkettungszuweisung) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Verkettet zwei Zeichenfolgen und legt die Zeichenfolge auf das Ergebnis des Vorgangs fest. Angenommen, eine Variable @x ist gleich 'Adventure', klicken Sie dann @x += 'Works' nimmt den ursprünglichen Wert des @x'Works' der Zeichenfolge hinzugefügt, und setzt @x auf diesen neuen Wert 'AdventureWorks'.  
+  Verkettet zwei Zeichenfolgen und legt die Zeichenfolge auf das Ergebnis des Vorgangs fest. Wenn beispielsweise eine Variable @x gleich 'Adventure' ist, dann übernimmt @x += 'Works' den ursprünglichen Wert von @x, fügt 'Works' der Zeichenfolge hinzu und legt @x auf den neuen Wert 'AdventureWorks' fest.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -46,13 +46,13 @@ expression += expression
   
 ## <a name="arguments"></a>Argumente  
  *expression*  
- Ist ein beliebiger gültiger [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) eines beliebigen Zeichendatentyps.  
+ Ein gültiger [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) eines beliebigen Zeichendatentyps.  
   
 ## <a name="result-types"></a>Ergebnistypen  
  Gibt den Datentyp zurück, der für die Variable definiert wird.  
   
-## <a name="remarks"></a>Hinweise  
- Legen Sie @v1 += 'Ausdruck' entspricht SET @v1 = @v1 + ('Ausdruck'). Legen Sie außerdem @v1 = @v2 + @v3 + @v4 entspricht dem Satz @v1 = (@v2 + @v3) + @v4.  
+## <a name="remarks"></a>Remarks  
+ SET @v1 += 'Ausdruck' entspricht SET @v1 = @v1 + ('Ausdruck'). SET @v1 = @v2 + @v3 + @v4 entspricht auch SET @v1 = (@v2 + @v3) + @v4.  
   
  Der Operator += kann nicht ohne eine Variable verwendet werden. So verursacht z. B. der folgende Code einen Fehler:  
   
@@ -61,7 +61,7 @@ SELECT 'Adventure' += 'Works'
 ```  
   
 ## <a name="examples"></a>Beispiele  
-### <a name="a-concatenation-using--operator"></a>A. Verkettung mit:: Operator +=-Operator
+### <a name="a-concatenation-using--operator"></a>A. Verkettung mit +=-Operator
  Im folgenden Beispiel wird mithilfe des `+=`-Operators verkettet.  
   
 ```  
@@ -75,8 +75,8 @@ PRINT @v1;
   
  `This is the original. More text.`  
   
-### <a name="b-order-of-evaluation-while-concatenating-using--operator"></a>B. Reihenfolge der Auswertung beim Verketten von mithilfe von:: Operator +=-Operator
-Im folgenden Beispiel werden mehrere Zeichenfolgen zu einer langen Zeichenfolge verkettet und versucht dann, um die Länge der endgültigen Zeichenfolge zu berechnen. Dieses Beispiel zeigt die Reihenfolge und Abschneiden-Auswertungsregeln dar, bei der Verwendung des Operators für Verkettungen. 
+### <a name="b-order-of-evaluation-while-concatenating-using--operator"></a>B. Reihenfolge der Auswertung beim Verketten mit dem +=-Operator
+Im folgenden Beispiel werden mehrere Zeichenfolgen zu einer langen Zeichenfolge verkettet. Anschließend wird versucht, die Länge der endgültigen Zeichenfolge zu berechnen. Dieses Beispiel zeigt die Auswertungsreihenfolge und Kürzungsregeln bei Verwendung des concatenation-Operators. 
 
 ```
 DECLARE @x varchar(4000) = replicate('x', 4000)
@@ -129,9 +129,9 @@ GO
  (1 row(s) affected)
   ```   
    
-## <a name="see-also"></a>Siehe auch  
- [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
- [+= &#40; Fügen Sie die Zuweisung &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/add-equals-transact-sql.md)   
- [+ &#40; Verketten von Zeichenfolgen &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/string-concatenation-transact-sql.md)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Operatoren &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [+= &#40;Additionszuweisung&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/add-equals-transact-sql.md)   
+ [+ &#40;Verketten von Zeichenfolgen&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/string-concatenation-transact-sql.md)  
   
   

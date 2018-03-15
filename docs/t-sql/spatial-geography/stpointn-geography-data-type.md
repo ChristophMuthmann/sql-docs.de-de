@@ -1,5 +1,5 @@
 ---
-title: STPointN (Geography-Datentyp) | Microsoft Docs
+title: STPointN (geography-Datentyp) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -48,16 +48,16 @@ ms.lasthandoff: 01/25/2018
  Ein **int** -Ausdruck zwischen 1 und der Anzahl der Punkte in der **geography** -Instanz.  
   
 ## <a name="return-types"></a>Rückgabetypen  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Rückgabetyp: **Geography**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Rückgabetyp: **geography**  
   
  CLR-Rückgabetyp: **SqlGeography**  
   
  Open Geospatial Consortium (OGC)-Typ: **Point**  
   
-## <a name="remarks"></a>Hinweise  
- Wenn eine **Geography** Instanz Benutzer erstellt, STPointN() wird die vom angegebenen Punkt *Ausdruck* indem die Punkte in der Reihenfolge, in der sie ursprünglich eingegeben wurden.  
+## <a name="remarks"></a>Remarks  
+ Wenn eine **geography**-Instanz von einem Benutzer erstellt wurde, gibt STPointN() den von *expression* festgelegten Punkt zurück, indem die Punkte in der Reihenfolge sortiert werden, in der sie ursprünglich eingegeben wurden.  
   
- Wenn eine **Geography** -Instanz vom System erstellt wurde, STPointN() gibt die vom angegebenen Punkt *Ausdruck* indem alle Punkte in der gleichen Reihenfolge Ausgabe werden: erst nach  **Geography** Instanz, dann nach dem Ring innerhalb der Instanz (falls zutreffend) und schließlich nach Punkt innerhalb des Rings. Diese Reihenfolge ist deterministisch.  
+ Wenn eine **geography**-Instanz systemseitig erstellt wurde, gibt STPointN() den von *expression* angegebenen Punkt zurück, indem alle Punkte in der Reihenfolge sortiert werden, in der sie ausgegeben werden: erst nach der **geography**-Instanz, dann nach dem Ring innerhalb der Instanz (falls zutreffend) und schließlich nach dem Punkt innerhalb des Rings. Diese Reihenfolge ist deterministisch.  
   
  Wenn diese Methode mit einem geringeren Wert als 1 aufgerufen wird, löst sie eine **ArgumentOutOfRangeException**aus.  
   
@@ -72,7 +72,7 @@ SET @g = geography::STGeomFromText('LINESTRING(-122.360 47.656, -122.343 47.656)
 SELECT @g.STPointN(2).ToString();  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [OGC-Methoden für geography-Instanzen](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

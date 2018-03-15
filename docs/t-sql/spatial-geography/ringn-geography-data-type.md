@@ -1,5 +1,5 @@
 ---
-title: RingN (Geography-Datentyp) | Microsoft Docs
+title: RingN (geography-Datentyp) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -48,12 +48,12 @@ ms.lasthandoff: 01/25/2018
  Ein **int** -Ausdruck zwischen 1 und der Anzahl der Ringe in einer **polygon** -Instanz.  
   
 ## <a name="return-value"></a>Rückgabewert  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Rückgabetyp: **Geography**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Rückgabetyp: **geography**  
   
  CLR-Rückgabetyp: **SqlGeography**  
   
-## <a name="remarks"></a>Hinweise  
- Wenn der Wert des ringindex  **n**  ist kleiner als 1 ist, löst diese Methode eine **ArgumentOutOfRangeException.** aus. Der Wert des Ringindex muss größer oder gleich 1 sein und sollte kleiner oder gleich dem Wert sein, der von `NumRings()`.  
+## <a name="remarks"></a>Remarks  
+ Ist der Wert des Ringindex **n** kleiner als 1, löst diese Methode eine **ArgumentOutOfRangeException** aus. aus. Der Wert des Ringindex muss größer oder gleich 1 sein und sollte kleiner oder gleich dem Wert sein, der von `NumRings()`.  
   
 ## <a name="examples"></a>Beispiele  
  In diesem Beispiel wird eine `Polygon` -Instanz mit zwei Ringen erstellt. Dann wird der zweite Ring zurückgegeben.  
@@ -64,8 +64,8 @@ SET @g = geography::STGeomFromText('POLYGON((-122.358 47.653, -122.348 47.649, -
 SELECT @g.RingN(2).ToString();  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Erweiterte Methoden für Geography-Instanzen](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Erweiterte Methoden für geography-Instanzen](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
  [NumRings &#40;geography-Datentyp&#41;](../../t-sql/spatial-geography/numrings-geography-data-type.md)  
   
   

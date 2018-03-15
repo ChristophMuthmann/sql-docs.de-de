@@ -1,5 +1,5 @@
 ---
-title: DENY-Schemaberechtigungen (Transact-SQL) | Microsoft Docs
+title: DENY (Schemaberechtigungen) (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -49,14 +49,14 @@ DENY permission  [ ,...n ] } ON SCHEMA :: schema_name
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *Berechtigung*  
+ *permission*  
  Gibt eine Berechtigung an, die für ein Schema verweigert werden kann. Eine Liste dieser Berechtigungen finden Sie unter Hinweise weiter unten in diesem Thema.  
   
- ON SCHEMA **::** Schema*_name*  
- Gibt das Schema an, für das die Berechtigung verweigert wird. Der bereichsqualifizierer **::** ist erforderlich.  
+ ON SCHEMA **::** schema*_name*  
+ Gibt das Schema an, für das die Berechtigung verweigert wird. Der Bereichsqualifizierer **::** ist erforderlich.  
   
  *database_principal*  
- Gibt den Prinzipal an, für den die Berechtigung verweigert wird. *Database_principal* kann eines der folgenden sein:  
+ Gibt den Prinzipal an, für den die Berechtigung verweigert wird. *database_principal* kann die folgenden Werte aufweisen:  
   
 -   Datenbankbenutzer  
 -   Datenbankrolle  
@@ -71,7 +71,7 @@ CASCADE
  Gibt an, dass die verweigerte Berechtigung auch anderen Prinzipalen verweigert wird, denen diese Berechtigung von diesem Prinzipal erteilt wurde.  
   
 *denying_principal*  
- Gibt einen Prinzipal an, von dem der Prinzipal, der diese Abfrage ausführt, das Recht zum Verweigern der Berechtigung ableitet. *Denying_principal* kann eines der folgenden sein:  
+ Gibt einen Prinzipal an, von dem der Prinzipal, der diese Abfrage ausführt, das Recht zum Verweigern der Berechtigung ableitet. *denying_principal* kann die folgenden Werte aufweisen:  
   
 -   Datenbankbenutzer  
 -   Datenbankrolle  
@@ -82,7 +82,7 @@ CASCADE
 -   Einem asymmetrischen Schlüssel zugeordneter Datenbankbenutzer  
 -   Keinem Serverprinzipal zugeordneter Datenbankbenutzer.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Ein Schema ist ein sicherbares Element auf Datenbankebene in der Datenbank, die das übergeordnete Element in der Berechtigungshierarchie ist. Die spezifischsten und restriktivsten Berechtigungen, die für ein Schema verweigert werden können, sind unten aufgeführt. Auch die allgemeineren Berechtigungen sind aufgeführt, die diese implizit einschließen.  
   
 |Schemaberechtigung|Impliziert durch die Schemaberechtigung|Impliziert durch Datenbankberechtigung|  
@@ -90,8 +90,8 @@ CASCADE
 |ALTER|CONTROL|ALTER ANY SCHEMA|  
 |CONTROL|CONTROL|CONTROL|  
 |CREATE SEQUENCE|ALTER|ALTER ANY SCHEMA|  
-|DELETE|CONTROL|DELETE|  
-|EXECUTE|CONTROL|EXECUTE|  
+|Delete|CONTROL|Delete|  
+|Führen Sie|CONTROL|Führen Sie|  
 |INSERT|CONTROL|INSERT|  
 |REFERENCES|CONTROL|REFERENCES|  
 |SELECT|CONTROL|SELECT|  
@@ -103,13 +103,13 @@ CASCADE
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die CONTROL-Berechtigung für das Schema. Falls die AS-Option verwendet wird, muss der angegebene Prinzipal das Schema besitzen.  
   
-## <a name="see-also"></a>Siehe auch  
- [Erstellen Sie SCHEMA &#40; Transact-SQL &#41;](../../t-sql/statements/create-schema-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [CREATE SCHEMA &#40;Transact-SQL&#41;](../../t-sql/statements/create-schema-transact-sql.md)   
  [DENY &#40;Transact-SQL&#41;](../../t-sql/statements/deny-transact-sql.md)   
  [Berechtigungen &#40;Datenbankmodul&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [Prinzipale &#40;Datenbankmodul&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [sys.fn_builtin_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)   
- [fn_my_permissions &#40; Transact-SQL &#41;](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)   
+ [sys.fn_my_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)   
  [HAS_PERMS_BY_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/has-perms-by-name-transact-sql.md)  
   
   

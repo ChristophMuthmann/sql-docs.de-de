@@ -1,5 +1,5 @@
 ---
-title: OBJECT_DEFINITION (Transact-SQL) | Microsoft Docs
+title: OBJECT_DEFINITION (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="objectdefinition-transact-sql"></a>OBJECT_DEFINITION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Gibt die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Quelltext der Definition eines angegebenen Objekts.  
+  Gibt den [!INCLUDE[tsql](../../includes/tsql-md.md)]-Quelltext der Definition eines angegebenen Objekts zurück.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -60,8 +60,8 @@ OBJECT_DEFINITION ( object_id )
   
  Ein Benutzer kann nur die Metadaten sicherungsfähiger Elemente anzeigen, bei denen der Benutzer entweder der Besitzer ist oder für die dem Benutzer eine Berechtigung erteilt wurde. Dies bedeutet, dass Metadaten ausgebende integrierte Funktionen, z. B. OBJECT_DEFINITION, möglicherweise NULL zurückgeben, wenn dem Benutzer für das Objekt keine Berechtigung erteilt wurde. Weitere Informationen finden Sie unter [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="remarks"></a>Hinweise  
- Die [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] setzt voraus, dass *Object_id* befindet sich im Kontext aktuellen Datenbank. Die Sortierung der Objektdefinition entspricht immer der des aufrufenden Datenbankkontexts.  
+## <a name="remarks"></a>Remarks  
+ [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] setzt voraus, dass sich *object_id* im aktuellen Datenbankkontext befindet. Die Sortierung der Objektdefinition entspricht immer der des aufrufenden Datenbankkontexts.  
   
  OBJECT_DEFINITION gilt für folgende Objekttypen:  
   
@@ -110,10 +110,10 @@ SELECT OBJECT_DEFINITION (OBJECT_ID(N'sys.sp_columns')) AS [Object Definition];
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Metadatenfunktionen &#40; Transact-SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
- [Object_name &#40; Transact-SQL &#41;](../../t-sql/functions/object-name-transact-sql.md)   
- [Object_id &#40; Transact-SQL &#41;](../../t-sql/functions/object-id-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Metadata Functions &#40;Transact-SQL&#41; (Metadatenfunktionen &#40;Transact-SQL&#41;)](../../t-sql/functions/metadata-functions-transact-sql.md)   
+ [OBJECT_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/object-name-transact-sql.md)   
+ [OBJECT_ID &#40;Transact-SQL&#41;](../../t-sql/functions/object-id-transact-sql.md)   
  [sp_helptext &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptext-transact-sql.md)   
  [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)   
  [sys.server_sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-sql-modules-transact-sql.md)  

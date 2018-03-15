@@ -1,5 +1,5 @@
 ---
-title: Parse (Geometry-Datentyp) | Microsoft Docs
+title: Parse (geometry-Datentyp) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -31,7 +31,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="parse-geometry-data-type"></a>Parse (geometry-Datentyp)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Gibt eine **geometry** -Instanz aus einer Open Geospatial-Konsortium (OGC) Well-Known Text (WKT)-Darstellung zurück. `Parse()`entspricht dem [STGeomFromText()](../../t-sql/spatial-geometry/parse-geometry-data-type.md), mit der Ausnahme, dass es eine räumliche wird vorausgesetzt ID SRID (Spatial reference) 0 als Parameter. Die Eingabe kann optional Z- (Höhe) und M-Werte (Measure) tragen.
+Gibt eine **geometry** -Instanz aus einer Open Geospatial-Konsortium (OGC) Well-Known Text (WKT)-Darstellung zurück. `Parse()` entspricht [STGeomFromText()](../../t-sql/spatial-geometry/parse-geometry-data-type.md), setzt aber eine SRID (Spatial Reference ID) mit dem Wert 0 als Parameter voraus. Die Eingabe kann optional Z- (Höhe) und M-Werte (Measure) tragen.
   
 ## <a name="syntax"></a>Syntax  
   
@@ -45,11 +45,11 @@ Parse ( 'geometry_tagged_text' )
  Die WKT-Darstellung der Instanz von **geometry** , die zurückgegeben werden soll. *geometry_tagged_text* ist ein **nvarchar** -Ausdruck.  
   
 ## <a name="return-types"></a>Rückgabetypen  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Rückgabetyp: **Geometrie**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Rückgabetyp: **geometry**  
   
  CLR-Rückgabetyp: **SqlGeometry**  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Der OGC-Typ der **geometry** -Instanz, die von `Parse()` zurückgegeben wird, wird auf die entsprechende WKT-Eingabe festgelegt.  
   
  Die Zeichenfolge 'Null' wird als eine NULL- **geometry** -Instanz interpretiert.  
@@ -65,7 +65,7 @@ SET @g = geometry::Parse('LINESTRING (100 100, 20 180, 180 180)');
 SELECT @g.ToString();  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [STGeomFromText](../../t-sql/spatial-geometry/parse-geometry-data-type.md)   
  [Erweiterte statische geometry-Methoden](../../t-sql/spatial-geometry/extended-static-geometry-methods.md)  
   

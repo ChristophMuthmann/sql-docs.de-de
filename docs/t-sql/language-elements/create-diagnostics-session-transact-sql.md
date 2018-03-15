@@ -1,5 +1,5 @@
 ---
-title: Erstellen des DIAGNOSESITZUNG (Transact-SQL) | Microsoft Docs
+title: CREATE DIAGNOSTICS SESSION (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -29,12 +29,12 @@ ms.lasthandoff: 01/25/2018
 # <a name="create-diagnostics-session-transact-sql"></a>CREATE DIAGNOSTICS SESSION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
-  Diagnosesitzungen können Sie auf die Leistung von System- oder Abfrage ausführlicher und benutzerdefinierte Diagnoseinformationen zu speichern.  
+  Mithilfe von Diagnosesitzungen können Sie detaillierte benutzerdefinierte Diagnoseinformationen zur System- oder Abfrageleistung speichern.  
   
- Diagnosesitzungen werden normalerweise verwendet, um Leistung für eine bestimmte Abfrage zu debuggen, oder das Verhalten einer bestimmten Anwendung Komponente während Appliance-Vorgangs zu überwachen.  
+ Diagnosesitzungen werden in der Regel dazu verwendet, die Leistung einer bestimmten Abfrage zu debuggen oder das Verhalten einer bestimmten Appliancekomponente während des Appliancevorgangs zu überwachen.  
   
 > [!NOTE]  
->  Sie sollten mit XML vertraut sein, um diagnosesitzungen verwenden.  
+>  Sie sollten mit XML vertraut sein, um Diagnosesitzungen zu verwenden.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -64,52 +64,52 @@ DROP DIAGNOSTICS SESSION diagnostics_name ;
   
 ## <a name="arguments"></a>Argumente  
  *diagnostics_name*  
- Der Name des Diagnostics-Sitzung. Diagnose Sitzungsnamen zählen die Zeichen a-Z, A-Z und 0-9. Darüber hinaus müssen Diagnose Sitzungsnamen mit einem Zeichen beginnen. *Diagnostics_name* ist auf 127 Zeichen begrenzt.  
+ Der Name der Diagnosesitzung. Namen von Diagnosesitzungen dürfen nur die Zeichen a-z, A-Z und die Zahlen 0-9 enthalten. Darüber hinaus müssen Namen von Diagnosesitzungen mit einem Zeichen beginnen. *diagnostics_name* ist auf 127 Zeichen beschränkt.  
   
  *max_item_count_num*  
- Die Anzahl der Ereignisse in einer Ansicht beibehalten werden. Z. B. werden 100 angegeben wird, die 100 letzten Ereignisse, die den Filterkriterien entsprechen. um die diagnosesitzung beibehalten werden. Wenn weniger als 100 Ereignisse Übereinstimmung gefunden werden, wird die diagnosesitzung weniger als 100 Ereignisse enthalten. *Max_item_count_num* muss mindestens 100 und kleiner oder gleich 100.000.  
+ Die Anzahl der zu persistierenden Ereignisse in einer Sicht. Wenn beispielsweise 100 angegeben wird, werden die 100 aktuellsten Ereignisse, die den Filterkriterien entsprechen, in der Diagnosesitzung persistiert. Wenn weniger als 100 übereinstimmende Ereignisse gefunden werden, enthält die Diagnosesitzung weniger als 100 Ereignisse. *max_item_count_num* muss mindestens einen Wert von 100 und darf maximal den Wert 100.000 aufweisen.  
   
  *event_name*  
- Definiert die tatsächliche Ereignisse in der diagnosesitzung gesammelt werden sollen.  *Ereignisname* ist eines der Ereignisse aufgeführt, die [sys.pdw_diag_events](http://msdn.microsoft.com/en-us/d813aac0-cea1-4f53-b8e8-d26824bc2587) , in denen `sys.pdw_diag_events.is_enabled='True'`.  
+ Definiert die tatsächlichen Ereignisse, die in der Diagnosesitzung gesammelt werden sollen.  *event_name* ist eines der Ereignisse, die in [sys.pdw_diag_events](http://msdn.microsoft.com/en-us/d813aac0-cea1-4f53-b8e8-d26824bc2587) aufgelistet sind, wobei Folgendes gilt: `sys.pdw_diag_events.is_enabled='True'`.  
   
  *filter_property_name*  
- Der Name der Eigenschaft für die Ergebnisse zu beschränken. Wenn Sie einschränken möchten, basierend auf der Sitzungs-Id, z. B. *Filter_property_name* muss *SessionId*. Finden Sie unter *Property_name* unten eine Liste der möglichen Werte für *Filter_property_name*.  
+ Der Name der Eigenschaft, auf die Ergebnisse beschränkt werden sollen. Wenn Sie beispielsweise eine Einschränkung basierend auf der Sitzungs-ID vornehmen möchten, muss für *filter_property_name* *SessionId* angegeben werden. Eine Liste mit möglichen Werten für *filter_property_name* finden Sie unter *property_name* weiter unten.  
   
  *value*  
- Ein Wert für die auszuwertende gegen *Filter_property_name*. Der Werttyp muss den Eigenschaftentyp überein. Beispielsweise ist der Eigenschaftentyp decimal, den Typ des *Wert* decimal werden muss.  
+ Ein Wert, der für *filter_property_name* ausgewertet werden soll. Der Werttyp muss mit dem Eigenschaftentyp übereinstimmen. Wenn beispielsweise der Eigenschaftentyp „decimal“ ist, muss der Typ von *value* „decimal“ sein.  
   
  *comp_type*  
- Der Vergleichstyp. Mögliche Werte sind: ist gleich, EqualsOrGreaterThan, EqualsOrLessThan, "GreaterThan", "LessThan", ungleich, Contains, RegEx  
+ Der Vergleichstyp. Mögliche Werte sind: Equals, EqualsOrGreaterThan, EqualsOrLessThan, GreaterThan, LessThan, NotEquals, Contains, RegEx  
   
  *property_name*  
- Eine Eigenschaft mit dem Ereignis verknüpft wird.  Eigenschaftsnamen können Teil der Capture-Tag sein oder als Teil der Filterkriterien verwendet.  
+ Eine Eigenschaft, die mit dem Ereignis verknüpft ist.  Eigenschaftsnamen können Teil des Capture-Tags sein oder als Teil der Filterkriterien verwendet werden.  
   
 |Eigenschaftsname|Description|  
 |-------------------|-----------------|  
-|UserName|Ein Name für Benutzer (Anmeldenamen).|  
+|UserName|Ein Benutzer(anmelde)name.|  
 |SessionID|Eine Sitzungs-ID.|  
 |QueryId|Eine Abfrage-ID.|  
-|CommandType|Einen Befehlstyp.|  
-|CommandText|Text in einen Befehl verarbeitet.|  
+|CommandType|Ein Befehlstyp.|  
+|CommandText|Text innerhalb eines verarbeiteten Befehls.|  
 |OperationType|Der Vorgangstyp für das Ereignis.|  
-|Dauer|Die Dauer des Ereignisses.|  
-|SPID|Die Dienst-Prozess-ID|  
+|Duration|Die Dauer des Ereignisses.|  
+|SPID|Die Prozess-ID des Diensts.|  
   
-## <a name="remarks"></a>Hinweise  
- Jeder Benutzer darf maximal 10 gleichzeitige diagnosesitzungen. Finden Sie unter [sys.pdw_diag_sessions](http://msdn.microsoft.com/en-us/ca111ddc-2787-4205-baf0-1a242c0257a9) eine Liste der aktuellen Sitzungen und Drop Sitzungen, die Sie nicht benötigte `DROP DIAGNOSTICS SESSION`.  
+## <a name="remarks"></a>Remarks  
+ Pro Benutzer sind maximal 10 Diagnosesitzungen gleichzeitig erlaubt. Eine Liste Ihrer aktuellen Sitzungen finden Sie unter [sys.pdw_diag_sessions](http://msdn.microsoft.com/en-us/ca111ddc-2787-4205-baf0-1a242c0257a9). Dort können Sie nicht benötigte Sitzungen mithilfe von `DROP DIAGNOSTICS SESSION` löschen.  
   
- Diagnosesitzungen weiterhin Metadaten bis gelöscht zu sammeln.  
+ Diagnosesitzungen sammeln weiter Metadaten, bis sie gelöscht werden.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert die **ALTER SERVER STATE** Berechtigung.  
+ Erfordert die **ALTER SERVER STATE**-Berechtigung.  
   
 ## <a name="locking"></a>Sperren  
- Akzeptiert eine gemeinsame Sperre für die Tabelle Diagnosesitzungen.  
+ Ruft eine gemeinsame Sperre für die Tabelle der Diagnosesitzungen ab.  
   
 ## <a name="examples"></a>Beispiele  
   
-### <a name="a-creating-a-diagnostics-session"></a>A. Erstellen eine diagnosesitzung  
- Dieses Beispiel erstellt ein diagnosesitzung zum Aufzeichnen von Metriken, die von der Leistung des Datenbankmoduls. Das Beispiel erstellt eine diagnosesitzung, der Datenbankmodul-Abfrage wird ausgeführt/End-Ereignisse und ein blockierendes DMS-Ereignis überwacht. Was zurückgegeben wird, wird der Befehlstext, Computername, Anforderungs-Id (Abfrage-Id) und die Sitzung, der das Ereignis erstellt wurde.  
+### <a name="a-creating-a-diagnostics-session"></a>A. Erstellen einer Diagnosesitzung  
+ In diesem Beispiel wird eine Diagnosesitzung erstellt, um Statistiken zur Leistung der Datenbank-Engine aufzuzeichnen. Im Beispiel wird eine Diagnosesitzung erstellt, die auf Ausführungs- und Endereignisse von Engine-Abfragen sowie ein blockierendes DMS-Ereignis achtet. Zurückgegeben werden der Befehlstext, der Computername, die Anforderungs-ID (Abfrage-ID) und die Sitzung, in der das Ereignis erstellt wurde.  
   
 ```  
 CREATE DIAGNOSTICS SESSION MYDIAGSESSION AS N'  
@@ -133,30 +133,30 @@ CREATE DIAGNOSTICS SESSION MYDIAGSESSION AS N'
 </Session>';  
 ```  
   
- Führen Sie eine Abfrage nach der Erstellung der diagnosesitzung.  
+ Führen Sie nach dem Erstellen der Diagnosesitzung eine Abfrage aus.  
   
 ```  
 SELECT COUNT(EmployeeKey) FROM AdventureWorksPDW2012..FactSalesQuota;  
 ```  
   
- Zeigen Sie dann die Diagnoseergebnisse für die Sitzung durch Auswahl aus dem Schema Sysdiag an.  
+ Zeigen Sie dann die Ergebnisse der Diagnosesitzung an, indem Sie diese über das sysdiag-Schema auswählen.  
   
 ```  
 SELECT * FROM master.sysdiag.MYDIAGSESSION;  
 ```  
   
- Beachten Sie, dass das Schema Sysdiag eine Sicht enthält, mit dem Namen der Diagnose-Sitzungsname.  
+ Beachten Sie, dass das sysdiag-Schema eine Sicht mit dem Namen Ihrer Diagnosesitzung enthält.  
   
- Um nur die Aktivität für die Verbindung angezeigt wird, fügen die `Session.SPID` Eigenschaft und fügen `WHERE [Session.SPID] = @@spid;` der Abfrage.  
+ Um nur die Aktivität für Ihre Verbindung anzuzeigen, fügen Sie die `Session.SPID`-Eigenschaft hinzu, und fügen Sie `WHERE [Session.SPID] = @@spid;` zur Abfrage hinzu.  
   
- Wenn Sie mit der diagnosesitzung fertig sind, legen Sie mithilfe der **löschen Diagnose** Befehl.  
+ Wenn Sie mit der Diagnosesitzung fertig sind, löschen Sie diese mithilfe des Befehls **DROP DIAGNOSTICS**.  
   
 ```  
 DROP DIAGNOSTICS SESSION MYDIAGSESSION;  
 ```  
   
-### <a name="b-alternative-diagnostic-session"></a>B. Alternative diagnosesitzung  
- Ein zweites Beispiel mit etwas andere Eigenschaften.  
+### <a name="b-alternative-diagnostic-session"></a>B. Alternative Diagnosesitzung  
+ Ein zweites Beispiel mit etwas anderen Eigenschaften.  
   
 ```  
 -- Determine the session_id of your current session  
@@ -187,7 +187,7 @@ CREATE DIAGNOSTICS SESSION PdwOptimizationDiagnostics AS N'
 </Session>';  
 ```  
   
- Führen Sie eine Abfrage, wie z. B. ein:  
+ Führen Sie eine Abfrage wie z.B folgende aus:  
   
 ```  
 USE ssawPDW;  
@@ -195,7 +195,7 @@ GO
 SELECT * FROM dbo.FactFinance;  
 ```  
   
- Die folgende Abfrage gibt die Anzeigedauer der Autorisierung:  
+ Die folgende Abfrage gibt die Autorisierungszeitsteuerung zurück:  
   
 ```  
 SELECT *   
@@ -203,7 +203,7 @@ FROM master.sysdiag.PdwOptimizationDiagnostics
 ORDER BY DateTimePublished;  
 ```  
   
- Wenn Sie mit der diagnosesitzung fertig sind, legen Sie mithilfe der **löschen Diagnose** Befehl.  
+ Wenn Sie mit der Diagnosesitzung fertig sind, löschen Sie diese mithilfe des Befehls **DROP DIAGNOSTICS**.  
   
 ```  
 DROP DIAGNOSTICS SESSION PdwOptimizationDiagnostics;  

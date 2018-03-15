@@ -1,5 +1,5 @@
 ---
-title: "GRANT datenbankweit gültige Anmeldeinformationen (Transact-SQL) | Microsoft Docs"
+title: "GRANT (Datenbankweit gültige Anmeldeinformationen) (Transact-SQL) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 06/19/2017
 ms.prod: sql-non-specified
@@ -34,10 +34,10 @@ ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="grant-database-scoped-credential-permissions-transact-sql"></a>GRANT Database Scoped Credential-Berechtigung (Transact-SQL)
+# <a name="grant-database-scoped-credential-permissions-transact-sql"></a>GRANT (Berechtigungen für datenbankweit gültige Anmeldeinformationen) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
-  Erteilt Berechtigungen für eine Datenbank im Bereich einer Anmeldeinformationen aus. 
+  Erteilt Berechtigungen für datenbankweit gültige Anmeldeinformationen. 
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,11 +51,11 @@ GRANT permission  [ ,...n ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *Berechtigung*  
- Gibt an, eine Berechtigung, die möglich gewährt Anmeldeinformationen für eine Datenbank beschränkt. Unten aufgeführt.  
+ *permission*  
+ Gibt eine Berechtigung an, die für die datenbankweit gültige Anmeldeinformationen erteilt werden kann. Unten aufgeführt.  
   
- AUF der DATENBANKWEITEN Anmeldeinformationen **::***Credential_name*  
- Gibt die datenbankweite Anmeldeinformationen auf der die Berechtigung erteilt wird. Der Bereichsqualifizierer "::" ist erforderlich.  
+ ON DATABASE SCOPED CREDENTIAL **::***credential_name*  
+ Gibt die datenbankweit gültigen Anmeldeinformationen an, für die die Berechtigung erteilt wird. Der Bereichsqualifizierer "::" ist erforderlich.  
   
  *database_principal*  
  Gibt den Prinzipal an, für den die Berechtigung erteilt wird. Einer der folgenden Typen:  
@@ -72,7 +72,7 @@ GRANT permission  [ ,...n ]
 GRANT OPTION  
  Gibt an, dass der Prinzipal die angegebene Berechtigung auch anderen Prinzipalen erteilen kann.  
   
-AS *Granting_principal*  
+AS *granting_principal*  
  Gibt einen Prinzipal an, von dem der Prinzipal, der diese Abfrage ausführt, sein Recht zum Erteilen der Berechtigung ableitet. Einer der folgenden Typen:  
   
 -   Datenbankbenutzer  
@@ -84,10 +84,10 @@ AS *Granting_principal*
 -   Einem asymmetrischen Schlüssel zugeordneter Datenbankbenutzer  
 -   Keinem Serverprinzipal zugeordneter Datenbankbenutzer.  
   
-## <a name="remarks"></a>Hinweise  
- Datenbankweit gültigen Anmeldeinformationen ist eine Datenbankebene sicherungsfähiges Element in der Datenbank, die das übergeordnete Element in der Berechtigungshierarchie ist enthalten. Die spezifischsten und restriktivsten Berechtigungen, die sein können werden gewährt auf datenbankweit gültigen Anmeldeinformationen aufgeführt, zusammen mit den allgemeineren Berechtigungen, die sie implizit enthalten.  
+## <a name="remarks"></a>Remarks  
+ Datenbankweit gültige Anmeldeinformationen sind ein sicherungsfähiges Element auf Datenbankebene in der Datenbank, die das übergeordnete Element in der Berechtigungshierarchie ist. Die spezifischsten und restriktivsten Berechtigungen, die für datenbankweit gültige Anmeldeinformationen erteilt werden können, sind im Folgenden aufgeführt, zusammen mit den allgemeineren Berechtigungen, die sie implizit enthalten.  
   
-|Datenbankweit gültige Credential-Berechtigung|Impliziert durch die datenbankweite Credential-Berechtigung|Impliziert durch Datenbankberechtigung|  
+|Berechtigung für datenbankweit gültige Anmeldeinformationen|Impliziert durch die Berechtigung für datenbankweit gültige Anmeldeinformationen|Impliziert durch Datenbankberechtigung|  
 |----------------------------|---------------------------------------|------------------------------------|  
 |CONTROL|CONTROL|CONTROL|  
 |TAKE OWNERSHIP|CONTROL|CONTROL|  
@@ -100,25 +100,25 @@ AS *Granting_principal*
   
  Wenn Sie die Option AS verwenden, gelten die folgenden zusätzlichen Anforderungen.  
   
-|AS *Granting_principal*|Zusätzliche Berechtigung erforderlich|  
+|AS *granting_principal*|Zusätzliche Berechtigung erforderlich|  
 |------------------------------|------------------------------------|  
-|Datenbankbenutzer|IMPERSONATE-Berechtigung für den Benutzer, Mitgliedschaft in der **Db_securityadmin** festen Datenbankrolle, Mitgliedschaft in der **Db_owner** feste Datenbankrolle oder die Mitgliedschaft in der **Sysadmin** festen Serverrolle "".|  
-|Einem Windows-Anmeldenamen zugeordneter Datenbankbenutzer|IMPERSONATE-Berechtigung für den Benutzer, Mitgliedschaft in der **Db_securityadmin** festen Datenbankrolle, Mitgliedschaft in der **Db_owner** feste Datenbankrolle oder die Mitgliedschaft in der **Sysadmin** festen Serverrolle "".|  
-|Einer Windows-Gruppe zugeordneter Datenbankbenutzer|Mitgliedschaft in der Windows-Gruppe, Mitgliedschaft in der **Db_securityadmin** festen Datenbankrolle, Mitgliedschaft in der **Db_owner** feste Datenbankrolle oder die Mitgliedschaft in der **Sysadmin**festen Serverrolle "".|  
-|Einem Zertifikat zugeordneter Datenbankbenutzer|Mitgliedschaft in der **Db_securityadmin** festen Datenbankrolle, Mitgliedschaft in der **Db_owner** feste Datenbankrolle oder die Mitgliedschaft in der **Sysadmin** festen Serverrolle "".|  
-|Einem asymmetrischen Schlüssel zugeordneter Datenbankbenutzer|Mitgliedschaft in der **Db_securityadmin** festen Datenbankrolle, Mitgliedschaft in der **Db_owner** feste Datenbankrolle oder die Mitgliedschaft in der **Sysadmin** festen Serverrolle "".|  
-|Einem Serverprinzipal zugeordneter Datenbankbenutzer|IMPERSONATE-Berechtigung für den Benutzer, Mitgliedschaft in der **Db_securityadmin** festen Datenbankrolle, Mitgliedschaft in der **Db_owner** feste Datenbankrolle oder die Mitgliedschaft in der **Sysadmin** festen Serverrolle "".|  
-|Datenbankrolle|ALTER-Berechtigung für die Rolle, Mitgliedschaft in der **Db_securityadmin** festen Datenbankrolle, Mitgliedschaft in der **Db_owner** feste Datenbankrolle oder die Mitgliedschaft in der **Sysadmin**festen Serverrolle "".|  
-|Anwendungsrolle|ALTER-Berechtigung für die Rolle, Mitgliedschaft in der **Db_securityadmin** festen Datenbankrolle, Mitgliedschaft in der **Db_owner** feste Datenbankrolle oder die Mitgliedschaft in der **Sysadmin**festen Serverrolle "".|  
+|Datenbankbenutzer|IMPERSONATE-Berechtigung für den Benutzer, die Mitgliedschaft in der festen Datenbankrolle **db_securityadmin** und **db_owner** oder die Mitgliedschaft in der festen Serverrolle **sysadmin**.|  
+|Einem Windows-Anmeldenamen zugeordneter Datenbankbenutzer|IMPERSONATE-Berechtigung für den Benutzer, die Mitgliedschaft in der festen Datenbankrolle **db_securityadmin** und **db_owner** oder die Mitgliedschaft in der festen Serverrolle **sysadmin**.|  
+|Einer Windows-Gruppe zugeordneter Datenbankbenutzer|Mitgliedschaft in der Windows-Gruppe, Mitgliedschaft in der festen Datenbankrolle **db_securityadmin**, Mitgliedschaft in der festen Datenbankrolle **db_owner** oder Mitgliedschaft in der festen Serverrolle **sysadmin**.|  
+|Einem Zertifikat zugeordneter Datenbankbenutzer|Mitgliedschaft in der festen Datenbankrolle **db_securityadmin**, Mitgliedschaft in der festen Datenbankrolle **db_owner** oder Mitgliedschaft in der festen Serverrolle **sysadmin**.|  
+|Einem asymmetrischen Schlüssel zugeordneter Datenbankbenutzer|Mitgliedschaft in der festen Datenbankrolle **db_securityadmin**, Mitgliedschaft in der festen Datenbankrolle **db_owner** oder Mitgliedschaft in der festen Serverrolle **sysadmin**.|  
+|Einem Serverprinzipal zugeordneter Datenbankbenutzer|IMPERSONATE-Berechtigung für den Benutzer, die Mitgliedschaft in der festen Datenbankrolle **db_securityadmin** und **db_owner** oder die Mitgliedschaft in der festen Serverrolle **sysadmin**.|  
+|Datenbankrolle|ALTER-Berechtigung für die Rolle, Mitgliedschaft in der festen Datenbankrolle **db_securityadmin**, Mitgliedschaft in der festen Datenbankrolle **db_owner** oder Mitgliedschaft in der festen Serverrolle **sysadmin**.|  
+|Anwendungsrolle|ALTER-Berechtigung für die Rolle, Mitgliedschaft in der festen Datenbankrolle **db_securityadmin**, Mitgliedschaft in der festen Datenbankrolle **db_owner** oder Mitgliedschaft in der festen Serverrolle **sysadmin**.|  
   
  Objektbesitzer können Berechtigungen für die Objekte erteilen, die sie besitzen. Prinzipale mit CONTROL-Berechtigung für ein sicherungsfähiges Element können die Berechtigung für dieses sicherungsfähige Element erteilen.  
   
- Empfänger der CONTROL SERVER-Berechtigung, z. B. Mitglieder der der **Sysadmin** feste Serverrolle, können beliebige Berechtigungen für ein beliebiges erteilen sicherungsfähige Element auf dem Server. Berechtigte der CONTROL-Berechtigung für eine Datenbank, z. B. Mitglieder der der **Db_owner** festen Datenbankrolle können beliebige Berechtigungen für ein beliebiges erteilen sicherungsfähiges Element in der Datenbank. Empfänger der CONTROL-Berechtigung für ein Schema können jede beliebige Berechtigung für jedes Objekt innerhalb des Schemas erteilen.  
+ Empfänger der CONTROL SERVER-Berechtigung, wie z.B. Mitglieder der festen Serverrolle **sysadmin**, können jede beliebige Berechtigung für jedes beliebige sicherungsfähige Element auf dem Server erteilen. Empfänger der CONTROL-Berechtigung für eine Datenbank, wie z.B. Mitglieder der festen Datenbankrolle **db_owner**, können jede beliebige Berechtigung für jedes beliebige sicherungsfähige Element in der Datenbank erteilen. Empfänger der CONTROL-Berechtigung für ein Schema können jede beliebige Berechtigung für jedes Objekt innerhalb des Schemas erteilen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
- [REVOKE-Datenbankweiter Anmeldeinformationen (Transact-SQL)](../../t-sql/statements/revoke-database-scoped-credential-transact-sql.md)   
- [VERWEIGERTE datenbankweit gültige Anmeldeinformationen (Transact-SQL)](../../t-sql/statements/deny-database-scoped-credential-transact-sql.md)   
+ [REVOKE (Datenbankweit gültige Anmeldeinformationen) (Transact-SQL)](../../t-sql/statements/revoke-database-scoped-credential-transact-sql.md)   
+ [DENY (Datenbankweit gültige Anmeldeinformationen) (Transact-SQL)](../../t-sql/statements/deny-database-scoped-credential-transact-sql.md)   
  [Berechtigungen &#40;Datenbankmodul&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [Prinzipale &#40;Datenbankmodul&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [Verschlüsselungshierarchie](../../relational-databases/security/encryption/encryption-hierarchy.md)  

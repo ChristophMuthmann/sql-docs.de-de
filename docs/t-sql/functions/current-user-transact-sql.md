@@ -1,5 +1,5 @@
 ---
-title: CURRENT_USER (Transact-SQL) | Microsoft Docs
+title: CURRENT_USER (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -51,10 +51,10 @@ CURRENT_USER
 ## <a name="return-types"></a>Rückgabetypen
 **sysname**
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
 Mit CURRENT_USER wird der Name des aktuellen Sicherheitskontexts zurückgegeben. Wird CURRENT_USER nach dem Kontextwechsel eines Aufrufs von EXECUTE AS ausgeführt, gibt CURRENT_USER den Namen des Kontexts zurück, dessen Identität angenommen wurde. Wenn ein Windows-Prinzipal über die Mitgliedschaft in einer Gruppe auf die Datenbank zugegriffen hat, wird der Name des Windows-Prinzipals anstelle des Namens der Gruppe zurückgegeben.
   
-Um den Benutzernamen des aktuellen Benutzers zurückzugeben, finden Sie unter [SUSER_NAME &#40; Transact-SQL &#41; ](../../t-sql/functions/suser-name-transact-sql.md) und [SYSTEM_USER &#40; Transact-SQL &#41; ](../../t-sql/functions/system-user-transact-sql.md).
+Weitere Informationen zum Zurückgeben des Anmeldenamens an den aktuellen Benutzer finden Sie unter [SUSER_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/suser-name-transact-sql.md) und [SYSTEM_USER &#40;Transact-SQL&#41;](../../t-sql/functions/system-user-transact-sql.md).
   
 ## <a name="examples"></a>Beispiele  
   
@@ -140,12 +140,12 @@ Wanida
 ```
   
 ## <a name="see-also"></a>Siehe auch
-[USER_NAME &#40; Transact-SQL &#41;](../../t-sql/functions/user-name-transact-sql.md)  
-[SYSTEM_USER &#40; Transact-SQL &#41;](../../t-sql/functions/system-user-transact-sql.md)  
+[USER_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/user-name-transact-sql.md)  
+[SYSTEM_USER &#40;Transact-SQL&#41;](../../t-sql/functions/system-user-transact-sql.md)  
 [sys.database_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)  
 [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  
 [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)  
-[Systemfunktionen &#40; Transact-SQL &#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)
+[Systemfunktionen &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)
   
   
 

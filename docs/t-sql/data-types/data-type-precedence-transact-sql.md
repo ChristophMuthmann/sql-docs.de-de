@@ -1,5 +1,5 @@
 ---
-title: Rangfolge der Datentypen (Transact-SQL) | Microsoft Docs
+title: Rangfolge der Datentypen (Transact-SQL) | Transact-SQL
 ms.custom: 
 ms.date: 7/23/2017
 ms.prod: sql-non-specified
@@ -63,12 +63,12 @@ Wenn durch einen Operator zwei Ausdrücke verschiedener Datentypen kombiniert we
 1. **image**  
 1. **timestamp**  
 1. **uniqueidentifier**  
-1. **Nvarchar** (einschließlich **nvarchar(max)** )  
+1. **nvarchar** (einschließlich **nvarchar(max)**)  
 1. **nchar**  
-1. **Varchar** (einschließlich **varchar(max)** )  
+1. **varchar** (einschließlich **varchar(max)**)  
 1. **char**  
-1. **Varbinary** (einschließlich **varbinary(max)** )  
-1. **binäre** (niedrigste Priorität)  
+1. **varbinary** (einschließlich **varbinary(max)**)  
+1. **binary** (niedrigster)  
   
 ## <a name="see-also"></a>Siehe auch
 [Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  

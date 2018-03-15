@@ -1,5 +1,5 @@
 ---
-title: IST NULL (Transact-SQL) | Microsoft Docs
+title: IS NULL (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -45,7 +45,7 @@ ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="is-null-transact-sql"></a>IST NULL (Transact-SQL)
+# <a name="is-null-transact-sql"></a>IS NULL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Bestimmt, ob ein angegebener Ausdruck NULL ist.  
@@ -69,11 +69,11 @@ expression IS [ NOT ] NULL
  **Boolean**  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
- Wenn der Wert der *Ausdruck* ist NULL, IS NULL, gibt "true" zurück; andernfalls wird "false" zurückgegeben.  
+ Wenn der Wert für *expression* NULL ist, gibt IS NULL den Wert TRUE zurück; andernfalls wird FALSE zurückgegeben.  
   
- Wenn der Wert der *Ausdruck* ist NULL, IS NOT NULL, gibt "false" zurück; andernfalls wird "Wahr" zurückgegeben.  
+ Wenn der Wert für *expression* NULL ist, gibt IS NOT NULL den Wert FALSE zurück; andernfalls wird TRUE zurückgegeben.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Um zu bestimmen, ob ein Ausdruck NULL ist, verwenden Sie IS NULL oder IS NOT NULL anstelle von Vergleichsoperatoren (z. B. = oder !=). Vergleichsoperatoren geben UNKNOWN zurück, auch wenn nur eines der Argumente NULL ist.  
   
 ## <a name="examples"></a>Beispiele  
@@ -89,8 +89,8 @@ ORDER BY Name;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- Das folgende Beispiel gibt den vollständigen Namen aller Mitarbeiter mit Initialen zurück.  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
+ Im folgenden Beispiel werden die vollständigen Namen aller Mitarbeiter mit den Initialen der Zweitnamen zurückgegeben.  
   
 ```  
 -- Uses AdventureWorks  
@@ -101,16 +101,16 @@ WHERE MiddleName IS NOT NULL
 ORDER BY LastName DESC;  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)   
  [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
- [INSERT &#40; Transact-SQL &#41;](../../t-sql/statements/insert-transact-sql.md)   
+ [Ausdrücke &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
  [LIKE &#40;Transact-SQL&#41;](../../t-sql/language-elements/like-transact-sql.md)   
- [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
- [Logische Operatoren &#40; Transact-SQL &#41;](../../t-sql/language-elements/logical-operators-transact-sql.md)   
+ [Operators &#40;Transact-SQL&#41; (Operatoren &#40;Transact-SQL&#41;)](../../t-sql/language-elements/operators-transact-sql.md)   
+ [Logical Operators &#40;Transact-SQL&#41; (Logische Operatoren &#40;Transact-SQL&#41;)](../../t-sql/language-elements/logical-operators-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [sp_help &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md)   
  [UPDATE (Transact-SQL)](../../t-sql/queries/update-transact-sql.md)   

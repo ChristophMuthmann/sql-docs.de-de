@@ -1,5 +1,5 @@
 ---
-title: SAVE TRANSACTION (Transact-SQL) | Microsoft Docs
+title: SAVE TRANSACTION (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -56,13 +56,13 @@ SAVE { TRAN | TRANSACTION } { savepoint_name | @savepoint_variable }
   
 ## <a name="arguments"></a>Argumente  
  *savepoint_name*  
- Dies ist der Name, der dem Sicherungspunkt zugewiesen ist. Sicherungspunktnamen müssen den Regeln für Bezeichner entsprechen, sind jedoch auf 32 Zeichen begrenzt. *Savepoint_name* wird immer Groß-/ Kleinschreibung, auch wenn die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ist nicht in der Groß-/Kleinschreibung beachtet.  
+ Dies ist der Name, der dem Sicherungspunkt zugewiesen ist. Sicherungspunktnamen müssen den Regeln für Bezeichner entsprechen, sind jedoch auf 32 Zeichen begrenzt. *savepoint_name* berücksichtigt immer die Groß-/Kleinschreibung, auch wenn die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht zwischen Groß- und Kleinschreibung unterscheidet.  
   
  @*savepoint_variable*  
- Ist der Name einer benutzerdefinierten Variablen, die einen gültigen Sicherungspunktnamen enthält. Die Variable muss deklariert werden, mit einem **Char**, **Varchar**, **Nchar**, oder **Nvarchar** -Datentyp. Es können mehr als 32 Zeichen an die Variable übergeben werden, jedoch werden nur die ersten 32 Zeichen verwendet.  
+ Dies ist der Name einer benutzerdefinierten Variablen, die einen gültigen Sicherungspunktnamen enthält. Die Variable muss mit einem der folgenden Datentypen deklariert werden: **char**, **varchar**, **nchar** oder **nvarchar**. Es können mehr als 32 Zeichen an die Variable übergeben werden, jedoch werden nur die ersten 32 Zeichen verwendet.  
   
-## <a name="remarks"></a>Hinweise  
- Ein Benutzer kann einen Sicherungspunkt oder Marker innerhalb einer Transaktion festlegen. Der Sicherungspunkt definiert die Position, zu der eine Transaktion zurückkehren kann, wenn ein Teil der Transaktion bedingt abgebrochen wird. Falls für eine Transaktion ein Rollback bis zu einem Sicherungspunkt ausgeführt wird, muss dieser abgeschlossen werden, bei Bedarf mit mehreren [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen und einer COMMIT TRANSACTION-Anweisung, oder ganz abgebrochen werden,  indem ein Rollback der Transaktion zurück zum Anfang ausgeführt wird. Verwenden Sie zum Abbrechen der gesamten Transaktion, die Syntax ROLLBACK TRANSACTION *Transaction_name*. Alle Anweisungen oder Prozeduren der Transaktion werden rückgängig gemacht.  
+## <a name="remarks"></a>Remarks  
+ Ein Benutzer kann einen Sicherungspunkt oder Marker innerhalb einer Transaktion festlegen. Der Sicherungspunkt definiert die Position, zu der eine Transaktion zurückkehren kann, wenn ein Teil der Transaktion bedingt abgebrochen wird. Falls für eine Transaktion ein Rollback bis zu einem Sicherungspunkt ausgeführt wird, muss dieser abgeschlossen werden, bei Bedarf mit mehreren [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen und einer COMMIT TRANSACTION-Anweisung, oder ganz abgebrochen werden,  indem ein Rollback der Transaktion zurück zum Anfang ausgeführt wird. Zum Abbrechen der gesamten Transaktion verwenden Sie die Syntax ROLLBACK TRANSACTION *transaction_name*. Alle Anweisungen oder Prozeduren der Transaktion werden rückgängig gemacht.  
   
  Doppelte Sicherungspunktnamen sind in einer Transaktion zulässig. Eine ROLLBACK TRANSACTION-Anweisung, die den Sicherungspunktnamen angibt, führt jedoch nur ein Rollback der Transaktion bis zur letzten SAVE TRANSACTION-Anweisung mit diesem Namen aus.  
   
@@ -167,7 +167,7 @@ AS
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [BEGIN TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-transaction-transact-sql.md)   
  [COMMIT TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/commit-transaction-transact-sql.md)   
  [COMMIT WORK &#40;Transact-SQL&#41;](../../t-sql/language-elements/commit-work-transact-sql.md)   
@@ -176,7 +176,7 @@ GO
  [ERROR_NUMBER &#40;Transact-SQL&#41;](../../t-sql/functions/error-number-transact-sql.md)   
  [ERROR_PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/functions/error-procedure-transact-sql.md)   
  [ERROR_SEVERITY &#40;Transact-SQL&#41;](../../t-sql/functions/error-severity-transact-sql.md)   
- [ERROR_STATE &#40; Transact-SQL &#41;](../../t-sql/functions/error-state-transact-sql.md)   
+ [ERROR_STATE &#40;Transact-SQL&#41;](../../t-sql/functions/error-state-transact-sql.md)   
  [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)   
  [ROLLBACK TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/rollback-transaction-transact-sql.md)   
  [ROLLBACK WORK &#40;Transact-SQL&#41;](../../t-sql/language-elements/rollback-work-transact-sql.md)   

@@ -1,5 +1,5 @@
 ---
-title: Read (Datenbankmodul) | Microsoft Docs
+title: Read (Datenbank-Engine) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 7/22/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="read-database-engine"></a>Read (Datenbankmodul)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Lesen liest die binäre Darstellung von **SqlHierarchyId** aus den übergebenen **BinaryReader** und legt die **SqlHierarchyId** -Objekt auf diesen Wert. Lesen kann nicht aufgerufen werden, mithilfe von [!INCLUDE[tsql](../../includes/tsql-md.md)]. Verwenden Sie stattdessen CAST oder CONVERT.
+Read liest binäre Darstellung von **SqlHierarchyId** aus dem übergebenen **BinaryReader** und legt das **SqlHierarchyId**-Objekt auf diesen Wert fest. Read kann nicht mit [!INCLUDE[tsql](../../includes/tsql-md.md)] aufgerufen werden. Verwenden Sie stattdessen CAST oder CONVERT.
   
 ## <a name="syntax"></a>Syntax  
   
@@ -44,17 +44,17 @@ void Read( BinaryReader r )
   
 ## <a name="arguments"></a>Argumente  
 *r*  
- Die **BinaryReader** -Objekt, das einen binären Datenstrom in eine binäre Darstellung der entsprechenden erzeugt eine **Hierarchyid** Knoten.  
+ Das **BinaryReader**-Objekt, das einen binären Datenstrom erzeugt, der einer binären Darstellung eines **hierarchyid**-Knotens entspricht.  
   
 ## <a name="return-types"></a>Rückgabetypen
- **CLR-Typ: Void zurückgeben**  
+ **CLR-Rückgabetyp: void**  
   
-## <a name="remarks"></a>Hinweise  
- Lesen wird die Eingabe nicht überprüft werden. Wenn eine ungültige binäre Eingabe gegeben wird, lesen eine Ausnahme ausgelöst. Oder es ist auch erfolgreich und erzeugt ein ungültiges **SqlHierarchyId** Objekt, dessen Methoden zu unvorhersagbaren Ergebnisse führen oder eine Ausnahme ausgelöst werden können.  
+## <a name="remarks"></a>Remarks  
+ Read überprüft seine Eingabe nicht. Wenn eine ungültige binäre Eingabe gegeben wird, löst Read möglicherweise eine Ausnahme aus. Oder der Vorgang ist erfolgreich und erzeugt ein ungültiges **SqlHierarchyId**-Objekt, dessen Methoden zu unvorhersagbaren Ergebnissen führen oder eine Ausnahme auslösen können.  
   
- Lesen kann nur aufgerufen werden auf einer neu erstellten **SqlHierarchyId** Objekt.  
+ Read kann nur für ein neu erstelltes **SqlHierarchyId**-Objekt aufgerufen werden.  
   
- Lesen wird intern von verwendet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Wenn ist es erforderlich, z. B. beim Schreiben von Daten auf **Hierarchyid** Spalte. Lesen wird außerdem intern aufgerufen, wenn eine Konvertierung zwischen erfolgt **Varbinary** und **Hierarchyid**.  
+ Read wird wenn nötig intern von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet, z.B. beim Schreiben von Daten in die **hierarchyid**-Spalte. Read wird auch intern aufgerufen, wenn eine Konvertierung zwischen **varbinary** und **hierarchyid** ausgeführt wird.  
   
 ## <a name="examples"></a>Beispiele  
   
@@ -66,9 +66,9 @@ SqlHierarchyId hid = new SqlHierarchyId();
 hid.Read(br);   
 ```  
   
-## <a name="see-also"></a>Siehe auch  
-[Schreibzugriff &#40; Datenbankmodul &#41;](../../t-sql/data-types/write-database-engine.md)  
-[ToString &#40; Datenbankmodul &#41;](../../t-sql/data-types/tostring-database-engine.md)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+[Write &#40;Datenbank-Engine&#41;](../../t-sql/data-types/write-database-engine.md)  
+[ToString &#40;Datenbank-Engine&#41;](../../t-sql/data-types/tostring-database-engine.md)  
 [CAST und CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
 [hierarchyid-Datentyp-Methodenverweis](http://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)
   

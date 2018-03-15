@@ -1,5 +1,5 @@
 ---
-title: DROP ASSEMBLY (Transact-SQL) | Microsoft Docs
+title: DROP ASSEMBLY (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 05/10/2017
 ms.prod: sql-non-specified
@@ -39,7 +39,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="drop-assembly-transact-sql"></a>DROP ASSEMBLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Entfernt eine Assembly und alle zugehörigen Dateien aus der aktuellen Datenbank. Assemblys werden erstellt, mit [CREATE ASSEMBLY](../../t-sql/statements/create-assembly-transact-sql.md) und mithilfe von geändert [ALTER ASSEMBLY](../../t-sql/statements/alter-assembly-transact-sql.md).  
+  Entfernt eine Assembly und alle zugehörigen Dateien aus der aktuellen Datenbank. Assemblys werden mithilfe von [CREATE ASSEMBLY](../../t-sql/statements/create-assembly-transact-sql.md) erstellt und mithilfe von [ALTER ASSEMBLY](../../t-sql/statements/alter-assembly-transact-sql.md) geändert.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -52,21 +52,21 @@ DROP ASSEMBLY [ IF EXISTS ] assembly_name [ ,...n ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *IF VORHANDEN IST*  
- **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [aktuelle Version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).  
+ *IF EXISTS*  
+ **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis zur [aktuellen Version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   
- Bedingt löscht die Assembly nur dann, wenn sie bereits vorhanden ist.  
+ Löscht die Assembly nur, wenn diese bereits vorhanden ist.  
   
  *assembly_name*  
  Der Name der zu löschenden Assembly.  
   
  WITH NO DEPENDENTS  
- Wenn angegeben, löscht nur *Assembly_name* und keines der abhängigen Assemblys, die von der Assembly verwiesen werden. Wenn nicht angegeben ist, löscht DROP ASSEMBLY *Assembly_name* sowie alle abhängigen Assemblys.  
+ Wird dieser Wert angegeben, wird nur *assembly_name* gelöscht, jedoch keine der abhängigen Assemblys, auf die die Assembly verweist. Wenn kein Wert angegeben wird, löscht DROP ASSEMBLY *assembly_name* sowie alle abhängigen Assemblys.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Durch Löschen einer Assembly werden die Assembly sowie alle zugehörigen Dateien, wie Quellcode und Debugdateien, aus der Datenbank entfernt.  
   
- Wenn WITH NO DEPENDENTS nicht angegeben ist, löscht DROP ASSEMBLY *Assembly_name* sowie alle abhängigen Assemblys. Schlägt der Versuch fehl, alle abhängigen Assemblys zu löschen, gibt DROP ASSEMBLY einen Fehler zurück.  
+ Wenn WITH NO DEPENDENTS nicht angegeben wird, löscht DROP ASSEMBLY *assembly_name* sowie alle abhängigen Assemblys. Schlägt der Versuch fehl, alle abhängigen Assemblys zu löschen, gibt DROP ASSEMBLY einen Fehler zurück.  
   
  DROP ASSEMBLY gibt einen Fehler zurück, wenn eine andere Assembly in der Datenbank auf die Assembly verweist oder diese von CLR-basierten Funktionen (Common Language Runtime), Prozeduren, Triggern, benutzerdefinierten Typen oder Aggregaten in der aktuellen Datenbank verwendet wird.  
   
@@ -82,7 +82,7 @@ DROP ASSEMBLY [ IF EXISTS ] assembly_name [ ,...n ]
 DROP ASSEMBLY Helloworld ;  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [CREATE ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/create-assembly-transact-sql.md)   
  [ALTER ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-assembly-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   

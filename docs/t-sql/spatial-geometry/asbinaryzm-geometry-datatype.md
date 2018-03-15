@@ -1,5 +1,5 @@
 ---
-title: AsBinaryZM (Geometry-Datentyp) | Microsoft Docs
+title: AsBinaryZM (geometry-Datentyp) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -31,7 +31,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="asbinaryzm-geometry-datatype"></a>AsBinaryZM (geometry-Datentyp)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-Gibt die Open Geospatial Consortium (OGC) Well-Known Binary (WKB)-Darstellung einer **Geometrie** Instanz getragenen alle **Z** (Höhe) und **M** (Measure) Werte, die von der Instanz getragen werden.
+Gibt die Open Geospatial Consortium (OGC) WKB-Darstellung (Well-Known Binary) einer **geometry**-Instanz zurück, die um alle von der Instanz getragenen **Z**- (Höhe) und **M**-Werte (Measure) erweitert wurde.
   
 ## <a name="syntax"></a>Syntax  
   
@@ -41,11 +41,11 @@ Gibt die Open Geospatial Consortium (OGC) Well-Known Binary (WKB)-Darstellung ei
 ```  
   
 ## <a name="return-types"></a>Rückgabetypen  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Rückgabetyp: **varbinary(max)**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Rückgabetyp: **varbinary(max)**  
   
  CLR-Rückgabetyp: **SqlBytes**  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="examples"></a>Beispiele  
   
@@ -59,10 +59,10 @@ SELECT @g1.AsBinaryZM();
 --Returns: 0x01B90B0000000000000000F03F000000000000F03F00000000000000400000000000000840  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Erweiterte Methoden für Geometry-Instanzen](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)   
- [Übe &#40; Geometry-Datentyp &#41;](../../t-sql/spatial-geometry/m-geometry-data-type.md)   
- [Z &#40; Geometry-Datentyp &#41;](../../t-sql/spatial-geometry/z-geometry-data-type.md)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Erweiterte Methoden für geometry-Instanzen](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)   
+ [M &#40;geometry-Datentyp&#41;](../../t-sql/spatial-geometry/m-geometry-data-type.md)   
+ [Z &#40;geometry Data Type&#41; (Z (geometry-Datentyp))](../../t-sql/spatial-geometry/z-geometry-data-type.md)  
   
   
 

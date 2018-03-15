@@ -1,5 +1,5 @@
 ---
-title: GRANT-Objektberechtigungen (Transact-SQL) | Microsoft Docs
+title: GRANT (Objektberechtigungen) (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
@@ -62,7 +62,7 @@ GRANT <permission> [ ,...n ] ON
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *Berechtigung*  
+ *permission*  
  Gibt eine Berechtigung an, die für Objekte, die Schemas als Bereiche besitzen, erteilt werden kann. Eine Liste der Berechtigungen finden Sie im Abschnitt zu den Hinweisen weiter unten in diesem Thema.  
   
  ALL  
@@ -77,22 +77,22 @@ GRANT <permission> [ ,...n ] ON
 PRIVILEGES  
  Dient zur Kompatibilität mit [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)]-92. Ändert das Verhalten von ALL nicht.  
   
-*Spalte*  
- Gibt den Namen einer Spalte in einer Tabelle, Sicht oder Tabellenwertfunktion an, für die die Berechtigung erteilt wird. Die (Klammer() sind erforderlich. Für eine Spalte können nur die Berechtigungen SELECT, REFERENCES und UPDATE gewährt werden. *Spalte* kann in der berechtigungsklausel oder nach dem Namen des sicherungsfähigen Elements angegeben werden.  
+*column*  
+ Gibt den Namen einer Spalte in einer Tabelle, Sicht oder Tabellenwertfunktion an, für die die Berechtigung erteilt wird. Die Klammern () sind erforderlich. Für eine Spalte können nur die Berechtigungen SELECT, REFERENCES und UPDATE gewährt werden. *column* kann in der Berechtigungsklausel oder nach dem Namen des sicherungsfähigen Elements angegeben werden.  
   
 > [!CAUTION]  
 >  Eine DENY-Anweisung auf Tabellenebene hat keinen Vorrang vor einer GRANT-Anweisung auf Spaltenebene. Diese Inkonsistenz in der Berechtigungshierarchie wurde aus Gründen der Abwärtskompatibilität beibehalten.  
   
- ON [OBJECT::] [ *Schema_name* ]. *object_name*  
- Gibt das Objekt an, für das die Berechtigung erteilt wird. Der OBJECT-Ausdruck ist optional Wenn *Schema_name* angegeben ist. Wird der OBJECT-Ausdruck verwendet, ist der Bereichsqualifizierer (::) erforderlich. Wenn *Schema_name* nicht angegeben ist, wird das Standardschema verwendet. Wenn *Schema_name* angegeben ist, ist der schemabereichsqualifizierer (.) ist erforderlich.  
+ ON [ OBJECT :: ] [ *schema_name* ] . *object_name*  
+ Gibt das Objekt an, für das die Berechtigung erteilt wird. Der OBJECT-Ausdruck ist optional, wenn *schema_name* angegeben ist. Wird der OBJECT-Ausdruck verwendet, ist der Bereichsqualifizierer (::) erforderlich. Wenn *schema_name* nicht angegeben ist, wird das Standardschema verwendet. Wenn *schema_name* angegeben ist, ist der Schemabereichsqualifizierer (.) erforderlich.  
   
- UM \<Database_principal >  
+ TO \<database_principal>  
  Gibt den Prinzipal an, für den die Berechtigung erteilt wird.  
   
  WITH GRANT OPTION  
  Gibt an, dass der Prinzipal die angegebene Berechtigung auch anderen Prinzipalen erteilen kann.  
   
- AS \<Database_principal > Gibt einen Prinzipal aus dem der Prinzipal, der diese Abfrage ausführt, sein Recht zum Erteilen der Berechtigung ableitet.  
+ AS \<database_principal> Gibt einen Prinzipal an, von dem der Prinzipal, der diese Abfrage ausführt, sein Recht zum Erteilen der Berechtigung ableitet.  
   
  *Database_user*  
  Gibt einen Datenbankbenutzer an.  
@@ -118,12 +118,12 @@ PRIVILEGES
  *Database_user_with_no_login*  
  Gibt einen Datenbankbenutzer ohne entsprechenden Prinzipal auf Serverebene an.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
   
 > [!IMPORTANT]  
 >  Durch eine Kombination von ALTER- und REFERENCE-Berechtigungen würde in manchen Fällen zugelassen, dass der Empfänger Daten anzeigt oder Funktionen ausführt, für die er nicht autorisiert ist. Beispiel: Ein Benutzer mit ALTER-Berechtigung für eine Tabelle und REFERENCE-Berechtigung für eine Funktion kann eine berechnete Spalte über eine Funktion erstellen und ausführen lassen. In diesem Fall benötigt der Benutzer auch die SELECT-Berechtigung für die berechnete Spalte.  
   
- Informationen zu Objekten werden in unterschiedlichen Katalogsichten angezeigt. Weitere Informationen finden Sie unter [Objekt Katalogsichten &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md).  
+ Informationen zu Objekten werden in unterschiedlichen Katalogsichten angezeigt. Weitere Informationen finden Sie unter [Object Catalog Views &#40;Transact-SQL&#41; (Katalogsichten für Objekte &#40;Transact-SQL&#41;)](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md).  
   
  Ein Objekt ist ein sicherungsfähiges Element auf Schemaebene in dem Schema, das das übergeordnete Element in der Berechtigungshierarchie ist. Die spezifischsten und restriktivsten Berechtigungen, die für ein Objekt erteilt werden können, sind unten aufgeführt. Auch die allgemeineren Berechtigungen sind aufgeführt, die diese implizit enthalten.  
   
@@ -131,8 +131,8 @@ PRIVILEGES
 |-----------------------|----------------------------------|----------------------------------|  
 |ALTER|CONTROL|ALTER|  
 |CONTROL|CONTROL|CONTROL|  
-|DELETE|CONTROL|DELETE|  
-|EXECUTE|CONTROL|EXECUTE|  
+|Delete|CONTROL|Delete|  
+|Führen Sie|CONTROL|Führen Sie|  
 |INSERT|CONTROL|INSERT|  
 |RECEIVE|CONTROL|CONTROL|  
 |REFERENCES|CONTROL|REFERENCES|  
@@ -212,16 +212,16 @@ GRANT EXECUTE ON dbo.uspGetBillOfMaterials TO newrole ;
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [DENY (Objektberechtigungen) &#40;Transact-SQL&#41;](../../t-sql/statements/deny-object-permissions-transact-sql.md)   
- [REVOKE-Objektberechtigungen &#40; Transact-SQL &#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md)   
- [Katalogsichten für Objekte &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+ [REVOKE (Objektberechtigungen) &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md)   
+ [Katalogsichten für Objekte &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [Berechtigungen &#40;Datenbankmodul&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [Prinzipale &#40;Datenbankmodul&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [Securables](../../relational-databases/security/securables.md)   
  [sys.fn_builtin_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)   
  [HAS_PERMS_BY_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/has-perms-by-name-transact-sql.md)   
- [fn_my_permissions &#40; Transact-SQL &#41;](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)  
+ [sys.fn_my_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)  
   
   
 

@@ -1,5 +1,5 @@
 ---
-title: DECRYPTBYCERT (Transact-SQL) | Microsoft Docs
+title: DECRYPTBYCERT (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -49,10 +49,10 @@ DecryptByCert ( certificate_ID , { 'ciphertext' | @ciphertext }
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *Zertifikat-ID*  
+ *certificate_ID*  
  Die ID eines Zertifikats in der Datenbank. *certificate*_ID ist vom Datentyp **int**.  
   
- *Chiffretext*  
+ *ciphertext*  
  Eine Datenzeichenfolge, die mithilfe des öffentlichen Schlüssels des Zertifikats verschlüsselt wurde.  
   
  @ciphertext  
@@ -67,7 +67,7 @@ DecryptByCert ( certificate_ID , { 'ciphertext' | @ciphertext }
 ## <a name="return-types"></a>Rückgabetypen  
  **varbinary** mit einer maximalen Größe von 8.000 Bytes.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Diese Funktion entschlüsselt Daten mithilfe des privaten Schlüssels eines Zertifikats. Kryptografische Umwandlungen, die asymmetrische Schlüssel verwenden, nehmen umfangreiche Ressourcen in Anspruch. Daher sind EncryptByCert und DecryptByCert für die Routineverschlüsselung von Benutzerdaten nicht geeignet.  
   
 ## <a name="permissions"></a>Berechtigungen  
@@ -85,11 +85,11 @@ WHERE Description
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [ENCRYPTBYCERT &#40; Transact-SQL &#41;](../../t-sql/functions/encryptbycert-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [ENCRYPTBYCERT &#40;Transact-SQL&#41;](../../t-sql/functions/encryptbycert-transact-sql.md)   
  [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)   
- [ALTER CERTIFICATE &#40; Transact-SQL &#41;](../../t-sql/statements/alter-certificate-transact-sql.md)   
- [DROP CERTIFICATE &#40; Transact-SQL &#41;](../../t-sql/statements/drop-certificate-transact-sql.md)   
+ [ALTER CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-certificate-transact-sql.md)   
+ [DROP CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-certificate-transact-sql.md)   
  [BACKUP CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/backup-certificate-transact-sql.md)   
  [Verschlüsselungshierarchie](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   

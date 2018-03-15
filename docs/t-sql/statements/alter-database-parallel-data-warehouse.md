@@ -1,5 +1,5 @@
 ---
-title: ALTER_DATABASE (Parallel Datawarehouse) | Microsoft Docs
+title: ALTER DATABASE (Parallel Data Warehouse) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -27,9 +27,9 @@ ms.lasthandoff: 01/25/2018
 # <a name="alter-database-parallel-data-warehouse"></a>ALTER DATABASE (Parallel Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
-  Ändert die maximale Größe Datenbankoptionen für replizierte Tabellen, verteilte Tabellen und das Transaktionsprotokoll in [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]. Verwenden Sie diese Anweisung, um die speicherplatzzuordnungen für eine Datenbank zu verwalten, wie es vergrößert oder verkleinert die Größe.  
+  Ändert die Optionen für die maximale Datenbankgröße für replizierte Tabellen und verteilte Tabellen sowie für das Transaktionsprotokoll in [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]. Verwenden Sie diese Anweisung, um die Speicherplatzzuordnungen für eine Datenbank zu verwalten, wenn sich diese vergrößert oder verkleinert.  
   
- ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Thema Linksymbol") [Transact-SQL-Syntaxkonventionen &#40; Transact-SQL &#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol zum Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions &#40;Transact-SQL&#41; (Transact-SQL-Syntaxkonventionen (Transact-SQL))](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -53,42 +53,42 @@ ALTER DATABASE database_name
   
 ## <a name="arguments"></a>Argumente  
  *database_name*  
- Der Name der Datenbank geändert werden. Verwenden Sie zum Anzeigen einer Liste der Datenbanken auf dem Gerät [sys.databases &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).  
+ Der Name der Datenbank, die geändert werden soll. Um eine Liste von Datenbanken auf dem Gerät anzuzeigen, verwenden Sie [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).  
   
- AUTOMATISCHE VERGRÖSSERUNG = {ON | {OFF}  
- Die Option "AUTOGROW" wird aktualisiert. Wenn die automatische VERGRÖßERUNG auf ON festgelegt ist [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] automatisch nach Bedarf für Wachstum in speicheranforderungen erhöht die speicherplatzbelegung für replizierte Tabellen, verteilte Tabellen und das Transaktionsprotokoll. Wenn die automatische VERGRÖßERUNG auf OFF festgelegt ist [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] gibt einen Fehler zurück, wenn Tabellen repliziert verteilte Tabellen oder das Transaktionsprotokoll überschreitet die maximale Größe festlegen.  
+ AUTOGROW = { ON | OFF }  
+ Aktualisiert die Option AUTOGROW. Wenn AUTOGROW ON ist, erhöht [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] automatisch den zugeordneten Speicherplatz für replizierte Tabellen und verteilte Tabellen sowie das Transaktionsprotokoll nach Bedarf, um den gesteigerten Speicheranforderungen gerecht zu werden. Wenn AUTOGROW OFF ist, gibt [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] einen Fehler zurück, wenn replizierte Tabellen, verteilte Tabellen oder das Transaktionsprotokoll die Einstellung für die maximale Größe überschreiten.  
   
- REPLICATED_SIZE = *Größe* [GB]  
- Gibt die neue maximale Gigabyte pro Serverknoten zum Speichern von allen replizierten Tabellen in der Datenbank geändert wird. Wenn Sie bei der Planung für Appliance Speicherplatz müssen Sie die Anzahl von Serverknoten in der Einheit REPLICATED_SIZE multiplizieren.  
+ REPLICATED_SIZE = *size* [GB]  
+ Gibt die neue maximale Anzahl von Gigabyte pro Computeknoten für die Speicherung aller replizierten Tabellen in der Datenbank an, die geändert werden. Wenn Sie Appliancespeicherplatz planen, müssen Sie REPLICATED_SIZE mit der Anzahl der Computeknoten in der Appliance multiplizieren.  
   
- DISTRIBUTED_SIZE = *Größe* [GB]  
- Gibt die neue maximale GB pro Datenbank zum Speichern von allen verteilte Tabellen in der Datenbank geändert wird. Die Größe wird auf alle der Serverknoten in der Anwendung verteilt.  
+ DISTRIBUTED_SIZE = *size* [GB]  
+ Gibt die neue maximale Anzahl von Gigabyte pro Datenbank für die Speicherung aller verteilten Tabellen in der Datenbank an, die geändert werden. Die Größe wird auf alle Computeknoten der Appliance verteilt.  
   
- LOG_SIZE = *Größe* [GB]  
- Gibt die neue maximale GB pro Datenbank zum Speichern aller den Transaktionsprotokollen in der Datenbank geändert wird. Die Größe wird auf alle der Serverknoten in der Anwendung verteilt.  
+ LOG_SIZE = *size* [GB]  
+ Gibt die neue maximale Anzahl von Gigabyte pro Datenbank für die Speicherung aller Transaktionsprotokolle in der Datenbank an, die geändert werden. Die Größe wird auf alle Computeknoten der Appliance verteilt.  
   
  ENCRYPTION { ON | OFF }  
- Legt fest, ob die Datenbank verschlüsselt (ON) oder nicht verschlüsselt (OFF) werden soll. Verschlüsselung kann nur konfiguriert werden, für die [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] Wenn [sp_pdw_database_encryption aktiviert werden](http://msdn.microsoft.com/5011bb7b-1793-4b2b-bd9c-d4a8c8626b6e) vorsieht **1**. Datenbank-Verschlüsselungsschlüssel muss erstellt werden, bevor die transparente datenverschlüsselung konfiguriert werden kann. Weitere Informationen über die datenbankverschlüsselung finden Sie unter [transparente datenverschlüsselung &#40; TDE &#41; ](../../relational-databases/security/encryption/transparent-data-encryption.md).  
+ Legt fest, ob die Datenbank verschlüsselt (ON) oder nicht verschlüsselt (OFF) werden soll. Die Verschlüsselung kann nur für [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] konfiguriert werden, wenn [sp_pdw_database_encryption](http://msdn.microsoft.com/5011bb7b-1793-4b2b-bd9c-d4a8c8626b6e) auf **1** festgelegt wurde. Ein Datenbank-Verschlüsselungsschlüssel muss erstellt werden, bevor Transparent Data Encryption konfiguriert werden kann. Weitere Informationen zur Datenbankverschlüsselung finden Sie unter [Transparent Data Encryption &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md).  
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert die ALTER-Berechtigung für die Datenbank an.  
+ Erfordert die ALTER-Berechtigung für die Datenbank.  
   
 ## <a name="general-remarks"></a>Allgemeine Hinweise  
- Die Werte für REPLICATED_SIZE DISTRIBUTED_SIZE und LOG_SIZE kann größer als, gleich oder kleiner als die aktuellen Werte für die Datenbank.  
+ Die Werte für REPLICATED_SIZE, DISTRIBUTED_SIZE und LOG_SIZE können größer, gleich oder kleiner als die aktuellen Werte für die Datenbank sein.  
   
 ## <a name="limitations-and-restrictions"></a>Einschränkungen  
- Wachsen und Verkleinerungsvorgänge sind ungefähre Werte. Die resultierende tatsächliche Größe können von den Größenparameter abweichen.  
+ Vergrößerungs- und Verkleinerungsvorgänge sind ungenau. Die resultierenden tatsächlichen Größen können von den Größenparametern abweichen.  
   
- [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]führt keine ALTER DATABASE-Anweisung als atomarer Vorgang. Wenn die Anweisung während der Ausführung abgebrochen wird, bleiben Änderungen, die bereits aufgetreten sind.  
+ [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] führt die ALTER DATABASE-Anweisung nicht als unteilbaren Vorgang aus. Wenn die Anweisung während der Ausführung abgebrochen wird, bleiben Änderungen, die bereits durchgeführt wurden, erhalten.  
   
 ## <a name="locking-behavior"></a>Sperrverhalten  
- Akzeptiert eine gemeinsame Sperre für das Datenbankobjekt. Sie können eine Datenbank, die von einem anderen Benutzer zum Lesen oder Schreiben verwendet wird, nicht ändern. Dies schließt Sitzungen, die ausgegeben haben eine [verwenden](http://msdn.microsoft.com/158ec56b-b822-410f-a7c4-1a196d4f0e15) -Anweisung für die Datenbank.  
+ Führt eine gemeinsame Sperre für das DATABASE-Objekt durch. Sie können eine Datenbank, die von einem anderen Benutzer im Lese- oder Schreibmodus verwendet wird, nicht ändern. Dies schließt auch Sitzungen ein, die eine [USE](http://msdn.microsoft.com/158ec56b-b822-410f-a7c4-1a196d4f0e15)-Anweisung für die Datenbank ausgeführt haben.  
   
 ## <a name="performance"></a>Leistung  
- Verkleinern einer Datenbank dauert eine große Menge an Zeit und Ressourcen, je nach Größe der tatsächlichen Daten innerhalb der Datenbank und die Menge der Fragmentierung auf dem Datenträger. Verkleinern einer Datenbank kann z. B. die mehrere Stunden oder länger dauern.  
+ Das Verkleinern einer Datenbank kann, abhängig von der Größe der tatsächlichen Daten innerhalb der Datenbank und der Menge der Fragmentierung auf dem Datenträger, viel Zeit und viele Systemressourcen in Anspruch nehmen. Das Verkleinern einer Datenbank könnte beispielsweise mehrere Stunden oder noch länger dauern.  
   
-## <a name="determining-encryption-progress"></a>Bestimmen des Status der Verschlüsselung  
- Verwenden Sie die folgende Abfrage, um Fortschritt der transparenten datenbankverschlüsselung als Prozentsatz zu bestimmen:  
+## <a name="determining-encryption-progress"></a>Bestimmen des Verschlüsselungsfortschritts  
+ Verwenden Sie die folgende Abfrage, um den Fortschritt der transparenten Datenverschlüsselung für die Datenbank als Prozentsatz zu bestimmen:  
   
 ```  
 WITH  
@@ -132,44 +132,44 @@ INNER JOIN dek_percent_complete
 WHERE type = 'CONTROL';  
 ```  
   
- Ein umfangreiches Beispiel für alle Schritte bei der Implementierung von TDE veranschaulichen, finden Sie unter [transparente datenverschlüsselung &#40; TDE &#41; ](../../relational-databases/security/encryption/transparent-data-encryption.md).  
+ Ein umfangreiches Beispiel mit allen Schritten zur Implementierung von TDE finden Sie unter [Transparente Datenverschlüsselung &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md).  
   
-## <a name="examples-includesspdwincludessspdw-mdmd"></a>Beispiele:[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="a-altering-the-autogrow-setting"></a>A. Die Einstellung für die automatische VERGRÖßERUNG ändern  
- Automatische VERGRÖßERUNG für die Datenbank auf ON festgelegt `CustomerSales`.  
+### <a name="a-altering-the-autogrow-setting"></a>A. Ändern der AUTOGROW-Einstellung  
+ Legen Sie AUTOGROW für die Datenbank `CustomerSales` auf ON fest.  
   
 ```  
 ALTER DATABASE CustomerSales  
     SET ( AUTOGROW = ON );  
 ```  
   
-### <a name="b-altering-the-maximum-storage-for-replicated-tables"></a>B. Ändern den maximalen Speicherplatz für replizierte Tabellen  
- Im folgenden Beispiel wird die Speicherobergrenze für den replizierten Tabelle auf 1 GB für die Datenbank `CustomerSales`. Dies ist die speicherbegrenzung pro Compute-Knoten.  
+### <a name="b-altering-the-maximum-storage-for-replicated-tables"></a>B. Ändern des maximalen Speicherplatzes für replizierte Tabellen  
+ Im folgenden Beispiel wird die Speicherbegrenzung für replizierte Tabellen für die Datenbank `CustomerSales` auf 1 GB festgelegt. Dabei handelt es sich um die Speicherbegrenzung pro Computeknoten.  
   
 ```  
 ALTER DATABASE CustomerSales  
     SET ( REPLICATED_SIZE = 1 GB );  
 ```  
   
-### <a name="c-altering-the-maximum-storage-for-distributed-tables"></a>C. Ändern den maximalen Speicherplatz für verteilte Tabellen  
- Im folgenden Beispiel wird die Speicherobergrenze für den verteilten Tabelle bis zu 1000 GB (ein Terabyte), für die Datenbank `CustomerSales`. Dies ist die Speicherobergrenze für den kombinierten für das Gerät für alle von der Compute-Knoten nicht die Speicherobergrenze für pro-Serverknoten.  
+### <a name="c-altering-the-maximum-storage-for-distributed-tables"></a>C. Ändern des maximalen Speicherplatzes für verteilte Tabellen  
+ Im folgenden Beispiel wird die Speicherbegrenzung für verteilte Tabellen für die Datenbank `CustomerSales` auf 1000 GB (ein Terabyte) festgelegt. Dabei handelt es sich um die gemeinsame Speicherbegrenzung für alle Computeknoten der Appliance und nicht um die Speicherbegrenzung pro Computeknoten.  
   
 ```  
 ALTER DATABASE CustomerSales  
     SET ( DISTRIBUTED_SIZE = 1000 GB );  
 ```  
   
-### <a name="d-altering-the-maximum-storage-for-the-transaction-log"></a>D. Ändern den maximalen Speicherplatz für das Transaktionsprotokoll  
- Das folgende Beispiel aktualisiert die Datenbank `CustomerSales` höchstens verfügen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Größe des Transaktionsprotokolls von 10 GB für die Anwendung.  
+### <a name="d-altering-the-maximum-storage-for-the-transaction-log"></a>D. Ändern des maximalen Speicherplatzes für das Transaktionsprotokoll  
+ Im folgenden Beispiel wird die Datenbank `CustomerSales` so aktualisiert, dass die maximale Größe des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Transaktionsprotokolls für die Appliance 10 GB beträgt.  
   
 ```  
 ALTER DATABASE CustomerSales  
     SET ( LOG_SIZE = 10 GB );  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Erstellen Sie die Datenbank &#40; Parallel Datawarehouse &#41;](../../t-sql/statements/create-database-parallel-data-warehouse.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [CREATE DATABASE &#40;Parallel Data Warehouse&#41;](../../t-sql/statements/create-database-parallel-data-warehouse.md)   
  [DROP DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-transact-sql.md)  
   
   

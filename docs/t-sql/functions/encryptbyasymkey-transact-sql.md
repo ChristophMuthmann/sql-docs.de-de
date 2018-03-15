@@ -1,5 +1,5 @@
 ---
-title: ENCRYPTBYASYMKEY (Transact-SQL) | Microsoft Docs
+title: ENCRYPTBYASYMKEY (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -55,18 +55,18 @@ EncryptByAsymKey ( Asym_Key_ID , { 'plaintext' | @plaintext } )
  Eine Zeichenfolge der Daten, die mit dem asymmetrischen Schlüssel verschlüsselt werden.  
   
  **@plaintext**  
- Eine Variable vom Typ **Nvarchar**, **Char**, **Varchar**, **binäre**, **Varbinary**, oder **Nchar** , enthält die Daten mit dem asymmetrischen Schlüssel verschlüsselt werden.  
+ Eine Variable vom Typ **nvarchar**, **char**, **varchar**, **binary**, **varbinary** oder **nchar** mit Daten, die mit dem asymmetrischen Schlüssel verschlüsselt werden sollen.  
   
 ## <a name="return-types"></a>Rückgabetypen  
  **varbinary** mit einer maximalen Größe von 8.000 Bytes.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Das Verschlüsseln und Entschlüsseln mit einem asymmetrischen Schlüssel ist im Vergleich zum Verschlüsseln und Entschlüsseln mit einem symmetrischen Schlüssel sehr teuer. Es ist nicht empfehlenswert, große Datasets, wie z. B. Benutzerdaten in Tabellen, mithilfe eines asymmetrischen Schlüssels zu verschlüsseln. Stattdessen sollten Sie die Daten mithilfe eines starken symmetrischen Schlüssels verschlüsseln und den symmetrischen Schlüssel mithilfe eines asymmetrischen Schlüssels verschlüsseln.  
   
- **EncryptByAsymKey** zurückgeben **NULL** überschreitet die Eingabe eine bestimmte Anzahl von Bytes, je nach Algorithmus. Die Grenzwerte sind: ein 512-Bit-RSA-Schlüssel kann bis zu 53 Bytes verschlüsseln, ein 1024-Bit-Schlüssel kann bis zu 117 Bytes verschlüsseln und ein 2048-Bit-Schlüssel kann bis zu 245 Bytes verschlüsseln. (Beachten Sie, dass in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] beide Zertifikate und asymmetrischen Schlüssel Wrapper für RSA-Schlüssel sind.)  
+ **EncryptByAsymKey** gibt je nach Algorithmus **NULL** zurück, wenn die Eingabe eine bestimmte Anzahl von Bytes überschreitet. Die Grenzwerte lauten wie folgt: ein 512-Bit-RSA-Schlüssel kann bis zu 53 Bytes verschlüsseln, ein 1024-Bit-Schlüssel kann bis zu 117 Bytes verschlüsseln, und ein 2048-Bit-Schlüssel kann bis zu 245 Bytes verschlüsseln. (Beachten Sie, dass in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] beide Zertifikate und asymmetrischen Schlüssel Wrapper für RSA-Schlüssel sind.)  
   
 ## <a name="examples"></a>Beispiele  
- Im folgenden Beispiel wird der in `@cleartext` gespeicherte Text mit dem asymmetrischen Schlüssel `JanainaAsymKey02` verschlüsselt. Die verschlüsselten Daten eingefügt werden die `ProtectedData04` Tabelle.  
+ Im folgenden Beispiel wird der in `@cleartext` gespeicherte Text mit dem asymmetrischen Schlüssel `JanainaAsymKey02` verschlüsselt. Die verschlüsselten Daten werden in die `ProtectedData04`-Tabelle eingefügt.  
   
 ```  
 INSERT INTO AdventureWorks2012.Sales.ProtectedData04   
@@ -75,8 +75,8 @@ INSERT INTO AdventureWorks2012.Sales.ProtectedData04
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [DECRYPTBYASYMKEY &#40; Transact-SQL &#41;](../../t-sql/functions/decryptbyasymkey-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [DECRYPTBYASYMKEY &#40;Transact-SQL&#41;](../../t-sql/functions/decryptbyasymkey-transact-sql.md)   
  [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)   
  [Verschlüsselungshierarchie](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   

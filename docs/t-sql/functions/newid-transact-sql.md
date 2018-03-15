@@ -1,5 +1,5 @@
 ---
-title: NEWID (Transact-SQL) | Microsoft Docs
+title: NEWID (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 07/29/2017
 ms.prod: sql-non-specified
@@ -49,7 +49,7 @@ NEWID ( )
 ## <a name="return-types"></a>Rückgabetypen  
  **uniqueidentifier**  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  `NEWID()` ist mit RFC4122 kompatibel.  
   
 ## <a name="examples"></a>Beispiele  
@@ -75,7 +75,7 @@ Value of @myid is: 6F9619FF-8B86-D011-B42D-00C04FC964FF
   
 ### <a name="b-using-newid-in-a-create-table-statement"></a>B. Verwenden von NEWID in einer CREATE TABLE-Anweisung  
   
-**Gilt für**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
   
  Das folgende Beispiel erstellt die `cust` -Tabelle mit einem **uniqueidentifier** data type, and uses NEWID to fill the -Tabelle mit einem default value. Durch das Zuweisen des Standardwertes `NEWID()`enthält jede neue und vorhandene Zeile einen eindeutigen Wert für die `CustomerID` -Spalte.  
   
@@ -124,14 +124,14 @@ SELECT @myid;
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [NEWSEQUENTIALID &#40; Transact-SQL &#41;](../../t-sql/functions/newsequentialid-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [NEWSEQUENTIALID &#40;Transact-SQL&#41;](../../t-sql/functions/newsequentialid-transact-sql.md)   
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
- [CAST und CONVERT &#40; Transact-SQL &#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
+ [CAST und CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [Systemfunktionen &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)   
- ["uniqueidentifier" &#40; Transact-SQL &#41;](../../t-sql/data-types/uniqueidentifier-transact-sql.md)   
+ [uniqueidentifier &#40;Transact-SQL&#41;](../../t-sql/data-types/uniqueidentifier-transact-sql.md)   
  [Sequenznummern](../../relational-databases/sequence-numbers/sequence-numbers.md)  
   
   

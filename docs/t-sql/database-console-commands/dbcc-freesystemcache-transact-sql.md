@@ -1,5 +1,5 @@
 ---
-title: DBCC FREESYSTEMCACHE (Transact-SQL) | Microsoft Docs
+title: DBCC FREESYSTEMCACHE (Transact-SQL) | Microsoft Dokumentation
 ms.custom: 
 ms.date: 07/16/2017
 ms.prod: sql-non-specified
@@ -55,9 +55,9 @@ DBCC FREESYSTEMCACHE
 ```  
   
 ## <a name="arguments"></a>Argumente  
- ('ALL' [,*Pool_name* ])  
+ ( 'ALL' [,*pool_name* ] )  
  ALL gibt alle unterstützten Caches an.  
- *Pool_name* gibt einen Cache für die Ressourcenkontrolle. Nur diesem Pool zugeordnete Einträge werden freigegeben.  
+ *pool_name* gibt einen Cache für den Resource Governor-Poolcache an. Nur diesem Pool zugeordnete Einträge werden freigegeben.  
   
  MARK_IN_USE_FOR_REMOVAL  
  Gibt zurzeit verwendete Einträge asynchron aus den jeweiligen Caches nach ihrer Verwendung frei. Neue Einträge, die nach der Ausführung von DBCC FREESYSTEMCACHE WITH MARK_IN_USE_FOR_REMOVAL im Cache erstellt wurden, sind nicht betroffen.  
@@ -65,11 +65,11 @@ DBCC FREESYSTEMCACHE
  NO_INFOMSGS  
  Alle Informationsmeldungen werden unterdrückt.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
 Durch das Ausführen von DBCC FREESYSTEMCACHE wird der Plancache für die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gelöscht. Durch das Löschen des Plancaches wird eine Neukompilierung aller nachfolgenden Ausführungspläne verursacht, und möglicherweise entsteht plötzlich eine temporäre Verringerung der Abfrageleistung. Das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Fehlerprotokoll enthält für jeden geleerten Cachespeicher im Plancache folgende Meldung zur Information: "Von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wurden für den '%s'-Cachespeicher (Bestandteil des Plancaches) %d Leerungen des Cachespeichers gefunden, die von 'DBCC FREEPROCCACHE'- oder 'DBCC FREESYSTEMCACHE'-Vorgängen ausgelöst wurden". Diese Meldung wird alle fünf Minuten protokolliert, solange der Cache innerhalb dieses Zeitintervalls geleert wird.
 
 ## <a name="result-sets"></a>Resultsets  
-DBCC FREESYSTEMCACHE gibt Folgendes zurück: "DBCC-Ausführung wurde abgeschlossen. Falls DBCC Fehlermeldungen ausgegeben hat, wenden Sie sich an den Systemadministrator."
+DBCC FREESYSTEMCACHE gibt Folgendes zurück: „Die DBCC-Ausführung wurde abgeschlossen. Falls DBCC Fehlermeldungen ausgegeben hat, wenden Sie sich an den Systemadministrator."
   
 ## <a name="permissions"></a>Berechtigungen  
 Erfordert die ALTER SERVER STATE-Berechtigung auf dem Server.
@@ -91,7 +91,7 @@ Im folgenden Beispiel wird die MARK_IN_USE_FOR_REMOVAL-Klausel dazu verwendet, a
 DBCC FREESYSTEMCACHE ('ALL') WITH MARK_IN_USE_FOR_REMOVAL;  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
 [DBCC FREEPROCCACHE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md)  
 [DBCC FREESESSIONCACHE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-freesessioncache-transact-sql.md)  

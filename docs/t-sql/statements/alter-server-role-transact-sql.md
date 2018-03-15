@@ -1,5 +1,5 @@
 ---
-title: ALTER SERVER ROLE (Transact-SQL) | Microsoft Docs
+title: ALTER SERVER ROLE (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 09/06/2016
 ms.prod: sql-non-specified
@@ -64,37 +64,37 @@ ALTER SERVER ROLE  server_role_name  DROP MEMBER login;
 *server_role_name*  
 Der Name der zu ändernden Serverrolle.  
   
-ADD MEMBER *Server_principal*  
-Fügt der Serverrolle den angegebenen Serverprinzipal hinzu. *Server_principal* kann ein Anmeldename oder eine benutzerdefinierte Serverrolle sein. *Server_principal* nicht mit einer festen Serverrolle, Datenbankrolle oder sa.  
+ADD MEMBER *server_principal*  
+Fügt der Serverrolle den angegebenen Serverprinzipal hinzu. *server_principal* kann eine Anmeldung oder eine benutzerdefinierte Serverrolle sein. *server_principal* darf keine feste Serverrolle, Datenbankrolle oder sa sein.  
   
-DROP MEMBER *Server_principal*  
-Entfernt den angegebenen Serverprinzipal aus der Serverrolle. *Server_principal* kann ein Anmeldename oder eine benutzerdefinierte Serverrolle sein. *Server_principal* nicht mit einer festen Serverrolle, Datenbankrolle oder sa.  
+DROP MEMBER *server_principal*  
+Entfernt den angegebenen Serverprinzipal aus der Serverrolle. *server_principal* kann eine Anmeldung oder eine benutzerdefinierte Serverrolle sein. *server_principal* darf keine feste Serverrolle, Datenbankrolle oder sa sein.  
   
-MIT dem Namen  **=**  *New_server_role_name*  
+WITH NAME **=***new_server_role_name*  
 Gibt den neuen Namen der benutzerdefinierten Serverrolle an. Dieser Name darf nicht bereits auf dem Server vorhanden sein.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
 Durch das Ändern des Namens einer benutzerdefinierten Serverrolle werden die ID-Nummer, der Besitzer oder Berechtigungen der Rolle nicht geändert.  
   
-Zum Ändern der Mitgliedschaft in Datenbankrolle `ALTER SERVER ROLE` Sp_addsrvrolemember und Sp_dropsrvrolemember ersetzt. Diese gespeicherten Prozeduren sind veraltet.  
+`ALTER SERVER ROLE` ändert die Rollenmitgliedschaft durch Ersetzen von sp_addsrvrolemember und sp_dropsrvrolemember. Diese gespeicherten Prozeduren sind veraltet.  
   
 Sie können Serverrollen anzeigen, indem Sie die `sys.server_role_members`- Katalogsicht und die `sys.server_principals`-Katalogsicht abfragen.  
   
-Um den Besitzer einer benutzerdefinierten Serverrolle zu ändern, verwenden [ALTER AUTHORIZATION &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-authorization-transact-sql.md).  
+Mit [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md) können Sie den Benutzer einer benutzerdefinierten Serverrolle ändern.  
   
 ## <a name="permissions"></a>Berechtigungen  
-Erfordert `ALTER ANY SERVER ROLE` Berechtigung auf dem Server zum Ändern des Namens einer benutzerdefinierten Serverrolle.  
+Erfordert eine `ALTER ANY SERVER ROLE`-Berechtigung für den Server, um den Namen einer benutzerdefinierten Serverrolle zu ändern.  
   
 **Feste Serverrollen**  
   
 Wenn Sie einer festen Serverrolle ein Mitglied hinzufügen möchten, müssen Sie Mitglied dieser festen Serverrolle oder Mitglied der festen Serverrolle `sysadmin` sein.  
   
 > [!NOTE]  
->  Die `CONTROL SERVER` und `ALTER ANY SERVER ROLE` Berechtigungen sind nicht ausreichend auszuführende `ALTER SERVER ROLE` für eine feste Serverrolle und `ALTER` Berechtigung kann auf einer festen Serverrolle nicht gewährt werden.  
+>  Die Berechtigungen `CONTROL SERVER` und `ALTER ANY SERVER ROLE` sind nicht ausreichend, um `ALTER SERVER ROLE` für eine feste Serverrolle auszuführen. Außerdem kann die `ALTER`-Berechtigung nicht an eine feste Serverrolle vergeben werden.  
   
 **Benutzerdefinierte Serverrollen**  
   
-Um eine benutzerdefinierte Serverrolle ein Mitglied hinzuzufügen, muss ein Mitglied der `sysadmin` festen Serverrolle oder haben `CONTROL SERVER` oder `ALTER ANY SERVER ROLE` Berechtigung. Oder Sie müssen über die `ALTER` -Berechtigung für diese Rolle.  
+Wenn Sie einer benutzerdefinierten Serverrolle ein Mitglied hinzufügen möchten, müssen Sie Mitglied der festen Serverrolle `sysadmin` sein oder über die Berechtigung `CONTROL SERVER` oder `ALTER ANY SERVER ROLE` verfügen. Andernfalls müssen Sie über die `ALTER`-Berechtigung für diese Rolle verfügen.  
   
 > [!NOTE]  
 >  Anders als bei festen Serverrollen verfügen Mitglieder einer benutzerdefinierten Serverrolle nicht unbedingt über die Berechtigung, dieser Rolle Mitglieder hinzuzufügen.  
@@ -111,14 +111,14 @@ GO
 ```  
   
 ### <a name="b-adding-a-domain-account-to-a-server-role"></a>B. Hinzufügen eines Domänenkontos zu einer Serverrolle  
-Im folgenden Beispiel wird ein Domänenkonto mit dem Namen `adventure-works\roberto0` der benutzerdefinierten Serverrolle mit dem Namen `Production`.  
+Im folgenden Beispiel wird der benutzerdefinierten Serverrolle `Production` das Domänenkonto `adventure-works\roberto0` hinzugefügt.  
   
 ```  
 ALTER SERVER ROLE Production ADD MEMBER [adventure-works\roberto0] ;  
 ```  
   
 ### <a name="c-adding-a-sql-server-login-to-a-server-role"></a>C. Hinzufügen einer SQL Server-Anmeldung zu einer Serverrolle  
-Im folgenden Beispiel wird eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldename `Ted` auf die `diskadmin` festen Serverrolle "".  
+Im folgenden Beispiel wird die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldung `Ted` der festen Serverrolle `diskadmin` hinzugefügt.  
   
 ```  
 ALTER SERVER ROLE diskadmin ADD MEMBER Ted ;  
@@ -126,14 +126,14 @@ GO
 ```  
   
 ### <a name="d-removing-a-domain-account-from-a-server-role"></a>D. Entfernen eines Domänenkontos aus einer Serverrolle  
-Im folgenden Beispiel wird ein Domänenkonto mit dem Namen `adventure-works\roberto0` aus der benutzerdefinierten Serverrolle mit dem Namen `Production`.  
+Im folgenden Beispiel wird das Domänenkonto `adventure-works\roberto0` aus der benutzerdefinierten Serverrolle `Production` entfernt.  
   
 ```  
 ALTER SERVER ROLE Production DROP MEMBER [adventure-works\roberto0] ;  
 ```  
   
 ### <a name="e-removing-a-sql-server-login-from-a-server-role"></a>E. Entfernen einer SQL Server-Anmeldung aus einer Serverrolle  
-Im folgenden Beispiel wird die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anmeldung `Ted` aus der `diskadmin` festen Serverrolle "".  
+Im folgenden Beispiel wird die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldung `Ted` aus der festen Serverrolle `diskadmin` entfernt.  
   
 ```  
 ALTER SERVER ROLE Production DROP MEMBER Ted ;  
@@ -149,7 +149,7 @@ GO
 ```  
   
 ### <a name="g-to-view-role-membership"></a>G. Anzeigen der Rollenmitgliedschaft  
-Verwenden Sie zum Anzeigen der Rollenmitgliedschaft der **-Serverrolle (Mitglieder)** auf der Seite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder führen Sie folgende Abfrage:  
+Um die Rollenmitgliedschaft anzuzeigen, verwenden Sie die Seite **Serverrolle (Mitglieder)** in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], oder führen Sie die folgende Abfrage aus:  
   
 ```  
 SELECT SRM.role_principal_id, SP.name AS Role_Name,   
@@ -162,31 +162,31 @@ JOIN sys.server_principals AS SP2
 ORDER BY  SP.name,  SP2.name  
 ```  
   
-## <a name="examples-includesspdwincludessspdw-mdmd"></a>Beispiele:[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="h-basic-syntax"></a>H. Grundlegende Syntax  
-Im folgenden Beispiel wird die Anmeldung `Anna` auf die `LargeRC` -Serverrolle.  
+Im folgenden Beispiel wird die Anmeldung `Anna` der Serverrolle `LargeRC` hinzugefügt.  
   
 ```  
 ALTER SERVER ROLE LargeRC ADD MEMBER Anna;  
 ```  
   
-### <a name="i-remove-a-login-from-a-resource-class"></a>I. Entfernen Sie einen Anmeldenamen aus einer Ressourcenklasse.  
-Das folgende Beispiel löscht Annas Mitgliedschaft der `LargeRC` -Serverrolle.  
+### <a name="i-remove-a-login-from-a-resource-class"></a>I. Entfernen einer Anmeldung aus einer Ressourcenklasse  
+Im folgenden Beispiel wird Annas Mitgliedschaft aus der Serverrolle `LargeRC` gelöscht.  
   
 ```  
 ALTER SERVER ROLE LargeRC DROP MEMBER Anna;  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
-[Erstellen Sie SERVER ROLE &#40; Transact-SQL &#41;](../../t-sql/statements/create-server-role-transact-sql.md)   
-[DROP SERVER ROLE &#40; Transact-SQL &#41;](../../t-sql/statements/drop-server-role-transact-sql.md)   
-[Erstellen Sie die Rolle "" &#40; Transact-SQL &#41;](../../t-sql/statements/create-role-transact-sql.md)   
-[ALTER ROLE &#40; Transact-SQL &#41;](../../t-sql/statements/alter-role-transact-sql.md)   
-[DROP ROLE &#40; Transact-SQL &#41;](../../t-sql/statements/drop-role-transact-sql.md)   
-[Gespeicherte Systemprozeduren &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+[CREATE SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-role-transact-sql.md)   
+[DROP SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-role-transact-sql.md)   
+[CREATE ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-role-transact-sql.md)   
+[ALTER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-role-transact-sql.md)   
+[DROP ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-role-transact-sql.md)   
+[Security Stored Procedures &#40;Transact-SQL&#41; (Gespeicherte Sicherheitsprozeduren (Transact-SQL))](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
 [Sicherheitsfunktionen &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)   
 [Prinzipale &#40;Datenbankmodul&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
-[Sys. server_role_members &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md)   
+[sys.server_role_members &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md)   
 [sys.server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)  
   

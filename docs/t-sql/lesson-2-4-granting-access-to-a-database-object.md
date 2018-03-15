@@ -1,5 +1,5 @@
 ---
-title: Erteilen des Zugriffs auf ein Datenbankobjekt | Microsoft Docs
+title: "Gewähren von Zugriff auf ein Datenbankobjekt | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -28,8 +28,8 @@ ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="lesson-2-4---granting-access-to-a-database-object"></a>Lektion 2-4-gewähren des Zugriffs auf ein Datenbankobjekt
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]Als Administrator können Sie ausführen, die SELECT-Anweisung aus der **Produkte** Tabelle und die **Vw_Names** anzuzeigen, und führen Sie die **Pr_Names** Prozedur; Mary dies allerdings nicht möglich. Verwenden Sie die GRANT-Anweisung, um Mary die erforderlichen Berechtigungen zu erteilen.  
+# <a name="lesson-2-4---granting-access-to-a-database-object"></a>Lektion 2.4: Gewähren von Zugriff auf ein Datenbankobjekt
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)] Als Administrator können Sie die SELECT-Anweisung für die **Products**-Tabelle und die **vw_Names**-Sicht ausführen. Außerdem können Sie die **pr_Names**-Prozedur ausführen. Mary hingegen ist dazu nicht berechtigt. Verwenden Sie die GRANT-Anweisung, um Mary die erforderlichen Berechtigungen zu erteilen.  
   
 ### <a name="procedure-title"></a>Titel der Prozedur  
   
@@ -48,10 +48,10 @@ In diesem Szenario kann Mary mithilfe der gespeicherten Prozedur nur auf die **P
 ## <a name="about-grant"></a>Informationen zu GRANT  
 Sie müssen über die EXECUTE-Berechtigung verfügen, um eine gespeicherte Prozedur auszuführen. Sie müssen über die SELECT-, INSERT-, UPDATE- und DELETE-Berechtigungen verfügen, um auf Daten zuzugreifen und sie zu ändern. Die GRANT-Anweisung wird auch für andere Berechtigungen wie die zum Erstellen von Tabellen verwendet.  
   
-## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
+## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
 [Zusammenfassung: Konfigurieren von Berechtigungen für Datenbankobjekte](../t-sql/lesson-2-5-summary-configuring-permissions-on-database-objects.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [GRANT &#40;Transact-SQL&#41;](../t-sql/statements/grant-transact-sql.md)  
 [REVOKE &#40;Transact-SQL&#41;](../t-sql/statements/revoke-transact-sql.md)  
   

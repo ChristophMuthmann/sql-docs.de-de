@@ -1,5 +1,5 @@
 ---
-title: Erstellen Sie KRYPTOGRAFIEANBIETER (Transact-SQL) | Microsoft Docs
+title: CREATE CRYPTOGRAPHIC PROVIDER (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -59,12 +59,12 @@ CREATE CRYPTOGRAPHIC PROVIDER provider_name
  Der Name des EKM-Anbieters (Extensible Key Management).  
   
  *path_of_DLL*  
- Ist der Pfad der DLL-Datei, die implementiert die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Extensible Key Management-Schnittstelle. Bei Verwendung der **SQL Server-Connector für Microsoft Azure Key Vault** der Standardspeicherort ist **"C:\Program Files\Microsoft SQL Server-Connector für Microsoft Azure Key Vault\Microsoft.AzureKeyVaultService.EKM.dll '**.  
+ Der Pfad der DLL-Datei, die die erweiterbare Schlüsselverwaltungsschnittstelle von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] implementiert. Wenn der **SQL Server-Connector für Microsoft Azure Key Vault** verwendet wird, lautet der Standardspeicherort: **C:\Program Files\Microsoft SQL Server Connector for Microsoft Azure Key Vault\Microsoft.AzureKeyVaultService.EKM.dll**.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Alle von einem Anbieter erstellten Schlüssel verweisen über den GUID auf den Anbieter. Der GUID bleibt in allen Versionen der DLL erhalten.  
   
- Die DLL, die die SQLEKM-Schnittstelle implementiert, muss mit einem beliebigen Zertifikat digital signiert werden. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] überprüft die Signatur. Dies schließt die Zertifikatskette, die dessen Stamm installiert haben, muss die **vertrauenswürdige Stammzertifizierungsstellen-Zertifikat** Speicherort auf einem Windows-Betriebssystem. Wenn die Signatur nicht ordnungsgemäß erweist, schlägt die CREATE CRYPTOGRAPHIC PROVIDER-Anweisung fehl. Weitere Informationen zu Zertifikaten und Zertifikatketten finden Sie unter [SQL Server Certificates and Asymmetric Keys](../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md).  
+ Die DLL, die die SQLEKM-Schnittstelle implementiert, muss mit einem beliebigen Zertifikat digital signiert werden. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] überprüft die Signatur. Diese Prüfung umfasst auch die Zertifikatskette, deren Stamm im Speicherort **Trusted Root Cert Authorities** auf einem Windows-System installiert sein muss. Wenn sich die Signatur bei der Überprüfung ihrer Gültigkeit als nicht ordnungsgemäß erweist, schlägt die Anweisung CREATE CRYPTOGRAPHIC PROVIDER fehl. Weitere Informationen zu Zertifikaten finden Sie unter [SQL Server-Zertifikate und asymmetrische Schlüssel](../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md).  
   
  Wenn von einer DLL des EKM-Anbieters nicht alle erforderlichen Methoden implementiert werden, kann CREATE CRYPTOGRAPHIC PROVIDER den Fehler 33085 zurückgeben:  
   
@@ -75,10 +75,10 @@ CREATE CRYPTOGRAPHIC PROVIDER provider_name
  `SQL Crypto API version '%02d.%02d' implemented by provider is not supported. Supported version is '%02d.%02d'.`  
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert die CONTROL SERVER-Berechtigung oder die Mitgliedschaft in der **Sysadmin** festen Serverrolle "".  
+ Erfordert die CONTROL SERVER-Berechtigung oder die Mitgliedschaft in der festen Serverrolle **sysadmin**.  
   
 ## <a name="examples"></a>Beispiele  
- Das folgende Beispiel erstellt einen kryptografischen Anbieter aufgerufen `SecurityProvider` in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aus einer DLL-Datei. Die DLL-Datei bekommt den Namen `c:\SecurityProvider\SecurityProvider_v1.dll` und wird auf dem Server installiert. Das Zertifikat des Anbieters muss zuerst auf dem Server installiert werden.  
+ Im folgenden Beispiel wird ein Kryptografieanbieter mit dem Namen `SecurityProvider` in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aus einer DLL-Datei erstellt. Die DLL-Datei bekommt den Namen `c:\SecurityProvider\SecurityProvider_v1.dll` und wird auf dem Server installiert. Das Zertifikat des Anbieters muss zuerst auf dem Server installiert werden.  
   
 ```  
 -- Install the provider  
@@ -86,7 +86,7 @@ CREATE CRYPTOGRAPHIC PROVIDER SecurityProvider
     FROM FILE = 'C:\SecurityProvider\SecurityProvider_v1.dll';  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Erweiterbare Schlüsselverwaltung &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)   
  [ALTER CRYPTOGRAPHIC PROVIDER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-cryptographic-provider-transact-sql.md)   
  [DROP CRYPTOGRAPHIC PROVIDER &#40;Transact-SQL&#41;](../../t-sql/statements/drop-cryptographic-provider-transact-sql.md)   

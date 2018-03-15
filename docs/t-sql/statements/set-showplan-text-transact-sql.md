@@ -1,5 +1,5 @@
 ---
-title: SET SHOWPLAN_TEXT (Transact-SQL) | Microsoft Docs
+title: SET SHOWPLAN_TEXT (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -54,12 +54,12 @@ ms.lasthandoff: 11/21/2017
 SET SHOWPLAN_TEXT { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Die Einstellung von SET SHOWPLAN_TEXT wird zur Ausführungszeit und nicht zur Analysezeit festgelegt.  
   
  Wenn SET SHOWPLAN_TEXT auf ON festgelegt ist, gibt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Ausführungsinformationen für jede [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung zurück, ohne sie auszuführen. Wenn diese Option auf ON festgelegt ist, werden Ausführungsplaninformationen zu allen weiteren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anweisungen zurückgegeben, bis die Option auf OFF festgelegt wird. Wenn beispielsweise eine CREATE TABLE-Anweisung ausgeführt wird, während SET SHOWPLAN_TEXT auf ON festgelegt ist, gibt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bei einer nachfolgenden SELECT-Anweisung, die dieselbe Tabelle betrifft, eine Fehlermeldung zurück. In dieser wird der Benutzer informiert, dass diese Tabelle nicht vorhanden ist. Daher schlagen spätere Verweise auf diese Tabelle fehl. Wenn SET SHOWPLAN_TEXT auf OFF festgelegt wird, führt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anweisungen aus, ohne einen Bericht mit Ausführungsplaninformationen zu generieren.  
   
- SET SHOWPLAN_TEXT soll lesbare Ausgabe für Microsoft Win32-eingabeaufforderungsanwendungen zurückgeben, z. B. die **Osql** Hilfsprogramm. SET SHOWPLAN_ALL gibt eine detailliertere Ausgabe zurück, die in Programmen verwendet werden kann, die diese Ausgabe verarbeiten.  
+ Verwenden Sie SET SHOWPLAN_TEXT, um eine lesbare Ausgabe für Microsoft Win32-Befehlszeilenanwendungen, z.B. das Hilfsprogramm **osql**, zurückzugeben. SET SHOWPLAN_ALL gibt eine detailliertere Ausgabe zurück, die in Programmen verwendet werden kann, die diese Ausgabe verarbeiten.  
   
  SET SHOWPLAN_TEXT und SET SHOWPLAN_ALL können in gespeicherten Prozeduren nicht angegeben werden. Sie müssen die einzigen Anweisungen in einem Batch sein.  
   
@@ -67,20 +67,20 @@ SET SHOWPLAN_TEXT { ON | OFF }
   
 |Spaltenname|Description|  
 |-----------------|-----------------|  
-|**StmtText**|Für Zeilen, die nicht vom Typ PLAN_ROW sind, enthält diese Spalte den Text der [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisung. Für Zeilen vom Typ PLAN_ROW enthält diese Spalte eine Beschreibung des Vorgangs. Diese Spalte enthält den physischen Operator und optional auch den logischen Operator. Diese Spalte kann auch eine Beschreibung folgen der vom physischen Operator bestimmt wird. Weitere Informationen zu physischen Operatoren finden Sie unter der **Argument** Spalte [SET SHOWPLAN_ALL &#40; Transact-SQL &#41; ](../../t-sql/statements/set-showplan-all-transact-sql.md).|  
+|**StmtText**|Für Zeilen, die nicht vom Typ PLAN_ROW sind, enthält diese Spalte den Text der [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung. Für Zeilen vom Typ PLAN_ROW enthält diese Spalte eine Beschreibung des Vorgangs. Diese Spalte enthält den physischen Operator und optional auch den logischen Operator. Auf die Spalte kann auch eine Beschreibung folgen, die vom physischen Operator bestimmt wird. Weitere Informationen zu physischen Operatoren finden Sie in der **Argument**-Spalte unter [SET SHOWPLAN_ALL &#40;Transact-SQL&#41;](../../t-sql/statements/set-showplan-all-transact-sql.md).|  
   
- Weitere Informationen zu den physischen und logischen Operatoren, die in der Showplanausgabe angezeigt werden können, finden Sie unter [Showplan logischen und physischen Operatoren Verweis](../../relational-databases/showplan-logical-and-physical-operators-reference.md)  
+ Weitere Informationen zu den physischen und logischen Operatoren, die in der Showplanausgabe angezeigt werden, finden Sie unter [Referenz zu logischen und physischen Showplanoperatoren](../../relational-databases/showplan-logical-and-physical-operators-reference.md).  
   
 ## <a name="permissions"></a>Berechtigungen  
  Für die Verwendung von SET SHOWPLAN_TEXT benötigen Sie für die Ausführung der Anweisungen, auf die SET SHOWPLAN_TEXT angewendet wird, ausreichende Berechtigungen sowie die SHOWPLAN-Berechtigung für alle Datenbanken mit Objekten, auf die verwiesen wird.  
   
- Für SELECT, INSERT, UPDATE, DELETE, EXEC *Stored_procedure*, und den AUSFÜHRUNGSTYP *User_defined_function* -Anweisungen, um einen Showplan zu erstellen, der Benutzer muss:  
+ Damit die Anweisungen SELECT, INSERT, UPDATE, DELETE, EXEC *stored_procedure* und EXEC *user_defined_function* einen Showplan erstellen, benötigt der Benutzer Folgendes:  
   
 -   Berechtigungen für die Ausführung der [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen.  
   
 -   Die SHOWPLAN-Berechtigung für alle Datenbanken mit Objekten, auf die von den Transact-SQL-Anweisungen verwiesen wird, wie z. B. Tabellen, Sichten usw.  
   
- Für alle anderen Anweisungen, z. B. DDL, USE *Database_name*, SET, DECLARE, dynamisches SQL usw., nur die entsprechenden Berechtigungen zum Ausführen der [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisungen erforderlich sind.  
+ Für alle anderen Anweisungen, z.B. DDL, USE *database_name*, SET, DECLARE, dynamische SQL-Anweisungen usw., werden nur die entsprechenden Berechtigungen für die Ausführung der [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen benötigt.  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird gezeigt, wie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bei der Verarbeitung von Anweisungen Indizes verwendet.  
@@ -143,9 +143,9 @@ StmtText
 |--Clustered Index Scan(OBJECT:([AdventureWorks2012].[Production].[ProductCostHistory].[PK_ProductCostHistory_ProductCostID]), WHERE:([AdventureWorks2012].[Production].[ProductCostHistory].[StandardCost]<[@1]))  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Operatoren &#40; Transact-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Operators &#40;Transact-SQL&#41; (Operatoren &#40;Transact-SQL&#41;)](../../t-sql/language-elements/operators-transact-sql.md)   
  [SET-Anweisungen (Transact-SQL)](../../t-sql/statements/set-statements-transact-sql.md)   
- [SET SHOWPLAN_ALL &#40; Transact-SQL &#41;](../../t-sql/statements/set-showplan-all-transact-sql.md)  
+ [SET SHOWPLAN_ALL &#40;Transact-SQL&#41;](../../t-sql/statements/set-showplan-all-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: STDimension (Geometry-Datentyp) | Microsoft Docs
+title: STDimension (geometry-Datentyp) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -44,12 +44,12 @@ Gibt die maximale Dimension einer **geometry** -Instanz zurück
 ```  
   
 ## <a name="return-types"></a>Rückgabetypen  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Rückgabetyp: **Int**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Rückgabetyp: **int**  
   
  CLR-Rückgabetyp: **SqlInt32**  
   
-## <a name="remarks"></a>Hinweise  
- `STDimension()`Gibt-1 zurück, wenn die **Geometrie** -Instanz leer ist.  
+## <a name="remarks"></a>Remarks  
+ `STDimension()` gibt -1 zurück, wenn die **geometry**-Instanz leer ist.  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird eine Tabellenvariable erstellt, in der **geometry** -Instanzen gespeichert werden. Dann werden ein `Point`, eine `LineString`, einend a `Polygon`.  Anschließend werden im Beispiel die Dimensionen jeder `STDimension()` -Instanz mit **geometry** -Instanz zurück  
@@ -65,13 +65,13 @@ FROM @temp;
   
  Im Beispiel werden dann die Dimensionen jeder `geometry` -Instanz zurückgegeben.  
   
-|name|dim|  
+|NAME|dim|  
 |----------|---------|  
 |Point|0|  
 |LineString|1|  
 |Polygon|2|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [OGC-Methoden für geometry-Instanzen](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: SET FIPS_FLAGGER (Transact-SQL) | Microsoft Docs
+title: SET FIPS_FLAGGER (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/29/2017
 ms.prod: sql-non-specified
@@ -38,7 +38,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="set-fipsflagger-transact-sql"></a>SET FIPS_FLAGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Gibt an, dass die Kompatibilität mit dem FIPS 127-2-Standard überprüft wird. Diese basiert auf dem ISO-Standard. Weitere Informationen zur SQL Server-FIPS-Kompatibilität finden Sie unter [zum Verwenden von SQL Server 2016 im FIPS 140-2-kompatiblen Modus](https://support.microsoft.com/help/4014354/how-to-use-sql-server-2016-in-fips-140-2-compliant-mode). 
+  Gibt an, dass die Kompatibilität mit dem FIPS 127-2-Standard überprüft wird. Diese basiert auf dem ISO-Standard. Informationen zur FIPS-Konformität mit SQL Server finden Sie unter [How to use SQL Server 2016 in FIPS 140-2-compliant mode (Verwendung von SQL Server 2016 in einem mit FIPS 140-2 konformen Modus)](https://support.microsoft.com/help/4014354/how-to-use-sql-server-2016-in-fips-140-2-compliant-mode). 
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,27 +49,27 @@ SET FIPS_FLAGGER ( 'level' |  OFF )
 ```  
   
 ## <a name="arguments"></a>Argumente  
- **"** *Ebene* **"**  
- Der Grad der Kompatibilität mit dem FIPS 127-2-Standard, auf den alle Datenbankoperationen überprüft werden. Wenn ein Datenbankvorgang mit der Stufe des ISO-Standards ausgewählt ist, steht in Konflikt [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird eine Warnung generiert.  
+ **'** *level* **'**  
+ Der Grad der Kompatibilität mit dem FIPS 127-2-Standard, auf den alle Datenbankoperationen überprüft werden. Wenn bei einem Datenbankvorgang ein Konflikt mit der gewählten Stufe des ISO-Standards auftritt, generiert [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eine Warnung.  
   
- *Ebene* muss eines der folgenden Werte sein.  
+ *level* muss einer der folgenden Werte sein.  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |ENTRY|Überprüfen der Kompatibilität mit der Eingangsstufe (Entry level) des ISO-Standards.|  
 |FULL|Überprüfen der vollständigen Kompatibilität mit dem ISO-Standard.|  
 |INTERMEDIATE|Überprüfen der Kompatibilität mit der INTERMEDIATE-Stufe des ISO-Standards.|  
 |OFF|Kein Überprüfen des Standards.|  
   
-## <a name="remarks"></a>Hinweise  
- Die Einstellung der `SET FIPS_FLAGGER` festlegen zur Analysezeit und nicht zum Ausführen oder zur Laufzeit ist. Festlegen zur Analysezeit bedeutet, dass wenn die SET-Anweisung des Batches oder gespeicherte Prozedur vorhanden ist, er wirksam wird, unabhängig davon, ob die codeausführung tatsächlich diesen Punkt erreicht; und die `SET` -Anweisung wird wirksam, bevor Anweisungen ausgeführt werden. Angenommen, selbst wenn die `SET` -Anweisung liegt im ein `IF...ELSE` Anweisungsblock, die während der Ausführung niemals erreicht wird der `SET` Anweisung ist weiterhin wirksam, da die `IF...ELSE` -Anweisungsblock analysiert wird.  
+## <a name="remarks"></a>Remarks  
+ Die Einstellung von `SET FIPS_FLAGGER` wird zur Analysezeit und nicht zur Ausführungs- oder Laufzeit festgelegt. Das Festlegen zur Analysezeit bedeutet Folgendes: Wenn sich die SET-Anweisung im Batch oder in der gespeicherten Prozedur befindet, wird sie unabhängig davon wirksam, ob die Codeausführung tatsächlich diesen Punkt erreicht, und die `SET`-Anweisung wird wirksam, bevor Anweisungen ausgeführt werden. Auch wenn sich die `SET`-Anweisung z.B. in einem `IF...ELSE`-Anweisungsblock befindet, der während der Ausführung niemals erreicht wird, ist die `SET`-Anweisung dennoch wirksam, da der `IF...ELSE`-Anweisungsblock analysiert wird.  
   
- Wenn `SET FIPS_FLAGGER` festgelegt ist, in einer gespeicherten Prozedur, die den Wert des `SET FIPS_FLAGGER` wird wiederhergestellt, nachdem die gespeicherte Prozedur die Steuerung zurückgegeben wird. Aus diesem Grund eine `SET FIPS_FLAGGER` angegebene in dynamischem SQL-Anweisung hat keinen Einfluss auf die Anweisungen, dynamische SQL-Anweisung.  
+ Wird `SET FIPS_FLAGGER` in einer gespeicherten Prozedur festgelegt, so wird der Wert von `SET FIPS_FLAGGER` wiederhergestellt, nachdem die gespeicherte Prozedur die Steuerung zurückgegeben hat. Daher hat eine `SET FIPS_FLAGGER`-Anweisung, die in einer dynamischem SQL-Anweisung angegeben wird, keine Auswirkung auf die Anweisungen, die der dynamischen SQL-Anweisung folgen.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die Mitgliedschaft in der **public** -Rolle.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SET-Anweisungen &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)  
   
   

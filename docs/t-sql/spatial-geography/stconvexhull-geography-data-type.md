@@ -1,5 +1,5 @@
 ---
-title: STConvexHull (Geography-Datentyp) | Microsoft Docs
+title: STConvexHull (geography-Datentyp) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -41,11 +41,11 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Rückgabetypen  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Rückgabetyp: **Geography**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Rückgabetyp: **geography**  
   
  CLR-Rückgabetyp: **SqlGeography**  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Gibt ein `FullGlobe` -Objekt für **geography** -Instanzen mit einem Umschlagwinkel größer als 90 Grad zurück.  
   
  Gibt eine leere **geography** -Auflistung für eine leere **geography** -Instanz zurück.  

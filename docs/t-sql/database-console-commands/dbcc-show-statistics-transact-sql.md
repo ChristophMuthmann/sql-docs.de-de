@@ -1,5 +1,5 @@
 ---
-title: DBCC SHOW_STATISTICS (Transact-SQL) | Microsoft Docs
+title: DBCC SHOW_STATISTICS (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 12/18/2017
 ms.prod: sql-non-specified
@@ -83,11 +83,11 @@ DBCC SHOW_STATISTICS ( table_name , target )
  Name der Tabelle oder der indizierten Sicht, für die statistische Informationen angezeigt werden sollen.  
   
  *table_name*  
- Der Name der Tabelle, die die Statistik anzuzeigenden enthält. Die Tabelle kann nicht auf eine externe Tabelle sein.  
+ Der Name der Tabelle, die die anzuzeigenden Statistiken enthält. Die Tabelle kann keine externe Tabelle sein.  
   
  *Ziel*  
- Der Name des Indexes, der Statistik oder der Spalte, für die Statistikinformationen angezeigt werden sollen. *Ziel* wird in Klammern eingeschlossen einzelne Anführungszeichen, doppelte Anführungszeichen oder ohne Anführungszeichen. Wenn *Ziel* ist ein Name eines vorhandenen Indexes oder Statistiken für eine Tabelle oder indizierten Sicht, die statistische Informationen zu diesem Ziel zurückgegeben. Wenn *Ziel* ist der Name einer vorhandenen Spalte, und eine automatisch erstellte Statistik für diese Spalte vorhanden ist, werden Informationen zu dieser automatisch erstellten Statistik zurückgegeben. Wenn keine automatisch erstellte Statistik für ein Spaltenziel vorhanden ist, wird die Fehlermeldung 2767 zurückgegeben.  
- In [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], *Ziel* kann kein Spaltenname sein.  
+ Der Name des Indexes, der Statistik oder der Spalte, für die Statistikinformationen angezeigt werden sollen. *target* wird in Klammern, einzelnen Anführungszeichen oder doppelten Anführungszeichen gesetzt, bzw. es werden keine Anführungszeichen verwendet. Wenn *target* ein Name eines vorhandenen Indexes oder einer vorhandenen Statistik für eine Tabelle oder eine indizierte Sicht ist, werden die Statistikinformationen zu diesem Ziel zurückgegeben. Wenn *target* der Name einer vorhandenen Spalte ist und eine automatisch erstellte Statistik für diese Spalte vorhanden ist, werden Informationen zu dieser automatisch erstellten Statistik zurückgegeben. Wenn keine automatisch erstellte Statistik für ein Spaltenziel vorhanden ist, wird die Fehlermeldung 2767 zurückgegeben.  
+ *target* kann in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] kein Spaltenname sein.  
   
  NO_INFOMSGS  
  Unterdrückt alle Informationsmeldungen mit einem Schweregrad von 0 bis 10.  
@@ -103,24 +103,24 @@ In der folgenden Tabelle werden die Spalten beschrieben, die im Resultset zurüc
 |Spaltenname|Description|  
 |-----------------|-----------------|  
 |Name|Name des Statistikobjekts.|  
-|Updated|Datum und Uhrzeit des letzten Updates der Statistik. Die [STATS_DATE](../../t-sql/functions/stats-date-transact-sql.md) Funktion ist eine alternative Möglichkeit zum Abrufen dieser Informationen. Weitere Informationen finden Sie unter der ["Hinweise"](#Remarks) Abschnitt auf dieser Seite.|  
-|Zeilen|Gesamtanzahl der Zeilen in der Tabelle oder indizierten Sicht zum Zeitpunkt des letzten Updates der Statistik. Wenn die Statistik gefiltert wird oder einem gefilterten Index entspricht, kann die Anzahl der Zeilen geringer als die Anzahl der Zeilen in der Tabelle sein. Weitere Informationen finden Sie unter[Statistiken](../../relational-databases/statistics/statistics.md).|  
+|Updated|Datum und Uhrzeit des letzten Updates der Statistik. Die Funktion [STATS_DATE](../../t-sql/functions/stats-date-transact-sql.md) ist eine alternative Möglichkeit zum Abrufen dieser Informationen. Weitere Informationen finden Sie im Abschnitt [Hinweise](#Remarks) dieses Artikels.|  
+|Zeilen|Gesamtanzahl der Zeilen in der Tabelle oder indizierten Sicht zum Zeitpunkt des letzten Updates der Statistik. Wenn die Statistik gefiltert wird oder einem gefilterten Index entspricht, kann die Anzahl der Zeilen geringer als die Anzahl der Zeilen in der Tabelle sein. Weitere Informationen finden Sie unter [Statistiken](../../relational-databases/statistics/statistics.md).|  
 |Rows Sampled|Gesamtzahl der Zeilen, die für die statistischen Berechnungen in die Stichprobe aufgenommen wurden. Wenn Rows Sampled < Rows, sind das angezeigte Histogramm und die Dichteergebnisse Schätzungen auf Grundlage der als Stichprobe entnommenen Zeilen.|  
 |Schritte|Anzahl der Schritte im Histogramm. Jeder Schritt umfasst einen Bereich von Spaltenwerten gefolgt von einem oberen Spaltengrenzwert. Die Histogrammschritte werden in der Statistik in der ersten Schlüsselspalte definiert. Die maximale Anzahl von Schritten ist 200.|  
 |Density|Berechnet als 1 / *verschiedene Werte* für alle Werte in der ersten Schlüsselspalte des Statistikobjekts mit Ausnahme der Begrenzungswerte des Histogramms. Dieser Dichtewert wird vom Abfrageoptimierer nicht verwendet und für die Abwärtskompatibilität mit Versionen vor [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] angezeigt.|  
 |Average Key Length|Durchschnittliche Anzahl von Bytes pro Wert für alle Schlüsselspalten im Statistikobjekt.|  
-|String Index|"Ja" gibt an, dass das Statistikobjekt Statistiken über Zusammenfassungen von Zeichenfolgen enthält, um die Kardinalitätsschätzungen für Abfrageprädikate, die den LIKE-Operator verwenden, zu verbessern, z. B. `WHERE ProductName LIKE '%Bike'`. Zeichenfolge, die eine Zusammenfassungsstatistik werden getrennt vom Histogramm gespeichert und in der ersten Schlüsselspalte des statistikobjekts erstellt, wenn der Typ ist **Char**, **Varchar**, **Nchar**, **Nvarchar**, **varchar(max)**, **nvarchar(max)**, **Text**, oder **Ntext.**.|  
-|Filterausdruck|Prädikat für die Teilmenge von Tabellenzeilen, die im Statistikobjekt enthalten sind. NULL = Nicht gefilterte Statistik. Weitere Informationen zu gefilterten Prädikaten finden Sie unter [Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md). Weitere Informationen zu gefilterten Statistiken finden Sie unter [Statistiken](../../relational-databases/statistics/statistics.md).|  
+|String Index|"Ja" gibt an, dass das Statistikobjekt Statistiken über Zusammenfassungen von Zeichenfolgen enthält, um die Kardinalitätsschätzungen für Abfrageprädikate, die den LIKE-Operator verwenden, zu verbessern, z. B. `WHERE ProductName LIKE '%Bike'`. Statistiken über Zusammenfassungen von Zeichenfolgen werden getrennt vom Histogramm gespeichert und in der ersten Schlüsselspalte des Statistikobjekts erstellt, wenn dieses vom Typ **char**, **varchar**, **nchar**, **nvarchar**, **varchar(max)**, **nvarchar(max)**, **text** oder **ntext** ist.|  
+|Filterausdruck|Prädikat für die Teilmenge von Tabellenzeilen, die im Statistikobjekt enthalten sind. NULL = Nicht gefilterte Statistik. Weitere Informationen zu gefilterten Prädikaten finden Sie unter [Erstellen gefilterter Indizes](../../relational-databases/indexes/create-filtered-indexes.md). Weitere Informationen zu gefilterten Statistiken finden Sie unter [Statistiken](../../relational-databases/statistics/statistics.md).|  
 |Unfiltered Rows|Gesamtzahl von Zeilen in der Tabelle vor dem Anwenden des Filterausdrucks. Wenn Filter Expression NULL ist, ist Unfiltered Rows gleich Rows.|  
-|Beispiel Prozent beibehalten|Beibehalten von Prozentsatz für die Stichprobe verwendet wird, für die Statistik-Updates, die einen Sampling Prozentsatz nicht explizit angeben. Wenn der Wert 0 (null) ist, ist kein Prozentsatz der beibehaltenen Beispiel für diese Statistik festgelegt.<br /><br /> **Gilt für:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4| 
+|Persistierter Beispielprozentwert|Der persistierte Prozentwert für die Stichprobe wird für Aktualisierungen von Statistiken verwendet, die keinen expliziten Prozentwert für die Stichprobenentnahme angibt. Wenn der Wert 0 (null) ist, wird kein persistierter Prozentwert für diese Statistik festgelegt.<br /><br /> **Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4| 
   
 In der folgenden Tabelle werden die Spalten beschrieben, die beim Angeben von DENSITY_VECTOR im Resultset zurückgegeben werden.
   
 |Spaltenname|Description|  
 |-----------------|-----------------|  
-|All Density|Die Dichte ist 1 / *verschiedene Werte*. Die Ergebnisse zeigen die Dichte für jedes Präfix von Spalten im Statistikobjekt mit einer Zeile pro Dichte an. Bei einem unterschiedlichen Wert handelt es sich um eine unterschiedliche Liste der Spaltenwerte pro Zeile und pro Spaltenpräfix. Wenn das Statistikobjekt beispielsweise Schlüsselspalten (A, B, C) enthält, geben die Ergebnisse die Dichte der unterschiedlichen Wertelisten jedes dieser Spaltenpräfixe an: (A), (A, B) und (A, B, C). Mit dem Präfix (A, B, C) ist jede dieser Listen eine Liste unterschiedlicher Werte: (3, 5, 6), (4, 4, 6), (4, 5, 6), (4, 5, 7). Mit dem Präfix-(A, B) weisen dieselben Spaltenwerte diese Listen unterschiedlicher Werte auf: (3, 5), (4, 4) und (4, 5)|  
+|All Density|Die Dichte ist 1 / *verschiedene Werte*. Die Ergebnisse zeigen die Dichte für jedes Präfix von Spalten im Statistikobjekt mit einer Zeile pro Dichte an. Bei einem unterschiedlichen Wert handelt es sich um eine unterschiedliche Liste der Spaltenwerte pro Zeile und pro Spaltenpräfix. Wenn das Statistikobjekt beispielsweise Schlüsselspalten (A, B, C) enthält, geben die Ergebnisse die Dichte der unterschiedlichen Wertelisten jedes dieser Spaltenpräfixe an: (A), (A, B) und (A, B, C). Mit dem Präfix (A, B, C) ist jede dieser Listen eine Liste unterschiedlicher Werte: (3, 5, 6), (4, 4, 6), (4, 5, 6), (4, 5, 7). Mit dem Präfix (A, B) weisen die gleichen Spaltenwerte diese unterschiedlichen Wertlisten auf: (3, 5), (4, 4) und (4, 5).|  
 |Average Length|Durchschnittliche Länge in Bytes zum Speichern einer Liste der Spaltenwerte für das Spaltenpräfix. Wenn die Werte in der Liste (3, 5, 6) beispielsweise jeweils 4 Bytes erfordern, beträgt die Länge 12 Bytes.|  
-|Spalten|Namen der Spalten im Präfix, für die All Density und Average Length angezeigt werden.|  
+|Spalte|Namen der Spalten im Präfix, für die All Density und Average Length angezeigt werden.|  
   
 Die folgende Tabelle beschreibt die Spalten, die im Resultset zurückgegeben werden, wenn die HISTOGRAM-Option angegeben wird.
   
@@ -134,12 +134,12 @@ Die folgende Tabelle beschreibt die Spalten, die im Resultset zurückgegeben wer
   
 ## <a name="Remarks"></a> Hinweise 
 
-Statistiken Aktualisierungsdatum befindet sich in der [Statistik-Blob-Objekt](../../relational-databases/statistics/statistics.md#DefinitionQOStatistics) zusammen mit den [Histogramm](#histogram) und [dichtevektor](#density), nicht in den Metadaten. Wenn keine Daten gelesen werden, um statistische Daten zu generieren, die Statistik-Blob nicht erstellt, das Datum ist nicht verfügbar, und die *aktualisiert* Spalte ist NULL. Dies ist der Fall für gefilterte Statistiken für die das Prädikat keine Zeilen zurückgibt, oder für neue, leere Tabellen.
+Das Aktualisierungsdatum für die Statistiken befindet sich gemeinsam mit dem [Histogramm](#histogram) und [Dichtevektor](#density) nicht in den Metadaten, sondern im [Statistik-Blobobjekt](../../relational-databases/statistics/statistics.md#DefinitionQOStatistics). Wenn für das Generieren von Statistikdaten keine Daten gelesen werden, wird das Statistik-Blob nicht erstellt, das Datum nicht verfügbar und die Spalte *aktualisiert* ist NULL. Dies ist der Fall bei gefilterten Statistiken oder neuen und leeren Tabellen, für die das Prädikat keine Zeilen zurückgibt.
   
 ## <a name="histogram"></a> Histogramm  
 Ein Histogramm misst die Häufigkeit des Vorkommens für jeden unterschiedlichen Wert in einem Dataset. Der Abfrageoptimierer berechnet ein Histogramm für die Spaltenwerte in der ersten Schlüsselspalte des Statistikobjekts und wählt die Spaltenwerte aus, indem statistische Zeilenstichproben entnommen werden oder indem ein vollständiger Scan aller Zeilen in der Tabelle oder Sicht ausgeführt wird. Wenn das Histogramm anhand einer Gruppe von Zeilenstichproben erstellt wird, handelt es sich bei der gespeicherten Gesamtzahl von Zeilen und unterschiedlichen Werten um Schätzungen, die keine ganzen Zahlen sein müssen.
   
-Zum Erstellen des Histogramms sortiert der Abfrageoptimierer die Spaltenwerte, berechnet die Anzahl der Werte, die den einzelnen unterschiedlichen Spaltenwerten entsprechen, und aggregiert die Spaltenwerte dann in maximal 200 zusammenhängenden Histogrammschritten. Jeder Schritt umfasst einen Bereich von Spaltenwerten gefolgt von einem oberen Spaltengrenzwert. Der Bereich enthält alle möglichen Spaltenwerte zwischen den Begrenzungswerten, ohne die Begrenzungswerte selbst. Der niedrigste der sortierten Spaltenwerte ist der obere Grenzwert für den ersten Histogrammschritt.
+Zum Erstellen des Histogramms sortiert der Abfrageoptimierer die Spaltenwerte, berechnet die Anzahl der Werte, die den einzelnen unterschiedlichen Spaltenwerten entsprechen, und aggregiert die Spaltenwerte dann in maximal 200 zusammenhängenden Histogrammschritten. Jeder Schritt enthält einen Bereich von Spaltenwerten gefolgt von einem oberen Spaltengrenzwert. Der Bereich enthält alle möglichen Spaltenwerte zwischen den Begrenzungswerten, ohne die Begrenzungswerte selbst. Der niedrigste der sortierten Spaltenwerte ist der obere Grenzwert für den ersten Histogrammschritt.
   
 Das folgende Diagramm zeigt ein Histogramm mit sechs Schritten. Der Bereich links vom ersten oberen Grenzwert ist der erste Schritt.
   
@@ -161,33 +161,33 @@ Der Abfrageoptimierer verwendet Dichten, um Kardinalitätsschätzungen für Abfr
 |(CustomerId, ItemId)|Zeilen mit übereinstimmenden Werten für CustomerId und ItemId|  
 |(CustomerId, ItemId, Price)|Zeilen mit übereinstimmenden Werten für CustomerId, ItemId und Price|  
   
-## <a name="restrictions"></a>Einschränkungen  
+## <a name="restrictions"></a>Restrictions  
  DBCC SHOW_STATISTICS stellt keine Statistik für räumliche oder speicheroptimierte xVelocity-columnstore-Indizes bereit.  
   
-## <a name="permissions-for-includessnoversionincludesssnoversion-mdmd-and-includesssdsincludessssds-mdmd"></a>Berechtigungen für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und[!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
-Zum Anzeigen des statistikobjekts muss der Benutzer Besitzer der Tabelle, oder der Benutzer muss ein Mitglied der `sysadmin` festen Serverrolle, die `db_owner` festen Datenbankrolle oder der `db_ddladmin` festen Datenbankrolle "".
+## <a name="permissions-for-includessnoversionincludesssnoversion-mdmd-and-includesssdsincludessssds-mdmd"></a>Berechtigungen für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
+Zum Anzeigen des Statistikobjekts muss der Benutzer Besitzer der Tabelle oder Mitglied der festen Serverrolle `sysadmin` bzw. der festen Datenbankrollen `db_owner` oder `db_ddladmin` sein.
   
-[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]SP1 werden die und ermöglicht es Benutzern mit SELECT-Berechtigung, um diesen Befehl verwenden. Die folgenden Voraussetzungen müssen erfüllt sein, damit der Befehl erfolgreich mit SELECT-Berechtigung ausgeführt werden kann:
+Durch [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 werden die Berechtigungseinschränkungen gelockert, sodass Benutzer mit SELECT-Berechtigung in der Lage sind, diesen Befehl auszuführen. Die folgenden Voraussetzungen müssen erfüllt sein, damit der Befehl erfolgreich mit SELECT-Berechtigung ausgeführt werden kann:
 -   Die Benutzer benötigen eine Zugriffsberechtigung für alle Spalten im Statistikobjekt.  
 -   Die Benutzer benötigen eine Zugriffsberechtigung für alle Spalten in einer Filterbedingung (falls vorhanden).  
--   Die Tabelle eine Sicherheitsrichtlinie auf Zeilenebene nicht möglich.  
+-   Die Tabelle kann keine Sicherheitsrichtlinie auf Zeilenebene haben.  
   
 Um dieses Verhalten zu deaktivieren, verwenden Sie das Ablaufverfolgungsflag 9485.
   
-## <a name="permissions-for-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Berechtigungen für [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] und[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-DBCC SHOW_STATISTICS erfordert SELECT-Berechtigung für die Tabelle oder die Mitgliedschaft in einer der folgenden:
+## <a name="permissions-for-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Berechtigungen für [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+DBCC SHOW_STATISTICS erfordert eine SELECT-Berechtigung in der Tabelle oder Mitgliedschaft in einer der folgenden Rollen:
 -   Feste Serverrolle sysadmin  
--   feste Datenbankrolle "Db_owner"  
--   feste Datenbankrolle "Db_ddladmin"  
+-   Feste Datenbankrolle db_owner  
+-   Feste Datenbankrolle db_ddladmin  
   
-## <a name="limitations-and-restrictions-for-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Einschränkungen für [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] und[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-DBCC SHOW_STATISTICS Zeigt Statistiken, die in der Shell-Datenbank auf der Ebene des Steuerelements gespeichert. Werden nicht angezeigt, die von automatisch erstellten Statistiken [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf den Serverknoten.
+## <a name="limitations-and-restrictions-for-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Einschränkungen für [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+DBCC SHOW_STATISTICS zeigt Statistiken an, die in der Shell-Datenbank auf der Ebene des Steuerelements gespeichert sind. Statistiken die automatisch von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf den Computeknoten erstellt wurden, werden nicht angezeigt.
   
-DBCC SHOW_STATISTICS wird in externen Tabellen nicht unterstützt.
+DBCC SHOW_STATISTICS wird nicht auf externen Tabellen unterstützt.
   
-## <a name="examples-includessnoversionincludesssnoversion-mdmd-and-includesssdsincludessssds-mdmd"></a>Beispiele: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und[!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
+## <a name="examples-includessnoversionincludesssnoversion-mdmd-and-includesssdsincludessssds-mdmd"></a>Beispiele: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
 ### <a name="a-returning-all-statistics-information"></a>A. Zurückgeben aller Statistikinformationen  
-Das folgende Beispiel zeigt alle Statistikinformationen für die `AK_Address_rowguid` Index, der die `Person.Address` -Tabelle in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] Datenbank.
+Im folgenden Beispiel werden alle Statistikinformationen für den Index `AK_Address_rowguid` der Tabelle `Person.Address` in der Datenbank [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] angezeigt.
   
 ```sql
 DBCC SHOW_STATISTICS ("Person.Address", AK_Address_rowguid);  
@@ -195,16 +195,16 @@ GO
 ```  
   
 ### <a name="b-specifying-the-histogram-option"></a>B. Angeben der HISTOGRAM-Option  
-Dies schränkt die Statistikinformationen für den Histogrammdaten für Customer_LastName angezeigt.
+Dies beschränkt die für Customer_LastName angezeigten Statistikinformationen auf die HISTOGRAM-Daten.
   
 ```sql
 DBCC SHOW_STATISTICS ("dbo.DimCustomer",Customer_LastName) WITH HISTOGRAM;  
 GO  
 ```  
   
-## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] und[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-### <a name="c-display-the-contents-of-one-statistics-object"></a>C. Zeigt den Inhalt der eine Statistik-Objekt  
- Das folgende Beispiel zeigt den Inhalt der Customer_LastName Statistiken für die DimCustomer-Tabelle.  
+## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
+### <a name="c-display-the-contents-of-one-statistics-object"></a>C. Anzeigen der Inhalte eine Statistikobjekts  
+ Im folgenden Beispiel werden die Inhalte der Customer_LastName-Statistiken in der Tabelle „DimCustomer“ angezeigt.  
   
 ```sql
 -- Uses AdventureWorks  
@@ -216,11 +216,11 @@ DBCC SHOW_STATISTICS ("dbo.DimCustomer",Customer_LastName);
 GO  
 ```  
   
-Die Ergebnisse zeigen die Header, density_vector und Teil des Histogramms.
+Die Ergebnisse zeigen den Header, den Dichtevektor und einen Teil des Histogramms an.
   
-![Führt DBCC SHOW_STATISTICS](../../t-sql/database-console-commands/media/aps-sql-dbccshow-statistics.JPG "Ergebnisse zu DBCC SHOW_STATISTICS")
+![DBCC SHOW_STATISTICS-Ergebnisse](../../t-sql/database-console-commands/media/aps-sql-dbccshow-statistics.JPG "DBCC SHOW_STATISTICS results")
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Statistik](../../relational-databases/statistics/statistics.md)  
 [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)  
 [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)  

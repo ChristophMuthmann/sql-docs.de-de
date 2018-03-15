@@ -1,5 +1,5 @@
 ---
-title: APPLOCK_MODE (Transact-SQL) | Microsoft Docs
+title: APPLOCK_MODE (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -48,14 +48,14 @@ APPLOCK_MODE( 'database_principal' , 'resource_name' , 'lock_owner' )
 ```  
   
 ## <a name="arguments"></a>Argumente  
-"*Database_principal*"  
-Der Benutzer, die Rolle oder die Anwendungsrolle, dem bzw. der Berechtigungen für Objekte in einer Datenbank erteilt werden können. Der Aufrufer der Funktion muss ein Mitglied sein *Database_principal*, Dbo oder Db_owner festen Datenbankrolle um die Funktion erfolgreich aufzurufen.
+'*database_principal*'  
+Der Benutzer, die Rolle oder die Anwendungsrolle, dem bzw. der Berechtigungen für Objekte in einer Datenbank erteilt werden können. Um eine Funktion erfolgreich aufzurufen, muss die aufrufende Funktion Mitglied einer der folgenden festen Datenbankrollen sein: *database_principal*, „dbo“ oder „db_owner“.
   
-"*Resource_name*"  
-Der Name einer Sperrressource, der von der Clientanwendung angegeben wird. Die Anwendung muss sicherstellen, dass der Ressourcenname eindeutig ist. Der angegebene Name wird intern als Hashwert in einem Wert gespeichert, der im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Sperren-Manager gespeichert werden kann. *Resource_name*ist **nvarchar(255)** hat keinen Standardwert. *Resource_name* binäre verglichen und Groß-/Kleinschreibung beachtet, unabhängig von den sortierungseinstellungen der aktuellen Datenbank.
+'*resource_name*'  
+Der Name einer Sperrressource, der von der Clientanwendung angegeben wird. Die Anwendung muss sicherstellen, dass der Ressourcenname eindeutig ist. Der angegebene Name wird intern als Hashwert in einem Wert gespeichert, der im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Sperren-Manager gespeichert werden kann. *resource_name* ist vom Datentyp **nvarchar(255)** und besitzt keinen Standardwert. *resource_name* unterliegt dem Binärvergleich. Daher muss die Groß-/Kleinschreibung unabhängig von den Sortierungseinstellungen der aktuellen Datenbank berücksichtigt werden.
   
-"*Lock_owner*"  
-Der Besitzer der Sperre ist die *Lock_owner* Wert, der beim Anfordern der Sperre. *Lock_owner* ist **nvarchar(32)**, und der Wert kann entweder **Transaktion** (Standard) oder **Sitzung**.
+'*lock_owner*'  
+Der Besitzer der Sperre. Dabei handelt es sich um den Wert von *lock_owner* beim Anfordern der Sperre. *lock_owner* ist vom Datentyp **nvarchar(32)**. Der Wert kann **Transaktion** (Standard) oder **Sitzung** entsprechen.
   
 ## <a name="return-types"></a>Rückgabetypen
 **nvarchar(32)**
@@ -67,12 +67,12 @@ Gibt den Sperrmodus zurück, der vom Besitzer der Sperre für eine bestimmte Anw
 |-|-|-|  
 |**NoLock**|**Update**|**\*SharedIntentExclusive**|  
 |**IntentShared**|**IntentExclusive**|**\*UpdateIntentExclusive**|  
-|**Freigegebene**|**Exclusive**||  
+|**Shared**|**Exclusive**||  
   
 *Dieser Sperrmodus ist eine Kombination aus anderen Sperrmodi und kann nicht mithilfe von sp_getapplock explizit aktiviert werden.
   
 ## <a name="function-properties"></a>Funktionseigenschaften
-**Nicht deterministisch**
+**Nondeterministic**
   
 **Nonindexable**
   
@@ -137,8 +137,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>Siehe auch
-[APPLOCK_TEST &#40; Transact-SQL &#41;](../../t-sql/functions/applock-test-transact-sql.md)  
-[Sp_getapplock &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-getapplock-transact-sql.md)  
-[Sp_releaseapplock &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-releaseapplock-transact-sql.md)
+[APPLOCK_TEST &#40;Transact-SQL&#41;](../../t-sql/functions/applock-test-transact-sql.md)  
+[sp_getapplock &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-getapplock-transact-sql.md)  
+[sp_releaseapplock &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-releaseapplock-transact-sql.md)
   
   

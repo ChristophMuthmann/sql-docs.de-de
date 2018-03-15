@@ -1,5 +1,5 @@
 ---
-title: "Bogenmaß (Radiant) (Transact-SQL) | Microsoft Docs"
+title: RADIANS (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
@@ -46,7 +46,7 @@ RADIANS ( numeric_expression )
   
 ## <a name="arguments"></a>Argumente  
  *numeric_expression*  
- Ist ein [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) der genauen numerischen oder ungefähren numerischen Datentypkategorie, mit Ausnahme der **Bit** -Datentyp.  
+ Ein [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) der genauen numerischen oder ungefähren numerischen Datentypkategorie, mit Ausnahme des **bit**-Datentyps.  
   
 ## <a name="return-types"></a>Rückgabetypen  
  Gibt denselben Typ wie *Numerischer Ausdruck*zurück.  
@@ -125,13 +125,13 @@ The RADIANS of the angle is: 3.44022
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [CAST und CONVERT &#40; Transact-SQL &#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
- [Decimal und Numeric &#40; Transact-SQL &#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)   
- [Float und Real &#40; Transact-SQL &#41;](../../t-sql/data-types/float-and-real-transact-sql.md)   
- [Int, Bigint, Smallint und Tinyint &#40; Transact-SQL &#41;](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)   
- [Mathematische Funktionen &#40; Transact-SQL &#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)   
- [Money und Smallmoney &#40; Transact-SQL &#41;](../../t-sql/data-types/money-and-smallmoney-transact-sql.md)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [CAST und CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
+ [decimal und numeric &#40;Transact-SQL&#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)   
+ [float und real &#40;Transact-SQL&#41;](../../t-sql/data-types/float-and-real-transact-sql.md)   
+ [int, bigint, smallint und tinyint &#40;Transact-SQL&#41;](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)   
+ [Mathematische Funktionen &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)   
+ [money und smallmoney &#40;Transact-SQL&#41;](../../t-sql/data-types/money-and-smallmoney-transact-sql.md)  
   
   
 

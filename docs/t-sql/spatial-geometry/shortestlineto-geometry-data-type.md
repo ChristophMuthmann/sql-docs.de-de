@@ -1,5 +1,5 @@
 ---
-title: ShortestLineTo (Geometry-Datentyp) | Microsoft Docs
+title: ShortestLineTo (geometry-Datentyp) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -45,11 +45,11 @@ Gibt eine **LineString** -Instanz mit zwei Punkten zurück, die den kürzesten A
  Die zweite **geometry** -Instanz, für die von der aufrufenden **geometry** -Instanz versucht wird, den kürzesten Abstand zu bestimmen.  
   
 ## <a name="return-types"></a>Rückgabetypen  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Rückgabetyp: **Geometrie**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Rückgabetyp: **geometry**  
   
  CLR-Rückgabetyp: **SqlGeometry**  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Die Methode gibt eine **LineString** -Instanz mit Endpunkten zurück, die auf den Rändern der beiden Instanzen von **geometry** liegen, die verglichen werden und sich nicht überschneiden. Die Länge der **LineString** -Instanz, die zurückgegeben wurde, entspricht dem geringsten Abstand zwischen den beiden **geometry** -Instanzen. Wenn sich die beiden Instanzen von **LineString** überschneiden, wird eine leere Instanz von **geometry** zurückgegeben.  
   
 ## <a name="examples"></a>Beispiele  
@@ -72,8 +72,8 @@ Gibt eine **LineString** -Instanz mit zwei Punkten zurück, die den kürzesten A
  SELECT @g1.ShortestLineTo(@g2).ToString();
  ```  
   
-## <a name="see-also"></a>Siehe auch  
- [ShortestLineTo &#40; Geography-Datentyp &#41;](../../t-sql/spatial-geography/shortestlineto-geography-data-type.md)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [ShortestLineTo &#40;geography-Datentyp&#41;](../../t-sql/spatial-geography/shortestlineto-geography-data-type.md)  
   
   
 

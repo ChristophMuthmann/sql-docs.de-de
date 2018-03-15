@@ -1,5 +1,5 @@
 ---
-title: STRING_AGG (Transact-SQL) | Microsoft Docs
+title: STRING_AGG (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 04/19/2017
 ms.prod: sql-non-specified
@@ -32,7 +32,7 @@ ms.lasthandoff: 01/18/2018
 # <a name="stringagg-transact-sql"></a>STRING_AGG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
-Verkettet die Werte von Zeichenfolgenausdrücke durch und platziert die Trennzeichenwerte dazwischen. Das Trennzeichen wird am Ende der Zeichenfolge nicht hinzugefügt werden.
+Verkettet die Werte von Zeichenfolgenausdrücken und platziert Trennzeichenwerte zwischen diesen. Das Trennzeichen wird am Ende einer Zeichenfolge nicht hinzugefügt.
  
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,51 +47,51 @@ STRING_AGG ( expression, separator ) [ <order_clause> ]
 
 ## <a name="arguments"></a>Argumente 
 
-*separator*  
-Ist ein [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) von `NVARCHAR` oder `VARCHAR` Typ, der verwendet wird, als Trennzeichen für verkettet Zeichenfolgen. Sie können literal oder eine Variable sein. 
+*Trennzeichen*  
+Ein [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) vom Typ `NVARCHAR` oder `VARCHAR`, der als Trennzeichen für verkettete Zeichenfolgen verwendet wird. Dieser kann ein Literal oder eine Variable sein. 
 
 *expression*  
-Ist ein [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) eines beliebigen Typs. Ausdrücke werden in konvertiert `NVARCHAR` oder `VARCHAR` Typen während der Verkettung. Nicht-Zeichenfolgen-Datentypen werden in konvertiert `NVARCHAR` Typ.
+Ein [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) beliebigen Typs. Ausdrücke werden während der Verkettung in `NVARCHAR`- oder `VARCHAR`-Typen konvertiert. Typen, die keine Zeichenfolgen darstellen, werden in den `NVARCHAR`-Typ konvertiert.
 
 
 <order_clause>   
-Geben Sie optional Reihenfolge von verketteten Ergebnissen mit `WITHIN GROUP` Klausel:
+Geben Sie mithilfe der `WITHIN GROUP`-Klausel optional die Reihenfolge der verketteten Ergebnisse an:
 ```
 WITHIN GROUP ( ORDER BY <order_by_expression_list> [ ASC | DESC ] )
 ```   
 <order_by_expression_list>   
  
-  Eine Liste der nicht konstant [Ausdrücke](../../t-sql/language-elements/expressions-transact-sql.md) , die zum Sortieren der Ergebnisse verwendet werden kann. Nur ein `order_by_expression` pro Abfrage zulässig ist. Die Standardsortierreihenfolge ist Aufsteigend.   
+  Eine Liste von nicht konstanten [Ausdrücken](../../t-sql/language-elements/expressions-transact-sql.md), die für das Sortieren von Ergebnissen verwendet werden kann. Nur ein `order_by_expression`-Element ist pro Abfrage zulässig. Standardmäßig wird die Sortierung in aufsteigender Reihenfolge vorgenommen.   
   
 
 ## <a name="return-types"></a>Rückgabetypen 
 
-Der Rückgabetyp ist, richtet sich nach der ersten Argument (Ausdruck). Wenn Eingabeargument Zeichenfolgentyp handelt (`NVARCHAR`, `VARCHAR`), Ergebnistyp wird als Eingabetyp identisch sein. Die folgende Tabelle enthält die automatische Konvertierung:  
+Der Rückgabetyp hängt vom ersten Argument (Ausdruck) ab. Wenn das Eingabeargument ein Zeichenfolgentyp (`NVARCHAR`, `VARCHAR`) ist, entspricht der Ergebnistyp dem Eingabetyp. In der folgenden Tabelle werden die automatischen Konvertierungen aufgeführt:  
 
-|Eingabeausdruck-Typ |Ergebnis | 
+|Typ des Eingabeausdrucks |Ergebnis | 
 |-------|-------|
 |NVARCHAR(MAX) |NVARCHAR(MAX) |
 |VARCHAR(MAX) |VARCHAR(MAX) |
-|NVARCHAR (1... 4000) |NVARCHAR(4000) |
-|VARCHAR (1... 8000) |VOM DATENTYP VARCHAR(8000) |
-|"Int", "bigint", "smallint", "tinyint", numeric, float, real, Bit, Decimal, Smallmoney, Money, Datetime, datetime2, |NVARCHAR(4000) |
+|NVARCHAR(1…4000) |NVARCHAR(4000) |
+|VARCHAR(1…8000) |VARCHAR(8000) |
+|int, bigint, smallint, tinyint, numeric, float, real, bit, decimal, smallmoney, money, datetime, datetime2 |NVARCHAR(4000) |
 
 
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  
-`STRING_AGG`ist eine Aggregatfunktion, die alle Ausdrücke aus Zeilen und verkettet diese in einer einzigen Zeichenfolge, an. Expression-Werte werden implizit in Zeichenfolgentypen konvertiert und dann verkettet. Die implizite Konvertierung in Zeichenfolgen erfolgt basierend auf den vorhandenen Regeln für Datentypkonvertierungen. Weitere Informationen zu datentypkonvertierungen finden Sie unter [CAST und CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md). 
+Bei `STRING_AGG` handelt es sich um eine Aggregatfunktion, die alle Ausdrücke aus Zeilen zu einer einzelnen Zeichenfolge verkettet. Ausdruckswerte werden implizit in Zeichenfolgentypen konvertiert und dann verkettet. Die implizite Konvertierung in Zeichenfolgen erfolgt basierend auf den vorhandenen Regeln für Datentypkonvertierungen. Weitere Informationen zu Datentypkonvertierungen finden Sie unter [CAST und CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md). 
 
-Wenn der Eingabeausdruck Typ `VARCHAR`, das Trennzeichen nicht mit Typ `NVARCHAR`. 
+Wenn der Eingabeausdruck den Typ `VARCHAR` aufweist, kann das Trennzeichen nicht vom Typ `NVARCHAR` sein. 
 
-NULL-Werte werden ignoriert, und das entsprechende Trennzeichen nicht hinzugefügt. Um ein Platzhalter für null-Werte zurückzugeben, verwenden die `ISNULL` wie in Beispiel b-Funktion
+NULL-Werte werden ignoriert, und das entsprechende Trennzeichen wird nicht hinzugefügt. Verwenden Sie wie in Beispiel B dargestellt die `ISNULL`-Funktion, um einen Platzhalter für NULL-Werte zurückzugeben.
 
-`STRING_AGG`in jedem Kompatibilitätsgrad ist verfügbar.
+`STRING_AGG` ist in jedem Kompatibilitätsgrad verfügbar.
 
 
 ## <a name="examples"></a>Beispiele 
 
-### <a name="a-generate-list-of-names-separated-in-new-lines"></a>A. Generieren Sie Liste der Namen in neue Zeilen getrennte 
-Im folgenden Beispiel wird eine Liste der Namen in eine Zelle eines einzelnen Resultsets durch Zeilenumbrüche voneinander getrennt.
+### <a name="a-generate-list-of-names-separated-in-new-lines"></a>A. Generieren einer Liste von Namen, die in neuen Zeilen getrennt sind 
+Im folgenden Beispiel wird eine Liste von Namen in einer einzelnen Ergebniszelle erstellt, die mit Wagenrückläufen getrennt sind.
 ```sql
 SELECT STRING_AGG (FirstName, CHAR(13)) AS csv 
 FROM Person.Person; 
@@ -102,13 +102,13 @@ FROM Person.Person;
 |--- |
 |Syed <br />Catherine <br />Kim <br />Kim <br />Kim <br />Hazem <br />... | 
 
-`NULL`Werte in gefunden `name` Zellen werden nicht im Ergebnis zurückgegeben.   
+`NULL`-Werte, die in `name`-Zellen gefunden werden, werden im Ergebnis nicht zurückgegeben.   
 > [!NOTE]  
->  Wenn im Management Studio-Abfrage-Editor verwenden die **Ergebnisse in Raster** Option kann nicht der Wagenrücklauf implementieren. Wechseln Sie zur **Ergebnisse in Text** um das Resultset anzuzeigen richtig festgelegt.   
+>  Wenn Sie den Abfrage-Editor von Management Studio verwenden, kann die Option **Ergebnisse in Raster** den Wagenrücklauf nicht implementieren. Wechseln Sie zu **Ergebnisse in Text**, um das Resultset ordnungsgemäß anzuzeigen.   
 
 
-### <a name="b-generate-list-of-names-separated-with-comma-without-null-values"></a>B. Liste der Namen getrennt durch Kommas ohne NULL-Werte zu generieren   
-Im folgenden Beispiel ersetzt null-Werte mit "N/v" und gibt die Namen getrennt durch Kommas in einer Zelle ein Einzelergebnis zurück.  
+### <a name="b-generate-list-of-names-separated-with-comma-without-null-values"></a>B. Generieren einer Liste von Namen ohne NULL-Werte, die mit Trennzeichen getrennt ist   
+Im folgenden Beispiel werden NULL-Werte durch „N/A“ ersetzt. Weiterhin werden die Namen durch Trennzeichen getrennt in einer einzelnen Ergebniszelle zurückgegeben.  
 ```sql
 SELECT STRING_AGG ( ISNULL(FirstName,'N/A'), ',') AS csv 
 FROM Person.Person; 
@@ -117,12 +117,12 @@ FROM Person.Person;
 [!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]
  
 
-|Csv | 
+|CSV | 
 |--- |
-|John, n/v, Mike, Peter, n/v, n/v, Alice und Bob |  
+|John,N/A,Mike,Peter,N/A,N/A,Alice,Bob |  
 
 
-### <a name="c-generate-comma-separated-values"></a>C. Durch Trennzeichen getrennten Werten zu generieren 
+### <a name="c-generate-comma-separated-values"></a>C. Generieren von durch Trennzeichen getrennten Werten 
 
 ```sql   
 SELECT 
@@ -134,15 +134,15 @@ FROM Person.Person;
 
 |Namen | 
 |--- |
-|Ken Sánchez (8 Februar 2003 12:00 Uhr) <br />Terri Duffy (24. Februar 2002 12:00 Uhr) <br />Roberto Tamburello (5. Dezember 2001 12:00 Uhr) <br />Rob Walter (29. Dezember 2001 12:00 Uhr) <br />... |
+|Ken Sánchez (Feb 8 2003 12:00AM) <br />Terri Duffy (Feb 24 2002 12:00AM) <br />Roberto Tamburello (Dec 5 2001 12:00AM) <br />Rob Walters (Dec 29 2001 12:00AM) <br />... |
 
 > [!NOTE]  
->  Wenn im Management Studio-Abfrage-Editor verwenden die **Ergebnisse in Raster** Option kann nicht der Wagenrücklauf implementieren. Wechseln Sie zur **Ergebnisse in Text** um das Resultset anzuzeigen richtig festgelegt.   
+>  Wenn Sie den Abfrage-Editor von Management Studio verwenden, kann die Option **Ergebnisse in Raster** den Wagenrücklauf nicht implementieren. Wechseln Sie zu **Ergebnisse in Text**, um das Resultset ordnungsgemäß anzuzeigen.   
  
 
-### <a name="d-return-news-articles-with-related-tags"></a>D. Zurückgeben von Artikeln mit den zugehörigen tags 
+### <a name="d-return-news-articles-with-related-tags"></a>D. Zurückgeben von Artikeln mit zugehörigen Tags 
 
-Artikel und die Tags werden in verschiedenen Tabellen aufgeteilt. Entwickler möchte eine Zeile pro jeder Artikel mit allen zugeordneten Tags zurückgegeben. Verwenden folgende Abfrage: 
+Artikel und Tags werden in unterschiedliche Tabellen aufgeteilt. Der Entwickler möchte eine Zeile mit allen zugehörigen Tags pro Artikel zurückgeben. Dafür wird folgende Abfrage verwendet: 
 ```sql
 SELECT a.articleId, title, STRING_AGG (tag, ',') as tags 
 FROM dbo.Article AS a       
@@ -155,13 +155,13 @@ GROUP BY a.articleId, title;
 
 |articleId |title |Transponder |
 |--- |--- |--- |
-|172 |Abrufe geben schließen Wahlergebnisse |Politik, Umfragen, City Rat | 
-|176 |Neue autobahnmeilenleistung erwartet, dass eine Überlastung zu reduzieren. |NULL |
-|177 |Dogs weiterhin als Katzen gängigeren |Abrufe Tieren| 
+|172 |Umfragen deuten auf knappe Wahlergebnisse hin |politics,polls,city council | 
+|176 |Neue Autobahn soll Überlastung reduzieren |NULL |
+|177 |Hunde sind weiterhin beliebter als Katzen |polls,animals| 
 
-### <a name="e-generate-list-of-emails-per-towns"></a>E. Liste von e-Mail-Adressen pro brushville generieren
+### <a name="e-generate-list-of-emails-per-towns"></a>E. Generieren einer Liste von E-Mails pro Stadt
 
-Die folgende Abfrage sucht nach der e-Mail-Adressen von Mitarbeitern und gruppiert sie nach brushville: 
+Die folgende Abfrage sucht die E-Mail-Adressen der Angestellten und gruppiert diese nach Städten: 
 ```sql
 SELECT town, STRING_AGG (email, ';') AS emails 
 FROM dbo.Employee 
@@ -170,16 +170,16 @@ GROUP BY town;
 
 [!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]
 
-|Stadt |e-Mail-Nachrichten |
+|Stadt |E-Mail-Adresse |
 |--- |--- |
 |Seattle |syed0@adventure-works.com;catherine0@adventure-works.com;kim2@adventure-works.com |
 |LA |sam1@adventure-works.com;hazem0@adventure-works.com |
 
-E-Mail-Nachrichten zurückgegeben, in die e-Mail-Nachrichten, die Spalte zum Senden von e-Mails an die Gruppe von Personen arbeiten in einigen bestimmten brushville direkt verwendet werden kann. 
+Die E-Mail-Adressen, die in der Spalte „E-Mail-Adresse“ zurückgegeben werden, können direkt verwendet werden, um E-Mails an mehrere Personen zu senden, die in bestimmten Städten arbeiten. 
 
-### <a name="f-generate-a-sorted-list-of-emails-per-towns"></a>F. Eine sortierte Liste von e-Mail-Adressen pro brushville generieren   
+### <a name="f-generate-a-sorted-list-of-emails-per-towns"></a>F. Generieren einer sortierten Liste von E-Mails pro Stadt   
    
-Ähnlich wie bei den vorherigen Beispiel die folgende Abfrage sucht nach der e-Mail-Adressen von Mitarbeitern, gruppiert sie nach der Stadt und die e-Mail-Nachrichten in alphabetischer Reihenfolge sortiert:   
+Ähnlich wie beim vorherigen Beispiel sucht die folgende Abfrage die E-Mail-Adressen der Angestellten, gruppiert diese nach Stadt und sortiert die E-Mail-Adressen alphabetisch:   
 ```sql
 SELECT town, 
     STRING_AGG (email, ';') WITHIN GROUP (ORDER BY email ASC) AS emails 
@@ -189,13 +189,13 @@ GROUP BY town;
    
 [!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]
 
-|Stadt |e-Mail-Nachrichten |
+|Stadt |E-Mail-Adresse |
 |--- |--- |
 |Seattle |catherine0@adventure-works.com;kim2@adventure-works.com;syed0@adventure-works.com |
 |LA |hazem0@adventure-works.com;sam1@adventure-works.com |
 
 
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [CONCAT &#40;Transact-SQL&#41;](../../t-sql/functions/concat-transact-sql.md)  
  [CONCAT_WS &#40;Transact-SQL&#41;](../../t-sql/functions/concat-ws-transact-sql.md)  
  [FORMATMESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/formatmessage-transact-sql.md)  
@@ -205,6 +205,6 @@ GROUP BY town;
  [STRING_ESCAPE &#40;Transact-SQL&#41;](../../t-sql/functions/string-escape-transact-sql.md)  
  [STUFF &#40;Transact-SQL&#41;](../../t-sql/functions/stuff-transact-sql.md)  
  [TRANSLATE &#40;Transact-SQL&#41;](../../t-sql/functions/translate-transact-sql.md)  
- [Aggregatfunktionen &#40; Transact-SQL &#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)  
- [Zeichenfolgenfunktionen &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
+ [Aggregate Functions &#40;Transact-SQL&#41; (Aggregatfunktionen &#40;Transact-SQL&#41;)](../../t-sql/functions/aggregate-functions-transact-sql.md)  
+ [String Functions &#40;Transact-SQL&#41; (Zeichenfolgenfunktionen &#40;Transact-SQL&#41;)](../../t-sql/functions/string-functions-transact-sql.md)  
 

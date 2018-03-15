@@ -1,5 +1,5 @@
 ---
-title: STDifference (Geometry-Datentyp) | Microsoft Docs
+title: STDifference (geometry-Datentyp) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -48,11 +48,11 @@ Gibt ein Objekt zurück, das die Punktmenge einer **geometry** -Instanz darstell
  Eine andere **geometry** -Instanz, die angibt, welche Punkte aus der Instanz zu entfernen sind, in der `STDifference()` aufgerufen wird.  
   
 ## <a name="return-types"></a>Rückgabetypen  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Rückgabetyp: **Geometrie**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Rückgabetyp: **geometry**  
   
  CLR-Rückgabetyp: **SqlGeometry**  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Diese Methode gibt immer NULL zurück, wenn die SRIDs (Spatial Reference IDs) der **geometry** -Instanzen nicht übereinstimmen.   Im Ergebnis können nur dann Kreisbogensegmente enthalten sein, wenn die Eingabeinstanzen auch Kreisbogensegmente enthalten.  
   
 ## <a name="examples"></a>Beispiele  
@@ -78,7 +78,7 @@ SELECT @g.STDifference(@h).ToString();
  SELECT @h.STDifference(@g).ToString(), @g.STDifference(@h).ToString();
  ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [OGC-Methoden für geometry-Instanzen](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

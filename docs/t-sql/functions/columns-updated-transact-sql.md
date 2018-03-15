@@ -1,5 +1,5 @@
 ---
-title: COLUMNS_UPDATED (Transact-SQL) | Microsoft Docs
+title: COLUMNS_UPDATED (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -50,12 +50,12 @@ COLUMNS_UPDATED ( )
 ## <a name="return-types"></a>Rückgabetypen
 **varbinary**
   
-## <a name="remarks"></a>Hinweise  
-COLUMNS_UPDATED testet, ob UPDATE- oder INSERT-Aktionen für mehrere Spalten ausgeführt wurden. Verwenden Sie zum Testen für eine Spalte wird, Update- oder INSERT versucht [UPDATE()](../../t-sql/functions/update-trigger-functions-transact-sql.md).
+## <a name="remarks"></a>Remarks  
+COLUMNS_UPDATED testet, ob UPDATE- oder INSERT-Aktionen für mehrere Spalten ausgeführt wurden. Verwenden Sie [UPDATE()](../../t-sql/functions/update-trigger-functions-transact-sql.md), um zu testen, ob UPDATE- oder INSERT-Aktionen für eine einzelne Spalte ausgeführt wurden.
   
 COLUMNS_UPDATED gibt mindestens ein Byte in der Reihenfolge von links nach rechts zurück, wobei das unwichtigste Bit in jedem Byte ganz rechts steht. Das Bit ganz rechts des Bytes ganz links stellt die erste Spalte in der Tabelle dar; das nächste Bit links davon stellt die zweite Spalte dar usw. COLUMNS_UPDATED gibt mehrere Bytes zurück, falls die Tabelle, für die der Trigger erstellt wird, mehr als acht Spalten enthält, wobei das unwichtigste Byte ganz links steht. COLUMNS_UPDATED gibt TRUE für alle Spalten in INSERT-Aktionen zurück, weil in die Spalten entweder explizite Werte oder implizite (NULL-) Werte eingefügt werden.
   
-Um zu testen, ob in bestimmten Spalten Updates oder Einfügungen vorgenommen wurden, verwenden Sie die Syntax mit einem bitweisen Operator und einer ganzzahligen Bitmaske der zu testenden Spalten. Die **t1** -Tabelle enthält beispielsweise die Spalten **C1**, **C2**, **C3**, **C4**und **C5**. So überprüfen, dass die Spalten **C2**, **C3**, und **C4** aktualisiert wurden (mit der Tabelle **t1** müssen einen UPDATE-Trigger), verwenden Sie die Syntax mit **& 14**. So testen Sie, ob nur Spalte **C2** wird aktualisiert wurde, geben **& 2**.
+Um zu testen, ob in bestimmten Spalten Updates oder Einfügungen vorgenommen wurden, verwenden Sie die Syntax mit einem bitweisen Operator und einer ganzzahligen Bitmaske der zu testenden Spalten. Die **t1** -Tabelle enthält beispielsweise die Spalten **C1**, **C2**, **C3**, **C4**und **C5**. Wenn Sie überprüfen möchten, ob die Spalten **C2**, **C3** und **C4** alle aktualisiert wurden (die Tabelle **t1** weist dabei einen UPDATE-Trigger auf), verwenden Sie die Syntax mit **& 14**. Geben Sie **& 2** ein, um zu testen, ob nur die Spalte **C2** aktualisiert wurde.
   
 COLUMNS_UPDATED kann überall innerhalb eines INSERT- oder UPDATE-Triggers von [!INCLUDE[tsql](../../includes/tsql-md.md)] verwendet werden.
   
@@ -211,8 +211,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>Siehe auch
-[Bitweise Operatoren &#40; Transact-SQL &#41;](../../t-sql/language-elements/bitwise-operators-transact-sql.md)  
+[Bitwise Operators &#40;Transact-SQL&#41; (Bitweise Operatoren &#40;Transact-SQL&#41;)](../../t-sql/language-elements/bitwise-operators-transact-sql.md)  
 [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)  
-[UPDATE &#40; &#41; &#40; Transact-SQL &#41;](../../t-sql/functions/update-trigger-functions-transact-sql.md)
+[UPDATE&#40;&#41; &#40;Transact-SQL&#41;](../../t-sql/functions/update-trigger-functions-transact-sql.md)
   
   

@@ -1,5 +1,5 @@
 ---
-title: DATALENGTH (Transact-SQL) | Microsoft Docs
+title: DATALENGTH (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 07/29/2017
 ms.prod: sql-non-specified
@@ -53,10 +53,10 @@ DATALENGTH ( expression )
 Ist ein [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) eines beliebigen Datentyps.
   
 ## <a name="return-types"></a>Rückgabetypen
-**"bigint"** Wenn *Ausdruck* wird von der **varchar(max)**, **nvarchar(max)** oder **varbinary(max)** -Datentypen; andernfalls **Int**.
+**bigint**, wenn *expression* vom Datentyp **varchar(max)**, **nvarchar(max)** oder **varbinary(max)** ist; andernfalls **int**.
   
-## <a name="remarks"></a>Hinweise  
-DATALENGTH ist besonders hilfreich bei **Varchar**, **Varbinary**, **Text**, **Image**, **Nvarchar**, und **Ntext** Datentypen, da diese Datentypen Daten variabler Länge speichern können.
+## <a name="remarks"></a>Remarks  
+DATALENGTH ist besonders nützlich für die Datentypen **varchar**, **varbinary**, **text**, **image**, **nvarchar** und **ntext**, da diese Daten variabler Länge speichern können.
   
 DATALENGTH von NULL ist NULL.
   
@@ -76,10 +76,10 @@ GO
 ```  
   
 ## <a name="see-also"></a>Siehe auch
-[LEN &#40; Transact-SQL &#41;](../../t-sql/functions/len-transact-sql.md)  
+[LEN &#40;Transact-SQL&#41;](../../t-sql/functions/len-transact-sql.md)  
 [CAST und CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
 [Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
-[Systemfunktionen &#40; Transact-SQL &#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)
+[Systemfunktionen &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)
   
   
 

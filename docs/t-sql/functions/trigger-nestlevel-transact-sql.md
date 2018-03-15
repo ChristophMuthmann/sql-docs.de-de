@@ -1,5 +1,5 @@
 ---
-title: TRIGGER_NESTLEVEL (Transact-SQL) | Microsoft Docs
+title: TRIGGER_NESTLEVEL (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -49,18 +49,18 @@ TRIGGER_NESTLEVEL ( [ object_id ] , [ 'trigger_type' ] , [ 'trigger_event_catego
   
 ## <a name="arguments"></a>Argumente  
  *object_id*  
- Die Objekt-ID eines Triggers. Wenn *Object_id* angegeben wird, wie oft die angegebene Trigger ausgeführt wurde, für die Anweisung zurückgegeben wird. Wenn *Object_id* nicht angegeben wird, wie oft alle Trigger für die Anweisung zurückgegeben wird ausgeführt wurden.  
+ Die Objekt-ID eines Triggers. Wenn *object_id* angegeben wird, wird die Häufigkeit zurückgegeben, mit der der angegebene Trigger für die Anweisung ausgeführt wurde. Wenn *object_id* nicht angegeben wird, wird die Häufigkeit zurückgegeben, mit der alle Trigger für die Anweisung ausgeführt wurden.  
   
- **"** *Trigger_type* **"**  
- Gibt an, ob TRIGGER_NESTLEVEL auf AFTER- oder INSTEAD OF-Trigger angewendet werden soll. Geben Sie **AFTER** für AFTER-Trigger. Geben Sie **IOT** für INSTEAD OF-Trigger. Wenn *Trigger_type* angegeben wird, *Trigger_event_category* muss auch angegeben werden.  
+ **'** *trigger_type* **'**  
+ Gibt an, ob TRIGGER_NESTLEVEL auf AFTER- oder INSTEAD OF-Trigger angewendet werden soll. Geben Sie **AFTER** für AFTER-Trigger an. Geben Sie **IOT** für INSTEAD OF-Trigger an. Wenn *trigger_type* angegeben ist, muss auch *trigger_event_category* angegeben sein.  
   
- **"** *Trigger_event_category* **"**  
- Gibt an, ob TRIGGER_NESTLEVEL auf DML- oder DDL-Trigger angewendet werden soll. Geben Sie **DML** für DML-Trigger. Geben Sie **DDL** für DDL-Trigger. Wenn *Trigger_event_category* angegeben wird, *Trigger_type* muss auch angegeben werden. Beachten Sie, dass nur **AFTER** kann angegeben werden, mit **DDL**, da DDL-Trigger nur AFTER-Trigger werden können.  
+ **'** *trigger_event_category* **'**  
+ Gibt an, ob TRIGGER_NESTLEVEL auf DML- oder DDL-Trigger angewendet werden soll. Geben Sie **DML** für DML-Trigger an. Geben Sie **DDL** für DDL-Trigger an. Wenn *trigger_event_category* angegeben ist, muss auch *trigger_type* angegeben sein. Beachten Sie, dass nur **AFTER** für **DDL** angegeben werden kann, weil DDL-Trigger nur AFTER-Trigger sein können.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Wenn keine Parameter angegeben werden, gibt TRIGGER_NESTLEVEL die Gesamtanzahl von Triggern in der Aufrufliste zurück. Der Parameter selbst ist ebenfalls darin eingeschlossen. Es kann vorkommen, dass Parameter nicht angegeben werden, wenn ein Trigger Befehle ausführt, die das Auslösen eines anderen Triggers bewirken, oder wenn er eine Folge von ausgelösten Triggern erzeugt.  
   
- Um die Gesamtanzahl von Triggern in der Aufrufliste für einen bestimmten Trigger und eine bestimmte Ereigniskategorie zurückzugeben, geben *Object_id* = 0.  
+ Geben Sie *object_id* = 0 an, um die Gesamtanzahl von Triggern in der Aufrufliste für einen bestimmten Triggertyp und eine bestimmte Ereigniskategorie zurückzugeben.  
   
  Eine TRIGGER_NESTLEVEL-Anweisung gibt 0 zurück, wenn sie außerhalb eines Triggers ausgeführt wird und ein Parameter ungleich NULL ist.  
   
@@ -91,7 +91,7 @@ IF ( (SELECT trigger_nestlevel() ) > 5 )
       ('This statement nested over 5 levels of triggers.',16,-1)  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)  
   
   

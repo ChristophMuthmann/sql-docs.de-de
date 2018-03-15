@@ -1,5 +1,5 @@
-﻿---
-title: Legen Sie @local_variable (Transact-SQL) | Microsoft Docs
+---
+title: SET @local_variable (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="set-localvariable-transact-sql"></a>SET @local_variable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Legt die angegebene lokale Variable, die zuvor erstellt haben, mit der DECLARE @*Local_variable* -Anweisung mit dem angegebenen Wert.  
+  Legt die angegebene lokale Variable, die zuvor mit der Anweisung DECLARE @*local_variable* erstellt wurde, auf den angegebenen Wert fest.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -77,7 +77,7 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
   
 ## <a name="arguments"></a>Argumente  
  **@** *local_variable*  
- Der Name einer Variablen eines beliebigen Typs außer **Cursor**, **Text**, **Ntext**, **Image**, oder **Tabelle**. Variablennamen müssen mit einem at-Zeichen beginnen (**@**). Variablennamen müssen den Regeln für entsprechen [Bezeichner](../../relational-databases/databases/database-identifiers.md).  
+ Der Name einer Variablen eines beliebigen Typs mit Ausnahme von **cursor**, **text**, **ntext**, **image** oder **table**. Variablennamen müssen mit einem at-Zeichen (**@**) beginnen. Variablennamen müssen den Regel für [Bezeichner](../../relational-databases/databases/database-identifiers.md) entsprechen.  
   
  *property_name*  
  Eigenschaft eines benutzerdefinierten Typs.  
@@ -89,9 +89,9 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
  Der Name eines benutzerdefinierten CLR-Typs (Common Language Runtime).  
   
  { **.** | **::** }  
- Gibt eine Methode für einen benutzerdefinierten CLR-Typ an. Verwenden Sie z. B. für eine Instanzmethode (nicht statisch) einen Punkt (**.**). Verwenden Sie für eine statische Methode zwei Doppelpunkte (**::**). Zum Aufrufen einer Methode, Eigenschaft oder eines Felds eines CLR-benutzerdefinierten Typs müssen Sie über die EXECUTE-Berechtigung für den Typ verfügen.  
+ Gibt eine Methode für einen benutzerdefinierten CLR-Typ an. Verwenden Sie bei einer Instanzmethode (nicht statisch) einen Punkt (**.**). Verwenden Sie bei einer statischen Methode zwei Doppelpunkte(**::**). Zum Aufrufen einer Methode, Eigenschaft oder eines Felds eines CLR-benutzerdefinierten Typs müssen Sie über die EXECUTE-Berechtigung für den Typ verfügen.  
   
- *keine Variablenargumentlisten verwenden* **(** *Argument* [ **,**... *n* ] **)**  
+ *method_name* **(** *argument* [ **,**... *n* ] **)**  
  Eine Methode eines benutzerdefinierten Typs, der ein oder mehrere Argumente übergeben werden, um den Status einer Instanz eines Typs zu ändern. Statische Methoden müssen öffentlich sein.  
   
  **@** *SQLCLR_local_variable*  
@@ -103,27 +103,27 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
  { **+=** | **-=** | **\*=** | **/=** | **%=** | **&=** | **^=** | **|=** }  
  Verbundzuweisungsoperator:  
   
- += Addition und Zuweisung  
+ +=                    Addition und Zuweisung  
   
- -= Subtraktion und Zuweisung  
+ -=                     Subtraktion und Zuweisung  
   
- *= Multiplikation und Zuweisung  
+ *=                     Multiplikation und Zuweisung  
   
- /= Division und Zuweisung  
+ /=                      Division und Zuweisung  
   
- %= Modulo und Zuweisung  
+ %=                    Modulo und Zuweisung  
   
- &= Bitweises AND und Zuweisung  
+ &=              Bitweises AND und Zuweisung  
   
- ^= Bitweises XOR und Zuweisung  
+ ^=                     Bitweises XOR und Zuweisung  
   
- |= Bitweises OR und Zuweisung  
+ |=                      Bitweises OR und Zuweisung  
   
  *expression*  
- Ist ein beliebiger gültiger [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md).  
+ Ein gültiger [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md).  
   
  *cursor_variable*  
- Ist der Name einer Cursorvariablen. Falls die Zielcursorvariable zuvor auf einen anderen Cursor verwiesen hat, wird dieser Verweis entfernt.  
+ Der Name einer Cursorvariablen. Falls die Zielcursorvariable zuvor auf einen anderen Cursor verwiesen hat, wird dieser Verweis entfernt.  
   
  *cursor_name*  
  Der Name eines Cursors, der mit der DECLARE CURSOR-Anweisung deklariert wurde.  
@@ -141,15 +141,15 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
  Definiert einen Cursor, der eine temporäre Kopie der von ihm zu verwendenden Daten erzeugt. Sämtliche Anforderungen an den Cursor werden von dieser temporären Tabelle in tempdb beantwortet; daher werden Änderungen, die an den Basistabellen vorgenommen werden, nicht in den Daten wiedergegeben, die durch Abrufoperationen an diesem Cursor zurückgegeben wurden. Darüber hinaus lässt dieser Cursor keine Änderungen zu.  
   
  KEYSET  
- Gibt an, dass im Cursor die Mitgliedschaft und Reihenfolge der Zeilen fest ist, wenn der Cursor geöffnet wird. Die Menge der Schlüssel, die die Zeilen eindeutig identifizieren, wird in der Keysettable in ' tempdb ' integriert. Änderungen an Nichtschlüsselwerten in den Basistabellen, die vom Cursorbesitzer oder durch Ausführen eines Commits von anderen Benutzern vorgenommen wurden, werden sichtbar, wenn der Cursorbesitzer im Cursor einen Bildlauf durchführt. Von anderen Benutzern vorgenommene Einfügungen sind nicht sichtbar, und Einfügevorgänge können nicht über einen [!INCLUDE[tsql](../../includes/tsql-md.md)]-Servercursor durchgeführt werden.  
+ Gibt an, dass im Cursor die Mitgliedschaft und Reihenfolge der Zeilen fest ist, wenn der Cursor geöffnet wird. Die Menge der Schlüssel, welche die Zeilen eindeutig identifizieren, wird in der „keyset“-Tabelle in „tempdb“ erstellt. Änderungen an Nichtschlüsselwerten in den Basistabellen, die vom Cursorbesitzer oder durch Ausführen eines Commits von anderen Benutzern vorgenommen wurden, werden sichtbar, wenn der Cursorbesitzer im Cursor einen Bildlauf durchführt. Von anderen Benutzern vorgenommene Einfügungen sind nicht sichtbar, und Einfügevorgänge können nicht über einen [!INCLUDE[tsql](../../includes/tsql-md.md)]-Servercursor durchgeführt werden.  
   
- Wenn eine Zeile gelöscht wird, gibt ein Versuch zum Abrufen der Zeile ein @@FETCH_STATUS -2. Updates von Schlüsselwerten von außerhalb des Cursors sind vergleichbar mit dem Löschen der alten Zeile, gefolgt von einem Einfügen der neuen Zeile. Die Zeile mit den neuen Werten ist nicht sichtbar, und versucht, die Zeile mit den alten Werten abzurufen Zurückgeben einer @@FETCH_STATUS -2. Die neuen Werte sind sichtbar, wenn die Aktualisierung über den Cursor durch Angeben der WHERE CURRENT OF-Klausel durchgeführt wird.  
+ Wenn eine Zeile gelöscht wird, wird bei einem Versuch, die Zeile abzurufen, @@FETCH_STATUS mit dem Wert -2 zurückgegeben. Updates von Schlüsselwerten außerhalb des Cursors sind vergleichbar mit dem Löschen der alten Zeile und dem anschließenden Einfügen der neuen Zeile. Die Zeile mit den neuen Werten ist nicht sichtbar, und bei dem Versuch, die Zeile mit den alten Werten abzurufen, wird @@FETCH_STATUS mit dem Wert -2 zurückgegeben. Die neuen Werte sind sichtbar, wenn das Update über den Cursor durch Angabe der WHERE CURRENT OF-Klausel ausgeführt wird.  
   
  DYNAMIC  
  Definiert einen Cursor, der alle in den Zeilen vorgenommenen Datenänderungen in seinem Resultset widerspiegelt, wenn der Cursorbesitzer im Cursor einen Bildlauf durchführt. Datenwerte, Reihenfolge und Mitgliedschaft der Zeilen können sich bei jedem Abrufvorgang ändern. Die Abrufoptionen FETCH RELATIVE und FETCH ABSOLUTE werden mit dynamischen Cursorn nicht unterstützt.  
   
  FAST_FORWARD  
- Gibt einen FORWARD_ONLY-, READ_ONLY-Cursor mit aktivierter Optimierung an. FAST_FORWARD kann angegeben werden, wenn auch SCROLL angegeben ist.  
+ Gibt einen FORWARD_ONLY-, READ_ONLY-Cursor mit aktivierter Optimierung an. Es kann nur eine der beiden Optionen FAST_FORWARD oder SCROLL angegeben werden.  
   
  READ_ONLY  
  Verhindert, dass Updates über diesen Cursor erfolgen. Auf den Cursor kann nicht in einer WHERE CURRENT OF-Klausel in einer UPDATE- oder DELETE-Anweisung verwiesen werden. Diese Option überschreibt die Standardeinstellung, nach der ein Cursor aktualisiert werden kann.  
@@ -163,43 +163,43 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
  TYPE_WARNING  
  Gibt an, dass dem Client eine Warnmeldung gesendet wird, wenn der Cursor vom angeforderten Typ in einen anderen Typ implizit konvertiert wird.  
   
- FÜR *Select_statement*  
- Eine standardmäßige SELECT-Anweisung, die das Resultset des Cursors definiert. Die Schlüsselwörter FOR BROWSE und INTO sind nicht zulässig, in der *Select_statement* der Deklaration eines Cursors.  
+ FOR *select_statement*  
+ Eine standardmäßige SELECT-Anweisung, die das Resultset des Cursors definiert. Die Schlüsselwörter FOR BROWSE und INTO sind innerhalb der *select_statement* einer Cursordeklaration nicht zulässig.  
   
- Wenn DISTINCT, UNION, GROUP BY- oder HAVING verwendet werden, oder ein Aggregatausdruck, in enthalten ist der *Select_list*, wird der Cursor als STATIC erstellt werden.  
+ Wenn DISTINCT, UNION, GROUP BY oder HAVING verwendet wird oder ein Aggregatausdruck in die *select_list* eingeschlossen wird, wird der Cursor als STATIC erstellt.  
   
  Wenn keine der zugrunde liegenden Tabellen einen eindeutigen Index besitzt und ein SCROLL-Cursor von ISO oder ein KEYSET-Cursor von [!INCLUDE[tsql](../../includes/tsql-md.md)] angefordert wird, liegt automatisch ein STATIC-Cursor vor.  
   
- Wenn *Select_statement* enthält eine ORDER BY-Klausel in der die Spalten keine eindeutigen Zeilenbezeichner sind, ein DYNAMISCHER Cursor wird konvertiert in einen Keysetcursor oder in einen statischen Cursor, wenn ein KEYSET-Cursor nicht geöffnet werden kann. Ebenso wird mit einem Cursor verfahren, der mithilfe der ISO-Syntax, jedoch ohne das STATIC-Schlüsselwort, definiert wurde.  
+ Wenn *select_statement* eine ORDER BY-Klausel enthält, in der die Spalten keine eindeutigen Zeilenbezeichner sind, wird ein DYNAMIC-Cursor in einen KEYSET-Cursor oder – falls ein KEYSET-Cursor nicht geöffnet werden kann – in einen STATIC-Cursor konvertiert. Ebenso wird mit einem Cursor verfahren, der mithilfe der ISO-Syntax, jedoch ohne das STATIC-Schlüsselwort, definiert wurde.  
   
  READ ONLY  
  Verhindert, dass Updates über diesen Cursor erfolgen. Auf den Cursor kann nicht in einer WHERE CURRENT OF-Klausel in einer UPDATE- oder DELETE-Anweisung verwiesen werden. Diese Option überschreibt die Standardeinstellung, nach der ein Cursor aktualisiert werden kann. Dieses Schlüsselwort unterscheidet sich vom vorherigen READ_ONLY durch das Leerzeichen zwischen READ und ONLY anstelle eines Unterstriches.  
   
- UPDATE [OF *Column_name*[ **,**... *n* ] ]  
- Definiert aktualisierbare Spalten innerhalb des Cursors. Wenn OF *Column_name* [**,**...  *n* ] angegeben wird, können nur in die aufgelisteten Spalten geändert werden. Falls keine Liste angegeben wird, können alle Spalten aktualisiert werden, es sei denn, der Cursor wurde mit der Option READ ONLY definiert.  
+ UPDATE [OF *column_name*[ **,**... *n* ] ]  
+ Definiert aktualisierbare Spalten innerhalb des Cursors. Wenn OF *column_name* [**,**...*n*] angegeben wird, können nur in den aufgeführten Spalten Änderungen vorgenommen werden. Falls keine Liste angegeben wird, können alle Spalten aktualisiert werden, es sei denn, der Cursor wurde mit der Option READ ONLY definiert.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Nach dem Deklarieren einer Variablen wird diese auf NULL initialisiert. Verwenden Sie die SET-Anweisung, um einer deklarierten Variablen einen anderen Wert als NULL zuzuweisen. Die SET-Anweisung, die der Variablen einen Wert zuweist, gibt einen einzelnen Wert zurück. Wenn Sie mehrere Variablen initialisieren, verwenden Sie eine separate SET-Anweisung für jede lokale Variable.  
   
  Variablen können nur in Ausdrücken verwendet werden, nicht anstelle von Objektnamen oder Schlüsselwörtern. Um dynamische [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen zu erstellen, verwenden Sie EXECUTE.  
   
- Die Syntaxregeln für SET **@*** Cursor_variable* schließen nicht die Schlüsselwörter LOCAL und GLOBAL. Wenn der Satz **@*** Cursor_variable* = CURSOR...-Syntax verwendet wird, wird der Cursor je nach der Einstellung der Datenbankoption Default to lokalen Cursor als GLOBAL oder LOCAL erstellt.  
+ Die Syntaxregeln für SET **@***cursor_variable* schließen nicht die Schlüsselwörter LOCAL und GLOBAL ein. Wenn die Syntax SET **@***cursor_variable* = CURSOR... verwendet wird, wird der Cursor je nach Einstellung der Datenbankoption „default to local cursor“ als GLOBAL oder LOCAL erstellt.  
   
  Cursorvariablen sind stets lokal, selbst wenn sie auf einen globalen Cursor verweisen. Wenn eine Cursorvariable auf einen globalen Cursor verweist, besitzt der Cursor einen globalen und einen lokalen Verweis. Weitere Informationen finden Sie unter Beispiel C.  
   
- Weitere Informationen finden Sie unter [DECLARE CURSOR &#40; Transact-SQL &#41; ](../../t-sql/language-elements/declare-cursor-transact-sql.md).  
+ Weitere Informationen finden Sie unter [DECLARE CURSOR &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-cursor-transact-sql.md).  
   
  Der Verbundzuweisungsoperator kann stets verwendet werden, wenn auf der rechten Seite des Operators eine Zuweisung mit einem Ausdruck steht, z. B. Variablen, und SET in einer UPDATE-, SELECT- oder RECEIVE-Anweisung vorhanden ist.  
   
- Verwenden Sie keine Variable in einer SELECT-Anweisung, um Werte zu verketten (d. h., um Aggregatwerte zu berechnen). Dies kann zu unerwarteten Abfrageergebnissen führen. Dies liegt daran, dass nicht gewährleistet ist, dass alle Ausdrücke in der SELECT-Liste (einschließlich Zuweisungen) für jede Ausgabezeile exakt einmal ausgeführt werden. Weitere Informationen finden Sie unter [diesem KB-Artikel](http://support.microsoft.com/kb/287515).  
+ Verwenden Sie keine Variable in einer SELECT-Anweisung, um Werte zu verketten (d. h., um Aggregatwerte zu berechnen). Dies kann zu unerwarteten Abfrageergebnissen führen. Dies liegt daran, dass nicht gewährleistet ist, dass alle Ausdrücke in der SELECT-Liste (einschließlich Zuweisungen) für jede Ausgabezeile exakt einmal ausgeführt werden. Weitere Informationen finden Sie in diesem [KB-Artikel](http://support.microsoft.com/kb/287515).  
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert die Mitgliedschaft in der public-Rolle. Alle Benutzer können SET **@*** Local_variable*.  
+ Erfordert die Mitgliedschaft in der public-Rolle. Alle Benutzer können SET **@***local_variable* verwenden.  
   
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="a-printing-the-value-of-a-variable-initialized-by-using-set"></a>A. Drucken des Werts einer Variablen, die mit SET initialisiert wurde  
- Das folgende Beispiel erstellt die `@myvar` Variable, legt einen Zeichenfolgenwert in die Variable ab und gibt den Wert der die `@myvar` Variable.  
+ Im folgenden Beispiel wird die `@myvar`-Variable erstellt, ein Zeichenfolgenwert in die Variable aufgenommen und der Wert der `@myvar`-Variablen ausgedruckt.  
   
 ```  
 DECLARE @myvar char(20);  
@@ -298,7 +298,7 @@ GO
 ```  
   
 ### <a name="h-assigning-a-value-to-a-user-defined-type-variable-by-invoking-a-method-of-the-type"></a>H. Zuweisen eines Werts zu einer benutzerdefinierten Typvariablen durch Aufrufen einer Methode des Typs  
- Im folgenden Beispiel wird einen Wert für den benutzerdefinierten Typ **zeigen** durch Aufrufen der Methode `SetXY` des Typs.  
+ Im folgenden Beispiel wird ein Wert für den benutzerdefinierten Typ **point** durch Aufrufen der `SetXY`-Methode des Typs festgelegt.  
   
 ```  
 DECLARE @p Point;  
@@ -316,10 +316,10 @@ DECLARE @p Point = CONVERT(Point, '')
 SET @p.SetXY(22, 23);  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
 ### <a name="j-printing-the-value-of-a-variable-initialized-by-using-set"></a>J. Drucken des Werts einer Variablen, die mit SET initialisiert wurde  
- Das folgende Beispiel erstellt die `@myvar` Variable, legt einen Zeichenfolgenwert in die Variable ab und gibt den Wert der die `@myvar` Variable.  
+ Im folgenden Beispiel wird die `@myvar`-Variable erstellt, ein Zeichenfolgenwert in die Variable aufgenommen und der Wert der `@myvar`-Variablen ausgedruckt.  
   
 ```  
 DECLARE @myvar char(20);  
@@ -329,7 +329,7 @@ SELECT top 1 @myvar FROM sys.databases;
 ```  
   
 ### <a name="k-using-a-local-variable-assigned-a-value-by-using-set-in-a-select-statement"></a>K. Verwenden einer lokalen Variablen, der ein Wert mit SET zugewiesen wurde, in einer SELECT-Anweisung  
- Das folgende Beispiel erstellt eine lokale Variable namens `@dept` und verwendet diese lokale Variable in einem `SELECT` Anweisung, um die vor- und Nachnamen Namen aller Mitarbeiter zu suchen, die Arbeiten in der `Marketing` Abteilung.  
+ Im folgenden Beispiel wird eine lokale Variable namens `@dept` erstellt, die dann in einer `SELECT`-Anweisung verwendet wird, um die Vor- und Nachnamen aller Mitarbeiter zu suchen, die in der Abteilung `Marketing` arbeiten.  
   
 ```  
 -- Uses AdventureWorks  
@@ -368,9 +368,9 @@ SET @rows = (SELECT COUNT(*) FROM dbo.DimCustomer);
 SELECT TOP 1 @rows FROM sys.tables;  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Zusammengesetzte Operatoren &#40; Transact-SQL &#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   
- [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Verbundoperatoren &#40;Transact-SQL&#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   
+ [DEKLARIEREN SIE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
  [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [SET-Anweisungen &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)  

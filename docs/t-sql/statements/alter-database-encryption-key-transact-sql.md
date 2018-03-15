@@ -1,5 +1,5 @@
 ---
-title: ALTER DATABASE ENCRYPTION KEY (Transact-SQL) | Microsoft Docs
+title: ALTER DATABASE ENCRYPTION KEY (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/20/2017
 ms.prod: sql-non-specified
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="alter-database-encryption-key-transact-sql"></a>ALTER DATABASE ENCRYPTION KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
-  Ändert einen Verschlüsselungsschlüssel und ein Zertifikat, die für die transparente Datenbankverschlüsselung verwendet werden. Weitere Informationen über transparente datenbankverschlüsselung finden Sie unter [transparente datenverschlüsselung &#40; TDE &#41; ](../../relational-databases/security/encryption/transparent-data-encryption.md).  
+  Ändert einen Verschlüsselungsschlüssel und ein Zertifikat, die für die transparente Datenbankverschlüsselung verwendet werden. Weitere Informationen zur transparenten Datenbankverschlüsselung finden Sie unter [Transparent Data Encryption &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md).  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -76,13 +76,13 @@ ALTER DATABASE ENCRYPTION KEY
  REGENERATE WITH ALGORITHM = { AES_128 | AES_192 | AES_256 | TRIPLE_DES_3KEY }  
  Gibt den Verschlüsselungsalgorithmus an, der für den Verschlüsselungsschlüssel verwendet wird.  
   
- Die Verschlüsselung durch SERVERZERTIFIKAT *Encryptor_Name*  
+ ENCRYPTION BY SERVER CERTIFICATE *Encryptor_Name*  
  Gibt den Namen des Zertifikats an, das zum Verschlüsseln des Verschlüsselungsschlüssels für die Datenbank verwendet wird.  
   
- Verschlüsselung mit ASYMMETRISCHEN Schlüssel Encryptor_Name für SERVER  
+ ENCRYPTION BY SERVER ASYMMETRIC KEY Encryptor_Name  
  Gibt den Namen des asymmetrischen Schlüssels an, der zum Verschlüsseln des Verschlüsselungsschlüssels für die Datenbank verwendet wird.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Das Zertifikat oder der asymmetrische Schlüssel, das bzw. der zum Verschlüsseln des Verschlüsselungsschlüssels für die Datenbank verwendet wird, muss sich in der master-Systemdatenbank befinden.  
   
  Der Verschlüsselungsschlüssel für die Datenbank muss nicht erneut generiert werden, wenn ein Datenbankbesitzer (DBO) geändert wird.  
@@ -103,14 +103,14 @@ REGENERATE WITH ALGORITHM = AES_256;
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Transparente Datenverschlüsselung &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md)   
  [SQL Server-Verschlüsselung](../../relational-databases/security/encryption/sql-server-encryption.md)   
  [Verschlüsselungsschlüssel für SQL Server und Datenbank &#40;Datenbankmodul&#41;](../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)   
  [Verschlüsselungshierarchie](../../relational-databases/security/encryption/encryption-hierarchy.md)   
  [ALTER DATABASE SET-Optionen &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
- [Erstellen Sie DATABASE ENCRYPTION KEY &#40; Transact-SQL &#41;](../../t-sql/statements/create-database-encryption-key-transact-sql.md)   
- [DROP DATABASE ENCRYPTION KEY &#40; Transact-SQL &#41;](../../t-sql/statements/drop-database-encryption-key-transact-sql.md)   
+ [CREATE DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-encryption-key-transact-sql.md)   
+ [DROP DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-encryption-key-transact-sql.md)   
  [sys.dm_database_encryption_keys &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md)  
   
   

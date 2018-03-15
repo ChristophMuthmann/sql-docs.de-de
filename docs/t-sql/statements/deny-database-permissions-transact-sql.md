@@ -1,5 +1,5 @@
 ---
-title: "Verweigern von Datenbankberechtigungen für die (Transact-SQL) | Microsoft Docs"
+title: DENY (Datenbankberechtigungen) (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 05/15/2017
 ms.prod: sql-non-specified
@@ -60,7 +60,7 @@ DENY <permission> [ ,...n ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *Berechtigung*  
+ *permission*  
  Gibt eine Berechtigung an, die für eine Datenbank verweigert werden kann. Eine Liste der Berechtigungen finden Sie im Abschnitt zu den Hinweisen weiter unten in diesem Thema.  
   
  ALL  
@@ -72,7 +72,7 @@ DENY <permission> [ ,...n ]
  CASCADE  
  Gibt an, dass die Berechtigung auch für andere Prinzipale verweigert wird, denen der angegebene Prinzipal diese Berechtigung erteilt hat.  
   
- AS \<Database_principal >  
+ AS \<database_principal>  
  Gibt einen Prinzipal an, von dem der Prinzipal, der diese Abfrage ausführt, das Recht zum Verweigern der Berechtigung ableitet.  
   
  *Database_user*  
@@ -82,7 +82,7 @@ DENY <permission> [ ,...n ]
  Gibt eine Datenbankrolle an.  
   
  *Application_role*  
- **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+ **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  Gibt eine Anwendungsrolle an.  
   
@@ -101,7 +101,7 @@ DENY <permission> [ ,...n ]
  *Database_user_with_no_login*  
  Gibt einen Datenbankbenutzer ohne entsprechenden Prinzipal auf Serverebene an.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Eine Datenbank ist ein sicherungsfähiges Element auf dem Server, der das übergeordnete Element in der Berechtigungshierarchie ist. Die spezifischsten und restriktivsten Berechtigungen, die für eine Datenbank verweigert werden können, sind in der folgenden Tabelle aufgeführt. Außerdem enthält die Tabelle die allgemeineren Berechtigungen, die implizit enthalten sind.  
   
 |Datenbankberechtigung|Impliziert durch Datenbankberechtigung|Impliziert durch die Serverberechtigung|  
@@ -113,24 +113,24 @@ DENY <permission> [ ,...n ]
 |ALTER ANY ASYMMETRIC KEY|ALTER|CONTROL SERVER|  
 |ALTER ANY CERTIFICATE|ALTER|CONTROL SERVER|  
 |ALTER ANY COLUMN ENCRYPTION KEY|ALTER|CONTROL SERVER|  
-|ALLE SPALTENHAUPTSCHLÜSSEL-DEFINITION ÄNDERN|ALTER|CONTROL SERVER|  
+|ALTER ANY COLUMN MASTER KEY DEFINITION|ALTER|CONTROL SERVER|  
 |ALTER ANY CONTRACT|ALTER|CONTROL SERVER|  
 |ALTER ANY DATABASE AUDIT|ALTER|ALTER ANY SERVER AUDIT|  
 |ALTER ANY DATABASE DDL TRIGGER|ALTER|CONTROL SERVER|  
 |ALTER ANY DATABASE EVENT NOTIFICATION|ALTER|ALTER ANY EVENT NOTIFICATION|  
 |ALTER ANY DATABASE EVENT SESSION<br /> **Gilt für**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|ALTER|ALTER ANY EVENT SESSION|  
-|ALTER ANY DATABASE SCOPED CONFIGURATION<br />  **Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|CONTROL|CONTROL SERVER|  
+|ALTER ANY DATABASE SCOPED CONFIGURATION<br />  **Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|CONTROL|CONTROL SERVER|  
 |ALTER ANY DATASPACE|ALTER|CONTROL SERVER|  
 |ALTER ANY EXTERNAL DATA SOURCE|ALTER|CONTROL SERVER|  
 |ALTER ANY EXTERNAL FILE FORMAT|ALTER|CONTROL SERVER|  
-|ÄNDERN EINER EXTERNEN BIBLIOTHEK <br /> **Gilt für**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].|CONTROL|CONTROL SERVER |    
+|ALTER ANY EXTERNAL LIBRARY <br /> **Gilt für**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].|CONTROL|CONTROL SERVER |    
 |ALTER ANY FULLTEXT CATALOG|ALTER|CONTROL SERVER|  
 |ALTER ANY MASK|CONTROL|CONTROL SERVER|  
 |ALTER ANY MESSAGE TYPE|ALTER|CONTROL SERVER|  
 |ALTER ANY REMOTE SERVICE BINDING|ALTER|CONTROL SERVER|  
 |ALTER ANY ROLE|ALTER|CONTROL SERVER|  
 |ALTER ANY ROUTE|ALTER|CONTROL SERVER|  
-|ALTER ANY SECURITY POLICY<br /> **Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|CONTROL|CONTROL SERVER|  
+|ALTER ANY SECURITY POLICY<br /> **Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|CONTROL|CONTROL SERVER|  
 |ALTER ANY SCHEMA|ALTER|CONTROL SERVER|  
 |ALTER ANY SERVICE|ALTER|CONTROL SERVER|  
 |ALTER ANY SYMMETRIC KEY|ALTER|CONTROL SERVER|  
@@ -167,8 +167,8 @@ DENY <permission> [ ,...n ]
 |CREATE TYPE|ALTER|CONTROL SERVER|  
 |CREATE VIEW|ALTER|CONTROL SERVER|  
 |CREATE XML SCHEMA COLLECTION|ALTER|CONTROL SERVER|  
-|DELETE|CONTROL|CONTROL SERVER|  
-|EXECUTE|CONTROL|CONTROL SERVER|  
+|Delete|CONTROL|CONTROL SERVER|  
+|Führen Sie|CONTROL|CONTROL SERVER|  
 |EXECUTE ANY EXTERNAL SCRIPT <br /> **Gilt für**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)].|CONTROL|CONTROL SERVER|   
 |INSERT|CONTROL|CONTROL SERVER|  
 |KILL DATABASE CONNECTION<br /> **Gilt für**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|CONTROL|ALTER ANY CONNECTION|  
@@ -179,8 +179,8 @@ DENY <permission> [ ,...n ]
 |TAKE OWNERSHIP|CONTROL|CONTROL SERVER|  
 |UNMASK|CONTROL|CONTROL SERVER|  
 |UPDATE|CONTROL|CONTROL SERVER|  
-|ALLE SPALTENVERSCHLÜSSELUNGSSCHLÜSSEL ANZEIGEN|CONTROL|VIEW ANY DEFINITION|  
-|SPALTENHAUPTSCHLÜSSEL-DEFINITION ANZEIGEN|CONTROL|VIEW ANY DEFINITION|  
+|VIEW ANY COLUMN ENCRYPTION KEY|CONTROL|VIEW ANY DEFINITION|  
+|VIEW ANY MASTER KEY DEFINITION|CONTROL|VIEW ANY DEFINITION|  
 |VIEW DATABASE STATE|CONTROL|VIEW SERVER STATE|  
 |VIEW DEFINITION|CONTROL|VIEW ANY DEFINITION|  
   
@@ -203,7 +203,7 @@ GO
 ### <a name="b-denying-references-permission-to-an-application-role"></a>B. Verweigern der REFERENCES-Berechtigung für eine Anwendungsrolle  
  Im folgenden Beispiel wird die `REFERENCES`-Berechtigung für die [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]-Datenbank für die Anwendungsrolle `AuditMonitor` verweigert.  
   
-**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
 ```  
 USE AdventureWorks2012;  
@@ -212,7 +212,7 @@ GO
 ```  
   
 ### <a name="c-denying-view-definition-with-cascade"></a>C. Verweigern von VIEW DEFINITION mit CASCADE  
- Im folgenden Beispiel wird verweigert `VIEW DEFINITION` -Berechtigung für die [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] Datenbank Benutzer `CarmineEs` und für alle Prinzipale, `CarmineEs` wurde gewährt `VIEW DEFINITION` Berechtigung.  
+ Im folgenden Beispiel wird die Berechtigung `VIEW DEFINITION` für die Datenbank [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] für Benutzer `CarmineEs` und für alle Prinzipale verweigert, denen von `CarmineEs` die Berechtigung `VIEW DEFINITION` erteilt wurde.  
   
 ```  
 USE AdventureWorks2012;  
@@ -220,8 +220,8 @@ DENY VIEW DEFINITION TO CarmineEs CASCADE;
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [database_permissions &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [sys.database_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)   
  [sys.database_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)   
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   

@@ -1,5 +1,5 @@
 ---
-title: ENABLE TRIGGER (Transact-SQL) | Microsoft Docs
+title: ENABLE TRIGGER (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 05/12/2017
 ms.prod: sql-non-specified
@@ -52,30 +52,30 @@ ON { object_name | DATABASE | ALL SERVER } [ ; ]
   
 ## <a name="arguments"></a>Argumente  
  *schema_name*  
- Der Name des Schemas, zu dem der Trigger gehört. *Schema_name* kann für DDL- oder Logon-Trigger angegeben werden.  
+ Der Name des Schemas, zu dem der Trigger gehört. *schema_name* kann für DDL- oder LOGON-Trigger nicht angegeben werden.  
   
- *Form trigger_name*  
+ *trigger_name*  
  Der Name des Triggers, der aktiviert werden soll.  
   
  ALL  
  Gibt an, dass alle im Bereich der ON-Klausel definierten Trigger aktiviert sind.  
   
  *object_name*  
- Der Name der Tabelle oder Sicht, die auf dem der DML-trigger *Form Trigger_name* zur Ausführung erstellt wurde.  
+ Der Name der Tabelle oder Sicht, in der der DML-Trigger *trigger_name* zur Ausführung erstellt wurde.  
   
  DATABASE  
- Für einen DDL-Trigger gibt an, dass *Form Trigger_name* erstellt oder zum Ausführen von mit Datenbankbereich geändert wurde.  
+ Für einen DDL-Trigger wird dadurch angegeben, dass *trigger_name* zur Ausführung mit dem Datenbankbereich erstellt oder geändert wurde.  
   
  ALL SERVER  
  **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Für einen DDL-Trigger gibt an, dass *Form Trigger_name* erstellt oder zum Ausführen von mit einem Serverbereich geändert wurde. ALL SERVER gilt auch für LOGON-Trigger.  
+ Für einen DDL-Trigger wird hiermit angegeben, dass *trigger_name* zur Ausführung mit dem Serverbereich erstellt oder geändert wurde. ALL SERVER gilt auch für LOGON-Trigger.  
   
 > [!NOTE]  
 >  Diese Option ist in einer enthaltenen Datenbank nicht verfügbar.  
   
-## <a name="remarks"></a>Hinweise  
- Durch das Aktivieren eines Triggers wird dieser nicht neu erstellt. Ein deaktivierter Trigger ist weiterhin als Objekt in der aktuellen Datenbank vorhanden, wird jedoch nicht ausgelöst. Durch das Aktivieren eines Triggers wird dieser ausgelöst, wenn eine beliebige [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung ausgeführt wird, für die er ursprünglich programmiert wurde. Trigger werden mithilfe von deaktiviert [DISABLE TRIGGER](../../t-sql/statements/disable-trigger-transact-sql.md). Für Tabellen definierte DML-Trigger kann auch deaktiviert oder aktiviert werden, mithilfe von [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).  
+## <a name="remarks"></a>Remarks  
+ Durch das Aktivieren eines Triggers wird dieser nicht neu erstellt. Ein deaktivierter Trigger ist weiterhin als Objekt in der aktuellen Datenbank vorhanden, wird jedoch nicht ausgelöst. Durch das Aktivieren eines Triggers wird dieser ausgelöst, wenn eine beliebige [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung ausgeführt wird, für die er ursprünglich programmiert wurde. Trigger werden mit [DISABLE TRIGGER](../../t-sql/statements/disable-trigger-transact-sql.md) deaktiviert. Für Tabellen definierte DML-Trigger können auch mithilfe von [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) deaktiviert oder aktiviert werden.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Zum Aktivieren eines DML-Triggers benötigt der Benutzer mindestens die ALTER-Berechtigung für die Tabelle oder Sicht, in der der Trigger erstellt wurde.  
@@ -85,7 +85,7 @@ ON { object_name | DATABASE | ALL SERVER } [ ; ]
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="a-enabling-a-dml-trigger-on-a-table"></a>A. Aktivieren eines DML-Triggers für eine Tabelle  
- Das folgende Beispiel deaktiviert Trigger `uAddress` , die für die Tabelle erstellt wurde `Address` in der AdventureWorks-Datenbank und anschließend aktiviert.  
+ Im folgenden Beispiel wird der `uAddress`-Trigger, der für die `Address`-Tabelle in der AdventureWorks-Datenbank erstellt wurde, deaktiviert und anschließend aktiviert.  
   
 ```  
 DISABLE TRIGGER Person.uAddress ON Person.Address;  
@@ -95,7 +95,7 @@ GO
 ```  
   
 ### <a name="b-enabling-a-ddl-trigger"></a>B. Aktivieren eines DDL-Triggers  
- Das folgende Beispiel erstellt einen DDL-Trigger `safety` mit Datenbankbereich, und klicken Sie dann deaktivieren und aktiviert.  
+ Im folgenden Beispiel wird der DDL-Trigger `safety` mit einem Datenbankbereich erstellt und anschließend deaktiviert bzw. aktiviert.  
   
 ```  
 CREATE TRIGGER safety   
@@ -121,7 +121,7 @@ ENABLE Trigger ALL ON ALL SERVER;
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [DISABLE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/disable-trigger-transact-sql.md)   
  [ALTER TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-trigger-transact-sql.md)   
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   

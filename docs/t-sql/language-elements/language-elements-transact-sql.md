@@ -1,5 +1,5 @@
 ---
-title: Sprachelemente (Transact-SQL) | Microsoft Docs
+title: Sprachelemente (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -34,13 +34,13 @@ ms.lasthandoff: 01/25/2018
 ## <a name="in-this-section"></a>In diesem Abschnitt  
 [-- &#40;Comment&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/comment-transact-sql.md)  
   
-[Schrägstrich-Stern &#40; Blockkommentar &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/slash-star-comment-transact-sql.md)  
+[Schrägstrich – Stern &#40;Blockkommentar&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/slash-star-comment-transact-sql.md)  
  
 [CREATE DIAGNOSTICS SESSION (Transact-SQL)](../../t-sql/language-elements/create-diagnostics-session-transact-sql.md)  
 
 [NULL und UNKNOWN (Transact-SQL)](../../t-sql/language-elements/null-and-unknown-transact-sql.md)
 
-[Transaktionen (SQL Datawarehouse)](../../t-sql/language-elements/transactions-sql-data-warehouse.md)
+[Transaktionen (SQL Data Warehouse)](../../t-sql/language-elements/transactions-sql-data-warehouse.md)
   
 [USE &#40;Transact-SQL&#41;](../../t-sql/language-elements/use-transact-sql.md)  
   

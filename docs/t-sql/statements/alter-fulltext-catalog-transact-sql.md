@@ -1,5 +1,5 @@
 ---
-title: ALTER FULLTEXT CATALOG (Transact-SQL) | Microsoft Docs
+title: ALTER FULLTEXT CATALOG (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -56,7 +56,7 @@ ALTER FULLTEXT CATALOG catalog_name
   
 ## <a name="arguments"></a>Argumente  
  *catalog_name*  
- Gibt den Namen des zu ändernden Katalogs an. Wenn kein Katalog mit dem angegebenen Namen nicht vorhanden ist, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einen Fehler zurück und führt keine ALTER-Vorgang.  
+ Gibt den Namen des zu ändernden Katalogs an. Wenn kein Katalog mit dem angegebenen Namen vorhanden ist, gibt [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einen Fehler zurück und führt den ALTER-Vorgang nicht aus.  
   
  REBUILD  
  Weist [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] an, den gesamten Katalog neu zu erstellen. Bei der Neuerstellung eines Katalogs wird der vorhandene Katalog gelöscht und an seiner Stelle ein neuer Katalog erstellt. Alle Tabellen, in denen Referenzen für die Volltextindizierung vorhanden sind, werden dem neuen Katalog zugeordnet. Durch das erneute Erstellen werden die Volltextmetadaten in den Datenbanksystemtabellen zurückgesetzt.  
@@ -64,12 +64,12 @@ ALTER FULLTEXT CATALOG catalog_name
  WITH ACCENT_SENSITIVITY = {ON|OFF}  
  Gibt an, ob der zu ändernde Katalog für die Volltextindizierung und Abfrage nach Akzent unterscheidet.  
   
- Um die aktuelle Einstellung der Unterscheidung nach Groß-/ Kleinschreibung-Eigenschaft des eines Volltextkatalogs zu bestimmen, verwenden Sie die FULLTEXTCATALOGPROPERTY-Funktion mit dem **Accentsensitivity** -Eigenschaftswert für *Catalog_name*. Gibt die Funktion '1' zurück, unterscheidet der Volltextkatalog nach Akzent. Gibt die Funktion '0' zurück, unterscheidet der Katalog nicht nach Akzent.  
+ Verwenden Sie die FULLTEXTCATALOGPROPERTY-Funktion mit dem **accentsensitivity**-Eigenschaftswert für *catalog_name*, um die aktuelle Eigenschaftseinstellung für die Unterscheidung nach Akzent eines Volltextkatalogs zu bestimmen. Gibt die Funktion '1' zurück, unterscheidet der Volltextkatalog nach Akzent. Gibt die Funktion '0' zurück, unterscheidet der Katalog nicht nach Akzent.  
   
  Die Standardeinstellung für die Unterscheidung nach Akzent des Katalogs und der Datenbank stimmen überein.  
   
  REORGANIZE  
- Weist [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zum Ausführen einer *masterzusammenführung*, dem umfasst im Verlauf zu einem großen Index Indizierung erstellten kleineren Indizes zusammengeführt. Zusammenführen von Volltextindex-Fragmente kann die Leistung verbessern und Datenträger- und Speicherressourcen freigeben. Bei häufigen Änderungen am Volltextkatalog sollten Sie diesen Befehl in regelmäßigen Abständen ausführen, um den Volltextkatalog neu zu organisieren.  
+ Weist [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] an, eine *Masterzusammenführung* auszuführen, wobei die im Verlauf der Indizierung erstellten kleineren Indizes zu einem großen Index zusammengeführt werden. Das Zusammenführen von Volltextindexfragmenten kann die Leistung verbessern und Datenträger- und Speicherressourcen freigeben. Bei häufigen Änderungen am Volltextkatalog sollten Sie diesen Befehl in regelmäßigen Abständen ausführen, um den Volltextkatalog neu zu organisieren.  
   
  REORGANIZE optimiert auch die internen Index- und Katalogstrukturen.  
   
@@ -79,7 +79,7 @@ ALTER FULLTEXT CATALOG catalog_name
  Gibt an, dass dieser Katalog der Standardkatalog ist. Werden Volltextindizes ohne Angabe von Katalogen erstellt, wird der Standardkatalog verwendet. Ist ein Standard-Volltextkatalog vorhanden, wird die vorhandene Standardeinstellung durch Festlegen von AS DEFAULT für diesen Katalog überschrieben.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Benutzer muss über ALTER-Berechtigung für den Volltextkatalog verfügen oder Mitglied der **Db_owner**, **Db_ddladmin** feste Datenbankrollen oder der festen Serverrolle "Sysadmin".  
+ Benutzer müssen über die ALTER-Berechtigung für den Volltextkatalog verfügen oder Mitglied der festen Datenbankrollen **db_owner** oder **db_ddladmin** oder der festen Serverrolle sysadmin sein.  
   
 > [!NOTE]  
 >  Damit ALTER FULLTEXT CATALOG AS DEFAULT verwendet werden kann, muss der Benutzer über ALTER-Berechtigung für den Volltextkatalog und CREATE FULLTEXT CATALOG-Berechtigung für die Datenbank verfügen.  
@@ -100,10 +100,10 @@ GO
 --Returned 0, which means the catalog is not accent sensitive.  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Sys. fulltext_catalogs &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md)   
- [Erstellen Sie FULLTEXT CATALOG &#40; Transact-SQL &#41;](../../t-sql/statements/create-fulltext-catalog-transact-sql.md)   
- [DROP FULLTEXT CATALOG &#40; Transact-SQL &#41;](../../t-sql/statements/drop-fulltext-catalog-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [sys.fulltext_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md)   
+ [CREATE FULLTEXT CATALOG &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-catalog-transact-sql.md)   
+ [DROP FULLTEXT CATALOG &#40;Transact-SQL&#41;](../../t-sql/statements/drop-fulltext-catalog-transact-sql.md)   
  [Volltextsuche](../../relational-databases/search/full-text-search.md)  
   
   

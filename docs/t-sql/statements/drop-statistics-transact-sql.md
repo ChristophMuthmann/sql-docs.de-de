@@ -1,5 +1,5 @@
 ---
-title: DROP STATISTICS (Transact-SQL) | Microsoft Docs
+title: DROP STATISTICS (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/22/2016
 ms.prod: sql-non-specified
@@ -60,25 +60,25 @@ DROP STATISTICS [ schema_name . ] table_name.statistics_name
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *Tabelle* | *anzeigen*  
- Der Name der Zieltabelle oder indizierten Sicht, für die statistische Informationen gelöscht werden sollen. Tabellen-und Sichtnamen müssen den Regeln für entsprechen [Datenbankbezeichner](../../relational-databases/databases/database-identifiers.md). Das Angeben des Besitzernamens der Tabelle oder Sicht ist optional.  
+ *table* | *view*  
+ Der Name der Zieltabelle oder indizierten Sicht, für die statistische Informationen gelöscht werden sollen. Tabellen- und Sichtnamen müssen den Regeln für [Datenbankbezeichner](../../relational-databases/databases/database-identifiers.md) entsprechen. Das Angeben des Besitzernamens der Tabelle oder Sicht ist optional.  
   
  *statistics_name*  
  Der Name der zu löschenden Statistikgruppe. Namen von Statistiken müssen den Regeln für Bezeichner entsprechen.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Gehen Sie vorsichtig vor, wenn Sie Statistiken löschen. Dieser Vorgang kann sich auf den vom Abfrageoptimierer ausgewählten Ausführungsplan auswirken.  
   
  Statistiken für Indizes können mit DROP STATISTICS nicht gelöscht werden. Die Statistiken bleiben so lange vorhanden wie der Index.  
   
- Weitere Informationen zum Anzeigen von Statistiken finden Sie unter [DBCC SHOW_STATISTICS &#40; Transact-SQL &#41; ](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md).  
+ Weitere Informationen zum Anzeigen von Statistiken finden Sie unter [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md).  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die ALTER-Berechtigung in der Tabelle oder Sicht.  
   
 ## <a name="examples"></a>Beispiele  
   
-### <a name="a-dropping-statistics-from-a-table"></a>A. Verwerfen von Statistiken aus einer Tabelle  
+### <a name="a-dropping-statistics-from-a-table"></a>A. Entfernen von Statistiken aus einer Tabelle  
  Im folgenden Beispiel werden die Statistikgruppen (Auflistungen) aus zwei Tabellen gelöscht. Die Statistikgruppe (Auflistung) `VendorCredit` der Tabelle `Vendor` und die Statistik (Auflistung) `CustomerTotal` der Tabelle `SalesOrderHeader` werden gelöscht.  
   
 ```  
@@ -96,10 +96,10 @@ DROP STATISTICS Purchasing.Vendor.VendorCredit, Sales.SalesOrderHeader.CustomerT
   
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
-### <a name="b-dropping-statistics-from-a-table"></a>B. Verwerfen von Statistiken aus einer Tabelle  
- Löschen Sie die folgenden Beispiele der `CustomerStats1` Statistiken aus Tabelle `Customer`.  
+### <a name="b-dropping-statistics-from-a-table"></a>B. Entfernen von Statistiken aus einer Tabelle  
+ In den folgenden Beispielen werden die `CustomerStats1`-Statistiken aus der Tabelle `Customer` entfernt.  
   
 ```  
 DROP STATISTICS Customer.CustomerStats1;  
@@ -107,15 +107,15 @@ DROP STATISTICS dbo.Customer.CustomerStats1;
   
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
  [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)   
  [sys.stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)   
- [Sys. stats_columns &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md)   
+ [sys.stats_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md)   
  [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
- [Sp_autostats &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-autostats-transact-sql.md)   
- [Sp_createstats &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-createstats-transact-sql.md)   
+ [sp_autostats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-autostats-transact-sql.md)   
+ [sp_createstats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-createstats-transact-sql.md)   
  [UPDATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
  [USE &#40;Transact-SQL&#41;](../../t-sql/language-elements/use-transact-sql.md)  

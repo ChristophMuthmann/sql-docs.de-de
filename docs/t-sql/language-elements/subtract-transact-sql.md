@@ -1,5 +1,5 @@
 ---
-title: '- (Subtraktion) (Transact-SQL) | Microsoft Docs'
+title: '- (Subtraktion) (Transact-SQL) | Microsoft-Dokumentation'
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -35,7 +35,7 @@ ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="--subtraction-transact-sql"></a>-(Subtraktion) (Transact-SQL)
+# <a name="--subtraction-transact-sql"></a>- (Subtraktion) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Subtrahiert zwei Zahlen (ein arithmetischer Subtraktionsoperator). Kann auch eine Zahl, in Tagen, von einem Datum subtrahieren.  
@@ -50,7 +50,7 @@ expression - expression
   
 ## <a name="arguments"></a>Argumente  
  *expression*  
- Ist ein beliebiger gültiger [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) von einem der Datentypen der numerischen Datentypkategorie, mit Ausnahme der **Bit** -Datentyp. Kann nicht verwendet werden, mit **Datum**, **Zeit**, **datetime2**, oder **"DateTimeOffset"** -Datentypen.  
+ Ein beliebiger gültiger [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) eines der Datentypen der numerischen Datentypkategorie, mit Ausnahme des **bit**-Datentyps. Der Operator kann mit den Datentypen **date**, **time**, **datetime2** oder **datetimeoffset** verwendet werden.  
   
 ## <a name="result-types"></a>Ergebnistypen  
  Gibt einen Wert vom Datentyp des Arguments zurück, das in der Rangfolge höher steht. Weitere Informationen finden Sie unter [Rangfolge der Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
@@ -96,10 +96,10 @@ SELECT @altstartdate - 1.5 AS 'Subtract Date';
  (1 row(s) affected)
  ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
-### <a name="c-using-subtraction-in-a-select-statement"></a>"C:" Verwenden der Subtraktion in einer SELECT-Anweisung  
- Das folgende Beispiel berechnet den Unterschied in einem Grundpreis zwischen den Mitarbeiter mit der höchsten Grundpreis und den Mitarbeiter mit dem niedrigsten Steuersatz aus der `dimEmployee` Tabelle.  
+### <a name="c-using-subtraction-in-a-select-statement"></a>C. Verwenden der Subtraktion in einer SELECT-Anweisung  
+ Im folgenden Beispiel wird der Unterschied im Basistarif zwischen dem Mitarbeiter mit dem höchsten Tarif und dem Mitarbeiter mit dem niedrigsten Tarif aus der `dimEmployee`-Tabelle berechnet.  
   
 ```  
 -- Uses AdventureWorks  
@@ -108,13 +108,13 @@ SELECT MAX(BaseRate) - MIN(BaseRate) AS BaseRateDifference
 FROM DimEmployee;  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [= &#40; Subtraktionszuweisung &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/subtract-equals-transact-sql.md)   
- [Zusammengesetzte Operatoren &#40; Transact-SQL &#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)  
- [Arithmetische Operatoren &#40; Transact-SQL &#41;](../../t-sql/language-elements/arithmetic-operators-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [-= &#40;Subtraktionszuweisung&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/subtract-equals-transact-sql.md)   
+ [Verbundoperatoren &#40;Transact-SQL&#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)  
+ [Arithmetische Operatoren &#40;Transact-SQL&#41;](../../t-sql/language-elements/arithmetic-operators-transact-sql.md)   
  [- &#40;Negative&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/unary-operators-negative.md)   
  [Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [Ausdrücke &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [Integrierte Funktionen &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
   

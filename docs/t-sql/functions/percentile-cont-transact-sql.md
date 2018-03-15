@@ -1,5 +1,5 @@
 ---
-title: PERCENTILE_CONT (Transact-SQL) | Microsoft Docs
+title: PERCENTILE_CONT (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 10/20/2015
 ms.prod: sql-non-specified
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/21/2017
 
   Berechnet ein Quantil auf Grundlage einer kontinuierlichen Verteilung des Spaltenwerts in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Das Ergebnis wird interpoliert und stimmt möglicherweise mit keinem der konkreten Werte in der Spalte überein.  
   
- ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Thema Linksymbol") [Transact-SQL-Syntaxkonventionen &#40; Transact-SQL &#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol zum Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions &#40;Transact-SQL&#41; (Transact-SQL-Syntaxkonventionen (Transact-SQL))](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -51,11 +51,11 @@ PERCENTILE_CONT ( numeric_literal )
  *numeric_literal*  
  Das zu berechnende Quantil. Der Wert muss zwischen 0,0 und 1,0 liegen.  
   
- IN den Gruppen **(** ORDER BY *Order_by_expression* [ **ASC** | "DESC"]**)**  
- Gibt eine Liste von numerischen Werten für die Sortierung und Berechnung des Quantils an. Nur ein *Order_by_expression* ist zulässig. Der Ausdruck ausgewertet werden muss, um einen exakten numerischen Typ (**Int**, **"bigint"**, **"smallint"**, **"tinyint"**, **numerische**, **Bit**, **decimal**, **Smallmoney**, **Money**) oder einen ungefähren numerischen Typ ( **"float"**, **real**). Andere Datentypen sind nicht zulässig. Die Standardsortierreihenfolge ist Aufsteigend.  
+ WITHIN GROUP **(** ORDER BY *order_by_expression* [ **ASC** | DESC ]**)**  
+ Gibt eine Liste von numerischen Werten für die Sortierung und Berechnung des Quantils an. Es ist nur ein *order_by_expression*-Element zulässig. Der Ausdruck muss einen genauen numerischen Typ (**int**, **bigint**, **smallint**, **tinyint**, **numeric**, **bit**, **decimal**, **smallmoney**, **money**) oder einen ungefähren numerischen Typ ergeben (**float**, **real**). Andere Datentypen sind nicht zulässig. Standardmäßig wird die Sortierung in aufsteigender Reihenfolge vorgenommen.  
   
- ÜBER **(** \<Partition_by_clause > **)**  
- Teilt das von der FROM-Klausel erzeugte Resultset in Partitionen, auf die die Quantilfunktion angewendet wird. Weitere Informationen finden Sie unter [Klausel "OVER" &#40; Transact-SQL &#41; ](../../t-sql/queries/select-over-clause-transact-sql.md). Die \<ORDER BY-Klausel > und \<Zeilen- oder Bereichsklausel > der OVER-Syntax kann nicht in einer PERCENTILE_CONT-Funktion angegeben werden.  
+ OVER **(** \<partition_by_clause> **)**  
+ Teilt das von der FROM-Klausel erzeugte Resultset in Partitionen, auf die die Quantilfunktion angewendet wird. Weitere Informationen finden Sie unter [OVER-Klausel &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md). Die \<ORDER BY-Klausel> und die \<ROWS oder RANGE-Klausel> der OVER-Syntax können nicht in einer PERCENTILE_CONT-Funktion angegeben werden.  
   
 ## <a name="return-types"></a>Rückgabetypen  
  **float(53)**  
@@ -100,7 +100,7 @@ Executive              54.32695     48.5577
 Human Resources        17.427850    16.5865
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
 ### <a name="b-basic-syntax-example"></a>B. Einfaches Syntaxbeispiel  
  Im folgenden Beispiel wird das durchschnittliche Mitarbeitergehalt in jeder Abteilung mithilfe von PERCENTILE_CONT und PERCENTILE_DISC ermittelt. Beachten Sie, dass diese Funktionen möglicherweise nicht den gleichen Wert zurückgeben. Ursache hierfür ist, dass PERCENTILE_CONT den geeigneten Wert interpoliert, unabhängig davon, ob dieser im Dataset vorhanden ist oder nicht, während PERCENTILE_DISC immer einen Istwert aus dem Dataset zurückgibt.  
@@ -128,8 +128,8 @@ Human Resources        17.427850    16.5865
 Shipping and Receiving 9.250000      9.0000
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [PERCENTILE_DISC &#40; Transact-SQL &#41;](../../t-sql/functions/percentile-disc-transact-sql.md)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [PERCENTILE_DISC &#40;Transact-SQL&#41;](../../t-sql/functions/percentile-disc-transact-sql.md)  
   
   
 

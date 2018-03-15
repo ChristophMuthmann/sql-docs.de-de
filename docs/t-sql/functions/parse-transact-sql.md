@@ -1,5 +1,5 @@
 ---
-title: PARSE (Transact-SQL) | Microsoft Docs
+title: PARSE (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 07/05/2017
 ms.prod: sql-non-specified
@@ -46,23 +46,23 @@ PARSE ( string_value AS data_type [ USING culture ] )
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *Zeichenfolgenwert*  
- **Nvarchar**(4000)-Wert für den formatierten Wert in den angegebenen Datentyp analysiert.  
+ *string_value*  
+ **nvarchar**(4000)-Wert, der den formatierten Wert darstellt, der als angegebener Datentyp analysiert werden soll.  
   
- *Zeichenfolgenwert* muss eine gültige Darstellung des angeforderten Datentyps oder löst PARSE einen Fehler.  
+ *string_value* muss eine gültige Darstellung des angeforderten Datentyps sein. Andernfalls löst PARSE einen Fehler aus.  
   
  *data_type*  
  Literalwert, der den für das Ergebnis angeforderten Datentyp darstellt.  
   
- *Kultur*  
- Optionale Zeichenfolge, die identifiziert die Kultur, in der *Zeichenfolgenwert* formatiert ist.  
+ *culture*  
+ Optionale Zeichenfolge, die die Kultur angibt, in der *string_value* formatiert wird.  
   
- Wenn die *Kultur* Argument nicht angegeben, wird die Sprache der aktuellen Sitzung verwendet. Diese Sprache ist entweder implizit definiert oder wird explizit mit der Anweisung SET LANGUAGE festgelegt. *Kultur* lässt alle von .NET Framework unterstützten Kulturen es gibt keine Beschränkung, die explizit von unterstützten Sprachen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Wenn die *Kultur* Argument ist ungültig, Analyse löst einen Fehler aus.  
+ Wenn das *culture*-Argument nicht angegeben wurde, wird die Sprache der aktuellen Sitzung verwendet. Diese Sprache ist entweder implizit definiert oder wird explizit mit der Anweisung SET LANGUAGE festgelegt. *culture* lässt alle von .NET Framework unterstützten Kulturen zu und ist auf die explizit durch [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützten Sprachen beschränkt. Wenn das *culture*-Argument nicht gültig ist, löst PARSE einen Fehler aus.  
   
 ## <a name="return-types"></a>Rückgabetypen  
  Gibt das Ergebnis des Ausdrucks zurück, das in den angeforderten Datentyp umgewandelt wurde.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  NULL-Werte, die als Argumente an PARSE übergeben wurden, werden auf die zwei Arten verarbeitet:  
   
 1.  Wenn eine NULL-Konstante übergeben wird, wird ein Fehler ausgelöst. Ein NULL-Wert kann nicht unter Berücksichtigung der Kultur in einen anderen Datentyp analysiert werden.  
@@ -71,34 +71,34 @@ PARSE ( string_value AS data_type [ USING culture ] )
   
  Verwenden Sie PARSE nur, um eine Zeichenfolge in ein Datum und eine Uhrzeit oder in eine Zahl zu konvertieren. Für die allgemeine Typkonvertierungen sollten Sie auch weiterhin CAST oder CONVERT verwenden. Bedenken Sie, dass die Analyse des Zeichenfolgenwerts mit gewissen Leistungseinbußen verbunden ist.  
   
- Analyse basiert auf dem Vorhandensein der .NET Framework Common Language Runtime (CLR).  
+ Für PARSE muss die .NET Framework-Common Language Runtime (CLR) vorhanden sein.  
   
  Diese Funktion wird nicht remote ausgeführt, da sie die Existenz der CLR voraussetzt. Die Remoteausführung einer Funktion, die die CLR erfordert, würde einen Fehler auf dem Remoteserver auslösen.  
   
- **Weitere Informationen zum Data_type-parameter**  
+ **Weitere Informationen zum data_type-Parameter**  
   
- Die Werte für die *Data_type* Parameter sind auf die Typen in der folgenden Tabelle sowie die zugehörigen Formate beschränkt. Die Formatinformationen werden bereitgestellt, um die Ermittlung der zulässigen Mustertypen zu unterstützen. Weitere Informationen zu Formaten finden Sie unter .NET Framework-Dokumentation für die **System.Globalization.NumberStyles** und **DateTimeStyles** Enumerationen.  
+ Die Werte für den *data_type*-Parameter sind auf die in der folgenden Tabelle dargestellten Typen sowie die zugehörigen Formate beschränkt. Die Formatinformationen werden bereitgestellt, um die Ermittlung der zulässigen Mustertypen zu unterstützen. Weitere Informationen zu Formaten finden Sie in der .NET Framework-Dokumentation für die Enumerationen **System.Globalization.NumberStyles** und **DateTimeStyles**.  
   
 |Kategorie|Typ|.NET Framework-Typ|Verwendete Formate|  
 |--------------|----------|-------------------------|-----------------|  
 |Numerisch|bigint|Int64|NumberStyles.Number|  
-|Numerisch|int|Int32|NumberStyles.Number|  
-|Numerisch|smallint|Int16|NumberStyles.Number|  
-|Numerisch|tinyint|Byte|NumberStyles.Number|  
-|Numerisch|decimal|Decimal|NumberStyles.Number|  
-|Numerisch|numeric|Decimal|NumberStyles.Number|  
-|Numerisch|float|Double|NumberStyles.Float|  
-|Numerisch|real|Single|NumberStyles.Float|  
+|Numerisch|ssNoversion|Int32|NumberStyles.Number|  
+|Numerisch|SMALLINT|Int16|NumberStyles.Number|  
+|Numerisch|TINYINT|Byte|NumberStyles.Number|  
+|Numerisch|Decimal|Decimal|NumberStyles.Number|  
+|Numerisch|NUMERIC|Decimal|NumberStyles.Number|  
+|Numerisch|FLOAT|Double|NumberStyles.Float|  
+|Numerisch|REAL|Single|NumberStyles.Float|  
 |Numerisch|smallmoney|Decimal|NumberStyles.Currency|  
 |Numerisch|money|Decimal|NumberStyles.Currency|  
-|Datum und Uhrzeit|Datum|DateTime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
+|Datum und Uhrzeit|date|datetime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
 |Datum und Uhrzeit|Uhrzeit|TimeSpan|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
-|Datum und Uhrzeit|DateTime|DateTime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
-|Datum und Uhrzeit|smalldatetime|DateTime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
-|Datum und Uhrzeit|datetime2|DateTime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
+|Datum und Uhrzeit|DateTime|datetime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
+|Datum und Uhrzeit|smalldatetime|datetime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
+|Datum und Uhrzeit|datetime2|datetime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
 |Datum und Uhrzeit|datetimeoffset|DateTimeOffset|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
   
- **Weitere Informationen zum Culture-parameter**  
+ **Weitere Informationen zum culture-Parameter**  
   
  In der folgenden Tabelle werden die Zuordnungen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Sprachen zu .NET Framework-Kulturen angezeigt.  
   
@@ -116,16 +116,16 @@ PARSE ( string_value AS data_type [ USING culture ] )
 |Português|Portugiesisch|2070|pt-PT|  
 |Suomi|Finnisch|1035|fi|  
 |Svenska|Schwedisch|1053|sv-SE|  
-|Čeština|Tschechisch|1029|Cs-CZ|  
+|čeština|Tschechisch|1029|Cs-CZ|  
 |magyar|Ungarisch|1038|Hu-HU|  
 |polski|Polnisch|1045|Pl-PL|  
 |română|Rumänisch|1048|Ro-RO|  
 |hrvatski|Kroatisch|1050|hr-HR|  
 |slovenčina|Slowakisch|1051|Sk-SK|  
 |slovenski|Slowenisch|1060|Sl-SI|  
-|ΕΛΛΗΝΙΚΆ|Griechisch|1032|El-GR|  
-|БЪЛГАРСКИ|Bulgarisch|1026|bg-BG|  
-|РУССКИЙ|Russisch|1049|Ru-RU|  
+|ελληνικά|Griechisch|1032|El-GR|  
+|български|Bulgarisch|1026|bg-BG|  
+|русский|Russisch|1049|Ru-RU|  
 |Türkçe|Türkisch|1055|Tr-TR|  
 |British|Englisch (britisch)|2057|en-GB|  
 |eesti|Estnisch|1061|Et-EE|  

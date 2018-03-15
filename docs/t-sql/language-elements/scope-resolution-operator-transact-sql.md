@@ -1,5 +1,5 @@
 ---
-title: ":: (Bereich Auflösung) (Transact-SQL) | Microsoft Docs"
+title: ":: (Bereichsauflösung) (Transact-SQL) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -28,10 +28,10 @@ ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="-scope-resolution-transact-sql"></a>:: (Scope Resolution) (Transact-SQL)
+# <a name="-scope-resolution-transact-sql"></a>:: (Bereichsauflösung) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Der Bereichsauflösungsoperator **::** ermöglicht den Zugriff auf statische Elemente eines Verbunddatentyps. Ein verbunddatentyp ist enthält mehrere einfache Datentypen und Methoden, z. B. die integrierten CLR-Typen und benutzerdefinierte SQLCLR User-Defined Typen (UDTs).  
+  Der Bereichsauflösungsoperator **::** ermöglicht den Zugriff auf statische Elemente eines Verbunddatentyps. Ein Verbunddatentyp enthält mehrere einfache Datentypen und Methoden, z.B. die integrierten CLR-Typen und benutzerdefinierte SQLCLR-Typen (User Defined Types, UDTs).  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird der Zugriff auf das `GetRoot()`-Element des `hierarchyid`-Typs mithilfe des Bereichsauflösungsoperators dargestellt.  
@@ -46,7 +46,7 @@ PRINT @hid.ToString();
   
  `/`  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "WIDERRUFEN Sie Berechtigungen für asymmetrische Schlüssel (Transact-SQL) | Microsoft Docs"
+title: "REVOKE (Berechtigungen für asymmetrische Schlüssel) (Transact-SQL) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -55,11 +55,11 @@ REVOKE [ GRANT OPTION FOR ] { permission  [ ,...n ] }
 > [!IMPORTANT]  
 >  Falls der Prinzipal die angegebene Berechtigung ohne GRANT OPTION besitzt, wird die Berechtigung selbst aufgehoben.  
   
- *Berechtigung*  
+ *permission*  
  Gibt eine Berechtigung an, die für eine Assembly aufgehoben werden kann. Unten aufgeführt.  
   
- FÜR ASYMMETRISCHEN Schlüssel **::***Asymmetric_key_name*  
- Gibt den asymmetrischen Schlüssel an, für den die Berechtigung aufgehoben wird. Der bereichsqualifizierer **::** ist erforderlich.  
+ ON ASYMMETRIC KEY **::***asymmetric_key_name*  
+ Gibt den asymmetrischen Schlüssel an, für den die Berechtigung aufgehoben wird. Der Bereichsqualifizierer **::** ist erforderlich.  
   
  *database_principal*  
  Gibt den Prinzipal an, für den die Berechtigung aufgehoben wird. Einer der folgenden Typen:  
@@ -86,7 +86,7 @@ REVOKE [ GRANT OPTION FOR ] { permission  [ ,...n ] }
 > [!CAUTION]  
 >  Durch ein kaskadiertes Aufheben einer Berechtigung, die mit GRANT OPTION erteilt wurde, werden sowohl GRANT als auch DENY für diese Berechtigung aufgehoben.  
   
- AS *Revoking_principal*  
+ AS *revoking_principal*  
  Gibt einen Prinzipal an, von dem der Prinzipal, der diese Abfrage ausführt, sein Recht zum Aufheben der Berechtigung ableitet. Einer der folgenden Typen:  
   
 -   Datenbankbenutzer  
@@ -105,7 +105,7 @@ REVOKE [ GRANT OPTION FOR ] { permission  [ ,...n ] }
   
 -   Datenbankbenutzer, der nicht einem Serverprinzipal zugeordnet ist.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Ein asymmetrischer Schlüssel ist ein sicherungsfähiges Element auf Datenbankebene, das in der Datenbank enthalten ist, die dem Element in der Berechtigungshierarchie übergeordnet ist. Die spezifischsten und restriktivsten Berechtigungen, die für einen asymmetrischen Schlüssel aufgehoben werden können, sind im Folgenden aufgeführt, zusammen mit den allgemeineren Berechtigungen, die sie implizit enthalten.  
   
 |Berechtigung für asymmetrische Schlüssel|Impliziert durch Berechtigung für asymmetrischen Schlüssel|Impliziert durch Datenbankberechtigung|  
@@ -119,13 +119,13 @@ REVOKE [ GRANT OPTION FOR ] { permission  [ ,...n ] }
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die CONTROL-Berechtigung für den asymmetrischen Schlüssel.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [REVOKE &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-transact-sql.md)   
  [Berechtigungen &#40;Datenbankmodul&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [Prinzipale &#40;Datenbankmodul&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)   
  [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)   
- [Erstellen Sie APPLICATION ROLE &#40; Transact-SQL &#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
+ [CREATE APPLICATION ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
  [Verschlüsselungshierarchie](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   
   

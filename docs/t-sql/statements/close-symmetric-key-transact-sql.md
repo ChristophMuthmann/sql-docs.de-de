@@ -1,5 +1,5 @@
 ---
-title: CLOSE SYMMETRIC KEY (Transact-SQL) | Microsoft Docs
+title: CLOSE SYMMETRIC KEY (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 05/15/2017
 ms.prod: sql-non-specified
@@ -50,11 +50,11 @@ CLOSE { SYMMETRIC KEY key_name | ALL SYMMETRIC KEYS }
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *Key_name*  
+ *key_name*  
  Der Name des zu schließenden symmetrischen Schlüssels.  
   
-## <a name="remarks"></a>Hinweise  
- Geöffnete symmetrische Schlüssel werden an die Sitzung gebunden und nicht an den Sicherheitskontext. Ein geöffneter Schlüssel ist weiterhin verfügbar, bis er entweder explizit geschlossen oder die Sitzung beendet wird. Schließen aller SYMMETRISCHEN Schlüssel schließt alle Datenbank-Hauptschlüssel, der in der aktuellen Sitzung mithilfe geöffneten Datenbankhauptschlüssel der [OPEN MASTER KEY](../../t-sql/statements/open-master-key-transact-sql.md) Anweisung.  Informationen zu offenen Schlüsseln werden in der [sys.openkeys &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-openkeys-transact-sql.md) -Katalogsicht angezeigt.  
+## <a name="remarks"></a>Remarks  
+ Geöffnete symmetrische Schlüssel werden an die Sitzung gebunden und nicht an den Sicherheitskontext. Ein geöffneter Schlüssel ist weiterhin verfügbar, bis er entweder explizit geschlossen oder die Sitzung beendet wird. Mit CLOSE ALL SYMMETRIC KEYS werden alle in der aktuellen Sitzung geöffneten Datenbank-Hauptschlüssel mithilfe der [OPEN MASTER KEY](../../t-sql/statements/open-master-key-transact-sql.md) -Anweisung geschlossen.  Informationen zu offenen Schlüsseln werden in der Katalogsicht [sys.openkeys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-openkeys-transact-sql.md) angezeigt.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Zum Schließen eines symmetrischen Schlüssels ist keine explizite Berechtigung erforderlich.  
@@ -77,10 +77,10 @@ CLOSE ALL SYMMETRIC KEYS;
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)   
  [ALTER SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-symmetric-key-transact-sql.md)   
  [OPEN SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/open-symmetric-key-transact-sql.md)   
- [DROP SYMMETRIC KEY &#40; Transact-SQL &#41;](../../t-sql/statements/drop-symmetric-key-transact-sql.md)  
+ [DROP SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-symmetric-key-transact-sql.md)  
   
   

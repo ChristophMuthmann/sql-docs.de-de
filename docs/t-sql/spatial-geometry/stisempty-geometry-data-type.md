@@ -1,5 +1,5 @@
 ---
-title: STIsEmpty (Geometry-Datentyp) | Microsoft Docs
+title: STIsEmpty (geometry-Datentyp) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -44,7 +44,7 @@ Gibt 1 zurück, wenn eine **geometry** -Instanz leer ist. Gibt 0 zurück, wenn e
 ```  
   
 ## <a name="return-types"></a>Rückgabetypen  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Rückgabetyp: **Bit**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Rückgabetyp: **bit**  
   
  CLR-Rückgabetyp: **SqlBoolean**  
   
@@ -57,7 +57,7 @@ SET @g = geometry::STGeomFromText('POLYGON EMPTY', 0);
 SELECT @g.STIsEmpty();  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [OGC-Methoden für geometry-Instanzen](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

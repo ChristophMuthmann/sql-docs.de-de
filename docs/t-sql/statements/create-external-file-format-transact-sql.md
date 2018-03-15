@@ -1,7 +1,7 @@
 ---
-title: CREATE EXTERNAL FILE FORMAT (Transact-SQL) | Microsoft Docs
+title: CREATE EXTERNAL FILE FORMAT (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
-ms.date: 12/08/2017
+ms.date: 2/20/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-data-warehouse, pdw, sql-database
 ms.service: 
@@ -27,28 +27,28 @@ author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8fd2fa33a8a9107c86cfda7e0a628ab282efa534
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
-ms.translationtype: MT
+ms.openlocfilehash: fadf030c271888e071ab05e7289c87db57269449
+ms.sourcegitcommit: 7e9380e53341755df13fce130ab3287918a8e44c
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="create-external-file-format-transact-sql"></a>CREATE EXTERNAL FILE FORMAT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
-  Erstellt eine PolyBase externe-Dateiformatdefinition für externe Daten in Hadoop oder Azure Blob-Speicher mit Azure Data Lake-Speicher gespeichert. Erstellen ein externes Dateiformat ist eine Voraussetzung zum Erstellen einer externen PolyBase-Tabelle. Durch das Erstellen eines externen Dateiformats, geben Sie das tatsächliche Layout der Daten von einer externen Tabelle verwiesen wird.  
+  Erstellt ein Objekt im externen Dateiformat und definiert dabei externe Daten, die in Hadoop, Azure Blob Storage oder Azure Data Lake Store gespeichert sind. Das Erstellen eines externen Dateiformats ist eine Voraussetzung für die Erstellung einer externen Tabelle. Durch das Erstellen eines externen Dateiformats geben Sie das tatsächliche Layout der Daten an, auf die von einer externen Tabelle verwiesen wird.  
   
  PolyBase unterstützt die folgenden Dateiformate:
   
--   Durch Trennzeichen getrennten text  
+-   Durch Trennzeichen getrennter Text  
   
--   Hive-RCFile  
+-   Hive RCFile  
   
--   Hive-ORC.
+-   Hive ORC
   
 -   Parquet  
   
- Um eine externe Tabelle zu erstellen, finden Sie unter [CREATE EXTERNAL TABLE &#40; Transact-SQL &#41; ](../../t-sql/statements/create-external-table-transact-sql.md).
+Informationen zur Erstellung einer externen Tabelle finden Sie unter [CREATE EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-transact-sql.md).
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -97,7 +97,8 @@ WITH (
 <format_options> ::=  
 {  
     FIELD_TERMINATOR = field_terminator  
-    | STRING_DELIMITER = string_delimiter  
+    | STRING_DELIMITER = string_delimiter 
+    | First_Row = integer -- ONLY AVAILABLE SQL DW
     | DATE_FORMAT = datetime_format  
     | USE_TYPE_DEFAULT = { TRUE | FALSE } 
     | Encoding = {'UTF8' | 'UTF16'} 
@@ -108,24 +109,25 @@ WITH (
  *file_format_name*  
  Gibt einen Namen für das externe Dateiformat an.
   
- FORMAT_TYPE = [ PARQUET | ORC | RCFILE | PARQUET] Specifies the format of the external data.
+ FORMAT_TYPE = [ PARQUET | ORC | RCFILE | PARQUET] Gibt das Format der externen Daten an.
   
-   -   PARQUET gibt ein Parquet-Format an.
+   -   PARQUET Gibt ein Parquet-Format an.
   
    -   ORC  
-   Gibt ein Format optimiert Zeile Einspaltig (ORC). Diese Option erfordert Hive 0,11 oder höher auf dem externen Hadoop-Cluster. Hadoop bietet das Dateiformat ORC eine bessere Leistung als das Dateiformat RCFILE und Komprimierung.
+   Gibt ein ORC-Format (ORC = Optimized Row Columnar) an. Für diese Option ist auf dem externen Hadoop-Cluster Hive Version 0.11 oder höher erforderlich. In Hadoop bietet das ORC-Dateiformat eine bessere Komprimierung und Leistung als das RCFILE-Dateiformat.
 
-   -   RCFILE (in Kombination mit SERDE_METHOD = *SERDE_method*) gibt einen Datensatz Einspaltig Dateiformat (RcFile). Diese Option müssen Sie eine Hive-Serialisierungsprogramm, das Deserialisierungsprogramm (SerDe)-Methode angeben. Diese Anforderung ist identisch, wenn Sie in Hadoop Hive/HiveQL, zum Abfragen der RC-Dateien verwenden. Beachten Sie, dass die SerDe-Methode für die Groß-/Kleinschreibung beachtet wird.
+   -   RCFILE (in Kombination mit SERDE_METHOD = *SERDE_method*) Gibt ein RcFile-Format (RcFile = Record Columnar file) an. Für diese Option müssen Sie eine Hive Serializer- und Hive Deserializer-Methode (SerDe) angeben. Diese Anforderung ist auch gegeben, wenn Sie in Hadoop Hive/HiveQL zum Abfragen von RC-Dateien verwenden. Beachten Sie, dass bei der SerDe-Methode die Groß-/Kleinschreibung beachtet werden muss.
 
-   Beispiele zur Angabe von RCFile mit zwei SerDe-Methoden, die PolyBase unterstützt.
+   Beispiele für die Angabe von RCFile mit den zwei von PolyBase unterstützten SerDe-Methoden.
 
     -   FORMAT_TYPE = RCFILE, SERDE_METHOD = 'org.apache.hadoop.hive.serde2.columnar.LazyBinaryColumnarSerDe'
 
     -   FORMAT_TYPE = RCFILE, SERDE_METHOD = 'org.apache.hadoop.hive.serde2.columnar.ColumnarSerDe'
 
-   -   DELIMITEDTEXT gibt ein Textformat mit Spaltentrennzeichen, so genannte Feldabschlusszeichen.
+   -   DELIMITEDTEXT Gibt ein Textformat mit Spaltentrennzeichen (auch als Feldabschlusszeichen bekannt) an.
   
- Feldabschlusszeichen = *Feldabschlusszeichen* gilt nur für durch Trennzeichen getrennten Textdateien. Das Feldabschlusszeichen gibt ein oder mehrere Zeichen, die kennzeichnen das Ende jedes Feld (Spalte) in der Datei mit Texttrennzeichen an. Die Standardeinstellung ist der Pipe-Zeichen ꞌ auf | ꞌ auf. Garantierte Unterstützung wird empfohlen, mindestens ein ASCII-Zeichen.
+ FIELD_TERMINATOR = *field_terminator*  
+Gilt nur für durch Trennzeichen getrennte Textdateien. Das Feldabschlusszeichen gibt mindestens ein Zeichen an, welches das Ende der einzelnen Felder (Spalten) in der durch Trennzeichen getrennten Textdatei markiert. Als Standardzeichen wird der senkrechte Strich „|“ verwendet. Für eine garantierte Unterstützung wird empfohlen, mehrere ASCII-Zeichen zu verwenden.
   
   
  Beispiele:  
@@ -136,10 +138,10 @@ WITH (
   
 -   FIELD_TERMINATOR = ꞌ\tꞌ  
   
--   FELDABSCHLUSSZEICHEN = "~ | ~"  
+-   FIELD_TERMINATOR = '~|~'  
   
  STRING_DELIMITER = *string_delimiter*  
- Gibt das Feldabschlusszeichen für Daten vom Typzeichenfolge in der Datei mit Texttrennzeichen an. Die Zeichenfolgen-Trennzeichen für ein oder mehrere Zeichen lang ist und mit einfachen Anführungszeichen eingeschlossen ist. Der Standardwert ist eine leere Zeichenfolge "". Garantierte Unterstützung wird empfohlen, mindestens ein ASCII-Zeichen.
+Gibt das Feldabschlusszeichen für Daten der Typzeichenfolge in der durch Trennzeichen getrennten Textdatei an. Das Zeichenfolgen-Trennzeichen umfasst mindestens ein Zeichen und ist in einfache Anführungszeichen gesetzt. Der Standardwert ist die leere Zeichenfolge „“. Für eine garantierte Unterstützung wird empfohlen, mehrere ASCII-Zeichen zu verwenden.
  
   
  Beispiele:  
@@ -152,156 +154,165 @@ WITH (
   
 -   STRING_DELIMITER = ꞌ,ꞌ  
   
--   STRING_DELIMITER = '0x7E0x7E'  -- Two tildes (for example, ~~)
-  
-Datum\_FORMAT = *Datetime_format* gibt ein benutzerdefiniertes Format für alle Datums- und Zeitdaten, die in einer durch Trennzeichen getrennte Textdatei angezeigt werden. Wenn die Quelldatei "DateTime" Standardformate verwendet wird, ist diese Option nicht erforderlich. Pro Datei ist nur eine benutzerdefinierte Datetime-Format zulässig. Sie können nicht mehrere benutzerdefinierte Datetime-Formate pro Datei angeben. Allerdings können Sie mehrere Datetime-Formate verwenden, ist jeweils das Standardformat für den jeweiligen Datentyp in der externen Tabellendefinition.
+-   STRING_DELIMITER = '0x7E0x7E'  -- Zwei Tilden (z.B. ~~)
+ 
+ FIRST_ROW = *First_row_int*  
+Gibt die Zeilenzahl an, die während eines PolyBase-Ladevorgangs in allen Dateien zuerst gelesen wird. Dieser Parameter kann Werte von 1 bis 15 umfassen. Wenn der Wert auf 2 festgelegt ist, wird die erste Zeile in jeder Datei (Kopfzeile) beim Laden der Daten übersprungen. Zeilen werden basierend auf dem Vorhandensein von Zeilenabschlusszeichen (/ r/n, r, /n) übersprungen. Wenn diese Option für den Export verwendet wird, werden Zeilen zu den Daten hinzugefügt, um sicherzustellen, dass die Datei ohne Datenverlust gelesen werden kann. Wenn der Wert auf >2 festgelegt wird, enthält die erste exportierte Zeile die Spaltennamen der externen Tabelle.
 
-PolyBase verwendet nur die benutzerdefinierten Datumsformat für das Importieren von Daten. Das benutzerdefinierte Format wird nicht zum Schreiben von Daten in eine externe Datei verwendet.
+ DATE\_FORMAT = *datetime_format*  
+Gibt ein benutzerdefiniertes Format für alle Datums- und Zeitdaten an, die in einer durch Trennzeichen getrennten Textdatei angezeigt werden könnten. Wenn die Quelldatei Standardformate für datetime verwendet, ist diese Option nicht erforderlich. Pro Datei ist nur ein benutzerdefiniertes datetime-Format zulässig. Sie können pro Datei nicht mehrere benutzerdefinierte datetime-Formate angeben. Sie können jedoch mehrere datetime-Formate verwenden, wenn es sich bei den einzelnen Formaten um die Standardformate der entsprechenden zugehörigen Datentypen in der externen Tabellendefinition handelt.
 
- Wenn DATE_FORMAT nicht angegeben oder ist eine leere Zeichenfolge, wird PolyBase folgenden Standardformate verwendet:
+PolyBase verwendet das benutzerdefinierte Datumsformat nur für den Import der Daten. Es verwendet das benutzerdefinierte Format nicht für das Schreiben von Daten in eine externe Datei.
+
+ Wenn DATE_FORMAT nicht angegeben ist oder eine leere Zeichenfolge ist, verwendet PolyBase folgende Standardformate:
   
--   "DateTime": "Yyyy-MM-TT HH: mm:"  
+-   DateTime: „JJJJ-MM-TT HH:mm:ss“  
   
--   SmallDateTime: "Yyyy-MM-TT HH: mm"  
+-   SmallDateTime: „JJJJ-MM-TT HH:mm“  
   
--   Datum: "Yyyy-MM-TT"  
+-   Date: „JJJJ-MM-TT“  
   
--   DateTime2: "Yyyy-MM-TT HH: mm:"  
+-   DateTime2: „JJJJ-MM-TT HH:mm:ss“  
   
--   "DateTimeOffset": "Yyyy-MM-TT HH: mm:"  
+-   DateTimeOffset: „JJJJ-MM-TT HH:mm:ss“  
   
--   Zeit: "hh"  
+-   Time: „HH:mm:ss“  
   
- **Beispiel für Datums-und Uhrzeitformate** in der folgenden Tabelle sind.  
+In der folgenden Tabelle finden Sie **Beispiele für Datumsformate**:
   
- Hinweise zur Tabelle:  
+Hinweise zur Tabelle:  
   
--   Jahr, Monat und Tag können eine Vielzahl von Formaten und Aufträge haben. Die Tabelle zeigt nur die **Ymd** Format. Monat kann Ziffern von 1 oder 2 oder 3 Zeichen hat. Tag kann 1 oder 2 Ziffern haben. Jahr kann 2 oder 4 Ziffern aufweisen.
+-   Jahr, Monat und Tag können verschiedene Formate und Reihenfolgen aufweisen. Die Tabelle enthält nur das Format **JMT**. Ein Monat kann eine oder zwei Ziffern oder drei Zeichen umfassen. Ein Tag kann eine oder zwei Ziffern umfassen. Ein Jahr kann zwei oder vier Ziffern umfassen.
   
--   Millisekunden (Fffffff) ist nicht erforderlich.
+-   Millisekunden (fffffff) sind nicht erforderlich.
   
--   Am, pm (Tt) nicht erforderlich ist. Der Standardwert ist Uhr.
+-   Die Angabe von AM oder PM (tt) ist nicht erforderlich. Der Standardwert ist AM.
   
-|Date-Typ|Beispiel|Description|  
+|Datumstyp|Beispiel|Description|  
 |---------------|-------------|-----------------|  
-|datetime|DATE_FORMAT = "JJJJ-MM-TT ss.fff"|Zusätzlich zu den Year, Month und Day, umfasst dieses Datumsformat 00 und 24 Stunden, 00-59 Minuten, 00-59 Sekunden und 3 Ziffern für Millisekunden.|  
-|datetime|DATE_FORMAT = "JJJJ-MM-tt hh:mm:ss.ffftt"|Zusätzlich zu den Year, Month und Day, umfasst dieses Datumsformat 00-12 Stunden, 00-59 Minuten, 00-59 Sekunden und 3 Ziffern für Millisekunden und Uhr am, PM oder pm. |  
-|SmallDateTime|DATE_FORMAT = "JJJJ-MM-TT HH: mm"|Zusätzlich zu den Year, Month und Day, umfasst dieses Datumsformat 00-23 Stunden, 00-59 Minuten.|  
-|SmallDateTime|DATE_FORMAT = "JJJJ-MM-tt Hh:mmtt"|Zusätzlich zu den Year, Month und Day, umfasst dieses Datumsformat 00-11 Stunden 00-59 Minuten, keine Sekunden und Uhr, am, PM oder pm.|  
-|Datum|DATE_FORMAT =  'yyyy-MM-dd'|Jahr, Monat und Tag. Keine Time-Element ist enthalten.|  
-|Datum|DATE_FORMAT = 'yyyy-MMM-dd'|Jahr, Monat und Tag. Wenn Monat mit 3 M angegeben wird, ist der Wert mindestens eine der Zeichenfolgen Januar, Februar, Mrz, Apr, Mai, Jun, Jul, Aug, Sep, Okt, Nov oder Dec.|  
-|datetime2|DATE_FORMAT = "JJJJ-MM-TT HH:mm:ss.fffffff"|Zusätzlich zu den Year, Month und Day, umfasst dieses Datumsformat 00-23 Stunden, 00-59 Minuten, 00-59 Sekunden und 7 Ziffern für Millisekunden.|  
-|datetime2|DATE_FORMAT = "JJJJ-MM-tt hh:mm:ss.ffffffftt"|Zusätzlich zu den Year, Month und Day, umfasst dieses Datumsformat 00-11 Stunden 00-59 Minuten, 00-59 Sekunden, 7 Ziffern für Millisekunden und Uhr, bin, Uhr oder pm.|  
-|DateTimeOffset|DATE_FORMAT = "JJJJ-MM-TT HH:mm:ss.fffffff Zzz"|Zusätzlich zu den Year, Month und Day, umfasst dieses Datumsformat 00-23 Stunden, 00-59 Minuten, 00-59 Sekunden und 7 Ziffern für Millisekunden und den Zeitzonenunterschied, die Sie in der Eingabedatei als verwendet `{+&#124;-}HH:ss`. Einsparungen ist z. B. seit Los Angeles ohne Sommerzeit 8 Stunden nach UTC, ein Wert von-08: 00 als Uhrzeit in der Eingabedatei gibt die Zeitzone für Los Angeles an.|  
-|DateTimeOffset|DATE_FORMAT = "JJJJ-MM-tt hh:mm:ss.ffffffftt Zzz"|Zusätzlich zu den Year, Month und Day, umfasst dieses Datumsformat 00-11 Stunden 00-59 Minuten, 00-59 Sekunden 7 Ziffern für Millisekunden (Uhr, am, PM oder pm) und den Zeitzonenunterschied. Finden Sie in der Beschreibung in der vorherigen Zeile.|  
-|Zeit|DATE_FORMAT = "Hh"|Es ist kein Datumswert, 00-23 Stunden, 00-59 Minuten und 00-59 Sekunden.|  
+|datetime|DATE_FORMAT = 'JJJJ-MM-TT HH:mm:ss.fff'|Neben dem Jahr, dem Monat und dem Tag umfasst dieses Datumsformat 00 bis 24 Stunden, 00 bis 59 Minuten, 00 bis 59 Sekunden und 3 Ziffern für Millisekunden.|  
+|datetime|DATE_FORMAT = 'JJJJ-MM-TT hh:mm:ss.ffftt'|Neben dem Jahr, dem Monat und dem Tag umfasst dieses Datumsformat 00 bis 12 Stunden, 00 bis 59 Minuten, 00 bis 59 Sekunden, 3 Ziffern für Millisekunden und AM bzw. am oder PM bzw. pm. |  
+|SmallDateTime|DATE_FORMAT = 'JJJJ-MM-TT HH:mm'|Neben dem Jahr, dem Monat und dem Tag umfasst dieses Datumsformat 00 bis 23 Stunden, 00 bis 59 Minuten.|  
+|SmallDateTime|DATE_FORMAT = 'JJJJ-MM-TT hh:mmtt'|Neben dem Jahr, dem Monat und dem Tag umfasst dieses Datumsformat 00 bis 11 Stunden, 00 bis 59 Minuten, keine Sekunden und AM bzw. am und PM bzw. pm.|  
+|date|DATE_FORMAT = 'JJJJ-MM-TT'|Jahr, Monat und Tag. Es ist kein Zeitelement enthalten.|  
+|date|DATE_FORMAT = 'JJJJ-MMM-TT'|Jahr, Monat und Tag. Wenn der Monat mit 3 Ms angegeben ist, steht der Eingabewert für eine der folgenden Zeichenfolgen: Jan, Feb, Mrz, Apr, Mai, Jun, Jul, Aug, Sep, Okt, Nov oder Dez.|  
+|datetime2|DATE_FORMAT = 'JJJJ-MM-TT HH:mm:ss.fffffff'|Neben dem Jahr, dem Monat und dem Tag umfasst dieses Datumsformat 00 bis 23 Stunden, 00 bis 59 Minuten, 00 bis 59 Sekunden und 7 Ziffern für Millisekunden.|  
+|datetime2|DATE_FORMAT = 'JJJJ-MM-TT hh:mm:ss.ffffffftt'|Neben dem Jahr, dem Monat und dem Tag umfasst dieses Datumsformat 00 bis 11 Stunden, 00 bis 59 Minuten, 00 bis 59 Sekunden, 7 Ziffern für Millisekunden und AM bzw. am oder PM bzw. pm.|  
+|DateTimeOffset|DATE_FORMAT = 'JJJJ-MM-TT HH:mm:ss.fffffff zzz'|Neben dem Jahr, dem Monat und dem Tag umfasst dieses Datumsformat 00 bis 23 Stunden, 00 bis 59 Minuten, 00 bis 59 Sekunden, 7 Ziffern für Millisekunden und den Offsetwert für die Zeitzone, den Sie als `{+&#124;-}HH:ss` in die Eingabedatei eingefügt haben. Da die Uhrzeit in Los Angeles beispielsweise ohne Umschaltung der Sommer-/Winterzeit 8 hinter UTC liegt, gibt der Wert -08:00 in der Eingabedatei die Zeitzone für Los Angeles an.|  
+|DateTimeOffset|DATE_FORMAT = 'JJJJ-MM-TT hh:mm:ss.ffffffftt zzz'|Neben dem Jahr, dem Monat und dem Tag umfasst dieses Datumsformat 00 bis 11 Stunden, 00 bis 59 Minuten, 00 bis 59 Sekunden, 7 Ziffern für Millisekunden, (AM bzw. am oder PM bzw. pm) und den Offsetwert für die Zeitzone. Eine Beschreibung finden Sie in der vorherigen Zeile.|  
+|Uhrzeit|DATE_FORMAT = 'HH:mm:ss'|Es ist kein Datumswert vorhanden, nur 00 bis 23 Stunden, 00 bis 59 Minuten und 00 bis 59 Sekunden.|  
   
- Alle unterstützten Datums-und Uhrzeitformate:
+ Alle unterstützten Datumsformate:
   
-|datetime|smalldatetime|Datum|datetime2|datetimeoffset|  
+|DATETIME|smalldatetime|date|datetime2|datetimeoffset|  
 |--------------|-------------------|----------|---------------|--------------------|  
-|[M [M]] M-[d] d-[Yy] Yy hh: mm: [ss.fff]|[M [M]] M-[d] d-[Yy] Yy hh: mm [: 00]|[M [M]] M-[d] d-[Yy] yy|[M [M]] M-[d] d-[Yy] Yy hh: mm: [.fffffff]|[M [M]] M-[d] d-[Yy] Yy hh: mm: [.fffffff] zzz|  
-|[M [M]] M-[d] d-[Yy] Yy hh: mm: [ss.fff] [Tt]|[M [M]] M-[d] d-[Yy] Yy hh: mm [: 00] [Tt]||[M [M]] M-[d] d-[Yy] Yy hh: mm: [.fffffff] [Tt]|[M [M]] M-[d] d-[Yy] Yy hh: mm: [.fffffff] [Tt] Zzz|  
-|[M [M]] M [Yy] Yy-[d]-d hh: mm: [ss.fff]|[M [M]] M [Yy] Yy-[d]-d hh: mm [: 00]|[M [M]] M [Yy] Yy-[d]-d|[M [M]] M [Yy] Yy-[d]-d ss [.fffffff]|[M [M]] M [Yy] Yy-[d]-d Zzz ss [.fffffff]|  
-|[M [M]] M-[Yy] Yy-[d] d hh: mm: [ss.fff] [Tt]|[M [M]] M-[Yy] Yy-[d] d hh: mm [: 00] [Tt]||[M [M]] M-[Yy] Yy-[d] d ss [.fffffff] [Tt]|[M [M]] M-[Yy] Yy-[d] d ss [.fffffff] [Tt] Zzz|  
-|[Yy] Yy [M [M]] M-[d]-d hh: mm: [ss.fff]|[Yy] Yy [M [M]] M-[d]-d hh: mm [: 00]|[Yy] Yy [M [M]] M-[d]-d|[Yy] Yy [M [M]] M-[d]-d ss [.fffffff]|[Yy] Yy-[M [M]] d ss [.fffffff] Zzz M-[d]|  
-|[Yy] Yy-[M [M]] M-[d] d hh: mm: [ss.fff] [Tt]|[Yy] Yy-[M [M]] M-[d] d hh: mm [: 00] [Tt]||[Yy] Yy-[M [M]] M-[d] d ss [.fffffff] [Tt]|[Yy] Yy-[M [M]] M-[d] d ss [.fffffff] [Tt] Zzz|  
-|[Yy] Yy-[d] d-[M [M]] M hh: mm: [ss.fff]|[Yy] Yy-[d] d-[M [M]] M hh: mm [: 00]|[Yy] Yy - d [d]-[M [M]] M|[Yy] Yy-[d] d-[M [M]] M ss [.fffffff]|[Yy] Yy-[d] M ss [.fffffff] Zzz d-[M [M]]|  
-|[Yy] Yy-[d] d-[M [M]] M hh: mm: [ss.fff] [Tt]|[Yy] Yy-[d] d-[M [M]] M hh: mm [: 00] [Tt]||[Yy] Yy-[d] d-[M [M]] M ss [.fffffff] [Tt]|[Yy] Yy-[d] d-[M [M]] M ss [.fffffff] [Tt] Zzz|  
-|[d] d-[M [M]] M-[Yy] Yy hh: mm: [ss.fff]|[d] d-[M [M]] M-[Yy] Yy hh: mm [: 00]|[d] d-[M [M]] M-[Yy] yy|[d] d-[M [M]] M-[Yy] Yy hh: mm: [.fffffff]|[d] d-[M [M]] M-[Yy] Yy hh: mm: [.fffffff] zzz|  
-|[d] d-[M [M]] M-[Yy] Yy hh: mm: [ss.fff] [Tt]|[d] d-[M [M]] M-[Yy] Yy hh: mm [: 00] [Tt]||[d] d-[M [M]] M-[Yy] Yy hh: mm: [.fffffff] [Tt]|[d] d-[M [M]] M-[Yy] Yy hh: mm: [.fffffff] [Tt] Zzz|  
-|[d] d-[Yy] Yy-[M [M]] M hh: mm: [ss.fff]|[d] d-[Yy] Yy-[M [M]] M hh: mm [: 00]|[d] d-[Yy] Yy-[M [M]] M|[d] d-[Yy] Yy-[M [M]] M ss [.fffffff]|[d] d-[Yy] Yy-[M [M]] M ss [.fffffff] zzz|  
-|[d] d-[Yy] Yy-[M [M]] M hh: mm: [ss.fff] [Tt]|[d] d-[Yy] Yy-[M [M]] M hh: mm [: 00] [Tt]||[d] d-[Yy] Yy-[M [M]] M ss [.fffffff] [Tt]|[d] d-[Yy] Yy-[M [M]] M ss [.fffffff] [Tt] Zzz|  
+|[M[M]]M-[T]T-[JJ]JJ HH:mm:ss[.fff]|[M[M]]M-[T]T-[JJ]JJ HH:mm[:00]|[M[M]]M-[T]T-[JJ]JJ|[M[M]]M-[T]T-[JJ]JJ HH:mm:ss[.fffffff]|[M[M]]M-[T]T-[JJ]JJ HH:mm:ss[.fffffff] zzz|  
+|[M[M]]M-[T]T-[JJ]JJ hh:mm:ss[.fff][tt]|[M[M]]M-[T]T-[JJ]JJ hh:mm[:00][tt]||[M[M]]M-[T]T-[JJ]JJ hh:mm:ss[.fffffff][tt]|[M[M]]M-[T]T-[JJ]JJ hh:mm:ss[.fffffff][tt] zzz|  
+|[M[M]]M-[JJ]JJ-[T]T HH:mm:ss[.fff]|[M[M]]M-[JJ]JJ-[T]T HH:mm[:00]|[M[M]]M-[JJ]JJ-[T]T|[M[M]]M-[JJ]JJ-[T]T HH:mm:ss[.fffffff]|[M[M]]M-[JJ]JJ-[T]T HH:mm:ss[.fffffff] zzz|  
+|[M[M]]M-[JJ]JJ-[T]T hh:mm:ss[.fff][tt]|[M[M]]M-[JJ]JJ-[T]T hh:mm[:00][tt]||[M[M]]M-[JJ]JJ-[T]T hh:mm:ss[.fffffff][tt]|[M[M]]M-[JJ]JJ-[T]T hh:mm:ss[.fffffff][tt] zzz|  
+|[JJ]JJ-[M[M]]M-[T]T HH:mm:ss[.fff]|[JJ]JJ-[M[M]]M-[T]T HH:mm[:00]|[JJ]JJ-[M[M]]M-[T]T|[JJ]JJ-[M[M]]M-[T]T HH:mm:ss[.fffffff]|[JJ]JJ-[M[M]]M-[T]T HH:mm:ss[.fffffff] zzz|  
+|[JJ]JJ-[M[M]]M-[T]T hh:mm:ss[.fff][tt]|[JJ]JJ-[M[M]]M-[T]T hh:mm[:00][tt]||[JJ]JJ-[M[M]]M-[T]T hh:mm:ss[.fffffff][tt]|[JJ]JJ-[M[M]]M-[T]T hh:mm:ss[.fffffff][tt] zzz|  
+|[JJ]JJ-[T]T-[M[M]]M HH:mm:ss[.fff]|[JJ]JJ-[T]T-[M[M]]M HH:mm[:00]|[JJ]JJ-[T]T-[M[M]]M|[JJ]JJ-[T]T-[M[M]]M HH:mm:ss[.fffffff]|[JJ]JJ-[T]T-[M[M]]M HH:mm:ss[.fffffff] zzz|  
+|[JJ]JJ-[T]T-[M[M]]M hh:mm:ss[.fff][tt]|[JJ]JJ-[T]T-[M[M]]M hh:mm[:00][tt]||[JJ]JJ-[T]T-[M[M]]M hh:mm:ss[.fffffff][tt]|[JJ]JJ-[T]T-[M[M]]M hh:mm:ss[.fffffff][tt] zzz|  
+|[T]T-[M[M]]M-[JJ]JJ HH:mm:ss[.fff]|[T]T-[M[M]]M-[JJ]JJ HH:mm[:00]|[T]T-[M[M]]M-[JJ]JJ|[T]T-[M[M]]M-[JJ]JJ :mm:ss[.fffffff]|[T]T-[M[M]]M-[JJ]JJ HH:mm:ss[.fffffff] zzz|  
+|[T]T-[M[M]]M-[JJ]JJ hh:mm:ss[.fff][tt]|[T]T-[M[M]]M-[JJ]JJ hh:mm[:00][tt]||[T]T-[M[M]]M-[JJ]JJ hh:mm:ss[.fffffff][tt]|[T]T-[M[M]]M-[JJ]JJ hh:mm:ss[.fffffff][tt] zzz|  
+|[T]T-[JJ]JJ-[M[M]]M HH:mm:ss[.fff]|[T]T-[JJ]JJ-[M[M]]M HH:mm[:00]|[T]T-[JJ]JJ-[M[M]]M|[T]T-[JJ]JJ-[M[M]]M HH:mm:ss[.fffffff]|[T]T-[JJ]JJ-[M[M]]M HH:mm:ss[.fffffff] zzz|  
+|[T]T-[JJ]JJ-[M[M]]M hh:mm:ss[.fff][tt]|[T]T-[JJ]JJ-[M[M]]M hh:mm[:00][tt]||[T]T-[JJ]JJ-[M[M]]M hh:mm:ss[.fffffff][tt]|[T]T-[JJ]JJ-[M[M]]M hh:mm:ss[.fffffff][tt] zzz|  
   
  Details:  
   
--   Um Werte für Monat, Tag und Jahr zu trennen, können Sie '–', '/' oder '. '. Der Einfachheit halber wird in die Tabelle nur das Trennzeichen ":" verwendet.
+-   Sie können „–“, „/“ oder „'.'“ verwenden, um Werte für Monat, Tag und Jahr zu trennen. Der Einfachheit halber wird in die Tabelle nur das Trennzeichen „–“ verwendet.
   
--   Um den Monat als Text anzugeben, verwenden Sie drei oder mehr Zeichen. Monate mit 1 oder 2-Zeichen werden als Zahl interpretiert.
+-   Geben Sie mindestens drei Zeichen an, wenn der Monat in Textform angegeben werden soll. Monate mit einem oder zwei Zeichen werden als Zahlen interpretiert.
   
--   Verwenden Sie zum Trennen der Time-Werten die ': ' Symbol.
+-   Verwenden Sie das Symbol „:“, um Zeitwerte zu trennen.
   
--   Buchstaben, die in eckige Klammern eingeschlossen sind optional.
+-   Buchstaben in eckigen Klammern sind optional.
   
--   Legen Sie die Buchstaben "Tt" [AM | PM | am | pm]. Uhr ist die Standardeinstellung. Wenn "Tt" angegeben wird, muss ein Wert für die Stunde (Hh) im Bereich von 0 bis 12 sein.
+-   Die Buchstaben „tt“ kennzeichnen [AM|PM|am|pm]. AM ist die Standardeinstellung. Wenn „tt“ angegeben ist, muss der Wert für die Stunde (hh) in einem Bereich von 0 bis 12 liegen.
   
--   Die Buchstaben "Zzz" Festlegen des Zeitzonenoffsets für das System aktuelle Zeitzone im Format {+ |-} HH:ss].
+-   Die Buchstaben „zzz“ kennzeichnen den Offsetwert für die Zeitzone für die aktuelle Zeitzone des Systems im Format {+|-}HH:ss].
   
- USE_TYPE_DEFAULT = {TRUE | **"False"** } gibt an, wie fehlende Werte in einer durch Trennzeichen getrennten Textdateien behandelt wird, wenn PolyBase Daten aus der Textdatei abruft.
+ USE_TYPE_DEFAULT = { TRUE | **FALSE** }  
+ Gibt an, wie fehlende Werte in durch Trennzeichen getrennten Textdateien behandelt werden sollen, wenn PolyBase Daten aus der Textdatei abruft.
   
- TRUE, wenn das Abrufen von Daten aus der Textdatei jeden fehlenden Wert speichern, indem Sie mit dem Standardwert für den Datentyp der entsprechenden Spalte in der externen Tabellendefinition. Ersetzen Sie z. B. einen fehlenden Wert mit ein:  
+ TRUE  
+ Speichern Sie beim Abrufen von Daten aus der Textdatei jeden fehlenden Wert, indem Sie den Standardwert für den Datentyp der entsprechenden Spalte in der externen Tabellendefinition verwenden. Ersetzen Sie einen fehlenden Wert beispielsweise durch:  
   
--   0, wenn die Spalte als eine numerische Spalte definiert ist.
+-   0, wenn die Spalte als numerische Spalte definiert ist.
   
--   Leere Zeichenfolge "" Wenn die Spalte eine Spalte mit Zeichenfolgen ist.
+-   Leere Zeichenfolge „“, wenn die Spalte eine Zeichenfolgenspalte ist.
   
--   1900-01-01 ist die Spalte eine Datumsspalte.
+-   1900-01-01, wenn die Spalte eine Datumsspalte ist.
   
- "False" Store alle fehlenden Werte als NULL. Alle Nullwerte, die das Wort NULL in die durch Tabstopps getrennte Textdatei mit gespeichert sind, werden als die Zeichenfolge 'NULL' importiert.
+ FALSE  
+ Speichern Sie alle fehlenden Werte als NULL-Werte. Alle NULL-Werte, die durch Verwendung des Worts NULL in der durch Trennzeichen getrennten Textdatei gespeichert werden, werden als Zeichenfolge „NULL“ importiert.
   
-   Encoding = {'UTF8' | 'UTF16'} In Azure SQL Data Warehouse, PolyBase can read UTF8 and UTF16-LE encoded delimited text files. In SQL Server und PDW PolyBase unterstützt keine lesen UTF16-Format codierte Dateien.
+   Encoding = {'UTF8' | 'UTF16'}  
+ In Azure SQL Data Warehouse kann PolyBase UTF8- und UTF16-LE-codierte, durch Trennzeichen getrennte Textdateien lesen. In SQL Server und PDW unterstützt PolyBase nicht das Lesen UTF16-codierter Dateien.
   
- DATA_COMPRESSION = *Data_compression_method* gibt die datenkomprimierungsmethode für die externen Daten. Wenn DATA_COMPRESSION nicht angegeben wird, ist die Standardeinstellung von nicht komprimierten Daten.
- Damit Sie richtig funktioniert, benötigen Gzip-komprimierten Dateien die Dateierweiterung ".gz".
+ DATA_COMPRESSION = *data_compression_method*  
+ Gibt die Datenkomprimierungsmethode für die externen Daten an. Wenn DATA_COMPRESSION nicht angegeben ist, stellen dekomprimierte Daten den Standard dar.
+ GZip-komprimierte Dateien müssen die Dateierweiterung „.gz“ aufweisen, damit sie ordnungsgemäß funktionieren.
  
- Der Formattyp DELIMITEDTEXT unterstützt diese Komprimierungsmethoden:
+ Der Formattyp DELIMITEDTEXT unterstützt folgende Komprimierungsmethoden:
   
 -   DATA COMPRESSION = 'org.apache.hadoop.io.compress.DefaultCodec'
   
 -   DATA COMPRESSION = 'org.apache.hadoop.io.compress.GzipCodec'
 
- Der Formattyp rcfile unterstützt diese Komprimierungsmethode:
+ Der Formattyp RCFILE unterstützt folgende Komprimierungsmethode:
   
 -   DATA COMPRESSION = 'org.apache.hadoop.io.compress.DefaultCodec'
   
- Formattyp ORC unterstützt diese Komprimierungsmethoden:
+ Der FORC-Dateiformattyp unterstützt folgende Komprimierungsmethode:
   
 -   DATA COMPRESSION = 'org.apache.hadoop.io.compress.DefaultCodec'
   
 -   DATA COMPRESSION = 'org.apache.hadoop.io.compress.SnappyCodec'
   
- Die PARQUET Dateiformate vom Typ unterstützt die Folliwing Komprimierungsverfahren:
+ Der PARQUET-Dateiformattyp unterstützt folgende Komprimierungsmethoden:
   
 -   DATA COMPRESSION = 'org.apache.hadoop.io.compress.GzipCodec'
   
 -   DATA COMPRESSION = 'org.apache.hadoop.io.compress.SnappyCodec'
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert die Berechtigung ALTER ANY EXTERNAL FILE FORMAT.
+ Macht eine ALTER ANY EXTERNAL FILE FORMAT-Berechtigung erforderlich.
   
 ## <a name="general-remarks"></a>Allgemeine Hinweise
- Das externe Dateiformat ist im Datenbankbereich [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. Es ist im Serverbereich [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
+ Das externe Dateiformat ist in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] datenbankweit gültig. Es ist in [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] serverweit gültig.  
   
- Die Formatoptionen sind optional und gelten nur für durch Trennzeichen getrennten Textdateien.  
+ Sämtliche Formatoptionen sind optional und gelten nur für durch Trennzeichen getrennte Textdateien.  
   
- Wenn die Daten in einem komprimierten Format gespeichert werden, dekomprimiert PolyBase zuerst die Daten vor der Rückgabe der Datensätze.
+ Wenn die Daten in einem der komprimierten Formate gespeichert werden, dekomprimiert PolyBase die Daten zunächst, bevor es die Datensätze zurückgibt.
   
 ## <a name="limitations-and-restrictions"></a>Einschränkungen
   
- Das Zeilentrennzeichen in getrennte Textdateien muss von Hadoops-LineRecordReader unterstützt werden. Es muss also entweder "\r", "\n" oder "\r\n" sein. Diese Trennzeichen sind nicht BenutzerKonfigurierbar.
+ Das Zeilentrennzeichen in durch Trennzeichen getrennten Textdateien muss von dem LineRecordReader von Hadoop unterstützt werden. Es muss „\r“, „\n“ oder „\r\n“ lauten. Diese Trennzeichen sind nicht durch Benutzer konfigurierbar.
   
- Die Kombinationen von unterstützten SerDe-Methoden mit RCFiles und die unterstützten Daten Komprimierungsverfahren, werden zuvor in diesem Artikel aufgeführt. Nicht alle Kombinationen werden unterstützt.
+ Die Kombinationen der unterstützten SerDe-Methoden mit RCFiles und die unterstützten Datenkomprimierungsmethoden werden oben in diesem Artikel aufgeführt. Nicht alle Kombinationen werden unterstützt.
   
- Die maximale Anzahl gleichzeitiger PolyBase-Abfragen ist 32. Wenn es sich bei 32 gleichzeitige Abfragen ausgeführt werden, kann jede Abfrage maximal 33.000 Dateien vom Speicherort externen lesen. Der Stammordner, und jeder Unterordner werden auch als eine Datei gewertet. Wenn der Grad an Parallelität höchstens 32 ist, kann der Speicherort der externen Datei mehr als 33.000 Dateien enthalten.
+ Die maximale Anzahl der gleichzeitigen PolyBase-Abfragen beläuft sich auf 32. Wenn 32 gleichzeitige Abfragen ausgeführt werden, kann jede Abfrage maximal 33.000 Dateien vom Speicherort für externe Dateien lesen. Der Stammordner und die einzelnen Unterordner zählen auch als Datei. Wenn der Grad der Parallelität unter 32 liegt, kann der Speicherort für externe Dateien mehr als 33.000 Dateien enthalten.
   
- Aufgrund der Einschränkung in Bezug auf die Anzahl der Dateien in der externen Tabelle wird empfohlen, weniger als 30.000 Dateien in die Stamm- und Unterordner der Speicherort der externen Datei zu speichern. Darüber hinaus wird empfohlen, lassen die Anzahl der Unterordner unter dem Stammverzeichnis auf einer kleinen Anzahl. Wenn zu viele Dateien verwiesen werden, kann eine Java Virtual Machine-Out-of-Memory-Ausnahme ausgelöst.
+ Aufgrund der Begrenzung in Bezug auf die Anzahl der Dateien in der externen Tabelle wird empfohlen, weniger als 30.000 Dateien in den Stamm- und Unterordnern des Speicherorts für externe Dateien zu speichern. Darüber hinaus wird empfohlen, die Anzahl der Unterordner unter dem Stammverzeichnis gering zu halten. Wenn auf zu viele Dateien verwiesen wird, kann eine Out-of-Memory-Ausnahme von Java Virtual Machine auftreten.
   
-  Beim Exportieren von Daten in Hadoop oder Azure Blob-Speicher über PolyBase, nur die Daten exportiert werden, nicht die Spalte-names(metadata) gemäß Definition in der CREATE EXTERNAL TABLE-Befehl.
+  Beim Exportieren von Daten nach Hadoop oder Azure Blob Storage über PolyBase werden nur die Daten exportiert, nicht die Spaltennamen (Metadaten), wie im CREATE EXTERNAL TABLE-Befehl definiert.
 
 ## <a name="locking"></a>Sperren  
- Akzeptiert eine gemeinsame Sperre für das externe DATEIFORMAT-Objekt.
+ Akzeptiert eine gemeinsame Sperre für das EXTERNAL FILE FORMAT-Objekt.
   
 ## <a name="performance"></a>Leistung
- Immer mithilfe von komprimierten Dateien im Lieferumfang der Kompromiss zwischen weniger Daten zwischen der externen Datenquelle und die SQL Server beim Erhöhen der CPU-Auslastung zum Komprimieren und Dekomprimieren die Daten übertragen.
+ Die Verwendung komprimierter Dateien ist immer mit dem Konflikt verbunden, ob weniger Daten zwischen der externen Datenquelle und SQL Server übertragen werden sollen oder ob die CPU-Auslastung zum Komprimieren und Dekomprimieren der Daten erhöht werden soll.
   
- Textdateien Gzip komprimiert sind nicht teilbar. Es wird empfohlen, zum Verbessern der Leistung für Gzip komprimierte Textdateien generiert mehrere Dateien, die alle im selben Verzeichnis in der externen Datenquelle gespeichert sind. Dadurch wird zum Lesen und Dekomprimieren die Daten schneller mehrere Reader und -dekomprimierung Prozesse mit PolyBase. Die ideale Anzahl von komprimierten Dateien ist die maximale Anzahl von Data Reader Prozessen pro Compute-Knoten. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], die maximale Anzahl von Data Reader-Prozesse ist 8 pro Knoten in der aktuellen Version. In [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], die maximale Anzahl von Data Reader Prozessen pro Knoten variiert je nach SLO. Finden Sie unter [Azure SQL Data Warehouse Laden von Mustern und Strategien](https://blogs.msdn.microsoft.com/sqlcat/2016/02/06/azure-sql-data-warehouse-loading-patterns-and-strategies/) Details.  
+ GZip-komprimierte Textdateien können nicht aufgeteilt werden. Es wird empfohlen, zur Verbesserung der Leistung von GZip-komprimierten Textdateien mehrere Dateien zu generieren, die alle in demselben Verzeichnis innerhalb der externen Datenquelle gespeichert sind. Die Dateistruktur ermöglicht PolyBase das schnellere Lesen und Dekomprimieren der Daten, indem mehrere Reader- und Dekomprimierungsprozesse verwendet werden. Die ideale Anzahl der komprimierten Dateien ist die maximale Anzahl der Datenreaderprozesse pro Computeknoten. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] beträgt die maximale Anzahl der Datenreaderprozesse im aktuellen Release 8 pro Knoten. In [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] variiert die maximale Anzahl der Datenreaderprozesse pro Knoten je nach SLO. Weitere Einzelheiten finden Sie unter [Azure SQL Data Warehouse loading patterns and strategies](https://blogs.msdn.microsoft.com/sqlcat/2016/02/06/azure-sql-data-warehouse-loading-patterns-and-strategies/) (Azure SQL Data Warehouse – Auslastungsmuster und Strategien).  
   
 ## <a name="examples"></a>Beispiele  
   
-### <a name="a-create-a-delimitedtext-external-file-format"></a>A. Erstellen Sie ein externes Dateiformat DELIMITEDTEXT  
- In diesem Beispiel wird ein externes Dateiformat mit dem Namen *textdelimited1* für eine Datei mit Texttrennzeichen. Die Optionen aufgeführt, für das FORMAT\_Optionen angeben, dass die Felder in der Datei getrennt werden sollen, verwenden einen senkrechten Strich "|". Die Textdatei wird mit dem Gzip-Codec auch komprimiert. Wenn Daten\_KOMPRIMIERUNG nicht angegeben wird, die Textdatei wird dekomprimiert.
+### <a name="a-create-a-delimitedtext-external-file-format"></a>A. Erstellen eines externen DELIMITEDTEXT-Dateiformats  
+ In diesem Beispiel wird für eine durch Trennzeichen getrennte Textdatei ein externes Dateiformat mit dem Namen *textdelimited1* erstellt. Die für FORMAT\_OPTIONS aufgeführten Optionen geben an, dass die Felder in der Datei durch einen senkrechten Strich „|“ voneinander getrennt werden sollten. Die Textdatei wird auch mit dem GZip-Codec komprimiert. Wenn DATA\_COMPRESSION nicht angegeben ist, wird die Textdatei dekomprimiert.
   
- Für eine durch Tabstopps getrennte Textdatei die datenkomprimierungsmethode oder sein. der Standardwert Codec, "org.apache.hadoop.io.compress.DefaultCodec", dem Gzip-Codec "org.apache.hadoop.io.compress.GzipCodec".
+ Bei einer durch Trennzeichen getrennten Textdatei kann als Datenkomprimierungsmethode entweder der Standard-Codec „org.apache.hadoop.io.compress.DefaultCodec“ oder der GZip-Codec „org.apache.hadoop.io.compress.GzipCodec“ angewendet werden.
   
 ```  
 CREATE EXTERNAL FILE FORMAT textdelimited1  
@@ -314,8 +325,8 @@ WITH (
 );  
 ```  
   
-### <a name="b-create-an-rcfile-external-file-format"></a>B. Erstellen Sie ein externes Dateiformat RCFile  
- Dieses Beispiel erstellt ein externes Dateiformat für eine RCFile, die die Serialisierung/Deserialisierung Methode org.apache.hadoop.hive.serde2.columnar.LazyBinaryColumnarSerDe verwendet. Außerdem angegeben, um die Standard-Codec für die datenkomprimierungsmethode zu verwenden. Wenn DATA_COMPRESSION nicht angegeben ist, wird standardmäßig keine Komprimierung.
+### <a name="b-create-an-rcfile-external-file-format"></a>B. Erstellen eines externen RCFile-Dateiformats  
+ In diesem Beispiel wird für eine RCFile ein externes Dateiformat erstellt, das die Serialisierungs-/Deserialisierungsmethode „org.apache.hadoop.hive.serde2.columnar.LazyBinaryColumnarSerDe“ verwendet. Zudem wird angegeben, dass der Standard-Codec für die Datenkomprimierungsmethode verwendet werden soll. Wenn DATA_COMPRESSION nicht angegeben ist, ist keine Komprimierung der Standard.
   
 ```  
 CREATE EXTERNAL FILE FORMAT rcfile1  
@@ -326,8 +337,8 @@ WITH (
 );  
 ```  
   
-### <a name="c-create-an-orc-external-file-format"></a>C. Erstellen Sie ein externes Dateiformat ORC.  
- Dieses Beispiel erstellt ein externes Dateiformat für eine ORC-Datei, die die Daten mit der org.apache.io.compress.SnappyCodec datenkomprimierungsmethode komprimiert. Wenn DATA_COMPRESSION nicht angegeben ist, wird standardmäßig keine Komprimierung.
+### <a name="c-create-an-orc-external-file-format"></a>C. Erstellen eines externen ORC-Dateiformats  
+ In diesem Beispiel wird für eine ORC-Datei ein externes Dateiformat erstellt, das die Daten mit der Datenkomprimierungsmethode „org.apache.io.compress.SnappyCodec“ komprimiert. Wenn DATA_COMPRESSION nicht angegeben ist, ist keine Komprimierung der Standard.
   
 ```  
 CREATE EXTERNAL FILE FORMAT orcfile1  
@@ -337,8 +348,8 @@ WITH (
 );  
 ```  
   
-### <a name="d-create-a-parquet-external-file-format"></a>D. Erstellen Sie ein externes Dateiformat PARQUET  
- Dieses Beispiel erstellt ein externes Dateiformat für eine Parquet-Datei, die die Daten mit der org.apache.io.compress.SnappyCodec datenkomprimierungsmethode komprimiert. Wenn DATA_COMPRESSION nicht angegeben ist, wird standardmäßig keine Komprimierung.  
+### <a name="d-create-a-parquet-external-file-format"></a>D. Erstellen eines externen PARQUET-Dateiformats  
+ In diesem Beispiel wird für eine PARQUET-Datei ein externes Dateiformat erstellt, das die Daten mit der Datenkomprimierungsmethode „org.apache.io.compress.SnappyCodec“ komprimiert. Wenn DATA_COMPRESSION nicht angegeben ist, ist keine Komprimierung der Standard.  
   
 ```  
 CREATE EXTERNAL FILE FORMAT parquetfile1  
@@ -347,10 +358,23 @@ WITH (
     DATA_COMPRESSION = 'org.apache.hadoop.io.compress.SnappyCodec'  
 );  
 ```  
+### <a name="e-create-a-delimited-text-file-skipping-header-row-azure-sql-dw-only"></a>E. Erstellen einer durch Trennzeichen getrennten Textdatei, wobei die Kopfzeile übersprungen wird (nur bei Azure SQL DW)
+ In diesem Beispiel wird für eine CSV-Datei mit einer einzelnen Kopfzeile ein externes Dateiformat erstellt. 
   
-## <a name="see-also"></a>Siehe auch
+```  
+CREATE EXTERNAL FILE FORMAT skipHeader_CSV
+WITH (FORMAT_TYPE = DELIMITEDTEXT,
+      FORMAT_OPTIONS(
+          FIELD_TERMINATOR = ',',
+          STRING_DELIMITER = '"',
+          FIRST_ROW = 2, 
+          USE_TYPE_DEFAULT = True)
+)
+```   
+
+## <a name="see-also"></a>Weitere Informationen finden Sie unter
  [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md)   
  [CREATE EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-transact-sql.md)   
  [CREATE EXTERNAL TABLE AS SELECT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-as-select-transact-sql.md)   
- [Erstellen Sie die Tabelle als SELECT &#40; Azure SQL Datawarehouse &#41;](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)   
+ [CREATE TABLE AS SELECT &#40;Azure SQL Data Warehouse&#41;](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)   
  [sys.external_file_formats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-external-file-formats-transact-sql.md)  

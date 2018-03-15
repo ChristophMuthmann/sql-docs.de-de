@@ -1,5 +1,5 @@
 ---
-title: LEN (Transact-SQL) | Microsoft Docs
+title: LEN (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 09/03/2015
 ms.prod: sql-non-specified
@@ -39,7 +39,7 @@ ms.lasthandoff: 01/18/2018
   Gibt die Anzahl von Zeichen im angegebenen Zeichenfolgenausdruck zurück, wobei nachfolgende Leerzeichen ausgeschlossen werden.  
   
 > [!NOTE]  
->  Um die Anzahl der Bytes, die zur Darstellung eines Ausdrucks zurückzugeben, verwenden die [DATALENGTH](../../t-sql/functions/datalength-transact-sql.md) Funktion.  
+>  Verwenden Sie die [DATALENGTH](../../t-sql/functions/datalength-transact-sql.md)-Funktion, um die Anzahl von Bytes zurückzugeben, die zur Darstellung eines Ausdrucks verwendet werden.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,15 +51,15 @@ LEN ( string_expression )
   
 ## <a name="arguments"></a>Argumente  
  *string_expression*  
- Die Zeichenfolge [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) ausgewertet werden soll. *String_expression* kann eine Konstante, Variable oder Spalte mit Zeichen- oder Binärdaten sein.  
+ Ist der auszuwertende [Zeichenfolgenausdruck](../../t-sql/language-elements/expressions-transact-sql.md). *string_expression* kann eine Konstante, Variable oder Spalte mit Zeichen- oder Binärdaten darstellen.  
   
 ## <a name="return-types"></a>Rückgabetypen  
- **"bigint"** Wenn *Ausdruck* wird von der **varchar(max)**, **nvarchar(max)** oder **varbinary(max)** -Datentypen; andernfalls **Int**.  
+ **bigint**, wenn *expression* vom Datentyp **varchar(max)**, **nvarchar(max)** oder **varbinary(max)** ist; andernfalls **int**.  
   
  Wenn Sie SC-Sortierungen verwenden, betrachtet der zurückgegebene ganzzahlige Wert UTF-16-Ersatzpaare als einzelne Zeichen. Weitere Informationen finden Sie unter [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).  
   
-## <a name="remarks"></a>Hinweise  
- LEN werden nachfolgende Leerzeichen ausgeschlossen. Wenn dies ein Problem aufgetreten ist, erwägen Sie die [DATALENGTH &#40; Transact-SQL &#41; ](../../t-sql/functions/datalength-transact-sql.md) Funktion, die die Zeichenfolge nicht abtrennt. Wenn eine Unicode-Zeichenfolge zu verarbeiten, gibt die DATALENGTH doppelt so viele Zeichen zurück. Im folgenden Beispiel wird veranschaulicht, LEN und DATALENGTH mit einem Leerzeichen.  
+## <a name="remarks"></a>Remarks  
+ Durch LEN werden nachfolgende Leerräume ausgeschlossen. Wenn dies ein Problem darstellt, erwägen Sie die Verwendung der Funktion [DATALENGTH &#40;Transact-SQL&#41;](../../t-sql/functions/datalength-transact-sql.md), die die Zeichenfolge nicht abtrennt. Wenn eine Unicode-Zeichenfolge verarbeitet wird, gibt DATALENGTH die doppelte Anzahl von Zeichen zurück. Im folgenden Beispiel werden LEN und DATALENGTH mit nachfolgenden Leerräumen veranschaulicht.  
   
 ```  
 DECLARE @v1 varchar(40),  
@@ -82,8 +82,8 @@ WHERE CountryRegionName = 'Australia';
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- Im folgende Beispiel gibt die Anzahl der Zeichen in der Spalte `FirstName` und die Namen vor- und Nachnamen der Mitarbeiter in `Australia`.  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
+ Im folgenden Beispiel wird die Anzahl von Zeichen in der Spalte `FirstName` zurückgegeben, und die Vor- und Nachnamen der Mitarbeiter werden in `Australia` zurückgegeben.  
   
 ```  
 -- Uses AdventureWorks  
@@ -103,14 +103,14 @@ FNameLength  FirstName  LastName
 4            Lynn       Tsoflias
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [DATALENGTH &#40;Transact-SQL&#41;](../../t-sql/functions/datalength-transact-sql.md)   
  [CHARINDEX &#40;Transact-SQL&#41;](../../t-sql/functions/charindex-transact-sql.md)  
  [PATINDEX &#40;Transact-SQL&#41;](../../t-sql/functions/patindex-transact-sql.md)  
  [LEFT &#40;Transact-SQL&#41;](../../t-sql/functions/left-transact-sql.md)   
  [RIGHT &#40;Transact-SQL&#41;](../../t-sql/functions/right-transact-sql.md)  
  [Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [Zeichenfolgenfunktionen &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)   
+ [String Functions &#40;Transact-SQL&#41; (Zeichenfolgenfunktionen &#40;Transact-SQL&#41;)](../../t-sql/functions/string-functions-transact-sql.md)   
   
   
 

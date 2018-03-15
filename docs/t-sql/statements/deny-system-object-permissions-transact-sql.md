@@ -1,5 +1,5 @@
 ---
-title: "Verweigern von Berechtigungen für Systemobjekte (Transact-SQL) | Microsoft Docs"
+title: "DENY (Berechtigungen für Systemobjekte) (Transact-SQL) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -46,19 +46,19 @@ DENY { SELECT | EXECUTE } ON [ sys.]system_object TO principal
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **Sys.** ]  
- Die **Sys** Qualifizierer ist erforderlich, nur, wenn auf Katalogsichten und dynamische Verwaltungssichten verwiesen wird.  
+ [ **sys.**]  
+ Der **sys**-Qualifizierer ist nur erforderlich, wenn auf Katalogsichten und dynamische Verwaltungssichten verwiesen wird.  
   
  *system_object*  
  Gibt das Objekt an, für das die Berechtigung verweigert wird.  
   
- *Prinzipal*  
+ *principal*  
  Gibt den Prinzipal an, für den die Berechtigung aufgehoben wird.  
   
-## <a name="remarks"></a>Hinweise  
- Mit dieser Anweisung können Berechtigungen für bestimmte gespeicherte Prozeduren, erweiterte gespeicherte Prozeduren, Tabellenwertfunktionen, Skalarfunktionen, Sichten, Katalogsichten, Kompatibilitätssichten, INFORMATION_SCHEMA-Sichten, dynamische Verwaltungssichten und Systemtabellen verweigert werden, die von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installiert wurden. Jedes dieser Systemobjekte vorhanden ist, als eindeutiger Datensatz in der Ressourcendatenbank (**Mssqlsystemresource**). Die Ressourcendatenbank ist schreibgeschützt. Ein Link zum Objekt wird verfügbar gemacht, als Datensatz in der **Sys** -Schema jeder Datenbank.  
+## <a name="remarks"></a>Remarks  
+ Mit dieser Anweisung können Berechtigungen für bestimmte gespeicherte Prozeduren, erweiterte gespeicherte Prozeduren, Tabellenwertfunktionen, Skalarfunktionen, Sichten, Katalogsichten, Kompatibilitätssichten, INFORMATION_SCHEMA-Sichten, dynamische Verwaltungssichten und Systemtabellen verweigert werden, die von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installiert wurden. Jedes Systemobjekt ist als eindeutiger Datensatz in der Ressourcendatenbank (**mssqlsystemresource**) vorhanden. Die Ressourcendatenbank ist schreibgeschützt. Ein Link zum Objekt wird in einem Datensatz im **sys**-Schema jeder Datenbank verfügbar gemacht.  
   
- Die Standardnamensauflösung löst nicht qualifizierte Prozedurnamen für die Ressourcendatenbank auf. Aus diesem Grund die **Sys** Qualifizierer ist nur erforderlich, wenn Katalogsichten und dynamische Verwaltungssichten angegeben werden.  
+ Die Standardnamensauflösung löst nicht qualifizierte Prozedurnamen für die Ressourcendatenbank auf. Daher ist der **sys**-Qualifizierer nur erforderlich, wenn Katalogsichten und dynamische Verwaltungssichten angegeben werden.  
   
 > [!CAUTION]  
 >  Durch Verweigern von Berechtigungen für Systemobjekte werden Fehler in abhängigen Anwendungen verursacht. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] verwendet Katalogsichten und funktioniert möglicherweise nicht wie erwartet, wenn Sie die Standardberechtigungen für Katalogsichten ändern.  
@@ -90,10 +90,10 @@ DENY EXECUTE ON sys.xp_cmdshell TO public;
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Transact-SQL-Syntaxkonventionen &#40; Transact-SQL &#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)   
- [database_permissions &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)   
- [Erteilen Sie Berechtigungen für Systemobjekte &#40; Transact-SQL &#41;](../../t-sql/statements/grant-system-object-permissions-transact-sql.md)   
- [WIDERRUFEN Sie Berechtigungen für Systemobjekte &#40; Transact-SQL &#41;](../../t-sql/statements/revoke-system-object-permissions-transact-sql.md)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Transact-SQL-Syntaxkonventionen &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)   
+ [sys.database_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)   
+ [GRANT (Berechtigungen für Systemobjekte) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-system-object-permissions-transact-sql.md)   
+ [REVOKE (Berechtigungen für Systemobjekte) &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-system-object-permissions-transact-sql.md)  
   
   

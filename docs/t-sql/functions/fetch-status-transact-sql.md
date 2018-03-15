@@ -1,5 +1,5 @@
 ---
-title: '@@FETCH_STATUS (Transact-SQL) | Microsoft Docs'
+title: '@@FETCH_STATUS (Transact-SQL) | Microsoft-Dokumentation'
 ms.custom: 
 ms.date: 09/18/2017
 ms.prod: sql-non-specified
@@ -33,7 +33,7 @@ ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="x40x40fetchstatus-transact-sql"></a>&#x40;&#x40;Sp_describe_cursor (Transact-SQL)
+# <a name="x40x40fetchstatus-transact-sql"></a>&#x40;&#x40;FETCH_STATUS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Gibt den Status der letzten Cursor-FETCH-Anweisung zurück, die für einen beliebigen der aktuell von der Verbindung geöffneten Cursor ausgegeben wurde.  
@@ -57,14 +57,14 @@ ms.lasthandoff: 11/21/2017
 |0|Die FETCH-Anweisung war erfolgreich.|  
 |-1|Die FETCH-Anweisung ist fehlgeschlagen, oder die Zeile war außerhalb des Resultsets.|  
 |-2|Die abgerufene Zeile fehlt.|
-|-9|Der Cursor wird einen Fetch-Vorgang nicht ausgeführt werden.|  
+|–9|Der Cursor führt keinen Abrufvorgang aus.|  
   
-## <a name="remarks"></a>Hinweise  
- Da @@FETCH_STATUS ist global für alle Cursor bei einer Verbindung verwenden@FETCH_STATUS sorgfältig. Nachdem eine FETCH-Anweisung ausgeführt wird, der Test auf Vorhandensein @@FETCH_STATUS auftreten muss, bevor weitere FETCH-Anweisung für einen anderen Cursor ausgeführt wird. Der Wert des @@FETCH_STATUS ist undefiniert, bis ein Abrufvorgang auf der Verbindung aufgetreten sind.  
+## <a name="remarks"></a>Remarks  
+ Da @@FETCH_STATUS global für alle Cursor auf einer Verbindung gilt, verwenden Sie @@FETCH_STATUS mit Bedacht. Nachdem eine FETCH-Anweisung ausgeführt wurde, muss der Test von @@FETCH_STATUS durchgeführt werden, bevor eine weitere FETCH-Anweisung für einen anderen Cursor ausgeführt wird. Der Wert von @@FETCH_STATUS wird erst definiert, wenn ein Abrufvorgang auf der Verbindung ausgeführt wurde.  
   
- Ein Benutzer führt z. B. eine FETCH-Anweisung von einem Cursor aus durch und ruft dann eine gespeicherte Prozedur auf, die die Ergebnisse von einem anderen Cursor aus öffnet und verarbeitet. Bei Steuerelement Rückgabe von der aufgerufenen gespeicherten Prozedur@FETCH_STATUS letzten in der gespeicherten Prozedur, nicht die FETCH-Anweisung, die ausgeführt werden, vor dem Aufruf der gespeicherten Prozedur ausgeführten ABRUFS widerspiegelt.  
+ Ein Benutzer führt z. B. eine FETCH-Anweisung von einem Cursor aus durch und ruft dann eine gespeicherte Prozedur auf, die die Ergebnisse von einem anderen Cursor aus öffnet und verarbeitet. Wenn die Steuerung von der aufgerufenen gespeicherten Prozedur zurückgegeben wird, spiegelt @@FETCH_STATUS die letzte in der Prozedur ausgeführte FETCH-Anweisung wider und nicht die FETCH-Anweisung, die vor dem Aufruf der gespeicherten Prozedur ausgeführt wurde.  
   
- Um den letzten Fetch-Status eines bestimmten Cursors abzurufen, Fragen Sie die **Fetch_status** Spalte die **dm_exec_cursors** dynamische Verwaltungsfunktion.  
+ Um den letzten FETCH-Status eines bestimmten Cursors abzurufen, führen Sie eine Abfrage der **fetch_status**-Spalte in der dynamischen Verwaltungsfunktion **sys.dm_exec_cursors** durch.  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird `@@FETCH_STATUS` zur Steuerung der Cursoraktivitäten in einer `WHILE`-Schleife verwendet.  
@@ -84,8 +84,8 @@ DEALLOCATE Employee_Cursor;
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Cursorfunktionen &#40;Transact-SQL&#41;](../../t-sql/functions/cursor-functions-transact-sql.md)   
- [Abrufen von Daten &#40; Transact-SQL &#41;](../../t-sql/language-elements/fetch-transact-sql.md)  
+ [FETCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/fetch-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Joinhinweise (Transact-SQL) | Microsoft Docs
+title: Hinweise (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 08/09/2017
 ms.prod: sql-non-specified
@@ -36,13 +36,13 @@ ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="hints-transact-sql---join"></a>Joinhinweise (Transact-SQL)-
+# <a name="hints-transact-sql---join"></a>Hinweise (Transact-SQL) - Join
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Joinhinweise geben an, dass der Abfrageoptimierer eine Joinstrategie zwischen zwei Tabellen in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] erzwingt. Allgemeine Informationen zu Joins und joinsyntaxen finden Sie unter [FROM &#40; Transact-SQL &#41; ](../../t-sql/queries/from-transact-sql.md).  
+  Joinhinweise geben an, dass der Abfrageoptimierer eine Joinstrategie zwischen zwei Tabellen in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] erzwingt. Allgemeine Informationen zu Joins und zur Joinsyntax finden Sie unter [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md).  
   
 > [!IMPORTANT]  
->  Da die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Abfrageoptimierer in der Regel den optimalen Ausführungsplan für eine Abfrage auswählt, wird empfohlen, die Hinweise, einschließlich \<Join_hint >, nur als letzte Möglichkeit verwendet werden, die von erfahrenen Entwicklern und Datenbankadministratoren.
+>  Da der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Abfrageoptimierer in der Regel einen optimalen Ausführungsplan für eine Abfrage auswählt, wird empfohlen, dass nur erfahrene Entwickler und Datenbankadministratoren Joinhinweise, einschließlich \<join_hint> verwenden, wenn alle anderen Möglichkeiten sich als unbefriedigend erwiesen haben.
   
  **Gilt für:**  
   
@@ -75,7 +75,7 @@ ms.lasthandoff: 01/25/2018
   
  REMOTE kann nur für INNER JOIN-Vorgänge verwendet werden.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Joinhinweise werden in der FROM-Klausel einer Abfrage angegeben. Sie erzwingen eine Joinstrategie zwischen zwei Tabellen. Falls ein Joinhinweis für zwei beliebige Tabellen angegeben ist, erzwingt der Abfrageoptimierer automatisch die Joinreihenfolge für alle verknüpften Tabellen der Abfrage abhängig von der Position der ON-Schlüsselwörter. Wird CROSS JOIN ohne die ON-Klausel verwendet, kann die Joinreihenfolge mithilfe von Klammern angegeben werden.  
   
 ## <a name="examples"></a>Beispiele  
@@ -114,7 +114,7 @@ INNER MERGE JOIN Purchasing.PurchaseOrderDetail AS pod
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql.md)  
   
   

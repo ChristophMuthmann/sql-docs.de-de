@@ -1,5 +1,5 @@
 ---
-title: STIsClosed (Geometry-Datentyp) | Microsoft Docs
+title: STIsClosed (geometry-Datentyp) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stisclosed-geometry-data-type"></a>STIsClosed (geometry-Datentyp)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Gibt 1 zurück, wenn die Start- und Endpunkte von der angegebenen **Geometrie** -Instanz gleich sind. Gibt 1 für **Geometrycollection** Typen, wenn alle enthaltenen **Geometrie** -Instanz geschlossen ist. Gibt 0 zurück, wenn die Instanz nicht geschlossen ist.
+Gibt 1 zurück, wenn die Ausgangs- und Endpunkte der angegebenen **geometry**-Instanz gleich sind. Gibt 1 für **geometrycollection**-Typen zurück, wenn alle enthaltenen Instanzen von **geometry** geschlossen sind. Gibt 0 zurück, wenn die Instanz nicht geschlossen ist.
   
 ## <a name="syntax"></a>Syntax  
   
@@ -44,12 +44,12 @@ Gibt 1 zurück, wenn die Start- und Endpunkte von der angegebenen **Geometrie** 
 ```  
   
 ## <a name="return-types"></a>Rückgabetypen  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Rückgabetyp: **Bit**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Rückgabetyp: **bit**  
   
  CLR-Rückgabetyp: **SqlBoolean**  
   
-## <a name="remarks"></a>Hinweise  
- Diese Methode gibt 0 zurück, wenn alle Abbildung eine **Geometry** Instanz sind Punkte, oder wenn die Instanz leer ist.  
+## <a name="remarks"></a>Remarks  
+ Diese Methode gibt 0 zurück, wenn eine beliebige Abbildung einer **geometry**-Instanz ein Punkt ist oder wenn die Instanz leer ist.  
   
  Alle **Polygon** -Instanzen werden als geschlossen betrachtet.  
   
@@ -62,7 +62,7 @@ SET @g = geometry::STGeomFromText('LINESTRING(0 0, 2 2, 1 0)', 0);
 SELECT @g.STIsClosed();  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [OGC-Methoden für geometry-Instanzen](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

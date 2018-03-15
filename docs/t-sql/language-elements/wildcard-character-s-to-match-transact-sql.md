@@ -1,5 +1,5 @@
 ---
-title: "[] (Platzhalterzeichen – zu suchende(s) Zeichen) (Transact-SQL) | Microsoft Docs"
+title: "[ ] (Platzhalterzeichen – zu suchende(s) Zeichen) (Transact-SQL) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 12/06/2016
 ms.prod: sql-non-specified
@@ -34,14 +34,14 @@ ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="--wildcard---characters-to-match-transact-sql"></a>\[\] (Platzhalterzeichen - Zeichen zur Übereinstimmung) (Transact-SQL)
+# <a name="--wildcard---characters-to-match-transact-sql"></a>\[ \] (Platzhalterzeichen – zu suchende(s) Zeichen) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Entspricht einem beliebigen einzelnes Zeichen innerhalb des angegebenen Bereichs oder Satzes, der zwischen Klammern angegeben ist `[ ]`. Diese Platzhalterzeichen können verwendet werden, in Zeichenfolgenvergleichen, bei denen Mustervergleiche, z. B. `LIKE` und `PATINDEX`.  
+  Entspricht jedem einzelnen Zeichen im Bereich oder der Menge, der bzw. die innerhalb der Klammern `[ ]` angegeben ist. Diese Platzhalterzeichen können in Zeichenfolgenvergleichen verwendet werden, bei denen Mustervergleiche wie `LIKE` und `PATINDEX` durchgeführt werden.  
   
 ## <a name="examples"></a>Beispiele  
-### <a name="a-simple-example"></a>A: einfaches Beispiel   
-Im folgende Beispiel gibt die Namen der mit dem Buchstaben `m`. `[n-z]`Gibt an, dass der zweite Buchstaben an einer beliebigen Stelle im Bereich von muss `n` auf `z`. Prozent-Platzhalter `%` sind alle oder keine Zeichen beginnend mit 3 Zeichen zulässig. Die `model` und `msdb` Datenbanken, die diese Kriterien erfüllen. Die `master` Datenbank nicht und wird aus dem Resultset ausgeschlossen.
+### <a name="a-simple-example"></a>A) Einfaches Beispiel   
+Im folgenden Beispiel werden Namen zurückgegeben, die mit dem Buchstaben `m` beginnen. `[n-z]` legt fest, dass der zweite Buchstaben zwischen `n` und `z` liegen muss. Durch das Prozent-Platzhalterzeichen `%` wird angegeben, dass auf das zweite Zeichen entweder kein weiteres Zeichen oder beliebige Zeichen folgen können. Die Datenbanken `model` und `msdb` erfüllen diese Kriterien. Die `master`-Datenbank erfüllt dieses Kriterium nicht und wird aus dem Resultset ausgeschlossen.
  
 ```sql
 SELECT name FROM sys.databases
@@ -55,10 +55,10 @@ name
 model
 msdb
 ```   
- Sie müssen möglicherweise zusätzliche qualifizierende installierte Datenbanken.
+ Möglicherweise haben Sie aber zusätzliche qualifizierende Datenbanken installiert.
 
 
-### <a name="b-more-complex-example"></a>B: Beispiel komplexere   
+### <a name="b-more-complex-example"></a>B) Komplexeres Beispiel   
  Im folgenden Beispiel wird mithilfe des []-Operators nach den IDs und Namen aller [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)]-Mitarbeiter gesucht, deren Adressen eine vierstellige Postleitzahl enthalten.  
   
 ```sql  
@@ -83,11 +83,11 @@ EmployeeID      FirstName      LastName      PostalCode
 
 
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [LIKE &#40;Transact-SQL&#41;](../../t-sql/language-elements/like-transact-sql.md)   
  [PATINDEX &#40;Transact-SQL&#41;](../../t-sql/functions/patindex-transact-sql.md)   
-  [% &#40; Platzhalter - Zeichen &#40; s &#41; Übereinstimmung &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/percent-character-wildcard-character-s-to-match-transact-sql.md)   
- [&#91; ^ &#93; &#40; Platzhalter - Zeichen &#40; s &#41; Nicht in Übereinstimmung &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md)     
- [\_&#40; Platzhalterzeichen - einzelnes zu suchendes Zeichen &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/wildcard-match-one-character-transact-sql.md)  
+  [% &#40;Wildcard - Character&#40;s&#41; to Match&#41; &#40;Transact-SQL&#41; (% (Platzhalterzeichen – zu suchende(s) Zeichen) (Transact-SQL))](../../t-sql/language-elements/percent-character-wildcard-character-s-to-match-transact-sql.md)   
+ [&#91;^&#93; &#40;Wildcard - Character&#40;s&#41; Not to Match&#41; &#40;Transact-SQL&#41; ([^] (Platzhalterzeichen – nicht zu suchende(s) Zeichen) (Transact-SQL))](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md)     
+ [\_ &#40;Wildcard - Match One Character&#41; &#40;Transact-SQL&#41; (_ (Platzhalterzeichen – einzelnes zu suchendes Zeichen) (Transact-SQL))](../../t-sql/language-elements/wildcard-match-one-character-transact-sql.md)  
     
   

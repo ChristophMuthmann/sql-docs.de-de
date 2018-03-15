@@ -1,5 +1,5 @@
 ---
-title: MERGE (Transact-SQL) | Microsoft Docs
+title: MERGE (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
@@ -43,7 +43,7 @@ ms.lasthandoff: 11/21/2017
 
   Führt Einfüge-, Update- oder Löschvorgänge in einer Zieltabelle anhand der Ergebnisse eines Joins mit einer Quelltabelle aus. Sie können z.&nbsp;B. zwei Tabellen synchronisieren, indem Sie Zeilen in einer Tabelle anhand von Unterschieden, die in der anderen Tabelle gefunden wurden, einfügen, aktualisieren oder löschen.  
   
- **Leistungstipp:** bedingte Verhalten beschrieben, für die MERGE-Anweisung am besten funktioniert, wenn die beiden Tabellen eine komplexe Mischung von übereinstimmenden Eigenschaften haben. Beispielsweise das Einfügen einer Zeile, wenn keine vorhanden ist, oder das Aktualisieren der Zeile, wenn sie übereinstimmt. Beim Aktualisieren einer Tabelle basierend auf den Zeilen einer anderen Tabelle einfach, können mit grundlegenden INSERT-, Update- und DELETE-Anweisungen verbesserte Leistung und Skalierbarkeit erreicht werden. Beispiel:  
+ **Leistungstipp:** Das für die MERGE-Anweisung beschriebene bedingte Verhalten funktioniert am besten, wenn die beiden Tabellen eine komplexe Mischung von übereinstimmenden Eigenschaften haben. Beispielsweise das Einfügen einer Zeile, wenn keine vorhanden ist, oder das Aktualisieren der Zeile, wenn sie übereinstimmt. Beim Aktualisieren einer Tabelle basierend auf den Zeilen einer anderen Tabelle einfach, können mit grundlegenden INSERT-, Update- und DELETE-Anweisungen verbesserte Leistung und Skalierbarkeit erreicht werden. Zum Beispiel:  
   
 ```  
 INSERT tbl_A (col, col2)  
@@ -166,67 +166,67 @@ SET
 ```  
   
 ## <a name="arguments"></a>Argumente  
- MIT \<Common_table_expression >  
- Gibt den temporären Resultset- oder Sichtnamen an, der auch als allgemeiner Tabellenausdruck bezeichnet wird und innerhalb der MERGE-Anweisung definiert ist. Das Resultset wird aus einer einfachen Abfrage abgeleitet. Die MERGE-Anweisung verweist auf dieses Resultset. Weitere Informationen finden Sie unter [WITH Common_table_expression &#40; Transact-SQL &#41; ](../../t-sql/queries/with-common-table-expression-transact-sql.md).  
+ WITH \<common_table_expression>  
+ Gibt den temporären Resultset- oder Sichtnamen an, der auch als allgemeiner Tabellenausdruck bezeichnet wird und innerhalb der MERGE-Anweisung definiert ist. Das Resultset wird aus einer einfachen Abfrage abgeleitet. Die MERGE-Anweisung verweist auf dieses Resultset. Weitere Informationen finden Sie unter [WITH common_table_expression &#40;Transact-SQL&#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md).  
   
- Nach oben ( *Ausdruck* ) [%]  
- Gibt die Anzahl oder den Prozentsatz der betroffenen Zeilen an. *Ausdruck* kann entweder eine Anzahl oder Prozentanteil der Zeilen sein. Die Zeilen, auf die im TOP-Ausdruck verwiesen wird, sind nicht auf bestimmte Weise angeordnet. Weitere Informationen finden Sie unter [nach oben &#40; Transact-SQL &#41; ](../../t-sql/queries/top-transact-sql.md).  
+ TOP ( *expression* ) [ PERCENT ]  
+ Gibt die Anzahl oder den Prozentsatz der betroffenen Zeilen an. *expression* kann eine Anzahl oder ein Prozentsatz der Zeilen sein. Die Zeilen, auf die im TOP-Ausdruck verwiesen wird, sind nicht auf bestimmte Weise angeordnet. Weitere Informationen finden Sie unter [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md).  
   
  Die TOP-Klausel wird angewendet, nachdem die gesamte Quelltabelle und die gesamte Zieltabelle verknüpft und die nicht für eine der Aktionen INSERT, UPDATE oder DELETE in Frage kommenden verknüpften Zeilen gelöscht wurden. Die TOP-Klausel verringert zudem die Anzahl der verknüpften Zeilen auf den angegebenen Wert, und die INSERT-, UPDATE- oder DELETE-Aktionen werden ungeordnet auf die verbliebenen verknüpften Zeilen angewendet. Dies bedeutet, dass für die Verteilung der Zeilen auf die in den WHEN-Klauseln definierten Aktionen keine bestimmte Reihenfolge gilt. Wenn beispielsweise TOP (10) angegeben wird, sind 10 Zeilen betroffen. Von diesen Zeilen können sieben aktualisiert und drei eingefügt werden, oder eine Zeile kann gelöscht, fünf können aktualisiert und vier eingefügt werden usw.  
   
  Da die MERGE-Anweisung einen vollständigen Tabellenscan der Quell- und der Zieltabelle ausführt, kann die E/A-Leistung beeinträchtigt werden, wenn mit der TOP-Klausel eine große Tabelle durch Erstellen mehrerer Batches geändert wird. In diesem Szenario muss unbedingt sichergestellt werden, dass alle aufeinanderfolgenden Batches auf neue Zeilen ausgerichtet sind.  
   
  *database_name*  
- Der Name der Datenbank, in der *Target_table* befindet.  
+ Der Name der Datenbank, in der sich *target_table* befindet.  
   
  *schema_name*  
- Der Name des Schemas, zu dem *Target_table* gehört.  
+ Der Namen des Schemas, zu dem die Tabelle *target_table* gehört.  
   
  *target_table*  
- Ist die Tabelle oder Sicht, für die die Datenzeilen aus \<Table_source > basierend auf abgeglichen werden \<Clause_search_condition >. *Target_table* ist das Ziel aller Einfüge-, Update- oder Delete-Vorgänge, die durch die WHEN-Klauseln der MERGE-Anweisung angegeben.  
+ Die Tabelle oder Sicht, mit der die Datenzeilen aus \<table_source> basierend auf \<clause_search_condition> abgeglichen werden. *target_table* ist das Ziel aller Einfüge-, Update- oder Löschvorgänge, die durch die WHEN-Klauseln der MERGE-Anweisung angegeben werden.  
   
- Wenn *Target_table* ist eine Sicht, alle Aktionen für die Bedingungen zum Aktualisieren von Sichten erfüllen müssen. Weitere Informationen finden Sie unter [Ändern von Daten über eine Sicht](../../relational-databases/views/modify-data-through-a-view.md).  
+ Wenn *target_table* eine Sicht ist, müssen alle Aktionen für die Tabelle die Bedingungen zum Aktualisieren von Sichten erfüllen. Weitere Informationen finden Sie unter [Modify Data Through a View (Ändern von Daten über eine Sicht)](../../relational-databases/views/modify-data-through-a-view.md).  
   
- *Target_table* eine Remotetabelle ist nicht möglich. *Target_table* dürfen keine Regeln definiert sein.  
+ *target_table* darf keine Remotetabelle sein. Für *target_table* dürfen keine Regeln definiert sein.  
   
- [AS] *Table_alias*  
+ [ AS ] *table_alias*  
  Ist ein alternativer Name, über den auf eine Tabelle verwiesen wird.  
   
- MIT \<Table_source >  
- Gibt die Datenquelle, die verglichen wird mit den Datenzeilen in *Target_table* basierend auf \<Merge_search-Bedingung >. Das Ergebnis dieser Zuordnung legt die Aktionen fest, die von den WHEN-Klauseln der MERGE-Anweisung ausgeführt werden. \<Table_source > kann eine Remotetabelle oder eine abgeleitete Tabelle, die auf Remotetabellen zugreift. 
+ USING \<table_source>  
+ Gibt die Datenquelle an, die basierend auf \<merge_search condition> mit den Datenzeilen in *target_table* abgeglichen wird. Das Ergebnis dieser Zuordnung legt die Aktionen fest, die von den WHEN-Klauseln der MERGE-Anweisung ausgeführt werden. \<table_source> kann eine Remotetabelle oder eine abgeleitete Tabelle sein, die auf Remotetabellen zugreift. 
   
- \<Table_source > kann eine abgeleitete Tabelle, verwendet der [!INCLUDE[tsql](../../includes/tsql-md.md)] [tabellenwertkonstruktor](../../t-sql/queries/table-value-constructor-transact-sql.md) So erstellen Sie eine Tabelle durch Angeben mehrerer Zeilen.  
+ \<table_source> kann eine abgeleitete Tabelle sein, die mit dem [Tabellenwertkonstruktor](../../t-sql/queries/table-value-constructor-transact-sql.md) von [!INCLUDE[tsql](../../includes/tsql-md.md)] eine Tabelle durch Angeben mehrerer Zeilen erstellt.  
   
- Weitere Informationen zur Syntax und den Argumenten dieser Klausel finden Sie unter [FROM &#40; Transact-SQL &#41; ](../../t-sql/queries/from-transact-sql.md).  
+ Weitere Informationen zur Syntax und zu den Argumenten dieser Klausel finden Sie unter [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md).  
   
- ON \<Merge_search_condition >  
- Gibt die Bedingungen auf dem \<Table_source > ist verknüpft mit *Target_table* um zu bestimmen, wo sie übereinstimmen. 
+ ON \<merge_search_condition>  
+ Gibt die Bedingungen an, unter denen \<table_source> mit *target_table* verknüpft wird, um Übereinstimmungen zu ermitteln. 
   
 > [!CAUTION]  
 >  Es ist wichtig, dass nur die Spalten aus der Zieltabelle angegeben werden, die für Abgleichszwecke verwendet werden. Geben Sie also Spalten aus der Zieltabelle an, die mit der entsprechenden Spalte der Quelltabelle abgeglichen werden. Versuchen Sie nicht, die Abfrageleistung zu optimieren, indem Sie Zeilen in der Zieltabelle in der ON-Klausel herausfiltern, beispielsweise durch Angabe von `AND NOT target_table.column_x = value`. Dadurch kann es zu unerwarteten und falschen Ergebnissen kommen.  
   
- Wenn eine Übereinstimmung mit dann \<Merge_matched >  
- Gibt an, dass alle Zeilen der *Target_table* , entsprechen die von zurückgegebenen Zeilen \<Table_source > ON \<Merge_search_condition >, und alle zusätzlichen suchbedingungen erfüllen, sind entweder aktualisiert oder gelöscht gemäß der \<Merge_matched >-Klausel.  
+ WHEN MATCHED THEN \<merge_matched>  
+ Gibt an, dass alle Zeilen von *target_table*, die mit den von \<table_source> ON \<merge_search_condition> zurückgegebenen Zeilen übereinstimmen und alle zusätzlichen Suchbedingungen erfüllen, gemäß der \<merge_matched>-Klausel aktualisiert oder gelöscht werden.  
   
- Die MERGE-Anweisung kann höchstens über zwei WHEN MATCHED-Klauseln verfügen. Wenn zwei Klauseln angegeben werden, muss die erste Klausel von einer AND begleitet werden \<Search_condition >-Klausel. Für jede gegebene Zeile wird die zweite WHEN MATCHED-Klausel nur angewendet, wenn die erste nicht angewendet wurde. Wenn zwei WHEN MATCHED-Klauseln vorhanden sind, muss die eine eine UPDATE-Aktion und die andere eine DELETE-Aktion angeben. Wenn in UPDATE angegeben ist die \<Merge_matched >-Klausel und mehr als eine Zeile in der \<Table_source > entspricht eine Zeile in *Target_table* basierend auf \<Merge_search_condition >, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]gibt einen Fehler zurück. Die MERGE-Anweisung kann dieselbe Zeile nicht mehrmals aktualisieren oder dieselbe Zeile aktualisieren und löschen.  
+ Die MERGE-Anweisung kann höchstens über zwei WHEN MATCHED-Klauseln verfügen. Wenn zwei Klauseln angegeben werden, muss die erste Klausel von einer AND \<search_condition>-Klausel begleitet werden. Für jede gegebene Zeile wird die zweite WHEN MATCHED-Klausel nur angewendet, wenn die erste nicht angewendet wurde. Wenn zwei WHEN MATCHED-Klauseln vorhanden sind, muss die eine eine UPDATE-Aktion und die andere eine DELETE-Aktion angeben. Wenn UPDATE in der \<merge_matched>-Klausel angegeben wird und mehr als eine Zeile aus \<table_source> basierend auf \<merge_search_condition> mit einer Zeile in *target_table* übereinstimmt, gibt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einen Fehler zurück. Die MERGE-Anweisung kann dieselbe Zeile nicht mehrmals aktualisieren oder dieselbe Zeile aktualisieren und löschen.  
   
- WHEN NOT MATCHED [BY TARGET] dann \<Merge_not_matched >  
- Gibt an, dass eine Zeile eingefügt wird *Target_table* für jede zurückgegebene Zeile \<Table_source > ON \<Merge_search_condition >, der nicht mit einer Zeile im *Target_table*, aber eine zusätzliche Suchbedingung erfüllt, sofern vorhanden. Die einzufügenden Werte werden angegeben, indem die \<Merge_not_matched >-Klausel. Die MERGE-Anweisung kann nur über eine WHEN NOT MATCHED-Klausel verfügen.  
+ WHEN NOT MATCHED [ BY TARGET ] THEN \<merge_not_matched>  
+ Gibt an, dass für jede Zeile, die von \<table_source> ON \<merge_search_condition> zurückgegeben wird und nicht mit einer Zeile in *target_table* übereinstimmt, aber eine zusätzliche Suchbedingung erfüllt (falls vorhanden), eine Zeile in *target_table* eingefügt wird. Die einzufügenden Werte werden durch die \<merge_not_matched>-Klausel angegeben. Die MERGE-Anweisung kann nur über eine WHEN NOT MATCHED-Klausel verfügen.  
   
- WHEN NOT MATCHED BY SOURCE dann \<Merge_matched >  
- Gibt an, dass alle Zeilen der *Target_table* , die nicht mit die zurückgegebenen Zeilen übereinstimmen \<Table_source > ON \<Merge_search_condition >, und die alle zusätzlichen suchbedingungen erfüllen, werden entweder aktualisiert. oder gelöschten gemäß der \<Merge_matched >-Klausel.  
+ WHEN NOT MATCHED BY SOURCE THEN \<merge_matched>  
+ Gibt an, dass alle Zeilen von *target_table*, die nicht mit den von \<table_source> ON \<merge_search_condition> zurückgegebenen Zeilen übereinstimmen und die alle zusätzlichen Suchbedingungen erfüllen, gemäß der \<merge_matched>-Klausel aktualisiert oder gelöscht werden.  
   
- Die MERGE-Anweisung kann höchstens über zwei WHEN NOT MATCHED BY SOURCE-Klauseln verfügen. Wenn zwei Klauseln angegeben werden, muss die erste Klausel von einer AND begleitet werden \<Clause_search_condition >-Klausel. Für jede gegebene Zeile wird die zweite WHEN NOT MATCHED BY SOURCE-Klausel nur angewendet, wenn die erste nicht angewendet wurde. Wenn zwei WHEN NOT MATCHED BY SOURCE-Klauseln vorhanden sind, muss die eine eine UPDATE-Aktion und die andere eine DELETE-Aktion angeben. Nur Spalten aus der Zieltabelle verwiesen werden können, \<Clause_search_condition >.  
+ Die MERGE-Anweisung kann höchstens über zwei WHEN NOT MATCHED BY SOURCE-Klauseln verfügen. Wenn zwei Klauseln angegeben werden, muss die erste Klausel von einer AND \<clause_search_condition>-Klausel begleitet werden. Für jede gegebene Zeile wird die zweite WHEN NOT MATCHED BY SOURCE-Klausel nur angewendet, wenn die erste nicht angewendet wurde. Wenn zwei WHEN NOT MATCHED BY SOURCE-Klauseln vorhanden sind, muss die eine eine UPDATE-Aktion und die andere eine DELETE-Aktion angeben. In \<clause_search_condition> kann nur auf Spalten aus der Zieltabelle verwiesen werden.  
   
- Wenn keine Zeilen zurückgegeben werden, indem \<Table_source >, die Spalten in der Quelltabelle können nicht zugegriffen werden. Wenn in die Update- oder Delete-Aktion angegeben die \<Merge_matched >-Klausel auf Spalten in der Quelltabelle verweist, wird Fehler 207 (Ungültiger Spaltenname) zurückgegeben. Die Klausel `WHEN NOT MATCHED BY SOURCE THEN UPDATE SET TargetTable.Col1 = SourceTable.Col1` kann beispielsweise dazu führen, dass die Anweisung fehlschlägt, da der Zugriff auf `Col1` in der Quelltabelle nicht möglich ist.  
+ Wenn von \<table_source> keine Zeilen zurückgegeben werden, kann auf Spalten in der Quelltabelle nicht zugegriffen werden. Wenn die in der \<merge_matched>-Klausel angegebene Update- oder Löschaktion auf Spalten in der Quelltabelle verweist, wird der Fehler 207 (Ungültiger Spaltenname) zurückgegeben. Die Klausel `WHEN NOT MATCHED BY SOURCE THEN UPDATE SET TargetTable.Col1 = SourceTable.Col1` kann beispielsweise dazu führen, dass die Anweisung fehlschlägt, da der Zugriff auf `Col1` in der Quelltabelle nicht möglich ist.  
   
- UND \<Clause_search_condition >  
- Gibt jede gültige Suchbedingung an. Weitere Informationen finden Sie unter [Suchbedingung &#40; Transact-SQL &#41; ](../../t-sql/queries/search-condition-transact-sql.md).  
+ AND \<clause_search_condition>  
+ Gibt jede gültige Suchbedingung an. Weitere Informationen finden Sie unter [Suchbedingung &#40;Transact-SQL&#41;](../../t-sql/queries/search-condition-transact-sql.md).  
   
- \<Table_hint_limited >  
+ \<table_hint_limited>  
  Gibt mindestens einen Tabellenhinweis an, der für jeden durch die MERGE-Anweisung ausgeführten Einfüge-, Update- oder Löschvorgang auf die Zieltabelle angewendet wird. Das WITH-Schlüsselwort und die Klammern sind erforderlich.  
   
- NOLOCK und READUNCOMMITTED sind nicht zulässig. Weitere Informationen zu Tabellenhinweisen finden Sie unter [Tabellenhinweise &#40; Transact-SQL &#41; ](../../t-sql/queries/hints-transact-sql-table.md).  
+ NOLOCK und READUNCOMMITTED sind nicht zulässig. Weitere Informationen zu Tabellenhinweisen finden Sie unter [Tabellenhinweise &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
   
  Das Angeben eines TABLOCK-Hinweises für eine Tabelle, die das Ziel einer INSERT-Anweisung ist, hat dieselbe Wirkung wie das Angeben eines TABLOCKX-Hinweises. Auf die Tabelle wird eine exklusive Sperre angewendet. Wenn FORCESEEK angegeben wird, wird der Hinweis auf die implizite Instanz der Zieltabelle angewendet, die mit der Quelltabelle verknüpft ist.  
   
@@ -236,64 +236,64 @@ SET
  INDEX ( index_val [ ,...n ] )  
  Gibt den Namen oder die ID eines oder mehrerer Indizes in der Zieltabelle zum Ausführen eines impliziten Joins mit der Quelltabelle an. Weitere Informationen finden Sie unter [Tabellenhinweise &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
   
- \<Output_clause >  
- Gibt eine Zeile für jede Zeile im *Target_table* ist, aktualisiert, eingefügt oder gelöscht werden, ohne bestimmte Reihenfolge. **$action** kann in der Output-Klausel angegeben werden. **$action** ist eine Spalte vom Typ **nvarchar(10)** , die einen von drei Werten für jede Zeile zurückgibt: 'INSERT', 'UPDATE' oder 'DELETE' die Aktion, die für diese Zeile ausgeführt wurde. Weitere Informationen zu den Argumenten dieser Klausel finden Sie unter [OUTPUT-Klausel &#40; Transact-SQL &#41; ](../../t-sql/queries/output-clause-transact-sql.md).  
+ \<OUTPUT_Clause>  
+ Gibt ohne bestimmte Reihenfolge eine Zeile für jede Zeile in *target_table* zurück, die aktualisiert, eingefügt oder gelöscht wird. **$action** kann in der OUTPUT-Klausel angegeben werden. **$action** ist eine Spalte vom Typ **nvarchar(10)**, die einen der drei folgenden Werte für jede Zeile zurückgibt: INSERT, UPDATE oder DELETE. Der zurückgegebene Wert hängt von der für diese Zeile ausgeführten Aktion ab. Weitere Informationen zu den Argumenten dieser Klausel finden Sie unter [OUTPUT-Klausel &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md).  
   
- OPTION ( \<Query_hint > [,... ...n])  
+ OPTION ( \<query_hint> [ ,...n ] )  
  Gibt an, dass zum Anpassen der Art und Weise, wie die Anweisung durch das Datenbankmodul verarbeitet wird, Hinweise des Abfrageoptimierers verwendet werden. Weitere Informationen finden Sie unter [Abfragehinweise &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md).  
   
- \<Merge_matched >  
- Gibt die Update- oder delete-Aktion, die auf alle Zeilen der angewendete *Target_table* , die nicht mit die zurückgegebenen Zeilen übereinstimmen \<Table_source > ON \<Merge_search_condition >, und erfüllen alle zusätzliche Suchbedingung erfüllt.  
+ \<merge_matched>  
+ Gibt die Update- oder Löschaktion an, die auf alle Zeilen von *target_table* angewendet wird, die nicht mit den von \<table_source> ON \<merge_search_condition> zurückgegebenen Zeilen übereinstimmen, und die alle zusätzlichen Suchbedingungen erfüllen.  
   
- Legen Sie UPDATE \<Set_clause >  
+ UPDATE SET \<set_clause>  
  Gibt die Liste der Spalten- oder Variablennamen an, die in der Zieltabelle aktualisiert werden sollen, sowie die Werte, mit denen das Update vorgenommen werden soll.  
   
- Weitere Informationen zu den Argumenten dieser Klausel finden Sie unter [UPDATE &#40; Transact-SQL &#41; ](../../t-sql/queries/update-transact-sql.md). Es ist nicht zulässig, eine Variable auf denselben Wert festzulegen wie eine Spalte.  
+ Weitere Informationen zu den Argumenten dieser Klausel finden Sie unter [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md). Es ist nicht zulässig, eine Variable auf denselben Wert festzulegen wie eine Spalte.  
   
- DELETE  
- Gibt an, dass die Zeilen, die mit Zeilen in *Target_table* werden gelöscht.  
+ Delete  
+ Gibt an, dass die Zeilen, die mit Zeilen in *target_table* übereinstimmen, gelöscht werden.  
   
- \<Merge_not_matched >  
+ \<merge_not_matched>  
  Gibt die Werte an, die in die Zieltabelle eingefügt werden sollen.  
   
- (*Column_list*)  
- Ist eine Liste mit einer oder mehreren Spalten der Zieltabelle, in die Daten eingefügt werden sollen. Spalten müssen als einteiliger Name angegeben werden. Andernfalls schlägt die MERGE-Anweisung fehl. *Column_list* muss in Klammern eingeschlossen und durch Kommas getrennt werden.  
+ (*column_list*)  
+ Ist eine Liste mit einer oder mehreren Spalten der Zieltabelle, in die Daten eingefügt werden sollen. Spalten müssen als einteiliger Name angegeben werden. Andernfalls schlägt die MERGE-Anweisung fehl. *column_list* muss in Klammern eingeschlossen und durch ein Trennzeichen getrennt werden.  
   
- Werte ( *Values_list*)  
+ VALUES ( *values_list*)  
  Eine durch Trennzeichen getrennte Liste mit Konstanten, Variablen oder Ausdrücken, die Werte zum Einfügen in die Zieltabelle zurückgeben. Ausdrücke dürfen keine EXECUTE-Anweisung enthalten.  
   
  DEFAULT VALUES  
  Erzwingt, dass die eingefügte Zeile den für jede Spalte definierten Standardwert enthält.  
   
- Weitere Informationen zu dieser Klausel finden Sie unter [INSERT &#40; Transact-SQL &#41; ](../../t-sql/statements/insert-transact-sql.md).  
+ Weitere Informationen zu dieser Klausel finden Sie unter [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md).  
   
- \<Volltextsuchbedingung >  
- Gibt an, die bestimmten suchbedingungen angegeben \<Merge_search_condition > oder \<Clause_search_condition >. Weitere Informationen zu den Argumenten für diese Klausel finden Sie unter [Suchbedingung &#40; Transact-SQL &#41; ](../../t-sql/queries/search-condition-transact-sql.md).  
+ \<search condition>  
+ Gibt die Suchbedingungen an, die zum Angeben von \<merge_search_condition> oder \<clause_search_condition> verwendet werden. Weitere Informationen zu den Argumenten für diese Klausel finden Sie unter [Suchbedingung &#40;Transact-SQL&#41;](../../t-sql/queries/search-condition-transact-sql.md).  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Mindestens eine der drei MATCHED-Klauseln muss angegeben werden, dies kann jedoch in beliebiger Reihenfolge erfolgen. Eine Variable in derselben MATCHED-Klausel kann nicht mehr als einmal aktualisiert werden.  
   
  Jede Einfüge-, Update- oder Löschaktion, die in der Zieltabelle durch die MERGE-Anweisung angegeben wird, ist durch alle für die Tabelle definierten Beschränkungen eingeschränkt, einschließlich aller kaskadierenden referenziellen Integritätsbeschränkungen. Wenn IGNORE_DUP_KEY für alle eindeutigen Indizes in der Zieltabelle auf ON festgelegt ist, ignoriert MERGE diese Einstellung.  
   
  Die MERGE-Anweisung erfordert ein Semikolon (;) als Abschlusszeichen für die Anweisung. Wenn eine MERGE-Anweisung ohne das Abschlusszeichen ausgeführt wird, wird der Fehler 10713 generiert.  
   
- Bei Verwendung nach MERGE [@@ROWCOUNT &#40; Transact-SQL &#41; ](../../t-sql/functions/rowcount-transact-sql.md) gibt die Gesamtzahl der Zeilen eingefügt, aktualisiert und gelöscht werden, an den Client zurück.  
+ Bei Verwendung nach MERGE gibt [@@ROWCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/rowcount-transact-sql.md) die Gesamtanzahl der eingefügten, aktualisierten und gelöschten Zeilen an den Client zurück.  
   
  MERGE ist ein vollständig reserviertes Schlüsselwort, wenn der Kompatibilitätsgrad der Datenbank auf 100 oder höher festgelegt ist. Die MERGE-Anweisung ist bei einem Kompatibilitätsgrad von sowohl 90 als auch 100 verfügbar. Bei einem Kompatibilitätsgrad von 90 ist das Schlüsselwort allerdings nicht vollständig reserviert.  
   
- Die **MERGE** Anweisung sollte nicht verwendet werden, wenn in der Warteschlange Replikationstyp verwenden. Die **MERGE** Trigger für verzögertes Updates sind nicht kompatibel. Ersetzen Sie die **MERGE** -Anweisung mit einer INSERT- oder Update-Anweisung.  
+ Die **MERGE**-Anweisung sollte nicht zusammen mit dem Replikationstyp „Verzögertes Update über eine Warteschlange“ verwendet werden. **MERGE** und der Trigger für verzögerte Updates über eine Warteschlange sind nicht kompatibel. Ersetzen Sie die **MERGE**-Anweisung durch eine INSERT- oder UPDATE-Anweisung.  
   
 ## <a name="trigger-implementation"></a>Triggerimplementierung  
- Für jeden Einfüge-, Update- oder Löschvorgang, der in der MERGE-Anweisung angegeben ist, löst [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alle entsprechenden AFTER-Trigger aus, die in der Zieltabelle definiert sind, gewährleistet jedoch nicht, für welche Aktion Trigger zuerst oder zuletzt ausgelöst werden. Trigger, die für dieselbe Aktion definiert sind, halten sich an die von Ihnen angegebene Reihenfolge. Weitere Informationen zum Festlegen der Reihenfolge beim Auslösen, finden Sie unter [geben erste und letzte Trigger](../../relational-databases/triggers/specify-first-and-last-triggers.md).  
+ Für jeden Einfüge-, Update- oder Löschvorgang, der in der MERGE-Anweisung angegeben ist, löst [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alle entsprechenden AFTER-Trigger aus, die in der Zieltabelle definiert sind, gewährleistet jedoch nicht, für welche Aktion Trigger zuerst oder zuletzt ausgelöst werden. Trigger, die für dieselbe Aktion definiert sind, halten sich an die von Ihnen angegebene Reihenfolge. Weitere Informationen zum Festlegen der Reihenfolge beim Auslösen von Triggern finden Sie unter [Angeben des ersten und des letzten Triggers](../../relational-databases/triggers/specify-first-and-last-triggers.md).  
   
  Wenn in der Zieltabelle ein aktivierter INSTEAD OF-Trigger für einen Einfüge-, Update- oder Löschvorgang definiert ist, der durch eine MERGE-Anweisung ausgeführt wird, muss sie einen aktivierten INSTEAD OF-Trigger für alle in der MERGE-Anweisung angegebenen Aktionen enthalten.  
   
- Wenn ein INSTEAD OF UPDATE oder INSTEAD OF DELETE-Trigger definiert wird, auf *Target_table*, Update- oder Delete-Operationen nicht ausgeführt. Stattdessen den Trigger ausgelöst werden und die **eingefügt** und **gelöscht** Tabellen werden entsprechend aufgefüllt.  
+ Wenn für *target_table* ein INSTEAD OF UPDATE-Trigger oder INSTEAD OF DELETE-Trigger definiert ist, werden die Update- oder Löschvorgänge nicht ausgeführt. Stattdessen werden die Trigger ausgelöst, und die **inserted**- und die **deleted**-Tabelle werden entsprechend aufgefüllt.  
   
- Bei etwaigen anstelle von INSERT-Trigger auf *Target_table*, der Insert-Vorgang wird nicht ausgeführt. Stattdessen den Trigger ausgelöst werden und die **eingefügt** -Tabelle wird entsprechend aufgefüllt.  
+ Wenn für *target_table* der INSTEAD OF INSERT-Trigger definiert ist, wird der Einfügevorgang nicht ausgeführt. Stattdessen werden die Trigger ausgelöst, und die **inserted**-Tabelle wird entsprechend aufgefüllt.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert die SELECT-Berechtigung für die Quelltabelle und die INSERT-, UPDATE- oder DELETE-Berechtigung für die Zieltabelle. Weitere Informationen finden Sie im Abschnitt "Berechtigungen" das [wählen](../../t-sql/queries/select-transact-sql.md), [einfügen](../../t-sql/statements/insert-transact-sql.md), [UPDATE](../../t-sql/queries/update-transact-sql.md), und [löschen](../../t-sql/statements/delete-transact-sql.md) Themen.  
+ Erfordert die SELECT-Berechtigung für die Quelltabelle und die INSERT-, UPDATE- oder DELETE-Berechtigung für die Zieltabelle. Weitere Informationen finden Sie im Abschnitt „Berechtigungen“ in den Artikeln zu [SELECT](../../t-sql/queries/select-transact-sql.md), [INSERT](../../t-sql/statements/insert-transact-sql.md), [UPDATE](../../t-sql/queries/update-transact-sql.md) und [DELETE](../../t-sql/statements/delete-transact-sql.md).  
   
 ## <a name="examples"></a>Beispiele  
   
@@ -397,7 +397,7 @@ EXECUTE Production.usp_UpdateInventory '20030501'
 ```  
   
 ### <a name="c-using-merge-to-perform-update-and-insert-operations-on-a-target-table-by-using-a-derived-source-table"></a>C. Verwenden von MERGE zum Ausführen von UPDATE- und INSERT-Vorgängen für eine Zieltabelle unter Verwendung einer abgeleiteten Quelltabelle  
- Im folgenden Beispiel wird die `SalesReason`-Tabelle in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Datenbank durch das Aktualisieren oder Einfügen von Zeilen mithilfe von MERGE geändert. Wenn der Wert von `NewName` in der Quelltabelle einem Wert in der `Name`-Spalte der Zieltabelle entspricht (`SalesReason`), wird die `ReasonType`-Spalte in der Zieltabelle aktualisiert. Wenn der Wert von `NewName` jedoch nicht übereinstimmt, wird die Quellzeile in die Zieltabelle eingefügt. Die Quelltabelle ist eine abgeleitete Tabelle, die mithilfe des [!INCLUDE[tsql](../../includes/tsql-md.md)]-Tabellenwertkonstruktors mehrere Zeilen für die Quelltabelle angibt. Weitere Informationen zur Verwendung des tabellenwertkonstruktors in einer abgeleiteten Tabelle finden Sie unter [Tabellenwertkonstruktor &#40; Transact-SQL &#41; ](../../t-sql/queries/table-value-constructor-transact-sql.md). Im Beispiel wird auch gezeigt, wie die Ergebnisse der OUTPUT-Klausel in einer Tabellenvariablen gespeichert werden. Es wird erläutert, wie die Ergebnisse der MERGE-Anweisung zusammengefasst werden, indem ein einfacher SELECT-Vorgang ausgeführt wird, der die Anzahl an eingefügten und aktualisierten Zeilen zurückgibt.  
+ Im folgenden Beispiel wird die `SalesReason`-Tabelle in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Datenbank durch das Aktualisieren oder Einfügen von Zeilen mithilfe von MERGE geändert. Wenn der Wert von `NewName` in der Quelltabelle einem Wert in der `Name`-Spalte der Zieltabelle entspricht (`SalesReason`), wird die `ReasonType`-Spalte in der Zieltabelle aktualisiert. Wenn der Wert von `NewName` jedoch nicht übereinstimmt, wird die Quellzeile in die Zieltabelle eingefügt. Die Quelltabelle ist eine abgeleitete Tabelle, die mithilfe des [!INCLUDE[tsql](../../includes/tsql-md.md)]-Tabellenwertkonstruktors mehrere Zeilen für die Quelltabelle angibt. Weitere Informationen zum Verwenden des Tabellenwertkonstruktors in einer abgeleiteten Tabelle finden Sie unter [Table Value Constructor &#40;Transact-SQL&#41; (Tabellenwertkonstruktor &#40;Transact-SQL&#41;)](../../t-sql/queries/table-value-constructor-transact-sql.md). Im Beispiel wird auch gezeigt, wie die Ergebnisse der OUTPUT-Klausel in einer Tabellenvariablen gespeichert werden. Es wird erläutert, wie die Ergebnisse der MERGE-Anweisung zusammengefasst werden, indem ein einfacher SELECT-Vorgang ausgeführt wird, der die Anzahl an eingefügten und aktualisierten Zeilen zurückgibt.  
   
 ```  
 -- Create a temporary table variable to hold the output actions.  
@@ -450,15 +450,15 @@ FROM
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
  [UPDATE (Transact-SQL)](../../t-sql/queries/update-transact-sql.md)   
  [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
- [OUTPUT-Klausel &#40; Transact-SQL &#41;](../../t-sql/queries/output-clause-transact-sql.md)   
- [MERGE in Integrationsservices-Paketen](../../integration-services/control-flow/merge-in-integration-services-packages.md)   
+ [OUTPUT-Klausel &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md)   
+ [MERGE in Integration Services-Paketen](../../integration-services/control-flow/merge-in-integration-services-packages.md)   
  [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)   
- [Tabellenwertkonstruktor &#40; Transact-SQL &#41;](../../t-sql/queries/table-value-constructor-transact-sql.md)  
+ [Table Value Constructor &#40;Transact-SQL&#41; (Tabellenwertkonstruktor &#40;Transact-SQL&#41;)](../../t-sql/queries/table-value-constructor-transact-sql.md)  
   
   
 

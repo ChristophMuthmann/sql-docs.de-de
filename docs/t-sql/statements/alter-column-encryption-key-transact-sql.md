@@ -1,5 +1,5 @@
 ---
-title: ALTER COLUMN ENCRYPTION KEY (Transact-SQL) | Microsoft Docs
+title: ALTER COLUMN ENCRYPTION KEY (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 10/28/2015
 ms.prod: sql-non-specified
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="alter-column-encryption-key-transact-sql"></a>ALTER COLUMN ENCRYPTION KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Ändert einen spaltenverschlüsselungsschlüssel in einer Datenbank hinzufügen oder Löschen eines verschlüsselten Werts an. Ein CEK kann bis zu zwei Werte, die für die Drehung des entsprechenden spaltenhauptschlüssels ermöglicht haben. Ein CEK wird verwendet, wenn Spalten mithilfe von Verschlüsselung der [Always Encrypted &#40; Datenbankmodul &#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md) Funktion. Vor dem Hinzufügen eines CEK-Werts, müssen Sie den spaltenhauptschlüssel, der verwendet wurde, beim Verschlüssen des Werts mit definieren [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [CREATE MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md) Anweisung.  
+  Ändert durch das Hinzufügen oder Entfernen eines verschlüsselten Werts einen Spaltenverschlüsselungsschlüssel (Column encryption key, CEK) in einer Datenbank. Ein CEK kann maximal zwei Werte enthalten, was die Rotation des zugehörigen Spaltenhauptschlüssels ermöglicht. Ein CEK wird zum Verschlüsseln von Spalten mithilfe des Features [Always Encrypted &#40;Datenbank-Engine&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md) verwendet. Sie müssen vor dem Hinzufügen eines CEK-Werts den Spalten-Hauptschlüssel definieren, der verwendet wurde, um den Wert unter Verwendung von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder der [CREATE MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md)-Anweisung zu verschlüsseln.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -53,33 +53,33 @@ ALTER COLUMN ENCRYPTION KEY key_name
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *Key_name*  
- Der spaltenverschlüsselungsschlüssel, den Sie ändern möchten.  
+ *key_name*  
+ Der Spaltenverschlüsselungsschlüssel, den Sie verändern möchten.  
   
  *column_master_key_name*  
- Gibt den Namen des spaltenhauptschlüssels (CMK) zum Verschlüsseln des Verschlüsselungsschlüssels für die Spalte (CEK) verwendet.  
+ Gibt den Namen des benutzerdefinierten Spaltenhauptschlüssels (custom column master key, CMK) an, der zur Verschlüsselung des CEK verwendet wird.  
   
  *algorithm_name*  
- Der Name des Verschlüsselungsalgorithmus verwendet, um den Wert zu verschlüsseln. Der Algorithmus für die Systemanbieter muss **RSA_OAEP**. Dieses Argument ist ungültig, wenn einen spaltenverschlüsselungsschlüssel-Wert zu löschen.  
+ Der Name des Verschlüsselungsalgorithmus, der zum Verschlüsseln des Werts verwendet wird. Der Algorithmus für die Systemanbieter muss auf **RSA_OAEP** festgelegt sein Dieses Argument ist ungültig, wenn ein Spaltenverschlüsselungsschlüssel entfernt wird.  
   
  *varbinary_literal*  
- Der CEK-BLOB, die mit dem angegebenen Verschlüsselungsschlüssel verschlüsselt. zugreifen. Dieses Argument ist ungültig, wenn einen spaltenverschlüsselungsschlüssel-Wert zu löschen.  
+ Der CEK-BLOB, der mit dem angegebenen Masterverschlüsselungsschlüssel verschlüsselt wird. zugreifen. Dieses Argument ist ungültig, wenn ein Spaltenverschlüsselungsschlüssel entfernt wird.  
   
 > [!WARNING]  
->  Übergeben Sie nur-Text nie CEK-Werte in dieser Anweisung an. Auf diese Weise wird der Vorteil dieser Funktion besteht.  
+>  Verwenden Sie diese Anweisung nie mit CEK-Werten im Klartext. Hierdurch wird die Wirksamkeit des Features beeinträchtigt.  
   
-## <a name="remarks"></a>Hinweise  
- In der Regel wird ein spaltenverschlüsselungsschlüssel mit nur einen verschlüsselten Wert erstellt. Wenn muss ein spaltenhauptschlüssel werden gedreht (die aktuelle Spalte Hauptschlüssel mit dem neuen spaltenhauptschlüssel ersetzt werden muss), können Sie einen neuen Wert des spaltenverschlüsselungsschlüssels, hinzufügen, mit dem neuen spaltenhauptschlüssel verschlüsselt. Dadurch können Sie sicherstellen, dass Clientanwendungen auf Daten zugreifen können mit der spaltenverschlüsselungsschlüssel verschlüsselt werden, solange der neue spaltenhauptschlüssel für Clientanwendungen verfügbar bereitgestellt werden. Ein Always Encrypted aktiviert der Treiber in einer Clientanwendung, die keinen Zugriff auf dem neuen Hauptschlüssel, wird in der Lage, die spaltenverschlüsselungsschlüssel verschlüsselt mit dem alten spaltenhauptschlüssel zu verwenden, um sensible Daten zuzugreifen. Verschlüsselungsalgorithmen, Always Encrypted unterstützt werden, erfordern die Klartextwert 256 Bits aufweisen. Ein verschlüsselter Wert soll mit einem Schlüsselspeicher-Anbieter, der den Schlüsselspeicher mit dem spaltenhauptschlüssel kapselt generiert werden.  
+## <a name="remarks"></a>Remarks  
+ In der Regel wird ein CEK nur mit einem verschlüsselten Wert erstellt. Wenn der aktuelle CMK rotiert, also mit dem neuen CMK ersetzt werden muss, können Sie einen neuen CEK-Wert hinzufügen, der mit dem neuen CMK verschlüsselt wird. Dadurch wird sichergestellt, dass Clientanwendungen auf Daten zugreifen können, die mit dem CEK verschlüsselt wurden, während der neue CMK Clientanwendungen zur Verfügung gestellt wird. Ein Treiber, für den Always Encrypted aktiviert ist, kann in einer Clientanwendung, die keinen Zugriff auf den neuen Hauptschlüssel hat, zum Zugriff auf vertrauliche Daten den CEK-Wert verwenden, der mit dem alten CMK verschlüsselt wurde. Von Always Encrypted unterstützte Verschlüsselungsalgorithmen erfordern einen Klartextwert von 256 Bit. Ein verschlüsselter Wert soll mit einem Schlüsselspeicheranbieter erstellt werden, der den Schlüsselspeicher mit dem CMK enthält.  
   
- Verwendung [sys.columns &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md), [column_encryption_keys &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md) und [column_encryption_key_values &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md) zum Anzeigen von Informationen zur Verschlüsselung von spaltenverschlüsselungsschlüsseln.  
+ Mit [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md), [sys.column_encryption_keys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md) und [sys.column_encryption_key_values &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md) können Sie sich Informationen zu CEKs anzeigen lassen.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert **ALTER ANY COLUMN ENCRYPTION KEY** Berechtigung für die Datenbank.  
+ Erfordert die **ALTER ANY COLUMN ENCRYPTION KEY**-Berechtigung in der Datenbank.  
   
 ## <a name="examples"></a>Beispiele  
   
-### <a name="a-adding-a-column-encryption-key-value"></a>A. Einen spaltenverschlüsselungsschlüssel-Wert hinzufügen  
- Im folgenden Beispiel wird einen spaltenverschlüsselungsschlüssel namens `MyCEK`.  
+### <a name="a-adding-a-column-encryption-key-value"></a>A. Hinzufügen eines Spaltenverschlüsselungsschlüsselwerts  
+ Im folgenden Beispiel wird ein CEK mit der Bezeichnung `MyCEK` verändert.  
   
 ```  
 ALTER COLUMN ENCRYPTION KEY MyCEK  
@@ -93,8 +93,8 @@ GO
   
 ```  
   
-### <a name="b-dropping-a-column-encryption-key-value"></a>B. Löschen einen spaltenverschlüsselungsschlüssel-Wert  
- Im folgenden Beispiel wird einen spaltenverschlüsselungsschlüssel namens `MyCEK` durch einen Wert zu löschen.  
+### <a name="b-dropping-a-column-encryption-key-value"></a>B. Entfernen eines Spaltenverschlüsselungsschlüsselwerts  
+ Im folgenden Beispiel wird ein CEK mit der Bezeichnung `MyCEK` verändert, indem ein Wert entfernt wird.  
   
 ```  
 ALTER COLUMN ENCRYPTION KEY MyCEK  
@@ -105,9 +105,9 @@ DROP VALUE
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [CREATE COLUMN ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-column-encryption-key-transact-sql.md)   
- [DROP COLUMN ENCRYPTION KEY &#40; Transact-SQL &#41;](../../t-sql/statements/drop-column-encryption-key-transact-sql.md)   
+ [DROP COLUMN ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-column-encryption-key-transact-sql.md)   
  [CREATE COLUMN MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-column-master-key-transact-sql.md)   
  [Always Encrypted &#40;Datenbankmodul&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
  [sys.column_encryption_keys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md)   

@@ -1,5 +1,5 @@
 ---
-title: BufferWithTolerance (Geometry-Datentyp) | Microsoft Docs
+title: BufferWithTolerance (geometry-Datentyp) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -58,25 +58,25 @@ Gibt ein geometrisches Objekt zurück, dass die Vereinigung aller Punktwerte dar
  Ein **bit** , das angibt, ob der *tolerance* -Wert relativ oder absolut ist. Wenn 'TRUE' oder 1, ist die Toleranz relativ und wird als Produkt des *tolerance* -Parameters und des Durchmessers des umgebenden Felds der Instanz berechnet. Wenn 'FALSE' oder 0, ist die Toleranz absolut und der *tolerance* -Wert ist die absolute maximale Variation im idealen Pufferabstand für die zurückgegebene lineare Näherung.  
   
 ## <a name="return-types"></a>Rückgabetypen  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Rückgabetyp: **Geometrie**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Rückgabetyp: **geometry**  
   
  CLR-Rückgabetyp: **SqlGeometry**  
   
 ## <a name="exceptions"></a>Ausnahmen  
- Der *tolerance* -Parameter muss größer als 0 sein. Wenn *Toleranz* < = 0 wird eine `System.ArgumentOutOfRangeException` ausgelöst wird.  
+ Der *tolerance* -Parameter muss größer als 0 sein. Wenn *tolerance* <= 0, wird `System.ArgumentOutOfRangeException` ausgelöst.  
   
 > [!NOTE]  
 >  Da *tolerance* is a **float** ist, kann aufgrund der Rundungsprobleme mit Gleitkommatypen eine `System.Runtime.InteropServices.COMException` ausgelöst werden, wenn der angegebene Toleranzwert sehr klein ist.  
   
-## <a name="remarks"></a>Hinweise  
- Wenn *Abstand* > 0 dann entweder eine **Polygon** oder **MultiPolygon** Instanz zurückgegeben.  
+## <a name="remarks"></a>Remarks  
+ Wenn *distance* > 0, wird eine **Polygon**- oder **MultiPolygon**-Instanz zurückgegeben.  
   
 > [!NOTE]  
->  Da der Abstand vom Typ **float**ist, kann ein sehr kleiner Wert in den Berechnungen mit 0 gleichgesetzt werden. In diesem Fall wird eine Kopie der aufrufenden Instanz von **geometry** zurückgegeben. Finden Sie unter [Float und Real &#40; Transact-SQL &#41; ](../../t-sql/data-types/float-and-real-transact-sql.md).  
+>  Da der Abstand vom Typ **float**ist, kann ein sehr kleiner Wert in den Berechnungen mit 0 gleichgesetzt werden. In diesem Fall wird eine Kopie der aufrufenden Instanz von **geometry** zurückgegeben. Informationen hierzu finden Sie unter [float und real &#40;Transact-SQL&#41;](../../t-sql/data-types/float-and-real-transact-sql.md).  
   
  Wenn *distance* = 0 ist, wird eine Kopie der aufrufenden Instanz von **geometry** zurückgegeben.  
   
- Wenn *Abstand* < 0 dann  
+ Wenn *distance* < 0, gilt Folgendes:  
   
 -   Es wird eine leere Instanz von **GeometryCollection** zurückgegeben, wenn die Dimensionen der Instanz 0 oder 1 betragen.  
   
@@ -87,7 +87,7 @@ Gibt ein geometrisches Objekt zurück, dass die Vereinigung aller Punktwerte dar
   
  Ein negativer Puffer entfernt alle Punkte innerhalb des angegebenen Abstands von der Begrenzung der **geometry** -Instanz.  
   
- Die Abweichung zwischen dem theoretischen und dem berechnetem Puffer ist max (Toleranz, Blöcke \* 1.E-7) Toleranz ist, in dem der Wert der *Toleranz* Parameter. Weitere Informationen zu Blöcken, finden Sie unter [Geometry-Datentyp-Methodenverweis](http://msdn.microsoft.com/library/d88e632b-6b2f-4466-a15f-9fbef1a347a7).  
+ Die Abweichung zwischen dem theoretischen und dem berechnetem Puffer beträgt max(tolerance, extents \* 1,0E-7), wobei die Toleranz der Wert des Parameters *tolerance* ist. Weitere Informationen zu Erweiterungen finden Sie unter [geometry-Datentyp-Methodenverweis](http://msdn.microsoft.com/library/d88e632b-6b2f-4466-a15f-9fbef1a347a7).  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird eine `Point` -Instanz erstellt und `BufferWithTolerance()` verwendet, um einen groben Puffer um die Instanz zu erhalten.  
@@ -98,8 +98,8 @@ SET @g = geometry::STGeomFromText('POINT(3 3)', 0);
 SELECT @g.BufferWithTolerance(1, .5, 0).ToString();  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [STBuffer &#40; Geometry-Datentyp &#41;](../../t-sql/spatial-geometry/stbuffer-geometry-data-type.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [STBuffer &#40;geometry-Datentyp&#41;](../../t-sql/spatial-geometry/stbuffer-geometry-data-type.md)   
  [Erweiterte Methoden für geometry-Instanzen](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)  
   
   

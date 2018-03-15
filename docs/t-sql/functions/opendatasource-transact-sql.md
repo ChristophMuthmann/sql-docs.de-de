@@ -1,5 +1,5 @@
 ---
-title: OPENDATASOURCE (Transact-SQL) | Microsoft Docs
+title: OPENDATASOURCE (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -52,12 +52,12 @@ OPENDATASOURCE ( provider_name, init_string )
   
 ## <a name="arguments"></a>Argumente  
  *provider_name*  
- Der Namen, der als PROGID des OLE DB-Anbieters für den Zugriff auf die Datenquelle registriert ist. *Provider_name* ist ein **Char** Datentyp verfügt über keinen Standardwert.  
+ Der Namen, der als PROGID des OLE DB-Anbieters für den Zugriff auf die Datenquelle registriert ist. *provider_name* ist vom Datentyp **char** und verfügt über keinen Standardwert.  
   
  *init_string*  
- Die Verbindungszeichenfolge wird an die IDataInitialize-Schnittstelle des Zielanbieters übergeben werden. Syntax der Anbieterzeichenfolge basiert auf Schlüsselwort-Wert-Paaren, die durch Semikolons getrennt ein, z. B.: **"***Schlüsselwort1*=*Wert***;** *Schlüsselwort2*=*Wert***"**.  
+ Die Verbindungszeichenfolge, die an die IDataInitialize-Schnittstelle des Zielanbieters übergeben wird. Die Syntax der Anbieterzeichenfolge basiert auf durch Semikolons getrennte Schlüssel-Wert-Paare in der Form: **'***Schlüsselwort1*=*=Wert***;***Schlüsselwort2*=*=Wert***'**.  
   
- Informationen zu bestimmten, vom Anbieter unterstützten Paaren aus Schlüsselwort und Wert finden Sie im MDAC SDK ([!INCLUDE[msCoName](../../includes/msconame-md.md)] Data Access Components Software Development Kit). In dieser Dokumentation wird die grundlegende Syntax definiert. Die folgende Tabelle listet die am häufigsten verwendeten Schlüsselwörter in der *Init_string* Argument.  
+ Informationen zu bestimmten, vom Anbieter unterstützten Paaren aus Schlüsselwort und Wert finden Sie im MDAC SDK ([!INCLUDE[msCoName](../../includes/msconame-md.md)] Data Access Components Software Development Kit). In dieser Dokumentation wird die grundlegende Syntax definiert. In der folgenden Tabelle werden die am häufigsten im *init_string*-Argument verwendeten Schlüsselwörter aufgelistet.  
   
 |Schlüsselwort|OLE DB-Eigenschaft|Gültige Werte und Beschreibung|  
 |-------------|---------------------|----------------------------------|  
@@ -68,9 +68,9 @@ OPENDATASOURCE ( provider_name, init_string )
 |Benutzer-ID|DBPROP_AUTH_USERID|Für die Verbindung zu verwendende Benutzer-ID.|  
 |Kennwort|DBPROP_AUTH_PASSWORD|Für die Verbindung zu verwendendes Kennwort.|  
 |Katalog|DBPROP_INIT_CATALOG|Name des Anfangs- oder Standardkatalogs beim Herstellen einer Verbindung mit der Datenquelle.|  
-|Integrierte Sicherheit|DBPROP_AUTH_INTEGRATED|SSPI, zur Windows-Authentifizierung|  
+|Integrierte Sicherheit|DBPROP_AUTH_INTEGRATED|SSPI, zur Angabe der Windows-Authentifizierung|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  OPENDATASOURCE kann nur dann für den Zugriff auf Remotedaten aus OLE DB-Datenquellen verwendet werden, wenn die DisallowAdhocAccess-Registrierungsoption explizit für den angegebenen Anbieter auf 0 festgelegt und die erweiterte Konfigurationsoption Ad Hoc Distributed Queries aktiviert wird. Wenn diese Optionen nicht festgelegt sind, ermöglicht das Standardverhalten keinen Ad-hoc-Zugriff.  
   
  Die OPENDATASOURCE-Funktion kann an denselben Stellen in der [!INCLUDE[tsql](../../includes/tsql-md.md)]-Syntax verwendet werden wie ein Verbindungsservername. Deshalb kann OPENDATASOURCE als erster Teil eines vierteiligen Namens verwendet werden, der in einer SELECT-, INSERT-, UPDATE-, oder DELETE-Anweisung auf einen Tabellen- oder Sichtnamen bzw. in einer EXECUTE-Anweisung auf eine remote gespeicherte Prozedur verweist. Beim Ausführen von remote gespeicherten Prozeduren muss OPENDATASOURCE auf eine andere [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz verweisen. Für die Argumente von OPENDATASOURCE können keine Variablen verwendet werden.  
@@ -78,9 +78,9 @@ OPENDATASOURCE ( provider_name, init_string )
  Wie die OPENROWSET-Funktion sollte OPENDATASOURCE nur auf OLE DB-Datenquellen verweisen, auf die selten zugegriffen wird. Definieren Sie Verbindungsserver für Datenquellen, auf die nicht nur ein paar Mal zugegriffen wird. Weder OPENDATASOURCE noch OPENROWSET stellen die gesamte Funktionalität einer Verbindungsserverdefinition bereit, wie die Sicherheitsverwaltung und die Möglichkeit, Kataloginformationen abzufragen. Alle Verbindungsinformationen, einschließlich Kennwörtern, müssen bei jedem Aufruf von OPENDATASOURCE bereitgestellt werden.  
   
 > [!IMPORTANT]  
->  Die Windows-Authentifizierung bietet deutlich mehr Sicherheit als die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung. Sie sollten nach Möglichkeit immer Windows-Authentifizierung verwenden. OPENDATASOURCE sollte nicht mit expliziten Kennwörtern in der Verbindungszeichenfolge verwendet werden.  
+>  Die Windows-Authentifizierung bietet deutlich mehr Sicherheit als die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung. Verwenden Sie nach Möglichkeit die Windows-Authentifizierung. OPENDATASOURCE sollte nicht mit expliziten Kennwörtern in der Verbindungszeichenfolge verwendet werden.  
   
- Die Verbindungsanforderungen für jeden Anbieter sind vergleichbar mit den Anforderungen an die Parameter, die zum Erstellen von Verbindungsservern verwendet werden. Die Details für viele allgemeine Anbieter sind in folgendem Thema aufgeführt [Sp_addlinkedserver &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md).  
+ Die Verbindungsanforderungen für jeden Anbieter sind vergleichbar mit den Anforderungen an die Parameter, die zum Erstellen von Verbindungsservern verwendet werden. Details für viele allgemeine Anbieter sind im Artikel [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) aufgeführt.  
   
  Jeder Aufruf von OPENDATASOURCE, OPENQUERY oder OPENROWSET in der FROM-Klausel wird einzeln und unabhängig von anderen Aufrufen dieser Funktionen ausgewertet, die als Ziel des Updates verwendet werden, auch wenn für die beiden Aufrufe identische Argumente angegeben werden. Insbesondere haben Filter- oder Joinbedingungen, die auf das Ergebnis eines dieser Aufrufe angewendet werden, keine Auswirkungen auf die Ergebnisse des jeweils anderen.  
   
@@ -104,7 +104,7 @@ SELECT * FROM OPENDATASOURCE('Microsoft.Jet.OLEDB.4.0',
 'Data Source=C:\DataFolder\Documents\TestExcel.xls;Extended Properties=EXCEL 5.0')...[Sheet1$] ;  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
  [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)  
   

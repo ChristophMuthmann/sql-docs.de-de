@@ -1,5 +1,5 @@
 ---
-title: Beispiele (Transact-SQL) | Microsoft Docs
+title: "Beispiele für SELECT (Transact-SQL) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -47,7 +47,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="select-examples-transact-sql"></a>SELECT-Beispiele (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Dieses Thema enthält Beispiele für die Verwendung der [wählen](../../t-sql/queries/select-transact-sql.md) Anweisung.  
+  In diesem Thema werden Beispiele für die Verwendung der [SELECT](../../t-sql/queries/select-transact-sql.md)-Anweisung bereitgestellt.  
   
 ## <a name="a-using-select-to-retrieve-rows-and-columns"></a>A. Verwenden von SELECT zum Abrufen von Zeilen und Spalten  
  Im folgenden Beispiel werden drei Codebeispiele aufgeführt. Im ersten Codebeispiel werden alle Zeilen (es ist keine WHERE-Klausel angegeben) und alle Spalten (mit `*`) aus der `Product`-Tabelle in der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]-Datenbank zurückgegeben.  
@@ -204,19 +204,19 @@ GO
   
  [!code-sql[Select#SelectExamples51](../../t-sql/queries/codesnippet/tsql/select-examples-transact_29.sql)]  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md)   
  [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
  [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   
- [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
- [INSERT &#40; Transact-SQL &#41;](../../t-sql/statements/insert-transact-sql.md)   
+ [Ausdrücke &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
  [LIKE &#40;Transact-SQL&#41;](../../t-sql/language-elements/like-transact-sql.md)   
  [UNION &#40;Transact-SQL&#41;](../../t-sql/language-elements/set-operators-union-transact-sql.md)   
- [Mit Ausnahme von und INTERSECT &#40; Transact-SQL &#41;](../../t-sql/language-elements/set-operators-except-and-intersect-transact-sql.md)   
+ [EXCEPT und INTERSECT &#40;Transact-SQL&#41;](../../t-sql/language-elements/set-operators-except-and-intersect-transact-sql.md)   
  [UPDATE (Transact-SQL)](../../t-sql/queries/update-transact-sql.md)   
  [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)   
  [PathName &#40;Transact-SQL&#41;](../../relational-databases/system-functions/pathname-transact-sql.md)   
- [INTO Clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-into-clause-transact-sql.md)  
+ [INTO-Klausel &#40;Transact-SQL&#41;](../../t-sql/queries/select-into-clause-transact-sql.md)  
   
   

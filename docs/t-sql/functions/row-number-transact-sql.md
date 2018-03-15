@@ -1,5 +1,5 @@
 ---
-title: ROW_NUMBER (Transact-SQL) | Microsoft Docs
+title: ROW_NUMBER (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 09/11/2017
 ms.prod: sql-non-specified
@@ -37,12 +37,12 @@ ms.lasthandoff: 01/02/2018
 # <a name="rownumber-transact-sql"></a>ROW_NUMBER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Legen Sie die Zahlen die Ausgabe eines Ergebnisses. Genauer gesagt, gibt die laufende Nummer einer Zeile innerhalb einer Partition eines Resultsets, beginnend mit 1 für die erste Zeile in jeder Partition ein. 
+  Nummeriert die Ausgabe eines Resultsets. Genauer gesagt wird die fortlaufende Nummer einer Zeile innerhalb einer Partition eines Resultsets zurückgegeben, beginnend mit 1 für die erste Zeile in jeder Partition. 
   
-`ROW_NUMBER`und `RANK` ähneln. `ROW_NUMBER`Zahlen, die alle Zeilen sequenziell (z. B. 1, 2, 3, 4, 5). `RANK`Stellt den gleichen Wert für Ties (z. B. 1, 2, 2, 4, 5) bereit.   
+`ROW_NUMBER` und `RANK` sind ähnlich. `ROW_NUMBER` nummeriert alle Zeilen sequenziell (z.B. 1, 2, 3, 4, 5). `RANK` stellt den gleichen numerischen Wert für gleichwertige Werte bereit (z.B. 1, 2, 3, 4, 5).   
   
 > [!NOTE]
-> `ROW_NUMBER`ein temporärer Wert wird berechnet, wenn die Abfrage ausgeführt wird. Um Zahlen in eine Tabelle dauerhaft zu speichern, finden Sie unter [IDENTITY-Eigenschaft](../../t-sql/statements/create-table-transact-sql-identity-property.md) und [SEQUENZ](../../t-sql/statements/create-sequence-transact-sql.md). 
+> `ROW_NUMBER` ist ein temporärer Wert, der berechnet wird, wenn die Abfrage ausgeführt wird. Unter [IDENTITY-Eigenschaft](../../t-sql/statements/create-table-transact-sql-identity-property.md) und [SEQUENCE](../../t-sql/statements/create-sequence-transact-sql.md) finden Sie weitere Informationen zum dauerhaften Speichern von Zahlen in einer Tabelle. 
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
  
@@ -55,31 +55,31 @@ ROW_NUMBER ( )
 ```  
   
 ## <a name="arguments"></a>Argumente  
- PARTITION BY *Value_expression*  
- Teilt das Resultset erzeugt, indem Sie die [FROM](../../t-sql/queries/from-transact-sql.md) -Klausel in Partitionen, auf die die ROW_NUMBER-Funktion angewendet wird. *Value_expression* gibt die Spalte, nach der das Resultset partitioniert wird. Wenn `PARTITION BY` nicht angegeben ist, behandelt die Funktion alle Zeilen des Abfrageresultsets als einzelne Gruppe. Weitere Informationen finden Sie unter [Klausel "OVER" &#40; Transact-SQL &#41; ](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ PARTITION BY *value_expression*  
+ Teilt das von der [FROM](../../t-sql/queries/from-transact-sql.md)-Klausel erzeugte Resultset in Partitionen, auf die die ROW_NUMBER-Funktion angewendet wird. *value_expression* gibt die Spalte an, nach der das Resultset partitioniert wird. Wird `PARTITION BY` nicht angegeben, verarbeitet die Funktion alle Zeilen des Abfrageresultsets als einzelne Gruppe. Weitere Informationen finden Sie unter [OVER-Klausel &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
  *order_by_clause*  
- Die `ORDER BY` -Klausel bestimmt die Reihenfolge, in der die Zeilen ihren eindeutigen zugewiesen sind `ROW_NUMBER` innerhalb einer angegebenen Partition. Sie ist erforderlich. Weitere Informationen finden Sie unter [Klausel "OVER" &#40; Transact-SQL &#41; ](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ Die `ORDER BY`-Klausel bestimmt die Reihenfolge, in der den Zeilen die eindeutige `ROW_NUMBER` innerhalb einer angegebenen Partition zugewiesen wird. Sie ist erforderlich. Weitere Informationen finden Sie unter [OVER-Klausel &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
 ## <a name="return-types"></a>Rückgabetypen  
  **bigint**  
   
 ## <a name="general-remarks"></a>Allgemeine Hinweise  
- Es gibt keine Garantie, die die zurückgegebenen Zeilen mithilfe einer Abfrage `ROW_NUMBER()` angeordnet genauso bei jeder Ausführung, wenn Folgendes zutrifft.  
+ Es gibt keine Garantie, dass die mithilfe von `ROW_NUMBER()` zurückgegebenen Zeilen bei jeder Ausführung exakt gleich sind, es sei denn, die folgenden Bedingungen treffen zu.  
   
 1.  Werte der partitionierten Spalte sind eindeutig.  
   
-2.  Der Werte der `ORDER BY` Spalten sind eindeutig.  
+2.  Werte der `ORDER BY`-Spalten sind eindeutig.  
   
-3.  Kombinationen von Werten für die Partitionsspalte und `ORDER BY` Spalten sind eindeutig.  
+3.  Kombinationen der Werte der Partitionsspalte und `ORDER BY`-Spalten sind eindeutig.  
   
- `ROW_NUMBER()`ist nicht deterministisch. Weitere Informationen finden Sie unter [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).  
+ `ROW_NUMBER()` ist nicht deterministisch. Weitere Informationen finden Sie unter [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).  
   
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="a-simple-examples"></a>A. Einfache Beispiele 
 
-Die folgende Abfrage gibt die vier Systemtabellen in alphabetischer Reihenfolge zurück.
+Die folgende Abfrage gibt vier Systemtabellen in alphabetischer Reihenfolge zurück.
 
 ```sql
 SELECT 
@@ -98,7 +98,7 @@ ORDER BY name ASC;
 |msdb |SIMPLE |
 |tempdb |SIMPLE |
 
-Um eine Zeilennummernspalte vor jede Zeile hinzuzufügen, fügen Sie eine Spalte mit dem `ROW_NUMBER` Funktion, die in diesem Fall mit dem Namen `Row#`. Sie verschieben, müssen die `ORDER BY` Klausel bis zu der `OVER` Klausel.
+Fügen Sie mit der `ROW_NUMBER`-Funktion eine Spalte namens `Row#` (in diesem Fall) hinzu, um eine Spalte für Zeilennummern vor jeder Zeile hinzuzufügen. Sie müssen die `ORDER BY`-Klausel bis zur `OVER`-Klausel verschieben.
 
 ```sql
 SELECT 
@@ -110,14 +110,14 @@ WHERE database_id < 5;
 
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
    
-|Zeilennr. |NAME    |recovery_model_desc |  
+|Row# |NAME    |recovery_model_desc |  
 |------- |-----------  |------------ |  
 |1 |master |SIMPLE |
 |2 |model |FULL |
 |3 |msdb |SIMPLE |
 |4 |tempdb |SIMPLE |
 
-Hinzufügen einer `PARTITION BY` -Klausel für die `recovery_model_desc` Spalte wird neu gestartet, wenn die Nummerierung der `recovery_model_desc` -Wert ändert. 
+Durch das Hinzufügen einer `PARTITION BY`-Klausel zur `recovery_model_desc`-Spalte wird die Nummerierung neu gestartet, wenn der `recovery_model_desc`-Wert sich verändert. 
  
 ```sql
 SELECT 
@@ -129,7 +129,7 @@ FROM sys.databases WHERE database_id < 5;
 
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
    
-|Zeilennr. |NAME    |recovery_model_desc |  
+|Row# |NAME    |recovery_model_desc |  
 |------- |-----------  |------------ |  
 |1 |model |FULL |
 |1 |master |SIMPLE |
@@ -224,10 +224,10 @@ Shu        Ito                  Southwest            2458535.61    2
 Jae        Pak                  United Kingdom       4116871.22    1  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
 ### <a name="e-returning-the-row-number-for-salespeople"></a>E. Zurückgeben der Zeilennummer für Vertriebsmitarbeiter  
- Das folgende Beispiel gibt die `ROW_NUMBER` für Vertriebsmitarbeiter, die basierend auf ihren zugewiesenen Vorgabe.  
+ Im folgenden Beispiel wird `ROW_NUMBER` für die Vertriebsmitarbeiter (basierend auf der zugewiesenen Sollvorgabe für den Verkauf) zurückgegeben.  
   
 ```sql  
 -- Uses AdventureWorks  
@@ -256,7 +256,7 @@ RowNumber  FirstName  LastName            SalesQuota
 ```
 
 ### <a name="f-using-rownumber-with-partition"></a>F. Verwenden von ROW_NUMBER () mit PARTITION  
- Im folgenden Beispiel wird die Verwendung der `ROW_NUMBER`-Funktion mit dem `PARTITION BY`-Argument dargestellt. Dies bewirkt, dass die `ROW_NUMBER` Funktion, um die Anzahl der Zeilen in jeder Partition.  
+ Im folgenden Beispiel wird die Verwendung der `ROW_NUMBER`-Funktion mit dem `PARTITION BY`-Argument dargestellt. Dadurch nummeriert die `ROW_NUMBER`-Funktion die Zeilen in jeder Partition.  
   
 ```sql  
 -- Uses AdventureWorks  
@@ -287,10 +287,10 @@ RowNumber  LastName            Territory  SalesQuota
 2          Ito                 4           7,804,000.00  
 ```
   
-## <a name="see-also"></a>Siehe auch  
- [Rang &#40; Transact-SQL &#41;](../../t-sql/functions/rank-transact-sql.md)   
- [DENSE_RANK &#40; Transact-SQL &#41;](../../t-sql/functions/dense-rank-transact-sql.md)   
- [NTILE &#40; Transact-SQL &#41;](../../t-sql/functions/ntile-transact-sql.md)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [RANK &#40;Transact-SQL&#41;](../../t-sql/functions/rank-transact-sql.md)   
+ [DENSE_RANK &#40;Transact-SQL&#41;](../../t-sql/functions/dense-rank-transact-sql.md)   
+ [NTILE &#40;Transact-SQL&#41;](../../t-sql/functions/ntile-transact-sql.md)  
   
   
 

@@ -1,5 +1,5 @@
 ---
-title: COMMIT TRANSACTION (Transact-SQL) | Microsoft Docs
+title: COMMIT TRANSACTION (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 09/09/2016
 ms.prod: sql-non-specified
@@ -45,7 +45,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="commit-transaction-transact-sql"></a>COMMIT TRANSACTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
 
-  Markiert das Ende einer erfolgreichen impliziten oder expliziten Transaktion. @ IF@TRANCOUNT beträgt 1, COMMIT TRANSACTION macht alle datenänderungen seit dem Start der Transaktion einen dauerhaften Bestandteil der Datenbank durch die Transaktion und dekrementiert @ belegten Ressourcen freigegeben@TRANCOUNT auf 0. @ IF@TRANCOUNT ist größer als 1, COMMIT TRANSACTION dekrementiert @@TRANCOUNT nur von 1 und die Transaktion bleibt aktiv.  
+  Markiert das Ende einer erfolgreichen impliziten oder expliziten Transaktion. Ist @@TRANCOUNT gleich 1, werden von COMMIT TRANSACTION alle Datenänderungen, die seit dem Start der Transaktion ausgeführt wurden, dauerhaft in der Datenbank gespeichert. Außerdem werden die von der Transaktion belegten Ressourcen freigegeben, und @@TRANCOUNT wird auf 0 (null) herabgesetzt. Ist @@TRANCOUNT größer als 1, wird @@TRANCOUNT von COMMIT TRANSACTION lediglich um den Wert 1 verringert, und die Transaktion bleibt aktiv.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -68,28 +68,28 @@ COMMIT [ TRAN | TRANSACTION ]
   
 ## <a name="arguments"></a>Argumente  
  *transaction_name*  
- **GILT für:** SQL Server- und Azure SQL-Datenbank
+ **GILT FÜR:** SQL Server und Azure SQL-Datenbank
  
- Wird vom [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ignoriert. *Transaction_name* gibt einen Transaktionsnamen an, die von einer vorherigen BEGIN TRANSACTION zugewiesen. *Transaction_name*muss den Regeln für Bezeichner entsprechen, jedoch 32 Zeichen nicht überschreiten. *Transaction_name* kann die Übersichtlichkeit Übersichtlichkeit verbessern Programmierern angezeigt wird, welcher geschachtelten BEGIN TRANSACTION, COMMIT TRANSACTION zugeordnet ist.  
+ Wird vom [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ignoriert. *transaction_name* gibt einen Transaktionsnamen an, der von einer vorherigen BEGIN TRANSACTION-Anweisung zugewiesen wurde. *transaction_name* muss den Regeln für Bezeichner entsprechen, darf jedoch 32 Zeichen nicht überschreiten. *transaction_name* kann die Übersichtlichkeit verbessern, da den Programmierern angezeigt wird, welcher geschachtelten BEGIN TRANSACTION-Anweisung die COMMIT TRANSACTION-Anweisung zugeordnet ist.  
   
  *@tran_name_variable*  
- **GILT für:** SQL Server- und Azure SQL-Datenbank  
+ **GILT FÜR:** SQL Server und Azure SQL-Datenbank  
  
-Ist der Name einer benutzerdefinierten Variablen, die einen gültigen Transaktionsnamen enthält. Die Variable muss mit einem Char, Varchar, Nchar oder Nvarchar-Datentyp deklariert werden. Werden mehr als 32 Zeichen an die Variable übergeben, werden nur die ersten 32 Zeichen verwendet, die restlichen Zeichen werden abgeschnitten.  
+Ist der Name einer benutzerdefinierten Variablen, die einen gültigen Transaktionsnamen enthält. Die Variable muss mit einem der folgenden Datentypen deklariert werden: char, varchar, nchar oder nvarchar. Werden mehr als 32 Zeichen an die Variable übergeben, werden nur die ersten 32 Zeichen verwendet, die restlichen Zeichen werden abgeschnitten.  
   
  DELAYED_DURABILITY  
- **GILT für:** SQL Server- und Azure SQL-Datenbank   
+ **GILT FÜR:** SQL Server und Azure SQL-Datenbank   
 
- Eine Option, die erfordert, dass für diese Transaktion ein Commit mit verzögerter Dauerhaftigkeit ausgeführt wird. Die Anforderung wird ignoriert, wenn die Datenbank mit `DELAYED_DURABILITY = DISABLED` oder `DELAYED_DURABILITY = FORCED` geändert wurde. Finden Sie im Thema [Steuern der Transaktionsdauerhaftigkeit](../../relational-databases/logs/control-transaction-durability.md) für Weitere Informationen.  
+ Eine Option, die erfordert, dass für diese Transaktion ein Commit mit verzögerter Dauerhaftigkeit ausgeführt wird. Die Anforderung wird ignoriert, wenn die Datenbank mit `DELAYED_DURABILITY = DISABLED` oder `DELAYED_DURABILITY = FORCED` geändert wurde. Weitere Informationen finden Sie im Thema [Steuern der Transaktionsdauerhaftigkeit](../../relational-databases/logs/control-transaction-durability.md).  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Es liegt in der Verantwortung des [!INCLUDE[tsql](../../includes/tsql-md.md)]-Programmierers, COMMIT TRANSACTION nur zu einem Zeitpunkt auszugeben, zu dem alle Daten, auf die die Transaktion verweist, logisch richtig sind.  
   
  War die Transaktion, für die ein Commit ausgeführt wird, eine verteilte [!INCLUDE[tsql](../../includes/tsql-md.md)]-Transaktion, wird MS DTC von COMMIT TRANSACTION veranlasst, mithilfe eines Zweiphasencommit-Protokolls für alle an der Transaktion beteiligten Server ein Commit auszuführen. Erstreckt sich eine lokale Transaktion über mehrere Datenbanken in derselben Instanz des [!INCLUDE[ssDE](../../includes/ssde-md.md)]s, verwendet die Instanz einen internen Zweiphasencommit, um für alle an der Transaktion beteiligten Datenbanken einen Commit auszuführen.  
   
- Bei der Verwendung in geschachtelten Transaktionen werden durch Commits der inneren Transaktionen keine Ressourcen freigegeben oder Änderungen dauerhaft gespeichert. Die Datenänderungen werden nur dann dauerhaft und Ressourcen nur dann freigegeben, wenn für die äußere Transaktion ein Commit ausgeführt wird. Jeder COMMIT TRANSACTION ausgegeben, wenn @@TRANCOUNT ist größer als 1 einfach dekrementiert @@TRANCOUNT um 1. Wenn @@TRANCOUNT wird schließlich den Wert 0 erreicht, die gesamte äußere Transaktion wird ein Commit ausgeführt wurde. Da *Transaction_name* ignoriert wird die [!INCLUDE[ssDE](../../includes/ssde-md.md)], Ausgeben einer COMMIT TRANSACTION verweisen auf den Namen einer äußeren Transaktion, wenn ausstehende innere Transaktionen nur dekrementiert @@TRANCOUNT um 1.  
+ Bei der Verwendung in geschachtelten Transaktionen werden durch Commits der inneren Transaktionen keine Ressourcen freigegeben oder Änderungen dauerhaft gespeichert. Die Datenänderungen werden nur dann dauerhaft und Ressourcen nur dann freigegeben, wenn für die äußere Transaktion ein Commit ausgeführt wird. Bei jeder COMMIT TRANSACTION, die ausgegeben wird, wenn @@TRANCOUNT größer als 1 ist, wird @@TRANCOUNT einfach um 1 reduziert. Hat @@TRANCOUNT schließlich den Wert 0 (null) erreicht, wird für die gesamte äußere Transaktion ein Commit ausgeführt. Da *transaction_name* vom [!INCLUDE[ssDE](../../includes/ssde-md.md)] ignoriert wird, wird beim Ausgeben einer COMMIT TRANSACTION-Anweisung, die auf den Namen einer äußeren Transaktion verweist, @@TRANCOUNT lediglich um 1 verringert, wenn ausstehende innere Transaktionen vorhanden sind.  
   
- Ausgeben einer COMMIT TRANSACTION Wenn @@TRANCOUNT ist 0, führt zu einem Fehler; Es besteht keine entsprechende BEGIN TRANSACTION.  
+ Hat @@TRANCOUNT den Wert 0 (null), führt die Ausgabe von COMMIT TRANSACTION zu einer Fehlermeldung, da keine entsprechende BEGIN TRANSACTION-Anweisung vorhanden ist.  
   
  Nach der Ausgabe einer COMMIT TRANSACTION-Anweisung kann kein Rollback für eine Transaktion ausgeführt werden, da die Datenänderungen zu einem dauerhaften Bestandteil der Datenbank geworden sind.  
   
@@ -101,9 +101,9 @@ Ist der Name einer benutzerdefinierten Variablen, die einen gültigen Transaktio
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="a-committing-a-transaction"></a>A. Ausführen eines Commits für eine Transaktion  
-**GILT für:** SQLServer, Azure SQL-Datenbank, Azure SQL Datawarehouse und Parallel Datawarehouse   
+**GILT FÜR:** SQL Server, Azure SQL-Datenbank, Azure SQL Data Warehouse und Parallel Data Warehouse   
 
-Im folgenden Beispiel wird ein Stellenbewerber gelöscht. AdventureWorks verwendet. 
+Im folgenden Beispiel wird ein Stellenbewerber gelöscht. AdventureWorks wird verwendet. 
   
 ```   
 BEGIN TRANSACTION;   
@@ -113,9 +113,9 @@ COMMIT TRANSACTION;
 ```  
   
 ### <a name="b-committing-a-nested-transaction"></a>B. Ausführen eines Commits für eine geschachtelte Transaktion  
-**GILT für:** SQL Server- und Azure SQL-Datenbank    
+**GILT FÜR:** SQL Server und Azure SQL-Datenbank    
 
-Im folgenden Beispiel werden eine Tabelle erstellt und drei Ebenen von geschachtelten Transaktionen generiert, und anschließend wird für die geschachtelte Transaktion ein Commit ausgeführt. Obwohl jede `COMMIT TRANSACTION` Anweisung verfügt über eine *Transaction_name* Parameter, besteht keine Beziehung zwischen der `COMMIT TRANSACTION` und `BEGIN TRANSACTION` Anweisungen. Die *Transaction_name* Parameter sind lediglich Hilfen zur und helfen dem Programmierer, stellen Sie sicher, dass die richtige Anzahl von Commits codiert sind, verringern `@@TRANCOUNT` auf 0 und somit die äußere Transaktion ein commit. 
+Im folgenden Beispiel werden eine Tabelle erstellt und drei Ebenen von geschachtelten Transaktionen generiert, und anschließend wird für die geschachtelte Transaktion ein Commit ausgeführt. Obwohl jede `COMMIT TRANSACTION`-Anweisung einen *transaction_name*-Parameter aufweist, gibt es keine Beziehung zwischen der `COMMIT TRANSACTION`-Anweisung und der `BEGIN TRANSACTION`-Anweisung. Die *transaction_name*-Parameter erhöhen lediglich die Übersichtlichkeit und helfen dem Programmierer, die richtige Anzahl von Commits zu codieren, damit `@@TRANCOUNT` auf 0 (null) herabgesetzt und dadurch für die äußere Transaktion ein Commit ausgeführt wird. 
   
 ```   
 IF OBJECT_ID(N'TestTran',N'U') IS NOT NULL  
@@ -169,7 +169,7 @@ PRINT N'Transaction count after COMMIT OuterTran = '
     + CAST(@@TRANCOUNT AS nvarchar(10));  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [BEGIN DISTRIBUTED TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-distributed-transaction-transact-sql.md)   
  [BEGIN TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-transaction-transact-sql.md)   
  [COMMIT WORK &#40;Transact-SQL&#41;](../../t-sql/language-elements/commit-work-transact-sql.md)   

@@ -1,5 +1,5 @@
 ---
-title: STUnion (Geography-Datentyp) | Microsoft Docs
+title: STUnion (geography-Datentyp) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -45,20 +45,20 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>Argumente  
  *other_geography*  
- Eine andere **Geography** Instanz zu einer Vereinigung mit der Instanz, auf dem STUnion() aufgerufen wird.  
+ Eine andere **geography**-Instanz zur Vereinigung mit der Instanz, in der STUnion() aufgerufen wird.  
   
 ## <a name="return-types"></a>Rückgabetypen  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Rückgabetyp: **Geography**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Rückgabetyp: **geography**  
   
  CLR-Rückgabetyp: **SqlGeography**  
   
 ## <a name="exceptions"></a>Ausnahmen  
  Diese Methode löst eine **ArgumentException** aus, wenn die Instanz eine gegenüberliegende Kante enthält.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Diese Methode gibt immer NULL zurück, wenn die SRIDs (Spatial Reference IDs) der **geography** -Instanzen nicht übereinstimmen.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt räumliche Instanzen, die größer als eine Hemisphäre sind. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], der Satz von möglichen Ergebnissen, die auf dem Server zurückgegeben wurde erweitert und **FullGlobe** Instanzen.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt räumliche Instanzen, die größer als eine Hemisphäre sind. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wurden die Ergebnisse, die auf dem Server zurückgegeben werden können, um **FullGlobe**-Instanzen erweitert.  
   
  Im Ergebnis können nur dann Kreisbogensegmente enthalten sein, wenn die Eingabeinstanzen auch Kreisbogensegmente enthalten.  
   
@@ -95,7 +95,7 @@ SELECT @g.STUnion(@h).ToString();
  SELECT @g.STUnion(@h).ToString();
  ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [OGC-Methoden für geography-Instanzen](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

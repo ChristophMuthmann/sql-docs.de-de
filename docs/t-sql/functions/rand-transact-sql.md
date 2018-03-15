@@ -1,5 +1,5 @@
 ---
-title: RAND (Transact-SQL) | Microsoft Docs
+title: RAND (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -36,7 +36,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="rand-transact-sql"></a>RAND (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
-  Gibt einen pseudozufälligen Schlüsselbytes **"float"** Wert von 0 bis 1, exklusiv.  
+  Gibt einen **float**-Pseudozufallswert von ausschließlich 0 bis 1 zurück.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,13 +48,13 @@ RAND ( [ seed ] )
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *Startwert*  
- Eine ganze Zahl [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) (**"tinyint"**, **"smallint"**, oder **Int**), die den Ausgangswert zurückgibt. Wenn *Ausgangswert* nicht angegeben wird, die [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ein Ausgangswerts nach dem Zufallsprinzip zugewiesen. Für einen bestimmten Ausgangswert ist das zurückgegebene Ergebnis immer gleich.  
+ *seed*  
+ Ein ganzzahliger [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) (**tinyint**, **smallint** oder **int**), der den Ausgangswert zurückgibt. Wenn *seed* nicht angegeben ist, weist [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] einen zufälligen Ausgangswert zu. Für einen bestimmten Ausgangswert ist das zurückgegebene Ergebnis immer gleich.  
   
 ## <a name="return-types"></a>Rückgabetypen  
  **float**  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Bei wiederholten Aufrufen von RAND() mit demselben Ausgangswert werden dieselben Ergebnisse zurückgegeben.  
   
  Wenn für eine bestimmte Verbindung RAND() mit einem angegebenen Ausgangswert aufgerufen wird, führen alle nachfolgenden Aufrufe von RAND() zu Ergebnissen, die auf dem RAND()-Ausgangsaufruf basieren. Durch die folgende Abfrage wird z. B. immer dieselbe Nummernreihenfolge zurückgegeben.  
@@ -77,7 +77,7 @@ WHILE @counter < 5
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Mathematische Funktionen &#40; Transact-SQL &#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Mathematische Funktionen &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
   
   

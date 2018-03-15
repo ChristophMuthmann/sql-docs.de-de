@@ -1,5 +1,5 @@
 ---
-title: "Verweigern von Berechtigungen für Volltext (Transact-SQL) | Microsoft Docs"
+title: "DENY (Berechtigungen für Volltext) (Transact-SQL) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 05/15/2017
 ms.prod: sql-non-specified
@@ -58,11 +58,11 @@ DENY permission [ ,...n ] ON
  *permission*  
  Der Name einer Berechtigung. Die gültigen Zuordnungen von Berechtigungen zu sicherungsfähigen Elementen werden im Abschnitt mit den Hinweisen weiter unten in diesem Thema beschrieben.  
   
- AUF FULLTEXT CATALOG **:: *** vollständige Text_catalog_name*  
- Gibt den Volltextkatalog an, für den die Berechtigung verweigert wird. Der bereichsqualifizierer **::** ist erforderlich.  
+ ON FULLTEXT CATALOG **::***full-text_catalog_name*  
+ Gibt den Volltextkatalog an, für den die Berechtigung verweigert wird. Der Bereichsqualifizierer **::** ist erforderlich.  
   
- AUF FULLTEXT STOPLIST **:: *** vollständige Text_stoplist_name*  
- Gibt die Volltext-Stoppliste an, für die die Berechtigung verweigert wird. Der bereichsqualifizierer **::** ist erforderlich.  
+ ON FULLTEXT STOPLIST **::***full-text_stoplist_name*  
+ Gibt die Volltext-Stoppliste an, für die die Berechtigung verweigert wird. Der Bereichsqualifizierer **::** ist erforderlich.  
   
  *database_principal*  
  Gibt den Prinzipal an, für den die Berechtigung verweigert wird. Einer der folgenden Typen:  
@@ -131,16 +131,16 @@ DENY permission [ ,...n ] ON
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die CONTROL-Berechtigung für den Volltextkatalog. Wenn Sie die Option AS verwenden, muss der angegebene Prinzipal Besitzer des Volltextkatalogs sein.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [CREATE APPLICATION ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
  [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)   
  [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)   
- [Erstellen Sie FULLTEXT CATALOG &#40; Transact-SQL &#41;](../../t-sql/statements/create-fulltext-catalog-transact-sql.md)   
- [Erstellen Sie FULLTEXT STOPLIST &#40; Transact-SQL &#41;](../../t-sql/statements/create-fulltext-stoplist-transact-sql.md)   
+ [CREATE FULLTEXT CATALOG &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-catalog-transact-sql.md)   
+ [CREATE FULLTEXT STOPLIST &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-stoplist-transact-sql.md)   
  [DENY &#40;Transact-SQL&#41;](../../t-sql/statements/deny-transact-sql.md)   
  [Verschlüsselungshierarchie](../../relational-databases/security/encryption/encryption-hierarchy.md)   
  [sys.fn_my_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)   
- [Berechtigungen GRANT Full-Text &#40; Transact-SQL &#41;](../../t-sql/statements/grant-full-text-permissions-transact-sql.md)   
+ [GRANT (Volltextberechtigungen) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-full-text-permissions-transact-sql.md)   
  [HAS_PERMS_BY_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/has-perms-by-name-transact-sql.md)   
  [Berechtigungen &#40;Datenbankmodul&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [Prinzipale &#40;Datenbankmodul&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   

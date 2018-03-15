@@ -1,5 +1,5 @@
 ---
-title: Cursorfunktionen (Transact-SQL) | Microsoft Docs
+title: Cursorfunktionen (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -39,7 +39,7 @@ Die folgenden Skalarfunktionen geben Informationen über Cursor zurück:
 |[@@CURSOR_ROWS](../../t-sql/functions/cursor-rows-transact-sql.md)|[CURSOR_STATUS](../../t-sql/functions/cursor-status-transact-sql.md)|  
 |[@@FETCH_STATUS](../../t-sql/functions/fetch-status-transact-sql.md)||  
   
-Alle Cursorfunktionen sind nicht deterministisch. Das heißt, dass diese Funktionen nicht stets dasselbe Ergebnis zurückgeben, selbst wenn sie mit denselben Eingabewerten aufgerufen werden. Weitere Informationen zum Funktionsdeterminismus finden Sie unter [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).
+Alle Cursorfunktionen sind nicht deterministisch. Das heißt, dass diese Funktionen nicht stets dasselbe Ergebnis zurückgeben, selbst wenn sie mit denselben Eingabewerten aufgerufen werden. Weitere Informationen zu Funktionsdeterminismus finden Sie unter [Deterministische und nicht deterministische Funktionen](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).
   
 ## <a name="see-also"></a>Siehe auch
 [Integrierte Funktionen &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)

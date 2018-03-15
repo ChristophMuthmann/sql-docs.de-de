@@ -1,5 +1,5 @@
 ---
-title: Cursor (Transact-SQL) | Microsoft Docs
+title: Cursor (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -33,7 +33,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="cursors-transact-sql"></a>Cursor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anweisungen erzeugen ein vollständiges Resultset allerdings gibt es Zeiten, wenn die Ergebnisse am besten sind, eine Zeile zu einem Zeitpunkt verarbeitet. Das Öffnen eines Cursors auf einem Resultset ermöglicht das zeilenweise Verarbeiten des Resultsets. Sie können einen Cursor zuweisen, um eine Variable oder Parameter mit einem **Cursor** -Datentyp.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anweisungen erzeugen ein vollständiges Resultset. Manchmal ist es jedoch von Vorteil, wenn die Ergebnisse zeilenweise verarbeitet werden. Das Öffnen eines Cursors auf einem Resultset ermöglicht das zeilenweise Verarbeiten des Resultsets. Sie können einen Cursor einer Variablen oder einem Parameter mit einem **cursor**-Datentyp zuweisen.  
   
  Cursorvorgänge werden für folgende Anweisungen unterstützt:  
   
@@ -73,7 +73,7 @@ ms.lasthandoff: 01/25/2018
   
  [sp_describe_cursor_tables](../../relational-databases/system-stored-procedures/sp-describe-cursor-tables-transact-sql.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Cursor](../../relational-databases/cursors.md)  
   
   

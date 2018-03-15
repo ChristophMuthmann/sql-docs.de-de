@@ -1,5 +1,5 @@
 ---
-title: MAX (Transact-SQL) | Microsoft Docs
+title: MAX (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 08/23/2017
 ms.prod: sql-non-specified
@@ -55,17 +55,17 @@ MAX ( [ ALL | DISTINCT ] expression )
  Gibt an, dass jeder eindeutige Wert berücksichtigt wird. DISTINCT ist bei MAX ohne Bedeutung und nur aus Gründen der ISO-Kompatibilität verfügbar.  
   
  *expression*  
- Dies ist eine Konstante, ein Spaltenname oder eine Funktion und eine beliebige Kombination aus arithmetischen, bitweisen und Zeichenfolgenoperatoren. MAX kann verwendet werden, mit **numerischen**, **Zeichen**, **"uniqueidentifier"**, und **"DateTime"** Spalten, jedoch nicht mit **Bit**  Spalten. Aggregatfunktionen und Unterabfragen sind nicht zulässig.  
+ Dies ist eine Konstante, ein Spaltenname oder eine Funktion und eine beliebige Kombination aus arithmetischen, bitweisen und Zeichenfolgenoperatoren. MAX kann mit Spalten vom Typ **numeric**, **character**, **uniqueidentifier** und **datetime**, jedoch nicht mit Spalten vom Typ **bit** verwendet werden. Aggregatfunktionen und Unterabfragen sind nicht zulässig.  
   
  Weitere Informationen finden Sie unter [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md).  
   
- ÜBER **(** [ *Partition_by_clause* ] *Order_by_clause***)**  
- *Partition_by_clause* teilt das Resultset, das von der FROM-Klausel erstellt wird, in Partitionen, die auf die die Funktion angewendet wird. Wird dies nicht angegeben, verarbeitet die Funktion alle Zeilen des Abfrageresultsets als einzelne Gruppe. *Order_by_clause* bestimmt die logische Reihenfolge, in dem der Vorgang ausgeführt wird. *Order_by_clause* ist erforderlich. Weitere Informationen finden Sie unter [Klausel "OVER" &#40; Transact-SQL &#41; ](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ OVER **(** [ *partition_by_clause* ] *order_by_clause***)**  
+ *partition_by_clause* unterteilt das von der FROM-Klausel erzeugte Resultset in Partitionen, auf die die Funktion angewendet wird. Wird dies nicht angegeben, verarbeitet die Funktion alle Zeilen des Abfrageresultsets als einzelne Gruppe. *order_by_clause* bestimmt die logische Reihenfolge, in der der Vorgang ausgeführt wird. *order_by_clause* ist erforderlich. Weitere Informationen finden Sie unter [OVER-Klausel &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
 ## <a name="return-types"></a>Rückgabetypen  
- Gibt einen Wert zurück wie *Ausdruck*.  
+ Gibt einen Wert zurück, der mit *expression* identisch ist.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  MAX ignoriert alle NULL-Werte.  
   
  Bei Zeichenspalten sucht MAX den höchsten Wert gemäß der Sortierreihenfolge.  
@@ -94,7 +94,7 @@ GO
  ```  
   
 ### <a name="b-using-the-over-clause"></a>B. Verwenden der OVER-Klausel  
- Im folgende Beispiel verwendet die Funktionen MIN, MAX, AVG und COUNT mit der OVER-Klausel, um aggregierte Werte für jede Abteilung in bieten die `HumanResources.Department` -Tabelle in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] Datenbank.  
+ Im folgenden Beispiel werden die Funktionen MIN, MAX, AVG und COUNT mit der OVER-Klausel verwendet, um aggregierte Werte für jede Abteilung in der `HumanResources.Department`-Tabelle der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Datenbank bereitzustellen.  
   
 ```sql  
 SELECT DISTINCT Name  
@@ -136,16 +136,16 @@ Tool Design                   8.62                  29.8462               23.505
  (16 row(s) affected)  
 ```  
   
-### <a name="c-using-max-with-character-data"></a>C. Verwenden MAX mit Zeichendaten   
-Das folgende Beispiel gibt den Namen der Datenbank, der als der letzte Name alphabetisch sortiert. Im Beispiel wird `WHERE database_id < 5`, um nur die Systemdatenbanken zu berücksichtigen.  
+### <a name="c-using-max-with-character-data"></a>C. Verwenden von MAX mit Zeichendaten   
+Im folgenden Beispiel werden Datenbanknamen zurückgegeben. Dabei wird der letzte Name alphabetisch sortiert. In diesem Beispiel wird `WHERE database_id < 5` verwendet, um nur Systemdatenbanken zu berücksichtigen.  
 ```sql   
 SELECT MAX(name) FROM sys.databases WHERE database_id < 5;
 ```
-Ist die letzte Systemdatenbank `tempdb`.  
+Die letzte Systemdatenbank ist `tempdb`.  
   
-## <a name="see-also"></a>Siehe auch  
- [Aggregatfunktionen &#40; Transact-SQL &#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)   
- [Failover-Klausel &#40; Transact-SQL &#41;](../../t-sql/queries/select-over-clause-transact-sql.md)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Aggregate Functions &#40;Transact-SQL&#41; (Aggregatfunktionen (Transact-SQL))](../../t-sql/functions/aggregate-functions-transact-sql.md)   
+ [OVER-Klausel &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)  
   
   
 

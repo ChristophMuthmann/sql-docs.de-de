@@ -1,5 +1,5 @@
 ---
-title: Money und Smallmoney (Transact-SQL) | Microsoft Docs
+title: money and smallmoney (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 7/22/2017
 ms.prod: sql-non-specified
@@ -42,27 +42,27 @@ ms.lasthandoff: 11/21/2017
 
 Datentypen zur Darstellung von Währungswerten.
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
   
 |Datentyp|Bereich|Speicherung|  
 |---|---|---|
-|**money**|-922.337.203.685.477,5808 zu 922.337.203.685.477,5807 (-922,337,203,685,477.58<br />Um 922,337,203,685,477.58 für Informatica –.  Informatica – unterstützt nur zwei Dezimalstellen, die nicht vier.)|8 Byte|  
-|**smallmoney**|-214.748,3648 bis 214.748,3647|4 bytes|  
+|**money**|-922.337.203.685.477,5808 bis 922.337.203.685.477,5807 (-922.337.203.685.477,58<br />bis 922.337.203.685.477,58 für Informatica.  Informatica unterstützt nur zwei Dezimalstellen, nicht vier.)|8 Byte|  
+|**smallmoney**|-214.748,3648 bis 214.748,3647|4 Bytes|  
   
-Die **Money** und **Smallmoney** Datentypen sind genau eine Zehntausendstels der dargestellten Währungseinheiten, die sie darstellen. Für Informatica – die **Money** und **Smallmoney** Datentypen sind auf eine Hundertstelsekunde der dargestellten Währungseinheiten, die sie darstellen.
+Die Datentypen **money** und **smallmoney** weisen die Genauigkeit eines Zehntausendstels der dargestellten Währungseinheiten auf. Für Informatica weisen die Datentypen **money** und **smallmoney** die Genauigkeit eines Hundertstels der dargestellten Währungseinheiten auf.
   
 Mit einem Punkt werden Währungsuntereinheiten, wie z. B. Cent, von ganzen Währungseinheiten getrennt. Die Zahl 2.15 gibt z. B. 2 Dollar und 15 Cent an.
   
 Diese Datentypen können eines der folgenden Währungssymbole verwenden.
   
-![Tabelle mit Währungssymbolen, hexadezimale Werte](../../t-sql/data-types/media/money01.gif "Tabelle mit Währungssymbolen, hexadezimale Werte")
+![Tabelle mit Währungssymbolen, hexadezimale Werte](../../t-sql/data-types/media/money01.gif "Table of currency symbols, hexadecimal values")
   
 Währungsdaten müssen nicht in einfache Anführungszeichen (') eingeschlossen werden. Sie sollten stets bedenken, dass Sie zwar Währungswerte angeben können, denen ein Währungssymbol vorangestellt ist, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] jedoch keinerlei mit diesem Symbol verbundene Währungsinformationen speichert, sondern lediglich den nummerischen Wert.
   
-## <a name="converting-money-data"></a>Konvertieren von Money-Daten
-Beim Konvertieren in **Money** vom Integer-Datentypen, Einheiten wird angenommen, dass in Währungseinheiten. Beispielsweise wird der ganzzahlige Wert 4 in konvertiert die **Money** 4 Währungseinheiten entspricht.
+## <a name="converting-money-data"></a>Konvertieren von money-Daten
+Beim Konvertieren von Ganzzahldatentypen in **money**-Datentypen wird davon ausgegangen, dass es sich bei den Einheiten um Währungseinheiten handelt. Der ganze Zahl 4 entspricht nach der Konvertierung in den **money**-Datentyp 4 Währungseinheiten.
   
-Das folgende Beispiel konvertiert **Smallmoney** und **Money** Werte **Varchar** und **decimal** Datentypen.
+Das folgende Beispiel konvertiert **smallmoney**- und **money**-Werte jeweils in **varchar**- und **decimal**-Datentypen.
   
 ```sql
 DECLARE @mymoney_sm smallmoney = 3148.29,  
@@ -81,12 +81,12 @@ SM_MONEY VARCHAR               MONEY DECIMAL
 ```  
   
 ## <a name="see-also"></a>Siehe auch
-[ALTER TABLE &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-table-transact-sql.md) 
- [CAST und CONVERT &#40; Transact-SQL &#41; ](../../t-sql/functions/cast-and-convert-transact-sql.md) 
- [CREATE TABLE &#40; Transact-SQL &#41; ](../../t-sql/statements/create-table-transact-sql.md) 
- [Datentypen &#40; Transact-SQL &#41; ](../../t-sql/data-types/data-types-transact-sql.md) 
- [DECLARE @local_variable &#40; Transact-SQL &#41; ](../../t-sql/language-elements/declare-local-variable-transact-sql.md) 
- [Festgelegt @local_variable &#40; Transact-SQL &#41; ](../../t-sql/language-elements/set-local-variable-transact-sql.md) 
- [sys.types &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)
+[ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)
+[CAST und CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)
+[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)
+[Data Types &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)
+[DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)
+[SET @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/set-local-variable-transact-sql.md)
+[sys.types &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)
   
   

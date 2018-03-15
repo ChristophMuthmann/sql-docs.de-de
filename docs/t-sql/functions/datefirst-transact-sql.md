@@ -1,5 +1,5 @@
 ---
-title: '@@DATEFIRST (Transact-SQL) | Microsoft Docs'
+title: '@@DATEFIRST (Transact-SQL) | Microsoft-Dokumentation'
 ms.custom: 
 ms.date: 09/18/2017
 ms.prod: sql-non-specified
@@ -45,12 +45,12 @@ ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="x40x40datefirst-transact-sql"></a>&#x40;&#x40; DATEFIRST (Transact-SQL)
+# <a name="x40x40datefirst-transact-sql"></a>&#x40;&#x40;DATEFIRST (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Gibt den aktuellen Wert für eine Sitzung des [SET DATEFIRST](../../t-sql/statements/set-datefirst-transact-sql.md).
+Gibt den aktuellen Wert des [SET DATEFIRST](../../t-sql/statements/set-datefirst-transact-sql.md)-Parameters für eine Sitzung zurück.
   
-Eine Übersicht über alle [!INCLUDE[tsql](../../includes/tsql-md.md)] Datums-und Uhrzeitdatentypen und Funktionen finden Sie unter [Datums- und Uhrzeitdatentypen und-Funktionen &#40; Transact-SQL &#41; ](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).
+Eine Übersicht über alle Datums- und Uhrzeitdatentypen und zugehörige Funktionen für [!INCLUDE[tsql](../../includes/tsql-md.md)] finden Sie unter [Date and Time Data Types and Functions &#40;Transact-SQL&#41; (Datums- und Uhrzeitdatentypen und zugehörige Funktionen)](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).
   
 ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -63,7 +63,7 @@ Eine Übersicht über alle [!INCLUDE[tsql](../../includes/tsql-md.md)] Datums-un
 ## <a name="return-type"></a>Rückgabetyp  
 **tinyint**
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
 SET DATEFIRST gibt den ersten Tag der Woche an. Der Standardparameter für Englisch (USA) ist 7 (Sonntag).
   
 Diese Spracheinstellung wirkt sich nur auf die Interpretation von Zeichenfolgen bei der Konvertierung in Datumswerte zum Speichern in der Datenbank sowie auf die Anzeige von Datumswerten aus, die in der Datenbank gespeichert sind. Das Speicherformat der Datumsdaten beeinflusst diese Einstellung nicht. Im folgenden Beispiel wird zunächst die Sprache auf `Italian` festgelegt. Die `SELECT @@DATEFIRST;`-Anweisung gibt `1` zurück. Danach wird die Sprache auf `us_english` festgelegt. Die `SELECT @@DATEFIRST;`-Anweisung gibt `7` zurück.
@@ -96,14 +96,14 @@ First Day         Today
 ```  
   
 ## <a name="example"></a>Beispiel
- [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]und[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ```sql
 SELECT @@DATEFIRST;  
 ```  
   
 ## <a name="see-also"></a>Siehe auch
-[Konfigurationsfunktionen &#40; Transact-SQL &#41;](../../t-sql/functions/configuration-functions-transact-sql.md)
+[Konfigurationsfunktionen &#40;Transact-SQL&#41;](../../t-sql/functions/configuration-functions-transact-sql.md)
   
   
 

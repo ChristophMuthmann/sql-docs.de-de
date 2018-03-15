@@ -1,5 +1,5 @@
 ---
-title: Die OVER-Klausel (Transact-SQL) | Microsoft Docs
+title: OVER-Klausel (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 08/11/2017
 ms.prod: sql-non-specified
@@ -49,7 +49,7 @@ ms.lasthandoff: 01/25/2018
   
 -   [Analytische Funktionen](../../t-sql/functions/analytic-functions-transact-sql.md)  
   
--   [Die NEXT VALUE FOR-Funktion](../../t-sql/functions/next-value-for-transact-sql.md)  
+-   [NEXT VALUE FOR-Funktion](../../t-sql/functions/next-value-for-transact-sql.md)  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -118,16 +118,16 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
  Teilt das Abfrageresultset in Partitionen. Die Fensterfunktion wird auf jede Partition einzeln angewendet, und die Berechnung wird für jede Partition neu gestartet.  
   
  *value_expression*  
- Gibt die Spalte an, nach der das Rowset partitioniert wird. *Value_expression* kann nur auf Spalten zur Verfügung gestellt, von der FROM-Klausel verweisen. *Value_expression* kann nicht auf Ausdrücke oder Aliase in der Auswahlliste verweisen. *Value_expression* kann ein Spaltenausdruck, skalare Unterabfrage, Skalarfunktion oder eine benutzerdefinierte Variable sein.  
+ Gibt die Spalte an, nach der das Rowset partitioniert wird. *value_expression* kann nur auf von der FROM-Klausel bereitgestellte Spalten verweisen. *value_expression* kann in der Auswahlliste nicht auf Ausdrücke oder Aliase verweisen. *value_expression* kann ein Spaltenausdruck, eine skalare Unterabfrage, eine Skalarfunktion oder eine benutzerdefinierte Variable sein.  
   
- \<ORDER BY-Klausel >  
+ \<ORDER BY-Klausel>  
  Definiert die logische Reihenfolge der Zeilen innerhalb jeder Partition des Resultsets. Demnach gibt sie die logische Reihenfolge an, in der die Fensterfunktionsberechnung ausgeführt wird.  
   
  *order_by_expression*  
- Gibt eine Spalte oder einen Ausdruck für die Sortierung an. *Order_by_expression* kann nur auf Spalten zur Verfügung gestellt, von der FROM-Klausel verweisen. Eine ganze Zahl kann nicht angegeben werden, um einen Spaltennamen oder einen Alias darzustellen.  
+ Gibt eine Spalte oder einen Ausdruck für die Sortierung an. *order_by_expression* kann nur auf von der FROM-Klausel bereitgestellte Spalten verweisen. Eine ganze Zahl kann nicht angegeben werden, um einen Spaltennamen oder einen Alias darzustellen.  
   
- COLLATE *Collation_name*  
- Gibt an, dass die ORDER BY-Vorgang soll, entsprechend der im angegebenen Sortierung ausgeführt werden *Collation_name*. *Collation_name* kann entweder ein Windows-Sortierungsname oder ein SQL-Sortierungsname sein. Weitere Informationen finden Sie unter [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md). COLLATE ist nur für Spalten vom Typ **Char**, **Varchar**, **Nchar**, und **Nvarchar**.  
+ COLLATE *collation_name*  
+ Gibt an, dass der ORDER BY-Vorgang gemäß der in *collation_name* angegebenen Sortierung ausgeführt werden soll. *collation_name* kann entweder der Name einer Windows-Sortierreihenfolge oder ein SQL-Sortierungsname sein. Weitere Informationen finden Sie unter [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md). COLLATE ist nur für Spalten vom Typ **char**, **varchar**, **nchar** und **nvarchar** anwendbar.  
   
  **ASC** | DESC  
  Gibt an, dass die Werte in der angegebenen Spalte in aufsteigender oder absteigender Reihenfolge sortiert werden sollen. ASC ist die Standardsortierreihenfolge. NULL-Werte werden als die niedrigsten Werte behandelt, die möglich sind.  
@@ -137,7 +137,7 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
   
  Grenzt die Zeilen innerhalb der Partition weiter ein, indem Start- und Endpunkte innerhalb der Partition angegeben werden. Dies erfolgt durch die Angabe einer Reihe von Zeilen unter Berücksichtigung aktuellen Zeile – entweder anhand der logischen oder physischen Zuordnung. Die physische Zuordnung wird erreicht, indem die ROWS-Klausel verwendet wird.  
   
- Die ROWS-Klausel schränkt die Zeilen innerhalb einer Partition ein, indem eine feste Anzahl an Zeilen angegeben wird, die der aktuellen Zeile vorausgehen oder dieser folgen. Alternativ schränkt die RANGE-Klausel die Zeilen innerhalb einer Partition logisch ein, indem eine Reihe von Werten unter Berücksichtigung des Werts der aktuellen Zeile angegeben wird. Vorausgehende und folgende Zeilen werden auf Grundlage der Reihenfolge in der ORDER BY-Klausel definiert. Der Fensterrahmen "RANGE … CURRENT ROW …" enthält alle Zeilen mit den gleichen Werten in der ORDER BY-Ausdruck als die aktuelle Zeile. Beispielsweise bedeutet ROWS BETWEEN 2 PRECEDING AND CURRENT ROW, dass das Zeilenfenster, über das die Funktion ausgeführt wird, drei Zeilen umfasst – beginnend mit zwei vorausgehenden Zeilen bis zur und einschließlich der aktuellen Zeile.  
+ Die ROWS-Klausel schränkt die Zeilen innerhalb einer Partition ein, indem eine feste Anzahl an Zeilen angegeben wird, die der aktuellen Zeile vorausgehen oder dieser folgen. Alternativ schränkt die RANGE-Klausel die Zeilen innerhalb einer Partition logisch ein, indem eine Reihe von Werten unter Berücksichtigung des Werts der aktuellen Zeile angegeben wird. Vorausgehende und folgende Zeilen werden auf Grundlage der Reihenfolge in der ORDER BY-Klausel definiert. Der Fensterrahmen "RANGE … CURRENT ROW …“ beinhaltet alle Zeilen, die im ORDER BY-Ausdruck über die gleichen Werte wie die aktuelle Zeile verfügen. Beispielsweise bedeutet ROWS BETWEEN 2 PRECEDING AND CURRENT ROW, dass das Zeilenfenster, über das die Funktion ausgeführt wird, drei Zeilen umfasst – beginnend mit zwei vorausgehenden Zeilen bis zur und einschließlich der aktuellen Zeile.  
   
 > [!NOTE]  
 >  ROWS oder RANGE erfordert die Angabe der ORDER BY-Klausel. Wenn ORDER BY mehrere Reihenfolgenausdrücke enthält, berücksichtigt CURRENT ROW FOR RANGE beim Ermitteln der aktuellen Zeile alle Spalten in der ORDER BY-Liste.  
@@ -147,26 +147,26 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
   
  Gibt an, dass das Fenster bei der ersten Zeile der Partition startet. UNBOUNDED PRECEDING kann nur als Fensterstartpunkt angegeben werden.  
   
- \<unsigniert Wert Specification > PRECEDING  
- Mit angegebenen \<unsigniert Wertangabe > an, dass die Anzahl der Zeilen oder Werte der aktuellen Zeile vorausgehen. Diese Spezifikation ist für RANGE nicht zulässig.  
+ \<unsigned value specification> PRECEDING  
+ Wird mit \<unsigned value specification> angegeben, um die Anzahl der Zeilen oder Werte anzugeben, die der aktuellen Zeile vorausgehen sollen. Diese Spezifikation ist für RANGE nicht zulässig.  
   
  CURRENT ROW  
 **Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
   
  Gibt an, dass das Fenster bei Verwendung mit ROWS oder auf Basis des aktuellen Werts bei Verwendung mit RANGE bei der aktuellen Zeile startet oder endet. CURRENT ROW kann als Start- und Endpunkt angegeben werden.  
   
- ZWISCHEN \<Fensterrahmen gebunden > AND \<Fensterrahmen gebunden >  
+ BETWEEN \<window frame bound > AND \<window frame bound >  
 **Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
   
- Wird mit ROWS oder RANGE verwendet, um den unteren Grenzpunkt (Startpunkt) oder oberen Grenzpunkt (Endpunkt) des Fensters anzugeben. \<Fensterrahmen gebunden > definiert den startgrenzpunkt und \<Fensterrahmen gebunden > definiert den endgrenzpunkt. Die Obergrenze kann nicht kleiner als die Untergrenze sein.  
+ Wird mit ROWS oder RANGE verwendet, um den unteren Grenzpunkt (Startpunkt) oder oberen Grenzpunkt (Endpunkt) des Fensters anzugeben. \<window frame bound> definiert den Startgrenzpunkt, und \<window frame bound> definiert den Endgrenzpunkt. Die Obergrenze kann nicht kleiner als die Untergrenze sein.  
   
  UNBOUNDED FOLLOWING  
 **Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
   
  Gibt an, dass das Fenster bei der letzten Zeile der Partition endet. UNBOUNDED FOLLOWING kann nur als Fensterendpunkt angegeben werden. Beispielsweise definiert RANGE BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING ein Fenster, das mit der aktuellen Zeile startet und mit der letzten Zeile der Partition endet.  
   
- \<nicht signierte Wertangabe > folgenden  
- Mit angegebenen \<unsigniert Wertangabe > an, dass die Anzahl der Zeilen oder Werte der aktuellen Zeile folgen. Wenn \<unsigniert Wertangabe > Folgendes als die fensterstartpunkt angegeben wird, muss des Endpunkts \<unsigniert Wertangabe > folgenden. Beispielsweise definiert ROWS BETWEEN 2 FOLLOWING AND 10 FOLLOWING ein Fenster, das mit der zweiten Zeile startet, die der aktuellen Zeile folgt, und mit der zehnten Zeile endet, die der aktuellen Zeile folgt. Diese Spezifikation ist für RANGE nicht zulässig.  
+ \<unsigned value specification> FOLLOWING  
+ Wird mit \<unsigned value specification> angegeben, um die Anzahl der Zeilen oder Werte anzugeben, die der aktuellen Zeile folgen sollen. Wenn \<unsigned value specification> FOLLOWING als Fensterstartpunkt angegeben ist, muss der Endpunkt \<unsigned value specification>FOLLOWING lauten. Beispielsweise definiert ROWS BETWEEN 2 FOLLOWING AND 10 FOLLOWING ein Fenster, das mit der zweiten Zeile startet, die der aktuellen Zeile folgt, und mit der zehnten Zeile endet, die der aktuellen Zeile folgt. Diese Spezifikation ist für RANGE nicht zulässig.  
   
  unsigned integer literal  
 **Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -180,7 +180,7 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
  
 ### <a name="important"></a>Wichtig!
 
-Wenn ROWS/RANGE angegeben wird und \<Fensterrahmen vorangehenden > wird zum \<Fenster Frame Extent > (kurze Syntax) und dann dieser Spezifikation ist für der Fenster Frame startgrenzpunkt und CURRENT ROW für die Endung Grenze verwendet wird Zeigen Sie. Beispielsweise ist "ROWS 5 PRECEDING" gleich "ROWS BETWEEN 5 PRECEDING AND CURRENT ROW".  
+Bei Angabe von ROWS/RANGE und Verwendung von \<window frame preceding> für \<window frame extent> (kurze Syntax) wird diese Spezifikation für den Startgrenzpunkt des Fensterrahmens und CURRENT ROW für den Endgrenzpunkt verwendet. Beispielsweise ist "ROWS 5 PRECEDING" gleich "ROWS BETWEEN 5 PRECEDING AND CURRENT ROW".  
   
 > [!NOTE]
 > Wenn ORDER BY nicht angegeben ist, wird die ganze Partition für einen Fensterrahmen verwendet. Dies gilt für nur Funktionen, die keine ORDER BY-Klausel erfordern. Wenn ROWS/RANGE nicht angegeben und ORDER BY angegeben ist, wird RANGE UNBOUNDED PRECEDING AND CURRENT ROW für Fensterrahmen als Standard verwendet. Dies gilt für nur Funktionen, die eine optionale ROWS/RANGE-Spezifikation akzeptieren. Beispielsweise können Rangfolgefunktionen ROWS/RANGE nicht akzeptieren. Daher wird dieser Fensterrahmen nicht übernommen, obwohl ORDER BY angegeben und ROWS/RANGE nicht angegeben ist.  
@@ -188,9 +188,9 @@ Wenn ROWS/RANGE angegeben wird und \<Fensterrahmen vorangehenden > wird zum \<Fe
 ## <a name="limitations-and-restrictions"></a>Einschränkungen  
  Die OVER-Klausel kann nicht mit der CHECKSUM-Aggregatfunktion verwendet werden.  
   
- Bereich kann nicht verwendet werden, mit \<unsigniert Wert Specification > PRECEDING oder \<unsigniert Wertangabe > folgenden.  
+ RANGE kann nicht mit \<unsigned value specification> PRECEDING oder \<unsigned value specification> FOLLOWING verwendet werden.  
   
- Dies hängt von der Funktion Rangfolge-, Aggregat- oder Analysefunktion, die mit der OVER-Klausel verwendet \<ORDER BY-Klausel > und/oder die \<ROWS / RANGE Klausel > möglicherweise nicht mehr unterstützt.  
+ Je nach Rangfolge-, Aggregat- oder Analysefunktion, die mit der OVER-Klausel verwendet wird, wird die \<ORDER BY-Klausel> bzw. die \<ROWS/RANGE-Klausel> u.U. nicht unterstützt.  
   
 ## <a name="examples"></a>Beispiele  
   
@@ -398,7 +398,7 @@ BusinessEntityID TerritoryID SalesYear   SalesYTD             MovingAvg         
   
 **Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Im folgenden Beispiel wird die ROWS-Klausel, um ein Fenster, die die Zeilen berechnet werden, als die aktuelle Zeile zu definieren und die *N* Anzahl von Zeilen, die (1 Zeile in diesem Beispiel) folgen.  
+ Im folgenden Beispiel wird die ROWS-Klausel verwendet, um ein Fenster zu definieren, über das die Zeilen als aktuelle Zeile und die *N*-Anzahl an Zeilen, die folgen, berechnet werden (eine Zeile in diesem Beispiel).  
   
 ```sql  
 SELECT BusinessEntityID, TerritoryID   
@@ -459,10 +459,10 @@ BusinessEntityID TerritoryID SalesYTD             SalesYear   CumulativeTotal
   
 ```  
   
-## <a name="examples-includesspdwincludessspdw-mdmd"></a>Beispiele:[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="e-using-the-over-clause-with-the-rownumber-function"></a>E. Verwenden der OVER-Klausel mit der ROW_NUMBER-Funktion  
- Im folgende Beispiel gibt die ROW_NUMBER für Vertriebsmitarbeiter, die basierend auf ihren zugewiesenen sollvorgaben zurück.  
+ Im folgenden Beispiel wird ROW_NUMBER für die Vertriebsmitarbeiter (basierend auf der zugewiesenen Sollvorgabe für den Verkauf) zurückgegeben.  
   
 ```sql  
 -- Uses AdventureWorks  
@@ -489,7 +489,7 @@ GROUP BY LastName, FirstName;
  ```
  
 ### <a name="f-using-the-over-clause-with-aggregate-functions"></a>F. Verwenden der OVER-Klausel mit Aggregatfunktionen  
- Die folgenden Beispiele zeigen die OVER-Klausel mit Aggregatfunktionen verwenden. In diesem Beispiel ist die Verwendung der OVER-Klausel effizienter als die Verwendung von Unterabfragen.  
+ In den folgenden Beispielen wird die Verwendung der OVER-Klausel mit Aggregatfunktionen dargestellt. In diesem Beispiel ist die Verwendung der OVER-Klausel effizienter als die Verwendung von Unterabfragen.  
   
 ```sql  
 -- Uses AdventureWorks  
@@ -521,7 +521,7 @@ ORDER BY SalesOrderNumber,ProductKey;
  SO43664      235      1     2     1    2      1    1  
  ```
  
- Im folgende Beispiel wird gezeigt, mit der OVER-Klausel mit einer Aggregatfunktion in einem berechneten Wert. Beachten Sie, die die Aggregate, indem berechnet werden `SalesOrderNumber` und der Prozentsatz des gesamten Auftrags berechnet für jede Zeile von `SalesOrderNumber`.  
+ Im folgenden Beispiel wird die Verwendung der OVER-Klausel mit einer Aggregatfunktion in einem berechneten Wert dargestellt. Beachten Sie, dass die Aggregate nach `SalesOrderNumber` berechnet werden und der Prozentsatz der Auftragssumme für jede Zeile von `SalesOrderNumber` berechnet wird.  
   
 ```sql  
 -- Uses AdventureWorks  
@@ -538,7 +538,7 @@ WHERE SalesOrderNumber IN(N'SO43659',N'SO43664') AND
 ORDER BY SalesOrderNumber,ProductKey;  
 ```  
   
- Der erste Start dieses Resultset wird:  
+ Das erste Ergebnis dieses Resultsets lautet wie folgt:  
   
  ```
  OrderNumber  Product  Qty  Total  PctByProduct  
@@ -549,9 +549,9 @@ ORDER BY SalesOrderNumber,ProductKey;
  SO43659      229      2    16     18.75  
  ```
  
-## <a name="see-also"></a>Siehe auch  
- [Aggregatfunktionen &#40; Transact-SQL &#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)   
- [Analytische Funktionen &#40; Transact-SQL &#41;](../../t-sql/functions/analytic-functions-transact-sql.md)   
- [Ausgezeichnete Blogbeitrag zu Fensterfunktionen und OVER, auf sqlmag.com Itzik Ben-Gan](http://sqlmag.com/sql-server-2012/how-use-microsoft-sql-server-2012s-window-functions-part-1)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Aggregate Functions &#40;Transact-SQL&#41; (Aggregatfunktionen (Transact-SQL))](../../t-sql/functions/aggregate-functions-transact-sql.md)   
+ [Analytische Funktionen &#40;Transact-SQL&#41;](../../t-sql/functions/analytic-functions-transact-sql.md)   
+ [Hilreicher Blogbeitrag zu Fensterfunktionen und OVER unter sqlmag.com von Itzik Ben-Gan](http://sqlmag.com/sql-server-2012/how-use-microsoft-sql-server-2012s-window-functions-part-1)  
   
   

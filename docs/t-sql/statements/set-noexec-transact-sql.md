@@ -1,5 +1,5 @@
 ---
-title: SET SHOWPLAN_TEXT (Transact-SQL) | Microsoft Docs
+title: SET NOEXEC (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -50,7 +50,7 @@ ms.lasthandoff: 11/21/2017
 SET NOEXEC { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Wenn SET NOEXEC auf ON festgelegt ist, kompiliert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] jeden [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungsbatch, führt die Anweisungen jedoch nicht aus. Wenn SET NOEXEC auf OFF festgelegt ist, werden alle Batches nach der Kompilierung ausgeführt.  
   
  Die Ausführung von Anweisungen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erfolgt in zwei Phasen: Kompilierung und Ausführung. Diese Einstellung ist hilfreich, wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Syntax und Objektnamen in [!INCLUDE[tsql](../../includes/tsql-md.md)]-Code während der Ausführung überprüfen soll. Sie ist auch hilfreich, um Anweisungen zu debuggen, die normalerweise Teil eines größeren Anweisungsbatches wären.  
@@ -115,9 +115,9 @@ SET NOEXEC OFF;
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SET-Anweisungen (Transact-SQL)](../../t-sql/statements/set-statements-transact-sql.md)   
- [SET SHOWPLAN_ALL &#40; Transact-SQL &#41;](../../t-sql/statements/set-showplan-all-transact-sql.md)   
- [SET SHOWPLAN_TEXT &#40; Transact-SQL &#41;](../../t-sql/statements/set-showplan-text-transact-sql.md)  
+ [SET SHOWPLAN_ALL &#40;Transact-SQL&#41;](../../t-sql/statements/set-showplan-all-transact-sql.md)   
+ [SET SHOWPLAN_TEXT &#40;Transact-SQL&#41;](../../t-sql/statements/set-showplan-text-transact-sql.md)  
   
   

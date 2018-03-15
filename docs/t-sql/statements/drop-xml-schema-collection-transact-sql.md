@@ -1,5 +1,5 @@
 ---
-title: DROP XML SCHEMA COLLECTION (Transact-SQL) | Microsoft Docs
+title: DROP XML SCHEMA COLLECTION (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 11/25/2015
 ms.prod: sql-non-specified
@@ -57,12 +57,12 @@ DROP XML SCHEMA COLLECTION [ relational_schema. ]sql_identifier
  *sql_identifier*  
  Der Name der zu löschenden XML-Schemaauflistung.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Das Löschen einer XML-Schemaauflistung ist ein Transaktionsvorgang. Das heißt, wenn Sie eine XML-Schemaauflistung innerhalb einer Transaktion löschen und später ein Rollback für die Transaktion ausführen, wird die XML-Schemaauflistung nicht gelöscht.  
   
  Eine XML-Schemaauflistung, die verwendet wird, kann nicht gelöscht werden. Das heißt, Folgendes darf für die zu löschende Auflistung nicht zutreffen:  
   
--   Alle zugeordneten **Xml** Parameter oder die Spalte eingeben.  
+-   Sie darf keinem Parameter bzw. keiner Spalte vom Typ **xml** zugeordnet sein.  
   
 -   Sie darf nicht in Tabelleneinschränkungen angegeben sein.  
   
@@ -91,7 +91,7 @@ DROP XML SCHEMA COLLECTION ManuInstructionsSchemaCollection;
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [CREATE XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-xml-schema-collection-transact-sql.md)   
  [ALTER XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-xml-schema-collection-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   

@@ -1,5 +1,5 @@
 ---
-title: DECRYPTBYKEY (Transact-SQL) | Microsoft Docs
+title: DECRYPTBYKEY (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -50,7 +50,7 @@ DecryptByKey ( { 'ciphertext' | @ciphertext }
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *Chiffretext*  
+ *ciphertext*  
  Mit dem Schlüssel verschlüsselte Daten. *ciphertext* ist vom Datentyp **varbinary**.  
   
  **@ciphertext**  
@@ -59,7 +59,7 @@ DecryptByKey ( { 'ciphertext' | @ciphertext }
  *add_authenticator*  
  Gibt an, ob zusammen mit dem Nur-Text auch ein Authentifikator verschlüsselt wurde. Dies muss derselbe Wert sein, der beim Verschlüsseln der Daten an EncryptByKey übergeben wurde. *add_authenticator* ist vom Datentyp **int**.  
   
- *Authenticator*  
+ *authenticator*  
  Die Daten, aus denen ein Authentifikator generiert werden soll. Dies muss derselbe Wert sein, der an EncryptByKey übergeben wurde. *authenticator* ist vom Datentyp **sysname**.  
   
  **@authenticator**  
@@ -68,13 +68,13 @@ DecryptByKey ( { 'ciphertext' | @ciphertext }
 ## <a name="return-types"></a>Rückgabetypen  
  **varbinary** mit einer maximalen Größe von 8.000 Bytes.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  DecryptByKey verwendet einen symmetrischen Schlüssel. Dieser symmetrische Schlüssel muss bereits in der Datenbank geöffnet sein. Es können mehrere Schlüssel gleichzeitig geöffnet sein. Der Schlüssel muss nicht unmittelbar vor dem Entschlüsseln von verschlüsseltem Text geöffnet werden.  
   
  Die symmetrische Ver- und Entschlüsselung erfolgt relativ schnell und kann auch bei großen Datenmengen verwendet werden.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert, dass der symmetrische Schlüssel in der aktuellen Sitzung geöffnet wurde. Weitere Informationen finden Sie unter [OPEN SYMMETRIC KEY &#40; Transact-SQL &#41; ](../../t-sql/statements/open-symmetric-key-transact-sql.md).  
+ Erfordert, dass der symmetrische Schlüssel in der aktuellen Sitzung geöffnet wurde. Weitere Informationen finden Sie unter [OPEN SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/open-symmetric-key-transact-sql.md).  
   
 ## <a name="examples"></a>Beispiele  
   
@@ -119,8 +119,8 @@ GO
   
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [ENCRYPTBYKEY &#40; Transact-SQL &#41;](../../t-sql/functions/encryptbykey-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [ENCRYPTBYKEY &#40;Transact-SQL&#41;](../../t-sql/functions/encryptbykey-transact-sql.md)   
  [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)   
  [ALTER SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-symmetric-key-transact-sql.md)   
  [DROP SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-symmetric-key-transact-sql.md)   

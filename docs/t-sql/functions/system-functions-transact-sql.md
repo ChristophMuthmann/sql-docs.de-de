@@ -1,5 +1,5 @@
 ---
-title: Systemfunktionen (Transact-SQL) | Microsoft Docs
+title: Systemfunktionen (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -54,7 +54,7 @@ ms.lasthandoff: 11/21/2017
 |[ERROR_MESSAGE](../../t-sql/functions/error-message-transact-sql.md)|[SESSION_ID](../../t-sql/functions/session-id-transact-sql.md)|  
 |[ERROR_NUMBER](../../t-sql/functions/error-number-transact-sql.md)|[XACT_STATE](../../t-sql/functions/xact-state-transact-sql.md)|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Integrierte Funktionen &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: BufferWithTolerance (Geography-Datentyp) | Microsoft Docs
+title: BufferWithTolerance (geography-Datentyp) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="bufferwithtolerance-geography-data-type"></a>BufferWithTolerance (geography-Datentyp)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Gibt ein geometrisches Objekt, das die Vereinigung aller Punktwerte darstellt, Werte, deren Abstand zu einer **Geography** Instanz ist kleiner oder gleich einem angegebenen Wert einer angegebenen Toleranz.  
+  Gibt ein geometrisches Objekt zurück, das die Vereinigung aller Punktwerte darstellt, deren Abstand zu einer **geography**-Instanz kleiner oder gleich einem angegebenen Wert ist, wobei eine angegebene Toleranz gewährt wird.  
   
  Diese geography-Datentypmethode unterstützt Instanzen von **FullGlobe** oder räumliche Instanzen, die größer als eine Hemisphäre sind.  
   
@@ -47,37 +47,37 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>Argumente  
  *distance*  
- Ist eine **"float"** Ausdruck, der den Abstand zwischen angibt der **Geography** Instanz, die der Puffer berechnet werden soll.  
+ Ein **float**-Ausdruck, der den Abstand zu der **geometry**-Instanz angibt, um die der Puffer berechnet werden soll.  
   
- Der maximale Abstand des Puffers darf 0.999 nicht überschreiten \* *π* * MinorAxis \* MinorAxis / MajorAxis (~0.999 \* 1/2 kugelumfang) oder die vollständige Kugel.  
+ Der maximale Abstand des Puffers darf 0,999 \* *π* * minorAxis \* minorAxis / majorAxis (~0.999 \* 1/2 Kugelumfang) oder die vollständige Kugel nicht überschreiten.  
   
  *tolerance*  
  Ein **float** -Ausdruck, der die Toleranz des Pufferabstands angibt.  
   
- Die *Toleranz* -Wert bezieht sich auf die maximale Variation im idealen Pufferabstand für die zurückgegebene lineare Näherung.  
+ Der *Toleranz*wert verweist auf die maximale Variation im idealen Pufferabstand für die zurückgegebene lineare Näherung.  
   
  Beispielsweise kann der ideale Pufferabstand eines Punkts ein Kreis sein, dieser muss jedoch durch ein Polygon näherungsweise angegeben werden. Je geringer die Toleranz, desto mehr Punkte hat das Polygon, wodurch die Komplexität des Ergebnisses erhöht, der Fehler jedoch verringert wird.  
   
  Die minimale Grenze ist 0,1 Prozent des Abstands, und geringere Toleranzen werden auf die minimale Grenze aufgerundet.  
   
  *relative*  
- Ein **bit** , das angibt, ob der *tolerance* -Wert relativ oder absolut ist. Wenn 'TRUE' oder 1, die Toleranz relativ und wird als Produkt des berechnet die *Toleranz* -Parameter und Winkelweite \* äquatorradius des ellipsoids. Wenn 'FALSE' oder 0, ist die Toleranz absolut und der *tolerance* -Wert ist die absolute maximale Variation im idealen Pufferabstand für die zurückgegebene lineare Näherung.  
+ Ein **bit** , das angibt, ob der *tolerance* -Wert relativ oder absolut ist. Bei TRUE oder 1 ist die Toleranz relativ und wird aus dem *tolerance*-Parameter und der Winkelweite \* (Äquatorradius) des Ellipsoids berechnet. Wenn 'FALSE' oder 0, ist die Toleranz absolut und der *tolerance* -Wert ist die absolute maximale Variation im idealen Pufferabstand für die zurückgegebene lineare Näherung.  
   
 ## <a name="return-types"></a>Rückgabetypen  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Rückgabetyp: **Geography**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Rückgabetyp: **geography**  
   
  CLR-Rückgabetyp: **SqlGeography**  
   
-## <a name="remarks"></a>Hinweise  
- Diese Methode löst eine **ArgumentException** Wenn die *Abstand* ist keine Zahl (NAN) ist, oder wenn *Abstand* positiv oder negativ unendlich ist.  Diese Methode löst auch ein **ArgumentException** Wenn *Toleranz* ist NULL (0), keine Zahl (NaN), negativ oder positiv oder minus unendlich.  
+## <a name="remarks"></a>Remarks  
+ Diese Methode löst eine **ArgumentException** aus, wenn *distance* keine Zahl (NAN) oder wenn *distance* positiv oder minus unendlich ist.  Diese Methode löst eine **ArgumentException** aus, wenn *tolerance* Null (0), keine Zahl (NAN), negativ oder positiv oder minus unendlich ist.  
   
- `STBuffer()`Gibt zurück, eine **FullGlobe** Instanz in bestimmten Fällen; z. B. `STBuffer()` gibt eine **FullGlobe** Instanz für zwei Pole zurück, wenn der Pufferabstand größer als der Abstand vom Äquator bis zu ist den Polen reichen.  
+ `STBuffer()` gibt in bestimmten Fällen eine Instanz von **FullGlobe** zurück. Beispielsweise gibt `STBuffer()` eine **FullGlobe**-Instanz für zwei Pole zurück, wenn der Pufferabstand größer als der Abstand vom Äquator zu den Polen ist.  
   
- Diese Methode löst eine **ArgumentException** in **FullGlobe** Instanzen, in denen der Abstand des Puffers die folgende Einschränkung überschreitet:  
+ Diese Methode löst eine **ArgumentException** in **FullGlobe**-Instanzen aus, bei denen der Abstand des Puffers die folgende Einschränkung überschreitet:  
   
- 0,999 \* *π* * MinorAxis \* MinorAxis / MajorAxis (~0.999 \* 1/2 kugelumfang)  
+ 0,999 \* *π* * minorAxis \* minorAxis / majorAxis (~0.999 \* 1/2 Kugelumfang)  
   
- Die Abweichung zwischen dem theoretischen und dem berechnetem Puffer ist max (Toleranz, Blöcke \* 1.E-7) Toleranz ist, in dem der Wert der *Toleranz* Parameter. Weitere Informationen zu Blöcken, finden Sie unter [Geography-Datentyp-Methodenverweis](http://msdn.microsoft.com/library/028e6137-7128-4c74-90a7-f7bdd2d79f5e).  
+ Die Abweichung zwischen dem theoretischen und dem berechnetem Puffer beträgt max(tolerance, extents \* 1,0E-7), wobei die Toleranz der Wert des Parameters *tolerance* ist. Weitere Informationen zu Erweiterungen finden Sie unter [geography-Datentyp-Methodenverweis](http://msdn.microsoft.com/library/028e6137-7128-4c74-90a7-f7bdd2d79f5e).  
   
  Diese Methode ist nicht exakt.  
   
@@ -90,8 +90,8 @@ SET @g = geography::STGeomFromText('POINT(-122.34900 47.65100)', 4326);
 SELECT @g.BufferWithTolerance(1, .5, 0).ToString();  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [STBuffer &#40; Geography-Datentyp &#41;](../../t-sql/spatial-geography/stbuffer-geography-data-type.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [STBuffer &#40;geography-Datentyp&#41;](../../t-sql/spatial-geography/stbuffer-geography-data-type.md)   
  [Erweiterte Methoden für geography-Instanzen](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)  
   
   

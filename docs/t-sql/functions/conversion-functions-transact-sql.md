@@ -1,5 +1,5 @@
 ---
-title: Konvertierungsfunktionen (Transact-SQL) | Microsoft Docs
+title: Konvertierungsfunktionen (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -33,10 +33,10 @@ Die folgenden Funktionen unterstützen die Umwandlung und Konvertierung von Date
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
 [CAST und CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
-[PARSE &#40; Transact-SQL &#41;](../../t-sql/functions/parse-transact-sql.md)  
-[TRY_CAST &#40; Transact-SQL &#41;](../../t-sql/functions/try-cast-transact-sql.md)  
-[TRY_CONVERT &#40; Transact-SQL &#41;](../../t-sql/functions/try-convert-transact-sql.md)  
-[TRY_PARSE &#40; Transact-SQL &#41;](../../t-sql/functions/try-parse-transact-sql.md)
+[PARSE &#40;Transact-SQL&#41;](../../t-sql/functions/parse-transact-sql.md)  
+[TRY_CAST &#40;Transact-SQL&#41;](../../t-sql/functions/try-cast-transact-sql.md)  
+[TRY_CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/try-convert-transact-sql.md)  
+[TRY_PARSE &#40;Transact-SQL&#41;](../../t-sql/functions/try-parse-transact-sql.md)
   
 ## <a name="see-also"></a>Siehe auch
 [Funktionen](../../t-sql/functions/functions.md)  

@@ -1,5 +1,5 @@
 ---
-title: TIMEFROMPARTS (Transact-SQL) | Microsoft Docs
+title: TIMEFROMPARTS (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/02/2018
 # <a name="timefromparts-transact-sql"></a>TIMEFROMPARTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-  Gibt eine **Zeit** Wert für die angegebene Zeit und mit der angegebenen Genauigkeit.  
+  Gibt einen **time**-Wert für die angegebene Uhrzeit mit der angegebenen Genauigkeit zurück.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,28 +45,28 @@ TIMEFROMPARTS ( hour, minute, seconds, fractions, precision )
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *Stunde*  
+ *hour*  
  Ganzzahliger Ausdruck, der die Stunden angibt.  
   
- *Minute*  
+ *minute*  
  Ganzzahliger Ausdruck, der die Minuten angibt.  
   
  *Sekunden*  
  Ganzzahliger Ausdruck, der die Sekunden angibt.  
   
- *Addieren von Brüchen*  
+ *fractions*  
  Ganzzahliger Ausdruck, der die Sekundenbruchteile angibt.  
   
  *precision*  
- Ganzzahliges Literal, die angibt, die **Zeit** Wert, der zurückgegeben werden.  
+ Ganzzahliges Literal, das die Genauigkeit des zurückzugebenden **time**-Werts angibt.  
   
 ## <a name="return-types"></a>Rückgabetypen  
- **Zeit (** *Genauigkeit* **)**  
+ **time(** *precision* **)**  
   
-## <a name="remarks"></a>Hinweise  
- TIMEROMPARTS gibt einen vollständig initialisierten Uhrzeitwert zurück. Wenn die Argumente ungültig sind, wird ein Fehler ausgegeben. Wenn einer der Parameter einen NULL-Wert aufweist, wird NULL zurückgegeben. Jedoch, wenn die *Genauigkeit* Argument null ist, wird ein Fehler ausgelöst.  
+## <a name="remarks"></a>Remarks  
+ TIMEROMPARTS gibt einen vollständig initialisierten Uhrzeitwert zurück. Wenn die Argumente ungültig sind, wird ein Fehler ausgegeben. Wenn einer der Parameter einen NULL-Wert aufweist, wird NULL zurückgegeben. Wenn jedoch das *precision*-Argument NULL ist, wird ein Fehler ausgelöst.  
   
- Die *Brüche* Argument richtet sich nach der *Genauigkeit* Argument. Z. B. wenn *Genauigkeit* 7 ist, dann stellt jeder Bruchteil 100 Nanosekunden; dar, wenn *Genauigkeit* 3 ist, und klicken Sie dann jeder Bruchteil eine Millisekunde dar. Wenn der Wert der *Genauigkeit* ist 0 (null), und klicken Sie dann auf den Wert der *Brüche* muss auch werden 0 (null) ist; andernfalls ein Fehler ausgelöst.  
+ Das *fractions*-Argument ist vom *precision*-Argument abhängig. Wenn beispielsweise *precision* den Wert 7 hat, stellt jeder Bruchteil 100 Nanosekunden dar. Ist *precision* jedoch 3, stellt jeder Bruchteil eine Millisekunde dar. Wenn der Wert von *precision* 0 (null) ist, muss auch der Wert von *fractions* 0 (null) sein; andernfalls wird ein Fehler ausgelöst.  
   
  Diese Funktion kann remote auf Servern mit [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] oder einer höheren Version ausgeführt werden. Sie kann nicht remote auf Servern mit einer Version vor [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ausgeführt werden.  
   
@@ -89,13 +89,13 @@ Result
 ```  
   
 ### <a name="b-example-with-fractions-of-a-second"></a>B. Beispiel mit Sekundenbruchteilen  
- Das folgende Beispiel veranschaulicht die Verwendung von der *Brüche* und *Genauigkeit* Parameter:  
+ Das folgende Beispiel zeigt die Verwendung der Parameter *fractions* und *precision*:  
   
-1.  Wenn *Brüche* hat den Wert 5 und *Genauigkeit* hat den Wert 1, klicken Sie dann den Wert der *Brüche* 5/10 Sekunde darstellt.  
+1.  Wenn *fractions* den Wert 5 und *precision* den Wert 1 hat, stellt der Wert von *fractions* 5/10 einer Sekunde dar.  
   
-2.  Wenn *Brüche* verfügt über einen Wert von 50 und *Genauigkeit* hat den Wert 2, klicken Sie dann den Wert der *Brüche* 50/100 einer Sekunde darstellt.  
+2.  Wenn *fractions* den Wert 50 und *precision* den Wert 2 hat, stellt der Wert von *fractions* 50/100 einer Sekunde dar.  
   
-3.  Wenn *Brüche* hat den Wert 500 und *Genauigkeit* hat den Wert 3, klicken Sie dann den Wert der *Brüche* 500/1000 einer Sekunde darstellt.  
+3.  Wenn *fractions* den Wert 500 und *precision* den Wert 3 hat, stellt der Wert von *fractions* 500/1000 einer Sekunde dar.  
   
 ```sql  
 SELECT TIMEFROMPARTS ( 14, 23, 44, 5, 1 );  

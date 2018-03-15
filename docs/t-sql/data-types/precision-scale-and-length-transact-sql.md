@@ -1,5 +1,5 @@
 ---
-title: "Genauigkeit, Dezimalstellen und Länge (Transact-SQL) | Microsoft Docs"
+title: "Genauigkeit, Dezimalstellen und Länge (Transact-SQL) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 7/22/2017
 ms.prod: sql-non-specified
@@ -40,23 +40,23 @@ ms.lasthandoff: 11/21/2017
 
 Genauigkeit gibt die Anzahl der Ziffern einer Zahl an. Dezimalstellen gibt die Anzahl der Nachkommastellen an. Die Zahl 123,45 hat z. B. eine Genauigkeit von 5 und 2 Dezimalstellen.
   
-In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], die maximale standardgenauigkeit der **numerischen** und **decimal** Datentypen ist 38. In früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ist das Standardmaximum 28.
+In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ist die maximale Standardgenauigkeit der Datentypen **numeric** und **decimal** 38. In früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ist das Standardmaximum 28.
   
-Die Länge für einen numerischen Datentyp ist die Anzahl der Bytes, die zum Speichern der Zahl verwendet werden. Die Länge für einen Zeichenfolgen- oder einen Unicode-Datentyp ist die Anzahl der Zeichen. Die Länge für **binäre**, **Varbinary**, und **Image** Datentypen wird die Anzahl der Bytes. Angenommen, ein **Int** Datentyp können 10 Stellen enthalten, wird in 4 Bytes gespeichert und akzeptiert keine Dezimaltrennzeichen an. Die **Int** Datentyp hat eine Genauigkeit von 10, eine Länge von 4 und einer Skala von 0.
+Die Länge für einen numerischen Datentyp ist die Anzahl der Bytes, die zum Speichern der Zahl verwendet werden. Die Länge für einen Zeichenfolgen- oder einen Unicode-Datentyp ist die Anzahl der Zeichen. Die Länge der Datentypen **binary**, **varbinary** und **image** entspricht der Anzahl von Bytes. Ein **int**-Datentyp kann z.B. 10 Stellen enthalten, wird in 4 Bytes gespeichert und nimmt kein Dezimaltrennzeichen an. Der **int**-Datentyp hat eine Genauigkeit von 10 und eine Länge von 4. Er weist 0 Dezimalstellen auf.
   
-Wenn zwei **Char**, **Varchar**, **binäre**, oder **Varbinary** verkettet werden, ist die Länge des sich ergebenden Ausdrucks die Summe der Längen der beiden 8.000 Zeichen, welcher Wert kleiner ist.
+Wenn zwei Ausdrücke vom Datentyp **char**, **varchar**, **binary** oder **varbinary** verkettet werden, ist die Länge des sich ergebenden Ausdrucks die Summe der Längen der beiden Ausgangsausdrücke, jedoch begrenzt auf 8.000 Zeichen.
   
-Wenn zwei **Nchar** oder **Nvarchar** verkettet werden, die Länge des sich ergebenden Ausdrucks ist die Summe der Längen der beiden 4.000 Zeichen, welcher Wert kleiner ist.
+Wenn zwei Ausdrücke vom Datentyp **nchar** oder **nvarchar** verkettet werden, ist die Länge des sich ergebenden Ausdrucks die Summe der Längen der beiden Ausgangsausdrücke, jedoch begrenzt auf 4.000 Zeichen.
   
 Wenn zwei Ausdrücke vom selben Datentyp, aber mit verschiedenen Längen mit UNION, EXCEPT oder INTERSECT verglichen werden, ist die sich ergebende Länge die maximale Länge der beiden Ausdrücke.
   
-Die Genauigkeit und Dezimalstellenanzahl der numerischen Datentypen außer **decimal** behoben werden. Wenn ein arithmetischer Operator zwei Ausdrücke vom gleichen Typ verwendet, so ist das Ergebnis vom selben Datentyp; er hat die Genauigkeit und die Dezimalstellenanzahl, die für diesen Datentyp definiert sind. Wenn ein Operator zwei Ausdrücke mit verschiedenen numerischen Datentypen verwendet, bestimmen die Rangfolgeregeln für Datentypen den Datentyp des Ergebnisses. Das Ergebnis hat die für seinen Datentyp definierte Genauigkeit und Dezimalstellenanzahl.
+Genauigkeit und Dezimalstellenanzahl der numerischen Datentypen außer **decimal** sind nicht veränderbar. Wenn ein arithmetischer Operator zwei Ausdrücke vom gleichen Typ verwendet, so ist das Ergebnis vom selben Datentyp; er hat die Genauigkeit und die Dezimalstellenanzahl, die für diesen Datentyp definiert sind. Wenn ein Operator zwei Ausdrücke mit verschiedenen numerischen Datentypen verwendet, bestimmen die Rangfolgeregeln für Datentypen den Datentyp des Ergebnisses. Das Ergebnis hat die für seinen Datentyp definierte Genauigkeit und Dezimalstellenanzahl.
   
-In der folgenden Tabelle definiert, wie die Genauigkeit und Dezimalstellen des Ergebnisses berechnet werden, wenn das Ergebnis eines Vorgangs des Typs ist **decimal**. Das Ergebnis ist **decimal** Wenn eine der folgenden Aussagen zutrifft:
--   Beide Ausdrücke **decimal**.  
--   Ein Ausdruck ist **decimal** und der andere einen Datentyp mit einer geringeren Priorität als **decimal**.  
+Die folgende Tabelle definiert, wie Genauigkeit und Dezimalstellen des Ergebnisses berechnet werden, wenn das Ergebnis einer Operation vom Datentyp **decimal** ist. Das Ergebnis ist vom Datentyp **decimal**, wenn eine der folgenden Bedingungen zutrifft:
+-   Beide Ausdrücke sind vom Datentyp **decimal**.  
+-   Ein Ausdruck ist vom Datentyp **decimal**, und der andere Ausdruck ist von einem Datentyp mit einer niedrigeren Rangfolge als **decimal**.  
   
-Die Operandenausdrücke werden als Ausdruck e1 mit der Genauigkeit p1 und der Dezimalstellenanzahl s1 und Ausdruck e2 mit der Genauigkeit p2 und der Dezimalstellenanzahl s2 bezeichnet. Die Genauigkeit und Dezimalstellenanzahl für einen Ausdruck, der nicht **decimal** ist die Genauigkeit und Dezimalstellenanzahl, die für den Datentyp des Ausdrucks definiert.
+Die Operandenausdrücke werden als Ausdruck e1 mit der Genauigkeit p1 und der Dezimalstellenanzahl s1 und Ausdruck e2 mit der Genauigkeit p2 und der Dezimalstellenanzahl s2 bezeichnet. Die Genauigkeit und Dezimalstellenanzahl für einen Ausdruck, der nicht vom Datentyp **decimal** ist, entspricht der für den Datentyp des Ausdrucks definierten Genauigkeit und Dezimalstellenanzahl.
   
 |Vorgang|Genauigkeit des Ergebnisses|Dezimalstellen des Ergebnisses *|  
 |---|---|---|
@@ -64,32 +64,32 @@ Die Operandenausdrücke werden als Ausdruck e1 mit der Genauigkeit p1 und der De
 |e1 - e2|max(s1, s2) + max(p1-s1, p2-s2) + 1|max(s1, s2)|  
 |e1 * e2|p1 + p2 + 1|s1 + s2|  
 |e1 / e2|p1 - s1 + s2 + max(6, s1 + p2 + 1)|max(6, s1 + p2 + 1)|  
-|E1 {UNION &#124; AUßER &#124; INTERSECT} e2|max(s1, s2) + max(p1-s1, p2-s2)|max(s1, s2)|  
+|e1 { UNION &#124; EXCEPT &#124; INTERSECT } e2|max(s1, s2) + max(p1-s1, p2-s2)|max(s1, s2)|  
 |e1 % e2|min(p1-s1, p2 -s2) + max( s1,s2 )|max(s1, s2)|  
   
-\*Die Genauigkeit und Dezimalstellenanzahl haben ein absolutes Maximum von 38. Wenn die Genauigkeit des Ergebnisses 38 überschreitet, wird reduziert, bis 38, und die zugehörige Dezimalstellenanzahl reduziert, um zu versuchen, die verhindern, dass des ganzzahligen Teils eines Ergebnisses abgeschnitten wird. In einigen Fällen wie Multiplikation oder Division wird Skalierungsfaktor nicht verringert werden um bleiben Dezimalstellen, obwohl Ganzzahlüberlauf-Fehler ausgelöst werden kann.
+\* Die Genauigkeit und Dezimalstellen des Ergebnisses haben ein absolutes Maximum von 38. Wenn die Genauigkeit des Ergebnisses 38 überschreitet, wird es auf 38 reduziert. Ebenfalls wird die zugehörige Dezimalstellenanzahl reduziert, um zu verhindern, dass der ganzzahlige Teil eines Ergebnisses abgeschnitten wird. In solchen Fällen (z.B. bei der Multiplikation oder Division) wird der Skalierungsfaktor nicht reduziert, um die Dezimalgenauigkeit beizubehalten. Dadurch kann jedoch ein Überlauffehler ausgelöst werden.
 
-In Addition und Subtraktion Vorgänge müssen wir `max(p1 – s1, p2 – s2)` stellen integralen Bestandteil der Dezimalzahl zu speichern. Wenn es nicht genügend Speicherplatz zum Speichern von ihnen also ist `max(p1 – s1, p2 – s2) < min(38, precision) – scale`, die Dezimalstellenanzahl reduziert, um ausreichend Speicherplatz für integraler Bestandteil bereitzustellen. Ist der resultierende Skalierung `MIN(precision, 38) - max(p1 – s1, p2 – s2)`, also der Teil mit Bruchzahlen enthält entsprechend in die resultierende Dezimalstellen gerundet werden kann.
+Bei Additions- und Subtraktionsvorgängen werden `max(p1 – s1, p2 – s2)`-Platzhalter benötigt, um den integralen Bestandteil der Dezimalzahl zu speichern. Wenn nicht genügend Speicherplatz vorhanden ist (d.h. `max(p1 – s1, p2 – s2) < min(38, precision) – scale`), werden die Dezimalstellen reduziert, um genügend Speicherplatz für den integralen Bestandteil bereitzustellen. Die resultierenden Dezimalstellen sind `MIN(precision, 38) - max(p1 – s1, p2 – s2)`. Die Stellen hinter dem Dezimaltrennzeichen werden also möglicherweise gerundet, um in diese zu passen.
 
-In Multiplikationen und Divisionen müssen wir `precision - scale` Stellen zum Speichern des ganzzahligen Teils des Ergebnisses. Die Skalierung möglicherweise reduziert werden, mithilfe der folgenden Regeln:
-1.  Die resultierende Dezimalstellenanzahl reduziert, um `min(scale, 38 – (precision-scale))` das ganzzahlige Teil kleiner als 32, ist, da er ist größer als `38 – (precision-scale)`. In diesem Fall möglicherweise Ergebnis gerundet.
-1. Die Skalierung wird nicht geändert werden, wenn er kleiner als 6 ist und das ganzzahlige Teil größer als 32 ist. In diesem Fall möglicherweise Ganzzahlüberlauf-Fehler ausgelöst, wenn er nicht in Decimal (38, Skala) passen 
-1. Die Skalierung wird auf 6 festgelegt werden, wenn sie größer als 6 ist und das ganzzahlige Teil größer als 32 ist. In diesem Fall integraler Bestandteil und Skalierung zu reduzieren und sich ergebenden Typ decimal(38,6). Ergebnis mit 6 Dezimalstellen gerundet werden kann, oder Ganzzahlüberlauf-Fehler wird ausgelöst, wenn integraler Bestandteil nicht in 32 Ziffern passen.
+Bei Multiplikations- und Divisionsvorgängen werden `precision - scale`-Platzhalter benötigt, um den integralen Bestandteil des Ergebnisses zu speichern. Die Dezimalstellen können mithilfe von folgenden Regeln reduziert werden:
+1.  Die resultierenden Dezimalstellen wird auf `min(scale, 38 – (precision-scale))` reduziert, wenn der integrale Bestandteil kleiner als 32 ist, da diese nicht größer als `38 – (precision-scale)` sein darf. Das Ergebnis kann in diesem Fall gerundet werden.
+1. Die Dezimalstellen werden nicht geändert, wenn dieses kleiner als 6 und der integrale Bestandteil größer als 32 ist. In diesem Fall wird möglicherweise ein Überlauffehler ausgelöst, wenn das Ergebnis nicht in decimal(38, scale) passt. 
+1. Die Dezimalstellen werden auf 6 festgelegt, wenn dieses weniger als 6 beträgt und der integrale Bestandteil größer als 32 ist. In diesem Fall werden der integrale Bestandteil und die Dezimalstellen reduziert, und der sich ergebende Typ lautet decimal(38,6). Das Ergebnis wird auf 6 Dezimalstellen gerundet. Andernfalls wird ein Überlauffehler ausgelöst, wenn der integrale Bestandteil nicht in 32 Ziffern passt.
 
 ## <a name="examples"></a>Beispiele
-Der folgende Ausdruck gibt Ergebnis `0.00000090000000000` ohne runden, da das Ergebnis in einem Platz finden `decimal(38,17)`:
+Der folgende Ausdruck gibt das Ergebnis `0.00000090000000000` ohne Rundung zurück, da das Ergebnis in `decimal(38,17)` passt:
 ```sql
 select cast(0.0000009000 as decimal(30,20)) * cast(1.0000000000 as decimal(30,20)) [decimal 38,17]
 ```
-In diesem Fall ist mit einfacher Genauigkeit 61 und Skalierung ist 40.
-Integraler Bestandteil (Genauigkeit skalierter = 21) ist kleiner als 32, sodass dies Schreibweise (1) im Multiplikation Regeln ist und Skalierung als berechnet wird `min(scale, 38 – (precision-scale)) = min(40, 38 – (61-40)) = 17`. Ist der Ergebnistyp `decimal(38,17)`.
+In diesem Fall beträgt die Genauigkeit 61 und die Dezimalstellen betragen 40.
+Der integrale Bestandteil (precision-scale = 21) ist kleiner als 32. Dies entspricht also Fall (1) in den Multiplikationsregeln, und die Dezimalstellen werden als `min(scale, 38 – (precision-scale)) = min(40, 38 – (61-40)) = 17` berechnet. Der Ergebnistyp ist `decimal(38,17)`.
 
-Der folgende Ausdruck gibt Ergebnis `0.000001` übersteigt `decimal(38,6)`:
+Der folgende Ausdruck gibt das Ergebnis `0.000001` zurück, das in `decimal(38,6)` passen soll:
 ```sql
 select cast(0.0000009000 as decimal(30,10)) * cast(1.0000000000 as decimal(30,10)) [decimal(38, 6)]
 ```
-In diesem Fall ist mit einfacher Genauigkeit 61 und Dezimalstellen ist 20.
-Skalierung ist größer als 6 und ganzzahligen Teil (`precision-scale = 41`) ist größer als 32. Dies ist der Fall (3) in den Regeln für Multiplikation und Ergebnistyp ist `decimal(38,6)`.
+In diesem Fall beträgt die Genauigkeit 61 und die Dezimalstellen betragen 20.
+Die Dezimalstellen sind größer als 6 und der integrale Bestandteil (`precision-scale = 41`) größer als 32. Dies entspricht also Fall (3) in den Multiplikationsregeln, und der Ergebnistyp ist `decimal(38,6)`.
 
 ## <a name="see-also"></a>Siehe auch
 [Ausdrücke &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)  

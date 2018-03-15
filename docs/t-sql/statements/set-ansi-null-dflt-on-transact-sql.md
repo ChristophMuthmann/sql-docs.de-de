@@ -1,5 +1,5 @@
 ---
-title: SET ANSI_NULL_DFLT_ON (Transact-SQL) | Microsoft Docs
+title: SET ANSI_NULL_DFLT_ON (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 12/04/2017
 ms.prod: sql-non-specified
@@ -42,7 +42,7 @@ ms.lasthandoff: 12/05/2017
 # <a name="set-ansinulldflton-transact-sql"></a>SET ANSI_NULL_DFLT_ON (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Ändert das Verhalten der Sitzung, um die standardmäßige NULL-Zulässigkeit neuer Spalten überschreiben bei der **' ANSI null Default '** option für die Datenbank **"false"**. Weitere Informationen zum Festlegen des Werts für **' ANSI null Default '**, finden Sie unter [ALTER DATABASE &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-database-transact-sql.md).  
+  Verändert das Sitzungsverhalten, sodass die Standardeinstellung der NULL-Zulässigkeit für neue Spalten überschrieben wird, wenn die Option **ANSI NULL Default** für die Datenbank auf **FALSE** festgelegt ist. Weitere Informationen zum Festlegen eines Werts für **ANSI NULL Default** finden Sie unter [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
@@ -60,14 +60,14 @@ SET ANSI_NULL_DFLT_ON {ON | OFF}
 SET ANSI_NULL_DFLT_ON ON
 ```
 
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Diese Einstellung betrifft die NULL-Zulässigkeit für neue Spalten nur, wenn die NULL-Zulässigkeit der Spalte nicht in den CREATE TABLE- und ALTER TABLE-Anweisungen angegeben wurde. Wenn für SET ANSI_NULL_DFLT_ON der Wert ON festgelegt ist und wenn mit den Anweisungen ALTER TABLE und CREATE TABLE neue Spalten erstellt werden, lassen diese standardmäßig NULL-Werte zu, falls der NULL-Zulässigkeitsstatus der Spalte nicht explizit angegeben ist. SET ANSI_NULL_DFLT_ON hat keine Auswirkung auf Spalten, die mit einer expliziten Angabe von NULL oder NOT NULL erstellt wurden.  
   
- Für SET ANSI_NULL_DFLT_OFF und SET ANSI_NULL_DFLT_ON kann nicht gleichzeitig ON festgelegt werden. Wird eine der beiden Optionen aktiviert (ON), so wird die andere deaktiviert (OFF). Daher entweder ANSI_NULL_DFLT_OFF oder ANSI_NULL_DFLT_ON ON festgelegt werden, oder OFF festgelegt sein können. Wenn eine der beiden Optionen auf ON festgelegt ist, tritt die entsprechende Einstellung (SET ANSI_NULL_DFLT_OFF oder SET ANSI_NULL_DFLT_ON) in Kraft. Beide Optionen OFF festgelegt werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet den Wert der **Is_ansi_null_default_on** Spalte in der [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) -Katalogsicht angezeigt.  
+ Für SET ANSI_NULL_DFLT_OFF und SET ANSI_NULL_DFLT_ON kann nicht gleichzeitig ON festgelegt werden. Wird eine der beiden Optionen aktiviert (ON), so wird die andere deaktiviert (OFF). Daher kann entweder ANSI_NULL_DFLT_OFF oder ANSI_NULL_DFLT_ON auf ON festgelegt werden, oder beide Optionen können auf OFF festgelegt werden. Wenn eine der beiden Optionen auf ON festgelegt ist, tritt die entsprechende Einstellung (SET ANSI_NULL_DFLT_OFF oder SET ANSI_NULL_DFLT_ON) in Kraft. Wird für beide Optionen OFF festgelegt, verwendet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] den Wert der Spalte **is_ansi_null_default_on** in der Katalogsicht [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).  
   
  Am zuverlässigsten arbeiten [!INCLUDE[tsql](../../includes/tsql-md.md)]-Skripts, die in Datenbanken mit unterschiedlichen Einstellungen der NULL-Zulässigkeit verwendet werden, wenn in CREATE TABLE- und ALTER TABLE-Anweisungen NULL oder NOT NULL angegeben wird.  
   
- Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ANSI_NULL_DFLT_ON automatisch auf ON festgelegt wird, wenn eine Verbindung herstellen. Der Standardwert für SET ANSI_NULL_DFLT_ON für Verbindungen von DB-Library-Anwendungen ist OFF.  
+ Der ODBC-Treiber von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client und der OLE DB-Anbieter von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] legen für ANSI_NULL_DFLT_ON beim Herstellen einer Verbindung automatisch ON fest. Der Standardwert für SET ANSI_NULL_DFLT_ON für Verbindungen von DB-Library-Anwendungen ist OFF.  
   
  Ist SET ANSI_DEFAULTS auf ON festgelegt, so ist SET ANSI_NULL_DFLT_ON aktiviert.  
   
@@ -88,7 +88,7 @@ SELECT @ANSI_NULL_DFLT_ON AS ANSI_NULL_DFLT_ON;
  Erfordert die Mitgliedschaft in der **public** -Rolle.  
   
 ## <a name="examples"></a>Beispiele  
- Das folgende Beispiel zeigt die Auswirkungen der `SET ANSI_NULL_DFLT_ON` beiden Einstellungen für die **' ANSI null Default '** -Datenbankoption.  
+ Im folgenden Beispiel werden die Auswirkungen der beiden Einstellungen von `SET ANSI_NULL_DFLT_ON` für die Datenbankoption **ANSI NULL Default** dargestellt.  
   
 ```  
 USE AdventureWorks2012;  
@@ -164,11 +164,11 @@ GO
 DROP TABLE t1,t2,t3,t4,t5,t6;  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [SET-Anweisungen (Transact-SQL)](../../t-sql/statements/set-statements-transact-sql.md)   
- [SET ANSI_DEFAULTS &#40; Transact-SQL &#41;](../../t-sql/statements/set-ansi-defaults-transact-sql.md)   
- [SET ANSI_NULL_DFLT_OFF &#40; Transact-SQL &#41;](../../t-sql/statements/set-ansi-null-dflt-off-transact-sql.md)  
+ [SET ANSI_DEFAULTS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-defaults-transact-sql.md)   
+ [SET ANSI_NULL_DFLT_OFF &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-null-dflt-off-transact-sql.md)  
   
   

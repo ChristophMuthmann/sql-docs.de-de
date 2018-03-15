@@ -1,5 +1,5 @@
 ---
-title: AsTextZM (Geography-Datentyp) | Microsoft Docs
+title: AsTextZM (geography-Datentyp) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -46,14 +46,14 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Rückgabetypen  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Rückgabetyp: **nvarchar(max)**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Rückgabetyp: **nvarchar(max)**  
   
  CLR-Rückgabetyp: **SqlChars**  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="examples"></a>Beispiele  
- Im folgenden Beispiel wird eine `Point` -Instanz mit dem Wert **Z** (Höhe)- und **M** (Measure) erstellt. `STAsText()`Wählt die WKT-Werte (-122.34900 47,65100); `AsTextZM()` wählt identische WKT-Werte und gibt auch die Werte für **Z** und **M**, Gewinnung (-122.34900 47,65100 10,3 12).  
+ Im folgenden Beispiel wird eine `Point` -Instanz mit dem Wert **Z** (Höhe)- und **M** (Measure) erstellt. `STAsText()` wählt die WKT-Werte (-122.34900 47.65100) aus; `AsTextZM()` wählt identische WKT-Werte aus und gibt die Werte für **Z** und **M** zurück; dies ergibt (-122.34900 47.65100 10.3 12).  
   
 ```  
 DECLARE @g geography;  
@@ -62,9 +62,9 @@ SELECT @g.STAsText();
 SELECT @g.AsTextZM();  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Erweiterte Methoden für Geography-Instanzen](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
- [Übe &#40; Geography-Datentyp &#41;](../../t-sql/spatial-geography/m-geography-data-type.md)   
- [Z &#40; Geography-Datentyp &#41;](../../t-sql/spatial-geography/z-geography-data-type.md)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Erweiterte Methoden für geography-Instanzen](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
+ [M &#40;geography-Datentyp&#41;](../../t-sql/spatial-geography/m-geography-data-type.md)   
+ [Z &#40;geography-Datentyp&#41;](../../t-sql/spatial-geography/z-geography-data-type.md)  
   
   

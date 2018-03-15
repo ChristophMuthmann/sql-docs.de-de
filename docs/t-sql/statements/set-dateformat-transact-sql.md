@@ -1,5 +1,5 @@
 ---
-title: SET DATEFORMAT (Transact-SQL) | Microsoft Docs
+title: SET DATEFORMAT (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -43,9 +43,9 @@ ms.lasthandoff: 11/21/2017
 # <a name="set-dateformat-transact-sql"></a>SET DATEFORMAT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Legt die Reihenfolge der Datumsteile Monat, Tag und Jahr für das Interpretieren **Datum**, **Smalldatetime**, **"DateTime"**, **datetime2** und **"DateTimeOffset"** Zeichenfolgen.  
+  Legt die Reihenfolge der Datumsteile für den Tag, den Monat und das Jahr fest, um die Zeichenfolgen **date**, **smalldatetime**, **datetime**, **datetime2** und **datetimeoffset** zu interpretieren.  
   
- Eine Übersicht über alle [!INCLUDE[tsql](../../includes/tsql-md.md)] Datums-und Uhrzeitdatentypen und Funktionen finden Sie unter [Datums- und Uhrzeitdatentypen und-Funktionen &#40; Transact-SQL &#41; ](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).  
+ Eine Übersicht über alle Datums- und Uhrzeitdatentypen und zugehörige Funktionen für [!INCLUDE[tsql](../../includes/tsql-md.md)] finden Sie unter [Datums- und Uhrzeitdatentypen und zugehörige Funktionen &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -56,19 +56,19 @@ SET DATEFORMAT { format | @format_var }
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *Format* | **@***Format_var*  
- Reihenfolge der Datumsteile. Gültige Parameter sind **Mdy**, **Dmy**, **Ymd**, **Ydm**, **Myd**, und **Dym**. Kann entweder in Unicode oder in Doppelbyte-Zeichensätzen (Double-Byte Character Set, DBCS), die in Unicode konvertiert wurden, dargestellt werden. Der Standardparameter Englisch (USA) ist **Mdy**. Die standardmäßige DateFormat-Einstellung aller unterstützungssprachen, finden Sie unter [Sp_helplanguage &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-helplanguage-transact-sql.md).  
+ *format* | **@***format_var*  
+ Reihenfolge der Datumsteile. Gültige Parameter sind **mdy**, **dmy**, **ymd**, **ydm**, **myd**, and **dym**. Kann entweder in Unicode oder in Doppelbyte-Zeichensätzen (Double-Byte Character Set, DBCS), die in Unicode konvertiert wurden, dargestellt werden. Der Standardparameter Der Standard für Englisch ist **mdy**. Die standardmäßige DATEFORMAT-Einstellung aller Unterstützungssprachen finden Sie unter [sp_helplanguage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helplanguage-transact-sql.md).  
   
-## <a name="remarks"></a>Hinweise  
- Die DateFormat-Einstellung **Ydm** wird nicht unterstützt für **Datum**, **datetime2** und **"DateTimeOffset"** -Datentypen.  
+## <a name="remarks"></a>Remarks  
+ Die DATEFORMAT-Einstellung **ydm** wird für die Datentypen **date**, **datetime2** und **datetimeoffset** nicht unterstützt.  
   
- Die Auswirkungen der DATEFORMAT-Einstellung auf die Interpretation von Zeichenfolgen ist möglicherweise für andere **"DateTime"** und **Smalldatetime** Werte von **Datum**, **datetime2** und **"DateTimeOffset"** Werte, je nach dem Zeichenfolgenformat. Diese Einstellung wirkt sich nur auf die Interpretation von Zeichenfolgen bei der Konvertierung in Datumswerte zum Speichern in der Datenbank aus. Sie wirkt sich nicht auf die Anzeige der Werte für Datumsdatentypen, die in der Datenbank gespeichert sind, oder auf das Speicherformat aus.  
+ Die Auswirkungen der DATEFORMAT-Einstellung auf die Interpretation der Zeichenfolgen können für die Werte von **datetime** und **smalldatetime** sowie für die Werte von**date**, **datetime2** und **datetimeoffset** je nach Zeichenfolgenformat unterschiedlich sein. Diese Einstellung wirkt sich nur auf die Interpretation von Zeichenfolgen bei der Konvertierung in Datumswerte zum Speichern in der Datenbank aus. Sie wirkt sich nicht auf die Anzeige der Werte für Datumsdatentypen, die in der Datenbank gespeichert sind, oder auf das Speicherformat aus.  
   
  Einige Zeichenfolgenformate, z. B. ISO 8601, werden unabhängig von der DATEFORMAT-Einstellung interpretiert.  
   
  Die Einstellung von SET DATEFORMAT wird zur Ausführungszeit und nicht zur Analysezeit festgelegt.  
   
- SET DATEFORMAT überschreibt die implizite Datum formatieren Sie die Einstellung der [SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md).  
+ SET DATEFORMAT überschreibt die implizite Einstellung für das Datumsformat von [SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md).  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die Mitgliedschaft in der **public** -Rolle.  
@@ -94,7 +94,7 @@ GO
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SET-Anweisungen &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)  
   
   

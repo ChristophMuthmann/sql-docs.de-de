@@ -1,5 +1,5 @@
 ---
-title: '@@IDENTITY (Transact-SQL) | Microsoft Docs'
+title: '@@IDENTITY (Transact-SQL) | Microsoft-Dokumentation'
 ms.custom: 
 ms.date: 08/29/2017
 ms.prod: sql-non-specified
@@ -33,7 +33,7 @@ ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="x40x40identity-transact-sql"></a>&#x40;&#x40; Identität (Transact-SQL)
+# <a name="x40x40identity-transact-sql"></a>&#x40;&#x40;IDENTITY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Eine Systemfunktion, die den zuletzt eingefügten Identitätswert zurückgibt.  
@@ -49,23 +49,23 @@ ms.lasthandoff: 11/21/2017
 ## <a name="return-types"></a>Rückgabetypen  
  **numeric(38,0)**  
   
-## <a name="remarks"></a>Hinweise  
- Nach einer INSERT, SELECT INTO- oder Bulk Copy-Anweisung abgeschlossen ist, @@IDENTITY enthält den letzten Identitätswert, der von der Anweisung generiert wird. Wenn die Anweisung kein Tabellen mit Identitätsspalten ausgewirkt hat@IDENTITY gibt NULL zurück. Wenn mehrere Zeilen eingefügt werden, generieren Sie mehrere Identitätswerte@IDENTITY gibt den letzten generierten Identitätswert zurück. Wenn die Anweisung einen oder mehrere Trigger, die Einfügevorgänge, die Identity-Werte zu generieren auslöst, @ Aufrufen@IDENTITY sofort, nachdem die Anweisung gibt den letzten, durch die Trigger generierten Identitätswert zurück. Wenn ein Trigger ausgelöst wird, nach einer Einfügeaktion bei einer Tabelle mit einer Identity-Spalte und der Trigger in eine andere Tabelle, die eine Identity-Spalte keinen fügt @@IDENTITY gibt den Identitätswert der Einfügung zurück. Der @@IDENTITY Wert kehrt nicht zu einer vorherigen Einstellung, wenn die INSERT- oder SELECT INTO-Anweisung Massenkopiervorgang fehlschlägt oder die Transaktion ein Rollback ausgeführt wird.  
+## <a name="remarks"></a>Remarks  
+ Nachdem eine INSERT- oder eine SELECT INTO-Anweisung bzw. eine Massenkopieranweisung abgeschlossen ist, enthält @@IDENTITY den letzten von der Anweisung generierten Identitätswert. Wenn sich die Anweisung nicht auf Tabellen mit Identitätsspalten ausgewirkt hat, gibt @@IDENTITY den Wert NULL zurück. Wenn mehrere Zeilen eingefügt und dabei mehrere Identitätswerte generiert werden, gibt @@IDENTITY den zuletzt generierten Identitätswert zurück. Wenn die Anweisung mindestens einen Trigger auslöst, der Einfügevorgänge zum Generieren von Identitätswerten durchführt, wird durch das Aufrufen von @@IDENTITY sofort nach der Anweisung der letzte von den Triggern generierte Identitätswert zurückgegeben. Wenn nach einer Einfügeaktion bei einer Tabelle mit einer Identitätsspalte ein Trigger ausgelöst wird und der Trigger das Einfügen in einer anderen Tabelle bewirkt, in der keine Identitätsspalte vorhanden ist, dann gibt @@IDENTITY den Identitätswert der Einfügung zurück. Der @@IDENTITY-Wert kehrt nicht zu einer vorherigen Einstellung zurück, wenn die INSERT- oder SELECT INTO-Anweisung oder der Massenkopiervorgang fehlschlägt bzw. für die Transaktion ein Rollback ausgeführt wird.  
   
  Fehlgeschlagene Anweisungen oder Transaktionen können die aktuelle Identität für eine Tabelle ändern und zu Lücken in den Identitätsspaltenwerten führen. Für den Identitätswert erfolgt kein Rollback, auch wenn für die Transaktion, die versuchte, den Wert in die Tabelle einzufügen, kein Commit ausgeführt wird. Wenn beispielsweise eine INSERT-Anweisung aufgrund einer IGNORE_DUP_KEY-Verletzung fehlschlägt, wird der aktuelle Identitätswert für die Tabelle trotzdem inkrementiert.  
   
- @@IDENTITY, SCOPE_IDENTITY und IDENT_CURRENT sind ähnliche Funktionen auf, da sie alle zurückkehren, dass den letzten Wert in die Identitätsspalte einer Tabelle eingefügt.  
+ Bei @@IDENTITY, SCOPE_IDENTITY und IDENT_CURRENT handelt es sich um ähnliche Funktionen. Sie geben den letzten Wert zurück, der in die IDENTITY-Spalte einer Tabelle eingefügt wurde.  
   
- @@IDENTITY und SCOPE_IDENTITY geben den letzten Identitätswert, der in einer beliebigen Tabelle in der aktuellen Sitzung generiert zurück. Allerdings gibt SCOPE_IDENTITY den Wert nur im aktuellen Gültigkeitsbereich zurück; @@IDENTITY ist nicht auf einen bestimmten Gültigkeitsbereich begrenzt.  
+ @@IDENTITY und SCOPE_IDENTITY geben den letzten Identitätswert zurück, der in einer Tabelle in der aktuellen Sitzung generiert wurde. Allerdings gibt SCOPE_IDENTITY den Wert nur im aktuellen Gültigkeitsbereich zurück. @@IDENTITY ist nicht auf einen bestimmten Gültigkeitsbereich begrenzt.  
   
- IDENT_CURRENT ist nicht durch einen Gültigkeitsbereich oder eine Sitzung begrenzt, sondern auf eine angegebene Tabelle. IDENT_CURRENT gibt den für eine bestimmte Tabelle in einer Sitzung oder einem Gültigkeitsbereich generierten Identitätswert zurück. Weitere Informationen finden Sie unter [IDENT_CURRENT &#40; Transact-SQL &#41; ](../../t-sql/functions/ident-current-transact-sql.md).  
+ IDENT_CURRENT ist nicht durch einen Gültigkeitsbereich oder eine Sitzung begrenzt, sondern auf eine angegebene Tabelle. IDENT_CURRENT gibt den für eine bestimmte Tabelle in einer Sitzung oder einem Gültigkeitsbereich generierten Identitätswert zurück. Weitere Informationen finden Sie unter [IDENT_CURRENT &#40;Transact-SQL&#41;](../../t-sql/functions/ident-current-transact-sql.md).  
   
- Der Geltungsbereich der @@IDENTITY Funktion ist die aktuelle Sitzung auf dem lokalen Server, auf dem er ausgeführt wird. Diese Funktion kann nicht für Remote- oder Verbindungsserver angewendet werden. Um einen Identitätswert auf einem anderen Server zu erhalten, müssen Sie eine gespeicherte Prozedur auf einem Remote- oder Verbindungsserver ausführen. Diese gespeicherte Prozedur (die im Kontext des Remote- bzw. Verbindungsservers ausgeführt wird) muss die Identitätswertinformationen sammeln und an die aufrufende Verbindung auf dem lokalen Server zurückgeben.  
+ Der Gültigkeitsbereich der @@IDENTITY-Funktion erstreckt sich auf die aktuelle Sitzung auf dem lokalen Server, auf dem sie ausgeführt wird. Diese Funktion kann nicht für Remote- oder Verbindungsserver angewendet werden. Um einen Identitätswert auf einem anderen Server zu erhalten, müssen Sie eine gespeicherte Prozedur auf einem Remote- oder Verbindungsserver ausführen. Diese gespeicherte Prozedur (die im Kontext des Remote- bzw. Verbindungsservers ausgeführt wird) muss die Identitätswertinformationen sammeln und an die aufrufende Verbindung auf dem lokalen Server zurückgeben.  
   
- Kann die Replikation Auswirkungen auf die @@IDENTITY Wert, da sie in den replikationstriggern und gespeicherten Prozeduren verwendet wird. @@IDENTITY ist nicht zuverlässiger Indikator der letzte Benutzer erstellten Identität dar, wenn die Spalte Teil eines replikationsartikels ist. Sie können die Syntax der SCOPE_IDENTITY()-Funktion statt @@IDENTITY. Weitere Informationen finden Sie unter [SCOPE_IDENTITY &#40; Transact-SQL &#41;](../../t-sql/functions/scope-identity-transact-sql.md)  
+ Die Replikation hat möglicherweise Auswirkungen auf den @@IDENTITY-Wert, da er in den Replikationstriggern und gespeicherten Prozeduren verwendet wird. @@IDENTITY stellt keinen zuverlässigen Indikator der zuletzt vom Benutzer erstellten Identität dar, wenn die Spalte Bestandteil eines Replikationsartikels ist. Sie können die Syntax der SCOPE_IDENTITY()-Funktion statt @@IDENTITY verwenden. Weitere Informationen finden Sie unter [SCOPE_IDENTITY &#40;Transact-SQL&#41;](../../t-sql/functions/scope-identity-transact-sql.md).  
   
 > [!NOTE]  
->  Die aufrufende gespeicherte Prozedur oder [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisung muss umgeschrieben werden, um mithilfe der `SCOPE_IDENTITY()` -Funktion, die die neueste Identität, die innerhalb des Bereichs dieser benutzeranweisung verwendet und nicht die Identität innerhalb des Bereichs des geschachtelten Triggers verwendeten zurückgibt die Replikation.  
+>  Die aufrufende gespeicherte Prozedur oder die [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung muss neu geschrieben werden, um die `SCOPE_IDENTITY()`-Funktion zu verwenden, die die neueste Identität zurückgibt, die im Bereich dieser Benutzeranweisung verwendet wird, und nicht die Identität im Bereich des geschachtelten Triggers, der von der Replikation verwendet wird.  
   
 ## <a name="examples"></a>Beispiele  
  Das folgende Beispiel fügt eine Zeile in eine Tabelle mit einer Identitätsspalte (`LocationID`) ein und zeigt mithilfe von `@@IDENTITY` den in der neuen Zeile verwendeten Identitätswert an.  
@@ -86,7 +86,7 @@ SELECT MAX(LocationID) FROM Production.Location;
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Systemfunktionen &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [IDENT_CURRENT &#40;Transact-SQL&#41;](../../t-sql/functions/ident-current-transact-sql.md)   

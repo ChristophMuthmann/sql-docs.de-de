@@ -1,5 +1,5 @@
 ---
-title: INDEXPROPERTY (Transact-SQL) | Microsoft Docs
+title: INDEXPROPERTY (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -48,18 +48,18 @@ INDEXPROPERTY ( object_ID , index_or_statistics_name , property )
   
 ## <a name="arguments"></a>Argumente  
  *object_ID*  
- Ein Ausdruck, der die Objekt-ID der Tabelle oder indizierten Sicht enthält, für die Indexeigenschafteninformationen bereitgestellt werden sollen. *Object_ID* ist **Int**.  
+ Ein Ausdruck, der die Objekt-ID der Tabelle oder indizierten Sicht enthält, für die Indexeigenschafteninformationen bereitgestellt werden sollen. *object_ID* entspricht **int**.  
   
  *index_or_statistics_name*  
- Ein Ausdruck, der den Namen des Index oder der Statistik enthält, für den bzw. die Eigenschafteninformationen zurückgegeben werden sollen. *Index_or_statistics_name* ist **vom Datentyp nvarchar(128)**.  
+ Ein Ausdruck, der den Namen des Index oder der Statistik enthält, für den bzw. die Eigenschafteninformationen zurückgegeben werden sollen. *index_or_statistics_name* entspricht **nvarchar(128)**.  
   
- *Eigenschaft*  
- Ein Ausdruck, der den Namen der zurückzugebenden Datenbankeigenschaft enthält. *Eigenschaft* ist **varchar(128)**, und kann einen der folgenden Werte sein.  
+ *property*  
+ Ein Ausdruck, der den Namen der zurückzugebenden Datenbankeigenschaft enthält. *property* ist vom Datentyp **varchar(128)**. Die folgenden Werte sind möglich:  
   
 > [!NOTE]  
->  Sofern nicht anders angegeben, NULL zurückgegeben, wenn *Eigenschaft* ist kein gültiger Eigenschaftsname *Object_ID* ist keine gültige ObjectID, *Object_ID* ist ein nicht unterstützter Objekttyp für die angegebene Eigenschaft oder der Aufrufer verfügt nicht über Berechtigung zum Anzeigen von Metadaten für das Objekt.  
+>  Wenn nicht anders angegeben, wird NULL zurückgegeben, wenn *property* kein gültiger Eigenschaftsname ist, *object_ID* keine gültige Objekt-ID ist, *object_ID* ein nicht unterstützter Objekttyp für die angegebene Eigenschaft ist oder der Aufrufer nicht über die Berechtigung zum Anzeigen der Metadaten des Objekts verfügt.  
   
-|Eigenschaft|Description|Wert|  
+|Eigenschaft|Description|value|  
 |--------------|-----------------|-----------|  
 |**IndexDepth**|Schachtelungstiefe des Indexes.|Anzahl von Indexebenen.<br /><br /> NULL = Ungültiger XML-Index oder ungültige Eingabe.|  
 |**IndexFillFactor**|Der beim Erstellen oder letzten Neuerstellen des Indexes verwendete Füllfaktor.|Füllfaktor|  
@@ -72,7 +72,7 @@ INDEXPROPERTY ( object_ID , index_or_statistics_name , property )
 |**IsPadIndex**|Der Index gibt den Speicherplatz an, der auf jedem inneren Knoten freigelassen werden soll.|**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = True<br /><br /> 0 = False oder XML-Index.|  
 |**IsPageLockDisallowed**|Der Wert für Seitensperren wird von der Option ALLOW_PAGE_LOCKS von ALTER INDEX festgelegt.|**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = Seitensperren sind nicht zulässig.<br /><br /> 0 = Seitensperren sind zulässig.<br /><br /> NULL = Eingabe ist nicht gültig.|  
 |**IsRowLockDisallowed**|Der Wert für Zeilensperren wird von der Option ALLOW_ROW_LOCKS von ALTER INDEX festgelegt.|**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = Zeilensperren sind nicht zulässig.<br /><br /> 0 = Zeilensperren sind zulässig.<br /><br /> NULL = Eingabe ist nicht gültig.|  
-|**IsStatistics**|*Index_or_statistics_name* Statistiken, die von der CREATE STATISTICS-Anweisung oder durch die AUTO_CREATE_STATISTICS-Option von ALTER DATABASE erstellt wird.|1 = True<br /><br /> 0 = False oder XML-Index.|  
+|**IsStatistics**|*index_or_statistics_name* stellt Statistiken dar, die durch die CREATE STATISTICS-Anweisung oder die AUTO_CREATE_STATISTICS-Option von ALTER DATABASE erstellt werden.|1 = True<br /><br /> 0 = False oder XML-Index.|  
 |**IsUnique**|Der Index ist eindeutig.|1 = True<br /><br /> 0 = False oder XML-Index.|  
 |**IsColumnstore**|Index ist ein speicheroptimierter xVelocity-columnstore-Index.|**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = True<br /><br /> 0 = False|  
   
@@ -85,7 +85,7 @@ INDEXPROPERTY ( object_ID , index_or_statistics_name , property )
  Ein Benutzer kann nur die Metadaten sicherungsfähiger Elemente anzeigen, bei denen der Benutzer entweder der Besitzer ist oder für die dem Benutzer eine Berechtigung erteilt wurde. Dies bedeutet, dass Metadaten ausgebende integrierte Funktionen, z. B. INDEXPROPERTY, möglicherweise NULL zurückgeben, wenn dem Benutzer für das Objekt keine Berechtigung erteilt wurde. Weitere Informationen finden Sie unter [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="examples"></a>Beispiele  
- Das folgende Beispiel gibt die Werte für die **IsClustered**, **IndexDepth**, und **IndexFillFactor** Eigenschaften für die `PK_Employee_BusinessEntityID` Index, der die `Employee`-Tabelle in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] Datenbank.  
+ Im folgenden Beispiel werden die Werte für die Eigenschaften **IsClustered**, **IndexDepth** und **IndexFillFactor** für den `PK_Employee_BusinessEntityID`-Index der `Employee`-Tabelle in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Datenbank zurückgegeben.  
   
 ```  
 SELECT   
@@ -108,8 +108,8 @@ Is Clustered Index Depth Fill Factor
 (1 row(s) affected)  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- Das folgende Beispiel überprüft die Eigenschaften der Indizes auf die `FactResellerSales` Tabelle.  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
+ Im folgenden Beispiel werden die Eigenschaften von einem der Indizes der `FactResellerSales`-Tabelle überprüft.  
   
 ```  
 -- Uses AdventureWorks  
@@ -124,13 +124,13 @@ INDEXPROPERTY(OBJECT_ID('dbo.FactResellerSales'),
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
  [Statistiken](../../relational-databases/statistics/statistics.md)   
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
  [sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)   
  [sys.stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)   
- [Sys. stats_columns &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md)  
+ [sys.stats_columns (Transact-SQL)](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md)  
   
   
 

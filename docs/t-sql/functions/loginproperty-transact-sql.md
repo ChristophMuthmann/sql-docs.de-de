@@ -1,5 +1,5 @@
 ---
-title: LOGINPROPERTY (Transact-SQL) | Microsoft Docs
+title: LOGINPROPERTY (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -64,16 +64,16 @@ LOGINPROPERTY ( 'login_name' , 'property_name' )
  *login_name*  
  Der Name einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldung, für die der Status der Anmeldungseigenschaften zurückgegeben wird.  
   
- *Eigenschaftenname*  
- Ein Ausdruck, der die Eigenschafteninformationen enthält, die für die Anmeldung zurückgegeben werden sollen. *PropertyName* kann einen der folgenden Werte sein.  
+ *propertyname*  
+ Ein Ausdruck, der die Eigenschafteninformationen enthält, die für die Anmeldung zurückgegeben werden sollen. Für*propertyname* sind die folgenden Werte möglich.  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |**BadPasswordCount**|Gibt die Anzahl aufeinanderfolgender Anmeldeversuche mit einem falschen Kennwort zurück.|  
 |**BadPasswordTime**|Gibt die Zeit des letzten Anmeldeversuchs mit einem falschen Kennwort zurück.|  
 |**DaysUntilExpiration**|Gibt die Anzahl von Tagen zurück, bis das Kennwort abläuft.|  
-|**DefaultDatabase**|Gibt die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anmeldung Standarddatenbank wie in den Metadaten gespeichert oder **master** Wenn keine Datenbank angegeben ist. Gibt NULL für nicht -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bereitgestellte Benutzer (z. B. Windows-authentifizierten Benutzer).|  
-|**DefaultLanguage**|Gibt die bei der Anmeldung angegebene Standardsprache zurück, wie sie in den Metadaten gespeichert ist. Gibt NULL für nicht -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bereitgestellte Benutzer, z. B. von Windows authentifizierte Benutzer.|  
+|**DefaultDatabase**|Gibt die Standarddatenbank für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldung zurück, wie sie in den Metadaten gespeichert ist. Wenn keine Datenbank angegeben ist, wird **master** zurückgegeben. Gibt für nicht in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bereitgestellte Benutzer (z.B. von Windows authentifizierte Benutzer) NULL zurück.|  
+|**DefaultLanguage**|Gibt die bei der Anmeldung angegebene Standardsprache zurück, wie sie in den Metadaten gespeichert ist. Gibt für nicht in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bereitgestellte Benutzer (z.B. von Windows authentifizierte Benutzer) NULL zurück.|  
 |**HistoryLength**|Gibt die Anzahl der Kennwörter zurück, die für die Anmeldung mithilfe der Mechanismen zur Durchsetzung von Kennwortrichtlinien nachverfolgt werden. 0, wenn keine Kennwortrichtlinie erzwungen wird. 1, wenn die Kennwortrichtlinie wieder erzwungen wird.|  
 |**IsExpired**|Gibt an, ob die Anmeldung abgelaufen ist.|  
 |**IsLocked**|Gibt an, ob die Anmeldung gesperrt ist.|  
@@ -86,21 +86,21 @@ LOGINPROPERTY ( 'login_name' , 'property_name' )
 ## <a name="returns"></a>Rückgabewert  
  Der Datentyp hängt vom angeforderten Wert ab.  
   
- **IsLocked**, **IsExpired**, und **IsMustChange** sind vom Typ **Int**.  
+ **IsLocked**, **IsExpired** und **IsMustChange** weisen den Typ **int** auf.  
   
 -   1, wenn sich die Anmeldung im angegebenen Status befindet.  
   
 -   0, wenn sich die Anmeldung nicht im angegebenen Status befindet.  
   
- **BadPasswordCount** und **HistoryLength** sind vom Typ **Int**.  
+ **BadPasswordCount** and **HistoryLength** weisen den Typ **int** auf.  
   
- **BadPasswordTime**, **LockoutTime**, **PasswordLastSetTime** sind vom Typ **"DateTime"**.  
+ **BadPasswordTime**, **LockoutTime** und **PasswordLastSetTime** weisen den Typ **datetime** auf.  
   
- **PasswordHash** ist vom Typ **Varbinary**.  
+ **PasswordHash** weist den Typ **varbinary** auf.  
   
  NULL, wenn es sich bei der Anmeldung nicht um eine gültige [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldung handelt.  
   
- **DaysUntilExpiration** ist vom Typ **Int**.  
+ **DaysUntilExpiration** weist den Typ **int** auf.  
   
 -   0, wenn die Anmeldung abgelaufen ist oder an dem Tag abläuft, an dem die Abfrage ausgeführt wird.  
   
@@ -108,18 +108,18 @@ LOGINPROPERTY ( 'login_name' , 'property_name' )
   
 -   NULL, wenn CHECK_POLICY oder CHECK_EXPIRATION für eine Anmeldung auf OFF festgelegt ist oder wenn das Betriebssystem die Kennwortrichtlinie nicht unterstützt.  
   
- **PasswordHashAlgorithm** ist vom Typ "int".  
+ **PasswordHashAlgorithm** weist den Typ „int“ auf.  
   
 -   0, wenn ein SQL7.0-Hash verwendet wird.  
   
--   1, wenn ein SHA-1-hash  
+-   1, wenn ein SHA-1-Hash verwendet wird.  
   
 -   2, wenn ein SHA-2-Hash verwendet wird.  
   
 -   NULL, wenn es sich bei der Anmeldung nicht um eine gültige SQL Server-Anmeldung handelt.  
   
-## <a name="remarks"></a>Hinweise  
- Diese integrierte Funktion gibt Informationen zu den Kennwortrichtlinien-Einstellungen einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldung zurück. Die Namen der Eigenschaften sind nicht Groß-/Kleinschreibung beachtet, sodass wie Eigenschaftsnamen **BadPasswordCount** und **Badpasswordcount** äquivalent sind. Die Werte der **PasswordHash, PasswordHashAlgorithm**, und **PasswordLastSetTime** Eigenschaften stehen in allen unterstützten Konfigurationen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], die anderen Eigenschaften jedoch nur verfügbar, wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] läuft auf [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] und CHECK_POLICY und CHECK_EXPIRATION aktiviert sind. Weitere Informationen finden Sie unter [Password Policy](../../relational-databases/security/password-policy.md).  
+## <a name="remarks"></a>Remarks  
+ Diese integrierte Funktion gibt Informationen zu den Kennwortrichtlinien-Einstellungen einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldung zurück. Bei den Namen der Eigenschaften wird die Groß-/Kleinschreibung nicht beachtet. Somit sind Eigenschaftsnamen wie **BadPasswordCount** und **badpasswordcount** gleichwertig. Die Werte der Eigenschaften **PasswordHash, PasswordHashAlgorithm** und **PasswordLastSetTime** sind in allen unterstützten Konfigurationen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verfügbar, die anderen Eigenschaften jedoch nur, wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unter [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] ausgeführt wird und CHECK_POLICY und CHECK_EXPIRATION aktiviert sind. Weitere Informationen finden Sie unter [Password Policy](../../relational-databases/security/password-policy.md).  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die VIEW-Berechtigung für die Anmeldung. Wenn der Kennworthash angefordert wird, ist auch die CONTROL SERVER-Berechtigung erforderlich.  
@@ -127,7 +127,7 @@ LOGINPROPERTY ( 'login_name' , 'property_name' )
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="a-checking-whether-a-login-must-change-its-password"></a>A. Überprüfen, ob das Kennwort einer Anmeldung geändert werden muss  
- Im folgenden Beispiel wird überprüft, ob [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anmeldung `John3` Kennwort muss geändert werden beim nächsten Herstellen einer mit einer Instanz von Verbindung [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Im folgenden Beispiel wird überprüft, ob das Kennwort des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldenamens `John3` geändert werden muss, wenn das nächste Mal unter diesem Anmeldenamen eine Verbindung mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hergestellt wird.  
   
 ```  
 SELECT LOGINPROPERTY('John3', 'IsMustChange');  
@@ -142,7 +142,7 @@ SELECT LOGINPROPERTY('John3', 'IsLocked');
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
  [sys.server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)  
   

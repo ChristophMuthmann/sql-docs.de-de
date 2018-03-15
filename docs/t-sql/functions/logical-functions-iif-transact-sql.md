@@ -1,5 +1,5 @@
 ---
-title: IIF (Transact-SQL) | Microsoft Docs
+title: IIF (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -31,7 +31,7 @@ ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="logical-functions---iif-transact-sql"></a>Logische Funktionen - IIF (Transact-SQL)
+# <a name="logical-functions---iif-transact-sql"></a>Logische Funktionen: IIF (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   Gibt einen von zwei Werten zurück, abhängig davon, ob der boolesche Ausdruck "true" oder "false" in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ergibt.  
@@ -52,16 +52,16 @@ IIF ( boolean_expression, true_value, false_value )
  Wenn dieses Argument kein boolescher Ausdruck ist, wird ein Syntaxfehler ausgelöst.  
   
  *true_value*  
- Der Wert wird zurückgegeben, wenn *Boolean_expression* auf "true" ergibt.  
+ Der zurückzugebende Wert, wenn *boolean_expression* den Wert TRUE ergibt.  
   
  *false_value*  
- Der Wert wird zurückgegeben, wenn *Boolean_expression* auf "false" ausgewertet wird.  
+ Der zurückzugebende Wert, wenn *boolean_expression* den Wert FALSE ergibt.  
   
 ## <a name="return-types"></a>Rückgabetypen  
- Gibt den Datentyp mit der höchsten Rangfolge aus den Typen in *True_value* und *False_value*. Weitere Informationen finden Sie unter [Rangfolge der Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
+ Gibt den Datentyp mit dem höchsten Rang unter den Typen in *true_value* und in *false_value* zurück. Weitere Informationen finden Sie unter [Rangfolge der Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
   
-## <a name="remarks"></a>Hinweise  
- IIF ist eine schnelle Möglichkeit zum Schreiben eines CASE-Ausdrucks. Hierdurch wird der als erstes Argument übergebenen booleschen Ausdruck ausgewertet und eines der beiden anderen Argumente auf Grundlage des Ergebnisses der Auswertung zurückgegeben. D. h. die *True_value* wird zurückgegeben, wenn der boolesche Ausdruck "true" ist und die *False_value* wird zurückgegeben, wenn der boolesche Ausdruck false oder unknown. *True_value* und *False_value* kann einen beliebigen Typ sein. Die gleichen Regeln, die für den CASE-Ausdruck für boolesche Ausdrücke, NULL-Behandlung und Rückgabetypen gelten, sind auch für IIF gültig. Weitere Informationen finden Sie unter [Groß-/KLEINSCHREIBUNG &#40; Transact-SQL &#41; ](../../t-sql/language-elements/case-transact-sql.md).  
+## <a name="remarks"></a>Remarks  
+ IIF ist eine schnelle Möglichkeit zum Schreiben eines CASE-Ausdrucks. Hierdurch wird der als erstes Argument übergebenen booleschen Ausdruck ausgewertet und eines der beiden anderen Argumente auf Grundlage des Ergebnisses der Auswertung zurückgegeben. Das heißt, dass bei einem zutreffenden (TRUE) booleschen Ausdruck *true_value* und bei einem unzutreffenden oder unbekannten (FALSE oder unbekannt) booleschen Ausdruck *false_value* zurückgegeben wird. *true_value* und *false_value* können einen beliebigen Typ aufweisen. Die gleichen Regeln, die für den CASE-Ausdruck für boolesche Ausdrücke, NULL-Behandlung und Rückgabetypen gelten, sind auch für IIF gültig. Weitere Informationen finden Sie unter [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md).  
   
  Die Tatsache, dass IIF in CASE übersetzt wird, wirkt sich auch auf andere Aspekte des Verhaltens dieser Funktion aus. Da CASE-Ausdrücke nur bis zur Ebene 10 geschachtelt werden können, können auch IIF-Anweisungen nur bis zu einer maximalen Ebene von 10 geschachtelt werden. Außerdem wird IIF remote an andere Server als semantisch gleichwertiger CASE-Ausdruck übergeben, einschließlich aller Verhaltensweisen eines remote ausgeführten CASE-Ausdrucks.  
   
@@ -109,8 +109,8 @@ NULL
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Groß-/KLEINSCHREIBUNG &#40; Transact-SQL &#41;](../../t-sql/language-elements/case-transact-sql.md)   
- [Wählen Sie &#40; Transact-SQL &#41;](../../t-sql/functions/logical-functions-choose-transact-sql.md)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)   
+ [CHOOSE &#40;Transact-SQL&#41;](../../t-sql/functions/logical-functions-choose-transact-sql.md)  
   
   

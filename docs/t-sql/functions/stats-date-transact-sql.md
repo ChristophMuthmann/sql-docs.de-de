@@ -1,5 +1,5 @@
 ---
-title: STATS_DATE (Transact-SQL) | Microsoft Docs
+title: STATS_DATE (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 12/18/2017
 ms.prod: sql-non-specified
@@ -40,7 +40,7 @@ ms.lasthandoff: 01/02/2018
 
   Gibt das Datum des letzten Updates für die Statistik einer Tabelle oder indizierten Sicht zurück.  
   
- Weitere Informationen zum Aktualisieren von Statistiken finden Sie unter [Statistiken](../../relational-databases/statistics/statistics.md).  
+ Weitere Informationen zum Aktualisieren von Statistiken finden Sie unter [Statistik](../../relational-databases/statistics/statistics.md).  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -58,14 +58,14 @@ STATS_DATE ( object_id , stats_id )
  Die ID des Statistikobjekts.  
   
 ## <a name="return-types"></a>Rückgabetypen  
- Gibt **"DateTime"** bei Erfolg. Gibt **NULL** ein Statistik-Blob nicht erstellt wurde.  
+ Gibt **datetime** erfolgreich zurück. Gibt **NULL** zurück, wenn kein statistisches Blob erstellt wurde.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Systemfunktionen können in der Auswahlliste, in der WHERE-Klausel und überall dort verwendet werden, wo ein Ausdruck verwendet werden kann.  
  
- Statistiken Aktualisierungsdatum befindet sich in der [Statistik-Blob-Objekt](../../relational-databases/statistics/statistics.md#DefinitionQOStatistics) zusammen mit den [Histogramm](../../relational-databases/statistics/statistics.md#histogram) und [dichtevektor](../../relational-databases/statistics/statistics.md#density), nicht in den Metadaten. Wenn keine Daten gelesen werden, um statistische Daten zu generieren, die Statistik-Blob nicht erstellt, und das Datum ist nicht verfügbar. Dies ist der Fall für gefilterte Statistiken für die das Prädikat keine Zeilen zurückgibt, oder für neue, leere Tabellen.
+ Das Aktualisierungsdatum für die Statistiken befindet sich gemeinsam mit dem [Histogramm](../../relational-databases/statistics/statistics.md#histogram) und [Dichtevektor](../../relational-databases/statistics/statistics.md#density) nicht in den Metadaten, sondern im [Statistik-Blobobjekt](../../relational-databases/statistics/statistics.md#DefinitionQOStatistics). Wenn für das generieren von Statistikdaten keine Daten gelesen werden, wird das Statistikblob nicht erstellt und das Datum nicht verfügbar gemacht. Dies ist der Fall bei gefilterten Statistiken oder neuen und leeren Tabellen, für die das Prädikat keine Zeilen zurückgibt.
  
- Wenn Statistiken einem Index entsprechen den *Stats_id* Wert in der [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) -Katalogsicht ist identisch mit der *Index_id* Wert in der [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) -Katalogsicht angezeigt.
+ Wenn Statistiken einem Index entsprechen, entspricht der *stats_id*-Wert in der [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)-Katalogsicht dem *index_id*-Wert in der [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)-Katalogsicht.
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die Mitgliedschaft in der festen Datenbankrolle db_owner oder die Berechtigung, Metadaten für die Tabelle oder indizierte Sicht anzuzeigen.  
@@ -85,7 +85,7 @@ WHERE object_id = OBJECT_ID('Person.Address');
 GO  
 ```  
   
- Wenn Statistiken einem Index entsprechen den *Stats_id* Wert in der [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) -Katalogsicht ist identisch mit der *Index_id* Wert in der [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) -Katalogsicht, und die folgende Abfrage gibt die gleichen Ergebnisse wie die vorherige Abfrage. Wenn Statistiken keinem Index entsprechen, kommen sie in den sys.stats-Ergebnissen, nicht jedoch in den sys.indexes-Ergebnissen vor.  
+ Wenn Statistiken einem Index entsprechen, ist der *stats_id*-Wert in der [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)-Katalogsicht der gleiche wie der *index_id*-Wert in der [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)-Katalogsicht. Die folgende Abfrage gibt die gleichen Ergebnisse zurück wie die vorherige Abfrage. Wenn Statistiken keinem Index entsprechen, kommen sie in den sys.stats-Ergebnissen, nicht jedoch in den sys.indexes-Ergebnissen vor.  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -97,10 +97,10 @@ WHERE object_id = OBJECT_ID('Person.Address');
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
-### <a name="b-learn-when-a-named-statistics-was-last-updated"></a>B. Erfahren Sie, wann eine benannte Statistik zuletzt aktualisiert wurde  
- Das folgende Beispiel erstellt Statistiken für die Spalte LastName der DimCustomer-Tabelle. Anschließend wird eine Abfrage aus, um das Datum der Statistik anzeigen ausgeführt. Klicken Sie dann es wurden Updates der Statistiken und führt die Abfrage erneut aus, um das aktualisierte Datum angezeigt.  
+### <a name="b-learn-when-a-named-statistics-was-last-updated"></a>B. Abrufen des Datums des letzten Updates für eine benannte Statistik  
+ Im folgenden Beispiel werden Statistiken für die LastName-Spalte der DimCustomer-Tabelle erstellt. Anschließend wird eine Abfrage ausgeführt, um das Datum der Statistiken anzuzeigen. Danach wird die Statistik aktualisiert und die Abfrage erneut ausgeführt, um das aktualisierte Datum anzuzeigen.  
   
 ```sql
 --First, create a statistics object  
@@ -134,8 +134,8 @@ WHERE s.object_id = OBJECT_ID('dbo.DimCustomer')
 GO    
 ```  
   
-### <a name="c-view-the-date-of-the-last-update-for-all-statistics-on-a-table"></a>C. Das Datum der letzten Aktualisierung für alle Statistiken für eine Tabelle anzeigen  
- In diesem Beispiel gibt das Datum für zurück, wenn jede Statistikobjekt für die DimCustomer-Tabelle zuletzt aktualisiert wurde.  
+### <a name="c-view-the-date-of-the-last-update-for-all-statistics-on-a-table"></a>C. Anzeigen des Datums des letzten Updates für alle Statistiken einer Tabelle  
+ In diesem Beispiel wird das Datum des letzten Updates für jedes Statistikobjekt in der DimCustomer-Tabelle zurückgegeben.  
   
 ```sql  
 --Return the dates all statistics on the table were last updated.  
@@ -146,7 +146,7 @@ WHERE s.object_id = OBJECT_ID('dbo.DimCustomer');
 GO  
 ```  
   
- Wenn Statistiken einem Index entsprechen den *Stats_id* Wert in der [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) -Katalogsicht ist identisch mit der *Index_id* Wert in der [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) -Katalogsicht, und die folgende Abfrage gibt die gleichen Ergebnisse wie die vorherige Abfrage. Wenn Statistiken keinem Index entsprechen, kommen sie in den sys.stats-Ergebnissen, nicht jedoch in den sys.indexes-Ergebnissen vor.  
+ Wenn Statistiken einem Index entsprechen, ist der *stats_id*-Wert in der [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)-Katalogsicht der gleiche wie der *index_id*-Wert in der [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)-Katalogsicht. Die folgende Abfrage gibt die gleichen Ergebnisse zurück wie die vorherige Abfrage. Wenn Statistiken keinem Index entsprechen, kommen sie in den sys.stats-Ergebnissen, nicht jedoch in den sys.indexes-Ergebnissen vor.  
   
 ```sql  
 USE AdventureWorksPDW2012;  
@@ -158,11 +158,11 @@ WHERE object_id = OBJECT_ID('dbo.DimCustomer');
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Systemfunktionen &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)   
  [UPDATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md)   
- [Sp_autostats &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-autostats-transact-sql.md)   
- [Statistiken](../../relational-databases/statistics/statistics.md)    
+ [sp_autostats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-autostats-transact-sql.md)   
+ [Statistics](../../relational-databases/statistics/statistics.md)    
  [sys.dm_db_stats_properties (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)   
  [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)   
   

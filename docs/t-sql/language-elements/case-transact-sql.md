@@ -1,5 +1,5 @@
 ---
-title: Fall (Transact-SQL) | Microsoft Docs
+title: CASE (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 06/28/2017
 ms.prod: sql-non-specified
@@ -79,48 +79,48 @@ END
   
 ## <a name="arguments"></a>Argumente  
  *input_expression*  
- Der Ausdruck, der ausgewertet wird, wenn das einfache CASE-Format verwendet wird. *Input_expression* ist ein beliebiger gültiger [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md).  
+ Der Ausdruck, der ausgewertet wird, wenn das einfache CASE-Format verwendet wird. *input_expression* ist ein gültiger [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md).  
   
- Wenn *When_expression*  
- Ein einfacher Ausdruck, der *Input_expression* verglichen wird, wenn das einfache CASE-Format verwendet wird. *When_expression* kann jeder gültige Ausdruck. Die Datentypen der *Input_expression* und jede *When_expression* müssen identisch sein oder muss eine implizite Konvertierung.  
+ WHEN *when_expression*  
+ Ein einfacher Ausdruck, mit dem *input_expression* verglichen wird, wenn das einfache CASE-Format verwendet wird. *when_expression* ist ein gültiger Ausdruck. Die Datentypen von *input_expression* und allen *when_expression*-Ausdrücken müssen gleich sein, oder es muss eine implizite Konvertierung vorliegen.  
   
- Klicken Sie dann *Result_expression*  
- Wird der Ausdruck zurückgegeben, wenn *Input_expression* gleich *When_expression* TRUE ergibt, oder *Boolean_expression* auf "true" ergibt. *-Ergebnisausdrücke* ist ein beliebiger gültiger [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md).  
+ THEN *result_expression*  
+ Der Ausdruck, der zurückgegeben wird, wenn *input_expression* gleich *when_expression* TRUE ergibt oder wenn *boolean_expression* TRUE ergibt. *result expression* ist ein gültiger [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md).  
   
  ELSE *else_result_expression*  
- Der Ausdruck, der zurückgegeben wird, wenn keine Vergleichsoperation TRUE ergibt. Wenn dieses Argument weggelassen wird und keine Vergleichsoperation als TRUE ausgewertet wird, gibt die CASE-Funktion NULL zurück. *Else_result_expression* kann jeder gültige Ausdruck. Die Datentypen der *Else_result_expression* und ein beliebiger *Result_expression* müssen identisch sein oder muss eine implizite Konvertierung.  
+ Der Ausdruck, der zurückgegeben wird, wenn keine Vergleichsoperation TRUE ergibt. Wenn dieses Argument weggelassen wird und keine Vergleichsoperation als TRUE ausgewertet wird, gibt die CASE-Funktion NULL zurück. *else_result_expression* ist ein gültiger Ausdruck. Die Datentypen von *else_result_expression* und allen *result_expression*-Ausdrücken müssen gleich sein, oder es muss eine implizite Konvertierung vorliegen.  
   
- Wenn *Boolean_expression*  
- Der boolesche Ausdruck, der ausgewertet wird, wenn das komplexe CASE-Format verwendet wird. *Boolean_expression* kann jeder gültiger boolesche Ausdruck.  
+ WHEN *Boolean_expression*  
+ Der boolesche Ausdruck, der ausgewertet wird, wenn das komplexe CASE-Format verwendet wird. *Boolean_expression* ist in gültiger boolescher Ausdruck.  
   
 ## <a name="return-types"></a>Rückgabetypen  
- Gibt den Typ der höchsten Rangfolge aus dem Satz von Typen in *Result_expressions* und dem optionalen *Else_result_expression*. Weitere Informationen finden Sie unter [Rangfolge der Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
+ Gibt den Typ mit höchsten Priorität in *result_expressions* und in dem optionalen *else_result_expression*-Ausdruck zurück. Weitere Informationen finden Sie unter [Rangfolge der Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
   
 ### <a name="return-values"></a>Rückgabewerte  
- **Einfache CASE-Ausdruck:**  
+ **Einfacher CASE-Ausdruck:**  
   
  Beim einfachen CASE-Ausdruck wird verglichen, ob der erste Ausdruck mit dem Ausdruck in den einzelnen WHEN-Klauseln gleichwertig ist. Wenn diese Ausdrücke gleichwertig sind, wird der Ausdruck in der THEN-Klausel zurückgegeben.  
   
 -   Lässt nur eine Gleichheitsüberprüfung zu.  
   
--   In der angegebenen Reihenfolge die input_expression = When_expression für jede WHEN-Klausel.  
+-   Wertet input_expression = when_expression in der angegebenen Reihenfolge für jede WHEN-Klausel aus.  
   
--   Gibt die *Result_expression* des ersten *Input_expression* = *When_expression* , der auf "true" ausgewertet wird.  
+-   Gibt für die erste *input_expression* = *when_expression*, die TRUE ergibt, *result_expression* zurück.  
   
--   Wenn kein *Input_expression* = *When_expression* auf "true", wertet der [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] gibt die *Else_result_expression* ist eine ELSE-Klausel angegeben wird, oder ein NULL-Wert, wenn keine ELSE-Klausel angegeben wird.  
+-   Wird kein *input_expression* = *when_expression*-Ausdruck TRUE ergibt, gibt [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] den *else_result_expression*-Ausdruck zurück, falls eine ELSE-Klausel angegeben ist, oder einen NULL-Wert, falls keine ELSE-Klausel angegeben ist.  
   
- **Komplexer CASE-Ausdruck:**  
+ **Komplexe CASE-Ausdrücke:**  
   
--   Ausgewertet wird, in der angegebenen Reihenfolge *Boolean_expression* für jede WHEN-Klausel.  
+-   Für jede WHEN-Klausel werden die *Boolean_expression*-Ausdrücke in der angegebenen Reihenfolge ausgewertet.  
   
--   Gibt *Result_expression* des ersten *Boolean_expression* , der auf "true" ausgewertet wird.  
+-   Gibt den *result_expression*-Ausdruck des ersten *Boolean_expression*-Ausdruck zurück, der TRUE ergibt.  
   
--   Wenn kein *Boolean_expression* TRUE ergibt, der [!INCLUDE[ssDE](../../includes/ssde-md.md)] gibt die *Else_result_expression* Falls eine ELSE-Klausel angegeben wird, oder ein NULL-Wert, wenn keine ELSE-Klausel angegeben wird.  
+-   Wird kein *Boolean_expression*-Ausdruck zu TRUE ausgewertet, gibt [!INCLUDE[ssDE](../../includes/ssde-md.md)] den *else_result_expression*-Ausdruck zurück, falls eine ELSE-Klausel angegeben ist, oder einen NULL-Wert, falls keine ELSE-Klausel angegeben ist.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ist für CASE-Ausdrücke nur eine Schachtelung von 10 Ebenen zulässig.  
   
- Der CASE-Ausdruck kann nicht verwendet werden, um den Ablauf bei der Ausführung von Transact-SQL-Anweisungen, Anweisungsblöcken, benutzerdefinierten Funktionen und gespeicherten Prozeduren zu steuern. Eine Liste der Control-of-Flow-Methoden, finden Sie unter [Control-of-Flow-Sprache &#40; Transact-SQL &#41; ](~/t-sql/language-elements/control-of-flow.md).  
+ Der CASE-Ausdruck kann nicht verwendet werden, um den Ablauf bei der Ausführung von Transact-SQL-Anweisungen, Anweisungsblöcken, benutzerdefinierten Funktionen und gespeicherten Prozeduren zu steuern. Eine Liste der Methoden zur Ablaufsteuerung finden Sie unter [Control-of-Flow Language &#40;Transact-SQL&#41; (Sprachkonstrukte zur Ablaufsteuerung (Transact-SQL))](~/t-sql/language-elements/control-of-flow.md).  
   
  Die CASE-Anweisung bewertet ihre Bedingungen sequenziell und hält bei der ersten Bedingung an, deren Bedingung erfüllt ist. In einigen Situationen wird ein Ausdruck bewertet, bevor eine CASE-Anweisung die Ergebnisse des Ausdrucks als Eingabe empfängt. Bei der Bewertung dieser Ausdrücke sind Fehler möglich. Aggregierte Ausdrücke, die in WHEN-Argumenten zu einer CASE-Anweisung angezeigt werden, werden zuerst bewertet und dann der CASE-Anweisung bereitgestellt. Beim Erzeugen des MAX-Aggregat-Werts erzeugt die folgende Abfrage beispielsweise einen Fehler aufgrund einer Division durch Null. Dies erfolgt vor dem Auswerten des CASE-Ausdrucks.  
   
@@ -225,7 +225,7 @@ WHERE SalariedFlag = 0;
 ```  
   
 ### <a name="e-using-case-in-a-set-statement"></a>E. Verwenden von CASE in einer SET-Anweisung  
- Im folgenden Beispiel wird der CASE-Ausdruck in einer SET-Anweisung in der Tabellenwertfunktion `dbo.GetContactInfo` verwendet. In der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]-Datenbank werden alle Daten zu Personen in der `Person.Person`-Tabelle gespeichert. Die Person kann z. B. ein Mitarbeiter, herstellerkontakt oder Kunde sein. Die Funktion gibt den vor- und Nachnamen von einem bestimmten `BusinessEntityID` und den Kontakttyp für diese Person. Der CASE-Ausdruck in der SET-Anweisung bestimmt den Wert, der für die Spalte angezeigt `ContactType` basierend auf dem Vorhandensein der `BusinessEntityID` Spalte in der `Employee`, `Vendor`, oder `Customer` Tabellen.  
+ Im folgenden Beispiel wird der CASE-Ausdruck in einer SET-Anweisung in der Tabellenwertfunktion `dbo.GetContactInfo` verwendet. In der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]-Datenbank werden alle Daten zu Personen in der `Person.Person`-Tabelle gespeichert. Die Person kann z.B. ein Mitarbeiter, Herstellerkontakt oder Kunde sein. Die Funktion gibt den Vor- und Nachnamen einer bestimmten `BusinessEntityID` und den Kontakttyp für diese Person zurück. Der CASE-Ausdruck in der SET-Anweisung bestimmt den Wert, der für die `ContactType`-Spalte basierend auf dem Vorhandensein der `BusinessEntityID`-Spalte in der Tabelle `Employee`, `Vendor` oder `Customer` angezeigt werden soll.  
   
 ```  
   
@@ -299,7 +299,7 @@ FROM dbo.GetContactInformation(5);
 ```  
   
 ### <a name="f-using-case-in-a-having-clause"></a>F. Verwenden von CASE in einer HAVING-Klausel  
- Im folgenden Beispiel wird der CASE-Ausdruck in einer HAVING-Klausel verwendet, um die von der SELECT-Anweisung zurückgegebenen Zeilen einzuschränken. Die Anweisung gibt den maximalen Stundensatz für jede Berufsbezeichnung in der `HumanResources.Employee` Tabelle. Die HAVING-Klausel beschränkt die Bezeichnungen auf diejenigen Positionen, die von Männern mit einem maximalen Stundensatz von über 40 Dollar bzw. von Frauen mit einem maximalen Stundensatz von über 42 Dollar besetzt werden.  
+ Im folgenden Beispiel wird der CASE-Ausdruck in einer HAVING-Klausel verwendet, um die von der SELECT-Anweisung zurückgegebenen Zeilen einzuschränken. Die Anweisung gibt den maximalen Stundensatz für jede Berufsbezeichnung in der `HumanResources.Employee`-Tabelle zurück. Die HAVING-Klausel beschränkt die Bezeichnungen auf diejenigen Positionen, die von Männern mit einem maximalen Stundensatz von über 40 Dollar bzw. von Frauen mit einem maximalen Stundensatz von über 42 Dollar besetzt werden.  
   
 ```  
 USE AdventureWorks2012;  
@@ -318,10 +318,10 @@ ORDER BY MaximumRate DESC;
   
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
-### <a name="g-using-a-select-statement-with-a-case-expression"></a>G. Verwenden eine SELECT-Anweisung mit einer CASE-Ausdruck  
- Innerhalb einer SELECT-Anweisung können der CASE-Ausdruck für die Werte im Resultset basierend auf den Vergleichsergebnissen ersetzt werden. Im folgenden Beispiel wird den CASE-Ausdruck so ändern Sie die Anzeige von Produktkategorien, die leichter verständlich zu machen. Wenn kein Wert vorhanden, den Text "nicht für den Verkauf" wird angezeigt.  
+### <a name="g-using-a-select-statement-with-a-case-expression"></a>G. Verwenden einer SELECT-Anweisung mit einem CASE-Ausdruck  
+ Innerhalb einer SELECT-Anweisung können mit dem komplexen CASE-Ausdruck Werte im Resultset basierend auf den Vergleichsergebnissen ersetzt werden. Im folgenden Beispiel wird ein CASE-Ausdruck verwendet, um die Anzeige von Produktkategorien so zu ändern, dass sie leichter verständlich werden. Wenn ein Wert nicht vorhanden ist, wird der Text „Not for sale“ (Nicht zu verkaufen) angezeigt.  
   
 ```  
 -- Uses AdventureWorks  
@@ -356,8 +356,8 @@ WHERE SalariedFlag = 0;
   
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Ausdrücke &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [COALESCE &#40;Transact-SQL&#41;](../../t-sql/language-elements/coalesce-transact-sql.md)   
  [IIF &#40;Transact-SQL&#41;](../../t-sql/functions/logical-functions-iif-transact-sql.md)   

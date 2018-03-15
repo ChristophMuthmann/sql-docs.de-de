@@ -1,5 +1,5 @@
 ---
-title: STExteriorRing (Geometry-Datentyp) | Microsoft Docs
+title: STExteriorRing (geometry-Datentyp) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -44,13 +44,13 @@ Gibt den äußeren Ring einer **geometry** -Instanz zurück, die ein Polygon ist
 ```  
   
 ## <a name="return-types"></a>Rückgabetypen  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Rückgabetyp: **Geometrie**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Rückgabetyp: **geometry**  
   
  CLR-Rückgabetyp: **SqlGeometry**  
   
  Open Geospatial Consortium (OGC)-Typ: **LineString**  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Diese Methode gibt **null** zurück, wenn die **geometry** -Instanz kein Polygon ist.  
   
 ## <a name="examples"></a>Beispiele  
@@ -62,7 +62,7 @@ SET @g = geometry::STGeomFromText('POLYGON((0 0, 3 0, 3 3, 0 3, 0 0),(2 2, 2 1, 
 SELECT @g.STExteriorRing().ToString();  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [OGC-Methoden für geometry-Instanzen](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

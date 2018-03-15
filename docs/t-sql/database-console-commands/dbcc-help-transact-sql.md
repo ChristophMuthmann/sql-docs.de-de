@@ -1,5 +1,5 @@
 ---
-title: DBCC HELP (Transact-SQL) | Microsoft Docs
+title: DBCC HELP (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 07/16/2017
 ms.prod: sql-non-specified
@@ -81,7 +81,7 @@ DBCC HELP ('?');
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)
   
   

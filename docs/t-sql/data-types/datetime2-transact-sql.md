@@ -1,5 +1,5 @@
 ---
-title: datetime2 (Transact-SQL) | Microsoft Docs
+title: datetime2 (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 7/23/2017
 ms.prod: sql-non-specified
@@ -38,19 +38,19 @@ ms.lasthandoff: 11/21/2017
 # <a name="datetime2-transact-sql"></a>datetime2 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Definiert ein Datum, das mit einer Uhrzeit kombiniert ist und auf dem 24-Stunden-Format basiert. **datetime2** berücksichtigt werden können, als Erweiterung des vorhandenen **"DateTime"** Typ, der einen größeren Datumsbereich, eine größere standardgenauigkeit bei Sekundenbruchteilen und eine optionale vom Benutzer angegebene Genauigkeit besitzt.
+Definiert ein Datum, das mit einer Uhrzeit kombiniert ist und auf dem 24-Stunden-Format basiert. **datetime2** kann als eine Erweiterung des bestehenden **datetime**-Typs angesehen werden, der einen größeren Datumsbereich, eine größere Standardgenauigkeit bei Sekundenbruchteilen und eine optionale vom Benutzer angegebene Genauigkeit besitzt.
   
-## <a name="datetime2-description"></a>Beschreibung von datetime2
+## <a name="datetime2-description"></a>datetime2-Beschreibung
   
-|Eigenschaft|Wert|  
+|Eigenschaft|value|  
 |--------------|-----------|  
-|Syntax|**datetime2** [(*Genauigkeit in Sekundenbruchteilen*)]|  
-|Verwendung|Deklarieren Sie @MyDatetime2 **datetime2(7)**<br /><br /> Erstellen der Tabelle Table1 (Column1 **datetime2(7)** )|  
-|Standardmäßiges Format der Zeichenfolgenliterale<br /><br /> (wird für Downlevelclients verwendet)|YYYY-MM-DD hh:mm:ss [.Sekundenbruchteile]<br /><br /> Weitere Informationen finden Sie unter den folgenden Abschnitt "Abwärtskompatibilität für Downlevelclients".|  
-|Datumsbereich|0001-01-01 bis 9999-12-31<br /><br /> Januar 1,1 CE bis zum 31. Dezember 9999 CE|  
+|Syntax|**datetime2** [ (*Genauigkeit in Sekundenbruchteilen*) ]|  
+|Verwendung|DECLARE @MyDatetime2 **datetime2(7)**<br /><br /> CREATE TABLE Table1 ( Column1 **datetime2(7)** )|  
+|Standardmäßiges Format der Zeichenfolgenliterale<br /><br /> (wird für Downlevelclients verwendet)|YYYY-MM-DD hh:mm:ss [.Sekundenbruchteile]<br /><br /> Weitere Informationen finden Sie im nachfolgenden Abschnitt „Abwärtskompatibilität für Downlevelclients“.|  
+|Datumsbereich|0001-01-01 bis 9999-12-31<br /><br /> 1. Januar 1 n. Chr. bis 31. Dezember 9999 n. Chr.|  
 |Uhrzeitbereich|00:00:00 bis 23:59:590,9999999|  
-|Zeitzonenoffsetbereich|Keine|  
-|Elementbereiche|Bei YYYY handelt es sich um eine vierstellige Zahl im Bereich von 0001 bis 9999, die ein Jahr darstellt.<br /><br /> Bei MM handelt es sich um eine zweistellige Zahl im Bereich von 01 bis 12, die im angegebenen Jahr einen Monat darstellt.<br /><br /> Bei DD handelt es sich um eine zweistellige Zahl im Bereich von 01 bis 31, die im angegebenen Monat einen Tag darstellt.<br /><br /> Bei hh handelt es sich um eine zweistellige Zahl im Bereich von 00 bis 23, die die Stunde darstellt.<br /><br /> Bei mm handelt es sich um eine zweistellige Zahl im Bereich von 00 bis 59, die die Minute darstellt.<br /><br /> Bei ss handelt es sich um eine zweistellige Zahl im Bereich von 00 bis 59, die die Sekunde darstellt.<br /><br /> Bei n* handelt es sich um eine null- bis siebenstellige Zahl von 0 bis 9999999, die die Sekundenbruchteile darstellt. Klicken Sie im Informatica –, werden die Sekundenbruchteile abgeschnitten, wenn n > 3.|  
+|Zeitzonenoffsetbereich|InclusionThresholdSetting|  
+|Elementbereiche|Bei YYYY handelt es sich um eine vierstellige Zahl im Bereich von 0001 bis 9999, die ein Jahr darstellt.<br /><br /> Bei MM handelt es sich um eine zweistellige Zahl im Bereich von 01 bis 12, die im angegebenen Jahr einen Monat darstellt.<br /><br /> Bei DD handelt es sich um eine zweistellige Zahl im Bereich von 01 bis 31, die im angegebenen Monat einen Tag darstellt.<br /><br /> Bei hh handelt es sich um eine zweistellige Zahl im Bereich von 00 bis 23, die die Stunde darstellt.<br /><br /> Bei mm handelt es sich um eine zweistellige Zahl im Bereich von 00 bis 59, die die Minute darstellt.<br /><br /> Bei ss handelt es sich um eine zweistellige Zahl im Bereich von 00 bis 59, die die Sekunde darstellt.<br /><br /> Bei n* handelt es sich um eine null- bis siebenstellige Zahl von 0 bis 9999999, die die Sekundenbruchteile darstellt. In Informatica werden die Sekundenbruchteile abgeschnitten, wenn n > 3.|  
 |Zeichenlänge|Mindestens 19 Positionen (YYYY-MM-DD hh:mm:ss) bis maximal 27 Positionen (YYYY-MM-DD hh:mm:ss .0000000)|  
 |Genauigkeit, Dezimalstellen|0 bis 7 Stellen mit einer Genauigkeit von 100 ns. Die Standardgenauigkeit beträgt 7 Stellen.|  
 |Speichergröße|6 Byte für Genauigkeiten unter 3; 7 Byte für Genauigkeiten von 3 und 4. Alle anderen Genauigkeiten erfordern 8 Bytes.|  
@@ -58,42 +58,42 @@ Definiert ein Datum, das mit einer Uhrzeit kombiniert ist und auf dem 24-Stunden
 |Standardwert|1900-01-01 00:00:00|  
 |Kalender|Gregorianisch|  
 |Benutzerdefinierte Genauigkeit in Sekundenbruchteilen|ja|  
-|Beachtung und Beibehaltung des Zeitzonenoffsets|Nein|  
-|Beachtung der Sommerzeit|Nein|  
+|Beachtung und Beibehaltung des Zeitzonenoffsets|nein|  
+|Beachtung der Sommerzeit|nein|  
   
-Datentyp-Metadaten finden Sie unter [sys.systypes &#40; Transact-SQL &#41; ](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md) oder [TYPEPROPERTY &#40; Transact-SQL &#41; ](../../t-sql/functions/typeproperty-transact-sql.md). Für einige Datums- und Uhrzeitdatentypen sind die Genauigkeit und die Dezimalstellenanzahl variabel. Um die Genauigkeit und Dezimalstellenanzahl für eine Spalte zu erhalten, finden Sie unter [COLUMNPROPERTY &#40; Transact-SQL &#41; ](../../t-sql/functions/columnproperty-transact-sql.md), [COL_LENGTH &#40; Transact-SQL &#41; ](../../t-sql/functions/col-length-transact-sql.md), oder [sys.columns &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md).
+Metadaten von Datentypen finden Sie unter [sys.systypes &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md) oder [TYPEPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/typeproperty-transact-sql.md). Für einige Datums- und Uhrzeitdatentypen sind die Genauigkeit und die Dezimalstellenanzahl variabel. Informationen zum Abrufen der Präzision und Skalierung für eine Spalte finden Sie unter [COLUMNPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/columnproperty-transact-sql.md), [COL_LENGTH &#40;Transact-SQL&#41;](../../t-sql/functions/col-length-transact-sql.md) oder [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md).
   
 ## <a name="supported-string-literal-formats-for-datetime2"></a>Unterstützte Formate der Zeichenfolgenliterale für datetime2
-Die folgenden Tabellen enthalten die unterstützten ISO 8601- und ODBC-Formate der Zeichenfolgenliterale für **datetime2**. Informationen zu alphabetischen, numerischen Prozedure und Zeit Formate für Datum und Uhrzeit Bestandteile **datetime2**, finden Sie unter [Datum &#40; Transact-SQL &#41; ](../../t-sql/data-types/date-transact-sql.md) und [Zeit &#40; Transact-SQL &#41; ](../../t-sql/data-types/time-transact-sql.md).
+In den folgenden Tabellen werden die unterstützten ISO 8601- und ODBC-Formate für Zeichenfolgenliterale für **datetime2** aufgelistet. Informationen zu alphabetischen, numerischen und unstrukturierten Formaten sowie zu Zeitformaten für die Datums- und Uhrzeitteile von **datetime2** finden Sie unter [date &#40;Transact-SQL&#41;](../../t-sql/data-types/date-transact-sql.md) und [time &#40;Transact-SQL&#41;](../../t-sql/data-types/time-transact-sql.md).
   
 |ISO 8601|Beschreibungen|  
 |---|---|
-|YYYY-MM-DDThh:mm:ss[.nnnnnnn]<br /><br /> YYYY-MM-DDThh:mm:ss[.nnnnnnn]|Dieses Format wird nicht von den SET LANGUAGE- und SET DATEFORMAT-Gebietsschemaeinstellungen für Sitzungen beeinflusst. Die **T**, die Doppelpunkte (:) und Punkt (.) sind in enthalten das Zeichenfolgenliteral, z. B. ' 2007-05-02T19:58:47.1234567 ".|  
+|YYYY-MM-DDThh:mm:ss[.nnnnnnn]<br /><br /> YYYY-MM-DDThh:mm:ss[.nnnnnnn]|Dieses Format wird nicht von den SET LANGUAGE- und SET DATEFORMAT-Gebietsschemaeinstellungen für Sitzungen beeinflusst. Das **T**, die Doppelpunkte (:) und der Punkt (.) werden in das Zeichenfolgenliteral eingeschlossen, z.B. '2007-05-02T19:58:47.1234567'.|  
   
 |ODBC|Description|  
 |---|---|
 |{ ts 'yyyy-mm-dd hh:mm:ss[.Sekundenbruchteile]' }|ODBC-API-spezifisch:<br /><br /> Für die Anzahl der Stellen rechts vom Dezimaltrennzeichen, die den Sekundenbruchteil darstellen, kann 0 bis 7 (100 Nanosekunden) angegeben werden.|  
   
 ## <a name="ansi-and-iso-8601-compliance"></a>Kompatibilität mit ANSI und ISO 8601  
-Die Kompatibilität mit ANSI und ISO 8601 von [Datum](../../t-sql/data-types/date-transact-sql.md) und [Zeit](../../t-sql/data-types/time-transact-sql.md) gelten für **datetime2**.
+Die Kompatibilität mit ANSI und ISO 8601 von [date](../../t-sql/data-types/date-transact-sql.md) und [time](../../t-sql/data-types/time-transact-sql.md) gilt auch für **datetime2**.
   
 ##  <a name="backward-compatibility-for-down-level-clients"></a>Abwärtskompatibilität für Downlevelclients  
-Einige Clients früherer unterstützen nicht die **Zeit**, **Datum**, **datetime2** und **"DateTimeOffset"** -Datentypen. In der folgenden Tabelle wird die Typzuordnung zwischen einer Instanz höherer Ebene in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und Downlevelclients gezeigt.
+Einige Downlevelclients unterstützen nicht die Datentypen **time**, **date**, **datetime2** und **datetimeoffset**. In der folgenden Tabelle wird die Typzuordnung zwischen einer Instanz höherer Ebene in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und Downlevelclients gezeigt.
   
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Datentyp|Standardmäßiges Format des an Downlevelclients übergebenen Zeichenfolgenliterals|ODBC früherer Versionen|OLEDB früherer Versionen|JDBC früherer Versionen|SQLCLIENT früherer Versionen|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentyp|Standardmäßiges Format des an Downlevelclients übergebenen Zeichenfolgenliterals|ODBC früherer Versionen|OLEDB früherer Versionen|JDBC früherer Versionen|SQLCLIENT früherer Versionen|  
 | --- | --- | --- | --- | --- | --- |
 |**Uhrzeit**|hh:mm:ss[.nnnnnnn]|SQL_WVARCHAR oder SQL_VARCHAR|DBTYPE_WSTR oder DBTYPE_STR|Java.sql.String|Zeichenfolge oder SqString|  
 |**Datum**|YYYY-MM-DD|SQL_WVARCHAR oder SQL_VARCHAR|DBTYPE_WSTR oder DBTYPE_STR|Java.sql.String|Zeichenfolge oder SqString|  
 |**datetime2**|YYYY-MM-DD hh:mm:ss[.nnnnnnn]|SQL_WVARCHAR oder SQL_VARCHAR|DBTYPE_WSTR oder DBTYPE_STR|Java.sql.String|Zeichenfolge oder SqString|  
-|**datetimeoffset**|JJJJ-MM-TT HH: mm: [.nnnnnnn] [+ &#124;-] hh: mm|SQL_WVARCHAR oder SQL_VARCHAR|DBTYPE_WSTR oder DBTYPE_STR|Java.sql.String|Zeichenfolge oder SqString|  
+|**datetimeoffset**|YYYY-MM-DD hh:mm:ss[.nnnnnnn] [+&#124;-]hh:mm|SQL_WVARCHAR oder SQL_VARCHAR|DBTYPE_WSTR oder DBTYPE_STR|Java.sql.String|Zeichenfolge oder SqString|  
   
-## <a name="converting-date-and-time-data"></a>Konvertieren von Datums-und Uhrzeitdaten
-Beim Konvertieren in date- und time-Datentypen lehnt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alle Werte ab, die nicht als Datum oder Uhrzeit erkannt werden. Informationen zum Verwenden von CAST und CONVERT-Funktionen mit Datums-und Uhrzeitdaten finden Sie unter [CAST und CONVERT &#40; Transact-SQL &#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)
+## <a name="converting-date-and-time-data"></a>Konvertieren von Datums- und Uhrzeitdaten
+Beim Konvertieren in date- und time-Datentypen lehnt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alle Werte ab, die nicht als Datum oder Uhrzeit erkannt werden. Informationen zur Verwendung der CAST-Funktion und der CONVERT-Funktion mit Datums- und Uhrzeitdaten finden Sie unter [CAST und CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md).
   
-### <a name="converting-other-date-and-time-types-to-the-datetime2-data-type"></a>Konvertieren von anderen Datums- und Uhrzeittypen in den datetime2-Datentyp
-In diesem Abschnitt wird beschrieben, was geschieht, wenn andere Datentypen für Datum und Uhrzeit, um konvertiert werden die **datetime2** -Datentyp.  
+### <a name="converting-other-date-and-time-types-to-the-datetime2-data-type"></a>Konvertieren anderer Datums- und Uhrzeittypen in datetime2-Datentyp
+Der folgende Abschnitt veranschaulicht die Abläufe bei der Konvertierung von anderen Datums- und Uhrzeitdatentypen in den Datentyp **datetime2**.  
   
-Wenn die Konvertierung von ist **Datum**, Jahr, Monat und Tag werden kopiert.  Die Zeitkomponente wird auf 00:00:00.0000000 festgelegt.  Der folgende Code zeigt die Ergebnisse der Konvertierung eines `date`-Werts in einen `datetime2`-Wert.  
+Beim Konvertieren in **date** werden das Jahr, der Monat und der Tag kopiert.  Die Zeitkomponente wird auf 00:00:00.0000000 festgelegt.  Der folgende Code zeigt die Ergebnisse der Konvertierung eines `date`-Werts in einen `datetime2`-Wert.  
   
 ```sql
 DECLARE @date date = '12-21-16';
@@ -107,7 +107,7 @@ SELECT @datetime2 AS '@datetime2', @date AS '@date';
 --2016-12-21 00:00:00.0000000 2016-12-21
 ```  
   
-Wenn die Konvertierung von ist **Time(n)-Werte**, die Zeitkomponente wird kopiert, und die Datumskomponente wird festgelegt, um "1900-01-01". Das folgende Beispiel zeigt die Ergebnisse der Konvertierung eines `time(7)`-Werts in einen `datetime2`-Wert.  
+Beim Konvertieren von **time(n)** wird die Zeitkomponente kopiert, und die Datumskomponente wird auf „1900-01-01“ festgelegt. Das folgende Beispiel zeigt die Ergebnisse der Konvertierung eines `time(7)`-Werts in einen `datetime2`-Wert.  
   
 ```sql
 DECLARE @time time(7) = '12:10:16.1234567';
@@ -121,7 +121,7 @@ SELECT @datetime2 AS '@datetime2', @time AS '@time';
 --1900-01-01 12:10:16.1234567 12:10:16.1234567
 ```  
   
-Wenn die Konvertierung von ist **Smalldatetime**, in Stunden und Minuten werden kopiert. Die Sekunden und die Sekundenbruchteile werden auf 0 festgelegt. Der folgende Code zeigt die Ergebnisse der Konvertierung eines `smalldatetime`-Werts in einen `datetime2`-Wert.  
+Wenn die Konvertierung von **samlldatetime** erfolgt, werden die Stunden und Minuten kopiert. Die Sekunden und die Sekundenbruchteile werden auf 0 festgelegt. Der folgende Code zeigt die Ergebnisse der Konvertierung eines `smalldatetime`-Werts in einen `datetime2`-Wert.  
   
 ```sql
 DECLARE @smalldatetime smalldatetime = '12-01-16 12:32';
@@ -135,7 +135,7 @@ SELECT @datetime2 AS '@datetime2', @smalldatetime AS '@smalldatetime';
 --2016-12-01 12:32:00.0000000 2016-12-01 12:32:00 
 ```  
   
-Wenn die Konvertierung von ist **DateTimeOffset (n)**, die Datums- und Zeitkomponenten werden kopiert. Die Zeitzone wird abgeschnitten. Das folgende Beispiel zeigt die Ergebnisse der Konvertierung eines `datetimeoffset(7)`-Werts in einen `datetime2`-Wert.  
+Wenn die Konvertierung von **datetimeoffset(n)** erfolgt, werden die Datums- und Uhrzeitkomponenten kopiert. Die Zeitzone wird abgeschnitten. Das folgende Beispiel zeigt die Ergebnisse der Konvertierung eines `datetimeoffset(7)`-Werts in einen `datetime2`-Wert.  
   
 ```sql
 DECLARE @datetimeoffset datetimeoffset(7) = '2016-10-23 12:45:37.1234567 +10:0';
@@ -149,7 +149,7 @@ SELECT @datetime2 AS '@datetime2', @datetimeoffset AS '@datetimeoffset';
 --2016-10-23 12:45:37.1234567 2016-10-23 12:45:37.1234567 +10:00
 ```  
 
-Wenn die Konvertierung von ist **"DateTime"**, Datum und Uhrzeit werden kopiert.  Die Genauigkeit von Bruchteile wird bis 7 Stellen erweitert.  Das folgende Beispiel zeigt die Ergebnisse der Konvertierung eines `datetime`-Werts in einen `datetime2`-Wert.
+Wenn die Konvertierung von **datetime** erfolgt, werden Datum und Uhrzeit kopiert.  Die Genauigkeit der Sekundenbruchteile wird auf 7 Dezimalstellen erweitert.  Das folgende Beispiel zeigt die Ergebnisse der Konvertierung eines `datetime`-Werts in einen `datetime2`-Wert.
 
 ```sql
 DECLARE @datetime datetime = '2016-10-23 12:45:37.333';
@@ -164,11 +164,11 @@ SELECT @datetime2 AS '@datetime2', @datetime AS '@datetime';
 ```  
   
 ### <a name="converting-string-literals-to-datetime2"></a>Konvertieren von Zeichenfolgenliteralen in datetime2  
-Konvertierungen von Zeichenfolgenliteralen in Datums- und Zeitwerte sind erlaubt, wenn alle Teile der Zeichenfolge in gültigen Formaten vorliegen. Andernfalls wird ein Laufzeitfehler ausgelöst. Wird bei impliziten oder expliziten Konvertierungen von Datums- und Zeitwerten in Zeichenfolgenliterale kein Stil angegeben, wird das Standardformat der aktuellen Sitzung verwendet. Die folgende Tabelle zeigt die Regeln zum Konvertieren einer Zeichenfolge Zeichenfolgenliteral an die **datetime2** -Datentyp.
+Konvertierungen von Zeichenfolgenliteralen in Datums- und Zeitwerte sind erlaubt, wenn alle Teile der Zeichenfolge in gültigen Formaten vorliegen. Andernfalls wird ein Laufzeitfehler ausgelöst. Wird bei impliziten oder expliziten Konvertierungen von Datums- und Zeitwerten in Zeichenfolgenliterale kein Stil angegeben, wird das Standardformat der aktuellen Sitzung verwendet. In der folgenden Tabelle werden die Regeln zum Konvertieren eines Zeichenfolgenliterals in den **datetime2**-Datentyp dargestellt.
   
 |Eingabezeichenfolgenliteral|**datetime2(n)**|  
 |---|---|
-|ODBC DATE|ODBC-Zeichenfolgenliterale zugeordnet sind, um die **"DateTime"** -Datentyp. Jede Zuweisungsoperation von ODBC DATETIME-literalen zu **datetime2** Typen führt dazu, dass eine implizite Konvertierung zwischen **"DateTime"** und dieses Typs gemäß den Konvertierungsregeln.|  
+|ODBC DATE|Dem **datetime**-Datentyp werden ODBC-Zeichenfolgenliterale zugeordnet. Jede Zuweisungsoperation von ODBC DATETIME-Literalen zu **datetime2**-Typen bewirkt eine in den Konvertierungsregeln definierte implizite Konvertierung zwischen **datetime** und diesen Typen.|  
 |ODBC TIME|Siehe vorherige ODBC DATE-Regel.|  
 |ODBC DATETIME|Siehe vorherige ODBC DATE-Regel.|  
 |Nur DATE|Der TIME-Teil wird standardmäßig auf 00:00:00 festgelegt.|  
@@ -180,7 +180,7 @@ Konvertierungen von Zeichenfolgenliteralen in Datums- und Zeitwerte sind erlaubt
 |DATE + TIME + TIMEZONE|Die lokale DATETIME wird verwendet.|  
   
 ## <a name="examples"></a>Beispiele  
-Das folgende Beispiel vergleicht die Ergebnisse der Umwandlung einer Zeichenfolge in alle **Datum** und **Zeit** -Datentyp.
+Im folgenden Beispiel werden die Ergebnisse der Umwandlung einer Zeichenfolge in alle **date**- und **time**-Datentypen verglichen.
   
 ```sql
 SELECT   

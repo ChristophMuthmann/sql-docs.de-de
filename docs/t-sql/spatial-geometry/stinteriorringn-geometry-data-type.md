@@ -1,5 +1,5 @@
 ---
-title: STInteriorRingN (Geometry-Datentyp) | Microsoft Docs
+title: STInteriorRingN (geometry-Datentyp) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stinteriorringn-geometry-data-type"></a>STInteriorRingN (geometry-Datentyp)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Gibt den angegebenen inneren Ring einer **Polygongeometry** Instanz.
+Gibt den angegebenen inneren Ring einer **Polygongeometry**-Instanz zurück.
   
 ## <a name="syntax"></a>Syntax  
   
@@ -45,20 +45,20 @@ Gibt den angegebenen inneren Ring einer **Polygongeometry** Instanz.
   
 ## <a name="arguments"></a>Argumente  
  *expression*  
- Ist ein **Int** -Ausdruck zwischen 1 und der Anzahl innerer Ringe in der **Geometrie** Instanz.  
+ Ein **int**-Ausdruck zwischen 1 und der Anzahl der inneren Ringe in der **geometry**-Instanz.  
   
 ## <a name="return-types"></a>Rückgabetypen  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Rückgabetyp: **Geometrie**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Rückgabetyp: **geometry**  
   
  CLR-Rückgabetyp: **SqlGeometry**  
   
  Open Geospatial Consortium (OGC)-Typ: **LineString**  
   
-## <a name="remarks"></a>Hinweise  
- Diese Methode gibt **null** zurück, wenn die **geometry** -Instanz kein Polygon ist. Diese Methode löst auch ein **ArgumentOutOfRangeException** , wenn der Ausdruck größer als die Anzahl der Ringe ist. Die Anzahl der Ringe zurückgegeben werden kann, mithilfe von `STNumInteriorRing``()`.  
+## <a name="remarks"></a>Remarks  
+ Diese Methode gibt **null** zurück, wenn die **geometry** -Instanz kein Polygon ist. Diese Methode löst außerdem eine **ArgumentOutOfRangeException** aus, wenn der Ausdruck größer als die Anzahl der Ringe ist. Die Anzahl der Ringe kann mithilfe von `STNumInteriorRing``()` zurückgegeben werden.  
   
 ## <a name="examples"></a>Beispiele  
- Das folgende Beispiel erstellt eine `Polygon` -Instanz `STInteriorRingN()` zurückzugebenden den inneren Ring des Polygons als eine **LineString**.  
+ Im folgenden Beispiel wird eine `Polygon`-Instanz erstellt und dann mithilfe von `STInteriorRingN()` der innere Ring des Polygons als **LineString** zurückgegeben.  
   
 ```  
 DECLARE @g geometry;  
@@ -66,7 +66,7 @@ SET @g = geometry::STGeomFromText('POLYGON((0 0, 3 0, 3 3, 0 3, 0 0),(2 2, 2 1, 
 SELECT @g.STInteriorRingN(1).ToString();  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [OGC-Methoden für geometry-Instanzen](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

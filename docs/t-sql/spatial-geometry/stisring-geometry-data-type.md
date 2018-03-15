@@ -1,5 +1,5 @@
 ---
-title: STIsRing (Geometry-Datentyp) | Microsoft Docs
+title: STIsRing (geometry-Datentyp) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -40,7 +40,7 @@ Gibt 1 zur체ck, wenn eine **geometry** -Instanz die folgenden Anforderungen erf�
 -   Sie ist einfach.  
 -   Gibt 0 zur체ck, wenn die **LineString** -Instanz die Anforderungen nicht erf체llt.  
 
- F체r eine **Geometrie** Instanz geschlossen und einfach ist, werden beide [STIsClosed()](../../t-sql/spatial-geometry/stisclosed-geometry-data-type.md) und [STIsSimple()](../../t-sql/spatial-geometry/stissimple-geometry-data-type.md) muss 1 zur체ckgeben, wenn f체r die Instanz aufgerufen. Um zu bestimmen, den Instanztyp einer **Geometrie**, verwenden Sie [STGeometryType()](../../t-sql/spatial-geometry/stgeometrytype-geometry-data-type.md).  
+ Damit eine **geometry**-Instanz als geschlossen und einfach betrachtet werden kann, m체ssen sowohl [STIsClosed()](../../t-sql/spatial-geometry/stisclosed-geometry-data-type.md) als auch [STIsSimple()](../../t-sql/spatial-geometry/stissimple-geometry-data-type.md) 1 zur체ckgeben, wenn sie f체r die Instanz aufgerufen werden. Sie k철nnen den Instanztyp einer **geometry** mithilfe von [STGeometryType()](../../t-sql/spatial-geometry/stgeometrytype-geometry-data-type.md) ermitteln.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -50,11 +50,11 @@ Gibt 1 zur체ck, wenn eine **geometry** -Instanz die folgenden Anforderungen erf�
 ```  
   
 ## <a name="return-types"></a>R체ckgabetypen  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]R체ckgabetyp: **Bit**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-R체ckgabetyp: **bit**  
   
  CLR-R체ckgabetyp: **SqlBoolean**  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Diese Methode gibt NULL zur체ck, wenn die Instanz kein **LineString**ist.  
   
 ## <a name="examples"></a>Beispiele  
@@ -66,10 +66,10 @@ SET @g = geometry::STGeomFromText('LINESTRING(0 0, 2 2, 1 0, 0 0)', 0);
 SELECT @g.STIsRing();  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [STIsClosed &#40;geometry-Datentyp&#41;](../../t-sql/spatial-geometry/stisclosed-geometry-data-type.md)   
- [STGeometryType &#40; Geometry-Datentyp &#41;](../../t-sql/spatial-geometry/stgeometrytype-geometry-data-type.md)   
- [STIsSimple &#40; Geometry-Datentyp &#41;](../../t-sql/spatial-geometry/stissimple-geometry-data-type.md)   
+ [STGeometryType &#40;geometry-Datentyp&#41;](../../t-sql/spatial-geometry/stgeometrytype-geometry-data-type.md)   
+ [STIsSimple &#40;geometry-Datentyp&#41;](../../t-sql/spatial-geometry/stissimple-geometry-data-type.md)   
  [OGC-Methoden f체r geometry-Instanzen](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

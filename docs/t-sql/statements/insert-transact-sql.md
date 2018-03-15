@@ -1,5 +1,5 @@
 ---
-title: INSERT (Transact-SQL) | Microsoft Docs
+title: INSERT (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
@@ -139,21 +139,21 @@ INSERT INTO [ database_name . [ schema_name ] . | schema_name . ] table_name
 ```  
   
 ## <a name="arguments"></a>Argumente  
- MIT \<Common_table_expression >  
- Gibt das (auch als allgemeiner Tabellenausdruck bezeichnete) temporäre benannte Resultset an, das innerhalb des Bereichs der INSERT-Anweisung definiert ist. Das Resultset wird von einer SELECT-Anweisung abgeleitet. Weitere Informationen finden Sie unter [WITH Common_table_expression &#40; Transact-SQL &#41; ](../../t-sql/queries/with-common-table-expression-transact-sql.md).  
+ WITH \<common_table_expression>  
+ Gibt das (auch als allgemeiner Tabellenausdruck bezeichnete) temporäre benannte Resultset an, das innerhalb des Bereichs der INSERT-Anweisung definiert ist. Das Resultset wird von einer SELECT-Anweisung abgeleitet. Weitere Informationen finden Sie unter [WITH common_table_expression &#40;Transact-SQL&#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md).  
   
- Nach oben (*Ausdruck*) [%]  
- Gibt die Anzahl oder den Prozentsatz willkürlicher Zeilen an, die eingefügt werden. *expression* kann eine Anzahl oder ein Prozentsatz der Zeilen sein. Weitere Informationen finden Sie unter [nach oben &#40; Transact-SQL &#41; ](../../t-sql/queries/top-transact-sql.md).  
+ TOP (*expression*) [ PERCENT ]  
+ Gibt die Anzahl oder den Prozentsatz willkürlicher Zeilen an, die eingefügt werden. *expression* kann eine Anzahl oder ein Prozentsatz der Zeilen sein. Weitere Informationen finden Sie unter [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md).  
   
  INTO  
  Ein optionales Schlüsselwort, das zwischen INSERT und der Zieltabelle verwendet werden kann.  
   
- *Servername*  
+ *server_name*  
  **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Der Name des Verbindungsservers, auf dem sich die Tabelle oder Sicht befinden. *Server_name* kann angegeben werden, als ein [Verbindungsserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) Namen, oder indem Sie die [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) Funktion.  
+ Der Name des Verbindungsservers, auf dem sich die Tabelle oder Sicht befinden. Für *server_name* kann der Name eines [Verbindungsservers](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) angegeben werden, oder Sie verwenden die Funktion [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md).  
   
- Wenn *Server_name* angegeben ist, als Verbindungsserver, *Database_name* und *Schema_name* erforderlich sind. Wenn *Server_name* mit OPENDATASOURCE angegeben wird *Database_name* und *Schema_name* gelten möglicherweise nicht für alle Datenquellen und unterliegen den Funktionen der OLE DB Anbieter, der das Remoteobjekt zugreift.  
+ Wenn *server_name* als Verbindungsserver angegeben ist, sind *database_name* und *schema_name* erforderlich. Wenn *server_name* mit OPENDATASOURCE angegeben wird, gelten *database_name* und *schema_name* möglicherweise nicht für alle Datenquellen und unterliegen den Funktionen des OLE DB-Anbieters, der auf das Remoteobjekt zugreift.  
   
  *database_name*  
  **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -163,64 +163,64 @@ INSERT INTO [ database_name . [ schema_name ] . | schema_name . ] table_name
  *schema_name*  
  Der Name des Schemas, zu dem die Tabelle oder Sicht gehört.  
   
- *Table_or view_name*  
+ *table_or_view_name*  
  Der Name der Tabelle oder Sicht, die die Daten empfangen soll.  
   
- Ein [Tabelle](../../t-sql/data-types/table-transact-sql.md) -Variable in ihrem Gültigkeitsbereich kann als Tabellenquelle in einer INSERT-Anweisung verwendet werden.  
+ Innerhalb ihres Bereichs kann eine [table](../../t-sql/data-types/table-transact-sql.md)-Variable als Tabellenquelle in einer INSERT-Anweisung verwendet werden.  
   
- Die Sicht verweist *Table_or_view_name* muss aktualisierbar sein und auf genau eine Basistabelle in der FROM-Klausel der Sicht verweisen. Beispielsweise muss eine Einfügung in eine Sicht mit mehreren Tabellen verwenden ein *Column_list* , die nur auf Spalten einer einzigen Basistabelle verweist. Weitere Informationen zu aktualisierbaren Sichten finden Sie unter [CREATE VIEW &#40; Transact-SQL &#41; ](../../t-sql/statements/create-view-transact-sql.md).  
+ Die Sicht, auf die *table_or_view_name* verweist, muss aktualisierbar sein und auf genau eine Basistabelle in der FROM-Klausel der Sicht verweisen. Beispielsweise muss eine INSERT-Anweisung für eine auf mehreren Tabellen basierende Sicht eine *column_list* verwenden, die nur auf Spalten einer einzigen Basistabelle verweist. Weitere Informationen zu aktualisierbaren Sichten finden Sie unter [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md).  
   
  *rowset_function_limited*  
  **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Handelt es sich um die [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md) oder [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) Funktion. Die Verwendung dieser Funktionen unterliegt den Funktionen des OLE DB-Anbieters, der auf das Remoteobjekt zugreift.  
+ Die [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md)-Funktion oder die [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md)-Funktion. Die Verwendung dieser Funktionen unterliegt den Funktionen des OLE DB-Anbieters, der auf das Remoteobjekt zugreift.  
   
- MIT ( \<Table_hint_limited > [... *n* ] )  
+ WITH ( \<table_hint_limited> [... *n* ] )  
  Gibt mindestens einen Tabellenhinweis an, der für eine Zieltabelle zulässig ist. Das WITH-Schlüsselwort und die Klammern sind erforderlich.  
   
- READPAST, NOLOCK und READUNCOMMITTED sind nicht zulässig. Weitere Informationen zu Tabellenhinweisen finden Sie unter [Tabellenhinweise &#40; Transact-SQL &#41; ](../../t-sql/queries/hints-transact-sql-table.md).  
+ READPAST, NOLOCK und READUNCOMMITTED sind nicht zulässig. Weitere Informationen zu Tabellenhinweisen finden Sie unter [Tabellenhinweise &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
   
 > [!IMPORTANT]  
 >  Die Möglichkeit, die Hinweise HOLDLOCK, SERIALIZABLE, READCOMMITTED, REPEATABLEREAD oder UPDLOCK für Tabellen anzugeben, bei denen es sich um Ziele von INSERT-Anweisungen handelt, wird in einer zukünftigen Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entfernt. Diese Hinweise beeinträchtigen die Leistung von INSERT-Anweisungen nicht. Vermeiden Sie ihre Verwendung bei neuen Entwicklungsarbeiten, und planen Sie die Änderung von Anwendungen, in denen sie aktuell verwendet werden.  
   
  Das Angeben eines TABLOCK-Hinweises für eine Tabelle, die das Ziel einer INSERT-Anweisung ist, hat dieselbe Wirkung wie das Angeben eines TABLOCKX-Hinweises. Auf die Tabelle wird eine exklusive Sperre angewendet.  
   
- (*Column_list*)  
- Eine Liste mit einer oder mehreren Spalten, in die Daten eingefügt werden sollen. *Column_list* muss in Klammern eingeschlossen und durch Kommas getrennt werden.  
+ (*column_list*)  
+ Eine Liste mit einer oder mehreren Spalten, in die Daten eingefügt werden sollen. *column_list* muss in Klammern eingeschlossen und durch ein Komma getrennt werden.  
   
- Wenn eine Spalte nicht im *Column_list*, die [!INCLUDE[ssDE](../../includes/ssde-md.md)] muss in der Lage, bieten Wert basierend auf der Definition der Spalte; andernfalls, die die Zeile kann nicht geladen werden kann. [!INCLUDE[ssDE](../../includes/ssde-md.md)] stellt automatisch einen Wert für die Spalte bereit, wenn für sie eine der folgenden Bedingungen erfüllt ist:  
+ Ist eine Spalte nicht in *column_list* enthalten, muss [!INCLUDE[ssDE](../../includes/ssde-md.md)] in der Lage sein, basierend auf der Spaltendefinition einen Wert bereitzustellen. Andernfalls kann die Zeile nicht geladen werden. [!INCLUDE[ssDE](../../includes/ssde-md.md)] stellt automatisch einen Wert für die Spalte bereit, wenn für sie eine der folgenden Bedingungen erfüllt ist:  
   
 -   Besitzt eine IDENTITY-Eigenschaft. Der nächste inkrementelle Identitätswert wird verwendet.  
   
 -   Verfügt über einen Standardwert. Der Standardwert der Spalte wird verwendet.  
   
--   Verfügt über eine **Zeitstempel** -Datentyp. Der aktuelle Zeitstempelwert wird verwendet.  
+-   Verfügt über einen **timestamp**-Datentyp. Der aktuelle Zeitstempelwert wird verwendet.  
   
 -   Lässt NULL-Werte zu. Ein NULL-Wert wird verwendet.  
   
--   Ist eine berechnete Spalte an. Der berechnete Wert wird verwendet.  
+-   Ist eine berechnete Spalte. Der berechnete Wert wird verwendet.  
   
-*Column_list* muss beim Einfügen von expliziten Werten in eine Identity-Spalte und die Option SET IDENTITY_INSERT ON, für die Tabelle werden muss verwendet werden.  
+*column_list* muss beim Einfügen von expliziten Werten in eine Identitätsspalte verwendet werden. Dabei muss die Option SET IDENTITY_INSERT für die Tabelle auf ON festgelegt sein.  
   
 OUTPUT-Klausel  
  Gibt eingefügte Zeilen als Teil des Einfügevorgangs zurück. Die Ergebnisse können an die Verarbeitungsanwendung zurückgegeben bzw. zur weiteren Verarbeitung in eine Tabelle oder eine Tabellenvariable eingefügt werden.  
   
- Die [OUTPUT-Klausel](../../t-sql/queries/output-clause-transact-sql.md) wird nicht unterstützt in DML-Anweisungen, die auf lokale partitionierte Sichten, verteilte partitionierte Sichten oder Remotetabellen verweisen, oder INSERT-Anweisungen, die enthalten eine *Execute_statement*. Die OUTPUT INTO-Klausel wird nicht unterstützt, in der INSERT-Anweisungen, die enthalten eine \<Dml_table_source >-Klausel. 
+ Die [OUTPUT-Klausel](../../t-sql/queries/output-clause-transact-sql.md) wird in DML-Anweisungen, die auf lokale partitionierte Sichten, verteilte partitionierte Sichten oder Remotetabellen verweisen, oder INSERT-Anweisungen, die *execute_statement* enthalten, nicht unterstützt. Die OUTPUT INTO-Klausel wird nicht in INSERT-Anweisungen unterstützt, die eine \<dml_table_source>-Klausel enthalten. 
   
  VALUES  
- Steht vor der Liste oder den Listen der Datenwerte, die eingefügt werden sollen. Es muss ein Datenwert für jede Spalte in *Column_list*, falls angegeben, oder in der Tabelle. Die Werteliste muss in Klammern eingeschlossen werden.  
+ Steht vor der Liste oder den Listen der Datenwerte, die eingefügt werden sollen. Für jede Spalte in *column_list* (falls angegeben) bzw. in der Tabelle muss ein Datenwert vorhanden sein. Die Wertliste muss in Klammern stehen.  
   
- Wenn die Werte in der Werteliste nicht im dieselbe Reihenfolge der Spalten in der Tabelle oder einen Wert für jede Spalte in der Tabelle verfügen nicht über *Column_list* muss verwendet werden, um explizit die Spalte angeben, die eingehender Wert jeweils gespeichert.  
+ Wenn die Reihenfolge der Werte in der Werteliste nicht mit der Reihenfolge der Spalten in der Tabelle übereinstimmt oder wenn nicht für jede Spalte in der Tabelle ein Wert vorhanden ist, muss mithilfe von *column_list* explizit die Spalte angegeben werden, in der ein eingehender Wert gespeichert werden soll.  
   
- Mit dem [!INCLUDE[tsql](../../includes/tsql-md.md)]-Zeilenkonstruktor (auch Tabellenwertkonstruktor genannt) können mehrere Zeilen in einer einzelnen INSERT-Anweisung angegeben werden. Der Zeilenkonstruktor besteht aus einer einzelnen VALUES-Klausel mit mehreren Wertelisten, die in Klammern eingeschlossen und durch ein Komma getrennt sind. Weitere Informationen finden Sie unter [Tabellenwertkonstruktor &#40; Transact-SQL &#41; ](../../t-sql/queries/table-value-constructor-transact-sql.md).  
+ Mit dem [!INCLUDE[tsql](../../includes/tsql-md.md)]-Zeilenkonstruktor (auch Tabellenwertkonstruktor genannt) können mehrere Zeilen in einer einzelnen INSERT-Anweisung angegeben werden. Der Zeilenkonstruktor besteht aus einer einzelnen VALUES-Klausel mit mehreren Wertelisten, die in Klammern eingeschlossen und durch ein Komma getrennt sind. Weitere Informationen finden Sie unter [Tabellenwertkonstruktor &#40;Transact-SQL&#41;](../../t-sql/queries/table-value-constructor-transact-sql.md).  
   
  DEFAULT  
- Erzwingt, dass [!INCLUDE[ssDE](../../includes/ssde-md.md)] den für eine Spalte definierten Standardwert lädt. Wenn für die Spalte kein Standardwert vorhanden ist und die Spalte NULL-Werte zulässt, wird NULL eingefügt. Für eine Spalte mit definiert die **Zeitstempel** -Datentyp, der nächste Zeitstempelwert eingefügt wird. DEFAULT ist für eine Identitätsspalte nicht zulässig.  
+ Erzwingt, dass [!INCLUDE[ssDE](../../includes/ssde-md.md)] den für eine Spalte definierten Standardwert lädt. Wenn für die Spalte kein Standardwert vorhanden ist und die Spalte NULL-Werte zulässt, wird NULL eingefügt. Für eine Spalte, die mit dem Datentyp **timestamp** definiert ist, wird der nächste Zeitstempelwert eingefügt. DEFAULT ist für eine Identitätsspalte nicht zulässig.  
   
  *expression*  
  Eine Konstante, eine Variable oder ein Ausdruck. Der Ausdruck darf keine EXECUTE-Anweisung enthalten.  
   
- Beim Verweisen auf die Unicode-Zeichen-Datentypen **Nchar**, **Nvarchar**, und **Ntext**, "*Ausdruck*" vorangestellt werden die Großbuchstabe ' n '. Wenn "N" nicht angegeben wird, konvertiert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Zeichenfolge in die Codepage, die der Standardsortierung der Datenbank oder Spalte entspricht. Alle Zeichen, die in der betreffenden Codepage nicht gefunden werden, gehen verloren.  
+ In Verweisen auf die Zeichendatentypen in Unicode **nchar**, **nvarchar** und **ntext** muss *expression* der Großbuchstabe „N“ vorangestellt werden. Wenn "N" nicht angegeben wird, konvertiert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Zeichenfolge in die Codepage, die der Standardsortierung der Datenbank oder Spalte entspricht. Alle Zeichen, die in der betreffenden Codepage nicht gefunden werden, gehen verloren.  
   
  *derived_table*  
  Eine gültige SELECT-Anweisung, die in die Tabelle zu ladende Datenzeilen zurückgibt. Die SELECT-Anweisung kann keinen allgemeinen Tabellenausdruck (Common Table Expression, CTE) enthalten.  
@@ -230,16 +230,16 @@ OUTPUT-Klausel
   
  Die RESULT SETS-Optionen der EXECUTE-Anweisung können in einer INSERT…EXEC-Anweisung nicht angegeben werden.  
   
- Wenn *Execute_statement* werden mit INSERT, muss jedes Resultset mit den Spalten in der Tabelle oder im kompatibel sein *Column_list*.  
+ Wenn *execute_statement* mit INSERT verwendet wird, muss jedes Resultset mit den Spalten in der Tabelle oder in *column_list* kompatibel sein.  
   
- *Execute_statement* zum Ausführen gespeicherter Prozeduren auf dem gleichen Server oder einem Remoteserver verwendet werden können. Die Prozedur auf dem Remoteserver wird ausgeführt, und die Resultsets werden an den lokalen Server gesendet. Anschließend werden sie in die Tabelle auf dem lokalen Server geladen. In einer verteilten Transaktion *Execute_statement* kann nicht für einen Loopback-Verbindungsserver ausgegeben werden, wenn die Verbindung mehrere aktive Resultsets (MARS) aktiviert ist.  
+ *execute_statement* kann zum Ausführen gespeicherter Prozeduren auf dem gleichen Server oder auf einem Remoteserver verwendet werden. Die Prozedur auf dem Remoteserver wird ausgeführt, und die Resultsets werden an den lokalen Server gesendet. Anschließend werden sie in die Tabelle auf dem lokalen Server geladen. In einer verteilten Transaktion kann *execute_statement* nicht für einen verknüpften Loopbackserver ausgeführt werden, wenn für die Verbindung mehrere aktive Resultsets (MARS) aktiviert ist.  
   
- Wenn *Execute_statement* gibt Daten zurück, mit der READTEXT-Anweisung kann jede READTEXT-Anweisung maximal 1 MB (1024 KB) Daten zurückgeben. *Execute_statement* kann auch mit erweiterten Prozeduren verwendet werden. *Execute_statement* fügt die Daten durch den Hauptthread der erweiterten Prozedur zurückgegeben; jedoch der Ausgabe von anderen Threads als dem Hauptthread nicht eingefügt werden.  
+ Wenn *execute_statement* Daten mit der READTEXT-Anweisung zurückgibt, kann jede READTEXT-Anweisung maximal 1 MB (1024 KB) an Daten zurückgeben. *execute_statement* kann auch mit erweiterten Prozeduren verwendet werden. *execute_statement* fügt die durch den Hauptthread der erweiterten Prozedur zurückgegebenen Daten ein. Die Ausgabe von anderen Threads als dem Hauptthread wird hingegen nicht eingefügt.  
   
  Sie können keinen Tabellenwertparameter als Ziel einer INSERT EXEC-Anweisung angeben; er kann jedoch als Quelle in der INSERT EXEC-Zeichenfolge oder der gespeicherten Prozedur angegeben werden. Weitere Informationen finden Sie unter [Use Table-Valued Parameters &#40;Database Engine&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md).  
   
- \<Dml_table_source >  
- Gibt an, dass es sich bei den in die Zieltabelle eingefügten Zeilen um die von der OUTPUT-Klausel in der INSERT-, UPDATE-, DELETE- oder MERGE-Anweisung zurückgegebenen Zeilen handelt, die optional durch eine WHERE-Klausel gefiltert werden. Wenn \<Dml_table_source > angegeben ist, wird das Ziel der äußeren INSERT-Anweisung erfüllt die folgenden Einschränkungen: 
+ \<dml_table_source>  
+ Gibt an, dass es sich bei den in die Zieltabelle eingefügten Zeilen um die von der OUTPUT-Klausel in der INSERT-, UPDATE-, DELETE- oder MERGE-Anweisung zurückgegebenen Zeilen handelt, die optional durch eine WHERE-Klausel gefiltert werden. Wenn \<dml_table_source> angegeben ist, muss das Ziel der äußeren INSERT-Anweisung die folgenden Einschränkungen einhalten: 
   
 -   Die Tabelle muss eine Basistabelle sein, keine Sicht.  
   
@@ -251,19 +251,19 @@ OUTPUT-Klausel
   
 -   Sie darf nicht an Mergereplikationen oder aktualisierbaren Abonnements für Transaktionsreplikationen teilnehmen.  
   
- Der Kompatibilitätsgrad der Datenbank muss auf 100 oder höher festgelegt sein. Weitere Informationen finden Sie unter [OUTPUT-Klausel &#40; Transact-SQL &#41; ](../../t-sql/queries/output-clause-transact-sql.md).  
+ Der Kompatibilitätsgrad der Datenbank muss auf 100 oder höher festgelegt sein. Weitere Informationen finden Sie unter [OUTPUT-Klausel &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md).  
   
- \<Select_list >  
- Eine durch Trennzeichen getrennte Liste, die angibt, welche von der OUTPUT-Klausel zurückgegebenen Spalten eingefügt werden sollen. Die Spalten in \<Select_list > müssen mit den Spalten, die in die Werte eingefügt werden kompatibel sein. \<Select_list > kann nicht auf Aggregatfunktionen oder TEXTPTR verweisen. 
+ \<select_list>  
+ Eine durch Trennzeichen getrennte Liste, die angibt, welche von der OUTPUT-Klausel zurückgegebenen Spalten eingefügt werden sollen. Die Spalten in \<select_list> müssen mit den Spalten kompatibel sein, in die Werte eingefügt werden. \<select_list> kann nicht auf Aggregatfunktionen oder TEXTPTR verweisen. 
   
 > [!NOTE]  
->  In der SELECT-Liste aufgeführten Variablen verweisen auf ihre ursprünglichen Werte, unabhängig von der alle Änderungen, die im \<Dml_statement_with_output_clause >.  
+>  In der SELECT-Liste aufgeführte Variablen verweisen auf ihre ursprünglichen Werte, unabhängig von den Änderungen, die daran in \<dml_statement_with_output_clause> vorgenommen wurden.  
   
- \<Dml_statement_with_output_clause >  
+ \<dml_statement_with_output_clause>  
  Eine gültige INSERT-, UPDATE-, DELETE- oder MERGE-Anweisung, die betroffene Zeilen in einer OUTPUT-Klausel zurückgibt. Die Anweisung darf keine WITH-Klausel enthalten und sich nicht auf Remotetabellen oder partitionierte Sichten beziehen. Wenn UPDATE oder DELETE angegeben wird, darf kein cursorbasiertes UPDATE oder DELETE verwendet werden. Auf Quellzeilen darf nicht als geschachtelte DML-Anweisungen verwiesen werden.  
   
- WOBEI \<Search_condition >  
- Ist WHERE-Klausel enthält einen gültigen \<Search_condition >, die von zurückgegebenen Zeilen filtert \<Dml_statement_with_output_clause >. Weitere Informationen finden Sie unter [Suchbedingung &#40; Transact-SQL &#41; ](../../t-sql/queries/search-condition-transact-sql.md). Wenn in diesem Kontext verwendet \<Search_condition > sind keine Unterabfragen, benutzerdefinierten Skalarfunktionen, die den Datenzugriff, Aggregatfunktionen, TEXTPTR oder Prädikate der Volltextsuche ausführen. 
+ WHERE \<search_condition>  
+ WHERE-Klausel mit gültiger \<search_condition>, die die von \<dml_statement_with_output_clause> zurückgegebenen Zeilen filtert. Weitere Informationen finden Sie unter [Suchbedingung &#40;Transact-SQL&#41;](../../t-sql/queries/search-condition-transact-sql.md). Bei Verwendung in diesem Kontext darf \<search_condition> keine Unterabfragen und benutzerdefinierte Skalarfunktionen für einen Datenzugriff, Aggregatfunktionen, TEXTPTR oder Prädikate der Volltextsuche enthalten. 
   
  DEFAULT VALUES  
  **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -273,7 +273,7 @@ OUTPUT-Klausel
  BULK  
 **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Wird von externen Tools verwendet, um einen Binärdatenstrom hochzuladen. Diese Option dient nicht zur Verwendung mit Tools wie z. B. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], SQLCMD, OSQL oder Daten zugreifen datenzugriffsanwendungs-Programmierschnittstellen wie z. B. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
+ Wird von externen Tools verwendet, um einen Binärdatenstrom hochzuladen. Diese Option ist nicht zur Verwendung mit Tools wie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], SQLCMD, OSQL oder Anwendungsprogrammierschnittstellen für den Datenzugriff wie den nativen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Client bestimmt.  
   
  FIRE_TRIGGERS  
  **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -291,26 +291,26 @@ OUTPUT-Klausel
  Gibt an, dass leere Spalten während des Binärdatenstrom-Uploads einen NULL-Wert beibehalten sollen. Weitere Informationen finden Sie unter [Beibehalten von NULL-Werten oder Verwenden von Standardwerten während des Massenimports &#40;SQL Server&#41;](../../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md).  
   
  KILOBYTES_PER_BATCH = kilobytes_per_batch  
- Gibt die ungefähre Anzahl der Kilobytes (KB) an Daten pro Batch als *Kilobytes_per_batch*. Weitere Informationen finden Sie unter [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md).  
+ Gibt die ungefähre Datenmenge pro Batch in KB als *kilobytes_per_batch* an. Weitere Informationen finden Sie unter [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md).  
   
- ROWS_PER_BATCH =*Rows_per_batch*  
+ ROWS_PER_BATCH =*rows_per_batch*  
  **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Gibt die ungefähre Anzahl von Datenzeilen im Binärdatenstrom an. Weitere Informationen finden Sie unter [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md).  
   
 >  [!NOTE]
->  Ein Syntaxfehler ausgelöst, wenn eine Spaltenliste nicht bereitgestellt wird.  
+>  Ein Syntaxfehler wird ausgelöst, wenn keine Spaltenliste bereitgestellt wird.  
 
-## <a name="remarks"></a>Hinweise  
-Informationen zum Einfügen von Daten in SQL-Diagramm Tabellen finden Sie unter [INSERT (SQL-Diagramm)](../../t-sql/statements/insert-sql-graph.md). 
+## <a name="remarks"></a>Remarks  
+Spezifische Informationen zum Einfügen von Daten in SQL-Graph-Tabellen finden Sie unter [INSERT (SQL-Graph)](../../t-sql/statements/insert-sql-graph.md). 
 
 ## <a name="best-practices"></a>Bewährte Methoden  
- Verwenden der @@ROWCOUNT Funktion zum Zurückgeben der Anzahl der eingefügten Zeilen an die Clientanwendung. Weitere Informationen finden Sie unter [@@ROWCOUNT &#40; Transact-SQL &#41; ](../../t-sql/functions/rowcount-transact-sql.md).  
+ Verwenden Sie die Funktion @@ROWCOUNT, um die Anzahl der eingefügten Zeilen an die Clientanwendung zurückzugeben. Weitere Informationen finden Sie unter [@@ROWCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/rowcount-transact-sql.md).  
   
 ### <a name="best-practices-for-bulk-importing-data"></a>Bewährte Methoden für den Massenimport von Daten  
   
 #### <a name="using-insert-intoselect-to-bulk-import-data-with-minimal-logging"></a>Verwenden von INSERT INTO…SELECT für den Massenimport von Daten mit minimaler Protokollierung  
- Sie können `INSERT INTO <target_table> SELECT <columns> FROM <source_table>` effizient eine große Anzahl von Zeilen aus einer Tabelle, wie eine Stagingtabelle in eine andere Tabelle mit minimaler Protokollierung übertragen. Die minimale Protokollierung kann die Leistung der Anweisung verbessern und die Wahrscheinlichkeit senken, dass der Vorgang den verfügbaren Transaktionsprotokoll-Speicherplatz während der Transaktion auffüllt.  
+ Sie können `INSERT INTO <target_table> SELECT <columns> FROM <source_table>` verwenden, um eine große Anzahl von Zeilen aus einer Tabelle, z.B. einer Stagingtabelle, effizient in eine andere Tabelle mit minimaler Protokollierung zu übertragen. Die minimale Protokollierung kann die Leistung der Anweisung verbessern und die Wahrscheinlichkeit senken, dass der Vorgang den verfügbaren Transaktionsprotokoll-Speicherplatz während der Transaktion auffüllt.  
   
  Bei der minimalen Protokollierung für diese Anweisung müssen die folgenden Voraussetzungen erfüllt sein:  
   
@@ -329,7 +329,7 @@ Zeilen, die infolge einer Einfügeaktion in eine MERGE-Anweisung in einen Heap e
 #### <a name="using-openrowset-and-bulk-to-bulk-import-data"></a>Verwenden von OPENROWSET und BULK für den Massenimport von Daten  
  Von der OPENROWSET-Funktion können die folgenden Tabellenhinweise akzeptiert werden, die Massenladeoptimierungen mit der INSERT-Anweisung bereitstellen:  
   
--   Der TABLOCK-Hinweis kann die Anzahl der Protokolldatensätze für den Einfügevorgang minimieren. Das Wiederherstellungsmodell der Datenbank muss auf einfach oder massenprotokolliert festgelegt werden, und die Zieltabelle kann nicht in der Replikation verwendet werden. Weitere Informationen finden Sie unter [Prerequisites for Minimal Logging in Bulk Import](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md).  
+-   Der TABLOCK-Hinweis kann die Anzahl der Protokolldatensätze für den Einfügevorgang minimieren. Das Wiederherstellungsmodell der Datenbank muss auf einfach oder massenprotokolliert festgelegt werden, und die Zieltabelle kann nicht in der Replikation verwendet werden. Weitere Informationen finden Sie unter [Voraussetzungen für die minimale Protokollierung beim Massenimport](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md).  
   
 -   Durch den IGNORE_CONSTRAINTS-Hinweis kann vorübergehend die FOREIGN KEY- und CHECK-Einschränkungsüberprüfung deaktiviert werden.  
   
@@ -344,7 +344,7 @@ Diese Optimierungen sind mit denen vergleichbar, die mit dem BULK INSERT-Befehl 
 ## <a name="data-types"></a>Datentypen  
  Beachten Sie beim Einfügen von Zeilen das folgende Datentypverhalten:  
   
--   Wenn Sie ein Wert in Spalten mit geladen wird eine **Char**, **Varchar**, oder **Varbinary** -Datentyp, der Auffüllung oder Abschneiden nachfolgender Leerstellen (Leerzeichen bei  **Char** und **Varchar**, Nullen bei **Varbinary**) richtet sich nach der SET ANSI_PADDING-Einstellung für die Spalte definiert werden, wenn die Tabelle erstellt wurde. Weitere Informationen finden Sie unter [SET ANSI_PADDING &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-padding-transact-sql.md).  
+-   Wird ein Wert in Spalten mit dem Datentyp **char**, **varchar** oder **varbinary** geladen, ist die Auffüllung mit Leerstellen oder das Abschneiden nachfolgender Leerstellen (Leerzeichen bei **char** und **varchar**, Nullen bei **varbinary**) abhängig von der Einstellung für SET ANSI_PADDING, die bei der Tabellenerstellung für die Spalte festgelegt wurde. Weitere Informationen finden Sie unter [SET ANSI_PADDING &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-padding-transact-sql.md).  
   
      Die folgende Tabelle zeigt den Standardvorgang für SET ANSI_PADDING OFF.  
   
@@ -354,18 +354,18 @@ Diese Optimierungen sind mit denen vergleichbar, die mit dem BULK INSERT-Befehl 
     |**varchar**|Löscht nachfolgende Leerzeichen bis zum ersten Zeichen, das kein Leerzeichen ist, oder alle Zeichen bis auf eines, wenn die Zeichenfolge nur aus Leerzeichen besteht.|  
     |**varbinary**|Löscht nachfolgende Nullen.|  
   
--   Wenn eine leere Zeichenfolge ("") wird geladen, in eine Spalte mit einer **Varchar** oder **Text** -Datentyp, der Standardvorgang ist eine Zeichenfolge der Länge 0 (null) zu laden.  
+-   Wird eine leere Zeichenfolge („ “) in eine Spalte mit dem Datentyp **varchar** oder **text** geladen, wird standardmäßig eine Zeichenfolge der Länge 0 (null) eingefügt.  
   
--   Einfügen von null-Wert in einer **Text** oder **Image** Spalte erstellt keinen gültigen Textzeiger noch ist eine 8-KB-Textseite Vorabzuordnung.  
+-   Durch das Einfügen eines NULL-Werts in eine Spalte mit dem Datentyp **text** oder **image** wird kein gültiger Textzeiger erstellt, und es wird vorab auch keine 8-KB-Textseite zugeordnet.  
   
--   Spalten mit erstellt die **"uniqueidentifier"** Daten enthalten speziell formatierte 16-Byte-Binärwerte. Im Gegensatz zu mit Identity-Spalten, die [!INCLUDE[ssDE](../../includes/ssde-md.md)] generiert Werte für Spalten mit nicht automatisch die **"uniqueidentifier"** -Datentyp. Bei einem Einfügevorgang können Variablen mit einem Typ **"uniqueidentifier"** und Zeichenfolgenkonstanten der Form *Xxxxxxxx-Xxxx-Xxxx-Xxxx-Xxxxxxxxxxxx* (36 Zeichen inklusive Bindestriche, wobei *x* eine Hexadezimalziffer im Bereich 0-9 bzw. a-f) kann verwendet werden, für die **"uniqueidentifier"** Spalten. Beispielsweise ist 6F9619FF-8B86-D011-B42D-00C04FC964FF ein gültiger Wert für eine **"uniqueidentifier"** Variable oder Spalte. Verwenden der [NEWID()](../../t-sql/functions/newid-transact-sql.md) Funktion, um eine global eindeutige ID (GUID) zu erhalten.  
+-   Mit dem Datentyp **uniqueidentifier** erstellte Spalten enthalten speziell formatierte 16-Byte-Binärwerte. Anders als bei Identitätsspalten generiert [!INCLUDE[ssDE](../../includes/ssde-md.md)] für Spalten mit dem Datentyp **uniqueidentifier** nicht automatisch Werte. Bei einem Einfügevorgang können Variablen mit einem **uniqueidentifier**-Datentyp und Zeichenfolgenkonstanten der Form *xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx* (36 Zeichen inklusive Bindestriche, wobei *x* für eine Hexadezimalziffer im Bereich 0–9 bzw. a–f steht) für **uniqueidentifier**-Spalten verwendet werden. Der Wert 6F9619FF-8B86-D011-B42D-00C04FC964FF ist z.B. ein gültiger Wert für eine **uniqueidentifier**-Variable oder -Spalte. Verwenden Sie die Funktion [NEWID()](../../t-sql/functions/newid-transact-sql.md), um eine GUID (ein eindeutiger Bezeichner) abzurufen.  
   
 ### <a name="inserting-values-into-user-defined-type-columns"></a>Einfügen von Werten in Spalten eines benutzerdefinierten Typs  
  Sie können Werte in Spalten eines benutzerdefinierten Typs einfügen, indem Sie eine der folgenden Methoden verwenden:  
   
 -   Bereitstellen eines Werts des benutzerdefinierten Typs  
   
--   Bereitstellen eines Werts eines [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Systemdatentyps, sofern der benutzerdefinierte Typ implizite oder explizite Konvertierung von diesem Typ unterstützt. Im folgende Beispiel wird gezeigt, wie zum Einfügen eines Werts in einer Spalte des benutzerdefinierten Typs `Point`, durch explizites konvertieren aus einer Zeichenfolge.  
+-   Bereitstellen eines Werts eines [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Systemdatentyps, sofern der benutzerdefinierte Typ implizite oder explizite Konvertierung von diesem Typ unterstützt. Im folgenden Beispiel wird gezeigt, wie ein Wert durch explizite Konvertierung von einer Zeichenfolge in eine Spalte des benutzerdefinierten Typs `Point` eingefügt wird.  
   
     ```  
     INSERT INTO Cities (Location)  
@@ -391,48 +391,48 @@ Diese Optimierungen sind mit denen vergleichbar, die mit dem BULK INSERT-Befehl 
  Wenn in einer INSERT-Anweisung bei der Auswertung eines Ausdrucks ein arithmetischer Fehler (Überlauf, Division durch Null oder Domänenfehler) auftritt, behandelt [!INCLUDE[ssDE](../../includes/ssde-md.md)] den Fehler so, als wäre SET ARITHABORT auf ON festgelegt. Der Batch wird beendet, und eine Fehlermeldung wird zurückgegeben. Wenn in einer Anweisung INSERT, DELETE oder UPDATE ein arithmetischer Fehler (Überlauf, Division durch 0 (null) oder Bereichsfehler) bei der Auswertung eines Ausdrucks auftritt und SET ARITHABORT und SET ANSI_WARNINGS auf OFF festgelegt ist, fügt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einen NULL-Wert ein oder aktualisiert ihn. Wenn die Zielspalte keine NULL-Werte zulässt, schlägt das Einfügen oder Aktualisieren fehl, und dem Benutzer wird ein Fehler angezeigt.  
   
 ## <a name="interoperability"></a>Interoperabilität  
- Wenn ein INSTEAD OF-Trigger für INSERT-Aktionen für eine Tabelle oder Sicht definiert ist, wird der Trigger anstelle der INSERT-Anweisung ausgeführt. Weitere Informationen zu INSTEAD OF-Trigger finden Sie unter [CREATE TRIGGER &#40; Transact-SQL &#41; ](../../t-sql/statements/create-trigger-transact-sql.md).  
+ Wenn ein INSTEAD OF-Trigger für INSERT-Aktionen für eine Tabelle oder Sicht definiert ist, wird der Trigger anstelle der INSERT-Anweisung ausgeführt. Weitere Informationen zu INSTEAD OF-Triggern finden Sie unter [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md).  
   
 ## <a name="limitations-and-restrictions"></a>Einschränkungen  
  Wenn in Remotetabellen Werte eingefügt und nicht alle Werte für alle Spalten angegeben werden, müssen Sie die Spalten identifizieren, in denen die angegebenen Werte eingefügt werden sollen.  
   
  Wenn TOP mit INSERT verwendet wird, werden die Zeilen, auf die verwiesen wird, nicht auf bestimmte Weise angeordnet, und die ORDER BY-Klausel kann in dieser Anweisung nicht direkt angegeben werden. Wenn Sie die TOP-Klausel verwenden müssen, um Zeilen in einer sinnvollen Reihenfolge einzufügen, müssen Sie sie zusammen mit einer ORDER BY-Klausel in einer untergeordneten SELECT-Anweisung verwenden. Weitere Informationen finden Sie im Abschnitt "Beispiele" in diesem Thema.
  
-INSERT-Abfragen, mit denen Wählen mit ORDER BY zum Auffüllen von Zeilen Garantien wie Identitätswerte berechnet werden, aber nicht die Reihenfolge, in der die Zeilen eingefügt werden.    
+INSERT-Abfragen, die SELECT mit ORDER BY zum Füllen von Zeilen verwenden, stellen sicher, wie Identitätswerte berechnet werden, jedoch nicht in der Reihenfolge, in der die Zeilen eingefügt werden.    
   
 ## <a name="logging-behavior"></a>Protokollierungsverhalten  
- Die INSERT-Anweisung wird außer immer vollständig protokolliert, wenn die OPENROWSET-Funktion mit dem BULK-Schlüsselwort verwenden oder bei Verwendung `INSERT INTO <target_table> SELECT <columns> FROM <source_table>`. Für diese Vorgänge ist eine minimale Protokollierung möglich. Weitere Informationen finden Sie im Abschnitt "Bewährte Methoden zum Massenladen von Daten" weiter oben in diesem Thema.  
+ Die INSERT-Anweisung wird immer vollständig protokolliert, sofern nicht die OPENROWSET-Funktion mit dem BULK-Schlüsselwort oder `INSERT INTO <target_table> SELECT <columns> FROM <source_table>` verwendet wird. Für diese Vorgänge ist eine minimale Protokollierung möglich. Weitere Informationen finden Sie im Abschnitt "Bewährte Methoden zum Massenladen von Daten" weiter oben in diesem Thema.  
   
-## <a name="security"></a>Sicherheit  
- Im Verlauf der Verbindung mit einem Verbindungsserver stellt der sendende Server einen Benutzernamen und ein Kennwort bereit, um eine Verbindung mit dem empfangenden Server in dessen Auftrag aufzubauen. Für diese Verbindung funktioniert, müssen Sie erstellen eine anmeldenamenzuordnung zwischen den Verbindungsservern mit [Sp_addlinkedsrvlogin](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md).  
+## <a name="security"></a>Security  
+ Im Verlauf der Verbindung mit einem Verbindungsserver stellt der sendende Server einen Benutzernamen und ein Kennwort bereit, um eine Verbindung mit dem empfangenden Server in dessen Auftrag aufzubauen. Damit diese Verbindung funktioniert, müssen Sie mithilfe von [sp_addlinkedsrvlogin](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md) eine Anmeldenamenzuordnung zwischen den Verbindungsservern erstellen.  
   
- Für die Verwendung von OPENROWSET(BULK…) ist es wichtig, nachvollziehen zu können, wie in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mit Identitätswechseln umgegangen wird. Weitere Informationen finden Sie unter "Sicherheitsüberlegungen" im [Importieren von Massendaten durch Verwenden von BULK INSERT oder OPENROWSET &#40; BULK... &#41; &#40; SQLServer &#41; ](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md).  
+ Für die Verwendung von OPENROWSET(BULK…) ist es wichtig, nachvollziehen zu können, wie in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mit Identitätswechseln umgegangen wird. Weitere Informationen finden Sie im Abschnitt „Überlegungen zur Sicherheit“ unter [Importieren von Massendaten mithilfe von BULK INSERT oder OPENROWSET&#40;BULK...&#41; &#40;SQL Server&#41;](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md).  
   
 ### <a name="permissions"></a>Berechtigungen  
  Die INSERT-Berechtigung ist für die Zieltabelle erforderlich.  
   
- Legen Sie Berechtigungen erhalten standardmäßig Mitglieder der der **Sysadmin** festen Serverrolle, die **Db_owner** und **Db_datawriter** festen Datenbankrollen und der Besitzer der Tabelle. Mitglieder der **Sysadmin**, **Db_owner**, und die **Db_securityadmin** Rollen sowie der Tabellenbesitzer können Berechtigungen an andere Benutzer übertragen.  
+ Mitglieder der festen Serverrolle **sysadmin**, der festen Datenbankrollen **db_owner** und **db_datawriter** und der Tabellenbesitzer erhalten standardmäßig INSERT-Berechtigungen. Mitglieder der Rollen **sysadmin**, **db_owner** und **db_securityadmin** sowie der Tabellenbesitzer können Berechtigungen an andere Benutzer übertragen.  
   
- Zum Ausführen von INSERT mit der Option BULK der OPENROWSET-Funktion muss ein Mitglied der **Sysadmin** feste Serverrolle oder die **Bulkadmin** festen Serverrolle.  
+ Zum Ausführen von INSERT mit der Option BULK der OPENROWSET-Funktion müssen Sie Mitglied der festen Serverrolle **sysadmin** oder der festen Serverrolle **bulkadmin** sein.  
   
 ##  <a name="InsertExamples"></a> Beispiele  
   
 |Kategorie|Funktionssyntaxelemente|  
 |--------------|------------------------------|  
-|[Grundlegende syntax](#BasicSyntax)|INSERT • Tabellenwertkonstruktor|  
-|[Behandlung von Spaltenwerten](#ColumnValues)|IDENTITY • NEWID • Standardwerte • Benutzerdefinierte Typen|  
+|[Grundlegende Syntax](#BasicSyntax)|INSERT • Tabellenwertkonstruktor|  
+|[Behandeln von Spaltenwerten](#ColumnValues)|IDENTITY • NEWID • Standardwerte • Benutzerdefinierte Typen|  
 |[Einfügen von Daten aus anderen Tabellen](#OtherTables)|INSERT…SELECT • INSERT…EXECUTE • WITH Allgemeiner Tabellenausdruck • TOP • OFFSET FETCH|  
-|[Angeben von Zielobjekten keine Standardtabellen sind](#TargetObjects)|Views • Tabellenvariablen|  
-|[Einfügen von Zeilen in einer Remotetabelle](#RemoteTables)|Verbindungsserver • OPENQUERY-Rowsetfunktion • OPENDATASOURCE-Rowsetfunktion|  
-|[Laden von Daten aus Tabellen oder Datendateien Massenimport](#BulkLoad)|INSERT…SELECT • OPENROWSET-Funktion|  
-|[Überschreiben das Standardverhalten des Abfrageoptimierers mithilfe von Hinweisen](#TableHints)|Tabellenhinweise|  
+|[Angeben von Zielobjekten, die keine Standardtabellen sind](#TargetObjects)|Views • Tabellenvariablen|  
+|[Einfügen von Zeilen in eine Remotetabelle](#RemoteTables)|Verbindungsserver • OPENQUERY-Rowsetfunktion • OPENDATASOURCE-Rowsetfunktion|  
+|[Massenladen von Daten aus Tabellen oder Datendateien](#BulkLoad)|INSERT…SELECT • OPENROWSET-Funktion|  
+|[Überschreiben des Standardverhaltens des Abfrageoptimierers mithilfe von Hinweisen](#TableHints)|Tabellenhinweise|  
 |[Erfassen der Ergebnisse der INSERT-Anweisung](#CaptureResults)|OUTPUT-Klausel|  
   
-###  <a name="BasicSyntax"></a>Grundlegende Syntax  
+###  <a name="BasicSyntax"></a> Grundlegende Syntax  
  Anhand von Beispielen in diesem Abschnitt wird die grundlegende Funktion der INSERT-Anweisung mithilfe der mindestens erforderlichen Syntax veranschaulicht.  
   
 #### <a name="a-inserting-a-single-row-of-data"></a>A. Einfügen einer einzelnen Datenzeile  
- Im folgenden Beispiel wird eine Zeile in die `Production.UnitMeasure`-Tabelle der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Datenbank eingefügt. Die Spalten in dieser Tabelle heißen `UnitMeasureCode`, `Name` und `ModifiedDate`. Da Werte für alle Spalten bereitgestellt werden und werden in der gleichen Reihenfolge wie die Spalten in der Tabelle aufgeführt, die Spaltennamen müssen nicht in der Spaltenliste angegeben werden*.*  
+ Im folgenden Beispiel wird eine Zeile in die `Production.UnitMeasure`-Tabelle der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Datenbank eingefügt. Die Spalten in dieser Tabelle heißen `UnitMeasureCode`, `Name` und `ModifiedDate`. Da Werte für alle Spalten bereitgestellt werden und in der Reihenfolge der Spalten in der Tabelle aufgelistet sind, müssen die Spaltennamen nicht in der Spaltenliste angegeben werden*.*  
   
 ```  
 INSERT INTO Production.UnitMeasure  
@@ -440,7 +440,7 @@ VALUES (N'FT', N'Feet', '20080414');
 ```  
   
 #### <a name="b-inserting-multiple-rows-of-data"></a>B. Einfügen mehrerer Datenzeilen  
- Im folgenden Beispiel wird die [tabellenwertkonstruktor](../../t-sql/queries/table-value-constructor-transact-sql.md) zum Einfügen von drei Zeilen in der `Production.UnitMeasure` -Tabelle in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] Datenbank in einer einzelnen INSERT­Anweisung. Da Werte für alle Spalten bereitgestellt werden und in der Reihenfolge der Spalten in der Tabelle aufgelistet sind, müssen die Spaltennamen nicht in der Spaltenliste angegeben werden.  
+ Im folgenden Beispiel werden mit dem [Tabellenwertkonstruktor](../../t-sql/queries/table-value-constructor-transact-sql.md) in einer einzelnen INSERT-Anweisung drei Zeilen in die Tabelle `Production.UnitMeasure` der Datenbank [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] eingefügt. Da Werte für alle Spalten bereitgestellt werden und in der Reihenfolge der Spalten in der Tabelle aufgelistet sind, müssen die Spaltennamen nicht in der Spaltenliste angegeben werden.  
   
 ```  
 INSERT INTO Production.UnitMeasure  
@@ -449,7 +449,7 @@ VALUES (N'FT2', N'Square Feet ', '20080923'), (N'Y', N'Yards', '20080923')
 ```  
   
 #### <a name="c-inserting-data-that-is-not-in-the-same-order-as-the-table-columns"></a>C. Einfügen von Daten, deren Reihenfolge nicht mit der Reihenfolge der Tabellenspalten übereinstimmt  
- Im folgenden Beispiel wird eine Spaltenliste verwendet, um die in jede Spalte einzufügenden Werte explizit anzugeben. Die Spaltenreihenfolge in der `Production.UnitMeasure` -Tabelle in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] Datenbank ist `UnitMeasureCode`, `Name`, `ModifiedDate`jedoch die Spalten sind nicht aufgeführt, in dieser Reihenfolge in *Column_list*.  
+ Im folgenden Beispiel wird eine Spaltenliste verwendet, um die in jede Spalte einzufügenden Werte explizit anzugeben. Die Spaltenreihenfolge in der Tabelle `Production.UnitMeasure` der Datenbank [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] lautet `UnitMeasureCode`, `Name`, `ModifiedDate`. Die Spalten sind jedoch nicht in dieser Reihenfolge in *column_list* aufgelistet.  
   
 ```  
 INSERT INTO Production.UnitMeasure (Name, UnitMeasureCode,  
@@ -457,11 +457,11 @@ INSERT INTO Production.UnitMeasure (Name, UnitMeasureCode,
 VALUES (N'Square Yards', N'Y2', GETDATE());  
 ```  
   
-###  <a name="ColumnValues"></a>Behandlung von Spaltenwerten  
- Beispiele in diesem Abschnitt veranschaulichen Methoden zum Einfügen von Werten in Spalten, die mit einer Identitätseigenschaft Standardwert definiert sind, oder werden mit Datentypen wie z. B. definiert **uniqueidentifier** oder UDT-Spalten.  
+###  <a name="ColumnValues"></a> Behandeln von Spaltenwerten  
+ In den Beispielen in diesem Abschnitt werden Methoden zum Einfügen von Werten in Spalten erläutert, die mit einer IDENTITY-Eigenschaft und einem DEFAULT-Wert oder mit Datentypen wie **uniqueidentifier** oder Spalten eines benutzerdefinierten Typs definiert werden.  
   
 #### <a name="d-inserting-data-into-a-table-with-columns-that-have-default-values"></a>D. Einfügen von Daten in eine Tabelle mit Spalten, die Standardwerte enthalten  
- Im folgenden Beispiel wird das Einfügen von Zeilen in eine Tabelle mit Spalten gezeigt, die automatisch einen Wert generieren oder einen Standardwert haben. `Column_1` ist eine berechnete Spalte, die automatisch einen Wert generiert, indem eine Zeichenfolge mit dem in `column_2` eingefügten Wert verkettet wird. `Column_2` wird als Standardeinschränkung definiert. Wenn für diese Spalte kein Wert angegeben ist, wird der Standardwert verwendet. `Column_3`wird definiert, mit der **Rowversion** -Datentyp, der automatisch eine eindeutige, inkrementelle Binärzahl generiert. `Column_4` generiert nicht automatisch einen Wert. Wird für diese Spalte kein Wert definiert, wird NULL eingefügt. Die INSERT-Anweisungen fügen Zeilen ein, die Werte für einige (aber nicht alle) Spalten enthalten. In der letzten INSERT-Anweisung werden keine Spalten angegeben, und nur die Standardwerte werden mithilfe der DEFAULT VALUES-Klausel eingefügt.  
+ Im folgenden Beispiel wird das Einfügen von Zeilen in eine Tabelle mit Spalten gezeigt, die automatisch einen Wert generieren oder einen Standardwert haben. `Column_1` ist eine berechnete Spalte, die automatisch einen Wert generiert, indem eine Zeichenfolge mit dem in `column_2` eingefügten Wert verkettet wird. `Column_2` wird als Standardeinschränkung definiert. Wenn für diese Spalte kein Wert angegeben ist, wird der Standardwert verwendet. `Column_3` ist mit dem Datentyp **rowversion** definiert, der automatisch eine eindeutige, inkrementelle Binärzahl generiert. `Column_4` generiert nicht automatisch einen Wert. Wird für diese Spalte kein Wert definiert, wird NULL eingefügt. Die INSERT-Anweisungen fügen Zeilen ein, die Werte für einige (aber nicht alle) Spalten enthalten. In der letzten INSERT-Anweisung werden keine Spalten angegeben, und nur die Standardwerte werden mithilfe der DEFAULT VALUES-Klausel eingefügt.  
   
 ```  
 CREATE TABLE dbo.T1   
@@ -506,7 +506,7 @@ GO
 ```  
   
 #### <a name="f-inserting-data-into-a-uniqueidentifier-column-by-using-newid"></a>F. Einfügen von Daten in eine uniqueidentifier-Spalte mithilfe von NEWID()  
- Im folgenden Beispiel wird die [NEWID](../../t-sql/functions/newid-transact-sql.md)()-Funktion zum Abrufen einer GUID für `column_2`. Im Gegensatz zu für Identity-Spalten, die [!INCLUDE[ssDE](../../includes/ssde-md.md)] generiert Werte für Spalten mit nicht automatisch die ["uniqueidentifier"](../../t-sql/data-types/uniqueidentifier-transact-sql.md) -Datentyp, wie durch den zweiten gezeigt `INSERT` Anweisung.  
+ Im folgenden Beispiel wird die Funktion [NEWID()](../../t-sql/functions/newid-transact-sql.md) verwendet, um eine GUID für `column_2` zu erhalten. Im Gegensatz zu Identitätsspalten generiert [!INCLUDE[ssDE](../../includes/ssde-md.md)] nicht automatisch Werte für Spalten mit dem [uniqueidentifier](../../t-sql/data-types/uniqueidentifier-transact-sql.md)-Datentyp, wie durch die zweite `INSERT`-Anweisung gezeigt.  
   
 ```  
 CREATE TABLE dbo.T1   
@@ -525,7 +525,7 @@ FROM dbo.T1;
 ```  
   
 #### <a name="g-inserting-data-into-user-defined-type-columns"></a>G. Einfügen von Daten in Spalten eines benutzerdefinierten Typs  
- Mit den folgenden [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen werden drei Zeilen in die `PointValue`-Spalte der `Points`-Tabelle eingefügt. Diese Spalte verwendet eine [CLR-benutzerdefinierten Typ](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md) (UDT). Der `Point`-Datentyp besteht aus X- und Y-Ganzzahlwerten, die als Eigenschaften des benutzerdefinierten Typs verfügbar gemacht werden. Verwenden Sie entweder die CAST- oder CONVERT-Funktion, um die durch Kommas getrennten X- und Y-Werte in den `Point`-Typ umzuwandeln. Die ersten beiden Anweisungen verwenden die CONVERT-Funktion zum Konvertieren eines Zeichenfolgenwertes in der `Point` Typ und die dritte Anweisung verwendet die CAST-Funktion. Weitere Informationen finden Sie unter [Bearbeiten von UDT-Daten](../../relational-databases/clr-integration-database-objects-user-defined-types/working-with-user-defined-types-manipulating-udt-data.md).  
+ Mit den folgenden [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen werden drei Zeilen in die `PointValue`-Spalte der `Points`-Tabelle eingefügt. Für diese Spalte wird ein [CLR-benutzerdefinierter Typ](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md) (UDT) verwendet. Der `Point`-Datentyp besteht aus X- und Y-Ganzzahlwerten, die als Eigenschaften des benutzerdefinierten Typs verfügbar gemacht werden. Verwenden Sie entweder die CAST- oder CONVERT-Funktion, um die durch Kommas getrennten X- und Y-Werte in den `Point`-Typ umzuwandeln. Die ersten beiden Anweisungen verwenden die CONVERT-Funktion, um einen Zeichenfolgenwert in den Typ `Point` zu konvertieren. Die dritte Anweisung verwendet die CAST-Funktion. Weitere Informationen zum Ändern von Daten finden Sie unter [Bearbeiten von UDT-Dateien](../../relational-databases/clr-integration-database-objects-user-defined-types/working-with-user-defined-types-manipulating-udt-data.md).  
   
 ```  
 INSERT INTO dbo.Points (PointValue) VALUES (CONVERT(Point, '3,4'));  
@@ -533,13 +533,13 @@ INSERT INTO dbo.Points (PointValue) VALUES (CONVERT(Point, '1,5'));
 INSERT INTO dbo.Points (PointValue) VALUES (CAST ('1,99' AS Point));  
 ```  
   
-###  <a name="OtherTables"></a>Einfügen von Daten aus anderen Tabellen  
+###  <a name="OtherTables"></a> Einfügen von Daten aus anderen Tabellen  
  Anhand von Beispielen in diesem Abschnitt werden Methoden zum Einfügen von Zeilen aus einer Tabelle in eine andere Tabelle gezeigt.  
   
 #### <a name="h-using-the-select-and-execute-options-to-insert-data-from-other-tables"></a>H. Verwenden der SELECT- und EXECUTE-Option zum Einfügen von Daten aus anderen Tabellen  
  Im folgenden Beispiel wird gezeigt, wie Daten mithilfe von INSERT…SELECT oder INSERT…EXECUTE aus einer Tabelle in eine andere Tabelle eingefügt werden. Jede Methode basiert auf einer SELECT-Anweisung mit mehreren Tabellen, die einen Ausdruck und einen Literalwert in der Spaltenliste enthält.  
   
- Die erste INSERT-Anweisung verwendet eine SELECT-Anweisung, um die Daten aus den Quelltabellen abgeleitet werden (`Employee`, `SalesPerson`, und `Person`) in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] Datenbank und speichern Sie das Resultset in der `EmployeeSales` Tabelle. Für die zweite INSERT-Anweisung wird die EXECUTE-Klausel verwendet, um eine gespeicherte Prozedur aufzurufen, die die SELECT-Anweisung enthält, wohingegen für die dritte INSERT-Anweisung mithilfe der EXECUTE-Klausel auf die SELECT-Anweisung als Literalzeichenfolge verwiesen wird.  
+ Bei der ersten INSERT-Anweisung wird eine SELECT-Anweisung verwendet, um die Daten aus den Quelltabellen (`Employee`, `SalesPerson` und `Person`) in der Datenbank [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] abzuleiten und das Resultset in der Tabelle `EmployeeSales` zu speichern. Für die zweite INSERT-Anweisung wird die EXECUTE-Klausel verwendet, um eine gespeicherte Prozedur aufzurufen, die die SELECT-Anweisung enthält, wohingegen für die dritte INSERT-Anweisung mithilfe der EXECUTE-Klausel auf die SELECT-Anweisung als Literalzeichenfolge verwiesen wird.  
   
 ```  
 CREATE TABLE dbo.EmployeeSales  
@@ -670,7 +670,7 @@ INSERT INTO dbo.EmployeeSales
     ORDER BY sp.SalesYTD DESC;  
 ```  
   
-###  <a name="TargetObjects"></a>Angeben von Zielobjekten keine Standardtabellen sind  
+###  <a name="TargetObjects"></a> Angeben von Zielobjekten, die keine Standardtabellen sind  
  In den Beispielen in diesem Abschnitt wird veranschaulicht, wie Zeilen durch Angeben einer Sicht oder Tabellenvariablen eingefügt werden.  
   
 #### <a name="k-inserting-data-by-specifying-a-view"></a>K. Einfügen von Daten durch Angeben einer Sicht  
@@ -716,11 +716,11 @@ SELECT * FROM @MyTableVar;
 GO  
 ```  
   
-###  <a name="RemoteTables"></a>Einfügen von Zeilen in einer Remotetabelle  
- Beispiele in diesem Abschnitt veranschaulichen, wie zum Einfügen von Zeilen in einer remotezieltabelle mit einem [Verbindungsserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) oder ein [Rowsetfunktion](../../t-sql/functions/rowset-functions-transact-sql.md) auf die Remotetabelle zu verweisen.  
+###  <a name="RemoteTables"></a> Einfügen von Zeilen in eine Remotetabelle  
+ In den Beispielen in diesem Abschnitt wird veranschaulicht, wie Zeilen mit einem [Verbindungsserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) oder einer [Rowsetfunktion](../../t-sql/functions/rowset-functions-transact-sql.md) in eine Remotezieltabelle eingefügt werden, um auf die Remotetabelle zu verweisen.  
   
 #### <a name="m-inserting-data-into-a-remote-table-by-using-a-linked-server"></a>M. Einfügen von Daten in eine Remotetabelle mithilfe eines Verbindungsservers  
- Im folgenden Beispiel werden Zeilen in eine Remotetabelle eingefügt. Im Beispiel wird zuerst erstellen einen Link zur Remotedatenquelle mithilfe [Sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md). Der Name des Verbindungsservers `MyLinkServer`, angegeben als Teil des vierteiligen Objektnamens in der Form *server.catalog.schema.object*.  
+ Im folgenden Beispiel werden Zeilen in eine Remotetabelle eingefügt. In diesem Beispiel wird zunächst mithilfe von [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) ein Link zur Remotedatenquelle erstellt. Der Name des Verbindungsservers (`MyLinkServer`) wird anschließend als Teil des vierteiligen Objektnamens in der Form *server.catalog.schema.object* angegeben.  
   
 **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
@@ -749,7 +749,7 @@ GO
 ```  
   
 #### <a name="n-inserting-data-into-a-remote-table-by-using-the-openquery-function"></a>N. Einfügen von Daten in eine Remotetabelle mithilfe der OPENQUERY-Funktion  
- Das folgende Beispiel fügt eine Zeile in eine Remotetabelle durch Angabe der [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md) Rowset-Funktion. Der im vorherigen Beispiel erstellte Name des Verbindungsservers wird hier verwendet.  
+ Im folgenden Beispiel wird durch Angabe der Rowsetfunktion [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md) eine Zeile in eine Remotetabelle eingefügt. Der im vorherigen Beispiel erstellte Name des Verbindungsservers wird hier verwendet.  
   
 **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
@@ -762,7 +762,7 @@ GO
 ```  
   
 #### <a name="o-inserting-data-into-a-remote-table-by-using-the-opendatasource-function"></a>O. Einfügen von Daten in eine Remotetabelle mithilfe der OPENDATASOURCE-Funktion  
- Das folgende Beispiel fügt eine Zeile in eine Remotetabelle durch Angabe der [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) Rowset-Funktion. Geben Sie einen gültigen Servernamen für die Datenquelle mithilfe des Formats *Server_name* oder *Server_name\instance_name*.  
+ Im folgenden Beispiel wird durch Angabe der Rowsetfunktion [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) eine Zeile in eine Remotetabelle eingefügt. Geben Sie im Format *server_name* oder *server_name\instance_name* einen gültigen Servernamen für die Datenquelle an.  
   
 **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
@@ -778,7 +778,7 @@ INSERT INTO OPENDATASOURCE('SQLNCLI',
 GO  
 ```  
   
-#### <a name="p-inserting-into-an-external-table-created-using-polybase"></a>P. Einfügen in eine externe Tabelle erstellten mithilfe von PolyBase  
+#### <a name="p-inserting-into-an-external-table-created-using-polybase"></a>P. Einfügen in eine externe Tabelle mithilfe von PolyBase  
  Exportieren von Daten aus SQL Server in Hadoop oder Azure Storage Erstellen Sie zuerst eine externe Tabelle, die auf die Zieldatei oder das Verzeichnis verweist. Verwenden Sie dann INSERT INTO zum Exportieren von Daten aus einer lokalen SQL Server-Tabelle in eine externe Datenquelle. Die INSERT INTO-Anweisung erstellt die Zieldatei oder das Verzeichnis, falls nicht vorhanden, und die Ergebnisse der SELECT-Anweisung werden zu einem angegebenen Speicherort im angegebenen Dateiformat exportiert.  Weitere Informationen finden Sie unter [Get started with PolyBase](../../relational-databases/polybase/get-started-with-polybase.md)(Erste Schritte mit PolyBase).  
   
 **Gilt für**: [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -808,7 +808,7 @@ ON (T1.CustomerKey = T2.CustomerKey)
 WHERE T2.YearMeasured = 2009 and T2.Speed > 40;  
 ```  
   
-###  <a name="BulkLoad"></a>Massenladen von Daten aus Tabellen oder Datendateien  
+###  <a name="BulkLoad"></a> Massenladen von Daten aus Tabellen oder Datendateien  
  In den Beispielen in diesem Abschnitt werden zwei Methoden zum Massenladen von Daten in eine Tabelle mithilfe der INSERT-Anweisung vorgestellt.  
   
 #### <a name="q-inserting-data-into-a-heap-with-minimal-logging"></a>Q. Einfügen von Daten mit minimaler Protokollierung in einen Heap  
@@ -855,7 +855,7 @@ GO
 ```  
   
 #### <a name="r-using-the-openrowset-function-with-bulk-to-bulk-load-data-into-a-table"></a>R. Verwenden der OPENROWSET-Funktion mit BULK zum Massenladen von Daten in eine Tabelle  
- Im folgenden Beispiel werden durch Angabe der OPENROWSET-Funktion Zeilen aus einer Datendatei in eine Tabelle eingefügt. Der IGNORE_TRIGGERS-Tabellenhinweis wird zur Leistungsoptimierung angegeben. Weitere Beispiele finden Sie unter [Importieren von Massendaten durch Verwenden von BULK INSERT oder OPENROWSET &#40; BULK... &#41; &#40; SQLServer &#41; ](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md).  
+ Im folgenden Beispiel werden durch Angabe der OPENROWSET-Funktion Zeilen aus einer Datendatei in eine Tabelle eingefügt. Der IGNORE_TRIGGERS-Tabellenhinweis wird zur Leistungsoptimierung angegeben. Weitere Beispiele finden Sie unter [Importieren von Massendaten mithilfe von BULK INSERT oder OPENROWSET&#40;BULK...&#41; &#40;SQL Server&#41;](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md).  
   
 **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
@@ -868,8 +868,8 @@ FROM OPENROWSET (
     ROWS_PER_BATCH = 15000)AS b ;  
 ```  
   
-###  <a name="TableHints"></a>Überschreiben das Standardverhalten des Abfrageoptimierers mithilfe von Hinweisen  
- Die Beispiele in diesem Abschnitt zeigen, wie [Tabellenhinweise](../../t-sql/queries/hints-transact-sql-table.md) zeitweise das Standardverhalten des Abfrageoptimierers überschrieben wird, beim Verarbeiten der INSERT-Anweisung.  
+###  <a name="TableHints"></a> Überschreiben des Standardverhaltens des Abfrageoptimierers mithilfe von Hinweisen  
+ In den Beispielen in diesem Abschnitt wird gezeigt, wie mit [Tabellenhinweisen](../../t-sql/queries/hints-transact-sql-table.md) beim Verarbeiten der INSERT-Anweisung zeitweise das Standardverhalten des Abfrageoptimierers überschrieben wird.  
   
 > [!CAUTION]  
 >  Da der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Abfrageoptimierer in der Regel den optimalen Ausführungsplan für eine Abfrage auswählt, wird empfohlen, dass erfahrene Entwickler und Datenbankadministratoren Hinweise nur dann verwenden, wenn alle anderen Möglichkeiten sich als unzureichend erwiesen haben.  
@@ -885,8 +885,8 @@ INSERT INTO Production.Location WITH (XLOCK)
 VALUES ( N'Final Inventory', 15.00, 80.00);  
 ```  
   
-###  <a name="CaptureResults"></a>Erfassen der Ergebnisse der INSERT-Anweisung  
- Die Beispiele in diesem Abschnitt zeigen, wie die [OUTPUT-Klausel](../../t-sql/queries/output-clause-transact-sql.md) zum Zurückgeben von Informationen aus bzw. Ausdrücke basierend auf an, die für jede Zeile von einer INSERT-Anweisung betroffen sind. Diese Ergebnisse können an die verarbeitende Anwendung zurückgegeben werden, die sie z. B. für Bestätigungen, Archivierungen und andere Anwendungsanforderungen verwendet.  
+###  <a name="CaptureResults"></a> Erfassen der Ergebnisse der INSERT-Anweisung  
+ In den Beispielen in diesem Abschnitt wird gezeigt, wie mit der [OUTPUT-Klausel](../../t-sql/queries/output-clause-transact-sql.md) Informationen aus jeder von einer INSERT-Anweisung betroffenen Zeile bzw. Ausdrücke, die auf jeder Zeile basieren, zurückgegeben werden. Diese Ergebnisse können an die verarbeitende Anwendung zurückgegeben werden, die sie z. B. für Bestätigungen, Archivierungen und andere Anwendungsanforderungen verwendet.  
   
 #### <a name="t-using-output-with-an-insert-statement"></a>T. Verwenden von OUTPUT mit einer INSERT-Anweisung  
  Im folgenden Beispiel wird eine Zeile in die `ScrapReason`-Tabelle eingefügt, und die `OUTPUT`-Klausel wird verwendet, um die Ergebnisse der Anweisung an die `@MyTableVar`-Tabellenvariable zurückzugeben. Da die `ScrapReasonID`-Spalte mit einer `IDENTITY`-Eigenschaft definiert ist, wird kein Wert für diese Spalte in der `INSERT`-Anweisung angegeben. Beachten Sie jedoch, dass der von [!INCLUDE[ssDE](../../includes/ssde-md.md)] für diese Spalte generierte Wert in der `OUTPUT`-Klausel in der `INSERTED.ScrapReasonID`-Spalte zurückgegeben wird.  
@@ -974,8 +974,8 @@ GO
 SELECT DeletedProductID, RemovedOnDate FROM Production.ZeroInventory;  
 ```  
 
-#### <a name="w-inserting-data-using-the-select-option"></a>W. Einfügen von Daten mithilfe der Option "auswählen"  
- Das folgende Beispiel veranschaulicht das Einfügen mehrerer Datenzeilen, die mithilfe einer INSERT-Anweisung mit einer SELECT-Option. Die erste `INSERT` -Anweisung verwendet eine `SELECT` -Anweisung direkt zum Abrufen von Daten aus der Quelltabelle, und legen Sie dann zum Speichern des Ergebnisses der `EmployeeTitles` Tabelle.  
+#### <a name="w-inserting-data-using-the-select-option"></a>W. Einfügen von Daten mit der SELECT-Option  
+ Im folgenden Beispiel wird gezeigt, wie mehrere Datenzeilen mithilfe einer INSERT-Anweisung mit einer SELECT-Option eingefügt werden. Die erste `INSERT`-Anweisung verwendet eine `SELECT`-Anweisung direkt, um Daten aus der Quelltabelle abzurufen und dann das Resultset in der Tabelle `EmployeeTitles` zu speichern.  
   
 ```  
 CREATE TABLE EmployeeTitles  
@@ -989,8 +989,8 @@ INSERT INTO EmployeeTitles
     WHERE EndDate IS NULL;  
 ```  
   
-#### <a name="x-specifying-a-label-with-the-insert-statement"></a>X. Eine Bezeichnung angeben mit der INSERT-Anweisung  
- Das folgende Beispiel zeigt die Verwendung einer Bezeichnung mit einer INSERT-Anweisung.  
+#### <a name="x-specifying-a-label-with-the-insert-statement"></a>X. Angeben einer Bezeichnung mit der INSERT-Anweisung  
+ Im folgenden Beispiel wird die Verwendung einer Bezeichnung mit einer INSERT-Anweisung gezeigt.  
   
 ```  
 -- Uses AdventureWorks  
@@ -1000,8 +1000,8 @@ VALUES (500, N'C1', N'Currency1')
 OPTION ( LABEL = N'label1' );  
 ```  
   
-#### <a name="y-using-a-label-and-a-query-hint-with-the-insert-statement"></a>Y. Verwenden eine Bezeichnung und einen Abfragehinweis mit der INSERT-Anweisung  
- Diese Abfrage zeigt die grundlegende Syntax für die INSERT-Anweisung eine Bezeichnung und einen Join-Abfragehinweis mit. Nachdem die Abfrage, mit dem Steuerungsknoten übermittelt wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], auf den Serverknoten ausgeführt wird, gilt die Hash-Join-Strategie beim Generieren der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Abfrageplan. Weitere Informationen zu joinhinweise und wie Sie die OPTION-Klausel verwenden, finden Sie unter [OPTION (SQL Server PDW)](http://msdn.microsoft.com/en-us/72bbce98-305b-42fa-a19f-d89620621ecc).  
+#### <a name="y-using-a-label-and-a-query-hint-with-the-insert-statement"></a>Y. Verwenden einer Bezeichnung und eines Abfragehinweises mit der Anweisung INSERT  
+ Diese Abfrage zeigt die grundlegende Syntax für die Verwendung einer Bezeichnung und eines Join-Abfragehinweises mit der INSERT-Anweisung. Nachdem die Abfrage an den Steuerungsknoten übermittelt wurde, wird die Hashjoinstrategie angewendet, wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (wird auf den Computeknoten ausgeführt) den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Abfrageplan generiert. Weitere Informationen zu Joinhinweisen und der Verwendung der OPTION-Klausel finden Sie unter [OPTION (SQL Server PDW)](http://msdn.microsoft.com/en-us/72bbce98-305b-42fa-a19f-d89620621ecc).  
   
 ```  
 -- Uses AdventureWorks  
@@ -1015,17 +1015,17 @@ WHERE g.CountryRegionCode = 'FR'
 OPTION ( LABEL = 'Add French Prospects', HASH JOIN);  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
  [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   
  [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)   
  [IDENTITY &#40;Eigenschaft&#41; &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql-identity-property.md)   
- [NEWID &#40; Transact-SQL &#41;](../../t-sql/functions/newid-transact-sql.md)   
+ [NEWID &#40;Transact-SQL&#41;](../../t-sql/functions/newid-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [UPDATE (Transact-SQL)](../../t-sql/queries/update-transact-sql.md)   
- [MERGE &#40; Transact-SQL &#41;](../../t-sql/statements/merge-transact-sql.md)   
- [OUTPUT-Klausel &#40; Transact-SQL &#41;](../../t-sql/queries/output-clause-transact-sql.md)   
+ [MERGE &#40;Transact-SQL&#41;](../../t-sql/statements/merge-transact-sql.md)   
+ [OUTPUT-Klausel &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md)   
  [Verwenden der Tabellen inserted und deleted](../../relational-databases/triggers/use-the-inserted-and-deleted-tables.md)  
   
   

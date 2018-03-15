@@ -1,5 +1,5 @@
 ---
-title: STMPolyFromWKB (Geometry-Datentyp) | Microsoft Docs
+title: STMPolyFromWKB (geometry-Datentyp) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stmpolyfromwkb-geometry-data-type"></a>STMPolyFromWKB (geometry-Datentyp)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Gibt eine **GeometryMultiPolygon** Instanz aus einer Open Geospatial Consortium (OGC) Well-Known Binary (WKB)-Darstellung.
+Gibt eine **geometryMultiPolygon**-Instanz von einer OGC-WKB-Darstellung (Open Geospatial Consortium, Well-Known Binary) zurück.
   
 ## <a name="syntax"></a>Syntax  
   
@@ -45,22 +45,22 @@ STMPolyFromWKB ( 'WKB_multipolygon' , SRID )
   
 ## <a name="arguments"></a>Argumente  
  *WKB_multipolygon*  
- Ist die WKB-Darstellung der **GeometryMultiPolygon** Instanz, die Sie zurückgeben möchten. *WKB_multipolygon* ist ein **varbinary(max)** Ausdruck.  
+ Die WKB-Darstellung der Instanz von **geometryMultiPolygon**, die zurückgegeben werden soll. *WKB_multipolygon* ist ein **varbinary(max)**-Ausdruck.  
   
  *SRID*  
- Ist ein **Int** Ausdruck darstellt, die räumliche verweisen ID (SRID), der die **GeometryMultiPolygon** Instanz, die Sie zurückgeben möchten.  
+ Ein **int**-Ausdruck, der die SRID (Spatial Reference ID) der **geometryMultiPolygon**-Instanz darstellt, die zurückgegeben werden soll.  
   
 ## <a name="return-types"></a>Rückgabetypen  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Rückgabetyp: **Geometrie**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Rückgabetyp: **geometry**  
   
  CLR-Rückgabetyp: **SqlGeometry**  
   
  OGC-Typ: **MultiPolygon**  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="examples"></a>Beispiele  
- Im folgenden Beispiel wird `STMPolyFromWKB()` zum Erstellen einer `geometry` Instanz:  
+ Im folgenden Beispiel wird `STMPolyFromWKB()` verwendet, um eine `geometry`-Instanz zu erstellen:  
   
 ```  
 DECLARE @g geometry;   
@@ -68,7 +68,7 @@ SET @g = geometry::STMPolyFromWKB(0x01060000000200000001030000000100000004000000
 SELECT @g.STAsText();  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Statische geometry-Methoden des OGC](../../t-sql/spatial-geometry/ogc-static-geometry-methods.md)  
   
   

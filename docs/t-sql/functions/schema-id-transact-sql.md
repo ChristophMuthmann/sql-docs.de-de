@@ -1,5 +1,5 @@
 ---
-title: SCHEMA_ID (Transact-SQL) | Microsoft Docs
+title: SCHEMA_ID (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -52,14 +52,14 @@ SCHEMA_ID ( [ schema_name ] )
   
 |Begriff|Definition|  
 |----------|----------------|  
-|*schema_name*|Der Name des Schemas. *Schema_name* ist ein **Sysname**. Wenn *Schema_name* nicht angegeben ist, SCHEMA_ID die ID des Standardschemas des Aufrufers zurück.|  
+|*schema_name*|Der Name des Schemas. *schema_name* ist ein **sysname**. Falls *schema_name* nicht angegeben wird, gibt SCHEMA_ID die ID des Standardschemas des Aufrufers zurück.|  
   
 ## <a name="return-types"></a>Rückgabetypen  
  **int**  
   
- NULL wird zurückgegeben, wenn *Schema_name* ist kein gültiges Schema.  
+ Es wird NULL zurückgegeben, wenn *schema_name* kein gültiges Schema ist.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  SCHEMA_ID gibt IDs von Systemschemas und benutzerdefinierten Schemas zurück. SCHEMA_ID kann in einer Auswahlliste, in einer WHERE-Klausel und überall dort aufgerufen werden, wo ein Ausdruck zulässig ist.  
   
 ## <a name="examples"></a>Beispiele  
@@ -76,10 +76,10 @@ SELECT SCHEMA_ID();
 SELECT SCHEMA_ID('dbo');  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Metadatenfunktionen &#40; Transact-SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
- [SCHEMA_NAME &#40; Transact-SQL &#41;](../../t-sql/functions/schema-name-transact-sql.md)   
- [Sys.Schemas &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/schemas-catalog-views-sys-schemas.md)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Metadata Functions &#40;Transact-SQL&#41; (Metadatenfunktionen &#40;Transact-SQL&#41;)](../../t-sql/functions/metadata-functions-transact-sql.md)   
+ [SCHEMA_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/schema-name-transact-sql.md)   
+ [sys.schemas &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/schemas-catalog-views-sys-schemas.md)  
   
   
 

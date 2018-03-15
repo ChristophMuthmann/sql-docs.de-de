@@ -1,5 +1,5 @@
 ---
-title: Transaktionen (Transact-SQL) | Microsoft Docs
+title: Transaktionen (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 09/25/2017
 ms.prod: sql-non-specified
@@ -39,9 +39,9 @@ ms.lasthandoff: 01/25/2018
 
   Eine Transaktion ist eine einzelne Arbeitseinheit. Ist eine Transaktion erfolgreich, wird für alle Datenänderungen, die während der Transaktion vorgenommen wurden, ein Commit ausgeführt, und sie werden dauerhaft in der Datenbank gespeichert. Treten während einer Transaktion Fehler auf, die den Abbruch oder ein Rollback der Transaktion erfordern, werden alle Datenänderungen rückgängig gemacht.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]in den folgenden Transaktionsmodi arbeitet:  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird in den folgenden Transaktionsmodi ausgeführt:  
   
- Autocommit-Transaktionen  
+ Autocommittransaktionen  
  Jede einzelne Anweisung ist eine Transaktion.  
   
  Explizite Transaktionen  
@@ -50,14 +50,14 @@ ms.lasthandoff: 01/25/2018
  Implizite Transaktionen  
  Eine neue Transaktion wird implizit gestartet, sobald die vorhergehende Transaktion abgeschlossen ist. Jede Transaktion wird jedoch explizit mit einer COMMIT- oder ROLLBACK-Anweisung beendet.  
   
- Transaktionen mit batchbereich  
+ Transaktionen mit Batchbereich  
  Trifft nur auf MARS (Multiple Active Result Sets) zu; eine explizite oder implizite [!INCLUDE[tsql](../../includes/tsql-md.md)]-Transaktion, die unter einer MARS-Sitzung gestartet wird, wird zu einer Transaktion im Batchbereich. Für eine Transaktion im Batchbereich, für die nach Abschluss des Batches kein Commit oder Rollback ausgeführt wird, wird das Rollback automatisch von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt.  
 
 > [!NOTE] 
-> Besondere Aspekte im Zusammenhang mit der Data Warehouse-Produkte finden Sie unter [Transaktionen (SQL Data Warehouse)](transactions-sql-data-warehouse.md).   
+> Besondere Aspekte im Zusammenhang mit Data Warehouse-Produkten finden Sie unter [Transaktionen (SQL Data Warehouse)](transactions-sql-data-warehouse.md).   
 
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Stellt die folgenden transaktionsanweisungen bereit:  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt die folgenden Transaktionsanweisungen bereit:  
   
 |||  
 |-|-|  
@@ -66,7 +66,7 @@ ms.lasthandoff: 01/25/2018
 |[COMMIT TRANSACTION](../../t-sql/language-elements/commit-transaction-transact-sql.md)|[SAVE TRANSACTION](../../t-sql/language-elements/save-transaction-transact-sql.md)|  
 |[COMMIT WORK](../../t-sql/language-elements/commit-work-transact-sql.md)||  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SET IMPLICIT_TRANSACTIONS &#40;Transact-SQL&#41;](../../t-sql/statements/set-implicit-transactions-transact-sql.md)   
  [@@TRANCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/trancount-transact-sql.md)  
   

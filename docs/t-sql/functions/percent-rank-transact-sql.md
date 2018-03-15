@@ -1,5 +1,5 @@
 ---
-title: PERCENT_RANK (Transact-SQL) | Microsoft Docs
+title: PERCENT_RANK (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 10/20/2015
 ms.prod: sql-non-specified
@@ -46,8 +46,8 @@ PERCENT_RANK( )
 ```  
   
 ## <a name="arguments"></a>Argumente  
- ÜBER **(** [ *Partition_by_clause* ] *Order_by_clause***)**  
- *Partition_by_clause* teilt das Resultset, das von der FROM-Klausel erstellt wird, in Partitionen, die auf die die Funktion angewendet wird. Wird dies nicht angegeben, verarbeitet die Funktion alle Zeilen des Abfrageresultsets als einzelne Gruppe. *Order_by_clause* bestimmt die logische Reihenfolge, in dem der Vorgang ausgeführt wird. Die *Order_by_clause* ist erforderlich. Die \<Zeilen- oder Bereichsklausel > der OVER-Syntax kann nicht in einer PERCENT_RANK-Funktion angegeben werden.  Weitere Informationen finden Sie unter [Klausel "OVER" &#40; Transact-SQL &#41; ](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ OVER **(** [*partition_by_clause*] *order_by_clause***)**  
+ *partition_by_clause* unterteilt das von der FROM-Klausel erzeugte Resultset in Partitionen, auf die die Funktion angewendet wird. Wird dies nicht angegeben, verarbeitet die Funktion alle Zeilen des Abfrageresultsets als einzelne Gruppe. *order_by_clause* bestimmt die logische Reihenfolge, in der der Vorgang ausgeführt wird. *order_by_clause* ist erforderlich. Die \<Zeilen- oder Bereichsklausel> der OVER-Syntax kann nicht in einer PERCENT_RANK-Funktion angegeben werden.  Weitere Informationen finden Sie unter [OVER-Klausel &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
 ## <a name="return-types"></a>Rückgabetypen  
  **float(53)**  
@@ -97,7 +97,7 @@ Information Services   Bueno                  27.4038               0.4         
 (15 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [CUME_DIST &#40; Transact-SQL &#41;](../../t-sql/functions/cume-dist-transact-sql.md)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [CUME_DIST &#40;Transact-SQL&#41;](../../t-sql/functions/cume-dist-transact-sql.md)  
   
   

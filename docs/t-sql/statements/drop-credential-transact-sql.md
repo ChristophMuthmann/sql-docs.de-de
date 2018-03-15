@@ -1,5 +1,5 @@
 ---
-title: DROP CREDENTIAL (Transact-SQL) | Microsoft Docs
+title: DROP CREDENTIAL (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 08/19/2015
 ms.prod: sql-non-specified
@@ -54,13 +54,13 @@ DROP CREDENTIAL credential_name
  *credential_name*  
  Der Name der Anmeldeinformationen, die für den Server entfernt werden sollen.  
   
-## <a name="remarks"></a>Hinweise  
- Verwenden Sie zum Löschen des geheime Schlüssel einer Anmeldeinformation zugeordnet werden, ohne die Anmeldeinformationen selbst löschen [ALTER CREDENTIAL](../../t-sql/statements/alter-credential-transact-sql.md).  
+## <a name="remarks"></a>Remarks  
+ Sie können das Geheimnis löschen, das Anmeldeinformationen zugeordnet ist, ohne diese Anmeldeinformationen zu löschen, indem Sie [ALTER CREDENTIAL](../../t-sql/statements/alter-credential-transact-sql.md) verwenden.  
   
- Informationen zu Anmeldeinformationen werden in der **sys.credentials** -Katalogsicht angezeigt.  
+ Informationen zu Anmeldeinformationen werden in der **sys.credentials**-Katalogsicht angezeigt.  
   
 > [!WARNING]  
->  Proxys werden Anmeldeinformationen zugeordnet. Werden Anmeldeinformationen gelöscht, die von einem Proxy verwendet werden, kann der zugehörige Proxy nicht mehr verwendet werden. Wenn Sie von einem Proxy verwendete Anmeldeinformationen löschen, löschen Sie den Proxy (mit [Sp_delete_proxy &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-delete-proxy-transact-sql.md) und erstellen Sie anhand den zugehörigen Proxy neu [Sp_add_proxy &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-add-proxy-transact-sql.md).  
+>  Proxys werden Anmeldeinformationen zugeordnet. Werden Anmeldeinformationen gelöscht, die von einem Proxy verwendet werden, kann der zugehörige Proxy nicht mehr verwendet werden. Wenn Sie von einem Proxy verwendete Anmeldeinformationen entfernen, löschen Sie den Proxy (indem Sie [sp_delete_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-proxy-transact-sql.md) verwenden und den zugehörigen Proxy anhand von [sp_add_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-proxy-transact-sql.md) wiederherstellen).  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die ALTER ANY CREDENTIAL-Berechtigung. Zum Löschen von Systemanmeldeinformationen ist die CONTROL SERVER-Berechtigung erforderlich.  
@@ -73,11 +73,11 @@ DROP CREDENTIAL Saddles;
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Anmeldeinformationen &#40; Datenbankmodul &#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Anmeldeinformationen &#40;Datenbank-Engine&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)   
  [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md)   
- [ALTER CREDENTIAL &#40; Transact-SQL &#41;](../../t-sql/statements/alter-credential-transact-sql.md)   
- [DROP DATABASE ausgelegte CREDENTIAL &#40; Transact-SQL &#41;](../../t-sql/statements/drop-database-scoped-credential-transact-sql.md)   
+ [ALTER CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/alter-credential-transact-sql.md)   
+ [DROP DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-scoped-credential-transact-sql.md)   
  [sys.credentials &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)  
   
   

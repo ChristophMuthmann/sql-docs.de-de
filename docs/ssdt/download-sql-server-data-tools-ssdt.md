@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 448f9f3f86dec25001be11f309718bd04a4d3f08
-ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
+ms.openlocfilehash: cdabb190f7ffd7258765560909510fb6e82f5158
+ms.sourcegitcommit: 7e9380e53341755df13fce130ab3287918a8e44c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="download-sql-server-data-tools-ssdt"></a>Herunterladen von SQL Server Data Tools (SSDT)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -133,7 +133,7 @@ Wenn Visual Studio 2015 (oder eine höhere Version) bereits installiert ist, wer
   
 |Projektvorlagen|Unterstützte SQL-Plattformen|  
 |-------------------|--------------------|  
-Relationale Datenbanken|  SQL Server 2005* – SQL Server 2017 <br /><br />Azure SQL-Datenbank<br /><br />Azure SQL Data Warehouse (unterstützt nur Abfragen, Datenbankprojekte werden noch nicht unterstützt)<br /><br />  * SQL Server 2005-Support ist veraltet,<br /><br /> wechseln Sie bitte zu einer offiziell unterstützten SQL-Version|
+Relationale Datenbanken|  SQL Server 2005* – SQL Server 2017<br> (Verwenden Sie SSDT 17.x oder SSDT für Visual Studio 2017, um eine Verbindung mit [SQL Server für Linux](../linux/sql-server-linux-overview.md) herzustellen)<br /><br />Azure SQL-Datenbank<br /><br />Azure SQL Data Warehouse (unterstützt nur Abfragen, Datenbankprojekte werden noch nicht unterstützt)<br /><br />  * SQL Server 2005-Support ist veraltet,<br /><br /> wechseln Sie bitte zu einer offiziell unterstützten SQL-Version|
   |Analysis Services-Modelle<br /><br />Reporting Services-Berichte | SQL Server 2008 – SQL Server 2017|
   |Integration Services-Pakete| SQL Server 2012 – SQL Server 2017    |
   

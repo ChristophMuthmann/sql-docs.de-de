@@ -1,5 +1,5 @@
 ---
-title: Erstellen von Sichten und gespeicherten Prozeduren | Microsoft Docs
+title: Erstellen von Sichten und gespeicherten Prozeduren | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -28,8 +28,8 @@ ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="lesson-2-3---creating-views-and-stored-procedures"></a>Lektion 2 – 3 – Erstellen von Sichten und gespeicherte Prozeduren
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]Nun, dass Mary zugreifen, kann die **TestData** Datenbank möglicherweise sollen einige Datenbankobjekte erstellen, z. B. eine Sicht und eine gespeicherte Prozedur, und Mary dann Zugriff erteilen auf diese. Bei einer Sicht handelt es sich um eine gespeicherte SELECT-Anweisung, und eine gespeicherte Prozedur setzt sich aus einer oder mehreren [!INCLUDE[tsql](../includes/tsql-md.md)] -Anweisungen zusammen, die als Batch ausgeführt werden.  
+# <a name="lesson-2-3---creating-views-and-stored-procedures"></a>Lektion 2–3: Erstellen von Sichten und gespeicherten Prozeduren
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]Nachdem Mary nun auf die **TestData**-Datenbank zugreifen kann, sollten Sie einige Datenbankobjekte erstellen, z.B. eine Sicht und eine gespeicherte Prozedur, und Mary dann Zugriff auf diese Objekte erteilen. Bei einer Sicht handelt es sich um eine gespeicherte SELECT-Anweisung, und eine gespeicherte Prozedur setzt sich aus einer oder mehreren [!INCLUDE[tsql](../includes/tsql-md.md)] -Anweisungen zusammen, die als Batch ausgeführt werden.  
   
 Sichten werden wie Tabellen abgefragt und nehmen keine Parameter an. Gespeicherte Prozeduren sind komplexer als Sichten. Gespeicherte Prozeduren können sowohl Eingabe- als auch Ausgabeparameter aufweisen und Anweisungen enthalten, die den Ablauf des Codes steuern, wie z. B. IF- und WHILE-Anweisungen. Als eine der Grundregeln guter Programmierung gilt die Verwendung gespeicherter Prozeduren für alle Aktionen, die sich in der Datenbank wiederholen.  
   
@@ -85,10 +85,10 @@ In diesem Beispiel erstellen Sie mithilfe von CREATE VIEW eine Sicht, die nur zw
   
     ```  
   
-## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
+## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
 [Erteilen des Zugriffs auf ein Datenbankobjekt](../t-sql/lesson-2-4-granting-access-to-a-database-object.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [CREATE VIEW &#40;Transact-SQL&#41;](../t-sql/statements/create-view-transact-sql.md)  
 [CREATE PROCEDURE &#40;Transact-SQL&#41;](../t-sql/statements/create-procedure-transact-sql.md)  
   

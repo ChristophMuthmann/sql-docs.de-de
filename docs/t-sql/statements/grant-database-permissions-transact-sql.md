@@ -1,5 +1,5 @@
 ---
-title: Erteilen der Datenbankberechtigungen (Transact-SQL) | Microsoft Docs
+title: GRANT (Datenbankberechtigungen) (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
@@ -63,7 +63,7 @@ permission | ALL [ PRIVILEGES ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *Berechtigung*  
+ *permission*  
  Gibt eine Berechtigung an, die für eine Datenbank erteilt werden kann. Eine Liste der Berechtigungen finden Sie im Abschnitt zu den Hinweisen weiter unten in diesem Thema.  
   
  ALL  
@@ -75,7 +75,7 @@ permission | ALL [ PRIVILEGES ]
  WITH GRANT OPTION  
  Gibt an, dass der Prinzipal die angegebene Berechtigung auch anderen Prinzipalen erteilen kann.  
   
- AS \<Database_principal > Gibt einen Prinzipal aus dem der Prinzipal, der diese Abfrage ausführt, sein Recht zum Erteilen der Berechtigung ableitet.  
+ AS \<database_principal> Gibt einen Prinzipal an, von dem der Prinzipal, der diese Abfrage ausführt, sein Recht zum Erteilen der Berechtigung ableitet.  
   
  *Database_user*  
  Gibt einen Datenbankbenutzer an.  
@@ -84,34 +84,34 @@ permission | ALL [ PRIVILEGES ]
  Gibt eine Datenbankrolle an.  
   
  *Application_role*  
-**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)],[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
+**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
   
  Gibt eine Anwendungsrolle an.  
   
  *Database_user_mapped_to_Windows_User*  
-**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] über[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
  Gibt einen Datenbankbenutzer an, der einem Windows-Benutzer zugeordnet ist.  
   
  *Database_user_mapped_to_Windows_Group*  
-**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] über[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
  Gibt einen Datenbankbenutzer an, der einer Windows-Gruppe zugeordnet ist.  
   
  *Database_user_mapped_to_certificate*  
-**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] über[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
  Gibt einen Datenbankbenutzer an, der einem Zertifikat zugeordnet ist.  
   
  *Database_user_mapped_to_asymmetric_key*  
-**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] über[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
  Gibt einen Datenbankbenutzer an, der einem asymmetrischen Schlüssel zugeordnet ist.  
   
  *Database_user_with_no_login*  
  Gibt einen Datenbankbenutzer ohne entsprechenden Prinzipal auf Serverebene an.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
   
 > [!IMPORTANT]  
 >  Durch eine Kombination von ALTER- und REFERENCE-Berechtigungen würde in manchen Fällen zugelassen, dass der Empfänger Daten anzeigt oder Funktionen ausführt, für die er nicht autorisiert ist. Beispiel: Ein Benutzer mit ALTER-Berechtigung für eine Tabelle und REFERENCE-Berechtigung für eine Funktion kann eine berechnete Spalte über eine Funktion erstellen und ausführen lassen. In diesem Fall benötigt der Benutzer auch die SELECT-Berechtigung für die berechnete Spalte.  
@@ -127,17 +127,17 @@ permission | ALL [ PRIVILEGES ]
 |ALTER ANY ASYMMETRIC KEY|ALTER|CONTROL SERVER|  
 |ALTER ANY CERTIFICATE|ALTER|CONTROL SERVER|  
 |ALTER ANY COLUMN ENCRYPTION KEY|ALTER|CONTROL SERVER|  
-|ALLE SPALTENHAUPTSCHLÜSSEL-DEFINITION ÄNDERN|ALTER|CONTROL SERVER|  
+|ALTER ANY COLUMN MASTER KEY DEFINITION|ALTER|CONTROL SERVER|  
 |ALTER ANY CONTRACT|ALTER|CONTROL SERVER|  
 |ALTER ANY DATABASE AUDIT|ALTER|ALTER ANY SERVER AUDIT|  
 |ALTER ANY DATABASE DDL TRIGGER|ALTER|CONTROL SERVER|  
 |ALTER ANY DATABASE EVENT NOTIFICATION|ALTER|ALTER ANY EVENT NOTIFICATION|  
 |ALTER ANY DATABASE EVENT SESSION<br />**Gilt für**: [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].|ALTER|ALTER ANY EVENT SESSION|  
-|ALTER ANY DATABASE SCOPED CONFIGURATION<br /> **Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|CONTROL|CONTROL SERVER|  
+|ALTER ANY DATABASE SCOPED CONFIGURATION<br /> **Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|CONTROL|CONTROL SERVER|  
 |ALTER ANY DATASPACE|ALTER|CONTROL SERVER|  
 |ALTER ANY EXTERNAL DATA SOURCE|ALTER|CONTROL SERVER|  
 |ALTER ANY EXTERNAL FILE FORMAT|ALTER|CONTROL SERVER|  
-|ÄNDERN EINER EXTERNEN BIBLIOTHEK <br /> **Gilt für**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].|CONTROL|CONTROL SERVER |    
+|ALTER ANY EXTERNAL LIBRARY <br /> **Gilt für**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].|CONTROL|CONTROL SERVER |    
 |ALTER ANY FULLTEXT CATALOG|ALTER|CONTROL SERVER|  
 |ALTER ANY MASK|CONTROL|CONTROL SERVER|  
 |ALTER ANY MESSAGE TYPE|ALTER|CONTROL SERVER|  
@@ -181,8 +181,8 @@ permission | ALL [ PRIVILEGES ]
 |CREATE TYPE|ALTER|CONTROL SERVER|  
 |CREATE VIEW|ALTER|CONTROL SERVER|  
 |CREATE XML SCHEMA COLLECTION|ALTER|CONTROL SERVER|  
-|DELETE|CONTROL|CONTROL SERVER|  
-|EXECUTE|CONTROL|CONTROL SERVER|  
+|Delete|CONTROL|CONTROL SERVER|  
+|Führen Sie|CONTROL|CONTROL SERVER|  
 |EXECUTE ANY EXTERNAL SCRIPT <br /> **Gilt für**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)].|CONTROL|CONTROL SERVER|   
 |INSERT|CONTROL|CONTROL SERVER|  
 |KILL DATABASE CONNECTION<br />**Gilt für**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|CONTROL|ALTER ANY CONNECTION|  
@@ -203,7 +203,7 @@ permission | ALL [ PRIVILEGES ]
   
  Falls die AS-Option verwendet wird, gelten die folgenden zusätzlichen Anforderungen.  
   
-|AS *Granting_principal*|Zusätzliche Berechtigung erforderlich|  
+|AS *granting_principal*|Zusätzliche Berechtigung erforderlich|  
 |------------------------------|------------------------------------|  
 |Datenbankbenutzer|IMPERSONATE-Berechtigung für den Benutzer, Mitgliedschaft in der festen Datenbankrolle db_securityadmin, Mitgliedschaft in der festen Datenbankrolle db_owner oder Mitgliedschaft in der festen Serverrolle sysadmin.|  
 |Einem Windows-Anmeldenamen zugeordneter Datenbankbenutzer|IMPERSONATE-Berechtigung für den Benutzer, Mitgliedschaft in der festen Datenbankrolle db_securityadmin, Mitgliedschaft in der festen Datenbankrolle db_owner oder Mitgliedschaft in der festen Serverrolle sysadmin.|  
@@ -221,7 +221,7 @@ permission | ALL [ PRIVILEGES ]
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="a-granting-permission-to-create-tables"></a>A. Erteilen der Berechtigung zum Erstellen von Tabellen  
- Im folgenden Beispiel wird `CREATE TABLE` -Berechtigung für die `AdventureWorks` Datenbank Benutzer `MelanieK`.  
+ Im folgenden Beispiel wird die `CREATE TABLE`-Berechtigung für die `AdventureWorks`-Datenbank dem Benutzer `MelanieK` erteilt.  
   
 ```  
 USE AdventureWorks;  
@@ -232,7 +232,7 @@ GO
 ### <a name="b-granting-showplan-permission-to-an-application-role"></a>B. Erteilen der SHOWPLAN-Berechtigung für eine Anwendungsrolle  
  Im folgenden Beispiel wird die `SHOWPLAN`-Berechtigung für die `AdventureWorks2012`-Datenbank der Anwendungsrolle `AuditMonitor` erteilt.  
   
-**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)],[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
+**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
   
 ```  
 USE AdventureWorks2012;  
@@ -249,8 +249,8 @@ GRANT CREATE VIEW TO CarmineEs WITH GRANT OPTION;
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [database_permissions &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [sys.database_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)   
  [sys.database_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)   
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   

@@ -1,5 +1,5 @@
 ---
-title: KILL QUERY NOTIFICATION SUBSCRIPTION (Transact-SQL) | Microsoft Docs
+title: KILL QUERY NOTIFICATION SUBSCRIPTION (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 07/27/2017
 ms.prod: sql-non-specified
@@ -54,17 +54,17 @@ KILL QUERY NOTIFICATION SUBSCRIPTION
  Entfernt alle Abonnements in der Instanz.  
   
  *subscription_id*  
- Entfernt das Abonnement durch die Abonnement-Id *Subscription_id*.  
+ Entfernt das Abonnement mit der Abonnement-ID *subscription_id*.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Die KILL QUERY NOTIFICATION SUBSCRIPTION-Anweisung entfernt Abfragebenachrichtigungsabonnements, ohne dass eine Benachrichtigungsmeldung erstellt wird.  
   
- *Subscription_id* ist die Id für das Abonnement aus, entsprechend der dynamischen verwaltungssicht [dm_qn_subscriptions &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/query-notifications-sys-dm-qn-subscriptions.md).  
+ Wie in der dynamischen Verwaltungssicht [sys.dm_qn_subscriptions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/query-notifications-sys-dm-qn-subscriptions.md) gezeigt wird, ist *subscription_id* die Abonnement-ID.  
   
  Falls die angegebene Abonnement-ID nicht vorhanden ist, gibt die Anweisung einen Fehler zurück.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Berechtigung zum Ausführen dieser Anweisung wird nur von Mitgliedern der der **Sysadmin** festen Serverrolle "".  
+ Die Ausführungsberechtigungen für diese Anweisung sind beschränkt auf Mitglieder der festen Serverrolle **sysadmin**.  
   
 ## <a name="examples"></a>Beispiele  
   
@@ -82,7 +82,7 @@ KILL QUERY NOTIFICATION SUBSCRIPTION ALL ;
 KILL QUERY NOTIFICATION SUBSCRIPTION 73 ;  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [sys.dm_qn_subscriptions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/query-notifications-sys-dm-qn-subscriptions.md)  
   
   

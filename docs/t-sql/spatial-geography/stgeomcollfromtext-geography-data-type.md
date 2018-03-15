@@ -1,5 +1,5 @@
 ---
-title: STGeomCollFromText (Geography-Datentyp) | Microsoft Docs
+title: STGeomCollFromText (geography-Datentyp) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 07/30/2017
 ms.prod: sql-non-specified
@@ -51,12 +51,12 @@ STGeomCollFromText ( 'geometrycollection_tagged_text' , SRID )
  Ein **int** -Ausdruck, der die SRID (Spatial Reference ID) der **geography** -Instanz darstellt, die Sie zurückgeben möchten.  
   
 ## <a name="return-types"></a>Rückgabetypen  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Rückgabetyp: **Geography**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Rückgabetyp: **geography**  
   
  CLR-Rückgabetyp: **SqlGeography**  
   
-## <a name="remarks"></a>Hinweise  
- Die OGC-Typ, der die **Geography** vom STGeomCollFromText() zurückgegebene Instanz auf die entsprechende WKT-Eingabe festgelegt ist.  
+## <a name="remarks"></a>Remarks  
+ Der OGC-Typ der **geography**-Instanz, die von STGeomCollFromText() zurückgegeben wird, wird auf die entsprechende WKT-Eingabe festgelegt.  
   
  Diese Methode löst eine **ArgumentException** aus, wenn die Eingabe ungültig ist.  
   
@@ -70,7 +70,7 @@ SET @g = geography::STGeomCollFromText('GEOMETRYCOLLECTION ( POINT(-122.34900 47
 SELECT @g.ToString();  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Statische geography-Methoden des OGC](../../t-sql/spatial-geography/ogc-static-geography-methods.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: BACKUP CERTIFICATE (Transact-SQL) | Microsoft Docs
+title: BACKUP CERTIFICATE (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -75,11 +75,11 @@ BACKUP CERTIFICATE certname TO FILE ='path_to_file'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *Dateipfad*  
- Gibt den vollständigen Pfad einschließlich des Dateinamens zu der Datei an, in der das Zertifikat gespeichert werden soll. Dies kann ein lokaler Pfad oder einen UNC-Pfad zu einem Netzwerkspeicherort sein. Standardmäßig wird der Pfad zum DATA-Ordner von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet.  
+ *path_to_file*  
+ Gibt den vollständigen Pfad einschließlich des Dateinamens zu der Datei an, in der das Zertifikat gespeichert werden soll. Dies kann ein lokaler Pfad oder ein UNC-Pfad zu einer Netzwerkadresse sein. Standardmäßig wird der Pfad zum DATA-Ordner von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet.  
   
  *path_to_private_key_file*  
- Gibt den vollständigen Pfad einschließlich des Dateinamens zu der Datei an, in der der private Schlüssel gespeichert werden soll. Dies kann ein lokaler Pfad oder einen UNC-Pfad zu einem Netzwerkspeicherort sein. Standardmäßig wird der Pfad zum DATA-Ordner von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet.  
+ Gibt den vollständigen Pfad einschließlich des Dateinamens zu der Datei an, in der der private Schlüssel gespeichert werden soll. Dies kann ein lokaler Pfad oder ein UNC-Pfad zu einer Netzwerkadresse sein. Standardmäßig wird der Pfad zum DATA-Ordner von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet.  
   
  *encryption_password*  
  Das Kennwort, das zum Verschlüsseln des privaten Schlüssels verwendet wird, bevor der Schlüssel in die Sicherungsdatei geschrieben wird. Das Kennwort unterliegt Komplexitätsüberprüfungen.  
@@ -87,12 +87,12 @@ BACKUP CERTIFICATE certname TO FILE ='path_to_file'
  *decryption_password*  
  Das Kennwort, das zum Entschlüsseln des privaten Schlüssels verwendet wird, bevor der Schlüssel gesichert wird.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Falls der private Schlüssel mit einem Kennwort in der Datenbank verschlüsselt wird, muss das Kennwort für die Entschlüsselung angegeben werden.  
   
  Bei der Sicherung des privaten Schlüssels in einer Datei ist eine Verschlüsselung erforderlich. Das Kennwort, mit dem das gesicherte Zertifikat geschützt wird, ist nicht dasselbe Kennwort, mit dem der private Schlüssel des Zertifikats verschlüsselt wird.  
   
- Um ein gesichertes Zertifikat wiederherstellen, verwenden die [CREATE CERTIFICATE](../../t-sql/statements/create-certificate-transact-sql.md)Anweisung.  
+ Ein gesichertes Zertifikat kann mithilfe der [CREATE CERTIFICATE](../../t-sql/statements/create-certificate-transact-sql.md)-Anweisung wiederhergestellt werden.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die CONTROL-Berechtigung für das Zertifikat und die Kenntnis des Kennworts, das zum Verschlüsseln des privaten Schlüssels verwendet wurde. Falls nur der öffentliche Teil des Zertifikats gesichert wird, sind bestimmte Berechtigungen für das Zertifikat erforderlich, und dem Aufrufer darf die VIEW-Berechtigung für das Zertifikat nicht verweigert worden sein.  
@@ -128,10 +128,10 @@ BACKUP CERTIFICATE sales09 TO FILE = 'c:\storedcerts\sales09cert'
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)   
- [ALTER CERTIFICATE &#40; Transact-SQL &#41;](../../t-sql/statements/alter-certificate-transact-sql.md)   
- [DROP CERTIFICATE &#40; Transact-SQL &#41;](../../t-sql/statements/drop-certificate-transact-sql.md)  
+ [ALTER CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-certificate-transact-sql.md)   
+ [DROP CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-certificate-transact-sql.md)  
   
   
 

@@ -1,5 +1,5 @@
 ---
-title: (XML DML) Replace Value of | Microsoft Docs
+title: replace value of (XML DML) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
@@ -199,10 +199,10 @@ from T
   
  Beachten Sie die Verwendung von **cast** beim Ersetzen des LotSize-Werts. Dies ist erforderlich, wenn der Wert einem bestimmten Typ angehören muss. In diesem Beispiel ist eine explizite Umwandlung nicht erforderlich, wenn der Wert 500 lautet.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Vergleichen von typisiertem XML mit nicht typisiertem XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [Erstellen von Instanzen der XML-Daten](../../relational-databases/xml/create-instances-of-xml-data.md)   
- [xml-Datentypmethoden](../../t-sql/xml/xml-data-type-methods.md)   
- [XML Data Modification Language &#40; XML DML &#41;](../../t-sql/xml/xml-data-modification-language-xml-dml.md)  
+ [XML-Datentypmethoden](../../t-sql/xml/xml-data-type-methods.md)   
+ [XML DML (Data Modification Language) &#40;XML DML&#41;](../../t-sql/xml/xml-data-modification-language-xml-dml.md)  
   
   

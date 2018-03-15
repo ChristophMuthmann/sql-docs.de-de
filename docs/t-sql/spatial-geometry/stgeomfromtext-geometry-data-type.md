@@ -1,5 +1,5 @@
 ---
-title: STGeomFromText (Geometry-Datentyp) | Microsoft Docs
+title: STGeomFromText (geometry-Datentyp) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -51,11 +51,11 @@ STGeomFromText ( 'geometry_tagged_text' , SRID )
  Ein **int** -Ausdruck, der die SRID (Spatial Reference ID) der **geometry** -Instanz darstellt, die Sie zurückgeben möchten.  
   
 ## <a name="return-types"></a>Rückgabetypen  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Rückgabetyp: **Geometrie**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Rückgabetyp: **geometry**  
   
  CLR-Rückgabetyp: **SqlGeometry**  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Der OGC-Typ der **geometry** -Instanz, die von `STGeomFromText()` zurückgegeben wird, wird auf die entsprechende WKT-Eingabe festgelegt.  
   
  Diese Methode löst eine **FormatException** aus, wenn die Eingabe nicht korrekt formatiert ist.  
@@ -69,7 +69,7 @@ SET @g = geometry::STGeomFromText('LINESTRING (100 100, 20 180, 180 180)', 0);
 SELECT @g.ToString();  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Statische geometry-Methoden des OGC](../../t-sql/spatial-geometry/ogc-static-geometry-methods.md)  
   
   

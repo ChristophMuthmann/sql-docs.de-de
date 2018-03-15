@@ -1,5 +1,5 @@
 ---
-title: DATENAME (Transact-SQL) | Microsoft Docs
+title: DATENAME (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 07/29/2017
 ms.prod: sql-non-specified
@@ -41,9 +41,9 @@ ms.lasthandoff: 11/21/2017
 # <a name="datename-transact-sql"></a>DATENAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Gibt eine Zeichenfolge, die den angegebenen darstellt *Datepart* des angegebenen *Datum*
+Gibt eine Zeichenfolge zurück, die den angegebenen *datepart*-Wert des angegebenen *Datums* darstellt.
   
-Eine Übersicht über alle [!INCLUDE[tsql](../../includes/tsql-md.md)] Datums-und Uhrzeitdatentypen und Funktionen finden Sie unter [Datums- und Uhrzeitdatentypen und-Funktionen &#40; Transact-SQL &#41; ](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).
+Eine Übersicht über alle Datums- und Uhrzeitdatentypen und zugehörige Funktionen für [!INCLUDE[tsql](../../includes/tsql-md.md)] finden Sie unter [Datums- und Uhrzeitdatentypen und Funktionen &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).
   
 ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -55,51 +55,51 @@ DATENAME ( datepart , date )
   
 ## <a name="arguments"></a>Argumente  
 *datepart*  
-Ist der Teil der *Datum* zurückgegeben. Die folgende Tabelle enthält alle gültigen *Datepart* Argumente. Benutzerdefinierte Variablenentsprechungen sind nicht gültig.
+Ist der Teil von *date*, der zurückgegeben werden soll. In der folgenden Tabelle werden alle gültigen *datepart*-Argumente aufgeführt. Benutzerdefinierte Variablenentsprechungen sind nicht gültig.
   
 |*datepart*|Abkürzungen|  
 |---|---|
-|**Jahr**|**Yy, yyyy**|  
-|**Quartal**|**Qq, q**|  
-|**Monat**|**mm, m**|  
-|**DayOfYear**|**dy, y**|  
-|**Tag**|**tt, d**|  
-|**Woche**|**wk weltweit**|  
-|**Wochentag**|**DW, w**|  
-|**Stunde**|**hh**|  
-|**Minute**|**Mi, n**|  
-|**Sekunde**|**ss, s**|  
-|**Millisekunde**|**MS**|  
-|**in Mikrosekunden**|**MCS**|  
-|**Nanosekunden**|**Notification Services**|  
-|**TZoffset**|**Tz**|  
-|**ISO_WEEK**|**ISOWK ISOWW**|  
+|**year**|**yy, yyyy**|  
+|**quarter**|**qq, q**|  
+|**month**|**mm, m**|  
+|**dayofyear**|**dy, y**|  
+|**day**|**dd, d**|  
+|**week**|**wk, ww**|  
+|**weekday**|**dw, w**|  
+|**hour**|**hh**|  
+|**minute**|**mi, n**|  
+|**second**|**ss, s**|  
+|**millisecond**|**ms**|  
+|**microsecond**|**mcs**|  
+|**nanosecond**|**ns**|  
+|**TZoffset**|**tz**|  
+|**ISO_WEEK**|**ISOWK, ISOWW**|  
   
 *Datum*  
-Ist ein Ausdruck, der in aufgelöst werden kann ein **Zeit**, **Datum**, **Smalldatetime**, **"DateTime"**, **datetime2**, oder **"DateTimeOffset"** Wert. *Datum* können einen Ausdruck, Spaltenausdruck, eine benutzerdefinierte Variable oder Zeichenfolge literal sein.  
-Um Mehrdeutigkeiten zu vermeiden, sollten Sie vierstellige Jahreszahlen verwenden. Informationen zu zweistelligen Jahresangaben, finden Sie unter [konfigurieren two Digit Year cutoff Server Configuration Option](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md).
+Ein Ausdruck, der in einen der folgenden Werte aufgelöst werden kann: **time**, **date**, **smalldatetime**, **datetime**, **datetime2** oder **datetimeoffset**. *date* kann ein Ausdruck, ein Spaltenausdruck, eine benutzerdefinierte Variable oder ein Zeichenfolgenliteral sein.  
+Um Mehrdeutigkeiten zu vermeiden, sollten Sie vierstellige Jahreszahlen verwenden. Informationen zu zweistelligen Jahreszahlen finden Sie unter [Konfigurieren der Serverkonfigurationsoption „Umstellungsjahr für Angaben mit zwei Ziffern“](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md).
   
 ## <a name="return-type"></a>Rückgabetyp  
 **nvarchar**
   
 ## <a name="return-value"></a>Rückgabewert  
   
--   Jede *Datepart* und zugehörigen Abkürzungen geben denselben Wert zurück.  
+-   Jedes *datepart*-Argument und die zugehörigen Abkürzungen geben den gleichen Wert zurück.  
   
-Der Rückgabewert hängt von der sprachumgebung Festlegung mithilfe von [SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md) und durch die [Konfigurieren der Serverkonfigurationsoption Standardsprache](../../database-engine/configure-windows/configure-the-default-language-server-configuration-option.md) der Anmeldung. Der Rückgabewert ist abhängigen auf [SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md) Wenn *Datum* ist eine Zeichenfolge Zeichenfolgenliteral einiger Formate. SET DATEFORMAT wirkt sich nicht auf den Rückgabewert aus, wenn das Datum ein Spaltenausdruck für Daten vom Typ Datum oder Uhrzeit darstellt.
+Der Rückgabewert hängt von der Sprachumgebung ab, die durch [SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md) und durch die [Konfiguration der Serverkonfigurationsoption „Standardsprache“](../../database-engine/configure-windows/configure-the-default-language-server-configuration-option.md) für die Anmeldung festgelegt wurde. Der Rückgabewert hängt von der Option [SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md) ab, wenn *date* ein Zeichenfolgenliteral einiger Formate darstellt. SET DATEFORMAT wirkt sich nicht auf den Rückgabewert aus, wenn das Datum ein Spaltenausdruck für Daten vom Typ Datum oder Uhrzeit darstellt.
   
-Wenn die *Datum* Parameter hat eine **Datum** datentypargument, der Rückgabewert hängt von der Einstellung, die mithilfe von angegeben [SET DATEFIRST](../../t-sql/statements/set-datefirst-transact-sql.md).
+Wenn der *date*-Parameter ein **date**-Datentypargument aufweist, hängt der Rückgabewert von der Einstellung ab, die mit [SET DATEFIRST](../../t-sql/statements/set-datefirst-transact-sql.md) angegeben wurde.
   
 ## <a name="tzoffset-datepart-argument"></a>datepart-Argumentdes Typs TZoffset  
-Wenn *Datepart* Argument ist **TZoffset** (**Tz**) und die *Datum* Argument über keinen Zeitzonenoffset verfügt, wird 0 zurückgegeben.
+Wenn das *datepart*-Argument **TZoffset** (**tz**) lautet und das *date*-Argument über keinen Zeitzonenoffset verfügt, wird 0 zurückgegeben.
   
 ## <a name="smalldatetime-date-argument"></a>date-Argument des Typs smalldatetime  
-Wenn *Datum* ist [Smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md), werden Sekunden als 00 zurückgegeben.
+Wenn *date* vom Typ [smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md) ist, werden Sekunden in der Form 00 zurückgegeben.
   
 ## <a name="default-returned-for-a-datepart-that-is-not-in-the-date-argument"></a>Zurückgeben des Standardwerts für ein datepart-Argument, das nicht im date-Argument enthalten ist  
-Wenn der Datentyp der *Datum* Argument weist nicht auf den angegebenen *Datepart*, der Standardwert für diese *Datepart* zurückgegeben, wenn ein Literal für angegebenwird*Datum*.
+Enthält der Datentyp des *date*-Arguments keine Angabe zu *datepart*, wird der Standardwert für *datepart* nur zurückgegeben, wenn für *date* ein Literal angegeben ist.
   
-Beispielsweise die Standardeinstellung Jahr-Monat-Tag für eine beliebige **Datum** -Datentyp ist 1900-01-01. Die folgende Anweisung verfügt über DatePart-Argumente für *Datepart*, ein Time-Argument für *Datum*, und gibt `1900, January, 1, 1, Monday`.
+Beispielsweise wird bei Jahr-Monat-Tag für jeden **date**-Datentyp standardmäßig der Wert 1900-01-01 angegeben. Die folgende Anweisung verfügt über datepart-Argumente für *datepart*, ein time-Argument für *date* und gibt `1900, January, 1, 1, Monday` zurück.
   
 ```sql
 SELECT DATENAME(year, '12:10:30.123')  
@@ -109,17 +109,17 @@ SELECT DATENAME(year, '12:10:30.123')
     ,DATENAME(weekday, '12:10:30.123');  
 ```  
   
-Wenn *Datum* wird angegeben, wie eine Variable oder Tabellenspalte und die Daten geben, dass Variablen oder Spalte nicht dem angegebenen *Datepart*, Fehler 9810 zurückgegeben. Im folgenden Codebeispiel wird ein Fehler auftritt, weil das Year-Datumsteil kein gültiger für ist die **Zeit** -Datentyp, der für die Variable deklariert wird  *@t* .
+Wenn *date* als Variable oder Tabellenspalte angegeben ist und der Datentyp für diese Variable oder Spalte nicht über das angegebene *datepart*-Argument verfügt, wird der Fehler 9810 zurückgegeben. Im folgenden Codebeispiel tritt ein Fehler auf, weil der year-Datumsteil für den für die *@t*-Variable deklarierten **time**-Datentyp nicht gültig ist.
   
 ```sql
 DECLARE @t time = '12:10:30.123';   
 SELECT DATENAME(year, @t);  
 ```  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
 DATENAME kann in den Klauseln WHERE, HAVING, GROUP BY und ORDER BY der SELECT-Liste verwendet werden.
   
-In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], DATENAME wandelt Zeichenfolgenliterale als implizit eine **datetime2** Typ. Daher unterstützt DATENAME das Format YDM nicht, wenn das Datum als Zeichenfolge übergeben wird. Sie müssen die Zeichenfolge, die explizit Umwandeln einer **"DateTime"** oder **Smalldatetime** Typ das YDM-Format verwendet.
+In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] wandelt DATENAME Zeichenfolgenliterale implizit in den **datetime2**-Typ um. Daher unterstützt DATENAME das Format YDM nicht, wenn das Datum als Zeichenfolge übergeben wird. Sie müssen die Zeichenfolge explizit in den Typ **datetime** oder **smalldatetime** umwandeln, um das YDM-Format zu verwenden.
   
 ## <a name="examples"></a>Beispiele  
 Im folgenden Beispiel werden die Datumsteile für das angegebene Datum zurückgegeben.
@@ -130,23 +130,23 @@ Im folgenden Beispiel werden die Datumsteile für das angegebene Datum zurückge
   
 |*datepart*|Rückgabewert|  
 |---|---|
-|**Jahr, JJJJ, JJ**|2007|  
-|**Quartal, Qq, q**|4|  
-|**Monat, mm, m**|October|  
-|**DayOfYear dy, y**|303|  
-|**Day "," Dd "," d**|30|  
-|**Woche "," wk "," ww-**|44|  
-|**Wochentag, dw**|Dienstag|  
-|**Stunde, "hh"**|12|  
-|**Minute, n**|15|  
-|**Sekunde "," ss "," s**|32|  
-|**Millisekunden, ms**|123|  
-|**in Mikrosekunden, die mcs**|123456|  
-|**Nanosekunden, ns**|123456700|  
-|**TZoffset tz**|310|  
-|**ISO_WEEK ISOWK, ISOWW**|44|  
+|**year, yyyy, yy**|2007|  
+|**quarter, qq, q**|4|  
+|**month, mm, m**|October|  
+|**dayofyear, dy, y**|303|  
+|**day, dd, d**|30|  
+|**week, wk, ww**|44|  
+|**weekday, dw**|Dienstag|  
+|**hour, hh**|12|  
+|**minute, n**|15|  
+|**second, ss, s**|32|  
+|**millisecond, ms**|123|  
+|**microsecond, mcs**|123456|  
+|**nanosecond, ns**|123456700|  
+|**TZoffset, tz**|310|  
+|**ISO_WEEK, ISOWK, ISOWW**|44|  
   
-[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]und[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
 Im folgenden Beispiel werden die Datumsteile für das angegebene Datum zurückgegeben.
   
@@ -158,21 +158,21 @@ SELECT DATENAME(datepart,'2007-10-30 12:15:32.1234567 +05:10');
   
 |*datepart*|Rückgabewert|  
 |---|---|
-|**Jahr, JJJJ, JJ**|2007|  
-|**Quartal, Qq, q**|4|  
-|**Monat, mm, m**|October|  
-|**DayOfYear dy, y**|303|  
-|**Day "," Dd "," d**|30|  
-|**Woche "," wk "," ww-**|44|  
-|**Wochentag, dw**|Dienstag|  
-|**Stunde, "hh"**|12|  
-|**Minute, n**|15|  
-|**Sekunde "," ss "," s**|32|  
-|**Millisekunden, ms**|123|  
-|**in Mikrosekunden, die mcs**|123456|  
-|**Nanosekunden, ns**|123456700|  
-|**TZoffset tz**|310|  
-|**ISO_WEEK ISOWK, ISOWW**|44|  
+|**year, yyyy, yy**|2007|  
+|**quarter, qq, q**|4|  
+|**month, mm, m**|October|  
+|**dayofyear, dy, y**|303|  
+|**day, dd, d**|30|  
+|**week, wk, ww**|44|  
+|**weekday, dw**|Dienstag|  
+|**hour, hh**|12|  
+|**minute, n**|15|  
+|**second, ss, s**|32|  
+|**millisecond, ms**|123|  
+|**microsecond, mcs**|123456|  
+|**nanosecond, ns**|123456700|  
+|**TZoffset, tz**|310|  
+|**ISO_WEEK, ISOWK, ISOWW**|44|  
   
 ## <a name="see-also"></a>Siehe auch
 [CAST und CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)

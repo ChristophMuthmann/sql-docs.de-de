@@ -1,5 +1,5 @@
 ---
-title: XML (Transact-SQL) | Microsoft Docs
+title: xml (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="xml-transact-sql"></a>xml (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Der Datentyp, in dem XML-Daten gespeichert sind. Sie können speichern **Xml** Instanzen in einer Spalte oder eine Variable vom **Xml** Typ.  
+  Der Datentyp, in dem XML-Daten gespeichert sind. **xml**-Instanzen können in einer Spalte oder in einer Variablen vom Typ **xml** gespeichert werden.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,18 +47,18 @@ xml ( [ CONTENT | DOCUMENT ] xml_schema_collection )
   
 ## <a name="arguments"></a>Argumente  
  CONTENT  
- Schränkt die **Xml** Instanz ein wohlgeformtes XML-Fragment ist. Die XML-Daten können keine oder auch mehrere Elemente auf der obersten Ebene enthalten. Textknoten sind auf der obersten Ebene ebenfalls zulässig.  
+ Schränkt die **xml**-Instanz auf ein wohlgeformtes XML-Fragment ein. Die XML-Daten können keine oder auch mehrere Elemente auf der obersten Ebene enthalten. Textknoten sind auf der obersten Ebene ebenfalls zulässig.  
   
  Dies ist das Standardverhalten.  
   
  DOCUMENT  
- Schränkt die **Xml** Instanz ein wohlgeformtes XML-Dokument ist. Die XML-Daten müssen genau ein Stammelement aufweisen. Textknoten sind auf der obersten Ebene nicht zulässig.  
+ Schränkt die **xml**-Instanz auf ein wohlgeformtes XML-Dokument ein. Die XML-Daten müssen genau ein Stammelement aufweisen. Textknoten sind auf der obersten Ebene nicht zulässig.  
   
  *xml_schema_collection*  
- Der Name einer XML-Schemaauflistung. So erstellen eine typisierte **Xml** Spalte oder Variable ist, können Sie optional den Namen der XML-schemaauflistung angeben. Weitere Informationen zu typisierten und nicht typisiertes XML, finden Sie unter [Vergleichen von typisiertem XML mit nicht typisiertem XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md).  
+ Der Name einer XML-Schemaauflistung. Zum Erstellen einer Spalte oder Variablen vom Typ **xml** können Sie optional den Namen der XML-Schemaauflistung angeben. Weitere Informationen zu typisierten und nicht typisierten XML-Dokumenten finden Sie unter [Vergleichen von typisiertem XML mit nicht typisiertem XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md).  
   
-## <a name="remarks"></a>Hinweise  
- Die gespeicherte Darstellung von **Xml** -datentypinstanzen darf 2 Gigabyte (GB) nicht überschreiten.  
+## <a name="remarks"></a>Remarks  
+ Die gespeicherte Darstellung von Instanzen vom Datentyp **xml** darf die Größe von 2 Gigabyte (GB) nicht überschreiten.  
   
  Die Facets CONTENT und DOCUMENT beziehen sich nur auf typisierte XML-Daten. Weitere Informationen finden Sie unter [Vergleichen von typisiertem XML mit nicht typisiertem XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md).  
   
@@ -73,10 +73,10 @@ SELECT @y;
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Datentypkonvertierung &#40; Datenbankmodul &#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Datentypkonvertierung &#40;Datenbank-Engine&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)   
  [Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [xml-Datentypmethoden](../../t-sql/xml/xml-data-type-methods.md)   
+ [XML-Datentypmethoden](../../t-sql/xml/xml-data-type-methods.md)   
  [XQuery-Sprachreferenz &#40;SQL Server&#41;](../../xquery/xquery-language-reference-sql-server.md)  
   
   

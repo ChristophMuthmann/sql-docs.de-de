@@ -1,5 +1,5 @@
 ---
-title: Erstellen der Warteschlange (Transact-SQL) | Microsoft Docs
+title: CREATE QUEUE (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 04/10/2017
 ms.prod: sql-non-specified
@@ -80,11 +80,11 @@ CREATE QUEUE <object>
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *Database_name* (Objekt)  
- Der Name der Datenbank, in der die neue Warteschlange erstellt werden soll. *Database_name* müssen den Namen einer vorhandenen Datenbank angeben. Wenn *Database_name* nicht angegeben wird, die Warteschlange in der aktuellen Datenbank erstellt wird.  
+ *database_name* (Objekt)  
+ Der Name der Datenbank, in der die neue Warteschlange erstellt werden soll. *database_name* muss dem Namen einer vorhandenen Datenbank entsprechen. Wird *database_name* nicht bereitgestellt, wird die Warteschlange in der aktuellen Datenbank erstellt.  
   
- *Schema_name* (Objekt)  
- Der Name des Schemas, zu dem die neue Warteschlange gehört. Standardmäßig handelt es sich bei dem Schema um das Standardschema für den Benutzer, der die Anweisung ausführt. Wenn die CREATE QUEUE-Anweisung von einem Mitglied der festen Serverrolle "Sysadmin" ausgeführt wird, oder ein Mitglied der Db_dbowner oder Db_ddladmin Datenbankrollen in der Datenbank gemäß festen *Database_name*, *Schema_name* können ein anderes als das dem Anmeldenamen der aktuellen Verbindung zugeordnete Schema angeben. Andernfalls *Schema_name* muss das Standardschema für den Benutzer, der die Anweisung ausführt.  
+ *schema_name* (Objekt)  
+ Der Name des Schemas, zu dem die neue Warteschlange gehört. Standardmäßig handelt es sich bei dem Schema um das Standardschema für den Benutzer, der die Anweisung ausführt. Wird die CREATE QUEUE-Anweisung von einem Mitglied der festen Serverrolle sysadmin oder einem Mitglied der festen Datenbankrollen db_dbowner oder db_ddladmin in der durch *database_name* angegebenen Datenbank ausgeführt, kann *schema_name* ein anderes als das dem Anmeldenamen der aktuellen Verbindung zugeordnete Schema angeben. Andernfalls muss es sich bei *schema_name* um das Standardschema für den Benutzer handeln, der die Anweisung ausführt.  
   
  *queue_name*  
  Der Name der zu erstellenden Warteschlange. Dieser Name muss den Richtlinien für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Bezeichner entsprechen.  
@@ -93,7 +93,7 @@ CREATE QUEUE <object>
  Gibt an, ob die Warteschlange verfügbar ist (ON) oder nicht (OFF). Ist die Warteschlange nicht verfügbar, können der Warteschlange keine Nachrichten hinzugefügt oder aus ihr entfernt werden. Sie können die Warteschlange im nicht verfügbaren Status erstellen, damit Nachrichten erst dann in der Warteschlange ankommen, wenn die Warteschlange mit einer ALTER QUEUE-Anweisung zur Verfügung gestellt wird. Wird diese Klausel nicht angegeben, ist die Standardeinstellung ON, und die Warteschlange ist verfügbar.  
   
  RETENTION  
- Gibt die Beibehaltungseinstellung für die Warteschlange an. Wenn RETENTION = ON, alle Nachrichten gesendete oder empfangene für Konversationen, die diese Warteschlange verwenden, werden in der Warteschlange beibehalten, bis die Konversationen beendet sind. Dies ermöglicht es Ihnen, Nachrichten zu Überwachungszwecken oder zur Ausführung von kompensierenden Transaktionen beim Auftreten eines Fehlers beizubehalten. Wird diese Klausel nicht angegeben, wird die Beibehaltungseinstellung standardmäßig auf OFF festgelegt.  
+ Gibt die Beibehaltungseinstellung für die Warteschlange an. Ist RETENTION = ON, werden alle Nachrichten, die für Konversationen mit dieser Warteschlange gesendet oder empfangen werden, in der Warteschlange beibehalten, bis die Konversationen beendet sind. Dies ermöglicht es Ihnen, Nachrichten zu Überwachungszwecken oder zur Ausführung von kompensierenden Transaktionen beim Auftreten eines Fehlers beizubehalten. Wird diese Klausel nicht angegeben, wird die Beibehaltungseinstellung standardmäßig auf OFF festgelegt.  
   
 > [!NOTE]  
 >  Das Festlegen von RETENTION = ON kann die Leistung reduzieren. Diese Einstellung sollte nur verwendet werden, wenn sie für die Anwendung erforderlich ist.  
@@ -107,17 +107,17 @@ CREATE QUEUE <object>
  PROCEDURE_NAME = \<procedure>  
  Gibt den Namen der gespeicherten Prozedur an, die für die Verarbeitung von Nachrichten in dieser Warteschlange gestartet werden soll. Dieser Wert muss ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Bezeichner sein.  
   
- *database_name*(procedure)  
+ *database_name*(Prozedur)  
  Der Name der Datenbank, die die gespeicherte Prozedur enthält.  
   
- *schema_name*(procedure)  
+ *schema_name*(Prozedur)  
  Der Name des Schemas, das die gespeicherte Prozedur enthält.  
   
  *procedure_name*  
  Der Name der gespeicherten Prozedur.  
   
- MAX_QUEUE_READERS =*Max_readers*  
- Gibt die maximale Anzahl von Instanzen der gespeicherten Aktivierungsprozedur an, die von der Warteschlange gleichzeitig gestartet werden. Der Wert der *Max_readers* muss eine Zahl zwischen **0** und **32767**.  
+ MAX_QUEUE_READERS =*max_reader*  
+ Gibt die maximale Anzahl von Instanzen der gespeicherten Aktivierungsprozedur an, die von der Warteschlange gleichzeitig gestartet werden. Der Wert von *max_readers* muss eine Zahl zwischen **0** und **32767** sein.  
   
  EXECUTE AS  
  Gibt das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank-Benutzerkonto an, unter dem die gespeicherte Aktivierungsprozedur ausgeführt wird. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] muss zum Zeitpunkt des Startens der gespeicherten Prozedur durch die Warteschlange die Berechtigungen für diesen Benutzer überprüfen können. Bei einem Domänenbenutzer muss der Server mit der Domäne verbunden sein, wenn die Prozedur gestartet wird. Andernfalls erzeugt die Aktivierung einen Fehler. Bei einem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Benutzer kann der Server immer die Berechtigungen überprüfen.  
@@ -125,8 +125,8 @@ CREATE QUEUE <object>
  SELF  
  Gibt an, dass die gespeicherte Prozedur als der aktuelle Benutzer ausgeführt wird. (Der Datenbankprinzipal, der diese CREATE QUEUE-Anweisung ausführt.)  
   
- "*User_name*"  
- Der Name des Benutzers, als der die gespeicherte Prozedur ausgeführt wird. Die *User_name* Parameter muss ein gültiger [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] als angegebenen Benutzers eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Bezeichner. Der aktuelle Benutzer benötigen die IMPERSONATE-Berechtigung für die *User_name* angegebenen.  
+ '*user_name*'  
+ Der Name des Benutzers, als der die gespeicherte Prozedur ausgeführt wird. Der *user_name*-Parameter muss ein gültiger [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Benutzer sein, der als [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Bezeichner angegeben wird. Der aktuelle Benutzer muss über die IMPERSONATE-Berechtigung für den mit *user_name* angegebenen Benutzer verfügen.  
   
  OWNER  
  Gibt an, dass die gespeicherte Prozedur als der Besitzer der Warteschlange ausgeführt wird.  
@@ -136,13 +136,13 @@ CREATE QUEUE <object>
   
  Eine Warteschlange, für die die Behandlung nicht verarbeitbarer Nachrichten auf OFF festgelegt ist, wird erst nach fünf aufeinander folgenden Transaktionsrollbacks deaktiviert. Daher ist es möglich, dass von der Anwendung ein System für die Behandlung nicht verarbeitbarer Nachrichten definiert wird.  
   
- ON *Dateigruppe |* [**Standard**]  
- Gibt die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Dateigruppe an, in der diese Warteschlange erstellt werden soll. Sie können die *Dateigruppe* Parameter für eine Dateigruppe identifizieren, oder verwenden die Standard-ID, um die Standarddateigruppe für die Service Broker-Datenbank verwenden. Im Kontext dieser Klausel ist DEFAULT kein Schlüsselwort und muss als Bezeichner begrenzt sein. Wird keine Dateigruppe angegeben, verwendet die Warteschlange die Standarddateigruppe für die Datenbank.  
+ ON *filegroup |* [**DEFAULT**]  
+ Gibt die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Dateigruppe an, in der diese Warteschlange erstellt werden soll. Sie können mit dem *filegroup*-Parameter eine Dateigruppe identifizieren oder mit dem DEFAULT-Bezeichner die Standarddateigruppe für die Service Broker-Datenbank verwenden. Im Kontext dieser Klausel ist DEFAULT kein Schlüsselwort und muss als Bezeichner begrenzt sein. Wird keine Dateigruppe angegeben, verwendet die Warteschlange die Standarddateigruppe für die Datenbank.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Eine Warteschlange kann das Ziel einer SELECT-Anweisung sein. Der Inhalt einer Warteschlange kann jedoch nur mithilfe von Anweisungen geändert werden, die für [!INCLUDE[ssSB](../../includes/sssb-md.md)]-Konversationen verwendet werden, wie beispielsweise SEND, RECEIVE und END CONVERSATION. Eine Warteschlange kann nicht das Ziel einer INSERT-, UPDATE-, DELETE- oder TRUNCATE-Anweisung sein.  
   
- Eine Warteschlange ist möglicherweise kein temporäres Objekt. Deshalb Warteschlangennamen ab  **#**  sind nicht gültig.  
+ Eine Warteschlange ist möglicherweise kein temporäres Objekt. Daher sind Warteschlangennamen, die mit **#** beginnen, ungültig.  
   
  Das Erstellen einer Warteschlange im inaktiven Status ermöglicht es Ihnen, die Infrastruktur für einen Dienst einzurichten, bevor der Empfang von Nachrichten in der Warteschlange zugelassen wird.  
   
@@ -158,7 +158,7 @@ CREATE QUEUE <object>
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
-|status|**tinyint**|Status der Nachricht. Die RECEIVE-Anweisung gibt alle Nachrichten, die den Status **1**. Wenn die Nachrichtenbeibehaltung aktiviert ist, wird der Status auf 0 festgelegt. Wenn die Nachrichtenbeibehaltung deaktiviert ist, wird die Meldung aus der Warteschlange gelöscht. Nachrichten in der Warteschlange können einen der folgenden Werte enthalten:<br /><br /> **0**= empfangene Nachricht wurde beibehalten<br /><br /> **1**= bereit zu empfangen<br /><br /> **2**= noch nicht abgeschlossen<br /><br /> **3**= gesendete Nachricht wurde beibehalten|  
+|status|**tinyint**|Status der Nachricht. Die RECEIVE-Anweisung gibt alle Nachrichten zurück, die den Status **1** haben. Wenn die Nachrichtenbeibehaltung aktiviert ist, wird der Status auf 0 festgelegt. Wenn die Nachrichtenbeibehaltung deaktiviert ist, wird die Meldung aus der Warteschlange gelöscht. Nachrichten in der Warteschlange können einen der folgenden Werte enthalten:<br /><br /> **0** = Empfangene Nachricht wurde beibehalten<br /><br /> **1** = Bereit zu empfangen<br /><br /> **2** = Noch nicht abgeschlossen<br /><br /> **3** = Gesendete Nachricht wurde beibehalten|  
 |priority|**tinyint**|Die Prioritätsebene, die der Nachricht zugewiesen wird.|  
 |queuing_order|**bigint**|Fortlaufende Nummer der Nachricht in der Warteschlange.|  
 |conversation_group_id|**uniqueidentifier**|Bezeichner für die Konversationsgruppe, zu der diese Nachricht gehört.|  
@@ -170,7 +170,7 @@ CREATE QUEUE <object>
 |service_contract_id|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Objektbezeichner des Vertrags, dem die Konversation entspricht.|  
 |message_type_name|**nvarchar(256)**|Name des Nachrichtentyps, der die Nachricht beschreibt.|  
 |message_type_id|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Objektbezeichner des Nachrichtentyps, der die Nachricht beschreibt.|  
-|validation|**nchar(2)**|Für die Nachricht verwendete Überprüfung.<br /><br /> E = leer<br /><br /> N = Keine<br /><br /> X = XML|  
+|validation|**nchar(2)**|Für die Nachricht verwendete Überprüfung.<br /><br /> E=Leer<br /><br /> N = Keine<br /><br /> X=XML|  
 |message_body|**varbinary(max)**|Inhalt der Nachricht.|  
 |message_id|**uniqueidentifier**|Eindeutiger Bezeichner für die Nachricht.|  
   
@@ -218,7 +218,7 @@ CREATE QUEUE ExpenseQueue
 ```  
   
 ### <a name="e-creating-a-queue-with-multiple-parameters"></a>E. Erstellen einer Warteschlange mit mehreren Parametern  
- Das folgende Beispiel erstellt eine Warteschlange auf dem `DEFAULT` Dateigruppe. Die Warteschlange ist nicht verfügbar. Nachrichten werden in der Warteschlange bis die Konversation beibehalten, die sie endet angehören. Wenn die Warteschlange über ALTER QUEUE zur Verfügung gestellt wird, startet die Warteschlange die gespeicherte Prozedur `2008R2.dbo.expense_procedure` für die Verarbeitung von Nachrichten. Die gespeicherte Prozedur wird als der Benutzer ausgeführt, der die `CREATE QUEUE`-Anweisung ausgeführt hat. Die Warteschlange startet ein Maximum von `10` Instanzen der gespeicherten Prozedur.  
+ Im folgenden Beispiel wird eine Warteschlange in der `DEFAULT`-Dateigruppe erstellt. Die Warteschlange ist nicht verfügbar. Nachrichten werden in der Warteschlange beibehalten, bis die Konversation endet, zu der sie gehören. Wenn die Warteschlange über ALTER QUEUE zur Verfügung gestellt wird, startet die Warteschlange die gespeicherte Prozedur `2008R2.dbo.expense_procedure` für die Verarbeitung von Nachrichten. Die gespeicherte Prozedur wird als der Benutzer ausgeführt, der die `CREATE QUEUE`-Anweisung ausgeführt hat. Die Warteschlange startet ein Maximum von `10` Instanzen der gespeicherten Prozedur.  
   
 ```  
 CREATE QUEUE ExpenseQueue  
@@ -231,7 +231,7 @@ CREATE QUEUE ExpenseQueue
     ON [DEFAULT] ;  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [ALTER QUEUE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-queue-transact-sql.md)   
  [CREATE SERVICE &#40;Transact-SQL&#41;](../../t-sql/statements/create-service-transact-sql.md)   
  [DROP QUEUE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-queue-transact-sql.md)   

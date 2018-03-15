@@ -1,5 +1,5 @@
 ---
-title: DECRYPTBYKEYAUTOASYMKEY (Transact-SQL) | Microsoft Docs
+title: DECRYPTBYKEYAUTOASYMKEY (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 09/09/2015
 ms.prod: sql-non-specified
@@ -67,7 +67,7 @@ DecryptByKeyAutoAsymKey ( akey_ID , akey_password
  @add_authenticator  
  Gibt an, ob zusammen mit dem Nur-Text auch ein Authentifikator verschlüsselt wurde. Dies muss derselbe Wert sein, der beim Verschlüsseln der Daten an EncryptByKey übergeben wurde.  
   
- *Authenticator*  
+ *authenticator*  
  Bezeichnet die Daten, aus denen ein Authentifikator generiert wird. Dies muss derselbe Wert sein, der an EncryptByKey übergeben wurde. *authenticator* ist vom Datentyp **sysname**.  
   
  @authenticator  
@@ -76,14 +76,14 @@ DecryptByKeyAutoAsymKey ( akey_ID , akey_password
 ## <a name="return-types"></a>Rückgabetypen  
  **varbinary** mit einer maximalen Größe von 8.000 Bytes.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  In DecryptByKeyAutoAsymKey ist die Funktionalität von OPEN SYMMETRIC KEY und von DecryptByKey kombiniert. In einem einzelnen Vorgang wird ein symmetrischer Schlüssel entschlüsselt und mit diesem Schlüssel der verschlüsselte Text entschlüsselt.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die VIEW DEFINITION-Berechtigung für den symmetrischen Schlüssel und die CONTROL-Berechtigung für den asymmetrischen Schlüssel.  
   
 ## <a name="examples"></a>Beispiele  
- Im folgenden Beispiel wird gezeigt, wie Code, mit dem eine Entschlüsselung ausgeführt wird, mit `DecryptByKeyAutoAsymKey` vereinfacht werden kann. Dieser Code sollte ausgeführt werden, auf eine [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] Datenbank, die nicht bereits einen Datenbank-Hauptschlüssel verfügt.  
+ Im folgenden Beispiel wird gezeigt, wie Code, mit dem eine Entschlüsselung ausgeführt wird, mit `DecryptByKeyAutoAsymKey` vereinfacht werden kann. Dieser Code sollte für eine [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]-Datenbank ausgeführt werden, die nicht bereits über einen Datenbank-Hauptschlüssel verfügt.  
   
 ```  
 --Create the keys and certificate.  
@@ -133,10 +133,10 @@ SELECT NationalIDNumber, EncryptedNationalIDNumber2
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [OPEN SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/open-symmetric-key-transact-sql.md)   
- [ENCRYPTBYKEY &#40; Transact-SQL &#41;](../../t-sql/functions/encryptbykey-transact-sql.md)   
- [DECRYPTBYKEY &#40; Transact-SQL &#41;](../../t-sql/functions/decryptbykey-transact-sql.md)   
+ [ENCRYPTBYKEY &#40;Transact-SQL&#41;](../../t-sql/functions/encryptbykey-transact-sql.md)   
+ [DECRYPTBYKEY &#40;Transact-SQL&#41;](../../t-sql/functions/decryptbykey-transact-sql.md)   
  [Verschlüsselungshierarchie](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   
   

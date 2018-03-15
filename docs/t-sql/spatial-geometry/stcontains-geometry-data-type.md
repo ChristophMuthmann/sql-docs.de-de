@@ -1,5 +1,5 @@
 ---
-title: STContains (Geometry-Datentyp) | Microsoft Docs
+title: STContains (geometry-Datentyp) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -48,12 +48,12 @@ Gibt 1 zurück, wenn eine **geometry** -Instanz eine andere **geometry** -Instan
  Eine andere **geometry** -Instanz zum Vergleich mit der Instanz, in der `STContains()` aufgerufen wird.  
   
 ## <a name="return-types"></a>Rückgabetypen  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Rückgabetyp: **Bit**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Rückgabetyp: **bit**  
   
  CLR-Rückgabetyp: **SqlBoolean**  
   
-## <a name="remarks"></a>Hinweise  
- `STContains()`immer null zurück, wenn das spatial Reference IDs (SRIDs) auf, der die **Geometrie** -Instanzen nicht übereinstimmen.  
+## <a name="remarks"></a>Remarks  
+ `STContains()` gibt immer NULL zurück, wenn die SRIDs (Spatial Reference IDs) der **geometry**-Instanzen nicht übereinstimmen.  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird `STContains()` verwendet, um zwei `geometry` -Instanzen daraufhin zu überprüfen, ob die erste Instanz die zweite Instanz enthält.  
@@ -66,7 +66,7 @@ SET @h = geometry::STGeomFromText('POINT(1 1)', 0);
 SELECT @g.STContains(@h);  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Übersicht über räumliche Indizes](../../relational-databases/spatial/spatial-indexes-overview.md)   
  [OGC-Methoden für geometry-Instanzen](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   

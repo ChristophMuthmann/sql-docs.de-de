@@ -1,5 +1,5 @@
 ---
-title: STNumCurves (Geography-Datentyp) | Microsoft Docs
+title: STNumCurves (geography-Datentyp) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -44,14 +44,14 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Rückgabetypen  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Rückgabetyp: **Geography**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Rückgabetyp: **geography**  
   
  CLR-Rückgabetyp: **SqlGeography**  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Eindimensionale räumliche Datentypen schließen **LineString**, **CircularString**und **CompoundCurve**ein. Eine leere eindimensionale Instanz von **geography** gibt 0 zurück.  
   
- `STNumCurves`() funktioniert nur für einfache Typen. Es funktioniert nicht mit **Geography** -Auflistungen wie **MultiLineString**. Wenn die Instanz von**NULL** kein eindimensionaler Datentyp ist, wird **geography** zurückgegeben.  
+ `STNumCurves`() funktioniert nur mit einfachen Typen; **geography**-Collection wie **MultiLineString** gehören nicht dazu. Wenn die Instanz von**NULL** kein eindimensionaler Datentyp ist, wird **geography** zurückgegeben.  
   
  **Null** wird für nicht initialisierte Instanzen von **geography** zurückgegeben.  
   
@@ -75,7 +75,7 @@ ms.lasthandoff: 01/25/2018
  SELECT @g.STNumCurves();
  ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Übersicht über räumliche Datentypen](../../relational-databases/spatial/spatial-data-types-overview.md)   
  [OGC-Methoden für geography-Instanzen](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   

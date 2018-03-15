@@ -1,5 +1,5 @@
 ---
-title: COLLATIONPROPERTY (Transact-SQL) | Microsoft Docs
+title: COLLATIONPROPERTY (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 10/24/2017
 ms.prod: sql-non-specified
@@ -32,7 +32,7 @@ ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="collation-functions---collationproperty-transact-sql"></a>Sortierungsfunktionen - COLLATIONPROPERTY (Transact-SQL)
+# <a name="collation-functions---collationproperty-transact-sql"></a>Sortierungsfunktionen: COLLATIONPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Gibt die Eigenschaft einer angegebenen Sortierung in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] zurück.
@@ -46,18 +46,18 @@ COLLATIONPROPERTY( collation_name , property )
 ```  
   
 ## <a name="arguments"></a>Argumente  
-*Sortierungsname*  
-Der Name der Sortierung. *Collation_name* ist **vom Datentyp nvarchar(128)**, und hat keinen Standardwert.
+*collation_name*  
+Der Name der Sortierung. *collation_name* ist vom Datentyp **nvarchar(128)** und verfügt nicht über einen Standardwert.
   
-*Eigenschaft*  
-Die Eigenschaft der Sortierung. *Eigenschaft* ist **varchar(128)**, und kann einen der folgenden Werte sein:
+*property*  
+Die Eigenschaft der Sortierung. *property* ist vom Datentyp **varchar(128)**. Die folgenden Werte sind möglich:
   
-|Eigenschaftsname|Description|  
+|Eigenschaftenname|Description|  
 |---|---|
-|**CodePage**|Nicht-Unicode-Codepage der Sortierung. Finden Sie unter [Anhang G DBCS/Unicode-Zuordnen von Systemtabellen](https://msdn.microsoft.com/en-us/library/cc194886.aspx) und [Anhang H-Codepages](https://msdn.microsoft.com/en-us/library/cc195051.aspx) übersetzen diese Werte und finden Sie unter zuordnungsangaben Zeichen.|  
-|**LCID**|Windows-LCID der Sortierung. Finden Sie unter [LCID-Struktur](https://msdn.microsoft.com/en-us/library/cc233968.aspx) übersetzen Sie diese Werte (Sie müssen zum Konvertieren **Varbinary** erste).|  
-|**ComparisonStyle**|Windows-Vergleichsart der Sortierung. Gibt 0 für alle binären Sortierungen sowohl (\_"bin") und (\_BIN2), sowie wenn alle Eigenschaften und Kleinschreibung beachtet werden. Bitmaskenwerte:<br /><br /> Groß-/Kleinschreibung ignorieren: 1<br /><br /> Akzente ignorieren: 2<br /><br /> Kana ignorieren: 65536<br /><br /> Breite ignorieren: 131072<br /><br /> Hinweis: Obwohl er wirkt sich auf das Vergleichsverhalten die Variation Selektor unterschieden (\_VSS) Option ist in diesem Wert nicht dargestellt.|  
-|**Version**|Die Version der Sortierung, abgeleitet vom Versionsfeld der Sortierungs-ID. Gibt einen ganzzahligen Wert zwischen 0 und 3.<br /><br /> Sortierungen mit "140" im Namen geben 3 zurück.<br /><br /> Sortierungen mit "100" im Namen geben 2 zurück.<br /><br /> Sortierungen mit "90" im Namen geben 1 zurück.<br /><br /> Alle anderen Sortierungen geben 0 zurück.|  
+|**CodePage**|Nicht-Unicode-Codepage der Sortierung. Informationen zum Übersetzen dieser Werte und zu ihren Zeichenzuordnungen finden Sie unter [Appendix G DBCS/Unicode Mapping Tables (Anhang G: DBCS/Tabellen zur Unicode-Zuordnung)](https://msdn.microsoft.com/en-us/library/cc194886.aspx) und [Appendix H Code Pages (Anhang H: Codeseiten)](https://msdn.microsoft.com/en-us/library/cc195051.aspx).|  
+|**LCID**|Windows-LCID der Sortierung. Informationen zum Übersetzen dieser Werte erhalten Sie unter [LCID Structure (LCID-Struktur)](https://msdn.microsoft.com/en-us/library/cc233968.aspx). Sie müssen jedoch zunächst eine Konvertierung in **varbinary** vornehmen.|  
+|**ComparisonStyle**|Die Windows-Vergleichsart der Sortierung. Gibt 0 (null) für binäre Sortierungen zurück. Sowohl (\_BIN) als auch (\_BIN2) werden ebenfalls zurückgegeben, wenn alle Eigenschaften als sensibel eingestuft sind. Bitmaskenwerte:<br /><br /> Groß-/Kleinschreibung ignorieren: 1<br /><br /> Akzente ignorieren: 2<br /><br /> Kana ignorieren: 65536<br /><br /> Breite ignorieren: 131072<br /><br /> Hinweis: Die Option „Variierungswahlzeichen“ (\_VSS) ist in diesem Wert nicht widergespiegelt, obwohl sie Auswirkungen auf das Vergleichsverhalten hat.|  
+|**Version**|Die Version der Sortierung, abgeleitet vom Versionsfeld der Sortierungs-ID. Gibt einen ganzzahligen Wert zwischen 0 und 3 zurück.<br /><br /> Sortierungen, in deren Namen die Zahl 140 enthalten ist, geben 3 zurück.<br /><br /> Sortierungen, in deren Namen die Zahl 100 enthalten ist, geben 2 zurück.<br /><br /> Sortierungen, in deren Namen die Zahl 90 enthalten ist, geben 1 zurück.<br /><br /> Alle anderen Sortierungen geben 0 zurück.|  
   
 ## <a name="return-types"></a>Rückgabetypen
 **sql_variant**
@@ -74,7 +74,7 @@ SELECT COLLATIONPROPERTY('Traditional_Spanish_CS_AS_KS_WS', 'CodePage');
 1252   
 ```  
   
-[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]und[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ```sql
 SELECT COLLATIONPROPERTY('Traditional_Spanish_CS_AS_KS_WS', 'CodePage')  

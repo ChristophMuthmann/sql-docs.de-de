@@ -1,5 +1,5 @@
 ---
-title: "Zurücksetzen (Transact-SQL) | Microsoft Docs"
+title: REVERT (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
@@ -52,10 +52,10 @@ REVERT
 ```  
   
 ## <a name="arguments"></a>Argumente  
- WITH COOKIE = @*Varbinary_variable*  
- Gibt das Cookie an, die in ein entsprechendes erstellten [EXECUTE AS](../../t-sql/statements/execute-as-transact-sql.md) eigenständigen Anweisung. *@varbinary_variable*ist **varbinary(100)**.  
+ WITH COOKIE = @*varbinary_variable*  
+ Gibt das Cookie an, das in einer entsprechenden eigenständigen [EXECUTE AS](../../t-sql/statements/execute-as-transact-sql.md)-Anweisung erstellt wurde. *@varbinary_variable* ist vom Datentyp **varbinary(100)**.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  REVERT kann in einem Modul, wie einer gespeicherten Prozedur oder benutzerdefinierten Funktion, oder in einer eigenständigen Anweisung angegeben werden. Innerhalb eines Moduls kann REVERT nur auf EXECUTE AS-Anweisungen angewendet werden, die im Modul definiert sind. So gibt beispielsweise die folgende gespeicherte Prozedur eine `EXECUTE AS`-Anweisung aus, gefolgt von einer `REVERT`-Anweisung.  
   
 ```  
@@ -79,14 +79,14 @@ GO
 EXECUTE dbo.usp_myproc;   
 ```  
   
- Die `REVERT` -Anweisung, die in definiert wird `usp_myproc` wechselt der Ausführungskontext, der innerhalb des Moduls festlegen, jedoch wirkt sich nicht auf die außerhalb des Moduls festgelegten Ausführungskontext. Der Ausführungskontext für die Sitzung bleibt also auf `login1` festgelegt.  
+ Die in `usp_myproc` definierte `REVERT`-Anweisung wechselt den im Modul festgelegten Ausführungskontext, wirkt sich jedoch nicht auf den außerhalb des Moduls festgelegten Ausführungskontext aus. Der Ausführungskontext für die Sitzung bleibt also auf `login1` festgelegt.  
   
  Als eigenständige Anweisung wird REVERT auf EXECUTE AS-Anweisungen angewendet, die in einem Batch oder einer Sitzung definiert sind. REVERT hat keinerlei Auswirkungen, wenn die entsprechende EXECUTE AS-Anweisung die WITH NO REVERT-Klausel enthält. In diesem Fall bleibt der Ausführungskontext so lange wirksam, bis die Sitzung gelöscht wird.  
   
 ## <a name="using-revert-with-cookie"></a>Verwenden von REVERT WITH COOKIE  
- Das Ausführen als-Anweisung, die verwendet wird, um den Ausführungskontext einer Sitzung festgelegt werden, die optionale Klausel WITH NO REVERT COOKIE sind = @*Varbinary_variabl*e. Wenn diese Anweisung ausgeführt wird, die [!INCLUDE[ssDE](../../includes/ssde-md.md)] übergibt das Cookie an @*Varbinary_variabl*e. Der Ausführungskontext festgelegt, dass die Anweisung nur auf den vorherigen Kontext zurückgesetzt werden kann, wenn die aufrufende REVERT WITH COOKIE = @*Varbinary_variable* -Anweisung enthält den richtigen  *@varbinary_variable*  Wert.  
+ Die zum Festlegen des Ausführungskontexts einer Sitzung verwendete EXECUTE AS-Anweisung kann die optionale Klausel WITH NO REVERT COOKIE = @*varbinary_variable* einschließen. Wird diese Anweisung ausgeführt, übergibt das [!INCLUDE[ssDE](../../includes/ssde-md.md)] das Cookie an @*varbinary_variable*. Der von dieser Anweisung festgelegte Ausführungskontext kann nur auf einen vorherigen Kontext zurückgesetzt werden, wenn die aufrufende REVERT WITH COOKIE = @*varbinary_variable*-Anweisung den gleichen *@varbinary_variable*-Wert enthält.  
   
- Dieser Mechanismus eignet sich für eine Umgebung, in der Verbindungs-Pooling verwendet wird. Verbindungs-Pooling bezeichnet die Verwaltung einer Gruppe von Datenbankverbindungen für die Wiederverwendung durch Anwendungen durch mehrere Endbenutzer. Da der Wert zu übergeben  *@varbinary_variable*  bekannt ist, nur an den Aufrufer der EXECUTE AS-Anweisung (in diesem Fall die Anwendung) kann der Aufrufer sicherstellen, dass der eingerichtete Ausführungskontext vom Endbenutzer geändert werden kann die die Anwendung aufruft. Nach dem Wiederherstellen des Ausführungskontexts kann die Anwendung einen Kontextwechsel zu einem anderen Prinzipal durchführen.  
+ Dieser Mechanismus eignet sich für eine Umgebung, in der Verbindungs-Pooling verwendet wird. Verbindungs-Pooling bezeichnet die Verwaltung einer Gruppe von Datenbankverbindungen für die Wiederverwendung durch Anwendungen durch mehrere Endbenutzer. Da der an *@varbinary_variable* übergebene Wert nur dem Aufrufer der EXECUTE AS-Anweisung (in diesem Fall die Anwendung) bekannt ist, kann der Aufrufer sicherstellen, dass der eingerichtete Ausführungskontext nicht von dem Endbenutzer geändert werden kann, der die Anwendung aufruft. Nach dem Wiederherstellen des Ausführungskontexts kann die Anwendung einen Kontextwechsel zu einem anderen Prinzipal durchführen.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Es sind keine Berechtigungen erforderlich.  
@@ -138,7 +138,7 @@ GO
 ```  
   
 ### <a name="b-using-the-with-cookie-clause"></a>B. Verwenden der WITH COOKIE-Klausel  
- Im folgenden Beispiel wird den Ausführungskontext einer Sitzung auf einen angegebenen Benutzer und gibt an, die WITH NO REVERT COOKIE = @*Varbinary_variabl*e-Klausel. In der `REVERT`-Anweisung muss der an die `@cookie`-Variable in der `EXECUTE AS`-Anweisung übergebene Wert angegeben sein, damit der Kontext erfolgreich auf den Aufrufer zurückgesetzt werden kann. Zur Ausführung dieses Beispiels müssen der `login1`-Anmeldename und der `user1`-Benutzer, die in Beispiel A erstellt wurden, vorhanden sein.  
+ Im folgenden Beispiel wird der Ausführungskontext einer Sitzung auf einen angegebenen Benutzer festgelegt und die WITH NO REVERT COOKIE = @*varbinary_variable*-Klausel angegeben. In der `REVERT`-Anweisung muss der an die `@cookie`-Variable in der `EXECUTE AS`-Anweisung übergebene Wert angegeben sein, damit der Kontext erfolgreich auf den Aufrufer zurückgesetzt werden kann. Zur Ausführung dieses Beispiels müssen der `login1`-Anmeldename und der `user1`-Benutzer, die in Beispiel A erstellt wurden, vorhanden sein.  
   
 ```  
 DECLARE @cookie varbinary(100);  
@@ -159,12 +159,12 @@ SELECT SUSER_NAME(), USER_NAME();
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Führen Sie AS &#40; Transact-SQL &#41;](../../t-sql/statements/execute-as-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [EXECUTE AS &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-transact-sql.md)   
  [EXECUTE AS-Klausel &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-clause-transact-sql.md)   
  [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   
- [SUSER_NAME &#40; Transact-SQL &#41;](../../t-sql/functions/suser-name-transact-sql.md)   
- [USER_NAME &#40; Transact-SQL &#41;](../../t-sql/functions/user-name-transact-sql.md)   
+ [SUSER_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/suser-name-transact-sql.md)   
+ [USER_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/user-name-transact-sql.md)   
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
  [CREATE USER &#40;Transact-SQL&#41;](../../t-sql/statements/create-user-transact-sql.md)  
   

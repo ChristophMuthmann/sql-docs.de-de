@@ -1,5 +1,5 @@
 ---
-title: Erstellen von columnstore-INDEX (Transact-SQL) | Microsoft Docs
+title: CREATE COLUMNSTORE INDEX (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
@@ -45,25 +45,25 @@ ms.lasthandoff: 01/25/2018
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-Konvertieren einer Rowstore-Tabelle einen gruppierten columnstore-Index, oder erstellen Sie einen nicht gruppierten columnstore-Index. Verwenden Sie einen columnstore-Index aus, um effizient operative Echtzeitanalyse auf einer OLTP-Arbeitslast auszuführen oder um Daten datenkomprimierung und abfrageleistung für Data warehousing-arbeitsauslastungen zu verbessern.  
+Konvertiert eine Rowstore-Tabelle in einen gruppierten Columnstore-Index oder erstellt einen nicht gruppierten Columnstore-Index. Verwendet einen Columnstore-Index, um eine operative Echtzeitanalyse für eine OLTP-Arbeitslast effizient auszuführen oder um die Datenkomprimierung und Abfrageleistung für Data Warehouse-Arbeitslasten zu verbessern.  
   
 > [!NOTE]  
-> Beginnend mit [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], können Sie die Tabelle als gruppierten columnstore-Index erstellen.   Es ist nicht mehr notwendig, erstellen Sie zuerst eine Rowstore-Tabelle, und klicken Sie dann in einen gruppierten columnstore-Index zu konvertieren.  
+> Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] können Sie die Tabelle als gruppierten Columnstore-Index erstellen.   Es ist nun nicht mehr erforderlich, zuerst eine Rowstore-Tabelle zu erstellen und diese dann in einen gruppierten Columnstore-Index zu konvertieren.  
 
 > [!TIP]
-> Informationen zu Richtlinien zum Entwerfen Indizes, finden Sie in der [SQL Server Handbuch zum Indexentwurf](../../relational-databases/sql-server-index-design-guide.md).
+> Weitere Informationen zu den Richtlinien für das Entwerfen von Indizes finden Sie im [Handbuch zum SQL Server-Indexentwurf](../../relational-databases/sql-server-index-design-guide.md).
 
-Fahren Sie mit Beispielen:  
--   [Beispiele zum Konvertieren einer Rowstore-Tabelle in columnstore](../../t-sql/statements/create-columnstore-index-transact-sql.md#convert)  
--   [Beispiele für nicht gruppierte columnstore-Indizes](../../t-sql/statements/create-columnstore-index-transact-sql.md#nonclustered)  
+Zu den Beispielen wechseln:  
+-   [Beispiele zum Konvertieren einer Rowstore-Tabelle in Columnstore](../../t-sql/statements/create-columnstore-index-transact-sql.md#convert)  
+-   [Beispiele für nicht gruppierte Columnstore-Indizes](../../t-sql/statements/create-columnstore-index-transact-sql.md#nonclustered)  
   
-Zu den Szenarien wechseln:  
--   [Columnstore-Indizes für die operative Echtzeitanalyse](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)  
--   [Columnstore-Indizes für Datawarehousing](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)  
+Zu den Szenarios wechseln:  
+-   [Erste Schritte mit Columnstore für operative Echtzeitanalyse](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)  
+-   [Columnstore-Indizes: Data Warehouse](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)  
   
 Weitere Informationen:  
--   [Columnstore-Indizes](../../relational-databases/indexes/columnstore-indexes-overview.md)  
--   [Featurezusammenfassung für columnstore-Indizes](../../relational-databases/indexes/columnstore-indexes-what-s-new.md)  
+-   [Columnstore-Indizes: Übersicht](../../relational-databases/indexes/columnstore-indexes-overview.md)  
+-   [Columnstore-Indizes: Zusammenfassung der Features](../../relational-databases/indexes/columnstore-indexes-what-s-new.md)  
   
 ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -118,155 +118,155 @@ CREATE CLUSTERED COLUMNSTORE INDEX index_name
   
 ## <a name="arguments"></a>Argumente  
 CREATE CLUSTERED COLUMNSTORE INDEX  
-Erstellen Sie einen gruppierten columnstore-Index, in dem alle Daten komprimiert und nach Spalten gespeichert werden. Der Index beinhaltet alle Spalten der Tabelle und speichert die gesamte Tabelle. Wenn die vorhandene Tabelle ein Heap oder gruppierter Index ist, wird die Tabelle einen gruppierten columnstore-Index konvertiert. Wenn die Tabelle bereits als gruppierter columnstore-Index gespeichert ist, wird der vorhandene Index gelöscht und neu erstellt.  
+Erstellt einen gruppierten Columnstore-Index, in dem alle Daten komprimiert und nach Spalten gespeichert werden. Der Index beinhaltet alle Spalten der Tabelle und speichert die gesamte Tabelle. Wenn die vorhandene Tabelle ein Heap oder ein gruppierter Index ist, wird die Tabelle in einen gruppierten Columnstore-Index konvertiert. Wenn die Tabelle bereits als gruppierter Columnstore-Index gespeichert ist, wird der vorhandene Index gelöscht und neu erstellt.  
   
 *index_name*  
-Gibt den Namen für den neuen Index.  
+Gibt den Namen für den neuen Index an.  
   
-Wenn die Tabelle bereits einen gruppierten columnstore-Index verfügt, können Sie den gleichen Namen wie des vorhandenen Indexes angeben, oder verwenden Sie die DROP EXISTING Option, um einen neuen Namen angeben.  
+Wenn die Tabelle bereits einen gruppierten Columnstore-Index enthält, können Sie denselben Namen wie für den vorhandenen Index angeben oder die DROP EXISTING-Option zum Angeben eines neuen Namens verwenden.  
   
-ON [*Database_name*. [*schema_name* ] . | *schema_name* . ] *table_name*  
-   Gibt den ein-, zwei- oder dreiteiligen Namen der Tabelle an, die als gruppierter Columnstore-Index gespeichert werden soll. Wenn die Tabelle ein Heap ist oder gruppierter Index der Tabelle von Rowstore in einen Columnstore konvertiert. Wenn die Tabelle bereits einen Columnstore ist, wird diese Anweisung den gruppierten columnstore-Index neu erstellt.  
+ON [*database_name*. [*schema_name* ] . | *schema_name* . ] *table_name*  
+   Gibt den ein-, zwei- oder dreiteiligen Namen der Tabelle an, die als gruppierter Columnstore-Index gespeichert werden soll. Wenn die Tabelle ein Heap oder ein gruppierter Index ist, wird die Tabelle von einem Rowstore in einen Columnstore konvertiert. Wenn die Tabelle bereits ein Columnstore ist, wird mit dieser Anweisung der gruppierte Columnstore-Index neu erstellt.  
   
 mit  
-DROP_EXISTING = [AUS] | ON  
-   DROP_EXISTING = ON gibt an, dass die vorhandenen gruppierten columnstore-Index löschen und erstellen Sie einen neuen columnstore-Index.  
+DROP_EXISTING = [OFF] | ON  
+   DROP_EXISTING = ON gibt an, dass der vorhandene gruppierte Columnstore-Index gelöscht und ein neuer Columnstore-Index erstellt werden soll.  
 
-   Die Standardeinstellung, DROP_EXISTING = OFF erwartet, dass der Indexname ist identisch mit den vorhandenen Namen. Ein Fehler auftritt, wird der angegebene Indexname bereits vorhanden ist.  
+   Bei Verwendung der Standardeinstellung DROP_EXISTING = OFF wird erwartet, dass der Indexname mit dem vorhandenen Namen übereinstimmt. Wenn der angegebene Indexname bereits vorhanden ist, tritt ein Fehler auf.  
   
 MAXDOP = *max_degree_of_parallelism*  
    Überschreibt die Serverkonfiguration für den maximalen Grad an Parallelität für die Dauer des Indexvorgangs. Sie können mit MAXDOP die Anzahl der Prozessoren begrenzen, die bei der Ausführung paralleler Pläne verwendet werden. Maximal sind 64 Prozessoren zulässig.  
   
-   *Max_degree_of_parallelism* Werte sind möglich:  
+   *max_degree_of_parallelism* kann folgende Werte haben:  
    - 1 - Unterdrückt die Generierung paralleler Pläne.  
-   - \>1 - beschränkt die maximale Anzahl der Prozessoren, die in einem parallelen Indexvorgang auf die angegebene Anzahl verwendet oder weniger basierend auf der aktuellen systemarbeitsauslastung. Zum Beispiel wenn MAXDOP = 4, die Anzahl der Prozessoren, die verwendet wird, 4 oder weniger.  
+   - \>1 - Beschränkt die maximale Anzahl der Prozessoren, die bei einem parallelen Indexvorgang verwendet werden, je nach aktueller Systemauslastung auf die angegebene Zahl oder einen niedrigeren Wert. Beispiel: Wenn MAXDOP = 4, beträgt die Anzahl der verwendeten Prozessoren 4 oder weniger.  
    - 0 (Standard) - Verwendet abhängig von der aktuellen Systemarbeitsauslastung die tatsächliche Anzahl von Prozessoren oder weniger Prozessoren.  
   
-   Weitere Informationen finden Sie unter [Konfigurieren der max Degree of Parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md), und [Konfigurieren von Parallelindexvorgängen](../../relational-databases/indexes/configure-parallel-index-operations.md).  
+   Weitere Informationen finden Sie unter [Konfigurieren der Serverkonfigurationsoption Max. Grad an Parallelität](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) und [Konfigurieren von Parallelindexvorgängen](../../relational-databases/indexes/configure-parallel-index-operations.md).  
  
-COMPRESSION_DELAY = **0** | *Verzögerung* [Minuten]  
-   Gilt für: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+COMPRESSION_DELAY = **0** | *delay* [ Minutes ]  
+   Gilt für: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
 
-   Für eine datenträgerbasierte Tabelle *Verzögerung* gibt die minimale Anzahl von Minuten, die eine Delta-Zeilengruppen in den GESCHLOSSENEN Zustand verbleiben muss, in der deltazeilengruppe an, bevor SQL Server in der komprimierten Zeilengruppe komprimiert werden können. Da es sich bei datenträgerbasierten Tabellen nicht nachverfolgen einfügen und aktualisieren Zeiten für einzelne Zeilen, SQL Server gilt die Verzögerung in Delta-Zeilengruppen in den GESCHLOSSENEN Zustand übergeht.  
-   Der Standardwert beträgt 0 Minuten.  
-   Empfehlungen zur Verwendung von COMPRESSION_DELAY, finden Sie unter [erste Schritte mit Columnstore für operative Echtzeitanalyse](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md).  
+   Bei einer datenträgerbasierten Tabelle gibt *delay* die minimale Anzahl von Minuten an, die eine Delta-Zeilengruppe im Zustand CLOSED in der Delta-Zeilengruppe verbringen muss, bevor SQL Server sie in die komprimierte Zeilengruppe komprimieren kann. Da Einfügungs- und Aktualisierungszeiten in datenträgerbasierten Tabellen nicht für einzelne Zeilen nachverfolgt werden, wird die Verzögerung in SQL Server auf Delta-Zeilengruppen im CLOSED-Status angewendet.  
+   Die Standardeinstellung beträgt 0 Minuten.  
+   Empfehlungen zur Verwendung von COMPRESSION_DELAY finden Sie unter [Erste Schritte mit Columnstore für operative Echtzeitanalyse](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md).  
   
 DATA_COMPRESSION = COLUMNSTORE | COLUMNSTORE_ARCHIVE  
-   Gilt für: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+   Gilt für: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
 Gibt die Datenkomprimierungsoption für die angegebene Tabelle, die Partitionsnummer oder den Bereich von Partitionen an. Folgende Optionen stehen zur Verfügung:   
 COLUMNSTORE  
-   COLUMNSTORE ist die Standardeinstellung und gibt an, dass Sie mit der meisten leistungsfähiger columnstore-Komprimierung zu komprimieren. Dies ist die typische Wahl.  
+   COLUMNSTORE ist die Standardeinstellung und gibt an, dass die Komprimierung mit der leistungsfähigsten Columnstore-Komprimierung ausgeführt werden soll. Dies ist die gängige Methode.  
   
 COLUMNSTORE_ARCHIVE  
-   COLUMNSTORE_ARCHIVE weiter komprimiert, die Tabelle oder Partition auf eine geringere Größe an. Verwenden Sie diese Option für Situationen, z. B. Archivierung, erfordern eine geringere Speichergröße und mehr Zeit für die Speicherung und Abruf leisten können.  
+   Durch COLUMNSTORE_ARCHIVE wird die Tabelle oder Partition weiter in eine geringere Größe komprimiert. Verwenden Sie diese Option für Situationen wie etwa die Archivierung, bei denen es auf eine geringere Datenspeichergröße und nicht auf den zusätzlichen Zeitaufwand für das Speichern und Abrufen ankommt.  
   
-   Weitere Informationen zur Komprimierung finden Sie unter [Datenkomprimierung](../../relational-databases/data-compression/data-compression.md).  
+   Weitere Informationen zur Datenkomprimierung finden Sie unter [Datenkomprimierung](../../relational-databases/data-compression/data-compression.md).  
 
 ON  
-   Mit den ON-Optionen können Sie Optionen für die Datenspeicherung, wie ein Partitionsschema, eine bestimmte Dateigruppe oder die Standarddateigruppe, angeben. Wenn die Option nicht angegeben ist, verwendet der Index die einstellungspartition oder dateigruppeneinstellungen-Einstellungen der vorhandenen Tabelle.  
+   Mit den ON-Optionen können Sie Optionen für die Datenspeicherung, wie ein Partitionsschema, eine bestimmte Dateigruppe oder die Standarddateigruppe, angeben. Wenn die ON-Option nicht angegeben ist, verwendet der Index die Einstellungspartition oder Dateigruppeneinstellungen der vorhandenen Tabelle.  
   
    *partition_scheme_name* **(** *column_name* **)**  
-   Gibt das Partitionsschema für die Tabelle an. Das Partitionsschema muss in der Datenbank bereits vorhanden sein. Um das Partitionsschema zu erstellen, finden Sie unter [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md).  
+   Gibt das Partitionsschema für die Tabelle an. Das Partitionsschema muss in der Datenbank bereits vorhanden sein. Informationen zum Erstellen des Partitionsschemas finden Sie unter [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md).  
  
-   *Column_name* gibt die Spalte für die ein partitionierter Index partitioniert ist. Diese Spalte muss den Datentyp, Länge, übereinstimmen und der Genauigkeit des Arguments der Partition, *Partition_scheme_name* verwendet.  
+   *column_name* gibt die Spalte an, auf deren Grundlage ein partitionierter Index partitioniert wird. Diese Spalte muss mit dem Datentyp, der Länge und der Genauigkeit des Arguments der Partitionierungsfunktion übereinstimmen, die *partition_scheme_name* verwendet.  
 
    *filegroup_name*  
    Gibt die Dateigruppe zum Speichern des gruppierten Columnstore-Indexes an. Wenn kein Speicherort angegeben und die Tabelle nicht partitioniert ist, verwendet der Index die gleiche Dateigruppe wie die zugrunde liegende Tabelle oder Sicht. Die Dateigruppe muss bereits vorhanden sein.  
 
    **"**default**"**  
-   Um den Index in der Standarddateigruppe erstellen, verwenden Sie "Default" oder [Default].  
+   Um den Index in der Standarddateigruppe zu erstellen, verwenden Sie "default" oder [ default ].  
   
    Wenn "default" angegeben wird, muss die Option QUOTED_IDENTIFIER für die aktuelle Sitzung auf ON festgelegt sein. QUOTED_IDENTIFIER hat standardmäßig den Wert ON. Weitere Informationen finden Sie unter [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
   
-[NICHT GRUPPIERTEN] COLUMNSTORE-INDEX ERSTELLEN  
-Erstellen Sie einen nicht gruppierten in-Memory-columnstore-Index für eine Rowstore-Tabelle als einen Heap oder gruppierten Index gespeichert. Der Index eine filterbedingung aufweisen und muss nicht alle Spalten der zugrunde liegenden Tabelle enthalten. Der columnstore-Index erfordert ausreichend Speicherplatz zum Speichern einer Kopie der Daten. Es ist aktualisierbar, und wird aktualisiert, während die zugrunde liegende Tabelle geändert wird. Der nicht gruppierten columnstore-Index für einen gruppierten Index ermöglicht Echtzeitanalyse.  
+CREATE [NONCLUSTERED] COLUMNSTORE INDEX  
+Erstellt einen nicht gruppierten In-Memory-Columnstore-Index in einer als Heap oder gruppierter Index gespeicherten Rowstore-Tabelle. Der Index kann gefiltert sein und muss nicht alle Spalten der zugrunde liegenden Tabelle enthalten. Der Columnstore-Index benötigt genügend Platz zum Speichern einer Kopie der Daten. Er kann aktualisiert werden und wird bei einer Änderung der zugrunde liegenden Tabelle aktualisiert. Der nicht gruppierte Columnstore-Index in einem gruppierten Index ermöglicht eine Echtzeitanalyse.  
   
 *index_name*  
-   Gibt den Namen des Indexes an. *Index_name* muss innerhalb der Tabelle eindeutig sein, aber keinen innerhalb der Datenbank eindeutig sein. Indexnamen müssen den Regeln der [Bezeichner](../../relational-databases/databases/database-identifiers.md).  
+   Gibt den Namen des Indexes an. *index_name* muss innerhalb der Tabelle eindeutig sein, kann aber innerhalb der Datenbank mehrfach vorkommen. Indexnamen müssen den Regeln für [Bezeichner](../../relational-databases/databases/database-identifiers.md) entsprechen.  
   
- **(** *Spalte* [ **,**... *n* ] **)**  
-    Gibt die zu speichernden Spalten an. Ein nicht gruppierter columnstore-Index ist auf 1024 Spalten beschränkt.  
-   Jede Spalte muss ein unterstützter Datentyp für columnstore-Indizes sein. Finden Sie unter [Einschränkungen](../../t-sql/statements/create-columnstore-index-transact-sql.md#LimitRest) eine Liste der unterstützten Datentypen.  
+ **(** *column*  [ **,**...*n* ] **)**  
+    Gibt die zu speichernden Spalten an. Ein nicht gruppierter Columnstore-Index ist auf 1024 Spalten beschränkt.  
+   Jede Spalte muss ein unterstützter Datentyp für columnstore-Indizes sein. Eine Liste der unterstützten Datentypen finden Sie unter [Einschränkungen](../../t-sql/statements/create-columnstore-index-transact-sql.md#LimitRest).  
 
-ON [*Database_name*. [*schema_name* ] . | *schema_name* . ] *table_name*  
-   Gibt den ein-, zwei- oder dreiteiligen Namen der Tabelle, die den Index enthält.  
+ON [*database_name*. [*schema_name* ] . | *schema_name* . ] *table_name*  
+   Gibt den ein-, zwei- oder dreiteiligen Name der Tabelle an, die den Index enthält.  
 
-MIT DROP_EXISTING = [DEAKTIVIERT] | ON  
-   DROP_EXISTING = ON der vorhandene Index gelöscht und neu erstellt wird. Der angegebene Indexname muss mit dem Namen eines derzeit vorhandenen Index übereinstimmen. Die Indexdefinition kann jedoch geändert werden. Sie können z. B. andere Spalten oder Indexoptionen angeben.
+WITH DROP_EXISTING = [OFF] | ON  
+   DROP_EXISTING = ON Der vorhandene Index wird gelöscht und neu erstellt. Der angegebene Indexname muss mit dem Namen eines derzeit vorhandenen Index übereinstimmen. Die Indexdefinition kann jedoch geändert werden. Sie können z. B. andere Spalten oder Indexoptionen angeben.
   
-   DROP_EXISTING = OFF, wenn der angegebene Indexname bereits vorhanden ist, wird ein Fehler angezeigt. Der Indextyp kann nicht mithilfe von DROP_EXISTING geändert werden. In abwärtskompatibler Syntax ist WITH DROP_EXISTING gleichwertig mit WITH DROP_EXISTING = ON.  
+   DROP_EXISTING = OFF Es wird ein Fehler angezeigt, wenn der angegebene Indexname bereits vorhanden ist. Der Indextyp kann nicht mithilfe von DROP_EXISTING geändert werden. In abwärtskompatibler Syntax ist WITH DROP_EXISTING gleichwertig mit WITH DROP_EXISTING = ON.  
 
 MAXDOP = *max_degree_of_parallelism*  
-   Überschreibt die [Konfigurieren der max Degree of Parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) Konfigurationsoption für die Dauer des Indexvorgangs. Sie können mit MAXDOP die Anzahl der Prozessoren begrenzen, die bei der Ausführung paralleler Pläne verwendet werden. Maximal sind 64 Prozessoren zulässig.  
+   Überschreibt die Konfigurationsoption [Max. Grad an Parallelität](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) für die Dauer des Indexvorgangs. Sie können mit MAXDOP die Anzahl der Prozessoren begrenzen, die bei der Ausführung paralleler Pläne verwendet werden. Maximal sind 64 Prozessoren zulässig.  
   
-   *Max_degree_of_parallelism* Werte sind möglich:  
+   *max_degree_of_parallelism* kann folgende Werte haben:  
    - 1 - Unterdrückt die Generierung paralleler Pläne.  
-   - \>1 - beschränkt die maximale Anzahl der Prozessoren, die in einem parallelen Indexvorgang auf die angegebene Anzahl verwendet oder weniger basierend auf der aktuellen systemarbeitsauslastung. Zum Beispiel wenn MAXDOP = 4, die Anzahl der Prozessoren, die verwendet wird, 4 oder weniger.  
+   - \>1 - Beschränkt die maximale Anzahl der Prozessoren, die bei einem parallelen Indexvorgang verwendet werden, je nach aktueller Systemauslastung auf die angegebene Zahl oder einen niedrigeren Wert. Beispiel: Wenn MAXDOP = 4, beträgt die Anzahl der verwendeten Prozessoren 4 oder weniger.  
    - 0 (Standard) - Verwendet abhängig von der aktuellen Systemarbeitsauslastung die tatsächliche Anzahl von Prozessoren oder weniger Prozessoren.  
   
    Weitere Informationen finden Sie unter [Konfigurieren von Parallelindexvorgängen](../../relational-databases/indexes/configure-parallel-index-operations.md).  
   
 > [!NOTE]  
->  Parallele Indexvorgänge sind nicht verfügbar in jeder Edition von [!INCLUDE[msC](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Eine Liste der Funktionen, die von den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Editionen unterstützt werden, finden Sie unter [Editionen und unterstütze Funktionen für den SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+>  Parallele Indexvorgänge sind nicht in jeder Edition von [!INCLUDE[msC](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verfügbar. Eine Liste der Funktionen, die von den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Editionen unterstützt werden, finden Sie unter [Editionen und unterstütze Funktionen für den SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
 ONLINE = [ON | OFF]   
-   Gilt für: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)], nur nicht gruppierte columnstore-Indizes.
-ON gibt an, dass der nicht gruppierten columnstore-Index online bleibt und verfügbar ist, während die neue Kopie des Indexes ist, die erstellt wird.
+   Gilt für: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)], nur in nicht gruppierten Columnstore-Indizes.
+ON gibt an, dass der nicht gruppierte Columnstore-Index online und verfügbar bleibt, während die neue Kopie des Indexes erstellt wird.
 
-   Gibt an, dass der Index nicht für die Verwendung verfügbar ist, während die neue Kopie erstellt wird, deaktiviert. Weil es sich handelt es sich um einen nicht gruppierten Index nur die Basistabelle bleibt verfügbar ist, wird nur der nicht gruppierten columnstore-Index nicht verwendet wird, um Abfragen zu erfüllen, bis der neue Index abgeschlossen ist. 
+   OFF gibt an, dass der Index nicht verwendet werden kann, während die neue Kopie erstellt wird. Da es sich hierbei nur um einen nicht gruppierten Index handelt, bleibt die Basistabelle verfügbar, nur der nicht gruppierte Columnstore-Index wird für Abfragen nicht verwendet, bis der neue Index erstellt ist. 
 
-COMPRESSION_DELAY = **0** | \<Verzögerung > [Minuten]  
-   Gilt für: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
+COMPRESSION_DELAY = **0** | \<delay>[Minutes]  
+   Gilt für: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
   
-   Gibt eine Untergrenze für wie lange eine Zeile in der Delta-Zeilengruppe bleiben soll, bevor er für die Migration in die komprimierte Zeilengruppe geeignet ist. Beispielsweise kann ein Kunde angenommen, die, wenn eine Zeile für 120 Minuten unverändert ist geeignet für die Komprimierung von Format für spaltenweise Speicherung erleichtern. Für columnstore-Index auf datenträgerbasierte Tabellen, wir die Zeit, wenn eine Zeile eingefügt oder aktualisiert wird, wurde, keine nachverfolgen wir stattdessen die Delta-Zeilengruppe geschlossen Zeit als Proxy für die Zeile. Der Standardzeitraum beträgt 0 Minuten. Eine Zeile ist auf spaltenweise Speicherung migriert, sobald 1 Million Zeilen in Delta-Zeilengruppe gesammelt wurden, und es geschlossen gekennzeichnet wurde.  
+   Gibt eine Untergrenze für die Zeitdauer an, für die eine Zeile in der Deltazeilengruppe bleibt, bevor sie in die komprimierte Zeilengruppe migriert werden kann. Ein Kunde kann beispielsweise angeben, dass eine Zeile für die Komprimierung in das Spaltenspeicherformat freigegeben werden soll, wenn an ihr 120 Minuten lang keine Änderungen vorgenommen wurden. Bei Columnstore-Indizes in datenträgerbasierten Tabellen wird die Zeit nicht nachverfolgt, wenn eine Zeile eingefügt oder aktualisiert wird. Vielmehr wird die Zeit, in der die Deltazeilengruppe geschlossen war, als Proxy für die Zeile verwendet. Die Standardeinstellung beträgt 0 Minuten. Eine Zeile wird in einen Speicher im Spaltenformat migriert, nachdem sich 1 Million Zeilen in der Deltazeilengruppe angesammelt haben und die Zeile als geschlossen gekennzeichnet wurde.  
   
 DATA_COMPRESSION  
    Gibt die Datenkomprimierungsoption für die angegebene Tabelle, die Partitionsnummer oder den Bereich von Partitionen an. Folgende Optionen stehen zur Verfügung:  
 COLUMNSTORE  
-   Gilt für: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Gilt nur für columnstore-Indizes, einschließlich nicht gruppierter und gruppierter columnstore-Indizes. COLUMNSTORE ist die Standardeinstellung und gibt an, dass Sie mit der meisten leistungsfähiger columnstore-Komprimierung zu komprimieren. Dies ist die typische Wahl.  
+   Gilt für: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Gilt nur für columnstore-Indizes, einschließlich nicht gruppierter und gruppierter columnstore-Indizes. COLUMNSTORE ist die Standardeinstellung und gibt an, dass die Komprimierung mit der leistungsfähigsten Columnstore-Komprimierung ausgeführt werden soll. Dies ist die gängige Methode.  
   
 COLUMNSTORE_ARCHIVE  
-   Gilt für: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
-Gilt nur für columnstore-Indizes, einschließlich nicht gruppierter und gruppierter columnstore-Indizes. COLUMNSTORE_ARCHIVE weiter komprimiert, die Tabelle oder Partition auf eine geringere Größe an. Dies empfiehlt sich bei der Archivierung und in Situationen, in denen es auf eine geringere Speichergröße und nicht auf den zusätzlichen Zeitaufwand für das Speichern und Abrufen ankommt.  
+   Gilt für: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+Gilt nur für columnstore-Indizes, einschließlich nicht gruppierter und gruppierter columnstore-Indizes. Durch COLUMNSTORE_ARCHIVE wird die Tabelle oder Partition weiter in eine geringere Größe komprimiert. Dies empfiehlt sich bei der Archivierung und in Situationen, in denen es auf eine geringere Speichergröße und nicht auf den zusätzlichen Zeitaufwand für das Speichern und Abrufen ankommt.  
   
- Weitere Informationen zur Komprimierung finden Sie unter [Datenkomprimierung](../../relational-databases/data-compression/data-compression.md).  
+ Weitere Informationen zur Datenkomprimierung finden Sie unter [Datenkomprimierung](../../relational-databases/data-compression/data-compression.md).  
   
-WOBEI \<Filter_expression > [AND \<Filter_expression >] gilt für: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+WHERE \<filter_expression> [ AND \<filter_expression> ] Gilt für: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
   
-   Ein Filterprädikat wird aufgerufen, gibt dies die Zeilen im Index enthalten. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]erstellt gefilterte Statistiken für die Datenzeilen im gefilterten Index.  
+   Gibt nach dem Aufruf eines Filterprädikats an, welche Zeilen in den Index aufgenommen werden sollen. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erstellt gefilterte Statistikdaten für die Datenzeilen im gefilterten Index.  
   
-   Das Filterprädikat verwendet einfache Vergleichslogik. Vergleiche mit NULL-Literalen sind mit den Vergleichsoperatoren nicht zulässig. Verwenden Sie stattdessen den IS NULL-Operator und den IS NOT NULL-Operator.  
+   Für das Filterprädikat wird eine einfache Vergleichslogik verwendet. Vergleiche mit NULL-Literalen sind mit den Vergleichsoperatoren nicht zulässig. Verwenden Sie stattdessen den IS NULL-Operator und den IS NOT NULL-Operator.  
   
    Es folgen einige Beispiele für Filterprädikate für die `Production.BillOfMaterials`-Tabelle:  
    `WHERE StartDate > '20000101' AND EndDate <= '20000630'`    
    `WHERE ComponentID IN (533, 324, 753)`  
    `WHERE StartDate IN ('20000404', '20000905') AND EndDate IS NOT NULL`  
    
-   Anleitungen für gefilterte Indizes finden Sie unter [Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md).  
+   Informationen zu gefilterten Indizes finden Sie unter [Erstellen gefilterter Indizes](../../relational-databases/indexes/create-filtered-indexes.md).  
   
 ON  
-   Diese Optionen geben die Dateigruppen, die auf denen der Index erstellt wird.  
+   Diese Optionen geben die Dateigruppen an, für die der Index erstellt wird.  
   
 *partition_scheme_name* **(** *column_name* **)**  
-   Gibt das Partitionsschema, das definiert, die Dateigruppen, denen die Partitionen eines partitionierten Index zugeordnet ist. Das Partitionsschema muss in der Datenbank vorhanden, durch das Ausführen [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md). 
-   *Column_name* gibt die Spalte für die ein partitionierter Index partitioniert ist. Diese Spalte muss den Datentyp, Länge, übereinstimmen und der Genauigkeit des Arguments der Partition, *Partition_scheme_name* verwendet. *Column_name* ist nicht auf die Spalten in der Indexdefinition beschränkt. Wenn Sie einen columnstore-Index partitionieren, fügt [!INCLUDE[ssDE](../../includes/ssde-md.md)] die Partitionierungsspalte als Spalte des Index hinzu, wenn sie noch nicht angegeben ist.  
-   Wenn *Partition_scheme_name* oder *Dateigruppe* nicht angegeben wird und die Tabelle partitioniert ist, wird der Index in demselben Partitionsschema, mit der gleichen Partitionsspalte, wie die zugrunde liegende Tabelle platziert.  
+   Gibt das Partitionsschema an, das die Dateigruppen definiert, denen die Partitionen eines partitionierten Index zugeordnet werden. Das Partitionsschema muss bereits durch Ausführen von [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md) in der Datenbank vorhanden sein. 
+   *column_name* gibt die Spalte an, auf deren Grundlage ein partitionierter Index partitioniert wird. Diese Spalte muss mit dem Datentyp, der Länge und der Genauigkeit des Arguments der Partitionierungsfunktion übereinstimmen, die *partition_scheme_name* verwendet. *column_name* ist nicht auf Spalten in der Indexdefinition beschränkt. Wenn Sie einen columnstore-Index partitionieren, fügt [!INCLUDE[ssDE](../../includes/ssde-md.md)] die Partitionierungsspalte als Spalte des Index hinzu, wenn sie noch nicht angegeben ist.  
+   Wenn *partition_scheme_name* oder *filegroup* bei einer partitionierten Tabelle nicht angegeben werden, wird der Index in demselben Partitionsschema platziert und verwendet dieselbe Partitionierungsspalte wie die zugrunde liegende Tabelle.  
    Ein columnstore-Index einer partitionierten Tabelle muss über eine Partitionsausrichtung verfügen.  
-   Weitere Informationen zum Partitionieren von Indizes finden Sie unter [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md).  
+   Weitere Informationen zu partitionierten Indizes finden Sie unter [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md).  
 
 *filegroup_name*  
-   Gibt den Namen einer Dateigruppe an, für die der Index erstellt werden soll. Wenn *Filegroup_name* nicht angegeben wird und die Tabelle nicht partitioniert ist, der Index verwendet die gleiche Dateigruppe wie die zugrunde liegende Tabelle. Die Dateigruppe muss bereits vorhanden sein.  
+   Gibt den Namen einer Dateigruppe an, für die der Index erstellt werden soll. Wenn *filegroup_name* nicht angegeben und die Tabelle nicht partitioniert ist, verwendet der Index die gleiche Dateigruppe wie die zugrunde liegende Tabelle. Die Dateigruppe muss bereits vorhanden sein.  
  
 **"**default**"**  
 Erstellt den angegebenen Index für die Standarddateigruppe.  
   
-Die Benennung default ist in diesem Kontext kein Schlüsselwort. Es ist ein Bezeichner für die Standarddateigruppe und muss begrenzt sein, wie in ON **"**Standard**"** oder ON **[**Standard**]**. Wenn "default" angegeben wird, muss die Option QUOTED_IDENTIFIER für die aktuelle Sitzung auf ON festgelegt sein. Dies ist die Standardeinstellung. Weitere Informationen finden Sie unter [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
+Die Benennung default ist in diesem Kontext kein Schlüsselwort. Es handelt sich dabei um einen Bezeichner für die Standarddateigruppe. Dieser muss wie in ON **"**default**"** or ON **[**default**]** durch Trennzeichen getrennt werden. Wenn "default" angegeben wird, muss die Option QUOTED_IDENTIFIER für die aktuelle Sitzung auf ON festgelegt sein. Dies ist die Standardeinstellung. Weitere Informationen finden Sie unter [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
   
 ##  <a name="Permissions"></a> Berechtigungen  
  Erfordert die ALTER-Berechtigung für die Tabelle.  
   
-##  <a name="GenRemarks"></a>Allgemeine Hinweise  
- Ein columnstore-Index kann für eine temporäre Tabelle erstellt werden. Wenn die Tabelle gelöscht oder die Sitzung beendet wird, wird der Index ebenfalls gelöscht.  
+##  <a name="GenRemarks"></a> Allgemeine Hinweise  
+ Ein Columnstore-Index kann für eine temporäre Tabelle erstellt werden. Wenn die Tabelle gelöscht oder die Sitzung beendet wird, wird der Index ebenfalls gelöscht.  
  
 ## <a name="filtered-indexes"></a>Gefilterten Indizes  
 Ein gefilterter Index ist ein optimierter nicht gruppierter Index, der sich für Abfragen eignet, mit denen ein kleiner Prozentsatz von Zeilen in einer Tabelle ausgewählt wird. Es wird ein Filterprädikat verwendet, um einen Teil der Daten in der Tabelle zu indizieren. Ein gut entworfener gefilterter Index kann die Abfrageleistung verbessern, den Speicheraufwand verringern und Wartungskosten reduzieren.  
@@ -277,7 +277,7 @@ Die SET-Optionen in der Spalte Erforderlicher Wert sind immer dann erforderlich,
 - Ein INSERT-, UPDATE-, DELETE- oder MERGE-Vorgang ändert die Daten in einem gefilterten Index.  
 - Der gefilterte Index wird vom Abfrageoptimierer verwendet, um den Abfrageplan zu erstellen.  
   
-    |SET-Optionen|Erforderlicher Wert|Standardserverwert|Standardwert<br /><br /> OLE DB- und ODBC-Wert|Standardwert<br /><br /> DB-Library-Wert|  
+    |SET-Optionen|Erforderlicher Wert|Standardserverwert|Default<br /><br /> OLE DB- und ODBC-Wert|Default<br /><br /> DB-Library-Wert|  
     |-----------------|--------------------|--------------------------|---------------------------------------|-----------------------------------|  
     |ANSI_NULLS|ON|ON|ON|OFF|  
     |ANSI_PADDING|ON|ON|ON|OFF|  
@@ -297,78 +297,78 @@ Die SET-Optionen in der Spalte Erforderlicher Wert sind immer dann erforderlich,
   
 -   Der Abfrageoptimierer berücksichtigt den Index des Abfrageausführungsplans von Transact-SQL-Anweisungen nicht.  
   
- Weitere Informationen zu gefilterten Indizes finden Sie unter [Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md). 
+ Weitere Informationen zu gefilterten Indizes finden Sie unter [Erstellen gefilterter Indizes](../../relational-databases/indexes/create-filtered-indexes.md). 
   
 ##  <a name="LimitRest"></a> Einschränkungen  
 
-**Jede Spalte in einem columnstore-Index muss eines der folgenden allgemeinen Geschäftsdatentypen sein:** 
+**Jede Spalte in einem Columnstore-Index muss von einem der folgenden allgemeinen Geschäftsdatentypen sein:** 
 -   datetimeoffset [ ( *n* ) ]  
 -   datetime2 [ ( *n* ) ]  
--   datetime  
+-   DATETIME  
 -   smalldatetime  
--   Datum  
--   Zeit [(  *n*  )]  
--   "float" [(  *n*  )]  
--   echte [(  *n*  )]  
--   Dezimal [( *Genauigkeit* [ *, Skalierung* ] **)** ]
--   numerische [( *Genauigkeit* [ *, Skalierung* ] **)** ]    
+-   date  
+-   time [ ( *n* ) ]  
+-   float [ ( *n* ) ]  
+-   real [ ( *n* ) ]  
+-   decimal [ ( *precision* [ *, scale* ] **)** ]
+-   numeric [ ( *precision* [ *, scale* ] **)** ]    
 -   money  
--   smallmoney  
--   bigint  
--   int  
+-   SMALLMONEY  
+-   BIGINT  
+-   ssNoversion  
 -   smallint  
--   tinyint  
+-   TINYINT  
 -   bit  
 -   nvarchar [ ( *n* ) ] 
--   nvarchar(max) (gilt für [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] und Azure SQL-Datenbank auf Premium Tarif, in nur gruppierte columnstore-Indizes)   
+-   nvarchar(max)  (Gilt für [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] und Azure SQL-Datenbank zum Premiumtarif, nur in gruppierten Columnstore-Indizes)   
 -   nchar [ ( *n* ) ]  
--   Varchar [(  *n*  )]  
--   varchar(max) (gilt für [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] und Azure SQL-Datenbank auf Premium Tarif, in nur gruppierte columnstore-Indizes)
+-   varchar [ ( *n* ) ]  
+-   varchar(max)  (Gilt für [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] und Azure SQL-Datenbank zum Premiumtarif, nur in gruppierten Columnstore-Indizes)
 -   char [ ( *n* ) ]  
 -   varbinary [ ( *n* ) ] 
--   Varbinary (Max) (gilt für [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] und Azure SQL-Datenbank auf Premium Tarif, in nur gruppierte columnstore-Indizes)
--   Binary [(  *n*  )]  
--   "uniqueidentifier" (gilt für [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und höher)
+-   varbinary(max)  (Gilt für [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] und Azure SQL-Datenbank zum Premiumtarif, nur in gruppierten Columnstore-Indizes)
+-   binary [ ( *n* ) ]  
+-   uniqueidentifier  (Gilt für [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und höher)
   
-Wenn die zugrunde liegenden Tabelle eine Spalte mit einem Datentyp, die für columnstore-Indizes nicht unterstützt wird verfügt, müssen Sie diese Spalte aus dem nicht gruppierten columnstore-Index auslassen.  
+Wenn die zugrunde liegende Tabelle eine Spalte enthält, die einen Datentyp aufweist, der für Columnstore-Indizes nicht unterstützt wird, müssen Sie diese Spalte aus dem nicht gruppierten Columnstore-Index ausschließen.  
   
-**Spalten, die keines der folgenden Datentypen verwenden, können nicht in einen columnstore-Index enthalten sein:**
+**Spalten, die einen der folgenden Datentypen verwenden, können nicht in einem Columnstore-Index enthalten sein:**
 -   ntext, text und image  
--   nvarchar(max), varchar(max) und varbinary(max) (gilt für [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und früheren Versionen sowie nicht gruppierten columnstore-Indizes) 
+-   nvarchar(max), varchar(max) und varbinary(max) (Gilt für [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und frühere Versionen und nicht gruppierte Columnstore-Indizes) 
 -   rowversion (und timestamp)  
 -   sql_variant  
 -   CLR-Typen (hierarchyid- und räumliche Typen)  
 -   xml  
--   "uniqueidentifier" (gilt für [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])  
+-   uniqueidentifier (gilt für [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])  
 
-**Nicht gruppierte columnstore-Indizes:**
+**Nicht gruppierte Columnstore-Indizes:**
 -   Kann nicht mehr als 1024 Spalten enthalten.  
 -   Eine Tabelle mit einem nicht gruppierten columnstore-Index kann über UNIQUE-, PRIMARY KEY- oder FOREIGN KEY-Einschränkungen verfügen, die Einschränkungen können aber nicht in den nicht gruppierten columnstore-Index eingeschlossen werden.  
 -   Kann nicht für eine Sicht oder indizierte Sicht erstellt werden.  
 -   Kann keine Sparsespalte enthalten.  
--   Kann nicht geändert werden, mithilfe der **ALTER INDEX** Anweisung. Um den nicht gruppierten Index zu ändern, müssen Sie stattdessen den columnstore-Index löschen und neu erstellen. Sie können **ALTER INDEX** deaktivieren und neu Erstellen eines columnstore-Indexes.  
--   Kann nicht erstellt werden, mithilfe der **INCLUDE** Schlüsselwort.  
--   Darf keine enthalten die **ASC** oder **"DESC"** Schlüsselwörter zum Sortieren des Index. Columnstore-Indizes werden gemäß den Komprimierungsalgorithmen sortiert. Durch die Sortierung würden viele der Leistungsvorteile entfernt werden.  
--   Darf keine großer Objekte (LOB) Spalten vom Typ nvarchar(max), varchar(max) und varbinary(max) nicht gruppierten columnstore-Indizes enthalten. Nur gruppierte columnstore-Indizes LOB-Typen unterstützt, beginnend [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] Version und Azure SQL-Datenbank auf Premium-Tarif konfiguriert. Beachten Sie, dass frühere Versionen nicht LOB-Typen in gruppierten und nicht gruppierten columnstore-Indizes unterstützen.
+-   Kann nicht mithilfe der **ALTER INDEX**-Anweisung geändert werden. Um den nicht gruppierten Index zu ändern, müssen Sie stattdessen den columnstore-Index löschen und neu erstellen. Sie können einen Columnstore-Index mithilfe von **ALTER INDEX** deaktivieren und neu erstellen.  
+-   Kann nicht mit dem Schlüsselwort **INCLUDE** erstellt werden.  
+-   Darf nicht das Schlüsselwort **ASC** oder das Schlüsselwort **DESC** zum Sortieren des Index enthalten. Columnstore-Indizes werden gemäß den Komprimierungsalgorithmen sortiert. Durch die Sortierung würden viele der Leistungsvorteile entfernt werden.  
+-   Darf keine LOB-Spalten (Large Object) vom Typ nvarchar(max), varchar(max) bzw. varbinary(max) in gruppierten Columnstore-Indizes enthalten. LOB-Datentypen werden in gruppierten Columnstore-Indizes nur von Versionen ab [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] und von der Azure SQL-Datenbank mit konfiguriertem Premium-Tarif unterstützt. Frühere Versionen unterstützen LOB-Datentypen in gruppierten und nicht gruppierten Columnstore-Indizes nicht.
 
 
- **Columnstore-Indizes können nicht mit den folgenden Funktionen kombiniert werden:**  
--   Berechnete Spalten. Beginnend mit SQL Server-2017 kann ein gruppierten columnstore-Index eine nicht permanente berechnete Spalte enthalten. Allerdings in SQL Server 2017 gruppierte columnstore-Indizes können nicht persistente berechnete Spalten enthalten, und erstellt nicht gruppierte Indizes für berechnete Spalten nicht möglich. 
--   Seiten- und zeilenkomprimierung, und **Vardecimal** Speicherformat (ein columnstore-Index ist bereits in einem anderen Format komprimiert.)  
+ **Columnstore-Indizes können mit den folgenden Features nicht kombiniert werden:**  
+-   Berechnete Spalten. Ab SQL Server 2017 darf ein gruppierter Columnstore-Index eine nicht persistierte berechnete Spalte enthalten. In SQL Server 2017 dürfen gruppierte Columnstore-Indizes jedoch keine persistierten berechneten Spalten enthalten, und es können keine nicht gruppierten Indizes für berechnete Spalten erstellt werden. 
+-   Seiten- und Zeilenkomprimierung und **vardecimal**-Speicherformat (ein Columnstore-Index ist bereits in einem anderen Format komprimiert)  
 -   Replikation  
 -   Filestream
 
-Sie können keine Cursor oder Trigger für eine Tabelle mit einem gruppierten columnstore-Index verwenden. Diese Einschränkung gilt nicht für nicht gruppierte columnstore-Indizes; Sie können den Cursor und Trigger für eine Tabelle mit einem nicht gruppierten columnstore-Index verwenden.
+In einer Tabelle mit einem gruppierten Columnstore-Index können keine Cursor oder Trigger verwendet werden. Diese Einschränkung gilt nicht für nicht gruppierte Columnstore-Indizes; in einer Tabelle mit einem nicht gruppierten Columnstore-Index können Cursor und Trigger verwendet werden.
 
-**Bestimmte Einschränkungen für SQL Server 2014**  
-Diese Einschränkungen gelten nur für SQL Server 2014. In dieser Version werden aktualisierbare gruppierte columnstore-Indizes vorgestellt. Nicht gruppierte columnstore-Indizes werden immer noch schreibgeschützt waren.  
+**SQL Server 2014-spezifische Einschränkungen**  
+Diese Einschränkungen gelten nur für SQL Server 2014. Mit diesem Release wurden aktualisierbare gruppierte Columnstore-Indizes eingeführt. Nicht gruppierte Columnstore-Indizes waren noch schreibgeschützt.  
 
--   "Änderungen Sie nachverfolgen". Sie können keine änderungsnachverfolgung mit nicht gruppierten columnstore-Indizes (NCCI), da sie schreibgeschützt sind. Es funktioniert für gruppierte columnstore-Indizes (CCI).  
--   Ändern Sie die Datenerfassung. Sie können keine Änderung, die Daten für nicht gruppierte columnstore-Index (NCCI) zu erfassen, da sie schreibgeschützt sind. Es funktioniert für gruppierte columnstore-Indizes (CCI).  
--   Lesbare sekundäre Rolle. Sie können keinen gruppierten gruppierten Columnstore-Index (CCI) über ein lesbares sekundäres Replikat einer verfügbarkeitsgruppe stets OnReadable zugreifen.  Sie können einen nicht gruppierten columnstore-Index (NCCI) aus einer lesbaren sekundären Datenbank zugreifen.  
--   Multiple Active Result Sets (MARS). SQL Server 2014 verwendet MARS für schreibgeschützte Verbindungen zu Tabellen mit einem columnstore-Index.    SQL Server 2014 unterstützt jedoch nicht MARS für gleichzeitige Data Manipulation Language (DML)-Vorgängen für eine Tabelle mit einem columnstore-Index. In diesem Fall wird von SQL Server beendet die Verbindungen und Transaktionen abgebrochen.  
+-   Änderungsnachverfolgung. Im Zusammenhang mit nicht gruppierten Columnstore-Indizes (NCCI) kann Change Data Capture nicht verwendet werden, weil diese Indizes schreibgeschützt sind. Für gruppierte Columnstore-Indizes (CCI) kann Change Data Capture verwendet werden.  
+-   Change Data Capture. Im Zusammenhang mit nicht gruppierten Columnstore-Indizes (NCCI) kann Change Data Capture nicht verwendet werden, weil diese Indizes schreibgeschützt sind. Für gruppierte Columnstore-Indizes (CCI) kann Change Data Capture verwendet werden.  
+-   Lesbares sekundäres Replikat. Auf einen gruppierten Columnstore-Index (CCI) kann nicht über ein lesbares sekundäres Replikat einer lesbaren Always On-Verfügbarkeitsgruppe zugegriffen werden.  Auf einen nicht gruppierten Columnstore-Index (NCCI) kann über ein lesbares sekundäres Replikat zugegriffen werden.  
+-   Mehrere aktive Resultsets (MARS). SQL Server 2014 verwendet MARS für schreibgeschützte Verbindungen mit Tabellen mit einem Columnstore-Index.    SQL Server 2014 unterstützt MARS jedoch nicht für gleichzeitige DML-Vorgänge (Data Manipulation Language, Datenbearbeitungssprache) für eine Tabelle mit einem Columnstore-Index. In diesem Fall beendet SQL Server die Verbindung und bricht die Transaktionen ab.  
   
- Informationen zu den Leistungsvorteilen und Einschränkungen von columnstore-Indizes finden Sie unter [Übersicht über columnstore-Indizes](../../relational-databases/indexes/columnstore-indexes-overview.md).
+ Informationen zu den Leistungsvorteilen und Einschränkungen von Columnstore-Indizes finden Sie unter [Columnstore-Indizes: Übersicht](../../relational-databases/indexes/columnstore-indexes-overview.md).
   
 ##  <a name="Metadata"></a> Metadaten  
  Alle Spalten in einem Columnstore-Index werden in den Metadaten als eingeschlossene Spalten gespeichert. Der Columnstore-Index weist keine Schlüsselspalten auf. Diese Systemsichten enthalten Informationen zu Columnstore-Indizes.  
@@ -380,7 +380,7 @@ Diese Einschränkungen gelten nur für SQL Server 2014. In dieser Version werden
 -   [sys.column_store_dictionaries &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-store-dictionaries-transact-sql.md)  
 -   [sys.column_store_row_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-store-row-groups-transact-sql.md)  
 
-##  <a name="convert"></a>Beispiele zum Konvertieren einer Rowstore-Tabelle in columnstore  
+##  <a name="convert"></a> Beispiele zum Konvertieren einer Rowstore-Tabelle in Columnstore  
   
 ### <a name="a-convert-a-heap-to-a-clustered-columnstore-index"></a>A. Konvertieren eines Heaps in einen gruppierten Columnstore-Index  
  In diesem Beispiel wird eine Tabelle als Heap erstellt und anschließend in einen gruppierten Columnstore-Index mit dem Namen cci_Simple konvertiert. Dadurch wird der Speicher für die gesamte Tabelle von rowstore in columnstore geändert.  
@@ -413,12 +413,12 @@ WITH (DROP_EXISTING = ON);
 GO  
 ```  
   
-### <a name="c-handle-nonclustered-indexes-when-converting-a-rowstore-table-to-a-columnstore-index"></a>C. Beim Konvertieren einer Rowstore-Tabelle in eine columnstore-Index nicht gruppierte Indizes zu behandeln.  
- In diesem Beispiel wird das Behandeln von nicht gruppierten Indizes beim Konvertieren einer Rowstore-Tabelle in eine columnstore-Index veranschaulicht. Tatsächlich, beginnend mit [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ist keine spezielle Handlung erforderlich; [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] automatisch definiert und erstellt die nicht gruppierten Indizes für den neuen gruppierten columnstore-Index neu.  
+### <a name="c-handle-nonclustered-indexes-when-converting-a-rowstore-table-to-a-columnstore-index"></a>C. Verarbeitung von nicht gruppierten Indizes beim Konvertieren einer Rowstore-Tabelle in einen Columnstore-Index.  
+ In diesem Beispiel wird gezeigt, wie nicht gruppierte Indizes beim Konvertieren einer Rowstore-Tabelle in einen Columnstore-Index verarbeitet werden. Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ist keine spezielle Aktion erforderlich. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] definiert die nicht gruppierten Indizes automatisch und erstellt sie neu im neuen gruppierten Columnstore-Index.  
   
- Wenn Sie die nicht gruppierten Indizes löschen möchten, verwenden Sie die DROP INDEX-Anweisung vor der Erstellung des columnstore-Index. Der DROP EXISTING-Option löscht nur den gruppierten Index, der konvertiert wird. Nicht gruppierte Indizes werden nicht gelöscht.  
+ Wenn Sie die nicht gruppierten Indizes löschen möchten, verwenden Sie vor dem Erstellen des Columnstore-Indexes die DROP INDEX-Anweisung. Mit der DROP EXISTING-Option wird nur der konvertierte gruppierte Index gelöscht. Die nicht gruppierten Indizes werden nicht gelöscht.  
   
- In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], einen nicht gruppierten Index konnte nicht erstellt werden, für einen columnstore-Index. Dieses Beispiel zeigt, wie in früheren Versionen müssen Sie die nicht gruppierten Indizes zu löschen, bevor Sie den columnstore-Index erstellen.  
+ In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] konnte für einen Columnstore-Index kein nicht gruppierter Index erstellt werden. Im folgenden Beispiel wird gezeigt, dass in früheren Releases vor dem Erstellen des Columnstore-Indexes die nicht gruppierten Indizes gelöscht werden mussten.  
   
 ```  
   
@@ -479,10 +479,10 @@ GO
   
 3.  Löschen Sie den gruppierten Index.  
   
-    -   Führen Sie diesen Schritt nur aus, wenn Sie beim Konvertieren in einen gruppierten Columnstore-Index einen neuen Namen für den Index angeben möchten. Wenn Sie den gruppierten Index nicht löschen, hat der neue gruppierte columnstore-Index den gleichen Namen.  
+    -   Führen Sie diesen Schritt nur aus, wenn Sie beim Konvertieren in einen gruppierten Columnstore-Index einen neuen Namen für den Index angeben möchten. Wenn Sie den gruppierten Index nicht löschen, weist der neue gruppierte Columnstore-Index den gleichen Namen auf.  
   
         > [!NOTE]  
-        >  Der Indexname ist möglicherweise einprägsamer, wenn Sie einen eigenen Namen angeben. Alle gruppierten Rowstore-Indizes verwenden Sie den Standardnamen also "ClusteredIndex_\<GUID >".  
+        >  Der Indexname ist möglicherweise einprägsamer, wenn Sie einen eigenen Namen angeben. Alle gruppierten Rowstore-Indizes weisen den Standardnamen auf, der ''ClusteredIndex_\<GUID>'' lautet.  
   
     ```  
     --Process for dropping a clustered index.  
@@ -539,13 +539,13 @@ ON MyFactTable;
 ```  
   
 
-### <a name="g-defragment-by-rebuilding-the-entire-clustered-columnstore-index"></a>G. Defragmentiert werden durch Neuerstellen des gesamten gruppierten columnstore-Indexes  
-   Gilt für: SQLServer 2014  
+### <a name="g-defragment-by-rebuilding-the-entire-clustered-columnstore-index"></a>G. Defragmentieren durch Neuerstellen des gesamten gruppierten Columnstore-Indexes  
+   Gilt für: SQL Server 2014  
   
- Es gibt zwei Möglichkeiten, den gesamten gruppierten Columnstore-Index neu zu erstellen. Sie können CREATE CLUSTERED COLUMNSTORE INDEX, oder [ALTER INDEX &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-index-transact-sql.md) und die REBUILD-Option. Mit beiden Methoden werden die gleichen Ergebnisse erzielt.  
+ Es gibt zwei Möglichkeiten, den gesamten gruppierten Columnstore-Index neu zu erstellen. Sie können CREATE CLUSTERED COLUMNSTORE INDEX oder [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md) und die REBUILD-Option verwenden. Mit beiden Methoden werden die gleichen Ergebnisse erzielt.  
   
 > [!NOTE]  
->  Ab SQL Server 2016, ALTER INDEX REORGANIZE verwenden Sie anstatt mit den Methoden, die in diesem Beispiel beschriebene neu erstellt.  
+>  Ab SQL Server 2016 wird der Index nicht mehr mit den in diesem Beispiel beschriebenen Methoden neu erstellt, sondern es wird ALTER INDEX REORGANIZE verwendet.  
   
 ```  
 --Determine the Clustered Columnstore Index name of MyDimTable.  
@@ -568,10 +568,10 @@ WITH ( DROP_EXISTING = ON );
   
 ```  
   
-##  <a name="nonclustered"></a>Beispiele für nicht gruppierte columnstore-Indizes  
+##  <a name="nonclustered"></a> Beispiele für nicht gruppierte Columnstore-Indizes  
   
-### <a name="a-create-a-columnstore-index-as-a-secondary-index-on-a-rowstore-table"></a>A. Erstellen Sie einen columnstore-Index als sekundären Index für eine Rowstore-Tabelle  
- In diesem Beispiel erstellt einen nicht gruppierten columnstore-Index für eine Rowstore-Tabelle. In diesem Fall kann nur über einen columnstore-Index erstellt werden. Der columnstore-Index erfordert zusätzlichen Speicherplatz, da es sich um eine Kopie der Daten in die Rowstore-Tabelle enthält. In diesem Beispiel wird eine einfache Tabelle und ein gruppierter Index erstellt und anschließend wird die Syntax zum Erstellen eines nicht gruppierten columnstore-Indexes veranschaulicht.  
+### <a name="a-create-a-columnstore-index-as-a-secondary-index-on-a-rowstore-table"></a>A. Erstellen eines Columnstore-Indexes als sekundärer Index für eine Rowstore-Tabelle  
+ In diesem Beispiel wird ein nicht gruppierter Columnstore-Index für eine Rowstore-Tabelle erstellt. In diesem Fall kann nur ein Columnstore-Index erstellt werden. Der Columnstore-Index erfordert zusätzlichen Speicher, da er eine Kopie der Daten in der Rowstore-Tabelle enthält. In diesem Beispiel wird eine einfache Tabelle und ein gruppierter Index erstellt. Anschließend wird die Syntax zum Erstellen eines nicht gruppierten Columnstore-Indexes beschrieben.  
   
 ```  
 CREATE TABLE SimpleTable  
@@ -588,7 +588,7 @@ ON SimpleTable
 GO  
 ```  
   
-### <a name="b-create-a-simple-nonclustered-columnstore-index-using-all-options"></a>B. Erstellen eines einfachen nicht gruppierten columnstore-Indexes mit allen Optionen  
+### <a name="b-create-a-simple-nonclustered-columnstore-index-using-all-options"></a>B. Erstellen eines einfachen nicht gruppierten Columnstore-Indexes mit allen Optionen  
  Im folgenden Beispiel wird die Syntax zum Erstellen eines nicht gruppierten Columnstore-Indexes unter Verwendung aller Optionen veranschaulicht.  
   
 ```  
@@ -601,10 +601,10 @@ ON "default"
 GO  
 ```  
   
- Ein komplexeres Beispiel mit partitionierten Tabellen, finden Sie unter [Übersicht über columnstore-Indizes](../../relational-databases/indexes/columnstore-indexes-overview.md).  
+ Ein komplexeres Beispiel mit partitionierten Tabellen finden Sie unter [Columnstore-Indizes: Übersicht](../../relational-databases/indexes/columnstore-indexes-overview.md).  
   
-### <a name="c-create-a-nonclustered-columnstore-index-with-a-filtered-predicate"></a>C. Erstellen Sie einen nicht gruppierten columnstore-Index mit einer gefilterten Prädikat  
- Das folgende Beispiel erstellt einen gefilterter nicht gruppierter columnstore-Index für die Production.BillOfMaterials-Tabelle in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] Datenbank. Das Filterprädikat kann Spalten einschließen, die keine Schlüsselspalten im gefilterten Index sind. Das Prädikat in diesem Beispiel wählt nur die Zeilen aus, in denen EndDate nicht NULL ist.  
+### <a name="c-create-a-nonclustered-columnstore-index-with-a-filtered-predicate"></a>C. Erstellen eines nicht gruppierten Columnstore-Indexes mit einem gefilterten Prädikat  
+ Im folgenden Beispiel wird ein gefilterter nicht gruppierter Columnstore-Index für die Production.BillOfMaterials-Tabelle in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Datenbank erstellt. Das Filterprädikat kann Spalten einschließen, die keine Schlüsselspalten im gefilterten Index sind. Das Prädikat in diesem Beispiel wählt nur die Zeilen aus, in denen EndDate nicht NULL ist.  
   
 ```  
 IF EXISTS (SELECT name FROM sys.indexes  
@@ -619,10 +619,10 @@ CREATE NONCLUSTERED COLUMNSTORE INDEX "FIBillOfMaterialsWithEndDate"
   
 ```  
   
-###  <a name="ncDML"></a> D. Ändern Sie die Daten in einem nicht gruppierten columnstore-index  
-   Gilt für: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] über [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].
+###  <a name="ncDML"></a> D. Ändern der Daten in einem nicht gruppierten Columnstore-Index  
+   Gilt für: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].
   
- Wenn Sie einen nicht gruppierten Columnstore-Index für eine Tabelle erstellen, können Sie die Daten in dieser Tabelle nicht mehr direkt ändern. Eine Abfrage mit INSERT, UPDATE, DELETE oder MERGE schlägt fehl, und es wird eine Fehlermeldung zurückgegeben. Um Daten in der Tabelle hinzuzufügen oder zu ändern, können Sie eine der folgenden Aktionen ausführen:  
+ Wenn Sie einen nicht gruppierten Columnstore-Index für eine Tabelle erstellen, können Sie die Daten in dieser Tabelle nicht mehr direkt ändern. Eine Abfrage mit INSERT, UPDATE, MERGE oder DELETE schlägt fehl und gibt eine Fehlermeldung zurück. Um Daten in der Tabelle hinzuzufügen oder zu ändern, können Sie eine der folgenden Aktionen ausführen:  
   
 -   Deaktivieren oder löschen Sie den Columnstore-Index. Anschließend können Sie die Daten in der Tabelle aktualisieren. Wenn Sie den Columnstore-Index deaktivieren, können Sie den Columnstore-Index nach dem Aktualisieren der Daten neu erstellen. Beispiel:  
   
@@ -636,16 +636,16 @@ CREATE NONCLUSTERED COLUMNSTORE INDEX "FIBillOfMaterialsWithEndDate"
   
 -   Wechseln Sie für eine Partition in der Tabelle mit dem Columnstore-Index in eine leere Stagingtabelle. Wenn die Stagingtabelle über einen Columnstore-Index verfügt, deaktivieren Sie den Columnstore-Index. Nehmen Sie die gewünschten Updates vor. Erstellen bzw. erstellen Sie den Columnstore-Index neu. Wechseln Sie für die Stagingtabelle zurück in die (nun leere) Partition der Haupttabelle.  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
-### <a name="a-change-a-clustered-index-to-a-clustered-columnstore-index"></a>A. Ändern Sie einen gruppierten Index in einen gruppierten columnstore-index  
- Mit der CREATE CLUSTERED COLUMNSTORE INDEX-Anweisung mit DROP_EXISTING = ON verwenden, können Sie:  
+### <a name="a-change-a-clustered-index-to-a-clustered-columnstore-index"></a>A. Ändern eines gruppierten Indexes in einen gruppierten Columnstore-Index  
+ Mit der CREATE CLUSTERED COLUMNSTORE INDEX-Anweisung und DROP_EXISTING = ON haben Sie folgende Möglichkeiten:  
   
--   Ändern Sie einen gruppierten Index in einen gruppierten columnstore-Index.  
+-   Ändern eines gruppierten Indexes in einen gruppierten Columnstore-Index  
   
--   Erstellen Sie einen gruppierten columnstore-Index neu.  
+-   Neuerstellen eines gruppierten Columnstore-Indexes  
   
- In diesem Beispiel erstellt die xDimProduct-Tabelle als eine Rowstore-Tabelle mit einem gruppierten Index und verwendet dann die gruppierten columnstore-INDEX erstellen, um die Tabelle aus einer Rowstore-Tabelle in eine columnstore-Tabelle zu ändern.  
+ In diesem Beispiel wird die xDimProduct-Tabelle als Rowstore-Tabelle mit einem gruppierten Index erstellt. Anschließend wird die Rowstore-Tabelle mit CREATE CLUSTERED COLUMNSTORE INDEX in eine Columnstore-Tabelle konvertiert.  
   
 ```  
 -- Uses AdventureWorks  
@@ -669,8 +669,8 @@ ON xdimProduct
 WITH ( DROP_EXISTING = ON );  
 ```  
   
-### <a name="b-rebuild-a-clustered-columnstore-index"></a>B. Erstellen Sie einen gruppierten columnstore-Index neu  
- Baut auf dem vorherigen Beispiel und verwendet in diesem Beispiel CREATE CLUSTERED columnstore-INDEX, um den vorhandenen gruppierten columnstore-Index aufgerufen Cci_xDimProduct neu erstellen.  
+### <a name="b-rebuild-a-clustered-columnstore-index"></a>B. Neuerstellen eines gruppierten Columnstore-Indexes  
+ Aufbauend auf dem vorherigen Beispiel wird in diesem Beispiel der vorhandene gruppierte Columnstore-Index namens „cci_xDimProduct“ mit CREATE CLUSTERED COLUMNSTORE INDEX neu erstellt.  
   
 ```  
 --Rebuild the existing clustered columnstore index.  
@@ -679,12 +679,12 @@ ON xdimProduct
 WITH ( DROP_EXISTING = ON );  
 ```  
   
-### <a name="c-change-the-name-of-a-clustered-columnstore-index"></a>C. Ändern Sie den Namen eines gruppierten columnstore-Indexes  
- Um den Namen eines gruppierten columnstore-Index zu ändern, löschen Sie den vorhandenen gruppierten columnstore-Index, und klicken Sie dann erstellen Sie den Index mit einem neuen Namen neu zu.  
+### <a name="c-change-the-name-of-a-clustered-columnstore-index"></a>C. Ändern des Namens eines gruppierten Columnstore-Indexes  
+ Um den Namen eines gruppierten Columnstore-Indexes zu ändern, löschen Sie den vorhandenen gruppierten Columnstore-Index. Erstellen Sie anschließend den Index mit einem neuen Namen neu.  
   
- Es wird empfohlen, diesen Vorgang eine kleine Tabelle oder eine leere Tabelle nur Aktionen. Er nimmt viel Zeit einen großen gruppierten columnstore-Index löschen und neu erstellen, mit einem anderen Namen.  
+ Es wird empfohlen, diesen Vorgang nur bei einer kleinen oder leeren Tabelle durchzuführen. Einen umfangreichen gruppierten Columnstore-Index zu löschen und mit einem anderen Namen neu zu erstellen, nimmt viel Zeit in Anspruch.  
   
- Mithilfe des Cci_xDimProduct gruppierten columnstore-Indexes aus dem vorherigen Beispiel in diesem Beispiel löscht den Cci_xDimProduct gruppierten columnstore-Index, und klicken Sie dann neu erstellt den gruppierten columnstore-Index mit dem Namen Mycci_xDimProduct.  
+ In diesem Beispiel wird der gruppierte Columnstore-Index „cci_xDimProduct“ aus dem vorherigen Beispiel gelöscht. Anschließend wird der gruppierte Columnstore-Index mit dem Namen „mycci_xDimProduct“ neu erstellt.  
   
 ```  
 --For illustration purposes, drop the clustered columnstore index.   
@@ -698,7 +698,7 @@ WITH ( DROP_EXISTING = OFF );
 ```  
   
 ### <a name="d-convert-a-columnstore-table-to-a-rowstore-table-with-a-clustered-index"></a>D. Konvertieren einer Columnstore-Tabelle in eine Rowstore-Tabelle mit einem gruppierten Index  
- Es gibt möglicherweise eine Situation, die für die Sie einen gruppierten columnstore-Index löschen und einen gruppierten Index erstellen möchten. Die Tabelle wird in der Rowstore-Format gespeichert. In diesem Beispiel konvertiert eine columnstore-Tabelle in eine Rowstore-Tabelle mit einem gruppierten Index mit dem gleichen Namen. Keine der Daten geht verloren. Alle Daten an die Rowstore-Tabelle und die aufgelisteten Spalten wird die Schlüsselspalten in dem gruppierten Index.  
+ Es kann vorkommen, dass ein gruppierter Columnstore-Index gelöscht und ein gruppierter Index erstellt werden soll. Dadurch wird die Tabelle im Rowstore-Format gespeichert. In diesem Beispiel wird eine Columnstore-Tabelle in eine Rowstore-Tabelle mit einem gruppierten Index mit demselben Namen konvertiert. Dabei gehen keine Daten verloren. Alle Daten werden in die Rowstore-Tabelle verschoben, und aus den aufgelisteten Spalten werden die Schlüsselspalten im gruppierten Index.  
   
 ```  
 --Drop the clustered columnstore index and create a clustered rowstore index.   
@@ -710,8 +710,8 @@ WITH ( DROP_EXISTING = ON);
   
 ```  
   
-### <a name="e-convert-a-columnstore-table-back-to-a-rowstore-heap"></a>E. Konvertieren einer columnstore-Tabelle wieder in einen Rowstore-heap  
- Verwendung [DROP INDEX (SQL Server PDW)](http://msdn.microsoft.com/en-us/f59cab43-9f40-41b4-bfdb-d90e80e9bf32) den gruppierten columnstore-Index löschen und die Tabelle in einen Rowstore-Heap konvertieren. In diesem Beispiel konvertiert die Cci_xDimProduct-Tabelle in einen Rowstore-Heap an. Die Tabelle weiterhin verteilt werden, aber als Heap gespeichert wird.  
+### <a name="e-convert-a-columnstore-table-back-to-a-rowstore-heap"></a>E. Konvertieren einer Columnstore-Tabelle in einen Rowstore-Heap  
+ Verwenden Sie [DROP INDEX (SQL Server PDW)](http://msdn.microsoft.com/en-us/f59cab43-9f40-41b4-bfdb-d90e80e9bf32), um den gruppierten Columnstore-Index zu verwerfen und die Tabelle in einen Rowstore-Heap zu konvertieren. In diesem Beispiel wird die Tabelle „cci_xDimProduct“ in einen Rowstore-Heap konvertiert. Die Tabelle wird weiterhin verteilt, jedoch als Heap gespeichert.  
   
 ```  
 --Drop the clustered columnstore index. The table continues to be distributed, but changes to a heap.  

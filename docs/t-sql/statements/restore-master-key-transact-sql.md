@@ -1,5 +1,5 @@
 ---
-title: RESTORE MASTER KEY (Transact-SQL) | Microsoft Docs
+title: RESTORE MASTER KEY (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -57,19 +57,19 @@ RESTORE MASTER KEY FROM FILE = 'path_to_file'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- Datei ='*Dateipfad*"  
- Gibt den vollständigen Pfad, einschließlich des Dateinamens, zum gespeicherten Datenbank-Hauptschlüssel an. *Dateipfad* kann ein lokaler Pfad oder einen UNC-Pfad zu einem Netzwerkspeicherort sein.  
+ FILE ='*path_to_file*'  
+ Gibt den vollständigen Pfad, einschließlich des Dateinamens, zum gespeicherten Datenbank-Hauptschlüssel an. *path_to_file* kann ein lokaler Pfad oder ein UNC-Pfad zu einem Netzwerkspeicherort sein.  
   
- DECRYPTION BY PASSWORD = "*Kennwort*"  
+ ENCRYPTION BY PASSWORD ='*password*'  
  Gibt das Kennwort an, das zum Entschlüsseln des aus einer Datei importierten Datenbank-Hauptschlüssels erforderlich ist.  
   
- ENCRYPTION BY PASSWORD = "*Kennwort*"  
+ ENCRYPTION BY PASSWORD ='*password*'  
  Gibt das Kennwort an, das nach dem Laden in die Datenbank zum Verschlüsseln des Datenbank-Hauptschlüssels verwendet wird.  
   
  FORCE  
  Gibt an, dass der RESTORE-Prozess auch dann fortgesetzt werden soll, wenn der aktuelle Datenbank-Hauptschlüssel nicht geöffnet ist oder wenn einige der privaten Schlüssel, die mit ihm verschlüsselt sind, von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht entschlüsselt werden können.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Bei der Wiederherstellung des Hauptschlüssels werden alle Schlüssel von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entschlüsselt, die mit dem aktuell aktiven Hauptschlüssel verschlüsselt sind. Diese Schlüssel werden dann mit dem wiederhergestellten Hauptschlüssel verschlüsselt. Die Ausführung dieses ressourcenintensiven Vorgangs sollte außerhalb der Hauptzeiten geplant werden. Falls der aktuelle Datenbank-Hauptschlüssel nicht geöffnet ist oder nicht geöffnet werden kann oder falls einer der Schlüssel, die mit ihm verschlüsselt sind, nicht entschlüsselt werden kann, kann der Wiederherstellungsvorgang nicht erfolgreich ausgeführt werden.  
   
  Die FORCE-Option sollte nur verwendet werden, wenn der Hauptschlüssel nicht abgerufen werden kann oder wenn bei der Entschlüsselung ein Fehler aufgetreten ist. Informationen, die nur mit dem nicht abrufbaren Schlüssel verschlüsselt sind, gehen verloren.  
@@ -93,7 +93,7 @@ RESTORE MASTER KEY
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [CREATE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-master-key-transact-sql.md)   
  [ALTER MASTER KEY (Transact-SQL)](../../t-sql/statements/alter-master-key-transact-sql.md)   
  [Verschlüsselungshierarchie](../../relational-databases/security/encryption/encryption-hierarchy.md)  

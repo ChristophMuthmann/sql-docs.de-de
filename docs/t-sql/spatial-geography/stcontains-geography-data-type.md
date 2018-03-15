@@ -1,5 +1,5 @@
 ---
-title: STContains (Geography-Datentyp) | Microsoft Docs
+title: STContains (geography-Datentyp) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -28,10 +28,10 @@ ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="stcontains--geography-data-type"></a>STContains (Geography-Datentyp)
+# <a name="stcontains--geography-data-type"></a>STContains (geography-Datentyp)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  Gibt an, ob die aufrufende **Geography** -Instanz räumlich enthält die **Geography** Instanz, die an die Methode übergeben.  
+  Gibt an, ob die aufrufende **geography**-Instanz die an die Methode übergebene **geography**-Instanz räumlich enthält.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -42,18 +42,18 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>Argumente  
  *other_geography*  
- Eine andere **Geography** Instanz mit der Instanz, für die zu vergleichende `STContains()` aufgerufen wird.  
+ Eine andere **geography**-Instanz zum Vergleich mit der Instanz, in der `STContains()` aufgerufen wird.  
   
 ## <a name="return-types"></a>Rückgabetypen  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Rückgabetyp: **Bit**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Rückgabetyp: **bit**  
   
  CLR-Rückgabetyp: **SqlBoolean**  
   
-## <a name="remarks"></a>Hinweise  
- Gibt 1 zurück, wenn die aufrufende **Geography** -Instanz räumlich enthält die **Geography** Instanz an die Methode übergeben, und gibt 0 zurück, wenn dies nicht der Fall. Gibt **null** Wenn der SRID der beiden **Geography** Instanzen stimmen nicht überein.  
+## <a name="remarks"></a>Remarks  
+ Gibt 1 zurück, wenn die aufrufende **geography**-Instanz die an die Methode übergebene **geography**-Instanz räumlich enthält, und gibt andernfalls 0 (null) zurück. Gibt **NULL** zurück, wenn die SRID der beiden **geography**-Instanzen nicht übereinstimmt.  
   
 ## <a name="examples"></a>Beispiele  
- Im folgenden Beispiel wird `STContains()` um zwei `geography` -Instanzen daraufhin zu überprüfen, ob die erste Instanz die zweite Instanz enthält.  
+ Im folgenden Beispiel wird `STContains()` verwendet, um zwei `geography`-Instanzen daraufhin zu überprüfen, ob die erste Instanz die zweite Instanz enthält.  
   
 ```  
 DECLARE @g geography;  

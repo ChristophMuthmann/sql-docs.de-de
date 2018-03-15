@@ -1,5 +1,5 @@
 ---
-title: DATETIMEFROMPARTS (Transact-SQL) | Microsoft Docs
+title: DATETIMEFROMPARTS (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 07/29/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="datetimefromparts-transact-sql"></a>DATETIMEFROMPARTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-Gibt eine **"DateTime"** Wert für das angegebene Datum und die Uhrzeit.
+Gibt einen **datetime**-Wert für das angegebene Datum und die Uhrzeit zurück.
   
 ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -45,34 +45,34 @@ DATETIMEFROMPARTS ( year, month, day, hour, minute, seconds, milliseconds )
 ```  
   
 ## <a name="arguments"></a>Argumente  
-*Jahr*  
+*year*  
 Ganzzahliger Ausdruck, der ein Jahr angibt.
   
-*Monat*  
+*month*  
 Ganzzahliger Ausdruck, der einen Monat angibt.
   
-*Tag*  
+*day*  
 Ganzzahliger Ausdruck, der einen Tag angibt.
   
-*Stunde*  
+*hour*  
 Ganzzahliger Ausdruck, der die Stunden angibt.
   
-*Minute*  
+*minute*  
 Ganzzahliger Ausdruck, der die Minuten angibt.
   
 *Sekunden*  
 Ganzzahliger Ausdruck, der die Sekunden angibt.
   
-*Millisekunden*  
+*milliseconds*  
 Ganzzahliger Ausdruck, der die Millisekunden angibt.
   
 ## <a name="return-types"></a>Rückgabetypen
 **datetime**
   
-## <a name="remarks"></a>Hinweise  
-**DATETIMEFROMPARTS** gibt einen vollständig initialisierten **"DateTime"** Wert. Wenn die Argumente nicht gültig sind, wird ein Fehler ausgelöst. Wenn erforderliche Argumente null sind, wird Null zurückgegeben.
+## <a name="remarks"></a>Remarks  
+**DATETIMEFROMPARTS** gibt einen vollständig initialisierten **datetime**-Wert zurück. Wenn die Argumente nicht gültig sind, wird ein Fehler ausgelöst. Wenn erforderliche Argumente den Wert NULL haben, wird auch NULL zurückgegeben.
   
-Diese Funktion kann remote auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]-Servern oder höher ausgeführt werden. Sie werden nicht in der Remoteausführung auf Servern, auf denen eine Version unter [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+Diese Funktion kann remote auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]-Servern oder höher ausgeführt werden. Eine Remoteausführung auf Servern mit einer Version vor [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ist nicht möglich.
   
 ## <a name="examples"></a>Beispiele  
   
@@ -91,7 +91,7 @@ Result
 ```  
   
 ## <a name="see-also"></a>Siehe auch
-["DateTime" &#40; Transact-SQL &#41;](../../t-sql/data-types/datetime-transact-sql.md)
+[datetime &#40;Transact-SQL&#41;](../../t-sql/data-types/datetime-transact-sql.md)
   
   
 

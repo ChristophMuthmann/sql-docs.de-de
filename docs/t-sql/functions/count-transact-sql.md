@@ -1,5 +1,5 @@
 ---
-title: COUNT (Transact-SQL) | Microsoft Docs
+title: COUNT (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="count-transact-sql"></a>COUNT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Gibt die Anzahl von Elementen in einer Gruppe zurück. COUNT funktioniert wie die [COUNT_BIG](../../t-sql/functions/count-big-transact-sql.md) Funktion. Der einzige Unterschied zwischen den beiden Funktionen sind die Rückgabewerte. COUNT gibt immer zurück ein **Int** -Datentypwert. COUNT_BIG gibt immer eine **"bigint"** -Datentypwert.
+Gibt die Anzahl von Elementen in einer Gruppe zurück. COUNT funktioniert wie die [COUNT_BIG](../../t-sql/functions/count-big-transact-sql.md)-Funktion. Der einzige Unterschied zwischen den beiden Funktionen sind die Rückgabewerte. COUNT gibt immer einen Wert vom **int**-Datentyp zurück. COUNT_BIG gibt immer einen Wert vom **bigint**-Datentyp zurück.
   
 ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -74,23 +74,23 @@ DISTINCT
 Gibt an, dass COUNT die Anzahl von eindeutigen Werten, die nicht NULL sind, zurückgibt.
   
 *expression*  
-Ist ein [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) eines beliebigen Typs außer **Text**, **Image**, oder **Ntext**. Aggregatfunktionen und Unterabfragen sind nicht zulässig.
+Ist [expression](../../t-sql/language-elements/expressions-transact-sql.md) eines beliebigen Typs mit Ausnahme von **text**, **image** und **ntext**. Aggregatfunktionen und Unterabfragen sind nicht zulässig.
   
 \*  
-Gibt an, dass alle Zeilen gezählt werden müssen, um die Gesamtzahl der Zeilen einer Tabelle zurückzugeben. COUNT (\*) besitzt keine Parameter und kann nicht zusammen mit DISTINCT verwendet werden. COUNT (\*) erfordert kein *Ausdruck* Parameter, da definitionsgemäß keine Informationen zu einer bestimmten Spalte verwendet wird. COUNT(*) gibt die Anzahl von Zeilen in der angegebenen Tabelle zurück, ohne Duplikate zu entfernen. Dabei werden alle Zeilen einzeln gezählt. Dies schließt Zeilen mit NULL-Werten ein.
+Gibt an, dass alle Zeilen gezählt werden müssen, um die Gesamtzahl der Zeilen einer Tabelle zurückzugeben. COUNT(\*) besitzt keine Parameter und kann nicht zusammen mit DISTINCT verwendet werden. COUNT(\*) erfordert keinen *expression*-Parameter, da definitionsgemäß keine Informationen zu einer bestimmten Spalte verwendet werden. COUNT(*) gibt die Anzahl von Zeilen in der angegebenen Tabelle zurück, ohne Duplikate zu entfernen. Dabei werden alle Zeilen einzeln gezählt. Dies schließt Zeilen mit NULL-Werten ein.
   
-ÜBER **(** [ *Partition_by_clause* ] [ *Order_by_clause* ] [ *ROW_or_RANGE_clause* ] **)**  
-*Partition_by_clause* teilt das Resultset, das von der FROM-Klausel erstellt wird, in Partitionen, die auf die die Funktion angewendet wird. Wird dies nicht angegeben, verarbeitet die Funktion alle Zeilen des Abfrageresultsets als einzelne Gruppe. *Order_by_clause* bestimmt die logische Reihenfolge, in dem der Vorgang ausgeführt wird. Weitere Informationen finden Sie unter [Klausel "OVER" &#40; Transact-SQL &#41; ](../../t-sql/queries/select-over-clause-transact-sql.md).
+OVER **(** [ *partition_by_clause* ] [ *order_by_clause* ] [ *ROW_or_RANGE_clause* ] **)**  
+*partition_by_clause* unterteilt das von der FROM-Klausel erzeugte Resultset in Partitionen, auf die die Funktion angewendet wird. Wird dies nicht angegeben, verarbeitet die Funktion alle Zeilen des Abfrageresultsets als einzelne Gruppe. *order_by_clause* bestimmt die logische Reihenfolge, in der der Vorgang ausgeführt wird. Weitere Informationen finden Sie unter [OVER-Klausel &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).
   
 ## <a name="return-types"></a>Rückgabetypen
  **int**  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
 COUNT(*) gibt die Anzahl von Elementen in einer Gruppe zurück. Dies schließt NULL-Werte und Duplikate ein.
   
-COUNT (alle *Ausdruck*) ergibt *Ausdruck* für jede Zeile in einer Gruppe und die Anzahl der Werte ungleich NULL zurückgegeben.
+COUNT(ALL *expression*) wertet *expression* für jede Zeile in einer Gruppe aus und gibt die Anzahl der Werte zurück, die nicht NULL sind.
   
-COUNT (DISTINCT *Ausdruck*) ergibt *Ausdruck* für jede Zeile in einer Gruppe und die Anzahl der eindeutigen Werte ungleich NULL zurückgegeben.
+COUNT(DISTINCT *expression*) wertet *expression* für jede Zeile in einer Gruppe aus und gibt die Anzahl der eindeutigen Werte zurück, die nicht NULL sind.
   
 Bei Rückgabewerten größer als 2^31-1 erzeugt COUNT einen Fehler. Verwenden Sie stattdessen COUNT_BIG.
   
@@ -196,10 +196,10 @@ Tool Design                   8.62                  29.8462               23.505
 (16 row(s) affected)
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
 ### <a name="e-using-count-and-distinct"></a>E. Verwenden von COUNT und DISTINCT  
-Das folgende Beispiel listet die Anzahl der verschiedenen Softwaretitel an, denen ein Mitarbeiter, die auf einen bestimmten Mandanten arbeitet aufnehmen kann.
+Im folgenden Beispiel wird die Anzahl der verschiedenen Berufsbezeichnungen aufgelistet, die ein Mitarbeiter in einem bestimmten Unternehmen haben kann.
   
 ```sql
 USE ssawPDW;  
@@ -216,7 +216,7 @@ FROM dbo.DimEmployee;
 ```  
   
 ### <a name="f-using-count"></a>F. Verwenden von COUNT(*)  
-Im folgende Beispiel gibt die Gesamtanzahl der Zeilen in der `dbo.DimEmployee` Tabelle.
+Im folgenden Beispiel wird die Gesamtzahl der Zeilen in der `dbo.DimEmployee`-Tabelle zurückgegeben.
   
 ```sql
 USE ssawPDW;  
@@ -233,7 +233,7 @@ FROM dbo.DimEmployee;
 ```  
   
 ### <a name="g-using-count-with-other-aggregates"></a>G. Verwenden von COUNT(*) mit anderen Aggregaten  
-Das folgende Beispiel kombiniert `COUNT(*)` mit anderen Aggregatfunktionen in der SELECT-Liste. Die Abfrage gibt die Anzahl von Vertriebsmitarbeitern mit einer jährlichen sollvorgaben größer als 500.000 Euro und die durchschnittliche Vertriebsvorgaben zurück.
+Das folgende Beispiel vereint `COUNT(*)` mit anderen Aggregatfunktionen in der SELECT-Liste. Die Abfrage gibt die Anzahl der Vertriebsmitarbeiter mit einer jährlichen Sollvorgabe für den Verkauf von über 500.000 USD und die durchschnittliche Sollvorgabe für den Verkauf zurück.
   
 ```sql
 USE ssawPDW;  
@@ -253,7 +253,7 @@ TotalCount  Average Sales Quota
 ```
   
 ### <a name="h-using-count-with-having"></a>H. Verwenden von COUNT mit HAVING  
-Im folgenden Beispiel wird die Anzahl der mit der HAVING-Klausel zurückzugebenden Abteilungen in einem Unternehmen, die mehr als 15 Mitarbeiter haben.
+Im folgenden Beispiel wird COUNT mit der HAVING-Klausel verwendet, um die Abteilungen eines Unternehmens zurückzugeben, in denen mehr als 15 Mitarbeiter beschäftigt sind.
   
 ```sql
 USE ssawPDW;  
@@ -274,8 +274,8 @@ Sales           18
 Production      179
 ```
   
-### <a name="i-using-count-with-over"></a>I. Verwenden von COUNT mit Failover  
-Im folgenden Beispiel wird die Anzahl mit der OVER-Klausel, um die Anzahl der Produkte, die enthalten sind in jedem der angegebenen Aufträge zurückzugeben.
+### <a name="i-using-count-with-over"></a>I. Verwenden von COUNT mit OVER  
+Im folgenden Beispiel wird COUNT mit der OVER-Klausel verwendet, um die Anzahl der Produkte zurückzugeben, die in jedem der angegebenen Verkaufsaufträge enthalten sind.
   
 ```sql
 USE ssawPDW;  
@@ -296,9 +296,9 @@ ProductCount   SalesOrderID`
 ```
   
 ## <a name="see-also"></a>Siehe auch
-[Aggregatfunktionen &#40; Transact-SQL &#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)  
-[COUNT_BIG &#40; Transact-SQL &#41;](../../t-sql/functions/count-big-transact-sql.md)  
-[Failover-Klausel &#40; Transact-SQL &#41;](../../t-sql/queries/select-over-clause-transact-sql.md)
+[Aggregate Functions &#40;Transact-SQL&#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)  
+[COUNT_BIG &#40;Transact-SQL&#41;](../../t-sql/functions/count-big-transact-sql.md)  
+[OVER-Klausel &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)
   
   
 

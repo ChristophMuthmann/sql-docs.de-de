@@ -1,5 +1,5 @@
 ---
-title: UNICODE (Transact-SQL) | Microsoft Docs
+title: UNICODE (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -48,12 +48,12 @@ UNICODE ( 'ncharacter_expression' )
   
 ## <a name="arguments"></a>Argumente  
  **'** *ncharacter_expression* **'**  
- Ist ein **Nchar** oder **Nvarchar** Ausdruck.  
+ Ein **nchar**- oder **nvarchar**-Ausdruck.  
   
 ## <a name="return-types"></a>Rückgabetypen  
  **int**  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  In früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] als [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] gibt die UNICODE-Funktion einen UCS-2-Codepunkt im Bereich 0 bis 0xFFFF zurück. In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höheren Editionen gibt UNICODE bei Verwendung von SC-Sortierungen einen UTF-16-Codepunkt im Bereich 0 bis 0x10FFFF zurück.  
   
 ## <a name="examples"></a>Beispiele  
@@ -145,12 +145,12 @@ Character # Unicode Character UNICODE Value
 12          4                 52  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [ASCII &#40;Transact-SQL&#41;](../../t-sql/functions/ascii-transact-sql.md)  
  [CHAR &#40;Transact-SQL&#41;](../../t-sql/functions/char-transact-sql.md)  
  [NCHAR &#40;Transact-SQL&#41;](../../t-sql/functions/nchar-transact-sql.md)   
- [Zeichenfolgenfunktionen &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)   
- [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)  
+ [String Functions &#40;Transact-SQL&#41; (Zeichenfolgenfunktionen (Transact-SQL))](../../t-sql/functions/string-functions-transact-sql.md)   
+ [Sortierung und Unicode-Unterstützung](../../relational-databases/collations/collation-and-unicode-support.md)  
   
   
 

@@ -1,5 +1,5 @@
 ---
-title: CREATE SYNONYM (Transact-SQL) | Microsoft Docs
+title: CREATE SYNONYM (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 04/11/2017
 ms.prod: sql-non-specified
@@ -70,28 +70,28 @@ CREATE SYNONYM [ schema_name_1. ] synonym_name FOR < object >
   
 ## <a name="arguments"></a>Argumente  
  *schema_name_1*  
- Gibt das Schema an, in dem das Synonym erstellt wird. Wenn *Schema* nicht angegeben ist, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] das Standardschema des aktuellen Benutzers verwendet.  
+ Gibt das Schema an, in dem das Synonym erstellt wird. Wird *schema* nicht angegeben ist, verwendet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] das Standardschema des aktuellen Benutzers.  
   
  *synonym_name*  
  Der Name des neuen Synonyms.  
   
- *Servername*  
+ *server_name*  
  **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Der Name des Servers, auf dem sich das Basisobjekt befindet.  
   
  *database_name*  
- Der Name der Datenbank, auf der sich das Basisobjekt befindet. Wenn *Database_name* nicht angegeben ist, wird der Name der aktuellen Datenbank verwendet wird.  
+ Der Name der Datenbank, auf der sich das Basisobjekt befindet. Wenn *database_name* nicht angegeben ist, wird der Name der aktuellen Datenbank verwendet.  
   
  *schema_name_2*  
- Der Name des Schemas des Basisobjekts. Wenn *Schema_name* ist nicht angegeben, wird das Standardschema des aktuellen Benutzers verwendet.  
+ Der Name des Schemas des Basisobjekts. Wenn *schema_name* nicht angegeben ist, wird das Standardschema des aktuellen Benutzers verwendet.  
   
  *object_name*  
  Der Name des Basisobjekts, auf das das Synonym verweist.  
   
  Die Windows Azure SQL-Datenbank unterstützt das aus drei Teilen bestehende Format database_name.[schema_name].object_name, wenn database_name die aktuelle Datenbank bzw. database_name tempdb ist und object_name mit # beginnt.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Das Basisobjekt muss zur Erstellungszeit des Synonyms nicht notwendigerweise vorhanden sein. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] überprüft das Vorhandensein des Basisobjekts zur Laufzeit.  
   
  Synonyme können für die folgenden Objekttypen erstellt werden:  
@@ -102,10 +102,10 @@ CREATE SYNONYM [ schema_name_1. ] synonym_name FOR < object >
 |Assembly (CLR)-Skalarfunktionen|Assembly (CLR)-Aggregatfunktionen|  
 |Replikationsfilterprozedur|Erweiterte gespeicherte Prozeduren|  
 |SQL-Skalarfunktionen|SQL-Tabellenwertfunktion|  
-|SQL-Inline-Table-valued Function|Gespeicherte SQL-Prozeduren|  
-|Sicht|Tabelle<sup>1</sup> (Benutzerdefiniert)|  
+|SQL-Inline-Tabellenwertfunktion|Gespeicherte SQL-Prozeduren|  
+|Anzeigen|Tabelle<sup>1</sup> (Benutzerdefiniert)|  
   
- <sup>1 enthält lokale und globale temporäre Tabellen</sup>  
+ <sup>1 Enthält lokale und globale temporäre Tabellen</sup>  
   
  Vierteilige Namen für Funktionsbasisobjekte werden nicht unterstützt.  
   
@@ -199,8 +199,8 @@ SET @Amt = 15;
 SELECT @Amt AS OriginalOrder, dbo.CorrectOrder(@Amt) AS ModifiedOrder;  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [DROP SYNONYM &#40; Transact-SQL &#41;](../../t-sql/statements/drop-synonym-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [DROP SYNONYM &#40;Transact-SQL&#41;](../../t-sql/statements/drop-synonym-transact-sql.md)   
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   

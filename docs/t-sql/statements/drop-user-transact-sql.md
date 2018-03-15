@@ -1,5 +1,5 @@
 ---
-title: DROP USER (Transact-SQL) | Microsoft Docs
+title: DROP USER (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 05/12/2017
 ms.prod: sql-non-specified
@@ -58,15 +58,15 @@ DROP USER user_name
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *IF VORHANDEN IST*  
- **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] über [aktuelle Version](http://go.microsoft.com/fwlink/p/?LinkId=299658), [!INCLUDE[sssds](../../includes/sssds-md.md)]).  
+ *IF EXISTS*  
+ **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis zur [aktuellen Version](http://go.microsoft.com/fwlink/p/?LinkId=299658), [!INCLUDE[sssds](../../includes/sssds-md.md)]).  
   
- Bedingt löscht den Benutzer nur dann, wenn sie bereits vorhanden ist.  
+ Entfernt den Benutzer nur, wenn dieser bereits vorhanden ist.  
   
- *Benutzername*  
+ *user_name*  
  Gibt den Namen an, mit dem der Benutzer innerhalb dieser Datenbank identifiziert wird.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Benutzer, die Besitzer sicherungsfähiger Elemente sind, können nicht aus der Datenbank gelöscht werden. Vor dem Löschen eines Datenbankbenutzers, der sicherungsfähige Elemente besitzt, müssen Sie zuerst den Besitz dieser sicherungsfähigen Elemente löschen oder übertragen.  
   
  Der guest-Benutzer kann nicht gelöscht, aber deaktiviert werden. Zu diesem Zweck heben Sie die CONNECT-Berechtigung auf, indem Sie REVOKE CONNECT FROM GUEST in einer beliebigen Datenbank außer master oder tempdb ausführen.  
@@ -85,7 +85,7 @@ DROP USER AbolrousHazem;
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [CREATE USER &#40;Transact-SQL&#41;](../../t-sql/statements/create-user-transact-sql.md)   
  [ALTER USER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-user-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  

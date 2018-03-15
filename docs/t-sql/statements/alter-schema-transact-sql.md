@@ -1,5 +1,5 @@
 ---
-title: ALTER SCHEMA (Transact-SQL) | Microsoft Docs
+title: ALTER SCHEMA (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 01/09/2018
 ms.prod: sql-non-specified
@@ -73,22 +73,22 @@ ALTER SCHEMA schema_name
  Die Klasse der Entität, für die der Besitzer geändert wird. Object ist der Standardwert.  
   
  *securable_name*  
- Ist die einteiligen oder zweiteiligen Namen von einem Schemabereich sicherungsfähigen Elements, das in das Schema verschoben werden.  
+ Bezeichnet den ein- oder zweiteiligen Namen eines sicherungsfähigen schemabezogenen Elements, das in das Schema verschoben werden soll.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Benutzer und Schemas vollkommen voneinander getrennt.  
   
  ALTER SCHEMA kann nur zum Verschieben von sicherungsfähigen Elementen zwischen Schemas in derselben Datenbank verwendet werden. Zum Ändern oder Löschen eines sicherungsfähigen Elements in einem Schema verwenden Sie die für das sicherungsfähige Element spezifische ALTER- oder DROP-Anweisung.  
   
- Wenn ein einteiliger Name verwendet wird, für die *Securable_name*, die Regeln für die Auflösung von Namen derzeit gültigen werden verwendet, um das sicherungsfähige Element zu suchen.  
+ Wenn ein einteiliger Name für *securable_name* verwendet wird, werden die derzeit gültigen Regeln zur Namensauflösung zum Auffinden des sicherungsfähigen Elements angewendet.  
   
  Alle dem sicherungsfähigen Element zugeordneten Berechtigungen werden gelöscht, wenn das sicherungsfähige Element in das neue Schema verschoben wird. Wurde der Besitzer des sicherungsfähigen Elements explizit festgelegt, bleibt der Besitzer unverändert. Wenn der Besitzer des sicherungsfähigen Elements auf SCHEMA OWNER festgelegt wurde, bleibt diese Einstellung zunächst erhalten. Nach dem Verschieben wird SCHEMA OWNER jedoch zum Besitzer des neuen Schemas aufgelöst. principal_id des neuen Besitzers ist NULL.  
   
- Verschieben eine gespeicherte Prozedur, Funktion, Sicht oder Trigger wird der Schemaname nicht ändern, wenn vorhanden, der das entsprechende entweder in der definitionsspalte der Objekt der [sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) -Katalogsicht oder erhalten hat, mithilfe der [ OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md) integrierte Funktion. Aus diesem Grund wird empfohlen, ALTER SCHEMA nicht verwendet werden, um diese Objekttypen zu verschieben. Löschen Sie stattdessen auf, und das Objekt in das neue Schema neu erstellen.  
+ Durch das Verschieben einer gespeicherten Prozedur, Funktion, Sicht oder eines Triggers wird der möglicherweise vorhandene Schemaname des entsprechenden Objekts nicht geändert. Dies gilt sowohl für eine Bezeichnung in der definition-Spalte der [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)-Katalogsicht als auch für eine Bezeichnung, die über die integrierte Funktion [OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md) abgerufen wird. Daher ist es empfehlenswert, ALTER SCHEMA nicht zum Verschieben dieser Objekttypen zu verwenden. Löschen Sie stattdessen das Objekt, und erstellen Sie es neu im zugehörigen neuen Schema.  
   
- Das Verschieben eines Objekts, z. B. eine Tabelle oder ein Synonym werden Verweise auf dieses Objekt nicht automatisch aktualisiert. Sie müssen Objekte ändern, die das übertragene Objekt, manuell verweisen. Wenn Sie eine Tabelle verschieben, und diese Tabelle in einem Trigger verwiesen wird, müssen Sie z. B. den Trigger entsprechend den neuen Schemanamen ändern. Verwendung [Sys. sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) für eine Liste der Abhängigkeiten für das Objekt vor dem verschieben.  
+ Beim Verschieben eines Objekts wie z.B. einer Tabelle oder eines Synonyms werden Verweise auf das Objekt nicht automatisch aktualisiert. Sie müssen Objekte, die auf das verschobene Objekt verweisen, manuell ändern. Wenn Sie z.B. eine Tabelle verschieben und in einem Trigger auf diese Tabelle verwiesen wird, müssen Sie den Trigger ändern, damit für ihn der Schemaname verwendet wird. Mit [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) können Sie Objektabhängigkeiten auflisten, bevor Sie das Objekt verschieben.  
 
- So ändern Sie das Schema einer Tabelle mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], Objekt-Explorer mit der Maustaste auf die Tabelle, und klicken Sie dann auf **Entwurf**. Drücken Sie **F4** um das Eigenschaftenfenster zu öffnen. In der **Schema** wählen ein neues Schema.  
+ Wenn Sie das Schema einer Tabelle mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ändern möchten, können Sie im Objekt-Explorer mit der rechten Maustaste auf die Tabelle und anschließend auf **Entwurf** klicken. Drücken Sie **F4**, um das Eigenschaftenfenster zu öffnen. Wählen Sie im Feld **Schema** ein neues Schema aus.  
   
 > [!CAUTION]  
 >  [!INCLUDE[ssCautionUserSchema](../../includes/sscautionuserschema-md.md)]  
@@ -96,7 +96,7 @@ ALTER SCHEMA schema_name
 ## <a name="permissions"></a>Berechtigungen  
  Für die Übertragung eines sicherungsfähigen Elements aus einem anderen Schema benötigt der aktuelle Benutzer die CONTROL-Berechtigung für das sicherungsfähige Element (nicht das Schema) sowie die ALTER-Berechtigung für das Zielschema.  
   
- Wenn das sicherungsfähige Element weist eine EXECUTE AS OWNER-Spezifikation auf, und der Besitzer auf SCHEMA OWNER festgelegt ist, muss der Benutzer auch auf den Besitzer des Zielschemas IMPERSONATE-Berechtigung verfügen.  
+ Wenn das sicherungsfähige Element über eine EXECUTE AS OWNER-Spezifikation verfügt und der Benutzer als SCHEMA OWNER festgelegt ist, benötigt der Benutzer auch die IMPERSONATE-Berechtigung für den Besitzer des Zielschemas.  
   
  Alle dem sicherungsfähigen Element, das übertragen wird, zugeordneten Berechtigungen werden gelöscht, wenn es verschoben wird.  
   
@@ -141,10 +141,10 @@ SELECT sys.types.name, sys.types.schema_id, sys.schemas.name
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
 ### <a name="c-transferring-ownership-of-a-table"></a>C. Übertragen des Besitzes einer Tabelle  
- Im folgende Beispiel wird eine Tabelle erstellt `Region` in der `dbo` Schema erstellt eine `Sales` Schema, und klicken Sie dann wechselt der `Region` Tabelle aus der `dbo` Schema, um die `Sales` Schema.  
+ Im folgenden Beispiel werden eine `Region`-Tabelle im `dbo`-Schema und ein `Sales`-Schema erstellt. Anschließend wird die `Region`-Tabelle aus dem `dbo`-Schema in das `Sales`-Schema verschoben.  
   
 ```  
 CREATE TABLE dbo.Region   
@@ -160,7 +160,7 @@ ALTER SCHEMA Sales TRANSFER OBJECT::dbo.Region;
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [CREATE SCHEMA &#40;Transact-SQL&#41;](../../t-sql/statements/create-schema-transact-sql.md)   
  [DROP SCHEMA &#40;Transact-SQL&#41;](../../t-sql/statements/drop-schema-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  

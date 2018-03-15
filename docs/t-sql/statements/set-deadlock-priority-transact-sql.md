@@ -1,5 +1,5 @@
 ---
-title: SET DEADLOCK_PRIORITY (Transact-SQL) | Microsoft Docs
+title: SET DEADLOCK_PRIORITY (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -63,21 +63,21 @@ SET DEADLOCK_PRIORITY { LOW | NORMAL | HIGH | <numeric-priority> | @deadlock_var
  HIGH  
  Gibt an, dass die aktuelle Sitzung das Deadlockopfer ist, wenn für die anderen Sitzungen in der Deadlockkette die Deadlockpriorität auf einen ganzzahligen Wert größer 5 festgelegt ist. Die aktuelle Sitzung kommt auch dann als Deadlockopfer in Frage, wenn bei einer anderen Sitzung die Deadlockpriorität auf HIGH oder einen ganzzahligen Wert gleich 5 festgelegt ist.  
   
- \<numerische Priorität >  
+ \<numeric-priority>  
  Ein Bereich ganzer Zahlen (-10 bis 10) zur Darstellung der 21 Stufen der Deadlockpriorität. Über diesen Bereich wird angegeben, dass die aktuelle Sitzung das Deadlockopfer ist, wenn für andere Sitzungen in der Deadlockkette ein höherer Wert für die Deadlockpriorität festgelegt wurde. Die aktuelle Sitzung ist dann nicht das Deadlockopfer, wenn für die anderen Sitzungen eine Deadlockpriorität festgelegt wurde, die niedriger ist als der Wert der aktuellen Sitzung. Außerdem wird angegeben, dass die aktuelle Sitzung als Deadlockopfer in Frage kommt, wenn für andere Sitzungen der gleiche Wert für die Deadlockpriorität festgelegt ist wie für die aktuelle Sitzung. LOW entspricht -5, NORMAL entspricht 0 und HIGH entspricht 5.  
   
- **@***Deadlock_var*  
+ **@** *deadlock_var*  
  Eine Zeichenvariable, die die Deadlockpriorität angibt. Für die Variable muss einer der Werte 'LOW', 'NORMAL' oder 'HIGH' festgelegt werden. Die Variable muss groß genug sein, um die gesamte Zeichenfolge aufzunehmen.  
   
- **@***Deadlock_intvar*  
+ **@** *deadlock_intvar*  
  Eine ganzzahlige Variable, die die Deadlockpriorität angibt. Für die Variable muss ein ganzzahliger Wert innerhalb des Bereichs (-10 bis 10) angegeben werden.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Deadlocks entstehen, wenn zwei Sitzungen auf den Zugriff auf Ressourcen warten, die jeweils durch die andere gesperrt wurden. Wenn eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ermittelt, dass für zwei Sitzungen ein Deadlock vorliegt, wird dieser Deadlock aufgelöst, indem eine der Sitzungen als Deadlockopfer ausgewählt wird. Es erfolgt ein Rollback der aktuellen Transaktion des Deadlockopfers, und die Deadlockfehlermeldung 1205 wird an den Client zurückgegeben. Damit werden alle von dieser Sitzung verhängten Sperren freigegeben, sodass die andere Sitzung den Vorgang fortsetzen kann.  
   
  Von der für die Sitzungen festgelegten Deadlockpriorität hängt ab, welche Sitzung als Deadlockopfer ausgewählt wird:  
   
--   Wenn für beide Sitzungen die gIeiche Deadlockprioriät festgelegt wurde, wählt die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] diejenige Sitzung als Deadlockopfer aus, für die das Rollback weniger aufwändig ist. Wenn beispielsweise für beide Sitzungen die Deadlockpriorität HIGH festgelegt wurde, wählt die Instanz diejenige Sitzung als Opfer aus, bei der das Rollback voraussichtlich weniger aufwändig sein wird. Die Kosten wird bestimmt durch Vergleich der Anzahl der Protokollbytes, die bis zu diesem Zeitpunkt in der jeweiligen Transaktion geschrieben. (Sie können diesen Wert als "Protokoll verwendet" in einem deadlockdiagramm finden Sie unter).
+-   Wenn für beide Sitzungen die gIeiche Deadlockprioriät festgelegt wurde, wählt die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] diejenige Sitzung als Deadlockopfer aus, für die das Rollback weniger aufwändig ist. Wenn beispielsweise für beide Sitzungen die Deadlockpriorität HIGH festgelegt wurde, wählt die Instanz diejenige Sitzung als Opfer aus, bei der das Rollback voraussichtlich weniger aufwändig sein wird. Die Kosten werden anhand der Anzahl der bis zu dem jeweiligen Zeitpunkt in jeder Transaktion geschriebenen Protokollbytes ermittelt. (Dieser Wert wird als „Protokollverwendung“ in einem Deadlock Graph angezeigt.)
   
 -   Wenn die Sitzungen verschiedene Deadlockprioritäten aufweisen, wird die Sitzung mit der niedrigsten Deadlockpriorität als Deadlockopfer ausgewählt.  
   
@@ -104,9 +104,9 @@ SET DEADLOCK_PRIORITY NORMAL;
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [@@LOCK_TIMEOUT &#40;Transact-SQL&#41;](../../t-sql/functions/lock-timeout-transact-sql.md)   
  [SET-Anweisungen (Transact-SQL)](../../t-sql/statements/set-statements-transact-sql.md)   
- [SET LOCK_TIMEOUT &#40; Transact-SQL &#41;](../../t-sql/statements/set-lock-timeout-transact-sql.md)  
+ [SET LOCK_TIMEOUT &#40;Transact-SQL&#41;](../../t-sql/statements/set-lock-timeout-transact-sql.md)  
   
   

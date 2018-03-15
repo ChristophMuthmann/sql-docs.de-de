@@ -1,5 +1,5 @@
 ---
-title: DROP INDEX (selektive XML-Indizes) | Microsoft Docs
+title: DROP INDEX (selektive XML-Indizes) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
@@ -58,7 +58,7 @@ DROP INDEX index_name ON <object>
  *index_name*  
  Der Name des vorhandenen, zu löschenden Indexes.  
   
- *\<Objekt >* ist die Tabelle, die indizierte XML-Spalte enthält. Verwenden Sie eines der folgenden Formate:  
+ *\< object>* ist die Tabelle, die die indizierte XML-Spalte enthält. Verwenden Sie eines der folgenden Formate:  
   
 -   `database_name.schema_name.table_name`  
   
@@ -68,9 +68,9 @@ DROP INDEX index_name ON <object>
   
 -   `table_name`  
   
- *\<Drop_index_option >* Informationen zu den Drop Index-Optionen finden Sie unter [DROP INDEX &#40; Transact-SQL &#41; ](../../t-sql/statements/drop-index-transact-sql.md).  
+ *\<drop_index_option>* Informationen zu den DROP INDEX-Optionen finden Sie unter [DROP INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/drop-index-transact-sql.md).  
   
-## <a name="security"></a>Sicherheit  
+## <a name="security"></a>Security  
   
 ### <a name="permissions"></a>Berechtigungen  
  Die ALTER-Berechtigung für die Tabelle oder Ansicht ist erforderlich, um DROP INDEX auszuführen. Über diese Berechtigung verfügen standardmäßig die Mitglieder der festen Serverrolle sysadmin und die Mitglieder der festen Datenbankrollen db_ddladmin und db_owner.  
@@ -82,7 +82,7 @@ DROP INDEX index_name ON <object>
 DROP INDEX sxi_index ON tbl;  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Selektive XML-Indizes &#40;SXI&#41;](../../relational-databases/xml/selective-xml-indexes-sxi.md)   
  [Erstellen, Ändern und Löschen selektiver XML-Indizes](../../relational-databases/xml/create-alter-and-drop-selective-xml-indexes.md)  
   

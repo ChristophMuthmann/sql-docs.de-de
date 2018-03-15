@@ -1,5 +1,5 @@
 ---
-title: '&amp;(Bitweises AND) (Transact-SQL) | Microsoft Docs'
+title: '&amp; (Bitweises UND) (Transact-SQL) | Microsoft-Dokumentation'
 ms.custom: 
 ms.date: 01/10/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="amp-bitwise-and-transact-sql"></a>&amp;(Bitweises AND) (Transact-SQL)
+# <a name="amp-bitwise-and-transact-sql"></a>&amp; (Bitweises UND) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Führt eine bitweise logische AND-Operation zwischen zwei ganzzahligen Werten aus.  
@@ -49,25 +49,25 @@ expression & expression
   
 ## <a name="arguments"></a>Argumente  
  *expression*  
- Ist ein beliebiger gültiger [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) aller die Datentypen der Datentypkategorie ' Integer ' oder die **Bit**, oder die **binäre** oder **Varbinary** Daten Typen. *Ausdruck* wird als eine Binärzahl für die bitweise Operation behandelt.  
+ Ein beliebiger gültiger [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) eines beliebigen Datentyps der ganzzahligen Datentypkategorie oder des Datentyps **bit**, **binary** oder **varbinary**. *expression* wird in der bitweisen Operation als binäre Zahl behandelt.  
   
 > [!NOTE]  
->  In einer bitweisen Operation kann nur ein *Ausdruck* sein **binäre** oder **Varbinary** -Datentyp.  
+>  Nur eines der *expression*-Argumente kann in einer bitweisen Operation vom Datentyp **binary** oder **varbinary** sein.  
   
 ## <a name="result-types"></a>Ergebnistypen  
- **Int** , wenn die Eingabewerte sind **Int**.  
+ **int**, wenn die Eingabewerte vom Typ **int** sind.  
   
- **"smallint"** , wenn die Eingabewerte sind **"smallint"**.  
+ **smallint**, wenn die Eingabewerte vom Typ **smallint** sind.  
   
- **"tinyint"** , wenn die Eingabewerte sind **"tinyint"** oder **Bit**.  
+ **tinyint**, wenn die Eingabewerte vom Typ **tinyint** oder **bit** sind.  
   
-## <a name="remarks"></a>Hinweise  
- Die  **&**  -Operator führt eine bitweise logische AND-Operation zwischen den beiden Ausdrücken, indem die jeweils entsprechenden Bits für beide Ausdrücke. Ein Ergebnisbit wird genau dann auf den Wert 1 festgelegt, wenn beide Bits (für das aktuell aufzulösende Bit) der Eingabeausdrücke den Wert 1 aufweisen. Andernfalls wird das entsprechende Bit im Ergebnis auf 0 festgelegt.  
+## <a name="remarks"></a>Remarks  
+ Der bitweise **&**-Operator führt eine bitweise logische UND-Operation zwischen den beiden Ausdrücken durch und verwendet die entsprechenden Bits für beide Ausdrücke. Ein Ergebnisbit wird genau dann auf den Wert 1 festgelegt, wenn beide Bits (für das aktuell aufzulösende Bit) der Eingabeausdrücke den Wert 1 aufweisen. Andernfalls wird das entsprechende Bit im Ergebnis auf 0 festgelegt.  
   
- Wenn der linke und der rechte Ausdruck unterschiedliche ganzzahlige Datentypen aufweisen (z. B. Links *Ausdruck* ist **"smallint"** und das Recht *Ausdruck* ist  **Int**), wird das Argument des kleineren Datentyps in den größeren Datentyp konvertiert. In diesem Fall die **"smallint" *** Ausdruck* konvertiert ein **Int**.  
+ Wenn der linke und der rechte Ausdruck unterschiedliche ganzzahlige Datentypen aufweisen (beispielsweise ist der linke *expression*-Ausdruck vom Datentyp **smallint** und der rechte *expression*-Ausdruck von Datentyp **int**), wird das Argument mit dem kleineren Datentyp in den größeren Datentyp konvertiert. In diesem Fall wird **smallint***expression* in einen **int**-Typ konvertiert.  
   
 ## <a name="examples"></a>Beispiele  
- Im folgende Beispiel wird eine Tabelle mit den **Int** Daten geben, um die Werte zu speichern und fügt zwei Werte in eine Zeile.  
+ Im folgenden Beispiel wird eine Tabelle mithilfe des **int**-Datentyps erstellt, um die Werte zu speichern. Zwei Werte werden in einer Zeile eingefügt.  
   
 ```  
 CREATE TABLE bitwise  
@@ -108,12 +108,12 @@ GO
 ```  
   
   
-## <a name="see-also"></a>Siehe auch  
- [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
- [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
- [Bitweise Operatoren &#40; Transact-SQL &#41;](../../t-sql/language-elements/bitwise-operators-transact-sql.md)   
- [& = &#40; Bitweise AND-Zuweisung &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/bitwise-and-equals-transact-sql.md)   
- [Zusammengesetzte Operatoren &#40; Transact-SQL &#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Ausdrücke &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [Operators &#40;Transact-SQL&#41; (Operatoren &#40;Transact-SQL&#41;)](../../t-sql/language-elements/operators-transact-sql.md)   
+ [Bitweise Operatoren &#40;Transact-SQL&#41;](../../t-sql/language-elements/bitwise-operators-transact-sql.md)   
+ [&= &#40;Bitwise AND Assignment&#41; &#40;Transact-SQL&#41; (&= (Bitweises UND und Zuweisung) &#40;Transact-SQL&#41;)](../../t-sql/language-elements/bitwise-and-equals-transact-sql.md)   
+ [Verbundoperatoren &#40;Transact-SQL&#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)  
   
   
 

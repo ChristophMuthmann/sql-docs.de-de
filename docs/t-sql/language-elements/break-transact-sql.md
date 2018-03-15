@@ -1,5 +1,5 @@
 ---
-title: BREAK (Transact-SQL) | Microsoft Docs
+title: BREAK (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -53,8 +53,8 @@ BEGIN
 END  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Control-of-Flow-Sprache &#40; Transact-SQL &#41;](~/t-sql/language-elements/control-of-flow.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Control-of-Flow Language &#40;Transact-SQL&#41; (Sprachkonstrukte zur Ablaufsteuerung &#40;Transact-SQL&#41;)](~/t-sql/language-elements/control-of-flow.md)   
  [WHILE &#40;Transact-SQL&#41;](../../t-sql/language-elements/while-transact-sql.md)   
  [IF...ELSE &#40;Transact-SQL&#41;](../../t-sql/language-elements/if-else-transact-sql.md)  
   

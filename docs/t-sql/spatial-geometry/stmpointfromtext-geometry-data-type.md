@@ -1,5 +1,5 @@
 ---
-title: STMPointFromText (Geometry-Datentyp) | Microsoft Docs
+title: STMPointFromText (geometry-Datentyp) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -45,23 +45,23 @@ STMPointFromText ( 'multipoint_tagged_text', SRID )
   
 ## <a name="arguments"></a>Argumente  
  *multipoint_tagged_text*  
- Ist die WKT-Darstellung der **GeometryMultiPoint** Instanz, die Sie zurückgeben möchten. *Multipoint_tagged_text* ist ein **nvarchar(max)** Ausdruck.  
+ Die WKT-Darstellung der **geometryMultiPoint**-Instanz, die zurückgegeben werden soll. *multipoint_tagged_text* ist ein **nvarchar(max)**-Ausdruck.  
   
  *SRID*  
- Ist ein **Int** Ausdruck darstellt, die räumliche verweisen ID (SRID), der die **GeometryMultiPoint** Instanz, die Sie zurückgeben möchten.  
+ Ein **int**-Ausdruck, der die SRID (Spatial Reference ID) der **geometryMultiPoint**-Instanz darstellt, die zurückgegeben werden soll.  
   
 ## <a name="return-types"></a>Rückgabetypen  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Rückgabetyp: **Geometrie**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Rückgabetyp: **geometry**  
   
  CLR-Rückgabetyp: **SqlGeometry**  
   
  OGC-Typ: **MultiPoint**  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Diese Methode löst eine **FormatException** aus, wenn die Eingabe nicht korrekt formatiert ist.  
   
 ## <a name="examples"></a>Beispiele  
- Im folgenden Beispiel wird `STMPointFromText()` zum Erstellen einer `geometry` Instanz.  
+ Im folgenden Beispiel wird `STMPointFromText()` verwendet, um eine `geometry`-Instanz zu erstellen.  
   
 ```  
 DECLARE @g geometry;   
@@ -69,7 +69,7 @@ SET @g = geometry::STMPointFromText('MULTIPOINT ((100 100), (200 200))', 0);
 SELECT @g.ToString();  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Statische geometry-Methoden des OGC](../../t-sql/spatial-geometry/ogc-static-geometry-methods.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: SET ROWCOUNT (Transact-SQL) | Microsoft Docs
+title: SET ROWCOUNT (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -54,13 +54,13 @@ SET ROWCOUNT { number | @number_var }
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *Anzahl* | @*Number_var*  
+ *number* | @*number_var*  
  Die Zahl (eine ganze Zahl), die festlegt, wie viele Zeilen verarbeitet werden sollen, bevor die angegebene Abfrage beendet wird.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
   
 > [!IMPORTANT]  
->  Die Verwendung von SET ROWCOUNT wird in einer zukünftigen Version von SQL Server keine Auswirkungen auf die Anweisungen DELETE, INSERT und UPDATE haben. Vermeiden Sie beim Entwickeln neuer Anwendungen das Verwenden von SET ROWCOUNT zusammen mit DELETE-, INSERT- und UPDATE-Anweisungen, und planen Sie die Änderung von Anwendungen, in denen dies zurzeit verwendet wird. Die Verwendung der TOP-Syntax ergibt ein ähnliches Verhalten. Weitere Informationen finden Sie unter [nach oben &#40; Transact-SQL &#41; ](../../t-sql/queries/top-transact-sql.md).  
+>  Die Verwendung von SET ROWCOUNT wird in einer zukünftigen Version von SQL Server keine Auswirkungen auf die Anweisungen DELETE, INSERT und UPDATE haben. Vermeiden Sie beim Entwickeln neuer Anwendungen das Verwenden von SET ROWCOUNT zusammen mit DELETE-, INSERT- und UPDATE-Anweisungen, und planen Sie die Änderung von Anwendungen, in denen dies zurzeit verwendet wird. Die Verwendung der TOP-Syntax ergibt ein ähnliches Verhalten. Weitere Informationen finden Sie unter [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md).  
   
  Um diese Option zu deaktivieren (sodass alle Zeilen zurückgegeben werden), geben Sie SET ROWCOUNT 0 an.  
   
@@ -107,8 +107,8 @@ GO
 (4 row(s) affected)
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- SET ROWCOUNT beendet die Verarbeitung nach der angegebenen Anzahl von Zeilen. Im folgenden Beispiel beachten Sie, dass mehr als 20 Zeilen mit dem Kriterium `AccountType = 'Assets'`. Wenn SET ROWCOUNT angewendet wurde, werden jedoch nicht alle Zeilen zurückgegeben.  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
+ SET ROWCOUNT beendet die Verarbeitung nach der angegebenen Anzahl von Zeilen. Beachten Sie im folgenden Beispiel, dass mehr als 20 Zeilen mit dem Kriterium `AccountType = 'Assets'` übereinstimmen. Wenn SET ROWCOUNT angewendet wurde, werden jedoch nicht alle Zeilen zurückgegeben.  
   
 ```  
 -- Uses AdventureWorks  
@@ -118,7 +118,7 @@ SELECT * FROM [dbo].[DimAccount]
 WHERE AccountType = 'Assets';  
 ```  
   
- Um alle Zeilen zurückzugeben, ZEILENANZAHL auf 0 festgelegt.  
+ Legen Sie ROWCOUNT auf 0 fest, um alle Zeilen zurückzugeben.  
   
 ```  
 -- Uses AdventureWorks  
@@ -128,7 +128,7 @@ SELECT * FROM [dbo].[DimAccount]
 WHERE AccountType = 'Assets';  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SET-Anweisungen &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)  
   
   

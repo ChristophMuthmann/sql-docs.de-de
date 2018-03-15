@@ -1,5 +1,5 @@
 ---
-title: Bitweise Operatoren (Transact-SQL) | Microsoft Docs
+title: Bitweise Operatoren (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 09/07/2017
 ms.prod: sql-non-specified
@@ -34,39 +34,39 @@ ms.lasthandoff: 01/25/2018
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Bitweise Operatoren bearbeiten Bits aus zwei Ausdrücken eines Datentyps der ganzzahligen Datentypkategorie.  
-  Bitweise Operatoren konvertieren von zwei ganzzahligen Werten in binäre Bits, führen Sie AND, OR oder NOT-Operation auf jedes Bit, Erzeugen eines Ergebnisses. Das Ergebnis wird dann in eine ganze Zahl konvertiert.  
+  Bitweise Operatoren konvertieren zwei ganzzahlige Werte in binäre Bitwerte und führen die Operationen AND, OR oder NOT für jedes Bit aus, wodurch ein Ergebnis ausgegeben wird. Dieses Ergebnis wird anschließend in einen Integer konvertiert.  
   
-  Beispielsweise konvertiert die ganze Zahl 170 auf binäre 1010 1010.
-Die Ganzzahl 75 konvertiert in binäre 0100 1011.
+  Beispielsweise wird der Integer 170 in die Binärzahl 1010 1010 konvertiert.
+Der Integer 75 wird in die Binärzahl 0100 1011 konvertiert.
 
-|Operator|bitweise mathematische Funktionen|
+|Operator|Bitweise Mathematik|
 |---- |---- |
-|AND <br> Wenn Bits an einer beliebigen Position 1 sind, ist das Ergebnis 1. |1010 1010 = 170 <br>0100 1011 =  75 <br>-----------------  <br> 0000 1010 =  10 |
-|OR <br> Wenn jedes Bit an einer beliebigen Position 1 ist, ist das Ergebnis 1. |1010 1010 = 170 <br>0100 1011 =  75 <br>-----------------  <br> 1110 1011 = 235|
-|NICHT  <br> Kehrt den Bitwert an jedem Standort Bit. |1010 1010 = 170 <br>----------------- <br>  0101 0101 =   85 |
+|AND <br> Wenn zwei Bits an einem beliebigen Speicherort 1 ergeben, wird auch 1 als Ergebnis ausgegeben. |1010 1010 = 170 <br>0100 1011 = 75 <br>-----------------  <br> 0000 1010 = 10 |
+|oder <br> Wenn irgendein Bit an einem beliebigen Speicherort 1 ergibt, wird auch 1 als Ergebnis zurückgegeben. |1010 1010 = 170 <br>0100 1011 = 75 <br>-----------------  <br> 1110 1011 = 235|
+|NICHT  <br> Kehrt den Bitwert an jedem Bitspeicherort um. |1010 1010 = 170 <br>----------------- <br>  0101 0101 = 85 |
   
-Finden Sie unter den folgenden Themen:   
-* [& &#40; Bitweises AND &#41;](../../t-sql/language-elements/bitwise-and-transact-sql.md)  
-* [& = &#40; Bitweise AND-Zuweisung &#41;](../../t-sql/language-elements/bitwise-and-equals-transact-sql.md)   
-* [&#124; &#40; Bitweises OR &#41;](../../t-sql/language-elements/bitwise-or-transact-sql.md)  
-* [&#124; = &#40; Bitweise OR-Zuweisung &#41;](../../t-sql/language-elements/bitwise-or-equals-transact-sql.md)   
-* [^ &#40; Bitweises exklusives OR &#41;](../../t-sql/language-elements/bitwise-exclusive-or-transact-sql.md)  
-* [^ = &#40; Bitweises exklusives OR-Zuweisung &#41;](../../t-sql/language-elements/bitwise-exclusive-or-equals-transact-sql.md)  
-* [~ &#40; Bitweises NOT &#41;](../../t-sql/language-elements/bitwise-not-transact-sql.md)  
+Weitere Informationen finden Sie in den folgenden Artikeln:   
+* [& &#40;Bitwise AND&#41; (Bitweises UND (Operator))](../../t-sql/language-elements/bitwise-and-transact-sql.md)  
+* [&= &#40;Bitwise AND Assignment&#41; (Bitweises UND und Zuweisung)](../../t-sql/language-elements/bitwise-and-equals-transact-sql.md)   
+* [&#124; &#40;Bitwise OR&#41; (Bitweiser OR-Operator)](../../t-sql/language-elements/bitwise-or-transact-sql.md)  
+* [&#124;= &#40;Bitwise OR Assignment&#41; (Zuweisung von bitweisem OR)](../../t-sql/language-elements/bitwise-or-equals-transact-sql.md)   
+* [^ &#40;Bitwise Exclusive OR&#41; (Bitweiser exklusiver OR-Operator)](../../t-sql/language-elements/bitwise-exclusive-or-transact-sql.md)  
+* [^= &#40;Bitwise Exclusive OR Assignment&#41; (Zuweisung von bitweisem OR)](../../t-sql/language-elements/bitwise-exclusive-or-equals-transact-sql.md)  
+* [~ &#40;Bitwise NOT&#41; (Bitweiser NOT-Operator)](../../t-sql/language-elements/bitwise-not-transact-sql.md)  
   
- Die Operanden für bitweise Operatoren können eines der Datentypen der ganzzahligen oder Binärzeichenfolge Datentypkategorien werden (mit Ausnahme der **Image** -Datentyp), mit dem Unterschied, dass beide Operanden eines Datentyps der binären Zeichenfolgen sein können Datentypkategorie. In der folgenden Tabelle sind alle Datentypen aufgeführt, die für Operanden unterstützt werden.  
+ Die Operanden für bitweise Operatoren können beliebige Datentypen aus den Datentypkategorien des Integers oder der binären Zeichenfolgen aufweisen (außer dem **image**-Datentyp). Ausnahme ist, dass keiner der Operanden aus der Datentypkategorie der binären Zeichenfolgen stammen können. In der folgenden Tabelle sind alle Datentypen aufgeführt, die für Operanden unterstützt werden.  
   
 |Linker Operand|Rechter Operand|  
 |------------------|-------------------|  
-|[binary](../../t-sql/data-types/binary-and-varbinary-transact-sql.md)|**Int**, **"smallint"**, oder **"tinyint"**|  
-|[bit](../../t-sql/data-types/bit-transact-sql.md)|**Int**, **"smallint"**, **"tinyint"**, oder **Bit**|  
-|[int](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)|**Int**, **"smallint"**, **"tinyint"**, **binäre**, oder **Varbinary**|  
-|[smallint](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)|**Int**, **"smallint"**, **"tinyint"**, **binäre**, oder **Varbinary**|  
-|[tinyint](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)|**Int**, **"smallint"**, **"tinyint"**, **binäre**, oder **Varbinary**|  
-|[varbinary](../../t-sql/data-types/binary-and-varbinary-transact-sql.md)|**Int**, **"smallint"**, oder **"tinyint"**|  
+|[binary](../../t-sql/data-types/binary-and-varbinary-transact-sql.md)|**int**, **smallint** oder **tinyint**|  
+|[bit](../../t-sql/data-types/bit-transact-sql.md)|**int**, **smallint**, **tinyint** oder **bit**|  
+|[int](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)|**int**, **smallint**, **tinyint**, **binary** oder **varbinary**|  
+|[smallint](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)|**int**, **smallint**, **tinyint**, **binary** oder **varbinary**|  
+|[tinyint](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)|**int**, **smallint**, **tinyint**, **binary** oder **varbinary**|  
+|[varbinary](../../t-sql/data-types/binary-and-varbinary-transact-sql.md)|**int**, **smallint** oder **tinyint**|  
   
-## <a name="see-also"></a>Siehe auch  
- [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Operatoren &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [Zusammengesetzte Operatoren &#40; Transact-SQL &#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   
+ [Compound Operators &#40;Transact-SQL&#41; (Verbundoperatoren (Transact-SQL))](../../t-sql/language-elements/compound-operators-transact-sql.md)   
   

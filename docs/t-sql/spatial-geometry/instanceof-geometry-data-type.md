@@ -1,5 +1,5 @@
 ---
-title: InstanceOf (Geometry-Datentyp) | Microsoft Docs
+title: InstanceOf (geometry-Datentyp) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="instanceof-geometry-data-type"></a>InstanceOf (geometry-Datentyp)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Eine Methode, die testet die **Geometrie** Instanz ist identisch mit den angegebenen Typ. Gibt 1 zurück, wenn der Typ des eine **Geometrie** Instanz ist identisch mit den angegebenen Typ, oder wenn der angegebene Typ ein Vorgänger des Instanztyps ist, andernfalls 0.
+Eine Methode, die die Übereinstimmung der **geometry**-Instanz mit dem angegebenen Typ überprüft. Gibt 1 zurück, wenn der Typ einer **geometry**-Instanz mit dem angegebenen Typ übereinstimmt oder der angegebene Typ ein Vorgänger des Instanztyps ist. Andernfalls wird 0 zurückgegeben.
   
 ## <a name="syntax"></a>Syntax  
   
@@ -45,15 +45,15 @@ Eine Methode, die testet die **Geometrie** Instanz ist identisch mit den angegeb
   
 ## <a name="arguments"></a>Argumente  
  *geometry_type*  
- Ist ein **nvarchar(4000)** Zeichenfolge angeben, einen von 15 Typen, die verfügbar gemacht werden, der **Geometrie** Typhierarchie.  
+ Eine **nvarchar(4000)**-Zeichenfolge, die einen von 15 Typen angibt, die in der **geometry**-Typhierarchie verfügbar gemacht werden.  
   
 ## <a name="return-types"></a>Rückgabetypen  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Rückgabetyp: **Bit**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Rückgabetyp: **bit**  
   
  CLR-Rückgabetyp: **SqlBoolean**  
   
-## <a name="remarks"></a>Hinweise  
- Die Eingabe für die Methode muss einen der folgenden sein: **Geometrie**, **Punkt**, **Kurve**, **LineString**,  **CircularString**, **CompoundCurve**, **Oberfläche**, **Polygon**, **CurvePolygon**, **GeometryCollection**, **MultiSurface**, **MultiPolygon**, **MultiCurve**, **MultiLineString**, und **MultiPoint**. Diese Methode löst eine **ArgumentException** anderen Zeichenfolgen für die Eingabe verwendet werden.  
+## <a name="remarks"></a>Remarks  
+ Die Eingabe für die Methode muss einem der folgenden Typen entsprechen: **Geometry**, **Point**, **Curve**, **LineString**, **CircularString**, **CompoundCurve**, **Surface**, **Polygon**, **CurvePolygon**, **GeometryCollection**, **MultiSurface**, **MultiPolygon**, **MultiCurve**, **MultiLineString** oder **MultiPoint**. Diese Methode löst eine **ArgumentException** aus, wenn andere Zeichenfolgen für die Eingabe verwendet werden.  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird eine `MultiPoint`-Instanz erstellt und `InstanceOf()` verwendet, um zu überprüfen, ob die Instanz eine `GeometryCollection` ist.  
@@ -64,7 +64,7 @@ SET @g = geometry::STGeomFromText('MULTIPOINT(0 0, 13.5 2, 7 19)', 0);
 SELECT @g.InstanceOf('GEOMETRYCOLLECTION');  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Erweiterte Methoden für geometry-Instanzen](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)  
   
   

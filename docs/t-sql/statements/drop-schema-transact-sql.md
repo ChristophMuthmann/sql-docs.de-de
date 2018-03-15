@@ -1,5 +1,5 @@
 ---
-title: DROP SCHEMA (Transact-SQL) | Microsoft Docs
+title: DROP SCHEMA (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 05/11/2017
 ms.prod: sql-non-specified
@@ -57,20 +57,20 @@ DROP SCHEMA schema_name
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *IF VORHANDEN IST*  
+ *IF EXISTS*  
  **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis zur [aktuellen Version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   
- Das Schema gelöscht bedingt nur, wenn sie bereits vorhanden ist.  
+ Löscht das Schema nur, wenn dieses bereits vorhanden ist.  
   
  *schema_name*  
  Der Name des Schemas in der Datenbank.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Das zu löschende Schema darf keine Objekte enthalten. Falls das Schema Objekte enthält, erzeugt die DROP-Anweisung einen Fehler.  
   
- Informationen zu Schemas werden in der [sys.schemas](../../relational-databases/system-catalog-views/schemas-catalog-views-sys-schemas.md) -Katalogsicht angezeigt.  
+ Informationen zu Schemas werden in der [sys.schemas](../../relational-databases/system-catalog-views/schemas-catalog-views-sys-schemas.md)-Katalogsicht angezeigt.  
   
- **Vorsicht**[!INCLUDE[ssCautionUserSchema](../../includes/sscautionuserschema-md.md)]  
+ **Vorsicht** [!INCLUDE[ssCautionUserSchema](../../includes/sscautionuserschema-md.md)]  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die CONTROL-Berechtigung für das Schema oder die ALTER ANY SCHEMA-Berechtigung für die Datenbank.  
@@ -95,8 +95,8 @@ GO
 ```  
   
   
-## <a name="see-also"></a>Siehe auch  
- [Erstellen Sie SCHEMA &#40; Transact-SQL &#41;](../../t-sql/statements/create-schema-transact-sql.md)   
- [ALTER SCHEMA &#40; Transact-SQL &#41;](../../t-sql/statements/alter-schema-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [CREATE SCHEMA &#40;Transact-SQL&#41;](../../t-sql/statements/create-schema-transact-sql.md)   
+ [ALTER SCHEMA &#40;Transact-SQL&#41;](../../t-sql/statements/alter-schema-transact-sql.md)   
  [DROP SCHEMA (Transact-SQL)](../../t-sql/statements/drop-schema-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  

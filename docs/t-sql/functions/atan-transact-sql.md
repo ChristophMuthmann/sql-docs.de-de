@@ -1,5 +1,5 @@
 ---
-title: ATAN (Transact-SQL) | Microsoft Docs
+title: ATAN (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -36,7 +36,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="atan-transact-sql"></a>ATAN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Gibt den Winkel im Bogenmaß wieder, dessen Tangens eines angegebenen **"float"** Ausdruck. Dies wird auch als Arkustangens bezeichnet.
+Gibt den Winkel im Bogenmaß zurück, dessen Tangens der angegebene **float**-Ausdruck ist. Dies wird auch als Arkustangens bezeichnet.
   
 ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -48,13 +48,13 @@ ATAN ( float_expression )
   
 ## <a name="arguments"></a>Argumente  
 *float_expression*  
-Ist ein [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) des Typs **"float"** oder eines Typs, der implizit konvertiert werden können **"float"**.
+Ein [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) vom Typ **float** oder von einem Typ, der implizit in **float** konvertiert werden kann.
   
 ## <a name="return-types"></a>Rückgabetypen
 **float**
   
 ## <a name="examples"></a>Beispiele  
-Im folgenden Beispiel wird eine **"float"** Ausdruck und gibt der ATAN des angegebenen Winkels zurück.
+Im folgenden Beispiel wird ein **float**-Ausdruck verwendet und der ATAN des angegebenen Winkels zurückgegeben.
   
 ```sql
 SELECT 'The ATAN of -45.01 is: ' + CONVERT(varchar, ATAN(-45.01))  
@@ -95,8 +95,8 @@ The ATAN of 197.1099392 is: 1.56572
 (1 row(s) affected)  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-Im folgenden Beispiel wird eine **"float"** Ausdruck und gibt den Arkustangens des angegebenen Winkels zurück.
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
+Im folgenden Beispiel wird ein **float**-Ausdruck verwendet und der Arkustangens des angegebenen Winkels zurückgegeben.
   
 ```sql
 SELECT ATAN(45.87) AS atanCalc1,  
@@ -115,8 +115,8 @@ atanCalc1  atanCalc2  atanCalc3  atanCalc4  atanCalc5
 ```
   
 ## <a name="see-also"></a>Siehe auch
-[CEILING &#40; Transact-SQL &#41;](../../t-sql/functions/ceiling-transact-sql.md)  
-[Mathematische Funktionen &#40; Transact-SQL &#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)
+[CEILING &#40;Transact-SQL&#41;](../../t-sql/functions/ceiling-transact-sql.md)  
+[Mathematische Funktionen &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)
   
   
 

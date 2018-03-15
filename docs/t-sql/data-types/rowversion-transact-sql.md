@@ -1,5 +1,5 @@
 ---
-title: RowVersion (Transact-SQL) | Microsoft Docs
+title: rowversion (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 7/22/2017
 ms.prod: sql-non-specified
@@ -43,40 +43,40 @@ ms.lasthandoff: 11/21/2017
 # <a name="rowversion-transact-sql"></a>rowversion (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Ein Datentyp, der automatisch generierte eindeutige, binäre Zahlen in einer Datenbank verfügbar macht. **RowVersion** wird normalerweise als Mechanismus für die versionskennung von Tabellenzeilen verwendet. Die Speichergröße beträgt 8 Byte. Die **Rowversion** -Datentyp ist nur eine inkrementelle Nummer und wird nicht beibehalten werden, ein Datum oder eine Uhrzeit. Verwenden Sie zum Aufzeichnen von Datum oder Uhrzeit einer **datetime2** -Datentyp.
+Ein Datentyp, der automatisch generierte eindeutige, binäre Zahlen in einer Datenbank verfügbar macht. **rowversion** wird normalerweise als Mechanismus für die Erstellung einer Versionskennung von Tabellenzeilen verwendet. Die Speichergröße beträgt 8 Byte. Der **rowversion**-Datentyp ist nur eine inkrementelle Nummer und behält ein Datum oder eine Uhrzeit nicht bei. Zum Aufzeichnen eines Datums oder einer Uhrzeit verwenden Sie einen **datetime2**-Datentyp.
   
-## <a name="remarks"></a>Hinweise  
-Jede Datenbank verfügt über einen Zähler, die für jeden Einfügevorgang erhöht oder Update-Vorgang für eine Tabelle ausgeführt wird, enthält eine **Rowversion** Spalte innerhalb der Datenbank. Dieser Zähler ist die Datenbankzeilenversion. Hiermit wird ein relativer Zeitpunkt innerhalb einer Datenbank nachverfolgt, keine tatsächliche Zeit, die einer Uhr zugeordnet werden kann. Eine Tabelle kann nur einen haben **Rowversion** Spalte. Jedes Mal, wenn, eine Zeile mit einem **Rowversion** Spalte geändert oder eingefügt wird, wird der inkrementierte Wert der datenbankzeilenversion eingefügt, der **Rowversion** Spalte. Diese Eigenschaft macht eine **Rowversion** -Spalten ungeeignete Kandidaten für Schlüssel, insbesondere für Primärschlüssel. Jedes Update der Zeile ändert den rowversion-Wert und somit auch den Wert des Schlüssels. Wenn die Spalte in einem Primärschlüssel verwendet wird, sind der alte Wert und somit auch alle Fremdschlüssel, die auf den alten Wert verweisen, nicht mehr gültig. Wenn in einem dynamischen Cursor auf die Tabelle verwiesen wird, ändern alle Updates die Position der Zeilen im Cursor. Falls die Spalte in einem Indexschlüssel verwendet wird, generieren alle Updates der Datenzeile auch Updates des Index.  Die **Rowversion** Wert wird bei jeder Update-Anweisung erhöht, selbst wenn keine Zeilenwerte geändert werden. (Z. B. wenn ein Spaltenwert 5 ist und eine Update-Anweisung der Wert auf 5 wird, diese Aktion gilt ein Update, obwohl keine Änderung aufgetreten ist und die **Rowversion** wird erhöht.)
+## <a name="remarks"></a>Remarks  
+Jede Datenbank weist einen Zähler auf, der für jeden Einfüge- oder Updatevorgang inkrementiert wird, der für eine Tabelle mit einer **rowversion**-Spalte in der Datenbank ausgeführt wird. Dieser Zähler ist die Datenbankzeilenversion. Hiermit wird ein relativer Zeitpunkt innerhalb einer Datenbank nachverfolgt, keine tatsächliche Zeit, die einer Uhr zugeordnet werden kann. Eine Tabelle kann nur eine **rowversion**-Spalte enthalten. Jedes Mal, wenn eine Zeile mit einer **rowversion**-Spalte geändert oder eingefügt wird, wird der inkrementierte rowversion-Wert der Datenbank in die **rowversion**-Spalte eingefügt. Daher sind **rowversion**-Spalten ungeeignete Kandidaten für Schlüssel, insbesondere für Primärschlüssel. Jedes Update der Zeile ändert den rowversion-Wert und somit auch den Wert des Schlüssels. Wenn die Spalte in einem Primärschlüssel verwendet wird, sind der alte Wert und somit auch alle Fremdschlüssel, die auf den alten Wert verweisen, nicht mehr gültig. Wenn in einem dynamischen Cursor auf die Tabelle verwiesen wird, ändern alle Updates die Position der Zeilen im Cursor. Falls die Spalte in einem Indexschlüssel verwendet wird, generieren alle Updates der Datenzeile auch Updates des Index.  Der **rowversion**-Wert kann mit jeder UPDATE-Anweisung inkrementiert werden, selbst wenn keine Zeilenwerte geändert werden. (Wenn ein Spaltenwert beispielsweise 5 beträgt und eine UPDATE-Anweisung diesen auf 5 festlegt, gilt diese Aktion als Update, obwohl keine Änderung durchgeführt wurde, und **rowversion** wird inkrementiert.)
   
-**Zeitstempel** wird das Synonym für den **Rowversion** -Datentyp und unterliegt der Verhaltensweise von Datentypsynonymen. Verwenden Sie in DDL-Anweisungen **Rowversion** anstelle von **Zeitstempel** möglichst. Weitere Informationen finden Sie unter [Synonyme für Datentypen &#40; Transact-SQL &#41; ](../../t-sql/data-types/data-type-synonyms-transact-sql.md).
+**timestamp** ist das Synonym für den **rowversion**-Datentyp und unterliegt der Verhaltensweise von Datentypsynonymen. Verwenden Sie in DDL-Anweisungen nach Möglichkeit stets **rowversion** anstelle von **timestamp**. Weitere Informationen finden Sie unter [Data Type Synonyms &#40;Transact-SQL&#41; (Synonyme für Datentypen &#40;Transact-SQL&#41;)](../../t-sql/data-types/data-type-synonyms-transact-sql.md).
   
-Die [!INCLUDE[tsql](../../includes/tsql-md.md)] **Zeitstempel** Datentyp unterscheidet sich von der **Zeitstempel** Datentyp im ISO-Standard definiert.
+Der **timestamp**-Datentyp von [!INCLUDE[tsql](../../includes/tsql-md.md)] unterscheidet sich vom **timestamp**-Datentyp gemäß dem ISO-Standard.
   
 > [!NOTE]  
->  Die **Zeitstempel** Syntax ist veraltet. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
+>  Die **timestamp**-Syntax ist veraltet. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
-In einer CREATE TABLE- oder ALTER TABLE-Anweisung, Sie müssen keinen Geben Sie einen Spaltennamen für die **Zeitstempel** -Datentyp, z. B.:
+In einer CREATE TABLE- oder ALTER TABLE-Anweisung müssen Sie keinen Spaltennamen für den **timestamp**-Datentyp angeben:
   
 ```sql
 CREATE TABLE ExampleTable (PriKey int PRIMARY KEY, timestamp);  
 ```  
   
-Wenn Sie keinen Spaltennamen angeben der [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] generiert die **Zeitstempel** Spaltenname, aber die **Rowversion** Synonym befolgt dieses Verhalten nicht. Bei Verwendung von **Rowversion**, müssen Sie einen Spaltennamen an, z. B. angeben:
+Wenn Sie keinen Spaltennamen angeben, generiert [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] den **timestamp**-Spaltennamen. Das **rowversion**-Synonym folgt diesem Verhalten jedoch nicht. Wenn Sie **rowversion** verwenden, müssen Sie einen Spaltennamen angeben:
   
 ```sql
 CREATE TABLE ExampleTable2 (PriKey int PRIMARY KEY, VerCol rowversion) ;  
 ```  
   
 > [!NOTE]  
->  Doppelte **Rowversion** Werte generiert werden, mithilfe der SELECT INTO-Anweisung in dem ein **Rowversion** Spalte in der SELECT-Liste ist. Es wird nicht empfohlen, mithilfe von **Rowversion** auf diese Weise.  
+>  Doppelte **rowversion**-Werte können mithilfe der SELECT INTO-Anweisung generiert werden, bei der eine **rowversion**-Spalte in der SELECT-Liste vorhanden ist. Es wird jedoch nicht empfohlen, **rowversion** auf diese Weise zu verwenden.  
   
-Ein NULL-Werte zulässt **Rowversion** Spalte ist semantisch gleichwertig mit einem **binary(8)** Spalte. Ein auf NULL festlegbares **Rowversion** Spalte ist semantisch gleichwertig mit einem **varbinary(8)** Spalte.
+Eine **rowversion**-Spalte, die keine NULL-Werte zulässt, ist semantisch gleichwertig mit einer **binary(8)**-Spalte. Eine **rowversion**-Spalte, die NULL-Werte zulässt, ist semantisch gleichwertig mit einer **varbinary(8)**-Spalte.
   
-Sie können die **Rowversion** Spalte einer Zeile auf einfache Weise ermitteln, ob die Zeile mit eine Update-Anweisung wurde für sie ausgeführt wurde, seit dem letzten er gelesen wurde. Wenn eine Update-Anweisung für die Zeile ausgeführt wird, wird der Rowversion-Wert aktualisiert. Wenn keine Update-Anweisungen sind für die Zeile ausgeführt haben, ist der Rowversion-Wert identisch mit dem zuletzt gelesen wurde. Um den aktuellen Rowversion-Wert für eine Datenbank zurückzugeben, verwenden Sie [@@DBTS](../../t-sql/functions/dbts-transact-sql.md).
+Sie können die **rowversion**-Spalte einer Zeile verwenden, um einfach zu bestimmen, ob für die Zeile seit dem letzten Lesevorgang eine UPDATE-Anweisung ausgeführt wurde. Wenn eine UPDATE-Anweisung für die Zeile ausgeführt wurde, wird der rowversion-Wert aktualisiert. Falls keine UPDATE-Anweisung ausgeführt wurde, bleibt der rowversion-Wert unverändert, seitdem die Zeile zuletzt gelesen wurde. Verwenden Sie [@@DBTS](../../t-sql/functions/dbts-transact-sql.md), um den aktuellen rowversion-Wert für eine Datenbank zurückzugeben.
   
-Sie können Hinzufügen einer **Rowversion** -Spalte einer Tabelle zur Erhaltung der Integrität der Datenbank, wenn mehrere Benutzer gleichzeitig Zeilen aktualisieren. Außerdem können Sie feststellen, wie viele und welche Zeilen aktualisiert wurden, ohne die Tabelle erneut abzufragen.
+Sie können einer Tabelle eine **rowversion**-Spalte hinzufügen, um die Integrität der Datenbank sicherzustellen, wenn mehrere Benutzer gleichzeitig Zeilen aktualisieren. Außerdem können Sie feststellen, wie viele und welche Zeilen aktualisiert wurden, ohne die Tabelle erneut abzufragen.
   
-Nehmen Sie z. B. an, Sie erstellen eine Tabelle mit dem Namen `MyTest`. Sie laden einige Daten in der Tabelle durch Ausführen des folgenden [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisungen.
+Nehmen Sie z. B. an, Sie erstellen eine Tabelle mit dem Namen `MyTest`. Sie laden einige Daten in die Tabelle, indem Sie die folgenden [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen ausführen.
   
 ```sql
 CREATE TABLE MyTest (myKey int PRIMARY KEY  
@@ -106,11 +106,11 @@ IF (SELECT COUNT(*) FROM @t) = 0
     END;  
 ```  
   
-`myValue`ist die **Rowversion** Spaltenwert für die Zeile, der Zeitpunkt der letzten angibt, dass die Zeile zu lesen. Dieser Wert ersetzt werden muss, durch den tatsächlichen **Rowversion** Wert. Ein Beispiel für den tatsächlichen **Rowversion** -Wert ist 0x00000000000007D3.
+`myValue` ist der **rowversion**-Spaltenwert für die Zeile, die die Zeit angibt, zu der Sie die Zeile zuletzt gelesen haben. Dieser Wert muss durch den tatsächlichen **rowversion**-Wert ersetzt werden. Ein Beispiel für den tatsächlichen **rowversion**-Wert ist 0x00000000000007D3.
   
 Sie können die [!INCLUDE[tsql](../../includes/tsql-md.md)]-Beispielanweisungen auch in einer Transaktion ablegen. Indem Sie die `@t`-Variable im Gültigkeitsbereich der Transaktion abfragen, können Sie die aktualisierte `myKey`-Spalte der Tabelle abrufen, ohne die Tabelle t `MyTes`erneut abzufragen.
   
-Im folgenden werden das gleiche Beispiel mit der **Zeitstempel** Syntax:
+Im Folgenden wird das gleiche Beispiel mit der **timestamp**-Syntax angeführt:
   
 ```sql
 CREATE TABLE MyTest2 (myKey int PRIMARY KEY  
@@ -143,7 +143,7 @@ IF (SELECT COUNT(*) FROM @t) = 0
 [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)  
 [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)  
 [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)  
-[MIN_ACTIVE_ROWVERSION &#40; Transact-SQL &#41;](../../t-sql/functions/min-active-rowversion-transact-sql.md)  
+[MIN_ACTIVE_ROWVERSION &#40;Transact-SQL&#41;](../../t-sql/functions/min-active-rowversion-transact-sql.md)  
 [SET @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/set-local-variable-transact-sql.md)  
 [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)
   

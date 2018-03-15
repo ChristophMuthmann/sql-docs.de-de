@@ -1,5 +1,5 @@
 ---
-title: STCurveToLine (Geometry-Datentyp) | Microsoft Docs
+title: STCurveToLine (geometry-Datentyp) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -41,27 +41,27 @@ Gibt eine polygonale Näherung einer Instanz von **geometry** mit Kreisbogensegm
 ```  
   
 ## <a name="return-types"></a>Rückgabetypen  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Rückgabetyp: **Geometrie**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Rückgabetyp: **geometry**  
   
  CLR-Rückgabetyp: **SqlGeometry**  
   
-## <a name="remarks"></a>Hinweise  
- Gibt ein leeres **GeometryCollection**-Instanz für leere **Geometrie** Instanz Variablen und gibt **NULL** für nicht initialisierte **Geometrie** Variablen.  
+## <a name="remarks"></a>Remarks  
+ Gibt eine leere **GeometryCollection**-Instanz für leere **geometry**-Instanzvariablen und **NULL** für nicht initialisierte **geometry**-Variablen zurück.  
   
- Die polygonale Näherung, die die Methode zurückgibt, hängt die **Geometry** Instanz, mit denen Sie die Methode aufrufen:  
+ Die polygonale Näherung, die die Methode zurückgibt, hängt von der **geometry**-Instanz ab, mit der Sie die Methode aufrufen:  
   
 -   Gibt eine **LineString** -Instanz für eine **CircularString** - oder **CompoundCurve** -Instanz zurück.  
   
 -   Gibt eine **Polygon** -Instanz für eine **CurvePolygon** -Instanz zurück.  
   
--   Gibt eine Kopie des der **Geometrie** Instanz, wenn diese Instanz nicht ist eine **CircularString**, **CompoundCurve**, oder **CurvePolygon** Instanz . Z. B. die `STCurveToLine` Methode gibt ein **Punkt** -Instanz für eine **Geometry** Instanz, die eine **Punkt** Instanz.  
+-   Gibt eine Kopie der **geometry**-Instanz zurück, wenn diese keine **CircularString**-, **CompoundCurve**- oder **CurvePolygon**-Instanz ist. Beispielsweise gibt die `STCurveToLine`-Methode eine **Point**-Instanz für eine **geometry**-Instanz zurück, die eine **Point**-Instanz darstellt.  
   
- Im Gegensatz zur SQL/MM-Spezifikation die `STCurveToLine` Methode verwendet keinen Z-Koordinate Werte zum Berechnen der polygonalen Näherung verwendet. Die Methode ignoriert alle Z-Koordinate Werte in die aufrufende **Geometrie** Instanz.  
+ Im Gegensatz zur SQL/MM-Spezifikation werden bei der `STCurveToLine`-Methode keine Z-Koordinatenwerte zur Berechnung der polygonalen Näherung verwendet. Die Methode berücksichtigt keine in der aufrufenden **geometry**-Instanz enthaltenen Werte der Z-Koordinate.  
   
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="a-using-an-uninitialized-geometry-variable-and-empty-instance"></a>A. Verwenden einer nicht initialisierten geometry-Variablen und einer leeren Instanz  
- Im folgenden Beispiel das erste **wählen** Anweisung mit einer nicht initialisierten **Geometrie** Instanz zum Aufrufen der `STCurveToLine` -Methode und die zweite **wählen** -Anweisung verwendet eine leere **Geometrie** Instanz. Daher gibt die Methode zurück **NULL** an die erste Anweisung und eine **GeometryCollection** Auflistung für die zweite Anweisung.  
+ In diesem Beispiel verwendet die erste **SELECT**-Anweisung eine nicht initialisierte **geometry**-Instanz, um die `STCurveToLine`-Methode aufzurufen, und die zweite **SELECT**-Anweisung verwendet eine leere **geometry**-Instanz. Daher gibt die Methode **NULL** an die erste Anweisung zurück und eine **GeometryCollection**-Collection an die zweite Anweisung.  
   
 ```
  DECLARE @g geometry; 
@@ -72,7 +72,7 @@ Gibt eine polygonale Näherung einer Instanz von **geometry** mit Kreisbogensegm
  ```  
   
 ### <a name="b-using-a-linestring-instance"></a>B. Verwenden einer LineString-Instanz  
- Die **wählen** -Anweisung in das folgende Beispiel verwendet eine **LineString** Instanz zum Aufrufen der Methode ' stcurvetoline '. Daher die Methode gibt ein **LineString** Instanz.  
+ Die **SELECT**-Anweisung in den folgenden Beispielen verwendet eine **LineString**-Instanz, um die STCurveToLine-Methode aufzurufen. Daher wird von der Methode eine **LineString**-Instanz zurückgegeben.  
   
 ```
  DECLARE @g geometry; 
@@ -82,7 +82,7 @@ Gibt eine polygonale Näherung einer Instanz von **geometry** mit Kreisbogensegm
  ```  
   
 ### <a name="c-using-a-circularstring-instance"></a>C. Verwenden einer CircularString-Instanz  
- Die erste **wählen** -Anweisung in das folgende Beispiel verwendet eine **CircularString** Instanz zum Aufrufen der Methode ' stcurvetoline '. Daher die Methode gibt ein **LineString** Instanz. Dies **wählen** Anweisung vergleicht auch die Längen der beiden Instanzen, die ungefähr gleich sind.  Zum Schluss das zweite **wählen** -Anweisung gibt die Anzahl der Punkte für jede Instanz zurück.  Es gibt nur 5 Punkte für die **CircularString** Instanz, jedoch 65 Punkte für die **LineString**Instanz.  
+ Die erste **SELECT**-Anweisung in den folgenden Beispielen verwendet eine **CircularString**-Instanz, um die STCurveToLine-Methode aufzurufen. Daher wird von der Methode eine **LineString**-Instanz zurückgegeben. Mit dieser **SELECT**-Anweisung wird auch die Länge der beiden Instanzen verglichen, die in etwa gleich ist.  Abschließend wird von der zweiten **SELECT**-Anweisung die Anzahl der Punkte für jede Instanz zurückgegeben.  Es werden nur 5 Punkte für die **CircularString**-Instanz, aber 65 Punkte für die **LineString**-Instanz zurückgegeben.  
   
 ```
  DECLARE @g1 geometry, @g2 geometry; 
@@ -93,7 +93,7 @@ Gibt eine polygonale Näherung einer Instanz von **geometry** mit Kreisbogensegm
  ```  
   
 ### <a name="d-using-a-curvepolygon-instance"></a>D. Verwenden einer CurvePolygon-Instanz  
- Die **wählen** -Anweisung in das folgende Beispiel verwendet eine **CurvePolygon** Instanz zum Aufrufen der Methode ' stcurvetoline '. Daher die Methode gibt ein **Polygon** Instanz.  
+ Die **SELECT**-Anweisung in den folgenden Beispielen verwendet eine **CurvePolygon**-Instanz, um die STCurveToLine-Methode aufzurufen. Daher wird von der Methode eine **Polygon**-Instanz zurückgegeben.  
   
 ```
  DECLARE @g1 geometry, @g2 geometry; 
@@ -102,7 +102,7 @@ Gibt eine polygonale Näherung einer Instanz von **geometry** mit Kreisbogensegm
  SELECT @g1.STGeometryType() AS [G1 Type], @g2.STGeometryType() AS [G2 Type];
  ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Übersicht über räumliche Datentypen](../../relational-databases/spatial/spatial-data-types-overview.md)   
  [STLength &#40;geometry-Datentyp&#41;](../../t-sql/spatial-geometry/stlength-geometry-data-type.md)   
  [STNumPoints &#40;geometry-Datentyp&#41;](../../t-sql/spatial-geometry/stnumpoints-geometry-data-type.md)   

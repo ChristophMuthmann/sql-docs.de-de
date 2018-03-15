@@ -1,5 +1,5 @@
 ---
-title: DROP EVENT NOTIFICATION (Transact-SQL) | Microsoft Docs
+title: DROP EVENT NOTIFICATION (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -53,7 +53,7 @@ ON { SERVER | DATABASE | QUEUE queue_name }
   
 ## <a name="arguments"></a>Argumente  
  *notification_name*  
- Der Name der zu entfernenden Ereignisbenachrichtigung. Es können mehrere Ereignisbenachrichtigungen angegeben werden. Um eine Liste der aktuell erstellten ereignisbenachrichtigungen anzuzeigen, verwenden [event_notifications &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-event-notifications-transact-sql.md).  
+ Der Name der zu entfernenden Ereignisbenachrichtigung. Es können mehrere Ereignisbenachrichtigungen angegeben werden. Verwenden Sie [sys.event_notifications &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-event-notifications-transact-sql.md), um eine Liste der aktuell erstellten Ereignisbenachrichtigungen anzuzeigen.  
   
  SERVER  
  Gibt den Bereich der Ereignisbenachrichtigungsanwendungen auf den aktuellen Server an. SERVER muss angegeben werden, wenn SERVER beim Erstellen der Ereignisbenachrichtigung angegeben wurde.  
@@ -61,10 +61,10 @@ ON { SERVER | DATABASE | QUEUE queue_name }
  DATABASE  
  Gibt den Bereich der Ereignisbenachrichtigungsanwendungen auf die aktuelle Datenbank an. DATABASE muss angegeben werden, wenn DATABASE beim Erstellen der Ereignisbenachrichtigung angegeben wurde.  
   
- Warteschlange *Warteschlangenname*  
- Gibt an, der Bereich der ereignisbenachrichtigung gilt, an die Warteschlange, die vom angegebenen *Warteschlangenname*. QUEUE musst angegebenen werden, wenn das Element beim Erstellen der Ereignisbenachrichtigung angegeben wurde. *Warteschlangenname* ist der Name der Warteschlange und muss auch angegeben werden.  
+ QUEUE *queue_name*  
+ Gibt den Bereich der Ereignisbenachrichtigungsanwendungen auf die durch *queue_name* angegebene Warteschlange an. QUEUE musst angegebenen werden, wenn das Element beim Erstellen der Ereignisbenachrichtigung angegeben wurde. *queue_name* ist der Name der Warteschlange und muss ebenfalls angegeben werden.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Wenn eine Ereignisbenachrichtigung innerhalb einer Transaktion ausgelöst und innerhalb derselben Transaktion gelöscht wird, wird die Ereignisbenachrichtigungsinstanz gesendet und die Ereignisbenachrichtigung dann gelöscht.  
   
 ## <a name="permissions"></a>Berechtigungen  
@@ -90,10 +90,10 @@ DROP EVENT NOTIFICATION NotifyALTER_T1
 ON DATABASE;  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Erstellen Sie EVENT NOTIFICATION &#40; Transact-SQL &#41;](../../t-sql/statements/create-event-notification-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [CREATE EVENT NOTIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/create-event-notification-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
- [Sys. event_notifications &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-event-notifications-transact-sql.md)   
- [Sys.Events &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-events-transact-sql.md)  
+ [sys.event_notifications &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-event-notifications-transact-sql.md)   
+ [sys.events &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-events-transact-sql.md)  
   
   

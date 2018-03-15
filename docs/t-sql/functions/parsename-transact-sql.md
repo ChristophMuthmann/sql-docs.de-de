@@ -1,5 +1,5 @@
 ---
-title: PARSENAME (Transact-SQL) | Microsoft Docs
+title: PARSENAME (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -52,11 +52,11 @@ PARSENAME ( 'object_name' , object_piece )
 ```  
   
 ## <a name="arguments"></a>Argumente  
- "*Object_name*"  
- Der Name des Objekts, für das der angegebene Objektteil abgerufen werden soll. *Object_name* ist **Sysname**. Dieser Parameter ist ein optional gekennzeichneter Objektname. Wenn alle Teile des Objektnamens gekennzeichnet sind, besteht dieser Name aus vier Teilen: dem Server-, Datenbank, Besitzer- und Objektnamen.  
+ '*object_name*'  
+ Der Name des Objekts, für das der angegebene Objektteil abgerufen werden soll. *database_name* ist vom Datentyp **sysname**. Dieser Parameter ist ein optional gekennzeichneter Objektname. Wenn alle Teile des Objektnamens gekennzeichnet sind, besteht dieser Name aus vier Teilen: dem Server-, Datenbank, Besitzer- und Objektnamen.  
   
  *object_piece*  
- Der Objektteil, der zurückgegeben werden soll. *Object_piece* ist vom Typ **Int**, und kann folgende Werte haben:  
+ Der Objektteil, der zurückgegeben werden soll. *object_piece* ist vom Datentyp **int** und kann folgende Werte haben:  
   
  1 = Objektname  
   
@@ -69,14 +69,14 @@ PARSENAME ( 'object_name' , object_piece )
 ## <a name="return-types"></a>Rückgabetypen  
  **nchar**  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  PARSENAME gibt NULL zurück, wenn eine der folgenden Bedingungen wahr ist:  
   
--   Entweder *Object_name* oder *Object_piece* ist NULL.  
+-   Entweder für *object_name* oder für *object_piece* wird NULL zurückgegeben.  
   
 -   Ein Syntaxfehler tritt auf.  
   
- Der angeforderte Objektteil hat eine Länge von 0 und ist kein gültiger [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Bezeichner. Ein Objektname mit der Länge 0 macht den gesamten qualifizierten Namen ungültig.  
+ Der angeforderte Objektteil hat eine Länge von 0 und ist kein gültiger [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Bezeichner. Ein Objektname mit der Länge 0 macht den gesamten qualifizierten Namen ungültig.  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird `PARSENAME` verwendet, um Informationen zur `Person`-Tabelle in der `AdventureWorks2012`-Datenbank zurückzugeben.  
@@ -118,11 +118,11 @@ Server Name
 (1 row(s) affected)
 ```
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [QUOTENAME &#40;Transact-SQL&#41;](../../t-sql/functions/quotename-transact-sql.md)  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
- [System Functions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
+ [Systemfunktionen &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
   
   
 

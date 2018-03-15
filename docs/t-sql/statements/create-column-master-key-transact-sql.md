@@ -1,5 +1,5 @@
 ---
-title: Erstellen von COLUMN MASTER KEY (Transact-SQL) | Microsoft Docs
+title: CREATE COLUMN MASTER KEY (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 07/18/2016
 ms.prod: sql-non-specified
@@ -43,7 +43,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="create-column-master-key-transact-sql"></a>CREATE COLUMN MASTER KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Erstellt einen spaltenhauptschlüssel-Metadaten-Objekt in einer Datenbank an. Master Key-Spalte Metadateneintrag, der einen Schlüssel darstellt gespeichert, in einem externen Schlüsselspeicher, die verwendet wird, um zu schützen (verschlüsseln) Spalte Verschlüsselungsschlüssel bei Verwendung der [Always Encrypted &#40; Datenbankmodul &#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md) Funktion. Mehrere spaltenhauptschlüssel ermöglichen Schlüsselrotation; der Schlüssel zur Erhöhung der Sicherheit ändern in regelmäßigen Abständen. Sie können einen spaltenhauptschlüssel in einem Schlüsselspeicher und das zugehörige Metadatenobjekt in der Datenbank erstellen, indem Sie im Objekt-Explorer mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder PowerShell. Weitere Informationen finden Sie unter [Übersicht über die Schlüsselverwaltung für Always Encrypted](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md).  
+  Erstellt ein Spaltenhauptschlüssel-Metadatenobjekt in einer Datenbank. Ein Metadateneintrag für einen Spaltenhauptschlüssel, der in einem externen Schlüsselspeicher gespeichert ist und zum Schützen (Verschlüsseln) von Spaltenverschlüsselungsschlüsseln verwendet wird, wenn Sie das Feature [Always Encrypted &#40;Datenbank-Engine&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md) verwenden. Durch mehrere Spaltenhauptschlüssel wird die Schlüsselrotation ermöglicht, und durch regelmäßiges Ändern des Schlüssels wird die Sicherheit erhöht. Sie können einen Spaltenhauptschlüssel in einem Schlüsselspeicher und das zugehörige Metadatenobjekt in der Datenbank erstellen, indem Sie den Objekt-Explorer in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder PowerShell verwenden. Weitere Informationen finden Sie unter [Overview of Key Management for Always Encrypted (Übersicht über die Schlüsselverwaltung für Always Encrypted)](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md).  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -59,49 +59,49 @@ CREATE COLUMN MASTER KEY key_name
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *Key_name*  
- Ist der Name, der durch den Hauptschlüssel der Spalte in der Datenbank bekannt ist.  
+ *key_name*  
+ Der Name des Spaltenhauptschlüssels in der Datenbank.  
   
  *key_store_provider_name*  
- Gibt den Namen eines Anbieters Schlüsselspeicher, also eine clientseitige Softwarekomponente, die einen Schlüsselspeicher mit dem spaltenhauptschlüssel kapselt. Ein Always Encrypted aktivierten Clienttreiber verwendet ein Name des Schlüsselspeicheranbieters, um einen Schlüsselspeicheranbieter in der Registrierung des Treibers, der Schlüsselspeicheranbieter nachzuschlagen. Der Treiber verwendet den Anbieter zum Entschlüsseln von spaltenverschlüsselungsschlüsseln, die durch eine in der zugrunde liegenden Schlüsselspeicher gespeicherten spaltenhauptschlüssel geschützt. Ein Klartextwert eines spaltenverschlüsselungsschlüssels wird dann verwendet, um Abfrageparameter, verschlüsselten Datenbankspalten entsprechend zu verschlüsseln oder Entschlüsseln der Abfrageergebnisse von verschlüsselten Spalten.  
+ Gibt den Namen eines Schlüsselspeicheranbieters an, der eine clientseitige Softwarekomponente darstellt, die einen Schlüsselspeicher mit dem Spaltenhauptschlüssel beinhaltet. Ein für Always Encrypted aktivierter Clienttreiber verwendet den Namen eines Schlüsselspeicheranbieters, um nach einem Schlüsselspeicheranbieter in der Registrierung der Schlüsselspeicheranbieter des Treibers zu suchen. Der Treiber verwendet den Anbieter, um Spaltenverschlüsselungsschlüssel zu entschlüsseln, die von einem Spaltenhauptschlüssel geschützt und im zugrunde liegenden Schlüsselspeicher gespeichert sind. Anschließend wird ein Klartextwert des Spaltenverschlüsselungsschlüssels verwendet, um Abfrageparameter zu entschlüsseln, die verschlüsselten Datenbankspalten entsprechen, oder um Abfrageergebnisse aus verschlüsselten Spalten zu entschlüsseln.  
   
- Always Encrypted-fähigen clienttreiberbibliotheken umfassen Schlüsselspeicher-Anbieter für beliebte Schlüsselspeicher.   
+ Für Always Encrypted aktivierte Clienttreiberbibliotheken enthalten Schlüsselspeicheranbieter für beliebte Schlüsselspeicher.   
   
-Ein Satz der verfügbaren Anbieter richten sich nach den Typ und die Version des Client-Treiber. Finden Sie in der Always Encrypted-Dokumentation für bestimmte Treiber:
+Die verfügbaren Anbieter hängen vom Typ und von der Version des Clienttreibers ab. Weitere Informationen zu bestimmten Treibern finden Sie in der Always Encrypted-Dokumentation:
 
-[Entwickeln Sie Anwendungen mit Always Encrypted mit dem .NET Framework-Datenanbieter für SQL Server](../../relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider.md)
+[Entwickeln von Anwendungen unter Verwendung von Always Encrypted mit dem .NET Framework-Anbieter für SQL Server](../../relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider.md)
 
 
-Die folgenden Tabellen erfasst die Namen der Systemanbieter:  
+In folgender Tabelle werden die Namen der Systemanbieter erfasst:  
   
-|Name des Schlüsselspeicheranbieters|Zugrunde liegende Schlüsselspeicher|  
+|Name des Schlüsselspeicheranbieters|Zugrunde liegender Schlüsselspeicher|  
     |-----------------------------|--------------------------|
-    |"MSSQL_CERTIFICATE_STORE"|Windows-Zertifikatspeicher| 
-    |"MSSQL_CSP_PROVIDER"|Ein Speicher, z. B. ein Hardwaresicherheitsmodul (HSM), ein, die Microsoft CryptoAPI unterstützt.|
-    |"MSSQL_CNG_STORE"|Ein Speicher, z. B. ein Hardwaresicherheitsmodul (HSM), ein, die Kryptografie-API unterstützt: Next Generation.|  
-    |"Azure_Key_Vault"|Finden Sie unter [erste Schritte mit Azure Key Vault.](https://azure.microsoft.com/documentation/articles/key-vault-get-started/)|  
+    |'MSSQL_CERTIFICATE_STORE'|Windows-Zertifikatspeicher| 
+    |'MSSQL_CSP_PROVIDER'|Ein Speicher, z.B. ein Hardwaresicherheitsmodul (HSM), der Microsoft CryptoAPI unterstützt.|
+    |'MSSQL_CNG_STORE'|Ein Speicher, z.B. ein Hardwaresicherheitsmodul (HSM), der Cryptography API: Next Generation unterstützt.|  
+    |'Azure_Key_Vault'|Weitere Informationen finden Sie unter [Erste Schritte mit Azure Key Vault](https://azure.microsoft.com/documentation/articles/key-vault-get-started/).|  
   
 
- Sie können einen benutzerdefinierte Schlüsselspeicheranbieter implementieren, damit speichern spaltenhauptschlüssel in einem Speicher für die kein integriertes Schlüssel vorhanden ist, speichern Sie Anbieter in Ihrer Always Encrypted aktivierten Clienttreiber.  Beachten Sie, die die Namen der benutzerdefinierten Schlüsselspeicheranbieter darf nicht mit "MSSQL_", ein Präfix ist beginnen reserviert für [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Schlüsselspeicheranbieter. 
+ Sie können einen benutzerdefinierten Schlüsselspeicheranbieter implementieren, um Spaltenhauptschlüssel in einem Speicher zu speichern, für den keine integrierten Schlüsselspeicheranbieter in Ihrem für Always Encrypted aktivierten Clienttreiber vorhanden sind.  Beachten Sie, dass die Namen der benutzerdefinierten Schlüsselspeicheranbieter nicht mit „MSSQL_“ beginnen dürfen. Dieses Präfix ist für [!INCLUDE[msCoName](../../includes/msconame-md.md)]-Schlüsselspeicheranbieter reserviert. 
 
   
  key_path  
- Der Pfad des Schlüssels in den spaltenhauptschlüssel speichern. Der Schlüsselpfad muss im Kontext der jede Clientanwendung, die zum Verschlüsseln oder Entschlüsseln von Daten in eine Spalte mit dem Hauptschlüssel für die Spalte verwiesen wird (indirekt) geschützt sein gültig sein und die Clientanwendung muss zulässig sein, um Zugriff auf den Schlüssel. Das Format des Schlüsselpfads bezieht sich auf den Schlüsselspeicher-Anbieter. Die folgende Liste beschreibt das Format von schlüsselpfaden für bestimmte Microsoft-System-Schlüsselspeicher-Anbieter.  
+ Der Pfad des Schlüssels im Speicher des Spaltenhauptschlüssels. Der Schlüsselpfad muss im Kontext jeder Clientanwendung gültig sein, die Daten verschlüsseln oder entschlüsseln soll, die in einer Spalte gespeichert sind, die (indirekt) vom Spaltenhauptschlüssel geschützt wird, auf den verwiesen wird. Zudem muss der Clientanwendung gewährt werden, auf den Schlüssel zuzugreifen. Das Format des Schlüsselpfads hängt vom Schlüsselspeicheranbieter ab. In der folgenden Liste werden die Formate der Schlüsselpfade für bestimmte System-Schlüsselspeicheranbieter von Microsoft beschrieben:  
   
 -   **Anbietername:** MSSQL_CERTIFICATE_STORE  
   
-     **Format des Schlüsselpfads:** *Zertifikatspeichername*/*CertificateStoreLocation*/*CertificateThumbprint*  
+     **Format des Schlüsselpfads:** *CertificateStoreName*/*CertificateStoreLocation*/*CertificateThumbprint*  
   
      Erläuterungen:  
   
      *CertificateStoreLocation*  
-     Zertifikatsspeicherort an, in der aktuellen Benutzer oder den lokalen Computer sein muss. Weitere Informationen finden Sie unter [des lokalen Computers und aktuellen Benutzerzertifikatspeichern](https://msdn.microsoft.com/library/windows/hardware/ff548653.aspx).  
+     Der Zertifikatspeicherort, der dem aktuellen Benutzer oder dem lokalen Computer entsprechen muss. Weitere Informationen finden Sie unter [Local Machine and Current User Certificate Stores (Zertifikatspeicher des lokalen Computers bzw. des aktuellen Benutzers)](https://msdn.microsoft.com/library/windows/hardware/ff548653.aspx).  
   
      *CertificateStore*  
-     Zertifikatsspeichername angegeben, z. B. "My".  
+     Der Name des Zertifikatspeichers, z.B. „My“.  
   
      *CertificateThumbprint*  
-     Fingerabdruck des Zertifikats.  
+     Zertifikatfingerabdruck.  
   
      **Beispiele:**  
   
@@ -118,10 +118,10 @@ Die folgenden Tabellen erfasst die Namen der Systemanbieter:
      Erläuterungen:  
   
      *ProviderName*  
-     Der Name einer Cryptography Service Provider (CSP), die für die spaltenhauptschlüsselspeicher CAPI implementiert. Wenn Sie eine HSM als einen Schlüsselspeicher verwenden, muss dies der Name des CSP den HSM-Anbieter bereitstellt. Der Anbieter muss auf einem Clientcomputer installiert werden.  
+     Der Name des Kryptografiedienstanbieters (Cryptography Service Provider, CSP), der CAPI implementiert, für den Speicher des Spaltenhauptschlüssels. Wenn Sie ein HSM als Schlüsselspeicher verwenden, muss dieser dem Namen des CSP entsprechen, den Ihr HSM-Anbieter bereitstellt. Der Anbieter muss auf einem Clientcomputer installiert sein.  
   
      *KeyIdentifier*  
-     Bezeichner des Schlüssels wird als ein spaltenhauptschlüssel im Schlüsselspeicher verwendet.  
+     Der Bezeichner des Schlüssels im Schlüsselspeicher, der als Spaltenhauptschlüssel verwendet wird.  
   
      **Beispiele:**  
   
@@ -136,10 +136,10 @@ Die folgenden Tabellen erfasst die Namen der Systemanbieter:
      Erläuterungen:  
   
      *ProviderName*  
-     Name der der Schlüssel Schlüsselspeicheranbieter (KSP), der die Kryptografie implementiert: Next Generation (CNG)-API für die spaltenhauptschlüsselspeicher. Wenn Sie eine HSM als einen Schlüsselspeicher verwenden, muss dies der Name des den KSP den HSM-Anbieter bereitstellt. Der Anbieter muss auf einem Clientcomputer installiert werden.  
+     Der Name des Schlüsselspeicheranbieters (Key Storage Provider, KSP), der die CNG-API (Cryptography: Next Generation) implementiert, für den Speicher des Spaltenhauptschlüssels. Wenn Sie ein HSM als Schlüsselspeicher verwenden, muss dieser dem Namen des KSP entsprechen, den Ihr HSM-Anbieter bereitstellt. Der Anbieter muss auf einem Clientcomputer installiert sein.  
   
      *KeyIdentifier*  
-     Bezeichner des Schlüssels wird als ein spaltenhauptschlüssel im Schlüsselspeicher verwendet.  
+     Der Bezeichner des Schlüssels im Schlüsselspeicher, der als Spaltenhauptschlüssel verwendet wird.  
   
      **Beispiele:**  
   
@@ -154,26 +154,26 @@ Die folgenden Tabellen erfasst die Namen der Systemanbieter:
      Erläuterungen:  
   
      *KeyUrl*  
-     Die URL des Schlüssels im Azure Key Vault
+     Die URL des Schlüssels in Azure Key Vault
 
 
 Beispiel:
  
 `N'https://myvault.vault.azure.net:443/keys/MyCMK/4c05f1a41b12488f9cba2ea964b6a700'`  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
 
-Erstellen einen Eintrag in der Spalte Hauptschlüssel Metadaten ist erforderlich, bevor ein Eintrag in der Spalte Verschlüsselung schlüsselmetadaten in der Datenbank und vor jeder Spalte in der Datenbank verschlüsselt werden kann, mit "immer verschlüsselt" erstellt werden kann. Beachten Sie, dass ein Eintrag in der Spalte Hauptschlüssel in den Metadaten nicht den tatsächlichen spaltenhauptschlüssel enthalten, die in einem Schlüsselspeicher der externen Spalte (außerhalb von SQL Server) gespeichert werden müssen. Der Name des Schlüsselspeicheranbieters und den Pfad des Hauptschlüssels Spalte in den Metadaten müssen für eine Clientanwendung auf den spaltenhauptschlüssel zum Entschlüsseln eines spaltenverschlüsselungsschlüssels mit dem spaltenhauptschlüssel verschlüsselt und zum Abfragen von verschlüsselten Spalten verwenden, können gültig sein.
+Das Erstellen eines Metadateneintrags für einen Spaltenhauptschlüssel ist erforderlich, bevor ein Metadateneintrag für einen Spaltenverschlüsselungsschlüssel in der Datenbank erstellt werden kann, und bevor Spalten in der Datenbank mithilfe von Always Encrypted verschlüsselt werden können. Beachten Sie, dass ein Metadateneintrag für einen Spaltenhauptschlüssel nicht den tatsächlichen Spaltenhauptschlüssel enthält. Dieser muss in einem externen Spaltenschlüsselspeicher (außerhalb von SQL Server) gespeichert werden. Der Name des Schlüsselspeicheranbieters und der Pfad des Spaltenhauptschlüssels in den Metadaten müssen für eine Clientanwendung gültig sein, damit der Spaltenhauptschlüssel verwendet werden kann, um einen Spaltenverschlüsselungsschlüssel zu entschlüsseln, der mit dem Spaltenhauptschlüssel verschlüsselt ist, sowie zum Abfragen von verschlüsselten Spalten.
 
 
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert die **ALTER ANY COLUMN MASTER KEY** Berechtigung.  
+ Erfordert die Berechtigung **ALTER ANY COLUMN MASTER KEY**.  
   
 ## <a name="examples"></a>Beispiele  
   
-### <a name="a-creating-a-column-master-key"></a>A. Erstellen einen spaltenhauptschlüssel  
- Erstellen einen Spalte Hauptschlüssel-Metadateneintrag für eine Spalte im Schlüsselspeicher gespeicherten spaltenhauptschlüssel Zertifikatspeicher für Clientanwendungen, die den MSSQL_CERTIFICATE_STORE-Anbieter zu verwenden, um den spaltenhauptschlüssel zuzugreifen:  
+### <a name="a-creating-a-column-master-key"></a>A. Erstellen eines Spaltenhauptschlüssels  
+ Erstellen eines Metadateneintrags für einen Spaltenhauptschlüssels, der im Zertifikatspeicher gespeichert ist, für Clientanwendungen, die den Anbieter „MSSQL_CERTIFICATE_STORE“ verwenden, um auf den Spaltenhauptschlüssel zuzugreifen:  
   
 ```  
 CREATE COLUMN MASTER KEY MyCMK  
@@ -183,7 +183,7 @@ WITH (
    );  
 ```  
   
- Erstellen einen Spalte Hauptschlüssel-Metadateneintrag für einen spaltenhauptschlüssel, die von Clientanwendungen zugegriffen wird, den Anbieter MSSQL_CNG_STORE verwenden:  
+ Erstellen eines Metadateneintrags für einen Spaltenhauptschlüssel, auf den von Clientanwendungen zugegriffen wird, die den Anbieter „MSSQL_CNG_STORE“ verwenden:  
   
 ```  
 CREATE COLUMN MASTER KEY MyCMK  
@@ -193,7 +193,7 @@ WITH (
 );  
 ```  
   
- Erstellen einen spaltenhauptschlüssel in Azure Key Vault für Clientanwendungen, die den Anbieter AZURE_KEY_VAULT zu verwenden, um den spaltenhauptschlüssel zuzugreifen gespeichert.  
+ Erstellen eines Spaltenhauptschlüssels, der in Azure Key Vault gespeichert wird, für Clientanwendungen, die den Anbieter „AZURE_KEY_VAULT“ verwenden, um auf den Spaltenhauptschlüssel zuzugreifen:  
   
 ```  
 CREATE COLUMN MASTER KEY MyCMK  
@@ -203,7 +203,7 @@ WITH (
         MyCMK/4c05f1a41b12488f9cba2ea964b6a700');  
 ```  
   
- Erstellen einen CMK in eine benutzerdefinierte spaltenhauptschlüsselspeicher gespeichert:  
+ Erstellen eines Spaltenhauptschlüssels, der in einem benutzerdefinierten Speicher für Spaltenhauptschlüssel gespeichert ist:  
   
 ```  
 CREATE COLUMN MASTER KEY MyCMK  
@@ -213,9 +213,9 @@ WITH (
 );  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen finden Sie unter
  
-* [DROP COLUMN MASTER KEY &#40; Transact-SQL &#41;](../../t-sql/statements/drop-column-master-key-transact-sql.md)   
+* [DROP COLUMN MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-column-master-key-transact-sql.md)   
 * [CREATE COLUMN ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-column-encryption-key-transact-sql.md)
 * [sys.column_master_keys (Transact-SQL)](../../relational-databases/system-catalog-views/sys-column-master-keys-transact-sql.md)
 * [Always Encrypted &#40;Datenbankmodul&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md)  

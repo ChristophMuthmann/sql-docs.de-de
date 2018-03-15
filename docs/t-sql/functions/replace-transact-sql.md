@@ -1,5 +1,5 @@
 ---
-title: REPLACE (Transact-SQL) | Microsoft Docs
+title: REPLACE (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 08/23/2017
 ms.prod: sql-non-specified
@@ -50,25 +50,25 @@ REPLACE ( string_expression , string_pattern , string_replacement )
   
 ## <a name="arguments"></a>Argumente  
  *string_expression*  
- Die Zeichenfolge [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) , gesucht werden soll. *String_expression* kann von einem Zeichen-oder Binärdatentyp sein.  
+ Der [Zeichenfolgenausdruck](../../t-sql/language-elements/expressions-transact-sql.md), der gesucht werden soll. *string_expression* kann von einem Zeichen- oder Binärdatentyp sein.  
   
- *String_*Muster  
- Ist der zu suchende Teilzeichenfolge an. *String_pattern* kann von einem Zeichen-oder Binärdatentyp sein. *String_pattern* darf keine leere Zeichenfolge (") sein und darf nicht die maximale Anzahl von Bytes, die auf eine Seite passen.  
+ *string_*pattern  
+ Die zu suchende Teilzeichenfolge. *string_pattern* kann von einem Zeichen- oder Binärdatentyp sein. *string_pattern* darf keine leere Zeichenfolge ('') sein und die maximal zulässige Anzahl von Byte auf einer Seite nicht überschreiten.  
   
- *String_*Ersatz  
- Ist die Ersatzzeichenfolge. *String_replacement* kann von einem Zeichen-oder Binärdatentyp sein.  
+ *string_*replacement  
+ Die Ersetzungszeichenfolge. *string_replacement* kann von einem Zeichen- oder Binärdatentyp sein.  
   
 ## <a name="return-types"></a>Rückgabetypen  
- Gibt **Nvarchar** die Eingabeargumente des ist die **Nvarchar** Daten geben; andernfalls wird von REPLACE gibt **Varchar**.  
+ Gibt **nvarchar** zurück, wenn eines der Eingabeargumente vom Datentyp **nvarchar** ist. Andernfalls wird von REPLACE **varchar** zurückgegeben.  
   
  Gibt NULL zurück, wenn eines der Argumente NULL ist.  
   
- Wenn *String_expression* ist nicht vom Typ **varchar(max)** oder **nvarchar(max) ersetzen** schneidet den Rückgabewert bei 8.000 Bytes ab. Zum Zurückgeben von Werten über 8.000 Bytes *String_expression* müssen explizit in einen Datentyp mit umfangreichen Werten umgewandelt werden.  
+ Wenn *string_expression* nicht vom Typ **varchar(max)** oder **nvarchar(max) ist, schneidet REPLACE** den Rückgabewert bei 8.000 Byte ab. Für die Rückgabe von Werten über 8.000 Byte muss *string_expression* explizit in einen Datentyp für umfangreichere Werten umgewandelt werden.  
   
-## <a name="remarks"></a>Hinweise  
- REPLACE führt Vergleiche auf der Basis der Sortierung der Eingabe durch. Um einen Vergleich in einer angegebenen Sortierung durchzuführen, können Sie [COLLATE](~/t-sql/statements/collations.md) eine ausdrückliche Sortierung auf die Eingabe anwenden.  
+## <a name="remarks"></a>Remarks  
+ REPLACE führt Vergleiche auf der Basis der Sortierung der Eingabe durch. Zum Ausführen eines Vergleichs in einer angegebenen Sortierung können Sie mithilfe von [COLLATE](~/t-sql/statements/collations.md) eine ausdrückliche Sortierung auf die Eingabe anwenden.  
   
- 0 x 0000 (**char(0) zurück**) ist ein nicht definiertes Zeichen in Windows-Sortierungen und kann nicht in REPLACE enthalten sein.  
+ 0x0000 (**char(0)**) ist ein nicht definiertes Zeichen in Windows-Sortierungen und kann nicht in REPLACE enthalten sein.  
   
 ## <a name="examples"></a>Beispiele  
  Das folgende Beispiel ersetzt die Zeichenfolge `cde` in `abcdefghi` durch `xxx`.  
@@ -103,7 +103,7 @@ This is a desk
 ```  
 
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [CONCAT &#40;Transact-SQL&#41;](../../t-sql/functions/concat-transact-sql.md)  
  [CONCAT_WS &#40;Transact-SQL&#41;](../../t-sql/functions/concat-ws-transact-sql.md)  
  [FORMATMESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/formatmessage-transact-sql.md)  
@@ -114,5 +114,5 @@ This is a desk
  [STUFF &#40;Transact-SQL&#41;](../../t-sql/functions/stuff-transact-sql.md)  
  [TRANSLATE &#40;Transact-SQL&#41;](../../t-sql/functions/translate-transact-sql.md)  
  [Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [Zeichenfolgenfunktionen &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
+ [String Functions &#40;Transact-SQL&#41; (Zeichenfolgenfunktionen (Transact-SQL))](../../t-sql/functions/string-functions-transact-sql.md)  
   

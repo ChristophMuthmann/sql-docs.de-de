@@ -1,5 +1,5 @@
 ---
-title: M (Geography-Datentyp) | Microsoft Docs
+title: M (geography-Datentyp) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -44,16 +44,16 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Rückgabetypen  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Typ: **"float"**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Typ: **float**  
   
  CLR-Typ: **SqlDouble**  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Der Wert dieser Eigenschaft ist NULL, wenn die **geography** -Instanz kein **Point**ist. Sie ist außerdem NULL für jede **Point** -Instanz, für die sie nicht festgelegt ist.  
   
  Diese Eigenschaft ist schreibgeschützt.  
   
- M-Werte werden in Berechnungen der Bibliothek nicht verwendet und werden nicht durch Berechnungen durchgeführt werden.  
+ M-Werte werden in Berechnungen der Bibliothek nicht verwendet und werden nicht in Bibliotheksberechnungen einbezogen.  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird eine `Point` -Instanz mit Z (Höhe)- und M (Measure)-Werten erstellt und `M` verwendet, um den `M` -Wert der Instanz abzurufen.  
@@ -64,8 +64,8 @@ SET @g = geography::STGeomFromText('POINT(-122.34900 47.65100 10.3 12)', 4326);
 SELECT @g.M;  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Erweiterte Methoden für Geography-Instanzen](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
- [Z &#40; Geography-Datentyp &#41;](../../t-sql/spatial-geography/z-geography-data-type.md)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Erweiterte Methoden für geography-Instanzen](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
+ [Z &#40;geography-Datentyp&#41;](../../t-sql/spatial-geography/z-geography-data-type.md)  
   
   

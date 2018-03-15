@@ -1,5 +1,5 @@
 ---
-title: KEY_GUID (Transact-SQL) | Microsoft Docs
+title: KEY_GUID (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -48,13 +48,13 @@ Key_GUID( 'Key_Name' )
 ```  
   
 ## <a name="arguments"></a>Argumente  
- **"** *Key_Name* **"**  
+ **'** *Key_Name* **'**  
  Der Name eines symmetrischen Schlüssels in der Datenbank.  
   
 ## <a name="return-types"></a>Rückgabetypen  
  **uniqueidentifier**  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Wenn beim Erstellen des Schlüssels ein Identitätswert angegeben wurde, ist dessen GUID ein MD5-Hash dieses Identitätswerts. Wurde kein Identitätswert angegeben, dann wurde die GUID vom Server generiert.  
   
  Falls es sich bei dem Schlüssel um einen temporären Schlüssel handelt, muss der Schlüsselname mit einem Nummernzeichen (#) beginnen.  
@@ -69,9 +69,9 @@ Key_GUID( 'Key_Name' )
 SELECT Key_GUID('ABerglundKey1');  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)   
- [Sys. symmetric_keys &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md)   
- [Sys. key_encryptions &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-key-encryptions-transact-sql.md)  
+ [sys.symmetric_keys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md)   
+ [sys.key_encryptions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-key-encryptions-transact-sql.md)  
   
   

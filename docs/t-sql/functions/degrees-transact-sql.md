@@ -1,5 +1,5 @@
 ---
-title: Grad (Transact-SQL) | Microsoft Docs
+title: DEGREES (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -47,7 +47,7 @@ DEGREES ( numeric_expression )
   
 ## <a name="arguments"></a>Argumente  
  *numeric_expression*  
- Ist ein [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) der genauen numerischen oder ungefähren numerischen Datentypkategorie, mit Ausnahme der **Bit** -Datentyp.  
+ Ein [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) der genauen numerischen oder ungefähren numerischen Datentypkategorie, mit Ausnahme des **bit**-Datentyps.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  Gibt denselben Typ wie *Numerischer Ausdruck*zurück.  
@@ -69,8 +69,8 @@ The number of degrees in PI/2 radians is 90
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Mathematische Funktionen &#40; Transact-SQL &#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Mathematische Funktionen &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
   
   
 

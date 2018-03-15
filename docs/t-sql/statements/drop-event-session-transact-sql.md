@@ -1,5 +1,5 @@
 ---
-title: DROP EVENT SESSION (Transact-SQL) | Microsoft Docs
+title: DROP EVENT SESSION (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -51,7 +51,7 @@ ON SERVER
  *event_session_name*  
  Ist der Name einer vorhandenen Ereignissitzung.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Wenn Sie eine Ereignissitzung löschen, werden alle Konfigurationsinformationen wie Ziele und Sitzungsparameter vollständig entfernt.  
   
 ## <a name="permissions"></a>Berechtigungen  
@@ -65,7 +65,7 @@ DROP EVENT SESSION evt_spin_lock_diagnosis
 ON SERVER;  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [CREATE EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/create-event-session-transact-sql.md)   
  [ALTER EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-event-session-transact-sql.md)   
  [sys.server_event_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-event-sessions-transact-sql.md)  

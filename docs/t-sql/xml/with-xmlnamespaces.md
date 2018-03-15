@@ -1,5 +1,5 @@
 ---
-title: WITH XMLNAMESPACES (Transact-SQL) | Microsoft Docs
+title: WITH XMLNAMESPACES (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -70,12 +70,12 @@ DEFAULT <xml_namespace_uri>
   
 ## <a name="arguments"></a>Argumente  
  *xml_namespace_uri*  
- Ein URI (Uniform Resource Identifier), der den zu deklarierenden XML-Namespace identifiziert. *Xml_namespace_uri* ist eine SQL-Zeichenfolge.  
+ Ein URI (Uniform Resource Identifier), der den zu deklarierenden XML-Namespace identifiziert. *xml_namespace_uri* ist eine SQL-Zeichenfolge.  
   
  *xml_namespace_prefix*  
- Gibt ein Präfix zugeordnet werden und der Namespace-URI-Wert, der im angegebenen zugeordnet an *Xml_namespace_uri*. *Xml_namespace_prefix* muss eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Bezeichner.  
+ Gibt ein Präfix an, das dem in *xml_namespace_uri* angegebenen Wert vom Namespace-URI zugeordnet werden soll. *xml_namespace_prefix* muss ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Bezeichner sein.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Wenn Sie die WITH XMLNAMESPACES-Klausel in einer Anweisung verwenden, die außerdem einen allgemeinen Tabellenausdruck enthält, muss die WITH XMLNAMESPACES-Klausel vor dem allgemeinen Tabellenausdruck in der Anweisung stehen.  
   
  Es folgen allgemeine Syntaxregeln, die beim Verwenden der WITH XMLNAMESPACES-Klausel angewendet werden.  
@@ -96,7 +96,7 @@ DEFAULT <xml_namespace_uri>
   
 -   URI-Zeichenfolgenwerte werden gemäß der aktuellen Datenbanksortierungs-Codepage verschlüsselt und intern in Unicode übersetzt.  
   
--   Die XML-Namespace-URIS werden Leerzeichen nach den XSD-Leerraum reduziert reduzieren, Regeln, die für die Verwendung **xs: anyURI**. Darüber hinaus werden keine Entitäten für XML-Namespace-URI-Werte ausgeführt oder aufgelöst.  
+-   Die Leerzeichen des XML-Namespace-URIs werden gemäß den für **xs:anyURI** verwendeten XSD-Leerzeichenreduzierungsregeln reduziert. Darüber hinaus werden keine Entitäten für XML-Namespace-URI-Werte ausgeführt oder aufgelöst.  
   
 -   Der XML-Namespace-URI wird auf ungültige XML 1.0-Zeichen überprüft. Wird ein solches Zeichen gefunden, wird ein Fehler ausgelöst (z. B. U+0007).  
   
@@ -107,7 +107,7 @@ DEFAULT <xml_namespace_uri>
 ## <a name="examples"></a>Beispiele  
  Beispiele finden Sie unter [Hinzufügen von Namespaces zu Abfragen mit WITH XMLNAMESPACES](../../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [XQuery-Sprachreferenz &#40;SQL Server&#41;](../../xquery/xquery-language-reference-sql-server.md)  
   
   

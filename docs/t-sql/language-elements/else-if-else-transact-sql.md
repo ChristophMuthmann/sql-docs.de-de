@@ -1,5 +1,5 @@
 ---
-title: (WENN... ELSE) (Transact-SQL) | Microsoft Docs
+title: ELSE (IF...ELSE) (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -36,7 +36,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="else-ifelse-transact-sql"></a>ELSE (IF...ELSE) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Legt Bedingungen für die Ausführung einer [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung fest. Die [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisung (*Sql_statement*) folgenden der *Boolean_expression*wird ausgeführt, wenn die *Boolean_expression* auf "true" ergibt. Das optionale ELSE-Schlüsselwort ist eine alternative [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisung, die ausgeführt wird, wenn *Boolean_expression* auf "false" oder NULL ausgewertet wird.  
+  Legt Bedingungen für die Ausführung einer [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung fest. Die [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung (*sql_statement*) nach dem *Boolean_expression*-Objekt wird ausgeführt, wenn das *Boolean_expression*-Objekt als TRUE ausgewertet wird. Die alternative [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung nach dem optionalen ELSE-Schlüsselwort wird ausgeführt, falls *Boolean_expression* als FALSE oder NULL ausgewertet wird.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,7 +51,7 @@ IF Boolean_expression
   
 ## <a name="arguments"></a>Argumente  
  *Boolean_expression*  
- Ein Ausdruck, der TRUE oder FALSE zurückgibt. Wenn die *Boolean_expression* enthält eine SELECT-Anweisung muss die SELECT-Anweisung in Klammern eingeschlossen werden.  
+ Ein Ausdruck, der TRUE oder FALSE zurückgibt. Wenn das *Boolean_expression*-Objekt eine SELECT-Anweisung enthält, muss die SELECT-Anweisung in Klammern eingeschlossen werden.  
   
  { *sql_statement* | *statement_block* }  
  Eine beliebige gültige [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung oder -Anweisungsgruppierung, die als Anweisungsblock definiert ist. Um einen Anweisungsblock (Batch) zu definieren, verwenden Sie die Schlüsselwörter BEGIN und END aus den Sprachkonstrukten zur Ablaufsteuerung. Obwohl sämtliche [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen in einem BEGIN...END-Block gültig sind, sollten bestimmte [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen nicht in demselben Batch (Anweisungsblock) gruppiert werden.  
@@ -123,7 +123,7 @@ GO
 ```  
   
 ### <a name="d-using-nested-ifelse-statements"></a>D. Verwenden geschachtelter IF...ELSE-Anweisungen  
- Im folgende Beispiel wird gezeigt, wie eine IF... ELSE-Anweisung kann in einer anderen geschachtelt werden. Legen Sie die `@Number`-Variable auf `5`, `50` und `500` fest, um die einzelnen Anweisungen zu testen.  
+ Im folgenden Beispiel wird gezeigt, wie eine IF … ELSE-Anweisung in einer anderen geschachtelt werden kann. Legen Sie die `@Number`-Variable auf `5`, `50` und `500` fest, um die einzelnen Anweisungen zu testen.  
   
 ```  
 DECLARE @Number int;  
@@ -140,10 +140,10 @@ ELSE
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
-### <a name="e-using-a-query-as-part-of-a-boolean-expression"></a>"E:" Verwenden einer Abfrage als Teil eines booleschen Ausdrucks  
- Im folgenden Beispiel wird `IF…ELSE` bestimmt, welche der beiden Antworten auf dem Benutzer anzuzeigen, basierend auf die Gewichtung eines Elements in der `DimProduct` Tabelle.  
+### <a name="e-using-a-query-as-part-of-a-boolean-expression"></a>E. Verwenden einer Abfrage als Teil eines booleschen Ausdrucks  
+ Im folgenden Beispiel wird `IF…ELSE` verwendet, um basierend auf der Gewichtung eines Elements in der `DimProduct`-Tabelle festzulegen, welche Antwort von zwei Antworten dem Benutzer angezeigt wird.  
   
 ```  
 -- Uses AdventureWorks  
@@ -157,9 +157,9 @@ ELSE
     (SELECT @productKey, EnglishDescription, Weight, 'This product is available for shipping or pickup.' FROM DimProduct WHERE ProductKey=@productKey)  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [ALTER TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-trigger-transact-sql.md)   
- [Control-of-Flow-Sprache &#40; Transact-SQL &#41;](~/t-sql/language-elements/control-of-flow.md)   
+ [Sprachkonstrukte zur Ablaufsteuerung &#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md)   
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [IF...ELSE &#40;Transact-SQL&#41;](../../t-sql/language-elements/if-else-transact-sql.md)  
   

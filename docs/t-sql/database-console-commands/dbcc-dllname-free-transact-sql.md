@@ -1,5 +1,5 @@
 ---
-title: DBCC-DLL-Namen (FREE) (Transact-SQL) | Microsoft Docs
+title: DBCC dllname (FREE) (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 07/16/2017
 ms.prod: sql-non-specified
@@ -41,7 +41,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-dllname-free-transact-sql"></a>DBCC dllname (FREE) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]Entfernt die angegebene erweiterte gespeicherte Prozedur DLL aus dem Arbeitsspeicher.
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] Entlädt die angegebene DLL einer erweiterten gespeicherten Prozedur aus dem Arbeitsspeicher.
   
 ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -51,14 +51,14 @@ DBCC <dllname> ( FREE ) [ WITH NO_INFOMSGS ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
- \<*DLL-Name*>  
+ \<*dllname*>  
  Der Name der DLL, die aus dem Arbeitsspeicher gelöscht werden soll.  
   
  WITH NO_INFOMSGS  
  Alle Informationsmeldungen werden unterdrückt.  
   
-## <a name="remarks"></a>Hinweise
-Wenn eine erweiterte gespeicherte Prozedur ausgeführt wird, die DLL bleibt so lange von der Instanz der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bis der Server heruntergefahren wird. Diese Anweisung kann eine DLL aus dem Arbeitsspeicher entladen werden, ohne herunterzufahren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Zum Anzeigen der DLL-Dateien, die momentan vom geladen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], führen Sie **Sp_helpextendedproc**
+## <a name="remarks"></a>Remarks
+Wenn eine erweiterte gespeicherte Prozedur ausgeführt wird, wird die DLL so lange von der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] im Arbeitsspeicher gehalten, bis der Server heruntergefahren wird. Mithilfe dieser Anweisung kann eine DLL aus dem Arbeitsspeicher entfernt werden, ohne dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] heruntergefahren werden muss. Führen Sie **sp_helpextendedproc** aus, damit alle zum aktuellen Zeitpunkt von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] geladenen DLL-Dateien angezeigt werden.
   
 ## <a name="result-sets"></a>Resultsets  
 Wenn eine gültige DLL angegeben wird, gibt DBCC *dllname* (FREE) Folgendes zurück:
@@ -71,13 +71,13 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 Erfordert die Mitgliedschaft in der festen Serverrolle **sysadmin** oder der festen Datenbankrolle **db_owner** .
   
 ## <a name="examples"></a>Beispiele  
-Im folgende Beispiel wird vorausgesetzt, dass `xp_sample` als xp_sample.dll implementiert ist und ausgeführt wurde. DBCC \< *DLL-Namen*> (FREE) entladen, die die Datei xp_sample.dll zugeordneten der `xp_sample` erweiterte Prozedur.
+Bei dem folgenden Beispiel wird vorausgesetzt, dass `xp_sample` als xp_sample.dll implementiert ist und ausgeführt wurde. DBCC \<*dllname*> (FREE) entfernt die Datei „xp_sample.dll“ aus dem Arbeitsspeicher, die der erweiterten Prozedur `xp_sample` zugeordnet ist.
   
 ```sql  
 DBCC xp_sample (FREE);  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
 [Ausführungsmerkmale erweiterter gespeicherter Prozeduren](../../relational-databases/extended-stored-procedures-programming/execution-characteristics-of-extended-stored-procedures.md)  
 [sp_addextendedproc &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addextendedproc-transact-sql.md)  

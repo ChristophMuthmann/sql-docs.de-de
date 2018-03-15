@@ -1,5 +1,5 @@
 ---
-title: SET NOCOUNT (Transact-SQL) | Microsoft Docs
+title: SET NOCOUNT (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -40,7 +40,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="set-nocount-transact-sql"></a>SET NOCOUNT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
-  Beendet die Meldung bezüglich der Anzahl der von betroffenen Zeilen eine [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisung oder gespeicherte Prozedur, die als Teil des Resultsets zurückgegeben wird, festgelegt.  
+  Bewirkt, dass die Meldung bezüglich der Anzahl der von einer [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung oder gespeicherten Prozedur betroffenen Zeilen nicht mehr als Teil des Resultsets zurückgegeben wird.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,12 +51,12 @@ ms.lasthandoff: 11/21/2017
 SET NOCOUNT { ON | OFF }   
 ```  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Wenn SET NOCOUNT auf ON festgelegt ist, wird die Anzahl nicht zurückgegeben. Wenn SET NOCOUNT auf OFF festgelegt ist, wird die Anzahl zurückgegeben.  
   
- Der @@ROWCOUNT -Funktion wird aktualisiert, auch wenn SET NOCOUNT auf ON festgelegt ist.  
+ Die @@ROWCOUNT-Funktion wird aktualisiert, auch wenn SET NOCOUNT auf ON festgelegt ist.  
   
- SET NOCOUNT ON verhindert das Senden der DONE_IN_PROC-Meldungen an den Client, die sonst für jede Anweisung in einer gespeicherten Prozedur gesendet werden. Für gespeicherte Prozeduren, die mehrere-Anweisungen enthalten, die wenige tatsächlichen Daten zurückgeben, oder für Prozeduren, die enthalten [!INCLUDE[tsql](../../includes/tsql-md.md)] Schleifen, Festlegen von SET NOCOUNT auf ON eine erhebliche Leistungssteigerung bewirken, da der Netzwerkverkehr stark reduziert wird bereitstellen kann.  
+ SET NOCOUNT ON verhindert das Senden der DONE_IN_PROC-Meldungen an den Client, die sonst für jede Anweisung in einer gespeicherten Prozedur gesendet werden. Bei gespeicherten Prozeduren mit mehreren Anweisungen, die wenige tatsächliche Daten zurückgeben, oder für Prozeduren, die [!INCLUDE[tsql](../../includes/tsql-md.md)]-Schleifen enthalten, kann das Festlegen von SET NOCOUNT auf ON eine erhebliche Leistungssteigerung bewirken, da der Netzwerkverkehr stark reduziert wird.  
   
  Die mit SET NOCOUNT angegebene Einstellung ist zur Ausführungszeit und nicht zur Analysezeit wirksam.  
   
@@ -97,7 +97,7 @@ SET NOCOUNT OFF;
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [@@ROWCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/rowcount-transact-sql.md)   
  [SET-Anweisungen &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)  
   

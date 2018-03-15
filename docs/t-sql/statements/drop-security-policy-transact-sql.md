@@ -1,5 +1,5 @@
 ---
-title: DROP SECURITY POLICY (Transact-SQL) | Microsoft Docs
+title: DROP SECURITY POLICY(Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 05/11/2017
 ms.prod: sql-non-specified
@@ -36,7 +36,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="drop-security-policy-transact-sql"></a>DROP SECURITY POLICY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Löscht eine Sicherheitsrichtlinie gilt.  
+  Löscht eine Sicherheitsrichtlinie.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,10 +48,10 @@ DROP SECURITY POLICY [ IF EXISTS ] [schema_name. ] security_policy_name
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *IF VORHANDEN IST*  
+ *IF EXISTS*  
  **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis zur [aktuellen Version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   
- Bedingt löscht die Sicherheitsrichtlinie nur, wenn sie bereits vorhanden ist.  
+ Löscht die Sicherheitsrichtlinie nur, wenn diese bereits vorhanden ist.  
   
  *schema_name*  
  Der Name des Schemas, zu dem die Sicherheitsrichtlinie gehört.  
@@ -59,7 +59,7 @@ DROP SECURITY POLICY [ IF EXISTS ] [schema_name. ] security_policy_name
  *security_policy_name*  
  Der Name der Sicherheitsrichtlinie. Namen von Sicherheitsrichtlinien müssen den Regeln für Bezeichner entsprechen und innerhalb der Datenbank und für jedes Schema eindeutig sein.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die ALTER ANY SECURITY POLICY-Berechtigung und die ALTER-Berechtigung für das Schema.  
@@ -70,11 +70,11 @@ DROP SECURITY POLICY [ IF EXISTS ] [schema_name. ] security_policy_name
 DROP SECURITY POLICY secPolicy;  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Sicherheit auf Zeilenebene](../../relational-databases/security/row-level-security.md)   
  [CREATE SECURITY POLICY &#40;Transact-SQL&#41;](../../t-sql/statements/create-security-policy-transact-sql.md)   
  [ALTER SECURITY POLICY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-security-policy-transact-sql.md)   
  [sys.security_policies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-security-policies-transact-sql.md)   
- [Sys. security_predicates &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-security-predicates-transact-sql.md)  
+ [sys.security_predicates &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-security-predicates-transact-sql.md)  
   
   

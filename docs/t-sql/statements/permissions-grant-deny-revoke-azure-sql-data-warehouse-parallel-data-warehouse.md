@@ -1,5 +1,5 @@
 ---
-title: "GRANT DENY REVOKE Perms – Azure SQL-Daten und Parallel Datawarehouses | Microsoft Docs"
+title: 'GRANT-, DENY-, REVOKE-Berechtigungen: Azure SQL Data Warehouse und Parallel Data Warehouse | Microsoft-Dokumentation'
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
@@ -26,22 +26,22 @@ ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse"></a>Berechtigungen: GRANT, DENY oder REVOKE (Azure SQL Datawarehouse, Parallel Datawarehouse)
+# <a name="permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse"></a>Berechtigungen: GRANT, DENY, REVOKE (Azure SQL Data Warehouse, Parallel Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  Verwendung [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] oder [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] **GRANT** und **DENY** Anweisungen zu erteilen oder Verweigern einer Berechtigung (z. B. **UPDATE**) für ein sicherungsfähiges Element (z. B. eine Datenbank, Tabelle, Sicht usw..) können einem Sicherheitsprinzipal (eine Anmeldung, ein Datenbankbenutzer oder eine Datenbankrolle). Verwendung **widerrufen** zum Entfernen der erteilen oder Verweigern einer Berechtigung.  
+  Verwenden Sie die Anweisungen **GRANT** und **DENY** von [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], um einem Sicherheitsprinzipal (ein Anmeldename, ein Datenbankbenutzer oder eine Datenbankrolle) eine Berechtigung (z.B. **UPDATE**) eines sicherungsfähigen Elements (z.B. Datenbank, Tabelle, Sicht, usw.) zu erteilen oder zu verweigern. Verwenden Sie **REVOKE** um die Erteilung oder Verweigerung einer Berechtigung zu widerrufen.  
   
- Berechtigungen auf Serverebene werden Anmeldungen angewendet. Berechtigungen auf Datenbankebene werden Datenbankbenutzer und Datenbankrollen angewendet.  
+ Berechtigungen auf Serverebene werden auf Anmeldenamen angewendet. Berechtigungen auf Datenbankebene werden auf Datenbankbenutzer und Datenbankrollen angewendet.  
   
- Um festzustellen, welche Berechtigungen erteilt und verweigert wurde, können Fragen Sie die Sys. server_permissions und database_permissions-Sichten ab. Berechtigungen, die nicht explizit erteilt oder verweigert wurden, zu einem Sicherheitsprinzipal können von, die Mitglied einer Rolle mit den Berechtigungen geerbt werden. Die Berechtigungen einer festen Datenbankrolle können nicht geändert werden und werden nicht in den Ansichten Sys. server_permissions und database_permissions angezeigt.  
+ Fragen Sie die Sichten „sys.server_permissions“ und „sys.database_permissions“ ab, um festzustellen, welche Berechtigungen erteilt und verweigert wurden. Berechtigungen, die einem Sicherheitsprinzipal nicht explizit erteilt oder verweigert wurden, können geerbt werden, wenn eine Mitgliedschaft einer Rolle mit Berechtigung besteht. Die Berechtigungen der festen Datenbankrollen können nicht geändert werden und werden nicht in den Sichten „sys.server_permissions“ und „sys.database_permissions“ angezeigt.  
   
--   **GRANT** explizit eine oder mehrere Berechtigungen erteilt.  
+-   **GRANT** erteilt explizit mindestens eine Berechtigung.  
   
--   **DENY** explizit verweigert den Prinzipal über eine oder mehrere Berechtigungen verfügen.  
+-   **DENY** verweigert dem Prinzipal explizit mindestens eine Berechtigung.  
   
--   **WIDERRUFEN** entfernt vorhandene **GRANT** oder **DENY** Berechtigungen.  
+-   **REVOKE** entfernt vorhandene **GRANT**- oder **DENY**-Berechtigungen.  
   
- ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Thema Linksymbol") [Transact-SQL-Syntaxkonventionen &#40; Transact-SQL &#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol zum Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions &#40;Transact-SQL&#41; (Transact-SQL-Syntaxkonventionen (Transact-SQL))](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -83,63 +83,63 @@ REVOKE
 ```  
   
 ## <a name="arguments"></a>Argumente  
- \<Berechtigung > [ **,**... *n* ]  
- Eine oder mehrere Berechtigungen zu gewähren, verweigern oder widerrufen.  
+ \<permission>[ **,**...*n* ]  
+ Mindestens eine Berechtigung, die zu erteilen, verweigern oder widerrufen ist.  
   
- ON [ \<Class_type >::] *sicherungsfähigen* der **ON** -Klausel beschreibt die sicherungsfähigen Parameter für das erteilen, verweigern oder widerrufen von Berechtigungen.  
+ ON [ \<class_type> :: ] *securable* Die **ON**-Klausel beschreibt den sicherungsfähigen Parameter, für den Berechtigungen erteilt, verweigert oder widerrufen werden sollen.  
   
- \<Class_type > den Klassentyp des sicherungsfähigen Elements. Dies kann **Anmeldung**, **Datenbank**, **Objekt**, **SCHEMA**, **Rolle**, oder **Benutzer** . Berechtigungen können auch erteilt werden, um die **SERVER *** Class_type*, aber **SERVER** für diese Berechtigungen nicht angegeben ist. **Datenbank** ist nicht angegeben, wenn die Berechtigung für das Wort enthält **Datenbank** (z. B. **ALTER ANY DATABASE**). Wenn kein *Class_type* angegeben ist und der Berechtigungstyp ist nicht beschränkt auf den Server oder Datenbankklasse, die Klasse wird davon ausgegangen, dass werden **Objekt**.  
+ \<class_type> Der Klassentyp des sicherungsfähigen Elements. Dies kann eins der folgenden Elemente sein: **LOGIN**, **DATABASE**, **OBJECT**, **SCHEMA**, **ROLE** oder **USER**. Berechtigungen können auch für **SERVER***class_type* erteilt werden, jedoch wird **SERVER** für diese Berechtigungen nicht angegeben. **DATABASE** wird nicht angegeben, wenn die Berechtigung das Wort **DATABASE** enthält (z.B. **ALTER ANY DATABASE**). Wenn *class_type* nicht angegeben ist und der Berechtigungstyp nicht auf die Server- oder Datenbankklassen beschränkt ist, wird von der Klasse **OBJECT** ausgegangen.  
   
  *securable*  
- Der Name der Anmeldung, Datenbank, Tabelle, Sicht, Schema, Prozedur, Funktion oder Benutzer, auf denen erteilt, verweigert oder widerrufen von Berechtigungen. Der Objektname kann angegeben werden, mit den dreiteiligen Benennungsregeln, die in beschriebenen [Transact-SQL-Syntaxkonventionen &#40; Transact-SQL &#41; ](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
+ Der Name für die Anmeldung, die Datenbank, die Tabelle, die Sicht, das Schema, die Prozedur, die Rolle oder den Benutzer, dem Berechtigungen erteilt, verweigert oder widerrufen werden sollen. Der Objektname kann mit den dreiteiligen Benennungsregeln angegeben werden, die unter [Transact-SQL-Syntaxkonventionen &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md) beschrieben sind.  
   
- UM *principal* [ **,**... *n* ]  
- Einen oder mehrere Prinzipale wird erteilt, verweigert oder widerrufen von Berechtigungen. Prinzipal ist der Name einer Anmeldung, den Datenbankbenutzer oder die Datenbankrolle.  
+ TO *principal* [ **,**...*n* ]  
+ Mindestens ein Prinzipal, dem Berechtigungen erteilt, verweigert oder widerrufen werden sollen. Ein Prinzipal ist der Anmeldename, der Datenbankbenutzer oder die Datenbankrolle.  
   
- VON *principal* [ **,**... *n* ]  
- Eine oder mehrere Prinzipale Widerrufen von Berechtigungen aus.  Prinzipal ist der Name einer Anmeldung, den Datenbankbenutzer oder die Datenbankrolle. **VON** kann nur verwendet werden, mit einem **widerrufen** Anweisung. **UM** genutzt werden **GRANT**, **DENY**, oder **widerrufen**.  
+ FROM *principal* [ **,**...*n* ]  
+ Mindestens ein Prinzipal, für den Berechtigungen widerrufen werden sollen.  Ein Prinzipal ist der Anmeldename, der Datenbankbenutzer oder die Datenbankrolle. **FROM** kann nur mit der Anweisung **REVOKE** verwendet werden. **TO** kann mit **GRANT**, **DENY** oder **REVOKE** verwendet werden.  
   
  WITH GRANT OPTION  
  Gibt an, dass der Empfänger die angegebene Berechtigung auch anderen Prinzipalen erteilen kann.  
   
  CASCADE  
- Gibt an, dass die Berechtigung verweigert oder aufgehoben wird, die dem angegebenen Prinzipal und für alle anderen Prinzipale, die der Prinzipal die Berechtigung gewährt. Erforderlich, wenn der Prinzipal die Berechtigung mit besitzt **GRANT OPTION**.  
+ Gibt an, dass die Berechtigung für den angegebenen Prinzipal und für alle anderen Prinzipale verweigert oder widerrufen wird, denen diese Berechtigung von diesem Prinzipal erteilt wurde. Dies ist erforderlich, wenn der Prinzipal die Berechtigung mit dem Argument **GRANT OPTION** besitzt.  
   
  GRANT OPTION FOR  
- Gibt an, dass die Fähigkeit, die angegebene Berechtigung zu erteilen, aufgehoben wird. Dies ist erforderlich, bei der Verwendung der **CASCADE** Argument.  
+ Gibt an, dass die Fähigkeit, die angegebene Berechtigung zu erteilen, aufgehoben wird. Dies ist bei Verwendung des Arguments **CASCADE** erforderlich.  
   
 > [!IMPORTANT]  
->  Falls der Prinzipal die angegebene Berechtigung ohne besitzt die **GRANT** Option, die Berechtigung selbst aufgehoben werden.  
+>  Falls der Prinzipal die angegebene Berechtigung ohne das Argument **GRANT OPTION** besitzt, wird die Berechtigung selbst aufgehoben.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Um eine Berechtigung zu erteilen, muss der berechtigende (Grantor) haben entweder die Berechtigung selbst mit den **WITH GRANT OPTION**, oder Sie benötigen eine höhere Berechtigung, die die erteilte Berechtigung impliziert.  Objektbesitzer können Berechtigungen für die Objekte erteilen, die sie besitzen. Prinzipale mit **Steuerelement** -Berechtigung für ein sicherungsfähiges Element kann Berechtigung für dieses sicherungsfähige Element.  Mitglieder der **Db_owner** und **Db_securityadmin** festen Datenbankrollen können beliebige Berechtigungen in der Datenbank erteilen.  
+ Zum Erteilen einer Berechtigung muss der Berechtigende entweder über die Berechtigung selbst mit dem Argument **WITH GRANT OPTION** oder über eine höhere Berechtigung verfügen, in der die erteilte Berechtigung impliziert ist.  Objektbesitzer können Berechtigungen für die Objekte erteilen, die sie besitzen. Prinzipale mit der Berechtigung **CONTROL** für ein sicherungsfähiges Element können die Berechtigung für dieses sicherungsfähige Element erteilen.  Mitglieder der festen Datenbankrollen **db_owner** und **db_securityadmin** können jegliche Berechtigungen in der Datenbank erteilen.  
   
 ## <a name="general-remarks"></a>Allgemeine Hinweise  
- Durch das verweigern oder Aufheben von Berechtigungen für einen Prinzipal wirkt Anforderungen sich nicht, die Autorisierung übergeben wurden, und zurzeit ausgeführt werden. Zum Einschränken des Zugriffs müssen Sie sofort, "Abbrechen" aktive Anforderungen oder aktuelle Sitzungen beenden.  
+ Das Verweigern oder Widerrufen von Berechtigungen für ein Prinzipal hat keine Auswirkungen auf Anforderungen, die bereits autorisiert wurden und derzeit ausgeführt werden. Zum sofortigen Einschränken des Zugriffs müssen Sie aktive Anforderungen abbrechen oder aktuelle Sitzungen beenden.  
   
 > [!NOTE]  
->  Die meisten feste Serverrollen sind nicht in dieser Version verfügbar. Verwenden Sie stattdessen eine benutzerdefinierte Datenbankrollen. Anmeldungen können nicht hinzugefügt werden, um die **Sysadmin** festen Serverrolle "". Erteilen der **CONTROL SERVER** Berechtigung entspricht in etwa die Mitgliedschaft in der **Sysadmin** festen Serverrolle "".  
+>  Die meisten festen Serverrollen sind in diesem Release nicht verfügbar. Verwenden Sie stattdessen benutzerdefinierte Datenbankrollen. Anmeldenamen können der festen Serverrolle **sysadmin** nicht hinzugefügt werden. Das Erteilen der Berechtigung **CONTROL SERVER** gleicht der Mitgliedschaft in der festen Serverrolle **sysadmin**.  
   
- Einige Anweisungen sind mehrere Berechtigungen erforderlich. Beispielsweise zum Erstellen einer Tabelle erfordert die **CREATE TABLE** Berechtigungen in der Datenbank und die **ALTER SCHEMA** -Berechtigung für die Tabelle, die die Tabelle enthalten wird.  
+ Einige Anweisungen erfordern mehrere Berechtigungen. Beispielsweise erfordert das Erstellen einer Tabelle die Berechtigungen **CREATE TABLE** in der Datenbank und **ALTER SCHEMA** für die Tabelle, die die Tabelle enthalten soll.  
   
- PDW führt Manchmal gespeicherte Prozeduren, um die Benutzeraktionen für die Serverknoten zu verteilen. Aus diesem Grund kann nicht die Execute-Berechtigung für eine ganze Datenbank verweigert werden. (Z. B. `DENY EXECUTE ON DATABASE::<name> TO <user>;` schlägt fehl.) Verweigern Sie umgehen die Execute-Berechtigung für die Benutzer-Schemas oder bestimmte Objekte (Prozeduren).  
+ In SQL Server PDW werden gespeicherte Prozeduren manchmal ausgeführt, um Benutzeraktionen an die Computeknoten zu verteilen. Aus diesem Grund kann die Berechtigung EXECUTE nicht für eine gesamte Datenbank verweigert werden. (Z.B. schlägt `DENY EXECUTE ON DATABASE::<name> TO <user>;` fehl.) Sie können dies umgehen, indem Sie die EXECUTE-Berechtigung für Benutzerschemas oder spezifische Objekte (Prozeduren) verweigern.  
   
 ### <a name="implicit-and-explicit-permissions"></a>Implizite und explizite Berechtigungen  
- Ein *explizite Berechtigung* ist ein **GRANT** oder **DENY** Berechtigung erhält, die einem Prinzipal durch eine **GRANT** oder **DENY**Anweisung.  
+ Eine *explizite Berechtigung* ist eine **GRANT**- oder **DENY**-Berechtigung, die einem Prinzipal durch eine **GRANT**- oder **DENY**-Anweisung zugewiesen wurde.  
   
- Ein *implizite Berechtigung* ist ein **GRANT** oder **DENY** Berechtigung, die ein Prinzipal (Anmeldung, Benutzer oder Datenbankrolle "") von einer anderen Datenbankrolle geerbt hat.  
+ Eine *implizite Berechtigung* ist eine **GRANT**- oder **DENY**-Berechtigung, die ein Prinzipal (Anmeldename, Benutzer oder Datenbankrolle) von einer anderen Datenbankrolle geerbt hat.  
   
- Eine implizite Berechtigung kann auch von einem abdeckenden oder die übergeordnete Berechtigung geerbt werden. Beispielsweise **UPDATE** Berechtigung für eine Tabelle geerbt werden kann, indem Sie **UPDATE** -Berechtigung für das Schema, das die Tabelle enthält oder **Steuerelement** Berechtigung für die Tabelle.  
+ Eine implizite Berechtigung kann auch von einer abdeckenden oder übergeordneten Berechtigung geerbt werden. Beispielsweise kann die Berechtigung **UPDATE** von einer Tabelle geerbt werden, wenn die Berechtigung **UPDATE** für das Schema, das die Tabelle enthält, oder die Berechtigung **CONTROL** für die Tabelle vorhanden ist.  
   
 ### <a name="ownership-chaining"></a>Besitzverkettung  
- Wenn mehrere Datenbankobjekte gegenseitig aufeinander sequenziell zugreifen, wird diese Sequenz als bezeichnet eine *Kette*. Obwohl solche Ketten nicht unabhängig voneinander vorhanden sind, werden in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] beim Traversieren der Links in einer Kette durch [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Berechtigungen für die einzelnen Objekte anders ausgewertet als beim getrennten Zugriff auf die Objekte. Besitzverkettung hat erhebliche Auswirkungen für die Verwaltung der Sicherheit. Weitere Informationen zu Besitzketten finden Sie unter [Besitzketten](http://msdn.microsoft.com/en-us/library/ms188676\(v=sql11\).aspx) und [Lernprogramm: Besitzketten und Kontextwechsel](http://msdn.microsoft.com/en-us/library/bb153640\(v=sql11\).aspx).  
+ Wenn mehrere Datenbankobjekte aufeinander sequenziell zugreifen, wird diese Sequenz als *Kette* bezeichnet. Obwohl solche Ketten nicht unabhängig voneinander vorhanden sind, werden in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] beim Traversieren der Links in einer Kette durch [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Berechtigungen für die einzelnen Objekte anders ausgewertet als beim getrennten Zugriff auf die Objekte. Besitzketten haben erhebliche Auswirkungen auf die Sicherheitsverwaltung. Weitere Informationen zu Besitzketten finden Sie unter [Besitzketten](http://msdn.microsoft.com/en-us/library/ms188676\(v=sql11\).aspx) und [Tutorial: Besitzketten und Kontextwechsel](http://msdn.microsoft.com/en-us/library/bb153640\(v=sql11\).aspx).  
   
 ## <a name="permission-list"></a>Berechtigungsliste  
   
 ### <a name="server-level-permissions"></a>Berechtigungen auf Serverebene  
- Berechtigungen auf Serverebene können gewährt, verweigert, und Anmeldungen aufgehoben.  
+ Berechtigungen auf Serverebene können von Anmeldenamen erteilt, verweigert und widerrufen werden.  
   
- **Berechtigungen, die auf Server anwenden**  
+ **Für Server geltende Berechtigungen**  
   
 -   CONTROL SERVER  
   
@@ -167,20 +167,20 @@ REVOKE
   
 -   VIEW SERVER STATE  
   
- **Berechtigungen, die Anmeldungen angewendet werden soll.**  
+ **Berechtigungen,die für Anmeldenamen gelten**  
   
--   CONTROL FÜR LOGIN  
+-   CONTROL ON LOGIN  
   
--   ALTER FÜR LOGIN  
+-   ALTER ON LOGIN  
   
--   BEI DER ANMELDUNG DIE IDENTITÄT ANNEHMEN  
+-   IMPERSONATE ON LOGIN  
   
 -   VIEW DEFINITION  
   
 ### <a name="database-level-permissions"></a>Berechtigungen auf Datenbankebene  
- Berechtigungen auf Datenbankebene können, abgelehnte und gesperrte aus Datenbankbenutzer und benutzerdefinierte Datenbankrollen erteilt werden.  
+ Berechtigungen auf Datenbankebene können von Datenbankbenutzern und benutzerdefinierten Datenbankrollen erteilt, verweigert und widerrufen werden.  
   
- **Berechtigungen, die gelten für alle Datenbankklassen**  
+ **Für alle Datenbankklassen geltende Berechtigungen**  
   
 -   CONTROL  
   
@@ -188,15 +188,15 @@ REVOKE
   
 -   VIEW DEFINITION  
   
- **Berechtigungen, die für alle Datenbankklassen, mit Ausnahme von Benutzern angewendet werden soll.**  
+ **Für alle Datenbankklassen außer Benutzer geltende Berechtigungen**  
   
 -   TAKE OWNERSHIP  
   
- **Berechtigungen, die nur für Datenbanken angewendet werden soll.**  
+ **Nur für die Datenbank geltende Berechtigungen**  
   
 -   ALTER ANY DATABASE  
   
--   ALTER FÜR DATABASE  
+-   ALTER ON DATABASE  
   
 -   ALTER ANY DATASPACE  
   
@@ -208,7 +208,7 @@ REVOKE
   
 -   BACKUP DATABASE  
   
--   IN DER DATENBANK VERBINDEN  
+-   CONNECT ON DATABASE  
   
 -   CREATE PROCEDURE  
   
@@ -222,15 +222,15 @@ REVOKE
   
 -   SHOWPLAN  
   
- **Berechtigungen, die gelten nur für Benutzer**  
+ **Nur für Benutzer geltende Berechtigungen**  
   
 -   IMPERSONATE  
   
- **Berechtigungen, die für Datenbanken, Schemas und Objekte gelten**  
+ **Für Datenbanken, Schemas und Objekte geltende Berechtigungen**  
   
 -   ALTER  
   
--   DELETE  
+-   Delete  
   
 -   Führen Sie  
   
@@ -240,38 +240,38 @@ REVOKE
   
 -   UPDATE  
   
--   REFRENCES  
+-   REFERENCES  
   
- Eine Definition für jede Art der Berechtigung, finden Sie unter [Berechtigungen (Datenbankmodul)](http://msdn.microsoft.com/library/ms191291.aspx).  
+ Eine Definition für jede Art der Berechtigung finden Sie unter [Berechtigungen (Datenbank-Engine)](http://msdn.microsoft.com/library/ms191291.aspx).  
   
 ### <a name="chart-of-permissions"></a>Diagramm der Berechtigungen  
- Alle Berechtigungen werden auf dieses Poster grafisch dargestellt. Dies ist die einfachste Möglichkeit, eine geschachtelte Hierarchie von Berechtigungen finden Sie unter. Z. B. die **ALTER ON LOGIN** Berechtigung erteilt werden kann, indem selbst, aber sie ist auch aus, wenn eine Anmeldung erteilt wird die **Steuerelement** Berechtigung für diesen Anmeldenamen oder wenn eine Anmeldung erteilt wird die **ALTER ANY Anmeldung** Berechtigung.  
+ Alle Berechtigungen werden auf diesem Poster grafisch dargestellt. Dies ist die einfachste Methode, um die geschachtelte Hierarchie von Berechtigungen zu sehen. Zum Beispiel kann die Berechtigung **ALTER ON LOGIN** von sich selbst erteilt werden, wird jedoch auch enthalten, wenn ein Anmeldename die Berechtigung **CONTROL** für diesen Anmeldenamen erhält, oder wenn einem Anmeldenamen die Berechtigung **ALTER ANY LOGIN** erteilt wird.  
   
- ![Poster der APS Sicherheit Berechtigungen](../../t-sql/statements/media/aps-security-perms-poster.png "Poster der APS-Sicherheit-Berechtigungen")  
+ ![APS-Poster über Sicherheitsberechtigungen](../../t-sql/statements/media/aps-security-perms-poster.png "APS security permissions poster")  
   
- Informationen zum Herunterladen einer Vollbildgröße Version dieses Posters finden Sie unter [SQL Server PDW-Berechtigungen](http://go.microsoft.com/fwlink/?LinkId=244249)im Abschnitt "Dateien" der APS Yammer-Website (oder -Anforderung per E-mail von  **apsdoc@microsoft.com** .  
+ Dieses Poster können Sie in voller Größe unter [SQL Server PDW Permissions (SQL Server PDW-Berechtigungen)](http://go.microsoft.com/fwlink/?LinkId=244249) im Abschnitt „Dateien“ der APS-Yammer-Website herunterladen (oder per E-Mail von **apsdoc@microsoft.com** anfragen).  
   
 ## <a name="default-permissions"></a>Standardberechtigungen  
- Die folgende Liste beschreibt die Standardberechtigungen an:  
+ In der folgenden Liste werden die Standardberechtigungen beschrieben:  
   
--   Erstellung ein Anmeldenamens mit dem **CREATE LOGIN** Anweisung, die der neue Anmeldenamen empfängt die **CONNECT SQL** Berechtigung.  
+-   Wenn ein Anmeldename mit der Anweisung **CREATE LOGIN** erstellt wird, erhält der neue Anmeldename die Berechtigung **CONNECT SQL**.  
   
--   Alle Anmeldenamen sind Mitglied der **öffentlichen** -Serverrolle und kann nicht entfernt werden, von **öffentlichen**.  
+-   Alle Anmeldenamen sind Mitglieder der Serverrolle **public** und können nicht aus **public** entfernt werden.  
   
--   Wenn ein Datenbankbenutzer erstellt wird, mithilfe der **CREATE USER** Berechtigung für der Datenbankbenutzer empfängt die **verbinden** Berechtigung in der Datenbank.  
+-   Wenn ein Datenbankbenutzer mithilfe der Berechtigung **CREATE USER** erstellt wird, erhält der Datenbankbenutzer die Berechtigung **CONNECT** in der Datenbank.  
   
--   Alle Prinzipale, einschließlich der **öffentlichen** Rolle verfügen standardmäßig über keine expliziten oder impliziten Berechtigungen.  
+-   Standardmäßig verfügen alle Prinzipale, einschließlich der Rolle **public**, über keine expliziten oder impliziten Berechtigungen.  
   
--   Wenn Sie einen Anmeldenamen oder Benutzer der Besitzer einer Datenbank oder das Objekt ist, hat den Anmeldenamen oder Benutzer immer alle Berechtigungen für die Datenbank oder des Objekts. Die Besitzerrechte können nicht geändert werden und sind nicht als explizite Berechtigungen sichtbar. Die **GRANT**, **DENY**, und **widerrufen** Anweisungen wirken sich nicht auf Besitzer.  
+-   Wenn ein Anmeldename oder ein Benutzer zum Besitzer einer Datenbank oder eines Objekts werden, erhalten diese alle Berechtigungen für die Datenbank bzw. das Objekt. Die Besitzerrechte können nicht geändert werden und sind nicht als explizite Berechtigungen sichtbar. Die Anweisungen **GRANT**, **DENY** und **REVOKE** haben keine Auswirkungen auf Besitzer.  
   
--   Die **sa** Anmeldung verfügt über alle Berechtigungen auf dem Gerät. Besitzerrechte, ähnelt der **sa** Berechtigungen kann nicht geändert werden und sind nicht als explizite Berechtigungen sichtbar. Die **GRANT**, **DENY**, und **widerrufen** Anweisungen haben keine Auswirkung auf **sa** Anmeldung. Die **sa** Anmeldung kann nicht umbenannt werden.  
+-   Der **sysadmin**-Anmeldename verfügt über alle Berechtigungen auf dem Gerät. Ähnlich wie Besitzerrechte, können **sa**-Berechtigungen nicht geändert werden und sind nicht als explizite Berechtigungen sichtbar. Die Anweisungen **GRANT**, **DENY** und **REVOKE** haben keine Auswirkungen auf den **sa**-Anmeldenamen. Der **sa**-Anmeldename kann nicht umbenannt werden.  
   
--   Die **verwenden** Anweisung erfordert keine Berechtigungen. Alle Prinzipale Ausführungsdauer der **verwenden** Anweisung für jede Datenbank.  
+-   Die Anweisung **USE** erfordert keine Berechtigungen. Auf allen Datenbanken können alle Prinzipale die Anweisung **USE** ausführen.  
   
-##  <a name="Examples"></a>Beispiele: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] und[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+##  <a name="Examples"></a> Beispiele: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="a-granting-a-server-level-permission-to-a-login"></a>A. Erteilen einer Berechtigung auf Serverebene für einen Anmeldenamen  
- Die folgenden beiden Anweisungen erteilen eine Berechtigung auf Serverebene für einen Anmeldenamen.  
+ Die folgenden zwei Anweisungen erteilen einem Anmeldenamen eine Berechtigung auf Serverebene.  
   
 ```  
 GRANT CONTROL SERVER TO [Ted];  
@@ -282,40 +282,40 @@ GRANT ALTER ANY DATABASE TO Mary;
 ```  
   
 ### <a name="b-granting-a-server-level-permission-to-a-login"></a>B. Erteilen einer Berechtigung auf Serverebene für einen Anmeldenamen  
- Im folgenden Beispiel wird gewährt eine Berechtigung auf Serverebene für einen Anmeldenamen mit einem Server principal (einen anderen Anmeldenamen).  
+ Im folgenden Beispiel wird einem Serverprinzipal (ein anderer Anmeldename) eine Berechtigung auf Serverebene für einen Anmeldenamen zugewiesen.  
   
 ```  
 GRANT  VIEW DEFINITION ON LOGIN::Ted TO Mary;  
 ```  
   
-### <a name="c-granting-a-database-level-permission-to-a-user"></a>C. Einem Benutzer erteilen eine Berechtigung auf Datenbankebene  
- Im folgenden Beispiel wird gewährt eine Berechtigung auf Datenbankebene für einen Benutzer an einen Datenbankprinzipal (ein anderer Benutzer).  
+### <a name="c-granting-a-database-level-permission-to-a-user"></a>C. Erteilen einer Berechtigung auf Datenbankebene für einen Benutzer  
+ Im folgenden Beispiel wird einem Datenbankprinzipal (ein anderer Benutzer) eine Berechtigung auf Datenbankebene für einen Benutzer zugewiesen.  
   
 ```  
 GRANT VIEW DEFINITION ON USER::[Ted] TO Mary;  
 ```  
   
-### <a name="d-granting-denying-and-revoking-a-schema-permission"></a>D. Erteilen, verweigern und Aufheben einer schemaberechtigung für  
- Die folgenden **GRANT** Anweisung erteilt eröffnet die Möglichkeit zur Auswahl von Daten aus einer Tabelle oder Sicht im Dbo-Schema.  
+### <a name="d-granting-denying-and-revoking-a-schema-permission"></a>D. Erteilen, Verweigern und Widerrufen einer Berechtigung für ein Schema  
+ Die folgende **GRANT**-Anweisung erteilt dem Benutzer Yuen die Berechtigung, Daten aus einer beliebigen Tabelle oder Sicht im dbo-Schema auszuwählen.  
   
 ```  
 GRANT SELECT ON SCHEMA::dbo TO [Yuen];  
 ```  
   
- Die folgenden **DENY** Anweisung verhindert, dass eröffnet auswählen von Daten aus einer Tabelle oder Sicht im Dbo-Schema. Eröffnet kann nicht Daten gelesen werden, auch wenn er die Berechtigung auf andere Weise, wie z. B. über eine Mitgliedschaft in Datenbankrolle besitzt.  
+ Die folgende **DENY**-Anweisung verweigert dem Benutzer Yuen die Berechtigung, Daten aus einer beliebigen Tabelle oder Sicht im dbo-Schema auszuwählen. Yuen kann die Daten nicht lesen, selbst wenn er auf eine andere Weise über die Berechtigung verfügt, z.B. über eine Rollenmitgliedschaft.  
   
 ```  
 DENY SELECT ON SCHEMA::dbo TO [Yuen];  
 ```  
   
- Die folgenden **widerrufen** -Anweisung entfernt die **DENY** Berechtigung. Jetzt sind die expliziten Berechtigungen des eröffnet neutrale. Eröffnet möglicherweise Daten aus jeder Tabelle über eine andere implizite Berechtigung wie z. B. eine Mitgliedschaft in Datenbankrolle auswählen können.  
+ Die folgende **REVOKE**-Anweisung entfernt die **DENY**-Anweisung. Jetzt sind die expliziten Berechtigungen von Yuen neutral. Yuen könnte über eine andere implizite Berechtigung, wie z.B. eine Rollenmitgliedschaft, über die Berechtigung verfügen, Daten aus einer beliebigen Tabelle auszuwählen.  
   
 ```  
 REVOKE SELECT ON SCHEMA::dbo TO [Yuen];  
 ```  
   
-### <a name="e-demonstrating-the-optional-object-clause"></a>E. Optionale Objekt demonstrieren:: Klausel  
- Da das Objekt die Standardklasse für die berechtigungsanweisung eine ist, sind die folgenden beiden Anweisungen identisch. Die **Objekt::** -Klausel ist optional.  
+### <a name="e-demonstrating-the-optional-object-clause"></a>E. Veranschaulichung der optionalen Klausel OBJECT::  
+ Da OBJECT die Standardklasse für eine Berechtigungsanweisung ist, sind die folgenden zwei Anweisungen identisch. Die Klausel **OBJECT::** ist optional.  
   
 ```  
 GRANT UPDATE ON OBJECT::dbo.StatusTable TO [Ted];  

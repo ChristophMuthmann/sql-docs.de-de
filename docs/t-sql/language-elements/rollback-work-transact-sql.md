@@ -1,5 +1,5 @@
 ---
-title: ROLLBACK WORK (Transact-SQL) | Microsoft Docs
+title: ROLLBACK WORK (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -52,15 +52,15 @@ ROLLBACK [ WORK ]
 [ ; ]  
 ```  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Diese Anweisung funktioniert genau wie ROLLBACK TRANSACTION, mit der Ausnahme, dass ROLLBACK TRANSACTION einen benutzerdefinierten Transaktionsnamen akzeptiert. Die ROLLBACK-Syntax ist ISO-kompatibel, unabhängig davon, ob das optionale WORK-Schlüsselwort angegeben wurde.  
   
- Wenn Transaktionen geschachtelt werden, ROLLBACK WORK immer einen Rollback zu dem äußersten BEGIN TRANSACTION-Anweisung und dekrementiert den @@TRANCOUNT -Systemfunktion auf 0.  
+ Wenn Transaktionen geschachtelt werden, führt ROLLBACK WORK immer einen Rollback bis zur äußersten BEGIN TRANSACTION-Anweisung durch und verringert die @@TRANCOUNT-Systemfunktion auf 0.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Alle gültigen Benutzer erhalten standardmäßig ROLLBACK WORK-Berechtigungen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [BEGIN DISTRIBUTED TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-distributed-transaction-transact-sql.md)   
  [BEGIN TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-transaction-transact-sql.md)   
  [COMMIT TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/commit-transaction-transact-sql.md)   

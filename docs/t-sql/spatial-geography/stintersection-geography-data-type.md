@@ -1,5 +1,5 @@
 ---
-title: STIntersection (Geography-Datentyp) | Microsoft Docs
+title: STIntersection (geography-Datentyp) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stintersection-geography-data-type"></a>STIntersection (geography-Datentyp)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  Gibt ein Objekt, das die Punkte darstellt, in dem ein **Geography** -Instanz überschneidet, eine andere **Geography** Instanz.  
+  Gibt ein Objekt zurück, das die Punkte darstellt, an denen eine **geography**-Instanz eine andere **geography**-Instanz überschneidet.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -45,19 +45,19 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>Argumente  
  *other_geography*  
- Eine andere **Geography** Instanz, mit der Instanz verglichen werden soll, auf dem von STIntersection() aufgerufen wird.  
+ Eine andere **geography**-Instanz, die mit der Instanz verglichen werden soll, für die STIntersection() aufgerufen wird.  
   
 ## <a name="return-types"></a>Rückgabetypen  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Rückgabetyp: **Geography**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Rückgabetyp: **geography**  
   
  CLR-Rückgabetyp: **SqlGeography**  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Die Schnittmenge von zwei geography-Instanzen wird zurückgegeben.  
   
- Von STIntersection() gibt immer Null zurück, wenn die räumliche Verweis-IDs (SRIDs), der die **Geography** -Instanzen nicht übereinstimmen.  
+ STIntersection() gibt immer NULL zurück, wenn die SRIDs (Spatial Reference IDs) der **geography**-Instanzen nicht übereinstimmen.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt räumliche Instanzen, die größer als eine Hemisphäre sind. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]eventuell **FullGlobe** Instanzen in den Satz von möglichen Ergebnissen zurückgegeben werden, auf dem Server.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt räumliche Instanzen, die größer als eine Hemisphäre sind. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gehören möglicherweise auch **FullGlobe**-Instanzen zu den Ergebnissen, die auf dem Server zurückgegeben werden.  
   
  Im Ergebnis können nur dann Kreisbogensegmente enthalten sein, wenn die Eingabeinstanzen auch Kreisbogensegmente enthalten.  
   
@@ -93,7 +93,7 @@ DECLARE @g geography = 'POLYGON((-122.358 47.653, -122.348 47.649, -122.348 47.6
 SELECT @g.STIntersection('FULLGLOBE').ToString();  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [OGC-Methoden für geography-Instanzen](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

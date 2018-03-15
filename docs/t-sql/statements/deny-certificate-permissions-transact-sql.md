@@ -1,5 +1,5 @@
 ---
-title: DENY (Zertifikatberechtigungen) (Transact-SQL) | Microsoft Docs
+title: DENY (Zertifikatberechtigungen) (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -51,10 +51,10 @@ DENY permission  [ ,...n ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *Berechtigung*  
+ *permission*  
  Gibt ein Berechtigung an, die für ein Zertifikat verweigert werden kann. Unten aufgeführt.  
   
- ON Zertifikat **::***Name*  
+ ON CERTIFICATE **::***certificate_name*  
  Gibt das Zertifikat an, für das die Berechtigung verweigert wird. Der Bereichsqualifizierer "::" ist erforderlich.  
   
  *database_principal*  
@@ -98,7 +98,7 @@ DENY permission  [ ,...n ]
   
 -   Keinem Serverprinzipal zugeordneter Datenbankbenutzer.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Ein Zertifikat ist ein sicherbares Element auf Datenbankebene in der Datenbank, die dessen übergeordnetes Element in der Berechtigungshierarchie ist. Die spezifischsten und am meisten beschränkten Berechtigungen, die für ein Zertifikat verweigert werden können, sind unten aufgeführt. Auch die allgemeineren Berechtigungen sind aufgeführt, die diese implizit enthalten.  
   
 |Zertifikatsberechtigung|Impliziert durch die Zertifikatsberechtigung|Impliziert durch Datenbankberechtigung|  
@@ -112,13 +112,13 @@ DENY permission  [ ,...n ]
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die CONTROL-Berechtigung für das Zertifikat. Falls die AS-Klausel verwendet wird, muss der angegebene Prinzipal der Besitzer des Zertifikats sein.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [DENY &#40;Transact-SQL&#41;](../../t-sql/statements/deny-transact-sql.md)   
  [Berechtigungen &#40;Datenbankmodul&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [Prinzipale &#40;Datenbankmodul&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)   
  [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)   
- [Erstellen Sie APPLICATION ROLE &#40; Transact-SQL &#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
+ [CREATE APPLICATION ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
  [Verschlüsselungshierarchie](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: ^ = (Bitweises exklusives OR -Zuweisung) (Transact-SQL) | Microsoft Docs
+title: ^= (Zuweisung von bitweisem exklusivem OR) (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 01/10/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="-bitwise-exclusive-or-assignment-transact-sql"></a>^ = (Bitweises exklusives OR -Zuweisung) (Transact-SQL)
+# <a name="-bitwise-exclusive-or-assignment-transact-sql"></a>^= (Zuweisung von bitweisem exklusiven OR) (Transact-SQL))
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Führt eine bitweise exklusive OR-Operation zwischen zwei ganzzahligen Werten durch und legt einen Wert auf das Ergebnis des Vorgangs fest.  
@@ -49,18 +49,18 @@ expression ^= expression
   
 ## <a name="arguments"></a>Argumente  
  *expression*  
- Ist ein beliebiger gültiger [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) eines beliebigen Datentyps der Kategorie "numeric" mit Ausnahme von Typen der **Bit** -Datentyp.  
+ Bezeichnet jeden gültigen [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) eines beliebigen Datentyps aus der numerischen Kategorie, mit Ausnahme des **bit**-Datentyps.  
   
 ## <a name="result-types"></a>Ergebnistypen  
  Gibt einen Wert vom Datentyp des Arguments zurück, das in der Rangfolge höher steht. Weitere Informationen finden Sie unter [Rangfolge der Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
   
-## <a name="remarks"></a>Hinweise  
- Weitere Informationen finden Sie unter [^ &#40; Bitweises exklusives OR &#41; &#40; Transact-SQL &#41; ](../../t-sql/language-elements/bitwise-exclusive-or-transact-sql.md).  
+## <a name="remarks"></a>Remarks  
+ Weitere Informationen finden Sie unter [^ &#40;Bitweises exklusives OR&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/bitwise-exclusive-or-transact-sql.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [Zusammengesetzte Operatoren &#40; Transact-SQL &#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   
- [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
- [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
- [Bitweise Operatoren &#40; Transact-SQL &#41;](../../t-sql/language-elements/bitwise-operators-transact-sql.md)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Compound Operators &#40;Transact-SQL&#41; (Verbundoperatoren (Transact-SQL))](../../t-sql/language-elements/compound-operators-transact-sql.md)   
+ [Ausdrücke &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [Operatoren &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [Bitweise Operatoren &#40;Transact-SQL&#41;](../../t-sql/language-elements/bitwise-operators-transact-sql.md)  
   
   

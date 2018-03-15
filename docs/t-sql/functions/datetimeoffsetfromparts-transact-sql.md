@@ -1,5 +1,5 @@
 ---
-title: DATETIMEOFFSETFROMPARTS (Transact-SQL) | Microsoft Docs
+title: DATETIMEOFFSETFROMPARTS (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 07/29/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="datetimeoffsetfromparts-transact-sql"></a>DATETIMEOFFSETFROMPARTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-Gibt eine **"DateTimeOffset"** -Wert für das angegebene Datum und die Uhrzeit mit den angegebenen Offsets und die Genauigkeit.
+Gibt einen **datetimeoffset**-Wert für das angegebene Datum und die angegebene Uhrzeit mit dem angegebenen Offset und der angegebenen Genauigkeit zurück.
   
 ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -45,25 +45,25 @@ DATETIMEOFFSETFROMPARTS ( year, month, day, hour, minute, seconds, fractions, ho
 ```  
   
 ## <a name="arguments"></a>Argumente  
-*Jahr*  
+*year*  
 Ganzzahliger Ausdruck, der ein Jahr angibt.
   
-*Monat*  
+*month*  
 Ganzzahliger Ausdruck, der einen Monat angibt.
   
-*Tag*  
+*day*  
 Ganzzahliger Ausdruck, der einen Tag angibt.
   
-*Stunde*  
+*hour*  
 Ganzzahliger Ausdruck, der die Stunden angibt.
   
-*Minute*  
+*minute*  
 Ganzzahliger Ausdruck, der die Minuten angibt.
   
 *Sekunden*  
 Ganzzahliger Ausdruck, der die Sekunden angibt.
   
-*Addieren von Brüchen*  
+*fractions*  
 Ganzzahliger Ausdruck, der die Sekundenbruchteile angibt.
   
 *hour_offset*  
@@ -73,17 +73,17 @@ Ganzzahliger Ausdruck, der den Stundenteil des Zeitzonenoffsets angibt.
 Ganzzahliger Ausdruck, der den Minutenteil des Zeitzonenoffsets angibt.
   
 *precision*  
-Ganzzahliges Literal, die angibt, die **"DateTimeOffset"** Wert, der zurückgegeben werden.
+Ganzzahliges Literal, der die Genauigkeit des zurückzugebenden **datetimeoffset**-Werts angibt.
   
 ## <a name="return-types"></a>Rückgabetypen
-**"DateTimeOffset" (** *Genauigkeit* **)**
+**datetimeoffset(** *Genauigkeit* **)**
   
-## <a name="remarks"></a>Hinweise  
-**DATETIMEOFFSETFROMPARTS** gibt einen vollständig initialisierten **"DateTimeOffset"** -Datentyp. Die Offsetargumente werden verwendet, um den Zeitzonenoffset darzustellen. Werden die Offsetargumente nicht angegeben, wird als Zeitzonenoffset 00:00 angenommen, d. h. es gibt keinen Zeitzonenoffset. Wenn die Offsetargumente angegeben werden, dann müssen beide Argumente vorhanden und beide Argumente entweder positiv oder negativ sein. Wenn *Minute_offset* wird angegeben, ohne *Hour_offset*, wird ein Fehler ausgelöst. Wenn andere Argumente ungültig sind, wird ein Fehler ausgegeben. Wenn erforderliche Argumente null sind, wird Null zurückgegeben. Jedoch, wenn die *Genauigkeit* Argument null ist, wird ein Fehler ausgelöst.
+## <a name="remarks"></a>Remarks  
+**DATETIMEOFFSETFROMPARTS** gibt einen vollständig initialisierten **datetimeoffset**-Datentyp zurück. Die Offsetargumente werden verwendet, um den Zeitzonenoffset darzustellen. Werden die Offsetargumente nicht angegeben, wird als Zeitzonenoffset 00:00 angenommen, d. h. es gibt keinen Zeitzonenoffset. Wenn die Offsetargumente angegeben werden, dann müssen beide Argumente vorhanden und beide Argumente entweder positiv oder negativ sein. Wenn *minute_offset* ohne *hour_offset* angegeben wird, wird ein Fehler ausgelöst. Wenn andere Argumente ungültig sind, wird ein Fehler ausgegeben. Wenn erforderliche Argumente den Wert NULL haben, wird auch NULL zurückgegeben. Wenn jedoch das *precision*-Argument NULL ist, wird ein Fehler ausgelöst.
   
-Die *Brüche* Argument richtet sich nach der *Genauigkeit* Argument. Z. B. wenn *Genauigkeit* 7 ist, dann stellt jeder Bruchteil 100 Nanosekunden; dar, wenn *Genauigkeit* 3 ist, und klicken Sie dann jeder Bruchteil eine Millisekunde dar. Wenn der Wert der *Genauigkeit* ist 0 (null), und klicken Sie dann auf den Wert der *Brüche* muss auch werden 0 (null) ist; andernfalls ein Fehler ausgelöst.
+Das *fractions*-Argument ist vom *precision*-Argument abhängig. Wenn beispielsweise *precision* den Wert 7 hat, stellt jeder Teil 100 Nanosekunden dar. Ist *precision* jedoch 3, stellt jeder Bruchteil eine Millisekunde dar. Wenn der Wert von *precision* 0 (null) ist, muss auch der Wert von *fractions* 0 (null) sein; andernfalls wird ein Fehler ausgelöst.
   
-Diese Funktion kann remote auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]-Servern oder höher ausgeführt werden. Sie werden nicht in der Remoteausführung auf Servern, auf denen eine Version unter [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+Diese Funktion kann remote auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]-Servern oder höher ausgeführt werden. Eine Remoteausführung auf Servern mit einer Version vor [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ist nicht möglich.
   
 ## <a name="examples"></a>Beispiele  
   
@@ -104,10 +104,10 @@ Result
 ```  
   
 ### <a name="b-example-with-fractions-of-a-second"></a>B. Beispiel mit Sekundenbruchteilen  
-Das folgende Beispiel veranschaulicht die Verwendung von der *Brüche* und *Genauigkeit* Parameter:
-1.   Wenn *Brüche* hat den Wert 5 und *Genauigkeit* hat den Wert 1, klicken Sie dann den Wert der *Brüche* 5/10 Sekunde darstellt.  
-1.   Wenn *Brüche* verfügt über einen Wert von 50 und *Genauigkeit* hat den Wert 2, klicken Sie dann den Wert der *Brüche* 50/100 einer Sekunde darstellt.  
-1.   Wenn *Brüche* hat den Wert 500 und *Genauigkeit* hat den Wert 3, klicken Sie dann den Wert der *Brüche* 500/1000 einer Sekunde darstellt.  
+Das folgende Beispiel zeigt die Verwendung der Parameter *fractions* und *precision*:
+1.   Wenn *fractions* den Wert 5 und *precision* den Wert 1 hat, stellt der Wert von *fractions* 5/10 einer Sekunde dar.  
+1.   Wenn *fractions* den Wert 50 und *precision* den Wert 2 hat, stellt der Wert von *fractions* 50/100 einer Sekunde dar.  
+1.   Wenn *fractions* den Wert 500 und *precision* den Wert 3 hat, stellt der Wert von *fractions* 500/1000 einer Sekunde dar.  
   
 ```sql
 SELECT DATETIMEOFFSETFROMPARTS ( 2011, 8, 15, 14, 30, 00, 5, 12, 30, 1 );  
@@ -137,7 +137,7 @@ GO
   
 ## <a name="see-also"></a>Siehe auch
 [datetimeoffset &#40;Transact-SQL&#41;](../../t-sql/data-types/datetimeoffset-transact-sql.md)  
-[ZEITZONE &#40; Transact-SQL &#41;](../../t-sql/queries/at-time-zone-transact-sql.md)
+[AT TIME ZONE &#40;Transact-SQL&#41;](../../t-sql/queries/at-time-zone-transact-sql.md)
   
   
 

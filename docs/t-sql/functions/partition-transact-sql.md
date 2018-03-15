@@ -1,5 +1,5 @@
 ---
-title: $PARTITION (transact-SQL) | Microsoft Docs
+title: $PARTITION (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -54,13 +54,13 @@ ms.lasthandoff: 11/21/2017
  Der Name einer beliebigen, vorhandenen Partitionsfunktion, für die eine Gruppe von Partitionierungsspaltenwerten angegeben wird.  
   
  *expression*  
- Ist ein [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) , deren Datentyp muss entweder übereinstimmen oder implizit in den Datentyp der entsprechenden Partitionierungsspalte konvertiert werden. *Ausdruck* kann auch der Name einer Partitionierungsspalte, die derzeit beteiligt sein *Partition_function_name*.  
+ Ein [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md), dessen Datentyp mit der zugehörigen Partitionierungsspalte entweder übereinstimmen oder implizit in diesen konvertierbar sein muss. *expression* kann auch der Name einer Partitionierungsspalte sein, die gerade an *partition_function_name* teilnimmt.  
   
 ## <a name="return-types"></a>Rückgabetypen  
  **int**  
   
-## <a name="remarks"></a>Hinweise  
- $PARTITION gibt eine **Int** Wert zwischen 1 und die Anzahl der Partitionen der Partitionsfunktion.  
+## <a name="remarks"></a>Remarks  
+ $PARTITION gibt einen **int**-Wert zwischen 1 und der Anzahl von der Partitionierungsfunktion betroffenen Partitionen zurück.  
   
  $PARTITION gibt die Partitionsnummer für jeden gültigen Wert zurück. Dabei spielt es keine Rolle, ob der Wert sich zurzeit in einer partitionierten Tabelle oder einem partitionierten Index befindet, die/der die Partitionsfunktion verwendet.  
   
@@ -105,7 +105,7 @@ SELECT * FROM Production.TransactionHistory
 WHERE $PARTITION.TransactionRangePF1(TransactionDate) = 5 ;  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [CREATE PARTITION FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-function-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: EXP (Transact-SQL) | Microsoft Docs
+title: EXP (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -35,7 +35,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="exp-transact-sql"></a>EXP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Gibt den Exponentialwert des angegebenen **"float"** Ausdruck.  
+  Gibt den exponentiellen Wert des angegebenen **float**-Ausdrucks zurück.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,17 +47,17 @@ EXP ( float_expression )
   
 ## <a name="arguments"></a>Argumente  
  *float_expression*  
- Ist ein [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) des Typs **"float"** oder eines Typs, der implizit konvertiert werden können **"float"**.  
+ Ein [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) vom Typ **float** oder von einem Typ, der implizit in **float** konvertiert werden kann.  
   
 ## <a name="return-types"></a>Rückgabetypen  
  **float**  
   
-## <a name="remarks"></a>Hinweise  
- Die Konstante **e** (2,718281...), ist die Basis des natürlichen Logarithmus.  
+## <a name="remarks"></a>Remarks  
+ Die Konstante **e** (2.718281…) ist die Basis von natürlichen Logarithmen.  
   
  Der Exponent einer Zahl ist die Konstante **e** potenziert mit der Zahl. Beispielsweise EXP(1,0) = e^1,0 = 2,71828182845905 und EXP(10) = e^10 = 22026,4657948067.  
   
- Der Exponentialwert des natürlichen Logarithmus einer Zahl ist die Zahl selbst: EXP (LOG (*n*)) =  *n* . Und der natürliche Logarithmus des Exponentialwerts einer Zahl ist die Zahl selbst: LOG (EXP (*n*)) =  *n* .  
+ Der natürliche Logarithmus des exponentiellen Werts einer Zahl ist die Zahl selbst: EXP (LOG (*n*)) = *n*. Und der natürliche Logarithmus des exponentiellen Werts einer Zahl ist die Zahl selbst: LOG (EXP (*n*)) = *n*.  
   
 ## <a name="examples"></a>Beispiele  
   
@@ -96,10 +96,10 @@ GO
 (1 row(s) affected)  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
 ### <a name="c-finding-the-exponent-of-a-number"></a>C. Suchen des Exponenten einer Zahl  
- Das folgende Beispiel gibt den Exponentialwert des angegebenen Werts zurück (`10`).  
+ Im folgenden Beispiel wird der exponentielle Wert des angegebenen Werts (`10`) zurückgegeben.  
   
 ```  
 SELECT EXP(10);  
@@ -112,7 +112,7 @@ SELECT EXP(10);
 22026.4657948067  
 ```  
   
-### <a name="d-finding-exponential-values-and-natural-logarithms"></a>D. Suchen exponentieller Werte und natürlicher Logarithmen  
+### <a name="d-finding-exponential-values-and-natural-logarithms"></a>D. Suchen von exponentiellen Werten und natürlichen Logarithmen  
  Im folgenden Beispiel werden der exponentielle Wert des natürlichen Logarithmus von `20` sowie der natürliche Logarithmus des exponentiellen Werts von `20` zurückgegeben. Bei diesen Funktionen handelt es sich um Umkehrfunktionen anderer Funktionen. Deshalb ist der Rückgabewert in beiden Fällen `20`.  
   
 ```  
@@ -126,10 +126,10 @@ SELECT EXP( LOG(20)), LOG( EXP(20));
 20                  20  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Mathematische Funktionen &#40; Transact-SQL &#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)   
- [Melden Sie sich &#40; Transact-SQL &#41;](../../t-sql/functions/log-transact-sql.md)   
- [LOG10 &#40; Transact-SQL &#41;](../../t-sql/functions/log10-transact-sql.md)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Mathematische Funktionen &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)   
+ [LOG &#40;Transact-SQL&#41;](../../t-sql/functions/log-transact-sql.md)   
+ [LOG10 &#40;Transact-SQL&#41;](../../t-sql/functions/log10-transact-sql.md)  
   
   
 

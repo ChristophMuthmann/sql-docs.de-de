@@ -1,5 +1,5 @@
 ---
-title: '@@ROWCOUNT (Transact-SQL) | Microsoft Docs'
+title: '@@ROWCOUNT (Transact-SQL) | Microsoft-Dokumentation'
 ms.custom: 
 ms.date: 08/29/2017
 ms.prod: sql-non-specified
@@ -38,7 +38,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="x40x40rowcount-transact-sql"></a>&#x40;&#x40;ROWCOUNT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Gibt die Anzahl der Zeilen zurück, auf die sich die letzte Anweisung ausgewirkt hat. Wenn die Anzahl der Zeilen mehr als 2 Milliarden ist, verwenden Sie [ROWCOUNT_BIG](../../t-sql/functions/rowcount-big-transact-sql.md).  
+  Gibt die Anzahl der Zeilen zurück, auf die sich die letzte Anweisung ausgewirkt hat. Beträgt die Anzahl der Zeilen mehr als 2 Milliarden, verwenden Sie [ROWCOUNT_BIG](../../t-sql/functions/rowcount-big-transact-sql.md).  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,28 +51,28 @@ ms.lasthandoff: 11/21/2017
 ## <a name="return-types"></a>Rückgabetypen  
  **int**  
   
-## <a name="remarks"></a>Hinweise  
- [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen können legen Sie den Wert im @@ROWCOUNT auf folgende Weise:  
+## <a name="remarks"></a>Remarks  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen können den Wert in @@ROWCOUNT auf folgende Weise festlegen:  
   
--   Set @@ROWCOUNT auf die Anzahl der Zeilen betroffen sind bzw. davon zu lesen. Zeilen werden möglicherweise an den Client gesendet.  
+-   @@ROWCOUNT wird auf die Anzahl der betroffenen oder gelesenen Zeilen festgelegt. Zeilen werden möglicherweise an den Client gesendet.  
   
--   Beibehalten@ROWCOUNT aus der vorherigen anweisungsausführung.  
+-   @@ROWCOUNT wird aus der vorherigen Anweisungsausführung übernommen.  
   
--   Zurücksetzen@ROWCOUNT auf 0 jedoch keinen Wert an den Client zurück.  
+-   @@ROWCOUNT wird auf 0 (null) zurückgesetzt, jedoch ohne den Wert an den Client zurückzugeben.  
   
- Anweisungen, die eine einfache Zuweisung, legen Sie immer die @@ROWCOUNT den Wert 1. Es werden keine Zeilen an den Client gesendet. Beispiele für diese Anweisungen: SET @*Local_variable*, RETURN, READTEXT und Select ohne abfrageanweisungen wie SELECT GETDATE() oder SELECT **"***Generic Text* **'**.  
+ Anweisungen, die eine einfache Zuweisung vornehmen, legen den Wert für @@ROWCOUNT stets auf 1 fest. Es werden keine Zeilen an den Client gesendet. Beispiele für derartige Anweisungen sind: SET @*local_variable*, RETURN, READTEXT sowie SELECT-Anweisungen ohne Abfrage, wie beispielsweise SELECT GETDATE() oder SELECT **'***Generic Text***'**.  
   
- Anweisungen, die eine Zuweisung in einer Abfrage vornehmen oder RETURN in einer Abfrage der @@ROWCOUNT Wert, der die Anzahl der Zeilen von betroffenen oder gelesenen die Abfrage z. B.: Wählen Sie*Local_variable* = c1 FROM t1.  
+ Anweisungen, die eine Zuweisung in einer Abfrage vornehmen oder RETURN in einer Abfrage verwenden, legen den Wert für @@ROWCOUNT auf die Anzahl der von der Abfrage betroffenen oder gelesenen Zeilen fest, z.B.: SELECT @*local_variable* = c1 FROM t1.  
   
- Data Manipulation Language (DML) Anweisungen legen die @@ROWCOUNT -Wert an die Anzahl der Zeilen, die von der Abfrage betroffen sind, und gibt diesen Wert an den Client zurück. Die DML-Anweisungen senden möglicherweise keine Zeilen an den Client.  
+ DML-Anweisungen (Data Manipulation Language = Datenbearbeitungssprache) legen den Wert für @@ROWCOUNT auf die Anzahl der von der Abfrage betroffenen Zeilen fest und geben diesen Wert an den Client zurück. Die DML-Anweisungen senden möglicherweise keine Zeilen an den Client.  
   
- DECLARE CURSOR und FETCH legen Sie den @@ROWCOUNT den Wert 1.  
+ DECLARE CURSOR und FETCH legen den Wert für @@ROWCOUNT auf 1 fest.  
   
- EXECUTE-Anweisungen behalten die vorherige @@ROWCOUNT.  
+ EXECUTE-Anweisungen behalten die vorherige @@ROWCOUNT-Einstellung bei.  
   
- Anweisungen wie z. B. verwenden, legen Sie \<Option >, DEALLOCATE CURSOR, CLOSE CURSOR, BEGIN TRANSACTION oder COMMIT TRANSACTION der ROWCOUNT-Wert auf 0 zurückgesetzt.  
+ Mit Anweisungen wie USE, SET \<Option>, DEALLOCATE CURSOR, CLOSE CURSOR, BEGIN TRANSACTION oder COMMIT TRANSACTION wird der ROWCOUNT-Wert auf 0 (null) zurückgesetzt.  
   
- Systemintern kompilierte gespeicherte Prozeduren erhalten die vorherigen @@ROWCOUNT. [!INCLUDE[tsql](../../includes/tsql-md.md)]Legen Sie die Anweisungen in systemintern kompilierten gespeicherten Prozeduren nicht@ROWCOUNT. Weitere Informationen finden Sie unter [Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md).  
+ Nativ kompilierte gespeicherte Prozeduren behalten die vorherige @@ROWCOUNT-Einstellung bei. [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen in nativ kompilierten gespeicherten Prozeduren legen die @@ROWCOUNT-Einstellung nicht fest. Weitere Informationen finden Sie unter [Nativ kompilierte gespeicherte Prozeduren](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md).  
   
 ## <a name="examples"></a>Beispiele  
  Das folgende Beispiel führt eine `UPDATE`-Anweisung aus und erkennt mithilfe von `@@ROWCOUNT`, ob Zeilen geändert wurden.  
@@ -88,8 +88,8 @@ PRINT 'Warning: No rows were updated';
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Systemfunktionen &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)   
- [SET ROWCOUNT &#40; Transact-SQL &#41;](../../t-sql/statements/set-rowcount-transact-sql.md)  
+ [SET ROWCOUNT &#40;Transact-SQL&#41;](../../t-sql/statements/set-rowcount-transact-sql.md)  
   
   

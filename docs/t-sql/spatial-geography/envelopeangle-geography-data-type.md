@@ -1,5 +1,5 @@
 ---
-title: EnvelopeAngle (Geography-Datentyp) | Microsoft Docs
+title: EnvelopeAngle (geography-Datentyp) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -46,16 +46,16 @@ EnvelopeAngle( )
 ```  
   
 ## <a name="return-types"></a>Rückgabetypen  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Rückgabetyp: **"float"**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Rückgabetyp: **float**  
   
  CLR-Rückgabetyp: **SqlDouble**  
   
-## <a name="remarks"></a>Hinweise  
- Diese Methode gibt einen Punkt in der **geography** -Instanz in Grad zurück. Bei Verwendung mit EnvelopeCenter(), `EnvelopeAngle()` gibt einen umschließenden Kreis einer **Geography** Instanz.  
+## <a name="remarks"></a>Remarks  
+ Diese Methode gibt einen Punkt in der **geography** -Instanz in Grad zurück. Bei Verwendung mit EnvelopeCenter () gibt `EnvelopeAngle()` einen umschließenden Kreis einer **geography**-Instanz zurück.  
   
- In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], diese Methode wurde erweitert und **FullGlobe** Instanzen.  
+ In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] wurde diese Methode auf **FullGlobe**-Instanzen erweitert.  
   
- Die hemisphäreneinschränkung auf `EnvelopeAngle()` in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] wurde entfernt. Bei Instanzen, deren Winkel 90 Grad übersteigt, wird jedoch 180 Grad zurückgegeben. `EnvelopeAngle()`ist nicht exakt für **Geography** Instanzen, die mehr als eine Hemisphäre umfassen.  
+ Die in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] für `EnvelopeAngle()` verwendete Hemisphäreneinschränkung wurde entfernt. Bei Instanzen, deren Winkel 90 Grad übersteigt, wird jedoch 180 Grad zurückgegeben. `EnvelopeAngle()` ist bei Instanzen von **geography**, die mehr als eine Hemisphäre umfassen, nicht exakt.  
   
 ## <a name="examples"></a>Beispiele  
   
@@ -64,8 +64,8 @@ DECLARE @g geography = 'LINESTRING(-120 45, -120 0, -90 0)';
 SELECT @g.EnvelopeAngle();  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Erweiterte Methoden für Geography-Instanzen](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
- [EnvelopeCenter &#40; Geography-Datentyp &#41;](../../t-sql/spatial-geography/envelopecenter-geography-data-type.md)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Erweiterte Methoden für geography-Instanzen](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
+ [EnvelopeCenter &#40;geography-Datentyp&#41;](../../t-sql/spatial-geography/envelopecenter-geography-data-type.md)  
   
   

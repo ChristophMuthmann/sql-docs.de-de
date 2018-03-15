@@ -1,5 +1,5 @@
 ---
-title: BACKUP SERVICE MASTER KEY (Transact-SQL) | Microsoft Docs
+title: BACKUP SERVICE MASTER KEY (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -54,13 +54,13 @@ BACKUP SERVICE MASTER KEY TO FILE = 'path_to_file'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- Datei **= "***Dateipfad***"**  
+ FILE **= '***path_to_file***'**  
  Gibt den vollständigen Pfad einschließlich des Dateinamens zu der Datei an, in die der Diensthauptschlüssel exportiert wird. Dies kann ein lokaler Pfad oder ein UNC-Pfad zu einem Netzwerkspeicherort sein.  
   
- Kennwort **= "***Kennwort***"**  
+ PASSWORD **='***password***'**  
  Das zum Verschlüsseln des Diensthauptschlüssels in der Sicherungsdatei verwendete Kennwort. Dieses Kennwort unterliegt Komplexitätsüberprüfungen. Weitere Informationen finden Sie unter [Password Policy](../../relational-databases/security/password-policy.md).  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Der Diensthauptschlüssel sollte gesichert und an einem sicheren Ort außerhalb der Geschäftsräume aufbewahrt werden. Das Erstellen dieser Sicherung sollte eine der ersten administrativen Aktionen sein, die auf dem Server ausgeführt werden.  
   
 ## <a name="permissions"></a>Berechtigungen  
@@ -73,8 +73,8 @@ BACKUP SERVICE MASTER KEY TO FILE = 'path_to_file'
 BACKUP SERVICE MASTER KEY TO FILE = 'c:\temp_backups\keys\service_master_key' ENCRYPTION BY PASSWORD = '3dH85Hhk003GHk2597gheij4';  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [ALTER SERVICE MASTER KEY &#40; Transact-SQL &#41;](../../t-sql/statements/alter-service-master-key-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [ALTER SERVICE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-service-master-key-transact-sql.md)   
  [RESTORE SERVICE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-service-master-key-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Erstellen von NACHRICHTENTYP (Transact-SQL) | Microsoft Docs
+title: CREATE MESSAGE TYPE (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 04/10/2017
 ms.prod: sql-non-specified
@@ -64,10 +64,10 @@ CREATE MESSAGE TYPE message_type_name
   
 ## <a name="arguments"></a>Argumente  
  *message_type_name*  
- Der Name des Nachrichtentyps, der erstellt werden soll. Ein neuer Nachrichtentyp wird in der aktuellen Datenbank erstellt, sein Besitzer ist der in der AUTHORIZATION-Klausel angegebene Prinzipal. Server-, Datenbank- und Schemaname können nicht angegeben werden. Die *Message_type_name* kann bis zu 128 Zeichen sein.  
+ Der Name des Nachrichtentyps, der erstellt werden soll. Ein neuer Nachrichtentyp wird in der aktuellen Datenbank erstellt, sein Besitzer ist der in der AUTHORIZATION-Klausel angegebene Prinzipal. Server-, Datenbank- und Schemaname können nicht angegeben werden. *message_type_name* kann aus bis zu 128 Zeichen bestehen.  
   
- Autorisierung *Owner_name*  
- Legt den Besitzer des Nachrichtentyps auf den angegebenen Datenbankbenutzer oder die angegebene Datenbankrolle fest. Wenn der aktuelle Benutzer ist **Dbo** oder **sa**, *Owner_name* kann der Name eines beliebigen gültigen Benutzers oder einer Rolle sein. Andernfalls *Owner_name* kann den Namen des aktuellen Benutzers, den Namen eines Benutzers an, die der aktuelle Benutzer IMPERSONATE-Berechtigungen verfügt oder der Name einer Rolle, zu der der aktuelle Benutzer gehört. Wird diese Klausel nicht angegeben, ist der Nachrichtentyp im Besitz des aktuellen Benutzers.  
+ AUTHORIZATION *owner_name*  
+ Legt den Besitzer des Nachrichtentyps auf den angegebenen Datenbankbenutzer oder die angegebene Datenbankrolle fest. Ist der aktuelle Benutzer **dbo** oder **sa**, kann *owner_name* der Name eines beliebigen gültigen Benutzers bzw. einer beliebigen gültigen Rolle sein. Andernfalls muss *owner_name* der Name des aktuellen Benutzers, der Name eines Benutzers, für den der aktuelle Benutzer IMPERSONATE-Berechtigungen besitzt, oder der Name einer Rolle sein, der der aktuelle Benutzer angehört. Wird diese Klausel nicht angegeben, ist der Nachrichtentyp im Besitz des aktuellen Benutzers.  
   
  VALIDATION  
  Gibt an, wie [!INCLUDE[ssSB](../../includes/sssb-md.md)] den Nachrichtentext für Nachrichten von diesem Typ überprüft. Wird diese Klausel nicht angegeben, ist die Standardeinstellung NONE.  
@@ -81,20 +81,20 @@ CREATE MESSAGE TYPE message_type_name
  WELL_FORMED_XML  
  Gibt an, dass der Nachrichtentext wohlgeformte XML-Daten enthalten muss.  
   
- VALID_XML WITH SCHEMA COLLECTION *Schema_collection_name*  
- Gibt an, dass der Nachrichtentext XML-Daten enthalten muss, die einem Schema in der angegebenen schemaauflistung entsprechen den *Schema_collection_name* muss der Name einer vorhandenen XML-schemaauflistung sein.  
+ VALID_XML WITH SCHEMA COLLECTION *schema_collection_name*  
+ Gibt an, dass der Nachrichtentext XML-Daten enthalten muss, die einem Schema in der angegebenen Schemaauflistung entsprechen. *schema_collection_name* muss der Name einer vorhandenen XML-Schemaauflistung sein.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] überprüft eingehende Nachrichten. Enthält eine Nachricht Text, der nicht dem angegebenen Überprüfungstyp entspricht, verwirft [!INCLUDE[ssSB](../../includes/sssb-md.md)] die ungültige Nachricht und gibt eine Fehlermeldung an den Dienst zurück, der die Nachricht gesendet hat.  
   
  Auf beiden Seiten einer Konversation muss derselbe Name für einen Nachrichtentyp definiert sein. Zur Vereinfachung der Problembehandlung geben beide Seiten einer Konversation in der Regel die gleiche Überprüfung für den Nachrichtentyp an, obwohl [!INCLUDE[ssSB](../../includes/sssb-md.md)] dies nicht voraussetzt.  
   
- Ein Nachrichtentyp kann kein temporäres Objekt sein. Beginnend mit Namen von Nachrichtentypen  **#**  zulässig sind, sind jedoch dauerhafte Objekte.  
+ Ein Nachrichtentyp kann kein temporäres Objekt sein. Namen von Nachrichtentypen, die mit **#** beginnen, sind zulässig. Hierbei handelt es sich jedoch um dauerhafte Objekte.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Die Berechtigung zum Erstellen eines Nachrichtentyps verfügen standardmäßig Mitglieder der der **Db_ddladmin** oder **Db_owner** festen Datenbankrollen und die **Sysadmin** festen Serverrolle "".  
+ Über die Berechtigung zum Erstellen eines Nachrichtentyps verfügen standardmäßig Mitglieder der festen Datenbankrollen **db_ddladmin** und **db_owner** sowie der festen Serverrolle **sysadmin**.  
   
- REFERENCES-Berechtigung für einen Nachrichtentyp standardmäßig verfügen der Besitzer des Nachrichtentyps, der Mitglied der **Db_owner** Datenbankrolle und Mitglieder der festen der **Sysadmin** festen Serverrolle "".  
+ Über die REFERENCES-Berechtigung für einen Nachrichtentyp verfügen standardmäßig der Besitzer des Nachrichtentyps, die Mitglieder der festen Datenbankrolle **db_owner** und die Mitglieder der festen Serverrolle **sysadmin**.  
   
  Wenn in der CREATE MESSAGE TYPE-Anweisung eine Schemaauflistung angegeben ist, muss der Benutzer, der die Anweisung ausführt, über die REFERENCES-Berechtigung in der angegebenen Schemaauflistung verfügen.  
   
@@ -166,7 +166,7 @@ CREATE MESSAGE TYPE
     VALIDATION = NONE ;  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [ALTER MESSAGE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-message-type-transact-sql.md)   
  [DROP MESSAGE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-message-type-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  

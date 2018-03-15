@@ -1,5 +1,5 @@
 ---
-title: SET FMTONLY (Transact-SQL) | Microsoft Docs
+title: SET FMTONLY (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/21/2017
   Gibt nur Metadaten an den Client zurück. Kann verwendet werden, um das Format der Antwort zu testen, ohne die Abfrage tatsächlich auszuführen.  
   
 > [!NOTE]  
->  Verwenden Sie diese Funktion nicht. Diese Funktion wurde ersetzt durch [Sp_describe_first_result_set &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md), [Sp_describe_undeclared_parameters &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md), [Sys. dm_exec_describe_first_result_set &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md), und [Sys. dm_exec_describe_first_result_set_for_object &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md).  
+>  Verwenden Sie diese Funktion nicht. Dieses Feature wurde durch [sp_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md), [sp_describe_undeclared_parameters &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md), [sys.dm_exec_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md) und [sys.dm_exec_describe_first_result_set_for_object &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md) ersetzt.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,7 +51,7 @@ ms.lasthandoff: 11/21/2017
 SET FMTONLY { ON | OFF }   
 ```  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Wenn SET FMTONLY aktiviert ist, werden keine Zeilen verarbeitet oder aufgrund der Anforderung an den Client gesendet.  
   
  Die Einstellung von SET FMTONLY wird zur Ausführungszeit und nicht zur Analysezeit festgelegt.  
@@ -61,7 +61,7 @@ SET FMTONLY { ON | OFF }
   
 ## <a name="examples"></a>Beispiele  
   
-### <a name="a-view-the-column-header-information-for-a-query-without-actually-running-the-query"></a>A: Anzeigen der Spaltenheader für eine Abfrage, ohne die Abfrage tatsächlich auszuführen.  
+### <a name="a-view-the-column-header-information-for-a-query-without-actually-running-the-query"></a>A: Anzeigen der Spaltenheaderinformationen für eine Abfrage, ohne dabei die Abfrage auszuführen.  
  Im folgenden Beispiel wird die `SET FMTONLY`-Einstellung zu `ON` geändert und eine `SELECT`-Anweisung ausgeführt. Die Einstellung bewirkt, dass die Anweisung nur die Spalteninformationen, aber keine Datenzeilen zurückgibt.  
   
 ```  
@@ -76,10 +76,10 @@ SET FMTONLY OFF;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
-### <a name="b-view-the-column-header-information-for-a-query-without-actually-running-the-query"></a>B. Anzeigen der Spaltenheader für eine Abfrage ohne die Abfrage tatsächlich auszuführen.  
- Im folgende Beispiel wird gezeigt, wie nur die Spalte (Metadaten) Headerinformationen für eine Abfrage zurückgegeben wird. Der Batch beginnt mit FMTONLY auf OFF festgelegt und FMTONLY On ändert, bevor Sie die SELECT-Anweisung. Dies bewirkt, dass die SELECT-Anweisung nur die Spaltenheader zurückgegeben; Es werden keine Zeilen mit Daten zurückgegeben.  
+### <a name="b-view-the-column-header-information-for-a-query-without-actually-running-the-query"></a>B. B: Anzeigen der Spaltenheaderinformationen für eine Abfrage, ohne dabei die Abfrage auszuführen.  
+ Im folgenden Beispiel werden nur die Spaltenheaderinformationen (Metadaten) für eine Abfrage zurückgegeben. Zu Beginnt ist FMTONLY für den Batch auf OFF festgelegt. Vor der Ausführung der SELECT-Anweisung wird FMTONLY jedoch auf ON festgelegt. Dadurch gibt die SELECT-Anweisung nur die Spaltenheader und keine Datenzeilen zurück.  
   
 ```  
 -- Uses AdventureWorks  
@@ -94,7 +94,7 @@ END
   
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SET-Anweisungen &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)  
   
   

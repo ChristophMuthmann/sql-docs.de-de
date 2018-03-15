@@ -1,5 +1,5 @@
 ---
-title: Erstellen Sie das PARTITIONSSCHEMA (Transact-SQL) | Microsoft Docs
+title: CREATE PARTITION SCHEME (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 04/10/2017
 ms.prod: sql-non-specified
@@ -45,7 +45,7 @@ ms.lasthandoff: 12/07/2017
 # <a name="create-partition-scheme-transact-sql"></a>CREATE PARTITION SCHEME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Erstellt ein Schema in der aktuellen Datenbank, das die Partitionen einer partitionierten Tabelle oder eines partitionierten Indexes Dateigruppen zuordnet. Die Anzahl und die Domäne der Partitionen einer partitionierten Tabelle oder eines partitionierten Indexes werden in einer Partitionsfunktion bestimmt. Eine Partitionsfunktion muss zunächst erstellt werden, einem [CREATE PARTITION FUNCTION](../../t-sql/statements/create-partition-function-transact-sql.md) Anweisung vor dem Erstellen eines Partitionsschemas.  
+  Erstellt ein Schema in der aktuellen Datenbank, das die Partitionen einer partitionierten Tabelle oder eines partitionierten Indexes Dateigruppen zuordnet. Die Anzahl und die Domäne der Partitionen einer partitionierten Tabelle oder eines partitionierten Indexes werden in einer Partitionsfunktion bestimmt. Eine Partitionsfunktion muss zunächst in einer [CREATE PARTITION FUNCTION](../../t-sql/statements/create-partition-function-transact-sql.md)-Anweisung erstellt werden, bevor ein Partitionsschema erstellt wird.  
 
 >[!NOTE]
 >In Azure SQL-Datenbank werden nur primäre Dateigruppen unterstützt.  
@@ -63,24 +63,24 @@ AS PARTITION partition_function_name
   
 ## <a name="arguments"></a>Argumente  
  *partition_scheme_name*  
- Der Name des Partitionsschemas. Partitionsschemanamen müssen innerhalb der Datenbank eindeutig sein und den Regeln für entsprechen [Bezeichner](../../relational-databases/databases/database-identifiers.md).  
+ Der Name des Partitionsschemas. Partitionsschemanamen müssen innerhalb der Datenbank eindeutig sein und den Regeln für [Bezeichner](../../relational-databases/databases/database-identifiers.md) entsprechen.  
   
  *partition_function_name*  
- Der Name der Partitionsfunktion, die das Partitionsschema verwendet. Von der Partitionsfunktion erstellte Partitionen werden den im Partitionsschema angegebenen Dateigruppen zugeordnet. *Partition_function_name* muss bereits in der Datenbank vorhanden sein. Eine einzelne Partition kann nicht sowohl FILESTREAM- als auch nicht-FILESTREAM-Dateigruppen enthalten.  
+ Der Name der Partitionsfunktion, die das Partitionsschema verwendet. Von der Partitionsfunktion erstellte Partitionen werden den im Partitionsschema angegebenen Dateigruppen zugeordnet. *partition_function_name* muss in der Datenbank bereits vorhanden sein. Eine einzelne Partition kann nicht sowohl FILESTREAM- als auch nicht-FILESTREAM-Dateigruppen enthalten.  
   
  ALL  
- Gibt an, dass alle Partitionen der Dateigruppe in bereitgestellten zuordnen *File_group_name*, oder der primären Dateigruppe Wenn **[**primären**]** angegeben ist. Wenn ALL angegeben ist, nur eine *File_group_name* kann angegeben werden.  
+ Legt fest, dass alle Partitionen der in *file_group_name* angegebenen Dateigruppe oder der primären Dateigruppe zugeordnet werden, falls **[**PRIMARY**]** angegeben ist. Wenn ALL angegeben ist, kann nur ein einzelner *file_group_name*-Wert angegeben werden.  
   
- *File_group_name* | **[** primären **]** [ **,***.. ...n*]  
- Gibt die Namen der Dateigruppen an, die vom angegebenen Partitionen enthalten *Partition_function_name*. *File_group_name* muss bereits in der Datenbank vorhanden sein.  
+ *file_group_name* | **[** PRIMARY **]** [ **,***...n*]  
+ Gibt die Namen der Dateigruppen an, in denen die durch *partition_function_name* angegebenen Partitionen gespeichert werden. *file_group_name* muss bereits in der Datenbank vorhanden sein.  
   
- Wenn **[**primären**]** angegeben ist, wird die Partition in der primären Dateigruppe gespeichert ist. Wenn ALL angegeben ist, nur eine *File_group_name* kann angegeben werden. Partitionen werden zugewiesen, Dateigruppen, beginnend mit der Partition 1, in der Reihenfolge, in dem die Dateigruppen finden Sie unter [**,***.. ...n*]. Die gleiche *File_group_name* kann angegeben werden, mehr als einmal in [**,***.. ...n*]. Wenn  *n*  ist nicht ausreichend zum Aufnehmen der Anzahl der Partitionen, die im angegebenen *Partition_function_name*, CREATE PARTITION SCHEME verursacht einen Fehler.  
+ Wenn **[**PRIMARY**]** angegeben ist, wird die Partition in der primären Dateigruppe gespeichert. Wenn ALL angegeben ist, kann nur ein einzelner *file_group_name*-Wert angegeben werden. Partitionen werden, beginnend mit der Partition 1, Dateigruppen in der Reihenfolge zugewiesen, in der die Dateigruppen in [**,***...n*] aufgelistet sind. Derselbe *file_group_name*-Wert kann mehrmals in [**,***...n*] angegeben werden. Falls *n* zum Speichern der in *partition_function_name* angegebenen Anzahl von Partitionen nicht ausreichend ist, wird für CREATE PARTITION SCHEME ein Fehler gemeldet.  
   
- Wenn *Partition_function_name* generiert weniger Partitionen als Dateigruppen, die erste nicht zugewiesene Dateigruppe als NEXT USED markiert und eine Meldung anzeigt, benennen die NEXT USED-Dateigruppe. Wenn ALL angegeben ist, das einzige *File_group_name* verwaltet seine NEXT USED-Eigenschaft für dieses *Partition_function_name*. Die NEXT USED-Dateigruppe erhält eine zusätzliche Partition, falls eine solche in einer ALTER PARTITION FUNCTION-Anweisung erstellt wird. Verwenden Sie ALTER PARTITION SCHEME, um zusätzliche nicht zugewiesene Dateigruppen zum Speichern neuer Partitionen zu erstellen.  
+ Falls *partition_function_name* weniger Partitionen als Dateigruppen generiert, wird die erste nicht zugewiesene Dateigruppe als NEXT USED markiert, und eine Informationsmeldung mit der NEXT USED-Dateigruppe wird angezeigt. Falls ALL angegeben ist, behält der einzige *file_group_name*-Wert seine NEXT USED-Eigenschaft für diesen *partition_function_name*-Wert bei. Die NEXT USED-Dateigruppe erhält eine zusätzliche Partition, falls eine solche in einer ALTER PARTITION FUNCTION-Anweisung erstellt wird. Verwenden Sie ALTER PARTITION SCHEME, um zusätzliche nicht zugewiesene Dateigruppen zum Speichern neuer Partitionen zu erstellen.  
   
- Bei Angabe der primary-Dateigruppe in *File_group_name* [1**,***.. ...n*], primäre muss begrenzt sein, wie in **[**primären**]** , da es sich um ein Schlüsselwort handelt.  
+ Wenn Sie die primäre Dateigruppe in *file_group_name* [ 1**,***...n*] angeben, muss PRIMARY durch Trennzeichen begrenzt sein, wie z.B. in **[**PRIMARY**]**, da es sich um ein Schlüsselwort handelt.  
   
- Nur PRIMARY wird für [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] unterstützt. Siehe Beispiel E unten. 
+ Nur PRIMARY wird für [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] unterstützt. Weitere Informationen finden Sie unten im Beispiel E. 
   
 ## <a name="permissions"></a>Berechtigungen  
  Die folgenden Berechtigungen können für CREATE PARTITION SCHEME verwendet werden:  
@@ -105,13 +105,13 @@ AS PARTITION myRangePF1
 TO (test1fg, test2fg, test3fg, test4fg);  
 ```  
   
- Die Partitionen einer Tabelle, die Partitionsfunktion verwendet `myRangePF1` auf Partitionierungsspalte **col1** würde zugewiesen werden, wie in der folgenden Tabelle gezeigt.  
+ Die Partitionen einer Tabelle, die die `myRangePF1`-Partitionsfunktion zum Partitionieren der **col1**-Spalte verwendet, werden wie in der folgenden Tabelle zugewiesen:  
   
 ||||||  
 |-|-|-|-|-|  
 |**Dateigruppe**|`test1fg`|`test2fg`|`test3fg`|`test4fg`|  
 |**Partition**|1|2|3|4|  
-|**Werte**|**col1** <= `1`|**col1**  >  `1` AND **col1** <= `100`|**col1**  >  `100` AND **col1** <= `1000`|**col1** > `1000`|  
+|**Werte**|**col1** <= `1`|**col1** > `1` AND **col1** <= `100`|**col1** > `100` UND **col1** <= `1000`|**col1** > `1000`|  
   
 ### <a name="b-creating-a-partition-scheme-that-maps-multiple-partitions-to-the-same-filegroup"></a>B. Erstellen eines Partitionsschemas, mit dem mehrere Partitionen derselben Dateigruppe zugeordnet werden  
  Verwenden Sie das ALL-Schlüsselwort, wenn alle Partitionen derselben Dateigruppe zugeordnet werden. Falls aber mehrere, jedoch nicht alle Partitionen derselben Dateigruppe zugeordnet werden, muss der Dateigruppenname wiederholt werden, wie im folgenden Beispiel gezeigt.  
@@ -125,13 +125,13 @@ AS PARTITION myRangePF2
 TO ( test1fg, test1fg, test1fg, test2fg );  
 ```  
   
- Die Partitionen einer Tabelle, die Partitionsfunktion verwendet `myRangePF2` auf Partitionierungsspalte **col1** würde zugewiesen werden, wie in der folgenden Tabelle gezeigt.  
+ Die Partitionen einer Tabelle, die die `myRangePF2`-Partitionsfunktion zum Partitionieren der **col1**-Spalte verwendet, werden wie in der folgenden Tabelle zugewiesen:  
   
 ||||||  
 |-|-|-|-|-|  
 |**Dateigruppe**|`test1fg`|`test1fg`|`test1fg`|`test2fg`|  
 |**Partition**|1|2|3|4|  
-|**Werte**|**col1** <= `1`|**col1** > 1 AND **col1** <= `100`|**col1**  >  `100` AND **col1** <= `1000`|**col1** > `1000`|  
+|**Werte**|**col1** <= `1`|**col1** > 1 UND **col1** <= `100`|**col1** > `100` UND **col1** <= `1000`|**col1** > `1000`|  
   
 ### <a name="c-creating-a-partition-scheme-that-maps-all-partitions-to-the-same-filegroup"></a>C. Erstellen eines Partitionsschemas, mit dem alle Partitionen derselben Dateigruppe zugeordnet werden  
  Im folgenden Beispiel wird dieselbe Partitionsfunktion wie in den vorherigen Beispielen erstellt, und ein Partitionsschema wird erstellt, mit dem alle Partitionen derselben Dateigruppe zugeordnet werden.  
@@ -159,14 +159,14 @@ TO (test1fg, test2fg, test3fg, test4fg, test5fg)
   
  Beim Ausführen der Anweisung wird die folgende Meldung zurückgegeben.  
   
-Das Partitionsschema "myRangePS4" wurde erfolgreich erstellt. "test5fg" ist als der nächste verwendete Dateigruppe im Partitionsschema "myRangePS4" gekennzeichnet.  
+Partition scheme 'myRangePS4' has been created successfully. 'test5fg' is marked as the next used filegroup in partition scheme 'myRangePS4'. (Das Partitionsschema „myRangePS4“ wurde erfolgreich erstellt. „test5fg“wird als nächste Dateigruppe im Partitionsschema „myRangePS4“ gekennzeichnet.)  
   
   
  Falls die `myRangePF4`-Partitionsfunktion geändert wird, um eine Partition hinzuzufügen, erhält die `test5fg`-Dateigruppe die neu erstellte Partition.  
 
-### <a name="e-creating-a-partition-schema-only-on-primary---only-primary-is-supported-for-includesqldbesaincludessqldbesa-mdmd"></a>E. Erstellen eines Partition Schemas nur für wird primären – nur das primäre für unterstützt[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
+### <a name="e-creating-a-partition-schema-only-on-primary---only-primary-is-supported-for-includesqldbesaincludessqldbesa-mdmd"></a>E. Erstellen eines Partitionsschemas, das ausschließlich für PRIMARY verwendet wird (für [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] wird nur PRIMARY unterstützt)
 
- Im folgenden Beispiel wird eine Partitionsfunktion zum Partitionieren einer Tabelle oder eines Indexes in vier Partitionen erstellt. Anschließend wird ein Partitionsschema erstellt, der angibt, dass alle Partitionen in der primären Dateigruppe erstellt werden.  
+ Im folgenden Beispiel wird eine Partitionsfunktion zum Partitionieren einer Tabelle oder eines Indexes in vier Partitionen erstellt. Anschließend wird ein Partitionsschema erstellt, das festlegt, dass alle Partitionen in der PRIMARY-Dateigruppe erstellt werden.  
   
 ```  
 CREATE PARTITION FUNCTION myRangePF1 (int)  
@@ -177,16 +177,16 @@ AS PARTITION myRangePF1
 ALL TO ( [PRIMARY] );  
 ```
    
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [CREATE PARTITION FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-function-transact-sql.md)   
- [ALTER PARTITION SCHEME &#40; Transact-SQL &#41;](../../t-sql/statements/alter-partition-scheme-transact-sql.md)   
- [DROP PARTITION SCHEME &#40; Transact-SQL &#41;](../../t-sql/statements/drop-partition-scheme-transact-sql.md)   
+ [ALTER PARTITION SCHEME &#40;Transact-SQL&#41;](../../t-sql/statements/alter-partition-scheme-transact-sql.md)   
+ [DROP PARTITION SCHEME &#40;Transact-SQL&#41;](../../t-sql/statements/drop-partition-scheme-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
- [Erstellen Sie partitionierter Tabellen und Indizes](../../relational-databases/partitions/create-partitioned-tables-and-indexes.md)   
- [Sys. partition_schemes &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-partition-schemes-transact-sql.md)   
- [Sys. data_spaces &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)   
- [Sys. destination_data_spaces &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-destination-data-spaces-transact-sql.md)   
- [Sys.Partitions &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)   
+ [Erstellen partitionierter Tabellen und Indizes](../../relational-databases/partitions/create-partitioned-tables-and-indexes.md)   
+ [sys.partition_schemes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partition-schemes-transact-sql.md)   
+ [sys.data_spaces &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)   
+ [sys.destination_data_spaces &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-destination-data-spaces-transact-sql.md)   
+ [sys.partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)   
  [sys.tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md)   
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
  [sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)  

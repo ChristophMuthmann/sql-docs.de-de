@@ -1,5 +1,5 @@
 ---
-title: Control-of-Flow | Microsoft Docs
+title: Ablaufsteuerung | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -29,7 +29,7 @@ ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="control-of-flow"></a>Der Ablaufsteuerung
+# <a name="control-of-flow"></a>Ablaufsteuerung
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Die Ablaufsteuerungs-Schlüsselwörter der Sprache [!INCLUDE[tsql](../../includes/tsql-md.md)] sind die folgenden:  
@@ -42,13 +42,13 @@ ms.lasthandoff: 01/25/2018
 |[GOTO](../../t-sql/language-elements/goto-transact-sql.md) *label*|[WAITFOR](../../t-sql/language-elements/waitfor-transact-sql.md)|  
 |[IF...ELSE](../../t-sql/language-elements/if-else-transact-sql.md)|[WHILE](../../t-sql/language-elements/while-transact-sql.md)|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)   
- [Schrägstrich-Stern &#40; Blockkommentar &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/slash-star-comment-transact-sql.md)   
- [-- &#40;Comment&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/comment-transact-sql.md)   
- [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
+ [Schrägstrich – Stern &#40;Blockkommentar&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/slash-star-comment-transact-sql.md)   
+ [-- &#40;Kommentar&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/comment-transact-sql.md)   
+ [DEKLARIEREN SIE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
  [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   
  [PRINT &#40;Transact-SQL&#41;](../../t-sql/language-elements/print-transact-sql.md)   
- [RAISERROR &#40; Transact-SQL &#41;](../../t-sql/language-elements/raiserror-transact-sql.md)  
+ [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)  
   
   

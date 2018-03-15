@@ -1,5 +1,5 @@
 ---
-title: CREATE DEFAULT (Transact-SQL) | Microsoft Docs
+title: CREATE DEFAULT (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 11/25/2015
 ms.prod: sql-non-specified
@@ -58,21 +58,21 @@ AS constant_expression [ ; ]
  Der Name des Schemas, zu dem der Standardwert gehört.  
   
  *default_name*  
- Der Name des Standardwerts. Namen für Standardwerte müssen den Regeln für entsprechen [Bezeichner](../../relational-databases/databases/database-identifiers.md). Das Angeben des Standardbesitzernamens ist optional.  
+ Der Name des Standardwerts. Namen für Standardwerte müssen den Regeln für [Bezeichner](../../relational-databases/databases/database-identifiers.md) entsprechen. Das Angeben des Standardbesitzernamens ist optional.  
   
  *constant_expression*  
- Ist ein [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) , enthält nur konstante Werte, die (es kann nicht die Namen von Spalten oder andere Datenbankobjekte enthalten). Es kann jede Konstante, jede integrierte Funktion oder jeder mathematische Ausdruck verwendet werden, außer solchen, die Aliasdatentypen enthalten. Benutzerdefinierte Funktionen können verwendet werden... Schließen Sie Zeichen- und Datumskonstanten in einfache Anführungszeichen (**"**); monetären, Integer und Gleitkommakonstanten erfordern keine Anführungszeichen. Binären Daten muss 0x vorangestellt werden, und Währungsdaten muss das Dollarzeichen ($) vorangestellt werden. Der Standardwert muss mit dem Datentyp der Spalte kompatibel sein.  
+ Ein [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md), der nur konstante Werte enthält (nicht zulässig sind Namen von Spalten oder anderen Datenbankobjekten). Es kann jede Konstante, jede integrierte Funktion oder jeder mathematische Ausdruck verwendet werden, außer solchen, die Aliasdatentypen enthalten. Benutzerdefinierte Funktionen können nicht verwendet werden. Setzen Sie Zeichen- und Datumskonstanten in einfache Anführungszeichen (**'**). Bei Integer-, Währungs- und Gleitkommakonstanten sind keine Anführungszeichen erforderlich. Binären Daten muss 0x vorangestellt werden, und Währungsdaten muss das Dollarzeichen ($) vorangestellt werden. Der Standardwert muss mit dem Datentyp der Spalte kompatibel sein.  
   
-## <a name="remarks"></a>Hinweise  
- Der Name eines Standardwerts kann nur in der aktuellen Datenbank erstellt werden. Innerhalb einer Datenbank müssen die Namen für Standardwerte für jedes Schema eindeutig sein. Verwenden Sie der Standardwert erstellt wurde, **Sp_bindefault** sie an eine Spalte oder an einen Aliasdatentyp binden.  
+## <a name="remarks"></a>Remarks  
+ Der Name eines Standardwerts kann nur in der aktuellen Datenbank erstellt werden. Innerhalb einer Datenbank müssen die Namen für Standardwerte für jedes Schema eindeutig sein. Verwenden Sie nach dem Erstellen eines Standardwerts **sp_bindefault**, um diesen an eine Spalte oder einen Aliasdatentyp zu binden.  
   
- Falls der Standardwert inkompatibel mit dem Datentyp der Spalte ist, an die er gebunden ist, erzeugt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] beim Versuch, den Standardwert einzufügen, eine Fehlermeldung. Beispielsweise kann nicht n/v verwendet werden, als Standardwert für eine **numerischen** Spalte.  
+ Falls der Standardwert inkompatibel mit dem Datentyp der Spalte ist, an die er gebunden ist, erzeugt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] beim Versuch, den Standardwert einzufügen, eine Fehlermeldung. N/V kann z.B. nicht als Standardwert für **numeric**-Spalten verwendet werden.  
   
  Falls der Standardwert zu lang für die Spalte ist, an die er gebunden ist, wird er gekürzt.  
   
  CREATE DEFAULT-Anweisungen können nicht mit anderen [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen in einem einzelnen Batch kombiniert werden.  
   
- Ein Standardwert muss gelöscht werden, bevor Sie eine neue mit demselben Namen erstellen, und der Standardwert muss aufgehoben werden, durch das Ausführen **Sp_unbindefault** bevor er gelöscht wird.  
+ Der Standardwert muss gelöscht werden, bevor ein neuer Standardwert mit dem gleichen Namen erstellt werden kann. Außerdem muss seine Bindung durch Ausführen von **sp_unbindefault** aufgehoben werden, bevor dieser gelöscht werden kann.  
   
  Falls einer Spalte sowohl ein Standardwert als auch eine Regel zugeordnet ist, darf der Standardwert nicht diese Regel verletzen. Ein Standardwert, der gegen eine Regel verstößt, wird nicht eingefügt. Bei jedem Versuch, einen solchen Standardwert einzufügen, erzeugt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eine Fehlermeldung.  
   
@@ -89,7 +89,7 @@ AS constant_expression [ ; ]
 |**NULL**|NULL|default|NULL|NULL|  
 |**NOT NULL**|Fehler|default|Fehler|Fehler|  
   
- Um einen Standardwert umzubenennen, verwenden Sie **"Sp_rename"**. Verwenden Sie für einen Bericht über einen Standardwert, **Sp_help**.  
+ Um einen Standardwert umzubenennen, verwenden Sie **sp_rename**. Um einen Bericht über einen Standardwert zu erhalten, verwenden Sie **sp_help**.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Für die Ausführung von CREATE DEFAULT benötigt ein Benutzer zumindest die CREATE DEFAULT-Berechtigung für die aktuelle Datenbank sowie die ALTER-Berechtigung für das Schema, in dem der Standardwert erstellt wird.  
@@ -116,18 +116,18 @@ GO
 sp_bindefault 'phonedflt', 'Person.PersonPhone.PhoneNumber';  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [CREATE RULE &#40;Transact-SQL&#41;](../../t-sql/statements/create-rule-transact-sql.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
- [Löschen Sie die STANDARDMÄßIGE &#40; Transact-SQL &#41;](../../t-sql/statements/drop-default-transact-sql.md)   
- [DROP RULE &#40; Transact-SQL &#41;](../../t-sql/statements/drop-rule-transact-sql.md)   
- [Ausdrücke &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [DROP DEFAULT &#40;Transact-SQL&#41;](../../t-sql/statements/drop-default-transact-sql.md)   
+ [DROP RULE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-rule-transact-sql.md)   
+ [Ausdrücke &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
- [Sp_bindefault &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-bindefault-transact-sql.md)   
+ [sp_bindefault &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-bindefault-transact-sql.md)   
  [sp_help &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md)   
  [sp_helptext &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptext-transact-sql.md)   
  [sp_rename &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md)   
- [Sp_unbindefault &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-unbindefault-transact-sql.md)  
+ [sp_unbindefault &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-unbindefault-transact-sql.md)  
   
   

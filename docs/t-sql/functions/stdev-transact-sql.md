@@ -1,5 +1,5 @@
 ---
-title: STDEV (Transact-SQL) | Microsoft Docs
+title: STDEV (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
@@ -67,22 +67,22 @@ STDEV (expression) OVER ( [ partition_by_clause ] order_by_clause)
  Gibt an, dass jeder eindeutige Wert berücksichtigt wird.  
   
  *expression*  
- Ein numerischer [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md). Aggregatfunktionen und Unterabfragen sind nicht zulässig. *Ausdruck* ist ein Ausdruck, der Kategorie der genauen numerischen oder ungefähren numerischen Daten, mit Ausnahme der **Bit** -Datentyp.  
+ Ein numerischer [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md). Aggregatfunktionen und Unterabfragen sind nicht zulässig. Bei *expression* handelt es sich um einen Ausdruck der genauen numerischen oder ungefähren numerischen Datentypkategorie, mit Ausnahme des **bit**-Datentyps.  
   
- ÜBER **(** [ *Partition_by_clause* ] *Order_by_clause***)**  
- *Partition_by_clause* teilt das Resultset, das von der FROM-Klausel erstellt wird, in Partitionen, die auf die die Funktion angewendet wird. Wird dies nicht angegeben, verarbeitet die Funktion alle Zeilen des Abfrageresultsets als einzelne Gruppe. *Order_by_clause* bestimmt die logische Reihenfolge, in dem der Vorgang ausgeführt wird. *Order_by_clause* ist erforderlich. Weitere Informationen finden Sie unter [Klausel "OVER" &#40; Transact-SQL &#41; ](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ OVER **(** [ *partition_by_clause* ] *order_by_clause***)**  
+ *partition_by_clause* unterteilt das von der FROM-Klausel erzeugte Resultset in Partitionen, auf die die Funktion angewendet wird. Wird dies nicht angegeben, verarbeitet die Funktion alle Zeilen des Abfrageresultsets als einzelne Gruppe. *order_by_clause* bestimmt die logische Reihenfolge, in der der Vorgang ausgeführt wird. *order_by_clause* ist erforderlich. Weitere Informationen finden Sie unter [OVER-Klausel &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
 ## <a name="return-types"></a>Rückgabetypen  
  **float**  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Falls STDEV für alle Elemente einer SELECT-Anweisung verwendet wird, werden alle Werte im Resultset in die Berechnung eingeschlossen. STDEV kann nur bei numerischen Spalten verwendet werden. NULL-Werte werden ignoriert.  
   
  STDEV ist eine deterministische Funktion, wenn sie ohne die OVER- und ORDER BY-Klauseln angegeben wird. Sie ist nicht deterministisch, wenn sie mit den OVER- und ORDER BY-Klauseln angegeben wird. Weitere Informationen finden Sie unter [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).  
   
 ## <a name="examples"></a>Beispiele  
   
-### <a name="a-using-stdev"></a>A: mithilfe von STDABWEICHUNG  
+### <a name="a-using-stdev"></a>A: Verwenden von STDEV  
  Im folgenden Beispiel wird die Standardabweichung für alle Bonuswerte in der `SalesPerson`-Tabelle der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Datenbank zurückgegeben.  
   
 ```  
@@ -91,10 +91,10 @@ FROM Sales.SalesPerson;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
-### <a name="b-using-stdev"></a>B: mithilfe von STDABWEICHUNG  
- Im folgende Beispiel gibt die Standardabweichung der sales Quota-Werte in der Tabelle `dbo.FactSalesQuota`. Die erste Spalte enthält die Standardabweichung der unterschiedlichen Werte und die zweite Spalte enthält die Standardabweichung aller Werte, einschließlich aller Duplikate-Werte.  
+### <a name="b-using-stdev"></a>B: Verwenden von STDEV  
+ Das folgende Beispiel gibt die Standardabweichung für alle Sollvorgabenwerte für den Verkauf in der `dbo.FactSalesQuota`-Tabelle zurück. Die erste Spalte enthält die Standardabweichung aller eindeutigen Werte. Die zweite Spalte enthält die Standardabweichung aller Werte, einschließlich aller doppelten Werte.  
   
 ```  
 -- Uses AdventureWorks  
@@ -111,8 +111,8 @@ Distinct_Values   All_Values
 398974.27         398450.57
  ```  
   
-### <a name="c-using-stdev-with-over"></a>C. Mithilfe von STDABWEICHUNG mit Failover  
- Im folgende Beispiel gibt die Standardabweichung der sales Quota-Werte für jedes Quartal in ein Kalenderjahr zurück. Beachten Sie, dass die ORDER BY in der OVER-Klausel die STDEV sortiert und die ORDER BY der SELECT-Anweisung das Resultset sortiert.  
+### <a name="c-using-stdev-with-over"></a>C. Verwenden von STDEV mit OVER  
+ Das folgende Beispiel gibt für jedes Quartal eines Kalenderjahrs die Standardabweichung der Sollvorgabenwerte für den Verkauf zurück. Beachten Sie, dass über die Anweisung ORDER BY in der OVER-Klausel der STDEV und ORDER BY über die Anweisung SELECT ein Resultset angefordert wird.  
   
 ```  
 -- Uses AdventureWorks  
@@ -135,9 +135,9 @@ Year  Quarter  SalesQuota              StdDeviation
 2002  4        154000.0000             39752.36
  ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Aggregatfunktionen &#40; Transact-SQL &#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)   
- [Failover-Klausel &#40; Transact-SQL &#41;](../../t-sql/queries/select-over-clause-transact-sql.md)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Aggregate Functions &#40;Transact-SQL&#41; (Aggregatfunktionen (Transact-SQL))](../../t-sql/functions/aggregate-functions-transact-sql.md)   
+ [OVER-Klausel &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)  
   
   
 

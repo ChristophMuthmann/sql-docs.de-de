@@ -1,5 +1,5 @@
 ---
-title: "Öffnen (Transact-SQL) | Microsoft Docs"
+title: OPEN (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -38,7 +38,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="open-transact-sql"></a>OPEN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Öffnet eine [!INCLUDE[tsql](../../includes/tsql-md.md)] Servercursor und füllt den Cursor durch Ausführen der [!INCLUDE[tsql](../../includes/tsql-md.md)] angegebene auf der DECLARE CURSOR oder SET-Anweisung *Cursor_variable* Anweisung.  
+  Öffnet einen [!INCLUDE[tsql](../../includes/tsql-md.md)]-Servercursor und füllt den Cursor auf, indem die [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung ausgeführt wird, die in der DECLARE - oder SET-*cursor_variable*-Anwendung angegeben ist.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,18 +51,18 @@ OPEN { { [ GLOBAL ] cursor_name } | cursor_variable_name }
   
 ## <a name="arguments"></a>Argumente  
  GLOBAL  
- Gibt an, dass *Cursor_name* auf einen globalen Cursor verweist.  
+ Gibt an, dass *cursor_name* auf einen globalen Cursor verweist.  
   
  *cursor_name*  
- Der Name eines deklarierten Cursors. Wenn sowohl ein globaler als auch ein lokaler Cursor mit vorhanden *Cursor_name* als Buchstabenfolge, *Cursor_name* bezieht sich auf den globalen Cursor, wenn GLOBAL angegeben, andernfalls ist *Cursor_name* bezieht sich auf den lokalen Cursor.  
+ Der Name eines deklarierten Cursors. Falls sowohl ein lokaler als auch ein globaler Cursor namens *cursor_name* vorhanden ist, bezieht sich *cursor_name* nur dann auf den globalen Cursor, wenn GLOBAL angegeben ist. Andernfalls bezieht sich *cursor_name* auf den lokalen Cursor.  
   
  *cursor_variable_name*  
  Der Name einer Cursorvariablen, die auf einen Cursor verweist.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Falls der Cursor mit der Option INSENSITIVE oder STATIC deklariert wird, erstellt OPEN eine temporäre Tabelle für das Resultset. OPEN schlägt fehl, wenn die Größe einer Zeile im Resultset die Maximalgröße für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Tabellen überschreitet. Falls der Cursor mit der Option KEYSET deklariert wird, erstellt OPEN eine temporäre Tabelle für das Keyset. Die temporären Tabellen werden in tempdb gespeichert.  
   
- Nachdem ein Cursor geöffnet wurde, verwenden Sie den @@CURSOR_ROWS Funktion, um die Anzahl von qualifizierenden Zeilen im letzten geöffneten Cursor.  
+ Nachdem ein Cursor geöffnet wurde, kann mit der @@CURSOR_ROWS-Funktion die Anzahl der Zeilen im letzten geöffneten Cursor abgerufen werden, die der Bedingung entsprechen.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt das asynchrone Generieren von keysetgesteuerten oder statischen [!INCLUDE[tsql](../../includes/tsql-md.md)] -Cursorn nicht. [!INCLUDE[tsql](../../includes/tsql-md.md)] -Cursorvorgänge, z. B. OPEN oder FETCH, sind in Batches enthalten. Daher ist das asynchrone Generieren von [!INCLUDE[tsql](../../includes/tsql-md.md)] -Cursorn nicht erforderlich. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt weiterhin asynchrone keysetgesteuerte oder statische AP -Servercursor (Application Programming Interface), wobei Cursoroperationen des Typs „Open“ mit niedriger Latenz ein Problem darstellen. Dies ist auf Clientroundtrips zurückzuführen, die für jeden Cursorvorgang ausgeführt werden.  
@@ -88,7 +88,7 @@ CLOSE Employee_Cursor;
 DEALLOCATE Employee_Cursor;  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [CLOSE &#40;Transact-SQL&#41;](../../t-sql/language-elements/close-transact-sql.md)   
  [@@CURSOR_ROWS &#40;Transact-SQL&#41;](../../t-sql/functions/cursor-rows-transact-sql.md)   
  [DEALLOCATE &#40;Transact-SQL&#41;](../../t-sql/language-elements/deallocate-transact-sql.md)   

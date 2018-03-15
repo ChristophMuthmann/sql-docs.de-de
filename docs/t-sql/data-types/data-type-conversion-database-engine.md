@@ -1,5 +1,5 @@
 ---
-title: Datentypkonvertierung (Datenbankmodul) | Microsoft Docs
+title: Datentypkonvertierung (Datenbank-Engine) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 7/23/2017
 ms.prod: sql-non-specified
@@ -34,25 +34,25 @@ ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="data-type-conversion-database-engine"></a>Datentypkonvertierung (Datenbankmodul)
+# <a name="data-type-conversion-database-engine"></a>Datentypkonvertierung (Datenbank-Engine)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Datentypen können in den folgenden Szenarien konvertiert werden:
 -   Wenn Daten aus einem Objekt zu einem anderen Objekt verschoben oder mit diesem verglichen oder kombiniert werden, müssen die Daten möglicherweise vom Datentyp des einen Objekts in den Datentyp des anderen Objekts konvertiert werden.  
--   Wenn Daten aus einer [!INCLUDE[tsql](../../includes/tsql-md.md)] Ergebnisspalte, Rückgabecode und Ausgabeparameter eine Programmvariable verschoben wird, müssen die Daten konvertiert werden, aus der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Systemdatentyp in den Datentyp der Variablen.  
+-   Wenn Daten aus einer Ergebnisspalte, einem Rückgabecode oder einem Ausgabeparameter von [!INCLUDE[tsql](../../includes/tsql-md.md)] in eine Programmvariable verschoben werden, müssen die Daten vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Systemdatentyp in den Datentyp der Variablen konvertiert werden.  
   
 Bei der Konvertierung zwischen einer Anwendungsvariablen und einer Resultsetspalte, einem Rückgabecode, einem Parameter oder Parametermarker von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden die unterstützten Datentypkonvertierungen von der Datenbank-API (Application Programming Interface, Anwendungsprogrammierschnittstelle) definiert.
   
 ## <a name="implicit-and-explicit-conversion"></a>Implizite und explizite Konvertierung
 Datentypen können entweder implizit oder explizit konvertiert werden.
   
-Implizite Konvertierungen sind für den Benutzer nicht sichtbar. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] konvertiert die Daten automatisch von einem Datentyp in einen anderen. Beispielsweise, wenn eine **"smallint"** im Vergleich zu einer **Int**, die **"smallint"** wird implizit in konvertiert **Int** vor dem Vergleich wird fortgesetzt.
+Implizite Konvertierungen sind für den Benutzer nicht sichtbar. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] konvertiert die Daten automatisch von einem Datentyp in einen anderen. Beispielsweise wird beim Vergleich eines **smallint**-Datentyps mit einem **int**-Datentyp der **smallint**-Datentyp implizit in **int** konvertiert, bevor der Vergleich fortgesetzt wird.
   
-**GETDATE()** implizit das Datumsformat 0 konvertiert. **SYSDATETIME()** implizit konvertiert das Datumsformat 21.
+**GETDATE()** konvertiert das Datumsformat implizit in 0. **SYSDATETIME()** konvertiert das Datumsformat implizit in 21.
   
 Explizite Konvertierungen verwenden die Funktionen CAST oder CONVERT.
   
-Die [CAST und CONVERT](../../t-sql/functions/cast-and-convert-transact-sql.md) Funktionen einen Wert (eine lokale Variable, eine Spalte oder einen anderen Ausdruck) von einem Datentyp in einen anderen zu konvertieren. Die folgende `CAST`-Funktion konvertiert z. B. den numerischen Wert `$157.27` in die Zeichenfolge `'157.27'`:
+Die Funktionen [CAST und CONVERT](../../t-sql/functions/cast-and-convert-transact-sql.md) konvertieren einen Wert (eine lokale Variable, eine Spalte oder einen anderen Ausdruck) von einem Datentyp in einen anderen. Die folgende `CAST`-Funktion konvertiert z. B. den numerischen Wert `$157.27` in die Zeichenfolge `'157.27'`:
   
 ```sql
 CAST ( $157.27 AS VARCHAR(10) )  
@@ -60,30 +60,30 @@ CAST ( $157.27 AS VARCHAR(10) )
   
 Verwenden Sie CAST anstelle von CONVERT, wenn der [!INCLUDE[tsql](../../includes/tsql-md.md)]-Programmcode dem ISO-Standard entsprechen soll. Verwenden Sie hingegen CONVERT anstelle von CAST, wenn Sie die Vorteile der Formatfunktionen in CONVERT nutzen möchten.
   
-In der folgenden Abbildung werden alle expliziten und impliziten Datentypkonvertierungen aufgeführt, die für die vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-System bereitgestellten Datentypen zulässig sind. Dazu gehören **Xml**, **"bigint"**, und **Sql_variant**. Es gibt keine implizite Konvertierung bei der Zuweisung vom der **Sql_variant** -Datentyp, aber es die implizite Konvertierung in ist **Sql_variant**.
+In der folgenden Abbildung werden alle expliziten und impliziten Datentypkonvertierungen aufgeführt, die für die vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-System bereitgestellten Datentypen zulässig sind. Dazu gehören **xml**, **bigint** und **sql_variant**. Es gibt keine implizite Konvertierung bei der Zuweisung vom **sql_variant**-Datentyp, eine implizite Konvertierung zum **sql_variant**-Datentyp findet jedoch statt.
   
-![Datentyp-Konvertierungstabelle](../../t-sql/data-types/media/lrdatahd.png "Datentyp-Konvertierungstabelle")
+![Konvertierungstabelle für Datentypen](../../t-sql/data-types/media/lrdatahd.png "Data type conversion table")
   
-## <a name="data-type-conversion-behaviors"></a>Verhalten bei der datentypkonvertierung
-Einige implizite und explizite Datentypkonvertierungen werden nicht unterstützt, wenn Sie den Datentyp eines [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Objekts in einen anderen konvertieren. Angenommen, ein **Nchar** Wert kann nicht konvertiert werden, um eine **Image** Wert. Ein **Nchar** können nur auf umgestellt werden **binäre** mithilfe der expliziten Konvertierung, eine implizite Konvertierung in **binäre** wird nicht unterstützt. Allerdings ein **Nchar** explizit oder implizit konvertiert werden können **Nvarchar**.
+## <a name="data-type-conversion-behaviors"></a>Verhalten bei der Datentypkonvertierung
+Einige implizite und explizite Datentypkonvertierungen werden nicht unterstützt, wenn Sie den Datentyp eines [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Objekts in einen anderen konvertieren. Ein **nchar**-Wert kann nicht in einen **image**-Wert konvertiert werden. **nchar** kann nur mit der expliziten Konvertierung in **binary** konvertiert werden; eine implizite Konvertierung in **binary** wird nicht unterstützt. **nchar** kann jedoch explizit oder implizit in **nvarchar** konvertiert werden.
   
 In den folgenden Themen wird das Konvertierungsverhalten der entsprechenden Datentypen beschrieben:
   
  - [binary und varbinary &#40;Transact-SQL&#41;](../../t-sql/data-types/binary-and-varbinary-transact-sql.md)  
  - [datetime2 &#40;Transact-SQL&#41;](../../t-sql/data-types/datetime2-transact-sql.md)  
- - [Money und Smallmoney &#40; Transact-SQL &#41;](../../t-sql/data-types/money-and-smallmoney-transact-sql.md)  
- - [Bit- &#40; Transact-SQL &#41;](../../t-sql/data-types/bit-transact-sql.md)  
+ - [money und smallmoney &#40;Transact-SQL&#41;](../../t-sql/data-types/money-and-smallmoney-transact-sql.md)  
+ - [bit &#40;Transact-SQL&#41;](../../t-sql/data-types/bit-transact-sql.md)  
  - [datetimeoffset &#40;Transact-SQL&#41;](../../t-sql/data-types/datetimeoffset-transact-sql.md)  
- - [Smalldatetime &#40; Transact-SQL &#41;](../../t-sql/data-types/smalldatetime-transact-sql.md)  
+ - [smalldatetime &#40;Transact-SQL&#41;](../../t-sql/data-types/smalldatetime-transact-sql.md)  
  - [char und varchar &#40;Transact-SQL&#41;](../../t-sql/data-types/char-and-varchar-transact-sql.md)  
- - [Decimal und Numeric &#40; Transact-SQL &#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)  
+ - [decimal und numeric &#40;Transact-SQL&#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)  
  - [sql_variant &#40;Transact-SQL&#41;](../../t-sql/data-types/sql-variant-transact-sql.md)  
  - [date &#40;Transact-SQL&#41;](../../t-sql/data-types/date-transact-sql.md)  
- - [Float und Real &#40; Transact-SQL &#41;](../../t-sql/data-types/float-and-real-transact-sql.md)  
- - [Zeit &#40; Transact-SQL &#41;](../../t-sql/data-types/time-transact-sql.md)  
- - ["DateTime" &#40; Transact-SQL &#41;](../../t-sql/data-types/datetime-transact-sql.md)  
- - [Int, Bigint, Smallint und Tinyint &#40; Transact-SQL &#41;](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)  
- - ["uniqueidentifier" &#40; Transact-SQL &#41;](../../t-sql/data-types/uniqueidentifier-transact-sql.md)  
+ - [float und real &#40;Transact-SQL&#41;](../../t-sql/data-types/float-and-real-transact-sql.md)  
+ - [time &#40;Transact-SQL&#41;](../../t-sql/data-types/time-transact-sql.md)  
+ - [datetime &#40;Transact-SQL&#41;](../../t-sql/data-types/datetime-transact-sql.md)  
+ - [int, bigint, smallint und tinyint &#40;Transact-SQL&#41;](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)  
+ - [uniqueidentifier &#40;Transact-SQL&#41;](../../t-sql/data-types/uniqueidentifier-transact-sql.md)  
   
 ###  <a name="converting-data-types-by-using-ole-automation-stored-procedures"></a>Konvertieren von Datentypen mithilfe von gespeicherten Prozeduren der OLE-Automatisierung  
 Da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)]-Datentypen und die OLE-Automatisierung [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]-Datentypen verwendet, müssen die gespeicherten Prozeduren der OLE-Automatisierung übergebene Daten konvertieren.
@@ -92,38 +92,38 @@ In der folgenden Tabelle werden die Konvertierungen von [!INCLUDE[ssNoVersion](.
   
 |SQL Server-Datentyp|Visual Basic-Datentyp|  
 |--------------------------|----------------------------|  
-|**Char**, **Varchar**, **Text**, **Nvarchar**, **Ntext**|**String**|  
-|**Decimal**, **numerischen**|**String**|  
+|**char**, **varchar**, **text**, **nvarchar**, **ntext**|**String**|  
+|**decimal**, **numeric**|**String**|  
 |**bit**|**Boolean**|  
-|**binäre**, **Varbinary**, **Bild**|Eindimensionale **Zeichen** Array|  
+|**binary**, **varbinary**, **image**|Eindimensionales **Byte()**-Array|  
 |**int**|**Long**|  
 |**smallint**|**Integer**|  
 |**tinyint**|**Byte**|  
 |**float**|**Double**|  
 |**real**|**Single**|  
 |**money**, **smallmoney**|**Währung**|  
-|**"DateTime"**, **Smalldatetime**|**Datum**|  
-|Beliebige auf NULL festgelegte Typen|**Variant** auf Null gesetzt|  
+|**datetime**, **smalldatetime**|**Datum**|  
+|Beliebige auf NULL festgelegte Typen|**Variant** wurde auf NULL festgelegt.|  
   
-Alle einzelnen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Werte in einer einzelnen konvertiert [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] Wert mit Ausnahme von **binäre**, **Varbinary**, und **Image** Werte. Diese Werte werden in ein eindimensionales konvertiert **Zeichen** array [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]. Dieses Array weist einen Bereich von **Byte (**0 bis *Länge*1**)** , in denen *Länge* ist die Anzahl der Bytes in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  **binäre**, **Varbinary**, oder **Image** Werte.
+Alle einzelnen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Werte mit Ausnahme der **binary**-, **varbinary**- und **image**-Werte werden in einen einzelnen [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]-Wert konvertiert. Diese Werte werden in ein eindimensionales **Byte()**-Array in [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] konvertiert. Dieses Array weist einen Bereich von **Byte(**0 to *length*1**)** auf, wobei *length* der Anzahl von Bytes in den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Werten **binary**, **varbinary** oder **image** entspricht.
   
 Im Folgenden sehen Sie die Konvertierungen von [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]-Datentypen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentypen.
   
 |Visual Basic-Datentyp|SQL Server-Datentyp|  
 |----------------------------|--------------------------|  
-|**Lange**, **Ganzzahl**, **Byte**, **booleschen**, **Objekt**|**int**|  
-|**Doppelte**, **einzelne**|**float**|  
+|**Long**, **Integer**, **Byte**, **Boolean**, **Object**|**int**|  
+|**Double**, **Single**|**float**|  
 |**Währung**|**money**|  
 |**Datum**|**datetime**|  
-|**Zeichenfolge** mit 4000 Zeichen oder weniger|**Varchar**/**Nvarchar**|  
-|**Zeichenfolge** mit mehr als 4000 Zeichen|**Text**/**Ntext**|  
-|Eindimensionale **Zeichen** Array mit 8000 Bytes oder weniger|**varbinary**|  
-|Eindimensionale **Zeichen** Array mit mehr als 8000 Bytes|**image**|  
+|**String** mit maximal 4000 Zeichen|**varchar**/**nvarchar**|  
+|**String** mit mehr als 4000 Zeichen|**text**/**ntext**|  
+|Eindimensionales **Byte()**-Array mit maximal 8000 Byte|**varbinary**|  
+|Eindimensionales **Byte()**-Array mit mehr als 8000 Byte|**image**|  
   
 ## <a name="see-also"></a>Siehe auch
 [Gespeicherte OLE-Automatisierungsprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)  
 [CAST und CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
 [Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
-[COLLATE &#40; Transact-SQL &#41;](http://msdn.microsoft.com/library/4ba6b7d8-114a-4f4e-bb38-fe5697add4e9)
+[COLLATE &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/4ba6b7d8-114a-4f4e-bb38-fe5697add4e9)
   
   

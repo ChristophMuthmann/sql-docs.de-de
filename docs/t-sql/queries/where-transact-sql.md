@@ -1,5 +1,5 @@
 ---
-title: WOBEI (Transact-SQL) | Microsoft Docs
+title: WHERE (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 08/09/2017
 ms.prod: sql-non-specified
@@ -49,7 +49,7 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="arguments"></a>Argumente  
-\<*Search_condition* > definiert die Bedingung, die erfüllt sein, damit die Zeilen zurückgegeben werden. Es gibt keinen Höchstwert hinsichtlich der Anzahl von Prädikaten in einer Suchbedingung. Weitere Informationen zu suchbedingungen und Prädikaten finden Sie unter [Suchbedingung &#40; Transact-SQL &#41; ](../../t-sql/queries/search-condition-transact-sql.md).  
+\< *search_condition* > Definiert die Bedingung, die erfüllt sein muss, damit die Zeilen zurückgegeben werden. Es gibt keinen Höchstwert hinsichtlich der Anzahl von Prädikaten in einer Suchbedingung. Weitere Informationen zu Suchbedingungen und Prädikaten finden Sie unter [Suchbedingung &#40;Transact-SQL&#41;](../../t-sql/queries/search-condition-transact-sql.md).  
   
 ## <a name="examples"></a>Beispiele  
  In den folgenden Beispielen wird gezeigt, wie einige allgemeine Suchbedingungen in der `WHERE`-Klausel verwendet werden.  
@@ -124,10 +124,10 @@ FROM DimEmployee
 WHERE EmployeeKey Between 100 AND 200;  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
  [Predicates &#40;Transact-SQL&#41;](~/t-sql/queries/predicates.md)   
- [Suchbedingung &#40; Transact-SQL &#41;](../../t-sql/queries/search-condition-transact-sql.md)   
+ [Suchbedingung &#40;Transact-SQL&#41;](../../t-sql/queries/search-condition-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [UPDATE (Transact-SQL)](../../t-sql/queries/update-transact-sql.md)   
  [MERGE &#40;Transact-SQL&#41;](../../t-sql/statements/merge-transact-sql.md)  

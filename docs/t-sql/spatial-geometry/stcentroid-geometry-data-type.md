@@ -1,5 +1,5 @@
 ---
-title: STCentroid (Geometry-Datentyp) | Microsoft Docs
+title: STCentroid (geometry-Datentyp) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stcentroid-geometry-data-type"></a>STCentroid (geometry-Datentyp)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-Gibt das geometrische Zentrum einer **Geometry** Instanz, die aus einem oder mehreren Polygonen besteht.
+Gibt das geometrische Zentrum einer **geometry**-Instanz zurück, die aus einem oder mehreren Polygonen besteht.
   
 ## <a name="syntax"></a>Syntax  
   
@@ -44,19 +44,19 @@ Gibt das geometrische Zentrum einer **Geometry** Instanz, die aus einem oder meh
 ```  
   
 ## <a name="return-types"></a>Rückgabetypen  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Rückgabetyp: **Geometrie**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Rückgabetyp: **geometry**  
   
  CLR-Rückgabetyp: **SqlGeometry**  
   
  Open Geospatial Consortium (OGC)-Typ: **Point**  
   
-## <a name="remarks"></a>Hinweise  
- `STCentroid()`Gibt null zurück, wenn die **Geometrie** -Instanz ist eine **Polygon, CurvePolygon**, oder **MultiPolygon** Typ.  
+## <a name="remarks"></a>Remarks  
+ `STCentroid()` gibt NULL zurück, wenn es sich bei der **geometry**-Instanz nicht um einen **Polygon-, CurvePolygon**- oder **MultiPolygon**-Typ handelt.  
   
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="a-computing-the-centroid-of-a-polygon-instance"></a>A. Berechnen des Schwerpunkts einer Polygon-Instanz  
- Im folgenden Beispiel wird `STCentroid()` zum Berechnen des Schwerpunkts einer `polygon``geometry` Instanz:  
+ Im folgenden Beispiel wird mithilfe von `STCentroid()` der Schwerpunkt einer `polygon``geometry`-Instanz berechnet:  
   
 ```  
 DECLARE @g geometry;  
@@ -72,7 +72,7 @@ SELECT @g.STCentroid().ToString();
  SELECT @g.STCentroid().ToString() AS Centroid
  ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [OGC-Methoden für geometry-Instanzen](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

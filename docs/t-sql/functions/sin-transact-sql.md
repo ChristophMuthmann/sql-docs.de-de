@@ -1,5 +1,5 @@
 ---
-title: SIN (Transact-SQL) | Microsoft Docs
+title: SIN (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -35,7 +35,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="sin-transact-sql"></a>SIN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Gibt den trigonometrischen Sinus des angegebenen Winkels im Bogenmaß und in einem ungefähren numerischen **"float"**, Ausdruck.  
+  Gibt den trigonometrischen Sinus des angegebenen Winkels im Bogenmaß und in einem ungefähren numerischen Ausdruck, **float**, zurück.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,7 +48,7 @@ SIN ( float_expression )
 
 ## <a name="arguments"></a>Argumente  
  *float_expression*  
- Ist ein [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) des Typs **"float"** oder eines Typs, der implizit in Float konvertiert werden kann.  
+ Ein [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) vom Typ **float** oder von einem Typ, der implizit in „float“ konvertiert werden kann.  
   
 ## <a name="return-types"></a>Rückgabetypen  
  **float**  
@@ -71,8 +71,8 @@ The SIN of the angle is: 0.929607
 (1 row(s) affected)  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- Das folgende Beispiel berechnet den Sinus für einen angegebenen Winkel.  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
+ Im folgenden Beispiel wird der Sinuswert für einen angegebenen Winkel berechnet.  
   
 ```  
 SELECT SIN(45.175643);  
@@ -85,8 +85,8 @@ SELECT SIN(45.175643);
 0.929607
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Mathematische Funktionen &#40; Transact-SQL &#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Mathematische Funktionen &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
   
   
 

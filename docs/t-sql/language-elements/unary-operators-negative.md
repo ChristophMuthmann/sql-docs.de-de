@@ -1,5 +1,5 @@
 ---
-title: '- (Negativ) (Transact-SQL) | Microsoft Docs'
+title: '- (Negative) (Transact-SQL) | Microsoft-Dokumentation'
 ms.custom: 
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
@@ -55,10 +55,10 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>Argumente  
  *numeric_expression*  
- Ist ein beliebiger gültiger [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) von einem der Datentypen der numerischen Datentypkategorie, mit Ausnahme der Datum und Zeitkategorie.  
+ Ein gültiger [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) eines der Datentypen aus der Kategorie numerischer Datentypen, mit Ausnahme der Datentypen für Datum und Uhrzeit.  
   
 ## <a name="result-types"></a>Ergebnistypen  
- Gibt den Datentyp der *numerischer_ausdruck*, außer dass unsignierten **"tinyint"** Ausdruck wird höher gestuft, um eine signierte **"smallint"** Ergebnis.  
+ Gibt einen Wert vom Datentyp *numeric_expression* zurück, wobei jedoch ein **tinyint**-Ausdruck ohne Vorzeichen zu einem **smallint**-Ergebnis mit Vorzeichen heraufgestuft wird.  
   
 ## <a name="examples"></a>Beispiele  
   
@@ -109,10 +109,10 @@ VariableValue NegativeValue
   
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
-### <a name="c-returning-the-negative-of-a-positive-constant"></a>C. Zurückgeben von den negativen Wert des positive-Konstante  
- Das folgende Beispiel gibt den negativen Wert, der eine Konstante positive zurück.  
+### <a name="c-returning-the-negative-of-a-positive-constant"></a>C. Zurückgeben des negativen Werts einer positiven Konstante  
+ Im folgenden Beispiel wird der negative Wert einer positiven Konstante zurückgegeben.  
   
 ```  
 USE ssawPDW;  
@@ -126,8 +126,8 @@ SELECT TOP (1) - 17 FROM DimEmployee;
 -17  
 ```  
   
-### <a name="d-returning-the-positive-of-a-negative-constant"></a>D. Zurückgeben den positiven einer negativen-Konstante  
- Im folgende Beispiel gibt das Positive einer negativen Konstante zurück.  
+### <a name="d-returning-the-positive-of-a-negative-constant"></a>D. Zurückgeben des positiven Werts einer negativen Konstante  
+ Im folgenden Beispiel wird der positive Wert einer negativen Konstante zurückgegeben.  
   
 ```  
 USE ssawPDW;  
@@ -141,8 +141,8 @@ SELECT TOP (1) – ( - 17) FROM DimEmployee;
 17  
 ```  
   
-### <a name="e-returning-the-negative-of-a-column"></a>E. Zurückgeben von den negativen Wert einer Spalte  
- Das folgende Beispiel gibt den negativen Wert, der die `BaseRate` Wert für jeden Mitarbeiter in der `dimEmployee` Tabelle.  
+### <a name="e-returning-the-negative-of-a-column"></a>E. Zurückgeben des negativen Werts einer Spalte  
+ Im folgenden Beispiel wird der negative Wert des `BaseRate`-Werts für jeden Mitarbeiter in der `dimEmployee`-Tabelle zurückgegeben.  
   
 ```  
 USE ssawPDW;  
@@ -150,9 +150,9 @@ USE ssawPDW;
 SELECT - BaseRate FROM DimEmployee;  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [Ausdrücke &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)  
   
   

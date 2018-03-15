@@ -1,5 +1,5 @@
 ---
-title: "+ (Unäres Plus) (Transact-SQL) | Microsoft Docs"
+title: "+ (Unäres Plus) (Transact-SQL) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
@@ -37,7 +37,7 @@ ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="unary-operators---positive"></a>Unäre Operatoren - positiv
+# <a name="unary-operators---positive"></a>Unäre Operatoren: Positiv
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Gibt den Wert eines numerischen Ausdrucks zurück (ein unärer Operator). Unäre Operatoren führen eine Operation mit nur einem Ausdruck eines beliebigen Datentyps der numerischen Datentypkategorie aus.   
@@ -61,13 +61,13 @@ Gibt den Wert eines numerischen Ausdrucks zurück (ein unärer Operator). Unäre
   
 ## <a name="arguments"></a>Argumente  
  *numeric_expression*  
- Ist ein beliebiger gültiger [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) eines beliebigen Datentyps Typen in der numerischen Datentypkategorie, mit Ausnahme der **"DateTime"** und **Smalldatetime** Datentypen.  
+ Jeder gültige [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) eines Datentyps der numerischen Datentypkategorie. Gilt allerdings nicht für die Datentypen **datetime** und **smalldatetime**.  
   
 ## <a name="result-types"></a>Ergebnistypen  
  Gibt den Datentyp von *numeric_expression*zurück.  
   
-## <a name="remarks"></a>Hinweise  
- Obwohl ein unäres Plus vor jedem numerischen Ausdruck angezeigt werden kann, führt es keinen Vorgang mit dem Wert aus, der von dem Ausdruck zurückgegeben wird. Insbesondere gibt es nicht den positiven Wert eines negativen Ausdrucks zurück. Um positiven Wert eines negativen Ausdrucks zurückzugeben, verwenden die [ABS](../../t-sql/functions/abs-transact-sql.md) Funktion.  
+## <a name="remarks"></a>Remarks  
+ Obwohl ein unäres Plus vor jedem numerischen Ausdruck angezeigt werden kann, führt es keinen Vorgang mit dem Wert aus, der von dem Ausdruck zurückgegeben wird. Insbesondere gibt es nicht den positiven Wert eines negativen Ausdrucks zurück. Verwenden Sie zum Zurückgeben des positiven Werts eines negativen Ausdrucks die [ABS](../../t-sql/functions/abs-transact-sql.md)-Funktion.  
   
 ## <a name="examples"></a>Beispiele  
   
@@ -111,10 +111,10 @@ GO
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
- [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [Ausdrücke &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [Operatoren &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [ABS &#40;Transact-SQL&#41;](../../t-sql/functions/abs-transact-sql.md)  
   
   

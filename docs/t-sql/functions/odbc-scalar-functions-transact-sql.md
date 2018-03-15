@@ -1,5 +1,5 @@
 ---
-title: ODBC-Skalarfunktionen (Transact-SQL) | Microsoft Docs
+title: ODBC-Skalarfunktionen (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -68,7 +68,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="odbc-scalar-functions-transact-sql"></a>ODBC-Skalarfunktionen (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Sie können [ODBC-Skalarfunktionen](http://go.microsoft.com/fwlink/?LinkID=88579) in [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisungen. Diese Anweisungen werden von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interpretiert. Sie können in gespeicherten Prozeduren und benutzerdefinierten Funktionen verwendet werden. Hierzu zählen Zeichenfolgen-, Uhrzeit-, Datums-, Intervall- und Systemfunktionen sowie numerische Funktionen.  
+  Sie können [ODBC-Skalarfunktionen](http://go.microsoft.com/fwlink/?LinkID=88579) in [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen verwenden. Diese Anweisungen werden von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interpretiert. Sie können in gespeicherten Prozeduren und benutzerdefinierten Funktionen verwendet werden. Hierzu zählen Zeichenfolgen-, Uhrzeit-, Datums-, Intervall- und Systemfunktionen sowie numerische Funktionen.  
   
 ## <a name="usage"></a>Verwendung  
  `SELECT {fn <function_name> [ (<argument>,....n) ] }`  
@@ -88,7 +88,7 @@ ms.lasthandoff: 11/21/2017
   
 |Funktion|Description|  
 |--------------|-----------------|  
-|TRUNCATE( numeric_exp, integer_exp) (ODBC 2.0)|Gibt numeric_exp abgeschnitten auf integer_exp-Positionen rechts vom Dezimaltrennzeichen zurück. Wenn Integer_exp negativ ist, wird Numeric_exp abgeschnitten auf &#124; Integer_exp &#124; Positionen links vom Dezimaltrennzeichen an.|  
+|TRUNCATE( numeric_exp, integer_exp) (ODBC 2.0)|Gibt numeric_exp abgeschnitten auf integer_exp-Positionen rechts vom Dezimaltrennzeichen zurück. Wenn „integer_exp“ negativ ist, wird „numeric_exp“ auf die Positionen „&#124;integer_exp&#124;“ links vom Dezimaltrennzeichen abgeschnitten.|  
   
 ### <a name="time-date-and-interval-functions"></a>Uhrzeit-, Datums- und Intervallfunktionen  
   
@@ -96,7 +96,7 @@ ms.lasthandoff: 11/21/2017
 |--------------|-----------------|  
 |CURRENT_DATE( ) (ODBC 3.0)|Gibt das aktuelle Datum zurück.|  
 |CURDATE( ) (ODBC 3.0)|Gibt das aktuelle Datum zurück.|  
-|AKTUELLE_ZEIT`[( time-precision )]` (ODBC 3.0)|Gibt die aktuelle lokale Zeit zurück. Das time-precision-Argument bestimmt die Genauigkeit des zurückgegebenen Werts bezüglich der Sekundenangaben.|  
+|CURRENT_TIME`[( time-precision )]` (ODBC 3.0)|Gibt die aktuelle lokale Zeit zurück. Das time-precision-Argument bestimmt die Genauigkeit des zurückgegebenen Werts bezüglich der Sekundenangaben.|  
 |CURTIME() (ODBC 3.0)|Gibt die aktuelle lokale Zeit zurück.|  
 |DAYNAME( date_exp ) (ODBC 2.0)|Gibt eine Zeichenfolge zurück, die den für die Datenquelle spezifischen Namen des Tages (z. B. Sonntag bis Samstag oder So. bis Sa. bei einer Datenquelle, die Deutsch verwendet, oder Sunday bis Saturday bei einer Datenquelle, die Englisch verwendet) für den Tagesteil von date_exp enthält.|  
 |DAYOFMONTH( date_exp ) (ODBC 1.0)|Gibt den Tag des Monats basierend auf dem Monatsfeld in date_exp als ganze Zahl im Bereich von 1 bis 31 zurück.|  
@@ -183,7 +183,7 @@ SELECT {fn WEEK( @date_exp )};
 -- Returns 16  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
 ### <a name="d-using-an-odbc-function-in-a-stored-procedure"></a>D. Verwenden einer ODBC-Funktion in einer gespeicherten Prozedur  
  Im folgenden Beispiel wird eine ODBC-Funktion in einer gespeicherten Prozedur verwendet:  
@@ -254,7 +254,7 @@ SELECT {fn WEEK( @date_exp )};
 -- Returns 16  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Integrierte Funktionen &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)  
   
   

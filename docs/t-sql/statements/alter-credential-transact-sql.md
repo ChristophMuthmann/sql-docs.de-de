@@ -1,5 +1,5 @@
 ---
-title: ALTER CREDENTIAL (Transact-SQL) | Microsoft Docs
+title: ALTER CREDENTIAL (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 08/19/2015
 ms.prod: sql-non-specified
@@ -54,18 +54,18 @@ ALTER CREDENTIAL credential_name WITH IDENTITY = 'identity_name'
  *credential_name*  
  Gibt den Namen der Anmeldeinformationen an, die geändert werden.  
   
- Identität **= "***Identity_name***"**  
+ IDENTITY **= '***identity_name***'**  
  Gibt den Namen des Kontos an, das beim Herstellen einer Verbindung außerhalb des Servers verwendet wird.  
   
- Geheime Schlüssel **= "***geheimen***"**  
- Gibt den geheimen Bereich an, der für die ausgehende Authentifizierung erforderlich ist. *geheime* ist optional.  
+ SECRET **='***secret***'**  
+ Gibt den geheimen Bereich an, der für die ausgehende Authentifizierung erforderlich ist. *secret* ist optional.  
   
-## <a name="remarks"></a>Hinweise  
- Wenn Anmeldeinformationen geändert wird, wird die Werte der beiden *Identity_name* und *geheimen* werden zurückgesetzt. Falls das optionale SECRET-Argument nicht angegeben wird, wird der Wert des gespeicherten Kennworts auf NULL festgelegt.  
+## <a name="remarks"></a>Remarks  
+ Wenn Anmeldeinformationen geändert werden, werden die Werte von *identity_name* und *secret* zurückgesetzt. Falls das optionale SECRET-Argument nicht angegeben wird, wird der Wert des gespeicherten Kennworts auf NULL festgelegt.  
   
  Das Kennwort wird mithilfe des Diensthauptschlüssels verschlüsselt. Falls der Diensthauptschlüssel erneut generiert wird, wird das Kennwort erneut mithilfe des neuen Diensthauptschlüssels verschlüsselt.  
   
- Informationen zu Anmeldeinformationen werden in der **sys.credentials** -Katalogsicht angezeigt.  
+ Informationen zu Anmeldeinformationen werden in der **sys.credentials**-Katalogsicht angezeigt.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die ALTER ANY CREDENTIAL-Berechtigung. Falls es sich bei dem Anmeldeinformationen um Systemanmeldeinformationen handelt, ist die CONTROL SERVER-Berechtigung erforderlich.  
@@ -89,11 +89,11 @@ ALTER CREDENTIAL Frames WITH IDENTITY = 'Aboulrus8';
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Anmeldeinformationen &#40; Datenbankmodul &#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Anmeldeinformationen &#40;Datenbank-Engine&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)   
  [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md)   
- [DROP CREDENTIAL &#40; Transact-SQL &#41;](../../t-sql/statements/drop-credential-transact-sql.md)   
- [ALTER DATABASE ausgelegte CREDENTIAL &#40; Transact-SQL &#41;](../../t-sql/statements/alter-database-scoped-credential-transact-sql.md)   
+ [DROP CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/drop-credential-transact-sql.md)   
+ [ALTER DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-credential-transact-sql.md)   
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
  [sys.credentials &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)  
   

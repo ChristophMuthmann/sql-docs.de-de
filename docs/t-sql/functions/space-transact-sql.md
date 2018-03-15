@@ -1,5 +1,5 @@
 ---
-title: Speicherplatz (Transact-SQL) | Microsoft Docs
+title: SPACE (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -48,14 +48,14 @@ SPACE ( integer_expression )
   
 ## <a name="arguments"></a>Argumente  
  *integer_expression*  
- Eine positive ganze Zahl, die die Anzahl von Leerzeichen anzeigt. Wenn *Integer_expression* ist negativ ist, wird eine Nullzeichenfolge zurückgegeben.  
+ Eine positive ganze Zahl, die die Anzahl von Leerzeichen anzeigt. Wenn *integer_expression* negativ ist, wird eine NULL-Zeichenfolge zurückgegeben.  
   
- Weitere Informationen finden Sie unter [Ausdrücke &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)  
+ Weitere Informationen finden Sie unter [Ausdrücke &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md).  
   
 ## <a name="return-types"></a>Rückgabetypen  
  **varchar**  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Verwenden Sie REPLICATE anstelle von SPACE, wenn Sie Leerzeichen in Unicode-Daten einfügen oder mehr als 8000 Zeichenstellen zurückgeben möchten.  
   
 ## <a name="examples"></a>Beispiele  
@@ -70,7 +70,7 @@ ORDER BY LastName, FirstName;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
  Im folgenden Beispiel werden die Nachnamen gekürzt und ein Komma, zwei Leerzeichen und die Vornamen der in der `DimCustomer`-Tabelle in `AdventureWorksPDW2012` aufgelisteten Personen verkettet.  
   
 ```  
@@ -82,9 +82,9 @@ ORDER BY LastName, FirstName;
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [REPLICATE &#40; Transact-SQL &#41;](../../t-sql/functions/replicate-transact-sql.md)   
- [Zeichenfolgenfunktionen &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [REPLICATE &#40;Transact-SQL&#41;](../../t-sql/functions/replicate-transact-sql.md)   
+ [String Functions &#40;Transact-SQL&#41; (Zeichenfolgenfunktionen (Transact-SQL))](../../t-sql/functions/string-functions-transact-sql.md)   
  [Integrierte Funktionen &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)  
   
   

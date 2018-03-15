@@ -1,5 +1,5 @@
 ---
-title: STOverlaps (Geometry-Datentyp) | Microsoft Docs
+title: STOverlaps (geometry-Datentyp) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -48,14 +48,14 @@ Gibt 1 zurück, wenn eine **geometry** -Instanz eine andere **geometry** -Instan
  Eine andere **geometry** -Instanz zum Vergleich mit der Instanz, in der `STOverlaps()` aufgerufen wird.  
   
 ## <a name="return-types"></a>Rückgabetypen  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Rückgabetyp: **Bit**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Rückgabetyp: **bit**  
   
  CLR-Rückgabetyp: **SqlBoolean**  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Zwei **geometry** -Instanzen überlappen sich, wenn der Bereich ihrer Schnittmenge die gleiche Dimensionalität wie die Instanzen hat und die Region mit keiner der Instanzen identisch ist.  
   
- `STOverlaps()`Gibt immer 0 zurück, wenn die Punkte, in denen die **Geometrie** Instanzen überschneiden sind nicht die gleiche Dimension.  
+ `STOverlaps()` gibt immer 0 (null) zurück, wenn die Punkte, an denen sich die **geometry**-Instanzen überschneiden, nicht die gleiche Dimensionalität aufweisen.  
   
  Diese Methode gibt immer NULL zurück, wenn die SRIDs (Spatial Reference IDs) der **geometry** -Instanzen nicht übereinstimmen.  
   
@@ -70,7 +70,7 @@ SET @h = geometry::STGeomFromText('POLYGON((1 1, 3 1, 3 3, 1 3, 1 1))', 0);
 SELECT @g.STOverlaps(@h);  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [OGC-Methoden für geometry-Instanzen](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

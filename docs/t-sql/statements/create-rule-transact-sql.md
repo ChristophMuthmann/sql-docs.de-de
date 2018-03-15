@@ -1,5 +1,5 @@
 ---
-title: Erstellen Sie die Regel (Transact-SQL) | Microsoft Docs
+title: CREATE RULE (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -69,35 +69,35 @@ AS condition_expression
  Der Name des Schemas, zu dem die Regel gehört.  
   
  *rule_name*  
- Der Name der neuen Regel. Regelnamen müssen den Regeln für entsprechen [Bezeichner](../../relational-databases/databases/database-identifiers.md). Das Angeben des Regelbesitzernamens ist optional.  
+ Der Name der neuen Regel. Regelnamen müssen den Regeln für [Bezeichner](../../relational-databases/databases/database-identifiers.md) entsprechen. Das Angeben des Regelbesitzernamens ist optional.  
   
  *condition_expression*  
  Die Bedingung oder die Bedingungen, die die Regel definieren. Eine Regel kann jeder Ausdruck sein, der in einer WHERE-Klausel zulässig ist, und kann Elemente, wie z. B. arithmetische Operatoren, relationale Operatoren und Prädikate (z. B. IN, LIKE, BETWEEN) einschließen. Eine Regel kann nicht auf Spalten oder andere Datenbankobjekte verweisen. Integrierte Funktionen, die nicht auf Datenbankobjekte verweisen, dürfen in einer Regel eingeschlossen sein. Benutzerdefinierte Funktionen können nicht verwendet werden.  
   
- *Condition_expression* enthält einen Variablenverweis. Das at-Zeichen (**@**) vorangestellt ist jede lokale Variable. Der Ausdruck bezieht sich auf den Wert, der mit der UPDATE- oder INSERT-Anweisung eingegeben wird. Kann einen beliebigen Namen bzw. ein Symbol zur Darstellung des Werts, beim Erstellen der Regel verwendet werden, aber das erste Zeichen muss das at-Zeichen (**@**).  
+ *condition_expression* enthält eine Variable. Jede lokale Variable erhält als Präfix das at-Zeichen (**@**). Der Ausdruck bezieht sich auf den Wert, der mit der UPDATE- oder INSERT-Anweisung eingegeben wird. Wenn Sie die Regel erstellen, können Sie den Wert durch einen beliebigen Namen bzw. ein Symbol darstellen. Das erste Zeichen muss jedoch ein at-Zeichen (**@**) sein.  
   
 > [!NOTE]  
 >  Vermeiden Sie die Erstellung von Regeln für Ausdrücke, die Aliasdatentypen verwenden. Obwohl die Erstellung von Regeln für Ausdrücke, die Aliasdatentypen verwenden, möglich ist, können die Ausdrücke nach dem Binden der Regeln an Spalten oder Aliasdatentypen nicht kompiliert werden, wenn auf diese verwiesen wird.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  CREATE RULE-Anweisungen können nicht mit anderen [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen in einem einzelnen Batch kombiniert werden. Wenn Sie Regeln erstellen, gelten diese nicht für die Daten, die zu diesem Zeitpunkt bereits in der Datenbank vorhanden sind; darüber hinaus können Regeln nicht an Systemdatentypen gebunden werden.  
   
- Eine Regel kann nur in der aktuellen Datenbank erstellt werden. Nachdem Sie eine Regel erstellt haben, führen Sie **Sp_bindrule** auf die Regel an eine Spalte oder an den Aliasdatentyp zu binden. Eine Regel muss mit dem Datentyp der Spalte kompatibel sein. Z. B. "@value wie a%" kann nicht als eine Regel für eine numerische Spalte verwendet werden. Eine Regel kann nicht gebunden werden, um eine **Text**, **Ntext**, **Image**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **Xml**, CLR-benutzerdefinierten Typ oder **Zeitstempel**Spalte. An eine berechnete Spalte kann keine Regel gebunden werden.  
+ Eine Regel kann nur in der aktuellen Datenbank erstellt werden. Führen Sie nach dem Erstellen einer Regel **sp_bindrule** aus, um die Regel an eine Spalte oder an einen Aliasdatentyp zu binden. Eine Regel muss mit dem Datentyp der Spalte kompatibel sein. Es ist beispielsweise nicht möglich, „@value LIKE A%“ als Regel für eine numerische Spalte zu verwenden. Eine Regel kann nicht an die Datentypen **text**, **ntext**, **image**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **xml**, einen CLR-benutzerdefinierten Typ oder an **timestamp**-Spalten gebunden werden. An eine berechnete Spalte kann keine Regel gebunden werden.  
   
  Stellen Sie sicher, dass Sie Zeichen- und Datumskonstanten in einfache Anführungszeichen (') setzen und vor binären Konstanten 0x einfügen. Falls die Regel nicht mit der Spalte kompatibel ist, an die sie gebunden ist, gibt [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] eine Fehlermeldung zurück, wenn ein Wert eingefügt wird, nicht jedoch, wenn die Regel gebunden wird.  
   
  Eine Regel, die an einen Aliasdatentyp gebunden ist, wird nur dann aktiviert, wenn Sie versuchen, einen Wert in eine Datenbankspalte dieses Aliasdatentyps einzufügen bzw. den Spaltenwert zu aktualisieren. Mit Regeln werden keine Variablen getestet. Weisen Sie deshalb einer Variable eines Aliasdatentyps keinen Wert zu, der gegen eine Regel verstoßen würde, die an eine Spalte dieses Datentyps gebunden ist.  
   
- Verwenden Sie zum Abrufen eines Berichts auf eine Regel **Sp_help**. Um den Text einer Regel anzuzeigen, führen Sie **Sp_helptext** mit dem Regelnamen als Parameter. Um eine Regel umzubenennen, verwenden Sie **"Sp_rename"**.  
+ Mit **sp_help** erhalten Sie einen Bericht zu einer Regel. Wenn Sie sich den Text der Regel anzeigen lassen möchten, können Sie **sp_helptext** mit dem Regelnamen als Parameter ausführen. Mit **sp_rename** benennen Sie eine Regel um.  
   
- Eine Regel muss gelöscht werden, mithilfe der DROP RULE, bevor Sie ein neuer Eintrag mit dem gleichen Namen erstellt wird, und die Regel muss ungebundenen mit **Sp_unbindrule** bevor er gelöscht wird. Verwenden Sie zum Aufheben der Bindung einer Regel an eine Spalte, **Sp_unbindrule**.  
+ Eine Regel muss mit der DROP RULE-Anweisung gelöscht werden, bevor eine neue Regel gleichen Namens erstellt wird. Außerdem muss ihre Bindung durch die Ausführung von **sp_unbindrule** aufgehoben werden, bevor sie gelöscht wird. Verwenden Sie **sp_unbindrule**, um die Bindung einer Regel an eine Spalte aufzuheben.  
   
  Sie können eine neue Regel an eine Spalte oder einen Datentyp binden, ohne die Bindung der alten aufzuheben; die neue Regel überschreibt die alte. Regeln, die an Spalten gebunden sind, haben immer Vorrang vor Regeln, die an Aliasdatentypen gebunden sind. Wenn Sie eine Regel an eine Spalte binden, wird dabei die Regel ersetzt, die bereits an den Aliasdatentyp jener Spalte gebunden ist. Binden Sie dagegen eine Regel an einen Datentyp, so ersetzt diese nicht die Regel, die an eine Spalte mit diesem Aliasdatentyp gebunden wurde. Die folgende Tabelle zeigt die Rangfolge, die gilt, wenn Regeln an Spalten und Aliasdatentypen, für die bereits Regeln vorhanden sind, gebunden werden:  
   
-|Neue Regel wird gebunden an|Alte Regel ist gebunden an<br /><br /> Aliasdatentyp|Alte Regel ist gebunden an<br /><br /> Column|  
+|Neue Regel wird gebunden an|Alte Regel ist gebunden an<br /><br /> Aliasdatentyp|Alte Regel ist gebunden an<br /><br /> Spalte|  
 |-----------------------|-------------------------------------------|----------------------------------|  
-|Alias-Datentyp|Ersetzt alte Regel|Keine Änderung|  
-|Column|Ersetzt alte Regel|Ersetzt alte Regel|  
+|Aliasdatentyp|Ersetzt alte Regel|Keine Änderung|  
+|Spalte|Ersetzt alte Regel|Ersetzt alte Regel|  
   
  Wenn einer Spalte ein Standardwert und eine Regel zugeordnet sind, muss der Standardwert innerhalb der durch die Regel definierten Domäne liegen. Ein Standardwert, der gegen eine Regel verstößt, wird nie eingefügt. Bei jedem Versuch, einen solchen Standardwert einzufügen, generiert das SQL Server-Datenbankmodul eine Fehlermeldung.  
   
@@ -133,18 +133,18 @@ AS
 @value LIKE '__-%[0-9]'  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [CREATE DEFAULT &#40;Transact-SQL&#41;](../../t-sql/statements/create-default-transact-sql.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
- [Löschen Sie die STANDARDMÄßIGE &#40; Transact-SQL &#41;](../../t-sql/statements/drop-default-transact-sql.md)   
- [DROP RULE &#40; Transact-SQL &#41;](../../t-sql/statements/drop-rule-transact-sql.md)   
- [Ausdrücke &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
- [Sp_bindrule &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-bindrule-transact-sql.md)   
+ [DROP DEFAULT &#40;Transact-SQL&#41;](../../t-sql/statements/drop-default-transact-sql.md)   
+ [DROP RULE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-rule-transact-sql.md)   
+ [Ausdrücke &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [sp_bindrule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-bindrule-transact-sql.md)   
  [sp_help &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md)   
  [sp_helptext &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptext-transact-sql.md)   
  [sp_rename &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md)   
- [Sp_unbindrule &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-unbindrule-transact-sql.md)   
- [WOBEI &#40; Transact-SQL &#41;](../../t-sql/queries/where-transact-sql.md)  
+ [sp_unbindrule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-unbindrule-transact-sql.md)   
+ [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)  
   
   

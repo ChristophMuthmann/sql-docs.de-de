@@ -1,5 +1,5 @@
 ---
-title: POWER (Transact-SQL) | Microsoft Docs
+title: POWER (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
@@ -46,13 +46,13 @@ POWER ( float_expression , y )
   
 ## <a name="arguments"></a>Argumente  
  *float_expression*  
- Ist ein [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) des Typs **"float"** oder eines Typs, der implizit konvertiert werden können **"float"**.  
+ Ein [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) vom Typ **float** oder von einem Typ, der implizit in **float** konvertiert werden kann.  
   
  *y*  
- Ist die Potenz, in die zum Auslösen von *Float_expression*. *y* kann ein Ausdruck der Kategorie der genauen numerischen oder ungefähren numerischen Daten, mit Ausnahme der **Bit** -Datentyp.  
+ Die Potenz, in die *float_expression* erhoben werden soll. *y* kann ein Ausdruck der genauen numerischen oder ungefähren numerischen Datentypkategorie sein, mit Ausnahme des **bit**-Datentyps.  
   
 ## <a name="return-types"></a>Rückgabetypen  
- Gibt denselben Typ wie in gesendetem *Float_expression*. Z. B. wenn ein **decimal**(2.0) wird als übermittelt *Float_expression*, der Rückgabe des Ergebnisses **decimal**(2.0).  
+ Gibt den gleichen Typen wie den an *float_expression* übermittelten zurück. Wenn z.B. ein **decimal**(2,0) als *float_expression* übermittelt wird, wird **decimal**(2,0) zurückgegeben.  
   
 ## <a name="examples"></a>Beispiele  
   
@@ -78,7 +78,7 @@ Result1                Result2
 ```  
   
 ### <a name="b-using-power-to-show-results-of-data-type-conversion"></a>B. Anzeigen der Ergebnisse einer Datentypkonvertierung mit POWER  
- Das folgende Beispiel zeigt wie die *Float_expression* behält den Datentyp der unerwartete Ergebnisse zurückgegeben werden können.  
+ Im folgenden Beispiel wird veranschaulicht, wie der Datentyp von *float_expression* beibehalten wird, was zu unerwarteten Ergebnissen führen kann.  
   
 ```  
 SELECT   
@@ -141,10 +141,10 @@ GO
 (1 row(s) affected)  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
-### <a name="d-using-power-to-return-the-cube-of-a-number"></a>D: Verwenden von POWER zum Zurückgeben der Kubikwurzel einer Zahl  
- Das folgende Beispiel zeigt, gibt `POWER` -Ergebnisse für `2.0` 3. hoch.  
+### <a name="d-using-power-to-return-the-cube-of-a-number"></a>D: Rückgabe des Cubes einer Zahl mit POWER  
+ Im folgenden Beispiel wird die Rückgabe von `POWER`-Ergebnissen für `2.0` an die dritte Potenz dargestellt.  
   
 ```  
 SELECT POWER(2.0, 3);  
@@ -157,12 +157,12 @@ SELECT POWER(2.0, 3);
 8.0
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Decimal und Numeric &#40; Transact-SQL &#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)   
- [Float und Real &#40; Transact-SQL &#41;](../../t-sql/data-types/float-and-real-transact-sql.md)   
- [Int, Bigint, Smallint und Tinyint &#40; Transact-SQL &#41;](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)   
- [Mathematische Funktionen &#40; Transact-SQL &#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)   
- [Money und Smallmoney &#40; Transact-SQL &#41;](../../t-sql/data-types/money-and-smallmoney-transact-sql.md)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [decimal und numeric &#40;Transact-SQL&#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)   
+ [float und real &#40;Transact-SQL&#41;](../../t-sql/data-types/float-and-real-transact-sql.md)   
+ [int, bigint, smallint und tinyint &#40;Transact-SQL&#41;](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)   
+ [Mathematische Funktionen &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)   
+ [money und smallmoney &#40;Transact-SQL&#41;](../../t-sql/data-types/money-and-smallmoney-transact-sql.md)  
   
   
 

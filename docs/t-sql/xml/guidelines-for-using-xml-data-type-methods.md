@@ -1,5 +1,5 @@
 ---
-title: "Richtlinien für die Verwendung von Xml-Datentypmethoden | Microsoft Docs"
+title: Richtlinien zum Verwenden von Methoden des xml-Datentyps | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -32,10 +32,10 @@ ms.lasthandoff: 01/25/2018
 # <a name="guidelines-for-using-xml-data-type-methods"></a>Richtlinien zum Verwenden von Methoden des xml-Datentyps
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Dieses Thema enthält Richtlinien zum Verwenden der **Xml** -Datentypmethoden.  
+  In diesem Thema werden Richtlinien zum Verwenden der **xml**-Datentypmethoden beschrieben.  
   
 ## <a name="the-print-statement"></a>Die PRINT-Anweisung  
- Die **Xml** -Datentypmethoden können nicht in der PRINT-Anweisung verwendet werden, wie im folgenden Beispiel gezeigt. Die **Xml** -Datentypmethoden werden als Unterabfragen behandelt und Unterabfragen sind in der PRINT-Anweisung nicht zulässig. Aus diesem Grund gibt das folgende Beispiel einen Fehler zurück:  
+ Die Methoden des **xml**-Datentyps können nicht in der PRINT-Anweisung verwendet werden, wie das folgende Beispiel zeigt. Die Methoden des **xml**-Datentyps werden als Unterabfragen behandelt, und Unterabfragen sind in der PRINT-Anweisung nicht zulässig. Aus diesem Grund gibt das folgende Beispiel einen Fehler zurück:  
   
 ```  
 DECLARE @x xml  
@@ -43,7 +43,7 @@ SET @x = '<root>Hello</root>'
 PRINT @x.value('/root[1]', 'varchar(20)') -- will not work because this is treated as a subquery (select top 1 col from table)   
 ```  
   
- Eine Lösung besteht darin, zuerst das Ergebnis des Zuweisen der **value()** Methode, um eine Variable des **Xml** geben, und geben Sie die Variable in der Abfrage.  
+ Eine mögliche Lösung besteht darin, zuerst das Ergebnis der **value()**-Methode einer Variablen vom **xml**-Typ zuzuweisen und dann diese Variable in der Abfrage anzugeben.  
   
 ```  
 DECLARE @x xml  
@@ -54,17 +54,17 @@ PRINT @c
 ```  
   
 ## <a name="the-group-by-clause"></a>Die GROUP BY-Klausel  
- Die **Xml** -Datentypmethoden werden intern als Unterabfragen behandelt. Da GROUP BY einen Skalarwert erfordert und keine Aggregate oder Unterabfragen lässt, Sie können keine angeben der **Xml** -Datentypmethoden in der GROUP BY-Klausel. Eine mögliche Lösung besteht im Aufrufen einer benutzerdefinierten Funktion, innerhalb derer XML-Methoden verwendet werden.  
+ Die Methoden des **xml**-Datentyps werden intern als Unterabfragen behandelt. Da GROUP BY einen Skalarwert erfordert und keine Aggregate oder Unterabfragen zulässt, können Sie die Methoden des **xml**-Datentyps nicht in der GROUP BY-Klausel angeben. Eine mögliche Lösung besteht im Aufrufen einer benutzerdefinierten Funktion, innerhalb derer XML-Methoden verwendet werden.  
   
 ## <a name="reporting-errors"></a>Erstellen von Fehlerberichten  
- Beim Melden von Fehlern, **Xml** -Datentypmethoden auslösen einen einzelnen Fehler in das folgende Format:  
+ Sollte ein Fehler auftreten, lösen die Methoden des **xml**-Datentyps einen einzelnen Fehler im folgenden Format aus:  
   
 ```  
 Msg errorNumber, Level levelNumber, State stateNumber:  
 XQuery [database.table.method]: description_of_error  
 ```  
   
- Beispiel:  
+ Zum Beispiel:  
   
 ```  
 Msg 2396, Level 16, State 1:  
@@ -72,22 +72,22 @@ XQuery [xmldb_test.xmlcol.query()]: Attribute may not appear outside of an eleme
 ```  
   
 ## <a name="singleton-checks"></a>Singleton-Überprüfungen  
- Positionsschritte, Funktionsparameter und Operatoren, die Singleton-Elemente benötigen, geben einen Fehler zurück, wenn der Compiler nicht ermitteln kann, ob zur Laufzeit ein Singleton-Element sichergestellt ist. Dieses Problem tritt häufig bei nicht typisierten Daten auf. So erfordert z. B. die Suche eines Attributs ein übergeordnetes Singleton-Element. Dabei ist eine Ordinalzahl ausreichend, die einen einzelnen übergeordneten Knoten auswählt. Die Auswertung einer **node()**-**value()** Kombination zum Extrahieren von Attributwerten erfordern ggf. keine der Ordinalzahl. Dies ist im nächsten Beispiel dargestellt.  
+ Positionsschritte, Funktionsparameter und Operatoren, die Singleton-Elemente benötigen, geben einen Fehler zurück, wenn der Compiler nicht ermitteln kann, ob zur Laufzeit ein Singleton-Element sichergestellt ist. Dieses Problem tritt häufig bei nicht typisierten Daten auf. So erfordert z. B. die Suche eines Attributs ein übergeordnetes Singleton-Element. Dabei ist eine Ordinalzahl ausreichend, die einen einzelnen übergeordneten Knoten auswählt. Die Auswertung einer **node()**-**-value()**-Kombination zum Extrahieren von Attributwerten erfordert möglicherweise keine Angabe der Ordinalzahl. Dies ist im nächsten Beispiel dargestellt.  
   
 ### <a name="example-known-singleton"></a>Beispiel: Bekanntes Singleton  
- In diesem Beispiel wird die **nodes()** Methode generiert eine separate Zeile für jeden <`book`> Element. Die **value()** -Methode, die auf ausgewertet wird ein <`book`> Knoten extrahiert den Wert des @genre und ein Attribut ist ein Singleton.  
+ In diesem Beispiel generiert die **nodes()**-Methode eine separate Zeile für jedes <`book`>-Element. Die **value()**-Methode, die in einem <`book`>-Knoten ausgewertet wird, extrahiert den Wert von @genre und stellt, da es sich um ein Attribut handelt, ein Singleton-Element dar.  
   
 ```  
 SELECT nref.value('@genre', 'varchar(max)') LastName  
 FROM   T CROSS APPLY xCol.nodes('//book') AS R(nref)  
 ```  
   
- Das XML-Schema wird zur Typprüfung von typisiertem XML verwendet. Wenn ein Knoten im XML-Schema als ein Singleton angegeben ist, verwendet der Compiler diese Informationen, und es tritt kein Fehler auf. Ansonsten ist eine Ordinalzahl erforderlich, die einen einzelnen Knoten auswählt. Insbesondere wird die Verwendung von Descendant-or-Self-Achse (/ /) wie in/Book / / title geht die Singleton-Kardinalität Typrückschluss für verliert die \<Title > Element, auch wenn das XML-Schema gibt an, um entsteht. Deshalb sollten Sie ihn als (/book//title)[1] umschreiben.  
+ Das XML-Schema wird zur Typprüfung von typisiertem XML verwendet. Wenn ein Knoten im XML-Schema als ein Singleton angegeben ist, verwendet der Compiler diese Informationen, und es tritt kein Fehler auf. Ansonsten ist eine Ordinalzahl erforderlich, die einen einzelnen Knoten auswählt. Insbesondere bei Verwendung einer descendant-or-self-Achse (//) wie in /book//title geht die Singleton-Kardinalitätsinferenz für das Element \<title> verloren; dies gilt auch bei einer entsprechenden Angabe durch das XML-Schema. Deshalb sollten Sie ihn als (/book//title)[1] umschreiben.  
   
- Sie müssen sich des Unterschiedes zwischen //first-name[1] und (//first-name)[1] für die Typüberprüfung bewusst sein. Die erste gibt eine Sequenz von \<First-Name > Knoten in der jeder Knoten der am weitesten links stehende ist \<First-Name >-Knoten der gleichgeordneten. Der zweite Wert gibt den ersten Singleton \<First-Name > Knoten in Dokumentreihenfolge der XML-Instanz.  
+ Sie müssen sich des Unterschiedes zwischen //first-name[1] und (//first-name)[1] für die Typüberprüfung bewusst sein. Das erstgenannte Element gibt eine Sequenz von \<first-name>-Knoten zurück, in der die einzelnen Knoten jeweils den äußeren linken \<first-name>-Knoten der gleichgeordneten Elemente darstellen. Das letztgenannte Element gibt den ersten \<first-name>-Singleton-Knoten in der Dokumentreihenfolge der XML-Instanz zurück.  
   
 ### <a name="example-using-value"></a>Beispiel: Verwenden von value()  
- Die folgende Abfrage für eine nicht typisierte XML-Spalte führt zu einem statischen Kompilierungsfehler. Grund hierfür ist, **value()** erwartet einen Singleton-Knoten als erstes Argument und der Compiler bestimmen können, ob nur ein \<Last-Name > Knoten wird zur Laufzeit auftreten:  
+ Die folgende Abfrage einer nicht typisierten XML-Spalte führt zu einem statischen Kompilierungsfehler. Das liegt daran, dass **value()** einen Singleton-Knoten als erstes Argument erwartet und der Compiler nicht feststellen kann, ob nur ein \<last-name>-Knoten zur Laufzeit auftritt:  
   
 ```  
 SELECT xCol.value('//author/last-name', 'nvarchar(50)') LastName  
@@ -110,7 +110,7 @@ FROM   T
   
  Diese Abfrage gibt den Wert des ersten `<last-name>`-Elements in jeder XML-Instanz zurück.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [xml Data Type Methods (xml-Datentypmethoden)](../../t-sql/xml/xml-data-type-methods.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "\"uniqueidentifier\" (Transact-SQL) | Microsoft Docs"
+title: uniqueidentifier (Transact-SQL)| Microsoft-Dokumentation
 ms.custom: 
 ms.date: 12/1/2017
 ms.prod: sql-non-specified
@@ -38,12 +38,12 @@ ms.lasthandoff: 01/02/2018
 
 Ein 16-Byte-GUID.
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
 Es gibt die folgenden Möglichkeiten, um eine Spalte oder lokale Variable vom Datentyp **uniqueidentifier** zu initialisieren:
--   Mithilfe der [NEWID](../../t-sql/functions/newid-transact-sql.md) oder [NEWSEQUENTIALID](../../t-sql/functions/newsequentialid-transact-sql.md) Funktionen.    
+-   Durch die Verwendung der Funktionen [NEWID](../../t-sql/functions/newid-transact-sql.md) oder [NEWSEQUENTIALID](../../t-sql/functions/newsequentialid-transact-sql.md).    
 -   Durch die Konvertierung einer Zeichenfolgenkonstanten der Form *xxxxxxxx*-*xxxx*-*xxxx*-*xxxx*-*xxxxxxxxxxxx*, in der jedes *x* für eine hexadezimale Ziffer zwischen 0 und 9 bzw. a und f steht. Beispielsweise ist 6F9619FF-8B86-D011-B42D-00C04FC964FF ein gültiger **uniqueidentifier** -Wert.  
   
-Vergleichsoperatoren können mit **uniqueidentifier** -Werten verwendet werden. Allerdings erfolgt das Sortieren nicht durch Vergleichen der Bitmuster der beiden Werte. Die einzigen Operationen, die gegen erfolgen können eine **"uniqueidentifier"** Wert sind Vergleiche (= <>, \<, >, \<=, > =) und das Überprüfen auf NULL (IS NULL und IS NOT NULL). Es können keine weiteren arithmetischen Operatoren verwendet werden. Alle Spalteneinschränkungen und -eigenschaften, außer der IDENTITY-Eigenschaft, können mit dem **uniqueidentifier** -Datentyp verwendet werden.
+Vergleichsoperatoren können mit **uniqueidentifier** -Werten verwendet werden. Allerdings erfolgt das Sortieren nicht durch Vergleichen der Bitmuster der beiden Werte. Die einzigen Operationen, die für einen **uniqueidentifier**-Wert ausgeführt werden können, sind Vergleiche (=, <>, \<, >, \<=, >=) und die Überprüfung auf NULL (IS NULL und IS NOT NULL). Es können keine weiteren arithmetischen Operatoren verwendet werden. Alle Spalteneinschränkungen und -eigenschaften, außer der IDENTITY-Eigenschaft, können mit dem **uniqueidentifier** -Datentyp verwendet werden.
   
 Die Merge- und die Transaktionsreplikation mit Abonnements mit Update verwenden **uniqueidentifier** -Spalten. Dadurch wird sichergestellt, dass die Zeilen über mehrere Kopien der Tabelle hinweg eindeutig identifiziert werden.
   
@@ -52,9 +52,9 @@ Der **uniqueidentifier** -Typ wird bei der Konvertierung von Zeichenausdrücken 
   
 ## <a name="limitations-and-restrictions"></a>Einschränkungen
 
-Diese Tools und Funktionen unterstützen nicht die `uniqueidentifier` -Datentyp:
+Diese Tools und Features unterstützen den `uniqueidentifier`-Datentyp nicht:
 - PolyBase
-- [Dwloader laden Tool](https://msdn.microsoft.com/sql/analytics-platform-system/dwloader) für Parallel Data Warehouse
+- [dwloader-Ladetool](https://msdn.microsoft.com/sql/analytics-platform-system/dwloader) für Parallel Data Warehouse
 
 ## <a name="examples"></a>Beispiele  
 Das folgende Beispiel konvertiert einen `uniqueidentifier` -Wert in einen `char` -Datentyp.
@@ -87,8 +87,8 @@ String                                       TruncatedValue
 [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)  
 [Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
 [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)  
-[NEWID &#40; Transact-SQL &#41;](../../t-sql/functions/newid-transact-sql.md)  
-[NEWSEQUENTIALID &#40; Transact-SQL &#41;](../../t-sql/functions/newsequentialid-transact-sql.md)    
+[NEWID &#40;Transact-SQL&#41;](../../t-sql/functions/newid-transact-sql.md)  
+[NEWSEQUENTIALID &#40;Transact-SQL&#41;](../../t-sql/functions/newsequentialid-transact-sql.md)    
 [SET @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/set-local-variable-transact-sql.md)  
 [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)
   

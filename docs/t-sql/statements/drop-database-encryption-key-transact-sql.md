@@ -1,5 +1,5 @@
 ---
-title: DROP DATABASE ENCRYPTION KEY (Transact-SQL) | Microsoft Docs
+title: DROP DATABASE ENCRYPTION KEY (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/20/2017
 ms.prod: sql-non-specified
@@ -35,7 +35,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="drop-database-encryption-key-transact-sql"></a>DROP DATABASE ENCRYPTION KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
-  Löscht einen Verschlüsselungsschlüssel für eine Datenbank, der bei der transparenten Datenbankverschlüsselung verwendet wird. Weitere Informationen über transparente datenbankverschlüsselung finden Sie unter [transparente datenverschlüsselung &#40; TDE &#41; ](../../relational-databases/security/encryption/transparent-data-encryption.md).  
+  Löscht einen Verschlüsselungsschlüssel für eine Datenbank, der bei der transparenten Datenbankverschlüsselung verwendet wird. Weitere Informationen zur transparenten Datenbankverschlüsselung finden Sie unter [Transparent Data Encryption &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md).  
   
 > [!IMPORTANT]  
 >  Auch wenn die Verschlüsselung einer Datenbank deaktiviert wurde, sollte immer eine Sicherung des Zertifikats beibehalten werden, mit dem die Datenbankverschlüsselung geschützt wurde. Selbst wenn die Datenbank nicht mehr verschlüsselt ist, können Teile des Transaktionsprotokolls nach wie vor geschützt sein. Für bestimmte Vorgänge wird das Zertifikat ggf. weiterhin benötigt, bis eine vollständige Sicherung der Datenbank ausgeführt wurde.  
@@ -48,8 +48,8 @@ ms.lasthandoff: 11/21/2017
 DROP DATABASE ENCRYPTION KEY  
 ```  
   
-## <a name="remarks"></a>Hinweise  
- Wenn die Datenbank verschlüsselt ist, müssen Sie die Verschlüsselung der Datenbank zunächst mit der ALTER DATABASE-Anweisung aufheben. Warten Sie, bis die Entschlüsselung abgeschlossen ist, bevor Sie den Verschlüsselungsschlüssel der Datenbank entfernen. Weitere Informationen über die ALTER DATABASE-Anweisung finden Sie unter [ALTER DATABASE SET-Optionen &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-database-transact-sql-set-options.md). Um den Status der Datenbank anzuzeigen, verwenden die [dm_database_encryption_keys](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md) -verwaltungssicht.  
+## <a name="remarks"></a>Remarks  
+ Wenn die Datenbank verschlüsselt ist, müssen Sie die Verschlüsselung der Datenbank zunächst mit der ALTER DATABASE-Anweisung aufheben. Warten Sie, bis die Entschlüsselung abgeschlossen ist, bevor Sie den Verschlüsselungsschlüssel der Datenbank entfernen. Weitere Informationen zur ALTER DATABASE-Anweisung finden Sie unter [ALTER DATABASE SET-Optionen &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md). Der Status der Datenbank wird mit der dynamischen Verwaltungssicht [sys.dm_database_encryption_keys](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md) angezeigt.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die CONTROL-Berechtigung für die Datenbank.  
@@ -72,8 +72,8 @@ DROP DATABASE ENCRYPTION KEY;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- Im folgenden Beispiel entfernt die TDE-Verschlüsselung und löscht dann die Datenbank-Verschlüsselungsschlüssel.  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
+ Im folgenden Beispiel wird die TDE-Verschlüsselung entfernt und der Datenbank-Verschlüsselungsschlüssel gelöscht.  
   
 ```  
 ALTER DATABASE AdventureWorksPDW2012  
@@ -104,14 +104,14 @@ DROP DATABASE ENCRYPTION KEY;
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Transparente Datenverschlüsselung &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md)   
  [SQL Server-Verschlüsselung](../../relational-databases/security/encryption/sql-server-encryption.md)   
  [Verschlüsselungsschlüssel für SQL Server und Datenbank &#40;Datenbankmodul&#41;](../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)   
  [Verschlüsselungshierarchie](../../relational-databases/security/encryption/encryption-hierarchy.md)   
  [ALTER DATABASE SET-Optionen &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
- [Erstellen Sie DATABASE ENCRYPTION KEY &#40; Transact-SQL &#41;](../../t-sql/statements/create-database-encryption-key-transact-sql.md)   
- [ALTER DATABASE ENCRYPTION KEY &#40; Transact-SQL &#41;](../../t-sql/statements/alter-database-encryption-key-transact-sql.md)   
+ [CREATE DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-encryption-key-transact-sql.md)   
+ [ALTER DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-encryption-key-transact-sql.md)   
  [sys.dm_database_encryption_keys &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md)  
   
   

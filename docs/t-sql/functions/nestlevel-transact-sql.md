@@ -1,5 +1,5 @@
 ---
-title: '@@NESTLEVEL (Transact-SQL) | Microsoft Docs'
+title: '@@NESTLEVEL (Transact-SQL) | Microsoft-Dokumentation'
 ms.custom: 
 ms.date: 09/17/2017
 ms.prod: sql-non-specified
@@ -49,14 +49,14 @@ ms.lasthandoff: 11/21/2017
 ## <a name="return-types"></a>Rückgabetypen  
  **int**  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Jedes Mal, wenn eine gespeicherte Prozedur eine andere gespeicherte Prozedur aufruft oder durch Verweis auf eine Common Language Routine (CLR), einen Typ oder ein Aggregat verwalteten Code ausführt, wird die Schachtelungsebene erhöht. Wird der Höchstwert von 32 überschritten, so wird die Transaktion beendet.  
   
- Wenn @@NESTLEVEL ausgeführt wird, innerhalb einer [!INCLUDE[tsql](../../includes/tsql-md.md)] Zeichenfolge, der zurückgegebene Wert ist 1 + der aktuellen Schachtelungsebene. Wenn @@NESTLEVEL ausgeführt wird dynamisch mithilfe von Sp_executesql ist der zurückgegebene Wert 2 + der aktuellen Schachtelungsebene.  
+ Wenn @@NESTLEVEL innerhalb einer [!INCLUDE[tsql](../../includes/tsql-md.md)]-Zeichenfolge ausgeführt wird, entspricht der zurückgegebene Wert 1 + der aktuellen Schachtelungsebene. Wenn @@NESTLEVEL mithilfe von sp_executesql dynamisch ausgeführt wird, entspricht der zurückgegebene Wert 2 + der aktuellen Schachtelungsebene.  
   
 ## <a name="examples"></a>Beispiele  
   
-### <a name="a-using-nestlevel-in-a-procedure"></a>A. Mit@NESTLEVEL in einer Prozedur  
+### <a name="a-using-nestlevel-in-a-procedure"></a>A. Verwenden von @@NESTLEVEL in einer Prozedur  
  Dieses Beispiel erstellt zwei Prozeduren: Eine, die eine andere Prozedur aufruft, und eine, die die `@@NESTLEVEL` -Einstellung beider Prozeduren anzeigt.  
   
 ```  
@@ -91,8 +91,8 @@ Inner Level
 2
 ```  
   
-### <a name="b-calling-nestlevel"></a>B. Aufrufen@NESTLEVEL  
- Das folgende Beispiel zeigt die unterschiedlichen Werte zurückgegebenes `SELECT`, `EXEC`, und `sp_executesql` Wenn aufruft, jede von ihnen `@@NESTLEVEL`.  
+### <a name="b-calling-nestlevel"></a>B. Aufrufen von @@NESTLEVEL  
+ Das folgende Beispiel zeigt die unterschiedlichen Werte, die von `SELECT`, `EXEC`und `sp_executesql` zurückgegeben werden, wenn jeweils `@@NESTLEVEL` aufgerufen wird.  
   
 ```  
 CREATE PROC usp_NestLevelValues AS  
@@ -126,7 +126,7 @@ TwoGreater
 (1 row(s) affected)
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Konfigurationsfunktionen (Transact-SQL)](../../t-sql/functions/configuration-functions-transact-sql.md)   
  [Erstellen einer gespeicherten Prozedur](../../relational-databases/stored-procedures/create-a-stored-procedure.md)   
  [@@TRANCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/trancount-transact-sql.md)  

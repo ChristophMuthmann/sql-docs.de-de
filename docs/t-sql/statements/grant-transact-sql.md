@@ -1,5 +1,5 @@
 ---
-title: GRANT (Transact-SQL) | Microsoft Docs
+title: GRANT (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 06/12/2017
 ms.prod: sql-non-specified
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="grant-transact-sql"></a>GRANT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Erteilt einem Prinzipal Berechtigungen für ein sicherungsfähiges Element.  Das allgemeine Konzept entspricht GRANT \<bestimmte Berechtigungen > ON \<ein Objekt > TO \<einige Benutzer, Anmeldenamen oder Gruppe >. Eine allgemeine Beschreibung der Berechtigungen finden Sie unter [Berechtigungen &#40; Datenbankmodul &#41;](../../relational-databases/security/permissions-database-engine.md).  
+  Erteilt einem Prinzipal Berechtigungen für ein sicherungsfähiges Element.  Das allgemeine Konzept sieht folgendermaßen aus: GRANT \<Berechtigung> ON \<Objekt> TO \<Benutzer, Anmeldename oder Gruppe>. Eine allgemeine Diskussion zu Berechtigungen finden Sie unter [Berechtigungen &#40;Datenbank-Engine&#41;](../../relational-databases/security/permissions-database-engine.md).  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -100,32 +100,32 @@ GRANT
 PRIVILEGES  
  Aus Gründen der Kompatibilität mit ISO eingeschlossen. Ändert das Verhalten von ALL nicht.  
   
-*Berechtigung*  
+*permission*  
  Der Name einer Berechtigung. Die gültigen Zuordnungen von Berechtigungen zu sicherungsfähigen Elementen sind in den im Folgenden aufgeführten untergeordneten Themen beschrieben.  
   
-*Spalte*  
+*column*  
  Gibt den Namen einer Spalte in einer Tabelle an, für die Berechtigungen erteilt werden. Die Klammern () sind erforderlich.  
   
-*Klasse*  
- Gibt die Klasse des sicherungsfähigen Elements an, für das die Berechtigung erteilt wird. Der bereichsqualifizierer **::** ist erforderlich.  
+*class*  
+ Gibt die Klasse des sicherungsfähigen Elements an, für das die Berechtigung erteilt wird. Der Bereichsqualifizierer **::** ist erforderlich.  
   
-*sicherungsfähiges Element*  
+*securable*  
  Gibt das sicherungsfähige Element an, für das die Berechtigung erteilt wird.  
   
-UM *Prinzipal*  
- Ist der Name eines Prinzipals. Die Prinzipale, für die Berechtigungen für ein sicherungsfähiges Element erteilt werden können, sind abhängig vom jeweiligen sicherungsfähigen Element unterschiedlich. Gültige Kombinationen finden Sie in den folgenden Unterthemen.  
+TO *principal*  
+ Der Name eines Prinzipals. Die Prinzipale, für die Berechtigungen für ein sicherungsfähiges Element erteilt werden können, sind abhängig vom jeweiligen sicherungsfähigen Element unterschiedlich. Gültige Kombinationen finden Sie in den folgenden Unterthemen.  
   
 GRANT OPTION  
  Gibt an, dass der Empfänger die angegebene Berechtigung auch anderen Prinzipalen erteilen kann.  
   
-AS *Prinzipal*  
- Verwenden Sie die Dienstprinzipalname AS-Klausel, um anzugeben, dass der Prinzipal aufgezeichnet, wie der berechtigende (Grantor), der die Berechtigung eines Prinzipals als die Person, die die Anweisung ausgeführt werden soll. Beispielsweise annehmen Sie, dass die Benutzerin Mary Principal_id 12 und Benutzer Raul principal 15. Andrea führt `GRANT SELECT ON OBJECT::X TO Steven WITH GRANT OPTION AS Raul;` nun die Tabelle database_permissions angezeigt wird, dass die Grantor_prinicpal_id 15 (Raul) wurde, auch wenn die Anweisung tatsächlich vom Benutzer 13 (Mary) ausgeführt wurde.
+AS *principal*  
+ Verwenden Sie die AS-Prinzipalklausel, um anzugeben, dass der Prinzipal, der die Berechtigung erteilt hat, ein anderer Prinzipal als die Person sein muss, die die Anweisung ausführt. Nehmen Sie beispielsweise an, dass der Benutzer Mary der principal_id 12 und der Benutzer Raul der principal_id 15 entspricht. Mary führt `GRANT SELECT ON OBJECT::X TO Steven WITH GRANT OPTION AS Raul;` aus. Daraufhin gibt die Tabelle „sys.database_permissions“ an, dass die „grantor_prinicpal_id“ „15“ (Raul) entspricht, obwohl die Anweisung tatsächlich von Benutzer 12 (Mary) ausgeführt wurde.
 
-Mithilfe der AS-Klausel ist in der Regel nicht empfehlenswert, wenn Sie explizit die Berechtigung Kette definieren müssen. Weitere Informationen finden Sie unter der **Statuszusammenfassung der Algorithmus zur Berechtigungsprüfung** Abschnitt [Berechtigungen (Datenbankmodul)](../../relational-databases/security/permissions-database-engine.md).
+Das Verwenden der AS-Klausel wird üblicherweise nicht empfohlen, sofern Sie nicht explizit die Berechtigungskette definieren müssen. Weitere Informationen finden Sie im Abschnitt **Zusammenfassung des Algorithmus zur Berechtigungsprüfung** unter [Berechtigungen (Datenbank-Engine)](../../relational-databases/security/permissions-database-engine.md).
 
-Die Verwendung eines wie in dieser Anweisung impliziert nicht die Möglichkeit, die Identität eines anderen Benutzers anzunehmen. 
+In dieser Anweisung impliziert die Verwendung von AS nicht die Fähigkeit, die Identität eines anderen Benutzers anzunehmen. 
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Die vollständige Syntax der GRANT-Anweisung ist sehr komplex. Das Syntaxdiagramm oben wurde vereinfacht, um die Struktur hervorzuheben. Die vollständige Syntax für das Erteilen von Berechtigungen für spezifische sicherungsfähige Elemente wird in den unten aufgeführten Themen beschrieben.  
   
  Die REVOKE-Anweisung kann zum Entfernen von erteilten Berechtigungen verwendet werden, und mit der DENY-Anweisung kann verhindert werden, dass einem Prinzipal eine spezifische Berechtigung durch eine GRANT-Anweisung erteilt wird.  
@@ -140,7 +140,7 @@ Die Verwendung eines wie in dieser Anweisung impliziert nicht die Möglichkeit, 
  Die gespeicherte Systemprozedur sp_helprotect gibt Informationen zu Berechtigungen für sicherungsfähige Elemente auf Datenbankebene zurück.  
   
 ## <a name="with-grant-option"></a>WITH GRANT OPTION  
- Die **GRANT** ... **MIT GRANT OPTION** gibt an, dass der Sicherheitsprinzipal, der die Berechtigung erhält anderen Sicherheitskonten die angegebene Berechtigung zu erteilen angegeben wird. Wenn der Prinzipal, der die Berechtigung empfängt eine Rolle oder eine Windows-Gruppe ist die **AS** -Klausel muss verwendet werden, wenn die Objektberechtigung muss, um weiteren Benutzern gewährt werden, die nicht Mitglieder der Gruppe oder Rolle sind. Da nur ein Benutzer anstelle einer Gruppe oder Rolle ausführen kann ein **GRANT** -Anweisung, die ein bestimmtes Mitglied der Gruppe oder Rolle verwenden muss die **AS** -Klausel, um die Rollen- oder Gruppenmitgliedschaft explizit aufrufen, wenn er gewährt die Berechtigung. Das folgende Beispiel zeigt wie die **WITH GRANT OPTION** wird verwendet, wenn eine Rolle oder einen Windows-Gruppe gewährt.  
+ Die Anweisung **GRANT** **WITH GRANT OPTION** gibt an, dass der Sicherheitsprinzipal, der die Berechtigung erhält, die Fähigkeit erhält, anderen Sicherheitskonten die angegebene Berechtigung zu erteilen. Wenn es sich bei dem Prinzipal, der die Berechtigung erhält, um eine Rolle oder eine Windows-Gruppe handelt, muss die **AS**-Klausel verwendet werden, wenn die Objektberechtigung Benutzern gewährt werden muss, die keine Elemente der Gruppe oder der Rolle sind. Da nur ein Benutzer anstelle einer Gruppe oder Rolle eine **GRANT**-Anweisung ausführen kann, muss ein spezifisches Element der Gruppe oder Rolle die **AS**-Klausel verwenden, um die Rollen- oder Gruppenmitgliedschaft beim Gewähren der Berechtigung explizit aufzurufen. Das folgende Beispiel zeigt, wie die Option **WITH GRANT OPTION** verwendet wird, wenn sie einer Rolle oder einer Windows-Gruppe gewährt wird.  
   
 ```  
 -- Execute the following as a database owner  
@@ -168,47 +168,47 @@ GRANT EXECUTE ON TestMe TO User2 AS TesterRole;
   
 |||  
 |-|-|  
-|Anwendungsrolle|[GRANT-Berechtigungen für Datenbankprinzipal &#40; Transact-SQL &#41;](../../t-sql/statements/grant-database-principal-permissions-transact-sql.md)|  
-|Assembly|[GRANT-Assemblyberechtigungen &#40; Transact-SQL &#41;](../../t-sql/statements/grant-assembly-permissions-transact-sql.md)|  
-|Asymmetrischer Schlüssel|[Erteilen Sie Berechtigungen für asymmetrische Schlüssel &#40; Transact-SQL &#41;](../../t-sql/statements/grant-asymmetric-key-permissions-transact-sql.md)|  
-|Verfügbarkeitsgruppe|[Erteilen von Verfügbarkeitsgruppenberechtigungen &#40; Transact-SQL &#41;](../../t-sql/statements/grant-availability-group-permissions-transact-sql.md)|  
-|Zertifikat|[GRANT (Zertifikatberechtigungen) &#40; Transact-SQL &#41;](../../t-sql/statements/grant-certificate-permissions-transact-sql.md)|  
-|Vertrag|[Berechtigungen von GRANT Service Broker &#40; Transact-SQL &#41;](../../t-sql/statements/grant-service-broker-permissions-transact-sql.md)|  
-|Datenbank|[Erteilen der Datenbankberechtigungen &#40; Transact-SQL &#41;](../../t-sql/statements/grant-database-permissions-transact-sql.md)|
-|Datenbankweit gültige Anmeldeinformationen|[GRANT datenbankweit gültige Anmeldeinformationen (Transact-SQL)](../../t-sql/statements/grant-database-scoped-credential-transact-sql.md)|  
-|Endpunkt|[GRANT (Endpunktberechtigungen) &#40; Transact-SQL &#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md)|  
-|Volltextkatalog|[Berechtigungen GRANT Full-Text &#40; Transact-SQL &#41;](../../t-sql/statements/grant-full-text-permissions-transact-sql.md)|  
-|Volltext-Stoppliste|[Berechtigungen GRANT Full-Text &#40; Transact-SQL &#41;](../../t-sql/statements/grant-full-text-permissions-transact-sql.md)|  
-|Funktion|[Erteilen von Objektberechtigungen &#40; Transact-SQL &#41;](../../t-sql/statements/grant-object-permissions-transact-sql.md)|  
-|Anmeldename|[GRANT-Berechtigungen für Serverprinzipal &#40; Transact-SQL &#41;](../../t-sql/statements/grant-server-principal-permissions-transact-sql.md)|  
-|Nachrichtentyp|[Berechtigungen von GRANT Service Broker &#40; Transact-SQL &#41;](../../t-sql/statements/grant-service-broker-permissions-transact-sql.md)|  
-|Objekt|[Erteilen von Objektberechtigungen &#40; Transact-SQL &#41;](../../t-sql/statements/grant-object-permissions-transact-sql.md)|  
-|Warteschlange|[Erteilen von Objektberechtigungen &#40; Transact-SQL &#41;](../../t-sql/statements/grant-object-permissions-transact-sql.md)|  
-|Remotedienstbindung|[Berechtigungen von GRANT Service Broker &#40; Transact-SQL &#41;](../../t-sql/statements/grant-service-broker-permissions-transact-sql.md)|  
-|Rolle|[GRANT-Berechtigungen für Datenbankprinzipal &#40; Transact-SQL &#41;](../../t-sql/statements/grant-database-principal-permissions-transact-sql.md)|  
-|Route|[Berechtigungen von GRANT Service Broker &#40; Transact-SQL &#41;](../../t-sql/statements/grant-service-broker-permissions-transact-sql.md)|  
-|Schema|[GRANT-Schemaberechtigungen &#40; Transact-SQL &#41;](../../t-sql/statements/grant-schema-permissions-transact-sql.md)|  
-|Sucheigenschaftenliste|[GRANT-Sucheigenschaftenlisten-Berechtigungen &#40; Transact-SQL &#41;](../../t-sql/statements/grant-search-property-list-permissions-transact-sql.md)|  
+|Anwendungsrolle|[GRANT (Berechtigungen für Datenbankprinzipal) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-database-principal-permissions-transact-sql.md)|  
+|Assembly|[GRANT (Assemblyberechtigungen) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-assembly-permissions-transact-sql.md)|  
+|Asymmetrischer Schlüssel|[GRANT (Berechtigungen für asymmetrische Schlüssel) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-asymmetric-key-permissions-transact-sql.md)|  
+|Verfügbarkeitsgruppe|[GRANT (Verfügbarkeitsgruppenberechtigungen) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-availability-group-permissions-transact-sql.md)|  
+|Zertifikat|[GRANT (Zertifikatberechtigungen) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-certificate-permissions-transact-sql.md)|  
+|Vertrag|[GRANT (Berechtigungen von Service Broker) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-service-broker-permissions-transact-sql.md)|  
+|Datenbank|[GRANT (Datenbankberechtigungen) &#40;&#40;Transact-SQL&#41;](../../t-sql/statements/grant-database-permissions-transact-sql.md)|
+|Datenbankweit gültige Anmeldeinformationen|[GRANT (Datenbankweit gültige Anmeldeinformationen) (Transact-SQL)](../../t-sql/statements/grant-database-scoped-credential-transact-sql.md)|  
+|Endpunkt|[GRANT (Endpunktberechtigungen) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md)|  
+|Volltextkatalog|[GRANT (Volltextberechtigungen) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-full-text-permissions-transact-sql.md)|  
+|Volltext-Stoppliste|[GRANT (Volltextberechtigungen) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-full-text-permissions-transact-sql.md)|  
+|Funktion|[GRANT (Objektberechtigungen) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-object-permissions-transact-sql.md)|  
+|Anmeldename|[GRANT (Berechtigungen für Serverprinzipal) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-server-principal-permissions-transact-sql.md)|  
+|Nachrichtentyp|[GRANT (Berechtigungen von Service Broker) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-service-broker-permissions-transact-sql.md)|  
+|Objekt|[GRANT (Objektberechtigungen) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-object-permissions-transact-sql.md)|  
+|Warteschlange|[GRANT (Objektberechtigungen) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-object-permissions-transact-sql.md)|  
+|Remotedienstbindung|[GRANT (Berechtigungen von Service Broker) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-service-broker-permissions-transact-sql.md)|  
+|-Rolle|[GRANT (Berechtigungen für Datenbankprinzipal) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-database-principal-permissions-transact-sql.md)|  
+|Route|[GRANT (Berechtigungen von Service Broker) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-service-broker-permissions-transact-sql.md)|  
+|Schema|[GRANT (Schemaberechtigungen) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-schema-permissions-transact-sql.md)|  
+|Sucheigenschaftenliste|[GRANT (Berechtigungen für Sucheigenschaftenlisten) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-search-property-list-permissions-transact-sql.md)|  
 |Server|[GRANT (Serverberechtigungen) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-server-permissions-transact-sql.md)|  
-|Dienst|[Berechtigungen von GRANT Service Broker &#40; Transact-SQL &#41;](../../t-sql/statements/grant-service-broker-permissions-transact-sql.md)|  
-|Gespeicherte Prozedur|[Erteilen von Objektberechtigungen &#40; Transact-SQL &#41;](../../t-sql/statements/grant-object-permissions-transact-sql.md)|  
-|Symmetrische Schlüssel|[Erteilen Sie Berechtigungen für symmetrische Schlüssel &#40; Transact-SQL &#41;](../../t-sql/statements/grant-symmetric-key-permissions-transact-sql.md)|  
-|Synonym|[Erteilen von Objektberechtigungen &#40; Transact-SQL &#41;](../../t-sql/statements/grant-object-permissions-transact-sql.md)|  
-|Systemobjekte anzeigen|[GRANT (Berechtigungen für Systemobjekte) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-system-object-permissions-transact-sql.md)|  
-|Tabelle|[Erteilen von Objektberechtigungen &#40; Transact-SQL &#41;](../../t-sql/statements/grant-object-permissions-transact-sql.md)|  
-|Typ|[GRANT (Typberechtigungen) &#40; Transact-SQL &#41;](../../t-sql/statements/grant-type-permissions-transact-sql.md)|  
-|Benutzer|[GRANT-Berechtigungen für Datenbankprinzipal &#40; Transact-SQL &#41;](../../t-sql/statements/grant-database-principal-permissions-transact-sql.md)|  
-|Sicht|[Erteilen von Objektberechtigungen &#40; Transact-SQL &#41;](../../t-sql/statements/grant-object-permissions-transact-sql.md)|  
-|XML-Schemasammlung|[Erteilen Sie Berechtigungen für XML-Schemaauflistungen &#40; Transact-SQL &#41;](../../t-sql/statements/grant-xml-schema-collection-permissions-transact-sql.md)|  
+|Dienst|[GRANT (Berechtigungen von Service Broker) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-service-broker-permissions-transact-sql.md)|  
+|Gespeicherte Prozedur|[GRANT (Objektberechtigungen) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-object-permissions-transact-sql.md)|  
+|Symmetrischer Schlüssel|[GRANT (Berechtigungen für symmetrische Schlüssel) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-symmetric-key-permissions-transact-sql.md)|  
+|Synonym|[GRANT (Objektberechtigungen) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-object-permissions-transact-sql.md)|  
+|Systemobjekte|[GRANT (Berechtigungen für Systemobjekte) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-system-object-permissions-transact-sql.md)|  
+|Tabelle|[GRANT (Objektberechtigungen) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-object-permissions-transact-sql.md)|  
+|Typ|[GRANT (Typberechtigungen) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-type-permissions-transact-sql.md)|  
+|Benutzer|[GRANT (Berechtigungen für Datenbankprinzipal) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-database-principal-permissions-transact-sql.md)|  
+|Anzeigen|[GRANT (Objektberechtigungen) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-object-permissions-transact-sql.md)|  
+|XML-Schemasammlung|[GRANT (Berechtigungen für XML-Schemaauflistungen) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-xml-schema-collection-permissions-transact-sql.md)|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [DENY &#40;Transact-SQL&#41;](../../t-sql/statements/deny-transact-sql.md)   
  [REVOKE &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-transact-sql.md)   
  [sp_addlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlogin-transact-sql.md)   
  [sp_adduser &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adduser-transact-sql.md)   
- [Sp_changedbowner &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-changedbowner-transact-sql.md)   
+ [sp_changedbowner &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedbowner-transact-sql.md)   
  [sp_dropuser &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropuser-transact-sql.md)   
- [Sp_helprotect &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helprotect-transact-sql.md)   
- [Sp_helpuser &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)  
+ [sp_helprotect &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helprotect-transact-sql.md)   
+ [sp_helpuser &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)  
   
   

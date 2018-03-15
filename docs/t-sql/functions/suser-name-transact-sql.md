@@ -1,5 +1,5 @@
 ---
-title: SUSER_NAME (Transact-SQL) | Microsoft Docs
+title: SUSER_NAME (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -53,15 +53,15 @@ SUSER_NAME ( [ server_user_id ] )
   
 ## <a name="arguments"></a>Argumente  
  *server_user_id*  
- Die numerische Anmelde-ID des Benutzers. *Server_user_id*, ist optional und wird **Int**. *Server_user_id* kann der numerischen Anmelde-ID eines beliebigen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anmeldung oder [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Benutzer oder eine Gruppe mit der Berechtigung zur Verbindung mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Wenn *Server_user_id* ist nicht angegeben wird, der Anmeldenamen für den aktuellen Benutzer zurückgegeben. Wenn der Parameter das Wort NULL enthalten ist, wird NULL zurückgegeben.  
+ Die numerische Anmelde-ID des Benutzers. *server_user_id* (optional) entspricht dem Datentyp **int**. *server_user_id* kann der numerischen Anmelde-ID einer beliebigen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldung oder jedes bzw. jeder [!INCLUDE[msCoName](../../includes/msconame-md.md)]-Windows-Benutzers/Gruppe entsprechen, der bzw. die die Berechtigung zum Herstellen einer Verbindung mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aufweist. Wenn *server_user_id* nicht angegeben wird, wird der Anmeldename für den aktuellen Benutzer zurückgegeben. Wenn der Parameter das Wort NULL enthalten ist, wird NULL zurückgegeben.  
   
 ## <a name="return-types"></a>Rückgabetypen  
- **vom Datentyp nvarchar(128)**  
+ **nvarchar(128)**  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 ersetzt die Sicherheits-ID (SID, Security Identification Number) die ID des Serverbenutzers (SUID, Server User Identification Number).  
   
- SUSER_NAME gibt einen Anmeldenamen nur für eine Anmeldung, das einen Eintrag in der **Syslogins** -Systemtabelle.  
+ SUSER_NAME gibt einen Anmeldenamen nur für eine Anmeldung zurück, für die es einen Eintrag in der **syslogins**-Systemtabelle gibt.  
   
  SUSER_NAME kann in einer Auswahlliste, in einer WHERE-Klausel und überall dort, wo ein Ausdruck zulässig ist, verwendet werden. Auf den Funktionsnamen müssen immer Klammern folgen, auch wenn kein Parameter angegeben wird.  
   
@@ -72,8 +72,8 @@ SUSER_NAME ( [ server_user_id ] )
 SELECT SUSER_NAME(1);  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [SUSER_ID &#40; Transact-SQL &#41;](../../t-sql/functions/suser-id-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [SUSER_ID &#40;Transact-SQL&#41;](../../t-sql/functions/suser-id-transact-sql.md)   
  [Prinzipale &#40;Datenbankmodul&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)  
   
   

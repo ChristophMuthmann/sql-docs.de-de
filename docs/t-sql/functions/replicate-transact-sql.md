@@ -1,5 +1,5 @@
 ---
-title: REPLICATE (Transact-SQL) | Microsoft Docs
+title: REPLICATE (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
@@ -48,16 +48,16 @@ REPLICATE ( string_expression ,integer_expression )
   
 ## <a name="arguments"></a>Argumente  
  *string_expression*  
- Der Ausdruck einer Zeichenfolge oder eines Binärdatentyps. *String_expression* Zeichen- oder Binärdaten sein können.  
+ Der Ausdruck einer Zeichenfolge oder eines Binärdatentyps. *string_expression* kann von einem Zeichen- oder Binärdatentyp sein.  
   
 > [!NOTE]  
->  Wenn *String_expression* ist nicht vom Typ **varchar(max)** oder **nvarchar(max)**, schneidet REPLICATE den Rückgabewert bei 8.000 Bytes. Zum Zurückgeben von Werten über 8.000 Bytes *String_expression* müssen explizit in den entsprechenden Datentyp mit umfangreichen Werten umgewandelt werden.  
+>  Wenn *string_expression* nicht vom Typ **varchar(max)** oder **nvarchar(max)** ist, schneidet REPLICATE den Rückgabewert bei 8.000 Byte ab. Für die Rückgabe von Werten über 8.000 Byte muss *string_expression* explizit in den entsprechenden Datentyp mit umfangreichen Werten umgewandelt werden.  
   
  *integer_expression*  
- Ist ein Ausdruck eines beliebigen ganzzahligen Typs, einschließlich **"bigint"**. Wenn *Integer_expression* ist negativ ist, wird NULL zurückgegeben.  
+ Ein Ausdruck eines beliebigen Integertyps, einschließlich **bigint**. Wenn *integer_expression* negativ ist, wird NULL zurückgegeben.  
   
 ## <a name="return-types"></a>Rückgabetypen  
- Gibt den gleichen Typ wie *String_expression*.  
+ Gibt denselben Typ wie *string_expression* zurück.  
   
 ## <a name="examples"></a>Beispiele  
   
@@ -123,10 +123,10 @@ Varchar Column        Char Column
   
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
-### <a name="c-using-replicate"></a>"C:" Verwenden von REPLICATE  
- Im folgende Beispiel wird repliziert eine `0` Startzeichen viermal in vor einer `ItemCode` Wert.  
+### <a name="c-using-replicate"></a>C: Verwenden von REPLICATE  
+ Im folgenden Beispiel wird ein `0`-Zeichen viermal vor einem `ItemCode`-Wert repliziert.  
   
 ```  
 -- Uses AdventureWorks  
@@ -138,7 +138,7 @@ FROM dbo.DimProduct
 ORDER BY Name;  
 ```  
   
- Hier werden die ersten Zeilen im Resultset.  
+ Im Folgenden finden Sie die ersten Reihen eines Resultsets.  
   
  ```
 Name                     ItemCode       FullItemCode
@@ -151,10 +151,10 @@ AWC Logo Cap             CA-1098        0000CA-1098
 BB Ball Bearing          BE-2349        0000BE-2349
  ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SPACE &#40;Transact-SQL&#41;](../../t-sql/functions/space-transact-sql.md)  
  [Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [Zeichenfolgenfunktionen &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
+ [String Functions &#40;Transact-SQL&#41; (Zeichenfolgenfunktionen &#40;Transact-SQL&#41;)](../../t-sql/functions/string-functions-transact-sql.md)  
   
   
 

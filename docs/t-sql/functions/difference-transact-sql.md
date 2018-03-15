@@ -1,5 +1,5 @@
 ---
-title: Unterschied (Transact-SQL) | Microsoft Docs
+title: DIFFERENCE (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -48,18 +48,18 @@ DIFFERENCE ( character_expression , character_expression )
   
 ## <a name="arguments"></a>Argumente  
  *character_expression*  
- Ein alphanumerischer [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) von Zeichendaten. *Character_expression* kann eine Konstante, Variable oder Spalte sein.  
+ Ein alphanumerischer [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) der Zeichendaten. *character_expression* kann eine Konstante, Variable oder Spalte sein.  
   
 ## <a name="return-types"></a>Rückgabetypen  
  **int**  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Die zurückgegebene ganze Zahl entspricht der Anzahl von gleichen Zeichen in den SOUNDEX-Werten. Der zurückgegebene Wert liegt im Bereich von 0 bis 4: 0 gibt an, dass keine oder nur eine geringe Ähnlichkeit besteht, 4 weist auf eine starke Ähnlichkeit oder identische Werte hin.  
   
  DIFFERENCE und SOUNDEX sind sortierungsabhängig.  
   
 ## <a name="examples"></a>Beispiele  
- Im ersten Teil des folgenden Beispiels werden die `SOUNDEX`-Werte von zwei sehr ähnlichen Zeichenfolgen verglichen. Bei einer Sortierung Latin1_General `DIFFERENCE` gibt einen Wert von `4`. Im zweiten Teil des folgenden Beispiels die `SOUNDEX` Werte von zwei sehr unterschiedliche Zeichenfolgen verglichen werden, und bei einer Sortierung Latin1_General `DIFFERENCE` gibt einen Wert von `0`.  
+ Im ersten Teil des folgenden Beispiels werden die `SOUNDEX`-Werte von zwei sehr ähnlichen Zeichenfolgen verglichen. Für eine Latin1_General-Sortierung gibt `DIFFERENCE` einen Wert von `4` zurück. Im zweiten Teil des folgenden Beispiels werden die `SOUNDEX`-Werte von zwei sehr unterschiedlichen Zeichenfolgen verglichen, wobei `DIFFERENCE` für eine Latin1_General-Sortierung den Wert `0` zurückgibt.  
   
 ```  
 -- Returns a DIFFERENCE value of 4, the least possible difference.  
@@ -84,9 +84,9 @@ B432  G650  0
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [SOUNDEX &#40; Transact-SQL &#41;](../../t-sql/functions/soundex-transact-sql.md)   
- [Zeichenfolgenfunktionen &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [SOUNDEX &#40;Transact-SQL&#41;](../../t-sql/functions/soundex-transact-sql.md)   
+ [String Functions &#40;Transact-SQL&#41; (Zeichenfolgenfunktionen (Transact-SQL))](../../t-sql/functions/string-functions-transact-sql.md)  
   
   
 

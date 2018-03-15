@@ -1,5 +1,5 @@
 ---
-title: TRY_CAST (Transact-SQL) | Microsoft Docs
+title: TRY_CAST (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -60,7 +60,7 @@ TRY_CAST ( expression AS data_type [ ( length ) ] )
 ## <a name="return-types"></a>Rückgabetypen  
  Gibt einen in den angegebenen Datentyp umgewandelten Wert zurück, wenn die Umwandlung erfolgreich ist. Andernfalls wird NULL zurückgegeben.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  **TRY_CAST** versucht, den übergebenen Wert in den angegebenen *data_type*zu konvertieren. Wenn die Umwandlung erfolgreich ist, gibt **TRY_CAST** den Wert als angegebenen *data_type*zurück. Bei einem Fehler wird NULL zurückgegeben. Wenn Sie jedoch eine Konvertierung anfordern, die explizit nicht zulässig ist, verursacht **TRY_CAST** einen Fehler.  
   
  **TRY_CAST** ist kein neues reserviertes Schlüsselwort und in allen Kompatibilitätsgraden verfügbar. **TRY_CAST** verfügt beim Herstellen einer Verbindung mit Remoteservern über die gleiche Semantik wie **TRY_CONVERT** .  
@@ -140,8 +140,8 @@ Result
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [TRY_CONVERT &#40; Transact-SQL &#41;](../../t-sql/functions/try-convert-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [TRY_CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/try-convert-transact-sql.md)   
  [CAST und CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: STGeomFromText (Geography-Datentyp) | Microsoft Docs
+title: STGeomFromText (geography-Datentyp) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 07/30/2017
 ms.prod: sql-non-specified
@@ -35,7 +35,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stgeomfromtext-geography-data-type"></a>STGeomFromText (geography-Datentyp)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Gibt eine **Geography** Instanz aus einer Open Geospatial Consortium (OGC) Well-Known Text (WKT)-Darstellung getragenen Z-(Höhe) und M (Measure)-Werte von der Instanz getragen.
+Gibt eine **geography**-Instanz von einer OGC-WKT-Darstellung (Open Geospatial Consortium, Well-Known Text) zurück, die um alle von der Instanz getragenen Z- und M-Werte (Höhen- bzw. Measurewerte) erweitert ist.
   
 Diese **geography** -Datentypmethode unterstützt Instanzen von **FullGlobe** oder räumliche Instanzen, die größer als eine Hemisphäre sind.
   
@@ -48,23 +48,23 @@ STGeomFromText ( 'geography_tagged_text' , SRID )
   
 ## <a name="arguments"></a>Argumente  
  *geography_tagged_text*  
- Die WKT-Darstellung der Instanz von **geography** , die zurückgegeben werden soll. *Geography_tagged_text* ist ein **nvarchar(max)** Ausdruck.  
+ Die WKT-Darstellung der Instanz von **geography** , die zurückgegeben werden soll. *geography_tagged_text* ist ein **nvarchar(max)**-Ausdruck.  
   
  *SRID*  
  Ein **int** -Ausdruck, der die SRID (Spatial Reference ID) der Instanz von **geography** darstellt, die zurückgegeben wird.  
   
 ## <a name="return-types"></a>Rückgabetypen  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Rückgabetyp: **Geography**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Rückgabetyp: **geography**  
   
  CLR-Rückgabetyp: **SqlGeography**  
   
-## <a name="remarks"></a>Hinweise  
- Die OGC-Typ, der die **Geography** vom STGeomFromText() zurückgegebene Instanz auf die entsprechende WKT-Eingabe festgelegt ist.  
+## <a name="remarks"></a>Remarks  
+ Der OGC-Typ der **geography**-Instanz, die von STGeomFromText() zurückgegeben wird, wird auf die entsprechende WKT-Eingabe festgelegt.  
   
- Diese Methode löst eine **ArgumentException** , wenn die Eingabe eine gegenüberliegende Kante enthält.  
+ Diese Methode löst eine Argumentausnahme (**ArgumentException**) aus, wenn die Eingabe eine gegenüberliegende Kante enthält.  
   
 ## <a name="examples"></a>Beispiele  
- Im folgenden Beispiel wird `STGeomFromText()` zum Erstellen einer `geography` Instanz.  
+ Im folgenden Beispiel wird `STGeomFromText()` verwendet, um eine `geography`-Instanz zu erstellen.  
   
 ```  
 DECLARE @g geography;  
@@ -72,7 +72,7 @@ SET @g = geography::STGeomFromText('LINESTRING(-122.360 47.656, -122.343 47.656)
 SELECT @g.ToString();  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Statische geography-Methoden des OGC](../../t-sql/spatial-geography/ogc-static-geography-methods.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: SET TEXTSIZE (Transact-SQL) | Microsoft Docs
+title: SET TEXTSIZE (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 04/12/2016
 ms.prod: sql-non-specified
@@ -40,10 +40,10 @@ ms.lasthandoff: 11/21/2017
 # <a name="set-textsize-transact-sql"></a>SET TEXTSIZE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Gibt die Größe des **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **Text**, **Ntext** , und **Image** von einer SELECT-Anweisung zurückgegebenen Daten.  
+  Gibt die Größe der **varchar(max)**-, **nvarchar(max)**-, **varbinary(max)**-, **text**-, **ntext**- und **image**-Daten an, die von einer SELECT-Anweisung zurückgegeben werden.  
   
 > [!IMPORTANT]  
->  **Ntext**, **Text**, und **Image** Datentypen werden in einer zukünftigen Version von entfernt [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Vermeiden Sie die Verwendung dieser Datentypen bei neuen Entwicklungen, und planen Sie die Änderung von Anwendungen, in denen sie aktuell verwendet werden. Verwenden Sie stattdessen **nvarchar(max)**, **varchar(max)**und **varbinary(max)** .  
+>  Die Datentypen **ntext**, **text** und **image** werden in einer zukünftigen Version von [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entfernt. Vermeiden Sie die Verwendung dieser Datentypen bei neuen Entwicklungen, und planen Sie die Änderung von Anwendungen, in denen sie aktuell verwendet werden. Verwenden Sie stattdessen **nvarchar(max)**, **varchar(max)**und **varbinary(max)** .  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -55,21 +55,21 @@ SET TEXTSIZE { number }
   
 ## <a name="arguments"></a>Argumente  
  *number*  
- Die Länge des **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **Text**, **Ntext**, oder **Image** Daten in Bytes. *Anzahl* ist eine ganze Zahl mit einem maximalen Wert von 2147483647 (2 GB).  Der Wert-1 gibt eine unbegrenzte Größe an. Der Wert 0 setzt die Größe auf den Standardwert von 4 KB zurück.  
+ Entspricht der Länge der **varchar(max)**-, **nvarchar(max)**-, **varbinary(max)**-, **text**-, **ntext**- oder **image**-Daten in Byte. *number* entspricht einer ganzen Zahl mit einem maximalen Wert von 2.147.483.647 (2 GB).  Ein Wert von –1 gibt eine unbegrenzte Größe an. Ein Wert von 0 setzt die Größe auf den Standardwert von 4 KB zurück.  
   
- Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client (10.0 und höher) und ODBC-Treiber für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] automatisch `-1` (unbegrenzt) beim Herstellen einer Verbindung.  
+ Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client (10.0 und höher) und der ODBC-Treiber für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] geben beim Herstellen einer Verbindung automatisch `-1` (unbegrenzt) an.  
   
- **Treiber, die älter sind als [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008:** der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter (Version 9) für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] TEXTSIZE automatisch auf 2147483647 festgelegt wird, beim Herstellen einer Verbindung.  
+ **Ältere Treiber als [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008:** Der ODBC-Treiber von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client und der OLE DB-Anbieter (Version 9) von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] legen beim Herstellen einer Verbindung für TEXTSIZE automatisch den Wert 2.147.483.647 fest.  
   
-## <a name="remarks"></a>Hinweise  
- Festlegen von SET TEXTSIZE wirkt sich auf den @@TEXTSIZE Funktion.  
+## <a name="remarks"></a>Remarks  
+ Das Festlegen von SET TEXTSIZE wirkt sich auf die @@TEXTSIZE-Funktion aus.  
   
  Die Einstellung von TEXTSIZE wird zur Ausführungszeit und nicht zur Analysezeit festgelegt.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die Mitgliedschaft in der **public** -Rolle.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [@@TEXTSIZE &#40;Transact-SQL&#41;](../../t-sql/functions/textsize-transact-sql.md)   
  [Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [SET-Anweisungen &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)  

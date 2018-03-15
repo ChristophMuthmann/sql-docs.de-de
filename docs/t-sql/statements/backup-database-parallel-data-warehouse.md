@@ -1,5 +1,5 @@
 ---
-title: SICHERUNGSDATENBANK (Parallel Datawarehouse) | Microsoft Docs
+title: BACKUP DATABASE (Parallel Data Warehouse) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -24,18 +24,18 @@ ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="backup-database-parallel-data-warehouse"></a>SICHERUNGSDATENBANK (Parallel Datawarehouse)
+# <a name="backup-database-parallel-data-warehouse"></a>BACKUP DATABASE (Parallel Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
-  Erstellt eine Sicherungskopie der eine [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] Datenbank und speichert die Sicherung deaktiviert das Gerät in einem Benutzer angegebenen Netzwerkadresse. Verwenden Sie diese Anweisung mit [Datenbank wiederherstellen &#40; Parallel Datawarehouse &#41; ](../../t-sql/statements/restore-database-parallel-data-warehouse.md) Wiederherstellung im Notfall oder eine Datenbank auf einem Gerät in einen anderen kopieren.  
+  Erstellt eine Sicherungskopie einer [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]-Datenbank und speichert die Sicherung nicht auf der Appliance, sondern in einem benutzerdefinierten Netzwerkpfad. Verwenden Sie diese Anweisung mit [RESTORE DATABASE &#40;Parallel Data Warehouse&#41;](../../t-sql/statements/restore-database-parallel-data-warehouse.md) zur Notfallwiederherstellung oder zum Kopieren einer Datenbank von einer Appliance auf eine andere.  
   
- **Vor dem Beginn**, finden Sie unter "Abrufen und Konfigurieren eines Server sichern" in der [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].  
+ **Bevor Sie beginnen**, lesen Sie „Erwerb und Konfiguration eines Sicherungsservers“ in der [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].  
   
- Es gibt zwei Arten von Sicherungen in [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]. Ein *vollständige datenbanksicherung* ist eine Sicherung einer gesamten [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] Datenbank. Ein *differenziellen* umfasst nur Änderungen seit der letzten vollständigen Sicherung vorgenommen wurden. Eine Sicherung einer Benutzerdatenbank umfasst Datenbankbenutzer und Datenbankrollen. Eine Sicherung der master-Datenbank umfasst Anmeldungen.  
+ Es gibt zwei Arten von Sicherungen in [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]. Eine *vollständige Datenbanksicherung* ist eine Sicherung einer kompletten [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]-Datenbank. Bei einer *differenziellen Datenbanksicherung* werden nur die Änderungen seit der letzten vollständigen Datenbanksicherung erfasst. Die Sicherung einer Benutzerdatenbank schließt Datenbankbenutzer und Datenbankrollen ein. Eine Sicherung der Masterdatenbank schließt Anmeldungen ein.  
   
- Weitere Informationen zu [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] datenbanksicherungen, finden Sie unter "Sichern und Wiederherstellen" in der [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].  
+ Weitere Informationen zu [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]-Datenbanksicherungen finden Sie unter „Sichern und Wiederherstellen“ in der [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].  
   
- ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Thema Linksymbol") [Transact-SQL-Syntaxkonventionen &#40; Transact-SQL &#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol zum Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions &#40;Transact-SQL&#41; (Transact-SQL-Syntaxkonventionen (Transact-SQL))](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -62,104 +62,104 @@ BACKUP DATABASE database_name
   
 ## <a name="arguments"></a>Argumente  
  *database_name*  
- Der Name der Datenbank auf dem eine Sicherung erstellt. Die Datenbank kann es sich um die master-Datenbank oder eine Benutzerdatenbank sein.  
+ Der Name der Datenbank, auf der eine Sicherung erstellt werden soll. Die Datenbank kann die Masterdatenbank oder eine Benutzerdatenbank sein.  
   
  TO DISK = '\\\\*UNC_path*\\*backup_directory*'  
- Der Netzwerkpfad und das Verzeichnis, in dem [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] schreibt die Sicherungsdateien. Z. B. "\\\xxx.xxx.xxx.xxx\backups\2012\Monthly\08.2012.Mybackup".  
+ Netzwerkpfad und Verzeichnis, in die [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] die Sicherungsdateien schreibt. Beispiel: '\\\xxx.xxx.xxx.xxx\backups\2012\Monthly\08.2012.Mybackup'.  
   
--   Der Pfad zur Sicherungsverzeichnis Namen muss bereits vorhanden und muss als eine vollqualifizierte Universal naming Convention (UNC)-Pfad angegeben werden.  
+-   Der Pfad zum Sicherungsverzeichnisnamen muss bereits vorhanden sein und als vollqualifizierter UNC-Pfad (Universal Naming Convention) angegeben werden.  
   
--   Das Sicherungsverzeichnis *Backup_directory*, darf nicht vor dem Ausführen des Sicherungsbefehls vorhanden sein. [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]erstellt das Sicherungsverzeichnis.  
+-   Das Sicherungsverzeichnis *backup_directory* darf nicht vor dem Ausführen des Sicherungsbefehls vorhanden sein. [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] erstellt das Sicherungsverzeichnis.  
   
--   Der Pfad zum Sicherungsverzeichnis handelt es sich nicht um einen lokalen Pfad und keinen Ort auf jedem der [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] Appliance-Knoten.  
+-   Beim Pfad zum Sicherungsverzeichnis darf es sich nicht um einen lokalen Pfad handeln, und der Speicherort darf sich nicht auf einem [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]-Applianceknoten befinden.  
   
--   Die maximale Länge des UNC-Pfad und Name der Sicherungsverzeichnis ist 200 Zeichen lang sein.  
+-   Die maximale Länge des UNC-Pfads und des Sicherungsverzeichnisnamens beträgt 200 Zeichen.  
   
--   Der Server oder Host muss eine IP-Adresse angegeben werden.  Sie können nicht als Host-oder Server angeben.  
+-   Der Server oder Host muss als IP-Adresse angegeben werden.  Sie können ihn nicht als Host- oder Servernamen angeben.  
   
  DESCRIPTION = **'***text***'**  
- Gibt eine Beschreibung des Sicherungssatzes an. Die maximale Länge des Texts beträgt 255 Zeichen.  
+ Gibt eine Textbeschreibung der Datensicherung an. Die maximale Länge des Texts beträgt 255 Zeichen.  
   
- Die Beschreibung wird in den Metadaten gespeichert und wird angezeigt, wenn der Sicherungsheader mit RESTORE HEADERONLY wiederhergestellt wird.  
+ Die Beschreibung wird in den Metadaten gespeichert und angezeigt, wenn der Sicherungsheader mit RESTORE HEADERONLY wiederhergestellt wird.  
   
- NAME = **"***backup _name***"**  
- Gibt den Namen des Sicherungssatzes. Der Name der Sicherungskopie kann anhand des Datenbanknamens abweichen.  
+ NAME = **'***backup _name***'**  
+ Gibt den Namen der Sicherung an. Der Sicherungsname kann vom Datenbanknamen abweichen.  
   
 -   Namen können maximal 128 Zeichen haben.  
   
--   Einen Pfad einschließen  
+-   Sie können keinen Pfad einschließen.  
   
--   Muss mit einem Buchstaben oder einer Ziffer Zeichen oder einem Unterstrich (_) beginnen. Sonderzeichen, die zulässig sind, den Unterstrich (\_), Bindestrich (-) oder Leerzeichen (). Sicherungsnamen darf nicht mit einem Leerzeichen enden.  
+-   An der ersten Stelle muss ein Buchstabe, eine Ziffer oder ein Unterstrich (_) stehen. Zulässige Sonderzeichen sind Unterstrich (\_), Bindestrich (-) oder Leerzeichen ( ). Sicherungsnamen dürfen nicht mit einem Leerzeichen enden.  
   
--   Die Anweisung schlägt fehl, wenn *Backup_name* am angegebenen Speicherort bereits vorhanden ist.  
+-   Die Anweisung schlägt fehl, wenn *backup_name* am angegebenen Speicherort bereits vorhanden ist.  
   
- Dieser Name wird in den Metadaten gespeichert und wird angezeigt, wenn der Sicherungsheader mit RESTORE HEADERONLY wiederhergestellt wird.  
+ Der Name wird in den Metadaten gespeichert und angezeigt, wenn der Sicherungsheader mit RESTORE HEADERONLY wiederhergestellt wird.  
   
  DIFFERENTIAL  
- Gibt an, dass eine differenzielle Sicherung einer Benutzerdatenbank. Wenn nicht angegeben, ist die Standardeinstellung eine vollständige Sicherung aus. Der Name der differenziellen Sicherung muss nicht mit dem Namen der vollständigen Sicherung übereinstimmen. Zum Nachverfolgen der differenziellen Sicherung und die zugehörige vollständige Sicherung, erwägen Sie den gleichen Namen mit "full" oder "momentaufnahmevergleich" angefügt.  
+ Gibt an, dass eine differenzielle Sicherung einer Benutzerdatenbank durchgeführt werden soll. Wenn nicht angegeben, ist die Standardeinstellung eine vollständige Sicherung. Der Name der differenziellen Sicherung muss nicht mit dem Namen der vollständigen Sicherung übereinstimmen. Zum Nachverfolgen der differenziellen Sicherung und der zugehörigen vollständigen Sicherung sollten Sie den gleichen Namen verwenden und "full" oder "diff" anfügen.  
   
- Beispiel:  
+ Zum Beispiel:  
   
  `BACKUP DATABASE Customer TO DISK = '\\xxx.xxx.xxx.xxx\backups\CustomerFull';`  
   
  `BACKUP DATABASE Customer TO DISK = '\\xxx.xxx.xxx.xxx\backups\CustomerDiff' WITH DIFFERENTIAL;`  
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert die **BACKUP DATABASE** Berechtigung oder die Mitgliedschaft in der **Db_backupoperator** festen Datenbankrolle "". Der master-Datenbank kann nicht gesichert werden, sich jedoch durch ein normaler Benutzer das hinzugefügte der **Db_backupoperator** festen Datenbankrolle "". Der master-Datenbank kann nur gesichert werden durch **sa**die Fabric-Administrator oder Mitglied der **Sysadmin** festen Serverrolle "".  
+ Erfordert die **BACKUP DATABASE**-Berechtigung oder die Mitgliedschaft in der festen Datenbankrolle **db_backupoperator**. Die Masterdatenbank kann nur von einem normalen Benutzer gesichert werden, der der festen Datenbankrolle **Db_backupoperator** hinzugefügt wurde. Die Masterdatenbank kann nur durch **sa**, den Fabricadministrator, oder Mitglieder der festen Serverrolle **Sysadmin** gesichert werden.  
   
- Erfordert ein Windowskonto, das über die Berechtigung den Zugriff, erstellen und Schreiben im Sicherungsverzeichnis verfügt. Sie müssen auch speichern, den Windows-Kontoname und das Kennwort in [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]. Diese Anmeldeinformationen für das Netzwerk zum Hinzufügen [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], verwenden Sie die [Sp_pdw_add_network_credentials &#40; SQL Datawarehouse &#41; ](../../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md) gespeicherte Prozedur.  
+ Erfordert ein Windows-Konto mit der Berechtigung, auf das Sicherungsverzeichnis zuzugreifen, es zu erstellen und auf es zu schreiben. Sie müssen außerdem den Windows-Kontonamen und das Kennwort in [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] speichern. Zum Hinzufügen dieser Netzwerk-Anmeldeinformationen [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] verwenden Sie die gespeicherte Prozedur [sp_pdw_add_network_credentials &#40;SQL Data Warehouse&#41; ](../../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md).  
   
- Weitere Informationen zum Verwalten von Anmeldeinformationen in [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], finden Sie unter der [Sicherheit](#Security) Abschnitt.  
+ Weitere Informationen zum Verwalten von Anmeldeinformationen in [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] finden Sie im Abschnitt [Sicherheit](#Security).  
   
 ## <a name="error-handling"></a>Fehlerbehandlung  
- BACKUP DATABASE-Fehler in den folgenden Situationen:  
+ BACKUP DATABASE-Fehler unter den folgenden Bedingungen:  
   
--   Berechtigungen sind nicht ausreichend, um eine Sicherung auszuführen.  
+-   Benutzerberechtigungen sind nicht ausreichend, um eine Sicherung auszuführen.  
   
--   [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]die richtigen Berechtigungen für den Netzwerkspeicherort, an keinen, in dem die Sicherung gespeichert wird.  
+-   [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] verfügt nicht über die erforderlichen Berechtigungen für den Netzwerkspeicherort, an dem die Sicherungsdateien gespeichert werden.  
   
 -   Die Datenbank ist nicht vorhanden.  
   
--   Das Zielverzeichnis ist bereits vorhanden, auf der Netzwerkfreigabe.  
+-   Das Zielverzeichnis ist bereits auf der Netzwerkfreigabe vorhanden.  
   
--   Die Ziel-Netzwerkfreigabe ist nicht verfügbar.  
+-   Die Zielnetzwerkfreigabe ist nicht verfügbar.  
   
--   Die Ziel-Netzwerkfreigabe besitzt nicht genügend Speicherplatz für die Sicherung. Der BACKUP DATABASE-Befehl bestätigt nicht, dass genügend freier Speicherplatz vorhanden ist, vor dem Initiieren der Sicherung, wodurch Fehler Out of Disk Space zu generieren, während der Ausführung der BACKUP DATABASE. Wenn nicht genügend Speicherplatz auftritt, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] wird durch ein Rollback der BACKUP DATABASE-Befehl. Führen Sie zum Verringern der Größe Ihrer Datenbank [DBCC SHRINKLOG (Azure SQL Data Warehouse)](../../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md)  
+-   Der Speicherplatz auf der Ziel-Netzwerkfreigabe ist nicht ausreichend für die Sicherung. Der BACKUP DATABASE-Befehl bestätigt nicht, dass genügend freier Speicherplatz vorhanden ist, bevor die Sicherung initiiert wird, wodurch bei Ausführen von BACKUP DATABASE ein Fehler wegen unzureichendem Speicherplatz generiert werden kann. Wenn nicht genügend Speicherplatz vorhanden ist, führt [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ein Rollback für den Befehl BACKUP DATABASE aus. Führen Sie zum Verkleinern Ihrer Datenbank [DBCC SHRINKLOG (Azure SQL Data Warehouse)](../../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md) aus.  
   
--   Der Versuch, eine Sicherung innerhalb einer Transaktion zu starten.  
+-   Versuchen Sie, eine Sicherung innerhalb einer Transaktion zu starten.  
   
 ## <a name="general-remarks"></a>Allgemeine Hinweise  
- Verwenden Sie vor dem Ausführen einer datenbanksicherung [DBCC SHRINKLOG (Azure SQL Data Warehouse)](../../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md) zum Verringern der Größe der Datenbank. 
+ Verwenden Sie vor dem Ausführen einer Datenbanksicherung [DBCC SHRINKLOG (Azure SQL Data Warehouse)](../../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md) zum Verkleinern der Datenbank. 
  
- Ein [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] Sicherung wird als eine Reihe von mehreren Dateien im gleichen Verzeichnis gespeichert.  
+ Eine [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]-Sicherung wird als Satz von mehreren Dateien im gleichen Verzeichnis gespeichert.  
   
- Eine differenzielle Sicherung normalerweise weniger Zeit als eine vollständige Sicherung und häufiger ausgeführt werden kann. Wenn mehrere differenzielle Sicherungen auf der gleichen vollständigen Sicherung basieren, enthält jeder differenziellen Sicherung aller Änderungen in der vorherigen differenziellen Sicherung.  
+ Eine differenzielle Sicherung nimmt normalerweise weniger Zeit in Anspruch als eine vollständige Sicherung und kann häufiger ausgeführt werden. Wenn mehrere differenzielle Sicherungen auf der gleichen vollständigen Sicherung basieren, enthält jede differenzielle Sicherung alle Änderungen aus der vorherigen differenziellen Sicherung.  
   
- Wenn Sie einen BACKUP-Befehl Abbrechen [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] entfernt das Zielverzeichnis und alle Dateien, die für die Sicherung erstellt wurde. Wenn [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] verliert Netzwerkkonnektivität auf die Freigabe das Rollback kann nicht abgeschlossen werden.  
+ Wenn Sie einen BACKUP-Befehl abbrechen, entfernt [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] das Zielverzeichnis und alle Dateien, die für die Sicherung erstellt wurden. Wenn [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] die Netzwerkkonnektivität mit der Freigabe verliert, kann das Rollback nicht abgeschlossen werden.  
   
- Vollständige und differenzielle Sicherungen werden in separaten Verzeichnissen gespeichert. Durch Benennungskonventionen werden nicht erzwungen, zum angeben, dass eine vollständige Sicherung und eine differenzielle Sicherung zusammengehören. Sie können diese über Ihre eigenen Benennungskonventionen nachverfolgen. Alternativ können Sie dies mithilfe der mit Beschreibung-Option verwenden, um eine Beschreibung hinzuzufügen, und klicken Sie dann mithilfe von RESTORE HEADERONLY-Anweisung zum Abrufen der Beschreibung nachverfolgen.  
+ Vollständige und differenzielle Sicherungen werden in separaten Verzeichnissen gespeichert. Benennungskonventionen werden nicht erzwungen, um anzugeben, dass eine vollständige Sicherung und eine differenzielle Sicherung zusammengehören. Sie können dies über Ihre eigenen Benennungskonventionen nachverfolgen. Alternativ können Sie dies nachverfolgen, indem Sie mithilfe der WITH DESCRIPTION-Option eine Beschreibung hinzufügen und diese dann mithilfe der RESTORE HEADERONLY-Anweisung abrufen.  
   
 ## <a name="limitations-and-restrictions"></a>Einschränkungen  
- Eine differenzielle Sicherung der master-Datenbank ist nicht möglich. Es werden nur vollständige Sicherungen der master-Datenbank unterstützt.  
+ Sie können keine differenzielle Sicherung der Masterdatenbank ausführen. Nur vollständige Sicherungen der Masterdatenbank werden unterstützt.  
   
- Die Sicherungsdateien gespeichert sind, in einem Format geeignet ist nur für die Wiederherstellung der Sicherung auf einen [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] Appliance mithilfe der [Datenbank wiederherstellen &#40; Parallel Datawarehouse &#41; ](../../t-sql/statements/restore-database-parallel-data-warehouse.md) Anweisung.  
+ Die Sicherungsdateien werden in einem Format gespeichert, das nur geeignet ist, um die Sicherung auf einer [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]-Appliance unter Verwendung der [RESTORE DATABASE &#40;Parallel Data Warehouse&#41; ](../../t-sql/statements/restore-database-parallel-data-warehouse.md)-Anweisung wiederherzustellen.  
   
- Die Sicherung mit der BACKUP DATABASE-Anweisung kann nicht verwendet werden, um Daten oder Benutzerinformationen in SMP übertragen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenbanken. Für diese Funktion können Sie die Remotetabelle Copy-Funktion verwenden. Weitere Informationen finden Sie unter "Remote Tabelle kopieren" in der [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].  
+ Die Sicherung mit der BACKUP DATABASE-Anweisung kann nicht verwendet werden, um Daten oder Benutzerinformationen an SMP-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbanken zu übertragen. Hierfür können Sie die Remotetabellenkopie-Features verwenden. Weitere Informationen finden Sie unter „Remotetabellenkopie“ in der [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].  
   
- [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]verwendet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Technologie sichern und Wiederherstellen von Datenbanken zu sichern. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Backup-Optionen sind vorkonfiguriert, um die Komprimierung von Sicherungen verwenden. Sie können keine Sicherungsoptionen z. B. Komprimierung, Checksum-Blockgröße und Puffergröße festlegen.  
+ [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] verwendet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Technologie zum Sichern und Wiederherstellen von Datenbanken. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Sicherungsoptionen sind vorkonfiguriert, um die Komprimierung von Sicherungen zu verwenden. Sie können keine Sicherungsoptionen wie Komprimierung, Prüfsumme, Blockgröße und Pufferanzahl festlegen.  
   
- Nur eine Sicherung oder Wiederherstellung kann auf das Gerät zu einem beliebigen Zeitpunkt ausführen. [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]Backup oder Restore-Befehlen bis zur aktuellen Sicherung Warteschlange oder Restore-Befehl wurde abgeschlossen.  
+ Nur eine Datenbanksicherung oder -wiederherstellung kann zu einem beliebigen Zeitpunkt auf der Appliance ausgeführt werden. [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] stellt Sicherungs- oder Wiederherstellungsbefehle in die Warteschlange, bis der aktuelle Sicherungs-oder Wiederherstellungsbefehl abgeschlossen ist.  
   
- Zielgerät für die Sicherung wiederherstellt, muss als die Quelle Appliance mindestens so viele Computeknoten umfassen. Das Ziel kann weitere Serverknoten als die Quelle Appliance, aber keine weniger Computerknoten.  
+ Die Zielappliance für die Wiederherstellung der Sicherung muss mindestens so viele Computeknoten besitzen wie die Quellappliance. Die Zielappliance kann über mehr Computeknoten verfügen als die Quellappliance, darf aber nicht weniger Computeknoten besitzen.  
   
- [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]wird nicht verfolgt den Speicherort und Namen von Sicherungen, da die Sicherungen gespeichert sind, deaktiviert die Appliance.  
+ [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] verfolgt Speicherort und Namen von Sicherungen nicht, da die Sicherungen nicht auf der Appliance gespeichert werden.  
   
- [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]Hierbei kann es sich um den Erfolg oder Misserfolg von datenbanksicherungen nachverfolgen.  
+ [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] verfolgt den Erfolg oder Misserfolg von Datenbanksicherungen nicht.  
   
- Eine differenzielle Sicherung ist nur zulässig, wenn die letzte vollständige Sicherung erfolgreich abgeschlossen wurde. Nehmen wir beispielsweise an, dass am Montag, die Sie einer vollständigen Sicherung der Sales-Datenbank erstellen und die Sicherung erfolgreich abgeschlossen wird. Klicken Sie dann am Dienstag, die Sie Erstellen einer vollständigen Sicherung der Sales-Datenbank, und ein Fehler auftritt. Nach diesem Fehler können nicht Sie eine differenzielle Sicherung basierend auf vom Montag vollständige Sicherung erstellen. Sie müssen zuerst eine vollständige Sicherung vor dem Erstellen einer differenziellen Sicherung erstellen.  
+ Eine differenzielle Sicherung ist nur zulässig, wenn die letzte vollständige Sicherung erfolgreich abgeschlossen wurde. Nehmen wir beispielsweise an, dass Sie am Montag eine vollständige Sicherung der Sales-Datenbank erstellen und die Sicherung erfolgreich abgeschlossen wird. Am Dienstag erstellen Sie dann eine vollständige Sicherung der Sales-Datenbank, die fehlschlägt. Nach diesem Fehler können Sie dann keine auf der vollständigen Sicherung vom Montag basierende differenzielle Sicherung erstellen. Sie müssen eine vollständige Sicherung erstellen, bevor Sie eine differenzielle Sicherung erstellen.  
   
 ## <a name="metadata"></a>Metadaten  
- Diese dynamischen Verwaltungssichten enthalten Informationen über alle Sicherung, Wiederherstellung und Ladevorgänge. Die Informationen, die über Systemneustarts weiterhin besteht.  
+ Diese dynamischen Verwaltungssichten enthalten Informationen über alle Sicherungs-, Wiederherstellungs- und Ladevorgänge. Die Informationen persistieren über Systemneustarts.  
   
 -   [sys.pdw_loader_backup_runs &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-loader-backup-runs-transact-sql.md)  
   
@@ -168,31 +168,31 @@ BACKUP DATABASE database_name
 -   [sys.pdw_loader_run_stages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-loader-run-stages-transact-sql.md)  
   
 ## <a name="performance"></a>Leistung  
- Zum Ausführen einer Sicherung [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] erste sichert die Metadaten, und klicken Sie dann führt eine parallele Sicherung der Datenbankdaten auf den Serverknoten gespeichert. Daten werden direkt aus jeder Serverknoten im Sicherungsverzeichnis kopiert. Die beste Leistung zum Verschieben von Daten von den Computeknoten im Sicherungsverzeichnis erzielen [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] steuert die Anzahl von Serverknoten, die gleichzeitig von Daten kopieren.  
+ [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] führt eine Sicherung aus, indem zuerst die Metadaten gesichert werden und dann eine parallele Sicherung der auf den Computeknoten gespeicherten Datenbankdaten ausgeführt wird. Daten werden direkt aus jedem Computeknoten in das Sicherungsverzeichnis kopiert. Um die bestmögliche Leistung für das Verschieben von Daten von den Computeknoten in das Sicherungsverzeichnis zu erzielen, steuert [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] die Anzahl von Computeknoten, die gleichzeitig Daten kopieren.  
   
 ## <a name="locking"></a>Sperren  
- Akzeptiert eine ExclusiveUpdate-Sperre für das Datenbankobjekt.  
+ Das DATABASE-Objekt wird mit einer ExclusiveUpdate-Sperre gesperrt.  
   
 ##  <a name="Security"></a> Sicherheit  
- [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]Sicherungen werden nicht auf dem Gerät gespeichert. Daher ist Ihr IT-Team zuständig für das Verwalten aller Aspekte der backup-Sicherheit. Dies beinhaltet die Verwaltung der Sicherheit der Sicherungsdaten, die Sicherheit des Servers, der zum Speichern von Sicherungen verwendet und die Sicherheit der Netzwerkinfrastruktur, die der Sicherung um eine Verbindung herstellt der [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] Appliance.  
+ [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]-Sicherungen werden nicht auf dem Gerät gespeichert. Daher ist Ihr IT-Team zuständig für das Verwalten aller Aspekte der Sicherheit von Sicherungen. Dazu gehört beispielsweise die Verwaltung der Sicherheit der Sicherungsdaten, der Sicherheit der Server, auf denen Sicherungen gespeichert werden, und der Sicherheit der Netzwerkinfrastruktur, die die Sicherungsserver mit der [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]-Appliance verbinden.  
   
  **Verwalten von Anmeldeinformationen für das Netzwerk**  
   
- Netzwerkzugriff auf das Sicherungsverzeichnis basiert auf standard Sicherheit der Windows-Dateifreigabe. Vor dem Ausführen einer Sicherung, müssen Sie erstellen oder reservieren Sie ein Windows-Konto für die Authentifizierung verwendeten [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] auf das Sicherungsverzeichnis. Dieses Windows-Konto muss über die Berechtigung den Zugriff, erstellen und Schreiben im Sicherungsverzeichnis.  
+ Der Netzwerkzugriff auf das Sicherungsverzeichnis basiert auf der Windows-Standarddateifreigabesicherheit. Vor dem Ausführen einer Sicherung müssen Sie ein Windows-Konto erstellen oder reservieren, das für die Authentifizierung von [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] beim Sicherungsverzeichnis verwendet wird. Dieses Windows-Konto benötigt die Berechtigung, auf das Sicherungsverzeichnis zuzugreifen, es zu erstellen und auf es zu schreiben.  
   
 > [!IMPORTANT]  
->  Um Sicherheitsrisiken mit Ihren Daten zu reduzieren, empfehlen wir, dass Sie ein Windows-Konto ausschließlich zum Zweck der Sicherung festlegen und Wiederherstellungsvorgänge. Ermöglichen Sie diesem Konto Berechtigungen für den Sicherungsspeicherort, und an keiner anderen Stelle verfügen.  
+>  Um Sicherheitsrisiken in Verbindung mit Ihren Daten zu reduzieren, empfehlen wir, dass Sie ein Windows-Konto ausschließlich zum Ausführen der Sicherungs- und Wiederherstellungsvorgänge festlegen. Definieren Sie das Konto so, dass es nur Berechtigungen für den Sicherungsspeicherort besitzt.  
   
- Sie müssen den Benutzernamen und Kennwort in speichern [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] durch Ausführen der [Sp_pdw_add_network_credentials &#40; SQL Datawarehouse &#41; ](../../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md) gespeicherte Prozedur. [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]Windows-Anmeldeinformationsverwaltung wird zum Speichern und Verschlüsseln von Benutzernamen und Kennwörter auf dem Knoten "Zugriffssteuerung" und Compute-Knoten verwendet. Die Anmeldeinformationen sind nicht mit dem Befehl BACKUP DATABASE gesichert.  
+ Sie müssen den Benutzernamen und das Kennwort in [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] speichern, indem Sie die gespeicherte Prozedur [sp_pdw_add_network_credentials &#40;SQL Data Warehouse&#41; ](../../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md) ausführen. [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] verwendet die Windows-Anmeldeinformationsverwaltung zum Speichern und Verschlüsseln von Benutzernamen und Kennwörtern auf dem Steuerknoten und den Computeknoten. Die Anmeldeinformationen werden nicht mit dem Befehl BACKUP DATABASE gesichert.  
   
- So entfernen Sie die Anmeldeinformationen für das Netzwerk aus [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], finden Sie unter [Sp_pdw_remove_network_credentials &#40; SQL Datawarehouse &#41; ](../../relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse.md).  
+ Mit [sp_pdw_remove_network_credentials &#40;SQL Data Warehouse&#41;](../../relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse.md) können Sie Netzwerkanmeldeinformationen aus [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] entfernen.  
   
- So Listen Sie alle Anmeldeinformationen für das Netzwerk in gespeicherten [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], verwenden Sie die [sys.dm_pdw_network_credentials &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-network-credentials-transact-sql.md) -verwaltungssicht.  
+ Um alle in [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] gespeicherten Netzwerkanmeldeinformationen aufzulisten, verwenden Sie die dynamische Verwaltungssicht [sys.dm_pdw_network_credentials &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-network-credentials-transact-sql.md).  
   
 ## <a name="examples"></a>Beispiele  
   
-### <a name="a-add-network-credentials-for-the-backup-location"></a>A. Fügen Sie der Netzwerkanmeldeinformationen für den Sicherungsspeicherort  
- So erstellen Sie eine Sicherung [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] benötigen Lese-/Schreibberechtigung für das Sicherungsverzeichnis. Im folgende Beispiel wird gezeigt, wie die Anmeldeinformationen für einen Benutzer hinzuzufügen. [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]werden diese Anmeldeinformationen zu speichern und verwenden sie für die Sicherung und Wiederherstellungsvorgänge.  
+### <a name="a-add-network-credentials-for-the-backup-location"></a>A. Fügen Sie der Netzwerkanmeldeinformationen für den Sicherungsspeicherort hinzu  
+ Zum Erstellen einer Sicherung [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] benötigen Sie die Lese-/Schreibberechtigung für das Sicherungsverzeichnis. Im folgenden Beispiel wird gezeigt, wie die Anmeldeinformationen für einen Benutzer hinzugefügt werden. [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] speichert die Anmeldeinformationen und verwendet sie für Sicherungs- und Wiederherstellungsvorgänge.  
   
 > [!IMPORTANT]  
 >  Aus Sicherheitsgründen wird empfohlen, mindestens ein Domänenkonto ausschließlich zum Zweck der Durchführung von Sicherungen zu erstellen.  
@@ -201,24 +201,24 @@ BACKUP DATABASE database_name
 EXEC sp_pdw_add_network_credentials 'xxx.xxx.xxx.xxx', 'domain1\backupuser', '*****';  
 ```  
   
-### <a name="b-remove-network-credentials-for-the-backup-location"></a>B. Entfernen Sie die Anmeldeinformationen für das Netzwerk für den Sicherungsspeicherort  
- Im folgende Beispiel wird gezeigt, wie zum Entfernen der Anmeldeinformationen für ein Domänenbenutzerkonto aus [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
+### <a name="b-remove-network-credentials-for-the-backup-location"></a>B. Entfernen Sie Netzwerkanmeldeinformationen für den Sicherungsspeicherort  
+ Im folgenden Beispiel wird gezeigt, wie die Anmeldeinformationen für ein Domänenbenutzerkonto aus [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] entfernt werden.  
   
 ```  
 EXEC sp_pdw_remove_network_credentials 'xxx.xxx.xxx.xxx';  
 ```  
   
-### <a name="c-create-a-full-backup-of-a-user-database"></a>C. Erstellen Sie eine vollständige Sicherung einer Benutzerdatenbank  
- Das folgende Beispiel erstellt eine vollständige Sicherung der Benutzerdatenbank Rechnungen. [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]erstellt das Verzeichnis Invoices2013 und speichert die Sicherungsdateien der \\\10.192.63.147\backups\yearly\Invoices2013Full-Verzeichnis.  
+### <a name="c-create-a-full-backup-of-a-user-database"></a>C. Erstellen Sie eine vollständige Sicherung jeder Benutzerdatenbank  
+ Im folgenden Beispiel wird eine vollständige Sicherung der Invoices-Benutzerdatenbank erstellt. [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] erstellt das Verzeichnis Invoices2013 und speichert die Sicherungsdateien im Verzeichnis \\\10.192.63.147\backups\yearly\Invoices2013Full.  
   
 ```  
 BACKUP DATABASE Invoices TO DISK = '\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full';  
 ```  
   
-### <a name="d-create-a-differential-backup-of-a-user-database"></a>D. Erstellen einer differenziellen Sicherung einer Benutzerdatenbank  
- Das folgende Beispiel erstellt eine differenzielle Sicherung, die alle Änderungen seit der letzten vollständigen Sicherung der Datenbank Rechnungen enthält. [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]erstellt die \\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Diff-Verzeichnis, dem die Dateien speichert. Die Beschreibung "Rechnungen 2013 differenzielle Sicherung" wird mit der Headerinformationen für die Sicherung gespeichert werden.  
+### <a name="d-create-a-differential-backup-of-a-user-database"></a>D. Erstellen Sie eine differenzielle Sicherung einer Benutzerdatenbank  
+ Das folgende Beispiel erstellt eine differenzielle Sicherung, die alle Änderungen seit der letzten vollständigen Sicherung der Invoices-Datenbank enthält. [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] erstellt das Verzeichnis \\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Diff, in dem die Dateien gespeichert werden. Die Beschreibung "Invoices 2013 differential backup" wird mit den Headerinformationen für die Sicherung gespeichert.  
   
- Die differenzielle Sicherung wird nur erfolgreich ausgeführt werden, wenn die letzte vollständige Sicherung von Rechnungen erfolgreich abgeschlossen wurde.  
+ Die differenzielle Sicherung wird nur dann erfolgreich ausgeführt, wenn die letzte vollständige Sicherung von Rechnungen erfolgreich abgeschlossen wurde.  
   
 ```  
 BACKUP DATABASE Invoices TO DISK = '\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Diff'  
@@ -226,17 +226,17 @@ BACKUP DATABASE Invoices TO DISK = '\\xxx.xxx.xxx.xxx\backups\yearly\Invoices201
     DESCRIPTION = 'Invoices 2013 differential backup';  
 ```  
   
-### <a name="e-create-a-full-backup-of-the-master-database"></a>E. Erstellen Sie eine vollständige Sicherung der master-Datenbank  
- Im folgenden Beispiel wird eine vollständige Sicherung der master-Datenbank erstellt und speichert ihn in das Verzeichnis "\\\10.192.63.147\backups\2013\daily\20130722\master".  
+### <a name="e-create-a-full-backup-of-the-master-database"></a>E. Erstellen Sie eine vollständige Sicherung der Masterdatenbank  
+ Im folgenden Beispiel wird eine vollständige Sicherung der Masterdatenbank erstellt und im Verzeichnis \\\10.192.63.147\backups\2013\daily\20130722\master gespeichert.  
   
 ```  
 BACKUP DATABASE master TO DISK = '\\xxx.xxx.xxx.xxx\backups\2013\daily\20130722\master';  
 ```  
   
-### <a name="f-create-a-backup-of-appliance-login-information"></a>F. Erstellen Sie eine Sicherung der Appliance-Anmeldeinformationen ein.  
- Der master-Datenbank speichert die Anmeldeinformationen für die Appliance. Um die Anmeldeinformationen für die Anwendung zu sichern, müssen Sie backup Master.  
+### <a name="f-create-a-backup-of-appliance-login-information"></a>F. Erstellen Sie eine Sicherung der Appliance-Anmeldeinformationen.  
+ Die Masterdatenbank speichert die Anmeldeinformationen für die Appliance. Um die Anmeldeinformationen für die Appliance zu sichern, müssen Sie die Masterdatenbank sichern.  
   
- Das folgende Beispiel erstellt eine vollständige Sicherung der master-Datenbank.  
+ Im folgenden Beispiel wird eine vollständige Sicherung der Masterdatenbank erstellt.  
   
 ```  
 BACKUP DATABASE master TO DISK = '\\xxx.xxx.xxx.xxx\backups\2013\daily\20130722\master'  
@@ -247,7 +247,7 @@ WITH (
 ;  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [WIEDERHERSTELLUNGSDATENBANK &#40; Parallel Datawarehouse &#41;](../../t-sql/statements/restore-database-parallel-data-warehouse.md)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [RESTORE DATABASE &#40;Parallel Data Warehouse&#41;](../../t-sql/statements/restore-database-parallel-data-warehouse.md)  
   
   

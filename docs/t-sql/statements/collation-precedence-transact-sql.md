@@ -1,5 +1,5 @@
 ---
-title: Rangfolge von Sortierungen (Transact-SQL) | Microsoft Docs
+title: Rangfolge von Sortierungen (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -48,12 +48,12 @@ ms.lasthandoff: 11/21/2017
   
 -   Die Sortierung, die von sortierungsabhängigen Operatoren verwendet wird, die Zeichenfolgen als Eingabe verwenden, jedoch keine Zeichenfolge zurückgeben, z. B. LIKE und IN.  
   
- Die sortierungsprioritätsregeln gelten nur für die Zeichenfolgen-Datentypen: **Char**, **Varchar**, **Text**, **Nchar**, **Nvarchar**, und **Ntext**. Objekte mit anderen Datentypen werden in Sortierungsbewertungen nicht einbezogen.  
+ Die Regeln für die Rangfolge von Sortierungen gelten nur für die Zeichenfolgen-Datentypen **char**, **varchar**, **text**, **nchar**, **nvarchar** und **ntext**. Objekte mit anderen Datentypen werden in Sortierungsbewertungen nicht einbezogen.  
   
 ## <a name="collation-labels"></a>Sortierungsbezeichnungen  
  In der folgenden Tabelle werden die vier Kategorien mit den jeweiligen Sortierungen aller Objekte aufgelistet und beschrieben. Der Name jeder Kategorie wird Sortierungsbezeichnung genannt.  
   
-|Sortierungsbezeichnung|Typen von Objekten|  
+|Sortierungsbezeichnung|Objekttypen|  
 |---------------------|----------------------|  
 |Coercible-default|Alle [!INCLUDE[tsql](../../includes/tsql-md.md)]-Zeichenfolgenvariablen, Parameter, Literale oder die Ausgabe einer in einen Katalog integrierten Funktion oder einer integrierten Funktion, die keine Zeichenfolgeneingabe akzeptiert, jedoch eine Zeichenfolge ausgibt.<br /><br /> Wenn das Objekt in einer benutzerdefinierten Funktion, einer gespeicherten Prozedur oder einem Trigger deklariert ist, wird dem Objekt die Standardsortierung der Datenbank zugewiesen, in der die Funktion, die gespeicherte Prozedur oder der Trigger erstellt wurde. Wenn das Objekt in einem Batch deklariert ist, wird dem Objekt die Standardsortierung der aktuellen Datenbank für die Verbindung zugewiesen.|  
 |Implicit X|Ein Spaltenverweis. Die Sortierung für den Ausdruck (X) wird von der Sortierung übernommen, die für die Spalte der Tabelle oder Sicht definiert ist.<br /><br /> Selbst wenn der Spalte explizit durch eine COLLATE-Klausel in der CREATE TABLE- oder CREATE VIEW-Anweisung eine Sortierung zugewiesen wurde, wird der Spaltenverweis als Implicit klassifiziert.|  
@@ -91,9 +91,9 @@ ms.lasthandoff: 11/21/2017
   
 |Prioritätsbezeichnung des Operanden|Explicit X|Implicit X|Coercible-default|No-collation|  
 |----------------------------|----------------|----------------|------------------------|-------------------|  
-|**EXPLICIT Y**|Ein Fehler wird erzeugt|Ergebnis ist Explicit Y|Ergebnis ist Explicit Y|Ergebnis ist Explicit Y|  
+|**Explicit Y**|Ein Fehler wird erzeugt|Ergebnis ist Explicit Y|Ergebnis ist Explicit Y|Ergebnis ist Explicit Y|  
 |**Implicit Y**|Ergebnis ist Explicit X|Ergebnis ist No-collation|Ergebnis ist Implicit Y|Ergebnis ist No-collation|  
-|**Coercible-Standard**|Ergebnis ist Explicit X|Ergebnis ist Implicit X|Ergebnis ist Coercible-default|Ergebnis ist No-collation|  
+|**Coercible-default**|Ergebnis ist Explicit X|Ergebnis ist Implicit X|Ergebnis ist Coercible-default|Ergebnis ist No-collation|  
 |**No-collation**|Ergebnis ist Explicit X|Ergebnis ist No-collation|Ergebnis ist No-collation|Ergebnis ist No-collation|  
   
  Die folgenden zusätzlichen Regeln sind auch auf die Sortierungspriorität anwendbar:  
@@ -102,9 +102,9 @@ ms.lasthandoff: 11/21/2017
   
      `WHERE ColumnA = ( 'abc' COLLATE French_CI_AS) COLLATE French_CS_AS`  
   
--   Codepagekonvertierungen für **Text** Datentypen sind nicht zulässig. Sie können nicht umgewandelt eine **Text** Ausdruck von einer Sortierung in eine andere besäßen sie unterschiedliche Codepages. Der Zuweisungsoperator kann keine Werte zuweisen, wenn die Sortierung des rechten Textoperanden eine andere Codepage als die des linken Textoperanden besitzt.  
+-   Codepagekonvertierungen für **text**-Datentypen sind nicht zulässig. Sie können einen **text**-Ausdruck nur dann von einer Sortierung in eine andere umwandeln, wenn sie dieselbe Codepage haben. Der Zuweisungsoperator kann keine Werte zuweisen, wenn die Sortierung des rechten Textoperanden eine andere Codepage als die des linken Textoperanden besitzt.  
   
- Die Rangfolge von Sortierungen wird nach der Konvertierung der Datentypen bestimmt. Der Operand, von dem die resultierende Sortierung genommen wird, kann sich von dem Operanden unterscheiden, der den Datentyp für das Endergebnis bereitstellt. Betrachten Sie beispielsweise den folgenden Batch aus:  
+ Die Rangfolge von Sortierungen wird nach der Konvertierung der Datentypen bestimmt. Der Operand, von dem die resultierende Sortierung genommen wird, kann sich von dem Operanden unterscheiden, der den Datentyp für das Endergebnis bereitstellt. Angenommen, der folgende Batch liegt vor:  
   
 ```  
 CREATE TABLE TestTab  
@@ -228,7 +228,7 @@ a
  Der Operator für die Zeichenfolgenverkettung ist sortierungsabhängig, und den beiden Zeichenfolgenoperanden und dem Ergebnis wird die Sortierungsbezeichnung des Operanden mit dem höchsten Sortierungsrang zugewiesen. Der UNION ALL- und der CASE-Operator sind ebenfalls sortierungsunabhängig, und allen Zeichenfolgenoperanden und den Endergebnissen wird die Sortierungsbezeichnung des Operanden mit dem höchsten Rang zugewiesen. Die Sortierungsrangfolge der UNION ALL-Operanden und des Ergebnisses werden spaltenweise ausgewertet.  
   
 ### <a name="functions-and-collation"></a>Funktionen und Sortierung  
- DIE Funktionen CAST, CONVERT und COLLATE sind sortierungsabhängig für **Char**, **Varchar**, und **Text** -Datentypen. Wenn die Eingabe und die Ausgabe der Funktionen CAST und CONVERT Zeichenfolgen sind, hat die ausgegebene Zeichenfolge die Sortierungsbezeichnung der eingegebenen Zeichenfolge. Wenn die Eingabe keine Zeichenfolge ist, erhält die ausgegebene Zeichenfolge die Bezeichnung Coercible-default. Der Zeichenfolge wird die Sortierung der aktuellen Datenbank für die Verbindung oder die Sortierung der Datenbank zugewiesen, die die benutzerdefinierte Funktion, die gespeicherte Prozedur oder den Trigger enthält, in der bzw. dem auf die CAST- oder CONVERT-Funktion verwiesen wird.  
+ Die Funktionen CAST, CONVERT und COLLATE sind sortierungsabhängig für die Datentypen **char**, **varchar** und **text**. Wenn die Eingabe und die Ausgabe der Funktionen CAST und CONVERT Zeichenfolgen sind, hat die ausgegebene Zeichenfolge die Sortierungsbezeichnung der eingegebenen Zeichenfolge. Wenn die Eingabe keine Zeichenfolge ist, erhält die ausgegebene Zeichenfolge die Bezeichnung Coercible-default. Der Zeichenfolge wird die Sortierung der aktuellen Datenbank für die Verbindung oder die Sortierung der Datenbank zugewiesen, die die benutzerdefinierte Funktion, die gespeicherte Prozedur oder den Trigger enthält, in der bzw. dem auf die CAST- oder CONVERT-Funktion verwiesen wird.  
   
  Für integrierte Funktionen, die eine Zeichenfolge zurückgeben, jedoch keine Zeichenfolge als Eingabe verwenden, ist die Bezeichnung für die ausgegebene Zeichenfolge Coercible-default. Der Zeichenfolge wird die Sortierung der aktuellen Datenbank oder der Datenbank zugewiesen, die die benutzerdefinierte Funktion, die gespeicherte Prozedur oder den Trigger enthält, in der bzw. dem auf die Funktion verwiesen wird.  
   
@@ -244,10 +244,10 @@ a
 |LOWER|SUBSTRING|  
 |PATINDEX|GROSSBUCHSTABEN|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [COLLATE &#40;Transact-SQL&#41;](~/t-sql/statements/collations.md)   
- [Datentypkonvertierung &#40; Datenbankmodul &#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)   
- [Operatoren &#40; Transact-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [Datentypkonvertierung &#40;Datenbank-Engine&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)   
+ [Operatoren &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [Ausdrücke &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)  
   
   

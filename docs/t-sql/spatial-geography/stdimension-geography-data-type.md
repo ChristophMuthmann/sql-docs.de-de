@@ -1,5 +1,5 @@
 ---
-title: STDimension (Geography-Datentyp) | Microsoft Docs
+title: STDimension (geography-Datentyp) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stdimension-geography-data-type"></a>STDimension (geography-Datentyp)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Gibt die maximale Dimension einer **Geography** Instanz.  
+  Gibt die maximale Dimension einer **geography**-Instanz zurück  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -44,15 +44,15 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Rückgabetypen  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Rückgabetyp: **Int**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Rückgabetyp: **int**  
   
  CLR-Rückgabetyp: **SqlInt32**  
   
-## <a name="remarks"></a>Hinweise  
- STDimension() gibt-1 zurück, wenn die **Geography** -Instanz leer ist.  
+## <a name="remarks"></a>Remarks  
+ STDimension() gibt -1 zurück, wenn die **geography**-Instanz leer ist.  
   
 ## <a name="examples"></a>Beispiele  
- Im folgenden Beispiel wird `STDimension()` So erstellen eine Tabellenvariable zum Speichern `geography` Instanzen und fügt eine `Point`, `LineString`, und ein `Polygon`.  
+ Im folgenden Beispiel wird `STDimension()` verwendet, um eine Tabellenvariable zu erstellen, in der `geography`-Instanzen gespeichert werden. Dann werden eine `Point`-, eine `LineString`- und eine `Polygon`-Instanz eingefügt.  
   
 ```  
 DECLARE @temp table ([name] varchar(10), [geom] geography);  
@@ -65,15 +65,15 @@ SELECT [name], [geom].STDimension() as [dim]
 FROM @temp;  
 ```  
   
- Im Beispiel wird dann zurückgegeben, die Dimensionen jeder `geography`Instanz.  
+ Im Beispiel werden dann die Dimensionen der einzelnen `geography`-Instanzen zurückgegeben.  
   
-|name|dim|  
+|NAME|dim|  
 |----------|---------|  
 |Point|0|  
 |LineString|1|  
 |Polygon|2|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [OGC-Methoden für geography-Instanzen](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

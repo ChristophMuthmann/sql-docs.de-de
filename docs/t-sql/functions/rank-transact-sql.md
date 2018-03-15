@@ -1,5 +1,5 @@
 ---
-title: Rang (Transact-SQL) | Microsoft Docs
+title: RANK (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 10/25/2016
 ms.prod: sql-non-specified
@@ -39,10 +39,10 @@ ms.lasthandoff: 11/21/2017
 
   Gibt den Rang jeder Zeile innerhalb der Partition eines Resultsets zurück. Der Rang einer Zeile ergibt sich, indem 1 zur Anzahl von Rängen vor der fraglichen Zeile addiert wird.  
 
-  ROW_NUMBER und Rang sind ähnlich. ROW_NUMBER-Zahlen, die alle Zeilen sequenziell (z. B. 1, 2, 3, 4, 5). Rang bereit (z. B. 1, 2, 2, 4, 5) das Funktionsverhalten demselben numerischen Wert.   
+  ROW_NUMBER und RANK sind ähnlich. ROW_NUMBER nummeriert alle Zeilen sequenziell (z.B. 1, 2, 3, 4, 5). RANK stellt den gleichen numerischen Wert für gleichwertige Werte bereit (z.B. 1, 2, 3, 4, 5).   
   
 > [!NOTE]
-> Rang ist ein temporärer Wert berechnet, wenn die Abfrage ausgeführt wird. Um Zahlen in eine Tabelle dauerhaft zu speichern, finden Sie unter [IDENTITY-Eigenschaft](../../t-sql/statements/create-table-transact-sql-identity-property.md) und [SEQUENZ](../../t-sql/statements/create-sequence-transact-sql.md). 
+> RANK ist ein temporärer Wert, der berechnet wird, wenn die Abfrage ausgeführt wird. Unter [IDENTITY-Eigenschaft](../../t-sql/statements/create-table-transact-sql-identity-property.md) und [SEQUENCE](../../t-sql/statements/create-sequence-transact-sql.md) finden Sie weitere Informationen zum dauerhaften Speichern von Zahlen in einer Tabelle. 
    
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -53,13 +53,13 @@ RANK ( ) OVER ( [ partition_by_clause ] order_by_clause )
 ```  
   
 ## <a name="arguments"></a>Argumente  
- ÜBER **(** [ *Partition_by_clause* ] *Order_by_clause***)**  
- *Partition_by_clause* teilt das Resultset, das von der FROM-Klausel erstellt wird, in Partitionen, die auf die die Funktion angewendet wird. Wird dies nicht angegeben, verarbeitet die Funktion alle Zeilen des Abfrageresultsets als einzelne Gruppe. *Order_by_clause* bestimmt die Reihenfolge der Daten, bevor die Funktion angewendet wird. Die *Order_by_clause* ist erforderlich. Die \<Zeilen- oder Bereichsklausel > der OVER-Klausel kann nicht für die RANK-Funktion angegeben werden. Weitere Informationen finden Sie unter [Klausel "OVER" &#40; Transact-SQL &#41; ](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ OVER **(** [ *partition_by_clause* ] *order_by_clause***)**  
+ *partition_by_clause* unterteilt das von der FROM-Klausel erzeugte Resultset in Partitionen, auf die die Funktion angewendet wird. Wird dies nicht angegeben, verarbeitet die Funktion alle Zeilen des Abfrageresultsets als einzelne Gruppe. *order_by_clause* bestimmt die Reihenfolge der Daten, bevor die Funktion angewendet wird. *order_by_clause* ist erforderlich. Die \<Zeilen- oder Bereichsklausel> der OVER-Klausel kann für die RANK-Funktion nicht angegeben werden. Weitere Informationen finden Sie unter [OVER-Klausel &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
 ## <a name="return-types"></a>Rückgabetypen  
  **bigint**  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Wenn zwei oder mehr Zeilen gleichwertig sind, erhält jede gleichwertige Zeile denselben Rang. Wenn beispielsweise zwei Vertriebsmitarbeiter denselben SalesYTD-Wert aufweisen, erhalten beide den Rang 1. Der Vertriebsmitarbeiter mit dem nächsthöheren SalesYTD-Wert erhält den Rang 3, da es bereits zwei Zeilen mit einem höheren Rang gibt. Aus diesem Grund gibt die RANK-Funktion nicht immer aufeinander folgende ganze Zahlen zurück.  
   
  Die Sortierreihenfolge, die für die ganze Abfrage verwendet wird, bestimmt die Reihenfolge, mit der die Zeilen in einem Resultset aufgeführt sind.  
@@ -135,10 +135,10 @@ BusinessEntityID Rate                  RankBySalary
 10               42.4808               9  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
-### <a name="c-ranking-rows-within-a-partition"></a>"C:" Ordnen von Zeilen innerhalb einer partition  
- Im folgenden Beispiel wird die Rangfolge der Vertriebsmitarbeiter in jedes Vertriebsgebiet gemäß deren Gesamtumsatz bestimmt. Das Rowset wird auf der Grundlage von `SalesTerritoryGroup` partitioniert und nach `SalesAmountQuota` sortiert.  
+### <a name="c-ranking-rows-within-a-partition"></a>C: Ordnen von Zeilen innerhalb einer Partition  
+ Im folgenden Beispiel wird die Rangfolge der Vertriebsmitarbeiter in jedem Vertriebsgebiet auf Grundlage von deren Gesamtumsatz bestimmt. Das Rowset wird auf der Grundlage von `SalesTerritoryGroup` partitioniert und nach `SalesAmountQuota` sortiert.  
   
 ```  
 -- Uses AdventureWorks  
@@ -173,11 +173,11 @@ Ito               7804000.0000   Southwest            2
 Pak               10514000.0000  United Kingdom       1
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [DENSE_RANK &#40; Transact-SQL &#41;](../../t-sql/functions/dense-rank-transact-sql.md)   
- [ROW_NUMBER &#40; Transact-SQL &#41;](../../t-sql/functions/row-number-transact-sql.md)   
- [NTILE &#40; Transact-SQL &#41;](../../t-sql/functions/ntile-transact-sql.md)   
- [Rangfolge Funktionen &#40; Transact-SQL &#41;](../../t-sql/functions/ranking-functions-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [DENSE_RANK &#40;Transact-SQL&#41;](../../t-sql/functions/dense-rank-transact-sql.md)   
+ [ROW_NUMBER &#40;Transact-SQL&#41;](../../t-sql/functions/row-number-transact-sql.md)   
+ [NTILE &#40;Transact-SQL&#41;](../../t-sql/functions/ntile-transact-sql.md)   
+ [Rangfolgefunktionen &#40;Transact-SQL&#41;](../../t-sql/functions/ranking-functions-transact-sql.md)   
  [Integrierte Funktionen &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)  
   
   

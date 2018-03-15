@@ -1,5 +1,5 @@
 ---
-title: Anweisungen | Microsoft Docs
+title: Anweisungen | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -29,36 +29,36 @@ ms.lasthandoff: 11/21/2017
 # <a name="transact-sql-statements"></a>Transact-SQL-Anweisungen
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
 
-In diesem Referenzthema werden die Kategorien von Anweisungen für die Verwendung mit Transact-SQL (T-SQL) zusammengefasst. Sie finden alle Anweisungen im linken Navigationsbereich aufgeführt.
+In diesem Referenzthema werden die Kategorien der Anweisungen zusammengefasst, die mit Transact-SQL (T-SQL) verwendet werden. Eine Auflistung aller Anweisungen finden Sie im linken Navigationsbereich.
 
 ## <a name="backup-and-restore"></a>Sichern und Wiederherstellen
-Die Backup- und Restore-Anweisungen bieten Möglichkeiten zum Erstellen von Sicherungen und Wiederherstellen von Sicherungen.  Weitere Informationen finden Sie unter der [Übersicht über die Sicherung und Wiederherstellung](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md).
+Die Backup- und Restore-Anweisungen stellen Möglichkeiten bereit, um Sicherungen zu erstellen und Wiederherstellungen aus Sicherungen vorzunehmen.  Weitere Informationen finden Sie in der [Übersicht zur Sicherung und Wiederherstellung](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md).
 
 ## <a name="data-definition-language"></a>Datendefinitionssprache
-Anweisungen von Data Definition Language (DDL) werden Datenstrukturen definiert. Verwenden Sie die Anweisungen zum Erstellen, ändern oder Löschen von Datenstrukturen in einer Datenbank.
+Durch DDL-Anweisungen (Data Definition Language, Datendefinitionssprache) werden Datenstrukturen definiert. Verwenden Sie die Anweisungen, um Datenstrukturen in einer Datenbank zu erstellen, zu ändern oder zu löschen.
 - ALTER
 - Sortierungen
 - CREATE
 - DROP
-- TRIGGER DEAKTIVIEREN
+- DISABLE TRIGGER
 - ENABLE TRIGGER
-- UMBENENNEN
+- RENAME
 - UPDATE STATISTICS
 
 ## <a name="data-manipulation-language"></a>Datenbearbeitungssprache
-(Data Manipulation Language, DML) wirken sich auf die Informationen in der Datenbank gespeichert. Verwenden Sie diese Anweisungen, um Einfüge-, Update- und ändern Sie die Zeilen in der Datenbank.
+Die DML (Data Manipulation Language, Datenbearbeitungssprache) wirkt sich auf die in der Datenbank gespeicherten Informationen aus. Verwenden Sie diese Anweisungen, um Zeilen in der Datenbank einzufügen, zu aktualisieren und zu verändern.
 
 - BULK INSERT
-- DELETE
+- Delete
 - INSERT
 - MERGE
 - TRUNCATE TABLE
 
-## <a name="permissions-statements"></a>Berechtigungen-Anweisungen
-Berechtigungen Anweisungen ermitteln, welche Benutzer und Anmeldenamen den Zugriff auf Daten und Vorgänge ausführen können. Weitere Informationen zur Authentifizierung und Zugriff finden Sie unter der [Sicherheitscenter](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md).
+## <a name="permissions-statements"></a>Berechtigungsanweisungen
+Durch Berechtigungsanweisungen wird bestimmt, welche Benutzer und Konten auf Daten zugreifen und Vorgänge ausführen können. Weitere Informationen zur Authentifizierung und zum Zugriff finden Sie im [Sicherheitscenter](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md).
 
 ## <a name="service-broker-statements"></a>Service Broker-Anweisungen
-Service Broker ist ein Feature, die systemeigene Unterstützung für Messaging-und warteschlangenanwendungen bereitstellt. Weitere Informationen finden Sie unter [Service Broker](../../relational-databases/service-broker/event-notifications.md).
+Bei Service Broker handelt es sich um ein Feature, das native Unterstützung für Messaging- und Warteschlangenanwendungen bereitstellt. Weitere Informationen finden Sie unter [Service Broker](../../relational-databases/service-broker/event-notifications.md).
 
 ## <a name="session-settings"></a>Sitzungseinstellungen
-SET-Anweisungen bestimmen, wie die aktuelle Sitzung Handles Uhrzeiteinstellungen ausgeführt. Eine Übersicht finden Sie unter [SET-Anweisungen](set-statements-transact-sql.md).
+Durch SET-Anweisungen wird bestimmt, wie die aktuelle Sitzung ausgeführte Uhrzeiteinstellungen verarbeitet. Eine Übersicht finden Sie unter [SET-Anweisungen](set-statements-transact-sql.md).

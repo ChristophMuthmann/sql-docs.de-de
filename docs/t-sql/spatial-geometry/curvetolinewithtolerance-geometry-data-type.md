@@ -1,5 +1,5 @@
 ---
-title: CurveToLineWithTolerance (Geometry-Datentyp) | Microsoft Docs
+title: CurveToLineWithTolerance (geometry-Datentyp) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -48,14 +48,14 @@ Gibt eine polygonale Näherung einer Instanz von **geometry** mit Kreisbogensegm
  Ein **bool** -Ausdruck, der angibt, ob ein relatives Maximum für die Abweichung verwendet werden soll. Wenn der relativer Wert auf false (0) festgelegt wird, wird ein absolutes Maximum für die Abweichung verwendet, die eine lineare Näherung aufweisen kann. Wenn der relative Wert auf true (1) festgelegt wird, wird die Toleranz als Produkt des tolerance-Parameters und des Durchmessers des Begrenzungsrahmens für das räumliche Objekt berechnet.  
   
 ## <a name="return-types"></a>Rückgabetypen  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Rückgabetyp: **Geometrie**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Rückgabetyp: **geometry**  
   
  CLR-Rückgabetyp: **SqlGeometry**  
   
 ## <a name="exceptions"></a>Ausnahmen  
- Festlegen der Toleranz < = 0 löst eine `ArgumentOutOfRange` Ausnahme.  
+ Wenn Sie die Toleranz auf <= 0 festlegen, wird eine `ArgumentOutOfRange`-Ausnahme ausgelöst.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Mit dieser Methode kann ein Umfang für die Fehlertoleranz in der resultierenden **LineString**angegeben werden.  
   
  In der folgenden Tabelle wird der von `CurveToLineWithTolerance()`zurückgegebene Instanzentyp für verschiedene Typen angezeigt.  
@@ -114,7 +114,7 @@ Gibt eine polygonale Näherung einer Instanz von **geometry** mit Kreisbogensegm
  ```  
   
 ### <a name="e-using-the-method-on-a-geometrycollection-instance"></a>E. Verwenden der Methode in einer GeometryCollection-Instanz  
- Im folgenden Beispiel wird `CurveToLineWithTolerance()` in einer `GeometryCollection` mit einer zweidimensionalen Instanz von `CurvePolygon` und einer eindimensionalen Instanz von `CircularString` aufgerufen. `CurveToLineWithTolerance()`Wandelt die beiden kreisbogensegmenttypen in liniensegmenttypen um und gibt diese in einem `GeometryCollection` Typ.  
+ Im folgenden Beispiel wird `CurveToLineWithTolerance()` in einer `GeometryCollection` mit einer zweidimensionalen Instanz von `CurvePolygon` und einer eindimensionalen Instanz von `CircularString` aufgerufen. `CurveToLineWithTolerance()` wandelt die beiden Kreisbogensegmenttypen in Liniensegmenttypen um und gibt diese in einem `GeometryCollection`-Typ zurück.  
   
 ```
  DECLARE @g geometry; 
@@ -122,9 +122,9 @@ Gibt eine polygonale Näherung einer Instanz von **geometry** mit Kreisbogensegm
  SELECT @g.CurveToLineWithTolerance(0.1,0).STNumPoints(), @g.CurveToLineWithTolerance(0.1, 0).ToString();
  ```  
   
-## <a name="see-also"></a>Siehe auch  
- [CurveToLineWithTolerance &#40; Geography-Datentyp &#41;](../../t-sql/spatial-geography/curvetolinewithtolerance-geography-data-type.md)   
- [STCurveToLine &#40; Geometry-Datentyp &#41;](../../t-sql/spatial-geometry/stcurvetoline-geometry-data-type.md)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [CurveToLineWithTolerance &#40;geography-Datentyp&#41;](../../t-sql/spatial-geography/curvetolinewithtolerance-geography-data-type.md)   
+ [STCurveToLine &#40;geometry-Datentyp&#41;](../../t-sql/spatial-geometry/stcurvetoline-geometry-data-type.md)  
   
   
 

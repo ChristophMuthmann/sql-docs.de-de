@@ -1,5 +1,5 @@
 ---
-title: Modify()-Methode (Xml-Datentyp) | Microsoft Docs
+title: modify()-Methode (xml-Datentyp) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
@@ -49,11 +49,11 @@ modify (XML_DML)
 >  Es wird ein Fehler zurückgegeben, wenn die **modify()** -Methode für einen NULL-Wert aufgerufen wird oder einen NULL-Wert ergibt.  
   
 ## <a name="examples"></a>Beispiele  
- Da für die **modify()** -Methode eine Zeichenfolge in der XML Data Manipulation Language (DML) erforderlich ist, sind die Beispiele für **modify()** in den Themen zur Beschreibung der XML DML-Anweisungen enthalten. Diese Beispiele finden Sie unter [Insert &#40; XML DML &#41; ](../../t-sql/xml/insert-xml-dml.md), [&#40; löschen XML DML &#41; ](../../t-sql/xml/delete-xml-dml.md) und [ersetzen Wert &#40; XML DML &#41; ](../../t-sql/xml/replace-value-of-xml-dml.md).  
+ Da für die **modify()** -Methode eine Zeichenfolge in der XML Data Manipulation Language (DML) erforderlich ist, sind die Beispiele für **modify()** in den Themen zur Beschreibung der XML DML-Anweisungen enthalten. Diese Beispiele finden Sie unter [insert &#40;XML DML&#41;](../../t-sql/xml/insert-xml-dml.md), [delete &#40;XML DML&#41;](../../t-sql/xml/delete-xml-dml.md) und [replace value of &#40;XML DML&#41;](../../t-sql/xml/replace-value-of-xml-dml.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Erstellen von Instanzen der XML-Daten](../../relational-databases/xml/create-instances-of-xml-data.md)   
- [xml-Datentypmethoden](../../t-sql/xml/xml-data-type-methods.md)   
- [XML Data Modification Language &#40; XML DML &#41;](../../t-sql/xml/xml-data-modification-language-xml-dml.md)  
+ [XML-Datentypmethoden](../../t-sql/xml/xml-data-type-methods.md)   
+ [XML DML &#40;Data Modification Language&#41;](../../t-sql/xml/xml-data-modification-language-xml-dml.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: DROP ROLE (Transact-SQL) | Microsoft Docs
+title: DROP ROLE (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 05/11/2017
 ms.prod: sql-non-specified
@@ -58,18 +58,18 @@ DROP ROLE role_name
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *IF VORHANDEN IST*  
+ *IF EXISTS*  
  **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis zur [aktuellen Version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   
- Bedingt löscht die Rolle nur dann, wenn sie bereits vorhanden ist.  
+ Löscht die Rolle nur, wenn diese bereits vorhanden ist.  
   
- *Rollenname*  
+ *role_name*  
  Gibt die Rolle an, die aus der Datenbank gelöscht werden soll.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Rollen, die sicherungsfähige Elemente besitzen, können nicht aus der Datenbank gelöscht werden. Wenn eine Datenbankrolle mit sicherungsfähigen Elementen gelöscht werden soll, müssen Sie zunächst den Besitz dieser sicherungsfähigen Elemente übertragen oder sie aus der Datenbank löschen. Rollen mit Mitgliedern können nicht aus der Datenbank gelöscht werden. Zum Löschen einer Rolle mit Mitgliedern müssen Sie zunächst die Mitglieder der Rolle entfernen.  
   
- Verwenden Sie zum Entfernen von Mitgliedern aus einer Datenbankrolle [ALTER ROLE &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-role-transact-sql.md).  
+ Um Mitglieder aus einer Datenbankrolle zu entfernen, verwenden Sie [ALTER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-role-transact-sql.md).  
   
  DROP ROLE kann nicht zum Löschen einer festen Datenbankrolle verwendet werden.  
   
@@ -78,13 +78,13 @@ DROP ROLE role_name
 > [!CAUTION]  
 >  [!INCLUDE[ssCautionUserSchema](../../includes/sscautionuserschema-md.md)]  
   
- Verwenden Sie zum Entfernen einer Serverrolle [DROP SERVER ROLE &#40; Transact-SQL &#41; ](../../t-sql/statements/drop-server-role-transact-sql.md).  
+ Verwenden Sie [DROP SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-role-transact-sql.md), um eine Serverrolle zu entfernen.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert **ALTER ANY ROLE** Berechtigung für die Datenbank oder **Steuerelement** -Berechtigung für die Rolle oder die Mitgliedschaft in der **Db_securityadmin**.  
+ Erfordert die **ALTER ANY ROLE**-Berechtigung für die Datenbank, die **CONTROL**-Berechtigung für die Rolle oder die Mitgliedschaft in **db_securityadmin**.  
   
 ## <a name="examples"></a>Beispiele  
- Das folgende Beispiel löscht die Datenbankrolle `purchasing` aus der `AdventureWorks2012` Datenbank.  
+ Im folgenden Beispiel wird die Datenbankrolle `purchasing` aus der `AdventureWorks2012`-Datenbank entfernt.  
   
 ```  
 DROP ROLE purchasing;  
@@ -92,9 +92,9 @@ GO
 ```  
   
   
-## <a name="see-also"></a>Siehe auch  
- [Erstellen Sie die Rolle "" &#40; Transact-SQL &#41;](../../t-sql/statements/create-role-transact-sql.md)   
- [ALTER ROLE &#40; Transact-SQL &#41;](../../t-sql/statements/alter-role-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [CREATE ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-role-transact-sql.md)   
+ [ALTER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-role-transact-sql.md)   
  [Prinzipale &#40;Datenbankmodul&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
  [sp_addrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)   

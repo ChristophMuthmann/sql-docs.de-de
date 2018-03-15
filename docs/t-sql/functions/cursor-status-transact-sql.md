@@ -1,5 +1,5 @@
 ---
-title: CURSOR_STATUS (Transact-SQL) | Microsoft Docs
+title: CURSOR_STATUS (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -55,8 +55,8 @@ CURSOR_STATUS
 'local'  
 Gibt eine Konstante an, die anzeigt, dass die Quelle des Cursors ein lokaler Cursorname ist.
   
-"*Cursor_name*"  
-Ist der Name des Cursors. Ein Cursorname muss den Regeln für Bezeichner entsprechen.
+'*cursor_name*'  
+Der Name des Cursors. Ein Cursorname muss den Regeln für Bezeichner entsprechen.
   
 'global'  
 Gibt eine Konstante an, die anzeigt, dass die Quelle des Cursors ein globaler Cursorname ist.
@@ -64,8 +64,8 @@ Gibt eine Konstante an, die anzeigt, dass die Quelle des Cursors ein globaler Cu
 'variable'  
 Gibt eine Konstante an, die anzeigt, dass die Quelle des Cursors eine lokale Variable ist.
   
-"*Cursor_variable*"  
-Der Name der Cursorvariablen. Eine Cursorvariable muss definiert werden, mithilfe der **Cursor** -Datentyp.
+'*cursor_variable*'  
+Der Name der Cursorvariablen. Eine Cursorvariable muss mithilfe des **cursor**-Datentyps definiert werden.
   
 ## <a name="return-types"></a>Rückgabetypen
 **smallint**
@@ -134,7 +134,7 @@ After Close
 ```  
   
 ## <a name="see-also"></a>Siehe auch
-[Cursorfunktionen &#40; Transact-SQL &#41;](../../t-sql/functions/cursor-functions-transact-sql.md)  
+[Cursor Functions &#40;Transact-SQL&#41; (Cursorfunktionen (Transact-SQL))](../../t-sql/functions/cursor-functions-transact-sql.md)  
 [Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)
   
   

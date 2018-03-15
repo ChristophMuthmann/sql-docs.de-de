@@ -1,5 +1,5 @@
 ---
-title: Reduce (Geometry-Datentyp) | Microsoft Docs
+title: Reduce (geometry-Datentyp) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -48,18 +48,18 @@ Gibt einen Näherungswert der gegebenen **geometry** -Instanz zurück. Dieser N�
  Ein Wert vom Typ **float**. *tolerance* gibt die Toleranz an, die als Eingabe für den Näherungsalgorithmus verwendet werden soll.  
   
 ## <a name="return-types"></a>Rückgabetypen  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Rückgabetyp: **Geometrie**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Rückgabetyp: **geometry**  
   
  CLR-Rückgabetyp: **SqlGeometry**  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Bei Auflistungstypen arbeitet dieser Algorithmus unabhängig für jeden **geometry** -Wert, der in der Instanz enthalten ist.  
   
  Dieser Algorithmus ändert keine **Point** -Instanzen.  
   
  Bei Instanzen von **LineString**, **CircularString**und **CompoundCurve** behält der Näherungsalgorithmus die ursprünglichen Anfangs- und Endpunkte der Instanz bei und fügt iterativ so lange die Punkte der ursprünglichen Instanz wieder ein, die am stärksten vom Ergebnis abweichen, bis kein weiterer Punkt stärker abweicht, als die angegebene Toleranz erlaubt.  
   
- `Reduce()`Gibt eine **LineString**, **CircularString**, oder **CompoundCurve** -Instanz für **CircularString** Instanzen.  `Reduce()`Gibt eine **CompoundCurve** oder **LineString** -Instanz für **CompoundCurve** Instanzen.  
+ `Reduce()` gibt eine **LineString**-, **CircularString**- oder **CompoundCurve**-Instanz für **CircularString**-Instanzen zurück.  `Reduce()` gibt eine **CompoundCurve**- oder **LineString**-Instanz für **CompoundCurve**-Instanzen zurück.  
   
  Auf **Polygon** -Instanzen wird der Näherungsalgorithmus unabhängig für jeden Ring angewendet. Die Methode erzeugt eine `FormatException` , wenn die zurückgegebene **Polygon** -Instanz ungültig ist. Eine ungültige **MultiPolygon** -Instanz wird beispielsweise dann erstellt, wenn `Reduce()` zur Vereinfachung jedes Rings in der Instanz angewendet wird, und sich die ergebenden Ringe überschneiden.  Bei Instanzen von **CurvePolygon** mit einem äußeren Ring und ohne innere Ringe wird von `Reduce()` gibt eine Instanz von **CurvePolygon**, **LineString**oder **Point** zurückgegeben.  Wenn **CurvePolygon** innere Ringe aufweist, wird eine Instanz von **CurvePolygon** oder eine Instanz von **MultiPoint** zurückgegeben.  
   
@@ -117,7 +117,7 @@ SELECT @g.STIsValid() AS Valid
 SELECT @g.ToString() AS Original, @h.ToString() AS Reduced;  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Erweiterte statische geometry-Methoden](../../t-sql/spatial-geometry/extended-static-geometry-methods.md)  
   
   

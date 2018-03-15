@@ -18,11 +18,11 @@ author: haoqian
 ms.author: haoqian
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bc22e1bac1e2a409061f73131cdfd203c8948fa3
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: a86f7e738b6e80ef81beda22a0c1f74349093ae7
+ms.sourcegitcommit: a8311ec5ad8313e85e6989f70c5ff9ef120821d6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="troubleshoot-scale-out"></a>Problembehandlung in Scale Out
 
@@ -42,7 +42,7 @@ Führen Sie die unten aufgeführten Schritte nacheinander aus, bis Ihr Problem g
 ### <a name="solution"></a>Lösung
 1.  Überprüfen Sie, ob Scale Out aktiviert ist.
 
-    Klicken Sie mit der rechten Maustaste in SSMS in Objekt-Explorer auf den Knoten **SSISDB**, und überprüfen Sie, ob die **Scale Out-Komponente aktiviert ist**.
+    Führen Sie im Objekt-Explorer von SSMS einen Rechtsklick auf **SSISDB** aus, und überprüfen Sie, ob das **Feature Scale Out aktiviert ist**.
 
     ![Scale Out ist aktiviert](media\isenabled.PNG)
 

@@ -1,5 +1,5 @@
 ---
-title: STMPolyFromText (Geometry-Datentyp) | Microsoft Docs
+title: STMPolyFromText (geometry-Datentyp) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stmpolyfromtext-geometry-data-type"></a>STMPolyFromText (geometry-Datentyp)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Gibt eine **Geometrie** Instanz aus einer Open Geospatial Consortium (OGC) Well-Known Text (WKT)-Darstellung durch einen beliebigen Z-(Höhe) und M (Measure)-Werte von der Instanz getragen.
+Gibt eine **geometry**-Instanz aus einer Darstellung des Typs Open Geospatial Consortium (OGC) Well-Known Text (WKT) mit von der Instanz getragenen Z (Höhe)- und M (Measure)-Werten zurück.
   
 ## <a name="syntax"></a>Syntax  
   
@@ -45,23 +45,23 @@ STMPolyFromText ( 'multipolygon_tagged_text' , SRID )
   
 ## <a name="arguments"></a>Argumente  
  *multipolygon_tagged_text*  
- Ist die WKT-Darstellung der **GeometryMultiPolygon** Instanz, die Sie zurückgeben möchten. *Multipolygon_tagged_text* ist ein **nvarchar(max)** Ausdruck.  
+ Die WKT-Darstellung der Instanz von **geometryMultiPolygon**, die zurückgegeben werden soll. *multipolygon_tagged_text* ist ein **nvarchar(max)**-Ausdruck.  
   
  *SRID*  
- Ist ein **Int** Ausdruck darstellt, die räumliche verweisen ID (SRID), der die **GeometryMultiPolygon** Instanz, die Sie zurückgeben möchten.  
+ Ein **int**-Ausdruck, der die SRID (Spatial Reference ID) der **geometryMultiPolygon**-Instanz darstellt, die zurückgegeben werden soll.  
   
 ## <a name="return-types"></a>Rückgabetypen  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Rückgabetyp: **Geometrie**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Rückgabetyp: **geometry**  
   
- CLR-Rückgabetyp: **Sql-Geometrie**  
+ CLR-Rückgabetyp: **SqlGeometry**  
   
  OGC-Typ: **MultiPolygon**  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Diese Methode löst eine **FormatException** aus, wenn die Eingabe nicht korrekt formatiert ist.  
   
 ## <a name="examples"></a>Beispiele  
- Im folgenden Beispiel wird `STMPolyFromText()` zum Erstellen einer `geometry` Instanz.  
+ Im folgenden Beispiel wird `STMPolyFromText()` verwendet, um eine `geometry`-Instanz zu erstellen.  
   
 ```  
 DECLARE @g geometry;  
@@ -69,7 +69,7 @@ SET @g = geometry::STMPolyFromText('MULTIPOLYGON (((5 5, 10 5, 10 10, 5 5)), ((1
 SELECT @g.ToString();  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Statische geometry-Methoden des OGC](../../t-sql/spatial-geometry/ogc-static-geometry-methods.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: STBoundary (Geometry-Datentyp) | Microsoft Docs
+title: STBoundary (geometry-Datentyp) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stboundary-geometry-data-type"></a>STBoundary (geometry-Datentyp)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Gibt die Begrenzung einer **Geometrie** Instanz.  
+  Gibt die Begrenzung einer **geometry**-Instanz zurück.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -44,17 +44,17 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Rückgabetypen  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Rückgabetyp: **Geometrie**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Rückgabetyp: **geometry**  
   
  CLR-Rückgabetyp: **SqlGeometry**  
   
-## <a name="remarks"></a>Hinweise  
- `STBoundary()`Gibt ein leeres **GeometryCollection** Wenn die Endpunkte für einen **LineString**, **CircularString**, oder **CompoundCurve** Instanz sind identisch.  
+## <a name="remarks"></a>Remarks  
+ `STBoundary()` gibt eine leere **GeometryCollection** zurück, wenn de Endpunkte für eine **LineString**-, **CircularString**- oder **CompoundCurve**-Instanz gleich sein.  
   
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="a-using-stboundary-on-a-linestring-instance-with-different-endpoints"></a>A. Verwenden von STBoundary() in einer LINESTRING-Instanz mit verschiedenen Endpunkten  
- Das folgende Beispiel erstellt eine `LineString``geometry` Instanz. `STBoundary()`Gibt die Begrenzung der `LineString`.  
+ Im folgenden Beispiel wird eine `LineString``geometry`-Instanz erstellt. `STBoundary()` gibt die Begrenzung zum `LineString` zurück.  
   
 ```  
 DECLARE @g geometry;  
@@ -80,7 +80,7 @@ SELECT @g.STBoundary().ToString();
  SELECT @g.STBoundary().ToString();
  ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [OGC-Methoden für geometry-Instanzen](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

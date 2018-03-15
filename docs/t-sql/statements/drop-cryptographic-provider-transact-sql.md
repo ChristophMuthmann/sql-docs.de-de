@@ -1,5 +1,5 @@
 ---
-title: DROP CRYPTOGRAPHIC PROVIDER (Transact-SQL) | Microsoft Docs
+title: DROP CRYPTOGRAPHIC PROVIDER (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -49,12 +49,12 @@ DROP CRYPTOGRAPHIC PROVIDER provider_name
  *provider_name*  
  Der Name des EKM-Anbieters (Extensible Key Management).  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Um einen Anbieter von erweiterbarer Schlüsselverwaltung (Extensible Key Management, EKM) löschen zu können, müssen alle Sitzungen, die den Anbieter verwenden, beendet werden.  
   
  Ein EKM-Anbieter kann nur gelöscht werden, wenn ihm keine Anmeldeinformationen zugeordnet sind.  
   
- Treten Schlüssel EKM-Anbieter zugeordnet werden, wenn sie die GUIDs für die Schlüssel gelöscht wird, bleiben weiterhin in gespeicherten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Wenn ein Anbieter später mit den gleichen Schlüssel-GUIDs erstellt wird, werden die Schlüssel wiederverwendet.  
+ Wenn dem EKM-Anbieter beim Löschen Schlüssel zugeordnet sind, bleiben die GUIDs für die Schlüssel weiterhin in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gespeichert. Wenn ein Anbieter später mit den gleichen Schlüssel-GUIDs erstellt wird, werden die Schlüssel wiederverwendet.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die CONTROL-Berechtigung für den symmetrischen Schlüssel.  
@@ -73,7 +73,7 @@ DROP CRYPTOGRAPHIC PROVIDER SecurityProvider;
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Erweiterbare Schlüsselverwaltung &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)   
  [CREATE CRYPTOGRAPHIC PROVIDER &#40;Transact-SQL&#41;](../../t-sql/statements/create-cryptographic-provider-transact-sql.md)   
  [ALTER CRYPTOGRAPHIC PROVIDER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-cryptographic-provider-transact-sql.md)   

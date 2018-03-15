@@ -1,5 +1,5 @@
 ---
-title: SET PARSEONLY (Transact-SQL) | Microsoft Docs
+title: SET PARSEONLY (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 11/27/2017
 ms.prod: sql-non-specified
@@ -52,7 +52,7 @@ ms.lasthandoff: 12/01/2017
 SET PARSEONLY { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Wenn SET PARSEONLY auf ON festgelegt ist, wird die Anweisung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nur analysiert. Wenn SET PARSEONLY auf OFF festgelegt ist, wird die Anweisung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kompiliert und ausgeführt.  
   
  Die Einstellung von SET PARSEONLY erfolgt zur Analysezeit und nicht zur Laufzeit.  
@@ -62,8 +62,8 @@ SET PARSEONLY { ON | OFF }
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die Mitgliedschaft in der **public** -Rolle.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SET-Anweisungen (Transact-SQL)](../../t-sql/statements/set-statements-transact-sql.md)   
- [SET OFFSETS &#40; Transact-SQL &#41;](../../t-sql/statements/set-offsets-transact-sql.md)  
+ [SET OFFSETS &#40;Transact-SQL&#41;](../../t-sql/statements/set-offsets-transact-sql.md)  
   
   

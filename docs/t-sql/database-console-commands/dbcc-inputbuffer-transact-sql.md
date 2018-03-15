@@ -1,5 +1,5 @@
 ---
-title: DBCC INPUTBUFFER (Transact-SQL) | Microsoft Docs
+title: DBCC INPUTBUFFER (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 11/14/2017
 ms.prod: sql-non-specified
@@ -40,7 +40,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="dbcc-inputbuffer-transact-sql"></a>DBCC INPUTBUFFER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Zeigt die letzte Anweisung, die von einem Client mit einer Instanz von gesendete [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+Zeigt die letzte Anweisung an, die von einem Client an eine Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gesendet wurde.
   
 ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -76,7 +76,7 @@ DBCC INPUTBUFFER gibt ein Rowset mit folgenden Spalten zurück.
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |**EventType**|**nvarchar(30)**|Der Ereignistyp. Dies kann **RPC Event** oder **Language Event**sein. Wurde kein letztes Ereignis erkannt, wird **No Event** ausgegeben.|  
-|**Parameter**|**smallint**|0 = Text<br /><br /> 1 -  *n*  = Parameter|  
+|**Parameter**|**smallint**|0 = Text<br /><br /> 1- *n* = Parameter|  
 |**EventInfo**|**nvarchar(4000)**|Wenn **EventType** gleich RPC, enthält **EventInfo** nur den Namen der Prozedur. Wenn **EventType** gleich Language, werden nur die ersten 4000 Zeichen des Ereignisses angezeigt.|  
   
 Beispielsweise gibt DBCC INPUTBUFFER das folgende Resultset zurück, wenn das letzte Ereignis im Puffer DBCC INPUTBUFFER(11) war:
@@ -92,10 +92,10 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 ```  
 
 > [!NOTE]
-> Beginnend mit [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 verwenden [Sys. dm_exec_input_buffer](../../relational-databases/system-dynamic-management-views/sys-dm-exec-input-buffer-transact-sql.md) zum Zurückgeben von Informationen zu Anweisungen, die mit einer Instanz von übermittelt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+> Verwenden Sie ab [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 [sys.dm_exec_input_buffer](../../relational-databases/system-dynamic-management-views/sys-dm-exec-input-buffer-transact-sql.md), um Informationen zu Anweisungen zurückzugeben, die an eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gesendet werden.
 
 ## <a name="permissions"></a>Berechtigungen  
-Auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] muss eine der folgenden:
+Bei [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] muss eine der folgenden Bedingungen erfüllt sein:
 -   Der Benutzer muss ein Mitglied der festen Serverrolle **sysadmin** sein.  
 -   Der Benutzer muss über die VIEW SERVER STATE-Berechtigung verfügen.  
 -   *session_id* muss mit der ID der Sitzung identisch sein, in der der Befehl ausgeführt wird. Führen Sie die folgende Abfrage aus, um die Sitzungs-ID zu bestimmen:  
@@ -104,7 +104,7 @@ Auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] muss eine der folg
 SELECT @@spid;  
 ```
   
-Auf [!INCLUDE[ssSDS](../../includes/sssds-md.md)] benötigen Premium-Ebenen die VIEW DATABASE STATE-Berechtigung in der Datenbank. Auf [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Standard und grundlegenden Organisationsebenen erfordert die [!INCLUDE[ssSDS](../../includes/sssds-md.md)] -Administratorkonto ein.
+Für [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Premium-Tarife ist die VIEW DATABASE STATE-Berechtigung in der Datenbank erforderlich. Für die [!INCLUDE[ssSDS](../../includes/sssds-md.md)]-Tarife Standard und Basic ist das [!INCLUDE[ssSDS](../../includes/sssds-md.md)]-Administratorkonto erforderlich.
   
 ## <a name="examples"></a>Beispiele  
 Im folgenden Beispiel wird `DBCC INPUTBUFFER` auf einer zweiten Verbindung ausgeführt, während eine vorherige Verbindung durch die Ausführung einer langwierigen Transaktion beansprucht wird.
@@ -125,7 +125,7 @@ COMMIT TRAN;
 DBCC INPUTBUFFER (52);  
 ```  
 
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
 [sp_who &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)  
 [sys.dm_exec_input_buffer &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-input-buffer-transact-sql.md)

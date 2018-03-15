@@ -1,5 +1,5 @@
 ---
-title: "Wählen Sie (SQL-Diagramm) | Microsoft Docs"
+title: SELECT (SQL-Graph) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 04/19/2017
 ms.prod: sql-non-specified
@@ -44,11 +44,11 @@ SELECT
 
 ## <a name="arguments"></a>Argumente  
 
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
 
 ## <a name="permissions"></a>Berechtigungen  
 
 ## <a name="examples"></a>Beispiele  
 
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 

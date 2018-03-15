@@ -1,5 +1,5 @@
 ---
-title: FILEGROUPPROPERTY (Transact-SQL) | Microsoft Docs
+title: FILEGROUPPROPERTY (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -49,13 +49,13 @@ FILEGROUPPROPERTY ( filegroup_name , property )
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *filegroup_name*  
- Ist ein Ausdruck vom Typ **Sysname** , die den Namen der Dateigruppe für die die benannte Eigenschaftsinformation zurückgegeben darstellt.  
+ *FILEGROUP_NAME*  
+ Ein Ausdruck vom **sysname**-Datentyp, der den Namen der Dateigruppe darstellt, für die die benannte Eigenschaftsinformation zurückgegeben wird.  
   
- *Eigenschaft*  
- Ist ein Ausdruck vom Typ **varchar(128)** enthält den Namen der Eigenschaft "Dateigruppe" zurückgegeben. *Eigenschaft* kann einen der folgenden Werte sein.  
+ *property*  
+ Ein Ausdruck vom Typ **varchar(128)**, der den Namen der Dateigruppeneigenschaft enthält, die zurückgegeben werden soll. *property* kann einen der folgenden Werte aufweisen.  
   
-|Wert|Description|Rückgabewert|  
+|value|Description|Zurückgegebener Wert|  
 |-----------|-----------------|--------------------|  
 |**IsReadOnly**|Dateigruppe ist schreibgeschützt.|1 = True<br /><br /> 0 = False<br /><br /> NULL = Eingabe ist nicht gültig.|  
 |**IsUserDefinedFG**|Dateigruppe ist eine benutzerdefinierte Dateigruppe.|1 = True<br /><br /> 0 = False<br /><br /> NULL = Eingabe ist nicht gültig.|  
@@ -64,8 +64,8 @@ FILEGROUPPROPERTY ( filegroup_name , property )
 ## <a name="return-types"></a>Rückgabetypen  
  **int**  
   
-## <a name="remarks"></a>Hinweise  
- *Filegroup_name* entspricht der **Namen** Spalte in der **"Sys.FileGroups"** -Katalogsicht angezeigt.  
+## <a name="remarks"></a>Remarks  
+ *filegroup_name* entspricht der **name**-Spalte der **sys.filegroups**-Katalogsicht.  
   
 ## <a name="examples"></a>Beispiele  
  In diesem Beispiel wird die Einstellung für die `IsDefault`-Eigenschaft für die primäre Dateigruppe in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Datenbank zurückgegeben.  
@@ -86,11 +86,11 @@ Default Filegroup
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Filegroup_id &#40; Transact-SQL &#41;](../../t-sql/functions/filegroup-id-transact-sql.md)   
- [Filegroup_name &#40; Transact-SQL &#41;](../../t-sql/functions/filegroup-name-transact-sql.md)   
- [Metadatenfunktionen &#40; Transact-SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [FILEGROUP_ID &#40;Transact-SQL&#41;](../../t-sql/functions/filegroup-id-transact-sql.md)   
+ [FILEGROUP_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/filegroup-name-transact-sql.md)   
+ [Metadata Functions &#40;Transact-SQL&#41; (Metadatenfunktionen &#40;Transact-SQL&#41;)](../../t-sql/functions/metadata-functions-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- ["Sys.FileGroups" &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)  
+ [sys.filegroups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)  
   
   

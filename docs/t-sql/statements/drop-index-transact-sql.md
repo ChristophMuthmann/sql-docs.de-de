@@ -1,5 +1,5 @@
 ---
-title: DROP INDEX (Transact-SQL) | Microsoft Docs
+title: DROP INDEX (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 05/11/2017
 ms.prod: sql-non-specified
@@ -50,10 +50,10 @@ ms.lasthandoff: 11/21/2017
 
   Entfernt einen oder mehrere relationale Indizes, räumliche Indizes, gefilterte Indizes oder XML-Indizes aus der aktuellen Datenbank. Sie können einen gruppierten Index löschen und die daraus resultierende Tabelle in einer einzigen Transaktion in eine andere Dateigruppe oder in ein anderes Partitionsschema verschieben, indem Sie die Option MOVE TO angeben.  
   
- Die DROP INDEX-Anweisung gilt nicht für Indizes, die durch Definieren der Einschränkung PRIMARY KEY oder UNIQUE erstellt wurden. Um die Einschränkung und den entsprechenden Index entfernen möchten, verwenden Sie [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) mit der DROP CONSTRAINT-Klausel.  
+ Die DROP INDEX-Anweisung gilt nicht für Indizes, die durch Definieren der Einschränkung PRIMARY KEY oder UNIQUE erstellt wurden. Verwenden Sie [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) mit der DROP CONSTRAINT-Klausel, wenn Sie die Einschränkung und den entsprechenden Index entfernen möchten.  
   
 > [!IMPORTANT]  
->  Die Syntax, die in definierten `<drop_backward_compatible_index>` wird in einer zukünftigen Version entfernt [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Vermeiden Sie die Verwendung dieser Syntax bei neuen Entwicklungen, und planen Sie die Änderung von Anwendungen, in denen diese Funktion zurzeit verwendet wird. Verwenden Sie stattdessen die unter `<drop_relational_or_xml_index>` angegebene Syntax. XML-Indizes können mit abwärtskompatibler Syntax nicht gelöscht werden.  
+>  Die in `<drop_backward_compatible_index>` definierte Syntax wird in einer zukünftigen Version von [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entfernt. Vermeiden Sie die Verwendung dieser Syntax bei neuen Entwicklungen, und planen Sie die Änderung von Anwendungen, in denen diese Funktion zurzeit verwendet wird. Verwenden Sie stattdessen die unter `<drop_relational_or_xml_index>` angegebene Syntax. XML-Indizes können mit abwärtskompatibler Syntax nicht gelöscht werden.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -119,10 +119,10 @@ DROP INDEX index_name ON [ database_name . [schema_name ] . | schema_name . ] ta
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *IF VORHANDEN IST*  
+ *IF EXISTS*  
  **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis zur [aktuellen Version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   
- Bedingt löscht den Index nur dann, wenn sie bereits vorhanden ist.  
+ Löscht den Standardindex nur, wenn dieser bereits vorhanden ist.  
   
  *index_name*  
  Der Name des zu löschenden Index.  
@@ -136,24 +136,24 @@ DROP INDEX index_name ON [ database_name . [schema_name ] . | schema_name . ] ta
  *table_or_view_name*  
  Der Name der Tabelle oder Sicht, die dem Index zugeordnet ist. Räumliche Indizes werden nur für Tabellen unterstützt.  
   
- Um einen Bericht über die Indizes eines Objekts anzuzeigen, verwenden die [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) -Katalogsicht angezeigt.  
+ Verwenden Sie zum Anzeigen eines Berichts über die Indizes zu einem Objekt die [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)-Katalogsicht.  
   
  Die Windows Azure SQL-Datenbank unterstützt das aus drei Teilen bestehende Format database_name.[schema_name].object_name, wenn database_name die aktuelle Datenbank bzw. database_name tempdb ist und object_name mit # beginnt.  
   
- \<Drop_clustered_index_option >  
- **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+ \<drop_clustered_index_option>  
+ **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  Steuert die Optionen für den gruppierten Index. Diese Optionen können nicht mit anderen Indextypen verwendet werden.  
   
- MAXDOP = *Max_degree_of_parallelism*  
- **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] (Leistungsstufen P2 und P3 nur).  
+ MAXDOP = *max_degree_of_parallelism*  
+ **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] (nur Leistungsstufen P2 und P3).  
   
- Überschreibt die **Max. Grad an Parallelität** Konfigurationsoption für die Dauer des Indexvorgangs. Weitere Informationen finden Sie unter [Konfigurieren der Serverkonfigurationsoption Max. Grad an Parallelität](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). Sie können mit MAXDOP die Anzahl der Prozessoren begrenzen, die bei der Ausführung paralleler Pläne verwendet werden. Maximal sind 64 Prozessoren zulässig.  
+ Überschreibt die Konfigurationsoption **max_degree_of_parallelism** für die Dauer des Indexvorgangs. Weitere Informationen finden Sie unter [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). Sie können mit MAXDOP die Anzahl der Prozessoren begrenzen, die bei der Ausführung paralleler Pläne verwendet werden. Maximal sind 64 Prozessoren zulässig.  
   
 > [!IMPORTANT]  
 >  MAXDOP ist für räumliche Indizes oder XML-Indizes nicht zulässig.  
   
- *Max_degree_of_parallelism* sind möglich:  
+ *max_degree_of_parallelism* kann folgende Werte haben:  
   
  1  
  Unterdrückt das Generieren paralleler Pläne.  
@@ -170,7 +170,7 @@ DROP INDEX index_name ON [ database_name . [schema_name ] . | schema_name . ] ta
 >  Parallele Indexvorgänge sind nicht in jeder Edition von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verfügbar. Eine Liste der Funktionen, die von den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Editionen unterstützt werden, finden Sie unter [Editionen und unterstütze Funktionen für den SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
  ONLINE = ON | **OFF**  
- **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Gibt an, ob die zugrunde liegenden Tabellen und zugeordneten Indizes für Abfragen und Datenänderungen während des Indexvorgangs verfügbar sind. Der Standardwert ist OFF.  
   
@@ -185,17 +185,17 @@ DROP INDEX index_name ON [ database_name . [schema_name ] . | schema_name . ] ta
 > [!NOTE]  
 >  Onlineindexvorgänge sind nicht in jeder Edition von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verfügbar. Eine Liste der Funktionen, die von den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Editionen unterstützt werden, finden Sie unter [Editionen und unterstütze Funktionen für den SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
- MOVE TO { *Partition_scheme_name***(***Column_name***)** | *Filegroup_name*  |  **"**Standard**"**  
- **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]unterstützt "Default" als Dateigruppenname.  
+ MOVE TO { *partition_scheme_name***(***column_name***)** | *filegroup_name* | **"**default**"**  
+ **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] unterstützt „default“ als Dateigruppenname.  
   
  Gibt einen Speicherort an, an den die Datenzeilen verschoben werden, die sich zurzeit auf der Blattebene des gruppierten Index befinden. Die Daten werden in einen Heap an den neuen Speicherort verschoben. Als neuen Speicherort können Sie entweder ein Partitionsschema oder eine Dateigruppe angeben, das Partitionsschema oder die Dateigruppe muss jedoch bereits vorhanden sein. MOVE TO ist für indizierte Sichten oder nicht gruppierte Indizes nicht gültig. Wird kein Partitionsschema oder keine Dateigruppe angegeben, dann befindet sich die daraus resultierende Tabelle entsprechend der Definition für den gruppierten Index im Partitionsschema oder in der Dateigruppe.  
   
- Wird ein gruppierter Index mit MOVE TO gelöscht, werden alle nicht gruppierten Indizes für die Basistabelle neu erstellt. Sie verbleiben jedoch in ihren ursprünglichen Dateigruppen oder Partitionsschemas. Wenn die Basistabelle in eine andere Dateigruppe oder ein anderes Partitionsschema verschoben wird, werden die nicht gruppierten Indizes nicht verschoben, um dem neuen Speicherort der Basistabelle (Heap) zu entsprechen. Deshalb ist es möglich, dass die nicht gruppierten Indizes nicht mehr mit dem Heap ausgerichtet sind, selbst wenn sie vorher mit dem gruppierten Index ausgerichtet wurden. Weitere Informationen zur partitionierten indexausrichtung finden Sie unter [partitionierte Tabellen und Indizes](../../relational-databases/partitions/partitioned-tables-and-indexes.md).  
+ Wird ein gruppierter Index mit MOVE TO gelöscht, werden alle nicht gruppierten Indizes für die Basistabelle neu erstellt. Sie verbleiben jedoch in ihren ursprünglichen Dateigruppen oder Partitionsschemas. Wenn die Basistabelle in eine andere Dateigruppe oder ein anderes Partitionsschema verschoben wird, werden die nicht gruppierten Indizes nicht verschoben, um dem neuen Speicherort der Basistabelle (Heap) zu entsprechen. Deshalb ist es möglich, dass die nicht gruppierten Indizes nicht mehr mit dem Heap ausgerichtet sind, selbst wenn sie vorher mit dem gruppierten Index ausgerichtet wurden. Weitere Informationen zu Ausrichtung von partitionierten Indizes finden Sie unter [Partitionierte Tabellen und Indizes](../../relational-databases/partitions/partitioned-tables-and-indexes.md).  
   
- *Partition_scheme_name* **(** *Column_name* **)**  
- **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+ *partition_scheme_name* **(** *column_name* **)**  
+ **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
- Gibt ein Partitionsschema als Speicherort für die resultierende Tabelle an. Das Partitionsschema muss bereits erstellt wurden durch Ausführen [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md) oder [ALTER PARTITION SCHEME](../../t-sql/statements/alter-partition-scheme-transact-sql.md). Wird kein Speicherort angegeben und ist die Tabelle partitioniert, dann wird die Tabelle in das Partitionsschema des vorhandenen gruppierten Index aufgenommen.  
+ Gibt ein Partitionsschema als Speicherort für die resultierende Tabelle an. Das Partitionsschema muss bereits durch Ausführen von [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md) oder [ALTER PARTITION SCHEME](../../t-sql/statements/alter-partition-scheme-transact-sql.md) erstellt worden sein. Wird kein Speicherort angegeben und ist die Tabelle partitioniert, dann wird die Tabelle in das Partitionsschema des vorhandenen gruppierten Index aufgenommen.  
   
  Für den Spaltennamen im Schema gibt es keine Beschränkung auf die Spalten in der Indexdefinition. Jede beliebige Spalte in der Basistabelle kann angegeben werden.  
   
@@ -204,56 +204,56 @@ DROP INDEX index_name ON [ database_name . [schema_name ] . | schema_name . ] ta
   
  Gibt eine Dateigruppe als Speicherort für die resultierende Tabelle an. Wird kein Speicherort angegeben und ist die Tabelle nicht partitioniert, dann wird die resultierende Tabelle in die Dateigruppe aufgenommen, in der sich der gruppierte Index befindet. Die Dateigruppe muss bereits vorhanden sein.  
   
- **"**Standard**"**  
+ **"**default**"**  
  Gibt den Standardspeicherort für die resultierende Tabelle an.  
   
 > [!NOTE]  
->  In diesem Zusammenhang ist DEFAULT kein Schlüsselwort. Es ist ein Bezeichner für die Standarddateigruppe und muss begrenzt sein, wie in MOVE TO **"**Standard**"** oder MOVE TO **[**Standard**]**. Wenn **"**Standard**"** angegeben wird, muss die QUOTED_IDENTIFIER-Option ON festgelegt, für die aktuelle Sitzung. Dies ist die Standardeinstellung. Weitere Informationen finden Sie unter [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
+>  In diesem Zusammenhang ist DEFAULT kein Schlüsselwort. Es ist ein Bezeichner für die Standarddateigruppe und muss eingeschränkt werden, wie in MOVE TO **"**default**"** oder MOVE TO **[**default**]**. Wenn **"**default**"** angegeben ist, muss die QUOTED_IDENTIFIER-Option in der aktuellen Sitzung auf ON festgelegt sein. Dies ist die Standardeinstellung. Weitere Informationen finden Sie unter [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
   
- FILESTREAM_ON { *Partition_scheme_name* | *Filestream_filegroup_name* | **"**Standard**"** }  
+ FILESTREAM_ON { *partition_scheme_name* | *filestream_filegroup_name* | **"**default**"** }  
  **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Gibt einen Speicherort an, an den die FILESTREAM-Tabelle verschoben wird, die sich zurzeit auf der Blattebene des gruppierten Index befindet. Die Daten werden in einen Heap an den neuen Speicherort verschoben. Als neuen Speicherort können Sie entweder ein Partitionsschema oder eine Dateigruppe angeben, das Partitionsschema oder die Dateigruppe muss jedoch bereits vorhanden sein. FILESTREAM ON ist für indizierte Sichten oder nicht gruppierte Indizes unzulässig. Wird kein Partitionsschema angegeben, werden die Daten in demselben Partitionsschema platziert, das für den gruppierten Index definiert war.  
   
  *partition_scheme_name*  
- Gibt ein Partitionsschema für FILESTREAM-Daten an. Das Partitionsschema muss bereits erstellt wurden durch Ausführen [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md) oder [ALTER PARTITION SCHEME](../../t-sql/statements/alter-partition-scheme-transact-sql.md). Wird kein Speicherort angegeben und ist die Tabelle partitioniert, dann wird die Tabelle in das Partitionsschema des vorhandenen gruppierten Index aufgenommen.  
+ Gibt ein Partitionsschema für FILESTREAM-Daten an. Das Partitionsschema muss bereits durch Ausführen von [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md) oder [ALTER PARTITION SCHEME](../../t-sql/statements/alter-partition-scheme-transact-sql.md) erstellt worden sein. Wird kein Speicherort angegeben und ist die Tabelle partitioniert, dann wird die Tabelle in das Partitionsschema des vorhandenen gruppierten Index aufgenommen.  
   
  Wenn Sie ein Partitionsschema für MOVE TO angeben, müssen Sie dasselbe Partitionsschema für FILESTREAM ON verwenden.  
   
  *filestream_filegroup_name*  
  Gibt eine FILESTREAM-Dateigruppe für FILESTREAM-Daten an. Wenn kein Speicherort angegeben und die Tabelle nicht partitioniert ist, werden die Daten in die FILESTREAM-Standarddateigruppe eingefügt.  
   
- **"**Standard**"**  
+ **"**default**"**  
  Gibt den Standardspeicherort für FILESTREAM-Daten an.  
   
 > [!NOTE]  
->  In diesem Zusammenhang ist DEFAULT kein Schlüsselwort. Es ist ein Bezeichner für die Standarddateigruppe und muss begrenzt sein, wie in MOVE TO **"**Standard**"** oder MOVE TO **[**Standard**]**. Wenn "default" angegeben wird, muss die Option QUOTED_IDENTIFIER für die aktuelle Sitzung auf ON festgelegt sein. Dies ist die Standardeinstellung. Weitere Informationen finden Sie unter [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
+>  In diesem Zusammenhang ist DEFAULT kein Schlüsselwort. Es ist ein Bezeichner für die Standarddateigruppe und muss eingeschränkt werden, wie in MOVE TO **"**default**"** oder MOVE TO **[**default**]**. Wenn "default" angegeben wird, muss die Option QUOTED_IDENTIFIER für die aktuelle Sitzung auf ON festgelegt sein. Dies ist die Standardeinstellung. Weitere Informationen finden Sie unter [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Wenn ein nicht gruppierter Index gelöscht wird, wird die Indexdefinition aus den Metadaten entfernt, und die Indexdatenseiten (in der B-Struktur) werden aus den Datenbankdateien entfernt. Wenn ein gruppierter Index gelöscht wird, wird die Indexdefinition aus den Metadaten entfernt und die auf der Blattebene des gruppierten Indexes gespeicherten Datenzeilen werden in der daraus resultierenden, nicht sortierten Tabelle (Heap) gespeichert. Der gesamte Speicherplatz, der vorher für den Index benötigt wurde, wird wieder freigegeben. Dieser Speicherplatz kann dann für beliebige Datenbankobjekte verwendet werden.  
   
  Ein Index kann nicht gelöscht werden, wenn die Dateigruppe, in der sich der Index befindet, offline oder schreibgeschützt ist.  
   
  Wenn der gruppierte Index einer indizierten Sicht gelöscht wird, dann werden alle nicht gruppierten Indizes und automatisch erstellten Statistiken dieser Sicht automatisch gelöscht. Manuell erstellte Statistiken werden nicht gelöscht.  
   
- Die Syntax*Table_or_view_name***.** *Index_name* wird aus Gründen der Abwärtskompatibilität beibehalten. XML-Indizes oder räumliche Indizes können mit abwärtskompatibler Syntax nicht gelöscht werden.  
+ Die Syntax *table_or_view_name***.***index_name* wird aus Gründen der Abwärtskompatibilität beibehalten. XML-Indizes oder räumliche Indizes können mit abwärtskompatibler Syntax nicht gelöscht werden.  
   
  Werden Indizes mit 128 oder mehr Blöcken gelöscht, verzögert das [!INCLUDE[ssDE](../../includes/ssde-md.md)] die Aufhebung der Seitenzuordnungen und der dazugehörigen Sperren, bis ein Commit für die Transaktion ausgeführt wurde.  
   
- Gelegentlich werden Indizes gelöscht und neu erstellt, um den Index neu zu organisieren oder neu zu erstellen, beispielsweise um einen neuen Füllfaktorwert anzuwenden oder um Daten nach dem Massenladen neu zu organisieren. Hierzu verwenden [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md)ist jedoch effizienter, insbesondere bei gruppierten Indizes. ALTER INDEX REBUILD verwendet Optimierungen, um den Aufwand der Neuerstellung der nicht gruppierten Indizes zu vermeiden.  
+ Gelegentlich werden Indizes gelöscht und neu erstellt, um den Index neu zu organisieren oder neu zu erstellen, beispielsweise um einen neuen Füllfaktorwert anzuwenden oder um Daten nach dem Massenladen neu zu organisieren. Für diesen Vorgang ist die Verwendung von [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) effizienter, insbesondere bei gruppierten Indizes. ALTER INDEX REBUILD verwendet Optimierungen, um den Aufwand der Neuerstellung der nicht gruppierten Indizes zu vermeiden.  
   
 ## <a name="using-options-with-drop-index"></a>Verwenden von Optionen mit DROP INDEX  
  Sie können folgende Indexoptionen festlegen, wenn Sie einen gruppierten Index löschen: MAXDOP, ONLINE und MOVE TO.  
   
  Verwenden Sie MOVE TO, um den gruppierten Index zu löschen und um die daraus resultierende Tabelle in einer einzigen Transaktion in eine andere Dateigruppe oder in ein anderes Partitionsschema zu verschieben.  
   
- Wenn Sie ONLINE = ON angeben, werden Abfragen und Änderungen der zugrunde liegenden Daten und dazugehörigen nicht gruppierten Indizes nicht von den DROP INDEX-Transaktion blockiert. Online kann jeweils nur ein gruppierter Index gelöscht werden. Eine vollständige Beschreibung der Option "ONLINE", finden Sie unter [CREATE INDEX &#40; Transact-SQL &#41; ](../../t-sql/statements/create-index-transact-sql.md).  
+ Wenn Sie ONLINE = ON angeben, werden Abfragen und Änderungen der zugrunde liegenden Daten und dazugehörigen nicht gruppierten Indizes nicht von den DROP INDEX-Transaktion blockiert. Online kann jeweils nur ein gruppierter Index gelöscht werden. Eine vollständige Beschreibung der Option ONLINE finden Sie unter [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).  
   
- Sie können einen gruppierten Index online löschen, wenn der Index für eine Sicht deaktiviert ist oder enthält **Text**, **Ntext**, **Image**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, oder **Xml** Spalten in den Datenzeilen auf Blattebene.  
+ Sie können einen gruppierten Index nicht online löschen, wenn der Index für eine Sicht deaktiviert ist oder in den Datenzeilen auf Blattebene die Spalten **text**, **ntext**, **image**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)** oder **xml** enthält.  
   
  Für das Verwenden der Optionen ONLINE = ON und MOVE TO wird zusätzlicher temporärer Speicherplatz benötigt.  
   
- Nachdem ein Index gelöscht wird, wird der daraus resultierende Heap in der **sys.indexes** -Katalogsicht mit NULL-Wert in der **Namen** Spalte. Zum Anzeigen des Tabellennamens verknüpfen **sys.indexes** mit **sys.tables** auf **Object_id**. Unter Beispiel D finden Sie eine Beispielabfrage.  
+ Wenn ein Index gelöscht wird, wird der daraus resultierende Heap in der Katalogsicht **sys.indexes** mit NULL in der Spalte **name** angezeigt. Zum Anzeigen des Tabellennamens verknüpfen Sie **sys.indexes** mit **sys.tables** für **object_id**. Unter Beispiel D finden Sie eine Beispielabfrage.  
   
  Auf Multiprozessorcomputern, auf denen [!INCLUDE[ssEnterpriseEd2005](../../includes/ssenterpriseed2005-md.md)] oder höher ausgeführt wird, kann DROP INDEX mehr Prozessoren zum Ausführen von Scan- und Sortierungsvorgängen verwenden, die dem Löschen des gruppierten Index zugeordnet sind. Dies geschieht in gleicher Weise wie für andere Abfragen. Sie können die Anzahl der Prozessoren, die zur Ausführung der DROP INDEX-Anweisung verwendet werden, durch Angeben der MAXDOP-Indexoption manuell konfigurieren. Weitere Informationen finden Sie unter [Konfigurieren von Parallelindexvorgängen](../../relational-databases/indexes/configure-parallel-index-operations.md).  
   
@@ -263,15 +263,15 @@ DROP INDEX index_name ON [ database_name . [schema_name ] . | schema_name . ] ta
   
 2.  Ändern Sie die Tabelle mit der Option ALTER TABLE ... REBUILD ..., die die Komprimierungsoption angibt.  
   
-Wenn ein gruppierter Index OFFLINE gelöscht wird, werden nur die oberen Ebenen des gruppierten Index entfernt. Daher wird dieser Vorgang ziemlich schnell ausgeführt. Wenn ein gruppierter Index ONLINE gelöscht wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erstellt den Heap zwei Mal neu, Mal für Schritt 1 und einmal für Schritt 2. Weitere Informationen zur datenkomprimierung finden Sie unter [Datenkomprimierung](../../relational-databases/data-compression/data-compression.md).  
+Wenn ein gruppierter Index OFFLINE gelöscht wird, werden nur die oberen Ebenen des gruppierten Index entfernt. Daher wird dieser Vorgang ziemlich schnell ausgeführt. Wenn ein gruppierter Index ONLINE gelöscht wird, erstellt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] den Heap zwei Mal neu, ein Mal für Schritt 1 und ein Mal für Schritt 2. Weitere Informationen zur Datenkomprimierung finden Sie unter [Datenkomprimierung](../../relational-databases/data-compression/data-compression.md).  
   
 ## <a name="xml-indexes"></a>XML-Indizes  
- Optionen können nicht angegeben werden, wenn Sie AnXML Index löschen. Darüber hinaus können keine der *Table_or_view_name***.** *Index_name* Syntax. Wird ein primärer XML-Index gelöscht, werden alle dazugehörigen sekundären XML-Indizes automatisch gelöscht. Weitere Informationen finden Sie unter [XML-Indizes &#40;SQL Server&#41;](../../relational-databases/xml/xml-indexes-sql-server.md).  
+ Optionen können nicht angegeben werden, wenn Sie einen XML-Index löschen. Darüber hinaus können Sie die Syntax *table_or_view_name***.***index_name* nicht verwenden. Wird ein primärer XML-Index gelöscht, werden alle dazugehörigen sekundären XML-Indizes automatisch gelöscht. Weitere Informationen finden Sie unter [XML-Indizes &#40;SQL Server&#41;](../../relational-databases/xml/xml-indexes-sql-server.md).  
   
 ## <a name="spatial-indexes"></a>Räumliche Indizes  
- Räumliche Indizes werden nur für Tabellen unterstützt. Wenn Sie einen räumlichen Index löschen, Sie können nicht angeben von Optionen oder **.** *Index_name*. Die korrekte Syntax lautet wie folgt:  
+ Räumliche Indizes werden nur für Tabellen unterstützt. Wenn Sie einen räumlichen Index löschen, können Sie keine Optionen angeben oder **.***index_name* verwenden. Die korrekte Syntax lautet wie folgt:  
   
- DROP INDEX *Spatial_index_name* ON *Spatial_table_name*;  
+ DROP INDEX *spatial_index_name* ON *spatial_table_name*;  
   
  Weitere Informationen zu räumlichen Indizes finden Sie unter [Übersicht über räumliche Indizes](../../relational-databases/spatial/spatial-indexes-overview.md).  
   
@@ -281,7 +281,7 @@ Wenn ein gruppierter Index OFFLINE gelöscht wird, werden nur die oberen Ebenen 
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="a-dropping-an-index"></a>A. Löschen eines Indexes  
- Das folgende Beispiel löscht den Index `IX_ProductVendor_VendorID` auf die `ProductVendor` -Tabelle in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] Datenbank.  
+ Im folgenden Beispiel wird der `IX_ProductVendor_VendorID`-Index für die `ProductVendor`-Tabelle in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Datenbank gelöscht.  
   
 ```  
 DROP INDEX IX_ProductVendor_BusinessEntityID   
@@ -300,9 +300,9 @@ GO
 ```  
   
 ### <a name="c-dropping-a-clustered-index-online-and-setting-the-maxdop-option"></a>C. Onlinelöschen eines gruppierten Indexes und Festlegen der MAXDOP-Option  
- Im folgenden Beispiel wird ein gruppierter Index gelöscht, wobei für die Option `ONLINE` die Einstellung `ON` und für `MAXDOP` die Einstellung `8` festgelegt ist. Da die Option MOVE TO nicht angegeben wurde, wird die daraus resultierende Tabelle in der gleichen Dateigruppe wie der Index gespeichert. In diesem Beispiel verwendet die [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] Datenbank  
+ Im folgenden Beispiel wird ein gruppierter Index gelöscht, wobei für die Option `ONLINE` die Einstellung `ON` und für `MAXDOP` die Einstellung `8` festgelegt ist. Da die Option MOVE TO nicht angegeben wurde, wird die daraus resultierende Tabelle in der gleichen Dateigruppe wie der Index gespeichert. In diesem Beispiel wird die [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Datenbank verwendet.  
   
-**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
 ```  
 DROP INDEX AK_BillOfMaterials_ProductAssemblyID_ComponentID_StartDate   
@@ -311,7 +311,7 @@ GO
 ```  
   
 ### <a name="d-dropping-a-clustered-index-online-and-moving-the-table-to-a-new-filegroup"></a>D. Onlinelöschen eines gruppierten Indexes und Verschieben der Tabelle in eine neue Dateigruppe  
- Im folgenden Beispiel wird ein gruppierter Index online gelöscht, und die daraus resultierende Tabelle (Heap) wird in die Dateigruppe `NewGroup` verschoben, wofür die `MOVE TO` -Klausel verwendet wird. Die Katalogsichten `sys.indexes`, `sys.tables`und `sys.filegroups` werden abgefragt, um die Platzierung von Index und Tabelle in den Dateigruppen vor und nach der Verschiebung zu prüfen. (Beginnend mit [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] können Sie die DROP INDEX IF EXISTS-Syntax verwenden.)  
+ Im folgenden Beispiel wird ein gruppierter Index online gelöscht, und die daraus resultierende Tabelle (Heap) wird in die Dateigruppe `NewGroup` verschoben, wofür die `MOVE TO` -Klausel verwendet wird. Die Katalogsichten `sys.indexes`, `sys.tables`und `sys.filegroups` werden abgefragt, um die Platzierung von Index und Tabelle in den Dateigruppen vor und nach der Verschiebung zu prüfen. (Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] können Sie die Syntax DROP INDEX IF EXISTS verwenden.)  
   
 **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
@@ -397,19 +397,19 @@ GO
 ```  
 
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)   
- [ALTER PARTITION SCHEME &#40; Transact-SQL &#41;](../../t-sql/statements/alter-partition-scheme-transact-sql.md)   
+ [ALTER PARTITION SCHEME &#40;Transact-SQL&#41;](../../t-sql/statements/alter-partition-scheme-transact-sql.md)   
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
  [CREATE PARTITION SCHEME &#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-scheme-transact-sql.md)   
- [Erstellen Sie SPATIAL INDEX &#40; Transact-SQL &#41;](../../t-sql/statements/create-spatial-index-transact-sql.md)   
- [Erstellen von XML-INDEX &#40; Transact-SQL &#41;](../../t-sql/statements/create-xml-index-transact-sql.md)   
+ [CREATE SPATIAL INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-spatial-index-transact-sql.md)   
+ [CREATE XML INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-xml-index-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
  [sys.tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md)   
- ["Sys.FileGroups" &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
- [Sp_spaceused &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)  
+ [sys.filegroups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
+ [sp_spaceused &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)  
   
   
 

@@ -1,5 +1,5 @@
 ---
-title: DROP SEARCH PROPERTY LIST (Transact-SQL) | Microsoft Docs
+title: DROP SEARCH PROPERTY LIST (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -49,26 +49,26 @@ DROP SEARCH PROPERTY LIST property_list_name
   
 ## <a name="arguments"></a>Argumente  
  *property_list_name*  
- Der Name der Sucheigenschaftenliste, die gelöscht werden soll. *Property_list_name* ist ein Bezeichner.  
+ Der Name der Sucheigenschaftenliste, die gelöscht werden soll. *property_list_name* ist ein Bezeichner.  
   
- Um die Namen der vorhandenen Eigenschaftenlisten anzuzeigen, verwenden Sie die [Sys. registered_search_property_lists](../../relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql.md) -Katalogsicht wie folgt:  
+ Mit der [sys.registered_search_property_lists](../../relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql.md)-Katalogsicht können Sie die Namen der vorhandenen Eigenschaftenlisten wie folgt aufrufen:  
   
 ```  
 SELECT name FROM sys.registered_search_property_lists;  
 ```  
   
-## <a name="remarks"></a>Hinweise  
- Sie können keine Sucheigenschaftenliste aus einer Datenbank löschen, während diese einem Volltextindex zugeordnet ist. Um einer sucheigenschaftenliste aus einem angegebenen Volltextindex zu löschen, verwenden Sie die [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md) -Anweisung, und geben Sie die SET SEARCH PROPERTY LIST-Klausel mit Off oder der Namen einer anderen sucheigenschaftenliste.  
+## <a name="remarks"></a>Remarks  
+ Sie können keine Sucheigenschaftenliste aus einer Datenbank löschen, während diese einem Volltextindex zugeordnet ist. Um eine Sucheigenschaftenliste aus einem angegebenen Volltextindex zu löschen, geben Sie die [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md)-Anweisung und die SET SEARCH PROPERTY LIST-Klausel mit OFF oder dem Namen einer anderen Sucheigenschaftenliste an.  
   
- **Zum Anzeigen der Eigenschaft enthält, auf einer Serverinstanz**  
+ **Anzeigen der Eigenschaftenlisten auf einer Serverinstanz**  
   
 -   [sys.registered_search_property_lists &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql.md)  
   
- **Wenn Sie die Eigenschaft anzeigen Eigenschaftenlisten Volltextindizes zugeordneten**  
+ **Anzeigen der den Volltextindizes zugeordneten Eigenschaftenlisten**  
   
 -   [sys.fulltext_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md)  
   
- **So entfernen Sie eine Eigenschaftenliste aus einem Volltextindex**  
+ **Entfernen einer Eigenschaftenliste aus einem Volltextindex**  
   
 -   [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-index-transact-sql.md)  
   
@@ -76,7 +76,7 @@ SELECT name FROM sys.registered_search_property_lists;
  Erfordert CONTROL-Berechtigungen für die Sucheigenschaftenliste.  
   
 > [!NOTE]  
->  Der Besitzer der Eigenschaftenliste kann CONTROL-Berechtigungen für die Liste erteilen. Besitzer der Sucheigenschaftenliste ist standardmäßig der Benutzer, der sie erstellt. Der Besitzer kann geändert werden, indem die [ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisung.  
+>  Der Besitzer der Eigenschaftenliste kann CONTROL-Berechtigungen für die Liste erteilen. Besitzer der Sucheigenschaftenliste ist standardmäßig der Benutzer, der sie erstellt. Der Besitzer kann mithilfe der [ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung geändert werden.  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird die `JobCandidateProperties`-Eigenschaftenliste aus der `AdventureWorks2012`-Datenbank gelöscht.  
@@ -86,12 +86,12 @@ DROP SEARCH PROPERTY LIST JobCandidateProperties;
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [ALTER SEARCH PROPERTY LIST &#40; Transact-SQL &#41;](../../t-sql/statements/alter-search-property-list-transact-sql.md)   
- [Erstellen Sie die SEARCH PROPERTY LIST &#40; Transact-SQL &#41;](../../t-sql/statements/create-search-property-list-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [ALTER SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](../../t-sql/statements/alter-search-property-list-transact-sql.md)   
+ [CREATE SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](../../t-sql/statements/create-search-property-list-transact-sql.md)   
  [Suchen von Dokumenteigenschaften mithilfe von Sucheigenschaftenlisten](../../relational-databases/search/search-document-properties-with-search-property-lists.md)   
- [Sys. registered_search_properties &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-registered-search-properties-transact-sql.md)   
- [Sys. registered_search_property_lists &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql.md)   
+ [sys.registered_search_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-registered-search-properties-transact-sql.md)   
+ [sys.registered_search_property_lists &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql.md)   
  [sys.registered_search_property_lists &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql.md)  
   
   

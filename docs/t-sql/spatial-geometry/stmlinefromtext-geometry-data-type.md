@@ -1,5 +1,5 @@
 ---
-title: STMLineFromText (Geometry-Datentyp) | Microsoft Docs
+title: STMLineFromText (geometry-Datentyp) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -45,23 +45,23 @@ STMLineFromText ( 'multilinestring_tagged_text' , SRID )
   
 ## <a name="arguments"></a>Argumente  
  *multilinestring_tagged_text*  
- Ist die WKT-Darstellung der **GeometryMultiLineString** Instanz, die Sie zurückgeben möchten. *Multilinestring_tagged_text* ist ein **nvarchar(max)** Ausdruck.  
+ Die WKT-Darstellung der **geometryMultiLineString**-Instanz, die zurückgegeben werden soll. *multilinestring_tagged_text* ist ein **nvarchar(max)**-Ausdruck.  
   
  *SRID*  
- Ist ein **Int** Ausdruck darstellt, die räumliche verweisen ID (SRID), der die **GeometryMultiLineString** Instanz, die Sie zurückgeben möchten.  
+ Ein **int**-Ausdruck, der die SRID (Spatial Reference ID) der **geometryMultiLineString**-Instanz darstellt, die Sie zurückgeben möchten.  
   
 ## <a name="return-types"></a>Rückgabetypen  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Rückgabetyp: **Geometrie**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Rückgabetyp: **geometry**  
   
  CLR-Rückgabetyp: **SqlGeometry**  
   
  OGC-Typ: **MultiLineString**  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Diese Methode löst eine **FormatException** aus, wenn die Eingabe nicht korrekt formatiert ist.  
   
 ## <a name="examples"></a>Beispiele  
- Im folgenden Beispiel wird `STMLineFromText()` zum Erstellen einer `geometry` Instanz.  
+ Im folgenden Beispiel wird `STMLineFromText()` verwendet, um eine `geometry`-Instanz zu erstellen.  
   
 ```  
 DECLARE @g geometry;  
@@ -70,7 +70,7 @@ SET @g = geometry::STMLineFromText('MULTILINESTRING ((100 100, 200 200), (3 4, 7
   
  `SELECT @g.ToString();`  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Statische geometry-Methoden des OGC](../../t-sql/spatial-geometry/ogc-static-geometry-methods.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Die NumRings (Geography-Datentyp) | Microsoft Docs
+title: NumRings (geography-Datentyp) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="numrings-geography-data-type"></a>NumRings (geography-Datentyp)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Gibt die Anzahl der Ringe in einer **Polygon** -Instanz zurück. In der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Geography** -Typ werden externe und interne Ringe nicht voneinander unterschieden, da jeder Ring ausgeführt werden kann, um die externe Ring betrachtet werden.  
+  Gibt die Anzahl der Ringe in einer **Polygon** -Instanz zurück. Bei dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **geography**-Typ werden externe und interne Ringe nicht voneinander unterschieden, da jeder Ring als der externe Ring betrachtet werden kann.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -44,11 +44,11 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-type"></a>Rückgabetyp  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Rückgabetyp: **Int**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Rückgabetyp: **int**  
   
  CLR-Rückgabetyp: **SqlInt32**  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Diese Methode gibt NULL zurück, wenn es sich nicht um ein **Polygon** handelt, und 0, wenn die Instanz leer ist. Diese Methode ist exakt.  
   
 ## <a name="examples"></a>Beispiele  
@@ -60,7 +60,7 @@ SET @g = geography::STGeomFromText('POLYGON((-122.358 47.653, -122.348 47.649, -
 SELECT @g.NumRings();  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Erweiterte Methoden für geography-Instanzen](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)  
   
   

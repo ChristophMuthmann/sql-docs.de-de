@@ -1,5 +1,5 @@
 ---
-title: SQUARE (Transact-SQL) | Microsoft Docs
+title: SQUARE (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -47,7 +47,7 @@ SQUARE ( float_expression )
   
 ## <a name="arguments"></a>Argumente  
  *float_expression*  
- Ist ein [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) des Typs **"float"** oder eines Typs, der implizit in Float konvertiert werden kann.  
+ Ein [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) vom Typ **float** oder von einem Typ, der implizit in „float“ konvertiert werden kann.  
   
 ## <a name="return-types"></a>Rückgabetypen  
  **float**  
@@ -70,8 +70,8 @@ Cyl Vol
 15.707963267948966  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- Das folgende Beispiel gibt das Quadrat jedes Werts in der `volume` Spalte in der `containers` Tabelle.  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
+ Im folgenden Beispiel wird das Quadrat der Werte in der Spalte `volume` der Tabelle `containers` zurückgegeben.  
   
 ```  
 -- Uses AdventureWorks  
@@ -97,8 +97,8 @@ Cylinder       15680.05
 Cube             575.04
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Mathematische Funktionen &#40; Transact-SQL &#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Mathematische Funktionen &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
   
   
 

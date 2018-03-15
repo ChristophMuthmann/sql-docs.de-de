@@ -1,5 +1,5 @@
 ---
-title: TERTIARY_WEIGHTS (Transact-SQL) | Microsoft Docs
+title: TERTIARY_WEIGHTS (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -33,7 +33,7 @@ ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="collation-functions---tertiaryweights-transact-sql"></a>Sortierungsfunktionen - TERTIARY_WEIGHTS (Transact-SQL)
+# <a name="collation-functions---tertiaryweights-transact-sql"></a>Sortierungsfunktionen: TERTIARY_WEIGHTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Gibt eine binäre Zeichenfolge der Schriftbreiten für jedes Zeichen in einem Nicht-Unicode-Zeichenfolgenausdruck zurück, der für eine tertiäre SQL-Sortierung definiert ist.
@@ -48,13 +48,13 @@ TERTIARY_WEIGHTS( non_Unicode_character_string_expression )
   
 ## <a name="arguments"></a>Argumente  
 *non_Unicode_character_string_expression*  
-Ist eine Zeichenfolge [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) des Typs **Char**, **Varchar**, oder **varchar(max)** für eine tertiäre SQL-Sortierung definiert. Eine Liste dieser Sortierungen finden Sie unter Hinweise.
+Ein [Zeichenfolgenausdruck](../../t-sql/language-elements/expressions-transact-sql.md) vom Datentyp **char**, **varchar** oder **varchar(max)**, der für eine tertiäre SQL-Sortierung definiert ist. Eine Liste dieser Sortierungen finden Sie unter Hinweise.
   
 ## <a name="return-types"></a>Rückgabetypen
-TERTIARY_WEIGHTS gibt **Varbinary** Wenn *Non_Unicode_character_string_expression* ist **Char** oder **Varchar**, und gibt zurück **varbinary(max)** Wenn *Non_Unicode_character_string_expression* ist **varchar(max)**.
+TERTIARY_WEIGHTS gibt **varbinary** zurück, wenn *non_Unicode_character_string_expression* vom Datentyp **char** oder **varchar** ist, und gibt **varbinary(max)** zurück, wenn *non_Unicode_character_string_expression* vom Datentyp **varchar(max)** ist.
   
-## <a name="remarks"></a>Hinweise  
-TERTIARY_WEIGHTS gibt NULL zurück, wenn *Non_Unicode_character_string_expression* ist nicht mit eine tertiäre SQL-Sortierung definiert. In der folgenden Tabelle werden die tertiären SQL-Sortierungen dargestellt.
+## <a name="remarks"></a>Remarks  
+TERTIARY_WEIGHTS gibt NULL zurück, wenn *non_Unicode_character_string_expression* nicht für eine tertiäre SQL-Sortierung definiert ist. In der folgenden Tabelle werden die tertiären SQL-Sortierungen dargestellt.
   
 |Sortierreihenfolge-ID|SQL-Sortierung|  
 |---|---|
@@ -91,7 +91,7 @@ TERTIARY_WEIGHTS gibt NULL zurück, wenn *Non_Unicode_character_string_expressio
 |185|SQL_SwedishStd_Pref_CP1_CI_AS|  
 |186|SQL_Icelandic_Pref_CP1_CI_AS|  
   
-TERTIARY_WEIGHTS dient zur Verwendung in der Definition einer berechneten Spalte, die auf den Werten definiert ist ein **Char**, **Varchar**, oder **varchar(max)** Spalte. Definieren eines Indexes für die berechnete Spalte und die **Char**, **Varchar**, oder **varchar(max)** Spalte kann die Leistung verbessern bei der **Char**, **Varchar**, oder **varchar(max)** Spalte in der ORDER BY-Klausel einer Abfrage angegeben ist.
+TERTIARY_WEIGHTS ist zum Definieren einer berechneten Spalte vorgesehen, die mit den Werten einer Spalte vom Datentyp **char**, **varchar** oder **varchar(max)** definiert wird. Das Definieren eines Index für die berechnete Spalte und die Spalte vom Datentyp **char**, **varchar** oder **varchar(max)** kann die Leistung verbessern, wenn die Spalte vom Datentyp **char**, **varchar** oder **varchar(max)** in der ORDER BY-Klausel einer Abfrage angegeben wird.
   
 ## <a name="examples"></a>Beispiele  
 Im folgenden Beispiel wird eine berechnete Spalte in einer Tabelle erstellt, die die `TERTIARY_WEIGHTS`-Funktion auf die Werte einer Spalte vom Datentyp `char` anwendet.
@@ -104,6 +104,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>Siehe auch
-[ORDER BY-Klausel &#40; Transact-SQL &#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md)
+[ORDER BY-Klausel &#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md)
   
   

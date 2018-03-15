@@ -1,5 +1,5 @@
 ---
-title: CERTENCODED (Transact-SQL) | Microsoft Docs
+title: CERTENCODED (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -43,17 +43,17 @@ CERTENCODED ( cert_id )
 ```  
   
 ## <a name="arguments"></a>Argumente  
-*cert_id*  
-Die **certificate_id** des Zertifikats. Diese Option ist verfügbar, über sys.certificates oder mithilfe der [CERT_ID &#40; Transact-SQL &#41; ](../../t-sql/functions/cert-id-transact-sql.md) Funktion. *cert_id* ist vom Typ **int**
+*CERT_ID*  
+Die **certificate_id** des Zertifikats. Diese ist in sys.certificates verfügbar oder kann mit der Funktion [CERT_ID &#40;Transact-SQL&#41;](../../t-sql/functions/cert-id-transact-sql.md) abgerufen werden. *cert_id* ist vom Typ **int**
   
 ## <a name="return-types"></a>Rückgabetypen
 **varbinary**
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
 **CERTENCODED** und **CERTPRIVATEKEY** werden zusammen verwendet, um andere Teile eines Zertifikats in binärer Form zurückzugeben.
   
 ## <a name="permissions"></a>Berechtigungen  
-**CERTENCODED** ist Öffentlichkeit zur Verfügung.
+**CERTENCODED** steht für die Öffentlichkeit zur Verfügung.
   
 ## <a name="examples"></a>Beispiele  
   
@@ -162,7 +162,7 @@ GO
 ## <a name="see-also"></a>Siehe auch
 [Sicherheitsfunktionen &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)  
 [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)  
-[CERTPRIVATEKEY &#40; Transact-SQL &#41;](../../t-sql/functions/certprivatekey-transact-sql.md)  
+[CERTPRIVATEKEY &#40;Transact-SQL&#41;](../../t-sql/functions/certprivatekey-transact-sql.md)  
 [sys.certificates &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-certificates-transact-sql.md)
   
   

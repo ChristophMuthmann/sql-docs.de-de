@@ -1,5 +1,5 @@
 ---
-title: REVERSE (Transact-SQL) | Microsoft Docs
+title: REVERSE (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
@@ -48,13 +48,13 @@ REVERSE ( string_expression )
   
 ## <a name="arguments"></a>Argumente  
  *string_expression*  
- *String_expression* ist ein [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) eines Datentyps Zeichenfolgen- oder Binärdatentyps. *String_expression* kann eine Konstante, Variable oder Spalte mit Zeichen- oder Binärdaten sein.  
+ Bei *string_expression* handelt es sich um den [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) einer Zeichenfolge oder eines binären Datentyps. *string_expression* kann eine Konstante, Variable oder Spalte mit Zeichen- oder Binärdaten darstellen.  
   
 ## <a name="return-types"></a>Rückgabetypen  
- **Varchar** oder **Nvarchar**  
+ **varchar** oder **nvarchar**  
   
-## <a name="remarks"></a>Hinweise  
- *String_expression* muss einen Datentyp, der implizit in **Varchar**. Verwenden Sie andernfalls [Umwandlung](../../t-sql/functions/cast-and-convert-transact-sql.md) zur expliziten Konvertierung *String_expression*.  
+## <a name="remarks"></a>Remarks  
+ *string_expression* muss einen Datentyp aufweisen, der implizit nach **varchar** konvertiert werden kann. Verwenden Sie in allen anderen Fällen [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) zur expliziten Konvertierung von *string_expression*.  
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>Ergänzende Zeichen (Ersatzpaare)  
  Wenn Sie SC-Sortierungen verwenden, kehrt die REVERSE-Funktion die Reihenfolge der beiden Hälften eines Ersatzzeichenpaars nicht um.  
@@ -92,22 +92,22 @@ SELECT REVERSE(@myvar) AS Reversed ;
 GO  
 ```  
   
- Im folgenden Beispiel wird eine implizite Konvertierung von einer **Int** -Datentyp in **Varchar** -Datentyp, und klicken Sie dann das Ergebnis umgekehrt.  
+ Im folgenden Beispiel wird eine implizite Konvertierung von einem **int**-Datentyp in einen **varchar**-Datentyp vorgenommen und das Ergebnis umgekehrt.  
   
 ```  
 SELECT REVERSE(1234) AS Reversed ;  
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- Das folgende Beispiel gibt die Namen aller Datenbanken, und die Namen mit den Zeichen rückgängig gemacht.  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
+ Im folgenden Beispiel werden die Namen aller Datenbanken sowie alle Namen mit den Zeichen in umgekehrter Reihenfolge zurückgegeben.  
   
 ```  
 SELECT name, REVERSE(name) FROM sys.databases;  
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [CONCAT &#40;Transact-SQL&#41;](../../t-sql/functions/concat-transact-sql.md)  
  [CONCAT_WS &#40;Transact-SQL&#41;](../../t-sql/functions/concat-ws-transact-sql.md)  
  [FORMATMESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/formatmessage-transact-sql.md)  
@@ -117,9 +117,9 @@ GO
  [STRING_ESCAPE &#40;Transact-SQL&#41;](../../t-sql/functions/string-escape-transact-sql.md)  
  [STUFF &#40;Transact-SQL&#41;](../../t-sql/functions/stuff-transact-sql.md)  
  [TRANSLATE &#40;Transact-SQL&#41;](../../t-sql/functions/translate-transact-sql.md)  
- [CAST und CONVERT &#40; Transact-SQL &#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
+ [CAST und CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
  [Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [Zeichenfolgenfunktionen &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
+ [String Functions &#40;Transact-SQL&#41; (Zeichenfolgenfunktionen &#40;Transact-SQL&#41;)](../../t-sql/functions/string-functions-transact-sql.md)  
   
   
 

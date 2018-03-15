@@ -1,5 +1,5 @@
 ---
-title: STDisjoint (Geography-Datentyp) | Microsoft Docs
+title: STDisjoint (geography-Datentyp) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -45,14 +45,14 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>Argumente  
  *other_geography*  
- Eine andere **Geography** Instanz, für die Instanz verglichen werden soll, auf dem STDisjoint() aufgerufen wird.  
+ Eine andere **geography**-Instanz zum Vergleich mit der Instanz, in der STDisjoint() aufgerufen wird.  
   
 ## <a name="return-types"></a>Rückgabetypen  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Rückgabetyp: **Bit**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Rückgabetyp: **bit**  
   
  CLR-Rückgabetyp: **SqlBoolean**  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Zwei **geography** -Instanzen sind disjunkt, wenn die Schnittmenge ihrer Punktmengen leer ist.  
   
  Diese Methode gibt immer NULL zurück, wenn die SRIDs (Spatial Reference IDs) der **geography** -Instanzen nicht übereinstimmen.  
@@ -68,7 +68,7 @@ SET @h = geography::STGeomFromText('POINT(-122.34900 47.65100)', 4326);
 SELECT @g.STDisjoint(@h);  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [OGC-Methoden für geography-Instanzen](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

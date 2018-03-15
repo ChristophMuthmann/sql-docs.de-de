@@ -1,5 +1,5 @@
 ---
-title: '% (Modulo) (Transact-SQL) | Microsoft Docs'
+title: '% (Modulo) (Transact-SQL) | Microsoft-Dokumentation'
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -38,7 +38,7 @@ ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="-modulus-transact-sql"></a>% (Modulus) (Transact-SQL)
+# <a name="-modulus-transact-sql"></a>% (Modulo) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Gibt den Rest der Division einer Zahl durch eine andere zurück.  
@@ -53,21 +53,21 @@ dividend % divisor
   
 ## <a name="arguments"></a>Argumente  
  *dividend*  
- Der zu dividierende numerische Ausdruck. *Dividend* muss ein gültiger [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) von einem der Datentypen monetären Datentypkategorien für ganze Zahlen und oder der **numerischen** -Datentyp.  
+ Der zu dividierende numerische Ausdruck. *dividend* muss ein gültiger [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) eines Datentyps aus den Datentypkategorien für Ganzzahlen und Währungen oder vom Datentyp **numeric** sein.  
   
  *divisor*  
- Ist der numerische Ausdruck, durch den der Dividend geteilt werden soll. *Divisor* muss jeder gültiger Ausdruck eines beliebigen monetären Datentypkategorien für ganze Zahlen und die Datentypen oder **numerischen** -Datentyp.  
+ Der numerische Ausdruck, durch den der Dividend geteilt werden soll. *divisor* muss ein gültiger Ausdruck eines Datentyps aus den Datentypkategorien für Ganzzahlen und Währungen oder vom Datentyp **numeric** sein.  
   
 ## <a name="result-types"></a>Ergebnistypen  
  Die Ergebnistypen werden von den Datentypen der beiden Argumente bestimmt.  
   
-## <a name="remarks"></a>Hinweise  
- Können Sie den modulo arithmetischen Operator in der Auswahlliste der SELECT-Anweisung mit einer beliebigen Kombination von Spaltennamen, numerischen Konstanten oder ein gültiger Ausdruck eines ganze Zahlen und Währungen geben Kategorien oder die **numerischen** Daten Geben Sie ein.  
+## <a name="remarks"></a>Remarks  
+ Sie können den arithmetischen Operator Modulo mit jeder Kombination aus Spaltennamen, numerischen Konstanten oder einem gültigen Ausdruck aus den Datentypkategorien für Ganzzahlen oder Währungen oder dem Datentyp **numeric** in der SELECT-Liste der SELECT-Anweisung verwenden.  
   
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="a-simple-example"></a>A. Einfaches Beispiel  
- Im folgenden Beispiel wird die Zahl 38 durch 5 geteilt. Dies führt zu 7 als der ganzzahlige Teil des Ergebnisses, und veranschaulicht, wie der Rest 3 modulo zurückgegeben.  
+ Im folgenden Beispiel wird die Zahl 38 durch 5 geteilt. Das Ergebnis 7 ist der ganzzahlige Anteil am Ergebnis, woraus sich ein Rest (Modulo) von 3 ergibt.  
   
 ```  
 SELECT 38 / 5 AS Integer, 38 % 5 AS Remainder ;  
@@ -86,10 +86,10 @@ FROM Sales.SalesOrderDetail;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
-### <a name="c-simple-example"></a>"C:" einfaches Beispiel  
- Das folgende Beispiel zeigt die Ergebnisse für die `%` Operator nach der Division von 3 durch 2.  
+### <a name="c-simple-example"></a>C. Einfaches Beispiel  
+ Das folgende Beispiel zeigt die Ergebnisse für den `%`-Operator nach der Division von 3 durch 2.  
   
 ```  
 -- Uses AdventureWorks  
@@ -104,13 +104,13 @@ SELECT TOP(1) 3%2 FROM dimEmployee;
 1         
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Integrierte Funktionen &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
  [LIKE &#40;Transact-SQL&#41;](../../t-sql/language-elements/like-transact-sql.md)   
  [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [% = &#40; Modulozuweisung &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/modulo-equals-transact-sql.md)   
- [Zusammengesetzte Operatoren &#40; Transact-SQL &#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)  
+ [&#40;Modulozuweisung&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/modulo-equals-transact-sql.md)   
+ [Verbundoperatoren &#40;Transact-SQL&#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)  
   
   
 

@@ -1,5 +1,5 @@
 ---
-title: DBCC TRACEOFF (Transact-SQL) | Microsoft Docs
+title: DBCC TRACEOFF (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 07/17/2017
 ms.prod: sql-non-specified
@@ -58,7 +58,7 @@ Deaktiviert die angegebenen Ablaufverfolgungsflags global.
 WITH NO_INFOMSGS  
 Unterdrückt alle Informationsmeldungen mit einem Schweregrad von 0 bis 10.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
 Ablaufverfolgungsflags werden dazu verwendet, bestimmte Merkmale anzupassen, die die Ausführung einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] steuern.
   
 ## <a name="result-sets"></a>Resultsets  
@@ -93,7 +93,7 @@ DBCC TRACEOFF (3205, 260, -1);
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
 [DBCC TRACEON &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-transact-sql.md)  
 [DBCC TRACESTATUS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-tracestatus-transact-sql.md)  

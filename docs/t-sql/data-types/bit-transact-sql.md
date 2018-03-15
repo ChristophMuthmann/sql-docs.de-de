@@ -1,5 +1,5 @@
 ---
-title: Bit (Transact-SQL) | Microsoft Docs
+title: bit (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 7/23/2017
 ms.prod: sql-non-specified
@@ -36,8 +36,8 @@ ms.lasthandoff: 11/21/2017
 
   Ein ganzzahliger Datentyp, der den Wert 1, 0 oder NULL annehmen kann.  
   
-## <a name="remarks"></a>Hinweise  
-Die [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] optimiert das Speichern von **Bit** Spalten. Wenn in einer Tabelle 8 oder weniger **bit** -Spalten vorhanden sind, werden die Spalten als 1 Byte gespeichert. Sind zwischen 9 und 16 **bit** -Spalten vorhanden, werden diese als 2 Byte gespeichert usw.
+## <a name="remarks"></a>Remarks  
+[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] optimiert das Speichern von **bit**-Spalten. Wenn in einer Tabelle 8 oder weniger **bit** -Spalten vorhanden sind, werden die Spalten als 1 Byte gespeichert. Sind zwischen 9 und 16 **bit** -Spalten vorhanden, werden diese als 2 Byte gespeichert usw.
   
 Die Zeichenfolgenwerte TRUE und FALSE können in **bit** -Werte konvertiert werden: TRUE wird in 1 konvertiert, und FALSE wird in 0 konvertiert.
   
@@ -47,10 +47,10 @@ Die Konvertierung in den bit-Datentyp ergibt für alle Werte ungleich 0 den Wert
 [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  
 [CAST und CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
 [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)  
-[Datentypkonvertierung &#40; Datenbankmodul &#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)  
+[Datentypkonvertierung &#40;Datenbank-Engine&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)  
 [Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
 [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)  
 [SET @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/set-local-variable-transact-sql.md)  
-[Sys.Types &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)
+[sys.types &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)
   
   

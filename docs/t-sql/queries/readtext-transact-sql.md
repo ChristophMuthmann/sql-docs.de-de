@@ -1,5 +1,5 @@
 ---
-title: READTEXT (Transact-SQL) | Microsoft Docs
+title: READTEXT (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 10/24/2017
 ms.prod: sql-non-specified
@@ -36,10 +36,10 @@ ms.lasthandoff: 01/25/2018
 # <a name="readtext-transact-sql"></a>READTEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Liest **Text**, **Ntext**, oder **Image** Werte aus einer **Text**, **Ntext**, oder **Bild**  -Spalte, beginnend bei einem angegebenen Offset und die angegebene Anzahl von Bytes zu lesen.  
+  Liest **text**-, **ntext**- oder **image**-Werte aus einer **text**-, **ntext**- oder **image**-Spalte, wobei bei einem angegebenen Offset begonnen und die angegebene Anzahl von Bytes gelesen wird.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Verwenden der [TEILZEICHENFOLGE](../../t-sql/functions/substring-transact-sql.md) stattdessen-Funktion.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Verwenden Sie stattdessen die Funktion [SUBSTRING](../../t-sql/functions/substring-transact-sql.md).  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -52,26 +52,26 @@ READTEXT { table.column text_ptr offset size } [ HOLDLOCK ]
   
 ## <a name="arguments"></a>Argumente  
  *table* **.** *column*  
- Dies ist der Name einer Tabelle und Spalte, aus der gelesen wird. Tabellen- und Spaltennamen müssen den Regeln für entsprechen [Bezeichner](../../relational-databases/databases/database-identifiers.md). Die Angabe der Tabellen- und Spaltennamen ist erforderlich, wohingegen die Angabe des Datenbank- und Besitzernamens optional ist.  
+ Dies ist der Name einer Tabelle und Spalte, aus der gelesen wird. Tabellen- und Spaltennamen müssen den Regeln für [Bezeichner](../../relational-databases/databases/database-identifiers.md) entsprechen. Die Angabe der Tabellen- und Spaltennamen ist erforderlich, wohingegen die Angabe des Datenbank- und Besitzernamens optional ist.  
   
  *text_ptr*  
- Ein gültiger Textzeiger. *text_ptr* must be **binary(16)**.  
+ Ein gültiger Textzeiger. *text_ptr* muss vom Datentyp **binary(16)** sein.  
   
  *offset*  
- Ist die Anzahl der Bytes (bei der **Text** oder **Image** Datentypen verwendet werden) oder Zeichen (bei der **Ntext** -Datentyp verwendet wird,) überspringen vor Beginn der Lesen**Text**, **Image**, oder **Ntext** Daten.  
+ Die Anzahl von Bytes (beim Verwenden der Datentypen **text** oder **image**) oder Zeichen (beim Verwenden des Datentyps **ntext**), die ausgelassen werden sollen, bevor mit dem Lesen der **text**-, **image**- oder **ntext**-Daten begonnen wird.  
   
  *size*  
- Ist die Anzahl der Bytes (bei der **Text** oder **Image** Datentypen verwendet werden) oder Zeichen (bei der **Ntext** -Datentyp verwendet wird) der zu lesenden Daten. Wenn *Größe* ist 0, 4 KB Daten gelesen wird.  
+ Die Anzahl von Bytes (beim Verwenden der Datentypen **text** oder **image**) oder Zeichen (beim Verwenden des Datentyps **ntext**) der zu lesenden Daten. Wenn *size* = 0 ist, werden 4 KB Daten gelesen.  
   
  HOLDLOCK  
  Bewirkt, dass der Textwert bis zum Ende der Transaktion gesperrt wird und nur gelesen werden kann. Andere Benutzer können den Wert dann lesen, aber nicht ändern.  
   
-## <a name="remarks"></a>Hinweise  
- Verwenden der [TEXTPTR](../../t-sql/functions/text-and-image-functions-textptr-transact-sql.md) Funktion zum Abrufen gültiger *Text_ptr* Wert. TEXTPTR gibt einen Zeiger auf die **Text**, **Ntext**, oder **Image** Spalte in der angegebenen Zeile oder auf die **Text**, **Ntext** , oder **Image** Spalte in der letzten Zeile, die von der Abfrage zurückgegeben werden, wenn mehr als eine Zeile zurückgegeben wird. Da TEXTPTR eine 16 Bytes große binäre Zeichenfolge zurückgibt, ist es empfehlenswert, eine lokale Variable für den Textzeiger zu deklarieren und dann die Variable mit READTEXT einzusetzen. Weitere Informationen zum Deklarieren einer lokalen Variablen finden Sie unter [DECLARE @local_variable &#40; Transact-SQL &#41; ](../../t-sql/language-elements/declare-local-variable-transact-sql.md).  
+## <a name="remarks"></a>Remarks  
+ Verwenden Sie die [TEXTPTR](../../t-sql/functions/text-and-image-functions-textptr-transact-sql.md)-Funktion, um einen gültigen *text_ptr*-Wert abzurufen. TEXTPTR gibt einen Zeiger auf die **text**-, **ntext**- oder **image**-Spalte in der angegebenen Zeile oder auf die **text**-, **ntext**- oder **image**-Spalte der letzten Zeile zurück, die von der Abfrage zurückgegeben wird, wenn mehrere Zeilen zurückgegeben werden. Da TEXTPTR eine 16 Bytes große binäre Zeichenfolge zurückgibt, ist es empfehlenswert, eine lokale Variable für den Textzeiger zu deklarieren und dann die Variable mit READTEXT einzusetzen. Weitere Informationen zum Deklarieren einer lokalen Variablen finden Sie unter [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md).  
   
- In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gibt es möglicherweise Textzeiger in Zeilen, die jedoch ungültig sind. Weitere Informationen zu den **Text in Zeile** finden Sie unter [Sp_tableoption &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md). Weitere Informationen zu den Textzeiger, finden Sie unter [Sp_invalidate_textptr &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-invalidate-textptr-transact-sql.md).  
+ In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gibt es möglicherweise Textzeiger in Zeilen, die jedoch ungültig sind. Weitere Informationen zur Option **text in row** finden Sie unter [sp_tableoption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md). Weitere Informationen dazu, wie Textzeiger ungültig gemacht werden können, finden Sie unter [sp_invalidate_textptr &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-invalidate-textptr-transact-sql.md).  
   
- Der Wert für den @@TEXTSIZE Funktion ersetzt die Größe, die für READTEXT angegebene, wenn er kleiner als die für READTEXT angegebene Größe ist. Der @@TEXTSIZE Funktion gibt den Grenzwert für die Anzahl der Datenbytes, die von der SET TEXTSIZE-Anweisung zurückgegeben werden. Weitere Informationen zum Festlegen der sitzungseinstellung für TEXTSIZE finden Sie unter [SET TEXTSIZE &#40; Transact-SQL &#41; ](../../t-sql/statements/set-textsize-transact-sql.md).  
+ Der Wert der @@TEXTSIZE-Funktion setzt die für READTEXT angegebene Größe außer Kraft, wenn diese geringer als die für READTEXT angegebene Größe ist. Die @@TEXTSIZE-Funktion gibt die Beschränkung der Anzahl zurückzugebender Bytes an, die von der SET TEXTSIZE-Anweisung festgelegt wurde. Weitere Informationen zum Festlegen der Sitzungseinstellung für TEXTSIZE finden Sie unter [SET TEXTSIZE &#40;Transact-SQL&#41;](../../t-sql/statements/set-textsize-transact-sql.md).  
   
 ## <a name="permissions"></a>Berechtigungen  
  READTEXT-Berechtigungen werden standardmäßig an Benutzer mit SELECT-Berechtigungen für die angegebene Tabelle vergeben. Die Berechtigungen sind übertragbar, wenn SELECT-Berechtigungen übertragen werden.  
@@ -80,7 +80,7 @@ READTEXT { table.column text_ptr offset size } [ HOLDLOCK ]
  Im folgenden Beispiel werden die Zeichen 2 bis 26 der `pr_info`-Spalte in der `pub_info`-Tabelle gelesen.  
   
 > [!NOTE]  
->  Um dieses Beispiel auszuführen, müssen Sie installieren die **Pubs** -Beispieldatenbank.  
+>  Um dieses Beispiel auszuführen, müssen Sie die **pubs**-Beispieldatenbank installieren.  
   
 ```  
 USE pubs;  
@@ -94,7 +94,7 @@ READTEXT pub_info.pr_info @ptrval 1 25;
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [@@TEXTSIZE &#40;Transact-SQL&#41;](../../t-sql/functions/textsize-transact-sql.md)   
  [UPDATETEXT (Transact-SQL)](../../t-sql/queries/updatetext-transact-sql.md)   
  [WRITETEXT (Transact-SQL)](../../t-sql/queries/writetext-transact-sql.md)  

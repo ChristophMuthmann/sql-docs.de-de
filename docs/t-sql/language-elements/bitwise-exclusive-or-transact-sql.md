@@ -1,5 +1,5 @@
 ---
-title: ^ (Bitweises exklusives OR) (Transact-SQL) | Microsoft Docs
+title: ^ (Bitweises exklusives OR) (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 01/10/2017
 ms.prod: sql-non-specified
@@ -53,25 +53,25 @@ expression ^ expression
   
 ## <a name="arguments"></a>Argumente  
  *expression*  
- Ist ein beliebiger gültiger [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) von einem der Datentypen der Datentypkategorie ' Integer ' oder die **Bit**, oder die **binäre** oder **Varbinary** Datentypen. *Ausdruck* wird als eine Binärzahl für die bitweise Operation behandelt.  
+ Ein gültiger [expression](../../t-sql/language-elements/expressions-transact-sql.md)-Ausdruck eines beliebigen Datentyps der ganzzahligen Datentypkategorie oder des Datentyps **bit**, **binary** oder **varbinary**. *expression* wird in der bitweisen Operation als binäre Zahl behandelt.  
   
 > [!NOTE]  
->  Nur ein *Ausdruck* sein **binäre** oder **Varbinary** -Datentyp in einer bitweisen Operation.  
+>  Nur eines der *expression*-Argumente kann in einer bitweisen Operation vom Datentyp **binary** oder **varbinary** sein.  
   
 ## <a name="result-types"></a>Ergebnistypen  
- **Int** , wenn die Eingabewerte sind **Int**.  
+ **int**, wenn die Eingabewerte vom Typ **int** sind  
   
- **"smallint"** , wenn die Eingabewerte sind **"smallint"**.  
+ **smallint**, wenn die Eingabewerte vom Typ **smallint** sind  
   
- **"tinyint"** , wenn die Eingabewerte sind **"tinyint"**.  
+ **tinyint**, wenn die Eingabewerte vom Typ **tinyint** sind  
   
-## <a name="remarks"></a>Hinweise  
- Die  **^**  bitweiser Operator führt ein bitweises logisches exklusives OR zwischen den beiden Ausdrücken, indem die jeweils entsprechenden Bits für beide Ausdrücke. Ein Ergebnisbit wird genau dann auf den Wert 1 festgelegt, wenn genau ein Bit, also nicht beide Bits (für das aktuell aufzulösende Bit), der Eingabeausdrücke den Wert 1 aufweist. Falls die Bits beide den Wert 0 oder beide den Wert 1 besitzen, wird das entsprechende Bit im Ergebnis auf 0 festgelegt.  
+## <a name="remarks"></a>Remarks  
+ Mit dem bitweisen Operator **^** wird zwischen zwei Ausdrücken ein bitweises logisches exklusives OR ausgeführt, indem die jeweils entsprechenden Bits der beiden Ausdrücke verarbeitet werden. Ein Ergebnisbit wird genau dann auf den Wert 1 festgelegt, wenn genau ein Bit, also nicht beide Bits (für das aktuell aufzulösende Bit), der Eingabeausdrücke den Wert 1 aufweist. Falls die Bits beide den Wert 0 oder beide den Wert 1 besitzen, wird das entsprechende Bit im Ergebnis auf 0 festgelegt.  
   
- Wenn der linke und der rechte Ausdruck unterschiedliche ganzzahlige Datentypen aufweisen (z. B. Links *Ausdruck* ist **"smallint"** und das Recht *Ausdruck* ist  **Int**), wird das Argument des kleineren Datentyps in den größeren Datentyp konvertiert. In diesem Fall die **"smallint" *** Ausdruck* konvertiert ein **Int**.  
+ Wenn der linke und der rechte Ausdruck unterschiedliche ganzzahlige Datentypen aufweisen (beispielsweise ist der linke *expression*-Ausdruck vom Datentyp **smallint** und der rechte *expression*-Ausdruck von Datentyp **int**), wird das Argument mit dem kleineren Datentyp in den größeren Datentyp konvertiert. In diesem Fall wird **smallint***expression* in einen **int** konvertiert.  
   
 ## <a name="examples"></a>Beispiele  
- Im folgende Beispiel wird eine Tabelle mit den **Int** Daten geben, um die ursprünglichen Werte zu speichern, und fügt zwei Werte in einer Zeile.  
+ Im folgenden Beispiel wird eine Tabelle mit dem **int**-Datentyp erstellt, um die ursprünglichen Werte zu speichern, und zwei Werte in eine Zeile einfügt.  
   
 ```  
 CREATE TABLE bitwise  
@@ -113,12 +113,12 @@ GO
   
 
   
-## <a name="see-also"></a>Siehe auch  
- [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Ausdrücke &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
- [Bitweise Operatoren &#40; Transact-SQL &#41;](../../t-sql/language-elements/bitwise-operators-transact-sql.md)   
- [^ = &#40; Bitweises exklusives OR-Zuweisung &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/bitwise-exclusive-or-equals-transact-sql.md)   
- [Zusammengesetzte Operatoren &#40; Transact-SQL &#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)  
+ [Bitweise Operatoren &#40;Transact-SQL&#41;](../../t-sql/language-elements/bitwise-operators-transact-sql.md)   
+ [^= &#40;Bitwise Exclusive OR Assignment&#41; &#40;Transact-SQL&#41; (^= (Zuweisung mit bitweisem exklusiven OR (Transact-SQL))](../../t-sql/language-elements/bitwise-exclusive-or-equals-transact-sql.md)   
+ [Verbundoperatoren &#40;Transact-SQL&#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)  
   
   
 

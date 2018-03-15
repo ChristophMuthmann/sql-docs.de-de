@@ -1,5 +1,5 @@
 ---
-title: TRUNCATE TABLE (Transact-SQL) | Microsoft Docs
+title: TRUNCATE TABLE (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
@@ -41,7 +41,7 @@ ms.lasthandoff: 01/02/2018
 # <a name="truncate-table-transact-sql"></a>TRUNCATE TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Entfernt alle Zeilen aus einer Tabelle oder die angegebenen Partitionen einer Tabelle ohne Protokollierung der einzelnen Zeilen löschen. TRUNCATE TABLE entspricht DELETE ohne WHERE-Klausel. TRUNCATE TABLE ist jedoch schneller und verwendet weniger Systemressourcen und Ressourcen für die Transaktionsprotokollierung.  
+  Entfernt alle Zeilen oder angegebenen Partitionen einer Tabelle, ohne die einzelnen Löschungen zu protokollieren. TRUNCATE TABLE entspricht DELETE ohne WHERE-Klausel. TRUNCATE TABLE ist jedoch schneller und verwendet weniger Systemressourcen und Ressourcen für die Transaktionsprotokollierung.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -76,26 +76,26 @@ TRUNCATE TABLE [ { database_name . [ schema_name ] . | schema_name . ] table_nam
  Der Name des Schemas, zu dem die Tabelle gehört.  
   
  *table_name*  
- Der Name der Tabelle, die gekürzt werden soll oder aus der alle Zeilen entfernt werden. *TABLE_NAME* muss ein Literal sein. *TABLE_NAME* nicht mit der **OBJECT_ID()** -Funktion oder eine Variable.  
+ Der Name der Tabelle, die gekürzt werden soll oder aus der alle Zeilen entfernt werden. *table_name* muss ein Literal sein. *table_name* kann nicht die **OBJECT_ID()**-Funktion oder eine Variable sein.  
   
- MIT (PARTITIONEN ({ \< *Partition_number_expression*> | \< *Bereich*>} [,... ...n]))  
-**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] über [aktuelle Version](http://go.microsoft.com/fwlink/p/?LinkId=299658))
+ WITH ( PARTITIONS ( { \<*partition_number_expression*> | \<*range*> } [ , ...n ] ) )  
+**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis zur [aktuellen Version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).
   
- Gibt die Partitionen an, die abgeschnitten oder aus denen alle Zeilen entfernt werden sollen. Wenn die Tabelle nicht partitioniert ist, die **mit PARTITIONEN** Argument wird ein Fehler generiert. Wenn die **mit PARTITIONEN** -Klausel nicht angegeben ist, wird die gesamte Tabelle abgeschnitten werden.  
+ Gibt die Partitionen an, die abgeschnitten oder aus denen alle Zeilen entfernt werden sollen. Wenn die Tabelle nicht partitioniert ist, erzeugt das **WITH PARTITIONS**-Argument einen Fehler. Wenn die **WITH PARTITIONS**-Klausel nicht angegeben wird, wird die gesamte Tabelle abgeschnitten.  
   
- *\<Partition_number_expression >* kann auf folgende Weise angegeben werden: 
+ *\<partition_number_expression>* kann auf die folgenden Weisen angegeben werden: 
   
--   Geben Sie die Nummer einer Partition, zum Beispiel:`WITH (PARTITIONS (2))`  
+-   Geben Sie die Nummer einer Partition an, beispielsweise: `WITH (PARTITIONS (2))`  
   
--   Geben Sie die Partitionsnummern mehrerer einzelner Partitionen durch Trennzeichen getrennt:`WITH (PARTITIONS (1, 5))`  
+-   Geben Sie die Partitionsnummern mehrerer einzelner Partitionen durch Kommas getrennt an, beispielsweise: `WITH (PARTITIONS (1, 5))`  
   
--   Geben Sie sowohl Bereiche als auch einzelne Partitionen an, beispielsweise:`WITH (PARTITIONS (2, 4, 6 TO 8))`  
+-   Geben Sie sowohl Bereiche als auch einzelne Partitionen an, beispielsweise: `WITH (PARTITIONS (2, 4, 6 TO 8))`  
   
--   *\<Bereich >* kann durch das Wort getrennte Partitionsnummern angegeben werden **TO**, beispielsweise:`WITH (PARTITIONS (6 TO 8))`  
+-   Für *\<range>* können durch das Wort **TO** getrennte Partitionsnummern angegeben werden, beispielsweise: `WITH (PARTITIONS (6 TO 8))`  
   
- Um eine partitionierte Tabelle abschneiden, müssen die Tabelle und Indizes (für die gleiche Partitionsfunktion partitioniert) ausgerichtet werden.  
+ Um eine partitionierte Tabelle abzuschneiden, müssen die Tabelle und Indizes ausgerichtet werden (partitioniert auf dieselbe Partitionsfunktion).  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  TRUNCATE TABLE bietet im Vergleich zur DELETE-Anweisung die folgenden Vorteile:  
   
 -   Es wird weniger Speicherplatz für die Transaktionsprotokolle verwendet.  
@@ -134,10 +134,10 @@ TRUNCATE TABLE [ { database_name . [ schema_name ] . | schema_name . ] table_nam
 - TRUNCATE TABLE kann nicht innerhalb einer Transaktion ausgeführt werden.
   
 ## <a name="truncating-large-tables"></a>Abschneiden von großen Tabellen  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verfügt über die Berechtigung zum Löschen oder Abschneiden von Tabellen, die mehr als 128 Blöcke haben, ohne simultane Sperren für alle für das Löschen erforderlichen Blöcke aufrechtzuerhalten.  
+ In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] können Tabellen gelöscht oder abgeschnitten werden, die mehr als 128 Blöcke enthalten, ohne simultane Sperren für alle Blöcke aufrechtzuerhalten, die für den Löschvorgang erforderlich sind.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Die mindestens erforderliche Berechtigung ist ALTER für *Table_name*. Die Berechtigungen für TRUNCATE TABLE liegen standardmäßig beim Tabellenbesitzer, bei Mitgliedern der festen Serverrolle sysadmin und der festen Datenbankrollen db_owner und db_ddladmin. Die Berechtigungen sind nicht übertragbar. Sie können jedoch die TRUNCATE TABLE-Anweisung innerhalb eines Moduls einbinden, z. B. eine gespeicherte Prozedur, und mit der EXECUTE AS-Klausel für das Modul die passenden Berechtigungen erteilen.  
+ Die mindestens erforderliche Berechtigung ist ALTER für *table_name*. Die Berechtigungen für TRUNCATE TABLE liegen standardmäßig beim Tabellenbesitzer, bei Mitgliedern der festen Serverrolle sysadmin und der festen Datenbankrollen db_owner und db_ddladmin. Die Berechtigungen sind nicht übertragbar. Sie können jedoch die TRUNCATE TABLE-Anweisung innerhalb eines Moduls einbinden, z. B. eine gespeicherte Prozedur, und mit der EXECUTE AS-Klausel für das Modul die passenden Berechtigungen erteilen.  
   
 ## <a name="examples"></a>Beispiele  
   
@@ -159,7 +159,7 @@ GO
   
 ### <a name="b-truncate-table-partitions"></a>B. Tabellenpartition abschneiden  
   
-**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] über [aktuelle Version](http://go.microsoft.com/fwlink/p/?LinkId=299658))
+**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis zur [aktuellen Version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).
   
  Im folgende Beispiel werden die angegebenen Partitionen einer partitionierten Tabelle abgeschnitten. Mit der Syntax `WITH (PARTITIONS (2, 4, 6 TO 8))` werden die Partitionen 2, 4, 6, 7 und 8 abgeschnitten.  
   
@@ -169,9 +169,9 @@ WITH (PARTITIONS (2, 4, 6 TO 8));
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
- [DROP TABLE &#40; Transact-SQL &#41;](../../t-sql/statements/drop-table-transact-sql.md)   
+ [DROP TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-table-transact-sql.md)   
  [IDENTITY &#40;Property&#41; &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql-identity-property.md)  
   
   

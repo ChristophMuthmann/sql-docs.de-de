@@ -1,5 +1,5 @@
 ---
-title: Erweiterte statische Geography-Methoden | Microsoft Docs
+title: Erweiterte statische geography-Methoden | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -31,7 +31,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="extended-static-geography-methods"></a>Erweiterte statische geography-Methoden
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]unterstützt mehrere Erweiterungen der statischen Geography-Methoden des Open Geospatial Consortium (OGC).  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt mehrere Erweiterungen zu den statischen geography-Methoden des Open Geospatial Consortium (OGC).  
   
  Weitere Informationen zu den OGC-Spezifikationen finden Sie in den folgenden Ressourcen:  
   
@@ -39,7 +39,7 @@ ms.lasthandoff: 01/25/2018
   
  [OGC Specifications, Simple Feature Access Part 2 – SQL Options](http://go.microsoft.com/fwlink/?LinkId=93628)  
   
- [OGC Specifications, Geography Markup Language](http://go.microsoft.com/fwlink/?LinkId=93629)  
+ [OGC-Spezifikationen, Geography Markup Language](http://go.microsoft.com/fwlink/?LinkId=93629)  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
@@ -49,12 +49,12 @@ ms.lasthandoff: 01/25/2018
   
 -   [Analysieren](../../t-sql/spatial-geography/parse-geography-data-type.md)  
   
--   [Punkt](../../t-sql/spatial-geography/point-geography-data-type.md)  
+-   [Point](../../t-sql/spatial-geography/point-geography-data-type.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Statische Geography-Aggregatmethoden](../../t-sql/spatial-geography/static-aggregate-geography-methods.md)   
- [OGC-Methoden für Geography-Instanzen](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)   
- [Erweiterte Methoden für Geography-Instanzen](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Statische aggregierte geography-Methoden](../../t-sql/spatial-geography/static-aggregate-geography-methods.md)   
+ [OGC-Methoden für geography-Instanzen](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)   
+ [Erweiterte Methoden für geography-Instanzen](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
  [Statische geography-Methoden des OGC](../../t-sql/spatial-geography/ogc-static-geography-methods.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "ÜBERSETZEN (Transact-SQL) | Microsoft Docs"
+title: TRANSLATE (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 12/16/2016
 ms.prod: sql-non-specified
@@ -32,7 +32,7 @@ ms.lasthandoff: 01/18/2018
 # <a name="translate-transact-sql"></a>TRANSLATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
-Gibt die Zeichenfolge als erstes Argument bereitgestellt werden, nachdem einige im zweiten Argument angegebenen Zeichen in eine Zielsatz von Zeichen übersetzt werden.
+Gibt die Zeichenfolge zurück, die als erstes Argument bereitgestellt wurde, nachdem einige durch das zweite Argument angegebene Zeichen in einen Zielzeichensatz übersetzt wurden.
 
 ## <a name="syntax"></a>Syntax   
 ```
@@ -42,29 +42,29 @@ TRANSLATE ( inputString, characters, translations)
 ## <a name="arguments"></a>Argumente   
 
 inputString   
-Ist ein [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) eines beliebigen Typs Zeichen ("Nvarchar", "Varchar", "Nchar", "Char").
+Ist ein [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) eines beliebigen Zeichentyps (nvarchar, varchar, nchar, char).
 
 Buchstaben   
-Ist eine [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) eines beliebigen Zeichens-Typs mit Zeichen, die ersetzt werden soll.
+Ist ein [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) eines beliebigen Zeichentyps, der zu ersetzende Zeichen enthält.
 
 Übersetzungen   
-Ist ein Zeichen [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) , zweites Argument vom Typ und Länge entspricht.
+Ist ein [Zeichenausdruck](../../t-sql/language-elements/expressions-transact-sql.md), der mit dem Typ und der Länge des zweiten Arguments übereinstimmt.
 
 ## <a name="return-types"></a>Rückgabetypen   
-Gibt einen Zeichenausdruck, der den gleichen Typ wie `inputString` , wobei die Zeichen aus dem zweiten Argument mit den entsprechenden Zeichen von Dritten Argument ersetzt werden.
+Gibt einen Zeichenausdruck vom gleichen Typ wie `inputString` zurück, bei dem die Zeichen des zweiten Arguments durch die entsprechenden Zeichen des dritten Arguments ersetzt werden.
 
-## <a name="remarks"></a>Hinweise   
+## <a name="remarks"></a>Remarks   
 
-`TRANSLATE`Funktion gibt einen Fehler zurück, wenn Zeichen und Übersetzungen unterschiedliche Längen aufweisen. `TRANSLATE`Funktion sollte unverändert Eingabe zurückgeben, wenn null-Werte als Zeichen oder Ersatz Argumente bereitgestellt werden. Das Verhalten der `TRANSLATE` Funktion sollte identisch mit der [ersetzen](../../t-sql/functions/replace-transact-sql.md) Funktion.   
+Die `TRANSLATE`-Funktion gibt einen Fehler zurück, wenn die Länge von Zeichen und Übersetzungen sich unterscheidet. Die `TRANSLATE`-Funktion sollte die Eingabe ohne Änderungen zurückgeben, wenn NULL-Werte als Zeichen oder Ersetzungsargumente bereitgestellt werden. Das Verhalten der `TRANSLATE`-Funktion sollte mit dem der [REPLACE](../../t-sql/functions/replace-transact-sql.md)-Funktion übereinstimmen.   
 
-Das Verhalten der `TRANSLATE` -Funktion ist gleichbedeutend mit der Verwendung mehrerer `REPLACE` Funktionen.
+Das Verhalten der `TRANSLATE`-Funktion entspricht dem Verwenden mehrerer `REPLACE`-Funktionen.
 
-`TRANSLATE`ist immer SC-Sortierung beachten.
+Bei `TRANSLATE` werden SC-Sortierungen immer beachtet.
 
 ## <a name="examples"></a>Beispiele   
 
-### <a name="a-replace-square-and-curly-braces-with-regular-braces"></a>A. Ersetzen Sie Square und geschweifte Klammern durch reguläre geschweifte Klammern    
-Die folgende Abfrage ersetzt Square und geschweifte Klammern in der Eingabezeichenfolge mit Klammern an:
+### <a name="a-replace-square-and-curly-braces-with-regular-braces"></a>A. Ersetzen von eckigen und geschweiften Klammern durch reguläre Klammern    
+Die folgende Abfrage ersetzt eckige und geschweifte Klammern in der Eingabezeichenfolge durch Klammern:
 ```
 SELECT TRANSLATE('2*[3+4]/{7-2}', '[]{}', '()()');
 ```
@@ -74,11 +74,11 @@ SELECT TRANSLATE('2*[3+4]/{7-2}', '[]{}', '()()');
 ```
 
 >  [!NOTE]
->  Die `TRANSLATE` -Funktion in diesem Beispiel ist, entspricht aber wesentlich vereinfachte als die Verwendung der folgenden Anweisung `REPLACE`:`SELECT REPLACE(REPLACE(REPLACE(REPLACE('2*[3+4]/{7-2}','[','('), ']', ')'), '{', '('), '}', ')');` 
+>  Die `TRANSLATE`-Funktion in diesem Beispiel entspricht dieser Funktionsweise ebenfalls, ist jedoch einfacher als die folgende Anweisung, die `REPLACE` verwendet: `SELECT REPLACE(REPLACE(REPLACE(REPLACE('2*[3+4]/{7-2}','[','('), ']', ')'), '{', '('), '}', ')');` 
 
 
-###  <a name="b-convert-geojson-points-into-wkt"></a>B. GeoJSON-Punkte in WKT konvertieren    
-GeoJSON ist ein Format für eine Vielzahl von geografischen Datenstrukturen-Codierung. Mit der `TRANSLATE` Funktion Entwickler können einfach GeoJSON-Punkte WKT-Format und umgekehrt zu konvertieren. Die folgende Abfrage ersetzt Square und geschweifte Klammern in der Eingabe durch reguläre geschweiften Klammern an:   
+###  <a name="b-convert-geojson-points-into-wkt"></a>B. Konvertieren von GeoJSON-Punkten in WKT    
+GeoJSON ist ein Format für das Codieren von vielen verschiedenen geografischen Datenstrukturen. Mit der `TRANSLATE`-Funktion können Entwickler GeoJSON-Punkte einfach in das WKT-Format (und umgekehrt) konvertieren. Die folgende Abfrage ersetzt eckige und geschweifte Klammern in der Eingabe durch reguläre Klammern:   
 ```sql
 SELECT TRANSLATE('[137.4, 72.3]' , '[,]', '( )') AS Point,
     TRANSLATE('(137.4 72.3)' , '( )', '[,]') AS Coordinates;
@@ -89,10 +89,10 @@ SELECT TRANSLATE('[137.4, 72.3]' , '[,]', '( )') AS Point,
 
 |Punkt  |Koordinaten |  
 ---------|--------- |
-(137.4  72.3) |[137.4,72.3] |
+(137,4; 72,3) |[137,4; 72,3] |
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen finden Sie unter
  [CONCAT &#40;Transact-SQL&#41;](../../t-sql/functions/concat-transact-sql.md)  
  [CONCAT_WS &#40;Transact-SQL&#41;](../../t-sql/functions/concat-ws-transact-sql.md)  
  [FORMATMESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/formatmessage-transact-sql.md)  

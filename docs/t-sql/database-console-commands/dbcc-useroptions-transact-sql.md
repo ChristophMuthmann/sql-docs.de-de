@@ -1,5 +1,5 @@
 ---
-title: DBCC USEROPTIONS (Transact-SQL) | Microsoft Docs
+title: DBCC USEROPTIONS (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 11/14/2017
 ms.prod: sql-non-specified
@@ -77,7 +77,7 @@ isolation level              read committed
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.
  ```  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
 DBCC USEROPTIONS meldet die Isolationsstufe 'read committed snapshot', wenn die Datenbankoption READ_COMMITTED_SNAPSHOT auf ON festgelegt ist und die Isolationsstufe der Transaktion auf 'read commited' festgelegt ist. Die eigentliche Isolationsstufe ist 'read commited'.
   
 ## <a name="permissions"></a>Berechtigungen  
@@ -90,7 +90,7 @@ Im folgenden Beispiel werden die aktiven SET-Optionen für die aktuelle Sitzung 
 DBCC USEROPTIONS;  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
 [SET-Anweisungen &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)  
 [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)

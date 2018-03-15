@@ -1,5 +1,5 @@
 ---
-title: ZUR ZEITZONE (Transact-SQL) | Microsoft Docs
+title: AT TIME ZONE (Transact-SQL) | Microsoft-Dokumentation
 ms.date: 11/16/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
@@ -29,12 +29,12 @@ ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="at-time-zone-transact-sql"></a>ZUR ZEITZONE (Transact-SQL)
+# <a name="at-time-zone-transact-sql"></a>AT TIME ZONE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Konvertiert eine *Inputdate* auf den entsprechenden *"DateTimeOffset"* Wert in der Zielzeitzone. Wenn *Inputdate* erfolgt ohne Offsetinformationen, die Funktion den Offset der Zeitzone, vorausgesetzt, dass gilt *Inputdate* Wert wird angegeben, in der Zielzeitzone. Wenn *Inputdate* dient als ein *"DateTimeOffset"* Wert als **AT TIME ZONE** Klausel konvertiert sie in der Zielzeitzone, die mithilfe von Konvertierungsregeln für die Zeitzone.  
+  Konvertiert einen *inputdate*-Wert in den entsprechenden *datetimeoffset*-Wert in der Zielzeitzone. Wenn *inputdate* ohne Offsetinformationen bereitgestellt wird, wendet die Funktion den Zeitzonenoffset an und setzt dabei voraus, dass der *inputdate*-Wert in der Zielzeitzone bereitgestellt wird. Wenn *inputdate* als *datetimeoffset*-Wert bereitgestellt wird, rechnet die **AT TIME ZONE**-Klausel den Wert mithilfe der Umrechnungsregeln der Zielzeitzone in die Zielzeitzone um.  
   
- **ZUR ZEITZONE** Implementierung basiert auf einem Windows-Mechanismus zu konvertierende **"DateTime"** Werte zwischen Zeitzonen.  
+ Die Implementierung von **AT TIME ZONE** hängt von einem Windows-Mechanismus zum Umrechnen von **datetime**-Werten in verschiedene Zeitzonen ab.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -46,21 +46,21 @@ inputdate AT TIME ZONE timezone
   
 ## <a name="arguments"></a>Argumente  
  *inputdate*  
- Ist ein Ausdruck, der in aufgelöst werden kann ein **Smalldatetime**, **"DateTime"**, **datetime2**, oder **"DateTimeOffset"** Wert.  
+ Ein Ausdruck, der in einen der folgenden Werte aufgelöst werden kann: **smalldatetime**, **datetime**, **datetime2** oder **datetimeoffset**.  
   
  *timezone*  
- Name der Zielzeitzone. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]basiert auf Zeitzonen, die in der Windows-Registrierung gespeichert sind. Alle Zeitzonen, die auf dem Computer installiert werden in der folgenden Registrierungsstruktur gespeichert: **KEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time Zonen**. Eine Liste der installierten Zeitzonen ist ebenfalls verfügbar gemacht, durch die [Sys. time_zone_info &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-time-zone-info-transact-sql.md) anzeigen.  
+ Name der Zielzeitzone. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] basiert auf in der Windows-Registrierung gespeicherten Zeitzonen. Alle auf dem Computer installierten Zeitzonen sind in der folgenden Registrierungsstruktur gespeichert: **KEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time Zones**. Eine Liste der installierten Zeitzonen wird auch über die [sys.time_zone_info &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-time-zone-info-transact-sql.md)-Sicht angezeigt.  
   
 ## <a name="return-types"></a>Rückgabetypen  
- Gibt den Datentyp des **"DateTimeOffset"**  
+ Gibt den Datentyp von **datetimeoffset** zurück.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Die **"DateTimeOffset"** Wert in der Zielzeitzone.  
+ Der **datetimeoffset**-Wert in der Zielzeitzone.  
   
-## <a name="remarks"></a>Hinweise  
- **ZUR ZEITZONE** gelten bestimmte Regeln zum Konvertieren der Eingabewerte in **Smalldatetime**, **"DateTime"** und **datetime2** -Datentypen, die in fallen ein Intervall, das betroffen ist von der Änderung DST:  
+## <a name="remarks"></a>Remarks  
+ **AT TIME ZONE** wendet bestimmte Regeln für die Umrechnung von Eingabewerten in die Datentypen **smalldatetime**, **datetime** und **datetime2** an, die in einem Intervall liegen, das durch den Wechsel zur Sommerzeit bestimmt wird:  
   
--   Wenn die Uhr im voraus festgelegt ist, besteht eine Lücke in Ortszeit, die die Dauer hängt von der Dauer der Anpassung Uhr (in der Regel 1 Stunde, aber es kann je nach Zeitzone 30 oder 45 Minuten). In diesem Fall werden Zeitpunkten, die diese Lücke gehören konvertiert, wobei der Offset *nach* DST ändern.  
+-   Wenn die Uhr vorgestellt wird, entsteht in der Ortszeit eine Lücke, deren Dauer von der Uhrzeitanpassung abhängt (in der Regel eine Stunde, kann jedoch je nach Zeitzone auch 30 oder 45 Minuten betragen). In diesem Fall werden Zeitpunkte innerhalb dieser Lücke mit dem Offset *nach* dem Wechsel zur Sommerzeit umgerechnet.  
   
     ```  
     /*  
@@ -91,7 +91,7 @@ inputdate AT TIME ZONE timezone
   
     ```  
   
-- Wenn die Uhr wieder festgelegt ist, werden 2 Stunden nach der lokalen Zeit auf eine Stunde überlappt.  In diesem Fall werden Zeitpunkten, die das überlappte Intervall gehören dargestellt, mit dem Offset *vor* die Uhr ändern:  
+- Wenn die Uhr wieder zurückgestellt wird, überschneiden sich zwei Stunden der Ortszeit um eine Stunde.  In diesem Fall werden Zeitpunkte im Überlappungsintervall mit dem Offset *vor* der Uhrzeitumstellung dargestellt:  
   
     ```  
     /*  
@@ -123,12 +123,12 @@ inputdate AT TIME ZONE timezone
   
     ```  
 
-Da einige Informationen (z. B. Timezone-Regeln), außerhalb von verwaltet wird [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] und gelegentlich gerechnet werden die **AT TIME ZONE** Funktion wird als nicht deterministisch klassifiziert. 
+Da Informationen (wie Zeitzonenregeln) außerhalb von [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] gespeichert und von Zeit zu Zeit geändert werden, wird die **AT TIME ZONE**-Funktion als nicht deterministisch klassifiziert. 
   
 ## <a name="examples"></a>Beispiele  
   
-### <a name="a-add-target-time-zone-offset-to-datetime-without-offset-information"></a>A. Hinzufügen von Ziel Zeitzonenoffset in "DateTime" ohne Offsetinformationen  
- Verwendung **AT TIME ZONE** hinzuzufügende Offset basierend auf der Zeitzonenregeln, wenn Sie wissen, dass die ursprüngliche **"DateTime"** Werte finden Sie in der gleichen Zeitzone:  
+### <a name="a-add-target-time-zone-offset-to-datetime-without-offset-information"></a>A. Hinzufügen des Zielzeitzonenoffsets zu datetime ohne Offsetinformationen  
+ Verwenden Sie **AT TIME ZONE** zum Hinzufügen des Offsets basierend auf Zeitzonenregeln, wenn Sie wissen, dass die ursprünglichen **datetime**-Werte in derselben Zeitzone bereitgestellt werden:  
   
 ```  
 USE AdventureWorks2016;  
@@ -139,8 +139,8 @@ SELECT SalesOrderID, OrderDate,
 FROM Sales.SalesOrderHeader;  
 ```  
   
-### <a name="b-convert-values-between-different-time-zones"></a>B. Konvertieren von Werten zwischen verschiedenen Zeitzonen  
- Das folgende Beispiel konvertiert die Werte zwischen verschiedenen Zeitzonen:  
+### <a name="b-convert-values-between-different-time-zones"></a>B. Umrechnen von Werten zwischen verschiedenen Zeitzonen  
+ Im folgenden Beispiel werden Werte zwischen verschiedenen Zeitzonen umgerechnet:  
   
 ```  
 USE AdventureWorks2016;  
@@ -153,7 +153,7 @@ SELECT SalesOrderID, OrderDate,
 FROM Sales.SalesOrderHeader;  
 ```  
   
-### <a name="c-query-temporal-tables-using-local-time-zone"></a>C. Abfragen von Temporalen Tabellen mit der lokalen Zeitzone  
+### <a name="c-query-temporal-tables-using-local-time-zone"></a>C. Abfragen von temporalen Tabellen mithilfe der lokalen Zeitzone  
  Im folgenden Beispiel werden Daten aus einer temporalen Tabelle ausgewählt.  
   
 ```  
@@ -172,8 +172,8 @@ FROM  Person.Person_Temporal
 FOR SYSTEM_TIME AS OF @ASOF;  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Datums- und Uhrzeittypen](../../t-sql/data-types/date-and-time-types.md)   
- [Datums- und Zeitdaten Typen und-Funktionen &#40; Transact-SQL &#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)  
+ [Date and Time Data Types and Functions &#40;Transact-SQL&#41; (Datums- und Uhrzeitdatentypen und zugehörige Funktionen (Transact-SQL))](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)  
   
   

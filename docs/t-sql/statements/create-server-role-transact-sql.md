@@ -1,5 +1,5 @@
 ---
-title: Erstellen Sie die SERVERROLLE (Transact-SQL) | Microsoft Docs
+title: CREATE SERVER ROLE (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 06/02/2016
 ms.prod: sql-non-specified
@@ -55,13 +55,13 @@ CREATE SERVER ROLE role_name [ AUTHORIZATION server_principal ]
  *role_name*  
  Der Name der zu erstellenden Serverrolle.  
   
- Autorisierung *Server_principal*  
+ AUTHORIZATION *server_principal*  
  Der Anmeldename, der die neue Serverrolle besitzt. Wenn kein Anmeldename angegeben wird, besitzt der Anmeldename, der CREATE SERVER ROLE ausführt, diese Serverrolle.  
   
-## <a name="remarks"></a>Hinweise  
- Serverrollen sind sicherungsfähige Elemente auf Serverebene. Nachdem Sie eine Serverrolle erstellt haben, konfigurieren Sie die Berechtigungen der Rolle auf Serverebene mithilfe von GRANT, DENY und REVOKE. Verwenden Sie zum Hinzufügen von Anmeldungen, oder Entfernen von Anmeldenamen aus einer Serverrolle, [ALTER SERVER ROLE &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-server-role-transact-sql.md). Verwenden Sie zum Löschen einer Serverrolle [DROP SERVER ROLE &#40; Transact-SQL &#41; ](../../t-sql/statements/drop-server-role-transact-sql.md). Weitere Informationen finden Sie unter [sys.server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  
+## <a name="remarks"></a>Remarks  
+ Serverrollen sind sicherungsfähige Elemente auf Serverebene. Nachdem Sie eine Serverrolle erstellt haben, konfigurieren Sie die Berechtigungen der Rolle auf Serverebene mithilfe von GRANT, DENY und REVOKE. Informationen zum Hinzufügen oder Entfernen von Anmeldenamen bei einer Serverrolle finden Sie unter [ALTER SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md). Informationen zum Löschen einer Serverrolle finden Sie unter [DROP SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-role-transact-sql.md). Weitere Informationen finden Sie unter [sys.server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  
   
- Sie können die Serverrollen anzeigen, durch Abfragen der [server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md) und [Sys. server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) Katalogsichten.  
+ Sie können die Serverrollen anzeigen, indem Sie die [sys.server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md)-Katalogsicht und die [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)-Katalogsicht abfragen.  
   
  Serverrollen kann keine Berechtigung für sicherungsfähige Elemente auf Datenbankebene gewährt werden. Informationen zum Erstellen von Datenbankrollen finden Sie unter [CREATE ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-role-transact-sql.md).  
   
@@ -70,9 +70,9 @@ CREATE SERVER ROLE role_name [ AUTHORIZATION server_principal ]
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die CREATE SERVER ROLE-Berechtigung oder die Mitgliedschaft in der festen sysadmin-Serverrolle.  
   
- Erfordert für Anmeldenamen außerdem IMPERSONATE für den *server_principal* , die ALTER-Berechtigung für Serverrollen, die als *server_principal*verwendet werden, oder die Mitgliedschaft in einer Windows-Gruppe, die als server_principal verwendet wird.  
+ Erfordert für Anmeldenamen außerdem IMPERSONATE für den *server_principal* , die ALTER-Berechtigung für Serverrollen, die als *server_principal* verwendet werden, oder die Mitgliedschaft in einer Windows-Gruppe, die als server_principal verwendet wird.  
   
- Dies wird der Audit Server Principal Management-Ereignis ausgelöst, mit dem Objekttyp Serverrolle festgelegt und das Ereignis des Typs hinzufügen.  
+ Hierdurch wird das Audit Server Principal Management-Ereignis mit dem Objekttyp ausgelöst, der auf die Serverrolle und den hinzuzufügenden Ereignistyp festgelegt ist.  
   
  Wenn Sie die AUTHORIZATION-Option verwenden, um den Besitz für Serverrollen zuzuweisen, sind außerdem folgende Berechtigungen erforderlich:  
   
@@ -100,8 +100,8 @@ CREATE SERVER ROLE auditors AUTHORIZATION securityadmin;
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [DROP SERVER ROLE &#40; Transact-SQL &#41;](../../t-sql/statements/drop-server-role-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [DROP SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-role-transact-sql.md)   
  [Prinzipale &#40;Datenbankmodul&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
  [sp_addrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)   

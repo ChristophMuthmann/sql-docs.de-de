@@ -1,5 +1,5 @@
 ---
-title: STGeomCollFromWKB (Geography-Datentyp) | Microsoft Docs
+title: STGeomCollFromWKB (geography-Datentyp) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 07/30/2017
 ms.prod: sql-non-specified
@@ -51,12 +51,12 @@ STGeomCollFromWKB ( 'WKB_geometrycollection' , SRID )
  Ein **int** -Ausdruck, der den SRID (Spatial Reference ID) der **GeometryCollection** -Instanz darstellt, die Sie zurückgeben möchten.  
   
 ## <a name="return-types"></a>Rückgabetypen  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Rückgabetyp: **Geography**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Rückgabetyp: **geography**  
   
  CLR-Rückgabetyp: **SqlGeography**  
   
-## <a name="remarks"></a>Hinweise  
- Die OGC-Typ, der die **Geography** vom STGeomCollFromWKB() zurückgegebene Instanz wird festgelegt, um **GeometryCollection**, **MultiPolygon**, **MultiLineString**, oder **MultiPoint**, abhängig von der entsprechenden WKB-Eingabe.  
+## <a name="remarks"></a>Remarks  
+ Der OGC-Typ der von STGeomCollFromWKB() zurückgegebenen **geography**-Instanz wird, abhängig von der entsprechenden WKB-Eingabe, auf **GeometryCollection**, **MultiPolygon**, **MultiLineString** oder **MultiPoint** festgelegt.  
   
  Diese Methode löst eine **FormatException** -Ausnahme aus, wenn die Eingabe nicht korrekt formatiert ist.  
   
@@ -69,7 +69,7 @@ SET @g = geography::STGeomCollFromWKB(0x0107000000020000000101000000759318045696
 SELECT @g.ToString();  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Statische geography-Methoden des OGC](../../t-sql/spatial-geography/ogc-static-geography-methods.md)  
   
   

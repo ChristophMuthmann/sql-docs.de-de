@@ -1,5 +1,5 @@
 ---
-title: Filegroup_name (Transact-SQL) | Microsoft Docs
+title: FILEGROUP_NAME (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -54,13 +54,13 @@ FILEGROUP_NAME ( filegroup_id )
   
 ## <a name="arguments"></a>Argumente  
  *filegroup_id*  
- Die ID der Dateigruppe, deren Name zurückgegeben werden soll. *Filegroup_id* ist **"smallint"**.  
+ Die ID der Dateigruppe, deren Name zurückgegeben werden soll. *filegroup_id* ist vom Datentyp **smallint**.  
   
 ## <a name="return-types"></a>Rückgabetypen  
- **vom Datentyp nvarchar(128)**  
+ **nvarchar(128)**  
   
-## <a name="remarks"></a>Hinweise  
- *Filegroup_id* entspricht der **Data_space_id** Spalte in der **"Sys.FileGroups"** -Katalogsicht angezeigt.  
+## <a name="remarks"></a>Remarks  
+ *filegroup_id* entspricht der **data_space_id**-Spalte in der **sys.filegroups**-Katalogsicht.  
   
 ## <a name="examples"></a>Beispiele  
  In diesem Beispiel wird der Dateigruppenname für die Dateigruppen-ID `1` in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Datenbank zurückgegeben.  
@@ -81,9 +81,9 @@ PRIMARY
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Metadatenfunktionen &#40; Transact-SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Metadata Functions &#40;Transact-SQL&#41; (Metadatenfunktionen (Transact-SQL))](../../t-sql/functions/metadata-functions-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- ["Sys.FileGroups" &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)  
+ [sys.filegroups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)  
   
   

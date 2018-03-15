@@ -1,5 +1,5 @@
 ---
-title: NTILE (Transact-SQL) | Microsoft Docs
+title: NTILE (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -49,19 +49,19 @@ NTILE (integer_expression) OVER ( [ <partition_by_clause> ] < order_by_clause > 
   
 ## <a name="arguments"></a>Argumente  
  *integer_expression*  
- Dies ist ein konstanter Ausdruck aus einer positiven ganzen Zahl, der die Anzahl von Gruppen angibt, in die jede Partition unterteilt werden muss. *Integer_expression* kann vom Typ **Int**, oder **"bigint"**.  
+ Dies ist ein konstanter Ausdruck aus einer positiven ganzen Zahl, der die Anzahl von Gruppen angibt, in die jede Partition unterteilt werden muss. *integer_expression* kann vom Typ **int** oder **bigint** sein.  
   
- \<Partition_by_clause >  
- Teilt das Resultset erzeugt, indem Sie die [FROM](../../t-sql/queries/from-transact-sql.md) -Klausel in Partitionen, auf die die Funktion angewendet wird. Die Syntax von PARTITION BY finden Sie unter [Klausel "OVER" &#40; Transact-SQL &#41; ](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ \<partition_by_clause>  
+ Teilt das von der [FROM](../../t-sql/queries/from-transact-sql.md)-Klausel erzeugte Resultset in Partitionen, auf die die Funktion angewendet wird. Weitere Informationen zur Syntax von PARTITION BY finden Sie unter [OVER-Klausel &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
- \<Order_by_clause >  
- Bestimmt die Reihenfolge, in der die NTILE-Werte den Zeilen in einer Partition zugeordnet werden. Eine ganze Zahl nicht darstellen kann eine Spalte bei der \<Order_by_clause > in einer rangfolgefunktion verwendet wird.  
+ \<order_by_clause>  
+ Bestimmt die Reihenfolge, in der die NTILE-Werte den Zeilen in einer Partition zugeordnet werden. Eine ganze Zahl kann keine Spalte darstellen, wenn \<order_by_clause> in einer Rangfolgefunktion verwendet wird.  
   
 ## <a name="return-types"></a>Rückgabetypen  
  **bigint**  
   
-## <a name="remarks"></a>Hinweise  
- Wenn die Anzahl der Zeilen in einer Partition nicht durch teilbar ist *Integer_expression*, dies führt dazu, dass Gruppen von zwei Größen, die sich unterscheiden, um ein Mitglied. Größere Gruppen stehen vor kleineren Gruppen in der von der OVER-Klausel angegebenen Reihenfolge. Wenn die Gesamtanzahl der Zeilen z. B. 53 beträgt und fünf Gruppen verwendet werden, enthalten die ersten drei Gruppen 11 Zeilen und die beiden anderen Gruppen jeweils 10 Zeilen. Falls jedoch die Gesamtanzahl der Zeilen durch die Anzahl von Gruppen teilbar ist, werden die Zeilen gleichmäßig auf die Gruppen verteilt. Wenn z. B. insgesamt 50 Zeilen und fünf Gruppen vorhanden sind, enthält jeder Bucket 10 Zeilen.  
+## <a name="remarks"></a>Remarks  
+ Falls die Anzahl der Zeilen in einer Partition nicht durch den *integer_expression*-Wert geteilt werden kann, führt dies zu Gruppen mit zwei unterschiedlichen Größen, die sich um ein Element unterscheiden. Größere Gruppen stehen vor kleineren Gruppen in der von der OVER-Klausel angegebenen Reihenfolge. Wenn die Gesamtanzahl der Zeilen z. B. 53 beträgt und fünf Gruppen verwendet werden, enthalten die ersten drei Gruppen 11 Zeilen und die beiden anderen Gruppen jeweils 10 Zeilen. Falls jedoch die Gesamtanzahl der Zeilen durch die Anzahl von Gruppen teilbar ist, werden die Zeilen gleichmäßig auf die Gruppen verteilt. Wenn z. B. insgesamt 50 Zeilen und fünf Gruppen vorhanden sind, enthält jeder Bucket 10 Zeilen.  
   
  NTILE ist nicht deterministisch. Weitere Informationen finden Sie unter [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).  
   
@@ -112,7 +112,7 @@ Pamela         Ansman-Wolfe          4         1,352,577.13   98027
 ```  
   
 ### <a name="b-dividing-the-result-set-by-using-partition-by"></a>B. Aufteilen des Resultsets mithilfe von PARTITION BY  
- Im folgenden Beispiel wird das `PARTITION BY`-Argument dem Code in Beispiel A hinzugefügt. Die Zeilen werden zunächst durch `PostalCode` partitioniert und anschließend in jedem `PostalCode` in vier Gruppen aufgeteilt. Im Beispiel wird auch eine Variable deklariert `@NTILE_Var` und verwendet diese Variable zum Angeben des Werts für die *Integer_expression* Parameter.  
+ Im folgenden Beispiel wird das `PARTITION BY`-Argument dem Code in Beispiel A hinzugefügt. Die Zeilen werden zunächst durch `PostalCode` partitioniert und anschließend in jedem `PostalCode` in vier Gruppen aufgeteilt. Im Beispiel wird auch eine `@NTILE_Var`-Variable deklariert, die zum Angeben des Werts für den *integer_expression*-Parameter verwendet wird.  
   
 ```  
 USE AdventureWorks2012;  
@@ -156,10 +156,10 @@ Lynn         Tsoflias             4        1,421,810.92  98055
 (14 row(s) affected)  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
 ### <a name="c-dividing-rows-into-groups"></a>C. Unterteilen von Zeilen in Gruppen  
- Im folgenden Beispiel wird die NTILE-Funktion, um einen Satz von Vertriebsmitarbeiter in vier Gruppen basierend auf ihren zugewiesenen sollvorgaben für das Jahr 2003 zu unterteilen. Da die Gesamtanzahl der Zeilen nicht durch die Anzahl von Gruppen teilbar ist, weist fünf Zeilen auf der ersten Gruppe und die übrigen Gruppen haben jeweils vier Zeilen.  
+ Im folgenden Beispiel wird die NTILE-Funktion verwendet, um eine Gruppe von Vertriebsmitarbeitern basierend auf den ihnen zugewiesenen Sollvorgaben für den Verkauf im Jahr 2003 in vier Gruppen zu unterteilen. Da die Gesamtanzahl der Zeilen nicht durch die Anzahl von Gruppen teilbar ist, enthält die erste Gruppe fünf Zeilen, und die übrigen Gruppen enthalten jeweils vier Zeilen.  
   
 ```  
 -- Uses AdventureWorks  
@@ -199,7 +199,7 @@ Tsoflias          4          867,000.00
 ```  
   
 ### <a name="d-dividing-the-result-set-by-using-partition-by"></a>D. Aufteilen des Resultsets mithilfe von PARTITION BY  
- Im folgenden Beispiel wird die PARTITION BY-Argument an den Code in Beispiel a berichtet. Die Zeilen werden zunächst durch partitioniert `SalesTerritoryCountry` , und klicken Sie dann in zwei Gruppen innerhalb jedes unterteilt `SalesTerritoryCountry`. Beachten Sie, dass die ORDER BY in der OVER-Klausel die NTILE sortiert und die ORDER BY der SELECT-Anweisung das Resultset sortiert.  
+ Im folgenden Beispiel wird das PARTITION BY-Argument dem Code in Beispiel A hinzugefügt. Die Zeilen werden zunächst durch `SalesTerritoryCountry` partitioniert und anschließend in jedem `SalesTerritoryCountry` in vier Gruppen aufgeteilt. Beachten Sie, dass über die Anweisung ORDER BY in der OVER-Klausel NTILE und über die Anweisung SELECT ein Resultset angefordert wird.  
   
 ```  
 -- Uses AdventureWorks  
@@ -241,11 +241,11 @@ Ito               2        2,644,000.00     United States
 Ansman-Wolfe      2        1,183,000.00     United States
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Rang &#40; Transact-SQL &#41;](../../t-sql/functions/rank-transact-sql.md)   
- [DENSE_RANK &#40; Transact-SQL &#41;](../../t-sql/functions/dense-rank-transact-sql.md)   
- [ROW_NUMBER &#40; Transact-SQL &#41;](../../t-sql/functions/row-number-transact-sql.md)   
- [Rangfolge Funktionen &#40; Transact-SQL &#41;](../../t-sql/functions/ranking-functions-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [RANK &#40;Transact-SQL&#41;](../../t-sql/functions/rank-transact-sql.md)   
+ [DENSE_RANK &#40;Transact-SQL&#41;](../../t-sql/functions/dense-rank-transact-sql.md)   
+ [ROW_NUMBER &#40;Transact-SQL&#41;](../../t-sql/functions/row-number-transact-sql.md)   
+ [Rangfolgefunktionen &#40;Transact-SQL&#41;](../../t-sql/functions/ranking-functions-transact-sql.md)   
  [Integrierte Funktionen &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)  
   
   

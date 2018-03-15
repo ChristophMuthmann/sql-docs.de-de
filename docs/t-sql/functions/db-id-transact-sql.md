@@ -1,5 +1,5 @@
 ---
-title: Db_id (Transact-SQL) | Microsoft Docs
+title: DB_ID (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 07/30/2017
 ms.prod: sql-non-specified
@@ -50,17 +50,17 @@ DB_ID ( [ 'database_name' ] )
 ```  
   
 ## <a name="arguments"></a>Argumente  
-"*Database_name*"  
-Der Datenbankname, der verwendet wird, um die entsprechende Datenbank-ID zurückzugeben. *database_name* ist **sysname** Wenn *Database_name* wird weggelassen wird, wird die aktuelle Datenbank-ID zurückgegeben.
+'*database_name*'  
+Der Datenbankname, der verwendet wird, um die entsprechende Datenbank-ID zurückzugeben. *database_name* ist **sysname** Wenn *database_name* nicht angegeben ist, wird die aktuelle Datenbank-ID zurückgegeben.
   
 ## <a name="return-types"></a>Rückgabetypen
 **int**
   
 ## <a name="permissions"></a>Berechtigungen  
-Wenn der Aufrufer **DB_ID** ist nicht der Besitzer der Datenbank und die Datenbank ist nicht **master** oder **Tempdb**, mindestens die Berechtigung zum Anzeigen der entsprechenden Zeile erforderlich ALTER ANY DATABASE oder VIEW ANY DATABASE auf Serverebene-Berechtigung oder die CREATE DATABASE-Berechtigung in den **master** Datenbank. Die Datenbank, mit der der Aufrufer eine Verbindung hergestellt hat, kann immer in **sys.databases**angezeigt werden.
+Wenn der Aufrufer von **DB_ID** nicht der Besitzer der Datenbank und die Datenbank keine **master**- oder **tempdb**-Datenbank ist, ist zum Anzeigen der entsprechenden Zeile mindestens die Berechtigung ALTER ANY DATABASE oder VIEW ANY DATABASE auf Serverebene bzw. die Berechtigung CREATE DATABASE für die **master**-Datenbank erforderlich. Die Datenbank, mit der der Aufrufer eine Verbindung hergestellt hat, kann immer in **sys.databases**angezeigt werden.
   
 > [!IMPORTANT]  
->  Standardmäßig verfügt die public-Rolle die VIEW ANY DATABASE-Berechtigung, alle Anmeldungen, die Datenbankinformationen finden Sie unter. Um eine Anmeldung über die Möglichkeit zur Erkennung von einer Datenbank zu blockieren, Aufheben der VIEW ANY DATABASE-Berechtigung aus öffentlichen oder für einzelne Anmeldenamen die VIEW ANY DATABASE-Berechtigung zu verweigern.  
+>  Standardmäßig verfügt die öffentliche Rolle über die Berechtigung VIEW ANY DATABASE, sodass alle Anmeldenamen auf Datenbankinformationen zugreifen können. Um zu verhindern, dass ein bestimmter Anmeldename eine Datenbank ermitteln kann, widerrufen Sie die VIEW ANY DATABASE-Berechtigung „Öffentlich“ über die REVOKE-Anweisung, oder Verweigern Sie die VIEW ANY DATABASE-Berechtigung für einzelne Anmeldenamen über die DENY-Anweisung.  
   
 ## <a name="examples"></a>Beispiele  
   
@@ -73,7 +73,7 @@ GO
 ```  
   
 ### <a name="b-returning-the-database-id-of-a-specified-database"></a>B. Zurückgeben der Datenbank-ID einer angegebenen Datenbank  
-Das folgende Beispiel gibt die ID des dem [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] Datenbank.
+Im folgenden Beispiel wird die Datenbank-ID der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]-Datenbank zurückgegeben.
   
 ```sql
 SELECT DB_ID(N'AdventureWorks2008R2') AS [Database ID];  
@@ -81,7 +81,7 @@ GO
 ```  
   
 ### <a name="c-using-dbid-to-specify-the-value-of-a-system-function-parameter"></a>C. Angeben des Werts eines Systemfunktionsparameters mithilfe von DB_ID  
-Im folgenden Beispiel wird `DB_ID` zum Zurückgeben der Datenbank-ID, der die [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] Datenbank in der Systemfunktion `sys.dm_db_index_operational_stats`. Der erste Parameter dieser Funktion ist eine Datenbank-ID.
+Im folgenden Beispiel wird mithilfe von `DB_ID` die Datenbank-ID der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]-Datenbank in der Systemfunktion `sys.dm_db_index_operational_stats` zurückgegeben. Der erste Parameter dieser Funktion ist eine Datenbank-ID.
   
 ```sql
 DECLARE @db_id int;  
@@ -103,25 +103,25 @@ ELSE
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
-### <a name="d-return-the-id-of-the-current-database"></a>D. Gibt die ID der aktuellen Datenbank  
+### <a name="d-return-the-id-of-the-current-database"></a>D. Rückgabe der ID der aktuellen Datenbank  
 Im folgenden Beispiel wird die Datenbank-ID der aktuellen Datenbank zurückgegeben.
   
 ```sql
 SELECT DB_ID();  
 ```  
   
-### <a name="e-return-the-id-of-a-named-database"></a>E. Die ID einer benannten Datenbank zurück.  
-Im folgende Beispiel gibt die Datenbank-ID von der AdventureWorksDW2012-Datenbank zurück.
+### <a name="e-return-the-id-of-a-named-database"></a>E. Zurückgeben der ID der benannten Datenbank.  
+Im folgenden Beispiel wird die Datenbank-ID der AdventureWorksDW2012-Datenbank zurückgegeben.
   
 ```sql
 SELECT DB_ID('AdventureWorksPDW2012');  
 ```  
   
 ## <a name="see-also"></a>Siehe auch
-[Db_name &#40; Transact-SQL &#41;](../../t-sql/functions/db-name-transact-sql.md)  
-[Metadatenfunktionen &#40; Transact-SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)  
+[DB_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/db-name-transact-sql.md)  
+[Metadata Functions &#40;Transact-SQL&#41; (Metadatenfunktionen (Transact-SQL))](../../t-sql/functions/metadata-functions-transact-sql.md)  
 [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)  
 [sys.dm_db_index_operational_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)
   

@@ -1,5 +1,5 @@
 ---
-title: KILL STATS JOB (Transact-SQL) | Microsoft Docs
+title: KILL STATS JOB (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 07/27/2017
 ms.prod: sql-non-specified
@@ -39,7 +39,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="kill-stats-job-transact-sql"></a>KILL STATS JOB (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Beendet einen asynchronen statistikupdateauftrag in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  Beendet einen asynchronen Statistikupdateauftrag in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Update.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -54,7 +54,7 @@ KILL STATS JOB job_id
  *job_id*  
  Ist das job_id-Feld, das von der dynamischen Verwaltungssicht sys.dm_exec_background_job_queue für den Auftrag zurückgegeben wird.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  job_id hängt nicht mit session_id oder der in anderen Formen der KILL-Anweisung verwendeten Arbeitseinheit zusammen.  
   
 ## <a name="permissions"></a>Berechtigungen  
@@ -63,16 +63,16 @@ KILL STATS JOB job_id
  KILL STATS JOB-Berechtigungen erhalten standardmäßig die Mitglieder der festen Datenbankrollen sysadmin und processadmin; sie sind nicht übertragbar.  
   
 ## <a name="examples"></a>Beispiele  
- Das folgende Beispiel zeigt, wie das Update der Statistik mit einem Auftrag verknüpften beendet, in dem die *Job_id* = `53`.  
+ Im folgenden Beispiel wird veranschaulicht, wie das mit einem Auftrag verknüpfte Statistikupdate beendet wird, wobei die *job_id* = `53` ist.  
   
 ```  
 KILL STATS JOB 53;  
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [KILL &#40;Transact-SQL&#41;](../../t-sql/language-elements/kill-transact-sql.md)   
- [KILL QUERY NOTIFICATION SUBSCRIPTION &#40; Transact-SQL &#41;](../../t-sql/language-elements/kill-query-notification-subscription-transact-sql.md)   
+ [KILL QUERY NOTIFICATION SUBSCRIPTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/kill-query-notification-subscription-transact-sql.md)   
  [sys.dm_exec_background_job_queue &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-background-job-queue-transact-sql.md)   
  [Statistik](../../relational-databases/statistics/statistics.md)  
   

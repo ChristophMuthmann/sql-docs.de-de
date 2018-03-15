@@ -1,5 +1,5 @@
 ---
-title: Erstellen der Tabelle (SQL-Diagramm) | Microsoft Docs
+title: CREATE TABLE (SQL-Graph) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 05/04/2017
 ms.prod: sql-non-specified
@@ -45,13 +45,13 @@ ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="create-table-sql-graph"></a>Erstellen der Tabelle (SQL-Diagramm)
+# <a name="create-table-sql-graph"></a>CREATE TABLE (SQL-Graph)
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
-Erstellt eine neue Tabelle der SQL-Diagramm entweder als eine `NODE` oder eine `EDGE` Tabelle. 
+Erstellt entweder als `NODE`- oder `EDGE`-Tabelle eine neue SQL-Graph-Tabelle. 
   
 > [!NOTE]   
->  Standard Transact-SQL-Anweisungen finden Sie unter [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md).
+>  Standardanweisungen für Transact-SQL finden Sie unter [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md).
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -67,37 +67,37 @@ CREATE TABLE
   
   
 ## <a name="arguments"></a>Argumente  
-Dieses Dokument Listet nur die SQL-Diagramm für Argumente. Eine vollständige Liste und Beschreibung der unterstützten Argumente finden Sie unter [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)
+In diesem Dokument werden nur Argumente für SQL-Graph aufgelistet. Eine vollständige Liste und Beschreibung der unterstützten Argumente finden Sie unter [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md).
 
  *database_name*    
- Der Name der Datenbank, in der die Tabelle erstellt wird. *Database_name* müssen den Namen einer vorhandenen Datenbank angeben. Wenn nicht angegeben, *Database_name* Standardwerte auf die aktuelle Datenbank. Der Anmeldename für die aktuelle Verbindung muss einer vorhandenen Benutzer-ID in der durch den angegebenen Datenbank zugeordnet werden *Database_name*, und diese Benutzer-ID muss über CREATE TABLE-Berechtigungen verfügen.  
+ Der Name der Datenbank, in der die Tabelle erstellt wird. *database_name* muss dem Namen einer vorhandenen Datenbank entsprechen. Wird *database_name* nicht angegeben, wird standardmäßig die aktuelle Datenbank verwendet. Der Anmeldename für die aktuelle Verbindung muss einer vorhandenen Benutzer-ID in der durch *database_name* angegebenen Datenbank zugeordnet sein. Diese Benutzer-ID muss über CREATE TABLE-Berechtigungen verfügen.  
   
  *schema_name*    
  Der Name des Schemas, zu dem die neue Tabelle gehört.  
   
  *table_name*    
- Ist der Name der Tabelle Knoten oder Edge. Tabellennamen müssen den Regeln für [Bezeichner](../../relational-databases/databases/database-identifiers.md). *TABLE_NAME* kann maximal 128 Zeichen enthalten, mit Ausnahme von lokalen temporären Tabellennamen (Namen mit dem Präfix ein einzelnen Nummernzeichen (#)), die 116 Zeichen nicht überschreiten.  
+ Der Name der Knoten- oder Edgetabelle. Tabellennamen müssen die Regeln für [Bezeichner](../../relational-databases/databases/database-identifiers.md) erfüllen. *table_name* kann höchstens 128 Zeichen aufweisen, ausgenommen lokale temporäre Tabellennamen (Namen mit einem einzelnen Nummernzeichen (#) als Präfix), bei denen maximal 116 Zeichen zulässig sind.  
   
- KNOTEN   
- Erstellt eine Knotentabelle.
+ NODE   
+ Erstellt eine Knotentabelle
 
  EDGE  
- Erstellt eine Rahmentabelle an.  
+ Erstellt eine Edgetabelle  
   
-## <a name="remarks"></a>Hinweise  
-Erstellen eine temporäre Tabelle als Knoten oder Edge-Tabelle wird nicht unterstützt.  
+## <a name="remarks"></a>Remarks  
+Das Erstellen einer temporären Tabelle als Knoten- oder Edgetabelle wird nicht unterstützt.  
 
-Erstellen eine Knoten oder Edge-Tabelle als eine temporale Tabelle wird nicht unterstützt.
+Das Erstellen einer Knoten- oder Edgetabelle als temporale Tabelle wird nicht unterstützt.
 
-Stretch-Datenbank ist für Knoten oder Edge-Tabelle nicht unterstützt.
+Stretch Database wird für Knoten- oder Edgetabellen nicht unterstützt.
 
-Knoten oder Edge Tabellen darf nicht auf externe Tabellen (keine Polybase-Unterstützung für Diagramm Tabellen) sein. 
+Knoten- oder Edgetabellen können keine externen Tabellen sein (es besteht keine Unterstützung von PolyBase für Graph-Tabellen). 
   
  
 ## <a name="examples"></a>Beispiele  
   
-### <a name="a-create-a-node-table"></a>A. Erstellen einer `NODE` Tabelle
- Im folgende Beispiel wird gezeigt, wie zum Erstellen einer `NODE` Tabelle
+### <a name="a-create-a-node-table"></a>A. Erstellen einer `NODE`-Tabelle
+ Im folgenden Beispiel wird das Erstellen einer `NODE`-Tabelle veranschaulicht.
 
 ```
  CREATE TABLE Person (
@@ -107,8 +107,8 @@ Knoten oder Edge Tabellen darf nicht auf externe Tabellen (keine Polybase-Unters
  ) AS NODE;
 ```
 
-### <a name="b-create-an-edge-table"></a>B. Erstellen einer `EDGE` Tabelle
-Die folgenden Beispiele zeigen, wie erstellen `EDGE` Tabellen
+### <a name="b-create-an-edge-table"></a>B. Erstellen einer `EDGE`-Tabelle
+Im folgenden Beispiel wird das Erstellen von `EDGE`-Tabellen veranschaulicht.
 
 ```
  CREATE TABLE friends (
@@ -125,8 +125,8 @@ Die folgenden Beispiele zeigen, wie erstellen `EDGE` Tabellen
 ```
 
 
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [INSERT (SQL Graph)](../../t-sql/statements/insert-sql-graph.md)]  
- [Diagramm mit SQL Server-2017 verarbeiten](../../relational-databases/graphs/sql-graph-overview.md)
+ [Graph Processing with SQL Server 2017 (Graph-Verarbeitung mit SQL Server-2017)](../../relational-databases/graphs/sql-graph-overview.md)
 

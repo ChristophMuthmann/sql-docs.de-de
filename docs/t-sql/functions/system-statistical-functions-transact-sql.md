@@ -1,5 +1,5 @@
 ---
-title: Statistische Systemfunktionen (Transact-SQL) | Microsoft Docs
+title: Statistische Systemfunktionen (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -44,9 +44,9 @@ ms.lasthandoff: 11/21/2017
 |[@@IO_BUSY](../../t-sql/functions/io-busy-transact-sql.md)|[@@TOTAL_READ](../../t-sql/functions/total-read-transact-sql.md)|  
 |[@@PACKET_ERRORS](../../t-sql/functions/packet-errors-transact-sql.md)|[@@TOTAL_WRITE](../../t-sql/functions/total-write-transact-sql.md)|  
   
- Alle statistischen Systemfunktionen sind nicht deterministisch. Das heißt, dass diese Funktionen nicht stets dasselbe Ergebnis zurückgeben, selbst wenn sie mit denselben Eingabewerten aufgerufen werden. Weitere Informationen zum Funktionsdeterminismus finden Sie unter [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).  
+ Alle statistischen Systemfunktionen sind nicht deterministisch. Das heißt, dass diese Funktionen nicht stets dasselbe Ergebnis zurückgeben, selbst wenn sie mit denselben Eingabewerten aufgerufen werden. Weitere Informationen zu Funktionsdeterminismus finden Sie unter [Deterministische und nicht deterministische Funktionen](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Integrierte Funktionen &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)  
   
   

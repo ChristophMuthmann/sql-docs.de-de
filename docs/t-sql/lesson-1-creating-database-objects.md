@@ -1,5 +1,5 @@
 ---
-title: 'Lektion 1: Erstellen von Datenbankobjekten | Microsoft Docs'
+title: 'Lektion 1: Erstellen von Datenbankobjekten | Microsoft-Dokumentation'
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -27,7 +27,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---
 # <a name="lesson-1-creating-database-objects"></a>Lektion 1: Erstellen von Datenbankobjekten
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]In dieser Lektion wird gezeigt, wie zum Erstellen einer Datenbank, erstellen Sie eine Tabelle in der Datenbank und dann zugreifen und die Daten in der Tabelle ändern. Weil diese Lektion eine Einführung in die Verwendung von [!INCLUDE[tsql](../includes/tsql-md.md)]darstellt, werden viele der für diese Anweisungen verfügbaren Optionen nicht verwendet bzw. beschrieben.  
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)] In dieser Lektion erfahren Sie, wie Sie eine Datenbank erstellen, eine Tabelle in der Datenbank erstellen und dann auf die Daten in der Tabelle zugreifen und diese ändern können. Weil diese Lektion eine Einführung in die Verwendung von [!INCLUDE[tsql](../includes/tsql-md.md)]darstellt, werden viele der für diese Anweisungen verfügbaren Optionen nicht verwendet bzw. beschrieben.  
   
 [!INCLUDE[tsql](../includes/tsql-md.md)] -Anweisungen können wie folgt geschrieben und an die [!INCLUDE[ssDE](../includes/ssde-md.md)] übertragen werden:  
   
@@ -53,7 +53,7 @@ Diese Lektion enthält die folgenden Themen:
   
 -   [Zusammenfassung: Erstellen von Datenbankobjekten](../t-sql/lesson-1-5-summary-creating-database-objects.md)  
   
-## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
+## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
 [Erstellen einer Datenbank &#40;Tutorial&#41;](../t-sql/lesson-1-1-creating-a-database.md)  
   
   

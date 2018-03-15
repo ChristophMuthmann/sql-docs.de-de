@@ -1,5 +1,5 @@
 ---
-title: SET FORCEPLAN (Transact-SQL) | Microsoft Docs
+title: SET FORCEPLAN (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
@@ -51,7 +51,7 @@ ms.lasthandoff: 11/21/2017
 SET FORCEPLAN { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  SET FORCEPLAN überschreibt im Wesentlichen die Logik, die der Abfrageoptimierer beim Verarbeiten einer [!INCLUDE[tsql](../../includes/tsql-md.md)]-SELECT-Anweisung verwendet hat. Die SELECT-Anweisung gibt unabhängig von dieser Einstellung dieselben Daten zurück. Der einzige Unterschied besteht darin, wie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Tabellen bei der Ausführung der Abfrage verarbeitet.  
   
  Auch Hinweise für den Abfrageoptimierer können in Abfragen verwendet werden, um das Verarbeiten der SELECT-Anweisung durch [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zu beeinflussen.  
@@ -107,10 +107,10 @@ SET FORCEPLAN OFF;
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [SET-Anweisungen (Transact-SQL)](../../t-sql/statements/set-statements-transact-sql.md)   
- [SET SHOWPLAN_ALL &#40; Transact-SQL &#41;](../../t-sql/statements/set-showplan-all-transact-sql.md)   
- [SET SHOWPLAN_TEXT &#40; Transact-SQL &#41;](../../t-sql/statements/set-showplan-text-transact-sql.md)  
+ [SET SHOWPLAN_ALL &#40;Transact-SQL&#41;](../../t-sql/statements/set-showplan-all-transact-sql.md)   
+ [SET SHOWPLAN_TEXT &#40;Transact-SQL&#41;](../../t-sql/statements/set-showplan-text-transact-sql.md)  
   
   

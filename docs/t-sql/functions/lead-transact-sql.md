@@ -1,5 +1,5 @@
 ---
-title: LEAD (Transact-SQL) | Microsoft Docs
+title: LEAD (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 11/09/2017
 ms.prod: sql-non-specified
@@ -35,9 +35,9 @@ ms.lasthandoff: 01/02/2018
 # <a name="lead-transact-sql"></a>LEAD (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-  Greift auf Daten in einer nachfolgenden Zeile in das gleiche Ergebnis festzulegen, ohne die Verwendung von einem selbstjoin beginnend mit [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. LEAD ermöglicht den Zugriff auf eine Zeile mit einem bestimmten physischen Offset nach der aktuellen Zeile. Verwenden Sie diese analytische Funktion in einer SELECT-Anweisung, um Werte in der aktuellen Zeile mit Werten in einer nachfolgenden Zeile zu vergleichen.  
+  Greift im selben Resultset auf Daten in einer nachfolgenden Zeile zu, ohne dass ein Selbstjoin ab [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] verwendet wird. LEAD ermöglicht den Zugriff auf eine Zeile mit einem bestimmten physischen Offset nach der aktuellen Zeile. Verwenden Sie diese analytische Funktion in einer SELECT-Anweisung, um Werte in der aktuellen Zeile mit Werten in einer nachfolgenden Zeile zu vergleichen.  
   
- ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Thema Linksymbol") [Transact-SQL-Syntaxkonventionen &#40; Transact-SQL &#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol zum Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions &#40;Transact-SQL&#41; (Transact-SQL-Syntaxkonventionen (Transact-SQL))](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -47,20 +47,20 @@ LEAD ( scalar_expression [ ,offset ] , [ default ] )
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *"scalar_expression"*  
- Der zurückzugebende Wert auf Grundlage des angegebenen Offsets. Dies ist ein Ausdruck eines beliebigen Typs, der einen einzelnen Skalarwert zurückgibt. *"scalar_expression"* darf nicht keine analytische Funktion sein.  
+ *scalar_expression*  
+ Der zurückzugebende Wert auf Grundlage des angegebenen Offsets. Dies ist ein Ausdruck eines beliebigen Typs, der einen einzelnen Skalarwert zurückgibt. *scalar_expression* darf keine analytische Funktion sein.  
   
- *Offset*  
- Die Anzahl der Zeilen nach der aktuellen Zeile, aus der ein Wert abgerufen werden soll. Wenn nichts angegeben ist, wird der Standardwert 1 verwendet. *Offset* kann eine Spalte, Unterabfrage oder ein anderer Ausdruck, der eine positive ganze Zahl ergibt oder implizit umgewandelt werden kann **"bigint"**. *Offset* darf nicht negativ oder keine analytische Funktion sein.  
+ *offset*  
+ Die Anzahl der Zeilen nach der aktuellen Zeile, aus der ein Wert abgerufen werden soll. Wenn nichts angegeben ist, wird der Standardwert 1 verwendet. *offset* kann eine Spalte, eine Unterabfrage oder ein anderer Ausdruck sein, der eine positive ganze Zahl ergibt, kann aber auch implizit in einen Wert vom Typ **bigint** konvertiert werden. *offset* darf kein negativer Wert bzw. keine analytische Funktion sein.  
   
- *Standardwert*  
- Der zurückzugebende Wert, wenn *"scalar_expression"* am *Offset* ist NULL. Wenn kein Standardwert angegeben ist, wird NULL zurückgegeben. *standardmäßige* kann eine Spalte, Unterabfrage oder ein anderer Ausdruck sein, jedoch keine analytische Funktion. *standardmäßige* typkompatibel sein muss mit *"scalar_expression"*.  
+ *default*  
+ Der zurückzugebende Wert, wenn *scalar_expression* bei *offset* NULL ist. Wenn kein Standardwert angegeben ist, wird NULL zurückgegeben. *default* kann eine Spalte, eine Unterabfrage oder ein anderer Ausdruck sein, jedoch keine analytische Funktion. *default* muss mit *scalar_expression* typkompatibel sein.  
   
- ÜBER **(** [ *Partition_by_clause* ] *Order_by_clause***)**  
- *Partition_by_clause* teilt das Resultset, das von der FROM-Klausel erstellt wird, in Partitionen, die auf die die Funktion angewendet wird. Wird dies nicht angegeben, verarbeitet die Funktion alle Zeilen des Abfrageresultsets als einzelne Gruppe. *Order_by_clause* bestimmt die Reihenfolge der Daten, bevor die Funktion angewendet wird. Wenn *Partition_by_clause* angegeben wird, bestimmt die Reihenfolge der Daten in jeder Partition. Die *Order_by_clause* ist erforderlich. Weitere Informationen finden Sie unter [Klausel "OVER" &#40; Transact-SQL &#41; ](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ OVER **(** [ *partition_by_clause* ] *order_by_clause***)**  
+ *partition_by_clause* unterteilt das von der FROM-Klausel erzeugte Resultset in Partitionen, auf die die Funktion angewendet wird. Wird dies nicht angegeben, verarbeitet die Funktion alle Zeilen des Abfrageresultsets als einzelne Gruppe. *order_by_clause* bestimmt die Reihenfolge der Daten, bevor die Funktion angewendet wird. Wenn *partition_by_clause* angegeben wird, wird hierdurch die Reihenfolge der Daten in jeder Partition bestimmt. *order_by_clause* ist erforderlich. Weitere Informationen finden Sie unter [OVER-Klausel &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
 ## <a name="return-types"></a>Rückgabetypen  
- Der Datentyp des angegebenen *"scalar_expression"*. NULL wird zurückgegeben, wenn *"scalar_expression"* NULL-Werte zulässt oder *Standard* auf NULL festgelegt ist.  
+ Der Datentyp des angegebenen *scalar_expression*-Ausdrucks. NULL wird zurückgegeben, wenn *scalar_expression* auf NULL festgelegt werden kann oder *default* auf NULL festgelegt ist.  
   
  LEAD ist nicht deterministisch. Weitere Informationen finden Sie unter [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).  
   
@@ -143,10 +143,10 @@ b           c           i
 1           5           -2  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
-### <a name="d-compare-values-between-quarters"></a>D: vergleicht Werte verschiedener Quartale  
- Im folgende Beispiel wird die LEAD-Funktion veranschaulicht. Die Abfrage ruft den Unterschied in der sales Quota-Werte für einen angegebenen Mitarbeiter über nachfolgende Kalenderquartale ab. Beachten Sie, da kein Lead-Wert verfügbar nach der letzten Zeile ist, der Standardwert von 0 (null) verwendet wird.  
+### <a name="d-compare-values-between-quarters"></a>D: Vergleichen von Werten aus verschiedenen Quartalen  
+ Im folgenden Beispiel wird die LEAD-Funktion vorgestellt. Die Abfrage ruft den Unterschied in den Sollvorgabenwerten für den Verkauf für einen angegebenen Mitarbeiter über nachfolgende Kalenderquartale ab. Beachten Sie, dass der Standardwert 0 (null) verwendet wird, da nach der letzten Zeile kein LEAD-Wert verfügbar ist.  
   
 ```sql  
 -- Uses AdventureWorks  
@@ -172,8 +172,8 @@ Year Quarter  SalesQuota  NextQuota  Diff
 2002 4       154000.0000      0.0000  154000.0000
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [LAG &#40; Transact-SQL &#41;](../../t-sql/functions/lag-transact-sql.md)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [LAG &#40;Transact-SQL&#41;](../../t-sql/functions/lag-transact-sql.md)  
   
   
 

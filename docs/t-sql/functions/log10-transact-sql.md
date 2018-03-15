@@ -1,5 +1,5 @@
 ---
-title: LOG10 (Transact-SQL) | Microsoft Docs
+title: LOG10 (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="log10-transact-sql"></a>LOG10 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Gibt den Base-10-Logarithmus des angegebenen **"float"** Ausdruck.  
+  Gibt den Logarithmus zur Basis 10 des angegebenen **float**-Ausdrucks zurück.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,13 +49,13 @@ LOG10 ( float_expression )
   
 ## <a name="arguments"></a>Argumente  
  *float_expression*  
- Ist ein [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) des Typs **"float"** oder eines Typs, der implizit konvertiert werden können **"float"**.  
+ Ein [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) vom Typ **float** oder von einem Typ, der implizit in **float** konvertiert werden kann.  
   
 ## <a name="return-types"></a>Rückgabetypen  
  **float**  
   
-## <a name="remarks"></a>Hinweise  
- Die Funktionen LOG10 und POWER sind ihre gegenseitigen Umkehrfunktionen. Beispielsweise 10 ^ LOG10 (*n*) =  *n* .  
+## <a name="remarks"></a>Remarks  
+ Die Funktionen LOG10 und POWER sind ihre gegenseitigen Umkehrfunktionen. Beispielsweise 10 ^ LOG10(*n*) = *n*.  
   
 ## <a name="examples"></a>Beispiele  
   
@@ -93,10 +93,10 @@ SELECT POWER (10, LOG10(5));
 (1 row(s) affected)  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
-### <a name="c-calculating-the-base-10-logarithm-for-a-value"></a>"C:" der Logarithmus zur Basis 10 für einen Wert zu berechnen.  
- Das folgende Beispiel berechnet den `LOG10` des angegebenen Werts.  
+### <a name="c-calculating-the-base-10-logarithm-for-a-value"></a>C: Berechnen des Logarithmus zur Basis 10 für einen Wert.  
+ Im folgenden Beispiel wird `LOG10` der angegebenen Variablen berechnet.  
   
 ```  
 SELECT LOG10(145.175642);  
@@ -109,10 +109,10 @@ SELECT LOG10(145.175642);
 2.16
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Mathematische Funktionen &#40; Transact-SQL &#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)   
- [Energie &#40; Transact-SQL &#41;](../../t-sql/functions/power-transact-sql.md)   
- [Melden Sie sich &#40; Transact-SQL &#41;](../../t-sql/functions/log-transact-sql.md)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Mathematische Funktionen &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)   
+ [POWER &#40;Transact-SQL&#41;](../../t-sql/functions/power-transact-sql.md)   
+ [LOG &#40;Transact-SQL&#41;](../../t-sql/functions/log-transact-sql.md)  
   
   
 

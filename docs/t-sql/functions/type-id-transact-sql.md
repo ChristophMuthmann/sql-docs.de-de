@@ -1,5 +1,5 @@
 ---
-title: TYPE_ID (Transact-SQL) | Microsoft Docs
+title: TYPE_ID (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -49,7 +49,7 @@ TYPE_ID ( [ schema_name ] type_name )
   
 ## <a name="arguments"></a>Argumente  
  *TYPE_NAME*  
- Ist der Name des Datentyps. *TYPE_NAME* ist vom Typ **Nvarchar**. *TYPE_NAME* kann ein Systemdatentyp oder benutzerdefinierte Typ.  
+ Der Name des Datentyps. *type_name* ist vom Typ **nvarchar**. *type_name* kann ein Systemdatentyp oder benutzerdefinierter Datentyp sein.  
   
 ## <a name="return-types"></a>Rückgabetypen  
  **int**  
@@ -59,7 +59,7 @@ TYPE_ID ( [ schema_name ] type_name )
   
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann ein Benutzer nur die Metadaten sicherungsfähiger Elemente anzeigen, bei denen der Benutzer entweder der Besitzer ist oder für die dem Benutzer eine Berechtigung erteilt wurde. Dies bedeutet, dass Metadaten ausgebende integrierte Funktionen, z. B. TYPE_ID, möglicherweise NULL zurückgeben, wenn dem Benutzer für das Objekt keine Berechtigung erteilt wurde. Weitere Informationen finden Sie unter [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  TYPE_ID gibt NULL zurück, wenn der Datentypname ungültig ist, oder wenn der Benutzer nicht die erforderliche Berechtigung besitzt, um den Datentyp zu verwenden.  
   
 ## <a name="examples"></a>Beispiele  
@@ -90,9 +90,9 @@ SELECT TYPE_NAME(TYPE_ID('datetime')) AS [TYPE_NAME]
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
-### <a name="c-looking-up-the-type-id-of-a-system-data-type"></a>"C:" Nachschlagen des TYPE ID eines systemdatentyps  
+### <a name="c-looking-up-the-type-id-of-a-system-data-type"></a>C: Abrufen des TYPE ID-Werts eines Systemdatentyps  
  Im folgenden Beispiel wird die `TYPE ID` für den `datetime`-Systemdatentyp zurückgegeben.  
   
 ```  
@@ -100,11 +100,11 @@ SELECT TYPE_NAME(TYPE_ID('datetime')) AS typeName,
     TYPE_ID('datetime') AS typeID FROM table1;  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [TYPE_NAME &#40; Transact-SQL &#41;](../../t-sql/functions/type-name-transact-sql.md)   
- [TYPEPROPERTY &#40; Transact-SQL &#41;](../../t-sql/functions/typeproperty-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [TYPE_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/type-name-transact-sql.md)   
+ [TYPEPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/typeproperty-transact-sql.md)   
  [sys.types &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)   
- [Metadatenfunktionen &#40; Transact-SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)  
+ [Metadata Functions &#40;Transact-SQL&#41; (Metadatenfunktionen (Transact-SQL))](../../t-sql/functions/metadata-functions-transact-sql.md)  
   
   
 

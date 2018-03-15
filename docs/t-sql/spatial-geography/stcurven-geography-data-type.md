@@ -1,5 +1,5 @@
 ---
-title: STCurveN (Geography-Datentyp) | Microsoft Docs
+title: STCurveN (geography-Datentyp) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -48,23 +48,23 @@ ms.lasthandoff: 01/25/2018
  Ein **int** -Ausdruck zwischen 1 und der Anzahl der Kurven in der **geography** -Instanz.  
   
 ## <a name="return-types"></a>Rückgabetypen  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Rückgabetyp: **Geography**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Rückgabetyp: **geography**  
   
  CLR-Rückgabetyp: **SqlGeography**  
   
 ## <a name="exceptions"></a>Ausnahmen  
- Wenn n < 1 ein **ArgumentOutOfRangeException** ausgelöst wird.  
+ **ArgumentOutOfRangeException** wird ausgelöst, wenn n < 1 ist.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  **NULL** wird zurückgegeben, wenn die folgenden Kriterien erfüllt sind.  
   
 -   Die **geography** -Instanz wird deklariert, aber nicht instanziiert  
   
 -   Die **geography** -Instanz ist leer.  
   
--   n überschreitet die Anzahl der Kurven in der **Geography** Instanz (siehe [STNumCurves &#40; Geography-Datentyp &#41;](../../t-sql/spatial-geography/stnumcurves-geography-data-type.md)  
+-   n überschreitet die Anzahl der Kurven in der **geography**-Instanz (siehe [STNumCurves &#40;geography-Datentyp&#41;](../../t-sql/spatial-geography/stnumcurves-geography-data-type.md))  
   
--   Die Dimension für die **Geography** Instanz entspricht nicht (finden Sie unter [STDimension &#40; Geography-Datentyp &#41;](../../t-sql/spatial-geography/stdimension-geography-data-type.md)  
+-   Die Dimension für die **geography**-Instanz entspricht nicht gleich (siehe [STDimension &#40;geography-Datentyp&#41;](../../t-sql/spatial-geography/stdimension-geography-data-type.md)).  
   
 ## <a name="examples"></a>Beispiele  
   
@@ -104,10 +104,10 @@ ms.lasthandoff: 01/25/2018
   
  `CIRCULARSTRING (-122.348 47.658, -122.358 47.658, -122.358 47.653)`  
   
- `STCurveN()`Gibt die gleichen Ergebnisse unabhängig vom Format (WELL-Known Text), das verwendet wird.  
+ `STCurveN()` gibt unabhängig vom verwendeten WKT-Format (Well-Known Text) die gleichen Ergebnisse zurück.  
   
 ### <a name="d-testing-for-validity-before-calling-stcurve"></a>D. Testen auf Gültigkeit vor dem Aufrufen von STCurve()  
- Im folgende Beispiel wird gezeigt, wie Sie sicher, dass  *n*  gültig ist, bevor Sie die Methode von STCurveN() aufrufen:  
+ Im folgenden Beispiel wird gezeigt, wie Sie sicherstellen, dass *n* gültig ist, bevor Sie die Methode STCurve() aufrufen:  
   
 ```
  DECLARE @g geography;  
@@ -120,7 +120,7 @@ ms.lasthandoff: 01/25/2018
  END
   ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [OGC-Methoden für geography-Instanzen](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

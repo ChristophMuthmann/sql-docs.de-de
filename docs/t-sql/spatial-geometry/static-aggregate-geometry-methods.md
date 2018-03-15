@@ -1,5 +1,5 @@
 ---
-title: Statische Geometry-Aggregatmethoden | Microsoft Docs
+title: Statische Geometry-Aggregatmethoden | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt die folgenden Aggregatmethoden als Erweiterungen der statischen geometry-Methoden des Open Geospatial Consortium (OGC).  
   
 > [!NOTE]  
->  Diese Aggregatmethoden werden nur in verfügbar gemacht [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Sie werden nicht in der Microsoft.SqlServer.Types-Assembly verfügbar gemacht.  
+>  Diese Aggregatmethoden werden nur in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verfügbar gemacht. Sie werden nicht in der Microsoft.SqlServer.Types-Assembly verfügbar gemacht.  
   
  Weitere Informationen zu den OGC-Spezifikationen finden Sie in den folgenden Ressourcen:  
   
@@ -42,22 +42,22 @@ ms.lasthandoff: 01/25/2018
   
  [OGC Specifications, Simple Feature Access Part 2 – SQL Options](http://go.microsoft.com/fwlink/?LinkId=93628)  
   
- [OGC Specifications, Geography Markup Language](http://go.microsoft.com/fwlink/?LinkId=93629)  
+ [OGC Specifications, Geography Markup Language (OGC-Spezifikationen, Geography Markup Language)](http://go.microsoft.com/fwlink/?LinkId=93629)  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
--   [CollectionAggregate &#40; Geometry-Datentyp &#41;](../../t-sql/spatial-geometry/collectionaggregate-geometry-data-type.md)  
+-   [CollectionAggregate &#40;geometry-Datentyp&#41;](../../t-sql/spatial-geometry/collectionaggregate-geometry-data-type.md)  
   
--   [ConvexHullAggregate &#40; Geometry-Datentyp &#41;](../../t-sql/spatial-geometry/convexhullaggregate-geometry-data-type.md)  
+-   [ConvexHullAggregate &#40;geometry-Datentyp&#41;](../../t-sql/spatial-geometry/convexhullaggregate-geometry-data-type.md)  
   
--   [EnvelopeAggregate &#40; Geometry-Datentyp &#41;](../../t-sql/spatial-geometry/envelopeaggregate-geometry-data-type.md)  
+-   [EnvelopeAggregate &#40;geometry-Datentyp&#41;](../../t-sql/spatial-geometry/envelopeaggregate-geometry-data-type.md)  
   
--   [UnionAggregate &#40; Geometry-Datentyp &#41;](../../t-sql/spatial-geometry/unionaggregate-geometry-data-type.md)  
+-   [UnionAggregate &#40;geometry-Datentyp&#41;](../../t-sql/spatial-geometry/unionaggregate-geometry-data-type.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Erweiterte Methoden für Geometry-Instanzen](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)   
- [Erweiterte statische Geometry-Methoden](../../t-sql/spatial-geometry/extended-static-geometry-methods.md)   
- [OGC-Methoden für Geometry-Instanzen](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Erweiterte Methoden für geometry-Instanzen](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)   
+ [Erweiterte statische geometry-Methoden](../../t-sql/spatial-geometry/extended-static-geometry-methods.md)   
+ [OGC-Methoden für geometry-Instanzen](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)   
  [Statische geometry-Methoden des OGC](../../t-sql/spatial-geometry/ogc-static-geometry-methods.md)  
   
   

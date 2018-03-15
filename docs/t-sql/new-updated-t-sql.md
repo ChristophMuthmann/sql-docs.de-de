@@ -1,6 +1,6 @@
 ---
-title: Aktualisiert - T-SQL-Dokumentation | Microsoft Docs
-description: "Aktualisierter Inhalt in zuletzt geänderten Dokumentation für Transact-SQL-Codeausschnitte anzeigen"
+title: 'Aktualisiert: Transact-SQL-Dokumente | Microsoft-Dokumentation'
+description: "Anzeigen von Codeausschnitten aktualisierten Inhalts in zuletzt geänderter Dokumentation für Transact-SQL."
 manager: craigg
 author: MightyPen
 ms.author: genemi
@@ -16,27 +16,27 @@ ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 02/09/2018
 ---
-# <a name="new-and-recently-updated-transact-sql-docs"></a>Neue und zuletzt aktualisiert: Transact-SQL-Dokumente
+# <a name="new-and-recently-updated-transact-sql-docs"></a>Neu und zuletzt aktualisiert: Transact-SQL-Dokumente
 
 
 
-Beinahe jeden Tag Microsoft updates einige vorhandene Artikel auf dessen [Docs.Microsoft.com](http://docs.microsoft.com/) Dokumentationswebsite. Dieser Artikel zeigt Auszüge aus den zuletzt aktualisierten Artikel. Links zu den neuen Artikel, möglicherweise ebenfalls aufgeführt.
+Beinahe jeden Tag aktualisiert Microsoft einige der vorhandenen Artikel auf der Dokumentationswebsite [Docs.Microsoft.com](http://docs.microsoft.com/). In diesem Artikel werden Auszüge aus den zuletzt aktualisierten Artikeln wiedergegeben. Links zu den neuen Artikel werden ggf. ebenfalls aufgeführt.
 
-In diesem Artikel wird von einem Programm generiert, die in regelmäßigen Abständen erneut ausgeführt wird. Gelegentlich kann ein Auszug aus dem Quellartikel mit sich Formatierung oder als Markdown angezeigt. Bilder werden hier nicht angezeigt.
+Dieser Artikel wurde im Rahmen eines Programms erstellt, das in regelmäßigen Abständen erneut ausgeführt wird. Gelegentlich kann ein Auszug mit falscher Formatierung oder als Markdown aus dem Quellartikel angezeigt werden. Bilder werden hier nie wiedergegeben.
 
-Neueste Updates werden für folgenden Datumsbereich und Betreff gemeldet:
+Neueste Updates werden für den folgenden Datumsbereich und Themenbereich gemeldet:
 
 
 
-- *Datumsbereich des Updates:* &nbsp; **2017-12-03** &nbsp; - zu - &nbsp; **2018-02-03**
-- *Bereich für die Themenbereichsdatenbank:* &nbsp; **T-SQL-**.
+- *Datumsbereich des Updates:* &nbsp; **3.12.2017** &nbsp; bis &nbsp; **3.2.2018**
+- *Themenbereich:* &nbsp; **Transact-SQL**.
 
 
 
 
 &nbsp;
 
-## <a name="new-articles-created-recently"></a>Neue Artikel, die vor kurzem erstellt
+## <a name="new-articles-created-recently"></a>Neue Artikel, die vor kurzem erstellt wurden
 
 Die folgenden Links leiten Sie zu den neuen Artikeln weiter, die erst kürzlich erstellt wurden.
 
@@ -47,13 +47,13 @@ Die folgenden Links leiten Sie zu den neuen Artikeln weiter, die erst kürzlich 
 
 &nbsp;
 
-## <a name="updated-articles-with-excerpts"></a>Aktualisierte Artikel mit Auszüge
+## <a name="updated-articles-with-excerpts"></a>Aktualisierte Artikel mit Auszügen
 
 In diesem Abschnitt werden die Auszüge der Updates aus den Artikeln dargestellt, die vor Kurzem umfassend aktualisiert wurden.
 
-Die hier angezeigten Auszüge werden getrennt vom richtigen semantische kontextabhängig angezeigt. Darüber hinaus wird manchmal ein Auszug vom wichtige Markdown-Syntax getrennt, die sie in den tatsächlichen Artikel umgibt. Aus diesem Grund sind diese Auszüge nur allgemeine Anleitungen. Die Auszüge können nur Sie wissen, ob Ihre Interessen dauert rechtfertigen, klicken Sie auf, und besuchen den tatsächlichen Artikel.
+Die Auszüge hier werden getrennt vom richtigen semantischen Kontext angezeigt. Darüber hinaus wird ein Auszug manchmal getrennt von der wichtigen Markdownsyntax wiedergegeben, die ihn im ursprünglichen Artikel umgibt. Aus diesem Grund sind diese Auszüge nur allgemeine Anleitungen. Anhand dieser Auszüge sollen Sie nur entscheiden können, ob Sie sich die Zeit nehmen und den eigentlichen Artikel besuchen möchten.
 
-Kopieren Sie für diese und andere Gründe Code nicht von diesen verwendet, und nehmen Sie nicht als genaue Wahrheit alle Textauszug. Besuchen Sie stattdessen den tatsächlichen Artikel aus.
+Kopieren Sie aus diesem und anderen Gründen auf gar keinen Fall Code aus diesen Auszügen, und gehen Sie bei keinem Textauszug von einer 100-prozentigen Richtigkeit der Informationen aus. Besuchen Sie stattdessen den eigentlichen Artikel.
 
 
 
@@ -63,7 +63,7 @@ Kopieren Sie für diese und andere Gründe Code nicht von diesen verwendet, und 
 
 <a name="compactupdatedlist"/>
 
-### <a name="compact-list-of-articles-updated-recently"></a>Compact Liste von Artikeln, die vor kurzem aktualisiert
+### <a name="compact-list-of-articles-updated-recently"></a>Kompakte Liste der Artikel, die vor Kurzem aktualisiert wurden
 
 Diese kompakte Liste enthält Links zu den aktualisierten Artikeln, die im Abschnitt Auszüge aufgeführt sind.
 
@@ -81,7 +81,7 @@ Diese kompakte Liste enthält Links zu den aktualisierten Artikeln, die im Absch
 
 ### <a name="1-nbsp-create-statistics-transact-sqlstatementscreate-statistics-transact-sqlmd"></a>1. &nbsp; [CREATE STATISTICS (Transact-SQL)](statements/create-statistics-transact-sql.md)
 
-*Aktualisiert: 2018-01-04* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([Weiter](#TitleNum_2))
+*Aktualisiert: 04.01.2018* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([Weiter](#TitleNum_2))
 
 <!-- Source markdown line 200.  ms.author= "edmaca".  -->
 
@@ -92,20 +92,20 @@ Diese kompakte Liste enthält Links zu den aktualisierten Artikeln, die im Absch
 
 
 
-MAXDOP = *Max_degree_of_parallelism*
-**betrifft**: SQL Server (SQL Server 2017 CU3 ab).
+MAXDOP = *max_degree_of_parallelism*
+**Gilt für**: SQL-Server (Ab SQL Server 2017 CU3).
 
- Überschreibt die **Max. Grad an Parallelität** Konfigurationsoption für die Dauer des Vorgangs Statistik. Weitere Informationen finden Sie unter [Configure the max degree of parallelism Server Configuration Option](statements/../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). Sie können mit MAXDOP die Anzahl der Prozessoren begrenzen, die bei der Ausführung paralleler Pläne verwendet werden. Maximal sind 64 Prozessoren zulässig.
+ Überschreibt die Konfigurationsoption **max degree of parallelism** (Max. Grad an Parallelität) für die Dauer des Statistikvorgangs. Weitere Informationen finden Sie unter [Configure the max degree of parallelism Server Configuration Option](statements/../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). Sie können mit MAXDOP die Anzahl der Prozessoren begrenzen, die bei der Ausführung paralleler Pläne verwendet werden. Maximal sind 64 Prozessoren zulässig.
 
- *Max_degree_of_parallelism* sind möglich:
+ *max_degree_of_parallelism* kann folgende Werte haben:
 
- 1 unterdrückt parallelen Pläne generiert.
+ 1 Unterdrückt das Generieren paralleler Pläne.
 
- \>1 beschränkt die maximale Anzahl der Prozessoren, die in einer parallelen Statistik Operation auf die angegebene Anzahl verwendet oder weniger basierend auf der aktuellen systemarbeitsauslastung.
+ \>1 Beschränkt die maximale Anzahl der Prozessoren, die bei einem parallelen Statistikvorgang verwendet werden, je nach aktueller Systemauslastung, auf die angegebene Zahl oder einen niedrigeren Wert.
 
- 0 (Standard) verwendet, die tatsächliche Anzahl von Prozessoren oder weniger basierend auf der aktuellen systemarbeitsauslastung.
+ 0 (Standard): Verwendet abhängig von der aktuellen Systemarbeitsauslastung die tatsächliche Anzahl von Prozessoren oder weniger Prozessoren.
 
- \<Update_stats_stream_option > nur zu Informationszwecken identifiziert. Nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.
+ \<update_stats_stream_option> Nur für Informationszwecke identifiziert. Wird nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.
 
 
 
@@ -120,7 +120,7 @@ MAXDOP = *Max_degree_of_parallelism*
 
 ### <a name="2-nbsp-update-statistics-transact-sqlstatementsupdate-statistics-transact-sqlmd"></a>2. &nbsp; [UPDATE STATISTICS (Transact-SQL)](statements/update-statistics-transact-sql.md)
 
-*Aktualisiert: 2018-01-04* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([vorherigen](#TitleNum_1))
+*Aktualisiert: 04.01.2018* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([Zurück](#TitleNum_1))
 
 <!-- Source markdown line 167.  ms.author= "edmaca".  -->
 
@@ -133,64 +133,64 @@ MAXDOP = *Max_degree_of_parallelism*
 
 MAXDOP = *max_degree_of_parallelism*
 
-**Gilt für**: SQLServer (beginnend mit SQL Server 2017 CU3).
+**Gilt für:** SQL Server (ab SQL Server 2017 CU3).
 
- Überschreibt die **Max. Grad an Parallelität** Konfigurationsoption für die Dauer des Vorgangs Statistik. Weitere Informationen finden Sie unter [Configure the max degree of parallelism Server Configuration Option](statements/../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). Sie können mit MAXDOP die Anzahl der Prozessoren begrenzen, die bei der Ausführung paralleler Pläne verwendet werden. Maximal sind 64 Prozessoren zulässig.
+ Überschreibt die Konfigurationsoption **max degree of parallelism** (Max. Grad an Parallelität) für die Dauer des Statistikvorgangs. Weitere Informationen finden Sie unter [Configure the max degree of parallelism Server Configuration Option](statements/../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). Sie können mit MAXDOP die Anzahl der Prozessoren begrenzen, die bei der Ausführung paralleler Pläne verwendet werden. Maximal sind 64 Prozessoren zulässig.
 
- *Max_degree_of_parallelism* sind möglich:
+ *max_degree_of_parallelism* kann folgende Werte haben:
 
- 1 unterdrückt parallelen Pläne generiert.
+ 1 Unterdrückt das Generieren paralleler Pläne.
 
- \>1 beschränkt die maximale Anzahl der Prozessoren, die in einer parallelen Statistik Operation auf die angegebene Anzahl verwendet oder weniger basierend auf der aktuellen systemarbeitsauslastung.
+ \>1 Beschränkt die maximale Anzahl der Prozessoren, die bei einem parallelen Statistikvorgang verwendet werden, je nach aktueller Systemauslastung, auf die angegebene Zahl oder einen niedrigeren Wert.
 
- 0 (Standard) verwendet, die tatsächliche Anzahl von Prozessoren oder weniger basierend auf der aktuellen systemarbeitsauslastung.
-
-
+ 0 (Standard): Verwendet abhängig von der aktuellen Systemarbeitsauslastung die tatsächliche Anzahl von Prozessoren oder weniger Prozessoren.
 
 
 
 
 
 
-## <a name="similar-articles-about-new-or-updated-articles"></a>Ähnliche Artikel Informationen zu neuen oder aktualisierten Artikeln
+
+
+## <a name="similar-articles-about-new-or-updated-articles"></a>Ähnliche Artikel zu neuen oder aktualisierten Artikeln
 
 Dieser Abschnitt enthält sehr ähnliche Artikel für zuletzt aktualisierte Artikel in anderen Themenbereichen innerhalb des gleichen GitHub-Repositorys: [MicrosoftDocs/sql-docs-pr](https://github.com/MicrosoftDocs/sql-docs/).
 
 
-#### <a name="subject-areas-that-do-have-new-or-recently-updated-articles"></a>Bereiche für die Themenbereichsdatenbank, *führen* wurden neue oder vor kurzem aktualisiert Artikel
+#### <a name="subject-areas-that-do-have-new-or-recently-updated-articles"></a>Themenbereiche, die *über* neue oder kürzlich aktualisierte Artikel verfügen
 
 
-- [Neue und aktualisierte (1 + 3):&nbsp; **Advanced Analytics für SQL** Docs](../advanced-analytics/new-updated-advanced-analytics.md)
-- [Neue und aktualisierte (0 + 1):&nbsp; **Analyseplattformsystem für SQL** Docs](../analytics-platform-system/new-updated-analytics-platform-system.md)
-- [Neue und aktualisierte (0 + 1):&nbsp; **Herstellen einer Verbindung mit SQL** Docs](../connect/new-updated-connect.md)
-- [Neue und aktualisierte (0 + 1):&nbsp; **für SQL-Datenbank-Engine** Docs](../database-engine/new-updated-database-engine.md)
-- [Neue und aktualisierte (12 + 1): **Integration Services für SQL** Docs](../integration-services/new-updated-integration-services.md)
-- [Neue und aktualisierte (6 + 2):&nbsp; **Linux für SQL** Docs](../linux/new-updated-linux.md)
-- [Neue und aktualisierte (15 + 0): **PowerShell für SQL** Docs](../powershell/new-updated-powershell.md)
-- [Neue und aktualisierte (2 + 9):&nbsp; **relationale Datenbanken für SQL** Docs](../relational-databases/new-updated-relational-databases.md)
-- [Neue und aktualisierte (1 + 0):&nbsp; **Reporting Services für SQL** Docs](../reporting-services/new-updated-reporting-services.md)
-- [Neue und aktualisierte (1 + 1):&nbsp; **SQL Operations Studio** Docs](../sql-operations-studio/new-updated-sql-operations-studio.md)
-- [Neue und aktualisierte (1 + 1):&nbsp; **Microsoft SQL Server** Docs](../sql-server/new-updated-sql-server.md)
-- [Neue und aktualisierte (0 + 1):&nbsp; **SQL Server Data Tools (SSDT)** Docs](../ssdt/new-updated-ssdt.md)
-- [Neue und aktualisierte (1 + 2):&nbsp; **SQL Server Management Studio (SSMS)** Docs](../ssms/new-updated-ssms.md)
-- [Neue und aktualisierte (0 + 2):&nbsp; **Transact-SQL** Docs](../t-sql/new-updated-t-sql.md)
+- [Neu und aktualisiert (1+3):&nbsp;Dokumente zu **Advanced Analytics für SQL**](../advanced-analytics/new-updated-advanced-analytics.md)
+- [Neu und aktualisiert (0+1):&nbsp;Dokumente zum **Analytics Platform System für SQL**](../analytics-platform-system/new-updated-analytics-platform-system.md)
+- [Neu und aktualisiert (0+1):&nbsp;Dokumente zum **Herstellen einer Verbindung mit SQL**](../connect/new-updated-connect.md)
+- [Neu und aktualisiert (0+1):&nbsp;Dokumente zur **Datenbank-Engine für SQL**](../database-engine/new-updated-database-engine.md)
+- [Neu und aktualisiert (12+1): Dokumente zu **Integration Services für SQL**](../integration-services/new-updated-integration-services.md)
+- [Neu und aktualisiert (6+2):&nbsp;Dokumente zu **Linux für SQL**](../linux/new-updated-linux.md)
+- [Neu und aktualisiert (15+0): Dokumente zu **PowerShell für SQL**](../powershell/new-updated-powershell.md)
+- [Neu und aktualisiert (2+9):&nbsp;Dokumente zu **relationalen Datenbanken für SQL**](../relational-databases/new-updated-relational-databases.md)
+- [Neu und aktualisiert (1+0):&nbsp;Dokumente zu **Reporting Services für SQL**](../reporting-services/new-updated-reporting-services.md)
+- [Neu und aktualisiert (1+1):&nbsp;Dokumente zu **SQL Operations Studio**](../sql-operations-studio/new-updated-sql-operations-studio.md)
+- [Neu und aktualisiert (1+1):&nbsp;Dokumente zu **Microsoft SQL Server**](../sql-server/new-updated-sql-server.md)
+- [Neu und aktualisiert (0+1):&nbsp;Dokumente zu **SQL Server Data Tools (SSDT)**](../ssdt/new-updated-ssdt.md)
+- [Neu und aktualisiert (1+2):&nbsp;Dokumente zu **SQL Server Management Studio (SSMS)**](../ssms/new-updated-ssms.md)
+- [Neu und aktualisiert (0+2):&nbsp;Dokumente zu **Transact-SQL**](../t-sql/new-updated-t-sql.md)
 
 
 
-#### <a name="subject-areas-that-do-not-have-any-new-or-recently-updated-articles"></a>Bereiche, die für die Themenbereichsdatenbank *nicht* haben eine neue oder vor kurzem aktualisiert Artikel
+#### <a name="subject-areas-that-do-not-have-any-new-or-recently-updated-articles"></a>Themenbereiche, die *nicht* über neue oder kürzlich aktualisierte Artikel verfügen
 
 
 - [Neu + Aktualisiert (0+0): Dokumente zu **Data Migration Assistant (DMA) für SQL**](../dma/new-updated-dma.md)
-- [Neue und aktualisierte (0 + 0): **ActiveX Data Objects (ADO) für SQL** Docs](../ado/new-updated-ado.md)
+- [New + Updated (0+0): **ActiveX Data Objects (ADO) for SQL** docs (Neu + Aktualisiert (0+0): ActiveX Data Objects (ADO) für SQL-Dokumente)](../ado/new-updated-ado.md)
 - [New + Updated (0+0): **Analysis Services for SQL** docs (Neu + Aktualisiert (0+0): Dokumentation zu Analysis Services für SQL)](../analysis-services/new-updated-analysis-services.md)
-- [Neue und aktualisierte (0 + 0): **Data Quality Services für SQL** Docs](../data-quality-services/new-updated-data-quality-services.md)
-- [Neue und aktualisierte (0 + 0): **Data Mining Extensions (DMX) für SQL** Docs](../dmx/new-updated-dmx.md)
+- [New + Updated (0+0): **Data Quality Services for SQL** docs (Neu + Aktualisiert (0+0): Data Quality Services für SQL-Dokumente)](../data-quality-services/new-updated-data-quality-services.md)
+- [New + Updated (0+0): **Data Mining Extensions (DMX) for SQL** docs (Neu + Aktualisiert (0+0): Data Mining-Erweiterungen (DMX) für SQL)](../dmx/new-updated-dmx.md)
 - [New + Updated (0+0): **Master Data Services (MDS) for SQL** docs (Neu + Aktualisiert (0+0): Dokumentation zu Master Data Services (MDS) für SQL)](../master-data-services/new-updated-master-data-services.md)
-- [Neue und aktualisierte (0 + 0): **MDX (Multidimensional Expressions) für SQL** Docs](../mdx/new-updated-mdx.md)
-- [Neue und aktualisierte (0 + 0): **ODBC (Open Database Connectivity) für SQL** Docs](../odbc/new-updated-odbc.md)
-- [Neue und aktualisierte (0 + 0): **Samples for SQL** Docs](../sample/new-updated-sample.md)
-- [Neue und aktualisierte (0 + 0): **SQL Server Migration Assistant (SSMA)** Docs](../ssma/new-updated-ssma.md)
+- [New + Updated (0+0): **Multidimensional Expressions (MDX) for SQL** docs (Neu + Aktualisiert (0+0): Mehrdimensionale Ausdrücke für SQL)](../mdx/new-updated-mdx.md)
+- [New + Updated (0+0): **ODBC (Open Database Connectivity) for SQL** docs (Neu + Aktualisiert (0+0): Open Database Connectivity für SQL-Dokumente)](../odbc/new-updated-odbc.md)
+- [New + Updated (0+0): **Samples for SQL** docs (Neu + Aktualisiert (0+0): Beispiele für SQL-Dokumente)](../sample/new-updated-sample.md)
+- [New + Updated (0+0): **SQL Server Migration Assistant (SSMA)** docs (Neu + Aktualisiert (0+0): SQL Server Migration Assistant-Dokumente (SSMA))](../ssma/new-updated-ssma.md)
 - [Neu + Aktualisiert (0+0): Dokumentation zu **Tools für SQL**](../tools/new-updated-tools.md)
-- [Neue und aktualisierte (0 + 0): **XQuery für SQL** Docs](../xquery/new-updated-xquery.md)
+- [New + Updated (0+0): **XQuery for SQL** docs (Neu + Aktualisiert (0+0): XQuery für SQL-Dokumente)](../xquery/new-updated-xquery.md)
 
 

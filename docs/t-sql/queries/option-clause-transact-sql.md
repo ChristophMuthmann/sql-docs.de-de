@@ -1,5 +1,5 @@
 ---
-title: OPTION-Klausel (Transact-SQL) | Microsoft Docs
+title: OPTION-Klausel (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -74,7 +74,7 @@ OPTION ( <query_option> [ ,...n ] )
   
 ## <a name="examples"></a>Beispiele  
   
-### <a name="a-using-an-option-clause-with-a-group-by-clause"></a>A. Verwenden eine OPTION-Klausel mit einer GROUP BY-Klausel  
+### <a name="a-using-an-option-clause-with-a-group-by-clause"></a>A. Verwenden einer OPTION-Klausel mit einer GROUP BY-Klausel  
  Im folgenden Beispiel wird gezeigt, wie die `OPTION`-Klausel in Verbindung mit einer `GROUP BY`-Klausel verwendet wird.  
   
 ```  
@@ -89,10 +89,10 @@ OPTION (HASH GROUP, FAST 10);
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
 ### <a name="b-select-statement-with-a-label-in-the-option-clause"></a>B. SELECT-Anweisung mit einer Bezeichnung in der OPTION-Klausel  
- Das folgende Beispiel zeigt eine einfache [!INCLUDE[ssDW](../../includes/ssdw-md.md)] SELECT-Anweisung mit einer Bezeichnung in der OPTION-Klausel.  
+ Im folgenden Beispiel wird eine einfache [!INCLUDE[ssDW](../../includes/ssdw-md.md)]-SELECT-Anweisung mit einer Bezeichnung in der OPTION-Klausel dargestellt.  
   
 ```  
 -- Uses AdventureWorks  
@@ -102,7 +102,7 @@ SELECT * FROM FactResellerSales
 ```  
   
 ### <a name="c-select-statement-with-a-query-hint-in-the-option-clause"></a>C. SELECT-Anweisung mit einem Abfragehinweis in der OPTION-Klausel  
- Das folgende Beispiel zeigt eine SELECT-Anweisung, die einen HASH JOIN-Abfragehinweis in der OPTION-Klausel verwendet.  
+ Im folgenden Beispiel wird eine SELECT-Anweisung in der OPTION-Klausel dargestellt, die einen HASH JOIN-Abfragehinweis verwendet.  
   
 ```  
 -- Uses AdventureWorks  
@@ -113,8 +113,8 @@ ON (a.CustomerKey = b.CustomerKey)
 OPTION (HASH JOIN);  
 ```  
   
-### <a name="d-select-statement-with-a-label-and-multiple-query-hints-in-the-option-clause"></a>D. SELECT-Anweisung mit einer Bezeichnung und mehrere Abfragehinweise in der OPTION-Klausel  
- Im folgende Beispiel wird eine [!INCLUDE[ssDW](../../includes/ssdw-md.md)] SELECT-Anweisung, die eine Bezeichnung und mehrere Abfragehinweise enthält. Bei der Ausführung der Abfrage auf den Serverknoten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gilt ein HashJoin oder einen zusammenführungsjoin, gemäß der Strategie, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entscheidet sich optimal ist.  
+### <a name="d-select-statement-with-a-label-and-multiple-query-hints-in-the-option-clause"></a>D. SELECT-Anweisung mit einer Bezeichnung und mehreren Abfragehinweisen in der OPTION-Klausel  
+ Beim folgenden Beispiel handelt es sich um eine [!INCLUDE[ssDW](../../includes/ssdw-md.md)]-SELECT-Anweisung, die eine Bezeichnung und mehrere Abfragehinweise enthält. Bei der Ausführung der Abfrage auf den Computeknoten wendet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einen Hashjoin oder Merge Join an, je nachdem, welche Strategie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] als optimal auswählt.  
   
 ```  
 -- Uses AdventureWorks  
@@ -125,8 +125,8 @@ ON (a.CustomerKey = b.CustomerKey)
 OPTION ( Label = 'CustJoin', HASH JOIN, MERGE JOIN);  
 ```  
   
-### <a name="e-using-a-query-hint-when-querying-a-view"></a>E. Mithilfe eines Abfragehinweises, bei der Abfrage einer Sicht  
- Im folgenden Beispiel wird eine Sicht mit dem Namen CustomerView erstellt und verwendet dann einen HASH JOIN-Abfragehinweis in einer Abfrage, die auf eine Sicht und eine Tabelle verweist.  
+### <a name="e-using-a-query-hint-when-querying-a-view"></a>E. Verwenden eines Abfragehinweises beim Abfragen einer Sicht  
+ Im folgenden Beispiel wird eine Sicht mit dem Namen CustomerView erstellt und anschließend ein HASH JOIN-Abfragehinweis in einer Abfrage verwendet, die auf eine Sicht und eine Tabelle verweist.  
   
 ```  
 -- Uses AdventureWorks  
@@ -144,8 +144,8 @@ DROP VIEW CustomerView;
   
 ```  
   
-### <a name="f-query-with-a-subselect-and-a-query-hint"></a>F. Abfrage mit einer untergeordneten SELECT-Anweisung und einen Abfragehinweis.  
- Das folgende Beispiel zeigt eine Abfrage, die eine untergeordnete SELECT-Anweisung und einen Abfragehinweis enthält. Der Abfragehinweis wird global angewendet. Abfragehinweise sind nicht zulässig, der untergeordneten SELECT-Anweisung angefügt werden soll.  
+### <a name="f-query-with-a-subselect-and-a-query-hint"></a>F. Abfrage mit einer untergeordneten SELECT-Anweisung und einem Abfragehinweis  
+ Im folgenden Beispiel wird eine Abfrage dargestellt, die sowohl eine untergeordnete SELECT-Anweisung als auch einen Abfragehinweis enthält. Der Abfragehinweis wird global angewendet. Abfragehinweise dürfen nicht an die untergeordnete SELECT-Anweisung angefügt werden.  
   
 ```  
 -- Uses AdventureWorks  
@@ -160,8 +160,8 @@ ON ( a.CustomerKey = b.CustomerKey )) AS t
 OPTION (HASH JOIN);  
 ```  
   
-### <a name="g-force-the-join-order-to-match-the-order-in-the-query"></a>G. Die joinreihenfolge entsprechend die Reihenfolge in der Abfrage zu erzwingen  
- Im folgenden Beispiel wird der FORCE ORDER-Hinweis, um den Abfrageplan zu verwenden, die von der Abfrage angegebene joinreihenfolge zu erzwingen. Dies verbessert die Leistung auf einigen Abfragen; nicht alle Abfragen.  
+### <a name="g-force-the-join-order-to-match-the-order-in-the-query"></a>G. Erzwingen der Übereinstimmung der Joinreihenfolge mit der Reihenfolge in der Abfrage  
+ Im folgenden Beispiel wird der FORCE ORDER-Hinweis verwendet, um zu erzwingen, dass der Abfrageplan die von der Abfrage angegebene Joinreihenfolge verwendet. Dies verbessert die Leistung einiger Abfragen, jedoch nicht aller.  
   
 ```  
 -- Uses AdventureWorks  
@@ -181,8 +181,8 @@ OPTION ( FORCE ORDER )
 ;  
 ```  
   
-### <a name="h-using-externalpushdown"></a>H. Verwenden die Verwendung des EXTERNALPUSHDOWN  
- Im folgenden Beispiel wird die Weitergabe der WHERE-Klausel auf die MapReduce-Auftrags für die externe Hadoop-Tabelle.  
+### <a name="h-using-externalpushdown"></a>H. Verwenden von EXTERNALPUSHDOWN  
+ Im folgenden Beispiel wird die Weitergabe der WHERE-Klausel an den MapReduce-Auftrag in der externen Hadoop-Tabelle erzwungen.  
   
 ```  
 SELECT ID FROM External_Table_AS A   
@@ -190,7 +190,7 @@ WHERE ID < 1000000
 OPTION (FORCE EXTERNALPUSHDOWN);  
 ```  
   
- Im folgende Beispiel wird die Weitergabe der WHERE-Klausel auf die MapReduce-Auftrags für die externe Hadoop-Tabelle verhindert. Mit PDW werden alle Zeilen zurückgegeben, in die WHERE-Klausel angewendet wird.  
+ Im folgenden Beispiel wird die Weitergabe der WHERE-Klausel an den MapReduce-Auftrag in der externen Hadoop-Tabelle verhindert. Wo die WHERE-Klausel angewendet wird, werden alle Zeilen an PDW zurückgegeben.  
   
 ```  
 SELECT ID FROM External_Table_AS A   
@@ -198,7 +198,7 @@ WHERE ID < 10
 OPTION (DISABLE EXTERNALPUSHDOWN);  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [UPDATE (Transact-SQL)](../../t-sql/queries/update-transact-sql.md)   

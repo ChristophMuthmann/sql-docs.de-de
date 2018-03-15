@@ -1,5 +1,5 @@
 ---
-title: Windows-Sortierungsname (Transact-SQL) | Microsoft Docs
+title: Name der Windows-Sortierung (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -59,31 +59,31 @@ CollationDesignator_<ComparisonStyle>
   
 -   Die Codepage, die zum Speichern von Nichtunicode-Zeichendaten verwendet wird.  
   
- Beispiele hierfür sind:  
+ Im Folgenden finden Sie einige Beispiele:  
   
 -   Latin1_General oder French: Beide verwenden Codepage 1252.  
   
 -   Turkish: verwendet die Codepage 1254.  
   
  *CaseSensitivity*  
- **CI** gibt Groß-/Kleinschreibung, **CS** gibt Groß-/Kleinschreibung beachtet.  
+ **CI** gibt keine Unterscheidung nach Groß-/Kleinschreibung an. Bei **CS** erfolgt eine Unterscheidung.  
   
  *AccentSensitivity*  
- **AI** gibt Unterscheidung nach Akzent **AS** gibt an, nach Akzent unterschieden wird.  
+ **AI** gibt keine Unterscheidung nach Akzent an. Bei **AS** erfolgt eine Unterscheidung.  
   
  *KanatypeSensitive*  
- **Weggelassen** gibt an, Unterscheidung nach Kanatyp **KS** gibt an, nach Kanatyp unterschieden.  
+ **Omitted** gibt keine Unterscheidung nach Kanatyp an. Bei **KS** erfolgt eine Unterscheidung.  
   
  *WidthSensitivity*  
- **Weggelassen** gibt an, Unterscheidung nach Breite **WS** Unterscheidung.  
+ **Omitted** gibt keine Unterscheidung nach Breite an. Bei **WS** erfolgt eine Unterscheidung.  
   
- **"BIN"**  
+ **BIN**  
  Gibt die zu verwendende abwärtskompatible binäre Sortierreihenfolge an.  
   
  **BIN2**  
  Gibt die binäre Sortierreihenfolge an, die die Semantik für den Codepunktvergleich verwendet.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Je nach Version der Sortierungen sind einige Codepunkte möglicherweise nicht definiert. Vergleichen Sie beispielsweise:  
   
 ```  
@@ -103,7 +103,7 @@ GO
   
 -   **Latin1_General_100_**  
   
- Die Sortierung verwendet die Latin1 General-Wörterbuch-Sortierungsregeln, Codepage 1252. Es erfolgt keine Unterscheidung nach Groß-/Kleinschreibung, aber eine Unterscheidung nach Akzenten. Die Sortierung verwendet die Latin1 General-Wörterbuch-Sortierungsregeln und ist der Codepage 1252 zugeordnet. Zeigt die Versionsnummer der Sortierung an, falls es sich um eine Windows-Sortierung handelt: _90 oder _100. Ist Groß-/Kleinschreibung (CI) und Unterscheidung nach Akzent (AS).  
+ Die Sortierung verwendet die Latin1 General-Wörterbuch-Sortierungsregeln, Codepage 1252. Es erfolgt keine Unterscheidung nach Groß-/Kleinschreibung, aber eine Unterscheidung nach Akzenten. Die Sortierung verwendet die Latin1 General-Wörterbuch-Sortierungsregeln und ist der Codepage 1252 zugeordnet. Zeigt die Versionsnummer der Sortierung an, falls es sich um eine Windows-Sortierung handelt: _90 oder _100. Es erfolgt keine Unterscheidung nach Groß-/Kleinschreibung (CI), aber eine Unterscheidung nach Akzenten (AS).  
   
 -   **Estonian_CS_AS**  
   
@@ -127,7 +127,7 @@ SELECT * FROM sys.fn_helpcollations() WHERE name NOT LIKE 'SQL%';
 |Elsässisch (Frankreich)|Latin1_General_100_|Nicht verfügbar|  
 |Amharisch (Äthiopien)|Latin1_General_100_|Nicht verfügbar|  
 |Armenisch (Armenien)|Cyrillic_General_100_|Nicht verfügbar|  
-|Assamisch (Indien)|Assamese_100_ <sup>1</sup>|Nicht verfügbar|  
+|Assamisch (Indien)|Assamese_100_<sup>1</sup>|Nicht verfügbar|  
 |Baschkirisch (Russische Föderation)|Bashkir_100_|Nicht verfügbar|  
 |Baskisch (Baskisch)|Latin1_General_100_|Nicht verfügbar|  
 |Bangla (Bangladesch)|Bengali_100_<sup>1</sup>|Nicht verfügbar|  
@@ -173,7 +173,7 @@ SELECT * FROM sys.fn_helpcollations() WHERE name NOT LIKE 'SQL%';
 |Mohawk (Kanada)|Mohawk_100_|Nicht verfügbar|  
 |Mongolisch (VRC)|Cyrillic_General_100_|Nicht verfügbar|  
 |Nepali (Nepal)|Nepali_100_<sup>1</sup>|Nicht verfügbar|  
-|Norwegisch (Bokmål, Norwegen)|Norwegian_100_|Nicht verfügbar|  
+|Norwegisch, Bokmål (Norwegen)|Norwegian_100_|Nicht verfügbar|  
 |Norwegisch (Nynorsk, Norwegen)|Norwegian_100_|Nicht verfügbar|  
 |Okzitanisch (Frankreich)|French_100_|Nicht verfügbar|  
 |Oriya (Indien)|Indic_General_100_<sup>1</sup>|Nicht verfügbar|  
@@ -188,7 +188,7 @@ SELECT * FROM sys.fn_helpcollations() WHERE name NOT LIKE 'SQL%';
 |Lule-Sami (Norwegen)|Sami_Norway_100_|Nicht verfügbar|  
 |Lule-Sami (Schweden)|Sami_Sweden_Finland_100_|Nicht verfügbar|  
 |Nord-Sami (Finnland)|Sami_Sweden_Finland_100_|Nicht verfügbar|  
-|Nord-Sami (Nord, Norwegen)|Sami_Norway_100_|Nicht verfügbar|  
+|Nordsamisch (Norwegen)|Sami_Norway_100_|Nicht verfügbar|  
 |Nord-Sami (Schweden)|Sami_Sweden_Finland_100_|Nicht verfügbar|  
 |Skolt-Sami (Finnland)|Sami_Sweden_Finland_100_|Nicht verfügbar|  
 |Süd-Sami (Norwegen)|Sami_Norway_100_|Nicht verfügbar|  
@@ -224,18 +224,18 @@ SELECT * FROM sys.fn_helpcollations() WHERE name NOT LIKE 'SQL%';
 |Veraltet, nicht verfügbar auf Serverebene in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] oder höher|Lithuanian_Classic|Lithuanian_Classic|  
 |Veraltet, nicht verfügbar auf Serverebene in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] oder höher|Macedonian|Macedonian|  
   
- <sup>1</sup>nur-Unicode-Windows-Sortierungen können nur auf Spaltenebene und Ausdrucksebene Daten angewendet werden. Sie können nicht für Sortierungen auf Server- oder Datenbankebene verwendet werden.  
+ <sup>1</sup> Nur-Unicode-Windows-Sortierungen unterstützen nur Daten auf Spaltenebene und Ausdrucksebene. Sie können nicht für Sortierungen auf Server- oder Datenbankebene verwendet werden.  
   
- <sup>2</sup>wie die Sortierung für Chinesisch (Taiwan), Chinesisch (Macao) die Regeln für Chinesisch (vereinfacht) verwendet; im Unterschied zu Chinesisch (Taiwan), die Codepage 950 verwendet.  
+ <sup>2</sup> Wie bei der chinesischen Sortierung (Taiwan) werden bei Chinesisch (Macao) die Regeln für Chinesisch (vereinfacht) verwendet. Im Unterschied zu Chinesisch (Taiwan) wird jedoch Codepage 950 verwendet.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Sortierung und Unicode-Unterstützung](../../relational-databases/collations/collation-and-unicode-support.md)   
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
- [Konstanten &#40; Transact-SQL &#41;](../../t-sql/data-types/constants-transact-sql.md)   
+ [Constants &#40;Transact-SQL&#41;](../../t-sql/data-types/constants-transact-sql.md)   
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
- [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
- [Table &#40; Transact-SQL &#41;](../../t-sql/data-types/table-transact-sql.md)   
+ [DEKLARIEREN SIE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
+ [table &#40;Transact-SQL&#41;](../../t-sql/data-types/table-transact-sql.md)   
  [sys.fn_helpcollations &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)  
   
   

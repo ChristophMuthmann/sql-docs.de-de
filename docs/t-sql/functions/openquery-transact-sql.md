@@ -1,5 +1,5 @@
 ---
-title: OPENQUERY (Transact-SQL) | Microsoft Docs
+title: OPENQUERY (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -53,13 +53,13 @@ OPENQUERY ( linked_server ,'query' )
  *linked_server*  
  Ein Bezeichner, der den Namen des Verbindungsservers darstellt.  
   
- **"** *Abfrage* **"**  
+ **'** *query* **'**  
  Ist die Zeichenfolge der Abfrage, die auf dem Verbindungsserver ausgeführt wird. Die maximale Länge der Zeichenfolge beträgt 8 KB.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Für die Argumente von OPENQUERY können keine Variablen verwendet werden.  
   
- Mit OPENQUERY können keine erweiterten gespeicherten Prozeduren für einen Verbindungsserver ausgeführt werden. Eine erweiterte gespeicherte Prozedur kann jedoch auf einem Verbindungsserver ausgeführt werden, wenn der vierteilige Name verwendet wird. Beispiel:  
+ Mit OPENQUERY können keine erweiterten gespeicherten Prozeduren für einen Verbindungsserver ausgeführt werden. Eine erweiterte gespeicherte Prozedur kann jedoch auf einem Verbindungsserver ausgeführt werden, wenn der vierteilige Name verwendet wird. Zum Beispiel:  
   
 ```sql  
 EXEC SeattleSales.master.dbo.xp_msver  
@@ -96,23 +96,23 @@ DELETE OPENQUERY (OracleSvr, 'SELECT name FROM joe.titles WHERE name = ''NewTitl
 ```  
   
 ### <a name="d-executing-a-select-pass-through-query"></a>D. Ausführen einer SELECT-Pass-Through-Abfrage  
- Im folgenden Beispiel wird ein Pass-Through- `SELECT` Abfrage, die in Beispiel c eingefügte Zeile auszuwählen.  
+ Im folgenden Beispiel wird eine `SELECT`-Pass-Through-Abfrage verwendet, um die in Beispiel C eingefügte Zeile auszuwählen.  
   
 ```sql  
 SELECT * FROM OPENQUERY (OracleSvr, 'SELECT name FROM joe.titles WHERE name = ''NewTitle''');  
 ```  
     
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
  [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)   
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
  [OPENDATASOURCE (Transact-SQL)](../../t-sql/functions/opendatasource-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
- [Rowset-Funktionen &#40; Transact-SQL &#41;](../../t-sql/functions/rowset-functions-transact-sql.md)   
+ [Rowset Functions &#40;Transact-SQL&#41; (Rowset-Funktionen (Transact-SQL))](../../t-sql/functions/rowset-functions-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
- [Sp_serveroption &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)   
+ [sp_serveroption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)   
  [UPDATE (Transact-SQL)](../../t-sql/queries/update-transact-sql.md)   
- [WOBEI &#40; Transact-SQL &#41;](../../t-sql/queries/where-transact-sql.md)  
+ [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)  
   
   

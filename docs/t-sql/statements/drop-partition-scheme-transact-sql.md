@@ -1,5 +1,5 @@
 ---
-title: DROP PARTITION SCHEME (Transact-SQL) | Microsoft Docs
+title: DROP PARTITION SCHEME (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -38,7 +38,7 @@ ms.lasthandoff: 12/06/2017
 # <a name="drop-partition-scheme-transact-sql"></a>DROP PARTITION SCHEME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Entfernt ein Partitionsschema aus der aktuellen Datenbank. Partitionsschemas Erstellung erfolgt mithilfe von [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md) und mithilfe von geändert [ALTER PARTITION SCHEME](../../t-sql/statements/alter-partition-scheme-transact-sql.md).  
+  Entfernt ein Partitionsschema aus der aktuellen Datenbank. Partitionsschemas werden mit [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md) erstellt und mit [ALTER PARTITION SCHEME](../../t-sql/statements/alter-partition-scheme-transact-sql.md) geändert.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -53,7 +53,7 @@ DROP PARTITION SCHEME partition_scheme_name [ ; ]
  *partition_scheme_name*  
  Der Name des zu löschenden Partitionsschemas.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Ein Partitionsschema kann nur gelöscht werden, wenn das Partitionsschema zurzeit nicht von Tabellen oder Indizes verwendet wird. Falls Tabellen oder Indizes das Partitionsschema verwenden, gibt DROP PARTITION SCHEME einen Fehler zurück. Die Dateigruppen selbst werden mit DROP PARTITION SCHEME nicht entfernt.  
   
 ## <a name="permissions"></a>Berechtigungen  
@@ -72,14 +72,14 @@ DROP PARTITION SCHEME partition_scheme_name [ ; ]
 DROP PARTITION SCHEME myRangePS1;  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [CREATE PARTITION SCHEME &#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-scheme-transact-sql.md)   
- [ALTER PARTITION SCHEME &#40; Transact-SQL &#41;](../../t-sql/statements/alter-partition-scheme-transact-sql.md)   
- [Sys. partition_schemes &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-partition-schemes-transact-sql.md)   
+ [ALTER PARTITION SCHEME &#40;Transact-SQL&#41;](../../t-sql/statements/alter-partition-scheme-transact-sql.md)   
+ [sys.partition_schemes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partition-schemes-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
- [Sys. data_spaces &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)   
- [Sys. destination_data_spaces &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-destination-data-spaces-transact-sql.md)   
- [Sys.Partitions &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)   
+ [sys.data_spaces &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)   
+ [sys.destination_data_spaces &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-destination-data-spaces-transact-sql.md)   
+ [sys.partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)   
  [sys.tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md)   
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
  [sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)  

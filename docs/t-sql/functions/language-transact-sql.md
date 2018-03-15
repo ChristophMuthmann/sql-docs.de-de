@@ -1,5 +1,5 @@
 ---
-title: '@@LANGUAGE (Transact-SQL) | Microsoft Docs'
+title: '@@LANGUAGE (Transact-SQL) | Microsoft-Dokumentation'
 ms.custom: 
 ms.date: 09/18/2017
 ms.prod: sql-non-specified
@@ -50,8 +50,8 @@ ms.lasthandoff: 11/21/2017
 ## <a name="return-types"></a>Rückgabetypen  
  **nvarchar**  
   
-## <a name="remarks"></a>Hinweise  
- Führen Sie zum Anzeigen von Informationen zu spracheinstellungen, einschließlich gültiger offizieller Sprachnamen **Sp_helplanguage** ohne einen Parameter angegeben.  
+## <a name="remarks"></a>Remarks  
+ Zum Anzeigen von Informationen zu Spracheinstellungen (einschließlich gültiger offizieller Sprachnamen) führen Sie **sp_helplanguage** ohne Angabe von Parametern aus.  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird die Sprache für die aktuelle Sitzung zurückgegeben.  
@@ -68,10 +68,10 @@ Language Name
 us_english                      
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Konfigurationsfunktionen (Transact-SQL)](../../t-sql/functions/configuration-functions-transact-sql.md)   
- [SET LANGUAGE &#40; Transact-SQL &#41;](../../t-sql/statements/set-language-transact-sql.md)   
- [Sp_helplanguage &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helplanguage-transact-sql.md)  
+ [SET LANGUAGE &#40;Transact-SQL&#41;](../../t-sql/statements/set-language-transact-sql.md)   
+ [sp_helplanguage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helplanguage-transact-sql.md)  
   
   
 

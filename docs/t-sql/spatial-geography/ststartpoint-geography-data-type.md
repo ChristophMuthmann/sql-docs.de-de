@@ -1,5 +1,5 @@
 ---
-title: STStartPoint (Geography-Datentyp) | Microsoft Docs
+title: STStartPoint (geography-Datentyp) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="ststartpoint-geography-data-type"></a>STStartPoint (geography-Datentyp)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Gibt den Ausgangspunkt einer **Geography** Instanz.  
+  Gibt den Startpunkt einer **geography**-Instanz zurück.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -44,13 +44,13 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Rückgabetypen  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Rückgabetyp: **Geography**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Rückgabetyp: **geography**  
   
  CLR-Rückgabetyp: **SqlGeography**  
   
  Open Geospatial Consortium (OGC)-Typ: **Point**  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  STStartPoint() entspricht [STPointN](../../t-sql/spatial-geometry/stpointn-geometry-data-type.md)`(1)`.  
   
 ## <a name="examples"></a>Beispiele  
@@ -62,7 +62,7 @@ SET @g = geography::STGeomFromText('LINESTRING(-122.360 47.656, -122.343 47.656)
 SELECT @g.STStartPoint().ToString();  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [OGC-Methoden für geography-Instanzen](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

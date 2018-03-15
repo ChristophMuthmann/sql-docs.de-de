@@ -1,5 +1,5 @@
 ---
-title: '| (Bitweises OR) (Transact-SQL) | Microsoft Docs'
+title: '| (Bitweises OR) (Transact-SQL) | Microsoft-Dokumentation'
 ms.custom: 
 ms.date: 01/10/2017
 ms.prod: sql-non-specified
@@ -51,21 +51,21 @@ expression | expression
   
 ## <a name="arguments"></a>Argumente  
  *expression*  
- Ist ein beliebiger gültiger [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) der Datentypkategorie ' Integer ' oder die **Bit**, **binäre**, oder **Varbinary** Datentypen. *Ausdruck* wird als eine Binärzahl für die bitweise Operation behandelt.  
+ Ein beliebiger gültiger [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) der Datentypkategorie „integer“ oder vom Datentyp **bit**, **binary** oder **varbinary**. *expression* wird in der bitweisen Operation als binäre Zahl behandelt.  
   
 > [!NOTE]  
->  Nur ein *Ausdruck* sein **binäre** oder **Varbinary** -Datentyp in einer bitweisen Operation.  
+>  Nur eines der *expression*-Argumente kann in einer bitweisen Operation vom Datentyp **binary** oder **varbinary** sein.  
   
 ## <a name="result-types"></a>Ergebnistypen  
- Gibt eine **Int** , wenn die Eingabewerte sind **Int**, **"smallint"** , wenn die Eingabewerte sind **"smallint"**, oder ein **"tinyint"** , wenn die Eingabewerte sind **"tinyint"**.  
+ Gibt Folgendes zurück: ein **int**, wenn die Eingabewerte auch **int** sind, ein **smallint**, wenn die Eingabewerte **smallint** sind, oder ein **tinyint**, wenn die Eingabewerte **tinyint** sind.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Mit dem bitweisen |-Operator wird zwischen zwei Ausdrücken ein bitweises logisches OR ausgeführt, indem die jeweils entsprechenden Bits der beiden Ausdrücke verarbeitet werden. Ein Ergebnisbit wird dann auf den Wert 1 festgelegt, wenn mindestens eines der Bits (für das aktuell aufzulösende Bit) der Eingabeausdrücke den Wert 1 aufweist. Falls keines der Bits in den Eingabeausdrücken den Wert 1 hat, wird das entsprechende Bit im Ergebnis auf 0 festgelegt.  
   
- Wenn der linke und der rechte Ausdruck unterschiedliche ganzzahlige Datentypen aufweisen (z. B. Links *Ausdruck* ist **"smallint"** und das Recht *Ausdruck* ist  **Int**), wird das Argument des kleineren Datentyps in den größeren Datentyp konvertiert. In diesem Beispiel wird die **"smallint" *** Ausdruck* konvertiert ein **Int**.  
+ Wenn der linke und der rechte Ausdruck unterschiedliche ganzzahlige Datentypen aufweisen (beispielsweise ist der linke *expression*-Ausdruck vom Datentyp **smallint** und der rechte *expression*-Ausdruck von Datentyp **int**), wird das Argument mit dem kleineren Datentyp in den größeren Datentyp konvertiert. In diesem Beispiel wird **smallint***expression* in einen **int** konvertiert.  
   
 ## <a name="examples"></a>Beispiele  
- Das folgende Beispiel erstellt eine Tabelle mit **Int** Datentypen, um die ursprünglichen Werte anzuzeigen und setzt die Tabelle in eine Zeile.  
+ Im folgenden Beispiel wird zum Anzeigen der ursprünglichen Werte eine Tabelle mit Werten vom **int**-Datentyp und gibt der Tabelle die Form einer einzelnen Zeile.  
   
 ```sql  
 CREATE TABLE bitwise  
@@ -78,7 +78,7 @@ INSERT bitwise VALUES (170, 75);
 GO  
 ```  
   
- Die folgende Abfrage führt ein bitweises OR auf die **A_int_value** und **B_int_value** Spalten.  
+ Die folgende Abfrage führt ein bitweises OR zwischen den Spalten **a_int_value** und **b_int_value** durch.  
   
 ```  
 SELECT a_int_value | b_int_value  
@@ -95,7 +95,7 @@ GO
 (1 row(s) affected)  
 ```  
   
- Die binäre Darstellung von 170 (**A_int_value** oder `A`, unten) wird `0000 0000 1010 1010`. Die binäre Darstellung von 75 (**B_int_value** oder `B`, unten) wird `0000 0000 0100 1011`. Die Anwendung einer bitweisen OR-Operation auf diese beiden Werte erzeugt das binäre Ergebnis `0000 0000 1110 1011`, was dem dezimalen Wert 235 entspricht.  
+ Die binäre Darstellung von 170 (**a_int_value**, unten mit `A` bezeichnet) ist `0000 0000 1010 1010`. Die binäre Darstellung von 75 (**b_int_value**, unten mit `B` bezeichnet) ist `0000 0000 0100 1011`. Die Anwendung einer bitweisen OR-Operation auf diese beiden Werte erzeugt das binäre Ergebnis `0000 0000 1110 1011`, was dem dezimalen Wert 235 entspricht.  
   
 ```  
 (A | B)  
@@ -105,11 +105,11 @@ GO
 0000 0000 1110 1011  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
- [Bitweise Operatoren &#40; Transact-SQL &#41;](../../t-sql/language-elements/bitwise-operators-transact-sql.md)   
- [&#124; = &#40; Bitweise OR-Zuweisung &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/bitwise-or-equals-transact-sql.md)   
- [Zusammengesetzte Operatoren &#40; Transact-SQL &#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)  
+ [Bitweise Operatoren &#40;Transact-SQL&#41;](../../t-sql/language-elements/bitwise-operators-transact-sql.md)   
+ [&#124;= &#40;Bitwise OR Assignment&#41; &#40;Transact-SQL&#41; (Zuweisung mit bitweisem OR (Transact-SQL))](../../t-sql/language-elements/bitwise-or-equals-transact-sql.md)   
+ [Verbundoperatoren &#40;Transact-SQL&#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)  
   
   
 

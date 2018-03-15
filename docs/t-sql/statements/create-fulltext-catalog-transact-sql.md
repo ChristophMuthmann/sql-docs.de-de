@@ -1,5 +1,5 @@
 ---
-title: CREATE FULLTEXT CATALOG (Transact-SQL) | Microsoft Docs
+title: CREATE FULLTEXT CATALOG (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 09/12/2017
 ms.prod: sql-non-specified
@@ -45,10 +45,10 @@ ms.lasthandoff: 11/21/2017
 
   Erstellt einen Volltextkatalog für eine Datenbank. Ein Volltextkatalog kann mehrere Volltextindizes besitzen, ein Volltextindex kann jedoch nur Teil eines Volltextkatalogs sein. Jede Datenbank kann keinen oder mehrere Volltextkataloge enthalten.  
   
- Sie können keine Volltextkataloge in erstellen die **master**, **Modell**, oder **Tempdb** Datenbanken.  
+ In den Datenbanken **master**, **model** oder **tempdb** kann kein Volltextkatalog erstellt werden.  
   
 > [!IMPORTANT]  
->  Beginnend mit [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], ein Volltextkatalogs ist ein virtuelles Objekt und gehört keiner Dateigruppe. Ein Volltextkatalog ist ein logisches Konzept, das auf eine Gruppe von Volltextindizes verweist.  
+>  Ab [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] stellt ein Volltextkatalog ein virtuelles Objekt dar, das keiner Dateigruppe angehört. Ein Volltextkatalog ist ein logisches Konzept, das auf eine Gruppe von Volltextindizes verweist.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -69,32 +69,32 @@ CREATE FULLTEXT CATALOG catalog_name
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *catalog_name*  
+ *CATALOG_NAME*  
  Der Name des neuen Katalogs. Der Katalogname muss für alle Katalognamen in der aktuellen Datenbank eindeutig sein. Zudem muss der Name der Datei, die dem Volltextkatalog entspricht (siehe ON FILEGROUP), für alle Dateien in der Datenbank eindeutig sein. Wenn der Name des Katalogs bereits für einen anderen Katalog in der Datenbank verwendet wird, wird von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ein Fehler zurückgegeben.  
   
  Der Katalogname darf maximal 120 Zeichen enthalten.  
   
  ON FILEGROUP *filegroup*  
- Beginnend mit [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], diese Klausel hat keine Auswirkungen.  
+ Ab [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hat diese Klausel keine Auswirkungen.  
   
- IM Pfad **"***Rootpath***"**  
+ IN PATH **'***rootpath***'**  
  > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
- Beginnend mit [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], diese Klausel hat keine Auswirkungen.  
+ Ab [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hat diese Klausel keine Auswirkungen.  
   
  ACCENT_SENSITIVITY = {ON|OFF}  
- Gibt an, ob für den Katalog bei der Volltextindizierung nach Akzent unterschieden wird. Bei einer Änderung dieser Eigenschaft muss der Index neu erstellt werden. Standardmäßig wird die in der Datenbanksortierung angegebene Unterscheidung nach Akzent verwendet. Um die Sortierung der Datenbank anzuzeigen, verwenden Sie die **sys.databases** -Katalogsicht angezeigt.  
+ Gibt an, ob für den Katalog bei der Volltextindizierung nach Akzent unterschieden wird. Bei einer Änderung dieser Eigenschaft muss der Index neu erstellt werden. Standardmäßig wird die in der Datenbanksortierung angegebene Unterscheidung nach Akzent verwendet. Die Datenbanksortierung kann in der **sys.databases**-Katalogsicht angezeigt werden.  
   
- Um die aktuelle Einstellung der Unterscheidung nach Groß-/ Kleinschreibung-Eigenschaft des eines Volltextkatalogs zu bestimmen, verwenden Sie die FULLTEXTCATALOGPROPERTY-Funktion mit dem **Accentsensitivity** -Eigenschaftswert für *Catalog_name*. Wird '1' zurückgegeben, unterscheidet der Volltextkatalog nach Akzent. Wird '0' zurückgegeben, unterscheidet der Katalog nicht nach Akzent.  
+ Verwenden Sie die FULLTEXTCATALOGPROPERTY-Funktion mit dem **accentsensitivity**-Eigenschaftswert für *catalog_name*, um die aktuelle Eigenschaftseinstellung für die Unterscheidung nach Akzent eines Volltextkatalogs zu bestimmen. Wird '1' zurückgegeben, unterscheidet der Volltextkatalog nach Akzent. Wird '0' zurückgegeben, unterscheidet der Katalog nicht nach Akzent.  
   
  AS DEFAULT  
  Gibt an, dass der Katalog als Standardkatalog verwendet wird. Wenn beim Erstellen von Volltextindizes nicht explizit ein Volltextkatalog angegeben wird, wird der Standardkatalog verwendet. Falls ein vorhandener Volltextkatalog bereits mit AS DEFAULT gekennzeichnet ist, wird durch das Festlegen von AS DEFAULT für den neuen Katalog dieser Katalog als standardmäßiger Volltextkatalog verwendet.  
   
- Autorisierung *Owner_name*  
- Legt den Namen eines Datenbankbenutzers oder einer Datenbankrolle als Besitzer des Volltextkatalogs fest. Wenn *Owner_name* ist eine Rolle, die Rolle der Name einer Rolle, die der aktuelle Benutzer ein Mitglied ist sein oder muss des Benutzers die Anweisung ausführt, der Datenbankbesitzer oder Systemadministrator sein.  
+ AUTHORIZATION *owner_name*  
+ Legt den Namen eines Datenbankbenutzers oder einer Datenbankrolle als Besitzer des Volltextkatalogs fest. Wenn für *owner_name* eine Rolle angegeben ist, muss dies der Name einer Rolle sein, deren Mitglied der aktuelle Benutzer ist, oder der Benutzer, der die Anweisung ausführt, muss der Datenbankbesitzer oder Systemadministrator sein.  
   
- Wenn *Owner_name* ein Benutzernamen ein, wird der Benutzername muss eines der folgenden sein:  
+ Wenn ein Benutzername für *owner_name* angegeben ist, muss es sich um einen der folgenden Benutzernamen handeln:  
   
 -   Den Namen des Benutzers, der die Anweisung ausführt.  
   
@@ -102,13 +102,13 @@ CREATE FULLTEXT CATALOG catalog_name
   
 -   Oder der Benutzer, der den Befehl ausführt, muss der Datenbankbesitzer oder Systemadministrator sein.  
   
- *Owner_name* muss auch der TAKE OWNERSHIP-Berechtigung für den angegebenen Volltextkatalog erteilt werden.  
+ *owner_name* muss zudem über die TAKE OWNERSHIP-Berechtigung im angegebenen Volltextkatalog verfügen.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Volltextkatalog-IDs beginnen bei 00005 und werden mit jedem neu erstellten Katalog um eins erhöht.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Benutzer muss über die CREATE FULLTEXT CATALOG-Berechtigung für die Datenbank oder ein Mitglied der **Db_owner**, oder **Db_ddladmin** festen Datenbankrollen.  
+ Der Benutzer muss über die CREATE FULLTEXT CATALOG-Berechtigung für die Datenbank verfügen oder ein Mitglied der festen Datenbankrolle **db_owner** oder **db_ddladmin** sein.  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel werden ein Volltextkatalog und ein Volltextindex erstellt.  
@@ -122,10 +122,10 @@ CREATE FULLTEXT INDEX ON HumanResources.JobCandidate(Resume) KEY INDEX PK_JobCan
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Sys. fulltext_catalogs &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [sys.fulltext_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md)   
  [ALTER FULLTEXT CATALOG &#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-catalog-transact-sql.md)   
- [DROP FULLTEXT CATALOG &#40; Transact-SQL &#41;](../../t-sql/statements/drop-fulltext-catalog-transact-sql.md)   
+ [DROP FULLTEXT CATALOG &#40;Transact-SQL&#41;](../../t-sql/statements/drop-fulltext-catalog-transact-sql.md)   
  [Volltextsuche](../../relational-databases/search/full-text-search.md)   
  
   

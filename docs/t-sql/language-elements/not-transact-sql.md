@@ -1,5 +1,5 @@
 ---
-title: KEINE (Transact-SQL) | Microsoft Docs
+title: NOT (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -49,7 +49,7 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>Argumente  
  *boolean_expression*  
- Gültiger boolescher [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md).  
+ Ein gültiger boolescher [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md).  
   
 ## <a name="result-types"></a>Ergebnistypen  
  **Boolean**  
@@ -57,16 +57,16 @@ ms.lasthandoff: 01/25/2018
 ## <a name="result-value"></a>Ergebniswert  
  NOT kehrt den Wert eines beliebigen booleschen Ausdrucks um.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Durch NOT wird ein Ausdruck negiert.  
   
  Die folgende Tabelle zeigt die Ergebnisse des Vergleichs von TRUE- und FALSE-Werten mithilfe des NOT-Operators.  
   
 ||NICHT|  
 |------|---------|  
-|**"TRUE"**|FALSE|  
+|**TRUE**|FALSE|  
 |**FALSE**|TRUE|  
-|**UNBEKANNT**|UNKNOWN|  
+|**UNKNOWN**|UNKNOWN|  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel werden alle silberfarbenen Fahrräder gefunden, deren Standardpreis nicht über 400 € liegt.  
@@ -93,8 +93,8 @@ GO
  (6 row(s) affected)
  ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- Das folgende Beispiel schränkt Ergebnisse `SalesOrderNumber` Werten beginnend mit `SO6` und `ProductKeys` größer als oder gleich 400.  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
+ Im folgenden Beispiel werden nur die Ergebnisse angezeigt, bei denen `SalesOrderNumber`-Werte mit `SO6` beginnen und `ProductKeys`-Werte größer oder gleich 400 sind.  
   
 ```  
 -- Uses AdventureWorks  
@@ -104,10 +104,10 @@ FROM FactInternetSales
 WHERE SalesOrderNumber LIKE 'SO6%' AND NOT ProductKey < 400;  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Ausdrücke &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [Integrierte Funktionen &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
- [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [Operatoren &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)  
   

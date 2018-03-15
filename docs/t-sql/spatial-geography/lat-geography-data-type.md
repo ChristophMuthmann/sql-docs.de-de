@@ -1,5 +1,5 @@
 ---
-title: LAT (Geography-Datentyp) | Microsoft Docs
+title: Lat (geography-Datentyp) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -43,12 +43,12 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Rückgabetypen  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Typ: **"float"**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Typ: **float**  
   
  CLR-Typ: **SqlDouble**  
   
-## <a name="remarks"></a>Hinweise  
- Im OpenGIS-Modell Lat nur auf definiert **Geography** Instanzen aus einem einzelnen Punkt bestehen. Diese Eigenschaft gibt NULL zurück, wenn **geography** -Instanzen mehr als nur einen Punkt enthalten. Diese Eigenschaft exakt und ist schreibgeschützt.  
+## <a name="remarks"></a>Remarks  
+ Im OpenGIS-Modell ist Lat nur für **geography**-Instanzen definiert, die aus einem einzelnen Punkt bestehen. Diese Eigenschaft gibt NULL zurück, wenn **geography** -Instanzen mehr als nur einen Punkt enthalten. Diese Eigenschaft exakt und ist schreibgeschützt.  
   
 ## <a name="examples"></a>Beispiele  
  In diesem Beispiel wird ein Punkt erstellt und der Breitengrad dieses Punkts zurückgegeben.  
@@ -59,7 +59,7 @@ SET @g = geography::STGeomFromText('POINT(-122.34900 47.65100)', 4326);
 SELECT @g.Lat;  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Erweiterte Methoden für geography-Instanzen](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)  
   
   

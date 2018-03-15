@@ -1,5 +1,5 @@
 ---
-title: DBCC OPENTRAN (Transact-SQL) | Microsoft Docs
+title: DBCC OPENTRAN (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 11/14/2017
 ms.prod: sql-non-specified
@@ -63,7 +63,7 @@ DBCC OPENTRAN
   
 ## <a name="arguments"></a>Argumente  
  *database_name* | *database_id*| 0  
- Der Name oder die ID der Datenbank, für die Informationen zur ältesten Transaktion angezeigt werden sollen. Erfolgt keine Eingabe, oder wird 0 angegeben, wird die aktuelle Datenbank verwendet. Datenbanknamen müssen den Regeln für entsprechen [Bezeichner](../../relational-databases/databases/database-identifiers.md).  
+ Der Name oder die ID der Datenbank, für die Informationen zur ältesten Transaktion angezeigt werden sollen. Erfolgt keine Eingabe, oder wird 0 angegeben, wird die aktuelle Datenbank verwendet. Datenbanknamen müssen den Regeln für [Bezeichner](../../relational-databases/databases/database-identifiers.md) entsprechen.  
   
  TABLERESULTS  
  Gibt die Ergebnisse, die in eine Tabelle geladen werden können, im Tabellenformat an. Verwenden Sie diese Option, um eine Tabelle mit Ergebniswerten zu erhalten, die zum Durchführen von Vergleichen in eine Tabelle eingefügt werden können. Wenn diese Option nicht angegeben ist, werden die Ergebnisse zwecks besserer Lesbarkeit formatiert.  
@@ -71,7 +71,7 @@ DBCC OPENTRAN
  NO_INFOMSGS  
  Alle Informationsmeldungen werden unterdrückt.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
 Verwenden Sie DBCC OPENTRAN, um zu ermitteln, ob eine offene Transaktion innerhalb des Transaktionsprotokolls vorhanden ist. Wenn Sie die BACKUP LOG-Anweisung verwenden, kann nur der inaktive Teil des Protokolls abgeschnitten werden. Eine offene Transaktion kann verhindern, dass das Protokoll vollständig abgeschnitten wird. Zum Identifizieren einer geöffneten Transaktion können Sie mit sp_who die Systemprozess-ID abrufen.
   
 ## <a name="result-sets"></a>Resultsets  
@@ -137,7 +137,7 @@ SELECT * FROM #OpenTranStatus;
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [BEGIN TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-transaction-transact-sql.md)  
 [COMMIT TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/commit-transaction-transact-sql.md)  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  

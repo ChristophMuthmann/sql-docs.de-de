@@ -1,5 +1,5 @@
 ---
-title: ENDE (BEGIN... Ende) (Transact-SQL) | Microsoft Docs
+title: END (BEGIN...END) (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -56,8 +56,8 @@ END
 ## <a name="result-types"></a>Ergebnistypen  
  **Boolean**  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- Im folgenden Beispiel `BEGIN` und `END` definieren Sie eine Reihe von [!INCLUDE[DWsql](../../includes/dwsql-md.md)] -Anweisungen, die zusammen ausgeführt. Wenn die `BEGIN...END` Block sind nicht enthalten, die im folgende Beispiel werden in eine Endlosschleife.  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
+ Im folgenden Beispiel wird durch `BEGIN` und `END` eine Reihe von [!INCLUDE[DWsql](../../includes/dwsql-md.md)]-Anweisungen definiert, die gemeinsam ausgeführt werden. Wenn der `BEGIN...END`-Block nicht vorhanden wäre, würde das folgende Beispiel in einer Endlosschleife ausgeführt werden.  
   
 ```  
 -- Uses AdventureWorks  
@@ -72,10 +72,10 @@ END;
   
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [ALTER TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-trigger-transact-sql.md)   
  [BEGIN...END &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-end-transact-sql.md)   
- [Control-of-Flow-Sprache &#40; Transact-SQL &#41;](~/t-sql/language-elements/control-of-flow.md)   
+ [Control-of-Flow Language &#40;Transact-SQL&#41; (Sprachkonstrukte zur Ablaufsteuerung (Transact-SQL))](~/t-sql/language-elements/control-of-flow.md)   
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [ELSE &#40;IF...ELSE&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/else-if-else-transact-sql.md)   
  [IF...ELSE &#40;Transact-SQL&#41;](../../t-sql/language-elements/if-else-transact-sql.md)   

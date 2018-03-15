@@ -1,5 +1,5 @@
 ---
-title: DBCC CHECKCONSTRAINTS (Transact-SQL) | Microsoft Docs
+title: DBCC CHECKCONSTRAINTS (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 11/14/2017
 ms.prod: sql-non-specified
@@ -61,7 +61,7 @@ DBCC CHECKCONSTRAINTS
   
 ## <a name="arguments"></a>Argumente  
  *table_name* | *table_id* | *constraint_name* | *constraint_id*  
- Die zu überprüfende Tabelle oder Einschränkung. Wenn *Table_name* oder *Table_id* wird angegeben, werden alle aktivierte Einschränkungen der Tabelle überprüft. Wenn *Constraint_name* oder *Constraint_id* wird angegeben, wird nur diese Einschränkung überprüft. Wenn weder ein Tabellenbezeichner noch ein Einschränkungsbezeichner angegeben ist, werden alle aktivierten Einschränkungen für alle Tabellen in der aktuellen Datenbank überprüft.  
+ Die zu überprüfende Tabelle oder Einschränkung. Wenn *table_name* oder *table_id* angegeben ist, werden alle aktivierten Einschränkungen der Tabelle überprüft. Wenn *constraint_name* oder *constraint_id* angegeben wird, wird nur diese Einschränkung überprüft. Wenn weder ein Tabellenbezeichner noch ein Einschränkungsbezeichner angegeben ist, werden alle aktivierten Einschränkungen für alle Tabellen in der aktuellen Datenbank überprüft.  
  Durch den Einschränkungsnamen wird die zugehörige Tabelle eindeutig identifiziert. Weitere Informationen finden Sie unter [Datenbankbezeichner](../../relational-databases/databases/database-identifiers.md).  
   
  mit  
@@ -76,7 +76,7 @@ DBCC CHECKCONSTRAINTS
  NO_INFOMSGS  
  Alle Informationsmeldungen werden unterdrückt.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
 DBCC CHECKCONSTRAINTS erstellt für alle FOREIGN KEY- und CHECK-Einschränkungen einer Tabelle eine Abfrage und führt sie aus.
   
 Eine FOREIGN KEY-Abfrage sieht beispielsweise folgendermaßen aus:
@@ -93,21 +93,21 @@ WHERE <table_being_checked.fkey1> IS NOT NULL
 ```  
   
 Die Abfragedaten werden in einer temporären Tabelle gespeichert. Wenn alle geforderten Tabellen oder Einschränkungen überprüft wurden, wird das Resultset zurückgegeben.
-DBCC CHECKCONSTRAINTS prüft die Integrität von FOREIGN KEY- und CHECK-Einschränkungen, aber nicht die Integrität der auf dem Datenträger gespeicherten Datenstrukturen einer Tabelle. Solche können ausgeführt werden, mithilfe von [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) und [DBCC CHECKTABLE](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md).
+DBCC CHECKCONSTRAINTS prüft die Integrität von FOREIGN KEY- und CHECK-Einschränkungen, aber nicht die Integrität der auf dem Datenträger gespeicherten Datenstrukturen einer Tabelle. Solche Datenstrukturprüfungen können mit [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) und [DBCC CHECKTABLE](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md) ausgeführt werden.
   
-**Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] über[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Gilt für:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
-Wenn *Table_name* oder *Table_id* angegeben ist und es für die versionsverwaltung durch das System aktiviert ist, führt DBCC CHECKCONSTRAINTS außerdem konsistenzprüfungen temporaler Daten für die angegebene Tabelle. Wenn *NO_INFOMSGS* nicht angegeben ist, wird dieser Befehl wird jeder Verstoß Konsistenz in der Ausgabe in einer separaten Zeile zurück. Das Format der Ausgabe werden ([pkcol1], [pkcol2]..) = (\<pkcol1_value >, \<pkcol2_value >...) UND \<Schwachpunkte durch temporale Tabellendatensatz >.
+Wenn *table_name* oder *table_id* angegeben wird und DBCC CHECKCONSTRAINTS für die Versionsverwaltung durch das System aktiviert ist, führt der Befehl außerdem Konsistenzprüfungen temporärer Daten für die angegebene Tabelle aus. Wenn *NO_INFOMSGS* nicht angegeben ist, gibt dieser Befehl jeden Konsistenzverstoß in der Ausgabe in einer separaten Zeile zurück. Das Format der Ausgabe ist ([pkcol1], [pkcol2]..) = (\<pkcol1_value>, \<pkcol2_value>…) AND \<Fehler des temporären Tabelleneintrags>.
   
-|Check|Zusätzliche Informationen in der Ausgabe, wenn Fehler bei der Überprüfung|  
+|Check|Zusätzliche Informationen in der Ausgabe, wenn die Prüfung einen Fehler zurückgibt|  
 |-----------|-----------------------------------------------|  
 |PeriodEndColumn ≥ PeriodStartColumn (aktuell)|[sys_end] = '{0}' AND MAX(DATETIME2) = '9999-12-31 23:59:59.99999'|  
-|PeriodEndColumn ≥ PeriodStartColumn (aktuell sind, Verlauf)|[sys_start] = '{0}' AND [sys_end] = '{1}'|  
-|PeriodStartColumn < Current_utc_time (aktuell)|[Sys_start] = '{0}' und SYSUTCTIME|  
-|PeriodEndColumn < Current_utc_time (Verlauf)|[sys_end] = '{0}' AND SYSUTCTIME|  
-|(überlappungen)|(sys_start1 sys_end1), (sys_start2 sys_end2) für zwei überlappende Datensätze.<br /><br /> Wenn mehr als 2 überlappende Datensätze sind, müssen Ausgabe mehrere Zeilen jeder mit ein Paar von überlappt.|  
+|PeriodEndColumn ≥ PeriodStartColumn (aktuell, Vergangenheit)|[sys_start] = '{0}' AND [sys_end] = '{1}'|  
+|PeriodStartColumn < current_utc_time (aktuell)|[sys_start] = '{0}' AND SYSUTCTIME|  
+|PeriodEndColumn < current_utc_time (Vergangenheit)|[sys_end] = '{0}' AND SYSUTCTIME|  
+|Überschneidungen|(sys_start1, sys_end1) , (sys_start2, sys_end2) für zwei sich überschneidende Einträge.<br /><br /> Wenn sich mehr als 2 Einträge überschneiden, enthält die Ausgabe mehrere Zeilen, die sich überschneiden.|  
   
-Es gibt keine Möglichkeit Constraint_name oder Constraint_id angeben, um nur temporale konsistenzprüfungen ausgeführt.
+Es ist nicht möglich, constraint_name oder constraint_id angeben, um nur temporäre Konsistenzprüfungen auszuführen.
   
 ## <a name="result-sets"></a>Resultsets  
 DBCC CHECKCONSTRAINTS gibt ein Rowset mit folgenden Spalten zurück.
@@ -157,7 +157,7 @@ DBCC CHECKCONSTRAINTS WITH ALL_CONSTRAINTS;
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [DBCC CHECKDB &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)  
 [DBCC CHECKTABLE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md)  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)

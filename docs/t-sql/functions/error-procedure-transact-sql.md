@@ -1,5 +1,5 @@
 ---
-title: ERROR_PROCEDURE (Transact-SQL) | Microsoft Docs
+title: ERROR_PROCEDURE (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -51,7 +51,7 @@ ERROR_PROCEDURE ( )
 ```  
   
 ## <a name="return-types"></a>Rückgabetypen  
- **vom Datentyp nvarchar(128)**  
+ **nvarchar(128)**  
   
 ## <a name="return-value"></a>Rückgabewert  
  Gibt beim Aufruf in einem CATCH-Block den Namen der gespeicherten Prozedur zurück, in der der Fehler aufgetreten ist.  
@@ -60,10 +60,10 @@ ERROR_PROCEDURE ( )
   
  Gibt NULL zurück, wenn die Funktion außerhalb des Bereichs eines CATCH-Blockes aufgerufen wird.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  ERROR_PROCEDURE kann innerhalb des Bereichs eines CATCH-Blocks an beliebigen Stellen aufgerufen werden.  
   
- ERROR_PROCEDURE gibt den Namen der gespeicherten Prozedur bzw. des Triggers zurück, in der bzw. in dem der Fehler aufgetreten ist, unabhängig davon, wie oft die Funktion aufgerufen wurde bzw. wo sie innerhalb des Bereichs des CATCH-Blocks aufgerufen wurde. Dies steht im Gegensatz zu Funktionen, z. B.@ERROR, die die Fehlernummer zurück, in der Anweisung unmittelbar folgt, die den Fehler verursacht hat, oder in der ersten Anweisung des CATCH-Blocks.  
+ ERROR_PROCEDURE gibt den Namen der gespeicherten Prozedur bzw. des Triggers zurück, in der bzw. in dem der Fehler aufgetreten ist, unabhängig davon, wie oft die Funktion aufgerufen wurde bzw. wo sie innerhalb des Bereichs des CATCH-Blocks aufgerufen wurde. Dies steht im Gegensatz zu Funktionen wie @@ERROR, die die Fehlernummer in der Anweisung sofort (gefolgt von der Nummer, die den Fehler verursacht hat) oder in der ersten Anweisung des CATCH-Blocks zurückgeben.  
   
  In geschachtelten CATCH-Blöcken gibt ERROR_PROCEDURE den Namen der gespeicherten Prozedur oder des Triggers im Bereich des CATCH-Blocks zurück, in dem auf die gespeicherte Prozedur bzw. auf den Trigger verwiesen wird. Der CATCH-Block eines TRY…CATCH-Konstrukts kann beispielsweise ein geschachteltes TRY…CATCH-Konstrukt enthalten. Innerhalb des geschachtelten CATCH-Blocks gibt ERROR_PROCEDURE den Namen der gespeicherten Prozedur oder des Triggers zurück, in der bzw. in dem der Fehler aufgetreten ist, mit dem der geschachtelte CATCH-Block aufgerufen wurde. Wenn ERROR_PROCEDURE im äußeren CATCH-Block ausgeführt wird, gibt die Funktion den Namen der gespeicherten Prozedur oder des Triggers zurück, in der bzw. in dem der Fehler aufgetreten ist, mit dem dieser CATCH-Block aufgerufen wurde.  
   
@@ -128,7 +128,7 @@ BEGIN CATCH
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
 ### <a name="c-using-errorprocedure-in-a-catch-block"></a>C. Verwenden von ERROR_PROCEDURE in einem CATCH-Block  
  Das folgende Codebeispiel zeigt eine gespeicherte Prozedur, in der ein Fehler aufgrund einer Division durch 0 generiert wird. `ERROR_PROCEDURE` gibt den Namen der gespeicherten Prozedur zurück, in der der Fehler aufgetreten ist.  
@@ -188,14 +188,14 @@ BEGIN CATCH
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [sys.messages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)   
  [TRY...CATCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/try-catch-transact-sql.md)   
  [ERROR_LINE &#40;Transact-SQL&#41;](../../t-sql/functions/error-line-transact-sql.md)   
  [ERROR_MESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/error-message-transact-sql.md)   
  [ERROR_NUMBER &#40;Transact-SQL&#41;](../../t-sql/functions/error-number-transact-sql.md)   
  [ERROR_SEVERITY &#40;Transact-SQL&#41;](../../t-sql/functions/error-severity-transact-sql.md)   
- [ERROR_STATE &#40; Transact-SQL &#41;](../../t-sql/functions/error-state-transact-sql.md)   
+ [ERROR_STATE &#40;Transact-SQL&#41;](../../t-sql/functions/error-state-transact-sql.md)   
  [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)   
  [@@ERROR &#40;Transact-SQL&#41;](../../t-sql/functions/error-transact-sql.md)  
   

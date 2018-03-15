@@ -1,5 +1,5 @@
 ---
-title: Column_constraint (Transact-SQL) | Microsoft Docs
+title: column_constraint (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 05/05/2017
 ms.prod: sql-non-specified
@@ -34,10 +34,10 @@ ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="alter-table-columnconstraint-transact-sql"></a>ALTER TABLE Column_constraint (Transact-SQL)
+# <a name="alter-table-columnconstraint-transact-sql"></a>ALTER TABLE column_constraint (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Gibt die Eigenschaften einer PRIMARY KEY-, FOREIGN KEY-, UNIQUE- oder CHECK-Einschränkung, die Teil einer neuen Spaltendefinition einer Tabelle hinzugefügt, mit [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).  
+  Gibt die Eigenschaften einer PRIMARY KEY-, FOREIGN KEY-, UNIQUE- oder CHECK-Einschränkung an, die Teil einer neuen Spaltendefinition ist, die einer Tabelle mithilfe von [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) hinzugefügt wird.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -68,7 +68,7 @@ ms.lasthandoff: 11/21/2017
  Gibt den Beginn der Definition für eine PRIMARY KEY-, UNIQUE-, FOREIGN KEY- oder CHECK-Einschränkung an.  
   
  *constraint_name*  
- Ist der Name der Einschränkung. Einschränkungsnamen müssen die Regeln für [Bezeichner](../../relational-databases/databases/database-identifiers.md), außer dass der Name nicht werden mit einem Nummernzeichen gestartet (#). Wenn *Constraint_name* ist nicht angegeben wird, wird die Einschränkung eine vom System generierter Name zugewiesen.  
+ Der Name der Einschränkung. Einschränkungsnamen müssen den Regeln für [Bezeichner](../../relational-databases/databases/database-identifiers.md) entsprechen. Zusätzlich darf der Name nicht mit einem Nummernzeichen (#) beginnen. Wenn *constraint_name* nicht angegeben ist, vergibt das System einen Namen für die Einschränkung.  
   
  NULL | NOT NULL  
  Gibt an, ob die Spalte NULL-Werte akzeptiert. Spalten, die keine NULL-Werte zulassen, können nur hinzugefügt werden, wenn für sie ein Standardwert angegeben ist. Wenn die neue Spalte NULL-Werte zulässt und kein Standardwert angegeben ist, enthält sie einen NULL-Wert für jede Zeile in der Tabelle. Wenn die neue Spalte NULL-Werte zulässt und eine Standarddefinition mit der neuen Spalte hinzugefügt wird, kann die Option WITH VALUES verwendet werden, um den Standardwert in der neuen Spalte für jede vorhandene Zeile in der Tabelle zu speichern.  
@@ -90,20 +90,20 @@ ms.lasthandoff: 11/21/2017
   
  Wenn bereits eine gruppierte Einschränkung oder ein gruppierter Index für eine Tabelle vorhanden ist, kann CLUSTERED nicht angegeben werden. Wenn bereits eine gruppierte Einschränkung oder ein gruppierter Index für eine Tabelle vorhanden ist, wird für PRIMARY KEY-Einschränkungen standardmäßig NONCLUSTERED verwendet.  
   
- Spalten, die von der **Ntext**, **Text**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **Xml**, oder **Image** Datentypen können nicht als Spalten für einen Index angegeben werden.  
+ Die Datentypen **ntext**, **text**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **xml** und **image** können nicht als Spalten für einen Index angegeben werden.  
   
- MIT FILLFACTOR  **=**  *Fillfactor*  
- Gibt an, wie weit [!INCLUDE[ssDE](../../includes/ssde-md.md)] die einzelnen Indexseiten füllen soll, die zum Speichern der Indexdaten verwendet werden. Benutzer angegebene füllfaktorwerte können zwischen 1 und 100 liegen. Wenn kein Wert angegeben ist, lautet der Standardwert 0.  
+ WITH FILLFACTOR **=***fillfactor*  
+ Gibt an, wie weit [!INCLUDE[ssDE](../../includes/ssde-md.md)] die einzelnen Indexseiten füllen soll, die zum Speichern der Indexdaten verwendet werden. Vom Benutzer angegebene Füllfaktorwerte können Zahlen von 1 bis 100 sein. Wenn kein Wert angegeben ist, lautet der Standardwert 0.  
   
 > [!IMPORTANT]  
->  Dokumentieren mit FILLFACTOR = *Fillfactor* als einzige Indexoption, für die PRIMARY KEY- oder UNIQUE-Einschränkungen gilt wird aus Gründen der Abwärtskompatibilität beibehalten, jedoch nicht auf diese Weise in Zukunft dokumentiert wird frei. Andere Indexoptionen können angegeben werden, der [Index_option](../../t-sql/statements/alter-table-index-option-transact-sql.md) -Klausel der ALTER TABLE.  
+>  Das Verwenden von WITH FILLFACTOR = *fillfactor* als einzige Indexoption, die für die PRIMARY KEY- oder UNIQUE-Einschränkungen gilt, wird hier aus Gründen der Abwärtskompatibilität weiterhin dokumentiert. In zukünftigen Releases wird dies jedoch nicht mehr der Fall sein. Andere Indexoptionen können in der [index_option](../../t-sql/statements/alter-table-index-option-transact-sql.md)-Klausel der ALTER TABLE-Anweisung angegeben werden.  
   
- ON { *Partition_scheme_name***(***Partition_column_name***)** | *Dateigruppe*  |  **"**Standard**"** }  
+ ON { *partition_scheme_name***(***partition_column_name***)** | *filegroup* | **"**default**"** }  
  **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Gibt den Speicherort des Indexes an, der für die Einschränkung erstellt wurde. Wenn *Partition_scheme_name* angegeben wird, wird der Index partitioniert und die Partitionen werden den Dateigruppen, die vom angegebenen zugeordnet *Partition_scheme_name*. Wenn *Dateigruppe* angegeben ist, wird der Index in der genannten Dateigruppe erstellt. Wenn **"**Standard**"** angegeben oder ON überhaupt nicht angegeben ist, wird der Index in derselben Dateigruppe wie die Tabelle erstellt. Wenn ON beim Hinzufügen eines gruppierten Index für eine PRIMARY KEY- oder UNIQUE-Einschränkung angegeben ist, wird die gesamte Tabelle beim Erstellen des gruppierten Index in die angegebene Dateigruppe verschoben.  
+ Gibt den Speicherort des Indexes an, der für die Einschränkung erstellt wurde. Wenn *partition_scheme_name* angegeben wird, wird der Index partitioniert, und die Partitionen werden den Dateigruppen zugeordnet, die durch *partition_scheme_name* angegeben sind. Wenn *filegroup* angegeben ist, wird der Index in der genannten Dateigruppe erstellt. Wenn **"**default**"** angegeben ist, oder wenn ON nicht für alle festgelegt ist, wird der Index in derselben Dateigruppe erstellt wie die Tabelle. Wenn ON beim Hinzufügen eines gruppierten Index für eine PRIMARY KEY- oder UNIQUE-Einschränkung angegeben ist, wird die gesamte Tabelle beim Erstellen des gruppierten Index in die angegebene Dateigruppe verschoben.  
   
- In diesem Kontext, in der Standardeinstellung ist kein Schlüsselwort. Es ist ein Bezeichner für die Standarddateigruppe und muss begrenzt sein, wie in ON **"**Standard**"** oder ON **[**Standard**]**. Wenn **"**Standard**"** angegeben ist, muss die QUOTED_IDENTIFIER-Option ON sein, für die aktuelle Sitzung. Dies ist die Standardeinstellung. Weitere Informationen finden Sie unter [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
+ In diesem Zusammenhang ist default kein Schlüsselwort. Es handelt sich dabei um einen Bezeichner für die Standarddateigruppe. Dieser muss wie in ON **"**default**"** or ON **[**default**]** durch Trennzeichen getrennt werden. Wenn **"**default**"** angegeben ist, muss die QUOTED_IDENTIFIER-Option für die aktuelle Sitzung auf ON festgelegt sein. Dies ist die Standardeinstellung. Weitere Informationen finden Sie unter [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
   
  FOREIGN KEY REFERENCES  
  Eine Einschränkung, die referenzielle Integrität für die Daten in der Spalte bereitstellt. FOREIGN KEY-Einschränkungen erfordern, dass jeder Wert in der Spalte in der angegebenen Spalte der Tabelle vorhanden ist, auf die verwiesen wird.  
@@ -117,7 +117,7 @@ ms.lasthandoff: 11/21/2017
  *ref_column*  
  Eine Spalte in Klammern, auf die die neue FOREIGN KEY-Einschränkung verweist.  
   
- ON DELETE { **NICHTS** | CASCADE | SET NULL | STANDARD FESTLEGEN}  
+ ON DELETE { **NO ACTION** | CASCADE | SET NULL | SET DEFAULT }  
  Gibt an, welche Aktion für eine Zeile der geänderten Tabelle ausgeführt werden soll, wenn diese Zeile eine referenzielle Beziehung hat, und die Zeile, auf die verwiesen wird, aus der übergeordneten Tabelle gelöscht wird. Der Standardwert ist NO ACTION.  
   
  NO ACTION  
@@ -136,13 +136,13 @@ ms.lasthandoff: 11/21/2017
   
  Die CASCADE-Aktion ON DELETE kann nicht definiert werden, wenn für ON DELETE bereits ein INSTEAD OF-Trigger für die Tabelle vorhanden ist, die geändert wird.  
   
- Z. B. in der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] Datenbank, die **ProductVendor** Tabelle verfügt über eine referenzielle Beziehung zu den **Hersteller** Tabelle. Die **ProductVendor.VendorID** -Fremdschlüssel verweist auf die **Vendor.VendorID** Primärschlüssel.  
+ In der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]-Datenbank verfügt die **ProductVendor**-Tabelle beispielsweise über eine referenzielle Beziehung zur **Vendor**-Tabelle. Der **ProductVendor.VendorID**-Fremdschlüssel verweist dabei auf den **Vendor.VendorID**-Primärschlüssel.  
   
- Wenn für eine Zeile in eine DELETE-Anweisung ausgeführt wird der **Hersteller** Tabelle und eine ON DELETE CASCADE-Aktion ist für die angegebene **ProductVendor.VendorID**, die [!INCLUDE[ssDE](../../includes/ssde-md.md)] überprüft, ob mindestens einer abhängigen Zeile in der **ProductVendor** Tabelle. Falls vorhanden, die abhängigen Zeilen in der **ProductVendor** Tabelle gelöscht werden, ebenso wie die Zeile verwiesen wird, der **Hersteller** Tabelle.  
+ Wenn eine DELETE-Anweisung für eine Zeile in der **Vendor**-Tabelle ausgeführt wird und eine ON DELETE CASCADE-Aktion für **ProductVendor.VendorID** festgelegt ist, sucht [!INCLUDE[ssDE](../../includes/ssde-md.md)] nach mindestens einer abhängigen Zeile in der **ProductVendor**-Tabelle. Sind abhängige Zeilen vorhanden, werden zusätzlich zur Zeile, auf die in der **Vendor**-Tabelle verwiesen wird, die abhängigen Zeilen in der **ProductVendor**-Tabelle gelöscht.  
   
- Umgekehrt, wenn NO ACTION angegeben ist, die [!INCLUDE[ssDE](../../includes/ssde-md.md)] löst einen Fehler aus und ein Rollback für die Delete-Aktion aus, auf die **Hersteller** -Zeile aus, wenn es mindestens eine Zeile in ist der **ProductVendor** Tabelle, die darauf verweist.  
+ Ist hingegen NO ACTION angegeben, löst [!INCLUDE[ssDE](../../includes/ssde-md.md)] einen Fehler aus und führt ein Rollback für die Löschaktion der **Vendor**-Zeile aus, wenn in der **ProductVendor**-Tabelle mindestens eine Zeile vorhanden ist, die auf diese Zeile verweist.  
   
- BEI UPDATE { **NICHTS** | CASCADE | SET NULL | STANDARD FESTLEGEN}  
+ ON UPDATE { **NO ACTION** | CASCADE | SET NULL | SET DEFAULT }  
  Gibt an, welche Aktion für eine Zeile der geänderten Tabelle ausgeführt werden soll, wenn diese Zeile eine referenzielle Beziehung hat und die Zeile, auf die verwiesen wird, in der übergeordneten Tabelle aktualisiert wird. Der Standardwert ist NO ACTION.  
   
  NO ACTION  
@@ -161,11 +161,11 @@ ms.lasthandoff: 11/21/2017
   
  ON UPDATE CASCADE, SET NULL oder SET DEFAULT können nicht definiert werden, wenn für ON UPDATE schon ein INSTEAD OF-Trigger für die Tabelle vorhanden ist, die geändert wird.  
   
- Z. B. in der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] Datenbank, die **ProductVendor** Tabelle verfügt über eine referenzielle Beziehung zu den **Hersteller** Tabelle. Die **ProductVendor.VendorID** -Fremdschlüssel verweist auf die **Vendor.VendorID** Primärschlüssel.  
+ In der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]-Datenbank verfügt die **ProductVendor**-Tabelle beispielsweise über eine referenzielle Beziehung zur **Vendor**-Tabelle. Der **ProductVendor.VendorID**-Fremdschlüssel verweist dabei auf den **Vendor.VendorID**-Primärschlüssel.  
   
- Wenn für eine Zeile in eine UPDATE-Anweisung ausgeführt wird die **Hersteller** Tabelle und eine ON UPDATE CASCADE-Aktion für angegeben wird **ProductVendor.VendorID**, die [!INCLUDE[ssDE](../../includes/ssde-md.md)] überprüft, ob mindestens einer abhängigen Zeile in der **ProductVendor** Tabelle. Falls vorhanden, die abhängige Zeilen in der **ProductVendor** -Tabelle aktualisiert, ebenso wie die Zeile verwiesen wird, der **Hersteller** Tabelle.  
+ Wenn eine UPDATE-Anweisung für eine Zeile in der **Vendor**-Tabelle ausgeführt wird, und eine ON UPDATE CASCADE-Aktion ist für **ProductVendor.VendorID** festgelegt, sucht [!INCLUDE[ssDE](../../includes/ssde-md.md)] nach mindestens einer abhängigen Zeile in der **ProductVendor**-Tabelle. Sind abhängige Zeilen vorhanden, wird zusätzlich zur Zeile, auf die in der **Vendor**-Tabelle verwiesen wird, die abhängige Zeile in der **ProductVendor**-Tabelle aktualisiert.  
   
- Umgekehrt, wenn NO ACTION angegeben ist, die [!INCLUDE[ssDE](../../includes/ssde-md.md)] löst einen Fehler aus und ein Rollback für die Updateaktion aus, auf die **Hersteller** -Zeile aus, wenn es mindestens eine Zeile in ist der **ProductVendor** Tabelle, die darauf verweist.  
+ Ist hingegen NO ACTION angegeben, löst [!INCLUDE[ssDE](../../includes/ssde-md.md)] einen Fehler aus und führt für die Updateaktion der **Vendor**-Zeile einen Rollback aus, wenn in der **ProductVendor**-Tabelle mindestens eine Zeile vorhanden ist, die auf diese Zeile verweist.  
   
  NOT FOR REPLICATION  
  **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -175,18 +175,18 @@ ms.lasthandoff: 11/21/2017
  CHECK  
  Eine Einschränkung, die Domänenintegrität erzwingt, indem die möglichen Eingabewerte für eine oder mehrere Spalten beschränkt wird.  
   
- *Logical_Expression*  
- Ein logischer Ausdruck, der in einer CHECK-Einschränkung verwendet wird und TRUE oder FALSE zurückgibt. *Logical_Expression* verwendet mit Kontrollkästchen Einschränkungen können nicht auf einer anderen Tabelle verweisen, jedoch andere Spalten in derselben Tabelle für dieselbe Zeile auf. Der Ausdruck kann keinen Verweis auf einen Aliasdatentyp enthalten.  
+ *logical_expression*  
+ Ein logischer Ausdruck, der in einer CHECK-Einschränkung verwendet wird und TRUE oder FALSE zurückgibt. Werden die CHECK-Einschränkungen zusammen mit *logical_expression* verwendet, kann nicht auf eine andere Tabelle, jedoch auf andere Spalten in derselben Tabelle für dieselbe Zeile verwiesen werden. Der Ausdruck kann keinen Verweis auf einen Aliasdatentyp enthalten.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Wenn FOREIGN KEY- oder CHECK-Einschränkungen hinzugefügt werden, werden alle vorhandenen Daten auf Einschränkungsverletzungen überprüft, es sei denn, die WITH NOCHECK-Option wurde festgelegt. Bei Verletzungen schlägt die ALTER TABLE-Anweisung fehl, und ein Fehler wird zurückgegeben. Wenn eine neue PRIMARY KEY- oder UNIQUE-Einschränkung zu einer vorhandenen Spalte hinzugefügt wird, müssen die Daten in der/den Spalte(n) eindeutig sein. Wenn doppelte Werte gefunden werden, schlägt die ALTER TABLE-Anweisung fehl. Die WITH NOCHECK-Option hat keine Auswirkungen, wenn PRIMARY KEY- oder UNIQUE-Einschränkungen hinzugefügt werden.  
   
  Jede PRIMARY KEY- und UNIQUE-Einschränkung generiert einen Index. Die Anzahl der UNIQUE- und PRIMARY KEY-Einschränkungen darf nicht dazu führen, dass die Anzahl der Indizes der Tabelle 999 nicht gruppierte Indizes und 1 gruppierten Index übersteigt. FOREIGN KEY-Einschränkungen generieren nicht automatisch einen Index. Fremdschlüsselspalten werden jedoch häufig in Joinkriterien in Abfragen verwendet, indem die Übereinstimmungen zwischen der oder den Spalten in der FOREIGN KEY-Einschränkung einer Tabelle und der oder den Spalten eines Primärschlüssels oder eines eindeutigen Schlüssels in der anderen Tabelle ermittelt werden. Ein Index für die Fremdschlüsselspalte ermöglicht [!INCLUDE[ssDE](../../includes/ssde-md.md)], die verbundenen Daten in der Fremdschlüsseltabelle schnell zu finden.  
   
 ## <a name="examples"></a>Beispiele  
- Beispiele finden Sie unter [ALTER TABLE &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-table-transact-sql.md).  
+ Beispiele finden Sie unter [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [column_definition &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-column-definition-transact-sql.md)  
   

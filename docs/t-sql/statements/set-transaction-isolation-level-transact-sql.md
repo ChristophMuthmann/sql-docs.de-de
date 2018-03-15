@@ -1,5 +1,5 @@
 ---
-title: SET TRANSACTION ISOLATION LEVEL (Transact-SQL) | Microsoft Docs
+title: SET TRANSACTION ISOLATION LEVEL (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 12/04/2017
 ms.prod: sql-non-specified
@@ -71,7 +71,7 @@ SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
  READ UNCOMMITTED  
  Gibt an, dass Anweisungen Zeilen lesen können, die von anderen Transaktionen geändert wurden, für die jedoch noch kein Commit ausgeführt wurde.  
   
- Transaktionen, die auf der READ UNCOMMITTED-Ebene ausgeführt werden. Geben Sie keine freigegebene sperren, um zu verhindern, dass andere Transaktionen von der aktuellen Transaktion gelesene Daten zu ändern. READ UNCOMMITTED-Transaktionen werden darüber hinaus nicht durch exklusive Sperren blockiert, die verhindern würden, dass die aktuelle Transaktion Zeilen liest, die von anderen Transaktionen geändert wurden, für die jedoch kein Commit ausgeführt wurde. Wenn diese Option festgelegt wird, können Änderungen gelesen werden, für die kein Commit ausgeführt wurde (so genannte Dirty Reads). Datenwerte können geändert werden, und Zeilen können vor dem Transaktionsende im Dataset hinzugefügt oder entfernt werden. Diese Option hat dieselbe Auswirkung wie das Festlegen von NOLOCK für die Tabellen in allen SELECT-Anweisungen in einer Transaktion. Von allen Isolationsstufen ist diese am wenigsten restriktiv.  
+ Transaktionen, die auf der READ UNCOMMITTED-Ebene ausgeführt werden, geben keine gemeinsamen Sperren aus, die verhindern würden, dass andere Transaktionen Daten ändern, die von der aktuellen Transaktion gelesen werden. READ UNCOMMITTED-Transaktionen werden darüber hinaus nicht durch exklusive Sperren blockiert, die verhindern würden, dass die aktuelle Transaktion Zeilen liest, die von anderen Transaktionen geändert wurden, für die jedoch kein Commit ausgeführt wurde. Wenn diese Option festgelegt wird, können Änderungen gelesen werden, für die kein Commit ausgeführt wurde (so genannte Dirty Reads). Datenwerte können geändert werden, und Zeilen können vor dem Transaktionsende im Dataset hinzugefügt oder entfernt werden. Diese Option hat dieselbe Auswirkung wie das Festlegen von NOLOCK für die Tabellen in allen SELECT-Anweisungen in einer Transaktion. Von allen Isolationsstufen ist diese am wenigsten restriktiv.  
   
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] können Sie auch Konflikte zwischen Sperren minimieren und zugleich Transaktionen vor Dirty Reads von Datenänderungen, für die kein Commit ausgeführt wurde, folgendermaßen schützen:  
   
@@ -84,7 +84,7 @@ SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
   
  Das Verhalten von READ COMMITTED hängt von der Einstellung der Datenbankoption READ_COMMITTED_SNAPSHOT ab:  
   
--   Wenn READ_COMMITTED_SNAPSHOT auf OFF (Standardeinstellung) festgelegt wird, verwendet [!INCLUDE[ssDE](../../includes/ssde-md.md)] freigegebene Sperren, um zu verhindern, dass andere Transaktionen Zeilen ändern, während die aktuelle Transaktion einen Lesevorgang ausführt. Durch freigegebene Sperren wird außerdem verhindert, dass die Anweisung Zeilen, die von anderen Transaktionen geändert werden, erst nach Abschluss der anderen Transaktion lesen kann. Mit dem Typ der gemeinsamen Sperre wird festgelegt, wann die Sperre aufgehoben wird. Zeilensperren werden aufgehoben, bevor die nächste Zeile verarbeitet wird. Seitensperren werden aufgehoben, wenn die nächste Seite wird gelesen, und Tabellensperren aufgehoben werden, wenn die Anweisung abgeschlossen ist.  
+-   Wenn READ_COMMITTED_SNAPSHOT auf OFF (Standardeinstellung) festgelegt wird, verwendet [!INCLUDE[ssDE](../../includes/ssde-md.md)] freigegebene Sperren, um zu verhindern, dass andere Transaktionen Zeilen ändern, während die aktuelle Transaktion einen Lesevorgang ausführt. Durch freigegebene Sperren wird außerdem verhindert, dass die Anweisung Zeilen, die von anderen Transaktionen geändert werden, erst nach Abschluss der anderen Transaktion lesen kann. Mit dem Typ der gemeinsamen Sperre wird festgelegt, wann die Sperre aufgehoben wird. Zeilensperren werden aufgehoben, bevor die nächste Zeile verarbeitet wird. Seitensperren werden aufgehoben, wenn die nächste Seite gelesen wird, und Tabellensperren werden aufgehoben, nachdem die Ausführung der Anweisung beendet wurde.  
   
     > [!NOTE]  
     >  Wenn READ_COMMITTED_SNAPSHOT auf ON festgelegt wird, verwendet [!INCLUDE[ssDE](../../includes/ssde-md.md)] die Zeilenversionsverwaltung, um jede Anweisung mit einer hinsichtlich der Transaktionen konsistenten Momentaufnahme der Daten so darzustellen, wie sie zu Beginn der Anweisung vorhanden waren. Es werden keine Sperren verwendet, um die Daten vor Updates durch andere Transaktionen zu schützen.  
@@ -128,7 +128,7 @@ SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
   
  Bereichssperren werden in den Schlüsselwertbereichen eingerichtet, die die Suchbedingungen der in einer Transaktion ausgeführten Anweisungen erfüllen. Dadurch wird verhindert, dass andere Transaktionen Zeilen aktualisieren oder einfügen, die den von der aktuellen Transaktion ausgeführten Anweisungen entsprechen würden. Werden also Anweisungen in einer Transaktion ein zweites Mal ausgeführt, lesen diese dieselbe Zeilengruppe. Die Bereichssperren werden bis zum Abschluss der Transaktion aufrechterhalten. Diese Isolationsstufe ist am restriktivsten, da gesamte Schlüsselbereiche gesperrt werden, und die Sperren bis zum Abschluss der Transaktion aufrechterhalten werden. Da die Parallelität geringer ist, verwenden Sie diese Option nur, wenn es notwendig ist. Diese Option hat dieselbe Auswirkung wie das Festlegen von HOLDLOCK für die Tabellen in allen SELECT-Anweisungen in einer Transaktion.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Es können nicht mehrere Isolationsstufenoptionen gleichzeitig festgelegt werden; eine Option bleibt für die Dauer der Verbindung festgelegt, wenn sie nicht explizit geändert wird. Alle Lesevorgänge innerhalb der Transaktion unterliegen den Regeln der angegebenen Isolationsstufe, es sei denn, ein Tabellenhinweis in der FROM-Klausel einer Anweisung gibt ein anderes Sperr- oder Versionsverwaltungsverhalten für eine Tabelle an.  
   
  Die Transaktionsisolationsstufen definieren die Typen von Sperren, die für Lesevorgänge angefordert werden. Freigegebene Sperren für READ COMMITTED oder REPEATABLE READ sind im Allgemeinen Zeilensperren, die jedoch auf Seiten- oder Tabellensperren ausgeweitet werden können, wenn beim Lesevorgang auf viele Zeilen auf einer Seite oder in einer Tabelle verwiesen wird. Wenn eine Zeile nach dem Lesen durch die Transaktion geändert wird, fordert die Transaktion eine exklusive Sperre an, um diese Zeile zu schützen. Die exklusive Sperre wird bis zum Abschluss der Transaktion aufrechterhalten. Verfügt beispielsweise eine REPEATABLE READ-Transaktion über eine freigegebene Sperre für eine Zeile, und die Zeile wird dann durch die Transaktion geändert, wird die freigegebene Zeilensperre in eine exklusive Zeilensperre konvertiert.  
@@ -154,7 +154,7 @@ SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
   
 -   READ COMMITTED mithilfe der Zeilenversionsverwaltung  
   
- Umgekehrt werden durch Abfragen, die unter diesen Isolationsstufen ausgeführt werden, optimierte Massenladevorgänge für Heaps blockiert. Weitere Informationen zu Massenladevorgängen finden Sie unter [Massenimport und-Export von Daten &#40; SQLServer &#41; ](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md).  
+ Umgekehrt werden durch Abfragen, die unter diesen Isolationsstufen ausgeführt werden, optimierte Massenladevorgänge für Heaps blockiert. Weitere Informationen zu Massenladevorgängen finden Sie unter [Massenimport und -export von Daten &#40;SQL Server&#41;](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md).  
   
  FILESTREAM-aktivierte Datenbanken unterstützen die folgenden Transaktionsisolationsstufen.  
   
@@ -187,9 +187,9 @@ COMMIT TRANSACTION;
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
- [DBCC USEROPTIONS &#40; Transact-SQL &#41;](../../t-sql/database-console-commands/dbcc-useroptions-transact-sql.md)   
+ [DBCC USEROPTIONS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-useroptions-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [SET-Anweisungen (Transact-SQL)](../../t-sql/statements/set-statements-transact-sql.md)   
  [Tabellenhinweise &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md)  

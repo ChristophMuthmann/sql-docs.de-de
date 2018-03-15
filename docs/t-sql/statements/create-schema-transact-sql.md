@@ -1,5 +1,5 @@
 ---
-title: Erstellen von SCHEMAS (Transact-SQL) | Microsoft Docs
+title: CREATE SCHEMA (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 12/01/2016
 ms.prod: sql-non-specified
@@ -75,10 +75,10 @@ CREATE SCHEMA schema_name [ AUTHORIZATION owner_name ] [;]
  *schema_name*  
  Der Name, mit dem das Schema innerhalb der Datenbank identifiziert wird.  
   
- Autorisierung *Owner_name*  
+ AUTHORIZATION *owner_name*  
  Gibt den Namen des Prinzipals auf Datenbankebene an, der der Besitzer des Schemas ist. Dieser Prinzipal kann andere Schemas besitzen und verwendet das aktuelle Schema möglicherweise nicht als Standardschema.  
   
- *Table_Definition*  
+ *table_definition*  
  Gibt eine CREATE TABLE-Anweisung an, die eine Tabelle in dem Schema erstellt. Der Prinzipal, der diese Anweisung ausführt, benötigt die CREATE TABLE-Berechtigung für die aktuelle Datenbank.  
   
  *view_definition*  
@@ -93,10 +93,10 @@ CREATE SCHEMA schema_name [ AUTHORIZATION owner_name ] [;]
  *deny_statement*  
  Gibt eine DENY-Anweisung an, die Berechtigungen für jedes sicherungsfähige Element außer dem neuen Schema verweigert.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
   
 > [!NOTE]  
->  Anweisungen, die CREATE SCHEMA AUTHORIZATION enthalten, aber kein Name angegeben ist, sind nur für Abwärtskompatibilität zulässig. Die Anweisung verursacht zwar keinen Fehler, erstellt aber auch kein Schema.  
+>  Anweisungen, die CREATE SCHEMA AUTHORIZATION enthalten, aber keinen Namen angeben, sind nur aus Gründen der Abwärtskompatibilität zulässig. Die Anweisung verursacht zwar keinen Fehler, erstellt aber auch kein Schema.  
   
  Mit CREATE SCHEMA können ein Schema und die darin enthaltenen Tabellen und Sichten sowie die Berechtigungen GRANT, REVOKE oder DENY für jedes sicherungsfähige Element in einer einzelnen Anweisung erstellt werden. Diese Anweisung muss als separater Batch ausgeführt werden. Mit der CREATE SCHEMA-Anweisung erstellte Objekte werden innerhalb des zu erstellenden Schemas erstellt.  
   
@@ -120,7 +120,7 @@ CREATE SCHEMA schema_name [ AUTHORIZATION owner_name ] [;]
   
  In bestimmten Fällen kann ein Benutzer eine Datenbank verwenden, ohne ein Datenbankbenutzerkonto (einen Datenbankprinzipal in der Datenbank) zu besitzen. Das ist in den folgenden Situationen möglich:  
   
--   Eine Anmeldung besitzt **CONTROL SERVER** Berechtigungen.  
+-   Eine Anmeldung verfügt über **CONTROL SERVER**-Berechtigungen.  
   
 -   Ein Windows-Benutzer hat kein individuelles Datenbankbenutzerkonto (einen Datenbankprinzipal in der Datenbank), greift jedoch als Mitglied einer Windows-Gruppe, die ein Datenbankbenutzerkonto (einen Datenbankprinzipal für die Windows-Gruppe) besitzt, auf eine Datenbank zu.  
   
@@ -129,7 +129,7 @@ CREATE SCHEMA schema_name [ AUTHORIZATION owner_name ] [;]
  Dieses Verhalten ist erforderlich, damit auf Windows-Gruppen basierende Benutzer Objekte erstellen und besitzen können. Es kann jedoch zur unbeabsichtigten Erstellung von Schemata und Benutzern führen. Um das implizite Erstellen von Benutzern und Schemata tu vermeiden, sollten Sie soweit möglich Datenbankprinzipale explizit erstellen und ein Standardschema zuweisen. Oder geben Sie bei der Erstellung von Objekten in einer Datenbank explizit ein vorhandenes Schema anhand von zwei- oder dreiteiligen Objektnamen an.  
 
 >  [!NOTE]
->  Die implizite Erstellung von Azure Active Directory-Benutzer ist nicht möglich, auf [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. Da den Status der Benutzer in der AAD Erstellen eines Azure AD-Benutzers von externen Anbieter überprüfen muss, Erstellen des Benutzers schlägt fehl mit Fehler 2760: **der angegebene Schemaname "\<user_name@domain>" ist nicht vorhanden oder Sie verfügen nicht über die Berechtigung, ihn zu verwenden.** Und klicken Sie dann die Fehler 2759: **Fehler bei CREATE SCHEMA wegen vorheriger Fehler.** Um diese Fehler zu umgehen, erstellen Sie Azure AD-Benutzers vom externen Anbieter zunächst, und führen Sie die Anweisung, die beim Erstellen des Objekts.
+>  Eine implizite Erstellung eines Azure Active Directory-Benutzers ist für [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] nicht möglich. Da bei der Erstellung eines Azure AD-Benutzers über einen externen Anbieter der Benutzerstatus in AAD überprüft werden muss, wird der Fehler 2760 ausgelöst: **The specified schema name "\<user_name@domain>" either does not exist or you do not have permission to use it.** (Den angegebenen Schemanamen "<user_name@domain>" gibt es entweder nicht oder Sie verfügen nicht über die Berechtigung, diesen zu verwenden.). Anschließend wird der Fehler 2759 ausgelöst: **CREATE SCHEMA failed due to previous errors.** (Fehler bei CREATE SCHEMA wegen vorheriger Fehler.). Erstellen Sie zum Umgehen dieser Fehler zuerst den Azure AD-Benutzer über einen externen Anbieter und führen Sie die Anweisung erneut aus, indem Sie das Objekt erstellen.
  
   
 ## <a name="deprecation-notice"></a>Hinweis zur Abwärtskompatibilität  
@@ -147,7 +147,7 @@ CREATE SCHEMA schema_name [ AUTHORIZATION owner_name ] [;]
   
 ## <a name="examples"></a>Beispiele  
   
-### <a name="a-creating-a-schema-and-granting-permissions"></a>A. Erstellen eines Schemas und Benutzern Berechtigungen erteilen  
+### <a name="a-creating-a-schema-and-granting-permissions"></a>A. Erstellen eines Schemas und Erteilen von Berechtigungen  
  Das folgende Beispiel erstellt das `Sprockets`-Schema, das im Besitz von `Annik` ist und die `NineProngs`-Tabelle enthält. Die Anweisung erteilt die `SELECT`-Berechtigung für `Mandar` und verweigert die `SELECT`-Berechtigung für `Prasanna`. Beachten Sie, dass `Sprockets` und `NineProngs` in einer einzigen Anweisung erstellt werden.  
   
 ```  
@@ -160,10 +160,10 @@ CREATE SCHEMA Sprockets AUTHORIZATION Annik
 GO   
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
-### <a name="b-creating-a-schema-and-a-table-in-the-schema"></a>B. Erstellen ein Schema und eine Tabelle im schema  
- Das folgende Beispiel erstellt ein Schema `Sales` und erstellt dann eine Tabelle `Sales.Region` in diesem Schema.  
+### <a name="b-creating-a-schema-and-a-table-in-the-schema"></a>B. Erstellen eines Schemas und einer Tabelle in diesem Schema  
+ Im folgenden Beispiel wird das Schema `Sales` erstellt, und anschließend in diesem Schema die Tabelle `Sales.Region`.  
   
 ```  
 CREATE SCHEMA Sales;  
@@ -177,22 +177,22 @@ GO
 ```  
   
 ### <a name="c-setting-the-owner-of-a-schema"></a>C. Festlegen des Besitzers eines Schemas  
- Das folgende Beispiel erstellt ein Schema `Production` Besitz `Mary`.  
+ Im folgenden Beispiel wird ein Schema `Production` erstellt, dessen Besitzer `Mary` ist.  
   
 ```  
 CREATE SCHEMA Production AUTHORIZATION [Contoso\Mary];  
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [ALTER SCHEMA &#40; Transact-SQL &#41;](../../t-sql/statements/alter-schema-transact-sql.md)   
- [DROP SCHEMA &#40; Transact-SQL &#41;](../../t-sql/statements/drop-schema-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [ALTER SCHEMA &#40;Transact-SQL&#41;](../../t-sql/statements/alter-schema-transact-sql.md)   
+ [DROP SCHEMA &#40;Transact-SQL&#41;](../../t-sql/statements/drop-schema-transact-sql.md)   
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
  [DENY &#40;Transact-SQL&#41;](../../t-sql/statements/deny-transact-sql.md)   
  [REVOKE &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-transact-sql.md)   
  [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
- [Sys.Schemas &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/schemas-catalog-views-sys-schemas.md)   
+ [sys.schemas &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/schemas-catalog-views-sys-schemas.md)   
  [Erstellen eines Datenbankschemas](../../relational-databases/security/authentication-access/create-a-database-schema.md)  
   
   

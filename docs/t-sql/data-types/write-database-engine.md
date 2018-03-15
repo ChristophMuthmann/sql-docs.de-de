@@ -1,5 +1,5 @@
 ---
-title: Write (Datenbankmodul) | Microsoft Docs
+title: Write (Datenbank-Engine) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 7/23/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="write-database-engine"></a>Write (Datenbankmodul)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Schreibt eine binäre Darstellung der schreiben **SqlHierarchyId** in den übergebenen **BinaryWriter**. Schreibvorgang kann nicht aufgerufen werden, mithilfe von [!INCLUDE[tsql](../../includes/tsql-md.md)]. Verwenden Sie stattdessen CAST oder CONVERT.
+Write schreibt eine binäre Darstellung von **SqlHierarchyId** in den übergebenen **BinaryWriter**. Write kann nicht mit [!INCLUDE[tsql](../../includes/tsql-md.md)] aufgerufen werden. Verwenden Sie stattdessen CAST oder CONVERT.
   
 ## <a name="syntax"></a>Syntax  
   
@@ -44,13 +44,13 @@ void Write( BinaryWriter w )
   
 ## <a name="arguments"></a>Argumente  
 *w*  
-Ein **BinaryWriter** Objekt, mit dem die binäre Darstellung dieses **Hierarchyid** Knoten geschrieben wird.
+Ein **BinaryWriter**-Objekt, in das die binäre Darstellung dieses **hierarchyid**-Knotens geschrieben wird.
   
 ## <a name="return-types"></a>Rückgabetypen  
-**CLR-Typ: Void zurückgeben**
+**CLR-Rückgabetyp: void**
   
-## <a name="remarks"></a>Hinweise  
-Schreiben wird intern von verwendet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Wenn ist es erforderlich, z. B. beim Laden von Daten aus einer **Hierarchyid** Spalte. Schreiben wird außerdem intern aufgerufen, wenn eine Konvertierung zwischen erfolgt **Hierarchyid** und **Varbinary**.
+## <a name="remarks"></a>Remarks  
+Write wird wenn nötig intern von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet, z.B. beim Schreiben von Daten in die **hierarchyid**-Spalte. Write wird auch intern aufgerufen, wenn eine Konvertierung zwischen **hierarchyid** und **varbinary** ausgeführt wird.
   
 ## <a name="examples"></a>Beispiele  
   
@@ -63,8 +63,8 @@ byte[] encoding = stream.ToArray();
 ```  
   
 ## <a name="see-also"></a>Siehe auch
-[Lesen &#40; Datenbankmodul &#41;](../../t-sql/data-types/read-database-engine.md)  
-[ToString &#40; Datenbankmodul &#41;](../../t-sql/data-types/tostring-database-engine.md)  
+[Read &#40;Database Engine&#41; (Read (Datenbank-Engine))](../../t-sql/data-types/read-database-engine.md)  
+[ToString &#40;Datenbank-Engine&#41;](../../t-sql/data-types/tostring-database-engine.md)  
 [CAST und CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
 [hierarchyid-Datentyp-Methodenverweis](http://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)
   

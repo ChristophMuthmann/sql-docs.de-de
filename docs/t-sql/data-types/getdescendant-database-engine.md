@@ -1,5 +1,5 @@
 ---
-title: GetDescendant (Datenbankmodul) | Microsoft Docs
+title: GetDescendant (Datenbank-Engine) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 7/22/2017
 ms.prod: sql-non-specified
@@ -49,18 +49,18 @@ SqlHierarchyId GetDescendant ( SqlHierarchyId child1 , SqlHierarchyId child2 )
 ```  
   
 ## <a name="arguments"></a>Argumente  
-*Child1*  
-NULL oder **Hierarchyid** der ein untergeordnetes Element des aktuellen Knotens.
+*child1*  
+NULL oder die **hierarchyid** eines untergeordneten Elements des aktuellen Knotens.
   
-*Child2*  
-NULL oder **Hierarchyid** der ein untergeordnetes Element des aktuellen Knotens.
+*child2*  
+NULL oder die **hierarchyid** eines untergeordneten Elements des aktuellen Knotens.
   
 ## <a name="return-types"></a>Rückgabetypen  
-**SQL Server-Typ: Hierarchyid zurück**
+**SQL Server-Rückgabetyp: hierarchyid**
   
-**CLR-Typ: SqlHierarchyId zurück**
+**CLR-Rückgabetyp: SqlHierarchyId**
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
 Gibt einen untergeordneten Knoten zurück, der ein Nachfolger des übergeordneten Elements ist.
 -   Ist parent NULL, wird NULL zurückgegeben.  
 -   Ist parent nicht NULL und sind sowohl child1 als auch child2 NULL, dann wird ein parent untergeordneter Knoten zurückgegeben.  
@@ -71,12 +71,12 @@ Gibt einen untergeordneten Knoten zurück, der ein Nachfolger des übergeordnete
 -   Ist child2 nicht NULL und außerdem kein untergeordnetes Element von parent, wird eine Ausnahme ausgelöst.  
 -   Ist child1 >= child2, wird eine Ausnahme ausgelöst.  
   
-GetDescendant ist deterministisch. Aus diesem Grund Wenn GetDescendant mit den gleichen Eingaben aufgerufen wird, wird immer die gleiche Ausgabe erzeugt. Die genaue Identität des erzeugten untergeordneten Elements kann jedoch abhängig von seiner Beziehung zu den anderen Knoten variieren, wie in Beispiel C veranschaulicht wird.
+GetDescendant ist deterministisch. Deshalb erzeugt GetDescendant immer die gleiche Ausgabe, wenn es mit den gleichen Eingaben aufgerufen wird. Die genaue Identität des erzeugten untergeordneten Elements kann jedoch abhängig von seiner Beziehung zu den anderen Knoten variieren, wie in Beispiel C veranschaulicht wird.
   
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="a-inserting-a-row-as-the-least-descendant-node"></a>A. Einfügen einer Zeile als unterster Nachfolgerknoten  
-Ein neuer Mitarbeiter wird eingestellt und berichtet einem vorhandenen Mitarbeiter auf Knoten `/3/1/`. Führen Sie den folgenden Code um die neue Zeile einzufügen, mithilfe der GetDescendant-Methode ohne Argumente an den neuen Zeilen Knoten als `/3/1/1/`:
+Ein neuer Mitarbeiter wird eingestellt und berichtet einem vorhandenen Mitarbeiter auf Knoten `/3/1/`. Führen Sie den folgenden Code aus, um mithilfe der GetDescendant-Methode ohne Argumente eine neue Zeile einzufügen, um den Knoten der neuen Zeile auf `/3/1/1/` festzulegen:
   
 ```sql
 DECLARE @Manager hierarchyid;   
@@ -89,7 +89,7 @@ VALUES
 ```  
   
 ### <a name="b-inserting-a-row-as-a-greater-descendant-node"></a>B. Einfügen einer Zeile als höherer Nachfolgerknoten  
-Ein weiterer neuer Mitarbeiter wird eingestellt, reporting, Abteilungsleiter aus Beispiel a Ausführen des folgenden Codes die neue Zeile eingefügt wird, mithilfe der GetDescendant-Methode, die mit dem untergeordneten 1 Argument angeben, dass des Knotens der neuen Zeile wird der Knoten aus Beispiel A folgen , zunehmend `/3/1/2/`:
+Ein weiterer neuer Mitarbeiter wird eingestellt, der ebenfalls dem Abteilungsleiter aus Beispiel A berichtet. Führen Sie den folgenden Code aus, um mithilfe der GetDescendant-Methode eine neue Zeile einzufügen, wobei Sie mit dem child1-Argument festlegen, dass der Knoten der neuen Zeile auf den Knoten aus Beispiel A folgen soll und somit `/3/1/2/` lautet:
   
 ```sql
 DECLARE @Manager hierarchyid, @Child1 hierarchyid;  
@@ -104,7 +104,7 @@ VALUES
 ```  
   
 ### <a name="c-inserting-a-row-between-two-existing-nodes"></a>C. Einfügen einer Zeile zwischen zwei vorhandenen Knoten  
-Ein dritter neuer Mitarbeiter wird eingestellt, Abteilungsleiter aus Beispiel a reporting und In diesem Beispiel fügt die neue Zeile zu einem Knoten, die größer als die `FirstNewEmployee` in Beispiel A und kleiner als das `SecondNewEmployee` in Beispiel B. Führen Sie den folgenden code mithilfe der GetDescendant-Methode. Verwenden Sie die Argumente child1 und child2, um festzulegen, dass der Knoten der neuen Zeile der Knoten `/3/1/1.1/` sein wird:
+Ein dritter neuer Mitarbeiter wird eingestellt, der ebenfalls dem Abteilungsleiter aus Beispiel A berichtet. In diesem Beispiel wird die neue Zeile mit einem Knoten eingefügt, der größer ist als `FirstNewEmployee` in Beispiel A und kleiner als `SecondNewEmployee` in Beispiel B. Führen Sie den folgenden Code mithilfe der GetDescendant-Methode aus. Verwenden Sie die Argumente child1 und child2, um festzulegen, dass der Knoten der neuen Zeile der Knoten `/3/1/1.1/` sein wird:
   
 ```sql
 DECLARE @Manager hierarchyid, @Child1 hierarchyid, @Child2 hierarchyid;  
@@ -120,7 +120,7 @@ VALUES
   
 ```  
   
-Die Knoten der Tabelle hinzugefügt werden nach Abschluss der Beispiele A, B und C, mit den folgenden Peers **Hierarchyid** Werte:
+Nach Abschluss der Beispiele A, B und C sind die der Tabelle hinzugefügten Knoten Peers der folgenden **hierarchyid**-Werte:
   
 `/3/1/1/`
   
@@ -131,7 +131,7 @@ Die Knoten der Tabelle hinzugefügt werden nach Abschluss der Beispiele A, B und
 Knoten `/3/1/1.1/` ist größer als Knoten `/3/1/1/`, befindet sich aber auf der gleichen Ebene in der Hierarchie.
   
 ### <a name="d-scalar-examples"></a>D. Skalarbeispiele  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]unterstützt willkürliche Einfüge- und Löschvorgänge beliebiger **Hierarchyid** Knoten. Mithilfe von GetDescendant() ist es immer möglich, einen Knoten zwischen zwei beliebigen generieren **Hierarchyid** Knoten. Führen Sie den folgenden Code aus, um mithilfe von `GetDescendant` Beispielknoten zu generieren:
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt willkürliche Einfüge- und Löschvorgänge beliebiger **hierarchyid**-Knoten. Mit GetDescendant() ist es immer möglich, einen Knoten zwischen zwei beliebigen **hierarchyid**-Knoten zu generieren. Führen Sie den folgenden Code aus, um mithilfe von `GetDescendant` Beispielknoten zu generieren:
   
 ```sql
 DECLARE @h hierarchyid = hierarchyid::GetRoot();  

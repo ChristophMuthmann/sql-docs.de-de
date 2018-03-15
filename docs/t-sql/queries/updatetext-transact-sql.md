@@ -1,5 +1,5 @@
 ---
-title: UPDATETEXT (Transact-SQL) | Microsoft Docs
+title: UPDATETEXT (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 10/23/2017
 ms.prod: sql-non-specified
@@ -37,10 +37,10 @@ ms.lasthandoff: 01/25/2018
 # <a name="updatetext-transact-sql"></a>UPDATETEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Aktualisiert ein vorhandenes **Text**, **Ntext**, oder **Image** Feld. Verwenden Sie UPDATETEXT so ändern Sie nur einen Teil einer **Text**, **Ntext**, oder **Image** Spalte vorhanden. Verwenden Sie WRITETEXT zum Aktualisieren und ersetzen die gesamte **Text**, **Ntext**, oder **Image** Feld.  
+  Aktualisiert ein vorhandenes **text**-, **ntext**-, oder **image**-Feld. Verwenden Sie UPDATETEXT, um nur einen Teil einer vorhandenen **text**-, **ntext**- oder **image**-Spalte zu ändern. Verwenden Sie WRITETEXT, um ein ganzes **text**-, **ntext**- oder **image**-Feld zu aktualisieren und zu ersetzen.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Verwenden Sie die Datentypen mit umfangreichen Werten und die **.** WRITE-Klausel aus, der die [UPDATE](../../t-sql/queries/update-transact-sql.md) Anweisung stattdessen.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Verwenden Sie stattdessen die Datentypen für große Werte und die **.**WRITE-Klausel der [UPDATE](../../t-sql/queries/update-transact-sql.md)-Anweisung.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -64,46 +64,46 @@ UPDATETEXT [BULK] { table_name.dest_column_name dest_text_ptr }
 >  Es wird empfohlen, die BULK-Option nicht in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-basierten Anwendungen zu verwenden. Diese Option kann in einer zukünftigen Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] geändert oder entfernt werden.  
   
  *table_name* **.** *dest_column_name*  
- Der Name der Tabelle und **Text**, **Ntext**, oder **Image** Spalte aktualisiert werden. Tabellen- und Spaltennamen müssen den Regeln für entsprechen [Bezeichner](../../relational-databases/databases/database-identifiers.md). Das Angeben des Datenbank- und des Besitzernamens ist optional.  
+ Der Name der zu aktualisierenden Tabelle oder der zu aktualisierenden Spalte vom Datentyp **text**, **ntext** oder **image**. Tabellen- und Spaltennamen müssen den Regeln für [Bezeichner](../../relational-databases/databases/database-identifiers.md) entsprechen. Das Angeben des Datenbank- und des Besitzernamens ist optional.  
   
  *dest_text_ptr*  
- Ein Textzeiger Wert (zurückgegeben von der TEXTPTR-Funktion), die auf zeigt die **Text**, **Ntext**, oder **Image** Daten aktualisiert werden. *Dest_text_ptr* muss **binäre (**16**)**.  
+ Ein Textzeigerwert (von der TEXTPTR-Funktion zurückgegeben), der auf die zu aktualisierenden Daten von **text**, **ntext** oder **image** zeigt. *dest_text_ptr* muss vom Datentyp **binary(**16**)** sein.  
   
  *insert_offset*  
- Die nullbasierte Startposition für das Update. Für **Text** oder **Image** Spalten *Insert_offset* ist die Anzahl der Bytes vom Beginn der vorhandenen Spalte zu überspringen, bevor neue Daten eingefügt werden. Für **Ntext** Spalten *Insert_offset*ist die Anzahl der Zeichen (jeder **Ntext** -Zeichen verwendet 2 Bytes). Die vorhandene **Text**, **Ntext**, oder **Image** Daten beginnend bei dieser nullbasierten Startposition verschoben wird, nach rechts, um Platz für die neuen Daten zu machen. Mit dem Wert 0 werden die neuen Daten am Beginn der vorhandenen Daten eingefügt. Mit dem Wert NULL werden die neuen Daten an den vorhandenen Datenwert angefügt.  
+ Die nullbasierte Startposition für das Update. Für **text**- oder **image**-Spalten stellt *insert_offset* die Zahl der ab dem Beginn der vorhandenen Spalte auszulassenden Bytes dar, bevor neue Daten eingefügt werden. Für **ntext**-Spalten stellt *insert_offset* die Anzahl von Zeichen dar (jedes **ntext**-Zeichen verwendet 2 Bytes). Die vorhandenen **text**-, **ntext**- oder **image**-Daten, die an dieser nullbasierten Startposition beginnen, werden nach rechts verschoben, um Platz für die neuen Daten zu schaffen. Mit dem Wert 0 werden die neuen Daten am Beginn der vorhandenen Daten eingefügt. Mit dem Wert NULL werden die neuen Daten an den vorhandenen Datenwert angefügt.  
   
  *delete_length*  
- Die Länge der Daten aus der vorhandenen gelöscht **Text**, **Ntext**, oder **Image** Spalte ausgehend von der *Insert_offset* Position. Die *Delete_length*Wert wird angegeben, in Byte für **Text** und **Image** Spalten und in Zeichen für **Ntext** Spalten. Jede **Ntext** -Zeichen belegt 2 Byte. Mit dem Wert 0 werden keine Daten gelöscht. Ein Wert von NULL löscht alle Daten aus der *Insert_offset* Position bis zum Ende des vorhandenen **Text** oder **Image** Spalte.  
+ Die Länge der Daten, die aus der vorhandenen **text**-, **ntext**- oder **image**-Spalte gelöscht werden sollen, ausgehend von der *insert_offset*-Position. Der Wert *delete_length* wird für **text**- und **image**-Spalten in Bytes und für **ntext**-Spalten in Zeichen angegeben. Jedes **ntext**-Zeichen verwendet 2 Bytes. Mit dem Wert 0 werden keine Daten gelöscht. Mit dem Wert NULL werden alle Daten von der *insert_offset*-Position bis zum Ende der vorhandenen **text**- oder **image**-Spalte gelöscht.  
   
  WITH LOG  
  Die Protokollierung wird durch das für die Datenbank wirksame Wiederherstellungsmodell bestimmt.  
   
  *inserted_data*  
- Sind die Daten in den vorhandenen einzufügenden **Text**, **Ntext**, oder **Image** Spalte bei der *Insert_offset* Speicherort. Dies ist eine einzelne **Char**, **Nchar**, **Varchar**, **Nvarchar**, **binäre**,  **Varbinary**, **Text**, **Ntext**, oder **Image** Wert. *Inserted_data* kann ein Literal oder eine Variable sein.  
+ Die Daten, die in die vorhandenen **text**-, **ntext**- oder **image**-Spalten am Speicherplatz *insert_offset* eingefügt werden sollen. Dabei handelt es sich um einen einzelnen **char**-, **nchar**-, **varchar**-, **nvarchar**-, **binary**-, **varbinary**-, **text**-, **ntext**- oder **image**-Wert. *inserted_data* kann ein Literal oder eine Variable sein.  
   
  *table_name.src_column_name*  
- Der Name der Tabelle und **Text**, **Ntext**, oder **Image** Spalte, die als Quelle der eingefügten Daten verwendet. Tabellen- und Spaltennamen müssen den Regeln für Bezeichner entsprechen.  
+ Der Name der Tabelle und **text**-, **ntext**- oder **image**-Spalte, die als Quelle der eingefügten Daten verwendet wird. Tabellen- und Spaltennamen müssen den Regeln für Bezeichner entsprechen.  
   
  *src_text_ptr*  
- Ein Textzeiger Wert (zurückgegeben von der TEXTPTR-Funktion), die auf zeigt eine **Text**, **Ntext**, oder **Image** Spalte, die als Quelle der eingefügten Daten verwendet.  
+ Ein Textzeigerwert (zurückgegeben von der TEXTPTR-Funktion), der auf eine **text**-, **ntext**- oder **image**-Spalte verweist, die als Quelle der eingefügten Daten verwendet wird.  
   
 > [!NOTE]  
->  *Scr_text_ptr* Wert darf nicht identisch sein *Dest_text_ptr*Wert.  
+>  Der Wert *scr_text_ptr* darf nicht mit dem Wert *dest_text_ptr* übereinstimmen.  
   
-## <a name="remarks"></a>Hinweise  
- Neu eingefügte Daten können es sich um eine einzelne *Inserted_data* -Konstante, Tabellennamen, Spaltennamen oder Textzeiger.  
+## <a name="remarks"></a>Remarks  
+ Bei neu eingefügten Daten kann es sich um eine einzelne *inserted_data*-Konstante, einen Tabellennamen, einen Spaltennamen oder einen Textzeiger handeln.  
   
 |Updateaktion|UPDATETEXT-Parameter|  
 |-------------------|---------------------------|  
-|Ersetzen vorhandener Daten|Geben Sie einen nicht-NULL *Insert_offset* -Wert, einen Wert ungleich NULL *Delete_length* Wert und die neuen Daten eingefügt werden.|  
-|Löschen vorhandener Daten|Geben Sie einen nicht-NULL *Insert_offset* Wert und einen Wert ungleich NULL *Delete_length*. Geben Sie keine neuen einzufügenden Daten an.|  
-|Einfügen neuer Dateien|Geben Sie die *Insert_offset* Wert, eine *Delete_length* 0 und die neuen Daten eingefügt werden.|  
+|Ersetzen vorhandener Daten|Geben Sie einen *insert_offset*-Wert ungleich NULL, einen *delete_length*-Wert ungleich 0 (null) und die neuen Daten an, die eingefügt werden sollten.|  
+|Löschen vorhandener Daten|Geben Sie einen *insert_offset*-Wert ungleich NULL und einen *delete_length*-Wert ungleich 0 (null) an. Geben Sie keine neuen einzufügenden Daten an.|  
+|Einfügen neuer Dateien|Geben Sie den *insert_offset*-Wert, einen *delete_length*-Wert von 0 (null) und die neuen Daten an, die eingefügt werden sollen.|  
   
- Für eine optimale Leistung empfehlen wir **Text**, **Ntext** und **Image** Daten eingefügt oder aktualisiert werden, in Blöcke Größen, die ein Vielfaches von 8.040 Byte sind.  
+ Für eine optimale Leistung empfiehlt es sich, Daten vom Typ **text**, **ntext** und **image** in Segmenten mit der Größe eines Vielfachen von 8,040 Bytes einzufügen oder zu aktualisieren.  
   
- In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], um Textzeiger in Zeilen **Text**, **Ntext**, oder **Image** Daten vorhanden, die jedoch möglicherweise nicht mehr gültig. Informationen zu dem Text in Row-Option finden Sie unter [Sp_tableoption &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md). Weitere Informationen zu den Textzeiger, finden Sie unter [Sp_invalidate_textptr &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-invalidate-textptr-transact-sql.md).  
+ In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] können Textzeiger auf **text**-, **ntext**- oder **image**-Daten in Zeilen vorhanden sein, die jedoch möglicherweise nicht gültig sind. Informationen zur Option „text in row“ finden Sie unter [sp_tableoption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md). Informationen dazu, wie Textzeiger ungültig gemacht werden können, finden Sie unter [sp_invalidate_textptr &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-invalidate-textptr-transact-sql.md).  
   
- Initialisieren **Text** -Spalten mit NULL, verwenden Sie WRITETEXT, Initialisiert UPDATETEXT **Text** Spalten auf eine leere Zeichenfolge.  
+ Verwenden Sie WRITETEXT, um **text**-Spalten mit NULL zu initialisieren. UPDATETEXT initialisiert **text**-Spalten mit einer leeren Zeichenfolge.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die UPDATE-Berechtigung für die angegebene Tabelle.  
@@ -130,8 +130,8 @@ ALTER DATABASE pubs SET RECOVERY FULL;
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [READTEXT &#40; Transact-SQL &#41;](../../t-sql/queries/readtext-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [READTEXT &#40;Transact-SQL&#41;](../../t-sql/queries/readtext-transact-sql.md)   
  [TEXTPTR &#40;Transact-SQL&#41;](../../t-sql/functions/text-and-image-functions-textptr-transact-sql.md)   
  [WRITETEXT (Transact-SQL)](../../t-sql/queries/writetext-transact-sql.md)  
   

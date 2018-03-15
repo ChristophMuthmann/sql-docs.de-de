@@ -1,5 +1,5 @@
 ---
-title: Konstanten (Transact-SQL) | Microsoft Docs
+title: Konstanten (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 7/22/2017
 ms.prod: sql-non-specified
@@ -72,15 +72,15 @@ Leere Zeichenfolgen werden als zwei einzelne Anführungszeichen ohne Inhalt darg
 Zeichenfolgenkonstanten unterstützen erweiterte Sortierungen.
   
 > [!NOTE]  
->  Zeichenkonstanten, die größer als 8000 Bytes typisiert werden **varchar(max)** Daten.  
+>  Zeichenkonstanten, die größer sind als 8000 Bytes, werden als **varchar(max)-** Daten typisiert.  
   
 ## <a name="unicode-strings"></a>Unicode-Zeichenfolgen
-Unicode-Zeichenfolgen besitzen ein ähnliches Format wie Zeichenfolgen, werden aber mit einem N-Bezeichner eingeleitet (N steht für Landessprache (National Language) im SQL-92-Standard). Das Präfix N muss ein Großbuchstabe sein. Beispielsweise ist 'Michél' eine Zeichenkonstante, während N 'Michél' eine Unicode-Konstante ist. Unicode-Konstanten werden als Unicode-Daten interpretiert und nicht mithilfe einer Codepage ausgewertet. Unicode-Konstanten verfügen über eine Sortierung. Diese Sortierung steuert in erster Linie Vergleiche und die Unterscheidung nach Groß- und Kleinschreibung. Unicode-Konstanten wird die Standardsortierung der aktuellen Datenbank zugewiesen, es sei denn, mit der COLLATE-Klausel wird eine Sortierung angegeben. Unicode-Daten werden mithilfe von 2 Byte pro Zeichen anstelle von 1 Byte pro Zeichen bei Zeichendaten gespeichert. Weitere Informationen finden Sie unter [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).
+Unicode-Zeichenfolgen besitzen ein ähnliches Format wie Zeichenfolgen, werden aber mit einem N-Bezeichner eingeleitet (N steht für Landessprache (National Language) im SQL-92-Standard). Das Präfix N muss ein Großbuchstabe sein. Beispielsweise ist „Michél“ eine Zeichenkonstante, während „N‘Michél“ eine Unicode-Konstante ist. Unicode-Konstanten werden als Unicode-Daten interpretiert und nicht mithilfe einer Codepage ausgewertet. Unicode-Konstanten verfügen über eine Sortierung. Diese Sortierung steuert in erster Linie Vergleiche und die Unterscheidung nach Groß- und Kleinschreibung. Unicode-Konstanten wird die Standardsortierung der aktuellen Datenbank zugewiesen, es sei denn, mit der COLLATE-Klausel wird eine Sortierung angegeben. Unicode-Daten werden mithilfe von 2 Byte pro Zeichen anstelle von 1 Byte pro Zeichen bei Zeichendaten gespeichert. Weitere Informationen finden Sie unter [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).
   
 Unicode-Zeichenfolgenkonstanten unterstützen erweiterte Sortierungen.
   
 > [!NOTE]  
->  Unicode-Konstanten, die größer als 8000 Bytes typisiert werden **nvarchar(max)** Daten.  
+>  Unicode-Konstanten, die größer sind als 8000 Bytes, werden als **nvarchar(max)**-Daten typisiert.  
   
 ## <a name="binary-constants"></a>Binäre Konstanten
 Binäre Konstanten besitzen das Präfix `0x` und bestehen aus einer Zeichenfolge von hexadezimalen Zahlen. Sie werden nicht in Anführungszeichen eingeschlossen.
@@ -95,15 +95,15 @@ Nachfolgend finden Sie Beispiele für Binärzeichenfolgen:
 ```  
   
 > [!NOTE]  
->  Binäre Konstanten, die größer als 8000 Bytes typisiert werden **varbinary(max)** Daten.  
+>  Binärkonstanten, die größer sind als 8000 Bytes, werden als **varbinary(max)**-Daten typisiert.  
   
-## <a name="bit-constants"></a>Bit-Konstanten
-**Bit** Konstanten werden durch die Zahlen 0 oder 1 dargestellt und nicht in Anführungszeichen eingeschlossen sind. Wird eine größere Zahl als eins verwendet, wird diese in eins umgewandelt.
+## <a name="bit-constants"></a>bit-Konstanten
+**bit**-Konstanten werden durch die Zahlen 0 oder 1 dargestellt und nicht in Anführungszeichen eingeschlossen. Wird eine größere Zahl als eins verwendet, wird diese in eins umgewandelt.
   
-## <a name="datetime-constants"></a>Konstanten "DateTime"
-**"DateTime"** -Konstanten werden durch Datumszeichenfolgen in bestimmten Formaten, eingeschlossen in einfache Anführungszeichen dargestellt.
+## <a name="datetime-constants"></a>datetime-Konstanten
+**datetime**-Konstanten werden durch Datumszeichenfolgen in einem besonderen Format dargestellt und in einfache Anführungszeichen eingeschlossen.
   
-Im folgenden sind Beispiele für **"DateTime"** Konstanten:
+Nachfolgend finden Sie Beispiele für **datetime**-Konstanten:
   
 ```sql
 'December 5, 1985'  
@@ -112,7 +112,7 @@ Im folgenden sind Beispiele für **"DateTime"** Konstanten:
 '12/5/98'  
 ```  
   
-Beispiele für "DateTime" Konstanten sind:
+Beispiele für datetime-Konstanten sind:
   
 ```sql
 '14:30:24'  
@@ -120,9 +120,9 @@ Beispiele für "DateTime" Konstanten sind:
 ```  
   
 ## <a name="integer-constants"></a>integer-Konstanten
-**ganze Zahl** -Konstanten werden durch eine Folge von Ziffern, die nicht in Anführungszeichen eingeschlossen und enthalten keine Dezimaltrennzeichen dargestellt. **ganze Zahl** -Konstanten müssen ganze Zahlen sein; sie können keinen Dezimalstellen enthalten.
+**integer**-Konstanten werden durch eine Zeichenfolge von Zahlen dargestellt, die nicht in Anführungszeichen eingeschlossen sind und keine Dezimaltrennzeichen enthalten. **integer**-Konstanten müssen ganze Zahlen sein und können keine Dezimalstellen enthalten.
   
-Im folgenden sind Beispiele für **Ganzzahl** Konstanten:
+Nachfolgend finden Sie Beispiele für **integer**-Konstanten:
   
 ```sql
 1894  
@@ -130,42 +130,42 @@ Im folgenden sind Beispiele für **Ganzzahl** Konstanten:
 ```  
   
 ## <a name="decimal-constants"></a>decimal-Konstanten
-**Decimal** -Konstanten werden durch eine Folge von Ziffern, die nicht in Anführungszeichen eingeschlossen und enthalten ein Dezimaltrennzeichen dargestellt.
+**decimal**-Konstanten werden durch eine Folge von Ziffern dargestellt, die nicht in Anführungszeichen eingeschlossen sind, und enthalten ein Dezimaltrennzeichen.
   
-Im folgenden sind Beispiele für **decimal** Konstanten:
+Nachfolgend finden Sie Beispiele für **decimal**-Konstanten:
   
 ```sql
 1894.1204  
 2.0  
 ```  
   
-## <a name="float-and-real-constants"></a>float- und Real-Konstanten
-**"float"** und **echte** -Konstanten wird die wissenschaftliche Schreibweise verwendet.
+## <a name="float-and-real-constants"></a>float- und real-Konstanten
+Für **float**- und **real**-Konstanten wird die wissenschaftliche Schreibweise verwendet.
   
-Im folgenden sind Beispiele für **"float"** oder **echte** Werte:
+Nachfolgend finden Sie Beispiele für **float**- oder **real**-Konstanten:
   
 ```sql
 101.5E5  
 0.5E-2  
 ```  
   
-## <a name="money-constants"></a>Money-Konstanten
-**Money** -Konstanten werden als Folge von Ziffern mit einem optionalen Dezimaltrennzeichen und einem optionalen Währungssymbol als Präfix dargestellt. **Money** -Konstanten werden nicht in Anführungszeichen eingeschlossen.
+## <a name="money-constants"></a>money-Konstanten
+**money**-Konstanten werden als Zeichenfolge von Zahlen mit einem optionalen Dezimaltrennzeichen und einem optionalen Währungssymbol als Präfix dargestellt. **money**-Konstanten werden nicht in Anführungszeichen eingeschlossen.
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erzwingt keine Gruppierungsregeln, wie etwa das Einfügen eines Kommas (,) nach jeder dritten Ziffer in Währungszeichenfolgen.
   
 > [!NOTE]  
->  Kommas werden an einer beliebigen Stelle in der angegebenen ignoriert **Money** literal.  
+>  Kommas werden im angegebenen **money**-Literal ignoriert.  
   
-Im folgenden sind Beispiele für **Money** Konstanten:
+Nachfolgend finden Sie Beispiele für **money**-Konstanten:
   
 ```sql
 $12  
 $542023.14  
 ```  
   
-## <a name="uniqueidentifier-constants"></a>Uniqueidentifier-Konstanten
-**"uniqueidentifier"** -Konstanten sind eine Zeichenfolge, die eine GUID darstellt. Sie können entweder im Binär- oder Zeichenfolgenformat angegeben werden.
+## <a name="uniqueidentifier-constants"></a>uniqueidentifier-Konstanten
+**uniqueidentifier**-Konstanten sind eine Zeichenfolge, die eine GUID darstellt. Sie können entweder im Binär- oder Zeichenfolgenformat angegeben werden.
   
 In den beiden folgenden Beispielen wird dieselbe GUID angegeben:
   
@@ -175,29 +175,29 @@ In den beiden folgenden Beispielen wird dieselbe GUID angegeben:
 ```  
   
 ## <a name="specifying-negative-and-positive-numbers"></a>Angeben von negativen und positiven Zahlen  
-Um anzugeben, ob eine Zahl positiv oder negativ ist, gelten die  **+**  oder  **-**  unäre Operatoren auf eine numerische Konstante. Dadurch wird ein numerischer Ausdruck erstellt, der den numerischen, vorzeichenbehafteten Wert darstellt. Numerische Konstanten verwenden positiv, wenn die  **+**  oder  **-**  unäre Operatoren werden nicht angewendet.
+Um anzugeben, ob eine Zahl positiv oder negativ ist, wenden Sie einen der unären Operatoren **+** oder **-** auf eine numerische Konstante an. Dadurch wird ein numerischer Ausdruck erstellt, der den numerischen, vorzeichenbehafteten Wert darstellt. Numerische Konstanten werden auf einen positiven Wert gesetzt, wenn die unären Operatoren **+** oder **-** nicht angewendet werden.
   
-Signiert **Ganzzahl** Ausdrücke:  
+**integer**-Ausdrücke mit Vorzeichen:  
   
 ```sql
 +145345234
 -2147483648
 ```
-Signiert **decimal** Ausdrücke:  
+**decimal**-Ausdrücke mit Vorzeichen:  
   
 ```sql
 +145345234.2234
 -2147483648.10
 ```
   
-Signiert **"float"** Ausdrücke:  
+**float**-Ausdrücke mit Vorzeichen:  
   
 ```sql
 +123E-3
 -12E5
 ```
   
-Signiert **Money** Ausdrücke:  
+**money**-Ausdrücke mit Vorzeichen:  
   
 ```sql
 -$45.56
@@ -205,11 +205,11 @@ Signiert **Money** Ausdrücke:
 ```
   
 ## <a name="enhanced-collations"></a>Erweiterte Sortierungen  
-SQL Server unterstützt Zeichen- und Unicode-Zeichenfolgenkonstanten, die erweiterte Sortierungen unterstützen. Weitere Informationen finden Sie unter der [COLLATE &#40; Transact-SQL &#41; ](http://msdn.microsoft.com/library/4ba6b7d8-114a-4f4e-bb38-fe5697add4e9) Klausel.
+SQL Server unterstützt Zeichen- und Unicode-Zeichenfolgenkonstanten, die erweiterte Sortierungen unterstützen. Weitere Informationen finden Sie in der [COLLATE &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/4ba6b7d8-114a-4f4e-bb38-fe5697add4e9)-Klausel.
   
 ## <a name="see-also"></a>Siehe auch
 [Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
 [Ausdrücke &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)  
-[Operatoren &#40; Transact-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)
+[Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)
   
   
