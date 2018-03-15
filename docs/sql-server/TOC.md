@@ -47,11 +47,12 @@
 ### [SQL Server-Sicherheit](https://blogs.msdn.microsoft.com/sqlsecurity/)
 ### [SQL Server Data Tools](https://blogs.msdn.microsoft.com/ssdt/)
 
-## Erlernen
+## Lernen
 ### [Microsoft Virtual Academy](https://mva.microsoft.com/product-training/sql-server#!lang=1033)
 ### [SQL auf Channel 9](https://channel9.msdn.com/Search?term=sql#ch9Search&lang-en=en&pubDate=year)
 
 ## Feedback und Hilfe
+### [Zur SQL-Dokumentation beitragen](sql-server-docs-contribute.md)
 ### [UserVoice – SQL Server-Verbesserungsvorschläge](https://feedback.azure.com/forums/908035-sql-server)
 ### [DBA Stack Exchange (DBA-Stapelaustausch)](https://dba.stackexchange.com/questions/tagged/sql-server)
 ### [Stack Overflow (Stapelüberlauf)](http://stackoverflow.com/questions/tagged/sql-server)
