@@ -1,13 +1,8 @@
-# [Erste Schritte](getting-started-with-machine-learning-services.md)
-
 # Übersicht
-## [Was sind Microsoft Machine Learning Services?](r/r-services.md)
-## [Was ist neu in Machine Learning?](what-s-new-in-sql-server-machine-learning-services.md)
-## [Neue und aktualisierte Artikel](new-updated-advanced-analytics.md)
-## [Architektur und Übersicht](architecture-overview-machine-learning.md)
-## [Unterschiede in Machine Learning-Features zwischen SQL Server-Editionen](r/differences-in-r-features-between-editions-of-sql-server.md)
-
-## [Verwenden von R in Azure SQL-Datenbanken](r/using-r-in-azure-sql-database.md)
+## [Was sind SQL Server-Machine Learning Services?](what-is-sql-server-machine-learning.md)
+## [Neue Funktionen](what-s-new-in-sql-server-machine-learning-services.md)
+## [Übersicht über die Architektur](architecture-overview-machine-learning.md)
+## [Funktionen nach Edition](r/differences-in-r-features-between-editions-of-sql-server.md)
 
 # [Machine Learning Services – R](r/sql-server-r-services.md)
 
@@ -97,8 +92,6 @@
 #### [Trainieren und Speichern des Modells](tutorials/sqldev-py5-train-and-save-a-model-using-t-sql.md)
 #### [Operationalisieren des Modells](tutorials/sqldev-py6-operationalize-the-model.md)
 
-### [Python: Bereitstellen und Nutzen von Modellen mit einem eigenständigen Server](../advanced-analytics/python/publish-consume-python-code.md)
-
 # [Machine Learning Server – eigenständig](r/r-server-standalone.md)
 ## [Erste Schritte](r/getting-started-with-microsoft-r-server-standalone.md)
 ## [Einrichten von Machine Learning Server (eigenständig)](r/create-a-standalone-r-server.md)
@@ -175,6 +168,8 @@
 
 ## [Bekannte Probleme](known-issues-for-sql-server-machine-learning-services.md)
 ## [Versionsanmerkungen](https://docs.microsoft.com/sql/sql-server/sql-server-2017-release-notes)
+## [Neue und aktualisierte Artikel](new-updated-advanced-analytics.md)
+## [Verwenden von R in Azure SQL-Datenbanken](r/using-r-in-azure-sql-database.md)
 
 ## [Tipps zum Setup und zur Problembehandlung](machine-learning-troubleshooting-faq.md)
 ### [Datensammlung zur Problembehandlung](data-collection-ml-troubleshooting-process.md)
