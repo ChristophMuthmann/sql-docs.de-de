@@ -15,11 +15,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: b090579bd0a32b901d1c1cedcc26b290d7a68771
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 4b439725c8c9e522ed500f717686b8a9cf7d972a
+ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="deploy-and-consume-analytics-using-mrsdeploy"></a>Bereitstellen Sie und nutzen Sie Analysen mit mrsdeploy
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -56,10 +56,6 @@ Diese Bereitstellungsfunktion von R Server bietet folgende Vorteile:
   
   Echtzeit-batchbewertung mit unterstützten R Model-Objekts können zur Verbesserung der Geschwindigkeit der Bewertung der Vorgänge.
 
-+ Python-Code als Webdienst veröffentlichen
-
-  Beispiele finden Sie unter [veröffentlichen und Nutzen von Python-Code](./python/publish-consume-python-code.md).
-
 + Asynchrones BatchUpdate Verbrauch
 
   Webdienste, die für große Eingabedaten aufrufen können jetzt über die Batchausführung asynchron verarbeitet werden.
@@ -88,7 +84,7 @@ Sie müssen zusammen installiert werden, führen Sie diese zusätzlichen Schritt
 
 3. Nach Abschluss des Setups von **Microsoft Machine Learning-Server**manuell fügen Sie den folgenden Registrierungsschlüssel für **Mrsdeploy**, gibt den Basisordner für die R_SERVER-Dateien. 
 
-    + Erstellen Sie einen neuen Registrierungsschlüssel`H_KEY_LOCAL_MACHINE\SOFTWARE\R Server\Path`
+    + Erstellen Sie einen neuen Registrierungsschlüssel `H_KEY_LOCAL_MACHINE\SOFTWARE\R Server\Path`
     + Legen Sie den Wert des Schlüssels, der `"C:\Program Files\Microsoft SQL Server\140\R_SERVER"`.
 
 4. Öffnen Sie anschließend die [Administrator Utility](https://docs.microsoft.com/r-server/operationalize/configure-use-admin-utility).

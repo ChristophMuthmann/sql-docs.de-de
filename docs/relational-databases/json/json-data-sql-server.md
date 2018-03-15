@@ -20,14 +20,14 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: ec68e7b254c10d4025b7cee61d47db033757516b
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 8ce81acc4134e1b8b9570d2eb871e1beb5565673
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="json-data-in-sql-server"></a>JSON-Daten in SQL Server
-[!INCLUDE[appliesto-ss2016-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss2016-asdb-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
 JSON ist ein beliebtes Textdatenformat, das zum Austauschen von Daten in modernen Webanwendungen und mobilen Anwendungen verwendet wird. JSON wird auch zum Speichern von unstrukturierten Daten in Protokolldateien oder NoSQL-Datenbanken wie Microsoft Azure Cosmos DB verwendet. Viele REST-Webdienste geben Ergebnisse zurück, die als JSON-Text formatiert sind, oder akzeptieren Daten, die im JSON-Format formatiert sind. Beispielsweise verfügen die meisten Azure-Dienste wie Azure Search, Azure Storage und Azure Cosmos DB über REST-Endpunkte, die JSON zurückgeben oder verarbeiten. JSON ist auch das hauptsächliche Format zum Austauschen von Daten zwischen Webseiten und Webservern über AJAX-Aufrufe. 
 

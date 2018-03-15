@@ -1,14 +1,15 @@
 ---
 title: "Vorgehensweise: Senden und Abrufen von UTF-8-Daten mithilfe der eingebauten UTF-8-Unterstützung | Microsoft Docs"
 ms.custom: 
-ms.date: 01/19/2017
+ms.date: 01/16/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: php
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - converting data types
 - updating data
 ms.assetid: 366c57cf-352f-4202-8074-6ddce44880d1
-caps.latest.revision: "33"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 89e34b2b9f113beaa0b170cdfc36c1afb5fcfc84
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 2d2763ec8906cc3100c1259aa25473ae7e8d8b22
+ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support"></a>Vorgehensweise: Senden und Abrufen von UTF-8-Daten mithilfe der eingebauten UTF-8-Unterstützung.
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -42,10 +43,10 @@ Gehen Sie zum Senden/Abrufen von UTF-8-codierten Daten an den/vom Server wie fol
   
     Wenn Sie einen Zeichensatz als Teil der Verbindungsoptionen angeben, geht der Treiber davon aus, dass auch die anderen Optionszeichenfolgen der Verbindung den gleichen Zeichensatz verwenden. Auch beim Servernamen und den Abfragezeichenfolgen geht er vom selben Zeichensatz aus.  
   
-Beachten Sie, dass Sie UTF-8 oder "sqlsrv_enc_char" zu übergeben, **CharacterSet** (Sie können keine SQLSRV_ENC_BINARY übergeben). Die Standardcodierung ist „SQLSRV_ENC_CHAR“.  
+Sie können übergeben, UTF-8 oder "sqlsrv_enc_char" an **CharacterSet** (Sie können keine SQLSRV_ENC_BINARY übergeben). Die Standardcodierung ist „SQLSRV_ENC_CHAR“.  
   
 ## <a name="example"></a>Beispiel  
-Im folgenden Beispiel wird veranschaulicht, wie Sie bei der Herstellung der Verbindung, durch die Festlegung auf den UTF-8 Zeichensatz, das Senden und Empfangen von UTF-8-codierten Daten ermöglichen. Das Beispiel aktualisiert die Spalte „Kommentare“ der Tabelle „Produktion.ProduktReview“ auf eine angegebene Review-ID. Das Beispiel ruft auch die neuen, aktualisierten Daten auf und zeigt sie an. Beachten Sie, dass die Kommentare-Spalte vom Typ **nvarchar(3850)..** Beachten Sie, dass sie vor dem Senden von Daten an den Server in UTF-8-Codierung mit der PHP konvertiert wird **utf8_encode** Funktion. Dies erfolgt nur zu Demonstrationszwecken. In einem realen Anwendungsszenario würden Sie mit UTF-8-codierten Daten beginnen.  
+Im folgenden Beispiel wird veranschaulicht, wie Sie bei der Herstellung der Verbindung, durch die Festlegung auf den UTF-8 Zeichensatz, das Senden und Empfangen von UTF-8-codierten Daten ermöglichen. Das Beispiel aktualisiert die Spalte „Kommentare“ der Tabelle „Produktion.ProduktReview“ auf eine angegebene Review-ID. Das Beispiel ruft auch die neuen, aktualisierten Daten auf und zeigt sie an. Die Kommentare-Spalte ist vom Typ **nvarchar(3850).** Beachten Sie, dass sie vor dem Senden von Daten an den Server in UTF-8-Codierung mit der PHP konvertiert wird **utf8_encode** Funktion. Dieser Schritt erfolgt nur zu Demonstrationszwecken. In einem realen Anwendungsszenario würden Sie mit UTF-8-codierten Daten beginnen.  
   
 Das Beispiel setzt voraus, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] und die [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) -Datenbank auf dem lokalen Computer installiert sind. Wenn das Beispiel über den Browser ausgeführt wird, werden alle Ausgaben im Browser geschrieben.  
   
@@ -226,7 +227,8 @@ sqlsrv_close( $conn);
   
 ## <a name="see-also"></a>Siehe auch  
 [Abrufen von Daten](../../connect/php/retrieving-data.md)  
-[Aktualisieren von Daten &#40;Microsoft-Treiber für PHP für SQL Server&#41;](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)  
+[Arbeiten mit ASCII-Daten in nicht-Windows](../../connect/php/how-to-send-and-retrieve-ascii-data-in-linux-mac.md)
+[Aktualisieren von Daten &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)  
 [API-Referenz für den SQLSRV-Treiber](../../connect/php/sqlsrv-driver-api-reference.md)  
 [Konstanten &#40;Microsoft-Treiber für PHP für SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)  
 [Beispielanwendung &#40;SQLSRV-Treiber&#41;](../../connect/php/example-application-sqlsrv-driver.md)  

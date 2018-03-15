@@ -14,11 +14,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: ff0022d673cfc368e988e009452d23a989b8eb7f
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: ef847b920d6bc0ffc7744ccca66023e2fbfa61f8
+ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="python"></a>Python
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -35,7 +35,6 @@ Dieser Abschnitt enthält Links zu API-Referenz zu Machine Learning Services in 
 **Beispiele**
 
 + [Ausführen von Python von T-SQL](../tutorials/run-python-using-t-sql.md)
-+ [Veröffentlichen und Nutzen von Python-Modelle](publish-consume-python-code.md)
 + [Verwenden Sie zum Erstellen eines Modells revoscalepy](../tutorials/use-python-revoscalepy-to-create-model.md)
 
 
