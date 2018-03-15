@@ -1,8 +1,8 @@
 ---
-redirect_url: /sql/advanced-analytics/getting-started-with-machine-learning-services
-ms.openlocfilehash: ccbdf505c6088bafd5eb7c4adfed3f45df730fce
-ms.sourcegitcommit: 657d18fc805512c9574b2fe7451310601b9d78cb
+redirect_url: /sql/advanced-analytics/what-is-sql-server-machine-learning
+ms.openlocfilehash: d6fa29692c898a286213b784cf6ace65104598ef
+ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
