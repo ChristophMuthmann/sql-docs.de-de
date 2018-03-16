@@ -1,5 +1,5 @@
 ---
-title: ALTER ROUTE (Transact-SQL) | Microsoft Docs
+title: ALTER ROUTE (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -64,13 +64,13 @@ WITH
  mit  
  Führt die Klauseln ein, die die Route definieren, die gerade geändert wird.  
   
- SERVICE_NAME **= "***Service_name***"**  
- Gibt den Namen des Remotediensts an, auf den diese Route zeigt. Die *Service_name* müssen genau übereinstimmen, die den Namen der Remotedienst verwendet. [!INCLUDE[ssSB](../../includes/sssb-md.md)]Führt einen Byte-pro-Byte-Vergleich mit der *Service_name*. Anders ausgedrückt: Bei dem Vergleich wird die Groß-/Kleinschreibung beachtet, die aktuelle Sortierung hingegen wird nicht berücksichtigt. Eine Route mit dem Dienstnamen **' SQL/ServiceBroker/BrokerConfiguration'** ist eine Route zu einem Broker-Konfigurationsdienst. Eine Route zu diesem Dienst kann keine Broker-Instanz angeben.  
+ SERVICE_NAME **='***service_name***'**  
+ Gibt den Namen des Remotediensts an, auf den diese Route zeigt. Der *service_name* muss genau mit dem Namen übereinstimmen, der vom Remotedienst verwendet wird. [!INCLUDE[ssSB](../../includes/sssb-md.md)] führt einen bitweisen Vergleich mit der *service_name*-Zeichenfolge aus. Anders ausgedrückt: Bei dem Vergleich wird die Groß-/Kleinschreibung beachtet, die aktuelle Sortierung hingegen wird nicht berücksichtigt. Eine Route mit dem Dienstnamen **'SQL/ServiceBroker/BrokerConfiguration'** ist eine Route zu einem Broker-Konfigurationsdienst. Eine Route zu diesem Dienst kann keine Broker-Instanz angeben.  
   
  Wird die SERVICE_NAME-Klausel weggelassen, ändert sich der Dienstname für die Route nicht.  
   
- BROKER_INSTANCE **= "***Broker_instance***"**  
- Gibt die Datenbank an, auf der sich der Zieldienst befindet. Die *Broker_instance* Parameter muss den Broker-Instanzbezeichner für die Remotedatenbank an, die durch Ausführen der folgenden Abfrage in der ausgewählten Datenbank abgerufen werden kann:  
+ BROKER_INSTANCE **='***broker_instance***'**  
+ Gibt die Datenbank an, auf der sich der Zieldienst befindet. Bei dem *broker_instance*-Parameter muss es sich um den Broker-Instanzbezeichner für die Remotedatenbank handeln, der durch das Ausführen der folgenden Abfrage in der ausgewählten Datenbank abgerufen werden kann:  
   
 ```  
 SELECT service_broker_guid  
@@ -87,35 +87,11 @@ WHERE database_id = DB_ID();
  Gibt die Zeitspanne in Sekunden an, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Route in der Routingtabelle aufbewahrt. Am Ende ihrer Lebensdauer läuft die Route ab, und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] berücksichtigt die Route nicht bei der Auswahl einer Route für eine neue Konversation. Wird die Klausel weggelassen, bleibt die Lebensdauer der Route unverändert.  
   
  ADDRESS **='***next_hop_address'*  
- Gibt die Netzwerkadresse für diese Route an. Die *Next_hop_address* gibt eine TCP/IP-Adresse in folgendem Format an:  
+ Gibt die Netzwerkadresse für diese Route an. *next_hop_address* gibt eine TCP/IP-Adresse mit folgendem Format an:  
   
- **TCP: / /** { *Dns_name* | *Netbios_name* |*Ip_address* } **:**  *Portnummer*  
+ **TCP://** { *dns_name* | *netbios_name* |*ip_address* } **:** *port_number*  
   
- Das angegebene *Port_number* übereinstimmen, dass die Portnummer für die [!INCLUDE[ssSB](../../includes/sssb-md.md)] Endpunkt einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf dem angegebenen Computer. Dieser kann durch Ausführen der folgenden Abfrage in der ausgewählten Datenbank abgerufen werden:  
-  
-```  
-SELECT tcpe.port  
-FROM sys.tcp_endpoints AS tcpe  
-INNER JOIN sys.service_broker_endpoints AS ssbe  
-   ON ssbe.endpoint_id = tcpe.endpoint_id  
-WHERE ssbe.name = N'MyServiceBrokerEndpoint';  
-```  
-  
- Gibt eine Route **'LOCAL'** für die *Next_hop_address*, übermittelt die Nachricht an einen Dienst innerhalb der aktuellen Instanz der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
-  
- Gibt eine Route **'TRANSPORT'** für die *Next_hop_address*, die Netzwerkadresse wird basierend auf der der Netzwerkadresse des Diensts bestimmt. Eine Route, der angibt, **'TRANSPORT'** können eine Dienst oder eine Broker-Instanz angeben.  
-  
- Wenn die *Next_hop_address* der Prinzipalserver für eine gespiegelte Datenbank müssen Sie auch MIRROR_ADDRESS für den Spiegelserver angeben. Andernfalls führt diese Route kein automatisches Failover zum Spiegelserver durch.  
-  
-> [!NOTE]  
->  Diese Option ist in einer enthaltenen Datenbank nicht verfügbar.  
-  
- MIRROR_ADDRESS **= "***Next_hop_mirror_address***"**  
- Gibt die Netzwerkadresse für den Spiegelserver eines gespiegelten Paars, dessen Prinzipalserver, die *Next_hop_address*. Die *Next_hop_mirror_address* gibt eine TCP/IP-Adresse in folgendem Format an:  
-  
- **TCP: / /**{ *Dns_name* | *Netbios_name* | *Ip_address* } **:**  *Portnummer*  
-  
- Das angegebene *Port_number* übereinstimmen, dass die Portnummer für die [!INCLUDE[ssSB](../../includes/sssb-md.md)] Endpunkt einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf dem angegebenen Computer. Dieser kann durch Ausführen der folgenden Abfrage in der ausgewählten Datenbank abgerufen werden:  
+ Der angegebene Wert für *port_number* muss mit der Portnummer für den [!INCLUDE[ssSB](../../includes/sssb-md.md)]-Endpunkt einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf dem angegebenen Computer übereinstimmen. Dieser kann durch Ausführen der folgenden Abfrage in der ausgewählten Datenbank abgerufen werden:  
   
 ```  
 SELECT tcpe.port  
@@ -125,24 +101,48 @@ INNER JOIN sys.service_broker_endpoints AS ssbe
 WHERE ssbe.name = N'MyServiceBrokerEndpoint';  
 ```  
   
- Wird MIRROR_ADDRESS angegeben, muss die Route die SERVICE_NAME-Klausel und die BROKER_INSTANCE-Klausel angeben. Eine Route, der angibt, **'LOCAL'** oder **'TRANSPORT'** für die *Next_hop_address* möglicherweise keine spiegeladresse.  
+ Gibt eine Route **'LOCAL'** für *next_hop_address* an, wird die Nachricht an einen Dienst innerhalb der aktuellen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] übermittelt.  
+  
+ Gibt eine Route **'TRANSPORT'** für *next_hop_address* an, wird die Netzwerkadresse auf der Basis der Netzwerkadresse im Dienstnamen ermittelt. Eine Route, die **'TRANSPORT'** angibt, kann einen Dienstnamen oder eine Broker-Instanz angeben.  
+  
+ Wenn *next_hop_address* der Prinzipalserver für den Datenbankspiegel ist, müssen Sie für den Spiegelserver auch MIRROR_ADDRESS angeben. Andernfalls führt diese Route kein automatisches Failover zum Spiegelserver durch.  
   
 > [!NOTE]  
 >  Diese Option ist in einer enthaltenen Datenbank nicht verfügbar.  
   
-## <a name="remarks"></a>Hinweise  
- Die Routingtabelle, die Routen gespeichert, ist eine Metadatentabelle, die gelesen werden kann, durch die **sys.routes** -Katalogsicht angezeigt. Die Routingtabelle kann nur mit der CREATE ROUTE-, ALTER ROUTE- und DROP ROUTE-Anweisung aktualisiert werden.  
+ MIRROR_ADDRESS **='***next_hop_mirror_address***'**  
+ Gibt die Netzwerkadresse für den Spiegelserver eines gespiegelten Paars an, dessen Prinzipalserver die Adresse *next_hop_address* besitzt. *next_hop_mirror_address* gibt eine TCP/IP-Adresse mit folgendem Format an:  
+  
+ **TCP://**{ *dns_name* | *netbios_name* | *ip_address* } **:** *port_number*  
+  
+ Der angegebene Wert für *port_number* muss mit der Portnummer für den [!INCLUDE[ssSB](../../includes/sssb-md.md)]-Endpunkt einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf dem angegebenen Computer übereinstimmen. Dieser kann durch Ausführen der folgenden Abfrage in der ausgewählten Datenbank abgerufen werden:  
+  
+```  
+SELECT tcpe.port  
+FROM sys.tcp_endpoints AS tcpe  
+INNER JOIN sys.service_broker_endpoints AS ssbe  
+   ON ssbe.endpoint_id = tcpe.endpoint_id  
+WHERE ssbe.name = N'MyServiceBrokerEndpoint';  
+```  
+  
+ Wird MIRROR_ADDRESS angegeben, muss die Route die SERVICE_NAME-Klausel und die BROKER_INSTANCE-Klausel angeben. Eine Route, die **'LOCAL'** oder **'TRANSPORT'** für *next_hop_address* angibt, gibt möglicherweise keine Spiegeladresse an.  
+  
+> [!NOTE]  
+>  Diese Option ist in einer enthaltenen Datenbank nicht verfügbar.  
+  
+## <a name="remarks"></a>Remarks  
+ Die Routingtabelle, in der die Routen gespeichert werden, ist eine Metadatentabelle, die über die **sys.routes**-Katalogsicht gelesen werden kann. Die Routingtabelle kann nur mit der CREATE ROUTE-, ALTER ROUTE- und DROP ROUTE-Anweisung aktualisiert werden.  
   
  Klauseln, die im ALTER ROUTE-Befehl nicht angegeben werden, bleiben unverändert. Deshalb ist es nicht möglich, über ALTER festzulegen, dass für die Route kein Timeout gilt, dass die Route mit jedem Dienstnamen übereinstimmt oder dass die Route mit jeder Broker-Instanz übereinstimmt. Wenn Sie diese Merkmale einer Route ändern möchten, müssen Sie die vorhandene Route löschen und eine neue Route mit den neuen Informationen erstellen.  
   
- Gibt eine Route **'TRANSPORT'** für die *Next_hop_address*, die Netzwerkadresse wird basierend auf den Namen des Diensts bestimmt. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]kann erfolgreich Dienstnamen, die mit einer Netzwerkadresse in einem Format beginnen, die für gültig ist Verarbeiten einer *Next_hop_address*. Für Dienste mit Namen, die gültige Netzwerkadressen enthalten, erfolgt das Routing an die Netzwerkadresse im Dienstnamen.  
+ Gibt eine Route **'TRANSPORT'** für *next_hop_address* an, wird die Netzwerkadresse auf der Basis der Netzwerkadresse im Dienstnamen ermittelt. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann Dienstnamen erfolgreich verarbeiten, die mit einer Netzwerkadresse in einem für eine *next_hop_address* gültigen Format beginnen. Für Dienste mit Namen, die gültige Netzwerkadressen enthalten, erfolgt das Routing an die Netzwerkadresse im Dienstnamen.  
   
  Die Routingtabelle kann eine beliebige Anzahl von Routen enthalten, die den gleichen Dienst, die gleiche Netzwerkadresse und/oder Broker-Instanz-ID angeben. In diesem Fall wählt [!INCLUDE[ssSB](../../includes/sssb-md.md)] eine Route mithilfe einer Prozedur aus, die darauf ausgerichtet ist, eine möglichst genaue Übereinstimmung zwischen den in der Konversation angegebenen Informationen und den Informationen in der Routingtabelle festzustellen.  
   
  Verwenden Sie die ALTER AUTHORIZATION-Anweisung, wenn Sie AUTHORIZATION für einen Dienst ändern möchten.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Berechtigung zum Ändern einer Route erhalten standardmäßig Besitzer der Route, Mitglieder der der **Db_ddladmin** oder **Db_owner** festen Datenbankrollen und Mitglieder der **Sysadmin** behoben Serverrolle.  
+ Die Berechtigung zum Ändern einer Route erhalten standardmäßig der Besitzer der Route, Mitglieder der festen Datenbankrollen **db_ddladmin** oder **db_owner**  sowie Mitglieder der festen Serverrolle **sysadmin**.  
   
 ## <a name="examples"></a>Beispiele  
   
@@ -183,7 +183,7 @@ ALTER ROUTE ExpenseRoute
      ADDRESS = 'TCP://www.Adventure-Works.com:1234';  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [CREATE ROUTE &#40;Transact-SQL&#41;](../../t-sql/statements/create-route-transact-sql.md)   
  [DROP ROUTE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-route-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  

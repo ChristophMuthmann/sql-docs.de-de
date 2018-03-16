@@ -65,7 +65,7 @@ Das bedeutet, dass die Befehle DBCC CHECKALLOC, DBCC CHECKTABLE oder DBCC CHECKC
 > [!NOTE]
 > DBCC CHECKDB wird für Datenbanken unterstützt, die speicheroptimierte Tabellen enthalten. Die Überprüfung wird jedoch nur für Tabellen auf dem Datenträger ausgeführt. Im Rahmen der Sicherung und Wiederherstellung von Datenbanken wird die CHECKSUM-Überprüfung jedoch für Dateien in speicheroptimierten Dateigruppen ausgeführt.    
 >     
-> Da DBCC-Reparaturoptionen sind nicht für speicheroptimierte Tabellen verfügbar. Sie müssen die Datenbanken regelmäßig sichern und die Sicherungen testen. Wenn bei einer speicheroptimierten Tabelle Datenintegritätsprobleme auftreten, müssen Sie die Tabelle von der letzten bekannten fehlerfreien Sicherung wiederherstellen.    
+> Da DBCC-Reparaturoptionen für speicheroptimierte Tabellen nicht verfügbar sind, müssen Sie Ihre Datenbanken regelmäßig sichern und die Sicherungen testen. Wenn bei einer speicheroptimierten Tabelle Datenintegritätsprobleme auftreten, müssen Sie die Tabelle aus der letzten bekannten fehlerfreien Sicherung wiederherstellen.    
 
 ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)    
     

@@ -197,7 +197,7 @@ OR ALTER
   
  Diese Option ist für Trigger in speicheroptimierten Tabellen erforderlich.  
   
- Weitere Informationen finden Sie unter [EXECUTE AS-Klausel &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-clause-transact-sql.md).  
+ Weitere Informationen finden Sie unter [EXECUTE AS-Klausel &#40; Transact-SQL &#41; ](../../t-sql/statements/execute-as-clause-transact-sql.md).  
   
  NATIVE_COMPILATION  
  Gibt an, dass die Trigger nativ kompiliert werden.  
