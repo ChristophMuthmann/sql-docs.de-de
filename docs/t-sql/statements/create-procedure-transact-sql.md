@@ -53,11 +53,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 086151e2916335ae0d7cda3eef11a79363d3ce53
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 8762890c81c5ff2b03ba07a44ef6c559c6d57ab7
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="create-procedure-transact-sql"></a>CREATE PROCEDURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -81,7 +81,7 @@ Wenn Sie die ausführlichen Informationen zur Syntax überspringen und ein Beisp
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```sql
 -- Transact-SQL Syntax for Stored Procedures in SQL Server and Azure SQL Database  
   
 CREATE [ OR ALTER ] { PROC | PROCEDURE } 
@@ -100,7 +100,7 @@ AS { [ BEGIN ] sql_statement [;] [ ...n ] [ END ] }
     [ EXECUTE AS Clause ]  
 ```  
   
-```  
+```sql
 -- Transact-SQL Syntax for CLR Stored Procedures  
   
 CREATE [ OR ALTER ] { PROC | PROCEDURE } 
@@ -113,7 +113,7 @@ AS { EXTERNAL NAME assembly_name.class_name.method_name }
 [;]  
 ```  
   
-```  
+```sql
 -- Transact-SQL Syntax for Natively Compiled Stored Procedures  
   
 CREATE [ OR ALTER ] { PROC | PROCEDURE } [schema_name.] procedure_name  
@@ -137,7 +137,7 @@ sql_statement [;] [ ... n ]
   | [ DELAYED_DURABILITY = { OFF | ON } ]  
 ```  
   
-```  
+```sql
 -- Transact-SQL Syntax for Stored Procedures in Azure SQL Data Warehouse
 -- and Parallel Data Warehouse  
   
@@ -224,7 +224,7 @@ RECOMPILE
 ENCRYPTION  
  **Gilt für:** SQL Server ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
- Gibt an, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] den Originaltext der CREATE PROCEDURE-Anweisung in ein verborgenes Format umwandelt. Die Ausgabe der Verbergung ist nicht direkt in den Katalogsichten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sichtbar. Benutzer, die keinen Zugriff auf Systemtabellen oder Datenbankdateien haben, können den verborgenen Text nicht abrufen. Der Text ist jedoch für berechtigte Benutzer verfügbar, die entweder auf die Systemtabellen über den [DAC-Port](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md) oder direkt auf die Datenbankdateien zugreifen. Des Weiteren können Benutzer, die einen Debugger an den Serverprozess anfügen können, die entschlüsselte Prozedur zur Laufzeit vom Arbeitsspeicher abrufen. Weitere Informationen zum Zugreifen auf Systemmetadaten finden Sie unter [Konfigurieren der Sichtbarkeit von Metadaten](../../relational-databases/security/metadata-visibility-configuration.md).  
+ Gibt an, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] den Originaltext der CREATE PROCEDURE-Anweisung in ein verborgenes Format umwandelt. Die Ausgabe der Verbergung ist nicht direkt in den Katalogsichten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sichtbar. Benutzer, die keinen Zugriff auf Systemtabellen oder Datenbankdateien haben, können den verborgenen Text nicht abrufen. Der Text ist jedoch für berechtigte Benutzer verfügbar, die entweder auf die Systemtabellen über den [DAC-Port](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md) oder direkt auf die Datenbankdateien zugreifen. Des Weiteren können Benutzer, die einen Debugger an den Serverprozess anfügen können, die entschlüsselte Prozedur zur Laufzeit vom Arbeitsspeicher abrufen. Weitere Informationen zu Berechtigungen zum Zugreifen auf Systemmetadaten finden Sie unter [Konfigurieren der Sichtbarkeit von Metadaten](../../relational-databases/security/metadata-visibility-configuration.md).  
   
  Diese Option ist für CLR-Prozeduren nicht gültig.  
   
@@ -258,7 +258,7 @@ EXTERNAL NAME *assembly_name***.***class_name***.***method_name*
 >  CLR-Prozeduren werden in einer enthaltenen Datenbank nicht unterstützt.  
   
 ATOMIC WITH  
- **Gilt für:** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Gibt die unteilbare Ausführung der gespeicherten Prozedur an. Änderungen werden entweder über ein Commit ausgeführt, oder ein Rollback aller Änderungen wird durch eine Ausnahme auslöst. Der ATOMIC WITH-Block ist für systemintern kompilierte gespeicherte Prozeduren erforderlich.  
   
@@ -283,12 +283,12 @@ BEGIN-, ROLLBACK- und COMMIT-Vorgänge können nicht innerhalb eines ATOMIC-Bloc
  Bestimmt, ob NULL-Werte in einem Parameter zulässig sind. NULL ist die Standardeinstellung.  
   
 NATIVE_COMPILATION  
- **Gilt für:** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Gibt an, dass die Prozedur systemintern kompiliert wird. NATIVE_COMPILATION, SCHEMABINDING und EXECUTE AS können in beliebiger Reihenfolge angegeben werden. Weitere Informationen finden Sie unter [Nativ kompilierte gespeicherte Prozeduren](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md).  
   
 SCHEMABINDING  
- **Gilt für:** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Stellt sicher, dass Tabellen, auf die eine Prozedur verweist, nicht gelöscht oder geändert werden können. SCHEMABINDING ist in systemintern kompilierten gespeicherten Prozeduren erforderlich. Weitere Informationen finden Sie unter [Nativ kompilierte gespeicherte Prozeduren](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md). Es gelten dieselben SCHEMABINDING-Einschränkungen wie für benutzerdefinierte Funktionen. Weitere Informationen finden Sie im Abschnitt SCHEMABINDING in [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md).  
   
@@ -298,7 +298,7 @@ LANGUAGE = [N] 'language'
  Entspricht der Sitzungsoption [SET LANGUAGE &#40;Transact-SQL&#41;](../../t-sql/statements/set-language-transact-sql.md). LANGUAGE = [N] 'Sprache' ist erforderlich.  
   
 TRANSACTION ISOLATION LEVEL  
- **Gilt für:** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Erforderlich für systemintern kompilierte gespeicherte Prozeduren. Gibt die Transaktionsisolationsstufe für die gespeicherte Prozedur an. Folgende Optionen stehen zur Verfügung:  
   
@@ -324,14 +324,14 @@ DATEFIRST = *number*
  Weitere Informationen finden Sie unter [SET DATEFIRST &#40;Transact-SQL&#41;](../../t-sql/statements/set-datefirst-transact-sql.md).  
   
 DATEFORMAT = *format*  
- **Gilt für:** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Legt die Reihenfolge der Datumsteile für den Tag, den Monat und das Jahr fest, um die date-, smalldatetime-, datetime-, datetime2- und datetimeoffset-Zeichenfolgen zu interpretieren. DATEFORMAT ist optional. Wenn dies nicht angegeben ist, wird die Einstellung von der angegebenen Sprache abgeleitet.  
   
  Weitere Informationen finden Sie unter [SET DATEFORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/set-dateformat-transact-sql.md).  
   
 DELAYED_DURABILITY = { OFF | ON }  
- **Gilt für:** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Transaktionscommits können entweder vollständig dauerhaft (Standardeinstellung) oder verzögert dauerhaft sein.  
   
@@ -426,7 +426,7 @@ Weitere Beispiele finden Sie unter [Beispiele](#Examples) am Ende dieses Themas.
   
  Sie können einen Funktionsnamen nicht als Parameterstandardwert oder den Wert angeben, der beim Ausführen einer Prozedur an einen Parameter weitergegeben wird. Sie können eine Funktion aber auch wie im folgenden Beispiel gezeigt als Variable übergeben.  
   
-```  
+```sql
 -- Passing the function value as a variable.  
 DECLARE @CheckDate datetime = GETDATE();  
 EXEC dbo.uspGetWhereUsedProductID 819, @CheckDate;   
@@ -589,7 +589,7 @@ GO
   
  Die `uspGetEmployees`-Prozedur kann auf folgende Arten ausgeführt werden:  
   
-```  
+```sql
 EXECUTE HumanResources.uspGetEmployees N'Ackerman', N'Pilar';  
 -- Or  
 EXEC HumanResources.uspGetEmployees @LastName = N'Ackerman', @FirstName = N'Pilar';  

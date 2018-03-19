@@ -30,11 +30,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 81d8b98cf6f7ddd80e3952b82ae13cea75a81abd
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: f8b63625f4e0af0e1f6c55b2d85ae8bb10d53b02
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="xactstate-transact-sql"></a>XACT_STATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -59,7 +59,7 @@ XACT_STATE()
 |------------------|-------------|  
 |1|Für die aktuelle Anforderung liegt eine aktive Benutzertransaktion vor. Die Anforderung kann beliebige Aktionen ausführen, z. B. können Daten geschrieben werden, und es kann ein Commit für die Transaktion ausgeführt werden.|  
 |0|Für die aktuelle Anforderung liegt keine aktive Benutzertransaktion vor.|  
-|-1|Für die aktuelle Anforderung liegt eine aktive Benutzertransaktion vor, allerdings ist ein Fehler aufgetreten, durch den die Transaktion als nicht commitfähig klassifiziert wurde. Die Anforderung kann für die Transaktion weder einen Commit noch ein Rollback zu einem Sicherungspunkt ausführen. Es ist lediglich möglich, ein vollständiges Rollback für die Transaktion anzufordern. Die Anforderung kann erst wieder Schreibvorgänge ausführen, wenn für die Transaktion ein Rollback ausgeführt wurde. Bis für die Transaktion ein Rollback ausgeführt wird, kann die Anforderung nur Lesevorgänge ausführen. Nachdem für die Transaktion ein Rollback ausgeführt worden ist, kann die Anforderung sowohl Lese- als auch Schreibvorgänge ausführen und eine neue Transaktion starten.<br /><br /> Nach Abschluss einer Batchausführung wird für alle aktiven nicht commitfähigen Transaktionen automatisch von [!INCLUDE[ssDE](../../includes/ssde-md.md)] ein Rollback ausgeführt. Falls keine Fehlermeldung gesendet wurde, als die Transaktion in den nicht commitfähigen Status überging, wird bei Abschluss des Batches eine Fehlermeldung an die Clientanwendung gesendet. Durch diese Meldung wird angezeigt, dass eine nicht commitfähige Transaktion erkannt und ein Rollback für sie ausgeführt wurde.|  
+|-1|Für die aktuelle Anforderung liegt eine aktive Benutzertransaktion vor, allerdings ist ein Fehler aufgetreten, durch den die Transaktion als nicht commitfähig klassifiziert wurde. Die Anforderung kann für die Transaktion weder einen Commit noch ein Rollback zu einem Sicherungspunkt ausführen. Es ist lediglich möglich, ein vollständiges Rollback für die Transaktion anzufordern. Die Anforderung kann erst wieder Schreibvorgänge ausführen, wenn für die Transaktion ein Rollback ausgeführt wurde. Bis für die Transaktion ein Rollback ausgeführt wird, kann die Anforderung nur Lesevorgänge ausführen. Nachdem für die Transaktion ein Rollback ausgeführt worden ist, kann die Anforderung sowohl Lese- als auch Schreibvorgänge ausführen und eine neue Transaktion starten.<br /><br /> Wenn die Ausführung des äußersten Batchs abgeschlossen ist, führt die [!INCLUDE[ssDE](../../includes/ssde-md.md)] für alle aktiven nicht commitfähigen Transaktionen automatisch ein Rollback aus. Falls keine Fehlermeldung gesendet wurde, als die Transaktion in den nicht commitfähigen Status überging, wird bei Abschluss des Batches eine Fehlermeldung an die Clientanwendung gesendet. Durch diese Meldung wird angezeigt, dass eine nicht commitfähige Transaktion erkannt und ein Rollback für sie ausgeführt wurde.|  
   
  Sowohl über die XACT_STATE-Funktion als auch über die @@TRANCOUNT-Funktion kann ermittelt werden, ob für die aktuelle Anforderung eine aktive Benutzertransaktion vorliegt. Mit @@TRANCOUNT kann nicht bestimmt werden, ob die betreffende Transaktion als nicht commitfähig klassifiziert wurde. Mit XACT_STATE kann nicht bestimmt werden, ob geschachtelte Transaktionen vorhanden sind.  
   

@@ -39,11 +39,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 645cb458c480fb0842f83bf60721f5228e434d4c
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 9c1d8692b634c1f6f71c112be59eb9e5ff84ea5e
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="insert-transact-sql"></a>INSERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -186,7 +186,7 @@ INSERT INTO [ database_name . [ schema_name ] . | schema_name . ] table_name
  Das Angeben eines TABLOCK-Hinweises für eine Tabelle, die das Ziel einer INSERT-Anweisung ist, hat dieselbe Wirkung wie das Angeben eines TABLOCKX-Hinweises. Auf die Tabelle wird eine exklusive Sperre angewendet.  
   
  (*column_list*)  
- Eine Liste mit einer oder mehreren Spalten, in die Daten eingefügt werden sollen. *column_list* muss in Klammern eingeschlossen und durch ein Komma getrennt werden.  
+ Eine Liste mit einer oder mehreren Spalten, in die Daten eingefügt werden sollen. *column_list* muss in Klammern eingeschlossen und durch ein Trennzeichen getrennt werden.  
   
  Ist eine Spalte nicht in *column_list* enthalten, muss [!INCLUDE[ssDE](../../includes/ssde-md.md)] in der Lage sein, basierend auf der Spaltendefinition einen Wert bereitzustellen. Andernfalls kann die Zeile nicht geladen werden. [!INCLUDE[ssDE](../../includes/ssde-md.md)] stellt automatisch einen Wert für die Spalte bereit, wenn für sie eine der folgenden Bedingungen erfüllt ist:  
   
@@ -398,7 +398,9 @@ Diese Optimierungen sind mit denen vergleichbar, die mit dem BULK INSERT-Befehl 
   
  Wenn TOP mit INSERT verwendet wird, werden die Zeilen, auf die verwiesen wird, nicht auf bestimmte Weise angeordnet, und die ORDER BY-Klausel kann in dieser Anweisung nicht direkt angegeben werden. Wenn Sie die TOP-Klausel verwenden müssen, um Zeilen in einer sinnvollen Reihenfolge einzufügen, müssen Sie sie zusammen mit einer ORDER BY-Klausel in einer untergeordneten SELECT-Anweisung verwenden. Weitere Informationen finden Sie im Abschnitt "Beispiele" in diesem Thema.
  
-INSERT-Abfragen, die SELECT mit ORDER BY zum Füllen von Zeilen verwenden, stellen sicher, wie Identitätswerte berechnet werden, jedoch nicht in der Reihenfolge, in der die Zeilen eingefügt werden.    
+INSERT-Abfragen, die SELECT mit ORDER BY zum Füllen von Zeilen verwenden, stellen sicher, wie Identitätswerte berechnet werden, jedoch nicht in der Reihenfolge, in der die Zeilen eingefügt werden.
+
+In Parallel Data Warehouse ist die ORDER BY-Klausel in VIEWS, CREATE TABLE AS SELECT, INSERT SELECT, Inlinefunktionen, abgeleiteten Tabellen, Unterabfragen und allgemeinen Tabellenausdrücken nur dann gültig, wenn auch TOP angegeben wird.
   
 ## <a name="logging-behavior"></a>Protokollierungsverhalten  
  Die INSERT-Anweisung wird immer vollständig protokolliert, sofern nicht die OPENROWSET-Funktion mit dem BULK-Schlüsselwort oder `INSERT INTO <target_table> SELECT <columns> FROM <source_table>` verwendet wird. Für diese Vorgänge ist eine minimale Protokollierung möglich. Weitere Informationen finden Sie im Abschnitt "Bewährte Methoden zum Massenladen von Daten" weiter oben in diesem Thema.  
@@ -674,7 +676,7 @@ INSERT INTO dbo.EmployeeSales
  In den Beispielen in diesem Abschnitt wird veranschaulicht, wie Zeilen durch Angeben einer Sicht oder Tabellenvariablen eingefügt werden.  
   
 #### <a name="k-inserting-data-by-specifying-a-view"></a>K. Einfügen von Daten durch Angeben einer Sicht  
- Im folgenden Beispiel wird ein Sichtname als Zielobjekt angegeben. Die neue Zeile wird jedoch in die zugrunde liegende Basistabelle eingefügt. Die Reihenfolge der Werte in der `INSERT`-Anweisung muss mit der Reihenfolge der Spalten in der Sicht übereinstimmen. Weitere Informationen finden Sie unter [Ändern von Daten über eine Sicht](../../relational-databases/views/modify-data-through-a-view.md).  
+ Im folgenden Beispiel wird ein Sichtname als Zielobjekt angegeben. Die neue Zeile wird jedoch in die zugrunde liegende Basistabelle eingefügt. Die Reihenfolge der Werte in der `INSERT`-Anweisung muss mit der Reihenfolge der Spalten in der Sicht übereinstimmen. Weitere Informationen finden Sie unter [Modify Data Through a View](../../relational-databases/views/modify-data-through-a-view.md) (Ändern von Daten über eine Sicht).  
   
 ```  
 CREATE TABLE T1 ( column_1 int, column_2 varchar(30));  
