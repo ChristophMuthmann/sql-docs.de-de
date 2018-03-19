@@ -1,7 +1,7 @@
 ---
 title: ALTER EXTERNAL LIBRARY (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
-ms.date: 02/25/2018
+ms.date: 03/05/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
@@ -21,11 +21,11 @@ helpviewer_keywords:
 author: jeannt
 ms.author: jeannt
 manager: craigg
-ms.openlocfilehash: 0581957db73b82b9486f938d17b4c8938e20258d
-ms.sourcegitcommit: 6e819406554efbd17bbf84cf210d8ebeddcf772d
+ms.openlocfilehash: e2fb628e2f832b7d1b73a2e3fefae1fb1d6b8e2b
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="alter-external-library-transact-sql"></a>ALTER EXTERNAL LIBRARY (Transact-SQL)  
 
@@ -61,7 +61,7 @@ WITH ( LANGUAGE = 'R' )
 
 **library_name**
 
-Gibt den Namen einer vorhandenen Paketbibliothek an. Bibliotheken umfassen nur den Benutzer. D.h., Bibliotheksnamen gelten innerhalb des Kontexts eines bestimmten Benutzers oder Besitzers als eindeutig.
+Gibt den Namen einer vorhandenen Paketbibliothek an. Bibliotheken umfassen nur den Benutzer. Bibliotheksnamen müssen innerhalb des Kontexts eines bestimmten Benutzers oder Besitzers eindeutig sein.
 
 Der Bibliotheksname kann nicht nach dem Zufallsprinzip zugewiesen werden. D.h., Sie müssen den Namen verwenden, den die aufrufende Runtime beim Laden des Pakets erwartet.
 
@@ -75,14 +75,7 @@ Gibt den Inhalt des Pakets für eine bestimmte Plattform an. Nur ein Dateiartefa
 
 Die Datei kann in Form eines lokalen Pfads oder eines Netzwerkpfads angegeben werden. Wenn die Datenquellenoption angegeben ist, kann der Dateiname ein relativer Pfad zu dem Container sein, auf den in `EXTERNAL DATA SOURCE` verwiesen wird.
 
-Optional kann eine Betriebssystemplattform für die Datei angegeben werden. Für jede Betriebssystemplattform für eine bestimmte Sprache oder Runtime ist nur jeweils ein Darteiartefakt oder Inhalt erlaubt.
-
-**DATA_SOURCE = external_data_source_name**
-
-Gibt den Namen der externen Datenquelle an, die den Speicherort der Bibliotheksdatei enthält. Dieser Speicherort sollte auf einen Azure Blob Storage-Pfad verweisen. Verwenden Sie zum Erstellen einer externen Datenquelle [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](create-external-data-source-transact-sql.md).
-
-> [!IMPORTANT] 
-> Blobs werden derzeit im SQL Server 2017-Release nicht als Datenquelle unterstützt.
+Optional kann eine Betriebssystemplattform für die Datei angegeben werden. Für jede Betriebssystemplattform für eine bestimmte Sprache oder Runtime ist nur ein Darteiartefakt oder Inhalt erlaubt.
 
 **library_bits**
 
@@ -104,11 +97,11 @@ Die `ALTER EXTERNAL LIBRARY`-Anweisung lädt nur die Bibliothekbits in die Daten
 
 ## <a name="permissions"></a>Berechtigungen
 
-Erfordert die `ALTER ANY EXTERNAL LIBRARY`-Berechtigung. Benutzer, die eine externe Bibliothek erstellt haben, können diese ändern.
+Standardmäßig verfügen der **dbo**-Benutzer sowie alle Mitglieder der Rolle **db_owner** über die Berechtigung zum Ausführen von ALTER EXTERNAL LIBRARY. Darüber hinaus kann der Benutzer, der die externe Bibliothek erstellt hat, diese ändern.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird eine externe Bibliothek namens `customPackage` geändert.
+Die folgenden Beispiele ändern eine externe Bibliothek namens `customPackage`.
 
 ### <a name="a-replace-the-contents-of-a-library-using-a-file"></a>A. Ersetzen des Inhalts einer Bibliothek mithilfe einer Datei
 
@@ -135,10 +128,12 @@ EXEC sp_execute_external_script
 Im folgenden Beispiel wird die vorhandene Bibliothek geändert, indem die neuen Bits als ein Hexadezimalliteral übergeben werden.
 
 ```SQL
-ALTER EXTERNAL LIBRARY customLibrary FROM (CONTENT = 0xabc123) WITH (LANGUAGE = 'R');
+ALTER EXTERNAL LIBRARY customLibrary 
+SET (CONTENT = 0xabc123) WITH (LANGUAGE = 'R');
 ```
 
-In diesem Codebeispiel werden die Inhalte der Variablen aus Gründen der Lesbarkeit abgeschnitten.
+> [!NOTE]
+> Dieses Codebeispiel zeigt nur die Syntax; der Binärwert in `CONTENT =` wurde zur besseren Lesbarkeit gekürzt und erstellt keine funktionierende Bibliothek. Der tatsächliche Inhalt der binären Variable wäre wesentlich länger.
 
 ## <a name="see-also"></a>Siehe auch
 

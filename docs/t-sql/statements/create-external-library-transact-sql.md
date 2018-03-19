@@ -1,7 +1,7 @@
 ---
 title: CREATE EXTERNAL LIBRARY (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: 
-ms.date: 02/25/2018
+ms.date: 03/05/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
@@ -23,11 +23,11 @@ helpviewer_keywords:
 author: jeannt
 ms.author: jeannt
 manager: craigg
-ms.openlocfilehash: e28716314837225586cf4bd1f80a37c5c6b824ab
-ms.sourcegitcommit: 6e819406554efbd17bbf84cf210d8ebeddcf772d
+ms.openlocfilehash: a8c77b86fac722d43b1634ea7dc5052655bf560d
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="create-external-library-transact-sql"></a>CREATE EXTERNAL LIBRARY (Transact-SQL)  
 
@@ -67,7 +67,7 @@ WITH ( LANGUAGE = 'R' )
 
 **library_name**
 
-Bibliotheken werden zu der Datenbank hinzugefügt, die an den Benutzer angepasst ist. Das bedeutet, dass Bibliotheksnamen innerhalb des Kontexts eines bestimmten Benutzers oder Besitzers als eindeutig gelten. Bibliotheksnamen müssen außerdem für jeden Benutzer eindeutig sein. Beispielsweise können zwei Benutzer, **RUser1** und **RUser2**, die R-Bibliothek `ggplot2` individuell und separat hochladen.
+Bibliotheken werden zu der Datenbank hinzugefügt, die an den Benutzer angepasst ist. Bibliotheksnamen müssen innerhalb des Kontexts eines bestimmten Benutzers oder Besitzers eindeutig sein. Beispielsweise können zwei Benutzer, **RUser1** und **RUser2**, die R-Bibliothek `ggplot2` individuell und separat hochladen. Wenn jedoch **RUser1** eine neuere Version von `ggplot2` hochladen möchte, muss die zweite Instanz anders benannt werden oder die vorhandene Bibliothek ersetzen. 
 
 Bibliotheksnamen können nicht beliebig zugewiesen werden. Der Bibliotheksname sollte mit dem Namen übereinstimmen, der benötigt wird, um die R-Bibliothek von R zu laden.
 
@@ -107,11 +107,9 @@ Die `CREATE EXTERNAL LIBRARY`-Anweisung lädt die Bibliothekbits in die Datenban
 
 Bibliotheken, die in die Instanz hochgeladen werden, können entweder öffentlich oder privat sein. Wenn die Bibliothek von einem Mitglied von `dbo` erstellt wird, ist sie öffentlich und kann mit allen Benutzern geteilt werden. Andernfalls ist die Bibliothek für diesen Benutzer privat.
 
-Sie können im SQL Server 2017-Release keine Blobs als Datenquelle verwenden.
-
 ## <a name="permissions"></a>Berechtigungen
 
-Erfordert die `CREATE ANY EXTERNAL LIBRARY`-Berechtigung.
+Erfordert die `CREATE EXTERNAL LIBRARY`-Berechtigung. Standardmäßig verfügt jeder Benutzer mit **dbo**, der Mitglied der Rolle **db_owner** ist, über die Berechtigung zum Erstellen einer externen Bibliothek. Allen anderen Benutzern müssen Sie die Berechtigung mithilfe einer [GRANT](https://docs.microsoft.com/sql/t-sql/statements/grant-database-permissions-transact-sql)-Anweisung explizit gewähren, in der Sie CREATE EXTERNAL LIBRARY als Berechtigung angeben.
 
 Zum Bearbeiten einer Bibliothek ist die separate Berechtigung `ALTER ANY EXTERNAL LIBRARY` erforderlich.
 
@@ -124,7 +122,7 @@ Im folgenden Beispiel wird eine externe Bibliothek namens `customPackage` zu ein
 ```sql
 CREATE EXTERNAL LIBRARY customPackage
 FROM (CONTENT = 'C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\customPackage.zip') WITH (LANGUAGE = 'R');
-```  
+```
 
 Nachdem die Bibliothek erfolgreich in die Instanz hochgeladen wurde, führt ein Benutzer den Vorgang `sp_execute_external_script` aus, um die Bibliothek zu installieren.
 
@@ -145,9 +143,9 @@ Nehmen wir beispielsweise an, dass Sie ein neues Paket, `packageA`, installieren
 
 Damit die Installation von `packageA` erfolgreich ist, müssen Sie Bibliotheken für `packageB` und `packageC` zur selben Zeit erstellen, zu der Sie `packageA` zu SQL Server hinzufügen. Achten Sie darauf, dass Sie auch die erforderlichen Paketversionen überprüfen.
 
-In der Praxis sind Paketabhängigkeiten für häufig verwendete Pakete in der Regel viel komplizierter als in diesem einfachen Beispiel. Beispielsweise könnte „ggplot2“ mehr als 30 Pakete erfordern, und diese Pakete könnten zusätzliche Pakete erfordern, die auf dem Server nicht verfügbar sind. Jedes fehlende Paket und jede falsche Paketversion kann zu einem Fehler bei der Installation führen.
+In der Praxis sind Paketabhängigkeiten für häufig verwendete Pakete in der Regel viel komplizierter als in diesem einfachen Beispiel. Beispielsweise könnte **ggplot2** mehr als 30 Pakete erfordern, und diese Pakete könnten wiederum zusätzliche Pakete erfordern, die auf dem Server nicht verfügbar sind. Jedes fehlende Paket und jede falsche Paketversion kann zu einem Fehler bei der Installation führen.
 
-Da es schwierig sein kann, alle Abhängigkeiten nur durch Betrachten des Paketmanifests zu bestimmen, empfehlen wir Ihnen, dass Sie ein Paket wie [miniCRAN](https://cran.r-project.org/web/packages/miniCRAN/index.html) oder [iGraph](http://igraph.org/redirect.html) verwenden, um alle Pakete zu identifizieren, die für eine erfolgreiche Installation erforderlich sein könnten.
+Da es schwierig sein kann, alle Abhängigkeiten nur durch Betrachten des Paketmanifests zu bestimmen, empfiehlt es sich, ein Paket wie [miniCRAN](https://cran.r-project.org/web/packages/miniCRAN/index.html) zu verwenden, um alle Pakete zu identifizieren, die für eine erfolgreiche Installation erforderlich sein könnten.
 
 + Laden Sie das Zielpaket und dessen Abhängigkeiten hoch. Alle Dateien müssen sich in einem Ordner befinden, auf den der Server Zugriff hat.
 
@@ -180,38 +178,26 @@ Da es schwierig sein kann, alle Abhängigkeiten nur durch Betrachten des Paketma
     @script=N'
     # load the desired package packageA
     library(packageA)
-    # call function from package
-    OutputDataSet <- packageA.function()
+    print(packageVersion("packageA"))
     '
-    with result sets (([result] int));    
     ```
 
 ### <a name="c-create-a-library-from-a-byte-stream"></a>C. Erstellen einer Bibliothek aus einem Bytedatenstrom
 
-Wenn Sie nicht die Möglichkeit haben, die Paketdateien an einem Speicherort auf dem Server zu speichern, können Sie die Paketinhalte auch in einer Variable übergeben. Im folgenden Beispiel wird eine Bibliothek erstellt, indem die Bits als Hexadezimalliteral übergeben werden.
+Wenn Sie nicht die Möglichkeit haben, die Paketdateien in einem Speicherort auf dem Server zu speichern, können Sie die Paketinhalte in einer Variable übergeben. Im folgenden Beispiel wird eine Bibliothek erstellt, indem die Bits als Hexadezimalliteral übergeben werden.
 
 ```SQL
 CREATE EXTERNAL LIBRARY customLibrary FROM (CONTENT = 0xabc123) WITH (LANGUAGE = 'R');
 ```
 
-Hier wurden die Hexadezimalwerte zur besseren Lesbarkeit abgeschnitten.
+> [!NOTE]
+> Dieses Codebeispiel zeigt nur die Syntax; der Binärwert in `CONTENT =` wurde zur besseren Lesbarkeit gekürzt und erstellt keine funktionierende Bibliothek. Der tatsächliche Inhalt der binären Variable wäre wesentlich länger.
 
 ### <a name="d-change-an-existing-package-library"></a>D. Löschen einer vorhandenen Paketbibliothek
 
 Die `ALTER EXTERNAL LIBRARY`-DDL-Anweisung kann verwendet werden, um neuen Bibliotheksinhalt hinzuzufügen oder bestehenden Bibliotheksinhalt zu ändern. Zum Bearbeiten einer bestehenden Bibliothek ist die Berechtigung `ALTER ANY EXTERNAL LIBRARY` erforderlich.
 
 Weitere Informationen finden Sie unter [ALTER EXTERNAL LIBRARY](alter-external-library-transact-sql.md).
-
-### <a name="e-delete-a-package-library"></a>E. Löschen einer Paketbibliothek
-
-Um eine Paketbibliothek aus der Datenbank zu löschen, führen Sie die folgende Anweisung aus:
-
-```sql
-DROP EXTERNAL LIBRARY customPackage <user_name>;
-```
-
-> [!NOTE]
-> Im Gegensatz zu anderen `DROP`-Anweisungen in [!INCLUDE[ssnoversion](../../includes/ssnoversion.md)] unterstützt diese Anweisung einen optionalen Parameter, der die Benutzerberechtigung angibt. Durch diese Option können Benutzer mit Besitzrollen Bibliotheken löschen, die von regulären Benutzern hochgeladen wurden.
 
 ## <a name="see-also"></a>Siehe auch
 
