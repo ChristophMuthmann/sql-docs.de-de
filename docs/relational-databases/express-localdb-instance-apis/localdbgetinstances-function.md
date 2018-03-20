@@ -19,19 +19,19 @@ apilocation:
 apitype: DLLExport
 ms.assetid: f95a9980-8bc0-426c-8aa1-e2660b6784cf
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ed025ca18f9c2618608a0adc3b643ebf800273a5
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 39e78268f6a0826f16a50f3cfe56e112cc1611f9
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="localdbgetinstances-function"></a>LocalDBGetInstances-Funktion
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Gibt alle SQL Server Express LocalDB-Instanzen mit der angegebenen Version zurück.  
+  Gibt alle SQL Server Express LocalDB-Instanzen mit der angegebenen Version zurück.  
   
  **Headerdatei:** sqlncli.h  
   

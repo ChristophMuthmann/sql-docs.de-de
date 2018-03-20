@@ -20,19 +20,19 @@ helpviewer_keywords:
 - AdvancedProperties property
 ms.assetid: 63bcb7e2-1f78-4961-b4b9-1b635a89079b
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c4d5bbd73a215d072dac4d992928d48becaf6510
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 32cc8f44db211fa2c3b69a7a5a952ee2ea40811e
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="advancedproperties-property-sqlservice-class"></a>AdvancedProperties-Eigenschaft (SqlService-Klasse)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-Ruft ein Array von Objektverweisen ab, die die erweiterten Eigenschaften für das **SqlService** -Objekt enthalten.  
+  Ruft ein Array von Objektverweisen ab, die die erweiterten Eigenschaften für das **SqlService** -Objekt enthalten.  
   
 ## <a name="syntax"></a>Syntax  
   

@@ -21,19 +21,19 @@ helpviewer_keywords:
 - PropertyName property
 ms.assetid: e51d3475-e998-47f3-837b-4b4bd7635dcb
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7a3677ece620e41cd6d770a226cea62b92754f44
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 6bed8739432fc16e8d24f28b2316abdc55677914
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="propertyname-property-sqlserviceadvancedproperty-class"></a>PropertyName-Eigenschaft (SqlServiceAdvancedProperty-Klasse)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-Ruft den Namen einer erweiterten Eigenschaft ab oder legt diesen fest.  
+  Ruft den Namen einer erweiterten Eigenschaft ab oder legt diesen fest.  
   
 ## <a name="syntax"></a>Syntax  
   

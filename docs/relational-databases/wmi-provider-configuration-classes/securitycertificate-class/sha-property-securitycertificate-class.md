@@ -21,19 +21,19 @@ helpviewer_keywords:
 - SHA property
 ms.assetid: 73dfe0b7-0237-4d92-8161-9264a10a28a7
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2cff1651ed4897455d47af97eb2ecd530a213ac3
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: e6366e4281637dabc94a44eb0606735277616295
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="sha-property-securitycertificate-class"></a>SHA-Eigenschaft (SecurityCertificate-Klasse)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-Ruft das SHA-Fingerabdruckattribut des Sicherheitszertifikats ab.  
+  Ruft das SHA-Fingerabdruckattribut des Sicherheitszertifikats ab.  
   
 ## <a name="syntax"></a>Syntax  
   

@@ -19,19 +19,19 @@ apilocation:
 apitype: DLLExport
 ms.assetid: 4bd73187-0aac-4f03-ac54-2b78e41917e5
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bde22cf301e05030402df861a137ae0c5070d2c4
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: ee7642cffce1dc0f0f3612759b9f709e7dcc8f8c
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="localdbstopinstance-function"></a>LocalDBStopInstance-Funktion
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Beendet die angegebene SQL Server Express LocalDB-Instanz.  
+  Beendet die angegebene SQL Server Express LocalDB-Instanz.  
   
  **Headerdatei:** sqlncli.h  
   

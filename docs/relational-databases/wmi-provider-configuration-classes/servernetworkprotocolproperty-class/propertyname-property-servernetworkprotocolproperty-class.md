@@ -21,19 +21,19 @@ helpviewer_keywords:
 - PropertyName property
 ms.assetid: 0175ce3c-e07e-4710-a2f9-a26dface6eb3
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 260ae5b0f6ed6ff19d602e6b6f00e89c763a2db6
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: ce9c015cc93a158bc9fa91c3c0e4eaea3031e234
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="propertyname-property-servernetworkprotocolproperty-class"></a>PropertyName-Eigenschaft (ServerNetworkProtocolProperty-Klasse)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-Ruft den Namen der aktuellen Eigenschaft ab, auf die verwiesen wird.  
+  Ruft den Namen der aktuellen Eigenschaft ab, auf die verwiesen wird.  
   
 ## <a name="syntax"></a>Syntax  
   

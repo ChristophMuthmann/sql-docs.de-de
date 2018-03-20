@@ -6,7 +6,7 @@ ms.prod:
 ms.prod_service: sql-data-warehouse
 ms.service: sql-data-warehouse
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: barbkess
 ms.suite: sql
 ms.technology:
 - database-engine
@@ -15,14 +15,14 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 author: ronortloff
-ms.author: rortloff;barbkess
+ms.author: rortloff
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a718827a478137a877b7b1130f3e80a5cbd05fc9
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 5efc510645a6a5648c4d1e2c6e2c05567159e6e2
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="syspdwreplicatedtablecachestate-transact-sql"></a>sys.pdw_replicated_table_cache_state (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.lasthandoff: 02/03/2018
   
 |Spaltenname|Datentyp|Description|Bereich|  
 |-----------------|---------------|-----------------|-----------|  
-|object_id|**int**|Die Objekt-ID für die Tabelle. Finden Sie unter [sys.objects &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).<br /><br /> **Object_id** ist der Schlüssel für diese Ansicht.||  
+|object_id|**int**|Die Objekt-ID für die Tabelle. Finden Sie unter [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).<br /><br /> **Object_id** ist der Schlüssel für diese Ansicht.||  
 |state|**nvarchar(40)**|Der Status der replizierten Tabelle Cache für diese Tabelle.|"NotReady", "Bereit"|  
   
 ## <a name="example"></a>Beispiel

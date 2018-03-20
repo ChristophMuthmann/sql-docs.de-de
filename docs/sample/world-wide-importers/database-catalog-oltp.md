@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
 ms.service: 
 ms.component: samples
-ms.technology: samples
+ms.technology:
+- samples
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,20 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e47c0022-ce87-4ba5-a24b-df55efe66431
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: BarbKess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 robots: noindex,nofollow
 ms.workload: On Demand
-ms.openlocfilehash: 6d87a24e91f96957170671303af641c6bacc6599
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 0d458bc15530aa87bfa922787558fff3f07645f7
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="wideworldimporters-database-catalog"></a>Datenbankkatalog "wideworldimporters"
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Die Datenbank "wideworldimporters" enthält alle der Transaktionsinformationen und Tagesdaten für und Verkäufe, sowie für Fahrzeuge und kalten Räume Sensordaten.
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Die Datenbank "wideworldimporters" enthält alle der Transaktionsinformationen und Tagesdaten für und Verkäufe, sowie für Fahrzeuge und kalten Räume Sensordaten.
 
 ## <a name="schemas"></a>Schemas
 
@@ -50,7 +52,7 @@ Diese Schemas werden für externe Anwendungen verwendet, die nicht direkt auf di
 |-----------------------------|---------------------|
 |Website|Alle Zugriffe auf die Datenbank von der Unternehmensportal-Website wird über dieses Schema.|
 |Berichte|Alle Zugriffe auf die Datenbank von Reporting Services-Berichte erfolgt über dieses Schema.|
-|Power BI|Alle Zugriffe auf die Datenbank aus der Power BI-Dashboards über das Enterprise-Gateway ist über dieses Schema.|
+|PowerBI|Alle Zugriffe auf die Datenbank aus der Power BI-Dashboards über das Enterprise-Gateway ist über dieses Schema.|
 
 Beachten Sie, dass die Berichte und PowerBI Schemas werden nicht in der ursprünglichen Version der Beispieldatenbank verwendet. Allerdings werden alle Reporting Services und Power BI-Beispiele baut auf den dieser Datenbank aufgefordert, diese Schemas verwendet.
 
@@ -73,7 +75,7 @@ Details der Parameter und Personen (Benutzer und Kontakte), zusammen mit (häufi
 
 |Tabelle|Description|
 |-----------------------------|---------------------|
-|Von SystemParameters|Enthält eine systemweite konfigurierbaren Parameter.|
+|SystemParameters|Enthält eine systemweite konfigurierbaren Parameter.|
 |Personen|Enthält die Benutzernamen, Kontaktinformationen für alle Benutzer, die die Anwendung verwenden, und für die Personen, die die Wide World Importers am kundenorganisationen behandelt. Dies schließt Mitarbeitern, Kunden, Lieferanten und alle anderen Kontakte. Für Personen, die vom System oder der Website mit Berechtigung erteilt wurde, enthält die Informationen über Anmeldeinformationen.|
 |Städte|Es gibt viele Adressen, die in das System für Personen, Unternehmen Übermittlung Kundenadressen pickup Adressen an Lieferanten usw. gespeichert. Wenn eine Adresse gespeichert wird, besteht ein Verweis auf eine Stadt in dieser Tabelle. Es gibt auch eine räumliche Position jeder Stadt.|
 |StateProvinces|Städte sind Teil der Bundesstaaten oder Provinzen. Diese Tabelle weist Details davon, wie z. B. räumliche Daten für die Beschreibung der Grenzen jeder Bundesland oder Kanton.|
@@ -91,7 +93,7 @@ Details des Lieferanten und der Lagerartikel Käufe.
 |Suppliers|Main Entitätstabelle für Lieferanten (Organisationen)|
 |SupplierCategories|Kategorien für Lieferanten (z. B. Novelties, Toys, clothing, Verpackung usw.)|
 |SupplierTransactions|Alle finanzielle Transaktionen, die Lieferanten-bezogene (Rechnungen, Zahlungen) sind.|
-|Aufträge|Details des Lieferanten Bestellungen|
+|PurchaseOrders|Details des Lieferanten Bestellungen|
 |PurchaseOrderLines|Detailzeilen vom Lieferanten Bestellungen|
 
  
@@ -217,7 +219,7 @@ Diese Prozeduren werden zum Konfigurieren des Beispiels verwendet. Sie werden ve
 |CreateRoleIfNonExistant|Erstellt eine Datenbankrolle aus, wenn er nicht bereits vorhanden.|
 
 
-### <a name="sequences-schema"></a>Sequenzen-Schema
+### <a name="sequences-schema"></a>Sequences Schema
 
 Verfahren zum Konfigurieren von Sequenzen in der Datenbank.
 

@@ -21,19 +21,19 @@ helpviewer_keywords:
 - FriendlyName property
 ms.assetid: ae3f26f9-141c-47cf-afe4-14f99b6b9567
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 121e406bb37fd3fb3687a3adaca58a2b2249346f
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: c98afd918ef3faee38577b088ba297cfdf8f18aa
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="friendlyname-property-securitycertificate-class"></a>FriendlyName-Eigenschaft (SecurityCertificate-Klasse)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-Ruft einen alternativen Anzeigenamen für das Sicherheitszertifikat ab oder legt diesen fest.  
+  Ruft einen alternativen Anzeigenamen für das Sicherheitszertifikat ab oder legt diesen fest.  
   
 ## <a name="syntax"></a>Syntax  
   

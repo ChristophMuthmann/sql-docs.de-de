@@ -20,19 +20,19 @@ helpviewer_keywords:
 - ConnectionString property
 ms.assetid: 8a3692b9-3a34-42e2-b0b9-28e6bd3a7aba
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ade55759e9fbec1bfce40ba21692bd1e6e6a0421
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: db3cfeef1b61e84ca7e99b557e9e2236cd21bc3d
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="connectionstring-property-sqlserveralias-class"></a>ConnectionString-Eigenschaft (SqlServerAlias-Klasse)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-Ruft die Verbindungszeichenfolge ab, die zum Herstellen der Verbindung für den Serververbindungsalias verwendet wird.  
+  Ruft die Verbindungszeichenfolge ab, die zum Herstellen der Verbindung für den Serververbindungsalias verwendet wird.  
   
 ## <a name="syntax"></a>Syntax  
   

@@ -24,14 +24,14 @@ helpviewer_keywords:
 ms.assetid: 
 caps.latest.revision: 
 author: tmullaney
-ms.author: thmullan;rickbyh
+ms.author: thmullan
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7b44f4253a295d91c7011c0aa51d943848188784
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: b634a990abcd9f763c851eaf1fbdde4d022ca25e
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="sysspaddtrustedassembly-transact-sql"></a>Sys.sp_add_trusted_assembly (Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]

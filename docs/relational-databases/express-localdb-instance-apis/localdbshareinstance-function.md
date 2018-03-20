@@ -19,19 +19,19 @@ apilocation:
 apitype: DLLExport
 ms.assetid: 21eb3b9a-7d32-455b-89bb-f624198cd202
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 35d269d5e0114d44e2ff631b2bddd4df1bf22c24
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: a57a13f470151a87aa5b1b1ec6d72c79518a398b
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="localdbshareinstance-function"></a>LocalDBShareInstance-Funktion
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Gibt die angegebene SQL Server Express-LocalDB-Instanz für andere Benutzer des Computers frei und verwendet den angegebenen Freigabenamen.  
+  Gibt die angegebene SQL Server Express-LocalDB-Instanz für andere Benutzer des Computers frei und verwendet den angegebenen Freigabenamen.  
   
  **Headerdatei:** sqlncli.h  
   

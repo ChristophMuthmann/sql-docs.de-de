@@ -19,19 +19,19 @@ apilocation:
 apitype: DLLExport
 ms.assetid: cb325f5d-10ee-4a56-ba28-db0074ab3926
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 16adebca59bd2ba5f6d31f1bcc64ec7742b06ca5
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 4b9c45c36dde3ea3856f271eb4198b91c526346d
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="localdbstartinstance-function"></a>LocalDBStartInstance-Funktion
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Startet die angegebene SQL Server Express LocalDB-Instanz.  
+  Startet die angegebene SQL Server Express LocalDB-Instanz.  
   
  **Headerdatei:** sqlncli.h  
   

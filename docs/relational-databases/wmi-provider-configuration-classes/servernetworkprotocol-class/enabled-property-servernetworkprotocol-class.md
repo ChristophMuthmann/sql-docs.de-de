@@ -21,19 +21,19 @@ helpviewer_keywords:
 - Enabled property
 ms.assetid: a514822a-91f1-4aca-9175-2b96cff29700
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b8e1211dd4c0ff618948594e923cc3ecd82f1f7f
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 452a4db68ae9f134be766fe6368f715d8edd2e48
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="enabled-property-servernetworkprotocol-class"></a>Enabled-Eigenschaft (ServerNetworkProtocol-Klasse)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-Ruft die boolesche Eigenschaft ab, die angibt, ob das Servernetzwerkprotokoll aktiviert ist.  
+  Ruft die boolesche Eigenschaft ab, die angibt, ob das Servernetzwerkprotokoll aktiviert ist.  
   
 ## <a name="syntax"></a>Syntax  
   

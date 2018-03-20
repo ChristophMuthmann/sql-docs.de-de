@@ -9,27 +9,29 @@ ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
 ms.service: 
 ms.component: samples
-ms.technology: " database-engine "
+ms.technology:
+- " database-engine "
 ms.topic: article
 ms.assetid: f387273b-8b5f-4687-b033-09499ea2d68f
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: BarbKess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 robots: noindex,nofollow
 ms.workload: Inactive
-ms.openlocfilehash: 49674a1edbec00a650af036297adacec3bdc150d
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 20db5f20256fb4b545482b29b0c5cc41c6ba231e
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 03/19/2018
 ---
-# <a name="wideworldimporters-data-generation"></a>"Wideworldimporters" Datengenerierungsplan
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Die Versionen der Datenbanken "wideworldimporters" und WideWorldImportersDW enthält Daten, die beginnend am 1. Januar-2013, bis zu dem Tag, die diese Datenbanken erstellt wurden.
+# <a name="wideworldimporters-data-generation"></a>WideWorldImporters data generation
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Die Versionen der Datenbanken "wideworldimporters" und WideWorldImportersDW enthält Daten, die beginnend am 1. Januar-2013, bis zu dem Tag, die diese Datenbanken erstellt wurden.
 
 Wenn die Beispieldatenbanken zu einem späteren Zeitpunkt, für Demonstrations- oder Abbildung, verwendet werden, kann es vorteilhaft, neuere Beispieldaten in der Datenbank enthalten sein.
 
-## <a name="data-generation-in-wideworldimporters"></a>Generieren von Daten in "wideworldimporters"
+## <a name="data-generation-in-wideworldimporters"></a>Data Generation in WideWorldImporters
 
 Gehen Sie folgendermaßen vor, um das Generieren von Beispieldaten bis zum aktuellen Datum:
 
@@ -79,7 +81,7 @@ Die Prozedur `Application.Configuration_PopulateLargeSaleTable` können verwende
 
 #### <a name="parameters"></a>Parameter:
 
-  `@EstimatedRowsFor2012`**"bigint"** (hat den Standardwert 12000000)
+  `@EstimatedRowsFor2012` **"bigint"** (hat den Standardwert 12000000)
 
 #### <a name="result"></a>Ergebnis:
 

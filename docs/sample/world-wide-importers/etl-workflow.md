@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
 ms.service: 
 ms.component: samples
-ms.technology: samples
+ms.technology:
+- samples
 ms.custom: 
 ms.date: 06/15/2017
 ms.reviewer: 
@@ -12,20 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 679e58fe-b062-4934-a94c-9bb916b0bcb0
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: BarbKess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 robots: noindex,nofollow
 ms.workload: Inactive
-ms.openlocfilehash: bbda77b86b4c804ae0cf261f54f51fc487090e1d
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 0a9ccfb4f49e490cb681561aeaa5a0e9a8e86ad0
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="wideworldimportersdw-etl-workflow"></a>WideWorldImportersDW ETL-Workflows
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Die ETL-Pakets WWI_Integration dient zum Migrieren von Daten aus der Datenbank "wideworldimporters" in der Datenbank WideWorldImportersDW sich mit den Daten. Das Paket wird in regelmäßigen Abständen ausgeführt (die am häufigsten täglich).
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Die ETL-Pakets WWI_Integration dient zum Migrieren von Daten aus der Datenbank "wideworldimporters" in der Datenbank WideWorldImportersDW sich mit den Daten. Das Paket wird in regelmäßigen Abständen ausgeführt (die am häufigsten täglich).
 
 ## <a name="overview"></a>Übersicht
 
@@ -35,7 +37,7 @@ Dimensionen werden zuerst geladen, gefolgt von Faktentabellen. Das Paket kann zu
 
 Der Workflow wird wie folgt:
 
- ![WideWorldImporters ETL-Workflows](../../sample/world-wide-importers/media/wideworldimporters-etl-workflow.png)
+ ![WideWorldImporters ETL workflow](../../sample/world-wide-importers/media/wideworldimporters-etl-workflow.png)
 
 Er beginnt mit einem funktioniert Task "Ausdruck" Umstellungsjahr für Angaben mit geeigneten Zeitpunkt. Dieses Mal wird die aktuelle Uhrzeit kleiner einigen Minuten. (Dies ist robuster als das Anfordern von Daten direkt auf die aktuelle Zeit). Es schneidet dann alle Millisekunden ab dem Zeitpunkt ab.
 
@@ -55,13 +57,13 @@ Anschließend lädt eine Reihe von Datenflusstasks jeder Dimension, und klicken 
 
 Die neueste Version des Beispiels:
 
-[Wide World Importers-Version](http://go.microsoft.com/fwlink/?LinkID=800630)
+[wide-world-importers-release](http://go.microsoft.com/fwlink/?LinkID=800630)
 
 Laden Sie die SSIS-Paket-Datei **tägliche ETL.ispac**.
 
 Quellcode und erstellen die Beispieldatenbank ist aus folgendem Ort verfügbar.
 
-[Wide World-Importers befinden](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/wwi-integration-etl)
+[wide-world-importers](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/wwi-integration-etl)
 
 ## <a name="install"></a>Install
 
