@@ -29,10 +29,10 @@ ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 7353125066cfcfe8d1d244bd04d98b51eedc884c
-ms.sourcegitcommit: 657d18fc805512c9574b2fe7451310601b9d78cb
+ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="integration-services-roles-ssis-service"></a>Integration Services-Rollen (SSIS-Dienst)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] stellt bestimmte feste Rollen auf Datenbankebene für den sicheren Zugriff auf Pakete bereit, die in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]gespeichert sind. Die verfügbaren Rollen unterscheiden sich abhängig davon, ob Sie Pakete in der SSIS-Katalogdatenbank (SSISDB) oder in der msdb-Datenbank speichern.  

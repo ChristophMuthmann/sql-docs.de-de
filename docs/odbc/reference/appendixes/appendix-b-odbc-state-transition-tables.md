@@ -23,10 +23,10 @@ ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
 ms.openlocfilehash: 2dabd364fb0a7415a4cf05035d06f5a1dd5838e5
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="appendix-b-odbc-state-transition-tables"></a>Anhang B: ODBC-Übergang Statustabellen
 In den Tabellen in diesem Anhang werden wie die ODBC-Funktionen Übergang von der Umgebung, Verbindungs-, Anweisung und Deskriptor Zustände verursachen. Der Status der Umgebung, die Verbindung, die Anweisung oder die Deskriptor bestimmt in der Regel an, wenn Funktionen, die verwenden den entsprechenden Typ des Handles (Umgebung, Verbindung, Anweisung oder Deskriptor) aufgerufen werden kann. Die Status-Umgebung, Verbindung, anweisungs- und Deskriptorstatuswerte überlappen ungefähr wie in der folgenden Abbildung dargestellt. Angenommen, die genaue Überlappung der Verbindung gibt, C5 und C6 und Anweisung besagt, dass S1 bis S12 ist datenquellenabhängig, da Transaktionen zu unterschiedlichen Zeiten auf verschiedenen Datenquellen starten und Deskriptor Status D1i (implizit Deskriptor zugeordnet) abhängt den Status der Anweisung, die mit der Deskriptor verknüpft ist, ist beim Status D1e (explizit Deskriptor reserviert) unabhängig von den Zustand einer beliebigen Anweisung. Eine Beschreibung der einzelnen Zustände, finden Sie unter [Umgebungsübergänge](../../../odbc/reference/appendixes/environment-transitions.md), [Verbindung Übergänge](../../../odbc/reference/appendixes/connection-transitions.md), [Anweisung Übergänge](../../../odbc/reference/appendixes/statement-transitions.md), und [Deskriptor Übergänge ](../../../odbc/reference/appendixes/descriptor-transitions.md)weiter unten in diesem Anhang.  
@@ -52,7 +52,7 @@ In den Tabellen in diesem Anhang werden wie die ODBC-Funktionen Übergang von de
 -   **--** – Der Zustand ist nach der Ausführung der Funktion unverändert.  
   
 -   **E**  
-     ***n*** , **C*n *** **S*n***, oder **D * n***  – die Umgebung, Verbindung, Anweisung oder Deskriptor Zustand wechselt zum die angegebenen Status.  
+     ***n*** , **C*n *** **S*n ***, oder **D * n***  – die Umgebung, Verbindung, Anweisung oder Deskriptor Zustand wechselt zum die angegebenen Status.  
   
 -   **(SODASS)**  – Ein ungültiges Handle wurde an die Funktion übergeben. Wenn das Handle ein null-Handle wurde oder ein gültiges Handle des falschen Typs wurde – beispielsweise ein Verbindungshandle übergeben wurde, wenn ein Anweisungshandle erforderlich ist – die Funktion gibt SQL_INVALID_HANDLE; Andernfalls ist das Verhalten nicht definiert "und" wahrscheinlich schwerwiegend. Dieser Fehler wird angezeigt, nur bei der einzig mögliche Ergebnis des Aufrufs der Funktion im angegebenen Status. Dieser Fehler ändert sich nicht auf den Status und von der Treiber-Manager wird immer erkannt werden, wie durch die Klammern angegeben.  
   
