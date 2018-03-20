@@ -21,19 +21,19 @@ helpviewer_keywords:
 - SetCurrentCertificate method
 ms.assetid: f9c6e172-11be-42de-b19b-a5b3436e84da
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0305428d4aec84200e5e07077a712371fd243e17
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: c4b5bd29ad1ae6b2d2414472e60cc2193d3be9b9
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="setcurrentcertificate-method-serversettings-class"></a>SetCurrentCertificate-Methode (ServerSettings-Klasse)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-Legt das aktuelle Sicherheitszertifikat fest.  
+  Legt das aktuelle Sicherheitszertifikat fest.  
   
 ## <a name="syntax"></a>Syntax  
   

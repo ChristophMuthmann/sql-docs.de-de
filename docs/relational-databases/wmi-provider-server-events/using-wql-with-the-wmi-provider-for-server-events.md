@@ -20,19 +20,19 @@ helpviewer_keywords:
 - WMI Provider for Server Events, WQL
 ms.assetid: 58b67426-1e66-4445-8e2c-03182e94c4be
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d14958366c9dfa24343e244a8a5d5cb880fafa3e
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 1bb07cf51939aec91de5b86b682545de9bfab382
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="using-wql-with-the-wmi-provider-for-server-events"></a>Verwenden von WQL mit dem WMI-Anbieter für Serverereignisse
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-Verwaltungsanwendungen greifen über den WMI-Anbieter für Serverereignisse auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zu, indem sie WQL-Anweisungen (WMI Query Language) ausgeben. WQL ist eine vereinfachte Teilmenge von Structured Query Language (SQL) mit einigen WMI-spezifischen Erweiterungen. Unter Verwendung von WQL ruft eine Anwendung einen Ereignistyp aus einer spezifischen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], einer Datenbank oder einem Datenbankobjekt ab. Das einzige zurzeit unterstützte Objekt ist queue. Der WMI-Anbieter für Serverereignisse übersetzt die Abfrage in eine ereignisbenachrichtigung, die in der Zieldatenbank für ereignisbenachrichtigungen im Serverbereich oder im Bereich einer Objekt oder erstellt wird die **master** Datenbank für serverbezogene-Ereignis Benachrichtigungen werden gesendet.  
+  Verwaltungsanwendungen greifen über den WMI-Anbieter für Serverereignisse auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zu, indem sie WQL-Anweisungen (WMI Query Language) ausgeben. WQL ist eine vereinfachte Teilmenge von Structured Query Language (SQL) mit einigen WMI-spezifischen Erweiterungen. Unter Verwendung von WQL ruft eine Anwendung einen Ereignistyp aus einer spezifischen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], einer Datenbank oder einem Datenbankobjekt ab. Das einzige zurzeit unterstützte Objekt ist queue. Der WMI-Anbieter für Serverereignisse übersetzt die Abfrage in eine ereignisbenachrichtigung, die in der Zieldatenbank für ereignisbenachrichtigungen im Serverbereich oder im Bereich einer Objekt oder erstellt wird die **master** Datenbank für serverbezogene-Ereignis Benachrichtigungen werden gesendet.  
   
  Betrachten Sie beispielsweise folgende WQL-Abfrage:  
   

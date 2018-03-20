@@ -21,19 +21,19 @@ helpviewer_keywords:
 - ProtocolName property
 ms.assetid: 5894a32b-c2d8-4bba-8f9d-d09e5cd65f71
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 57b6c1277502f93f7bd58b52b5bf5b8fee9349a2
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: e95b91373254e9fdebaea50dfaeb84f67cc53c35
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="protocolname-property-servernetworkprotocol-class"></a>ProtocolName-Eigenschaft (ServerNetworkProtocol-Klasse)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-Ruft den Namen des Server-Netzwerkprotokolls ab.  
+  Ruft den Namen des Server-Netzwerkprotokolls ab.  
   
 ## <a name="syntax"></a>Syntax  
   

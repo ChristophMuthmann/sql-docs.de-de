@@ -21,19 +21,19 @@ helpviewer_keywords:
 - SetNumValue method
 ms.assetid: a5e1056b-0b75-4ad6-99c1-89246010d815
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 72f8764704f1646063e4bfa281e170af630686e9
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 504d1ca8ca0c49c188b70bf51cd79ac0c7fb2dfa
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="setnumvalue-method-sqlserviceadvancedproperty-class"></a>SetNumValue-Methode (SqlServiceAdvancedProperty-Klasse)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-Legt den numerischen Wert einer Eigenschaft fest.  
+  Legt den numerischen Wert einer Eigenschaft fest.  
   
 ## <a name="syntax"></a>Syntax  
   

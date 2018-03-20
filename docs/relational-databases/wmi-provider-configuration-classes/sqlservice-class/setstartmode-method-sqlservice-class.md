@@ -21,19 +21,19 @@ helpviewer_keywords:
 - SetStartMode method
 ms.assetid: f6f198b4-f9a4-468c-8977-76462ef06e61
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 713513ec867a8d5dadf46a59a0721eea10d26919
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 2012cfe7e91e20e7a92088712e01a3b9fdc26158
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="setstartmode-method-sqlservice-class"></a>SetStartMode-Methode (SqlService-Klasse)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-Ändert den Startmodus der Dienstinstanz.  
+  Ändert den Startmodus der Dienstinstanz.  
   
 ## <a name="syntax"></a>Syntax  
   

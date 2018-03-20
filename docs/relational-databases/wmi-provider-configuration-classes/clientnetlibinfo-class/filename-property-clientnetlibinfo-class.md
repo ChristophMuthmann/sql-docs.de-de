@@ -21,19 +21,19 @@ helpviewer_keywords:
 - FileName property
 ms.assetid: 5b478582-9389-4923-a914-0df2d8333b0e
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e8b1c315e2ec9d5a286f58a90dc2a5e5243b40e8
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 2b54b3f9b4be77b145ca2c3e73a40fb30bbae5fa
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="filename-property-clientnetlibinfo-class"></a>FileName-Eigenschaft (ClientNetLibInfo-Klasse)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-Ruft den Dateinamen der Clientnetzwerk-Bibliotheksdatei ab.  
+  Ruft den Dateinamen der Clientnetzwerk-Bibliotheksdatei ab.  
   
 ## <a name="syntax"></a>Syntax  
   

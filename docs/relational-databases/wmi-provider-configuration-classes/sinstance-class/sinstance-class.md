@@ -20,19 +20,19 @@ helpviewer_keywords:
 - SInstance class
 ms.assetid: ddda92fa-5bb9-45dd-b421-243b02db4caf
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 49f43f17234db949709b76f283da1d2270f53a9e
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 40621e5274e1566f385e62143e3339e10bbd3ad3
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="sinstance-class"></a>SInstance-Klasse
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-Die [SInstance-Klasse](../../../relational-databases/wmi-provider-configuration-classes/sinstance-class/sinstance-class.md) stellt eine Instanz von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]dar.  
+  Die [SInstance-Klasse](../../../relational-databases/wmi-provider-configuration-classes/sinstance-class/sinstance-class.md) stellt eine Instanz von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]dar.  
   
  Diese [Sinstance-Klasse](../../../relational-databases/wmi-provider-configuration-classes/sinstance-class/sinstance-class.md) kann verwendet werden, um Protokolle und Netzwerkbibliotheken zu verwalten, die der Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]zugeordnet sind. Ein Sicherheitszertifikat kann auch für die Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]angegeben werden.  
   

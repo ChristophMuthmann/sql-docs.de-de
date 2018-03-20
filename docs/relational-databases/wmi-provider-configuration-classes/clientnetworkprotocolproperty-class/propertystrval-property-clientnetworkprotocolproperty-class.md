@@ -21,19 +21,19 @@ helpviewer_keywords:
 - PropertyStrVal property
 ms.assetid: eeb15b13-4fee-47ac-81c3-cba19d450bd9
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5b88757cd0aa8e1638d593a08c1b440c1f98af2f
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: e7c5a8826a3dddb1bfb2d51fab47a69bb1e57a21
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="propertystrval-property-clientnetworkprotocolproperty-class"></a>PropertyStrVal-Eigenschaft (ClientNetworkProtocolProperty-Klasse)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-Ruft den Zeichenfolgenwert der aktuellen Eigenschaft ab, auf die durch den [PropertyIdx-Eigenschaftswert (ClientNetworkProtocolProperty-Klasse)](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/propertyidx-property-clientnetworkprotocolproperty-class.md) verwiesen wird.  
+  Ruft den Zeichenfolgenwert der aktuellen Eigenschaft ab, auf die durch den [PropertyIdx-Eigenschaftswert (ClientNetworkProtocolProperty-Klasse)](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/propertyidx-property-clientnetworkprotocolproperty-class.md) verwiesen wird.  
   
 ## <a name="syntax"></a>Syntax  
   

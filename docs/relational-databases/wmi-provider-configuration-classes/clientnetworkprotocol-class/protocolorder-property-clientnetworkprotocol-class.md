@@ -21,19 +21,19 @@ helpviewer_keywords:
 - ProtocolOrder property
 ms.assetid: aa09b8ab-37db-4406-8973-acf503855fd2
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cb610179585806c0d2d9335e43a6023c50538100
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 5fcd2d279a3eca46fe13c0ca78b2b2afd1799241
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="protocolorder-property-clientnetworkprotocol-class"></a>ProtocolOrder-Eigenschaft (ClientNetworkProtocol-Klasse)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-Ruft die fortlaufende Nummer des Netzwerkprotokolls ab, auf das aktuell verwiesen wird. Dies erfolgt gemäß der [SetOrderValue-Methode (ClientNetworkProtocol Class)](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/setordervalue-method-clientnetworkprotocol-class.md) -Methode.  
+  Ruft die fortlaufende Nummer des Netzwerkprotokolls ab, auf das aktuell verwiesen wird. Dies erfolgt gemäß der [SetOrderValue-Methode (ClientNetworkProtocol Class)](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/setordervalue-method-clientnetworkprotocol-class.md) -Methode.  
   
 ## <a name="syntax"></a>Syntax  
   

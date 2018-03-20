@@ -20,19 +20,19 @@ helpviewer_keywords:
 - SecurityCertificate class
 ms.assetid: d772da67-e04e-4499-9f80-7a5e94829b5c
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d81a903d33d474ab4c2f0350fd4a86de974d3ea6
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 3c04297c28c3f64f08f190911dd1c1b5e8e9f4ca
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="securitycertificate-class"></a>SecurityCertificate-Klasse
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-Die [SecurityCertificate-Klasse](../../../relational-databases/wmi-provider-configuration-classes/securitycertificate-class/securitycertificate-class.md) stellt ein Sicherheitszertifikat dar. Ein Zertifikat ist eine digital signierte Anweisung, die den Wert eines öffentlichen Schlüssels an die Instanz von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]bindet, wo der entsprechende private Schlüssel gespeichert ist. Das Zertifikat wird von einer Zertifizierungsstelle ausgestellt.  
+  Die [SecurityCertificate-Klasse](../../../relational-databases/wmi-provider-configuration-classes/securitycertificate-class/securitycertificate-class.md) stellt ein Sicherheitszertifikat dar. Ein Zertifikat ist eine digital signierte Anweisung, die den Wert eines öffentlichen Schlüssels an die Instanz von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]bindet, wo der entsprechende private Schlüssel gespeichert ist. Das Zertifikat wird von einer Zertifizierungsstelle ausgestellt.  
   
  Mit der [SecurityCertificate-Klasse](../../../relational-databases/wmi-provider-configuration-classes/securitycertificate-class/securitycertificate-class.md)können Sie folgende Aufgaben ausführen:  
   

@@ -21,19 +21,19 @@ helpviewer_keywords:
 - FlagValue property
 ms.assetid: 7af9e5b2-1b99-4eea-8a49-1129c0d46086
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 15d82423c606c301b02c59cfe2040b05412f0b9d
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: e1e506c53596c9d49a5b918a0c2c4bb0682dd0d8
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="flagvalue-property-clientsettingsgeneralflag-class"></a>FlagValue-Eigenschaft (ClientSettingsGeneralFlag-Klasse)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-Ruft den Wert des Flags ab.  
+  Ruft den Wert des Flags ab.  
   
 ## <a name="syntax"></a>Syntax  
   

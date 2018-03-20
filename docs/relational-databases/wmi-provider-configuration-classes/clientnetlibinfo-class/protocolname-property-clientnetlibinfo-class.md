@@ -21,19 +21,19 @@ helpviewer_keywords:
 - ProtocolName property
 ms.assetid: 3af93df3-69df-4a55-82cd-294ad70cc0cb
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 912a409993bdbb7a0e7974788ede817a8217ec6d
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 2c30e838d256d4195661004aea59c5236135ae12
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="protocolname-property-clientnetlibinfo-class"></a>ProtocolName-Eigenschaft (ClientNetLibInfo-Klasse)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-Ruft den Namen des Protokolls ab, das der Clientnetzwerkbibliothek zugeordnet ist.  
+  Ruft den Namen des Protokolls ab, das der Clientnetzwerkbibliothek zugeordnet ist.  
   
 ## <a name="syntax"></a>Syntax  
   

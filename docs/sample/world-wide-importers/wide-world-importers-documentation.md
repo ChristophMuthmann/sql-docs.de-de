@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
 ms.service: 
 ms.component: samples
-ms.technology: samples
+ms.technology:
+- samples
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,20 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 17cabd9d-cb2f-436c-ad9c-ce02225808b7
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: BarbKess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 robots: noindex,nofollow
 ms.workload: On Demand
-ms.openlocfilehash: a2510ee889f57f7ab51c0f45574a8fa6e86abb47
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 99d3bf3913b620a34e284b8277e4c639ba20727a
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="wide-world-importers-documentation"></a>Wide World Importers-Dokumentation
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Wide World Importers ist der neuen Beispieldatenbank für SQL Server 2016 und Azure SQL-Datenbank. Es veranschaulicht die Kernfunktionen von SQL Server 2016 und Azure SQL-Datenbank für Transactional Processing (OLTP), Datawarehousing und Analyse (OLAP)-Arbeitslasten sowie Hybrid-Transaktion und analysearbeitsauslastungen Verarbeitung (HTAP) dar.
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Wide World Importers ist der neuen Beispieldatenbank für SQL Server 2016 und Azure SQL-Datenbank. Es veranschaulicht die Kernfunktionen von SQL Server 2016 und Azure SQL-Datenbank für Transactional Processing (OLTP), Datawarehousing und Analyse (OLAP)-Arbeitslasten sowie Hybrid-Transaktion und analysearbeitsauslastungen Verarbeitung (HTAP) dar.
 
 ## <a name="about-this-sample"></a>Zu diesem Beispiel
 

@@ -21,19 +21,19 @@ helpviewer_keywords:
 - GetCurrentCertificate method
 ms.assetid: 450e33c6-91d4-420f-ab7c-1905111f5658
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 633b85a138bfbf28d012ba92e3a122a4d122091b
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 60356b1b148444f1ba714a0fd8b207ca95fc49ed
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="getcurrentcertificate-method-serversettings-class"></a>GetCurrentCertificate-Methode (ServerSettings-Klasse)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-Ruft das aktuelle Sicherheitszertifikat ab.  
+  Ruft das aktuelle Sicherheitszertifikat ab.  
   
 ## <a name="syntax"></a>Syntax  
   

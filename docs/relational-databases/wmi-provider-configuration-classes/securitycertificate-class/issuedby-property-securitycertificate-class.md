@@ -21,19 +21,19 @@ helpviewer_keywords:
 - IssuedBy property
 ms.assetid: 9fcf9c62-01a8-4be2-9d10-5b1b796b397c
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5bcede9ef192ca53112e89bc0f41fcc065fc9c19
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 33d5c864c4c38936b9468d8bd16c5c626f9997c4
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="issuedby-property-securitycertificate-class"></a>IssuedBy-Eigenschaft (SecurityCertificate-Klasse)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-Ruft das Objekt ab, das das Sicherheitszertifikat ausgegeben hat.  
+  Ruft das Objekt ab, das das Sicherheitszertifikat ausgegeben hat.  
   
 ## <a name="syntax"></a>Syntax  
   

@@ -21,19 +21,19 @@ helpviewer_keywords:
 - ProtocolName property
 ms.assetid: b28d7e40-5fd8-4aad-a2a6-b4131d8152b2
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9941790722892098ee1ef26cac08266d04ed276b
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: c60fae36ac721ea50303b6b3295984807b21919e
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="protocolname-property-servernetworkprotocolproperty-class"></a>ProtocolName-Eigenschaft (ServerNetworkProtocolProperty-Klasse)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-Ruft den Namen des Protokolls ab, dem die referenzierte Eigenschaft gehört.  
+  Ruft den Namen des Protokolls ab, dem die referenzierte Eigenschaft gehört.  
   
 ## <a name="syntax"></a>Syntax  
   

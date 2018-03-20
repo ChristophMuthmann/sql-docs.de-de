@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
 ms.service: 
 ms.component: samples
-ms.technology: samples
+ms.technology:
+- samples
 ms.custom: 
 ms.date: 10/31/2017
 ms.reviewer: 
@@ -12,20 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5ed65e42-527a-45e7-9a91-7179e892652e
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: BarbKess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 robots: noindex,nofollow
 ms.workload: On Demand
-ms.openlocfilehash: d6b43b590e7a5e6117f6752e1eb1dec701ca645e
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 8d3957abef7fb70698c04fd22d390d96ac4cd17b
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 03/19/2018
 ---
-# <a name="wideworldimportersdw-database-catalog"></a>Datenbankkatalog WideWorldImportersDW
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Erläuterungen für Schemas, Tabellen und gespeicherten Prozeduren in der Datenbank WideWorldImportersDW. 
+# <a name="wideworldimportersdw-database-catalog"></a>WideWorldImportersDW database catalog
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Erläuterungen für Schemas, Tabellen und gespeicherten Prozeduren in der Datenbank WideWorldImportersDW. 
 
 Die WideWorldImportersDW-Datenbank ist für Datawarehousing und analytischen Verarbeitung verwendet. Transaktionsdaten zur und Verkäufe in der Datenbank "wideworldimporters" generiert und in die Datenbank mit WideWorldImportersDW geladen ist ein **tägliche ETL-Prozess**.
 
@@ -51,14 +53,14 @@ WideWorldImportersDW hat die folgenden Dimensionstabellen. Die Beschreibung umfa
 
 |Tabelle|Quelltabellen|
 |-----------------------------|---------------------|
-|City|`Application.Cities`, `Application.StateProvinces`, `Application.Countries`.|
+|Ort|`Application.Cities`, `Application.StateProvinces`, `Application.Countries`.|
 |Customer|`Sales.Customers`, `Sales.BuyingGroups`, `Sales.CustomerCategories`.|
 |Datum|Neue Tabelle mit Informationen zu Daten, einschließlich des Geschäftsjahres (basierend auf dem 1. November Geschäftsjahres starten).|
-|Employee|`Application.People`.|
+|Employee|`Application.People`installiert haben.|
 |StockItem|`Warehouse.StockItems`, `Warehouse.Colors`, `Warehouse.PackageType`.|
 |Lieferanten|`Purchasing.Suppliers`, `Purchasing.SupplierCategories`.|
-|PaymentMethod|`Application.PaymentMethods`.|
-|TransactionType|`Application.TransactionTypes`.|
+|PaymentMethod|`Application.PaymentMethods`installiert haben.|
+|TransactionType|`Application.TransactionTypes`installiert haben.|
 
 ### <a name="fact-tables"></a>Faktentabellen
 
@@ -97,9 +99,9 @@ Diese Prozeduren werden zum Konfigurieren des Beispiels verwendet. Sie werden ve
 In der ETL-Prozess verwendete Prozeduren fallen in den folgenden Kategorien:
 - Hilfsprozeduren für ETL-Paket - alle Get * Prozeduren.
 - Prozeduren, die von der ETL-Paket verwendet werden, für die Migration von bereitgestellten Daten in die Data Warehouse-Tabellen - alle migrieren * Prozeduren.
-- `PopulateDateDimensionForYear`-Akzeptiert ein Jahr und stellt sicher, dass alle Datumsangaben für dieses Jahr, in aufgefüllt werden der `Dimension.Date` Tabelle.
+- `PopulateDateDimensionForYear` -Akzeptiert ein Jahr und stellt sicher, dass alle Datumsangaben für dieses Jahr, in aufgefüllt werden der `Dimension.Date` Tabelle.
 
-### <a name="sequences-schema"></a>Sequenzen-Schema
+### <a name="sequences-schema"></a>Sequences Schema
 
 Verfahren zum Konfigurieren von Sequenzen in der Datenbank.
 

@@ -21,19 +21,19 @@ helpviewer_keywords:
 - Properties property
 ms.assetid: 7e0a4e38-4555-4750-8fd3-4425b29e6aa1
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c0b58b301799f2e9d7c7f2366b10419165050b75
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: ceb8b7e1f36de213d25aab190901743dab1ad8bb
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="properties-property-clientnetworkprotocol-class"></a>Properties-Eigenschaft (ClientNetworkProtocol-Klasse)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-Ruft die Eigenschaften ab, die dem aktuellen Clientnetzwerkprotokoll zugeordnet sind, das in [Konfigurieren von Clientprotokollen](http://technet.microsoft.com/library/ms181035.aspx)angegeben ist.  
+  Ruft die Eigenschaften ab, die dem aktuellen Clientnetzwerkprotokoll zugeordnet sind, das in [Konfigurieren von Clientprotokollen](http://technet.microsoft.com/library/ms181035.aspx)angegeben ist.  
   
 ## <a name="syntax"></a>Syntax  
   

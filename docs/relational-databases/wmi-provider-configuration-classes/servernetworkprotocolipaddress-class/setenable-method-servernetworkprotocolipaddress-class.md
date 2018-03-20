@@ -21,19 +21,19 @@ helpviewer_keywords:
 - SetEnable method
 ms.assetid: baa86deb-95dd-416f-b2c7-cec1dfb91ab4
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5cbeeeb8c1e71ac0952b6f4f0ad844e1eced6786
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 512fc26a961ccdf20167a232ba2bbce094f62d0e
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="setenable-method-servernetworkprotocolipaddress-class"></a>SetEnable-Methode (ServerNetworkProtocolIPAddress-Klasse)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-Aktiviert die IP-Adresse.  
+  Aktiviert die IP-Adresse.  
   
 ## <a name="syntax"></a>Syntax  
   

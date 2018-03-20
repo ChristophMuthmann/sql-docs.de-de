@@ -21,19 +21,19 @@ helpviewer_keywords:
 - GeneralFlags property
 ms.assetid: 36faf960-e49b-4866-bce0-f8bbf50fd225
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cd408ed88e9c8a4b713e85fb6dd00bfc7056729f
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 101e9b16f7195bee1903fde7d4283a853e2efb0a
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="generalflags-property-sinstance-class"></a>GeneralFlags-Eigenschaft (SInstance-Klasse)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-Ruft die allgemeinen Flags ab, die einer Instanz von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]zugeordnet sind.  
+  Ruft die allgemeinen Flags ab, die einer Instanz von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]zugeordnet sind.  
   
 ## <a name="syntax"></a>Syntax  
   

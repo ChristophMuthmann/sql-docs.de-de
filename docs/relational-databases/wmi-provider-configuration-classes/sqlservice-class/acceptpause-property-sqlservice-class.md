@@ -20,19 +20,19 @@ helpviewer_keywords:
 - AcceptPause property
 ms.assetid: 4339e903-35ee-4395-b005-ca58b3a24a84
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d0ffdaafa3c41908f0d92e342512885c7aed072a
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 4eb8dda420be11e34fa9a10277847f407a60f5a9
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="acceptpause-property-sqlservice-class"></a>AcceptPause-Eigenschaft (SqlService-Klasse)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-Ruft den booleschen Eigenschaftswert ab, der angibt, ob der Dienst angehalten werden kann.  
+  Ruft den booleschen Eigenschaftswert ab, der angibt, ob der Dienst angehalten werden kann.  
   
 ## <a name="syntax"></a>Syntax  
   

@@ -19,19 +19,19 @@ apilocation:
 apitype: DLLExport
 ms.assetid: 3eebb485-8a53-4a79-82a9-57b8de9f8e84
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c044ceddef837aa063ea84c071081417c17f415a
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: f69904b452befa2c801fefd36fb8b32ca83d4f14
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="localdbcreateinstance-function"></a>LocalDBCreateInstance-Funktion
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Erstellt eine neue SQL Server Express LocalDB-Instanz.  
+  Erstellt eine neue SQL Server Express LocalDB-Instanz.  
   
  **Headerdatei:** sqlncli.h  
   

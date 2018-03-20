@@ -21,19 +21,19 @@ helpviewer_keywords:
 - SetNumericalValue method
 ms.assetid: 950ed1e8-0538-4db4-807c-a2c36f43cf6b
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d51a64f45a8257af9875ab70b5e214f17602e0df
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 334870de1a2e64c0d1633f8a8c6a375f32ef612e
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="setnumericalvalue-method-sqlserviceadvancedproperty-class"></a>SetNumericalValue-Methode (SqlServiceAdvancedProperty-Klasse)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-Legt den numerischen Wert einer Eigenschaft fest.  
+  Legt den numerischen Wert einer Eigenschaft fest.  
   
 ## <a name="syntax"></a>Syntax  
   

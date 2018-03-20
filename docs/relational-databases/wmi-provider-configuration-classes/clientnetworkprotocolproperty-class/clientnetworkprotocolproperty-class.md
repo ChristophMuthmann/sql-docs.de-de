@@ -19,19 +19,19 @@ helpviewer_keywords:
 - ClientNetworkProtocolProperty class
 ms.assetid: a6e8adb5-2ffd-4c49-b9e4-9a1e459ff7b4
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e5c389656e15e293e2f092c2d9b221f581bbc5ad
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 90682f49f4eefbb4a03278cd023c05f138324b27
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="clientnetworkprotocolproperty-class"></a>ClientNetworkProtocolProperty-Klasse
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-Die [ClientNetworkProtocolProperty-Klasse](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/clientnetworkprotocolproperty-class.md) stellt die Eigenschaften eines Clientnetzwerkprotokolls dar.  
+  Die [ClientNetworkProtocolProperty-Klasse](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/clientnetworkprotocolproperty-class.md) stellt die Eigenschaften eines Clientnetzwerkprotokolls dar.  
   
  Mit der [ClientNetworkProtocolProperty-Klasse](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/clientnetworkprotocolproperty-class.md)können Sie folgende Aufgaben ausführen:  
   

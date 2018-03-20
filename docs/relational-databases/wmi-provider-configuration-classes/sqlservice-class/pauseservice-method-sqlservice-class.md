@@ -21,19 +21,19 @@ helpviewer_keywords:
 - PauseService method
 ms.assetid: 5c3a8feb-58b8-4385-b4c8-bf33cf4d276d
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3e1125a354cc7b06c76d73984f9ede4dea6debd0
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 567941dde0de5f8fb8d3aeeeba5d3c77d24ac6e2
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="pauseservice-method-sqlservice-class"></a>PauseService-Methode (SqlService-Klasse)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-Versucht, den Dienst anzuhalten.  
+  Versucht, den Dienst anzuhalten.  
   
 ## <a name="syntax"></a>Syntax  
   

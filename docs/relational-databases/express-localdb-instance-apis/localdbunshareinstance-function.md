@@ -19,19 +19,19 @@ apilocation:
 apitype: DLLExport
 ms.assetid: 54012ccb-eded-43f7-8ea5-da5ce79224c6
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 955212bb6a4c87f51cd1eb238252ce732b0c1bd7
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 15ddbf2fa0b09e567f2dd6a8168b768e99b01648
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="localdbunshareinstance-function"></a>LocalDBUnshareInstance-Funktion
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Beendet die Freigabe der angegebenen SQL Server Express LocalDB-Instanz.  
+  Beendet die Freigabe der angegebenen SQL Server Express LocalDB-Instanz.  
   
  **Headerdatei:** sqlncli.h  
   

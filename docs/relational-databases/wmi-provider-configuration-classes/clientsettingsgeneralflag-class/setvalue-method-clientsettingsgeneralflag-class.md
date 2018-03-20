@@ -21,19 +21,19 @@ helpviewer_keywords:
 - SetValue method
 ms.assetid: 34443689-a0e0-4668-a811-17532c6fd271
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1cc568fa4f8850583628e82936270886a686141f
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: b019eac03294390e2ac271457a8ec9c56fc914ab
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="setvalue-method-clientsettingsgeneralflag-class"></a>SetValue-Methode (ClientSettingsGeneralFlag-Klasse)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-Legt alle Werte des Flags fest, auf das verwiesen wird.  
+  Legt alle Werte des Flags fest, auf das verwiesen wird.  
   
 ## <a name="syntax"></a>Syntax  
   

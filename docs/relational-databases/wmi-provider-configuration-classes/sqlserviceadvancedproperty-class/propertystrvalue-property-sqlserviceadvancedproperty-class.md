@@ -21,19 +21,19 @@ helpviewer_keywords:
 - PropertyStrValue property
 ms.assetid: 637dd734-c294-4bfd-892d-882bac4708f5
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7ad13cd2578c665ef6a24eda10f1783245fcc8bf
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 22ef8afd96714b24d3026b804e9b8b662bcb8ef4
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="propertystrvalue-property-sqlserviceadvancedproperty-class"></a>PropertyStrValue-Eigenschaft (SqlServiceAdvancedProperty-Klasse)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-Ruft den Zeichenfolgenwert der erweiterten Eigenschaft ab.  
+  Ruft den Zeichenfolgenwert der erweiterten Eigenschaft ab.  
   
 ## <a name="syntax"></a>Syntax  
   

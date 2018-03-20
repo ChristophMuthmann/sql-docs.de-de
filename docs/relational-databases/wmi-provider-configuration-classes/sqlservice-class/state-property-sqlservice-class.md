@@ -21,19 +21,19 @@ helpviewer_keywords:
 - State property
 ms.assetid: 9e09f419-947c-4d4b-9a49-2d3396c847cd
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3ba996af300626a03b61ea367791b27fbf1134e9
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 19751c0def878b510834b53442048562a2b5c835
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="state-property-sqlservice-class"></a>State-Eigenschaft (SqlService-Klasse)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-Ruft den aktuellen Zustand des Diensts ab oder legt diesen fest.  
+  Ruft den aktuellen Zustand des Diensts ab oder legt diesen fest.  
   
 ## <a name="syntax"></a>Syntax  
   

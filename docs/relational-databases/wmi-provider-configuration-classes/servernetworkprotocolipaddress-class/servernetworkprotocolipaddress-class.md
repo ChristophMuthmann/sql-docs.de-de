@@ -20,19 +20,19 @@ helpviewer_keywords:
 - ServerNetworkProtocolIPAddress class
 ms.assetid: 1dbea791-c5a2-4911-b23c-64bddd860dae
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d89aebb2177fc9085141ea457bcbc5378918ed5b
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: eb22ad3383ab2c323e94c6b4e5ba5c20e7877639
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="servernetworkprotocolipaddress-class"></a>ServerNetworkProtocolIPAddress-Klasse
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-Die [ServerNetworkProtocolIPAddress-Klasse](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolipaddress-class/servernetworkprotocolipaddress-class.md) stellt eine vom Servernetzwerkprotokoll unterstützte IP-Adresse dar.  
+  Die [ServerNetworkProtocolIPAddress-Klasse](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolipaddress-class/servernetworkprotocolipaddress-class.md) stellt eine vom Servernetzwerkprotokoll unterstützte IP-Adresse dar.  
   
  Mit der [ServerNetworkProtocolIPAddress-Klasse](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolipaddress-class/servernetworkprotocolipaddress-class.md) können Sie folgende Aufgaben ausführen:  
   

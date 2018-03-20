@@ -19,14 +19,14 @@ helpviewer_keywords:
 ms.assetid: 
 caps.latest.revision: 
 author: shkale-msft
-ms.author: shkale;barbkess
+ms.author: shkale
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a8cdff2f5407ae25f096ff65c0110e22a28bfb09
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: d570be772eefec569c59e01a3501a18c1f33d536
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="create-a-graph-database-and-run-some-pattern-matching-queries-using-t-sql"></a>Erstellen Sie eine Diagrammdatenbank, und führen Sie einige Abfragen, die mithilfe des T-SQL-Mustervergleich
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]

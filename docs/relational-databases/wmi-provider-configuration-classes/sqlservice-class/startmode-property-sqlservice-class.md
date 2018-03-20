@@ -21,19 +21,19 @@ helpviewer_keywords:
 - StartMode property
 ms.assetid: c0c2c7f8-d4ae-44f2-ad8e-aecfcb7c2878
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e2b21cd8bfa81fad84f34aa28a96f5a6b3c46e3c
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 1f8399d37a6d2f208480fc55777453274803c2d6
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="startmode-property-sqlservice-class"></a>StartMode-Eigenschaft (SqlService-Klasse)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-Ruft den Startmodus des Dienstes ab.  
+  Ruft den Startmodus des Dienstes ab.  
   
 ## <a name="syntax"></a>Syntax  
   

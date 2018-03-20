@@ -17,19 +17,19 @@ helpviewer_keywords:
 - WMI Provider for Server Events, about WMI Provider for Server Events
 ms.assetid: 8fd7bd18-76d0-4b28-8fee-8ad861441ab2
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d68916b90c9b8312f02f75f5911a7871d350d4d5
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: a7f710e54927b01ddcbdf0bb7890d992087bc51f
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="understanding-the-wmi-provider-for-server-events"></a>Grundlegendes zum WMI-Anbieter für Serverereignisse
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-Über den WMI-Anbieter für Serverereignisse können Sie Ereignisse in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]mithilfe von WMI (Windows Management Instrumentation) überwachen. Der Anbieter wandelt funktioniert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in ein verwaltetes WMI-Objekt. Jedes Ereignis, das eine ereignisbenachrichtigung in generieren kann [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] können mithilfe dieses Anbieters von WMI verwendet werden. Darüber hinaus kann der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent als eine mit WMI interagierende Verwaltungsanwendung auf diese Ereignisse reagieren. Dadurch wird der durch den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent abgedeckte Ereignisbereich im Gegensatz zu früheren Versionen erweitert.  
+  Über den WMI-Anbieter für Serverereignisse können Sie Ereignisse in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]mithilfe von WMI (Windows Management Instrumentation) überwachen. Der Anbieter wandelt funktioniert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in ein verwaltetes WMI-Objekt. Jedes Ereignis, das eine ereignisbenachrichtigung in generieren kann [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] können mithilfe dieses Anbieters von WMI verwendet werden. Darüber hinaus kann der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent als eine mit WMI interagierende Verwaltungsanwendung auf diese Ereignisse reagieren. Dadurch wird der durch den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent abgedeckte Ereignisbereich im Gegensatz zu früheren Versionen erweitert.  
   
  Verwaltungsanwendungen wie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent erreichen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Ereignisse, indem Sie in der WMI-Anbieter für Serverereignisse WMI Query Language (WQL)-Anweisungen ausgeben. WQL ist eine vereinfachte Teilmenge von Structured Query Language (SQL) mit einigen WMI-spezifischen Erweiterungen. Bei Verwendung von WQL ruft eine Anwendung einen Ereignistyp für eine bestimmte Datenbank oder ein bestimmtes Datenbankobjekt ab. Der WMI-Anbieter für Serverereignisse übersetzt die Abfrage in eine Ereignisbenachrichtigung und erstellt dadurch auf effektive Weise eine Ereignisbenachrichtigung in der Zieldatenbank. Weitere Informationen zur Funktionsweise von ereignisbenachrichtigungen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], finden Sie unter [WMI Provider for Server Ereignisse Concepts](http://technet.microsoft.com/library/ms180560.aspx). Die Ereignisse, die abgefragt werden können, sind in aufgeführt [WMI-Anbieter für Server Events-Ereignisklassen und Eigenschaften](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-classes-and-properties.md).  
   

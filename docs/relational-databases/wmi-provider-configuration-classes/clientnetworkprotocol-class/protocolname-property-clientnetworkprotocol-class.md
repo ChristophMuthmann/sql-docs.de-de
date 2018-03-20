@@ -21,19 +21,19 @@ helpviewer_keywords:
 - ProtocolName property
 ms.assetid: f8527121-fbcd-4d30-9b4a-1461149cb5a8
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 71f4a8fd66200a206078f723272ce81213967343
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 404660316b2009e19b314642d7422abbe6c848e4
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="protocolname-property-clientnetworkprotocol-class"></a>ProtocolName-Eigenschaft (ClientNetworkProtocol-Klasse)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-Ruft den Namen des aktuellen Netzwerkprotokolls ab, das in [Konfigurieren von Clientprotokollen](http://technet.microsoft.com/library/ms181035.aspx)angegeben ist.  
+  Ruft den Namen des aktuellen Netzwerkprotokolls ab, das in [Konfigurieren von Clientprotokollen](http://technet.microsoft.com/library/ms181035.aspx)angegeben ist.  
   
 ## <a name="syntax"></a>Syntax  
   

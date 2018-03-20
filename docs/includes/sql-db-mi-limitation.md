@@ -1,0 +1,2 @@
+> [!IMPORTANT]  
+> Auf [Azure SQL-Datenbank verwaltete Instanz](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), diese T-SQL-Funktion hat bestimmte verhaltensänderungen. Finden Sie unter [Azure SQL-Datenbank verwaltet Instanz T-SQL-Unterschiede zu SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information) Details für alle T-SQL-verhaltensänderungen.

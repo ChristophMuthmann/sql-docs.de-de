@@ -21,19 +21,19 @@ helpviewer_keywords:
 - SetEnable method
 ms.assetid: a66c756a-1311-4f4a-8088-818f8ed90056
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 691ad26d97fd9b3cc58276c5192374aca8e3d45d
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 8dfc8be6eab3972304918db40e77162d4549b3c9
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="setenable-method-clientnetworkprotocol-class"></a>SetEnable-Methode (ClientNetworkProtocol-Klasse)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-Aktiviert das Clientnetzwerkprotokoll, das in [Konfigurieren von Clientprotokollen](http://technet.microsoft.com/library/ms181035.aspx)angegeben ist.  
+  Aktiviert das Clientnetzwerkprotokoll, das in [Konfigurieren von Clientprotokollen](http://technet.microsoft.com/library/ms181035.aspx)angegeben ist.  
   
 ## <a name="syntax"></a>Syntax  
   

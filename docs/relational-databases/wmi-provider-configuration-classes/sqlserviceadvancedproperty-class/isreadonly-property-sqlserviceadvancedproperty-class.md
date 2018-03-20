@@ -21,19 +21,19 @@ helpviewer_keywords:
 - IsReadOnly property
 ms.assetid: 9672e70f-1d8c-4133-ac73-3b5733a1c4ee
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ffabc7f76b91da116a0ea6cd126aacc028f04766
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: c8332fe7b41630dc9e5069a78751f9ecae987490
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="isreadonly-property-sqlserviceadvancedproperty-class"></a>IsReadOnly-Eigenschaft (SqlServiceAdvancedProperty-Klasse)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-Ruft die boolesche Eigenschaft ab, die angibt, ob die erweiterte Eigenschaft schreibgeschützt ist, oder legt diese fest.  
+  Ruft die boolesche Eigenschaft ab, die angibt, ob die erweiterte Eigenschaft schreibgeschützt ist, oder legt diese fest.  
   
 ## <a name="syntax"></a>Syntax  
   

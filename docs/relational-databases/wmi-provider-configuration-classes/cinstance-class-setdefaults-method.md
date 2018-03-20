@@ -21,19 +21,19 @@ helpviewer_keywords:
 - SetDefaults method
 ms.assetid: ed9e99c2-3e28-4ee8-bc20-61ca05984973
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ea75930319239ca7e14a1f840b4cfad3b04226b3
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 7fd485033f67436045a9d29c3181dd2fd84d7dab
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="cinstance-class---setdefaults-method"></a>CInstance-Klasse - SetDefaults-Methode
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-Legt alle Standardwerte für die Instanz von der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client mit der Option zum Überschreiben vorhandener Daten besteht.  
+  Legt alle Standardwerte für die Instanz von der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client mit der Option zum Überschreiben vorhandener Daten besteht.  
   
 ## <a name="syntax"></a>Syntax  
   

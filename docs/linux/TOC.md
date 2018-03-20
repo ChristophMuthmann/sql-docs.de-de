@@ -55,7 +55,6 @@
 ### [Use PowerShell to manage (Verwenden von PowerShell zum Verwalten)](sql-server-linux-manage-powershell.md)
 ### [Use log shipping (Verwenden von Protokollversand)](sql-server-linux-use-log-shipping.md)
 ### [Use DB Mail and email alerts (Verwenden von DB-Mails und E-Mail-Warnungen)](sql-server-linux-db-mail-sql-agent.md)
-### [Konfigurieren mehrerer Subnetze für die Verfügbarkeit](sql-server-linux-configure-multiple-subnet.md)
 
 ## [Migrieren](sql-server-linux-migrate-overview.md)
 ### [Export and import a BACPAC from Windows (Exportieren und Importieren einer BACPAC-Datei von Windows)](sql-server-linux-migrate-ssms.md)
@@ -85,6 +84,7 @@
 ##### [Configure on Ubuntu (Konfigurieren unter Ubuntu)](sql-server-linux-availability-group-cluster-ubuntu.md)
 ##### [Failover](sql-server-linux-availability-group-failover-ha.md)
 ##### [Operate (Ausführen)](sql-server-linux-availability-group-operate-ha.md)
+##### [Konfigurieren mehrerer Subnetze für die Verfügbarkeit](sql-server-linux-configure-multiple-subnet.md)
 #### [Erstellung nur für schreibgeschützten Zugriff]()
 ##### [Configure AG (Konfigurieren von AG)](sql-server-linux-availability-group-configure-rs.md)
 #### [Plattformübergreifendes Konfigurieren (Windows und Linux)](sql-server-linux-availability-group-cross-platform.md)

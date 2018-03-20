@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
 ms.service: 
 ms.component: samples
-ms.technology: samples
+ms.technology:
+- samples
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,20 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 06f89721-8478-4abc-8ada-e9c73b08bf51
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: BarbKess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 robots: noindex,nofollow
 ms.workload: Inactive
-ms.openlocfilehash: 9a76e8c2bb70be5accc28d65de7f86db86dacd29
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 34535db5b43311e13d21fd663f5302327b24978e
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="use-of-sql-server-features-and-capabilities"></a>Verwendung von SQL Server-Features und Funktionen
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]"Wideworldimporters" Verwenden von SQL Server-Features und Funktionen in der OLTP-Datenbank.
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+"Wideworldimporters" Verwenden von SQL Server-Features und Funktionen in der OLTP-Datenbank.
 
 "Wideworldimporters" dient zur Veranschaulichung viele der wichtigsten Funktionen von SQL Server, einschließlich der neuesten Funktionen in SQL Server 2016 eingeführt. Im folgenden finden eine Liste von SQL Server-Funktionen, Funktionen und eine Beschreibung, wie sie in "wideworldimporters" verwendet werden.
 
@@ -42,7 +44,7 @@ ms.lasthandoff: 12/05/2017
 |Dynamische Datenmaskierung|In das Datenbankschema Datenmaskierung angewendet wurde, die Details der Bank für Lieferanten, in der Tabelle gespeicherten `Purchasing.Suppliers`. Ohne Administratorrechte Mitarbeiter müssen nicht den Zugriff auf diese Informationen.|
 |Always Encrypted|Ein Verwendungsbeispiel für Always Encrypted ist enthalten, in dem herunterladbaren samples.zip, die Teil von der [Version des Beispiels](http://go.microsoft.com/fwlink/?LinkID=800630)... Die Demo erstellt einen Verschlüsselungsschlüssel, der eine Tabelle, die Verwendung der Verschlüsselung für vertrauliche Daten und einer kleinen beispielanwendung, die Daten in die Tabelle einfügt.|
 |Stretch-Datenbank|Die `Warehouse.ColdRoomTemperatures` Tabelle als eine temporale Tabelle implementiert wurde, und in der vollständigen Version der Beispieldatenbank speicheroptimiert ist. Die remotedatenarchiv-Tabelle basiert auf Datenträger und Azure gestreckt werden.|
-|Volltextindizes|Volltextindizes verbessern sucht nach Mitarbeitern, Kunden und StockItems. Die Indizes werden auf Abfragen angewendet werden, nur, wenn Sie Volltextindizierung für Ihre SQL Server-Instanz installiert haben. Eine nicht persistente berechnete Spalte wird verwendet, um die Daten zu erstellen, die Volltext-ist in der Tabelle StockItems indiziert.<br/><br/>`CONCAT`Dient zum Verketten die Felder zum SearchData zu erstellen, die volltextindiziert ist.<br/>Zum Aktivieren der Verwendung von Volltextindizes im Beispiel die folgende Anweisung in der Datenbank ausführen:<br/><br/>    `EXECUTE [Application].[Configuration_ConfigureFullTextIndexing]`<br/><br/>Die Prozedur erstellt einen Standard-Volltextkatalogs Wenn eine nicht bereits vorhanden ist, ersetzt die Search-Ansichten mit Volltext-Versionen dieser Ansichten).<br/><br/>Beachten Sie, dass mithilfe von Volltextindizes in SQL Server erforderlich ist, wählen Sie die Option Volltext-während der Installation. Azure SQL-Datenbank ist nicht erforderlich und besondere Konfiguration für die Volltextindizes zu aktivieren.|
+|Volltextindizes|Volltextindizes verbessern sucht nach Mitarbeitern, Kunden und StockItems. Die Indizes werden auf Abfragen angewendet werden, nur, wenn Sie Volltextindizierung für Ihre SQL Server-Instanz installiert haben. Eine nicht persistente berechnete Spalte wird verwendet, um die Daten zu erstellen, die Volltext-ist in der Tabelle StockItems indiziert.<br/><br/>`CONCAT` Dient zum Verketten die Felder zum SearchData zu erstellen, die volltextindiziert ist.<br/>Zum Aktivieren der Verwendung von Volltextindizes im Beispiel die folgende Anweisung in der Datenbank ausführen:<br/><br/>    `EXECUTE [Application].[Configuration_ConfigureFullTextIndexing]`<br/><br/>Die Prozedur erstellt einen Standard-Volltextkatalogs Wenn eine nicht bereits vorhanden ist, ersetzt die Search-Ansichten mit Volltext-Versionen dieser Ansichten).<br/><br/>Beachten Sie, dass mithilfe von Volltextindizes in SQL Server erforderlich ist, wählen Sie die Option Volltext-während der Installation. Azure SQL-Datenbank ist nicht erforderlich und besondere Konfiguration für die Volltextindizes zu aktivieren.|
 |Indizierte permanente berechnete Spalten|Indizierte permanente berechnete Spalten, die bei der SupplierTransactions und CustomerTransactions verwendet.|
 |Check-Einschränkungen|Eine relativ komplexe Check-Einschränkung wird `Sales.SpecialDeals`. Dadurch wird sichergestellt, dass eine und nur eine der DiscountAmount DiscountPercentage, und UnitPrice konfiguriert ist.|
 |Unique-Einschränkungen|Eine m: viele Konstruktion (und unique-Einschränkungen) sind für Warehouse.StockItemStockGroups eingerichtet.|
@@ -51,4 +53,4 @@ ms.lasthandoff: 12/05/2017
 |GZip-Komprimierung.|Die `Warehouse.VehicleTemperature`s-Tabelle enthält die vollständige Sensordaten jedoch, wenn diese Daten mehr als ein paar Monate ist, wird komprimiert zum Einsparen von Speicherplatz, die mithilfe der Funktion COMPRESS, mit dem GZip-Komprimierung verwendet.<br/><br/>Die Ansicht `Website.VehicleTemperatures` verwendet die DECOMPRESS-Funktion, beim Abrufen von Daten, die zuvor komprimiert wurde.|
 |Abfragespeicher|Der Abfragespeicher ist für die Datenbank aktiviert. Öffnen Sie nach einigen Abfragen ausführen die Datenbank in Management Studio aus, öffnen Sie den Knoten Abfragespeicher, d. h. unter der Datenbank, und öffnen Sie den Bericht Abfragen mit höchstem Ressourcenverbrauch, finden in der abfrageausführungen und die Pläne für Abfragen, die Sie soeben ausgeführt haben.|
 |STRING_SPLIT|Die Spalte `DeliveryInstructions` in der Tabelle `Sales.Invoices`verfügt über eine durch Trennzeichen getrennte-Wert, der verwendet werden kann, um STRING_SPLIT zu veranschaulichen.|
-|Überwachung|SQL Server Audit können für diese Beispieldatenbank aktiviert werden, indem Sie die folgende Anweisung in der Datenbank ausführen:<br/><br/>    `EXECUTE [Application].[Configuration_ApplyAuditing]`<br/><br/>In Azure SQL-Datenbank, Aktivierung der Überwachung über die [Azure-Portal](https://portal.azure.com/).<br/><br/>Sicherheitsvorgänge im Zusammenhang mit Anmeldungen, werden Rollen und Berechtigungen auf allen Systemen protokolliert, Überwachung (einschließlich standard Edition-Systeme) aktiviert ist. Überwachung wird in das Anwendungsprotokoll umgeleitet werden, da dies auf allen Systemen verfügbar ist und keine zusätzliche Berechtigungen erfordert. Eine Warnung handelt, davon ausgehend, dass zum Erhöhen der Sicherheit, es in das Sicherheitsprotokoll oder in eine Datei in einem sicheren Ordner umgeleitet werden sollen. Ein Link wird bereitgestellt, um die erforderliche zusätzliche Konfiguration beschreiben.<br/><br/>Für Systeme Evaluierung, Developer, Enterprise Edition wird den Zugriff auf alle finanzielle Transaktionsdaten überwacht.|
+|Überwachen von|SQL Server Audit können für diese Beispieldatenbank aktiviert werden, indem Sie die folgende Anweisung in der Datenbank ausführen:<br/><br/>    `EXECUTE [Application].[Configuration_ApplyAuditing]`<br/><br/>In Azure SQL-Datenbank, Aktivierung der Überwachung über die [Azure-Portal](https://portal.azure.com/).<br/><br/>Sicherheitsvorgänge im Zusammenhang mit Anmeldungen, werden Rollen und Berechtigungen auf allen Systemen protokolliert, Überwachung (einschließlich standard Edition-Systeme) aktiviert ist. Überwachung wird in das Anwendungsprotokoll umgeleitet werden, da dies auf allen Systemen verfügbar ist und keine zusätzliche Berechtigungen erfordert. Eine Warnung handelt, davon ausgehend, dass zum Erhöhen der Sicherheit, es in das Sicherheitsprotokoll oder in eine Datei in einem sicheren Ordner umgeleitet werden sollen. Ein Link wird bereitgestellt, um die erforderliche zusätzliche Konfiguration beschreiben.<br/><br/>Für Systeme Evaluierung, Developer, Enterprise Edition wird den Zugriff auf alle finanzielle Transaktionsdaten überwacht.|

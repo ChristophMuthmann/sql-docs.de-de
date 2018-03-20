@@ -21,19 +21,19 @@ helpviewer_keywords:
 - ServiceName property
 ms.assetid: 8ac7387b-c3ae-4e45-b2cc-ebab3f83bfb2
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ed3419f329e2731b4257d427eae2b52ea707aa79
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 27b8ec92c3293f0ad1b9c4bd4eb1421fbdf811da
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="servicename-property-sqlservice-class"></a>ServiceName-Eigenschaft (SqlService-Klasse)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-Ruft den Namen des Diensts ab.  
+  Ruft den Namen des Diensts ab.  
   
 ## <a name="syntax"></a>Syntax  
   

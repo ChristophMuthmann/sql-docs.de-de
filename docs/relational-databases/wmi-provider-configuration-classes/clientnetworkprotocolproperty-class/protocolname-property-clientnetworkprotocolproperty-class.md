@@ -21,19 +21,19 @@ helpviewer_keywords:
 - ProtocolName property
 ms.assetid: 77c53201-4fab-481e-9b3b-57d0b8b83113
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cd460cc343262c93b6abf78357e8818a24d0b465
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: b48635346524f7db1f99207e1cbf8b6fd58cd73a
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="protocolname-property-clientnetworkprotocolproperty-class"></a>ProtocolName-Eigenschaft (ClientNetworkProtocolProperty-Klasse)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-Ruft den Namen des Protokolls ab, dem die aktuelle Eigenschaft gehört, auf die durch den Eigenschaftswert [PropertyIdx (ClientNetworkProtocolProperty-Klasse)](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/propertyidx-property-clientnetworkprotocolproperty-class.md) verwiesen wird.  
+  Ruft den Namen des Protokolls ab, dem die aktuelle Eigenschaft gehört, auf die durch den Eigenschaftswert [PropertyIdx (ClientNetworkProtocolProperty-Klasse)](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/propertyidx-property-clientnetworkprotocolproperty-class.md) verwiesen wird.  
   
 ## <a name="syntax"></a>Syntax  
   

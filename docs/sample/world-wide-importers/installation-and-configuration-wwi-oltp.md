@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
 ms.service: 
 ms.component: samples
-ms.technology: samples
+ms.technology:
+- samples
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,20 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6dd1f09b-dcff-4627-899a-eca5162d9e5b
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: BarbKess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 robots: noindex,nofollow
 ms.workload: On Demand
-ms.openlocfilehash: 967755e34b397f2dfac98277d34cb799655f5165
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: add5788063cdc5026d343061b8111cbec42e5a4d
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="installation-and-configuration"></a>Installation und Konfiguration
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Wide World Importers OLTP-Datenbank Installations- und konfigurationsanleitung für.
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Wide World Importers OLTP-Datenbank Installations- und konfigurationsanleitung für.
 
 ## <a name="prerequisites"></a>Erforderliche Komponenten
 
@@ -36,13 +38,13 @@ ms.lasthandoff: 12/05/2017
 
 Die neueste Version des Beispiels:
 
-[Wide World Importers-Version](http://go.microsoft.com/fwlink/?LinkID=800630)
+[wide-world-importers-release](http://go.microsoft.com/fwlink/?LinkID=800630)
 
 Herunterladen Sie das Beispiel "wideworldimporters" Datenbank Backup/bacpac-Datei, die entspricht auf Ihre Edition von SQL Server oder Azure SQL-Datenbank.
 
 Quellcode und erstellen die Beispieldatenbank ist aus folgendem Ort verfügbar. Beachten Sie, dass beim erneuten Erstellen des Beispiels zu geringfügigen Unterschieden in den Daten, führt da ein Zufallsfaktor in die datengenerierung vorhanden ist:
 
-[Wide World-Importers befinden](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/wwi-database-scripts)
+[wide-world-importers](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/wwi-database-scripts)
 
 ## <a name="install"></a>Install
 
@@ -58,7 +60,7 @@ Um eine Sicherung einer SQL Server-Instanz wiederherzustellen, können Sie Manag
 5. Wenn erforderlich, ändern Sie den Zielspeicherort für die Daten und Protokolldateien, in der **Dateien** Bereich. Beachten Sie, dass es die bewährte Methode zum Hinzufügen von Daten und Protokolldateien auf verschiedenen Laufwerken handelt.
 6. Klicken Sie auf **OK**. Hierdurch wird die Wiederherstellung der Datenbank ausgelöst. Nachdem der Vorgang abgeschlossen ist, müssen Sie die Datenbank "wideworldimporters" auf SQL Server-Instanz installiert.
 
-### <a name="azure-sql-database"></a>Azure SQL-Datenbank
+### <a name="azure-sql-database"></a>Azure SQL Database
 
 Um eine bacpac-Datei in eine neue SQL-Datenbank importieren, können Sie Management Studio verwenden.
 
@@ -77,7 +79,7 @@ Um eine bacpac-Datei in eine neue SQL-Datenbank importieren, können Sie Managem
 Die Beispieldatenbank kann Stellen der Volltextindizierung verwenden. Jedoch diese Funktion wird nicht standardmäßig installiert, mit SQL Server - müssen Sie es während des Setups von SQL Server auswählen (in Azure SQL-Datenbank standardmäßig aktiviert). Aus diesem Grund ist ein Schritt nach der Installation erforderlich.
 
 1. Herstellen einer Verbindung mit der Datenbank "wideworldimporters", und öffnen Sie ein neues Abfragefenster, in SQL Server Management Studio.
-2. Führen Sie den folgenden T-SQL-Befehl, um die Verwendung der Volltextindizierung in der Datenbank zu aktivieren:`EXECUTE Application.Configuration_ApplyFullTextIndexing`
+2. Führen Sie den folgenden T-SQL-Befehl, um die Verwendung der Volltextindizierung in der Datenbank zu aktivieren:  `EXECUTE Application.Configuration_ApplyFullTextIndexing`
 
 
 ### <a name="sql-server-audit"></a>SQL Server Audit

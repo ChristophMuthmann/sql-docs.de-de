@@ -21,19 +21,19 @@ helpviewer_keywords:
 - SetEnable method
 ms.assetid: a287950b-086f-4b6d-a2d8-4d3973bd1b21
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c7f99ef2c23774fba964ec178df167ee814df678
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 1033deaba813d19232dedf285efc0101367b8547
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="setenable-method-servernetworkprotocol-class"></a>SetEnable-Methode (ServerNetworkProtocol-Klasse)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-Aktiviert das Server-Netzwerkprotokoll.  
+  Aktiviert das Server-Netzwerkprotokoll.  
   
 ## <a name="syntax"></a>Syntax  
   

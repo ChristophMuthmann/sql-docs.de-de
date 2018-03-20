@@ -21,19 +21,19 @@ helpviewer_keywords:
 - FlagName property
 ms.assetid: 108c13aa-da9c-4908-b0a3-a9460806819c
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6dd6111b90c6dd505c7a132331e6f1f21585ad69
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: d81dd8f078e63448cfa2f364c231230fd2f319e0
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="flagname-property-serversettingsgeneralflag-class"></a>FlagName-Eigenschaft (ServerSettingsGeneralFlag-Klasse)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-Ruft den Namen des Flags ab.  
+  Ruft den Namen des Flags ab.  
   
 ## <a name="syntax"></a>Syntax  
   

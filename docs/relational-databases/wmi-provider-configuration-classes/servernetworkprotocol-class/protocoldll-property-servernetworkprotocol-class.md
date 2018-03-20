@@ -21,19 +21,19 @@ helpviewer_keywords:
 - ProtocolDLL property
 ms.assetid: ac386558-392e-46f3-97f8-382f267b7fca
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6e8e06e663caf5bdd068d1bb424758774a0f1f81
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 521936cebdaec40d362995fe6f6b80cbd412f597
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="protocoldll-property-servernetworkprotocol-class"></a>ProtocolDLL-Eigenschaft (ServerNetworkProtocol-Klasse)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-Ruft den Namen der .dll-Datei ab, die von einem Servernetzwerkprotokoll benötigt wird.  
+  Ruft den Namen der .dll-Datei ab, die von einem Servernetzwerkprotokoll benötigt wird.  
   
 ## <a name="syntax"></a>Syntax  
   

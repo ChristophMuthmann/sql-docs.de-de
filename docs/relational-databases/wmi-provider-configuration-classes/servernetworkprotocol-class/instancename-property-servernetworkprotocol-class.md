@@ -21,19 +21,19 @@ helpviewer_keywords:
 - InstanceName property
 ms.assetid: 456911c1-9881-4574-8576-0070eff78c27
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a038f1b2ffdf7f5b88bab2d7eb31d1cbe4fd260d
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: acb176acfdb692a107b030fd63dfd2e4db03ee04
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="instancename-property-servernetworkprotocol-class"></a>InstanceName-Eigenschaft (ServerNetworkProtocol-Klasse)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-Ruft den Namen der Instanz von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ab, auf die durch das Servernetzwerkprotokoll verwiesen wird.  
+  Ruft den Namen der Instanz von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ab, auf die durch das Servernetzwerkprotokoll verwiesen wird.  
   
 ## <a name="syntax"></a>Syntax  
   

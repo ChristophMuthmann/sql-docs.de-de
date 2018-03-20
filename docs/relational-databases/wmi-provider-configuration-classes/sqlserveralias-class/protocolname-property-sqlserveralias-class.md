@@ -21,19 +21,19 @@ helpviewer_keywords:
 - ProtocolName property
 ms.assetid: 8fb81ab3-15f1-4a71-be72-2072c6bcc670
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 766b6955f3b0fa8a5239fa2e2e39c95e4f4e5d79
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: e9c8711cf2e98f103fa3f052b1377b8050d5eefa
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="protocolname-property-sqlserveralias-class"></a>ProtocolName-Eigenschaft (SqlServerAlias-Klasse)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-Ruft den Namen des vom Serververbindungsalias verwendeten Protokolls ab.  
+  Ruft den Namen des vom Serververbindungsalias verwendeten Protokolls ab.  
   
 ## <a name="syntax"></a>Syntax  
   

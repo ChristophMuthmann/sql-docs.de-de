@@ -21,19 +21,19 @@ helpviewer_keywords:
 - Context property
 ms.assetid: 65dd737f-81ce-479e-8219-7b1b4d8f57c7
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 23d747129c298bec63674670033c204f44f025b2
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 292701fcbb8429a1c5ebe308ec138783716dd86c
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="context-property-securitycertificate-class"></a>Context-Eigenschaft (SecurityCertificate-Klasse)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-Ruft den Kontext des Sicherheitszertifikats ab.  
+  Ruft den Kontext des Sicherheitszertifikats ab.  
   
 ## <a name="syntax"></a>Syntax  
   
