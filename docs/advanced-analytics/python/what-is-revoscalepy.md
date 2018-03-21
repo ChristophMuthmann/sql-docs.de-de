@@ -13,11 +13,11 @@ ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
-ms.openlocfilehash: f6ce9219f2b8969f3bfa7bf96c07cedb7d0c6d90
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 2649596abecfd92d40a860e743c867e0ff80ed26
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="introducing-revoscalepy"></a>Einführung in revoscalepy
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -84,12 +84,12 @@ Die folgenden Machine Learning-Algorithmen und Zusammenfassungsfunktionen vom "r
 
 | Funktion| Description|Hinweise|
 | ------ | ------ |------ |
-|`rx_btrees` | Passen Sie stochastic gradient Entscheidungsbäume|`rx_btrees_ex`in CTP 2.0|
-|`rx_dforest` | Passen Sie die Klassifizierung und Regression entscheidungswälder|`rx_dforest_ex`in CTP 2.0|
-|`rx_dtree` | Anpassen der Klassifizierung und Regression Strukturen |`rx_dtree_ex`in CTP 2.0|
-|`rx_lin_mod` | Erstellen Sie ein Lineares Modell|`rx_lin_mod_ex`in CTP 2.0|
-|`rx_logit` | Erstellen eines logistischen Regressionsmodells|`rx_logit_ex`in CTP 2.0|
-|`rx_predict` | Vorhersagen von einem trainierten Modell generieren|`rx_predict_ex`in CTP 2.0|
+|`rx_btrees` | Passen Sie stochastic gradient Entscheidungsbäume|`rx_btrees_ex` in CTP 2.0|
+|`rx_dforest` | Passen Sie die Klassifizierung und Regression entscheidungswälder|`rx_dforest_ex` in CTP 2.0|
+|`rx_dtree` | Anpassen der Klassifizierung und Regression Strukturen |`rx_dtree_ex` in CTP 2.0|
+|`rx_lin_mod` | Erstellen Sie ein Lineares Modell|`rx_lin_mod_ex` in CTP 2.0|
+|`rx_logit` | Erstellen eines logistischen Regressionsmodells|`rx_logit_ex` in CTP 2.0|
+|`rx_predict` | Vorhersagen von einem trainierten Modell generieren|`rx_predict_ex` in CTP 2.0|
 |`rx_summary` | Generieren Sie eine Zusammenfassung des Modells||
 
 Neue Machine Learning-Algorithmen werden ebenfalls bereitgestellt, von der Python-Version von [MicrosoftML](https://docs.microsoft.com/r-server/python-reference/microsoftml/microsoftml-package):
@@ -108,7 +108,7 @@ Neue Machine Learning-Algorithmen werden ebenfalls bereitgestellt, von der Pytho
 
 MicrosoftML für Python enthält auch eine Reihe von Transformationen und Hilfsfunktionen, z. B.:
 
-+ `rx_predict`Vorhersagen von einem trainierten Modell generiert und kann verwendet werden, für die Echtzeit-Bewertung
++ `rx_predict` Vorhersagen von einem trainierten Modell generiert und kann verwendet werden, für die Echtzeit-Bewertung
 + Image merkmalbereitstellung-Funktionen
 + Funktionen für die Verarbeitung und die Stimmungslage Ausdrucksextrahierung
 
@@ -157,7 +157,7 @@ from revoscalepy.etl.RxImport import rx_import_datasource
 Zum Ausführen von Python-Code in SQL Server muss installiert sein 2017 von SQL Server zusammen mit der Funktion **Machine Learning Services**, und die Sprache Python aktiviert. Python-Integration wird von frühere Versionen von SQL Server nicht unterstützt.
 
 > [!NOTE]
-> Python-Open Source-Distributionen unterstützt rechenkontexte für SQL Server nicht. Wenn Sie zum Veröffentlichen und Nutzen von Python-Anwendungen in Windows müssen, können Sie Microsoft Machine Learning-Server installieren, ohne Installation von SQL Server. Weitere Informationen finden Sie unter [a Standalone R Server erstellen](../r/create-a-standalone-r-server.md)
+> Python-Open Source-Distributionen unterstützt rechenkontexte für SQL Server nicht. Wenn Sie zum Veröffentlichen und Nutzen von Python-Anwendungen in Windows müssen, können Sie Microsoft Machine Learning-Server installieren, ohne Installation von SQL Server. Weitere Informationen finden Sie unter [installieren Sie SQL Server 2017 Machine Learning-Server (eigenständig)](../install/sql-machine-learning-standalone-windows-install.md).
 
 ## <a name="get-more-help"></a>Weitere Hilfe
 

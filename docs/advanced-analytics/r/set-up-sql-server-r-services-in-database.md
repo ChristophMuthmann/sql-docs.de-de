@@ -22,10 +22,10 @@ ms.author: jeannt
 manager: cgronlund
 ms.workload: Active
 ms.openlocfilehash: 4d18a45b40c7f80ae2b46514f6c8245b80f6b142
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="set-up-sql-server-machine-learning-services-in-database"></a>Einrichten von SQL Server Machine Learning-Services (Datenbankintern)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -55,7 +55,7 @@ Dieser Artikel beschreibt den Prozess der Einrichtung, die verwendet die [!INCLU
 
 **Gilt für:** SQLServer 2016, SqlServer 2017
 
-## <a name="bkmk_prereqs"></a> Prüfliste vor der Installation
+## <a name="bkmk_prereqs"> </a> Prüfliste vor der Installation
 
 + Machine Learning in der Datenbank erfordert SQLServer 2016 oder höher. 
 
@@ -77,7 +77,7 @@ Dieser Artikel beschreibt den Prozess der Einrichtung, die verwendet die [!INCLU
 
 + Machine Learning-Framework erfordert zusätzliche Konfigurationsschritte, nachdem Setup abgeschlossen ist. Die genauen Schritte hängen von Ihrer Organisation und die Sicherheitsrichtlinien, die Serverkonfiguration und die vorgesehenen Benutzer ab. Es wird empfohlen, dass Sie überprüfen Sie alle Schritte und zusätzliche Konfigurationsschritte, die erforderlich sein könnten in Ihrer Umgebung bestimmen.
 
-## <a name="bkmk2016top"></a>Installieren von SQL Server 2016 R Services (Datenbankintern)
+## <a name="bkmk2016top"></a> Installieren von SQL Server 2016 R Services (Datenbankintern)
 
 > [!div class="checklist"]
 > * Installieren von Datenbankmodul und Machine learning-Funktionen
@@ -119,7 +119,7 @@ Dieser Artikel beschreibt den Prozess der Einrichtung, die verwendet die [!INCLU
 7. Wenn die Installation abgeschlossen ist, starten Sie den Computer neu.
 
 
-## <a name="bkmk2017top"></a>Installieren von SQL Server 2017 Machine Learning-Services (Datenbankintern)
+## <a name="bkmk2017top"></a> Installieren von SQL Server 2017 Machine Learning-Services (Datenbankintern)
 
 > [!div class="checklist"]
 > * Installieren von Datenbankmodul und Machine learning-Funktionen
@@ -240,7 +240,7 @@ In diesem Abschnitt wird beschrieben, wie die Instanz für Machine Learning neu 
     + [Optionale Schritte der nach der Installation: Konfigurieren von Dienst- und Berechtigungen](#bkmk_FollowUp) 
     + [Problembehandlung bei Machine Learning in der SQL Server](upgrade-and-installation-faq-sql-server-r-services.md)
 
-## <a name="bkmk_FollowUp"></a>Optionale Schritte der nach der installation
+## <a name="bkmk_FollowUp"></a> Optionale Schritte der nach der installation
 
 Je nach Ihrer Anwendungsfall für maschinelles lernen müssen Sie zusätzliche Änderungen vornehmen, auf dem Server, die Firewall, den Dienst bzw. die Datenbankberechtigungen verwendeten Konten. Die Änderungen, die Sie vornehmen müssen, variieren nach Groß-/Kleinschreibung.
 

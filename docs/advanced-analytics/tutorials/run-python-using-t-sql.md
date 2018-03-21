@@ -18,11 +18,11 @@ caps.latest.revision:
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
-ms.openlocfilehash: 5c6145d3af6918a5f3daa954aae5522ffffebb89
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+ms.openlocfilehash: 3cff0d963dc365b60404893c1b15eb7733dbdfeb
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="run-python-using-t-sql"></a>Ausführen von Python mit T-SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -31,7 +31,7 @@ In diesem Lernprogramm wird erläutert, wie Sie in SQL Server-2017 Python-Code a
 
 ## <a name="prerequisites"></a>Erforderliche Komponenten
 
-Um dieses Lernprogramm abzuschließen, müssen Sie zunächst installieren Sie SQL Server-2017 und Machine Learning-Dienste auf der Serverinstanz zu aktivieren, wie in beschrieben [in diesem Artikel](../python/setup-python-machine-learning-services.md). 
+Um dieses Lernprogramm abzuschließen, müssen Sie zunächst installieren Sie SQL Server-2017 und Machine Learning-Dienste auf der Serverinstanz zu aktivieren, wie in beschrieben [installieren Sie SQL Server 2017 Machine Learning Services (Datenbankintern)](../install/sql-machine-learning-services-windows-install.md). 
 
 Sie sollten auch installieren [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms). Alternativ können Sie ein anderes Tool der Datenbank Management oder Abfrage, solange er Herstellen einer mit einem Server und einer Datenbank Verbindung kann, und führen Sie eine T-SQL-Abfrage oder gespeicherte Prozedur.
 
@@ -388,7 +388,7 @@ In dieser Übung sollte Ihnen eine Vorstellung zum Arbeiten mit verschiedenen Py
 
 + Die gespeicherte Prozedur wurde nicht gefunden `sp_execute_external_script`? Dies bedeutet, dass Sie wahrscheinlich noch nicht abgeschlossen Konfigurieren der Instanz zur Unterstützung von externen skriptausführung. Nach dem 2017 von SQL Server-Setup ausführen und Python als Machine learning Sprache auswählen, müssen Sie auch ausdrücklich aktivieren die Funktion mit `sp_configure`, und klicken Sie dann die Instanz neu gestartet. 
 
-    Weitere Informationen finden Sie unter [Setup Machine Learning-Dienste mit Python](../python/setup-python-machine-learning-services.md).
+    Weitere Informationen finden Sie unter [installieren Sie SQL Server 2017 Machine Learning Services (Datenbankintern)](../install/sql-machine-learning-services-windows-install.md).
 
 ## <a name="next-steps"></a>Nächste Schritte
 

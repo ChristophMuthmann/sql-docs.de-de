@@ -1,7 +1,7 @@
 ---
 title: "SQL Server Machine Learning-Services - funktionsverfügbarkeit über Editionen | Microsoft Docs"
 ms.custom: 
-ms.date: 03/07/2018
+ms.date: 03/17/2018
 ms.reviewer: 
 ms.suite: sql
 ms.prod: machine-learning-services
@@ -12,55 +12,55 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 
 caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: 16ca6c44b15c9fb7c1983d5a04175ebbade57895
-ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
+ms.openlocfilehash: 4322211bcc3a5466976368b9562ed3e95ad7e331
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="feature-availability-across-editions-of-sql-server-machine-learning-services"></a>Verfügbarkeit von Features für Editionen von SQL Server-Machine Learning-Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
  
  Machine Learning-Funktionen sind in SQL Server 2016 und SQL Server-2017 verfügbar. In diesem Artikel listet die Editionen, die die Funktion bereitstellen, werden Einschränkungen, die in bestimmten Editionen gelten und sind Funktionen, die nur in bestimmten Editionen verfügbar.
 
+
+## <a name="sql-server-2017-machine-learning-features"></a>SQL Server 2017 Machine Learning-Funktionen
+
+Enterprise und Developer Edition haben dieselbe Funktion Erfassung, sodass Sie Lösungen für eine Unternehmensinstallation erstellen können, ohne dass die gleiche Kosten anfallen. Obwohl die Editionen funktional Equivlanet sind, wird mithilfe der Developer Edition für produktionsumgebungen nicht unterstützt.
+
+Der Unterschied zwischen grundlegenden und erweiterten Integration ist Skalierung. Erweiterte Integration können alle verfügbaren Kerne für die parallele Verarbeitung von Datasets auf eine beliebige Größe, die von Ihrem Computer aufnehmen kann. Grundlegende Integration ist auf 2 Kerne und Datasets im Arbeitsspeicher einpassen beschränkt. 
+
+Grundlegende und erweiterte Integration gilt für die Instanzen (In-Database). Ein eigenständiger Server ist keine Datenbank-Engine-Instanz-Funktion und wird als Installationsoption nur in der Developer und Enterprise Editions angeboten.
+
+|Funktion|Enterprise|Standard|Web|Express mit Advanced Services|Express 
+|-------------|----------------|--------------|---------|------------------------------------|------------------------|  
+|Grundlegende Integration von R|ja|ja|ja|ja|nein|   
+|Erweiterte Integration von R|ja|Nein|Nein|Nein|nein| 
+|Grundlegende Integration von Python|ja|ja|ja|ja|nein|
+|Erweiterte Integration von Python|ja|Nein|Nein|Nein|nein| 
+|Machine Learning-Server (eigenständig)|ja|Nein|Nein|Nein|nein|   
+
  > [!NOTE]
- > Im Allgemeinen SQL Server-Machine Learning (In-Database) enthält keine der [operationalisierung](https://docs.microsoft.com/machine-learning-server/what-is-operationalization) Funktionen, die in einer eigenständigen R-Server "oder" Machine Learning-Server-Installation enthalten sind. Operationalisierung Web Service-Bereitstellung und hosting enthält und daher für die gleichen Ressourcen wie andere SQL Server-Vorgängen konkurriert.
- > 
- > Aus diesem Grund wird empfohlen, SQL Server 2016 R Server (eigenständig) oder SQL Server 2017 Machine Learning-Server (eigenständig) auf einem anderen physischen Server zur Unterstützung der Bereitstellung von Vorhersagemodellen als Webdienst installieren. 
+ > Nur auf ein Server (eigenständig) bietet die [operationalisierung](https://docs.microsoft.com/machine-learning-server/what-is-operationalization) Funktionen, die in einer Microsoft (nicht-SQL-Branding) R-Server "oder" Machine Learning-Server-Installation enthalten sind. Operationalisierung enthält Web Service-Bereitstellung und hosting-Funktionen.
+>
+> Für die Installation (In-Database) wird die entsprechende Vorgehensweise zum operationalisieren Lösungen Nutzung der Funktionen des Datenbankmoduls, beim Konvertieren von Code an eine Funktion, die in einer gespeicherten Prozedur ausgeführt werden kann.
 
-## <a name="sql-server-2017-machine-learning-services-in-database-and-standalone"></a>SQL Server 2017 Machine Learning Services (Datenbankintern) und (eigenständig)
 
-Die Developer Edition bietet Leistung entspricht, die Enterprise Edition. Verwenden der Developer Edition wird für produktionsumgebungen nicht unterstützt.
+## <a name="sql-server-2016-r-features"></a>SQL Server 2016-R-Funktionen
 
-|Funktion|Enterprise|Standard|Web|Express mit Advanced Services|Express| 
-|-------|----------|--------|---|------------------------------|-------|
-| R-Interpreter & proprietären Pakete | ja | ja | Nein | Nein | nein | 
-| Python-Interpreter & Client-Bibliotheken | ja | ja | Nein | Nein | nein | 
-| Daten, die Segmentierung <br/>(verarbeiten Sie große Datenmengen, oberhalb, was in den Arbeitsspeicher passt) | ja | Nein | Nein | Nein | nein |
-| Vertikale Skalierung Verarbeitung <br/>(mehr als 2 Prozessoren) | ja | Nein | Nein | Nein | nein |
-| Operationalisierung | ja | Nein | Nein | Nein | nein |
-| [VORHERSAGEN](../../t-sql/queries/predict-transact-sql.md) Funktion <br/>(führt [native Bewertung](../sql-native-scoring.md) auf ein vortrainiertes Modell, das zuvor in das erforderliche binären Format gespeichert) | ja | ja | ja | ja | ja |
-| R-Clientkompatibilität | ja | ja | Nein | Nein | nein | 
-| Microsoft R Open | ja | ja | Nein | Nein | nein | 
-| Anaconda Python 3.5 | ja | ja | Nein | Nein | nein | 
-
-## <a name="sql-server-2016-r-services-in-database-and-r-server-standalone"></a>SQL Server 2016 R Services (Datenbankintern) und R-Server (eigenständig)
-
-Verfügbarkeit von Features ist identisch mit 2017 minus Python-Unterstützung, die nicht Bestandteil der zunächst 2016 Version war.
+SQL Server 2016 schließt nur die R-Integration. In SQL Server 2016 grundlegenden und erweiterten R-Integration entsprechen 2017 von SQL Server.
 
 ## <a name="r-feature-availability-in-azure-sql-database"></a>Verfügbarkeit von R-Funktionen in Azure SQL-Datenbank
   
-Nach der Veröffentlichung einer anfänglichen Test-R Services ist zurzeit **nicht** ausstehende weiteren Entwicklung in Azure SQL-Datenbank verfügbar. 
+Nach einer anfänglichen Test--Version wurde R Services ausstehende Weiterentwicklung aus Azure SQL-Datenbank entfernt. 
 
 ## <a name="performance-expectations-for-enterprise-edition"></a>Leistungserwartungen für die Enterprise Edition
 
 Leistung der Machine Learning-Lösungen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird erwartet, dass in der Regel mit konventionellen R, erhält die gleiche Hardware Implementierungen übertreffen. Die liegt daran, dass in SQL Server R-Lösungen mit Serverressourcen ausgeführt werden können und in einigen Fällen mit mehreren Prozessen, die mit distributed der **"revoscaler"** Funktionen. 
-
-Leistung ist nicht für Python-Lösungen bewertet wurde, wie die Funktion befindet sich noch in Entwicklung, aber einige der Vorteile gelten soll.
 
 Benutzer können auch erwartungsgemäß erhebliche Unterschiede in der Leistung und Skalierbarkeit im Hinblick auf dem gleichen Computer Lern-Lösung, wenn in der Enterprise Edition im Vergleich ausgeführt. Standard Edition Ursachen gehören Unterstützung für parallele Verarbeitungsthreads, erhöhte für maschinelles lernen, verfügbar und streaming (oder Segmentierung), die RevoScaleR-Funktionen, mehr Daten als in den Arbeitsspeicher passen können behandeln können. 
 

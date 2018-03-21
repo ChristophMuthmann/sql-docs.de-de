@@ -15,10 +15,10 @@ ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
 ms.openlocfilehash: 034d58a26ef111a89bc88aace8d49c89f1664278
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="monitoring-python-in-sql-server"></a>Überwachung von Python in SQLServer
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

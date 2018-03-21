@@ -1,4 +1,5 @@
 # [Tutorials: SQL Server Management Studio](tutorial-sql-server-management-studio.md)  
+## [Herstellen einer Verbindung mit und Abfragen von SQL Server über SSMS](connect-query-sql-server.md)
 
 # Lektionen
 ## [Lektion 1: Grundlegendes zur Navigation in SQL Server Management Studio](lesson-1-basic-navigation-in-sql-server-management-studio.md)  

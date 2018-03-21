@@ -17,11 +17,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 261f7c750ab958cf85b3cfa6806704ca18f6d597
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: af9896e9e0baa2899b9e9c95795907ca46463504
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="common-issues-with-external-script-execution-in-sql-server"></a>Häufige Probleme mit der externen skriptausführung in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -161,7 +161,7 @@ Wenn die Windows-Gruppe für Benutzer von R (auch für Python verwendet) auf die
 
     * *Sicherheitsprotokolle darauf hinweisen, dass das Konto NT-Dienst konnte sich nicht anmelden*
 
-Weitere Informationen zu dieser Benutzergruppe die erforderlichen Berechtigungen erteilen, finden Sie unter [Einrichten von SQL Server R Services](r/set-up-sql-server-r-services-in-database.md).
+Weitere Informationen zu dieser Benutzergruppe die erforderlichen Berechtigungen erteilen, finden Sie unter [Installieren von SQL Server 2016 R Services](install/sql-r-services-windows-install.md).
 
 > [!NOTE]
 > Diese Einschränkung gilt nicht, wenn Sie SQL-Benutzernamen verwenden, um von einer Remotearbeitsstation R-Skripts auszuführen.
@@ -233,7 +233,7 @@ Solche Duplizierung wird ein Problem auf, wenn Sie versuchen, ein Skript über d
 
 Obwohl das Löschen des Arbeitsbereichs üblich ist, bei der Arbeit in der R-Konsole, haben sie unbeabsichtigte Folgen in einer SQL-computekontext.
 
-`revoScriptConnection`ist ein Objekt in den R-Arbeitsbereich, der Informationen über eine R-Sitzung enthält, die von SQL Server aufgerufen wird. Jedoch Wenn R-Code einen Befehl zum Deaktivieren des Arbeitsbereichs enthält (z. B. `rm(list=ls())`), alle Informationen über die Sitzung und anderen Objekten im Arbeitsbereich "R" ist ebenfalls deaktiviert.
+`revoScriptConnection` ist ein Objekt in den R-Arbeitsbereich, der Informationen über eine R-Sitzung enthält, die von SQL Server aufgerufen wird. Jedoch Wenn R-Code einen Befehl zum Deaktivieren des Arbeitsbereichs enthält (z. B. `rm(list=ls())`), alle Informationen über die Sitzung und anderen Objekten im Arbeitsbereich "R" ist ebenfalls deaktiviert.
 
 Vermeiden Sie dieses Problem zu umgehen die willkürliche Löschen von Variablen und andere Objekte während Sie R in SQL Server ausführen. Sie können bestimmte Variablen löschen, indem Sie mit der **entfernen** Funktion:
 

@@ -20,11 +20,11 @@ caps.latest.revision:
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
-ms.openlocfilehash: c026e09e1fa34b98d1eda43d59097c966051f6d7
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: dab1a9648865f13d1741917bd389eae287afd7f2
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="in-database-python-analytics-for-sql-developers"></a>In der Datenbank Python-Analyse für SQL-Entwickler
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -80,7 +80,7 @@ Alle Aufgaben können ausgeführt werden, mit [!INCLUDE[tsql](../../includes/tsq
 
 ### <a name="prerequisites"></a>Erforderliche Komponenten
 
-+ Installieren Sie eine Instanz von SQL Server-2017 mit Machine Learning-Dienste und Python aktiviert. Weitere Informationen finden Sie unter [Einrichten von SQL Server-Machine Learning-Services mit Python](../python/setup-python-machine-learning-services.md).
++ Installieren Sie eine Instanz von SQL Server-2017 mit Machine Learning-Dienste und Python aktiviert. Weitere Informationen finden Sie unter [installieren Sie SQL Server 2017 Machine Learning Services (Datenbankintern)](../install/sql-machine-learning-services-windows-install.md).
 + Die Anmeldung, die Sie für diese exemplarische Vorgehensweise verwenden, muss über Berechtigungen zum Erstellen von Datenbanken und anderer Objekte, zum Hochladen von Daten, Auswählen von Daten und Ausführen von gespeicherten Prozeduren verfügen.
 
 ### <a name="experience-level"></a>Erfahrung

@@ -16,10 +16,10 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.openlocfilehash: b7a9ec054b512e8825bf5cf9208a0c1deb3abbb8
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="getting-started-with-machine-learning-server-standalone"></a>Erste Schritte mit Machine Learning-Server (eigenständig)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

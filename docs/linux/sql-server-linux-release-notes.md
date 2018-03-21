@@ -4,7 +4,7 @@ description: "Dieser Artikel enthält die Versionshinweise und Funktionen für S
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/20/2018
+ms.date: 03/20/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -15,11 +15,11 @@ ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
 ms.workload: Active
-ms.openlocfilehash: 23f93527aa295815304f76676f2efc3506fd9878
-ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
+ms.openlocfilehash: dea9cde5674dd684998894691c56e21e728bfe28
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/24/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Versionshinweise für SQL Server-2017 unter Linux
 
@@ -49,6 +49,7 @@ In der folgenden Tabelle werden die Revisionsverlauf für SQL Server-2017 aufgel
 
 | Release | Version | Veröffentlichungsdatum |
 |-----|-----|-----|
+| [CU5](#CU5) | 14.0.3023.8 | 3-2018 |
 | [CU4](#CU4) | 14.0.3022.28 | 2-2018 |
 | [CU3](#CU3) | 14.0.3015.40 | 1-2018 |
 | [CU2](#CU2) | 14.0.3008.27 | 11-2017 |
@@ -66,9 +67,23 @@ Wenn Sie vorhandene SQL Server-Pakete aktualisieren, führen Sie das entsprechen
 - [Install SQL Server Integration Services (Installieren von SQL Server Integration Services)](sql-server-linux-setup-ssis.md)
 - [Aktivieren Sie SQL Server-Agent](sql-server-linux-setup-sql-agent.md)
 
+## <a id="CU5"></a> CU5 (März 2018)
+
+Dies ist das kumulative Update 5 (CU5)-Version von SQL Server-2017. Die Version des SQL Server-Datenbankmodul für diese Version ist 14.0.3023.8. Informationen zu den Korrekturen und Verbesserungen in dieser Version finden Sie unter [ https://support.microsoft.com/help/4092643 ](https://support.microsoft.com/help/4092643).
+
+### <a name="package-details"></a>Details zum Paket
+
+Für Paketinstallationen der manuellen oder offline-können Sie die RPM und Debian Pakete mit den Informationen in der folgenden Tabelle herunterladen:
+
+| Paket | Paketversion | Downloads |
+|-----|-----|-----|
+| Red Hat-RPM-Paket | 14.0.3023.8-4 | [Datenbankmodul-RPM-Paket](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-14.0.3023.8-4.x86_64.rpm)</br>[Hohe Verfügbarkeit RPM-Paket](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-ha-14.0.3023.8-4.x86_64.rpm)</br>[Volltext-Suche RPM-Paket](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-fts-14.0.3023.8-4.x86_64.rpm)</br>[SSIS-Paket](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-is-14.0.1000.169-1.x86_64.rpm) | 
+| SLES RPM-Paket | 14.0.3023.8-4 | [MSSQL-Server-Datenbankmodul-RPM-Paket](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3023.8-4.x86_64.rpm)</br>[Hohe Verfügbarkeit RPM-Paket](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3023.8-4.x86_64.rpm)</br>[Volltext-Suche RPM-Paket](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3023.8-4.x86_64.rpm) | 
+| Ubuntu 16.04 Debian-Paket | 14.0.3023.8-4 | [Modul Debian-Paket](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3023.8-4_amd64.deb)</br>[Hohe Verfügbarkeit Debian-Paket](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3023.8-4_amd64.deb)</br>[Volltext-Suche Debian-Paket](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3023.8-4_amd64.deb)<br/>[SSIS-Paket](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
+
 ## <a id="CU4"></a> CU4 (Februar 2018)
 
-Dies ist der kumulativen Update 4 (CU4)-Version von SQL Server-2017. Die Version des SQL Server-Datenbankmodul für diese Version ist 14.0.3022.28. Informationen zu den Korrekturen und Verbesserungen in dieser Version finden Sie unter [https://support.microsoft.com/en-us/help/4056498](https://support.microsoft.com/en-us/help/4056498).
+Dies ist der kumulativen Update 4 (CU4)-Version von SQL Server-2017. Die Version des SQL Server-Datenbankmodul für diese Version ist 14.0.3022.28. Informationen zu den Korrekturen und Verbesserungen in dieser Version finden Sie unter [ https://support.microsoft.com/en-us/help/4056498 ](https://support.microsoft.com/en-us/help/4056498).
 
 ### <a name="package-details"></a>Details zum Paket
 
@@ -85,7 +100,7 @@ Für Paketinstallationen der manuellen oder offline-können Sie die RPM und Debi
 
 ## <a id="CU3"></a> CU3 (Januar 2018)
 
-Dies ist das kumulative Update 3 (CU3)-Version von SQL Server-2017. Die Version des SQL Server-Datenbankmodul für diese Version ist 14.0.3015.40. Informationen zu den Korrekturen und Verbesserungen in dieser Version finden Sie unter [https://support.microsoft.com/en-us/help/4052987](https://support.microsoft.com/en-us/help/4052987).
+Dies ist das kumulative Update 3 (CU3)-Version von SQL Server-2017. Die Version des SQL Server-Datenbankmodul für diese Version ist 14.0.3015.40. Informationen zu den Korrekturen und Verbesserungen in dieser Version finden Sie unter [ https://support.microsoft.com/en-us/help/4052987 ](https://support.microsoft.com/en-us/help/4052987).
 
 ### <a name="package-details"></a>Details zum Paket
 
@@ -99,7 +114,7 @@ Für Paketinstallationen der manuellen oder offline-können Sie die RPM und Debi
 
 ## <a id="CU2"></a> CU2 (November 2017)
 
-Dies ist das kumulative Update 2 (CU2)-Version von SQL Server-2017. Die Version des SQL Server-Datenbankmodul für diese Version ist 14.0.3008.27. Informationen zu den Korrekturen und Verbesserungen in dieser Version finden Sie unter [https://support.microsoft.com/help/4052574](https://support.microsoft.com/help/4052574).
+Dies ist das kumulative Update 2 (CU2)-Version von SQL Server-2017. Die Version des SQL Server-Datenbankmodul für diese Version ist 14.0.3008.27. Informationen zu den Korrekturen und Verbesserungen in dieser Version finden Sie unter [ https://support.microsoft.com/help/4052574 ](https://support.microsoft.com/help/4052574).
 
 ### <a name="package-details"></a>Details zum Paket
 
@@ -113,7 +128,7 @@ Für Paketinstallationen der manuellen oder offline-können Sie die RPM und Debi
 
 ## <a id="CU1"></a> CU1 (Oktober 2017)
 
-Dies ist das kumulative Update 1 (CU1)-Version von SQL Server-2017. Die Version des SQL Server-Datenbankmodul für diese Version ist 14.0.3006.16. Informationen zu den Korrekturen und Verbesserungen in dieser Version finden Sie unter [https://support.microsoft.com/help/KB4053439](https://support.microsoft.com/help/4038634).
+Dies ist das kumulative Update 1 (CU1)-Version von SQL Server-2017. Die Version des SQL Server-Datenbankmodul für diese Version ist 14.0.3006.16. Informationen zu den Korrekturen und Verbesserungen in dieser Version finden Sie unter [ https://support.microsoft.com/help/KB4053439 ](https://support.microsoft.com/help/4038634).
 
 ### <a name="package-details"></a>Details zum Paket
 

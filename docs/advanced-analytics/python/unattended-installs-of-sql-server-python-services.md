@@ -17,10 +17,10 @@ ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
 ms.openlocfilehash: 810adfeca86bc12bf05561eb50d555261579a1a5
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="unattended-installation-of-python-machine-learning-services-in-database"></a>Unbeaufsichtigte Installation von Python Machine Learning-Services (Datenbankintern)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -55,7 +55,7 @@ Das folgende Beispiel zeigt die **minimale** erforderlichen Funktionen in der Be
 
     > [!NOTE]
     > 
-    > Es gibt neue Setup-Flags für Python: `SQL_INST_MPY` und`IACCEPTPYTHONLICENSETERMS`
+    > Es gibt neue Setup-Flags für Python: `SQL_INST_MPY` und `IACCEPTPYTHONLICENSETERMS`
 
 2. Starten Sie den Server weitergeleitet.
 3. Führen Sie die Schritte für die Konfiguration nach der Installation aus, wie in beschrieben [in diesem Abschnitt](#bkmk_PostInstall). Ein weiterer Neustart des SQL Server-Dienste werden benötigt.
