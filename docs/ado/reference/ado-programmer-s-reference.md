@@ -1,5 +1,5 @@
 ---
-title: ADO-Programmierer &#39; s Verweis | Microsoft Docs
+title: ADO-Programmierer&#39;s-Referenz | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -20,12 +20,12 @@ ms.author: genemi
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 7632d4bed6a963e1015c4ae07adf4fbf7b034a37
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/21/2018
 ---
-# <a name="ado-programmer39s-reference"></a>ADO-Programmierer &#39; s-Verweis
+# <a name="ado-programmer39s-reference"></a>ADO-Programmierer&#39;s-Referenz
 Dieser Abschnitt enthält die folgenden Themen.  
   
 -   [ADO – API-Referenz](../../ado/reference/ado-api/ado-api-reference.md)  
