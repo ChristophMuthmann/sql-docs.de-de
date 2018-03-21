@@ -125,13 +125,22 @@
         - name: SQL Server unter Linux
           href: /sql/linux/
           homepage: /sql/linux/sql-server-linux-overview
-        - name: Erweiterte Analysen auf SQL Server
+        - name: SQL Server-Machine Learning-Dienste
           href: /sql/advanced-analytics/
-          homepage: /sql/advanced-analytics/getting-started-with-machine-learning-services
-        - name: R Services on SQL Server (R-Dienste auf SQL Server)
+          homepage: /sql/advanced-analytics/what-is-sql-server-machine-learning
+        - name: R
           href: /sql/advanced-analytics/r/
           homepage: /sql/advanced-analytics/r/architecture-overview-sql-server-r
-        - name: SQL Server
+        - name: Python
+          href: /sql/advanced-analytics/python/
+          homepage: /sql/advanced-analytics/python/sql-server-python-services
+        - name: Installieren und konfigurieren
+          href: /sql/advanced-analytics/install/
+          homepage: /sql/advanced-analytics/install/sql-machine-learning-services-windows-install.md
+        - name: Lernprogramme
+          href: /sql/advanced-analytics/tutorials/
+          homepage: /sql/advanced-analytics/tutorials/machine-learning-services-tutorials
+        - name: "SQL\_Server"
           href: /sql/sql-server/
           homepage: /sql/sql-server/sql-server-technical-documentation
           items:
@@ -354,7 +363,7 @@
                 - name: Horizontale Hochskalierung
                   href: /sql/integration-services/scale-out/
                   homepage: /sql/integration-services/scale-out/integration-services-ssis-scale-out
-                - name: Sicherheit
+                - name: Security
                   href: /sql/integration-services/security/
                   homepage: /sql/integration-services/security/security-overview-integration-services
                 - name: Dienst
@@ -397,7 +406,7 @@
                     - name: Task
                       href: /sql/integration-services/extending-packages-custom-objects/task/
                       homepage: /sql/integration-services/extending-packages-custom-objects/task/developing-a-custom-task
-                    - name: Verbindungs-Manager
+                    - name: Ziel-Editor für Dimensionsverarbeitung
                       href: /sql/integration-services/extending-packages-custom-objects/connection-manager/
                       homepage: /sql/integration-services/extending-packages-custom-objects/connection-manager/developing-a-custom-connection-manager
                     - name: Protokollanbieter
@@ -464,7 +473,7 @@
                 - name: Arbeiten mit Berichten
                   href: /sql/reporting-services/reports/
                   homepage: /sql/reporting-services/reports/reporting-services-reports-ssrs
-                - name: Sicherheit
+                - name: Security
                   href: /sql/reporting-services/security/
                   homepage: /sql/reporting-services/security/reporting-services-security-and-protection
                 - name: Abonnements
@@ -639,7 +648,7 @@
                 - name: Veröffentlichen
                   href: /sql/relational-databases/replication/publish/
                   homepage: /sql/relational-databases/replication/publish/publish-data-and-database-objects
-                - name: Sicherheit
+                - name: Security
                   href: /sql/relational-databases/replication/security/
                   homepage: /sql/relational-databases/replication/security/security-overview-replication
                 - name: Transaktion
@@ -654,7 +663,7 @@
             - name: Suchen
               href: /sql/relational-databases/search/
               homepage: /sql/relational-databases/search/full-text-search
-            - name: Sicherheit
+            - name: Security
               href: /sql/relational-databases/security/
               homepage: /sql/relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database
               items:
@@ -831,7 +840,7 @@
                     - name: Transaktionen
                       href: /sql/relational-databases/clr-integration-data-access-transactions/
                       homepage: /sql/relational-databases/clr-integration-data-access-transactions/clr-integration-and-transactions
-                - name: Sicherheit
+                - name: Security
                   href: /sql/relational-databases/clr-integration/security/
                   homepage: /sql/relational-databases/clr-integration/security/clr-integration-code-access-security
                   items:
@@ -1010,7 +1019,7 @@
                         - name: Caching templates XML schemas (Zwischenspeichern von XML-Schemavorlagen)
                           href: /sql/relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/caching-templates-xml-schemas/
                           homepage: /sql/relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/caching-templates-xml-schemas/caching-templates-xsl-and-schemas-sqlxml-4-0
-                        - name: Sicherheit
+                        - name: Security
                           href: /sql/relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/
                           homepage: /sql/relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/sqlxml-4-0-security-considerations
         - name: DMX
