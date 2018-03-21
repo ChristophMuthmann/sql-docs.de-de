@@ -45,11 +45,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 96a567e1fe27c5302d9adf3857539af2336d5d6f
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 9fe700c3dc23125b21b24a749ca5ae5238d6a02c
+ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="database-level-roles"></a>Rollen auf Datenbankebene
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -69,7 +69,7 @@ Zum Hinzufügen und Entfernen von Benutzern zu oder aus einer Datenbankrolle ver
 
 Die Berechtigungen von benutzerdefinierten Datenbankrollen können mithilfe der Anweisungen GRANT, DENY und REVOKE angepasst werden. Weitere Informationen finden Sie unter [Berechtigungen (Datenbankmodul)](../../../relational-databases/security/permissions-database-engine.md).
 
-Eine Liste aller Berechtigungen finden Sie auf dem Poster [Database Engine Permissions (Berechtigungen im Datenbankmodul)](http://go.microsoft.com/fwlink/?LinkId=229142) . (Datenbankrollen können keine Berechtigungen auf Serverebene erteilt werden. Anmeldungen und andere Prinzipale auf Serverebene (wie etwa Serverrollen) können Datenbankrollen nicht hinzugefügt werden. Verwenden Sie für Sicherheit auf Serverebene in [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)]stattdessen [Serverrollen](../../../relational-databases/security/authentication-access/server-level-roles.md) . Berechtigungen auf Serverebene können nicht mithilfe von Rollen in [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] und [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)]erteilt werden.)
+Eine Liste aller Berechtigungen finden Sie auf dem Poster [Database Engine Permissions (Berechtigungen im Datenbankmodul)](https://aka.ms/sql-permissions-poster) . (Datenbankrollen können keine Berechtigungen auf Serverebene erteilt werden. Anmeldungen und andere Prinzipale auf Serverebene (wie etwa Serverrollen) können Datenbankrollen nicht hinzugefügt werden. Verwenden Sie für Sicherheit auf Serverebene in [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)]stattdessen [Serverrollen](../../../relational-databases/security/authentication-access/server-level-roles.md) . Berechtigungen auf Serverebene können nicht mithilfe von Rollen in [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] und [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)]erteilt werden.)
 
 ## <a name="fixed-database-roles"></a>feste Datenbankrollen
   
@@ -108,7 +108,7 @@ Diese Datenbankrollen sind nur in der virtuellen Masterdatenbank vorhanden. Ihre
   
 |Name der msdb-Rolle|Description|  
 |--------------------|-----------------|  
-|**db_ssisadmin**<br /><br /> **db_ssisoperator**<br /><br /> **db_ssisltduser**|Mitglieder dieser Datenbankrollen können [!INCLUDE[ssIS](../../../includes/ssis-md.md)]verwalten und verwenden. Instanzen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], die von einer früheren Version aktualisiert wurden, enthalten möglicherweise eine ältere Version der Rolle, die mit Data Transformation Services (DTS) und nicht mit [!INCLUDE[ssIS](../../../includes/ssis-md.md)] benannt wurde. Weitere Informationen finden Sie unter [Integration Services-Rollen &#40;SSIS-Dienst&#41;](../../../integration-services/security/integration-services-roles-ssis-service.md).|  
+|**db_ssisadmin**<br /><br /> **db_ssisoperator**<br /><br /> **db_ssisltduser**|Mitglieder dieser Datenbankrollen können [!INCLUDE[ssIS](../../../includes/ssis-md.md)]verwalten und verwenden. Instanzen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], die von einer früheren Version aktualisiert wurden, enthalten möglicherweise eine ältere Version der Rolle, die mit Data Transformation Services (DTS) und nicht mit [!INCLUDE[ssIS](../../../includes/ssis-md.md)] benannt wurde. Weitere Informationen finden Sie unter [Integration Services Roles &#40;SSIS Service&#41;](../../../integration-services/security/integration-services-roles-ssis-service.md) (Integration Services-Rollen [SSIS-Dienst]).|  
 |**dc_admin**<br /><br /> **dc_operator**<br /><br /> **dc_proxy**|Mitglieder dieser Datenbankrollen können den Datensammler verwalten und verwenden. Weitere Informationen finden Sie unter [Data Collection](../../../relational-databases/data-collection/data-collection.md).|  
 |**PolicyAdministratorRole**|Mitglieder der Datenbankrolle **db_PolicyAdministratorRole** können alle Aktivitäten zur Konfiguration und Wartung für Richtlinien und Bedingungen der richtlinienbasierten Verwaltung ausführen. Weitere Informationen finden Sie unter [Verwalten von Servern mit der richtlinienbasierten Verwaltung](../../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md).|  
 |**ServerGroupAdministratorRole**<br /><br /> **ServerGroupReaderRole**|Mitglieder dieser Datenbankrollen können registrierte Servergruppen verwalten und verwenden.|  

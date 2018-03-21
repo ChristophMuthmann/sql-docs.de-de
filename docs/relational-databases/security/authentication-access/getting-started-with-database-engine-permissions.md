@@ -20,11 +20,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6234975f35a30fc956f4e8735771d09cea2d1e2e
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 4292564f8e3e392bd01d5b1e580e1f28251840bd
+ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="getting-started-with-database-engine-permissions"></a>Erste Schritte mit Berechtigungen für das Datenbankmodul
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -166,7 +166,7 @@ GRANT CONTROL ON DATABASE::SalesDB TO Ted;
 ## <a name="list-of-permissions"></a>Liste der Berechtigungen  
  [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] hat 230 Berechtigungen. [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] hat 219 Berechtigungen. [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] hat 214 Berechtigungen. [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] hat 195 Berechtigungen. [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]Obwohl , [!INCLUDE[ssDW](../../../includes/ssdw-md.md)], und [!INCLUDE[ssAPS](../../../includes/ssaps-md.md)] einige Berechtigungen bereitstellen, die nicht für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]gelten, haben sie insgesamt weniger Berechtigungen, da sie nur einen Teil des Datenbankmoduls verfügbar machen. Die folgende Grafik zeigt die Berechtigungen und ihre Beziehungen zueinander. Einige der Berechtigungen auf höherer Ebene (z.B. `CONTROL SERVER`) sind mehrmals aufgeführt. In diesem Thema ist nicht ausreichend Platz, um das Poster entsprechend darzustellen. Klicken Sie auf das Bild zum Herunterladen der **Poster zu den Datenbankmodulberechtigungen** im PDF-Format.  
   
-[![Datenbankmodulberechtigungen](../../../relational-databases/security/media/database-engine-permissions.PNG)](http://go.microsoft.com/fwlink/?LinkId=229142)
+[![Datenbankmodulberechtigungen](../../../relational-databases/security/media/database-engine-permissions.PNG)](https://aka.ms/sql-permissions-poster)
  
  Eine Grafik mit den Beziehungen zwischen den [!INCLUDE[ssDE](../../../includes/ssde-md.md)]-Prinzipalen und Servern und Datenbankobjekten finden Sie unter [Berechtigungshierarchie &#40;Datenbankmodul&#41;](../../../relational-databases/security/permissions-hierarchy-database-engine.md).  
   

@@ -31,17 +31,19 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f0e46404d775da09f4aaeb7b9640dd2a35d3cfa2
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 200adf6302cb0c86f487a7480579a173403ed14c
+ms.sourcegitcommit: 3ed9be04cc7fb9ab1a9ec230c298ad2932acc71b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="create-credential-transact-sql"></a>CREATE CREDENTIAL (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   Erstellt Anmeldeinformationen auf Serverebene. Anmeldeinformationen sind in einem Datensatz gespeichert, in dem die Authentifizierungsinformationen enthalten sind, die zum Herstellen einer Verbindung mit einer Ressource außerhalb von SQL Server erforderlich sind. Die meisten Anmeldeinformationen schließen einen Windows-Benutzer und ein Kennwort ein. Wenn Sie z.B. eine Datensicherung an einem beliebigen Speicherort speichern, erfordert SQL Server möglicherweise die Eingabe von besonderen Anmeldeinformationen, damit auf diesen Speicherort zugegriffen werden kann. Weitere Informationen finden Sie unter [Anmeldeinformationen (Datenbank-Engine)](../../relational-databases/security/authentication-access/credentials-database-engine.md).
-  
+
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
+
 > [!NOTE]  
 >  Verwenden Sie [CREATE DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-scoped-credential-transact-sql.md) zum Erstellen der Anmeldeinformationen auf Datenbankebene. Verwenden Sie Anmeldeinformationen auf Serverebene, wenn Sie dieselben Anmeldeinformationen für mehrere Datenbanken auf demselben Server verwenden müssen. Verwenden Sie datenbankbezogene Anmeldeinformationen, um die Datenbank portierbarer zu machen. Wenn eine Datenbank auf einen neuen Server verschoben wird, werden gleichzeitig auch diese datenbankbezogenen Anmeldeinformationen verschoben. Verwenden Sie datenbankbezogene Anmeldeinformationen in [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
@@ -61,7 +63,7 @@ WITH IDENTITY = 'identity_name'
  *credential_name*  
  Gibt den Namen für die zu erstellenden Anmeldeinformationen an. *credential_name* darf nicht mit dem Nummernzeichen (#) beginnen. Systemanmeldeinformationen beginnen mit zwei Nummernzeichen (##).  Wenn eine Shared Access Signature (SAS) verwendet wird, muss dieser Name dem Containerpfad zugeordnet werden können, mit „https“ beginnen und einen Schrägstrich enthalten. Siehe Beispiel D.  
   
- IDENTITY **= '***identity_name***'**  
+ IDENTITY **='***identity_name***'**  
  Gibt den Namen des Kontos an, das beim Herstellen einer Verbindung außerhalb des Servers verwendet wird. Wenn die Anmeldeinformationen zum Zugreifen auf Azure Key Vault verwendet werden, ist **IDENTITY** der Name des Schlüsseltresors. Weitere Informationen finden Sie unten im Beispiel C. Wenn die Anmeldeinformationen eine Shared Access Signature (SAS) verwenden, lautet **IDENTITY** *SHARED ACCESS SIGNATURE*. Siehe Beispiel D.  
   
  SECRET **='***secret***'**  

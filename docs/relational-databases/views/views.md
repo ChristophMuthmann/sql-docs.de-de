@@ -16,18 +16,19 @@ helpviewer_keywords:
 - views [SQL Server], about views
 ms.assetid: ada83c28-e8b7-45d9-b53c-b3d67c8820c8
 caps.latest.revision: 
-author: sstein
+author: stevestein
+ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7ba650c638d855556ec2afe992f26ff3f6ad2460
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: de1be71afd708fab6f380daf4b60a0aeb87b2665
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="views"></a>Sichten
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
-Eine Sicht ist eine virtuelle Tabelle, deren Inhalt durch eine Abfrage definiert wird. Wie bei einer Tabelle besteht auch eine Sicht aus einem Satz benannter Spalten und Zeilen mit Daten. Wenn sie nicht indiziert ist, liegt eine Sicht jedoch nicht als gespeicherter Satz von Datenwerten in einer Datenbank vor. Die Zeilen und Spalten mit Daten stammen aus Tabellen, auf die in der die Sicht definierenden Abfrage verwiesen wird. Diese Datenzeilen und -spalten werden dynamisch erstellt, wenn auf die Sicht verwiesen wird.  
+  Eine Sicht ist eine virtuelle Tabelle, deren Inhalt durch eine Abfrage definiert wird. Wie bei einer Tabelle besteht auch eine Sicht aus einem Satz benannter Spalten und Zeilen mit Daten. Wenn sie nicht indiziert ist, liegt eine Sicht jedoch nicht als gespeicherter Satz von Datenwerten in einer Datenbank vor. Die Zeilen und Spalten mit Daten stammen aus Tabellen, auf die in der die Sicht definierenden Abfrage verwiesen wird. Diese Datenzeilen und -spalten werden dynamisch erstellt, wenn auf die Sicht verwiesen wird.  
   
  Eine Sicht dient als Filter für die zugrunde liegenden Tabellen, auf die in der Sicht verwiesen wird. Die Abfrage, die die Sicht definiert, kann Daten aus einer oder mehreren Tabellen oder aus anderen Sichten in der aktuellen Datenbank oder anderen Datenbanken verwenden. Sie können darüber hinaus verteilte Abfragen verwenden, um Sichten zu definieren, die Daten aus mehreren heterogenen Quellen verwenden. Dies kann z. B. dann hilfreich sein, wenn Sie Daten mit gleicher Struktur kombinieren möchten, die sich jedoch auf unterschiedlichen Servern befinden, wobei auf jedem Server die Daten für einen anderen Bereich Ihrer Organisation gespeichert sind.  
   

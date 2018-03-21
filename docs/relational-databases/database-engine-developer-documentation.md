@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Database Engine [SQL Server], development
 ms.assetid: 7638f46c-9e66-48e6-9a9b-425e0b788311
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 23d61cdb9d6f82ddd2e35e7e4e8999cd814557b7
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: e25a10ebfdeab6a24c5db324c0d9d3771feaa9b5
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="database-engine-developer-documentation"></a>Entwicklerhandbuch (Datenbankmodul)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

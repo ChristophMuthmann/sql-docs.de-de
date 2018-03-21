@@ -15,14 +15,14 @@ ms.topic: article
 helpviewer_keywords: 
 ms.assetid: 
 author: joesackmsft
-ms.author: josack;monicar
+ms.author: josack
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 139d73430346cdad7baa27d90c14ad692be5bbeb
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: ee7f27d3dee664d10257c65b4210dc1e402f5f65
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="adaptive-query-processing-in-sql-databases"></a>Adaptive Abfrageverarbeitung in SQL-Datenbanken
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
