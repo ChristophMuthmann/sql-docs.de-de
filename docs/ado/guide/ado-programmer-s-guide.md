@@ -1,5 +1,5 @@
 ---
-title: ADO-Programmierer &#39; Entwicklerhandbuch | Microsoft Docs
+title: ADO-Programmierer&#39;Entwicklerhandbuch | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -20,12 +20,12 @@ ms.author: genemi
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 6414a5691c89a2a399f207a3cf2059c17a00991c
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/21/2018
 ---
-# <a name="ado-programmer39s-guide-for-using-ado-objects"></a>ADO-Programmierer &#39; s Leitfaden zum Verwenden von ADO-Objekten
+# <a name="ado-programmer39s-guide-for-using-ado-objects"></a>ADO-Programmierer&#39;s Leitfaden zum Verwenden von ADO-Objekten
 Diese Dokumentation enthält eine Übersicht über das ADO-Objekten, die zum Arbeiten mit Daten aus verschiedenen Datenquellen verwenden. Zunächst werden die Einführung zusammengefasst, die neuen Funktionen und die Anforderung für die Installation, Verwendung und Verteilen von der ADO-Komponente. Den nächsten Abschnitten wird die Verwendung der verschiedenen Typen von ADO-Objekten. Schließlich erläutern die Anhänge verschiedene Microsoft bereitgestellten Daten und Dienstanbietern, Fehlermeldungen und Tipps zur Verwendung von ADO in verschiedenen Programmiersprachen, zusätzlich zu den Beispielen und ein Glossar.
 
  Dieser Abschnitt enthält die folgenden Themen.
