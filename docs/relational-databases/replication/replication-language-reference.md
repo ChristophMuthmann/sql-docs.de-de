@@ -17,14 +17,14 @@ applies_to:
 ms.assetid: 605eb49a-225c-4186-a341-e90403c82b60
 caps.latest.revision: 
 author: MashaMSFT
-ms.author: mblythe
-manager: erikre
+ms.author: mathoma
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ea2fd7fc18676a6169f1243d29caa6efaf61f985
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+ms.openlocfilehash: ffda88aa78751a7ac905651f8c421d60b9a786b1
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="replication-language-reference"></a>Replikationssprachreferenz
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
