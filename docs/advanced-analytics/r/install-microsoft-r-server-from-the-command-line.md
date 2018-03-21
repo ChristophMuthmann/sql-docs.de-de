@@ -17,10 +17,10 @@ ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
 ms.openlocfilehash: 95f8e0c688a2f141ce066e3831e461509d72c1a9
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="install-machine-learning-server-standalone-or-microsoft-r-server-standalone-from-the-command-line"></a>Installieren von Machine Learning-Server (eigenständig) oder Microsoft R Server (eigenständig) über die Befehlszeile
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -43,7 +43,7 @@ Weitere Informationen finden Sie unter [Installieren von SQL Server von der Befe
 Wenn Sie Machine Learning-Server oder Microsoft R Server (eigenständig) auf einem Computer, die keinen Zugang zum Internet hat installieren, müssen Sie die erforderlichen Komponenten von R (oder Python) im Voraus herunterladen und in einen lokalen Ordner zu kopieren. Speicherorte für den Download, finden Sie unter [Machine Learning-Komponenten ohne Internetzugang installieren](installing-ml-components-without-internet-access.md).
 
 
-## <a name="bkmk_mls2017"></a>Installieren Sie Microsoft-Machine Learning-Server (eigenständig)
+## <a name="bkmk_mls2017"></a> Installieren Sie Microsoft-Machine Learning-Server (eigenständig)
 
 **Gilt für: SQLServer 2017**
 

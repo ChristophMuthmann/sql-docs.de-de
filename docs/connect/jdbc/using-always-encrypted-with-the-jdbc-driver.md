@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: af8b651364f58c3c4261666d5d6531e99e620efe
-ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
+ms.openlocfilehash: 5a32f8269bb6787087b54d161c50cf6f06488482
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="using-always-encrypted-with-the-jdbc-driver"></a>Always Encrypted verwenden mit dem JDBC-Treiber
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -136,7 +136,7 @@ WITH VALUES
 ```
 
 > [!IMPORTANT]
-> Die SQLServerColumnEncryptionCertificateStoreProvider-Implementierung des JDBC-Treibers ist mit Windows-Betriebssystemen verfügbar und hat eine Abhängigkeit auf "sqljdbc_auth.dll", die im Treiberpaket enthaltenen verfügbar ist. Kopieren Sie die Datei "sqljdbc_auth.dll" zur Verwendung dieses Anbieters in ein Verzeichnis auf dem Windows-Systempfad auf dem Computer, auf dem der JDBC-Treiber installiert ist. Alternativ können Sie mit der java.libary.path-Systemeigenschaft das Verzeichnis von „sqljdbc_auth.dll“ angeben. Wenn Sie eine 32-Bit-JVM (Java Virtual Machine) ausführen, verwenden Sie die Datei „sqljdbc_auth.dll“ im Ordner „x86“, auch wenn es sich bei dem Betriebssystem um die x64-Version handelt. Wenn Sie eine 64-Bit-JVM mit einem x64-Prozessor ausführen, verwenden Sie die Datei „sqljdbc_auth.dll“ im Ordner „x64“. Beispielsweise können, wenn Sie die 32-Bit-JVM und der JDBC-Treiber wird im Standardverzeichnis installiert, Sie geben Sie den Speicherort der DLL mit dem folgenden Argument für den virtuellen Computer (VM) beim Start der Java-Anwendung: `-Djava.library.path=C:\Microsoft JDBC Driver <version> for SQL Server\sqljdbc_<version>\enu\auth\x86`
+> Während die andere Schlüsselspeicher-Anbieter in diesem Artikel auf allen Plattformen, die vom Treiber unterstützten verfügbar sind, ist die SQLServerColumnEncryptionCertificateStoreProvider-Implementierung des JDBC-Treibers auf Windows-Betriebssystemen verfügbar. Es besteht eine Abhängigkeit "sqljdbc_auth.dll", die im Treiberpaket enthaltenen verfügbar ist. Kopieren Sie die Datei "sqljdbc_auth.dll" zur Verwendung dieses Anbieters in ein Verzeichnis auf dem Windows-Systempfad auf dem Computer, auf dem der JDBC-Treiber installiert ist. Alternativ können Sie mit der java.libary.path-Systemeigenschaft das Verzeichnis von „sqljdbc_auth.dll“ angeben. Wenn Sie eine 32-Bit-JVM (Java Virtual Machine) ausführen, verwenden Sie die Datei „sqljdbc_auth.dll“ im Ordner „x86“, auch wenn es sich bei dem Betriebssystem um die x64-Version handelt. Wenn Sie eine 64-Bit-JVM mit einem x64-Prozessor ausführen, verwenden Sie die Datei „sqljdbc_auth.dll“ im Ordner „x64“. Beispielsweise können, wenn Sie die 32-Bit-JVM und der JDBC-Treiber wird im Standardverzeichnis installiert, Sie geben Sie den Speicherort der DLL mit dem folgenden Argument für den virtuellen Computer (VM) beim Start der Java-Anwendung: `-Djava.library.path=C:\Microsoft JDBC Driver <version> for SQL Server\sqljdbc_<version>\enu\auth\x86`
 
 ### <a name="using-java-key-store-provider"></a>Mithilfe von Java-Schlüsselspeicher-Anbieter
 Der JDBC-Treiber ist mit einer integrierten Schlüsselspeicher-Anbieter-Implementierung für die Java-Schlüsselspeicher. Wenn die **KeyStoreAuthentication** Verbindungszeichenfolgen-Eigenschaft in der Verbindungszeichenfolge vorhanden ist und "JavaKeyStorePassword" festgelegt ist, der Treiber automatisch instanziiert und registriert den Java-Schlüsselspeicher-Anbieter. Der Name von der Java-Schlüsselspeicher-Anbieter ist MSSQL_JAVA_KEYSTORE. Dieser Name kann auch mithilfe der SQLServerColumnEncryptionJavaKeyStoreProvider.getName()-API abgefragt werden. 

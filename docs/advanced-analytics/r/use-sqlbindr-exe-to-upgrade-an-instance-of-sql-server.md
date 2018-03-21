@@ -1,7 +1,7 @@
 ---
-title: Machine Learning-Komponenten in SQL Server-Instanz aktualisieren | Microsoft Docs
+title: Binden von Machine Learning-Komponenten auf SQL Server auf Microsoft Machine Learning-Server | Microsoft Docs
 ms.custom: 
-ms.date: 10/31/2017
+ms.date: 03/15/2018
 ms.reviewer: 
 ms.suite: sql
 ms.prod: machine-learning-services
@@ -12,19 +12,19 @@ ms.tgt_pltfrm:
 ms.topic: article
 applies_to:
 - SQL Server (starting with 2016 CTP3)
-ms.assetid: 4da80998-f929-4fad-a86f-87d09c1a79ef
+ms.assetid: 
 caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
 ms.workload: On Demand
-ms.openlocfilehash: 643d5062f14de70cec493fd9c2fab69989eb4dd6
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 7c67d0accb7ac7be46105e5148028fac3f67aa0f
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/21/2018
 ---
-# <a name="upgrade-machine-learning-components-in-a-sql-server-instance"></a>Aktualisieren des Machine Learning-Komponenten in SQL Server-Instanz
+# <a name="bind-machine-learning-components-on-sql-server-to-microsoft-machine-learning-server"></a>Binden von Machine Learning-Komponenten auf SQL Server auf Microsoft Machine Learning-Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 In diesem Artikel erläutert, wie der _Bindung_, die Sie verwenden können, zum Aktualisieren des Machine learning in SQL Server verwendete Komponenten. Der Prozess der Bindung sperrt die Server in einer Update-Rhythmus basierend auf Versionen von Machine Learning-Server, Version anstelle von SQL Server und Zeitplan aktualisieren.
@@ -106,7 +106,7 @@ Wenn Sie nicht, um den Assistenten verwenden möchten, können Sie Machine Learn
 > 
 > Gefunden SqlBindR.exe wurde nicht? Sie haben wahrscheinlich nicht die oben aufgelisteten Komponenten heruntergeladen. Dieses Dienstprogramm ist nur mit Windows Installer für Machine Learning-Server verfügbar.
 
-1. Öffnen Sie als Administrator eine Eingabeaufforderung und navigieren Sie zum Ordner, der „sqlbindr.exe“ enthält. Der Standardspeicherort ist`C:\Program Files\Microsoft\MLServer\Setup`
+1. Öffnen Sie als Administrator eine Eingabeaufforderung und navigieren Sie zum Ordner, der „sqlbindr.exe“ enthält. Der Standardspeicherort ist `C:\Program Files\Microsoft\MLServer\Setup`
 
 2. Geben Sie den folgenden Befehl ein, um eine Liste der verfügbaren Instanzen anzuzeigen: `SqlBindR.exe /list`
   
@@ -114,7 +114,7 @@ Wenn Sie nicht, um den Assistenten verwenden möchten, können Sie Machine Learn
 
 3. Führen Sie die **SqlBindR.exe** -Befehl mit der */bind* Argument, und geben Sie den Namen der Instanz für ein upgrade auf die Verwendung des Instanznamens, die im vorherigen Schritt zurückgegeben wurde.
 
-   Um die Standardinstanz zu aktualisieren, z. B. Folgendes ein:`SqlBindR.exe /bind MSSQL14.MSSQLSERVER`
+   Um die Standardinstanz zu aktualisieren, z. B. Folgendes ein:  `SqlBindR.exe /bind MSSQL14.MSSQLSERVER`
 
 4. Starten Sie nach Abschluss des Upgrades den Launchpad-Dienst verknüpft sind mit jeder Instanz, die geändert wurde.
 
@@ -135,7 +135,7 @@ Wenn Sie sich entscheiden, dass Sie nicht mehr Machine learning-Komponenten mith
 
     Anweisungen hierzu finden Sie unter [deinstallieren Machine Learning-Server für Windows](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-uninstall). 
 
-### <a name="bkmk_wizunbind"></a>Aufheben der Bindung mithilfe des Assistenten
+### <a name="bkmk_wizunbind"></a> Aufheben der Bindung mithilfe des Assistenten
 
 1. Suchen Sie das Installationsprogramm für Machine Learning-Server. Wenn Sie das Installationsprogramm entfernt haben, müssen Sie möglicherweise erneut herunterladen oder von einem anderen Computer zu kopieren.
 2. Achten Sie darauf, dass Sie das Installationsprogramm auf dem Computer ausführen, der die Instanz verfügt, die Bindung aufgehoben werden soll.
@@ -144,7 +144,7 @@ Wenn Sie sich entscheiden, dass Sie nicht mehr Machine learning-Komponenten mith
 4. Akzeptieren Sie den Lizenzvertrag. Sie müssen die Annahme der Lizenzbedingungen auch angeben, bei der Installation.
 5. Klicken Sie auf **Fertig stellen**. Der Vorgang dauert eine Weile.
 
-### <a name="bkmk_cmdunbind"></a>Aufheben der Bindung über die Befehlszeile
+### <a name="bkmk_cmdunbind"></a> Aufheben der Bindung über die Befehlszeile
 
 1. Öffnen Sie eine Eingabeaufforderung, und navigieren Sie zu dem Ordner, der **sqlbindr.exe** enthält, wie im vorherigen Abschnitt beschrieben.
 
@@ -178,7 +178,7 @@ Dieses Problem zu umgehen können Sie die vorhandene Installation von R-Server w
 ### <a name="binding-or-unbinding-leaves-multiple-temporary-folders"></a>Binden oder Aufheben der Bindung bewirkt, dass mehrere temporären Ordner
 
 Treten ggf. Fehler bei der Bindung und Aufheben der Bindung Vorgänge zum Bereinigen von temporären Ordner.
-Wenn Sie den Ordner mit einem Namen wie folgt finden, können Sie es nach der Installation entfernen:`R_SERVICES_<guid>`
+Wenn Sie den Ordner mit einem Namen wie folgt finden, können Sie es nach der Installation entfernen: `R_SERVICES_<guid>`
 
 > [!NOTE]
 > Achten Sie darauf warten, bis die Installation abgeschlossen ist. Es dauert sehr lange zum Entfernen von R-Bibliotheken, die eine Version zugeordnet, und fügen Sie dann die neuen R-Bibliotheken. Wenn der Vorgang abgeschlossen ist, werden temporäre Ordner entfernt.

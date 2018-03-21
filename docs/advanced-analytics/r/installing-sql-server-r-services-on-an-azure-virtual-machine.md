@@ -16,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 5d52dd25059dcc8204fbc2598a595de9e208f308
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 572aeffdc0d3c06a4c3bda17e3f3d438b2819183
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="installing-sql-server-machine-learning-features-on-an-azure-virtual-machine"></a>Installieren von SQL Server-Machine learning-Features auf virtuellen Azure-Computer
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -37,7 +37,7 @@ Wenn Sie einen virtuellen Azure-Computer bereitstellen, enthält [!INCLUDE[ssCur
 
 ## <a name="create-a-new-sql-server-2017-virtual-machine"></a>Erstellen eines neuen SQL Server-2017 virtuellen Computers
 
-Um in SQL Server-2017 R oder Python zu verwenden, werden Sie sicher, dass eine Windows-basierte virtuelle Maschine abrufen. [!INCLUDE[sscurrentlong-md](../../includes/sscurrentlong-md.md)]unter Linux unterstützt schnelle [native Bewertung](../sql-native-scoring.md) verwenden, die VORHERSAGEN T-SQL-Funktion, aber anderen Machine learning-Funktionen sind nicht verfügbar noch in dieser Edition.
+Um in SQL Server-2017 R oder Python zu verwenden, werden Sie sicher, dass eine Windows-basierte virtuelle Maschine abrufen. [!INCLUDE[sscurrentlong-md](../../includes/sscurrentlong-md.md)] unter Linux unterstützt schnelle [native Bewertung](../sql-native-scoring.md) verwenden, die VORHERSAGEN T-SQL-Funktion, aber anderen Machine learning-Funktionen sind nicht verfügbar noch in dieser Edition.
 
 Eine Liste der SQL Server-VM-Angebote, finden Sie im Artikel: [Übersicht über die von SQL Server auf Azure Virtual Machines (Windows)](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview).
 
@@ -74,11 +74,10 @@ Sie können auch aktivieren oder deaktivieren Sie die Funktion auf einem vorhand
 Wenn Sie einen virtuellen Azure-Computer, der SQL Server ohne Machine learning-enthalten erstellt, können Sie die Funktion hinzufügen, durch die folgenden Schritte:
 
 1. Führen Sie erneut das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Setup aus, und fügen Sie die Funktion auf der Seite **Serverkonfiguration** des Assistenten hinzu.
-2. Aktivieren Sie die Ausführung des externen Skripts, und starten Sie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz erneut. Weitere Informationen finden Sie unter [Einrichten von SQL Server R Services](../../advanced-analytics/r/set-up-sql-server-r-services-in-database.md).
+2. Aktivieren Sie die Ausführung des externen Skripts, und starten Sie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz erneut. Weitere Informationen finden Sie unter [Installieren von SQL Server 2016 R Services](../install/sql-r-services-windows-install.md).
 3. (Optional) Konfigurieren Sie bei Bedarf den Datenbankzugriff für R-Workerkonten für die remote Skriptausführung.
-   Weitere Informationen finden Sie unter [Einrichten von SQL Server R Services](../../advanced-analytics/r/set-up-sql-server-r-services-in-database.md).
-3. (Optional) Ändern Sie eine Firewallregel auf dem virtuellen Azure-Computer, wenn Sie beabsichtigen, die R-Skriptausführung von remoten Data Science-Clients zu ermöglichen. Weitere Informationen finden Sie unter [Aufhebung der Firewallblockierung](#firewall).
-4. Installieren oder Aktivieren von erforderlichen Netzwerkbibliotheken. Weitere Informationen finden Sie unter [Hinzufügen von Netzwerkprotokollen](#network).
+4. (Optional) Ändern Sie eine Firewallregel auf dem virtuellen Azure-Computer, wenn Sie beabsichtigen, die R-Skriptausführung von remoten Data Science-Clients zu ermöglichen. Weitere Informationen finden Sie unter [Aufhebung der Firewallblockierung](#firewall).
+5. Installieren oder Aktivieren von erforderlichen Netzwerkbibliotheken. Weitere Informationen finden Sie unter [Hinzufügen von Netzwerkprotokollen](#network).
 
 ## <a name="additional-steps"></a>Zusätzliche Schritte
 
@@ -101,13 +100,13 @@ So aktivieren Sie den Zugriff auf remote Data Science-clients
 ### <a name="enable-odbc-callbacks-for-remote-clients"></a>ODBC-Rückrufe für Remoteclients aktivieren
 
 Wenn Sie erwarten, dass Clients den Server Aufrufen von ODBC-Abfragen als Teil ihrer den Machine learning-Lösungen benötigen, müssen Sie sicherstellen, dass das Launchpad ODBC-Aufrufe für den Remoteclient ausführen kann. Zu diesem Zweck müssen Sie die SQL-Workerkonten zulassen, die vom Launchpad für die Anmeldung bei der Instanz verwendet werden.
-Weitere Informationen finden Sie unter [Einrichten von SQL Server R Services](../../advanced-analytics/r/set-up-sql-server-r-services-in-database.md).
+Weitere Informationen finden Sie unter [Installieren von SQL Server 2016 R Services](../install/sql-r-services-windows-install.md).
 
 ### <a name="network"></a>Hinzufügen von Netzwerkprotokollen
 
 + Aktivieren von Named Pipes
   
-  [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] Named Pipes-Protokoll verwendet, für Verbindungen zwischen den Client- und Servercomputer, und für einige interne Verbindungen. Wenn Named Pipes nicht aktiviert ist, müssen Sie es jeweils auf dem virtuellen Azure-Computer und auf alle Data Science-Clients installieren und aktivieren, die eine Verbindung mit dem Server herstellen.
+  Derzeit verwendet [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] das Named Pipes-Protokoll für Verbindungen zwischen dem Client und den Servercomputern und für einige externe Verbindungen. Wenn Named Pipes nicht aktiviert ist, müssen Sie es jeweils auf dem virtuellen Azure-Computer und auf alle Data Science-Clients installieren und aktivieren, die eine Verbindung mit dem Server herstellen.
   
 + Aktivieren von TCP/IP
 

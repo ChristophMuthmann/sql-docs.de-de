@@ -15,10 +15,10 @@ ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
 ms.openlocfilehash: 9ecd54dcb1fe829c51e0e05346abf04d80af3cf9
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="set-up-python-machine-learning-services-in-database"></a>Einrichten von Python Machine Learning-Services (Datenbankintern)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -54,7 +54,7 @@ Nachdem die Installation abgeschlossen ist, konfigurieren, dass die Instanz, um 
 
 Zum Ausführen einer unbeaufsichtigten Installations verwenden Sie die Befehlszeilenoptionen für SQL Server-Setup und die Argumente, die spezifisch für Python. Weitere Informationen finden Sie unter [unbeaufsichtigt installiert SQL Server mit Python Machine Learning Services](unattended-installs-of-sql-server-python-services.md).
 
-##  <a name="bkmk_installPythonInDatabase"></a>Schritt 1: Installieren von Machine Learning-Dienste (In-Database) auf dem SQLServer
+##  <a name="bkmk_installPythonInDatabase"></a> Schritt 1: Installieren von Machine Learning-Dienste (In-Database) auf dem SQLServer
 
 1. Führen Sie den Setup-Assistenten für SQL Server-2017.
   
@@ -105,7 +105,7 @@ Zum Ausführen einer unbeaufsichtigten Installations verwenden Sie die Befehlsze
 
 6. Nach Abschluss der Installation starten Sie den Computer neu.
 
-##  <a name="bkmk_enableFeature"></a>Schritt 2: Ausführen von Python-Skripts zu aktivieren
+##  <a name="bkmk_enableFeature"></a> Schritt 2: Ausführen von Python-Skripts zu aktivieren
 
 1. Öffnen Sie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. 
 
@@ -168,7 +168,7 @@ Nehmen Sie einen Moment Zeit, um sicherzustellen, dass alle Komponenten, die mit
 > [!NOTE]
 > Spalten oder Überschriften im Python-Skript verwendet, werden nicht, entwurfsbedingt zurückgegeben. Um die Spaltennamen für Ihre Ausgabe hinzufügen, müssen Sie das Schema für die zurückgegebenen Daten Menge angeben. Dies erfolgt mithilfe des Parameters mit der Ergebnisse der gespeicherten Prozedur, benennen die Spalten und Angeben des SQL-Datentyps.
 > 
-> Beispielsweise können Sie die folgende Zeile zum Generieren von einer beliebigen Spaltenname hinzufügen:`WITH RESULT SETS ((Col1 AS int))`
+> Beispielsweise können Sie die folgende Zeile zum Generieren von einer beliebigen Spaltenname hinzufügen: `WITH RESULT SETS ((Col1 AS int))`
 
 ## <a name="step-4-additional-configuration"></a>Schritt 4: Zusätzliche Konfiguration
 
@@ -180,7 +180,7 @@ Wenn Sie einen Fehler beim Ausführen des Befehls erhalten haben, überprüfen S
 > 
 > Nicht alle aufgelisteten Änderungen erforderlich sind, und keine u. u. notwendig sein. Anforderungen richten sich nach Ihrem Sicherheitsschema, in dem Sie installiert SQL Server, und wie Sie erwarten, dass Benutzer eine Verbindung mit der Datenbank und externe Skripts ausführen.
 
-###  <a name="bkmk_configureAccounts"></a>Aktivieren Sie die implizite Authentifizierung für die Kontogruppe Launchpad
+###  <a name="bkmk_configureAccounts"></a> Aktivieren Sie die implizite Authentifizierung für die Kontogruppe Launchpad
 
 Beim Setup werden eine Anzahl neuer Windows-Benutzerkonten angelegt, um Aufgaben unter dem Sicherheitstoken des [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)]-Dienstes ausführen zu können. Wenn ein Benutzer ein Python oder R-Skript von einem externen Client sendet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aktiviert ein Konto Arbeitsthreads verfügbar. Anschließend ordnet er die Identität des aufrufenden Benutzers und führt das Skript im Namen des Benutzers.
 

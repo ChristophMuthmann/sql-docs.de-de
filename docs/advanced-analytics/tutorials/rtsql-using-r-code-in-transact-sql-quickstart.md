@@ -21,11 +21,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Active
-ms.openlocfilehash: d4810554e5ed40a300a902b96ca568f799c63899
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 488661c917690c2ec5af6db40a135c8eb3927db1
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="using-r-code-in-transact-sql-r-in-sql-quickstart"></a>Verwenden von R-Code in Transact-SQL (R in SQL-Schnellstart)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -84,7 +84,7 @@ Für dieses Lernprogramm soll zeigen, wie einfach es ist zum Ausführen von R in
 
 ## <a name="troubleshooting"></a>Problembehandlung
 
-+ Wenn Sie alle Fehler aus dieser Abfrage erhalten haben, kann Installation unvollständig sein. Nach dem Hinzufügen der Funktion mit dem SQL Server-Setup-Assistenten müssen Sie einige zusätzliche Schritte unternehmen, um die Verwendung externer Codebibliotheken zu aktivieren.  Siehe [Set up SQL Server R Services (Einrichten von SQL Server R Services)](../r/set-up-sql-server-r-services-in-database.md).
++ Wenn Sie alle Fehler aus dieser Abfrage erhalten haben, kann Installation unvollständig sein. Nach dem Hinzufügen der Funktion mit dem SQL Server-Setup-Assistenten müssen Sie einige zusätzliche Schritte unternehmen, um die Verwendung externer Codebibliotheken zu aktivieren.  Finden Sie unter [installieren Sie SQL Server 2017 Machine Learning-Services](../install/sql-machine-learning-services-windows-install.md) oder [Installieren von SQL Server 2016 R Services](../install/sql-r-services-windows-install.md).
 
 + Stellen Sie sicher, dass der Launchpad-Dienst ausgeführt wird. Je nach Umgebung kann es erforderlich sein, dass Sie die R-Workerkonten für die Verbindung mit SQL Server aktivieren, zusätzliche Netzwerkbibliotheken installieren, Remotecodeausführung zulassen oder die Instanz neu starten, nachdem alles konfiguriert wurde. Siehe [R Services Installation and Upgrade FAQ (FAQ zu Installation und Upgrade von R Services)](../r/upgrade-and-installation-faq-sql-server-r-services.md).
 

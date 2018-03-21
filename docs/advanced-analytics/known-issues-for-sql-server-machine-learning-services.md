@@ -16,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 2143b576e3104ba2cf707e8fada75471a007a987
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 0e9f4351e74e73453182ff8e8f840f50f0085537
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="known-issues-in-machine-learning-services"></a>Bekannte Probleme in Machine Learning-Diensten
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -94,7 +94,7 @@ Dieses Problem wird in der endgültigen Produktversion behoben. Darüber hinaus 
 
 **Gilt für:** 2017 von SQLServer mit Python
 
-### <a name="bkmk_sqlbindr"></a>Inkompatible Version Warnung, wenn Sie mit einer älteren Version von SQL Server R Services von einem Client mit verbinden[!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]
+### <a name="bkmk_sqlbindr"></a> Inkompatible Version Warnung, wenn Sie mit einer älteren Version von SQL Server R Services von einem Client mit verbinden [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]
 
 Beim Ausführen von R-Code in eine SQL Server 2016-computekontext, möglicherweise die folgende Fehlermeldung angezeigt:
 
@@ -117,7 +117,7 @@ Dieses Problem zu umgehen, können Sie mithilfe der Befehlszeile und angeben die
 
 `C:\<path to installation media>\SQLServer2016-KB3164674-x64.exe /Action=Patch /IACCEPTROPENLICENSETERMS /MRCACHEDIRECTORY=<path to CU1 CAB files>`
 
-Um die neuesten Installationsprogramme zu erhalten, finden Sie unter [Machine Learning-Komponenten ohne Internetzugang installieren](r/installing-ml-components-without-internet-access.md).
+Um die neuesten Installationsprogramme zu erhalten, finden Sie unter [Machine Learning-Komponenten ohne Internetzugang installieren](install/sql-ml-component-install-without-internet-access.md).
 
 **Gilt für:** SQL Server 2016 R Services mit R-Server Version 9.0.0 oder früher
 
@@ -155,7 +155,7 @@ Es ist möglich, rufen Sie die Machine learning-Bibliotheken, die von einer exte
 
 Beispielsweise, selbst wenn Sie die Enterprise Edition von SQL Server verwenden, führt R im Singlethread-Modus beim Ausführen des R-Code mithilfe von externen Tools. Rufen Sie die Vorteile der Leistung in SQL Server eine SQL Server-Verbindung initiieren, und verwenden Sie [Sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) der externen Skriptlaufzeit aufrufen.
 
-Vermeiden Sie generell das Aufrufen von Machine learning-Bibliotheken, die von externen Tools von SQL Server verwendet werden. Wenn Sie zum Debuggen R "oder" Python-Code müssen, ist es in der Regel einfacher dazu außerhalb von SQL Server. Um die gleichen Bibliotheken zu erhalten, die in SQL Server sind, können Sie Microsoft R-Client installieren oder [Machine Learning-Server](r/create-a-standalone-r-server.md).
+Vermeiden Sie generell das Aufrufen von Machine learning-Bibliotheken, die von externen Tools von SQL Server verwendet werden. Wenn Sie zum Debuggen R "oder" Python-Code müssen, ist es in der Regel einfacher dazu außerhalb von SQL Server. Um die gleichen Bibliotheken zu erhalten, die in SQL Server sind, können Sie Microsoft R-Client installieren [SQL Server 2017 Machine Learning-Server (eigenständig)](install/sql-machine-learning-standalone-windows-install.md), oder [SQL Server 2016 R Server (eigenständig)](install/sql-r-standalone-windows-install.md).
 
 ### <a name="sql-server-data-tools-does-not-support-permissions-required-by-external-scripts"></a>Externer Skripts, die erforderlichen Berechtigungen für unterstützt SQL Server Data Tools nicht.
 
@@ -264,7 +264,7 @@ Wenn Sie einen R-Befehl verwenden, um den Arbeitsbereich von Objekten zu deaktiv
 
 Vermeiden Sie dieses Problem zu umgehen, willkürliche Löschen von Variablen und andere Objekte während der Ausführung von R sind [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Obwohl das Löschen des Arbeitsbereichs üblich ist, bei der Arbeit in der R-Konsole, haben sie unerwartete Ergebnisse liefern.
 
-* Um bestimmte Variablen zu löschen, verwenden Sie das R `remove` Funktion: z. B.`remove('name1', 'name2', ...)`
+* Um bestimmte Variablen zu löschen, verwenden Sie das R `remove` Funktion: z. B. `remove('name1', 'name2', ...)`
 * Wenn mehrere zu löschende Variablen vorhanden sind, speichern Sie die Namen temporärer Variablen in einer Liste und führen eine regelmäßige automatische Speicherbereinigung durch.
 
 ### <a name="restrictions-on-data-that-can-be-provided-as-input-to-an-r-script"></a>Einschränkungen von Daten, die als Eingabe für ein R-Skript bereitgestellt werden können
@@ -305,7 +305,7 @@ Beim Senden von Zeichenfolgendaten an R konvertieren sie nach Möglichkeit in ei
 
 Diese Einschränkung gilt für Daten, die auch zwischen SQL Server und Python übergeben. Mehrbytezeichen sollte als UTF-8 übergeben und als Unicode gespeichert werden.
 
-### <a name="only-one-value-of-type-raw-can-be-returned-from-spexecuteexternalscript"></a>Nur ein Wert vom Typ `raw` zurückgegeben werden`sp_execute_external_script`
+### <a name="only-one-value-of-type-raw-can-be-returned-from-spexecuteexternalscript"></a>Nur ein Wert vom Typ `raw` zurückgegeben werden `sp_execute_external_script`
 
 Bei einem binären Datentyp (der R **unformatierten** -Datentyp) von R zurückgegeben wird, muss der Wert im ausgabedatenrahmen entsprechen gesendet werden.
 
@@ -436,7 +436,7 @@ Ab SQL Server 2017 CU2, möglicherweise die folgende Meldung angezeigt, selbst w
 
 > *Stderr-Meldung(en) aus dem externen Skript:*
 > **~PYTHON_SERVICES\lib\site-packages\revoscalepy\utils\RxTelemetryLogger*
-> *SyntaxWarning: Telemetry_state wird vor der globale Deklaration verwendet.*
+> *SyntaxWarning: Telemetry_state ist vor der globale Deklaration verwendet*
 
 
 Dieses Problem wurde in SQL Server 2017 kumulative Update 3 (CU3) behoben. 

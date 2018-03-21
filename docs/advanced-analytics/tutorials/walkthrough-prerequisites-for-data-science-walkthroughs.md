@@ -19,11 +19,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 6ac8e646c93c0371f959afc212601e5abe0de213
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 35738101548f3b0790131c8106bb37e482cc7316
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="prerequisites-for-the-data-science-walkthrough-for-sql-server-and-r"></a>Voraussetzungen für die Data sience-Vorgehensweise für SQL Server und R
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -39,7 +39,7 @@ Sie benötigen Zugriff auf eine Instanz von SQL Server mit Unterstützung für R
 + Für SQLServer 2017 Machine Learning-Services (Datenbankintern)
 + SQL Server 2016 R Services
 
-Weitere Informationen finden Sie unter [Einrichten von SQL Server R Services (Datenbankintern](../r/set-up-sql-server-r-services-in-database.md).
+Weitere Informationen finden Sie unter [installieren Sie SQL Server 2017 Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) oder [Installieren von SQL Server 2016 R Services](../install/sql-r-services-windows-install.md).
 
 > [!IMPORTANT]
 > SQL Server-Versionen vor als 2016-Integration in r unterstützen nicht Allerdings können Sie die SQL-Datenbanken, die älter sind als ODBC-Datenquelle.
@@ -52,7 +52,7 @@ In dieser exemplarischen Vorgehensweise wird empfohlen, dass Sie eine R-Entwickl
 
 - **Microsoft R Client** ist ein lightweight-Webentwicklungstool, die Entwicklung mit dem "revoscaler"-Paket r unterstützt. Unter [Erste Schritte mit Microsoft R Client](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client)können Sie es herunterladen.
 
-- **RStudio** ist eine der beliebtesten Umgebungen für die Entwicklung von R. Weitere Informationen finden Sie unter [https://www.rstudio.com/products/RStudio/](https://www.rstudio.com/products/RStudio/).
+- **RStudio** ist eine der beliebtesten Umgebungen für die Entwicklung von R. Weitere Informationen finden Sie unter [ https://www.rstudio.com/products/RStudio/ ](https://www.rstudio.com/products/RStudio/).
 
     Dieses Lernprogramm, die Verwendung einer generischen Installation RStudio oder anderen Umgebung kann nicht abgeschlossen werden; Sie müssen auch das R-Pakete und verbindungsbibliotheken für Microsoft R Open installieren. Weitere Informationen finden Sie unter [Einrichten eines Data Science-Clients](../r/set-up-a-data-science-client.md).
 

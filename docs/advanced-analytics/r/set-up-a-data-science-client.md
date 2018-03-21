@@ -15,11 +15,11 @@ caps.latest.revision:
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
-ms.openlocfilehash: 80b4898397cd0cb6460b379d91be81eb28cd9b87
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 160dae2d84c84aeaecaa07ec16be681fabde5534
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="set-up-a-data-science-client-for-use-with-sql-server"></a>Einrichten eines Data Science-Clients für die Verwendung mit SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -38,13 +38,13 @@ Um diese Bibliotheken zu erhalten, installieren Sie eine der folgenden:
 
 + Microsoft R Server (für SQLServer 2016)
 
-    - Zur Installation von SQL Server-Setup finden Sie unter [erstellen Sie einen eigenständigen R-Server](../../advanced-analytics/r/create-a-standalone-r-server.md)
+    - Zur Installation von SQL Server-Setup finden Sie unter [Installieren von SQL Server 2016 R Server (eigenständig)](../install/sql-r-standalone-windows-install.md)
 
     - Um separate Windows-basierten Installationsprogramm verwenden zu können, finden Sie unter [Machine Learning-Server für Windows installieren](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install)
 
 + Machine Learning-Server (für SQLServer 2017)
 
-    - Zur Installation von SQL Server-Setup finden Sie unter [erstellen Sie einen eigenständigen R-Server](../../advanced-analytics/r/create-a-standalone-r-server.md)
+    - Zur Installation von SQL Server-Setup finden Sie unter [installieren Sie SQL Server 2017 Machine Learning-Server (eigenständig)](../install/sql-machine-learning-standalone-windows-install.md)
 
     - Um separate Windows-basierten Installationsprogramm verwenden zu können, finden Sie unter [Installieren von R Server 9.1 für Windows](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows)
 
