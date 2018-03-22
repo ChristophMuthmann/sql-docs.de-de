@@ -2,15 +2,15 @@
 title: Bookmark-Eigenschaft (ADO) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
-ms.date: 01/19/2017
-ms.reviewer: 
+ms.custom: ''
+ms.date: 03/20/2018
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 apitype: COM
 f1_keywords:
@@ -18,16 +18,16 @@ f1_keywords:
 helpviewer_keywords:
 - Bookmark property [ADO]
 ms.assetid: 481dcc93-487b-490e-ac58-a1e9b2ebfd43
-caps.latest.revision: 
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3c6076acd2bde7e82bf142bad76093d582106877
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 59cc184403fff8b152ee7eabbdf823abd6c3d4bc
+ms.sourcegitcommit: ccb05cb5a4cccaf7ffa9e85a4684fa583bab914e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="bookmark-property-ado"></a>Bookmark-Eigenschaft (ADO)
 Gibt ein Lesezeichen, die eindeutig für den aktuellen Datensatz in einer [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) -Objekt, oder legt den aktuellen Datensatz einer **Recordset** -Objekt, das durch ein gültiges Lesezeichen identifizierten Datensatz.  
@@ -40,7 +40,7 @@ Gibt ein Lesezeichen, die eindeutig für den aktuellen Datensatz in einer [Recor
   
  Beim Öffnen einer **Recordset** Objekt, jeder Datensatz hat ein eindeutiges Lesezeichen. Um das Lesezeichen für den aktuellen Datensatz zu speichern, weisen Sie den Wert der **Lesezeichen** Eigenschaft einer Variablen. Um schnell an diesen Datensatz zu einem beliebigen Zeitpunkt nach dem Verschieben zu einem anderen Datensatz zurückzugeben, legen Sie die **Recordset** des Objekts **Lesezeichen** -Eigenschaft auf den Wert dieser Variablen.  
   
- Der Benutzer kann möglicherweise nicht den Wert des Lesezeichens anzuzeigen. Außerdem erwarten Benutzer nicht direkt vergleichbar sein, Lesezeichen??? zwei Lesezeichen, die auf den gleichen Datensatz verweisen möglicherweise unterschiedliche Werte.  
+ Der Benutzer kann möglicherweise nicht den Wert des Lesezeichens anzuzeigen. Darüber hinaus sollten Benutzer nicht erwarten, dass Lesezeichen direkt vergleichbar sein, da zwei Lesezeichen, die auf den gleichen Datensatz verweisen unterschiedliche Werte haben können.  
   
  Bei Verwendung von der [Klon](../../../ado/reference/ado-api/clone-method-ado.md) Methode, um eine Kopie erstellen eine **Recordset** -Objekt, das **Lesezeichen** -eigenschafteneinstellungen für die ursprüngliche und das Duplikat **Recordset**  Objekte identisch sind, und Sie können diese Synonym verwenden. Allerdings können keine Lesezeichen aus verschiedenen **Recordset** Objekte Synonym verwenden lassen, auch wenn sie über die Quelle oder der Befehl erstellt wurden.  
   
