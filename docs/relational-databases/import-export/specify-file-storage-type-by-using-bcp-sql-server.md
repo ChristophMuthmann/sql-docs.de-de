@@ -1,16 +1,16 @@
 ---
 title: Angeben des Dateispeichertyps mithilfe von bcp (SQL Server) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: import-export
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-bulk-import-export
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - bcp utility [SQL Server], file storage types
@@ -19,14 +19,14 @@ helpviewer_keywords:
 - file storage types [SQL Server]
 - data formats [SQL Server], file storage types
 ms.assetid: 85e12df8-1be7-4bdc-aea9-05aade085c06
-caps.latest.revision: 
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 0b3ea3ad1c9c467925e50e4fdc337d2dd99c858b
 ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 03/20/2018
 ---
@@ -53,11 +53,11 @@ ms.lasthandoff: 03/20/2018
     |**varchar**|**c[har]**|  
     |**nchar**|**w**|  
     |**nvarchar**|**w**|  
-    |**Text***\*|**T**[**ext**]|  
+    |**Text**\*\*|**T**[**ext**]|  
     |**ntext2**|**W**|  
     |**binary**|**x**|  
     |**varbinary**|**x**|  
-    |**Image***\*|**I**[**mage**]|  
+    |**Image**\*\*|**I**[**mage**]|  
     |**datetime**|**d[ate]**|  
     |**smalldatetime**|**D**|  
     |**Uhrzeit**|**te**|  
@@ -94,11 +94,11 @@ ms.lasthandoff: 03/20/2018
 |**varchar**|SQLCHAR|  
 |**nchar**|SQLNCHAR|  
 |**nvarchar**|SQLNCHAR|  
-|**Text***\*|SQLCHAR|  
-|**NText***\*|SQLNCHAR|  
+|**Text**\*\*|SQLCHAR|  
+|**NText**\*\*|SQLNCHAR|  
 |**binary**|SQLBINARY|  
 |**varbinary**|SQLBINARY|  
-|**Image***\*|SQLBINARY|  
+|**Image**\*\*|SQLBINARY|  
 |**datetime**|SQLDATETIME|  
 |**smalldatetime**|SQLDATETIM4|  
 |**decimal**|SQLDECIMAL|  
