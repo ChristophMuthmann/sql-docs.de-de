@@ -1,16 +1,16 @@
 ---
 title: Angeben von Feld- und Zeilenabschlusszeichen (SQL Server) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 08/10/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: import-export
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-bulk-import-export
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - bcp utility [SQL Server], terminators
@@ -19,14 +19,14 @@ helpviewer_keywords:
 - row terminators [SQL Server]
 - terminators [SQL Server]
 ms.assetid: f68b6782-f386-4947-93c4-e89110800704
-caps.latest.revision: 
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 8d596be8f4ae978a3eafe58d1cf9e8e52241f49c
 ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 03/20/2018
 ---
@@ -46,13 +46,13 @@ ms.lasthandoff: 03/20/2018
 |Neue-Zeile-Zeichen|\n<br /><br /> Dies ist das Standardzeilenabschlusszeichen.|  
 |Wagenrücklauf/Zeilenvorschub|\r|  
 |Umgekehrter Schrägstrich*|\\\|  
-|NULL-Abschlusszeichen (nicht sichtbares Abschlusszeichen)**|\0|  
+|NULL-Abschlusszeichen (nicht sichtbares Abschlusszeichen)\*\*|\0|  
 |Jedes Zeichen, das gedruckt werden kann (Steuerzeichen können nicht gedruckt werden, ausgenommen Null, Tabstopp, Neue Zeile und Wagenrücklauf)|(*, A, t, l usw.)|  
-|Eine Zeichenfolge von bis zu 10 Zeichen, die gedruckt werden können, einschließlich einiger oder aller oben aufgeführten Abschlusszeichen|(**\t\*\*, Ende, !!!!!!!!!!, \t - \n usw.)|  
+|Eine Zeichenfolge von bis zu 10 Zeichen, die gedruckt werden können, einschließlich einiger oder aller oben aufgeführten Abschlusszeichen|(\*\*\t\*\*, Ende, !!!!!!!!!!, \t - \n usw.)|  
   
  *Um ein Steuerzeichen zu erzeugen, können in Verbindung mit dem Escapezeichen des umgekehrten Schrägstrichs nur die Zeichen t, n, r, 0 und '\0' verwendet werden.  
   
- **Obwohl das NULL-Steuerzeichen (\0) beim Drucken nicht sichtbar ist, handelt es sich dabei um ein eigenständiges Zeichen in der Datendatei. Dies bedeutet, dass das Verwenden des Null-Steuerzeichens als Feld- oder Zeilenabschlusszeichen einen Unterschied dazu darstellt, überhaupt kein Feld- oder Zeilenabschlusszeichen zu verwenden.  
+ \*\*Obwohl das NULL-Steuerzeichen (\0) beim Drucken nicht sichtbar ist, handelt es sich dabei um ein eigenständiges Zeichen in der Datendatei. Dies bedeutet, dass das Verwenden des Null-Steuerzeichens als Feld- oder Zeilenabschlusszeichen einen Unterschied dazu darstellt, überhaupt kein Feld- oder Zeilenabschlusszeichen zu verwenden.  
   
 > [!IMPORTANT]  
 >  Wenn ein Abschlusszeichen innerhalb der Daten auftritt, wird es als Abschlusszeichen, nicht als Daten interpretiert, und die Daten nach diesem Zeichen als zum nächsten Feld oder Datensatz zugehörig interpretiert. Wählen Sie deshalb die Abschlusszeichen mit Bedacht aus, um sicherzustellen, dass sie nicht anderweitig in Ihren Daten vorkommen. Beispielsweise ist ein niedriges Ersatzzeichen als Feldabschlusszeichen keine gute Wahl, wenn die Daten dieses niedrige Ersatzzeichen enthalten.  
