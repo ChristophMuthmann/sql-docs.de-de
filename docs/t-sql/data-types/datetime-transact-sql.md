@@ -50,7 +50,7 @@ Definiert ein Datum, das mit einer Uhrzeit mit Sekundenbruchteilen kombiniert is
 |Syntax|**datetime**|  
 |Verwendung|DECLARE @MyDatetime **datetime**<br /><br /> CREATE TABLE Table1 ( Column1 **datetime** )|  
 |Standardmäßige Formate der Zeichenfolgenliterale<br /><br /> (wird für Downlevelclients verwendet)|Nicht verfügbar|  
-|Datumsbereich|Zwischen dem 01.01.53 und dem 31.12.99|  
+|Datumsbereich|Zwischen dem 01.01.1753 und dem 31.12.9999|  
 |Uhrzeitbereich|00:00:00 bis 23:59:59.997|  
 |Zeitzonenoffsetbereich|InclusionThresholdSetting|  
 |Elementbereiche|Bei YYYY handelt es sich um vier Ziffern von 1753 bis 9999, die ein Jahr darstellen.<br /><br /> Bei MM handelt es sich um zwei Ziffern im Bereich von 01 bis 12, die im angegebenen Jahr einen Monat darstellen.<br /><br /> Bei DD handelt es sich um zwei Ziffern im Bereich von 01 bis 31, die im angegebenen Monat einen Tag darstellen.<br /><br /> Bei hh handelt es sich um zwei Ziffern im Bereich von 00 bis 23, die die Stunde darstellen.<br /><br /> Bei mm handelt es sich um zwei Ziffern im Bereich von 00 bis 59, die die Minute darstellen.<br /><br /> Bei ss handelt es sich um zwei Ziffern im Bereich von 00 bis 59, die die Sekunde darstellen.<br /><br /> Bei n* handelt es sich um drei Ziffern im Bereich von 0 bis 999, die die Sekundenbruchteile darstellen.|  
