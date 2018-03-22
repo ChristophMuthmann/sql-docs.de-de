@@ -1,21 +1,21 @@
 ---
-title: "Optionen für die Anforderung für Spaltenmusterprofil (Datenprofilerstellungs-Task) | Microsoft-Dokumentation"
-ms.custom: 
+title: Optionen für die Anforderung für Spaltenmusterprofil (Datenprofilerstellungs-Task) | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: control-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: 9ccb8fc5-f65e-41a2-9511-7fa55586eb8b
-caps.latest.revision: 
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
@@ -135,7 +135,7 @@ ms.lasthandoff: 02/15/2018
  Weitere Informationen finden Sie unter "Grundlegendes zur Verwendung von Trennzeichen und Symbolen" in diesem Thema.  
   
  **Symbols**  
- Führen Sie die Symbole auf, die als Teil von Mustern beibehalten werden sollen. Beispiele könnten "/" für Datumsangaben, ":" für Uhrzeiten und "@" für E-Mail-Adressen enthalten. Standardmäßig enthält die Liste der **Symbole** die folgenden Zeichen: `,.;:-"'~=&/@!?()<>[]{}|#*^%`.  
+ Führen Sie die Symbole auf, die als Teil von Mustern beibehalten werden sollen. Beispiele könnten "/" für Datumsangaben, ":" für Uhrzeiten und "@" für E-Mail-Adressen enthalten. Standardmäßig enthält die Liste der  **Symbole**  die folgenden Zeichen: `,.;:-"'~=&/@!?()<>[]{}|#*^%`.  
   
  Weitere Informationen finden Sie unter "Grundlegendes zur Verwendung von Trennzeichen und Symbolen" in diesem Thema.  
   
