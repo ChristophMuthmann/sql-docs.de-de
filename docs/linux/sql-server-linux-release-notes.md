@@ -4,7 +4,7 @@ description: Dieser Artikel enthält die Versionshinweise und Funktionen für SQ
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 03/21/2018
+ms.date: 03/22/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -15,11 +15,11 @@ ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
 ms.workload: Active
-ms.openlocfilehash: 22c0bd360cd7b5cb6ac9dcc058a417d243b0fb3f
-ms.sourcegitcommit: ccb05cb5a4cccaf7ffa9e85a4684fa583bab914e
+ms.openlocfilehash: b6f6f6b19b145dfcaf4a59e8cf871bc1cb0c214a
+ms.sourcegitcommit: 270de8a0260fa3c0ecc37f91eec4a5aee9b9834a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Versionshinweise für SQL Server-2017 unter Linux
 
@@ -70,6 +70,24 @@ Wenn Sie vorhandene SQL Server-Pakete aktualisieren, führen Sie das entsprechen
 ## <a id="CU5"></a> CU5 (März 2018)
 
 Dies ist das kumulative Update 5 (CU5)-Version von SQL Server-2017. Die Version des SQL Server-Datenbankmodul für diese Version ist 14.0.3023.8. Informationen zu den Korrekturen und Verbesserungen in dieser Version finden Sie unter [ https://support.microsoft.com/help/4092643 ](https://support.microsoft.com/help/4092643).
+
+### <a name="known-upgrade-issue"></a>Bekanntes Problem
+
+Wenn Sie von einer früheren Version auf CU5 aktualisieren, kann SQL Server nicht gestartet mit folgendem Fehler:
+
+```
+Error: 4860, Severity: 16, State: 1.
+Cannot bulk load. The file "C:\Install\SqlTraceCollect.dtsx" does not exist or you don't have file access rights.
+Error: 912, Severity: 21, State: 2.
+Script level upgrade for database 'master' failed because upgrade step 'msdb110_upgrade.sql' encountered error 200, state
+```
+
+Um diesen Fehler zu beheben, aktivieren Sie SQL Server-Agent, und starten Sie SQL Server mit den folgenden Befehlen neu:
+
+```bash
+sudo /opt/mssql/bin/mssql-conf set sqlagent.enabled true
+sudo systemctl start mssql-server
+```
 
 ### <a name="package-details"></a>Details zum Paket
 
