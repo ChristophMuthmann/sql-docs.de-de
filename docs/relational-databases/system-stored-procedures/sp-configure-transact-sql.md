@@ -1,16 +1,16 @@
 ---
 title: Sp_configure (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/16/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, pdw
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_configure
@@ -20,24 +20,26 @@ dev_langs:
 helpviewer_keywords:
 - sp_configure
 ms.assetid: d18b251d-b37a-4f5f-b50c-502d689594c8
-caps.latest.revision: 
+caps.latest.revision: ''
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: d6ff78066f307e70f37880eb57e2430774c242ae
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 63ab5d253d26375b3f53cb0f38ffa96f56e0a93d
+ms.sourcegitcommit: 270de8a0260fa3c0ecc37f91eec4a5aee9b9834a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="spconfigure-transact-sql"></a>sp_configure (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/t-sql-appliesto-ss-asdbmi-xxxx-pwd-md.md)]
 
-  Mit dieser Prozedur können globale Konfigurationseinstellungen für den aktuellen Server angezeigt oder geändert werden.  
+  Mit dieser Prozedur können globale Konfigurationseinstellungen für den aktuellen Server angezeigt oder geändert werden.
+
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
   
 > [!NOTE]  
->  Auf Datenbankebene-Konfigurationsoptionen finden Sie unter [ALTER DATABASE SCOPED CONFIGURATION &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md). Zum Konfigurieren von Soft-NUMA finden Sie unter [Soft-NUMA &#40; SQLServer &#41; ](../../database-engine/configure-windows/soft-numa-sql-server.md).  
+>  Auf Datenbankebene-Konfigurationsoptionen finden Sie unter [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md). Zum Konfigurieren von Soft-NUMA finden Sie unter [Soft-NUMA &#40;SQL Server&#41;](../../database-engine/configure-windows/soft-numa-sql-server.md).  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -66,12 +68,12 @@ RECONFIGURE
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@configname=** ] **'***option_name***'**  
+ [ **@configname=** ] **'***Optionsname***'**  
  Der Name einer Konfigurationsoption. *option_name* ist vom Datentyp **varchar(35)**. Der Standardwert ist NULL. Von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] wird jede eindeutige Zeichenfolge erkannt, die Teil des Konfigurationsnamens ist. Erfolgt keine Angabe, wird die gesamte Liste der Optionen zurückgegeben.  
   
- Informationen zu den verfügbaren Konfigurationsoptionen und ihren Einstellungen finden Sie unter [Serverkonfigurationsoptionen &#40; SQLServer &#41; ](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
+ Informationen zu den verfügbaren Konfigurationsoptionen und ihren Einstellungen finden Sie unter [Serverkonfigurationsoptionen &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
   
- [ **@configvalue=** ] **'***value***'**  
+ [ **@configvalue=** ] **'***Wert***'**  
  Die neue Konfigurationseinstellung. *value* ist vom Datentyp **int**. Der Standardwert ist NULL. Der Maximalwert kann je nach Option unterschiedlich sein.  
   
  Der maximale Wert für die einzelnen Optionen finden Sie unter der **maximale** Spalte die **sys.configurations** -Katalogsicht angezeigt.  
@@ -89,8 +91,8 @@ RECONFIGURE
 |**name**|**nvarchar(35)**|Der Name der Konfigurationsoption.|  
 |**minimum**|**int**|Der Mindestwert der Konfigurationsoption.|  
 |**maximum**|**int**|Der Höchstwert der Konfigurationsoption.|  
-|**config_value**|**int**|Wert, dem Festlegen der Konfigurationsoption wurde mit **Sp_configure** (Wert in **sysconfigures.Value**). Weitere Informationen zu diesen Optionen finden Sie unter [Serverkonfigurationsoptionen &#40; SQLServer &#41; ](../../database-engine/configure-windows/server-configuration-options-sql-server.md) und [sys.configurations &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md).|  
-|**run_value**|**int**|Aktuell ausgeführter Wert der Konfigurationsoption (Wert in **value_in_use**).<br /><br /> Weitere Informationen finden Sie unter [sys.configurations &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md).|  
+|**config_value**|**int**|Wert, dem Festlegen der Konfigurationsoption wurde mit **Sp_configure** (Wert in **sysconfigures.Value**). Weitere Informationen zu diesen Optionen finden Sie unter [Serverkonfigurationsoptionen &#40;SQL Server&#41; ](../../database-engine/configure-windows/server-configuration-options-sql-server.md) und [sys.configurations &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md).|  
+|**run_value**|**int**|Aktuell ausgeführter Wert der Konfigurationsoption (Wert in **value_in_use**).<br /><br /> Weitere Informationen finden Sie unter [sys.configurations &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md).|  
   
 ## <a name="remarks"></a>Hinweise  
  Verwendung **Sp_configure** anzeigen oder Ändern von Einstellungen auf Serverebene. Zum Ändern von Einstellungen auf Datenbankebene können Sie ALTER DATABASE verwenden. Wenn Einstellungen geändert werden sollen, die nur die aktuelle Benutzersitzung betreffen, verwenden Sie die SET-Anweisung.  
@@ -110,12 +112,12 @@ RECONFIGURE
 > [!NOTE]  
 >  Wenn ein angegebener *Wert* ist zu hoch für eine Option der **Run_value** Spalte gibt die Tatsache wieder, die die [!INCLUDE[ssDE](../../includes/ssde-md.md)] hat standardmäßig dynamischer Arbeitsspeicher statt verwenden Sie eine Einstellung, die nicht gültig ist.  
   
- Weitere Informationen finden Sie unter [RECONFIGURE &#40; Transact-SQL &#41; ](../../t-sql/language-elements/reconfigure-transact-sql.md).  
+ Weitere Informationen finden Sie unter [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md).  
   
 ## <a name="advanced-options"></a>Erweiterte Optionen  
  Einige Konfigurationsoptionen, z. B. **Affinitätsmaske** und **Wiederherstellungsintervall**, werden als erweiterte Optionen bezeichnet. Diese Optionen stehen zum Anzeigen und Ändern nicht zur Verfügung. Um sie verfügbar machen, legen Sie die **ShowAdvancedOptions** Konfigurationsoption auf 1.  
   
- Weitere Informationen zu den Konfigurationsoptionen und ihren Einstellungen finden Sie unter [Serverkonfigurationsoptionen &#40; SQLServer &#41; ](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
+ Weitere Informationen zu den Konfigurationsoptionen und ihren Einstellungen finden Sie unter [Serverkonfigurationsoptionen &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
   
 ## <a name="permissions"></a>Berechtigungen  
  Die Ausführungsberechtigungen für **sp_configure** ohne Parameter oder nur mit dem ersten Parameter werden standardmäßig allen Benutzern erteilt. Auszuführende **Sp_configure** mit beiden Parametern zum Ändern einer Konfigurationsoption oder zum Ausführen der RECONFIGURE-Anweisung, Sie müssen die Berechtigung ALTER SETTINGS auf Serverebene. Die ALTER SETTINGS-Berechtigung ist in den festen Serverrollen **sysadmin** und **serveradmin** eingeschlossen.  
@@ -150,7 +152,7 @@ EXEC sp_configure 'recovery interval', '3';
 RECONFIGURE WITH OVERRIDE;  
 ```  
   
-## <a name="examples-includesspdwincludessspdw-mdmd"></a>Beispiele:[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-list-all-available-configuration-settings"></a>C. Auflisten aller verfügbaren Konfigurationseinstellungen  
  Im folgenden Beispiel wird dargestellt, wie alle Konfigurationsoptionen aufgelistet werden.  
@@ -168,10 +170,10 @@ EXEC sp_configure @configname='hadoop connectivity';
 ```  
   
 ### <a name="e-set-hadoop-connectivity"></a>E. Festlegen der Hadoop-Konnektivität  
- Festlegen der Hadoop-Konnektivität erfordert einige zusätzliche Schritte neben dem Ausführen von Sp_configure. Das vollständige Verfahren finden Sie unter [CREATE EXTERNAL DATA SOURCE &#40; Transact-SQL &#41; ](../../t-sql/statements/create-external-data-source-transact-sql.md).  
+ Festlegen der Hadoop-Konnektivität erfordert einige zusätzliche Schritte neben dem Ausführen von Sp_configure. Das vollständige Verfahren finden Sie unter [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
+ [RECONFIGURE &#40; Transact-SQL &#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [SET-Anweisungen (Transact-SQL)](../../t-sql/statements/set-statements-transact-sql.md)   
  [Serverkonfigurationsoptionen &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   

@@ -1,33 +1,33 @@
 ---
-title: "Node.js-Treiber für SQLServer | Microsoft Docs"
-ms.custom: 
+title: Node.js-Treiber für SQLServer | Microsoft Docs
+ms.custom: ''
 ms.date: 08/08/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.component: node-js
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: c4cdbfa6-9b73-4b72-a1a6-e1b45d8a773d
-caps.latest.revision: 
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 85c5c9f1fe80893c9d778c6e1cfb7ce889aa1c61
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: 5cf72af4ebd9b00c06b80a64cd6f3017d9cd4a63
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="nodejs-driver-for-sql-server"></a>Node.js-Treiber für SQLServer
 
 ![Download-nach-unten-Eingekreister](../../ssdt/media/download.png)[zum Herunterladen der Node.js SQL-Treiber](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-Das mühsame Modul ist ein Javascript-Implementierung des TDS-Protokolls, das von allen modernen Version von SQL Server unterstützt wird. Der Treiber ist ein open Source-Projekte auf Github.  
+Das mühsame Modul ist ein Javascript-Implementierung des TDS-Protokolls, das von allen modernen SQL Server-Versionen unterstützt wird. Der Treiber ist eine Open-Source-Projekt, das auf Github verfügbar.  
   
 Sie können eine Verbindung mit einer SQL-Datenbank, die mit Node.js unter Windows, Linux oder Mac herstellen  
   
