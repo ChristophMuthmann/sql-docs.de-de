@@ -1,16 +1,16 @@
 ---
-title: "Importieren von Daten aus früheren SQL Server-Versionen im nativen Format oder im Zeichenformat | Microsoft-Dokumentation"
-ms.custom: 
+title: Importieren von Daten aus früheren SQL Server-Versionen im nativen Format oder im Zeichenformat | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: import-export
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-bulk-import-export
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - earlier versions [SQL Server], import and export data formats
@@ -18,14 +18,14 @@ helpviewer_keywords:
 - data formats [SQL Server], earlier versions
 - previous versions [SQL Server], import and export data formats
 ms.assetid: e644696f-9017-428e-a5b3-d445d1c630b3
-caps.latest.revision: 
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: b80ad93883e5ef5d1fa907116e2c4fa5b4a264f5
 ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 03/20/2018
 ---
@@ -53,11 +53,11 @@ ms.lasthandoff: 03/20/2018
 |**nvarchar(max)**|**ntext**|**ntext**|**ntext**|  
 |**varbinary(max)**|**image**|**image**|**image**|  
 |XML|**ntext**|**ntext**|**ntext**|  
-|UDT**|**image**|**image**|**image**|  
+|UDT\*\*|**image**|**image**|**image**|  
   
  *Dieser Typ wird nativ unterstützt.  
   
- **UDT gibt einen benutzerdefinierten Typ an.  
+ \*\*UDT gibt einen benutzerdefinierten Typ an.  
   
 ## <a name="exporting-using-v-80"></a>Exportieren mit –V 80  
  Bei einem Massenexport von Daten mithilfe des **–V80** -Schalters werden Daten vom Typ **nvarchar(max)**, **varchar(max)**, **varbinary(max)**, XML und UDT – wie Daten vom Typ **text**, **image**und **ntext** – anstatt mit einem 8-Byte-Präfix mit einem 4-Byte-Präfix im einheitlichen Modus gespeichert. Dies ist der Standardwert für [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] und höhere Versionen.  

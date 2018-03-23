@@ -1,16 +1,16 @@
 ---
 title: Datenprofilerstellungs-Task | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: control-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.dataprofilingtask.f1
@@ -19,14 +19,14 @@ helpviewer_keywords:
 - data profiling
 - profiling data
 ms.assetid: 248ce233-4342-42c5-bf26-f4387ea152cf
-caps.latest.revision: 
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 62c240d11e15eea39fb7246d147680b39370c7a6
 ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 03/20/2018
 ---
@@ -81,7 +81,7 @@ ms.lasthandoff: 03/20/2018
 |Profil|Gültige Datentypen*|  
 |-------------|------------------------|  
 |Spaltenstatistikprofil|Spalten vom numerischen Typ oder **datetime** -Typ (kein **mean** und **stddev** für **datetime** -Spalte)|  
-|Profil für Spalten-NULL-Verhältnis|Alle Spalten**|  
+|Profil für Spalten-NULL-Verhältnis|Alle Spalten\*\*|  
 |Verteilungsprofil für Spaltenwerte|Die Spalten müssen vom **integer** -Typ, vom **char** -Typ und vom **datetime** -Typ sein.|  
 |Verteilungsprofil für Spaltenlänge|Die Spalten müssen vom **char** -Typ sein.|  
 |Spaltenmusterprofil|Die Spalten müssen vom **char** -Typ sein.|  
