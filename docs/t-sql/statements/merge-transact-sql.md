@@ -1,16 +1,16 @@
 ---
 title: MERGE (Transact-SQL) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - MERGE
@@ -27,7 +27,7 @@ helpviewer_keywords:
 - data manipulation language [SQL Server], MERGE statement
 - inserting data
 ms.assetid: c17996d6-56a6-482f-80d8-086a3423eecc
-caps.latest.revision: 
+caps.latest.revision: ''
 author: edmacauley
 ms.author: edmaca
 manager: craigg
@@ -43,7 +43,7 @@ ms.lasthandoff: 11/21/2017
 
   Führt Einfüge-, Update- oder Löschvorgänge in einer Zieltabelle anhand der Ergebnisse eines Joins mit einer Quelltabelle aus. Sie können z.&nbsp;B. zwei Tabellen synchronisieren, indem Sie Zeilen in einer Tabelle anhand von Unterschieden, die in der anderen Tabelle gefunden wurden, einfügen, aktualisieren oder löschen.  
   
- **Leistungstipp:** Das für die MERGE-Anweisung beschriebene bedingte Verhalten funktioniert am besten, wenn die beiden Tabellen eine komplexe Mischung von übereinstimmenden Eigenschaften haben. Beispielsweise das Einfügen einer Zeile, wenn keine vorhanden ist, oder das Aktualisieren der Zeile, wenn sie übereinstimmt. Beim Aktualisieren einer Tabelle basierend auf den Zeilen einer anderen Tabelle einfach, können mit grundlegenden INSERT-, Update- und DELETE-Anweisungen verbesserte Leistung und Skalierbarkeit erreicht werden. Zum Beispiel:  
+ **Leistungstipp:** Das für die MERGE-Anweisung beschriebene bedingte Verhalten funktioniert am besten, wenn die beiden Tabellen eine komplexe Mischung von übereinstimmenden Eigenschaften haben. Beispielsweise das Einfügen einer Zeile, wenn keine vorhanden ist, oder das Aktualisieren der Zeile, wenn sie übereinstimmt. Wenn Sie eine Tabelle einfach nur basierend auf den Zeilen einer anderen Tabelle aktualisieren, können Sie mit den grundlegenden INSERT-, UPDATE- und DELETE-Anweisungen eine bessere Leistung oder mehr Skalierbarkeit erzielen. Zum Beispiel:  
   
 ```  
 INSERT tbl_A (col, col2)  
