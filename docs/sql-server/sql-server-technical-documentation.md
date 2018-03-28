@@ -3,13 +3,13 @@ title: SQL Server-Dokumentation | Microsoft-Dokumentation
 ms.date: 02/28/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
-ms.service: 
+ms.service: ''
 ms.component: sql-non-specified
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.custom: 
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.custom: ''
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.portal.f1
@@ -22,16 +22,16 @@ helpviewer_keywords:
 - Books Online [SQL Server], home page
 - portal page [SQL Server]
 ms.assetid: 674933a8-e423-4d44-a39b-2a997e2c2333
-caps.latest.revision: 
+caps.latest.revision: ''
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 84c0a18929883f0a58e75ed5ce20900d0bdf09e7
-ms.sourcegitcommit: 1a3584a60c12521ba5b4b12a18d8cb32b1f2d555
+ms.openlocfilehash: 8868bbce17a31e72d55cbdca3e7badb00e66666e
+ms.sourcegitcommit: ccb05cb5a4cccaf7ffa9e85a4684fa583bab914e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="sql-server-documentation"></a>SQL Server-Dokumentation
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ SQL Server ist ein zentraler Bestandteil der Microsoft-Datenplattform. SQL Serve
 |||
 |-|-|    
 |![SQL-Datenbankmodul](../sql-server/media/sql-database-engine.png "SQL-Datenbankmodul")|**[Datenbankmodul](../database-engine/sql-server-database-engine-overview.md)**<br /><br /> Das Datenbankmodul ist der Kerndienst zum Speichern, Verarbeiten und Sichern von Daten. Das Datenbankmodul stellt kontrollierten Zugriff und schnelle Transaktionsverarbeitung bereit. So können Sie auch hohe Anforderungen von Daten verarbeitenden Anwendungen in Ihrem Unternehmen zu erfüllen. Das Datenbankmodul stellt darüber hinaus vielfältige Unterstützung für die Aufrechterhaltung von Hochverfügbarkeit bereit.|
-|![Integration Services](../sql-server/media/integration-services.png "Integration Services")|**[Integration Services](../integration-services/sql-server-integration-services.md)**<br /><br /> [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ist eine Konstruktionsplattform für Hochleistungslösungen im Bereich Datenintegration, einschließlich Data Warehouse-Paketen zum Extrahieren, Transformieren und Laden (ETL) von Daten.|    
+|![Integration Services](../sql-server/media/integration-services.png "Integration Services")|**[Integration Services](../integration-services/sql-server-integration-services.md)**<br /><br /> [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ist eine Plattform für das Entwickeln von Hochleistungslösungen im Bereich Datenintegration, einschließlich Paketen zum Extrahieren, Transformieren und Laden (ETL) von Daten für den Data Warehouse-Betrieb.|    
 |![Analysis Services](../sql-server/media/analysis-services.png "Analysis Services")|**[Analysis Services](../analysis-services/analysis-services.md)**<br /><br /> [!INCLUDE[ssASnoversion_md](../includes/ssasnoversion-md.md)] ist eine Plattform für analytische Daten und ein Business Intelligence-Toolset für Einzelpersonen, Teams und Unternehmen. Server- und Clientdesigner unterstützen herkömmliche OLAP-Lösungen, neue Tabellenmodellierungslösungen sowie Self-Service-Funktionen für die Analyse und Zusammenarbeit mit [!INCLUDE[ssGemini](../includes/ssgemini-md.md)], Excel und einer SharePoint Server-Umgebung. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ermöglicht zudem Data Mining, damit Sie die Muster und Beziehungen erkennen können, die in großen Datenvolumen versteckt sind.|    
 |![Reporting Services](../sql-server/media/reporting-services.png "Reporting Services")|**[Reporting Services](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)**<br /><br /> Reporting Services bietet webbasierte Berichtfunktionen für Unternehmen.  Sie können Berichte zu Inhalten aus einer Vielzahl von Datenquellen erstellen, Berichte in verschiedenen Formaten veröffentlichen und Abonnements und Sicherheit zentral verwalten.|
 |![R Server](../sql-server/media/r-server.png "R Server")|**[Machine Learning Services (Machine Learning-Dienste)](../advanced-analytics/r-services/r-services.md)**<br /><br /> Microsoft Machine Learning Services unterstützt die Integration von Machine Learning in Unternehmensworkflows mithilfe der gängigen Sprachen R und Python.<br /><br /> Machine Learning-Dienste (datenbankintern) integriert R und Python in SQL Server, wodurch das Erstellen, Trainieren und Bewerten von Modellen durch das Aufrufen gespeicherter Prozeduren erleichtert wird.  Microsoft Machine Learning Server stellt eine unternehmensweite Unterstützung für R und Python zur Verfügung, ohne dass SQL Server erforderlich ist.|
@@ -69,11 +69,13 @@ SQL Server ist ein zentraler Bestandteil der Microsoft-Datenplattform. SQL Serve
 |![Master Data Services](../sql-server/media/master-data-services.png)|**[Master Data Services](../master-data-services/master-data-services-installation-and-configuration.md)**<br /><br /> [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] ist die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Lösung für die Masterdatenverwaltung. Eine auf [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] erstellte Lösung gewährleistet, dass Berichterstellung und Analyse auf den richtigen Informationen basieren. Mit [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]erstellen Sie ein zentrales Repository für Masterdaten und verwalten einen überwachungs- und sicherungsfähigen Datensatz dieser Daten, die sich im Laufe der Zeit ändern.|
 
 ## <a name="migrate-and-move-data"></a>Migrieren und Verlagern von Daten
+
 - [Importieren und Exportieren von Daten mit dem SQL Server-Import/Export-Assistenten](../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)
 - [Microsoft Data Migration Assistant](https://www.microsoft.com/download/details.aspx?id=53595)
 - [Migrieren Ihrer SQL Server-Datenbank zu Azure SQL-Datenbank](https://docs.microsoft.com/azure/sql-database/sql-database-migrate-your-sql-server-database)
 
 ## <a name="earlier-sql-server-versions"></a>Frühere SQL Server-Versionen
+
 - [SQL Server-Update Center – Links und Informationen zu allen unterstützten Versionen](https://msdn.microsoft.com/library/ff803383.aspx)
 - [Dokumentation zu SQL Server 2014](https://msdn.microsoft.com/library/ms130214(v=sql.120).aspx)
 - [Dokumentation zu SQL Server 2012](https://technet.microsoft.com/library/bb418433(v=sql.10).aspx)
@@ -81,9 +83,12 @@ SQL Server ist ein zentraler Bestandteil der Microsoft-Datenplattform. SQL Serve
 - [Dokumentation zu SQL Server 2008](https://msdn.microsoft.com/library/hh994727(v=sql.10).aspx)
 - [Archivierte Dokumentation zu SQL Server 2005](https://msdn.microsoft.com/library/hh278313(v=sql.10).aspx)
 
-## <a name="samples"></a>Beispiele  
+## <a name="samples"></a>Beispiele
+
 - [Beispieldatenbank von Wide World Importers](https://msdn.microsoft.com/library/mt734199(v=sql.1).aspx)
 - [AdventureWorks-Beispieldatenbanken und Skripts für SQL Server 2016](https://www.microsoft.com/download/details.aspx?id=49502) 
-- [SQL Server-Beispiele bei GitHub](https://github.com/Microsoft/sql-server-samples) 
-   
+- [SQL Server-Beispiele bei GitHub](https://github.com/Microsoft/sql-server-samples)
+
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
+
+[!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]
