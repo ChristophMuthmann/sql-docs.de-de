@@ -1,99 +1,100 @@
 ---
-title: Laden des PHP-SQL-Treibers | Microsoft Docs
-ms.custom: 
-ms.date: 01/19/2017
+title: Laden die Microsoft-Treiber für PHP für SQLServer | Microsoft Docs
+ms.custom: ''
+ms.date: 03/26/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: loading the driver
+helpviewer_keywords:
+- loading the driver
 ms.assetid: e5c114c5-8204-49c2-94eb-62ca63f5d3ec
-caps.latest.revision: "42"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 90ba63857ea38481577083d2a85999e789dfcb84
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 5a21dcd1f7f416a7bdade75e1648aec9795680a1
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
-# <a name="loading-the-php-sql-driver"></a>Laden des PHP-SQL-Treibers
+# <a name="loading-the-microsoft-drivers-for-php-for-sql-server"></a>Laden von Microsoft Drivers for PHP for SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Dieses Thema enthält Anweisungen für das Laden der [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] in den PHP verarbeitenden Speicherplatz.  
+Diese Seite enthält Anweisungen für das Laden der [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] in den PHP verarbeitenden Speicherplatz.  
   
-Es gibt zwei Optionen, um einen Treiber zu laden. Der Treiber kann geladen werden, wenn PHP gestartet wird oder während der PHP-Skriptlaufzeit.  
+Sie können die vorgefertigten Treiber für Ihre Plattform aus der [Microsoft Drivers for PHP for SQL Server](https://github.com/Microsoft/msphpsql/releases) Github-Projektseite. Jedem Installationspaket enthält die SQLSRV- und PDO_SQLSRV-Treiber-Dateien in Threads und nicht-threaded Varianten. Unter Windows sind auch verfügbar in 32-Bit und 64-Bit-Varianten. Finden Sie unter [System Requirements for Microsoft Drivers for PHP for SQL Server](../../connect/php/system-requirements-for-the-php-sql-driver.md) eine Liste der Treiberdateien abzurufen, die in jedem Paket enthalten sind. Der Treiberdatei muss es sich um die PHP-Version, Architektur und Threadedness Ihrer PHP-Umgebung übereinstimmen.
+
+Auf Linux- und MacOS der Treiber können alternativ mit installiert werden PECL, wie in der [Installation Lernprogramm](../../connect/php/installation-tutorial-linux-mac.md).
   
 ## <a name="moving-the-driver-file-into-your-extension-directory"></a>Verschieben Sie die Treiberdatei in Ihr Erweiterungsverzeichnis  
-Unabhängig davon, welches Verfahren Sie verwenden, wird im ersten Schritt die Treiberdatei in einem Verzeichnis abgelegt, wo die PHP-Laufzeit sie finden kann. Legen Sie also die Treiberdatei in Ihr PHP-Erweiterungsverzeichnis. Auf [Systemanforderungen für den PHP-SQL-Treiber](../../connect/php/system-requirements-for-the-php-sql-driver.md) können Sie eine Liste der Treiberdateien abrufen, die mit dem [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]installiert werden.  
-  
-Geben Sie bei Bedarf den Speicherort der Treiberdatei in der PHP-Konfigurationsdatei (php.ini) an, mit der **"extension_dir"** Option. Wenn Sie beispielsweise die Treiberdatei in Ihr Verzeichnis „c:\php\ext“ einfügen, verwenden Sie diese Option:  
+Der Treiberdatei muss in einem Verzeichnis befinden, wo die PHP-Laufzeit sie finden kann. Es ist am einfachsten, legen die Treiberdatei in Ihr Standardwert PHP-Erweiterungsverzeichnis - suchen das Standardverzeichnis, führen Sie `php -i | sls extension_dir` unter Windows oder `php -i | grep extension_dir` auf Linux/MacOS. Wenn Sie das Standardverzeichnis für die Erweiterung nicht verwenden, geben Sie ein Verzeichnis in der PHP-Konfigurationsdatei (php.ini) an, mit der **"extension_dir"** Option. Beispielsweise unter Windows, wenn Sie die Treiberdatei, in abgelegt haben Ihrem `c:\php\ext` Verzeichnis, fügen Sie die folgende Zeile auf die Datei "PHP.ini":
   
 ```  
 extension_dir = "c:\PHP\ext"  
-```  
-  
-## <a name="loading-the-driver-at-php-startup"></a>Laden des Treibers beim Starten von PHP  
-Beim Laden der [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] beim Starten von PHP, verschieben Sie zunächst eine Treiberdatei in das Erweiterungsverzeichnis. Dann führen Sie folgende Schritte aus:  
-  
-1.  So aktivieren Sie die **SQLSRV** -Treibers ändern **"PHP.ini"** durch die folgende Zeile den Abschnitt "Erweiterung" hinzufügen oder ändern Sie die Zeile, die bereits vorhanden ist:  
-  
-    Unter Windows (dieses Beispiel verwendet die Version 4.0 threadsicherer Treiber für PHP-7): 
-    ```  
-    extension=php_sqlsrv_7_ts.dll  
-    ```  
-    Unter Linux (dieses Beispiel verwendet die Version, wie vom PECL installiert): 
-    ```  
-    extension=sqlsrv.so  
-    ```  
-    So aktivieren Sie die **PDO_SQLSRV** -Treibers ändern **"PHP.ini"** durch die folgende Zeile den Abschnitt "Erweiterung" hinzufügen oder ändern Sie die Zeile, die bereits vorhanden ist:  
-  
-    Unter Windows (dieses Beispiel verwendet die Version 4.0 threadsicherer Treiber für PHP-7):
-    ```  
-    extension=php_pdo_sqlsrv_7_ts.dll  
-    ```  
-    Unter Linux (dieses Beispiel verwendet die Version, wie vom PECL installiert):
-    ```  
-    extension=pdo_sqlsrv.so  
-    ```  
-  
-2.  Wenn Sie verwenden möchten die **PDO_SQLSRV** -Treiber verwenden, die Erweiterung PHP Data Objects (PDO) muss verfügbar sein, entweder als integrierte Erweiterung oder als dynamisch geladene Erweiterung. Wenn Sie den PDO_SQLSRV-Treiber dynamisch laden müssen, die Datei php_pdo.dll (oder pdo.so unter Linux) muss im Erweiterungsverzeichnis vorhanden sein, und die folgende Zeile muss in der Datei "PHP.ini" sein:
+```
 
-    Unter Windows:  
+## <a name="loading-the-driver-at-php-startup"></a>Laden des Treibers beim Starten von PHP  
+Verschieben Sie zunächst eine Treiberdatei in Ihr Erweiterungsverzeichnis, um SQLSRV-Treiber zu laden, wenn PHP gestartet wird. Dann führen Sie folgende Schritte aus:  
+  
+1.  So aktivieren Sie die **SQLSRV** -Treibers ändern **"PHP.ini"** durch die folgende Zeile den Abschnitt "Erweiterung" hinzufügen, ändern Sie den Dateinamen entsprechend:  
+  
+    Unter Windows: 
+    ```  
+    extension=php_sqlsrv_72_ts.dll  
+    ```  
+    Unter Linux, wenn Sie die vorgefertigten Binärdateien für Ihre Distribution heruntergeladen haben: 
+    ```  
+    extension=php_sqlsrv_72_nts.so  
+    ```
+    Wenn Sie die binäre SQLSRV aus Quelle oder mit PECL kompiliert haben, wird er stattdessen sqlsrv.so benannt werden:
+    ```
+    extension=sqlsrv.so
+    ```
+  
+2.  So aktivieren Sie die **PDO_SQLSRV** -Treiber verwenden, die Erweiterung PHP Data Objects (PDO) muss verfügbar sein, entweder als integrierte Erweiterung oder als dynamisch geladene Erweiterung.
+
+    Unter Windows stammen vorgefertigten PHP-Binärdateien mit PDO integriert, daher keine Notwendigkeit zum Ändern der Datei "PHP.ini" besteht, um diese zu laden. Wenn Sie haben jedoch kompiliert PHP aus Quelle und eine separate PDO-Erweiterung zu erstellenden angegeben, es den Namen `php_pdo.dll`, und Sie müssen in Ihr Erweiterungsverzeichnis kopieren und fügen Sie die folgende Zeile auf die Datei "PHP.ini":  
     ```
     extension=php_pdo.dll  
-    ```  
-    Unter Linux:  
     ```
-    extension=pdo.so  
-    ```  
+    Wenn Sie PHP mit Ihrem System-Paket-Manager installiert haben, wird unter Linux wahrscheinlich PDO als dynamisch geladene Erweiterung mit dem Namen pdo.so installiert. Die PDO-Erweiterung geladen werden muss, bevor Sie die PDO_SQLSRV-Erweiterung, oder das Laden fehl. Erweiterungen werden in der Regel mithilfe von einzelnen INI-Dateien geladen, und diese Dateien werden nach der Datei "PHP.ini" gelesen. Wenn pdo.so über einen eigenen INI-Datei geladen wird, ist daher eine separate Datei laden den PDO_SQLSRV-Treiber nach PDO erforderlich. 
+
+    Um herauszufinden, welches Verzeichnis die erweiterungsspezifische INI-Dateien gespeichert sind, führen Sie `php --ini` und notieren Sie sich das Verzeichnis, die unter aufgeführten `Scan for additional .ini files in:`. Suchen Sie die Datei, die pdo.so lädt, denn es wahrscheinlich eine Zahl, z. B. 10 pdo.ini vorangestellt ist. Das numerische Präfix gibt die Ladereihenfolge von der INI-Dateien an, während Dateien, die keine numerischen Präfix sind in alphabetischer Reihenfolge geladen werden. Erstellen Sie eine Datei zum Laden Sie die PDO_SQLSRV-Treiber-Datei als 30-pdo_sqlsrv.ini (beliebige Anzahl größer ist als diejenige, die Präfixe pdo.ini Works) oder pdo_sqlsrv.ini (sofern keine Zahl pdo.ini vorangestellt ist), und fügen die folgende Zeile hinzu, ändern den Dateinamen als geeignet:  
+    ```
+    extension=php_pdo_sqlsrv_72_nts.so
+    ```
+    Als mit SQLSRV, wird Wenn Sie die binäre PDO_SQLSRV aus Quelle oder mit PECL, kompiliert haben es stattdessen pdo_sqlsrv.so benannt werden:
+    ```
+    extension=pdo_sqlsrv.so
+    ```
+    Kopieren Sie diese Datei in das Verzeichnis, das die INI-Dateien enthält. 
+
+    Wenn Sie PHP von der Quelle mit integrierter Unterstützung für PDO kompiliert haben, Sie erfordern keine separate INI-Datei, und Sie können die entsprechende Zeile oberhalb "PHP.ini" hinzufügen.
   
 3.  Starten Sie den Webserver neu.  
   
 > [!NOTE]  
-> Um zu bestimmen, ob der Treiber erfolgreich geladen wurde, führen Sie ein Skript aufruft [phpinfo()](http://go.microsoft.com/fwlink/?LinkId=108678).  
+> Um zu bestimmen, ob der Treiber erfolgreich geladen wurde, führen Sie ein Skript aufruft [phpinfo()](http://php.net/manual/en/function.phpinfo.php).  
   
-Weitere Informationen zu **php.ini** -Direktiven finden Sie unter [Beschreibung der wichtigsten php.ini-Direktiven](http://go.microsoft.com/fwlink/?LinkId=105817).  
-  
-## <a name="loading-the-driver-at-php-script-runtime"></a>Laden des Treibers während der PHP-Skriptlaufzeit  
-Beim Laden der [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] während der Skriptlaufzeit verschieben Sie zunächst eine Treiberdatei in Ihr Erweiterungsverzeichnis. Fügen Sie die folgende Zeile am Anfang des PHP-Skripts, die den Dateinamen des Treibers entspricht:  
-  
-```  
-dl('php_pdo_sqlsrv_7_ts.dll');  
-```  
-  
-Weitere Informationen zu PHP-Funktionen, die im Zusammenhang mit der dynamischen Laden von Erweiterungen finden Sie unter [dl](http://go.microsoft.com/fwlink/?LinkId=105818) und [Extension_loaded.](http://go.microsoft.com/fwlink/?LinkId=105819)  
+Weitere Informationen zu **"PHP.ini"** -Direktiven finden Sie unter [Beschreibung der wichtigsten php.ini-Direktiven](http://php.net/manual/en/ini.core.php).  
   
 ## <a name="see-also"></a>Siehe auch  
-[Erste Schritte mit dem PHP-SQL-Treiber](../../connect/php/getting-started-with-the-php-sql-driver.md)
-[Systemanforderungen für den PHP-SQL-Treiber](../../connect/php/system-requirements-for-the-php-sql-driver.md)
-[Programmierhandbuch für den PHP-SQL-Treiber](../../connect/php/programming-guide-for-php-sql-driver.md)
-[SQLSRV-Treiber – API-Referenz](../../connect/php/sqlsrv-driver-api-reference.md)  
+[Erste Schritte mit Microsoft-Treiber für PHP für SQLServer](../../connect/php/getting-started-with-the-php-sql-driver.md)
+
+[Systemanforderungen für die Microsoft-Treiber für PHP für SQLServer](../../connect/php/system-requirements-for-the-php-sql-driver.md)
+
+[Programmierhandbuch für den Microsoft-Treiber für PHP für SQLServer](../../connect/php/programming-guide-for-php-sql-driver.md)
+
+[API-Referenz für den SQLSRV-Treiber](../../connect/php/sqlsrv-driver-api-reference.md)
+
+[PDO_SQLSRV Driver API Reference](../../connect/php/pdo-sqlsrv-driver-reference.md)  
   

@@ -1,28 +1,30 @@
 ---
-title: "Vorgehensweise: Ausführen von Transaktionen | Microsoft Docs"
-ms.custom: 
+title: 'Vorgehensweise: Ausführen von Transaktionen | Microsoft Docs'
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: transaction support
+helpviewer_keywords:
+- transaction support
 ms.assetid: f4643b85-f929-4919-8951-23394bc5bfa7
-caps.latest.revision: "32"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a759dbf523ff275f20436919b5f093225b2693e5
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 15f4ba792e7657125c6964f098c6c1f7a9fe83f0
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="how-to-perform-transactions"></a>Vorgehensweise: Ausführen von Transaktionen
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -58,7 +60,7 @@ Die Schritte zum Ausführen einer Transaktion können wie folgt zusammengefasst 
   
     Wird standardmäßig der [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] befindet sich im Autocommit-Modus. Dies bedeutet, dass alle Abfragen bei Erfolg automatisch committet werden, es sei denn, sie wurden durch **sqlsrv_begin_transaction**.  
   
-    Wenn eine explizite Transaktion nicht mit **Sqlsrv_commit**committet wird, wird beim Trennen der Verbindung oder bei der Beendigung des Skripts ein Rollback durchgeführt.  
+    Wenn eine explizite Transaktion nicht mit übernommen wird **Sqlsrv_commit**, wird ein Rollback beim Trennen der Verbindung oder bei Beendigung des Skripts.  
   
     Verwenden Sie eingebettetes Transact-SQL nicht zum Durchführen von Transaktionen. Führen Sie z. B. keine Anweisung mit "BEGIN TRANSACTION" als Transact-SQL-Abfrage aus, um eine Transaktion zu beginnen. Das erwartete Transaktionsverhalten kann nicht garantiert werden, wenn Sie eingebettetes Transact-SQL zum Durchführen von Transaktionen verwenden.  
   
@@ -66,7 +68,7 @@ Die Schritte zum Ausführen einer Transaktion können wie folgt zusammengefasst 
   
 ## <a name="example"></a>Beispiel  
   
-### <a name="description"></a>Beschreibung  
+### <a name="description"></a>Description  
 Im folgenden Beispiel werden mehrere Abfragen im Rahmen einer Transaktion ausgeführt. Wenn alle Abfragen erfolgreich sind, wird die Transaktion committet. Wenn eine der Abfragen fehlschlägt, wird für die Transaktion ein Rollback ausgeführt.  
   
 Das Beispiel versucht, einen Verkaufsauftrag aus der *Sales.SalesOrderDetail* -Tabelle zu löschen und die Lagerbestände der Produkte in der *Product.ProductInventory* -Tabelle für jedes Produkt im Verkaufsauftrag anzupassen. Diese Abfragen werden in eine Transaktion aufgenommen, weil alle Abfragen erfolgreich ausgeführt werden müssen, damit die Datenbank den Status der Aufträge und die Verfügbarkeit von Produkten korrekt widerspiegelt.  
@@ -75,7 +77,7 @@ Die erste Abfrage im Beispiel ruft die Produkt-IDs und Mengen für eine bestimmt
   
 Die anschließenden Abfragen (Löschen des Verkaufsauftrags und Aktualisieren der Lagerbestände der Produkte) sind Teil der Transaktion.  
   
-Das Beispiel setzt voraus, dass SQL Server und die [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) -Datenbank auf dem lokalen Computer installiert sind. Wenn das Beispiel über die Befehlszeile ausgeführt wird, werden alle Ausgaben in die Konsole geschrieben.  
+Das Beispiel setzt voraus, dass SQL Server und die [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) -Datenbank auf dem lokalen Computer installiert sind. Wenn das Beispiel über die Befehlszeile ausgeführt wird, werden alle Ausgaben in die Konsole geschrieben.  
   
 ### <a name="code"></a>Code  
   
@@ -155,10 +157,12 @@ function perform_trans_ops($conn, $orderId)
 ```  
   
 ### <a name="comments"></a>Kommentare  
-Für die Überwachung des Transaktionsverhaltens ist eine empfohlene Fehlerbehandlung im vorherigen Beispiel nicht enthalten. Für eine Produktionsanwendung empfehlen wir, dass jeder Aufruf einer **sqlsrv** -Funktion auf Fehler überprüft und entsprechend behandelt wird.  
+Für die Überwachung des Transaktionsverhaltens ist eine empfohlene Fehlerbehandlung im vorherigen Beispiel nicht enthalten. Für eine produktionsanwendung empfehlen wir überprüfen jeden Aufruf eine **Sqlsrv** Funktion auf Fehler, und diese entsprechend zu behandeln.
   
 ## <a name="see-also"></a>Siehe auch  
-[Aktualisieren von Daten &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)  
-[Transaktionen (Datenbankmodul)](http://go.microsoft.com/fwlink/?LinkId=105862)  
+[Aktualisieren von Daten &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)
+
+[Transaktionen (Datenbankmodul)](https://msdn.microsoft.com/library/ms190612.aspx)
+
 [Informationen zu den Codebeispielen in der Dokumentation](../../connect/php/about-code-examples-in-the-documentation.md)  
   

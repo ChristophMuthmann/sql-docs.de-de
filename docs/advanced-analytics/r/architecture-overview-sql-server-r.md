@@ -1,33 +1,33 @@
 ---
-title: "Übersicht über die Architektur (SQL Server R Services) | Microsoft-Dokumentation"
-ms.custom: 
+title: Übersicht über die Architektur (SQL Server R Services) | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 07/11/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 6c4a4f66-ea3e-4a73-acf2-6c8aeafc94b0
-caps.latest.revision: 
+caps.latest.revision: ''
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: d23b15bd823c9054d9ddc7f1077bda80614686bd
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 7ef5e5efd0e1efb1817e4b9d1577d3b0a8a82051
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="architecture-overview-for-r-in-sql-server"></a>Übersicht über die Architektur für R in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Dieser Abschnitt enthält eine Übersicht über die Architektur von SQL Server 2016 R Services und SQL Server 2017 Machine Learning Services.
 
-Die Architektur für die erweiterbarkeitsarchitektur ist die gleiche oder sehr ähnlich, für den SQLServer 2016 und SQLServer-2017-Versionen und Ähnliches gilt auch für R und Python. Allerdings wird erläutert, um die Diskussion zu vereinfachen, in diesem Thema nur die R-Komponenten, einschließlich neue Komponenten, die in der SQL Server-Datenbankmodul zur externen skriptausführung, Sicherheit, R-Bibliotheken und Interoperabilität mit open-Source-r-Unterstützung hinzugefügt
+Die Architektur für die erweiterbarkeitsarchitektur ist die gleiche oder sehr ähnlich, für den SQLServer 2016 und SQLServer-2017-Versionen und Ähnliches gilt auch für R und Python. Allerdings wird erläutert, um die Diskussion zu vereinfachen, nur die R-Komponenten, einschließlich neue Komponenten, die in der SQL Server-Datenbankmodul zur externen skriptausführung, Sicherheit, R-Bibliotheken und Interoperabilität mit open-Source-r-Unterstützung hinzugefügt
 
 Weitere Details werden in den Links für die einzelnen Abschnitte bereitgestellt.
 

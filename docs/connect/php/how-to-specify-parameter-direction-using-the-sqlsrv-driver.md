@@ -1,33 +1,35 @@
 ---
 title: 'Vorgehensweise: Angeben der Parameterrichtung mit dem SQLSRV-Treiber | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: stored procedure support
+helpviewer_keywords:
+- stored procedure support
 ms.assetid: 1209eeca-df75-4283-96dc-714f39956b95
-caps.latest.revision: "16"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 692d1cd432a7d156a4bb9d8cc2c3bfcf57c02d6d
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: b4004fa498c01e73c99204bb0d36ac4bded66a9b
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="how-to-specify-parameter-direction-using-the-sqlsrv-driver"></a>Vorgehensweise: Angeben der Parameterrichtung mit dem SQLSRV-Treiber
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-In diesem Thema wird beschrieben, wie der SQLSRV-Treiber verwendet wird, um die Parameterrichtung anzugeben, wenn Sie eine gespeicherte Prozedur aufrufen. Beachten Sie, dass die parameterrichtung angegeben wird, wenn Sie ein Parameterarray erstellen Arrays (Schritt 3), um übergeben wird [Sqlsrv_query](../../connect/php/sqlsrv-query.md) oder [Sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md).  
+In diesem Thema wird beschrieben, wie der SQLSRV-Treiber verwendet wird, um die Parameterrichtung anzugeben, wenn Sie eine gespeicherte Prozedur aufrufen. Die Richtung des Parameters angegeben ist, wenn Sie ein Parameterarray (Schritt 3) erstellen, die an [Sqlsrv_query](../../connect/php/sqlsrv-query.md) oder [Sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md).  
   
 ### <a name="to-specify-parameter-direction"></a>Gehen Sie wie folgt vor, um die Parameterrichtung anzugeben:  
   
@@ -38,7 +40,7 @@ In diesem Thema wird beschrieben, wie der SQLSRV-Treiber verwendet wird, um die 
     ```  
   
     > [!NOTE]  
-    > Die Verwendung kanonischer Syntax stellt die empfohlene Vorgehensweise für das Abrufen gespeicherter Prozeduren dar. Weitere Informationen zur kanonischen Syntax finden Sie unter [Aufrufen einer gespeicherten Prozedur](http://go.microsoft.com/fwlink/?linkid=119517).  
+    > Die Verwendung kanonischer Syntax stellt die empfohlene Vorgehensweise für das Abrufen gespeicherter Prozeduren dar. Weitere Informationen zur kanonischen Syntax finden Sie unter [Aufrufen einer gespeicherten Prozedur](../../relational-databases/native-client-odbc-stored-procedures/calling-a-stored-procedure.md).  
   
 2.  Initialisieren oder aktualisieren Sie PHP-Variablen, die den Platzhaltern in der Transact-SQL-Abfrage entsprechen. Zum Beispiel aktualisiert folgender Code die zwei in der Prozedur UpdateVacationHours gespeicherten Parameter.  
   
@@ -61,7 +63,7 @@ In diesem Thema wird beschrieben, wie der SQLSRV-Treiber verwendet wird, um die 
   
     Um die Syntax zum Angeben der Parameterrichtung im Allgemeinen zu verstehen, nehmen Sie an, dass *$var1*, *$var2*, und *$var3* jeweils den Eingabe-, Ausgabe- und bidirektionalen Parametern entsprechen. Sie können die Richtung des Parameters in einer der folgenden Arten angeben:  
   
-    -   Geben Sie den Eingabeparameter implizit und den Ausgabeparameter sowie den bidirektionalen Parameter explizit an:  
+    -   Geben Sie den Eingabeparameter implizit und geben Sie einen bidirektionalen Parameter explizit Geben Sie Output-Parameters explizit an:  
   
         ```  
         array(   
@@ -71,7 +73,7 @@ In diesem Thema wird beschrieben, wie der SQLSRV-Treiber verwendet wird, um die 
                );  
         ```  
   
-    -   Geben Sie den Eingabeparameter ,den Ausgabeparameter sowie den bidirektionalen Parameter explizit an.  
+    -   Input-Parameters explizit angeben, die Output-Parameter explizit angeben und einen bidirektionalen Parameter explizit angeben:  
   
         ```  
         array(   
@@ -88,6 +90,7 @@ In diesem Thema wird beschrieben, wie der SQLSRV-Treiber verwendet wird, um die 
     ```  
   
 ## <a name="see-also"></a>Siehe auch  
-[Vorgehensweise: Abrufen von Eingabe-/Ausgabeparametern mit dem SQLSRV-Treiber](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)  
+[Gewusst wie: Abrufen von Eingabe-/Ausgabeparametern mit dem SQLSRV-Treiber](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)
+
 [How to: Retrieve Input and Output Parameters Using the SQLSRV Driver](../../connect/php/how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver.md)  
   

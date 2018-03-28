@@ -1,24 +1,24 @@
 ---
-title: "Die Ressourcenkontrolle für Python | Microsoft Docs"
-ms.custom: 
+title: Die Ressourcenkontrolle für Python | Microsoft Docs
+ms.custom: ''
 ms.date: 03/30/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: python
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 8accb9b8e050340ff980a1b5d9f1faf9283d8b89
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: c1bf3fb84629310c09f0dc181f6b7eaa6707fa88
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="resource-governance-for-python"></a>Die Ressourcenkontrolle für Python
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -64,7 +64,7 @@ Eine gute Einführung in die Terminologie und allgemeinen Konzepte finden Sie un
 
 ## <a name="resource-management-using-resource-governor"></a>Ressourcenmanagement mit dem Resource Governor
 
-Wenn Sie mit dem Resource Governor noch nicht vertraut sind, finden Sie eine kurze exemplarische Vorgehensweise zum Ändern der Standardressourcen einer Instanz und zum Erstellen eines neuen externen Ressourcenpools unter [Vorgehensweise: Erstellen eines Ressourcenpools für R](../../advanced-analytics/r-services/how-to-create-a-resource-pool-for-r.md).
+Wenn Sie die Ressourcenkontrolle nicht vertraut sind, finden Sie im Artikel für eine kurze exemplarische Vorgehensweise zum Ändern der Instanz-Standardressourcen und Erstellen eines neuen externen Ressourcenpools: [Vorgehensweise: Erstellen eines Ressourcenpools für R](../../advanced-analytics/r-services/how-to-create-a-resource-pool-for-r.md)
 
 Sie können die *externen Ressourcenpool* Mechanismus zum Verwalten von Ressourcen der folgenden unterstützten ausführbare Dateien:
 

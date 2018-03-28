@@ -1,27 +1,28 @@
 ---
-title: 'PDO:: BeginTransaction | Microsoft Docs'
-ms.custom: 
+title: PDO::beginTransaction | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 4d5db438-9df7-4d22-9907-3ddc63bd2220
-caps.latest.revision: "10"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 131edab231009e63c32a3c5b7a4d6ffccfc7d407
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 51a04874f23dcae77347d85ad0ebd284a1e3b03c
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="pdobegintransaction"></a>PDO::beginTransaction
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -39,13 +40,13 @@ bool PDO::beginTransaction();
 „true“, bei erfolgreichem Aufruf der Methode; andernfalls „false“.  
   
 ## <a name="remarks"></a>Hinweise  
-Die Transaktion, die mit PDO::beginTransaction gestartet wurde, endet, wenn [PDO::commit](../../connect/php/pdo-commit.md) oder [PDO::rollback](../../connect/php/pdo-rollback.md) aufgerufen werden.  
+Die Transaktion, die mit PDO:: BeginTransaction gestartet wurde beendet, wenn [PDO:: Commit](../../connect/php/pdo-commit.md) oder [PDO:: Rollback](../../connect/php/pdo-rollback.md) aufgerufen wird.  
   
 PDO::beginTransaction ist nicht betroffen von dem (und hat keinen Einfluss auf den) Wert von PDO::ATTR_AUTOCOMMIT.  
   
 Sie dürfen PDO::beginTransaction nicht aufrufen, solange die vorherige PDO::beginTransaction noch nicht mit PDO::rollback oder PDO::commit beendet wurde.  
   
-Die Verbindung wird zum Autocommit-Modus zurückkehren, falls diese Methode fehlschlägt.  
+Wenn diese Methode fehlschlägt, werden die Verbindung zum Autocommit-Modus zurückgegeben.  
   
 Unterstützung für PDO wurde in Version 2.0 von [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]hinzugefügt.  
   
@@ -66,6 +67,7 @@ Im folgenden Beispiel wird eine Datenbank namens „Test“ und eine Tabelle nam
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
-[PDO-Klasse](../../connect/php/pdo-class.md)  
-[PDO](http://go.microsoft.com/fwlink/?LinkID=187441)  
+[PDO-Klasse](../../connect/php/pdo-class.md)
+
+[PDO](http://php.net/manual/book.pdo.php)  
   

@@ -1,33 +1,35 @@
 ---
 title: Sqlsrv_fetch_array | Microsoft Docs
-ms.custom: 
-ms.date: 01/19/2017
+ms.custom: ''
+ms.date: 03/26/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: sqlsrv_fetch_array
+apiname:
+- sqlsrv_fetch_array
 apitype: NA
 helpviewer_keywords:
 - sqlsrv_fetch_array
 - retrieving data, as an array
 - API Reference, sqlsrv_fetch_array
 ms.assetid: 69270b9e-0791-42f4-856d-412da39dea63
-caps.latest.revision: "52"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 63fd8fa0274ed5e83774d6d9929023fe58ad6553
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 087d26284d99ee0021acded71b7bb5a2ff3e2cd6
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="sqlsrvfetcharray"></a>sqlsrv_fetch_array
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -87,7 +89,7 @@ SELECT SCOPE_IDENTITY() AS PictureID
 Wenn ein Resultset mehrere Spalten ohne Namen enthält, wird der Wert der letzten unbenannten Spalte dem Schlüssel einer leeren Zeichenfolge ("") zugewiesen.  
   
 ## <a name="example"></a>Beispiel  
-Das folgende Beispiel ruft jede Zeile eines Resultsets als assoziatives **Array**auf. Das Beispiel setzt voraus, dass SQL Server und die [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) -Datenbank auf dem lokalen Computer installiert sind. Wenn das Beispiel über die Befehlszeile ausgeführt wird, werden alle Ausgaben in die Konsole geschrieben.  
+Das folgende Beispiel ruft jede Zeile eines Resultsets als assoziatives **Array**auf. Das Beispiel setzt voraus, dass die SQL Server und die [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) -Datenbank auf dem lokalen Computer installiert sind. Wenn das Beispiel über die Befehlszeile ausgeführt wird, werden alle Ausgaben in die Konsole geschrieben.  
   
 ```  
 <?php  
@@ -130,7 +132,7 @@ Das folgende Beispiel ruft jede Zeile eines Resultsets als numerisch indiziertes
   
 Im Beispiel wird die Produktinformation aus der *Purchasing.PurchaseOrderDetail* Tabelle der AdventureWorks-Datenbank für Produkte mit einem angegebenen Datum und einer gelagerten Menge (*StockQty*) kleiner als ein angegebener Wert.  
   
-Das Beispiel setzt voraus, dass SQL Server und die [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) -Datenbank auf dem lokalen Computer installiert sind. Wenn das Beispiel über die Befehlszeile ausgeführt wird, werden alle Ausgaben in die Konsole geschrieben.  
+Das Beispiel setzt voraus, dass SQL Server und die [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) -Datenbank auf dem lokalen Computer installiert sind. Wenn das Beispiel über die Befehlszeile ausgeführt wird, werden alle Ausgaben in die Konsole geschrieben.  
   
 ```  
 <?php  
@@ -186,8 +188,11 @@ Die **sqlsrv_fetch_array** Funktion gibt immer die Daten gemäß der [Default PH
 Wenn ein Feld ohne Namen abgerufen wird, ist der assoziative Schlüssel für das Arrayelement eine leere Zeichenfolge (""). Weitere Informationen finden Sie unter [sqlsrv_fetch_array](../../connect/php/sqlsrv-fetch-array.md).  
   
 ## <a name="see-also"></a>Siehe auch  
-[API-Referenz für den SQLSRV-Treiber](../../connect/php/sqlsrv-driver-api-reference.md)  
-[Abrufen von Daten](../../connect/php/retrieving-data.md)  
-[Informationen zu den Codebeispielen in der Dokumentation](../../connect/php/about-code-examples-in-the-documentation.md)  
-[Programmierhandbuch für den PHP-SQL-Treiber](../../connect/php/programming-guide-for-php-sql-driver.md)
+[API-Referenz für den SQLSRV-Treiber](../../connect/php/sqlsrv-driver-api-reference.md)
+
+[Abrufen von Daten](../../connect/php/retrieving-data.md)
+
+[Informationen zu den Codebeispielen in der Dokumentation](../../connect/php/about-code-examples-in-the-documentation.md)
+
+[Programmierhandbuch für den Microsoft-Treiber für PHP für SQLServer](../../connect/php/programming-guide-for-php-sql-driver.md)
   

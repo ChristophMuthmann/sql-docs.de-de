@@ -5,26 +5,26 @@ ms.author: barbkess
 manager: jhubbard
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology: mpp-data-warehouse
-description: "Sprachelemente für Transact-SQL (T-SQL) für analytische Platform System (APS) SQL Server Parallel Data Warehouse (PDW)."
+description: Sprachelemente für Transact-SQL (T-SQL) für analytische Platform System (APS) SQL Server Parallel Data Warehouse (PDW).
 services: sql-data-warehouse
 documentationcenter: NA
-editor: 
+editor: ''
 ms.assetid: ea0b9a3e-e489-458e-addc-cc153e5cc158
 ms.devlang: NA
 ms.topic: article
 ms.tgt_pltfrm: NA
 ms.workload: data-services
 ms.date: 12/15/2016
-ms.openlocfilehash: 35c8de2f1105bbbda05642b993d8fe0c88d76f39
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: 0fa153859632739fe626a92dbf8d741a879dd74f
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="language-elements"></a>Language elements (Sprachelemente)
 Sprachelemente für Transact-SQL (T-SQL) für analytische Platform System (APS) SQL Server Parallel Data Warehouse (PDW).
@@ -61,7 +61,7 @@ Sprachelemente für Transact-SQL (T-SQL) für analytische Platform System (APS) 
 * [- (Negative) (- (Negativ))](../t-sql/language-elements/unary-operators-negative.md)
 * [- (Subtract) (- (Subtrahieren))](../t-sql/language-elements/subtract-transact-sql.md)
 * [* (Multiply) (* (Multiplizieren))](../t-sql/language-elements/multiply-transact-sql.md)
-* [/ (Division)](../t-sql/language-elements/divide-transact-sql.md)
+* [/ (Dividieren)](../t-sql/language-elements/divide-transact-sql.md)
 * [Modulo](../t-sql/language-elements/modulo-transact-sql.md)
 
 ## <a name="wildcard-characters-to-match"></a>Platzhalter zu suchende(s) Zeichen
@@ -71,7 +71,7 @@ Sprachelemente für Transact-SQL (T-SQL) für analytische Platform System (APS) 
 * [> = (Great als oder gleich)](../t-sql/language-elements/greater-than-or-equal-to-transact-sql.md)
 * [< = (kleiner als oder gleich)](../t-sql/language-elements/less-than-or-equal-to-transact-sql.md)
 * [<> (Ungleich)](../t-sql/language-elements/not-equal-to-transact-sql-traditional.md)
-* [! = (Ungleich)](../t-sql/language-elements/not-equal-to-transact-sql-exclamation.md)
+* [\!= (Ungleich)](../t-sql/language-elements/not-equal-to-transact-sql-exclamation.md)
 * [AND](../t-sql/language-elements/and-transact-sql.md)
 * [BETWEEN](../t-sql/language-elements/between-transact-sql.md)
 * [EXISTS](../t-sql/language-elements/exists-transact-sql.md)
@@ -274,7 +274,7 @@ Sprachelemente für Transact-SQL (T-SQL) für analytische Platform System (APS) 
 * [SET ARITHIGNORE](../t-sql/statements/set-arithignore-transact-sql.md)
 * [SET CONCAT_NULL_YIELDS_NULL](../t-sql/statements/set-concat-null-yields-null-transact-sql.md)
 * [SET DATEFIRST](../t-sql/statements/set-datefirst-transact-sql.md)
-* [SET DATEFORMAT-EINSTELLUNG](../t-sql/statements/set-dateformat-transact-sql.md)
+* [SET DATEFORMAT](../t-sql/statements/set-dateformat-transact-sql.md)
 * [SET FMTONLY](../t-sql/statements/set-fmtonly-transact-sql.md)
 * [SET-IMPLICIT_TRANSACITONS](../t-sql/statements/set-implicit-transactions-transact-sql.md)
 * [SET LOCK_TIMEOUT](../t-sql/statements/set-lock-timeout-transact-sql.md)

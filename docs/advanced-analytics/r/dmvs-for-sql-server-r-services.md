@@ -1,31 +1,31 @@
 ---
-title: "DMVs für SQL Server-Machine Learning-Services | Microsoft Docs"
-ms.custom: 
+title: DMVs für SQL Server-Machine Learning-Services | Microsoft Docs
+ms.custom: ''
 ms.date: 07/31/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: b3643ea0-d9f3-463f-8ece-572127f32a24
-caps.latest.revision: 
+caps.latest.revision: ''
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: d3c90457c7d55071520546e6362a451427503a52
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 2e51f5229eb085eb4b92a4f6f53cc7b28ebb7485
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="dmvs-for-sql-server-machine-learning-services"></a>DMVs für SQL Server-Machine Learning-Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Das Thema umfasst die Katalogsichten und DMVs, die auf Machine Learning in der SQL Server beziehen.
+Listet die Katalogsichten und DMVs, die auf Machine Learning in der SQL Server beziehen.
 
 Weitere Informationen zu erweiterten Ereignissen finden Sie unter [erweiterte Ereignisse für Machine Learning](../../advanced-analytics/r/extended-events-for-sql-server-r-services.md).
 
@@ -53,7 +53,7 @@ Sie überwachen und analysieren Sie mithilfe von externen Skripts Ressourcen [!I
   Die folgenden Leistungsindikatoren werden von dieser DMV für externe Skripts pro Instanz gemeldet:
 
   + **Gesamtanzahl der Ausführungen**: Anzahl externer Prozesse durch Aufrufe von lokalen oder remote gestartet
-  + **Parallele Ausführung**: Anzahl der Fälle, in denen ein Skript enthalten die  _@parallel_  -Spezifikation und die [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] konnte zum Generieren und Verwenden von einem parallelen Abfrageplan
+  + **Parallele Ausführung**: Anzahl der Fälle, in denen ein Skript enthalten die _@parallel_ -Spezifikation und die [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] konnte zum Generieren und Verwenden von einem parallelen Abfrageplan
   + **Streaming Ausführungen**: Anzahl der Fälle, in denen die Medienstreaming-Funktion aufgerufen wurde
   + **SQL CC Ausführungen**: Anzahl externer Skripts ausführen, in dem der Aufruf wurde Remote instanziiert und SQL Server wurde als computekontext verwendet.
   + **Implied Auth. Logins**: Gibt an, wie oft ein ODBC-Loopback-Aufruf mit implizierter Authentifizierung abgeschlossen wurde, d.h. dass [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] den Aufruf im Auftrag des Benutzers ausführt und die Skriptanforderung sendet

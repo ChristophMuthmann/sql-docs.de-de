@@ -1,16 +1,16 @@
 ---
 title: managed_backup.sp_backup_config_schedule (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_backup_config_schedule_TSQL
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - managed_backup.sp_backup_config_schedule
 - sp_backup_config_schedule
 ms.assetid: 82541160-d1df-4061-91a5-6868dd85743a
-caps.latest.revision: 
+caps.latest.revision: ''
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d3ba08667f9eebe37cc5493903b714ee1bf0d67f
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 6325c940487b37fea083a923a20f884bd872a0b4
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="managedbackupspbackupconfigschedule-transact-sql"></a>managed_backup.sp_backup_config_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ EXEC managed_backup.sp_backup_config_schedule
  Der frequenztyp für die verwaltete Sicherung, die auf "Täglich" oder "Wöchentlich" festgelegt werden können.  
   
  @days_of_week  
- Die Wochentage für die Sicherungen beim @full_backup_freq_type ist auf wöchentlich festgelegt. Geben Sie die vollständige Zeichenfolgennamen wie "Montag".  Sie können auch mehr als einen Tag-Namen, die durch Kommas getrennt angeben. Z. B. "Montag, Mittwoch, Freitag".  
+ Die Wochentage für die Sicherungen beim @full_backup_freq_type ist auf wöchentlich festgelegt. Geben Sie die vollständige Zeichenfolgennamen wie "Montag".  Sie können auch mehr als einen Tag-Namen durch einen senkrechten Strich getrennt angeben. Z. B. N'Monday | Mittwoch | Freitag ".  
   
  @backup_begin_time  
  Die Startzeit für das Zeitfenster für Sicherungen. Sicherungen werden nicht außerhalb des Zeitfensters, die durch eine Kombination von definiert ist gestartet @backup_begin_time und @backup_duration.  
@@ -73,7 +73,7 @@ EXEC managed_backup.sp_backup_config_schedule
  Die Dauer des Fensters Sicherungszeitpunkt aus. Beachten Sie, dass es gibt keine Garantie, dass Sicherungen während des Zeitfensters durch definierten abgeschlossen werden @backup_begin_time und @backup_duration. Sicherungsvorgänge, die in diesem Zeitfenster gestartet wurden, aber überschreiten die Dauer des Fensters werden nicht abgebrochen werden.  
   
  @log_backup_freq  
- Dies bestimmt die Häufigkeit der Sicherungen des Transaktionsprotokolls. Diese Sicherungen Vorkommen in regelmäßigen Abständen anstatt auf dem Zeitplan für die Datenbank gesichert wird. @log_backup_freqkann in Minuten oder Stunden und 0 ist gültig, womit keine protokollsicherungen. Deaktivieren von Sicherungen nur wäre für Datenbanken mit einem einfachen Wiederherstellungsmodell geeignet.  
+ Dies bestimmt die Häufigkeit der Sicherungen des Transaktionsprotokolls. Diese Sicherungen Vorkommen in regelmäßigen Abständen anstatt auf dem Zeitplan für die Datenbank gesichert wird. @log_backup_freq kann in Minuten oder Stunden und 0 ist gültig, womit keine protokollsicherungen. Deaktivieren von Sicherungen nur wäre für Datenbanken mit einem einfachen Wiederherstellungsmodell geeignet.  
   
 > [!NOTE]  
 >  Wenn das Wiederherstellungsmodell von simple in full geändert wird, müssen Sie die Log_backup_freq von 0 auf einen Wert ungleich 0 (null) neu konfigurieren.  

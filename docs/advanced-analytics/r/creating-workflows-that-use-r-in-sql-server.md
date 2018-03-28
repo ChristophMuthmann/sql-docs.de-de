@@ -3,25 +3,25 @@ title: Erstellen von BI-Workflows mit R | Microsoft Docs
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 04/18/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 34c3b1c2-97db-4cea-b287-c7f4fe4ecc1b
-caps.latest.revision: 
+caps.latest.revision: ''
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: dcfd7571f5dd555e6654eb65c4bbb7852f82feff
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: bd006f20f65b386a4351534e639b3b60db7e76de
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="creating-bi-workflows-with-r"></a>Erstellen von BI-Workflows mit R
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -30,9 +30,9 @@ Eine relationale Datenbank ist eine hochgradig optimierte Technologie für die B
 
 Im Gegensatz dazu haben bisher R-Lösungen in der Regel verlassen zum Importieren von Daten aus verschiedenen Quellen, oft im CSV-Format, zum Ausführen von weiteren Durchsuchen von Daten und Modellierung. Solche Methoden sind nicht nur ineffizient, sondern auch unsicher.
 
-Dieses Thema beschreibt einige Integrationsszenarien für R und SQL Server, der zu vermeiden, häufige Fehlerquellen und Sicherheitsrisiken, die auftreten können, wenn Sie außerhalb der Datenbank Machine Learning-Lösungen entwickelt werden.
+Dieser Artikel beschreibt einige Integrationsszenarien für R und SQL Server, der zu vermeiden, häufige Fehlerquellen und Sicherheitsrisiken, die auftreten können, wenn Sie außerhalb der Datenbank Machine Learning-Lösungen entwickelt werden.
 
-Außerdem wird beschrieben, wie Business Intelligence-Anwendungen, vor allem Integration Services und Reportng-Services, R-Code interagieren können, und Nutzen von Daten oder Grafiken, die von r generierte-Beispiele
+Außerdem wird beschrieben, wie Business Intelligence-Anwendungen, vor allem Integration Services und Reporting Services, R-Code interagieren können, und Nutzen von Daten oder Grafiken, die von r generierte-Beispiele
 
 Gilt für: SQL Server 2016-R-Services, SqlServer 2017 Machine Learning-Dienste
 
@@ -44,7 +44,7 @@ Ein Schlüssel Entwurfsziel der Integration von Machine Learning in SQL Server w
 
 + Geschwindigkeit. Datenbanken sind für setbasierte Vorgänge optimiert. Aktuelle Innovationen in Datenbanken wie z. B. in-Memory-Tabellen stellen Zusammenfassungen und Aggregationen der Daten extrem und eine perfekte Ergänzung zu Data Science sind.
 
-+ Einfache Bereitstellung und Integration. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ist der zentrale Punkt von Vorgängen für andere Verwaltungsaufgaben für Daten und Anwendungen. Mithilfe von Daten, die in der Datenbank oder reporting Warehouse befindet, stellen Sie sicher, dass die Daten von Machine learning-Lösungen, konsistente und auf dem neuesten Stand sind. 
++ Einfache Bereitstellung und Integration. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ist der zentrale Punkt von Vorgängen für andere Verwaltungsaufgaben für Daten und Anwendungen. Mithilfe von Daten, die in der Datenbank oder reporting Warehouse befindet, stellen Sie sicher, dass die Daten von Machine learning-Lösungen, konsistente und auf dem neuesten Stand sind. 
 
 + Effizienz über Cloud und lokal. Anstatt die Daten in R zu verarbeiten, können Sie Datenpipelines des Unternehmens nutzen, darunter [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] und Azure Data Factory. Das Berichten von Ergebnissen oder Analysen ist über Power BI oder [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]einfach.
 
@@ -56,7 +56,7 @@ Data Science-Workflows sind hoch iterativ und umfassen eine Menge Transformation
 
 Da [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] es Ihnen ermöglicht, komplexe Vorgänge in R über Transact-SQL und gespeicherte Prozeduren auszuführen, können Sie R-spezifische Aufgaben mit vorhandenen ETL-Prozessen ohne erneute Entwicklung integrieren. Stattdessen als eine Kette von arbeitsspeicherintensive Vorgänge in R auszuführen, Vorbereitung der Daten kann optimiert werden mit den effizientesten Tools, einschließlich [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] und [!INCLUDE[tsql](../../includes/tsql-md.md)]. 
 
-Hier sind einige Ideass für wie Ihre Daten, die Verarbeitung einer Dmodeling automatisiert werden können pipelines mit [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]:
+Im folgenden sind einige anregungen für wie die Datenverarbeitung automatisiert werden können und die Modellierung von pipelines mit [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]:
 
 + Verwendung [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Aufgaben zum Erstellen von Features erforderlichen Daten in der SQL-Datenbank
 + Verwenden von bedingter Verzweigung, um Computekontext für R-Aufträge zu wechseln
@@ -75,13 +75,13 @@ In diesem Blogbeitrag veranschaulicht die grundlegenden Techniken zum Bearbeiten
 
 + Ausführen der Bewertung auf dem Modell mit dem Skripttask und dem Task „SQL ausführen“
 
-##  <a name="bkmk_ssrs"></a>Verwenden von Reporting Services für die Visualisierung
+##  <a name="bkmk_ssrs"></a> Verwenden von Reporting Services für die Visualisierung
 
 Obwohl R Diagramme und interessante Visualisierungen erstellen kann, ist es nicht gut mit externen Datenquellen integriert, was bedeutet, dass jedes Diagramm oder jeder Graph einzeln erstellt werden muss. Gemeinsame Nutzung kann auch schwierig sein.
 
 Mithilfe von [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] können Sie komplexe Vorgänge in R über gespeicherte [!INCLUDE[tsql](../../includes/tsql-md.md)]-Prozeduren ausführen, die problemlos von einer Vielzahl von Tools für Unternehmensberichte, einschließlich [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] und Power BI, genutzt werden können.
 
-+ Visualisieren von Grafikobjekten, die über ein R-Skript mit zurückgegeben [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]
++ Visualisieren von Grafikobjekten, die über ein R-Skript mit [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]zurückgegeben werden
 + Verwenden der Tabelle in Power BI
 
 ### <a name="examples"></a>Beispiele

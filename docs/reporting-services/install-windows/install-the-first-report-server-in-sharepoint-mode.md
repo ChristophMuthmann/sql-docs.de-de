@@ -1,25 +1,25 @@
 ---
 title: Installieren des ersten Berichtsservers im SharePoint-Modus | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 10/05/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint
-ms.service: 
+ms.service: ''
 ms.component: install-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: b266fbdf4801a4b2433590cc3ee2403250702666
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 796eed171b40234af4ab00877a5e73121b49368e
+ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="install-the-first-report-server-in-sharepoint-mode"></a>Installieren des ersten Berichtsservers im SharePoint-Modus
 
@@ -69,7 +69,7 @@ ms.lasthandoff: 01/09/2018
   
  **Erstellen einer Reporting Services-Dienstanwendung**  
   
--   Nach der Installation und Registrierung des Reporting Services-Dienstes erstellen Sie mindestens eine Reporting Services-Dienstanwendung. Das "Dienstkonto der SharePoint-Farm" muss vorübergehend Mitglied der lokalen Administratorgruppe sein, damit die Reporting Services-Dienstanwendung erstellt werden kann. Weitere Informationen zu SharePoint 2013-Kontoberechtigungen finden Sie unter [Kontoberechtigungen und Sicherheitseinstellungen in SharePoint 2013](http://technet.microsoft.com/library/cc678863.aspx) (http://technet.microsoft.com/library/cc678863.aspx). Für SharePoint 2016 finden Sie weitere Informationen unter [Kontoberechtigungen und Sicherheitseinstellungen in SharePoint 2016](https://technet.microsoft.com/library/cc678863\(v=office.16\).aspx).  
+-   Nach der Installation und Registrierung des Reporting Services-Dienstes erstellen Sie mindestens eine Reporting Services-Dienstanwendung. Das "Dienstkonto der SharePoint-Farm" muss vorübergehend Mitglied der lokalen Administratorgruppe sein, damit die Reporting Services-Dienstanwendung erstellt werden kann. Weitere Informationen zu SharePoint 2013-Kontoberechtigungen finden Sie unter [Kontoberechtigungen und Sicherheitseinstellungen in SharePoint 2013](http://technet.microsoft.com/library/cc678863.aspx) (http://technet.microsoft.com/library/cc678863.aspx)). Zu SharePoint 2016 finden Sie weitere Informationen unter [Kontoberechtigungen und Sicherheitseinstellungen in SharePoint 2016](https://technet.microsoft.com/library/cc678863\(v=office.16\).aspx).  
   
      Eine bewährte Sicherheitsmethode besteht darin, die Administratorkonten der SharePoint-Farm nicht gleichzeitig als Administratorkonten des lokalen Betriebssystems festzulegen. Wenn Sie der lokalen Administratorgruppe während der Installation ein Farmadministratorkonto hinzufügen, wird empfohlen, das Konto nach Ende der Installation aus der lokalen Administratorgruppe zu entfernen.  
   
@@ -81,7 +81,7 @@ ms.lasthandoff: 01/09/2018
  > Für SharePoint 2016 muss der SharePoint-Server, auf dem Reporting Services installiert wird, eine **benutzerdefinierte** Serverrolle besitzen. Reporting Services lässt sich auf einem SharePoint-Server, der keine **benutzerdefinierte** Rolle besitzt, erfolgreich bereitstellen, aber während des nächsten SharePoint-Wartungsfensters hält MinRole den Reporting Services-Dienst an, da erkannt wird, dass Reporting Services im in SharePoint integrierten Modus keine Unterstützung für eine der anderen SharePoint-Serverrollen bietet. Die Reporting Services-Dienstanwendung unterstützt nur die **benutzerdefinierte** Rolle.
  
  > [!NOTE]
- > Wenn Sie planen, auch den Power Pivot-Dienst mit SharePoint 2016 zu verwenden, installieren Sie diesen Dienst, bevor Sie Reporting Services installieren. Der Power Pivot-Dienst kann nicht auf einem SharePoint-Server mit der **benutzerdefinierten** Rolle installiert werden. Dadurch wird vermieden, dass die Rollen mehrfach gewechselt werden müssen.
+ > Wenn Sie planen, auch den Power Pivot-Dienst mit SharePoint 2016 zu verwenden, installieren Sie diesen Dienst, bevor Sie Reporting Services installieren. Der Power Pivot-Dienst kann ausschließlich mit der **benutzerdefinierten** Rolle auf einem SharePoint-Server installiert werden.
  
  ### <a name="apply-the-custom-server-role-to-a-sharepoint-2016-server"></a>Anwenden der benutzerdefinierten Serverrolle auf einen SharePoint 2016-Server
  
@@ -420,7 +420,7 @@ Darüber hinaus muss das von der Reporting Services-Dienstanwendung verwendete S
  Reporting Services stellt vordefinierte Inhaltstypen bereit, die zum Verwalten freigegebener Datenquellendateien (RSDS), Berichtsmodelldateien (SMDL) und Berichts-Generator-Berichtsdefinitionsdateien (RDL) verwendet werden können. Wenn einer Bibliothek ein Inhaltstyp ( **Berichts-Generator-Bericht**, **Berichtsmodell**und **Berichtsdatenquelle** ) hinzugefügt wird, wird der Befehl **Neu** aktiviert, sodass Sie neue Dokumente des betreffenden Typs erstellen können. Weitere Informationen finden Sie unter [Hinzufügen von Reporting Services-Inhaltstypen zu einer SharePoint-Bibliothek](../../reporting-services/report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md).  
   
 ### <a name="activate-the-report-server-file-sync-feature"></a>Aktivieren der Funktion zur Synchronisierung der Berichtsserverdateien  
- Wenn Benutzer häufig veröffentlichte Berichtselemente direkt in SharePoint-Dokumentbibliotheken hochladen, ist die Funktion zur **Synchronisierung der Berichtsserverdateien** auf Websiteebene hilfreich. Die Dateisynchronisierungsfunktion synchronisiert den Berichtsserverkatalog regelmäßiger mit Elementen in Dokumentbibliotheken. Weitere Informationen finden Sie unter [Activate the Report Server File Sync Feature in SharePoint Central Administration](../../reporting-services/report-server-sharepoint/activate-the-report-server-file-sync-feature-in-sharepoint-ca.md).  
+ Wenn Benutzer häufig veröffentlichte Berichtselemente direkt in SharePoint-Dokumentbibliotheken hochladen, ist die Funktion zur **Synchronisierung der Berichtsserverdateien** auf Websiteebene hilfreich. Die Dateisynchronisierungsfunktion synchronisiert den Berichtsserverkatalog regelmäßiger mit Elementen in Dokumentbibliotheken. Weitere Informationen finden Sie unter [Aktivieren der Funktion zur Synchronisierung der Berichtsserverdateien in der SharePoint-Zentraladministration](../../reporting-services/report-server-sharepoint/activate-the-report-server-file-sync-feature-in-sharepoint-ca.md).  
   
 ##  <a name="bkmk_verify_installation"></a> Überprüfen der Installation  
  Im Folgenden werden Schritte und Verfahren vorgeschlagen, um die Reporting Services-Bereitstellung im SharePoint-Modus zu überprüfen.  

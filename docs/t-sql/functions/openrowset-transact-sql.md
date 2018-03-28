@@ -1,16 +1,16 @@
 ---
 title: OPENROWSET (Transact-SQL) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - OPENROWSET_TSQL
@@ -27,24 +27,26 @@ helpviewer_keywords:
 - OLE DB data sources [SQL Server]
 - ad hoc connection information
 ms.assetid: f47eda43-33aa-454d-840a-bb15a031ca17
-caps.latest.revision: 
+caps.latest.revision: ''
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 68db78ede26c3e7f8c60ced655d89d0fc9a615ac
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: ee158cdc30d1c083151bc07c58ba7ddea515a308
+ms.sourcegitcommit: 3ed9be04cc7fb9ab1a9ec230c298ad2932acc71b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="openrowset-transact-sql"></a>OPENROWSET (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   Enthält alle für einen Zugriff auf Remotedaten von einer OLE DB-Datenquelle notwendigen Verbindungsinformationen. Diese Methode ist eine Alternative zum Zugriff auf Tabellen eines Verbindungsservers. Sie ist eine einmalig verwendete Ad-hoc-Methode zum Verbinden und Zugreifen auf Remotedaten mithilfe von OLE DB. Für häufigere Verweise auf OLE DB-Datenquellen verwenden Sie stattdessen Verbindungsserver. Weitere Informationen finden Sie unter [Verbindungsserver &#40;Datenbankmodul&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md). Auf die `OPENROWSET`-Funktion kann in der FROM-Klausel einer Abfrage so verwiesen werden, als handele es sich um einen Tabellennamen. Auf die `OPENROWSET`-Funktion kann auch als Zieltabelle einer `INSERT`-, `UPDATE`- oder `DELETE`-Anweisung verwiesen werden, je nach den Funktionen des OLE DB-Anbieters. Obwohl die Abfrage möglicherweise mehrere Resultsets zurückgibt, gibt `OPENROWSET` nur das erste Resultset zurück.  
   
  `OPENROWSET` unterstützt auch Massenvorgänge über einen integrierten BULK-Anbieter, mit dem Daten aus einer Datei gelesen und als Rowset zurückgegeben werden können.  
-  
+
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
+
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
@@ -228,7 +230,7 @@ Gibt ein Zeichen an, das als Anführungszeichen in der CSV-Datei verwendet wird.
   
  Beim Zugriff auf OLE DB-Remotedatenquellen wird die Anmelde-ID vertrauenswürdiger Verbindungen nicht automatisch von dem Server delegiert, auf dem der Client mit dem Server verbunden ist, der abgefragt wird. Die Authentifizierungsdelegierung muss konfiguriert sein.  
   
- Der Katalog- und Schemaname sind erforderlich, falls der OLE DB-Anbieter mehrere Kataloge und Schemas in der angegebenen Datenquelle unterstützt. Die Angabe von Werten für *catalog* und *schema* kann entfallen, falls diese vom OLE DB-Anbieter nicht unterstützt werden. Falls der Anbieter nur Schemanamen unterstützt, muss ein zweiteiliger Name im Format *schema***.***object* angegeben werden. Falls der Anbieter nur Katalognamen unterstützt, muss ein dreiteiliger Name im Format *catalog***.***schema***.***object* angegeben werden. Dreiteilige Namen müssen für Pass-Through-Abfragen angegeben werden, für die der OLE DB-Anbieter von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client verwendet wird. Weitere Informationen finden Sie unter [Transact-SQL-Syntaxkonventionen &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
+ Der Katalog- und Schemaname sind erforderlich, falls der OLE DB-Anbieter mehrere Kataloge und Schemas in der angegebenen Datenquelle unterstützt. Die Angabe von Werten für *catalog* und *schema* kann entfallen, falls diese vom OLE DB-Anbieter nicht unterstützt werden. Falls der Anbieter nur Schemanamen unterstützt, muss ein zweiteiliger Name im Format *Schema***.***Objekt* angegeben werden. Falls der Anbieter nur Katalognamen unterstützt, muss ein dreiteiliger Name im Format *Katalog***.***Schema***.***Objekt* angegeben werden. Dreiteilige Namen müssen für Pass-Through-Abfragen angegeben werden, für die der OLE DB-Anbieter von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client verwendet wird. Weitere Informationen finden Sie unter [Transact-SQL-Syntaxkonventionen &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
  Für die Argumente von `OPENROWSET` können keine Variablen verwendet werden.  
   

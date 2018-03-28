@@ -1,16 +1,16 @@
 ---
 title: SERVERPROPERTY (Transact-SQL) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - SERVERPROPERTY_TSQL
@@ -25,22 +25,24 @@ helpviewer_keywords:
 - instances of SQL Server, property information
 - server properties [SQL Server]
 ms.assetid: 11e166fa-3dd2-42d8-ac4b-04f18c612c4a
-caps.latest.revision: 
+caps.latest.revision: ''
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: f619623b90b784d9d44bc76c99daf3d9802cb8a0
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: be72828789c74d599c003100c98db93b1ec937e4
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="serverproperty-transact-sql"></a>SERVERPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Gibt Eigenschaftsinformationen über die Serverinstanz zurück.  
-  
+
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
+
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
@@ -86,7 +88,7 @@ SERVERPROPERTY ( 'propertyname' )
 |ProductLevel|Ebene der Version der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> Gibt einen der folgenden Werte zurück:<br /><br /> 'RTM' = Ursprüngliche Version<br /><br /> 'SP*n*' = Service Pack-Version<br /><br /> 'CTP*n*' = Community Technology Preview-Version<br /><br /> Basisdatentyp: **nvarchar(128)**|  
 |ProductMajorVersion|**Gilt für:** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis zur aktuellen Version, ab den Updates vom Spätjahr 2015.<br /><br /> Die Hauptversion.|  
 |ProductMinorVersion|**Gilt für:** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis zur aktuellen Version, ab den Updates vom Spätjahr 2015.<br /><br /> Die Nebenversion.|  
-|ProductUpdateLevel|**Gilt für:** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis zur aktuellen Version, ab den Updates vom Spätjahr 2015.<br /><br /> Updateebene des aktuellen Builds. CU gibt ein kumulatives Update an.<br /><br /> Gibt einen der folgenden Werte zurück:<br /><br /> CU*n* = Kumulatives Update<br /><br /> NULL<br />= Nicht zutreffend|  
+|ProductUpdateLevel|**Gilt für:** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis zur aktuellen Version, ab den Updates vom Spätjahr 2015.<br /><br /> Updateebene des aktuellen Builds. CU gibt ein kumulatives Update an.<br /><br /> Gibt einen der folgenden Werte zurück:<br /><br /> CU*n* = kumulatives Update<br /><br /> NULL<br />= Nicht zutreffend|  
 |ProductUpdateReference|**Gilt für:** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis zur aktuellen Version, ab den Updates vom Spätjahr 2015.<br /><br /> KB-Artikel für dieses Release.|  
 |ProductVersion|Version der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] im Format '*major.minor.build.revision*'.<br /><br /> Basisdatentyp: **nvarchar(128)**|  
 |ResourceLastUpdateDateTime|Gibt das Datum und die Zeit des letzten Updates der Ressourcendatenbank zurück.<br /><br /> Basisdatentyp: **datetime**|  

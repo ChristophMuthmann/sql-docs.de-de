@@ -1,30 +1,31 @@
 ---
-title: "Vorgehensweise: Ausführen von parametrisierten Abfragen | Microsoft Docs"
-ms.custom: 
-ms.date: 01/19/2017
+title: 'Vorgehensweise: Ausführen von parametrisierten Abfragen | Microsoft Docs'
+ms.custom: ''
+ms.date: 03/26/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - updating data
 - parameterized queries
 ms.assetid: dc7d0ede-a9b6-4ce2-977e-4d1e7ec2131c
-caps.latest.revision: "31"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 946380fdce8f3ac0d976840e569e35db077a4202
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 23660f3d7ddbaf45ac39674c4eba23092e3ae2d2
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="how-to-perform-parameterized-queries"></a>Vorgehensweise: Ausführen von parametrisierten Abfragen
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -37,7 +38,7 @@ Die Schritte zur Durchführung einer parametrisierten Abfrage können in vier Sc
   
 2.  Initialisieren oder aktualisieren Sie PHP-Variablen, die den Platzhaltern in der Transact-SQL-Abfrage entsprechen.  
   
-3.  Verwenden Sie die PHP-Variablen aus Schritt 2, um ein Array von Parameterwerten zu erstellen oder zu aktualisieren. Diese sollen der Reihenfolge der Parameterplatzhalter in der Transact-SQL-Zeichenfolge entsprechen.  
+3.  Verwenden Sie PHP-Variablen aus Schritt 2 erstellt oder aktualisiert ein Array von Parameterwerten entsprechen Parameterplatzhalter in der Transact-SQL-Zeichenfolge. Die Parameterwerte im Array muss sich in derselben Reihenfolge wie die Platzhalter vorgesehen, die sie darstellen.
   
 4.  Führen Sie die Abfrage aus:  
   
@@ -55,7 +56,7 @@ Das folgende Beispiel aktualisiert die Menge für eine angegebene Produkt-ID in 
   
 Das Beispiel fragt dann die Datenbank ab, um sicherzustellen, dass die Menge korrekt aktualisiert wurde. Die Produkt-ID ist ein Parameter in der SELECT-Abfrage.  
   
-Das Beispiel setzt voraus, dass SQL Server und die [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) -Datenbank auf dem lokalen Computer installiert sind. Wenn das Beispiel über die Befehlszeile ausgeführt wird, werden alle Ausgaben in die Konsole geschrieben.  
+Das Beispiel setzt voraus, dass SQL Server und die [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) -Datenbank auf dem lokalen Computer installiert sind. Wenn das Beispiel über die Befehlszeile ausgeführt wird, werden alle Ausgaben in die Konsole geschrieben.  
   
 ```  
 <?php  
@@ -121,7 +122,7 @@ Das vorhergehende Beispiel verwendet die Funktion **sqlsrv_query** , um Abfragen
 ## <a name="example"></a>Beispiel  
 Das folgende Beispiel veranschaulicht die implizite Bindung von Variablen bei Verwendung der **sqlsrv_prepare** -Funktion. Das Beispiel fügt mehrere Verkaufsaufträge in die *Sales.SalesOrderDetail* -Tabelle ein Die *$params* Array an die Anweisung gebunden ist (*$stmt*) beim **Sqlsrv_prepare** aufgerufen wird. Vor jeder Ausführung einer Abfrage, die einen neuen Verkaufsauftrag in die Tabelle einfügt, wird das *$params* -Array mit neuen Werten entsprechend der Auftragsdetails aktualisiert. Die Ausführung der nachfolgenden Abfrage verwendet die neuen Parameterwerte.  
   
-Das Beispiel setzt voraus, dass SQL Server und die [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) -Datenbank auf dem lokalen Computer installiert sind. Wenn das Beispiel über die Befehlszeile ausgeführt wird, werden alle Ausgaben in die Konsole geschrieben.  
+Das Beispiel setzt voraus, dass SQL Server und die [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) -Datenbank auf dem lokalen Computer installiert sind. Wenn das Beispiel über die Befehlszeile ausgeführt wird, werden alle Ausgaben in die Konsole geschrieben.  
   
 ```  
 <?php  
@@ -194,8 +195,11 @@ sqlsrv_close( $conn);
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
-[Konvertieren von Datentypen](../../connect/php/converting-data-types.md)  
-[Überlegungen zur Sicherheit für PHP SQL Driver](../../connect/php/security-considerations-for-php-sql-driver.md)
-[Informationen zu den Codebeispielen in der Dokumentation](../../connect/php/about-code-examples-in-the-documentation.md)  
+[Konvertieren von Datentypen](../../connect/php/converting-data-types.md)
+
+[Sicherheitsüberlegungen für die Microsoft-Treiber für PHP für SQLServer](../../connect/php/security-considerations-for-php-sql-driver.md)
+
+[Informationen zu den Codebeispielen in der Dokumentation](../../connect/php/about-code-examples-in-the-documentation.md)
+
 [sqlsrv_rows_affected](../../connect/php/sqlsrv-rows-affected.md)  
   

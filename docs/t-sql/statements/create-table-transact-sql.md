@@ -1,16 +1,16 @@
 ---
 title: CREATE TABLE (Transact-SQL) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - FILESTREAM_TSQL
@@ -49,28 +49,30 @@ helpviewer_keywords:
 - number of columns per table
 - maximum number of bytes per row
 ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
-caps.latest.revision: 
+caps.latest.revision: ''
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: ad0dd6ed4d8006a596ac05c35730a8132368d5df
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 33705d53cf51fa0aa32c386ff5cdf3fae54383ff
+ms.sourcegitcommit: 6e16d1616985d65484c72f5e0f34fb2973f828f4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Erstellt eine neue Tabelle in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
+
 > [!NOTE]   
 >  Eine [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]-Syntax finden Sie unter [CREATE TABLE (Azure SQL Data Warehouse)](../../t-sql/statements/create-table-azure-sql-data-warehouse.md).
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
-## <a name="syntax"></a>Syntax  
+## <a name="simple-syntax"></a>Einfache Syntax  
   
 ```  
 --Simple CREATE TABLE Syntax (common if not using options)  
@@ -80,7 +82,7 @@ CREATE TABLE
 [ ; ]  
 ```  
   
-## <a name="syntax"></a>Syntax  
+## <a name="full-syntax"></a>Vollständige Syntax  
   
 ```  
 --Disk-Based CREATE TABLE Syntax  
@@ -359,7 +361,7 @@ column_name <data_type>
  Der Name des Schemas, zu dem die neue Tabelle gehört.  
   
  *table_name*  
- Der Name der neuen Tabelle. Tabellennamen müssen den Regeln für [Bezeichner](../../relational-databases/databases/database-identifiers.md) entsprechen. *table_name* kann höchstens 128 Zeichen aufweisen, ausgenommen lokale temporäre Tabellennamen (Namen mit einem Nummernzeichen (#) als Präfix), bei denen maximal 116 Zeichen zulässig sind.  
+ Der Name der neuen Tabelle. Tabellennamen müssen die Regeln für [Bezeichner](../../relational-databases/databases/database-identifiers.md) erfüllen. *table_name* kann höchstens 128 Zeichen aufweisen, ausgenommen lokale temporäre Tabellennamen (Namen mit einem Nummernzeichen (#) als Präfix), bei denen maximal 116 Zeichen zulässig sind.  
   
  AS FileTable 
  
@@ -396,7 +398,7 @@ column_name <data_type>
  ON {*partition_scheme* | *filegroup* | **"**default**"**} kann auch in den Einschränkungen PRIMARY KEY oder UNIQUE angegeben werden. Diese Einschränkungen erstellen Indizes. Wenn *filegroup* angegeben ist, wird der Index in der genannten Dateigruppe gespeichert. Wenn **"**default**"** angegeben oder ON überhaupt nicht angegeben sind, wird der Index in derselben Dateigruppe wie die Tabelle gespeichert. Wenn die PRIMARY KEY- oder die UNIQUE-Einschränkung einen gruppierten Index erstellt, werden die Datenseiten für die Tabelle in derselben Dateigruppe wie der Index gespeichert. Wenn CLUSTERED angegeben wird oder ein gruppierter Index anderweitig durch die Einschränkung erstellt wird, und ein Wert für *partition_scheme* angegeben wird, der von der Angabe für *partition_scheme* oder *filegroup* der Tabellendefinition abweicht (oder umgekehrt), wird nur die Einschränkungsdefinition berücksichtigt. Der andere Wert wird ignoriert.  
   
 > [!NOTE]  
->  In diesem Zusammenhang ist DEFAULT kein Schlüsselwort. Es handelt sich dabei um einen Bezeichner für die Standarddateigruppe. Dieser muss wie in ON **"**default**"** or ON **[**default**]** durch Trennzeichen getrennt werden. Wenn **"**default**"** angegeben ist, muss die Option QUOTED_IDENTIFIER für die aktuelle Sitzung auf ON festgelegt sein. Dies ist die Standardeinstellung. Weitere Informationen finden Sie unter [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
+>  In diesem Zusammenhang ist DEFAULT kein Schlüsselwort. Es handelt sich dabei um einen Bezeichner für die Standarddateigruppe. Dieser muss wie in ON **"**default**"** or ON **[**default**]** durch Trennzeichen getrennt werden. Wenn **"**default**"** angegeben ist, muss die QUOTED_IDENTIFIER-Option in der aktuellen Sitzung auf ON festgelegt sein. Dies ist die Standardeinstellung. Weitere Informationen finden Sie unter [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
   
 > [!NOTE]  
 >  Nachdem Sie eine partitionierte Tabelle erstellt haben, erwägen Sie, die LOCK_ESCALATION-Option für die Tabelle auf AUTO festzulegen. Dies kann die Parallelität verbessern, indem die Sperren auf Partitionsebene (HoBT) statt auf Tabellenebene aktiviert werden. Weitere Informationen finden Sie unter [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md).  
@@ -412,7 +414,7 @@ TEXTIMAGE_ON ändert nur den Speicherort des LOB-Speicherbereichs – in Zeilen 
 
 
 > [!NOTE]  
->  In diesem Zusammenhang ist DEFAULT kein Schlüsselwort. Es handelt sich um einen Bezeichner für die Standarddateigruppe, der begrenzt werden muss, wie z.B. in TEXTIMAGE_ON **"**default**"** oder TEXTIMAGE_ON **[**default**]**. Wenn **"**default**"** angegeben ist, muss die Option QUOTED_IDENTIFIER für die aktuelle Sitzung auf ON festgelegt sein. Dies ist die Standardeinstellung. Weitere Informationen finden Sie unter [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
+>  In diesem Zusammenhang ist DEFAULT kein Schlüsselwort. Es handelt sich um einen Bezeichner für die Standarddateigruppe, der begrenzt werden muss, wie z.B. in TEXTIMAGE_ON **"**default**"** oder TEXTIMAGE_ON **[**default**]**. Wenn **"**default**"** angegeben ist, muss die QUOTED_IDENTIFIER-Option in der aktuellen Sitzung auf ON festgelegt sein. Dies ist die Standardeinstellung. Weitere Informationen finden Sie unter [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
   
  FILESTREAM_ON { *partition_scheme_name* | filegroup | **"**default**"** } **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
  
@@ -463,13 +465,13 @@ TEXTIMAGE_ON ändert nur den Speicherort des LOB-Speicherbereichs – in Zeilen 
  Gilt nur für die Datentypen **varchar**, **nvarchar** und **varbinary** zum Speichern von 2^31 Byte an Zeichen- und Binärdaten sowie von 2^30 Byte an Unicode-Daten.  
   
  CONTENT  
- Gibt an, dass jede Instanz des **XML**-Datentyps in *column_name* mehrere allgemeine Elemente enthalten kann. CONTENT gilt nur für den **XML**-Datentyp und kann angegeben werden, wenn *xml_schema_collection* ebenfalls angegeben ist. Wird der Parameter nicht angegeben, entspricht CONTENT dem Standardverhalten.  
+ Gibt an, dass jede Instanz des **XML**-Datentyps in *column_name* mehrere allgemeine Elemente enthalten kann. CONTENT gilt nur für den **xml**-Datentyp und kann nur angegeben werden, wenn *xml_schema_collection* ebenfalls angegeben ist. Wird der Parameter nicht angegeben, entspricht CONTENT dem Standardverhalten.  
   
  DOCUMENT  
  Gibt an, dass jede Instanz des **XML**-Datentyps in *column_name* nur ein allgemeines Element enthalten kann. DOCUMENT gilt nur für den **XML**-Datentyp und kann angegeben werden, wenn *xml_schema_collection* ebenfalls angegeben ist.  
   
  *xml_schema_collection*  
- Gilt nur für den **xml**-Datentyp zum Verknüpfen einer XML-Schemaauflistung mit diesem Typ. Vor der Typisierung einer **XML**-Spalte mit einem Schema muss das Schema zuerst mithilfe von [CREATE XML SCHEMA COLLECTION](../../t-sql/statements/create-xml-schema-collection-transact-sql.md) in der Datenbank erstellt werden.  
+ Gilt nur für den **xml**-Datentyp zum Verknüpfen einer XML-Schemaauflistung mit diesem Typ. Vor der Typisierung einer **xml**-Spalte mit einem Schema muss das Schema zuerst mithilfe von [CREATE XML SCHEMA COLLECTION](../../t-sql/statements/create-xml-schema-collection-transact-sql.md) in der Datenbank erstellt werden.  
   
  DEFAULT  
  Gibt den Wert an, der für die Spalte bereitgestellt wird, wenn kein Wert explizit angegeben wurde. DEFAULT-Definitionen können auf alle Spalten angewendet werden, mit Ausnahme der als **timestamp** definierten Spalten sowie von Spalten mit der IDENTITY-Eigenschaft. Wenn ein Standardwert für einen benutzerdefinierten Spaltentyp angegeben wird, sollte dieser Typ eine implizite Konvertierung von *constant_expression* in den benutzerdefinierten Typ unterstützen. DEFAULT-Definitionen werden entfernt, wenn die Tabelle gelöscht wird. Es kann nur ein konstanter Wert (z. B. eine Zeichenfolge), eine Skalarfunktion (entweder eine System-, eine benutzerdefinierte oder eine CLR-Funktion) oder NULL als Standardwert verwendet werden. Um die Kompatibilität mit früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aufrechtzuerhalten, ist es möglich, einer DEFAULT-Definition einen Einschränkungsnamen zuzuweisen.  
@@ -550,7 +552,7 @@ Gibt an, dass ein Index in der Tabelle erstellt werden soll. Dies kann ein grupp
 
  Gibt die Platzierung der FILESTREAM-Daten für die Tabelle an, wenn ein gruppierter Index erstellt wird. Die FILESTREAM_ON-Klausel lässt zu, dass FILESTREAM-Daten in eine andere FILESTREAM-Dateigruppe oder ein anderes Partitionsschema verschoben werden.  
   
- *filestream_filegroup_name* gibt den Namen einer FILESTREAM-Dateigruppe an. Für die Dateigruppe muss eine Datei mit einer [CREATE DATABASE](../../t-sql/statements/create-database-sql-server-transact-sql.md)-Anweisung oder einer [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md)-Anweisung definiert worden sein, andernfalls wird ein Fehler ausgelöst.  
+ *filestream_filegroup_name* ist der Name einer FILESTREAM-Dateigruppe. Für die Dateigruppe muss eine Datei mit einer [CREATE DATABASE](../../t-sql/statements/create-database-sql-server-transact-sql.md)-Anweisung oder einer [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md)-Anweisung definiert worden sein, andernfalls wird ein Fehler ausgelöst.  
   
  Wenn die Tabelle partitioniert ist, muss die FILESTREAM_ON-Klausel eingeschlossen werden und ein Partitionsschema von FILESTREAM-Dateigruppen angeben, das die gleiche Partitionsfunktion und die gleichen Partitionsspalten wie das Partitionsschema der Tabelle enthält. Andernfalls wird ein Fehler ausgelöst.  
   
@@ -788,7 +790,7 @@ CREATE TABLE t4( c1 int, c2 int, INDEX ix_1 NONCLUSTERED (c1,c2))
   
  Gilt nur für columnstore-Indizes, einschließlich nicht gruppierter und gruppierter columnstore-Indizes. Durch COLUMNSTORE_ARCHIVE wird die Tabelle oder Partition weiter in eine geringere Größe komprimiert. Dies empfiehlt sich bei der Archivierung und in Situationen, in denen es auf eine geringere Speichergröße und nicht auf den zusätzlichen Zeitaufwand für das Speichern und Abrufen ankommt.  
   
- Weitere Informationen zur Komprimierung finden Sie unter [Datenkomprimierung](../../relational-databases/data-compression/data-compression.md).  
+ Weitere Informationen zur Datenkomprimierung finden Sie unter [Datenkomprimierung](../../relational-databases/data-compression/data-compression.md).  
   
  ON PARTITIONS **(** { `<partition_number_expression>` | [ **,**...*n* ] **)**  
  Gibt die Partitionen an, für die die DATA_COMPRESSION-Einstellung gilt. Wenn die Tabelle nicht partitioniert ist, erzeugt das ON PARTITIONS-Argument einen Fehler. Wenn die ON PARTITIONS-Klausel nicht angegeben wird, gilt die DATA_COMPRESSION-Option für alle Partitionen einer partitionierten Tabelle.  
@@ -834,7 +836,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
   
  IGNORE_DUP_KEY kann für Indizes, die für eine Sicht erstellt werden, nicht eindeutige Indizes, XML-Indizes, räumliche und gefilterte Indizes nicht auf ON festgelegt werden.  
   
- Verwenden Sie [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) zum Anzeigen von IGNORE_DUP_KEY.  
+ Um IGNORE_DUP_KEY anzuzeigen, verwenden Sie [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md).  
   
  In abwärtskompatibler Syntax ist WITH IGNORE_DUP_KEY gleichwertig mit WITH IGNORE_DUP_KEY = ON.  
   
@@ -1222,7 +1224,7 @@ SELECT * FROM tempdb.sys.database_files
   
 -   Ein für eine Einschränkung erstellter Index kann nicht mit der DROP INDEX-Anweisung gelöscht werden. Die Einschränkung muss mithilfe von ALTER TABLE gelöscht werden. Ein Index, der für eine Einschränkung erstellt wurde und von ihr verwendet wird, kann mithilfe von ALTER INDEX...REBUILD neu erstellt werden. Weitere Informationen finden Sie unter [Neuorganisieren und Neuerstellen von Indizes](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md).  
   
--   Einschränkungsnamen müssen den Regeln für [Bezeichner](../../relational-databases/databases/database-identifiers.md) entsprechen, wobei der Name außerdem nicht mit einem Nummernzeichen (#) beginnen darf. Wenn *constraint_name* nicht angegeben ist, vergibt das System einen Namen für die Einschränkung. Der Einschränkungsname wird in jeder Fehlermeldung über Einschränkungsverletzungen angezeigt.  
+-   Einschränkungsnamen müssen den Regeln für [Bezeichner](../../relational-databases/databases/database-identifiers.md) entsprechen, wobei der Name nicht mit einem Nummernzeichen (#) beginnen darf. Wenn *constraint_name* nicht angegeben ist, vergibt das System einen Namen für die Einschränkung. Der Einschränkungsname wird in jeder Fehlermeldung über Einschränkungsverletzungen angezeigt.  
   
 -   Wenn eine Einschränkung in einer INSERT-, UPDATE- oder DELETE-Anweisung verletzt wird, wird die Anweisung beendet. Wenn SET XACT_ABORT jedoch auf OFF festgelegt ist, wird die Verarbeitung der Transaktion – falls die Anweisung Teil einer expliziten Transaktion ist – fortgesetzt. Wenn SET XACT_ABORT auf ON festgelegt ist, wird für die ganze Transaktion ein Rollback ausgeführt. Sie können auch die ROLLBACK TRANSACTION-Anweisung mit der Transaktionsdefinition verwenden, indem Sie die @@ERROR-Systemfunktion prüfen.  
   
@@ -1468,7 +1470,7 @@ CREATE TABLE dbo.T1
 WITH (DATA_COMPRESSION = ROW);  
 ```  
   
- Weitere Beispiele zur Datenkomprimierung finden Sie unter [Datenkomprimierung](../../relational-databases/data-compression/data-compression.md).  
+ Weitere Beispiele für die Datenkomprimierung finden Sie unter [Datenkomprimierung](../../relational-databases/data-compression/data-compression.md).  
   
 ### <a name="o-creating-a-table-that-has-sparse-columns-and-a-column-set"></a>O. Erstellen einer Tabelle mit Sparsespalten und einem Spaltensatz  
  Anhand der folgenden Beispiele wird gezeigt, wie Sie eine Tabelle mit einer Sparsespalte und eine Tabelle mit zwei Sparsespalten und einem Spaltensatz erstellen. In den Beispielen wird die grundlegende Syntax verwendet. Komplexere Beispiele finden Sie unter [Verwenden von Spalten mit geringer Dichte](../../relational-databases/tables/use-sparse-columns.md) und [Verwenden von Spaltensätzen](../../relational-databases/tables/use-column-sets.md).  

@@ -1,27 +1,28 @@
 ---
 title: Beispielanwendung (PDO_SQLSRV-Treiber) | Microsoft Docs
-ms.custom: 
-ms.date: 01/19/2017
+ms.custom: ''
+ms.date: 03/26/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a153e4ce-992d-4211-9a0f-c0998c706402
-caps.latest.revision: "19"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: a20885a414ac330f4e4421e5769fce5352574d47
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 1dd0cdfbc217900ae4a4bfb618bafc9307e9e0c5
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="example-application-pdosqlsrv-driver"></a>Beispielanwendung (PDO_SQLSRV-Treiber)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -30,17 +31,17 @@ Bei der beispielanwendung AdventureWorks Product Reviews ist eine Webanwendung, 
   
 ### <a name="running-the-example-application"></a>Ausführen der Beispielanwendung  
   
-1.  Installieren Sie [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. Ausführliche Informationen finden Sie unter [erste Schritte mit der SQL-Treiber für PHP](../../connect/php/getting-started-with-the-php-sql-driver.md)
+1.  Installieren Sie [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. Ausführliche Informationen finden Sie unter [erste Schritte mit Microsoft Drivers for PHP for SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)
 2.  Kopieren Sie den Code weiter unten in diesem Dokument in zwei Dateien: „adventureworks_demo.php“ und „photo.php“.  
 3.  Platzieren Sie die „adventureworks_demo.php-“ und „photo.php“-Dateien im Stammverzeichnis Ihres Webservers.  
-4.  Führen Sie die Anwendung durch, indem Sie „http://localhost/adventureworks_demo.php“ aus Ihrem Browse starten.  
+4.  Führen Sie die Anwendung durch Starten http://localhost/adventureworks_demo.php in Ihrem Browser.  
   
 ## <a name="requirements"></a>Anforderungen  
 Um die Beispielanwendung „AdventureWorks Product Reviews“ auszuführen, muss Ihr Computer Folgendes erfüllen:  
   
--   Ihr System erfüllt die Anforderungen für [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. Detaillierte Informationen finden Sie unter [Systemanforderungen für den PHP_SQL-Treiber](../../connect/php/system-requirements-for-the-php-sql-driver.md).  
+-   Ihr System erfüllt die Anforderungen für [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. Ausführliche Informationen finden Sie unter [System Requirements for Microsoft Drivers for PHP for SQL Server](../../connect/php/system-requirements-for-the-php-sql-driver.md).  
  -   Die „adventureworks_demo.php“- und „photo.php“-Dateien befinden sich im Stammverzeichnis Ihres Webservers. Die Dateien müssen den weiter unten in diesem Dokument gelisteten Code enthalten.  
--   SQL Server 2005 oder SQL Server 2008 mit der [AdventureWorks2008](http://go.microsoft.com/fwlink/?LinkID=67739) -Datenbank ist auf dem lokalen Computer installiert.  
+-   SQL Server 2005 oder SQL Server 2008 mit der [AdventureWorks2008](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) Datenbank angefügt wurde, auf dem lokalen Computer installiert ist.  
 -   Ein Webbrowser ist installiert.  
   
 ## <a name="demonstrates"></a>Veranschaulicht  
@@ -510,9 +511,13 @@ die( print_r( $e->getMessage() ) );
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
-[Verbinden mit dem Server](../../connect/php/connecting-to-the-server.md)  
-[Vergleichen von Ausführungsfunktionen](../../connect/php/comparing-execution-functions.md)  
-[Abrufen von Daten](../../connect/php/retrieving-data.md)  
-[Aktualisieren von Daten &#40;Microsoft-Treiber für PHP für SQL Server&#41;](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)  
+[Verbinden mit dem Server](../../connect/php/connecting-to-the-server.md)
+
+[Vergleichen von Ausführungsfunktionen](../../connect/php/comparing-execution-functions.md)
+
+[Abrufen von Daten](../../connect/php/retrieving-data.md)
+
+[Aktualisieren von Daten &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)
+
 [API-Referenz für den SQLSRV-Treiber](../../connect/php/sqlsrv-driver-api-reference.md)  
   

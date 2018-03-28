@@ -1,32 +1,32 @@
 ---
 title: SQLServer Machine Learning und R Services (Datenbankintern) | Microsoft Docs
 ms.date: 03/16/2018
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-ms.assetid: 
-caps.latest.revision: 
+ms.assetid: ''
+caps.latest.revision: ''
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ms.workload: Active
-ms.openlocfilehash: 0d5bb56717eefa50a219db051eb611a82974a0bc
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: f84f61721bca14a78694a9df6c7af8b7f7d74ea7
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="sql-server-machine-learning-and-r-services-in-database"></a>SQLServer Machine Learning und R Services (Datenbankintern)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Eine Installation in der Datenbank von Machine Learning operiert innerhalb des Kontexts von einer SQL Server-Datenbank-Modulinstanz Bereitstellen von R und Python externes Skript-Unterstützung für Residente Daten in der SQL Server-Instanz. Machine Learning in integriert ist [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], können Sie Analysen in der Nähe der Daten und beseitigen Sie die Kosten und Sicherheitsrisiken durch Verschieben von Daten.
 
-Da das Datenbankmodul mit mehreren Instanzen handelt, können Sie mehrere Instanzen von Analysen in der Datenbank, oder sogar älteren und neueren Versionen Seite-an-Seite installieren. Optionen sind entweder [SQL Server 2017 Machine Learning Services (Datenbankintern)](../install/sql-machine-learning-standalone-windows-install.md) mit R und Python oder [SQL Server 2016 R Services (In ändern)](../install/sql-r-standalone-windows-install.md) mit nur R. 
+Da das Datenbankmodul mit mehreren Instanzen handelt, können Sie mehrere Instanzen von Analysen in der Datenbank, oder sogar älteren und neueren Versionen Seite-an-Seite installieren. Optionen sind entweder [SQL Server 2017 Machine Learning Services (Datenbankintern)](../install/sql-machine-learning-standalone-windows-install.md) mit R und Python oder [SQL Server 2016 R Services (Datenbankintern)](../install/sql-r-standalone-windows-install.md) mit nur R. 
 
 Machine Learning-Komponenten können ebenfalls als Unabhängigkeit von der Instanz installiert werden [eigenständigen Servern](r-server-standalone.md). Im Allgemeinen empfohlen, dass Sie zu behandeln (eigenständig) und (In-Database) Installationen als sich gegenseitig exklusiven zur Vermeidung von Ressourcenkonflikten, wenn Sie jedoch genügend Ressourcen stehen keine verboten für beide auf demselben physischen Computer installieren.
 

@@ -1,30 +1,31 @@
 ---
 title: 'Vorgehensweise: Angeben von PHP-Datentypen | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - converting data types
 - streaming data
 ms.assetid: fee6e6b8-aad9-496b-84a2-18d2950470a4
-caps.latest.revision: "32"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0a0374a32d2798a28cfe3e27ab557921763eea36
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: b12a1042d4090a9e2369f602010199dea54431ed
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="how-to-specify-php-data-types"></a>Vorgehensweise: PHP-Datentypen festlegen
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -37,14 +38,14 @@ Die folgenden Schritten zeigen zusammenfassend, wie PHP-Datentypen beim Abruf vo
   
 2.  Stellen Sie eine Datenzeile für das Lesen mit [sqlsrv_fetch](../../connect/php/sqlsrv-fetch.md)bereit.  
   
-3.  Verwenden Sie [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md) , um die Felddaten einer ausgegebenen Zeile mit dem gewünschten, im dritten optionalen Parameter festgelegten PHP-Datentyp abzurufen. Falls der optionale dritte Parameter nicht festgelegt ist, werden die Daten laut den PHP-Standarddatentypen zurückgegeben. Informationen zu den PHP-Standarddatentypen finden Sie unter [Default PHP Data Types](../../connect/php/default-php-data-types.md).  
+3.  Verwenden Sie [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md) , um die Felddaten einer ausgegebenen Zeile mit dem gewünschten, im dritten optionalen Parameter festgelegten PHP-Datentyp abzurufen. Wenn der optionale dritte Parameter nicht angegeben wird, werden die Daten laut den PHP-Standarddatentypen zurückgegeben. Informationen zu den PHP-Standarddatentypen finden Sie unter [Default PHP Data Types](../../connect/php/default-php-data-types.md).  
   
-    Informationen über die Konstanten, die zur Angabe des PHP-Datentyps finden Sie unter im PHPTYPEs-Abschnitt der [Konstanten &#40; Microsoft Drivers for PHP for SQLServer &#41; ](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).  
+    Informationen über die Konstanten, die zur Angabe des PHP-Datentyps finden Sie unter im PHPTYPEs-Abschnitt der [Konstanten &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).  
   
 ## <a name="example"></a>Beispiel  
-Im folgenden Beispiel werden Zeilen von der *Production.ProductReview* -Tabelle der AdventureWorks-Datenbank abgerufen. In jeder ausgegebenen Zeile wird das *ReviewDate* -Feld als Zeichenfolge und das *Comments* -Feld als Stream abgerufen. Die Streamdateien werden mit der PHP [fpassthru](http://php.net/manual/en/function.fpassthru.php) -Funktion dargestellt.  
+Im folgenden Beispiel werden Zeilen von der *Production.ProductReview* -Tabelle der AdventureWorks-Datenbank abgerufen. Jede zurückgegebene Zeile den *ReviewDate* -Feld als Zeichenfolge abgerufen und die *Kommentare* -Feld als Stream abgerufen. Die Streamdateien werden mit der PHP [fpassthru](http://php.net/manual/en/function.fpassthru.php) -Funktion dargestellt.  
   
-Das Beispiel setzt voraus, dass SQL Server und die [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) -Datenbank auf dem lokalen Computer installiert sind. Wenn das Beispiel über die Befehlszeile ausgeführt wird, werden alle Ausgaben in die Konsole geschrieben.  
+Das Beispiel setzt voraus, dass SQL Server und die [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) -Datenbank auf dem lokalen Computer installiert sind. Wenn das Beispiel über die Befehlszeile ausgeführt wird, werden alle Ausgaben in die Konsole geschrieben.  
   
 ```  
 <?php  
@@ -111,8 +112,11 @@ Abrufen von das vierte Feld (*Kommentare*) wird als Stream zu Demonstrationszwec
 > Die [sqlsrv_field_metadata](../../connect/php/sqlsrv-field-metadata.md) -Funktion bietet eine Möglichkeit, Feldinformationen inklusive Feldtypinformationen zu erhalten bevor eine Abfrage durchgeführt wird.  
   
 ## <a name="see-also"></a>Siehe auch  
-[Abrufen von Daten](../../connect/php/retrieving-data.md)  
-[Informationen zu den Codebeispielen in der Dokumentation](../../connect/php/about-code-examples-in-the-documentation.md)  
-[Vorgehensweise: Abrufen von Eingabe-/Ausgabeparametern mit dem SQLSRV-Treiber](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)  
+[Abrufen von Daten](../../connect/php/retrieving-data.md)
+
+[Informationen zu den Codebeispielen in der Dokumentation](../../connect/php/about-code-examples-in-the-documentation.md)
+
+[Gewusst wie: Abrufen von Eingabe-/Ausgabeparametern mit dem SQLSRV-Treiber](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)
+
 [How to: Retrieve Input and Output Parameters Using the SQLSRV Driver](../../connect/php/how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver.md)  
   

@@ -1,33 +1,33 @@
 ---
-title: Microsoft PHP Driver for SQLServer | Microsoft Docs
-ms.custom: 
-ms.date: 01/19/2017
+title: Microsoft Drivers for PHP for SQLServer | Microsoft Docs
+ms.custom: ''
+ms.date: 03/26/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 9e78bbf3-9e9a-426d-99d3-6fa2cb33ff6b
-caps.latest.revision: 
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 1b9464f25551d391004275fcb6dda33fc9b89e2f
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: a7a78c55a54c5e020b26cee82e2e5a08ff09f5e0
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 03/28/2018
 ---
-# <a name="microsoft-php-driver-for-sql-server"></a>Microsoft PHP Driver for SQL Server
+# <a name="microsoft-drivers-for-php-for-sql-server"></a>Microsoft-Treiber für PHP für SQL Server
 
-![Download-nach-unten-Eingekreister](../../ssdt/media/download.png)[beim Herunterladen von PHP-Treiber für SQL](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+![Download-nach-unten-Eingekreister](../../ssdt/media/download.png)[beim Herunterladen von PHP-Treibern für SQL](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-Der SQL Server-Treiber für PHP ermöglicht die Integration in SQL Server for PHP-Anwendungen. Der Treiber ist eine PHP-Erweiterung, die das Lesen und Schreiben von SQL Server-Daten über PHP-Skripts ermöglicht. Der Treiber stellt Schnittstellen bereit, für den Datenzugriff Azure SQL-Datenbank und in allen Editionen von SQL Server 2005 und höher (einschließlich Express-Editionen). Der Treiber nutzt PHP-Funktionen, einschließlich PHP-Datenströmen zum Lesen und Schreiben großer Objekte.  
+Microsoft Drivers for PHP for SQL Server-Integration mit SQL Server für PHP-Anwendungen zu aktivieren. Die Treiber sind PHP-Erweiterungen, die das Lesen und Schreiben von SQL Server-Daten über PHP-Skripts zu ermöglichen. Der Treiber selbst bereitstellen Schnittstellen für den Zugriff auf Daten in Azure SQL-Datenbanken und allen Editionen von SQL Server 2005 und höher (einschließlich Express-Editionen). Die Treiber stellen PHP-Funktionen verwenden, einschließlich PHP-Datenströmen zum Lesen und Schreiben großer Objekte.  
   
 ## <a name="getting-started"></a>Erste Schritte  
 * [Schritt 1: Konfigurieren der Entwicklungsumgebung für PHP-Entwicklung](step-1-configure-development-environment-for-php-development.md)  
@@ -42,13 +42,13 @@ Der SQL Server-Treiber für PHP ermöglicht die Integration in SQL Server for PH
 * [Überlegungen zur Sicherheit](security-considerations-for-php-sql-driver.md)
   
 ## <a name="community"></a>Community  
-* [Supportressourcen Sie für den PHP-SQL-Treiber](support-resources-for-the-php-sql-driver.md)
+* [Supportressourcen Sie für die Microsoft-Treiber für PHP für SQLServer](support-resources-for-the-php-sql-driver.md)
   
 ## <a name="download"></a>Herunterladen  
 * ![Download-nach-unten-Eingekreister](../../ssdt/media/download.png)[beim Herunterladen von PHP-Treiber für SQL](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
   
 ## <a name="samples"></a>Beispiele  
-* [Codebeispiele für PHP-SQL-Treiber](code-samples-for-php-sql-driver.md)
+* [Microsoft Drivers for PHP for SQLServer-Codebeispiele](code-samples-for-php-sql-driver.md)
 * [Erste Schritte mit PHP unter Windows](https://www.microsoft.com/sql-server/developer-get-started/php/windows/)
 * [Erste Schritte mit PHP auf macOS](https://www.microsoft.com/sql-server/developer-get-started/php/mac/)
 * [Erste Schritte mit PHP für Ubuntu](https://www.microsoft.com/sql-server/developer-get-started/php/ubuntu/)

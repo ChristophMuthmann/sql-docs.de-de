@@ -1,42 +1,43 @@
 ---
 title: 'Vorgehensweise: Senden von Daten als Stream | Microsoft Docs'
-ms.custom: 
-ms.date: 01/19/2017
+ms.custom: ''
+ms.date: 03/26/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - updating data
 - streaming data
 ms.assetid: ab6b95d6-b6e6-4bd7-a18c-50f2918f7532
-caps.latest.revision: "30"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fe89454453e105ca264f5e04aacb8581dfb81cac
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: b1821f922e9c45340365abf680f5f46a61d6eb1e
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
-# <a name="how-to-send-data-as-a-stream"></a>Vorgehensweise: Datenströme senden
+# <a name="how-to-send-data-as-a-stream"></a>Vorgehensweise: Streamen von Daten
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Die [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] nutzt PHP-Datenströme, um große Objekte an den Server zu senden. In diesem Thema wird erklärt, wie Sie Daten in Strömen senden können. Im ersten Beispiel wird mithilfe des SQLSRV-Treibers die Standardvorgehensweise veranschaulicht, bei der alle Datenstromdaten direkt bei der Abfrageausführung gesendet werden. Im zweiten Beispiel wird mithilfe des SQLSRV-Treibers veranschaulicht, wie Sie bis zu 8 Kilobyte (KB) an Datenstromdaten gleichzeitig an den Server senden.  
+Die [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] nutzt PHP-Datenströme, um große Objekte an den Server zu senden. In diesem Thema wird erklärt, wie Sie Daten in Strömen senden können. Im ersten Beispiel wird mithilfe des SQLSRV-Treibers die Standardvorgehensweise veranschaulicht, bei der alle Datenstromdaten direkt bei der Abfrageausführung gesendet werden. Im zweiten Beispiel wird den SQLSRV-Treiber veranschaulicht, wie Sie bis zu acht Kilobyte (8 kB) Senden von datenstromdaten gleichzeitig an den Server.  
   
 Im dritten Beispiel wird veranschaulicht, wie Sie mithilfe des PDO_SQLSRV-Treibers Datenstromdaten an den Server senden.  
   
-## <a name="example"></a>Beispiel  
+## <a name="example-sending-stream-data-at-execution"></a>Beispiel: Senden von Datenstromdaten bei Ausführung
 Im folgenden Beispiel wird eine einzelne Zeile in die *Production.ProductReview* Tabelle der AdventureWorks-Datenbank eingefügt. Die Kundenkommentare (*$comments*) werden als Datenstrom mithilfe der PHP geöffnet [Fopen](http://php.net/manual/en/function.fopen.php) Funktion, und klicken Sie dann an den Server nach der Ausführung der Abfrage gestreamt.  
   
-Das Beispiel setzt voraus, dass SQL Server und die [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) -Datenbank auf dem lokalen Computer installiert sind. Die Ausgabe wird in die Konsole geschrieben.  
+Das Beispiel setzt voraus, dass SQL Server und die [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) -Datenbank auf dem lokalen Computer installiert sind. Die Ausgabe wird in die Konsole geschrieben.  
   
 ```  
 <?php  
@@ -89,10 +90,10 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="example"></a>Beispiel  
-Das nächste Beispiel ähnelt dem vorherigen Beispiel, jedoch wurde hier die Standardvorgehensweise zum Senden von Datenstromdaten bei Ausführung der Abfrage deaktiviert. Im Beispiel wird [sqlsrv_send_stream_data](../../connect/php/sqlsrv-send-stream-data.md) verwendet, um Datenstromdaten an den Server zu senden. Bis zu acht Kilobyte (8 KB) Daten mit jedem Aufruf gesendet **Sqlsrv_send_stream_data**. Das Skript zählt die Anzahl der Aufrufe durch **sqlsrv_send_stream_data** und zeigt sie in der Konsole an.  
+## <a name="example-sending-stream-data-using-sqlsrvsendstreamdata"></a>Beispiel: Senden von Sqlsrv_send_stream_data Stream mithilfe von Daten
+Das nächste Beispiel ähnelt dem vorherigen Beispiel identisch, aber das Standardverhalten Senden von datenstromdaten bei Ausführung deaktiviert ist. Im Beispiel wird [sqlsrv_send_stream_data](../../connect/php/sqlsrv-send-stream-data.md) verwendet, um Datenstromdaten an den Server zu senden. Bis zu acht Kilobyte (8 kB) Daten mit jedem Aufruf gesendet **Sqlsrv_send_stream_data**. Das Skript zählt die Anzahl der Aufrufe durch **sqlsrv_send_stream_data** und zeigt sie in der Konsole an.  
   
-Das Beispiel setzt voraus, dass SQL Server und die [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) -Datenbank auf dem lokalen Computer installiert sind. Die Ausgabe wird in die Konsole geschrieben.  
+Das Beispiel setzt voraus, dass SQL Server und die [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) -Datenbank auf dem lokalen Computer installiert sind. Die Ausgabe wird in die Konsole geschrieben.  
   
 ```  
 <?php  
@@ -156,7 +157,7 @@ sqlsrv_close( $conn);
   
 Obwohl in den Beispielen in diesem Thema nur Zeichendaten an den Server gesendet werden, können Daten aller Formate als Strom gesendet werden. Sie können die in diesem Thema erläuterten Techniken beispielsweise nutzen, um Bilder im Binärformat als Ströme zu senden.  
   
-## <a name="example"></a>Beispiel  
+## <a name="example-sending-an-image-as-a-stream"></a>Beispiel: Senden ein Bild als Stream 
   
 ```  
 <?php  
@@ -176,7 +177,9 @@ Obwohl in den Beispielen in diesem Thema nur Zeichendaten an den Server gesendet
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
-[Aktualisieren von Daten &#40;Microsoft-Treiber für PHP für SQL Server&#41;](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)  
-[Abrufen von Daten als Stream mit dem SQLSRV-Treiber](../../connect/php/retrieving-data-as-a-stream-using-the-sqlsrv-driver.md)  
+[Aktualisieren von Daten &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)
+
+[Abrufen von Daten als Stream mit dem SQLSRV-Treiber](../../connect/php/retrieving-data-as-a-stream-using-the-sqlsrv-driver.md)
+
 [Informationen zu den Codebeispielen in der Dokumentation](../../connect/php/about-code-examples-in-the-documentation.md)  
   
