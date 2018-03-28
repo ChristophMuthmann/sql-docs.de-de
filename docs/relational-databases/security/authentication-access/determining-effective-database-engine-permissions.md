@@ -1,42 +1,42 @@
 ---
 title: Ermitteln effektiver Datenbankmodulberechtigungen | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 01/03/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - permissions, effective
 - effective permissions
 ms.assetid: 273ea09d-60ee-47f5-8828-8bdc7a3c3529
-caps.latest.revision: 
+caps.latest.revision: ''
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5c940b6382349630be1de89e5fde8db3991500bb
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 4d93f80a8a662edd4e84309aa95803dc0e3cc57c
+ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="determining-effective-database-engine-permissions"></a>Ermitteln effektiver Datenbankmodulberechtigungen
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-Dieses Thema beschreibt, wie Sie feststellen können, wer über Berechtigungen für verschiedene Objekte im SQL Server-Datenbankmodul verfügt. SQL Server implementiert zwei Berechtigungssysteme für das Datenbankmodul. Ein älteres System fester Datenbankrollen hat vorkonfigurierte Berechtigungen. Ab SQL Server 2005 ist ein flexibleres und präziseres System verfügbar. (Die Informationen in diesem Thema gelten für SQL Server ab Version 2005. Einige Arten von Berechtigungen sind in einigen Versionen von SQL Server nicht verfügbar.)
+In diesem Artikel wird beschrieben, wie Sie feststellen können, wer über Berechtigungen für verschiedene Objekte in der SQL Server-Datenbank-Engine verfügt. SQL Server implementiert zwei Berechtigungssysteme für das Datenbankmodul. Ein älteres System fester Datenbankrollen hat vorkonfigurierte Berechtigungen. Ab SQL Server 2005 ist ein flexibleres und präziseres System verfügbar. (Die Informationen in diesem Artikel gelten für SQL Server ab Version 2005. Einige Arten von Berechtigungen sind in einigen Versionen von SQL Server nicht verfügbar.)
 
 >  [!IMPORTANT] 
 >  * Die effektiven Berechtigungen sind das Aggregat von beiden Berechtigungssystemen. 
 >  * Eine DOS-Berechtigung überschreibt eine Gewährung von Berechtigungen. 
 >  * Wenn ein Benutzer ein Mitglied der festen Serverrolle „sysadmin“ ist, werden Berechtigungen nicht darüber hinaus überprüft, damit Verweigerungen nicht erzwungen werden. 
->  * Die alten und neuen Systeme sind vergleichbar. Z.B. ist die Mitgliedschaft in der festen `sysadmin`-Serverrolle vergleichbar mit der `CONTROL SERVER`-Berechtigung. Die Systeme sind jedoch nicht identisch. Wenn eine Anmeldung beispielsweise nur über die `CONTROL SERVER`-Berechtigung verfügt und eine gespeicherte Prozedur die Mitgliedschaft in der festen `sysadmin`-Serverrolle überprüft, dann kann die Überprüfung der Berechtigung nicht ausgeführt werden. Das Gegenteil trifft ebenfalls zu. 
+>  * Die alten und neuen Systeme sind vergleichbar. Z.B. ist die Mitgliedschaft in der festen `sysadmin`-Serverrolle vergleichbar mit der `CONTROL SERVER`-Berechtigung. Die Systeme sind jedoch nicht identisch. Wenn eine Anmeldung beispielsweise nur über die `CONTROL SERVER`-Berechtigung verfügt und eine gespeicherte Prozedur die Mitgliedschaft in der festen `sysadmin`-Serverrolle überprüft, dann schlägt die Überprüfung der Berechtigung fehl. Das Gegenteil trifft ebenfalls zu. 
 
 
 ## <a name="summary"></a>Zusammenfassung   
@@ -51,13 +51,13 @@ Dieses Thema beschreibt, wie Sie feststellen können, wer über Berechtigungen f
 * Berechtigungen können mit der `IMPERSONATE`-Berechtigung durch Anmeldenamen oder Benutzer erworben werden.   
 * Mitglieder der Administratorgruppe des lokalen Computers können immer ihre Berechtigungen auf `sysadmin` erhöhen. (Gilt nicht für die SQL-Datenbank.)  
 * Mitglieder der festen `securityadmin`-Serverrolle können viele ihrer Berechtigungen und in einigen Fällen auch die Berechtigungen auf `sysadmin` erhöhen. (Gilt nicht für die SQL-Datenbank.)   
-* SQL Server-Administratoren können Informationen zu allen Anmeldungen und Benutzern sehen. Weniger privilegierten Benutzern werden in der Regel nur Informationen zu ihren eigenen Identitäten angezeigt.
+* SQL Server-Administratoren können Informationen zu allen Anmeldungen und Benutzern anzeigen. Weniger privilegierten Benutzern werden in der Regel nur Informationen zu ihren eigenen Identitäten angezeigt.
 
 ## <a name="older-fixed-role-permission-system"></a>Ältere feste Rollenberechtigungssysteme
 
-Feste Serverrollen und feste Datenbankrollen verfügen über vorkonfigurierte Berechtigungen, die nicht geändert werden können. Um zu bestimmen, wer Mitglied der festen Serverrolle ist, führen Sie die folgende Abfrage aus.    
+Feste Serverrollen und feste Datenbankrollen verfügen über vorkonfigurierte Berechtigungen, die nicht geändert werden können. Führen Sie die folgende Abfrage aus, um zu bestimmen, wer Mitglied der festen Serverrolle ist:    
 >  [!NOTE] 
->  Dies gilt nicht für SQL-Datenbank oder SQL Data Warehouse, bei denen die Berechtigungen auf Serverebene nicht verfügbar sind. Die `is_fixed_role`-Spalte von `sys.server_principals` wurde zu SQL Server 2012 hinzugefügt. Sie ist für ältere Versionen von SQL Server nicht erforderlich.  
+>  Dies gilt nicht für SQL-Datenbank oder SQL Data Warehouse, bei denen die Berechtigung auf Serverebene nicht verfügbar ist. Die `is_fixed_role`-Spalte von `sys.server_principals` wurde zu SQL Server 2012 hinzugefügt. Sie ist für ältere Versionen von SQL Server nicht erforderlich.  
 ```sql
 SELECT SP1.name AS ServerRoleName, 
  isnull (SP2.name, 'No members') AS LoginName   
@@ -89,11 +89,11 @@ Um die Berechtigungen zu verstehen, die jeder Rolle gewährt werden, finden Sie 
 
 ## <a name="newer-granular-permission-system"></a>Neuere präzise Berechtigungssysteme
 
-Dieses System ist sehr flexibel, was bedeutet, dass es kompliziert sein kann, wenn die Personen, die es einrichten, sehr präzise sein möchten. Das ist nicht unbedingt schlecht. Ich hoffe, dass meine Bank präzise ist. Zur Vereinfachung könnten Sie Rollen erstellen, Rollen Berechtigungen zuweisen und dann Personengruppen zu den Rollen hinzufügen. Und es ist einfacher, wenn das Entwicklungsteam für die Datenbank die Aktivitäten nach Schema trennt und dann die Rollenberechtigungen für ein ganzes Schema statt für einzelne Tabellen oder Prozeduren erteilt. Aber die reale Welt ist komplex, und wir müssen davon ausgehen, dass Unternehmen unerwartete Sicherheitsanforderungen erstellen müssen.   
+Dieses System ist flexibel, was bedeutet, dass es kompliziert sein kann, wenn die Personen, die es einrichten, präzise sein möchten. Zur Vereinfachung könnten Sie Rollen erstellen, Rollen Berechtigungen zuweisen und dann Personengruppen zu den Rollen hinzufügen. Und es ist einfacher, wenn das Entwicklungsteam für die Datenbank die Aktivitäten nach Schema trennt und dann die Rollenberechtigungen für ein ganzes Schema statt für einzelne Tabellen oder Prozeduren erteilt. Reale Szenarios sind komplex, und Geschäftsanforderungen können unerwartete Sicherheitsanforderungen schaffen.   
 
-Die folgende Grafik zeigt die Berechtigungen und ihre Beziehungen zueinander. Einige der Berechtigungen auf höherer Ebene (z.B. `CONTROL SERVER`) sind mehrmals aufgeführt. In diesem Thema ist nicht ausreichend Platz, um das Poster entsprechend darzustellen. Klicken Sie auf das Bild zum Herunterladen der **Poster zu den Datenbankmodulberechtigungen** im PDF-Format.  
+Die folgende Grafik zeigt die Berechtigungen und ihre Beziehungen zueinander. Einige der Berechtigungen auf höherer Ebene (z.B. `CONTROL SERVER`) sind mehrmals aufgeführt. In diesem Artikel ist nicht ausreichend Platz, um das Poster entsprechend darzustellen. Klicken Sie auf das Bild zum Herunterladen der **Poster zu den Datenbankmodulberechtigungen** im PDF-Format.  
   
- [![Datenbankmodulberechtigungen](../../../relational-databases/security/media/database-engine-permissions.PNG)](http://go.microsoft.com/fwlink/?LinkId=229142)
+ [![Datenbankmodulberechtigungen](../../../relational-databases/security/media/database-engine-permissions.PNG)](https://aka.ms/sql-permissions-poster)
 
 ### <a name="security-classes"></a>Sicherheitsklassen
 
@@ -105,7 +105,7 @@ Dateiberechtigungen werden an Prinzipale erteilt. Prinzipale können Serverrolle
 
 Wenn ein Windows-Benutzer eine Verbindung mithilfe einer Anmeldung auf Basis einer Windows-Gruppe herstellt, könnten einige Aktivitäten SQL Server benötigen. Dieser würde eine Anmeldung oder einen Benutzer erstellen, der die einzelnen Windows-Benutzer darstellt. Z.B. enthält eine Windows-Gruppe (Techniker) Benutzer (Mary, Todd, Pat) und die Techniker-Gruppe verfügt über ein Datenbankbenutzerkonto. Wenn Mary über eine Berechtigung verfügt und eine Tabelle erstellt kann ein Benutzer (nämlich Mary) als Besitzer der Tabelle erstellt werden. Wenn Todd eine Berechtigung verweigert wird, über die der Rest der Techniker-Gruppe verfügt, dann muss der Benutzer Todd die Möglichkeit erhalten, die Berechtigungsverweigerung nachverfolgen zu können.
 
-Denken Sie daran, dass ein Windows-Benutzer Mitglied von mehr als einer Windows-Gruppe (z.B. sowohl Techniker und Manager) sein könnte. Berechtigungen, die der Techniker- oder Manager-Anmeldung, den individuellen Benutzern oder Rollen, in denen der Benutzer Mitglied ist, gewährt oder verweigert werden, werden alle aggregiert und für die effektiven Berechtigungen ausgewertet. Die `HAS_PERMS_BY_NAME`-Funktion kann anzeigen, ob ein Benutzer oder Anmeldename über eine bestimmte Berechtigung verfügt. Es gibt jedoch keine offensichtliche Möglichkeit zur Bestimmung der Quelle der Erteilung oder Verweigerung der Berechtigung. Sie müssen die Liste der Berechtigungen durchsuchen und vielleicht auch ausprobieren.
+Denken Sie daran, dass ein Windows-Benutzer Mitglied von mehr als einer Windows-Gruppe (z.B. sowohl Techniker und Manager) sein könnte. Berechtigungen, die der Techniker- oder Manager-Anmeldung, den individuellen Benutzern oder Rollen, in denen der Benutzer Mitglied ist, gewährt oder verweigert werden, werden alle aggregiert und für die effektiven Berechtigungen ausgewertet. Die `HAS_PERMS_BY_NAME`-Funktion kann anzeigen, ob ein Benutzer oder Anmeldename über eine bestimmte Berechtigung verfügt. Es gibt jedoch keine offensichtliche Möglichkeit zur Bestimmung der Quelle der Erteilung oder Verweigerung der Berechtigung. Durchsuchen Sie die Liste der Berechtigungen, und probieren Sie sie vielleicht auch aus.
 
 ## <a name="useful-queries"></a>Nützliche Abfragen
 

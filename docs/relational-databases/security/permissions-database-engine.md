@@ -1,16 +1,16 @@
 ---
 title: Berechtigungen (Datenbankmodul) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 01/03/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.databaseuser.permissions.database.f1--May use common.permissions
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - security [SQL Server], permissions
 - naming conventions [SQL Server]
 ms.assetid: f28e3dea-24e6-4a81-877b-02ec4c7e36b9
-caps.latest.revision: 
+caps.latest.revision: ''
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: a1648f5ecd3170b2b60c157e4debb25d7c7f793a
-ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
+ms.openlocfilehash: 0932d368e23c01e181dbe94e3d27ce71e8c1b0f4
+ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="permissions-database-engine"></a>Berechtigungen (Datenbankmodul)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,7 +39,7 @@ ms.lasthandoff: 02/19/2018
   
 Die Gesamtanzahl der Berechtigungen für [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] und [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] beträgt 237. Die meisten Berechtigungen – jedoch nicht alle – gelten für alle Plattformen. Zum Beispiel können in SQL-Datenbank keine Berechtigungen auf Serverebene erteilt werden, und einige Berechtigungen sind nur für [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]sinnvoll. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] macht 230 Berechtigungen verfügbar. [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] macht 219 Berechtigungen verfügbar. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] macht 214 Berechtigungen verfügbar. [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] macht 195 Berechtigungen verfügbar. Im Thema [sys.fn_builtin_permissions](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md) wird angegeben, welche Themen in den aktuellsten Versionen neu sind. Die folgende Grafik zeigt die Berechtigungen und ihre Beziehungen zueinander. Einige der Berechtigungen auf höherer Ebene (z.B. `CONTROL SERVER`) sind mehrmals aufgeführt. Klicken Sie auf das Bild, um das **Poster zu den Datenbankmodulberechtigungen** im PDF-Format herunterzuladen.  
   
-[![Datenbankmodulberechtigungen](../../relational-databases/security/media/database-engine-permissions.PNG)](http://go.microsoft.com/fwlink/?LinkId=229142)
+[![Datenbankmodulberechtigungen](../../relational-databases/security/media/database-engine-permissions.PNG)](https://aka.ms/sql-permissions-poster)
 
 Sobald Sie sich mit den Berechtigungen vertraut gemacht haben, verwenden Sie die Anweisungen [GRANT](../../t-sql/statements/grant-transact-sql.md), [REVOKE](../../t-sql/statements/revoke-transact-sql.md)und [DENY](../../t-sql/statements/deny-transact-sql.md) , um Berechtigungen auf Serverebene auf Anmeldungen und Berechtigungen auf Datenbankebene auf Benutzer anzuwenden. Beispiel:   
 ```sql
@@ -102,7 +102,7 @@ Tipps zum Planen eines Berechtigungssystems finden Sie unter [Erste Schritte mit
      Die REFERENCES-Berechtigung ist für ein Objekt erforderlich, um eine FUNCTION oder VIEW mit der `WITH SCHEMABINDING` -Klausel zu erstellen, die auf das betreffende Objekt verweist.  
   
 ## <a name="chart-of-sql-server-permissions"></a>Diagramm der SQL Server-Berechtigungen  
- Navigieren Sie zu [!INCLUDE[ssDE](../../includes/ssde-md.md)] http://go.microsoft.com/fwlink/?LinkId=229142 [, um ein Diagramm aller](http://go.microsoft.com/fwlink/?LinkId=229142)-Berechtigungen in Postergröße im PDF-Format abzurufen.  
+ Navigieren Sie zu [https://aka.ms/sql-permissions-poster](https://aka.ms/sql-permissions-poster), um ein Diagramm aller [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Berechtigungen im PDF-Format abzurufen.  
   
 ##  <a name="_securables"></a> Berechtigungen anwendbar für bestimmte sicherungsfähige Elemente  
  Die folgende Tabelle enthält eine Liste der wichtigsten Berechtigungsklassen und der sicherungsfähigen Elemente, für die sie erteilt werden können.  
@@ -115,7 +115,7 @@ Tipps zum Planen eines Berechtigungssystems finden Sie unter [Erste Schritte mit
 |Führen Sie|CLR-Typen, externe Skripts, Prozeduren ([!INCLUDE[tsql](../../includes/tsql-md.md)] und CLR), Skalar- und Aggregatfunktionen ([!INCLUDE[tsql](../../includes/tsql-md.md)] und CLR) und Synonyme|  
 |IMPERSONATE|Anmeldungen und Benutzer|  
 |INSERT|Synonyme, Tabellen und Spalten, Ansichten und Spalten. Eine Berechtigung kann auf Datenbank-, Schema- oder Objektebene erteilt werden.|  
-|RECEIVE|[!INCLUDE[ssSB](../../includes/sssb-md.md)] Warteschlangen|  
+|RECEIVE|[!INCLUDE[ssSB](../../includes/sssb-md.md)] -Warteschlangen|  
 |REFERENCES|AGGREGATE,<br />ASSEMBLY,<br />ASYMMETRIC KEY,<br />CERTIFICATE,<br />CONTRACT,<br />DATABASE,<br />DATABASE SCOPED CREDENTIAL,<br />FULLTEXT CATALOG,<br />FULLTEXT STOPLIST,<br />FUNCTION,<br />MESSAGE TYPE,<br />PROCEDURE,<br />QUEUE, <br />RULE,<br />SCHEMA,<br />SEARCH PROPERTY LIST,<br />SEQUENCE OBJECT, <br />SYMMETRIC KEY,<br />SYNONYM,<br />TABLE,<br />TYPE,<br />VIEW und<br />XML SCHEMA COLLECTION|  
 |SELECT|Synonyme, Tabellen und Spalten, Ansichten und Spalten. Eine Berechtigung kann auf Datenbank-, Schema- oder Objektebene erteilt werden.|  
 |TAKE OWNERSHIP|Alle Objektklassen außer DATABASE SCOPED CONFIGURATION, LOGIN, SERVER und USER.|  
@@ -369,7 +369,7 @@ Tipps zum Planen eines Berechtigungssystems finden Sie unter [Erste Schritte mit
 |XML SCHEMA COLLECTION|VIEW DEFINITION|VW|SCHEMA|VIEW DEFINITION|  
   
 ##  <a name="_algorithm"></a> Zusammenfassung des Algorithmus zur Berechtigungsprüfung  
- Die Prüfung von Berechtigungen kann sehr komplex sein. Der Algorithmus für die Berechtigungsprüfung umfasst überlappende Gruppenmitgliedschaften und Besitzverkettung, explizite und implizite Berechtigungen und kann von den Berechtigungen für sicherungsfähige Klassen, in denen die sicherungsfähige Entität enthalten ist, beeinflusst werden. Die allgemeine Vorgehensweise des Algorithmus besteht darin, alle relevanten Berechtigungen zu sammeln. Wenn keine blockierende DENY-Anweisung gefunden wird, sucht der Algorithmus nach einer GRANT-Anweisung mit ausreichenden Zugriffsberechtigungen. Der Algorithmus enthält drei wesentliche Elemente, den **Sicherheitskontext**, den **Berechtigungsbereich**und die **erforderlichen Berechtigung**.  
+ Die Prüfung von Berechtigungen kann sehr komplex sein. Der Algorithmus für die Berechtigungsprüfung umfasst überlappende Gruppenmitgliedschaften und Besitzverkettung, explizite und implizite Berechtigungen und kann von den Berechtigungen für sicherungsfähige Klassen, in denen die sicherungsfähige Entität enthalten ist, beeinflusst werden. Die allgemeine Vorgehensweise des Algorithmus besteht darin, alle relevanten Berechtigungen zu sammeln. Wenn keine blockierende DENY-Anweisung gefunden wird, sucht der Algorithmus nach einer GRANT-Anweisung mit ausreichenden Zugriffsberechtigungen. Der Algorithmus enthält drei wesentliche Elemente, den **Sicherheitskontext**, den **Berechtigungsbereich**und die **erforderliche Berechtigung**.  
   
 > [!NOTE]  
 >  Berechtigungen können nicht für sa, dbo, den Entitätsbesitzer, information_schema, sys oder für den Benutzer selbst erteilt, verweigert oder aufgehoben werden.  
@@ -392,7 +392,7 @@ Tipps zum Planen eines Berechtigungssystems finden Sie unter [Erste Schritte mit
   
      Dies sind die sicherungsfähige Entität und alle sicherungsfähigen Klassen, in denen das sicherungsfähige Element enthalten ist. Eine Tabelle (eine sicherungsfähige Entität) ist z. B. in der sicherungsfähigen Klasse des Schemas und in der sicherungsfähigen Klasse der Datenbank enthalten. Berechtigungen auf Tabellen-, Schema-, Datenbank- und Serverebene können sich auf den Zugriff auswirken. Weitere Informationen finden Sie unter [Berechtigungshierarchie &#40;Datenbankmodul&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md).  
   
--   **erforderlichen Berechtigung**  
+-   **Erforderliche Berechtigung**  
   
      Die Art der erforderlichen Berechtigung. Beispielsweise INSERT, UPDATE, DELETE, SELECT, EXECUTE, ALTER, CONTROL usw.  
   
@@ -409,14 +409,14 @@ Tipps zum Planen eines Berechtigungssystems finden Sie unter [Erste Schritte mit
   
 2.  Erteilen des Zugriffs, wenn die Besitzverkettung anwendbar ist und die Zugriffsprüfung für das Objekt an früherer Stelle in der Kette die Sicherheitsprüfung erfolgreich war.  
   
-3.  Aggregieren der Identitäten, die dem Aufrufer zum Erstellen des **Sicherheitskontexts** zugeordnet sind, auf Server- und Datenbankebene sowie auf Ebene des signierten Moduls.  
+3.  Aggregieren der Identitäten, die dem Aufrufer zum Erstellen des **Sicherheitskontexts**zugeordnet sind, auf Server- und Datenbankebene sowie auf Ebene des signierten Moduls.  
   
 4.  Sammeln aller Berechtigungen, die für diesen **Berechtigungsbereich**erteilt oder verweigert wurden, in diesem **Sicherheitskontext**. Die Berechtigung kann explizit als GRANT, GRANT WITH GRANT oder DENY angegeben werden; oder die Berechtigungen können als implizite oder abdeckende GRANT-Berechtigung oder DENY-Berechtigung angegeben werden. Die CONTROL-Berechtigung für ein Schema impliziert z. B. CONTROL für eine Tabelle. CONTROL für eine Tabelle impliziert SELECT. Wenn CONTROL für das Schema erteilt wurde, wird folglich SELECT für die Tabelle erteilt. Wenn CONTROL für die Tabelle verweigert wurde, wird SELECT für die Tabelle verweigert.  
   
     > [!NOTE]  
     >  Durch eine GRANT-Berechtigung auf Spaltenebene wird eine DENY-Berechtigung auf Objektebene überschrieben.  
   
-5.  Identifizieren Sie die **erforderlichen Berechtigung**.  
+5.  Identifizieren Sie die **erforderliche Berechtigung**.  
   
 6.  Die Berechtigungsprüfung ist nicht bestanden, wenn die **erforderlichen Berechtigung** für eine der Identitäten im **Sicherheitskontext** der Objekte im **Berechtigungsbereich** direkt oder implizit verweigert werden.  
   

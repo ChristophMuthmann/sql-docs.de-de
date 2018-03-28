@@ -1,35 +1,35 @@
 ---
 title: Versionsanmerkungen zu SQL Server 2016|Microsoft-Dokumente
-ms.date: 02/27/2018
+ms.date: 03/14/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
-ms.service: 
+ms.service: ''
 ms.component: sql-non-specified
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology:
 - server-general
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - build notes
 - release issues
 ms.assetid: c64077a2-bec8-4c87-9def-3dbfb1ea1fb6
-caps.latest.revision: 
+caps.latest.revision: ''
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 6485ef83b940ab9d04b9406e461517d5254aec7f
-ms.sourcegitcommit: 1a3584a60c12521ba5b4b12a18d8cb32b1f2d555
+ms.openlocfilehash: 1a6d422098fdacb3a7bc6392b99fe63bb25c2c36
+ms.sourcegitcommit: 6e16d1616985d65484c72f5e0f34fb2973f828f4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="sql-server-2016-release-notes"></a>Versionsanmerkungen zu SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
-In den folgenden Artikeln werden Einschränkungen und Probleme mit Releases von SQL Server 2016 beschrieben. Informationen zu Neuerungen finden Sie unter [Neues im Berichts-Generator für SQL Server 2016](https://docs.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-2016).
+  Im folgenden Artikel werden Einschränkungen und Probleme mit Releases von SQL Server 2016, Service Packs inbegriffen, beschrieben. Informationen zu Neuerungen finden Sie unter [Neues im Berichts-Generator für SQL Server 2016](https://docs.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-2016).
 
 > [![Download aus dem Evaluation Center](../includes/media/download2.png)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) Laden Sie SQL Server 2016 aus dem **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)** herunter.
 >
@@ -37,12 +37,51 @@ In den folgenden Artikeln werden Einschränkungen und Probleme mit Releases von 
 >
 > [![SSMS herunterladen](../includes/media/download2.png)](../ssms/download-sql-server-management-studio-ssms.md) Wechseln Sie zu **[Herunterladen von SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)**, um die neueste Version von SQL Server Management Studio (SSMS) abzurufen.
 
-## <a name="bkmk_2016sp1"></a>SQL Server 2016 Service Pack 1 (SP1) verfügbar
-![info_tip](../sql-server/media/info-tip.png) Mit SQL Server 2016 SP1 werden alle Editionen und Dienstebenen von SQL Server 2016 auf SQL Server 2016 SP1 aktualisiert. Neben den Fehlerbehebungen, die in diesem Artikel aufgeführt sind, enthält SQL Server 2016 SP1 Hotfixes, die in SQL Server 2016 CU1 (kumulatives Update 1) bis SQL Server 2016 CU3 enthalten waren.
+## <a name="bkmk_2016sp1"></a>SQL Server 2016 Service Pack 1 (SP1)
+![info_tip](../sql-server/media/info-tip.png) SQL Server 2016 SP1 umfasst alle Problembehebungen bis zu SQL Server 2016 RTM CU3 Security einschließlich des Sicherheitsupdates MS16-136. Es enthält ein Rollup der in den kumulativen Updates von SQL Server 2016 bereitgestellten Lösungen und umfasst das aktuelle kumulative Update CU3 sowie das Sicherheitsupdate MS16-136 mit Veröffentlichungsdatum am 8. November 2016. 
 
-- [Downloadseite für SQL Server 2016 SP1](https://www.microsoft.com/download/details.aspx?id=54276)
-- [SQL Server 2016 Service Pack 1-Versionsinformationen](https://support.microsoft.com/kb/3182545) Enthält die einzelnen Fehlernummern und Probleme, die in SP1 korrigiert oder geändert wurden.
- - ![info_tip](../sql-server/media/info-tip.png) Links und Informationen zu allen unterstützten Versionen finden Sie unter [SQL Server-Update Center](https://msdn.microsoft.com/library/ff803383.aspx). Dort finden Sie auch Informationen zu Service Packs von [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] 
+Die folgenden Features sind in der Standard, Web, Express und Local DB Edition von SQL Server SP1 verfügbar (sofern nicht anders angegeben):
+- Always Encrypted
+- Geänderte Datenerfassung (in Express nicht verfügbar)
+- columnstore
+- Komprimierung
+- Dynamische Datenmaskierung
+- Differenzierte Überwachung
+- In-Memory OLTP (in Local DB nicht verfügbar)
+- Mehrere FileStream-Container (in Local DB nicht verfügbar)
+- Partitionierung
+- Polybase
+- Sicherheit auf Zeilenebene
+
+In der folgenden Tabelle werden wichtige Verbesserungen in SQL Server 2016 SP1 zusammengefasst.
+
+|Funktion|Description|Weitere Informationen finden Sie unter|
+|---|---|---|
+|Masseneinfügung in Heaps mit automatischem TABLOCK unter TF 715| Das Ablaufverfolgungsflag 715 aktiviert Tabellensperren für Massenladevorgänge in einen Heap ohne nicht gruppierte Indizes.|[Migrating SAP workloads to SQL Server just got 2.5x faster (Beschleunigung der Migration von SAP-Workloads zu SQL Server um das 2,5-fache)](https://blogs.msdn.microsoft.com/sql_server_team/migrating-sap-workloads-to-sql-server-just-got-2-5x-faster/)|
+|CREATE OR ALTER|Bereitstellen von Objekten wie gespeicherten Prozeduren, Triggern, benutzerdefinierten Funktionen und Ansichten.|[Blog der SQL Server-Datenbank-Engine](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/11/17/create-or-alter-another-great-language-enhancement-in-sql-server-2016-sp1/)|
+|DROP TABLE-Unterstützung für die Replikation|DROP TABLE DDL-Unterstützung für die Replikation zum Löschen von Replikationsartikeln.|[KB 3170123](https://support.microsoft.com/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactiona)|
+|Signieren des FileStream RsFx-Treibers|Der Filestream RsFx-Treiber wird im Windows Hardware Developer Center Dashboard-Portal (Dev-Portal) signiert und zertifiziert. Dadurch kann der Filestream RsFx-Treiber von SQL Server 2016 SP1 problemlos unter Windows Server 2016/Windows 10 installiert werden.|[Migrating SAP workloads to SQL Server just got 2.5x faster (Beschleunigung der Migration von SAP-Workloads zu SQL Server um das 2,5-fache)](https://blogs.msdn.microsoft.com/sql_server_team/migrating-sap-workloads-to-sql-server-just-got-2-5x-faster/)|
+|LPIM für SQL-Dienstkonto – programmgesteuerte Identifikation|Ermöglicht DBAs die programmgesteuerte Identifikation, wenn die Berechtigung zum Sperren von Seiten im Speicher (Lock Pages in Memory, LPIM) zur Startzeit des Service besteht.|[Developers Choice: Programmatically identify LPIM and IFI privileges in SQL Server (Wahl für Entwickler: LPIM- und IFI-Berechtigungen zur programmgesteuerten Identifikation in SQL Server)](https://blogs.msdn.microsoft.com/sql_server_team/developers-choice-programmatically-identify-lpim-and-ifi-privileges-in-sql-server)|
+|Manuelles Bereinigen der Änderungsnachverfolgung|Die neue gespeicherte Prozedur löscht die interne Tabelle der Änderungsnachverfolgung bedarfsgesteuert.| [KB 3173157](https://support.microsoft.com/help/3173157/adds-a-stored-procedure-for-the-manual-cleanup-of-the-change-tracking)|
+|Parallele INSERT..SELECT-Änderungen in lokalen temporären Tabellen|Neue parallele INSERT in INSERT..SELECT-Vorgänge.|[SQL Server-Kundenberatungsteam](https://blogs.msdn.microsoft.com/sqlcat/2016/07/21/real-world-parallel-insert-what-else-you-need-to-know/)|
+|Showplan XML|Erweiterte Diagnose einschließlich einer aktivierten Zuweisungswarnung und eines aktivierten maximalen Arbeitsspeichers für eine Abfrage, aktivierter Ablaufverfolgungsflags und Oberflächen für andere Diagnoseinformationen. | [KB 3190761](https://support.microsoft.com/help/3190761/update-to-improve-diagnostics-by-expose-data-type-of-the-parameters-fo)|
+|Speicherklassenspeicher|Steigern Sie mit dem Speicherklassenspeicher in Windows Server 2016 die Transaktionsverarbeitung, wodurch die Commitzeiten für Transaktionen nach Größenordnungen beschleunigt werden können.|[Blog der SQL Server-Datenbank-Engine](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/12/02/transaction-commit-latency-acceleration-using-storage-class-memory-in-windows-server-2016sql-server-2016-sp1/)|
+|USE HINT|Verwenden Sie die Abfrageoption `OPTION(USE HINT('<option>'))`, um das Verhalten des Abfrageoptimierers mit unterstützten Hinweisen auf Abfrageebene zu ändern. Anders als bei der Option QUERYTRACEON sind bei der Option USE HINT keine Systemadministratorberechtigungen erforderlich.|[Developers Choice: USE HINT query hints (Wahl der Entwickler: USE HINT-Abfragehinweise)](https://blogs.msdn.microsoft.com/sql_server_team/developers-choice-use-hint-query-hints/)|
+|XEvent-Ergänzungen|Neue XEvents- und Perfmon-Diagnosefunktionen bewirken eine Optimierung der Wartezeit bei der Problembehandlung.|[Erweiterte Ereignisse](https://docs.microsoft.com/sql/relational-databases/extended-events/extended-events)|
+
+Zudem sollten Sie folgende Problembehandlungen beachten:
+- Basierend auf Feedback von DBAs und der SQL-Community werden die Hekaton-Protokollierungsnachrichten ab SQL 2016 SP1 auf ein Minimum reduziert.
+- Überprüfen neuer [Ablaufverfolgungsflags](https://docs.microsoft.com/en-us/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql).
+- Die vollständigen Versionen der WideWorldImporters-Beispieldatenbanken können jetzt beginnend mit SQL Server 2016 SP1 mit der Standard Edition und der Express Edition ausgeführt werden und sind auf [Github]( https://github.com/Microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0) verfügbar. Im Beispiel müssen keine Änderungen vorgenommen werden. Die Datenbanksicherungen, die zum RTM der Enterprise Edition erstellt wurden, werden in SP1 von der Standard und der Express Edition unterstützt. 
+
+Für die Installation von SQL Server 2016 SP1 ist nach der Installation möglicherweise ein Neustart erforderlich. Als bewährte Methode wird empfohlen, nach der Installation von SQL Server 2016 SP1 einen Neustart zu planen und durchzuführen.
+
+### <a name="download-pages-and-more-information"></a>Downloadseiten und weitere Informationen
+
+- [Service Pack 1 für Microsoft SQL Server 2016 herunterladen](https://www.microsoft.com/download/details.aspx?id=54276)
+- [SQL Server 2016 Service Pack 1 (SP1) freigegeben](https://blogs.msdn.microsoft.com/sqlreleaseservices/sql-server-2016-service-pack-1-sp1-released/)
+- [Releaseinformationen zu SQL Server 2016 Service Pack 1](https://support.microsoft.com/kb/3182545)
+- ![info_tip](../sql-server/media/info-tip.png) Links und Informationen zu allen unterstützten Versionen finden Sie unter [SQL Server-Update Center](https://msdn.microsoft.com/library/ff803383.aspx). Dort finden Sie auch Informationen zu Service Packs von [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] 
 
 ##  <a name="bkmk_2016_ga"></a> SQL Server 2016 Release - General Availability (GA)
 -   [Datenbankmodul (GA)](#bkmk_ga_instalpatch) 

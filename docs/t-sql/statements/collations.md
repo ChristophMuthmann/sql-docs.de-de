@@ -1,16 +1,16 @@
 ---
 title: Sortierungen | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - COLLATE
@@ -21,21 +21,23 @@ helpviewer_keywords:
 - collations [SQL Server], COLLATE clause
 - COLLATE clause
 ms.assetid: 76763ac8-3e0d-4bbb-aa53-f5e7da021daa
-caps.latest.revision: 
+caps.latest.revision: ''
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 7a206f638b78a5e4311ab7889a7902aa39a17413
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+ms.openlocfilehash: a59320941ecd488abbaa728968a1326525682839
+ms.sourcegitcommit: 3ed9be04cc7fb9ab1a9ec230c298ad2932acc71b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="collations"></a>Sortierungen
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Eine Klausel, die auf eine Datenbankdefinition oder eine Spaltendefinition angewendet werden kann, um die Sortierung zu definieren, oder auf einen Zeichenfolgenausdruck, um eine Sortierungsumwandlung anzuwenden.  
+
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -105,6 +107,9 @@ FROM fn_helpcollations();
   
 -   Beim Wiederherstellen oder Anfügen einer Datenbank müssen die Standardsortierung der Datenbank und die Sortierungen aller Spalten und Parameter, die zur Datenbank gehören und den Datentyp **char**, **varchar** oder **text** aufweisen, vom Betriebssystem unterstützt werden.  
   
+> [!NOTE]
+> Die Serversortierung der verwalteten Azure SQL-Datenbank-Instanz lautet **SQL_Latin1_General_CP1_CI_AS** und kann nicht geändert werden.
+
 > [!NOTE]
 > Codepageübersetzungen werden für die Datentypen **char** und **varchar**, nicht jedoch für den **text**-Datentyp unterstützt. Datenverlust während der Codepageübersetzung wird nicht gemeldet.  
   

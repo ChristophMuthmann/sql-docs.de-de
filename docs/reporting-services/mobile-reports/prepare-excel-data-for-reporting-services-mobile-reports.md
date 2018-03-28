@@ -1,27 +1,27 @@
 ---
-title: "Vorbereiten von Excel-Daten für mobile Berichte von Reporting Services | Microsoft-Dokumentation"
-ms.custom: 
+title: Vorbereiten von Excel-Daten für mobile Berichte von Reporting Services | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 02/08/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
+ms.service: ''
 ms.component: mobile-reports
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 16698f8d-bfc7-4eca-9e97-82c99d8bc08e
-caps.latest.revision: "14"
+caps.latest.revision: ''
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b9f739a009fe8b80ce5005e8145b3fd95648e6f9
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 57440dd767e421cb1448d8d365ebf894edbd065a
+ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="prepare-excel-data-for-reporting-services-mobile-reports"></a>Vorbereiten von Excel-Daten für mobile Berichte von Reporting Services
   
@@ -56,7 +56,7 @@ Wenn Sie eine Excel-Datei als Dataset für einen mobilen Bericht vorbereiten, so
   
 Wie im obigen Beispiel zu sehen ist, enthält die erste Zeile den Namen der Metrik dieser Spalte. [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] behält diese Spaltenköpfe als einfachen Verweis in den Einstellungen des Katalogelements bei. Spaltenköpfe sind jedoch nicht erforderlich. Falls diese fehlen, generiert [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] Überschriften mithilfe der Excel-Konvention A, B, C,..., AA, BB...  
   
-[!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]erkennt automatisch Kopfzeilen, wenn Excel-Arbeitsmappen importiert werden, indem die Datentypen für die ersten beiden Zellen in jeder Spalte miteinander verglichen werden. Wenn die Datentypen der ersten beiden Zellen in einer beliebigen Spalte nicht übereinstimmen, wird bestimmt, dass die erste Zeile Spaltenüberschriften enthalten soll. Wenn eine Tabelle also numerische Spaltenköpfe besitzt, sollten Sie ihnen eine Zeichenfolge voranstellen, sodass diese als Spaltenüberschriften beim Importvorgang erkannt werden.  
+[!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] erkennt beim Importieren von Excel-Arbeitsmappen automatisch Kopfzeilen, indem die Datentypen der ersten beiden Zellen in jeder Spalte miteinander verglichen werden. Wenn die Datentypen der ersten beiden Zellen in einer beliebigen Spalte nicht übereinstimmen, wird bestimmt, dass die erste Zeile Spaltenüberschriften enthalten soll. Wenn eine Tabelle also numerische Spaltenköpfe besitzt, sollten Sie ihnen eine Zeichenfolge voranstellen, sodass diese als Spaltenüberschriften beim Importvorgang erkannt werden.  
   
 ## <a name="cells"></a>Zellen  
   

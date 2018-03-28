@@ -1,16 +1,16 @@
 ---
 title: Reporting Services (SSRS) | Microsoft-Dokumentation
-description: "Erfahren Sie mehr über Tools und Dienste für mobile und paginierte Reporting Services-Berichte sowie lokale Power BI-Berichte."
-ms.custom: 
+description: Erfahren Sie mehr über Tools und Dienste für mobile und paginierte Reporting Services-Berichte sowie lokale Power BI-Berichte.
+ms.custom: ''
 ms.date: 07/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
+ms.service: ''
 ms.component: reporting-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 helpviewer_keywords:
 - reports [Reporting Services]
@@ -19,16 +19,16 @@ helpviewer_keywords:
 - Reporting Services
 - SQL Server Reporting Services
 ms.assetid: b8d18d3d-9db0-43e7-8286-7b46cc3a37ed
-caps.latest.revision: "70"
+caps.latest.revision: ''
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 85377a9d96bbaa8d7d94dacafc0989d3089ff7dd
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 6deaece7d2dd01ebf831820c2e026044f80651de
+ms.sourcegitcommit: 3ed9be04cc7fb9ab1a9ec230c298ad2932acc71b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="what-is-sql-server-reporting-services-ssrs"></a>Was ist SQL Server Reporting Services (SSRS)?
 
@@ -36,7 +36,7 @@ ms.lasthandoff: 01/09/2018
 
 [!INCLUDE [ssrs-previous-versions](../includes/ssrs-previous-versions.md)]
 
-Mit unterschiedlichen sofort einsatzbereiten Tools und Diensten, die von SQL Server Reporting Services (SSRS) und Power BI bereitgestellt werden, können Sie mobile und paginierte Reporting Services-Berichte sowie Power BI-Berichte lokal erstellen, bereitstellen und verwalten.
+Mit einer Reihe von direkt einsatzbereiten Tools und Diensten, die von SQL Server Reporting Services (SSRS) bereitgestellt werden, können Sie mobile und paginierte Reporting Services-Berichte lokal erstellen, bereitstellen und verwalten.
 
 ![SQL Server Reporting Services im Überblick](../reporting-services/media/ss-reporting-services-all-together.png "SQL Server Reporting Services all together")
 
@@ -48,7 +48,7 @@ Für SQL Server 2016 wird in Reporting Services eine aktualisierte Sammlung von 
 
 * **„Herkömmlich“ paginierte Berichte** sind auf den neuesten Stand gebracht, sodass Sie modern aussehende Berichte erstellen können, wozu Sie aktualisierte Tools und neue Funktionen nutzen.
 * **Neue mobile Berichte** mit einem ansprechenden Layout, das sich entsprechend den verschiedenen Geräten und den verschiedenen Arten anpasst, wie Sie diese Geräte halten.
-* **Ein modernes Webportal** , das Sie in jedem modernen Browser anzeigen können. Im neuen Portal können Sie mobile und paginierte Reporting Services-Berichte und KPIs zusammen mit Power BI Desktop-Berichten organisieren und abrufen. Sie können auch Excel-Arbeitsmappen im Portal speichern.
+* **Ein modernes Webportal** , das Sie in jedem modernen Browser anzeigen können. Im neuen Portal können Sie mobile und paginierte Reporting Services-Berichte und KPIs organisieren und anzeigen. Sie können auch Excel-Arbeitsmappen im Portal speichern.
 
 Lesen Sie weiter, um weitere Informationen zu jedem Aspekt zu erhalten.
 
@@ -90,13 +90,13 @@ Sie erstellen diese mobilen Berichte in der neuen App [Publisher für mobile Ber
 
 ![SSRS - Webportal](../reporting-services/media/ssrs-web-portal.png)
 
-Für Endbenutzer des einheitlichen Modus von Reporting Services ist die „Eingangstür“ ein modernes Webportal, das Sie in jedem modernen Browser anzeigen können. Sie können über das neue Portal auf all Ihre mobilen und paginierten Reporting Services- und Power BI Desktop-Berichte sowie KPIs zugreifen. Weitere Informationen finden Sie unter [Power BI reports in Reporting Services (Power Bl-Berichte in Reporting Services)](../reporting-services/power-bi-reports-in-reporting-services.md).  
+Für Endbenutzer des einheitlichen Modus von Reporting Services ist die „Eingangstür“ ein modernes Webportal, das Sie in jedem modernen Browser anzeigen können. Sie können über das neue Portal auf all Ihre mobilen und paginierten Reporting Services-Berichte und KPIs zugreifen.
 
 Sie können Ihr eigenes benutzerdefiniertes Branding auf Ihr Webportal anwenden. Und Sie können KPIs direkt im Webportal erstellen. KPIs können wichtige Geschäftsmetriken auf einen Blick im Browser zum Vorschein bringen, ohne dass ein Bericht geöffnet werden muss. 
 
 Das neue Webportal ist eine vollständig neu geschriebene Version des Berichts-Managers. Es ist nun eine auf Standards basierende Einzelseiten-HTML5-App, für die moderne Browser optimiert sind: Edge, Internet Explorer 10 und 11, Chrome, Firefox, Safari und alle weiteren wichtigen Browser.
 
-Der Inhalt im Webportal wird nach Typ strukturiert: mobile und paginierte Reporting Services- und Power BI Desktop-Berichte, KPIs, Excel-Arbeitsmappen, freigegebene Datasets sowie freigegebene Datenquellen, die als Bausteine für Ihre Berichte verwendet werden können. Sie können die Berichte dort in der herkömmlichen Ordnerhierarchie sicher speichern und verwalten. Sie können Ihre Favoriten kennzeichnen, und Sie können den Inhalt verwalten, wenn Sie diese Rolle haben.
+Der Inhalt im Webportal wird nach Typ strukturiert: mobile und paginierte Reporting Services-Berichte und KPIs, Excel-Arbeitsmappen, freigegebene Datasets sowie freigegebene Datenquellen, die als Bausteine für Ihre Berichte verwendet werden können. Sie können die Berichte dort in der herkömmlichen Ordnerhierarchie sicher speichern und verwalten. Sie können Ihre Favoriten kennzeichnen, und Sie können den Inhalt verwalten, wenn Sie diese Rolle haben.
 
 Und Sie können im neuen Webportal weiterhin Berichtsverarbeitung planen, bei Bedarf auf Berichte zugreifen sowie veröffentlichte Berichte abonnieren.
 
@@ -119,6 +119,5 @@ Weitere Informationen finden Sie in der [Reporting Services-Entwicklerdokumentat
 * [Installieren von Reporting Services](../reporting-services/install-windows/install-reporting-services.md)  
 * [Installieren des Berichts-Generators](../reporting-services/install-windows/install-report-builder.md)   
 * [Herunterladen von SQL Server Data Tools (SSDT)](http://go.microsoft.com/fwlink/?LinkID=616714)  
-* [Power Bl-Berichte in Reporting Services](../reporting-services/power-bi-reports-in-reporting-services.md)
 
 Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](http://go.microsoft.com/fwlink/?LinkId=620231)
