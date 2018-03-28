@@ -1,16 +1,16 @@
 ---
 title: Operatorrangfolge (Transact-SQL) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|language-elements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -20,16 +20,16 @@ helpviewer_keywords:
 - order of operator execution [Transact-SQL]
 - precedence [SQL Server], operators
 ms.assetid: f04d2439-6fff-4e4c-801f-cc62faef510a
-caps.latest.revision: 
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c9de4447c5918edbc33ec67c783272f724883e81
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 8ea8f70ba88d8a9632e94d452c09612173cac83a
+ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="operator-precedence-transact-sql"></a>Operatorrangfolge (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.lasthandoff: 01/25/2018
 |-----------|---------------|  
 |1|~ (Bitweises NOT)|  
 |2|* (Multiplikation) / (Division), % (Modulo)|  
-|3|+ (Positiv), - (Negativ), + (Addition), (+ Verkettung), - (Subtraktion), & (Bitweises UND), ^ (Bitweises exklusives ODER), &#124; (Bitweises ODER)|  
+|3|+ (Positiv), - (Negativ), + (Addition), + (Verkettung), - (Subtraktion), & (bitweises UND), ^ (bitweises exklusives ODER), &#124; (bitweises ODER)|  
 |4|=, >, \<, >=, <=, <>, !=, !>, !< (Vergleichsoperatoren)|  
 |5|NICHT|  
 |6|AND|  

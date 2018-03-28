@@ -1,29 +1,29 @@
 ---
 title: Konfigurieren der Windows-Authentifizierung auf dem Berichtsserver | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 08/26/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Windows authentication [Reporting Services]
 - Reporting Services, configuration
 ms.assetid: 4de9c3dd-0ee7-49b3-88bb-209465ca9d86
-caps.latest.revision: "25"
+caps.latest.revision: ''
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: b948fea25ec62f338556b604812ff4d9574462ed
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: e5ea30da8f6267bd864509ad48940b0a80f3d8c8
+ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="configure-windows-authentication-on-the-report-server"></a>Konfigurieren der Windows-Authentifizierung auf dem Berichtsserver
   In der Standardeinstellung werden [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Anforderungen übergeben, die die Negotiate- oder die NTLM-Authentifizierung angeben. Wenn eine Bereitstellung Clientanwendungen und Browser umfasst, die diese Sicherheitsanbieter nutzen, können Sie die Standardwerte ohne zusätzliche Konfiguration verwenden. Wenn Sie einen anderen Sicherheitsanbieter für die integrierte Sicherheit von Windows nutzen möchten (wenn Sie beispielsweise Kerberos direkt verwenden möchten) oder wenn Sie die Standardwerte verändert haben und die ursprünglichen Einstellungen wiederherstellen möchten, können Sie mithilfe der in diesem Thema enthaltenen Informationen die Authentifizierungseinstellungen auf dem Berichtsserver festlegen.  
@@ -32,7 +32,7 @@ ms.lasthandoff: 01/09/2018
   
  Überdies müssen die folgenden zusätzlichen Anforderungen erfüllt werden:  
   
--   In den RSeportServer.config-Dateien muss **AuthenticationType** auf **RSWindowsNegotiate**, **RSWindowsKerberos**oder **RSWindowsNTLM**festgelegt werden. Standardmäßig enthält die Datei RSReportServer.config die **RSWindowsNegotiate** -Einstellung, wenn das Berichtsserver-Dienstkonto entweder NetworkService oder LocalSystem ist. Andernfalls wird die **RSWindowsNTLM** -Einstellung verwendet. Sie können **RSWindowsKerberos** hinzufügen, wenn Anwendungen vorhanden sind, die nur die Kerberos-Authentifizierung verwenden.  
+-   In den RSReportServer.config-Dateien muss **AuthenticationType** auf **RSWindowsNegotiate**, **RSWindowsKerberos** oder **RSWindowsNTLM** festgelegt werden. Standardmäßig enthält die Datei RSReportServer.config die **RSWindowsNegotiate** -Einstellung, wenn das Berichtsserver-Dienstkonto entweder NetworkService oder LocalSystem ist. Andernfalls wird die **RSWindowsNTLM** -Einstellung verwendet. Sie können **RSWindowsKerberos** hinzufügen, wenn Anwendungen vorhanden sind, die nur die Kerberos-Authentifizierung verwenden.  
   
     > [!IMPORTANT]  
     >  Die Verwendung von **RSWindowsNegotiate** hat einen Kerberos-Authentifizierungsfehler zur Folge, wenn der Berichtsserverdienst so konfiguriert wurde, dass er unter einem Domänenbenutzerkonto ausgeführt wird und für das Konto kein Dienstprinzipalname (Service Principal Name, SPN) registriert wurde. Weitere Informationen finden Sie unter [Beheben von Kerberos-Authentifizierungsfehlern beim Herstellen einer Verbindung mit einem Berichtsserver](#proxyfirewallRSWindowsNegotiate) in diesem Thema.  
