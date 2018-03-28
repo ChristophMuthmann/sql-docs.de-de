@@ -1,16 +1,16 @@
 ---
-title: "Übersicht zu Sicherungen (SQL Server) | Microsoft-Dokumentation"
-ms.custom: 
+title: Übersicht zu Sicherungen (SQL Server) | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 07/15/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: backup-restore
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-backup-restore
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - tables [SQL Server], backing up data
@@ -25,7 +25,7 @@ helpviewer_keywords:
 - backups [SQL Server], about
 - backups [SQL Server], table-level backups unsupported
 ms.assetid: 09a6e0c2-d8fd-453f-9aac-4ff24a97dc1f
-caps.latest.revision: 
+caps.latest.revision: ''
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
@@ -85,7 +85,7 @@ ms.lasthandoff: 01/18/2018
 ## <a name="backup-media-terms-and-definitions"></a>Sicherungsmedien – Begriffe und Definitionen  
   
  **[Sicherungsgerät](../../relational-databases/backup-restore/backup-devices-sql-server.md)**  
- Ein Datenträger oder Bandmedium, auf den bzw. das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sicherungen geschrieben werden und von dem sie wiederhergestellt werden können. SQL Server-Sicherungen können auch in einen Windows Azure-BLOB-Speicherdienst geschrieben werden. Das **URL** -Format wird verwendet, um das Ziel und den Namen der Sicherungsdatei anzugeben. Weitere Informationen finden Sie unter [SQL Server Backup and Restore with Windows Azure Blob Storage Service](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
+ Ein Datenträger oder Bandmedium, auf den bzw. das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sicherungen geschrieben werden und von dem sie wiederhergestellt werden können. SQL Server-Sicherungen können auch in einen Windows Azure-BLOB-Speicherdienst geschrieben werden. Das **URL** -Format wird verwendet, um das Ziel und den Namen der Sicherungsdatei anzugeben. Weitere Informationen finden Sie unter [SQL Server-Sicherung und -Wiederherstellung mit dem Microsoft Azure Blob Storage Service](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
   
  **[Sicherungsmedien](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)**  
  Bänder oder Datenträgerdateien, auf die Sicherungen geschrieben wurden.  

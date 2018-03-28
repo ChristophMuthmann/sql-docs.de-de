@@ -1,16 +1,16 @@
 ---
-title: "Erstellen einer Server- und Datenbank-Überwachungsspezifikation | Microsoft-Dokumentation"
-ms.custom: 
+title: Erstellen einer Server- und Datenbank-Überwachungsspezifikation | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.sqlaudit.dbaudit.general.f1
@@ -18,7 +18,7 @@ helpviewer_keywords:
 - audits [SQL Server], creating database specification
 - database audit [SQL Server]
 ms.assetid: 26ee85de-6e97-4318-b526-900924d96e62
-caps.latest.revision: 
+caps.latest.revision: ''
 author: edmacauley
 ms.author: edmaca
 manager: craigg
@@ -71,7 +71,7 @@ ms.lasthandoff: 11/21/2017
   
 1.  Erweitern Sie im Objekt-Explorer den Ordner **Sicherheit** .  
   
-2.  Klicken Sie mit der rechten Maustaste auf den Ordner **Überwachungen** , und wählen Sie dann **Neue Überwachung**aus. Weitere Informationen finden Sie unter [Create a Server Audit and Server Audit Specification](../../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md).  
+2.  Klicken Sie mit der rechten Maustaste auf den Ordner **Überwachungen** , und wählen Sie dann **Neue Überwachung**aus. Weitere Informationen finden Sie unter [Erstellen einer Serverüberwachung und einer Serverüberwachungsspezifikation](../../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md).  
   
 3.  Nachdem Sie alle Optionen ausgewählt haben, klicken Sie auf **OK**.  
   
