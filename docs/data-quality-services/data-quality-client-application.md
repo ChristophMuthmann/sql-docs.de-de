@@ -1,27 +1,28 @@
 ---
 title: Data Quality-Clientanwendung | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 10/01/2012
 ms.prod: sql-non-specified
 ms.prod_service: data-quality-services
-ms.service: 
+ms.service: ''
 ms.component: data-quality-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: data-quality-services
-ms.tgt_pltfrm: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 25d1547e-4113-4b34-a9f8-8897db1acf16
-caps.latest.revision: "15"
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 92da55879e2d7dddd982eaba66fb2ff5c2c7ba27
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: 3b86461302e64c244deb9dfd1da7b431fcb89685
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="data-quality-client-application"></a>Data Quality-Clientanwendung
   Die Anwendung [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] ermöglicht es Ihnen, Data Quality-Vorgänge mithilfe eines eigenständigen Tools auszuführen. Diese Anwendung ermöglicht es Ihnen, Wissensdatenbanken zu erstellen, Data Quality-Projekte zu erstellen und auszuführen sowie administrative Aufgaben auszuführen.  

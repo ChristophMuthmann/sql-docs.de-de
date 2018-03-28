@@ -1,30 +1,31 @@
 ---
-title: "Erstellen einer Domänenregel | Microsoft-Dokumentation"
-ms.custom: 
+title: Erstellen einer Domänenregel | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 11/08/2011
 ms.prod: sql-non-specified
 ms.prod_service: data-quality-services
-ms.service: 
+ms.service: ''
 ms.component: data-quality-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: data-quality-services
-ms.tgt_pltfrm: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dqs.dm.testdomainrule.f1
 - sql13.dqs.dm.rules.f1
 ms.assetid: 339fa10d-e22c-4468-b366-080c33f1a23f
-caps.latest.revision: "28"
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d5c7e6f027352d3d8fbd79304d6454340a438d9b
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: 44c7b7392737306ffa78958d46e53f7904c688da
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="create-a-domain-rule"></a>Erstellen einer Domänenregel
   In diesem Thema wird beschrieben, wie Sie eine Domänenregel in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) erstellen. Eine Domänenregel ist eine Bedingung, mit der Domänenwerte validiert, korrigiert und standardisiert werden. Eine Domänenregel muss über eine Domäne hinweg wahr sein, damit Domänenwerte als genau betrachtet werden und den Geschäftsanforderungen entsprechen. Domänenregeln können Überprüfungsregeln enthalten, die für die Überprüfung von Domänenwerten, aber nicht für die Korrektur von Daten in Data Quality-Projekten verwendet werden. Regeln umfassen auch Standardisierungsregeln, die auf gültige Daten angewendet und in der Datenkorrektur verwendet werden.  

@@ -1,32 +1,34 @@
 ---
-title: "Konfigurieren der Schwellenwerte für Bereinigung und Abgleich | Microsoft-Dokumentation"
-ms.custom: 
+title: Konfigurieren der Schwellenwerte für Bereinigung und Abgleich | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: data-quality-services
-ms.service: 
+ms.service: ''
 ms.component: data-quality-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: data-quality-services
-ms.tgt_pltfrm: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: ''
 ms.topic: article
-f1_keywords: sql13.dqs.admin.config.general.f1
+f1_keywords:
+- sql13.dqs.admin.config.general.f1
 helpviewer_keywords:
 - cleansing,threshold value
 - cleansing threshold values
 - matching,threshold value
 ms.assetid: d2305409-7115-45a4-8f60-1213c0a47368
-caps.latest.revision: "9"
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8297e028715e333653a208ba3467cb0795318af0
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: 0f204a5e85961751edf1e81313817a282a8a7c2f
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="configure-threshold-values-for-cleansing-and-matching"></a>Konfigurieren der Schwellenwerte für Bereinigung und Abgleich
   In diesem Thema wird beschrieben, wie Schwellenwerte, die während den computerunterstützten Bereinigungs- und Abgleichsaktivitäten in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) verwendet werden, konfiguriert werden.  

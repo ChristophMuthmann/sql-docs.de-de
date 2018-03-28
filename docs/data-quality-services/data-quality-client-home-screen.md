@@ -1,28 +1,30 @@
 ---
 title: Startbildschirm des Data Quality-Clients | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 02/29/2012
 ms.prod: sql-non-specified
 ms.prod_service: data-quality-services
-ms.service: 
+ms.service: ''
 ms.component: data-quality-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: data-quality-services
-ms.tgt_pltfrm: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: ''
 ms.topic: article
-f1_keywords: sql13.dqs.clienthome.f1
+f1_keywords:
+- sql13.dqs.clienthome.f1
 ms.assetid: 7c6ec469-bc7d-4d19-8e21-11dcf8ade108
-caps.latest.revision: "14"
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 370c6cc6e18c7064db092a92d3b8a5d826927689
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: ec74905b85cc048e84d7cd4996cfb02ff03191a4
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="data-quality-client-home-screen"></a>Startbildschirm des Data Quality-Clients
   Über diesen Bildschirm können Sie auf die Benutzeroberflächen für die drei wichtigsten [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] -Taskgruppen (DSQ) zugreifen: Wissensdatenbank-Verwaltung, Data Quality-Projekte und Verwaltung.  

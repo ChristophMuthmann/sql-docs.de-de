@@ -1,30 +1,31 @@
 ---
-title: "Erstellen einer Verbunddomäne | Microsoft-Dokumentation"
-ms.custom: 
+title: Erstellen einer Verbunddomäne | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 11/22/2011
 ms.prod: sql-non-specified
 ms.prod_service: data-quality-services
-ms.service: 
+ms.service: ''
 ms.component: data-quality-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: data-quality-services
-ms.tgt_pltfrm: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dqs.kb.createcd.f1
 - sql13.dqs.dm.cdproperties.f1
 ms.assetid: c7f0bd84-a02e-4a81-885d-985e6415c499
-caps.latest.revision: "21"
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9c1676681c21b306c6df820957b07863c5db6c5a
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: 2d358802cd5500359b4132e6db6868485e317773
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="create-a-composite-domain"></a>Erstellen einer Verbunddomäne
   In diesem Thema wird beschrieben, wie eine Verbunddomäne in einer Wissensdatenbank in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) erstellt wird. Eine Verbunddomäne besteht aus einer oder mehreren Einzeldomänen, die für ein einzelnes Datenfeld gelten. Weitere Informationen zu Verbunddomänen finden Sie unter [Verwalten einer Verbunddomäne](../data-quality-services/managing-a-composite-domain.md).  

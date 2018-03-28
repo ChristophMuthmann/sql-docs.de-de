@@ -1,27 +1,28 @@
 ---
-title: "Ausführen von „DQSInstaller.exe“ zum Abschließen der Installation von Data Quality Server | Microsoft-Dokumentation"
-ms.custom: 
+title: Ausführen von „DQSInstaller.exe“ zum Abschließen der Installation von Data Quality Server | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: data-quality-services
-ms.service: 
+ms.service: ''
 ms.component: install-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: data-quality-services
-ms.tgt_pltfrm: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 7a8c96e0-1328-4f35-97fc-b6d9cb808bae
-caps.latest.revision: "33"
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d6d14694ebc822f28c7765d1ed7235b77e4db06c
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: 6d0052007846b4edf4a399fa831011982c344dd5
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="run-dqsinstallerexe-to-complete-data-quality-server-installation"></a>Ausführen von DQSInstaller.exe zum Abschließen der Installation von Data Quality Server
   Um die Installation von [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] abzuschließen, müssen Sie nach dem Installieren von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]die Datei DQSInstaller.exe ausführen. In diesem Thema wird beschrieben, wie Sie **DQSInstaller.exe** über den Startbildschirm, das Menü **Start** , Windows-Explorer oder die Eingabeaufforderung ausführen. Sie können die Datei „DQSInstaller.exe“ mit jeder dieser Methoden ausführen.  

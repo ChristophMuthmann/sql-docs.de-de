@@ -1,31 +1,32 @@
 ---
-title: "Ausführen eines Abgleichsprojekts | Microsoft-Dokumentation"
-ms.custom: 
+title: Ausführen eines Abgleichsprojekts | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: data-quality-services
-ms.service: 
+ms.service: ''
 ms.component: data-quality-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: data-quality-services
-ms.tgt_pltfrm: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dqs.matchingproject.map.f1
 - sql13.dqs.matchingproject.matching.f1
 - sql13.dqs.matchingproject.export.f1
 ms.assetid: 6aa9d199-83ce-4b5d-8497-71eef9258745
-caps.latest.revision: "36"
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9874323ad1bef8199d2ebc969bb3673826b946fb
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: cd76d59bc0c13742633185766f559bd3d189e228
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="run-a-matching-project"></a>Ausführen eines Abgleichsprojekts
   In diesem Thema wird beschrieben, wie ein Datenabgleich in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) ausgeführt wird. Der Abgleichsprozess identifiziert anhand von Abgleichsregeln in der Abgleichsrichtlinie Cluster von übereinstimmenden Datensätzen, legt basierend auf einer Survivorship-Regel einen Datensatz von jedem Cluster als Survivor fest und exportiert die Ergebnisse. DQS führt den Abgleichsprozess, auch Deduplizierung genannt, in einem computerunterstützten Prozess aus, Sie erstellen die Abgleichsregeln jedoch interaktiv und wählen die Survivorship-Regel aus mehreren Optionen aus, so dass Sie den Abgleichsprozess selbst steuern können.  

@@ -1,27 +1,28 @@
 ---
-title: "Importieren von Domänen aus einer Excel-Datei in eine Wissensermittlung | Microsoft-Dokumentation"
-ms.custom: 
+title: Importieren von Domänen aus einer Excel-Datei in eine Wissensermittlung | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: data-quality-services
-ms.service: 
+ms.service: ''
 ms.component: data-quality-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: data-quality-services
-ms.tgt_pltfrm: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 4d3a3940-6c2a-4dc4-90eb-86f26012c165
-caps.latest.revision: "24"
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9070b4ea757325e2f037140383bc525be75e1fe2
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: 3bf3c6cad727ffb358dacfd2f2f401ca1902e806
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="import-domains-from-an-excel-file-in-knowledge-discovery"></a>Importieren von Domänen aus einer Excel-Datei in eine Wissensermittlung
   In diesem Thema wird beschrieben, wie eine oder mehrere Domänen in einer Excel-Datei in die [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS)-Wissensermittlungsaktivität importiert werden. Der Importvorgang vereinfacht den Wissensgenerierungsprozess und spart Zeit und Aufwand. Auf diese Weise können Personen, die über Daten in einer Excel-Datei oder Textdatei verfügen, eine Wissensdatenbank mit diesen Daten erstellen. (Weitere Informationen zum Importieren von Werten in eine Domäne einer vorhandenen Wissensdatenbank finden Sie unter [Importieren von Werten aus einer Excel-Datei in eine Domäne](../data-quality-services/import-values-from-an-excel-file-into-a-domain.md).) Das Exportieren in eine Excel-Datei wird nicht unterstützt.  
