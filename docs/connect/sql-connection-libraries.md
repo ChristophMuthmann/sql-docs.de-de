@@ -1,23 +1,23 @@
 ---
-title: "Datenverbindungsbibliotheken für Microsoft SQL-Datenbanken | Microsoft Docs"
-description: "Bietet Downloadlinks für Module, die Verbindung mit Microsoft SQL Server und Azure SQL-Datenbank aus einer Vielzahl von Programmiersprachen Client zu aktivieren."
+title: Datenverbindungsbibliotheken für Microsoft SQL-Datenbanken | Microsoft Docs
+description: Bietet Downloadlinks für Module, die Verbindung mit Microsoft SQL Server und Azure SQL-Datenbank aus einer Vielzahl von Programmiersprachen Client zu aktivieren.
 author: MightyPen
-ms.service: 
+ms.service: ''
 ms.component: connect
 ms.suite: sql
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.technology: dbe-data-tier-apps
-ms.custom: 
+ms.custom: ''
 ms.workload: data-management
 ms.topic: article
 ms.date: 08/09/2017
 ms.author: genemi
-ms.openlocfilehash: 9c85a5e40ca7d3b6e35cdb09fc4becbe5c9c65c3
-ms.sourcegitcommit: 1a3584a60c12521ba5b4b12a18d8cb32b1f2d555
+ms.openlocfilehash: 33df5e13dcdeb205a1dbc9fa9c1a5dc7efc754c2
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="connection-modules-for-microsoft-sql-databases"></a>Verbindung von Modulen für Microsoft SQL-Datenbanken
 
@@ -30,7 +30,7 @@ Dieser Artikel bietet Downloadlinks für Verbindung Module oder *Treiber* , die 
 
 #### <a name="oop-to-relational-mismatch"></a>OOP-relationale Konflikt
 
-*Relationale*: Clientprogramme, die in einer objektorientierten Programmierung (OOP) Sprache, oft geschrieben werden verwenden SQL-Treiber, die abgefragte Daten in einem Format zurückgeben, die mehr als objektorientierte relational ist. C# mithilfe von ADO.NET ist ein Beispiel. Der OOP-relationalen Format Konflikt erschwert manchmal den OOP-Code zu schreiben und zu verstehen.
+*Relationale*: Clientprogramme, die in einer objektorientierten Programmierung (OOP) Sprache, oft geschrieben werden verwenden SQL-Treiber die abgefragte Daten in einem Format zurückgeben, die mehr als objektorientierte relational ist. C# mithilfe von ADO.NET ist ein Beispiel. Der OOP-relationalen Format Konflikt erschwert manchmal den OOP-Code zu schreiben und zu verstehen.
 
 *Verwendung von ORM*: andere Treiber oder Frameworks abgefragte Daten zurückgeben, in der OOP-Format, das den Konflikt zu vermeiden. Diese Treiber funktionieren erwartet, dass die Klassen entsprechend die Datenspalten von bestimmten SQL-Tabellen definiert wurden. Der Treiber führt dann die *objektrelationales Mapping* (ORM), um die abgefragte Daten als eine Instanz einer Klasse zurückgeben. Microsofts Entity Framework (EF) für C#- und Ruhezustand für Java, sind zwei Beispiele.
 
@@ -60,7 +60,7 @@ although the FWLink is less precise than is http://github.com/Microsoft/msphpsql
 | C++      | [ODBC](http://docs.microsoft.com/sql/connect/odbc/download-odbc-driver-for-sql-server) |
 | Java     | [JDBC](http://www.microsoft.com/download/details.aspx?id=55539) |
 | Node.js  | [Node.js-Treiber installationsanweisungen](http://docs.microsoft.com/sql/connect/node-js/step-1-configure-development-environment-for-node-js-development) |
-| PHP      | *Betriebssystem:*<br /><br />[Windows-PHP-Treiber](https://www.microsoft.com/download/details.aspx?id=55642)<br />[Ubuntu oder MacOS PHP-Treiber von Github](http://github.com/Microsoft/msphpsql/tree/dev#install-unix) |
+| PHP      | *Betriebssystem:*<br /><br />[Windows-PHP-Treiber](https://www.microsoft.com/download/details.aspx?id=55642)<br />[Linux oder MacOS PHP-Treiber von Github](http://github.com/Microsoft/msphpsql/) |
 | Python   | [Pyodbc installationsanweisungen](http://docs.microsoft.com/sql/connect/python/pyodbc/step-1-configure-development-environment-for-pyodbc-python-development)<br />[Herunterladen von ODBC](http://docs.microsoft.com/sql/connect/odbc/download-odbc-driver-for-sql-server) |
 | Ruby     | [Ruby-Treiber installationsanweisungen](https://docs.microsoft.com/sql/connect/ruby/step-1-configure-development-environment-for-ruby-development)<br />[Ruby-Downloadseite](https://rubyinstaller.org/downloads/) |
 | &nbsp; | <br /> |
@@ -90,7 +90,7 @@ Die folgende Tabelle enthält Beispiele für Objekt Relational Mapping (ORM)-Fra
 ## <a name="build-an-app-webpages"></a>Erstellen eines app-Webseiten
 
 
-[http://AKA.ms/sqldev](http://aka.ms/sqldev) gelangen Sie auf einen Satz von *Build eine app* Webseiten. Die Webseiten Aufschluss darüber geben zahlreiche Kombinationen von programming Language, Betriebssystem und Treiber für SQL-Verbindung. Die folgenden Elemente sind, zwischen den Informationen, die von der Build ein app-Webseiten bereitgestellt:
+[http://aka.ms/sqldev](http://aka.ms/sqldev) gelangen Sie auf einen Satz von *Build eine app* Webseiten. Die Webseiten Aufschluss darüber geben zahlreiche Kombinationen von programming Language, Betriebssystem und Treiber für SQL-Verbindung. Die folgenden Elemente sind, zwischen den Informationen, die von der Build ein app-Webseiten bereitgestellt:
 
 - Ausführliche Informationen zum ganz von vorn, für jede Kombination aus Sprache, Betriebssystem + Treiber beginnen.
     - Anweisungen zum Installieren der neuesten Treiber von SQL-Verbindung.

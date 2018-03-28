@@ -1,28 +1,28 @@
 ---
 title: Always Encrypted mit dem JDBC-Treiber verwenden | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 3/14/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 271c0438-8af1-45e5-b96a-4b1cabe32707
-caps.latest.revision: 
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 5a32f8269bb6787087b54d161c50cf6f06488482
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: 425f965c37e1d148a267566bd1980eb345cadfc6
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="using-always-encrypted-with-the-jdbc-driver"></a>Always Encrypted verwenden mit dem JDBC-Treiber
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -408,7 +408,7 @@ Die **SendTimeAsDatetime** Verbindungseigenschaft dient zum Konfigurieren, wie d
 Weitere Informationen zu dieser Eigenschaft finden Sie unter [konfigurieren wie java.sql.Time-Werte werden an den Server gesendet](configuring-how-java-sql-time-values-are-sent-to-the-server.md).
 
 ### <a name="configuring-how-string-values-are-sent-to-the-server"></a>Konfigurieren, wie die Zeichenfolgenwerte an den Server gesendet werden
-Die **SendStringParametersAsUnicode** Connection-Eigenschaft wird verwendet, um zu konfigurieren, die Zeichenfolgenwerte auf SQL Server gesendet werden. Wenn auf "true", String-Parameter im Unicode-Format an den Server gesendet werden. Wenn auf "false", String-Parameter festgelegt ist, die in nicht-Unicode-Format, z. B. ASCII oder MBCS, sondern gesendet werden. Der Standardwert für diese Eigenschaft ist "true". Wenn Always Encrypted aktiviert ist und eine char/varchar/varchar(max)-Spalte wird verschlüsselt, wird der Wert der **SendStringParametersAsUnicode** muss auf "true" (oder bleiben die Standardeinstellung) festgelegt werden. Diese Eigenschaft auf "false" festgelegt ist, wird der Treiber eine Ausnahme auszulösen, wenn beim Einfügen von Daten in einer verschlüsselten char/varchar/varchar(max)-Spalte. Weitere Informationen zu dieser Eigenschaft finden Sie unter [Festlegen der Verbindungseigenschaften](../../connect/jdbc/setting-the-connection-properties.md).
+Die **SendStringParametersAsUnicode** Connection-Eigenschaft wird verwendet, um zu konfigurieren, die Zeichenfolgenwerte auf SQL Server gesendet werden. Wenn auf "true", String-Parameter im Unicode-Format an den Server gesendet werden. Wenn auf "false", String-Parameter festgelegt ist, die in nicht-Unicode-Format, z. B. ASCII oder MBCS, sondern gesendet werden. Der Standardwert für diese Eigenschaft ist "true". Wenn Always Encrypted aktiviert ist und eine char/varchar/varchar(max)-Spalte wird verschlüsselt, wird der Wert der **SendStringParametersAsUnicode** muss auf "false" festgelegt werden. Wenn diese Eigenschaft festgelegt ist, auf "true", der Treiber löst eine Ausnahme bei der Entschlüsselung von Daten aus einer verschlüsselten char/varchar/varchar(max)-Spalte, die Unicode-Zeichen aufweist. Weitere Informationen zu dieser Eigenschaft finden Sie unter [Festlegen der Verbindungseigenschaften](../../connect/jdbc/setting-the-connection-properties.md).
   
 ## <a name="retrieving-and-modifying-data-in-encrypted-columns"></a>Abrufen und Ändern von Daten in verschlüsselten Spalten
 Nachdem Sie Always Encrypted für Anwendungsabfragen aktiviert, können Sie den JDBC-standard-APIs verwenden, abrufen und Ändern von Daten in verschlüsselten Datenbankspalten. Wenn die Anwendung die erforderlichen Datenbankberechtigungen verfügt und den spaltenhauptschlüssel zugreifen kann, wird der Treiber alle Abfrageparameter verschlüsseln, die verschlüsselte Spalten anvisieren und entschlüsselt die Daten, die aus verschlüsselten Spalten abgerufen werden.

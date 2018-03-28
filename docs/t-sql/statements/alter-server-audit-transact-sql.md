@@ -1,16 +1,16 @@
 ---
 title: ALTER SERVER AUDIT (Transact-SQL) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER_SERVER_AUDIT_TSQL
@@ -22,22 +22,24 @@ helpviewer_keywords:
 - audits [SQL Server], specification
 - ALTER SERVER AUDIT statement
 ms.assetid: 63426d31-7a5c-4378-aa9e-afcf4f64ceb3
-caps.latest.revision: 
+caps.latest.revision: ''
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 992919d80e0f82393af0a6aa4c2c5564d3ec6189
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: f8c65e86bb3bea70a771cfcabf6b6e9049c6826a
+ms.sourcegitcommit: 6e16d1616985d65484c72f5e0f34fb2973f828f4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="alter-server-audit--transact-sql"></a>ALTER SERVER AUDIT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Ändert ein Serverüberwachungsobjekt mithilfe der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit-Funktion. Weitere Informationen finden Sie unter [SQL Server Audit &#40;Datenbankmodul&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
-  
+
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
+
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
@@ -107,13 +109,13 @@ ALTER SERVER AUDIT audit_name
  Gibt an, ob die an das Ziel ausgebende Instanz fehlschlagen, fortgesetzt oder beendet werden soll, wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] keine Daten in das Überwachungsprotokoll schreiben kann.  
   
  CONTINUE  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Vorgänge werden fortgesetzt. Überwachungsdatensätze werden nicht beibehalten. Die Überwachung versucht weiterhin, Ereignisse zu protokollieren, und wird fortgesetzt, nachdem die Fehlerbedingung aufgelöst wurde. Durch Auswählen der continue-Option können unter Umständen unüberwachte Aktivitäten ausgeführt werden, die gegen Ihre Sicherheitsrichtlinien verstoßen. Verwenden Sie diese Option, wenn die weitere Verwendung von [!INCLUDE[ssDE](../../includes/ssde-md.md)] wichtiger als die Beibehaltung einer vollständigen Überwachung ist.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Vorgänge werden fortgesetzt. Überwachungsdatensätze werden nicht beibehalten. Bei der Überwachung wird weiterhin versucht, Ereignisse zu protokollieren. Sie wird fortgesetzt, wenn die Fehlerbedingung aufgelöst wurde. Durch Auswählen der Continue-Option können unter Umständen nicht überwachte Aktivitäten ausgeführt werden, die gegen Ihre Sicherheitsrichtlinien verstoßen könnten. Verwenden Sie diese Option, wenn die weitere Verwendung von [!INCLUDE[ssDE](../../includes/ssde-md.md)] wichtiger als die Beibehaltung einer vollständigen Überwachung ist.  
   
 SHUTDOWN  
-Erzwingt, dass die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] heruntergefahren wird, falls [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] keine Daten in das Überwachungsziel schreiben kann. Die Anmeldung, die die `ALTER`-Anweisung ausführt, muss über die `SHUTDOWN`-Berechtigung in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verfügen. Das Herunterfahren wird auch dann fortgesetzt, wenn die `SHUTDOWN`-Berechtigung später von der ausführenden Anmeldung widerrufen wird. Wenn der Benutzer nicht über diese Berechtigung verfügt, schlägt die Anweisung fehl, und die Überwachung wird nicht geändert. Verwenden Sie die Option, wenn ein Überwachungsfehler die Sicherheit oder die Integrität des Systems beeinträchtigen konnte. Weitere Informationen finden Sie unter [SHUTDOWN](../../t-sql/language-elements/shutdown-transact-sql.md). 
+Erzwingt, dass die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] heruntergefahren wird, falls [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aus irgendeinem Grund keine Daten in das Überwachungsziel schreiben kann. Die Anmeldung, bei der die `ALTER`-Anweisung ausgeführt wird, muss über die `SHUTDOWN`-Berechtigung in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verfügen. Das Herunterfahren wird auch dann fortgesetzt, wenn die `SHUTDOWN`-Berechtigung später von der ausführenden Anmeldung widerrufen wird. Wenn der Benutzer nicht über diese Berechtigung verfügt, schlägt die Anweisung fehl, und die Überwachung wird nicht geändert. Verwenden Sie die Option, wenn ein Überwachungsfehler die Sicherheit oder die Integrität des Systems beeinträchtigen konnte. Weitere Informationen finden Sie unter [SHUTDOWN](../../t-sql/language-elements/shutdown-transact-sql.md). 
   
  FAIL_OPERATION  
- Datenbankaktionen schlagen fehl, wenn sie überwachte Ereignisse verursachen. Aktionen, die keine überwachten Ereignisse verursachen, können fortgesetzt werden, aber es können keine überwachten Ereignisse auftreten. Die Überwachung versucht weiterhin, Ereignisse zu protokollieren, und wird fortgesetzt, nachdem die Fehlerbedingung aufgelöst wurde. Verwenden Sie diese Option, wenn die Beibehaltung einer vollständigen Überwachung wichtiger als der Vollzugriff auf [!INCLUDE[ssDE](../../includes/ssde-md.md)] ist.  
+ Datenbankaktionen schlagen fehl, wenn sie überwachte Ereignisse verursachen. Aktionen, die keine überwachten Ereignisse verursachen, können fortgesetzt werden, es können jedoch keine überwachten Ereignisse auftreten. Bei der Überwachung wird weiterhin versucht, Ereignisse zu protokollieren. Sie wird fortgesetzt, wenn die Fehlerbedingung aufgelöst wurde. Verwenden Sie diese Option, wenn die Beibehaltung einer vollständigen Überwachung wichtiger als der Vollzugriff auf [!INCLUDE[ssDE](../../includes/ssde-md.md)] ist.  
  **Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].   
   
  STATE **=** { ON | OFF }  

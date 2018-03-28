@@ -1,26 +1,26 @@
 ---
-title: "SQL Server Machine Learning-Services - funktionsverfügbarkeit über Editionen | Microsoft Docs"
-ms.custom: 
+title: SQL Server Machine Learning-Services - funktionsverfügbarkeit über Editionen | Microsoft Docs
+ms.custom: ''
 ms.date: 03/17/2018
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-ms.assetid: 
-caps.latest.revision: 
+ms.assetid: ''
+caps.latest.revision: ''
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: 4322211bcc3a5466976368b9562ed3e95ad7e331
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: 50c9f2c8f1039ce0bba25ed9c6b7c5564c1d10d2
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="feature-availability-across-editions-of-sql-server-machine-learning-services"></a>Verfügbarkeit von Features für Editionen von SQL Server-Machine Learning-Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -28,9 +28,9 @@ ms.lasthandoff: 03/21/2018
  Machine Learning-Funktionen sind in SQL Server 2016 und SQL Server-2017 verfügbar. In diesem Artikel listet die Editionen, die die Funktion bereitstellen, werden Einschränkungen, die in bestimmten Editionen gelten und sind Funktionen, die nur in bestimmten Editionen verfügbar.
 
 
-## <a name="sql-server-2017-machine-learning-features"></a>SQL Server 2017 Machine Learning-Funktionen
+## <a name="sql-server-2017-features"></a>2017 von SQL Server-Funktionen
 
-Enterprise und Developer Edition haben dieselbe Funktion Erfassung, sodass Sie Lösungen für eine Unternehmensinstallation erstellen können, ohne dass die gleiche Kosten anfallen. Obwohl die Editionen funktional Equivlanet sind, wird mithilfe der Developer Edition für produktionsumgebungen nicht unterstützt.
+Enterprise und Developer Edition haben dieselbe Funktion Erfassung, sodass Sie Lösungen für eine Unternehmensinstallation erstellen können, ohne dass die gleiche Kosten anfallen. Obwohl die Editionen funktionell gleichwertig sind, wird mithilfe der Developer Edition für produktionsumgebungen nicht unterstützt.
 
 Der Unterschied zwischen grundlegenden und erweiterten Integration ist Skalierung. Erweiterte Integration können alle verfügbaren Kerne für die parallele Verarbeitung von Datasets auf eine beliebige Größe, die von Ihrem Computer aufnehmen kann. Grundlegende Integration ist auf 2 Kerne und Datasets im Arbeitsspeicher einpassen beschränkt. 
 

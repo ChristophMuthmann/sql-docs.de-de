@@ -1,31 +1,31 @@
 ---
 title: Installieren von SQL Server 2016 R Services (Datenbankintern) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/15/2018
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 keywords:
 - Installieren von SQL Server R Services
 - Installieren von SQL Server-Machine Learning-Services
 - Richten Sie R Services
 - Installieren Sie SQL Machine learning
-ms.assetid: 
-caps.latest.revision: 
+ms.assetid: ''
+caps.latest.revision: ''
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ms.workload: Active
-ms.openlocfilehash: 0012b48101085b7ccb18695fbda1f25c10a6b90b
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: 7a00eb7f3151ad95818feee1d981170164f44345
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="install-sql-server-2016-r-services-in-database"></a>Installieren von SQL Server 2016 R Services (datenbankintern) 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -34,7 +34,7 @@ In diesem Artikel wird erläutert, wie zum Installieren und konfigurieren **SQL 
 
 ## <a name="bkmk_prereqs"> </a> Prüfliste vor der Installation
 
-+ SQL Server 2016 ist erforderlich. Wenn Sie SQL Server 2016 haben, installieren Sie [SQL Server 2017 Machine Learning Services (Datenbankintern)](sql-machine-learning-services-windows-install.md) stattdessen.
++ SQL Server 2016-Setup ist erforderlich, wenn Sie R Services installieren möchten. Wenn Sie stattdessen die 2017 von SQL Server-Installationsmedien verfügen, müssen Sie installieren [SQL Server 2017 Machine Learning Services (Datenbankintern)](sql-machine-learning-services-windows-install.md) R-Integration für die jeweilige Version von SQL Server abgerufen.
 
 + Eine Datenbank-Modulinstanz ist erforderlich. Installation kann nicht nur R, Athough Sie ihn inkrementell zu einer vorhandenen Instanz hinzufügen können.
 

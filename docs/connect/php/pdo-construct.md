@@ -1,27 +1,28 @@
 ---
 title: 'PDO:: __construct | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 3ee53aff-6fe4-44cd-a15b-51770c98c712
-caps.latest.revision: "18"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c615bf11081ee791a6a3a700c4c7bae514fe4fae
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 3a1c40e8e31cbba9eb93155c3f81f6dd03452b59
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="pdoconstruct"></a>PDO::__construct
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -53,9 +54,9 @@ PDOException
 ## <a name="remarks"></a>Hinweise  
 Sie können ein Verbindungsobjekt schließen, indem Sie die Instanz auf NULL setzen.  
   
-Nachdem eine Verbindung hergestellt wurde, wird PDO::errorCode 01000 anstelle von 00000 angezeigt.  
+Nachdem eine Verbindung wird PDO:: ErrorCode 01000 anstelle von 00000 angezeigt.  
   
-Wenn PDO::__construct aus irgendeinem Grund fehlschlägt, wird eine Ausnahme ausgelöst, selbst wenn PDO::ATTR_ERRMODE auf PDO::ERRMODE_SILENT festgelegt ist.  
+Wenn PDO:: __construct aus irgendeinem Grund fehlschlägt, wird eine Ausnahme ausgelöst, selbst wenn PDO:: attr_errmode auf PDO:: errmode_silent festgelegt ist.  
   
 Unterstützung für PDO wurde in Version 2.0 von [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]hinzugefügt.  
   
@@ -93,6 +94,7 @@ Dieses Beispiel zeigt, wie Sie eine Verbindung mit einem Server herstellen und s
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
-[PDO-Klasse](../../connect/php/pdo-class.md)  
-[PDO](http://go.microsoft.com/fwlink/?LinkID=187441)  
+[PDO-Klasse](../../connect/php/pdo-class.md)
+
+[PDO](http://php.net/manual/book.pdo.php)  
   

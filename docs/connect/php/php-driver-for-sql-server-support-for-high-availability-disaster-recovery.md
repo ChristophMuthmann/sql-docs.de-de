@@ -1,29 +1,30 @@
 ---
-title: "PHP-Treiber für SQL Server High Availability, Disaster Recovery | Microsoft Docs"
-ms.custom: 
-ms.date: 01/19/2017
+title: Unterstützung für hohe Verfügbarkeit, Notfallwiederherstellung für Microsoft Drivers for PHP for SQLServer | Microsoft Docs
+ms.custom: ''
+ms.date: 03/26/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 73a80821-d345-4fea-b076-f4aabeb4af3e
-caps.latest.revision: "15"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a4777aa2ffac5b3932815dee65eb237337d95784
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: ee0be974c5998d531e20ed64c871ca85892aa46f
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
-# <a name="php-driver-for-sql-server-support-for-high-availability-disaster-recovery"></a>PHP-Treiber für SQL Server-Unterstützung für hohe Verfügbarkeit, Notfallwiederherstellung
+# <a name="support-for-high-availability-disaster-recovery"></a>Unterstützung für hohe Verfügbarkeit bei Notfallwiederherstellung
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 In diesem Thema wird erläutert, [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] Support (eingeführt in Version 3.0) für hohe Verfügbarkeit und notfallwiederherstellung [!INCLUDE[ssHADR](../../includes/sshadr_md.md)].  [!INCLUDE[ssHADR](../../includes/sshadr_md.md)]-Support wurde in [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)] hinzugefügt. Weitere Informationen über [!INCLUDE[ssHADR](../../includes/sshadr_md.md)]finden Sie in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Onlinedokumentation.  
@@ -38,7 +39,7 @@ Wenn Sie nicht mit einem Verfügbarkeitsgruppen-Listener herstellen und mehrere 
 ## <a name="connecting-with-multisubnetfailover"></a>Verbinden mit MultiSubnetFailover  
 Die **MultiSubnetFailover** -Verbindungseigenschaft gibt an, dass die Anwendung in einer verfügbarkeitsgruppe oder Failoverclusterinstanz und die bereitgestellt wird, wird die [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] versucht, eine Verbindung mit der Datenbank auf dem primären [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Instanz beim Herstellen der Verbindung mit allen IP-Adressen. Wenn **MultiSubnetFailover = True** ist für eine Verbindung angegeben, der Client TCP-Verbindungsversuche schneller als das Betriebssystem standardmäßig TCP-neuübertragungsintervallen wiederholt. Auf diese Weise kann die Verbindung nach einem Failover einer AlwaysOn-Verfügbarkeitsgruppe oder einer AlwaysOn-Failoverclusterinstanz schneller wiederhergestellt werden. Diese Einstellung gilt sowohl für Einzelsubnetz- als auch Multisubnetz-Verfügbarkeitsgruppen und -Failoverclusterinstanzen.  
   
-Geben Sie immer **MultiSubnetFailover = True** beim Verbinden mit einer SQL Server 2012-verfügbarkeitsgruppenlistener oder die SQL Server 2012-Failoverclusterinstanz. **MultiSubnetFailover** aktiviert schnelleres Failover für alle Verfügbarkeitsgruppen und die Failoverclusterinstanz in SQL Server 2012 und reduziert die Failoverzeit für einzelne und Multisubnetz-AlwaysOn-Topologien erheblich. Während eines Multisubnetzfailovers versucht der Client Verbindungen parallel. Während eines subnetzfailovers der [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] aggressive Wiederholungsversuche zum Herstellen die TCP-Verbindung.  
+Geben Sie immer **MultiSubnetFailover = True** beim Verbinden mit einer SQL Server 2012-verfügbarkeitsgruppenlistener oder die SQL Server 2012-Failoverclusterinstanz. **MultiSubnetFailover** ermöglicht ein schnelleres Failover für alle Verfügbarkeitsgruppen und Failoverclusterinstanzen in SQL Server 2012 und reduziert die Failoverzeit für Einzel- und multisubnetz AlwaysOn-Topologien. Während eines Multisubnetzfailovers versucht der Client Verbindungen parallel. Während eines subnetzfailovers der [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] aggressive Wiederholungsversuche zum Herstellen die TCP-Verbindung.  
   
 Weitere Informationen zu Schlüsselwörtern der Verbindungszeichenfolge in [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], finden Sie unter [Verbindungsoptionen](../../connect/php/connection-options.md).  
   
@@ -83,7 +84,7 @@ Eine Datenbank kann Lesearbeitslasten auf der AlwaysOn-Zieldatenbank zulassen bz
 Das **ApplicationIntent** -Schlüsselwort wird verwendet, um schreibgeschütztes Routing zu aktivieren.  
   
 ## <a name="read-only-routing"></a>Schreibgeschütztes Routing  
-Schreibgeschütztes Routing ist eine Funktion, die die Verfügbarkeit eines schreibgeschützten Replikats einer Datenbank sicherstellen kann. So aktivieren Sie schreibgeschütztes Routing:  
+Das schreibgeschützte Routing ist eine Funktion, die die Verfügbarkeit des schreibgeschützten Replikats einer Datenbank sicherstellen kann. So aktivieren Sie schreibgeschütztes Routing:  
   
 1.  Sie müssen eine Verbindung zum Verfügbarkeitsgruppenlistener einer AlwaysOn-Verfügbarkeitsgruppe herstellen.  
   
@@ -93,7 +94,7 @@ Schreibgeschütztes Routing ist eine Funktion, die die Verfügbarkeit eines schr
   
 Möglicherweise werden bei mehreren Verbindungen mithilfe von schreibgeschütztem Routing nicht alle mit demselben schreibgeschützten Replikat verbunden. Änderungen in der Datenbanksynchronisierung oder Änderungen in der Routingkonfiguration des Servers können zu Clientverbindungen mit anderen schreibgeschützten Replikaten führen. Sie gewährleisten, dass alle schreibgeschützten Anforderungen Verbindungen mit demselben schreibgeschützten Replikat herstellen, indem Sie keinen Verfügbarkeitsgruppenlistener an das Schlüsselwort der **Server** -Verbindungszeichenfolge übermitteln. Geben Sie stattdessen den Namen der schreibgeschützten Instanz an.  
   
-Schreibgeschütztes Routing dauert möglicherweise länger als das Herstellen einer primären Verbindung, da schreibgeschütztes Routing zuerst eine primäre Verbindung herstellt und dann nach der besten verfügbaren lesbaren Sekundärverbindung sucht. Deswegen sollten Sie das Anmeldetimeout vergrößern.  
+Das schreibgeschützte Routing kann länger als das Herstellen einer Verbindung mit dem primären Objekt dauern, da beim schreibgeschützten Routing zunächst eine Verbindung mit dem primären Objekt hergestellt und anschließend nach dem verfügbaren am besten lesbaren sekundären Objekt gesucht wird. In diesem Fall sollte das Anmeldungstimeout erhöht werden.  
   
 ## <a name="see-also"></a>Siehe auch  
 [Verbinden mit dem Server](../../connect/php/connecting-to-the-server.md)  

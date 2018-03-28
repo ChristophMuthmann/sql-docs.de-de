@@ -1,65 +1,66 @@
 ---
-title: Installieren Sie vortrainierte Machine Learning-Modellen in SQL Server | Microsoft Docs
+title: Installieren von Pre-tained Machine Learning-Modellen in SQL Server | Microsoft Docs
 ms.date: 03/14/2018
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 21456462-e58a-44c3-9d3a-68b4263575d7
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+caps.latest.revision: ''
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: fd02766e4020e6f522d50bbd471c5f84c66a998b
-ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
+ms.openlocfilehash: a1228597a1781ca13952a249f554bdea0a990a4d
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 03/28/2018
 ---
-# <a name="install-pretrained-machine-learning-models-on-sql-server"></a>Installieren Sie vortrainierte Machine learning-Modelle mit SQL Server
+# <a name="install-pre-trained-machine-learning-models-on-sql-server"></a>Installieren Sie Pre-tained Machine learning-Modelle mit SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Dieser Artikel beschreibt, wie Pre-tained Modelle mit einer Instanz von SQL Server hinzufügen, die bereits über R Services oder Machine Learning-Dienste installiert.
+In diesem Artikel wird beschrieben, wie Pre-tained Modelle mit einer Instanz von SQL Server hinzufügen, die bereits über R Services oder SQL Server-Machine Learning-Services installiert. 
 
-Das Pre-tained Modelle MicrosoftML wurden zum Unterstützen von Kunden, die Aufgaben wie das Sentiment Analysis "oder" Image merkmalbereitstellung müssen, jedoch nicht die Ressourcen zum Abrufen großer Datasets oder ein komplexes Modell trainieren besitzen, erstellt. Das Team Machine Learning-Server erstellt und trainiert diese Modelle können Sie den ersten Schritten für Text- und effizient verarbeiten. Weitere Informationen finden Sie unter der [Ressourcen](#bkmk_resources) Abschnitt dieses Artikels.
+Pre-tained Modelle, die zum Unterstützen von Kunden, die Aufgaben wie das Sentiment Analysis "oder" Image merkmalbereitstellung müssen, jedoch nicht die Ressourcen zum Abrufen großer Datasets oder ein komplexes Modell trainieren besitzen, vorhanden sein. Das Team Machine Learning-Server erstellt und trainiert diese Modelle können Sie den ersten Schritten für Text- und effizient verarbeiten. Weitere Informationen finden Sie unter der [Ressourcen](#bkmk_resources) Abschnitt dieses Artikels.
 
-Ein Beispiel dafür, wie mithilfe der Pre-tained Modelle mit SQL Server-Daten finden Sie in diesem Blogbeitrag vom SQL Server-Machine Learning-Team:
+Ein Beispiel dafür, wie mithilfe der Pre-tained Modelle mit SQL Server-Daten finden Sie unter diesem Blogbeitrag vom SQL Server-Machine Learning-Team: [stimmungsanalyse mit Python in SQL Server-Machine Learning-Services](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2017/11/01/sentiment-analysis-with-python-in-sql-server-machine-learning-services/)
 
-+ [Stimmungsanalyse mit Python in SQL Server-Machine Learning-Services](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2017/11/01/sentiment-analysis-with-python-in-sql-server-machine-learning-services/)
+## <a name="pre-trained-model-availability"></a>Pre-trained Model-Verfügbarkeit
 
-## <a name="install-the-pre-trained-models"></a>Installieren Sie die vorab trainierten Modelle
+Pre-tained Modelle werden mithilfe des Installationsmediums Microsoft Machine Learning-Server (oder Microsoft R Server, wenn Sie Modelle auf eine SQL Server 2016-Installation hinzufügen) installiert. Die kostenlose Developer Edition können Sie um die Modelle zu installieren. Es ist keine zusätzliche Kosten mit Model-Installation. 
 
-Sie können die Pre-tained Modelle mit den folgenden Produkten:
+Pre-tained Modelle funktionieren mit der folgenden Produkte und Sprachen. Das Setup-Programm erkennt Sprache Integration, die MicrosoftML oder Microsoftml-Bibliothek und fügt dann die vorab trainierten Modelle in der jeweiligen-Bibliothek. Beim Modell-Installation abgeschlossen ist, können Sie die Modelle über Bibliotheksfunktionen.
 
-+ SQL Server 2016 R Services (Datenbankintern)
-+ SQL Server 2017 Machine Learning Services (Datenbankintern)
-+ Machine Learning-Server (eigenständig)
++ SQL Server 2016 R Services (Datenbankintern) - R nur mit der [MicrosoftML-Bibliothek](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)
++ SQL Server 2016 R Server (eigenständig) - R nur mit der [MicrosoftML-Bibliothek](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)
++ SQL Server 2017 Machine Learning Services (Datenbankintern) - R mit [MicrosoftML Bibliothek] (https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package), Python, mit der [Microsoftml-Bibliothek](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package)
++ SQL Server 2017 Machine Learning-Server (eigenständig) - R mit [MicrosoftML Bibliothek] (https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package), Python, mit der [Microsoftml-Bibliothek](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package)
 
 Während des Installationsvorgangs unterscheidet sich abhängig von Ihrer Version von SQL Server. Finden Sie unter den folgenden Abschnitten Anweisungen für die einzelnen Versionen.
 
 > [!NOTE]
-> Es ist nicht möglich, zu lesen oder ändern die vorab trainierten Modelle, da sie über ein systemeigenes Format zum Verbessern der Leistung komprimiert werden.
+> Es ist nicht möglich, zu lesen oder ändern die vorab trainierten Modelle. Sie werden komprimiert, ein systemeigenes Format verwenden, um die Leistung zu verbessern.
 
-### <a name="obtain-files-for-an-offline-installation"></a>Dateien für eine Offlineinstallation abrufen
+## <a name="obtain-files-for-an-offline-installation"></a>Dateien für eine Offlineinstallation abrufen
 
 Um die vorab trainierten Modelle auf einem Server installieren, die nicht über Internetzugriff verfügt, müssen Sie die entsprechenden Installationsprogramme im Voraus herunterladen und kopieren Sie den Installer in einen lokalen Ordner auf dem Server. 
 
 Finden Sie auf dieser Seite die Downloadlinks für alle R-Server und Machine Learning Server Installationsprogramme: [Offline-Installation](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-offline)
 
-### <a name="install-pretrained-models-with-sql-server-2016-r-services"></a>Installieren Sie vortrainierte Modelle mit SQL Server 2016 R Services
+## <a name="install-pre-trained-models-on-sql-server-2016-r-services"></a>Installieren Sie vorab trainierten Modelle auf SQL Server 2016 R Services
 
 Mit SQL Server 2016 können Sie installieren und verwenden Sie Pre-tained R-Modelle aus, nur dann, wenn upgrade Machine learning-Komponenten in einem Vorgang namens **Bindung**. 
 
-Hierzu separaten Windows Installer für Microsoft R Server "oder" Machine Learning-Server ausgeführt und Auswählen einer Instanz oder Instanzen **binden**. Binden eine Instanz bedeutet, die die Support-Richtlinie mit der Instanz verknüpft wird geändert, um r häufiger Updates zulassen 
+Hierzu separaten Windows Installer für Microsoft R Server "oder" Machine Learning-Server auf einem Computer, eine SQL Server 2016-R-Services-Installation und in der Auswahl einer Instanz oder Instanzen ausgeführt **binden**. Binden eine Instanz bedeutet, die die Support-Richtlinie mit der Instanz verknüpft wird geändert, um r häufiger Updates zulassen 
 
 1. Starten Sie den separaten Windows-basierten Installer entweder [R Server](https://docs.microsoft.com/machine-learning-server/rebranding-microsoft-r-server) oder [Machine Learning-Server](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install).
 
-2. Wählen Sie die Instanz zu aktualisieren, und wählen Sie dann die Option aus, um das vortrainierte Modelle erhalten.
+2. Wählen Sie die Instanz zu aktualisieren, und wählen Sie dann die Option aus, um die vorab trainierten Modelle abzurufen.
 
     Weitere Informationen finden Sie unter [Aktualisieren des Machine Learning-Komponenten von SQL Server verwendeten](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md).
 
@@ -113,18 +114,18 @@ Mit SQL Server 2016 müssen Sie einige zusätzliche Schritte zum Registrieren di
     + ResNet\_18\_Updated.model
     + ResNet\_50\_Updated.model
 
-### <a name="install-pretrained-models-on-sql-server-2017"></a>Installieren Sie auf SQL Server-2017 vortrainierte Modelle
+## <a name="install-pre-trained-models-on-sql-server-machine-learning-services-in-database"></a>Installieren Sie vorab trainierten Modelle auf SQL Server Machine Learning-Services (Datenbankintern)
 
-Wenn Sie SQL Server-2017 bereits installiert haben, können Sie die vortrainierte Modelle auf zwei Arten abrufen:
+Wenn Sie SQL Server-2017 bereits installiert haben, können Sie die vorab trainierten Modelle auf zwei Arten abrufen:
 
-+ Aktualisieren Sie die Python- und R-Komponenten mithilfe der Bindung, und installieren Sie die vortrainierte Modelle zur gleichen Zeit
++ Aktualisieren Sie die Python- und R-Komponenten mithilfe der Bindung, und installieren Sie die vorab trainierten Modelle zur gleichen Zeit
 + Installieren Sie nur die Pre-tained Modelle
 
 Die folgenden Anweisungen beschreiben das Verfahren zum Aktualisieren der Machine Learning-Komponenten und Abrufen von Pre-tained Modelle zur gleichen Zeit.
 
 1. Führen Sie das Windows-basierten-Installationsprogramm für Machine Learning-Server. Sie können das Installationsprogramm unter den Links auf dieser Seite herunterladen: [Machine Learning-Server für Windows installieren](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install).
 
-2. Wenn Sie die Modelle auf einem Server, der nicht über Internetzugriff verfügt installieren, stellen Sie sicher, dass das Installationsprogramm für die vortrainierte Modelle auch auf dieser Seite herunterladen: [Offline-Installation für Machine Learning-Server](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-offline).
+2. Wenn Sie die Modelle auf einem Server, der nicht über Internetzugriff verfügt installieren, stellen Sie sicher, dass das Installationsprogramm für die Pre-tained Modelle auch auf dieser Seite herunterladen: [Offline-Installation für Machine Learning-Server](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-offline).
 
 3. Führen Sie das Installationsprogramm an.
 
@@ -140,11 +141,11 @@ Mit SQL Server 2017 ist keine zusätzliche Konfiguration erforderlich.
 > 
 > Für Python-Modelle erhalten Sie möglicherweise einen Fehler, wenn die Modelldatei aus Python-Code aufrufen. Dies ist eine Einschränkung in der aktuellen Python-Implementierung, die beschränkt der Länge des Pfads der Modelldatei. Dieses Problem wurde behoben, und wird in einer bevorstehenden Dienstversion verfügbar sein.
 
-### <a name="installing-pretrained-models-with-r-server-standalone"></a>Installieren von vortrainierte Modelle mit R-Server (eigenständig)
+## <a name="install-pre-trained-models-with-sql-server-standalone-r-server"></a>Installieren Sie vorab trainierten Modelle mit SQL Server-eigenständigen R-server
 
 Wenn Sie eine frühere Version von R Server (eigenständig) mithilfe des SQL Server 2016-Setups installiert haben, können Sie die Möglichkeit, mithilfe der Pre-tained Modelle, durch ein Upgrade mit dem neueren Windows-basierten Installer R-Server hinzufügen. 
 
-Vortrainierte Modelle wurde zuerst als Option mit verfügbar [Microsoft R Server 9.1](https://blogs.technet.microsoft.com/dataplatforminsider/2017/04/19/introducing-microsoft-r-server-9-1-release/), jedoch Upgrades mit jeder Version hinzugefügt wurden. Es wird empfohlen, die neueste Version möglich abrufen, aber frühere Versionen sind hier aufgeführt [R Server-Versionen](https://docs.microsoft.com/machine-learning-server/install/r-server-install)
+Das Pre-tained Modelle wurde zuerst als Option mit verfügbar [Microsoft R Server 9.1](https://blogs.technet.microsoft.com/dataplatforminsider/2017/04/19/introducing-microsoft-r-server-9-1-release/), jedoch Upgrades mit jeder Version hinzugefügt wurden. Es wird empfohlen, die neueste Version möglich abrufen, aber frühere Versionen sind hier aufgeführt [R Server-Versionen](https://docs.microsoft.com/machine-learning-server/install/r-server-install)
 
 Die folgenden Anweisungen wird beschrieben, wie Aktualisieren von R-Komponenten und gleichzeitig die Pre-tained Modelle hinzufügen.
 
@@ -179,11 +180,11 @@ Nachdem die Installation abgeschlossen ist, müssen Sie einige zusätzliche Schr
     + Kumulatives Update 1: **9.2.0.24**
     + Kumulatives Update 4: **9.3.0**
 
-    Um die neueste Version der vortrainierte Modelle für R, in einer Standardinstallation von R Server (eigenständig), aktivieren ausführen Sie beispielsweise diese Anweisung:
+    Um die neueste Version der Pre-tained Modelle für R, in einer Standardinstallation von R Server (eigenständig), aktivieren ausführen Sie beispielsweise diese Anweisung:
 
     `RSetup.exe /install /component MLM /version 9.3.0 /language 1033 /destdir "C:\Program Files\Microsoft SQL Server\130\R_SERVER\library\MicrosoftML\mxLibs\"`
 
-### <a name="installing-pretrained-models-with-machine-learning-server-standalone"></a>Installieren von vortrainierte Modelle mit Machine Learning-Server (eigenständig)
+## <a name="install-pre-trained-models-with-sql-server-2017-standalone-server"></a>Installieren Sie Pre-tained Modelle mit SQL Server-2017 eigenständiger server
 
 Wenn Sie Machine Learning-Servers mit 2017 von SQL Server-Setup installiert, fügen Sie der vorab trainierten Modelle durch Ausführen des Windows-basierten hinzu. Sie können die Option zum Aktualisieren der R oder Python-Komponenten und gleichzeitig die Pre-tained Modelle hinzufügen. 
 
@@ -200,19 +201,19 @@ Jede Netzwerkkonfiguration wurde basierend auf den folgenden referenzimplementie
 + ResNet-101
 + AlexNet
 
-Weitere Informationen zu den Algorithmen, die in diese learning-Modellen sowie ihre ere implementiert und mithilfe von CNTK trainiert paarweise verwendet finden Sie in diesen Artikeln:
+Weitere Informationen zu den Algorithmen in diesen Modellen umfassenden lernen und wie sie implementiert werden und mithilfe von CNTK trainiert, finden Sie in diesen Artikeln:
 
 + [Microsoft-Forschern Algorithmus legt ImageNet Herausforderung Meilenstein](https://www.microsoft.com/research/blog/microsoft-researchers-algorithm-sets-imagenet-challenge-milestone/)
 
 + [Microsoft rechnerischen Netzwerk Toolkit bietet effizienteste verteilte Deep learning rechenbetonte Leistung](https://www.microsoft.com/research/blog/microsoft-computational-network-toolkit-offers-most-efficient-distributed-deep-learning-computational-performance/)
 
-### <a name="how-to-use-pre-trained-models-for-text-analysis"></a>Verwenden Sie vorab trainierten Modelle für Textanalyse
+## <a name="how-to-use-pre-trained-models-for-text-analysis"></a>Verwenden Sie vorab trainierten Modelle für Textanalyse
 
-Siehe das folgende Beispiel zeigt, wie Sie das vortrainierte merkmalbereitstellung Textmodell für textklassifizierung verwenden:
+Siehe das folgende Beispiel zeigt, wie die Pre-tained merkmalbereitstellung Textmodell für textklassifizierung verwendet:
 
 [Mithilfe von Text Featurizer Stimmungsanalyse](https://github.com/Microsoft/microsoft-r/tree/master/microsoft-ml/Samples/101/BinaryClassification/SimpleSentimentAnalysis)
 
-### <a name="how-to-use-pretrained-models-for-image-detection"></a>Gewusst wie: vortrainierte Modelle für die Image-Erkennung verwenden
+## <a name="how-to-use-pre-trained-models-for-image-detection"></a>Verwenden Sie vorab trainierten Modelle für Image-Erkennung
 
 Das vortrainierte Modell für Bilder unterstützt merkmalbereitstellung von Bildern, die Sie angeben. Um das Modell zu verwenden, rufen Sie die **FeaturizeImage** transformieren. Das Bild geladen wird, geändert, und die merkmalerstellung durch das trainierte Modell. Die Ausgabe der DNNS Featurizer wird dann zum Trainieren eines linearen Modells, für die bildklassifizierung verwendet.
 

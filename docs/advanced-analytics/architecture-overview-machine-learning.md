@@ -1,34 +1,34 @@
 ---
-title: "Übersicht über die Architektur für SQL Server-Machine Learning-Services | Microsoft Docs"
-ms.custom: 
+title: Übersicht über die Architektur für SQL Server-Machine Learning-Services | Microsoft Docs
+ms.custom: ''
 ms.date: 11/03/2017
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 4272a0f421bc8286fc9be7be44e3b7ef8cc13905
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 7993a93eec3bd657f4d37fbbbfbb16dd514453fa
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="architecture-overview-for-sql-server-machine-learning-services"></a>Übersicht über die Architektur für SQL Server-Machine Learning-Services 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-In diesem Thema wird beschrieben, die Ziele der Extensibility Framework, die Ausführung von Python und R-Skript in SQL Server unterstützt.
+Dieser Artikel beschreibt die Ziele der Extensibility Framework, die Ausführung von Python und R-Skript in SQL Server unterstützt.
 
 Es bietet auch einen Überblick darüber, wie die Architektur, zur Erreichung dieser Ziele konzipiert ist wie R und Python unterstützt und von SQL Server und die Vorteile der Integration ausgeführt werden.
 
-Insgesamt ist das Extensibility Framework für R und Python mit einigen kleineren Unterschieden in den Details der Startprogramme, die aufgerufen werden, die Konfigurationsoptionen usw. nahezu identisch. Weitere Informationen zur Implementierung für eine bestimmte Sprache finden Sie unter folgenden Themen:
+Insgesamt ist das Extensibility Framework für R und Python mit einigen kleineren Unterschieden in den Details der Startprogramme, die aufgerufen werden, die Konfigurationsoptionen usw. nahezu identisch. Weitere Informationen zur Implementierung für eine bestimmte Sprache finden Sie in diesen Artikeln:
 
 - [Übersicht über die Architektur für SQL Server R Services](r/architecture-overview-sql-server-r.md)
 - [Übersicht über die Architektur für Python in SQLServer](python/architecture-overview-sql-server-python.md)

@@ -1,6 +1,6 @@
 ---
-title: "Verwenden Sie die Visual Studio Code-Mssql-Erweiterung für SQL Server | Microsoft Docs"
-description: "In diesem Lernprogramm wird gezeigt, wie die Mssql-Erweiterung für Visual Studio Code verwendet wird. Diese Erweiterung ermöglicht das Bearbeiten und Ausführen von Transact-SQL-Skripts in Visual Studio Code."
+title: Verwenden Sie die Visual Studio Code-Mssql-Erweiterung für SQL Server | Microsoft Docs
+description: In diesem Lernprogramm wird gezeigt, wie die Mssql-Erweiterung für Visual Studio Code verwendet wird. Diese Erweiterung ermöglicht das Bearbeiten und Ausführen von Transact-SQL-Skripts in Visual Studio Code.
 author: erickangMSFT
 ms.author: erickang
 manager: craigg
@@ -8,18 +8,18 @@ ms.date: 03/17/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.technology: database-engine
 ms.assetid: 9766ee75-32d3-4045-82a6-4c7968bdbaa6
 ms.custom: sql-linux
 ms.workload: Active
-ms.openlocfilehash: caf053ca9dc50df6d3433a11e992e097f2147d7a
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: fa3fb3c1d807698ddf1fa28c6c710956a75d30ea
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="use-visual-studio-code-to-create-and-run-transact-sql-scripts-for-sql-server"></a>Verwenden von Visual Studio-Code zum Erstellen und Ausführen von Transact-SQL-Skripts für SQL Server
 
@@ -97,7 +97,7 @@ Die folgenden Schritte zeigen, Herstellen einer Verbindung mit SQL Server mit Vi
 
    | Einstellung | Description |
    |-----|-----|
-   | **Servername** | Der Name des SQL Server-Instanz. Verwenden Sie für dieses Lernprogramm **"localhost"** für die Verbindung mit der lokalen SQL Server-Instanz auf dem Computer. Wenn eine Verbindung mit einem SQL-Remoteserver herstellen, geben Sie den Namen des Ziel-SQL Server-Computer oder die IP-Adresse ein. |
+   | **Servername** | Der Name des SQL Server-Instanz. Verwenden Sie für dieses Lernprogramm **"localhost"** für die Verbindung mit der lokalen SQL Server-Instanz auf dem Computer. Wenn eine Verbindung mit einem SQL-Remoteserver herstellen, geben Sie den Namen des Ziel-SQL Server-Computer oder die IP-Adresse ein. Wenn Sie einen Port für die SQL Server-Instanz angeben müssen, verwenden Sie ein Komma, von dem Namen unterschieden werden kann. Z. B. für einen lokalen Server an Port 1401 Geben Sie **"localhost", "1401**. |
    | **[Optional] Datenbankname** | Die Datenbank, die Sie verwenden möchten. Für die Zwecke dieses Lernprogramms, geben Sie eine Datenbank, und drücken Sie **EINGABETASTE** um den Vorgang fortzusetzen. |
    | **Benutzername** | Geben Sie den Namen eines Benutzers mit Zugriff auf eine Datenbank auf dem Server. Für dieses Lernprogramm verwenden Sie den Standardnamen **SA** Konto während der SQL Server-Setup erstellt. |
    | **Kennwort (SQL-Anmeldung)** | Geben Sie das Kennwort für den angegebenen Benutzer ein. | 
@@ -116,7 +116,7 @@ Die folgenden Schritte zeigen, Herstellen einer Verbindung mit SQL Server mit Vi
 
    <img src="./media/sql-server-linux-develop-use-vscode/vscode-connection-status.png" alt="Connection status" style="width: 500px;" />
 
-## <a name="create-a-database"></a>Erstellen Sie eine Datenbank
+## <a name="create-a-database"></a>Erstellen einer Datenbank
 
 1. Geben Sie im Editor **Sql** , um eine Liste der bearbeitbaren Codeausschnitte anzuzeigen. 
 

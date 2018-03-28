@@ -1,32 +1,34 @@
 ---
 title: Sqlsrv_field_metadata | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: sqlsrv_field_metadata
+apiname:
+- sqlsrv_field_metadata
 apitype: NA
 helpviewer_keywords:
 - API Reference, sqlsrv_field_metadata
 - sqlsrv_field_metadata
 ms.assetid: c02f6942-0484-4567-a78e-fe8aa2053536
-caps.latest.revision: "34"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c1d4688874e09a91a0aaaa1395278572b5cd4520
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 077296607e78b8a0a4d77a174c96abb47a0545d3
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="sqlsrvfieldmetadata"></a>sqlsrv_field_metadata
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -46,7 +48,7 @@ sqlsrv_field_metadata( resource $stmt)
 ## <a name="return-value"></a>Rückgabewert  
 Ein **Array** von Arrays oder **false**. Das Array besteht aus einem Array für jedes Feld im Resultset. Jedes Teilarray hat Schlüssel, wie in der unten stehenden Tabelle beschrieben. Falls beim Abrufen der Feldmetadaten ein Fehler auftritt, wird **false** zurückgegeben.  
   
-|Key|Beschreibung|  
+|Key|Description|  
 |-------|---------------|  
 |Name|Name der Spalte, der das Feld entspricht|  
 |Typ|Numerischer Wert, der einem SQL-Typ entspricht|  
@@ -60,19 +62,19 @@ Die folgende Tabelle enthält mehr Informationen zu den Schlüsseln für jedes T
 |SQL Server 2008-Datentyp|Typ|Min/Max Genauigkeit|Min/Max Skalierung|Größe|  
 |-----------------------------|--------|----------------------|------------------|--------|  
 |bigint|SQL_BIGINT (-5)|||8|  
-|binary|SQL_BINARY (-2)|||0 < *n* < 8000 <sup>1</sup>|  
+|BINARY|SQL_BINARY (-2)|||0 < *n* < 8000 <sup>1</sup>|  
 |bit|SQL_BIT (-7)||||  
 |char|SQL_CHAR (1)|||0 < *n* < 8000 <sup>1</sup>|  
 |Datum|SQL_TYPE_DATE (91)|10/10|0/0||  
 |datetime|SQL_TYPE_TIMESTAMP (93)|23/23|3/3||  
 |datetime2|SQL_TYPE_TIMESTAMP (93)|19/27|0/7||  
 |datetimeoffset|SQL_SS_TIMESTAMPOFFSET (-155)|26/34|0/7||  
-|decimal|SQL_DECIMAL (3)|1/38|0/Genauigkeitswert||  
+|Decimal|SQL_DECIMAL (3)|1/38|0/Genauigkeitswert||  
 |float|SQL_FLOAT (6)|4/8|||  
 |image|SQL_LONGVARBINARY (-4)|||2 GB|  
 |int|SQL_INTEGER (4)||||  
 |money|SQL_DECIMAL (3)|19/19|4/4||  
-|nchar|SQL_WCHAR (-8)|||0 < *n* < 4000 <sup>1</sup>|  
+|NCHAR|SQL_WCHAR (-8)|||0 < *n* < 4000 <sup>1</sup>|  
 |ntext|SQL_WLONGVARCHAR (-10)|||1 GB|  
 |numeric|SQL_NUMERIC (2)|1/38|0/Genauigkeitswert||  
 |nvarchar|SQL_WVARCHAR (-9)|||0 < *n* < 4000 <sup>1</sup>|  
@@ -95,7 +97,7 @@ Die folgende Tabelle enthält mehr Informationen zu den Schlüsseln für jedes T
 Ein Schlüssel der NULL-Werte zulässt, kann entweder „Ja“ oder „Nein“ sein.  
   
 ## <a name="example"></a>Beispiel  
-Das folgende Beispiel erstellt eine Anweisungsressource, ruft  die Feldmetadaten ab und stellt sie dar. Das Beispiel setzt voraus, dass SQL Server und die [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) -Datenbank auf dem lokalen Computer installiert sind. Wenn das Beispiel über die Befehlszeile ausgeführt wird, werden alle Ausgaben in die Konsole geschrieben.  
+Das folgende Beispiel erstellt eine Anweisungsressource, ruft  die Feldmetadaten ab und stellt sie dar. Das Beispiel setzt voraus, dass SQL Server und die [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) -Datenbank auf dem lokalen Computer installiert sind. Wenn das Beispiel über die Befehlszeile ausgeführt wird, werden alle Ausgaben in die Konsole geschrieben.  
   
 ```  
 <?php  
@@ -135,6 +137,8 @@ sqlsrv_close( $conn);
   
 ## <a name="see-also"></a>Siehe auch  
 [API-Referenz für den SQLSRV-Treiber](../../connect/php/sqlsrv-driver-api-reference.md)  
+
 [Konstanten &#40;Microsoft-Treiber für PHP für SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)  
+
 [Informationen zu den Codebeispielen in der Dokumentation](../../connect/php/about-code-examples-in-the-documentation.md)  
   

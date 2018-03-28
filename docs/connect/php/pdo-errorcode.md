@@ -1,27 +1,28 @@
 ---
-title: 'PDO:: ErrorCode | Microsoft Docs'
-ms.custom: 
+title: PDO::errorCode | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 5864b1d8-6814-41cd-a88d-415124484c13
-caps.latest.revision: "13"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3342ebf997f8cd915efe939ead8baa5e868eb0f2
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 143a7bef0a0be2d125068a7f003b0b941ff39617
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="pdoerrorcode"></a>PDO::errorCode
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -39,9 +40,9 @@ mixed PDO::errorCode();
 PDO::errorCode gibt einen fünf Zeichen umfassenden SQLSTATE als eine Zeichenfolge oder NULL zurück, falls es auf dem Datenbankhandle keine Operation gab.  
   
 ## <a name="remarks"></a>Hinweise  
-PDO::errorCode gibt im PDO_SQLSRV-Treiber Warnungen für einige erfolgreiche Operationen aus. Beispielsweise wird bei einer erfolgreichen Verbindung  PDO::errorCode „01000“ zurückgegeben, um SQL_SUCCESS_WITH_INFO anzuzeigen.  
+PDO:: ErrorCode gibt im PDO_SQLSRV-Treiber gibt Warnungen für einige erfolgreichen Operationen zurück. Z. B. auf einer erfolgreichen Verbindung PDO:: ErrorCode gibt "01000", um SQL_SUCCESS_WITH_INFO.  
   
-PDO::errorCode ruft nur die Fehlercodes ab, die diejenigen Operationen betreffen, die direkt auf der Datenbankverbindung durchgeführt wurden. Wenn Sie mittels PDO::prepare oder PDO::query eine PDOStatement-Instanz erstellen und einen Fehler im Anweisungsobjekt generieren, wird PDO::errorCode diesen Fehler nicht abrufen. Sie müssen einen PDOStatement::errorCode aufrufen, um den Fehlercode für eine auf einem bestimmten Anweisungsobjekt durchgeführte Operation auszugeben.  
+PDO::errorCode ruft nur die Fehlercodes ab, die diejenigen Operationen betreffen, die direkt auf der Datenbankverbindung durchgeführt wurden. Wenn Sie eine PDOStatement-Instanz mit PDO:: Prepare erstellen oder PDO:: Query und ein Fehler im Anweisungsobjekt generiert wird, wird PDO:: ErrorCode diesen Fehler nicht abrufen. Sie müssen einen PDOStatement::errorCode aufrufen, um den Fehlercode für eine auf einem bestimmten Anweisungsobjekt durchgeführte Operation auszugeben.  
   
 Unterstützung für PDO wurde in Version 2.0 von [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]hinzugefügt.  
   
@@ -59,6 +60,7 @@ print $conn->errorCode();
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
-[PDO-Klasse](../../connect/php/pdo-class.md)  
-[PDO](http://go.microsoft.com/fwlink/?LinkID=187441)  
+[PDO-Klasse](../../connect/php/pdo-class.md)
+
+[PDO](http://php.net/manual/book.pdo.php)  
   

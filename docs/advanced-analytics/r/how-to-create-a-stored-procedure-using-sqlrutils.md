@@ -1,39 +1,39 @@
 ---
 title: 'Vorgehensweise: Erstellen einer gespeicherten Prozedur mithilfe von sqlrutils| Microsoft-Dokumentation'
-ms.custom: 
+ms.custom: ''
 ms.date: 12/16/2016
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - R
 ms.assetid: 5ba99b49-481e-4b30-967a-a429b855b1bd
-caps.latest.revision: 
+caps.latest.revision: ''
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: ad0cf99c59bcd3295acf0e1c29b14c8523f6f925
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: fe1e05ee854fb6a094a66d88981d74287aa96beb
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="create-a-stored-procedure-using-sqlrutils"></a>Erstellen einer gespeicherten Prozedur mithilfe von sqlrutils
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-In diesem Thema werden die Schritte beschrieben, in denen Sie R-Code so konvertieren, dass er als gespeicherte T-SQL-Prozedur ausgeführt werden kann. Zum Erzielen bestmöglicher Ergebnisse kann es erforderlich sein, dass Ihr Code ein wenig geändert wird, damit sichergestellt ist, dass alle Eingaben parametrisiert werden können.
+Dieser Artikel beschreibt die Schritte zum Konvertieren von R-Code als T-SQL-Prozedur ausgeführt wird. Zum Erzielen bestmöglicher Ergebnisse kann es erforderlich sein, dass Ihr Code ein wenig geändert wird, damit sichergestellt ist, dass alle Eingaben parametrisiert werden können.
 
 ## <a name="bkmk_rewrite"></a>Schritt 1: Schreiben Sie R-Skript
 
 Schreiben Sie die besten Ergebnisse erzielen Sie den R-Code, um es als einzelne Funktion gekapselt.
 
-Alle Variablen, die von der Funktion verwendeten sollte innerhalb der Funktion definiert werden, oder als Eingabeparameter definiert werden soll. Siehe [Beispielcode](#samples) in diesem Thema.
+Alle Variablen, die von der Funktion verwendeten sollte innerhalb der Funktion definiert werden, oder als Eingabeparameter definiert werden soll. Finden Sie unter der [Beispielcode](#samples) in diesem Artikel.
 
 Außerdem wird, da die Eingabeparameter für die R-Funktion werden die Eingabeparameter des SQL-Prozedur enthält, müssen Sie sicherstellen, dass Ihre Eingaben und Ausgaben zu folgendem Typ entsprechen:
 
@@ -69,8 +69,8 @@ Nachdem Ihre R-Code bereinigt wurden und als einzelne Funktion aufgerufen werden
 
 Wenn Ihre Funktion Eingaben akzeptiert für jeden Eingabe-, rufen Sie die folgenden Funktionen ein:
 
-- `setInputData`Wenn die Eingabe eine Datenrahmen ist.
-- `setInputParameter`Bei allen anderen Eingabetypen
+- `setInputData` Wenn die Eingabe eine Datenrahmen ist.
+- `setInputParameter` Bei allen anderen Eingabetypen
 
 Wenn Sie jeden Funktionsaufruf vornehmen, wird ein R-Objekt erstellt, wenn Sie später als Argument übergeben werden `StoredProcedure`, um die vollständige gespeicherte Prozedur zu erstellen.
 
@@ -82,8 +82,8 @@ Sie können auch der Konvertierung diesen Schritt überspringen, wenn die Funkti
 
 Beim Konvertieren einer Liste oder für das Abrufen eines bestimmten Artikels aus einer Liste Wählen Sie auf diese Funktionen:
 
-- `setOutputData`Wenn die Variable für die abzurufenden aus der Liste einen Datenrahmen
-- `setOutputParameter`für alle anderen Elemente der Liste
+- `setOutputData` Wenn die Variable für die abzurufenden aus der Liste einen Datenrahmen
+- `setOutputParameter` für alle anderen Elemente der Liste
 
 Wenn Sie jeden Funktionsaufruf vornehmen, wird ein R-Objekt erstellt, wenn Sie später als Argument übergeben werden `StoredProcedure`, um die vollständige gespeicherte Prozedur zu erstellen.
 

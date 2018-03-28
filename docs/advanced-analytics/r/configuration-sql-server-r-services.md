@@ -1,26 +1,26 @@
 ---
 title: Konfiguration und Verwaltung | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 05/31/2016
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e0fd4554-60c6-4181-ac4c-2e366fb434f6
-caps.latest.revision: 
+caps.latest.revision: ''
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 63448281d0e1d135a52bc1c9d0c8afa097a87596
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: f130f4a300351bb8384362affddc595aadf92148
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="configuration-and-management"></a>Konfiguration und Verwaltung
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -40,7 +40,7 @@ Dieser Artikel enthält Links zu ausführlicheren Informationen über das Konfig
 
 ## <a name="r-package-management"></a>R-Paketverwaltung
 
-In diesen Themen wird beschrieben, wie neue R-Pakete auf SQL Server-Instanz installieren, R-Paket-Bibliotheken verwalten und Wiederherstellen der Paket-Bibliotheken nach einer Wiederherstellung der Datenbank.
+In diesen Artikeln beschrieben, wie neue R-Pakete auf SQL Server-Instanz installieren, R-Paket-Bibliotheken verwalten und Wiederherstellen der Paket-Bibliotheken nach einer Wiederherstellung der Datenbank.
 
 + [Installieren und Verwalten von R-Paketen](installing-and-managing-r-packages.md)
 + [Neue R-Pakete installiert.](install-additional-r-packages-on-sql-server.md)
@@ -52,7 +52,7 @@ In diesen Themen wird beschrieben, wie neue R-Pakete auf SQL Server-Instanz inst
 
 ## <a name="service-configuration"></a>Dienstkonfiguration
 
-In diesen Themen wird beschrieben, wie Änderungen an der zugrunde liegenden Dienstarchitektur vornehmen und zum Verwalten von Sicherheitsprinzipalen, die der Erweiterungsdienst zugeordnet.
+In diesen Artikeln wird beschrieben, wie Änderungen an der zugrunde liegenden Dienstarchitektur vornehmen und zum Verwalten von Sicherheitsprinzipalen, die der Erweiterungsdienst zugeordnet.
 
 + [Überlegungen zur Sicherheit](security-considerations-for-the-r-runtime-in-sql-server.md)
 + [Ändern des Benutzerkontenpools für SQL Server R Services](../../advanced-analytics/r/modify-the-user-account-pool-for-sql-server-r-services.md)
@@ -62,7 +62,7 @@ In diesen Themen wird beschrieben, wie Änderungen an der zugrunde liegenden Die
 
 ## <a name="resource-governance"></a>Ressourcenkontrolle
 
-In diesen Themen wird beschrieben, wie ressourcenverwaltung für R oder Python-Projekte, die mithilfe der Ressourcenkontrolle Feature nutzenden in der Enterprise Edition implementieren.
+In diesen Artikeln wird beschrieben, wie ressourcenverwaltung für R oder Python-Projekte, die mithilfe der Ressourcenkontrolle Feature nutzenden in der Enterprise Edition implementieren.
 
 + [Ressourcenkontrolle für R Services](../../advanced-analytics/r/resource-governance-for-r-services.md)
 + [How to Create a Resource Pool für R](../../advanced-analytics/r/how-to-create-a-resource-pool-for-r.md)
@@ -73,7 +73,7 @@ Siehe auch:
 
 ## <a name="initial-setup"></a>Anfangssetup
 
-Zusätzliche Hilfe im Zusammenhang mit der ersten Installation und Konfiguration finden Sie in diesen Themen:
+Zusätzliche Hilfe im Zusammenhang mit der ersten Installation und Konfiguration finden Sie in diesen Artikeln:
 
 + [Häufig gestellte Fragen zu Upgrade und Installation](../r/upgrade-and-installation-faq-sql-server-r-services.md)
 + [Überlegungen zur Sicherheit](../r/security-considerations-for-the-r-runtime-in-sql-server.md)

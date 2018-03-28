@@ -1,16 +1,16 @@
 ---
 title: SQL Server Audit (Datenbankmodul) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 11/21/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - audit
@@ -18,21 +18,23 @@ helpviewer_keywords:
 - SQL Server Audit
 - audits [SQL Server], SQL Server Audit
 ms.assetid: 0c1fca2e-f22b-4fe8-806f-c87806664f00
-caps.latest.revision: 
+caps.latest.revision: ''
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 02c5d20286c4bcf688e9570a85d58ac89e2ffd06
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 3ca903d27dc667095e8db79e3a92e8cb85737004
+ms.sourcegitcommit: 6e16d1616985d65484c72f5e0f34fb2973f828f4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="sql-server-audit-database-engine"></a>SQL Server Audit (Datenbankmodul)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Die*Überwachung* einer Instanz von [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] oder einer einzelnen Datenbank umfasst die Nachverfolgung und Protokollierung von Ereignissen, die in [!INCLUDE[ssDE](../../../includes/ssde-md.md)]auftreten. Mithilfe von[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit können Serverüberwachungen erstellt werden, die Serverüberwachungsspezifikationen für Ereignisse auf Serverebene sowie Datenbank-Überwachungsspezifikationen für Ereignisse auf Datenbankebene beinhalten können. Überwachte Ereignisse können in die Ereignisprotokolle oder Überwachungsdateien geschrieben werden.  
+  
+[!INCLUDE[ssMIlimitation](../../../includes/sql-db-mi-limitation.md)]
   
  Es gibt mehrere Überwachungsebenen für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], die von gesetzlichen oder standardspezifischen Anforderungen für die Installation abhängig sind. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit enthält die Tools und Prozesse, die Sie zum Aktivieren, Speichern und Anzeigen von Überwachungen auf verschiedenen Server- und Datenbankobjekten benötigen.  
   
@@ -67,7 +69,7 @@ ms.lasthandoff: 11/21/2017
   
  Überwachungsaktionsgruppen auf Datenbankebene und Überwachungsaktionen werden im Thema [SQL Server Audit-Aktionsgruppen und -Aktionen](../../../relational-databases/security/auditing/sql-server-audit-action-groups-and-actions.md)beschrieben.  
   
-### <a name="target"></a>Target  
+### <a name="target"></a>Ziel  
  Die Ergebnisse einer Überwachung werden an ein Ziel gesendet, wobei es sich um eine Datei, das Windows-Sicherheitsereignisprotokoll oder das Windows-Anwendungsereignisprotokoll handelt. Protokolle müssen regelmäßig überprüft und archiviert werden, um sicherzustellen, dass das Ziel über ausreichend Platz verfügt, um zusätzliche Datensätze anzulegen.  
   
 > [!IMPORTANT]  
@@ -131,7 +133,7 @@ ms.lasthandoff: 11/21/2017
 ### <a name="database-mirroring-and-sql-server-audit"></a>Datenbankspiegelung und SQL Server Audit  
  Eine Datenbank, für die eine Datenbank-Überwachungsspezifikation definiert wurde und für die Datenbankspiegelung verwendet wird, enthält die Datenbank-Überwachungsspezifikation. Die folgenden Elemente müssen konfiguriert werden, damit sie auf der gespiegelten SQL-Instanz ordnungsgemäß arbeitet:  
   
--   Der Spiegelserver muss über eine Überwachung mit der gleichen GUID verfügen, damit die Datenbank-Überwachungsspezifikation Überwachungsdatensätze schreiben kann. Diese Einstellung können Sie mit dem Befehl CREATE AUDIT WITH GUID**=***\<> GUID der Quellserverüberwachung*> konfigurieren.  
+-   Der Spiegelserver muss über eine Überwachung mit der gleichen GUID verfügen, damit die Datenbank-Überwachungsspezifikation Überwachungsdatensätze schreiben kann. Diese Einstellung können Sie mit dem Befehl CREATE AUDIT WITH GUID**=***\<GUID der Quellserverüberwachung*> konfigurieren.  
   
 -   Bei Binärdateizielen muss das Dienstkonto des Spiegelservers über die erforderlichen Berechtigungen für den Speicherort verfügen, an den der Überwachungspfad geschrieben wird.  
   
@@ -188,7 +190,7 @@ ms.lasthandoff: 11/21/2017
 > [!CAUTION]  
 >  Prinzipale in der Rolle sysadmin können die Überwachungskomponenten manipulieren; Prinzipale in der Rolle db_owner können Überwachungsspezifikationen in einer Datenbank bearbeiten. Die[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Überwachung überprüft, dass bei der Anmeldung, bei der eine Überwachungsspezifikation erstellt oder geändert wird, mindestens die Berechtigung ALTER ANY DATABASE AUDIT vorliegt. Es wird jedoch keine Überprüfung durchgeführt, wenn Sie eine Datenbank anfügen. Gehen Sie davon aus, dass alle Datenbank-Überwachungsspezifikationen nur so vertrauenswürdig sind wie die Prinzipale in der Rolle sysadmin oder db_owner.  
   
-## <a name="related-tasks"></a>Verwandte Aufgaben  
+## <a name="related-tasks"></a>Related Tasks  
  [Erstellen einer Serverüberwachung und einer Serverüberwachungsspezifikation](../../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md)  
   
  [Erstellen einer Server- und Datenbank-Überwachungsspezifikation](../../../relational-databases/security/auditing/create-a-server-audit-and-database-audit-specification.md)  
@@ -216,7 +218,7 @@ ms.lasthandoff: 11/21/2017
  [Microsoft TechNet: SQL Server-TechCenter: SQL Server 2005 – Sicherheit und Schutz](http://go.microsoft.com/fwlink/?LinkId=101152)  
  Stellt aktuelle Informationen zur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Sicherheit bereit.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SQL Server Überwachung-Aktionsgruppen und -Aktionen](../../../relational-databases/security/auditing/sql-server-audit-action-groups-and-actions.md)   
  [SQL Server-Überwachungsdatensätze](../../../relational-databases/security/auditing/sql-server-audit-records.md)  
   

@@ -1,33 +1,35 @@
 ---
 title: 'Vorgehensweise: Behandeln von Fehlern und Warnungen bei Verwendung des SQLSRV-Treibers | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: errors and warnings
+helpviewer_keywords:
+- errors and warnings
 ms.assetid: fa231d60-4c06-4137-89e8-097c28638c5d
-caps.latest.revision: "18"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 02aa17ddd031d351510f600f60dcd99b42a5d6e5
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 4b7e2c9157cf37ab35987ebc9bb6a4d6615f80ba
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="how-to-handle-errors-and-warnings-using-the-sqlsrv-driver"></a>Vorgehensweise: Fehlerbehandlung und Warnungen bei Verwendung des SQLSRV-Treibers
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Standardmäßig werden im SQLSRV-Treiber Warnungen als Fehler behandelt; ein Aufruf einer **sqlsrv** -Funktion, die einen Fehler oder eine Warnung generiert, gibt **false**zurück. Dieses Thema demonstriert wie dieses Standardverhalten abgestellt wird und wie Warnungen separat von Fehlern behandelt werden.  
+Standardmäßig werden mit der SQLSRV-Treiber Warnungen als Fehler behandelt; ein Aufruf einer **Sqlsrv** -Funktion, die einen Fehler oder eine Warnung generiert gibt **"false"**. Dieses Thema demonstriert wie dieses Standardverhalten abgestellt wird und wie Warnungen separat von Fehlern behandelt werden.  
   
 > [!NOTE]  
 > Es gibt einige Ausnahmen zum Standardverhalten, dass Warnungen als Fehler behandelt werden. Warnungen, die den SQLSTATE-Werten 01000, 01001, 01003 und 01S02 entsprechen, werden nie als Fehler behandelt.  
@@ -43,11 +45,11 @@ Das folgende Codebeispiel verwendet zwei benutzerdefinierte Funktionen **Display
   
 4.  Zeigt die verbleibenden Urlaubsstunden für jeden Arbeitnehmer an.  
   
-Beachten Sie, dass beim ersten Aufruf an ein **Sqlsrv** Funktion ([Sqlsrv_configure](../../connect/php/sqlsrv-configure.md)), Warnungen als Fehler behandelt werden. Da Warnungen der Fehlersammlung hinzugefügt werden, müssen Sie unabhängig von den Fehlern nicht nochmals nach Warnungen suchen. In den folgenden Aufrufen der Funktion **sqlsrv** werden Warnungen hingegen nicht als Fehler behandelt.,Sie müssen das Auftreten Warnungen und Fehlern also explizit überprüfen.  
+Im ersten Aufruf einer **Sqlsrv** Funktion ([Sqlsrv_configure](../../connect/php/sqlsrv-configure.md)), Warnungen als Fehler behandelt werden. Da Warnungen der Fehlersammlung hinzugefügt werden, müssen Sie unabhängig von den Fehlern nicht nochmals nach Warnungen suchen. In den folgenden Aufrufen der Funktion **sqlsrv** werden Warnungen hingegen nicht als Fehler behandelt.,Sie müssen das Auftreten Warnungen und Fehlern also explizit überprüfen.  
   
 Beachten Sie auch, dass der Beispielcode nach jedem Anruf einer **sqlsrv** -Funktion nach Fehlern sucht. Dies ist die empfohlene Vorgehensweise.  
   
-Dieses Beispiel setzt voraus, dass SQL Server und die [AdventureWorks-Datenbank](http://go.microsoft.com/fwlink/?LinkID=67739) auf dem lokalen Computer installiert sind. Wenn das Beispiel über die Befehlszeile ausgeführt wird, werden alle Ausgaben in die Konsole geschrieben. Wenn das Beispiel in einer neuen Installation der AdventureWorks-Datenbank ausgeführt wird, produziert es drei Warnungen und zwei Fehler. Die ersten beiden Warnungen sind Standardwarnungen, die beim Herstellen einer Verbindung mit einer Datenbank ausgegeben werden. Die dritte Warnung tritt auf, weil die verfügbaren Urlaubsstunden des Arbeitnehmers auf einen negativen Wert aktualisiert werden. Dieser Fehler tritt auf, weil die verfügbaren Urlaubsstunden des Arbeitnehmers auf einen Wert von weniger als -40 Stunden aktualisiert werden. Dies verletzt eine der Einschränkungen aus der Tabelle.  
+In diesem Beispiel wird vorausgesetzt, dass SQL Server und die [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) -Datenbank auf dem lokalen Computer installiert sind. Wenn das Beispiel über die Befehlszeile ausgeführt wird, werden alle Ausgaben in die Konsole geschrieben. Wenn das Beispiel in einer neuen Installation der AdventureWorks-Datenbank ausgeführt wird, produziert es drei Warnungen und zwei Fehler. Die ersten beiden Warnungen sind Standardwarnungen, die beim Herstellen einer Verbindung mit einer Datenbank ausgegeben werden. Die dritte Warnung tritt auf, weil die verfügbaren Urlaubsstunden des Arbeitnehmers auf einen negativen Wert aktualisiert werden. Dieser Fehler tritt auf, weil die verfügbaren Urlaubsstunden des Arbeitnehmers auf einen Wert von weniger als -40 Stunden aktualisiert werden. Dies verletzt eine der Einschränkungen aus der Tabelle.  
   
 ```  
 <?php  
@@ -205,6 +207,7 @@ function DisplayWarnings()
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
-[Vorgehensweise: Konfigurieren der Behandlung von Fehlern und Warnungen unter Verwendung des SQLSRV-Treibers](../../connect/php/how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver.md)  
+[Vorgehensweise: Konfigurieren der Behandlung von Fehlern und Warnungen unter Verwendung des SQLSRV-Treibers](../../connect/php/how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver.md)
+
 [API-Referenz für den SQLSRV-Treiber](../../connect/php/sqlsrv-driver-api-reference.md)  
   

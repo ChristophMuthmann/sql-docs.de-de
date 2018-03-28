@@ -1,52 +1,38 @@
 ---
 title: Installieren von SQL Server-Machine Learning-Features auf virtuellen Azure-Computer | Microsoft Docs
-ms.custom: 
-ms.date: 10/31/2017
-ms.reviewer: 
+ms.custom: ''
+ms.date: 03/21/2018
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-ms.assetid: c3c223b8-75c4-412e-a319-d57ecf6533af
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.assetid: ''
+caps.latest.revision: ''
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: 572aeffdc0d3c06a4c3bda17e3f3d438b2819183
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: d2f0f38086c7725e14261afa9a40f29b212b748f
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 03/28/2018
 ---
-# <a name="installing-sql-server-machine-learning-features-on-an-azure-virtual-machine"></a>Installieren von SQL Server-Machine learning-Features auf virtuellen Azure-Computer
+# <a name="install-sql-server-machine-learning-features-on-an-azure-virtual-machine"></a>Installieren von SQL Server-Machine learning-Features auf virtuellen Azure-Computer
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
  
-Wenn Sie einen virtuellen Azure-Computer bereitstellen, enthält [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], Machine Learning können jetzt als eine Funktion mit der Instanz hinzugefügt werden, bei der Erstellung des virtuellen Computers auswählen.
+Es wird empfohlen, die [Data Science Virtual Machine](ttps://docs.microsoft.com/azure/machine-learning/data-science-virtual-machine/provision-vm), aber Sie gegebenenfalls einen virtuellen Computer, die nur für SQL Server 2017 Machine Learning Services oder SQL Server 2016 R Services hat dieser Artikel leitet Sie durch die Schritte.
 
-+ [Erstellen Sie einen neuen virtuellen Computer, der SQL Server 2016 und R Services enthält](#new)
-+ [Hinzufügen von Machine Learning-Features mit einem vorhandenen virtuellen Computer mit SQL Server 2016](#existing)
+## <a name="create-a-virtual-machine-on-azure"></a>Erstellen eines virtuellen Computers in Azure
 
-> [!NOTE]
-> Virtuelle Computer sind jetzt für SQL Server-2017 verfügbar! Finden Sie unter [dieser Ankündigung](https://azure.microsoft.com/blog/announcing-new-azure-vm-images-sql-server-2017-on-linux-and-windows/) Details.
-> 
-> R ist auch verfügbar als Vorschaufunktion in Azure SQL-Datenbank. Weitere Informationen finden Sie unter [mithilfe von R in Azure SQL-Datenbank](../r/using-r-in-azure-sql-database.md).
-
-## <a name="create-a-new-sql-server-2017-virtual-machine"></a>Erstellen eines neuen SQL Server-2017 virtuellen Computers
-
-Um in SQL Server-2017 R oder Python zu verwenden, werden Sie sicher, dass eine Windows-basierte virtuelle Maschine abrufen. [!INCLUDE[sscurrentlong-md](../../includes/sscurrentlong-md.md)] unter Linux unterstützt schnelle [native Bewertung](../sql-native-scoring.md) verwenden, die VORHERSAGEN T-SQL-Funktion, aber anderen Machine learning-Funktionen sind nicht verfügbar noch in dieser Edition.
-
-Eine Liste der SQL Server-VM-Angebote, finden Sie im Artikel: [Übersicht über die von SQL Server auf Azure Virtual Machines (Windows)](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview).
-
-### <a name="new"></a>Erstellen Sie eine neue SQL Server-Enterprise-VM mit Machine learning
-
-1. Klicken Sie im Azure-Portal auf virtuelle Computer, und klicken Sie dann auf neu.
-2. Wählen Sie SQL Server 2017 Enterprise Edition ein.
+1. Klicken Sie im Azure-Portal in der linken Liste auf **VMs** , und klicken Sie dann auf **hinzufügen**.
+2. Suche nach SQL Server 2017 Enterprise Edition oder SQL Server 2016 Enterprise Edition.
 3. Konfigurieren Sie den Servernamen und die Kontoberechtigungen, und wählen Sie einen Tarif aus.
-4. In **SQL Server-Einstellungen** (Schritt 4 in der VM-Setup-Assistenten), suchen Sie **Machine Learning-Dienste (Advanced Analytics)** , und klicken Sie auf **aktivieren**.
+4. In **SQL Server-Einstellungen** (Schritt 4 in der VM-Setup-Assistenten), suchen Sie **Machine Learning-Dienste (Advanced Analytics)** (oder **R Services** für SQL Server 2016), und klicken Sie auf  **Aktivieren Sie**.
 5. Überprüfen Sie die Zusammenfassung, die für die Validierung dargestellt ist, und klicken Sie auf **OK**.
 6. Wenn der virtuelle Computer bereit ist, stellen Sie eine Verbindung her, und öffnen Sie SQL Server Management Studio, was bereits installiert ist. Machine Learning ist für die Ausführung bereit.
 7. Um dies zu überprüfen, können Sie ein neues Abfragefenster öffnen eine einfache Anweisung wie diese ausführen, die R verwendet, um eine Sequenz von Zahlen von 1 bis 10 zu generieren.
@@ -113,7 +99,3 @@ Weitere Informationen finden Sie unter [Installieren von SQL Server 2016 R Servi
   TCP/IP ist für Loopback-Verbindungen erforderlich. Wenn Sie die folgende Fehlermeldung angezeigt, aktivieren Sie TCP/IP auf dem virtuellen Computer, die die Instanz unterstützt:
 
   "DBNETLIB; SQL Server ist nicht vorhanden oder der Zugriff verweigert"
-
-## <a name="related-resources"></a>Verwandte Ressourcen
-
-[Verwendung von R in Azure SQL-Datenbank](../r/using-r-in-azure-sql-database.md)

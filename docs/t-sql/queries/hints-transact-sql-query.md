@@ -1,16 +1,16 @@
 ---
 title: Abfragehinweise (Transact-SQL) | Microsoft-Dokumentation
-ms.custom: 
-ms.date: 08/09/2017
+ms.custom: ''
+ms.date: 03/11/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|queries
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - Query_Hint_TSQL
@@ -57,16 +57,16 @@ helpviewer_keywords:
 - EXTERNALPUSHDOWN query hint
 - USE HINT query hint
 ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
-caps.latest.revision: 
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 0a3c74aa7b1da86c6d0ac54025d337700019465d
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: f13c32bbc1852c06a88df7a9ab24443be9d1c4d5
+ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="hints-transact-sql---query"></a>Hinweise (Transact-SQL) – Abfrage
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -74,7 +74,7 @@ ms.lasthandoff: 01/25/2018
   Abfragehinweise geben an, dass die angezeigten Hinweise in der gesamten Abfrage verwendet werden sollen. Sie wirken sich auf alle Operatoren in der Anweisung aus. Falls UNION in der Hauptabfrage vorkommt, kann nur die letzte Abfrage, die eine UNION-Operation enthält, die OPTION-Klausel aufweisen. Abfragehinweise werden als Teil der [OPTION-Klausel](../../t-sql/queries/option-clause-transact-sql.md) angegeben. Wenn mindestens ein Abfragehinweis dazu führt, dass der Abfrageoptimierer keinen gültigen Plan generiert, wird der Fehler 8622 ausgelöst.  
   
 > [!CAUTION]  
->  Da der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Abfrageoptimierer in der Regel den besten Ausführungsplan für eine Abfrage auswählt, wird empfohlen, dass nur erfahrene Entwickler und Datenbankadministratoren Hinweise verwenden, wenn alle anderen Möglichkeiten sich als unbefriedigend erwiesen haben.  
+> Da der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Abfrageoptimierer in der Regel den besten Ausführungsplan für eine Abfrage auswählt, wird empfohlen, dass nur erfahrene Entwickler und Datenbankadministratoren Hinweise verwenden, wenn alle anderen Möglichkeiten sich als unbefriedigend erwiesen haben.  
   
  **Gilt für:**  
   
@@ -171,7 +171,7 @@ ms.lasthandoff: 01/25/2018
  Gibt an, dass die von der Abfragesyntax angegebene Joinreihenfolge während der Abfrageoptimierung beibehalten wird. Die Verwendung von FORCE ORDER hat keine Auswirkung auf das mögliche Rollentauschverhalten des Abfrageoptimierers.  
   
 > [!NOTE]  
->  In einer MERGE-Anweisung wird als Standardreihenfolge für Joins zunächst auf die Quelltabelle und dann auf die Zieltabelle zugegriffen, es sei denn, die WHEN SOURCE NOT MATCHED-Klausel wurde angegeben. Wenn Sie FORCE ORDER angeben, wird dieses Standardverhalten beibehalten.  
+> In einer MERGE-Anweisung wird als Standardreihenfolge für Joins zunächst auf die Quelltabelle und dann auf die Zieltabelle zugegriffen, es sei denn, die WHEN SOURCE NOT MATCHED-Klausel wurde angegeben. Wenn Sie FORCE ORDER angeben, wird dieses Standardverhalten beibehalten.  
   
  { FORCE | DISABLE } EXTERNALPUSHDOWN  
  Erzwingen oder Deaktivieren der Weitergabe der Berechnung von qualifizierenden Ausdrücken in Hadoop. Gilt nur für Abfragen mit PolyBase. Wird nicht in den Azure-Speicher weitergegeben.  
@@ -202,31 +202,31 @@ ms.lasthandoff: 01/25/2018
   
  Überschreibt die Konfigurationsoption **Max. Grad an Parallelität** von **sp_configure** und die Ressourcenkontrolle für die Abfrage, in der diese Option angegeben wird. Der MAXDOP-Abfragehinweis kann den mit sp_configure konfigurierten Wert überschreiten. Wenn MAXDOP den mit der Ressourcenkontrolle konfigurierten Wert überschreitet, verwendet [!INCLUDE[ssDE](../../includes/ssde-md.md)] den MAXDOP-Wert der Ressourcenkontrolle, wie unter [ALTER WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-workload-group-transact-sql.md) beschrieben. Alle mit der Konfigurationsoption **Max. Grad an Parallelität** verwendeten semantischen Regeln gelten auch für die Verwendung des MAXDOP-Abfragehinweises. Weitere Informationen finden Sie unter [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).  
   
-> [!WARNING]  
-> Wenn MAXDOP auf 0 (Null) festgelegt wird, wählt der Server den maximalen Grad an Parallelität aus.  
+> [!WARNING]     
+> Wenn MAXDOP auf 0 (null) festgelegt wird, wählt der Server den maximalen Grad an Parallelität aus.  
   
- MAXRECURSION *number*  
- Gibt die maximale Anzahl der für diese Abfrage zulässigen Rekursionen an. *number* ist eine nicht negative ganze Zahl zwischen 0 und 32767. Wenn 0 angegeben wird, wird keine Beschränkung angewendet. Wenn diese Option nicht angegeben wird, beträgt das Standardlimit für den Server 100.  
+ MAXRECURSION *number*     
+ Gibt die maximale Anzahl der für diese Abfrage zulässigen Rekursionen an. *number* ist eine nicht negative ganze Zahl zwischen 0 und 32.767. Wenn 0 angegeben wird, wird keine Beschränkung angewendet. Wenn diese Option nicht angegeben wird, beträgt das Standardlimit für den Server 100.  
   
  Wenn der angegebene Wert bzw. der Standardwert für MAXRECURSION während der Ausführung der Abfrage erreicht wird, wird die Abfrage beendet und ein Fehler wird zurückgegeben.  
   
  Aufgrund dieses Fehlers wird für alle Änderungen aufgrund der Anweisung ein Rollback ausgeführt. Falls es sich hierbei um eine SELECT-Anweisung handelt, können Teilergebnisse oder keine Ergebnisse zurückgegeben werden. Teilergebnisse schließen möglicherweise nicht alle Zeilen auf Rekursionsebenen ein, die über die angegebene maximale Rekursionsebene hinausgehen.  
   
- Weitere Informationen finden Sie unter [WITH common_table_expression &#40;Transact-SQL&#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md).  
+ Weitere Informationen finden Sie unter [WITH common_table_expression &#40;Transact-SQL&#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md).     
   
- NO_PERFORMANCE_SPOOL  
+ NO_PERFORMANCE_SPOOL    
  **Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Verhindert, dass ein Spool-Operator zu Abfrageplänen hinzugefügt wird (mit Ausnahme der Pläne, bei denen der Spool-Operator eine gültige Update-Semantik garantieren muss). In einigen Szenarios kann der Spool-Operator die Leistung beeinträchtigen. Der Spool-Operator verwendet beispielsweise „tempdb“. Wenn in den Spool-Vorgängen viele Abfragen gleichzeitig ausgeführt werden, kann es zu einem „tempdb“-Konflikt kommen.  
   
- OPTIMIZE FOR ( *@variable_name* { UNKNOWN | = *literal_constant }* [ **,** ...*n* ] )  
+ OPTIMIZE FOR ( *@variable_name* { UNKNOWN | = *literal_constant }* [ **,** ...*n* ] )     
  Weist den Abfrageoptimierer an, einen bestimmten Wert für eine lokale Variable zu verwenden, wenn die Abfrage kompiliert und optimiert wird. Dieser Wert wird nur während der Abfrageoptimierung verwendet, nicht während der Abfrageausführung.  
   
  *@variable_name*  
  Der Name einer lokalen Variablen, die in einer Abfrage verwendet wird und der ein Wert für die Verwendung mit dem OPTIMIZE FOR-Abfragehinweis zugewiesen werden kann.  
   
  *UNKNOWN*  
- Gibt an, dass der Abfrageoptimierer statistische Daten statt des Anfangswerts verwenden soll, um während der Abfrageoptimierung den Wert einer lokalen Variablen zu bestimmen.  
+ Gibt an, dass der Abfrageoptimierer statt des Anfangswerts statistische Daten verwenden soll, um während der Abfrageoptimierung den Wert einer lokalen Variablen zu bestimmen.  
   
  *literal_constant*  
  Ein Literalkonstantenwert, dem *@variable_name* für die Verwendung mit dem OPTIMIZE FOR-Abfragehinweis zugewiesen wird. *literal_constant* wird nur während der Abfrageoptimierung verwendet, nicht als Wert von *@variable_name* während der Abfrageausführung. *literal_constant* kann einen beliebigen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Systemdatentyp aufweisen, der als Literalkonstante dargestellt werden kann. Der Datentyp von *literal_constant* muss implizit in den Datentyp konvertierbar sein, auf den *@variable_name* in der Abfrage verweist.  
@@ -238,13 +238,14 @@ ms.lasthandoff: 01/25/2018
   
  Wenn OPTIMIZE FOR @variable_name = *literal_constant* und OPTIMIZE FOR UNKNOWN in dem gleichen Abfragehinweis verwendet werden, verwendet der Abfrageoptimierer die *literal_constant*, die für einen bestimmten Wert angegeben wurde, und UNKNOWN für die übrigen Variablenwerte. Diese Werte werden nur während der Abfrageoptimierung verwendet, nicht während der Abfrageausführung.  
   
- PARAMETERIZATION { SIMPLE | FORCED }  
+ PARAMETERIZATION { SIMPLE | FORCED }     
  Gibt die Parametrisierungsregeln an, die der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Abfrageoptimierer bei der Kompilierung auf die Abfrage anwendet.  
   
 > [!IMPORTANT]  
-> Der PARAMETERIZATION-Abfragehinweis kann nur innerhalb einer Planhinweisliste angegeben werden. Er kann nicht direkt innerhalb einer Abfrage angegeben werden.  
+> Der PARAMETERIZATION-Abfragehinweis kann in einer Planhinweisliste nur angegeben werden, um die aktuelle Einstellung der Option PARAMETERIZATION database SET zu überschreiben. Er kann nicht direkt innerhalb einer Abfrage angegeben werden.    
+> Weitere Informationen finden Sie unter [Angeben des Abfrageparametrisierungsverhaltens mithilfe von Planhinweislisten](../../relational-databases/performance/specify-query-parameterization-behavior-by-using-plan-guides.md).
   
- Mit SIMPLE wird der Abfrageoptimierer angewiesen, einfache Parametrisierung auszuführen. Mit FORCED wird der Optimierer angewiesen, erzwungene Parametrisierung auszuführen. Mit dem PARAMETERIZATION-Abfragehinweis wird die aktuelle Einstellung der Option PARAMETERIZATION database SET innerhalb einer Planhinweisliste überschrieben. Weitere Informationen finden Sie unter [Angeben des Abfrageparametrisierungsverhaltens mithilfe von Planhinweislisten](../../relational-databases/performance/specify-query-parameterization-behavior-by-using-plan-guides.md).  
+ Mit SIMPLE wird der Abfrageoptimierer angewiesen, einfache Parametrisierung auszuführen. Mit FORCED wird der Abfrageoptimierer angewiesen, eine erzwungene Parametrisierung auszuführen. Weitere Informationen finden Sie unter [„Erzwungene Parametrisierung“ im Handbuch zur Architektur der Abfrageverarbeitung](../../relational-databases/query-processing-architecture-guide.md#ForcedParam) und unter [„Einfache Parametrisierung“ im Handbuch zur Architektur der Abfrageverarbeitung](../../relational-databases/query-processing-architecture-guide.md#SimpleParam).  
   
  RECOMPILE  
  Weist [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] an, den für die Abfrage generierten Abfrageplan nach der Ausführung zu verwerfen. Dadurch wird der Abfrageoptimierer gezwungen, erneut einen Abfrageplan zu kompilieren, wenn dieselbe Abfrage das nächste Mal ausgeführt wird. Ohne die Angabe von RECOMPILE werden Abfragepläne von [!INCLUDE[ssDE](../../includes/ssde-md.md)] zwischengespeichert und wiederverwendet. Beim Kompilieren von Abfrageplänen verwendet der RECOMPILE-Abfragehinweis die aktuellen Werte von lokalen Variablen in der Abfrage und, falls sich die Abfrage innerhalb einer gespeicherten Prozedur befindet, die an Parameter übergebenen aktuellen Werte.  
@@ -256,12 +257,12 @@ ms.lasthandoff: 01/25/2018
   
  Ist eine solche Vorgehensweise nicht möglich, gibt der Abfrageoptimierer einen Fehler zurück, statt die Fehlererkennung auf die Abfrageausführung zu verschieben. Die Zeilen können Spalten variabler Länge aufweisen. [!INCLUDE[ssDE](../../includes/ssde-md.md)] läßt die Definition von Zeilen zu, deren maximale potenzielle Größe von [!INCLUDE[ssDE](../../includes/ssde-md.md)] nicht mehr verarbeitet werden kann. Trotz der maximalen potenziellen Größe speichert eine Anwendung im Allgemeinen Zeilen, deren tatsächliche Größe innerhalb der Höchstwerte liegen, die [!INCLUDE[ssDE](../../includes/ssde-md.md)] verarbeiten kann. Wenn [!INCLUDE[ssDE](../../includes/ssde-md.md)] eine Zeile ermittelt, die zu lang ist, wird ein Ausführungsfehler zurückgegeben.  
  
-<a name="use_hint"></a> USE HINT ( **'***hint_name***'** )  
- **Gilt für**: Gilt für[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) und [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
+<a name="use_hint"></a> USE HINT ( **'***hint_name***'** )    
+ **Gilt für**: Gilt für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1) und [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
  
- Stellt mindestens einen zusätzlichen Hinweis für den Abfrageprozessor bereit, der von einem Hinweisnamen **innerhalb einfacher Anführungszeichen** angegeben wird. 
+ Stellt mindestens einen zusätzlichen Hinweis für den Abfrageprozessor bereit, der von einem Hinweisnamen **innerhalb einfacher Anführungszeichen** angegeben wird.   
 
- Die folgenden Hinweisnamen werden unterstützt:
+ Die folgenden Hinweisnamen werden unterstützt:    
  
 *  'DISABLE_OPTIMIZED_NESTED_LOOP'  
  Weist den Abfrageprozessor an, bei der Generierung eines Abfrageplans keine Sortiervorgänge (Batch-Sortierung) für optimierte Joins geschachtelter Schleifen zu verwenden. Dies entspricht dem [Ablaufverfolgungsflag](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2340.
@@ -285,11 +286,12 @@ ms.lasthandoff: 01/25/2018
 > [!TIP]
 > Bei Hinweisnamen muss die Groß-/Kleinschreibung nicht beachtet werden.
   
-  Die Liste aller unterstützten USE HINT-Namen kann über die dynamische Verwaltungsansicht [sys.dm_exec_valid_use_hints ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md) abgefragt werden.
+  Die Liste aller unterstützten USE HINT-Namen kann über die dynamische Verwaltungsansicht [sys.dm_exec_valid_use_hints](../../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md) abgefragt werden.    
+  
 > [!IMPORTANT] 
-> Einige USE HINT-Hinweise stehen möglicherweise mit Ablaufverfolgungsflags, die auf globaler Ebene oder auf Sitzungsebene aktiviert sind, oder mit Einstellungen für die datenbankweit gültige Konfiguration in Konflikt. In diesem Fall hat der Hinweis auf Abfrageebene (USE HINT) immer Vorrang. Wenn ein USE HINT-Hinweis mit einem anderen Abfragehinweis oder einem auf Abfrageebene aktivierten Ablaufverfolgungsflag (z.B. QUERYTRACEON) in Konflikt steht, generiert SQL Server beim Versuch der Abfrageausführung einen Fehler. 
+> Einige USE HINT-Hinweise stehen möglicherweise mit Ablaufverfolgungsflags, die auf globaler Ebene oder auf Sitzungsebene aktiviert sind, oder mit Einstellungen für die datenbankweit gültige Konfiguration in Konflikt. In diesem Fall hat der Hinweis auf Abfrageebene (USE HINT) immer Vorrang. Wenn ein USE HINT-Hinweis mit einem anderen Abfragehinweis oder einem auf Abfrageebene aktivierten Ablaufverfolgungsflag (z.B. QUERYTRACEON) in Konflikt steht, generiert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] beim Versuch der Abfrageausführung einen Fehler. 
 
- USE PLAN N**'***xml_plan***'**  
+ USE PLAN N**'***xml_plan***'**     
  Zwingt den Abfrageoptimierer, einen vorhandenen Abfrageplan für eine Abfrage zu verwenden, die mit **'***xml_plan***'** angegeben wird. USE PLAN kann nicht für die Anweisungen INSERT, UPDATE, MERGE oder DELETE angegeben werden.  
   
 TABLE HINT **(***exposed_object_name* [ **,** \<table_hint> [ [**,** ]...*n* ] ] **)** Wendet den angegebenen Tabellenhinweis auf die Tabelle oder die Ansicht an, die *exposed_object_name* entspricht. Es wird empfohlen, einen Tabellenhinweis nur im Kontext einer [Planhinweisliste](../../relational-databases/performance/plan-guides.md) als Abfragehinweis zu verwenden.  
@@ -302,7 +304,7 @@ TABLE HINT **(***exposed_object_name* [ **,** \<table_hint> [ [**,** ]...*n* ] ]
   
  Wenn *exposed_object_name* angegeben wird, ohne dass auch ein Tabellenhinweis angegeben wird, werden alle in der Abfrage als Teil eines Tabellenhinweises für das Objekt festgelegten Indizes ignoriert, und die Indexverwendung wird vom Abfrageoptimierer bestimmt. Sie können diese Vorgehensweise verwenden, um die Auswirkung eines INDEX-Tabellenhinweises zu eliminieren, wenn Sie die ursprüngliche Abfrage nicht ändern können. Siehe Beispiel J.  
   
-**\<table_hint> ::=** { [ NOEXPAND ] { INDEX ( *index_value* [ ,...*n* ] ) | INDEX = ( *index_value* ) | FORCESEEK [**(***index_value***(***index_column_name* [**,**... ] **))** ]| FORCESCAN | HOLDLOCK | NOLOCK | NOWAIT | PAGLOCK | READCOMMITTED | READCOMMITTEDLOCK | READPAST | READUNCOMMITTED | REPEATABLEREAD | ROWLOCK | SERIALIZABLE | SNAPSHOT | SPATIAL_WINDOW_MAX_CELLS | TABLOCK | TABLOCKX | UPDLOCK | XLOCK } Ist der Tabellenhinweis, der auf die Tabelle oder die Ansicht angewendet wird, die *exposed_object_name* als Abfragehinweis entspricht. Eine Beschreibung dieser Hinweise finden Sie unter [Tabellenhinweise &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
+**\<table_hint> ::=** { [ NOEXPAND ] { INDEX ( *index_value* [ ,...*n* ] ) | INDEX = ( *index_value* ) | FORCESEEK [**(***index_value***(***index_column_name* [**,**... ] **))** ]| FORCESCAN | HOLDLOCK | NOLOCK | NOWAIT | PAGLOCK | READCOMMITTED | READCOMMITTEDLOCK | READPAST | READUNCOMMITTED | REPEATABLEREAD | ROWLOCK | SERIALIZABLE | SNAPSHOT | SPATIAL_WINDOW_MAX_CELLS | TABLOCK | TABLOCKX | UPDLOCK | XLOCK } ist der Tabellenhinweis, der auf die Tabelle oder die Ansicht angewendet wird, die *exposed_object_name* als Abfragehinweis entspricht. Eine Beschreibung dieser Hinweise finden Sie unter [Tabellenhinweise &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
   
  Andere Tabellenhinweise als INDEX, FORCESCAN und FORCESEEK sind als Abfragehinweise nicht zulässig, es sei denn, die Abfrage enthält bereits eine WITH-Klausel, die einen Tabellenhinweis angibt. Weitere Informationen finden Sie in den Hinweisen.  
   
@@ -320,15 +322,10 @@ TABLE HINT **(***exposed_object_name* [ **,** \<table_hint> [ [**,** ]...*n* ] ]
  Wenn die INDEX-, FORCESCAN- und FORCESEEK-Tabellenhinweise als Abfragehinweise angegeben werden, sind sie für die folgenden Objekte gültig:  
   
 -   Tabellen  
-  
 -   Sichten  
-  
 -   Indizierte Sichten  
-  
 -   Allgemeine Tabellenausdrücke (Der Hinweis muss in der SELECT-Anweisung angegeben sein, mit deren Resultset der allgemeine Tabellenausdruck aufgefüllt wird.)  
-  
 -   Dynamische Verwaltungssichten  
-  
 -   Benannte Unterabfragen  
   
  Die INDEX-, FORCESCAN- und FORCESEEK-Tabellenhinweis können als Abfragehinweise für eine Abfrage angegeben werden, die nicht über vorhandene Tabellenhinweise verfügt, oder sie können verwendet werden, um vorhandene INDEX-, FORCESCAN- oder FORCESEEK-Hinweise in der Abfrage zu ersetzen. Andere Tabellenhinweise als INDEX, FORCESCAN und FORCESEEK sind als Abfragehinweise nicht zulässig, es sei denn, die Abfrage enthält bereits eine WITH-Klausel, die einen Tabellenhinweis angibt. In diesem Fall muss, um die Semantik der Abfrage beizubehalten, mithilfe von TABLE HINT in der OPTION-Klausel auch ein übereinstimmender Hinweis als Abfragehinweis angegeben werden. Wenn die Abfrage beispielsweise den Tabellenhinweis NOLOCK enthält, muss die OPTION-Klausel im **@hints**-Parameter der Planhinweisliste ebenfalls den NOLOCK-Hinweis enthalten. Siehe Beispiel K. Wenn ein anderer Tabellenhinweis als INDEX, FORCESCAN oder FORCESEEK mithilfe von TABLE HINT in der OPTION-Klausel ohne übereinstimmenden Abfragehinweis angegeben wurde (oder umgekehrt), wird der Fehler 8702 ausgelöst (als Hinweis darauf, dass die OPTION-Klausel bewirken kann, dass sich die Semantik der Abfrage ändert), und die Abfrage schlägt fehl.  
@@ -338,7 +335,7 @@ TABLE HINT **(***exposed_object_name* [ **,** \<table_hint> [ [**,** ]...*n* ] ]
 ### <a name="a-using-merge-join"></a>A. Verwenden von MERGE JOIN  
  Im folgenden Beispiel wird der JOIN-Vorgang in der Abfrage durch einen MERGE JOIN ausgeführt. Im Beispiel wird die [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]-Datenbank verwendet.  
   
-```  
+```sql  
 SELECT *   
 FROM Sales.Customer AS c  
 INNER JOIN Sales.CustomerAddress AS ca ON c.CustomerID = ca.CustomerID  
@@ -350,7 +347,7 @@ GO
 ### <a name="b-using-optimize-for"></a>B. Verwenden von OPTIMIZE FOR  
  Im folgenden Beispiel wird der Abfrageoptimierer angewiesen, den Wert `'Seattle'` für die lokale Variable `@city_name` zu verwenden, und statistische Daten zu verwenden, um während der Abfrageoptimierung den Wert der lokalen Variablen `@postal_code` zu bestimmen. Im Beispiel wird die [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]-Datenbank verwendet.  
   
-```  
+```sql  
 DECLARE @city_name nvarchar(30);  
 DECLARE @postal_code nvarchar(15);  
 SET @city_name = 'Ascheim';  
@@ -389,7 +386,7 @@ GO
 ### <a name="d-using-merge-union"></a>D. Verwenden von MERGE UNION  
  Im folgenden Beispiel wird der MERGE UNION-Abfragehinweis verwendet. Im Beispiel wird die [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]-Datenbank verwendet.  
   
-```  
+```sql  
 SELECT *  
 FROM HumanResources.Employee AS e1  
 UNION  
@@ -402,7 +399,7 @@ GO
 ### <a name="e-using-hash-group-and-fast"></a>E. Verwenden von HASH GROUP und FAST  
  Im folgenden Beispiel werden der MERGE UNION- und der FAST-Abfragehinweis verwendet. Im Beispiel wird die [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]-Datenbank verwendet.  
   
-```  
+```sql  
 SELECT ProductID, OrderQty, SUM(LineTotal) AS Total  
 FROM Sales.SalesOrderDetail  
 WHERE UnitPrice < $5.00  
@@ -417,7 +414,7 @@ GO
   
 **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-```  
+```sql  
 SELECT ProductID, OrderQty, SUM(LineTotal) AS Total  
 FROM Sales.SalesOrderDetail  
 WHERE UnitPrice < $5.00  
@@ -430,7 +427,7 @@ GO
 ### <a name="g-using-index"></a>G. Verwenden von INDEX  
  In den folgenden Beispielen wird der INDEX-Hinweis verwendet. Im ersten Beispiel wird ein einzelner Index angegeben. Im zweiten Beispiel werden mehrere Indizes für einen einzelnen Tabellenverweis angegeben. Da der INDEX-Hinweis auf eine Tabelle angewendet wird, die einen Alias verwendet, muss in beiden Beispielen in der TABLE HINT-Klausel auch der gleiche Alias wie der verfügbare Objektname angegeben werden. Im Beispiel wird die [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]-Datenbank verwendet.  
   
-```  
+```sql  
 EXEC sp_create_plan_guide   
     @name = N'Guide1',   
     @stmt = N'SELECT c.LastName, c.FirstName, e.Title  
@@ -458,7 +455,7 @@ GO
 ### <a name="h-using-forceseek"></a>H. Verwenden von FORCESEEK  
  Im folgenden Beispiel wird der FORCESEEK-Tabellenhinweis verwendet. Da der INDEX-Hinweis auf eine Tabelle angewendet wird, die einen zweiteiligen Namen verwendet, muss in der TABLE HINT-Klausel auch der gleiche zweiteilige Name wie der verfügbare Objektname angegeben werden. Im Beispiel wird die [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]-Datenbank verwendet.  
   
-```  
+```sql  
 EXEC sp_create_plan_guide   
     @name = N'Guide3',   
     @stmt = N'SELECT c.LastName, c.FirstName, HumanResources.Employee.Title  
@@ -476,7 +473,7 @@ GO
 ### <a name="i-using-multiple-table-hints"></a>I. Verwenden von mehreren Tabellenhinweisen  
  Im folgenden Beispiel wird der INDEX-Hinweis auf eine Tabelle angewendet, und der FORCESEEK-Hinweis wird auf eine andere Tabelle angewendet. Im Beispiel wird die [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]-Datenbank verwendet.  
   
-```  
+```sql  
 EXEC sp_create_plan_guide   
     @name = N'Guide4',   
     @stmt = N'SELECT e.ManagerID, c.LastName, c.FirstName, e.Title  
@@ -494,7 +491,7 @@ GO
 ### <a name="j-using-table-hint-to-override-an-existing-table-hint"></a>J. Verwenden von TABLE HINT zum Überschreiben eines vorhandenen Tabellenhinweises  
  Das folgende Beispiel zeigt, wie der TABLE HINT-Hinweis ohne Angabe eines Hinweises verwendet wird, um das Verhalten des INDEX-Tabellenhinweises zu überschreiben, der in der FROM-Klausel der Abfrage angegeben ist. Im Beispiel wird die [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]-Datenbank verwendet.  
   
-```  
+```sql  
 EXEC sp_create_plan_guide   
     @name = N'Guide5',   
     @stmt = N'SELECT e.ManagerID, c.LastName, c.FirstName, e.Title  
@@ -511,7 +508,7 @@ GO
 ### <a name="k-specifying-semantics-affecting-table-hints"></a>K. Angeben von Tabellenhinweisen, die die Semantik beeinflussen  
  Das folgende Beispiel enthält in der Abfrage zwei Tabellenhinweise: den NOLOCK-Hinweis, der die Semantik beeinflusst, und den INDEX-Hinweis, der die Semantik nicht beeinflusst. Der NOLOCK-Hinweis wird in der OPTIONS-Klausel der Planhinweisliste angegeben, um die Semantik der Abfrage beizubehalten. Neben dem NOLOCK-Hinweis werden auch der INDEX-Hinweis und der FORCESEEK-Hinweis angegeben, die den die Semantik nicht beeinflussenden INDEX-Hinweis in der Abfrage ersetzen, wenn die Anweisung kompiliert und optimiert wird. Im Beispiel wird die [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]-Datenbank verwendet.  
   
-```  
+```sql  
 EXEC sp_create_plan_guide   
     @name = N'Guide6',   
     @stmt = N'SELECT c.LastName, c.FirstName, e.Title  
@@ -528,7 +525,7 @@ GO
   
  Das folgende Beispiel zeigt eine alternative Methode, um die Semantik der Abfrage beizubehalten und zuzulassen, dass der Abfrageoptimierer einen anderen als den im Tabellenhinweis angegebenen Index verwendet. Dies erfolgt durch Angabe des NOLOCK-Hinweises in der OPTIONS-Klausel (da dieser die Semantik beeinflusst) und durch Angabe des TABLE HINT-Schlüsselworts nur mit einem Tabellenverweis und ohne INDEX-Hinweis. Im Beispiel wird die [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]-Datenbank verwendet.  
   
-```  
+```sql  
 EXEC sp_create_plan_guide   
     @name = N'Guide7',   
     @stmt = N'SELECT c.LastName, c.FirstName, e.Title  
@@ -547,7 +544,7 @@ GO
   
 **Gilt für**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].  
   
-```  
+```sql  
 SELECT * FROM Person.Address  
 WHERE City = 'SEATTLE' AND PostalCode = 98104
 OPTION (RECOMPILE, USE HINT ('ASSUME_MIN_SELECTIVITY_FOR_FILTER_ESTIMATES', 'DISABLE_PARAMETER_SNIFFING')); 

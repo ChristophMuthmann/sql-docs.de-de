@@ -1,29 +1,29 @@
 ---
-title: "TDE: Bring Your Own Key (BYOK) – Azure SQL | Microsoft-Dokumentation"
-description: "BYOK-Unterstützung (Bring Your Own Key) für Transparent Data Encryption (TDE) mit Azure Key Vault für SQL-Datenbank und Data Warehouse. TDE mit BYOK: Überblick, Funktionsweise, Überlegungen und Empfehlungen."
-keywords: 
+title: 'TDE: Bring Your Own Key (BYOK) – Azure SQL | Microsoft-Dokumentation'
+description: 'BYOK-Unterstützung (Bring Your Own Key) für Transparent Data Encryption (TDE) mit Azure Key Vault für SQL-Datenbank und Data Warehouse. TDE mit BYOK: Überblick, Funktionsweise, Überlegungen und Empfehlungen.'
+keywords: ''
 services: sql-database
-documentationcenter: 
+documentationcenter: ''
 author: aliceku
 manager: craigg
-ms.prod: 
-ms.reviewer: 
+ms.prod: ''
+ms.reviewer: ''
 ms.suite: sql
 ms.prod_service: sql-database, sql-data-warehouse
 ms.service: sql-database
-ms.custom: 
+ms.custom: ''
 ms.component: security
 ms.workload: On Demand
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.devlang: na
 ms.topic: article
-ms.date: 01/31/2018
+ms.date: 03/16/2018
 ms.author: aliceku
-ms.openlocfilehash: 1fdb7da4fe1276a66494873fc38aa15ae67bae27
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: ae89e8496ce8f2aec87d80e36ce7b48acfd6a8cf
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="transparent-data-encryption-with-bring-your-own-key-preview-support-for-azure-sql-database-and-data-warehouse"></a>Transparent Data Encryption mit Bring Your Own Key-Unterstützung (Vorschau) für Azure SQL-Datenbank und Data Warehouse
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
@@ -69,10 +69,10 @@ Wenn TDE dafür konfiguriert wird, einen TDE Protector von Key Vault zu verwende
 - Verwenden Sie einen Schlüsseltresor, für den [vorläufiges Löschen](https://docs.microsoft.com/azure/key-vault/key-vault-ovw-soft-delete) aktiviert ist, um sich vor Datenverlusten zu schützen, falls der Schlüssel bzw. der Schlüsseltresor aus Versehen gelöscht wird:  
   - Vorläufig gelöschte Ressourcen bleiben für einen Zeitraum von 90 Tagen weiter gespeichert. In diesem Zeitraum können sie wiederhergestellt oder endgültig gelöscht werden.
   - Den Aktionen **Wiederherstellen** und **Endgültig löschen** sind über Zugriffsrichtlinien für den Schlüsseltresor eigene Berechtigungen zugewiesen. 
-- Erteilen Sie dem logischen Server über dessen Azure Active Directory-Identität Zugriff auf den Schlüsseltresor.  Wenn die Benutzeroberfläche des Portals verwendet wird, wird die Azure Active Directory-Identität automatisch erstellt, und dem Server werden die Zugriffsberechtigungen des Schlüsseltresors erteilt.  Wenn PowerShell verwendet wird, um TDE mit BYOK zu konfigurieren, muss die Azure Active Directory-Identität erstellt, und der Abschluss des Vorgangs sollte überprüft werden. Wenn Sie PowerShell verwenden, finden Sie detaillierte Anweisungen unter [Konfigurieren von TDE mit BYOK](transparent-data-encryption-byok-azure-sql-configure.md).
+- Erteilen Sie dem logischen Server über dessen Azure AD-Identität (Azure Active Directory) Zugriff auf den Schlüsseltresor.  Wenn die Benutzeroberfläche des Portals verwendet wird, wird die Azure AD-Identität automatisch erstellt, und dem Server werden die Zugriffsberechtigungen für den Schlüsseltresor erteilt.  Wenn PowerShell verwendet wird, um TDE mit BYOK zu konfigurieren, muss die Azure AD-Identität erstellt werden. Außerdem sollte der Abschluss des Vorgangs überprüft werden. Wenn Sie PowerShell verwenden, finden Sie detaillierte Anweisungen unter [Konfigurieren von TDE mit BYOK](transparent-data-encryption-byok-azure-sql-configure.md).
 
   >[!NOTE]
-  >Wenn die Azure Active Directory-Identität **aus Versehen gelöscht werden sollte oder die Berechtigung des Servers widerrufen werden**, kann der Server nicht mehr auf den Schlüsseltresor zugreifen, wenn die Zugriffsrichtlinie des Schlüsseltresors verwendet wird.
+  >Wenn die Azure AD-Identität über die Zugriffsrichtlinie des Schlüsseltresors **aus Versehen gelöscht wird oder die Serverberechtigungen widerrufen werden**, kann der Server nicht mehr auf den Schlüsseltresor zugreifen.
   >
   
 - Aktivieren Sie die Überwachung und die Berichterstellung auf allen Verschlüsselungsschlüsseln: Key Vault stellt Protokolle bereit, die leicht in andere Tools für Sicherheitsinformationen und Ereignisverwaltung (SIEM) eingefügt werden können. Operations Management Suite (OMS) [Log Analytics](https://docs.microsoft.com/azure/log-analytics/log-analytics-azure-key-vault) ist ein Beispieldienst, der bereits integriert ist.
@@ -115,6 +115,12 @@ Im zweiten Fall ist es erforderlich, redundante Azure Key Vaults anhand der vorh
 
 Wenn Sie sicherstellen wollen, dass ohne Einschränkungen während eines Failovers auf den TDE Protector in Azur Key Vault zugegriffen werden kann, muss dies konfiguriert werden, bevor eine Datenbank repliziert wird oder ein Failover auf einen sekundären Server ausgeführt wird. Sowohl der primäre als auch der sekundäre Server muss Kopien der TDE Protectors in allen anderen Azure Key Vaults speichern. Das bedeutet in diesem Fall, dass dieselben Schlüssel in beiden Schlüsseltresoren gespeichert werden.
 
+Im Szenario der georedundanten Notfallwiederherstellung wird zur Sicherstellung von Redundanz eine sekundäre Datenbank mit einem sekundären Schlüsseltresor benötigt. Dabei werden maximal vier sekundäre Datenbanken unterstützt.  Nicht unterstützt wird das Verketten, also das Erstellen einer sekundären Datenbank für eine andere sekundäre Datenbank.  Bei der Ersteinrichtung bestätigt der Dienst, dass die Berechtigungen ordnungsgemäß für den primären und sekundären Schlüsseltresor konfiguriert sind.  Diese Berechtigungen müssen korrekt verwaltet und regelmäßig geprüft werden, sodass sichergestellt wird, dass diese aktiv sind.
+
+>[!NOTE]
+>Wenn die Identität des Servers einem primären und einem sekundären Server zugewiesen wird, muss diese zuerst dem sekundären Server zugewiesen werden.
+>
+
 Wenn Sie einen in einem Schlüsseltresor vorhandenen Schlüssel einem anderen Schlüsseltresor hinzufügen möchten, verwenden Sie das Cmdlet [Add-AzureRmSqlServerKeyVaultKey](https://docs.microsoft.com/en-us/powershell/module/azurerm.sql/add-azurermsqlserverkeyvaultkey).
 
  ```powershell
@@ -149,4 +155,7 @@ Führen Sie zur Umgehung dieses Fehlers das Cmdlet [Get-AzureRmSqlServerKeyVault
    ```
 Weitere Informationen zum Wiederherstellen von Sicherungen für SQL-Datenbank finden Sie unter [Recover an Azure SQL database (Wiederherstellen von Azure SQL-Datenbank)](https://docs.microsoft.com/azure/sql-database/sql-database-recovery-using-backups). Weitere Informationen zum Wiederherstellen von Sicherungen für SQL Data Warehouse finden Sie unter [Recover an Azure SQL Data Warehouse (Wiederherstellen von Azure SQL Data Warehouse)](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-restore-database-overview).
 
-Weitere Überlegungen für gesicherte Protokolldateien: Gesicherte Protokolldateien sind weiterhin mit dem ursprünglichen TDE Encryptor verschlüsselt, auch wenn der TDE Protector rotiert wurde und die Datenbank jetzt einen neuen TDE Protector verwendet.  Zur Wiederherstellungszeit werden beide Schlüssel benötigt, um die Datenbank wiederherzustellen.  Wenn die Protokolldatei einen in Azure Key Vault gespeicherten TDE Protector verwendet, wird dieser Schlüssel zur Wiederherstellungszeit benötigt, auch wenn die Datenbank in der Zwischenzeit geändert wurde und jetzt eine per Dienst verwaltete TDE verwendet.   
+
+Weitere Überlegungen für gesicherte Protokolldateien: Gesicherte Protokolldateien sind weiterhin mit dem ursprünglichen TDE Encryptor verschlüsselt, auch wenn der TDE Protector rotiert wurde und die Datenbank jetzt einen neuen TDE Protector verwendet.  Zur Wiederherstellungszeit werden beide Schlüssel benötigt, um die Datenbank wiederherzustellen.  Wenn die Protokolldatei einen in Azure Key Vault gespeicherten TDE Protector verwendet, wird dieser Schlüssel zur Wiederherstellungszeit benötigt, auch wenn die Datenbank in der Zwischenzeit geändert wurde und jetzt eine per Dienst verwaltete TDE verwendet.
+
+

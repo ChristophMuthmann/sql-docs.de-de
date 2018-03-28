@@ -1,16 +1,16 @@
 ---
 title: FROM (Transact-SQL) | Microsoft-Dokumentation
-ms.custom: 
-ms.date: 08/09/2017
+ms.custom: ''
+ms.date: 03/16/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|queries
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - JOIN
@@ -36,16 +36,16 @@ helpviewer_keywords:
 - UPDATE statement [SQL Server], FROM clause
 - derived tables
 ms.assetid: 36b19e68-94f6-4539-aeb1-79f5312e4263
-caps.latest.revision: 
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: c1abc4a060dd275ba2f8500e88d634a5ba9244ee
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 0a78b022ae6b344531130c55fb08bfc3684f8e23
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="from-transact-sql"></a>FROM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -137,11 +137,15 @@ FROM { <table_source> [ ,...n ] }
   
 <table_source> ::=   
 {  
-    [ database_name . [ schema_name ] . | schema_name . ] table_or_view_name [ AS ] table_or_view_alias  
+    [ database_name . [ schema_name ] . | schema_name . ] table_or_view_name [ AS ] table_or_view_alias 
+    [<tablesample_clause>]  
     | derived_table [ AS ] table_alias [ ( column_alias [ ,...n ] ) ]  
     | <joined_table>  
 }  
   
+<tablesample_clause> ::=
+    TABLESAMPLE ( sample_number [ PERCENT ] ) -- SQL Data Warehouse only  
+ 
 <joined_table> ::=   
 {  
     <table_source> <join_type> <table_source> ON search_condition   
@@ -230,8 +234,10 @@ FROM { <table_source> [ ,...n ] }
   
  Gibt an, dass eine bestimmte Version von Daten aus der angegebenen temporalen Tabelle und die verknüpfte Verlaufstabelle mit Systemversionsverwaltung zurückgegeben werden.  
   
-\<tablesample_clause>  
- Gibt an, dass Beispieldaten aus der Tabelle zurückgegeben werden. Die Beispieldaten können ungefähr sein. Diese Klausel kann für eine primäre oder verknüpfte Tabelle in einer SELECT-, UPDATE- oder DELETE-Anweisung verwendet werden. TABLESAMPLE kann nicht für Sichten angegeben werden.  
+### <a name="tablesample-clause"></a>TABLESAMPLE-Klausel
+**Gilt für:** SQL Server und SQL-Datenbank 
+ 
+ Gibt an, dass Beispieldaten aus der Tabelle zurückgegeben werden. Die Beispieldaten können ungefähr sein. Diese Klausel kann für eine primäre oder verknüpfte Tabelle in einer SELECT- oder UPDATE-Anweisung verwendet werden. TABLESAMPLE kann nicht für Sichten angegeben werden.  
   
 > [!NOTE]  
 >  Wenn Sie TABLESAMPLE für Datenbanken verwenden, die auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aktualisiert wurden, wird der Kompatibilitätsgrad der Datenbank auf mindestens 110 festgelegt, und PIVOT ist in einer rekursiven allgemeinen Tabellenausdrucksabfrage (CTE, Common Table Expression) nicht zugelassen. Weitere Informationen finden Sie unter [ALTER DATABASE-Kompatibilitätsgrad &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
@@ -254,13 +260,22 @@ FROM { <table_source> [ ,...n ] }
  *repeat_seed*  
  Ist ein konstanter ganzzahliger Ausdruck, der von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zum Generieren einer Zufallszahl verwendet wird. *repeat_seed* ist vom Datentyp **bigint**. Wenn *repeat_seed* nicht angegeben ist, weist [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einen zufälligen Wert zu. Für einen bestimmten *repeat_seed*-Wert ist das Stichprobenergebnis immer gleich, wenn keine Änderungen auf die Tabelle angewendet wurden. Der *repeat_seed*-Ausdruck muss zu einem ganzzahligen Wert größer null ausgewertet werden.  
   
- \<joined_table>  
- Ein Resultset, das das Produkt von zwei oder mehr Tabellen darstellt. Verwenden Sie für mehrere Joins Klammern, um die natürliche Joinreihenfolge zu ändern.  
+### <a name="tablesample-clause"></a>TABLESAMPLE-Klausel
+**Gilt für:** SQL Data Warehouse
+
+ Gibt an, dass Beispieldaten aus der Tabelle zurückgegeben werden. Die Beispieldaten können ungefähr sein. Diese Klausel kann für eine primäre oder verknüpfte Tabelle in einer SELECT- oder UPDATE-Anweisung verwendet werden. TABLESAMPLE kann nicht für Sichten angegeben werden. 
+
+ PERCENT  
+ Gibt an, dass ein *sample_number*-Prozentanteil der Zeilen einer Tabelle aus der Tabelle abgerufen werden soll. Wenn PERCENT angegeben wird, gibt SQL Data Warehouse einen ungefähren Wert des angegebenen Prozentanteils zurück. Wenn PERCENT angegeben wird, muss die Auswertung des *sample_number*-Ausdrucks einen Wert von 0 bis 100 ergeben.  
+
+
+### <a name="joined-table"></a>Verknüpfte Tabelle 
+Eine verknüpfte Tabelle ist ein Resultset, das das Produkt von zwei oder mehr Tabellen darstellt. Verwenden Sie für mehrere Joins Klammern, um die natürliche Joinreihenfolge zu ändern.  
   
-\<join_type>  
- Gibt den Typ der Joinoperation an.  
+### <a name="join-type"></a>Jointyp
+Gibt den Typ der Joinoperation an.  
   
- **INNER**  
+ INNER  
  Gibt an, dass alle übereinstimmenden Paare von Zeilen zurückgegeben werden. Zeilen, die in den beiden Tabellen nicht übereinstimmen, werden verworfen. Wenn kein Jointyp angegeben wird, ist dies die Standardeinstellung.  
   
  FULL [OUTER]  
@@ -272,8 +287,8 @@ FROM { <table_source> [ ,...n ] }
  RIGHT [OUTER]  
  Gibt an, dass alle Zeilen der rechten Tabelle, die die angegebene Joinbedingung nicht erfüllen, im Resultset enthalten sind. Die Ausgabespalten der anderen Tabelle werden auf NULL gesetzt. Dies erfolgt zusätzlich zu allen Zeilen, die von INNER JOIN zurückgegeben werden.  
   
-\<join_hint>  
- Gibt für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und [!INCLUDE[ssSDS](../../includes/sssds-md.md)] an, dass der Abfrageoptimierer von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pro Join genau einen in der FROM-Klausel angegebenen Joinhinweis oder Ausführungsalgorithmus verwendet. Weitere Informationen finden Sie unter [Joinhinweise &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-join.md).  
+### <a name="join-hint"></a>Jointipp  
+Gibt für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und [!INCLUDE[ssSDS](../../includes/sssds-md.md)] an, dass der Abfrageoptimierer von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pro Join genau einen in der FROM-Klausel angegebenen Joinhinweis oder Ausführungsalgorithmus verwendet. Weitere Informationen finden Sie unter [Joinhinweise &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-join.md).  
   
  Bei [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] gelten diese Joinhinweise für INNER Joins in zwei verteilungsinkompatiblen Spalten. Sie können die Abfrageleistung verbessern, indem Sie die Anzahl der Datenverschiebungen bei der Verarbeitung von Abfragen einschränken. Die zulässigen Joinhinweise für [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] lauten wie folgt:  
   
@@ -324,6 +339,8 @@ ON (p.ProductID = v.ProductID);
  *right_table_source*  
  Eine Tabellenquelle gemäß Definition im vorherigen Argument. Weitere Informationen finden Sie im Abschnitt mit Hinweisen.  
   
+### <a name="pivot-clause"></a>PIVOT-Klausel
+
  *table_source* PIVOT \<pivot_clause>  
  Gibt an, dass *table_source* basierend auf *pivot_column* pivotiert wird. *table_source* ist eine Tabelle oder ein Tabellenausdruck. Die Ausgabe ist eine Tabelle, die alle Spalten von *table_source* enthält mit Ausnahme von *pivot_column* und *value_column*. Die Spalten von *table_source* mit Ausnahme von *pivot_column* und *value_column* werden als Gruppierungsspalten des PIVOT-Operators bezeichnet. Weitere Informationen zu PIVOT und UNPIVOT finden Sie unter [Verwenden von PIVOT und UNPIVOT](../../t-sql/queries/from-using-pivot-and-unpivot.md).  
   
@@ -854,6 +871,14 @@ FROM DimProduct AS dp
 INNER REDISTRIBUTE JOIN FactInternetSales AS fis  
     ON dp.ProductKey = fis.ProductKey;  
 ```  
+
+### <a name="v-using-tablesample-to-read-data-from-a-sample-of-rows-in-a-table"></a>V. Verwenden von TABLESAMPLE, um Daten von einem Beispiel für Zeilen in einer Tabelle zu lesen  
+ Im folgenden Beispiel wird `TABLESAMPLE` in der `FROM`-Klausel verwendet, um ungefähr `10`-Prozent aller Zeilen in der `Customer`-Tabelle zurückzugeben.  
+  
+```sql    
+SELECT *  
+FROM Sales.Customer TABLESAMPLE SYSTEM (10 PERCENT) ;
+```
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [CONTAINSTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/containstable-transact-sql.md)   
@@ -862,6 +887,6 @@ INNER REDISTRIBUTE JOIN FactInternetSales AS fis
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
  [OPENQUERY &#40;Transact-SQL&#41;](../../t-sql/functions/openquery-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
- [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [Operatoren &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [UPDATE (Transact-SQL)](../../t-sql/queries/update-transact-sql.md)   
  [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)  

@@ -1,28 +1,30 @@
 ---
 title: 'Vorgehensweise: Herstellen einer Verbindung mithilfe von SQL Server-Authentifizierung | Microsoft Docs'
-ms.custom: 
-ms.date: 01/19/2017
+ms.custom: ''
+ms.date: 03/26/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: connecting to the server, SQL Server Authentication
+helpviewer_keywords:
+- connecting to the server, SQL Server Authentication
 ms.assetid: 8d298830-3186-47e7-aef6-586b457901c1
-caps.latest.revision: "34"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 5802ddf79f53fda9e03c842ce21def20cb99f6e3
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 7885d3d2be29b2ad8de9c4f576c7441b43b37726
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="how-to-connect-using-sql-server-authentication"></a>Vorgehensweise: Herstellen einer Verbindung mithilfe der SQL Server-Authentifizierung
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -57,7 +59,7 @@ Wenn Sie SQL Server-Authentifizierung verwenden, um die Verbindung mit SQL Serve
 ## <a name="example"></a>Beispiel  
 Im folgenden Beispiel wird der SQLSRV-Treiber mit SQL Server-Authentifizierung für die Verbindung mit einer lokalen Instanz von SQL Server verwendet. Die Werte für die erforderlichen *UID* und *PWD* Verbindungsattribute stammen aus anwendungsspezifischen Textdateien, *uid.txt* und *pwd.txt*in der *C:\AppData* Verzeichnis. Nachdem die Verbindung hergestellt wurde, wird der Server abgefragt, um die Anmeldung des Benutzers zu überprüfen.  
   
-Das Beispiel setzt voraus, dass SQL Server und die [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) -Datenbank auf dem lokalen Computer installiert sind. Wenn das Beispiel über den Browser ausgeführt wird, werden alle Ausgaben im Browser geschrieben.  
+Das Beispiel setzt voraus, dass SQL Server und die [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) -Datenbank auf dem lokalen Computer installiert sind. Wenn das Beispiel über den Browser ausgeführt wird, werden alle Ausgaben im Browser geschrieben.  
   
 ```  
 <?php  
@@ -135,13 +137,21 @@ Dieses Beispiel verwendet den PDO_SQLSRV- Treiber, um zu veranschaulichen, wie S
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
-[How to: Connect Using SQL Server Authentication](../../connect/php/how-to-connect-using-sql-server-authentication.md)  
-[Programmierhandbuch für den PHP-SQL-Treiber](../../connect/php/programming-guide-for-php-sql-driver.md)
-[Informationen zu den Codebeispielen in der Dokumentation](../../connect/php/about-code-examples-in-the-documentation.md)  
-[SUSER_SNAME (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=106382)  
-[Vorgehensweise: Erstellen einer SQL Server-Anmeldung](http://go.microsoft.com/fwlink/?LinkId=106325)  
-[Vorgehensweise: Erstellen eines Datenbankbenutzers](http://go.microsoft.com/fwlink/?LinkId=106327)  
-[Verwalten von Benutzern, Rollen und Anmeldungen](http://go.microsoft.com/fwlink/?LinkId=106329)  
-[Trennung von Benutzer und Schema](http://go.microsoft.com/fwlink/?LinkId=106330)  
-[GRANT-Objektberechtigungen (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=106332)  
+[Gewusst wie: Herstellen einer Verbindung mithilfe der SQL Server-Authentifizierung](../../connect/php/how-to-connect-using-sql-server-authentication.md)
+
+[Programmierhandbuch für den Microsoft-Treiber für PHP für SQLServer](../../connect/php/programming-guide-for-php-sql-driver.md)
+
+[Informationen zu den Codebeispielen in der Dokumentation](../../connect/php/about-code-examples-in-the-documentation.md)
+
+[SUSER_SNAME (Transact-SQL)](../../t-sql/functions/suser-sname-transact-sql.md)
+
+[Vorgehensweise: Erstellen einer SQL Server-Anmeldung](../../relational-databases/security/authentication-access/create-a-login.md)
+
+[Vorgehensweise: Erstellen eines Datenbankbenutzers](../../relational-databases/security/authentication-access/create-a-database-user.md)
+
+[Verwalten von Benutzern, Rollen und Anmeldungen](../../relational-databases/server-management-objects-smo/tasks/managing-users-roles-and-logins.md)
+
+[Trennung von Benutzer und Schema](../../relational-databases/server-management-objects-smo/tasks/managing-users-roles-and-logins.md)
+
+[GRANT-Objektberechtigungen (Transact-SQL)](../../t-sql/statements/grant-object-permissions-transact-sql.md)  
   

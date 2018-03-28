@@ -1,31 +1,31 @@
 ---
-title: "Erstellen eines Ressourcenpools für Machine Learning | Microsoft Docs"
-ms.custom: 
+title: Erstellen eines Ressourcenpools für Machine Learning | Microsoft Docs
+ms.custom: ''
 ms.date: 11/13/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: c7f7f6e4-774d-4b45-b94a-f06c51718475
-caps.latest.revision: 
+caps.latest.revision: ''
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: dc7a1c26f38cb63cf678f71ec6b889f6051f5387
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 449b9b46b3f371ef7eca89a488201cdad05c232d
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="create-a-resource-pool-for-machine-learning"></a>Erstellen eines Ressourcenpools für Machine learning
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-In diesem Thema wird beschrieben, wie Sie einen Ressourcenpool speziell für die Verwaltung von Machine Learning-Arbeitslasten in SQL Server erstellen können. Es wird davon ausgegangen, dass Sie bereits installiert und aktiviert die Machine learning-Funktionen und die Instanz für die Unterstützung von Ressourcen von einem externen Prozess, z. B. R oder Python Weitere differenzierte Management neu konfigurieren möchten.
+In diesem Artikel wird beschrieben, wie Sie einen Ressourcenpool speziell für die Verwaltung von Machine Learning-Arbeitslasten in SQL Server erstellen können. Es wird davon ausgegangen, dass Sie bereits installiert und aktiviert die Machine learning-Funktionen und die Instanz für die Unterstützung von Ressourcen von einem externen Prozess, z. B. R oder Python Weitere differenzierte Management neu konfigurieren möchten.
 
 Der Vorgang umfasst mehrere Schritte:
 
@@ -175,7 +175,7 @@ Um sicherzustellen, dass die Änderungen vorgenommen wurden, sollten Sie die Kon
     |2|default|Medium|25|0|0|0|0|2|2|
     |256|ds_wg|Medium|25|0|0|0|0|2|256|
   
-2.  Verwenden Sie die neue Katalogsicht [Sys. resource_governor_external_resource_pools &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-resource-governor-external-resource-pools-transact-sql.md), um alle externen Ressourcenpools anzuzeigen.
+2.  Verwenden Sie die neue Katalogsicht [Sys. resource_governor_external_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-external-resource-pools-transact-sql.md), um alle externen Ressourcenpools anzuzeigen.
   
     ```sql
     SELECT * FROM sys.resource_governor_external_resource_pools;
@@ -203,7 +203,7 @@ Um sicherzustellen, dass die Änderungen vorgenommen wurden, sollten Sie die Kon
 Weitere Informationen zum Verwalten von Serverressourcen finden Sie unter:
 
 +  [Ressourcenkontrolle](../../relational-databases/resource-governor/resource-governor.md) 
-+ [Die Ressourcenkontrolle in Verbindung mit dynamischen Verwaltungssichten &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md)
++ [Die Ressourcenkontrolle verbundene dynamische Verwaltungssichten &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md)
 
 Einen Überblick über die Ressourcenkontrolle für den Machine learning finden Sie unter:
 

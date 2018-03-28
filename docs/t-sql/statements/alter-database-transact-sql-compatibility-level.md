@@ -1,16 +1,16 @@
 ---
-title: "ALTER DATABASE-Kompatibilitätsgrad (Transact-SQL) | Microsoft-Dokumentation"
-ms.custom: 
+title: ALTER DATABASE-Kompatibilitätsgrad (Transact-SQL) | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 01/30/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - COMPATIBILITY_LEVEL_TSQL
@@ -26,22 +26,24 @@ helpviewer_keywords:
 - db compatibility level
 - db compat level
 ms.assetid: ca5fd220-d5ea-4182-8950-55d4101a86f6
-caps.latest.revision: 
+caps.latest.revision: ''
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 750578d028077079b051a08cc2a0ed4276983cda
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: d22ee796f75c4c4736c983801a63293b8a44e7cb
+ms.sourcegitcommit: 3ed9be04cc7fb9ab1a9ec230c298ad2932acc71b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>ALTER DATABASE-Kompatibilitätsgrad (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Legt für bestimmte Verhalten der Datenbank fest, dass sie mit der angegebenen Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kompatibel sein müssen. Informationen zu anderen ALTER DATABASE-Optionen finden Sie unter [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
-  
+
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
+
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
@@ -164,7 +166,7 @@ Fixes unter dem Ablaufverfolgungsflag 4199 in früheren Versionen von [!INCLUDE[
   
 |Kompatibilitätsgradeinstellung 110 oder niedriger|Kompatibilitätsgradeinstellung 120|  
 |--------------------------------------------------|-----------------------------------------|  
-|Der ältere Abfrageoptimierer wird verwendet.|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Die Komponente zum Erstellen und Optimieren von Abfrageplänen wurde deutlich verbessert. Diese neue Funktion des Abfrageoptimierers ist nur bei Verwendung des Datenbank-Kompatibilitätsgrads 120 verfügbar. Damit diese Verbesserungen optimal genutzt werden können, sollten neue Datenbankanwendungen mit dem Datenbank-Kompatibilitätsgrad 120 entwickelt werden. Von früheren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Versionen migrierte Anwendungen sollten sorgfältig daraufhin überprüft werden, ob die bisherige gute Leistung aufrechterhalten bzw. verbessert wird. Wird die Leistung beeinträchtigt, können Sie den Kompatibilitätsgrad der Datenbank auf 110 oder einen niedrigeren Wert festlegen, um die ältere Methodologie des Abfrageoptimierers zu nutzen.<br /><br /> Der Datenbank-Kompatibilitätsgrad 120 verwendet eine neue Kardinalitätsschätzung, die für moderne Data Warehousing- und OLTP-Arbeitsauslastungen optimiert ist. Bevor Sie den Datenbank-Kompatibilitätsgrad aufgrund von Leistungsproblemen auf 110 festlegen, sollten Sie die Empfehlungen im Abschnitt „Abfragepläne“ des Themas [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [Neues im Datenbank-Engine](../../database-engine/configure-windows/what-s-new-in-sql-server-2016-database-engine.md) lesen.|  
+|Der ältere Abfrageoptimierer wird verwendet.|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] schließt deutliche Verbesserungen der Komponente zum Erstellen und Optimieren von Abfrageplänen ein. Diese neue Funktion des Abfrageoptimierers ist nur bei Verwendung des Datenbank-Kompatibilitätsgrads 120 verfügbar. Damit diese Verbesserungen optimal genutzt werden können, sollten neue Datenbankanwendungen mit dem Datenbank-Kompatibilitätsgrad 120 entwickelt werden. Von früheren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Versionen migrierte Anwendungen sollten sorgfältig daraufhin überprüft werden, ob die bisherige gute Leistung aufrechterhalten bzw. verbessert wird. Wird die Leistung beeinträchtigt, können Sie den Kompatibilitätsgrad der Datenbank auf 110 oder einen niedrigeren Wert festlegen, um die ältere Methodologie des Abfrageoptimierers zu nutzen.<br /><br /> Der Datenbank-Kompatibilitätsgrad 120 verwendet eine neue Kardinalitätsschätzung, die für moderne Data Warehousing- und OLTP-Arbeitsauslastungen optimiert ist. Bevor Sie den Datenbank-Kompatibilitätsgrad aufgrund von Leistungsproblemen auf 110 festlegen, sollten Sie die Empfehlungen im Abschnitt „Abfragepläne“ des Themas [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [Neues im Datenbank-Engine](../../database-engine/configure-windows/what-s-new-in-sql-server-2016-database-engine.md) lesen.|  
 |Bei Kompatibilitätsgraden unter 120 wird die Spracheinstellung beim Konvertieren eines **date**-Werts in einen Zeichenfolgenwert ignoriert. Beachten Sie, dass dieses Verhalten nur für den **date**-Typ spezifisch ist. Siehe Beispiel B im Abschnitt „Beispiele“ weiter unten.|Die Spracheinstellung wird nicht ignoriert, wenn ein **date**-Wert in eine Zeichenfolge konvertiert wird.|  
 |Rekursive Verweise auf der rechten Seite einer `EXCEPT`-Klausel erzeugen eine Endlosschleife. In Beispiel C im nachfolgenden Abschnitt „Beispiele“ wird dieses Verhalten veranschaulicht.|Rekursive Verweise in einer `EXCEPT`-Klausel generieren gemäß dem ANSI SQL-Standard einen Fehler.|  
 |Der rekursive allgemeine Tabellenausdruck (Common Table Expression, CTE) lässt doppelte Spaltennamen zu.|Der rekursive CTE lässt keine doppelten Spaltennamen zu.|  

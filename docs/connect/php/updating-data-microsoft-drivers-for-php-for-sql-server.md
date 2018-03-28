@@ -1,27 +1,28 @@
 ---
 title: Aktualisieren von Daten (Microsoft Drivers for PHP for SQLServer) | Microsoft Docs
-ms.custom: 
-ms.date: 01/19/2017
+ms.custom: ''
+ms.date: 03/26/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: dd323f83-f415-4fa4-8457-89dad6d321d0
-caps.latest.revision: "19"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 94ba634fe2d52f2871214ace0890cc27fa5cb1c9
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: b34df07ff8c95f4ec08cc853f5a18ba8675ed016
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="updating-data-microsoft-drivers-for-php-for-sql-server"></a>Aktualisieren von Daten (Microsoft Drivers for PHP for SQL Server)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -38,13 +39,14 @@ Die Schritte zur Verwendung von [!INCLUDE[ssDriverPHP](../../includes/ssdriverph
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Thema|Beschreibung|  
+|Thema|Description|  
 |---------|---------------|  
 |[Vorgehensweise: Ausführen von parametrisierten Abfragen](../../connect/php/how-to-perform-parameterized-queries.md)|Beschreibt, wie parametrisierte Abfragen ausgeführt werden|  
 |[Vorgehensweise: Streamen von Daten](../../connect/php/how-to-send-data-as-a-stream.md)|Beschreibt, wie Datenströme an den Server übermittelt werden|  
-|[Vorgehensweise: Ausführen von Transaktionen](../../connect/php/how-to-perform-transactions.md)|Beschreibt, wie **sqlsrv** -Funktionen zur Durchführung von Transaktionen verwendet werden|  
+|[Gewusst wie: Ausführen von Transaktionen](../../connect/php/how-to-perform-transactions.md)|Beschreibt, wie **sqlsrv** -Funktionen zur Durchführung von Transaktionen verwendet werden|  
   
 ## <a name="see-also"></a>Siehe auch  
-[Beispielanwendung &#40;SQLSRV-Treiber&#41;](../../connect/php/example-application-sqlsrv-driver.md)  
-[Programmierhandbuch für den PHP-SQL-Treiber](../../connect/php/programming-guide-for-php-sql-driver.md)
+[Beispielanwendung &#40;SQLSRV-Treiber&#41;](../../connect/php/example-application-sqlsrv-driver.md)
+
+[Programmierhandbuch für den Microsoft-Treiber für PHP für SQLServer](../../connect/php/programming-guide-for-php-sql-driver.md)
   

@@ -1,24 +1,24 @@
 ---
 title: Installieren von SQL Server 2017 Machine Learning-Services (Datenbankintern) unter Windows | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/20/2018
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: python
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ms.workload: On Demand
-ms.openlocfilehash: 1904517351a23bfa736549a249d77be2932b3c07
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: a620e7ede1976fbbc50c0c81a595f002410403c8
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="install-sql-server-2017-machine-learning-services-in-database-on-windows"></a>Installieren von SQL Server 2017 Machine Learning-Services (Datenbankintern) unter Windows 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -29,7 +29,7 @@ In diesem Artikel wird erläutert, wie zum Installieren der Machine Learning-Kom
 
 ## <a name="bkmk_prereqs"> </a> Prüfliste vor der Installation
 
-+ SQL Server-2017 ist erforderlich. Wenn Sie SQL Server 2016 haben, installieren Sie [SQL Server 2016 R Services (Datenbankintern)](sql-r-services-windows-install.md) stattdessen.
++ 2017 von SQL Server-Setup ist erforderlich, wenn Sie Machine Learning-Dienste mit Unterstützung für R, Python oder beide Sprachen installiert werden soll. Wenn Sie stattdessen die SQL Server 2016-Installationsmedien verfügen, können Sie installieren [SQL Server 2016 R Services (Datenbankintern)](sql-r-services-windows-install.md) von R-Sprache-Support.
 
 + Eine Datenbank-Modulinstanz ist erforderlich. Nur R kann nicht installiert oder Python-Funktionen, Athough hinzufügen sie inkrementell zu einer vorhandenen Instanz.
 
@@ -67,7 +67,7 @@ Bei lokalen Installationen müssen Sie das Setup als Administrator ausführen. W
   
          Um die R und Python mit SQL Server verwenden möchten, müssen Sie eine Instanz des Datenbankmoduls installieren. Sie können entweder eine Standardinstanz oder eine benannte Instanz verwenden.
   
-    -   **Machine Learning-Services (Datenbankintern)**
+    -   **Machine Learning Services (datenbankintern)**
   
          Diese Option installiert die Datenbankdienste, die R zu unterstützen, und Python-skriptausführung.
 
