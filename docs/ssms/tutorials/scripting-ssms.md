@@ -19,19 +19,21 @@ helpviewer_keywords:
 - solutions [SQL Server Management Studio], tutorials
 - SQL Server Management Studio [SQL Server], tutorials
 - scripts [SQL Server], SQL Server Management Studio
-ms.openlocfilehash: 2ee56bc26c22f91af7bf156ea967c19b61eab881
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: bc20cc573c6b0890e5b16f4876636534f9fbb916
+ms.sourcegitcommit: ccb05cb5a4cccaf7ffa9e85a4684fa583bab914e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="tutorial-script-objects-in-sql-server-management-studio"></a>Tutorial: Erstellen von Skripts für Objekte in SQL Server Management Studio
 In diesem Tutorial erfahren Sie, wie Sie T-SQL-Skripts (Transact-SQL) für verschiedene Objekte in SQL Server Management Studio erstellen können.  Dabei wird die Skripterstellung für die folgenden Objekte beschrieben: 
- - Abfragen beim Ausführen von Aktionen auf der grafischen Benutzeroberfläche
- - Datenbanken (mithilfe der beiden Methoden „Script Database As“ (Skript für Datenbank erstellen als) und „Skript generieren“)
- - Tabellen
- - Gespeicherte Prozeduren
- - Erweiterte Ereignisse
+
+> [!div class="checklist"]
+> * Abfragen beim Ausführen von Aktionen auf der grafischen Benutzeroberfläche
+> * Datenbanken (mithilfe der beiden Methoden „Script Database As“ (Skript für Datenbank erstellen als) und „Skript generieren“)
+> * Tabellen
+> * Gespeicherte Prozeduren
+> * Erweiterte Ereignisse
 
 In diesem Tutorial haben Sie erfahren, dass Sie für jedes Objekt im **Objekt-Explorer** ein Skript erstellen können, indem Sie mit der rechten Maustaste darauf klicken und anschließend die Option **Script Object As** (Skript für Objekt als) auswählen. 
 
@@ -41,14 +43,13 @@ Zur Durchführung dieses Tutorials benötigen Sie SQL Server Management Studio, 
 
 - Installieren Sie [SQL Server Management Studio](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms).
 - Installieren Sie die [SQL Server 2017 Developer Edition](https://www.microsoft.com/en-us/sql-server/sql-server-downloads).
-- Laden Sie eine [AdventureWorks-Beispieldatenbank](https://github.com/Microsoft/sql-server-samples/releases) herunter. 
-    - Anweisungen zum Wiederherstellen von Datenbanken in SSMS finden Sie unter [Restoring a Database (Wiederherstellen einer Datenbank)](https://docs.microsoft.com/en-us/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms). 
+- Laden Sie eine [AdventureWorks-Beispieldatenbank](https://github.com/Microsoft/sql-server-samples/releases) herunter. Anweisungen zum Wiederherstellen von Datenbanken in SSMS finden Sie unter [Restoring a Database (Wiederherstellen einer Datenbank)](https://docs.microsoft.com/en-us/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms). 
 
 
 ## <a name="script-queries-from-gui"></a>Erstellen von Skripts für Abfragen über die grafische Benutzeroberfläche
 Beim Ausführen einer Aufgabe über die grafische Benutzeroberfläche in SSMS können Sie gleichzeitig den zugehörigen T-SQL-Code generieren. In den folgenden Beispielen wird dies anhand der Sicherung einer Datenbank und der Verkleinerung eines Transaktionsprotokolls demonstriert.  Die gleichen Schritte lassen sich auf jede Aktion anwenden, die über die grafische Benutzeroberfläche ausgeführt wird. 
 
-### <a name="scriptt-sql-when-backing-up-a-database"></a>Erstellen von T-SQL-Skripts beim Sichern einer Datenbank
+### <a name="script-t-sql-when-backing-up-a-database"></a>Erstellen von T-SQL-Skripts beim Sichern einer Datenbank
 1. Stellen Sie eine Verbindung mit Ihrem SQL Server her.
 2. Erweitern Sie den Knoten **Datenbanken** .
 3. Klicken Sie mit der rechten Maustaste auf die Datenbank, und rufen Sie anschließend **Aufgaben** > **Back Up...** (Sichern) auf:

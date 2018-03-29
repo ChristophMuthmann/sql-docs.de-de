@@ -10,21 +10,22 @@ ms.suite: sql
 ms.prod_service: sql-tools
 ms.reviewer: sstein
 manager: craigg
-ms.openlocfilehash: c9ede90c1232469797f85af353c7e3fced6851b5
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: 8cdb4f258f62b425be78e9f6b4628d69e304c7ba
+ms.sourcegitcommit: ccb05cb5a4cccaf7ffa9e85a4684fa583bab914e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="tutorial-sql-server-management-studio-components-and-configuration"></a>Tutorial: SQL Server Management Studio-Komponenten und -Konfiguration
 In diesem Tutorial werden die verschiedenen Fensterkomponenten in SQL Server Management Studio (SSMS) und einige grundlegende Konfigurationsoptionen für Ihren Arbeitsbereich erläutert. In diesem Artikel erhalten Sie Informationen zu Folgendem: 
-- Den verschiedenen Komponenten der SSMS-Umgebung
-- Ändern des Umgebungslayouts und Zurücksetzen des Layouts auf den Standard
-- Maximieren des Abfrage-Editors
-- Ändern einiger grundlegender Einstellungen, wie z.B.
-    - Ändern der Schriftart
-    - Konfigurieren von Startoptionen
-    - Zurücksetzen der Konfiguration auf den Standard
+
+> [!div class="checklist"]
+> * Den verschiedenen Komponenten der SSMS-Umgebung
+> * Ändern des Umgebungslayouts und Zurücksetzen des Layouts auf den Standard
+> * Maximieren des Abfrage-Editors
+> * Ändern der Schriftart 
+> * Konfigurieren von Startoptionen 
+> * Zurücksetzen der Konfiguration auf den Standard 
 
 ## <a name="prerequisites"></a>Voraussetzungen
 Zur Durchführung dieses Tutorials benötigen Sie SQL Server Management Studio.  
@@ -60,7 +61,7 @@ In diesem Abschnitt werden die unterschiedlichen im Arbeitsbereich verfügbaren 
 
     
 
-## <a name="changing-the-environmental-layout"></a>Ändern des Umgebungslayouts 
+## <a name="change-the-environmental-layout"></a>Ändern des Umgebungslayouts 
 Dieser Abschnitt behandelt die Bearbeitung des Umgebungslayouts, wie z.B. das Verschieben der verschiedenen Fenster. 
 
 -  Die einzelnen Fensterkomponenten können verschoben werden, indem der Titel gedrückt gehalten und das Fenster gezogen wird. 
@@ -90,7 +91,7 @@ Dieser Abschnitt behandelt die Bearbeitung des Umgebungslayouts, wie z.B. das Ve
  
     ![Fensterlayout wiederherstellen](media/ssms-configuration/resetwindowlayout.png)
     
-## <a name="maximizing-query-editor"></a>Maximieren des Abfrage-Editors
+## <a name="maximize-query-editor"></a>Maximieren des Abfrage-Editors
 Der Abfrage-Editor kann in den Vollbildmodus maximiert werden.
 
 1. Klicken Sie im Fenster des Abfrage-Editors auf eine beliebige Stelle.
@@ -100,7 +101,7 @@ Diese Tastenkombination gilt für jedes Dokumentfenster.
 
 
 
-## <a name="changing-basic-settings"></a>Ändern der grundlegenden Einstellungen
+## <a name="change-basic-settings"></a>Ändern der Standardeinstellungen
 In diesem Abschnitt wird erläutert, wie einige grundlegende Einstellungen in SSMS geändert werden können. Diese Optionen sind unter der Menüoption **Tools** zu finden:
 
   ![Menü 'Extras'](media/ssms-configuration/tools.png)
@@ -110,18 +111,32 @@ In diesem Abschnitt wird erläutert, wie einige grundlegende Einstellungen in SS
 
     ![Symbolleiste anpassen](media/ssms-configuration/toolbar.png)
 
+### <a name="change-the-font"></a>Ändern der Schriftart
 - Die Schriftart kann über das Menü **Tools** > **Optionen** > **Schriftarten und Farben** geändert werden:
 
      ![Schriftarten und Farben](media/ssms-configuration/fontsandcolors.png)
 
+### <a name="change-the-startup-options"></a>Ändern der Startoptionen
 - Die Startoptionen bestimmen, wie Ihr Arbeitsbereich beim ersten Starten von SSMS aussieht. Diese können über das Menü **Tools** > **Optionen** > **Start** konfiguriert werden:
  
     ![Startoptionen](media/ssms-configuration/startup.png)
 
+### <a name="reset-settings-to-default"></a>Zurücksetzen auf die Standardeinstellungen
 - All diese Einstellungen können über das Menü **Tools** > **Einstellungen importieren und exportieren** importiert und exportiert werden. 
 
     ![Einstellungen importieren und exportieren](media/ssms-configuration/settings.png)
     - Dort können Sie auch all Ihre Einstellungen auf den Standardwert zurücksetzen. 
+
+
+## <a name="next-steps"></a>Nächste Schritte
+Im nächsten Artikel erhalten Sie weitere nützliche Informationen zu SSMS, wie z.B. wo Sie Ihr eigenes SQL Server-Fehlerprotokoll finden und was der Name Ihrer SQL-Instanz ist. 
+
+Für weitere Informationen zum nächsten Artikel blättern
+> [!div class="nextstepaction"]
+> [Schaltfläche „Nächste Schritte“](ssms-tricks.md)
+ 
+ 
+
 
 
 

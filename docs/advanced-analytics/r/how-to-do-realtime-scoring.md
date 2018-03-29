@@ -1,29 +1,29 @@
 ---
-title: "Zum Ausführen von Realtime Bewertung oder systemeigenen bewerten in SQL Server | Microsoft Docs"
-ms.custom: 
+title: Zum Ausführen von Realtime Bewertung oder systemeigenen bewerten in SQL Server | Microsoft Docs
+ms.custom: ''
 ms.date: 11/09/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 9287a85017df7b05b3b354a855811ea528a3ad79
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 2a79ab351f109959a743fecfb4cb6a0d186c6892
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="how-to-perform-realtime-scoring-or-native-scoring-in-sql-server"></a>Zum Bewerten von Realtime oder systemeigenen bewerten in SQL Server ausführen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Dieses Thema enthält Anweisungen und Beispielcode für die Echtzeit-Bewertung ausführen und systemeigenen bewertungs-Funktionen in SQL Server-2017 und SQL Server 2016. Das Ziel von Realtime Bewertung und systemeigene Bewertung ist zum Verbessern der Leistung von bewerteten Vorgängen in kleinen Batches.
+Dieser Artikel enthält Anweisungen und Beispielcode für die Echtzeit-Bewertung ausführen und systemeigenen bewertungs-Funktionen in SQL Server-2017 und SQL Server 2016. Das Ziel von Realtime Bewertung und systemeigene Bewertung ist zum Verbessern der Leistung von bewerteten Vorgängen in kleinen Batches.
 
 Sowohl Echtzeit Bewertung als auch systemeigene Bewertung dienen ein Machine learning-Modell ohne Installation von r verwenden Alles, was Sie tun müssen ist ein vortrainierte Modell in einem kompatiblen Format zu erhalten, und speichern sie in einer SQL Server-Datenbank.
 
@@ -178,7 +178,7 @@ Wenn Sie die Fehlermeldung erhalten, Fehler"bei der Ausführung der PREDICT-Funk
 
 Dieser Abschnitt beschreibt die erforderlichen Schritte zum Einrichten von **Echtzeit** Vorhersage, und veranschaulicht, wie die Funktion von T-SQL aus aufgerufen.
 
-### <a name ="bkmk_enableRtScoring"></a>Schritt 1. Aktivieren Sie die Bewertung der Prozedur Echtzeit
+### <a name ="bkmk_enableRtScoring"></a> Schritt 1. Aktivieren Sie die Bewertung der Prozedur Echtzeit
 
 Sie müssen diese Funktion für jede Datenbank aktivieren, die Sie für die Bewertung verwenden möchten. Der Serveradministrator sollte das Befehlszeile-Hilfsprogramm RegisterRExt.exe, führen Sie die in die RevoScaleR-Paket enthalten ist.
 
@@ -202,7 +202,7 @@ Sie müssen diese Funktion für jede Datenbank aktivieren, die Sie für die Bewe
 3. RegisterRExt.exe erstellt die folgenden Objekte:
 
     + Vertrauenswürdige Assemblys
-    + Die gespeicherte Prozedur`sp_rxPredict`
+    + Die gespeicherte Prozedur `sp_rxPredict`
     + Eine neue Datenbankrolle `rxpredict_users`. Der Datenbankadministrator kann diese Rolle verwenden, Berechtigung Benutzern erteilen, die Bewertungsprofile Echtzeit-Funktionalität verwenden.
 
 4. Fügen Sie alle Benutzer, die auszuführenden `sp_rxPredict` der neuen Rolle.
@@ -221,7 +221,7 @@ model <- rxSerializeModel(model.name, realtimeScoringOnly = TRUE)
 
 ### <a name="step-3-call-sprxpredict"></a>Schritt 3: Rufen Sie sp_rxPredict
 
-Rufen Sie sp\_RxPredict wie würde jeder andere Prozedur enthält. In der aktuellen Version die gespeicherte Prozedur akzeptiert nur zwei Parameter:  _@model_  für das Modell im binären Format und  _@inputData_  für die Daten zur Verwendung in der Bewertung, definiert als eine gültige SQL-Abfrage .
+Rufen Sie sp\_RxPredict wie würde jeder andere Prozedur enthält. In der aktuellen Version die gespeicherte Prozedur akzeptiert nur zwei Parameter: _@model_ für das Modell im binären Format und _@inputData_ für die Daten zur Verwendung in der Bewertung, definiert als eine gültige SQL-Abfrage .
 
 Da das Binärformat identisch, die von der PREDICT-Funktion verwendet wird ist, können Sie die Modelle und eine Datentabelle aus dem vorherigen Beispiel.
 
@@ -246,7 +246,7 @@ EXEC sp_rxPredict
 
 ## <a name="disable-realtime-scoring"></a>Deaktivieren Sie Echtzeit-Bewertung
 
-Um bewerteten Echtzeit-Funktionen zu deaktivieren, öffnen Sie ein Eingabeaufforderungsfenster mit erhöhten Rechten, und führen Sie den folgenden Befehl:`RegisterRExt.exe /uninstallrts /database:<database_name> [/instance:name]`
+Um bewerteten Echtzeit-Funktionen zu deaktivieren, öffnen Sie ein Eingabeaufforderungsfenster mit erhöhten Rechten, und führen Sie den folgenden Befehl: `RegisterRExt.exe /uninstallrts /database:<database_name> [/instance:name]`
 
 ## <a name="realtime-scoring-in-microsoft-r-server-or-machine-learning-server"></a>Echtzeit-Bewertung in Microsoft R Server "oder" Machine Learning-Server
 

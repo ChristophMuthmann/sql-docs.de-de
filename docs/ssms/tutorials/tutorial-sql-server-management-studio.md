@@ -30,13 +30,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 9a1cbac9e3eef44384313792d92f38ac90cce5e1
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: e6d1650a126991292680a40a0faa76f5ae8ffa42
+ms.sourcegitcommit: ccb05cb5a4cccaf7ffa9e85a4684fa583bab914e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 03/22/2018
 ---
-# <a name="tutorial-sql-server-management-studio"></a>Lernprogramm: SQL Server Management Studio
+# <a name="tutorials-for-sql-server-management-studio-ssms"></a>Tutorials zu SQL Server Management Studio (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 Dieses Tutorial zu SQL Server Management Studio (SSMS) bietet eine Einführung in die integrierte Umgebung zum Verwalten Ihrer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Infrastruktur. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] verfügt über eine grafische Oberfläche zum Konfigurieren, Überwachen und Verwalten von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanzen. Darüber hinaus vermittelt Ihnen das Tutorial, wie Sie die von Ihren Anwendungen, z.B. Datenbanken, verwendeten Datenebenenkomponenten bereitstellen, überwachen und aktualisieren. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] stellt auch Editoren für die [!INCLUDE[tsql](../../includes/tsql-md.md)]-, MDX-, DMX- und XML-Sprache bereit, um Skripts zu bearbeiten und zu debuggen.  
@@ -84,7 +84,7 @@ Zum Durchlaufen dieses Tutorials muss Folgendes installiert sein:
 
   -   Installieren Sie die neueste Version von [SQL Server Management Studio (SSMS)](../download-sql-server-management-studio-ssms.md).  
 
-Im ersten Artikel erfahren Sie, wie Sie eine Datenbank erstellen. Weitere beispielhafte Datenbanken finden Sie unter [AdventureWorks-Beispieldatenbanken](https://github.com/Microsoft/sql-server-samples/releases). Anweisungen zum Wiederherstellen von Datenbanken in SSMS finden Sie unter [Restoring a Database (Wiederherstellen einer Datenbank)](https://docs.microsoft.com/en-us/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms). 
+Im ersten Artikel erfahren Sie, wie Sie eine Datenbank erstellen. Weitere beispielhafte Datenbanken finden Sie unter [AdventureWorks-Beispieldatenbanken](https://github.com/Microsoft/sql-server-samples/releases). Anweisungen zum Wiederherstellen von Datenbanken in SSMS finden Sie hier: [Restoring a Database (Wiederherstellen einer Datenbank)](https://docs.microsoft.com/en-us/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms). 
 
 
   
