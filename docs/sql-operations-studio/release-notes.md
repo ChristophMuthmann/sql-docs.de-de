@@ -1,28 +1,45 @@
 ---
-title: "Versionshinweise für Microsoft SQL Operations Studio (Vorschau) | Microsoft Docs"
-description: "Versionshinweise für Microsoft SQL Operations Studio (Vorschau)"
+title: Versionshinweise für Microsoft SQL Operations Studio (Vorschau) | Microsoft Docs
+description: Versionshinweise für Microsoft SQL Operations Studio (Vorschau)
 ms.custom: tools|sos
-ms.date: 02/15/2018
+ms.date: 03/28/2018
 ms.prod: sql-non-specified
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1b8c5e3cce8f84f0565c764a47d3f3b7c1709454
-ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
+ms.openlocfilehash: ba86403e791af25de4f7bcd8b1cbd7b5f188897b
+ms.sourcegitcommit: d6881107b51e1afe09c2d8b88b98d075589377de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="sql-operations-studio-preview-release-notes"></a>Versionshinweise für SQL-Vorgänge Studio (Vorschau)
 
-**[Herunterladen der öffentlichen Vorschau von Februar](download.md)**
+**[Herunterladen der öffentlichen Vorschau von März](download.md)**
+
+## <a name="march-2018-march-public-preview"></a>März 2018 (März öffentliche Vorschau)
+
+Veröffentlichungsdatum: 28 März 2018  
+version: 0.27.3
+
+Die *März Public Preview* weiterhin die wichtigsten GitHub-Probleme zu beheben und konzentriert sich auf die Verbesserung unserer Story Erweiterbarkeit. Insbesondere Erweiterungs-Manager aktivieren, Verbessern der Dashboard-Management und Bereitstellen von SQL-Agent und Erweiterungen Einblicke. Diese Version umfasst die folgenden Verbesserungen:
+
+- Erweitern Sie das Dashboard-Erweiterbarkeitsmodell zur Unterstützung von im Registerkartenformat Einblicke und Konfiguration Bereiche.
+   - Erweiterungs-Manager ermöglicht die einfache Übernahme von Erweiterungen.
+   - Dashboard-Erweiterungen für Sp_whoisactive aus [whoisactive.com](http://www.whoisactive.com).
+   - Weitere Informationen finden Sie unter [Erweitern der Funktionalität von SQL-Vorgänge Studio](extensions.md).
+- Hinzufügen zusätzlicher [-Erweiterbarkeits-APIs für die Verbindung und Objekt-Explorer](https://github.com/Microsoft/sqlopsstudio/wiki/Extensibility-API) Management.
+- Weiterhin wichtige Auswirkungen auf Kunden beheben [GitHub Probleme](https://github.com/Microsoft/sqlopsstudio/issues).
+
+Weitere Informationen finden Sie unter der [Änderungsprotokoll](https://github.com/Microsoft/sqlopsstudio/blob/master/CHANGELOG.md).
+
 
 ## <a name="february-2018-february-public-preview"></a>Februar 2018 (Februar öffentliche Vorschau)
 
@@ -63,8 +80,6 @@ Die *Public Preview Januar* enthält einige neue Features vorschlagen und hoher 
 - Korrigieren Sie die Drag-and-Drop-wichtige scripting Fehler.
 - Korrigieren Sie falsche angeheftete Startmenü-Symbol.
 - Beheben Sie fehlende branding Symbol Azure-Konto.
-
-Weitere Informationen finden Sie unter der [Änderungsprotokoll](https://github.com/Microsoft/sqlopsstudio/blob/master/CHANGELOG.md).
 
 
 ## <a name="december-2017-december-public-preview"></a>Dezember 2017 (Dezember öffentliche Vorschau)

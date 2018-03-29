@@ -1,16 +1,16 @@
 ---
 title: Sys. fn_get_audit_file (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 05/16/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - fn_get_audit_file_TSQL
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - sys.fn_get_audit_file function
 - fn_get_audit_file function
 ms.assetid: d6a78d14-bb1f-4987-b7b6-579ddd4167f5
-caps.latest.revision: 
+caps.latest.revision: ''
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3b7a7d79b8cbaf65e803d042efd86a790e2eeb1d
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 982113b9acc85b0dd340e2850ad6efb463a500cb
+ms.sourcegitcommit: 7246ef88fdec262fa0d34bf0e232f089e03a6911
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/29/2018
 ---
 # <a name="sysfngetauditfile-transact-sql"></a>sys.fn_get_audit_file (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -69,7 +69,7 @@ fn_get_audit_file ( file_pattern,
  
       - **\<Storage_endpoint\>/\<Container\>/\<ServerName\>/\<DatabaseName\> /**  – sammelt alle Überwachungsdateien (Blobs) für die jeweilige Datenbank.    
       
-      - **\<Storage_endpoint\>/\<Container\>/\<ServerName\>/\<DatabaseName\> / \<AuditName\>/\<CreationDate\>/\<FileName\>xel** – sammelt eine bestimmte Überwachungsdatei (Blob).
+      - **\<Storage_endpoint\>/\<Container\>/\<ServerName\>/\<DatabaseName\> / \< AuditName\>/\<CreationDate\>/\<FileName\>xel** – sammelt eine bestimmte Überwachungsdatei (Blob).
   
 > [!NOTE]  
 >  Einen Pfad ohne ein Dateinamenmuster zu übergeben generiert einen Fehler.  
@@ -119,16 +119,18 @@ fn_get_audit_file ( file_pattern,
 |additional_information|**nvarchar(4000)**|Eindeutige Informationen, die nur für ein einzelnes Ereignis gelten, werden als XML zurückgegeben. Eine kleine Anzahl überwachbarer Aktionen enthält diese Art von Informationen.<br /><br /> Eine Ebene des TSQL-Stapels wird im XML-Format für Aktionen angezeigt, denen ein TSQL-Stapel zugeordnet ist. Das XML-Format sieht folgendermaßen aus:<br /><br /> `<tsql_stack><frame nest_level = '%u' database_name = '%.*s' schema_name = '%.*s' object_name = '%.*s' /></tsql_stack>`<br /><br /> Frame nest_level gibt die aktuelle Schachtelungsebene des Frames an. Der Modulname (database_name, schema_name und object_name) wird in einem aus drei Teilen bestehenden Format dargestellt.  Der Modulname wird analysiert, wie ungültige XML-Escapezeichen `'\<'`, `'>'`, `'/'`, `'_x'`. Werden sie als mit Escapezeichen versehen werden `_xHHHH\_`. HHHH steht für den vierstelligen hexadezimalen UCS 2-Code für das Zeichen<br /><br /> Lässt NULL-Werte zu. Gibt NULL zurück, wenn keine zusätzlichen vom Ereignis gemeldeten Informationen vorliegen.|  
 |file_name|**varchar(260)**|Der Pfad und der Name der Überwachungsprotokolldatei, aus der der Datensatz stammt. Lässt keine NULL-Werte zu.|  
 |audit_file_offset|**bigint**|Der Pufferoffset in der Datei, die den Überwachungsdatensatz enthält. Lässt keine NULL-Werte zu.|  
-|user_defined_event_id|**smallint**|**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Benutzerdefinierte Ereignis-Id als Argument zu übergeben **Sp_audit_write**. **NULL** für Systemereignisse (Standard) und ungleich 0 für ein benutzerdefiniertes Ereignis. Weitere Informationen finden Sie unter [Sp_audit_write &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-audit-write-transact-sql.md).|  
+|user_defined_event_id|**smallint**|**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Benutzerdefinierte Ereignis-Id als Argument zu übergeben **Sp_audit_write**. **NULL** für Systemereignisse (Standard) und ungleich 0 für ein benutzerdefiniertes Ereignis. Weitere Informationen finden Sie unter [Sp_audit_write &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-audit-write-transact-sql.md).|  
 |user_defined_information|**nvarchar(4000)**|**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Verwendet, um zusätzliche Informationen aufzeichnet, die der Benutzer möchte in aufzeichnen |Überwachungsprotokoll mit dem **Sp_audit_write** gespeicherte Prozedur.|  
 |audit_schema_version |**int** | |  
-|sequence_group_id |**varbinary** | Nur SQL Server (ab 2016) |  
-|transaction_id |**bigint** | Nur SQL Server (ab 2016) |  
-|client_ip |**nvarchar(128)** | Azure SQL-Datenbank und SQL Server (beginnend mit 2017) |  
-|application_name |**nvarchar(128)** | Azure SQL-Datenbank und SQL Server (beginnend mit 2017) |  
-|duration_milliseconds |**bigint** | Nur Azure SQL-DB |  
-|response_rows |**bigint** | Nur Azure SQL-DB |  
-|affected_rows |**bigint** | Nur Azure SQL-DB |  
+|sequence_group_id |**varbinary** | **Gilt für**: nur SQL Server (ab 2016) |  
+|transaction_id |**bigint** | **Gilt für**: nur SQL Server (ab 2016) |  
+|client_ip |**nvarchar(128)** | **Gilt für**: Azure SQL-Datenbank und SQL Server (beginnend mit 2017) |  
+|application_name |**nvarchar(128)** | **Gilt für**: Azure SQL-Datenbank und SQL Server (beginnend mit 2017) |  
+|duration_milliseconds |**bigint** | **Gilt für**: nur für Azure SQL-DB |  
+|response_rows |**bigint** | **Gilt für**: nur für Azure SQL-DB |  
+|affected_rows |**bigint** | **Gilt für**: nur für Azure SQL-DB |  
+|connection_id |GUID | **Gilt für**: nur für Azure SQL-DB |
+|data_sensitivity_information |nvarchar(4000) | **Gilt für**: nur für Azure SQL-DB |
   
 ## <a name="remarks"></a>Hinweise  
  Wenn die *File_pattern* Argument zu übergeben, um **Fn_get_audit_file** verweist auf einen Pfad oder die Datei, die nicht vorhanden ist, oder wenn die Datei keine Überwachungsdatei ist die **MSG_INVALID_AUDIT_FILE**Fehlermeldung wird zurückgegeben.  
@@ -176,20 +178,20 @@ fn_get_audit_file ( file_pattern,
   GO  
   ```
 
-Ein vollständiges Beispiel zum Erstellen einer Überwachung finden Sie unter [SQL Server Audit &#40; Datenbankmodul &#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).
+Ein vollständiges Beispiel für das Erstellen einer Überwachung finden Sie unter [SQL Server Audit &#40;Datenbank-Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).
 
 Informationen zum Einrichten der Überwachung von Azure SQL-Datenbank finden Sie unter [erste Schritte mit SQL-datenbanküberwachung](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-auditing).
   
 ## <a name="see-also"></a>Siehe auch  
  [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   
- [ALTER SERVER AUDIT  &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-audit-transact-sql.md)   
- [DROP SERVER AUDIT &#40; Transact-SQL &#41;](../../t-sql/statements/drop-server-audit-transact-sql.md)   
- [Erstellen Sie die SERVER AUDIT SPECIFICATION &#40; Transact-SQL &#41;](../../t-sql/statements/create-server-audit-specification-transact-sql.md)   
- [ALTER SERVER AUDIT SPECIFICATION &#40; Transact-SQL &#41;](../../t-sql/statements/alter-server-audit-specification-transact-sql.md)   
- [DROP SERVER AUDIT SPECIFICATION &#40; Transact-SQL &#41;](../../t-sql/statements/drop-server-audit-specification-transact-sql.md)   
+ [ALTER SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-audit-transact-sql.md)   
+ [DROP SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-audit-transact-sql.md)   
+ [CREATE SERVER AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-specification-transact-sql.md)   
+ [ALTER SERVER AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-audit-specification-transact-sql.md)   
+ [DROP SERVER AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-audit-specification-transact-sql.md)   
  [CREATE DATABASE AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-audit-specification-transact-sql.md)   
  [ALTER DATABASE AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-audit-specification-transact-sql.md)   
- [DROP DATABASE AUDIT SPECIFICATION &#40; Transact-SQL &#41;](../../t-sql/statements/drop-database-audit-specification-transact-sql.md)   
+ [DROP DATABASE AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-audit-specification-transact-sql.md)   
  [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md)   
  [sys.server_audits &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-audits-transact-sql.md)   
  [sys.server_file_audits &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-file-audits-transact-sql.md)   

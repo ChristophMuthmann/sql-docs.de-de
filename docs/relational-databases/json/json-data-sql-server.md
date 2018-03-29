@@ -1,30 +1,30 @@
 ---
 title: Arbeiten mit JSON-Daten in SQL Server | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 02/19/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
 ms.component: json
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-json
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 helpviewer_keywords:
 - JSON
 - JSON, built-in support
 ms.assetid: c9a4e145-33c3-42b2-a510-79813e67806a
-caps.latest.revision: 
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 92bac08a5168cb60477f8d253a9fee1f0fb5caef
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: 1e4e9f4a26b2d5ad3ee12975fa16d0442766f7e9
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="json-data-in-sql-server"></a>JSON-Daten in SQL Server
 [!INCLUDE[appliesto-ss2016-asdb-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -172,7 +172,31 @@ Am **FOR JSON** -Klausel formatiert SQL-Ergebnisse als JSON-Text, der für alle 
 ```  
   
 Weitere Informationen finden Sie unter [Formatieren von Abfrageergebnissen als JSON mit FOR JSON (SQL Server)](../../relational-databases/json/format-query-results-as-json-with-for-json-sql-server.md) und [FOR-Klausel (Transact-SQL)](../../t-sql/queries/select-for-clause-transact-sql.md).  
-  
+
+## <a name="use-cases-for-json-data-in-sql-server"></a>Anwendungsfälle für JSON-Daten in SQL Server
+
+Durch die JSON-Unterstützung in SQL Server und Azure SQL-Datenbank können Sie relationale Konzepte mit NoSQL-Konzepten verbinden. Dadurch lassen sich relationale Daten leicht in teilweise strukturierte Daten und umgekehrt transformieren. JSON ist jedoch kein Ersatz für vorhandene relationale Modelle. Im Folgenden werden einige spezifische Anwendungsfälle beschrieben, in denen die JSON-Unterstützung in SQL Server und SQL-Datenbank genutzt wird. Weitere Informationen finden Sie unter [JSON in SQL Server – Use cases (JSON in SQL Server: Anwendungsfälle)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2018/01/31/json-in-sql-server-use-cases/).
+
+### <a name="simplify-complex-data-models"></a>Vereinfachen komplexer Datenmodelle
+
+Denormalisieren Sie Ihr Datenmodell mit JSON-Feldern anstelle von mehreren untergeordneten Tabellen. Weitere Informationen hierzu finden Sie unter [Simplify data access using de-normalized models (Vereinfachen des Datenzugriffs mit denormalisierten Modellen)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2018/01/24/simplify-data-access-using-de-normalized-models/).
+
+### <a name="store-retail-and-e-commerce-data"></a>Speichern von Einzelhandels- und E-Commerce-Daten
+
+Speichern Sie Informationen über Produkte mit vielen veränderbaren Attributen in einem denormalisierten Modell, um mehr Flexibilität zu erhalten. Weitere Informationen hierzu finden Sie unter [Designing Product Catalogs in SQL Server using JSON (Entwerfen von Produktkatalogen in SQL Server mit JSON)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2015/12/21/designing-product-catalogs-in-sql-server-2016-using-json/) und [Indexing data in JSON product catalogs (Indizieren von Daten in JSON-Produktkatalogen)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2015/12/21/indexing-data-in-json-product-catalogs/).
+
+### <a name="process-log-and-telemetry-data"></a>Verarbeiten von Protokoll- und Telemetriedaten
+
+Laden Sie als JSON-Dateien gespeicherte Protokolldaten, fragen Sie diese ab und analysieren Sie sie mithilfe der leistungsfähigen Programmiersprache Transact-SQL. Weitere Informationen hierzu finden Sie im Artikel [JSON in SQL Server – Use cases (JSON in SQL Server :Anwendungsfälle)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2018/01/31/json-in-sql-server-use-cases/) im Abschnitt *Log and telemetry data analysis (Analyse von Protokoll- und Telemetriedaten)*.
+
+### <a name="store-semi-structured-iot-data"></a>Speichern von teilweise strukturieren IoT-Daten
+
+Laden Sie bei einer Echtzeitanalyse von IoT-Daten eingehende Daten direkt in die Datenbank, anstatt sie durch Staging an einem Speicherort bereitzustellen. Weitere Informationen hierzu finden Sie unter [Working with Azure IoT data in Azure SQL Database (Arbeiten mit Azure IoT-Daten in Azure SQL-Datenbank)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2018/01/23/working-with-azure-iot-data-in-azure-sql-database/).
+
+### <a name="simplify-rest-api-development"></a>Vereinfachen der REST-API-Entwicklung
+
+Transformieren Sie relationale Daten aus Ihrer Datenbank problemlos in das JSON-Format, das von den REST-APIs verwendet wird, die Ihre Website unterstützen. Weitere Informationen hierzu finden Sie unter [Simplify REST API development for modern Single-page apps with SQL Server (Vereinfachen der REST-API-Entwicklung für moderne Single-Page-Apps mit SQL Server)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2018/01/29/simplify-rest-api-development-modern-single-page-apps-sql-server/).
+
 ## <a name="combine-relational-and-json-data"></a>Kombinieren von relationalen und JSON-Daten
 SQL Server bietet ein Hybridmodell zum Speichern und Verarbeiten von relationalen Daten und JSON-Daten, indem die Transact-SQL-Standardsprache verwendet wird. Sie können Sammlungen Ihrer JSON-Dokumente nach Tabellen anordnen, Beziehungen zwischen ihnen herstellen, in Tabellen gespeicherte, stark typisierte Skalarspalten mit flexiblen Schlüssel-Wert/Paaren kombinieren, die in JSON-Spalten gespeichert werden, und sowohl Skalarwerte als auch JSON-Werte in einer oder mehreren Tabellen abfragen, indem Sie vollständiges Transact-SQL verwenden.
  
