@@ -1,33 +1,36 @@
 ---
-title: "In tabellarischen Modellen von SQL Server Analysis Services unterstützte Datenquellen | Microsoft Docs"
-ms.custom: 
-ms.date: 02/22/2018
+title: In tabellarischen 1200-Modelle von SQL Server Analysis Services unterstützte Datenquellen | Microsoft Docs
+ms.custom: ''
+ms.date: 03/28/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d6c2b1b3-91fc-4175-af25-509946dc7f24
-caps.latest.revision: 
+caps.latest.revision: ''
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 8eb83ae398449673cfe22caeeaba0a7616cee02f
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 14aa6597e533000c259f513c503825e7993da77c
+ms.sourcegitcommit: 7246ef88fdec262fa0d34bf0e232f089e03a6911
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/29/2018
 ---
-# <a name="data-sources-supported-in-tabular-models"></a>In tabellarischen Modellen unterstützte Datenquellen
+# <a name="data-sources-supported-in-sql-server-analysis-services-tabular-1200-models"></a>Datenquellen unterstützt in SQL Server Analysis Services tabular 1200-Modelle
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-Azure Analysis Services, finden Sie unter [in Azure Analysis Services unterstützte Datenquellen](https://docs.microsoft.com/azure/analysis-services/analysis-services-datasource).
+  
+Dieser Artikel beschreibt die Typen von Datenquellen, die mit SQL Server Analysis Services-Tabellenmodelle die 1200 und niedrigeren Kompatibilitätsgrad verwendet werden können. 
 
-  Dieser Artikel beschreibt die Typen von Datenquellen, die mit tabellarischen Modellen verwendet werden können.  
+Bei den Kompatibilitätsgraden 1400 Modellen finden Sie unter [in SQL Server Analysis Services Tabellenmodelle 1400 unterstützte Datenquellen](data-sources-supported-ssas-tabular-1400.md).
+
+Azure Analysis Services, finden Sie unter [in Azure Analysis Services unterstützte Datenquellen](https://docs.microsoft.com/azure/analysis-services/analysis-services-datasource).
   
 ##  <a name="bkmk_supported_ds"></a> Unterstützte Datenquellen für tabellarische Modelle im Arbeitsspeicher  
 Bei der Installation von [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]werden die für die einzelnen Datenquellen aufgelisteten Anbieter nicht von Setup installiert. Einige Anbieter wurden möglicherweise mit anderen Anwendungen auf Ihrem Computer installiert werden. In anderen Fällen müssen Sie möglicherweise herunterladen und Installieren des Anbieters.  
@@ -73,3 +76,9 @@ Sie können auch Zeit sparen, indem Sie mehrere Tabellen importieren und dann di
 Spalten, die ähnliche Daten in anderen Datenquellen enthalten, bilden die Basis bei der Erstellung von Beziehungen innerhalb des Modell-Designers. Wenn Sie heterogene Datenquellen verwenden, wählen Sie Tabellen mit Spalten aus, die Tabellen in anderen Datenquellen zugeordnet werden können, die identische oder ähnliche Daten enthalten.  
   
 OLE DB-Anbieter können in einigen Fällen bessere Leistung für umfangreiche Datenmengen anbieten. Bei der Auswahl zwischen unterschiedlichen Anbietern für die gleiche Datenquelle sollten Sie zuerst den OLE DB-Anbieter wählen.  
+
+## <a name="see-also"></a>Siehe auch
+
+[Datenquellen unterstützt in SQL Server Analysis Services-Tabellenmodelle 1400](data-sources-supported-ssas-tabular-1400.md)
+
+[In Azure Analysis Services unterstützte Datenquellen](https://docs.microsoft.com/azure/analysis-services/analysis-services-datasource)   

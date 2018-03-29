@@ -1,31 +1,34 @@
 ---
-title: "Ausführen der Analysis Services-Bereitstellungs-Assistenten | Microsoft Docs"
-ms.custom: 
-ms.date: 03/14/2017
+title: Ausführen der Analysis Services-Bereitstellungs-Assistenten | Microsoft Docs
+ms.custom: ''
+ms.date: 03/27/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: Analysis Services Deployment Wizard, running
+helpviewer_keywords:
+- Analysis Services Deployment Wizard, running
 ms.assetid: 3a38d489-4625-4878-bd18-c6f903be33df
-caps.latest.revision: "41"
+caps.latest.revision: ''
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 2d6a1102ed83493e25e3e73a0b77d035c2e299d9
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 61a2c558fca710d9fa6df37b998cddca6125c3c6
+ms.sourcegitcommit: d6881107b51e1afe09c2d8b88b98d075589377de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="running-the-analysis-services-deployment-wizard"></a>Ausführen des Bereitstellungs-Assistenten für Analysis Services
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Bei Verwendung der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Bereitstellungs-Assistent zum Bereitstellen einer [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt können Sie den Assistenten ausführen, auf folgende Weise:  
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+
+  Die [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Bereitstellungs-Assistent kann die folgenden Arten ausgeführt werden:  
   
 -   **Interaktiv** bei interaktiver Ausführung der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Bereitstellungs-Assistent generiert ein Bereitstellungsskript basierend auf den Eingabedateien, durch die Benutzereingabe interaktiv geänderten. Der Assistent wendet alle Änderungen durch den Benutzer ausschließlich auf das Bereitstellungsskript an. Der Assistent nimmt dabei keine Änderungen an den Eingabedateien vor. Weitere Informationen zu den Eingabedateien finden Sie unter [Grundlegendes zu den zum Erstellen des Bereitstellungsskripts verwendeten Eingabedateien](../../analysis-services/multidimensional-models/deployment-script-files-input-used-to-create-deployment-script.md).  
   
@@ -41,7 +44,7 @@ ms.lasthandoff: 01/08/2018
   
 #### <a name="to-run-the-analysis-services-deployment-wizard-interactively"></a>So führen Sie den Bereitstellungs-Assistenten für Analysis Services interaktiv aus  
   
--   Zeigen Sie im Menü **Start**auf **Alle Programme**, zeigen Sie auf **Microsoft SQL Server**, zeigen Sie auf **Analysis Services**, und klicken Sie dann auf **Bereitstellungs-Assistent**.  
+-   Klicken Sie auf **starten** > **Microsoft SQL Server** > **-Bereitstellungsassistent**.  
   
      – oder –  
   
@@ -73,7 +76,7 @@ ms.lasthandoff: 01/08/2018
   
 #### <a name="to-run-the-analysis-services-deployment-wizard-at-the-command-prompt"></a>So führen Sie den Bereitstellungs-Assistenten für Analysis Services an der Eingabeaufforderung aus  
   
-1.  Öffnen Sie eine Eingabeaufforderung, und navigieren Sie zum Ordner „C:\Programme (x86)\Microsoft SQL Server\120\Tools\Binn\ManagementStudio“.  
+1.  Öffnen Sie ein Eingabeaufforderungsfenster, und navigieren Sie zu der C:\Program Files (x86) \Microsoft SQL Server\140\Tools\Binn\ManagementStudio  
   
 2.  Geben Sie **Microsoft.AnalysisServices.Deployment.exe** ein und darauf folgend die Schalter für den Modus, in dem der Assistent ausgeführt werden soll.  
   

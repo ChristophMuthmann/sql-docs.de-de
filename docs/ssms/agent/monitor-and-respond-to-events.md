@@ -1,15 +1,16 @@
 ---
-title: "Überwachen und Reagieren auf Ereignisse | Microsoft-Dokumentation"
-ms.custom: 
+title: Überwachen und Reagieren auf Ereignisse | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-agent
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - notifications [SQL Server], alert
@@ -23,20 +24,24 @@ helpviewer_keywords:
 - monitoring [SQL Server], events
 - responding to events automatically
 ms.assetid: f7fbe155-5b68-4777-bc71-a47637471f32
-caps.latest.revision: "5"
+caps.latest.revision: ''
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9599d16a627d3bef2c5a1f0261d6395b08ec1ecd
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: af58193a2ce3b8e1bd6bfb21927dfaf1c96be4b8
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="monitor-and-respond-to-events"></a>Überwachen und Reagieren auf Ereignisse
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent kann Ereignisse überwachen und automatisch auf *Ereignisse* reagieren. Zu diesen Ereignissen gehören Meldungen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], bestimmte Leistungsbedingungen und WMI-Ereignisse (Windows Management Instrumentation, Windows-Verwaltungsinstrumentation).  
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+
+> [!IMPORTANT]  
+> In einer [verwalteten Azure SQL-Datenbank-Instanz](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) werden die meisten, aber nicht alle, SQL Server-Agent-Features unterstützt. Weitere Informationen finden Sie unter [T-SQL-Unterschiede zwischen einer verwalteten Azure SQL-Datenbank-Instanz und SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
+
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent kann Ereignisse überwachen und automatisch auf *Ereignisse*reagieren. Zu diesen Ereignissen gehören Meldungen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], bestimmte Leistungsbedingungen, und WMI-Ereignisse (Windows Management Instrumentation, Windows-Verwaltungsinstrumentation).  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
 [Warnungen](../../ssms/agent/alerts.md)  

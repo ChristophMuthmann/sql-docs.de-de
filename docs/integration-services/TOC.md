@@ -104,7 +104,9 @@
 
 # [Importieren und Exportieren von Daten](../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)
 
-# [Change Data Capture](../integration-services/change-data-capture/change-data-capture-ssis.md)
+# [Laden von Daten aus oder in Excel](load-data-to-from-excel-with-ssis.md)
+
+# [Change data capture](../integration-services/change-data-capture/change-data-capture-ssis.md)
 
 # [Microsoft Connector for SAP BW](microsoft-connector-for-sap-bw.md)
 ## [Installieren von Microsoft Connector für SAP BW](installing-the-microsoft-connector-for-sap-bw.md)
@@ -175,8 +177,8 @@
 #### [Lektion 3-3: Testen des bereitgestellten Pakets](lesson-3-3-testing-the-deployed-packages.md)
 
 # Ressourcen
-## [Abrufen von Hilfe im SSIS-Forum](https://social.msdn.microsoft.com/Forums/home?forum=sqlintegrationservices)
-## [Abrufen von Hilfe auf Stack Overflow](http://stackoverflow.com/questions/tagged/ssis)  
-## [Dem SSIS-Teamblog folgen](https://blogs.msdn.microsoft.com/ssis/)
-## [Melden von Problemen und anfordern von Features](https://feedback.azure.com/forums/908035-sql-server)
+## [Erhalten Sie Hilfe im SSIS-Forum](https://social.msdn.microsoft.com/Forums/home?forum=sqlintegrationservices)
+## [Erhalten Sie Hilfe auf Stack Overflow](http://stackoverflow.com/questions/tagged/ssis)  
+## [Folgen Sie dem SSIS-Teamblog](https://blogs.msdn.microsoft.com/ssis/)
+## [Probleme melden und Funktionen anfordern](https://feedback.azure.com/forums/908035-sql-server)
 ## [Rufen Sie die Dokumente auf Ihrem PC auf](../sql-server/sql-server-help-installation.md)
