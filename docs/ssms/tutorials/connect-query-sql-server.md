@@ -10,21 +10,23 @@ ms.suite: sql
 ms.prod_service: sql-tools
 ms.reviewer: sstein
 manager: craigg
-ms.openlocfilehash: 7b389c5b58dc0afde077f70e2fd8bec7c6cac4d0
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: 6f4110a0ae1b4ca349cc9b990cc9a32f7d41764d
+ms.sourcegitcommit: ccb05cb5a4cccaf7ffa9e85a4684fa583bab914e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="tutorial-connect-and-query-sql-server-using-sql-server-management-studio"></a>Tutorial: Herstellen einer Verbindung mit und Abfragen von SQL Server über SQL Server Management Studio
 In diesem Tutorial erfahren Sie, wie Sie mit SQL Server Management Studio (SSMS) eine Verbindung mit einer SQL Server-Instanz herstellen und grundlegende T-SQL-Befehle (Transact-SQL) ausführen. Dieser Artikel enthält Beispiele für folgende Themen:
-    - [Herstellen einer Verbindung mit SQL Server](#connect-to-a-sql-server)
-    - [Erstellen einer neuen Datenbank (**TutorialDB**)](#create-a-database)
-    - [Erstellen einer Tabelle (**Customers**) in der neuen Datenbank](#create-a-table)
-    - [Einfügen von Zeilen in die neue **Customers**-Tabelle](#insert-rows)
-    - [Abfragen der **Customers**-Tabelle und Aufrufen der Ergebnisse](#view-query-results)
-    - [Überprüfen der Verbindungseigenschaften mit der Tabelle im Abfragefenster](#verify-your-query-window-connection-properties)
-    - [Ändern der Serververbindung für das Abfragefenster](#change-server-connection-within-query-window)
+
+> [!div class="checklist"]
+> * [Herstellen einer Verbindung mit SQL Server](#connect-to-a-sql-server)
+> * [Erstellen einer neuen Datenbank (**TutorialDB**)](#create-a-database)
+> * [Erstellen einer Tabelle (**Customers**) in der neuen Datenbank](#create-a-table)
+> * [Einfügen von Zeilen in die neue **Customers**-Tabelle](#insert-rows)
+> * [Abfragen der **Customers**-Tabelle und Aufrufen der Ergebnisse](#view-query-results)
+> * [Überprüfen der Verbindungseigenschaften mit der Tabelle im Abfragefenster](#verify-your-query-window-connection-properties)
+> * [Ändern der Serververbindung für das Abfragefenster](#change-server-connection-within-query-window)
 
 
 ## <a name="prerequisites"></a>Voraussetzungen
