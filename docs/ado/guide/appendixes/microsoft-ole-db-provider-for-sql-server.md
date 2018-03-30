@@ -1,35 +1,37 @@
 ---
-title: "Microsoft OLE DB-Anbieter für SQLServer | Microsoft Docs"
+title: Microsoft OLE DB-Anbieter für SQLServer | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - providers [ADO], OLE DB provider for SQL Server
 - OLE DB provider for SQL Server [ADO]
 - SQLOLEDB [ADO]
 ms.assetid: 99bc40c4-9181-4ca1-a06f-9a1a914a0b7b
-caps.latest.revision: 
+caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 3d7be2d6b7f9be8105723b8781106b50da678b11
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 69e32ae7ddb254e18d0789f22bb6471da17a0c5e
+ms.sourcegitcommit: 9f4330a4b067deea396b8567747a6771f35e6eee
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/30/2018
 ---
 # <a name="microsoft-ole-db-provider-for-sql-server-overview"></a>Microsoft OLE DB-Anbieter für SQL Server-Übersicht
 Microsoft OLE DB-Anbieter für SQL Server, SQLOLEDB, ermöglicht ADO, Microsoft SQL Server anzumelden.
+
+**Hinweis:** es wird nicht empfohlen, diesen Treiber für neue Entwicklungen verwenden. Die neue OLE DB-Anbieter wird aufgerufen, die [Microsoft OLE DB-Treiber für SQL Server](../../../connect/oledb/oledb-driver-for-sql-server.md) (MSOLEDBSQL) der wird mit den neuesten Serverfeatures zukünftig aktualisiert.
 
 ## <a name="connection-string-parameters"></a>Parameter für Verbindungszeichenfolgen
  Zur Verbindung mit diesem Anbieter Festlegen der *Anbieter* Argument an die ["ConnectionString"](../../../ado/reference/ado-api/connectionstring-property-ado.md) Eigenschaft:
