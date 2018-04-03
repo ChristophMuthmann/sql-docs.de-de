@@ -1,28 +1,30 @@
 ---
 title: SQLDriverConnect (Visual FoxPro-ODBC-Treiber) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: SQLDriverConnect function [ODBC], Visual FoxPro ODBC Driver
+helpviewer_keywords:
+- SQLDriverConnect function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: 10492c8f-3a18-4971-9db8-879e878083b9
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 95587af8044ec6485729233ebff378ceac064c40
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 67961f2d5b02bf203e67c82ed1406739aba914a1
+ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="sqldriverconnect-visual-foxpro-odbc-driver"></a>SQLDriverConnect (Visual FoxPro-ODBC-Treiber)
 > [!NOTE]  
@@ -49,7 +51,7 @@ ms.lasthandoff: 12/21/2017
 |Exclusive|"Yes" oder "No"|  
 |SourceDB|Einen vollständig qualifizierten Pfad auf ein Verzeichnis mit NULL oder mehr [frei Tabellen](../../odbc/microsoft/visual-foxpro-terminology.md), oder der absolute Pfad und Dateiname für eine [Datenbank](../../odbc/microsoft/visual-foxpro-terminology.md).|  
 |SourceType|"Datenbank" oder "DBF"|  
-|Versionsoptionen||  
+|Version||  
   
  Wenn der Name der Datenquelle nicht angegeben ist, wird der Treiber-Manager fordert den Benutzer Informationen zu erhalten (entsprechend der Einstellung von der *fDriverCompletion* Argument) und dann fortgesetzt wird. Wenn Sie weitere Informationen erforderlich ist, zeigt der Visual FoxPro-ODBC-Treiber das Dialogfeld "Prompt".  
   

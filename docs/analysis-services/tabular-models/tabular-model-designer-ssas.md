@@ -1,31 +1,31 @@
 ---
-title: "Designer für tabellarische Modelle | Microsoft Docs"
-ms.date: 10/19/2017
+title: Designer für tabellarische Modelle in SQL Server Data Tools | Microsoft Docs
+ms.date: 03/30/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.custom: 
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.custom: ''
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.ASVS.BIDTOOLSET.TOPLEVSEMMODUIENTRY.F1
 ms.assetid: 45735c57-2a95-4e45-8994-7242df6c9c5f
-caps.latest.revision: 
+caps.latest.revision: 22
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 98eb6a35d2dba7c71dcd857ffdfbe08c6e8bd17c
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 062505fcf50d84cb853cff541dc0cf6ed6ee0f3e
+ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/03/2018
 ---
-# <a name="tabular-model-designer-ssas"></a>Tabellen-Modell-Designer (SSAS)
+# <a name="tabular-model-designer"></a>Designer für tabellarische Modelle
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
 Der Designer für tabellarische Modelle ist Bestandteil von [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]und in Microsoft [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]integriert. Der Designer bietet zusätzliche Projekttypvorlagen speziell für die Entwicklung von Projektmappen für professionelle tabellarische Modelle.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] wird als kostenloser Webdownload installiert. Weitere Informationen finden Sie unter [Herunterladen von SQL Server Data Tools (SSDT)](../../ssdt/download-sql-server-data-tools-ssdt.md).    
   
@@ -139,7 +139,6 @@ Der Designer für tabellarische Modelle ist Bestandteil von [!INCLUDE[ssBIDevStu
  Die Analysis Services-Tastenkombinationen können über das Dialogfeld Tools->Optionen->Tastatur konfiguriert bzw. neu zugeordnet werden. Einige globale [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]-Verknüpfungen, wie z.B. „Erstellen“, „Speichern“, „Debuggen“, „neues Projekt“ usw., werden im Kontext des Designers für tabellarische Modelle unterstützt. Andere spezifische Tastenkombinationen des Designers für tabellarische Modelle sind im Analysis Services-Kontext verfügbar.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Projekte für tabellarische Modelle](../../analysis-services/tabular-models/tabular-model-projects-ssas-tabular.md)   
- [Eigenschaften](../../analysis-services/tabular-models/properties-ssas-tabular.md)  
+ [Tabellenmodellprojekte](../../analysis-services/tabular-models/tabular-model-projects-ssas-tabular.md)   
   
   

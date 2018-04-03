@@ -1,28 +1,29 @@
 ---
-title: "Kompatibilitätsgrad für tabellarische Modelle in Analysis Services | Microsoft Docs"
-ms.custom: 
-ms.date: 10/16/2017
+title: Kompatibilitätsgrad für tabellarische Modelle in Analysis Services | Microsoft Docs
+ms.custom: ''
+ms.date: 03/30/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-f1_keywords: sql13.asvs.bidtoolset.versioncompat.f1
+f1_keywords:
+- sql13.asvs.bidtoolset.versioncompat.f1
 ms.assetid: 8943d78d-4a73-4be8-ad14-3d428f5abd06
-caps.latest.revision: "27"
+caps.latest.revision: 27
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 4dcc372bb9eac9887a06923cf517e4375ec1bbcb
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 6fbd08b52c50e8ea010f4fcc6664176935457322
+ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="compatibility-level-for-analysis-services-tabular-models"></a>Kompatibilitätsgrad für tabellarische Modelle von Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -34,7 +35,7 @@ ms.lasthandoff: 01/08/2018
 Der Kompatibilitätsgrad 1400 Hauptfunktionen sind:
 
 *  Neue Infrastruktur für die datenverbindungen und Import in tabellarischen Modellen mit Unterstützung für TOM-APIs und TMSL-Skripts. Dies ermöglicht die Unterstützung für zusätzliche Datenquellen wie z. B. Azure Blob-Speicher. Zusätzliche Daten von Quellen werden werden in zukünftigen Updates enthalten.
-*  Datentransformation und Funktionen für die Mashups mit Daten abrufen und M-Ausdrücken.
+*  Datentransformation und Funktionen für die Mashups mit Daten abrufen und M-Ausdrücken in SSDT.
 *  Measures unterstützen jetzt eine Eigenschaft Detailzeilen mit einem DAX-Ausdruck, und Aktivieren von BI-Tools wie Microsoft Excel Drilldown zu detaillierten Daten aus einem aggregierten Bericht. Wenn Endbenutzer den Gesamtumsatz für eine Region und Monat anzeigen, können sie die zugehörigen Auftragsdetails anzeigen. 
 *  Objektebene Sicherheit für Tabellen- und Spaltennamen, zusätzlich zu den darin enthaltenen Daten.
 *  Verbesserte Unterstützung für unregelmäßige Hierarchien.
@@ -46,12 +47,12 @@ Der Kompatibilitätsgrad 1400 Hauptfunktionen sind:
 |||  
 |-|-|- 
 |**Kompatibilitätsgrad**|**Serverversion**| 
-|1400|Azure Analysis Services, SqlServer 2017 |  
+|1400|Azure Analysis Services, SQL Server 2017 |  
 |1200|Azure Analysis Services, SqlServer 2017 SQLServer 2016| 
 |1103|SQLServer 2017 *, SqlServer 2016, SqlServer 2014, SQL Server 2012 SP1|  
 |1100|SQLServer 2017 *, SqlServer 2016, SqlServer 2014, SQL Server 2012 SP1, SqlServer 2012| 
 
-\*1100 und 1103 Kompatibilitätsgrade sind in SQL Server-2017 veraltet.
+\* 1100 und 1103 Kompatibilitätsgrade sind in SQL Server-2017 veraltet.
   
 ## <a name="set-compatibility-level"></a>Set-Kompatibilitätsgrad 
  Wenn Sie ein neues Projekt für tabellarische Modelle in SQL Server Data Tools (SSDT) erstellen, können Sie den Kompatibilitätsgrad angeben, auf die **Designer für tabellarische Modelle** Dialogfeld. 

@@ -21,11 +21,11 @@ author: pmasl
 ms.author: Pedro.Lopes
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e363464201a3d80c296ccd111e6708d5b3176501
-ms.sourcegitcommit: 9f4330a4b067deea396b8567747a6771f35e6eee
+ms.openlocfilehash: f6bff4cdd5ea1a6b2fef3283ba9c0413e3d26842
+ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="conversions-ole-db"></a>Konvertierungen (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -47,7 +47,7 @@ ms.lasthandoff: 03/30/2018
      *JJJJ*-*mm*-*TT*  
   
 > [!NOTE]  
->  Frühere Versionen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client und SQLOLEDB haben OLE-Konvertierungen implementiert, falls Standardkonvertierungen fehlgeschlagen sind. Folglich unterscheiden sich einige Konvertierungen, die vom OLE DB-Treiber für SQL Server, von der OLE DB-Spezifikation.  
+>  Frühere Versionen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client und SQLOLEDB haben OLE-Konvertierungen implementiert, falls Standardkonvertierungen fehlgeschlagen sind. Der OLE DB-Treiber für SQL Server folgt das gleiche Verhalten wie [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client. Folglich unterscheiden sich einige Konvertierungen, die vom OLE DB-Treiber für SQL Server, von der OLE DB-Spezifikation.  
   
  Konvertierungen von Zeichenfolgen ermöglichen Flexibilität bei Leerstellen- und Feldbreite. Weitere Informationen finden Sie im Abschnitt "Datenformate: Zeichenfolgen und Literale" unter [Datentypunterstützung für OLE DB-Datum und Uhrzeit-Verbesserungen](../../oledb/ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md).  
   

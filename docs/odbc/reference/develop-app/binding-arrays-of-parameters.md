@@ -1,31 +1,32 @@
 ---
 title: Binden von Arrays von Parametern | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - binding parameter arrays [ODBC]
 - arrays of parameter values [ODBC]
 - parameter arrays [ODBC]
 ms.assetid: 037afe23-052d-4f3a-8aa7-45302b199ad0
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ad5bb4e2281802c231b4dc7abcfd356c8ca4b72c
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 09b3a3c732b34a5a1a7a1d98e2ebe9740069f72e
+ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="binding-arrays-of-parameters"></a>Binden von Arrays von Parametern
 Anwendungen, die Arrays von Parametern verwenden, binden die Arrays an die Parameter in der SQL-Anweisung. Es gibt zwei Bindung Formate ein:  
@@ -41,7 +42,7 @@ Anwendungen, die Arrays von Parametern verwenden, binden die Arrays an die Param
   
  Die spaltenweise Bindung ist die Standardeinstellung. Die Anwendung kann über zeilenbezogene Bindungen auch spaltenbezogene Bindung ändern, indem SQL_ATTR_PARAM_BIND_TYPE-Anweisungsattribut festlegen verwendet wird. Die folgende Abbildung zeigt die Funktionsweise der spaltenbezogenen Bindung.  
   
- ![Zeigt, wie Spalte &#45; hintergrundprüfung Bindung Works](../../../odbc/reference/develop-app/media/pr31.gif "pr31")  
+ ![Zeigt, wie Spalte&#45;hintergrundprüfung binden Works](../../../odbc/reference/develop-app/media/pr31.gif "pr31")  
   
  Beispielsweise der folgende Code bindet 10 Elemente umfassende Arrays Parameter für die Spalten PartID, Beschreibung und den Preis und führt eine Anweisung zum Einfügen von 10 Zeilen. Er verwendet spaltenbezogene Bindungen.  
   
@@ -59,9 +60,9 @@ SQLINTEGER     PartIDIndArray[ARRAY_SIZE], DescLenOrIndArray[ARRAY_SIZE],
 SQLUSMALLINT   i, ParamStatusArray[ARRAY_SIZE];  
 SQLULEN ParamsProcessed;  
   
-memset(DescLenOrIndArray, 0, sizeof(DescLenOrIndArray);  
-memset(PartIDIndArray, 0, sizeof(PartIDIndArray);  
-memset(PriceIndArray, 0, sizeof(PriceIndArray);  
+memset(DescLenOrIndArray, 0, sizeof(DescLenOrIndArray));  
+memset(PartIDIndArray, 0, sizeof(PartIDIndArray));  
+memset(PriceIndArray, 0, sizeof(PriceIndArray));  
   
 // Set the SQL_ATTR_PARAM_BIND_TYPE statement attribute to use  
 // column-wise binding.  
@@ -134,7 +135,7 @@ Address = Bound Address + ((Row Number - 1) * Structure Size) + Offset
   
  Legen Sie die, in denen Zeilen zwischen 1 auf die Größe des Parameters nummeriert sind. Der Offset, sofern definiert, ist das Anweisungsattribut SQL_ATTR_PARAM_BIND_OFFSET_PTR verweist. Die folgende Abbildung zeigt die Funktionsweise der zeilenbezogenen Bindung. Die Parameter in der Struktur in beliebiger Reihenfolge platziert werden können, jedoch in sequenzieller Reihenfolge aus Gründen der Übersichtlichkeit angezeigt.  
   
- ![Zeigt wie Zeile &#45; hintergrundprüfung Bindung Works](../../../odbc/reference/develop-app/media/pr32.gif "pr32")  
+ ![Zeigt wie Zeile&#45;hintergrundprüfung binden Works](../../../odbc/reference/develop-app/media/pr32.gif "pr32")  
   
  Der folgende Code erstellt eine Struktur mit Elementen, für die Werte in den Spalten PartID, Beschreibung und den Preis zu speichern. Anschließend ordnet ein Array mit 10 Elementen dieser Strukturen und bindet sie an die Parameter für die Spalten PartID, Beschreibung und den Preis, verwenden zeilenbezogene Bindungen. Es wird eine Anweisung zum Einfügen von 10 Zeilen ausgeführt.  
   
