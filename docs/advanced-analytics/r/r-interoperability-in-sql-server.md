@@ -1,26 +1,24 @@
 ---
-title: "R-Interoperabilität in SQL Server R Services|Microsoft-Dokumente"
-ms.custom: 
+title: R-Interoperabilität in SQL Server R Services|Microsoft-Dokumente
+ms.custom: ''
 ms.date: 07/11/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-ms.assetid: 0506b950-34b3-4f11-8e2f-d067a58015bd
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: 3dd916a0d91d5f237d7a60963c1b3fab1f90b5e9
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 3464b9f051bef8a5403401b022b605b67f54d3df
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="r-interoperability-in-sql-server"></a>R-Interoperabilität in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -33,11 +31,11 @@ Weitere Informationen zu zusätzlichen Komponenten finden Sie unter [neue Kompon
 
 ### <a name="open-source-r-components"></a>Open Source-R-Komponenten
 
-[!INCLUDE[rsql_productname_md](../../includes/rsql-productname-md.md)] enthält eine vollständige Verteilung der R-Basispakete und-Tools an. Weitere Informationen darüber, was in der Basis-Verteilung enthalten ist, finden Sie unter der Dokumentation, die während der Installation den folgenden standardmäßigen Speicherort installiert: `C:\Program Files\Microsoft SQL Server\<instance_name>\R_SERVICES\doc\manual`
+[!INCLUDE[rsql_productname_md](../../includes/rsql-productname-md.md)] enthält eine vollständige Verteilung der Basis-R-Pakete und -Tools. Weitere Informationen darüber, was in der Basis-Verteilung enthalten ist, finden Sie unter der Dokumentation, die während der Installation den folgenden standardmäßigen Speicherort installiert: `C:\Program Files\Microsoft SQL Server\<instance_name>\R_SERVICES\doc\manual`
 
 Im Rahmen der Installation von [!INCLUDE[rsql_productname_md](../../includes/rsql-productname-md.md)], müssen Sie den Bedingungen der öffentlichen GNU-Lizenz zustimmen. Anschließend können Sie Standard-R-Pakete ohne weitere Änderungen ausführen, wie in anderen Open-Source-Verteilungen von R.
 
-[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] R-Laufzeitmoduls in keiner Weise werden nicht geändert werden. Die R-Laufzeit wird außerhalb des [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]-Prozesses ausgeführt und kann unabhängig von [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ausgeführt werden. Es wird jedoch dringend empfohlen, diese Tools nicht zu verwenden, während [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] R verwendet, um Ressourcenkonflikte zu vermeiden.
+[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ändert die R-Laufzeit in keiner Weise. Die R-Laufzeit wird außerhalb des [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]-Prozesses ausgeführt und kann unabhängig von [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ausgeführt werden. Es wird jedoch dringend empfohlen, diese Tools nicht zu verwenden, während [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] R verwendet, um Ressourcenkonflikte zu vermeiden.
 
 Die R-Basispaket-Verteilung, die mit einer bestimmten [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]-Instanz verknüpft ist, finden Sie in dem Ordner, der mit der Instanz verknüpft ist. Z. B. Wenn Sie R Services auf der Standardinstanz installiert haben, R-Bibliotheken in diesem Ordner in der Standardeinstellung befinden:
 

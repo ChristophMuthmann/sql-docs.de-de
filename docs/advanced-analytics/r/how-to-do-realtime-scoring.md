@@ -10,15 +10,15 @@ ms.component: r
 ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: 2a79ab351f109959a743fecfb4cb6a0d186c6892
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
+ms.openlocfilehash: 186ead48ffe33eb8b9dc169041aaf78212a36b0a
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="how-to-perform-realtime-scoring-or-native-scoring-in-sql-server"></a>Zum Bewerten von Realtime oder systemeigenen bewerten in SQL Server ausführen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

@@ -1,28 +1,26 @@
 ---
 title: Installieren und Verwalten von Machine Learning-Paketen in SQL Server | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 02/19/2018
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - R
-ms.assetid: 98c14b05-750e-44f9-8531-1298bf51e8d2
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: On Demand
-ms.openlocfilehash: 0fd96240581203d9f948372dfbe98cac80a3b906
-ms.sourcegitcommit: c08d665754f274e6a85bb385adf135c9eec702eb
+ms.openlocfilehash: 9b2bf101674d6733c137324c9e5581647251726b
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="installing-and-managing-machine-learning-packages-in-sql-server"></a>Installieren und Verwalten von Machine Learning-Paketen in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

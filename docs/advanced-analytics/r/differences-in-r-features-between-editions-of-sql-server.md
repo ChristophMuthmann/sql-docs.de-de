@@ -10,17 +10,15 @@ ms.component: r
 ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
-ms.assetid: ''
-caps.latest.revision: ''
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: 50c9f2c8f1039ce0bba25ed9c6b7c5564c1d10d2
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
+ms.openlocfilehash: b64e836dc8969058e5012197e85fa78d40b87ac6
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="feature-availability-across-editions-of-sql-server-machine-learning-services"></a>Verfügbarkeit von Features für Editionen von SQL Server-Machine Learning-Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

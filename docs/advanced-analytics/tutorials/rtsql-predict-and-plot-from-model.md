@@ -1,29 +1,27 @@
 ---
 title: Vorhersagen und Zeichnen von Modell (R in SQL-Schnellstart) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/20/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
-ms.component: 
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.component: ''
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: tutorial
 dev_langs:
 - R
 - SQL
-ms.assetid: 46babd8a-a331-44fc-bbd6-24daf58865e1
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: On Demand
-ms.openlocfilehash: 835e7d4901fc3d58edfedaea4474e9b523b71620
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: b30c2443b8b1532d008e717e1b86fdb62adbe0a1
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="predict-and-plot-from-model-r-in-sql-quickstart"></a>Vorhersagen und Zeichnen von Modell (R in SQL-Schnellstart)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

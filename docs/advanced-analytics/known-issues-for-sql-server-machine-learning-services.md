@@ -3,24 +3,22 @@ title: Bekannte Probleme in Machine Learning Services | Microsoft Docs
 ms.date: 02/05/2018
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-ms.assetid: 2b37a63a-5ff5-478e-bcc2-d13da3ac241c
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: On Demand
-ms.openlocfilehash: 0e9f4351e74e73453182ff8e8f840f50f0085537
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: 65294b0b630b662e68d252312a865dc8e898dec5
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="known-issues-in-machine-learning-services"></a>Bekannte Probleme in Machine Learning-Diensten
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

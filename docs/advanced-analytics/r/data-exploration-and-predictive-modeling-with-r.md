@@ -11,17 +11,15 @@ ms.component: r
 ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
-ms.assetid: bf6de7e2-f394-4b8a-a4b7-0b8dadf25426
-caps.latest.revision: ''
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: 09f3ec8f5171050082ab4bc5ede085387682a33e
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
+ms.openlocfilehash: 40ea95675221a4a8f349447641cb73f7d5fc3305
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="data-exploration-and-predictive-modeling-with-r"></a>Datensuche und Vorhersagemodellierung mit R
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

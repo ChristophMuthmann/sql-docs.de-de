@@ -1,28 +1,26 @@
 ---
 title: Zum Erstellen von MDX-Abfragen, die mit OlapR | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/29/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - R
-ms.assetid: c12b988e-be7e-41ba-a84c-299a5c45d4ab
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: 12c44fd21ab72975276e41c3107ca68d67dc2f82
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 9d917316a9d25b0634605e0f55eae3eda93f8669
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="how-to-create-mdx-queries-using-olapr"></a>Vorgehensweise: Erstellen von MDX-Abfragen mit olapR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -40,7 +38,7 @@ Die folgenden Vorgänge werden nicht unterstützt:
 + Erstellen von neuen OLAP-Objekten
 + Rückschreiben von Daten in Partitionen, einschließlich Measures "oder" Summen
 
-## <a name="buildMDX"></a>Erstellen Sie eine MDX-Abfrage von R
+## <a name="buildMDX"></a> Erstellen Sie eine MDX-Abfrage von R
 
 1. Definieren Sie eine Verbindungszeichenfolge, die die OLAP-Datenquelle (SSAS-Instanz) und den MSOLAP-Anbieter angibt.
 
@@ -51,8 +49,8 @@ Die folgenden Vorgänge werden nicht unterstützt:
 4. Verwenden Sie die folgenden Hilfsfunktionen, um weitere Details über die Dimensionen und Measures anzugeben, die in der MDX-Abfrage enthalten sein sollen:
 
      + `cube()` Geben Sie den Namen der SSAS-Datenbank an. Wenn eine Verbindung mit einer benannten Instanz herstellen, geben Sie den Computernamen und den Instanznamen ein. 
-     + `columns()`Geben Sie die Namen von Measures zur Verwendung in der **ON Spalten** Argument.
-     + `rows()`Geben Sie die Namen von Measures zur Verwendung in der **ON Zeilen** Argument.
+     + `columns()` Geben Sie die Namen von Measures zur Verwendung in der **ON Spalten** Argument.
+     + `rows()` Geben Sie die Namen von Measures zur Verwendung in der **ON Zeilen** Argument.
      + `slicers()` Geben Sie ein Feld oder Elemente an, das bzw. die als Datenschnitt verwendet werden soll(en). Ein Datenschnitt funktioniert wie ein Filter, der auf alle MDX-Abfragedaten angewendet wird.
      
      + `axis()` Geben Sie den Namen einer in der Abfrage zu verwendenden zusätzlichen Achse an. 
@@ -66,7 +64,7 @@ Die folgenden Vorgänge werden nicht unterstützt:
   + `executeMD` Gibt ein mehrdimensionales Array zurück
   + `execute2D` Gibt einen zweidimensionalen (tabellarischen) Datenrahmen zurück
 
-## <a name="executeMDX"></a>Führen Sie eine gültige MDX-Abfrage von R
+## <a name="executeMDX"></a> Führen Sie eine gültige MDX-Abfrage von R
 
 1. Definieren Sie eine Verbindungszeichenfolge, die die OLAP-Datenquelle (SSAS-Instanz) und den MSOLAP-Anbieter angibt.
 
@@ -191,7 +189,7 @@ explore(ocs, "Sales")
 
 #### <a name="to-return-all-members-of-the-specified-dimension-and-hierarchy"></a>So geben Sie alle Elemente der angegebenen Dimension und Hierarchie zurück
 
-Geben Sie nach dem Definieren der Quelle und dem Erstellen des Handles den Cube, die Dimension und die Hierarchie an, die zurückgegeben werden sollen. In den zurückgegebenen Ergebnisse, Elemente, die mit dem Präfix  **->**  untergeordneten Elemente des vorherigen Elements darstellen.
+Geben Sie nach dem Definieren der Quelle und dem Erstellen des Handles den Cube, die Dimension und die Hierarchie an, die zurückgegeben werden sollen. In den zurückgegebenen Ergebnisse, Elemente, die mit dem Präfix **->** untergeordneten Elemente des vorherigen Elements darstellen.
 
 ```R
 cnnstr <- "Data Source=localhost; Provider=MSOLAP;"

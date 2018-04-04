@@ -1,29 +1,27 @@
 ---
 title: Verwenden das Paket MicrosoftML mit SQLServer | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/23/2017
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - R
-ms.assetid: 1c377717-e281-431e-8171-3924dcce1cdd
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: d6b3c17d4fadf639102c4090fceaabee37276bc2
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 8d3cec4401f23e4cf7f187b1a937eb10b60dbcd0
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="using-the-microsoftml-package-with-sql-server"></a>Verwenden das Paket MicrosoftML mit SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -52,7 +50,7 @@ MicrosoftML enthält eine Vielzahl von Machine learning-Algorithmen und Transfor
 
 - Struktur und Entscheidung Gesamtstruktur Modelle Entscheidung: `rxFastTree` einem verstärkten Entscheidungsbaumalgorithmus als FastRank, die für die Verwendung in Bing entwickelt wurde ursprünglich bezeichnet wird. Es ist eins der schnellsten und am häufigsten verwendeten Lernmodule. Es unterstützt binäre Klassifizierung und Regression.
 
-  `rxFastForest`basiert ein Logistisches Regressionsmodell auf die zufälligen Gesamtstruktur-Methode. Es ähnelt der `rxLogit` -Funktion in RevoScaleR, unterstützt aber L1- und L2-Regularisierung. Es unterstützt binäre Klassifizierung und Regression.
+  `rxFastForest` basiert ein Logistisches Regressionsmodell auf die zufälligen Gesamtstruktur-Methode. Es ähnelt der `rxLogit` -Funktion in RevoScaleR, unterstützt aber L1- und L2-Regularisierung. Es unterstützt binäre Klassifizierung und Regression.
 
 - Die logistische Regression: `rxLogisticRegression` ähnelt ein logistischen Regressionsmodell der `rxLogit` Funktion in "revoscaler", mit zusätzlicher Unterstützung für die L1- und L2-regularisierung. Binäre oder mehrklassige Klassifizierung wird unterstützt.
 

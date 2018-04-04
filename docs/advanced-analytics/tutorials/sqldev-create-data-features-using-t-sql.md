@@ -1,31 +1,29 @@
 ---
 title: 'Lektion 4: Erstellen von Data-Funktionen, die mithilfe des T-SQL | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 07/26/2016
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
-ms.component: 
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.component: ''
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: tutorial
 applies_to:
 - SQL Server 2016
 dev_langs:
 - R
 - TSQL
-ms.assetid: 5b2f4c44-6192-40df-abf1-fc983844f1d0
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: 5802fe172f8476d11a776b15fd2038ebc6917eaf
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 20e1a425f297165b5d82a00b8722407913b4bbc0
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="lesson-4-create-data-features-using-t-sql"></a>Lektion 4: Erstellen von Data-Funktionen, die mithilfe des T-SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

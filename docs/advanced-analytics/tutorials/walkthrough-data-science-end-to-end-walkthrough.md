@@ -1,29 +1,27 @@
 ---
-title: "End-to-End Data sience-Vorgehensweise für R und SQL Server | Microsoft Docs"
-ms.custom: 
+title: End-to-End Data sience-Vorgehensweise für R und SQL Server | Microsoft Docs
+ms.custom: ''
 ms.date: 08/22/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
-ms.component: 
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.component: ''
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: tutorial
 applies_to:
 - SQL Server 2016
 dev_langs:
 - R
-ms.assetid: edd76ae9-4125-45a8-bf42-47a85b9d9a32
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
-ms.openlocfilehash: eee99c95b17438fa810501b653a83538e658b205
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
+ms.openlocfilehash: 4ea795cfd3b6fba4d2559399a837eb90b7075eb0
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="end-to-end-data-science-walkthrough-for-r-and-sql-server"></a>End-to-End Data sience-Vorgehensweise für R und SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

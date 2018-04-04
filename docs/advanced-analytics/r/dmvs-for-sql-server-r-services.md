@@ -10,17 +10,15 @@ ms.component: r
 ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
-ms.assetid: b3643ea0-d9f3-463f-8ece-572127f32a24
-caps.latest.revision: ''
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: 2e51f5229eb085eb4b92a4f6f53cc7b28ebb7485
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
+ms.openlocfilehash: 269b40244faca6bd76e1245f8771ed4bf26ae594
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="dmvs-for-sql-server-machine-learning-services"></a>DMVs für SQL Server-Machine Learning-Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

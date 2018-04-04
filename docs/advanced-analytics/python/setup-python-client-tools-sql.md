@@ -11,15 +11,15 @@ ms.suite: sql
 ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: d81c3db5c1d1f4658ff9490316fe2311ba96c66f
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: c0054fd0dc9ecb3dbf9035ddff0f6828a85b471d
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="set-up-python-client-tools-for-use-with-sql-server"></a>Einrichten von Python-Clienttools für die Verwendung mit SQL Server 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

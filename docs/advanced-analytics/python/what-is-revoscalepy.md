@@ -1,23 +1,23 @@
 ---
-title: "Einführung in Revoscalepy | Microsoft Docs"
-ms.custom: 
+title: Einführung in Revoscalepy | Microsoft Docs
+ms.custom: ''
 ms.date: 10/05/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: python
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
-ms.openlocfilehash: 2649596abecfd92d40a860e743c867e0ff80ed26
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
+ms.openlocfilehash: fc59cbc5a34e79a98a787dea34f5ff1440fbe8c3
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="introducing-revoscalepy"></a>Einführung in revoscalepy
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

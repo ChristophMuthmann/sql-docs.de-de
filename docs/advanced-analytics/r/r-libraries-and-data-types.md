@@ -3,25 +3,23 @@ title: Arbeiten mit R-Datentypen | Microsoft-Dokumentation
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 01/31/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-ms.assetid: 5df99e1c-a89a-42c1-9d68-ffe8d9577c94
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: 977d358981e3382a0ea8ee224362098627424e88
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 58728d89907666cbfc6a12e4d850143eb1314493
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="r-libraries-and-r-data-types"></a>R-Bibliotheken und R-Datentypen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -39,7 +37,7 @@ Beide Produkte, R Services und Machine Learning-Dienste mit R, sind bestimmte Ve
 
 Öffnen Sie zum Anzeigen von der R-Version, die einer bestimmten Instanz von SQL Server zugeordnet, "rgui.exe".
 
-1. Für die Standardinstanz wäre der Pfad wie folgt:`C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64\`
+1. Für die Standardinstanz wäre der Pfad wie folgt: `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64\`
 2. Eine Meldung angezeigt, die die Verteilung von R und Microsoft R Open Versionsnummer aufgelistet sind.
 
 Die Version von R in einer bestimmten Version von Microsoft R Server enthalten, finden Sie unter [R-Server – neues](https://msdn.microsoft.com/microsoft-r/rserver-whats-new#new-and-updated-packages).

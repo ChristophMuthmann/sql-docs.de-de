@@ -1,29 +1,28 @@
 ---
-title: "Python-Code in einer gespeicherten Prozedur umschließen | Microsoft Docs"
+title: Python-Code in einer gespeicherten Prozedur umschließen | Microsoft Docs
 titleSuffix: SQL Server
-ms.custom: 
+ms.custom: ''
 ms.date: 02/28/2018
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
-ms.component: 
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.component: ''
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: tutorial
 applies_to:
 - SQL Server 2017
 dev_langs:
 - Python
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
-ms.openlocfilehash: 11b5b649a942b1d1804b799426530a1b82ee9458
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
+ms.openlocfilehash: fa802c2ae213168d7b6d16cecbfad2eb540dce66
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="wrap-python-code-in-a-stored-procedure"></a>Python-Code in einer gespeicherten Prozedur umschließen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

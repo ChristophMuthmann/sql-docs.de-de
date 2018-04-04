@@ -9,17 +9,15 @@ ms.component: r
 ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
-ms.assetid: 21456462-e58a-44c3-9d3a-68b4263575d7
-caps.latest.revision: ''
-author: HeidiSteen
 ms.author: heidist
+author: HeidiSteen
 manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: a1228597a1781ca13952a249f554bdea0a990a4d
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
+ms.openlocfilehash: c9895584e53f488c0db15ad533ba4a2230ae60c4
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="install-pre-trained-machine-learning-models-on-sql-server"></a>Installieren Sie Pre-tained Machine learning-Modelle mit SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

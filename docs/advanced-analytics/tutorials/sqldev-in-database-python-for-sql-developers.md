@@ -1,30 +1,28 @@
 ---
-title: "In der Datenbank Python Analytics für SQL-Entwickler | Microsoft Docs"
-ms.custom: 
+title: In der Datenbank Python Analytics für SQL-Entwickler | Microsoft Docs
+ms.custom: ''
 ms.date: 10/13/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
-ms.component: 
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.component: ''
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: tutorial
 applies_to:
 - SQL Server 2017
 dev_langs:
 - Python
 - TSQL
-ms.assetid: 
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
-ms.openlocfilehash: dab1a9648865f13d1741917bd389eae287afd7f2
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
+ms.openlocfilehash: 3dac546d3396915932241c08c5e51afa09bf3d75
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="in-database-python-analytics-for-sql-developers"></a>In der Datenbank Python-Analyse für SQL-Entwickler
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

@@ -1,27 +1,25 @@
 ---
 title: Verwenden von Daten aus OLAP-Cubes in R | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 12/08/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-dev_langs: 
-ms.assetid: 8093599c-8307-4237-983b-0908d0f8ab77
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+dev_langs: ''
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: On Demand
-ms.openlocfilehash: 256a8a58a61f679cd5b2981134403cc389733e75
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 5c1aa6e5a0c3e4c5338ac9fd263c299ed4c764c1
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="using-data-from-olap-cubes-in-r"></a>Verwenden von Daten aus OLAP-Cubes in R
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

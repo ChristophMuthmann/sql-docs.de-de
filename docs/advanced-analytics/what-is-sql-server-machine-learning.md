@@ -3,24 +3,22 @@ title: Was ist SQL Server-Machine Learning-Services? | Microsoft Docs
 ms.date: 03/07/2018
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-ms.assetid: 
-caps.latest.revision: 
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.workload: 
-ms.openlocfilehash: ccba60d0a3e0fe45f82215a045e53a265d6c0a92
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.workload: ''
+ms.openlocfilehash: 77642fa794493a98c56be70f4615f6401e48b3c5
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="what-is-sql-server-machine-learning-services"></a>Was ist SQL Server-Machine Learning-Services?
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

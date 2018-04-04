@@ -1,27 +1,25 @@
 ---
-title: "Verwalten und Überwachen von Machine Learning-Lösungen | Microsoft Docs"
+title: Verwalten und Überwachen von Machine Learning-Lösungen | Microsoft Docs
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 07/26/2016
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-ms.assetid: d455f22a-190f-4a28-9088-98a843cd5db2
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: 65398ab522f7a39aae08b1f438d2fa59291e4e8f
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: 8fa8eabdb5556f8b46ef46e22d077be43d574687
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="managing-and-monitoring-machine-learning-solutions"></a>Verwalten und Überwachen von Machine Learning-Lösungen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

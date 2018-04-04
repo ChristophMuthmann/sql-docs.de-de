@@ -1,31 +1,29 @@
 ---
 title: SQL Server Data Objekte mithilfe von RxSqlServerData (SQL und R deep Dive) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 12/14/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
-ms.component: 
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.component: ''
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: tutorial
 applies_to:
 - SQL Server 2016
 - SQL Server 2017
 dev_langs:
 - R
-ms.assetid: bcf5f7ff-795b-4815-b163-bcddd496efce
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: On Demand
-ms.openlocfilehash: 4690f7bd66b17643d7d58b10663debd4becbdac7
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 84413df820a415ede57a029b24e16abf4181e54f
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="create-sql-server-data-objects-using-rxsqlserverdata-sql-and-r-deep-dive"></a>Erstellen Sie SQL Server-Datenobjekte mit RxSqlServerData (SQL und R deep Dive)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

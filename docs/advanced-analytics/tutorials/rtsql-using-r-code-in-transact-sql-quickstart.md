@@ -3,29 +3,27 @@ title: Verwenden von R-Code in Transact-SQL (R in SQL-Schnellstart) | Microsoft 
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 08/20/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
-ms.component: 
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.component: ''
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: tutorial
 applies_to:
 - SQL Server 2016
 dev_langs:
 - R
-ms.assetid: 4e6fe30d-a105-4d5b-bc05-5e5204753847
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: Active
-ms.openlocfilehash: 488661c917690c2ec5af6db40a135c8eb3927db1
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: 92c3b1aab8b1d9ceb4f301e0d53f0aa5a9ce495e
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="using-r-code-in-transact-sql-r-in-sql-quickstart"></a>Verwenden von R-Code in Transact-SQL (R in SQL-Schnellstart)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

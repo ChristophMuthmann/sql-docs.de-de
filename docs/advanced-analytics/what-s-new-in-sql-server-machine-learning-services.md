@@ -3,24 +3,22 @@ title: Was&#39;s ist neu in SQL Server-Machine Learning-Services | Microsoft Doc
 ms.date: 03/17/2018
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-ms.assetid: 
-caps.latest.revision: 
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ms.workload: On Demand
-ms.openlocfilehash: ee7186be0f28d7df4018b8f94ef661f865179483
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: 07c21de29f41826d1314f92f77fd9277f84cb0e7
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="whats-new-in-sql-server-machine-learning-services"></a>Neuigkeiten in SQL Server-Machine Learning-Services 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

@@ -1,26 +1,26 @@
 ---
-title: "Erweiterte Ereignisse für die Überwachung der PREDICT-Anweisungen | Microsoft Docs"
+title: Erweiterte Ereignisse für die Überwachung der PREDICT-Anweisungen | Microsoft Docs
 titleSuffix: SQL Server
-ms.custom: 
+ms.custom: ''
 ms.date: 03/01/2018
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: 0e2847690a8d63753c9246995211d0705128f7ab
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+ms.openlocfilehash: d517da44f989620003fef35d2e4721eead15d5d5
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="extended-events-for-monitoring-predict-statements"></a>Erweiterte Ereignisse für die Überwachung der PREDICT-Anweisungen
 

@@ -1,30 +1,28 @@
 ---
 title: " Visualisieren von SQL Server-Daten mithilfe von R (SQL und R deep Dive) | Microsoft Docs"
 ms.date: 12/14/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
-ms.component: 
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.component: ''
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: tutorial
 applies_to:
 - SQL Server 2016
 - SQL Server 2017
 dev_langs:
 - R
-ms.assetid: 10def0b3-9b09-4df9-b8aa-69516f7d7659
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: 13bf00b9b1a196e0a83c7cca62a0504a5b3bcbcd
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 6edb993ecee3ba255d3fd671c40dbda11639fc61
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 #  <a name="visualize-sql-server-data-using-r-sql-and-r-deep-dive"></a>Visualisieren von SQL Server-Daten mithilfe von R (SQL und R deep Dive)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
