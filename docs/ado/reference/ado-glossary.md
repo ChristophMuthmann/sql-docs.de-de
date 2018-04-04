@@ -1,28 +1,28 @@
 ---
 title: ADO-Glossar | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
-ms.technology: "“drivers”"
+ms.technology: drivers
 ms.topic: article
 helpviewer_keywords:
 - ADO, glossary
 ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
-caps.latest.revision: 
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ed92b88736cdc579ddee67dff313f8aad3c69b71
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: f24e579d2cd1802b42ce4ae2cbc2d8b5b8e447e6
+ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="ado-glossary"></a>ADO-Glossar
 In diesem Thema werden Begriffe, die relevant für ADO definiert.  
@@ -54,7 +54,7 @@ In diesem Thema werden Begriffe, die relevant für ADO definiert.
  Eine Zuordnung zwischen einem Feld in einer Tabelle und einer Variablen. In den Visual C++ ADO-Erweiterungen **Recordset** Felder C/C++-Variablen zugeordnet werden.  
   
  bitmask  
- Ein numerischer Wert vorgesehen für ein Bit für Bit Wertvergleich mit anderen numerischen Werten in der Regel so kennzeichnen Sie die Optionen im Parameter oder Rückgabewerte. Dieser Vergleich erfolgt normalerweise mit bitweisen logischen Operatoren, wie z. B. **und** und **oder** in Visual Basic  **&**  und **&#124;** in C++.  
+ Ein numerischer Wert vorgesehen für ein Bit für Bit Wertvergleich mit anderen numerischen Werten in der Regel so kennzeichnen Sie die Optionen im Parameter oder Rückgabewerte. Dieser Vergleich erfolgt normalerweise mit bitweisen logischen Operatoren, wie z. B. **und** und **oder** in Visual Basic **&** und **&#124;** in C++.  
   
  Zum Beispiel das ADO- **FieldAttributeEnum** Werte können als Bitmasken verwendet werden, um die Attribute eines Felds zu bestimmen. Angenommen Sie, Sie möchten, um festzustellen, ob ein Feld aktualisiert wurde. Sie können mit dem folgenden Ausdruck in Visual Basic dafür testen:`Field.Attributes AND adFldUpdatable`  
   
@@ -165,7 +165,7 @@ In diesem Thema werden Begriffe, die relevant für ADO definiert.
   
 ## <a name="e"></a>E  
  Enumeration  
- Eine Liste von benannten Konstanten. Aufgezählter Werte müssen nicht eindeutig sein. Jedoch muss der Name der einzelnen Werte innerhalb des Bereichs eindeutig sein, in dem die Enumeration definiert ist. In ADO Enumerationen dienen zum numerischen Parameter und Rückgabewerte, Bedeutung in ADO-Code hinzufügen und den Entwickler von numerischen Werten geschützt werden (die sich von Version zu Version ändern können). Um beispielsweise einen statischen Öffnen **Recordset**, verwenden Sie die **AdOpenStatic** Enumerationswert:`Recordset.Open ,,adOpenStatic`  
+ Eine Liste von benannten Konstanten. Aufgezählter Werte müssen nicht eindeutig sein. Jedoch muss der Name der einzelnen Werte innerhalb des Bereichs eindeutig sein, in dem die Enumeration definiert ist. In ADO Enumerationen dienen zum numerischen Parameter und Rückgabewerte, Bedeutung in ADO-Code hinzufügen und den Entwickler von numerischen Werten geschützt werden (die sich von Version zu Version ändern können). Um beispielsweise einen statischen Öffnen **Recordset**, verwenden Sie die **AdOpenStatic** Enumerationswert: `Recordset.Open ,,adOpenStatic`  
   
  Auch bezeichnet als *Enumerationskonstante*. Siehe auch *Konstanten*.  
   

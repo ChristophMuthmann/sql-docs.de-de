@@ -1,31 +1,31 @@
 ---
-title: Arbeitsbereichsdatenbank | Microsoft Docs
-ms.custom: 
-ms.date: 02/21/2018
+title: Arbeitsbereichsdatenbank in SQL Server Data Tools | Microsoft Docs
+ms.custom: ''
+ms.date: 03/30/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 662daf08-a514-44a7-8675-44644aa454a2
-caps.latest.revision: 
+caps.latest.revision: 24
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 2ab6a38542e9c6702edcf98401db0796fc5e78e4
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: ad6297a1485d710b6ef34cca88a5610efd6e7c9e
+ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="workspace-database"></a>Arbeitsbereichsdatenbank 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-Die Arbeitsbereichsdatenbank für Tabellenmodelle, die während der Modellerstellung verwendet wird, wird erstellt, wenn Sie ein Projekt für Tabellenmodelle in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]anlegen.
+  Die Arbeitsbereichsdatenbank für Tabellenmodelle, die während der Modellerstellung verwendet wird, wird erstellt, wenn Sie ein Projekt für Tabellenmodelle in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]anlegen.
   
 ## <a name="specifying-a-workspace-instance"></a>Angeben einer Arbeitsbereichinstanz  
   Beim Erstellen eines neuen Tabellenmodellprojekts mit SSDT können Sie eine Analysis Services-Instanz angeben, die beim Erstellen des Projekts verwendet werden soll. Mit dem [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]-Release vom September 2016 (14.0.60918.0) wurden für die Erstellung eines neuen Tabellenmodellprojekts zwei Modi zum Angeben einer Arbeitsbereichsinstanz eingeführt. 

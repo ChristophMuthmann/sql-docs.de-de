@@ -1,29 +1,29 @@
 ---
 title: ADO-Verlauf | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
-ms.technology: "“drivers”"
+ms.technology: drivers
 ms.topic: article
 helpviewer_keywords:
 - ADO, what's new
 ms.assetid: 667673f2-3151-432b-894a-3fc60b704ea4
-caps.latest.revision: 
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4e76e56b9d1840d4e6e1f42acd10b3b9226a61d4
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 283d7ff395edf23668d1921e1f3f2c2e3c985446
+ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="ado-features-for-each-release"></a>ADO-Funktionen für jedes Release
 In diesem Thema werden die neuen Funktionen von jeder Version von ADO, ADO MD und ADOX aufgelistet.
@@ -37,13 +37,13 @@ In diesem Thema werden die neuen Funktionen von jeder Version von ADO, ADO MD un
  *Festplatte Zugriff ist nicht außerhalb einer Zone vertrauenswürdiger Sites zulässig.*
 Die folgenden Vorgänge sind in domänenübergreifende Skripterstellung im Zusammenhang mit nicht vertrauenswürdige Standorten, deaktiviert: **Stream.SaveToFile**, **Stream.LoadFromFile**, **Recordset.Save**, und **Recordset.Open**, zusammen mit den **AdCmdFile** Flag oder mit der Microsoft OLE DB-Persistenz-Provider (MSPersist).
 
- **Recordset.Open** *,***Recordset.Save** *,***Stream.SaveToFile** *, und* **Stream.LoadFromFile***für nur physische Dateien verwendet werden.* 
+ **Recordset.Open** *,***Recordset.Save** *,***Stream.SaveToFile** *, und* **Stream.LoadFromFile***für nur physische Dateien verwendet werden.*
 Diese Methoden nun überprüfen Sie, ob Dateihandles auf nur physische Dateien zeigen.
 
- **Recordset.ActiveCommand***gibt einen Fehler beim Aufrufen aus einem HTML/ASP-Seite zurück.* 
+ **Recordset.ActiveCommand***gibt einen Fehler beim Aufrufen aus einem HTML/ASP-Seite zurück.*
 Dies verhindert, dass die **Befehl** -Sitzungsobjekts missbraucht wird.
 
- *Die Anzahl der***Recordsets***zurückgegebenes eine geschachtelte***Form***Befehl hat eine Obergrenze.* 
+ *Die Anzahl der***Recordsets***zurückgegebenes eine geschachtelte***Form***Befehl hat eine Obergrenze.*
 Ein geschachtelte Shape-Befehl gibt jetzt maximal 512 **Recordsets**. Dies bedeutet, dass eine **Form** Befehl kann nicht mehr in jeder beliebigen Tiefe geschachtelt werden. Stattdessen ist die maximale Tiefe der Ebene 512, wenn jeder Befehl in einem einzelnen (untergeordneten) ergibt **Recordset**. If-auf jeder Ebene, ein **Form** Befehl gibt mehrere **Recordsets**, die maximale Ebene werden weniger als 512.
 
 ## <a name="ado-27"></a>ADO 2.7
@@ -67,7 +67,7 @@ Ein geschachtelte Shape-Befehl gibt jetzt maximal 512 **Recordsets**. Dies bedeu
  *Einzeilige Resultset* der ADO **Datensatz** Objekt kann nun geöffnet werden, auf eine Befehlszeichenfolge oder **Befehl** eine Zeile mit Daten vom Anbieter zurückgegebene Objekt. Dies führt zu einer verbesserten Leistung mit MDAC 2.6-Anbietern. Finden Sie unter [Open-Methode (ADO-Datensatz)](../../ado/reference/ado-api/open-method-ado-record.md).
 
 ## <a name="ado-25"></a>ADO 2.5
- **Datensatz** *Objekt* ADO 2.5 führt die **Datensatz** Objekt zum darstellen und verwalten eine Zeile aus einer **Recordset** oder einen Datenanbieter oder ein Objekt Kapseln einer semistrukturierten Daten, z. B. eine Datei oder ein Verzeichnis an.
+ **Datensatz** *Objekt* ADO 2.5 führt die **Datensatz** Objekt zum darstellen und verwalten eine Zeile aus einer **Recordset** oder einen Datenanbieter oder ein Objekt Kapseln einer teilweise strukturierten Daten, z. B. eine Datei oder ein Verzeichnis.
 
  **Stream** *Objekt* ADO 2.5 führt auch die **Stream** Objekt zur Darstellung eines Datenstroms Binär oder Text.
 
