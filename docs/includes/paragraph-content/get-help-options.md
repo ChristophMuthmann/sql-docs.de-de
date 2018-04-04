@@ -1,6 +1,7 @@
 ##  <a name="infotipmediainfo-tippng-get-help"></a>![info_tip](../media/info-tip.png) Hilfe erhalten 
 - [UserVoice - Vorschlag für die Verbesserung von SQL Server?](https://feedback.azure.com/forums/908035-sql-server)
-- [Stapelüberlauf (Tag „sql-server“): Anlaufstelle für Fragen zur SQL-Entwicklung](http://stackoverflow.com/questions/tagged/sql-server)
+- [DBA-Stapel Exchange (Tag Sql-Server) – stellen Fragen zu SQL Server](https://dba.stackexchange.com/questions/tagged/sql-server)
+    - [Stapelüberlauf (Tag Sql-Server) – auch hat einige Antworten zur Entwicklung von SQL](http://stackoverflow.com/questions/tagged/sql-server) 
 - [Setup und Upgrade - MSDN-Forum](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlsetupandupgrade&filter=alltypes&sort=lastpostdesc)
 - [SQL Server Datatools - MSDN-forum](https://social.msdn.microsoft.com/Forums/en-US/home?forum=ssdt&filter=alltypes&sort=lastpostdesc)
 - [Reddit – allgemeine Erläuterung zu SQL Server](https://www.reddit.com/r/SQLServer/)
