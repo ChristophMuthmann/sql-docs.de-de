@@ -1,16 +1,16 @@
 ---
 title: GO (Transact-SQL) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 07/27/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|language-elements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server (starting with 2008)
@@ -24,16 +24,16 @@ helpviewer_keywords:
 - ending batches [SQL Server]
 - GO command
 ms.assetid: b2ca6791-3a07-4209-ba8e-2248a92dd738
-caps.latest.revision: 
+caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 63fe775455df2b9b25ec3abc8bb0208aa6b5dd0e
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 6c029c375f40e114c6b01f80c3e69bd5841a3521
+ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="sql-server-utilities-statements---go"></a>Anweisungen für SQL Server-Hilfsprogramme - GO
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -98,7 +98,7 @@ GO;
 ```  
   
 ## <a name="examples"></a>Beispiele  
- Im folgenden Beispiel werden zwei Batches erstellt. Der erste Batch enthält nur eine `USE``AdventureWorks2012`-Anweisung zum Festlegen des Datenbankkontexts. Die verbleibenden Anweisungen verwenden eine lokale Variable. Daher müssen alle Deklarationen von lokalen Variablen in einem einzelnen Batch gruppiert werden. Dies wird erreicht, indem ein `GO`-Befehl erst nach der letzten Anweisung, die auf die Variable verweist, ausgeführt wird.  
+ Im folgenden Beispiel werden zwei Batches erstellt. Der erste Batch enthält nur eine `USE AdventureWorks2012`-Anweisung zum Festlegen des Datenbankkontexts. Die verbleibenden Anweisungen verwenden eine lokale Variable. Daher müssen alle Deklarationen von lokalen Variablen in einem einzelnen Batch gruppiert werden. Dies wird erreicht, indem ein `GO`-Befehl erst nach der letzten Anweisung, die auf die Variable verweist, ausgeführt wird.  
   
 ```  
 USE AdventureWorks2012;  

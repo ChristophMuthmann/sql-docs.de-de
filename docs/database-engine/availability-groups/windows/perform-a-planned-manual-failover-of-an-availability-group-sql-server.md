@@ -1,16 +1,16 @@
 ---
-title: "Ausführen eines geplanten manuellen Failovers einer Verfügbarkeitsgruppe (SQL Server) | Microsoft-Dokumentation"
-ms.custom: 
+title: Ausführen eines geplanten manuellen Failovers einer Verfügbarkeitsgruppe (SQL Server) | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 10/25/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: availability-groups
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-high-availability
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.availabilitygroup.manualfailover.f1
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], failover
 - failover [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 419f655d-3f9a-4e7d-90b9-f0bab47b3178
-caps.latest.revision: 
+caps.latest.revision: 36
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f1523eff2118c8a451b13167510e204d039f84fa
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+ms.openlocfilehash: 273222eb4eae452f9385f415723535b416ec7c95
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="perform-a-planned-manual-failover-of-an-availability-group-sql-server"></a>Ausführen eines geplanten manuellen Failovers einer Verfügbarkeitsgruppe (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ Ein geplantes manuelles Failover wird nur unterstützt, wenn das primäre Replik
 ##  <a name="BeforeYouBegin"></a> Vorbereitungen 
 
 >[!IMPORTANT]
->Für das Failover einer schreibgeschützten Verfügbarkeitsgruppe ohne Cluster-Manager gibt es bestimmte Vorgehensweisen. Wenn für eine Verfügbarkeitsgruppe CLUSTER_TYPE = NONE gilt, führen Sie die Schritte unter [Ausführen eines Failovers des primären Replikats auf schreibgeschützten Verfügbarkeitsgruppen](#Fail-over-the-primary-replica-on-a-read-scale-availability-group) aus.
+>Für das Failover einer schreibgeschützten Verfügbarkeitsgruppe ohne Cluster-Manager gibt es bestimmte Vorgehensweisen. Wenn für eine Verfügbarkeitsgruppe CLUSTER_TYPE = NONE gilt, führen Sie die Schritte unter [Ausführen eines Failovers des primären Replikats auf schreibgeschützten Verfügbarkeitsgruppen](#fail-over-the-primary-replica-on-a-read-scale-availability-group) aus.
 
 ###  <a name="Restrictions"></a> Einschränkungen 
   

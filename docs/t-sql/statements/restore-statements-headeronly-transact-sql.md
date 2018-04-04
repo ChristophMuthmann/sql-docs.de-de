@@ -1,16 +1,16 @@
 ---
 title: RESTORE HEADERONLY (Transact-SQL) | Microsoft-Dokumentation
-ms.custom: 
-ms.date: 07/07/2016
+ms.custom: ''
+ms.date: 03/30/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - HEADERONLY
@@ -25,21 +25,23 @@ helpviewer_keywords:
 - RESTORE HEADERONLY statement
 - backup header information [SQL Server]
 ms.assetid: 4b88e98c-49c4-4388-ab0e-476cc956977c
-caps.latest.revision: 
+caps.latest.revision: 95
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 840793c4bbfee8282676cf90d42d6e7a6c4d6b42
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 6cf34895c1e60ea81f75c4920e5abf235608bf66
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="restore-statements---headeronly-transact-sql"></a>RESTORE-Anweisungen – HEADERYONLY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
 
-  Gibt ein Resultset mit allen Sicherungsheaderinformationen für alle Sicherungssätze auf einem bestimmten Sicherungsmedium in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zurück.  
+  Gibt ein Resultset mit allen Sicherungsheaderinformationen für alle Sicherungssätze auf einem bestimmten Sicherungsmedium in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zurück. 
+
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)] 
   
 > [!NOTE]  
 >  Eine Beschreibung der Argumente finden Sie unter [RESTORE-Argumente &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  

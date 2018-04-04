@@ -1,7 +1,7 @@
 ---
 title: Sichern und Wiederherstellen von SQL Server-Datenbanken | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 07/29/2016
+ms.date: 03/30/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: ''
@@ -25,22 +25,24 @@ helpviewer_keywords:
 - Database Engine [SQL Server], backups
 - databases [SQL Server], backups
 ms.assetid: 570a21b3-ad29-44a9-aa70-deb2fbd34f27
-caps.latest.revision: ''
+caps.latest.revision: 91
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 959fea6c816396c70883a47c1d9f00cbd11be9dc
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 4dddfcc3841704e7863a55253e8152b44d73a8d9
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="back-up-and-restore-of-sql-server-databases"></a>Sichern und Wiederherstellen von SQL Server-Datenbanken
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   In diesem Thema werden die Vorteile der Sicherung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbanken und grundlegende Begriffe zu Sicherung und Wiederherstellung erläutert. Darüber hinaus bietet das Thema eine Einführung in Sicherungs- und Wiederherstellungsstrategien für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und Sicherheitsüberlegungen zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sicherungen und -Wiederherstellungen. 
   
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
+
 > **Suchen Sie nach Schritt-für-Schritt-Anweisungen?** Dieses Thema enthält **keine spezifischen Schritte zum Ausführen von Sicherungen!** Wenn Sie sofort zum eigentlichen Sicherungsvorgang gelangen möchten, scrollen Sie auf dieser Seite nach unten bis zum Abschnitt mit den Links, die nach Sicherungsaufgaben und nach der Verwendung von SSMS oder T-SQL gegliedert sind.  
   
  Durch die Sicherungs- und Wiederherstellungskomponente von SQL Server wird eine wichtige Vorrichtung zum Schutz wichtiger Daten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbanken bereitgestellt. Um das Risiko schwerwiegenden Datenverlusts zu verringern, müssen Sie die Datenbanken regelmäßig sichern, um Änderungen an den Daten beizubehalten. Eine sorgfältig geplante Sicherungs- und Wiederherstellungsstrategie schützt Datenbanken vor Datenverlust, der durch die verschiedensten Fehler verursacht werden kann. Testen Sie Ihre Strategie, indem Sie einen Sicherungssatz wiederherstellen und dann die Datenbank wiederherstellen, um im Notfall effektiv reagieren zu können.  

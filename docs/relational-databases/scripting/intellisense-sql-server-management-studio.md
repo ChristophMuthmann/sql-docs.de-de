@@ -1,31 +1,32 @@
 ---
 title: IntelliSense (SQL Server Management Studio) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-scripting
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 7d6b0f60-c6ac-4f71-a9d0-fc3c2ffa7e91
-caps.latest.revision: 
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: dbf4112403363ce7c3d19e433b1bcf028983823f
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+ms.openlocfilehash: f9e2553224bfb95b294d1b7e9f7d676dd9dbf7b8
+ms.sourcegitcommit: d6881107b51e1afe09c2d8b88b98d075589377de
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="intellisense-sql-server-management-studio"></a>IntelliSense (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Die Editoren in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] unterstützen [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense-Optionen, die die Typisierung reduzieren, schnellen Zugriff auf Syntaxinformationen bieten oder das Anzeigen der Trennzeichen komplexer Ausdrücke erleichtern.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+  Die Editoren in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] unterstützen [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense-Optionen, die die Typisierung reduzieren, schnellen Zugriff auf Syntaxinformationen bieten oder das Anzeigen der Trennzeichen komplexer Ausdrücke erleichtern.  
   
 ## <a name="benefits-of-intellisense"></a>Vorteile von IntelliSense  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense bietet eine Reihe von Optionen, die den problemlosen Zugriff auf Sprachverweise ermöglichen. Beim Codieren ist es nicht erforderlich, dass Sie den Editor zum Ausführen von Suchvorgängen nach Sprachelementen verlassen. Sie können den Kontext beibehalten, die gewünschten Informationen suchen, Sprachelemente direkt in den Code einfügen und sogar IntelliSense die restliche Eingabe überlassen.  
