@@ -1,7 +1,7 @@
 ---
-title: Mehrdimensionale Modelle (SSAS) | Microsoft Docs
+title: Mehrdimensionale Modelle | Microsoft Docs
 ms.custom: ''
-ms.date: 03/01/2017
+ms.date: 04/03/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: ''
@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 63ac8a0d7c5911c9f8c973137ff1107cbc7eae6e
-ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
+ms.openlocfilehash: 194edbb2f7922fa2eec08c92d5ae6930528c862c
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="multidimensional-models"></a>Mehrdimensionale Modelle
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

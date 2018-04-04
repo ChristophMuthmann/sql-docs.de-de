@@ -9,17 +9,15 @@ ms.component: r
 ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
-ms.assetid: ''
-caps.latest.revision: ''
-author: HeidiSteen
 ms.author: heidist
+author: HeidiSteen
 manager: cgronlun
 ms.workload: Active
-ms.openlocfilehash: f84f61721bca14a78694a9df6c7af8b7f7d74ea7
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
+ms.openlocfilehash: a610ff9393f502070cca28af84418b20c90e13cc
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="sql-server-machine-learning-and-r-services-in-database"></a>SQLServer Machine Learning und R Services (Datenbankintern)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

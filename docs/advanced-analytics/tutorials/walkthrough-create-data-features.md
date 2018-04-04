@@ -1,30 +1,28 @@
 ---
 title: Erstellen von Data-Features, die mit R und SQL (Exemplarische Vorgehensweise) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/23/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
-ms.component: 
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.component: ''
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: tutorial
 applies_to:
 - SQL Server 2016
 dev_langs:
 - R
-ms.assetid: 4981d4eb-0874-4fe9-82e1-edf99890e27a
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: 9b447f8c8faa834bea4360844308e468bf15d89c
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: ecbdc28ac530dcee1ba9f5a3820d999ad4e0fcd9
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="create-data-features-using-r-and-sql-walkthrough"></a>Erstellen von Data-Features, die mit R und SQL (Exemplarische Vorgehensweise)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -242,7 +240,7 @@ Sie können versuchen, mit diesem mit der SQL-Beispiel für benutzerdefinierte F
 Die Zeiten variieren beträchtlich, je nach Geschwindigkeit des Netzwerks ab, und der Hardwarekonfiguration. In den Konfigurationen, die wir getestet, die [!INCLUDE[tsql](../../includes/tsql-md.md)] Funktion schneller als die Verwendung einer benutzerdefinierten R-Funktion wurde. Daher verwenden wir die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Funktion für diese Berechnungen in den folgenden Schritten.
 
 > [!TIP]
-> Sehr häufig feature engineering mit [!INCLUDE[tsql](../../includes/tsql-md.md)] schneller erfolgt als R. T-SQL enthält beispielsweise schnell Windowing und Rangfolgefunktionen, die auf allgemeine Data Science Berechnungen wie gleitende Durchschnitte parallelen angewendet werden können und  *n* -Kacheln. Wählen Sie je nach Daten und Aufgabe die effizienteste Methode.
+> Sehr häufig feature engineering mit [!INCLUDE[tsql](../../includes/tsql-md.md)] schneller erfolgt als R. T-SQL enthält beispielsweise schnell Windowing und Rangfolgefunktionen, die auf allgemeine Data Science Berechnungen wie gleitende Durchschnitte parallelen angewendet werden können und *n*-Kacheln. Wählen Sie je nach Daten und Aufgabe die effizienteste Methode.
 
 ## <a name="next-lesson"></a>Nächste Lektion
 

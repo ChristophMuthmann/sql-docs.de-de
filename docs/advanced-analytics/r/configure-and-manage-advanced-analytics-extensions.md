@@ -1,27 +1,25 @@
 ---
-title: "Erweiterte Konfigurationsoptionen für Machine Learning-Dienste | Microsoft Docs"
+title: Erweiterte Konfigurationsoptionen für Machine Learning-Dienste | Microsoft Docs
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 10/31/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-ms.assetid: 8d73fd98-0c61-4a62-94bb-75658195f2a6
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: 042e36faee599de3ff31a6bbb8dee32f0a6999cf
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 6001d30a38b1362db8b259d29fffbfcc268f706c
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="advanced-configuration-options-for-machine-learning-services"></a>Erweiterte Konfigurationsoptionen für Machine Learning-Dienste
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -30,7 +28,7 @@ Dieser Artikel beschreibt die Änderungen, die Sie zum Ändern der Konfiguration
 
 **Gilt für:** SQL Server 2016-R-Services, SqlServer 2017 Machine Learning-Dienste
 
-##  <a name="bkmk_Provisioning"></a>Bereitstellen zusätzlicher-Benutzerkonten für den Computer lernen
+##  <a name="bkmk_Provisioning"></a> Bereitstellen zusätzlicher-Benutzerkonten für den Computer lernen
 
 Externes Skript-Prozessen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] im Kontext des lokalen Benutzerkonten mit einer geringen ausgeführt. Diese Prozesse in einzelnen Konten, die mit eingeschränkten Berechtigungen ausgeführt, hat die folgenden Vorteile:
 
@@ -45,13 +43,13 @@ Auf protext vertrauliche Ressourcen auf der [!INCLUDE[ssNoVersion](../../include
 
 + Der Benutzerkontenpool ist mit einer bestimmten Instanz verknüpft. Ein separater Pool von Worker-Konten wird für jede Instanz benötigt auf dem Machine Learning aktiviert wurde. Konten können nicht zwischen Instanzen freigegeben werden.
 
-+ Benutzerkontonamen im Pool weisen das Format „SQLInstanzname*nn*zugeordnet sind. Z. B. bei Verwendung die Standardinstanz für den Machine learning unterstützt der benutzerkontenpool Kontonamen wie MSSQLSERVER01, MSSQLSERVER02 usw.
++ Benutzerkontonamen im Pool weisen das Format „SQLInstanzname*nn*“ auf. Z. B. bei Verwendung die Standardinstanz für den Machine learning unterstützt der benutzerkontenpool Kontonamen wie MSSQLSERVER01, MSSQLSERVER02 usw.
 
 + Die Größe des Benutzerkontenpools ist statisch und der Standardwert ist 20. Die Anzahl der externen-laufzeitsitzungen, die gleichzeitig gestartet werden kann, wird durch die Größe dieses benutzerkontenpools beschränkt. Zum Ändern dieses Limits, sollte ein Administrator SQL Server-Konfigurations-Manager verwenden.
 
 Weitere Informationen zum Ändern des benutzerkontenpools finden Sie unter [Ändern des benutzerkontenpools für SQL Server-Machine Learning-Services](../../advanced-analytics/r/modify-the-user-account-pool-for-sql-server-r-services.md).
 
-##  <a name="bkmk_ManagingMemory"></a>Verwalten von externen Skriptprozesse belegter Arbeitsspeicher
+##  <a name="bkmk_ManagingMemory"></a> Verwalten von externen Skriptprozesse belegter Arbeitsspeicher
 
 Standardmäßig sind die externen Skript Laufzeiten für Machine Learning auf nicht mehr als 20 % des gesamten Arbeitsspeichers beschränkt. Es hängt von Ihrem System, aber in der Regel stellen Sie möglicherweise dieses Limit nicht schwerwiegenden Machine Learning-Aufgaben wie z. B. Trainieren eines Modells oder Vorhersagen auf viele Zeilen mit Daten. 
 
@@ -75,7 +73,7 @@ Wenn Sie das Dienstkonto ändern, achten Sie darauf, dass Sie die Anwendung **Lo
 
 Weitere Informationen zu erforderlichen Berechtigungen für das Ausführen von SQL Server-Diensten finden Sie unter [Konfigurieren von Windows-Dienstkonten und -Berechtigungen](https://msdn.microsoft.com/library/ms143504.aspx#Windows).
 
-##  <a name="bkmk_ChangingConfig"></a>Ändern der erweiterten Dienstoptionen
+##  <a name="bkmk_ChangingConfig"></a> Ändern der erweiterten Dienstoptionen
 
 In frühen Versionen von SQL Server 2016 R Services können Sie einige Eigenschaften des Diensts ändern, indem Sie bearbeiten die [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] Konfigurationsdatei. 
 
@@ -93,7 +91,7 @@ Diese Datei ist jedoch nicht mehr zum Ändern der Konfigurationen verwendet. Wir
 
 **So ändern Sie die Debugeinstellungen**
 
-Einige Eigenschaften können nur geändert werden, mithilfe der Launchpad-Konfigurationsdatei, die sich in selteneren Fällen, z. B. das Debuggen von Nutzen sein kann. Die Konfigurationsdatei wird erstellt, während [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einrichten und wird standardmäßig als nur-Text-Datei am folgenden Speicherort gespeichert:`<instance path>\binn\rlauncher.config`
+Einige Eigenschaften können nur geändert werden, mithilfe der Launchpad-Konfigurationsdatei, die sich in selteneren Fällen, z. B. das Debuggen von Nutzen sein kann. Die Konfigurationsdatei wird erstellt, während [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einrichten und wird standardmäßig als nur-Text-Datei am folgenden Speicherort gespeichert: `<instance path>\binn\rlauncher.config`
 
 Sie müssen Administrator auf dem Computer sein, auf dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt wird, um diese Datei ändern zu können. Für die Bearbeitung der Datei wird empfohlen, dass Sie eine Sicherungskopie erstellen, bevor Sie Änderungen speichern.
 

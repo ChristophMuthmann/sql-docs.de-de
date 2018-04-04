@@ -1,26 +1,24 @@
 ---
-title: "Die Ressourcenkontrolle für Machine Learning in SQL Server | Microsoft Docs"
-ms.custom: 
+title: Die Ressourcenkontrolle für Machine Learning in SQL Server | Microsoft Docs
+ms.custom: ''
 ms.date: 11/16/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-ms.assetid: 18c9978a-aa55-42bd-9ab3-8097030888c9
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: d1eb0f1cce23d084516b5446d39274ac3078b0b8
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 11cfaba5f645824158e0c25103ec355e513fa075
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="resource-governance-for-machine-learning-in-sql-server"></a>Die Ressourcenkontrolle für Machine Learning in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -28,7 +26,7 @@ ms.lasthandoff: 02/11/2018
 Dieser Artikel bietet einen Überblick über die Ressourcenkontrolle Funktionen in SQL Server, mit deren Hilfe reservieren und Ausgleichen von R und Python-Skripts verwendete Ressourcen.
 
 **Gilt für:** [!INCLUDE[sscurrent-md](../../includes/sscurrent-md.md)]
- [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)] und [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)]
+[!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)] und [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)]
 
 ## <a name="goals-of-resource-governance-for-machine-learning"></a>Ziele für die Ressourcenkontrolle für Machine learning
 
@@ -90,7 +88,7 @@ Wenn Sie die Ressourcenkontrolle nicht vertraut sind, finden Sie in diesem Thema
 
 Die Unterstützung externer Skripts ist bei der Installation von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] optional. Auch nach der Installation von Machine learning-Funktionen, die Fähigkeit zur Ausführung externer Skripts ist standardmäßig deaktiviert und müssen Sie manuell die Eigenschaft neu zu konfigurieren und starten Sie die Instanz, um die Ausführung des Skripts zu aktivieren.
 
-Aus diesem Grund, wenn eine Ressource-Problem, das sofort entschärft werden muss, oder ein Sicherheitsproblem vorhanden ist, ein Administrator kann sofort deaktiviert alle externen skriptausführung mithilfe [Sp_configure &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) und Festlegen der Eigenschaft `external scripts enabled` auf "false" oder 0 gesetzt.
+Aus diesem Grund, wenn eine Ressource-Problem, das sofort entschärft werden muss, oder ein Sicherheitsproblem vorhanden ist, ein Administrator kann sofort deaktiviert alle externen skriptausführung mithilfe [Sp_configure &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) und Festlegen der Eigenschaft `external scripts enabled` auf "false" oder 0 gesetzt.
   
 ## <a name="see-also"></a>Siehe auch
 

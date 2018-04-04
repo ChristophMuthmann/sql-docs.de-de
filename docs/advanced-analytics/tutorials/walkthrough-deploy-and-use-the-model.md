@@ -1,30 +1,28 @@
 ---
 title: Das R-Modell bereitstellen und deren Verwendung in SQL (Exemplarische Vorgehensweise) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/26/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
-ms.component: 
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.component: ''
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: tutorial
 applies_to:
 - SQL Server 2016
 dev_langs:
 - R
-ms.assetid: f28a7aac-6d08-4781-ad28-b48d18cc16a0
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: 771683f472af17292de62fb1591539f1215ebf57
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: de43bd77f7a5537265fb7cb74a59e326010a9f71
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="deploy-the-r-model-and-use-it-in-sql"></a>Das R-Modell bereitstellen und deren Verwendung in SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -71,9 +69,9 @@ Eine gespeicherte Prozedur für die batchbewertung wurde erstellt, wenn Sie zun�
     END
     ```
 
-    + Sie verwenden eine SELECT-Anweisung, um das gespeicherte Modell aus einer SQL-Tabelle aufzurufen. Das Modell wird abgerufen, aus der Tabelle als **varbinary(max)** Daten, die in der SQL-Variablen gespeichert  _@lmodel2_ , und als Parameter übergeben *mod* an das System gespeichert Prozedur [Sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
+    + Sie verwenden eine SELECT-Anweisung, um das gespeicherte Modell aus einer SQL-Tabelle aufzurufen. Das Modell wird abgerufen, aus der Tabelle als **varbinary(max)** Daten, die in der SQL-Variablen gespeichert _@lmodel2_, und als Parameter übergeben *mod* an das System gespeichert Prozedur [Sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
 
-    + Die Daten, die als Eingaben verwendet werden, für die Bewertung als eine SQL-Abfrage definiert und als Zeichenfolge in der SQL-Variablen gespeicherten  _@input_ . Wie Daten aus der Datenbank abgerufen werden, wird es in einem Datenrahmen aufgerufen gespeichert *InputDataSet*, also nur der Standardnamen für die Eingabedaten für die [Sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) Prozedur können Sie definieren einen anderen Variablennamen an, die bei Bedarf mithilfe des Parameters   *_@input_data_1_name_*  .
+    + Die Daten, die als Eingaben verwendet werden, für die Bewertung als eine SQL-Abfrage definiert und als Zeichenfolge in der SQL-Variablen gespeicherten _@input_. Wie Daten aus der Datenbank abgerufen werden, wird es in einem Datenrahmen aufgerufen gespeichert *InputDataSet*, also nur der Standardnamen für die Eingabedaten für die [Sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) Prozedur können Sie definieren einen anderen Variablennamen an, die bei Bedarf mithilfe des Parameters *_@input_data_1_name_*.
 
     + Die gespeicherte Prozedur ruft die `rxPredict` -Funktion aus der **RevoScaleR** -Bibliothek auf, um die Bewertung zu generieren.
 

@@ -1,27 +1,25 @@
 ---
-title: "Konvertieren von R-Code für die Verwendung in R Services| Microsoft-Dokumentation"
+title: Konvertieren von R-Code für die Verwendung in R Services| Microsoft-Dokumentation
 ms.date: 12/20/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - R
-ms.assetid: 0b11ab52-b2f9-4a4f-b1ab-68ba09c8adcc
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: 802ad1ee49920db65eadccfb29650c649c339d48
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 669f52d499b9479e23266af91c04e6bc084bb8ea
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="converting-r-code-for-execution-in-database"></a>Konvertieren von R-Code für die Ausführung in Datenbank
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -34,7 +32,7 @@ Erfordert jedoch möglicherweise der Code erhebliche Änderungen Wenn eine der f
 
 + Sie verwenden die R-Bibliotheken, die auf das Netzwerk zugreifen, oder, die nicht auf SQL Server installiert sein.
 + Der Code führt separate Aufrufe auf Datenquellen außerhalb von SQL Server, wie z. B. Excel-Arbeitsblättern, Dateien auf Freigaben und andere Datenbanken. 
-+ Den Code in ausgeführt werden soll die  *@script*  Parameter [Sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) und die gespeicherte Prozedur auch parametrisieren.
++ Den Code in ausgeführt werden soll die *@script* Parameter [Sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) und die gespeicherte Prozedur auch parametrisieren.
 + Die ursprüngliche Lösung umfasst mehrere Schritte, die eine effizientere in einer produktiven Umgebung unabhängig, z. B. datenvorbereitung oder Feature Engineering im Vergleich zu Modell trainieren oder bewerten reporting ausgeführt werden können.
 + Sie verbessern möchten Optimieren der Leistung von Bibliotheken ändern, verwenden parallele Ausführung oder einige Verarbeitung mit SQL Server-Abladung. 
 

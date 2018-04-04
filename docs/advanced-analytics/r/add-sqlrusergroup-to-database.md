@@ -1,29 +1,27 @@
 ---
-title: "Fügen Sie als Datenbankbenutzer SQLRUserGroup | Microsoft Docs"
-ms.custom: 
+title: Fügen Sie als Datenbankbenutzer SQLRUserGroup | Microsoft Docs
+ms.custom: ''
 ms.date: 12/21/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 keywords:
 - Implizite Authentifizierung
 - SQLRUserGroup
-ms.assetid: 4d773c74-c779-4fc2-b1b6-ec4b4990950d
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: Active
-ms.openlocfilehash: 8e448e665044b1b8f63d30b7c99adf62419ae283
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 230c7432a7c6645213968f1c7fd7c2a1cf9d5dbe
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="add-sqlrusergroup-as-a-database-user"></a>Fügen Sie SQLRUserGroup als einen Datenbankbenutzer hinzu.
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

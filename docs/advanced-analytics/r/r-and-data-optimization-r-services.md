@@ -1,26 +1,24 @@
 ---
-title: "Leistung für R Services – datenoptimierung | Microsoft Docs"
-ms.custom: 
+title: Leistung für R Services – datenoptimierung | Microsoft Docs
+ms.custom: ''
 ms.date: 07/12/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-ms.assetid: b6104878-ed19-47a7-ac37-21e4d6e2a1af
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: 0ca7a57b10787ca183c2979fe95a5e3fe446dc86
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 6b320357d8978a97878d31943b48accee8898f9f
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="performance-for-r-services---data-optimization"></a>Leistung für R Services – Data-Optimierung
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -139,7 +137,7 @@ Viele "revoscaler"-Algorithmus unterstützen die Parameter, um zu steuern, wie d
 
 + [rxDTree](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdtree)
 
-    `rxDTree`unterstützt die `maxDepth` -Parameter, der die Tiefe der Entscheidungsstruktur steuert. Als `maxDepth` wird erhöht, Leistung kann beeinträchtigt werden, es ist daher wichtig, um die Vorteile der Erhöhen der Tiefe im Vergleich zu beeinträchtigt die Leistung zu analysieren.
+    `rxDTree` unterstützt die `maxDepth` -Parameter, der die Tiefe der Entscheidungsstruktur steuert. Als `maxDepth` wird erhöht, Leistung kann beeinträchtigt werden, es ist daher wichtig, um die Vorteile der Erhöhen der Tiefe im Vergleich zu beeinträchtigt die Leistung zu analysieren.
 
     Sie können auch steuern, das Gleichgewicht zwischen Zeit Komplexität und Vorhersage Genauigkeit durch Anpassen der Parameter wie z. B. `maxNumBins`, `maxDepth`, `maxComplete`, und `maxSurrogate`. Das Erhöhen der Tiefe auf mehr als 10 oder 15 kann die Berechnung sehr teuer machen.
 

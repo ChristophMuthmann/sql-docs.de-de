@@ -1,26 +1,24 @@
 ---
-title: "Überwachung von R Services mithilfe von benutzerdefinierten Berichten in Management Studio | Microsoft-Dokumentation"
-ms.custom: 
+title: Überwachung von R Services mithilfe von benutzerdefinierten Berichten in Management Studio | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 10/09/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-ms.assetid: 5933c72c-ba63-4966-b882-75719ef8428e
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: 0a065ffeeaf5a88ac26cc1e628eaec5d39ba462a
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: 3c8bbd59e8a5879320b75e28f1e0f7bdd5da62bc
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="monitor-machine-learning-services-using-custom-reports-in-management-studio"></a>Überwachen von Machine Learning Services mithilfe benutzerdefinierter Berichte in Management Studio
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

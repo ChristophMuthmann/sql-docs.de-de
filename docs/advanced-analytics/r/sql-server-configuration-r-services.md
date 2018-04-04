@@ -1,26 +1,24 @@
 ---
 title: SQL Server-Konfiguration (R Services) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 07/26/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-ms.assetid: 4b08969f-b90b-46b3-98e7-0bf7734833fc
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: 5716fced7dd2be49c580222b9ae155451cf8f426
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 794a15c6673a06ea261f66129035ea62ea31cb0e
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="sql-server-configuration-for-use-with-r"></a>SQL Server-Konfiguration für die Verwendung mit R
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -98,7 +96,7 @@ Weitere Informationen finden Sie in folgenden Dokumenten:
 
 + [Aktivieren der Komprimierung für eine Tabelle oder einen index](../../relational-databases/data-compression/enable-compression-on-a-table-or-index.md)
 
-+ [Columnstore-Indizes](../../relational-databases/indexes/columnstore-indexes-overview.md)
++ [Columnstore-Indizes: Übersicht](../../relational-databases/indexes/columnstore-indexes-overview.md)
 
 ### <a name="memory-optimized-tables"></a>Speicheroptimierte Tabellen
 
@@ -126,7 +124,7 @@ Die Ressourcenkontrolle in SQL Server können Sie die Überwachung und Kontrolle
 
 Der Standardwert für den Arbeitsspeicherverbrauch durch externe Skripts ist auf 20 % des insgesamt für SQL Server selbst verfügbaren Arbeitsspeichers beschränkt. Dieser Grenzwert gilt standardmäßig um sicherzustellen, dass alle Aufgaben, die auf dem Datenbankserver beruhen durch R-Aufträgen mit langer nicht schwerwiegend beeinträchtigt werden. Diese Einschränkungen können vom Datenbankadministrator angepasst werden. In vielen Fällen ist der Grenzwert von 20 % nicht ausreichend, um schwerwiegende Machine learning-arbeitsauslastungen zu unterstützen.
 
-Sind die Konfigurationsoptionen unterstützt **MAX_CPU_PERCENT**, **MAX_MEMORY_PERCENT**, und **MAX_PROCESSES**. Um die aktuellen Einstellungen anzuzeigen, verwenden Sie diese Anweisung aus:`SELECT * FROM sys.resource_governor_external_resource_pools`
+Sind die Konfigurationsoptionen unterstützt **MAX_CPU_PERCENT**, **MAX_MEMORY_PERCENT**, und **MAX_PROCESSES**. Um die aktuellen Einstellungen anzuzeigen, verwenden Sie diese Anweisung aus: `SELECT * FROM sys.resource_governor_external_resource_pools`
 
 -  Wenn der Server für R Services in erster Linie verwendet wird, kann es MAX_CPU_PERCENT auf 40 % oder 60 % erhöhen hilfreich sein.
 
@@ -134,11 +132,11 @@ Sind die Konfigurationsoptionen unterstützt **MAX_CPU_PERCENT**, **MAX_MEMORY_P
 
 Um die zugeordnete Ressourcenwerte zu ändern, verwenden Sie T-SQL-Anweisungen.
 
-+ Diese Anweisung wird die Auslastung des Speichers auf 40 % festgelegt:`ALTER EXTERNAL RESOURCE POOL [default] WITH (MAX_MEMORY_PERCENT = 40)`
++ Diese Anweisung wird die Auslastung des Speichers auf 40 % festgelegt: `ALTER EXTERNAL RESOURCE POOL [default] WITH (MAX_MEMORY_PERCENT = 40)`
 
-+ Diese Anweisung legt alle drei konfigurierbaren Werte fest:`ALTER EXTERNAL RESOURCE POOL [default] WITH (MAX_CPU_PERCENT = 40, MAX_MEMORY_PERCENT = 50, MAX_PROCESSES = 20)`
++ Diese Anweisung legt alle drei konfigurierbaren Werte fest: `ALTER EXTERNAL RESOURCE POOL [default] WITH (MAX_CPU_PERCENT = 40, MAX_MEMORY_PERCENT = 50, MAX_PROCESSES = 20)`
 
-+ Wenn Sie ein Arbeitsspeicher, CPU oder max prozesseinstellung ändern, und klicken Sie dann auf die Einstellungen sofort angewendet werden soll, führen Sie diese Anweisung:`ALTER RESOURCE GOVERNOR RECONFIGURE`
++ Wenn Sie ein Arbeitsspeicher, CPU oder max prozesseinstellung ändern, und klicken Sie dann auf die Einstellungen sofort angewendet werden soll, führen Sie diese Anweisung: `ALTER RESOURCE GOVERNOR RECONFIGURE`
 
 ## <a name="soft-numa-hardware-numa-and-cpu-affinity"></a>Soft-NUMA-Hardware-NUMA und CPU-Affinität
 

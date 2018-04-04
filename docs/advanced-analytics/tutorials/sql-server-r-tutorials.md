@@ -1,30 +1,29 @@
 ---
-title: "Lernprogramme für SQL Server-R | Microsoft Docs"
+title: Lernprogramme für SQL Server-R | Microsoft Docs
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 08/29/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
-ms.component: 
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.component: ''
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: tutorial
 applies_to:
 - SQL Server 2016
 dev_langs:
 - R
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: On Demand
-ms.openlocfilehash: a2fd60a40950710972c6e9507b3c9545e86840ff
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 34fee91978a27e38fca6092a98596c701cfd32eb
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="sql-server-r-tutorials"></a>SQL Server-R-Lernprogramme
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -113,7 +112,7 @@ Um diese Lernprogramme und Beispiele zu verwenden, müssen Sie eines der folgend
 
 Nach dem Ausführen von SQL Server-Setup, vergessen Sie nicht folgenden wichtigen Schritte aus:
 
-+ Aktivieren Sie die externen Skript Ausführung-Funktion, indem Sie ausgeführt wird`sp_configure 'external scripts enabled', 1`
++ Aktivieren Sie die externen Skript Ausführung-Funktion, indem Sie ausgeführt wird `sp_configure 'external scripts enabled', 1`
 + Neustarten des Servers
 + Stellen Sie sicher, dass der Dienst, der die externe Runtime ruft erforderlichen Berechtigungen verfügt.
 + Sicherstellen Sie, dass der SQL-Anmeldung oder die Windows-Benutzerkonto hat erforderlichen Berechtigungen zum Verbinden mit dem Server, der zum Lesen von Daten und erstellen das Beispiel erforderlichen Datenbankobjekte

@@ -1,24 +1,24 @@
 ---
 title: Systemeigene Bewertung | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 09/19/2017
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
-ms.openlocfilehash: 14e2a86b3f85f5dd1cfec7ac634b6801bb0f319b
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
+ms.openlocfilehash: 449773e8ca4f2e396dca4f8aed5299effb7aa49a
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="native-scoring"></a>Systemeigene Bewertung
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -99,7 +99,7 @@ Unterstützte Plattformen sind wie folgt aus:
 + Das Modell muss im voraus mit einer der unterstützten trainiert **Rx** Algorithmen. Weitere Informationen finden Sie unter [Algorithmen unterstützt](#bkmk_native_supported_algos).
 + Das Modell muss gespeichert werden, mithilfe der neuen Serialisierungsfunktion, die in Microsoft R Server 9.1.0 bereitgestellt. Die Serialisierungsfunktion wird optimiert, um schnelle Bewertung unterstützen.
 
-### <a name="bkmk_native_supported_algos"></a>Algorithmen, die systemeigene Bewertung unterstützen
+### <a name="bkmk_native_supported_algos"></a> Algorithmen, die systemeigene Bewertung unterstützen
 
 + "Revoscaler"-Modelle
 

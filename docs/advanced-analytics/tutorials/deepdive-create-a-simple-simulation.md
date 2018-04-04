@@ -1,31 +1,29 @@
 ---
 title: Erstellen Sie eine einfache Simulation (SQL und R deep Dive) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 12/14/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
-ms.component: 
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.component: ''
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: tutorial
 applies_to:
 - SQL Server 2016
 - SQL Server 2017
 dev_langs:
 - R
-ms.assetid: f420b816-ddab-4a1a-89b9-c8285a2d33a3
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: cc613d303fa3200c3460face71399223e00272e6
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: ca76aef56ef731d9190a8f40d8b4af2e9b04ca00
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="create-a-simple-simulation-sql-and-r-deep-dive"></a>Erstellen Sie eine einfache Simulation (SQL und R deep Dive)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -133,8 +131,8 @@ Wenn Sie mit diesen Verfahren unter Verwendung eines größeren Datasets von 10 
 Um dieser exemplarischen Vorgehensweise mit den größeren Data-Dateien erneut zu verwenden, die Daten herunter, und ändern Sie jede der Datenquellen wie folgt:
 
 1. Ändern Sie die Variablen `ccFraudCsv` und `ccScoreCsv` , zeigen Sie auf die neue Datendateien
-2. Ändern Sie den Namen der Tabelle verwiesen wird, im *SqlFraudTable* an`ccFraud10`
-3. Ändern Sie den Namen der Tabelle verwiesen wird, im *SqlScoreTable* an`ccFraudScore10`
+2. Ändern Sie den Namen der Tabelle verwiesen wird, im *SqlFraudTable* an `ccFraud10`
+3. Ändern Sie den Namen der Tabelle verwiesen wird, im *SqlScoreTable* an `ccFraudScore10`
 
 ## <a name="additional-samples"></a>Zusätzliche Beispiele
 

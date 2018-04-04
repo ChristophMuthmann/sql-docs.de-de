@@ -1,28 +1,26 @@
 ---
 title: Binden von Machine Learning-Komponenten auf SQL Server auf Microsoft Machine Learning-Server | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/15/2018
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - SQL Server (starting with 2016 CTP3)
-ms.assetid: 
-caps.latest.revision: 
-author: HeidiSteen
 ms.author: heidist
+author: HeidiSteen
 manager: cgronlun
 ms.workload: On Demand
-ms.openlocfilehash: 7c67d0accb7ac7be46105e5148028fac3f67aa0f
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: c82a1788f7c2c5cf4bca43c4fb03ff5c9eba0e28
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="bind-machine-learning-components-on-sql-server-to-microsoft-machine-learning-server"></a>Binden von Machine Learning-Komponenten auf SQL Server auf Microsoft Machine Learning-Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

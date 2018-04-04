@@ -1,25 +1,23 @@
 ---
-title: "Ändern des benutzerkontenpools für SQL Server-Machine Learning | Microsoft Docs"
+title: Ändern des benutzerkontenpools für SQL Server-Machine Learning | Microsoft Docs
 ms.date: 11/03/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-ms.assetid: 58b79170-5731-46b5-af8c-21164d28f3b0
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: d12de2f8298e23d5396d7caf2496b293f1bf28ed
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 7c1efa87fef881a8b88b0967716ec062cf95e64f
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="modify-the-user-account-pool-for-sql-server-machine-learning"></a>Ändern des benutzerkontenpools für SQL Server-Machine learning
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -43,7 +41,7 @@ Standardmäßig enthält der Benutzerkontenpool 20 Benutzerkonten. In den meiste
 
 Wenn mehr als eine Instanz Machine Learning verwendet wird, wird der Computer mehrere Benutzergruppen haben. Eine Gruppe kann nicht über Instanzen gemeinsam genutzt werden.
 
-### <a name = "HowToChangeGroup"></a>So ändern Sie die Anzahl der Worker-Konten
+### <a name = "HowToChangeGroup"> </a>So ändern Sie die Anzahl der Worker-Konten
 
 Sie müssen die Eigenschaften des [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]-Dienstes wie unten beschrieben ändern, um die Anzahl der Benutzer im Kontenpool zu ändern.
 
