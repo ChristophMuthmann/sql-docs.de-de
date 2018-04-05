@@ -1,6 +1,6 @@
 ---
-Title: 'Tutorial: Connect and Query SQL Server using SQL Server Management Studio'
-description: Tutorial zum Herstellen einer Verbindung mit SQL Server über SQL Server Management Studio und zum Ausführen grundlegender T-SQL-Abfragen
+Title: 'Tutorial: Connect to and query a SQL Server instance by using SQL Server Management Studio'
+description: Ein Tutorial für die Herstellung einer Verbindung zu einer SQL Server-Instanz durch Verwendung von SQL Server Management Studio und Ausführen grundlegender T-SQL-Abfragen
 keywords: SQL Server, SSMS, SQL Server Management Studio
 author: MashaMSFT
 ms.author: mathoma
@@ -10,67 +10,68 @@ ms.suite: sql
 ms.prod_service: sql-tools
 ms.reviewer: sstein
 manager: craigg
-ms.openlocfilehash: 6f4110a0ae1b4ca349cc9b990cc9a32f7d41764d
-ms.sourcegitcommit: ccb05cb5a4cccaf7ffa9e85a4684fa583bab914e
+ms.openlocfilehash: fe8d438d95e994438df565013eaf79da92ccf9b3
+ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/03/2018
 ---
-# <a name="tutorial-connect-and-query-sql-server-using-sql-server-management-studio"></a>Tutorial: Herstellen einer Verbindung mit und Abfragen von SQL Server über SQL Server Management Studio
-In diesem Tutorial erfahren Sie, wie Sie mit SQL Server Management Studio (SSMS) eine Verbindung mit einer SQL Server-Instanz herstellen und grundlegende T-SQL-Befehle (Transact-SQL) ausführen. Dieser Artikel enthält Beispiele für folgende Themen:
+# <a name="tutorial-connect-to-and-query-a-sql-server-instance-by-using-sql-server-management-studio"></a>Tutorial: Herstellen einer Verbindung mit und Abfragen von einer SQL Server-Instanz über SQL Server Management Studio
+In diesem Tutorial erfahren Sie, wie Sie mit SQL Server Management Studio (SSMS) eine Verbindung mit einer SQL Server-Instanz herstellen und grundlegende T-SQL-Befehle (Transact-SQL) ausführen. In diesem Artikel erhalten Sie Informationen zu folgenden Themen:
 
-> [!div class="checklist"]
-> * [Herstellen einer Verbindung mit SQL Server](#connect-to-a-sql-server)
-> * [Erstellen einer neuen Datenbank (**TutorialDB**)](#create-a-database)
-> * [Erstellen einer Tabelle (**Customers**) in der neuen Datenbank](#create-a-table)
-> * [Einfügen von Zeilen in die neue **Customers**-Tabelle](#insert-rows)
-> * [Abfragen der **Customers**-Tabelle und Aufrufen der Ergebnisse](#view-query-results)
-> * [Überprüfen der Verbindungseigenschaften mit der Tabelle im Abfragefenster](#verify-your-query-window-connection-properties)
-> * [Ändern der Serververbindung für das Abfragefenster](#change-server-connection-within-query-window)
-
+> [!div class="checklist"]  
+> * Eine Verbindung mit einer SQL Server-Instanz herstellen    
+> * Erstellen einer Datenbank („TutorialDB“)    
+> * Erstellen einer Tabelle („Customers“) in Ihrer neuen Datenbank   
+> * Einfügen von Zeilen in Ihre neue Tabelle 
+> * Abfragen der neuen Tabelle und Aufrufen der Ergebnisse    
+> * Überprüfen der Verbindungseigenschaften mit der Tabelle im Abfragefenster 
+> * Ändern des Servers, mit dem Ihr Abfragefenster verbunden ist
 
 ## <a name="prerequisites"></a>Voraussetzungen
-Für dieses Tutorial benötigen Sie SQL Server Management Studio und Zugriff auf einen Server mit SQL Server. Hierfür ist Folgendes erforderlich: 
+Zur Durchführung dieses Tutorials benötigen Sie SQL Server Management Studio und Zugriff auf eine SQL Server-Instanz. 
 
 - Installieren Sie [SQL Server Management Studio](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms).
 
-Wenn Sie über keinen Zugriff auf einen Server mit SQL Server verfügen, müssen Sie die von Ihnen verwendete Plattform über einen der folgenden Links auswählen. Falls Sie die SQL-Authentifizierung nutzen, ist es erforderlich, dass Sie sich den SQL-Anmeldenamen und das zugehörige Kennwort merken.
-- [Windows: Herunterladen der SQL Server 2017 Developer Edition](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)
-- [macOS: Herunterladen von SQL Server 2017 für Docker](https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker)
+Wenn Sie über keinen Zugriff auf eine SQL Server-Instanz verfügen, wählen Sie Ihre Plattform aus den folgenden Links aus. Wenn Sie die SQL-Authentifizierung wählen, verwenden Sie Ihre SQL Server-Anmeldeinformationen.
+- **Windows**: [Herunterladen der SQL Server 2017 Developer Edition](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)
+- **macOS**: [Herunterladen von SQL Server 2017 für Docker](https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker)
 
 
-## <a name="connect-to-a-sql-server"></a>Herstellen einer Verbindung mit SQL Server
+## <a name="connect-to-a-sql-server-instance"></a>Eine Verbindung mit einer SQL Server-Instanz herstellen
 
-1. Starten Sie SQL Server Management Studio (SSMS).
-1. Beim ersten Ausführen von SSMS wird das Dialogfeld **Connect to Server** (Verbindung mit Server herstellen) geöffnet. 
-      - Wenn das Dialogfeld **Connect to Server** (Verbindung mit Server herstellen) nicht geöffnet wird, können Sie es selbst über **Objekt-Explorer** > **Verbinden** (oder über das nebenstehende Symbol) > **Datenbank-Engine** öffnen.
+1. Starten von SQL Server Management Studio  
+    Beim ersten Ausführen von SSMS wird das Fenster **Connect to Server** (Verbindung mit Server herstellen) geöffnet. Wenn das Fenster nicht geöffnet wird, können Sie es manuell öffnen, indem Sie auf **Objekt-Explorer** > **Verbinden** > **Datenbank-Engine** klicken.
 
-        ![Option „Verbinden“ im Objekt-Explorer](media/connect-query-sql-server/connectobjexp.png)
+    ![Die Verknüpfung „Verbinden“ im Objekt-Explorer](media/connect-query-sql-server/connectobjexp.png)
 
-1. Wählen Sie im Dialogfeld **Connect to Server** (Verbindung mit Server herstellen) Ihre Verbindungsoptionen aus: 
+2. Führen Sie im Fenster **Mit Server verbinden** folgende Aktionen aus: 
 
-    - **Servertyp**: Datenbank-Engine (in der Regel die Standardauswahl)
-    - **Authentifizierung**: Windows-Authentifizierung (in diesem Artikel wird die Windows-Authentifizierung verwendet; bei Nutzung der SQL-Anmeldung, die ebenfalls unterstützt wird, müssen Sie Ihren Benutzernamen und Ihr Kennwort eingeben)
+    - Wählen Sie für **Servertyp** die Option **Datenbank-Engine** (normalerweise die Standardoption) aus.
+    - Geben Sie für **Servername** den Namen Ihrer SQL Server-Instanz ein. (In diesem Artikel wird der Instanzname „SQL2016ST“ auf dem Hostnamen „NODE5“ [NODE5\SQL2016ST] verwendet.) Wenn Sie nicht genau wissen, wie Sie Ihren SQL Server-Instanznamen bestimmen sollen, erhalten Sie hier [zusätzliche Tipps und Tricks für die Verwendung von SSMS](ssms-tricks.md#determine-sql-server-name).  
 
-      ![Verbindung](media/connect-query-sql-server/connection.png)
+    ![Feld „Servername“ mit Beispielinstanznamen](media/connect-query-sql-server/connection.png)
 
-        Sie können außerdem zusätzliche Verbindungsoptionen ändern (z.B. die Datenbank, mit der die Verbindung hergestellt werden soll, das Zeitlimit für die Verbindungszeit sowie das Netzwerkprotokoll), indem Sie auf die Schaltfläche **Optionen** klicken. In diesem Artikel werden die Standardeinstellungen beibehalten. 
+    ![Feld „Servername“ mit der Option zur Verwendung der SQL Server-Instanz](media/connect-query-sql-server/connection2.png)
 
-1. Klicken Sie nach dem Ausfüllen der Felder auf **Verbinden**. 
+    - Wählen Sie für **Authentifizierung** die Option **Windows-Authentifizierung** aus. In diesem Artikel wird die Windows-Authentifizierung verwendet, jedoch wird ebenso die SQL Server-Anmeldung unterstützt. Wenn Sie **SQL-Anmeldung** auswählen, werden Sie aufgefordert, Ihren Benutzernamen und Ihr Kennwort einzugeben. Weitere Informationen zu Authentifizierungstypen finden Sie unter [Verbindung mit Server herstellen (Datenbank-Engine)](https://docs.microsoft.com/en-us/sql/ssms/f1-help/connect-to-server-database-engine).
 
-1. Ob eine Verbindung mit SQL Server hergestellt wurde, können Sie überprüfen, indem Sie sich die Objekte im **Objekt-Explorer** ansehen: 
+    Sie können auch zusätzliche Verbindungsoptionen ändern, indem Sie **Optionen** auswählen. Beispiele für Verbindungsoptionen sind die Datenbank, mit der Sie sich verbinden, der Verbindungstimeoutwert und das Netzwerkprotokoll. In diesem Artikel werden die Standardwerte für alle Optionen verwendet. 
+
+3. Nachdem Sie alle Felder ausgefüllt haben, klicken Sie auf **Verbinden**. 
+
+4. Überprüfen Sie, ob die Verbindung mit Ihrer SQL Server-Instanz erfolgreich ist, indem Sie die Objekte im Objekt-Explorer wie hier dargestellt durchsuchen: 
 
    ![Erfolgreicher Verbindungsaufbau](media/connect-query-sql-server/successfulconnection.png)
 
-
 ## <a name="create-a-database"></a>Erstellen einer Datenbank
-Mit den folgenden Schritten wird eine neue Datenbank mit dem Namen „TutorialDB“ erstellt. 
+Erstellen Sie mithilfe folgender Schritte eine Datenbank namens „TutorialDB“: 
 
-1. Klicken Sie im **Objekt-Explorer** mit der rechten Maustaste auf Ihren Server und anschließend mit der linken auf **Neue Abfrage**:
+1. Klicken Sie im Objekt-Explorer mit der rechten Maustaste auf Ihre Serverinstanz und anschließend mit der linken auf **Neue Abfrage**:
 
-   ![Neue Abfrage](media/connect-query-sql-server/newquery.png)
+   ![Die Verknüpfung „Neue Abfrage“](media/connect-query-sql-server/newquery.png)
    
-1. Fügen Sie den folgenden T-SQL-Codeausschnitt in das Abfragefenster ein: 
+2. Fügen Sie den folgenden T-SQL-Codeausschnitt in das Abfragefenster ein: 
    ```sql
    USE master
    GO
@@ -84,21 +85,20 @@ Mit den folgenden Schritten wird eine neue Datenbank mit dem Namen „TutorialDB
    ```
 2. Klicken Sie zum Ausführen der Abfrage auf **Ausführen**, oder drücken Sie F5. 
 
-   ![Ausführen der Abfrage](media/connect-query-sql-server/execute.png)
+   ![Befehl „Ausführen“](media/connect-query-sql-server/execute.png)
   
- 
-Nachdem die Abfrage abgeschlossen ist, wird die neue Datenbank **TutorialDB** in der Datenbankliste im **Objekt-Explorer** angezeigt. Wenn die Datenbank nicht angezeigt wird, klicken Sie zuerst mit der rechten Maustaste auf den Datenbankenknoten und anschließend mit der linken auf **Aktualisieren**.  
+    Nachdem die Abfrage abgeschlossen ist, wird die neue Datenbank „TutorialDB“ in der Datenbankliste im Objekt-Explorer angezeigt. Wenn die Datenbank nicht angezeigt wird, klicken Sie zuerst mit der rechten Maustaste auf den **Datenbankenknoten** und anschließend mit der linken auf **Aktualisieren**.  
 
 
-## <a name="create-a-table"></a>Erstellen einer Tabelle
-Mit den folgenden Schritten erstellen Sie nun eine Tabelle in der neuen Datenbank **TutorialDB**. Für den Abfrage-Editor ist als Verbindungskontext allerdings immer noch die *Masterdatenbank* und nicht *TutorialDB* ausgewählt. 
+## <a name="create-a-table-in-the-new-database"></a>Erstellen einer Tabelle in der neuen Datenbank
+In diesem Abschnitt erstellen Sie nun eine Tabelle in der neuen Datenbank „TutorialDB“. Da sich der Abfrage-Editor immer noch im Kontext der *Master*-Datenbank befindet, ändern Sie den Verbindungskontext in die *TutorialDB*-Datenbank, indem Sie folgende Schritte ausführen: 
 
-1. Sie müssen daher den Verbindungskontext in **TutorialDB** ändern, indem Sie die gewünschte Datenbank über die zugehörige Dropdownliste auswählen. 
+1. Wählen Sie in der Dropdownliste die gewünschte Datenbank aus, so wie hier dargestellt: 
 
    ![Ändern der Datenbank](media/connect-query-sql-server/changedb.png)
 
-1. Fügen Sie den folgenden T-SQL-Codeausschnitt in das Abfragefenster ein, markieren Sie ihn, und klicken Sie auf **Ausführen** (oder drücken Sie F5): 
-    - Sie können entweder den vorhandenen Text im Abfragefenster ersetzen oder weiteren Text am Ende anfügen. Wenn Sie den gesamten Code im Abfragefenster ausführen möchten, klicken Sie auf **Ausführen**. Wenn Sie nur einen Teil des Codes ausführen möchten, markieren Sie diese Stelle, und klicken Sie anschließend auf **Ausführen**.  
+2. Fügen Sie den folgenden T-SQL-Codeausschnitt in das Abfragefenster ein, wählen Sie ihn aus, und klicken Sie auf **Ausführen** (oder drücken Sie F5).  
+   Sie können entweder den vorhandenen Text im Abfragefenster ersetzen oder weiteren Text am Ende anfügen. Um den gesamten Code im Abfragefenster auszuführen, klicken Sie auf **Ausführen**. Wenn Sie nur einen Teil des Codes ausführen möchten, markieren Sie diese Stelle, und klicken Sie anschließend auf **Ausführen**.  
   
    ```sql
    -- Create a new table called 'Customers' in schema 'dbo'
@@ -116,12 +116,11 @@ Mit den folgenden Schritten erstellen Sie nun eine Tabelle in der neuen Datenban
    );
    GO
    ```
-Nachdem die Abfrage abgeschlossen ist, wird die neue Tabelle **Customers** in der Tabellenliste im **Objekt-Explorer** angezeigt. Wenn die Tabelle nicht angezeigt wird, klicken Sie im **Objekt-Explorer** mit der rechten Maustaste auf den Knoten **TutorialDB > Tabellen** und anschließend mit der linken auf **Aktualisieren**.
 
-## <a name="insert-rows"></a>Einfügen von Zeilen
-Durch den folgenden Schritt fügen Sie mehrere Zeilen in die zuvor erstellte Tabelle **Customers** ein. 
+Nachdem die Abfrage abgeschlossen ist, wird die neue Tabelle „Customers“ in der Tabellenliste im Objekt-Explorer angezeigt. Wenn die Tabelle nicht angezeigt wird, klicken Sie im Objekt-Explorer mit der rechten Maustaste auf den Knoten **TutorialDB** > **Tabellen** und anschließend mit der linken Maustaste auf **Aktualisieren**.
 
-Fügen Sie den folgenden T-SQL-Codeausschnitt in das Abfragefenster ein, und klicken Sie auf **Ausführen**: 
+## <a name="insert-rows-into-the-new-table"></a>Einfügen von Zeilen in die neue Tabelle
+Fügen Sie einige Zeilen in die Tabelle „Customers“ ein, die Sie zuvor erstellt haben. Fügen Sie dazu den folgenden T-SQL-Codeausschnitt in das Abfragefenster ein, und klicken Sie auf **Ausführen**: 
 
 
    ```sql
@@ -136,8 +135,8 @@ Fügen Sie den folgenden T-SQL-Codeausschnitt in das Abfragefenster ein, und kli
    GO
    ```
 
-## <a name="view-query-results"></a>Aufrufen der Abfrageergebnisse
-Die Ergebnisse einer Abfrage werden unter dem Abfragetextfenster angezeigt. Mit den unten aufgeführten Schritten können Sie die Tabelle **Customers** abfragen und sich die zuvor eingefügten Zeilen anzeigen lassen.  
+## <a name="query-the-table-and-view-the-results"></a>Abfragen der Tabelle und Aufrufen der Ergebnisse
+Die Ergebnisse einer Abfrage werden unter dem Abfragetextfenster angezeigt. Um die Tabelle Customers abzufragen und sich die zuvor eingefügten Zeilen anzeigen zu lassen, führen Sie folgende Schritte aus:  
 
 1. Fügen Sie den folgenden T-SQL-Codeausschnitt in das Abfragefenster ein, und klicken Sie auf **Ausführen**: 
 
@@ -145,35 +144,40 @@ Die Ergebnisse einer Abfrage werden unter dem Abfragetextfenster angezeigt. Mit 
    -- Select rows from table 'Customers'
    SELECT * FROM dbo.Customers;
    ```
-1. Die Ergebnisse der Abfrage werden unter dem Bereich angezeigt, in dem Text eingegeben wurde: 
 
-   ![Abfrageergebnisse](media/connect-query-sql-server/queryresults.png)
+    Die Ergebnisse der Abfrage werden unter dem Bereich angezeigt, in dem Text eingegeben wurde: 
 
+   ![Die Ergebnisliste](media/connect-query-sql-server/queryresults.png)
 
-1.  Sie können die Darstellung der angezeigten Ergebnisse durch eine der folgenden Optionen ändern:
+2. Ändern Sie die Darstellung der angezeigten Ergebnisse durch eine der folgenden Optionen:
 
-     ![Ergebnisse](media/connect-query-sql-server/results.png)
+     ![Drei Optionen zum Anzeigen von Abfrageergebnissen](media/connect-query-sql-server/results.png)
 
-    - Als Standardeinstellung für die Darstellung der Ergebnisse wird die **Rasteransicht** verwendet, durch die die Ergebnisse in einer Tabelle angezeigt werden. Diese Option kann über die mittlere Schaltfläche ausgewählt werden. 
+    - Die mittlere Schaltfläche zeigt die Ergebnisse in der **Rasteransicht**, also in der Standardansicht, an. 
     - Mit der linken Schaltfläche werden die Ergebnisse in der **Textansicht** dargestellt, wie in der Abbildung im nächsten Abschnitt zu sehen ist.
-    - Über die rechte Schaltfläche können Sie die Ergebnisse in einer Datei speichern, wobei *.rpt das Standardsuffix ist.
+    - Mit der dritten Schaltfläche können Sie die Ergebnisse in einer Datei speichern, deren Erweiterung standardmäßig nicht RPT ist.
 
-## <a name="verify-your-query-window-connection-properties"></a>Überprüfen von Verbindungseigenschaften des Abfragefensters
-Informationen zu Verbindungseigenschaften finden Sie unter den Ergebnissen einer Abfrage. 
-- Nachdem Sie die Abfrage aus dem vorherigen Schritt ausgeführt haben, können Sie sich die Verbindungseigenschaften im unteren Bereich des Abfragefensters ansehen.
-    - Hier wird angezeigt, mit welchem Server und welcher Datenbank Sie verbunden sind. Außerdem ist der Benutzername zu sehen, mit dem Sie angemeldet sind.
-    - Des Weiteren sind auch die Abfragedauer und die Anzahl der Zeilen sichtbar, die von der zuvor ausgeführten Abfrage zurückgegeben wurden.
+## <a name="verify-your-connection-properties-by-using-the-query-window-table"></a>Überprüfen Ihrer Verbindungseigenschaften mit der Tabelle im Abfragefenster
+Informationen zu Verbindungseigenschaften finden Sie unter den Ergebnissen einer Abfrage. Nachdem Sie die Abfrage aus dem vorherigen Schritt ausgeführt haben, können Sie sich die Verbindungseigenschaften im unteren Bereich des Abfragefensters ansehen.
+
+- Hier wird angezeigt, mit welchem Server und welcher Datenbank Sie verbunden sind. Außerdem ist der Benutzername zu sehen, mit dem Sie angemeldet sind.
+- Des Weiteren sind auch die Abfragedauer und die Anzahl der Zeilen angezeigt, die von der zuvor ausgeführten Abfrage zurückgegeben wurden.
+
+    ![Verbindungseigenschaften](media/connect-query-sql-server/connectionproperties.png)
     
-    ![Verbindungseigenschaften](media/connect-query-sql-server/connectionproperties.png)  
-    In dieser Abbildung werden die Ergebnisse in der **Textansicht** dargestellt.  
+    Beachten Sie, dass in dieser Abbildung die Ergebnisse in der **Textansicht** dargestellt werden. 
 
-## <a name="change-server-connection-within-query-window"></a>Ändern der Serververbindung im Abfragefenster
+## <a name="change-the-server-that-the-query-window-is-connected-to"></a>Ändern des Servers, mit dem das Abfragefenster verbunden ist
 Mit den folgenden Schritten können Sie die Serververbindung für das aktuelle Abfragefenster ändern:
-1. Klicken Sie mit der mit der rechten Maustaste in das Abfragefenster und rufen Sie „Verbindung“ > „Verbindung ändern“ auf.
-2. Dadurch wird das Dialogfeld **Connect to Server** (Verbindung mit Server herstellen) im Dialogfeld erneut geöffnet, sodass Sie für die Abfrageverbindung einen anderen Server festlegen können. 
+
+1. Klicken Sie mit der rechten Maustaste in das Abfragefenster, und wählen Sie dann **Verbindung** > **Verbindung ändern** aus.  
+    Das Fenster **Mit Server verbinden** wird erneut geöffnet.
+2. Ändern Sie den Server, mit dem Ihr Abfragefenster verbunden ist. 
  
-   ![Verbindung ändern](media/connect-query-sql-server/changeconnection.png)
-   - Beachten Sie, dass diese Änderung keine Auswirkung auf den Server hat, mit dem der **Objekt-Explorer** verbunden ist. Die Änderung betrifft ausschließlich das aktuelle Abfragefenster. 
+   ![Der Befehl „Verbindung ändern“](media/connect-query-sql-server/changeconnection.png)
+
+    > [!NOTE]
+    > Diese Aktion ändert nur den Server, mit dem das Abfragefenster verbunden ist und nicht den Server, mit dem der Objekt-Explorer verbunden ist. 
 
 
 
