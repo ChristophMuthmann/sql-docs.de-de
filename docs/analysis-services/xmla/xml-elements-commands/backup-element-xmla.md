@@ -1,27 +1,31 @@
 ---
 title: Backup-Element (XMLA) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-apiname: Backup Element
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
+apiname:
+- Backup Element
+apilocation:
+- http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 f1_keywords:
 - urn:schemas-microsoft-com:xml-analysis#Backup
 - http://schemas.microsoft.com/analysisservices/2003/engine#Backup
 - microsoft.xml.analysis.backup
-helpviewer_keywords: Backup command
+helpviewer_keywords:
+- Backup command
 ms.assetid: 5bcbc14c-9db9-45b2-99de-f3a265bcb0c4
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: Minewiskan
 ms.author: owend
 manager: kfile

@@ -1,19 +1,21 @@
 ---
-title: "Eigenschaften des Verfügbarkeitsreplikats (Seite Allgemein) | Microsoft-Dokumentation"
-ms.custom: 
+title: Eigenschaften des Verfügbarkeitsreplikats (Seite Allgemein) | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: availability-groups
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
-f1_keywords: sql13.swb.availabilityreplicaproperties.general.f1
+f1_keywords:
+- sql13.swb.availabilityreplicaproperties.general.f1
 ms.assetid: 8318fefb-e045-4fab-8507-e1951fc7cec6
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

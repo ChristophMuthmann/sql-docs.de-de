@@ -1,24 +1,29 @@
 ---
 title: CubePermission-Element (ASSL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-apiname: CubePermission Element
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
+apiname:
+- CubePermission Element
+apilocation:
+- http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to: SQL Server 2016 Preview
-f1_keywords: CubePermission
-helpviewer_keywords: CubePermission element
+applies_to:
+- SQL Server 2016 Preview
+f1_keywords:
+- CubePermission
+helpviewer_keywords:
+- CubePermission element
 ms.assetid: b144b623-ff20-4ead-91ad-4c718f3b140b
-caps.latest.revision: "36"
+caps.latest.revision: 36
 author: Minewiskan
 ms.author: owend
 manager: kfile

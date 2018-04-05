@@ -1,24 +1,29 @@
 ---
 title: QueryBinding-Datentyp (ASSL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-apiname: QueryBinding Data Type
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
+apiname:
+- QueryBinding Data Type
+apilocation:
+- http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to: SQL Server 2016 Preview
-f1_keywords: QueryBinding
-helpviewer_keywords: QueryBinding data type
+applies_to:
+- SQL Server 2016 Preview
+f1_keywords:
+- QueryBinding
+helpviewer_keywords:
+- QueryBinding data type
 ms.assetid: 7b58fc89-0060-4e56-ad99-6f74fe8cfc6d
-caps.latest.revision: "38"
+caps.latest.revision: 38
 author: Minewiskan
 ms.author: owend
 manager: kfile

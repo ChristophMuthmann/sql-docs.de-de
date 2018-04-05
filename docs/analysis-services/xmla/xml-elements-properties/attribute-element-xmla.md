@@ -1,27 +1,31 @@
 ---
 title: Attribut-Element (XMLA) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-apiname: Attribute Element
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
+apiname:
+- Attribute Element
+apilocation:
+- http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 f1_keywords:
 - http://schemas.microsoft.com/analysisservices/2003/engine#Attribute
 - microsoft.xml.analysis.attribute
 - urn:schemas-microsoft-com:xml-analysis#Attribute
-helpviewer_keywords: Attribute element
+helpviewer_keywords:
+- Attribute element
 ms.assetid: 0df9cf44-dc5f-4234-8a5a-daac8aabc0d6
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: Minewiskan
 ms.author: owend
 manager: kfile

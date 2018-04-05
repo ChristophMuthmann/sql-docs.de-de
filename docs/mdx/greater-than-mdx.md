@@ -1,23 +1,25 @@
 ---
-title: "&gt;(Größer als) (MDX) | Microsoft Docs"
-ms.custom: 
+title: '&gt;(Größer als) (MDX) | Microsoft Docs'
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-f1_keywords: '>'
-dev_langs: kbMDX
+f1_keywords:
+- '>'
+dev_langs:
+- kbMDX
 helpviewer_keywords:
 - greater than operator (>)
 - '> (greater than operator)'
 ms.assetid: 36ba6462-5517-43be-8e7d-a38b7343c5d3
-caps.latest.revision: "33"
+caps.latest.revision: 33
 author: Minewiskan
 ms.author: owend
 manager: erikre

@@ -1,19 +1,21 @@
 ---
 title: Erstellen von Abfragen (Visual Database Tools) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: queries [SQL Server], creating
+helpviewer_keywords:
+- queries [SQL Server], creating
 ms.assetid: 696a080d-848f-44d3-a918-e29bafaab85a
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg

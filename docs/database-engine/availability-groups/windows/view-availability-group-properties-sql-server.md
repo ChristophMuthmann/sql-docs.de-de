@@ -1,19 +1,21 @@
 ---
-title: "Anzeigen von Verfügbarkeitsgruppeneigenschaften (SQL Server) | Microsoft-Dokumentation"
-ms.custom: 
+title: Anzeigen von Verfügbarkeitsgruppeneigenschaften (SQL Server) | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: availability-groups
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: Availability Groups [SQL Server]
+helpviewer_keywords:
+- Availability Groups [SQL Server]
 ms.assetid: 61243c87-bd62-4510-863f-2a8f347caf1f
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

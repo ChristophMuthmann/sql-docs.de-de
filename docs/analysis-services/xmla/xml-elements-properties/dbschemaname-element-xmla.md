@@ -1,27 +1,31 @@
 ---
 title: DbSchemaName-Element (XMLA) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-apiname: DbSchemaName Element
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
+apiname:
+- DbSchemaName Element
+apilocation:
+- http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 f1_keywords:
 - urn:schemas-microsoft-com:xml-analysis#DbSchemaName
 - microsoft.xml.analysis.dbschemaname
 - http://schemas.microsoft.com/analysisservices/2003/engine#DbSchemaName
-helpviewer_keywords: DbSchemaName element
+helpviewer_keywords:
+- DbSchemaName element
 ms.assetid: 40ca10c9-7597-48fe-a9d9-ee2c7b84d4d1
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: Minewiskan
 ms.author: owend
 manager: kfile

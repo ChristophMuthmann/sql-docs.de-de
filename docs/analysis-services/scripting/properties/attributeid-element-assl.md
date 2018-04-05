@@ -1,24 +1,29 @@
 ---
 title: AttributeID-Element (ASSL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-apiname: AttributeID Element
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
+apiname:
+- AttributeID Element
+apilocation:
+- http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to: SQL Server 2016 Preview
-f1_keywords: AttributeID
-helpviewer_keywords: AttributeID element
+applies_to:
+- SQL Server 2016 Preview
+f1_keywords:
+- AttributeID
+helpviewer_keywords:
+- AttributeID element
 ms.assetid: 13d2e92b-e4bf-4f2d-b34c-a6f483da3a9e
-caps.latest.revision: "42"
+caps.latest.revision: 42
 author: Minewiskan
 ms.author: owend
 manager: kfile

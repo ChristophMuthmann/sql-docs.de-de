@@ -1,21 +1,24 @@
 ---
 title: Dimensionen (MDX) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-f1_keywords: Dimensions
-dev_langs: kbMDX
-helpviewer_keywords: Dimensions function
+f1_keywords:
+- Dimensions
+dev_langs:
+- kbMDX
+helpviewer_keywords:
+- Dimensions function
 ms.assetid: 64f63aa0-ef74-4415-a0c9-8acc6cd81739
-caps.latest.revision: "33"
+caps.latest.revision: 33
 author: Minewiskan
 ms.author: owend
 manager: erikre

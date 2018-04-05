@@ -1,21 +1,24 @@
 ---
 title: IIf (MDX) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-f1_keywords: IIF
-dev_langs: kbMDX
-helpviewer_keywords: IIf function
+f1_keywords:
+- IIF
+dev_langs:
+- kbMDX
+helpviewer_keywords:
+- IIf function
 ms.assetid: ec7b35e6-f4c5-40bf-93c8-b83c1cc26fe2
-caps.latest.revision: "41"
+caps.latest.revision: 41
 author: Minewiskan
 ms.author: owend
 manager: erikre

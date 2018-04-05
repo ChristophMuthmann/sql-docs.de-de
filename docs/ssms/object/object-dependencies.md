@@ -1,19 +1,21 @@
 ---
-title: "Objektabhängigkeiten | Microsoft-Dokumentation"
-ms.custom: 
+title: Objektabhängigkeiten | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-objects
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
-f1_keywords: sql13.swb.common.objectdependencies.f1
+f1_keywords:
+- sql13.swb.common.objectdependencies.f1
 ms.assetid: c63d1160-3f3d-45df-99be-6fe081125fb5
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg

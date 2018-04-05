@@ -1,20 +1,23 @@
 ---
 title: StorageBoundInMB-Element (DTA) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: dta
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
-dev_langs: XML
-helpviewer_keywords: StorageBoundInMB element
+dev_langs:
+- XML
+helpviewer_keywords:
+- StorageBoundInMB element
 ms.assetid: a8374910-bf68-4edb-b464-53a3a705e7f4
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg

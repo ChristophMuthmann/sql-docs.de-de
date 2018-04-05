@@ -1,23 +1,27 @@
 ---
 title: ProactiveCachingInheritedBinding-Datentyp (ASSL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-apiname: ProactiveCachingInheritedBinding Data Type
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
+apiname:
+- ProactiveCachingInheritedBinding Data Type
+apilocation:
+- http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to: SQL Server 2016 Preview
-helpviewer_keywords: ProactiveCachingInheritedBinding data type
+applies_to:
+- SQL Server 2016 Preview
+helpviewer_keywords:
+- ProactiveCachingInheritedBinding data type
 ms.assetid: 913fa19f-1ecb-4fca-897e-12f0fb02cf8b
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: Minewiskan
 ms.author: owend
 manager: kfile

@@ -1,19 +1,20 @@
 ---
 title: Datenspalten der Benachrichtigungsereignisse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-helpviewer_keywords: Notification Events event category
+helpviewer_keywords:
+- Notification Events event category
 ms.assetid: 0ecf06da-1586-415a-9da8-60d4c634f030
-caps.latest.revision: "30"
+caps.latest.revision: 30
 author: Minewiskan
 ms.author: owend
 manager: kfile

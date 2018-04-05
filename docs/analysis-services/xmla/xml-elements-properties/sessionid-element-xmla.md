@@ -1,27 +1,31 @@
 ---
 title: SessionID-Element (XMLA) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-apiname: SessionID Element
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
+apiname:
+- SessionID Element
+apilocation:
+- http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 f1_keywords:
 - urn:schemas-microsoft-com:xml-analysis#SessionID
 - http://schemas.microsoft.com/analysisservices/2003/engine#SessionID
 - microsoft.xml.analysis.sessionid
-helpviewer_keywords: SessionID element
+helpviewer_keywords:
+- SessionID element
 ms.assetid: 18220e00-76cf-48f6-9465-200465a0c553
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: Minewiskan
 ms.author: owend
 manager: kfile

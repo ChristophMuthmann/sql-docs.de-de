@@ -1,25 +1,26 @@
 ---
 title: SELECT FROM &lt;Modell&gt; (DMX) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - SELECT
 - FROM
-dev_langs: DMX
+dev_langs:
+- DMX
 helpviewer_keywords:
 - empty prediction joins [DMX]
 - SELECT FROM <model> statement
 ms.assetid: dc5b9a01-e308-4ee8-84fc-ba4b991c60aa
-caps.latest.revision: "36"
+caps.latest.revision: 36
 author: Minewiskan
 ms.author: owend
 manager: erikre

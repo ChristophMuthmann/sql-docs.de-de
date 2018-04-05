@@ -1,24 +1,26 @@
 ---
 title: Bearbeiten von Zeilen im Ergebnisbereich (Visual Database Tools) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
-f1_keywords: vdt.pane.results
+f1_keywords:
+- vdt.pane.results
 helpviewer_keywords:
 - View Designer, Results pane
 - modifying rows
 - Query Designer [SQL Server], Results pane
 - Results pane
 ms.assetid: de36f636-cfe9-4ae6-a474-06e9c51f9f0c
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg

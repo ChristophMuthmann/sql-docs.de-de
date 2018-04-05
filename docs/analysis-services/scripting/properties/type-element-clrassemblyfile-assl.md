@@ -1,24 +1,29 @@
 ---
 title: Geben Sie-Element (ClrAssemblyFile) (ASSL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-apiname: Type Element (ClrAssemblyFile)
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
+apiname:
+- Type Element (ClrAssemblyFile)
+apilocation:
+- http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to: SQL Server 2016 Preview
-f1_keywords: TYPE
-helpviewer_keywords: Type element
+applies_to:
+- SQL Server 2016 Preview
+f1_keywords:
+- TYPE
+helpviewer_keywords:
+- Type element
 ms.assetid: ab9e1e2c-ab06-4cd1-b007-16d738dc5604
-caps.latest.revision: "38"
+caps.latest.revision: 38
 author: Minewiskan
 ms.author: owend
 manager: kfile

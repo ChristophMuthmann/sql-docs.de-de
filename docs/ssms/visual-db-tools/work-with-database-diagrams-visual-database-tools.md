@@ -1,24 +1,26 @@
 ---
 title: Arbeiten mit Datenbankdiagrammen (Visual Database Tools) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
-f1_keywords: sql13.swb.workingwithsql2000diagrams
+f1_keywords:
+- sql13.swb.workingwithsql2000diagrams
 helpviewer_keywords:
 - database diagrams [SQL Server], about database diagrams
 - diagrams [SQL Server], about diagrams
 - database diagrams [SQL Server]
 - diagrams [SQL Server]
 ms.assetid: 2dec7e0b-99cd-4185-8334-111795e52f45
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg

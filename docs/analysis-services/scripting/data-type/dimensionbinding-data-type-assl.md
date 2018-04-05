@@ -1,24 +1,29 @@
 ---
 title: DimensionBinding-Datentyp (ASSL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-apiname: DimensionBinding Data Type
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
+apiname:
+- DimensionBinding Data Type
+apilocation:
+- http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to: SQL Server 2016 Preview
-f1_keywords: DimensionBinding
-helpviewer_keywords: DimensionBinding data type
+applies_to:
+- SQL Server 2016 Preview
+f1_keywords:
+- DimensionBinding
+helpviewer_keywords:
+- DimensionBinding data type
 ms.assetid: 6163d86b-0f6c-4237-b07b-47bc7e2962c4
-caps.latest.revision: "41"
+caps.latest.revision: 41
 author: Minewiskan
 ms.author: owend
 manager: kfile

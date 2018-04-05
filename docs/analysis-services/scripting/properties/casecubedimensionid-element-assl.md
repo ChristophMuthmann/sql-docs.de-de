@@ -1,24 +1,29 @@
 ---
 title: CaseCubeDimensionID-Element (ASSL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-apiname: CaseCubeDimensionID Element
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
+apiname:
+- CaseCubeDimensionID Element
+apilocation:
+- http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to: SQL Server 2016 Preview
-f1_keywords: CaseCubeDimensionID
-helpviewer_keywords: CaseCubeDimensionID element
+applies_to:
+- SQL Server 2016 Preview
+f1_keywords:
+- CaseCubeDimensionID
+helpviewer_keywords:
+- CaseCubeDimensionID element
 ms.assetid: 96720e13-7f9b-4768-ad4b-4def40758707
-caps.latest.revision: "37"
+caps.latest.revision: 37
 author: Minewiskan
 ms.author: owend
 manager: kfile

@@ -1,19 +1,20 @@
 ---
-title: "URL-Reservierungen für Berichtsserver-Bereitstellungen mit mehreren Instanzen | Microsoft-Dokumentation"
-ms.custom: 
+title: URL-Reservierungen für Berichtsserver-Bereitstellungen mit mehreren Instanzen | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 05/18/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
+ms.service: ''
 ms.component: install-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: URL reservations
+helpviewer_keywords:
+- URL reservations
 ms.assetid: f67c83c0-1f74-42bb-bfc1-e50c38152d3d
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
 manager: kfile

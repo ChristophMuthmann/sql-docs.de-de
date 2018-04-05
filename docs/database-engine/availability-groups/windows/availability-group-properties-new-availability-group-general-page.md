@@ -1,19 +1,21 @@
 ---
-title: "Eigenschaften der Verfügbarkeitsgruppe: Neue Verfügbarkeitsgruppe (Seite „Allgemein“) | Microsoft-Dokumentation"
-ms.custom: 
+title: 'Eigenschaften der Verfügbarkeitsgruppe: Neue Verfügbarkeitsgruppe (Seite „Allgemein“) | Microsoft-Dokumentation'
+ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: availability-groups
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
-f1_keywords: sql13.swb.availabilitygroupproperties.general.f1
+f1_keywords:
+- sql13.swb.availabilitygroupproperties.general.f1
 ms.assetid: 9af5379f-91b8-4729-9f75-4a80242a30e9
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

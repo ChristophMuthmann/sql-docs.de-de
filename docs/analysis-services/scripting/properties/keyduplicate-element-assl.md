@@ -1,24 +1,29 @@
 ---
 title: KeyDuplicate-Element (ASSL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-apiname: KeyDuplicate Element
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
+apiname:
+- KeyDuplicate Element
+apilocation:
+- http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to: SQL Server 2016 Preview
-f1_keywords: KeyDuplicate
-helpviewer_keywords: KeyDuplicate element
+applies_to:
+- SQL Server 2016 Preview
+f1_keywords:
+- KeyDuplicate
+helpviewer_keywords:
+- KeyDuplicate element
 ms.assetid: d7000b8b-e81f-4401-8738-00c2e0f73a59
-caps.latest.revision: "33"
+caps.latest.revision: 33
 author: Minewiskan
 ms.author: owend
 manager: kfile

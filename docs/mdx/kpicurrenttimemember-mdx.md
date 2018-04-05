@@ -1,20 +1,22 @@
 ---
 title: KPICurrentTimeMember (MDX) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-dev_langs: kbMDX
-helpviewer_keywords: KPICurrentTimeMember function
+dev_langs:
+- kbMDX
+helpviewer_keywords:
+- KPICurrentTimeMember function
 ms.assetid: b7011335-1df9-460a-8cfa-452a687156da
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: Minewiskan
 ms.author: owend
 manager: erikre

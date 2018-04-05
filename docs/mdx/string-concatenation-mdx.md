@@ -1,23 +1,25 @@
 ---
 title: + (Verketten von Zeichenfolgen) (MDX) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-f1_keywords: +
-dev_langs: kbMDX
+f1_keywords:
+- +
+dev_langs:
+- kbMDX
 helpviewer_keywords:
 - string concatenation operators
 - + (string concatenation)
 ms.assetid: d77636b1-2973-4587-af35-54aba5700d9a
-caps.latest.revision: "29"
+caps.latest.revision: 29
 author: Minewiskan
 ms.author: owend
 manager: erikre

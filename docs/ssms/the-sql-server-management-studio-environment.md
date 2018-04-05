@@ -1,19 +1,21 @@
 ---
 title: Die SQL Server Management Studio-Umgebung | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: SQL Server Management Studio [SQL Server], about SQL Server Management Studio
+helpviewer_keywords:
+- SQL Server Management Studio [SQL Server], about SQL Server Management Studio
 ms.assetid: 73f4db18-6b4e-4b72-9dce-449bd5de8eab
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg

@@ -1,23 +1,24 @@
 ---
 title: Operatoren (DMX) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-dev_langs: DMX
+dev_langs:
+- DMX
 helpviewer_keywords:
 - operators [DMX]
 - DMX [Analysis Services], operators
 - Data Mining Extensions [Analysis Services], operators
 ms.assetid: e453e570-1ad1-4604-892f-6130308936ac
-caps.latest.revision: "35"
+caps.latest.revision: 35
 author: Minewiskan
 ms.author: owend
 manager: erikre

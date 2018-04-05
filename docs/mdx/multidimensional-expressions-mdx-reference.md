@@ -1,18 +1,20 @@
 ---
-title: "Mehrdimensionale Ausdrücke (MDX)-Referenz | Microsoft Docs"
-ms.custom: 
+title: Mehrdimensionale Ausdrücke (MDX)-Referenz | Microsoft Docs
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-f1_keywords: sql13.asvs.sqlserverstudio.startpage.mdx.f1
-dev_langs: kbMDX
+f1_keywords:
+- sql13.asvs.sqlserverstudio.startpage.mdx.f1
+dev_langs:
+- kbMDX
 helpviewer_keywords:
 - Multidimensional Expressions [Analysis Services]
 - MDX [Analysis Services], reference
@@ -20,7 +22,7 @@ helpviewer_keywords:
 - MDX [Analysis Services]
 - Analysis Services Multidimensional Expressions
 ms.assetid: 7e1cb1fb-2a50-41c2-9c70-b853ad6b6c3f
-caps.latest.revision: "43"
+caps.latest.revision: 43
 author: Minewiskan
 ms.author: owend
 manager: erikre

@@ -1,20 +1,22 @@
 ---
 title: ^ (Potenz) (MDX) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-dev_langs: kbMDX
-helpviewer_keywords: functions [MDX], ^ (Power)
+dev_langs:
+- kbMDX
+helpviewer_keywords:
+- functions [MDX], ^ (Power)
 ms.assetid: be2becd7-5683-4891-9b8a-6e795fc9e47d
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: Minewiskan
 ms.author: owend
 manager: erikre

@@ -1,21 +1,24 @@
 ---
 title: IsLeaf (MDX) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-f1_keywords: ISLEAF
-dev_langs: kbMDX
-helpviewer_keywords: IsLeaf function
+f1_keywords:
+- ISLEAF
+dev_langs:
+- kbMDX
+helpviewer_keywords:
+- IsLeaf function
 ms.assetid: 54862bb3-acc2-4711-ac5a-faa9e9de3721
-caps.latest.revision: "30"
+caps.latest.revision: 30
 author: Minewiskan
 ms.author: owend
 manager: erikre

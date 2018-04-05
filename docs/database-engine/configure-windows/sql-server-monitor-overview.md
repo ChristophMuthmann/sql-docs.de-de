@@ -1,20 +1,23 @@
 ---
-title: "SQL Server-Monitor (Übersicht) | Microsoft-Dokumentation"
-ms.custom: 
+title: SQL Server-Monitor (Übersicht) | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: configure-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
-f1_keywords: sql13.swb.sqlservermonitor.main.f1
-helpviewer_keywords: SQL Server Monitor [SQL Server]
+f1_keywords:
+- sql13.swb.sqlservermonitor.main.f1
+helpviewer_keywords:
+- SQL Server Monitor [SQL Server]
 ms.assetid: 048ae16d-31c3-489a-9f1e-1400a3bacd39
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

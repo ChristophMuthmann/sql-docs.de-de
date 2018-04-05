@@ -1,21 +1,24 @@
 ---
 title: Vorhersagen (MDX) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-f1_keywords: PREDICT
-dev_langs: kbMDX
-helpviewer_keywords: Predict function
+f1_keywords:
+- PREDICT
+dev_langs:
+- kbMDX
+helpviewer_keywords:
+- Predict function
 ms.assetid: a82f3edd-249b-4559-98d3-6e10d81a095d
-caps.latest.revision: "36"
+caps.latest.revision: 36
 author: Minewiskan
 ms.author: owend
 manager: erikre

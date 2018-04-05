@@ -1,20 +1,23 @@
 ---
-title: "Dialogfeld „Fenster“ (Hilfe von Microsoft Document Explorer) | Microsoft-Dokumentation"
-ms.custom: 
+title: Dialogfeld „Fenster“ (Hilfe von Microsoft Document Explorer) | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-menu
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
-f1_keywords: vs.windows
-helpviewer_keywords: Windows dialog box
+f1_keywords:
+- vs.windows
+helpviewer_keywords:
+- Windows dialog box
 ms.assetid: 7a53478c-e8e1-4d15-b484-c242495c1f4f
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg

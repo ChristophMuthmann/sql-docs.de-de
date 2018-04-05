@@ -1,22 +1,23 @@
 ---
 title: Konvertieren des CRI Dialogfelds (Berichts-Generator) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
+ms.service: ''
 ms.component: report-builder
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-f1_keywords: "10008"
+f1_keywords:
+- "10008"
 helpviewer_keywords:
 - CRI
 - custom report items
 ms.assetid: 2a3f2ac6-667e-4498-8b73-9c40beb993f5
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: markingmyname
 ms.author: maghan
 manager: kfile

@@ -1,21 +1,24 @@
 ---
 title: DistinctCount (MDX) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-f1_keywords: DISTINCTCOUNT
-dev_langs: kbMDX
-helpviewer_keywords: DistinctCount function
+f1_keywords:
+- DISTINCTCOUNT
+dev_langs:
+- kbMDX
+helpviewer_keywords:
+- DistinctCount function
 ms.assetid: b1a725a6-d81e-4777-a2f7-ecbc39f9b1e8
-caps.latest.revision: "34"
+caps.latest.revision: 34
 author: Minewiskan
 ms.author: owend
 manager: erikre

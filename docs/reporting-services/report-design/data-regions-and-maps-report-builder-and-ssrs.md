@@ -1,19 +1,20 @@
 ---
 title: Datenbereiche und Karten (Berichts-Generator und SSRS) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
+ms.service: ''
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: data regions
+helpviewer_keywords:
+- data regions
 ms.assetid: 3afb8874-b36c-4e44-a0d8-80d2f7135fb1
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile

@@ -1,21 +1,24 @@
 ---
 title: LinkMember (MDX) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-f1_keywords: LINKMEMBER
-dev_langs: kbMDX
-helpviewer_keywords: LinkMember function
+f1_keywords:
+- LINKMEMBER
+dev_langs:
+- kbMDX
+helpviewer_keywords:
+- LinkMember function
 ms.assetid: b9106f07-8ea2-4933-aed3-ee9c63acf7ac
-caps.latest.revision: "33"
+caps.latest.revision: 33
 author: Minewiskan
 ms.author: owend
 manager: erikre

@@ -1,19 +1,20 @@
 ---
-title: "3D, Abschrägungen und andere Effekte in einem Diagramm (Berichts-Generator und SSRS) | Microsoft-Dokumentation"
-ms.custom: 
+title: 3D, Abschrägungen und andere Effekte in einem Diagramm (Berichts-Generator und SSRS) | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
+ms.service: ''
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-f1_keywords: "10156"
+f1_keywords:
+- "10156"
 ms.assetid: 18ef2119-2931-43ae-9078-f39b460462dd
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile

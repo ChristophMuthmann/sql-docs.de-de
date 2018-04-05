@@ -1,24 +1,29 @@
 ---
 title: PushedDataSource-Datentyp (ASSL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-apiname: PushedDataSource Data Type
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
+apiname:
+- PushedDataSource Data Type
+apilocation:
+- http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to: SQL Server 2016 Preview
-f1_keywords: PushedDataSource
-helpviewer_keywords: PushedDataSource data type
+applies_to:
+- SQL Server 2016 Preview
+f1_keywords:
+- PushedDataSource
+helpviewer_keywords:
+- PushedDataSource data type
 ms.assetid: b319ee87-7c0a-41ec-a8af-cc7089aeb6ad
-caps.latest.revision: "36"
+caps.latest.revision: 36
 author: Minewiskan
 ms.author: owend
 manager: kfile

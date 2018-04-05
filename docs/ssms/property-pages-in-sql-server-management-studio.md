@@ -1,19 +1,21 @@
 ---
 title: Eigenschaftenseiten in SQL Server Management Studio | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: property pages [SQL Server Management Studio]
+helpviewer_keywords:
+- property pages [SQL Server Management Studio]
 ms.assetid: 719282c3-e9cc-4e0e-9a83-7fb8b8b17f67
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg

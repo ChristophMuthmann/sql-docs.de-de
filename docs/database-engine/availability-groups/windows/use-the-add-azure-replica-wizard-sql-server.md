@@ -1,19 +1,21 @@
 ---
-title: "Verwenden des Assistenten zum Hinzufügen von Azure-Replikaten (SQL Server) | Microsoft-Dokumentation"
-ms.custom: 
+title: Verwenden des Assistenten zum Hinzufügen von Azure-Replikaten (SQL Server) | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: availability-groups
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
-f1_keywords: sql13.swb.addreplicawizard.azurereplica.f1
+f1_keywords:
+- sql13.swb.addreplicawizard.azurereplica.f1
 ms.assetid: b89cc41b-07b4-49f3-82cc-bc42b2e793ae
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

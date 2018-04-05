@@ -1,17 +1,18 @@
 ---
 title: '&lt;quelldatenabfrage&gt; | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-dev_langs: DMX
+dev_langs:
+- DMX
 helpviewer_keywords:
 - data sources [DMX]
 - predictions [DMX]
@@ -21,7 +22,7 @@ helpviewer_keywords:
 - <source data query> element
 - training mining models
 ms.assetid: 9dce5e37-1354-4d28-87c2-f9c419cb5b09
-caps.latest.revision: "41"
+caps.latest.revision: 41
 author: Minewiskan
 ms.author: owend
 manager: erikre

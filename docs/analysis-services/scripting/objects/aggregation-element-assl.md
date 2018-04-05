@@ -1,24 +1,29 @@
 ---
 title: Aggregation-Element (ASSL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-apiname: Aggregation Element
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
+apiname:
+- Aggregation Element
+apilocation:
+- http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to: SQL Server 2016 Preview
-f1_keywords: Aggregation
-helpviewer_keywords: Aggregation element
+applies_to:
+- SQL Server 2016 Preview
+f1_keywords:
+- Aggregation
+helpviewer_keywords:
+- Aggregation element
 ms.assetid: f37af388-b2b3-4234-a1d6-936ee9b7f2ae
-caps.latest.revision: "39"
+caps.latest.revision: 39
 author: Minewiskan
 ms.author: owend
 manager: kfile

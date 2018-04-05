@@ -1,21 +1,24 @@
 ---
 title: Head (MDX) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-f1_keywords: HEAD
-dev_langs: kbMDX
-helpviewer_keywords: Head function
+f1_keywords:
+- HEAD
+dev_langs:
+- kbMDX
+helpviewer_keywords:
+- Head function
 ms.assetid: 2a909bda-1366-4537-93b0-c089554fc11f
-caps.latest.revision: "35"
+caps.latest.revision: 35
 author: Minewiskan
 ms.author: owend
 manager: erikre

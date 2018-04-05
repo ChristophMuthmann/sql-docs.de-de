@@ -1,27 +1,31 @@
 ---
 title: Delete-Element (XMLA) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-apiname: Delete Element
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
+apiname:
+- Delete Element
+apilocation:
+- http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 f1_keywords:
 - microsoft.xml.analysis.delete
 - urn:schemas-microsoft-com:xml-analysis#Delete
 - http://schemas.microsoft.com/analysisservices/2003/engine#Delete
-helpviewer_keywords: Delete element
+helpviewer_keywords:
+- Delete element
 ms.assetid: 76201b18-11e9-4815-9287-27a068d8fbc5
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: Minewiskan
 ms.author: owend
 manager: kfile

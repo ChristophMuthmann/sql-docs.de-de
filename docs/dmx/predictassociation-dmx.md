@@ -1,21 +1,24 @@
 ---
 title: PredictAssociation (DMX) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 09/14/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-f1_keywords: PredictAssociation
-dev_langs: DMX
-helpviewer_keywords: PredictAssociation function
+f1_keywords:
+- PredictAssociation
+dev_langs:
+- DMX
+helpviewer_keywords:
+- PredictAssociation function
 ms.assetid: 33eb66b5-84c6-449f-aaae-316345bc4ad5
-caps.latest.revision: "33"
+caps.latest.revision: 33
 author: Minewiskan
 ms.author: owend
 manager: erikre

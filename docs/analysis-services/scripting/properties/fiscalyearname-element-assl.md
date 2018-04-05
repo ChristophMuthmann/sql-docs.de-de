@@ -1,24 +1,29 @@
 ---
 title: FiscalYearName-Element (ASSL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-apiname: FiscalYearName Element
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
+apiname:
+- FiscalYearName Element
+apilocation:
+- http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to: SQL Server 2016 Preview
-f1_keywords: FiscalYearName
-helpviewer_keywords: FiscalYearName element
+applies_to:
+- SQL Server 2016 Preview
+f1_keywords:
+- FiscalYearName
+helpviewer_keywords:
+- FiscalYearName element
 ms.assetid: ce613a21-6890-4796-aac5-b029eca46255
-caps.latest.revision: "30"
+caps.latest.revision: 30
 author: Minewiskan
 ms.author: owend
 manager: kfile

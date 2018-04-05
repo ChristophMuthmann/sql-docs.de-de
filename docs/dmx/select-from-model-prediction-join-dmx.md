@@ -1,15 +1,15 @@
 ---
 title: SELECT FROM &lt;Modell&gt; PREDICTION JOIN (DMX) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - PREDICTION
@@ -18,7 +18,8 @@ f1_keywords:
 - join
 - FROM
 - PREDICTION JOIN
-dev_langs: DMX
+dev_langs:
+- DMX
 helpviewer_keywords:
 - prediction joins [DMX]
 - PREDICTION JOIN statement
@@ -27,7 +28,7 @@ helpviewer_keywords:
 - singleton query predictions [DMX]
 - SELECT FROM <model> PREDICTION JOIN statement
 ms.assetid: 7ca37fec-4a50-4d79-b1d6-1c7c12176946
-caps.latest.revision: "43"
+caps.latest.revision: 43
 author: Minewiskan
 ms.author: owend
 manager: erikre

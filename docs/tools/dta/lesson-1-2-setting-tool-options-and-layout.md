@@ -1,20 +1,23 @@
 ---
 title: Festlegen von Optionen und Layout | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: dta
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-query-tuning
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-query-tuning
+ms.tgt_pltfrm: ''
 ms.topic: article
-applies_to: SQL Server 2016
-helpviewer_keywords: Database Engine [SQL Server], tutorials
+applies_to:
+- SQL Server 2016
+helpviewer_keywords:
+- Database Engine [SQL Server], tutorials
 ms.assetid: 43e97ce0-97bc-4a27-9485-5bbeb7190b85
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg

@@ -1,15 +1,15 @@
 ---
 title: Erstellen von CELL CALCULATION-Anweisung (MDX) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CELL CALCULATION
@@ -19,13 +19,14 @@ f1_keywords:
 - CREATE_CELL_CALCULATION
 - CREATE CELL
 - CREATE CELL CALCULATION
-dev_langs: kbMDX
+dev_langs:
+- kbMDX
 helpviewer_keywords:
 - calculations [Analysis Services], creating
 - CREATE CELL CALCULATION statement
 - cubes [Analysis Services], calculations
 ms.assetid: 01ced1b3-ada1-4b55-b350-e4255c3cc679
-caps.latest.revision: "34"
+caps.latest.revision: 34
 author: Minewiskan
 ms.author: owend
 manager: erikre

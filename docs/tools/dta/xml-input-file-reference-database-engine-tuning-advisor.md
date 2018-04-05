@@ -1,23 +1,25 @@
 ---
 title: XML-Eingabe Dateiverweis (Datenbankoptimierungsratgeber) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: dta
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
-dev_langs: XML
+dev_langs:
+- XML
 helpviewer_keywords:
 - Database Engine Tuning Advisor [SQL Server], XML input files
 - input file reference [Database Engine Tuning Advisor]
 - XML input files [Database Engine Tuning Advisor]
 ms.assetid: 05e5e5f0-d6df-4336-b18e-e9bc2835a766
-caps.latest.revision: "26"
+caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg

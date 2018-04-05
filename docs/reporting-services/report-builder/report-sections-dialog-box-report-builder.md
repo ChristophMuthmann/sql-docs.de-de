@@ -1,19 +1,20 @@
 ---
 title: Berichtsabschnitte (Dialogfeld) (Berichts-Generator) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
+ms.service: ''
 ms.component: report-builder
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-f1_keywords: "10009"
+f1_keywords:
+- "10009"
 ms.assetid: 56407152-a962-49dd-a080-aef11bb6f829
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: markingmyname
 ms.author: maghan
 manager: kfile

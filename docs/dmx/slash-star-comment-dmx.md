@@ -1,23 +1,24 @@
 ---
-title: "Schrägstrich Stern / / (Kommentar) (DMX) | Microsoft Docs"
-ms.custom: 
+title: Schrägstrich Stern / / (Kommentar) (DMX) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-dev_langs: DMX
+dev_langs:
+- DMX
 helpviewer_keywords:
 - commenting characters
 - forward slash-asterisk character pairs
 - /*...*/ (comment)
 ms.assetid: 163976cc-aa47-4eda-bd98-03c1a397f80e
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: Minewiskan
 ms.author: owend
 manager: erikre

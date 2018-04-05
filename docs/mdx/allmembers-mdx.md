@@ -1,21 +1,24 @@
 ---
 title: AllMembers (MDX) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-f1_keywords: ALLMEMBERS
-dev_langs: kbMDX
-helpviewer_keywords: AllMembers function
+f1_keywords:
+- ALLMEMBERS
+dev_langs:
+- kbMDX
+helpviewer_keywords:
+- AllMembers function
 ms.assetid: 202e81d4-d2ee-4ec1-a019-4835eb19f446
-caps.latest.revision: "44"
+caps.latest.revision: 44
 author: Minewiskan
 ms.author: owend
 manager: erikre

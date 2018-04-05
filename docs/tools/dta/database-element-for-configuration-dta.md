@@ -1,20 +1,23 @@
 ---
-title: "Database-Element für Konfiguration (DTA) | Microsoft Docs"
-ms.custom: 
+title: Database-Element für Konfiguration (DTA) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: dta
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
-dev_langs: XML
-helpviewer_keywords: Database element
+dev_langs:
+- XML
+helpviewer_keywords:
+- Database element
 ms.assetid: e91ba243-6cc9-457a-8f5a-134f3c71ae69
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg

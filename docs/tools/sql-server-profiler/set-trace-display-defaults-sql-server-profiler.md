@@ -1,19 +1,21 @@
 ---
 title: Legen Sie die Ablaufverfolgungsanzeige (SQL Server Profiler) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: sql-server-profiler
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: traces [SQL Server], defaults
+helpviewer_keywords:
+- traces [SQL Server], defaults
 ms.assetid: d471aaed-c40c-4c55-a993-835e6394b5d2
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg

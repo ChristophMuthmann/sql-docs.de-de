@@ -1,27 +1,31 @@
 ---
 title: Password-Element (XMLA) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-apiname: Password Element
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
+apiname:
+- Password Element
+apilocation:
+- http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 f1_keywords:
 - http://schemas.microsoft.com/analysisservices/2003/engine#Password
 - urn:schemas-microsoft-com:xml-analysis#Password
 - microsoft.xml.analysis.password
-helpviewer_keywords: Password element
+helpviewer_keywords:
+- Password element
 ms.assetid: 8a0603bd-f6a1-4b86-84f1-c83d0b03951b
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: Minewiskan
 ms.author: owend
 manager: kfile

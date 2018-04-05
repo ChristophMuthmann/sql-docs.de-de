@@ -1,23 +1,24 @@
 ---
 title: Data Mining-Erweiterungen (DMX)-Operatorreferenz | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-dev_langs: DMX
+dev_langs:
+- DMX
 helpviewer_keywords:
 - operators [DMX]
 - DMX [Analysis Services], operators
 - Data Mining Extensions [Analysis Services], operators
 ms.assetid: a6d747c0-9ff0-475f-86cd-34bebd79c21a
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: Minewiskan
 ms.author: owend
 manager: erikre

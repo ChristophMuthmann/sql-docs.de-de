@@ -1,20 +1,22 @@
 ---
 title: KPIStatus (MDX) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-dev_langs: kbMDX
-helpviewer_keywords: KPIStatus function
+dev_langs:
+- kbMDX
+helpviewer_keywords:
+- KPIStatus function
 ms.assetid: c563f3a9-5dd7-4586-9519-16a3ca58e2ec
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: Minewiskan
 ms.author: owend
 manager: erikre

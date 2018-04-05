@@ -1,21 +1,24 @@
 ---
 title: Unorder (MDX) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-f1_keywords: UNORDER
-dev_langs: kbMDX
-helpviewer_keywords: Unorder function
+f1_keywords:
+- UNORDER
+dev_langs:
+- kbMDX
+helpviewer_keywords:
+- Unorder function
 ms.assetid: a805df2a-6320-45bc-989f-90e85faf027f
-caps.latest.revision: "36"
+caps.latest.revision: 36
 author: Minewiskan
 ms.author: owend
 manager: erikre

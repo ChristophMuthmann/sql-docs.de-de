@@ -1,15 +1,15 @@
 ---
 title: Formatieren von Achsenbezeichnungen in einem Diagramm (Berichts-Generator und SSRS) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
+ms.service: ''
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.rtp.rptdesigner.axisproperties.majortickmarks.f1
@@ -26,9 +26,10 @@ f1_keywords:
 - sql13.rtp.rptdesigner.axisproperties.labelfont.f1
 - sql13.rtp.rptdesigner.axisproperties.minortickmarks.f1
 - "10141"
-helpviewer_keywords: "10140"
+helpviewer_keywords:
+- "10140"
 ms.assetid: ddf50dd5-5314-42ff-97f4-c3a4a17cfcdd
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile

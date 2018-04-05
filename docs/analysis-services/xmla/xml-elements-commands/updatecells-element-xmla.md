@@ -1,27 +1,31 @@
 ---
 title: UpdateCells-Element (XMLA) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-apiname: UpdateCells Element
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
+apiname:
+- UpdateCells Element
+apilocation:
+- http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 f1_keywords:
 - microsoft.xml.analysis.updatecells
 - urn:schemas-microsoft-com:xml-analysis#UpdateCells
 - http://schemas.microsoft.com/analysisservices/2003/engine#UpdateCells
-helpviewer_keywords: UpdateCells command
+helpviewer_keywords:
+- UpdateCells command
 ms.assetid: 18336a35-8a46-4532-9ee7-71828b2982af
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: Minewiskan
 ms.author: owend
 manager: kfile

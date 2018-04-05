@@ -1,21 +1,24 @@
 ---
 title: PredictSupport (DMX) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-f1_keywords: PredictSupport
-dev_langs: DMX
-helpviewer_keywords: PredictSupport function
+f1_keywords:
+- PredictSupport
+dev_langs:
+- DMX
+helpviewer_keywords:
+- PredictSupport function
 ms.assetid: 325437d6-7cb5-4ae0-8abe-edb58fe5e90d
-caps.latest.revision: "35"
+caps.latest.revision: 35
 author: Minewiskan
 ms.author: owend
 manager: erikre

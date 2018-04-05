@@ -1,22 +1,23 @@
 ---
 title: '- (Subtrahieren) (DMX) | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-dev_langs: DMX
+dev_langs:
+- DMX
 helpviewer_keywords:
 - '- (subtract)'
 - subtract operator (-)
 ms.assetid: 9602e908-e80c-442a-a412-073e10d0abd4
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: Minewiskan
 ms.author: owend
 manager: erikre

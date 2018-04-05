@@ -1,21 +1,24 @@
 ---
 title: IsTestCase (DMX) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-f1_keywords: IsTestCase
-dev_langs: DMX
-helpviewer_keywords: IsTestCase function
+f1_keywords:
+- IsTestCase
+dev_langs:
+- DMX
+helpviewer_keywords:
+- IsTestCase function
 ms.assetid: 7ff4b895-9bb4-4e26-ab1b-c9049cfc2291
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: Minewiskan
 ms.author: owend
 manager: erikre

@@ -1,21 +1,24 @@
 ---
 title: OPENROWSET (DMX) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-f1_keywords: OPENROWSET
-dev_langs: DMX
-helpviewer_keywords: OPENROWSET statement
+f1_keywords:
+- OPENROWSET
+dev_langs:
+- DMX
+helpviewer_keywords:
+- OPENROWSET statement
 ms.assetid: 8c8b61b4-2bf6-46c7-8976-51484004dc22
-caps.latest.revision: "34"
+caps.latest.revision: 34
 author: Minewiskan
 ms.author: owend
 manager: erikre

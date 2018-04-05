@@ -1,19 +1,21 @@
 ---
 title: Drucken (Dialogfeld) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
-f1_keywords: vs.Print
+f1_keywords:
+- vs.Print
 ms.assetid: 1811cb9e-3791-414d-b8c9-1d61657707f8
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg

@@ -1,19 +1,21 @@
 ---
-title: "Spiegelserverinstanz (Assistent zum Konfigurieren der Sicherheit für die Datenbankspiegelung) | Microsoft-Dokumentation"
-ms.custom: 
+title: Spiegelserverinstanz (Assistent zum Konfigurieren der Sicherheit für die Datenbankspiegelung) | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: database-mirroring
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
-f1_keywords: sql13.swb.configdbmsecurwiz.mirrorsrvr.f1
+f1_keywords:
+- sql13.swb.configdbmsecurwiz.mirrorsrvr.f1
 ms.assetid: 53223432-615e-440f-904d-925d33ec2144
-caps.latest.revision: "42"
+caps.latest.revision: 42
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

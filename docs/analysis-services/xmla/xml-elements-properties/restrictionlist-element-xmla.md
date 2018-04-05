@@ -1,27 +1,31 @@
 ---
 title: RestrictionList-Element (XMLA) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-apiname: RestrictionList Element
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
+apiname:
+- RestrictionList Element
+apilocation:
+- http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 f1_keywords:
 - urn:schemas-microsoft-com:xml-analysis#RestrictionList
 - microsoft.xml.analysis.restrictionlist
 - http://schemas.microsoft.com/analysisservices/2003/engine#RestrictionList
-helpviewer_keywords: RestrictionList element
+helpviewer_keywords:
+- RestrictionList element
 ms.assetid: 2297c005-381e-49a4-a207-826f7f9ea93a
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: Minewiskan
 ms.author: owend
 manager: kfile

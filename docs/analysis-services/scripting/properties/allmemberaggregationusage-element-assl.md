@@ -1,24 +1,29 @@
 ---
 title: AllMemberAggregationUsage-Element (ASSL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-apiname: AllMemberAggregationUsage Element
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
+apiname:
+- AllMemberAggregationUsage Element
+apilocation:
+- http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to: SQL Server 2016 Preview
-f1_keywords: AllMemberAggregationUsage
-helpviewer_keywords: AllMemberAggregationUsage element
+applies_to:
+- SQL Server 2016 Preview
+f1_keywords:
+- AllMemberAggregationUsage
+helpviewer_keywords:
+- AllMemberAggregationUsage element
 ms.assetid: 264fe9d8-8e9a-4642-8cee-7c2804126926
-caps.latest.revision: "40"
+caps.latest.revision: 40
 author: Minewiskan
 ms.author: owend
 manager: kfile

@@ -1,21 +1,24 @@
 ---
 title: Korrelation (MDX) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-f1_keywords: CORRELATION
-dev_langs: kbMDX
-helpviewer_keywords: Correlation function
+f1_keywords:
+- CORRELATION
+dev_langs:
+- kbMDX
+helpviewer_keywords:
+- Correlation function
 ms.assetid: 9b3662c9-95a1-4644-b952-9460fe0cf160
-caps.latest.revision: "38"
+caps.latest.revision: 38
 author: Minewiskan
 ms.author: owend
 manager: erikre

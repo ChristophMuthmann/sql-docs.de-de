@@ -1,21 +1,24 @@
 ---
 title: DataMember (MDX) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-f1_keywords: DATAMEMBER
-dev_langs: kbMDX
-helpviewer_keywords: DataMember function
+f1_keywords:
+- DATAMEMBER
+dev_langs:
+- kbMDX
+helpviewer_keywords:
+- DataMember function
 ms.assetid: 65bf21e8-1cb2-4ae8-bfbe-bb4d72589557
-caps.latest.revision: "30"
+caps.latest.revision: 30
 author: Minewiskan
 ms.author: owend
 manager: erikre

@@ -1,19 +1,21 @@
 ---
 title: Speicherorte (Dialogfeld) (Visual Database Tools) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
-f1_keywords: vs.getdirectoryname
+f1_keywords:
+- vs.getdirectoryname
 ms.assetid: b7f94269-d28a-4f30-9e50-2ee1a6e82178
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg

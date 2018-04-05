@@ -1,23 +1,25 @@
 ---
 title: Einrichten des Datenbankdiagramm-Designers (Visual Database Tools) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
-f1_keywords: vdt.diagnostic.InstallSqlDiagramSupport
+f1_keywords:
+- vdt.diagnostic.InstallSqlDiagramSupport
 helpviewer_keywords:
 - Database Diagram Designer
 - database diagrams [SQL Server], Database Diagram Designer
 - diagrams [SQL Server], Database Diagram Designer
 ms.assetid: 927321ee-b459-4f5b-9719-4a7a95639143
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg

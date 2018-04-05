@@ -1,27 +1,31 @@
 ---
 title: RollbackTransaction-Element (XMLA) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-apiname: RollbackTransaction Element
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
+apiname:
+- RollbackTransaction Element
+apilocation:
+- http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 f1_keywords:
 - http://schemas.microsoft.com/analysisservices/2003/engine#RollbackTransaction
 - microsoft.xml.analysis.rollbacktransaction
 - urn:schemas-microsoft-com:xml-analysis#RollbackTransaction
-helpviewer_keywords: RollbackTransaction command
+helpviewer_keywords:
+- RollbackTransaction command
 ms.assetid: 40e7dc00-656f-412f-97f0-d05bf7caa196
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: Minewiskan
 ms.author: owend
 manager: kfile

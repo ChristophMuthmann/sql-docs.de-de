@@ -1,19 +1,20 @@
 ---
-title: "Designer für SharePoint-Listenabfragen (Berichts-Generator) | Microsoft-Dokumentation"
-ms.custom: 
+title: Designer für SharePoint-Listenabfragen (Berichts-Generator) | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
+ms.service: ''
 ms.component: report-data
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-f1_keywords: "10016"
+f1_keywords:
+- "10016"
 ms.assetid: b8a3122c-8008-4950-b515-937636d7967f
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
 manager: kfile

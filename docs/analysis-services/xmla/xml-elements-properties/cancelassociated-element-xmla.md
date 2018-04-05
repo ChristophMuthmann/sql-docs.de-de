@@ -1,27 +1,31 @@
 ---
 title: CancelAssociated-Element (XMLA) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-apiname: CancelAssociated Element
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
+apiname:
+- CancelAssociated Element
+apilocation:
+- http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 f1_keywords:
 - microsoft.xml.analysis.cancelassociated
 - urn:schemas-microsoft-com:xml-analysis#CancelAssociated
 - http://schemas.microsoft.com/analysisservices/2003/engine#CancelAssociated
-helpviewer_keywords: CancelAssociated element
+helpviewer_keywords:
+- CancelAssociated element
 ms.assetid: fd890440-d1a7-4c05-9e81-c81e6b8c274c
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: Minewiskan
 ms.author: owend
 manager: kfile

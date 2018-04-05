@@ -1,21 +1,24 @@
 ---
 title: Rang (MDX) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-f1_keywords: RANK
-dev_langs: kbMDX
-helpviewer_keywords: Rank function [MDX]
+f1_keywords:
+- RANK
+dev_langs:
+- kbMDX
+helpviewer_keywords:
+- Rank function [MDX]
 ms.assetid: 3cea35ed-57c4-4b47-a736-cee00275509b
-caps.latest.revision: "31"
+caps.latest.revision: 31
 author: Minewiskan
 ms.author: owend
 manager: erikre

@@ -1,23 +1,24 @@
 ---
 title: MDX-Operatorreferenz (MDX) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-dev_langs: kbMDX
+dev_langs:
+- kbMDX
 helpviewer_keywords:
 - Multidimensional Expressions [Analysis Services], operators
 - operators [MDX]
 - MDX [Analysis Services], operators
 ms.assetid: 1cdb8c31-a5f6-4430-b509-f81344f4622a
-caps.latest.revision: "34"
+caps.latest.revision: 34
 author: Minewiskan
 ms.author: owend
 manager: erikre

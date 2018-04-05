@@ -3,25 +3,29 @@ title: Parallel-Element (XMLA) | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.custom: 
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.custom: ''
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-apiname: Parallel Element
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
+apiname:
+- Parallel Element
+apilocation:
+- http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 f1_keywords:
 - urn:schemas-microsoft-com:xml-analysis#Parallel
 - http://schemas.microsoft.com/analysisservices/2003/engine#Parallel
 - microsoft.xml.analysis.parallel
-helpviewer_keywords: Parallel element
+helpviewer_keywords:
+- Parallel element
 ms.assetid: 04726d94-37ee-460b-9744-d62b45f536b9
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: Minewiskan
 ms.author: owend
 manager: kfile

@@ -1,21 +1,24 @@
 ---
 title: HIERARCHIZE (MDX) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-f1_keywords: HIERARCHIZE
-dev_langs: kbMDX
-helpviewer_keywords: Hierarchize function
+f1_keywords:
+- HIERARCHIZE
+dev_langs:
+- kbMDX
+helpviewer_keywords:
+- Hierarchize function
 ms.assetid: e9795003-70e7-4b4c-9074-45b5b9b817fa
-caps.latest.revision: "33"
+caps.latest.revision: 33
 author: Minewiskan
 ms.author: owend
 manager: erikre

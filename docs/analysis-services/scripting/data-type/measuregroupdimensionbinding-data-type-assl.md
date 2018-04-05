@@ -1,24 +1,29 @@
 ---
 title: MeasureGroupDimensionBinding-Datentyp (ASSL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-apiname: MeasureGroupDimensionBinding Data Type
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
+apiname:
+- MeasureGroupDimensionBinding Data Type
+apilocation:
+- http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to: SQL Server 2016 Preview
-f1_keywords: MeasureGroupDimensionBinding
-helpviewer_keywords: MeasureGroupDimensionBinding data type
+applies_to:
+- SQL Server 2016 Preview
+f1_keywords:
+- MeasureGroupDimensionBinding
+helpviewer_keywords:
+- MeasureGroupDimensionBinding data type
 ms.assetid: 770e5ef8-aea1-4c9e-8e0a-2cbac43f2383
-caps.latest.revision: "37"
+caps.latest.revision: 37
 author: Minewiskan
 ms.author: owend
 manager: kfile

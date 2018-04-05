@@ -1,21 +1,24 @@
 ---
 title: IsInNode (DMX) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-f1_keywords: IsInNode
-dev_langs: DMX
-helpviewer_keywords: IsInNode function
+f1_keywords:
+- IsInNode
+dev_langs:
+- DMX
+helpviewer_keywords:
+- IsInNode function
 ms.assetid: 47b2114f-9ad6-45cc-9498-193ad6fa5288
-caps.latest.revision: "29"
+caps.latest.revision: 29
 author: Minewiskan
 ms.author: owend
 manager: erikre

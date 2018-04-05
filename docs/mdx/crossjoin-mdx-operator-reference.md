@@ -1,23 +1,25 @@
 ---
 title: '* (Crossjoin) (MDX) | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-f1_keywords: '*'
-dev_langs: kbMDX
+f1_keywords:
+- '*'
+dev_langs:
+- kbMDX
 helpviewer_keywords:
 - '* (crossjoin operator)'
 - crossjoin operator (*)
 ms.assetid: e00cb260-0189-4c4e-b3d2-088f4421337b
-caps.latest.revision: "41"
+caps.latest.revision: 41
 author: Minewiskan
 ms.author: owend
 manager: erikre

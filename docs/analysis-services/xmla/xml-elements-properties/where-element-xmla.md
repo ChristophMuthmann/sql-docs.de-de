@@ -1,27 +1,31 @@
 ---
 title: Wobei-Element (XMLA) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-apiname: Where Element
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
+apiname:
+- Where Element
+apilocation:
+- http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 f1_keywords:
 - urn:schemas-microsoft-com:xml-analysis#Where
 - microsoft.xml.analysis.where
 - http://schemas.microsoft.com/analysisservices/2003/engine#Where
-helpviewer_keywords: Where element
+helpviewer_keywords:
+- Where element
 ms.assetid: 81fb4190-3379-4ddf-8795-a0772f3b92bb
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: Minewiskan
 ms.author: owend
 manager: kfile

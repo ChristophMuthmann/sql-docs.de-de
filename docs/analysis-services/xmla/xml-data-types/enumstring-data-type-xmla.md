@@ -1,27 +1,31 @@
 ---
 title: EnumString-Datentyp (XMLA) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-apiname: EnumString Data Type
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
+apiname:
+- EnumString Data Type
+apilocation:
+- http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 f1_keywords:
 - EnumString
 - urn:schemas-microsoft-com:xml-analysis#EnumString
 - http://schemas.microsoft.com/analysisservices/2003/engine#EnumString
-helpviewer_keywords: EnumString data type
+helpviewer_keywords:
+- EnumString data type
 ms.assetid: 9214195e-4539-419b-95ec-b7aa75e033ab
-caps.latest.revision: "29"
+caps.latest.revision: 29
 author: Minewiskan
 ms.author: owend
 manager: kfile

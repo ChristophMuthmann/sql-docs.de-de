@@ -1,19 +1,20 @@
 ---
-title: "Datenspalten für Ermittlungsereignisse | Microsoft Docs"
-ms.custom: 
+title: Datenspalten für Ermittlungsereignisse | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-helpviewer_keywords: Discover Events event category
+helpviewer_keywords:
+- Discover Events event category
 ms.assetid: 10ec598e-5b51-4767-b4f7-42e261d96a40
-caps.latest.revision: "29"
+caps.latest.revision: 29
 author: Minewiskan
 ms.author: owend
 manager: kfile

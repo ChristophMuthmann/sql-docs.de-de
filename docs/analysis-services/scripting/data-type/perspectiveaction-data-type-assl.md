@@ -1,24 +1,29 @@
 ---
 title: PerspectiveAction-Datentyp (ASSL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-apiname: PerspectiveAction Data Type
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
+apiname:
+- PerspectiveAction Data Type
+apilocation:
+- http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to: SQL Server 2016 Preview
-f1_keywords: PerspectiveAction
-helpviewer_keywords: PerspectiveAction data type
+applies_to:
+- SQL Server 2016 Preview
+f1_keywords:
+- PerspectiveAction
+helpviewer_keywords:
+- PerspectiveAction data type
 ms.assetid: a0e4a545-688c-4d4e-b05f-0008d3503349
-caps.latest.revision: "35"
+caps.latest.revision: 35
 author: Minewiskan
 ms.author: owend
 manager: kfile

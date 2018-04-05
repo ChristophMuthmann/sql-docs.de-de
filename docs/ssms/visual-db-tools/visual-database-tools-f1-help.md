@@ -1,19 +1,21 @@
 ---
-title: "Visual Database Tools – F1-Hilfe | Microsoft-Dokumentation"
-ms.custom: 
+title: Visual Database Tools – F1-Hilfe | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: Visual Database Tools [SQL Server], help
+helpviewer_keywords:
+- Visual Database Tools [SQL Server], help
 ms.assetid: 79d15b47-6759-4f48-b9ac-2c86a3cd9980
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg

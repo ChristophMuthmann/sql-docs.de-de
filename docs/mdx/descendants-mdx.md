@@ -1,21 +1,24 @@
 ---
-title: "Abhängige Elemente (MDX) | Microsoft Docs"
-ms.custom: 
+title: Abhängige Elemente (MDX) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-f1_keywords: DESCENDANTS
-dev_langs: kbMDX
-helpviewer_keywords: Descendants function
+f1_keywords:
+- DESCENDANTS
+dev_langs:
+- kbMDX
+helpviewer_keywords:
+- Descendants function
 ms.assetid: d103b0f5-e794-4828-aa57-43f6918a0749
-caps.latest.revision: "38"
+caps.latest.revision: 38
 author: Minewiskan
 ms.author: owend
 manager: erikre

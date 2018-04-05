@@ -1,24 +1,26 @@
 ---
-title: "Anhalten einer Verfügbarkeitsdatenbank (SQL Server) | Microsoft-Dokumentation"
-ms.custom: 
+title: Anhalten einer Verfügbarkeitsdatenbank (SQL Server) | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: availability-groups
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
-f1_keywords: sql13.swb.availabilitygroup.suspenddatamove.f1
+f1_keywords:
+- sql13.swb.availabilitygroup.suspenddatamove.f1
 helpviewer_keywords:
 - secondary databases [SQL Server], in availability group
 - primary databases [SQL Server], in availability group
 - Availability Groups [SQL Server], suspending a database
 - Availability Groups [SQL Server], databases
 ms.assetid: 86858982-6af1-4e80-9a93-87451f0d7ee9
-caps.latest.revision: "51"
+caps.latest.revision: 51
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

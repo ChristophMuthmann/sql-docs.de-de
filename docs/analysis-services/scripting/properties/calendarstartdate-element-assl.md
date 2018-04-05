@@ -1,24 +1,29 @@
 ---
 title: CalendarStartDate-Element (ASSL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-apiname: CalendarStartDate Element
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
+apiname:
+- CalendarStartDate Element
+apilocation:
+- http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to: SQL Server 2016 Preview
-f1_keywords: CalendarStartDate
-helpviewer_keywords: CalendarStartDate element
+applies_to:
+- SQL Server 2016 Preview
+f1_keywords:
+- CalendarStartDate
+helpviewer_keywords:
+- CalendarStartDate element
 ms.assetid: f6204107-9123-41f0-acbd-52134fe36e37
-caps.latest.revision: "32"
+caps.latest.revision: 32
 author: Minewiskan
 ms.author: owend
 manager: kfile

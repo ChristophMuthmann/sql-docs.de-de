@@ -1,21 +1,24 @@
 ---
 title: CalculationPassValue (MDX) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-f1_keywords: CALCULATIONPASSVALUE
-dev_langs: kbMDX
-helpviewer_keywords: CalculationPassValue function
+f1_keywords:
+- CALCULATIONPASSVALUE
+dev_langs:
+- kbMDX
+helpviewer_keywords:
+- CalculationPassValue function
 ms.assetid: 1b4012cb-c8c7-441a-bb9c-59430703b189
-caps.latest.revision: "45"
+caps.latest.revision: 45
 author: Minewiskan
 ms.author: owend
 manager: erikre

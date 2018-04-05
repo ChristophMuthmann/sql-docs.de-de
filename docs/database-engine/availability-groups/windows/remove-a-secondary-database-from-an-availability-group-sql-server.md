@@ -1,23 +1,25 @@
 ---
-title: "Entfernen einer sekundären Datenbank aus einer Verfügbarkeitsgruppe (SQL Server) | Microsoft-Dokumentation"
-ms.custom: 
+title: Entfernen einer sekundären Datenbank aus einer Verfügbarkeitsgruppe (SQL Server) | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: availability-groups
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
-f1_keywords: sql13.swb.availabilitygroup.unjoindb.f1
+f1_keywords:
+- sql13.swb.availabilitygroup.unjoindb.f1
 helpviewer_keywords:
 - secondary databases [SQL Server], in availability group
 - Availability Groups [SQL Server], removing
 - Availability Groups [SQL Server], databases
 ms.assetid: 4e51a570-58d7-4f01-9390-4198f3602576
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

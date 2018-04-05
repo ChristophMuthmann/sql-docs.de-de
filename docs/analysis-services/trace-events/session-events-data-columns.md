@@ -1,19 +1,20 @@
 ---
-title: "Datenspalten für Sitzungsereignisse | Microsoft Docs"
-ms.custom: 
+title: Datenspalten für Sitzungsereignisse | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-helpviewer_keywords: Session Events event category
+helpviewer_keywords:
+- Session Events event category
 ms.assetid: 35853451-6768-4a02-8b8f-81a8ae37a333
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: Minewiskan
 ms.author: owend
 manager: kfile

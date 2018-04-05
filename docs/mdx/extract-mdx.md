@@ -1,21 +1,24 @@
 ---
 title: Extrahieren (MDX) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-f1_keywords: EXTRACT
-dev_langs: kbMDX
-helpviewer_keywords: Extract function
+f1_keywords:
+- EXTRACT
+dev_langs:
+- kbMDX
+helpviewer_keywords:
+- Extract function
 ms.assetid: c0d27d31-e36e-4b7f-bb86-1e4707351392
-caps.latest.revision: "32"
+caps.latest.revision: 32
 author: Minewiskan
 ms.author: owend
 manager: erikre

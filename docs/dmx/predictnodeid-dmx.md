@@ -1,21 +1,24 @@
 ---
 title: PredictNodeId (DMX) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-f1_keywords: PredictNodeId
-dev_langs: DMX
-helpviewer_keywords: PredictNodeId function
+f1_keywords:
+- PredictNodeId
+dev_langs:
+- DMX
+helpviewer_keywords:
+- PredictNodeId function
 ms.assetid: fb236645-ad7e-4c54-9c4c-1af47cad7ad5
-caps.latest.revision: "31"
+caps.latest.revision: 31
 author: Minewiskan
 ms.author: owend
 manager: erikre

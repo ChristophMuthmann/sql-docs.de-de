@@ -1,24 +1,29 @@
 ---
 title: Database-Element (ASSL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-apiname: Database Element
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
+apiname:
+- Database Element
+apilocation:
+- http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to: SQL Server 2016 Preview
-f1_keywords: DATABASE
-helpviewer_keywords: Database element
+applies_to:
+- SQL Server 2016 Preview
+f1_keywords:
+- DATABASE
+helpviewer_keywords:
+- Database element
 ms.assetid: c3bc7eaf-ed0d-4395-a3b7-8d9cfacfe911
-caps.latest.revision: "41"
+caps.latest.revision: 41
 author: Minewiskan
 ms.author: owend
 manager: kfile

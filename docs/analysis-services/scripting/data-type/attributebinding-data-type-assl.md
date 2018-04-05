@@ -1,24 +1,29 @@
 ---
 title: AttributeBinding-Datentyp (ASSL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-apiname: AttributeBinding Data Type
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
+apiname:
+- AttributeBinding Data Type
+apilocation:
+- http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to: SQL Server 2016 Preview
-f1_keywords: AttributeBinding
-helpviewer_keywords: AttributeBinding data type
+applies_to:
+- SQL Server 2016 Preview
+f1_keywords:
+- AttributeBinding
+helpviewer_keywords:
+- AttributeBinding data type
 ms.assetid: 24d511a9-d0eb-4150-9f78-541e03963d67
-caps.latest.revision: "44"
+caps.latest.revision: 44
 author: Minewiskan
 ms.author: owend
 manager: kfile

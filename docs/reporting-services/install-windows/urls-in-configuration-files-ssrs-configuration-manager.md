@@ -1,19 +1,20 @@
 ---
 title: URLs in Konfigurationsdateien (SSRS-Konfigurations-Manager) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 05/18/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
+ms.service: ''
 ms.component: install-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: URL configuration [Reporting Services]
+helpviewer_keywords:
+- URL configuration [Reporting Services]
 ms.assetid: 4f5e7fe0-b5b1-4665-93d4-80dce12d6b14
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: markingmyname
 ms.author: maghan
 manager: kfile

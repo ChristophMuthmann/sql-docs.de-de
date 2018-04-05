@@ -1,24 +1,26 @@
 ---
-title: "Common Criteria-Konformität aktiviert (Serverkonfigurationsoption) | Microsoft-Dokumentation"
-ms.custom: 
+title: Common Criteria-Konformität aktiviert (Serverkonfigurationsoption) | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: configure-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
-f1_keywords: common criteria compliance
+f1_keywords:
+- common criteria compliance
 helpviewer_keywords:
 - CC (common criteria) [Database Engine]
 - common criteria compliance [Database Engine]
 - Risidual Information Protection [Database Engine]
 - RIP (Residual Information Protection)
 ms.assetid: 61766eea-c450-408d-af33-fbe7ef8c9ff2
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

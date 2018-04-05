@@ -1,21 +1,24 @@
 ---
 title: DrilldownMemberTop (MDX) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-f1_keywords: DRILLDOWNMEMBERTOP
-dev_langs: kbMDX
-helpviewer_keywords: DrilldownMemberTop function
+f1_keywords:
+- DRILLDOWNMEMBERTOP
+dev_langs:
+- kbMDX
+helpviewer_keywords:
+- DrilldownMemberTop function
 ms.assetid: b6575544-1fd3-4fa1-aa2e-272d307c7750
-caps.latest.revision: "37"
+caps.latest.revision: 37
 author: Minewiskan
 ms.author: owend
 manager: erikre

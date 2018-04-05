@@ -1,21 +1,24 @@
 ---
-title: "Verzögerung (MDX) | Microsoft Docs"
-ms.custom: 
+title: Verzögerung (MDX) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-f1_keywords: LAG
-dev_langs: kbMDX
-helpviewer_keywords: Lag function
+f1_keywords:
+- LAG
+dev_langs:
+- kbMDX
+helpviewer_keywords:
+- Lag function
 ms.assetid: 08c704ea-35d8-44ee-abe5-93bd24b99906
-caps.latest.revision: "34"
+caps.latest.revision: 34
 author: Minewiskan
 ms.author: owend
 manager: erikre

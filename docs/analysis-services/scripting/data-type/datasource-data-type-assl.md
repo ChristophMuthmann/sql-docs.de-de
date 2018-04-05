@@ -1,23 +1,27 @@
 ---
 title: DataSource-Datentyp (ASSL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-apiname: DataSource Data Type
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
+apiname:
+- DataSource Data Type
+apilocation:
+- http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to: SQL Server 2016 Preview
-helpviewer_keywords: DataSource data type
+applies_to:
+- SQL Server 2016 Preview
+helpviewer_keywords:
+- DataSource data type
 ms.assetid: 05e8de8d-452d-4128-98a6-4437df227fec
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: Minewiskan
 ms.author: owend
 manager: kfile

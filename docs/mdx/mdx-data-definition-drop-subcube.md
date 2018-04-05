@@ -1,22 +1,23 @@
 ---
 title: DROP SUBCUBE-Anweisung (MDX) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DROP
 - DROP SUBCUBE
 - SUBCUBE
 - DROP_SUBCUBE
-dev_langs: kbMDX
+dev_langs:
+- kbMDX
 helpviewer_keywords:
 - subcubes [MDX]
 - DROP SUBCUBE statement
@@ -24,7 +25,7 @@ helpviewer_keywords:
 - removing subcubes
 - deleting subcubes
 ms.assetid: d8771b38-7a8f-40b2-947f-dd6d47e89ae3
-caps.latest.revision: "28"
+caps.latest.revision: 28
 author: Minewiskan
 ms.author: owend
 manager: erikre

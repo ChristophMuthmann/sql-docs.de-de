@@ -1,27 +1,31 @@
 ---
 title: Materialize-Element (XMLA) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-apiname: Materialize Element
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
+apiname:
+- Materialize Element
+apilocation:
+- http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 f1_keywords:
 - microsoft.xml.analysis.materialize
 - http://schemas.microsoft.com/analysisservices/2003/engine#Materialize
 - urn:schemas-microsoft-com:xml-analysis#Materialize
-helpviewer_keywords: Materialize element
+helpviewer_keywords:
+- Materialize element
 ms.assetid: cda19474-7170-4b0e-b0ea-297ce5128112
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: Minewiskan
 ms.author: owend
 manager: kfile

@@ -1,27 +1,31 @@
 ---
 title: Nachrichten-Element (XMLA) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-apiname: Messages Element
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
+apiname:
+- Messages Element
+apilocation:
+- http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 f1_keywords:
 - http://schemas.microsoft.com/analysisservices/2003/engine#Messages
 - microsoft.xml.analysis.messages
 - urn:schemas-microsoft-com:xml-analysis#Messages
-helpviewer_keywords: Messages element
+helpviewer_keywords:
+- Messages element
 ms.assetid: 719d15ff-f18b-4c56-80ba-a9114c0b7d8a
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: Minewiskan
 ms.author: owend
 manager: kfile

@@ -1,23 +1,27 @@
 ---
 title: IncrementalProcessingNotification-Datentyp (ASSL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-apiname: IncrementalProcessingNotification Data Type
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
+apiname:
+- IncrementalProcessingNotification Data Type
+apilocation:
+- http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to: SQL Server 2016 Preview
-helpviewer_keywords: IncrementalProcessingNotification data type
+applies_to:
+- SQL Server 2016 Preview
+helpviewer_keywords:
+- IncrementalProcessingNotification data type
 ms.assetid: 66e27f92-65c1-4a34-b9c2-bfbb5aeb7d7c
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: Minewiskan
 ms.author: owend
 manager: kfile

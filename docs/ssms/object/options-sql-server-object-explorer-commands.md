@@ -1,19 +1,21 @@
 ---
-title: "Optionen (SQL Server-Objekt-Explorer – Befehle) | Microsoft-Dokumentation"
-ms.custom: 
+title: Optionen (SQL Server-Objekt-Explorer – Befehle) | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-objects
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
-f1_keywords: VS.ToolsOptionsPages.Sql_Server_Object_Explorer.ObjectExplorerCommands
+f1_keywords:
+- VS.ToolsOptionsPages.Sql_Server_Object_Explorer.ObjectExplorerCommands
 ms.assetid: 0e5afdb3-488c-4ea9-9e38-d42085ec00b1
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg

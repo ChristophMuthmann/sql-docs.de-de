@@ -1,24 +1,26 @@
 ---
-title: "Fortsetzen einer Verfügbarkeitsdatenbank (SQL Server) | Microsoft-Dokumentation"
-ms.custom: 
+title: Fortsetzen einer Verfügbarkeitsdatenbank (SQL Server) | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: availability-groups
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
-f1_keywords: sql13.swb.availabilitygroup.resumedatamove.f1
+f1_keywords:
+- sql13.swb.availabilitygroup.resumedatamove.f1
 helpviewer_keywords:
 - Availability Groups [SQL Server], resuming a database
 - secondary databases [SQL Server], in availability group
 - primary databases [SQL Server], in availability group
 - Availability Groups [SQL Server], databases
 ms.assetid: 20e9147b-e985-4caa-910e-fc4b38dbf9a1
-caps.latest.revision: "38"
+caps.latest.revision: 38
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

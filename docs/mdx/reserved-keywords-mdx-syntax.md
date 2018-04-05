@@ -1,23 +1,24 @@
 ---
-title: "Reservierte Schlüsselwörter (MDX-Syntax) | Microsoft Docs"
-ms.custom: 
+title: Reservierte Schlüsselwörter (MDX-Syntax) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-dev_langs: kbMDX
+dev_langs:
+- kbMDX
 helpviewer_keywords:
 - reserved words [MDX]
 - Multidimensional Expressions [Analysis Services], reserved words
 - MDX [Analysis Services], reserved words
 ms.assetid: 0baab5fb-bd04-4ab3-b99a-9f91f3470fbb
-caps.latest.revision: "26"
+caps.latest.revision: 26
 author: Minewiskan
 ms.author: owend
 manager: erikre

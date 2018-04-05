@@ -1,20 +1,22 @@
 ---
-title: "Benutzeroberfläche des textbasierten Abfrage-Designers (Berichts-Generator) | Microsoft-Dokumentation"
-ms.custom: 
+title: Benutzeroberfläche des textbasierten Abfrage-Designers (Berichts-Generator) | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
+ms.service: ''
 ms.component: report-data
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-f1_keywords: "10010"
-helpviewer_keywords: query designers, text-based
+f1_keywords:
+- "10010"
+helpviewer_keywords:
+- query designers, text-based
 ms.assetid: 89fddca5-bd96-4128-9072-5348d1b6e02c
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: markingmyname
 ms.author: maghan
 manager: kfile

@@ -1,23 +1,24 @@
 ---
-title: "Reservierte Wörter in MDX | Microsoft Docs"
-ms.custom: 
+title: Reservierte Wörter in MDX | Microsoft Docs
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-dev_langs: kbMDX
+dev_langs:
+- kbMDX
 helpviewer_keywords:
 - reserved words [MDX]
 - Multidimensional Expressions [Analysis Services], reserved words
 - MDX [Analysis Services], reserved words
 ms.assetid: 8d059a8c-d578-4713-a615-2404d94ce32d
-caps.latest.revision: "26"
+caps.latest.revision: 26
 author: Minewiskan
 ms.author: owend
 manager: erikre

@@ -1,24 +1,26 @@
 ---
-title: "SELECT FROM &lt;Struktur&gt;. FÄLLEN | Microsoft Docs"
-ms.custom: 
+title: SELECT FROM &lt;Struktur&gt;. FÄLLEN | Microsoft Docs
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - SELECT
 - CASES
 - FROM
-dev_langs: DMX
-helpviewer_keywords: SELECT FROM <structure> statements
+dev_langs:
+- DMX
+helpviewer_keywords:
+- SELECT FROM <structure> statements
 ms.assetid: 36f50213-14dc-42da-b899-20240b781e1a
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: Minewiskan
 ms.author: owend
 manager: erikre

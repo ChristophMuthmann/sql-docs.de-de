@@ -1,24 +1,29 @@
 ---
 title: CalculationProperty-Element (ASSL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-apiname: CalculationProperty Element
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
+apiname:
+- CalculationProperty Element
+apilocation:
+- http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to: SQL Server 2016 Preview
-f1_keywords: CalculationProperty
-helpviewer_keywords: CalculationProperty element
+applies_to:
+- SQL Server 2016 Preview
+f1_keywords:
+- CalculationProperty
+helpviewer_keywords:
+- CalculationProperty element
 ms.assetid: 5f0b4cfc-7d25-4c01-a517-cc2e89859be3
-caps.latest.revision: "34"
+caps.latest.revision: 34
 author: Minewiskan
 ms.author: owend
 manager: kfile

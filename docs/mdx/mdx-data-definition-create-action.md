@@ -1,22 +1,23 @@
 ---
 title: CREATE ACTION-Anweisung (MDX) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE ACTION
 - Action
 - CREATE
 - CREATE_ACTION
-dev_langs: kbMDX
+dev_langs:
+- kbMDX
 helpviewer_keywords:
 - invocation types [MDX]
 - dimensions [Analysis Services], actions
@@ -25,7 +26,7 @@ helpviewer_keywords:
 - actions [MDX]
 - hierarchies [Analysis Services], actions
 ms.assetid: 0419f349-ece2-42ba-8552-a1023f268a41
-caps.latest.revision: "36"
+caps.latest.revision: 36
 author: Minewiskan
 ms.author: owend
 manager: erikre

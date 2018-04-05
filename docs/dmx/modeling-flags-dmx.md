@@ -1,17 +1,18 @@
 ---
 title: Modellierungsflags (DMX) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-dev_langs: DMX
+dev_langs:
+- DMX
 helpviewer_keywords:
 - REGRESSOR flag
 - DMX [Analysis Services], modeling flags
@@ -21,7 +22,7 @@ helpviewer_keywords:
 - flags [DMX]
 - NOT NULL flag
 ms.assetid: 498d25f7-9597-47ae-8717-61ddd1d2fd15
-caps.latest.revision: "35"
+caps.latest.revision: 35
 author: Minewiskan
 ms.author: owend
 manager: erikre

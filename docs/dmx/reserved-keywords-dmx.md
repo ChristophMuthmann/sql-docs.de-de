@@ -1,23 +1,24 @@
 ---
-title: "Reservierte Schlüsselwörter (DMX) | Microsoft Docs"
-ms.custom: 
+title: Reservierte Schlüsselwörter (DMX) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-dev_langs: DMX
+dev_langs:
+- DMX
 helpviewer_keywords:
 - Data Mining Extensions [Analysis Services], reserved keywords
 - reserved words [DMX]
 - DMX [Analysis Services], reserved keywords
 ms.assetid: d74871b0-d33f-4ee0-b1c7-384817c45e66
-caps.latest.revision: "33"
+caps.latest.revision: 33
 author: Minewiskan
 ms.author: owend
 manager: erikre

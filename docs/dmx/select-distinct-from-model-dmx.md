@@ -1,27 +1,28 @@
 ---
 title: SELECT DISTINCT FROM &lt;Modell &gt; (DMX) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DISTINCT
 - SELECT
-dev_langs: DMX
+dev_langs:
+- DMX
 helpviewer_keywords:
 - discrete columns [DMX]
 - discretized columns [DMX]
 - SELECT DISTINCT FROM <model> statement
 - continuous columns
 ms.assetid: 0ab44ef6-1c3b-4809-a687-4d5d13f343af
-caps.latest.revision: "44"
+caps.latest.revision: 44
 author: Minewiskan
 ms.author: owend
 manager: erikre

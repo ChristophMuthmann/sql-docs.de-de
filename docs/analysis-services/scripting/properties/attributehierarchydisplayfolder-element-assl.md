@@ -1,24 +1,29 @@
 ---
 title: AttributeHierarchyDisplayFolder-Element (ASSL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-apiname: AttributeHierarchyDisplayFolder Element
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
+apiname:
+- AttributeHierarchyDisplayFolder Element
+apilocation:
+- http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to: SQL Server 2016 Preview
-f1_keywords: AttributeHierarchyDisplayFolder
-helpviewer_keywords: AttributeHierarchyDisplayFolder element
+applies_to:
+- SQL Server 2016 Preview
+f1_keywords:
+- AttributeHierarchyDisplayFolder
+helpviewer_keywords:
+- AttributeHierarchyDisplayFolder element
 ms.assetid: d4a3aff7-553e-416c-9c42-819a96ae264d
-caps.latest.revision: "36"
+caps.latest.revision: 36
 author: Minewiskan
 ms.author: owend
 manager: kfile
