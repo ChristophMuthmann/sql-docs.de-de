@@ -1,27 +1,31 @@
 ---
 title: Create-Element (XMLA) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-apiname: Create Element
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
+apiname:
+- Create Element
+apilocation:
+- http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 f1_keywords:
 - http://schemas.microsoft.com/analysisservices/2003/engine#Create
 - urn:schemas-microsoft-com:xml-analysis#Create
 - microsoft.xml.analysis.create
-helpviewer_keywords: Create command (XMLA)
+helpviewer_keywords:
+- Create command (XMLA)
 ms.assetid: a623d362-a1ac-40e4-8816-65fac89cb391
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: Minewiskan
 ms.author: owend
 manager: kfile

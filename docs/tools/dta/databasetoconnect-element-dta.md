@@ -1,20 +1,23 @@
 ---
 title: DatabaseToConnect-Element (DTA) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: dta
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
-dev_langs: XML
-helpviewer_keywords: DatabaseToConnect element
+dev_langs:
+- XML
+helpviewer_keywords:
+- DatabaseToConnect element
 ms.assetid: 65153a66-3aee-4429-99b7-0816ac23c285
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg

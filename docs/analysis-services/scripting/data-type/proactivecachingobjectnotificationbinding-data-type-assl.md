@@ -1,23 +1,27 @@
 ---
 title: ProactiveCachingObjectNotificationBinding-Datentyp (ASSL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-apiname: ProactiveCachingObjectNotificationBinding Data Type
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
+apiname:
+- ProactiveCachingObjectNotificationBinding Data Type
+apilocation:
+- http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to: SQL Server 2016 Preview
-helpviewer_keywords: ProactiveCachingObjectNotificationBinding data type
+applies_to:
+- SQL Server 2016 Preview
+helpviewer_keywords:
+- ProactiveCachingObjectNotificationBinding data type
 ms.assetid: b3cf5fb6-6121-4f25-8de6-f171792c440d
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: Minewiskan
 ms.author: owend
 manager: kfile

@@ -1,22 +1,23 @@
 ---
-title: "Verwenden von Skalarausdrücken | Microsoft Docs"
-ms.custom: 
+title: Verwenden von Skalarausdrücken | Microsoft Docs
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-dev_langs: kbMDX
+dev_langs:
+- kbMDX
 helpviewer_keywords:
 - scalar expressions
 - expressions [MDX], scalar
 ms.assetid: 4678b675-8fbd-4e5b-a519-d4cd1bb8c46a
-caps.latest.revision: "25"
+caps.latest.revision: 25
 author: Minewiskan
 ms.author: owend
 manager: erikre

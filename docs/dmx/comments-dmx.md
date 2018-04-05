@@ -1,17 +1,18 @@
 ---
 title: Kommentare (DMX) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-dev_langs: DMX
+dev_langs:
+- DMX
 helpviewer_keywords:
 - comments [DMX]
 - Data Mining Extensions [Analysis Services], comments
@@ -26,7 +27,7 @@ helpviewer_keywords:
 - // (comment)
 - -- (comment character)
 ms.assetid: 64d10eb5-4fe8-42c6-b387-eff336315e56
-caps.latest.revision: "30"
+caps.latest.revision: 30
 author: Minewiskan
 ms.author: owend
 manager: erikre

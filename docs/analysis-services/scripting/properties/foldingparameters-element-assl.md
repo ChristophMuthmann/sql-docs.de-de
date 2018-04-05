@@ -1,27 +1,29 @@
 ---
 title: FoldingParameters-Element (ASSL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apitype: Schema
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 f1_keywords:
 - FoldIndex
 - FoldCount
 - MaxCases
 - FoldingParameters
 - FoldTargetAttribute
-helpviewer_keywords: FoldingParameters element
+helpviewer_keywords:
+- FoldingParameters element
 ms.assetid: 5f5c5a3e-4aed-48fb-bca5-e67f421bef2f
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: Minewiskan
 ms.author: owend
 manager: kfile

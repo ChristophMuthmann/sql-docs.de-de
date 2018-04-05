@@ -1,27 +1,28 @@
 ---
 title: CREATE SUBCUBE-Anweisung (MDX) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE_SUBCUBE
 - CREATE SUBCUBE
 - CREATE
 - SUBCUBE
-dev_langs: kbMDX
+dev_langs:
+- kbMDX
 helpviewer_keywords:
 - subcubes [MDX]
 - CREATE SUBCUBE statement
 ms.assetid: 15b6ac4c-b68a-4f9f-b33c-f5f7c4a74535
-caps.latest.revision: "32"
+caps.latest.revision: 32
 author: Minewiskan
 ms.author: owend
 manager: erikre

@@ -1,23 +1,25 @@
 ---
-title: "Hinzufügen eines vorhandenen Projekts zu einer Projektmappe | Microsoft-Dokumentation"
-ms.custom: 
+title: Hinzufügen eines vorhandenen Projekts zu einer Projektmappe | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-solutions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
-f1_keywords: vs.addexistingproject
+f1_keywords:
+- vs.addexistingproject
 helpviewer_keywords:
 - adding projects
 - solutions [SQL Server Management Studio], project additions
 - projects [SQL Server Management Studio], adding
 ms.assetid: 7b0c8ac0-5941-4ac6-b960-87d9830d00de
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg

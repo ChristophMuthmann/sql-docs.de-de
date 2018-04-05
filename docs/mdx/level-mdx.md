@@ -1,21 +1,24 @@
 ---
 title: Ebene (MDX) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-f1_keywords: LEVEL
-dev_langs: kbMDX
-helpviewer_keywords: Level function
+f1_keywords:
+- LEVEL
+dev_langs:
+- kbMDX
+helpviewer_keywords:
+- Level function
 ms.assetid: 10bbe4ac-44bc-45c7-81a1-85423fbeaab1
-caps.latest.revision: "31"
+caps.latest.revision: 31
 author: Minewiskan
 ms.author: owend
 manager: erikre

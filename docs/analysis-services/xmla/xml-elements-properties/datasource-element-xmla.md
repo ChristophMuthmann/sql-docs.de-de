@@ -1,27 +1,31 @@
 ---
 title: DataSource-Element (XMLA) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-apiname: DataSource Element
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
+apiname:
+- DataSource Element
+apilocation:
+- http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 f1_keywords:
 - urn:schemas-microsoft-com:xml-analysis#DataSource
 - http://schemas.microsoft.com/analysisservices/2003/engine#DataSource
 - microsoft.xml.analysis.datasource
-helpviewer_keywords: DataSource element
+helpviewer_keywords:
+- DataSource element
 ms.assetid: adc0713a-3927-40f3-8b87-012130908f34
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: Minewiskan
 ms.author: owend
 manager: kfile

@@ -1,21 +1,24 @@
 ---
 title: IST (MDX) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-f1_keywords: IS
-dev_langs: kbMDX
-helpviewer_keywords: IS operator
+f1_keywords:
+- IS
+dev_langs:
+- kbMDX
+helpviewer_keywords:
+- IS operator
 ms.assetid: dc8c0b91-3bb1-49e5-8d70-57545baaa8e0
-caps.latest.revision: "29"
+caps.latest.revision: 29
 author: Minewiskan
 ms.author: owend
 manager: erikre

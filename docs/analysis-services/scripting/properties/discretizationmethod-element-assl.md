@@ -1,24 +1,29 @@
 ---
 title: DiscretizationMethod-Element (ASSL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-apiname: DiscretizationMethod Element
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
+apiname:
+- DiscretizationMethod Element
+apilocation:
+- http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to: SQL Server 2016 Preview
-f1_keywords: DiscretizationMethod
-helpviewer_keywords: DiscretizationMethod element
+applies_to:
+- SQL Server 2016 Preview
+f1_keywords:
+- DiscretizationMethod
+helpviewer_keywords:
+- DiscretizationMethod element
 ms.assetid: 4cfe015f-ad6c-47e1-8aff-c9c7677867b1
-caps.latest.revision: "31"
+caps.latest.revision: 31
 author: Minewiskan
 ms.author: owend
 manager: kfile

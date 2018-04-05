@@ -1,22 +1,23 @@
 ---
 title: DROP SET-Anweisung (MDX) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - SET
 - DROP
 - DROP SET
 - DROP_SET
-dev_langs: kbMDX
+dev_langs:
+- kbMDX
 helpviewer_keywords:
 - DROP SET statement
 - deleting named sets
@@ -24,7 +25,7 @@ helpviewer_keywords:
 - removing named sets
 - dropping named sets
 ms.assetid: bbc37afb-af8c-41df-ba81-12771beb1c41
-caps.latest.revision: "35"
+caps.latest.revision: 35
 author: Minewiskan
 ms.author: owend
 manager: erikre

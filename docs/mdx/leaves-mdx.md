@@ -1,21 +1,24 @@
 ---
 title: Bewirkt, dass (MDX) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-f1_keywords: LEAVES
-dev_langs: kbMDX
-helpviewer_keywords: Leaves function
+f1_keywords:
+- LEAVES
+dev_langs:
+- kbMDX
+helpviewer_keywords:
+- Leaves function
 ms.assetid: 09f908aa-1b2d-4af9-8c8d-c023915241b2
-caps.latest.revision: "32"
+caps.latest.revision: 32
 author: Minewiskan
 ms.author: owend
 manager: erikre

@@ -1,22 +1,23 @@
 ---
-title: "+ (Hinzufügen) (DMX) | Microsoft Docs"
-ms.custom: 
+title: + (Hinzufügen) (DMX) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-dev_langs: DMX
+dev_langs:
+- DMX
 helpviewer_keywords:
 - + (add)
 - add operator (+)
 ms.assetid: 35e7636f-814c-44c3-94a7-384a305d65ea
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: Minewiskan
 ms.author: owend
 manager: erikre

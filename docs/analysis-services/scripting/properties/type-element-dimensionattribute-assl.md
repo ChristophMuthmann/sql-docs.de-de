@@ -1,24 +1,29 @@
 ---
 title: Geben Sie-Element (DimensionAttribute) (ASSL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-apiname: Type Element (DimensionAttribute)
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
+apiname:
+- Type Element (DimensionAttribute)
+apilocation:
+- http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to: SQL Server 2016 Preview
-f1_keywords: TYPE
-helpviewer_keywords: Type element
+applies_to:
+- SQL Server 2016 Preview
+f1_keywords:
+- TYPE
+helpviewer_keywords:
+- Type element
 ms.assetid: 64fce1f5-39b7-4d0a-ae60-21203a03bd0d
-caps.latest.revision: "35"
+caps.latest.revision: 35
 author: Minewiskan
 ms.author: owend
 manager: kfile

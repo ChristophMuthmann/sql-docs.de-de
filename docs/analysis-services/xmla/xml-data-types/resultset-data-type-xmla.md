@@ -1,27 +1,31 @@
 ---
 title: Resultset-Datentyp (XMLA) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-apiname: Resultset Data Type
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
+apiname:
+- Resultset Data Type
+apilocation:
+- http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 f1_keywords:
 - http://schemas.microsoft.com/analysisservices/2003/engine#Resultset
 - urn:schemas-microsoft-com:xml-analysis#Resultset
 - Resultset
-helpviewer_keywords: Resultset data type
+helpviewer_keywords:
+- Resultset data type
 ms.assetid: 45e7d7d6-1f89-4dc8-b39d-9270ea2db541
-caps.latest.revision: "30"
+caps.latest.revision: 30
 author: Minewiskan
 ms.author: owend
 manager: kfile

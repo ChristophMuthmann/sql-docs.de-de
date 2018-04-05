@@ -1,24 +1,29 @@
 ---
 title: AttributeHierarchyOptimizedState-Element (ASSL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-apiname: AttributeHierarchyOptimizedState Element
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
+apiname:
+- AttributeHierarchyOptimizedState Element
+apilocation:
+- http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to: SQL Server 2016 Preview
-f1_keywords: AttributeHierarchyOptimizedState
-helpviewer_keywords: AttributeHierarchyOptimizedState element
+applies_to:
+- SQL Server 2016 Preview
+f1_keywords:
+- AttributeHierarchyOptimizedState
+helpviewer_keywords:
+- AttributeHierarchyOptimizedState element
 ms.assetid: d87148c8-2011-45ae-94c3-851f48babc5f
-caps.latest.revision: "37"
+caps.latest.revision: 37
 author: Minewiskan
 ms.author: owend
 manager: kfile

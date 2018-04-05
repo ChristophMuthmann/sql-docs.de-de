@@ -1,19 +1,21 @@
 ---
-title: "Hinzufügen eines benutzerdefinierten Berichts zu Management Studio | Microsoft-Dokumentation"
-ms.custom: 
+title: Hinzufügen eines benutzerdefinierten Berichts zu Management Studio | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-objects
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: SQL Server Management Studio [SQL Server], custom reports
+helpviewer_keywords:
+- SQL Server Management Studio [SQL Server], custom reports
 ms.assetid: 3cf8d726-0a90-4f80-98d0-352a2a59be0f
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: stevestein
 ms.author: sstein
 manager: craigg

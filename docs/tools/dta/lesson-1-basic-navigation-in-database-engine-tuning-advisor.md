@@ -1,20 +1,23 @@
 ---
 title: 'Lektion 1: Grundlagen zur Navigation in der Datenbank des Datenbankoptimierungsratgebers | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: dta
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-query-tuning
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-query-tuning
+ms.tgt_pltfrm: ''
 ms.topic: article
-applies_to: SQL Server 2016
-helpviewer_keywords: Database Engine Tuning Advisor [SQL Server], tutorials
+applies_to:
+- SQL Server 2016
+helpviewer_keywords:
+- Database Engine Tuning Advisor [SQL Server], tutorials
 ms.assetid: ad49b2e0-a5e3-49d2-80fd-9f4eaa3652cb
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg

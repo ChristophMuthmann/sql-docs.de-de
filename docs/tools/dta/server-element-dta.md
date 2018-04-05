@@ -1,20 +1,23 @@
 ---
 title: Server-Element (DTA) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: dta
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
-dev_langs: XML
-helpviewer_keywords: Server element
+dev_langs:
+- XML
+helpviewer_keywords:
+- Server element
 ms.assetid: 9fe0bfb4-3aa6-4eb2-a83e-c0d0e7d4e9f6
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: stevestein
 ms.author: sstein
 manager: craigg

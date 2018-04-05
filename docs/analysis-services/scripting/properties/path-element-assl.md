@@ -1,24 +1,29 @@
 ---
 title: Path-Element (ASSL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-apiname: Path Element
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
+apiname:
+- Path Element
+apilocation:
+- http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to: SQL Server 2016 Preview
-f1_keywords: Path
-helpviewer_keywords: Path element
+applies_to:
+- SQL Server 2016 Preview
+f1_keywords:
+- Path
+helpviewer_keywords:
+- Path element
 ms.assetid: 0edc59ac-1671-4fe1-9b7c-6c1548df5c63
-caps.latest.revision: "33"
+caps.latest.revision: 33
 author: Minewiskan
 ms.author: owend
 manager: kfile

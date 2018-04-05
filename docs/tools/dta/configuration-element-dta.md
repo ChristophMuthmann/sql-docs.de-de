@@ -1,20 +1,23 @@
 ---
 title: Configuration-Element (DTA) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: dta
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
-dev_langs: XML
-helpviewer_keywords: Configuration element
+dev_langs:
+- XML
+helpviewer_keywords:
+- Configuration element
 ms.assetid: 1478e56f-57c4-4441-bac9-1ac91453839b
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: stevestein
 ms.author: sstein
 manager: craigg

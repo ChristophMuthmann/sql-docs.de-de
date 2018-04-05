@@ -1,21 +1,24 @@
 ---
-title: "Verzögerung (DMX) | Microsoft Docs"
-ms.custom: 
+title: Verzögerung (DMX) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-f1_keywords: LAG
-dev_langs: DMX
-helpviewer_keywords: Lag function
+f1_keywords:
+- LAG
+dev_langs:
+- DMX
+helpviewer_keywords:
+- Lag function
 ms.assetid: 2da6df1a-5506-4871-a0f0-83292f1df41e
-caps.latest.revision: "31"
+caps.latest.revision: 31
 author: Minewiskan
 ms.author: owend
 manager: erikre

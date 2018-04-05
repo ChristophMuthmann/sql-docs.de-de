@@ -1,21 +1,24 @@
 ---
 title: CalculationCurrentPass (MDX) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-f1_keywords: CALCULATIONCURRENTPASS
-dev_langs: kbMDX
-helpviewer_keywords: CalculationCurrentPass function
+f1_keywords:
+- CALCULATIONCURRENTPASS
+dev_langs:
+- kbMDX
+helpviewer_keywords:
+- CalculationCurrentPass function
 ms.assetid: 7069f7a0-8ec8-4293-8db3-b35b9327f437
-caps.latest.revision: "32"
+caps.latest.revision: 32
 author: Minewiskan
 ms.author: owend
 manager: erikre

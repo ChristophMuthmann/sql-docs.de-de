@@ -1,20 +1,23 @@
 ---
-title: "Objekte löschen | Microsoft-Dokumentation"
-ms.custom: 
+title: Objekte löschen | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-objects
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
-f1_keywords: sql13.swb.deleteobjects.f1
-helpviewer_keywords: Delete Objects dialog box
+f1_keywords:
+- sql13.swb.deleteobjects.f1
+helpviewer_keywords:
+- Delete Objects dialog box
 ms.assetid: 49541441-179c-40d3-ba0c-01bcae545984
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg

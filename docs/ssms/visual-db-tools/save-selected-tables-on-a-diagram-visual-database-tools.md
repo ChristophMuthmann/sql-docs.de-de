@@ -1,19 +1,21 @@
 ---
-title: "Speichern ausgewählter Tabellen in einem Diagramm (Visual Database Tools) | Microsoft-Dokumentation"
-ms.custom: 
+title: Speichern ausgewählter Tabellen in einem Diagramm (Visual Database Tools) | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: saving tables
+helpviewer_keywords:
+- saving tables
 ms.assetid: 86943b49-48f3-432c-8021-928c13edfbcf
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg

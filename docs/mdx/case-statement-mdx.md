@@ -1,20 +1,22 @@
 ---
 title: CASE-Anweisung (MDX) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-dev_langs: kbMDX
-helpviewer_keywords: statements [MDX], CASE
+dev_langs:
+- kbMDX
+helpviewer_keywords:
+- statements [MDX], CASE
 ms.assetid: 0aee3b4a-d5f7-4c9a-87b8-e5efc2da6b6d
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: Minewiskan
 ms.author: owend
 manager: erikre

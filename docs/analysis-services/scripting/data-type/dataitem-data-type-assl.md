@@ -1,24 +1,29 @@
 ---
 title: DataItem-Datentyp (ASSL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-apiname: DataItem Data Type
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
+apiname:
+- DataItem Data Type
+apilocation:
+- http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to: SQL Server 2016 Preview
-f1_keywords: DataItem
-helpviewer_keywords: DataItem data type
+applies_to:
+- SQL Server 2016 Preview
+f1_keywords:
+- DataItem
+helpviewer_keywords:
+- DataItem data type
 ms.assetid: f4f5155f-9c3d-49a1-a390-a9c734fafbce
-caps.latest.revision: "44"
+caps.latest.revision: 44
 author: Minewiskan
 ms.author: owend
 manager: kfile

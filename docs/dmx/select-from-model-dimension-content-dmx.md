@@ -1,26 +1,27 @@
 ---
 title: SELECT FROM &lt;Modell&gt;. DIMENSION_CONTENT (DMX) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - SELECT
 - FROM
 - DIMENSION_CONTENT
-dev_langs: DMX
+dev_langs:
+- DMX
 helpviewer_keywords:
 - mining models [Analysis Services], dimension content
 - SELECT FROM <model>.DIMENSION_CONTENT statement
 ms.assetid: 907fb3fb-2131-4a10-8635-2a39b9a805aa
-caps.latest.revision: "42"
+caps.latest.revision: 42
 author: Minewiskan
 ms.author: owend
 manager: erikre

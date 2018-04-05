@@ -1,24 +1,29 @@
 ---
 title: CurrentStorageMode-Element (ASSL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-apiname: CurrentStorageMode Element
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
+apiname:
+- CurrentStorageMode Element
+apilocation:
+- http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to: SQL Server 2016 Preview
-f1_keywords: CurrentStorageMode
-helpviewer_keywords: CurrentStorageMode element
+applies_to:
+- SQL Server 2016 Preview
+f1_keywords:
+- CurrentStorageMode
+helpviewer_keywords:
+- CurrentStorageMode element
 ms.assetid: 050c21e4-368b-4ff0-b0c5-349f93fe9747
-caps.latest.revision: "38"
+caps.latest.revision: 38
 author: Minewiskan
 ms.author: owend
 manager: kfile

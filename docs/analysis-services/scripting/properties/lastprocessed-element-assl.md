@@ -1,24 +1,29 @@
 ---
 title: LastProcessed-Element (ASSL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-apiname: LastProcessed Element
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
+apiname:
+- LastProcessed Element
+apilocation:
+- http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to: SQL Server 2016 Preview
-f1_keywords: LastProcessed
-helpviewer_keywords: LastProcessed element
+applies_to:
+- SQL Server 2016 Preview
+f1_keywords:
+- LastProcessed
+helpviewer_keywords:
+- LastProcessed element
 ms.assetid: df3d1f6f-705c-4408-9eb3-c550a1dec450
-caps.latest.revision: "34"
+caps.latest.revision: 34
 author: Minewiskan
 ms.author: owend
 manager: kfile

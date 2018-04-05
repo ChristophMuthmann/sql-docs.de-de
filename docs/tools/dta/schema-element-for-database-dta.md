@@ -1,20 +1,23 @@
 ---
-title: "Schema-Element für Datenbank (DTA) | Microsoft Docs"
-ms.custom: 
+title: Schema-Element für Datenbank (DTA) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: dta
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
-dev_langs: XML
-helpviewer_keywords: Schema element
+dev_langs:
+- XML
+helpviewer_keywords:
+- Schema element
 ms.assetid: d932e59c-953f-4ab4-934d-b6baf344835c
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: stevestein
 ms.author: sstein
 manager: craigg

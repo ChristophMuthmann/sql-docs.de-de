@@ -1,25 +1,27 @@
 ---
 title: EXPORT (DMX) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-f1_keywords: EXPORT
-dev_langs: DMX
+f1_keywords:
+- EXPORT
+dev_langs:
+- DMX
 helpviewer_keywords:
 - exporting mining models
 - exporting mining structures
 - mining structures [DMX], exporting
 - EXPORT statement
 ms.assetid: 97617071-e560-4080-81af-a80276fc0823
-caps.latest.revision: "39"
+caps.latest.revision: 39
 author: Minewiskan
 ms.author: owend
 manager: erikre

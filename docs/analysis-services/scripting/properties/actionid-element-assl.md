@@ -1,24 +1,29 @@
 ---
 title: ActionID-Element (ASSL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-apiname: ActionID Element
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
+apiname:
+- ActionID Element
+apilocation:
+- http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to: SQL Server 2016 Preview
-f1_keywords: ActionID
-helpviewer_keywords: ActionID element
+applies_to:
+- SQL Server 2016 Preview
+f1_keywords:
+- ActionID
+helpviewer_keywords:
+- ActionID element
 ms.assetid: 2c9c66b2-a7ea-4874-a0ed-020ce3feab20
-caps.latest.revision: "37"
+caps.latest.revision: 37
 author: Minewiskan
 ms.author: owend
 manager: kfile

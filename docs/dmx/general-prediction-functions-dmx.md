@@ -1,17 +1,18 @@
 ---
 title: Allgemeine Vorhersagefunktionen (DMX) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-dev_langs: DMX
+dev_langs:
+- DMX
 helpviewer_keywords:
 - DMX [Analysis Services], functions
 - mapping functions to query types [DMX]
@@ -21,7 +22,7 @@ helpviewer_keywords:
 - Data Mining Extensions [Analysis Services], functions
 - Data Mining Extensions [Analysis Services], prediction queries
 ms.assetid: e128159a-0458-43c9-bfe9-129cb6cfbe1c
-caps.latest.revision: "48"
+caps.latest.revision: 48
 author: Minewiskan
 ms.author: owend
 manager: erikre

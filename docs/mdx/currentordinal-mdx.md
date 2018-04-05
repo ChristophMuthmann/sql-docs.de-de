@@ -1,20 +1,22 @@
 ---
 title: CurrentOrdinal (MDX) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-dev_langs: kbMDX
-helpviewer_keywords: functions [MDX], CurrentOrdinal
+dev_langs:
+- kbMDX
+helpviewer_keywords:
+- functions [MDX], CurrentOrdinal
 ms.assetid: f127e0f1-c3f5-4cae-ad4c-b851e8728036
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: Minewiskan
 ms.author: owend
 manager: erikre

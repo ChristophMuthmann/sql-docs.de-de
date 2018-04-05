@@ -1,27 +1,31 @@
 ---
 title: BeginSession-Element (XMLA) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-apiname: BeginSession Element
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
+apiname:
+- BeginSession Element
+apilocation:
+- http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 f1_keywords:
 - http://schemas.microsoft.com/analysisservices/2003/engine#BeginSession
 - urn:schemas-microsoft-com:xml-analysis#BeginSession
 - microsoft.xml.analysis.beginsession
-helpviewer_keywords: BeginSession element
+helpviewer_keywords:
+- BeginSession element
 ms.assetid: 49873a97-58d7-42a9-ab7f-e045e2856737
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: Minewiskan
 ms.author: owend
 manager: kfile

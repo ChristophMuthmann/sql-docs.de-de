@@ -1,23 +1,24 @@
 ---
 title: Data Mining-Erweiterungen (DMX)-Syntaxkonventionen | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-dev_langs: DMX
+dev_langs:
+- DMX
 helpviewer_keywords:
 - Data Mining Extensions [Analysis Services], syntax conventions
 - syntax [DMX]
 - DMX [Analysis Services], syntax conventions
 ms.assetid: 7a885df3-9500-4793-9307-90a7d617f486
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: Minewiskan
 ms.author: owend
 manager: erikre

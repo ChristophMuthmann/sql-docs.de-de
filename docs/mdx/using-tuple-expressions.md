@@ -1,17 +1,18 @@
 ---
-title: "Verwenden von Tupelausdrücken | Microsoft Docs"
-ms.custom: 
+title: Verwenden von Tupelausdrücken | Microsoft Docs
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-dev_langs: kbMDX
+dev_langs:
+- kbMDX
 helpviewer_keywords:
 - single-member tuples [MDX]
 - expressions [MDX], tuples
@@ -19,7 +20,7 @@ helpviewer_keywords:
 - tuples
 - implicit tuples
 ms.assetid: 0b802b76-9123-405e-ae43-d438754724ba
-caps.latest.revision: "27"
+caps.latest.revision: 27
 author: Minewiskan
 ms.author: owend
 manager: erikre

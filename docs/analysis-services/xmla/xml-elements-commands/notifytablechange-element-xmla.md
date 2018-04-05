@@ -1,27 +1,31 @@
 ---
 title: NotifyTableChange-Element (XMLA) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-apiname: NotifyTableChange Element
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
+apiname:
+- NotifyTableChange Element
+apilocation:
+- http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 f1_keywords:
 - urn:schemas-microsoft-com:xml-analysis#NotifyTableChange
 - http://schemas.microsoft.com/analysisservices/2003/engine#NotifyTableChange
 - microsoft.xml.analysis.notifytablechange
-helpviewer_keywords: NotifyTableChange command
+helpviewer_keywords:
+- NotifyTableChange command
 ms.assetid: b76898eb-20d3-48c8-9eb8-1fd5df638bcc
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: Minewiskan
 ms.author: owend
 manager: kfile

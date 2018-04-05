@@ -1,27 +1,31 @@
 ---
 title: CubeID-Element (XMLA) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-apiname: CubeID Element
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
+apiname:
+- CubeID Element
+apilocation:
+- http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 f1_keywords:
 - microsoft.xml.analysis.cubeid
 - urn:schemas-microsoft-com:xml-analysis#CubeID
 - http://schemas.microsoft.com/analysisservices/2003/engine#CubeID
-helpviewer_keywords: CubeID element
+helpviewer_keywords:
+- CubeID element
 ms.assetid: 9dba605a-c45e-4730-827b-b7c55c8110da
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: Minewiskan
 ms.author: owend
 manager: kfile

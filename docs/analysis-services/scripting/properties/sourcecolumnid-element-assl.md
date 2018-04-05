@@ -1,24 +1,29 @@
 ---
 title: SourceColumnID-Element (ASSL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-apiname: SourceColumnID Element
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
+apiname:
+- SourceColumnID Element
+apilocation:
+- http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to: SQL Server 2016 Preview
-f1_keywords: SourceColumnID
-helpviewer_keywords: SourceColumnID element
+applies_to:
+- SQL Server 2016 Preview
+f1_keywords:
+- SourceColumnID
+helpviewer_keywords:
+- SourceColumnID element
 ms.assetid: 715c0be7-aa07-4dff-a909-9738224941ec
-caps.latest.revision: "35"
+caps.latest.revision: 35
 author: Minewiskan
 ms.author: owend
 manager: kfile

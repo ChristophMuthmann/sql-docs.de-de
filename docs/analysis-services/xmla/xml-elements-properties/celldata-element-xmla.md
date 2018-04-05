@@ -1,28 +1,32 @@
 ---
 title: CellData-Element (XMLA) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-apiname: CellData Element
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
+apiname:
+- CellData Element
+apilocation:
+- http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 f1_keywords:
 - CellData
 - http://schemas.microsoft.com/analysisservices/2003/engine#CellData
 - urn:schemas-microsoft-com:xml-analysis#CellData
 - microsoft.xml.analysis.celldata
-helpviewer_keywords: CellData element
+helpviewer_keywords:
+- CellData element
 ms.assetid: 0ebfb5e1-a674-4b9b-bd8c-c529da105f61
-caps.latest.revision: "27"
+caps.latest.revision: 27
 author: Minewiskan
 ms.author: owend
 manager: kfile

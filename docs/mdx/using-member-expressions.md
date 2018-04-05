@@ -1,22 +1,23 @@
 ---
-title: "Verwenden von Elementausdrücken | Microsoft Docs"
-ms.custom: 
+title: Verwenden von Elementausdrücken | Microsoft Docs
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-dev_langs: kbMDX
+dev_langs:
+- kbMDX
 helpviewer_keywords:
 - members [MDX], expressions
 - expressions [MDX], members
 ms.assetid: 63c7af49-8bea-47c5-9566-a961f77d2a3d
-caps.latest.revision: "28"
+caps.latest.revision: 28
 author: Minewiskan
 ms.author: owend
 manager: erikre

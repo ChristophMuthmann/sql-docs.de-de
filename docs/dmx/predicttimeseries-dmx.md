@@ -1,18 +1,20 @@
 ---
 title: PredictTimeSeries (DMX) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-f1_keywords: PredictTimeSeries
-dev_langs: DMX
+f1_keywords:
+- PredictTimeSeries
+dev_langs:
+- DMX
 helpviewer_keywords:
 - time series algorithms [Analysis Services]
 - time series [Analysis Services]
@@ -20,7 +22,7 @@ helpviewer_keywords:
 - REPLACE_MODEL_CASES parameter
 - PredictTimeSeries function
 ms.assetid: 85c596be-a7f4-499b-8d36-7e67c2647b6c
-caps.latest.revision: "56"
+caps.latest.revision: 56
 author: Minewiskan
 ms.author: owend
 manager: erikre

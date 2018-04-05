@@ -1,27 +1,31 @@
 ---
 title: CubeInfo-Element (XMLA) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-apiname: CubeInfo Element
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
+apiname:
+- CubeInfo Element
+apilocation:
+- http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 f1_keywords:
 - http://schemas.microsoft.com/analysisservices/2003/engine#CubeInfo
 - microsoft.xml.analysis.cubeinfo
 - urn:schemas-microsoft-com:xml-analysis#CubeInfo
-helpviewer_keywords: CubeInfo element
+helpviewer_keywords:
+- CubeInfo element
 ms.assetid: a504bac5-4bf2-4f78-a288-e74a34eaa97e
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: Minewiskan
 ms.author: owend
 manager: kfile

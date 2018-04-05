@@ -1,19 +1,21 @@
 ---
-title: "Optionen (Designer – Seite „Tabellen- und Datenbank-Designer“) | Microsoft-Dokumentation"
-ms.custom: 
+title: Optionen (Designer – Seite „Tabellen- und Datenbank-Designer“) | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-menu
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
-f1_keywords: VS.ToolsOptionsPages.Designers.Table_Designer
+f1_keywords:
+- VS.ToolsOptionsPages.Designers.Table_Designer
 ms.assetid: b43f4b97-17b9-4004-a824-f77b9e145741
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg

@@ -1,21 +1,24 @@
 ---
 title: IsEmpty (MDX) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-f1_keywords: ISEMPTY
-dev_langs: kbMDX
-helpviewer_keywords: IsEmpty function
+f1_keywords:
+- ISEMPTY
+dev_langs:
+- kbMDX
+helpviewer_keywords:
+- IsEmpty function
 ms.assetid: b4a50996-61d1-4e23-8003-7d530195ea72
-caps.latest.revision: "34"
+caps.latest.revision: 34
 author: Minewiskan
 ms.author: owend
 manager: erikre

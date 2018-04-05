@@ -1,27 +1,31 @@
 ---
 title: Caption-Element (XMLA) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-apiname: Caption Element
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
+apiname:
+- Caption Element
+apilocation:
+- http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 f1_keywords:
 - urn:schemas-microsoft-com:xml-analysis#Caption
 - http://schemas.microsoft.com/analysisservices/2003/engine#Caption
 - microsoft.xml.analysis.caption
-helpviewer_keywords: Caption element
+helpviewer_keywords:
+- Caption element
 ms.assetid: 3d10ee68-98ab-4da0-a409-800dea2f1c32
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: Minewiskan
 ms.author: owend
 manager: kfile

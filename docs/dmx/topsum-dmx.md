@@ -1,21 +1,24 @@
 ---
 title: TopSum (DMX) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-f1_keywords: TOPSUM
-dev_langs: DMX
-helpviewer_keywords: TopSum function
+f1_keywords:
+- TOPSUM
+dev_langs:
+- DMX
+helpviewer_keywords:
+- TopSum function
 ms.assetid: a0bebdfa-3db2-4818-ab8c-440598de71f1
-caps.latest.revision: "41"
+caps.latest.revision: 41
 author: Minewiskan
 ms.author: owend
 manager: erikre

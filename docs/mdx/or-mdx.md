@@ -1,21 +1,24 @@
 ---
 title: ODER (MDX) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-f1_keywords: OR
-dev_langs: kbMDX
-helpviewer_keywords: OR operator
+f1_keywords:
+- OR
+dev_langs:
+- kbMDX
+helpviewer_keywords:
+- OR operator
 ms.assetid: 7634c08a-5b70-44cd-9422-6555fed6ae05
-caps.latest.revision: "27"
+caps.latest.revision: 27
 author: Minewiskan
 ms.author: owend
 manager: erikre

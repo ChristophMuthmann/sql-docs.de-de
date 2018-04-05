@@ -1,21 +1,24 @@
 ---
 title: ClusterProbability (DMX) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-f1_keywords: ClusterProbability
-dev_langs: DMX
-helpviewer_keywords: ClusterProbability function
+f1_keywords:
+- ClusterProbability
+dev_langs:
+- DMX
+helpviewer_keywords:
+- ClusterProbability function
 ms.assetid: a6447b3c-94ce-4122-a3eb-6f3827598d8f
-caps.latest.revision: "35"
+caps.latest.revision: 35
 author: Minewiskan
 ms.author: owend
 manager: erikre

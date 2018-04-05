@@ -1,22 +1,24 @@
 ---
 title: Erstellen eines neu registrierten Servers (SQL Server Management Studio) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-registration
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.registerserver.general.sqlce.f1
 - sql13.swb.registerserver.general.sqlserver.f1
-helpviewer_keywords: Registered Servers [SQL Server], creating new registered servers
+helpviewer_keywords:
+- Registered Servers [SQL Server], creating new registered servers
 ms.assetid: 716ea070-a3b5-4514-9de2-82ce8a96514b
-caps.latest.revision: "31"
+caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg

@@ -1,20 +1,22 @@
 ---
 title: Gruppierungsbereich (Berichts-Generator) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
+ms.service: ''
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-f1_keywords: "10033"
-helpviewer_keywords: Grouping Pane dialog box
+f1_keywords:
+- "10033"
+helpviewer_keywords:
+- Grouping Pane dialog box
 ms.assetid: 983ee5a4-944c-491e-8720-7cd9f3881961
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile

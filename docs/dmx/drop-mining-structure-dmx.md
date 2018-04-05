@@ -1,20 +1,21 @@
 ---
 title: DROP MINING STRUCTURE (DMX) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DROP MINING STRUCTURE
 - DROP_MINING_STRUCTURE
-dev_langs: DMX
+dev_langs:
+- DMX
 helpviewer_keywords:
 - removing mining structures
 - dropping mining structures
@@ -22,7 +23,7 @@ helpviewer_keywords:
 - deleting mining structures
 - mining structures [DMX], deleting
 ms.assetid: 30df8c36-3a15-4d8c-98f3-0f8917be9fc8
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: Minewiskan
 ms.author: owend
 manager: erikre

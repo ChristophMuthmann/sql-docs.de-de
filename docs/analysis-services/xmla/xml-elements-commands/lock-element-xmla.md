@@ -1,27 +1,31 @@
 ---
 title: Sperren-Element (XMLA) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-apiname: Lock Element
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
+apiname:
+- Lock Element
+apilocation:
+- http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 f1_keywords:
 - urn:schemas-microsoft-com:xml-analysis#Lock
 - microsoft.xml.analysis.lock
 - http://schemas.microsoft.com/analysisservices/2003/engine#Lock
-helpviewer_keywords: Lock command
+helpviewer_keywords:
+- Lock command
 ms.assetid: a819e805-4793-43bb-8af3-16a19f8bdab3
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: Minewiskan
 ms.author: owend
 manager: kfile

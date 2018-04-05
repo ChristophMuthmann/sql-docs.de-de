@@ -1,27 +1,31 @@
 ---
 title: DisplayInfo-Element (XMLA) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-apiname: DisplayInfo Element
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
+apiname:
+- DisplayInfo Element
+apilocation:
+- http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 f1_keywords:
 - microsoft.xml.analysis.displayinfo
 - http://schemas.microsoft.com/analysisservices/2003/engine#DisplayInfo
 - urn:schemas-microsoft-com:xml-analysis#DisplayInfo
-helpviewer_keywords: DisplayInfo element
+helpviewer_keywords:
+- DisplayInfo element
 ms.assetid: 059ce038-38de-4c7d-a72f-4f919cfc7c4a
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: Minewiskan
 ms.author: owend
 manager: kfile

@@ -1,24 +1,29 @@
 ---
 title: ProcessingMode-Element (ASSL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-apiname: ProcessingMode Element
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
+apiname:
+- ProcessingMode Element
+apilocation:
+- http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to: SQL Server 2016 Preview
-f1_keywords: ProcessingMode
-helpviewer_keywords: ProcessingMode element
+applies_to:
+- SQL Server 2016 Preview
+f1_keywords:
+- ProcessingMode
+helpviewer_keywords:
+- ProcessingMode element
 ms.assetid: dff6eeba-f09c-4d8c-ad81-caef76254af0
-caps.latest.revision: "33"
+caps.latest.revision: 33
 author: Minewiskan
 ms.author: owend
 manager: kfile

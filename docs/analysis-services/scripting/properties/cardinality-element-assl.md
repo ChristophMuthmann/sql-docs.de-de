@@ -1,23 +1,27 @@
 ---
 title: Cardinality-Element (ASSL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-apiname: Cardinality Element
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
+apiname:
+- Cardinality Element
+apilocation:
+- http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to: SQL Server 2016 Preview
-helpviewer_keywords: Cardinality element
+applies_to:
+- SQL Server 2016 Preview
+helpviewer_keywords:
+- Cardinality element
 ms.assetid: 60ac8a26-7c8b-4011-9b9b-a29863779428
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: Minewiskan
 ms.author: owend
 manager: kfile

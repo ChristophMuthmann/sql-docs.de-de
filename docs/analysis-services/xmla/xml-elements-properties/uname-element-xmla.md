@@ -1,27 +1,31 @@
 ---
 title: UName-Element (XMLA) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-apiname: UName Element
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
+apiname:
+- UName Element
+apilocation:
+- http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 f1_keywords:
 - http://schemas.microsoft.com/analysisservices/2003/engine#UName
 - urn:schemas-microsoft-com:xml-analysis#UName
 - microsoft.xml.analysis.uname
-helpviewer_keywords: UName element
+helpviewer_keywords:
+- UName element
 ms.assetid: b4916d44-cf77-4d4c-b4e5-a0a98192d057
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: Minewiskan
 ms.author: owend
 manager: kfile

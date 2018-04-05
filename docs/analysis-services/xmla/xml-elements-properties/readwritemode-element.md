@@ -1,20 +1,22 @@
 ---
 title: ReadWriteMode-Element | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
-helpviewer_keywords: ReadWriteMode command
+applies_to:
+- SQL Server 2016 Preview
+helpviewer_keywords:
+- ReadWriteMode command
 ms.assetid: 379bcaca-bb7e-4934-a9e7-21f8ede2fdc7
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: Minewiskan
 ms.author: owend
 manager: kfile

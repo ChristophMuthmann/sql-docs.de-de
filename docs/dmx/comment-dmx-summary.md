@@ -1,23 +1,24 @@
 ---
-title: "--(Kommentar) (DMX)-Übersicht | Microsoft Docs"
-ms.custom: 
+title: --(Kommentar) (DMX)-Übersicht | Microsoft Docs
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-dev_langs: DMX
+dev_langs:
+- DMX
 helpviewer_keywords:
 - commenting characters
 - double hyphens
 - -- (comment character)
 ms.assetid: 487b580b-5b81-4e52-8868-4fa809e4ef58
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: Minewiskan
 ms.author: owend
 manager: erikre

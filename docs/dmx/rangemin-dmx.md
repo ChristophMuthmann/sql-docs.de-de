@@ -1,21 +1,24 @@
 ---
 title: RangeMin (DMX) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-f1_keywords: RangeMin
-dev_langs: DMX
-helpviewer_keywords: RangeMin function
+f1_keywords:
+- RangeMin
+dev_langs:
+- DMX
+helpviewer_keywords:
+- RangeMin function
 ms.assetid: 64159bbe-7016-4f67-91d9-5c5f6ceb6c25
-caps.latest.revision: "30"
+caps.latest.revision: 30
 author: Minewiskan
 ms.author: owend
 manager: erikre

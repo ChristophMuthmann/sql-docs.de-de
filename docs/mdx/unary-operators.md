@@ -1,20 +1,22 @@
 ---
-title: "Unäre Operatoren | Microsoft Docs"
-ms.custom: 
+title: Unäre Operatoren | Microsoft Docs
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-dev_langs: kbMDX
-helpviewer_keywords: unary operators
+dev_langs:
+- kbMDX
+helpviewer_keywords:
+- unary operators
 ms.assetid: bf1b5518-6040-4484-9ce8-79c0eb4373a9
-caps.latest.revision: "27"
+caps.latest.revision: 27
 author: Minewiskan
 ms.author: owend
 manager: erikre

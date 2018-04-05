@@ -1,21 +1,24 @@
 ---
 title: KEINE (MDX) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-f1_keywords: NOT
-dev_langs: kbMDX
-helpviewer_keywords: NOT operator [MDX]
+f1_keywords:
+- NOT
+dev_langs:
+- kbMDX
+helpviewer_keywords:
+- NOT operator [MDX]
 ms.assetid: c11bd3b0-54b3-4a6d-babc-6067722194db
-caps.latest.revision: "26"
+caps.latest.revision: 26
 author: Minewiskan
 ms.author: owend
 manager: erikre

@@ -1,24 +1,29 @@
 ---
 title: Dimension-Element (ASSL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-apiname: Dimension Element
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
+apiname:
+- Dimension Element
+apilocation:
+- http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to: SQL Server 2016 Preview
-f1_keywords: Dimension
-helpviewer_keywords: Dimension element
+applies_to:
+- SQL Server 2016 Preview
+f1_keywords:
+- Dimension
+helpviewer_keywords:
+- Dimension element
 ms.assetid: 71886014-f463-4b70-a2a2-d9e5053ba4f0
-caps.latest.revision: "39"
+caps.latest.revision: 39
 author: Minewiskan
 ms.author: owend
 manager: kfile

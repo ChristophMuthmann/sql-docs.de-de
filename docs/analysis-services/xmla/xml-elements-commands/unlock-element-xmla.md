@@ -1,27 +1,31 @@
 ---
 title: Unlock-Element (XMLA) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-apiname: Unlock Element
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
+apiname:
+- Unlock Element
+apilocation:
+- http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 f1_keywords:
 - http://schemas.microsoft.com/analysisservices/2003/engine#Unlock
 - urn:schemas-microsoft-com:xml-analysis#Unlock
 - microsoft.xml.analysis.unlock
-helpviewer_keywords: Unlock command
+helpviewer_keywords:
+- Unlock command
 ms.assetid: 46425b33-baa2-41ad-803a-34d2fb4b2cab
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: Minewiskan
 ms.author: owend
 manager: kfile

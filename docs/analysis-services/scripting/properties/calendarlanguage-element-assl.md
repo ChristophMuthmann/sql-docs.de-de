@@ -1,24 +1,29 @@
 ---
 title: CalendarLanguage-Element (ASSL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-apiname: CalendarLanguage Element
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
+apiname:
+- CalendarLanguage Element
+apilocation:
+- http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to: SQL Server 2016 Preview
-f1_keywords: CalendarLanguage
-helpviewer_keywords: CalendarLanguage element
+applies_to:
+- SQL Server 2016 Preview
+f1_keywords:
+- CalendarLanguage
+helpviewer_keywords:
+- CalendarLanguage element
 ms.assetid: e43a0f48-a583-418b-a0a4-d73a40035573
-caps.latest.revision: "31"
+caps.latest.revision: 31
 author: Minewiskan
 ms.author: owend
 manager: kfile

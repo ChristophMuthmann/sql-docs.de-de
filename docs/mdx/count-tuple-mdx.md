@@ -1,21 +1,24 @@
 ---
 title: Count (Tupel) (MDX) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-f1_keywords: COUNT
-dev_langs: kbMDX
-helpviewer_keywords: Count function [MDX]
+f1_keywords:
+- COUNT
+dev_langs:
+- kbMDX
+helpviewer_keywords:
+- Count function [MDX]
 ms.assetid: c8f4a570-54a8-4c00-ac4b-eef0ebdb353c
-caps.latest.revision: "31"
+caps.latest.revision: 31
 author: Minewiskan
 ms.author: owend
 manager: erikre

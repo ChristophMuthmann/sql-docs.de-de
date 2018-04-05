@@ -1,23 +1,25 @@
 ---
-title: "&gt;= (Größer als oder gleich) (MDX) | Microsoft Docs"
-ms.custom: 
+title: '&gt;= (Größer als oder gleich) (MDX) | Microsoft Docs'
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-f1_keywords: '>='
-dev_langs: kbMDX
+f1_keywords:
+- '>='
+dev_langs:
+- kbMDX
 helpviewer_keywords:
 - '>= (greater than or equal to operator)'
 - greater than or equal to (>=)
 ms.assetid: 272f4614-9ba3-46bd-8306-181c26e798f1
-caps.latest.revision: "34"
+caps.latest.revision: 34
 author: Minewiskan
 ms.author: owend
 manager: erikre

@@ -1,21 +1,24 @@
 ---
 title: Root (MDX) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-f1_keywords: Root
-dev_langs: kbMDX
-helpviewer_keywords: Root function
+f1_keywords:
+- Root
+dev_langs:
+- kbMDX
+helpviewer_keywords:
+- Root function
 ms.assetid: f6c42e87-5a52-4e43-9dd1-ca757f2db79c
-caps.latest.revision: "32"
+caps.latest.revision: 32
 author: Minewiskan
 ms.author: owend
 manager: erikre

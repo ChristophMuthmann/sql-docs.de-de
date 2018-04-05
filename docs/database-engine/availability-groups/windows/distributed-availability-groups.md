@@ -1,19 +1,21 @@
 ---
-title: "Verteilte Verfügbarkeitsgruppen (SQL Server) | Microsoft-Dokumentation"
-ms.custom: 
+title: Verteilte Verfügbarkeitsgruppen (SQL Server) | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 01/12/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: availability-groups
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: Availability Groups [SQL Server], distributed
-ms.assetid: 
-caps.latest.revision: 
+helpviewer_keywords:
+- Availability Groups [SQL Server], distributed
+ms.assetid: ''
+caps.latest.revision: ''
 author: allanhirt
 ms.author: mikeray
 manager: craigg

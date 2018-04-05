@@ -1,22 +1,23 @@
 ---
 title: DROP ACTION-Anweisung (MDX) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DROP
 - DROP ACTION
 - Action
 - DROP_ACTION
-dev_langs: kbMDX
+dev_langs:
+- kbMDX
 helpviewer_keywords:
 - DROP ACTION statement
 - deleting actions
@@ -24,7 +25,7 @@ helpviewer_keywords:
 - actions [MDX]
 - dropping actions
 ms.assetid: 74b3cfee-dea8-4968-a54c-1754d52ee1bd
-caps.latest.revision: "31"
+caps.latest.revision: 31
 author: Minewiskan
 ms.author: owend
 manager: erikre

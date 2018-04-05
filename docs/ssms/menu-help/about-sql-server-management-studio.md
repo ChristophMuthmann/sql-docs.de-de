@@ -1,20 +1,23 @@
 ---
 title: Informationen zu SQL Server Management Studio | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-menu
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
-f1_keywords: sql13.swb.aboutsqlserverworkbench.f1
-helpviewer_keywords: SQL Server Management Studio dialog box
+f1_keywords:
+- sql13.swb.aboutsqlserverworkbench.f1
+helpviewer_keywords:
+- SQL Server Management Studio dialog box
 ms.assetid: b3568e0f-3227-45a0-ad6d-997ee87cdf0f
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg

@@ -1,23 +1,27 @@
 ---
 title: ProactiveCachingIncrementalProcessingBinding-Datentyp (ASSL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-apiname: ProactiveCachingIncrementalProcessingBinding Data Type
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
+apiname:
+- ProactiveCachingIncrementalProcessingBinding Data Type
+apilocation:
+- http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to: SQL Server 2016 Preview
-helpviewer_keywords: ProactiveCachingIncrementalProcessingBinding data type
+applies_to:
+- SQL Server 2016 Preview
+helpviewer_keywords:
+- ProactiveCachingIncrementalProcessingBinding data type
 ms.assetid: f49c0c96-4277-417b-9660-d77a4faebd00
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: Minewiskan
 ms.author: owend
 manager: kfile

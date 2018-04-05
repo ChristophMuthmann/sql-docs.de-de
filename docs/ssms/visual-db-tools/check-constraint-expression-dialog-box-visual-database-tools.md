@@ -1,19 +1,21 @@
 ---
-title: "CHECK-Einschränkungsausdruck (Dialogfeld) (Visual Database Tools) | Microsoft-Dokumentation"
-ms.custom: 
+title: CHECK-Einschränkungsausdruck (Dialogfeld) (Visual Database Tools) | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
-f1_keywords: vdt.dlgbox.checkconstraintexpression
+f1_keywords:
+- vdt.dlgbox.checkconstraintexpression
 ms.assetid: beb6ce43-3913-4d66-8826-8e885335b790
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg

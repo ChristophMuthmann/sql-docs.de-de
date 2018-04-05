@@ -1,20 +1,22 @@
 ---
 title: Arithmetische Operatoren (DMX) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-dev_langs: DMX
-helpviewer_keywords: arithmetic operators
+dev_langs:
+- DMX
+helpviewer_keywords:
+- arithmetic operators
 ms.assetid: befe4f0c-e5dd-4ae1-b88e-6ac7aab2181a
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: Minewiskan
 ms.author: owend
 manager: erikre

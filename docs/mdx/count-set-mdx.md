@@ -1,21 +1,24 @@
 ---
 title: Count (Menge) (MDX) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-f1_keywords: COUNT
-dev_langs: kbMDX
-helpviewer_keywords: Count function [MDX]
+f1_keywords:
+- COUNT
+dev_langs:
+- kbMDX
+helpviewer_keywords:
+- Count function [MDX]
 ms.assetid: 22f530e9-f8e1-4608-affa-9a2bc0821591
-caps.latest.revision: "39"
+caps.latest.revision: 39
 author: Minewiskan
 ms.author: owend
 manager: erikre

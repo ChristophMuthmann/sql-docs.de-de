@@ -1,24 +1,29 @@
 ---
 title: PerspectiveDimension-Datentyp (ASSL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-apiname: PerspectiveDimension Data Type
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
+apiname:
+- PerspectiveDimension Data Type
+apilocation:
+- http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to: SQL Server 2016 Preview
-f1_keywords: PerspectiveDimension
-helpviewer_keywords: PerspectiveDimension data type
+applies_to:
+- SQL Server 2016 Preview
+f1_keywords:
+- PerspectiveDimension
+helpviewer_keywords:
+- PerspectiveDimension data type
 ms.assetid: c4bc56de-4f42-4ceb-a68d-a4fec92fdfa9
-caps.latest.revision: "34"
+caps.latest.revision: 34
 author: Minewiskan
 ms.author: owend
 manager: kfile

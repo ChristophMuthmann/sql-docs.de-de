@@ -1,24 +1,29 @@
 ---
 title: AllowBrowsing-Element (ASSL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-apiname: AllowBrowsing Element
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
+apiname:
+- AllowBrowsing Element
+apilocation:
+- http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to: SQL Server 2016 Preview
-f1_keywords: AllowBrowsing
-helpviewer_keywords: AllowBrowsing element
+applies_to:
+- SQL Server 2016 Preview
+f1_keywords:
+- AllowBrowsing
+helpviewer_keywords:
+- AllowBrowsing element
 ms.assetid: e5d09f8c-080b-4013-8c6a-0c9775e6ab25
-caps.latest.revision: "38"
+caps.latest.revision: 38
 author: Minewiskan
 ms.author: owend
 manager: kfile

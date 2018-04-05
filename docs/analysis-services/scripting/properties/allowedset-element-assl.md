@@ -1,24 +1,29 @@
 ---
 title: AllowedSet-Element (ASSL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-apiname: AllowedSet Element
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
+apiname:
+- AllowedSet Element
+apilocation:
+- http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to: SQL Server 2016 Preview
-f1_keywords: AllowedSet
-helpviewer_keywords: AllowedSet element
+applies_to:
+- SQL Server 2016 Preview
+f1_keywords:
+- AllowedSet
+helpviewer_keywords:
+- AllowedSet element
 ms.assetid: 4aff2e03-6e1f-4f1a-b99d-d86bba25ab9b
-caps.latest.revision: "36"
+caps.latest.revision: 36
 author: Minewiskan
 ms.author: owend
 manager: kfile

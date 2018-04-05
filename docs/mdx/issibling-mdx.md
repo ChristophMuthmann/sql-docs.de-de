@@ -1,21 +1,24 @@
 ---
 title: IsSibling (MDX) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-f1_keywords: ISSIBLING
-dev_langs: kbMDX
-helpviewer_keywords: IsSibling function
+f1_keywords:
+- ISSIBLING
+dev_langs:
+- kbMDX
+helpviewer_keywords:
+- IsSibling function
 ms.assetid: 12f302f0-141e-4ec0-ad5f-329aade17a4d
-caps.latest.revision: "31"
+caps.latest.revision: 31
 author: Minewiskan
 ms.author: owend
 manager: erikre

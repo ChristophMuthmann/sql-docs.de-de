@@ -1,27 +1,31 @@
 ---
 title: Locations-Element (XMLA) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-apiname: Locations Element
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
+apiname:
+- Locations Element
+apilocation:
+- http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 f1_keywords:
 - http://schemas.microsoft.com/analysisservices/2003/engine#Locations
 - urn:schemas-microsoft-com:xml-analysis#Locations
 - microsoft.xml.analysis.locations
-helpviewer_keywords: Locations element
+helpviewer_keywords:
+- Locations element
 ms.assetid: 630929cb-f0dc-472a-86bc-28b67e907c3d
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: Minewiskan
 ms.author: owend
 manager: kfile

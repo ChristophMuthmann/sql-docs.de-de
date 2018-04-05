@@ -1,23 +1,25 @@
 ---
 title: + (Vereinigung) (MDX) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-f1_keywords: +
-dev_langs: kbMDX
+f1_keywords:
+- +
+dev_langs:
+- kbMDX
 helpviewer_keywords:
 - union operator (+)
 - + (union operator)
 ms.assetid: 6c6dfca2-7413-452a-98a2-3d8c58a8a3e6
-caps.latest.revision: "43"
+caps.latest.revision: 43
 author: Minewiskan
 ms.author: owend
 manager: erikre

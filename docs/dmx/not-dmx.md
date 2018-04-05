@@ -1,21 +1,24 @@
 ---
 title: KEINE (DMX) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-f1_keywords: NOT
-dev_langs: DMX
-helpviewer_keywords: NOT operator [DMX]
+f1_keywords:
+- NOT
+dev_langs:
+- DMX
+helpviewer_keywords:
+- NOT operator [DMX]
 ms.assetid: 6d91b3d9-270c-4a68-b41f-169cff5faa0e
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: Minewiskan
 ms.author: owend
 manager: erikre

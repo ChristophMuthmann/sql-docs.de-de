@@ -1,24 +1,29 @@
 ---
 title: Konto-Element (ASSL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-apiname: Account Element
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
+apiname:
+- Account Element
+apilocation:
+- http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to: SQL Server 2016 Preview
-f1_keywords: Account
-helpviewer_keywords: Account element
+applies_to:
+- SQL Server 2016 Preview
+f1_keywords:
+- Account
+helpviewer_keywords:
+- Account element
 ms.assetid: 0bb7d06c-0158-4ab2-b2b1-cb50ba24f7c0
-caps.latest.revision: "41"
+caps.latest.revision: 41
 author: Minewiskan
 ms.author: owend
 manager: kfile
