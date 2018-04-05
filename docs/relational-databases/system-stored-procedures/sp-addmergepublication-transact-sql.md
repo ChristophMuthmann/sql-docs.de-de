@@ -1,16 +1,16 @@
 ---
 title: Sp_addmergepublication (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,7 +20,7 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addmergepublication
 ms.assetid: 28a629a1-7374-4614-9b04-279d290a942a
-caps.latest.revision: 
+caps.latest.revision: 72
 author: edmacauley
 ms.author: edmaca
 manager: craigg
@@ -123,7 +123,7 @@ sp_addmergepublication [ @publication = ] 'publication'
  Aktiviert die Mergeveröffentlichung, um parametrisierte Zeilenfilter zu verwenden. *Dynamic_filters* ist **nvarchar(5)**, hat den Standardwert "false".  
   
 > [!NOTE]  
->  Sie sollten diesen Parameter nicht angeben, sondern stattdessen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zulassen, damit automatisch festgestellt wird, ob parametrisierte Zeilenfilter verwendet werden. Wenn Sie einen Wert angeben **"true"** für *Dynamic_filters*, müssen Sie für den Artikel einen parametrisierten Zeilenfilter definieren. Weitere Informationen finden Sie unter [Define and Modify a Parameterized Row Filter for a Merge Article](../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md).  
+>  Sie sollten diesen Parameter nicht angeben, sondern stattdessen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zulassen, damit automatisch festgestellt wird, ob parametrisierte Zeilenfilter verwendet werden. Wenn Sie einen Wert angeben **"true"** für *Dynamic_filters*, müssen Sie für den Artikel einen parametrisierten Zeilenfilter definieren. Weitere Informationen finden Sie unter [Definieren und Ändern eines parametrisierten Zeilenfilters für einen Mergeartikel](../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md).  
   
  [  **@snapshot_in_defaultfolder =** ] **"***Snapshot_in_default_folder***"**  
  Legt fest, ob die Momentaufnahmedateien im Standardordner gespeichert werden. *Snapshot_in_default_folder* ist **nvarchar(5)**, Standardwert ist "true". Wenn **"true"**, momentaufnahmedateien im Standardordner gefunden werden können. Wenn **"false"**, momentaufnahmedateien im alternativen vom angegebenen Speicherort gespeichert *Alternate_snapshot_folder*. Alternative Speicherorte können sich auf einem anderen Server, auf einem Netzlaufwerk oder auf einem Wechselmedium (z. B. CD-ROM oder Wechseldatenträger) befinden. Momentaufnahmedateien lassen sich auch auf einer FTP-Site (File Transfer Protocol) speichern, um zu einem späteren Zeitpunkt vom Abonnenten abgerufen zu werden. Beachten Sie, dass dieser Parameter kann "true" sein und dennoch fehlgeschlagene vom angegebenen Speicherort *Alt_snapshot_folder*. Diese Kombination gibt an, dass die Momentaufnahmedateien sowohl im Standardpfad als auch im alternativen Pfad gespeichert werden.  
@@ -138,7 +138,7 @@ sp_addmergepublication [ @publication = ] 'publication'
  Gibt einen Zeiger auf eine **.sql** Dateispeicherort. *Post_snapshot_script* ist **nvarchar(255)**, hat den Standardwert NULL. Der Merge-Agent führt das nach der Momentaufnahme ausgeführte Skript aus, nachdem alle anderen Skripts und Daten für replizierte Objekte während einer Erstsynchronisierung angewendet wurden. Das Skript wird in dem Sicherheitskontext ausgeführt, der vom Merge-Agent beim Herstellen einer Verbindung mit der Abonnementdatenbank verwendet wird. Nach der Momentaufnahme-Skripts werden nicht ausgeführt, auf [!INCLUDE[ssEW](../../includes/ssew-md.md)] Abonnenten.  
   
  [  **@compress_snapshot =** ] **"***Compress_snapshot***"**  
- Gibt an, dass die Momentaufnahme, die geschrieben werden, um die  **@alt_snapshot_folder**  Speicherort ist in komprimiert werden soll die [!INCLUDE[msCoName](../../includes/msconame-md.md)] CAB-Format. *Compress_snapshot* ist **nvarchar(5)**, hat den Standardwert "false". **"false"** gibt an, dass die Momentaufnahme nicht komprimiert wird. **"true"** gibt an, dass die Momentaufnahme komprimiert werden. Momentaufnahmedateien, die größer als 2 GB sind, können nicht komprimiert werden. Komprimierte Momentaufnahmedateien werden an der Stelle dekomprimiert, an der der Merge-Agent ausgeführt wird. Pullabonnements werden in der Regel mit komprimierten Momentaufnahmen verwendet, sodass die Dateien auf dem Abonnenten dekomprimiert werden. Die Momentaufnahme im Standardordner kann nicht komprimiert werden. Zur Unterstützung [!INCLUDE[ssEW](../../includes/ssew-md.md)] -Abonnenten, die Sie angeben müssen **"false"**.  
+ Gibt an, dass die Momentaufnahme, die geschrieben werden, um die **@alt_snapshot_folder** Speicherort ist in komprimiert werden soll die [!INCLUDE[msCoName](../../includes/msconame-md.md)] CAB-Format. *Compress_snapshot* ist **nvarchar(5)**, hat den Standardwert "false". **"false"** gibt an, dass die Momentaufnahme nicht komprimiert wird. **"true"** gibt an, dass die Momentaufnahme komprimiert werden. Momentaufnahmedateien, die größer als 2 GB sind, können nicht komprimiert werden. Komprimierte Momentaufnahmedateien werden an der Stelle dekomprimiert, an der der Merge-Agent ausgeführt wird. Pullabonnements werden in der Regel mit komprimierten Momentaufnahmen verwendet, sodass die Dateien auf dem Abonnenten dekomprimiert werden. Die Momentaufnahme im Standardordner kann nicht komprimiert werden. Zur Unterstützung [!INCLUDE[ssEW](../../includes/ssew-md.md)] -Abonnenten, die Sie angeben müssen **"false"**.  
   
  [  **@ftp_address =** ] **"***Ftp_address***"**  
  Die Netzwerkadresse des FTP-Diensts für den Verteiler. *Ftp_address* ist **Sysname**, hat den Standardwert NULL. Gibt an, wo die veröffentlichungsmomentaufnahmedateien der Merge-Agent eines Abonnenten zum Abholen gespeichert sind. Da diese Eigenschaft für jede Veröffentlichung gespeichert wird, kann jede Veröffentlichung einen anderen haben *Ftp_address*. Die Veröffentlichung muss die Weitergabe von Momentaufnahmen über FTP unterstützen.  
@@ -219,11 +219,11 @@ sp_addmergepublication [ @publication = ] 'publication'
  [  **@replicate_ddl =** ] *Replicate_ddl*  
  Gibt an, ob für die Veröffentlichung die Schemareplikation unterstützt wird. *Replicate_ddl* ist **Int**, hat den Standardwert 1. **1** gibt an, dass die Anweisungen des Data Definition Language (DDL) wird auf dem Verleger ausgeführte repliziert werden, und **0** gibt an, dass die DDL-Anweisungen nicht repliziert werden. Weitere Informationen finden Sie unter [Vornehmen von Schemaänderungen in Veröffentlichungsdatenbanken](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md).  
   
- Die  *@replicate_ddl*  Parameter wird berücksichtigt, wenn eine DDL-Anweisung eine Spalte hinzugefügt. Die  *@replicate_ddl*  Parameter wird ignoriert, wenn eine DDL-Anweisung ändert oder eine Spalte aus den folgenden Gründen löscht.  
+ Die *@replicate_ddl* Parameter wird berücksichtigt, wenn eine DDL-Anweisung eine Spalte hinzugefügt. Die *@replicate_ddl* Parameter wird ignoriert, wenn eine DDL-Anweisung ändert oder eine Spalte aus den folgenden Gründen löscht.  
   
--   Wenn eine Spalte gelöscht wird, muss die Sysarticlecolumns aktualisiert werden, um zu verhindern, dass neue DML-Anweisungen die gelöschte Spalte, die der Verteilungs-Agent fehlschlagen würde aufnehmen. Die  *@replicate_ddl*  Parameter wird ignoriert, da die Replikation immer die schemaänderung replizieren muss.  
+-   Wenn eine Spalte gelöscht wird, muss die Sysarticlecolumns aktualisiert werden, um zu verhindern, dass neue DML-Anweisungen die gelöschte Spalte, die der Verteilungs-Agent fehlschlagen würde aufnehmen. Die *@replicate_ddl* Parameter wird ignoriert, da die Replikation immer die schemaänderung replizieren muss.  
   
--   Wenn eine Spalte geändert wird, hat sich möglicherweise der Quelldatentyp oder die NULL-Zulässigkeit geändert. Dies hat zur Folge, dass DML-Anweisungen einen Wert enthalten, der möglicherweise nicht mit der Tabelle beim Abonnenten kompatibel ist. Solche DML-Anweisungen können bewirken, dass der Verteilungs-Agent fehlschlägt. Die  *@replicate_ddl*  Parameter wird ignoriert, da die Replikation immer die schemaänderung replizieren muss.  
+-   Wenn eine Spalte geändert wird, hat sich möglicherweise der Quelldatentyp oder die NULL-Zulässigkeit geändert. Dies hat zur Folge, dass DML-Anweisungen einen Wert enthalten, der möglicherweise nicht mit der Tabelle beim Abonnenten kompatibel ist. Solche DML-Anweisungen können bewirken, dass der Verteilungs-Agent fehlschlägt. Die *@replicate_ddl* Parameter wird ignoriert, da die Replikation immer die schemaänderung replizieren muss.  
   
 -   Wenn eine DDL-Anweisung eine neue Spalte hinzufügt, schließt Sysarticlecolumns nicht die neue Spalte. DML-Anweisungen versuchen nicht, Daten für die neue Spalte zu replizieren. Der Parameter wird berücksichtigt, da sowohl das Replizieren als auch das Nicht-Replizieren der DDL akzeptabel ist.  
   
@@ -256,7 +256,7 @@ sp_addmergepublication [ @publication = ] 'publication'
  Gibt die Anzahl der Änderungen, die in einer Generierung enthalten sind. Eine Generierung ist eine Auflistung von Änderungen, die an einen Verleger oder Abonnenten übermittelt werden. *Generation_leveling_threshold* ist **Int**, Standardwert ist 1000.  
   
  [  **@automatic_reinitialization_policy =** ] *Automatic_reinitialization_policy*  
- Gibt an, ob Änderungen vom Abonnenten vor einer automatischen neuinitialisierung, die durch eine Änderung an der Veröffentlichung erforderlich, wobei der Wert hochgeladen werden **1** Zielsätzen für  **@force_reinit_subscription** . *Automatic_reinitialization_policy* bit und hat den Standardwert 0. **1** bedeutet, dass Änderungen vom Abonnenten vor einer automatischen erneuten Initialisierung hochgeladen werden.  
+ Gibt an, ob Änderungen vom Abonnenten vor einer automatischen neuinitialisierung, die durch eine Änderung an der Veröffentlichung erforderlich, wobei der Wert hochgeladen werden **1** Zielsätzen für **@force_reinit_subscription**. *Automatic_reinitialization_policy* bit und hat den Standardwert 0. **1** bedeutet, dass Änderungen vom Abonnenten vor einer automatischen erneuten Initialisierung hochgeladen werden.  
   
 > [!IMPORTANT]  
 >  Wenn Sie einen parametrisierten Filter hinzufügen, löschen oder ändern, können ausstehende Änderungen auf dem Abonnenten während der erneuten Initialisierung nicht auf den Verleger hochgeladen werden. Wenn Sie ausstehende Änderungen hochladen möchten, sollten Sie vor dem Ändern des Filters alle Abonnements synchronisieren.  
@@ -277,7 +277,7 @@ sp_addmergepublication [ @publication = ] 'publication'
 ## <a name="remarks"></a>Hinweise  
  **Sp_addmergepublication** wird bei der Mergereplikation verwendet.  
   
- Zum Auflisten von veröffentlichungsobjekten zu Active Directory unter Verwendung der  **@add_to_active_directory**  Parameter, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Objekt muss bereits in Active Directory erstellt werden.  
+ Zum Auflisten von veröffentlichungsobjekten zu Active Directory unter Verwendung der **@add_to_active_directory** Parameter, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Objekt muss bereits in Active Directory erstellt werden.  
   
  Wenn mehrere Veröffentlichungen vorhanden sind, die veröffentlichen, der dasselbe Datenbankobjekt nur Veröffentlichungen mit einer *Replicate_ddl* Wert **1** repliziert, ALTER TABLE, ALTER VIEW, ALTER PROCEDURE, ALTER FUNCTION und ALTER TRIGGER-DDL-Anweisungen. Eine ALTER TABLE DROP COLUMN DDL-Anweisung wird hingegen von allen Veröffentlichungen repliziert, die die gelöschte Spalte veröffentlichen.  
   
