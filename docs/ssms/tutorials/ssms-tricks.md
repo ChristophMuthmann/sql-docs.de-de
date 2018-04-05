@@ -16,11 +16,11 @@ helpviewer_keywords:
 - tutorials [SQL Server Management Studio]
 - Transact-SQL tutorials
 - SQL Server Management Studio [SQL Server], tutorials
-ms.openlocfilehash: 9f633a8d624fd31913dc2aeb6fde34ff30b7645d
-ms.sourcegitcommit: ccb05cb5a4cccaf7ffa9e85a4684fa583bab914e
+ms.openlocfilehash: 792d6c7fe69a1b8ec77c70d0fbfa6ceaa92d808a
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="tutorial-additional-tips-and-tricks-for-using-ssms"></a>Tutorial: Zusätzliche Tipps und Tricks für die Verwendung von SSMS
 Dieses Tutorial enthält einige zusätzliche Tricks für die Verwendung von SQL Server Management Studio. In diesem Artikel lernen Sie Folgendes: 
@@ -143,33 +143,6 @@ Wenn eine Datenbank viele Objekte enthält, kann sich die Suche nach einem besti
 ## <a name="access-your-sql-server-error-log"></a>Zugreifen auf Ihr SQL Server-Fehlerprotokoll
 Das Fehlerprotokoll ist eine Datei mit Details zu Ereignissen, die auf Ihrem SQL-Server auftreten. Es kann in SSMS durchsucht und abgefragt werden. Es kann auch als Protokolldatei auf dem Datenträger gefunden werden.
 
-### <a name="find-your-error-log-if-you-cannot-connect-to-sql"></a>Finden Ihres Fehlerprotokolls, wenn keine Verbindung zu SQL hergestellt werden kann
-1. Öffnen Sie den SQL Server-Konfigurations-Manager. 
-2. Erweitern Sie den Knoten **Dienste**.
-3. Klicken Sie mit der rechten Maustaste auf Ihre SQL Server-Instanz > **Eigenschaften**:
-
-    ![Servereigenschaften für den Konfigurations-Manager](media/ssms-tricks/serverproperties.PNG)
-
-4. Wählen Sie die Registerkarte **Startparameter** aus.
-5. Im Bereich **Vorhandene Parameter** ist im Pfad hinter „-e“ der Speicherort des Fehlerprotokolls enthalten: 
-    
-    ![Fehlerprotokoll](media/ssms-tricks/errorlog.png)
-    - Sie werden feststellen, dass an diesem Speicherort mehrere errorlog.*-Dateien vorhanden sind. Bei der Datei mit „*.log“ handelt es sich um das aktuelle Fehlerprotokoll. Die Dateien, die mit Ziffern enden, sind vorhergehende Protokolle, da bei jedem Neustart von SQL Server ein neues Protokoll erstellt wird. 
-6. Öffnen Sie diese Datei in Notepad. 
-
-### <a name="find-your-error-log-if-youre-connected-to-sql"></a>Finden Ihres Fehlerprotokolls, wenn Sie mit SQL verbunden sind
-1. Stellen Sie eine Verbindung mit SQL Server her.
-2. Öffnen Sie das Fenster **Neue Abfrage**.
-3. Fügen Sie folgenden T-SQL-Codeausschnitt in Ihr Abfragefenster ein, und klicken Sie auf **Ausführen**:
-
-
-  ```sql
-   SELECT SERVERPROPERTY('ErrorLogFileName') AS 'Error log file location' 
-  ```
-3. Die Ergebnisse zeigen den Speicherort des Fehlerprotokolls innerhalb des Dateisystems an: 
-
-![Fehlerprotokoll nach Abfrage suchen](media/ssms-tricks/finderrorlogquery.png)
-
 ### <a name="open-error-log-within-ssms"></a>Öffnen des Fehlerprotokolls in SSMS
 1. Stellen Sie eine Verbindung mit Ihrem SQL Server her.
 2. Erweitern Sie den Knoten **Verwaltung** . 
@@ -191,17 +164,45 @@ Das Fehlerprotokoll ist eine Datei mit Details zu Ereignissen, die auf Ihrem SQL
    
     ![Fehlerprotokoll abfragen](media/ssms-tricks/queryerrorlog.png)
 
-## <a name="determine-sql-server-instance-name"></a>Bestimmen des Namens der SQL Server-Instanz, ...
-Der Name Ihrer Instanz kann auf verschiedenen Wegen vor und nach dem Herstellen einer Verbindung mit Ihrem SQL Server bestimmt werden.  
+
+### <a name="find-error-log-location-if-youre-connected-to-sql"></a>Suchen des Speicherorts des Fehlerprotokolls, wenn Sie mit SQL verbunden sind
+1. Stellen Sie eine Verbindung mit SQL Server her.
+2. Öffnen Sie das Fenster **Neue Abfrage**.
+3. Fügen Sie folgenden T-SQL-Codeausschnitt in Ihr Abfragefenster ein, und klicken Sie auf **Ausführen**:
+
+ ```sql
+    SELECT SERVERPROPERTY('ErrorLogFileName') AS 'Error log file location'  
+  ``` 
+
+4. Die Ergebnisse zeigen den Speicherort des Fehlerprotokolls innerhalb des Dateisystems an: 
+
+    ![Suchen des Fehlerprotokolls nach Abfrage](media/ssms-tricks/finderrorlogquery.png)
+
+### <a name="find-error-log-location-if-you-cannot-connect-to-sql"></a>Suchen des Speicherorts des Fehlerprotokolls, wenn kein Verbindung mit SQL möglich ist
+1. Öffnen Sie den SQL Server-Konfigurations-Manager. 
+2. Erweitern Sie den Knoten **Dienste**.
+3. Klicken Sie mit der rechten Maustaste auf Ihre SQL Server-Instanz > **Eigenschaften**:
+
+    ![Servereigenschaften für den Konfigurations-Manager](media/ssms-tricks/serverproperties.PNG)
+
+4. Wählen Sie die Registerkarte **Startparameter** aus.
+5. Im Bereich **Vorhandene Parameter** ist im Pfad hinter „-e“ der Speicherort des Fehlerprotokolls enthalten: 
+    
+    ![Fehlerprotokoll](media/ssms-tricks/errorlog.png)
+    - Sie werden feststellen, dass an diesem Speicherort mehrere errorlog.*-Dateien vorhanden sind. Bei der Datei mit „*.log“ handelt es sich um das aktuelle Fehlerprotokoll. Die Dateien, die mit Ziffern enden, sind vorhergehende Protokolle, da bei jedem Neustart von SQL Server ein neues Protokoll erstellt wird. 
+6. Öffnen Sie diese Datei in Notepad. 
+
+## <a name="determine-sql-server-name"></a>Bestimmen Sie den Azure SQL-Servernamen...
+Der Name Ihres Servers von SQL Server kann auf verschiedenen Wegen vor und nach dem Herstellen einer Verbindung mit Ihrem SQL Server bestimmt werden.  
 
 ### <a name="when-you-dont-know-it"></a>... wenn er Ihnen nicht bekannt ist
 1. Führen Sie die Schritte zum Finden des [SQL Server-Fehlerprotokolls auf dem Datenträger](#finding-your-error-log-if-you-cannot-connect-to-sql) aus. 
 2. Öffnen Sie die Datei „errorlog.log“ in Notepad. 
 3. Navigieren Sie durch die Datei, bis Sie den Text „Server name is“ (Servername lautet) finden:
-  - Bei dem Text, der in einfachen Anführungszeichen steht, handelt es sich um den Namen der Instanz, mit der Sie verbunden werden: ![Servername im Fehlerprotokoll](media/ssms-tricks/servernameinlog.png)
+  - Bei dem Text, der in einfachen Anführungszeichen steht, handelt es sich um den Namen der SQL Server-Instanz, mit der Sie verbunden werden: ![Servername im Fehlerprotokoll](media/ssms-tricks/servernameinlog.png) Das Format des Namens ist 'HOSTNAME\INSTANZNAME'. Wenn nur der Hostname angezeigt wird, haben Sie die Standardinstanz installiert, und Ihr Instanzname ist „MSSQLSERVER“. Wenn Sie eine Verbindung mit einer Standardinstanz erstellen, müssen Sie nur den Hostnamen eingeben, um eine Verbindung mit SQL Server herzustellen.  
 
 ### <a name="once-youre-connected-to-sql"></a>Sobald Sie eine Verbindung mit SQL hergestellt haben 
-Sie können den Namen der Instanz, mit der Sie verbunden sind, an drei Positionen finden. 
+Sie können den Namen der SQL Server-Instanz, mit der Sie verbunden sind, an drei Positionen finden. 
 
 1. Der Name des Servers wird im **Objekt-Explorer** aufgeführt:
 
@@ -209,7 +210,7 @@ Sie können den Namen der Instanz, mit der Sie verbunden sind, an drei Positione
 2. Der Name des Servers wird im Abfragefenster aufgeführt:
 
     ![Name im Abfragefenster](media/ssms-tricks/nameinquerywindow.png)
-3. zugreifen. Der Name des Servers wird zudem im Fenster **Eigenschaften** aufgeführt.
+3. Der Name des Servers wird zudem im Fenster **Eigenschaften** aufgeführt.
     - Öffnen Sie das Menü **Ansicht** > **Eigenschaften**, um darauf zugreifen zu können:
 
     ![Name in Eigenschaften](media/ssms-tricks/nameinproperties.png)
