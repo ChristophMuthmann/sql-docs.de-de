@@ -1,17 +1,18 @@
 ---
 title: Erteilen von benutzerdefiniertem Zugriff auf dimensiondaten (Analysis Services) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-f1_keywords: sql13.asvs.roledesignerdialog.dimensiondata.f1
+f1_keywords:
+- sql13.asvs.roledesignerdialog.dimensiondata.f1
 helpviewer_keywords:
 - dimensions [Analysis Services], security
 - AllowedSet property
@@ -24,7 +25,7 @@ helpviewer_keywords:
 - VisualTotals property
 - ApplyDenied property
 ms.assetid: b028720d-3785-4381-9572-157d13ec4291
-caps.latest.revision: "40"
+caps.latest.revision: 40
 author: Minewiskan
 ms.author: owend
 manager: kfile

@@ -1,19 +1,21 @@
 ---
 title: SQLSetConnectAttrForDbcInfo Funktion | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: SQLSetConnectAttrForDbcInfo function [ODBC]
+helpviewer_keywords:
+- SQLSetConnectAttrForDbcInfo function [ODBC]
 ms.assetid: a28fadb9-b998-472a-b252-709507e92005
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: jhubbard

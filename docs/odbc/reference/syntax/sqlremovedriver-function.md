@@ -1,23 +1,28 @@
 ---
 title: SQLRemoveDriver Funktion | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLRemoveDriver
-apilocation: sqlsrv32.dll
+apiname:
+- SQLRemoveDriver
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLRemoveDriver
-helpviewer_keywords: SQLRemoveDriver function [ODBC]
+f1_keywords:
+- SQLRemoveDriver
+helpviewer_keywords:
+- SQLRemoveDriver function [ODBC]
 ms.assetid: 9a3b4f8b-982b-44b9-ade6-754ff026dc90
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard

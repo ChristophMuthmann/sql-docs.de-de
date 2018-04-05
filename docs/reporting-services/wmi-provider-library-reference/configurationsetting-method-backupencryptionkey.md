@@ -1,22 +1,25 @@
 ---
 title: 'BackupEncryptionKey-Methode (WMI: MSReportServer_ConfigurationSetting) | Microsoft-Dokumentation'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
+ms.service: ''
 ms.component: wmi-provider-library-reference
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: BackupEncryptionKey Method (WMI MSReportServer_ConfigurationSetting Class)
-apilocation: reportingservices.mof
+apiname:
+- BackupEncryptionKey Method (WMI MSReportServer_ConfigurationSetting Class)
+apilocation:
+- reportingservices.mof
 apitype: MOFDef
-helpviewer_keywords: BackupEncryptionKey method
+helpviewer_keywords:
+- BackupEncryptionKey method
 ms.assetid: da1d5dae-2517-448e-96fb-5379c93222ea
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: markingmyname
 ms.author: maghan
 manager: kfile

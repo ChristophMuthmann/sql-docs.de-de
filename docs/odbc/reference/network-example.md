@@ -1,19 +1,21 @@
 ---
 title: Netzwerk-Beispiel | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: drivers [ODBC], examples
+helpviewer_keywords:
+- drivers [ODBC], examples
 ms.assetid: e14ae90f-87b3-4bcf-b69a-1773e2c2a1c5
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard

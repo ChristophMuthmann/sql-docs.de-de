@@ -1,19 +1,21 @@
 ---
 title: SQLGetInfo (Visual FoxPro-ODBC-Treiber) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: SQLGetInfo function [ODBC], Visual FoxPro ODBC Driver
+helpviewer_keywords:
+- SQLGetInfo function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: fbc39e3d-67d9-4331-bf5f-76dbd74c4c45
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard

@@ -1,23 +1,28 @@
 ---
 title: SQLInstallTranslatorEx Funktion | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLInstallTranslatorEx
-apilocation: sqlsrv32.dll
+apiname:
+- SQLInstallTranslatorEx
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLInstallTranslatorEx
-helpviewer_keywords: SQLInstallTranslatorEx function [ODBC]
+f1_keywords:
+- SQLInstallTranslatorEx
+helpviewer_keywords:
+- SQLInstallTranslatorEx function [ODBC]
 ms.assetid: a0630602-53c1-4db0-98ce-70d160aedf8d
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: jhubbard

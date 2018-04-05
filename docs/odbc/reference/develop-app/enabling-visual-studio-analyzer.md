@@ -1,19 +1,21 @@
 ---
 title: Aktivieren von Visual Studio Analyzer | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: Visual Studio Analyzer [ODBC], enabling
+helpviewer_keywords:
+- Visual Studio Analyzer [ODBC], enabling
 ms.assetid: 423950e9-a5c0-4da9-b9b2-49c38b3bb0b8
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: jhubbard

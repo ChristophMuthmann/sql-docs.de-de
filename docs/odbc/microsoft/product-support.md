@@ -1,19 +1,21 @@
 ---
 title: Microsoft Support Services | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: product support [ODBC]
+helpviewer_keywords:
+- product support [ODBC]
 ms.assetid: 585c41c6-5c5a-437e-a4b4-e32a346b478d
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard

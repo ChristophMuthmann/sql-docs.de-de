@@ -1,17 +1,18 @@
 ---
-title: "Ausdrücke (MDX) | Microsoft Docs"
-ms.custom: 
+title: Ausdrücke (MDX) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-dev_langs: kbMDX
+dev_langs:
+- kbMDX
 helpviewer_keywords:
 - identifiers [MDX]
 - expressions [MDX]
@@ -19,7 +20,7 @@ helpviewer_keywords:
 - MDX [Analysis Services], expressions
 - Multidimensional Expressions [Analysis Services], expressions
 ms.assetid: e20c34bc-30fa-4ac5-b896-9d4c9925ef59
-caps.latest.revision: "37"
+caps.latest.revision: 37
 author: Minewiskan
 ms.author: owend
 manager: erikre

@@ -1,20 +1,23 @@
 ---
-title: "Datensynchronisierungsstatus einer Verfügbarkeitsdatenbank ist nicht fehlerfrei | Microsoft-Dokumentation"
-ms.custom: 
+title: Datensynchronisierungsstatus einer Verfügbarkeitsdatenbank ist nicht fehlerfrei | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: availability-groups
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
-f1_keywords: sql13.swb.agdashboard.drp3datasynchealthy.issues.f1
-helpviewer_keywords: Availability Groups [SQL Server], policies
+f1_keywords:
+- sql13.swb.agdashboard.drp3datasynchealthy.issues.f1
+helpviewer_keywords:
+- Availability Groups [SQL Server], policies
 ms.assetid: 89f95d15-33c6-4768-bccd-9dbf8c4f49a9
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

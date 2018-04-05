@@ -1,23 +1,28 @@
 ---
 title: SQLDataSources Funktion | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLDataSources
-apilocation: sqlsrv32.dll
+apiname:
+- SQLDataSources
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLDataSources
-helpviewer_keywords: SQLDataSources function [ODBC]
+f1_keywords:
+- SQLDataSources
+helpviewer_keywords:
+- SQLDataSources function [ODBC]
 ms.assetid: 3f63b1b4-e70e-44cd-96c6-6878d50d0117
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: jhubbard

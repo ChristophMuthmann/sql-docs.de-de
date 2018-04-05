@@ -1,23 +1,28 @@
 ---
 title: SQLSetScrollOptions Funktion | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLSetScrollOptions
-apilocation: sqlsrv32.dll
+apiname:
+- SQLSetScrollOptions
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLSetScrollOptions
-helpviewer_keywords: SQLSetScrollOptions function [ODBC]
+f1_keywords:
+- SQLSetScrollOptions
+helpviewer_keywords:
+- SQLSetScrollOptions function [ODBC]
 ms.assetid: 2a825ba7-7942-4c23-bcdb-c80dc12f8c86
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: jhubbard

@@ -1,19 +1,21 @@
 ---
 title: Datenquellen-Beispiel | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: data sources [ODBC], examples
+helpviewer_keywords:
+- data sources [ODBC], examples
 ms.assetid: cbf15f32-0550-4c74-8088-8f7ac3855469
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard

@@ -1,23 +1,28 @@
 ---
 title: SQLRemoveDSNFromIni Funktion | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLRemoveDSNFromIni
-apilocation: sqlsrv32.dll
+apiname:
+- SQLRemoveDSNFromIni
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLRemoveDSNFromIni
-helpviewer_keywords: SQLRemoveDSNFromIni function [ODBC]
+f1_keywords:
+- SQLRemoveDSNFromIni
+helpviewer_keywords:
+- SQLRemoveDSNFromIni function [ODBC]
 ms.assetid: bb2e8273-7b61-4113-bfc8-f7ccc607c811
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard

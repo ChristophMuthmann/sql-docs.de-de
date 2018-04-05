@@ -1,22 +1,25 @@
 ---
 title: DMSCHEMA_MINING_MODEL_CONTENT_PMML-Rowset | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-apiname: DMSCHEMA_MINING_MODEL_CONTENT_PMML
+apiname:
+- DMSCHEMA_MINING_MODEL_CONTENT_PMML
 apitype: NA
-applies_to: SQL Server 2016 Preview
-helpviewer_keywords: DMSCHEMA_MINING_MODEL_CONTENT_PMML rowset
+applies_to:
+- SQL Server 2016 Preview
+helpviewer_keywords:
+- DMSCHEMA_MINING_MODEL_CONTENT_PMML rowset
 ms.assetid: fa05bb08-a955-4c8d-b57f-ffcd82470220
-caps.latest.revision: "30"
+caps.latest.revision: 30
 author: Minewiskan
 ms.author: owend
 manager: kfile

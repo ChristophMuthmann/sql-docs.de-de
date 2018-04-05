@@ -1,22 +1,24 @@
 ---
-title: "Installieren von SSMA für MySQL (MySqlToSql) | Microsoft Docs"
+title: Installieren von SSMA für MySQL (MySqlToSql) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-mysql
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
-helpviewer_keywords: Installing SSMA 2008, Upgrading
+helpviewer_keywords:
+- Installing SSMA 2008, Upgrading
 ms.assetid: e89b45bd-59c1-4d23-8bd7-3dafc1947448
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard

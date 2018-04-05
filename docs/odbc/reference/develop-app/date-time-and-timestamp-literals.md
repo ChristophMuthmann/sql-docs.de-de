@@ -1,19 +1,21 @@
 ---
 title: Date, Time und Timestamp-Literale | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: escape sequences [ODBC], literals
+helpviewer_keywords:
+- escape sequences [ODBC], literals
 ms.assetid: 2b42a52a-6353-494c-a179-3a7533cd729f
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard

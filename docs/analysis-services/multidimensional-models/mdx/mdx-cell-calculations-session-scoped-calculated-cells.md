@@ -1,19 +1,20 @@
 ---
 title: Erstellen im Bereich einer Sitzung berechnete Zellen | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: session-scoped calculated members [MDX]
+helpviewer_keywords:
+- session-scoped calculated members [MDX]
 ms.assetid: f2d14a89-6286-4e74-9afb-091076f93f21
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: Minewiskan
 ms.author: owend
 manager: kfile

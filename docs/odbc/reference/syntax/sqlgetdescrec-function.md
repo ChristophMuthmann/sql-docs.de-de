@@ -1,23 +1,28 @@
 ---
 title: SQLGetDescRec-Funktion | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLGetDescRec
-apilocation: sqlsrv32.dll
+apiname:
+- SQLGetDescRec
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLGetDescRec
-helpviewer_keywords: SQLGetDescRec function [ODBC]
+f1_keywords:
+- SQLGetDescRec
+helpviewer_keywords:
+- SQLGetDescRec function [ODBC]
 ms.assetid: 325e0907-8e87-44e8-a111-f39e636a9cbc
-caps.latest.revision: "30"
+caps.latest.revision: 30
 author: MightyPen
 ms.author: genemi
 manager: jhubbard

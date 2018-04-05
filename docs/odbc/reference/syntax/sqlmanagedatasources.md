@@ -1,23 +1,28 @@
 ---
 title: SQLManageDataSources | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLManageDataSources
-apilocation: sqlsrv32.dll
+apiname:
+- SQLManageDataSources
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLManageDataSources
-helpviewer_keywords: SQLManageDataSources [ODBC]
+f1_keywords:
+- SQLManageDataSources
+helpviewer_keywords:
+- SQLManageDataSources [ODBC]
 ms.assetid: ac6d186f-b394-406c-94c4-c6331d1ca468
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: jhubbard

@@ -1,19 +1,21 @@
 ---
 title: Optionen (SQL Server Always On, Dashboardseite) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: availability-groups
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
-f1_keywords: VS.ToolsOptionsPages.Alwayson.Dashboard
+f1_keywords:
+- VS.ToolsOptionsPages.Alwayson.Dashboard
 ms.assetid: 4369b588-e982-4b57-80a1-beb2e879ce0b
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

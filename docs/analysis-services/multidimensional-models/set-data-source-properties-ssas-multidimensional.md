@@ -1,20 +1,22 @@
 ---
-title: "Festlegen von Datenquelleneigenschaften (SSAS – mehrdimensional) | Microsoft Docs"
-ms.custom: 
+title: Festlegen von Datenquelleneigenschaften (SSAS – mehrdimensional) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-f1_keywords: sql13.asvs.sqlserverstudio.datasourceproperties.f1
-helpviewer_keywords: Data Source Properties dialog box
+f1_keywords:
+- sql13.asvs.sqlserverstudio.datasourceproperties.f1
+helpviewer_keywords:
+- Data Source Properties dialog box
 ms.assetid: bf8b600f-5b99-4f7d-908b-8a391721e9dd
-caps.latest.revision: "25"
+caps.latest.revision: 25
 author: Minewiskan
 ms.author: owend
 manager: kfile

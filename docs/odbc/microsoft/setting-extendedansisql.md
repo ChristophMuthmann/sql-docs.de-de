@@ -1,19 +1,21 @@
 ---
 title: Festlegen von ExtendedAnsiSQL | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: extendedANSISQL [ODBC], setting
+helpviewer_keywords:
+- extendedANSISQL [ODBC], setting
 ms.assetid: 37b775d1-65ac-45ac-8572-454bc4e3c1a2
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard

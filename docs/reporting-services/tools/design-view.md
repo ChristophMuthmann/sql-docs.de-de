@@ -1,20 +1,22 @@
 ---
 title: Entwurfsansicht | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 05/31/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
+ms.service: ''
 ms.component: tools
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-f1_keywords: sql13.rtp.rptdesigner.layoutview.f1
-helpviewer_keywords: Layout View dialog box
+f1_keywords:
+- sql13.rtp.rptdesigner.layoutview.f1
+helpviewer_keywords:
+- Layout View dialog box
 ms.assetid: 6fa378aa-442f-4d2f-beab-02a0fb5cd3ce
-caps.latest.revision: "38"
+caps.latest.revision: 38
 author: markingmyname
 ms.author: maghan
 manager: kfile

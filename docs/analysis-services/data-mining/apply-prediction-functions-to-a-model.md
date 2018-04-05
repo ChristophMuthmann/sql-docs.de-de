@@ -1,19 +1,20 @@
 ---
 title: Anwenden von Vorhersagefunktionen auf ein Modell | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: Mining Model Prediction [Analysis Services], selecting mining models
+helpviewer_keywords:
+- Mining Model Prediction [Analysis Services], selecting mining models
 ms.assetid: cf9a97e2-c249-441b-af12-c977c1a91c44
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: Minewiskan
 ms.author: owend
 manager: kfile

@@ -1,22 +1,25 @@
 ---
 title: 'ConfigurationSetting-Eigenschaft: WindowsServiceIdentityActual | Microsoft-Dokumentation'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
+ms.service: ''
 ms.component: wmi-provider-library-reference
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: WindowsServiceIdentityActual
-apilocation: reportingservices.mof
+apiname:
+- WindowsServiceIdentityActual
+apilocation:
+- reportingservices.mof
 apitype: MOFDef
-helpviewer_keywords: WindowsServiceIdentityActual property
+helpviewer_keywords:
+- WindowsServiceIdentityActual property
 ms.assetid: 08289240-098d-4ad1-b165-227699747ba4
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: markingmyname
 ms.author: maghan
 manager: kfile

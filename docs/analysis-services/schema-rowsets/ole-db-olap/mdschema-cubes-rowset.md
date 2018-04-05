@@ -1,22 +1,25 @@
 ---
 title: MDSCHEMA_CUBES-Rowset | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-apiname: MDSCHEMA_CUBES
+apiname:
+- MDSCHEMA_CUBES
 apitype: NA
-applies_to: SQL Server 2016 Preview
-helpviewer_keywords: MDSCHEMA_CUBES rowset
+applies_to:
+- SQL Server 2016 Preview
+helpviewer_keywords:
+- MDSCHEMA_CUBES rowset
 ms.assetid: 5f1b63d4-aa3f-48c6-b866-7ffd91675044
-caps.latest.revision: "32"
+caps.latest.revision: 32
 author: Minewiskan
 ms.author: owend
 manager: kfile

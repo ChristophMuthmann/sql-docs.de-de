@@ -1,19 +1,21 @@
 ---
 title: SQL-Zeilenanzahl (Visual FoxPro-ODBC-Treiber) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: SQL row count [ODBC]
+helpviewer_keywords:
+- SQL row count [ODBC]
 ms.assetid: 9d851f8d-94ca-47ae-a4ad-53863be2d404
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard

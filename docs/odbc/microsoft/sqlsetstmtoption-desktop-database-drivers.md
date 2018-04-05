@@ -1,19 +1,21 @@
 ---
 title: SQLSetStmtOption (Desktop-Datenbanktreiber) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: SQLSetStmtOption function [ODBC], Desktop Database Drivers
+helpviewer_keywords:
+- SQLSetStmtOption function [ODBC], Desktop Database Drivers
 ms.assetid: 98db9631-eb9b-4962-abe4-96f495133a5d
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard

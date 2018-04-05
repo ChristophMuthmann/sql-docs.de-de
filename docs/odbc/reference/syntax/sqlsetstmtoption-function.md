@@ -1,23 +1,28 @@
 ---
 title: Funktion SQLSetStmtOption | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLSetStmtOption
-apilocation: sqlsrv32.dll
+apiname:
+- SQLSetStmtOption
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLSetStmtOption
-helpviewer_keywords: SQLSetStmtOption function [ODBC]
+f1_keywords:
+- SQLSetStmtOption
+helpviewer_keywords:
+- SQLSetStmtOption function [ODBC]
 ms.assetid: 9cbe2b62-4cf7-43ab-8fb4-9a53df2c6b3f
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard

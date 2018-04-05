@@ -1,19 +1,20 @@
 ---
-title: "Ändern des Timeoutwerts für Datamining-Abfragen | Microsoft Docs"
-ms.custom: 
+title: Ändern des Timeoutwerts für Datamining-Abfragen | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: time-out
+helpviewer_keywords:
+- time-out
 ms.assetid: f1add4bc-e882-440a-a98b-333cfa274c3e
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: Minewiskan
 ms.author: owend
 manager: kfile

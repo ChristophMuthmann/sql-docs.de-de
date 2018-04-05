@@ -1,22 +1,25 @@
 ---
 title: DMSCHEMA_MINING_STRUCTURES-Rowset | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-apiname: DMSCHEMA_MINING_STRUCTURES
+apiname:
+- DMSCHEMA_MINING_STRUCTURES
 apitype: NA
-applies_to: SQL Server 2016 Preview
-helpviewer_keywords: DMSCHEMA_MINING_STRUCTURES rowset
+applies_to:
+- SQL Server 2016 Preview
+helpviewer_keywords:
+- DMSCHEMA_MINING_STRUCTURES rowset
 ms.assetid: 6224556b-08a0-496e-bd7c-632c3e833e26
-caps.latest.revision: "36"
+caps.latest.revision: 36
 author: Minewiskan
 ms.author: owend
 manager: kfile

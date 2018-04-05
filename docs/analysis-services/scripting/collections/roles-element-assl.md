@@ -1,24 +1,29 @@
 ---
 title: Roles-Element (ASSL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-apiname: Roles Element
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
+apiname:
+- Roles Element
+apilocation:
+- http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to: SQL Server 2016 Preview
-f1_keywords: Roles
-helpviewer_keywords: Roles element
+applies_to:
+- SQL Server 2016 Preview
+f1_keywords:
+- Roles
+helpviewer_keywords:
+- Roles element
 ms.assetid: 4191b7ce-bae4-4200-8550-3904420efafd
-caps.latest.revision: "36"
+caps.latest.revision: 36
 author: Minewiskan
 ms.author: owend
 manager: kfile

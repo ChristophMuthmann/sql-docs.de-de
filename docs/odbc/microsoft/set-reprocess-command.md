@@ -1,19 +1,21 @@
 ---
 title: Die Verarbeitung wiederholen Befehl SET | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: SET REPROCESS command [ODBC]
+helpviewer_keywords:
+- SET REPROCESS command [ODBC]
 ms.assetid: b0708757-b1d7-42f3-8988-787f2a806b8b
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard

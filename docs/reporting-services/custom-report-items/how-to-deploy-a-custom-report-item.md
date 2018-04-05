@@ -1,20 +1,22 @@
 ---
 title: 'Vorgehensweise: Bereitstellen eines benutzerdefinierten Berichtselements | Microsoft-Dokumentation'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/18/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
+ms.service: ''
 ms.component: custom-report-items
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
-helpviewer_keywords: custom report items, deploying
+applies_to:
+- SQL Server 2016 Preview
+helpviewer_keywords:
+- custom report items, deploying
 ms.assetid: 80e97b0d-e355-4240-aebd-08cbc84089ed
-caps.latest.revision: "26"
+caps.latest.revision: 26
 author: markingmyname
 ms.author: maghan
 manager: kfile

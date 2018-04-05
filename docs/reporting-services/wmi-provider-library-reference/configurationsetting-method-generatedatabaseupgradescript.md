@@ -1,22 +1,25 @@
 ---
 title: 'GenerateDatabaseUpgradeScript-Methode (WMI: MSReportServer_ConfigurationSetting) | Microsoft-Dokumentation'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
+ms.service: ''
 ms.component: wmi-provider-library-reference
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: GenerateDatabaseUpgradeScript (WMI MSReportServer_ConfigurationSetting Class)
-apilocation: reportingservices.mof
+apiname:
+- GenerateDatabaseUpgradeScript (WMI MSReportServer_ConfigurationSetting Class)
+apilocation:
+- reportingservices.mof
 apitype: MOFDef
-helpviewer_keywords: GenerateDatabaseUpgradeScript method
+helpviewer_keywords:
+- GenerateDatabaseUpgradeScript method
 ms.assetid: 88534e8e-2877-41cd-b5c2-b1d33a0fd203
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: markingmyname
 ms.author: maghan
 manager: kfile

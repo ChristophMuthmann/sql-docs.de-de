@@ -1,19 +1,21 @@
 ---
 title: OLE-Automatisierungsprozeduren (Serverkonfigurationsoption) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: configure-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: Ole Automation Procedures option
+helpviewer_keywords:
+- Ole Automation Procedures option
 ms.assetid: e8982e05-4984-4406-9760-285e8c028ddf
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

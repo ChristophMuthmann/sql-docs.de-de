@@ -2,21 +2,23 @@
 title: Generieren von Berichten (MySQLToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-mysql
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
-helpviewer_keywords: Generating reports
+helpviewer_keywords:
+- Generating reports
 ms.assetid: 1c0202e8-546d-4cb3-a37f-1d2e35d53839
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard

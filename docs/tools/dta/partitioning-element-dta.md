@@ -1,20 +1,23 @@
 ---
 title: Partitioning-Element (DTA) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: dta
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
-dev_langs: XML
-helpviewer_keywords: Partitioning element
+dev_langs:
+- XML
+helpviewer_keywords:
+- Partitioning element
 ms.assetid: 9bc5d1d5-27a7-4434-966f-c3935794af27
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: stevestein
 ms.author: sstein
 manager: craigg

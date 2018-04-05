@@ -1,23 +1,28 @@
 ---
 title: SQLExtendedFetch Funktion | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLExtendedFetch
-apilocation: sqlsrv32.dll
+apiname:
+- SQLExtendedFetch
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLExtendedFetch
-helpviewer_keywords: SQLExtendedFetch function [ODBC]
+f1_keywords:
+- SQLExtendedFetch
+helpviewer_keywords:
+- SQLExtendedFetch function [ODBC]
 ms.assetid: 940b5cf7-581c-4ede-8533-c67d5e9ef488
-caps.latest.revision: "26"
+caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
 manager: jhubbard

@@ -1,23 +1,28 @@
 ---
 title: SQLColAttribute-Funktion | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLColAttribute
-apilocation: sqlsrv32.dll
+apiname:
+- SQLColAttribute
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLColAttribute
-helpviewer_keywords: SQLColAttribute function [ODBC]
+f1_keywords:
+- SQLColAttribute
+helpviewer_keywords:
+- SQLColAttribute function [ODBC]
 ms.assetid: 8c45c598-cb01-4789-a571-e93619a18ed9
-caps.latest.revision: "42"
+caps.latest.revision: 42
 author: MightyPen
 ms.author: genemi
 manager: jhubbard

@@ -1,22 +1,25 @@
 ---
 title: DBSCHEMA_CATALOGS-Rowset | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-apiname: DBSCHEMA_CATALOGS
+apiname:
+- DBSCHEMA_CATALOGS
 apitype: NA
-applies_to: SQL Server 2016 Preview
-helpviewer_keywords: DBSCHEMA_CATALOGS rowset
+applies_to:
+- SQL Server 2016 Preview
+helpviewer_keywords:
+- DBSCHEMA_CATALOGS rowset
 ms.assetid: f02dc75d-5442-4eea-b33a-567dc816be7a
-caps.latest.revision: "31"
+caps.latest.revision: 31
 author: Minewiskan
 ms.author: owend
 manager: kfile

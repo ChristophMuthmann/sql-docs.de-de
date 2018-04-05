@@ -1,22 +1,24 @@
 ---
 title: Herstellen einer Verbindung mit SQLServer (SybaseToSQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-sybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
-helpviewer_keywords: Connecting to SQL Server
+helpviewer_keywords:
+- Connecting to SQL Server
 ms.assetid: dd368a1a-45b0-40e9-b4d3-5cdb48c26606
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard

@@ -1,20 +1,23 @@
 ---
-title: "Verfügbarkeitsreplikat wird getrennt | Microsoft-Dokumentation"
-ms.custom: 
+title: Verfügbarkeitsreplikat wird getrennt | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: availability-groups
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
-f1_keywords: sql13.swb.agdashboard.arp2connected.issues.f1
-helpviewer_keywords: Availability Groups [SQL Server], policies
+f1_keywords:
+- sql13.swb.agdashboard.arp2connected.issues.f1
+helpviewer_keywords:
+- Availability Groups [SQL Server], policies
 ms.assetid: 1a2162d3-54fb-4356-b349-effbdc15a5a4
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

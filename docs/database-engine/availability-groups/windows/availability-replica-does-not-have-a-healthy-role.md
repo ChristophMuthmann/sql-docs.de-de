@@ -1,20 +1,23 @@
 ---
-title: "Verfügbarkeitsreplikat hat keine fehlerfreie Rolle | Microsoft-Dokumentation"
-ms.custom: 
+title: Verfügbarkeitsreplikat hat keine fehlerfreie Rolle | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: availability-groups
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
-f1_keywords: sql13.swb.agdashboard.arp1rolehealthy.issues.f1
-helpviewer_keywords: Availability Groups [SQL Server], policies
+f1_keywords:
+- sql13.swb.agdashboard.arp1rolehealthy.issues.f1
+helpviewer_keywords:
+- Availability Groups [SQL Server], policies
 ms.assetid: ebb2c9f4-2097-4688-b4fb-8f0571047317
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

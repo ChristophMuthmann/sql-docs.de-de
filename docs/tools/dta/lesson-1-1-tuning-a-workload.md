@@ -1,20 +1,23 @@
 ---
 title: Optimieren einer Arbeitsauslastung | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: dta
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-query-tuning
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-query-tuning
+ms.tgt_pltfrm: ''
 ms.topic: article
-applies_to: SQL Server 2016
-helpviewer_keywords: workloads [SQL Server], tuning
+applies_to:
+- SQL Server 2016
+helpviewer_keywords:
+- workloads [SQL Server], tuning
 ms.assetid: 6229bf3f-1182-4bc6-8451-cedc37f4b62e
-caps.latest.revision: "25"
+caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg

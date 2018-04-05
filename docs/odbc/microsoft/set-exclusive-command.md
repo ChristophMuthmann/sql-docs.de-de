@@ -1,19 +1,21 @@
 ---
 title: EXKLUSIVE SET-Befehls | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: SET EXCLUSIVE command [ODBC]
+helpviewer_keywords:
+- SET EXCLUSIVE command [ODBC]
 ms.assetid: d4fe12c5-7e8b-4d20-9ea4-2bcaffb271f2
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard

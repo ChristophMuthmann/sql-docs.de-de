@@ -1,16 +1,16 @@
 ---
 title: Sys. dm_exec_connections (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/16/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_exec_connections_TSQL
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_connections dynamic management view
 ms.assetid: 6bd46fe1-417d-452d-a9e6-5375ee8690d8
-caps.latest.revision: 
+caps.latest.revision: 50
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ef46c3c9ffdf534b2ef76154498a4da8b11fa197
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 0cc531232731aa3e2b2bf29a5538396be06b7e5c
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="sysdmexecconnections-transact-sql"></a>sys.dm_exec_connections (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.lasthandoff: 02/03/2018
   Gibt Informationen über die zu dieser Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hergestellten Verbindungen zurück, sowie Details zu jeder der Verbindungen. Gibt die Breite Serververbindungsinformationen für SQL Server zurück. Gibt die aktuelle Datenbank-Verbindungsinformationen für SQL-Datenbank zurück.  
   
 > [!NOTE]
-> Aufrufen von [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] oder [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], verwenden Sie [sys.dm_pdw_exec_connections &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-connections-transact-sql.md).  
+> Aufrufen von [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] oder [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], verwenden Sie [sys.dm_pdw_exec_connections &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-connections-transact-sql.md).  
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
@@ -67,10 +67,11 @@ ms.lasthandoff: 02/03/2018
 |most_recent_sql_handle|**varbinary(64)**|Das SQL-Handle der letzten Anforderung, die über diese Verbindung ausgeführt wurde. Die most_recent_sql_handle-Spalte ist immer mit der most_recent_session_id-Spalte synchronisiert. Lässt NULL-Werte zu.|  
 |pdw_node_id|**int**|**Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Der Bezeichner für den Knoten, dem auf diesem Verteilungspunkt befindet.|  
   
-## <a name="permissions"></a>Berechtigungen  
+## <a name="permissions"></a>Berechtigungen
+
 Auf [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], erfordert `VIEW SERVER STATE` Berechtigung.   
-Auf [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] benötigen Premium-Ebenen der `VIEW DATABASE STATE` Berechtigung in der Datenbank. Auf [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard und grundlegenden Organisationsebenen erfordert die **Serveradministrator** oder ein **Azure Active Directory-Administrators** Konto.
-  
+Auf [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], erfordert die `VIEW DATABASE STATE` Berechtigung in der Datenbank.   
+
 ## <a name="physical-joins"></a>Physische Joins  
  ![Joins für Sys. dm_exec_connections](../../relational-databases/system-dynamic-management-views/media/join-dm-exec-connections-1.gif "Joins für Sys. dm_exec_connections")  
   
@@ -100,7 +101,7 @@ WHERE c.session_id = @@SPID;
   
 ## <a name="see-also"></a>Siehe auch  
 
- [Ausführung bezogene dynamische Verwaltungssichten und-Funktionen &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
+ [Ausführung dynamische Verwaltungssichten und-Funktionen im Zusammenhang &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   
 

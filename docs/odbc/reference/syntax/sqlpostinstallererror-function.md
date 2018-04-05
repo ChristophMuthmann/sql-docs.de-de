@@ -1,23 +1,28 @@
 ---
 title: SQLPostInstallerError Funktion | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLPostInstallerError
-apilocation: sqlsrv32.dll
+apiname:
+- SQLPostInstallerError
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLPostInstallerError
-helpviewer_keywords: SQLPostInstallerError function [ODBC]
+f1_keywords:
+- SQLPostInstallerError
+helpviewer_keywords:
+- SQLPostInstallerError function [ODBC]
 ms.assetid: 4c60d827-b2d2-4f27-b220-daa9e1fcdd8d
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard

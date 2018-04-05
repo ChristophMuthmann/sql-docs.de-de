@@ -1,19 +1,21 @@
 ---
 title: Warum wurde ODBC erstellt? | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: ODBC [ODBC], about ODBC
+helpviewer_keywords:
+- ODBC [ODBC], about ODBC
 ms.assetid: ba6eb993-316b-4650-bab8-d76583c00e53
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard

@@ -1,23 +1,28 @@
 ---
 title: SQLSetCursorName-Funktion | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLSetCursorName
-apilocation: sqlsrv32.dll
+apiname:
+- SQLSetCursorName
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLSetCursorName
-helpviewer_keywords: SQLSetCursorName function [ODBC]
+f1_keywords:
+- SQLSetCursorName
+helpviewer_keywords:
+- SQLSetCursorName function [ODBC]
 ms.assetid: 4e055946-12d4-4589-9891-41617a50f34e
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: jhubbard

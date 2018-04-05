@@ -1,23 +1,28 @@
 ---
 title: SQLGetStmtOption Funktion | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLGetStmtOption
-apilocation: sqlsrv32.dll
+apiname:
+- SQLGetStmtOption
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLGetStmtOption
-helpviewer_keywords: SQLGetStmtOption function [ODBC]
+f1_keywords:
+- SQLGetStmtOption
+helpviewer_keywords:
+- SQLGetStmtOption function [ODBC]
 ms.assetid: d69c2668-4260-4722-8c34-1c51caac307f
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard

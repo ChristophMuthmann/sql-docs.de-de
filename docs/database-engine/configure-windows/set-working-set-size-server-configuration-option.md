@@ -1,19 +1,21 @@
 ---
-title: "Festgelegte Workingsetgröße (Serverkonfigurationsoption) | Microsoft-Dokumentation"
-ms.custom: 
+title: Festgelegte Workingsetgröße (Serverkonfigurationsoption) | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: configure-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: set working set size option
+helpviewer_keywords:
+- set working set size option
 ms.assetid: 8876cdbe-c84a-43ae-a146-06974b4576e8
-caps.latest.revision: "34"
+caps.latest.revision: 34
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

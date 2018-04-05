@@ -1,22 +1,25 @@
 ---
 title: MDSCHEMA_MEASURES-Rowset | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-apiname: MDSCHEMA_MEASURES
+apiname:
+- MDSCHEMA_MEASURES
 apitype: NA
-applies_to: SQL Server 2016 Preview
-helpviewer_keywords: MDSCHEMA_MEASURES rowset
+applies_to:
+- SQL Server 2016 Preview
+helpviewer_keywords:
+- MDSCHEMA_MEASURES rowset
 ms.assetid: 6ff5bd1a-aad0-49b8-9f8d-7df2637caacf
-caps.latest.revision: "31"
+caps.latest.revision: 31
 author: Minewiskan
 ms.author: owend
 manager: kfile

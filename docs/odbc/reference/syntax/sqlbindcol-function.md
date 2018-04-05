@@ -1,23 +1,28 @@
 ---
 title: SQLBindCol-Funktion | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLBindCol
-apilocation: sqlsrv32.dll
+apiname:
+- SQLBindCol
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLBindCol
-helpviewer_keywords: SQLBindCol function [ODBC]
+f1_keywords:
+- SQLBindCol
+helpviewer_keywords:
+- SQLBindCol function [ODBC]
 ms.assetid: 41a37655-84cd-423f-9daa-e0b47b88dc54
-caps.latest.revision: "37"
+caps.latest.revision: 37
 author: MightyPen
 ms.author: genemi
 manager: jhubbard

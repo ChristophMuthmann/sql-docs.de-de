@@ -1,19 +1,20 @@
 ---
 title: Arbeiten mit Analysis Services-Projekten und Datenbanken in Entwicklung | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: Analysis Services, projects
+helpviewer_keywords:
+- Analysis Services, projects
 ms.assetid: 39cf9166-fa92-40fe-9962-210a52461257
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: Minewiskan
 ms.author: owend
 manager: kfile

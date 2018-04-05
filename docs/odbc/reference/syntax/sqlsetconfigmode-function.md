@@ -1,23 +1,28 @@
 ---
 title: SQLSetConfigMode Funktion | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLSetConfigMode
-apilocation: sqlsrv32.dll
+apiname:
+- SQLSetConfigMode
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLSetConfigMode
-helpviewer_keywords: SQLSetConfigMode function [ODBC]
+f1_keywords:
+- SQLSetConfigMode
+helpviewer_keywords:
+- SQLSetConfigMode function [ODBC]
 ms.assetid: 09eb88ea-b6f6-4eca-b19d-0951cebc6c0a
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard

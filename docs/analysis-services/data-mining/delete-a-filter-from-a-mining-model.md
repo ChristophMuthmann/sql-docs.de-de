@@ -1,19 +1,20 @@
 ---
-title: "Löschen eines Filters aus einem Miningmodell | Microsoft Docs"
-ms.custom: 
+title: Löschen eines Filters aus einem Miningmodell | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: filters [Analysis Services]
+helpviewer_keywords:
+- filters [Analysis Services]
 ms.assetid: 91220b21-adbc-49a9-b200-8bf0a724eff1
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: Minewiskan
 ms.author: owend
 manager: kfile

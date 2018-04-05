@@ -1,23 +1,28 @@
 ---
 title: SQLSpecialColumns-Funktion | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLSpecialColumns
-apilocation: sqlsrv32.dll
+apiname:
+- SQLSpecialColumns
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLSpecialColumns
-helpviewer_keywords: SQLSpecialColumns function [ODBC]
+f1_keywords:
+- SQLSpecialColumns
+helpviewer_keywords:
+- SQLSpecialColumns function [ODBC]
 ms.assetid: bb2d9f21-bda0-4e50-a8be-f710db660034
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: jhubbard

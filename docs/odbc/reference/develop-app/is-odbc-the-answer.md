@@ -1,19 +1,21 @@
 ---
 title: Ist ODBC-die Antwort? | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: interoperability [ODBC], ODBC
+helpviewer_keywords:
+- interoperability [ODBC], ODBC
 ms.assetid: bfa5e6ee-5979-42a9-be6f-a84d1ee7a54c
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard

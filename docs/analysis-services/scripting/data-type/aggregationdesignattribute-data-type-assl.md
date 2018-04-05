@@ -1,24 +1,29 @@
 ---
 title: AggregationDesignAttribute-Datentyp (ASSL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-apiname: AggregationDesignAttribute Data Type
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
+apiname:
+- AggregationDesignAttribute Data Type
+apilocation:
+- http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to: SQL Server 2016 Preview
-f1_keywords: AggregationDesignAttribute
-helpviewer_keywords: AggregationDesignAttribute data type
+applies_to:
+- SQL Server 2016 Preview
+f1_keywords:
+- AggregationDesignAttribute
+helpviewer_keywords:
+- AggregationDesignAttribute data type
 ms.assetid: 03d29d76-e4bd-4035-92cc-35149d83fbf9
-caps.latest.revision: "42"
+caps.latest.revision: 42
 author: Minewiskan
 ms.author: owend
 manager: kfile

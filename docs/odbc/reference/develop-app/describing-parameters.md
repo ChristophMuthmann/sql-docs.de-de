@@ -1,19 +1,21 @@
 ---
 title: Beschreibt Parameter | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: SQLBindParameter function [ODBC], describing parameters
+helpviewer_keywords:
+- SQLBindParameter function [ODBC], describing parameters
 ms.assetid: 118d0f47-2afd-4955-bb47-38b1e2c2f38f
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard

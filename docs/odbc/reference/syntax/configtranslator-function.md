@@ -1,23 +1,28 @@
 ---
 title: ConfigTranslator Funktion | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: ConfigTranslator
-apilocation: sqlsrv32.dll
+apiname:
+- ConfigTranslator
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: ConfigTranslator
-helpviewer_keywords: ConfigTranslator [ODBC]
+f1_keywords:
+- ConfigTranslator
+helpviewer_keywords:
+- ConfigTranslator [ODBC]
 ms.assetid: 7c22f07e-36de-425b-aa67-e32a84afae92
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard

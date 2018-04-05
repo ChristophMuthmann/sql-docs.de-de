@@ -1,23 +1,28 @@
 ---
 title: SQLWritePrivateProfileString Funktion | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLWritePrivateProfileString
-apilocation: sqlsrv32.dll
+apiname:
+- SQLWritePrivateProfileString
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLWritePrivateProfileString
-helpviewer_keywords: SQLWritePrivateProfileString [ODBC]
+f1_keywords:
+- SQLWritePrivateProfileString
+helpviewer_keywords:
+- SQLWritePrivateProfileString [ODBC]
 ms.assetid: 526f36a4-92ed-4874-9725-82d27c0b86f9
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard

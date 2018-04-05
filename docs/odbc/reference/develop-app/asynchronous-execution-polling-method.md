@@ -1,19 +1,21 @@
 ---
-title: "Asynchrone Ausführung (Abrufmethode) | Microsoft Docs"
-ms.custom: 
+title: Asynchrone Ausführung (Abrufmethode) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: asynchronous execution [ODBC]
+helpviewer_keywords:
+- asynchronous execution [ODBC]
 ms.assetid: 8cd21734-ef8e-4066-afd5-1f340e213f9c
-caps.latest.revision: "40"
+caps.latest.revision: 40
 author: MightyPen
 ms.author: genemi
 manager: jhubbard

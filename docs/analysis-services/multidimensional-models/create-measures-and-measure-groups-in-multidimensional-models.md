@@ -1,19 +1,20 @@
 ---
 title: Erstellen von Measures und Measuregruppen in mehrdimensionalen Modellen | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: measure groups [Analysis Services], defining
+helpviewer_keywords:
+- measure groups [Analysis Services], defining
 ms.assetid: 1018bb2e-b89b-489e-aead-450dec5dca3b
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: Minewiskan
 ms.author: owend
 manager: kfile

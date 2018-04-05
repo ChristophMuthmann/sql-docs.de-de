@@ -1,22 +1,25 @@
 ---
 title: 'GenerateDatabaseRightsScript-Methode (WMI: MSReportServer_ConfigurationSetting) | Microsoft-Dokumentation'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
+ms.service: ''
 ms.component: wmi-provider-library-reference
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: GenerateDatabaseRightsScript (WMI MSReportServer_ConfigurationSetting Class)
-apilocation: reportingservices.mof
+apiname:
+- GenerateDatabaseRightsScript (WMI MSReportServer_ConfigurationSetting Class)
+apilocation:
+- reportingservices.mof
 apitype: MOFDef
-helpviewer_keywords: GenerateDatabaseRightsScript method
+helpviewer_keywords:
+- GenerateDatabaseRightsScript method
 ms.assetid: f2e6dcc9-978f-4c2c-bafe-36c330247fd0
-caps.latest.revision: "26"
+caps.latest.revision: 26
 author: markingmyname
 ms.author: maghan
 manager: kfile

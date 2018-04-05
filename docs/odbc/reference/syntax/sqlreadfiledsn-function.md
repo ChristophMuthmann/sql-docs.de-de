@@ -1,23 +1,28 @@
 ---
 title: SQLReadFileDSN Funktion | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLReadFileDSN
-apilocation: sqlsrv32.dll
+apiname:
+- SQLReadFileDSN
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLReadFileDSN
-helpviewer_keywords: SQLReadFileDSN function [ODBC]
+f1_keywords:
+- SQLReadFileDSN
+helpviewer_keywords:
+- SQLReadFileDSN function [ODBC]
 ms.assetid: ead464aa-cdc3-47dd-a0c0-997711205d31
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard

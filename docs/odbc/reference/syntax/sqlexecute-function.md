@@ -1,23 +1,28 @@
 ---
 title: SQLExecute-Funktion | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLExecute
-apilocation: sqlsrv32.dll
+apiname:
+- SQLExecute
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLExecute
-helpviewer_keywords: SQLExecute function [ODBC]
+f1_keywords:
+- SQLExecute
+helpviewer_keywords:
+- SQLExecute function [ODBC]
 ms.assetid: 9286a01d-cde2-4b90-af94-9fd7f8da48bf
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: jhubbard

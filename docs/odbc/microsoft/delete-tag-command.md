@@ -1,19 +1,21 @@
 ---
 title: TAG-Befehl DELETE | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: DELETE TAG command [ODBC]
+helpviewer_keywords:
+- DELETE TAG command [ODBC]
 ms.assetid: 4f4e1362-a5f3-4b15-8a3c-d4e96605f221
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard

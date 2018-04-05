@@ -1,20 +1,23 @@
 ---
-title: "Verfügbarkeitsgruppe ist offline | Microsoft-Dokumentation"
-ms.custom: 
+title: Verfügbarkeitsgruppe ist offline | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: availability-groups
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
-f1_keywords: sql13.swb.agdashboard.agp2online.issues.f1
-helpviewer_keywords: Availability Groups [SQL Server], policies
+f1_keywords:
+- sql13.swb.agdashboard.agp2online.issues.f1
+helpviewer_keywords:
+- Availability Groups [SQL Server], policies
 ms.assetid: 093c5208-bf7a-49f4-a546-72b48197cadf
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

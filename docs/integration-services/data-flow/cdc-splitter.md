@@ -1,19 +1,21 @@
 ---
 title: CDC-Splitter | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: integration-services
-ms.tgt_pltfrm: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: ''
 ms.topic: article
-f1_keywords: sql13.ssis.designer.cdcsplitter.f1
+f1_keywords:
+- sql13.ssis.designer.cdcsplitter.f1
 ms.assetid: 167bc5c6-fa36-439d-987c-b20acd1a77e2
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg

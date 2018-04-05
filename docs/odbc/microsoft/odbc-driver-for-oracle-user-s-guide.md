@@ -1,19 +1,21 @@
 ---
-title: "ODBC-Treiber für Oracle-Benutzer &#39; s Handbuch | Microsoft Docs"
-ms.custom: 
+title: ODBC-Treiber für Oracle-Benutzer &#39; s Handbuch | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: ODBC driver for Oracle [ODBC], using ODBC driver for Oracle
+helpviewer_keywords:
+- ODBC driver for Oracle [ODBC], using ODBC driver for Oracle
 ms.assetid: c506aaa1-0b4f-440b-b069-98e0a463a5f6
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard

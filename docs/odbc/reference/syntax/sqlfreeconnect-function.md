@@ -1,23 +1,28 @@
 ---
 title: SQLFreeConnect Funktion | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLFreeConnect
-apilocation: sqlsrv32.dll
+apiname:
+- SQLFreeConnect
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLFreeConnect
-helpviewer_keywords: SQLFreeConnect function [ODBC]
+f1_keywords:
+- SQLFreeConnect
+helpviewer_keywords:
+- SQLFreeConnect function [ODBC]
 ms.assetid: 0d22eaeb-3c75-47fb-af9a-6f7397e61b9c
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard

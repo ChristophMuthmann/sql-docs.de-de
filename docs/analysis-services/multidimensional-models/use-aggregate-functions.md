@@ -1,19 +1,20 @@
 ---
 title: Verwenden von Aggregatfunktionen | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: aggregate functions [Analysis Services]
+helpviewer_keywords:
+- aggregate functions [Analysis Services]
 ms.assetid: c42166ef-b75c-45f4-859c-09a3e9617664
-caps.latest.revision: "28"
+caps.latest.revision: 28
 author: Minewiskan
 ms.author: owend
 manager: kfile

@@ -1,24 +1,26 @@
 ---
-title: "Entfernen einer primären Datenbank aus einer Verfügbarkeitsgruppe (SQL Server) | Microsoft-Dokumentation"
-ms.custom: 
+title: Entfernen einer primären Datenbank aus einer Verfügbarkeitsgruppe (SQL Server) | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: availability-groups
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
-f1_keywords: sql13.swb.availabilitygroup.removeprimarydb.f1
+f1_keywords:
+- sql13.swb.availabilitygroup.removeprimarydb.f1
 helpviewer_keywords:
 - primary databases [SQL Server], in availability group
 - Availability Groups [SQL Server], removing
 - Availability Groups [SQL Server], configuring
 - Availability Groups [SQL Server], databases
 ms.assetid: 6d4ca31e-ddf0-44bf-be5e-a5da060bf096
-caps.latest.revision: "28"
+caps.latest.revision: 28
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

@@ -1,23 +1,28 @@
 ---
 title: SQLRemoveDefaultDataSource Funktion | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLRemoveDefaultDataSource
-apilocation: sqlsrv32.dll
+apiname:
+- SQLRemoveDefaultDataSource
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLRemoveDefaultDataSource
-helpviewer_keywords: SQLRemoveDefaultDataSource function [ODBC]
+f1_keywords:
+- SQLRemoveDefaultDataSource
+helpviewer_keywords:
+- SQLRemoveDefaultDataSource function [ODBC]
 ms.assetid: db803266-57df-4864-a41b-901247549c1f
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard

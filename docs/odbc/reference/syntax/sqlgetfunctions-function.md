@@ -1,23 +1,28 @@
 ---
 title: SQLGetFunctions-Funktion | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLGetFunctions
-apilocation: sqlsrv32.dll
+apiname:
+- SQLGetFunctions
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLGetFunctions
-helpviewer_keywords: SQLGetFunctions function [ODBC]
+f1_keywords:
+- SQLGetFunctions
+helpviewer_keywords:
+- SQLGetFunctions function [ODBC]
 ms.assetid: 0451d2f9-0f4f-46ba-b252-670956a52183
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
 manager: jhubbard

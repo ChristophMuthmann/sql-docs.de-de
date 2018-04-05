@@ -1,19 +1,21 @@
 ---
-title: "Konfigurieren der Serverkonfigurationsoption „Timeout für Remoteanmeldung“ | Microsoft-Dokumentation"
-ms.custom: 
+title: Konfigurieren der Serverkonfigurationsoption „Timeout für Remoteanmeldung“ | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: configure-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: remote login timeout option
+helpviewer_keywords:
+- remote login timeout option
 ms.assetid: 077adebe-0e3f-42a5-a75e-5e6d04847e2b
-caps.latest.revision: "27"
+caps.latest.revision: 27
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

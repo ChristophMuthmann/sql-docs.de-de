@@ -1,22 +1,24 @@
 ---
-title: "Abschließen des Testfalls Vorbereitung (SybaseToSQL) | Microsoft Docs"
-ms.custom: 
+title: Abschließen des Testfalls Vorbereitung (SybaseToSQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-sybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
-helpviewer_keywords: Tester Component,Test Case Settings
+helpviewer_keywords:
+- Tester Component,Test Case Settings
 ms.assetid: 8b2a49b0-4296-4f3f-9e56-323aa6a6fa8e
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard

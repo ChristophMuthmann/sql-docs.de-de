@@ -1,20 +1,22 @@
 ---
-title: "Festlegen von Identitätswechseloptionen (SSAS – mehrdimensional) | Microsoft Docs"
-ms.custom: 
+title: Festlegen von Identitätswechseloptionen (SSAS – mehrdimensional) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/13/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-f1_keywords: sql13.asvs.sqlserverstudio.impersonationinfo.f1
-helpviewer_keywords: Impersonation Information dialog box
+f1_keywords:
+- sql13.asvs.sqlserverstudio.impersonationinfo.f1
+helpviewer_keywords:
+- Impersonation Information dialog box
 ms.assetid: 8e127f72-ef23-44ad-81e6-3dd58981770e
-caps.latest.revision: "27"
+caps.latest.revision: 27
 author: Minewiskan
 ms.author: owend
 manager: kfile

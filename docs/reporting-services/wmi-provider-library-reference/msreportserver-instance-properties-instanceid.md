@@ -1,22 +1,25 @@
 ---
 title: 'InstanceID-Eigenschaft (WMI: MSReportServer_Instance) | Microsoft-Dokumentation'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
+ms.service: ''
 ms.component: wmi-provider-library-reference
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: InstanceID Property (WMI MSReportServer_Instance)
-apilocation: reportingservices.mof
+apiname:
+- InstanceID Property (WMI MSReportServer_Instance)
+apilocation:
+- reportingservices.mof
 apitype: MOFDef
-helpviewer_keywords: InstanceID property
+helpviewer_keywords:
+- InstanceID property
 ms.assetid: 55c6c8b6-dfad-499f-befa-042c1caba17f
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: markingmyname
 ms.author: maghan
 manager: kfile

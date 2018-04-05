@@ -1,22 +1,25 @@
 ---
 title: 'SetDatabaseQueryTimeout-Methode (WMI: MSReportServer_ConfigurationSetting) | Microsoft-Dokumentation'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
+ms.service: ''
 ms.component: wmi-provider-library-reference
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SetDatabaseQueryTimeout (WMI MSReportServer_ConfigurationSetting Class)
-apilocation: reportingservices.mof
+apiname:
+- SetDatabaseQueryTimeout (WMI MSReportServer_ConfigurationSetting Class)
+apilocation:
+- reportingservices.mof
 apitype: MOFDef
-helpviewer_keywords: SetDatabaseQueryTimeout method
+helpviewer_keywords:
+- SetDatabaseQueryTimeout method
 ms.assetid: bd2809e5-7848-45b3-a502-b04fc698b646
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: markingmyname
 ms.author: maghan
 manager: kfile

@@ -1,17 +1,18 @@
 ---
-title: "Erteilen von Berechtigungen für Datamining-Strukturen und-Modellen (Analysis Services) | Microsoft Docs"
-ms.custom: 
+title: Erteilen von Berechtigungen für Datamining-Strukturen und-Modellen (Analysis Services) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-f1_keywords: sql13.asvs.roledesignerdialog.miningmodels.f1
+f1_keywords:
+- sql13.asvs.roledesignerdialog.miningmodels.f1
 helpviewer_keywords:
 - data mining [Analysis Services], security
 - permissions [Analysis Services], mining models
@@ -21,7 +22,7 @@ helpviewer_keywords:
 - user access rights [Analysis Services], mining structures
 - user access rights [Analysis Services], mining models
 ms.assetid: a0008004-e2b7-47db-acad-5fe7e12b130f
-caps.latest.revision: "37"
+caps.latest.revision: 37
 author: Minewiskan
 ms.author: owend
 manager: kfile

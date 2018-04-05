@@ -1,20 +1,22 @@
 ---
 title: Datamining-Programmierungsverfahren | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-applies_to: SQL Server 2016 Preview
-helpviewer_keywords: data mining [Analysis Services], developer's guide
+applies_to:
+- SQL Server 2016 Preview
+helpviewer_keywords:
+- data mining [Analysis Services], developer's guide
 ms.assetid: 9fd77b16-0b89-44ce-bcf1-7c04b62499da
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: Minewiskan
 ms.author: owend
 manager: kfile

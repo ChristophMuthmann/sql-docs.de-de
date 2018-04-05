@@ -1,19 +1,21 @@
 ---
 title: Konfigurieren von Datenquellen | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: data sources [ODBC], configuring
+helpviewer_keywords:
+- data sources [ODBC], configuring
 ms.assetid: f11985c2-c054-4ab4-840e-aca4c585c9d8
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard

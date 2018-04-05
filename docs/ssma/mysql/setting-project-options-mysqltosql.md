@@ -1,22 +1,24 @@
 ---
-title: "Festlegen von Optionen für Projekt (MySQLToSQL) | Microsoft Docs"
+title: Festlegen von Optionen für Projekt (MySQLToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-mysql
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
-helpviewer_keywords: Setting project options,configuration options
+helpviewer_keywords:
+- Setting project options,configuration options
 ms.assetid: 08820d88-e157-4d49-9401-38580dd7ec2d
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard

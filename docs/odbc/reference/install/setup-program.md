@@ -1,19 +1,21 @@
 ---
 title: Setup-Programm | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/31/2016
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: installing ODBC components [ODBC], setup program
+helpviewer_keywords:
+- installing ODBC components [ODBC], setup program
 ms.assetid: 9cc5d75d-b293-41e5-927c-10f4af2e7af1
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard

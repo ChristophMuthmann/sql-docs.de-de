@@ -1,19 +1,21 @@
 ---
-title: "Geöffnete Objekte (Serverkonfigurationsoption) | Microsoft-Dokumentation"
-ms.custom: 
+title: Geöffnete Objekte (Serverkonfigurationsoption) | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: configure-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: open objects option
+helpviewer_keywords:
+- open objects option
 ms.assetid: c8424d3c-86ba-4cc5-bf0c-be4ce44bdd04
-caps.latest.revision: "26"
+caps.latest.revision: 26
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

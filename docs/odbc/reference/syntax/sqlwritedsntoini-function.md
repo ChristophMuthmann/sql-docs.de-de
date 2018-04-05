@@ -1,23 +1,28 @@
 ---
 title: SQLWriteDSNToIni Funktion | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLWriteDSNToIni
-apilocation: sqlsrv32.dll
+apiname:
+- SQLWriteDSNToIni
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLWriteDSNToIni
-helpviewer_keywords: SQLWriteDSNToIni [ODBC]
+f1_keywords:
+- SQLWriteDSNToIni
+helpviewer_keywords:
+- SQLWriteDSNToIni [ODBC]
 ms.assetid: dc7018b2-18d4-4657-96d0-086479a47474
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard

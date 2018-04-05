@@ -1,21 +1,24 @@
 ---
 title: SetToStr (MDX) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-f1_keywords: SETTOSTR
-dev_langs: kbMDX
-helpviewer_keywords: SetToStr function
+f1_keywords:
+- SETTOSTR
+dev_langs:
+- kbMDX
+helpviewer_keywords:
+- SetToStr function
 ms.assetid: b761e002-26cd-460e-b424-fb8e306746fa
-caps.latest.revision: "30"
+caps.latest.revision: 30
 author: Minewiskan
 ms.author: owend
 manager: erikre

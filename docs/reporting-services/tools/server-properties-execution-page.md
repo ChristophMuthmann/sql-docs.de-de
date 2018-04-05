@@ -1,19 +1,20 @@
 ---
-title: "Servereigenschaften (Ausführungsseite) | Microsoft-Dokumentation"
-ms.custom: 
+title: Servereigenschaften (Ausführungsseite) | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
+ms.service: ''
 ms.component: tools
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-f1_keywords: sql13.swb.reportserver.serverproperties.execution.f1
+f1_keywords:
+- sql13.swb.reportserver.serverproperties.execution.f1
 ms.assetid: 53b77db1-b013-4dac-82dd-30c0de276639
-caps.latest.revision: "32"
+caps.latest.revision: 32
 author: markingmyname
 ms.author: maghan
 manager: kfile

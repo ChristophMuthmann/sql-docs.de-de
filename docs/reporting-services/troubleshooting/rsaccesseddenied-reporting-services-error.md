@@ -1,19 +1,20 @@
 ---
 title: 'rsAccessedDenied: Reporting Services-Fehler | Microsoft-Dokumentation'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
+ms.service: ''
 ms.component: troubleshooting
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: rsAccessDenied error
+helpviewer_keywords:
+- rsAccessDenied error
 ms.assetid: 2f76b1bf-96a2-4755-b76b-84e933220efc
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: markingmyname
 ms.author: maghan
 manager: kfile

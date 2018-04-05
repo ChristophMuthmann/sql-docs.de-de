@@ -1,19 +1,21 @@
 ---
 title: SQLEndTran (Cursorbibliothek) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: SQLEndTran function [ODBC], Cursor Library
+helpviewer_keywords:
+- SQLEndTran function [ODBC], Cursor Library
 ms.assetid: 92340b87-9084-4838-a509-e9ca22d5fd5c
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard

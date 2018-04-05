@@ -1,23 +1,28 @@
 ---
 title: SQLDrivers-Funktion | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLDrivers
-apilocation: sqlsrv32.dll
+apiname:
+- SQLDrivers
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLDrivers
-helpviewer_keywords: SQLDrivers function [ODBC]
+f1_keywords:
+- SQLDrivers
+helpviewer_keywords:
+- SQLDrivers function [ODBC]
 ms.assetid: 6b5b7514-e9cb-4cfd-8b7a-ab51dfab9efa
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
 manager: jhubbard

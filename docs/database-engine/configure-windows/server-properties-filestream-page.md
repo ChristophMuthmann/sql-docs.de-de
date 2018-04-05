@@ -1,20 +1,23 @@
 ---
 title: SQL Server-Eigenschaften (Seite FILESTREAM) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: configure-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
-f1_keywords: sql13.swb.serverproperties.filestream.f1
-helpviewer_keywords: FILESTREAM [SQL Server], properties page
+f1_keywords:
+- sql13.swb.serverproperties.filestream.f1
+helpviewer_keywords:
+- FILESTREAM [SQL Server], properties page
 ms.assetid: 8a8d38d3-e97a-4b09-a40b-659b2e3a5c47
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

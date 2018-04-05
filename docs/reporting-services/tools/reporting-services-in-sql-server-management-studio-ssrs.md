@@ -1,19 +1,20 @@
 ---
 title: Reporting Services in SQL Server Management Studio (SSRS) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
+ms.service: ''
 ms.component: tools
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: report servers [Reporting Services], how-to topics
+helpviewer_keywords:
+- report servers [Reporting Services], how-to topics
 ms.assetid: 60685458-9108-47bf-820a-5e7db454d408
-caps.latest.revision: "57"
+caps.latest.revision: 57
 author: markingmyname
 ms.author: maghan
 manager: kfile

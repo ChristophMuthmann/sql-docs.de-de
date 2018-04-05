@@ -2,21 +2,23 @@
 title: Arbeiten mit der Konsole-Skriptdateien (MySQLToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-mysql
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
-helpviewer_keywords: Sample console script files
+helpviewer_keywords:
+- Sample console script files
 ms.assetid: 7e6aaa8a-5f5c-414d-9fb8-21e56b9ffaef
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard

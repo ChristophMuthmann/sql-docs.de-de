@@ -1,19 +1,20 @@
 ---
 title: Festlegen von Berichtsservereigenschaften (Management Studio) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
+ms.service: ''
 ms.component: tools
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: report servers [Reporting Services], properties
+helpviewer_keywords:
+- report servers [Reporting Services], properties
 ms.assetid: 1ed0f84b-b12a-4e49-b65c-a11a99f9093f
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: markingmyname
 ms.author: maghan
 manager: kfile

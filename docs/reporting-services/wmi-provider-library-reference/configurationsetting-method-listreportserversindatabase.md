@@ -1,22 +1,25 @@
 ---
 title: 'ListReportServersInDatabase-Methode (WMI: MSReportServer_ConfigurationSetting) | Microsoft-Dokumentation'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
+ms.service: ''
 ms.component: wmi-provider-library-reference
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: ListReportServersInDatabase (WMI MSReportServer_ConfigurationSetting Class)
-apilocation: reportingservices.mof
+apiname:
+- ListReportServersInDatabase (WMI MSReportServer_ConfigurationSetting Class)
+apilocation:
+- reportingservices.mof
 apitype: MOFDef
-helpviewer_keywords: ListReportServersInDatabase method
+helpviewer_keywords:
+- ListReportServersInDatabase method
 ms.assetid: a4bf5968-c46f-484f-a510-65e2dde65a0d
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: markingmyname
 ms.author: maghan
 manager: kfile

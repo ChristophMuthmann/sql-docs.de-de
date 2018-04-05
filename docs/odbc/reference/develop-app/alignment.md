@@ -1,19 +1,21 @@
 ---
 title: Ausrichtung | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: alignment issues [ODBC]
+helpviewer_keywords:
+- alignment issues [ODBC]
 ms.assetid: 06a01e51-e7a5-495f-aa27-e304b0d005ff
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard

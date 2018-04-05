@@ -1,22 +1,25 @@
 ---
 title: 'SendUsingSMTPServer-Eigenschaft (WMI: MSReportServer_ConfigurationSetting) | Microsoft-Dokumentation'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
+ms.service: ''
 ms.component: wmi-provider-library-reference
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SendUsingSMTPServer
-apilocation: reportingservices.mof
+apiname:
+- SendUsingSMTPServer
+apilocation:
+- reportingservices.mof
 apitype: MOFDef
-helpviewer_keywords: SendUsingSMTPServer property
+helpviewer_keywords:
+- SendUsingSMTPServer property
 ms.assetid: c4abf03a-7a0e-4087-8aa6-91e4277ab65c
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: markingmyname
 ms.author: maghan
 manager: kfile

@@ -1,19 +1,21 @@
 ---
 title: Abrufen von Deskriptor behandelt | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: descriptors [ODBC], retrieving or setting field values
+helpviewer_keywords:
+- descriptors [ODBC], retrieving or setting field values
 ms.assetid: 936f983f-c7e9-43f3-97ea-dd4b1bbf4654
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard

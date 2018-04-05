@@ -1,19 +1,20 @@
 ---
 title: Verarbeiten einer Miningstruktur | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/13/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: mining structures [Analysis Services], processing
+helpviewer_keywords:
+- mining structures [Analysis Services], processing
 ms.assetid: 4162f33e-c23f-4293-8905-271781e45fa4
-caps.latest.revision: "31"
+caps.latest.revision: 31
 author: Minewiskan
 ms.author: owend
 manager: kfile

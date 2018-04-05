@@ -1,19 +1,20 @@
 ---
 title: Neue Systemrolle (Management Studio) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
+ms.service: ''
 ms.component: tools
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-f1_keywords: sql13.swb.reportserver.newsystemrole.f1
+f1_keywords:
+- sql13.swb.reportserver.newsystemrole.f1
 ms.assetid: 7b4a0b98-975b-478a-8359-7db39ccbb347
-caps.latest.revision: "28"
+caps.latest.revision: 28
 author: markingmyname
 ms.author: maghan
 manager: kfile

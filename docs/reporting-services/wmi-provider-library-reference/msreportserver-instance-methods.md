@@ -1,22 +1,25 @@
 ---
 title: MSReportServer_Instance-Methoden | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 06/09/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
+ms.service: ''
 ms.component: wmi-provider-library-reference
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: MSReportServer_Instance Methods
-apilocation: reportingservices.mof
+apiname:
+- MSReportServer_Instance Methods
+apilocation:
+- reportingservices.mof
 apitype: MOFDef
-helpviewer_keywords: MSReportServer_Instance class
+helpviewer_keywords:
+- MSReportServer_Instance class
 ms.assetid: ed079327-0bb0-4245-adb5-e46a90cf3586
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: markingmyname
 ms.author: maghan
 manager: kfile

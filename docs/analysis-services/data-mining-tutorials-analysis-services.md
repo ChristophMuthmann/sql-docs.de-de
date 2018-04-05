@@ -1,20 +1,22 @@
 ---
 title: Datamining-Lernprogramme (Analysis Services) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 05/06/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
-applies_to: SQL Server 2016
-helpviewer_keywords: data mining [Analysis Services], designing
+applies_to:
+- SQL Server 2016
+helpviewer_keywords:
+- data mining [Analysis Services], designing
 ms.assetid: 96eea930-4a4f-42d8-bf72-6c5daf1a5f09
-caps.latest.revision: "25"
+caps.latest.revision: 25
 author: Minewiskan
 ms.author: owend
 manager: kfile

@@ -1,19 +1,20 @@
 ---
-title: "Ausführen einer Reporting Services-Skriptdatei | Microsoft-Dokumentation"
-ms.custom: 
+title: Ausführen einer Reporting Services-Skriptdatei | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
+ms.service: ''
 ms.component: tools
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: scripts [Reporting Services], running
+helpviewer_keywords:
+- scripts [Reporting Services], running
 ms.assetid: 0de4995c-85ec-4d4c-aaef-fbd30edfb20f
-caps.latest.revision: "36"
+caps.latest.revision: 36
 author: markingmyname
 ms.author: maghan
 manager: kfile

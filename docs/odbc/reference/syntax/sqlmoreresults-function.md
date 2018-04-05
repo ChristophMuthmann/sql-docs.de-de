@@ -1,23 +1,28 @@
 ---
 title: SQLMoreResults-Funktion | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLMoreResults
-apilocation: sqlsrv32.dll
+apiname:
+- SQLMoreResults
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLMoreResults
-helpviewer_keywords: SQLMoreResults function [ODBC]
+f1_keywords:
+- SQLMoreResults
+helpviewer_keywords:
+- SQLMoreResults function [ODBC]
 ms.assetid: bf169ed5-4d55-412c-b184-12065a726e89
-caps.latest.revision: "26"
+caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
 manager: jhubbard

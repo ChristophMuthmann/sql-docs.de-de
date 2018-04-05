@@ -1,23 +1,28 @@
 ---
 title: SQLPrimaryKeys-Funktion | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLPrimaryKeys
-apilocation: sqlsrv32.dll
+apiname:
+- SQLPrimaryKeys
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLPrimaryKeys
-helpviewer_keywords: SQLPrimaryKeys function [ODBC]
+f1_keywords:
+- SQLPrimaryKeys
+helpviewer_keywords:
+- SQLPrimaryKeys function [ODBC]
 ms.assetid: 3f809b09-3c1b-415e-80c5-a603e8e25d5b
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: jhubbard

@@ -1,23 +1,28 @@
 ---
 title: ConfigDriver Funktion | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: ConfigDriver
-apilocation: sqlsrv32.dll
+apiname:
+- ConfigDriver
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: ConfigDriver
-helpviewer_keywords: ConfigDriver [ODBC]
+f1_keywords:
+- ConfigDriver
+helpviewer_keywords:
+- ConfigDriver [ODBC]
 ms.assetid: 9473f48f-bcae-4784-89c1-7839bad4ed13
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard

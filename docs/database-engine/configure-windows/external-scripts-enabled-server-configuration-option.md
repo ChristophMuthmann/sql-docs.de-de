@@ -3,20 +3,22 @@ title: Externe Skripts aktiviert (Serverkonfigurationsoption) | Microsoft-Dokume
 ms.date: 11/13/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: configure-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.custom: 
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.custom: ''
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - external scripts enabled
 - external_scripts_enabled_TSQL
-helpviewer_keywords: external scripts enabled option
+helpviewer_keywords:
+- external scripts enabled option
 ms.assetid: 9d0ce165-8719-4007-9ae8-00f85cab3a0d
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: jeannt
 ms.author: edmaca
 manager: craigg

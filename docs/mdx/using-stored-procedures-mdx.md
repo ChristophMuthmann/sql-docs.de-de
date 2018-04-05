@@ -1,22 +1,23 @@
 ---
 title: Verwenden von gespeicherten Prozeduren (MDX) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-dev_langs: kbMDX
+dev_langs:
+- kbMDX
 helpviewer_keywords:
 - user-defined functions [MDX]
 - stored procedures [MDX]
 ms.assetid: 818fb2ad-f88b-4d0c-9f70-f378aed42e8e
-caps.latest.revision: "27"
+caps.latest.revision: 27
 author: Minewiskan
 ms.author: owend
 manager: erikre

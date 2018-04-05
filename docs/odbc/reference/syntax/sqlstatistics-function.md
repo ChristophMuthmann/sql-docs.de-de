@@ -1,23 +1,28 @@
 ---
 title: SQLStatistics-Funktion | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLStatistics
-apilocation: sqlsrv32.dll
+apiname:
+- SQLStatistics
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLStatistics
-helpviewer_keywords: SQLStatistics function [ODBC]
+f1_keywords:
+- SQLStatistics
+helpviewer_keywords:
+- SQLStatistics function [ODBC]
 ms.assetid: 45210682-cfea-4e5d-9951-bcf1cbe10f41
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
 manager: jhubbard

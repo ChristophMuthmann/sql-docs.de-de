@@ -1,19 +1,20 @@
 ---
 title: Systemrolleneigenschaften (Management Studio) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
+ms.service: ''
 ms.component: tools
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-f1_keywords: sql13.swb.reportserver.systemroleproperties.f1
+f1_keywords:
+- sql13.swb.reportserver.systemroleproperties.f1
 ms.assetid: 0210fc2a-74fb-41dd-8e39-4830047ec417
-caps.latest.revision: "30"
+caps.latest.revision: 30
 author: markingmyname
 ms.author: maghan
 manager: kfile

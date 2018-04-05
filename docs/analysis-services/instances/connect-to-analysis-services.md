@@ -1,19 +1,20 @@
 ---
 title: Herstellen einer Verbindung mit Analysis Services | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/23/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: instances of Analysis Services, connections
+helpviewer_keywords:
+- instances of Analysis Services, connections
 ms.assetid: 73ee8171-3379-4384-bfc8-071b3eebbc8f
-caps.latest.revision: "46"
+caps.latest.revision: 46
 author: Minewiskan
 ms.author: owend
 manager: kfile

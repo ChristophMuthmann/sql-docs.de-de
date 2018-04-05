@@ -1,22 +1,25 @@
 ---
 title: 'InstanceName-Eigenschaft (WMI: MSReportServr_ConfigurationSetting) | Microsoft-Dokumentation'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
+ms.service: ''
 ms.component: wmi-provider-library-reference
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: InstanceName Property
-apilocation: reportingservices.mof
+apiname:
+- InstanceName Property
+apilocation:
+- reportingservices.mof
 apitype: MOFDef
-helpviewer_keywords: InstanceName property
+helpviewer_keywords:
+- InstanceName property
 ms.assetid: 5e8aa5fb-2d4a-45ac-bbd8-47ed3c667cbb
-caps.latest.revision: "34"
+caps.latest.revision: 34
 author: markingmyname
 ms.author: maghan
 manager: kfile

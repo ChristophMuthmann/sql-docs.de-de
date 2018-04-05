@@ -1,23 +1,28 @@
 ---
 title: SQLTablePrivileges-Funktion | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLTablePrivileges
-apilocation: sqlsrv32.dll
+apiname:
+- SQLTablePrivileges
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLTablePrivileges
-helpviewer_keywords: SQLTablePrivileges function [ODBC]
+f1_keywords:
+- SQLTablePrivileges
+helpviewer_keywords:
+- SQLTablePrivileges function [ODBC]
 ms.assetid: 8cfdb64f-64c5-47e6-ad57-0533ac630afa
-caps.latest.revision: "27"
+caps.latest.revision: 27
 author: MightyPen
 ms.author: genemi
 manager: jhubbard

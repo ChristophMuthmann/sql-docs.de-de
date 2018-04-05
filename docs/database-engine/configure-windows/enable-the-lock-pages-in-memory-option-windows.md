@@ -1,19 +1,21 @@
 ---
-title: "Aktivieren der Option „Sperren von Seiten im Speicher“ (Windows) | Microsoft-Dokumentation"
-ms.custom: 
+title: Aktivieren der Option „Sperren von Seiten im Speicher“ (Windows) | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: configure-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: Lock Pages in Memory option
+helpviewer_keywords:
+- Lock Pages in Memory option
 ms.assetid: cd581fbc-4747-439e-87f9-2f18e39c5bb9
-caps.latest.revision: "35"
+caps.latest.revision: 35
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

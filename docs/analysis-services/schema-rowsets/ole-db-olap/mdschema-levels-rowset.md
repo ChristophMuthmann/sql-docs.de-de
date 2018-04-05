@@ -1,22 +1,25 @@
 ---
 title: MDSCHEMA_LEVELS-Rowset | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-apiname: MDSCHEMA_LEVELS
+apiname:
+- MDSCHEMA_LEVELS
 apitype: NA
-applies_to: SQL Server 2016 Preview
-helpviewer_keywords: MDSCHEMA_LEVELS rowset
+applies_to:
+- SQL Server 2016 Preview
+helpviewer_keywords:
+- MDSCHEMA_LEVELS rowset
 ms.assetid: 4313e268-33f4-4e99-96d7-2ec26775c580
-caps.latest.revision: "33"
+caps.latest.revision: 33
 author: Minewiskan
 ms.author: owend
 manager: kfile

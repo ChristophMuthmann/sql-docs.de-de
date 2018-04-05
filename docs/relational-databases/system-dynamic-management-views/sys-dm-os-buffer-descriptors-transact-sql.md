@@ -1,16 +1,16 @@
 ---
 title: Sys. dm_os_buffer_descriptors (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_os_buffer_descriptors_TSQL
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_buffer_descriptors dynamic management view
 ms.assetid: 012aab95-8888-4f35-9ea3-b5dff6e3f60f
-caps.latest.revision: 
+caps.latest.revision: 48
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1c03bbdbe271500ecf417fe3b5c125304001a05e
-ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
+ms.openlocfilehash: d64627b7d232503494a3aff308eb24273df98313
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="sysdmosbufferdescriptors-transact-sql"></a>sys.dm_os_buffer_descriptors (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -59,9 +59,10 @@ ms.lasthandoff: 03/15/2018
 |pdw_node_id|**int**|**Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Der Bezeichner für den Knoten, dem auf diesem Verteilungspunkt befindet.|  
   
 ## <a name="permissions"></a>Berechtigungen  
+
 Auf [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], erfordert `VIEW SERVER STATE` Berechtigung.   
-Auf [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] benötigen Premium-Ebenen der `VIEW DATABASE STATE` Berechtigung in der Datenbank. Auf [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard und grundlegenden Organisationsebenen erfordert die **Serveradministrator** oder ein **Azure Active Directory-Administrators** Konto.  
-  
+Auf [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], erfordert die `VIEW DATABASE STATE` Berechtigung in der Datenbank.   
+   
 ## <a name="remarks"></a>Hinweise  
  Sys. dm_os_buffer_descriptors gibt Seiten, die von der Resource-Datenbank verwendet werden. Sys. dm_os_buffer_descriptors gibt keine Informationen über freie oder gestohlene Seite oder zu Seiten, die beim Lesen Fehler enthielten zurück.  
   

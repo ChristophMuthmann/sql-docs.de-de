@@ -1,23 +1,28 @@
 ---
 title: SQLCreateDataSource Funktion | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLCreateDataSource
-apilocation: sqlsrv32.dll
+apiname:
+- SQLCreateDataSource
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLCreateDataSource
-helpviewer_keywords: SQLCreateDataSource function [ODBC]
+f1_keywords:
+- SQLCreateDataSource
+helpviewer_keywords:
+- SQLCreateDataSource function [ODBC]
 ms.assetid: 76ee851a-dca9-40cc-8e9e-eb3f74e560ee
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard

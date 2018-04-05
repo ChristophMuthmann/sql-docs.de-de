@@ -1,19 +1,20 @@
 ---
 title: 'SetVirtualDirectory-Methode (WMI: MSReportServer_ConfigurationSetting) | Microsoft-Dokumentation'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
+ms.service: ''
 ms.component: wmi-provider-library-reference
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: SetVirtualDirectory method
+helpviewer_keywords:
+- SetVirtualDirectory method
 ms.assetid: 1a25cb1d-38d5-401a-970b-87b642a780e4
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: markingmyname
 ms.author: maghan
 manager: kfile

@@ -1,29 +1,30 @@
 ---
 title: REFRESH CUBE-Anweisung (MDX) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - Cube
 - REFRESH CUBE
 - REFRESH_CUBE
 - REFRESH
-dev_langs: kbMDX
+dev_langs:
+- kbMDX
 helpviewer_keywords:
 - cubes [Analysis Services], cache
 - refreshing cache
 - REFRESH CUBE statement
 - cache [Analysis Services]
 ms.assetid: b8c087fb-5d17-4b13-b7cf-9929e9aab35c
-caps.latest.revision: "31"
+caps.latest.revision: 31
 author: Minewiskan
 ms.author: owend
 manager: erikre

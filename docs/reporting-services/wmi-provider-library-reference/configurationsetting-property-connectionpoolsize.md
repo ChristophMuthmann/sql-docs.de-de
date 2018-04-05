@@ -1,22 +1,25 @@
 ---
 title: 'ConnectionPoolSize-Eigenschaft (WMI: MSReportServer_ConfigurationSetting) | Microsoft-Dokumentation'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
+ms.service: ''
 ms.component: wmi-provider-library-reference
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: ConnectionPoolSize
-apilocation: reportingservices.mof
+apiname:
+- ConnectionPoolSize
+apilocation:
+- reportingservices.mof
 apitype: MOFDef
-helpviewer_keywords: ConnectionPoolSize property
+helpviewer_keywords:
+- ConnectionPoolSize property
 ms.assetid: b80c8e5d-b725-4fe4-aec6-02fb18ec4434
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: markingmyname
 ms.author: maghan
 manager: kfile

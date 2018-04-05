@@ -1,19 +1,20 @@
 ---
 title: Berichtsteile (Berichts-Generator und SSRS) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
+ms.service: ''
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-f1_keywords: "10543"
+f1_keywords:
+- "10543"
 ms.assetid: 957f664c-8a7a-4532-b5a6-5f859c5840bd
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile

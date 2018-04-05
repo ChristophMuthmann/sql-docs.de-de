@@ -1,19 +1,21 @@
 ---
 title: SQL Server-Fehlerprotokolle konfigurieren (Seite Allgemein) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: configure-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
-f1_keywords: sql13.swb.configurelogs.configureerrorlogs.f1
+f1_keywords:
+- sql13.swb.configurelogs.configureerrorlogs.f1
 ms.assetid: 03f0d463-9b0b-4af9-a853-da936d75e5af
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

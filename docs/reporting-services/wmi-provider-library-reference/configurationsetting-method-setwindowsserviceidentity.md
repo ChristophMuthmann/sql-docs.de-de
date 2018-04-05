@@ -1,22 +1,25 @@
 ---
 title: 'SetWindowsServiceIdentity-Methode (WMI: MSReportServer_ConfigurationSetting) | Microsoft-Dokumentation'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
+ms.service: ''
 ms.component: wmi-provider-library-reference
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SetWindowsServiceIdentity (WMI MSReportServer_ConfigurationSetting Class)
-apilocation: reportingservices.mof
+apiname:
+- SetWindowsServiceIdentity (WMI MSReportServer_ConfigurationSetting Class)
+apilocation:
+- reportingservices.mof
 apitype: MOFDef
-helpviewer_keywords: SetWindowsServiceIdentity method
+helpviewer_keywords:
+- SetWindowsServiceIdentity method
 ms.assetid: 9bbc734c-9e69-48c2-8bec-8abe7c6cc987
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: markingmyname
 ms.author: maghan
 manager: kfile

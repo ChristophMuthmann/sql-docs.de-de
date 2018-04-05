@@ -1,19 +1,20 @@
 ---
 title: Report Server-Windows-Dienst (MSSQLServer) 107 | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
+ms.service: ''
 ms.component: troubleshooting
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: MSSQLServer 107 error
+helpviewer_keywords:
+- MSSQLServer 107 error
 ms.assetid: 52b5704b-27f9-400a-a821-d8fa0786afe4
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: markingmyname
 ms.author: maghan
 manager: kfile

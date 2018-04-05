@@ -2,21 +2,23 @@
 title: Neues Projekt (SSMA) (AccessToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-access
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
-helpviewer_keywords: New Project dialog box
+helpviewer_keywords:
+- New Project dialog box
 ms.assetid: ca294f6d-eeb5-42ca-9306-156281a3f0f3
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard

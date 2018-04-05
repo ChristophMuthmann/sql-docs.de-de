@@ -1,22 +1,24 @@
 ---
 title: Befehlszeilenoptionen in SSMA-Konsole (SybaseToSQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-sybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
-helpviewer_keywords: Sybase Console,Command Line Options
+helpviewer_keywords:
+- Sybase Console,Command Line Options
 ms.assetid: 337cbd26-67b7-4c88-9deb-d0a69a3d7714
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard

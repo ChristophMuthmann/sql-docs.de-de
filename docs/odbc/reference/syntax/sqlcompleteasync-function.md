@@ -1,20 +1,23 @@
 ---
 title: SQLCompleteAsync Funktion | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-f1_keywords: SQLCompleteAsync
-helpviewer_keywords: SQLCompleteAsync function [ODBC]
+f1_keywords:
+- SQLCompleteAsync
+helpviewer_keywords:
+- SQLCompleteAsync function [ODBC]
 ms.assetid: 1b97c46a-d2e5-4540-8239-9d975e5321c6
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: MightyPen
 ms.author: genemi
 manager: jhubbard

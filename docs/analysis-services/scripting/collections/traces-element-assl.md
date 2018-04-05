@@ -1,24 +1,29 @@
 ---
 title: Verfolgt-Element (ASSL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-apiname: Traces Element
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
+apiname:
+- Traces Element
+apilocation:
+- http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to: SQL Server 2016 Preview
-f1_keywords: Traces
-helpviewer_keywords: Traces element
+applies_to:
+- SQL Server 2016 Preview
+f1_keywords:
+- Traces
+helpviewer_keywords:
+- Traces element
 ms.assetid: 7ca2c7d1-fda3-4c76-9e32-fd9b5dda56e9
-caps.latest.revision: "33"
+caps.latest.revision: 33
 author: Minewiskan
 ms.author: owend
 manager: kfile

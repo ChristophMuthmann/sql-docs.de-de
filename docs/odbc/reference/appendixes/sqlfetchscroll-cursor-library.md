@@ -1,19 +1,21 @@
 ---
 title: SQLFetchScroll (Cursorbibliothek) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: SQLFetchScroll function [ODBC], Cursor Library
+helpviewer_keywords:
+- SQLFetchScroll function [ODBC], Cursor Library
 ms.assetid: 4417e57c-31dd-475e-8fe9-eab00a459c80
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard

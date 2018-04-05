@@ -1,23 +1,28 @@
 ---
 title: SQLGetConnectAttr-Funktion | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLGetConnectOption
-apilocation: sqlsrv32.dll
+apiname:
+- SQLGetConnectOption
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLGetConnectAttr
-helpviewer_keywords: SQLGetConnectAttr function [ODBC]
+f1_keywords:
+- SQLGetConnectAttr
+helpviewer_keywords:
+- SQLGetConnectAttr function [ODBC]
 ms.assetid: 2cb4ffa8-19d3-4664-8c2f-6682cdcc3f33
-caps.latest.revision: "32"
+caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
 manager: jhubbard

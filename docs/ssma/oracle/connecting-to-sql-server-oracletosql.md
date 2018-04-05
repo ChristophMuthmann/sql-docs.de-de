@@ -2,18 +2,20 @@
 title: Herstellen einer Verbindung mit SQLServer (OracleToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-oracle
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: Connecting to SQL Server,Synchronizing SQL Server Metadata
+helpviewer_keywords:
+- Connecting to SQL Server,Synchronizing SQL Server Metadata
 ms.assetid: 1b2a8059-1829-4904-a82f-9c06de1e245f
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro

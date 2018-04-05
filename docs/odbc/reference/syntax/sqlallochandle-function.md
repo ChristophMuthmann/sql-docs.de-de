@@ -1,23 +1,28 @@
 ---
 title: SQLAllocHandle-Funktion | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLAllocHandle
-apilocation: sqlsrv32.dll
+apiname:
+- SQLAllocHandle
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLAllocHandle
-helpviewer_keywords: SQLAllocHandle function [ODBC]
+f1_keywords:
+- SQLAllocHandle
+helpviewer_keywords:
+- SQLAllocHandle function [ODBC]
 ms.assetid: 6e7fe420-8cf4-4e72-8dad-212affaff317
-caps.latest.revision: "43"
+caps.latest.revision: 43
 author: MightyPen
 ms.author: genemi
 manager: jhubbard

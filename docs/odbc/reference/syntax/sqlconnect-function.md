@@ -1,23 +1,28 @@
 ---
 title: SQLConnect-Funktion | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLConnect
-apilocation: sqlsrv32.dll
+apiname:
+- SQLConnect
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLConnect
-helpviewer_keywords: SQLConnect function [ODBC]
+f1_keywords:
+- SQLConnect
+helpviewer_keywords:
+- SQLConnect function [ODBC]
 ms.assetid: 59075e46-a0ca-47bf-972a-367b08bb518d
-caps.latest.revision: "37"
+caps.latest.revision: 37
 author: MightyPen
 ms.author: genemi
 manager: jhubbard

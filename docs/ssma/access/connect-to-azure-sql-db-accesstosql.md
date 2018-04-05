@@ -2,21 +2,23 @@
 title: Herstellen einer Verbindung mit Azure SQL-Datenbank (AccessToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-access
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
-helpviewer_keywords: Connect to SQL Azure dialog box
+helpviewer_keywords:
+- Connect to SQL Azure dialog box
 ms.assetid: bf44b236-d9be-41ae-a5fd-bd73038e505f
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard

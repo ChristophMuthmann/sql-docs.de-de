@@ -1,19 +1,21 @@
 ---
-title: "Erstellen und Öffnen von Tabellen (Text-Datei-Treiber) | Microsoft Docs"
-ms.custom: 
+title: Erstellen und Öffnen von Tabellen (Text-Datei-Treiber) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: text file driver [ODBC], creating and opening tables
+helpviewer_keywords:
+- text file driver [ODBC], creating and opening tables
 ms.assetid: e6a07dda-a665-4f5b-a8d6-9ff479700513
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard

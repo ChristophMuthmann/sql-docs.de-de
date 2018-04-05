@@ -1,19 +1,21 @@
 ---
 title: SQLSetPos (Cursorbibliothek) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: SQLSetPos function [ODBC], Cursor Library
+helpviewer_keywords:
+- SQLSetPos function [ODBC], Cursor Library
 ms.assetid: 574399c3-2bb2-4d19-829c-7c77bd82858d
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard

@@ -1,17 +1,18 @@
 ---
-title: "Erteilen von Berechtigungen für ein Datenquellenobjekt (Analysis Services) | Microsoft Docs"
-ms.custom: 
+title: Erteilen von Berechtigungen für ein Datenquellenobjekt (Analysis Services) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-f1_keywords: sql13.asvs.roledesignerdialog.datasources.f1
+f1_keywords:
+- sql13.asvs.roledesignerdialog.datasources.f1
 helpviewer_keywords:
 - read/write permissions
 - user access rights [Analysis Services], data sources
@@ -19,7 +20,7 @@ helpviewer_keywords:
 - connection strings [Analysis Services]
 - data sources [Analysis Services], security
 ms.assetid: b4e302d3-c93b-4383-aa4a-37d15c129830
-caps.latest.revision: "38"
+caps.latest.revision: 38
 author: Minewiskan
 ms.author: owend
 manager: kfile

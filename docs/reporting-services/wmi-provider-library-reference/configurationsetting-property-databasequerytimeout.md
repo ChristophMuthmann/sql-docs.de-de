@@ -1,22 +1,25 @@
 ---
 title: 'DatabaseQueryTimeout-Eigenschaft (WMI: MSReportServer_ConfigurationSetting) | Microsoft-Dokumentation'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
+ms.service: ''
 ms.component: wmi-provider-library-reference
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: DatabaseQueryTimeout Property
-apilocation: reportingservices.mof
+apiname:
+- DatabaseQueryTimeout Property
+apilocation:
+- reportingservices.mof
 apitype: MOFDef
-helpviewer_keywords: DatabaseQueryTimeout property
+helpviewer_keywords:
+- DatabaseQueryTimeout property
 ms.assetid: 96faed97-9799-4bbf-a66f-fdd532d3eace
-caps.latest.revision: "35"
+caps.latest.revision: 35
 author: markingmyname
 ms.author: maghan
 manager: kfile

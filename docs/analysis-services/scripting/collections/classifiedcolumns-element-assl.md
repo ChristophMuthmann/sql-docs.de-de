@@ -1,24 +1,29 @@
 ---
 title: ClassifiedColumns-Element (ASSL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-apiname: ClassifiedColumns Element
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
+apiname:
+- ClassifiedColumns Element
+apilocation:
+- http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to: SQL Server 2016 Preview
-f1_keywords: ClassifiedColumns
-helpviewer_keywords: ClassifiedColumns element
+applies_to:
+- SQL Server 2016 Preview
+f1_keywords:
+- ClassifiedColumns
+helpviewer_keywords:
+- ClassifiedColumns element
 ms.assetid: f16b4f51-c38d-4601-98b8-1497dbf12d02
-caps.latest.revision: "35"
+caps.latest.revision: 35
 author: Minewiskan
 ms.author: owend
 manager: kfile

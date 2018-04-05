@@ -1,19 +1,21 @@
 ---
-title: "Dienstkonten (Assistent zum Konfigurieren der Sicherheit für die Datenbankspiegelung) | Microsoft-Dokumentation"
-ms.custom: 
+title: Dienstkonten (Assistent zum Konfigurieren der Sicherheit für die Datenbankspiegelung) | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: database-mirroring
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
-f1_keywords: sql13.swb.configdbmsecurwiz.serviceaccounts.f1
+f1_keywords:
+- sql13.swb.configdbmsecurwiz.serviceaccounts.f1
 ms.assetid: d58d8f93-7888-4d66-af4d-969ef6a2dbee
-caps.latest.revision: "34"
+caps.latest.revision: 34
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

@@ -1,19 +1,21 @@
 ---
 title: SQLPoolConnect Funktion | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: SQLPoolConnect function [ODBC]
+helpviewer_keywords:
+- SQLPoolConnect function [ODBC]
 ms.assetid: 41322737-890d-4a81-aed2-06cc3d546962
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
