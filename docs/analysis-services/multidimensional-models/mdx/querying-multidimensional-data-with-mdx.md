@@ -1,19 +1,20 @@
 ---
 title: Abfragen von mehrdimensionalen Daten mit MDX | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: multidimensional data [Analysis Services], querying
+helpviewer_keywords:
+- multidimensional data [Analysis Services], querying
 ms.assetid: e0a5dd60-35a3-4a4f-b36f-52ecea814886
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: Minewiskan
 ms.author: owend
 manager: kfile

@@ -1,23 +1,28 @@
 ---
 title: SQLDescribeCol-Funktion | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLDescribeCol
-apilocation: sqlsrv32.dll
+apiname:
+- SQLDescribeCol
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLDescribeCol
-helpviewer_keywords: SQLDescribeCol function [ODBC]
+f1_keywords:
+- SQLDescribeCol
+helpviewer_keywords:
+- SQLDescribeCol function [ODBC]
 ms.assetid: eddef353-83f3-4a3c-8f24-f9ed888890a4
-caps.latest.revision: "35"
+caps.latest.revision: 35
 author: MightyPen
 ms.author: genemi
 manager: jhubbard

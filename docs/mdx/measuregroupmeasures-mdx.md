@@ -1,20 +1,22 @@
 ---
 title: MeasureGroupMeasures (MDX) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-dev_langs: kbMDX
-helpviewer_keywords: MeasureGroupMeasures function
+dev_langs:
+- kbMDX
+helpviewer_keywords:
+- MeasureGroupMeasures function
 ms.assetid: 69d9b205-1ca7-4741-9ca9-c7926bc87ead
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: Minewiskan
 ms.author: owend
 manager: erikre

@@ -1,19 +1,20 @@
 ---
 title: Konfigurieren des Webportals | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 05/10/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
+ms.service: ''
 ms.component: report-server
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: the web portal [Reporting Services], configuring
+helpviewer_keywords:
+- the web portal [Reporting Services], configuring
 ms.assetid: e918986c-af15-48f6-8178-256aed829c6a
-caps.latest.revision: "28"
+caps.latest.revision: 28
 author: markingmyname
 ms.author: maghan
 manager: kfile

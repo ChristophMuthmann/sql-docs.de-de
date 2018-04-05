@@ -1,19 +1,21 @@
 ---
 title: Herstellen einer Verbindung mit Sqlcmd | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: sqlcmd
+helpviewer_keywords:
+- sqlcmd
 ms.assetid: 61a2ec0d-1bcb-4231-bea0-cff866c21463
-caps.latest.revision: "45"
+caps.latest.revision: 45
 author: MightyPen
 ms.author: genemi
 manager: jhubbard

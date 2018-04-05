@@ -1,23 +1,28 @@
 ---
 title: SQLFreeEnv Funktion | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLFreeEnv
-apilocation: sqlsrv32.dll
+apiname:
+- SQLFreeEnv
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLFreeEnv
-helpviewer_keywords: SQLFreeEnv function [ODBC]
+f1_keywords:
+- SQLFreeEnv
+helpviewer_keywords:
+- SQLFreeEnv function [ODBC]
 ms.assetid: 32000150-e120-445e-b269-43200f813b2a
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard

@@ -1,21 +1,24 @@
 ---
 title: AVG (MDX) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-f1_keywords: AVG
-dev_langs: kbMDX
-helpviewer_keywords: Avg function [MDX]
+f1_keywords:
+- AVG
+dev_langs:
+- kbMDX
+helpviewer_keywords:
+- Avg function [MDX]
 ms.assetid: efe61272-c3eb-4a33-b231-e00c30be16aa
-caps.latest.revision: "42"
+caps.latest.revision: 42
 author: Minewiskan
 ms.author: owend
 manager: erikre

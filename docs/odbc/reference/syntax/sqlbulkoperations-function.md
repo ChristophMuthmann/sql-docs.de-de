@@ -1,23 +1,28 @@
 ---
 title: SQLBulkOperations-Funktion | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLBulkOperations
-apilocation: sqlsrv32.dll
+apiname:
+- SQLBulkOperations
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLBulkOperations
-helpviewer_keywords: SQLBulkOperations function [ODBC]
+f1_keywords:
+- SQLBulkOperations
+helpviewer_keywords:
+- SQLBulkOperations function [ODBC]
 ms.assetid: 7029d0da-b0f2-44e6-9114-50bd96f47196
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
 manager: jhubbard

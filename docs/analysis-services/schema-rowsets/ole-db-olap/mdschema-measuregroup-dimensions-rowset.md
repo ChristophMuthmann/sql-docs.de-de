@@ -1,22 +1,25 @@
 ---
 title: MDSCHEMA_MEASUREGROUP_DIMENSIONS-Rowset | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-apiname: MDSCHEMA_MEASUREGROUP_DIMENSIONS
+apiname:
+- MDSCHEMA_MEASUREGROUP_DIMENSIONS
 apitype: NA
-applies_to: SQL Server 2016 Preview
-helpviewer_keywords: MDSCHEMA_MEASUREGROUP_DIMENSIONS rowset
+applies_to:
+- SQL Server 2016 Preview
+helpviewer_keywords:
+- MDSCHEMA_MEASUREGROUP_DIMENSIONS rowset
 ms.assetid: c731c06a-7382-4e50-ba0e-d8cee3ab4f28
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: Minewiskan
 ms.author: owend
 manager: kfile

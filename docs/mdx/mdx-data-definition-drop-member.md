@@ -1,22 +1,23 @@
 ---
 title: DROP MEMBER-Anweisung (MDX) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DROP
 - Member
 - DROP_MEMBER
 - DROP MEMBER
-dev_langs: kbMDX
+dev_langs:
+- kbMDX
 helpviewer_keywords:
 - deleting calculated members
 - calculated members [MDX]
@@ -24,7 +25,7 @@ helpviewer_keywords:
 - dropping calculated members
 - removing calculated members
 ms.assetid: e9819976-a9ec-4c48-b0b5-3f6938e200f5
-caps.latest.revision: "32"
+caps.latest.revision: 32
 author: Minewiskan
 ms.author: owend
 manager: erikre

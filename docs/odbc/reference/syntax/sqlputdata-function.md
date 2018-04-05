@@ -1,23 +1,28 @@
 ---
 title: SQLPutData-Funktion | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLPutData
-apilocation: sqlsrv32.dll
+apiname:
+- SQLPutData
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLPutData
-helpviewer_keywords: SQLPutData function [ODBC]
+f1_keywords:
+- SQLPutData
+helpviewer_keywords:
+- SQLPutData function [ODBC]
 ms.assetid: 9a60f004-1477-4c54-a20c-7378e1116713
-caps.latest.revision: "28"
+caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
 manager: jhubbard

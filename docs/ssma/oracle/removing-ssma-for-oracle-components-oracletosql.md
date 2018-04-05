@@ -1,19 +1,21 @@
 ---
-title: "Entfernen von SSMA für die Oracle-Clientkomponenten (OracleToSQL) | Microsoft Docs"
+title: Entfernen von SSMA für die Oracle-Clientkomponenten (OracleToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-oracle
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: Uninstalling the Extension Pack
+helpviewer_keywords:
+- Uninstalling the Extension Pack
 ms.assetid: 8b527a56-4e52-487a-9ac9-2320388e6d7d
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro

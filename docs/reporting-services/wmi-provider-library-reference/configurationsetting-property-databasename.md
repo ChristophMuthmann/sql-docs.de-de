@@ -1,22 +1,25 @@
 ---
 title: 'DatabaseName-Eigenschaft (WMI: MSReportServer_ConfigurationSetting) | Microsoft-Dokumentation'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
+ms.service: ''
 ms.component: wmi-provider-library-reference
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: DatabaseName Property
-apilocation: reportingservices.mof
+apiname:
+- DatabaseName Property
+apilocation:
+- reportingservices.mof
 apitype: MOFDef
-helpviewer_keywords: DatabaseName property
+helpviewer_keywords:
+- DatabaseName property
 ms.assetid: 0ec6ef80-3b48-40c1-9618-2326a1d167a5
-caps.latest.revision: "36"
+caps.latest.revision: 36
 author: markingmyname
 ms.author: maghan
 manager: kfile

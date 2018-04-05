@@ -1,19 +1,21 @@
 ---
 title: Wurde ein Resultset erstellt? | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: result sets [ODBC], determining if created
+helpviewer_keywords:
+- result sets [ODBC], determining if created
 ms.assetid: 4a83b8cb-2d57-4e64-b497-80bd587ee1f9
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard

@@ -1,22 +1,25 @@
 ---
 title: DBSCHEMA_TABLES-Rowset | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-apiname: DBSCHEMA_TABLES
+apiname:
+- DBSCHEMA_TABLES
 apitype: NA
-applies_to: SQL Server 2016 Preview
-helpviewer_keywords: DBSCHEMA_TABLES rowset
+applies_to:
+- SQL Server 2016 Preview
+helpviewer_keywords:
+- DBSCHEMA_TABLES rowset
 ms.assetid: 14c16e6b-0aff-4ad1-b98f-cdb7df0f8d73
-caps.latest.revision: "31"
+caps.latest.revision: 31
 author: Minewiskan
 ms.author: owend
 manager: kfile

@@ -1,19 +1,20 @@
 ---
-title: "Unregelmäßige Hierarchien | Microsoft Docs"
-ms.custom: 
+title: Unregelmäßige Hierarchien | Microsoft Docs
+ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: ragged hierarchies [Analysis Services]
+helpviewer_keywords:
+- ragged hierarchies [Analysis Services]
 ms.assetid: e40a5788-7ede-4b0f-93ab-46ca33d0cace
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: Minewiskan
 ms.author: owend
 manager: kfile

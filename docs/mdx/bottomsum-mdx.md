@@ -1,21 +1,24 @@
 ---
 title: BottomSum (MDX) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-f1_keywords: BOTTOMSUM
-dev_langs: kbMDX
-helpviewer_keywords: BottomSum function
+f1_keywords:
+- BOTTOMSUM
+dev_langs:
+- kbMDX
+helpviewer_keywords:
+- BottomSum function
 ms.assetid: b3b10e68-2a36-4c38-85f4-3bb7917d5ae8
-caps.latest.revision: "39"
+caps.latest.revision: 39
 author: Minewiskan
 ms.author: owend
 manager: erikre

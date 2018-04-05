@@ -1,22 +1,25 @@
 ---
 title: DISCOVER_ENUMERATORS-Rowset | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-apiname: DISCOVER_ENUMERATORS
+apiname:
+- DISCOVER_ENUMERATORS
 apitype: NA
-applies_to: SQL Server 2016 Preview
-helpviewer_keywords: DISCOVER_ENUMERATORS rowset
+applies_to:
+- SQL Server 2016 Preview
+helpviewer_keywords:
+- DISCOVER_ENUMERATORS rowset
 ms.assetid: ddc7b13c-3135-4419-8166-eddd459167da
-caps.latest.revision: "31"
+caps.latest.revision: 31
 author: Minewiskan
 ms.author: owend
 manager: kfile

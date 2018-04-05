@@ -1,23 +1,28 @@
 ---
 title: SQLSetParam Funktion | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLSetParam
-apilocation: sqlsrv32.dll
+apiname:
+- SQLSetParam
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLSetParam
-helpviewer_keywords: SQLSetParam function [ODBC]
+f1_keywords:
+- SQLSetParam
+helpviewer_keywords:
+- SQLSetParam function [ODBC]
 ms.assetid: 2ebdc303-3802-443a-8895-69c93dff5618
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard

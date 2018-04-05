@@ -1,23 +1,24 @@
 ---
-title: "Löschen einer Datenquelle im Projektmappen-Explorer (SSAS – mehrdimensional) | Microsoft Docs"
-ms.custom: 
+title: Löschen einer Datenquelle im Projektmappen-Explorer (SSAS – mehrdimensional) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-f1_keywords: sql13.asvs.deleteobjects.f1
+f1_keywords:
+- sql13.asvs.deleteobjects.f1
 helpviewer_keywords:
 - data sources [Analysis Services], deleting
 - deleting data sources
 - removing data sources
 ms.assetid: b45441ef-f909-4736-98b9-cc80d0acac99
-caps.latest.revision: "46"
+caps.latest.revision: 46
 author: Minewiskan
 ms.author: owend
 manager: kfile

@@ -1,24 +1,29 @@
 ---
 title: MeasureGroups-Element (ASSL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-apiname: MeasureGroups Element
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
+apiname:
+- MeasureGroups Element
+apilocation:
+- http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to: SQL Server 2016 Preview
-f1_keywords: MeasureGroups
-helpviewer_keywords: MeasureGroups element
+applies_to:
+- SQL Server 2016 Preview
+f1_keywords:
+- MeasureGroups
+helpviewer_keywords:
+- MeasureGroups element
 ms.assetid: 80e970e9-6ea6-47a9-9e5c-d0f9b01c09c0
-caps.latest.revision: "33"
+caps.latest.revision: 33
 author: Minewiskan
 ms.author: owend
 manager: kfile

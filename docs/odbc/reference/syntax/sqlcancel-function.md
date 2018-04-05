@@ -1,23 +1,28 @@
 ---
 title: SQLCancel-Funktion | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLCancel
-apilocation: sqlsrv32.dll
+apiname:
+- SQLCancel
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLCancel
-helpviewer_keywords: SQLCancel function [ODBC]
+f1_keywords:
+- SQLCancel
+helpviewer_keywords:
+- SQLCancel function [ODBC]
 ms.assetid: ac0b5972-627f-4440-8c5a-0e8da728726d
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
 manager: jhubbard

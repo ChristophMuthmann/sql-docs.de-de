@@ -1,22 +1,23 @@
 ---
 title: Gruppierungsbereich | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
+ms.service: ''
 ms.component: tools
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - "10033"
 - sql13.rtp.rptdesigner.group.f1
-helpviewer_keywords: Grouping Pane dialog box
+helpviewer_keywords:
+- Grouping Pane dialog box
 ms.assetid: 8b4bd0b3-ec97-48f8-8bfb-82a53a2f35a1
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile

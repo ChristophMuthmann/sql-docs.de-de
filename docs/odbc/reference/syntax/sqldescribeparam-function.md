@@ -1,23 +1,28 @@
 ---
 title: SQLDescribeParam-Funktion | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLDescribeParam
-apilocation: sqlsrv32.dll
+apiname:
+- SQLDescribeParam
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLDescribeParam
-helpviewer_keywords: SQLDescribeParam function [ODBC]
+f1_keywords:
+- SQLDescribeParam
+helpviewer_keywords:
+- SQLDescribeParam function [ODBC]
 ms.assetid: 1f5b63c4-2f3e-44da-b155-876405302281
-caps.latest.revision: "28"
+caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
 manager: jhubbard

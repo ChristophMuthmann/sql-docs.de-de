@@ -1,19 +1,21 @@
 ---
 title: ODBC-SQL-Grammatik | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: interoperability [ODBC], SQL grammar
+helpviewer_keywords:
+- interoperability [ODBC], SQL grammar
 ms.assetid: 301817a7-d656-4078-b95f-e5b8099d4be4
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard

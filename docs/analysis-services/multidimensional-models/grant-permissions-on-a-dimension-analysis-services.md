@@ -1,24 +1,25 @@
 ---
-title: "Erteilen von Berechtigungen für eine Dimension (Analysis Services) | Microsoft Docs"
-ms.custom: 
+title: Erteilen von Berechtigungen für eine Dimension (Analysis Services) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-f1_keywords: sql13.asvs.roledesignerdialog.dimensions.f1
+f1_keywords:
+- sql13.asvs.roledesignerdialog.dimensions.f1
 helpviewer_keywords:
 - dimensions [Analysis Services], security
 - read/write permissions
 - user access rights [Analysis Services], dimensions
 - permissions [Analysis Services], dimensions
 ms.assetid: be5b2746-0336-4b12-827e-131462bdf605
-caps.latest.revision: "39"
+caps.latest.revision: 39
 author: Minewiskan
 ms.author: owend
 manager: kfile

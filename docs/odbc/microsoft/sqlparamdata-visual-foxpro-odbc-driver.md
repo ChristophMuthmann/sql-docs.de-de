@@ -1,19 +1,21 @@
 ---
 title: SQLParamData (Visual FoxPro-ODBC-Treiber) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: SQLParamData function [ODBC], Visual FoxPro ODBC Driver
+helpviewer_keywords:
+- SQLParamData function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: a2308f6c-2fa1-47e9-903f-37c2a03c723a
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard

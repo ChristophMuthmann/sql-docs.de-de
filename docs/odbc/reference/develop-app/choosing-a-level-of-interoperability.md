@@ -1,19 +1,21 @@
 ---
-title: "Wählen ein Maß an Interoperabilität | Microsoft Docs"
-ms.custom: 
+title: Wählen ein Maß an Interoperabilität | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: interoperability [ODBC], levels
+helpviewer_keywords:
+- interoperability [ODBC], levels
 ms.assetid: 1f915832-a7c1-41cd-8c4f-bf6d976951b0
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard

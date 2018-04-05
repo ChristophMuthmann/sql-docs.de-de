@@ -1,19 +1,21 @@
 ---
-title: "Löschen - SQL-Befehl | Microsoft Docs"
-ms.custom: 
+title: Löschen - SQL-Befehl | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: DELETE [ODBC]
+helpviewer_keywords:
+- DELETE [ODBC]
 ms.assetid: 0d5bd477-626f-4f22-a05a-f531d9f8c5e7
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard

@@ -1,22 +1,24 @@
 ---
-title: "Ausführen eines erzwungenen manuellen Failovers einer Verfügbarkeitsgruppe (SQL Server) | Microsoft-Dokumentation"
-ms.custom: 
+title: Ausführen eines erzwungenen manuellen Failovers einer Verfügbarkeitsgruppe (SQL Server) | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: availability-groups
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
-f1_keywords: sql13.swb.availabilitygroup.forcefailover.f1
+f1_keywords:
+- sql13.swb.availabilitygroup.forcefailover.f1
 helpviewer_keywords:
 - Availability Groups [SQL Server], failover
 - failover [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 222288fe-ffc0-4567-b624-5d91485d70f0
-caps.latest.revision: "83"
+caps.latest.revision: 83
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

@@ -1,23 +1,28 @@
 ---
 title: SQLDriverToDataSource Funktion | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLDriverToDataSource
-apilocation: sqlsrv32.dll
+apiname:
+- SQLDriverToDataSource
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLDriverToDataSource
-helpviewer_keywords: SQLDriverToDataSource function [ODBC]
+f1_keywords:
+- SQLDriverToDataSource
+helpviewer_keywords:
+- SQLDriverToDataSource function [ODBC]
 ms.assetid: 0de28eb5-8aa9-43e4-a87f-7dbcafe800dc
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard

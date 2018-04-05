@@ -1,23 +1,28 @@
 ---
 title: SQLNumParams-Funktion | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLNumParams
-apilocation: sqlsrv32.dll
+apiname:
+- SQLNumParams
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLNumParams
-helpviewer_keywords: SQLNumParams function [ODBC]
+f1_keywords:
+- SQLNumParams
+helpviewer_keywords:
+- SQLNumParams function [ODBC]
 ms.assetid: dbf2da44-253b-4094-bd6b-29bafc23c7a3
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
 manager: jhubbard

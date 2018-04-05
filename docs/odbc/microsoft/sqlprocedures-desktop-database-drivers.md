@@ -1,19 +1,21 @@
 ---
 title: SQLProcedures (Desktop-Datenbanktreiber) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: SQLProcedures function [ODBC], Desktop Database Drivers
+helpviewer_keywords:
+- SQLProcedures function [ODBC], Desktop Database Drivers
 ms.assetid: c996ad6f-e790-40f4-a962-843422496149
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard

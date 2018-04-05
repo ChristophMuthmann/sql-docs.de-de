@@ -1,21 +1,24 @@
 ---
 title: DefaultMember (MDX) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-f1_keywords: DefaultMember
-dev_langs: kbMDX
-helpviewer_keywords: DefaultMember function
+f1_keywords:
+- DefaultMember
+dev_langs:
+- kbMDX
+helpviewer_keywords:
+- DefaultMember function
 ms.assetid: c1b53b3a-6e73-4c41-a4fe-9f5c96da5463
-caps.latest.revision: "32"
+caps.latest.revision: 32
 author: Minewiskan
 ms.author: owend
 manager: erikre

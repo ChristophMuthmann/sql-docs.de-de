@@ -1,20 +1,22 @@
 ---
-title: "Tabelle für SoapException-Fehler | Microsoft-Dokumentation"
-ms.custom: 
+title: Tabelle für SoapException-Fehler | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
+ms.service: ''
 ms.component: report-server-web-service-net-framework-exception-handling
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
-helpviewer_keywords: SoapException class
+applies_to:
+- SQL Server 2016 Preview
+helpviewer_keywords:
+- SoapException class
 ms.assetid: 3dbf1b5a-bd2a-4385-925d-5d095d72014c
-caps.latest.revision: "32"
+caps.latest.revision: 32
 author: markingmyname
 ms.author: maghan
 manager: kfile

@@ -1,19 +1,20 @@
 ---
-title: "Servereigenschaften (Seite „Allgemein“) | Microsoft-Dokumentation"
-ms.custom: 
+title: Servereigenschaften (Seite „Allgemein“) | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 06/08/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
+ms.service: ''
 ms.component: tools
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-f1_keywords: sql13.swb.reportserver.serverproperties.general.f1
+f1_keywords:
+- sql13.swb.reportserver.serverproperties.general.f1
 ms.assetid: 23537d52-4356-450f-a671-5921cef2431f
-caps.latest.revision: "34"
+caps.latest.revision: 34
 author: markingmyname
 ms.author: maghan
 manager: kfile

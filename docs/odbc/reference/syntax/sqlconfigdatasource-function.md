@@ -1,23 +1,28 @@
 ---
 title: SQLConfigDataSource-Funktion | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLConfigDataSource
-apilocation: sqlsrv32.dll
+apiname:
+- SQLConfigDataSource
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLConfigDataSource
-helpviewer_keywords: SQLConfigDataSource function [ODBC]
+f1_keywords:
+- SQLConfigDataSource
+helpviewer_keywords:
+- SQLConfigDataSource function [ODBC]
 ms.assetid: f8d6e342-c010-434e-b1cd-f5371fb50a14
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: jhubbard

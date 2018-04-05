@@ -1,23 +1,28 @@
 ---
 title: SQLParamData-Funktion | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLParamData
-apilocation: sqlsrv32.dll
+apiname:
+- SQLParamData
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLParamData
-helpviewer_keywords: SQLParamData function [ODBC]
+f1_keywords:
+- SQLParamData
+helpviewer_keywords:
+- SQLParamData function [ODBC]
 ms.assetid: 68fe010d-9539-4e5b-a260-c8d32423b1db
-caps.latest.revision: "26"
+caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
 manager: jhubbard

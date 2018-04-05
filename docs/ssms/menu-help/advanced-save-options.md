@@ -1,20 +1,23 @@
 ---
 title: Erweiterte Speicheroptionen | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-menu
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
-f1_keywords: vs.advancedsaveoptions
-helpviewer_keywords: Advanced Save Options dialog box
+f1_keywords:
+- vs.advancedsaveoptions
+helpviewer_keywords:
+- Advanced Save Options dialog box
 ms.assetid: 6e11159f-df1f-4681-9b37-c4a5e5f2fca1
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg

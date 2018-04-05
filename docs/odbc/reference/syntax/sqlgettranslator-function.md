@@ -1,23 +1,28 @@
 ---
 title: SQLGetTranslator Funktion | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLGetTranslator
-apilocation: sqlsrv32.dll
+apiname:
+- SQLGetTranslator
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLGetTranslator
-helpviewer_keywords: SQLGetTranslator function [ODBC]
+f1_keywords:
+- SQLGetTranslator
+helpviewer_keywords:
+- SQLGetTranslator function [ODBC]
 ms.assetid: 33879db3-5ef9-4585-9be5-69376157e017
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard

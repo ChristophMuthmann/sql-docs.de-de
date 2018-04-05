@@ -1,19 +1,20 @@
 ---
-title: "Data Mining-Abfragen, Tasks und Anweisungen für | Microsoft Docs"
-ms.custom: 
+title: Data Mining-Abfragen, Tasks und Anweisungen für | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: mining models [Analysis Services], how-to topics
+helpviewer_keywords:
+- mining models [Analysis Services], how-to topics
 ms.assetid: 1bc2a775-6e62-4c66-a53c-201f2ea66295
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: Minewiskan
 ms.author: owend
 manager: kfile

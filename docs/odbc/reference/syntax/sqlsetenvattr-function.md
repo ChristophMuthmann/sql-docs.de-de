@@ -1,23 +1,28 @@
 ---
 title: SQLSetEnvAttr-Funktion | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLSetEnvAttr
-apilocation: sqlsrv32.dll
+apiname:
+- SQLSetEnvAttr
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLSetEnvAttr
-helpviewer_keywords: SQLSetEnvAttr function [ODBC]
+f1_keywords:
+- SQLSetEnvAttr
+helpviewer_keywords:
+- SQLSetEnvAttr function [ODBC]
 ms.assetid: 0343241c-4b15-4d4b-aa2b-2e8ab5215cd2
-caps.latest.revision: "38"
+caps.latest.revision: 38
 author: MightyPen
 ms.author: genemi
 manager: jhubbard

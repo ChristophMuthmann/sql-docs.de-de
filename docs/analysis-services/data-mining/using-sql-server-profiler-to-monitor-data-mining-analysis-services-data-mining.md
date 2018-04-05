@@ -1,19 +1,20 @@
 ---
-title: "SQL Server Profiler zum Überwachen von Datamining mit | Microsoft Docs"
-ms.custom: 
+title: SQL Server Profiler zum Überwachen von Datamining mit | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: Profiler [SQL Server Profiler], Analysis Services
+helpviewer_keywords:
+- Profiler [SQL Server Profiler], Analysis Services
 ms.assetid: 655ac93c-5c5c-4565-914b-915327f7d349
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: Minewiskan
 ms.author: owend
 manager: kfile

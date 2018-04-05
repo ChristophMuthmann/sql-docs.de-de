@@ -1,23 +1,28 @@
 ---
 title: SQLAllocEnv Funktion | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLAllocEnv
-apilocation: sqlsrv32.dll
+apiname:
+- SQLAllocEnv
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLAllocEnv
-helpviewer_keywords: SQLAllocEnv function [ODBC]
+f1_keywords:
+- SQLAllocEnv
+helpviewer_keywords:
+- SQLAllocEnv function [ODBC]
 ms.assetid: 00bac0c1-346b-4e48-901a-06ba4557b944
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard

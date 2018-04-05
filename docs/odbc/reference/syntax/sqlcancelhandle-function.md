@@ -1,20 +1,23 @@
 ---
 title: SQLCancelHandle Funktion | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-f1_keywords: SQLCancelHandle
-helpviewer_keywords: SQLCancelHandle function [ODBC]
+f1_keywords:
+- SQLCancelHandle
+helpviewer_keywords:
+- SQLCancelHandle function [ODBC]
 ms.assetid: 16049b5b-22a7-4640-9897-c25dd0f19d21
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: jhubbard

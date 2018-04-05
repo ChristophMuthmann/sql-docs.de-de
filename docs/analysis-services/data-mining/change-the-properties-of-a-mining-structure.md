@@ -1,19 +1,20 @@
 ---
-title: "Ändern der Eigenschaften einer Miningstruktur | Microsoft Docs"
-ms.custom: 
+title: Ändern der Eigenschaften einer Miningstruktur | Microsoft Docs
+ms.custom: ''
 ms.date: 03/13/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: mining structures [Analysis Services], properties
+helpviewer_keywords:
+- mining structures [Analysis Services], properties
 ms.assetid: 03b16897-2e36-42b8-9f7d-db1b9b898401
-caps.latest.revision: "28"
+caps.latest.revision: 28
 author: Minewiskan
 ms.author: owend
 manager: kfile

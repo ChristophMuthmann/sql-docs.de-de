@@ -1,24 +1,27 @@
 ---
-title: "XQuery-Operatoren für den Xml-Datentyp | Microsoft Docs"
-ms.custom: 
+title: XQuery-Operatoren für den Xml-Datentyp | Microsoft Docs
+ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
-ms.service: 
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to: SQL Server
-dev_langs: XML
+applies_to:
+- SQL Server
+dev_langs:
+- XML
 helpviewer_keywords:
 - XQuery, operators
 - operators [XQuery]
 - xml data type [SQL Server], XQuery
 ms.assetid: 39ca3d2e-e928-4333-872b-75c4ccde8e79
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard

@@ -1,23 +1,28 @@
 ---
 title: SQLFreeHandle-Funktion | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLFreeHandle
-apilocation: sqlsrv32.dll
+apiname:
+- SQLFreeHandle
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLFreeHandle
-helpviewer_keywords: SQLFreeHandle function [ODBC]
+f1_keywords:
+- SQLFreeHandle
+helpviewer_keywords:
+- SQLFreeHandle function [ODBC]
 ms.assetid: 17a6fcdc-b05a-4de7-be93-a316f39696a1
-caps.latest.revision: "35"
+caps.latest.revision: 35
 author: MightyPen
 ms.author: genemi
 manager: jhubbard

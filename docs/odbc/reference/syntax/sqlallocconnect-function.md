@@ -1,23 +1,28 @@
 ---
 title: SQLAllocConnect Funktion | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLAllocConnect
-apilocation: sqlsrv32.dll
+apiname:
+- SQLAllocConnect
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLAllocConnect
-helpviewer_keywords: SQLAllocConnect function [ODBC]
+f1_keywords:
+- SQLAllocConnect
+helpviewer_keywords:
+- SQLAllocConnect function [ODBC]
 ms.assetid: ca119958-ff72-42d4-b0ac-b1ca3212c705
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard

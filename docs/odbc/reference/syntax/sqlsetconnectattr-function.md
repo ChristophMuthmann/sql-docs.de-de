@@ -1,23 +1,28 @@
 ---
 title: SQLSetConnectAttr-Funktion | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLSetConnectAttr
-apilocation: sqlsrv32.dll
+apiname:
+- SQLSetConnectAttr
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLSetConnectAttr
-helpviewer_keywords: SQLSetConnectAttr function [ODBC]
+f1_keywords:
+- SQLSetConnectAttr
+helpviewer_keywords:
+- SQLSetConnectAttr function [ODBC]
 ms.assetid: 97fc7445-5a66-4eb9-8e77-10990b5fd685
-caps.latest.revision: "83"
+caps.latest.revision: 83
 author: MightyPen
 ms.author: genemi
 manager: jhubbard

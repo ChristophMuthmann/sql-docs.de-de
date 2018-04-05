@@ -1,23 +1,24 @@
 ---
-title: "Benutzeroberfläche des relationalen Abfrage-Designers (Berichts-Generator) | Microsoft-Dokumentation"
-ms.custom: 
+title: Benutzeroberfläche des relationalen Abfrage-Designers (Berichts-Generator) | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
+ms.service: ''
 ms.component: report-data
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-f1_keywords: "10012"
+f1_keywords:
+- "10012"
 helpviewer_keywords:
 - query designers
 - accessing data, query designer
 - relational query designer
 ms.assetid: cd5fa70c-5218-40d5-9ae6-02d798b5c485
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: markingmyname
 ms.author: maghan
 manager: kfile

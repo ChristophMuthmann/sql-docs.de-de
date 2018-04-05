@@ -1,19 +1,21 @@
 ---
-title: "Starten der Datenverschiebung auf einer sekundären Always On-Datenbank (SQL Server) | Microsoft-Dokumentation"
-ms.custom: 
+title: Starten der Datenverschiebung auf einer sekundären Always On-Datenbank (SQL Server) | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: availability-groups
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: Availability Groups [SQL Server], databases
+helpviewer_keywords:
+- Availability Groups [SQL Server], databases
 ms.assetid: 498eb3fb-6a43-434d-ad95-68a754232c45
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

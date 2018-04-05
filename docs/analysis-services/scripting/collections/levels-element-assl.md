@@ -1,24 +1,29 @@
 ---
 title: Level-Element (ASSL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-apiname: Levels Element
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
+apiname:
+- Levels Element
+apilocation:
+- http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to: SQL Server 2016 Preview
-f1_keywords: Levels
-helpviewer_keywords: Levels element
+applies_to:
+- SQL Server 2016 Preview
+f1_keywords:
+- Levels
+helpviewer_keywords:
+- Levels element
 ms.assetid: a9dd4890-a5da-48e7-9bbf-f857107cde8d
-caps.latest.revision: "31"
+caps.latest.revision: 31
 author: Minewiskan
 ms.author: owend
 manager: kfile

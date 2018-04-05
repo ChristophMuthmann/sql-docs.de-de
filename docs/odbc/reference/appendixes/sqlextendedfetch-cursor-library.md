@@ -1,19 +1,21 @@
 ---
 title: SQLExtendedFetch (Cursorbibliothek) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: SQLExtendedFetch function [ODBC], Cursor Library
+helpviewer_keywords:
+- SQLExtendedFetch function [ODBC], Cursor Library
 ms.assetid: 06fbf06f-127b-475c-b636-7b784918475d
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard

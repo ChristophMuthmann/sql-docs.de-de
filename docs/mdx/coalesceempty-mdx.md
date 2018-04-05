@@ -1,21 +1,24 @@
 ---
 title: CoalesceEmpty (MDX) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-f1_keywords: COALESCEEMPTY
-dev_langs: kbMDX
-helpviewer_keywords: CoalesceEmpty function
+f1_keywords:
+- COALESCEEMPTY
+dev_langs:
+- kbMDX
+helpviewer_keywords:
+- CoalesceEmpty function
 ms.assetid: c00dd739-44bc-4af6-9871-c7e1e3f3e5ba
-caps.latest.revision: "39"
+caps.latest.revision: 39
 author: Minewiskan
 ms.author: owend
 manager: erikre

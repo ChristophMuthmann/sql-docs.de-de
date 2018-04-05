@@ -1,23 +1,28 @@
 ---
 title: SQLParamOptions Funktion | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLParamOptions
-apilocation: sqlsrv32.dll
+apiname:
+- SQLParamOptions
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLParamOptions
-helpviewer_keywords: SQLParamOptions function [ODBC]
+f1_keywords:
+- SQLParamOptions
+helpviewer_keywords:
+- SQLParamOptions function [ODBC]
 ms.assetid: ee08e987-0243-4060-ab21-64da11fe444f
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard

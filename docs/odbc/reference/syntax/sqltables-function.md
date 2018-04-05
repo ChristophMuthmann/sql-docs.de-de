@@ -1,23 +1,28 @@
 ---
 title: SQLTables-Funktion | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLTables
-apilocation: sqlsrv32.dll
+apiname:
+- SQLTables
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLTables
-helpviewer_keywords: SQLTables function [ODBC]
+f1_keywords:
+- SQLTables
+helpviewer_keywords:
+- SQLTables function [ODBC]
 ms.assetid: 60d5068a-7d7c-447c-acc6-f3f2cf73440c
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
 manager: jhubbard

@@ -1,23 +1,28 @@
 ---
 title: Funktion SQLSetConnectOption | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLSetConnectOption
-apilocation: sqlsrv32.dll
+apiname:
+- SQLSetConnectOption
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLSetConnectOption
-helpviewer_keywords: SQLSetConnectOption function [ODBC]
+f1_keywords:
+- SQLSetConnectOption
+helpviewer_keywords:
+- SQLSetConnectOption function [ODBC]
 ms.assetid: 8cd2c2a2-25c8-4aff-951c-b593bbfc90ad
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: jhubbard

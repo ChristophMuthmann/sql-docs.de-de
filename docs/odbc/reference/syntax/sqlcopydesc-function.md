@@ -1,23 +1,28 @@
 ---
 title: SQLCopyDesc Funktion | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLCopyDesc
-apilocation: sqlsrv32.dll
+apiname:
+- SQLCopyDesc
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLCopyDesc
-helpviewer_keywords: SQLCopyDesc function [ODBC]
+f1_keywords:
+- SQLCopyDesc
+helpviewer_keywords:
+- SQLCopyDesc function [ODBC]
 ms.assetid: d5450895-3824-44c4-8aa4-d4f9752a9602
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: jhubbard

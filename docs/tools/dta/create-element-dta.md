@@ -1,20 +1,23 @@
 ---
 title: Create-Element (DTA) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: dta
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
-dev_langs: XML
-helpviewer_keywords: Create element (DTA)
+dev_langs:
+- XML
+helpviewer_keywords:
+- Create element (DTA)
 ms.assetid: 9d076c90-f933-45f4-b6d9-447793f6528b
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg

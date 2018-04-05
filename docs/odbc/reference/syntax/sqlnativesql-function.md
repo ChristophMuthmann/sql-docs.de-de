@@ -1,23 +1,28 @@
 ---
 title: SQLNativeSql-Funktion | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLNativeSql
-apilocation: sqlsrv32.dll
+apiname:
+- SQLNativeSql
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLNativeSql
-helpviewer_keywords: SQLNativeSql function [ODBC]
+f1_keywords:
+- SQLNativeSql
+helpviewer_keywords:
+- SQLNativeSql function [ODBC]
 ms.assetid: b8efc247-27ab-4a00-92b6-1400785783fe
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
 manager: jhubbard

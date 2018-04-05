@@ -1,20 +1,23 @@
 ---
 title: Anzeigen von Optimierungsberichten | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: dta
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-query-tuning
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-query-tuning
+ms.tgt_pltfrm: ''
 ms.topic: article
-applies_to: SQL Server 2016
-helpviewer_keywords: tuning reports [SQL Server]
+applies_to:
+- SQL Server 2016
+helpviewer_keywords:
+- tuning reports [SQL Server]
 ms.assetid: daee6143-269f-428b-8458-9a3e726d586c
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg

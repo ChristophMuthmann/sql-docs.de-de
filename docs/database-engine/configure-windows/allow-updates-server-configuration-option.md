@@ -1,19 +1,21 @@
 ---
 title: Updates zulassen (Serverkonfigurationsoption) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: configure-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: allow updates option
+helpviewer_keywords:
+- allow updates option
 ms.assetid: 3967c3ed-280a-4de8-a2ce-393e82745a7b
-caps.latest.revision: "32"
+caps.latest.revision: 32
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

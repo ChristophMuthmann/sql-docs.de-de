@@ -1,19 +1,20 @@
 ---
-title: "Servereigenschaften (Seite „Verlauf“)|Microsoft-Dokumentation"
-ms.custom: 
+title: Servereigenschaften (Seite „Verlauf“)|Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
+ms.service: ''
 ms.component: tools
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-f1_keywords: sql13.swb.reportserver.serverproperties.history.f1
+f1_keywords:
+- sql13.swb.reportserver.serverproperties.history.f1
 ms.assetid: be9d8018-a46f-4625-9ae1-138ebe6b38ba
-caps.latest.revision: "30"
+caps.latest.revision: 30
 author: markingmyname
 ms.author: maghan
 manager: kfile

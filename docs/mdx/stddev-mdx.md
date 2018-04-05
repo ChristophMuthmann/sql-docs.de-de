@@ -1,21 +1,24 @@
 ---
 title: STDDEV (MDX) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-f1_keywords: STDDEV
-dev_langs: kbMDX
-helpviewer_keywords: Stddev function
+f1_keywords:
+- STDDEV
+dev_langs:
+- kbMDX
+helpviewer_keywords:
+- Stddev function
 ms.assetid: f08f8982-69ed-4d0e-925c-35ed030679d0
-caps.latest.revision: "25"
+caps.latest.revision: 25
 author: Minewiskan
 ms.author: owend
 manager: erikre

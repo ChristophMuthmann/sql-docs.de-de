@@ -1,23 +1,28 @@
 ---
 title: ConfigDSN Funktion | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: ConfigDSN
-apilocation: sqlsrv32.dll
+apiname:
+- ConfigDSN
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: ConfigDSN
-helpviewer_keywords: ConfigDSN [ODBC]
+f1_keywords:
+- ConfigDSN
+helpviewer_keywords:
+- ConfigDSN [ODBC]
 ms.assetid: 01ced74e-c575-4a25-83f5-bd7d918123f8
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: jhubbard

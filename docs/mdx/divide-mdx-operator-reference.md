@@ -1,23 +1,25 @@
 ---
 title: (Division) (MDX) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-f1_keywords: /
-dev_langs: kbMDX
+f1_keywords:
+- /
+dev_langs:
+- kbMDX
 helpviewer_keywords:
 - / (divide)
 - divide operator (/)
 ms.assetid: 42b7d3ea-234d-41b3-a849-f457be6d7972
-caps.latest.revision: "34"
+caps.latest.revision: 34
 author: Minewiskan
 ms.author: owend
 manager: erikre

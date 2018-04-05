@@ -1,23 +1,28 @@
 ---
 title: SQLGetDiagField-Funktion | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLGetDiagField
-apilocation: sqlsrv32.dll
+apiname:
+- SQLGetDiagField
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLGetDiagField
-helpviewer_keywords: SQLGetDiagField function [ODBC]
+f1_keywords:
+- SQLGetDiagField
+helpviewer_keywords:
+- SQLGetDiagField function [ODBC]
 ms.assetid: 1dbc4398-97a8-4585-bb77-1f7ea75e24c4
-caps.latest.revision: "26"
+caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
 manager: jhubbard

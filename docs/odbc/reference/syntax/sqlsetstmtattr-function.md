@@ -1,23 +1,28 @@
 ---
 title: SQLSetStmtAttr-Funktion | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLSetStmtAttr
-apilocation: sqlsrv32.dll
+apiname:
+- SQLSetStmtAttr
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLSetStmtAttr
-helpviewer_keywords: SQLSetStmtAttr function [ODBC]
+f1_keywords:
+- SQLSetStmtAttr
+helpviewer_keywords:
+- SQLSetStmtAttr function [ODBC]
 ms.assetid: 7abc5260-733a-48d4-9974-2d1a6a9ea5f6
-caps.latest.revision: "32"
+caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
 manager: jhubbard

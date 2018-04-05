@@ -1,23 +1,28 @@
 ---
 title: SQLFetch-Funktion | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLFetch
-apilocation: sqlsrv32.dll
+apiname:
+- SQLFetch
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLFetch
-helpviewer_keywords: SQLFetch function [ODBC]
+f1_keywords:
+- SQLFetch
+helpviewer_keywords:
+- SQLFetch function [ODBC]
 ms.assetid: 6c6611d2-bc6a-4390-87c9-1c5dd9cfe07c
-caps.latest.revision: "27"
+caps.latest.revision: 27
 author: MightyPen
 ms.author: genemi
 manager: jhubbard

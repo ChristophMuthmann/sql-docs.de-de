@@ -1,17 +1,18 @@
 ---
 title: Erteilen von benutzerdefiniertem Zugriff auf Zellendaten (Analysis Services) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-f1_keywords: sql13.asvs.roledesignerdialog.celldata.f1
+f1_keywords:
+- sql13.asvs.roledesignerdialog.celldata.f1
 helpviewer_keywords:
 - user access rights [Analysis Services], cell data
 - permissions [Analysis Services], cells
@@ -20,7 +21,7 @@ helpviewer_keywords:
 - cells [Analysis Services]
 - custom cell data access [Analysis Services]
 ms.assetid: 3b13a4ae-f3df-4523-bd30-b3fdf71e95cf
-caps.latest.revision: "31"
+caps.latest.revision: 31
 author: Minewiskan
 ms.author: owend
 manager: kfile

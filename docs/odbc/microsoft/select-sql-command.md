@@ -1,19 +1,21 @@
 ---
-title: "Wählen Sie-SQL-Befehl | Microsoft Docs"
-ms.custom: 
+title: Wählen Sie-SQL-Befehl | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: select [ODBC]
+helpviewer_keywords:
+- select [ODBC]
 ms.assetid: 2149c3ca-3a71-446d-8d53-3d056e2f301a
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard

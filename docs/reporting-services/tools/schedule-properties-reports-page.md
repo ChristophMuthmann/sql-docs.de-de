@@ -1,19 +1,20 @@
 ---
 title: Zeitplaneigenschaften (Registerkarte Berichte) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 06/30/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
+ms.service: ''
 ms.component: tools
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-f1_keywords: sql13.swb.reportserver.scheduleproperties.reports.f1
+f1_keywords:
+- sql13.swb.reportserver.scheduleproperties.reports.f1
 ms.assetid: 7db728bd-4b08-43ef-a49a-e8dcdd37cf89
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: markingmyname
 ms.author: maghan
 manager: kfile

@@ -1,22 +1,24 @@
 ---
-title: "Änderungen speichern | Microsoft-Dokumentation"
-ms.custom: 
+title: Änderungen speichern | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-menu
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.file.close.f1
 - VS.SaveChangesDlg
-helpviewer_keywords: Save Changes dialog box
+helpviewer_keywords:
+- Save Changes dialog box
 ms.assetid: abe17944-c538-4106-a18b-ade5e2d8e20f
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg

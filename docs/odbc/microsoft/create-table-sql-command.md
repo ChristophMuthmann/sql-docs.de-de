@@ -1,19 +1,21 @@
 ---
 title: Erstellen der Tabelle - SQL-Befehl | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: CREATE TABLE [ODBC]
+helpviewer_keywords:
+- CREATE TABLE [ODBC]
 ms.assetid: be2143ba-fc16-42c9-84f7-8985cd924860
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard

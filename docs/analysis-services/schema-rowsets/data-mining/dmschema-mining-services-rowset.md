@@ -1,22 +1,25 @@
 ---
 title: DMSCHEMA_MINING_SERVICES-Rowset | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-apiname: DMSCHEMA_MINING_SERVICES
+apiname:
+- DMSCHEMA_MINING_SERVICES
 apitype: NA
-applies_to: SQL Server 2016 Preview
-helpviewer_keywords: DMSCHEMA_MINING_SERVICES rowset
+applies_to:
+- SQL Server 2016 Preview
+helpviewer_keywords:
+- DMSCHEMA_MINING_SERVICES rowset
 ms.assetid: 4a672f2f-d637-4def-a572-c18556f83d34
-caps.latest.revision: "35"
+caps.latest.revision: 35
 author: Minewiskan
 ms.author: owend
 manager: kfile

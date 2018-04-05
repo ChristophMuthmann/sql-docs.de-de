@@ -1,21 +1,24 @@
 ---
 title: Members (Menge) (MDX) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-f1_keywords: Members
-dev_langs: kbMDX
-helpviewer_keywords: Members function
+f1_keywords:
+- Members
+dev_langs:
+- kbMDX
+helpviewer_keywords:
+- Members function
 ms.assetid: 0c4d5bb9-500b-47ce-b7fc-f5a10e2400e0
-caps.latest.revision: "33"
+caps.latest.revision: 33
 author: Minewiskan
 ms.author: owend
 manager: erikre

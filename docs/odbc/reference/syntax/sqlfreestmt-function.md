@@ -1,23 +1,28 @@
 ---
 title: SQLFreeStmt-Funktion | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLFreeStmt
-apilocation: sqlsrv32.dll
+apiname:
+- SQLFreeStmt
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLFreeStmt
-helpviewer_keywords: SQLFreeStmt function [ODBC]
+f1_keywords:
+- SQLFreeStmt
+helpviewer_keywords:
+- SQLFreeStmt function [ODBC]
 ms.assetid: 03408162-8b63-4470-90c4-e6c7d8d33892
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: jhubbard

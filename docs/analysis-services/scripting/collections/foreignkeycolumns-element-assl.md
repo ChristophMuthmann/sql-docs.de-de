@@ -1,24 +1,29 @@
 ---
 title: ForeignKeyColumns-Element (ASSL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-apiname: ForeignKeyColumns Element
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
+apiname:
+- ForeignKeyColumns Element
+apilocation:
+- http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to: SQL Server 2016 Preview
-f1_keywords: ForeignKeyColumns
-helpviewer_keywords: ForeignKeyColumns element
+applies_to:
+- SQL Server 2016 Preview
+f1_keywords:
+- ForeignKeyColumns
+helpviewer_keywords:
+- ForeignKeyColumns element
 ms.assetid: 0a673c1a-73dd-4217-aa41-56b340b5e1ab
-caps.latest.revision: "30"
+caps.latest.revision: 30
 author: Minewiskan
 ms.author: owend
 manager: kfile

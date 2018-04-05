@@ -1,24 +1,29 @@
 ---
 title: AggregationDesignDimension-Datentyp (ASSL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-apiname: AggregationDesignDimension Data Type
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
+apiname:
+- AggregationDesignDimension Data Type
+apilocation:
+- http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to: SQL Server 2016 Preview
-f1_keywords: AggregationDesignDimension
-helpviewer_keywords: AggregationDesignDimension data type
+applies_to:
+- SQL Server 2016 Preview
+f1_keywords:
+- AggregationDesignDimension
+helpviewer_keywords:
+- AggregationDesignDimension data type
 ms.assetid: 06a0d418-014c-4f40-a63a-5cfeee3f6a41
-caps.latest.revision: "39"
+caps.latest.revision: 39
 author: Minewiskan
 ms.author: owend
 manager: kfile

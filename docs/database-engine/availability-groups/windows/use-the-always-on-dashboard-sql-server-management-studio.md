@@ -1,22 +1,24 @@
 ---
-title: "Verwenden des Verfügbarkeitsgruppen-Dashboards von Always On (SQL Server Management Studio) | Microsoft-Dokumentation"
-ms.custom: 
+title: Verwenden des Verfügbarkeitsgruppen-Dashboards von Always On (SQL Server Management Studio) | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 10/30/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: availability-groups
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
-f1_keywords: sql13.swb.agdashboard.f1
+f1_keywords:
+- sql13.swb.agdashboard.f1
 helpviewer_keywords:
 - Availability Groups [SQL Server], policies
 - Availability Groups [SQL Server], dashboard
 ms.assetid: c9ba2589-139e-42bc-99e1-94546717c64d
-caps.latest.revision: "30"
+caps.latest.revision: 30
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

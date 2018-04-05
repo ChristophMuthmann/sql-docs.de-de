@@ -1,19 +1,21 @@
 ---
 title: SQLGetData (Cursorbibliothek) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: SQLGetData function [ODBC], Cursor Library
+helpviewer_keywords:
+- SQLGetData function [ODBC], Cursor Library
 ms.assetid: ff40c9c0-b847-4426-a099-1bff47e6e872
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard

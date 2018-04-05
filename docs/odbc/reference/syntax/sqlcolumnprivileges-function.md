@@ -1,23 +1,28 @@
 ---
 title: SQLColumnPrivileges-Funktion | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLColumnPrivileges
-apilocation: sqlsrv32.dll
+apiname:
+- SQLColumnPrivileges
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLColumnPrivileges
-helpviewer_keywords: SQLColumnPrivileges function [ODBC]
+f1_keywords:
+- SQLColumnPrivileges
+helpviewer_keywords:
+- SQLColumnPrivileges function [ODBC]
 ms.assetid: ef233d9a-6ed5-4986-9d42-5e0b1a79fb6e
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: jhubbard

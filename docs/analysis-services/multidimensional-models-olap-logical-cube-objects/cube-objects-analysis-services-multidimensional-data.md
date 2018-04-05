@@ -1,20 +1,22 @@
 ---
-title: "Cubeobjekte (Analysis Services – mehrdimensionale Daten) | Microsoft Docs"
-ms.custom: 
+title: Cubeobjekte (Analysis Services – mehrdimensionale Daten) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
-helpviewer_keywords: cubes [Analysis Services], objects
+applies_to:
+- SQL Server 2016 Preview
+helpviewer_keywords:
+- cubes [Analysis Services], objects
 ms.assetid: 5cee362e-3f95-4467-bc6c-29b1518ecbf3
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: Minewiskan
 ms.author: owend
 manager: kfile

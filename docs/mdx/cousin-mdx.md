@@ -1,21 +1,24 @@
 ---
 title: Cousin (MDX) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-f1_keywords: COUSIN
-dev_langs: kbMDX
-helpviewer_keywords: Cousin function
+f1_keywords:
+- COUSIN
+dev_langs:
+- kbMDX
+helpviewer_keywords:
+- Cousin function
 ms.assetid: 9a416685-d35d-4d9c-a9f6-4574cbe59aea
-caps.latest.revision: "33"
+caps.latest.revision: 33
 author: Minewiskan
 ms.author: owend
 manager: erikre

@@ -1,23 +1,28 @@
 ---
 title: SQLEndTran-Funktion | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLEndTran
-apilocation: sqlsrv32.dll
+apiname:
+- SQLEndTran
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLEndTran
-helpviewer_keywords: SQLEndTran function [ODBC]
+f1_keywords:
+- SQLEndTran
+helpviewer_keywords:
+- SQLEndTran function [ODBC]
 ms.assetid: ff375ce1-eb50-4693-b1e6-70181a6dbf9f
-caps.latest.revision: "29"
+caps.latest.revision: 29
 author: MightyPen
 ms.author: genemi
 manager: jhubbard

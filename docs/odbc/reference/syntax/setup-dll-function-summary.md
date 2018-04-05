@@ -1,19 +1,21 @@
 ---
 title: Setup-DLL-Funktion Zusammenfassung | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: functions [ODBC], setup DLL functions
+helpviewer_keywords:
+- functions [ODBC], setup DLL functions
 ms.assetid: d18169eb-89f7-4079-be70-a85713030191
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard

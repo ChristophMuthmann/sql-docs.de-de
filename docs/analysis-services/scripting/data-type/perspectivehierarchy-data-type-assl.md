@@ -1,24 +1,29 @@
 ---
 title: PerspectiveHierarchy-Datentyp (ASSL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-apiname: PerspectiveHierarchy Data Type
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
+apiname:
+- PerspectiveHierarchy Data Type
+apilocation:
+- http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to: SQL Server 2016 Preview
-f1_keywords: PerspectiveHierarchy
-helpviewer_keywords: PerspectiveHierarchy data type
+applies_to:
+- SQL Server 2016 Preview
+f1_keywords:
+- PerspectiveHierarchy
+helpviewer_keywords:
+- PerspectiveHierarchy data type
 ms.assetid: 30366bd0-ee1c-4940-8c1f-ca5e0dd5fe4b
-caps.latest.revision: "33"
+caps.latest.revision: 33
 author: Minewiskan
 ms.author: owend
 manager: kfile

@@ -1,22 +1,25 @@
 ---
 title: 'IsWindowsServiceEnabled-Eigenschaft (WMI: MSReportServer_ConfigurationSetting) | Microsoft-Dokumentation'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
+ms.service: ''
 ms.component: wmi-provider-library-reference
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: IsWindowsServiceEnabled
-apilocation: reportingservices.mof
+apiname:
+- IsWindowsServiceEnabled
+apilocation:
+- reportingservices.mof
 apitype: MOFDef
-helpviewer_keywords: IsWindowsServiceEnabled property
+helpviewer_keywords:
+- IsWindowsServiceEnabled property
 ms.assetid: b1b75d72-6220-43fe-abfb-f967f3972d00
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: markingmyname
 ms.author: maghan
 manager: kfile

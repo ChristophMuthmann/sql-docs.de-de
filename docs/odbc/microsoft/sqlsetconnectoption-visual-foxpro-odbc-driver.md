@@ -1,19 +1,21 @@
 ---
 title: SQLSetConnectOption (Visual FoxPro-ODBC-Treiber) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: SQLSetConnectOption function [ODBC], Visual FoxPro ODBC Driver
+helpviewer_keywords:
+- SQLSetConnectOption function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: 5a35449e-4694-4ee5-9fa1-45d5a8fe7823
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard

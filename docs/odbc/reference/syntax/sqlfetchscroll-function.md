@@ -1,23 +1,28 @@
 ---
 title: SQLFetchScroll-Funktion | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLFetchScroll
-apilocation: sqlsrv32.dll
+apiname:
+- SQLFetchScroll
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLFetchScroll
-helpviewer_keywords: SQLFetchScroll function [ODBC]
+f1_keywords:
+- SQLFetchScroll
+helpviewer_keywords:
+- SQLFetchScroll function [ODBC]
 ms.assetid: c0243667-428c-4dda-ae91-3c307616a1ac
-caps.latest.revision: "30"
+caps.latest.revision: 30
 author: MightyPen
 ms.author: genemi
 manager: jhubbard

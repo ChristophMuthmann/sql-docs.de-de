@@ -1,23 +1,28 @@
 ---
 title: SQLProcedureColumns-Funktion | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLProcedureColumns
-apilocation: sqlsrv32.dll
+apiname:
+- SQLProcedureColumns
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLProcedureColumns
-helpviewer_keywords: SQLProcedureColumns function [ODBC]
+f1_keywords:
+- SQLProcedureColumns
+helpviewer_keywords:
+- SQLProcedureColumns function [ODBC]
 ms.assetid: 4ca37b28-a6df-465b-8988-d422d37fc025
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: jhubbard

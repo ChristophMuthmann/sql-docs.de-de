@@ -1,20 +1,22 @@
 ---
-title: "EXISTING-Schlüsselwort (MDX) | Microsoft Docs"
-ms.custom: 
+title: EXISTING-Schlüsselwort (MDX) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-f1_keywords: EXISTING
-helpviewer_keywords: Existing keyword
+f1_keywords:
+- EXISTING
+helpviewer_keywords:
+- Existing keyword
 ms.assetid: 651ee9ac-04ef-4316-87c9-a3df5ac27d22
-caps.latest.revision: "38"
+caps.latest.revision: 38
 author: Minewiskan
 ms.author: owend
 manager: kfile

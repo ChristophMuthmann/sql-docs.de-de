@@ -1,19 +1,20 @@
 ---
 title: Konfigurieren von Measuregruppeneigenschaften | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: properties [Analysis Services], measure groups
+helpviewer_keywords:
+- properties [Analysis Services], measure groups
 ms.assetid: fa66bdb6-60b8-413c-ac2a-00e4d09f60a2
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: Minewiskan
 ms.author: owend
 manager: kfile

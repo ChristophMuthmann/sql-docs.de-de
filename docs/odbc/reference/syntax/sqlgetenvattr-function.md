@@ -1,23 +1,28 @@
 ---
 title: SQLGetEnvAttr Funktion | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLGetEnvAttr
-apilocation: sqlsrv32.dll
+apiname:
+- SQLGetEnvAttr
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLGetEnvAttr
-helpviewer_keywords: SQLGetEnvAttr function [ODBC]
+f1_keywords:
+- SQLGetEnvAttr
+helpviewer_keywords:
+- SQLGetEnvAttr function [ODBC]
 ms.assetid: 01f4590f-427a-4280-a1c3-18de9f7d86c1
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: jhubbard

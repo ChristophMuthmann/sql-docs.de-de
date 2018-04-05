@@ -1,23 +1,28 @@
 ---
 title: SQLInstallDriverEx Funktion | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLInstallDriverEx
-apilocation: sqlsrv32.dll
+apiname:
+- SQLInstallDriverEx
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLInstallDriverEx
-helpviewer_keywords: SQLInstallDriverEx function [ODBC]
+f1_keywords:
+- SQLInstallDriverEx
+helpviewer_keywords:
+- SQLInstallDriverEx function [ODBC]
 ms.assetid: 1dd74544-f4e9-46e1-9b5f-c11d84fdab4c
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: jhubbard

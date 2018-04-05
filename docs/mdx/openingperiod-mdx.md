@@ -1,21 +1,24 @@
 ---
 title: OpeningPeriod (MDX) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-f1_keywords: OPENINGPERIOD
-dev_langs: kbMDX
-helpviewer_keywords: OpeningPeriod function
+f1_keywords:
+- OPENINGPERIOD
+dev_langs:
+- kbMDX
+helpviewer_keywords:
+- OpeningPeriod function
 ms.assetid: bebf55cf-e5c6-42b1-98f2-1d6e54093d4c
-caps.latest.revision: "33"
+caps.latest.revision: 33
 author: Minewiskan
 ms.author: owend
 manager: erikre

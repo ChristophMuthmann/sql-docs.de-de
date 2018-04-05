@@ -1,19 +1,21 @@
 ---
-title: "Optionen (Umgebung – Hilfe – Seite „Online“) | Microsoft-Dokumentation"
-ms.custom: 
+title: Optionen (Umgebung – Hilfe – Seite „Online“) | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-menu
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
-f1_keywords: VS.ToolsOptionsPages.Environment.Help.Online
+f1_keywords:
+- VS.ToolsOptionsPages.Environment.Help.Online
 ms.assetid: 24933338-3a47-44c0-87fc-c3dca8faf4de
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg

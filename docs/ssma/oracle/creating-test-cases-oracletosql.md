@@ -1,19 +1,21 @@
 ---
-title: "Erstellen von Testfällen (OracleToSQL) | Microsoft Docs"
+title: Erstellen von Testfällen (OracleToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-oracle
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: Test Case Wizard
+helpviewer_keywords:
+- Test Case Wizard
 ms.assetid: 22f38901-ec35-4707-a911-784e6ad8dafb
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro

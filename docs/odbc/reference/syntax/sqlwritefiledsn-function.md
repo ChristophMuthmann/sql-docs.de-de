@@ -1,23 +1,28 @@
 ---
 title: SQLWriteFileDSN Funktion | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLWriteFileDSN
-apilocation: sqlsrv32.dll
+apiname:
+- SQLWriteFileDSN
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLWriteFileDSN
-helpviewer_keywords: SQLWriteFileDSN [ODBC]
+f1_keywords:
+- SQLWriteFileDSN
+helpviewer_keywords:
+- SQLWriteFileDSN [ODBC]
 ms.assetid: 9e18f56f-1061-416b-83d4-ffeec42ab5a9
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard

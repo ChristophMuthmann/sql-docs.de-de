@@ -1,15 +1,15 @@
 ---
 title: DROP CELL CALCULATION-Anweisung (MDX) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - Calculation
@@ -19,7 +19,8 @@ f1_keywords:
 - DROP CELL
 - cell
 - DROP CELL CALCULATION
-dev_langs: kbMDX
+dev_langs:
+- kbMDX
 helpviewer_keywords:
 - deleting calculations
 - dropping calculations
@@ -28,7 +29,7 @@ helpviewer_keywords:
 - calculations [SQL Server]
 - cubes [Analysis Services], calculations
 ms.assetid: 77caedf4-dd96-4eac-a5e4-fd82148a44a7
-caps.latest.revision: "29"
+caps.latest.revision: 29
 author: Minewiskan
 ms.author: owend
 manager: erikre

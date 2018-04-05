@@ -1,32 +1,46 @@
 ---
 title: Versionshinweise (Odbcdriver for SQLServer) | Microsoft Docs
-ms.custom: 
-ms.date: 02/14/2018
+ms.custom: ''
+ms.date: 04/04/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: b8459ed8-625e-4d8b-891c-e7e78c9977cc
-caps.latest.revision: 
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-ms.openlocfilehash: 2b0846781a17fdad4c8cf9e39cab743595a20e7e
-ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
+ms.openlocfilehash: 3bf3ac3b378cc5e3c55892860c45e5e5d6463cce
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="release-notes"></a>Versionsanmerkungen
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
   Versionsanmerkungen für Microsoft ODBC Driver for SQL Server on Windows.  
+
+## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-171-for-includessnoversionincludesssnoversionmdmd-on-windows"></a>Neuigkeiten in der [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC-Treiber 17.1 für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] unter Windows
+
+**Funktionen**:
+
+Unterstützung für `SQL_COPT_SS_CEKCACHETTL` und `SQL_COPT_SS_TRUSTEDCMKPATHS` Verbindungsattribute (Weitere Informationen finden Sie unter [Using Always Encrypted mit dem ODBC-Treiber für SQL Server](../using-always-encrypted-with-the-odbc-driver.md))
+- `SQL_COPT_SS_CEKCACHETTL` Ermöglicht das Steuern der Zeit, die den lokale Cache der Spaltenverschlüsselungsschlüssel vorhanden ist, sowie die leeren Sie
+- `SQL_COPT_SS_TRUSTEDCMKPATHS` Ermöglicht der Anwendung, AE-Vorgänge, um nur die angegebene Liste der Spaltenhauptschlüssel verwenden einzuschränken
+
+
+Unterstützung von Azure Active Directory-interaktive Authentifizierung
+
+[Behebung von Programmfehlern](../bug-fixes.md)
+
 
 ## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-17-for-includessnoversionincludesssnoversionmdmd-on-windows"></a>Neuigkeiten in der [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC-Treiber 17 für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] unter Windows
 

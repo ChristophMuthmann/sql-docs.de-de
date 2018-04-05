@@ -1,30 +1,30 @@
 ---
 title: sys.dm_column_store_object_pool (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: a8a58ca7-0a7d-4786-bfd9-e8894bd345dd
-caps.latest.revision: 
+caps.latest.revision: 12
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c77d44fd04f328cad314b50c16e6f70970c5e9d8
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 6c9ce143112a96856879fa90a1b29d2a9a451b58
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="sysdmcolumnstoreobjectpool-transact-sql"></a>sys.dm_column_store_object_pool (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -40,15 +40,15 @@ ms.lasthandoff: 02/03/2018
 |`column_id`|`int`|ID der columnstore-Spalte. Dies ist NULL für DELETE_BITMAP.| 
 |`row_group_id`|`int`|Die ID der Zeilengruppe.|
 |`object_type`|`smallint`|1 = COLUMN_SEGMENT<br /><br /> 2 = COLUMN_SEGMENT_PRIMARY_DICTIONARY<br /><br /> 3 = COLUMN_SEGMENT_SECONDARY_DICTIONARY<br /><br /> 4 = COLUMN_SEGMENT_BULKINSERT_DICTIONARY<br /><br /> 5 = COLUMN_SEGMENT_DELETE_BITMAP|  
-|`object_type_desc`|`nvarchar(60)`|COLUMN_SEGMENT – ein Spaltensegment. `object_id`die Segment-ID. Ein Segment werden alle Werte für eine Spalte innerhalb einer Zeilengruppe gespeichert. Beispielsweise, wenn eine Tabelle 10 Spalten verfügt, sind 10 spaltensegmente pro Zeilengruppe. <br /><br /> COLUMN_SEGMENT_PRIMARY_DICTIONARY – ein globaler Wörterbuch, das Informationen zur Suche aller spaltensegmente in der Tabelle enthält.<br /><br /> COLUMN_SEGMENT_SECONDARY_DICTIONARY – ein lokales Wörterbuch, das eine Spalte zugeordnet.<br /><br /> COLUMN_SEGMENT_BULKINSERT_DICTIONARY – Another representation of the global dictionary. Dies bietet eine umgekehrte Nachschlagen von Werten an Dictionary_id. Zum Erstellen von komprimierten Segmente als Teil der Tupelverschiebungsvorgang oder Massenladen verwendet.<br /><br /> COLUMN_SEGMENT_DELETE_BITMAP – Löscht eine Bitmap, die Segment nachverfolgt. Es gibt eine Delete-Bitmap pro Partition.|  
+|`object_type_desc`|`nvarchar(60)`|COLUMN_SEGMENT – ein Spaltensegment. `object_id` die Segment-ID. Ein Segment werden alle Werte für eine Spalte innerhalb einer Zeilengruppe gespeichert. Beispielsweise, wenn eine Tabelle 10 Spalten verfügt, sind 10 spaltensegmente pro Zeilengruppe. <br /><br /> COLUMN_SEGMENT_PRIMARY_DICTIONARY – ein globaler Wörterbuch, das Informationen zur Suche aller spaltensegmente in der Tabelle enthält.<br /><br /> COLUMN_SEGMENT_SECONDARY_DICTIONARY – ein lokales Wörterbuch, das eine Spalte zugeordnet.<br /><br /> COLUMN_SEGMENT_BULKINSERT_DICTIONARY – Another representation of the global dictionary. Dies bietet eine umgekehrte Nachschlagen von Werten an Dictionary_id. Zum Erstellen von komprimierten Segmente als Teil der Tupelverschiebungsvorgang oder Massenladen verwendet.<br /><br /> COLUMN_SEGMENT_DELETE_BITMAP – Löscht eine Bitmap, die Segment nachverfolgt. Es gibt eine Delete-Bitmap pro Partition.|  
 |`access_count`|`int`|Anzahl der lesen oder Schreiben greift auf dieses Objekt.|  
 |`memory_used_in_bytes`|`bigint`|Von diesem Objekt im Objektpool verwendete Arbeitsspeicher.|  
 |`object_load_time`|`datetime`|Uhrzeit für Wenn Object_id im Objektpool geschaltet wurde.|  
   
 ## <a name="permissions"></a>Berechtigungen  
-Auf [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], erfordert `VIEW SERVER STATE` Berechtigung.   
-Auf [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] benötigen Premium-Ebenen der `VIEW DATABASE STATE` Berechtigung in der Datenbank. Auf [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard und grundlegenden Organisationsebenen erfordert die **Serveradministrator** oder ein **Azure Active Directory-Administrators** Konto.  
 
+Auf [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], erfordert `VIEW SERVER STATE` Berechtigung.   
+Auf [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], erfordert die `VIEW DATABASE STATE` Berechtigung in der Datenbank.   
  
 ## <a name="see-also"></a>Siehe auch  
   

@@ -2,21 +2,23 @@
 title: Installieren SSMA-Komponenten auf SQLServer (MySQLToSql) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-mysql
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
-helpviewer_keywords: SSMA extension pack, Installation
+helpviewer_keywords:
+- SSMA extension pack, Installation
 ms.assetid: 6772d0c5-258f-4d7b-afb0-b5f810e71af1
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard

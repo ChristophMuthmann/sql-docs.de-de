@@ -1,23 +1,28 @@
 ---
 title: SQLCloseCursor-Funktion | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLCloseCursor
-apilocation: sqlsrv32.dll
+apiname:
+- SQLCloseCursor
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLCloseCursor
-helpviewer_keywords: SQLCloseCursor function [ODBC]
+f1_keywords:
+- SQLCloseCursor
+helpviewer_keywords:
+- SQLCloseCursor function [ODBC]
 ms.assetid: 05b0a054-e28d-4e16-b5b0-07418486b372
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: jhubbard

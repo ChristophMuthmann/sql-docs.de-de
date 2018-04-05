@@ -1,23 +1,28 @@
 ---
 title: SQLRemoveTranslator Funktion | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLRemoveTranslator
-apilocation: sqlsrv32.dll
+apiname:
+- SQLRemoveTranslator
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLRemoveTranslator
-helpviewer_keywords: SQLRemoveTranslator function [ODBC]
+f1_keywords:
+- SQLRemoveTranslator
+helpviewer_keywords:
+- SQLRemoveTranslator function [ODBC]
 ms.assetid: c6feda49-0359-4224-8de9-77125cf2397b
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard

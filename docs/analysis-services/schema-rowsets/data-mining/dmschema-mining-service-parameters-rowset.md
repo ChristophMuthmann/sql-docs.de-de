@@ -1,22 +1,25 @@
 ---
 title: DMSCHEMA_MINING_SERVICE_PARAMETERS-Rowset | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-apiname: DMSCHEMA_MINING_SERVICE_PARAMETERS
+apiname:
+- DMSCHEMA_MINING_SERVICE_PARAMETERS
 apitype: NA
-applies_to: SQL Server 2016 Preview
-helpviewer_keywords: DMSCHEMA_MINING_SERVICE_PARAMETERS rowset
+applies_to:
+- SQL Server 2016 Preview
+helpviewer_keywords:
+- DMSCHEMA_MINING_SERVICE_PARAMETERS rowset
 ms.assetid: 5994e66b-84d0-4279-9f50-d92fd829dd83
-caps.latest.revision: "33"
+caps.latest.revision: 33
 author: Minewiskan
 ms.author: owend
 manager: kfile

@@ -1,23 +1,28 @@
 ---
 title: SQLTransact Funktion | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLTransact
-apilocation: sqlsrv32.dll
+apiname:
+- SQLTransact
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLTransact
-helpviewer_keywords: SQLTransact function [ODBC]
+f1_keywords:
+- SQLTransact
+helpviewer_keywords:
+- SQLTransact function [ODBC]
 ms.assetid: 496249e0-8eff-4c60-8358-5543bc3ead9c
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
