@@ -1,27 +1,28 @@
 ---
 title: Datenquellen (Assistentenbildschirm 2) (Odbcdriver for SQLServer) | Microsoft Docs
-ms.custom: 
-ms.date: 09/27/2017
+ms.custom: ''
+ms.date: 03/21/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: MightyPen
-ms.author: genemi
+ms.author: v-jizho2
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c2291b951c0df4f365b76f80ebab3572a39375d1
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 624888902e260baa03ad30aee8608f921deb73a4
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="data-source-wizard-screen-2"></a>Datenquellen-Assistent (Bildschirm 2)
 
@@ -47,9 +48,13 @@ Gibt an, dass der Treiber mit SQL Server mithilfe der Anmelde-ID und Kennwort au
 
 Gibt an, dass der Treiber mit SQL Server mit einem Azure Active Directory-Anmelde-ID und Kennwort authentifizieren.
 
+### <a name="with-active-directory-interactive-authentication"></a>Mit interaktiven für Active Directory-Authentifizierung
+
+Gibt an, dass der Treiber mit SQL Server mithilfe von Azure Active Directory interaktiven Modus durch Bereitstellen der Anmelde-ID zu authentifizieren. Dadurch wird das Dialogfeld mit der Windows Azure-Authentifizierung Eingabeaufforderung ausgelöst.
+
 ### <a name="login-id"></a>Login ID
 
-Gibt die Anmelde-ID, die der Treiber verwendet, wenn SQL Server herstellen können, wenn **mit SQL Server-Authentifizierung mit Anmelde-ID und Kennwort, die vom Benutzer eingegebenen** oder **mit Active Directory-Kennwort-Authentifizierung mit Anmelde-ID und das Kennwort, die vom Benutzer eingegebenen** ausgewählt ist. Die gilt nur für die Verbindung, die zum Bestimmen der Standardeinstellungen des Servers hergestellt wird; es gilt nicht für folgende Verbindungen, die nach dem Erstellen mit der Datenquelle hergestellt werden.
+Gibt die Anmelde-ID, die der Treiber verwendet, wenn SQL Server herstellen können, wenn **mit SQL Server-Authentifizierung mit Anmelde-ID und Kennwort, die vom Benutzer eingegebenen** oder **mit Active Directory-Kennwort-Authentifizierung mit Anmelde-ID und das Kennwort, die vom Benutzer eingegebenen** oder **mit Active Directory interaktive Authentifizierung mit Anmelde-ID, die vom Benutzer eingegebenen** ausgewählt ist. Die gilt nur für die Verbindung, die zum Bestimmen der Standardeinstellungen des Servers hergestellt wird; es gilt nicht für folgende Verbindungen, die nach dem Erstellen mit der Datenquelle hergestellt werden.
 
 ### <a name="password"></a>Kennwort
 
