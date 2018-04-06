@@ -1,27 +1,28 @@
 ---
-title: "Using Always Encrypted with the Odbcdriver für SQLServer | Microsoft Docs"
-ms.custom: 
+title: Using Always Encrypted with the Odbcdriver für SQLServer | Microsoft Docs
+ms.custom: ''
 ms.date: 10/01/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
-caps.latest.revision: "3"
+caps.latest.revision: 3
 ms.author: v-chojas
 manager: jhubbard
 author: MightyPen
 ms.workload: On Demand
-ms.openlocfilehash: a7e2679b04f55f528de1d90070593f6197160d79
-ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
+ms.openlocfilehash: 1456db9e5474f2970508b4bc035915744172b3df
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>Mit "immer verschlüsselt" mit dem ODBC-Treiber für SQLServer
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -333,10 +334,16 @@ Wenn SQL Server den Treiber, den der Parameter nicht verschlüsselt werden muss 
 
 ### <a name="column-encryption-key-caching"></a>Column Encryption Key, Zwischenspeichern
 
-Um die Anzahl der Aufrufe an einen spaltenhauptschlüsselspeicher spaltenhauptschlüsselspeicher zu verringern, wird der Treiber den nur-Text-CEKs im Arbeitsspeicher zwischengespeichert. Nach dem Empfang der ECEK von Datenbankmetadaten, versucht der Treiber zunächst Klartext-CEK entspricht dem verschlüsselten Schlüsselwert im Cache gefunden. Der Treiber Ruft den Schlüsselspeicher CMK nur, wenn die entsprechenden Klartext-CEK im Cache gefunden.
+Um die Anzahl der Aufrufe an einen spaltenhauptschlüsselspeicher spaltenhauptschlüsselspeicher zu verringern, wird der Treiber den nur-Text-CEKs im Arbeitsspeicher zwischengespeichert. Der CEK-Cache ist global für den Treiber und eine Verbindung nicht zugeordnet. Nach dem Empfang der ECEK von Datenbankmetadaten, versucht der Treiber zunächst Klartext-CEK entspricht dem verschlüsselten Schlüsselwert im Cache gefunden. Der Treiber Ruft den Schlüsselspeicher CMK nur, wenn die entsprechenden Klartext-CEK im Cache gefunden.
 
 > [!NOTE]
 > In der ODBC-Treiber für SQL Server werden die Einträge im Cache nach einem Timeout von zwei Stunden entfernt. Dies bedeutet, dass für einen bestimmten ECEK kontaktiert der Treiber den Schlüsselspeicher nur einmal während der Lebensdauer der Anwendung oder alle zwei Stunden, welcher Wert kleiner ist.
+
+17.1 der ODBC-Treiber für SQL Server ab, das Cachetimeout des CEK angepasst werden, mithilfe der `SQL_COPT_SS_CEKCACHETTL` Verbindungsattribut, das die Anzahl der Sekunden angibt, ein CEK im Cache verbleiben. Aufgrund der globalen Eigenschaften des Caches kann dieses Attribut aus jeder gültigen für den Treiber Verbindungshandle angepasst werden. Wenn der Cache, die Gültigkeitsdauer (TTL) verringert wird, vorhandenen CEKs neue TTL überschreiten würde auch entfernt werden. Wenn sie 0 ist, werden keine CEKs zwischengespeichert.
+
+### <a name="trusted-key-paths"></a>Vertrauenswürdigen Schlüsselpfaden
+
+Beginnend mit der ODBC-Treiber 17.1 für SQL Server, die `SQL_COPT_SS_TRUSTEDCMKPATHS` Verbindungsattribut ermöglicht einer Anwendung, erfordern die Verwendung von Always Encrypted-Vorgänge nur einer angegebenen Liste von CMKs, durch deren Schlüsselpfade identifiziert. Standardmäßig ist dieses Attributs NULL, was bedeutet, dass der Treiber alle Schlüsselpfad akzeptiert. Um dieses Feature verwenden zu können, legen `SQL_COPT_SS_TRUSTEDCMKPATHS` Null getrenntes, nullterminiertes Breitzeichen Zeichenfolge auf der die zulässigen Key Pfade aufgelistet sind. Der Arbeitsspeicher, der von diesem Attribut verweist muss gültig bleiben, während der Ver- oder Entschlüsselung Vorgänge, die mit dem Verbindungshandle auf dem sie festgelegt ist---auf dem der Treiber überprüft wird, ob der CMK-Pfad entsprechend den Angaben von Metadaten des Groß-und Kleinschreibung nicht in diesem ist Liste. Wenn die CMK-Pfad nicht in der Liste enthalten ist, schlägt der Vorgang fehl. Die Anwendung kann den Inhalt des Arbeitsspeichers ändern, auf den dieses Attribut, verweist, die Liste der vertrauenswürdigen CMKs zu ändern, ohne das Attribut erneut festzulegen.
 
 ## <a name="working-with-column-master-key-stores"></a>Arbeiten mit Spaltenhauptschlüsselspeichern
 
@@ -351,7 +358,7 @@ Der ODBC-Treiber für SQL Server enthält die folgenden integrierten-Schlüssels
 | Name | Description | Name des Anbieters (Metadaten) |Verfügbarkeit|
 |:---|:---|:---|:---|
 |Azure-Schlüsseltresor |Speichern von CMKs in ein Azure-Schlüsseltresor | `AZURE_KEY_VAULT` |Windows, macOS, Linux|
-|Windows Certificate Store|CMKs lokal speichert, in der Windows-Schlüsselspeicher| `MSSQL_CERTIFICATE_STORE`|Windows|
+|Windows-Zertifikatspeicher|CMKs lokal speichert, in der Windows-Schlüsselspeicher| `MSSQL_CERTIFICATE_STORE`|Windows|
 
 - Sie (oder Ihrem DBA) müssen sicherstellen, dass die in den Metadaten des spaltenhauptschlüssels, konfigurierte Anbietername richtig ist und der Pfad des Hauptschlüssels Spalte Schlüsselpfad Format für den gegebenen Provider einhält. Es wird empfohlen, dass Sie die Schlüssel mithilfe von Tools wie SQL Server Management Studio konfigurieren, die die gültigen Anbieternamen und Schlüsselpfade automatisch generieren, wenn die Anweisung [CREATE COLUMN MASTER KEY (Transact-SQL)](../../t-sql/statements/create-column-master-key-transact-sql.md) ausgegeben wird.
 
@@ -430,7 +437,7 @@ Der Treiber versucht, beim Laden der Bibliothek, die durch den mit der Plattform
 |`CE203`|Das Symbol "CEKeyStoreProvider" exportiert wurde in der Bibliothek nicht gefunden.|
 |`CE203`|Mindestens ein Anbieter in der Bibliothek sind bereits geladen.|
 
-`SQLSetConnectAttr`Gibt die üblichen Fehler oder Erfolg Werte und zusätzlichen Informationen steht für alle Fehler, die über ODBC-Diagnose der Standardmechanismus auftraten.
+`SQLSetConnectAttr` Gibt die üblichen Fehler oder Erfolg Werte und zusätzlichen Informationen steht für alle Fehler, die über ODBC-Diagnose der Standardmechanismus auftraten.
 
 > [!NOTE]
 > Der Programmierer muss sicherstellen, dass alle benutzerdefinierten Anbieter geladen werden, bevor jede Abfrage, dass sie über eine Verbindung gesendet wird. Bei unterlassen ergibt sich der Fehler auf:
@@ -567,8 +574,8 @@ Finden Sie unter [migrieren geschützten sensiblen Daten durch Always Encrypted]
 
 |Name|Description|  
 |----------|-----------------|  
-|`ColumnEncryption`|Gültige Werte sind `Enabled` / `Disabled`.<br>`Enabled`--Always Encrypted-Funktionen für die Verbindung ermöglichen.<br>`Disabled`– Deaktivieren von Always Encrypted-Funktionalität für die Verbindung. <br><br>Der Standardwert ist `Disabled`.|  
-|`KeyStoreAuthentication` | Gültige Werte: `KeyVaultPassword`,`KeyVaultClientSecret` |
+|`ColumnEncryption`|Gültige Werte sind `Enabled` / `Disabled`.<br>`Enabled` --Always Encrypted-Funktionen für die Verbindung ermöglichen.<br>`Disabled` – Deaktivieren von Always Encrypted-Funktionalität für die Verbindung. <br><br>Der Standardwert ist `Disabled`.|  
+|`KeyStoreAuthentication` | Gültige Werte: `KeyVaultPassword`, `KeyVaultClientSecret` |
 |`KeyStorePrincipalId` | Wenn `KeyStoreAuthentication`  =  `KeyVaultPassword`, legen Sie diesen Wert in einen gültigen Azure Active Directory-Benutzerprinzipalnamen-Namen. <br>Wenn `KeyStoreAuthetication`  =  `KeyVaultClientSecret` legen Sie diesen Wert auf einen gültigen Azure Active Directory Anwendungsclient-ID |
 |`KeyStoreSecret` | Wenn `KeyStoreAuthentication`  =  `KeyVaultPassword` legen Sie diesen Wert auf das Kennwort für den entsprechenden Benutzernamen ein. <br>Wenn `KeyStoreAuthentication`  =  `KeyVaultClientSecret` legen Sie diesen Wert auf das Anwendungsgeheimnis an einem gültigen Azure Active Directory Anwendungsclient-ID zugeordnet|
 
@@ -576,15 +583,17 @@ Finden Sie unter [migrieren geschützten sensiblen Daten durch Always Encrypted]
 
 |Name|Typ|Description|  
 |----------|-------|----------|  
-|`SQL_COPT_SS_COLUMN_ENCRYPTION`|Vor dem Verbinden|`SQL_COLUMN_ENCRYPTION_DISABLE`(0) – deaktivieren, die Always Encrypted <br>`SQL_COLUMN_ENCRYPTION_ENABLE`(1) – aktivieren Sie Always Encrypted|
+|`SQL_COPT_SS_COLUMN_ENCRYPTION`|Vor dem Verbinden|`SQL_COLUMN_ENCRYPTION_DISABLE` (0) – deaktivieren, die Always Encrypted <br>`SQL_COLUMN_ENCRYPTION_ENABLE` (1) – aktivieren Sie Always Encrypted|
 |`SQL_COPT_SS_CEKEYSTOREPROVIDER`|Nach Herstellen der Verbindung|[Set] Fehler beim Laden der CEKeystoreProvider<br>[Get] Gibt den Namen einer CEKeystoreProvider zurück|
 |`SQL_COPT_SS_CEKEYSTOREDATA`|Nach Herstellen der Verbindung|[Set] Schreiben von Daten in CEKeystoreProvider<br>[Get] Lesen von Daten aus CEKeystoreProvider|
+|`SQL_COPT_SS_CEKCACHETTL`|Nach Herstellen der Verbindung|[Set] Legen Sie den CEK-Cache-Gültigkeitsdauer (TTL)<br>[Get] Abrufen des aktuellen CEK Caches Gültigkeitsdauer (TTL)|
+|`SQL_COPT_SS_TRUSTEDCMKPATHS`|Nach Herstellen der Verbindung|[Set] Legen Sie den vertrauenswürdigen CMK Pfade Zeiger<br>[Get] Abrufen des aktuellen vertrauenswürdigen CMK Pfade Zeigers|
 
 ### <a name="statement-attributes"></a>Anweisungsattribute
 
 |Name|Description|  
 |----------|-----------------|  
-|`SQL_SOPT_SS_COLUMN_ENCRYPTION`|`SQL_CE_DISABLED`(0) – always Encrypted ist deaktiviert, für die Anweisung <br>`SQL_CE_RESULTSETONLY`(1) – nur Entschlüsselung. Entschlüsselt von Resultsets und Rückgabewerte und Parameter werden nicht verschlüsselt. <br>`SQL_CE_ENABLED`(3) – always Encrypted aktiviert ist und für Parameter und die Ergebnisse|
+|`SQL_SOPT_SS_COLUMN_ENCRYPTION`|`SQL_CE_DISABLED` (0) – always Encrypted ist deaktiviert, für die Anweisung <br>`SQL_CE_RESULTSETONLY` (1) – nur Entschlüsselung. Entschlüsselt von Resultsets und Rückgabewerte und Parameter werden nicht verschlüsselt. <br>`SQL_CE_ENABLED` (3) – always Encrypted aktiviert ist und für Parameter und die Ergebnisse|
 
 ### <a name="descriptor-fields"></a>Deskriptorfelder
 

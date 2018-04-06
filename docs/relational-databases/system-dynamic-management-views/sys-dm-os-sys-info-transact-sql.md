@@ -1,16 +1,16 @@
 ---
 title: Sys. dm_os_sys_info (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 04/24/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_os_sys_info_TSQL
@@ -24,16 +24,16 @@ helpviewer_keywords:
 - time [SQL Server], instance started
 - starting time
 ms.assetid: 20f6bc9c-839a-4fa4-b3f3-a6c47d1b69af
-caps.latest.revision: 
+caps.latest.revision: 57
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 21fe61d34a9b8823af499b64aef0eaef95c1a92e
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: d5284112257c5d1c2d23f354ec7690fab6abb90b
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="sysdmossysinfo-transact-sql"></a>sys.dm_os_sys_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -68,7 +68,7 @@ ms.lasthandoff: 02/03/2018
 |**deadlock_monitor_serial_number**|**int**|Gibt die ID der aktuellen Deadlocküberwachungssequenz an. Lässt keine NULL-Werte zu.|  
 |**sqlserver_start_time_ms_ticks**|**bigint**|Stellt die **Ms_tick** Anzahl beim [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zuletzt gestartet wurde. Vergleicht diesen Wert mit dem aktuellen Wert in der ms_ticks-Spalte. Lässt keine NULL-Werte zu.|  
 |**sqlserver_start_time**|**datetime**|Gibt das Datum und die Uhrzeit an, wann [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zum letzten Mal gestartet wurde. Lässt keine NULL-Werte zu.|  
-|**affinity_type**|**int**|**Gilt für: [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]**  über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Gibt den Typ der Server-CPU-Prozessaffinität an, die derzeit verwendet wird. Lässt keine NULL-Werte zu. Weitere Informationen finden Sie unter [ALTER SERVER CONFIGURATION &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-server-configuration-transact-sql.md).<br /><br /> 1 = MANUELL<br /><br /> 2 = AUTO|  
+|**affinity_type**|**int**|**Gilt für: [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]**  über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Gibt den Typ der Server-CPU-Prozessaffinität an, die derzeit verwendet wird. Lässt keine NULL-Werte zu. Weitere Informationen finden Sie unter [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md).<br /><br /> 1 = MANUELL<br /><br /> 2 = AUTO|  
 |**affinity_type_desc**|**varchar(60)**|**Gilt für: [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]** .<br /><br /> Beschreibt die **Affinity_type** Spalte. Lässt keine NULL-Werte zu.<br /><br /> MANUELL = Die Affinität wurde für mindestens eine CPU festgelegt.<br /><br /> AUTO = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann Threads zwischen CPUs frei verschieben.|  
 |**process_kernel_time_ms**|**bigint**|**Gilt für: [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] über [! INCLUDE [SsCurrent]**(.. /Token/ssCurrent_md.MD)].<br /><br /> Benötigte Gesamtzeit in Millisekunden für alle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Threads im Kernelmodus. Dieser Wert kann größer als eine einzelne Prozessoruhr sein, da er die Zeit für alle Prozessoren auf dem Server enthält. Lässt keine NULL-Werte zu.|  
 |**process_user_time_ms**|**bigint**|**Gilt für: [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]** .<br /><br /> Benötigte Gesamtzeit in Millisekunden für alle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Threads im Benutzermodus. Dieser Wert kann größer als eine einzelne Prozessoruhr sein, da er die Zeit für alle Prozessoren auf dem Server enthält. Lässt keine NULL-Werte zu.|  
@@ -81,19 +81,19 @@ ms.lasthandoff: 02/03/2018
 |**process_physical_affinity**|**nvarchar(3072)** |**Gilt für: ab [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]** .<br /><br />Informationen noch bereitgestellt. |
 |**sql_memory_model**|**int**|**Gilt für: [!INCLUDE[sssql11](../../includes/sssql11-md.md)] SP4 und ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1**.<br /><br />Gibt das Zuweisen von Arbeitsspeicher von SQL Server verwendeten Arbeitsspeicher-Modell. Lässt keine NULL-Werte zu.<br /><br />1 = konventionellen Arbeitsspeicher gespeicherten Modells<br />2 = Lock Pages in Memory<br /> 3 = große Seiten im Speicher|
 |**sql_memory_model_desc**|**nvarchar(120)**|**Gilt für: [!INCLUDE[sssql11](../../includes/sssql11-md.md)] SP4 und ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1**.<br /><br />Gibt das Zuweisen von Arbeitsspeicher von SQL Server verwendeten Arbeitsspeicher-Modell. Lässt keine NULL-Werte zu.<br /><br />**HERKÖMMLICHE** = SQL Server verwendeten Modells konventionellen Arbeitsspeicher belegt werden. Dies ist die Standardmodell Sql-Speicher, wenn SQL Server-Dienstkonto nicht Sperren von Seiten im Speicher Berechtigungen während des Starts verfügt.<br />**LOCK_PAGES** = SQL Server verwendet Sperren von Seiten im Arbeitsspeicher belegt werden. Dies ist der Standard-Sql-Speicher-Manager, wenn SQL Server-Dienstkonto über Sperren von Seiten im Speicher-Berechtigung verfügen, während des Starts von SQL Server.<br /> **LARGE_PAGES** = SQL Server verwendeten große Seiten im Arbeitsspeicher belegt werden. SQL Server verwendete große Seiten Allocator Speicher nur mit Enterprise Edition, wenn SQL Server-Dienstkonto Sperren von Seiten im Speicher-Berechtigung besitzen, während des Serverstarts und wenn die Trace Flag 834 aktiviert ist.|
-|**pdw_node_id**|**int**|**Gilt für: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]**<br /><br /> Der Bezeichner für den Knoten, dem auf diesem Verteilungspunkt befindet.|  
+|**pdw_node_id**|**int**|**Gilt für: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]**<br /><br /> Der Bezeichner für den Knoten, dem auf diesem Verteilungspunkt befindet.|  
 |**socket_count** |**int** | **Gilt für: ab [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]** .<br /><br />Gibt die Anzahl von prozessorsockets verfügbar im System an. |  
 |**cores_per_socket** |**int** | **Gilt für: ab [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)].**.<br /><br />Gibt die Anzahl der Prozessoren pro Socket verfügbar im System an. |  
 |**numa_node_count** |**int** | **Gilt für: ab [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)].**.<br /><br />Gibt die Anzahl der verfügbaren Numa-Knoten auf dem System an. Diese Spalte enthält die physischen Numa-Knoten als auch von soft-Numa-Knoten. |  
   
-## <a name="permissions"></a>Berechtigungen  
- Auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erfordert `VIEW SERVER STATE` Berechtigung auf dem Server.  
-  
- Auf [!INCLUDE[ssSDS](../../includes/sssds-md.md)] benötigen Premium-Ebenen der `VIEW DATABASE STATE` Berechtigung in der Datenbank. Auf [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Standard und grundlegenden Organisationsebenen erfordert die [!INCLUDE[ssSDS](../../includes/sssds-md.md)] -Administratorkonto ein.  
-  
+## <a name="permissions"></a>Berechtigungen
+
+Auf [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], erfordert `VIEW SERVER STATE` Berechtigung.   
+Auf [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], erfordert die `VIEW DATABASE STATE` Berechtigung in der Datenbank.   
+
 ## <a name="see-also"></a>Siehe auch  
  [Dynamische Verwaltungssichten und -funktionen &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [SQL Server-Betriebssystem in Verbindung mit dynamischen Verwaltungssichten &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
+ [SQL Server-Betriebssystem verbundene dynamische Verwaltungssichten &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
   
   
 

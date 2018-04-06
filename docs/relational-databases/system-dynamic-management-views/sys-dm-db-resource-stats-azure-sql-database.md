@@ -1,16 +1,16 @@
 ---
 title: Sys. dm_db_resource_stats (Azure SQL-Datenbank) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/16/2016
-ms.prod: 
+ms.prod: ''
 ms.prod_service: sql-database
-ms.reviewer: 
+ms.reviewer: ''
 ms.service: sql-database
 ms.component: dmv's
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_db_resource_stats
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - sys.dm_db_resource_stats
 - dm_db_resource_stats
 ms.assetid: 6e76b39f-236e-4bbf-b0b5-38be190d81e8
-caps.latest.revision: 
+caps.latest.revision: 11
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 606b871aeac34ac99d239ec4a84757187e00855f
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 116c5875ad7933e1b3d68f0c65ca7d0cb4d2b661
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="sysdmdbresourcestats-azure-sql-database"></a>sys.dm_db_resource_stats (Azure SQL-Datenbank)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -58,20 +58,17 @@ ms.lasthandoff: 02/03/2018
  Diese Sicht erfordert die VIEW DATABASE STATE-Berechtigung.  
   
 ## <a name="remarks"></a>Hinweise  
- Die zurückgegebene Daten **dm_db_resource_stats** wird angegeben als Prozentsatz des maximal zulässigen dtu-Grenzwerte für den Dienst/Leistungsebene, die Sie für Basic, Standard und Premium-Datenbanken ausgeführt werden. Für die Web- und Businessebenen geben diese Zahlen den Prozentsatz in Bezug auf die Standard S2-Leistungsebene an. Wenn zum Beispiel beim Ausführen mit einer Web- oder Geschäftsdatenbank avg_cpu_percent den Wert 70 % zurückgibt, weist dies auf 70 % des S2-Ebenenhöchstwerts hin. Darüber hinaus kann für Web- und Businessebenen der Prozentsatz eine Zahl über 100% zurückgeben, was ebenfalls auf dem S2-Ebenenhöchstwert basiert.  
-  
+ Die zurückgegebene Daten **dm_db_resource_stats** wird angegeben als Prozentsatz des maximal zulässigen dtu-Grenzwerte für den Dienst/Leistungsebene, die Sie für Basic, Standard und Premium-Datenbanken ausgeführt werden.
+ 
  Wenn innerhalb der letzten 60 Minuten ein Failover auf einem anderen Server für die Datenbank durchgeführt wurde, gibt die Ansicht nur die Daten für die Zeit zurück, die diese die primäre Datenbank seit dem Failover darstellt.  
   
- Verwenden Sie für eine weniger präzise Ansicht dieser Daten, **Sys. resource_stats** -Katalogsicht in der **master** Datenbank. Diese Sicht erfasst die Daten jede 5 Minuten und behält die Verlaufsdaten 14 Tage bei.  Weitere Informationen finden Sie unter [Sys. resource_stats &#40; Azure SQL-Datenbank &#41; ](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md).  
+ Verwenden Sie für eine weniger präzise Ansicht dieser Daten, **Sys. resource_stats** -Katalogsicht in der **master** Datenbank. Diese Sicht erfasst die Daten jede 5 Minuten und behält die Verlaufsdaten 14 Tage bei.  Weitere Informationen finden Sie unter [Sys. resource_stats &#40;Azure SQL-Datenbank&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md).  
   
  Wenn eine Datenbank einem elastischen Pool angehört, Ressourcenstatistiken als Prozentangaben, dargestellt als den Prozentsatz der maximalen DTU-Grenzwerts für die Datenbanken als Gruppe in der Konfiguration des elastischen Pools ausgedrückt.  
   
 ## <a name="example"></a>Beispiel  
   
-> [!NOTE]  
->  Für die Web- und Businessebenen geben diese Zahlen den Prozentsatz in Bezug auf die Standard S2-Leistungsebene an. Wenn zum Beispiel beim Ausführen mit einer Web- oder Geschäftsdatenbank avg_cpu_percent den Wert 70 % zurückgibt, weist dies auf 70 % des S2-Ebenenhöchstwerts hin. Darüber hinaus kann für Web- und Businessebenen der Prozentsatz eine Zahl über 100% zurückgeben, was ebenfalls auf dem S2-Ebenenhöchstwert basiert.  
-  
- Im folgenden Beispiel werden die Ressourcennutzungsdaten sortiert nach der letzten Ausführung der derzeit verbundenen Datenbank zurückgegeben.  
+Im folgenden Beispiel werden die Ressourcennutzungsdaten sortiert nach der letzten Ausführung der derzeit verbundenen Datenbank zurückgegeben.  
   
 ```  
 SELECT * FROM sys.dm_db_resource_stats ORDER BY end_time DESC;  
@@ -106,7 +103,7 @@ FROM sys.dm_db_resource_stats;
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Sys. resource_stats &#40; Azure SQL-Datenbank &#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md)   
+ [Sys. resource_stats &#40;Azure SQL-Datenbank&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md)   
  [Dienstebenen](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)   
  [Dienst-Tier-Funktionen und Beschränkungen](https://azure.microsoft.com/documentation/articles/sql-database-performance-guidance/)  
   

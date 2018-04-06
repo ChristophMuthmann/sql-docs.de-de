@@ -1,16 +1,16 @@
 ---
 title: dm_os_workers (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_os_workers_TSQL
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_workers dynamic management view
 ms.assetid: 4d5d1e52-a574-4bdd-87ae-b932527235e8
-caps.latest.revision: 
+caps.latest.revision: 47
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fb27268dbfb21cf2fed3b1b7b728cd9eeb4ee495
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: ce7582dc2c432ee0cfaf0dc04d47d59db9d2aff3
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="sysdmosworkers-transact-sql"></a>sys.dm_os_workers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -51,7 +51,7 @@ ms.lasthandoff: 02/03/2018
 |is_in_cc_exception|**bit**|1 = Arbeitsthread verarbeitet zurzeit eine Nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Ausnahme.|  
 |is_fatal_exception|**bit**|Gibt an, ob dieser Arbeitsthread eine schwerwiegende Ausnahme empfangen hat.|  
 |is_inside_catch|**bit**|1 = Arbeitsthread verarbeitet zurzeit eine Ausnahme.|  
-|is_in_polling_io_completion_routine|**bit**|1 = Arbeitsthread führt zurzeit eine E/A-Abschlussroutine für einen ausstehenden E/A-Vorgang aus. Weitere Informationen finden Sie unter [dm_io_pending_io_requests &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-io-pending-io-requests-transact-sql.md).|  
+|is_in_polling_io_completion_routine|**bit**|1 = Arbeitsthread führt zurzeit eine E/A-Abschlussroutine für einen ausstehenden E/A-Vorgang aus. Weitere Informationen finden Sie unter [dm_io_pending_io_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-io-pending-io-requests-transact-sql.md).|  
 |context_switch_count|**int**|Die Anzahl der von diesem Arbeitsthread ausgeführten Kontextwechsel des Zeitplanungsmoduls.|  
 |pending_io_count|**int**|Anzahl der physischen E/A-Vorgänge, die dieser Arbeitsthread ausgeführt hat.|  
 |pending_io_byte_count|**bigint**|Gesamtanzahl von Bytes aller ausstehenden physischen E/A-Vorgänge für diesen Arbeitsthread.|  
@@ -63,22 +63,22 @@ ms.lasthandoff: 02/03/2018
 |exception_num|**int**|Die Fehlernummer der letzten Ausnahme, die bei diesem Arbeitsthread aufgetreten ist.|  
 |exception_severity|**int**|Der Schweregrad der letzten Ausnahme, die bei diesem Arbeitsthread aufgetreten ist.|  
 |exception_address|**varbinary(8)**|Die Codeadresse, von der die Ausnahme ausgelöst wurde.|  
-|affinity|**bigint**|Die Threadaffinität des Arbeitsthreads. Entspricht die Affinität des Threads im [dm_os_threads &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-threads-transact-sql.md).|  
+|affinity|**bigint**|Die Threadaffinität des Arbeitsthreads. Entspricht die Affinität des Threads im [dm_os_threads &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-threads-transact-sql.md).|  
 |state|**nvarchar(60)**|Der Status des Arbeitsthreads. Folgende Werte sind möglich:<br /><br /> INIT = Der Arbeitsthread wird zurzeit initialisiert.<br /><br /> RUNNING = Arbeitsthread wird derzeit nicht präemptiv oder präemptiv ausgeführt.<br /><br /> RUNNABLE = Arbeitsthread kann im Zeitplanungsmodul ausgeführt werden.<br /><br /> SUSPENDED = Arbeitsthread wurde angehalten und wartet darauf, dass ein Ereignis ein Signal sendet.|  
 |start_quantum|**bigint**|Zeit in Millisekunden zu Beginn der aktuellen Ausführung dieses Arbeitsthreads.|  
 |end_quantum|**bigint**|Zeit in Millisekunden am Ende der aktuellen Ausführung dieses Arbeitsthreads.|  
-|last_wait_type|**nvarchar(60)**|Typ des letzten Wartevorgangs. Eine Liste der Wartetypen, finden Sie unter [dm_os_wait_stats &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md).|  
+|last_wait_type|**nvarchar(60)**|Typ des letzten Wartevorgangs. Eine Liste der Wartetypen, finden Sie unter [dm_os_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md).|  
 |return_code|**int**|Rückgabewert des letzten Wartevorgangs. Folgende Werte sind möglich:<br /><br /> 0 =SUCCESS<br /><br /> 3 = DEADLOCK<br /><br /> 4 = PREMATURE_WAKEUP<br /><br /> 258 = TIMEOUT|  
 |quantum_used|**bigint**|Nur interne Verwendung.|  
 |max_quantum|**bigint**|Nur interne Verwendung.|  
 |boost_count|**int**|Nur interne Verwendung.|  
 |tasks_processed_count|**int**|Anzahl der von diesem Arbeitsthread verarbeiteten Tasks.|  
 |fiber_address|**varbinary(8)**|Speicheradresse der Fiber, der dieser Arbeitsthread zugeordnet ist.<br /><br /> NULL = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ist nicht konfiguriert für Lightweightpooling.|  
-|task_address|**varbinary(8)**|Speicheradresse des aktuellen Tasks. Weitere Informationen finden Sie unter [dm_os_tasks &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md).|  
-|memory_object_address|**varbinary(8)**|Speicheradresse des Arbeitsthread-Speicherobjekts. Weitere Informationen finden Sie unter [Sys. dm_os_memory_objects &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md).|  
-|thread_address|**varbinary(8)**|Speicheradresse des Threads, der diesem Arbeitsthread zugeordnet ist. Weitere Informationen finden Sie unter [dm_os_threads &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-threads-transact-sql.md).|  
+|task_address|**varbinary(8)**|Speicheradresse des aktuellen Tasks. Weitere Informationen finden Sie unter [dm_os_tasks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md).|  
+|memory_object_address|**varbinary(8)**|Speicheradresse des Arbeitsthread-Speicherobjekts. Weitere Informationen finden Sie unter [dm_os_memory_objects &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md).|  
+|thread_address|**varbinary(8)**|Speicheradresse des Threads, der diesem Arbeitsthread zugeordnet ist. Weitere Informationen finden Sie unter [dm_os_threads &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-threads-transact-sql.md).|  
 |signal_worker_address|**varbinary(8)**|Speicheradresse des Arbeitsthreads, der dieses Objekt zuletzt signalisiert hat. Weitere Informationen finden Sie unter [dm_os_workers](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md).|  
-|scheduler_address|**varbinary(8)**|Speicheradresse des Zeitplanungsmoduls. Weitere Informationen finden Sie unter [DM_OS_SCHEDULERS &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md).|  
+|scheduler_address|**varbinary(8)**|Speicheradresse des Zeitplanungsmoduls. Weitere Informationen finden Sie unter [DM_OS_SCHEDULERS &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md).|  
 |processor_group|**smallint**|Speichert die Prozessorgruppen-ID, die diesem Thread zugewiesen ist.|  
 |pdw_node_id|**int**|**Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Der Bezeichner für den Knoten, dem auf diesem Verteilungspunkt befindet.|  
   
@@ -87,10 +87,11 @@ ms.lasthandoff: 02/03/2018
   
  Wird ein auf ein Ereignis wartender Arbeitsthread signalisiert, wird der Arbeitsthread an der vordersten Stelle in der ausführbaren Warteschlange platziert. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ermöglicht diesen Vorgang tausendmal nacheinander. Danach wird der Arbeitsthread an das Ende der Warteschlange verschoben. Wenn ein Arbeitsthread an das Ende der Warteschlange verschoben wird, wirkt sich dies negativ auf die Leistung aus.  
   
-## <a name="permissions"></a>Berechtigungen  
+## <a name="permissions"></a>Berechtigungen
+
 Auf [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], erfordert `VIEW SERVER STATE` Berechtigung.   
-Auf [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] benötigen Premium-Ebenen der `VIEW DATABASE STATE` Berechtigung in der Datenbank. Auf [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard und grundlegenden Organisationsebenen erfordert die **Serveradministrator** oder ein **Azure Active Directory-Administrators** Konto.  
-  
+Auf [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], erfordert die `VIEW DATABASE STATE` Berechtigung in der Datenbank.   
+
 ## <a name="examples"></a>Beispiele  
  Sie können die folgende Abfrage verwenden, um herauszufinden, wie lange ein Arbeitsthread bereits im Status SUSPENDED oder RUNNABLE ausgeführt wird.  
   
@@ -142,7 +143,7 @@ SELECT
  Wenn `w_runnable` und `w_suspended` gleich sind, stellt dies in der Ausgabe die Zeit dar, die sich der Arbeitsthread im Status SUSPENDED befindet. Andernfalls stellt `w_runnable` die Zeit dar, die der Arbeitsthread im Status RUNNABLE verbringt. In der Ausgabe befindet sich die Sitzung `52` `SUSPENDED` Millisekunden lang im Status `35,094`.  
   
 ## <a name="see-also"></a>Siehe auch  
- [SQL Server-Betriebssystem in Verbindung mit dynamischen Verwaltungssichten &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
+ [SQL Server-Betriebssystem verbundene dynamische Verwaltungssichten &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
   
   
 

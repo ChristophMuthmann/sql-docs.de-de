@@ -1,29 +1,29 @@
 ---
-title: "DSN und Verbindung-Schlüsselwörter und Attribute, die in der ODBC-Treiber für SQLServer verwendet eine Zeichenfolge | Microsoft Docs"
-ms.custom: 
-ms.date: 01/24/2018
+title: DSN und Verbindung-Schlüsselwörter und Attribute, die in der ODBC-Treiber für SQLServer verwendet eine Zeichenfolge | Microsoft Docs
+ms.custom: ''
+ms.date: 03/21/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
 - DSN
 - Connection String Keywords
 - Connection Attributes
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: MightyPen
 ms.author: v-jizho2
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 09af03a1f7f9389bbbc86bc5f9f1a5a358aaf885
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 641d0cf4134dc488436f981df1d4bee2c089acd2
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="dsn-and-connection-string-keywords-and-attributes"></a>DSN und Schlüsselwörter für Verbindungszeichenfolgen und Attribute
 
@@ -166,6 +166,7 @@ Legt den Authentifizierungsmodus zu verwenden, wenn eine Verbindung mit SQL Serv
 |SqlPassword|SQL_AU_PASSWORD|SQL Server-Authentifizierung mit Benutzername und Kennwort.|
 |ActiveDirectoryIntegrated|SQL_AU_AD_INTEGRATED|Azure Active Directory-integrierte Authentifizierung.|
 |ActiveDirectoryPassword|SQL_AU_AD_PASSWORD|Azure Active Directory-Kennwort-Authentifizierung.|
+|ActiveDirectoryInteractive|SQL_AU_AD_INTERACTIVE|Azure Active Directory interaktive Authentifizierung.|
 | |SQL_AU_RESET|Nicht festgelegt ist. Überschreibt alle DSN- oder Zeichenfolge-verbindungseinstellung an.|
 
 ### <a name="columnencryption---sqlcoptsscolumnencryption"></a>ColumnEncryption - SQL_COPT_SS_COLUMN_ENCRYPTION
@@ -219,6 +220,6 @@ Lädt eine Keystore-Anbieterbibliothek für Always Encrypted, oder ruft die Name
 
 | Attributwert | Description |
 |-|-|
-| Char * | Pfad zu einer Schlüsselspeicher-Anbieter-Bibliothek |
+| char * | Pfad zu einer Schlüsselspeicher-Anbieter-Bibliothek |
 
 

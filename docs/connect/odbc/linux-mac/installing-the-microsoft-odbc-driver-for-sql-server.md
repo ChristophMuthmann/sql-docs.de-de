@@ -1,30 +1,30 @@
 ---
-title: "Installieren von Microsoft ODBC Driver für SQL Server unter Linux und MacOS | Microsoft Docs"
-ms.custom: 
-ms.date: 03/13/2018
+title: Installieren von Microsoft ODBC Driver für SQL Server unter Linux und MacOS | Microsoft Docs
+ms.custom: ''
+ms.date: 04/04/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - driver, installing
 ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
-caps.latest.revision: 
+caps.latest.revision: 69
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 4b5371302206f87f19632c55f90917de189b303a
-ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
+ms.openlocfilehash: 44afb66dfdc98ea2160f54d394f48e1ce03df1cd
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="installing-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>Installieren von Microsoft ODBC Driver for SQL Server unter Linux und macOS
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -500,6 +500,40 @@ Weitere Informationen zum Beheben von Verbindungsproblemen finden Sie hier:
 -   [Fehler-Details ()http://www.microsoft.com/products/ee/transform.aspx?ProdName=Microsoft+SQL+Server&EvtSrc=MSSQLServer&EvtID=11001)](http://www.microsoft.com/products/ee/transform.aspx?ProdName=Microsoft+SQL+Server&EvtSrc=MSSQLServer&EvtID=001)  
   
     Die in der URL spezifizierte Fehlernummer (11001) sollte geändert werden, damit sie mit dem Ihnen angezeigten Fehler übereinstimmt.  
+  
+## <a name="driver-files"></a>Treiberdateien
+Der ODBC-Treiber unter Linux und MacOS besteht aus folgenden Komponenten:
+
+### <a name="linux"></a>Linux
+
+|Komponente|Description|  
+|---------------|-----------------|  
+|Libmsodbcsql-17. X.so.X.X oder Libmsodbcsql 13. X.so.X.X|Gemeinsam genutzte Objekt (`so`) dynamische Bibliotheksdatei, die gesamte Funktionalität des Treibers enthält. Diese Datei wird im installiert `/opt/microsoft/msodbcsql17/lib64/` für den Treiber 17 und in `/opt/microsoft/msodbcsql/lib64/` für Driver 13.|  
+|`msodbcsqlr17.rll`oder`msodbcsqlr13.rll`|Die begleitende Ressourcendatei für die Treiberbibliothek. Diese Datei wird in installiert. `[driver .so directory]../share/resources/en_US/`| 
+|msodbcsql.h|Die Header-Datei, die alle erforderlichen neuen Definitionen benötigt des Treibers enthält.<br /><br /> **Hinweis:**  Sie können nicht auf „msodbcsql.h“ und „odbcss.h“ im selben Programm verweisen.<br /><br /> "msodbcsql.h" wird im installiert `/opt/microsoft/msodbcsql17/include/` für Treiber 17 und in `/opt/microsoft/msodbcsql/include/` für Driver 13. |
+|LICENSE.txt|Die Textdatei, die die Bedingungen des Endbenutzer-Lizenzvertrag enthält. Diese Datei befindet sich im `/usr/share/doc/msodbcsql17/` für Treiber 17 und in `/usr/share/doc/msodbcsql/` für Driver 13.|
+|RELEASE_NOTES|Die Textdatei, die Anmerkungen zu dieser Version enthält. Diese Datei befindet sich im `/usr/share/doc/msodbcsql17/` für Treiber 17 und in `/usr/share/doc/msodbcsql/` für Driver 13.|
+
+
+### <a name="macos"></a>MacOS
+
+|Komponente|Description|  
+|---------------|-----------------|  
+|libmsodbcsql.17.dylib oder libmsodbcsql.13.dylib|Die dynamische Bibliothek (`dylib`) Datei, die gesamte Funktionalität des Treibers enthält. Diese Datei wird im installiert `/usr/local/lib/`.|  
+|`msodbcsqlr17.rll`oder`msodbcsqlr13.rll`|Die begleitende Ressourcendatei für die Treiberbibliothek. Diese Datei wird im installiert `[driver .dylib directory]../share/msodbcsql17/resources/en_US/` für Treiber 17 und in `[driver .dylib directory]../share/msodbcsql/resources/en_US/` für Driver 13. | 
+|msodbcsql.h|Die Header-Datei, die alle erforderlichen neuen Definitionen benötigt des Treibers enthält.<br /><br /> **Hinweis:**  Sie können nicht auf „msodbcsql.h“ und „odbcss.h“ im selben Programm verweisen.<br /><br /> "msodbcsql.h" wird im installiert `/usr/local/include/msodbcsql17/` für Treiber 17 und in `/usr/local/include/msodbcsql/` für Driver 13. |
+|LICENSE.txt|Die Textdatei, die die Bedingungen des Endbenutzer-Lizenzvertrag enthält. Diese Datei befindet sich im `/usr/local/share/doc/msodbcsql17/` für Treiber 17 und in `/usr/local/share/doc/msodbcsql/` für Driver 13. |
+|RELEASE_NOTES|Die Textdatei, die Anmerkungen zu dieser Version enthält. Diese Datei befindet sich im `/usr/local/share/doc/msodbcsql17/` für Treiber 17 und in `/usr/local/share/doc/msodbcsql/` für Driver 13. |
+
+## <a name="resource-file-loading"></a>Laden von Ressourcendateien
+
+Der Treiber muss die Ressourcendatei zu laden, um zu funktionieren. Diese Datei heißt `msodbcsqlr17.rll` oder `msodbcsqlr13.rll` abhängig von der Version des Treibers. Der Speicherort des der `.rll` Datei ist relativ zum Speicherort des Treibers selbst (`so` oder `dylib`), wie in der obigen Tabelle aufgeführt. Ab Version 17.1 versucht der Treiber auch beim Laden der `.rll` aus der Standard-Verzeichnis, wenn das Laden von Daten aus den relativen Pfad ein Fehler auftritt. Der Standardpfad für die Ressource sind:
+
+Linux: `/opt/microsoft/msodbcsql17/share/resources/en_US/`
+
+MacOS: `/usr/local/share/msodbcsql17/resources/en_US/`
+
+
   
 ## <a name="see-also"></a>Siehe auch
 
