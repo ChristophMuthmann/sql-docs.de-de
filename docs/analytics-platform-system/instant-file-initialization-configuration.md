@@ -2,25 +2,25 @@
 title: Sofortige Initialisierung Dateikonfiguration (Analytics Platform System)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 58be8982-4d2e-4aa3-bcdd-874a062d2f9d
-caps.latest.revision: "20"
-ms.openlocfilehash: b7dda4bb925e08f49409ea1950cfe3649b4db3e0
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 20
+ms.openlocfilehash: 1e28ff30c727dfe1132b5568bb12a333c51927d5
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="instant-file-initialization-configuration"></a>Sofortige Initialisierung Dateikonfiguration
 Sofortige dateiinitialisierung ist eine SQL Server-Funktion, die Datei Datenvorgänge schneller ausführen kann. Überprüfen das Kontrollkästchen, um die sofortige Dateiinitialisierung einschalten verbessert die Leistung von SQL Server PDW. Jedoch wenn dadurch ein Sicherheitsrisiko Business für Sie darstellt, dann lassen Sie das Kontrollkästchen deaktiviert.  
@@ -45,7 +45,7 @@ Im Rahmen des Sicherungsvorgangs erfordert eine Netzwerkanmeldeinformationen (Wi
   
 ## <a name="to-turn-instant-file-initialization-on-or-off"></a>Zum Aktivieren oder deaktivieren Sie die sofortige Dateiinitialisierung  
   
-1.  Starten Sie den Konfigurations-Manager. Weitere Informationen finden Sie unter [starten Sie den Konfigurations-Manager &#40; Analyseplattformsystem &#41; ](launch-the-configuration-manager.md).  
+1.  Starten Sie den Konfigurations-Manager. Weitere Informationen finden Sie unter [Starten des Konfigurations-Managers &#40;Analyseplattformsystem&#41;](launch-the-configuration-manager.md).  
   
 2.  Klicken Sie im linken Bereich des Konfigurations-Managers auf **Dateiinitialisierung**.  
   
@@ -54,7 +54,7 @@ Im Rahmen des Sicherungsvorgangs erfordert eine Netzwerkanmeldeinformationen (Wi
     > [!WARNING]  
     > Wenn Sie schnelle dateiinitialisierung deaktivieren, gelten die oben beschriebenen für das Feature Sicherheitsaspekt möglicherweise weiterhin für Dateien gelöscht werden, während die sofortige dateiinitialisierung aktiviert wurde.  
   
-4.  Klicken Sie auf **Anwenden**. Die Änderung wird das nächste Mal über die SQL Server-Instanzen für SQL Server PDW weitergegeben, das die Appliance-Dienste neu gestartet werden. Um die Anwendung Dienste neu zu starten, finden Sie unter [PDW-Dienststatus &#40; Analyseplattformsystem &#41; ](pdw-services-status.md).  
+4.  Klicken Sie auf **Anwenden**. Die Änderung wird das nächste Mal über die SQL Server-Instanzen für SQL Server PDW weitergegeben, das die Appliance-Dienste neu gestartet werden. Um die Anwendung Dienste neu zu starten, finden Sie unter [PDW-Dienststatus &#40;Analyseplattformsystem&#41;](pdw-services-status.md).  
   
 5.  Möglicherweise möchten Sie die oben erläuterten Schritte wiederholen **Berechtigung hinzufügen, für das Konto für die Sicherung** So entfernen Sie die **Durchführen von Volumewartungsaufgaben** Berechtigung.  
   

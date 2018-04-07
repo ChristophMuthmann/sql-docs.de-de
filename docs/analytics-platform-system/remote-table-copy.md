@@ -2,25 +2,25 @@
 title: Remotetabelle kopieren (SQLServer PDW)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/13/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: e00d948f-fede-4d41-a45d-67134770ce37
-caps.latest.revision: "23"
-ms.openlocfilehash: 3de6700957b48c5022c73c3d521bf6f6ed090553
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 23
+ms.openlocfilehash: fe6e808b8db8534f38db250d838d6a2cf132a30d
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="remote-table-copy"></a>Remotetabelle kopieren
 Beschreibt, wie die Remotetabelle Copy-Funktion verwenden, um Tabellen aus SQL Server PDW-Datenbanken auf entfernte (nicht-Appliance) – SMP – SQL Server-Datenbanken zu kopieren. Verwenden Sie für SQL Server PDW Remotetabelle Kopie auf Hub- und Spoke-Szenarien ermöglicht.  
@@ -35,7 +35,7 @@ Sie können die Remotetabelle Copy zum Kopieren von Tabellen aus SQL Server PDW 
   
 -   Der zu kopierenden Daten muss mit einer einzelnen gültigen SQL Server PDW auswählbare [wählen](../t-sql/queries/select-transact-sql.md) Anweisung.  
   
--   Der Zielserver muss ein nicht-Appliance-Server sein. Daten können nicht direkt von einem Gerät kopiert werden, in eine andere mithilfe der Anweisungen in diesem Thema.  
+-   Der Zielserver muss Server sein, der nicht zur Appliance gehört. Daten können nicht direkt von einem Gerät kopiert werden, in eine andere mithilfe der Anweisungen in diesem Thema.  
   
 -   Der Zielserver muss für alle Knoten auf die Appliance Infiniband-Netzwerk zugegriffen werden kann.  
   

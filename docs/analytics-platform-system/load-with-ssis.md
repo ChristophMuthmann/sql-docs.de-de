@@ -2,24 +2,24 @@
 title: Laden von Daten mit Integrationsservices
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology: mpp-data-warehouse
 description: Stellt Referenz- und Bereitstellung von Informationen zum Laden von Daten in SQL Server Parallel Data Warehouse mithilfe von SQL Server Integration Services (SSIS)-Pakete bereit.
 ms.date: 10/20/2016
 ms.topic: article
 ms.assetid: 9bdb559a-a91c-4342-8a6e-438cb93f975c
-caps.latest.revision: "69"
-ms.openlocfilehash: f00f72886a10c8be05db6a28adf3df89f8116081
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 69
+ms.openlocfilehash: d32e6b97d036437f6a28b81622873d14854d304f
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="load-data-with-integration-services"></a>Laden von Daten mit Integration Services
 Stellt Referenz- und Bereitstellung von Informationen zum Laden von Daten in SQL Server Parallel Data Warehouse mithilfe von SQL Server Integration Services (SSIS)-Pakete bereit.  
@@ -59,12 +59,12 @@ Standardmäßig führt die BIDS-Paketen mit 64-Bit-Binärdateien. Dies richtet s
 Führen Sie das Paket in SQL Server Data Tools, mit der rechten Maustaste auf das Paket, und wählen Sie **Paketausführungs**.  
   
 ### <a name="run-from-powershell"></a>Ausführen von PowerShell  
-Zum Ausführen des Pakets von Windows PowerShell mit der **Dtexec** Hilfsprogramm:`dtexec /FILE <packagePath>`  
+Zum Ausführen des Pakets von Windows PowerShell mit der **Dtexec** Hilfsprogramm: `dtexec /FILE <packagePath>`  
   
-Beispielsweise `dtexec /FILE "C:\Users\User1\Desktop\Package.dtsx"`  
+Beispiel: `dtexec /FILE "C:\Users\User1\Desktop\Package.dtsx"`  
   
 ### <a name="run-from-a-windows-command-prompt"></a>Ausführen von Windows-Befehlszeile 
-Zum Ausführen des Pakets aus einer Windows-Eingabeaufforderung mit dem **Dtexec** Hilfsprogramm:`dtexec /FILE <packagePath>`  
+Zum Ausführen des Pakets aus einer Windows-Eingabeaufforderung mit dem **Dtexec** Hilfsprogramm: `dtexec /FILE <packagePath>`  
   
 Beispiel: `dtexec /FILE "C:\Users\User1\Desktop\Package.dtsx"`  
   
@@ -227,7 +227,7 @@ Geben Sie das Ziel für den Datenfluss.
   
     Für Ethernet-Verbindungen **Servernamen**: Geben Sie die IP-Adresse der Steuerelement-Knoten-Cluster, Komma, Port 17001. Beispielsweise 10.192.63.134,17001.  
   
-    **Benutzer:**`user1`  
+    **User:**`user1`  
   
     **Kennwort:**`password1`  
   

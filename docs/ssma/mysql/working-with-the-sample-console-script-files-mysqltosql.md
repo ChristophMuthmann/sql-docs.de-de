@@ -21,13 +21,13 @@ ms.assetid: 7e6aaa8a-5f5c-414d-9fb8-21e56b9ffaef
 caps.latest.revision: 10
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8647293328bd0da43c095ddebb4844917afdc580
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 667cd2b758e5b7f249379b00266db3fc41c1d398
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="working-with-the-sample-console-script-files-mysqltosql"></a>Arbeiten mit der Konsole-Skriptdateien (MySQLToSQL)
 Einige Beispieldateien wurden zusammen mit dem Produkt für die Benutzer-Verweis und die Verwendung bereitgestellt. Dieser Abschnitt beschreibt die Möglichkeit, diese Skripts, sodass die Endbenutzer Bedürfnissen problemlos anzupassen.  
@@ -51,19 +51,19 @@ Referenz für den Benutzer haben die folgenden Konsole Skript Beispieldateien f�
   
     -   Der Benutzer kann mit der erforderlichen Datenbank einfach die Werte ändern, um die erforderlichen Quell- und Ziel-Serverdefinitionen verbinden. In das bereitgestellte Beispiel alle Werte bereitgestellt wie Variablenwerte in zur Verfügung stehen die **VariableValueFileSample.xml**.  Alle anderen Verbindungsparameter können aus der Verbindung des Benutzers arbeiten Serverdatei entfernt werden.  
   
-    -   Weitere Informationen zum Herstellen einer Verbindung mit dem Quell- und Ziel-Server finden Sie unter [erstellen, die Server-Connection-Dateien &#40; MySQLToSQL &#41; ](../../ssma/mysql/creating-the-server-connection-files-mysqltosql.md) .  
+    -   Weitere Informationen zum Herstellen einer Verbindung mit dem Quell- und Ziel-Server finden Sie unter [erstellen die Server-Verbindungsdateien &#40;MySQLToSQL&#41; ](../../ssma/mysql/creating-the-server-connection-files-mysqltosql.md) .  
   
 -   **VariableValueFileSample.xml:** alle Variablen, die in der Beispielkonsole verwendet wurden, Skriptdateien und `ServersConnectionFileSample.xml` haben in dieser Datei sortiert wurden. Beispielskripts-Konsole ausführen, die ersetzen Sie die Beispiel-Variable der Benutzer muss, Werte mit Benutzer definierten Argumente und übergeben Sie diese Datei als ein zusätzliches Befehlszeilenargument zusammen mit der Skriptdatei.  
   
-    Weitere Informationen zu Wert Variablendatei, finden Sie unter [erstellen Variable Wertdateien &#40; MySQLToSQL &#41; ](../../ssma/mysql/creating-variable-value-files-mysqltosql.md).  
+    Weitere Informationen zu Wert Variablendatei, finden Sie unter [Variable Value-Dateien erstellen &#40;MySQLToSQL&#41;](../../ssma/mysql/creating-variable-value-files-mysqltosql.md).  
   
--   **AssessmentReportGenerationSample.xml:** dieses Beispiel ermöglicht dem Benutzer um einen XML-Bewertung-Bericht zu generieren, die verwendet werden, können vom Benutzer für die Analyse bevor er beginnt, konvertieren und Migrieren von Daten.  
+-   **AssessmentReportGenerationSample.xml:** This sample enables the user to generate an xml assessment report which can be used by the user for analysis before he begins to convert and migrate data.  
   
     In der `generate-assessment-report` Befehl, der Benutzer hat den Wert den Variablen Zwischenschritte ändern (finden Sie unter **VariableValueFileSample.xml**) in der `object-name` -Attribut auf die Datenbank Namen an, von dem Benutzer verwendet. Je nach Art des Objekts angegeben wird die `object-type` Wert auch geändert werden müssen.  
   
     Wenn der Benutzer verfügt über mehrere Objekte bewerten / Datenbanken er mehrere festlegbaren `metabase-object` Knoten wie im veranschaulicht die `generate-assessment-report` des Befehls Beispiel 4 von der Konsole Beispielskriptdatei.  
   
-    Weitere Informationen zum Erstellen von Berichten finden Sie unter [Generieren von Berichten &#40; MySQLToSQL &#41; ](../../ssma/mysql/generating-reports-mysqltosql.md).  
+    Weitere Informationen zum Erstellen von Berichten finden Sie unter [Generieren von Berichten &#40;MySQLToSQL&#41;](../../ssma/mysql/generating-reports-mysqltosql.md).  
   
     **Hinweise:**  
   
@@ -92,7 +92,7 @@ Referenz für den Benutzer haben die folgenden Konsole Skript Beispieldateien f�
   
     **Attribut**  
   
-    -   `source-schema:`Gibt die Quelldatenbank, die erforderlich sind, konvertiert werden soll.  
+    -   `source-schema:` Gibt die Quelldatenbank, die erforderlich sind, konvertiert werden soll.  
   
     -   `sql-server-schema`: Gibt an, die Zieldatenbank, die migriert werden  
   
@@ -106,7 +106,7 @@ Referenz für den Benutzer haben die folgenden Konsole Skript Beispieldateien f�
   
     **Attribut**  
   
-    `object-name`: Geben Sie die Quelldatenbank / Objektnamen Sie, die erforderlich sind, konvertiert werden soll. Sicherstellen, dass das entsprechende `object-type` wird basierend auf den Typ des Objekts, das im angegebenen geändert, die`object-name`  
+    `object-name`: Geben Sie die Quelldatenbank / Objektnamen Sie, die erforderlich sind, konvertiert werden soll. Sicherstellen, dass das entsprechende `object-type` wird basierend auf den Typ des Objekts, das im angegebenen geändert, die `object-name`  
   
     **Befehlsname**  
   
@@ -118,7 +118,7 @@ Referenz für den Benutzer haben die folgenden Konsole Skript Beispieldateien f�
   
     **Attribut**  
   
-    `object-name:`Geben Sie die Sql Server-Datenbank / Objektname, der um zu erstellenden erfordert. Sicherstellen, dass das entsprechende `object-type` wird basierend auf den Typ des Objekts, das im angegebenen geändert, die`object-name`  
+    `object-name:` Geben Sie die Sql Server-Datenbank / Objektname, der um zu erstellenden erfordert. Sicherstellen, dass das entsprechende `object-type` wird basierend auf den Typ des Objekts, das im angegebenen geändert, die `object-name`  
   
     **Befehlsname**  
   
@@ -130,10 +130,10 @@ Referenz für den Benutzer haben die folgenden Konsole Skript Beispieldateien f�
   
     **Attribut**  
   
-    `object-name:`Gibt an, die Quelldatenbank / Tabellen Namen, die für die Migration erforderlich sind. Sicherstellen, dass das entsprechende `object-type` wird basierend auf den Typ des Objekts, das im angegebenen geändert, die`object-name`  
+    `object-name:` Gibt an, die Quelldatenbank / Tabellen Namen, die für die Migration erforderlich sind. Sicherstellen, dass das entsprechende `object-type` wird basierend auf den Typ des Objekts, das im angegebenen geändert, die `object-name`  
   
 ## <a name="see-also"></a>Siehe auch  
-[Erstellen Variablenwert Dateien &#40; MySQLToSQL &#41;](../../ssma/mysql/creating-variable-value-files-mysqltosql.md)  
-[Erstellen die Server-Connection-Dateien &#40; MySQLToSQL &#41;](../../ssma/mysql/creating-the-server-connection-files-mysqltosql.md)  
-[Generieren von Berichten &#40; MySQLToSQL &#41;](../../ssma/mysql/generating-reports-mysqltosql.md)  
+[Erstellen von Dateien Variablenwert &#40;MySQLToSQL&#41;](../../ssma/mysql/creating-variable-value-files-mysqltosql.md)  
+[Erstellen die Server-Verbindungsdateien &#40;MySQLToSQL&#41;](../../ssma/mysql/creating-the-server-connection-files-mysqltosql.md)  
+[Generieren von Berichten &#40;MySQLToSQL&#41;](../../ssma/mysql/generating-reports-mysqltosql.md)  
   

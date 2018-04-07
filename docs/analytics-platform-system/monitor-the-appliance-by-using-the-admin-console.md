@@ -1,26 +1,26 @@
 ---
-title: "Überwachen Sie das Gerät mithilfe der Verwaltungskonsole (Analytics Platform System)"
+title: Überwachen Sie das Gerät mithilfe der Verwaltungskonsole (Analytics Platform System)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 294ba6ac-b1ff-46ea-ba32-d8b32cb4cdc2
-caps.latest.revision: "26"
-ms.openlocfilehash: db27003d4e1efd54a179551f585fb23ce9c0ed82
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 26
+ms.openlocfilehash: 8da883797f8e9d09de0a5d160fc3383caf181590
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="monitor-the-appliance-by-using-the-admin-console"></a>Überwachen Sie die Anwendung mithilfe der Verwaltungskonsole
 Die Verwaltungskonsole ist eine SQL Server PDW-Webanwendung, die die Appliance Zustand, Integrität und Leistung Informationen bereitstellt. Benutzer eine Verbindung herstellen, um die Verwaltungskonsole über Internet Explorer.  
@@ -112,12 +112,12 @@ Die Admin-Konsole bietet die Möglichkeit zur Überwachung der folgenden:
 |-|-|  
 |**Informationstyp**|**Vorgehensweise beim Zugriff in der Verwaltungskonsole**|  
 |Gesamtstatus des Geräts|Klicken Sie auf **Anwendungszustand** im oberen Menü oder **Home**.|  
-|Warnungen|Klicken Sie auf **Warnungen**. Weitere Informationen finden Sie unter [Grundlegendes zu Admin Console-Warnungen &#40; Analyseplattformsystem &#41; ](understanding-admin-console-alerts.md).|  
+|Warnungen|Klicken Sie auf **Warnungen**. Weitere Informationen finden Sie unter [Grundlegendes zu Admin-Konsole Warnungen &#40;Analyseplattformsystem&#41;](understanding-admin-console-alerts.md).|  
 |Appliance-Komponenten und deren status|Klicken Sie auf **Anwendungszustand** im oberen Menü oder **Home**.|  
 |Monitor-Anforderungen (einschließlich Abfragen, lädt, Sicherungen und Wiederherstellungen)|Klicken Sie auf **Sitzungen** , die derzeit aktive oder aktuelle Sitzungen finden Sie unter.<br /><br />Klicken Sie auf **Abfragen** , die derzeit aktive oder aktuelle Abfragen finden Sie unter. Die für Abfragen angezeigten Informationen gehören lädt, Sicherungen und Wiederherstellungen.<br /><br />Klicken Sie auf **Sperren** zu aktiven Sperren finden Sie unter.|  
 |Zusätzliche Informationen für lädt, Sicherungen und Wiederherstellungen zu überwachen.|Klicken Sie auf **lädt** oder **Sicherungen/Wiederherstellungen**.|  
 |Leistungsinformationen|Klicken Sie auf **Systemmonitor**.|  
   
 ## <a name="see-also"></a>Siehe auch  
-[Überwachen der Appliance &#40; Analyseplattformsystem &#41;](appliance-monitoring.md)  
+[Überwachen der Appliance &#40;Analyseplattformsystem&#41;](appliance-monitoring.md)  
   

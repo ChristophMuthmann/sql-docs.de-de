@@ -2,24 +2,24 @@
 title: Sichern und Wiederherstellen
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology: mpp-data-warehouse
-description: "Beschreibt, wie die Daten sichern und Wiederherstellen von Works für SQL Server Parallel Data Warehouse (PDW)."
+description: Beschreibt, wie die Daten sichern und Wiederherstellen von Works für SQL Server Parallel Data Warehouse (PDW).
 ms.date: 10/20/2016
 ms.topic: article
 ms.assetid: d4669957-270a-4e50-baf3-14324ca63049
-caps.latest.revision: 
-ms.openlocfilehash: 06863b600ed62d795db82aa5aa3ae5c88578833a
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+caps.latest.revision: 50
+ms.openlocfilehash: b4ac7a3a0b9f005ac05646ad03dcf3123036462e
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="backup-and-restore"></a>Sichern und Wiederherstellen
 Beschreibt, wie die Daten sichern und Wiederherstellen von Works für SQL Server Parallel Data Warehouse (PDW). Sicherungs-und Wiederherstellungsvorgänge sind für die Wiederherstellung im Notfall verwendet werden. Sicherung und Wiederherstellung können auch zum Kopieren einer Datenbank auf einem Gerät in einer anderen Anwendung verwendet werden.  
@@ -35,7 +35,7 @@ The [master database](master-database.md) is a SMP SQL Server database. It is ba
 
 -->
   
-PDW verwendet SQL Server backup-Technologie, um Appliance-Datenbanken sichern und wiederherstellen. Optionen zur Sicherung der SQL Server sind vorkonfiguriert, um die Komprimierung von Sicherungen verwenden. Sie können keine Sicherungsoptionen z. B. Komprimierung, Checksum-Blockgröße und Puffergröße festlegen.  
+PDW verwendet SQL Server backup-Technologie, um Appliance-Datenbanken sichern und wiederherstellen. Optionen zur Sicherung der SQL Server sind vorkonfiguriert, um die Komprimierung von Sicherungen verwenden. Sie können keine Sicherungsoptionen wie Komprimierung, Prüfsumme, Blockgröße und Pufferanzahl festlegen.  
   
 Datenbanksicherungen werden auf eine oder mehrere Sicherungsserver gespeichert, die in Ihrem eigenen Kundennetzwerk vorhanden sein.  PDW schreibt eine Benutzerdatenbank-Sicherung direkt von den Computeknoten parallel auf einem Sicherungsserver und eine Benutzerdatenbank-Sicherung parallel direkt aus dem backup-Server an den Computeknoten wiederhergestellt.  
   
@@ -46,7 +46,7 @@ Es gibt zwei Arten von Daten, die eine Sicherung erfordern: Benutzerdatenbanken 
   
 Eine vollständige Sicherung ist eine Sicherung einer gesamten PDW-Datenbank. Dies ist der Standard-Sicherungstyp aus. Eine vollständige Sicherung einer Benutzerdatenbank enthält Datenbankbenutzer und Datenbankrollen. Eine Sicherung der Master-Datenbank umfasst Anmeldungen.  
   
-Eine differenzielle Sicherung enthält alle Änderungen seit der letzten vollständigen Sicherung. Eine differenzielle Sicherung normalerweise weniger Zeit als eine vollständige Sicherung und häufiger ausgeführt werden kann. Wenn mehrere differenzielle Sicherungen auf der gleichen vollständigen Sicherung basieren, enthält jeder differenziellen Sicherung aller Änderungen in der vorherigen differenziellen an.  
+Eine differenzielle Sicherung enthält alle Änderungen seit der letzten vollständigen Sicherung. Eine differenzielle Sicherung nimmt normalerweise weniger Zeit in Anspruch als eine vollständige Sicherung und kann häufiger ausgeführt werden. Wenn mehrere differenzielle Sicherungen auf der gleichen vollständigen Sicherung basieren, enthält jeder differenziellen Sicherung aller Änderungen in der vorherigen differenziellen an.  
   
 Sie konnten z. B. eine vollständige Sicherung wöchentlich und täglich eine differenzielle Sicherung erstellen. Zum Wiederherstellen der Datenbank, die vollständige Sicherung sowie der letzten muss (falls vorhanden) differenziellen wiederhergestellt werden.  
   
@@ -123,11 +123,11 @@ Beim Wiederherstellen von Daten erkennt die Appliance die Anzahl der Serverknote
   
 ## <a name="restoring-to-an-appliance-with-a-larger-number-of-compute-nodes"></a>Wiederherstellen in einer Anwendung mit einer größeren Anzahl von Serverknoten  
   
-Wiederherstellen einer Sicherung in einer Anwendung mit einer größeren Anzahl von Serverknoten, wächst die Größe der belegten Datenbank relativ zur Anzahl von Compute-Knoten.  
+Beim Wiederherstellen einer Sicherung auf einer Appliance mit einer größeren Anzahl von Computeknoten wächst die Größe der zugeordneten Datenbank entsprechend der Anzahl der Computeknoten.  
   
 Erstellt z. B. bei der Wiederherstellung einer 60-GB-Datenbank von einer 2-Knoten-Einheit (30 GB pro Knoten) in einer Anwendung 6 Knoten SQL Server PDW eine 180 GB-Datenbank (6 Knoten mit 30 GB pro Knoten) auf dem Gerät 6 Knoten. SQL Server PDW stellt anfänglich 2 Knoten entsprechend die Quellkonfiguration der Datenbank wieder her, und klicken Sie dann die Daten für alle 6 Knoten neu verteilt.  
   
-Nach der Weitergabe enthält jeder Serverknoten weniger tatsächlichen Daten und mehr freien Speicher als jeder Compute-Knoten auf der kleinere Source-Anwendung. Verwenden Sie den zusätzlichen Speicherplatz, um die Datenbank weitere Daten hinzuzufügen. Wenn die wiederhergestellte Datenbank größer ist, als Sie benötigen, können Sie [ALTER DATABASE](../t-sql/statements/alter-database-parallel-data-warehouse.md) zum Verkleinern der Datenbank-Dateigrößen.  
+Nach der Umverteilung enthält jeder Computeknoten weniger tatsächliche Daten und mehr freien Speicherplatz als die einzelnen Computeknoten auf der kleineren Quellappliance. Dank des zusätzlichen Speicherplatzes können Sie der Datenbank weitere Daten hinzufügen. Wenn die wiederhergestellte Datenbank größer ist, als Sie benötigen, können Sie [ALTER DATABASE](../t-sql/statements/alter-database-parallel-data-warehouse.md) zum Verkleinern der Datenbank-Dateigrößen.  
   
 ## <a name="related-tasks"></a>Verwandte Aufgaben  
   

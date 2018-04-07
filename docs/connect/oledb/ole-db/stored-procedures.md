@@ -10,7 +10,7 @@ ms.component: ole-db
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
-- docset-sql-devref
+- drivers
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -22,16 +22,16 @@ author: pmasl
 ms.author: Pedro.Lopes
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3b3b294bb410423688f94521b857ca3062e02c4e
-ms.sourcegitcommit: 9f4330a4b067deea396b8567747a6771f35e6eee
+ms.openlocfilehash: bbae7466e59e16be3195637987ce0b6724078934
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="stored-procedures"></a>Gespeicherte Prozeduren
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Eine gespeicherte Prozedur ([systemgespeicherte Prozeduren &#40; Datenbankmodul &#41;](../../../relational-databases/stored-procedures/stored-procedures-database-engine.md)) ist eine in einer Datenbank gespeichertes, ausführbares Objekt. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unterstützt:  
+  Eine gespeicherte Prozedur ([systemgespeicherte Prozeduren & #40; Datenbankmodul & #41;](../../../relational-databases/stored-procedures/stored-procedures-database-engine.md)) ist eine in einer Datenbank gespeichertes, ausführbares Objekt. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unterstützt:  
   
 -   Gespeicherte Prozeduren  
   
@@ -43,9 +43,9 @@ ms.lasthandoff: 03/30/2018
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
--   [Ausführen von gespeicherten Prozeduren &#40; OLE DB &#41;](../../oledb/ole-db/stored-procedures-running.md)  
+-   [Ausführen von gespeicherten Prozeduren & #40; OLE DB & #41;](../../oledb/ole-db/stored-procedures-running.md)  
   
--   [Aufrufen einer gespeicherten Prozedur &#40; OLE DB &#41;](../../oledb/ole-db/stored-procedures-calling.md)  
+-   [Aufrufen einer gespeicherten Prozedur & #40; OLE DB & #41;](../../oledb/ole-db/stored-procedures-calling.md)  
   
 ## <a name="see-also"></a>Siehe auch  
  [OLE DB-Treiber für SQLServer &#40;OLE DB&#41;](../../oledb/ole-db/oledb-driver-for-sql-server-ole-db.md)  

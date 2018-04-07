@@ -2,25 +2,25 @@
 title: Appliance-Netzwerkkonfiguration (Analytics Platform System)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 8e2b9abe-963d-479b-a4a7-1739fcb3e249
-caps.latest.revision: "27"
-ms.openlocfilehash: 34f322e9bd1d500b3755262332ab5724de5aa301
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 27
+ms.openlocfilehash: fcee7a037b3fbffc56e923f9be875074628398c3
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="appliance-network-configuration"></a>Appliance-Netzwerkkonfiguration
 Die SQL Server PDW-Anwendung wird erstellt und mit einem Update von IP-Adressen in allen Servern und Geräten aus der IHV Herstellerstandort konfiguriert. Bei der Übermittlung der Appliance muss die externen (Ethernet) IP-Adresse gerichtet neu konfiguriert werden, um die kundenspezifischen Daten Center Anforderungen entsprechen.  
@@ -65,5 +65,5 @@ Weitere Informationen über Dell-Einheiten finden Sie unter:
 -   Die Stromverteilereinheit **Dell gemessene Gestell-PDU**`ftp://ftp.dell.com/Manuals/all-products/esuprt_ser_stor_net/esuprt_rack_infrastructure/dell-metered-pdu-led_User's%20Guide_en-us.pdf`  
   
 ## <a name="see-also"></a>Siehe auch  
-[Starten Sie den Konfigurations-Manager &#40; Analyseplattformsystem &#41;](launch-the-configuration-manager.md)  
+[Starten Sie den Konfigurations-Manager &#40;Analyseplattformsystem&#41;](launch-the-configuration-manager.md)  
   

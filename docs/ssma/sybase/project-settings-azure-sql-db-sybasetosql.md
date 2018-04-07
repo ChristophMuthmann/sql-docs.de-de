@@ -1,32 +1,33 @@
 ---
 title: Projekteinstellungen (Azure SQL-Datenbank) (SybaseToSQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-sybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 57002374-0d4d-43c1-b4e9-cbec02355a9c
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c6d39a4ceb167746ffe1f47528ac8e042f45715a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: cb155079bc318e9b23944fb2830a64454d3a76de
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
-# <a name="project-settings-azure-sql-db--sybasetosql"></a>Projekteinstellungen (Azure SQL-Datenbank) (SybaseToSQL)
+# <a name="project-settings-azure-sql-db--sybasetosql"></a>Project Settings (Azure SQL DB ) (SybaseToSQL)
 Die projekteinstellungen für die Azure SQL-Datenbank können Sie konfigurieren das Suffix des Azure SQL-Datenbank-Datenbank auch können implementieren taktmechanismus in Verbindung mit Azure SQL-Datenbank und klicken Sie im Dialogfeld "Verbindung" hinzugefügt werden.  
   
 Klicken Sie im Azure SQL-Datenbank finden Sie in der **Projekteinstellungen** und **Projekt Standardeinstellungen** Dialogfelder.  
@@ -35,7 +36,7 @@ Klicken Sie im Azure SQL-Datenbank finden Sie in der **Projekteinstellungen** un
   
 -   Verwenden Sie das Dialogfeld Projekt Standardeinstellungen, um Konfigurationsoptionen für alle Projekte festzulegen. Zum Zugriff auf die Einstellungen für Azure SQL-Datenbank, in der **Tools** klicken Sie im Menü **DefaultProject Einstellungen**, klicken Sie auf **allgemeine** am unteren Rand des linken Bereich, und klicken Sie dann wählen **Azure SQL-Datenbank**.  
   
-## <a name="connectivity"></a>Connectivity  
+## <a name="connectivity"></a>Konnektivität  
 **Taktintervall**  
   
 Gibt ein Zeitintervall, das für taktmechanismus verwendet werden, um die Azure SQL-DB-Verbindung in aufrechtzuerhalten "Minuten: Sekunden-Format.  

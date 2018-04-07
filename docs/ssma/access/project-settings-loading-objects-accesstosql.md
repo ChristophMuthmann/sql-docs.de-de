@@ -2,34 +2,35 @@
 title: Projekteinstellungen (Laden von Objekten) (AccessToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-access
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 9ec1c1e8-a3e1-4e81-bf49-631f87daa209
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: da86fe46153ede299a41a2b4e308f1b5b51f6947
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 16d21bbe8cb2d3bc2e2d069c12fe53607774373e
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="project-settings-loading-objects-accesstosql"></a>Projekteinstellungen (Laden von Objekten) (AccessToSQL)
 Die projekteinstellungen Laden von Objekten können Sie konfigurieren, wie den Zugriff auf Datenbankobjekte mit SQL Server-Datenbankobjekte synchronisiert werden.  
   
-Die Standardaktionen geben Standardeinstellungen für die Aktualisierung von Objekten aus der Access-Datenbank und zum Synchronisieren von Objekten mit SQL Server-Datenbank. Weitere Informationen finden Sie unter [aus Datenbank &#40; aktualisieren AccessToSQL &#41;](../../ssma/access/refresh-from-database-accesstosql.md)  
+Die Standardaktionen geben Standardeinstellungen für die Aktualisierung von Objekten aus der Access-Datenbank und zum Synchronisieren von Objekten mit SQL Server-Datenbank. Weitere Informationen finden Sie unter [aus der Datenbank aktualisieren &#40;AccessToSQL&#41;](../../ssma/access/refresh-from-database-accesstosql.md)  
   
 Sie können zwei unterschiedliche Synchronisierung Seiten zugreifen, die die gleichen Einstellungen enthalten:  
   
@@ -37,7 +38,7 @@ Sie können zwei unterschiedliche Synchronisierung Seiten zugreifen, die die gle
   
 -   Zum Angeben von Einstellungen für das aktuelle Projekt auf die **Tools** Menü klicken Sie auf **Projekteinstellungen**, und klicken Sie dann auf **Objekte laden** unten im linken Bereich.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>enthalten  
   
 ##### <a name="misc"></a>Sonstiges  
   

@@ -21,20 +21,20 @@ ms.assetid: 00b2d32a-998b-47a7-b25c-589b5bd6777a
 caps.latest.revision: 13
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 069e14ae3babfb3961042edaf0d99e24367df85d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 2612b2658ae1d89891e410768dc0e31d78eb299c
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="find-databases-wizard-select-locations-accesstosql"></a>Datenbanken-Assistent (Wählen Sie Speicherorte) suchen (AccessToSQL)
 Auf der Seite Standorte auswählen des Assistenten Datenbanken suchen Geben Sie die Suchparameter zum Suchen von Access-Datenbanken.  
   
 Klicken Sie im Assistenten zum Suchen von Datenbanken zum Öffnen der **Datei** Menü klicken Sie auf **Datenbanken suchen**. Weitere Informationen zur Verwendung dieses Dialogfelds finden Sie unter [hinzufügen und Entfernen von Access-Datenbankdateien](http://msdn.microsoft.com/en-us/e944c740-4c8a-4bc1-b0ed-be57bc06dced)  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>enthalten  
 **Durchsuchen**  
 Klicken Sie auf diese Option, um den Computer oder im Netzwerk zu suchen. Wählen Sie den Ordner oder den Speicherort zu suchen, und klicken Sie dann auf **OK**. Klicken Sie auf **hinzufügen** an diesem Speicherort zur Liste hinzuzufügen.  
   

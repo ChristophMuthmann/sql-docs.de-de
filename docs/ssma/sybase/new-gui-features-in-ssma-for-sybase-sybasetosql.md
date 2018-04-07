@@ -1,30 +1,31 @@
 ---
-title: "Neue GUI-Funktionen in SSMA für Sybase (SybaseToSQL) | Microsoft Docs"
-ms.custom: 
+title: Neue GUI-Funktionen in SSMA für Sybase (SybaseToSQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-sybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: d3c60e8c-f0a7-4590-8ece-c68ceaeaea4a
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c65710ff7ff0a89a326a4c7d5594d23fd660b8cb
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 321c8e193c93ba34d15c7f8882d4284d08fabdf3
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="new-gui-features-in-ssma-for-sybase-sybasetosql"></a>Neue GUI-Funktionen in SSMA für Sybase (SybaseToSQL)
 In diesem Kapitel wird beschrieben, neuen Features von SSMA-Benutzeroberfläche.  

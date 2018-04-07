@@ -1,26 +1,26 @@
 ---
-title: "Konfigurieren von SQLServer PDW für Remotetabelle Kopien (SQLServer PDW)"
+title: Konfigurieren von SQLServer PDW für Remotetabelle Kopien (SQLServer PDW)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/13/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 496b4214-5891-404c-8237-c2a1e09db6d5
-caps.latest.revision: "11"
-ms.openlocfilehash: 08257e4823eed7bf86977ddca1df41eee7f8bda2
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 11
+ms.openlocfilehash: 46fdb88ce3a244946b89f14320229905793564ac
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="configure-sql-server-pdw-for-remote-table-copies"></a>Konfigurieren von SQLServer PDW für Kopien der Remotetabelle
 Beschreibt das Konfigurieren von SQL Server PDW Verwendung die Funktion zum Kopieren von Remotetabelle um Tabellen SMP SQL Server-Datenbanken auf nicht-Appliance-Servern zu kopieren.  
@@ -30,7 +30,7 @@ Dieses Thema beschreibt eine der Konfigurationsschritte zum Konfigurieren von re
 ## <a name="before-you-begin"></a>Vorbereitungen  
 Konfigurieren Sie SQL Server PDW um Remotetabelle Kopie verwenden möchten, müssen Sie folgende Aktionen ausführen:  
   
--   Haben Sie ein Administratorkonto Analytics Platform System mit der Möglichkeit, melden Sie direkt in die  ***Appliance_domain*-AD01** und  ***Appliance_domain*-AD02** Knoten.  
+-   Haben Sie ein Administratorkonto Analytics Platform System mit der Möglichkeit, melden Sie direkt in der ***Appliance_domain *-AD01** und ***Appliance_domain *-AD02** Knoten.  
   
 -   Kennen Sie den Hostnamen oder die IP-Name des Zielservers an.  
   
@@ -39,7 +39,7 @@ Die **CREATE REMOTE TABLE** -Anweisung, zum Remotetabelle Kopien, gibt den Ziels
   
 Die folgenden Schritte beschreiben, wie den DNS-Server aktualisiert wird.  
   
-1.  Melden Sie sich bei dem aktiven Knoten des AD (normalerweise  ***Appliance_domain*-AD01**).  
+1.  Melden Sie sich bei dem aktiven Knoten des AD (normalerweise ***Appliance_domain *-AD01**).  
   
 2.  Öffnen Sie den DNS-Manager. Diese befindet sich unter **Verwaltung** in der **starten** Menü.  
   

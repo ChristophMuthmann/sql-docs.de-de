@@ -1,35 +1,36 @@
 ---
 title: Arbeiten mit SSMA-Projekten (SybaseToSQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-sybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 11091d95-c488-48c3-891a-743cac94ac93
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4625284beb50612c276046c139f8340b1872cfc8
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 3c1b7b34a106a8bab8bb2a5ba09a67b29cc4e50a
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="working-with-ssma-projects-sybasetosql"></a>Arbeiten mit SSMA-Projekten (SybaseToSQL)
 Zum Migrieren von Datenbanken von Sybase Adaptive Server Enterprise (ASE) zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure, Sie zuerst ein SSMA Projekt erstellen. Das Projekt ist eine Datei, die Metadaten zu den Datenbanken ASE enthält, die Sie zum migrieren möchten [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder Metadaten zu der Zielinstanz von SQL Azure [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure, die die migrierten Objekte und Daten, erhalten [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure-Verbindungsinformationen und Einstellungen für Projektdateien.  
   
-Wenn Sie ein Projekt öffnen, wird getrennt von [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure. Dadurch können Sie offline arbeiten. Sie können die Verbindung mit wiederherstellen [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure. Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit SQL Server &#40; SybaseToSQL &#41; ](../../ssma/sybase/connecting-to-sql-server-sybasetosql.md)  /  [Herstellen einer Verbindung mit Azure SQL-Datenbank &#40; SybaseToSQL &#41; ](../../ssma/sybase/connecting-to-azure-sql-db-sybasetosql.md).  
+Wenn Sie ein Projekt öffnen, wird getrennt von [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure. Dadurch können Sie offline arbeiten. Sie können die Verbindung mit wiederherstellen [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure. Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit SQL Server &#40;SybaseToSQL&#41;](../../ssma/sybase/connecting-to-sql-server-sybasetosql.md) / [Herstellen einer Verbindung mit Azure SQL-Datenbank &#40;SybaseToSQL&#41;](../../ssma/sybase/connecting-to-azure-sql-db-sybasetosql.md).  
   
 ## <a name="reviewing-default-project-settings"></a>Überprüfen die standardmäßigen Projekteinstellungen  
 SSMA enthält mehrere Optionen zum Umrechnen und Laden von Datenbankobjekten, Migrieren von Daten und beim Synchronisieren von SSMA mit ASE und [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure. Die Standardeinstellungen für diese Optionen eignen sich für viele Benutzer. Jedoch bevor Sie ein neues SSMA-Projekt erstellen, sollten Sie überprüfen Sie die Optionen und, wenn Sie möchten, ändern die Standardwerte, die für alle neuen Projekte verwendet werden.  
@@ -42,19 +43,19 @@ SSMA enthält mehrere Optionen zum Umrechnen und Laden von Datenbankobjekten, Mi
   
 3.  Klicken Sie im linken Bereich auf **Konvertierung**.  
   
-4.  Überprüfen Sie im rechten Bereich die Optionen, die Optionen nach Bedarf ändern. Weitere Informationen zu diesen Optionen finden Sie unter [Projekteinstellungen &#40; Konvertierung &#41; &#40; SybaseToSQL &#41; ](../../ssma/sybase/project-settings-conversion-sybasetosql.md).  
+4.  Überprüfen Sie im rechten Bereich die Optionen, die Optionen nach Bedarf ändern. Weitere Informationen zu diesen Optionen finden Sie unter [Projekteinstellungen &#40;Konvertierung&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-conversion-sybasetosql.md).  
   
 5.  Wiederholen Sie die Schritte 1 bis 3 für die Migration, SQL Azure, Laden von Objekten, GUI und Type Mapping-Seiten.  
   
-    -   Informationen zu Migrationsoptionen finden Sie unter [Projekteinstellungen &#40; Migration &#41; &#40; SybaseToSQL &#41; ](../../ssma/sybase/project-settings-migration-sybasetosql.md).  
+    -   Informationen zu Migrationsoptionen finden Sie unter [Projekteinstellungen &#40;Migration&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-migration-sybasetosql.md).  
   
-    -   Weitere Informationen zu Optionen zum Laden von Objekten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], finden Sie unter [Projekteinstellungen &#40; Synchronisierung &#41; &#40; SybaseToSQL &#41; ](../../ssma/sybase/project-settings-synchronization-sybasetosql.md).  
+    -   Weitere Informationen zu Optionen zum Laden von Objekten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], finden Sie unter [Projekteinstellungen &#40;Synchronisierung&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-synchronization-sybasetosql.md).  
   
-    -   Weitere Informationen über die GUI-Optionen finden Sie unter [Projekteinstellungen &#40; GUI &#41; &#40; SybaseToSQL &#41; ](../../ssma/sybase/project-settings-gui-sybasetosql.md).  
+    -   Weitere Informationen über die GUI-Optionen finden Sie unter [Projekteinstellungen &#40;GUI&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-gui-sybasetosql.md).  
   
-    -   Weitere Informationen zu datentypzuordnung-Einstellungen, klicken Sie auf [Projekteinstellungen &#40; Typzuordnung &#41; &#40; SybaseToSQL &#41; ](../../ssma/sybase/project-settings-type-mapping-sybasetosql.md).  
+    -   Weitere Informationen zu datentypzuordnung-Einstellungen, klicken Sie auf [Projekteinstellungen &#40;Typzuordnung&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-type-mapping-sybasetosql.md).  
   
-    -   Weitere Informationen zu SQL Azure-Optionen finden Sie unter [Projekteinstellungen &#40; Azure SQL-Datenbank &#41; &#40; SybaseToSQL &#41; ](../../ssma/sybase/project-settings-azure-sql-db-sybasetosql.md).  
+    -   Weitere Informationen zu SQL Azure-Optionen finden Sie unter [Projekteinstellungen &#40;Azure SQL-Datenbank &#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-azure-sql-db-sybasetosql.md).  
   
     > [!NOTE]  
     > Die SQL Azure-Einstellungen werden angezeigt, bei der Auswahl **Migration zu SQL Azure** beim Erstellen eines Projekts.  
@@ -84,14 +85,14 @@ Zum Migrieren von Daten aus Datenbanken ASE [!INCLUDE[ssNoVersion](../../include
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2016  
   
-    -   Azure SQL-Datenbank  
+    -   Azure SQL DB  
   
 Und klicken Sie dann auf **OK**.  
   
 ## <a name="customizing-project-settings"></a>Anpassen von Projekteinstellungen  
-Zusätzlich zum Definieren von Standard-projekteinstellungen, die für alle neuen SSMA-Projekte gelten, können Sie die Einstellungen für jedes Projekt anpassen. Weitere Informationen finden Sie unter [Einstellung Projektoptionen &#40; SybaseToSQL &#41; ](../../ssma/sybase/setting-project-options-sybasetosql.md).  
+Zusätzlich zum Definieren von Standard-projekteinstellungen, die für alle neuen SSMA-Projekte gelten, können Sie die Einstellungen für jedes Projekt anpassen. Weitere Informationen finden Sie unter [Einstellung Projektoptionen &#40;SybaseToSQL&#41;](../../ssma/sybase/setting-project-options-sybasetosql.md).  
   
-Wenn Sie datentypzuordnungen zwischen Quell-und Zieldatenbanken anpassen, können Sie Zuordnungen auf das Projekt, Datenbank oder Objektebene definieren. Weitere Informationen zur Zuordnung finden Sie unter [Zuordnung Sybase ASE und SQL Server-Datentypen &#40; SybaseToSQL &#41; ](../../ssma/sybase/mapping-sybase-ase-and-sql-server-data-types-sybasetosql.md).  
+Wenn Sie datentypzuordnungen zwischen Quell-und Zieldatenbanken anpassen, können Sie Zuordnungen auf das Projekt, Datenbank oder Objektebene definieren. Weitere Informationen zur Zuordnung finden Sie unter [Zuordnung Sybase ASE und SQL Server-Datentypen &#40;SybaseToSQL&#41;](../../ssma/sybase/mapping-sybase-ase-and-sql-server-data-types-sybasetosql.md).  
   
 ## <a name="saving-projects"></a>Speichern von Projekten  
 Wenn Sie ein Projekt speichern, behält SSMA den projekteinstellungen und optional die Datenbank-Metadaten in die Projektdatei.  
@@ -129,8 +130,8 @@ Wenn Sie ein Projekt öffnen, wird getrennt von ASE und [!INCLUDE[ssNoVersion](.
 Der nächste Schritt des Migrationsvorgangs besteht darin [Herstellen einer Verbindung mit der Sybase ASE](http://msdn.microsoft.com/en-us/a45a2330-9175-4c9e-af38-ef920e350614).  
   
 ## <a name="see-also"></a>Siehe auch  
-[Migrieren von Sybase ASE-Datenbanken zu SQLServer - Azure SQL-Datenbank &#40; SybaseToSQL &#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
-[Herstellen einer Verbindung zum Sybase ASE &#40; SybaseToSQL &#41;](../../ssma/sybase/connecting-to-sybase-ase-sybasetosql.md)  
-[Herstellen einer Verbindung mit SQLServer &#40; SybaseToSQL &#41;](../../ssma/sybase/connecting-to-sql-server-sybasetosql.md)  
-[Herstellen einer Verbindung mit Azure SQL-Datenbank &#40; SybaseToSQL &#41;](../../ssma/sybase/connecting-to-azure-sql-db-sybasetosql.md)  
+[Migrieren von Sybase ASE-Datenbanken zu SQLServer – Azure SQL-Datenbank &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
+[Herstellen einer Verbindung mit der Sybase ASE &#40;SybaseToSQL&#41;](../../ssma/sybase/connecting-to-sybase-ase-sybasetosql.md)  
+[Herstellen einer Verbindung mit SQLServer &#40;SybaseToSQL&#41;](../../ssma/sybase/connecting-to-sql-server-sybasetosql.md)  
+[Herstellen einer Verbindung mit Azure SQL-Datenbank &#40;SybaseToSQL&#41;](../../ssma/sybase/connecting-to-azure-sql-db-sybasetosql.md)  
   

@@ -21,13 +21,13 @@ ms.assetid: 195ffdef-cfde-4bf4-a3ae-e7402bb07972
 caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0b78d26a492a73964c39b15c678103537cd9abe1
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 687fa8b221a31e0c1c447b5c5cbee85cc31d1702
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="running-test-cases-sybasetosql"></a>Ausführen von Testfällen (SybaseToSQL)
 Wenn SSMA Tester einen Testfall ausgeführt wird, führt die Objekte, die zu Testzwecken ausgewählt und erstellt einen Bericht über die Ergebnisse der Überprüfung. Wenn die Ergebnisse auf beiden Plattformen identisch sind, war der Test erfolgreich. Die Entsprechung von Objekten zwischen Sybase und [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] richtet sich danach die schemazuordnung Einstellungen für das aktuelle SSMA-Projekt.  
@@ -41,11 +41,11 @@ So führen Sie die vorbereiteten Testfall aus:
   
 2.  In der **Herstellen einer Verbindung mit der Sybase** (Dialogfeld), geben Sie die Verbindungsinformationen, und klicken Sie dann auf **verbinden**.  
   
-Wenn der Test abgeschlossen ist, ist der Testfall Bericht erstellt. Klicken Sie auf die **Bericht** Schaltfläche zum Anzeigen der [Anzeigen von Testfall Berichten &#40; SybaseToSQL &#41; ](../../ssma/sybase/viewing-test-case-reports-sybasetosql.md). Das Ergebnis des Tests (Bericht "Testfall") werden automatisch gespeichert, der [mithilfe-Repositorys &#40; SybaseToSQL &#41; ](../../ssma/sybase/using-test-repositories-sybasetosql.md) zur späteren Verwendung.  
+Wenn der Test abgeschlossen ist, ist der Testfall Bericht erstellt. Klicken Sie auf die **Bericht** Schaltfläche zum Anzeigen der [Testfall Berichte anzeigen &#40;SybaseToSQL&#41;](../../ssma/sybase/viewing-test-case-reports-sybasetosql.md). Das Ergebnis des Tests (Bericht "Testfall") werden automatisch gespeichert, der [mithilfe-Repositorys &#40;SybaseToSQL&#41; ](../../ssma/sybase/using-test-repositories-sybasetosql.md) zur späteren Verwendung.  
   
 ## <a name="test-case-execution-steps"></a>Testfall Ausführungsschritte folgen  
   
-### <a name="prerequisites"></a>Voraussetzungen  
+### <a name="prerequisites"></a>Erforderliche Komponenten  
 SSMA-Tester wird überprüft, ob alle erforderlichen Komponenten für die Ausführung des Tests vor Beginn des Tests erfüllt sind. Wenn bestimmte Bedingungen nicht erfüllt sind, wird eine Fehlermeldung angezeigt.  
   
 ### <a name="initialization"></a>Initialisierung  
@@ -57,19 +57,19 @@ Die folgenden Objekte werden an Sybase erstellt, in der Datenbank SSMATESTER2005
   
 |Name|Typ|Description|  
 |--------|--------|---------------|  
-|USER_TABLE$ "TRG"|Trigger|Trigger, der die Änderungen in der überprüften Tabelle überwachen.|  
-|USER_TABLE$ Aud|Tabelle|Die Tabelle, in dem überschriebene, und gelöschte Zeilen gespeichert werden.|  
-|USER_TABLE$ AudID|Tabelle|Die Tabelle, in dem neue und geänderte Zeilen gespeichert werden.|  
-|USER_TABLE|Anzeigen|Vereinfachte Darstellung der tabellenänderungen.|  
-|USER_TABLE$ neue|Anzeigen|Vereinfachte Darstellung der eingefügten Zeilen überschrieben.|  
-|USER_TABLE$ new_id|Anzeigen|Kennung des eingefügten und geänderten Zeilen.|  
-|USER_TABLE$ alte|Anzeigen|Vereinfachte Darstellung der Zeilen gelöscht und überschrieben.|  
+|USER_TABLE$Trg|Trigger|Trigger, der die Änderungen in der überprüften Tabelle überwachen.|  
+|USER_TABLE$Aud|Tabelle|Die Tabelle, in dem überschriebene, und gelöschte Zeilen gespeichert werden.|  
+|USER_TABLE$AudID|Tabelle|Die Tabelle, in dem neue und geänderte Zeilen gespeichert werden.|  
+|USER_TABLE|Sicht|Vereinfachte Darstellung der tabellenänderungen.|  
+|USER_TABLE$new|Sicht|Vereinfachte Darstellung der eingefügten Zeilen überschrieben.|  
+|USER_TABLE$new_id|Sicht|Kennung des eingefügten und geänderten Zeilen.|  
+|USER_TABLE$old|Sicht|Vereinfachte Darstellung der Zeilen gelöscht und überschrieben.|  
   
 Das folgende Objekt wird in der überprüften Tabelle auf Sybase-Datenbank erstellt und [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
   
 |Name|Typ|Description|  
 |--------|--------|---------------|  
-|USER_TABLE$ "TRG"|Trigger|Trigger, der die Änderungen in der überprüften Tabelle überwachen.|  
+|USER_TABLE$Trg|Trigger|Trigger, der die Änderungen in der überprüften Tabelle überwachen.|  
   
 ### <a name="test-object-calls"></a>Testen der Aufrufe  
 SSMA-Tester an diesem Punkt ruft jedes Objekt, das für die Tests ausgewählt, vergleichen Sie die Ergebnisse und zeigt den Bericht.  
@@ -78,10 +78,10 @@ SSMA-Tester an diesem Punkt ruft jedes Objekt, das für die Tests ausgewählt, v
 Während der Finalisierung bereinigt SSMA Tester die zusätzlichen Objekte erstellt, auf die **Initialisierung** Schritt.  
   
 ## <a name="next-step"></a>Nächster Schritt  
-[Anzeigen von Berichten Testfall &#40; SybaseToSQL &#41;](../../ssma/sybase/viewing-test-case-reports-sybasetosql.md)  
+[Anzeigen von Berichten Testfall &#40;SybaseToSQL&#41;](../../ssma/sybase/viewing-test-case-reports-sybasetosql.md)  
   
 ## <a name="see-also"></a>Siehe auch  
-[Wählen Sie aus, und Konfigurieren von Objekten zum Test &#40; SybaseToSQL &#41;](../../ssma/sybase/selecting-and-configuring-objects-to-test-sybasetosql.md)  
-[Auswählen und Konfigurieren der betroffenen Objekte &#40; SybaseToSQL &#41;](../../ssma/sybase/selecting-and-configuring-affected-objects-sybasetosql.md)  
-[Testen von migriert Datenbankobjekte &#40; SybaseToSQL &#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
+[Auswählen und Konfigurieren von Objekten mit Test &#40;SybaseToSQL&#41;](../../ssma/sybase/selecting-and-configuring-objects-to-test-sybasetosql.md)  
+[Auswählen und Konfigurieren von betroffene Objekte &#40;SybaseToSQL&#41;](../../ssma/sybase/selecting-and-configuring-affected-objects-sybasetosql.md)  
+[Testen von Datenbankobjekten migriert &#40;SybaseToSQL&#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
   

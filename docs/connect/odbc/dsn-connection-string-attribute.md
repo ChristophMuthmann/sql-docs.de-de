@@ -8,22 +8,18 @@ ms.service: ''
 ms.component: odbc
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
-- DSN
-- Connection String Keywords
-- Connection Attributes
+ms.technology: drivers
 ms.tgt_pltfrm: ''
 ms.topic: article
 author: MightyPen
 ms.author: v-jizho2
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 641d0cf4134dc488436f981df1d4bee2c089acd2
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
+ms.openlocfilehash: a24fd4bba9a29733ab13147d5bbfe7537f2ef4e7
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="dsn-and-connection-string-keywords-and-attributes"></a>DSN und Schlüsselwörter für Verbindungszeichenfolgen und Attribute
 

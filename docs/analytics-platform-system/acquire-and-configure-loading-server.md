@@ -2,24 +2,24 @@
 title: Erwerben und Konfigurieren eines Servers geladen (SQLServer PDW)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology: mpp-data-warehouse
-description: "Abrufen und einen laden-Server als nicht-Appliance WindowsSystem für die Einreichung von riesige Datenmengen mit SQL Server Parallel Data Warehouse konfigurieren."
+description: Abrufen und einen laden-Server als nicht-Appliance WindowsSystem für die Einreichung von riesige Datenmengen mit SQL Server Parallel Data Warehouse konfigurieren.
 ms.date: 10/20/2016
 ms.topic: article
 ms.assetid: a434b174-a818-4f73-b218-264619bab664
-caps.latest.revision: "19"
-ms.openlocfilehash: d4a91dc3216945b3f473e1b5b131333ad8d210d3
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 19
+ms.openlocfilehash: 566153d95f2affa5b8c5857d45f53c6b43a80a39
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="acquire-and-configure-a-loading-server"></a>Erwerben und Konfigurieren eines Servers geladen
 In diesem Thema wird beschrieben, wie erwerben und Konfigurieren als nicht-Appliance WindowsSystem für die Einreichung von riesige Datenmengen zu SQL Server Parallel Data Warehouse (PDW) eines Servers geladen wird.  

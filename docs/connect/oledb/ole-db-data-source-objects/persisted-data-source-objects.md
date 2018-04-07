@@ -10,7 +10,7 @@ ms.component: ole-db-data-source-objects
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
-- docset-sql-devref
+- drivers
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -22,11 +22,11 @@ author: pmasl
 ms.author: Pedro.Lopes
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 77e9c60892599a2032fda11bd9241a65c4089991
-ms.sourcegitcommit: 9f4330a4b067deea396b8567747a6771f35e6eee
+ms.openlocfilehash: 77a375f3aa928b110a01028755556d6de0f61a4e
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="persisted-data-source-objects"></a>Persistente Datenquellenobjekte
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -236,6 +236,6 @@ HRESULT InitFromPersistedDS
  Die **IPersistFile:: Save** Methode kann aufgerufen werden, vor oder nach dem Aufruf **IDBInitialize:: Initialize**. Aufrufen der Methode nach einer erfolgreichen Rückgabe von **IDBInitialize:: Initialize** wird sichergestellt, dass eine gültige datenquellenspezifikation persistent ist.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datenquellenobjekte &#40; OLE DB &#41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
+ [Datenquellenobjekte & #40; OLE DB & #41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
   
   

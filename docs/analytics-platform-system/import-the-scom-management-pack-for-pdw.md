@@ -1,26 +1,26 @@
 ---
-title: "Importieren Sie das SCOM Management Pack für PDW (Analytics Platform System)"
+title: Importieren Sie das SCOM Management Pack für PDW (Analytics Platform System)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: fa735041-8e58-4886-ae3b-36f3c6298b12
-caps.latest.revision: "6"
-ms.openlocfilehash: 179395b7befdf934fcc44532944f4b535b9d3c5a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 6
+ms.openlocfilehash: d8accd7106cce2274e60793e123779e87b8dfd49
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="import-the-scom-management-pack-for-pdw"></a>Importieren Sie das SCOM Management Pack für PDW
 Führen Sie diese Schritte aus, um die System Center Operations Manager (SCOM) Management Packs für SQL Server PDW zu importieren. Die Management Packs sind erforderlich, zum Überwachen von SQL Server PDW aus SCOM.  
@@ -30,7 +30,7 @@ Führen Sie diese Schritte aus, um die System Center Operations Manager (SCOM) M
   
 System Center Operationsmanager 2007 R2 muss installiert und aktiv sein.  
   
-Die Management Packs müssen installiert sein. Finden Sie unter [installieren Sie die SCOM-Management Packs &#40; Analyseplattformsystem &#41; ](install-the-scom-management-packs.md).  
+Die Management Packs müssen installiert sein. Finden Sie unter [Installation der SCOM-Management Packs &#40;Analyseplattformsystem&#41;](install-the-scom-management-packs.md).  
   
 ## <a name="Step1"></a>Schritt 1: Importieren Sie das SQL Server-Appliance Basis-Management Pack  
   
@@ -83,7 +83,7 @@ Die Management Packs müssen installiert sein. Finden Sie unter [installieren Si
     ![Klicken Sie auf Schließen](./media/import-the-scom-management-pack-for-pdw/SCOM_PDW4.png "SCOM_PDW4")  
   
 ## <a name="next-step"></a>Nächster Schritt  
-Nun, dass Sie die Management Packs importiert haben, mit dem nächsten Schritt fortfahren: [Konfigurieren von SCOM zum Überwachen Analytics Platform System &#40; Analyseplattformsystem &#41; ](configure-scom-to-monitor-analytics-platform-system.md).  
+Nun, dass Sie die Management Packs importiert haben, mit dem nächsten Schritt fortfahren: [Konfigurieren von SCOM zum Überwachen Analytics Platform System &#40;Analyseplattformsystem&#41;](configure-scom-to-monitor-analytics-platform-system.md).  
   
 <!-- MISSING LINKS ## See Also  
 [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  

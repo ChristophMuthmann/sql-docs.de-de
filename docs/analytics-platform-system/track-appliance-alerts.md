@@ -2,25 +2,25 @@
 title: Nachverfolgen der Appliance Warnungen (Analytics Platform System)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 631345d9-4967-461a-8922-e5f8fd33f48f
-caps.latest.revision: "14"
-ms.openlocfilehash: a780aa34667280d9e079dad4f44954ba919275d5
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 14
+ms.openlocfilehash: 825617eb8ff8d1e6c20bd891a53e85aba71f6100
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="track-appliance-alerts"></a>Nachverfolgen der Appliance-Warnungen
 In diesem Thema wird erläutert, wie mit der Admin-Konsole und Systemsichten Warnungen in einer SQL Server PDW Appliance nachverfolgt wird.  
@@ -78,5 +78,5 @@ ORDER BY
   
 ## <a name="see-also"></a>Siehe auch  
 <!-- MISSING LINKS [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->
-[Überwachen der Appliance &#40; Analyseplattformsystem &#41;](appliance-monitoring.md)  
+[Überwachen der Appliance &#40;Analyseplattformsystem&#41;](appliance-monitoring.md)  
   

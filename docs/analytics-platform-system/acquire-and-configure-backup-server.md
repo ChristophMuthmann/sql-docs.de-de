@@ -1,25 +1,25 @@
 ---
-title: "Erwerben Sie und konfigurieren Sie einen Sicherungsserver für APS PDW"
+title: Erwerben Sie und konfigurieren Sie einen Sicherungsserver für APS PDW
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology: mpp-data-warehouse
-description: "Konfigurieren von einem nicht-Appliance-Windows-Betriebssystem als Sicherungsserver für die Verwendung mit der Sicherung und Wiederherstellungsfunktionen in Analytics Platform System (APS) und SQL Server Parallel Data Warehouse (PDW)."
+description: Konfigurieren von einem nicht-Appliance-Windows-Betriebssystem als Sicherungsserver für die Verwendung mit der Sicherung und Wiederherstellungsfunktionen in Analytics Platform System (APS) und SQL Server Parallel Data Warehouse (PDW).
 ms.date: 10/20/2016
 ms.topic: article
-caps.latest.revision: "20"
+caps.latest.revision: 20
 ms.assetid: f8b769fe-c864-4d65-abcb-a9a287061702
-ms.openlocfilehash: 760537abd7e3227cc2245c429d0a0c13f7609f8b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 564a70d5fa483f2c34ef2598213a2c22074daf80
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="acquire-and-configure-a-backup-server"></a>Erwerben und Konfigurieren eines backup-Servers
 Dieses Thema beschreibt, wie ein nicht-Appliance-Windows-System als backup Server für die Verwendung mit der Sicherung und Wiederherstellung-Funktionen in Analytics Platform System (APS) und SQL Server Parallel Data Warehouse (PDW) konfigurieren.  
@@ -136,12 +136,12 @@ Da PDW Sicherungen nicht auf dem Gerät gespeichert werden, ist Ihr IT-Team zust
   
 ### <a name="manage-network-credentials"></a>Verwalten von Anmeldeinformationen für das Netzwerk  
   
-Netzwerkzugriff auf das Sicherungsverzeichnis basiert auf standard Sicherheit der Windows-Dateifreigabe. Bevor Sie eine Sicherung ausführen, müssen Sie erstellen oder reservieren Sie ein Windowskonto, das zum Authentifizieren von PDW im Sicherungsverzeichnis verwendet werden soll. Dieses Windows-Konto muss über die Berechtigung den Zugriff, erstellen und Schreiben im Sicherungsverzeichnis.  
+Der Netzwerkzugriff auf das Sicherungsverzeichnis basiert auf der Windows-Standarddateifreigabesicherheit. Bevor Sie eine Sicherung ausführen, müssen Sie erstellen oder reservieren Sie ein Windowskonto, das zum Authentifizieren von PDW im Sicherungsverzeichnis verwendet werden soll. Dieses Windows-Konto benötigt die Berechtigung, auf das Sicherungsverzeichnis zuzugreifen, es zu erstellen und auf es zu schreiben.  
   
 > [!IMPORTANT]  
-> Um Sicherheitsrisiken mit Ihren Daten zu reduzieren, empfehlen wir, dass Sie ein Windows-Konto ausschließlich zum Zweck der Sicherung festlegen und Wiederherstellungsvorgänge. Ermöglichen Sie diesem Konto Berechtigungen für den Sicherungsspeicherort, und an keiner anderen Stelle verfügen.  
+> Um Sicherheitsrisiken in Verbindung mit Ihren Daten zu reduzieren, empfehlen wir, dass Sie ein Windows-Konto ausschließlich zum Ausführen der Sicherungs- und Wiederherstellungsvorgänge festlegen. Definieren Sie das Konto so, dass es nur Berechtigungen für den Sicherungsspeicherort besitzt.  
   
-Um den Benutzernamen und das Kennwort im PDW speichern möchten, verwenden Sie die [Sp_pdw_add_network_credentials](../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md) gespeicherte Prozedur. PDW verwendet Windows-Anmeldeinformationsverwaltung zum Speichern und Verschlüsseln von Benutzernamen und Kennwörter auf den Knoten "Zugriffssteuerung" und Compute-Knoten. Die Anmeldeinformationen sind nicht mit dem Befehl BACKUP DATABASE gesichert.  
+Um den Benutzernamen und das Kennwort im PDW speichern möchten, verwenden Sie die [Sp_pdw_add_network_credentials](../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md) gespeicherte Prozedur. PDW verwendet Windows-Anmeldeinformationsverwaltung zum Speichern und Verschlüsseln von Benutzernamen und Kennwörter auf den Knoten "Zugriffssteuerung" und Compute-Knoten. Die Anmeldeinformationen werden nicht mit dem Befehl BACKUP DATABASE gesichert.  
   
 Verwenden Sie zum Entfernen der Anmeldeinformationen für das Netzwerk aus PDW die [Sp_pdw_remove_network_credentials](../relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse.md) gespeicherte Prozedur.  
   

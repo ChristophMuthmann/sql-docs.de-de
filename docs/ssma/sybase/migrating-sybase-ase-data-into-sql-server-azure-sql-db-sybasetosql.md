@@ -1,15 +1,16 @@
 ---
 title: Migrieren von Sybase ASE Daten in SQLServer - Azure SQL-Datenbank | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-sybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - Migrating data,Client Side Data Migration
 - Migrating data,Server Side Data Migration
 ms.assetid: 54a39f5e-9250-4387-a3ae-eae47c799811
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5ff0dfa9d72d7616d7e775361de03728fd951bea
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ab42e495eb4e76b6e9d7b6a2cca3d031eed12448
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="migrating-sybase-ase-data-into-sql-server---azure-sql-db--sybasetosql"></a>Migrieren von Sybase ASE-Daten in SQLServer - Azure SQL-Datenbank (SybaseToSQL)
 Nachdem Sie die Datenbankobjekte Sybase Adaptive Server Enterprise (ASE) in erfolgreich geladen wurde [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder Azure SQL-Datenbank, können Sie Daten aus ASE zum Migrieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder Azure SQL-Datenbank.  
@@ -106,11 +107,11 @@ Zum Anzeigen der Migration Nachrichten sicher, dass im Ausgabebereich angezeigt 
     > [!NOTE]  
     > Wenn SSMA für Sybase Erweiterung Pack nicht auf die Instanz von SQL Server installiert ist und **Server Side Migration Datenmodul** ausgewählt ist, wird bei der Migration der das in die Zieldatenbank an, der folgende Fehler aufgetreten ist: "Datenmigration SSMA-Komponenten wurden nicht gefunden für SQL Server, serverseitige Datenmigration ist nicht möglich. Überprüfen Sie, ob die Erweiterung Pack ordnungsgemäß installiert ist ". Klicken Sie auf **"Abbrechen"** die Datenmigration beendet.  
   
-5.  In der **Herstellen einer Verbindung mit der Sybase ASE** (Dialogfeld), geben Sie die Anmeldeinformationen der Verbindung, und klicken Sie dann auf **verbinden**. Weitere Informationen zum Verbinden mit Sybase ASE finden Sie unter [Herstellen einer Verbindung mit der Sybase &#40; SybaseToSQL &#41;](../../ssma/sybase/connect-to-sybase-sybasetosql.md)  
+5.  In der **Herstellen einer Verbindung mit der Sybase ASE** (Dialogfeld), geben Sie die Anmeldeinformationen der Verbindung, und klicken Sie dann auf **verbinden**. Weitere Informationen zum Verbinden mit Sybase ASE finden Sie unter [Herstellen einer Verbindung mit der Sybase &#40;SybaseToSQL&#41;](../../ssma/sybase/connect-to-sybase-sybasetosql.md)  
   
     Wenn die Zieldatenbank, SQL Server befindet, und geben Sie dann die Anmeldeinformationen in der **Herstellen einer Verbindung mit SQL Server** (Dialogfeld), und klicken Sie auf **verbinden**. Weitere Informationen zum Herstellen einer Verbindung mit SQL Server finden Sie unter [Herstellen einer Verbindung mit SQL-Server(SybaseToSQL)](http://msdn.microsoft.com/en-us/dd368a1a-45b0-40e9-b4d3-5cdb48c26606)  
   
-    Wenn die Zieldatenbank Azure SQL-Datenbank ist, und geben Sie dann die Anmeldeinformationen in der **Herstellen einer Verbindung mit Azure SQL-Datenbank** (Dialogfeld), und klicken Sie auf **verbinden**. Weitere Informationen zum Verbinden mit Azure SQL-Datenbank finden Sie unter [Herstellen einer Verbindung mit Azure SQL-Datenbank &#40; SybaseToSQL &#41;](../../ssma/sybase/connecting-to-azure-sql-db-sybasetosql.md)  
+    Wenn die Zieldatenbank Azure SQL-Datenbank ist, und geben Sie dann die Anmeldeinformationen in der **Herstellen einer Verbindung mit Azure SQL-Datenbank** (Dialogfeld), und klicken Sie auf **verbinden**. Weitere Informationen zum Verbinden mit Azure SQL-Datenbank finden Sie unter [Herstellen einer Verbindung mit Azure SQL-Datenbank &#40;SybaseToSQL&#41;](../../ssma/sybase/connecting-to-azure-sql-db-sybasetosql.md)  
   
     Nachrichten werden angezeigt, der **Ausgabe** Bereich. Wenn die Migration abgeschlossen ist, ist die **Migrationsbericht Daten** angezeigt wird. Wenn keine Daten migriert haben, klicken Sie auf die Zeile, die Fehler enthält, und klicken Sie dann auf **Details**. Wenn Sie mit dem Bericht fertig sind, klicken Sie auf **schließen**. Weitere Informationen zu Daten Migrationsbericht, finden Sie unter [Migrationsbericht für Daten (SSMA häufigen Spalten)](http://msdn.microsoft.com/en-us/bbfb9d88-5a98-4980-8d19-c5d78bd0d241)  
   
@@ -118,5 +119,5 @@ Zum Anzeigen der Migration Nachrichten sicher, dass im Ausgabebereich angezeigt 
 > Wenn SQL Express-Edition als die Zieldatenbank verwendet wird, wird nur Client Side Datenmigration ist zulässig, und Server Seite Daten-Migration wird nicht unterstützt.  
   
 ## <a name="see-also"></a>Siehe auch  
-[Migrieren von Sybase ASE-Datenbanken zu SQLServer - Azure SQL-Datenbank &#40; SybaseToSQL &#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
+[Migrieren von Sybase ASE-Datenbanken zu SQLServer – Azure SQL-Datenbank &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
   

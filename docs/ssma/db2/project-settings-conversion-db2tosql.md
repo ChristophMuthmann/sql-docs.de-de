@@ -2,29 +2,30 @@
 title: Projekteinstellungen (Konvertierung) (DB2ToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-db2
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 538c93cf-c5bb-43d5-b758-186d9fb00c19
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5f459472409e9fc85322aca5067d0953bd24831a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 389d5da7b3940464150ca52618595fd8bd518fb8
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="project-settings-conversion-db2tosql"></a>Projekteinstellungen (Konvertierung) (DB2ToSQL)
 Die Seite "Konvertierung", der die **Projekteinstellungen** Dialogfeld enthält Einstellungen, anpassen, wie SSMA zu DB2-Syntax konvertiert [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Syntax.  
@@ -100,7 +101,7 @@ Bei Auswahl einer Konvertierungsmodus in der **Modus** Feld SSMA gilt die folgen
 **Standard/Optimistic/Full-Modus:** mit MERGE Anweisung  
   
 ### <a name="convert-calls-to-subprograms-that-use-default-arguments"></a>Konvertieren Sie Aufrufe an, mit denen Standardargumente Unterprogramme  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]Funktionen unterstützen nicht die Auslassung der Parameter im Funktionsaufruf. Darüber hinaus [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Funktionen und Prozeduren unterstützen keine Ausdrücke als Parameter Standardwerte.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Funktionen unterstützen nicht die Auslassung der Parameter im Funktionsaufruf. Darüber hinaus [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Funktionen und Prozeduren unterstützen keine Ausdrücke als Parameter Standardwerte.  
   
 -   Bei Auswahl des **Ja** und ein Funktionsaufruf wird ausgelassen, Parameter, SSMA fügt das Schlüsselwort **Standard** in der Funktion und den Aufruf in der richtigen Position. Es werden dann in den Aufruf mit einer Warnung gekennzeichnet.  
   
@@ -115,7 +116,7 @@ Wenn die COUNT-Funktion zum Zurückgeben von Werten größer als 2.147.483.647 w
   
 -   Bei Auswahl des **Ja**, SSMA konvertiert alle Vorkommen von COUNT, COUNT_BIG.  
   
--   Bei Auswahl des **keine**, die Funktionen als Anzahl bleiben. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]Gibt einen Fehler zurück, wenn die Funktion einen Wert größer als 2 zurückgibt<sup>31</sup>-1 zurück.  
+-   Bei Auswahl des **keine**, die Funktionen als Anzahl bleiben. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Gibt einen Fehler zurück, wenn die Funktion einen Wert größer als 2 zurückgibt<sup>31</sup>-1 zurück.  
   
 Bei Auswahl einer Konvertierungsmodus in der **Modus** Feld SSMA gilt die folgende Einstellung:  
   
@@ -137,7 +138,7 @@ Bei Auswahl einer Konvertierungsmodus in der **Modus** Feld SSMA gilt die folgen
 **Vollmodus:** Ja  
   
 ### <a name="convert-foreign-keys-with-set-null-referential-action-on-column-that-is-not-null"></a>Konvertieren von Fremdschlüsseln mit referenziellen SET NULL-Aktion auf die Spalte, die NULL nicht  
-DB2 ermöglicht foreign Key-Einschränkungen erstellen, in denen konnte eine SET NULL-Aktion nicht möglicherweise ausgeführt werden, da NULL-Werte nicht in der referenzierten Spalte zulässig sind. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]die Konfiguration dieser Art foreign Key ist nicht zulässig.  
+DB2 ermöglicht foreign Key-Einschränkungen erstellen, in denen konnte eine SET NULL-Aktion nicht möglicherweise ausgeführt werden, da NULL-Werte nicht in der referenzierten Spalte zulässig sind. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] die Konfiguration dieser Art foreign Key ist nicht zulässig.  
   
 -   Bei Auswahl des **Ja**, SSMA referenzielle Aktionen wie DB2 generiert, aber Sie müssen manuelle Änderungen vor dem Laden der Einschränkung [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Sie können z. B. NO ACTION anstelle von NULL festgelegt.  
   
@@ -173,7 +174,7 @@ Die folgende Tabelle zeigt, wie SSMA DB2 Sperrmodi konvertiert:
   
 |||  
 |-|-|  
-|DB2-Sperrmodus|SQL Server-Tabellenhinweis|  
+|DB2 Lock Mode|SQL Server-Tabellenhinweis|  
 |FREIGABE DER ZEILE|ROWLOCK, HOLDLOCK|  
 |EXKLUSIVE ZEILE|ROWLOCK, XLOCK, HOLDLOCK|  
 |FREIGABE UPDATE = ZEILE FREIGABE|ROWLOCK, HOLDLOCK|  
@@ -227,7 +228,7 @@ SSMA kann PL/SQL-Untertypen auf zwei Arten konvertieren:
   
 -   Bei Auswahl des **Ja**, SSMA erstellt [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] benutzerdefinierte Geben Sie einen Untertyp und verwenden sie für jede Variable dieses Untertyps.  
   
--   Bei Auswahl des **keine**, SSMA wird allen Deklarationen in der Quelle des Untertyps mit dem zugrunde liegenden Typ ersetzen und das Ergebnis wie gewohnt konvertieren. In diesem Fall keine zusätzlichen Typen in erstellt werden.[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]  
+-   Bei Auswahl des **keine**, SSMA wird allen Deklarationen in der Quelle des Untertyps mit dem zugrunde liegenden Typ ersetzen und das Ergebnis wie gewohnt konvertieren. In diesem Fall keine zusätzlichen Typen in erstellt werden. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]  
   
 Bei Auswahl einer Konvertierungsmodus in der **Modus** Feld SSMA gilt die folgende Einstellung:  
   
@@ -317,7 +318,7 @@ Wenn die SELECT-Anweisung eine INTO-Klausel keine Zeilen zurückgibt, löst DB2 
   
 -   Bei Auswahl des **Ja**, SSMA Aufruf Sysdb Prozedur Db_error_exact_one_row_check nach jeder SELECT-Anweisung hinzugefügt. Diese Prozedur emuliert die NO_DATA_FOUND und TOO_MANY_ROWS Ausnahmen. Dies ist die Standardeinstellung, und ermöglicht DB2 Verhalten so nah wie möglich zu reproduzieren. Sie sollten immer auswählen **Ja** Wenn Quellcode Ausnahmehandler verfügt, die diese Fehler zu verarbeiten. Beachten Sie, dass die SELECT-Anweisung innerhalb einer benutzerdefinierten Funktion tritt auf, dieses Modul an eine gespeicherte Prozedur konvertiert werden, wird da das Ausführen von gespeicherter Prozeduren und Auslösen von Ausnahmen ist nicht kompatibel mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Funktionskontext.  
   
--   Bei Auswahl des **keine**, keine Ausnahmen generiert werden. Der nützlich sein, wenn SSMA eine User-defined Function konvertiert, und Sie eine Funktion in bleiben möchten[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]  
+-   Bei Auswahl des **keine**, keine Ausnahmen generiert werden. Der nützlich sein, wenn SSMA eine User-defined Function konvertiert, und Sie eine Funktion in bleiben möchten [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]  
   
 Bei Auswahl einer Konvertierungsmodus in der **Modus** Feld SSMA gilt die folgende Einstellung:  
   
@@ -370,7 +371,7 @@ Bei Auswahl einer Konvertierungsmodus in der **Modus** Feld SSMA gilt die folgen
 **Standard/optimistische/Full-Modus:** Inline  
   
 ### <a name="use-isnull-in-string-concatenation"></a>Verwenden von ISNULL in Verketten von Zeichenfolgen  
-DB2 und [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] unterschiedliche Ergebnisse zurückgeben, wenn die Zeichenfolge Verkettungen NULL-Werte enthalten. DB2 wird der NULL-Wert, wie ein leerer Zeichensatz behandelt. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]Gibt NULL zurück.  
+DB2 und [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] unterschiedliche Ergebnisse zurückgeben, wenn die Zeichenfolge Verkettungen NULL-Werte enthalten. DB2 wird der NULL-Wert, wie ein leerer Zeichensatz behandelt. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Gibt NULL zurück.  
   
 -   Bei Auswahl des **Ja**, SSMA ersetzt den DB2 Verkettung Strich (|) mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Verkettung Zeichen (+). SSMA überprüft auch die Ausdrücke auf beiden Seiten der Verkettung für NULL-Werte.  
   
@@ -430,7 +431,7 @@ Bei Auswahl einer Konvertierungsmodus in der **Modus** Feld SSMA gilt die folgen
 ## <a name="returning-clause-conversion"></a>Zurückgeben der Klausel-Konvertierung  
   
 ### <a name="convert-returning-clause-in-delete-statement-to-output"></a>RETURNING-Klausel in der DELETE-Anweisung in die Ausgabe zu konvertieren.  
-DB2 bietet eine RETURNING-Klausel als eine Möglichkeit, sofort gelöschten Werte zu erhalten. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]stellt diese Funktionalität bereit, mit der OUTPUT-Klausel.  
+DB2 bietet eine RETURNING-Klausel als eine Möglichkeit, sofort gelöschten Werte zu erhalten. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] stellt diese Funktionalität bereit, mit der OUTPUT-Klausel.  
   
 -   Bei Auswahl des **Ja**, SSMA RETURNING-Klauseln in DELETE-Anweisungen in der OUTPUT-Klauseln konvertiert. Da Trigger für eine Tabelle mit Werten ändern können, der zurückgegebene Wert möglicherweise in anderen [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] als DB2 vorlag.  
   
@@ -441,7 +442,7 @@ Bei Auswahl einer Konvertierungsmodus in der **Modus** Feld SSMA gilt die folgen
 **Standard/optimistische/Full-Modus:** Ja  
   
 ### <a name="convert-returning-clause-in-insert-statement-to-output"></a>RETURNING-Klausel in der INSERT-Anweisung in die Ausgabe zu konvertieren.  
-DB2 bietet eine RETURNING-Klausel als eine Möglichkeit, sofort eingefügten Werte zu erhalten. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]stellt diese Funktionalität bereit, mit der OUTPUT-Klausel.  
+DB2 bietet eine RETURNING-Klausel als eine Möglichkeit, sofort eingefügten Werte zu erhalten. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] stellt diese Funktionalität bereit, mit der OUTPUT-Klausel.  
   
 -   Bei Auswahl des **Ja**, SSMA Wandelt eine RETURNING-Klausel in einer INSERT-Anweisung in die Ausgabe. Da Trigger für eine Tabelle mit Werten ändern können, der zurückgegebene Wert möglicherweise in anderen [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] als DB2 vorlag.  
   
@@ -452,7 +453,7 @@ Bei Auswahl einer Konvertierungsmodus in der **Modus** Feld SSMA gilt die folgen
 **Standard/optimistische/Full-Modus:** Ja  
   
 ### <a name="convert-returning-clause-in-update-statement-to-output"></a>RETURNING-Klausel in der UPDATE-Anweisung in die Ausgabe zu konvertieren.  
-DB2 bietet eine RETURNING-Klausel als eine Möglichkeit, sofort aktualisierte Werte zu erhalten. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]stellt diese Funktionalität bereit, mit der OUTPUT-Klausel.  
+DB2 bietet eine RETURNING-Klausel als eine Möglichkeit, sofort aktualisierte Werte zu erhalten. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] stellt diese Funktionalität bereit, mit der OUTPUT-Klausel.  
   
 -   Bei Auswahl des **Ja**, SSMA RETURNING-Klauseln in der UPDATE-Anweisungen in der OUTPUT-Klauseln konvertiert. Da Trigger für eine Tabelle mit Werten ändern können, der zurückgegebene Wert möglicherweise in anderen [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] als DB2 vorlag.  
   
@@ -489,5 +490,5 @@ Nur sichtbar, wenn die Sequenz-Generator konvertiert, um festgelegt ist **mithil
 -   Bei Auswahl des **keine**, SSMA werden alle Verweise auf außerhalb Trigger für die konvertierte CURRVAL mit einem Fehler Sequenz gekennzeichnet.  
   
 ## <a name="see-also"></a>Siehe auch  
-[Referenz zur Benutzeroberfläche &#40; DB2ToSQL &#41;](../../ssma/db2/user-interface-reference-db2tosql.md)  
+[Referenz zur Benutzeroberfläche &#40;DB2ToSQL&#41;](../../ssma/db2/user-interface-reference-db2tosql.md)  
   

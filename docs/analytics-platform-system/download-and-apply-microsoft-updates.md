@@ -2,25 +2,25 @@
 title: Herunterladen und Anwenden von Microsoft-Updates (Analytics Platform System)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4f69df44-8549-4a8a-b10c-f91908594856
-caps.latest.revision: "51"
-ms.openlocfilehash: 7c91a5ed97d5aedfa456fd63e16c0178c5241706
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 51
+ms.openlocfilehash: b1bbb32473ff89ee137c0de0fcdb0b3750c31889
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="download-and-apply-microsoft-updates"></a>Herunterladen und Anwenden von Microsoft-Updates
 In diesem Thema wird erläutert, wie Updates von Microsoft Update-Katalog zu Windows Server Update Services (WSUS) herunterladen und diese Updates auf die Analytics Platform System Appliance-Server angewendet werden. Microsoft Update werden alle anwendbaren Updates für Windows und SQL Server installieren. WSUS ist auf dem VMM-virtuellen Computer von dem Gerät installiert.  
@@ -32,22 +32,22 @@ In diesem Thema wird erläutert, wie Updates von Microsoft Update-Katalog zu Win
 >   
 > Microsoft-Updates werden nicht angewendet werden, während das Gerät verwendet wird. Anwenden von Updates kann dazu führen, dass Appliance Knoten neu starten. Während eines Wartungsfensters sollten die Updates angewendet werden, wenn das Gerät nicht verwendet wird.  
   
-### <a name="prerequisites"></a>Voraussetzungen  
+### <a name="prerequisites"></a>Erforderliche Komponenten  
 Bevor Sie diese Schritte ausführen, müssen Sie:  
   
--   Konfigurieren von WSUS auf Ihrer Anwendung entsprechend den Anweisungen im [Konfigurieren von Windows Server Update Services &#40; WSUS &#41; &#40; Analyseplattformsystem &#41; ](configure-windows-server-update-services-wsus.md).  
+-   Konfigurieren von WSUS auf Ihrer Anwendung entsprechend den Anweisungen im [Konfigurieren von Windows Server Update Services &#40;WSUS&#41; &#40;Analyseplattformsystem&#41;](configure-windows-server-update-services-wsus.md).  
   
 -   Kenntnisse in Bezug auf eine Fabric-Domänenadministrator Anmeldung Kontoinformationen.  
   
 -   Haben Sie einen Anmeldenamen mit Berechtigungen zum Zugriff auf das Analytics Platform System-Verwaltungskonsole und Anzeigen von Statusinformationen Appliance.  
   
--   In den meisten Fällen muss WSUS Server außerhalb der Anwendung zugreifen. Um dieses Verwendungsszenario zu unterstützen, das Analytics Platform System DNS Unterstützung eine Weiterleitung externer Name, mit dem das Analytics Platform System Hosts und virtuellen Computern (VMs), externen DNS-Server zum Auflösen von Namen verwenden können konfiguriert werden, können außerhalb von, der Appliance. Weitere Informationen finden Sie unter [mithilfe einer DNS-Weiterleitung zum Auflösen von Non-Appliance DNS-Namen &#40; Analyseplattformsystem &#41; ](use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md).  
+-   In den meisten Fällen muss WSUS Server außerhalb der Anwendung zugreifen. Um dieses Verwendungsszenario zu unterstützen, das Analytics Platform System DNS Unterstützung eine Weiterleitung externer Name, mit dem das Analytics Platform System Hosts und virtuellen Computern (VMs), externen DNS-Server zum Auflösen von Namen verwenden können konfiguriert werden, können außerhalb von, der Appliance. Weitere Informationen finden Sie unter [mithilfe einer DNS-Weiterleitung zum Auflösen von Non-Appliance DNS-Namen &#40;Analyseplattformsystem&#41;](use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md).  
   
 ## <a name="bkmk_ImportUpdates"></a>Herunterladen und Anwenden von Microsoft-updates  
   
 #### <a name="verify-the-appliance-state-indicators"></a>Überprüfen Sie die Appliance Statusindikatoren  
   
-1.  Öffnen Sie die Admin-Konsole, und navigieren Sie zu der Seite "Anwendungszustand". Weitere Informationen finden Sie unter [überwachen Sie die Anwendung mithilfe der Verwaltungskonsole &#40; Analyseplattformsystem &#41;](monitor-the-appliance-by-using-the-admin-console.md)  
+1.  Öffnen Sie die Admin-Konsole, und navigieren Sie zu der Seite "Anwendungszustand". Weitere Informationen finden Sie unter [überwachen Sie die Anwendung mithilfe der Verwaltungskonsole &#40;Analyseplattformsystem&#41;](monitor-the-appliance-by-using-the-admin-console.md)  
   
 2.  Vergewissern Sie sich die Statusindikatoren für alle Knoten auf den Zustand der Anwendung.  
   
@@ -85,7 +85,7 @@ Bevor Sie diese Schritte ausführen, müssen Sie:
   
     ![Wählen Sie alle Updates, die gelten, und klicken Sie auf genehmigen. ] (./media/download-and-apply-microsoft-updates/SQL_Server_PDW_WSUSSelectApprove.png "SQL_Server_PDW_WSUSSelectApprove")  
   
-4.  Wählen Sie die Appliance Server-Gruppe, die Sie erstellt, in haben [Konfigurieren von Windows Server Update Services &#40; WSUS &#41; &#40; Analyseplattformsystem &#41; ](configure-windows-server-update-services-wsus.md).  
+4.  Wählen Sie die Appliance Server-Gruppe, die Sie erstellt, in haben [Konfigurieren von Windows Server Update Services &#40;WSUS&#41; &#40;Analyseplattformsystem&#41;](configure-windows-server-update-services-wsus.md).  
   
 5.  Klicken Sie auf **für die Installation genehmigt**, und klicken Sie dann auf **OK**.  
   
@@ -111,9 +111,9 @@ Bevor Sie diese Schritte ausführen, müssen Sie:
   
 #### <a name="apply-microsoft-updates"></a>Anwenden von Microsoft-updates  
   
-1.  Bevor Sie beginnen, öffnen Sie die [überwachen Sie die Anwendung mithilfe der Verwaltungskonsole &#40; Analyseplattformsystem &#41; ](monitor-the-appliance-by-using-the-admin-console.md), klicken Sie auf die **Anwendungszustand** Registerkarte, und überprüfen Sie, ob die **Cluster** und **Netzwerk** Spalten anzeigen, die grünen (oder NV) für alle Knoten. Wenn keine Warnungen in einem dieser Spalten vorhanden sind, das Gerät nicht ordnungsgemäß installiert. Updates möglicherweise. Beheben Sie alle vorhandene Warnungen in der **Cluster** und **Netzwerk** Spalten, bevor Sie fortfahren.  
+1.  Bevor Sie beginnen, öffnen die [überwachen Sie die Anwendung mithilfe der Verwaltungskonsole &#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md), klicken Sie auf die **Anwendungszustand** Registerkarte, und überprüfen Sie, ob die  **Cluster** und **Netzwerk** Spalten anzeigen, die grünen (oder NV) für alle Knoten. Wenn keine Warnungen in einem dieser Spalten vorhanden sind, das Gerät nicht ordnungsgemäß installiert. Updates möglicherweise. Beheben Sie alle vorhandene Warnungen in der **Cluster** und **Netzwerk** Spalten, bevor Sie fortfahren.  
   
-2.  Melden Sie sich an den *< Domänenname >***-HST01** als Domänenadministrator Fabric-Knoten.  
+2.  Melden Sie sich an den *< Domänenname > ***-HST01** als Domänenadministrator Fabric-Knoten.  
   
 3.  Um alle Updates für WSUS genehmigt anzuwenden, führen Sie das Update-Programm. Finden Sie unter [führen Sie das Update-Programm](#RunUpdateWizard) unten Anweisungen.  
   
@@ -125,11 +125,11 @@ Bevor Sie diese Schritte ausführen, müssen Sie:
   
 3.  Erweitern Sie **alle Computer**.  
   
-4.  Wählen Sie die Appliance Server-Gruppe, die Sie erstellt, in haben [Konfigurieren von Windows Server Update Services &#40; WSUS &#41; &#40; Analyseplattformsystem &#41; ](configure-windows-server-update-services-wsus.md).  
+4.  Wählen Sie die Appliance Server-Gruppe, die Sie erstellt, in haben [Konfigurieren von Windows Server Update Services &#40;WSUS&#41; &#40;Analyseplattformsystem&#41;](configure-windows-server-update-services-wsus.md).  
   
 5.  In der **Status** wählen Sie im Dropdownmenü **alle** , und klicken Sie auf **aktualisieren**.  
   
-6.  Erweitern Sie **Aktualisierungsdienste**,  *<appliance name>* - VMM **Updates**, **alle Updates**, wobei  *<appliance name>*  ist der Gerätename Ihres.  
+6.  Erweitern Sie **Aktualisierungsdienste**, *<appliance name>*- VMM **Updates**, **alle Updates**, wobei *<appliance name>* ist der Gerätename Ihres.  
   
 7.  In der **alle Updates** Fenster Satz **Genehmigung** auf **alle bis auf abgelehnte**.  
   
@@ -141,7 +141,7 @@ Bevor Sie diese Schritte ausführen, müssen Sie:
   
 #### <a name="ensure-there-are-no-critical-alerts-in-the-sql-server-pdw-admin-console"></a>Stellen Sie sicher, dass es sind keine kritischen Warnungen in der SQL Server PDW-Verwaltungskonsole  
   
-1.  Öffnen Sie die Admin-Konsole, klicken Sie auf der Registerkarte "Anwendungszustand". Finden Sie unter [überwachen Sie die Anwendung mithilfe der Verwaltungskonsole &#40; Analyseplattformsystem &#41; ](monitor-the-appliance-by-using-the-admin-console.md).  
+1.  Öffnen Sie die Admin-Konsole, klicken Sie auf der Registerkarte "Anwendungszustand". Finden Sie unter [überwachen Sie die Anwendung mithilfe der Verwaltungskonsole &#40;Analyseplattformsystem&#41;](monitor-the-appliance-by-using-the-admin-console.md).  
   
 2.  Überprüfen Sie, ob die **Cluster** und **Netzwerk** Spalten anzeigen, die grünen (oder NV) für alle Knoten. Wenn keine Warnungen in einem dieser Spalten vorhanden sind, das Gerät nicht ordnungsgemäß installiert. Updates möglicherweise. Kontaktieren Sie Support, wenn kritische Warnungen vorhanden sind.  
   
@@ -153,7 +153,7 @@ Um das Analytics Platform System Update-Programm auszuführen, gehen Sie wie fol
   
 1.  Stellen Sie sicher, dass Sie in den Knoten "HST01" als der Fabric-Domänenadministrator angemeldet sind.  
   
-2.  Öffnen Sie ein Eingabeaufforderungsfenster, und geben Sie die folgenden Befehle. Ersetzen Sie  *<parameter>*  mit den angegebenen Informationen.  
+2.  Öffnen Sie ein Eingabeaufforderungsfenster, und geben Sie die folgenden Befehle. Ersetzen Sie *<parameter>* mit den angegebenen Informationen.  
   
 **So führen Sie die Microsoft Update:**  
   
@@ -168,8 +168,8 @@ C:\pdwinst\media\setup.exe /action="ReportMicrosoftUpdateClientStatus" /DomainAd
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
-[Deinstallieren Sie Microsoft Updates &#40; Analyseplattformsystem &#41;](uninstall-microsoft-updates.md)  
-[Anwenden von Analytics Platform System Hotfixes &#40; Analyseplattformsystem &#41;](apply-analytics-platform-system-hotfixes.md)  
-[Vorgehensweise: Deinstallieren Sie Analytics Platform System Hotfixes &#40; Analyseplattformsystem &#41;](uninstall-analytics-platform-system-hotfixes.md)  
-[Wartung von Software &#40; Analyseplattformsystem &#41;](software-servicing.md)  
+[Deinstallieren Sie Microsoft Updates &#40;Analyseplattformsystem&#41;](uninstall-microsoft-updates.md)  
+[Anwenden von Analytics Platform System Hotfixes &#40;Analyseplattformsystem&#41;](apply-analytics-platform-system-hotfixes.md)  
+[Deinstallieren Sie Analytics Platform System Hotfixes &#40;Analyseplattformsystem&#41;](uninstall-analytics-platform-system-hotfixes.md)  
+[Wartung von Software &#40;Analyseplattformsystem&#41;](software-servicing.md)  
   

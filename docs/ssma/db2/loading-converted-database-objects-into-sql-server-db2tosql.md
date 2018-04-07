@@ -2,29 +2,30 @@
 title: Laden konvertierte Objekte in SQLServer (DB2ToSQL) Datenbank | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-db2
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: f4ea1ced-9f9f-4a9d-88ab-81dbab64adc3
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d662bcab0fe8c804b75f7908ca6fc04f2e96a650
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 3997b2e1284513d92c76aefbb582f6cbebb81c7b
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="loading-converted-database-objects-into-sql-server-db2tosql"></a>Laden konvertierte Objekte in SQLServer (DB2ToSQL) Datenbank
 Nachdem Sie zu DB2-Schemas konvertiert haben [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], können Sie die resultierende Datenbankobjekte in laden [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Kann entweder über die SSMA, die die Objekte zu erstellen, oder können Sie Skripts für die Objekte und führen Sie die Skripts selbst. Darüber hinaus SSMA können Sie die Ziel-Metadaten mit dem tatsächlichen Inhalt aktualisieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Datenbank.  
@@ -99,7 +100,7 @@ Sie können ein Skript oder die einzelnen Anweisungen in ausführen [!INCLUDE[ss
   
 1.  Auf der [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] **Datei** Sie im Menü **öffnen**, und klicken Sie dann auf **Datei**.  
   
-2.  In der **öffnen** Dialogfeld wählen die Skriptdatei, und klicken Sie dann[!INCLUDE[clickOK](../../includes/clickok_md.md)]  
+2.  In der **öffnen** Dialogfeld wählen die Skriptdatei, und klicken Sie dann [!INCLUDE[clickOK](../../includes/clickok_md.md)]  
   
 3.  Um das vollständige Skript auszuführen, drücken Sie die **F5** Schlüssel.  
   
@@ -116,5 +117,5 @@ Nachdem Sie die konvertierte Datenbankobjekte in geladen haben [!INCLUDE[ssNoVer
 Der nächste Schritt des Migrationsvorgangs besteht darin [DB2-Daten in SQL Server Migration](http://msdn.microsoft.com/en-us/86cbd39f-6dac-409a-9ce1-7dd54403f84b).  
   
 ## <a name="see-also"></a>Siehe auch  
-[Migrieren von DB2-Daten in SQLServer &#40; DB2ToSQL &#41;](../../ssma/db2/migrating-db2-data-into-sql-server-db2tosql.md)  
+[Migrieren von DB2-Daten in SQLServer &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-data-into-sql-server-db2tosql.md)  
   

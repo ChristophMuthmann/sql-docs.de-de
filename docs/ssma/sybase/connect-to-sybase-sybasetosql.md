@@ -1,38 +1,39 @@
 ---
 title: Herstellen einer Verbindung mit der Sybase (SybaseToSQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-sybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 524f95ef-10bd-497c-84ca-c06a0ae794fb
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ebf5f7f5c12a8a2e3af85ba2901e2348da92c30b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 85cc0d5c5dbea4526afd86fb4efb4b4ec65d7ac9
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="connect-to-sybase-sybasetosql"></a>Herstellen einer Verbindung mit der Sybase (SybaseToSQL)
 Verwenden der **Herstellen einer Verbindung mit der Sybase** Dialogfeld Verbindung mit der Sybase Adaptive Server Enterprise (ASE)-Instanz, die Sie migrieren möchten.  
   
 Zum Zugriff auf dieses Dialogfeld, in dem **Datei** klicken Sie im Menü **Herstellen einer Verbindung mit der Sybase**. Wenn Sie zuvor eine Verbindung hergestellt haben, wird der Befehl ist **eine erneute Verbindung zu Sybase**.  
   
-## <a name="options"></a>Tastatur  
-**Anbieter**  
+## <a name="options"></a>enthalten  
+**Provider**  
 Wählen Sie einen der installierten Anbieter auf dem Computer für die Verbindung mit der Sybase-Server.  
   
 **Mode**  
@@ -44,7 +45,7 @@ Geben Sie an, oder wählen Sie den Namen oder IP-Adresse des Adaptive Server. De
 **Serverport**  
 Wenn Sie einen nicht standardmäßigen Port für Verbindungen mit ASE verwenden, geben Sie die Portnummer. Die Standardportnummer ist 5000. Dies ist ein Modus "standard"-Option.  
   
-**User name**  
+**Benutzername**  
 Geben Sie den Benutzernamen ein, der zum Herstellen einer ASE verwendet wird. Dies ist ein Modus "standard"-Option.  
   
 **Kennwort**  
@@ -59,7 +60,7 @@ Verbindungszeichenfolgen werden von Name-Wert-Paaren bestehen. Die Namen der Par
   
 1.  Verbindungsparameter für **OLE DB-Anbieter**  
   
-    |Einstellung|Sybase 12,5-Parameter|Sybase 15-Parameter|  
+    |Einstellung|Sybase 12.5 Parameter|Sybase 15 Parameter|  
     |-----------|-------------------------|-----------------------|  
     |Servername|Servername|Server|  
     |Port|Serverport-Adresse|Port|  
@@ -82,7 +83,7 @@ Verbindungszeichenfolgen werden von Name-Wert-Paaren bestehen. Die Namen der Par
     |Treibername|Treiber|  
     |Servername|Server|  
     |Benutzername|UID|  
-    |Kennwort|PWD|  
+    |Kennwort|Pwd|  
     |Portnummer|Port|  
   
     Für Sybase ASE 12,5 oder 15 weist eine Beispielverbindungszeichenfolge Folgendes:  
@@ -95,7 +96,7 @@ Verbindungszeichenfolgen werden von Name-Wert-Paaren bestehen. Die Namen der Par
     |-----------|-----------------------------|  
     |Servername|Server|  
     |Benutzername|UID|  
-    |Kennwort|PWD|  
+    |Kennwort|Pwd|  
     |Portnummer|Port|  
   
     Ein Beispiel für die Verbindungszeichenfolge für den ADO.NET-Anbieter ist wie folgt:  

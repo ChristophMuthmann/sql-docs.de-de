@@ -21,13 +21,13 @@ ms.assetid: 6772d0c5-258f-4d7b-afb0-b5f810e71af1
 caps.latest.revision: 9
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 15e50ed4dd915f524a2e9980d4aa4997053af912
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 5fd268b84300a15eb67b767858e7ac53ed2fdf3f
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="installing-ssma-components-on-sql-server-mysqltosql"></a>Installieren SSMA-Komponenten auf SQLServer (MySQLToSql)
 Neben der Installation von SSMA, müssen Sie auch Komponenten installieren, auf dem Computer, auf denen ausgeführt wird, ist [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Zu diesen Komponenten gehören das Pack der SSMA-Erweiterung, das Datenmigration und MySQL-Anbieter auf Server-zu-Server-Verbindung aktivieren unterstützt.  
@@ -37,10 +37,10 @@ Das SSMA-Erweiterung Pack Fügt eine Datenbank, **Sysdb**, mit der angegebenen I
   
 Darüber hinaus beim Migrieren von Daten zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], SSMA erstellt [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Agent-Aufträge, wenn Server-Seite-Migration Datenmodul zum Migrieren Ihrer Daten verwendet wird.  
   
-### <a name="prerequisites"></a>Voraussetzungen  
+### <a name="prerequisites"></a>Erforderliche Komponenten  
 Vor der Installation von SSMA für MySQL Server-Komponenten auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], stellen Sie sicher, dass der Computer die folgenden Anforderungen erfüllt:  
   
--   [!INCLUDE[msCoName](../../includes/msconame_md.md)]Windows Installer 3.1 oder höher.  
+-   [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows Installer 3.1 oder höher.  
   
 -   Die MySQL-Client-Anbieter, und die Konnektivität mit der MySQL-Datenbank, die Sie migrieren möchten. Sie können den Anbieter aus der MySQL-Produktmedien oder MySQL-Website installieren.  
   
@@ -57,7 +57,7 @@ Sie können einem beliebigen Zeitpunkt vor dem Migrieren von Daten an, das Erwei
   
 **So installieren Sie die Erweiterung pack**  
   
-1.  Kopieren Sie SSMA für MySQL-Erweiterung Pack. *n*. Install.exe, wobei  *n*  ist, auf dem Computer, auf denen ausgeführt wird, die Nummer des Builds [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
+1.  Kopieren Sie SSMA für MySQL-Erweiterung Pack. *n*. Install.exe, wobei *n* ist, auf dem Computer, auf denen ausgeführt wird, die Nummer des Builds [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
   
 2.  Doppelklicken Sie SSMA für MySQL-Erweiterung Pack ein. *n*. Install.exe.  
   
@@ -81,13 +81,13 @@ Sie können einem beliebigen Zeitpunkt vor dem Migrieren von Daten an, das Erwei
   
     Windows-Authentifizierung wird Windows-Anmeldeinformationen verwenden, um zu versuchen, melden Sie sich mit der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Bei Auswahl des [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Authentifizierung, geben Sie einen [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Anmeldename und Kennwort.  
   
-10. Wählen Sie im nächsten Dialogfeld **Utilities-Datenbank installieren**  *n* , wobei  *n*  ist die Versionsnummer, und klicken Sie dann auf **Weiter**.  
+10. Wählen Sie im nächsten Dialogfeld **Utilities-Datenbank installieren** *n*, wobei *n* ist die Versionsnummer, und klicken Sie dann auf **Weiter**.  
   
     Die **Sysdb** Datenbank mit den Tabellen und gespeicherte Prozeduren, die für die Datenmigration (mit Server-Seite-Migration Datenmodul) erforderlich sind in dieser Datenbank erstellt.  
   
 11. So installieren Sie die Dienstprogramme in eine andere Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]Option **Ja**, und klicken Sie dann auf **Weiter**. Um den Assistenten zu beenden, klicken Sie auf **keine**.  
   
 ## <a name="see-also"></a>Siehe auch  
-[Installieren SSMA für MySQL-Client &#40; MySQLToSQL &#41;](../../ssma/mysql/installing-ssma-for-mysql-client-mysqltosql.md)  
-[Migrieren von MySQL-Datenbanken zu SQLServer – Azure SQL-Datenbank &#40; MySQLToSql &#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
+[Installieren von SSMA für MySQL-Client &#40;MySQLToSQL&#41;](../../ssma/mysql/installing-ssma-for-mysql-client-mysqltosql.md)  
+[Migrieren von MySQL-Datenbanken zu SQLServer – Azure SQL-Datenbank &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   

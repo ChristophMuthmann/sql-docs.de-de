@@ -2,29 +2,30 @@
 title: Projekteinstellungen (Konvertierung) (MySQLToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-mysql
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 7ad5fe44-6445-4ba8-a457-5af792631f11
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9062c61ad2a799a20370c8b406843e0e4a209869
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e731155b4adadfe8a5a05edafd97f90bd3de263b
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="project-settings-conversion-mysqltosql"></a>Projekteinstellungen (Konvertierung) (MySQLToSQL)
 Die Seite "Konvertierung", der die **Projekteinstellungen** Dialogfeld enthält Einstellungen, anpassen, wie SSMA MySQL-Syntax in SQL Server- bzw. SQL Azure-Syntax konvertiert.  
@@ -35,7 +36,7 @@ Bereich Konvertierung finden Sie in der **Projekteinstellungen** und **Projekt S
   
 -   Zum Angeben von Einstellungen für das aktuelle Projekt auf die **Tools** klicken Sie im Menü **Projekteinstellungen**, klicken Sie dann auf **allgemeine** am unteren Rand der linken Bereich, und klicken Sie dann auf **Konvertierung**.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>enthalten  
   
 ### <a name="collate-clause"></a>COLLATE-Klausel  
   
@@ -96,8 +97,8 @@ Bereich Konvertierung finden Sie in der **Projekteinstellungen** und **Projekt S
 |||  
 |-|-|  
 |**Begriff**|**Definition**|  
-|**Standard umgebendes Feld {"xmax" &#124; XMIN &#124; YMAX &#124; "Ymin"} für räumliche Indizes**|Standardwert definiert für {"xmax" &#124; XMIN &#124; YMAX &#124; "Ymin"}-Parameter des umgebenden Felds in räumliche Indizes verwendet.<br /><br />**Standardmodus**<br /><br />"XMAX": 100<br /><br />XMIN: 0<br /><br />YMAX: 100<br /><br />"YMIN": 0<br /><br />**Optimistische Modus**<br /><br />"XMAX": 100<br /><br />XMIN: 0<br /><br />YMAX: 100<br /><br />"YMIN": 0<br /><br />**Vollbildmodus**<br /><br />"XMAX": 100<br /><br />XMIN: 0<br /><br />YMAX: 100<br /><br />"YMIN": 0|  
-|**Standardrasterdichte für räumliche Indizes**|Standardwert definiert für LEVEL_1, LEVEL_2 LEVEL_3 und LEVEL_4 von rasterdichte im räumlichen Indizes verwendet.<br /><br />**Standardmodus**<br /><br />LEVEL_1: Standard<br /><br />LEVEL_2: Standard<br /><br />LEVEL_3: Standard<br /><br />LEVEL_4: Standard<br /><br />**Optimistische Modus**<br /><br />LEVEL_1: Standard<br /><br />LEVEL_2: Standard<br /><br />LEVEL_3: Standard<br /><br />LEVEL_4: Standard<br /><br />**Vollbildmodus**<br /><br />LEVEL_1: Standard<br /><br />LEVEL_2: Standard<br /><br />LEVEL_3: Standard<br /><br />LEVEL_4: Standard|  
+|**Standardmäßige umgebendes Feld {"xmax"&#124;XMIN&#124;YMAX&#124;"ymin"} für räumliche Indizes**|Standardwert für definiert {"xmax"&#124;XMIN&#124;YMAX&#124;"ymin"} Parameter des umgebenden Felds in räumliche Indizes verwendet.<br /><br />**Standardmodus**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX: 100<br /><br />YMIN: 0<br /><br />**Optimistische Modus**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX:  100<br /><br />YMIN: 0<br /><br />**Vollbildmodus**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX: 100<br /><br />YMIN: 0|  
+|**Standardrasterdichte für räumliche Indizes**|Standardwert definiert für LEVEL_1, LEVEL_2 LEVEL_3 und LEVEL_4 von rasterdichte im räumlichen Indizes verwendet.<br /><br />**Standardmodus**<br /><br />LEVEL_1: Standard<br /><br />LEVEL_2: Standard<br /><br />LEVEL_3: Default<br /><br />LEVEL_4: Default<br /><br />**Optimistische Modus**<br /><br />LEVEL_1: Standard<br /><br />LEVEL_2: Standard<br /><br />LEVEL_3: Default<br /><br />LEVEL_4: Default<br /><br />**Vollbildmodus**<br /><br />LEVEL_1: Standard<br /><br />LEVEL_2: Standard<br /><br />LEVEL_3: Default<br /><br />LEVEL_4: Default|  
   
 ### <a name="transactions"></a>Transaktionen  
   
@@ -121,5 +122,5 @@ Bereich Konvertierung finden Sie in der **Projekteinstellungen** und **Projekt S
 |**NULL-Datum in NOT NULL-Spalten**|Gibt Zuweisung zu NOT NULL-Spalten von 0 (null) bis Datum, 0 (null) in Datum oder ungültige Datum/Uhrzeit-Werte zu behandeln.<br /><br />**Standardmodus**: GETDATE()<br /><br />**Vollständige**: GETDATE()<br /><br />**Vollständige Modus**: GETDATE()|  
   
 ## <a name="see-also"></a>Siehe auch  
-[Referenz zur Benutzeroberfläche &#40; MySQLToSQL &#41;](../../ssma/mysql/user-interface-reference-mysqltosql.md)  
+[Referenz zur Benutzeroberfläche &#40;MySQLToSQL&#41;](../../ssma/mysql/user-interface-reference-mysqltosql.md)  
   

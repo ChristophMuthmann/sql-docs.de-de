@@ -10,7 +10,7 @@ ms.component: ole-db
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
-- docset-sql-devref
+- drivers
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -25,11 +25,11 @@ author: pmasl
 ms.author: Pedro.Lopes
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 96f21a14b48e0cc5df2042149679f9bd848d38e6
-ms.sourcegitcommit: 9f4330a4b067deea396b8567747a6771f35e6eee
+ms.openlocfilehash: 4e89b51abc13d346ef0ed6d0ef77a5cb218157da
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="stored-procedures---calling"></a>Gespeicherte Prozeduren - aufrufen
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -122,7 +122,7 @@ ms.lasthandoff: 03/30/2018
 {rpc SalesByCategory}  
 ```  
   
- Eine beispielanwendung, die eine RPC-Escapesequenz veranschaulicht, finden Sie unter [Ausführen einer gespeicherten Prozedur &#40; Mithilfe der RPC-Syntax &#41; und Verarbeiten von Return Rückgabecodes und Ausgabeparameter &#40; OLE DB &#41; ](../../oledb/ole-db-how-to/results/execute-stored-procedure-with-rpc-and-process-output.md).  
+ Eine beispielanwendung, die eine RPC-Escapesequenz veranschaulicht, finden Sie unter [Ausführen einer gespeicherten Prozedur & #40; Mithilfe der RPC-Syntax & #41; und Verarbeiten von Return Rückgabecodes und Ausgabeparameter & #40; OLE DB & #41; ](../../oledb/ole-db-how-to/results/execute-stored-procedure-with-rpc-and-process-output.md).  
   
 ### <a name="transact-sql-execute-statement"></a>'EXECUTE'-Anweisung (Transact-SQL)  
  Die ODBC CALL-Escapesequenz und die RPC-Escapesequenz werden die bevorzugten Methoden zum Aufrufen einer gespeicherten Prozedur statt über das [EXECUTE](../../../t-sql/language-elements/execute-transact-sql.md) Anweisung. Der OLE DB-Treiber für SQL Server verwendet den RPC-Mechanismus von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] um die befehlsverarbeitung zu optimieren. Dieses RPC-Protokoll erhöht die Leistung, indem es einen Großteil der Parameterverarbeitung und Anweisungsauswertung auf dem Server überflüssig macht.  

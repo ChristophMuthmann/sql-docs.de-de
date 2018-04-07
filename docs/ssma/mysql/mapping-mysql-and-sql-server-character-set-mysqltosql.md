@@ -2,29 +2,30 @@
 title: Zuordnen von MySQL und SQL Server-Zeichen festgelegt (MySQLToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-mysql
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 20b3f22e-16a2-4a87-b4eb-c277be6bf5c8
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c9b3fc89548b10593cb16e2a70c93afe9b56350e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 793c7362024e402e52523da8c0f007f525fe2650
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="mapping-mysql-and-sql-server-character-set-mysqltosql"></a>Zuordnen von MySQL und SQL Server-Zeichen (MySQLToSQL) festlegen
 Zeichensatz (Zeichensatz) kann für MySQL-Unicodezeichen-Datentypen, Ausdrücke und Literale angegeben werden.  
@@ -89,28 +90,28 @@ Zuordnen von CharSet variiert auf unterschiedlichen Knotenebenen, nämlich:
     ||||  
     |-|-|-|  
     |**CharSet-Name**|**CharSet-Beschreibung**|**Charset Zieltyp (Standard)**|  
-    |Big5|Chinesisch (traditionell) Big5|NCHAR/NVARCHAR (Standard)|  
+    |big5|Chinesisch (traditionell) Big5|NCHAR/NVARCHAR (Standard)|  
     |dec8|DEC West Europäischen|CHAR/VARCHAR (Standard)|  
     |cp850|DOS-West Europäischen|CHAR/VARCHAR (Standard)|  
-    |hp8|HP West Europäischen|CHAR/VARCHAR (Standard)|  
+    |hp8|HP West European|CHAR/VARCHAR (Standard)|  
     |koi8r|KOI8-r Relcom Russisch|CHAR/VARCHAR (Standard)|  
     |Latin 1|cp1252 West Europäischen|CHAR/VARCHAR (Standard)|  
-    |Lateinisch 2|ISO 8859-2 Mitteleuropa|CHAR/VARCHAR (Standard)|  
+    |latin2|ISO 8859-2 Mitteleuropa|CHAR/VARCHAR (Standard)|  
     |swe7|7-Bit-Schwedisch|CHAR/VARCHAR (Standard)|  
-    |ASCII|US-ASCII|CHAR/VARCHAR (Standard)|  
+    |ascii|US-ASCII|CHAR/VARCHAR (Standard)|  
     |ujis|EUC-JP Japanisch|NCHAR/NVARCHAR (Standard)|  
-    |SJIS|Shift-JIS Japanisch|NCHAR/NVARCHAR (Standard)|  
+    |sjis|Shift-JIS Japanisch|NCHAR/NVARCHAR (Standard)|  
     |Hebräisch|ISO 8859-8 Hebrew|CHAR/VARCHAR (Standard)|  
-    |tis620|Thailändisch TIS620|CHAR/VARCHAR (Standard)|  
-    |eucKR|EUC-KR Koreanisch|NCHAR/NVARCHAR (Standard)|  
+    |tis620|TIS620 Thai|CHAR/VARCHAR (Standard)|  
+    |euckr|EUC-KR Koreanisch|NCHAR/NVARCHAR (Standard)|  
     |koi8u|KOI8-u Ukrainisch|CHAR/VARCHAR (Standard)|  
-    |GB2312|GB2312 Chinesisch (vereinfacht)|NCHAR/NVARCHAR (Standard)|  
+    |gb2312|GB2312 Chinesisch (vereinfacht)|NCHAR/NVARCHAR (Standard)|  
     |Griechisch|ISO 8859-7 Greek|CHAR/VARCHAR (Standard)|  
-    |CP 1250|Windows-Mitteleuropäisch|CHAR/VARCHAR (Standard)|  
-    |GBK|GBK, vereinfachtes Chinesisch|NCHAR/NVARCHAR (Standard)|  
+    |cp 1250|Windows Central European|CHAR/VARCHAR (Standard)|  
+    |gbk|GBK, vereinfachtes Chinesisch|NCHAR/NVARCHAR (Standard)|  
     |Latin5|ISO 8859-9 Turkish|CHAR/VARCHAR (Standard)|  
     |armscii8|ARMSCII 8 Armenisch|CHAR/VARCHAR (Standard)|  
-    |UTF8|Unicode UTF-8|NCHAR/NVARCHAR (Standard)|  
+    |utf8|UTF-8 Unicode|NCHAR/NVARCHAR (Standard)|  
     |ucs2|Unicode UCS-2|NCHAR/NVARCHAR (Standard)|  
     |cp866|DOS Russisch|CHAR/VARCHAR (Standard)|  
     |keybcs2|DOS Kamenicky Tschechisch-Slowakisch|CHAR/VARCHAR (Standard)|  
@@ -118,9 +119,9 @@ Zuordnen von CharSet variiert auf unterschiedlichen Knotenebenen, nämlich:
     |MacRoman|Mac-West-Europäischen|CHAR/VARCHAR (Standard)|  
     |cp852|DOS-Mitte Europäischen|CHAR/VARCHAR (Standard)|  
     |Latin7|ISO 8859-13-Baltisch|CHAR/VARCHAR (Standard)|  
-    |CP 1251|Windows-Kyrillisch|CHAR/VARCHAR (Standard)|  
-    |CP 1256|Windows-Arabisch|CHAR/VARCHAR (Standard)|  
-    |CP 1257|Windows-Baltisch|CHAR/VARCHAR (Standard)|  
+    |cp 1251|Windows Cyrillic|CHAR/VARCHAR (Standard)|  
+    |cp 1256|Windows Arabic|CHAR/VARCHAR (Standard)|  
+    |cp 1257|Windows Baltic|CHAR/VARCHAR (Standard)|  
     |BINARY|Binäre Pseudo-Zeichensatz|CHAR/VARCHAR (Standard)|  
     |geostd8|Georgisch GEOSTD8|CHAR/VARCHAR (Standard)|  
     |cp932|SJIS für Japanisch für Windows|NCHAR/NVARCHAR (Standard)|  

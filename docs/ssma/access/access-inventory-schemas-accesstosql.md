@@ -2,14 +2,15 @@
 title: Zugriff auf Lager Schemas (AccessToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-access
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
@@ -42,16 +43,16 @@ helpviewer_keywords:
 - SSMA_Access_InventoryTables
 - tables, inventory
 ms.assetid: fdd3cff2-4d62-4395-8acf-71ea8f17f524
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8d3c34d87adbe5e854b9de2f49bda5492583298d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: d68215dd768a2fbd4e6723d7ca98ef9a5c96c72d
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="access-inventory-schemas-accesstosql"></a>Access-Inventur-Schemas (AccessToSQL)
 In den folgenden Abschnitten wird beschrieben, die Tabellen, die von SSMA erstellt werden, wenn Sie zu Access-Schemas exportieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
@@ -65,9 +66,9 @@ Datenbank-Metadaten in exportiert wird die **SSMA_Access_InventoryDatabases** Ta
 |**DatabaseName**|**nvarchar(4000)**|Der Name der Access-Datenbank.|  
 |**ExportTime**|**datetime**|Datum und Uhrzeit der Erstellung dieser Metadaten von SSMA.|  
 |**FilePath**|**nvarchar(4000)**|Der vollständige Pfad und Name der Access-Datenbank.|  
-|**Dateigröße**|**bigint**|Die Größe der Access-Datenbank in KB.|  
+|**FileSize**|**bigint**|Die Größe der Access-Datenbank in KB.|  
 |**FileOwner**|**nvarchar(4000)**|Das Windows-Konto, das als Besitzer der Access-Datenbank angegeben ist.|  
-|**Erstellungsdatum**|**datetime**|Das Datum und Uhrzeit der Erstellung die Access-Datenbank.|  
+|**DateCreated**|**datetime**|Das Datum und Uhrzeit der Erstellung die Access-Datenbank.|  
 |**DateModified**|**datetime**|Das Datum und Uhrzeit der letzten die Access-Datenbank Änderung.|  
 |**TablesCount**|**int**|Die Anzahl der Tabellen in der Access-Datenbank.|  
 |**QueriesCount**|**int**|Die Anzahl der Abfragen in der Access-Datenbank.|  
@@ -88,13 +89,13 @@ Tabellenmetadaten ist exportiert der **SSMA_Access_InventoryTables** Tabelle. Di
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|Identifiziert die Datenbank, die diese Tabelle enthält.|  
 |**TableId**|**uniqueidentifier**|Eine GUID, die die Tabelle eindeutig identifiziert. Diese Spalte wird auch der Primärschlüssel für die Tabelle.|  
-|**Tabellenname**|**nvarchar(4000)**|Der Name der Tabelle.|  
+|**TableName**|**nvarchar(4000)**|Der Name der Tabelle.|  
 |**RowsCount**|**int**|Anzahl der Zeilen in der Tabelle.|  
 |**ValidationRule**|**nvarchar(4000)**|Die Regel, die gültigen Eingaben für die Tabelle definiert. Wenn es wurde keine Gültigkeitsprüfungsregel vorhanden ist, wird das Feld eine leere Zeichenfolge enthalten.|  
 |**LinkedTable**|**nvarchar(4000)**|Eine andere Tabelle, sofern vorhanden, die mit der Tabelle verknüpft ist. Ermöglicht das Verknüpfen von Tabellen Hinzufügungen, löschungen und Updates für die andere Tabelle mithilfe dieser Tabelle.|  
 |**ExternalSource**|**nvarchar(4000)**|Die Datenquelle ist ggf., die der Tabelle zugeordnet. Wenn eine Tabelle verknüpft ist, muss es sich um eine externe Datenquelle, die in diesem Feld angegeben.|  
   
-## <a name="columns"></a>Spalte  
+## <a name="columns"></a>Spalten  
 Spaltenmetadaten ist exportiert der **SSMA_Access_InventoryColumns** Tabelle. Diese Tabelle enthält die folgenden Spalten:  
   
 |Spaltenname|Datentyp|Description|  
@@ -107,7 +108,7 @@ Spaltenmetadaten ist exportiert der **SSMA_Access_InventoryColumns** Tabelle. Di
 |**DataType**|**nvarchar(4000)**|Der Access-Datentyp der Spalte, wie z. B. **Text** oder **lang**.|  
 |**IsAutoIncrement**|**bit**|Gibt an, ob ganzzahligen Werten in die Spalte automatisch inkrementiert wird. Wenn der Wert 1 ist, werden die ganzen Zahlen automatisch inkrementiert.|  
 |**Ordinal**|**smallint**|Die Reihenfolge der Spalte in der Tabelle, beginnend mit 0 (null).|  
-|**"DefaultValue"**|**nvarchar(4000)**|Der Standardwert für die Spalte.|  
+|**DefaultValue**|**nvarchar(4000)**|Der Standardwert für die Spalte.|  
 |**ValidationRule**|**nvarchar(4000)**|Die Regel, die zum Überprüfen der Daten, die hinzugefügt oder aktualisiert werden, in der Spalte verwendet wird.|  
   
 ## <a name="indexes"></a>Indizes  
@@ -147,8 +148,8 @@ Abfragemetadaten ist exportiert der **SSMA_Access_InventoryQueries** Tabelle. Di
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|Identifiziert die Datenbank, die diese Abfrage enthält.|  
 |**QueryId**|**int**|Inkrementelle eine ganze Zahl, die die Abfrage identifiziert. Diese Spalte ist der Primärschlüssel für die Tabelle.|  
-|**Abfragename**|**nvarchar(4000)**|Der Name der Abfrage.|  
-|**Abfragetext**|**nvarchar(4000)**|Code der SQL-Abfrage, z. B. eine SELECT-Anweisung.|  
+|**QueryName**|**nvarchar(4000)**|Der Name der Abfrage.|  
+|**QueryText**|**nvarchar(4000)**|Code der SQL-Abfrage, z. B. eine SELECT-Anweisung.|  
 |**IsUpdateable**|**bit**|Gibt an, ob die Abfrage aktualisierbar oder schreibgeschützt ist.|  
 |**QueryType**|**nvarchar(4000)**|Gibt den Typ der Abfrage, z. B. **wählen** oder **SetOperation**.|  
 |**ExternalSource**|**nvarchar(4000)**|Wenn die Abfrage eine externen Datenquelle verweist, ist dies die von der Abfrage verwendeten Verbindungszeichenfolge.|  
@@ -160,7 +161,7 @@ In von Formularmetadaten exportiert wird die **SSMA_Access_InventoryForms** Tabe
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|Identifiziert die Datenbank, die dieses Formular enthält.|  
 |**FormId**|**int**|Inkrementelle eine ganze Zahl, die das Formular identifiziert. Diese Spalte ist der Primärschlüssel für die Tabelle.|  
-|**Formularname**|**nvarchar(4000)**|Der Name des Formulars.|  
+|**FormName**|**nvarchar(4000)**|Der Name des Formulars.|  
   
 ## <a name="macros"></a>Makros  
 Makro-Metadaten werden exportiert, auf die **SSMA_Access_InventoryMacros** Tabelle. Diese Tabelle enthält die folgenden Spalten:  
@@ -169,7 +170,7 @@ Makro-Metadaten werden exportiert, auf die **SSMA_Access_InventoryMacros** Tabel
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|Identifiziert die Datenbank, die das Makro enthält.|  
 |**MacroId**|**int**|Inkrementelle eine ganze Zahl, die das Makro identifiziert. Diese Spalte ist der Primärschlüssel für die Tabelle.|  
-|**Makroname**|**nvarchar(4000)**|Der Name des Makros.|  
+|**MacroName**|**nvarchar(4000)**|Der Name des Makros.|  
   
 ## <a name="reports"></a>Berichte  
 Berichtsmetadaten ist exportiert der **SSMA_Access_InventoryReports** Tabelle. Diese Tabelle enthält die folgenden Spalten:  
@@ -187,7 +188,7 @@ Metadaten des Moduls ist exportiert der **SSMA_Access_InventoryModules** Tabelle
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|Identifiziert die Datenbank, die das Modul enthält.|  
 |**ModuleId**|**int**|Inkrementelle eine ganze Zahl, die das Modul identifiziert. Diese Spalte ist der Primärschlüssel für die Tabelle.|  
-|**"ModuleName"**|**nvarchar(4000)**|Der Name des Moduls.|  
+|**ModuleName**|**nvarchar(4000)**|Der Name des Moduls.|  
   
 ## <a name="see-also"></a>Siehe auch  
 [Exporting an Access Inventory (Exportieren eines Access-Inventars)](http://msdn.microsoft.com/en-us/7e1941fb-3d14-4265-aff6-c77a4026d0ed)  

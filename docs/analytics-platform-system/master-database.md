@@ -2,26 +2,26 @@
 title: Master-Datenbank (SQL Server PDW)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/13/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c71617c0-6689-4f52-81c6-58f4cf7c7377
-caps.latest.revision: "8"
+caps.latest.revision: 8
 ms.workload: not set
-ms.openlocfilehash: 1fde1a329703ed833a9fdeb6686b1a63c04aea79
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 0031e4720c7fbcf7e60b7e35a59d16ad31a24103
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="master-database"></a>master-Datenbank
 Der SQL Server PDW-master-Datenbank speichert Informationen Appliance-Anmeldung sowie der Datenbankkatalog. Es ist eine SQL Server-master-Datenbank, die auf den Knoten "Zugriffssteuerung" befindet. Daher verfügt über sie ähnliche Funktionen in SQL Server PDW als Master für SQL Server bereitstellt.  
@@ -47,7 +47,7 @@ Sie *kann nicht:*
   
 -   Führen Sie **DBCC SHRINKLOG**.  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Verwandte Aufgaben  
   
 |Task|Description|  
 |--------|---------------|  

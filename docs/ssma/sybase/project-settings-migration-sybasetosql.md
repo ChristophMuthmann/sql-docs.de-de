@@ -1,30 +1,31 @@
 ---
 title: Projekteinstellungen (Migration) (SybaseToSQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-sybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 82f8857f-7ab1-4738-ab6e-b1e95ea94924
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b032cb4f1453a3b9a2986e5d554d21c62e606001
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 23e575ca7b7094ee835ff8432cfbdb906c875ce9
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="project-settings-migration-sybasetosql"></a>Projekteinstellungen (Migration) (SybaseToSQL)
 Die Seite "Migration", der die **Projekteinstellungen** Dialogfeld enthält Einstellungen, anpassen, wie SSMA Daten aus Sybase Adaptive Server Enterprise (ASE), migriert [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
@@ -39,7 +40,7 @@ Der Bereich für die Migration in beiden verfügbar ist die **Projekteinstellung
   
 |Begriff|Definition|  
 |--------|--------------|  
-|**Ersetzen von nicht unterstützten Datumsangaben**|Gibt an, ob SSMA Datumsangaben Beseitigung zuständig, die älter als die früheste sind [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] **"DateTime"** Datum (01 Januar 1753).<br /><br />Um die Werte aktuell zu halten, wählen Sie **nichts**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]Datumsangaben vor 01 Januar 1753 wird in einer Datetime-Spalte nicht akzeptiert werden. Wenn Sie ältere Daten verwenden, müssen Sie die Datums-/ Uhrzeitwerten in Zeichenwerten konvertieren.<br /><br />Wählen Sie zum Konvertieren von Datumsangaben vor 01 Januar 1753 auf NULL **durch NULL Ersetzen**.<br /><br />Wählen Sie zum Ersetzen von Datumsangaben vor 01 Januar 1753 durch eine unterstützte Datum **am nächsten unterstützte Datum ersetzt**.<br /><br />**Standardmodus**: Unternehmen Sie nichts<br /><br />**Vollständige**: Unternehmen Sie nichts<br /><br />**Vollständige Modus**: nächste unterstützte Datum ersetzt|  
+|**Ersetzen von nicht unterstützten Datumsangaben**|Gibt an, ob SSMA Datumsangaben Beseitigung zuständig, die älter als die früheste sind [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] **"DateTime"** Datum (01 Januar 1753).<br /><br />Um die Werte aktuell zu halten, wählen Sie **nichts**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Datumsangaben vor 01 Januar 1753 wird in einer Datetime-Spalte nicht akzeptiert werden. Wenn Sie ältere Daten verwenden, müssen Sie die Datums-/ Uhrzeitwerten in Zeichenwerten konvertieren.<br /><br />Wählen Sie zum Konvertieren von Datumsangaben vor 01 Januar 1753 auf NULL **durch NULL Ersetzen**.<br /><br />Wählen Sie zum Ersetzen von Datumsangaben vor 01 Januar 1753 durch eine unterstützte Datum **am nächsten unterstützte Datum ersetzt**.<br /><br />**Standardmodus**: Unternehmen Sie nichts<br /><br />**Vollständige**: Unternehmen Sie nichts<br /><br />**Vollständige Modus**: nächste unterstützte Datum ersetzt|  
   
 ## <a name="migration-engine"></a>Migrationsmodul  
   

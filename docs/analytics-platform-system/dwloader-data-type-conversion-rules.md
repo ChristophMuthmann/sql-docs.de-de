@@ -1,32 +1,32 @@
 ---
-title: "Konvertierungsregeln für Dwloader-Datentyp"
+title: Konvertierungsregeln für Dwloader-Datentyp
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology: mpp-data-warehouse
-description: "Dieses Thema beschreibt die Eingabedaten-Formate und impliziten datentypkonvertierungen, Dwloader, Befehlszeilen-Ladeprogramm beim Laden von Daten in PDW unterstützt."
+description: Dieses Thema beschreibt die Eingabedaten-Formate und impliziten datentypkonvertierungen, Dwloader, Befehlszeilen-Ladeprogramm beim Laden von Daten in PDW unterstützt.
 ms.date: 10/20/2016
 ms.topic: article
 ms.assetid: 79c48520-b08b-4b15-a943-a551cc90a2c4
-caps.latest.revision: "30"
-ms.openlocfilehash: 29cf43b7bb5ea38d821e62b03cc125fe5e0fc30c
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 30
+ms.openlocfilehash: 6910358803673c34d2381d071340e2ec7c8f2a0b
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="data-type-conversion-rules-for-dwloader"></a>Konvertierungsregeln für Dwloader-Datentyp
 In diesem Thema wird beschrieben, die Eingabedaten-Formate und impliziten datentypkonvertierungen, [Dwloader Command-Line-Ladeprogramm](dwloader.md) beim Laden von Daten in PDW unterstützt. Die implizite datenkonvertierungen auftreten, wenn die Eingabedaten nicht den Datentyp in der SQL Server PDW-Zieltabelle übereinstimmt. Verwenden Sie diese Informationen beim Entwerfen Ihrer Ladevorgang, um sicherzustellen, dass Ihre Daten in SQL Server PDW erfolgreich geladen wird.  
    
   
 ## <a name="InsertBinaryTypes"></a>Literale in Binärtypen eingefügt.  
-In der folgenden Tabelle definiert, der akzeptierten Literaltypen, Format und Konvertierungsregeln für einen literalen Wert in einer SQL Server PDW-Spalte vom Typ laden **binäre** (*n*) oder  **Varbinary**(*n*).  
+In der folgenden Tabelle definiert, der akzeptierten Literaltypen, Format und Konvertierungsregeln für einen literalen Wert in einer SQL Server PDW-Spalte vom Typ laden **binäre** (*n*) oder **Varbinary** (*n*).  
   
 |Input-Datentyp|Beispiele für die Eingabedaten|Die Konvertierung in Binary oder Varbinary-Datentyp|  
 |-------------------|-----------------------|-----------------------------------------------|  
@@ -76,7 +76,7 @@ In der folgenden Tabelle definiert, das Standardformat und die Regeln zum Laden 
 |Zeichenfolgenliteral im **Smalldatetime** Format|"Yyyy-MM-Dd hh: mm"<br /><br />Beispiel: "2007-05-08 12:35"|Sekunden, die restlichen Dezimalstellen und die Offset-Werte werden auf 0 festgelegt, wenn der Wert eingefügt wird.|  
 |Zeichenfolgenliteral im **Datum** Format|"JJJJ-MM-TT"<br /><br />Beispiel: "2007-05-08"|Time-Werten (Stunde, Minuten, Sekunden und Sekundenbruchteile) werden auf 0 festgelegt, wenn der Wert eingefügt wird. Z. B., das literal "2007-05-08' wird als eingefügt" 2007-05-08-00:00:00.0000000 + 00:00 ".|  
 |Zeichenfolgenliteral im **datetime2** Format|"JJJJ-MM-tt hh:mm:ss.fffffff"<br /><br />Beispiel: "2007-05-08-12:35:29.1234567"|Die Quelldaten darf die angegebene Anzahl von Sekundenbruchteilen in der Spalte "DateTimeOffset" nicht überschreiten. Wenn die Datenquelle eine Zahl kleinere oder gleich der Bruchteile von Sekunden enthält, wird auf die rechte Seite mit Nullen aufgefüllt. Angenommen, der Datentyp "DateTimeOffset" (5), der literale Wert ist "2007-05-08-12:35:29.123 + 12:15 ' wird als eingefügt" 12:35:29.12300 + 12:15 '.|  
-|Zeichenfolgenliteral im **"DateTimeOffset"** Format|"JJJJ-MM-tt hh:mm:ss.fffffff {+ &#124;;-} hh: mm"<br /><br />Beispiel: "2007-05-08-12:35:29.1234567 + 12:15 '|Die Quelldaten darf die angegebene Anzahl von Sekundenbruchteilen in der Spalte "DateTimeOffset" nicht überschreiten. Wenn die Datenquelle eine Zahl kleinere oder gleich der Bruchteile von Sekunden enthält, wird auf die rechte Seite mit Nullen aufgefüllt. Angenommen, der Datentyp "DateTimeOffset" (5), der literale Wert ist "2007-05-08-12:35:29.123 + 12:15 ' wird als eingefügt" 12:35:29.12300 + 12:15 '.|  
+|Zeichenfolgenliteral im **"DateTimeOffset"** Format|"JJJJ-MM-tt hh:mm:ss.fffffff {+&#124;-} hh: mm"<br /><br />Beispiel: "2007-05-08-12:35:29.1234567 + 12:15 '|Die Quelldaten darf die angegebene Anzahl von Sekundenbruchteilen in der Spalte "DateTimeOffset" nicht überschreiten. Wenn die Datenquelle eine Zahl kleinere oder gleich der Bruchteile von Sekunden enthält, wird auf die rechte Seite mit Nullen aufgefüllt. Angenommen, der Datentyp "DateTimeOffset" (5), der literale Wert ist "2007-05-08-12:35:29.123 + 12:15 ' wird als eingefügt" 12:35:29.12300 + 12:15 '.|  
   
 ### <a name="datetime2-data-type"></a>datetime2-Datentyp  
 In der folgenden Tabelle definiert, das Standardformat und die Regeln zum Laden von literalen Werten in einer Spalte vom Typ **datetime2** (*n*). Das Standardformat ist "Yyyy-MM-Dd hh:mm:ss.fffffff". Der Standardwert ist eine leere Zeichenfolge (") konvertiert" 1900-01-01 – 12:00:00 ". Zeichenfolgen, die nur Leerstellen enthalten ("") ein Fehler generiert. Die Anzahl der Dezimalstellen, hängt von der Definition der Spalte ab. Angenommen, eine Spalte, die als definiert **datetime2** (2) hat zwei Dezimalstellen.  
@@ -91,34 +91,34 @@ In der folgenden Tabelle definiert, das Standardformat und die Regeln zum Laden 
 ### <a name="DateFormats"></a>DateTime-Formate  
 Dwloader unterstützt die folgenden Formate für die Eingabedaten, die sie in SQL Server PDW geladen wird. Weitere Details sind nach der Tabelle aufgeführt.  
   
-|DATETIME|smalldatetime|date|datetime2|datetimeoffset|  
+|datetime|smalldatetime|Datum|datetime2|datetimeoffset|  
 |------------|-----------------|--------|-------------|------------------|  
-|[M [M]] M-[d] d-[Yy] Yy hh: mm: [ss.fff]|[M [M]] M-[d] d-[Yy] Yy hh: mm [: 00]|[M [M]] M-[d] d-[Yy] yy|[M [M]] M-[d] d-[Yy] Yy hh: mm: [.fffffff]|[M [M]] M-[d] d-[Yy] Yy hh: mm: [.fffffff] zzz|  
-|[M [M]] M-[d] d-[Yy] Yy hh: mm: [ss.fff] [Tt]|[M [M]] M-[d] d-[Yy] Yy hh: mm [: 00] [Tt]||[M [M]] M-[d] d-[Yy] Yy hh: mm: [.fffffff] [Tt]|[M [M]] M-[d] d-[Yy] Yy hh: mm: [.fffffff] [Tt] Zzz|  
-|[M [M]] M [Yy] Yy-[d]-d hh: mm: [ss.fff]|[M [M]] M [Yy] Yy-[d]-d hh: mm [: 00]|[M [M]] M [Yy] Yy-[d]-d|[M [M]] M [Yy] Yy-[d]-d ss [.fffffff]|[M [M]] M [Yy] Yy-[d]-d Zzz ss [.fffffff]|  
-|[M [M]] M-[Yy] Yy-[d] d hh: mm: [ss.fff] [Tt]|[M [M]] M-[Yy] Yy-[d] d hh: mm [: 00] [Tt]||[M [M]] M-[Yy] Yy-[d] d ss [.fffffff] [Tt]|[M [M]] M-[Yy] Yy-[d] d ss [.fffffff] [Tt] Zzz|  
-|[Yy] Yy [M [M]] M-[d]-d hh: mm: [ss.fff]|[Yy] Yy [M [M]] M-[d]-d hh: mm [: 00]|[Yy] Yy [M [M]] M-[d]-d|[Yy] Yy [M [M]] M-[d]-d ss [.fffffff]|[Yy] Yy-[M [M]] d ss [.fffffff] Zzz M-[d]|  
-|[Yy] Yy-[M [M]] M-[d] d hh: mm: [ss.fff] [Tt]|[Yy] Yy-[M [M]] M-[d] d hh: mm [: 00] [Tt]||[Yy] Yy-[M [M]] M-[d] d ss [.fffffff] [Tt]|[Yy] Yy-[M [M]] M-[d] d ss [.fffffff] [Tt] Zzz|  
-|[Yy] Yy-[d] d-[M [M]] M hh: mm: [ss.fff]|[Yy] Yy-[d] d-[M [M]] M hh: mm [: 00]|[Yy] Yy - d [d]-[M [M]] M|[Yy] Yy-[d] d-[M [M]] M ss [.fffffff]|[Yy] Yy-[d] M ss [.fffffff] Zzz d-[M [M]]|  
-|[Yy] Yy-[d] d-[M [M]] M hh: mm: [ss.fff] [Tt]|[Yy] Yy-[d] d-[M [M]] M hh: mm [: 00] [Tt]||[Yy] Yy-[d] d-[M [M]] M ss [.fffffff] [Tt]|[Yy] Yy-[d] d-[M [M]] M ss [.fffffff] [Tt] Zzz|  
-|[d] d-[M [M]] M-[Yy] Yy hh: mm: [ss.fff]|[d] d-[M [M]] M-[Yy] Yy hh: mm [: 00]|[d] d-[M [M]] M-[Yy] yy|[d] d-[M [M]] M-[Yy] Yy hh: mm: [.fffffff]|[d] d-[M [M]] M-[Yy] Yy hh: mm: [.fffffff] zzz|  
-|[d] d-[M [M]] M-[Yy] Yy hh: mm: [ss.fff] [Tt]|[d] d-[M [M]] M-[Yy] Yy hh: mm [: 00] [Tt]||[d] d-[M [M]] M-[Yy] Yy hh: mm: [.fffffff] [Tt]|[d] d-[M [M]] M-[Yy] Yy hh: mm: [.fffffff] [Tt] Zzz|  
-|[d] d-[Yy] Yy-[M [M]] M hh: mm: [ss.fff]|[d] d-[Yy] Yy-[M [M]] M hh: mm [: 00]|[d] d-[Yy] Yy-[M [M]] M|[d] d-[Yy] Yy-[M [M]] M ss [.fffffff]|[d] d-[Yy] Yy-[M [M]] M ss [.fffffff] zzz|  
-|[d] d-[Yy] Yy-[M [M]] M hh: mm: [ss.fff] [Tt]|[d] d-[Yy] Yy-[M [M]] M hh: mm [: 00] [Tt]||[d] d-[Yy] Yy-[M [M]] M ss [.fffffff] [Tt]|[d] d-[Yy] Yy-[M [M]] M ss [.fffffff] [Tt] Zzz|  
+|[M[M]]M-[T]T-[JJ]JJ HH:mm:ss[.fff]|[M[M]]M-[T]T-[JJ]JJ HH:mm[:00]|[M[M]]M-[T]T-[JJ]JJ|[M[M]]M-[T]T-[JJ]JJ HH:mm:ss[.fffffff]|[M[M]]M-[T]T-[JJ]JJ HH:mm:ss[.fffffff] zzz|  
+|[M[M]]M-[T]T-[JJ]JJ hh:mm:ss[.fff][tt]|[M[M]]M-[T]T-[JJ]JJ hh:mm[:00][tt]||[M[M]]M-[T]T-[JJ]JJ hh:mm:ss[.fffffff][tt]|[M[M]]M-[T]T-[JJ]JJ hh:mm:ss[.fffffff][tt] zzz|  
+|[M[M]]M-[JJ]JJ-[T]T HH:mm:ss[.fff]|[M[M]]M-[JJ]JJ-[T]T HH:mm[:00]|[M[M]]M-[JJ]JJ-[T]T|[M[M]]M-[JJ]JJ-[T]T HH:mm:ss[.fffffff]|[M[M]]M-[JJ]JJ-[T]T HH:mm:ss[.fffffff] zzz|  
+|[M[M]]M-[JJ]JJ-[T]T hh:mm:ss[.fff][tt]|[M[M]]M-[JJ]JJ-[T]T hh:mm[:00][tt]||[M[M]]M-[JJ]JJ-[T]T hh:mm:ss[.fffffff][tt]|[M[M]]M-[JJ]JJ-[T]T hh:mm:ss[.fffffff][tt] zzz|  
+|[JJ]JJ-[M[M]]M-[T]T HH:mm:ss[.fff]|[JJ]JJ-[M[M]]M-[T]T HH:mm[:00]|[JJ]JJ-[M[M]]M-[T]T|[JJ]JJ-[M[M]]M-[T]T HH:mm:ss[.fffffff]|[JJ]JJ-[M[M]]M-[T]T HH:mm:ss[.fffffff] zzz|  
+|[JJ]JJ-[M[M]]M-[T]T hh:mm:ss[.fff][tt]|[JJ]JJ-[M[M]]M-[T]T hh:mm[:00][tt]||[JJ]JJ-[M[M]]M-[T]T hh:mm:ss[.fffffff][tt]|[JJ]JJ-[M[M]]M-[T]T hh:mm:ss[.fffffff][tt] zzz|  
+|[JJ]JJ-[T]T-[M[M]]M HH:mm:ss[.fff]|[JJ]JJ-[T]T-[M[M]]M HH:mm[:00]|[JJ]JJ-[T]T-[M[M]]M|[JJ]JJ-[T]T-[M[M]]M HH:mm:ss[.fffffff]|[JJ]JJ-[T]T-[M[M]]M HH:mm:ss[.fffffff] zzz|  
+|[JJ]JJ-[T]T-[M[M]]M hh:mm:ss[.fff][tt]|[JJ]JJ-[T]T-[M[M]]M hh:mm[:00][tt]||[JJ]JJ-[T]T-[M[M]]M hh:mm:ss[.fffffff][tt]|[JJ]JJ-[T]T-[M[M]]M hh:mm:ss[.fffffff][tt] zzz|  
+|[T]T-[M[M]]M-[JJ]JJ HH:mm:ss[.fff]|[T]T-[M[M]]M-[JJ]JJ HH:mm[:00]|[T]T-[M[M]]M-[JJ]JJ|[T]T-[M[M]]M-[JJ]JJ :mm:ss[.fffffff]|[T]T-[M[M]]M-[JJ]JJ HH:mm:ss[.fffffff] zzz|  
+|[T]T-[M[M]]M-[JJ]JJ hh:mm:ss[.fff][tt]|[T]T-[M[M]]M-[JJ]JJ hh:mm[:00][tt]||[T]T-[M[M]]M-[JJ]JJ hh:mm:ss[.fffffff][tt]|[T]T-[M[M]]M-[JJ]JJ hh:mm:ss[.fffffff][tt] zzz|  
+|[T]T-[JJ]JJ-[M[M]]M HH:mm:ss[.fff]|[T]T-[JJ]JJ-[M[M]]M HH:mm[:00]|[T]T-[JJ]JJ-[M[M]]M|[T]T-[JJ]JJ-[M[M]]M HH:mm:ss[.fffffff]|[T]T-[JJ]JJ-[M[M]]M HH:mm:ss[.fffffff] zzz|  
+|[T]T-[JJ]JJ-[M[M]]M hh:mm:ss[.fff][tt]|[T]T-[JJ]JJ-[M[M]]M hh:mm[:00][tt]||[T]T-[JJ]JJ-[M[M]]M hh:mm:ss[.fffffff][tt]|[T]T-[JJ]JJ-[M[M]]M hh:mm:ss[.fffffff][tt] zzz|  
   
 Details:  
   
--   Um Werte für Monat, Tag und Jahr zu trennen, können Sie '–', '/' oder '. '. Der Einfachheit halber wird in die Tabelle nur das Trennzeichen ":" verwendet.  
+-   Um Werte für Monat, Tag und Jahr zu trennen, können Sie '–', '/' oder '. '. Der Einfachheit halber wird in die Tabelle nur das Trennzeichen „–“ verwendet.  
   
 -   Zum Angeben der Monat als Text, verwenden drei oder mehr Zeichen. Monate mit 1 oder 2 Zeichen werden als Zahl interpretiert.  
   
 -   Verwenden Sie zum Trennen der Time-Werten die ': ' Symbol.  
   
--   Buchstaben, die in eckige Klammern eingeschlossen sind optional.  
+-   Buchstaben in eckigen Klammern sind optional.  
   
--   Legen Sie die Buchstaben "Tt" [AM | PM | am | pm]. Uhr ist die Standardeinstellung. Wenn "Tt" angegeben wird, muss ein Wert für die Stunde (Hh) im Bereich von 0 bis 12 sein.  
+-   Die Buchstaben „tt“ kennzeichnen [AM|PM|am|pm]. AM ist die Standardeinstellung. Wenn „tt“ angegeben ist, muss der Wert für die Stunde (hh) in einem Bereich von 0 bis 12 liegen.  
   
--   Die Buchstaben "Zzz" Festlegen des Zeitzonenoffsets für das System aktuelle Zeitzone im Format {+ |-} HH:ss].  
+-   Die Buchstaben „zzz“ kennzeichnen den Offsetwert für die Zeitzone für die aktuelle Zeitzone des Systems im Format {+|-}HH:ss].  
   
 ## <a name="InsertNumerictypes"></a>Einfügen von Literalen in numerische Typen  
 In den folgenden Tabellen definieren, die Standardregeln Format und Konvertierung zum Laden eines literalen Wert in eine SQL Server PDW-Spalte, die einen numerischen Typ verwendet wird.  
@@ -128,7 +128,7 @@ In der folgenden Tabelle definiert, das Standardformat und die Regeln zum Laden 
   
 |Input-Datentyp|Beispiele für die Eingabedaten|Die Konvertierung in den bit-Datentyp|  
 |-------------------|-----------------------|-------------------------------|  
-|Zeichenfolgenliteral im **Ganzzahl** Format|"Ffffffffff"<br /><br />Beispiel: "1" oder "321"|Ein Ganzzahlwert, formatiert als Zeichenfolgenliteral darf keinen negativen Wert enthalten. Der Wert "-123" generiert z. B. einen Fehler.<br /><br />Ein Wert größer als 1 wird in 1 konvertiert. Beispielsweise wird der Wert "123" in 1 konvertiert.|  
+|Zeichenfolgenliteral im **Ganzzahl** Format|'ffffffffff'<br /><br />Beispiel: "1" oder "321"|Ein Ganzzahlwert, formatiert als Zeichenfolgenliteral darf keinen negativen Wert enthalten. Der Wert "-123" generiert z. B. einen Fehler.<br /><br />Ein Wert größer als 1 wird in 1 konvertiert. Beispielsweise wird der Wert "123" in 1 konvertiert.|  
 |Ein Zeichenfolgenliteral handeln|'TRUE' oder 'FALSE'<br /><br />Beispiel: "true"|Der Wert "TRUE" wird in 1 konvertiert. der Wert "FALSE" wird in 0 konvertiert.|  
 |Integer-literal|fffffffn<br /><br />Beispiel: 1 oder 321|Ein Wert größer als 1 oder kleiner als 0 wird in 1 konvertiert. Beispielsweise werden Werte 123 "und"-123 in 1 konvertiert.|  
 |Decimal-literal|fffnn.fffn<br /><br />Beispiel: 1234.5678|Ein Wert größer als 1 oder kleiner als 0 wird in 1 konvertiert. Beispielsweise werden Werte 123,45 "und"-123.45 in 1 konvertiert.|  
@@ -148,7 +148,7 @@ In der folgenden Tabelle definiert die Regeln zum Laden von literalen Werten in 
 |-------------------|-----------------------|  
 |Integer-literal|321312313123|  
 |Decimal-literal|123344.34455|  
-|Floating-Point-literal|3.12323E + 14|  
+|Floating-Point-literal|3.12323E+14|  
   
 ### <a name="int-bigint-tinyint-smallint-data-types"></a>"Int", "bigint", "tinyint", "smallint"-Datentypen  
 In der folgenden Tabelle definiert die Regeln zum Laden von literalen Werten in einer Spalte vom Typ **Int**, **"bigint"**, **"tinyint"**, oder **"smallint"**. Die Datenquelle kann nicht die für den angegebenen Datentyp zulässigen Bereichs nicht überschreiten. Z. B. den Bereich für **"tinyint"** ist 0 bis 255 und der Bereich für **Int** wird von – 2.147.483.648 bis 2.147.483.647.  

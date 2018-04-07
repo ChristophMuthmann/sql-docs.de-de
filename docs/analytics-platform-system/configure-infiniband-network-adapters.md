@@ -1,25 +1,25 @@
 ---
-title: "Konfigurieren Sie InfiniBand-Netzwerkadapter für das Analytics Platform System (APS)"
+title: Konfigurieren Sie InfiniBand-Netzwerkadapter für das Analytics Platform System (APS)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology: mpp-data-warehouse
-description: "Beschreibt, wie die InfiniBand-Netzwerkadapter auf einem nicht-Appliance Clientserver für die Verbindung mit dem Steuerungsknoten auf SQL Server Parallel Data Warehouse (PDW) konfigurieren."
+description: Beschreibt, wie die InfiniBand-Netzwerkadapter auf einem nicht-Appliance Clientserver für die Verbindung mit dem Steuerungsknoten auf SQL Server Parallel Data Warehouse (PDW) konfigurieren.
 ms.date: 01/05/2017
 ms.topic: article
 ms.assetid: 61f3c51a-4411-4fe8-8b03-c8e1ba279646
-caps.latest.revision: 
-ms.openlocfilehash: 052dfcb32de7fb84acc0ce97c55775944a1d0dc1
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+caps.latest.revision: 15
+ms.openlocfilehash: 5724f5e61d458d19e8fc52d77fbff1401ca2afd3
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="configure-infiniband-network-adapters-for-analytics-platform-system"></a>InfiniBand-Netzwerkadapter für Analytics Platform System konfigurieren
 Beschreibt, wie die InfiniBand-Netzwerkadapter auf einem nicht-Appliance Clientserver für die Verbindung mit dem Steuerungsknoten auf SQL Server Parallel Data Warehouse (PDW) konfigurieren. Verwenden Sie diese Anweisungen für grundlegende Konnektivität und hohe Verfügbarkeit, sodass laden, Sicherung und andere Prozesse werden automatisch mit dem aktiven InfiniBand-Netzwerk verbinden.  

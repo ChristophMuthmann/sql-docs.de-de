@@ -21,20 +21,20 @@ ms.assetid: bf44b236-d9be-41ae-a5fd-bd73038e505f
 caps.latest.revision: 17
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 54f826bd9b4bd2bdec0c7cd79c6faf20b0630639
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 511c652a221ffb3fe4392dd8f4c365de129efe13
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="connect-to-azure-sql-db-accesstosql"></a>Herstellen einer Verbindung mit Azure SQL-Datenbank (AccessToSQL)
 Stellen Sie mithilfe der SQL Azure-Dialogfeld Verbindung mit SQL Azure-Datenbank, die Sie migrieren möchten.  
   
 Zum Zugriff auf dieses Dialogfeld, in dem **Datei** klicken Sie im Menü **Herstellen einer Verbindung mit SQL Azure**. Wenn Sie zuvor eine Verbindung hergestellt haben, wird der Befehl ist **eine erneute Verbindung mit SQL Azure.**  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>enthalten  
 **Servername**  
   
 Wählen Sie aus, oder geben Sie den Servernamen zum Herstellen einer Verbindung mit SQL Azure.  
@@ -46,7 +46,7 @@ Wählen Sie aus, geben Sie ein oder **Durchsuchen** den Datenbanknamen.
 > [!IMPORTANT]  
 > SSMA für Access unterstützt keine Verbindung mit der master-Datenbank in SQL Azure.  
   
-**User name**  
+**Benutzername**  
   
 Geben Sie den Benutzernamen, den SSMA für die Verbindung mit der SQL Azure-Datenbank verwenden  
   
@@ -54,7 +54,7 @@ Geben Sie den Benutzernamen, den SSMA für die Verbindung mit der SQL Azure-Date
   
 Geben Sie das Kennwort für den Benutzernamen ein.  
   
-**Verschlüsseln**  
+**Encrypt**  
   
 SSMA empfiehlt verschlüsselte Verbindung zu SQL Azure.  
   

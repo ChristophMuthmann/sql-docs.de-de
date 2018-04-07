@@ -2,26 +2,26 @@
 title: Tempdb-Datenbank (SQL Server PDW)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/13/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 5840033d-2dc6-4576-8a5f-067e2a58b170
-caps.latest.revision: "22"
+caps.latest.revision: 22
 ms.workload: not set
-ms.openlocfilehash: 459265906774604f4d98f7cfb2bd2ad09485cc7e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 6a52f21b266d277f3bda205803d38431598545f7
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="tempdb-database"></a>tempdb-Datenbank
 **Tempdb** ist eine SQL Server PDW-Systemdatenbank, in der lokale temporäre Tabellen für die Benutzerdatenbanken gespeichert. Temporäre Tabellen werden häufig verwendet, um die abfrageleistung zu verbessern. Sie können beispielsweise eine temporäre Tabelle verwenden, um ein Skript zu modularisieren und berechnete Daten wiederverwenden.  
@@ -81,7 +81,7 @@ Einschränkungen für lokale temporäre Tabellen. Sie *kann nicht:*
   
 -   Führen Sie Datenbank-Konsolenbefehle auf temporäre Tabellen.  
   
--   Verwenden Sie denselben Namen für mindestens zwei temporäre Tabellen innerhalb desselben Batches. Wenn mehr als eine lokale temporäre Tabelle innerhalb eines Batches verwendet wird, muss jede einen eindeutigen Namen haben. Wenn mehrere Sitzungen sind die gleichen Batch ausgeführt und die gleiche lokale temporäre Tabelle erstellen, fügt SQL Server PDW intern ein numerisches Suffix an den Namen lokaler temporärer Tabellen einen eindeutigen Namen für jede lokale temporäre Tabelle zu verwalten.  
+-   Verwenden Sie denselben Namen für mindestens zwei temporäre Tabellen innerhalb desselben Batches. Wenn in einem Batch mehrere lokale temporäre Tabellen verwendet werden, muss jede einen eindeutigen Namen aufweisen. Wenn mehrere Sitzungen sind die gleichen Batch ausgeführt und die gleiche lokale temporäre Tabelle erstellen, fügt SQL Server PDW intern ein numerisches Suffix an den Namen lokaler temporärer Tabellen einen eindeutigen Namen für jede lokale temporäre Tabelle zu verwalten.  
   
 > [!NOTE]  
 > Sie *können* erstellen und Aktualisieren von Statistiken für eine temporäre Tabelle. **ALTER INDEX** können verwendet werden, um einen gruppierten Index neu erstellen.  

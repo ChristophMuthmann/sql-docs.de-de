@@ -2,14 +2,15 @@
 title: Exportieren eine Access-Inventur (AccessToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-access
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
@@ -24,16 +25,16 @@ helpviewer_keywords:
 - inventories of Access databases
 - querying exported metadata
 ms.assetid: 7e1941fb-3d14-4265-aff6-c77a4026d0ed
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7f1ca36e752e0df28ca4b1fb3dcc7dff6f8895cf
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 834b8d2b1be548a8be1114d6b536475eb52d4441
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="exporting-an-access-inventory-accesstosql"></a>Exportieren eine Access-Inventur (AccessToSQL)
 Wenn Sie mehrere Access-Datenbanken verfügen und Sie nicht sicher, welche Informationen zum Migrieren sind in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], können Sie ein Inventar aller Access-Datenbanken in einem Projekt exportieren. Sie können anschließend überprüfen und Fragen Sie die Metadaten Inventar, um zu bestimmen, welche Datenbanken und Objekte innerhalb dieser Datenbanken migrieren. Diese Inventur können Sie schnell beantwortet Fragen, wie die folgenden:  
@@ -124,7 +125,7 @@ Weitere Informationen zum Hinzufügen von Datenbanken zu Projekten finden Sie un
   
 5.  In der **Authentifizierung** Dropdown-Menü Wählen Sie den Authentifizierungstyp, der für die Verbindung verwendet. Um die aktuelle Windows-Konto verwenden möchten, wählen **Windows-Authentifizierung**. Verwenden einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Anmeldung wählen **SQL Server-Authentifizierung**, und geben Sie dann einen Benutzernamen und ein Kennwort.  
   
-Weitere Informationen zum Verbinden mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], finden Sie unter [Herstellen einer Verbindung mit SQL Server &#40; AccessToSQL &#41; ](../../ssma/access/connecting-to-sql-server-accesstosql.md).  
+Weitere Informationen zum Verbinden mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], finden Sie unter [Herstellen einer Verbindung mit SQL Server &#40;AccessToSQL&#41;](../../ssma/access/connecting-to-sql-server-accesstosql.md).  
   
 **So exportieren Sie Inventurinformationen**  
   

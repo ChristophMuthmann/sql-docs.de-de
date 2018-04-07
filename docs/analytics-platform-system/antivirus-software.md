@@ -2,27 +2,27 @@
 title: Antivirus-Software (Analytics Platform System)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 60ab9a88-d339-4917-a38b-f9481aef38fd
-caps.latest.revision: "29"
-ms.openlocfilehash: 1733ec6be50d839284fa147eb1cf5c1660b77190
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 29
+ms.openlocfilehash: 27e3bc7eae50c0418c0dcb4df99565b3f0edeadf
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
-# <a name="antivirus-software"></a>Antivirus-Software
+# <a name="antivirus-software"></a>Antivirus Software
 Wenn Ihr Rechenzentrum antivirus-Software erfordert, verwenden Sie diese Richtlinien antivirus-Software auf Analytics Platform System zu installieren. Es wird empfohlen, antivirus-Software, wenn sie über gute zwingend Ihres Rechenzentrums ist nicht installiert.  
   
 > [!WARNING]  
@@ -37,9 +37,9 @@ Um die antivirus-Software auf physischen Hosts installieren, schließen Sie die 
   
 **Schließen Sie diese Verzeichnisse:**  
   
--   C:\ProgramData\Microsoft\Windows\Hyper-V - Konfigurationsverzeichnis für die virtuelle Maschine  
+-   C:\ProgramData\Microsoft\Windows\Hyper-V - Virtual machine configuration directory  
   
--   C:\Users\Public\Documents\Hyper-V\Virtual Festplatten - Standardverzeichnis für die virtuelle Festplatte  
+-   C:\Users\Public\Documents\Hyper-V\Virtual Hard Disks - Default virtual hard disk drive directory  
   
 -   C:\clusterStorage - Verzeichnisse virtuelle Festplattenlaufwerk  
   
@@ -58,7 +58,7 @@ Um die antivirus-Software auf den virtuellen Computern zu installieren, schließ
   
 -   G:\  
   
-***Appliance_domain*-AD01** und  ***Appliance_domain*-AD02**  
+***Appliance_domain *-AD01** und ***Appliance_domain *-AD02**  
   
 -   Keine Einschränkungen  
   
@@ -68,18 +68,18 @@ Um die antivirus-Software auf den virtuellen Computern zu installieren, schließ
   
 -   G:\  
   
-***Appliance_domain*– VMM**  
+***appliance_domain*-VMM**  
   
 -   Keine Einschränkungen  
   
-***Appliance_domain*- Windows-Bereitstellungsdienste**  
+***Appliance_domain *-Windows-Bereitstellungsdienste**  
   
 -   Keine Einschränkungen  
   
-***Appliance_domain*-ISCSI01**  
+***appliance_domain*-ISCSI01**  
   
 -   C:\iscsitarget  
   
 ## <a name="see-also"></a>Siehe auch  
-[Appliance-Verwaltungsaufgaben &#40; Analyseplattformsystem &#41;](appliance-management-tasks.md)  
+[Appliance-Verwaltungsaufgaben &#40;Analyseplattformsystem&#41;](appliance-management-tasks.md)  
   

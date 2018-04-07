@@ -21,13 +21,13 @@ ms.assetid: e89b45bd-59c1-4d23-8bd7-3dafc1947448
 caps.latest.revision: 11
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b8984aaeb9240c8c3b309925e151e79688bc7be3
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 40515884db1dc08b0d3ebe7384ba46b98a961342
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="installing-ssma-for-mysql-mysqltosql"></a>Installieren von SSMA für MySQL (MySqlToSql)
 SQL Server Migration Assistant (SSMA) for MySQL besteht aus einer Clientanwendung, die Sie verwenden zum Durchführen einer Migration von MySQL zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure. Es enthält auch einen Erweiterung Pack, der die Datenmigration sowie die Verwendung von MySQL-Systemfunktionen in der migrierten Datenbanken unterstützt.  
@@ -42,10 +42,10 @@ Wenn Sie auf eine höhere Version von SSMA für MySQL aktualisieren möchten, m�
 |||  
 |-|-|  
 |**Thema**|**Beschreibung**|  
-|[Installieren SSMA für MySQL-Client &#40; MySQLToSQL &#41;](../../ssma/mysql/installing-ssma-for-mysql-client-mysqltosql.md)|Enthält Informationen und Anweisungen zur Installation des SSMA-Clients.|  
+|[Installieren von SSMA für MySQL-Client &#40;MySQLToSQL&#41;](../../ssma/mysql/installing-ssma-for-mysql-client-mysqltosql.md)|Enthält Informationen und Anweisungen zur Installation des SSMA-Clients.|  
 |[Installieren SSMA-Komponenten auf SQLServer (MySQL zu SQL)](http://msdn.microsoft.com/en-us/6772d0c5-258f-4d7b-afb0-b5f810e71af1)|Enthält Informationen und Anweisungen für die Installation der Erweiterung Pack auf Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].|  
-|[Entfernen die SSMA für die MySQL-Komponenten &#40; MySQLToSql &#41;](../../ssma/mysql/removing-the-ssma-for-mysql-components-mysqltosql.md)|Enthält Anweisungen zur Deinstallation des Clientprogramms.|  
+|[Entfernen von SSMA für die MySQL-Komponenten &#40;MySQLToSql&#41;](../../ssma/mysql/removing-the-ssma-for-mysql-components-mysqltosql.md)|Enthält Anweisungen zur Deinstallation des Clientprogramms.|  
   
 ## <a name="see-also"></a>Siehe auch  
-[Migrieren von MySQL-Datenbanken zu SQLServer – Azure SQL-Datenbank &#40; MySQLToSql &#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
+[Migrieren von MySQL-Datenbanken zu SQLServer – Azure SQL-Datenbank &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   

@@ -21,13 +21,13 @@ ms.assetid: 266d987c-ecc5-4fa4-bfdf-8c584f1a1332
 caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 89df7322e4025ffb79f3ae2aecb2ef67fa52c8d7
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 122cc3c70f69a6c6037484b499a85480b16792ef
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="managing-backups-sybasetosql"></a>Verwalten von Sicherungen (SybaseToSQL)
 Sybase Sicherungsverwaltung können Sie sichern und Wiederherstellen der Daten vor oder nach dem Ausführen eines Tests Tabelle. Sie können auch der Sicherungsinhalt Sicherungsinhalt verwalten Dialogfeld verwalten.  
@@ -104,5 +104,5 @@ Die folgenden Schaltflächen sind auf das Dialogfeld verfügbar:
 -   Klicken Sie auf die **schließen** Schaltfläche, um das Dialogfeld zu schließen.  
   
 ## <a name="see-also"></a>Siehe auch  
-[Testen von migriert Datenbankobjekte &#40; SybaseToSQL &#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
+[Testen von Datenbankobjekten migriert &#40;SybaseToSQL&#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
   

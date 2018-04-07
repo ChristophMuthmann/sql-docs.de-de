@@ -2,14 +2,15 @@
 title: Zuordnen von Quell- und Zieldatenbanken (AccessToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-access
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
@@ -23,22 +24,22 @@ helpviewer_keywords:
 - source database
 - target database
 ms.assetid: 69bee937-7b2c-49ee-8866-7518c683fad4
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 48e87d2b6c84db3534a3c52ee6176e29fd34257f
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: eed81b1bf2d9f3f2e70f30a6744c4d7ad9bf33d3
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="mapping-source-and-target-databases-accesstosql"></a>Zuordnen von Quell- und Zieldatenbanken (AccessToSQL)
 Wenn Sie eine Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure, müssen Sie eine Zieldatenbank für die Migration angeben. Wenn Sie mehrere Access-Datenbanken haben können Sie sie mit mehreren zuordnen [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Datenbanken (oder Schemas) oder auf mehrere Schemas unter der verbundenen SQL Azure-Datenbank.  
   
 ## <a name="sql-server-or-sql-azure-database-schemas"></a>SQL Server- oder SQL Azure-Datenbankschemas  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]Datenbanken verwenden das Konzept des Schemas, um Objekte innerhalb einer Datenbank in logische Gruppen zu unterteilen. Bibliotheksdatenbank könnten z. B. drei Schemas, die mit dem Namen verwenden **Bücher**, **audio**, und **video** Buch, Audio- und Videofunktionen Objekte voneinander zu trennen. Wird standardmäßig die Access-Datenbank zugeordnet ist **master** Datenbank und **Dbo** Schema in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] bzw. aus einer verbundenen Datenbank und **Dbo** Schema in SQL Azure.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Datenbanken verwenden das Konzept des Schemas, um Objekte innerhalb einer Datenbank in logische Gruppen zu unterteilen. Bibliotheksdatenbank könnten z. B. drei Schemas, die mit dem Namen verwenden **Bücher**, **audio**, und **video** Buch, Audio- und Videofunktionen Objekte voneinander zu trennen. Wird standardmäßig die Access-Datenbank zugeordnet ist **master** Datenbank und **Dbo** Schema in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] bzw. aus einer verbundenen Datenbank und **Dbo** Schema in SQL Azure.  
   
 Wenn Sie die Zuordnung zwischen jeder Access-Datenbank anzupassen und die [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Datenbank- und Schemaobjekte, SSMA werden migriert, die Schemas und Daten der Zugriffsdatenbank auf die Standarddatenbank zugeordnet zugeordnet.  
   
