@@ -2,28 +2,28 @@
 title: Verwendung von SQL Server-Features und Funktionen | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
-ms.service: 
+ms.service: ''
 ms.component: samples
 ms.technology:
 - samples
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 7cbfb4ef-1e61-4e65-9fe0-ed5adfb43415
-caps.latest.revision: 
+caps.latest.revision: 3
 author: BarbKess
 ms.author: barbkess
 manager: craigg
 robots: noindex,nofollow
 ms.workload: Inactive
 ms.openlocfilehash: 4688b3ebaf7f25bf37fb471c698d287f1e9792ed
-ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
+ms.sourcegitcommit: 094c46e7fa6de44735ed0040c65a40ec3d951b75
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/07/2018
 ---
 # <a name="wideworldimportersdw-use-of-sql-server-features-and-capabilities"></a>WideWorldImportersDW Verwendung von SQL Server-Features und Funktionen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
