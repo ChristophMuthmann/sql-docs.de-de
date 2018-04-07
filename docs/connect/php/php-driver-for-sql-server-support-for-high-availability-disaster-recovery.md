@@ -1,7 +1,7 @@
 ---
 title: Unterstützung für hohe Verfügbarkeit, Notfallwiederherstellung für Microsoft Drivers for PHP for SQLServer | Microsoft Docs
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 04/04/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: ''
@@ -13,16 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 73a80821-d345-4fea-b076-f4aabeb4af3e
-caps.latest.revision: ''
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ee0be974c5998d531e20ed64c871ca85892aa46f
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
+ms.openlocfilehash: 6cb7f145f14861720d11401a3d60db0ce0efcfd9
+ms.sourcegitcommit: 094c46e7fa6de44735ed0040c65a40ec3d951b75
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="support-for-high-availability-disaster-recovery"></a>Unterstützung für hohe Verfügbarkeit bei Notfallwiederherstellung
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -73,29 +73,11 @@ Ein Verbindungsfehler tritt auf, wenn die Verbindungsschlüsselwörter **MultiSu
 Wenn Sie ein upgrade einer [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] Anwendung, die derzeit die datenbankspiegelung zu einem multisubnetz-Szenario verwendet, sollten Sie entfernen die **von Failover_Partner** Verbindungseigenschaft und ersetzen es durch **MultiSubnetFailover**  festgelegt **Ja** , und Ersetzen Sie den Servernamen in der Verbindungszeichenfolge mit einem Verfügbarkeitsgruppen-Listener. Wenn eine Verbindungszeichenfolge verwendet **von Failover_Partner** und **MultiSubnetFailover = True**, generiert der Treiber einen Fehler. Jedoch, wenn eine Verbindungszeichenfolge verwendet **von Failover_Partner** und **MultiSubnetFailover = "false"** (oder **ApplicationIntent = ReadWrite**), die Anwendung wird die Datenbank verwenden die Spiegelung.  
   
 Der Treiber einen Fehler zurück, wenn die datenbankspiegelung auf der primären Datenbank in der Verfügbarkeitsgruppe verwendet wird, und wenn **MultiSubnetFailover = True** wird verwendet, in der Verbindungszeichenfolge die Herstellung einer primären Datenbank nicht zu einer verfügbarkeitsgruppe der Listener.  
-  
-## <a name="specifying-application-intent"></a>Angeben des Anwendungszwecks  
-Im Fall von **ApplicationIntent=ReadOnly** fordert der Client eine Lesearbeitslast an, wenn eine Verbindung mit einer AlwaysOn-aktivierten Datenbank hergestellt wird. Der Server erzwingt den Versuch zur Verbindungszeit und während einer USE-Datenbankanweisung, aber nur für eine AlwaysOn-aktivierte Datenbank.  
-  
-Das Schlüsselwort **ApplicationIntent** funktioniert nicht mit schreibgeschützten Legacy-Datenbanken.  
-  
-Eine Datenbank kann Lesearbeitslasten auf der AlwaysOn-Zieldatenbank zulassen bzw. nicht zulassen. (Hierzu wird die **ALLOW_CONNECTIONS**Klausel der **PRIMARY_ROLE** und der **SECONDARY_ROLE**[!INCLUDE[tsql](../../includes/tsql_md.md)]-Anweisung verwendet.)  
-  
-Das **ApplicationIntent** -Schlüsselwort wird verwendet, um schreibgeschütztes Routing zu aktivieren.  
-  
-## <a name="read-only-routing"></a>Schreibgeschütztes Routing  
-Das schreibgeschützte Routing ist eine Funktion, die die Verfügbarkeit des schreibgeschützten Replikats einer Datenbank sicherstellen kann. So aktivieren Sie schreibgeschütztes Routing:  
-  
-1.  Sie müssen eine Verbindung zum Verfügbarkeitsgruppenlistener einer AlwaysOn-Verfügbarkeitsgruppe herstellen.  
-  
-2.  Das Schlüsselwort der **ApplicationIntent** -Verbindungszeichenfolge muss auf **ReadOnly**festgelegt werden.  
-  
-3.  Die Verfügbarkeitsgruppe muss vom Datenbankadministrator konfiguriert werden, um schreibgeschütztes Routing zu aktivieren.  
-  
-Möglicherweise werden bei mehreren Verbindungen mithilfe von schreibgeschütztem Routing nicht alle mit demselben schreibgeschützten Replikat verbunden. Änderungen in der Datenbanksynchronisierung oder Änderungen in der Routingkonfiguration des Servers können zu Clientverbindungen mit anderen schreibgeschützten Replikaten führen. Sie gewährleisten, dass alle schreibgeschützten Anforderungen Verbindungen mit demselben schreibgeschützten Replikat herstellen, indem Sie keinen Verfügbarkeitsgruppenlistener an das Schlüsselwort der **Server** -Verbindungszeichenfolge übermitteln. Geben Sie stattdessen den Namen der schreibgeschützten Instanz an.  
-  
-Das schreibgeschützte Routing kann länger als das Herstellen einer Verbindung mit dem primären Objekt dauern, da beim schreibgeschützten Routing zunächst eine Verbindung mit dem primären Objekt hergestellt und anschließend nach dem verfügbaren am besten lesbaren sekundären Objekt gesucht wird. In diesem Fall sollte das Anmeldungstimeout erhöht werden.  
-  
+
+
+[!INCLUDE[specify-application-intent_read-only-routing](~/includes/paragraph-content/specify-application-intent-read-only-routing.md)]
+
+
 ## <a name="see-also"></a>Siehe auch  
 [Verbinden mit dem Server](../../connect/php/connecting-to-the-server.md)  
   

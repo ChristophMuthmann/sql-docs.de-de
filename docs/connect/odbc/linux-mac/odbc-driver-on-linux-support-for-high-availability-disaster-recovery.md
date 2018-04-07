@@ -1,27 +1,28 @@
 ---
 title: ODBC-Treiber unter Linux und Mac OS - High Availability and Disaster Recovery | Microsoft Docs
-ms.custom: 
-ms.date: 01/19/2017
+ms.custom: ''
+ms.date: 04/04/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: fa656c5b-a935-40bf-bc20-e517ca5cd0ba
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 53553cc88d771aeb7ef7d537309583fb49e1aaa6
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: e69df64ad4e5c5e5319719fe14f380c745b0aeba
+ms.sourcegitcommit: 094c46e7fa6de44735ed0040c65a40ec3d951b75
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="odbc-driver-on-linux-and-macos-support-for-high-availability-and-disaster-recovery"></a>ODBC-Treiber unter Linux und MacOS Unterstützung für hohe Verfügbarkeit und Wiederherstellung im Notfall
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -74,29 +75,11 @@ Wenn das schreibgeschützte Routing nicht aktiviert ist, scheitert die Verbindun
 2.  Wenn eine Anwendung **ApplicationIntent=ReadWrite** verwendet wird und der sekundäre Replikatspeicherort für den schreibgeschützten Zugriff konfiguriert ist.  
   
 Es kann keine Verbindung hergestellt werden, wenn ein primäres Replikat so konfiguriert ist, dass schreibgeschützte Arbeitsauslastungen abgelehnt werden und die Verbindungszeichenfolge **ApplicationIntent=ReadOnly**enthält.  
-  
-## <a name="specifying-application-intent"></a>Angeben des Anwendungszwecks  
-Im Fall von **ApplicationIntent=ReadOnly**fordert der Client eine Lesearbeitslast an, wenn eine Verbindung mit einer AlwaysOn-aktivierten Datenbank hergestellt wird. Der Server erzwingt den Zweck zur Verbindungszeit und während einer USE-datenbankanweisung, aber nur für eine AlwaysOn-aktivierten Datenbank.
 
-Das **ApplicationIntent** -Schlüsselwort funktioniert nicht mit schreibgeschützten Legacy-Datenbanken.  
 
-Eine Datenbank kann Lesearbeitslasten auf der AlwaysOn-Zieldatenbank zulassen bzw. nicht zulassen. (Verwenden der **ALLOW_CONNECTIONS** -Klausel der **PRIMARY_ROLE** und **SECONDARY_ROLE** [!INCLUDE[tsql](../../../includes/tsql_md.md)] Anweisungen.)  
-  
-Das Schlüsselwort **ApplicationIntent** wird verwendet, um das schreibgeschützte Routing zu aktivieren.  
-  
-## <a name="read-only-routing"></a>Schreibgeschütztes Routing  
-Das schreibgeschützte Routing ist eine Funktion, die die Verfügbarkeit des schreibgeschützten Replikats einer Datenbank sicherstellen kann. So aktivieren Sie schreibgeschütztes Routing:  
-  
-1.  Stellen Sie eine Verbindung zum Verfügbarkeitsgruppenlistener einer AlwaysOn-Verfügbarkeitsgruppe her.  
-  
-2.  Das Verbindungszeichenfolge-Schlüsselwort **ApplicationIntent** - muss auf **ReadOnly**eingerichtet sein.  
-  
-3.  Der Datenbankadministrator muss die Verfügbarkeitsgruppe entsprechend konfigurieren, um schreibgeschütztes Routing zu aktivieren.  
-  
-Es ist möglich das mehrere Verbindungen die schreibgeschütztes Routing verwenden, mit verschiedenen schreibgeschützten Replikaten verbunden werden. Änderungen in der Datenbanksynchronisierung oder Änderungen in der Routingkonfiguration des Servers können zu Clientverbindungen mit anderen schreibgeschützten Replikaten führen. Sie gewährleisten, dass alle schreibgeschützten Anforderungen Verbindungen mit demselben schreibgeschützten Replikat herstellen, indem Sie keinen Verfügbarkeitsgruppenlistener an das **Server** -Verbindungsschlüsselwort übermitteln. Geben Sie stattdessen den Namen der schreibgeschützten Instanz an.  
-  
-Die Zeit bis zum Verbindungsaufbau ist beim schreibgeschützten Routing länger als beim Zugriff auf das primäre Replikat. Erhöhen Sie deshalb Ihr Anmeldetimout. Schreibgeschütztes Routing verbindet sich zunächst mit dem primären Replikat und sucht dann nach dem besten verfügbaren lesbaren sekundären Replikat.  
-  
+[!INCLUDE[specify-application-intent_read-only-routing](~/includes/paragraph-content/specify-application-intent-read-only-routing.md)]
+
+
 ## <a name="odbc-syntax"></a>ODBC-Syntax
 
 Zwei ODBC-Verbindungszeichenfolgen-Schlüsselwörter unterstützen [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]:  
@@ -128,4 +111,4 @@ Eine ODBC-Anwendung, verwendet [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)
 
 [Programmierrichtlinien](../../../connect/odbc/linux-mac/programming-guidelines.md)
 
-[Versionsanmerkungen](../../../connect/odbc/linux-mac/release-notes.md)  
+[Anmerkungen zu dieser Version](../../../connect/odbc/linux-mac/release-notes.md)  

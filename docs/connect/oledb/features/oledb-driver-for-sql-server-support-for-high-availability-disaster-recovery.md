@@ -2,7 +2,7 @@
 title: OLE DB-Treiber für SQL Server-Unterstützung für hohe Verfügbarkeit, Wiederherstellung im Notfall | Microsoft Docs
 description: OLE DB-Treiber für SQL Server-Unterstützung für hohe Verfügbarkeit, Wiederherstellung im Notfall
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 04/04/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
@@ -17,9 +17,9 @@ author: pmasl
 ms.author: Pedro.Lopes
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: c915af2ec748c4b2c15882c9a643c8e200442e98
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: HT
+ms.openlocfilehash: 1c23f1147b525ae35050ee47fe0c6278d03b3181
+ms.sourcegitcommit: 094c46e7fa6de44735ed0040c65a40ec3d951b75
+ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 04/06/2018
 ---
@@ -72,29 +72,11 @@ Ein Verbindungsfehler tritt auf, wenn die Verbindungsschlüsselwörter **MultiSu
 Wenn Sie ein upgrade einer OLE DB-Treiber für SQL Server-Anwendung, die derzeit verwendet der datenbankspiegelung zu einer multisubnetz-Szenario, entfernen Sie die **von Failover_Partner** Verbindungseigenschaft und ersetzen es durch  **MultiSubnetFailover** festgelegt **Ja** , und Ersetzen Sie den Servernamen in der Verbindungszeichenfolge mit einem Verfügbarkeitsgruppen-Listener. Wenn eine Verbindungszeichenfolge **Failover_Partner** und **MultiSubnetFailover=Yes**verwendet, generiert der Treiber einen Fehler. Wenn eine Verbindungszeichenfolge jedoch **Failover_Partner** und **MultiSubnetFailover=No** (oder **ApplicationIntent=ReadWrite**) verwendet, verwendet die Anwendung Datenbankspiegelung.  
   
 Der Treiber gibt einen Fehler zurück, wenn die Datenbankspiegelung in der primären Datenbank in der Verfügbarkeitsgruppe verwendet wird, und wenn **MultiSubnetFailover=Yes** in der Verbindungszeichenfolge verwendet wird, die statt mit einem Verfügbarkeitsgruppenlistener eine Verbindung mit einer primären Datenbank herstellt.  
-  
-## <a name="specifying-application-intent"></a>Angeben des Anwendungszwecks  
-Wenn **ApplicationIntent = ReadOnly**, fordert der Client eine lesearbeitslast aus, wenn eine Verbindung mit einer Always On aktiviert-Datenbank herstellen. Der Server erzwingt den Zweck zur Verbindungszeit und während einer `USE` database-Anweisung jedoch nur an eine Datenbank Always On aktiviert.  
-  
-Das **ApplicationIntent** -Schlüsselwort funktioniert nicht mit schreibgeschützten Legacy-Datenbanken.  
-  
-Eine Datenbank kann gestattet oder verweigert lesearbeitslasten auf die gewünschte Always On-Datenbank. (Hierzu wird die **ALLOW_CONNECTIONS**Klausel der **PRIMARY_ROLE** und der **SECONDARY_ROLE**[!INCLUDE[tsql](../../../includes/tsql-md.md)]-Anweisung verwendet.)  
-  
-Das **ApplicationIntent** -Schlüsselwort wird verwendet, um schreibgeschütztes Routing zu aktivieren.  
-  
-## <a name="read-only-routing"></a>Schreibgeschütztes Routing  
-Das schreibgeschützte Routing ist eine Funktion, die die Verfügbarkeit des schreibgeschützten Replikats einer Datenbank sicherstellen kann. So aktivieren Sie schreibgeschütztes Routing:  
-  
-1.  Sie müssen eine Verbindung zum Verfügbarkeitsgruppenlistener einer AlwaysOn-Verfügbarkeitsgruppe herstellen.  
-  
-2.  Das Schlüsselwort der **ApplicationIntent** -Verbindungszeichenfolge muss auf **ReadOnly**festgelegt werden.  
-  
-3.  Die AlwaysOn-Verfügbarkeitsgruppe muss vom Datenbankadministrator So aktivieren Sie schreibgeschütztes routing konfiguriert werden.  
-  
-Möglicherweise werden bei mehreren Verbindungen mithilfe von schreibgeschütztem Routing nicht alle mit demselben schreibgeschützten Replikat verbunden. Änderungen in der Datenbanksynchronisierung oder Änderungen in der Routingkonfiguration des Servers können zu Clientverbindungen mit anderen schreibgeschützten Replikaten führen. Um sicherzustellen, dass alle schreibgeschützten Anforderungen mit demselben schreibgeschützten Replikat herstellen, übergeben Sie einen Listener AlwaysOn-Verfügbarkeitsgruppe die **Server** Verbindungszeichenfolgen-Schlüsselwort. Geben Sie stattdessen den Namen der schreibgeschützten Instanz an.  
-  
-Das schreibgeschützte Routing kann länger als das Herstellen einer Verbindung mit dem primären Objekt dauern, da beim schreibgeschützten Routing zunächst eine Verbindung mit dem primären Objekt hergestellt und anschließend nach dem verfügbaren am besten lesbaren sekundären Objekt gesucht wird. Deswegen sollten Sie das Anmeldetimeout vergrößern.  
-  
+
+
+[!INCLUDE[specify-application-intent_read-only-routing](~/includes/paragraph-content/specify-application-intent-read-only-routing.md)]
+
+
 ## <a name="ole-db"></a>OLE DB  
 Der OLE DB-Treiber für SQL Server unterstützt sowohl die **ApplicationIntent** und **MultiSubnetFailover** Schlüsselwörter.   
   

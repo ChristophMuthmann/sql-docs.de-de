@@ -1,27 +1,28 @@
 ---
-title: "JDBC Driver-Unterstützung für hohe Verfügbarkeit, Wiederherstellung im Notfall | Microsoft Docs"
-ms.custom: 
-ms.date: 01/19/2017
+title: JDBC Driver-Unterstützung für hohe Verfügbarkeit, Wiederherstellung im Notfall | Microsoft Docs
+ms.custom: ''
+ms.date: 04/04/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 62de4be6-b027-427d-a7e5-352960e42877
-caps.latest.revision: "40"
+caps.latest.revision: 40
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 621f31fbeddee6ec3705396b5d049f5496f4ae04
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 1e41503e9b319d1e4372d93d835c4791563fd2da
+ms.sourcegitcommit: 094c46e7fa6de44735ed0040c65a40ec3d951b75
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="jdbc-driver-support-for-high-availability-disaster-recovery"></a>JDBC Driver-Unterstützung für hohe Verfügbarkeit, Notfallwiederherstellung
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -63,7 +64,7 @@ Wenn Sie Microsoft JDBC Driver 4.2 (oder niedriger) für SQL Server und **MultiS
   
  Angeben von **MultiSubnetFailover = True** beim Herstellen einer Verbindung auf einen anderen Wert als einem verfügbarkeitsgruppenlistener oder einer Failover-Clusterinstanz möglicherweise verminderter Leistung und wird nicht unterstützt.  
   
- Wenn der Sicherheits-Manager nicht installiert ist, werden virtuelle IP-Adressen (VIPs) von der Java Virtual Machine für einen begrenzten Zeitraum zwischengespeichert. Die jeweilige Dauer wird durch Ihre JDK-Implementierung und die Java-Eigenschaften networkaddress.cache.ttl und networkaddress.cache.negative.ttl bestimmt. Wenn der JDK-Sicherheits-Manager installiert ist, werden VIPs von der Java Virtual Machine zwischengespeichert, und der Cache wird standardmäßig nicht aktualisiert. Es empfiehlt sich die Gültigkeitsdauer, d. h. "time-to-live" (networkaddress.cache.ttl), für den Cache der Java Virtual Machine auf einen Tag festzulegen. Wenn Sie den Standardwert nicht auf einen Tag oder eine ähnliche Einstellung festlegen, wird der alte Wert beim Hinzufügen oder Aktualisieren einer VIP nicht aus dem Java Virtual Machine-Cache gelöscht. Weitere Informationen zu networkaddress.cache.ttl und networkaddress.cache.negative.ttl, finden Sie unter [http://download.oracle.com/javase/6/docs/technotes/guides/net/properties.html](http://download.oracle.com/javase/6/docs/technotes/guides/net/properties.html).  
+ Wenn der Sicherheits-Manager nicht installiert ist, werden virtuelle IP-Adressen (VIPs) von der Java Virtual Machine für einen begrenzten Zeitraum zwischengespeichert. Die jeweilige Dauer wird durch Ihre JDK-Implementierung und die Java-Eigenschaften networkaddress.cache.ttl und networkaddress.cache.negative.ttl bestimmt. Wenn der JDK-Sicherheits-Manager installiert ist, werden VIPs von der Java Virtual Machine zwischengespeichert, und der Cache wird standardmäßig nicht aktualisiert. Es empfiehlt sich die Gültigkeitsdauer, d. h. "time-to-live" (networkaddress.cache.ttl), für den Cache der Java Virtual Machine auf einen Tag festzulegen. Wenn Sie den Standardwert nicht auf einen Tag oder eine ähnliche Einstellung festlegen, wird der alte Wert beim Hinzufügen oder Aktualisieren einer VIP nicht aus dem Java Virtual Machine-Cache gelöscht. Weitere Informationen zu networkaddress.cache.ttl und networkaddress.cache.negative.ttl, finden Sie unter [ http://download.oracle.com/javase/6/docs/technotes/guides/net/properties.html ](http://download.oracle.com/javase/6/docs/technotes/guides/net/properties.html).  
   
  Befolgen Sie beim Herstellen einer Verbindung mit einem Server in einer Verfügbarkeitsgruppe oder einer Failoverclusterinstanz die folgenden Richtlinien:  
   
@@ -93,29 +94,11 @@ Wenn Sie Microsoft JDBC Driver 4.2 (oder niedriger) für SQL Server und **MultiS
  Wenn Sie ein upgrade einer [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] Anwendung, die derzeit die datenbankspiegelung zu einem multisubnetz-Szenario verwendet, sollten Sie entfernen die **FailoverPartner** Verbindungseigenschaft und ersetzen es durch **MultiSubnetFailover**  festgelegt **"true"** und den Servernamen in der Verbindungszeichenfolge mit einem verfügbarkeitsgruppenlistener ersetzen. Wenn eine Verbindungszeichenfolge verwendet **FailoverPartner** und **MultiSubnetFailover = True**, generiert der Treiber einen Fehler. Jedoch, wenn eine Verbindungszeichenfolge verwendet **FailoverPartner** und **MultiSubnetFailover = "false"** (oder **ApplicationIntent = ReadWrite**), die Anwendung wird die Datenbank verwenden die Spiegelung.  
   
  Der Treiber einen Fehler zurück, wenn die datenbankspiegelung auf der primären Datenbank in der Verfügbarkeitsgruppe verwendet wird, und wenn **MultiSubnetFailover = True** wird verwendet, in der Verbindungszeichenfolge die Herstellung einer primären Datenbank nicht zu einer verfügbarkeitsgruppe der Listener.  
-  
-## <a name="specifying-application-intent"></a>Angeben des Anwendungszwecks  
- Wenn **ApplicationIntent = ReadOnly**, fordert der Client eine schreibgeschützte Arbeitslast aus, wenn eine Verbindung mit einer AlwaysOn-Datenbank herstellen. Der Server erzwingt den Zweck zur Verbindungszeit und während einer USE-Datenbankanweisung, jedoch lediglich für eine AlwaysOn-fähige Datenbank.  
-  
- Die **ApplicationIntent** -Schlüsselwort funktioniert nicht mit älteren und schreibgeschützte Datenbanken.  
-  
- Eine Datenbank kann Lesearbeitslasten auf der AlwaysOn-Zieldatenbank zulassen bzw. nicht zulassen. (Hierzu wird die **ALLOW_CONNECTIONS**Klausel der **PRIMARY_ROLE** und der **SECONDARY_ROLE**[!INCLUDE[tsql](../../includes/tsql_md.md)]-Anweisung verwendet.)  
-  
- Die **ApplicationIntent** Schlüsselwort wird verwendet, um schreibgeschütztes routing zu aktivieren.  
-  
-## <a name="read-only-routing"></a>Schreibgeschütztes Routing  
- Das schreibgeschützte Routing ist eine Funktion, die die Verfügbarkeit des schreibgeschützten Replikats einer Datenbank sicherstellen kann. So aktivieren Sie schreibgeschütztes Routing:  
-  
-1.  Sie müssen eine Verbindung mit dem Verfügbarkeitsgruppen-Listener einer AlwaysOn-Verfügbarkeitsgruppe herstellen.  
-  
-2.  Die **ApplicationIntent** -Schlüsselwort der Verbindungszeichenfolge muss festgelegt werden, um **ReadOnly**.  
-  
-3.  Die Verfügbarkeitsgruppe muss vom Datenbankadministrator konfiguriert werden, um schreibgeschütztes Routing zu aktivieren.  
-  
- Möglicherweise werden bei mehreren Verbindungen mithilfe von schreibgeschütztem Routing nicht alle mit demselben schreibgeschützten Replikat verbunden. Änderungen in der Datenbanksynchronisierung oder Änderungen in der Routingkonfiguration des Servers können zu Clientverbindungen mit anderen schreibgeschützten Replikaten führen. Um sicherzustellen, dass alle schreibgeschützten Anforderungen mit demselben schreibgeschützten Replikat herstellen, übergeben Sie einen verfügbarkeitsgruppenlistener oder die virtuelle IP-Adresse der **ServerName** Verbindungszeichenfolgen-Schlüsselwort. Geben Sie stattdessen den Namen der schreibgeschützten Instanz an.  
-  
- Das schreibgeschützte Routing kann länger als das Herstellen einer Verbindung mit dem primären Objekt dauern, da beim schreibgeschützten Routing zunächst eine Verbindung mit dem primären Objekt hergestellt und anschließend nach dem verfügbaren am besten lesbaren sekundären Objekt gesucht wird. Deswegen sollten Sie das Anmeldetimeout vergrößern.  
-  
+
+
+[!INCLUDE[specify-application-intent_read-only-routing](~/includes/paragraph-content/specify-application-intent-read-only-routing.md)]
+
+
 ## <a name="new-methods-supporting-multisubnetfailover-and-applicationintent"></a>Neue Methoden, die multiSubnetFailover und applicationIntent unterstützen  
  Die folgenden Methoden ermöglichen den programmgesteuerten Zugriff auf die **MultiSubnetFailover**, **ApplicationIntent** und **TransparentNetworkIPResolution** Verbindungszeichenfolge Schlüsselwörter:  
   
@@ -136,7 +119,7 @@ Wenn Sie Microsoft JDBC Driver 4.2 (oder niedriger) für SQL Server und **MultiS
  Die **GetMultiSubnetFailover**, **SetMultiSubnetFailover**, **GetApplicationIntent**, **SetApplicationIntent**, **GetTransparentNetworkIPResolution** und **SetTransparentNetworkIPResolution** Methoden werden auch hinzugefügt [SQLServerDataSource-Klasse](../../connect/jdbc/reference/sqlserverdatasource-class.md), [ SQLServerConnectionPoolDataSource-Klasse](../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md), und [SQLServerXADataSource-Klasse](../../connect/jdbc/reference/sqlserverxadatasource-class.md).  
   
 ## <a name="ssl-certificate-validation"></a>Überprüfung des SSL-Zertifikats  
- Eine Verfügbarkeitsgruppe besteht aus mehreren physischen Servern. [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)]zusätzliche Unterstützung für **alternativen Antragstellernamen** in SSL-Zertifikaten, sodass mehrere Hosts das gleiche Zertifikat zugeordnet werden können. Weitere Informationen zu SSL finden Sie unter [Grundlegendes zur SSL-Unterstützung](../../connect/jdbc/understanding-ssl-support.md).  
+ Eine Verfügbarkeitsgruppe besteht aus mehreren physischen Servern. [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] zusätzliche Unterstützung für **alternativen Antragstellernamen** in SSL-Zertifikaten, sodass mehrere Hosts das gleiche Zertifikat zugeordnet werden können. Weitere Informationen zu SSL finden Sie unter [Grundlegendes zur SSL-Unterstützung](../../connect/jdbc/understanding-ssl-support.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Herstellen einer Verbindung mit SQLServer mit der JDBC-Treiber](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)   

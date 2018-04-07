@@ -1,29 +1,29 @@
 ---
-title: "Übersicht über | Microsoft Docs"
+title: Übersicht über | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
-ms.service: 
+ms.service: ''
 ms.component: samples
 ms.technology:
 - samples
-ms.custom: 
+ms.custom: ''
 ms.date: 01/30/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 4d4dcb00-b93e-44db-9d67-061702bba41a
-caps.latest.revision: 
+caps.latest.revision: 3
 author: BarbKess
 ms.author: barbkess
 manager: craigg
 robots: noindex,nofollow
 ms.workload: On Demand
 ms.openlocfilehash: f4d22aada117e3230e36aa52e911f31eea53439e
-ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
+ms.sourcegitcommit: 094c46e7fa6de44735ed0040c65a40ec3d951b75
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/07/2018
 ---
 # <a name="wide-world-importers-overview"></a>Übersicht über die Wide World Importers
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

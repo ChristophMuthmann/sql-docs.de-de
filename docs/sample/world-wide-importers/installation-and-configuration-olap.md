@@ -2,28 +2,28 @@
 title: Installation und Konfiguration | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
-ms.service: 
+ms.service: ''
 ms.component: samples
 ms.technology:
 - samples
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d07ffb9a-ac4f-4295-9aeb-ecfb97600134
-caps.latest.revision: 
+caps.latest.revision: 3
 author: BarbKess
 ms.author: barbkess
 manager: craigg
 robots: noindex,nofollow
 ms.workload: On Demand
 ms.openlocfilehash: a4d1f7c55112efe127e2435d84fc1efadd954495
-ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
+ms.sourcegitcommit: 094c46e7fa6de44735ed0040c65a40ec3d951b75
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/07/2018
 ---
 # <a name="wideworldimportersdw-installation-and-configuration"></a>WideWorldImportersDW Installation und Konfiguration
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

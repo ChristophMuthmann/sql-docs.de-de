@@ -1,28 +1,28 @@
 ---
-title: "Beispiele für Microsoft SQL Server | Microsoft Docs"
-ms.custom: 
+title: Beispiele für Microsoft SQL Server | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
-ms.service: 
+ms.service: ''
 ms.component: samples
-ms.technology: 
+ms.technology: ''
 ms.topic: article
 ms.assetid: d67e31d0-49fb-40d3-b340-95c1fe00957f
-caps.latest.revision: 
+caps.latest.revision: 3
 author: BarbKess
 ms.author: barbkess
 manager: craigg
 robots: noindex,nofollow
 ms.workload: On Demand
 ms.openlocfilehash: 956488f4edf46c21441cebaf5f7019d8ac3b4446
-ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
+ms.sourcegitcommit: 094c46e7fa6de44735ed0040c65a40ec3d951b75
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/07/2018
 ---
 # <a name="microsoft-sql-server-samples"></a>Microsoft SQL Server-Beispiele
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
