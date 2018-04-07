@@ -1,15 +1,16 @@
 ---
-title: "Verwalten von Kennwörtern (MySQLToSQL) | Microsoft Docs"
+title: Verwalten von Kennwörtern (MySQLToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-mysql
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - Password management, importing or exporting encrypted password
 - Password management, securing password
 ms.assetid: 4ffbc587-ea3f-49ad-bc42-a654f672325e
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 95ef6e3271cb4374a5df35427f8a681f0eaa04ce
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 4592eba9b40be32498f57f26a202dada2d48151e
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="managing-passwords-mysqltosql"></a>Verwalten von Kennwörtern (MySQLToSQL)
 In diesem Abschnitt wird zum Schützen von Datenbankkennwörter und das Verfahren zum Importieren oder exportieren Sie sie über Server:  
@@ -45,7 +46,7 @@ Geben Sie ein gültiges Kennwort ein, die mit einer der drei folgenden Methoden:
   
 1.  **Klartext:** Geben Sie das Datenbankkennwort, in der Value-Attribut des Knotens "Kennwort". Finden sie unter dem Serverknoten der Definition im Abschnitt "Server" des Server-Verbindungsdatei oder Skriptdatei.  
   
-    Kennwörter in Klartext sind nicht sicher. Aus diesem Grund tritt die folgende Warnmeldung in der Konsolenausgabe: *"Server &lt;Server-Id&gt; Kennwort wird in Klartext unsicher, SSMA-Konsolenanwendung bietet eine Option aus, um das Kennwort durch Verschlüsselung zu schützen, finden Sie die Option" – Securepassword "in SSMA-Hilfedatei für Weitere Informationen."*  
+    Kennwörter in Klartext sind nicht sicher. Aus diesem Grund tritt die folgende Warnmeldung in der Konsolenausgabe: *"Server &lt;Server-Id&gt; Kennwort wird in Klartext unsicher, SSMA-Konsolenanwendung eine Option zum Schutz bietet der das Kennwort durch Verschlüsselung, finden Sie – Securepassword Option in SSMA-Hilfedatei für Weitere Informationen."*  
   
     **Verschlüsselte Kennwörter:** das angegebene Kennwort ist in diesem Fall in verschlüsselter Form auf dem lokalen Computer im ProtectedStorage.ssma gespeichert.  
   

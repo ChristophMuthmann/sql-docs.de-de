@@ -2,29 +2,30 @@
 title: Projekteinstellungen (Migration) (DB2ToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-db2
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 48aaa8e6-a9cb-487d-9ba5-fc3f1c4786ae
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bf47fee6992ec74ca331972e711be931d4dfb34e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 5d143857c00815a8d219b5add7b3281cf982723d
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="project-settings-migration-db2tosql"></a>Projekteinstellungen (Migration) (DB2ToSQL)
 Die Seite "Migration", der die **Projekteinstellungen** Dialogfeld enthält Einstellungen, anpassen, wie Daten von SSMA von DB2 nach migriert [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
@@ -57,7 +58,7 @@ Der Bereich für die Migration in beiden verfügbar ist die **Projekteinstellung
 |**NULL-Werte beibehalten**|Gibt an, ob SSMA behält null-Werte in den Quelldaten aus, wenn Daten mit SQL Server, unabhängig von den Standardwerten hinzugefügt, die in SQL Server angegeben werden.<br /><br />**Standardmodus**: "true"<br /><br />**Vollständige**: "true"<br /><br />**Vollständige Modus**: "true"|  
 |**Markieren Sie die Zeichenfolge Entfernungsvorgang mit Fehler**|Wenn die Größe der Zielspalte kleiner als der Länge der Zeichenfolge ist, wird der Wert gekürzt und markiert als Fehler.<br /><br />**Standardmodus**: Ja<br /><br />**Vollständige**: Ja<br /><br />**Vollständige Modus**: Ja|  
 |**On Error**|Die Datenmigration beendet, wenn ein Fehler auftritt. Es gibt drei Optionen:<br /><br />**Beenden Sie die Migration:** Datenmigration beendet<br /><br />**Fahren Sie mit der nächsten Tabelle:** beendet die Datenmigration für die aktuelle Tabelle und geht zum nächsten Endpunkt<br /><br />**Fahren Sie mit der nächsten Batch:** Migration von Daten zu den aktuellen Batch beendet und geht zum nächsten Endpunkt<br /><br />**Standardmodus**: fahren Sie mit den nächsten Batch<br /><br />**Vollständige**: fahren Sie mit den nächsten Batch<br /><br />**Vollständige Modus**: fahren Sie mit den nächsten Batch|  
-|**Ersetzen von nicht unterstützten Datumsangaben**|Gibt an, ob SSMA Datumsangaben Beseitigung zuständig, die älter als die früheste sind [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] **"DateTime"** Datum (01 Januar 1753).<br /><br />Um die Werte aktuell zu halten, wählen Sie **nichts**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]Datumsangaben vor 01 Januar 1753 wird in einer Datetime-Spalte nicht akzeptiert werden. Wenn Sie ältere Daten verwenden, müssen Sie die Datums-/ Uhrzeitwerten in Zeichenwerten konvertieren.<br /><br />Wählen Sie zum Konvertieren von Datumsangaben vor 01 Januar 1753 auf NULL **durch NULL Ersetzen**.<br /><br />Wählen Sie zum Ersetzen von Datumsangaben vor 01 Januar 1753 durch eine unterstützte Datum **am nächsten unterstützte Datum ersetzt**.<br /><br />**Standardmodus**: Unternehmen Sie nichts<br /><br />**Vollständige**: Unternehmen Sie nichts<br /><br />**Vollständige Modus**: nächste unterstützte Datum ersetzt|  
+|**Ersetzen von nicht unterstützten Datumsangaben**|Gibt an, ob SSMA Datumsangaben Beseitigung zuständig, die älter als die früheste sind [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] **"DateTime"** Datum (01 Januar 1753).<br /><br />Um die Werte aktuell zu halten, wählen Sie **nichts**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Datumsangaben vor 01 Januar 1753 wird in einer Datetime-Spalte nicht akzeptiert werden. Wenn Sie ältere Daten verwenden, müssen Sie die Datums-/ Uhrzeitwerten in Zeichenwerten konvertieren.<br /><br />Wählen Sie zum Konvertieren von Datumsangaben vor 01 Januar 1753 auf NULL **durch NULL Ersetzen**.<br /><br />Wählen Sie zum Ersetzen von Datumsangaben vor 01 Januar 1753 durch eine unterstützte Datum **am nächsten unterstützte Datum ersetzt**.<br /><br />**Standardmodus**: Unternehmen Sie nichts<br /><br />**Vollständige**: Unternehmen Sie nichts<br /><br />**Vollständige Modus**: nächste unterstützte Datum ersetzt|  
 |**Tabellensperre**|Gibt an, ob SSMA Tabellen sperrt, wenn sie Daten während der Datenmigration für Tabellen hinzufügt. Ruft eine Massenaktualisierungssperre für die Dauer des Massenkopiervorgangs ab. Wenn der Wert "false" ist, wird eine Sperre auf Zeilenebene festgelegt.<br /><br />**Standardmodus**: "true"<br /><br />**Vollständige**: "true"<br /><br />**Vollständige Modus**: "true"|  
   
 ## <a name="parallel-data-migration"></a>Parallele Datenmigration  

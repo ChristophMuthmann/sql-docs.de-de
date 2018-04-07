@@ -2,29 +2,30 @@
 title: Projekteinstellungen (Azure SQL-Datenbank) (MySQLToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-mysql
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 8c06420a-533b-4de0-948d-a0c6b368c544
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a71ecfe91f04e45382ac6ab9f1ec3aa18dd64d04
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 46dfaa1f7b35f87d13fc3a88fb00d6a26a1cf27f
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="project-settings-azure-sql-db-mysqltosql"></a>Projekteinstellungen (Azure SQL-Datenbank) (MySQLToSQL)
 Die Einstellungen der SQL Azure-Projekt können Sie konfigurieren das Suffix des SQL Azure-Datenbank auch können taktmechanismus in Verbindung mit SQL Azure implementieren und klicken Sie im Dialogfeld "Verbindung" hinzugefügt werden.  
@@ -35,9 +36,9 @@ Im Bereich SQL Azure finden Sie in der **Projekteinstellungen** und **Projekt St
   
 -   Verwenden Sie das Dialogfeld Projekt Standardeinstellungen, um Konfigurationsoptionen für alle Projekte festzulegen. Zum Zugriff auf die SQL Azure-Einstellungen in der **Tools** klicken Sie im Menü **DefaultProject Einstellungen**, wählen Sie die Migration Projekttyp als SQL Azure aus **Migration Zielversion** Dropdown-Liste die Einstellungen in SQL Azure-Bereich zuzugreifen, klicken Sie auf **allgemeine** am unteren Rand des linken Bereich, und klicken Sie dann wählen **SQL Azure**.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>enthalten  
   
-## <a name="connectivity"></a>Connectivity  
+## <a name="connectivity"></a>Konnektivität  
 **Taktintervall**  
   
 Gibt ein Zeitintervall, das für taktmechanismus verwendet werden, um die Azure SQL-Verbindung in aufrechtzuerhalten "Minuten: Sekunden-Format.  

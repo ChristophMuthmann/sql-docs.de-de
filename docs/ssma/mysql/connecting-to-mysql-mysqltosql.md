@@ -2,14 +2,15 @@
 title: Herstellen einer Verbindung mit MySQL (MySQLToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-mysql
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - Connecting to MySQL, MySQL permission
 - Connecting to MySQL,reconnecting
 ms.assetid: 084c7020-f729-4f91-90e0-143f85fa68d1
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 291f10d4f045747266297287903ba4cf900c09c5
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 5b36b626d611896a5af496a0ae02d25dcf44ac83
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="connecting-to-mysql-mysqltosql"></a>Herstellen einer Verbindung mit MySQL (MySQLToSQL)
 Um MySQL-Datenbanken zu SQL Server oder SQL Azure zu migrieren, müssen Sie mit der MySQL-Datenbank verbinden, die Sie migrieren möchten. Wenn Sie eine Verbindung herstellen, SSMA Ruft Metadaten über alle MySQL-Schemas ab, und anschließend in der MySQL-Metadaten-Explorer-Bereich angezeigt. SSMA speichert Informationen über den Datenbankserver, aber die Kennwörter werden nicht gespeichert.  
@@ -90,7 +91,7 @@ Wenn Sie eine Verbindung mit einer Datenbank herstellen, SSMA liest die Datenban
     > -   Die **OK** Schaltfläche ist aktiviert, wenn die erforderliche Informationen angegeben wurden. Wenn die Dateipfade ungültig sind, bleiben die Schaltfläche "OK" wird deaktiviert.  
     > -   Die **"Abbrechen"** Schaltfläche wird das Dialogfeld geschlossen und **deaktiviert** die Option "SSL" aus der Verbindung Hauptformular.  
   
-7.  Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit MySQL &#40; MySQLToSQL &#41;](../../ssma/mysql/connect-to-mysql-mysqltosql.md)  
+7.  Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/connect-to-mysql-mysqltosql.md)  
   
 ## <a name="reconnecting-to-mysql"></a>Erneutes Herstellen einer Verbindung mit MySQL  
 Die Verbindung mit dem Datenbankserver bleibt aktiv, bis Sie das Projekt schließen. Wenn Sie das Projekt erneut öffnen, müssen Sie neu, wenn eine aktive Verbindung mit der Datenbank verwendet werden soll. Sie können offline arbeiten, bis Sie die Metadaten zu aktualisieren, laden Datenbankobjekte in SQL Server oder SQL Azure und Daten migrieren möchten.  
@@ -121,8 +122,8 @@ Metadaten für die MySQL-Datenbank wird nicht automatisch aktualisiert. Die Meta
 5.  Klicken Sie auf **OK**.  
   
 ## <a name="next-step"></a>Nächster Schritt  
-Der nächste Schritt des Migrationsvorgangs besteht [Herstellen einer Verbindung mit SQL Server &#40; MySQLToSQL &#41;](../../ssma/mysql/connecting-to-sql-server-mysqltosql.md)  
+Der nächste Schritt des Migrationsvorgangs besteht [Herstellen einer Verbindung mit SQL Server &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-sql-server-mysqltosql.md)  
   
 ## <a name="see-also"></a>Siehe auch  
-[Migrieren von MySQL-Datenbanken zu SQLServer – Azure SQL-Datenbank &#40; MySQLToSql &#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
+[Migrieren von MySQL-Datenbanken zu SQLServer – Azure SQL-Datenbank &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   

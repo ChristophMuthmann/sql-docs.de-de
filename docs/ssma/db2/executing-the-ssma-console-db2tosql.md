@@ -1,30 +1,31 @@
 ---
-title: "Ausführen der Konsole SSMA (DB2ToSQL) | Microsoft Docs"
+title: Ausführen der Konsole SSMA (DB2ToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-db2
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: ce63f633-067d-4f04-b8e9-e1abd7ec740b
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 55415d575aac34cdee2ed2acdb8c9ceaade6465c
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f491f5afc0beea80943e976c64785afba200ad7c
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="executing-the-ssma-console-db2tosql"></a>Ausführen der Konsole SSMA (DB2ToSQL)
 Microsoft stellt Ihnen Dateibefehle auszuführen und zu steuern SSMA Aktivitäten eine Reihe robuster Skript. In den folgenden Abschnitten ausführlich identisch. Die Konsolenanwendung verwendet bestimmte Standardskripts Dateibefehle als aufgezählte in diesem Abschnitt.  
@@ -40,11 +41,11 @@ Erstellt ein neues SSMA-Projekt.
   
 **Skript**  
   
--   `project-folder`Gibt den Ordner, der das erste erstellte Projekt an.  
+-   `project-folder` Gibt den Ordner, der das erste erstellte Projekt an.  
   
--   `project-name`Gibt den Namen des Projekts an. {String}  
+-   `project-name` Gibt den Namen des Projekts an. {string}  
   
--   `overwrite-if-exists`Optionales Attribut gibt an, ob ein vorhandenes Projekt überschrieben werden soll. {Boolean}  
+-   `overwrite-if-exists`Optionales Attribut gibt an, ob ein vorhandenes Projekt überschrieben werden soll. {boolean}  
   
 -   `project-type:`Optionales Attribut. Gibt den Projekttyp z. B. "Sql Server 2005" Projekt oder "Sql Server 2008" Project oder Project "Sql Server 2012" oder "Sql Server 2014" Projekt oder "Sql Azure". Der Standardwert ist "Sql Server 2014".  
   
@@ -75,9 +76,9 @@ Open-Projekt
   
 **Skript**  
   
--   `project-folder`Gibt den Ordner, der das erste erstellte Projekt an. Der Befehl schlägt fehl, wenn der angegebene Ordner nicht vorhanden ist.  {String}  
+-   `project-folder` Gibt den Ordner, der das erste erstellte Projekt an. Der Befehl schlägt fehl, wenn der angegebene Ordner nicht vorhanden ist.  {string}  
   
--   `project-name`Gibt den Namen des Projekts an. Der Befehl schlägt fehl, wenn das angegebene Projekt nicht vorhanden ist.  {String}  
+-   `project-name` Gibt den Namen des Projekts an. Der Befehl schlägt fehl, wenn das angegebene Projekt nicht vorhanden ist.  {string}  
   
 **Syntaxbeispiel:**  
   
@@ -128,11 +129,11 @@ Die Verbindung mit Datenbank-Befehle können mit der Datenbank herstellen.
   
 -   Die **Durchsuchen** Features der Benutzeroberfläche wird in der Konsole nicht unterstützt.  
   
--   Weitere Informationen zu "Skriptdateien erstellen", finden Sie unter [Skriptdateien erstellen &#40; OracleToSQL &#41;](../../ssma/oracle/creating-script-files-oracletosql.md).  
+-   Weitere Informationen zu "Skriptdateien erstellen", finden Sie unter [Skriptdateien erstellen &#40;OracleToSQL&#41;](../../ssma/oracle/creating-script-files-oracletosql.md).  
   
 **Befehl**  
   
-Verbinden-Quelldatenbank  
+connect-source-database  
   
 -   Führt die Verbindung mit der Quelldatenbank und lädt hohe Ebene Metadaten von der Quelldatenbank, aber nicht alle Metadaten.  
   
@@ -149,7 +150,7 @@ Das Name-Attribut für jede Verbindung im Server-Abschnitt des Server-Verbindung
 ```  
 **Befehl**  
   
-Force-Load-/ Ziel-Quelldatenbank  
+force-load-source/target-database  
   
 -   Lädt die Quellmetadaten an.  
   
@@ -179,7 +180,7 @@ oder
 ```  
 **Befehl**  
   
-Schließen Sie Quelldatenbank  
+reconnect-source-database  
   
 -   Verbindung mit der Quelldatenbank, aber keine Metadaten im Gegensatz zu den Befehl Connect Quelldatenbank wird nicht geladen.  
   
@@ -194,7 +195,7 @@ Schließen Sie Quelldatenbank
 ```  
 **Befehl**  
   
-Verbinden-Zieldatenbank  
+connect-target-database  
   
 -   Eine Verbindung mit SQL Server-Zieldatenbank her und lädt vollständig hohe Ebene Metadaten der Zieldatenbank, aber nicht die Metadaten.  
   
@@ -211,7 +212,7 @@ Das Name-Attribut für jede Verbindung im Server-Abschnitt des Server-Verbindung
 ```  
 **Befehl**  
   
-Schließen Sie Zieldatenbank  
+reconnect-target-database  
   
 -   Erneut mit der Zieldatenbank, aber keine Metadaten, im Gegensatz zu den Befehl Connect der Zieldatenbank wird nicht geladen.  
   
@@ -240,25 +241,25 @@ Generieren von Bewertungsbericht
   
 **Skript**  
   
--   `conversion-report-folder:`Gibt an, Ordner, in dem Bericht die Beurteilung kann gespeichert werden soll. (optionales Attribut)  
+-   `conversion-report-folder:` Gibt an, Ordner, in dem Bericht die Beurteilung kann gespeichert werden soll. (optionales Attribut)  
   
--   `object-name:`Gibt an, die Objekte, die zur Bewertung berichterstellung (es kann Indivdual Objektnamen oder einen Gruppennamen für das Objekt besitzen) betrachtet.  
+-   `object-name:` Gibt an, die Objekte, die zur Bewertung berichterstellung (es kann Indivdual Objektnamen oder einen Gruppennamen für das Objekt besitzen) betrachtet.  
   
--   `object-type:`Gibt den Typ des Objekts im Objekt-Name-Attribut angegeben ist (wenn Objektkategorie angegeben wird, dann Objekttyp "Category").  
+-   `object-type:` Gibt den Typ des Objekts im Objekt-Name-Attribut angegeben ist (wenn Objektkategorie angegeben wird, dann Objekttyp "Category").  
   
--   `conversion-report-overwrite:`Gibt an, ob die Berichtsordner Assessment zu überschreiben, wenn sie bereits vorhanden ist.  
+-   `conversion-report-overwrite:` Gibt an, ob die Berichtsordner Assessment zu überschreiben, wenn sie bereits vorhanden ist.  
   
     **Standardwert:** "false". (optionales Attribut)  
   
--   `write-summary-report-to:`Gibt den Pfad, in dem der zusammenfassende Bericht generiert wird.  
+-   `write-summary-report-to:` Gibt den Pfad, in dem der zusammenfassende Bericht generiert wird.  
   
     Falls nur der Ordnerpfad angegeben wird, namentlich Datei **AssessmentReport&lt;n&gt;. XML** wird erstellt. (optionales Attribut)  
   
     Erstellen des Berichts verfügt über zwei weitere Unterkategorien:  
   
-    -   `report-errors`(= "wahr/falsch", Standardwert "false" (optionale Attribute))  
+    -   `report-errors` (= "wahr/falsch", Standardwert "false" (optionale Attribute))  
   
-    -   `verbose`(= "wahr/falsch", Standardwert "false" (optionale Attribute))  
+    -   `verbose` (= "wahr/falsch", Standardwert "false" (optionale Attribute))  
   
 **Syntaxbeispiel:**  
   
@@ -304,7 +305,7 @@ Die Befehle für die Migration konvertieren das Schema der Zieldatenbank, die de
   
 **Befehl**  
   
-Convert-schema  
+convert-schema  
   
 -   Schemakonvertierung von der Quelle in das Zielschema durchgeführt.  
   
@@ -312,25 +313,25 @@ Convert-schema
   
 **Skript**  
   
--   `conversion-report-folder:`Gibt an, Ordner, in dem Bericht die Beurteilung kann gespeichert werden soll. (optionales Attribut)  
+-   `conversion-report-folder:` Gibt an, Ordner, in dem Bericht die Beurteilung kann gespeichert werden soll. (optionales Attribut)  
   
--   `object-name:`Gibt die Quelle-Objekte, die für das Konvertieren eines Schemas (es kann Indivdual Objektnamen oder einen Gruppennamen für das Objekt haben) in Betracht gezogen.  
+-   `object-name:` Gibt die Quelle-Objekte, die für das Konvertieren eines Schemas (es kann Indivdual Objektnamen oder einen Gruppennamen für das Objekt haben) in Betracht gezogen.  
   
--   `object-type:`Gibt den Typ des Objekts im Objekt-Name-Attribut angegeben ist (wenn Objektkategorie angegeben wird, dann Objekttyp "Category").  
+-   `object-type:` Gibt den Typ des Objekts im Objekt-Name-Attribut angegeben ist (wenn Objektkategorie angegeben wird, dann Objekttyp "Category").  
   
--   `conversion-report-overwrite:`Gibt an, ob die Berichtsordner Assessment zu überschreiben, wenn sie bereits vorhanden ist.  
+-   `conversion-report-overwrite:` Gibt an, ob die Berichtsordner Assessment zu überschreiben, wenn sie bereits vorhanden ist.  
   
     **Standardwert:** "false". (optionales Attribut)  
   
--   `write-summary-report-to:`Gibt den Pfad, in dem der zusammenfassende Bericht generiert wird.  
+-   `write-summary-report-to:` Gibt den Pfad, in dem der zusammenfassende Bericht generiert wird.  
   
     Falls nur der Ordnerpfad angegeben wird, namentlich Datei **SchemaConversionReport&lt;n&gt;. XML** wird erstellt. (optionales Attribut)  
   
     Erstellen des Berichts verfügt über zwei weitere Unterkategorien:  
   
-    -   `report-errors`(= "wahr/falsch", Standardwert "false" (optionale Attribute))  
+    -   `report-errors` (= "wahr/falsch", Standardwert "false" (optionale Attribute))  
   
-    -   `verbose`(= "wahr/falsch", Standardwert "false" (optionale Attribute))  
+    -   `verbose` (= "wahr/falsch", Standardwert "false" (optionale Attribute))  
   
 **Syntaxbeispiel:**  
   
@@ -374,25 +375,25 @@ Migrieren von Daten: migriert die Quelldaten zum Ziel.
   
 **Skript**  
   
--   `conversion-report-folder:`Gibt an, Ordner, in dem Bericht die Beurteilung kann gespeichert werden soll. (optionales Attribut)  
+-   `conversion-report-folder:` Gibt an, Ordner, in dem Bericht die Beurteilung kann gespeichert werden soll. (optionales Attribut)  
   
--   `object-name:`Gibt die Quelle-Objekte, die für die Migration in Betracht gezogen Daten (es kann haben Indivdual Objektnamen oder einen Gruppennamen-Objekt).  
+-   `object-name:` Gibt die Quelle-Objekte, die für die Migration in Betracht gezogen Daten (es kann haben Indivdual Objektnamen oder einen Gruppennamen-Objekt).  
   
--   `object-type:`Gibt den Typ des Objekts im Objekt-Name-Attribut angegeben ist (wenn Objektkategorie angegeben wird, dann Objekttyp "Category").  
+-   `object-type:` Gibt den Typ des Objekts im Objekt-Name-Attribut angegeben ist (wenn Objektkategorie angegeben wird, dann Objekttyp "Category").  
   
--   `conversion-report-overwrite:`Gibt an, ob die Berichtsordner Assessment zu überschreiben, wenn sie bereits vorhanden ist.  
+-   `conversion-report-overwrite:` Gibt an, ob die Berichtsordner Assessment zu überschreiben, wenn sie bereits vorhanden ist.  
   
     **Standardwert:** "false". (optionales Attribut)  
   
--   `write-summary-report-to:`Gibt den Pfad, in dem der zusammenfassende Bericht generiert wird.  
+-   `write-summary-report-to:` Gibt den Pfad, in dem der zusammenfassende Bericht generiert wird.  
   
     Falls nur der Ordnerpfad angegeben wird, namentlich Datei **DataMigrationReport&lt;n&gt;. XML** wird erstellt. (optionales Attribut)  
   
     Erstellen des Berichts verfügt über zwei weitere Unterkategorien:  
   
-    -   `report-errors`(= "wahr/falsch", Standardwert "false" (optionale Attribute))  
+    -   `report-errors` (= "wahr/falsch", Standardwert "false" (optionale Attribute))  
   
-    -   `verbose`(= "wahr/falsch", Standardwert "false" (optionale Attribute))  
+    -   `verbose` (= "wahr/falsch", Standardwert "false" (optionale Attribute))  
   
 **Syntaxbeispiel:**  
   
@@ -446,9 +447,9 @@ Schemazuordnung der Quelldatenbank mit dem Zielschema.
   
 **Skript**  
   
--   `source-schema`Gibt das Quellschema, das wir migrieren möchten.  
+-   `source-schema` Gibt das Quellschema, das wir migrieren möchten.  
   
--   `sql-server-schema`Gibt das Zielschema, in dem wir migriert werden soll.  
+-   `sql-server-schema` Gibt das Zielschema, in dem wir migriert werden soll.  
   
 **Syntaxbeispiel:**  
   
@@ -467,9 +468,9 @@ Schemazuordnung der Quelldatenbank mit dem Zielschema.
   
 **Skript**  
   
-`source-schema`Gibt das Quellschema, das wir migrieren möchten.  
+`source-schema` Gibt das Quellschema, das wir migrieren möchten.  
   
-`sql-server-schema`Gibt das Zielschema, in dem wir migriert werden soll.  
+`sql-server-schema` Gibt das Zielschema, in dem wir migriert werden soll.  
   
 **Syntaxbeispiel:**  
   
@@ -498,19 +499,19 @@ Synchronisieren von Ziel
   
 **Skript**  
   
--   `object-name:`Gibt an, die Ziel-Objekte, die für die Synchronisierung mit der Zieldatenbank (es kann Indivdual Objektnamen oder einen Gruppennamen für das Objekt besitzen) betrachtet.  
+-   `object-name:` Gibt an, die Ziel-Objekte, die für die Synchronisierung mit der Zieldatenbank (es kann Indivdual Objektnamen oder einen Gruppennamen für das Objekt besitzen) betrachtet.  
   
--   `object-type:`Gibt den Typ des Objekts im Objekt-Name-Attribut angegeben ist (wenn Objektkategorie angegeben wird, dann Objekttyp "Category").  
+-   `object-type:` Gibt den Typ des Objekts im Objekt-Name-Attribut angegeben ist (wenn Objektkategorie angegeben wird, dann Objekttyp "Category").  
   
--   `on-error:`Gibt an, ob die Synchronisierungsfehler als Warnungen oder Fehler angegeben. Verfügbare Optionen für auf Fehler:  
+-   `on-error:` Gibt an, ob die Synchronisierungsfehler als Warnungen oder Fehler angegeben. Verfügbare Optionen für auf Fehler:  
   
-    -   Bericht insgesamt als Warnung  
+    -   report-total-as-warning  
   
-    -   Bericht-each-als-Warnung  
+    -   report-each-as-warning  
   
-    -   Fail-Skript  
+    -   fail-script  
   
--   `report-errors-to:`Speicherort der Fehlerbericht angibt, für der Synchronisierungsvorgang (optionales Attribut), wenn nur Ordnerpfad angegeben ist, dann Datei namentlich **TargetSynchronizationReport.XML** wird erstellt.  
+-   `report-errors-to:` Speicherort der Fehlerbericht angibt, für der Synchronisierungsvorgang (optionales Attribut), wenn nur Ordnerpfad angegeben ist, dann Datei namentlich **TargetSynchronizationReport.XML** wird erstellt.  
   
 **Syntaxbeispiel:**  
   
@@ -553,7 +554,7 @@ oder
 ```  
 **Befehl**  
   
-Aktualisieren von Datenbank  
+refresh-from-database  
   
 -   Aktualisiert die Datenquelle Objekte aus der Datenbank.  
   
@@ -563,19 +564,19 @@ Aktualisieren von Datenbank
   
 Ist eine oder mehrere Metabase-Knoten als-Befehlszeilenparameter erforderlich.  
   
--   `object-name:`Gibt die Quelle-Objekte, die beim Aktualisieren von der Quelldatenbank (es kann Indivdual Objektnamen oder einen Gruppennamen für das Objekt haben) in Betracht gezogen.  
+-   `object-name:` Gibt die Quelle-Objekte, die beim Aktualisieren von der Quelldatenbank (es kann Indivdual Objektnamen oder einen Gruppennamen für das Objekt haben) in Betracht gezogen.  
   
--   `object-type:`Gibt den Typ des Objekts im Objekt-Name-Attribut angegeben ist (wenn Objektkategorie angegeben wird, dann Objekttyp "Category").  
+-   `object-type:` Gibt den Typ des Objekts im Objekt-Name-Attribut angegeben ist (wenn Objektkategorie angegeben wird, dann Objekttyp "Category").  
   
--   `on-error:`Gibt an, ob die Aktualisierung Fehler als Warnungen oder Fehler angegeben. Verfügbare Optionen für auf Fehler:  
+-   `on-error:` Gibt an, ob die Aktualisierung Fehler als Warnungen oder Fehler angegeben. Verfügbare Optionen für auf Fehler:  
   
-    -   Bericht insgesamt als Warnung  
+    -   report-total-as-warning  
   
-    -   Bericht-each-als-Warnung  
+    -   report-each-as-warning  
   
-    -   Fail-Skript  
+    -   fail-script  
   
--   `report-errors-to:`Speicherort der Fehlerbericht angibt, für der Aktualisierungsvorgang (optionales Attribut) Wenn nur Ordnerpfad angegeben ist, klicken Sie dann Datei namentlich **SourceDBRefreshReport.XML** wird erstellt.  
+-   `report-errors-to:` Speicherort der Fehlerbericht angibt, für der Aktualisierungsvorgang (optionales Attribut) Wenn nur Ordnerpfad angegeben ist, klicken Sie dann Datei namentlich **SourceDBRefreshReport.XML** wird erstellt.  
   
 **Syntaxbeispiel:**  
   
@@ -618,7 +619,7 @@ Die Befehle Skriptgenerierung zwei Aufgaben ausführen: sie helfen bei der speic
   
 **Befehl**  
   
-"Save-als-Script"  
+save-as-script  
   
 Zum Speichern von den Skripts für die Objekte in einer Datei, wenn erwähnt Metabasis = Ziel, dies ist eine Alternative zum Synchronisationsbefehl, in denen in wir erhalten die Skripts und führen Sie die gleiche in der Zieldatenbank.  
   
@@ -626,15 +627,15 @@ Zum Speichern von den Skripts für die Objekte in einer Datei, wenn erwähnt Met
   
 Ist eine oder mehrere Metabase-Knoten als-Befehlszeilenparameter erforderlich.  
   
--   `object-name:`Gibt an, die Objekte, deren Skripts sind gespeichert werden sollen. (sie können einzelne Objektnamen oder einen Gruppennamen für das Objekt verfügen)  
+-   `object-name:` Gibt an, die Objekte, deren Skripts sind gespeichert werden sollen. (sie können einzelne Objektnamen oder einen Gruppennamen für das Objekt verfügen)  
   
--   `object-type:`Gibt den Typ des Objekts im Objekt-Name-Attribut angegeben ist (wenn Objektkategorie angegeben wird, dann Objekttyp "Category").  
+-   `object-type:` Gibt den Typ des Objekts im Objekt-Name-Attribut angegeben ist (wenn Objektkategorie angegeben wird, dann Objekttyp "Category").  
   
--   `metabase:`Gibt an, ob es die Quelle oder Ziel der Metabasis.  
+-   `metabase:` Gibt an, ob es die Quelle oder Ziel der Metabasis.  
   
--   `destination:`Gibt den Pfad oder den Ordner, in dem das Skript muss gespeichert werden, wenn der Dateiname nicht klicken Sie dann einen Dateinamen in das Format (Attributwert Object_name) .out angegeben ist  
+-   `destination:` Gibt den Pfad oder den Ordner, in dem das Skript muss gespeichert werden, wenn der Dateiname nicht klicken Sie dann einen Dateinamen in das Format (Attributwert Object_name) .out angegeben ist  
   
--   `overwrite:`Bei "true" überschreibt es denselben Dateinamen vorhanden. Sie können die Werte (wahr/falsch) haben.  
+-   `overwrite:` Bei "true" überschreibt es denselben Dateinamen vorhanden. Sie können die Werte (wahr/falsch) haben.  
   
 **Syntaxbeispiel:**  
   
@@ -672,25 +673,25 @@ oder
   
 Convert-Sql-Anweisung  
   
--   `context`Gibt den Schemanamen an.  
+-   `context` Gibt den Schemanamen an.  
   
--   `destination`Gibt an, ob die Ausgabe in einer Datei gespeichert werden sollen.  
+-   `destination` Gibt an, ob die Ausgabe in einer Datei gespeichert werden sollen.  
   
     Wenn dieses Attribut nicht angegeben ist, wird die konvertierte T-SQL-Anweisung in der Konsole angezeigt. (optionales Attribut)  
   
--   `conversion-report-folder`Gibt an, Ordner, in dem Bericht die Beurteilung kann gespeichert werden soll. (optionales Attribut)  
+-   `conversion-report-folder` Gibt an, Ordner, in dem Bericht die Beurteilung kann gespeichert werden soll. (optionales Attribut)  
   
--   `conversion-report-overwrite`Gibt an, ob die Berichtsordner Assessment zu überschreiben, wenn sie bereits vorhanden ist.  
+-   `conversion-report-overwrite` Gibt an, ob die Berichtsordner Assessment zu überschreiben, wenn sie bereits vorhanden ist.  
   
     **Standardwert:** "false". (optionales Attribut)  
   
--   `write-converted-sql-to`Gibt die Datei Ordnerpfad, in dem die konvertierte T-SQL ist, gespeichert werden (oder). Wenn ein Pfad angegeben wird, zusammen mit der `sql-files` -Attribut, jeder Quelldatei klicken wird eine entsprechende Ziel T-SQL-Datei, die unter den angegebenen Ordner erstellt haben. Wenn ein Pfad angegeben wird, zusammen mit den `sql` -Attribut, das konvertierte T-SQL wird in eine Datei mit dem Namen geschrieben **Result.out** unter den angegebenen Ordner.  
+-   `write-converted-sql-to` Gibt die Datei Ordnerpfad, in dem die konvertierte T-SQL ist, gespeichert werden (oder). Wenn ein Pfad angegeben wird, zusammen mit der `sql-files` -Attribut, jeder Quelldatei klicken wird eine entsprechende Ziel T-SQL-Datei, die unter den angegebenen Ordner erstellt haben. Wenn ein Pfad angegeben wird, zusammen mit den `sql` -Attribut, das konvertierte T-SQL wird in eine Datei mit dem Namen geschrieben **Result.out** unter den angegebenen Ordner.  
   
--   `sql`Gibt an, DB2 Sql-Anweisungen konvertiert werden, eine oder mehrere Anweisungen können getrennt werden, mithilfe einer ";"  
+-   `sql` Gibt an, DB2 Sql-Anweisungen konvertiert werden, eine oder mehrere Anweisungen können getrennt werden, mithilfe einer ";"  
   
--   `sql-files`Gibt den Pfad der Sql-Dateien mit T-SQL-Code konvertiert werden.  
+-   `sql-files` Gibt den Pfad der Sql-Dateien mit T-SQL-Code konvertiert werden.  
   
--   `write-summary-report-to`Gibt den Pfad, in dem der Bericht generiert wird. Falls nur der Ordnerpfad angegeben wird, namentlich Datei **ConvertSQLReport.XML** wird erstellt. (optionales Attribut)  
+-   `write-summary-report-to` Gibt den Pfad, in dem der Bericht generiert wird. Falls nur der Ordnerpfad angegeben wird, namentlich Datei **ConvertSQLReport.XML** wird erstellt. (optionales Attribut)  
   
     Bericht Erstellung hat 2 Unterkategorien, begrenzt weiter..,:  
   
@@ -767,15 +768,15 @@ oder
 ```  
   
 ## <a name="next-step"></a>Nächster Schritt  
-Informationen zu Befehlszeilenoptionen finden Sie unter [Command Line Options SSMA-Konsole &#40; DB2ToSQL &#41;](../../ssma/db2/command-line-options-in-ssma-console-db2tosql.md) .  
+Informationen zu Befehlszeilenoptionen finden Sie unter [Befehlszeilenoptionen in SSMA-Konsole &#40;DB2ToSQL&#41; ](../../ssma/db2/command-line-options-in-ssma-console-db2tosql.md) .  
   
-Informationen zum Beispiel Konsole-Skriptdateien, finden Sie unter [arbeiten mit der Konsole Skript-Beispieldateien &#40; DB2ToSQL &#41;](../../ssma/db2/working-with-the-sample-console-script-files-db2tosql.md)  
+Informationen zum Beispiel Konsole-Skriptdateien, finden Sie unter [arbeiten mit der Konsole Skript-Beispieldateien &#40;DB2ToSQL&#41;](../../ssma/db2/working-with-the-sample-console-script-files-db2tosql.md)  
   
 Der nächste Schritt hängt davon ab, auf die Anforderungen Ihres Projekts:  
   
--   Zur Angabe eines Kennworts oder einer Exportieren / Importieren von Kennwörtern, finden Sie unter [Verwalten von Kennwörtern &#40; DB2ToSQL &#41;](../../ssma/db2/managing-passwords-db2tosql.md).  
+-   Zur Angabe eines Kennworts oder einer Exportieren / Importieren von Kennwörtern, finden Sie unter [Verwalten von Kennwörtern &#40;DB2ToSQL&#41;](../../ssma/db2/managing-passwords-db2tosql.md).  
   
--   Generieren von Berichten, finden Sie unter [Generieren von Berichten &#40; DB2ToSQL &#41;](../../ssma/db2/generating-reports-db2tosql.md).  
+-   Generieren von Berichten, finden Sie unter [Generieren von Berichten &#40;DB2ToSQL&#41;](../../ssma/db2/generating-reports-db2tosql.md).  
   
--   Behandlung von Problemen in der Konsole, finden Sie unter [Problembehandlung &#40; DB2ToSQL &#41;](../../ssma/db2/troubleshooting-db2tosql.md).  
+-   Behandlung von Problemen in der Konsole, finden Sie unter [Problembehandlung &#40;DB2ToSQL&#41;](../../ssma/db2/troubleshooting-db2tosql.md).  
   

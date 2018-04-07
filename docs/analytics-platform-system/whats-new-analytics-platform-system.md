@@ -1,23 +1,23 @@
 ---
-title: "Was ist neu in Analytics Platform System – ein horizontaler Datawarehouse"
+title: Was ist neu in Analytics Platform System – ein horizontaler Datawarehouse
 author: happynicolle
 ms.author: nicw;barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology: mpp-data-warehouse
-description: "Neuigkeiten in Microsoft® Analytics Platform System angezeigt wird, eine horizontale Skalierung einer lokalen Anwendung, die MPP SQL Server Parallel Data Warehouse hostet."
+description: Neuigkeiten in Microsoft® Analytics Platform System angezeigt wird, eine horizontale Skalierung einer lokalen Anwendung, die MPP SQL Server Parallel Data Warehouse hostet.
 ms.date: 11/28/2016
 ms.topic: article
-ms.openlocfilehash: eeeb41045527e72856edfb8bdb40becc462bde07
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c6af71d6b7c2bc67aeea0fdc5c1af2e668f537c5
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="whats-new-in-analytics-platform-system-2016-a-scale-out-mpp-data-warehouse"></a>Was ist neu in Analytics Platform System 2016, ein horizontaler MPP Datawarehouse
 Neuigkeiten Sie in Microsoft® Analytics Platform System (APS) 2016, das neueste Update für die Anwendung für eine horizontale Skalierung lokalen Einheit, die MPP SQL Server Parallel Data Warehouse hostet. 
@@ -32,7 +32,7 @@ APS-2016 unterstützt diese Verbesserungen der T-SQL-Kompatibilität.  Diese zus
 
 - [SQL-Sortierungen auf Spaltenebene][] werden jetzt zusätzlich zu den Windows-Sortierungen unterstützt.
 - [Nicht gruppierte Indizes für gruppierte columnstore-Indizes][] Umfang zur Leistungssteigerung von Abfragen, Suchen nach bestimmten Werten in den gruppierten columnstore-Index. 
-- [WÄHLEN SIE... IN][] 
+- [SELECT...INTO][] 
 - [sp_spaceused()][] zeigt der Speicherplatz verwendet, oder in einer Tabelle oder Datenbank reserviert.
 - [Breite Tabellen][] Unterstützung entspricht dem SQL Server 2016. Das vorherige Limit von 32 KB für die Zeilengröße ist nicht mehr vorhanden. 
 
@@ -99,7 +99,7 @@ Installation oder Aktualisierung auf APS 2016 ist schneller und erfordert wenige
 [NVARCHAR(MAX)]:https://msdn.microsoft.com/library/ms186939.aspx
 [VARBINARY(MAX)]:https://msdn.microsoft.com/library/ms188362.aspx
 [SYSNAME]:https://msdn.microsoft.com/library/ms188021.aspx
-[WÄHLEN SIE... IN]:https://msdn.microsoft.com/library/ms188029.aspx
+[SELECT...INTO]:https://msdn.microsoft.com/library/ms188029.aspx
 [sp_spaceused()]:https://msdn.microsoft.com/library/ms188776.aspx
 [Breite Tabellen]:https://msdn.microsoft.com/library/ms143432.aspx
 [BULK INSERT]:https://msdn.microsoft.com/library/ms188365.aspx

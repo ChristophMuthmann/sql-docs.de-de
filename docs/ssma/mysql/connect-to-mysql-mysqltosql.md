@@ -2,37 +2,38 @@
 title: Herstellen einer Verbindung mit MySQL (MySQLToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-mysql
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 94099d01-ab19-4d58-a172-340c86b4a0f3
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 068fe6585eac87830511515a95373a938cbcdca2
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: cb5ed12698026172f7ef2ef080fd8e68d64cf51c
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="connect-to-mysql-mysqltosql"></a>Herstellen einer Verbindung mit MySQL (MySQLToSQL)
 Verwenden der **Herstellen einer Verbindung mit MySQL** Dialogfeld Verbindung mit der MySQL-Datenbank, die Sie migrieren möchten.  
   
 Zum Zugriff auf dieses Dialogfeld, in dem **Datei** klicken Sie im Menü **Herstellen einer Verbindung mit MySQL**. Wenn Sie zuvor eine Verbindung hergestellt haben, wird der Befehl ist **eine erneute Verbindung mit MySQL**.  
   
-## <a name="options"></a>Tastatur  
-**Anbieter**  
+## <a name="options"></a>enthalten  
+**Provider**  
   
 MySQL-Anbieter verfügbar ist, MySQL 5.1 Odbcdriver (vertrauenswürdigen).  
   
@@ -48,7 +49,7 @@ Geben Sie den Namen der MySQL-Server aus. Dies ist ein Modus "Standard"-Option.
   
 Geben Sie den Server-Port. Der Server-Standardport ist 3306. Dies ist ein Modus "Standard"-Option.  
   
-**User name**  
+**Benutzername**  
   
 Geben Sie den Benutzernamen, den SSMA für die Verbindung zur MySQL-Datenbank verwenden.  
   

@@ -21,13 +21,13 @@ ms.assetid: c359c25c-db2a-4a20-afa9-62d87a62df72
 caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ef959c05f397a898d9c1e72adddd6b895eabf87d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 938f0dd71ea980af429591cf53bc8f6bd39e9b13
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="using-test-repositories-sybasetosql"></a>Mithilfe von Test-Repositorys (SybaseToSQL)
 Die SSMA testen Repository-Speicher SSMA Tester Testfälle und die Testergebnisse für die spätere Verwendung. Die Repository-Daten werden in der SQL Server-Tabellen gespeichert **TestCaseRepository** und **RunTestCaseResultRepository** im Schema **Ssma_sybase_utilities** von **Ssmatesterdb_syb** Datenbank.  
@@ -59,7 +59,7 @@ Die folgenden Schaltflächen stehen auf der Seite "Testfälle" zur Verfügung:
   
 -   Klicken Sie auf die **bearbeiten** Schaltfläche, um den Testfall-Assistenten ausführen und ändern den ausgewählten Test.  
   
--   Klicken Sie auf die **ausführen** die Schaltfläche, um die [Ausführen von Testfällen &#40; SybaseToSQL &#41; ](../../ssma/sybase/running-test-cases-sybasetosql.md) Dialogfeld, und führen Sie den ausgewählten Test.  
+-   Klicken Sie auf die **ausführen** die Schaltfläche, um die [Testfälle ausgeführt &#40;SybaseToSQL&#41; ](../../ssma/sybase/running-test-cases-sybasetosql.md) Dialogfeld, und führen Sie den ausgewählten Test.  
   
 ## <a name="test-results-repository"></a>Ergebnisrepository  
 Sehen Sie die Ergebnisrepository auf die **Testergebnisse** auf der Seite der **Repository Testfälle** Fenster. Öffnen Sie sie durch Klicken auf **Testergebnisse...** aus der **Tester** Menü.  
@@ -80,11 +80,11 @@ Die folgende Informationen zu Testergebnissen wird im Raster angezeigt.
   
 Die folgenden Schaltflächen stehen auf der Seite "Testergebnis" zur Verfügung:  
   
--   Klicken Sie auf die **Ansicht** die Schaltfläche, um [Testfall Berichte anzeigen &#40; SybaseToSQL &#41; ](../../ssma/sybase/viewing-test-case-reports-sybasetosql.md) des aktuellen Testfall Ergebnisses.  
+-   Klicken Sie auf die **Ansicht** die Schaltfläche, um [Testfall Berichte anzeigen &#40;SybaseToSQL&#41; ](../../ssma/sybase/viewing-test-case-reports-sybasetosql.md) des aktuellen Testfallergebnis.  
   
 -   Klicken Sie auf die **löschen** Schaltfläche, um das ausgewählte Testergebnis löschen  
   
 ## <a name="see-also"></a>Siehe auch  
-[Ausführen von Testfällen &#40; SybaseToSQL &#41;](../../ssma/sybase/running-test-cases-sybasetosql.md)  
-[Testen von migriert Datenbankobjekte &#40; SybaseToSQL &#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
+[Ausführen von Testfällen &#40;SybaseToSQL&#41;](../../ssma/sybase/running-test-cases-sybasetosql.md)  
+[Testen von Datenbankobjekten migriert &#40;SybaseToSQL&#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
   

@@ -2,30 +2,30 @@
 title: Konfigurieren von Windows Server Update Services (WSUS) (Analytics Platform System)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a10b2884-468e-41ef-bd59-8df894381254
-caps.latest.revision: 
-ms.openlocfilehash: cc95a4f26970b91f2346e3edfcfa937190694b43
-ms.sourcegitcommit: 0a9c29c7576765f3b5774b2e087852af42ef4c2d
+caps.latest.revision: 41
+ms.openlocfilehash: 31427bc55017cf9c069e8cd4a467dfdb9608ca3f
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="configure-windows-server-update-services-wsus"></a>Konfigurieren von Windows Server Update Services (WSUS)
 Diese Anweisungen führen Sie durch die Schritte zur Verwendung der Windows Server Update Services (WSUS)-Konfigurations-Assistent zum Konfigurieren von WSUS für Analytics Platform System. Sie müssen zum Konfigurieren von WSUS, bevor Sie Softwareupdates auf das Gerät anwenden können. WSUS ist bereits auf dem VMM-virtuellen Computer des Geräts installiert.  
   
-Weitere Informationen zum Konfigurieren von WSUS finden Sie unter der [WSUS schrittweise Anleitung für Installation](http://go.microsoft.com/fwlink/?LinkId=202417) auf die WSUS-Website. Nach dem Konfigurieren von WSUS, finden Sie unter [&#40; herunterladen und Anwenden von Microsoft-Updates Analyseplattformsystem &#41; ](download-and-apply-microsoft-updates.md) um ein Update zu initiieren.  
+Weitere Informationen zum Konfigurieren von WSUS finden Sie unter der [WSUS schrittweise Anleitung für Installation](http://go.microsoft.com/fwlink/?LinkId=202417) auf die WSUS-Website. Nach dem Konfigurieren von WSUS, finden Sie unter [herunterladen und Anwenden von Microsoft-Updates &#40;Analyseplattformsystem&#41; ](download-and-apply-microsoft-updates.md) um ein Update zu initiieren.  
   
 > [!WARNING]  
 > Wenn bei dieser Konfiguration Fehler auftreten, beenden Sie, und wenden Sie sich an den Support, um Unterstützung zu erhalten. Ignorieren von Fehlern nicht, oder im Prozess fortgesetzt wird, wenn Fehler empfangen werden.  
@@ -41,7 +41,7 @@ Um WSUS konfigurieren möchten, müssen Sie:
   
 -   Kennen Sie die IP-Adresse des Proxyservers, wenn Ihre Anwendung einen Proxyserver verwenden auf dem Upstreamserver oder Microsoft Update.  
   
--   In den meisten Fällen muss WSUS Server außerhalb der Anwendung zugreifen. Um dieses Verwendungsszenario zu unterstützen, das Analytics Platform System DNS Unterstützung eine Weiterleitung externer Name, mit dem das Analytics Platform System Hosts und virtuellen Computern (VMs), externen DNS-Server zum Auflösen von Namen verwenden können konfiguriert werden, können außerhalb von, der Appliance. Weitere Informationen finden Sie unter [mithilfe einer DNS-Weiterleitung zum Auflösen von Non-Appliance DNS-Namen &#40; Analyseplattformsystem &#41; ](use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md).  
+-   In den meisten Fällen muss WSUS Server außerhalb der Anwendung zugreifen. Um dieses Verwendungsszenario zu unterstützen, das Analytics Platform System DNS Unterstützung eine Weiterleitung externer Name, mit dem das Analytics Platform System Hosts und virtuellen Computern (VMs), externen DNS-Server zum Auflösen von Namen verwenden können konfiguriert werden, können außerhalb von, der Appliance. Weitere Informationen finden Sie unter [mithilfe einer DNS-Weiterleitung zum Auflösen von Non-Appliance DNS-Namen &#40;Analyseplattformsystem&#41;](use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md).  
   
 ## <a name="to-configure-windows-server-update-services-wsus"></a>So konfigurieren Sie Windows Server Update Services (WSUS)  
   
@@ -67,7 +67,7 @@ Um WSUS konfigurieren möchten, müssen Sie:
   
         ![Server-Manager-Dashboard-Menü](./media/configure-windows-server-update-services-wsus/WSUS_Wiz0.png "WSUS_Wiz0")  
   
-    4.  Wenn dies das erste Mal ist Sie den WSUS-Assistenten ausgeführt haben, werden Sie möglicherweise aufgefordert, ein Verzeichnis zum Speichern der Updates konfigurieren. `C:\wsus`ist Sie ein geeigneten Speicherort. Sie können jedoch einen anderen Pfad bereitstellen.  
+    4.  Wenn dies das erste Mal ist Sie den WSUS-Assistenten ausgeführt haben, werden Sie möglicherweise aufgefordert, ein Verzeichnis zum Speichern der Updates konfigurieren. `C:\wsus` ist Sie ein geeigneten Speicherort. Sie können jedoch einen anderen Pfad bereitstellen.  
   
         ![WSUS-Pfad](./media/configure-windows-server-update-services-wsus/WSUS_Wiz1.png "WSUS_Wiz1")  
   
@@ -179,7 +179,7 @@ Um WSUS konfigurieren möchten, müssen Sie:
 Als Nächstes werden nach dem Konfigurieren von WSUS für Analytics Platform System, die Appliance Servergruppe. Von allen Servern Appliance zu einer Gruppe hinzufügen, wird WSUS Softwareupdates auf allen Servern in der Einheit anwenden können.  
   
 > [!NOTE]  
-> Der WSUS-System ist darauf ausgelegt, asynchron ausgeführt wird. Initiieren einer Aktivität immer führt nicht zu einer sofort zu aktualisieren. Aus diesem Grund müssen Sie eine Weile warten, bis Computer in der WSUS-Dialogfelder angezeigt werden. Ausführen der `setup.exe /action=ReportMicrosoftUpdateClientStatus /DomainAdminPassword="<password>"` am Ende dieses Themas beschriebenen Befehl [&#40; herunterladen und Anwenden von Microsoft-Updates Analyseplattformsystem &#41; ](download-and-apply-microsoft-updates.md) können die Dialogfelder zu aktualisieren.  
+> Der WSUS-System ist darauf ausgelegt, asynchron ausgeführt wird. Initiieren einer Aktivität immer führt nicht zu einer sofort zu aktualisieren. Aus diesem Grund müssen Sie eine Weile warten, bis Computer in der WSUS-Dialogfelder angezeigt werden. Ausführen der `setup.exe /action=ReportMicrosoftUpdateClientStatus /DomainAdminPassword="<password>"` Befehl am Ende dieses Themas beschriebenen [herunterladen und Anwenden von Microsoft-Updates &#40;Analytics Platform System&#41; ](download-and-apply-microsoft-updates.md) Dialogfelder aktualisieren können.  
   
 #### <a name="to-group-the-appliance-servers"></a>Um die Appliance-Server zu gruppieren.  
   

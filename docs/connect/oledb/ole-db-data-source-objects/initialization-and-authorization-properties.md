@@ -10,7 +10,7 @@ ms.component: ole-db-data-source-objects
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
-- docset-sql-devref
+- drivers
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -23,11 +23,11 @@ author: pmasl
 ms.author: Pedro.Lopes
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6be9ab05f9f7a5c669e62f92c238be3d06dbf44d
-ms.sourcegitcommit: 9f4330a4b067deea396b8567747a6771f35e6eee
+ms.openlocfilehash: a785c2bf470df9f09b177fc7b5119132ed93c319
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="initialization-and-authorization-properties"></a>Initialisierungs- und Autorisierungseigenschaften
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -70,7 +70,7 @@ ms.lasthandoff: 03/30/2018
 |SSPROP_INIT_ENCRYPT|Typ: VT_BOOL<br /><br /> R/W: Lesen/Schreiben<br /><br /> Standard: VARIANT_FALSE<br /><br /> Beschreibung: Zur Verschlüsselung von Daten, die über das Netzwerk gesendet werden, wird die SSPROP_INIT_ENCRYPT-Eigenschaft auf VARIANT_TRUE festgelegt.<br /><br /> Wenn die Protokollverschlüsselung aktiviert ist, wird immer verschlüsselt, unabhängig von der Einstellung von SSPROP_INIT_ENCRYPT. Wenn sie deaktiviert ist und SSPROP_INIT_ENCRYPT auf VARIANT_TRUE festgelegt wird, wird verschlüsselt.<br /><br /> Wenn die Protokollverschlüsselung deaktiviert ist und SSPROP_INIT_ENCRYPT auf VARIANT_FALSE festgelegt wird, wird nicht verschlüsselt.|  
 |SSPROP_INIT_FAILOVERPARTNER|Typ: VT_BSTR<br /><br /> R/w: Lesen/Schreiben<br /><br /> Beschreibung: Gibt den Namen des Failoverpartners für die Datenbankspiegelung an. Es handelt sich um eine Initialisierungseigenschaft, die nur vor der Initialisierung festgelegt werden kann. Nach der Initialisierung gibt sie den ggf. vom primären Server zurückgegebenen Failoverpartner zurück.<br /><br /> Dies ermöglicht einer intelligenten Anwendung vor kurzem hartnäckigsten Sicherungsserver zwischengespeichert, aber solche Anwendungen sollten sich bewusst, dass die Informationen nur aktualisiert, wenn die Verbindung wird hergestellt (oder zurücksetzen, wenn in einem Pool) sein und können veralten oder für langfristige Verbindungen.<br /><br /> Nach dem Herstellen der Verbindung kann die Anwendung dieses Attribut abfragen, um die Identität des Failoverpartners festzustellen. Wenn der primäre Server über keinen Failoverpartner verfügt, gibt diese Eigenschaft eine leere Zeichenfolge zurück. Weitere Informationen finden Sie unter [verwenden der Datenbankspiegelung](../../oledb/features/using-database-mirroring.md).|  
 |SSPROP_INIT_FILENAME|Typ: VT_BSTR<br /><br /> R/w: Lesen/Schreiben<br /><br /> Beschreibung: Gibt die primäre Datei für eine anfügbare Datenbank an. Diese Datenbank wird angefügt und als Standarddatenbank für die Verbindung verwendet. Sie müssen den Namen der Datenbank als Wert der Initialisierungseigenschaft DBPROP_INIT_CATALOG angeben, um SSPROP_INIT_FILENAME verwenden zu können. Wenn der Datenbankname nicht vorhanden ist, wird nach dem primären Dateinamen, der in SSPROP_INIT_FILENAME angegeben ist, gesucht, und die Datenbank mit dem in DBPROP_INIT_CATALOG angegebenen Namen wird angefügt. Wenn die Datenbank bereits vorher angefügt wurde, fügt [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sie nicht erneut an.|  
-|SSPROP_INIT_MARSCONNECTION|Typ: VT_BOOL<br /><br /> R/w: Lesen/Schreiben<br /><br /> Standard: VARIANT_FALSE<br /><br /> Beschreibung: Gibt an, ob Multiple Active Result Sets (MARS) für die Verbindung aktiviert sind. Diese Option muss auf den Wert "True" festgelegt werden, bevor eine Verbindung mit der Datenbank hergestellt wird. Weitere Informationen finden Sie unter [mithilfe von Multiple Active Result Sets &#40; MARS &#41; ](../../oledb/features/using-multiple-active-result-sets-mars.md).|  
+|SSPROP_INIT_MARSCONNECTION|Typ: VT_BOOL<br /><br /> R/w: Lesen/Schreiben<br /><br /> Standard: VARIANT_FALSE<br /><br /> Beschreibung: Gibt an, ob Multiple Active Result Sets (MARS) für die Verbindung aktiviert sind. Diese Option muss auf den Wert "True" festgelegt werden, bevor eine Verbindung mit der Datenbank hergestellt wird. Weitere Informationen finden Sie unter [mithilfe von Multiple Active Result Sets & #40; MARS & #41; ](../../oledb/features/using-multiple-active-result-sets-mars.md).|  
 |SSPROP_INIT_NETWORKADDRESS|Typ: VT_BSTR<br /><br /> R/w: Lesen/Schreiben<br /><br /> Beschreibung: Die Netzwerkadresse des Servers, auf dem eine von der DBPROP_INIT_DATASOURCE-Eigenschaft angegebene Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ausgeführt wird.|  
 |SSPROP_INIT_NETWORKLIBRARY|Typ: VT_BSTR<br /><br /> R/w: Lesen/Schreiben<br /><br /> Beschreibung: Der Name der Netzwerkbibliothek (DLL), die zum Kommunizieren mit einer Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] verwendet wird. Der Name sollte weder den Pfad noch die DLL-Dateinamenerweiterung enthalten.<br /><br /> Der Standard kann mit dem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Clientkonfigurations-Hilfsprogramm angepasst werden.<br /><br /> Hinweis: Nur TCP und Named Pipes werden von dieser Eigenschaft unterstützt. Wenn Sie diese Eigenschaft mit einem Präfix verwenden, erhalten Sie ein Doppelpräfix, da die Eigenschaft zur internen Generierung eines Präfix verwendet wird. Dies führt zu einem Fehler.|  
 |SSPROP_INIT_PACKETSIZE|Typ: VT_I4<br /><br /> R/w: Lesen/Schreiben<br /><br /> Beschreibung: Eine Netzwerkpaketgröße in Bytes. Der Paketgrößen-Eigenschaftswert muss zwischen 512 und 32.767 liegen. Der Standard OLE DB-Treiber für SQL Server-Netzwerkpaketgröße ist 4.096.|  
@@ -93,6 +93,6 @@ Server=MyServer;UID=MyUserName;
  Eine Liste der in der OLE DB-Treiber für SQL Server verfügbaren Schlüsselwörter, finden Sie unter [Schlüsselwörtern für Verbindungszeichenfolgen mit OLE DB-Treiber für SQL Server](../../oledb/applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datenquellenobjekte &#40; OLE DB &#41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
+ [Datenquellenobjekte & #40; OLE DB & #41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
   
   

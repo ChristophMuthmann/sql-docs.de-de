@@ -2,36 +2,37 @@
 title: Herstellen einer Verbindung mit Azure SQL-Datenbank (MySQLToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-mysql
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 81623d27-25af-444f-9779-1edb8c6fb470
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f3f0572426b6c90aa7b56c1f81e077f05f01caae
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 21b24f9b46490f0eb83a0b9508b8b5b2213cd7a9
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="connect-to-azure-sql-db-mysqltosql"></a>Herstellen einer Verbindung mit Azure SQL-Datenbank (MySQLToSQL)
 Stellen Sie mithilfe der SQL Azure-Dialogfeld Verbindung mit SQL Azure-Datenbank, die Sie migrieren möchten.  
   
 Zum Zugriff auf dieses Dialogfeld, in dem **Datei** klicken Sie im Menü **Herstellen einer Verbindung mit SQL Azure**. Wenn Sie zuvor eine Verbindung hergestellt haben, wird der Befehl ist **eine erneute Verbindung mit SQL Azure.**  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>enthalten  
 **Servername**  
   
 Wählen Sie aus, oder geben Sie den Servernamen zum Herstellen einer Verbindung mit SQL Azure.  
@@ -43,7 +44,7 @@ Wählen Sie aus, geben Sie ein oder **Durchsuchen** den Datenbanknamen.
 > [!IMPORTANT]  
 > SSMA für die MySQL unterstützt keine Verbindung mit der master-Datenbank in SQL Azure.  
   
-**User name**  
+**Benutzername**  
   
 Geben Sie den Benutzernamen, den SSMA für die Verbindung mit der SQL Azure-Datenbank verwenden  
   
@@ -51,7 +52,7 @@ Geben Sie den Benutzernamen, den SSMA für die Verbindung mit der SQL Azure-Date
   
 Geben Sie das Kennwort für den Benutzernamen ein.  
   
-**Verschlüsseln**  
+**Encrypt**  
   
 SSMA empfiehlt verschlüsselte Verbindung zu SQL Azure.  
   

@@ -1,15 +1,16 @@
 ---
-title: "Auswählen und Konfigurieren von Objekten mit Test (SybaseToSQL) | Microsoft Docs"
-ms.custom: 
+title: Auswählen und Konfigurieren von Objekten mit Test (SybaseToSQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-sybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
@@ -18,22 +19,22 @@ helpviewer_keywords:
 - Tester Component,Parameter Comparision Setting
 - Tester Component,Selecting Objects
 ms.assetid: 89c23aad-bfee-4917-bc16-175288390ac0
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 23c5a636c3031fce08294de4640799fde34362d7
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 3ee6efee5172d5261c5f8fa5e23507b9bb2b931b
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="selecting-and-configuring-objects-to-test-sybasetosql"></a>Auswählen und Konfigurieren von Objekten mit Test (SybaseToSQL)
 In diesem Schritt wählen Sie die Objekte zu testen, und konfigurieren Einstellungen für den Vergleich von Prozeduren und Funktionen Output-Parameter als auch die Rückgabewerte von Funktionen.  
   
 ## <a name="selection-of-objects-to-test"></a>Auswahl von Objekten, die Tests  
-Überprüfen Sie in der Objektstruktur für die Sybase befindet sich auf der linken Seite des Fensters die Objekte, die Sie während des Testens aufrufen möchten. Die vollständige Liste der getestet werden Objekte in der [migriert Datenbankobjekte testen &#40; SybaseToSQL &#41; ](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md) Thema.  
+Überprüfen Sie in der Objektstruktur für die Sybase befindet sich auf der linken Seite des Fensters die Objekte, die Sie während des Testens aufrufen möchten. Die vollständige Liste der getestet werden Objekte in der [migriert Datenbankobjekte testen &#40;SybaseToSQL&#41; ](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md) Thema.  
   
 Wenn Tester SSMA eines der Objekte, die zu Testzwecken ausgewählt nicht unterstützt wird, sehen Sie die Verknüpfung mit der Bezeichnung **einige ausgewählte Objekte enthalten Fehler** unter der Struktur der Objekte. Klicken Sie auf diesen Link an die Gründe, warum diese Objekte nicht getestet werden können, und um die Auswahl der falschen Objekte zu löschen.  
   
@@ -45,7 +46,7 @@ Einrichten der Vergleichsregeln für Output-Parameter und Rückgabewerte in der 
 ### <a name="use-during-comparisons"></a>Während der Vergleiche verwenden  
 Aktivieren Sie die von den ausgewählten Parameter in Vergleichsberichte für Ergebnisse verwenden.  
   
--   Falls gewünscht **"true"**, SSMA wird nach dem Ausführen der Prozedur für Sybase mit den entsprechenden Wert auf den Ausgabewert dieses Parameters vergleichen[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]  
+-   Falls gewünscht **"true"**, SSMA wird nach dem Ausführen der Prozedur für Sybase mit den entsprechenden Wert auf den Ausgabewert dieses Parameters vergleichen [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]  
   
 -   Falls gewünscht**"false"**, der Parameter vom Ergebnisbereich Überprüfung ausgeschlossen werden.  
   
@@ -90,8 +91,8 @@ Steuert, wie nachfolgende Leerzeichen werden während des Vergleichs behandelt.
 Sie können die Werte der Eingabeparameter angeben, auf die **rufen Werte** Seite. Die **Aufruf hinzufügen** Schaltfläche wird einen neuen Aufruf mit leeren Parameterwerten hinzugefügt. Die **entfernen aufrufen** Schaltfläche entfernt den aktuellen Aufruf.  
   
 ## <a name="next-step"></a>Nächster Schritt  
-[Auswählen und Konfigurieren der betroffenen Objekte &#40; SybaseToSQL &#41;](../../ssma/sybase/selecting-and-configuring-affected-objects-sybasetosql.md)  
+[Auswählen und Konfigurieren von betroffene Objekte &#40;SybaseToSQL&#41;](../../ssma/sybase/selecting-and-configuring-affected-objects-sybasetosql.md)  
   
 ## <a name="see-also"></a>Siehe auch  
-[Testen von migriert Datenbankobjekte &#40; SybaseToSQL &#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
+[Testen von Datenbankobjekten migriert &#40;SybaseToSQL&#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
   

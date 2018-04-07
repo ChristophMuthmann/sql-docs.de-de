@@ -2,14 +2,15 @@
 title: Projekteinstellungen (Zuordnung) (AccessToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-access
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
@@ -22,16 +23,16 @@ helpviewer_keywords:
 - SQL Server data types
 - Type Mapping settings
 ms.assetid: b87b9683-abed-4677-8c50-18bdba704655
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 81c2512eacc634de526ecffb0d56d86dbcecca87
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 30586710c156ffe14028e8395b0e887419a36584
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="project-settings-type-mapping-accesstosql"></a>Projekteinstellungen (Zuordnung) (AccessToSQL)
 Die projekteinstellungen Type Mapping können Sie die standardtypmappings für das SSMA-Projekt festgelegt. Sie können auch Zuordnungen für einzelne Datenbankobjekte angeben. Weitere Informationen finden Sie unter [Zuordnen von Quelle und Ziel-Datentypen](http://msdn.microsoft.com/en-us/b362a075-16e7-423f-b63f-e1e9f02844a9).  
@@ -42,7 +43,7 @@ Typzuordnung finden Sie in der **Projekteinstellungen** und **Projekt Standardei
   
 -   Verwenden der **Projekt Standardeinstellungen** (Dialogfeld), Konfigurationsoptionen für alle Projekte festzulegen. Zum Zugriff auf die Einstellungen für die Zuordnung, in der **Tools** klicken Sie im Menü **Projekt Standardeinstellungen**, wählen Sie die Migration-Projekttyp, die für die Einstellungen angezeigt oder geändert werden, erforderlich sind **Migration-Zielversion** Dropdown-Liste, und klicken Sie dann auf **Typzuordnung** im linken Bereich.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>enthalten  
 **Quelltyp**  
 Der Access-Datentyp zugeordnet werden soll.  
   
@@ -53,22 +54,22 @@ Die folgende Tabelle zeigt die Zuordnung zwischen Quelle und Ziel-Datentypen.
   
 |Access-Datentyp|SQL Server-Datentyp|  
 |--------------------|------------------------|  
-|**Binary [\*... \*]**|**Varbinary [\*]**|  
+|**binary[\*..\*]**|**varbinary[\*]**|  
 |**boolean**|**bit**|  
-|**Byte**|**tinyint**|  
-|**Währung**|**money**|  
+|**byte**|**tinyint**|  
+|**currency**|**money**|  
 |**Datum**|**datetime**|  
 |**decimal**|**float**|  
 |**double**|**float**|  
-|**GUID**|**uniqueidentifier**|  
+|**guid**|**uniqueidentifier**|  
 |**integer**|**smallint**|  
-|**lange**|**int**|  
-|**LONGBINARY**|**varbinary(max)**|  
-|**Memo**|**nvarchar(max)**|  
+|**long**|**int**|  
+|**longbinary**|**varbinary(max)**|  
+|**memo**|**nvarchar(max)**|  
 |**Memo** – Access 97|**varchar(max)**|  
-|**einzelne**|**real**|  
-|**text[\*.. \*]**|**Nvarchar [\*]**|  
-|**text[\*.. \*]** – für Access 97|**Varchar [\*]**|  
+|**single**|**real**|  
+|**text[\*..\*]**|**nvarchar[\*]**|  
+|**Text [\*... \*]** – für Access 97|**varchar[\*]**|  
   
 **Hinzufügen**  
 Klicken Sie auf diese Option, um einen Datentyp der Zuordnungsliste hinzuzufügen.  

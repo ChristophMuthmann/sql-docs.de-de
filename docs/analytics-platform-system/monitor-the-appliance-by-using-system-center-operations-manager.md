@@ -2,32 +2,32 @@
 title: Monitor-Einheit mit System Center Operationsmanager (APS)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: de6cbf6e-f2e9-4877-94df-9c13b1182d56
-caps.latest.revision: "14"
-ms.openlocfilehash: 47a89b19a93d99bb3e63925b012bb53d169fdf0d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 14
+ms.openlocfilehash: 02bdd22c66729ab471298e211b619e1cb1e4565c
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="monitor-the-appliance-by-using-system-center-operations-manager"></a>Überwachen Sie die Anwendung mit System Center Operationsmanager
 Beschreibt, wie System Center Operations Manager verwenden, um SQL Server PDW und HDInsight zu überwachen.  
   
 ## <a name="before-you-begin"></a>Vorbereitungen  
   
-### <a name="prerequisites"></a>Voraussetzungen  
+### <a name="prerequisites"></a>Erforderliche Komponenten  
   
 1.  System Center Operationsmanager 2007 R2, 2012 oder 2012 SP1 muss installiert und aktiv sein.  
   
@@ -35,11 +35,11 @@ Beschreibt, wie System Center Operations Manager verwenden, um SQL Server PDW un
   
 3.  Die Management Packs zum Überwachen von SQL Server PDW und HDInsight müssen installiert, nicht importiert und konfiguriert werden. Verwenden Sie die folgenden Anweisungen zum Ausführen dieser Aufgaben.  
   
-    -   [Installieren Sie die SCOM-Management Packs &#40; Analyseplattformsystem &#41;](install-the-scom-management-packs.md)  
+    -   [Installieren Sie die SCOM-Management Packs &#40;Analyseplattformsystem&#41;](install-the-scom-management-packs.md)  
   
-    -   [Importieren Sie das SCOM-Management Pack für PDW &#40; Analyseplattformsystem &#41;](import-the-scom-management-pack-for-pdw.md) 
+    -   [Importieren Sie das SCOM Management Pack für PDW &#40;Analyseplattformsystem&#41;](import-the-scom-management-pack-for-pdw.md) 
     
-    -   [Konfigurieren von SCOM zum Überwachen von Analyseplattformsystem &#40; Analyseplattformsystem &#41;](configure-scom-to-monitor-analytics-platform-system.md)
+    -   [Konfigurieren von SCOM zum Überwachen von Analyseplattformsystem &#40;Analyseplattformsystem&#41;](configure-scom-to-monitor-analytics-platform-system.md)
   
 <!-- MISSING LINKS    -   [Import the SCOM Management Pack for HDInsight &#40;Analytics Platform System&#41;](import-the-scom-management-pack-for-hdinsight.md)  -->  
    
@@ -50,24 +50,24 @@ Nach dem Konfigurieren der SCOM-Management Packs, klicken Sie auf die Überwachu
 ### <a name="alerts"></a>Warnungen  
 Warnungen sind, wo Sie die aktuellen Warnungen verwalten erhalten.  
   
-![Warnungen](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM.png "SCOM_SCOM")  
+![Alerts](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM.png "SCOM_SCOM")  
   
 ### <a name="appliances"></a>Einheiten  
 Einheiten sind, in dem Sie die derzeit ermittelt und überwacht SQL Server PDW-Geräte in Ihrer Umgebung erwarten können. Wenn ein Gerät auf der sich hier nicht angezeigt, und die ODBC-Verbindung für sie erstellt haben, klicken Sie dann möglicherweise etwas mit Ihrem Konto von PDWWatcher. Wenn sie als "nicht überwacht", dass möglicherweise ein Problem mit Ihrem Konto PDWMonitor angezeigt. Bitte etwas Geduld SCOM nimmt Änderungen in Echtzeit, sondern überprüft regelmäßig, ob neue Geräte überwachen, und sendet in regelmäßigen Abständen Abfragen an die Einheiten für die Überwachung.  
   
-![Dazu gehören softwarelastenausgleichsmodule](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM2.png "SCOM_SCOM2")  
+![Appliances](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM2.png "SCOM_SCOM2")  
   
 ### <a name="appliances-diagram"></a>Anwendungsdiagramm  
 Der Diagrammseite Einheiten ist, in dem Sie einen Blick auf die Integrität Ihrer Anwendung mit einer Strukturansicht finden können:  
   
 ![Anwendungsdiagramm](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM3.png "SCOM_SCOM3")  
   
-### <a name="nodes"></a>Knoten  
+### <a name="nodes"></a>Nodes  
 Schließlich können mit die Knoten-Ansicht der Integrität Ihrer Anwendung über jeden Knoten finden Sie unter:  
   
-![Knoten](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM4.png "SCOM_SCOM4")  
+![Nodes](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM4.png "SCOM_SCOM4")  
   
 ## <a name="see-also"></a>Siehe auch  
 <!-- MISSING LINKS [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  
-[Grundlegendes zu Admin Console-Warnungen &#40; Analyseplattformsystem &#41;](understanding-admin-console-alerts.md)  
+[Grundlegendes zu Verwaltungskonsolenwarnungen &#40;Analyseplattformsystem&#41;](understanding-admin-console-alerts.md)  
   

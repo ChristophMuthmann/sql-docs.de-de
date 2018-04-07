@@ -2,29 +2,30 @@
 title: Herstellen einer Verbindung mit SQLServer (DB2eToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-db2
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: b59803cb-3cc6-41cc-8553-faf90851410e
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1530b84e785a0c707f4a0d8ca66b273ca697ccde
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: a985f474e67c846fcb7d4b0428f8f61ba3e010e9
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="connecting-to-sql-server-db2etosql"></a>Herstellen einer Verbindung mit SQLServer (DB2eToSQL)
 Zum Migrieren von DB2-Datenbanken zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]2014 oder Azure SQL-Datenbank müssen Sie mit keines dieser Zielinstanzen von verbinden [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Wenn Sie eine Verbindung herstellen, erhält SSMA Metadaten zu allen Datenbanken in der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] und zeigt Sie Datenbank-Metadaten in die [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Metadaten-Explorer. SSMA speichert Informationen zu welcher Instanz des [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Sie verbunden sind, jedoch werden Kennwörter nicht gespeichert.  
@@ -49,7 +50,7 @@ Wenn das Konto, das verwendet wird, für die Verbindung [!INCLUDE[ssNoVersion](.
 ## <a name="establishing-a-sql-server-connection"></a>Herstellen einer SQL Server-Verbindung  
 Vor dem Konvertieren von DB2-Datenbankobjekte auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Syntax müssen Sie eine Verbindung mit der Instanz von herstellen [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] , wo Sie mindestens eine DB2-Datenbank migrieren möchten.  
   
-Wenn Sie die Verbindungseigenschaften definieren, geben Sie auch die Datenbank, in denen Objekte und Daten migriert werden sollen. Sie können diese Zuordnung auf Schemaebene DB2 anpassen, nach dem Herstellen einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Weitere Informationen finden Sie unter [Mapping DB2 Schemas zu SQL Server-Schemas &#40; DB2ToSQL &#41;](../../ssma/db2/mapping-db2-schemas-to-sql-server-schemas-db2tosql.md).  
+Wenn Sie die Verbindungseigenschaften definieren, geben Sie auch die Datenbank, in denen Objekte und Daten migriert werden sollen. Sie können diese Zuordnung auf Schemaebene DB2 anpassen, nach dem Herstellen einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Weitere Informationen finden Sie unter [DB2-Schemas in SQL Server-Schemas zuordnen &#40;DB2ToSQL&#41;](../../ssma/db2/mapping-db2-schemas-to-sql-server-schemas-db2tosql.md).  
   
 > [!IMPORTANT]  
 > Bevor Sie versuchen, eine Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], stellen Sie sicher, dass die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ausgeführt wird und Verbindungen akzeptieren können.  
@@ -90,11 +91,11 @@ Wenn Sie die Verbindungseigenschaften definieren, geben Sie auch die Datenbank, 
   
 ||||||  
 |-|-|-|-|-|  
-|**Projekt Typ Vs-SERVER-ZIELVERSION**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012 <br />(Version:11.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2014 <br />(Version:12.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2016 <br />(Version:13.x)|Azure SQL-Datenbank|  
+|**Projekt Typ Vs-SERVER-ZIELVERSION**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012 <br />(Version:11.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2014 <br />(Version:12.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2016 <br />(Version:13.x)|Azure SQL DB|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012|ja|ja|ja||  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2014||ja|ja||  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2014|||ja||  
-|Azure SQL-Datenbank||||ja|  
+|Azure SQL DB||||ja|  
   
 > [!IMPORTANT]  
 > Konvertierung der Datenbankobjekte erfolgt gemäß den Projekttyp, aber nicht gemäß der Version von den [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Sie verbunden sind. Im Fall von [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2014 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2016 oder Azure SQL-Datenbank.  
@@ -115,14 +116,14 @@ Metadaten zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Datenbank
 ## <a name="next-step"></a>Nächster Schritt  
 Der nächste Schritt der Migration hängt von Ihren Anforderungen Projekt:  
   
--   Die Zuordnung zwischen DB2 Schemas anpassen und [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Datenbanken und Schemas, finden Sie unter [DB2 Zuordnungsschemas zu SQL Server-Schemas &#40; DB2ToSQL &#41;](../../ssma/db2/mapping-db2-schemas-to-sql-server-schemas-db2tosql.md).  
+-   Die Zuordnung zwischen DB2 Schemas anpassen und [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Datenbanken und Schemas, finden Sie unter [DB2 Zuordnungsschemas in SQL Server-Schemas &#40;DB2ToSQL&#41;](../../ssma/db2/mapping-db2-schemas-to-sql-server-schemas-db2tosql.md).  
   
--   Konfigurationsoptionen für die Projekte anpassen können, finden Sie unter [Projekteinstellungen &#40; Konvertierung &#41; &#40; DB2ToSQL &#41; ](../../ssma/db2/project-settings-conversion-db2tosql.md) und Verwandte Abschnitte.  
+-   Konfigurationsoptionen für die Projekte anpassen können, finden Sie unter [Projekteinstellungen &#40;Konvertierung&#41; &#40;DB2ToSQL&#41; ](../../ssma/db2/project-settings-conversion-db2tosql.md) und Verwandte Abschnitte.  
   
--   Zum Anpassen der Zuordnung von Quelle und Ziel-Datentypen finden Sie unter [Zuordnung DB2 und SQL Server-Datentypen &#40; DB2ToSQL &#41;](../../ssma/db2/mapping-db2-and-sql-server-data-types-db2tosql.md).  
+-   Zum Anpassen der Zuordnung von Quelle und Ziel-Datentypen finden Sie unter [Zuordnung DB2 und SQL Server-Datentypen &#40;DB2ToSQL&#41;](../../ssma/db2/mapping-db2-and-sql-server-data-types-db2tosql.md).  
   
--   Wenn Sie nicht verfügen, um diese Aufgaben auszuführen, können Sie die DB2-Datenbank-Objektdefinitionen in konvertieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Objektdefinitionen. Weitere Informationen finden Sie unter [DB2-Schemas konvertieren &#40; DB2ToSQL &#41;](../../ssma/db2/converting-db2-schemas-db2tosql.md).  
+-   Wenn Sie nicht verfügen, um diese Aufgaben auszuführen, können Sie die DB2-Datenbank-Objektdefinitionen in konvertieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Objektdefinitionen. Weitere Informationen finden Sie unter [DB2-Schemas konvertieren &#40;DB2ToSQL&#41;](../../ssma/db2/converting-db2-schemas-db2tosql.md).  
   
 ## <a name="see-also"></a>Siehe auch  
-[Migrieren von DB2-Datenbanken zu SQLServer &#40; DB2ToSQL &#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
+[Migrieren von DB2-Datenbanken zu SQLServer &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
   

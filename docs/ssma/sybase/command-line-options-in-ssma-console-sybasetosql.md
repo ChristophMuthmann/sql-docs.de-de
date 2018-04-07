@@ -21,13 +21,13 @@ ms.assetid: 337cbd26-67b7-4c88-9deb-d0a69a3d7714
 caps.latest.revision: 11
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8eb96fb924a26d691db1ba6577d0b6f9c93e49ee
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 4926712b260fe20dc42518ed1bccb70bb0ab306c
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="command-line-options-in-ssma-console-sybasetosql"></a>Befehlszeilenoptionen in SSMA-Konsole (SybaseToSQL)
 Microsoft stellt Ihnen eine Reihe robuster Befehlszeilenoptionen zum Ausführen und Steuern von SSMA-Aktivitäten. In den folgenden Abschnitten ausführlich identisch.  
@@ -165,21 +165,21 @@ Zeigt eine syntaxzusammenfassung der Optionen SSMA-Konsole:
   
 `C:\>SSMAforSybaseConsole.EXE -?`  
   
-Einer tabellarischen Ansicht von der Konsole SSMA-Befehlszeilenoptionen finden Sie unter [Anhang - 1 &#40; SybaseToSQL &#41; ](../../ssma/sybase/appendix-1-sybasetosql.md).  
+Einer tabellarischen Ansicht von der Konsole SSMA-Befehlszeilenoptionen finden Sie unter [Anhang - 1 &#40;SybaseToSQL&#41;](../../ssma/sybase/appendix-1-sybasetosql.md).  
   
 ### <a name="securepassword-help-option-securepassword--help"></a>SecurePassword Help Option: – Securepassword-? / Help  
 Zeigt eine syntaxzusammenfassung der Optionen SSMA-Konsole:  
   
 `C:\>SSMAforSybaseConsole.EXE -securepassword -?`  
   
-Einer tabellarischen Ansicht von der Konsole SSMA-Befehlszeilenoptionen finden Sie unter [Anhang - 1 &#40; SybaseToSQL &#41;](../../ssma/sybase/appendix-1-sybasetosql.md)  
+Einer tabellarischen Ansicht von der Konsole SSMA-Befehlszeilenoptionen finden Sie unter [Anhang - 1 &#40;SybaseToSQL&#41;](../../ssma/sybase/appendix-1-sybasetosql.md)  
   
 ### <a name="next-step"></a>Nächster Schritt  
 Der nächste Schritt hängt davon ab, auf die Anforderungen Ihres Projekts:  
   
--   Zur Angabe eines Kennworts oder einer Exportieren / Importieren von Kennwörtern, finden Sie unter [Verwalten von Kennwörtern &#40; SybaseToSQL &#41; ](../../ssma/sybase/managing-passwords-sybasetosql.md).  
+-   Zur Angabe eines Kennworts oder einer Exportieren / Importieren von Kennwörtern, finden Sie unter [Verwalten von Kennwörtern &#40;SybaseToSQL&#41;](../../ssma/sybase/managing-passwords-sybasetosql.md).  
   
--   Generieren von Berichten, finden Sie unter [Generieren von Berichten &#40; SybaseToSQL &#41; ](../../ssma/sybase/generating-reports-sybasetosql.md).  
+-   Generieren von Berichten, finden Sie unter [Generieren von Berichten &#40;SybaseToSQL&#41;](../../ssma/sybase/generating-reports-sybasetosql.md).  
   
--   Behandlung von Problemen in der Konsole, finden Sie unter [Problembehandlung &#40; SybaseToSQL &#41; ](../../ssma/sybase/troubleshooting-sybasetosql.md).  
+-   Behandlung von Problemen in der Konsole, finden Sie unter [Problembehandlung &#40;SybaseToSQL&#41;](../../ssma/sybase/troubleshooting-sybasetosql.md).  
   

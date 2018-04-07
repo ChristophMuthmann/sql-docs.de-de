@@ -2,29 +2,30 @@
 title: Konvertieren von DB2-Schemas (DB2ToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-db2
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 7947efc3-ca86-4ec5-87ce-7603059c75a0
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e3684380a10f371952b2461907bb36a7b13f1107
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 2483c178999952ed552c78016aa1a4d4c994512d
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="converting-db2-schemas-db2tosql"></a>Konvertieren von DB2-Schemas (DB2ToSQL)
 Nachdem Sie eine Verbindung mit DB2 hergestellt haben, verbunden [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], und Set-Projekt und Datenoptionen für die Zuordnung, können Sie DB2-Datenbankobjekte zu konvertieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Datenbankobjekten.  
@@ -35,7 +36,7 @@ Konvertieren von Datenbankobjekten die Objektdefinitionen aus DB2 dauert, konver
 Bei der Konvertierung druckt SSMA Ausgabenachrichten in den Ausgabebereich und Fehlermeldungen in den Bereich Fehlerliste. Verwenden Sie die Ausgabe und Fehler Informationen, um festzustellen, ob Sie so ändern Sie die DB2-Datenbanken oder die Konvertierung in die gewünschte Konvertierungsergebnisse zu erhalten haben.  
   
 ## <a name="setting-conversion-options"></a>Festlegen von Optionen  
-Lesen Sie vor dem Konvertieren von Objekten, das Projekt Konvertierungsoptionen in der **Projekteinstellungen** (Dialogfeld). Mithilfe dieses Dialogfelds können Sie festlegen, wie SSMA Funktionen und globalen Variablen konvertiert. Weitere Informationen finden Sie unter [Projekteinstellungen &#40; Konvertierung &#41; &#40; DB2ToSQL &#41; ](../../ssma/db2/project-settings-conversion-db2tosql.md).  
+Lesen Sie vor dem Konvertieren von Objekten, das Projekt Konvertierungsoptionen in der **Projekteinstellungen** (Dialogfeld). Mithilfe dieses Dialogfelds können Sie festlegen, wie SSMA Funktionen und globalen Variablen konvertiert. Weitere Informationen finden Sie unter [Projekteinstellungen &#40;Konvertierung&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-conversion-db2tosql.md).  
   
 ## <a name="conversion-results"></a>Konvertierungsergebnisse  
 Die folgende Tabelle zeigt, welche DB2 Objekte konvertiert werden, und die resultierende [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Objekte:  
@@ -151,7 +152,7 @@ Für jedes Element, das nicht konvertiert werden konnte, müssen Sie ermitteln, 
   
 -   Sie können den Quellcode für Prozeduren ändern, auf die **SQL** Registerkarte.  
   
--   Sie können das Objekt in der DB2-Datenbank zu entfernen oder zu überarbeiten problematischen Code ändern. Um den aktualisierten Code in SSMA zu laden, müssen Sie die Metadaten zu aktualisieren. Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit DB2-Datenbank &#40; DB2ToSQL &#41;](../../ssma/db2/connecting-to-db2-database-db2tosql.md).  
+-   Sie können das Objekt in der DB2-Datenbank zu entfernen oder zu überarbeiten problematischen Code ändern. Um den aktualisierten Code in SSMA zu laden, müssen Sie die Metadaten zu aktualisieren. Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit DB2-Datenbank &#40;DB2ToSQL&#41;](../../ssma/db2/connecting-to-db2-database-db2tosql.md).  
   
 -   Sie können das Objekt von der Migration ausschließen. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Metadaten-Explorer und DB2-Metadaten-Explorer, deaktivieren Sie das Kontrollkästchen neben dem Element vor dem Laden der Objekte in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] und Migrieren von Daten von DB2.  
   
@@ -159,5 +160,5 @@ Für jedes Element, das nicht konvertiert werden konnte, müssen Sie ermitteln, 
 Der nächste Schritt des Migrationsvorgangs besteht darin [Laden Sie konvertierte Objekte in SQL Server](http://msdn.microsoft.com/en-us/f4ea1ced-9f9f-4a9d-88ab-81dbab64adc3).  
   
 ## <a name="see-also"></a>Siehe auch  
-[Migrieren von DB2-Daten in SQLServer &#40; DB2ToSQL &#41;](../../ssma/db2/migrating-db2-data-into-sql-server-db2tosql.md)  
+[Migrieren von DB2-Daten in SQLServer &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-data-into-sql-server-db2tosql.md)  
   

@@ -2,58 +2,59 @@
 title: Generieren von Berichten (AccessToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-access
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: abb4264a-622e-4215-af5b-14e309b8a399
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8e8af206d514c49676cde2c2d26b9cbb01575803
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: d2fbe24e28d74a4aeb76482c06de32cde1785e76
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="generating-reports-accesstosql"></a>Generieren von Berichten (AccessToSQL)
 Berichte über bestimmte Aktivitäten mit Befehlen durchgeführt werden in SSMA-Konsole auf Objektebene-Struktur generiert.  
   
 Verwenden Sie das folgende Verfahren zum Generieren von Berichten:  
   
-1.  Geben Sie die **schreiben Zusammenfassung-Bericht-in** Parameter. Der verknüpfte Bericht wird als Dateiname gespeichert (falls angegeben), oder geben Sie im Ordner "". Der Dateiname ist System vordefiniert, wie in der Tabelle unten WHERE-, erwähnt  **&lt; n &gt;**  ist die Anzahl von eindeutigen Dateinamen, die mit einer Ziffer bei jeder Ausführung desselben Befehls inkrementiert.  
+1.  Geben Sie die **schreiben Zusammenfassung-Bericht-in** Parameter. Der verknüpfte Bericht wird als Dateiname gespeichert (falls angegeben), oder geben Sie im Ordner "". Der Dateiname ist System vordefiniert, wie in der Tabelle unten WHERE-, erwähnt **&lt;n&gt;** ist die Anzahl von eindeutigen Dateinamen, die mit einer Ziffer bei jeder Ausführung desselben Befehls inkrementiert.  
   
     Die Berichte Vis gegenüber Befehle sind:  
   
     ||||  
     |-|-|-|  
-    |**"SL". Nein.**|**Befehl**|**Berichtstitel**|  
+    |**Sl. Nein.**|**Befehl**|**Berichtstitel**|  
     |1|Generieren von Bewertungsbericht|AssessmentReport&lt;n&gt;. XML|  
-    |2|Convert-schema|SchemaConversionReport&lt;n&gt;. XML|  
-    |3|Migrieren von Daten|DataMigrationReport&lt;n&gt;. XML|  
-    |4|Synchronisieren von Ziel|TargetSynchronizationReport&lt;n&gt;. XML|  
-    |5|Aktualisieren von Datenbank|SourceDBRefreshReport&lt;n&gt;. XML|  
+    |2|convert-schema|SchemaConversionReport&lt;n&gt;.XML|  
+    |3|Migrieren von Daten|DataMigrationReport&lt;n&gt;.XML|  
+    |4|Synchronisieren von Ziel|TargetSynchronizationReport&lt;n&gt;.XML|  
+    |5|refresh-from-database|SourceDBRefreshReport&lt;n&gt;.XML|  
   
     > [!IMPORTANT]  
     > Ein Ausgabebericht unterscheidet sich von Assessment-Bericht. Die erste ist ein Bericht auf die Leistung eines ausgeführten Befehls beim, die zweite Datei ist ein XML-Bericht für die programmgesteuerte Nutzung.  
   
-    Für die Befehlsoptionen für das Ausgabeberichte (von "SL". Nein. 2 bis 4, oben), finden Sie in der [Ausführen der Konsole SSMA &#40; AccessToSQL &#41; ](../../ssma/access/executing-the-ssma-console-accesstosql.md) Abschnitt.  
+    Für die Befehlsoptionen für das Ausgabeberichte (von "SL". Nein. 2 bis 4, oben), finden Sie in der [SSMA-Konsole ausführen &#40;AccessToSQL&#41; ](../../ssma/access/executing-the-ssma-console-accesstosql.md) Abschnitt.  
   
 2.  Geben Sie den Umfang der Details, die Sie in den Ausgabebericht mithilfe der Einstellungen des Berichts Ausführlichkeit wünschen:  
   
     ||||  
     |-|-|-|  
-    |**"SL". Nein.**|**Installationsbefehl und Parametersatz**|**Beschreibung der Ausgabe**|  
+    |**Sl. Nein.**|**Installationsbefehl und Parametersatz**|**Beschreibung der Ausgabe**|  
     |1|Ausführliche = "false"|Generiert einen zusammenfassenden Bericht der Aktivität.|  
     |2|Ausführliche = "true"|Generiert einen zusammengefassten und detaillierten Statusbericht für jede Aktivität an.|  
   
@@ -64,7 +65,7 @@ Verwenden Sie das folgende Verfahren zum Generieren von Berichten:
   
     ||||  
     |-|-|-|  
-    |**"SL". Nein.**|**Installationsbefehl und Parametersatz**|**Beschreibung der Ausgabe**|  
+    |**Sl. Nein.**|**Installationsbefehl und Parametersatz**|**Beschreibung der Ausgabe**|  
     |1|Melden von Fehlern = "false"|Keine Details zu Fehler / Warnung / Informationen Nachrichten.|  
     |2|Melden von Fehlern = "true"|Detaillierter Fehler / Warnung / Informationen Nachrichten.|  
   
@@ -94,7 +95,7 @@ Verwenden Sie das folgende Verfahren zum Generieren von Berichten:
 ```  
   
 ### <a name="synchronize-target"></a>Synchronisieren von Ziel:  
-Der Befehl **synchronisieren Ziel** hat **Bericht Fehler zu** -Parameter, der den Speicherort der Fehlerbericht für den Synchronisierungsvorgang angibt. Klicken Sie dann eine Datei namens **TargetSynchronizationReport&lt;n&gt;. XML** wird am angegebenen Speicherort erstellt, in denen  **&lt; n &gt;**  ist die Anzahl von eindeutigen Dateinamen, die mit einer Ziffer bei jeder Ausführung desselben Befehls inkrementiert.  
+Der Befehl **synchronisieren Ziel** hat **Bericht Fehler zu** -Parameter, der den Speicherort der Fehlerbericht für den Synchronisierungsvorgang angibt. Klicken Sie dann eine Datei namens **TargetSynchronizationReport&lt;n&gt;. XML** wird am angegebenen Speicherort erstellt, in denen **&lt;n&gt;** ist die Anzahl von eindeutigen Dateinamen, die mit einer Ziffer bei jeder Ausführung desselben Befehls inkrementiert.  
   
 **Hinweis:** , wenn der Ordnerpfad angegeben ist, und klicken Sie dann 'Bericht-Fehler-to'-Parameter ein optionales Attribut für den Befehl "Synchronisieren-Ziel ist".  
   
@@ -115,14 +116,14 @@ Der Befehl **synchronisieren Ziel** hat **Bericht Fehler zu** -Parameter, der de
   
 **Bei Fehler:** gibt an, ob die Synchronisierungsfehler als Warnungen oder Fehler angegeben. Verfügbare Optionen für auf Fehler:  
   
--   Bericht insgesamt als Warnung  
+-   report-total-as-warning  
   
--   Bericht-each-als-Warnung  
+-   report-each-as-warning  
   
--   Fail-Skript  
+-   fail-script  
   
 ### <a name="refresh-from-database"></a>Aktualisierung aus Datenbank:  
-Der Befehl **Aktualisierung aus Datenbank** hat **Bericht Fehler zu** -Parameter, der den Speicherort der Fehlerbericht für den Aktualisierungsvorgang angibt. Klicken Sie dann eine Datei namens **SourceDBRefreshReport&lt;n&gt;. XML** wird am angegebenen Speicherort erstellt, in denen  **&lt; n &gt;**  ist die Anzahl von eindeutigen Dateinamen, die mit einer Ziffer bei jeder Ausführung desselben Befehls inkrementiert.  
+Der Befehl **Aktualisierung aus Datenbank** hat **Bericht Fehler zu** -Parameter, der den Speicherort der Fehlerbericht für den Aktualisierungsvorgang angibt. Klicken Sie dann eine Datei namens **SourceDBRefreshReport&lt;n&gt;. XML** wird am angegebenen Speicherort erstellt, in denen **&lt;n&gt;** ist die Anzahl von eindeutigen Dateinamen, die mit einer Ziffer bei jeder Ausführung desselben Befehls inkrementiert.  
   
 **Hinweis:** , wenn der Ordnerpfad angegeben ist, und klicken Sie dann 'Bericht-Fehler-to'-Parameter ein optionales Attribut für den Befehl "Synchronisieren-Ziel ist".  
   
@@ -145,11 +146,11 @@ Der Befehl **Aktualisierung aus Datenbank** hat **Bericht Fehler zu** -Parameter
   
 **Bei Fehler:** gibt an, ob die Aktualisierung Fehler als Warnungen oder Fehler anzugeben. Verfügbare Optionen für auf Fehler:  
   
--   Bericht insgesamt als Warnung  
+-   report-total-as-warning  
   
--   Bericht-each-als-Warnung  
+-   report-each-as-warning  
   
--   Fail-Skript  
+-   fail-script  
   
 ## <a name="see-also"></a>Siehe auch  
 [Ausführen der Konsole SSMA (Access)](http://msdn.microsoft.com/en-us/aa1bf665-8dc0-4259-b36f-46ae67197a43)  

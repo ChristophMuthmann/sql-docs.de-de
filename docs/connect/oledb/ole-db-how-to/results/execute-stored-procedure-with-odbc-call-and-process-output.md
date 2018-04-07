@@ -10,7 +10,7 @@ ms.component: ole-db-how-to
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
-- docset-sql-devref
+- drivers
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -20,11 +20,11 @@ author: pmasl
 ms.author: Pedro.Lopes
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 18a52c9828d84631668a0c18cf93a02cca7223ec
-ms.sourcegitcommit: 9f4330a4b067deea396b8567747a6771f35e6eee
+ms.openlocfilehash: 82faa1ac05b03fdf6dc980f97cfca4afa68e0fdb
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="execute-stored-procedure-with-odbc-call-and-process-output"></a>Führen Sie die gespeicherte Prozedur mit dem ODBC aufrufen und Verarbeiten von Ausgabe
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -362,6 +362,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Verarbeiten von Ergebnissen Gewusst-wie-Themen zur Vorgehensweise &#40; OLE DB &#41;](../../../oledb/ole-db-how-to/results/processing-results-how-to-topics-ole-db.md)  
+ [Verarbeiten von Ergebnissen Gewusst-wie-Themen zur Vorgehensweise & #40; OLE DB & #41;](../../../oledb/ole-db-how-to/results/processing-results-how-to-topics-ole-db.md)  
   
   

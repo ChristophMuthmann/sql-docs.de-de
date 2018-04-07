@@ -2,34 +2,35 @@
 title: Neues Projekt (SSMA) (MySQLToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-mysql
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 7a3846ee-b221-47a5-ac8c-d08a962931af
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5607f0d2cbcfb01cd7aa5846f114d07d8020b557
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 1ff23e86cd80c6aeba2a78f778511ef8f288d092
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="new-project-ssma-mysqltosql"></a>Neues Projekt (SSMA) (MySQLToSQL)
 Verwenden der **neues Projekt** (Dialogfeld), um ein neues SSMA-Projekt zu erstellen. Für den Zugriff auf die **neues Projekt** Dialogfeld auf die **Datei** Menü klicken Sie auf **neues Projekt**.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>enthalten  
 **Name**  
   
 Geben Sie den Namen des Projekts ein. SSMA wird die Erweiterung angefügt.  

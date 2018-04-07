@@ -2,23 +2,23 @@
 title: Berechtigungen erteilen
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.openlocfilehash: d7d685d15eb0e5704698ebd2b79c20589f49ee16
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 35542a9ea2544f0bdd357d3609937e1596e00a3f
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="grant-permissions"></a>Berechtigungen erteilen
 
@@ -221,7 +221,7 @@ For a list of all permissions, see [Permissions: GRANT, DENY, REVOKE &#40;SQL Se
 -->
 
 ## <a name="grant-permissions-to-monitor-the-appliance"></a>Gewähren von Berechtigungen für die Anwendung überwachen
-Die SQL Server PDW-Anwendung kann mithilfe der Verwaltungskonsole oder der SQL Server PDW-Systemsichten überwacht werden. Anmeldungen müssen Serverebene **VIEW SERVER STATE** über die Berechtigung zum Überwachen der Appliance. Anmeldungen müssen die **ALTER ANY CONNECTION** Berechtigung, um Verbindungen mit der Verwaltungskonsole zu beenden oder die **KILL** Befehl. Informationen über ausreichende Berechtigungen zum Verwenden der Verwaltungskonsole finden Sie unter [Erteilen von Berechtigungen zum Verwenden der Verwaltungskonsole &#40; SQLServer-PDW &#41; ](#grant-permissions-to-use-the-admin-console).  
+Die SQL Server PDW-Anwendung kann mithilfe der Verwaltungskonsole oder der SQL Server PDW-Systemsichten überwacht werden. Anmeldungen müssen Serverebene **VIEW SERVER STATE** über die Berechtigung zum Überwachen der Appliance. Anmeldungen müssen die **ALTER ANY CONNECTION** Berechtigung, um Verbindungen mit der Verwaltungskonsole zu beenden oder die **KILL** Befehl. Informationen über ausreichende Berechtigungen zum Verwenden der Verwaltungskonsole finden Sie unter [Erteilen von Berechtigungen zum Verwenden der Verwaltungskonsole &#40;SQL Server PDW&#41;](#grant-permissions-to-use-the-admin-console).  
   
 ### <a name="PermsAdminConsole"></a>Erteilen der Berechtigung zum Überwachen der Appliance mithilfe von Systemsichten  
 Die folgenden SQL-Anweisungen erstellen Sie eine Anmeldung, die mit dem Namen `monitor_login` und erteilt ihm die **VIEW SERVER STATE** über die Berechtigung zum der `monitor_login` Anmeldung.  
@@ -249,7 +249,7 @@ GO
 Admin-Anmeldungen erstellen zu können, finden Sie unter [fester Serverrollen](pdw-permissions.md#fixed-server-roles).  
   
 ## <a name="see-also"></a>Siehe auch
-[ANMELDUNGSERSTELLUNG](../t-sql/statements/create-login-transact-sql.md)  
+[CREATE LOGIN](../t-sql/statements/create-login-transact-sql.md)  
 [BENUTZER ERSTELLEN](../t-sql/statements/create-user-transact-sql.md)  
 [ERSTELLEN DER ROLLE ""](../t-sql/statements/create-role-transact-sql.md)  
 [Auslastungstest](load-overview.md)  

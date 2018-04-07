@@ -21,13 +21,13 @@ ms.assetid: b52dfd93-95af-4299-bc8f-83f2a7a6a518
 caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8028f170d5f3154b9874cda16cc18bd7b36a84b8
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 0647f807a6a28eb1dc450d3e38b2e591f1b51dd2
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="creating-test-cases-sybasetosql"></a>Erstellen von Testfällen (SybaseToSQL)
 Verwenden Sie den Testfall-Assistenten, um einen Test zu erstellen. Mit diesem Assistenten können Sie die Testfälle erstellen, durch Auswahl von Objekten überprüft und getestet, und geben Sie die Parameter testen.  
@@ -42,16 +42,16 @@ Wenn Sie im Dialogfenster erhalten, klicken Sie auf **Ja** Sybase Tester-Datenba
 ## <a name="overview-of-creating-test-cases-using-the-wizard"></a>Übersicht über das Erstellen von Testfällen, die mithilfe des Assistenten  
 Das Verfahren zum Erstellen eines Testfalls besteht aus fünf Schritten:  
   
-1.  [Initialisieren von Testfällen &#40; SybaseToSQL &#41; ](../../ssma/sybase/initializing-test-cases-sybasetosql.md).  
+1.  [Initialisieren von Testfällen &#40;SybaseToSQL&#41;](../../ssma/sybase/initializing-test-cases-sybasetosql.md).  
   
-2.  [Wählen Sie aus, und Konfigurieren von Objekten zum Test &#40; SybaseToSQL &#41; ](../../ssma/sybase/selecting-and-configuring-objects-to-test-sybasetosql.md).  
+2.  [Auswählen und Konfigurieren von Objekten mit Test &#40;SybaseToSQL&#41;](../../ssma/sybase/selecting-and-configuring-objects-to-test-sybasetosql.md).  
   
-3.  [Auswählen und Konfigurieren der betroffenen Objekte &#40; SybaseToSQL &#41; ](../../ssma/sybase/selecting-and-configuring-affected-objects-sybasetosql.md).  
+3.  [Auswählen und Konfigurieren von betroffene Objekte &#40;SybaseToSQL&#41;](../../ssma/sybase/selecting-and-configuring-affected-objects-sybasetosql.md).  
   
-4.  [Anpassen der Reihenfolge der Aufrufe &#40; SybaseToSQL &#41; ](../../ssma/sybase/customizing-calls-order-sybasetosql.md).  
+4.  [Anpassen der Reihenfolge der Aufrufe &#40;SybaseToSQL&#41;](../../ssma/sybase/customizing-calls-order-sybasetosql.md).  
   
-5.  [Beenden Testfall Vorbereitung &#40; SybaseToSQL &#41; ](../../ssma/sybase/finishing-test-case-preparation-sybasetosql.md).  
+5.  [Abschließen des Testfalls Vorbereitung &#40;SybaseToSQL&#41;](../../ssma/sybase/finishing-test-case-preparation-sybasetosql.md).  
   
 ## <a name="see-also"></a>Siehe auch  
-[Testen von migriert Datenbankobjekte &#40; SybaseToSQL &#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
+[Testen von Datenbankobjekten migriert &#40;SybaseToSQL&#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
   

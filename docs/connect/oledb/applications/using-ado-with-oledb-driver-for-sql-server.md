@@ -10,7 +10,7 @@ ms.component: oledb|applications
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
-- docset-sql-devref
+- drivers
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -22,11 +22,11 @@ author: pmasl
 ms.author: Pedro.Lopes
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 31dfd17d0e5f12cfddf88030e2b3516ea3ada0e6
-ms.sourcegitcommit: 9f4330a4b067deea396b8567747a6771f35e6eee
+ms.openlocfilehash: 3003fd77624f7e304f8e3f493148475c1187a86b
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="using-ado-with-ole-db-driver-for-sql-server"></a>Verwenden von ADO mit OLE DB-Treiber für SQLServer
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -171,4 +171,4 @@ Set con = Nothing
  In früheren Versionen des OLE DB-Anbieters hätte dieser Code bewirkt, dass für den zweiten Execute-Aufruf eine Standardverbindung erstellt wird, weil in diesen Versionen nur ein aktives Resultset pro Verbindung geöffnet werden konnte. Weil die Standardverbindung nicht in den OLE DB-Verbindungspool aufgenommen wurde, bedeutete dies zusätzlichen Aufwand. Mit der MARS-Funktion, die von der OLE DB-Treiber für SQL Server verfügbar gemacht werden erhalten Sie mehrere aktive Resultsets in einer Verbindung.  
 
 ## <a name="see-also"></a>Siehe auch  
- [Erstellen von Anwendungen mit OLE DB-Treiber für SQLServer](../../oledb/applications/building-applications-with-oledb-driver-for-sql-server.md)  
+ [Erstellen von Anwendungen mit dem OLE DB-Treiber für SQL Server](../../oledb/applications/building-applications-with-oledb-driver-for-sql-server.md)  

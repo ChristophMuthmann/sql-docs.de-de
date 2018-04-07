@@ -2,14 +2,15 @@
 title: Erstellen von Variablenwert-Dateien (MySQLToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-mysql
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
@@ -18,23 +19,23 @@ helpviewer_keywords:
 - Creating variable value files
 - variable value file validation
 ms.assetid: 1dc56a7b-8e3a-4576-ad4f-47050bf7e28a
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1cd159682512255ab253630ac762fbeac104ab14
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 04b0efa56050e500277a62e52cbbbec9f6d261b2
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="creating-variable-value-files-mysqltosql"></a>Erstellen von Variablenwert-Dateien (MySQLToSQL)
 Variablendatei Wert ist eine XML-Datei mit den Parameterwerten für Befehle wie die Quelle oder Ziel-Servernamen, die häufig von der Migration von einem Server auf einen anderen ändern. Wenn eine große Anzahl von Datenbank-Migrationen auftreten, mehrere Dateien zum Speichern des Wert der einzelnen Quellserver werden erstellt und in master Skriptdatei mit verwiesen die **– V** zur Befehlszeile wechseln. Dadurch erhalten Sie statische Werte in ein paar Skriptdateien mit den Variablen Werten in mehreren Dateien.  
   
 > [!NOTE]  
 > 1.  Variablennamen sind mit dem Präfix und Suffix ein Symbol, das $ (Dollar). Wenn einen Wert in der Datei Variablenwert in der Variablen nicht zugewiesen sind, treten einen Fehler während der Analyse der Skriptdatei an, was in der Konsole Ausführungsprozess führte.  
-> 2.  The escape character for **$** is **$$**. Wenn der Wert, der eine Variable oder ein statischer Wert eines Parameters enthält  **$**  Symbol (Dollar), klicken Sie dann  **$$**  muss angegeben werden, um es als ein Zeichen anstatt einer Variablen zu behandeln.  
+> 2.  The escape character for **$** is **$$**. Wenn der Wert, der eine Variable oder ein statischer Wert eines Parameters enthält **$** Symbol (Dollar), klicken Sie dann **$$** muss angegeben werden, um es als ein Zeichen anstatt einer Variablen zu behandeln.  
 > 3.  Aus Gründen der Verwaltbarkeit können Variablen deklariert werden in `‘variable-group’` Elemente logische Trennung von Benutzer definierte Variablen.  Verwendung dieses Elements ist nicht obligatorisch.  
   
 **Beispiele:**  
@@ -100,7 +101,7 @@ Variablendatei Wert ist eine XML-Datei mit den Parameterwerten für Befehle wie 
 Benutzer kann problemlos überprüfen Benutzervoreinstellung Variablenwert-Datei anhand der Schemadefinitionsdatei **"ConsoleScriptVariablesSchema.xsd"** in den Ordner "Schemas" verfügbar.  
   
 ## <a name="next-step"></a>Nächster Schritt  
-Im nächsten Schritt in der Konsole funktioniert [erstellen, die Server-Connection-Dateien &#40; MySQLToSQL &#41;](../../ssma/mysql/creating-the-server-connection-files-mysqltosql.md)  
+Im nächsten Schritt in der Konsole funktioniert [erstellen die Server-Verbindungsdateien &#40;MySQLToSQL&#41;](../../ssma/mysql/creating-the-server-connection-files-mysqltosql.md)  
   
 ## <a name="see-also"></a>Siehe auch  
 [Erstellen die Server-Connection-Dateien (MySQL)](http://msdn.microsoft.com/en-us/df0e970c-da0b-4118-b359-c9dcbbad16d6)  

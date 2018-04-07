@@ -2,25 +2,25 @@
 title: Installieren Sie die SCOM-Management Packs (Analytics Platform System)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ab3985d8-0a71-4b28-9d28-9886ae2a110f
-caps.latest.revision: "16"
-ms.openlocfilehash: 0fce285f730508ec9bf7f384eed4f6b3c9ed3dda
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 16
+ms.openlocfilehash: 2f05a947f09940fc1dd676ec6ca316863f567a7f
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="install-the-scom-management-packs"></a>Installieren Sie die SCOM-Management Packs
 Führen Sie diese Schritte zum Herunterladen und installieren die System Center Operations Manager (SCOM) Management Packs für SQL Server PDW. Die Management Packs sind erforderlich, zum Überwachen von SQL Server PDW aus SCOM.  
@@ -82,7 +82,7 @@ Für die arbeitsauslastung HDInsight Herunterladen der [System Center Management
     ![– Installation komplett](./media/install-the-scom-management-packs/SCOM_licnse_agmtB3.png "SCOM_licnse_agmtB3")  
   
 ## <a name="next-step"></a>Nächster Schritt  
-Nun, dass Sie die Management Packs installiert haben, mit dem nächsten Schritt fortfahren: [importieren Sie das SCOM-Management Pack für PDW &#40; Analyseplattformsystem &#41; ](import-the-scom-management-pack-for-pdw.md).  
+Nun, dass Sie die Management Packs installiert haben, mit dem nächsten Schritt fortfahren: [importieren Sie das SCOM-Management Pack für PDW &#40;Analyseplattformsystem&#41;](import-the-scom-management-pack-for-pdw.md).  
   
 <!-- MISSING LINKS ## See Also  
 [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  

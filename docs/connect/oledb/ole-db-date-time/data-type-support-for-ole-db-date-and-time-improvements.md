@@ -10,7 +10,7 @@ ms.component: ole-db-date-time
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
-- docset-sql-devref
+- drivers
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -20,11 +20,11 @@ author: pmasl
 ms.author: Pedro.Lopes
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: bbfdaf039668820a108c3f261ca7162c17cd4c09
-ms.sourcegitcommit: 9f4330a4b067deea396b8567747a6771f35e6eee
+ms.openlocfilehash: 336665f67245911fa560c8ac54cad77dc9c661c6
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="data-type-support-for-ole-db-date-and-time-improvements"></a>Datentypunterstützung für OLE DB-Datum und Uhrzeit-Verbesserungen
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -188,6 +188,6 @@ enum SQLVARENUM {
  Wenn eine Anwendung DBTYPE_DBTIMESTAMP in legt *wType*, kann die Zuordnung zu überschreiben **datetime2** durch Angabe eines Typs in *PwszTypeName*. Wenn **"DateTime"** angegeben wird, *bScale* muss 3 sein. Wenn **Smalldatetime** angegeben wird, *bScale* muss 0 sein. Wenn *bScale* ist nicht konsistent mit *wType* und *PwszTypeName*, wird DB_E_BADSCALE zurückgegeben.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datum und Uhrzeit-Verbesserungen &#40; OLE DB &#41;](../../oledb/ole-db-date-time/date-and-time-improvements-ole-db.md)  
+ [Datum und Uhrzeit-Verbesserungen & #40; OLE DB & #41;](../../oledb/ole-db-date-time/date-and-time-improvements-ole-db.md)  
   
   

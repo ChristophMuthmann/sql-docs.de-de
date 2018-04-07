@@ -1,29 +1,27 @@
 ---
 title: Sys.dm_db_xtp_merge_requests (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 02/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-- database-engine-imoltp
-ms.tgt_pltfrm: 
+ms.technology: relational-databases
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: c1224e88-af74-4c99-ae32-d5d2c552a1f5
-caps.latest.revision: 
+caps.latest.revision: 2
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4e08d9df86f8b389e3a2811c4b63a35ab0945dd0
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: e511ba417e4eb58d1ff52b1896a03f8bb5f0722c
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="sysdmdbxtpmergerequests-transact-sql"></a>sys.dm_db_xtp_merge_requests (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]

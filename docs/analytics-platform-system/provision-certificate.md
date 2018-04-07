@@ -2,31 +2,31 @@
 title: PDW-Zertifikatbereitstellung (Analytics Platform System)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology: mpp-data-warehouse
 description: Die Seite PDW Zertifikatbereitstellung von Analytics Platform System Configuration Manager importiert oder von PDW verwendeten Zertifikats entfernt.
 ms.date: 01/05/2017
 ms.topic: article
 ms.assetid: 0a423b7d-c6ea-45c1-80b0-26758170594c
-caps.latest.revision: "22"
-ms.openlocfilehash: c6cbaf559e51103648a4238245d44425c4d5af77
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 22
+ms.openlocfilehash: 13e4f6ba3aeb105813ae53eee3a15ce41616273a
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="pdw-certificate-provisioning"></a>PDW-Zertifikatbereitstellung
 Die **PDW Zertifikatbereitstellung** auf der Seite das Analytics Platform System**Configuration Manager** importiert oder von PDW verwendeten Zertifikats entfernt. 
 
 Verwenden, kann ein Zertifikat zum Verschlüsseln von Verbindungen sicheren Kommunikation mit dem Steuerungsknoten über SQL Server-Clients, Tools, mit denen die SQL Server PDW-Treiber unterstützen die [Admin Console](monitor-the-appliance-by-using-the-admin-console.md), und lädt Sie Integration Services. 
   
-## <a name="prerequisites"></a>Voraussetzungen  
+## <a name="prerequisites"></a>Erforderliche Komponenten  
 Vor dem Installieren des Zertifikats an, führen Sie folgende Schritte aus:  
   
 1.  Ein gesichertes Zertifikat zu erhalten. Wenn Sie weitere Informationen zum Abrufen eines sicheren Zertifikats benötigen, wenden Sie sich an Microsoft Support.  
@@ -53,7 +53,7 @@ Die folgenden Anweisungen zeigen, wie zum Importieren oder entfernen das Zertifi
 ### <a name="to-import-the-certificate"></a>Um das Zertifikat zu importieren.  
   
 1.  Starten Sie die **Configuration Manager**.  
-Weitere Informationen finden Sie unter [starten Sie den Konfigurations-Manager &#40; Analyseplattformsystem &#41; ](launch-the-configuration-manager.md).  
+Weitere Informationen finden Sie unter [Starten des Konfigurations-Managers &#40;Analyseplattformsystem&#41;](launch-the-configuration-manager.md).  
 
 2.  Im linken Bereich des der **Configuration Manager**, erweitern Sie **Parallel Data Warehouse-Topologie**, und klicken Sie dann auf **Zertifikate**.  
   
@@ -84,4 +84,4 @@ SQL Server PDW wird zum Verschlüsseln von aktuellen Verbindungen fortgesetzt, a
 ![DWConfig-Anwendung PDW-Zertifikat](media/dwconfig-appl-pdw-cert.png "DWConfig Appliance PDW-Zertifikat")  
   
 ## <a name="see-also"></a>Siehe auch  
-[Starten Sie den Konfigurations-Manager &#40; Analyseplattformsystem &#41;](launch-the-configuration-manager.md)  
+[Starten Sie den Konfigurations-Manager &#40;Analyseplattformsystem&#41;](launch-the-configuration-manager.md)  

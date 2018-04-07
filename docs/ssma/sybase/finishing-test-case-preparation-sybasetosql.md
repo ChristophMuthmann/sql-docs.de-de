@@ -21,13 +21,13 @@ ms.assetid: 8b2a49b0-4296-4f3f-9e56-323aa6a6fa8e
 caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 41a22720524b4105bff9eec3dcf38e7183f01cc3
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 089bd7e6fe013f3cd590ff0c3e23929c367e67c8
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="finishing-test-case-preparation-sybasetosql"></a>Testfall zur Vorbereitung (SybaseToSQL) beenden
 Letzte Seite des Assistenten zeigt den Testfall Beschreibung und die Informationen zu Objekten, die am Test Beteiligter. Darüber hinaus können auf dieser Seite des Tests Ausführungsoptionen festlegen.  
@@ -56,7 +56,7 @@ Aktivieren Sie automatische Rollback, nach der Ausführung des Tests.
 -   Falls gewünscht **keine**, alle testausführung datenänderungen werden gespeichert.  
   
 ### <a name="auxiliary-tables-saving-mode"></a>Erweiterungstabellen Modus speichern  
-Definiert den speichern für Erweiterungstabellen erstellt während der Ausführung des Tests. Siehe die Beschreibung der Erweiterungstabellen in der [Ausführen von Testfällen &#40; SybaseToSQL &#41; ](../../ssma/sybase/running-test-cases-sybasetosql.md) Thema.  
+Definiert den speichern für Erweiterungstabellen erstellt während der Ausführung des Tests. Siehe die Beschreibung der Erweiterungstabellen in der [Ausführen von Testfällen &#40;SybaseToSQL&#41; ](../../ssma/sybase/running-test-cases-sybasetosql.md) Thema.  
   
 -   Bei Auswahl des **immer speichern**, Erweiterungstabellen Daten werden immer für die spätere Verwendung gespeichert werden.  
   
@@ -66,10 +66,10 @@ Definiert den speichern für Erweiterungstabellen erstellt während der Ausführ
   
 -   Bei Auswahl des **Benutzer bitten, wenn Tabelle Vergleich fehlgeschlagen**, der Benutzer kann die erforderliche Aktion auswählen, wenn ein Fehler auftritt.  
   
-Klicken Sie auf die **Fertig stellen** Schaltfläche zum Speichern des vorbereiteten Testfalls in [mithilfe von Test-Repositorys &#40; SybaseToSQL &#41; ](../../ssma/sybase/using-test-repositories-sybasetosql.md).  
+Klicken Sie auf die **Fertig stellen** Schaltfläche zum Speichern des vorbereiteten Testfalls in [mithilfe von Test-Repositorys &#40;SybaseToSQL&#41;](../../ssma/sybase/using-test-repositories-sybasetosql.md).  
   
 ## <a name="see-also"></a>Siehe auch  
-[Mithilfe der Test-Repositorys &#40; SybaseToSQL &#41;](../../ssma/sybase/using-test-repositories-sybasetosql.md)  
-[Ausführen von Testfällen &#40; SybaseToSQL &#41;](../../ssma/sybase/running-test-cases-sybasetosql.md)  
-[Testen von migriert Datenbankobjekte &#40; SybaseToSQL &#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
+[Mithilfe von Test-Repositorys &#40;SybaseToSQL&#41;](../../ssma/sybase/using-test-repositories-sybasetosql.md)  
+[Ausführen von Testfällen &#40;SybaseToSQL&#41;](../../ssma/sybase/running-test-cases-sybasetosql.md)  
+[Testen von Datenbankobjekten migriert &#40;SybaseToSQL&#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
   

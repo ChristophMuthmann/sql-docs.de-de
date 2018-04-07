@@ -2,14 +2,15 @@
 title: Migrations-Assistent (AccessToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-access
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
@@ -24,16 +25,16 @@ helpviewer_keywords:
 - Migration Wizard, New Project
 - Migration Wizard, Selecting objects to migrate
 ms.assetid: 5bab5914-b2ae-4795-8cf5-83e42d64bef2
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7b8e039ef80efd41fabbaeeddbb9e3e1e9acc2ea
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 03b556d7fa5f49d69d9554d3416e3277adc4f504
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="migration-wizard-accesstosql"></a>Migrations-Assistent (AccessToSQL)
 Der Migrations-Assistent führt Sie durch die Migration von einer oder mehreren Datenbanken aus Zugriff auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure. Mithilfe des Assistenten zum Erstellen eines Projekts, fügen Sie Datenbanken auf das Projekt, wählen Sie Objekte zu migrieren, und Verbinden mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure. Sie werden auch konvertieren, laden und Migrieren von Access-Schemas und Daten. Optional können Sie den Zugriff auf Tabellen zu verknüpfen [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure-Tabellen.  
@@ -108,7 +109,7 @@ Die Migrations-Statusseite wird der Fortschritt der Schemata Zugriff zu konverti
 Weitere Informationen zu dieser Seite finden Sie unter [konvertieren, laden und migrieren](http://msdn.microsoft.com/en-us/4ec83e96-88a5-4b7b-8d5a-f3429d9a936b)  
   
 ## <a name="see-also"></a>Siehe auch  
-[Erste Schritte mit SQL Server Migration Assistant für Access &#40; AccessToSQL &#41;](../../ssma/access/getting-started-with-sql-server-migration-assistant-for-access-accesstosql.md)  
+[Erste Schritte mit SQL Server Migration Assistant für Access &#40;AccessToSQL&#41;](../../ssma/access/getting-started-with-sql-server-migration-assistant-for-access-accesstosql.md)  
 [Migrieren von Access-Datenbanken zu SQLServer](http://msdn.microsoft.com/en-us/76a3abcf-2998-4712-9490-fe8d872c89ca)  
 [Benutzer-Schnittstelle Reference(Access)](http://msdn.microsoft.com/en-us/af24c303-4a41-449b-9c86-d6558a97e839)  
   

@@ -1,25 +1,25 @@
 ---
-title: "Dwloader Command-Line-Ladeprogramm für Parallel Data Warehouse"
+title: Dwloader Command-Line-Ladeprogramm für Parallel Data Warehouse
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology: mpp-data-warehouse
-description: "**Dwloader** ist ein Befehlszeilentool Parallel Data Warehouse (PDW), die Zeilen der Tabelle in einem Massenvorgang in eine vorhandene Tabelle lädt."
+description: '**Dwloader** ist ein Befehlszeilentool Parallel Data Warehouse (PDW), die Zeilen der Tabelle in einem Massenvorgang in eine vorhandene Tabelle lädt.'
 ms.date: 11/04/2016
 ms.topic: article
 ms.assetid: f79b8354-fca5-41f7-81da-031fc2570a7c
-caps.latest.revision: 
-ms.openlocfilehash: 4050df3fa69a823ebb36076367c2e8d7344ac1a2
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+caps.latest.revision: 90
+ms.openlocfilehash: 83d04928aa0c8f7fe0156f557466edccc36470dd
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="dwloader-command-line-loader"></a>Dwloader Command-Line-Ladeprogramm
 **Dwloader** ist ein Befehlszeilentool Parallel Data Warehouse (PDW), die Zeilen der Tabelle in einem Massenvorgang in eine vorhandene Tabelle lädt. Beim Laden von Zeilen können Sie alle Zeilen bis zum Ende der Tabelle hinzufügen (*append-Modus* oder *Fastappend-Modus*), neue Zeilen angefügt, und aktualisieren Sie vorhandene Zeilen (*Upsert-Modus*), oder löschen Sie alle vorhandene Zeilen vor dem Laden, und klicken Sie dann alle Zeilen in eine leere Tabelle einfügen (*Modus laden*).  
@@ -140,7 +140,7 @@ For information about configuring Windows Authentication, see [Security - Config
 **-f** *parameter_file_name*  
 Verwenden Sie eine Parameterdatei *Parameter_file_name*, anstelle von Befehlszeilenparametern. *Parameter_file_name* darf Befehlszeilenparameter außer *User_name* und *Kennwort*. Wenn ein Parameter in der Befehlszeile angegeben und in der Parameterdatei angegeben wird, überschreibt der Befehlszeile den File-Parameter.  
   
-Die Parameterdatei enthält einen Parameter, ohne die  **-**  Präfix pro Zeile.  
+Die Parameterdatei enthält einen Parameter, ohne die **-** Präfix pro Zeile.  
   
 Beispiele:  
   
@@ -402,7 +402,7 @@ Das Ladeprogramm Zeilen am Ende der vorhandenen Zeilen in der Zieltabelle eingef
 fastappend  
 Das Ladeprogramm Zeilen direkt, ohne eine temporäre Tabelle, bis zum Ende der vorhandenen Zeilen in die Zieltabelle eingefügt. Fastappend erfordert die Multi-Transaktion (– m) Option. Eine staging-Datenbank kann nicht angegeben werden, wenn Fastappend verwenden. Es ist kein Rollback mit Fastappend, was bedeutet, dass die Wiederherstellung aus einer fehlerhaften oder abgebrochenen Last vom Auslastungstest-Prozess verarbeitet werden muss.  
   
-Upsert **-K***Merge_column* [,... *n* ]  
+Upsert **-K***Merge_column* [,... *n* ]    
 Das Ladeprogramm verwendet die SQL Server-Merge-Anweisung, um vorhandene Zeilen aktualisiert, und fügen Sie neue Zeilen.  
   
 Die Option-K gibt die Spalte(n) auf die Zusammenführung basieren. Diese Spalten bilden einen Merge-Schlüssel, der eine eindeutige Zeile darstellen soll. Wenn der Merge-Schlüssel in der Zieltabelle vorhanden ist, wird die Zeile aktualisiert. Wenn der Merge-Schlüssel in der Zieltabelle nicht vorhanden ist, wird die Zeile angefügt.  

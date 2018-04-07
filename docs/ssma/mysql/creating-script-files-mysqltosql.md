@@ -2,14 +2,15 @@
 title: Erstellen von Skriptdateien (MySQLToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-mysql
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
@@ -20,18 +21,18 @@ helpviewer_keywords:
 - Creating script files, script file validation
 - Creating script files, server connection parameters
 ms.assetid: b4608fe7-c777-4ba5-b853-4402f02109e3
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ddfe50aa62403c1dda26ebf1f2017bdf45bf7864
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 1bef1029a5bfcde8f3cad7c83393c026e7d8a5d9
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
-# <a name="creating-script-files-mysqltosql"></a>Erstellen von Skriptdateien (MySQLToSQL)
+# <a name="creating-script-files-mysqltosql"></a>Creating Script Files (MySQLToSQL)
 Der erste Schritt vor dem Starten SSMA-Konsolenanwendung auf die Skriptdatei erstellt wird und bei Bedarf den Wert der Variablen-Datei und die Server-Verbindung erstellen.  
   
 Die Skriptdatei kann begrenzt in drei Abschnitte unterteilt werden..,:  
@@ -76,7 +77,7 @@ BenutzerKonfigurierbar-Optionen:
   
     </output-providers>  
     ```  
-    *oder*  
+    *Oder*  
   
     ```xml  
     <…All commands…>  
@@ -113,7 +114,7 @@ BenutzerKonfigurierbar-Optionen:
   
     </output-providers>  
     ```  
-    *oder*  
+    *Oder*  
   
     ```xml  
     <migrate-data>  
@@ -146,7 +147,7 @@ BenutzerKonfigurierbar-Optionen:
   
     </output-providers>  
     ```  
-    *oder*  
+    *Oder*  
   
     ```xml  
     <!-- Connect to target database -->  
@@ -179,7 +180,7 @@ BenutzerKonfigurierbar-Optionen:
   
     </output-providers>  
     ```  
-    *oder*  
+    *Oder*  
   
     ```xml  
     <!--synchronization-->  
@@ -190,7 +191,7 @@ BenutzerKonfigurierbar-Optionen:
   
     </synchronize-target>  
     ```  
-    *oder*  
+    *Oder*  
   
     ```xml  
     <!--data migration-->  
@@ -225,7 +226,7 @@ BenutzerKonfigurierbar-Optionen:
   
     </output-providers>  
     ```  
-    *oder*  
+    *Oder*  
   
     ```xml  
     <convert-schema object-name="<object-name>">  
@@ -278,7 +279,7 @@ BenutzerKonfigurierbar-Optionen:
   
     </output-providers>  
     ```  
-    *oder*  
+    *Oder*  
   
     ```xml  
     <…All commands…>  
@@ -320,7 +321,7 @@ BenutzerKonfigurierbar-Optionen:
   
     </output-providers>  
     ```  
-    *oder*  
+    *Oder*  
   
     ```xml  
     <…All commands…>  
@@ -353,7 +354,7 @@ Nicht konfigurierbare Option ist:
 -   **Maximale Verbindungswiederherstellungsversuchen:** bei eine bereits eingerichteten Verbindung ein Timeout oder aufgrund von Netzwerkfehlern unterbricht, der Server ist erforderlich, um die Verbindung hergestellt werden. Der erneuten Herstellen einer Verbindung versucht dürfen maximal **5** Wiederholungen nach, die die Konsole wird automatisch beim erneuten Verbindungsversuch ausgeführt. Die Einrichtung der automatischen erneuten Herstellen einer Verbindung wird der Aufwand bei der erneuten Ausführen des Skripts reduziert.  
   
 ## <a name="server-connection-parameters"></a>Server-Verbindungsparameter  
-Server-Verbindungsparameter können in der Skriptdatei oder in der Datei der Server-Verbindung definiert werden. Finden Sie in der [erstellen, die Server-Connection-Dateien &#40; MySQLToSQL &#41; ](../../ssma/mysql/creating-the-server-connection-files-mysqltosql.md) Abschnitt, um weitere Details.  
+Server-Verbindungsparameter können in der Skriptdatei oder in der Datei der Server-Verbindung definiert werden. Finden Sie in der [erstellen die Server-Verbindungsdateien &#40;MySQLToSQL&#41; ](../../ssma/mysql/creating-the-server-connection-files-mysqltosql.md) Abschnitt, um weitere Details.  
   
 ## <a name="script-commands"></a>Skriptbefehle  
 Die Skriptdatei enthält eine Sequenz von Migration Workflowbefehle in das XML-Format. Die SSMA-Konsolenanwendung verarbeitet die Migration in der Reihenfolge der Befehle, die angezeigt werden, in der Skriptdatei an.  
@@ -401,14 +402,14 @@ Vorlagen 3 Skriptdateien (zum Ausführen von verschiedenen Szenarios), bestehend
   
 Sie können Vorlagen (Dateien) ausgeführt wird, nachdem eine Änderung der Parameter für Relevanz darin angezeigt.  
   
-Vollständige Liste der Befehle des Skripts befinden sich im [Ausführen der Konsole SSMA &#40; MySQLToSQL &#41;](../../ssma/mysql/executing-the-ssma-console-mysqltosql.md)  
+Vollständige Liste der Befehle des Skripts befinden sich im [Ausführen der Konsole SSMA &#40;MySQLToSQL&#41;](../../ssma/mysql/executing-the-ssma-console-mysqltosql.md)  
   
 ## <a name="script-file-validation"></a>Skript-Dateiüberprüfung  
 Benutzer kann problemlos überprüfen Benutzervoreinstellung Skriptdatei anhand der Schemadefinitionsdatei **"M2SSConsoleScriptSchema.xsd"** in den Ordner "Schemas" verfügbar.  
   
 ## <a name="next-step"></a>Nächster Schritt  
-Im nächsten Schritt in der Konsole funktioniert [erstellen Variable Wertdateien &#40; MySQLToSQL &#41; ](../../ssma/mysql/creating-variable-value-files-mysqltosql.md).  
+Im nächsten Schritt in der Konsole Betrieb [Variable Value-Dateien erstellen &#40;MySQLToSQL&#41;](../../ssma/mysql/creating-variable-value-files-mysqltosql.md).  
   
 ## <a name="see-also"></a>Siehe auch  
-[Erstellen Variablenwert Dateien &#40; MySQLToSQL &#41;](../../ssma/mysql/creating-variable-value-files-mysqltosql.md)  
+[Erstellen von Dateien Variablenwert &#40;MySQLToSQL&#41;](../../ssma/mysql/creating-variable-value-files-mysqltosql.md)  
   

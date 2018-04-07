@@ -1,31 +1,31 @@
 ---
-title: "Microsoft JDBC Driver für SQLServer | Microsoft Docs"
-ms.custom: 
+title: Microsoft JDBC Driver für SQLServer | Microsoft Docs
+ms.custom: ''
 ms.date: 08/09/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: baf420ab-c058-4cec-a673-d7cb6397210e
-caps.latest.revision: 
+caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 0f9ec204daf3c0e0130be3fc1e4a44bf2982cb68
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: a7ccbec6a54b6709f04d39659517aeae5415127d
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="microsoft-jdbc-driver-for-sql-server"></a>Microsoft JDBC-Treiber für SQL Server
 
-![Download-nach-unten-Eingekreister](../../ssdt/media/download.png)[zum Herunterladen der JDBC-Treiber](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
 Stärkere Interoperabilität stellt Microsoft einen Java Database Connectivity (JDBC)-Treiber für die Verwendung mit SQL Server und Azure SQL-Datenbank. Der Treiber ist kostenlos und stellt die Java Database Connectivity aus allen Java Anwendungen, Anwendungsservern oder Applets mit aktiviertem Java bereit. Dieser Treiber ist ein JDBC-Treiber vom Typ 4, der die Database Connectivity über die standardmäßigen JDBC-Anwendungsprogrammierschnittstellen (Application Programming Interfaces, APIs) zur Verfügung stellt.
 

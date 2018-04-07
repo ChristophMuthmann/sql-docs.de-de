@@ -2,7 +2,7 @@
 title: 'T-SQL - Sprachelemente: Parallel Data Warehouse Analytics Platform System | Microsoft Docs'
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: ''
@@ -20,11 +20,11 @@ ms.topic: article
 ms.tgt_pltfrm: NA
 ms.workload: data-services
 ms.date: 12/15/2016
-ms.openlocfilehash: 0fa153859632739fe626a92dbf8d741a879dd74f
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
+ms.openlocfilehash: fc6d1b69896ffeef0402d0b359f3b978bf43d961
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="language-elements"></a>Language elements (Sprachelemente)
 Sprachelemente für Transact-SQL (T-SQL) für analytische Platform System (APS) SQL Server Parallel Data Warehouse (PDW).

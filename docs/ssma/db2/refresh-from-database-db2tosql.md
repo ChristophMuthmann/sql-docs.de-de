@@ -2,29 +2,30 @@
 title: Aktualisieren Sie aus der Datenbank (DB2ToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-db2
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 613a8368-b372-443f-8252-fb6dc31a003d
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c62364a5dae70a00624cceddc87e9673466212fa
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 421c86c9b8b61c95d5221c7ca28af9762a530778
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="refresh-from-database-db2tosql"></a>Aktualisieren Sie aus der Datenbank (DB2ToSQL)
 Die **aus der Datenbank aktualisieren** Dialogfeld können Sie auswählen, welche Objekte von der DB2-Datenbank zu aktualisieren. Zeilen, die Sie im Dialogfeld sind farblich codiert, basierend auf dem Status der Metadaten:  
@@ -37,11 +38,11 @@ Die **aus der Datenbank aktualisieren** Dialogfeld können Sie auswählen, welch
   
 -   Wenn das Objekt in der DB2-Datenbank neu ist, ist die Zeile rosa.  
   
-Sie können angeben, die Einstellungen der Standardrichtlinie Objekt aktualisieren in der **Projekteinstellungen** (Dialogfeld). Weitere Informationen finden Sie unter [Projekteinstellungen &#40; Synchronisierung &#41; &#40; DB2ToSQL &#41; ](../../ssma/db2/project-settings-synchronization-db2tosql.md).  
+Sie können angeben, die Einstellungen der Standardrichtlinie Objekt aktualisieren in der **Projekteinstellungen** (Dialogfeld). Weitere Informationen finden Sie unter [Projekteinstellungen&#40;Synchronisierung&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-synchronization-db2tosql.md).  
   
 Für den Zugriff auf die **aus der Datenbank aktualisieren** mit der rechten Maustaste ein Objekt in DB2-Metadaten-Explorer, und klicken Sie im Dialogfeld **aus der Datenbank aktualisieren**.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>enthalten  
 **Reduzieren (-)**  
 Reduzieren Sie alle Objektgruppen, um einzelne Objekte auszublenden.  
   

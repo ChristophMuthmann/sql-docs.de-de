@@ -21,13 +21,13 @@ ms.assetid: a219df74-543a-4aec-aeeb-79f90ac3e2ee
 caps.latest.revision: 8
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 102de8f523d91c34369ca84a4577e5978934349d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: a9871370dc3e6e8ca9d148a4df2435ce94286903
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="selecting-and-configuring-affected-objects-sybasetosql"></a>Auswählen und Konfigurieren von betroffene Objekte (SybaseToSQL)
 Auf dieser Seite können Sie Tabellen auswählen und Fremdschlüsseln, Änderungen in der verglichen werden sollen, wenn SSMA wird überprüft, die Ergebnisse der Ausführung für die Objekte, die in den vorherigen Schritt ausgewählt wurde ob. Darüber hinaus können Sie die Überprüfung der Parameter anpassen.  
@@ -48,9 +48,9 @@ Die Registerkarte "Tabelle" enthält die Rasteransicht der ausgewählten Tabelle
   
 -   Dezimalstellen  
   
--   Regel  
+-   Rule  
   
--   Default  
+-   Standardwert  
   
 -   Identität  
   
@@ -126,9 +126,9 @@ Sehen Sie die SELECT-Anweisungen generiert von SSMA Tester auf die **SQL verglei
 Sie können diese SELECT-Anweisungen für die benutzerdefinierte Überprüfung bearbeiten. Zum Speichern der Änderungen im Sybase und [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Anweisungen können mithilfe der **übernehmen** Schaltflächen unter den Quell- und Zielservern SQL "oder" entsprechend angepasst.  
   
 ## <a name="next-step"></a>Nächster Schritt  
-[Anpassen der Reihenfolge der Aufrufe &#40; SybaseToSQL &#41;](../../ssma/sybase/customizing-calls-order-sybasetosql.md)  
+[Anpassen der Reihenfolge der Aufrufe &#40;SybaseToSQL&#41;](../../ssma/sybase/customizing-calls-order-sybasetosql.md)  
   
 ## <a name="see-also"></a>Siehe auch  
-[Ausführen von Testfällen &#40; SybaseToSQL &#41;](../../ssma/sybase/running-test-cases-sybasetosql.md)  
-[Testen von migriert Datenbankobjekte &#40; SybaseToSQL &#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
+[Ausführen von Testfällen &#40;SybaseToSQL&#41;](../../ssma/sybase/running-test-cases-sybasetosql.md)  
+[Testen von Datenbankobjekten migriert &#40;SybaseToSQL&#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
   

@@ -1,50 +1,51 @@
 ---
-title: "Installieren von SSMA für Sybase-Clients (SybaseToSQL) | Microsoft Docs"
-ms.custom: 
+title: Installieren von SSMA für Sybase-Clients (SybaseToSQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-sybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: e770c2f2-52b9-4471-a207-0d35df41399c
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6448e7788759a78ec41dfaeccede1d768857fda8
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 96c227a0bff583c9cc399e2ec453f708bbb4c9b4
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="installing-ssma--for-sybase-client-sybasetosql"></a>Installieren von SSMA für Sybase-Clients (SybaseToSQL)
 Die SSMA-Client besteht aus der Programmdateien an, die verwendet werden, für die Verbindung zum Datenbankserver Sybase Adaptive Server Enterprise (ASE) und einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder Azure SQL-Datenbank, ASE Datenbankobjekte, die zu konvertierende [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder eine ungültige Syntax für Azure SQL-Datenbank, laden die Objekte in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder Azure SQL-Datenbank, und Migrieren von Daten zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder Azure SQLDB.  
   
 Dieses Thema enthält die Installationsvoraussetzungen und Anweisungen zum Installieren von SSMA.  
   
-## <a name="prerequisites"></a>Voraussetzungen  
+## <a name="prerequisites"></a>Erforderliche Komponenten  
 SSMA ist dienen zum Arbeiten mit ASE 11.9.2 oder höheren Versionen und allen Editionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
   
 Bevor Sie SSMA installiert haben, stellen Sie sicher, dass der Computer die folgenden Anforderungen erfüllt:  
   
 -   Windows 7 oder höher oder Windows Server 2008 oder höher.  
   
--   [!INCLUDE[msCoName](../../includes/msconame_md.md)]Windows Installer 3.1 oder höher.  
+-   [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows Installer 3.1 oder höher.  
   
 -   Die [!INCLUDE[msCoName](../../includes/msconame_md.md)] Version von .NET Framework 4.0 oder höher. .NET Framework, Version 4.0 wird über die [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Produktmedien. Sie können auch erhalten sie über die [.NET Framework Developer Center](http://go.microsoft.com/fwlink/?LinkId=48882).  
   
--   Der Anbieter für Sybase OLEDB/ADO.Net/ODBC und eine Verbindung mit der Sybase ASE-Datenbankserver mit den Datenbanken, die Sie migrieren möchten. Sie können von dem Produktdatenträger Sybase ASE Anbieter installieren. Informationen zur Konnektivität finden Sie unter [Herstellen einer Verbindung mit der Sybase ASE &#40; SybaseToSQL &#41; ](../../ssma/sybase/connecting-to-sybase-ase-sybasetosql.md).  
+-   Der Anbieter für Sybase OLEDB/ADO.Net/ODBC und eine Verbindung mit der Sybase ASE-Datenbankserver mit den Datenbanken, die Sie migrieren möchten. Sie können von dem Produktdatenträger Sybase ASE Anbieter installieren. Informationen zur Konnektivität finden Sie unter [Herstellen einer Verbindung mit der Sybase ASE &#40;SybaseToSQL&#41;](../../ssma/sybase/connecting-to-sybase-ase-sybasetosql.md).  
   
--   Zugriff auf sowie ausreichende Berechtigungen auf dem Computer, der die Zielinstanz des hostet [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder Azure SQL-Datenbank, in dem Sie Datenbankobjekte und Daten migrieren. Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit SQL Server &#40; SybaseToSQL &#41; ](../../ssma/sybase/connecting-to-sql-server-sybasetosql.md) / [Herstellen einer Verbindung mit Azure SQL-Datenbank &#40; SybaseToSQL &#41; ](../../ssma/sybase/connecting-to-azure-sql-db-sybasetosql.md).  
+-   Zugriff auf sowie ausreichende Berechtigungen auf dem Computer, der die Zielinstanz des hostet [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder Azure SQL-Datenbank, in dem Sie Datenbankobjekte und Daten migrieren. Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit SQL Server &#40;SybaseToSQL&#41;](../../ssma/sybase/connecting-to-sql-server-sybasetosql.md)/[Herstellen einer Verbindung mit Azure SQL-Datenbank &#40;SybaseToSQL&#41;](../../ssma/sybase/connecting-to-azure-sql-db-sybasetosql.md).  
   
 -   4 GB RAM empfohlen.  
   
@@ -55,7 +56,7 @@ Nachdem Sie die neueste Version heruntergeladen haben, müssen Sie die Installat
   
 **Zum Installieren des SSMA-Clients**  
   
-1.  Doppelklicken Sie auf SSMA für Sybase  *n* . Install.exe, wobei  *n*  Nummer des Builds.  
+1.  Doppelklicken Sie auf SSMA für Sybase *n*. Install.exe, wobei *n* Nummer des Builds.  
   
 2.  Klicken Sie auf der Seite "Willkommen" auf **Weiter**.  
   
@@ -72,9 +73,9 @@ Nachdem Sie die neueste Version heruntergeladen haben, müssen Sie die Installat
   
 Der Standardinstallationspfad lautet c:\Programme\Microsoft c:\Programme\Microsoft SQL Server Migration Assistant für Sybase.  
   
-Zusätzlich zu den SSMA-Programmdateien, müssen Sie auch die SSMA für Sybase Erweiterung Pack installieren, auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] . Weitere Informationen finden Sie unter [SSMA-Komponenten installieren, auf SQL Server &#40; SybaseToSQL &#41; ](../../ssma/sybase/installing-ssma-components-on-sql-server-sybasetosql.md).  
+Zusätzlich zu den SSMA-Programmdateien, müssen Sie auch die SSMA für Sybase Erweiterung Pack installieren, auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] . Weitere Informationen finden Sie unter [SSMA-Komponenten installieren, auf SQL Server &#40;SybaseToSQL&#41;](../../ssma/sybase/installing-ssma-components-on-sql-server-sybasetosql.md).  
   
 ## <a name="see-also"></a>Siehe auch  
-[Installieren SSMA-Komponenten auf SQLServer &#40; SybaseToSQL &#41;](../../ssma/sybase/installing-ssma-components-on-sql-server-sybasetosql.md)  
-[Migrieren von Sybase ASE-Datenbanken zu SQLServer - Azure SQL-Datenbank &#40; SybaseToSQL &#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
+[Installieren SSMA-Komponenten in SQLServer &#40;SybaseToSQL&#41;](../../ssma/sybase/installing-ssma-components-on-sql-server-sybasetosql.md)  
+[Migrieren von Sybase ASE-Datenbanken zu SQLServer – Azure SQL-Datenbank &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
   

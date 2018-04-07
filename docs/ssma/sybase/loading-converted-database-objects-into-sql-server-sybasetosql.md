@@ -21,13 +21,13 @@ ms.assetid: 4c59256f-99a8-4351-9559-a455813dbd06
 caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5eaf1ddf88b1658a3eb7c96d65cbae9630cc3784
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f57bd83c71660e4268758bcf47cd30c2b9b3e1c8
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="loading-converted-database-objects-into-sql-server-sybasetosql"></a>Laden konvertierte Objekte in SQLServer (SybaseToSQL) Datenbank
 Nachdem Sie die Datenbankobjekte Sybase Adaptive Server Enterprise (ASE) konvertiert haben [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure, laden Sie die resultierende Datenbankobjekte in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure. Kann entweder über die SSMA, die die Objekte zu erstellen, oder können Sie Skripts für die Objekte und führen Sie die Skripts selbst. Darüber hinaus SSMA können Sie die Ziel-Metadaten mit dem tatsächlichen Inhalt aktualisieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure-Datenbank.  
@@ -121,5 +121,5 @@ Nachdem Sie die konvertierte Datenbankobjekte in geladen haben [!INCLUDE[ssNoVer
 Der nächste Schritt des Migrationsvorgangs besteht darin [Migrieren von Sybase ASE Daten in SQL Server / SQL Azure(SybaseToSQL)](http://msdn.microsoft.com/en-us/54a39f5e-9250-4387-a3ae-eae47c799811).  
   
 ## <a name="see-also"></a>Siehe auch  
-[Migrieren von Sybase ASE-Datenbanken zu SQLServer - Azure SQL-Datenbank &#40; SybaseToSQL &#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
+[Migrieren von Sybase ASE-Datenbanken zu SQLServer – Azure SQL-Datenbank &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
   

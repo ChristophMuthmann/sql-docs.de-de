@@ -2,29 +2,30 @@
 title: Erstellen von Skriptdateien (DB2ToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-db2
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: ec23d188-b890-49b8-9a88-446df96269e4
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 088cd42b2635193ff34e45490811c44d6450ffc5
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 6c07c232e22ba41899846f6e9cb5e6ecfa5783be
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="creating-script-files-db2tosql"></a>Erstellen von Skriptdateien (DB2ToSQL)
 Der erste Schritt vor dem Starten SSMA-Konsolenanwendung auf die Skriptdatei erstellt wird und bei Bedarf den Wert der Variablen-Datei und die Server-Verbindung erstellen.  
@@ -71,7 +72,7 @@ BenutzerKonfigurierbar-Optionen:
   
     </output-providers>  
     ```  
-    *oder*  
+    *Oder*  
   
     ```xml  
     <…All commands…>  
@@ -108,7 +109,7 @@ BenutzerKonfigurierbar-Optionen:
   
     </output-providers>  
     ```  
-    *oder*  
+    *Oder*  
   
     ```xml  
     <migrate-data>  
@@ -141,7 +142,7 @@ BenutzerKonfigurierbar-Optionen:
   
     </output-providers>  
     ```  
-    *oder*  
+    *Oder*  
   
     ```xml  
     <!-- Connect to target database -->  
@@ -174,7 +175,7 @@ BenutzerKonfigurierbar-Optionen:
   
     </output-providers>  
     ```  
-    *oder*  
+    *Oder*  
   
     ```xml  
     <!--synchronization-->  
@@ -185,7 +186,7 @@ BenutzerKonfigurierbar-Optionen:
   
     </synchronize-target>  
     ```  
-    *oder*  
+    *Oder*  
   
     ```xml  
     <!--data migration-->  
@@ -220,7 +221,7 @@ BenutzerKonfigurierbar-Optionen:
   
     </output-providers>  
     ```  
-    *oder*  
+    *Oder*  
   
     ```xml  
     <convert-schema object-name="<object-name>">  
@@ -273,7 +274,7 @@ BenutzerKonfigurierbar-Optionen:
   
     </output-providers>  
     ```  
-    *oder*  
+    *Oder*  
   
     ```xml  
     <…All commands…>  
@@ -315,7 +316,7 @@ BenutzerKonfigurierbar-Optionen:
   
     </output-providers>  
     ```  
-    *oder*  
+    *Oder*  
   
     ```xml  
     <…All commands…>  
@@ -348,14 +349,14 @@ Nicht konfigurierbare Option ist:
 -   **Maximale Verbindungswiederherstellungsversuchen:** bei eine bereits eingerichteten Verbindung ein Timeout oder aufgrund von Netzwerkfehlern unterbricht, der Server ist erforderlich, um die Verbindung hergestellt werden. Der erneuten Herstellen einer Verbindung versucht dürfen maximal **5** Wiederholungen nach, die die Konsole wird automatisch beim erneuten Verbindungsversuch ausgeführt. Die Einrichtung der automatischen erneuten Herstellen einer Verbindung wird der Aufwand bei der erneuten Ausführen des Skripts reduziert.  
   
 ## <a name="server-connection-parameters"></a>Server-Verbindungsparameter  
-Server-Verbindungsparameter können in der Skriptdatei oder in der Datei der Server-Verbindung definiert werden. Finden Sie in der [erstellen, die Server-Connection-Dateien &#40; OracleToSQL &#41;](../../ssma/oracle/creating-the-server-connection-files-oracletosql.md) Abschnitt, um weitere Details.  
+Server-Verbindungsparameter können in der Skriptdatei oder in der Datei der Server-Verbindung definiert werden. Finden Sie in der [erstellen die Server-Verbindungsdateien &#40;OracleToSQL&#41; ](../../ssma/oracle/creating-the-server-connection-files-oracletosql.md) Abschnitt, um weitere Details.  
   
 ## <a name="script-commands"></a>Skriptbefehle  
 Die Skriptdatei enthält eine Sequenz von Migration Workflowbefehle in das XML-Format. Die SSMA-Konsolenanwendung verarbeitet die Migration in der Reihenfolge der Befehle, die angezeigt werden, in der Skriptdatei an.  
   
 Eine typische Datenmigration, der eine bestimmte Tabelle in eine DB2-Datenbank folgt z. B. die Hierarchie der: Schema -&gt; Tabelle.  
   
-Wenn alle Befehle in der Skriptdatei erfolgreich ausgeführt werden, wird die SSMA-Konsolenanwendung beendet und das Steuerelement an den Benutzer zurückgegeben. Den Inhalt einer Skriptdatei sind mehr oder weniger statisch mit Variableninformationen enthalten entweder in einem [Variable-Wert-Dateien erstellen &#40; OracleToSQL &#41;](../../ssma/oracle/creating-variable-value-files-oracletosql.md) oder in einem separaten Abschnitt innerhalb der Skriptdatei für Variablenwerte.  
+Wenn alle Befehle in der Skriptdatei erfolgreich ausgeführt werden, wird die SSMA-Konsolenanwendung beendet und das Steuerelement an den Benutzer zurückgegeben. Den Inhalt einer Skriptdatei sind mehr oder weniger statisch mit Variableninformationen enthalten entweder in einem [Variable-Wert-Dateien erstellen &#40;OracleToSQL&#41; ](../../ssma/oracle/creating-variable-value-files-oracletosql.md) oder in einem separaten Abschnitt innerhalb der Skriptdatei für Variablenwerte.  
   
 **Beispiel:**  
   
@@ -396,14 +397,14 @@ Vorlagen 3 Skriptdateien (zum Ausführen von verschiedenen Szenarios), bestehend
   
 Sie können Vorlagen (Dateien) ausgeführt wird, nachdem eine Änderung der Parameter für Relevanz darin angezeigt.  
   
-Vollständige Liste der Befehle des Skripts befinden sich im [Ausführen der Konsole SSMA &#40; DB2ToSQL &#41;](../../ssma/db2/executing-the-ssma-console-db2tosql.md)  
+Vollständige Liste der Befehle des Skripts befinden sich im [Ausführen der Konsole SSMA &#40;DB2ToSQL&#41;](../../ssma/db2/executing-the-ssma-console-db2tosql.md)  
   
 ## <a name="script-file-validation"></a>Skript-Dateiüberprüfung  
 Benutzer kann problemlos überprüfen Benutzervoreinstellung Skriptdatei anhand der Schemadefinitionsdatei **"O2SSConsoleScriptSchema.xsd"** in den Ordner "Schemas" verfügbar.  
   
 ## <a name="next-step"></a>Nächster Schritt  
-Im nächsten Schritt in der Konsole Betrieb [erstellen Variable Wertdateien &#40; DB2ToSQL &#41;](../../ssma/db2/creating-variable-value-files-db2tosql.md).  
+Im nächsten Schritt in der Konsole Betrieb [Variable Value-Dateien erstellen &#40;DB2ToSQL&#41;](../../ssma/db2/creating-variable-value-files-db2tosql.md).  
   
 ## <a name="see-also"></a>Siehe auch  
-[Erstellen Variablenwert Dateien &#40; DB2ToSQL &#41;](../../ssma/db2/creating-variable-value-files-db2tosql.md)  
+[Erstellen von Dateien Variablenwert &#40;DB2ToSQL&#41;](../../ssma/db2/creating-variable-value-files-db2tosql.md)  
   

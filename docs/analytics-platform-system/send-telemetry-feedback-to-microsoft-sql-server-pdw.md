@@ -2,25 +2,25 @@
 title: Senden Sie Telemetrie Feedback an Microsoft (SQLServer PDW)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 40a994f0-7eff-4db9-9572-401d6e1187a0
-caps.latest.revision: "18"
-ms.openlocfilehash: f78a9e7c1e66085dd84ba71e8e7b5f517131e18a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 18
+ms.openlocfilehash: 970533d5c0220ac651074977f7f522a480d5e2a4
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="send-telemetry-feedback-to-microsoft"></a>Telemetriedaten an Microsoft senden
 Analyseplattformsystem ist eine optionale Telemetrie-Funktion, die Verwaltungskonsole Daten an Microsoft zu senden. Wir empfehlen Ihnen, aktivieren Sie diese Option, um uns dabei, das Produkt zu verbessern.  
@@ -39,11 +39,11 @@ Um die maximale Datenschutz zu gewährleisten, wird Sie ohne Aktivierung der Tel
   
 #### <a name="to-enable-feedback"></a>Um Feedback zu aktivieren.  
   
-1.  Mit einem Administratorkonto der Appliance-Domäne mit dem Steuerungsknoten hergestellt (***Appliance_domain*-CTL01**), und öffnen Sie eine Eingabeaufforderung unter Verwendung von Windows-Administratoranmeldeinformationen.  
+1.  Mit einem Administratorkonto der Appliance-Domäne mit dem Steuerungsknoten hergestellt (***Appliance_domain *-CTL01**), und öffnen Sie eine Eingabeaufforderung unter Verwendung von Windows-Administratoranmeldeinformationen.  
   
 2.  Navigieren Sie zum folgenden Verzeichnis: `C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100`.  
   
-3.  Importieren Sie das Modul`Configure-RemoteMonitoring.ps1`  
+3.  Importieren Sie das Modul `Configure-RemoteMonitoring.ps1`  
   
     > [!NOTE]  
     > Sie importieren muss zwei Punkte im Befehl verwenden.  
@@ -89,11 +89,11 @@ Deaktivieren der Telemetrie werden alle Vorgänge beendet, die Informationen üb
   
 #### <a name="to-disable-telemetry"></a>So deaktivieren Sie Telemetrie  
   
-1.  Mit einem Administratorkonto der Appliance-Domäne mit dem Steuerungsknoten hergestellt (***Appliance_domain*-CTL01**), und öffnen Sie ein PowerShell-Fenster mit Administratorrechten aus.  
+1.  Mit einem Administratorkonto der Appliance-Domäne mit dem Steuerungsknoten hergestellt (***Appliance_domain *-CTL01**), und öffnen Sie ein PowerShell-Fenster mit Administratorrechten aus.  
   
 2.  Navigieren Sie zum folgenden Verzeichnis: `C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100`.  
   
-3.  Importieren Sie das Modul`Configure-RemoteMonitoring.ps1`  
+3.  Importieren Sie das Modul `Configure-RemoteMonitoring.ps1`  
   
     > [!NOTE]  
     > Sie importieren muss zwei Punkte im Befehl verwenden.  
@@ -117,8 +117,8 @@ Wenden Sie sich an CSS um Unterstützung zu erhalten, wenn Sie sehen Fehler oder
 Es gibt keinen Schaden beim Ausführen der `Disable-RemoteMonitoring` Befehl mehrmals.  
   
 ## <a name="see-also"></a>Siehe auch  
-[Überwachen Sie die Anwendung mithilfe der Verwaltungskonsole &#40; Analyseplattformsystem &#41;](monitor-the-appliance-by-using-the-admin-console.md)  
-[Überwachen Sie die Anwendung mithilfe von Systemsichten &#40; Analyseplattformsystem &#41;](monitor-the-appliance-by-using-system-views.md)  
-[Überwachen Sie die Anwendung mithilfe von System Center Operationsmanager &#40; Analyseplattformsystem &#41;](monitor-the-appliance-by-using-system-center-operations-manager.md)  
-[Verwenden Sie eine DNS-Weiterleitung zum Auflösen von nicht-Appliance DNS-Namen &#40; Analyseplattformsystem &#41;](use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md)  
+[Überwachen Sie die Anwendung mithilfe der Verwaltungskonsole &#40;Analyseplattformsystem&#41;](monitor-the-appliance-by-using-the-admin-console.md)  
+[Überwachen Sie die Anwendung mithilfe von Systemsichten &#40;Analyseplattformsystem&#41;](monitor-the-appliance-by-using-system-views.md)  
+[Überwachen Sie die Anwendung mit System Center Operationsmanager &#40;Analyseplattformsystem&#41;](monitor-the-appliance-by-using-system-center-operations-manager.md)  
+[Verwenden Sie nicht-Appliance DNS-Namen auflösen eine DNS-Weiterleitung &#40;Analyseplattformsystem&#41;](use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md)  
   

@@ -2,36 +2,37 @@
 title: Erstellen von Variablenwert-Dateien (AccessToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-access
-ms.custom: 
+ms.custom: ''
 ms.date: 08/17/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 808595c3-8ef1-40bd-a93e-5cf237950e08
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4d19975c619dcbcbf2b0c99b26d6065940d7414f
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 2c9e2d86d94c8e49c2aa54e431e5b2c2c4a1ba43
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="creating-variable-value-files-accesstosql"></a>Erstellen von Variablenwert-Dateien (AccessToSQL)
 Ein Wert Variablendatei ist eine XML-Datei mit den Parameterwerten für Befehle (z. B. den Servernamen Quelle bzw. zum Ziel), die häufig für Migrationen zu ändern. Wenn eine große Anzahl von Datenbank-Migrationen auftreten, mehrere Dateien zum Speichern des Wert der einzelnen Quellserver erstellt und in einer master Skriptdatei mit referenziert werden die **– V** zur Befehlszeile wechseln. Dieses Verhalten hilft dabei, die statische Werte in ein paar Skriptdateien mit den Variablen Werten in mehreren Dateien.  
   
 > [!NOTE]  
 > -  Variablennamen sind mit dem Präfix und Suffix ein Symbol, das $ (Dollar). Wenn eine Variable einen Wert in der Datei der Wert der Variablen nicht zugewiesen ist, tritt ein Fehler während der Analyse der Skriptdatei, resultierende, in der Konsole Ausführungsprozess führte.  
-> -  The escape character for **$** is **$$**. Wenn der Wert, der eine Variable oder ein statischer Wert eines Parameters enthält eine  **$**  Symbol (Dollar), klicken Sie dann  **$$**  muss angegeben werden, um es als ein Zeichen anstatt einer Variablen zu behandeln.  
+> -  The escape character for **$** is **$$**. Wenn der Wert, der eine Variable oder ein statischer Wert eines Parameters enthält eine **$** Symbol (Dollar), klicken Sie dann **$$** muss angegeben werden, um es als ein Zeichen anstatt einer Variablen zu behandeln.  
 > -  Aus Gründen der Verwaltbarkeit können Variablen deklariert werden in `‘variable-group’` Elemente logische Trennung von benutzerdefinierten Variablen.  Verwendung dieses Elements ist nicht obligatorisch.  
   
 **Beispiele:**  
@@ -101,7 +102,7 @@ Ein Wert Variablendatei ist eine XML-Datei mit den Parameterwerten für Befehle 
 Benutzer kann problemlos überprüfen Benutzervoreinstellung Variablenwert-Datei anhand der Schemadefinitionsdatei **ConsoleScriptVariablesSchema.xsd** in den Ordner "Schemas" verfügbar.  
   
 ## <a name="next-step"></a>Nächster Schritt  
-Im nächsten Schritt in der Konsole funktioniert [erstellen, die Server-Connection-Dateien &#40; AccessToSQL &#41;](../../ssma/access/creating-the-server-connection-files-accesstosql.md)  
+Im nächsten Schritt in der Konsole funktioniert [erstellen die Server-Verbindungsdateien &#40;AccessToSQL&#41;](../../ssma/access/creating-the-server-connection-files-accesstosql.md)  
   
 ## <a name="see-also"></a>Siehe auch  
 [Erstellen die Server-Verbindungsdateien (Access)](http://msdn.microsoft.com/829153be-aa8e-4162-87e8-69882feecf19)  

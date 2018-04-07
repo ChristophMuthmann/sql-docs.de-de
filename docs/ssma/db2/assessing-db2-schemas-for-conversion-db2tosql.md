@@ -1,31 +1,31 @@
 ---
-title: "Bewerten von DB2-Schemas für die Konvertierung (DB2ToSQL) | Microsoft Docs"
+title: Bewerten von DB2-Schemas für die Konvertierung (DB2ToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-db2
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - sql-ssma
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 8892f5a4-72ba-4406-8649-7a9d67f4c1d9
-caps.latest.revision: 
+caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4ee5825c7a7df208baeccd27a463defb2c6e250c
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 96c437f34bbe4b45c33082a18536aef33dd4b218
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="assessing-db2-schemas-for-conversion-db2tosql"></a>Bewerten von DB2-Schemas für die Konvertierung (DB2ToSQL)
 Bevor Sie Objekte laden und Migrieren von Daten zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], sollten Sie bestimmen, wie komplex die Migration gestellt werden und wie lange dauert die Migration. SSMA kann einen Assessment-Bericht erstellen, die den Prozentsatz von Objekten, die erfolgreich konvertiert werden. SSMA können auch die spezifischen Probleme anzeigen, die dazu führen, dass bei der Konvertierung auftreten.  

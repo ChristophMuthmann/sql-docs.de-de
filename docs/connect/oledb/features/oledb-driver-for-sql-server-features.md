@@ -10,7 +10,7 @@ ms.component: oledb|features
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
-- docset-sql-devref
+- drivers
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -21,11 +21,11 @@ author: pmasl
 ms.author: Pedro.Lopes
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: bda748c764d49044a76638ebd2e87a6d831ae66f
-ms.sourcegitcommit: 9f4330a4b067deea396b8567747a6771f35e6eee
+ms.openlocfilehash: 6c56a145ecfbb986c7ec0124202ff61e89036657
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="ole-db-driver-for-sql-server-features"></a>OLE DB-Treiber für SQL Server-Funktionen
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -78,7 +78,7 @@ ms.lasthandoff: 03/30/2018
  [Dienstprinzipalnamen &#40;SPN&#41; -Unterstützung in Clientverbindungen](../../oledb/features/service-principal-name-spn-support-in-client-connections.md)  
  Erläutert, auf welche Weise die Unterstützung für Dienstprinzipalnamen (Service Principal Names, SPN) erweitert wurde, damit die gegenseitige Authentifizierung über alle Protokolle hinweg möglich ist.  
   
- [Unterstützung von Spalten mit geringer Dichte in OLE DB-Treiber für SQLServer](../../oledb/features/sparse-columns-support-in-oledb-driver-for-sql-server.md)  
+ [Unterstützung von Spalten mit geringer Dichte im OLE DB-Treiber für SQL Server](../../oledb/features/sparse-columns-support-in-oledb-driver-for-sql-server.md)  
  Erläutert, OLE DB-Treiber für SQL Server-Unterstützung für Spalten mit geringer Dichte.  
   
  [Verbesserungen bei Datum und Zeit](../../oledb/features/date-and-time-improvements.md)  
@@ -87,10 +87,10 @@ ms.lasthandoff: 03/30/2018
  [Metadatenermittlung](../../oledb/features/metadata-discovery.md)  
  Erläutert Verbesserungen der Metadatenermittlung in [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)].  
   
- [UTF-16-Unterstützung in OLE DB-Treiber für SQLServer](../../oledb/features/utf-16-support-in-oledb-driver-for-sql-server.md)  
+ [UTF-16-Unterstützung im OLE DB-Treiber für SQL Server (OLE DB)](../../oledb/features/utf-16-support-in-oledb-driver-for-sql-server.md)  
  Erläutert eine mit [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] eingeführte Verhaltensänderung. Wenn Sie beim Binden eines Spaltenergebnisses oder Ausgabeparameters einen Puffer fester Länge übergeben und die **Wchar** Zeichen, die in den Puffer geschrieben wird, vor das abschließende Zeichen ein hoher Ersatzzeichencodepunkt eines Ersatzzeichenpaars und wenn das nächste **Wchar** Zeichen ist ein niedriger Ersatzzeichencodepunkt, OLE DB-Treiber für SQL Server wird nicht die hoher Ersatzzeichencodepunkt hinzugefügt, in den Puffer.  
   
- [OLE DB-Treiber für SQL Server-Unterstützung für hohe Verfügbarkeit, Wiederherstellung im Notfall](../../oledb/features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)  
+ [OLE DB-Treiber für SQL Server-Unterstützung für Hochverfügbarkeit, Notfallwiederherstellung](../../oledb/features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)  
  Erläutert, wie die Anwendung konfiguriert werden kann, um die hohe Verfügbarkeit und notfallwiederherstellung nutzen Funktionen, in hinzugefügt [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)].  
   
  [Zugreifen auf Diagnoseinformationen im Protokoll der erweiterten Ereignisse](../../oledb/features/accessing-diagnostic-information-in-the-extended-events-log.md)  
@@ -102,6 +102,6 @@ ms.lasthandoff: 03/30/2018
 ## <a name="see-also"></a>Siehe auch  
  [OLE DB-Treiber für SQL Server-Programmierung](../../oledb/oledb-driver-for-sql-server-programming.md)      
  [OLE DB-Themen zur Vorgehensweise](../../oledb/ole-db-how-to/ole-db-how-to-topics.md)   
- [OLE DB-Treiber für SQLServer installieren.](../../oledb/applications/installing-oledb-driver-for-sql-server.md)  
+ [Installation des OLE DB-Treibers für SQL Server](../../oledb/applications/installing-oledb-driver-for-sql-server.md)  
   
   

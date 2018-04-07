@@ -10,18 +10,18 @@ ms.component: ole-db-how-to
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
-- docset-sql-devref
+- drivers
 ms.tgt_pltfrm: ''
 ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 773c22fd645c661289ef574beb47c4a72a9c4d34
-ms.sourcegitcommit: 9f4330a4b067deea396b8567747a6771f35e6eee
+ms.openlocfilehash: 3828927497b98a0c9c24a17e669c492dec60bde1
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="read-a-filestream-column-to-file-using-ibcpsession-ole-db"></a>Lesen einer FILESTREAM-Spalte in eine Datei mithilfe von IBCPSession (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,9 +35,9 @@ ms.lasthandoff: 03/30/2018
   
  Erstellen Sie die Tabelle, aus der in diesem Beispiel gelesen wird, mithilfe eines der folgenden Beispiele:  
   
--   [Senden von Daten an eine FILESTREAM-Spalte, die mithilfe von ISequentialStream Grenze ICommandText-Parameter &#40; OLE DB &#41;](../../../oledb/ole-db-how-to/filestream/send-data-to-filestream-isequentialstream-bound-to-icommandtext.md)  
+-   [Senden von Daten an eine FILESTREAM-Spalte, die mithilfe von ISequentialStream Grenze ICommandText-Parameter & #40; OLE DB & #41;](../../../oledb/ole-db-how-to/filestream/send-data-to-filestream-isequentialstream-bound-to-icommandtext.md)  
   
--   [Senden von Daten an eine FILESTREAM-Spalte mithilfe von IRowsetFastUpload &#40; OLE DB &#41;](../../../oledb/ole-db-how-to/filestream/send-data-to-a-filestream-column-using-irowsetfastupload-ole-db.md)  
+-   [Senden von Daten an eine FILESTREAM-Spalte mithilfe von IRowsetFastUpload & #40; OLE DB & #41;](../../../oledb/ole-db-how-to/filestream/send-data-to-a-filestream-column-using-irowsetfastupload-ole-db.md)  
   
  Kopieren Sie das erste Codelisting, und fügen Sie es in eine Datei mit dem Namen ISSHelper.h ein.  
   

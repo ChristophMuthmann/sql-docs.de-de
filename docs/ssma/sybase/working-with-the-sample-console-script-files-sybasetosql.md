@@ -21,13 +21,13 @@ ms.assetid: ef221118-b442-4ca6-9409-6ee1d9f8d948
 caps.latest.revision: 9
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fd9859a3292d7cb9ec00f22f695be9aaa25b59f0
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 617c897ce05b3b57b32e8ffd67606d4314fb5c80
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="working-with-the-sample-console-script-files-sybasetosql"></a>Arbeiten mit der Konsole-Skriptdateien (SybaseToSQL)
 Einige Beispieldateien wurden zusammen mit dem Produkt für die Benutzer-Verweis und die Verwendung bereitgestellt. Dieser Abschnitt beschreibt die Möglichkeit, diese Skripts, sodass die Endbenutzer Bedürfnissen problemlos anzupassen.  
@@ -51,12 +51,12 @@ Referenz für den Benutzer haben die folgenden Konsole Skript Beispieldateien f�
   
     -   Der Benutzer kann mit der erforderlichen Datenbank einfach die Werte ändern, um die erforderlichen Quell- und Ziel-Serverdefinitionen verbinden. In das bereitgestellte Beispiel alle Werte bereitgestellt wie Variablenwerte in zur Verfügung stehen die **VariableValueFileSample.xml**.  Alle anderen Verbindungsparameter können aus der Verbindung des Benutzers arbeiten Serverdatei entfernt werden.  
   
-    -   Weitere Informationen zum Herstellen einer Verbindung mit dem Quell- und Ziel-Server finden Sie unter [erstellen, die Server-Connection-Dateien &#40; SybaseToSQL &#41; ](../../ssma/sybase/creating-the-server-connection-files-sybasetosql.md).  
+    -   Weitere Informationen zum Herstellen einer Verbindung mit dem Quell- und Ziel-Server finden Sie unter [erstellen die Server-Verbindungsdateien &#40;SybaseToSQL&#41;](../../ssma/sybase/creating-the-server-connection-files-sybasetosql.md).  
   
 -   **VariableValueFileSample.xml:**  
     Alle Variablen, die in der Beispielkonsole verwendet wurden, Skriptdateien und `ServersConnectionFileSample.xml` haben in dieser Datei sortiert wurden. Beispielskripts-Konsole ausführen, die ersetzen Sie die Beispiel-Variable der Benutzer muss, Werte mit Benutzer definierten Argumente und übergeben Sie diese Datei als ein zusätzliches Befehlszeilenargument zusammen mit der Skriptdatei.  
   
-    Weitere Informationen zu Wert Variablendatei, finden Sie unter [erstellen Variable Wertdateien &#40; SybaseToSQL &#41; ](../../ssma/sybase/creating-variable-value-files-sybasetosql.md).  
+    Weitere Informationen zu Wert Variablendatei, finden Sie unter [Variable Value-Dateien erstellen &#40;SybaseToSQL&#41;](../../ssma/sybase/creating-variable-value-files-sybasetosql.md).  
   
 -   **AssessmentReportGenerationSample.xml:**  
     Dieses Beispiel ermöglicht dem Benutzer um einen XML-Bewertung-Bericht zu generieren, die verwendet werden, können vom Benutzer für die Analyse bevor er beginnt, konvertieren und Migrieren von Daten.  
@@ -65,7 +65,7 @@ Referenz für den Benutzer haben die folgenden Konsole Skript Beispieldateien f�
   
     Wenn der Benutzer verfügt über mehrere Objekte bewerten / Datenbanken er mehrere festlegbaren `metabase-object` Knoten wie im veranschaulicht die `generate-assessment-report` des Befehls Beispiel 4 von der Konsole Beispielskriptdatei.  
   
-    Weitere Informationen zum Erstellen von Berichten finden Sie unter [Generieren von Berichten &#40; SybaseToSQL &#41; ](../../ssma/sybase/generating-reports-sybasetosql.md).  
+    Weitere Informationen zum Erstellen von Berichten finden Sie unter [Generieren von Berichten &#40;SybaseToSQL&#41;](../../ssma/sybase/generating-reports-sybasetosql.md).  
   
     > [!NOTE]  
     > -   Stellen Sie sicher, dass der Wert der Variablen Befehlszeilenargument-Datei an die Konsolenanwendung übergeben wird und VariableValueFileSample.xml wird mit den angegebenen Benutzer aktualisiert Werte.  
@@ -92,7 +92,7 @@ Referenz für den Benutzer haben die folgenden Konsole Skript Beispieldateien f�
   
     **Attribut**  
   
-    -   `source-schema:`Gibt die Quelldatenbank, die erforderlich sind, konvertiert werden soll.  
+    -   `source-schema:` Gibt die Quelldatenbank, die erforderlich sind, konvertiert werden soll.  
   
     -   `sql-server-schema`: Gibt an, die Zieldatenbank, die migriert werden  
   
@@ -106,7 +106,7 @@ Referenz für den Benutzer haben die folgenden Konsole Skript Beispieldateien f�
   
     **Attribut**  
   
-    `object-name`: Geben Sie die Quelldatenbank / Objektnamen Sie, die erforderlich sind, konvertiert werden soll. Sicherstellen, dass das entsprechende `object-type` wird basierend auf den Typ des Objekts, das im angegebenen geändert, die`object-name`  
+    `object-name`: Geben Sie die Quelldatenbank / Objektnamen Sie, die erforderlich sind, konvertiert werden soll. Sicherstellen, dass das entsprechende `object-type` wird basierend auf den Typ des Objekts, das im angegebenen geändert, die `object-name`  
   
     **Befehlsname**  
   
@@ -118,7 +118,7 @@ Referenz für den Benutzer haben die folgenden Konsole Skript Beispieldateien f�
   
     **Attribut**  
   
-    `object-name:`Geben Sie die Sql Server-Datenbank / Objektname, der um zu erstellenden erfordert. Sicherstellen, dass das entsprechende `object-type` wird basierend auf den Typ des Objekts, das im angegebenen geändert, die`object-name`  
+    `object-name:` Geben Sie die Sql Server-Datenbank / Objektname, der um zu erstellenden erfordert. Sicherstellen, dass das entsprechende `object-type` wird basierend auf den Typ des Objekts, das im angegebenen geändert, die `object-name`  
   
     **Befehlsname**  
   
@@ -130,10 +130,10 @@ Referenz für den Benutzer haben die folgenden Konsole Skript Beispieldateien f�
   
     **Attribut**  
   
-    `object-name:`Gibt an, die Quelldatenbank / Tabellen Namen, die für die Migration erforderlich sind. Sicherstellen, dass das entsprechende `object-type` wird basierend auf den Typ des Objekts, das im angegebenen geändert, die`object-name`  
+    `object-name:` Gibt an, die Quelldatenbank / Tabellen Namen, die für die Migration erforderlich sind. Sicherstellen, dass das entsprechende `object-type` wird basierend auf den Typ des Objekts, das im angegebenen geändert, die `object-name`  
   
 ## <a name="see-also"></a>Siehe auch  
-[Erstellen Variablenwert Dateien &#40; SybaseToSQL &#41;](../../ssma/sybase/creating-variable-value-files-sybasetosql.md)  
-[Erstellen die Server-Connection-Dateien &#40; SybaseToSQL &#41;](../../ssma/sybase/creating-the-server-connection-files-sybasetosql.md)  
-[Generieren von Berichten &#40; SybaseToSQL &#41;](../../ssma/sybase/generating-reports-sybasetosql.md)  
+[Erstellen von Dateien Variablenwert &#40;SybaseToSQL&#41;](../../ssma/sybase/creating-variable-value-files-sybasetosql.md)  
+[Erstellen die Server-Verbindungsdateien &#40;SybaseToSQL&#41;](../../ssma/sybase/creating-the-server-connection-files-sybasetosql.md)  
+[Generieren von Berichten &#40;SybaseToSQL&#41;](../../ssma/sybase/generating-reports-sybasetosql.md)  
   

@@ -1,36 +1,36 @@
 ---
-title: "Verwenden Sie eine DNS-Weiterleitung zum Auflösen von nicht-Appliance DNS-Namen (APS)"
+title: Verwenden Sie eine DNS-Weiterleitung zum Auflösen von nicht-Appliance DNS-Namen (APS)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 123d8a83-b7fd-4dc9-90d4-fa01af2d629d
-caps.latest.revision: "21"
-ms.openlocfilehash: 6538ec32f141592b6cf21a325b74f3e451e73092
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 21
+ms.openlocfilehash: 1d94319bd4d9ad3c25f74ca3393031d7ab916ee2
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="use-a-dns-forwarder-to-resolve-non-appliance-dns-names"></a>Verwenden Sie nicht-Appliance DNS-Namen auflösen einer DNS-Weiterleitungsservers
-DNS-Weiterleitung für die Active Directory-Domänendienste-Knoten konfiguriert werden kann (***Appliance_domain*-AD01** und  ***Appliance_domain*-AD02**) der Appliance Analytics Platform System, Skripts und softwareanwendungen auf externe Servern zugreifen können.  
+DNS-Weiterleitung für die Active Directory-Domänendienste-Knoten konfiguriert werden kann (***Appliance_domain *-AD01** und ***Appliance_domain *-AD02**) der Appliance Analytics Platform System zu ermöglichen Skripts und softwareanwendungen auf externe Servern zugreifen.  
   
 ## <a name="ResolveDNS"></a>Mithilfe einer DNS-Weiterleitungsservers  
 Das Analytics Platform System-Gerät ist konfiguriert, um zu verhindern, Auflösen von DNS-Namen der Server, die nicht in der Einheit befinden. Einige Prozesse, z. B. Windows Software Update Services (WSUS) müssen auf Servern außerhalb der Appliance zugreifen. Um dieses Verwendungsszenario das Analytics Platform System DNS unterstützen können konfiguriert werden um eine externen Namen-Weiterleitung zu unterstützen, die Analytics Platform System-Hosts und virtuellen Computern (VMs), externen DNS-Server zum Auflösen von Namen außerhalb der Anwendung verwendet werden kann. Benutzerdefinierte Konfiguration von DNS-Suffixe wird nicht unterstützt, was bedeutet, dass Sie vollständig qualifizierte Domänennamen verwenden müssen, um einen nicht-Appliance-Servernamen zu beheben.  
   
 **So erstellen Sie DNS-Weiterleitung mit der DNS-GUI**  
   
-1.  Melden Sie sich an den  ***Appliance_domain*-AD01** Knoten.  
+1.  Melden Sie sich an den ***Appliance_domain *-AD01** Knoten.  
   
 2.  Öffnen Sie den DNS-Manager (**dnsmgmt.msc**).  
   
@@ -42,13 +42,13 @@ Das Analytics Platform System-Gerät ist konfiguriert, um zu verhindern, Auflös
   
 6.  Geben Sie die IP-Adresse für den externen DNS-Server, der die namensauflösung bereitstellen. Der virtuelle Computer und Servern (Hosts) in der Einheit verbindet mit externen Servern mit vollqualifizierten Domänennamen.  
   
-7.  Wiederholen Sie die Schritte 1 bis 6 für die  ***Appliance_domain*-AD02** Knoten  
+7.  Wiederholen Sie die Schritte 1 bis 6 für die ***Appliance_domain *-AD02** Knoten  
   
 **So erstellen Sie eine DNS-Weiterleitung mit Windows PowerShell**  
   
-1.  Melden Sie sich an den  ***Appliance_domain*-AD01**Knoten.  
+1.  Melden Sie sich an den ***Appliance_domain *-AD01**Knoten.  
   
-2.  Führen Sie das folgende Windows PowerShell-Skript aus der  ***Appliance_domain*-AD01** Knoten. Ersetzen Sie vor dem Ausführen der Windows PowerShell-Skript, IP-Adressen mit der IP-Adressen Ihrer DNS-Server von nicht-Appliance.  
+2.  Führen Sie das folgende Windows PowerShell-Skript aus der ***Appliance_domain *-AD01** Knoten. Ersetzen Sie vor dem Ausführen der Windows PowerShell-Skript, IP-Adressen mit der IP-Adressen Ihrer DNS-Server von nicht-Appliance.  
   
     ```  
     $DNS=Get-WmiObject -class "MicrosoftDNS_Server"  -Namespace "root\microsoftdns"  
@@ -56,7 +56,7 @@ Das Analytics Platform System-Gerät ist konfiguriert, um zu verhindern, Auflös
     $DNS.put()  
     ```  
   
-3.  Führen Sie den gleichen Befehl auf die  ***Appliance_domain*-AD02** Knoten.  
+3.  Führen Sie den gleichen Befehl auf dem ***Appliance_domain *-AD02** Knoten.  
   
 ## <a name="configuring-dns-resolution-for-wsus"></a>Konfigurieren von DNS-Auflösung für WSUS  
 SQL Server PDW 2012 bietet integrierte Wartung und Patchen Funktionalität. SQL Server PDW verwendet Microsoft Update und andere Microsoft-Technologien Wartung. Um Updates zu aktivieren muss die Anwendung entweder in einem Unternehmen WSUS-Repository oder den öffentlichen Microsoft-WSUS-Repository herstellen.  

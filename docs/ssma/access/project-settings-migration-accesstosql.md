@@ -2,14 +2,15 @@
 title: Projekteinstellungen (Migration) (AccessToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-access
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - Migration settings
 - Project Settings dialog box, Migration
 ms.assetid: 4caebc9c-8680-4b99-a8fa-89c43161c95d
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d3ffb7f8fe3a50fc940bb3030fd2bed518006b01
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 83f7ad0fbda7ead76a24e40f971e9589719fb788
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="project-settings-migration-accesstosql"></a>Projekteinstellungen (Migration) (AccessToSQL)
 Die projekteinstellungen für die Migration können Sie konfigurieren, wie die Daten migriert werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure.  
@@ -38,7 +39,7 @@ Der Bereich für die Migration finden Sie in der **Projekteinstellungen** und **
   
 -   Verwenden der **Projekt Standardeinstellungen** (Dialogfeld), Konfigurationsoptionen für alle Projekte festzulegen. Die migrationseinstellungen auf den Zugriff auf die **Tools** klicken Sie im Menü **Projekt Standardeinstellungen**, wählen Sie den Projekttyp in **Migration Zielversion** Kombinationsfeld, von denen Sie darauf zugreifen möchten die Einstellungen, klicken Sie auf **allgemeine** am unteren Rand der linken Bereich, und klicken Sie dann auf **Migration**.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>enthalten  
 **Check-Einschränkungen**  
 Gibt an, ob SSMA Einschränkungen überprüft werden sollen, wenn Daten zu Tabellen hinzugefügt.  
   
@@ -87,7 +88,7 @@ Gibt an, ob SSMA Tabellen sperrt, wenn sie Daten während der Datenmigration fü
 **Ersetzen von nicht unterstützten Datumsangaben**  
 Gibt an, ob SSMA Zugriffsdaten Beseitigung zuständig, die älter als die früheste sind [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] "DateTime" Datum (01 Januar 1753).  
   
--   Um die Werte aktuell zu halten, wählen Sie **nichts**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]Datumsangaben vor 01 Januar 1753 wird in einer Datetime-Spalte nicht akzeptiert werden. Wenn Sie ältere Daten verwenden, müssen Sie die Datums-/ Uhrzeitwerten in Zeichenwerten konvertieren.  
+-   Um die Werte aktuell zu halten, wählen Sie **nichts**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Datumsangaben vor 01 Januar 1753 wird in einer Datetime-Spalte nicht akzeptiert werden. Wenn Sie ältere Daten verwenden, müssen Sie die Datums-/ Uhrzeitwerten in Zeichenwerten konvertieren.  
   
 -   Wählen Sie zum Konvertieren von Datumsangaben vor 01 Januar 1753 auf NULL **durch NULL Ersetzen**.  
   

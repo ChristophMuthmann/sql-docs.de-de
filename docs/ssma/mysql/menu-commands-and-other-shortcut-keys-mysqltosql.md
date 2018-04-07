@@ -1,30 +1,31 @@
 ---
-title: "Menübefehle und andere Tastenkombinationen (MySQLToSQL) | Microsoft Docs"
+title: Menübefehle und andere Tastenkombinationen (MySQLToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-mysql
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 9ae780dc-b33f-4861-a996-176bae9e7211
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cd2d8321fb6fe50e952bf9a92ee07e1d97f29bc6
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ec0bab67f16fbd67a0fe6ffaa759e578882035e1
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="menu-commands-and-other-shortcut-keys-mysqltosql"></a>Menübefehle und andere Tastenkombinationen (MySQLToSQL)
 Den folgenden Abschnitten werden die Tastenkombinationen für den Zugriff auf Menübefehle und andere Tastenkombinationen, die in verschiedenen Dialogfeldern von SSMA für MySQL-Anwendung verwendet.  
@@ -190,5 +191,5 @@ Um das Kontextmenü für das ausgewählte Objekt im Objekt-Explorer zugreifen zu
 |Gehe zu Deklaration.|F12|  
   
 ## <a name="see-also"></a>Siehe auch  
-[Tastenkombinationen &#40; MySQLToSQL &#41;](../../ssma/mysql/shortcut-keys-mysqltosql.md)  
+[Tastenkombinationen &#40;MySQLToSQL&#41;](../../ssma/mysql/shortcut-keys-mysqltosql.md)  
   

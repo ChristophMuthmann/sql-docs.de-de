@@ -1,25 +1,25 @@
 ---
-title: "Transparente datenverschlüsselung für Parallel Datawarehouse"
+title: Transparente datenverschlüsselung für Parallel Datawarehouse
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology: mpp-data-warehouse
-description: "Transparente datenverschlüsselung (TDE) führt in Echtzeit e/a-Verschlüsselung und Entschlüsselung von Daten und Transaktionsprotokolldateien und die speziellen PDW-Protokolldateien."
+description: Transparente datenverschlüsselung (TDE) führt in Echtzeit e/a-Verschlüsselung und Entschlüsselung von Daten und Transaktionsprotokolldateien und die speziellen PDW-Protokolldateien.
 ms.date: 10/20/2016
 ms.topic: article
 ms.assetid: b82ad21d-09dd-43dd-8fab-bcf2c8c3ac6d
-caps.latest.revision: "22"
-ms.openlocfilehash: 6c96bd67d9a935756b8353999f6c778134d2ed57
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 22
+ms.openlocfilehash: d93d76018baeed1577b6831cbde359002c89416e
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="transparent-data-encryption"></a>Transparente Datenverschlüsselung
 Sie können verschiedene Vorsichtsmaßnahmen treffen, um eine Datenbank abzusichern, beispielsweise ein sicheres System entwerfen, vertrauliche Datenbestände verschlüsseln oder eine Firewall für die Datenbankserver einrichten. Wenn jedoch physische Medien (etwa Laufwerke oder Sicherungsbänder) gestohlen werden, muss ein böswilliger Benutzer die Datenbank einfach nur wieder herstellen und kann dann die Daten durchsuchen. Eine Lösung dieses Problems besteht darin, die sensiblen Daten in der Datenbank zu verschlüsseln, und den für die Verschlüsselung der Daten verwendeten Schlüssel mit einem Zertifikat zu schützen. Dadurch kann niemand die Daten verwenden, der nicht im Besitz der Schlüssel ist. Diese Art des Schutzes muss jedoch im Voraus geplant werden.  
@@ -149,7 +149,7 @@ Während eine erneute Verschlüsselungsprüfung für einen Datenbankverschlüsse
   
 Sie finden den Status der Verschlüsselung für die Datenbank mithilfe der **sys.dm_pdw_nodes_database_encryption_keys** -verwaltungssicht. Weitere Informationen finden Sie unter der *Katalogsichten und dynamische Verwaltungssichten* weiter oben in diesem Thema).  
   
-### <a name="restrictions"></a>Restrictions  
+### <a name="restrictions"></a>Einschränkungen  
 Die folgenden Vorgänge sind nicht zulässig, während die `CREATE DATABASE ENCRYPTION KEY`, `ALTER DATABASE ENCRYPTION KEY`, `DROP DATABASE ENCRYPTION KEY`, oder `ALTER DATABASE...SET ENCRYPTION` Anweisungen.  
   
 -   Löschen der Datenbank.  

@@ -21,15 +21,15 @@ ms.assetid: 97b70fc8-1f68-4f15-8e22-db5b784ea4ec
 caps.latest.revision: 9
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 750be041907417b0683633fbe59f88fdb5b53ead
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 57954b06479e041772200fbb05ba823607a02ad5
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
-# <a name="setting-project-options-sybasetosql"></a>Einstellungsoptionen für Projekt (SybaseToSQL)
+# <a name="setting-project-options-sybasetosql"></a>Setting Project Options (SybaseToSQL)
 Für jedes SSMA-Projekt können Sie Optionen für Projekt festlegen. Diese Optionen geben Objekt Konvertierung, Objekt laden, SQL Azure, Benutzeroberfläche und Einstellungen für die Migration von Daten. Bevor Sie Objekte konvertieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure oder Migrieren von Daten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure, stellen Sie sicher, dass die Konfigurationsoptionen für das Projekt geeignet sind.  
   
 SSMA können Sie die Standardoptionen für alle Projekte zu konfigurieren. Diese Optionen werden auf jedem neuen Projekt angewendet, die Sie erstellen. Sie können dann die Optionen für jedes Projekt anpassen.  
@@ -49,7 +49,7 @@ SSMA verfügt über fünf Mengen von projekteinstellungen:
   
 Es sind auch vier Modi für diese Einstellungen konfigurieren:  
   
-1.  Default  
+1.  Standardwert  
   
 2.  Optimistisch  
   
@@ -61,17 +61,17 @@ Der Standardmodus ist für die meisten Benutzer empfohlen. Der optimistische hä
   
 Die Einstellungen werden in der Referenz zur Benutzeroberfläche Teil dieser Dokumentation beschrieben. Weitere Informationen zu den Einstellungen und wie die Einstellungen in jedem Modus angewendet werden finden Sie unter den folgenden Themen:  
   
--   [Projekteinstellungen &#40; Konvertierung &#41; &#40; SybaseToSQL &#41;](../../ssma/sybase/project-settings-conversion-sybasetosql.md)  
+-   [Projekteinstellungen &#40;Konvertierung&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-conversion-sybasetosql.md)  
   
--   [Projekteinstellungen &#40; Migration &#41; &#40; SybaseToSQL &#41;](../../ssma/sybase/project-settings-migration-sybasetosql.md)  
+-   [Projekteinstellungen &#40;Migration&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-migration-sybasetosql.md)  
   
--   [Projekteinstellungen &#40; Synchronisierung &#41; &#40; SybaseToSQL &#41;](../../ssma/sybase/project-settings-synchronization-sybasetosql.md)  
+-   [Projekteinstellungen &#40;Synchronisierung&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-synchronization-sybasetosql.md)  
   
--   [Projekteinstellungen &#40; GUI &#41; &#40; SybaseToSQL &#41;](../../ssma/sybase/project-settings-gui-sybasetosql.md)  
+-   [Projekteinstellungen &#40;GUI&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-gui-sybasetosql.md)  
   
--   [Projekteinstellungen &#40; Typzuordnung &#41; &#40; SybaseToSQL &#41;](../../ssma/sybase/project-settings-type-mapping-sybasetosql.md)  
+-   [Projekteinstellungen &#40;Typzuordnung&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-type-mapping-sybasetosql.md)  
   
--   [Projekteinstellungen &#40; Azure SQL-Datenbank &#41; &#40; SybaseToSQL &#41;](../../ssma/sybase/project-settings-azure-sql-db-sybasetosql.md)  
+-   [Projekteinstellungen &#40;Azure SQL-Datenbank &#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-azure-sql-db-sybasetosql.md)  
   
 ## <a name="setting-project-options"></a>Einstellung Projektoptionen  
 In SSMA können Sie die Standardeinstellungen für alle Projekte konfigurieren. Diese Einstellungen sind der SSMA-Konfigurationsdatei gespeichert und angewendet wird, zu einem neuen Projekt, das Sie erstellen.  
@@ -104,13 +104,13 @@ Sie können auch die Einstellungen für das aktuelle Projekt anpassen. Diese Ein
   
 3.  Klicken Sie auf **OK** zum Speichern der Einstellungen.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Nächste Schritte  
 Der nächste Schritt der Migration hängt von Ihren Anforderungen Projekt:  
   
--   An benutzerdefinierte die Zuordnung der Quell- und Datentypen, finden Sie unter [Zuordnung Sybase ASE und SQL Server-Datentypen &#40; SybaseToSQL &#41; ](../../ssma/sybase/mapping-sybase-ase-and-sql-server-data-types-sybasetosql.md).  
+-   An benutzerdefinierte die Zuordnung der Quell- und Datentypen, finden Sie unter [Zuordnung Sybase ASE und SQL Server-Datentypen &#40;SybaseToSQL&#41;](../../ssma/sybase/mapping-sybase-ase-and-sql-server-data-types-sybasetosql.md).  
   
--   Konvertieren Sie Sie andernfalls die Sybase-Datenbank-Objektdefinitionen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure-Objektdefinitionen. Weitere Informationen finden Sie unter [Konvertierung von Sybase ASE Datenbankobjekte &#40; SybaseToSQL &#41; ](../../ssma/sybase/converting-sybase-ase-database-objects-sybasetosql.md).  
+-   Konvertieren Sie Sie andernfalls die Sybase-Datenbank-Objektdefinitionen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure-Objektdefinitionen. Weitere Informationen finden Sie unter [Konvertierung von Sybase ASE Datenbankobjekte &#40;SybaseToSQL&#41;](../../ssma/sybase/converting-sybase-ase-database-objects-sybasetosql.md).  
   
 ## <a name="see-also"></a>Siehe auch  
-[Migrieren von Sybase ASE-Datenbanken zu SQLServer - Azure SQL-Datenbank &#40; SybaseToSQL &#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
+[Migrieren von Sybase ASE-Datenbanken zu SQLServer – Azure SQL-Datenbank &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
   

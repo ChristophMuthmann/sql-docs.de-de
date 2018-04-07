@@ -1,26 +1,26 @@
 ---
-title: "Integritätsstatus des Monitors Appliance (Analytics Platform System)"
+title: Integritätsstatus des Monitors Appliance (Analytics Platform System)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 91132e3c-3137-4670-adaa-8a7b234fb8d2
-caps.latest.revision: "12"
-ms.openlocfilehash: d83c3d35c4cf65ebf714b44bc9db7db36b11f818
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 12
+ms.openlocfilehash: 346e7f00973a59ce23ebe4fb4e018157c7a03c84
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="monitor-appliance-health-state"></a>Integritätsstatus des Monitors Appliance
 In diesem Thema erläutert, wie den Status einer SQL Server PDW Appliance mithilfe der Verwaltungskonsole oder durch direkte Abfrage der SQL Server PDW dynamischen Management-Ansichten überwachen.  
@@ -77,7 +77,7 @@ Mögliche Werte für die Status-Eigenschaft zurückgegeben werden:
   
 -   Okay  
   
--   Nicht schwerwiegender  
+-   NonCritical  
   
 -   Kritisch  
   
@@ -98,5 +98,5 @@ Die **[Update_time]** zeigt Spalte der letzten Ausführung die Komponente wurde 
   
 ## <a name="see-also"></a>Siehe auch  
 <!-- MISSING LINKS [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  
-[Überwachen der Appliance &#40; Analyseplattformsystem &#41;](appliance-monitoring.md)  
+[Überwachen der Appliance &#40;Analyseplattformsystem&#41;](appliance-monitoring.md)  
   

@@ -10,23 +10,23 @@ ms.component: oledb|features
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
-- docset-sql-devref
+- drivers
 ms.tgt_pltfrm: ''
 ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 05275a1f770ce4a01f583dda768872a26b5e3725
-ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
-ms.translationtype: MT
+ms.openlocfilehash: c915af2ec748c4b2c15882c9a643c8e200442e98
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="ole-db-driver-for-sql-server-support-for-high-availability-disaster-recovery"></a>OLE DB-Treiber für SQL Server-Unterstützung für hohe Verfügbarkeit, Wiederherstellung im Notfall
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  In diesem Artikel werden OLE DB-Treiber für SQL Server-Unterstützung (hinzugefügt [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]) für [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Weitere Informationen zu [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] finden Sie unter [Verfügbarkeitsgruppenlistener, Clientkonnektivität und Anwendungsfailover &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md), [Erstellung und Konfiguration von Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md), [Failoverclustering und AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md) und [Aktive sekundäre Replikate: Lesbare sekundäre Replikate &#40;AlwaysOn-Verfügbarkeitsgruppen&#41;](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
+  Dieser Artikel erläutert die OLE DB-Treiber für SQL Server-Unterstützung (hinzugefügt [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]) für [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Weitere Informationen zu [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] finden Sie unter [Verfügbarkeitsgruppenlistener, Clientkonnektivität und Anwendungsfailover &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md), [Erstellung und Konfiguration von Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md), [Failoverclustering und AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md) und [Aktive sekundäre Replikate: Lesbare sekundäre Replikate &#40;AlwaysOn-Verfügbarkeitsgruppen&#41;](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
   
  Sie können den Verfügbarkeitsgruppenlistener einer bestimmten Verfügbarkeitsgruppe in der Verbindungszeichenfolge angeben. Wenn ein OLE DB-Treiber für SQL Server-Anwendung mit einer Datenbank in einer verfügbarkeitsgruppe verbunden ist, die ein Failover ausführt, die ursprüngliche Verbindung unterbrochen wird, und öffnen Sie die Anwendung muss eine neue Verbindung, um die Arbeit nach dem Failover fortzusetzen.  
   
@@ -83,7 +83,7 @@ Eine Datenbank kann gestattet oder verweigert lesearbeitslasten auf die gewünsc
 Das **ApplicationIntent** -Schlüsselwort wird verwendet, um schreibgeschütztes Routing zu aktivieren.  
   
 ## <a name="read-only-routing"></a>Schreibgeschütztes Routing  
-Schreibgeschütztes Routing ist eine Funktion, die die Verfügbarkeit eines schreibgeschützten Replikats einer Datenbank sicherstellen kann. So aktivieren Sie schreibgeschütztes Routing:  
+Das schreibgeschützte Routing ist eine Funktion, die die Verfügbarkeit des schreibgeschützten Replikats einer Datenbank sicherstellen kann. So aktivieren Sie schreibgeschütztes Routing:  
   
 1.  Sie müssen eine Verbindung zum Verfügbarkeitsgruppenlistener einer AlwaysOn-Verfügbarkeitsgruppe herstellen.  
   
@@ -93,7 +93,7 @@ Schreibgeschütztes Routing ist eine Funktion, die die Verfügbarkeit eines schr
   
 Möglicherweise werden bei mehreren Verbindungen mithilfe von schreibgeschütztem Routing nicht alle mit demselben schreibgeschützten Replikat verbunden. Änderungen in der Datenbanksynchronisierung oder Änderungen in der Routingkonfiguration des Servers können zu Clientverbindungen mit anderen schreibgeschützten Replikaten führen. Um sicherzustellen, dass alle schreibgeschützten Anforderungen mit demselben schreibgeschützten Replikat herstellen, übergeben Sie einen Listener AlwaysOn-Verfügbarkeitsgruppe die **Server** Verbindungszeichenfolgen-Schlüsselwort. Geben Sie stattdessen den Namen der schreibgeschützten Instanz an.  
   
-Schreibgeschütztes Routing dauert möglicherweise länger als das Herstellen einer primären Verbindung, da schreibgeschütztes Routing zuerst eine primäre Verbindung herstellt und dann nach der besten verfügbaren lesbaren Sekundärverbindung sucht. Deswegen sollten Sie das Anmeldetimeout vergrößern.  
+Das schreibgeschützte Routing kann länger als das Herstellen einer Verbindung mit dem primären Objekt dauern, da beim schreibgeschützten Routing zunächst eine Verbindung mit dem primären Objekt hergestellt und anschließend nach dem verfügbaren am besten lesbaren sekundären Objekt gesucht wird. Deswegen sollten Sie das Anmeldetimeout vergrößern.  
   
 ## <a name="ole-db"></a>OLE DB  
 Der OLE DB-Treiber für SQL Server unterstützt sowohl die **ApplicationIntent** und **MultiSubnetFailover** Schlüsselwörter.   
@@ -113,18 +113,15 @@ Die entsprechenden Verbindungseigenschaften sind:
   
 -   **DBPROP_INIT_PROVIDERSTRING**  
   
-Ein OLE DB-Treiber für SQL Server OLE DB-Anwendung kann eine der Methoden zum Angeben der anwendungsabsicht verwenden:  
+Ein OLE DB-Treiber für SQL Server-Anwendung kann eine der Methoden zum Angeben der anwendungsabsicht verwenden:  
   
- **IDBInitialize:: Initialize**  
+ -   **IDBInitialize:: Initialize**  
  **IDBInitialize::Initialize** verwendet den zuvor konfigurierten Satz von Eigenschaften, um die Datenquelle zu initialisieren und das Datenquellenobjekt zu erstellen. Geben Sie die Anwendungsabsicht als Anbietereigenschaft oder als einen Teil der erweiterten Eigenschaftenzeichenfolge an.  
   
- **IDataInitialize:: GetDatasource**  
+ -   **IDataInitialize:: GetDatasource**  
  **IDataInitialize::GetDataSource** verwendet eine Eingabeverbindungszeichenfolge, die das **Application Intent** -Schlüsselwort enthalten kann.  
   
- **IDBProperties::GetProperties**  
- **IDBProperties::GetProperties** ruft den Wert der Eigenschaft ab, die derzeit in der Datenquelle festgelegt wird.  Sie können den **Application Intent** -Wert über die DBPROP_INIT_PROVIDERSTRING-Eigenschaft und die SSPROP_INIT_APPLICATIONINTENT-Eigenschaft abrufen.  
-  
- **IDBProperties::SetProperties**  
+ -   **IDBProperties::SetProperties**  
  Um den **ApplicationIntent** -Eigenschaftswert festzulegen, rufen Sie **IDBProperties::SetProperties** auf, indem Sie die **SSPROP_INIT_APPLICATIONINTENT** -Eigenschaft mit dem Wert "**ReadWrite**" oder "**ReadOnly**" oder die **DBPROP_INIT_PROVIDERSTRING** -Eigenschaft mit dem Wert angeben, der "**ApplicationIntent=ReadOnly**" oder "**ApplicationIntent=ReadWrite**" enthält.  
   
 Sie können die Anwendungsabsicht im Feld für die Eigenschaften der Anwendungsabsicht auf der Registerkarte Alle im Dialogfeld **Datenverknüpfungseigenschaften** angeben.  
@@ -133,13 +130,22 @@ Wenn implizite Verbindungen hergestellt werden, verwendet die implizite Verbindu
   
 ### <a name="multisubnetfailover"></a>MultiSubnetFailover
 
-Die entsprechende Verbindungseigenschaft ist:  
+Die entsprechenden Verbindungseigenschaften sind:  
   
 -   **SSPROP_INIT_MULTISUBNETFAILOVER**  
+  
+-   **DBPROP_INIT_PROVIDERSTRING**  
 
-Die SSPROP_INIT_MULTISUBNETFAILOVER-Eigenschaft ist vom Typ Boolean auf. Die Eigenschaft akzeptiert die Werte der VARIANT_TRUE oder VARIANT_FALSE.
+Ein OLE DB-Treiber für SQL Server-Anwendung können eine der folgenden Methoden verwenden, die MultiSubnetFailover-Option fest:  
 
-Rufen Sie zum Festlegen des MultiSubnetFailover-Eigenschaftswert **IDBProperties:: SetProperties** übergibt die SSPROP_INIT_MULTISUBNETFAILOVER-Eigenschaft mit dem Wert **VARIANT_TRUE** oder **VARIANT_ "False"**. 
+ -   **IDBInitialize:: Initialize**  
+ **IDBInitialize::Initialize** verwendet den zuvor konfigurierten Satz von Eigenschaften, um die Datenquelle zu initialisieren und das Datenquellenobjekt zu erstellen. Geben Sie die Anwendungsabsicht als Anbietereigenschaft oder als einen Teil der erweiterten Eigenschaftenzeichenfolge an.  
+  
+ -   **IDataInitialize:: GetDatasource**  
+ **IDataInitialize:: GetDatasource** verwendet eine eingabeverbindungszeichenfolge, die enthalten, kann die **MultiSubnetFailover** Schlüsselwort.  
+
+-   **IDBProperties::SetProperties**  
+Festlegen der **MultiSubnetFailover** Eigenschaftswert, rufen **IDBProperties:: SetProperties** übergibt die **SSPROP_INIT_MULTISUBNETFAILOVER** Eigenschaft mit dem Wert  **VARIANT_TRUE** oder **VARIANT_FALSE** oder **DBPROP_INIT_PROVIDERSTRING** Eigenschaft mit dem Wert mit "**MultiSubnetFailover = Yes** "oder"**MultiSubnetFailover = Nein**".
 
 #### <a name="example"></a>Beispiel
 

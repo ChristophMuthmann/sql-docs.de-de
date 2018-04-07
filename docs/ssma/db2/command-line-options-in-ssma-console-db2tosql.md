@@ -2,29 +2,30 @@
 title: Befehlszeilenoptionen in SSMA-Konsole (DB2ToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-db2
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 237354e9-25c4-4386-9d1f-ca0618d4a9a0
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d5eff60694cdcfdb4d2d147ae0531fbbc2ecfb32
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 1ece5c9b4a72f588608103437b03902fd81cc89f
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="command-line-options-in-ssma-console-db2tosql"></a>Befehlszeilenoptionen in SSMA-Konsole (DB2ToSQL)
 Microsoft stellt Ihnen eine Reihe robuster Befehlszeilenoptionen zum Ausführen und Steuern von SSMA-Aktivitäten. In den folgenden Abschnitten ausführlich identisch.  
@@ -162,21 +163,21 @@ Zeigt eine syntaxzusammenfassung der Optionen SSMA-Konsole:
   
 `C:\>SSMAforDB2Console.EXE -?`  
   
-Einer tabellarischen Ansicht von der Konsole SSMA-Befehlszeilenoptionen finden Sie unter [Anhang - 1 &#40; DB2ToSQL &#41;](../../ssma/db2/appendix-1-db2tosql.md).  
+Einer tabellarischen Ansicht von der Konsole SSMA-Befehlszeilenoptionen finden Sie unter [Anhang - 1 &#40;DB2ToSQL&#41;](../../ssma/db2/appendix-1-db2tosql.md).  
   
 ### <a name="securepassword-help-option-securepassword--help"></a>SecurePassword Help Option: – Securepassword-? / Help  
 Zeigt eine syntaxzusammenfassung der Optionen SSMA-Konsole:  
   
 `C:\>SSMAforDB2Console.EXE -securepassword -?`  
   
-Einer tabellarischen Ansicht von der Konsole SSMA-Befehlszeilenoptionen finden Sie unter [Anhang - 1 &#40; DB2ToSQL &#41;](../../ssma/db2/appendix-1-db2tosql.md)  
+Einer tabellarischen Ansicht von der Konsole SSMA-Befehlszeilenoptionen finden Sie unter [Anhang - 1 &#40;DB2ToSQL&#41;](../../ssma/db2/appendix-1-db2tosql.md)  
   
 ### <a name="next-step"></a>Nächster Schritt  
 Der nächste Schritt hängt davon ab, auf die Anforderungen Ihres Projekts:  
   
-1.  Zur Angabe eines Kennworts oder einer Exportieren / Importieren von Kennwörtern, finden Sie unter [Verwalten von Kennwörtern &#40; DB2ToSQL &#41;](../../ssma/db2/managing-passwords-db2tosql.md).  
+1.  Zur Angabe eines Kennworts oder einer Exportieren / Importieren von Kennwörtern, finden Sie unter [Verwalten von Kennwörtern &#40;DB2ToSQL&#41;](../../ssma/db2/managing-passwords-db2tosql.md).  
   
-2.  Generieren von Berichten, finden Sie unter [Generieren von Berichten &#40; DB2ToSQL &#41;](../../ssma/db2/generating-reports-db2tosql.md).  
+2.  Generieren von Berichten, finden Sie unter [Generieren von Berichten &#40;DB2ToSQL&#41;](../../ssma/db2/generating-reports-db2tosql.md).  
   
-3.  Behandlung von Problemen in der Konsole, finden Sie unter [Problembehandlung &#40; DB2ToSQL &#41;](../../ssma/db2/troubleshooting-db2tosql.md).  
+3.  Behandlung von Problemen in der Konsole, finden Sie unter [Problembehandlung &#40;DB2ToSQL&#41;](../../ssma/db2/troubleshooting-db2tosql.md).  
   

@@ -2,29 +2,30 @@
 title: Migrieren von DB2-Daten in SQLServer (DB2ToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-db2
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 86cbd39f-6dac-409a-9ce1-7dd54403f84b
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7249a757ecc1c7c8fb88687953eed93e98890d45
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 0714e217aff8f6aa728bbc401472b9b538add968
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="migrating-db2-data-into-sql-server-db2tosql"></a>Migrieren von DB2-Daten in SQLServer (DB2ToSQL)
 Nachdem Sie die konvertierten Objekte mit erfolgreich synchronisiert haben [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], Migrieren von Daten aus DB2 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
@@ -98,7 +99,7 @@ Um die Migration der Meldungsansicht sicher, dass im Ausgabebereich angezeigt wi
     > [!NOTE]  
     > Wenn SSMA für DB2 Erweiterung Pack nicht auf der Instanz installiert ist [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], und wenn **Server Side Migration Datenmodul** ausgewählt ist, wird bei der Migration der das in die Zieldatenbank an, der folgende Fehler aufgetreten ist: "Datenmigration SSMA-Komponenten wurden nicht gefunden für SQL Server, serverseitige Datenmigration ist nicht möglich. Überprüfen Sie, ob die Erweiterung Pack ordnungsgemäß installiert ist ". Klicken Sie auf **"Abbrechen"** die Datenmigration beendet.  
   
-5.  In der **Herstellen einer Verbindung mit DB2** (Dialogfeld), geben Sie die Anmeldeinformationen der Verbindung, und klicken Sie dann auf **verbinden**. Weitere Informationen zum Verbinden mit DB2 finden Sie unter [Herstellen einer Verbindung mit DB2-Datenbank &#40; DB2ToSQL &#41;](../../ssma/db2/connecting-to-db2-database-db2tosql.md)  
+5.  In der **Herstellen einer Verbindung mit DB2** (Dialogfeld), geben Sie die Anmeldeinformationen der Verbindung, und klicken Sie dann auf **verbinden**. Weitere Informationen zum Verbinden mit DB2 finden Sie unter [Herstellen einer Verbindung mit DB2-Datenbank &#40;DB2ToSQL&#41;](../../ssma/db2/connecting-to-db2-database-db2tosql.md)  
   
     Zum Herstellen einer Verbindung in die Zieldatenbank [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], geben Sie die Anmeldeinformationen in der **Herstellen einer Verbindung mit SQL Server** (Dialogfeld), und klicken Sie auf **verbinden**. Weitere Informationen zum Herstellen einer Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], finden Sie unter [Herstellen einer Verbindung mit SQL Server](http://msdn.microsoft.com/en-us/b59803cb-3cc6-41cc-8553-faf90851410e)  
   
@@ -108,5 +109,5 @@ Um die Migration der Meldungsansicht sicher, dass im Ausgabebereich angezeigt wi
 > Wenn SQL Express-Edition als die Zieldatenbank verwendet wird, wird nur Client Side Datenmigration ist zulässig, und Server Seite Daten-Migration wird nicht unterstützt.  
   
 ## <a name="see-also"></a>Siehe auch  
-[Migrieren von DB2-Daten in SQLServer &#40; DB2ToSQL &#41;](../../ssma/db2/migrating-db2-data-into-sql-server-db2tosql.md)  
+[Migrieren von DB2-Daten in SQLServer &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-data-into-sql-server-db2tosql.md)  
   

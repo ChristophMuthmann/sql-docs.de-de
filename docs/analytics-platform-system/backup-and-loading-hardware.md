@@ -1,25 +1,25 @@
 ---
-title: "Sicherung und Laden von Hardwareübersicht für APS PDW"
+title: Sicherung und Laden von Hardwareübersicht für APS PDW
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology: mpp-data-warehouse
-description: "Um die End-to-End Data warehousing-Lösung auf Analytics Platform System (APS) mit SQL Server Parallel Data Warehouse (PDW) bereitstellen, müssen Sie einen Plan für das Datawarehouse sichern, und Laden von Daten zu erstellen."
+description: Um die End-to-End Data warehousing-Lösung auf Analytics Platform System (APS) mit SQL Server Parallel Data Warehouse (PDW) bereitstellen, müssen Sie einen Plan für das Datawarehouse sichern, und Laden von Daten zu erstellen.
 ms.date: 10/20/2016
 ms.topic: article
 ms.assetid: 3a2ae046-f8d8-4a5c-b3c1-6ecee005df6c
-caps.latest.revision: "9"
-ms.openlocfilehash: 91348b3cb936556cbfe4b2c515c6d32e38913618
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 9
+ms.openlocfilehash: 8979b0d7b14f3e6b3de2834fdc800c5281d057ad
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="backup-and-loading-hardware-overview"></a>Sicherung und Laden von Hardware (Übersicht)
 Um die End-to-End Data warehousing-Lösung auf Analytics Platform System (APS) mit SQL Server Parallel Data Warehouse (PDW) bereitstellen, müssen Sie einen Plan für das Datawarehouse sichern, und Laden von Daten zu erstellen. Verwenden Sie diese Anleitung erwerben und Konfigurieren der Sicherung und Laden von Servern, die Ihren geschäftsanforderungen erfüllen.  

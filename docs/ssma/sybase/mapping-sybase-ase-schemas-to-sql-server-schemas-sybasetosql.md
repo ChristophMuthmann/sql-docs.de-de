@@ -21,13 +21,13 @@ ms.assetid: 2c927003-c49d-4fe1-8e3e-5b2899166268
 caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1e0b8dad8d5742782ed3b3828806c5122092b37b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 2e06a6710b85621f9b0df66f38c42a0b8ebc05ce
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="mapping-sybase-ase-schemas-to-sql-server-schemas-sybasetosql"></a>Zuordnen von Sybase ASE Schemas in SQL Server-Schemas (SybaseToSQL)
 In Sybase Adaptive Server Enterprise (ASE), dass jede Datenbank eine oder mehrere Schemas. Standardmäßig migriert SSMA alle Objekte innerhalb einer Datenbank und des Schemas in derselben Datenbank und Schema in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure. Sie können jedoch die Zuordnung zwischen ASE anpassen und [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure-Datenbanken und Schemas.  
@@ -71,9 +71,9 @@ Wenn Sie die Zuordnung zwischen einem Schema ASE anpassen und eine [!INCLUDE[ssN
   
 1.  Klicken Sie unter der Registerkarte "Schema-Zuordnung" Wählen Sie eine beliebige Zeile, und klicken Sie auf **auf Standard zurücksetzen** , um die Standarddatenbank und das Schema wiederherzustellen.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Nächste Schritte  
 Wenn Sie die Konvertierung von Sybase ASE-Objekten in analysieren möchten [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure-Objekte können Sie [erstellen Sie ein Konvertierungsbericht](http://msdn.microsoft.com/en-us/eb996b7c-1eef-4f73-b5e6-2fa6faf7336c). Andernfalls können Sie [konvertieren ASE Datenbankobjektdefinitionen](http://msdn.microsoft.com/en-us/509cb65d-2f54-427a-83d7-37919cc4e3e3) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure-Objektdefinitionen.  
   
 ## <a name="see-also"></a>Siehe auch  
-[Migrieren von Sybase ASE-Datenbanken zu SQLServer - Azure SQL-Datenbank &#40; SybaseToSQL &#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
+[Migrieren von Sybase ASE-Datenbanken zu SQLServer – Azure SQL-Datenbank &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
   

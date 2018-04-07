@@ -2,31 +2,32 @@
 title: SQL-Modi (MySQLToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-mysql
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: d840ee51-b863-4e77-84aa-37d3f094bfed
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e3f9271008c9633a5266d2171e7724d259ebae37
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 8687edb508bdf0020554d267a1947abe843cd0e2
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
-# <a name="sql-modes-mysqltosql"></a>SQL-Modi (MySQLToSQL)
+# <a name="sql-modes-mysqltosql"></a>SQL Modes (MySQLToSQL)
 SSMA für MySQL kann in verschiedenen SQL-Modi betrieben werden, und diese Modi für verschiedene Clients unterschiedlich anwenden zu kann.  
   
 Modi definieren die SQL-Syntax, die MySQL unterstützen soll, und die Art der Validierung überprüft, dass es durchführen soll. Dies erleichtert es, verwenden MySQL in verschiedenen Umgebungen und MySQL mit SQL Server verwenden.  
