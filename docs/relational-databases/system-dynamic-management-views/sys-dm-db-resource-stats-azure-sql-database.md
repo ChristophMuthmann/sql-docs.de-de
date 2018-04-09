@@ -1,7 +1,7 @@
 ---
 title: Sys. dm_db_resource_stats (Azure SQL-Datenbank) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/16/2016
+ms.date: 04/06/2018
 ms.prod: ''
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -28,11 +28,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 116c5875ad7933e1b3d68f0c65ca7d0cb4d2b661
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
+ms.openlocfilehash: f09cea24068fe63dd1609e26c7835662369d8f0d
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/08/2018
 ---
 # <a name="sysdmdbresourcestats-azure-sql-database"></a>sys.dm_db_resource_stats (Azure SQL-Datenbank)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -49,7 +49,8 @@ ms.lasthandoff: 04/05/2018
 |xtp_storage_percent|**Decimal (5,2)**|Speicherauslastung für In-Memory OLTP in Prozent des Grenzwerts der Dienstebene (am Ende des Berichterstellungsintervalls). Dies schließt Arbeitsspeicher für die Speicherung von folgenden In-Memory OLTP-Objekte verwendet: Speicheroptimierte Tabellen, Indizes und Tabellenvariablen. Darüber hinaus Arbeitsspeicher zum Verarbeiten von ALTER TABLE-Vorgänge.<br /><br /> Gibt 0 zurück, wenn In-Memory OLTP nicht in der Datenbank verwendet wird.|  
 |max_worker_percent|**Decimal (5,2)**|Maximale gleichzeitige Arbeitsthreads (Anforderungen) in Prozent des Grenzwerts der Dienstebene der Datenbank.|  
 |max_session_percent|**Decimal (5,2)**|Maximaler gleichzeitiger Sitzungen in Prozent des Grenzwerts der Dienstebene der Datenbank.|  
-|dtu_limit|**int**|Aktuelle maximale DTU datenbankeinstellung für diese Datenbank während dieses Intervalls.|  
+|dtu_limit|**int**|Aktuelle maximale DTU datenbankeinstellung für diese Datenbank während dieses Intervalls. |
+|||
   
 > [!TIP]  
 >  Mehr Kontext zu diesen Grenzwerten und Dienstebenen finden Sie unter den Themen [Dienstebenen](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/) und [-Service-Tier-Funktionen und Beschränkungen](https://azure.microsoft.com/documentation/articles/sql-database-performance-guidance/).  
@@ -58,13 +59,13 @@ ms.lasthandoff: 04/05/2018
  Diese Sicht erfordert die VIEW DATABASE STATE-Berechtigung.  
   
 ## <a name="remarks"></a>Hinweise  
- Die zurückgegebene Daten **dm_db_resource_stats** wird angegeben als Prozentsatz des maximal zulässigen dtu-Grenzwerte für den Dienst/Leistungsebene, die Sie für Basic, Standard und Premium-Datenbanken ausgeführt werden.
+ Die zurückgegebene Daten **dm_db_resource_stats** wird angegeben als Prozentsatz des maximal zulässigen Grenzwerte für den Dienst/Leistungsebene, die Sie ausgeführt werden.
  
  Wenn innerhalb der letzten 60 Minuten ein Failover auf einem anderen Server für die Datenbank durchgeführt wurde, gibt die Ansicht nur die Daten für die Zeit zurück, die diese die primäre Datenbank seit dem Failover darstellt.  
   
  Verwenden Sie für eine weniger präzise Ansicht dieser Daten, **Sys. resource_stats** -Katalogsicht in der **master** Datenbank. Diese Sicht erfasst die Daten jede 5 Minuten und behält die Verlaufsdaten 14 Tage bei.  Weitere Informationen finden Sie unter [Sys. resource_stats &#40;Azure SQL-Datenbank&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md).  
   
- Wenn eine Datenbank einem elastischen Pool angehört, Ressourcenstatistiken als Prozentangaben, dargestellt als den Prozentsatz der maximalen DTU-Grenzwerts für die Datenbanken als Gruppe in der Konfiguration des elastischen Pools ausgedrückt.  
+ Wenn eine Datenbank einem elastischen Pool angehört, Ressourcenstatistiken als Prozentangaben, dargestellt als der prozentuale Anteil der maximale Grenzwert für die Datenbanken als Gruppe in der Konfiguration des elastischen Pools ausgedrückt.  
   
 ## <a name="example"></a>Beispiel  
   

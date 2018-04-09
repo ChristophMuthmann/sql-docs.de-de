@@ -2,25 +2,25 @@
 title: PDW-Berechtigungen (SQLServer PDW)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7e271980-bec8-424b-9f68-cea11b4e64e8
-caps.latest.revision: "23"
-ms.openlocfilehash: 49bcb7cf5e8d4bb03acd9db5de87716ec2462191
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 23
+ms.openlocfilehash: 95843be163714be27e6eeb7f28825e98a5371e19
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="pdw-permissions"></a>PDW-Berechtigungen
 Dieses Thema beschreibt die Anforderungen und Optionen für die Verwaltung von Datenbankberechtigungen für SQL Server PDW.  
@@ -64,11 +64,11 @@ Anmeldungen sind Objekte auf Serverebene und können durch Anzeigen aufgelistet 
 Benutzer und Datenbankrollen sind Objekte auf Datenbankebene und können durch Anzeigen aufgelistet werden [Sys. database_principals](../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md). Datenbankprinzipale können nur Berechtigungen auf Datenbankebene gewährt werden.  
   
 ## <a name="BackupTypes"></a>Standardberechtigungen  
-Die folgende Liste beschreibt die Standardberechtigungen an:  
+In der folgenden Liste werden die Standardberechtigungen beschrieben:  
   
 -   Erstellung ein Anmeldenamens von using-Direktiven **CREATE LOGIN** -Anweisung, die Anmeldung empfängt die **CONNECT SQL** Berechtigung der Anmeldung zur Verbindung mit SQL Server-PDW.  
   
--   Wenn ein Datenbankbenutzer erstellt wird, mithilfe der **CREATE USER** -Anweisung, die der Benutzer erhält die **CONNECT ON DATABASE::***< Database_name >* Berechtigung, ermöglicht die Melden Sie sich mit dieser Datenbank als Benutzer herstellen.  
+-   Wenn ein Datenbankbenutzer erstellt wird, mithilfe der **CREATE USER** -Anweisung, die der Benutzer erhält die **CONNECT ON DATABASE:: *** < Database_name >* Berechtigung für die Anmeldung für die Verbindung zu dieser Datenbank als Benutzer.  
   
 -   Alle Prinzipale, einschließlich der Rolle "PUBLIC" haben keine expliziten oder impliziten Berechtigungen standardmäßig, da die expliziten Berechtigungen und implizite Berechtigungen geerbt werden. Daher, wenn keine explizite Berechtigungen vorhanden sind, treten auch möglicherweise keine implizite Berechtigungen.  
   
@@ -80,7 +80,7 @@ Die folgende Liste beschreibt die Standardberechtigungen an:
   
 -   Transaktionen sind keine Berechtigungen erforderlich. Alle Prinzipale Ausführungsdauer der **BEGIN TRANSACTION**, **COMMIT**, und **ROLLBACK** Transaktionsbefehle. Ein Prinzipal muss jedoch die entsprechenden Berechtigungen zum Ausführen jeder Anweisung innerhalb der Transaktion haben.  
   
--   Die **verwenden** Anweisung erfordert keine Berechtigungen. Alle Prinzipale Ausführungsdauer der **verwenden** Anweisung für jede Datenbank jedoch den Zugriff auf eine Datenbank sie einen Benutzerprinzipal in der Datenbank benötigen oder der Guest-Benutzer aktiviert sein muss.  
+-   Die Anweisung **USE** erfordert keine Berechtigungen. Alle Prinzipale Ausführungsdauer der **verwenden** Anweisung für jede Datenbank jedoch den Zugriff auf eine Datenbank sie einen Benutzerprinzipal in der Datenbank benötigen oder der Guest-Benutzer aktiviert sein muss.  
   
 ### <a name="the-public-role"></a>Die PUBLIC-Rolle  
 Alle neuen Appliance Anmeldungen gehören automatisch an die PUBLIC-Rolle. Die Serverrolle PUBLIC weist folgende Merkmale auf:  
@@ -95,7 +95,7 @@ Alle neuen Appliance Anmeldungen gehören automatisch an die PUBLIC-Rolle. Die S
 Fest, ob eine Anmeldung über die Berechtigung zum Ausführen einer bestimmten Aktion hat, hängt von den Berechtigungen erteilt oder verweigert, Anmeldenamen, Benutzer und Rollen, denen der Benutzer Mitglied ist ab. Berechtigungen auf Serverebene (z. B. **CREATE LOGIN** und **VIEW SERVER STATE**) auf Serverebene Prinzipalen (Anmeldenamen) verfügbar sind. Berechtigungen auf Datenbankebene (z. B. **wählen** aus einer Tabelle oder **EXECUTE** für eine Prozedur) auf Datenbankebene Prinzipale (Benutzer und Rollen) verfügbar sind.  
   
 ### <a name="implicit-and-explicit-permissions"></a>Implizite und explizite Berechtigungen  
-Ein *explizite Berechtigung* ist ein **GRANT** oder **DENY** Berechtigung erhält, die einem Prinzipal durch eine **GRANT** oder **DENY**Anweisung. Auf Datenbankebene Berechtigungen sind aufgeführt, der [database_permissions](../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md) anzeigen. Berechtigungen auf Serverebene sind aufgeführt, der [server_permissions](../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) anzeigen.  
+Eine *explizite Berechtigung* ist eine **GRANT**- oder **DENY**-Berechtigung, die einem Prinzipal durch eine **GRANT**- oder **DENY**-Anweisung zugewiesen wurde. Auf Datenbankebene Berechtigungen sind aufgeführt, der [database_permissions](../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md) anzeigen. Berechtigungen auf Serverebene sind aufgeführt, der [server_permissions](../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) anzeigen.  
   
 Ein *implizite Berechtigung* ist ein **GRANT** oder **DENY** Berechtigung, die ein Prinzipal (Anmeldename oder eine Serverrolle) geerbt hat. Eine Berechtigung kann auf folgende Weise geerbt werden.  
   
@@ -103,7 +103,7 @@ Ein *implizite Berechtigung* ist ein **GRANT** oder **DENY** Berechtigung, die e
   
 -   Ein Prinzipal kann eine Berechtigung für ein untergeordnetes Objekt (z. B. eine Tabelle) erben, wenn der Prinzipal eine Berechtigung für eines der Objekte übergeordnete Bereiche (z. B. das Schema der Tabelle oder die Berechtigung für die gesamte Datenbank) verfügt.  
   
--   Ein Prinzipal kann eine Berechtigung erben, durch die Verwendung einer Berechtigung, die eine untergeordnete Berechtigung enthält. Z. B. die **ALTER ANY USER** Berechtigung enthält sowohl die **CREATE USER** und **ALTER ON USER::**  *<name>*  Berechtigungen.  
+-   Ein Prinzipal kann eine Berechtigung erben, durch die Verwendung einer Berechtigung, die eine untergeordnete Berechtigung enthält. Z. B. die **ALTER ANY USER** Berechtigung enthält sowohl die **CREATE USER** und die **ALTER ON USER:: ***<name>*  Berechtigungen.  
   
 ### <a name="determining-permissions-when-performing-actions"></a>Festlegen von Berechtigungen beim Ausführen von Aktionen  
 Der Prozess der bestimmen, welche Berechtigung zuweisen, die einem Prinzipal komplex ist. Die Komplexität tritt auf, wenn implizite Berechtigungen bestimmen, da Prinzipale können Mitglied mehrerer Rollen und Berechtigungen über mehrere Ebenen in der Hierarchie Rolle übergeben werden können.  
@@ -225,7 +225,7 @@ Das System von festen Serverrollen und feste Datenbankrollen ist ein Legacysyste
 Feste Serverrollen werden von SQL Server automatisch erstellt. SQL Server PDW ist eine eingeschränkte Implementierung von SQL Server, die festen Serverrollen. Nur die **Sysadmin** und **öffentlichen** Benutzeranmeldenamen als Mitglieder haben. Die **Setupadmin** und **Dbcreator** Rollen werden von SQL Server PDW intern verwendet. Zusätzliche Member können nicht hinzugefügt oder aus keiner Rolle entfernt werden.  
   
 ### <a name="sysadmin-fixed-server-role"></a>Sysadmin feste Serverrolle  
-Mitglieder der festen Serverrolle **sysadmin** können alle Aktivitäten auf dem Server ausführen. Die **sa** Anmeldung ist das einzige Mitglied der **Sysadmin** festen Serverrolle "". Zusätzliche Anmeldungen können nicht hinzugefügt werden, um die **Sysadmin** festen Serverrolle "". Erteilen der **CONTROL SERVER** Berechtigung entspricht in etwa die Mitgliedschaft in der **Sysadmin** festen Serverrolle "". Im folgenden Beispiel wird die **CONTROL SERVER** Berechtigung für einen Anmeldenamen mit dem Namen Fay.  
+Mitglieder der festen Serverrolle **sysadmin** können alle Aktivitäten auf dem Server ausführen. Die **sa** Anmeldung ist das einzige Mitglied der **Sysadmin** festen Serverrolle "". Zusätzliche Anmeldungen können nicht hinzugefügt werden, um die **Sysadmin** festen Serverrolle "". Das Erteilen der Berechtigung **CONTROL SERVER** gleicht der Mitgliedschaft in der festen Serverrolle **sysadmin**. Im folgenden Beispiel wird die **CONTROL SERVER** Berechtigung für einen Anmeldenamen mit dem Namen Fay.  
   
 ```sql  
 USE master;  

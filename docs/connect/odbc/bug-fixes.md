@@ -20,11 +20,11 @@ author: v-makouz
 ms.author: genemi
 manager: kenvh
 ms.workload: Active
-ms.openlocfilehash: dc71f74ca8e81f370037b82e42fd78957e096775
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
+ms.openlocfilehash: 5187e07d18c6a967ce0a8fadbac370273684c9dc
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/08/2018
 ---
 # <a name="list-of-bugs-fixed"></a>Liste der behobenen Fehler
 
@@ -38,10 +38,10 @@ Diese Seite enthält eine Liste von Fehlern in jeder Version, beginnend mit fest
 - Korrektur eines seltenen Fehlers auf 32-Bit-Windows, bei der Konvertierung eine Gleitkommazahl Gleitkommazahl in eine ganze Zahl
 - Ein Problem behoben, würde in Feld "decimal" mit Always Encrypted auf doppelte einfügen kein Kürzungsfehler Daten zurückgeben
 - Eine Warnung behoben auf MacOS installer
+- Feste falschen Status auf SQL Server während der Sitzung Wiederherstellungsversuch senden, wenn Connection Resiliency sowohl Verbindungspooling aktiviert sind verursacht Sitzung vom Server gelöscht werden,
 
 ### <a name="bug-fixes-in-the-includemsconameincludesmsconamemdmd-odbc-driver-17-for-includessnoversionincludesssnoversionmdmd"></a>Fehlerkorrekturen in der [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC-Treiber 17 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]
 
-- Feste falschen Status auf SQL Server während der Sitzung Wiederherstellungsversuch senden, wenn Connection Resiliency sowohl Verbindungspooling aktiviert sind verursacht Sitzung vom Server gelöscht werden,
 - Korrektur eines Fehlers, bei Verwendung der Kerberos-Authentifizierung mit dem Fehler "Zugriff verweigert" Bulk Insert ausgeführt wurde
 - Entfernte problemumgehung für einen UnixODBC-Fehler, die in Version unter 2.3.1 vorhanden (Treiber verdoppelt die Größen der bestimmte an UnixODBC übergebene Puffer)
 - Feste Connection Resiliency (Verbindung) hängenden Verwendung ColumnEncryption = aktiviert

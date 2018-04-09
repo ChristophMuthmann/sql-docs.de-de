@@ -7,3 +7,6 @@
 # [Herunterladen des ODBC-Treibers für SQL Server](download-odbc-driver-for-sql-server.md)
 
 # [Schlüsselwörter und Attribute von DNS-Verbindungszeichenfolgen](dsn-connection-string-attribute.md)
+# [Verwenden von Azure Active Directory mit dem ODBC-Treiber](using-azure-active-directory.md)
+
+# [Fehlerbehebungen](bug-fixes.md)
