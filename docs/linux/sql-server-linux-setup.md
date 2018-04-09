@@ -4,7 +4,7 @@ description: Installieren, aktualisieren und Deinstallieren von SQL Server on Li
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 03/22/2018
+ms.date: 04/06/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -15,11 +15,11 @@ ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
 ms.workload: Active
-ms.openlocfilehash: ef5e2131681981e85971d734ebbe576e106e2b92
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: 98f7f19bbcf7ba83d74c2d4aa1e54409c2434147
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/08/2018
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>-Installationsleitfaden für SQL Server on Linux
 
@@ -179,7 +179,7 @@ Wenn Ihre Linux-Computer auf den online-Repositorys verwendet keinen Zugriff hat
 
 1. **Installieren Sie das Datenbank-Engine-Paket**. Verwenden Sie die folgenden Befehle, die basierend auf Ihrer Plattform. Ersetzen Sie den Namen der Paketdatei in diesem Beispiel wird mit dem genauen Namen, den Sie heruntergeladen haben.
 
-   | Platform | Befehl der Paket-entfernen |
+   | Platform | Paket installieren-Befehl |
    |-----|-----|
    | RHEL | `sudo yum localinstall mssql-server_versionnumber.x86_64.rpm` |
    | SLES | `sudo zypper install mssql-server_versionnumber.x86_64.rpm` |

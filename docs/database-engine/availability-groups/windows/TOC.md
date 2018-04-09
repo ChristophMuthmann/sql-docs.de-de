@@ -102,7 +102,6 @@
 ### [Upgraden von Replikatinstanzen](upgrading-always-on-availability-group-replica-instances.md)  
 ### [Anzeigen der Integrität mit Richtlinien](use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)  
 
-
 # References
 ## [PowerShell-Cmdlets](overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md)  
 ## [Transact-SQL](transact-sql-statements-for-always-on-availability-groups.md)  
@@ -143,3 +142,17 @@
 ### [Einige Verfügbarkeitsreplikate haben keine fehlerfreie Rolle](some-availability-replicas-do-not-have-a-healthy-role.md)  
 ### [Einige synchrone Replikate wurden nicht synchronisiert](some-synchronous-replicas-are-not-synchronized.md)  
 ### [WSFC-Clusterdienst ist offline](wsfc-cluster-service-is-offline.md)  
+## [Leitfaden zur Problembehandlung und Überwachung](always-on-availability-groups-troubleshooting-and-monitoring-guide.md)
+### [Überwachen der Leistung von Verfügbarkeitsgruppen](monitor-performance-for-always-on-availability-groups.md)
+### [Problembehandlung: Verfügbarkeitsgruppe hat RPO überschritten](troubleshoot-availability-group-exceeded-rpo.md)
+### [Problembehandlung: Verfügbarkeitsgruppe hat RTO überschritten](troubleshoot-availability-group-exceeded-rto.md)
+### [Problembehandlung: Änderungen am primären Replikat werden nicht beim sekundären Replikat widergespiegelt](troubleshoot-primary-changes-not-reflected-on-secondary.md)
+### [Hilfreiche Tools für die Problembehandlung](useful-tools-for-troubleshooting.md)
+#### [Erweiterte Ereignisse](always-on-extended-events.md)
+#### [Integritätsdiagnoseprotokoll](always-on-health-diagnostics-log.md)
+#### [Richtlinien](always-on-policies.md)
+#### [Ringspeicher](always-on-ring-buffers.md)
+#### [Wartetypen](always-on-wait-types.md)
+#### [CLUSTER.LOG](cluster-log-always-on-availability-groups.md)
+#### [Dynamische Verwaltungs- und Systemkatalogsichten](dynamic-management-views-and-system-catalog-views-always-on-availability-groups.md)
+#### [SQL Server-Fehlerprotokoll](sql-server-error-log-always-on-availability-groups.md)

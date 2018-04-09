@@ -1,6 +1,6 @@
 ---
-title: Aktualisiert - XQuery für SQL Server-Dokumentation | Microsoft Docs
-description: Codeausschnitte anzeigen aktualisierter Inhalt in zuletzt geänderten Dokumentation für XQuery für Microsoft SQL Server.
+title: Aktualisierte - Beispiele für SQL Server-Dokumentation | Microsoft Docs
+description: Codeausschnitte anzeigen aktualisierter Inhalt in zuletzt geänderten Dokumentation, Beispiele für Microsoft SQL Server.
 manager: craigg
 author: MightyPen
 ms.author: genemi
@@ -8,15 +8,15 @@ ms.topic: article
 ms.custom: UpdArt.exe
 ms.suite: sql
 ms.prod_service: sql-non-specified
-ms.component: xquery
+ms.component: samples
 ms.date: 02/03/2018
-ms.openlocfilehash: 65e9c176bfd3e19c646b3d3466f648e358b8ab27
+ms.openlocfilehash: 758ce1d48b6a8dc961635ee7dcb4023867d727d1
 ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 04/08/2018
 ---
-# <a name="new-and-recently-updated-xquery-for-sql-server"></a>Neue und kürzlich aktualisierte: XQuery für SQLServer
+# <a name="new-and-recently-updated-samples-for-sql-server"></a>Neue und kürzlich aktualisierte: Beispiele für SQLServer
 
 
 
@@ -29,7 +29,7 @@ Neueste Updates werden für folgenden Datumsbereich und Betreff gemeldet:
 
 
 - *Datumsbereich des Updates:* &nbsp; **3.12.2017** &nbsp; bis &nbsp; **3.2.2018**
-- *Bereich für die Themenbereichsdatenbank:* &nbsp; **XQuery für SQL Server**.
+- *Bereich für die Themenbereichsdatenbank:* &nbsp; **Beispiele für SQL Server**.
 
 
 
