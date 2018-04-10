@@ -1,16 +1,16 @@
 ---
 title: ANY (Transact-SQL) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|language-elements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ANY
@@ -21,10 +21,10 @@ helpviewer_keywords:
 - values [SQL Server], TRUE
 - scalar values
 - ANY operator
-- TRUE
+- "TRUE"
 - single-column set of values [SQL Server]
 ms.assetid: ddadefd7-49ad-4be1-b34d-dcf155558d34
-caps.latest.revision: 
+caps.latest.revision: 15
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
