@@ -1,16 +1,16 @@
 ---
-title: "Prädikate | Microsoft-Dokumentation"
-ms.custom: 
+title: Prädikate | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|queries
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -18,13 +18,13 @@ helpviewer_keywords:
 - HAVING clause, predicates
 - FROM clause, predicates
 - unknown data [SQL Server]
-- TRUE
+- "TRUE"
 - WHERE clause, predicates
-- FALSE
+- "FALSE"
 - predicates [full-text search]
 - expressions [SQL Server], predicates
 ms.assetid: ddbc530c-f44d-4551-9ca3-3430258eb6c0
-caps.latest.revision: 
+caps.latest.revision: 30
 author: douglaslMS
 ms.author: douglasl
 manager: craigg

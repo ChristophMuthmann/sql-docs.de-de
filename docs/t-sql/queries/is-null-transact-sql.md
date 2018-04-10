@@ -1,22 +1,22 @@
 ---
 title: IS NULL (Transact-SQL) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|queries
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - NULL_TSQL
 - IS_[NOT]_NULL_TSQL
 - IS_NULL_TSQL
-- NULL
+- "NULL"
 - '[NOT]_TSQL'
 - IS
 - IS_TSQL
@@ -34,7 +34,7 @@ helpviewer_keywords:
 - testing nullability
 - checking nullability
 ms.assetid: cdc45cd8-e9b6-4648-8417-892fbeab15af
-caps.latest.revision: 
+caps.latest.revision: 37
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
