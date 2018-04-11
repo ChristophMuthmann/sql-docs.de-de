@@ -1,31 +1,32 @@
 ---
-title: "Dateimomentaufnahme-Sicherungen für Datenbankdateien in Azure | Microsoft-Dokumentation"
-ms.custom: 
+title: Dateimomentaufnahme-Sicherungen für Datenbankdateien in Azure | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 05/23/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: backup-restore
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-backup-restore
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 17a81fcd-8dbd-458d-a9c7-2b5209062f45
-caps.latest.revision: 
+caps.latest.revision: 34
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8970c703cc7b2af93cb29466f0b06c3d83cc1f56
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: d010a0b7ea33cdda98c62c07d6d52c61d01051cb
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="file-snapshot-backups-for-database-files-in-azure"></a>Dateimomentaufnahme-Sicherungen für Datenbankdateien in Azure
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Dateimomentaufnahme-Sicherungen verwenden Azure-Momentaufnahmen, um nahezu sofortige Sicherungen und schnellere Wiederherstellungen für Datenbankdateien mithilfe von Azure Blob Storage zu nutzen. Diese Funktion ermöglicht es Ihnen, Ihre Sicherungs- und Wiederherstellungsrichtlinien zu vereinfachen. Eine Livedemo finden Sie unter [Demo of Point in Time Restore](https://channel9.msdn.com/Blogs/Windows-Azure/File-Snapshot-Backups-Demo)(in englischer Sprache). Weitere Informationen zum Speichern von Datenbankdateien mithilfe von Azure Blob Storage finden Sie unter [SQL Server-Datendateien in Microsoft Azure](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Dateimomentaufnahme-Sicherungen verwenden Azure-Momentaufnahmen, um nahezu sofortige Sicherungen und schnellere Wiederherstellungen für Datenbankdateien mithilfe von Azure Blob Storage zu nutzen. Diese Funktion ermöglicht es Ihnen, Ihre Sicherungs- und Wiederherstellungsrichtlinien zu vereinfachen. Eine Livedemo finden Sie unter [Demo of Point in Time Restore](https://channel9.msdn.com/Blogs/Windows-Azure/File-Snapshot-Backups-Demo)(in englischer Sprache). Weitere Informationen zum Speichern von Datenbankdateien mithilfe von Azure Blob Storage finden Sie unter [SQL Server-Datendateien in Microsoft Azure](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md).  
   
  ![Momentaufnahme Backup Architekturdiagramm](../../relational-databases/backup-restore/media/snapshotbackups.PNG "snapshot backup architectural diagram")  
   
@@ -180,9 +181,6 @@ GO
 sys.sp_delete_backup_file_snapshot N'adventureworks2016', N'https://<mystorageaccountname>.blob.core.windows.net/<mycontainername>/AdventureWorks2016Data.mdf?snapshot=2015-05-29T21:31:31.6502195Z';  
 GO  
 ```  
-  
-## <a name="did-this-article-help-you-were-listening"></a>Fanden Sie diesen Artikel nützlich? Wir hören Ihnen zu  
- Welche Informationen suchen Sie, und haben Sie sie gefunden? Wir nehmen uns Ihr Feedback zu Herzen, um unsere Inhalte zu verbessern. Bitte senden Sie Ihre Kommentare an [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20File-Snapshot%20Backups%20for%20Database%20Files%20in%20Azure%20page)  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Tutorial: Verwenden von SQL Server 2016-Datenbanken mit Microsoft Azure Blob Storage](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  

@@ -1,16 +1,16 @@
 ---
 title: Verwenden von Tabellenwertparameter (Datenbankmodul) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-tables
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - table-valued parameters
@@ -18,19 +18,19 @@ helpviewer_keywords:
 - parameters [SQL Server], table-valued
 - TVP See table-valued parameters
 ms.assetid: 5e95a382-1e01-4c74-81f5-055612c2ad99
-caps.latest.revision: 
+caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: ed7f2311343668c75a5f2637110385995d838f0a
-ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.openlocfilehash: 4693b25ca94be3c364c1824614f80c88cefc01bd
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/08/2018
 ---
 # <a name="use-table-valued-parameters-database-engine"></a>Verwenden von Tabellenwertparameter (Datenbankmodul)
-[!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Tabellenwertparameter werden mit benutzerdefinierten Tabellentypen deklariert. Mit Tabellenwertparametern können Sie mehrere Datenzeilen an eine [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung oder an eine Routine übergeben, z. B. eine gespeicherte Prozedur oder eine Funktion, ohne eine temporäre Tabelle oder viele Parameter erstellen zu müssen.  
   

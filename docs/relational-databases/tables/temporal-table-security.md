@@ -1,28 +1,28 @@
 ---
 title: Sicherheit bei temporalen Tabellen | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 02/21/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-tables
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 60e5d6f6-a26d-4bba-aada-42e382bbcd38
-caps.latest.revision: 
+caps.latest.revision: 9
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5c86f951c3e6f8d553ea61ed959cac6ade235b54
-ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.openlocfilehash: 089e718385b028ff81c021ba1b3759fc9e424a58
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="temporal-table-security"></a>Sicherheit bei temporale Tabellen
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -75,9 +75,6 @@ ms.lasthandoff: 01/18/2018
   
 ## <a name="security-of-select-statement"></a>Sicherheit der SELECT-Anweisung  
  **SELECT** -Berechtigung ist unverändert für **SELECT** -Anweisungen, die sich nicht auf die Verlaufstabelle auswirken. Für **SELECT** -Anweisungen, die auf die Verlaufstabelle wirken, ist die **SELECT** -Berechtigung sowohl für die aktuelle als auch für die Verlaufstabelle erforderlich.  
-  
-## <a name="did-this-article-help-you-were-listening"></a>Fanden Sie diesen Artikel nützlich? Wir hören Ihnen zu  
- Welche Informationen suchen Sie, und haben Sie sie gefunden? Wir nehmen uns Ihr Feedback zu Herzen, um unsere Inhalte zu verbessern. Bitte senden Sie Ihre Kommentare an [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Temporal%20Table%20Security%20page)  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Temporale Tabellen](../../relational-databases/tables/temporal-tables.md)   

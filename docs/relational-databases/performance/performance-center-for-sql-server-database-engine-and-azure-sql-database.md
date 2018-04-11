@@ -1,16 +1,16 @@
 ---
-title: "Leistungscenter für SQL Server-Datenbankmodul und Azure SQL-Datenbank | Microsoft-Dokumentation"
-ms.custom: 
+title: Leistungscenter für SQL Server-Datenbankmodul und Azure SQL-Datenbank | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 04/08/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.reviewer: 
-ms.service: 
+ms.reviewer: ''
+ms.service: ''
 ms.component: performance
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - Performance (SQL Server)
@@ -23,27 +23,24 @@ helpviewer_keywords:
 - performance (SQL Database)
 - database performance (SQL Database)
 ms.assetid: 301204b2-140d-4495-98ed-021a9b5025f5
-caps.latest.revision: 
+caps.latest.revision: 14
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f17dd20a0a6c3ffd93cc89dd97140341ed893383
-ms.sourcegitcommit: 7e9380e53341755df13fce130ab3287918a8e44c
+ms.openlocfilehash: 1e3b52ab64122fab76182d355cbd5c54d2b72c39
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="performance-center-for-sql-server-database-engine-and-azure-sql-database"></a>Leistungscenter für SQL Server-Datenbankmodul und Azure SQL-Datenbank
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Diese Seite enthält Links, mit deren Hilfe Sie die erforderlichen Informationen zur Leistung in [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] und [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]finden.  
+  Diese Seite enthält Links, mit deren Hilfe Sie die erforderlichen Informationen zur Leistung in [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] und [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]finden.  
   
  **Legende**  
   
- ![security-center-legend](../../relational-databases/performance/media/security-center-legend.PNG "security-center-legend")  
-  
-## <a name="this-is-a-work-in-process-does-this-performance-center-help-you-how-can-we-improve-it"></a>Dies ist noch zu erledigen. Hilft dieses Leistungscenter Ihnen? Wie können wir es verbessern?  
- Welche Informationen suchen Sie, und haben Sie sie gefunden? Was fehlt noch? Was möchten Sie hier sehen? Wir nehmen uns Ihr Feedback zu Herzen, um unsere Inhalte zu verbessern. Bitte senden Sie Ihre Kommentare an [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Temporal%20Tables%20page)  
+ ![Sicherheitscenter-Legende](../../relational-databases/performance/media/security-center-legend.PNG "security-center-legend")  
   
 ## <a name="configuration-options-for-performance"></a>Konfigurationsoptionen für Leistung  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bietet die Möglichkeit, die Leistung des Datenbankmoduls mit einer Anzahl von Konfigurationsoptionen auf dem [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] -Level zu beeinflussen. Mit [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)], führt Microsoft die meisten dieser Optimierungen für Sie aus, jedoch nicht alle.  

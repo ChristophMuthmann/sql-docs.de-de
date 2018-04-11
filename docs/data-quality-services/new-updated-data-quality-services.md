@@ -1,6 +1,6 @@
 ---
-title: "Aktualisiert: Dokumentation zu Data Quality Services für SQL Server | Microsoft-Dokumentation"
-description: "Anzeigen von Codeausschnitten für kürzlich aktualisierten Inhalt in der Dokumentation zu Data Quality Services für Microsoft SQL Server"
+title: 'Aktualisiert: Dokumentation zu Data Quality Services für SQL Server | Microsoft-Dokumentation'
+description: Anzeigen von Codeausschnitten für kürzlich aktualisierten Inhalt in der Dokumentation zu Data Quality Services für Microsoft SQL Server
 manager: craigg
 author: MightyPen
 ms.author: genemi
@@ -10,11 +10,11 @@ ms.suite: sql
 ms.prod_service: sql-non-specified
 ms.component: dqs
 ms.date: 02/03/2018
-ms.openlocfilehash: e5d82b7e42b7a33edb9ff09acb891933a9fa1b31
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: c90dbd42d77d7654a24f96076221f9d37fabf426
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/08/2018
 ---
 # <a name="new-and-recently-updated-data-quality-services-for-sql-server"></a>Neu und kürzlich aktualisiert: Data Quality Services für SQL Server
 
@@ -116,7 +116,7 @@ Dieser Abschnitt enthält sehr ähnliche Artikel für zuletzt aktualisierte Arti
 - [New + Updated (0+0): **Master Data Services (MDS) for SQL** docs (Neu + Aktualisiert (0+0): Dokumentation zu Master Data Services (MDS) für SQL)](../master-data-services/new-updated-master-data-services.md)
 - [New + Updated (0+0): **Multidimensional Expressions (MDX) for SQL** docs (Neu + Aktualisiert (0+0): Mehrdimensionale Ausdrücke für SQL)](../mdx/new-updated-mdx.md)
 - [New + Updated (0+0): **ODBC (Open Database Connectivity) for SQL** docs (Neu + Aktualisiert (0+0): Open Database Connectivity für SQL-Dokumente)](../odbc/new-updated-odbc.md)
-- [New + Updated (0+0): **Samples for SQL** docs (Neu + Aktualisiert (0+0): Beispiele für SQL-Dokumente)](../sample/new-updated-sample.md)
+- [New + Updated (0+0): **Samples for SQL** docs (Neu + Aktualisiert (0+0): Beispiele für SQL-Dokumente)](../samples/new-updated-samples.md)
 - [New + Updated (0+0): **SQL Server Migration Assistant (SSMA)** docs (Neu + Aktualisiert (0+0): SQL Server Migration Assistant-Dokumente (SSMA))](../ssma/new-updated-ssma.md)
 - [Neu + Aktualisiert (0+0): Dokumentation zu **Tools für SQL**](../tools/new-updated-tools.md)
 - [New + Updated (0+0): **XQuery for SQL** docs (Neu + Aktualisiert (0+0): XQuery für SQL-Dokumente)](../xquery/new-updated-xquery.md)
