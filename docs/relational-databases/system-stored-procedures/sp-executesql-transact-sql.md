@@ -1,16 +1,16 @@
 ---
 title: Sp_executesql (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_executesql
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - sp_executesql
 - dynamic SQL
 ms.assetid: a8d68d72-0f4d-4ecb-ae86-1235b962f646
-caps.latest.revision: 
+caps.latest.revision: 64
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: b6dec48efa27a14443e69158ed9e9fffb55eba29
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="spexecutesql-transact-sql"></a>sp_executesql (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -55,18 +55,18 @@ sp_executesql [ @stmt = ] statement
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ @stmt=] *Anweisung*  
- Ist eine Unicode-Zeichenfolge, enthält eine [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisung oder eines Batches. @stmteine Unicode-Konstante oder eine Unicode-Variable muss sein. Komplexere Unicodeausdrücke, wie z. B. die Verkettung von zwei Zeichenfolgen mit dem +-Operator, sind nicht zulässig. Zeichenkonstanten sind nicht zulässig. Wenn eine Unicode-Konstante angegeben wird, muss er mit vorangestellt ein **N**. Beispielsweise die Unicode-Konstante **N 'Sp_who'** gültig ist, aber die Zeichenkonstante **'Sp_who'** nicht. Die Länge der Zeichenfolge wird nur durch den verfügbaren Arbeitsspeicher des Datenbankservers begrenzt. Auf 64-Bit-Servern, die Größe der Zeichenfolge ist auf 2 GB sind, die maximale Größe des beschränkt **nvarchar(max)**.  
+ [ @stmt= ] *statement*  
+ Ist eine Unicode-Zeichenfolge, enthält eine [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisung oder eines Batches. @stmt eine Unicode-Konstante oder eine Unicode-Variable muss sein. Komplexere Unicodeausdrücke, wie z. B. die Verkettung von zwei Zeichenfolgen mit dem +-Operator, sind nicht zulässig. Zeichenkonstanten sind nicht zulässig. Wenn eine Unicode-Konstante angegeben wird, muss er mit vorangestellt ein **N**. Beispielsweise die Unicode-Konstante **N 'Sp_who'** gültig ist, aber die Zeichenkonstante **'Sp_who'** nicht. Die Länge der Zeichenfolge wird nur durch den verfügbaren Arbeitsspeicher des Datenbankservers begrenzt. Auf 64-Bit-Servern, die Größe der Zeichenfolge ist auf 2 GB sind, die maximale Größe des beschränkt **nvarchar(max)**.  
   
 > [!NOTE]  
->  @stmtkann Parameter aufweisen, z. B. das gleiche Format wie ein Variablenname enthalten:`N'SELECT * FROM HumanResources.Employee WHERE EmployeeID = @IDParameter'`  
+>  @stmt kann Parameter aufweisen, z. B. das gleiche Format wie ein Variablenname enthalten: `N'SELECT * FROM HumanResources.Employee WHERE EmployeeID = @IDParameter'`  
   
  Für jeden Parameter in @stmt ist ein entsprechender Eintrag in der @params-Parameterdefinitionsliste und in der Parameterwerteliste erforderlich.  
   
- [ @params=] N'@*Parameter_name**Data_type* [,... *n* ] '  
- Eine Zeichenfolge, die die Definitionen aller Parameter enthält, die in @stmt eingebettet wurden. Die Zeichenfolge muss eine Unicode-Konstante oder eine Unicode-Variable sein. Jede Parameterdefinition besteht aus einem Parameternamen und einem Datentyp. *n*ist ein Platzhalter, der zusätzliche Parameterdefinitionen. Jeder Parameter im angegebenen @stmtmust definiert werden, @params. Wenn die [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung bzw. ein solcher Batch in @stmt keine Parameter enthält, ist @params nicht erforderlich. Der Standardwert für diesen Parameter ist NULL.  
+ [ @params=] N'@*Parameter_name ** Data_type* [,... *n* ] "  
+ Eine Zeichenfolge, die die Definitionen aller Parameter enthält, die in @stmt eingebettet wurden. Die Zeichenfolge muss eine Unicode-Konstante oder eine Unicode-Variable sein. Jede Parameterdefinition besteht aus einem Parameternamen und einem Datentyp. *n* ist ein Platzhalter, der zusätzliche Parameterdefinitionen. Jeder Parameter im angegebenen @stmtmust definiert werden, @params. Wenn die [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung bzw. ein solcher Batch in @stmt keine Parameter enthält, ist @params nicht erforderlich. Der Standardwert für diesen Parameter ist NULL.  
   
- [ @param1=] '*value1*"  
+ [ @param1= ] '*value1*'  
  Der Wert für den ersten Parameter, der in der Parameterzeichenfolge definiert ist. Bei diesem Wert kann es sich um eine Unicode-Konstante oder eine Unicode-Variable handeln. Für jeden Parameter in @stmt muss ein Parameterwert angegeben werden. Die Werte sind nicht erforderlich, wenn die [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung oder der -Batch in @stmt keine Parameter aufweist.  
   
  [ OUT | OUTPUT ]  
@@ -240,7 +240,7 @@ FROM Sales.SalesOrderHeader
 WHERE SalesOrderNumber = @SalesOrderNumber;  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
 ### <a name="d-executing-a-simple-select-statement"></a>D. Ausführen einer einfachen SELECT-Anweisung  
  In diesem Beispiel wird eine einfache `SELECT`-Anweisung erstellt und ausgeführt, die den eingebetteten Parameter `@level` enthält.  

@@ -2,30 +2,30 @@
 title: Feld (ADO - WFC-Syntax) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 02/15/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 apitype: COM
 helpviewer_keywords:
 - Field collection [ADO], ADO/WFC syntax
 ms.assetid: 7e01cb24-2338-4f92-ad46-8d97248e1a4d
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 0ca92f0ab46f11fad94d4dacd6399bc2c97dd8b4
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="field-ado---wfc-syntax"></a>Feld (ADO - WFC-Syntax)
 ## <a name="package-commswfcdata"></a>Paket com.ms.wfc.data  

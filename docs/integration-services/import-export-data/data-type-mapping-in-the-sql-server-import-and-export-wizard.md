@@ -1,28 +1,28 @@
 ---
 title: Zuordnung von Datentypen mit dem SQL Server-Import/Export-Assistenten | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 01/11/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: import-export-data
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 669be403-cb17-4b12-bbbf-e7a74003c4b6
-caps.latest.revision: 
+caps.latest.revision: 2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 1796ece3b0fb24b0fb5a4026ce12a085d4744a77
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: HT
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="data-type-mapping-in-the-sql-server-import-and-export-wizard"></a>Zuordnung von Datentypen mit dem SQL Server-Import/Export-Assistenten
  Im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Import/Export-Assistenten können Sie den Namen, den Datentyp und die Datentypeigenschaften von Spalten in neuen Zieltabellen und -dateien festlegen. Allerdings können Sie keine benutzerdefinierten Konvertierungen für Spaltenwerte angeben. Daher ist die integrierte Zuordnung von Datentypen von der Quelle zum Ziel wichtig.  

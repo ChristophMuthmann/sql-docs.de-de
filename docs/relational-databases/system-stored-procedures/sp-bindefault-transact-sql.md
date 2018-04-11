@@ -1,16 +1,16 @@
 ---
 title: Sp_bindefault (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/25/2015
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_bindefault
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_bindefault
 ms.assetid: 3da70c10-68d0-4c16-94a5-9e84c4a520f6
-caps.latest.revision: 
+caps.latest.revision: 42
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: b3e23435d6c0a2db3809722856b9daa6b2d66505
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="spbindefault-transact-sql"></a>sp_bindefault (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/21/2017
   Bindet einen Standard an eine Spalte oder einen Aliasdatentyp.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]Es wird empfohlen, Default-Definitionen erstellen, mit dem DEFAULT-Schlüsselwort von der [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) oder [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) Anweisungen stattdessen.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Es wird empfohlen, Default-Definitionen erstellen, mit dem DEFAULT-Schlüsselwort von der [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) oder [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) Anweisungen stattdessen.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,10 +51,10 @@ sp_bindefault [ @defname = ] 'default' ,
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@defname=** ] **"***Standard***"**  
+ [ **@defname=** ] **'***default***'**  
  Der Name des Standards, der von CREATE DEFAULT erstellt wird. *standardmäßige* ist **nvarchar(776)**, hat keinen Standardwert.  
   
- [  **@objname=** ] **"***Object_name***"**  
+ [ **@objname=** ] **'***object_name***'**  
  Der Name der Tabelle und der Spalte, oder der Aliasdatentyp, an den der Standardwert gebunden werden soll. *Object_name* ist **nvarchar(776)** hat keinen Standardwert. *Object_name* kann nicht definiert werden, mit der **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **Xml**, oder CLR Benutzerdefinierte Typen.  
   
  Wenn *Object_name* ist ein einteiliger Name, wird er als Aliasdatentyp aufgelöst. Ist er ein - oder dreiteiliger Name, wird es zuerst als eine Tabelle und Spalte aufgelöst; und wenn die Auflösung fehlschlägt, wird Sie als einen Aliasdatentyp aufgelöst. Vorhandene Spalten des aliasdatentyps erben standardmäßig *Standard*, es sei denn, Sie direkt auf die Spalte ein Standardwert gebunden wurde. Ein Standard kann nicht gebunden werden, um eine **Text**, **Ntext**, **Image**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **Xml**, **Zeitstempel**, oder CLR UDT-Spalte, eine Spalte mit der IDENTITY-Eigenschaft, eine berechnete Spalte oder eine Spalte, die hat bereits eine DEFAULT-Einschränkung.  
@@ -62,7 +62,7 @@ sp_bindefault [ @defname = ] 'default' ,
 > [!NOTE]  
 >  *Object_name* können Klammern enthalten **[]** als begrenzungsbezeichnern angegeben wird. Weitere Informationen finden Sie unter [Datenbankbezeichner](../../relational-databases/databases/database-identifiers.md).  
   
- [  **@futureonly=** ] **"***Futureonly_flag***"**  
+ [ **@futureonly=** ] **'***futureonly_flag***'**  
  Wird nur beim Binden eines Standardwerts an einen Aliasdatentyp verwendet. *Futureonly_flag* ist **varchar(15)** hat den Standardwert NULL. Wenn dieser Parameter festgelegt ist, um **Futureonly**, vorhandene Spalten dieses Datentyps den neuen Standard können nicht geerbt werden. Dieser Parameter wird nie beim Binden eines Standards an eine Spalte verwendet. Wenn *Futureonly_flag* NULL ist, wird der neue Standard an alle Spalten des aliasdatentyps, die aktuell keinen Standard aufweisen oder die den vorhandenen Standard des aliasdatentyps, gebunden.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
@@ -122,10 +122,10 @@ EXEC sp_bindefault 'default1', '[t.1].c1' ;
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datenbankmodul gespeicherte Systemprozeduren &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Gespeicherte Datenbankmodulprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [CREATE DEFAULT &#40;Transact-SQL&#41;](../../t-sql/statements/create-default-transact-sql.md)   
- [Löschen Sie die STANDARDMÄßIGE &#40; Transact-SQL &#41;](../../t-sql/statements/drop-default-transact-sql.md)   
- [Sp_unbindefault &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-unbindefault-transact-sql.md)   
+ [DROP DEFAULT &#40;Transact-SQL&#41;](../../t-sql/statements/drop-default-transact-sql.md)   
+ [sp_unbindefault &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-unbindefault-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

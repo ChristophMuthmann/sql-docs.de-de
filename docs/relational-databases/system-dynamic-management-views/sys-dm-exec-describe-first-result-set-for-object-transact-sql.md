@@ -1,16 +1,16 @@
 ---
-title: sys.dm_exec_describe_first_result_set_for_object (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: Sys. dm_exec_describe_first_result_set_for_object (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_exec_describe_first_result_set_for_object_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_describe_first_result_set_for_object catalog view
 ms.assetid: 63b0fde7-95d7-4ad7-a219-a9feacf1bd89
-caps.latest.revision: 
+caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: bcdb3bd85543ae5feeb4b224350a5b72a2d95f7b
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="sysdmexecdescribefirstresultsetforobject-transact-sql"></a>sys.dm_exec_describe_first_result_set_for_object (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -50,10 +50,10 @@ sys.dm_exec_describe_first_result_set_for_object
   
 ## <a name="arguments"></a>Argumente  
  *@object_id*  
- Die @object_id von einem [!INCLUDE[tsql](../../includes/tsql-md.md)] gespeicherte Prozedur oder eine [!INCLUDE[tsql](../../includes/tsql-md.md)] Trigger. @object_idTyp **Int**.  
+ Die @object_id von einem [!INCLUDE[tsql](../../includes/tsql-md.md)] gespeicherte Prozedur oder eine [!INCLUDE[tsql](../../includes/tsql-md.md)] Trigger. @object_id Typ **Int**.  
   
  *@include_browse_information*  
- @include_browse_informationTyp **Bit**. Bei 1 werden alle Abfragen so analysiert, als ob die FOR BROWSE-Option in der Abfrage enthalten wäre. Gibt zusätzliche Schlüsselspalten und Quelltabelleninformationen zurück.  
+ @include_browse_information Typ **Bit**. Bei 1 werden alle Abfragen so analysiert, als ob die FOR BROWSE-Option in der Abfrage enthalten wäre. Gibt zusätzliche Schlüsselspalten und Quelltabelleninformationen zurück.  
   
 ## <a name="table-returned"></a>Zurückgegebene Tabelle  
  Diese allgemeinen Metadaten werden in den Ergebnismetadaten als Resultset mit einer Zeile für jede Spalte zurückgegeben. Jede Zeile beschreibt den Typ und die NULL-Zulässigkeit der Spalte in dem Format, das im folgenden Abschnitt beschriebenen wird. Wenn die erste Anweisung nicht für alle Steuerelementpfade vorhanden ist, wird ein Resultset mit 0 Zeilen zurückgegeben.  
@@ -103,7 +103,7 @@ sys.dm_exec_describe_first_result_set_for_object
 |**error_type_desc**|**nvarchar(60)**|Enthält eine kurze Zeichenfolge in Großbuchstaben, die den zurückgegebenen Fehler darstellt. Wird error_type zugeordnet. Siehe Liste unter Hinweisen.|  
   
 ## <a name="remarks"></a>Hinweise  
- Diese Funktion verwendet den gleichen Algorithmus wie **Sp_describe_first_result_set**. Weitere Informationen finden Sie unter [Sp_describe_first_result_set &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md).  
+ Diese Funktion verwendet den gleichen Algorithmus wie **Sp_describe_first_result_set**. Weitere Informationen finden Sie unter [Sp_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md).  
   
  In der folgenden Tabelle werden die Fehlertypen und deren Beschreibungen aufgeführt.  
   

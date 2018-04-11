@@ -1,16 +1,16 @@
 ---
-title: managed_backup.sp_backup_config_basic (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: managed_backup. sp_backup_config_basic (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 10/03/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_backup_config_basic_TSQL
@@ -23,24 +23,24 @@ helpviewer_keywords:
 - managed_backup.sp_backup_config_basic
 - sp_backup_config_basic
 ms.assetid: 3ad73051-ae9a-4e41-a889-166146e5508f
-caps.latest.revision: 
+caps.latest.revision: 15
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 51507869caef7a8738381881f22f6cf9f1005144
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/10/2018
 ---
-# <a name="managedbackupspbackupconfigbasic-transact-sql"></a>managed_backup.sp_backup_config_basic (Transact-SQL)
+# <a name="managedbackupspbackupconfigbasic-transact-sql"></a>managed_backup. sp_backup_config_basic (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Konfiguriert die [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] grundlegende Einstellungen für eine bestimmte Datenbank oder für eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!NOTE]  
->  Dieses Verfahren kann für eigene zum Erstellen einer grundlegenden verwalteten Sicherung Konfigurations aufgerufen werden. Jedoch, wenn Sie erweiterte Funktionen oder einen benutzerdefinierten Zeitplan hinzufügen möchten, zunächst konfigurieren Sie diese Einstellungen mithilfe von [sp_backup_config_advanced &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md) und [sp_backup_config_schedule &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-schedule-transact-sql.md) vor dem Aktivieren der verwalteten Sicherung mit diesem Verfahren.  
+>  Dieses Verfahren kann für eigene zum Erstellen einer grundlegenden verwalteten Sicherung Konfigurations aufgerufen werden. Jedoch, wenn Sie erweiterte Funktionen oder einen benutzerdefinierten Zeitplan hinzufügen möchten, zunächst konfigurieren Sie diese Einstellungen mithilfe von [sp_backup_config_advanced &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md) und [managed_backup.sp_ Backup_config_schedule &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-schedule-transact-sql.md) vor dem Aktivieren der verwalteten Sicherung mit diesem Verfahren.  
    
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -69,10 +69,10 @@ EXEC managed_backup.sp_backup_config_basic
  Die Beibehaltungsdauer für die Sicherungsdateien in Tagen. Die @storage_url ist "int". Dies ist ein erforderlicher Parameter, beim Konfigurieren von [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] zum ersten Mal auf der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Beim Ändern der [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] Konfiguration dieser Parameter ist optional. Wenn der Parameter nicht angegeben ist, werden die vorhandenen Konfigurationswerte beibehalten.  
   
  @credential_name  
- Der Name der SQL-Anmeldeinformationen, der zur Authentifizierung beim Windows Azure-Speicherkonto verwendet wird. @credentail_nameist **SYSNAME**. Wenn angegeben, wird die Sicherung ein Seiten-Blob gespeichert. Wenn dieser Parameter NULL ist, wird die Sicherung als Block-Blob gespeichert werden. Seiten-Blob-Sicherung ist veraltet, damit sie mit der neuen Block-BLOB-backup-Funktionalität bevorzugt wird. Bei Verwendung zum Ändern der [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]-Konfiguration ist dieser Parameter optional. Wenn nicht angegeben, werden die vorhandenen Konfigurationswerte beibehalten.  
+ Der Name der SQL-Anmeldeinformationen, der zur Authentifizierung beim Windows Azure-Speicherkonto verwendet wird. @credentail_name ist **SYSNAME**. Wenn angegeben, wird die Sicherung ein Seiten-Blob gespeichert. Wenn dieser Parameter NULL ist, wird die Sicherung als Block-Blob gespeichert werden. Seiten-Blob-Sicherung ist veraltet, damit sie mit der neuen Block-BLOB-backup-Funktionalität bevorzugt wird. Bei Verwendung zum Ändern der [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]-Konfiguration ist dieser Parameter optional. Wenn nicht angegeben, werden die vorhandenen Konfigurationswerte beibehalten.  
   
 > [!WARNING]  
->  Die  **@credential_name**  Parameter ist zu diesem Zeitpunkt nicht unterstützt. Nur Sicherung in block von Blob wird unterstützt, die erfordert, dass dieser Parameter gleich NULL sein.  
+>  Die **@credential_name** Parameter ist zu diesem Zeitpunkt nicht unterstützt. Nur Sicherung in block von Blob wird unterstützt, die erfordert, dass dieser Parameter gleich NULL sein.  
   
 ## <a name="return-code-value"></a>Rückgabecodewert  
  0 (Erfolg) oder 1 (Fehler)  
@@ -116,7 +116,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [sp_backup_config_advanced &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md)   
+ [managed_backup.sp_backup_config_advanced &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md)   
  [managed_backup.sp_backup_config_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-schedule-transact-sql.md)  
   
   

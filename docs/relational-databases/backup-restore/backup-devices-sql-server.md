@@ -1,16 +1,16 @@
 ---
 title: Sicherungsmedien (SQL Server) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 08/12/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: backup-restore
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-backup-restore
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - tape backup devices, about tape backup devices
@@ -28,20 +28,20 @@ helpviewer_keywords:
 - backing up databases [SQL Server], backup devices
 - devices [SQL Server]
 ms.assetid: 35a8e100-3ff2-4844-a5da-dd088c43cba4
-caps.latest.revision: 
+caps.latest.revision: 93
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1dbf5d00855a498782a65a3ff04e2477a2cb871d
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
-ms.translationtype: HT
+ms.openlocfilehash: fda4874de4ba9df6c8bab86ca8201dff76b28f33
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="backup-devices-sql-server"></a>Sicherungsmedien (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Während eines Sicherungsvorgangs in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank werden die gesicherten Daten (die *Sicherung*) auf ein physisches Sicherungsmedium geschrieben. Dieses physische Sicherungsmedium wird initialisiert, wenn die erste Sicherung in einem Mediensatz darauf geschrieben wird. Die Sicherungen auf einem Satz von einem oder mehreren Sicherungsmedien bilden einen einzelnen Mediensatz.  
+  Während eines Sicherungsvorgangs in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank werden die gesicherten Daten (die *Sicherung*) auf ein physisches Sicherungsmedium geschrieben. Dieses physische Sicherungsmedium wird initialisiert, wenn die erste Sicherung in einem Mediensatz darauf geschrieben wird. Die Sicherungen auf einem Satz von einem oder mehreren Sicherungsmedien bilden einen einzelnen Mediensatz.  
    
 ##  <a name="TermsAndDefinitions"></a> Begriffe und Definitionen  
  Sicherungsdatenträger  
@@ -75,9 +75,9 @@ Während eines Sicherungsvorgangs in einer [!INCLUDE[ssNoVersion](../../includes
   
  TO DISK **=** { **'***Name_des_physischen_Sicherungsgeräts***'** | **@***Name_des_physischen_Sicherungsgeräts_Variable* }  
   
- Zum Beispiel:  
+ Beispiel:  
   
-```  
+```sql  
 BACKUP DATABASE AdventureWorks2012   
    TO DISK = 'Z:\SQLServerBackups\AdventureWorks2012.bak';  
 GO  
@@ -91,7 +91,7 @@ GO
   
  Beispiel:  
   
-```  
+```sql  
 RESTORE DATABASE AdventureWorks2012   
    FROM DISK = 'Z:\SQLServerBackups\AdventureWorks2012.bak';   
 ```  
@@ -102,7 +102,7 @@ RESTORE DATABASE AdventureWorks2012
   
  Für eine eindeutige Zuordnung (insbesondere in Skripts) empfiehlt sich die explizite Angabe des Pfads für das Sicherungsverzeichnis in allen DISK-Klauseln. Wenn Sie den Abfrage-Editor verwenden, ist dieser Aspekt weniger wichtig. In diesem Fall, wenn Sie sicherstellen können, dass sich die Sicherungsdatei im Standardsicherungsverzeichnis befindet, können Sie die Pfadangabe in der DISK-Klausel auslassen. Beispielsweise wird die `BACKUP` -Datenbank mithilfe der folgenden [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] -Anweisung im Standardsicherungsverzeichnis gesichert.  
   
-```  
+```sql  
 BACKUP DATABASE AdventureWorks2012   
    TO DISK = ’AdventureWorks2012.bak’;  
 GO  
@@ -125,9 +125,9 @@ GO
 ## <a name="specify-a-universal-naming-convention-unc-name"></a>Angeben eines UNC-Namen (Universal Naming Convention)  
  Zum Angeben einer Netzwerkfreigabe in einem Sicherungs- oder Wiederherstellungsbefehl verwenden Sie den vollqualifizierten UNC-Namen der Datei für das Sicherungsmedium. Ein UNC-Name weist das Format **\\\\***Systemname***\\***Freigabename***\\***Pfad***\\***Dateiname* auf.  
   
- Zum Beispiel:  
+ Beispiel:  
   
-```  
+```sql  
 BACKUP DATABASE AdventureWorks2012   
    TO DISK = '\\BackupSystem\BackupDisk1\AW_backups\AdventureWorksData.Bak';  
 GO  
@@ -136,7 +136,7 @@ GO
  
 ##  <a name="TapeDevices"></a> Verwenden von Bandgeräten  
   
-> **HINWEIS:** Die Unterstützung für Bandsicherungsgeräte wird in zukünftigen Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden.  
+> **HINWEIS:** Die Unterstützung für Bandsicherungsgeräte wird in zukünftigen Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]entfernt. Verwenden Sie diese Funktion beim Entwickeln neuer Anwendungen nicht, und planen Sie das Ändern von Anwendungen, in denen es zurzeit verwendet wird.  
    
  Zum Sichern von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Daten auf Band ist mindestens ein Bandlaufwerk erforderlich, das vom [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Betriebssystem unterstützt wird. Verwenden Sie für diese Laufwerke nur die vom Hersteller des Laufwerks empfohlenen Bänder. Weitere Informationen zum Installieren eines Bandlaufwerks finden Sie in der Dokumentation zum Windows-Betriebssystem.  
   
@@ -155,9 +155,9 @@ GO
   
  TO TAPE **=** { **'***Name_des_physischen_Sicherungsgeräts***'** | **@***Name_des_physischen_Sicherungsgeräts_Variable* }  
   
- Zum Beispiel:  
+ Beispiel:  
   
-```  
+```sql  
 BACKUP LOG AdventureWorks2012   
    TO TAPE = '\\.\tape0';  
 GO  
@@ -200,7 +200,7 @@ GO
   
  Nachdem ein logisches Sicherungsmedium definiert wurde, können Sie in einem BACKUP- oder RESTORE-Befehl das logische Sicherungsmedium angeben, statt den physischen Namen des Sicherungsmediums zu verwenden. Beispielsweise wird die `AdventureWorks2012` -Datenbank mit der folgenden Anweisung auf dem logischen Sicherungsmedium `AdventureWorksBackups` gesichert.  
   
-```  
+```sql  
 BACKUP DATABASE AdventureWorks2012   
    TO AdventureWorksBackups;  
 GO  

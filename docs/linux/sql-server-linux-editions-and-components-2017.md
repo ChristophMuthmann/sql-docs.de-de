@@ -34,10 +34,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: da867b1125d4ee444a0e04e34d729484bee43514
-ms.sourcegitcommit: 094c46e7fa6de44735ed0040c65a40ec3d951b75
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017-on-linux"></a>Editionen und unterstützten Funktionen von SQL Server-2017 unter Linux
 
