@@ -1,16 +1,16 @@
 ---
 title: Sp_add_jobschedule (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/28/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_add_jobschedule
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_jobschedule
 ms.assetid: ffce19d9-d1d6-45b4-89fd-ad0f60822ba0
-caps.latest.revision: 
+caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: b2da9a4bf2bc1fb7e2768922b6b5dd4d93452571
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="spaddjobschedule-transact-sql"></a>sp_add_jobschedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -86,7 +86,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
 |**64**|Ausführen, wenn der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent-Dienst gestartet wird.|  
 |**128**|Ausführen, wenn sich der Computer im Leerlauf befindet.|  
   
- [  **@freq_interval=** ] *Frequency_interval*  
+ [ **@freq_interval=** ] *frequency_interval*  
  Der Tag, an dem der Auftrag ausgeführt wird. *Frequency_interval* ist **Int**, hat den Standardwert 0 (null) und hängt vom Wert der *Frequency_type* wie in der folgenden Tabelle aufgeführt:  
   
 |Wert|Wirkung|  
@@ -111,7 +111,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
  [ **@freq_subday_interval=** ] *frequency_subday_interval*  
  Anzahl der *Frequency_subday_type* -Perioden zwischen den einzelnen Ausführungen des Auftrags auftreten. *Frequency_subday_interval* ist **Int**, hat den Standardwert 0.  
   
- [  **@freq_relative_interval=** ] *Frequency_relative_interval*  
+ [ **@freq_relative_interval=** ] *frequency_relative_interval*  
  Weitere definiert die *Frequency_interval* Wenn *Frequency_type* festgelegt ist, um **32** (mit relativem Monatsintervall).  
   
  *Frequency_relative_interval* ist **Int**, hat keinen Standardwert und kann die folgenden Werte sind möglich:  
@@ -140,7 +140,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
  [ **@active_start_time=** ] *active_start_time*  
  Uhrzeit an einem beliebigen Tag zwischen *Active_start_date* und *Active_end_date* auftragsausführung beginnen. *Active_start_time* ist **Int**, hat keinen Standardwert. Die Zeit wird als HHMMSS im 24-Stunden-Format formatiert.  
   
- [ **@active_end_time=***active_end_time*  
+ [**@active_end_time= *** Active_end_time*  
  Uhrzeit an einem beliebigen Tag zwischen *Active_start_date* und *Active_end_date* auf die Ausführung eines Auftrags beendet. *Active_end_time* ist **Int**, hat keinen Standardwert. Die Zeit wird als HHMMSS im 24-Stunden-Format formatiert.  
   
  [ **@schedule_id=***schedule_id***OUTPUT**  
@@ -185,7 +185,7 @@ EXEC msdb.dbo.sp_add_jobschedule
  [Erstellen und Zuweisen von Zeitplänen zu Aufträgen](http://msdn.microsoft.com/library/079c2984-0052-4a37-a2b8-4ece56e6b6b5)   
  [Planen eines Auftrags](http://msdn.microsoft.com/library/f626390a-a3df-4970-b7a7-a0529e4a109c)   
  [Erstellen Sie einen Zeitplan](http://msdn.microsoft.com/library/8c7ef3b3-c06d-4a27-802d-ed329dc86ef3)   
- [SQL Server-Agent-gespeicherte Prozeduren &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
+ [SQL Server-Agent-Prozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
  [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
  [sp_update_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-schedule-transact-sql.md)   
  [sp_delete_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   

@@ -1,16 +1,16 @@
 ---
 title: XQuery und statische Typisierung | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
-ms.service: 
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -22,16 +22,16 @@ helpviewer_keywords:
 - checking static types
 - inference [XQuery]
 ms.assetid: d599c791-200d-46f8-b758-97e761a1a5c0
-caps.latest.revision: 
+caps.latest.revision: 38
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 41c21d1689e97b3939d4c479395e5af217e39897
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="xquery-and-static-typing"></a>XQuery und statische Typisierung
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.lasthandoff: 02/09/2018
 ## <a name="static-type-inference"></a>Inferenz des statischen Typs  
  Die Inferenz des statischen Typs ermittelt den Rückgabetyp eines Ausdrucks. Hierbei wird aus den statischen Typen der Eingabeparameter und aus der statischen Semantik des Vorgangs der statische Typ des Ergebnisses abgeleitet. Beispiel: Der statische Typ des Ausdrucks 1 + 2,3 wird wie folgt abgeleitet:  
   
--   Der statische Typ von 1 ist **xs: Integer** und der statische Typ von 2,3 ist **xs: decimal**. Auf Grundlage der dynamischen Semantik, die statische Semantik der  **+**  Vorgang konvertiert die ganze Zahl in eine Dezimalzahl und gibt dann einen Dezimalwert zurück. Der abgeleitete statische Typ wäre dann **xs: decimal**.  
+-   Der statische Typ von 1 ist **xs: Integer** und der statische Typ von 2,3 ist **xs: decimal**. Auf Grundlage der dynamischen Semantik, die statische Semantik der **+** Vorgang konvertiert die ganze Zahl in eine Dezimalzahl und gibt dann einen Dezimalwert zurück. Der abgeleitete statische Typ wäre dann **xs: decimal**.  
   
  Für nicht typisierte XML-Instanzen gibt es spezielle Typen, mit deren Hilfe angegeben wird, dass die Daten nicht typisiert sind. Diese Information wird bei der Überprüfung des statischen Typs und zur Durchführung bestimmter impliziter Datentypkonvertierungen verwendet.  
   
@@ -64,11 +64,11 @@ ms.lasthandoff: 02/09/2018
   
  Untertypen werden auf der Grundlage der Untertypisierungsregeln definiert, um Ableitungen durch Beschränkung oder Erweiterung des XML-Schemas zu verwenden. Ein Typ S ist beispielsweise ein Untertyp von T, wenn alle Werte, die den Typ S besitzen, auch Instanzen des Typs T sind.  
   
- Darüber hinaus sind alle Ganzzahlwerte auf der Grundlage der Typhierarchie des XML-Schemas auch Dezimalwerte. Nicht alle Dezimalwerte sind allerdings ganze Zahlen. Aus diesem Grund ist eine ganze Zahl ein Untertyp einer Dezimalzahl, aber nicht umgekehrt. Z. B. die  **+**  Vorgang lässt nur Werte eines bestimmten Typs, z. B. die numerischen Typen **xs: Integer**, **xs: decimal**, **Xs: "float"**, und **xs: double**. Wenn Werte anderer Typen, wie z. B. **xs: String**, sind übergeben, die Operation einen Typfehler. Dies wird als strenge Typisierung bezeichnet. Werte anderer Typen, wie der Typ atomic, der untypisiertes XML kennzeichnet, können implizit in einen Wert eines Typs konvertiert werden, den die Operation zulässt. Dies wird als schwache Typisierung bezeichnet.  
+ Darüber hinaus sind alle Ganzzahlwerte auf der Grundlage der Typhierarchie des XML-Schemas auch Dezimalwerte. Nicht alle Dezimalwerte sind allerdings ganze Zahlen. Aus diesem Grund ist eine ganze Zahl ein Untertyp einer Dezimalzahl, aber nicht umgekehrt. Z. B. die **+** Vorgang lässt nur Werte eines bestimmten Typs, z. B. die numerischen Typen **xs: Integer**, **xs: decimal**, **Xs: "float"**, und **xs: double**. Wenn Werte anderer Typen, wie z. B. **xs: String**, sind übergeben, die Operation einen Typfehler. Dies wird als strenge Typisierung bezeichnet. Werte anderer Typen, wie der Typ atomic, der untypisiertes XML kennzeichnet, können implizit in einen Wert eines Typs konvertiert werden, den die Operation zulässt. Dies wird als schwache Typisierung bezeichnet.  
   
- Wenn eine implizite Konvertierung notwendig ist, stellt eine anschließende Überprüfung des statischen Typs sicher, dass an eine Operation nur Werte des zugelassenen Typs mit der richtigen Kardinalität übergeben werden. Für "String" + 1 erkennt, dass der statische Typ von "String" **xs: String**. Da dies nicht für einen zulässigen Typ ist der  **+**  Vorgang ein Typfehler ausgelöst wird.  
+ Wenn eine implizite Konvertierung notwendig ist, stellt eine anschließende Überprüfung des statischen Typs sicher, dass an eine Operation nur Werte des zugelassenen Typs mit der richtigen Kardinalität übergeben werden. Für "String" + 1 erkennt, dass der statische Typ von "String" **xs: String**. Da dies nicht für einen zulässigen Typ ist der **+** Vorgang ein Typfehler ausgelöst wird.  
   
- Wenn das Ergebnis eines beliebigen Ausdrucks E1 zu einem beliebigen Ausdruck E2 addiert wird (E1 + E2), bestimmt die Inferenz des statischen Typs zuerst die statischen Typen von E1 und E2 und prüft diese dann gegen die für den Vorgang zulässigen statischen Typen. Angenommen, der statische Typ von E1 entweder als eine **xs: String** oder ein **xs: Integer**, Überprüfung des statischen Typs einen Typfehler, obwohl einige Werte zur möglicherweise zur Laufzeit ganze Zahlen sein. Die gleiche wäre der Fall, wenn der statische von E1 Typ **xs: Integer\***. Da die  **+**  Vorgang akzeptiert nur genau einen Ganzzahlwert und E1 NULL zurückgeben oder mehr als 1 Überprüfung des statischen Typs löst einen Fehler aus.  
+ Wenn das Ergebnis eines beliebigen Ausdrucks E1 zu einem beliebigen Ausdruck E2 addiert wird (E1 + E2), bestimmt die Inferenz des statischen Typs zuerst die statischen Typen von E1 und E2 und prüft diese dann gegen die für den Vorgang zulässigen statischen Typen. Angenommen, der statische Typ von E1 entweder als eine **xs: String** oder ein **xs: Integer**, Überprüfung des statischen Typs einen Typfehler, obwohl einige Werte zur möglicherweise zur Laufzeit ganze Zahlen sein. Die gleiche wäre der Fall, wenn der statische von E1 Typ **xs: Integer\***. Da die **+** Vorgang akzeptiert nur genau einen Ganzzahlwert und E1 NULL zurückgeben oder mehr als 1 Überprüfung des statischen Typs löst einen Fehler aus.  
   
  Wie zuvor erwähnt, ermittelt die Typinferenz häufig einen Typ, der breiter angelegt ist, als dies dem Benutzer hinsichtlich des zu übergebenden Datentyps bekannt ist. In diesen Fällen muss der Benutzer die Abfrage neu schreiben. Im folgenden: Einige typische Fälle  
   

@@ -1,16 +1,16 @@
 ---
 title: Sp_add_job (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_add_job_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_job
 ms.assetid: 6ca8fe2c-7b1c-4b59-b4c7-e3b7485df274
-caps.latest.revision: 
+caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 9f83b2b206b38783e53d2fb0ccdbf724a78b17d7
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="spaddjob-transact-sql"></a>sp_add_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -80,7 +80,7 @@ sp_add_job [ @job_name = ] 'job_name'
  Ein sprachenunabhängiger Mechanismus zum Angeben einer Auftragskategorie. *Category_id*ist **Int**, hat den Standardwert NULL.  
   
  [ **@owner_login_name =** ] **'***login***'**  
- Der Name der Anmeldung, die im Besitz des Auftrags ist. *Anmeldung*ist **Sysname**, hat den Standardwert NULL, die als der aktuelle Anmeldename interpretiert wird. Nur Mitglieder der **Sysadmin** festen Serverrolle "" festlegen oder ändern Sie den Wert für  **@owner_login_name** . Wenn Benutzer, die keine Mitglieder sind von der **Sysadmin** Rolle festlegen oder ändern Sie den Wert der  **@owner_login_name** , Ausführung dieser gespeicherten Prozedur ein Fehler auftritt und ein Fehler zurückgegeben.  
+ Der Name der Anmeldung, die im Besitz des Auftrags ist. *Anmeldung*ist **Sysname**, hat den Standardwert NULL, die als der aktuelle Anmeldename interpretiert wird. Nur Mitglieder der **Sysadmin** festen Serverrolle "" festlegen oder ändern Sie den Wert für **@owner_login_name**. Wenn Benutzer, die keine Mitglieder sind von der **Sysadmin** Rolle festlegen oder ändern Sie den Wert der **@owner_login_name**, Ausführung dieser gespeicherten Prozedur ein Fehler auftritt und ein Fehler zurückgegeben.  
   
  [ **@notify_level_eventlog =** ] *eventlog_level*  
  Ein Wert, der angibt, wann im Microsoft Windows-Anwendungsprotokoll ein Eintrag für diesen Auftrag hinzugefügt werden soll. *ist NULL*ist **Int**, und kann einen der folgenden Werte sein.  
@@ -126,7 +126,7 @@ sp_add_job [ @job_name = ] 'job_name'
  Keine  
   
 ## <a name="remarks"></a>Hinweise  
- **@originating_server**vorhanden ist, **Sp_add_job** jedoch nicht unter den Argumenten aufgeführt. **@originating_server**ist für die interne Verwendung reserviert.  
+ **@originating_server** vorhanden ist, **Sp_add_job** jedoch nicht unter den Argumenten aufgeführt. **@originating_server** ist für die interne Verwendung reserviert.  
   
  Nach dem **Sp_add_job** wurde ausgeführt, um einen Auftrag hinzuzufügen **Sp_add_jobstep** zum Hinzufügen von Schritten, mit denen die Aktivitäten für den Auftrag verwendet werden können. **Sp_add_jobschedule** können den Zeitplan zu erstellen, die die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Dienst verwendet wird, um den Auftrag ausführt. Verwendung **Sp_add_jobserver** festzulegende der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Instanz, in dem der Auftrag ausgeführt wird, und **Sp_delete_jobserver** So entfernen Sie den Auftrag aus der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Instanz.  
   
@@ -145,7 +145,7 @@ sp_add_job [ @job_name = ] 'job_name'
   
  Informationen über die spezifischen Berechtigungen, die mit jeder dieser festen einhergehen-Datenbankrollen, finden Sie unter [SQL Server Agent Fixed Database Roles](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
   
- Nur Mitglieder der **Sysadmin** festen Serverrolle "" festlegen oder ändern Sie den Wert für  **@owner_login_name** . Wenn Benutzer, die keine Mitglieder sind von der **Sysadmin** Rolle festlegen oder ändern Sie den Wert der  **@owner_login_name** , Ausführung dieser gespeicherten Prozedur ein Fehler auftritt und ein Fehler zurückgegeben.  
+ Nur Mitglieder der **Sysadmin** festen Serverrolle "" festlegen oder ändern Sie den Wert für **@owner_login_name**. Wenn Benutzer, die keine Mitglieder sind von der **Sysadmin** Rolle festlegen oder ändern Sie den Wert der **@owner_login_name**, Ausführung dieser gespeicherten Prozedur ein Fehler auftritt und ein Fehler zurückgegeben.  
   
 ## <a name="examples"></a>Beispiele  
   

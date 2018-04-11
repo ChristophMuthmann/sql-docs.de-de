@@ -1,16 +1,16 @@
 ---
 title: Sp_resyncmergesubscription (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_resyncmergesubscription
 ms.assetid: e04d464a-60ab-4b39-a710-c066025708e6
-caps.latest.revision: 
+caps.latest.revision: 19
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 676257b0429fa236780c435c934852fb7258a4b7
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="spresyncmergesubscription-transact-sql"></a>sp_resyncmergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,22 +52,22 @@ sp_resyncmergesubscription [ [ @publisher = ] 'publisher' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@publisher**  =] **"***Publisher***"**  
+ [ **@publisher** = ] **'***publisher***'**  
  Der Name des Verlegers. *Publisher* ist **Sysname**, hat den Standardwert NULL. Der Wert NULL ist zulässig, wenn die gespeicherte Prozedur auf dem Verleger ausgeführt wird. Wenn die gespeicherte Prozedur auf dem Abonnenten ausgeführt wird, muss ein Verleger angegeben werden.  
   
- [  **@publisher_db**  =] **"***Publisher_db***"**  
+ [ **@publisher_db** = ] **'***publisher_db***'**  
  Der Name der Veröffentlichungsdatenbank. *Publisher_db* ist **Sysname**, hat den Standardwert NULL. Der Wert NULL ist zulässig, wenn die gespeicherte Prozedur auf dem Verleger in der Veröffentlichungsdatenbank ausgeführt wird. Wenn die gespeicherte Prozedur auf dem Abonnenten ausgeführt wird, muss ein Verleger angegeben werden.  
   
- [  **@publication**  =] **"***Veröffentlichung***"**  
+ [ **@publication** =] **"***Veröffentlichung***"**  
  Der Name der Veröffentlichung. *Veröffentlichung*ist **Sysname**, hat keinen Standardwert.  
   
- [  **@subscriber**  =] **"***Abonnenten***"**  
+ [ **@subscriber** = ] **'***subscriber***'**  
  Der Name des Abonnenten. *Abonnenten* ist **Sysname**, hat den Standardwert NULL. Der Wert NULL ist zulässig, wenn die gespeicherte Prozedur auf dem Abonnenten ausgeführt wird. Wenn die gespeicherte Prozedur auf dem Verleger ausgeführt wird, muss ein Abonnent angegeben werden.  
   
- [  **@subscriber_db**  =] **"***Subscriber_db***"**  
+ [ **@subscriber_db** = ] **'***subscriber_db***'**  
  Ist der Name der Abonnementdatenbank. *Subscription_db* ist **Sysname**, hat den Standardwert NULL. Der Wert NULL ist zulässig, wenn die gespeicherte Prozedur auf dem Abonnenten in der Abonnementdatenbank ausgeführt wird. Wenn die gespeicherte Prozedur auf dem Verleger ausgeführt wird, muss ein Abonnent angegeben werden.  
   
- [  **@resync_type**  =] *Resync_type*  
+ [ **@resync_type** = ] *resync_type*  
  Legt fest, wann die erneute Synchronisierung gestartet werden soll. *Resync_type* ist **Int**, und kann einen der folgenden Werte.  
   
 |Wert|Beschreibung|  
@@ -76,7 +76,7 @@ sp_resyncmergesubscription [ [ @publisher = ] 'publisher' ]
 |**1**|Die Synchronisierung beginnt bei der letzten erfolgreichen Überprüfung. Alle neuen oder unvollständigen Generierungen, die seit der letzten erfolgreichen Überprüfung durchgeführt wurden, werden erneut auf den Abonnenten angewendet.|  
 |**2**|Die Synchronisierung beginnt das Datum im angegebenen *resync_date_str angegeben wird*. Alle neuen oder unvollständigen Generierungen, die seit diesem Datum durchgeführt wurden, werden erneut auf den Abonnenten angewendet.|  
   
- [  **@resync_date_str=**] *Resync_date_string*  
+ [ **@resync_date_str=**] *resync_date_string*  
  Legt das Datum fest, an dem die erneute Synchronisierung gestartet werden soll. *Resync_date_string* ist **nvarchar(30)**, hat den Standardwert NULL. Dieser Parameter wird verwendet, wenn die *Resync_type* ist ein Wert von **2**. Konvertiert das angegebene Datum in die entsprechende **"DateTime"** Wert.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  

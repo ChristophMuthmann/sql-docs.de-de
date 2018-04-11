@@ -1,15 +1,16 @@
 ---
-title: "Tastenkombinationen für SQL Server Management Studio | Microsoft Docs"
-ms.custom: 
+title: Tastenkombinationen für SQL Server Management Studio | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], shortcuts
@@ -22,19 +23,20 @@ helpviewer_keywords:
 - shortcuts [SQL Server Management Studio]
 - accelerator keys
 ms.assetid: 98baaac4-0727-4ce4-8bfe-c63793ae69b8
-caps.latest.revision: "82"
+caps.latest.revision: 82
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 8d206355149899d1e8f9df816d45b2f64fe2c4cb
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: HT
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="sql-server-management-studio-keyboard-shortcuts"></a>Tastenkombinationen für SQL Server Management Studio
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] bietet Benutzern zwei Tastaturschemas. Standardmäßig wird das [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] -Schema mit auf [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2010 basierenden Tastenkombinationen verwendet. [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] bietet auch ein dem Standardschema von [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] ähnliches Tastaturschema. Um das Tastaturschema zu ändern oder weitere Tastenkombinationen hinzuzufügen, klicken Sie im Menü **Extras** auf **Optionen**. Wählen Sie das gewünschte Tastaturschema unter **Umgebung**auf der Seite **Tastatur** aus.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] bietet Benutzern zwei Tastaturschemas. Standardmäßig wird das [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] -Schema mit auf [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2010 basierenden Tastenkombinationen verwendet. [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] bietet auch ein dem Standardschema von [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] ähnliches Tastaturschema. Um das Tastaturschema zu ändern oder weitere Tastenkombinationen hinzuzufügen, klicken Sie im Menü **Extras** auf **Optionen**. Wählen Sie das gewünschte Tastaturschema unter **Umgebung**auf der Seite **Tastatur** aus.  
   
 > [!NOTE]  
 >  Klicken Sie oben auf dieser Seite auf **Alle reduzieren** , um nur die Überschriften anzuzeigen.  
@@ -219,7 +221,7 @@ ms.lasthandoff: 01/17/2018
 |Wechseln zwischen Abfrage- und Ergebnisbereich|F6|F6|  
 |Kopieren des Ergebnisrasters und der Kopfzeilen in die Zwischenablage|STRG+UMSCHALT+C|Keine Entsprechung|  
 |Wechseln zum nächsten aktiven Fenster in [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]|ALT+F6|ALT+F6|  
-|Öffnen [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]|STRG+ALT+P|STRG+ALT+P|  
+|Öffnen[!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]|STRG+ALT+P|STRG+ALT+P|  
 |Anzeigen des Dialogfelds "Abfrage-Designer" über das Fenster des Abfrage-Editors|STRG+UMSCHALT+Q|Keine Entsprechung|  
 |Ausführen der gespeicherten Systemprozedur **sp_help**|ALT+F1|ALT+F1|  
 |Ausführen der gespeicherten Systemprozedur **sp_who**|STRG+1|STRG+1|  
@@ -240,7 +242,7 @@ ms.lasthandoff: 01/17/2018
 |------------|-----------------------------|---------------------------------|  
 |Einfügen einer neuen Zeile|EINGABE oder UMSCHALT+EINGABE|EINGABE oder UMSCHALT+EINGABE|  
 |Auslagern der Zeichen auf eine Seite des Cursors (gilt nicht für den SQL-Editor)|STRG+T|STRG+T|  
-|Löschen eines Zeichens rechts vom Cursor|Delete|Delete|  
+|Löschen eines Zeichens rechts vom Cursor|DELETE|DELETE|  
 |Löschen eines Zeichens links vom Cursor|RÜCKTASTE<br /><br /> oder<br /><br /> UMSCHALT+<br /><br /> RÜCKTASTE|RÜCKTASTE<br /><br /> oder<br /><br /> UMSCHALT+<br /><br /> RÜCKTASTE|  
 |Löschen des Leerzeichens in der Auswahl oder Löschen des Leerzeichens, das an den Cursor angrenzt, wenn keine Auswahl getroffen wurde|STRG+K, C|Keine Entsprechung|  
 |Einfügen der für den Editor konfigurierten Anzahl von Leerzeichen|TAB|TAB|  
@@ -465,7 +467,7 @@ ms.lasthandoff: 01/17/2018
 |Wechseln zum vorherigen Steuerelement auf der Seite|UMSCHALT+TAB|Keine Entsprechung|  
 |Anzeigen des Rasters auf der Entwurfsoberfläche|EINGABE|Keine Entsprechung|  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Siehe auch  
  [Anpassen von Menüs und Tastenkombinationen](http://msdn.microsoft.com/library/fb4edf3c-71b6-4645-b1d1-ddfdd69f0d7b)  
   
   

@@ -1,6 +1,6 @@
 ---
 title: Problembehandlung bei SQLServer on Linux | Microsoft Docs
-description: "Bietet Tipps zur Problembehandlung für die Verwendung von SQL Server-2017 unter Linux."
+description: Bietet Tipps zur Problembehandlung für die Verwendung von SQL Server-2017 unter Linux.
 author: annashres
 ms.author: anshrest
 manager: craigg
@@ -8,18 +8,18 @@ ms.date: 02/22/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 99636ee8-2ba6-4316-88e0-121988eebcf9S
 ms.workload: On Demand
 ms.openlocfilehash: b3dc37601859ee4125f9f7885592e3a0653e8d0c
-ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/24/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="troubleshoot-sql-server-on-linux"></a>Problembehandlung bei SQLServer on Linux
 

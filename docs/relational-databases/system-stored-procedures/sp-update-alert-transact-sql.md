@@ -1,16 +1,16 @@
 ---
 title: Sp_update_alert (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_update_alert_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_update_alert
 ms.assetid: 4bbaeaab-8aca-4c9e-abc1-82ce73090bd3
-caps.latest.revision: 
+caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 7d39736eed19992c5fa20bb1231aed3bcb20e3b0
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="spupdatealert-transact-sql"></a>sp_update_alert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -87,7 +87,7 @@ sp_update_alert
  [ **@delay_between_responses =**] *delay_between_responses*  
  Die neue Wartezeit zwischen Antworten auf die Warnung in Sekunden. *Delay_between_responses* ist **Int**, hat den Standardwert NULL.  
   
- [  **@notification_message =**] **"***Notification_message***"**  
+ [ **@notification_message =**] **'***notification_message***'**  
  Der überarbeitete Text einer zusätzlichen Nachricht, die an den Operator gesendet werden, als Teil der e-Mail- **net Send**,- oder Pagerbenachrichtigung. *Notification_message* ist **vom Datentyp nvarchar(512)**, hat den Standardwert NULL.  
   
  [ **@include_event_description_in =**] *include_event_description_in*  
@@ -105,7 +105,7 @@ sp_update_alert
  Der Name der Datenbank, in der der Fehler auftreten muss, damit die Warnung ausgelöst wird. *Datenbank* ist **Sysname.** In eckige Klammern ([ ]) eingeschlossene Namen sind nicht zulässig. Der Standardwert ist NULL.  
   
  [ **@event_description_keyword =**] **'***event_description_keyword***'**  
- Eine Folge von Zeichen, die in der Beschreibung des Fehlers im Fehlermeldungsprotokoll enthalten sein muss. Zulässig sind Zeichen, die dem Muster des LIKE-Ausdrucks von [!INCLUDE[tsql](../../includes/tsql-md.md)] entsprechen. *event_description_keyword* is **nvarchar(100)**, with a default of NULL. Dieser Parameter ist hilfreich beim Filtern von Objektnamen (z. B. **%customer_table%**).  
+ Eine Folge von Zeichen, die in der Beschreibung des Fehlers im Fehlermeldungsprotokoll enthalten sein muss. Zulässig sind Zeichen, die dem Muster des LIKE-Ausdrucks von [!INCLUDE[tsql](../../includes/tsql-md.md)] entsprechen. *Event_description_keyword* ist **nvarchar(100)**, hat den Standardwert NULL. Dieser Parameter ist hilfreich beim Filtern von Objektnamen (z. B. **%customer_table%**).  
   
  [ **@job_id =**] *job_id*  
  Die Auftrags-ID *Job_id* ist **"uniqueidentifier"**, hat den Standardwert NULL. Wenn *Job_id* angegeben wird, *Job_name* muss weggelassen werden.  
@@ -143,13 +143,13 @@ sp_update_alert
 |Format-Element|Description|  
 |--------------------|-----------------|  
 |*Element*|Ein Leistungsobjekt, ein Leistungsindikator oder die benannte Instanz des Indikators|  
-|*Comparator*|Einer dieser Operatoren:  **>** ,  **<** ,**=**|  
+|*Comparator*|Einer dieser Operatoren: **>**, **<**, **=**|  
 |*Wert*|Numerischer Wert des Indikators|  
   
  [ **@category_name =**] **'***category***'**  
  Der Name der Warnungskategorie. *Kategorie* ist **Sysname** hat den Standardwert NULL.  
   
- [ **@wmi_namespace**= ] **'***wmi_namespace***'**  
+ [ **@wmi_namespace**=] **"***Wmi_namespace***"**  
  Der WMI-Namespace zum Abfragen der Ereignisse. *Wmi_namespace* ist **Sysname**, hat den Standardwert NULL.  
   
  [ **@wmi_query**= ] **'***wmi_query***'**  
