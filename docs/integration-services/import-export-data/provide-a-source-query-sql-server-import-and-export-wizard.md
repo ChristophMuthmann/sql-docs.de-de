@@ -1,30 +1,30 @@
 ---
 title: Angeben einer Quellabfrage (SQL Server-Import/Export-Assistent) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: import-export-data
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.impexpwizard.providesourcequery.f1
 ms.assetid: c8cbd07e-b9c3-422f-94b8-d6fc8cf31cf5
-caps.latest.revision: 
+caps.latest.revision: 61
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4399fdeb68ee0768ac083e0193ae0513b221021d
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 485faeca41d64c744a091c0efd4be8a05109a6b8
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="provide-a-source-query-sql-server-import-and-export-wizard"></a>Quellabfrage angeben (SQL Server-Import/Export-Assistent)
 Wenn Sie angegeben haben, dass Sie eine Abfrage zum Auswählen der zu kopierenden Daten bereitstellen möchten, zeigt der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Import/Export-Assistent **Quellabfrage angeben**an. Auf dieser Seite schreiben und testen Sie die SQL-Abfrage, die die Daten sammelt, die aus der Datenquelle in das Ziel kopiert werden sollen. Sie können außerdem den Text einer gespeicherten Abfrage einfügen oder den Abfragetext aus einer Datei laden.
@@ -64,7 +64,10 @@ Wenn Ihre Datenquelle Excel ist, gehen Sie zu [Bereitstellen einer Datenabfrage 
  Suchen Sie mithilfe des Dialogfelds **Öffnen** eine Datei, die den Text einer SQL-Abfrage enthält. Durch das Auswählen einer Datei wird der Test aus der Datei in das Textfeld **SQL-Anweisung** kopiert.  
  
 ## <a name="excelQueries"></a> Bereitstellen einer Datenabfrage für Excel
-### <a name="specify-excel-objects-in-queries"></a>Angeben von Excel-Objekten in Abfragen
+
+> [!IMPORTANT]
+> Ausführliche Informationen über das Herstellen einer Verbindung mit Excel-Dateien sowie Einschränkungen und bekannte Probleme beim Laden von Daten aus oder in Excel-Dateien finden Sie unter [Load data from or to Excel with SQL Server Integration Services (SSIS) (Laden von Daten aus oder in Excel mit SQL Server Integration Services (SSIS))](../load-data-to-from-excel-with-ssis.md).
+
 Es gibt drei Arten von Excel-Objekten, die Sie abfragen können.
 -   **Arbeitsblatt:** Fügen Sie das $-Zeichen an das Ende des Blattnamens an, und schließen Sie die Zeichenfolge in Trennzeichen ein, z.B. **[Sheet1$]**, um ein Arbeitsblatt abzufragen.
 
@@ -83,9 +86,6 @@ Es gibt drei Arten von Excel-Objekten, die Sie abfragen können.
     ```sql
     SELECT * FROM [Sheet1$A1:B4]
     ```
-
-### <a name="prepare-the-excel-source-data"></a>Vorbereiten der Daten der Excel-Quelle
-Unabhängig davon, ob Sie ein Arbeitsblatt oder einen Bereich als Quelltabelle angeben, liest der Treiber den *zusammenhängenden* Zellenblock ab der ersten nicht leeren Zelle in der linken oberen Ecke des Arbeitsblatts oder Bereichs. Folglich sind keine leeren Zeilen in den Quelldaten erlaubt. Es sind z.B. keine leeren Zellen zwischen den Spaltenkopfzeilen und den Datenzeilen erlaubt. Wenn sich zwischen dem Titel oben auf dem Arbeitsblatt und Ihren Daten eine leere Zeile befindet, können Sie das Arbeitsblatt nicht abfragen. In Excel müssen Sie Ihren Datenbereich einen Namen zuweisen und den benannten Bereich statt des Arbeitsblatts abfragen.
 
 ## <a name="whats-next"></a>Wie geht es weiter?  
  Nachdem Sie die SQL-Abfrage geschrieben und getestet haben, die die zu kopierenden Daten auswählt, hängt die nächste Seite vom Ziel Ihrer Daten ab.  

@@ -1,16 +1,16 @@
 ---
 title: ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL) | Microsoft-Dokumentation
-ms.custom: 
-ms.date: 01/04/2018
+ms.custom: ''
+ms.date: 04/03/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - ALTER_DATABASE_SCOPED_CONFIGURATION
@@ -24,21 +24,21 @@ helpviewer_keywords:
 - ALTER DATABASE SCOPED CONFIGURATION statement
 - configuration [SQL Server], ALTER DATABASE SCOPED CONFIGURATION statement
 ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
-caps.latest.revision: 
+caps.latest.revision: 32
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f9eb68c07f9e163dfba699627e41ea825b041540
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: f7bac70742dee98e760f93c3345df0546a058932
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Diese Anweisung aktiviert mehrere Einstellungen für die Datenbankkonfiguration auf der Ebene **einzelner Datenbanken**. Sie ist in [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] und in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] verfügbar. Zu diesen Einstellungen zählen die folgenden:  
+  Diese Anweisung aktiviert mehrere Einstellungen für die Datenbankkonfiguration auf der Ebene **einzelner Datenbanken**. Sie ist in [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)] und in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] verfügbar. Zu diesen Einstellungen zählen die folgenden:  
   
 - Löschen des Prozedurcaches.  
 - Festlegen des MAXDOP-Parameters auf einen beliebigen Wert (1,2, ...) für die primäre Datenbank, basierend auf dem, was am besten für diese bestimmte Datenbank ist, und Festlegen eines anderen Werts (z.B. 0) für alle verwendeten sekundären Datenbanken (z.B. für Berichtsabfragen).  
@@ -46,7 +46,8 @@ ms.lasthandoff: 01/25/2018
 - Aktivieren oder Deaktivieren der Parameterermittlung auf Datenbankebene.
 - Aktivieren oder Deaktivieren der Abfrageoptimierungs-Hotfixes auf Datenbankebene.
 - Aktivieren oder Deaktivieren des Identitätscache auf Datenbankebene.
-- Aktivieren oder Deaktivieren eines Stubs des kompilierten Plans, der bei der erstmaligen Kompilierung eines Batches im Cache gespeichert werden soll.    
+- Aktivieren oder Deaktivieren eines Stubs des kompilierten Plans, der bei der erstmaligen Kompilierung eines Batches im Cache gespeichert werden soll.  
+- Aktivieren oder Deaktivieren von Sammlungen von Ausführungsstatistiken für nativ kompilierte T-SQL-Module.
   
  ![Linksymbol](../../database-engine/configure-windows/media/topic-link.gif "Linksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -69,6 +70,8 @@ ALTER DATABASE SCOPED CONFIGURATION
     | QUERY_OPTIMIZER_HOTFIXES = { ON | OFF | PRIMARY}
     | IDENTITY_CACHE = { ON | OFF }
     | OPTIMIZE_FOR_AD_HOC_WORKLOADS = { ON | OFF }
+    | XTP_PROCEDURE_EXECUTION_STATISTICS = { ON | OFF } 
+    | XTP_QUERY_EXECUTION_STATISTICS = { ON | OFF }     
 }  
 ```  
   
@@ -133,7 +136,7 @@ Löscht den Cache der Datenbank für die Prozedur bzw. den Prozedurplan. Dieser 
 
 IDENTITY_CACHE **=** { **ON** | OFF }  
 
-**Gilt für** : [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] und [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 
+**Gilt für** : [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
 
 Aktiviert oder deaktiviert den Identitätscache auf Datenbankebene. Der Standardwert ist **ON**. Identitätszwischenspeichern wird verwendet, um die Leistung von INSERT in Tabellen mit Identitätsspalten zu verbessern. Deaktiviert die Option IDENTITY_CACHE, um Lücken in einer Identitätsspalte zu vermeiden, wenn der Server unerwartet neu gestartet oder ein Failover zu einem sekundären Server ausgeführt wird. Diese Option ist mit dem vorhandenen [Ablaufverfolgungsflag 272](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) vergleichbar. Der einzige Unterschied besteht darin, dass sie auf Datenbankebene und nicht nur auf Serverebene festgelegt werden kann.   
 
@@ -142,9 +145,27 @@ Aktiviert oder deaktiviert den Identitätscache auf Datenbankebene. Der Standard
 
 OPTIMIZE_FOR_AD_HOC_WORKLOADS **=** { ON | **OFF** }  
 
-**Gilt für:** [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 
+**Gilt für:** [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)] 
 
 Aktiviert oder deaktiviert einen Stub des kompilierten Plans, der bei der erstmaligen Kompilierung eines Batches im Cache gespeichert werden soll. Der Standardwert ist OFF. Sobald die datenbankweite Konfiguration OPTIMIZE_FOR_AD_HOC_WORKLOADS für eine Datenbank aktiviert ist, wird ein Stub des kompilierten Plans zwischengespeichert, wenn ein Batch zum ersten Mal kompiliert wird. Planstubs weisen im Vergleich zur Größe des vollständigen kompilierten Plans einen niedrigeren Speicherbedarf auf.  Wenn ein Batch erneut kompiliert oder ausgeführt wird, wird der Stub des kompilierten Plans entfernt und durch einen vollständigen kompilierten Plan ersetzt.
+
+XTP_PROCEDURE_EXECUTION_STATISTICS  **=** { ON | **OFF** }  
+
+**Gilt für:** [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] 
+
+Aktiviert oder deaktiviert die Sammlung von Ausführungsstatistiken auf Modulebene für nativ kompilierte T-SQL-Module in der aktuellen Datenbank. Der Standardwert ist OFF. Die Ausführungsstatistiken werden in [sys.dm_exec_procedure_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md) wiedergegeben.
+
+Ausführungsstatistiken auf Modulebene für nativ kompilierte T-SQL-Module werden gesammelt, wenn diese Option auf „ON“ festgelegt ist, oder die Sammlung von Statistiken durch [sp_xtp_control_proc_exec_stats](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md) aktiviert ist.
+
+XTP_QUERY_EXECUTION_STATISTICS  **=** { ON | **OFF** }  
+
+**Gilt für:** [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]
+
+Aktiviert oder deaktiviert die Sammlung von Ausführungsstatistiken auf Anweisungsebene für nativ kompilierte T-SQL-Module in der aktuellen Datenbank. Der Standardwert ist OFF. Die Ausführungsstatistik wird in [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md) und im [Abfragespeicher](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md) wiedergegeben.
+
+Ausführungsstatistiken auf Anweisungsebene für nativ kompilierte T-SQL-Module werden gesammelt, wenn diese Option auf „ON“ festgelegt ist, oder die Sammlung von Statistiken durch [sp_xtp_control_query_exec_stats](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md) aktiviert ist.
+
+Weitere Informationen über die Leistungsüberwachung von nativ kompilierten T-SQL-Modulen finden Sie unter [Überwachen der Leistung von systemintern kompilierten gespeicherten Prozeduren](../../relational-databases/in-memory-oltp/monitoring-performance-of-natively-compiled-stored-procedures.md).
 
 ##  <a name="Permissions"></a> Berechtigungen  
  Macht ALTER ANY DATABASE SCOPE CONFIGURATION   

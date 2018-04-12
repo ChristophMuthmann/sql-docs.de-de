@@ -1,6 +1,6 @@
 ---
-title: "Schnellstart: Eine Verbindung herstellen und Abfragen einer Azure SQL Data Warehouse mit SQL-Vorgänge Studio (Vorschau) | Microsoft Docs"
-description: "Dieser Schnellstart veranschaulicht, wie SQL-Vorgänge Studio (Vorschau) zum Herstellen einer Verbindung mit einer SQL-Datenbank, und führen Sie eine Abfrage"
+title: 'Schnellstart: Eine Verbindung herstellen und Abfragen einer Azure SQL Data Warehouse mit SQL Operations Studio (preview) | Microsoft Docs'
+description: Dieser Schnellstart veranschaulicht, wie SQL Operations Studio (preview) zum Herstellen einer Verbindung mit einer SQL-Datenbank, und führen Sie eine Abfrage
 ms.custom: tools|sos
 ms.date: 03/08/2018
 ms.prod: sql-non-specified
@@ -8,7 +8,7 @@ ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: quickstart
 author: yualan
 ms.author: alayu
@@ -56,7 +56,7 @@ Verwendung [!INCLUDE[name-sos](../includes/name-sos-short.md)] zum Herstellen ei
 
    ![Symbol "neue Verbindung"](media/quickstart-sql-dw/new-connection-screen.png) 
 
-3. Wenn Ihr Server eine Firewallregel, die SQL-Vorgänge Studio eine Verbindung herstellen, sodass keine der **neue Firewallregel erstellen** bilden wird geöffnet. Füllen Sie das Formular zum Erstellen einer neuen Firewallregel. Weitere Informationen finden Sie unter [Firewallregeln](https://docs.microsoft.com/azure/sql-database/sql-database-firewall-configure).
+3. Wenn Ihr Server eine Firewallregel, die SQL Operations Studio eine Verbindung herstellen, sodass keine der **neue Firewallregel erstellen** bilden wird geöffnet. Füllen Sie das Formular zum Erstellen einer neuen Firewallregel. Weitere Informationen finden Sie unter [Firewallregeln](https://docs.microsoft.com/azure/sql-database/sql-database-firewall-configure).
 
    ![Neue Firewallregel](media/quickstart-sql-dw/firewall.png)  
 

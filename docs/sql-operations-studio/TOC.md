@@ -1,4 +1,4 @@
-# [SQL Operations Studio (Vorschau)](what-is.md)
+# [SQL Operations Studio (preview)](what-is.md)
 # [Installieren](download.md)
 # [Versionsanmerkungen](release-notes.md)
 # Schnellstarts
@@ -24,7 +24,7 @@
 ## [Sammlung von Verwendungsdaten](usage-data-collection.md)
 # Ressourcen
 ## [Transact-SQL-Referenz](../t-sql/language-reference.md)
-## [SQL Operations Studio (Vorschau) GitHub-Repository](https://www.github.com/Microsoft/SqlOpsStudio)
+## [SQL Operations Studio (preview) GitHub-Repository](https://www.github.com/Microsoft/SqlOpsStudio)
 ## [SQL Server Blog (SQL Server-Blog)](https://blogs.technet.microsoft.com/dataplatforminsider/)
 ## [Neue und aktualisierte Artikel](new-updated-sql-operations-studio.md)
 # [FAQ](faq.md)

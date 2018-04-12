@@ -1,16 +1,16 @@
 ---
 title: Excel-Quelle | Microsoft-Dokumentation
-ms.custom: 
-ms.date: 03/14/2017
+ms.custom: ''
+ms.date: 04/02/2018
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.excelsource.f1
@@ -21,20 +21,24 @@ helpviewer_keywords:
 - Excel [Integration Services]
 - sources [Integration Services], Excel
 ms.assetid: e66349f3-b1b8-4763-89b7-7803541a4d62
-caps.latest.revision: 
+caps.latest.revision: 60
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 872ac8117bb87cb9f1709afedbacc32b2d1f1413
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 6a9795de30c7d4fbe2ede9a17043a916e5953cd5
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="excel-source"></a>Excel-Quelle
   Die Excel-Quelle extrahiert Daten aus Arbeitsblättern oder Bereichen in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel-Arbeitsmappen.  
-  
+
+> [!IMPORTANT]
+> Ausführliche Informationen über das Herstellen einer Verbindung mit Excel-Dateien sowie Einschränkungen und bekannte Probleme beim Laden von Daten aus oder in Excel-Dateien finden Sie unter [Load data from or to Excel with SQL Server Integration Services (SSIS) (Laden von Daten aus oder in Excel mit SQL Server Integration Services (SSIS))](../load-data-to-from-excel-with-ssis.md).
+
+## <a name="access-mode"></a>Zugriffsmodus
  Die Excel-Quelle stellt vier verschiedene Datenzugriffsmodi zum Extrahieren von Daten bereit:  
   
 -   Eine Tabelle oder Sicht.  
@@ -44,9 +48,6 @@ ms.lasthandoff: 01/25/2018
 -   Die Ergebnisse einer SQL-Anweisung. Bei der Abfrage kann es sich um eine parametrisierte Abfrage handeln.  
   
 -   Die Ergebnisse einer SQL-Anweisung, die in einer Variablen gespeichert werden.  
-  
-> [!IMPORTANT]  
->  In Excel entspricht ein Arbeitsblatt oder ein Bereich einer Tabelle oder Sicht. Die Liste verfügbarer Tabellen im Quellen-Editor und Ziel-Editor für Excel zeigt vorhandene Arbeitsblätter (gekennzeichnet durch das an den Arbeitsblattnamen angefügte $-Zeichen, wie z. B. Sheet1$) und benannte Bereiche (gekennzeichnet durch das Fehlen des $-Zeichens, wie z. B. MyRange) an. Weitere Informationen finden Sie im Abschnitt mit Überlegungen zur Verwendung.  
   
  Die Excel-Quelle verwendet einen Excel-Verbindungs-Manager zum Herstellen einer Verbindung mit einer Datenquelle. Dieser Verbindungs-Manager gibt die zu verwendende Arbeitsmappendatei an. Weitere Informationen finden Sie unter [Excel Connection Manager](../../integration-services/connection-manager/excel-connection-manager.md).  
   
@@ -205,13 +206,6 @@ ms.lasthandoff: 01/25/2018
  Wendet die Fehlerbehandlungsoption auf die ausgewählten Zellen an.  
   
 ## <a name="related-content"></a>Verwandte Inhalte  
-  
--   Blogeintrag [Importing data from 64-bit Excel in SSIS](http://go.microsoft.com/fwlink/?LinkId=217673)(Importieren von Daten aus 64-Bit-Excel in SSIS) auf hrvoje.piasevoli.com  
-  
--   Blogeintrag [Excel in Integration Services, Part 1 of 3: Connections and Components](http://go.microsoft.com/fwlink/?LinkId=217674)auf dougbert.com  
-  
--   Blogeintrag [Excel in Integration Services, Part 2 of 3: Tables and Data Types](http://go.microsoft.com/fwlink/?LinkId=217675)auf dougbert.com.  
-  
--   Blogeintrag [Excel in Integration Services, Part 3 of 3: Issues and Alternatives](http://go.microsoft.com/fwlink/?LinkId=217676)auf dougbert.com.  
-  
-  
+[Load data from or to Excel with SQL Server Integration Services (SSIS) (Laden von Daten aus oder in Excel mit SQL Server Integration Services (SSIS))](../load-data-to-from-excel-with-ssis.md)
+[Excel-Ziel](excel-destination.md)  
+[Excel-Verbindungs-Manager](../connection-manager/excel-connection-manager.md)

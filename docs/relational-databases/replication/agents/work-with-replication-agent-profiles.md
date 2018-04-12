@@ -1,16 +1,16 @@
 ---
 title: Arbeiten mit Replikations-Agent-Profilen | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: replication
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - replication [SQL Server], agents and profiles
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - agents [SQL Server replication], profiles
 - profiles [SQL Server], replication agents
 ms.assetid: 9c290a88-4e9f-4a7e-aab5-4442137a9918
-caps.latest.revision: 
+caps.latest.revision: 49
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 189377d1812914df0f71ec844cd9fca0127a4a9c
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+ms.openlocfilehash: d593b1bb98508fa17bcc9be4bce1bdf448494dc6
+ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="work-with-replication-agent-profiles"></a>Arbeiten mit Replikations-Agent-Profilen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -178,7 +178,7 @@ ms.lasthandoff: 03/08/2018
   
 2.  Führen Sie auf dem Verteiler [sp_help_agent_parameter &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-help-agent-parameter-transact-sql.md) aus. Geben Sie den Bezeichner des Profils aus Schritt 1 für **@profile_id**. Dadurch werden alle Parameter für das Profil zurückgegeben. Beachten Sie den Namen der zu ändernden Parameter bzw. der aus dem Profil zu entfernenden Parameter.  
   
-3.  Führen Sie [sp_change_agent_profile &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-change-agent-profile-transact-sql.md) aus, um den Wert eines Parameters in einem Profil zu ändern. Geben Sie den Bezeichner des Profils aus Schritt 1 für **@profile_id**, den Namen des zu ändernden Parameters für **@property**und einen neuen Wert für den Parameter für **@value**.  
+3.  Führen Sie [sp_change_agent_parameter &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-change-agent-parameter-transact-sql.md) aus, um den Wert eines Parameters in einem Profil zu ändern. Geben Sie den Bezeichner des Profils aus Schritt 1 für **@profile_id**, den Namen des zu ändernden Parameters für **@parameter_name**und einen neuen Wert für den Parameter für **@parameter_value**.  
   
     > [!NOTE]  
     >  Es ist nicht möglich, ein vorhandenes Agentprofil in das Standardprofil für einen Agent zu ändern. Stattdessen müssen Sie ein neues Profil als Standardprofil erstellen, wie in der vorherigen Prozedur beschrieben.  

@@ -1,6 +1,6 @@
 ---
-title: "Lernprogramm: Erstellen Sie ein Widget eines benutzerdefinierten Einblicke in SQL-Vorgänge Studio (Vorschau) | Microsoft Docs"
-description: "Dieses Lernprogramm veranschaulicht, wie benutzerdefinierte Insight-Widgets erstellen, und fügen sie Datenbank- und Dashboards im SQL-Vorgänge Studio (Vorschau) hinzu."
+title: 'Lernprogramm: Erstellen Sie ein Widget eines benutzerdefinierten Einblicke in SQL Operations Studio (preview) | Microsoft Docs'
+description: Dieses Lernprogramm veranschaulicht, wie benutzerdefinierte Insight-Widgets erstellen, und fügen sie Datenbank- und Dashboards im SQL Operations Studio (preview) hinzu.
 ms.custom: tools|sos
 ms.date: 11/15/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,7 @@ ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: tutorial
 author: erickangMSFT
 ms.author: erickang

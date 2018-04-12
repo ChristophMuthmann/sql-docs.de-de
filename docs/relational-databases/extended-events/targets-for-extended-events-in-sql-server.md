@@ -1,29 +1,26 @@
 ---
-title: "Ziele für erweiterte Ereignisse in SQL Server | Microsoft-Dokumentation"
-ms.custom: 
-ms.date: 06/12/2017
+title: Ziele für erweiterte Ereignisse in SQL Server | Microsoft-Dokumentation
+ms.custom: ''
+ms.date: 04/02/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
-ms.component: extended-events
-ms.reviewer: 
+ms.service: ''
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-- xevents
-ms.tgt_pltfrm: 
+ms.technology: xevents
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 47c64144-4432-4778-93b5-00496749665b
-caps.latest.revision: 
+caps.latest.revision: 2
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a3c0d634e359b9b3578ba46649d202beef3367dd
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 06ac9f1d58fef9a2c8344de8e56e9bccb7024a31
+ms.sourcegitcommit: 094c46e7fa6de44735ed0040c65a40ec3d951b75
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="targets-for-extended-events-in-sql-server"></a>Ziele für erweiterte Ereignisse in SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -90,6 +87,10 @@ Erweiterte Ereignisse von SQL Server können mit der Ereignisablaufverfolgung f�
 
 Dieses ETW-Ziel verarbeitet die empfangenen Daten *synchron* , während die meisten Ziele *asynchrone*Verarbeitung aufweisen.
 
+> [!NOTE]
+> Die Azure SQL-Datenbank unterstützt das ETW-Ziel nicht. Die verwaltete Azure SQL-Datenbank-Instanz unterstützt das ETW-Ziel auch nicht.
+
+<!-- After OPS Versioning is live, the above !NOTE could be converted into a "3colon ZONE".  GeneMi = MightyPen. -->
 
 <a name="h2_target_event_counter"></a>
 
@@ -152,6 +153,12 @@ Das Ziel **event_file** schreibt Ereignissitzungsausgaben vom Puffer in eine Dat
 
 
 - Der gewählte Dateiname wird vom System als Präfix verwendet, an das eine auf Datum-/Uhrzeit basierende Ganzzahl vom Typ long integer angehängt wird, gefolgt von der XEL-Erweiterung.
+
+> [!NOTE]
+> Azure SQL-Datenbank unterstützt das Ziel **event_file**, aber nur durch Verwendung eines Blobs in Azure Storage für die Ausgabe. SQL-Datenbank kann Ereignisausgaben nicht in einer Datei auf Ihrer lokalen Festplatte speichern.
+> Ein Codebeispiel für **event_file** speziell für SQL-Datenbank (und die verwaltete SQL-Datenbank-Instanz) finden Sie unter [Code des Ereignisdateiziels für erweiterte Ereignisse in SQL-Datenbank](https://docs.microsoft.com/azure/sql-database/sql-database-xevent-code-event-file).
+
+<!-- After OPS Versioning is live, the above !NOTE could be converted into a "3colon ZONE".  GeneMi = MightyPen. -->
 
 
 #### <a name="create-event-session-with-eventfile-target"></a>CREATE EVENT SESSION mit **event_file**

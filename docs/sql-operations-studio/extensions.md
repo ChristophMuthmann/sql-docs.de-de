@@ -1,6 +1,6 @@
 ---
-title: Erweitern der Funktionalität von SQL-Vorgänge Studio (Vorschau) | Microsoft Docs
-description: Hinzufügen von Erweiterungen SQL Operations Studio (Vorschau)
+title: Erweitern der Funktionalität von SQL Operations Studio (preview) | Microsoft Docs
+description: Hinzufügen von Erweiterungen SQL Operations Studio (preview)
 ms.custom: tools|sos
 ms.date: 03/28/2018
 ms.reviewer: alayu; erickang; sstein
@@ -24,10 +24,10 @@ ms.lasthandoff: 03/28/2018
 
 Erweiterungen in [!INCLUDE[name-sos](../includes/name-sos-short.md)] bieten eine einfache Möglichkeit, weitere Funktionen hinzufügen, an den Basistext [!INCLUDE[name-sos](../includes/name-sos-short.md)] Installation. 
 
-Erweiterungen werden von der SQL-Vorgänge Studio-Team (Microsoft), sowie der 3rd Party-Community (Sie!) bereitgestellt. Ausführliche Informationen zum Erstellen von Erweiterungen finden Sie unter [erste Schritte mit Erweiterbarkeit](https://github.com/Microsoft/sqlopsstudio/wiki/Getting-started-with-Extensibility).
+Erweiterungen werden von der SQL Operations Studio-Team (Microsoft), sowie der 3rd Party-Community (Sie!) bereitgestellt. Ausführliche Informationen zum Erstellen von Erweiterungen finden Sie unter [erste Schritte mit Erweiterbarkeit](https://github.com/Microsoft/sqlopsstudio/wiki/Getting-started-with-Extensibility).
 
 
-## <a name="add-sql-operations-studio-extensions"></a>SQL-Vorgänge Studio-Erweiterungen hinzufügen.
+## <a name="add-sql-operations-studio-extensions"></a>SQL Operations Studio-Erweiterungen hinzufügen.
 
 1. Klicken Sie zum Öffnen des Erweiterungs-Managers und Zugriff auf die verfügbaren Erweiterungen, wählen Sie das Symbol "Erweiterungen", oder wählen Sie **Erweiterungen** in der **Ansicht** Menü.
 2. Wählen Sie eine verfügbare Erweiterung aus, um die zugehörigen Details anzuzeigen.

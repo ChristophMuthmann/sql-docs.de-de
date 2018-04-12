@@ -1,16 +1,16 @@
 ---
 title: BACKUP (Transact-SQL) | Microsoft-Dokumentation
-ms.custom: 
-ms.date: 01/22/2018
+ms.custom: ''
+ms.date: 03/30/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - BACKUP_TSQL
@@ -48,21 +48,23 @@ helpviewer_keywords:
 - stripe sets [SQL Server]
 - cross-platform backups
 ms.assetid: 89a4658a-62f1-4289-8982-f072229720a1
-caps.latest.revision: 
+caps.latest.revision: 275
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 506cda0644c6e3d144d5b02ff208d78e7305dfcc
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: ad21db12a4d147f8d999c7774a773082cbc6b1b5
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
 
-  Sichert eine vollständige [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank, um eine Datenbanksicherung zu erstellen, oder eine oder mehrere Dateien oder Dateigruppen, um eine Dateisicherung (BACKUP DATABASE) zu erstellen. Sichert bei Verwendung des vollständigen oder massenprotokollierten Wiederherstellungsmodells auch das Transaktionsprotokoll der Datenbank, um eine Protokollsicherung (BACKUP LOG) zu erstellen.  
+  Sichert eine vollständige [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank, um eine Datenbanksicherung zu erstellen, oder eine oder mehrere Dateien oder Dateigruppen, um eine Dateisicherung (BACKUP DATABASE) zu erstellen. Sichert bei Verwendung des vollständigen oder massenprotokollierten Wiederherstellungsmodells auch das Transaktionsprotokoll der Datenbank, um eine Protokollsicherung (BACKUP LOG) zu erstellen. 
+
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -73,7 +75,8 @@ Backing Up a Whole Database
 BACKUP DATABASE { database_name | @database_name_var }   
   TO <backup_device> [ ,...n ]   
   [ <MIRROR TO clause> ] [ next-mirror-to ]  
-  [ WITH { DIFFERENTIAL | <general_WITH_options> [ ,...n ] } ]  
+  [ WITH { DIFFERENTIAL -- Not supporterd in SQL Database Managed Instance
+           | <general_WITH_options> [ ,...n ] } ]  
 [;]  
   
 Backing Up Specific Files or Filegroups  
@@ -93,7 +96,8 @@ BACKUP DATABASE { database_name | @database_name_var }
 [;]  
   
 Backing Up the Transaction Log (full and bulk-logged recovery models)  
-BACKUP LOG { database_name | @database_name_var }   
+BACKUP LOG -- Not supported in SQL Database Managed Instance
+  { database_name | @database_name_var }  
   TO <backup_device> [ ,...n ]   
   [ <MIRROR TO clause> ] [ next-mirror-to ]  
   [ WITH { <general_WITH_options> | \<log-specific_optionspec> } [ ,...n ] ]  
@@ -102,7 +106,9 @@ BACKUP LOG { database_name | @database_name_var }
 <backup_device>::=   
  {  
    { logical_device_name | @logical_device_name_var }   
- | { DISK | TAPE | URL} =   
+ | {   DISK -- Not supported in SQL Database Managed Instance
+     | TAPE -- Not supported in SQL Database Managed Instance
+     | URL } =   
      { 'physical_device_name' | @physical_device_name_var | 'NUL' }  
  }   
   
@@ -120,13 +126,13 @@ FILEGROUP = { logical_filegroup_name | @logical_filegroup_name_var }
   
 <general_WITH_options> [ ,...n ]::=   
 --Backup Set Options  
-   COPY_ONLY   
+   COPY_ONLY -- Only backup set option supported by SQL Database Managed Instance  
  | { COMPRESSION | NO_COMPRESSION }   
  | DESCRIPTION = { 'text' | @text_variable }   
  | NAME = { backup_set_name | @backup_set_name_var }   
  | CREDENTIAL  
  | ENCRYPTION  
- | FILE_SNAPSHOT  
+ | FILE_SNAPSHOT  --Not supported in SQL Database Managed Instance
  | { EXPIREDATE = { 'date' | @date_var }   
         | RETAINDAYS = { days | @days_var } }   
   
@@ -152,11 +158,11 @@ FILEGROUP = { logical_filegroup_name | @logical_filegroup_name_var }
 --Monitoring Options  
    STATS [ = percentage ]   
   
---Tape Options  
+--Tape Options. These are not supported in SQL Database Managed Instance
    { REWIND | NOREWIND }   
  | { UNLOAD | NOUNLOAD }   
   
---Log-specific Options  
+--Log-specific Options. These are not supported in SQL Database Managed Instance 
    { NORECOVERY | STANDBY = undo_file_name }  
  | NO_TRUNCATE  
   
@@ -166,7 +172,8 @@ FILEGROUP = { logical_filegroup_name | @logical_filegroup_name_var }
 ```  
   
 ## <a name="arguments"></a>Argumente  
- DATABASE  
+
+DATABASE  
  Gibt eine vollständige Datenbanksicherung an. Wird eine Liste von Dateien und Dateigruppen angegeben, werden nur diese Dateien und Dateigruppen gesichert. Während einer vollständigen oder differenziellen Datenbanksicherung werden von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auch die erforderlichen Teile des Transaktionsprotokolls gesichert, um eine konsistente Datenbank zu erzeugen, wenn die Sicherung wiederhergestellt wird.  
   
  Wenn Sie eine von BACKUP DATABASE (eine *Datensicherung*) erstellte Sicherung wiederherstellen, wird die komplette Sicherung wiederhergestellt. Nur Protokollsicherungen können bis zu einem bestimmten Zeitpunkt oder bis zu einer bestimmten Transaktion in der Sicherung wiederhergestellt werden.  
@@ -174,7 +181,8 @@ FILEGROUP = { logical_filegroup_name | @logical_filegroup_name_var }
 > [!NOTE]  
 > Für die **Masterdatenbank** kann nur eine vollständige Datenbanksicherung ausgeführt werden.  
   
- LOG  
+LOG **Gilt für:** SQL Server
+
  Gibt an, dass nur das Transaktionsprotokoll gesichert wird. Das Protokoll wird von der letzten erfolgreich ausgeführten Protokollsicherung bis zum aktuellen Ende des Protokolls gesichert. Bevor Sie die erste Protokollsicherung erstellen können, müssen Sie eine vollständige Sicherung erstellen.  
   
  Eine Protokollsicherung können Sie auf eine bestimmte Zeit oder Transaktion in der Sicherung wiederherstellen, indem Sie `WITH STOPAT`, `STOPATMARK` oder `STOPBEFOREMARK` in Ihrer [RESTORE LOG](../../t-sql/statements/restore-statements-transact-sql.md)-Anweisung angeben.  
@@ -223,12 +231,11 @@ Der logische Name einer schreibgeschützten Dateigruppe oder einer Variablen, de
   
 TO \<backup_device> [ **,**...*n* ]Gibt an, dass es sich bei dem zugehörigen Satz von [Sicherungsmedien](../../relational-databases/backup-restore/backup-devices-sql-server.md) entweder um einen nicht gespiegelten Mediensatz handelt oder um den ersten Spiegel innerhalb eines gespiegelten Mediensatzes (für den eine oder mehrere MIRROR TO-Klauseln deklariert sind).  
   
-\<backup_device> Gibt ein logisches oder physisches Sicherungsmedium an, das für den Sicherungsvorgang verwendet werden soll.  
+\<backup_device> **Gilt für:** SQL Server Gibt ein logisches oder physisches Sicherungsmedium an, das für den Sicherungsvorgang verwendet werden soll.  
   
- { *logical_device_name* | **@***logical_device_name_var* } Der logische Name des Sicherungsmediums, auf dem die Datenbank gesichert wird. Der logische Name muss den Regeln für Bezeichner entsprechen. Bei der Angabe als Variable (*logical_device_name_var*) kann der Name des Sicherungsmediums entweder als Zeichenfolgenkonstante (@*logical_device_name_var***=** Name des logischen Sicherungsmediums) oder als Variable eines Zeichenfolgen-Datentyps (mit Ausnahme der Datentypen **ntext** oder **text**) angegeben werden.  
+ { *logical_device_name* | **@***logical_device_name_var* } **Gilt für:** SQL Server Der logische Name des Sicherungsmediums, auf dem die Datenbank gesichert wird. Der logische Name muss den Regeln für Bezeichner entsprechen. Bei der Angabe als Variable (*logical_device_name_var*) kann der Name des Sicherungsmediums entweder als Zeichenfolgenkonstante (@*logical_device_name_var***=** Name des logischen Sicherungsmediums) oder als Variable eines Zeichenfolgen-Datentyps (mit Ausnahme der Datentypen **ntext** oder **text**) angegeben werden.  
   
- { DISK | TAPE | URL} **=** { **'***physical_device_name***'** | **@***physical_device_name_var* | 'NUL' }  
- Gibt eine Datenträgerdatei oder ein Bandmedium oder einen Windows Azure-BLOB-Speicherdienst an. Das URL-Format wird zum Erstellen von Sicherungen im Windows Azure-Speicherdienst verwendet. Weitere Informationen finden Sie unter [SQL Server-Sicherung und -Wiederherstellung mit dem Microsoft Azure Blob Storage Service](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). Ein Tutorial finden Sie unter [Tutorial: SQL Server-Sicherung und -Wiederherstellung im Windows Azure-BLOB-Speicherdienst](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md). 
+ {DISK | TAPE | URL} **=** { **'***physical_device_name***'** | **@***physical_device_name_var* | 'NUL' } **Gilt für:** DISK, TAPE und URL gelten für SQL Server. Nur URL gilt für die verwaltete SQL-Datenbankinstanz Gibt eine Datenträgerdatei oder ein Bandmedium oder einen Microsoft Azure Blob Storage-Dienst an. Das URL-Format wird zum Erstellen von Sicherungen im Windows Azure-Speicherdienst verwendet. Weitere Informationen finden Sie unter [SQL Server-Sicherung und -Wiederherstellung mit dem Microsoft Azure Blob Storage Service](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). Ein Tutorial finden Sie unter [Tutorial: SQL Server-Sicherung und -Wiederherstellung im Windows Azure-BLOB-Speicherdienst](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md). 
 
 > [!NOTE] 
 > Das Datenträgermedium NUL verwirft alle Informationen, die es empfängt, und sollte nur zu Testzwecken verwendet werden. Es ist nicht zur Verwendung in der Produktion bestimmt.
@@ -236,7 +243,7 @@ TO \<backup_device> [ **,**...*n* ]Gibt an, dass es sich bei dem zugehörigen Sa
 > [!IMPORTANT]  
 > Ab [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 bis [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] können Sie nur auf ein einzelnes Gerät sichern, wenn Sie über die URL sichern. Um auf mehreren Geräten eine Sicherung durchzuführen, wenn Sie über die URL sichern, verwenden Sie [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Außerdem müssen Sie Shared Access Signature-Token (SAS) verwenden. Beispiele für die Erstellung einer Shared Access Signature finden Sie unter [SQL Server-Sicherung über URLs](../../relational-databases/backup-restore/sql-server-backup-to-url.md) und [Simplifying creation of SQL Credentials with Shared Access Signature (SAS) tokens on Azure Storage with Powershell](http://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx) (Vereinfachen der Erstellung von SQL-Anmeldeinformationen mit Shared Access Signature-Token in Azure Storage mit PowerShell).  
   
-**URL betrifft**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
+**URL gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) und die verwaltete SQL-Datenbankinstanz.  
   
  Das Datenträgermedium muss erst dann vorhanden sein, wenn es in einer BACKUP-Anweisung angegeben wird. Wenn das physische Medium vorhanden ist und die Option INIT in der BACKUP-Anweisung nicht angegeben ist, wird die Sicherung an das Medium angefügt.  
  
@@ -272,17 +279,15 @@ MIRROR TO \<backup_device> [ **,**...*n* ] Gibt einen Satz von bis zu drei sekun
  Gibt die Optionen an, die bei einem Sicherungsvorgang verwendet werden sollen.  
   
  CREDENTIAL  
+**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) und die verwaltete SQL-Datenbankinstanz.  
  Wird nur verwendet, wenn eine Sicherung im Windows Azure-BLOB-Speicherdienst erstellt wird.  
   
-**Betrifft**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
-  
- FILE_SNAPSHOT  
+ FILE_SNAPSHOT **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).
+
  Wird zum Erstellen einer Azure-Momentaufnahme der Datenbankdateien verwendet, wenn alle SQL Server-Datenbankdateien unter Verwendung des Azure-Blob-Speicherdiensts gespeichert werden. Weitere Informationen finden Sie unter [SQL Server-Datendateien in Microsoft Azure](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Die Momentaufnahmesicherung erstellt Azure-Momentaufnahmen der Datenbankdateien (Daten- und Protokolldateien) in einem konsistenten Zustand. Ein konsistenter Satz von Azure-Momentaufnahmen bildet zusammen eine Sicherung und wird in der Sicherungsdatei aufgezeichnet. Der einzige Unterschied zwischen `BACKUP DATABASE TO URL WITH FILE_SNAPSHOT` und `BACKUP LOG TO URL WITH FILE_SNAPSHOT` ist, dass der zweite Wert auch das Transaktionsprotokoll abschneidet, während dies beim ersten Wert nicht der Fall ist. Bei [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Momentaufnahmesicherung ist nur eine Transaktionsprotokollsicherung erforderlich, um eine Datenbank auf den Zeitpunkt der Transaktionsprotokollsicherung wiederherzustellen, nachdem die erste vollständige, von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für die Einrichtung der Sicherungskette vorausgesetzte Sicherung durchgeführt wurde. Darüber hinaus sind nur zwei Sicherungen des Transaktionsprotokolls erforderlich, um eine Datenbank auf einen Zeitpunkt zwischen den beiden Transaktionsprotokollsicherungen wiederherstellen.  
-  
-**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
-  
+    
  DIFFERENTIAL  
- Gibt bei der Verwendung nur mit BACKUP DATABASE an, dass sich die Datenbank- oder Dateisicherung nur auf die Teile der Datenbank oder Datei beschränken soll, die seit der letzten vollständigen Sicherung geändert wurden. Eine differenzielle Sicherung benötigt in der Regel weniger Speicherplatz als eine vollständige Sicherung. Verwenden Sie diese Option, damit nicht alle seit der letzten vollständigen Sicherung ausgeführten individuellen Protokollsicherungen angewendet werden müssen.  
+**Gilt für:** SQL Server Nur mit BACKUP DATABASE verwendet, gibt an, dass sich die Datenbank- oder Dateisicherung nur auf die Teile der Datenbank oder Datei beschränken soll, die seit der letzten vollständigen Sicherung geändert wurden. Eine differenzielle Sicherung benötigt in der Regel weniger Speicherplatz als eine vollständige Sicherung. Verwenden Sie diese Option, damit nicht alle seit der letzten vollständigen Sicherung ausgeführten individuellen Protokollsicherungen angewendet werden müssen.  
   
 > [!NOTE]  
 > Standardmäßig erstellt `BACKUP DATABASE` eine vollständige Sicherung.  
@@ -313,8 +318,7 @@ Diese Optionen werden für den durch diesen Sicherungsvorgang erstellten Sicheru
 > [!NOTE]  
 > Verwenden Sie die Option `FILE = <backup_set_file_number>`, um einen Sicherungssatz für einen Wiederherstellungsvorgang anzugeben. Weitere Informationen zum Angeben eines Sicherungssatzes finden Sie unter "Angeben eines Sicherungssatzes" in [RESTORE-Argumente &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md).
   
- COPY_ONLY  
- Gibt an, dass die Sicherung eine *Kopiesicherung* ist, die keine Auswirkungen auf die normale Sicherungssequenz hat. Eine Kopiesicherung wird unabhängig von den regelmäßig geplanten konventionellen Sicherungen erstellt. Eine Kopiesicherung hat keine Auswirkungen auf die allgemeinen Sicherungs- und Wiederherstellungsprozeduren für die Datenbank.  
+ COPY_ONLY **Gilt für:** SQL Server und verwaltete SQL-Datenbankinstanz Gibt an, dass die Sicherung eine *Kopiesicherung* ist, die keine Auswirkungen auf die normale Sicherungssequenz hat. Eine Kopiesicherung wird unabhängig von den regelmäßig geplanten konventionellen Sicherungen erstellt. Eine Kopiesicherung hat keine Auswirkungen auf die allgemeinen Sicherungs- und Wiederherstellungsprozeduren für die Datenbank.  
   
  Kopiesicherungen sollten in Situationen verwendet werden, in denen eine Sicherung für einen besonderen Zweck verwendet wird, z. B. zum Sichern des Protokolls vor einer Onlinedateiwiederherstellung. In der Regel wird eine Kopieprotokollsicherung einmal verwendet und dann gelöscht.  
   
@@ -501,15 +505,13 @@ STATS [ **=** *percentage* ]
 Mit der Option STATS wird der Prozentsatz gemeldet, der beim Erreichen des Schwellenwertes für das nächste Meldungsintervall abgeschlossen ist. Bei dem angegebenen Prozentsatz handelt es sich um einen ungefähren Wert. Wird beispielsweise STATS=10 festgelegt und sind 40 Prozent des Vorgangs abgeschlossen, dann zeigt die Option u. U. 43 Prozent an. Bei größeren Sicherungssätzen stellt dies kein Problem dar, da sich der Wert für den abgeschlossenen Prozentsatz zwischen abgeschlossenen E/A-Aufrufen nur sehr langsam verändert.  
   
 **Bandoptionen**  
-  
+**Gilt für:** SQL Server  
 Diese Optionen werden nur für Bandmedien verwendet. Diese Optionen werden ignoriert, wenn ein anderes Medium als ein Bandmedium verwendet wird.  
   
 { **REWIND** | NOREWIND }  
-REWIND  
- Gibt an, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] das Band freigeben und zurückspulen soll. REWIND ist die Standardeinstellung.  
+REWIND **Gilt für:** SQL Server Gibt an, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] das Band freigeben und zurückspulen soll. REWIND ist die Standardeinstellung.  
   
-NOREWIND  
-Gibt an, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] das Band nach dem Sicherungsvorgang offen hält. Diese Option trägt zur Leistungsverbesserung bei, wenn mehrere Sicherungsvorgänge auf einem Band ausgeführt werden.  
+NOREWIND **Gilt für:** SQL Server Gibt an, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] das Band nach dem Sicherungsvorgang offen hält. Diese Option trägt zur Leistungsverbesserung bei, wenn mehrere Sicherungsvorgänge auf einem Band ausgeführt werden.  
   
 NOREWIND impliziert NOUNLOAD, und diese Optionen sind innerhalb einer BACKUP-Anweisung inkompatibel.  
   
@@ -517,33 +519,33 @@ NOREWIND impliziert NOUNLOAD, und diese Optionen sind innerhalb einer BACKUP-Anw
 > Wenn Sie `NOREWIND` verwenden, bleibt die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Besitzer des Bandlaufwerks, bis in einer BACKUP- oder RESTORE-Anweisung, die in demselben Prozess ausgeführt wird, die Option `REWIND` oder `UNLOAD` verwendet wird oder bis die Serverinstanz heruntergefahren wird. Ein Offenhalten des Bandes verhindert, dass andere Prozesse auf das Band zugreifen können. Informationen zum Anzeigen einer Liste offener Bänder und zum Schließen eines offenen Bandes finden Sie unter [Sicherungsmedien &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).  
   
 { **UNLOAD** | NOUNLOAD }    
-
+**Gilt für:** SQL Server 
 > [!NOTE]  
 > `UNLOAD` und `NOUNLOAD` sind Sitzungseinstellungen, die für die Dauer der Sitzung oder bis zur Angabe der alternativen Einstellung persistent gespeichert wird.  
   
-UNLOAD  
+UNLOAD **Gilt für:** SQL Server   
  Gibt an, dass das Band automatisch zurückgespult und ausgeworfen wird, wenn die Sicherung vollständig ausgeführt ist. UNLOAD ist die Standardeinstellung beim Beginn einer Sitzung. 
   
-NOUNLOAD  
- Gibt an, dass das Band nach dem BACKUP-Vorgang im Bandlaufwerk geladen bleibt.  
+NOUNLOAD **Gilt für:** SQL Server Gibt an, dass das Band nach dem BACKUP-Vorgang im Bandlaufwerk geladen bleibt.  
   
 > [!NOTE]  
 > Beim Sichern auf einem Bandsicherungsmedium wirkt sich die Option `BLOCKSIZE` auf die Leistung des Sicherungsvorgangs aus. Diese Option hat i. d. R. nur dann Auswirkungen auf die Leistung, wenn auf Bandmedien geschrieben wird.  
   
 **Protokollspezifische Optionen**  
-  
+**Gilt für:** SQL Server  
 Diese Optionen werden nur mit `BACKUP LOG` verwendet.  
   
 > [!NOTE]  
 > Wenn Sie keine Protokollsicherungen vornehmen möchten, verwenden Sie das einfache Wiederherstellungsmodell. Weitere Informationen finden Sie unter [Wiederherstellungsmodelle &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md).  
   
 { NORECOVERY | STANDBY **=** *undo_file_name* }  
-  NORECOVERY  
+  NORECOVERY **Gilt für:** SQL Server   
   Sichert das Protokollfragment und belässt die Datenbank im RESTORING-Status. NORECOVERY ist hilfreich, wenn ein Failover zu einer sekundären Datenbank erfolgt oder wenn das Protokollfragment vor einem RESTORE-Vorgang gesichert wird.  
   
   Zum Ausführen einer Protokollsicherung, bei der die Protokollkürzung ausgelassen wird und die Datenbank automatisch den Status RESTORING erhält, verwenden Sie die Optionen `NO_TRUNCATE` und `NORECOVERY` zusammen.  
   
-  STANDBY **=** *standby_file_name*  
+  STANDBY **=** *standby_file_name* 
+**Gilt für:** SQL Server   
   Sichert das Protokollfragment und belässt die Datenbank im schreibgeschützten Modus und im STANDBY-Status. Die STANDBY-Klausel schreibt Standbydaten (wobei ein Rollback durchgeführt wird, aber mit der Option weiterer Wiederherstellungen). Die Verwendung der Option STANDBY ist gleichbedeutend mit BACKUP LOG WITH NORECOVERY gefolgt von RESTORE WITH STANDBY.  
   
   Wenn der Standbymodus verwendet wird, ist eine Standbydatei erforderlich, die mit *standby_file_name* angegeben wird und deren Speicherort im Protokoll der Datenbank gespeichert wird. Ist die angegebene Datei bereits vorhanden, wird sie von [!INCLUDE[ssDE](../../includes/ssde-md.md)] überschrieben. Ist sie noch nicht vorhanden, wird sie von [!INCLUDE[ssDE](../../includes/ssde-md.md)] erstellt. Die Standbydatei wird Teil der Datenbank.  
@@ -551,6 +553,7 @@ Diese Optionen werden nur mit `BACKUP LOG` verwendet.
   Diese Datei enthält die Änderungen aus dem Rollback, die rückgängig gemacht werden müssen, wenn zu einem späteren Zeitpunkt RESTORE LOG-Vorgänge angewendet werden sollen. Es muss ausreichend Speicherplatz für die Vergrößerung der Standbydatei vorhanden sein, damit diese Datei alle Seiten aus der Datenbank enthalten kann, die durch das Rollback für die Transaktionen ohne Commit geändert wurden.  
   
 NO_TRUNCATE  
+**Gilt für:** SQL Server  
 Gibt an, dass das Protokoll nicht abgeschnitten wird, und führt dazu, dass [!INCLUDE[ssDE](../../includes/ssde-md.md)] versucht, die Sicherung unabhängig vom Status der Datenbank durchzuführen. Daraus folgt, dass eine Sicherung, die mit `NO_TRUNCATE` erstellt wird, u.U. unvollständige Metadaten enthält. Diese Option ermöglicht es, das Protokoll auch dann zu sichern, wenn die Datenbank beschädigt ist.  
   
 Die NO_TRUNCATE-Option von BACKUP LOG ist gleichbedeutend mit der Angabe von COPY_ONLY und CONTINUE_AFTER_ERROR.  
@@ -700,7 +703,8 @@ Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ermöglicht dies einen opti
 
 > [!NOTE]  
 > Der optimierte Komprimierungsalgorithmus für TDE-verschlüsselte Datenbanken wird automatisch verwendet, wenn:
-> * URL-Sicherung verwendet wird. In diesem Fall wird die Standardeinstellung `MAXTRANSFERSIZE` in 1048576 (1 MB) geändert und nicht auf einen niedrigeren Wert erzwungen.
+> * 
+>  In diesem Fall wird die Standardeinstellung `MAXTRANSFERSIZE` in 1048576 (1 MB) geändert und nicht auf einen niedrigeren Wert erzwungen.
 > * Die Datenbank mehrere Datendateien besitzt. In diesem Fall wird die Standardeinstellung `MAXTRANSFERSIZE` in ein Vielfaches von 65536 (64 KB) und nicht in einen niedrigeren Wert geändert (z.B. `MAXTRANSFERSIZE = 65536`). 
   
 Standardmäßig wird bei jedem erfolgreichen Sicherungsvorgang dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Fehlerprotokoll und dem Systemereignisprotokoll ein Eintrag hinzugefügt. Wenn Sie das Protokoll regelmäßig sichern, kann die Anzahl dieser Erfolgsmeldungen schnell ansteigen, d. h., es entstehen sehr große Fehlerprotokolle, die das Suchen nach anderen Meldungen erschweren können. In solchen Fällen können Sie diese Protokolleinträge mithilfe des Ablaufverfolgungsflags 3226 unterdrücken, wenn keines der Skripts von diesen Einträgen abhängig ist. Weitere Informationen finden Sie unter [Ablaufverfolgungsflags &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).  
@@ -715,7 +719,16 @@ Standardmäßig wird bei jedem erfolgreichen Sicherungsvorgang dem [!INCLUDE[ssN
 -   Vorgänge zum Verkleinern der Datenbank oder von Dateien. Dazu gehören auch Vorgänge zum automatischen Verkleinern.  
   
 Wenn sich ein Sicherungsvorgang mit einem Dateiverwaltungs- oder Verkleinerungsvorgang überschneidet, tritt ein Konflikt auf. Unabhängig davon, welcher am Konflikt beteiligte Vorgang zuerst begonnen hat, wartet der zweite Vorgang auf das Timeout der Sperre, die vom ersten Vorgang angewendet wurde (der Timeoutzeitraum wird durch eine Timeouteinstellung für die Sitzung gesteuert). Wenn die Sperre während des Timeoutzeitraums aufgehoben wird, wird der zweite Vorgang fortgesetzt. Wenn das Timeout für die Sperre eintritt, erzeugt der zweite Vorgang einen Fehler.  
-  
+
+## <a name="limitations-for-sql-database-managed-instance"></a>Einschränkungen bei verwalteten SQL-Datenbank-Instanzen
+Verwaltete SQL-Datenbank-Instanzen können eine Datenbank mit bis zu 32 Streifen speichern. Dies ist ausreichend für Datenbanken bis zu 4 TB, wenn die Sicherungskomprimierung verwendet wird.
+
+Die max. Streifengröße bei der Speicherung beträgt 195 GB (maximale Blob-Größe). Erhöhen Sie die Streifenanzahl im Backup-Befehl, um die einzelne Streifengröße zu reduzieren und innerhalb dieser Einschränkungen zu bleiben.
+
+> [!NOTE]
+> Um diese Einschränkung lokal umgehen zu können, führen Sie eine Sicherung auf `DISK` und nicht auf `URL` durch, laden Sie die Sicherungsdatei in den Blob, und führen Sie anschließend eine Wiederherstellung durch. Die Wiederherstellung unterstützt größere Dateien, da ein anderer Blobtyp verwendet wird.
+
+ 
 ## <a name="metadata"></a>Metadaten  
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sind folgende Tabellen mit Sicherungsverläufen enthalten, in denen Sicherungsaktivitäten nachverfolgt werden:  
   
@@ -740,7 +753,8 @@ Wird eine Wiederherstellung durchgeführt, wenn der Sicherungssatz noch nicht in
   
 -   A. [Sichern einer vollständigen Datenbank](#backing_up_db)  
 -   B. [Sichern der Datenbank und des Protokolls](#backing_up_db_and_log)  
--   C. [Erstellen einer vollständigen Dateisicherung der sekundären Dateigruppen](#full_file_backup)  
+-   C. [Erstellen einer vollständigen Dateisicherung der sekundären Dateigruppen](#full_
+-   file_backup)  
 -   D. [Erstellen einer differenziellen Dateisicherung der sekundären Dateigruppen](#differential_file_backup)  
 -   E. [Erstellen eines gespiegelten Mediensatzes für eine Medienfamilie und Sichern auf einen gespiegelten Mediensatz für eine Medienfamilie](#create_single_family_mirrored_media_set)  
 -   F. [Erstellen eines gespiegelten Mediensatzes für mehrere Medienfamilien und Sichern auf einen gespiegelten Mediensatz für mehrere Medienfamilien](#create_multifamily_mirrored_media_set)  

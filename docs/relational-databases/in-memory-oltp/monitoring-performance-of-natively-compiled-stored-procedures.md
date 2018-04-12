@@ -1,35 +1,35 @@
 ---
-title: "Überwachen der Leistung von systemintern kompilierten gespeicherten Prozeduren | Microsoft-Dokumentation"
-ms.custom: 
-ms.date: 03/16/2017
+title: Überwachen der Leistung von systemintern kompilierten gespeicherten Prozeduren | Microsoft-Dokumentation
+ms.custom: ''
+ms.date: 04/03/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: in-memory-oltp
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine-imoltp
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 55548cb2-77a8-4953-8b5a-f2778a4f13cf
-caps.latest.revision: 
+caps.latest.revision: 11
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a5f180e94f835adaa91812e0341dab85d382c2c2
-ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
+ms.openlocfilehash: 1912c692998f08f947b9fb147d049048b8101ad6
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="monitoring-performance-of-natively-compiled-stored-procedures"></a>Überwachen der Leistung von systemintern kompilierten gespeicherten Prozeduren
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  In diesem Thema wird erläutert, wie Sie die Leistung von systemintern kompilierten gespeicherten Prozeduren überwachen können.  
+  In diesem Artikel wird erläutert, wie Sie die Leistung von nativ kompilierten gespeicherten Prozeduren und anderen nativ kompilierten T-SQL-Modulen überwachen können.  
   
 ## <a name="using-extended-events"></a>Unter Verwendung erweiterter Ereignisse  
- Verwenden Sie das erweiterte Ereignis **sp_statement_completed** , um die Ausführung einer Abfrage zu verfolgen. Erstellen Sie eine Sitzung für erweiterte Ereignisse mit diesem Ereignis. Optional können Sie für eine bestimmte systemintern kompilierte gespeicherte Prozedur nach object_id filtern. Das erweiterte Ereignis wird nach der Ausführung jeder Abfrage ausgelöst. Die vom erweiterten Ereignis angegebene CPU-Zeit und Dauer geben an, wie lange die CPU genutzt und wie lange die Abfrage ausgeführt wurde. Bei einer systemintern kompilierten gespeicherten Prozedur, die viel CPU-Zeit beansprucht, treten u. U. Leistungsprobleme auf.  
+ Verwenden Sie das erweiterte Ereignis **sp_statement_completed** , um die Ausführung einer Abfrage zu verfolgen. Erstellen Sie eine Sitzung für erweiterte Ereignisse mit diesem Ereignis. Optional können Sie für eine bestimmte nativ kompilierte gespeicherte Prozedur nach object_id filtern. Das erweiterte Ereignis wird nach der Ausführung jeder Abfrage ausgelöst. Die vom erweiterten Ereignis angegebene CPU-Zeit und Dauer geben an, wie lange die CPU genutzt und wie lange die Abfrage ausgeführt wurde. Bei einer systemintern kompilierten gespeicherten Prozedur, die viel CPU-Zeit beansprucht, treten u. U. Leistungsprobleme auf.  
   
  Neben**line_number**kann auch **object_id** im erweiterten Ereignis verwendet werden, um die Abfrage zu untersuchen. Mithilfe der folgenden Abfrage kann die Prozedurdefinition abgerufen werden. Anhand der Zeilennummer wird die Abfrage innerhalb der Definition identifiziert:  
   
@@ -39,21 +39,39 @@ select [definition] from sys.sql_modules where object_id=object_id
   
  Weitere Informationen zum erweiterten Ereignis **sp_statement_completed** finden Sie unter [Abrufen der Anweisung, durch die ein Ereignis ausgelöst wurde](http://blogs.msdn.com/b/extended_events/archive/2010/05/07/making-a-statement-how-to-retrieve-the-t-sql-statement-that-caused-an-event.aspx).  
   
-## <a name="using-data-management-views"></a>Unter Verwendung von Datenverwaltungssichten  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt Ausführungsstatistiken für systemintern kompilierte gespeicherte Prozeduren sowohl auf Prozedur- als auch auf Abfrageebene. Das Sammeln statistischer Ausführungsdaten ist aufgrund der Leistungsauswirkungen standardmäßig nicht aktiviert.  
-  
- Die Statistiksammlung für systemintern kompilierte gespeicherte Prozeduren kann mit [sys.sp_xtp_control_proc_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md) aktiviert und deaktiviert werden.  
-  
- Wenn die Erfassung von Statistiken mit [sys.sp_xtp_control_proc_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md) aktiviert ist, können Sie [sys.dm_exec_procedure_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md) verwenden, um die Leistung einer nativ kompilierten gespeicherten Prozedur zu überwachen.  
-  
- Wenn die Erfassung von Statistiken mit [sys.sp_xtp_control_query_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md) aktiviert ist, können Sie [sys.dm_exec_query_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md) verwenden, um die Leistung einer nativ kompilierten gespeicherten Prozedur zu überwachen.  
-  
- Zu Beginn aktivieren Sie die Statistiksammlung. Anschließend führen Sie die systemintern kompilierte gespeicherte Prozedur aus. Am Ende deaktivieren Sie die Statistiksammlung. Anschließend analysieren Sie die von den DMVs zurückgegebene Ausführungsstatistik.  
-  
+## <a name="using-data-management-views-and-query-store"></a>Verwenden von Datenverwaltungsansichten und Abfragespeicher
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und [!INCLUDE[ssSDS](../../includes/sssds-md.md)] unterstützen Ausführungsstatistiken für nativ kompilierte gespeicherte Prozeduren sowohl auf Prozedur- als auch auf Abfrageebene. Das Sammeln statistischer Ausführungsdaten ist aufgrund der Leistungsauswirkungen standardmäßig nicht aktiviert.  
+
+Ausführungsstatistiken werden in den Systemansichten [sys.dm_exec_procedure_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md) und [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md) sowie im [Abfragespeicher](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md) wiedergegeben.
+
+### <a name="enabling-procedure-level-execution-statistics-collection"></a>Aktivieren der Sammlung von Ausführungsstatistiken auf Prozedurebene
+
+**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**: Aktivieren oder Deaktivieren der Sammlung von Statistiken auf nativ kompilierten gespeicherten Prozeduren auf Prozedurebene mithilfe von [sys.sp_xtp_control_proc_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md).  Die folgende Anweisung aktiviert die Sammlung von Ausführungsstatistiken auf Prozedurebene für alle nativ kompilierten T-SQL-Module auf der aktuellen Instanz:
+```sql
+EXEC sys.sp_xtp_control_proc_exec_stats 1
+```
+
+**[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]**: Aktivieren oder Deaktivieren der Sammlung von Statistiken auf nativ kompilieren gespeicherten Prozeduren auf Prozedurebene mithilfe der [datenbankweit gültigen Konfigurationsoption](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) `XTP_PROCEDURE_EXECUTION_STATISTICS`. Die folgende Anweisung aktiviert die Sammlung von Ausführungsstatistiken auf Prozedurebene für alle nativ kompilierten T-SQL-Module auf der aktuellen Datenbank:
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET XTP_PROCEDURE_EXECUTION_STATISTICS = ON
+```
+
+### <a name="enabling-query-level-execution-statistics-collection"></a>Aktivieren der Sammlung von Ausführungsstatistiken auf Abfrageebene
+
+**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**: Aktivieren oder Deaktivieren der Sammlung von Statistiken auf nativ kompilierten gespeicherten Prozeduren auf Abfrageebene mithilfe von [sys.sp_xtp_control_query_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md).  Die folgende Anweisung aktiviert die Sammlung von Ausführungsstatistiken auf Abfrageebene für alle nativ kompilierten T-SQL-Module auf der aktuellen Instanz:
+```sql
+EXEC sys.sp_xtp_control_query_exec_stats 1
+```
+
+**[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]**: Aktivieren oder Deaktivieren der Sammlung von Statistiken auf nativ kompilieren gespeicherten Prozeduren auf Anweisungsebene mithilfe der [datenbankweit gültigen Konfigurationsoption](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) `XTP_QUERY_EXECUTION_STATISTICS`. Die folgende Anweisung aktiviert die Sammlung von Ausführungsstatistiken auf Abfrageebene für alle nativ kompilierten T-SQL-Module auf der aktuellen Datenbank:
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET XTP_QUERY_EXECUTION_STATISTICS = ON
+```
+
+## <a name="sample-queries"></a>Beispielabfragen
+
  Nachdem die Statistiksammlung abgeschlossen wurde, können die Ausführungsstatistiken zu nativ kompilierten gespeicherten Prozeduren mit [sys.dm_exec_procedure_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md) für eine Prozedur und für Abfragen mit [sys.dm_exec_query_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md) abgefragt werden.  
-  
-> [!NOTE]  
->  Wenn die Statistiksammlung für systemintern kompilierte gespeicherte Prozeduren aktiviert ist, wird worker_time in Millisekunden erfasst. Wird die Abfrage in weniger als einer Millisekunde ausgeführt, lautet der Wert 0. Wenn zahlreiche Ausführungen weniger als 1 Millisekunde dauern, wird **total_worker_time** bei nativ kompilierten gespeicherten Prozeduren u.U. nicht exakt angegeben.  
+ 
   
  Mit der folgenden Abfrage werden nach der Statistiksammlung die Prozedurnamen und Ausführungsstatistiken für systemintern kompilierte gespeicherte Prozeduren in der aktuellen Datenbank zurückgegeben:  
   
@@ -99,7 +117,9 @@ where  st.dbid=db_id() and st.objectid in (select object_id
 from sys.sql_modules where uses_native_compilation=1)  
 order by qs.total_worker_time desc  
 ```  
-  
+
+## <a name="query-execution-plans"></a>Abfragen von Ausführungsplänen
+
  Systemintern kompilierte gespeicherte Prozeduren unterstützen SHOWPLAN_XML (geschätzter Ausführungsplan). Der geschätzte Ausführungsplan kann verwendet werden, um den Abfrageplan auf Planungsfehler zu überprüfen. Häufige Gründe für fehlerhafte Pläne sind:  
   
 -   Statistiken wurden vor der Erstellung der Prozedur nicht aktualisiert.  

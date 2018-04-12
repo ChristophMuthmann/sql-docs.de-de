@@ -1,6 +1,6 @@
 ---
-title: "Erstellen von Codeausschnitten in SQL-Vorgänge Studio (Vorschau) | Microsoft Docs"
-description: "Informationen Sie zum Erstellen und Verwenden von SQL-Codeausschnitte in SQL-Vorgänge Studio (Vorschau)"
+title: Erstellen von Codeausschnitten in SQL Operations Studio (preview) | Microsoft Docs
+description: Informationen Sie zum Erstellen und Verwenden von SQL-Codeausschnitte in SQL Operations Studio (preview)
 ms.custom: tools|sos
 ms.date: 11/15/2017
 ms.reviewer: alayu; erickang; sstein
@@ -8,7 +8,7 @@ ms.prod: sql-non-specified
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: stevestein
 ms.author: sstein

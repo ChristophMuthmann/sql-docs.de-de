@@ -1,6 +1,6 @@
 ---
-title: "Schnellstart: Verbinden und Abfragen von SQL Server mithilfe von SQL-Vorgänge Studio (Vorschau) | Microsoft Docs"
-description: "Dieser Schnellstart veranschaulicht, wie SQL-Vorgänge Studio (Vorschau) eine Verbindung mit SQL Server, und führen Sie eine Abfrage"
+title: 'Schnellstart: Verbinden und Abfragen von SQL Server mithilfe von SQL Operations Studio (preview) | Microsoft Docs'
+description: Dieser Schnellstart veranschaulicht, wie SQL Operations Studio (preview) eine Verbindung mit SQL Server, und führen Sie eine Abfrage
 ms.custom: tools|sos
 ms.date: 03/08/2018
 ms.prod: sql-non-specified
@@ -8,7 +8,7 @@ ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: quickstart
 author: yualan
 ms.author: alayu
@@ -38,8 +38,8 @@ Wenn Sie Zugriff auf einen SQL-Server haben, wählen Sie Ihre Plattform aus den 
 ## <a name="connect-to-a-sql-server"></a>Herstellen einer Verbindung mit einem SQLServer
 
    
-1. Starten Sie  **[!INCLUDE[name-sos](../includes/name-sos-short.md)]** .
-1. Die erste Ausführung  *[!INCLUDE[name-sos](../includes/name-sos-short.md)]*  der **Verbindung** Dialogfeld wird geöffnet. Wenn die **Verbindung** Dialogfeld nicht öffnen, klicken Sie auf die **neue Verbindung** Symbol in der **Server** Seite:
+1. Starten Sie **[!INCLUDE[name-sos](../includes/name-sos-short.md)]**.
+1. Die erste Ausführung *[!INCLUDE[name-sos](../includes/name-sos-short.md)]* der **Verbindung** Dialogfeld wird geöffnet. Wenn die **Verbindung** Dialogfeld nicht öffnen, klicken Sie auf die **neue Verbindung** Symbol in der **Server** Seite:
    
    ![Symbol "neue Verbindung"](media/quickstart-sql-server/new-connection-icon.png)
 

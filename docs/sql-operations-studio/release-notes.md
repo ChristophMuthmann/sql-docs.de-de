@@ -1,6 +1,6 @@
 ---
-title: Versionshinweise für Microsoft SQL Operations Studio (Vorschau) | Microsoft Docs
-description: Versionshinweise für Microsoft SQL Operations Studio (Vorschau)
+title: Versionshinweise für Microsoft SQL Operations Studio (preview) | Microsoft Docs
+description: Versionshinweise für Microsoft SQL Operations Studio (preview)
 ms.custom: tools|sos
 ms.date: 03/28/2018
 ms.prod: sql-non-specified
@@ -20,7 +20,7 @@ ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 03/28/2018
 ---
-# <a name="sql-operations-studio-preview-release-notes"></a>Versionshinweise für SQL-Vorgänge Studio (Vorschau)
+# <a name="sql-operations-studio-preview-release-notes"></a>Versionshinweise für SQL Operations Studio (preview)
 
 **[Herunterladen der öffentlichen Vorschau von März](download.md)**
 
@@ -34,7 +34,7 @@ Die *März Public Preview* weiterhin die wichtigsten GitHub-Probleme zu beheben 
 - Erweitern Sie das Dashboard-Erweiterbarkeitsmodell zur Unterstützung von im Registerkartenformat Einblicke und Konfiguration Bereiche.
    - Erweiterungs-Manager ermöglicht die einfache Übernahme von Erweiterungen.
    - Dashboard-Erweiterungen für Sp_whoisactive aus [whoisactive.com](http://www.whoisactive.com).
-   - Weitere Informationen finden Sie unter [Erweitern der Funktionalität von SQL-Vorgänge Studio](extensions.md).
+   - Weitere Informationen finden Sie unter [Erweitern der Funktionalität von SQL Operations Studio](extensions.md).
 - Hinzufügen zusätzlicher [-Erweiterbarkeits-APIs für die Verbindung und Objekt-Explorer](https://github.com/Microsoft/sqlopsstudio/wiki/Extensibility-API) Management.
 - Weiterhin wichtige Auswirkungen auf Kunden beheben [GitHub Probleme](https://github.com/Microsoft/sqlopsstudio/issues).
 

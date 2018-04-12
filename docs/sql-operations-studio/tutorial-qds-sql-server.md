@@ -1,6 +1,6 @@
 ---
-title: "Lernprogramm: Aktivieren Sie die fünf langsamste Abfragen Beispiel Widget - SQL-Vorgänge Studio (Vorschau) | Microsoft Docs"
-description: "Dieses Lernprogramm veranschaulicht, wie die fünf langsamsten Abfragen Beispiel-Widget im Dashboard für die Datenbank aktiviert wird."
+title: 'Lernprogramm: Aktivieren Sie die fünf langsamste Abfragen Beispiel Widget - SQL Operations Studio (preview) | Microsoft Docs'
+description: Dieses Lernprogramm veranschaulicht, wie die fünf langsamsten Abfragen Beispiel-Widget im Dashboard für die Datenbank aktiviert wird.
 ms.custom: tools|sos
 ms.date: 03/15/2018
 ms.prod: sql-non-specified
@@ -8,7 +8,7 @@ ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: tutorial
 author: erickangMSFT
 ms.author: erickang

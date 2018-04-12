@@ -1,16 +1,16 @@
 ---
 title: "'SQL Server:Als veraltet markierte Funktionen'-Objekt | Microsoft-Dokumentation"
-ms.custom: 
+ms.custom: ''
 ms.date: 05/03/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: performance-monitor
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQLServer:Deprecated Features
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - deprecation [SQL Server], performance counters
 - Deprecated Features object
 ms.assetid: e95de9d6-c950-41cd-8aaa-be529c6de198
-caps.latest.revision: 
+caps.latest.revision: 61
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 336fea7b5f3ea9fec4dc559933477086f4cca5ed
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: a9a674bac91e77945fd7493cee22a11f44639a75
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="sql-server-deprecated-features-object"></a>'SQL Server:Als veraltet markierte Funktionen'-Objekt
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ In der folgenden Tabelle wird das SQL Server-Leistungsobjekt **Als veraltet mark
 |------------------------------------------------------|-----------------|  
 |'#' und '##' als Namen von temporären Tabellen und gespeicherten Prozeduren|Ein Bezeichner wurde gefunden, der keine anderen Zeichen als # enthielt. Verwenden Sie mindestens ein zusätzliches Zeichen. Tritt einmal pro Kompilierung auf.|  
 |Funktionsaufrufsyntax '::'|Für eine Tabellenwertfunktion wurde die Funktionsaufrufsyntax :: gefunden. Ersetzen Sie die Syntax durch `SELECT column_list FROM` *<Funktionsname>*`()`. Ersetzen Sie beispielsweise `SELECT * FROM ::fn_virtualfilestats(2,1)` durch `SELECT * FROM sys.fn_virtualfilestats(2,1)`. Tritt einmal pro Kompilierung auf.|  
-|'@' und Namen, die mit '@@' beginnen, als [!INCLUDE[tsql](../../includes/tsql-md.md)] -Bezeichner|Ein Bezeichner wurde gefunden, der mit @ oder @@ beginnt. @ oder @@ oder Namen, die mit @@ beginnen, dürfen nicht als Bezeichner verwendet werden. Tritt einmal pro Kompilierung auf.|  
+|\@ und Namen, die mit \@\@ beginnen, als [!INCLUDE[tsql](../../includes/tsql-md.md)]-Bezeichner|Ein Bezeichner wurde gefunden, der mit \@ oder \@\@ beginnt. \@, \@v@ oder Namen, die mit \@\@ beginnen, dürfen nicht als Bezeichner verwendet werden. Tritt einmal pro Kompilierung auf.|  
 |ADDING TAPE DEVICE|Die veraltete Funktionen sp_addumpdevice '**tape**' wurde gefunden. Verwenden Sie stattdessen sp_addumpdevice '**disk**'. Tritt einmal pro Verwendung auf.|  
 |ALL-Berechtigung|Gesamtanzahl der gefundenen Vorkommnisse der Syntax GRANT ALL, DENY ALL oder REVOKE ALL. Ändern Sie die Syntax, um einzelne Berechtigungen zu widerrufen. Tritt einmal pro Abfrage auf.|  
 |ALTER DATABASE WITH TORN_PAGE_DETECTION|Gesamtanzahl der Verwendungen der veralteten Funktion – der TORN_PAGE_DETECTION-Option von ALTER DATABASE – seit dem Start der Serverinstanz. Verwenden Sie stattdessen die Syntax PAGE_VERIFY. Tritt einmal pro Verwendung in einer DDL-Anweisung auf.|  
@@ -193,7 +193,7 @@ In der folgenden Tabelle wird das SQL Server-Leistungsobjekt **Als veraltet mark
 |sp_defaultlanguage|Die Prozedur sp_defaultlanguage wurde gefunden. Verwenden Sie stattdessen ALTER LOGIN. Tritt einmal pro Kompilierung auf.|  
 |sp_denylogin|Die Prozedur sp_denylogin wurde gefunden. Verwenden Sie stattdessen ALTER LOGIN DISABLE. Tritt einmal pro Abfrage auf.|  
 |sp_depends|Die Prozedur sp_depends wurde gefunden. Verwenden Sie stattdessen sys.dm_sql_referencing_entities und sys.dm_sql_referenced_entities. Tritt einmal pro Abfrage auf.|  
-|sp_detach_db @keepfulltextindexfile|Das @keepfulltextindexfile-Argument wurde in einer sp_detach_db-Anweisung gefunden. Verwenden Sie dieses Argument nicht.|  
+|sp_detach_db \@keepfulltextindexfile|In einer sp_detach_db-Anweisung wurde das \@keepfulltextindexfile-Argument gefunden. Verwenden Sie dieses Argument nicht.|  
 |sp_dropalias|Die Prozedur sp_dropalias wurde gefunden. Ersetzen Sie Aliase durch eine Kombination von Benutzerkonten und Datenbankrollen. Verwenden Sie sp_dropalias, um Aliase in aktualisierten Datenbanken zu entfernen. Tritt einmal pro Kompilierung auf.|  
 |sp_dropapprole|Die Prozedur sp_dropapprole wurde gefunden. Verwenden Sie stattdessen DROP APPLICATION ROLE. Tritt einmal pro Abfrage auf.|  
 |sp_dropextendedproc|Die Prozedur sp_dropextendedproc wurde gefunden. Verwenden Sie stattdessen CLR. Tritt einmal pro Kompilierung auf.|  
@@ -206,10 +206,10 @@ In der folgenden Tabelle wird das SQL Server-Leistungsobjekt **Als veraltet mark
 |sp_fulltext_catalog|Die Prozedur sp_fulltext_catalog wurde gefunden. Verwenden Sie stattdessen CREATE/ALTER/DROP FULLTEXT CATALOG. Tritt einmal pro Kompilierung auf.|  
 |sp_fulltext_column|Die Prozedur sp_fulltext_column wurde gefunden. Verwenden Sie stattdessen ALTER FULLTEXT INDEX. Tritt einmal pro Kompilierung auf.|  
 |sp_fulltext_database|Die Prozedur sp_fulltext_database wurde gefunden. Verwenden Sie stattdessen ALTER DATABASE. Tritt einmal pro Kompilierung auf.|  
-|Sp_fulltext_service @action= Clean_up|Die Option clean_up der Prozedur sp_fulltext_service wurde gefunden. Tritt einmal pro Abfrage auf.|  
-|sp_fulltext_service @action=connect_timeout|Die Option connect_timeout der Prozedur sp_fulltext_service wurde gefunden. Tritt einmal pro Abfrage auf.|  
-|sp_fulltext_service @action=data_timeout|Die Option data_timeout der Prozedur sp_fulltext_service wurde gefunden. Tritt einmal pro Abfrage auf.|  
-|sp_fulltext_service @action=resource_usage|Die Option resource_usage der Prozedur sp_fulltext_service wurde gefunden. Diese Option hat keine Funktion. Tritt einmal pro Abfrage auf.|  
+|sp_fulltext_service \@action=clean_up|Die Option clean_up der Prozedur sp_fulltext_service wurde gefunden. Tritt einmal pro Abfrage auf.|  
+|sp_fulltext_service \@action=connect_timeout|Die Option connect_timeout der Prozedur sp_fulltext_service wurde gefunden. Tritt einmal pro Abfrage auf.|  
+|sp_fulltext_service \@action=data_timeout|Die Option data_timeout der Prozedur sp_fulltext_service wurde gefunden. Tritt einmal pro Abfrage auf.|  
+|sp_fulltext_service \@action=resource_usage|Die Option resource_usage der Prozedur sp_fulltext_service wurde gefunden. Diese Option hat keine Funktion. Tritt einmal pro Abfrage auf.|  
 |sp_fulltext_table|Die Prozedur sp_fulltext_table wurde gefunden. Verwenden Sie stattdessen CREATE/ALTER/DROP FULLTEXT INDEX. Tritt einmal pro Kompilierung auf.|  
 |sp_getbindtoken|Die Prozedur sp_getbindtoken wurde gefunden. Verwenden Sie stattdessen MARS (Multiple Active Results Sets) oder verteilte Transaktionen. Tritt einmal pro Kompilierung auf.|  
 |sp_grantdbaccess|Die Prozedur sp_grantdbaccess wurde gefunden. Verwenden Sie stattdessen CREATE USER. Tritt einmal pro Abfrage auf.|  

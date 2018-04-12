@@ -1,30 +1,30 @@
 ---
 title: FINDSTRING (SSIS-Ausdruck) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: expressions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - FINDSTRING function
 ms.assetid: c83cb1b1-3c52-4496-b518-4c9253b9336d
-caps.latest.revision: 
+caps.latest.revision: 41
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c2787fdb4663ea8c1495a811b44f878b896498eb
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 56520a56a70622e23e7c407ed788f8f8f0ba3dc6
+ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="findstring-ssis-expression"></a>FINDSTRING (SSIS-Ausdruck)
   Gibt den Speicherort für das angegebene Auftreten einer Zeichenfolge innerhalb eines Zeichenausdrucks zurück. Das Ergebnis ist der einsbasierte Index für das Auftreten. Der string-Parameter muss zu einem Zeichenausdruck und der occurrence-Parameter zu einer ganzen Zahl ausgewertet werden. Wenn die Zeichenfolge nicht gefunden wird, wird 0 zurückgegeben. Wenn die Zeichenfolge weniger auftritt als im occurrence-Argument angegeben, wird ebenfalls 0 zurückgegeben.  
@@ -71,10 +71,10 @@ FINDSTRING("New York, NY, NY", "NY", 1)
 FINDSTRING("New York, NY, NY", "NY", 3)   
 ```  
   
- In diesem Beispiel wird die **Name** -Spalte verwendet. Der Speicherort des Werts n in der **Name** -Spalte wird zurückgegeben. Das Ergebnis hängt vom Wert in **Name**ab. Wenn die **Name** -Spalte „Anderson“ enthält, gibt die Funktion den Wert 8 zurück.  
+ In diesem Beispiel wird die **Name** -Spalte verwendet. Der Speicherort des zweiten „n“ in der Spalte **Name** wird zurückgegeben. Das Ergebnis hängt vom Wert in **Name**ab. Wenn die **Name** -Spalte „Anderson“ enthält, gibt die Funktion den Wert 8 zurück.  
   
 ```  
-FINDSTRING(Name,"n", 2)   
+FINDSTRING(Name, "n", 2)   
 ```  
   
  In diesem Beispiel werden die Spalten **Name** und **Size** verwendet. Der Speicherort des äußeren linken Zeichens des **Size** -Arguments in der **Name** -Spalte wird zurückgegeben. Das Ergebnis hängt von den Spaltenwerten ab. Falls **Name** „Mountain,500Red,42“ und **Size** „42“ enthält, wird 17 zurückgegeben.  

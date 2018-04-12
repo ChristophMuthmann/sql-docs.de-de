@@ -4,25 +4,25 @@ ms.date: 10/31/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: lift-shift
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology:
 - integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 36a844cb2dcda45701c29066b825e64a864d5757
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+ms.openlocfilehash: 82a6ab09504edd0a5df17a05de62ae5fd44a1c18
+ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="lift-and-shift-sql-server-integration-services-workloads-to-the-cloud"></a>Migration von SQL Server Integration Services-Workloads in die Cloud per Lift & Shift
 Sie können Ihre SQL Server Integration Services-Pakete und -Workloads (SSIS) nun in die Azure-Cloud verschieben.
--   Speichern und verwalten Sie SSIS-Projekte und -Pakete in der SSIS-Katalogdatenbank (SSISDB) in Azure SQL-Datenbank.
+-   Speichern und verwalten Sie SSIS-Projekte und -Pakete in der SSIS-Katalogdatenbank (SSISDB) in Azure SQL-Datenbank oder verwaltete SQL-Datenbank-Instanz (Vorschauversion).
 -   Führen Sie Pakete in einer Instanz von Azure SSIS Integration Runtime aus, die mit Version 2 von Azure Data Factory eingeführt wurde.
 -   Verwenden Sie vertraute Tools für diese allgemeinen Aufgaben, z.B. SQL Server Management Studio (SSMS).
 
@@ -38,7 +38,7 @@ In der folgenden Tabelle werden die Unterschiede zwischen der lokalen Ausführun
 | Speicherung | Typ | Skalierbarkeit |
 |---|---|---|
 | Lokal (SQL Server) | Von SQL Server gehostete SSIS-Runtime | SSIS Scale Out (in SQL Server 2017 und höher)<br/><br/>Benutzerdefinierte Projektmappen (in früheren Versionen von SQL Server) |
-| In Azure (SQL-Datenbank) | Azure SSIS Integration Runtime, eine Komponente von Azure Data Factory (Version 2) | Skalierungsoptionen für SSIS Integration Runtime (SSIS IR) |
+| In Azure (SQL-Datenbank oder verwaltete SQL-Datenbank-Instanz (Vorschauversion)) | Azure SSIS Integration Runtime, eine Komponente von Azure Data Factory (Version 2) | Skalierungsoptionen für SSIS Integration Runtime (SSIS IR) |
 | | | |
 
 Azure Data Factory hostet das Runtimemodul für SSIS-Pakete in Azure. Das Runtimemodul wird als Azure SSIS Integration Runtime (SSIS IR) bezeichnet.
@@ -55,37 +55,42 @@ Sie müssen SSIS IR nur einmal bereitstellen. Danach können Sie vertraute Tools
 
 Data Factory unterstützt auch andere Arten von Integration Runtimes. Weitere Informationen zu SSIS IR und anderen Typen von Integration Runtime finden Sie unter [Integration Runtime in Azure Data Factory](https://docs.microsoft.com/azure/data-factory/concepts-integration-runtime).
 
-## <a name="prerequisites"></a>Voraussetzungen
-Die in diesem Artikel beschriebenen Funktionen erfordern nicht SQL Server 2017 oder SQL Server 2016.
+## <a name="version-info"></a>Versionsinformationen
 
-Diese Funktionen erfordern die folgenden Versionen von SQL Server Data Tools (SSDT):
+Sie können ein Paket in Azure bereitstellen, das mit einer beliebigen Version von SSIS erstellt wurde. Wenn Sie ein Paket in Azure bereitstellen, wird das Paket automatisch in das aktuelle Paketformat geändert, sofern es zu keinen Überprüfungsfehlern kam. Das heißt, es wird immer auf die aktuelle Version von SSIS aktualisiert.
+
+Der Bereitstellungsprozess überprüft Pakete, um sicherzustellen, dass sie auf der Integration Runtime von Azure SSIS ausgeführt werden können. Weitere Informationen finden Sie unter [Überprüfen von in Azure bereitgestellten SSIS-Paketen](ssis-azure-validate-packages.md).
+
+## <a name="prerequisites"></a>Voraussetzungen
+
+Die in diesem Artikel beschriebenen Funktionen erfordern die folgenden Versionen von SQL Server Data Tools (SSDT):
 -   Version 15.3 (Vorschau) oder höher für Visual Studio 2017.
 -   Version 17.2 oder höher für Visual Studio 2015.
 
-> [!NOTE]
-> Wenn Sie Pakete in Azure bereitstellen, aktualisiert der Assistent für die Paketbereitstellung die Pakete immer auf das aktuelle Paketformat.
-
 Weitere Informationen zu Voraussetzungen für Azure finden Sie unter [Bereitstellen von SQL Server Integration Services-Paketen in Azure](https://docs.microsoft.com/azure/data-factory/tutorial-create-azure-ssis-runtime-portal).
 
-## <a name="ssis-features-on-azure"></a>SSIS-Features in Azure
-
-Wenn Sie eine Instanz von SQL-Datenbank bereitstellen, um SSISDB zu hosten, werden auch das Azure Feature Pack für SSIS und die weitervertreibbare Komponente von Access installiert. Diese Komponenten stellen zusätzlich zu den Datenquellen, die von den integrierten Komponenten unterstützt werden, die Konnektivität zu **Excel- und Access-Dateien** und zu verschiedenen **Azure**-Datenquellen bereit. Sie können derzeit keine **Drittanbieterkomponenten** für SSIS (einschließlich der Drittanbieterkomponenten von Microsoft, z.B. Oracle- und Teradata-Komponenten von Attunity- und SAP BI-Komponenten) installieren.
+## <a name="provision-ssis-on-azure"></a>Bereitstellen von SSIS in Azure
+Bevor Sie SSIS-Pakete in Azure bereitstellen und ausführen können, müssen Sie die SSIS-Katalogdatenbank (SSISDB) und Azure SSIS Integration Runtime bereitstellen. Befolgen Sie die Schritte zur Bereitstellung im folgenden Artikel: [Bereitstellen von SQL Server Integration Services-Paketen in Azure](https://docs.microsoft.com/azure/data-factory/tutorial-create-azure-ssis-runtime-portal).
 
 Der **Name der SQL-Datenbank**, die SSISDB hostet, stellt den ersten Teil des vierteiligen Namens dar, den Sie beim Bereitstellen und Verwalten von Paketen von SSDT und SSMS verwenden müssen: `<sql_database_name>.database.windows.net`.
 
-Sie müssen das **Projektbereitstellungsmodell** und nicht das Paketbereitstellungsmodell für Projekte verwenden, die Sie für SSISDB in Azure SQL-Datenbank bereitstellen.
+Informationen darüber, wie Sie eine Verbindung zur SSIS-Katalogdatenbank herstellen, finden Sie unter [Herstellen einer Verbindung mit der SSISDB-Katalogdatenbank in Azure](ssis-azure-connect-to-catalog-database.md).
 
+## <a name="design-packages"></a>Entwerfen von Paketen
 Sie können Pakete weiterhin lokal in SSDT oder in Visual Studio (wenn SSDT installiert ist) **entwerfen und erstellen**.
 
-Weitere Informationen zur Verbindung mit **lokalen Datenquellen** aus der Cloud mithilfe der Windows-Authentifizierung finden Sie unter [Connect to on-premises data sources with Windows Authentication (Herstellen einer Verbindung mit lokalen Datenquellen mit der Windows-Authentifizierung)](ssis-azure-connect-with-windows-auth.md).
+Weitere Informationen zur Verbindung mit lokalen Datenquellen aus der Cloud mithilfe der **Windows-Authentifizierung** finden Sie unter [Herstellen einer Verbindung mit lokalen Datenquellen und Azure-Dateifreigaben mit der Windows-Authentifizierung](ssis-azure-connect-with-windows-auth.md).
 
-## <a name="common-tasks"></a>Allgemeine Aufgaben
+Informationen dazu, wie Sie eine Verbindung zu Dateien und Dateifreigaben herstellen, finden Sie unter [Speichern und Abrufen von Dateien auf lokalen Dateifreigaben und Dateifreigaben in Azure mit SSIS](ssis-azure-files-file-shares.md).
 
-### <a name="provision"></a>Bereitstellen
-Bevor Sie SSIS-Pakete in Azure bereitstellen und ausführen können, müssen Sie die SSIS-Katalogdatenbank und Azure SSIS Integration Runtime bereitstellen. Befolgen Sie die Schritte zur Bereitstellung im folgenden Artikel: [Bereitstellen von SQL Server Integration Services-Paketen in Azure](https://docs.microsoft.com/azure/data-factory/tutorial-create-azure-ssis-runtime-portal).
+Wenn Sie eine Instanz von SQL-Datenbank bereitstellen, um SSISDB zu hosten, werden auch das Azure Feature Pack für SSIS und die weitervertreibbare Komponente von Access installiert. Diese Komponenten stellen zusätzlich zu den Datenquellen, die von den integrierten Komponenten unterstützt werden, die Konnektivität zu **Excel- und Access-Dateien** und zu verschiedenen **Azure**-Datenquellen bereit.
 
-### <a name="deploy-and-run-packages"></a>Bereitstellen und Ausführen von Paketen
-Sie können diese vertrauten Tools und Skriptoptionen verwenden, um Projekte bereitzustellen und Pakete in SQL-Datenbank auszuführen:
+Sie können derzeit keine **Drittanbieterkomponenten** für SSIS (einschließlich der Drittanbieterkomponenten von Microsoft, z.B. Oracle- und Teradata-Komponenten von Attunity- und SAP BI-Komponenten) installieren oder verwenden.
+
+## <a name="deploy-and-run-packages"></a>Bereitstellen und Ausführen von Paketen
+Sie müssen das **Projektbereitstellungsmodell** verwenden und nicht das Paketbereitstellungsmodell, wenn Sie Projekte für SSISDB in Azure bereitstellen.
+
+Zum Bereitstellen von Projekten und Ausführen von Paketen in Azure, können Sie diese vertrauten Tools und Skriptoptionen verwenden:
 -   SQL Server Management Studio (SSMS)
 -   Transact-SQL (von SSMS, Visual Studio Code oder einem anderen Tool)
 -   Ein Befehlszeilentool
@@ -94,12 +99,12 @@ Sie können diese vertrauten Tools und Skriptoptionen verwenden, um Projekte ber
 
 Erste Schritte finden Sie unter [Bereitstellen, Ausführen und Überwachen eines SSIS-Pakets in Azure](ssis-azure-deploy-run-monitor-tutorial.md).
 
-### <a name="monitor-packages"></a>Überwachen von Paketen
+## <a name="monitor-packages"></a>Überwachen von Paketen
 Sie können eines der folgenden Berichtstools in SSMS verwenden, um ausgeführte Pakete in SSMS zu überwachen.
 -   Klicken Sie mit der rechten Maustaste auf **SSISDB**, und klicken Sie dann auf **Aktive Vorgänge**, um das Dialogfeld **Aktive Vorgänge** zu öffnen.
 -   Wählen Sie im Objekt-Explorer ein Paket aus, klicken Sie mit der rechten Maustaste, und klicken Sie dann auf **Berichte** > **Standardberichte** > **Alle Ausführungen**.
 
-### <a name="schedule-packages"></a>Planen von Paketen
+## <a name="schedule-packages"></a>Planen von Paketen
 Sie können folgende Tools verwenden, um die Ausführung von in SQL-Datenbank gespeicherten Paketen zu planen:
 -   SQL Server-Agent (lokal)
 -   Die Data Factory-Aktivität für gespeicherte SQL Server-Prozeduren

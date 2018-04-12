@@ -1,6 +1,6 @@
 ---
-title: "SQL-Vorgänge Studio (Vorschau) Benutzer und Arbeitsbereichseinstellungen | Microsoft Docs"
-description: "Vorgehensweise: Ändern von SQL-Vorgänge Studio (Vorschau) Benutzer und Arbeitsbereichseinstellungen."
+title: SQL Operations Studio (preview) Benutzer und Arbeitsbereichseinstellungen | Microsoft Docs
+description: 'Vorgehensweise: Ändern von SQL Operations Studio (preview) Benutzer und Arbeitsbereichseinstellungen.'
 ms.custom: tools|sos
 ms.date: 11/15/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,7 @@ ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: yualan
 ms.author: alayu

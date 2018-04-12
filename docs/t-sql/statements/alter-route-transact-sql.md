@@ -1,16 +1,16 @@
 ---
 title: ALTER ROUTE (Transact-SQL) | Microsoft-Dokumentation
-ms.custom: 
-ms.date: 03/14/2017
+ms.custom: ''
+ms.date: 03/30/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER_ROUTE_TSQL
@@ -24,21 +24,24 @@ helpviewer_keywords:
 - removing routes
 - routes [Service Broker], modifying
 ms.assetid: 8dfb7b16-3dac-4e1e-8c97-adf2aad07830
-caps.latest.revision: 
+caps.latest.revision: 33
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e9ae2ef58b234919dab8057b00afd64efa0cc89b
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 3a1b6e3b8ea236aec4104653a7a96cdc0a6a53f2
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="alter-route-transact-sql"></a>ALTER ROUTE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
-  Verändert die Routeninformationen für eine vorhandene Route in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  Verändert die Routeninformationen für eine vorhandene Route in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
+
+
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)] 
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -87,6 +90,9 @@ WHERE database_id = DB_ID();
  Gibt die Zeitspanne in Sekunden an, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Route in der Routingtabelle aufbewahrt. Am Ende ihrer Lebensdauer läuft die Route ab, und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] berücksichtigt die Route nicht bei der Auswahl einer Route für eine neue Konversation. Wird die Klausel weggelassen, bleibt die Lebensdauer der Route unverändert.  
   
  ADDRESS **='***next_hop_address'*  
+
+ Für die verwaltete SQL-Datenbank-Instanz muss `ADDRESS` lokal sein.
+
  Gibt die Netzwerkadresse für diese Route an. *next_hop_address* gibt eine TCP/IP-Adresse mit folgendem Format an:  
   
  **TCP://** { *dns_name* | *netbios_name* |*ip_address* } **:** *port_number*  
