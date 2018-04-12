@@ -1,31 +1,32 @@
 ---
 title: Als veraltet markierte Funktionen des Datenbankmoduls in SQL Server 2016 | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 06/12/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: database-engine
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - deprecated features [SQL Server]
 - Database Engine [SQL Server], backward compatibility
 - deprecation [SQL Server], feature list
 ms.assetid: c10eeaa5-3d3c-49b4-a4bd-5dc4fb190142
-caps.latest.revision: "215"
+caps.latest.revision: 215
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 2c85ec6c5975b8053dfd5c87a575fe79f61d5170
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 785a3740d27b57bc4aee02f3cfccfd22b95d987f
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2016"></a>Als veraltet markierte Funktionen des Datenbankmoduls in SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -53,11 +54,10 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |Datenbankobjekte|Funktionalität zum Zurückgeben von Resultsets von Triggern|InclusionThresholdSetting|Zurückgeben von Ergebnissen aus Triggern|12|  
 |Verschlüsselung|Die Verschlüsselung mit RC4 oder RC4_128 ist veraltet. Die Entfernung ist für die nächste Version geplant. Die Entschlüsselung von RC4 und RC4_128 sind nicht veraltet.|Verwenden Sie einen anderen Verschlüsselungsalgorithmus, z. B. AES.|Veralteter Verschlüsselungsalgorithmus|253|  
 |Remoteserver|sp_addremotelogin<br /><br /> sp_addserver<br /><br /> sp_dropremotelogin<br /><br /> sp_helpremotelogin<br /><br /> sp_remoteoption|Ersetzen Sie Remoteserver mithilfe von Verbindungsservern. sp_addserver kann nur mit der lokalen Option verwendet werden.|sp_addremotelogin<br /><br /> sp_addserver<br /><br /> sp_dropremotelogin<br /><br /> sp_helpremotelogin<br /><br /> sp_remoteoption|70<br /><br /> 69<br /><br /> 71<br /><br /> 72<br /><br /> 73|  
-|Remoteserver|@@remserver|Ersetzen Sie Remoteserver mithilfe von Verbindungsservern.|InclusionThresholdSetting|InclusionThresholdSetting|  
+|Remoteserver|\@\@remserver|Ersetzen Sie Remoteserver mithilfe von Verbindungsservern.|InclusionThresholdSetting|InclusionThresholdSetting|  
 |Remoteserver|SET REMOTE_PROC_TRANSACTIONS|Ersetzen Sie Remoteserver mithilfe von Verbindungsservern.|SET REMOTE_PROC_TRANSACTIONS|110|  
 |SET-Optionen|**SET ROWCOUNT** für die **INSERT**-, **UPDATE**-Anweisung und die **DELETE** -Anweisung|TOP-Schlüsselwort|SET ROWCOUNT|109|  
 |Tabellenhinweise|HOLDLOCK-Tabellenhinweis ohne Klammern.|Verwenden Sie HOLDLOCK mit Klammern.|HOLDLOCK-Tabellenhinweis ohne Klammern|167|  
-|Tools|sqlmaint (Hilfsprogramm)|Verwenden Sie die Wartungsplanfunktion von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .|InclusionThresholdSetting|InclusionThresholdSetting|  
   
 ## <a name="features-not-supported-in-a-future-version-of-sql-server"></a>Funktionen, die in einer zukünftigen Version von SQL Server nicht unterstützt werden  
  Die folgenden Funktionen von [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] werden in der nächsten Version von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]noch unterstützt, aber in zukünftigen Versionen entfernt. Die betreffende Version von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] wurde noch nicht festgelegt.  
@@ -157,7 +157,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|ROWGUIDCOL als Spaltenname in DML-Anweisungen|Verwenden Sie $rowguid.|ROWGUIDCOL|182|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|IDENTITYCOL als Spaltenname in DML-Anweisungen|Verwenden Sie $identity.|IDENTITYCOL|183|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|Verwendung von #, ## als Name für eine temporäre Tabelle oder eine temporäre gespeicherte Prozedur|Verwenden Sie mindestens ein zusätzliches Zeichen.|'#' und '##' als Namen von temporären Tabellen und gespeicherten Prozeduren|185|  
-|[!INCLUDE[tsql](../includes/tsql-md.md)]|Verwendung von '@', '@@' oder '@@' als [!INCLUDE[tsql](../includes/tsql-md.md)] -Bezeichner|@ oder @@ oder Namen, die mit @@ beginnen, dürfen nicht als Bezeichner verwendet werden.|'@' und Namen, die mit '@@' beginnen, als [!INCLUDE[tsql](../includes/tsql-md.md)] -Bezeichner|186.|  
+|[!INCLUDE[tsql](../includes/tsql-md.md)]|Verwendung von \@, \@\@ oder \@\@ als [!INCLUDE[tsql](../includes/tsql-md.md)]-Bezeichner.|\@, \@\@ oder Namen, die mit \@\@ beginnen, dürfen nicht als Bezeichner verwendet werden.|\@ und Namen, die mit \@\@ beginnen, als [!INCLUDE[tsql](../includes/tsql-md.md)]-Bezeichner|186.|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|Verwendung des DEFAULT-Schlüsselworts als Standardwert.|Verwenden Sie das Wort DEFAULT nicht als Standardwert.|DEFAULT-Schlüsselwort als Standardwert|187|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|Verwendung eines Leerzeichens als Trennzeichen zwischen Tabellenhinweisen|Trennen Sie die Tabellenhinweise durch Kommas.|Mehrere Tabellenhinweise ohne Komma|168|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|Die Auswahlliste einer indizierten Aggregatsicht muss im Kompatibilitätsmodus '90' oder höher den Wert COUNT_BIG (*) enthalten.|Verwenden Sie COUNT_BIG(*).|Indexsicht-Auswahlliste ohne COUNT_BIG(*)|2|  

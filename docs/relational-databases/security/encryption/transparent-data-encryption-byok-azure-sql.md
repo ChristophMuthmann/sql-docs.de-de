@@ -17,13 +17,13 @@ ms.workload: On Demand
 ms.tgt_pltfrm: ''
 ms.devlang: na
 ms.topic: article
-ms.date: 03/16/2018
+ms.date: 04/03/2018
 ms.author: aliceku
-ms.openlocfilehash: ae89e8496ce8f2aec87d80e36ce7b48acfd6a8cf
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: e39e6f8957c1fc2c4f50603af213055cde84d0b6
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="transparent-data-encryption-with-bring-your-own-key-preview-support-for-azure-sql-database-and-data-warehouse"></a>Transparent Data Encryption mit Bring Your Own Key-Unterstützung (Vorschau) für Azure SQL-Datenbank und Data Warehouse
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
@@ -109,33 +109,64 @@ Die Art und Weise, auf die Hochverfügbarkeit mit Azure Key Vault konfiguriert w
 
 ![Hochverfügbarkeit für einen einzelnen Server und fehlende Georedundanz](./media/transparent-data-encryption-byok-azure-sql/SingleServer_HA_Config.PNG)
 
-Im zweiten Fall ist es erforderlich, redundante Azure Key Vaults anhand der vorhandenen SQL-Datenbank-Failovergruppen oder der Kopien der aktiven Georedundanz von Datenbanken zu konfigurieren, um die Hochverfügbarkeit der TDE Protectors in Azure Key Vault zu erhalten.  Jeder georeplizierte Server erfordert einen separaten Schlüsseltresor, der sich idealerweise in derselben Azure-Region befindet wie der Server. Wenn es in einer Region zu einem Ausfall kommen sollte, nach dem nicht mehr auf die primäre Datenbank zugegriffen werden kann und ein Failover ausgelöst wird, kann die sekundäre Datenbank einspringen und den sekundären Schlüsseltresor verwenden.  
+## <a name="how-to-configure-geo-dr-with-azure-key-vault"></a>Vorgehensweise: Konfigurieren von Georedundanzen mit Azure Key Vault
+
+Es ist erforderlich, redundante Azure Key Vaults anhand der vorhandenen oder gewünschten SQL-Datenbank-Failovergruppen oder der aktiven Georedundanzinstanzen zu konfigurieren, um die Hochverfügbarkeit der TDE Protectors für verschlüsselte Datenbanken zu erhalten.  Jeder georeplizierte Server erfordert einen separaten Schlüsseltresor, der sich in derselben Azure-Region wie der Server befinden muss. Wenn es in einer Region zu einem Ausfall kommen sollte, nach dem nicht mehr auf die primäre Datenbank zugegriffen werden kann und ein Failover ausgelöst wird, kann die sekundäre Datenbank einspringen und den sekundären Schlüsseltresor verwenden. 
+ 
+Für georeplizierte Azure SQL-Datenbanken ist die folgende Konfiguration von Azure Key Vault erforderlich:
+- Eine primäre Datenbank mit einem Schlüsseltresor in der Region und eine sekundäre Datenbank mit einem Schlüsseltresor in der Region. 
+- Mindestens eine sekundäre Datenbank ist erforderlich, es werden bis zu vier sekundäre Datenbanken unterstützt. 
+- Sekundäre Datenbanken von sekundären Datenbanken (Verkettung) werden nicht unterstützt.
+
+Im folgenden Abschnitt werden die Schritte für die Einrichtung und Konfiguration im Detail besprochen. 
+
+### <a name="azure-key-vault-configuration-steps"></a>Konfigurationsschritte für Azure Key Vault
+
+- Installieren Sie [PowerShell](https://docs.microsoft.com/en-us/powershell/azure/install-azurerm-ps?view=azurermps-5.6.0) 
+- Erstellen Sie zwei Azure Key Vaults in zwei verschiedenen Regionen, und verwenden Sie [PowerShell zum Aktivieren der Eigenschaft „vorläufiges Löschen“](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-soft-delete-powershell) in den Schlüsseltresoren (diese Option ist noch nicht im AKV-Portal verfügbar – wird aber von SQL gefordert) 
+- Erstellen Sie einen neuen Schlüssel im ersten Schlüsseltresor:  
+  - Schlüssel RSA/RSA-HSA 2048 
+  - Kein Ablaufdatum 
+  - Der Schlüssel ist aktiviert und verfügt über Berechtigungen, um die Vorgänge „Abrufen“, „Schlüssel packen“ und „Schlüssel entpacken“ durchzuführen 
+- Sichern Sie den primären Schlüssel, und stellen Sie ihn im zweiten Schlüsseltresor wieder her.  Weitere Informationen finden Sie unter [BackupAzureKeyVaultKey](https://docs.microsoft.com/en-us/powershell/module/azurerm.keyvault/backup-azurekeyvaultkey?view=azurermps-5.1.1) und [Restore-AzureKeyVaultKey](https://docs.microsoft.com/en-us/powershell/module/azurerm.keyvault/restore-azurekeyvaultkey?view=azurermps-5.5.0). 
+
+### <a name="azure-sql-database-configuration-steps"></a>Konfigurationsschritte für Azure SQL-Datenbank
+
+Die folgenden Konfigurationsschritte hängen davon ab, ob Sie mit einer neuen SQL-Bereitstellung beginnen oder mit einer bereits vorhandenen, georedundanten SQL-Bereitstellung arbeiten.  Wir erläutern zuerst die Konfigurationsschritte für eine neue Bereitstellung und erklären dann das Zuweisen von TDE Protector in Azure Key Vault zu einer vorhandenen Bereitstellung, die bereits über einen eingerichteten, georedundanten Link verfügt. 
+
+Schritte für eine neue Bereitstellung:
+- Erstellen Sie die beiden logischen SQL Server in den gleichen zwei Regionen wie die zuvor erstellten Schlüsseltresore. 
+- Wählen Sie den TDE-Bereich für logische Server und für jeden logischen SQL Server aus:  
+   - Wählen Sie den AKV in der gleichen Region aus 
+   - Wählen Sie den als TDE Protector zu verwendenden Schlüssel aus – jeder Server verwendet die lokale Kopie von TDE Protector. 
+   - Dadurch wird im Portal eine [AppID](https://docs.microsoft.com/en-us/azure/active-directory/managed-service-identity/overview) für den logischen SQL Server erstellt, die zum Zuweisen von logischen SQL Server-Berechtigungen dient. Somit kann auf den Schlüsseltresor zugegriffen werden – löschen Sie diese Identität nicht.  Der Zugriff kann stattdessen durch das Entfernen von Berechtigungen in Azure Key Vault aufgehoben werden. Dieser dient zum Zuweisen von logischen SQL Server-Berechtigungen für den Zugriff auf den Schlüsseltresor – löschen Sie diese Identität nicht.  Der Zugriff kann stattdessen durch das Entfernen von Berechtigungen in Azure Key Vault aufgehoben werden. 
+- Erstellen Sie die primäre Datenbank. 
+- Folgen Sie dem [Leitfaden für aktive Georeplikation](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-geo-replication-overview) zum Abschließen dieses Szenarios. Mit diesem Schritt wird die sekundäre Datenbank erstellt.
 
 ![Failovergruppen und Georedundanz](./media/transparent-data-encryption-byok-azure-sql/Geo_DR_Config.PNG)
 
-Wenn Sie sicherstellen wollen, dass ohne Einschränkungen während eines Failovers auf den TDE Protector in Azur Key Vault zugegriffen werden kann, muss dies konfiguriert werden, bevor eine Datenbank repliziert wird oder ein Failover auf einen sekundären Server ausgeführt wird. Sowohl der primäre als auch der sekundäre Server muss Kopien der TDE Protectors in allen anderen Azure Key Vaults speichern. Das bedeutet in diesem Fall, dass dieselben Schlüssel in beiden Schlüsseltresoren gespeichert werden.
-
-Im Szenario der georedundanten Notfallwiederherstellung wird zur Sicherstellung von Redundanz eine sekundäre Datenbank mit einem sekundären Schlüsseltresor benötigt. Dabei werden maximal vier sekundäre Datenbanken unterstützt.  Nicht unterstützt wird das Verketten, also das Erstellen einer sekundären Datenbank für eine andere sekundäre Datenbank.  Bei der Ersteinrichtung bestätigt der Dienst, dass die Berechtigungen ordnungsgemäß für den primären und sekundären Schlüsseltresor konfiguriert sind.  Diese Berechtigungen müssen korrekt verwaltet und regelmäßig geprüft werden, sodass sichergestellt wird, dass diese aktiv sind.
-
 >[!NOTE]
->Wenn die Identität des Servers einem primären und einem sekundären Server zugewiesen wird, muss diese zuerst dem sekundären Server zugewiesen werden.
+>Es ist wichtig, sicherzustellen, dass die gleichen TDE Protectors in beiden Schlüsseltresoren vorhanden sind, bevor Sie mit der Einrichtung des Geolinks zwischen den Datenbanken fortfahren.
 >
 
-Wenn Sie einen in einem Schlüsseltresor vorhandenen Schlüssel einem anderen Schlüsseltresor hinzufügen möchten, verwenden Sie das Cmdlet [Add-AzureRmSqlServerKeyVaultKey](https://docs.microsoft.com/en-us/powershell/module/azurerm.sql/add-azurermsqlserverkeyvaultkey).
+Schritte für eine vorhandene SQL-Datenbank mit georedundanter Bereitstellung:
 
- ```powershell
-   <# Include the version guid in the KeyId #>
-   Add-AzureRmSqlServerKeyVaultKey `
-   -KeyId <KeyVaultKeyId> `
-   -ServerName <LogicalServerName> `
-   -ResourceGroup <SQLDatabaseResourceGroupName>
-   ```
+Da die logischen SQL Server bereits vorhanden, und primäre und sekundäre Datenbanken bereits zugewiesen sind, müssen die Konfigurationsschritte für Azure Key Vault in der folgenden Reihenfolge ausgeführt werden: 
+- Beginnen Sie mit dem logischen SQL Server, der die sekundäre Datenbank hostet: 
+   - Weisen Sie den Schlüsseltresor, der sich in derselben Region befindet, zu. 
+   - Weisen Sie den TDE Protector zu. 
+- Navigieren Sie nun zum logischen SQL Server, der die primäre Datenbank hostet: 
+   - Wählen Sie den gleichen TDE Protector wie für die sekundäre Datenbank aus.
+   
+![Failovergruppen und Georedundanz](./media/transparent-data-encryption-byok-azure-sql/geo_DR_ex_config.PNG)
 
 >[!NOTE]
->Die kombinierte Zeichenlänge des Schlüsseltresornamens und des Schlüsselnamens darf nicht über 94 Zeichen hinausgehen.
+>Beim Zuweisen des Schlüsseltresors zum Server ist es wichtig, mit dem sekundären Server zu beginnen.  Weisen Sie im zweiten Schritt den Schlüsseltresor dem primären Server zu, und aktualisieren Sie den TDE Protector. Der georedundante Link funktioniert weiterhin, da der TDE Protector, der von der replizierten Datenbank verwendet wird, zu diesem Zeitpunkt für beide Server verfügbar ist.
 >
+
+Bevor Sie TDE mit vom Kunden in Azure Key Vault verwalteten Schlüsseln für ein georedundantes SQL-Datenbankszenario aktivieren, ist es wichtig, zwei Azure Key Vaults mit identischem Inhalt in denselben Regionen zu erstellen und zu verwalten, die für die Georeplikation von SQL-Datenbank verwendet werden.  „Identischer Inhalt“ bedeutet im Besonderen, dass beide Schlüsseltresore Kopien der gleichen TDE Protector(s) enthalten müssen, damit beide Server Zugriff auf die von allen Datenbanken verwendeten TDE Protectors haben.  Es ist erforderlich, beide Schlüsseltresore zu synchronisieren. Das bedeutet, dass sie die gleichen Kopien von TDE Protector nach der Schlüsselrotation enthalten, und alte Versionen von Schlüsseln für Protokolldateien oder Sicherungen beibehalten müssen. TDE Protectors müssen die gleichen Schlüsseleigenschaften und die Schlüsseltresore die gleichen Zugriffsberechtigungen für SQL beibehalten.  
  
-Befolgen Sie die Schritte in [Active geo-replication overview (Übersicht über die aktive Georeplikation)](https://docs.microsoft.com/azure/sql-database/sql-database-geo-replication-overview), um die aktive Georeplikation mit diesen Servern zu konfigurieren und ein Failover auszulösen. 
+Führen Sie die Schritte in [Übersicht über die aktive Georeplikation](https://docs.microsoft.com/azure/sql-database/sql-database-geo-replication-overview) aus, um ein Failover zu testen und auszulösen. Dies sollte regelmäßig durchgeführt werden, um zu überprüfen, ob die Zugriffsberechtigungen für SQL für beide Schlüsseltresore noch gültig sind. 
 
 
 ### <a name="backup-and-restore"></a>Sichern und Wiederherstellen

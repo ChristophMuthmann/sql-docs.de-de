@@ -1,28 +1,28 @@
 ---
 title: Erste Schritte mit diesem einfachen Beispiel des Import/Export-Assistenten | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 02/15/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: import-export-data
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 ms.assetid: ea3db39b-698b-4a74-8eb8-21dc7252dc1a
-caps.latest.revision: 
+caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 169ad5455571c2b0e484fc0aa153e55141cdd1fd
-ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
+ms.openlocfilehash: a684f719495083d5ca4e79a2fbc0213ab83a95a6
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="get-started-with-this-simple-example-of-the-import-and-export-wizard"></a>Erste Schritte mit diesem einfachen Beispiel des Import/Export-Assistenten
 Erfahren Sie, was Sie von dem Import/Export-Assistenten von SQL Server im Hinblick auf alltägliche Szenarios erwarten können. In diesem Artikel geht es um das Importieren von Daten aus einem Excel-Arbeitsblatt in eine SQL Server-Datenbank. Selbst wenn Sie planen, eine andere Quelle und ein anderes Ziel zu verwenden, werden Ihnen trotzdem in diesem Artikel nützliche Informationen zum Ausführen des Assistenten zur Verfügung gestellt.
@@ -62,9 +62,12 @@ Wenn Sie diese Seite nicht mehr anzeigen lassen möchten, klicken Sie einfach au
 ## <a name="step-3---pick-excel-as-your-data-source"></a>Schritt 3: Auswählen von Excel als Datenquelle
 Wählen Sie auf der nächsten Seite (**Datenquelle auswählen**) Microsoft Excel als Ihre Datenquelle aus. Suchen Sie dann die Excel-Datei, die Sie auswählen möchten. Geben Sie dann die Excel-Version an, die Sie zum Erstellen der Datei verwendet haben.
 
+> [!IMPORTANT]
+> Ausführliche Informationen über das Herstellen einer Verbindung mit Excel-Dateien sowie Einschränkungen und bekannte Probleme beim Laden von Daten aus oder in Excel-Dateien finden Sie unter [Load data from or to Excel with SQL Server Integration Services (SSIS) (Laden von Daten aus oder in Excel mit SQL Server Integration Services (SSIS))](../load-data-to-from-excel-with-ssis.md).
+
 ![Auswählen der Excel-Datenquelle](../../integration-services/import-export-data/media/choose-the-excel-data-source.jpg)
 
-Weitere Informationen zum Herstellen einer Verbindung mit Excel finden Sie unter [Connect to an Excel Data Source (Herstellen einer Verbindung mit einer Excel-Datenquelle)](../../integration-services/import-export-data/connect-to-an-excel-data-source-sql-server-import-and-export-wizard.md). Weitere Informationen zu dieser Seite des Assistenten finden Sie unter [Choose a Data Source (Auswählen einer Datenquelle)](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md).
+Weitere Informationen zu dieser Seite des Assistenten finden Sie unter [Choose a Data Source (Auswählen einer Datenquelle)](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md).
 
 ## <a name="step-4---pick-sql-server-as-your-destination"></a>Schritt 4: Auswählen von SQL Server als Ziel
 Wählen Sie auf der nächsten Seite (**Ziel auswählen**) Microsoft SQL Server als Ziel aus, indem Sie einen der Datenanbieter aus der Liste auswählen, die eine Verbindung mit SQL Server herstellen. Wählen Sie für dieses Beispiel **.NET Framework-Datenanbieter für SQL Server** aus.
@@ -162,4 +165,4 @@ Weitere Informationen zu den Funktionen des Assistenten.
 
 -   **Weitere Informationen zum Herstellen einer Verbindung zwischen Datenquellen und -zielen:** Wählen Sie für weitere Informationen zum Herstellen einer Verbindung mit Ihren Daten die Seite aus der Liste aus, die Sie besonders interessiert: [Connect to data sources with the SQL Server Import and Export Wizard (Herstellen einer Verbindung mit Datenquellen mit dem SQL Server Import/Export-Assistenten)](../../integration-services/import-export-data/connect-to-data-sources-with-the-sql-server-import-and-export-wizard.md). Es sind separate Dokumentationsseiten für verschiedene, häufig verwendete Datenquellen verfügbar.
 
-
+-   **Weitere Informationen zum Laden von Daten aus und in Excel.** Informationen über das Herstellen einer Verbindung mit Excel-Dateien und Einschränkungen und bekannte Probleme beim Laden von Daten aus oder in Excel-Dateien finden Sie unter [Load data from or to Excel with SQL Server Integration Services (SSIS) (Laden von Daten aus oder in Excel mit SQL Server Integration Services (SSIS))](../load-data-to-from-excel-with-ssis.md).

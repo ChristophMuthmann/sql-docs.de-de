@@ -1,16 +1,16 @@
 ---
 title: Excel-Ziel | Microsoft-Dokumentation
-ms.custom: 
-ms.date: 03/17/2017
+ms.custom: ''
+ms.date: 04/02/2018
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.exceldest.f1
@@ -21,19 +21,22 @@ helpviewer_keywords:
 - destinations [Integration Services], Excel
 - Excel [Integration Services]
 ms.assetid: 37c07446-1264-4814-b4f5-9c66d333bb24
-caps.latest.revision: 
+caps.latest.revision: 49
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: be3ad15259560b7b69a9a375affab2940376a22e
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 794d9041bc3057d2737c88e2815d98a9d441beb3
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="excel-destination"></a>Excel-Ziel
   Das Excel-Ziel lädt Daten in Arbeitsblätter oder Bereiche in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel-Arbeitsmappen.  
+
+> [!IMPORTANT]
+> Ausführliche Informationen über das Herstellen einer Verbindung mit Excel-Dateien sowie Einschränkungen und bekannte Probleme beim Laden von Daten aus oder in Excel-Dateien finden Sie unter [Load data from or to Excel with SQL Server Integration Services (SSIS) (Laden von Daten aus oder in Excel mit SQL Server Integration Services (SSIS))](../load-data-to-from-excel-with-ssis.md).
   
 ## <a name="access-modes"></a>Zugriffsmodi  
  Das Excel-Ziel stellt drei verschiedene Datenzugriffsmodi zum Laden von Daten bereit:  
@@ -44,45 +47,7 @@ ms.lasthandoff: 01/25/2018
   
 -   Die Ergebnisse einer SQL-Anweisung. Bei der Abfrage kann es sich um eine parametrisierte Abfrage handeln.  
   
-> [!IMPORTANT]  
->  In Excel entspricht ein Arbeitsblatt oder ein Bereich einer Tabelle oder Sicht. In den Listen der verfügbaren Tabellen im Quellen-Editor und Ziel-Editor für Excel werden nur vorhandene Arbeitsblätter (identifiziert durch das an den Arbeitsblattnamen angefügte $-Zeichen, wie z. B. Sheet1$) und benannte Bereiche (identifiziert durch das Fehlen des $-Zeichens, wie z. B. MyRange) angezeigt.  
-  
-## <a name="usage-considerations"></a>Überlegungen zur Verwendung  
- Der Excel-Verbindungs-Manager verwendet den [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB-Anbieter für Jet 4.0 und den unterstützenden Excel-ISAM-Treiber (Indexed Sequential Access Method, indizierte sequenzielle Zugriffsmethode), um sich mit Excel-Datenquellen zu verbinden und diese zu lesen und in sie zu schreiben.  
-  
- In vielen [!INCLUDE[msCoName](../../includes/msconame-md.md)] Knowledge Base-Artikeln ist das Verhalten dieses Anbieters und Treibers dokumentiert. Diese Artikel beziehen sich zwar nicht speziell auf [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] oder die Vorgängerversion Data Transformation Services, aber Sie sollten bestimmte Verhaltensweisen kennen, die zu unerwarteten Ergebnissen führen können. Allgemeine Informationen zu Verwendung und Verhalten des Excel-Treibers finden Sie unter [SO WIRD'S GEMACHT: Verwenden von ADO mit Excel-Daten von Visual Basic oder VBA](http://support.microsoft.com/kb/257819).  
-  
- Die folgenden Verhaltensweisen des im Excel-Treiber enthaltenen Jet-Anbieters können zu unerwarteten Ergebnissen führen, wenn Daten in ein Excel-Ziel gespeichert werden.  
-  
--   **Speichern von Textdaten**. Wenn der Excel-Treiber Textdatenwerte in ein Excel-Ziel speichert, wird vor den Text jeder Zelle das einfache Anführungszeichen (') gesetzt, um sicherzustellen, dass die gespeicherten Werte als Textwerte interpretiert werden. Wenn Sie andere Anwendungen verwenden bzw. entwickeln, die die gespeicherten Daten lesen oder verarbeiten, kann eine spezielle Verarbeitung des vor jedem Textwert gesetzten einfachen Anführungszeichens erforderlich sein.  
-  
-     Informationen dazu, wie Sie das Einschließen des einfachen Anführungszeichens vermeiden, finden Sie in diesem Blogpost: [Single quote is appended to all strings when data is transformed to excel when using Excel destination data flow component in SSIS package](http://go.microsoft.com/fwlink/?LinkId=400876)(Einzelnes Anführungszeichen wird an alle Zeichenfolgen angehängt, wenn Daten für Excel umgewandelt werden und die Excel-Ziel-Datenflusskomponente in SSIS verwendet wird), auf msdn.com.  
-  
--   **Speichern von Memodaten (ntext)** Zum erfolgreichen Speichern von Zeichenfolgen mit mehr als 255 Zeichen in einer Excel-Spalte muss der Treiber den Datentyp der Zielspalte als **memo** und nicht als **string**erkennen. Wenn die Zieltabelle bereits Datenzeilen enthält, müssen die ersten Zeilen, die vom Treiber als Stichprobe genommen werden, mindestens eine Instanz eines Werts mit mehr als 255 Zeichen in der Memospalte enthalten. Wenn die Zieltabelle während des Paketentwurfs oder zur Laufzeit erstellt wird, muss die CREATE TABLE-Anweisung als Datentyp für die Memospalte LONGTEXT (oder eines der Synonyme) verwenden.  
-  
--   **Datentypen**. Der Excel-Treiber erkennt nur einen begrenzten Satz von Datentypen. Beispielsweise werden alle numerischen Spalten als Werte mit doppelter Genauigkeit (DT_R8) interpretiert, und alle Zeichenfolgenspalten (außer Memospalten) werden als Unicode-Zeichenfolgen mit 255 Zeichen (DT_WSTR) interpretiert. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] werden die Excel-Datentypen folgendermaßen zugeordnet:  
-  
-    -   Numerisch – Gleitkommawert mit doppelter Genauigkeit (DT_R8)  
-  
-    -   Währung – Währung (DT_CY)  
-  
-    -   Boolesch – Boolesch (DT_BOOL)  
-  
-    -   Datum/Uhrzeit –     **datetime** (DT_DATE)  
-  
-    -   Zeichenfolge – Unicode-Zeichenfolge, Länge 255 (DT_WSTR)  
-  
-    -   Memo – Unicode-Textstream (DT_NTEXT)  
-  
--   **Datentyp- und Längenkonvertierungen**. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] werden Datentypen nicht implizit konvertiert. Daher müssen Sie eventuell die Transformationen für abgeleitete Spalten und für die Datenkonvertierung verwenden, um Excel-Daten vor dem Laden in ein Nicht-Excel-Ziel explizit zu konvertieren bzw. um Nicht-Excel-Daten vor dem Laden in ein Excel-Ziel zu konvertieren. In diesem Fall kann es nützlich sein, das erste Paket mit dem Import/Export-Assistenten zu erstellen, mit dem die Konfiguration notwendiger Konvertierungen vorgenommen wird. Im Folgenden finden Sie einige Beispiele für ggf. erforderliche Konvertierungen:  
-  
-    -   Konvertierung zwischen Unicode-Excel-Zeichenfolgenspalten und Nicht-Unicode-Zeichenfolgenspalten mit bestimmten Codepages.  
-  
-    -   Konvertierung zwischen Excel-Zeichenfolgenspalten mit 255 Zeichen und Zeichenfolgenspalten anderer Längen.  
-  
-    -   Konvertierung zwischen numerischen Excel-Spalten mit doppelter Genauigkeit und numerischen Spalten anderer Typen.  
-  
-## <a name="configuration-of-the-excel-destination"></a>Konfiguration des Excel-Ziels  
+## <a name="configure-the-excel-destination"></a>Konfigurieren des Excel-Ziels  
  Das Excel-Ziel verwendet einen Excel-Verbindungs-Manager zum Herstellen einer Verbindung mit einer Datenquelle. Dieser Verbindungs-Manager gibt die zu verwendende Arbeitsmappendatei an. Weitere Informationen finden Sie unter [Excel Connection Manager](../../integration-services/connection-manager/excel-connection-manager.md).  
   
  Das Excel-Ziel weist eine reguläre Eingabe und eine Fehlerausgabe auf.  
@@ -96,22 +61,6 @@ ms.lasthandoff: 01/25/2018
 -   [Benutzerdefinierte Eigenschaften von Excel](../../integration-services/data-flow/excel-custom-properties.md)  
   
  Weitere Informationen zum Festlegen der Eigenschaften finden Sie unter [Festlegen der Eigenschaften einer Datenflusskomponente](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
-  
-## <a name="related-tasks"></a>Related Tasks  
-  
--   [Herstellen einer Verbindung mit einer Excel-Arbeitsmappe](../../integration-services/connection-manager/connect-to-an-excel-workbook.md)  
-  
--   [Schleife durch Excel-Dateien und Tabellen mit einem Foreach-Schleifencontainer](../../integration-services/control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md)  
-  
--   [Festlegen der Eigenschaften einer Datenflusskomponente](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
-  
-## <a name="related-content"></a>Verwandte Inhalte  
-  
--   Blogeintrag [Excel in Integration Services, Part 1 of 3: Connections and Components](http://go.microsoft.com/fwlink/?LinkId=217674)auf dougbert.com  
-  
--   Blogeintrag [Excel in Integration Services, Part 2 of 3: Tables and Data Types](http://go.microsoft.com/fwlink/?LinkId=217675)auf dougbert.com.  
-  
--   Blogeintrag [Excel in Integration Services, Part 3 of 3: Issues and Alternatives](http://go.microsoft.com/fwlink/?LinkId=217676)auf dougbert.com.  
   
 ## <a name="excel-destination-editor-connection-manager-page"></a>Ziel-Editor für Excel (Seite Verbindungs-Manager)
   Mithilfe der Seite **Verbindungs-Manager** des Dialogfelds **Ziel-Editor für Excel** können Sie Informationen zur Datenquelle angeben und eine Vorschau der Ergebnisse anzeigen. Das Excel-Ziel lädt Daten in ein Arbeitsblatt oder einen benannten Bereich einer [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] -Arbeitsmappe.  
@@ -143,9 +92,6 @@ ms.lasthandoff: 01/25/2018
   
  **Vorhandene Daten anzeigen**  
  Zeigen Sie mithilfe des Dialogfelds **Vorschau der Abfrageergebnisse anzeigen** eine Vorschau der Ergebnisse an. In der Vorschau können bis zu 200 Zeilen angezeigt werden.  
-  
-> [!WARNING]  
->  Wenn der ausgewählte **Excel-Verbindungs-Manager** auf eine nicht vorhandene Excel-Datei zeigt, wird beim Klicken auf diese Schaltfläche eine Fehlermeldung angezeigt.  
   
 ### <a name="data-access-mode-dynamic-options"></a>Dynamische Optionen (Datenzugriffsmodus)  
   
@@ -214,9 +160,6 @@ ms.lasthandoff: 01/25/2018
  Wendet die Fehlerbehandlungsoption auf die ausgewählten Zellen an.  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Load data from or to Excel with SQL Server Integration Services (SSIS) (Laden von Daten aus oder in Excel mit SQL Server Integration Services (SSIS))](../load-data-to-from-excel-with-ssis.md)  
  [Excel-Quelle](../../integration-services/data-flow/excel-source.md)   
- [Integration Services-Variablen &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md)   
- [Datenfluss](../../integration-services/data-flow/data-flow.md)   
- [Arbeiten mit Excel-Dateien mit dem Skripttask](../../integration-services/extending-packages-scripting-task-examples/working-with-excel-files-with-the-script-task.md)  
-  
-  
+[Excel-Verbindungs-Manager](../connection-manager/excel-connection-manager.md)

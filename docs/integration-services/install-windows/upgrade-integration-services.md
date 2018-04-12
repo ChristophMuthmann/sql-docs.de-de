@@ -18,16 +18,16 @@ helpviewer_keywords:
 - SQL Server Integration Services, upgrading
 - upgrading Integration Services
 ms.assetid: 04f9863c-ba0b-47c5-af91-f2d41b078a23
-caps.latest.revision: ''
+caps.latest.revision: 53
 author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: e7617074c17989315b75272611688f1bd77d97d2
-ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
+ms.openlocfilehash: 56b70314f149d8eb2f8a9a0143ac43aae3d31afc
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="upgrade-integration-services"></a>Upgrade von Integration Services
   Wenn [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] oder höher derzeit auf Ihrem Computer installiert ist, können Sie auf [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]aktualisieren.  
@@ -43,12 +43,12 @@ ms.lasthandoff: 03/20/2018
  Es wird empfohlen, Upgrade Advisor auszuführen, bevor Sie auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]aktualisieren. Der Upgrade Advisor meldet Probleme, die auftreten können, wenn Sie vorhandene [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Pakete auf das neue Paketformat migrieren, das von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] verwendet wird.  
   
 > [!NOTE]  
->  Das Migrieren oder Ausführen von DTS-Paketen (Data Transformation Services) wird in der aktuellen Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]nicht mehr unterstützt. Folgende DTS-Funktionen werden nicht mehr unterstützt:  
+>  Das Migrieren oder Ausführen von DTS-Paketen (Data Transformation Services) wird in dieser SQL Server 2012 nicht mehr unterstützt. Folgende DTS-Funktionen werden nicht mehr unterstützt:  
 >   
 >  -   DTS-Laufzeit  
 > -   DTS-API  
 > -   Paketmigrations-Assistent zum Migrieren von DTS-Paketen zur nächsten Version von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]  
-> -   Unterstützung für DTS-paketverwaltung in[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
+> -   Unterstützung der DTS-Paketverwaltung in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
 > -   DTS 2000-Paket ausführen (Task)  
 > -   Scannen von DTS-Paketen durch den Upgrade Advisor  
 >   
@@ -96,7 +96,7 @@ ms.lasthandoff: 03/20/2018
   
     -   Verschiebt Protokolldaten von der Systemtabelle msdb.sysdtslog90 in die Systemtabelle msdb.sysssislog.  
   
--   Entfernt die Systemtabellen msdb.sysdts\*90 und die gespeicherten Prozeduren, die für den Zugriff verwendet werden, nachdem die Daten in die neuen Tabellen msdb.sysssis\* verschoben wurden. Das Upgrade ersetzt jedoch die sysdtslog90-Tabelle durch eine Sicht, die auch sysdtslog90 genannt wird. Diese neue sysdtslog90-Sicht macht die neue Systemtabelle msdb.sysssislog verfügbar. So kann sichergestellt werden, dass auf der Protokolltabelle basierende Berichte weiterhin ohne Unterbrechung ausgeführt werden.  
+-   Entfernt die Systemtabellen msdb.sysdts*90 und die gespeicherten Prozeduren, die für den Zugriff verwendet werden, nachdem die Daten in die neuen Tabellen msdb.sysssis\* verschoben wurden. Das Upgrade ersetzt jedoch die sysdtslog90-Tabelle durch eine Sicht, die auch sysdtslog90 genannt wird. Diese neue sysdtslog90-Sicht macht die neue Systemtabelle msdb.sysssislog verfügbar. So kann sichergestellt werden, dass auf der Protokolltabelle basierende Berichte weiterhin ohne Unterbrechung ausgeführt werden.  
   
 -   Zum Steuern des Paketzugriffs werden drei neue feste Rollen auf Datenbankebene erstellt: db_ssisadmin, db_ssisltduser und db_ssisoperator. Die [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Rollen von db_dtsadmin, db_dtsltduser und db_dtsoperator werden nicht entfernt, sondern werden Member der entsprechenden neuen Rollen.  
   

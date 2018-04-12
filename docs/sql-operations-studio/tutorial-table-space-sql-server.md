@@ -1,6 +1,6 @@
 ---
-title: "Lernprogramm: Aktivieren des Tabelle Speicherplatz Nutzung Beispiel Einblicke Widgets in SQL-Vorgänge Studio (Vorschau) | Microsoft Docs"
-description: "Dieses Lernprogramm veranschaulicht, wie die Tabelle Speicherplatz Nutzung Beispiel Einblicke Widget im Datenbank-Dashboard SQL-Vorgänge Studio (Vorschau) aktiviert."
+title: 'Lernprogramm: Aktivieren des Tabelle Speicherplatz Nutzung Beispiel Einblicke Widgets in SQL Operations Studio (preview) | Microsoft Docs'
+description: Dieses Lernprogramm veranschaulicht, wie die Tabelle Speicherplatz Nutzung Beispiel Einblicke Widget im Datenbank-Dashboard SQL Operations Studio (preview) aktiviert.
 ms.custom: tools|sos
 ms.date: 03/19/2018
 ms.prod: sql-non-specified
@@ -8,7 +8,7 @@ ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: tutorial
 author: erickangMSFT
 ms.author: erickang

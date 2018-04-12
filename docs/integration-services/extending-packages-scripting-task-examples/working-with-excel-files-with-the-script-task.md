@@ -1,15 +1,15 @@
 ---
 title: Arbeiten mit Excel-Dateien mit dem Skripttask | Microsoft-Dokumentation
-ms.custom: 
-ms.date: 03/17/2017
+ms.custom: ''
+ms.date: 04/02/2018
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: extending-packages-scripting-task-examples
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
@@ -20,39 +20,30 @@ helpviewer_keywords:
 - Script task [Integration Services], examples
 - Excel [Integration Services]
 ms.assetid: b8fa110a-2c9c-4f5a-8fe1-305555640e44
-caps.latest.revision: 
+caps.latest.revision: 35
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: bfbe8efdeab1af1ba6c802d69abdce4b1b4696fa
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: a533795d6d6017c885b887e35b8e996ab82493df
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="working-with-excel-files-with-the-script-task"></a>Arbeiten mit Excel-Dateien mit dem Skripttask
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] stellt den Excel-Verbindungs-Manager, die Excel-Quelle und das Excel-Ziel zum Arbeiten mit den in Kalkulationstabellen gespeicherten Daten im [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel-Dateiformat bereit. Die in diesem Thema beschriebenen Verfahren verwenden den Skripttask zum Abrufen von Informationen über verfügbare Excel-Datenbanken (Arbeitsmappendateien) und -Tabellen (Arbeitsmappen und benannte Bereiche). Diese Beispiele können leicht geändert werden, um mit einer der anderen vom [!INCLUDE[msCoName](../../includes/msconame-md.md)] Jet OLE DB-Anbieter unterstützten dateibasierten Datenquellen zu arbeiten.  
+  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] stellt den Excel-Verbindungs-Manager, die Excel-Quelle und das Excel-Ziel zum Arbeiten mit den in Kalkulationstabellen gespeicherten Daten im [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel-Dateiformat bereit. Die in diesem Thema beschriebenen Verfahren verwenden den Skripttask zum Abrufen von Informationen über verfügbare Excel-Datenbanken (Arbeitsmappendateien) und -Tabellen (Arbeitsmappen und benannte Bereiche).
   
- [Konfigurieren eines Pakets zum Testen der Beispiele](#configuring)  
-  
- [Beispiel 1: Überprüfen, ob eine Excel-Datei vorhanden ist](#example1)  
-  
- [Beispiel 2: Überprüfen, ob eine Excel-Tabelle vorhanden ist](#example2)  
-  
- [Beispiel 3: Abrufen einer Liste der Excel-Dateien in einem Ordner](#example3)  
-  
- [Beispiel 4: Abrufen einer Liste der Tabellen in einer Excel-Datei](#example4)  
-  
- [Anzeigen der Ergebnisse dieser Beispiele](#testing)  
-  
-> [!NOTE]  
->  Wenn Sie einen Task erstellen möchten, den Sie einfacher in mehreren Paketen wiederverwenden können, empfiehlt es sich, den Code in diesem Skripttaskbeispiel als Ausgangspunkt für einen benutzerdefinierten Task zu verwenden. Weitere Informationen finden Sie unter [Entwickeln eines benutzerdefinierten Tasks](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md).  
-  
+> [!TIP]  
+>  Wenn Sie einen Task erstellen möchten, den Sie in mehreren Paketen wiederverwenden können, empfiehlt es sich, den Code in diesem Skripttaskbeispiel als Ausgangspunkt für einen benutzerdefinierten Task zu verwenden. Weitere Informationen finden Sie unter [Entwickeln eines benutzerdefinierten Tasks](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md).  
+
+> [!IMPORTANT]
+> Ausführliche Informationen über das Herstellen einer Verbindung mit Excel-Dateien sowie Einschränkungen und bekannte Probleme beim Laden von Daten aus oder in Excel-Dateien finden Sie unter [Load data from or to Excel with SQL Server Integration Services (SSIS) (Laden von Daten aus oder in Excel mit SQL Server Integration Services (SSIS))](../load-data-to-from-excel-with-ssis.md).
+ 
 ##  <a name="configuring"></a> Konfigurieren eines Pakets zum Testen der Beispiele  
  Sie können ein einzelnes Paket konfigurieren, um alle Beispiele in diesem Thema zu testen. In den Beispielen werden oft die gleichen Paketvariablen und die gleichen [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]-Klassen verwendet.  
   
-#### <a name="to-configure-a-package-for-use-with-the-examples-in-this-topic"></a>So konfigurieren Sie ein Paket zur Verwendung mit den in diesem Thema beschriebenen Beispielen  
+### <a name="to-configure-a-package-for-use-with-the-examples-in-this-topic"></a>So konfigurieren Sie ein Paket zur Verwendung mit den in diesem Thema beschriebenen Beispielen  
   
 1.  Erstellen Sie in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ein neues [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]-Projekt, und öffnen Sie das Standardpaket für die Bearbeitung.  
   
@@ -85,7 +76,7 @@ ms.lasthandoff: 01/25/2018
 ##  <a name="example1"></a> Beschreibung zu Beispiel 1: Überprüfen, ob eine Excel-Datei vorhanden ist  
  In diesem Beispiel wird überprüft, ob die von der `ExcelFile`-Variable angegebene Excel-Arbeitsmappendatei vorhanden ist. Daraufhin wird der boolesche Wert der `ExcelFileExists`-Variable auf das Ergebnis festgelegt. Sie können diesen booleschen Wert im Workflow des Pakets zur Verzweigung verwenden.  
   
-#### <a name="to-configure-this-script-task-example"></a>So konfigurieren Sie dieses Skripttaskbeispiel  
+### <a name="to-configure-this-script-task-example"></a>So konfigurieren Sie dieses Skripttaskbeispiel  
   
 1.  Fügen Sie dem Paket einen neuen Skripttask hinzu, und ändern Sie den Namen in **ExcelFileExists**.  
   
@@ -155,7 +146,7 @@ public class ScriptMain
 ##  <a name="example2"></a> Beschreibung zu Beispiel 2: Überprüfen, ob eine Excel-Tabelle vorhanden ist  
  In diesem Beispiel wird überprüft, ob das in der `ExcelTable`-Variable angegebene Excel-Arbeitsblatt bzw. der benannte Bereich in der Excel-Arbeitsmappendatei vorhanden ist, die in der `ExcelFile`-Variable angegeben wurde. Daraufhin wird der boolesche Wert der `ExcelTableExists`-Variable auf das Ergebnis festgelegt. Sie können diesen booleschen Wert im Workflow des Pakets zur Verzweigung verwenden.  
   
-#### <a name="to-configure-this-script-task-example"></a>So konfigurieren Sie dieses Skripttaskbeispiel  
+### <a name="to-configure-this-script-task-example"></a>So konfigurieren Sie dieses Skripttaskbeispiel  
   
 1.  Fügen Sie dem Paket einen neuen Skripttask hinzu, und ändern Sie den Namen in **ExcelTableExists**.  
   
@@ -262,7 +253,7 @@ public class ScriptMain
 ##  <a name="example3"></a> Beschreibung zu Beispiel 3: Abrufen einer Liste der Excel-Dateien in einem Ordner  
  In diesem Beispiel wird ein Array mit der Liste der Excel-Dateien aus dem Ordner gefüllt, der im Wert der `ExcelFolder`-Variable angegeben wurde. Das Array wird daraufhin in die `ExcelFiles`-Variable kopiert. Mithilfe des Foreach-Enumerators für Daten aus Variablen können die Dateien in dem Array durchlaufen werden.  
   
-#### <a name="to-configure-this-script-task-example"></a>So konfigurieren Sie dieses Skripttaskbeispiel  
+### <a name="to-configure-this-script-task-example"></a>So konfigurieren Sie dieses Skripttaskbeispiel  
   
 1.  Fügen Sie dem Paket einen neuen Skripttask hinzu, und ändern Sie den Namen in **GetExcelFiles**.  
   
@@ -337,7 +328,7 @@ public class ScriptMain
 > [!NOTE]  
 >  Die Liste der Tabellen in einer Excel-Arbeitsmappe schließt sowohl Arbeitsmappen (diese weisen das Suffix $ auf) als auch benannte Bereiche ein. Wenn Sie die Liste nach nur Arbeitsmappen oder nach nur benannten Bereichen filtern müssen, müssen Sie zu diesem Zweck möglicherweise zusätzlichen Code hinzufügen.  
   
-#### <a name="to-configure-this-script-task-example"></a>So konfigurieren Sie dieses Skripttaskbeispiel  
+### <a name="to-configure-this-script-task-example"></a>So konfigurieren Sie dieses Skripttaskbeispiel  
   
 1.  Fügen Sie dem Paket einen neuen Skripttask hinzu, und ändern Sie den Namen in **GetExcelTables**.  
   
@@ -446,7 +437,7 @@ public class ScriptMain
 ##  <a name="testing"></a> Anzeigen der Ergebnisse dieser Beispiele  
  Wenn Sie alle Beispiele dieses Themas im selben Paket konfiguriert haben, können Sie alle Skripttasks mit einem zusätzlichen Skripttask verbinden, der die Ausgaben aller Beispiele anzeigt.  
   
-#### <a name="to-configure-a-script-task-to-display-the-output-of-the-examples-in-this-topic"></a>So konfigurieren Sie einen Skripttask zum Anzeigen der Ausgabe der in diesem Thema behandelten Beispiele  
+### <a name="to-configure-a-script-task-to-display-the-output-of-the-examples-in-this-topic"></a>So konfigurieren Sie einen Skripttask zum Anzeigen der Ausgabe der in diesem Thema behandelten Beispiele  
   
 1.  Fügen Sie dem Paket einen neuen Skripttask hinzu, und ändern Sie den Namen in **DisplayResults**.  
   
@@ -550,7 +541,7 @@ public class ScriptMain
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [Excel-Verbindungs-Manager](../../integration-services/connection-manager/excel-connection-manager.md)   
+ [Load data from or to Excel with SQL Server Integration Services (SSIS) (Laden von Daten aus oder in Excel mit SQL Server Integration Services (SSIS))](../load-data-to-from-excel-with-ssis.md)  
  [Schleife durch Excel-Dateien und Tabellen mit einem Foreach-Schleifencontainer](../../integration-services/control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md)  
   
   

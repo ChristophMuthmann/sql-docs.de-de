@@ -1,6 +1,6 @@
 ---
-title: "Lernprogramm: Verwenden den SQL-Vorgänge Studio (Vorschau) Transact-SQL-Editor zum Erstellen von Datenbankobjekten | Microsoft Docs"
-description: Dieses Lernprogramm veranschaulicht die wichtigsten Funktionen in SQL Operations Studio (Vorschau), die mithilfe des T-SQL-vereinfachen.
+title: 'Lernprogramm: Verwenden den SQL Operations Studio (preview) Transact-SQL-Editor zum Erstellen von Datenbankobjekten | Microsoft Docs'
+description: Dieses Lernprogramm veranschaulicht die wichtigsten Funktionen in SQL Operations Studio (preview), die mithilfe des T-SQL-vereinfachen.
 ms.custom: tools|sos
 ms.date: 03/13/2018
 ms.prod: sql-non-specified
@@ -8,7 +8,7 @@ ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: tutorial
 author: erickangMSFT
 ms.author: erickang
@@ -57,13 +57,13 @@ Dieses Lernprogramm erfordert die SQL Server- oder Azure SQL-Datenbank *Tutorial
 
    ![Schnellsuche-widget](./media/tutorial-sql-editor/quick-search-widget.png)
 
-1. Bearbeiten der **E-Mail** Spalte in der ersten Zeile Typ  *orlando0@adventure-works.com* , und drücken Sie **EINGABETASTE** um die Änderung zu speichern.
+1. Bearbeiten der **E-Mail** Spalte in der ersten Zeile Typ *orlando0@adventure-works.com*, und drücken Sie **EINGABETASTE** um die Änderung zu speichern.
 
    ![Bearbeiten von Daten](./media/tutorial-sql-editor/edit-data.png)
 
 ## <a name="use-t-sql-snippets-to-create-stored-procedures"></a>Verwenden Sie zum Erstellen gespeicherter Prozeduren T-SQL-Ausschnitten
 
-SQL-Vorgänge Studio stellt viele integrierte T-SQL-Ausschnitte für das schnelle Erstellen von Anweisungen bereit.
+SQL Operations Studio stellt viele integrierte T-SQL-Ausschnitte für das schnelle Erstellen von Anweisungen bereit.
 
 
 1. Öffnen Sie einen neues Abfrage-Editor, indem Sie mit **STRG + N**.
@@ -117,7 +117,7 @@ Nun wird die gespeicherte Prozedur erstellt, und die **Ergebnisse** Bereich zeig
 
 ## <a name="use-peek-definition"></a>Verwenden von "Definition einsehen" 
 
-SQL-Vorgänge Studio bietet die Möglichkeit zum Anzeigen der Definition einer Objekte mit der Peek-Definition-Funktion. In diesem Abschnitt wird eine zweite gespeicherte Prozedur erstellt und "Definition einsehen" verwendet, um festzustellen, welche Spalten in einer Tabelle, um schnell den Text der gespeicherten Prozedur zu erstellen sind.
+SQL Operations Studio bietet die Möglichkeit zum Anzeigen der Definition einer Objekte mit der Peek-Definition-Funktion. In diesem Abschnitt wird eine zweite gespeicherte Prozedur erstellt und "Definition einsehen" verwendet, um festzustellen, welche Spalten in einer Tabelle, um schnell den Text der gespeicherten Prozedur zu erstellen sind.
 
 1. Öffnen Sie einen neuen Editor durch Drücken von **STRG + N**. 
 
@@ -185,7 +185,7 @@ SQL-Vorgänge Studio bietet die Möglichkeit zum Anzeigen der Definition einer O
 
 ## <a name="use-save-query-results-as-json-to-test-the-setcustomer-stored-procedure"></a>Verwenden Sie Abfrageergebnisse als JSON zum Testen der SetCustomer gespeicherte Prozedur speichern
 
-Die *SetCustomer* im vorherigen Abschnitt erstellte gespeicherte Prozedur erfordert JSON Daten übergeben werden, in der  *@json_val*  Parameter. In diesem Abschnitt veranschaulicht das Abrufen eine ordnungsgemäß formatierte Bit der JSON-der Parameter übergeben, sodass Sie die gespeicherte Prozedur testen können.
+Die *SetCustomer* im vorherigen Abschnitt erstellte gespeicherte Prozedur erfordert JSON Daten übergeben werden, in der *@json_val* Parameter. In diesem Abschnitt veranschaulicht das Abrufen eine ordnungsgemäß formatierte Bit der JSON-der Parameter übergeben, sodass Sie die gespeicherte Prozedur testen können.
 
 1. In der **Server** Randleiste Maustaste die *Dbo. Kunden* Tabelle, und klicken Sie auf **oberste 1000 Zeilen auswählen**.
 

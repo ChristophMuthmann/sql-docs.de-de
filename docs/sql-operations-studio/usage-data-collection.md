@@ -1,6 +1,6 @@
 ---
-title: "Aktivieren oder deaktivieren Sie die Sammlung von Verwendungsdaten und Absturzberichten für SQL-Vorgänge Studio (Vorschau) | Microsoft Docs"
-description: "In diesem Artikel wird erläutert, wie steuern, wenn die Verwendung und Absturzberichte Daten gesammelt und an Microsoft gesendet werden."
+title: Aktivieren oder deaktivieren Sie die Sammlung von Verwendungsdaten und Absturzberichten für SQL Operations Studio (preview) | Microsoft Docs
+description: In diesem Artikel wird erläutert, wie steuern, wenn die Verwendung und Absturzberichte Daten gesammelt und an Microsoft gesendet werden.
 ms.custom: tools|sos
 ms.date: 11/15/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,7 @@ ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: stevestein
 ms.author: sstein

@@ -1,6 +1,6 @@
 ---
-title: Verwenden Sie Active Directory-Authentifizierung (Kerberos), bei der Verbindung mit SQL-Vorgänge Studio (Vorschau) | Microsoft Docs
-description: Informationen Sie zum Aktivieren von Kerberos mit Active Directory-Authentifizierung für SQL-Vorgänge Studio (Vorschau)
+title: Verwenden Sie Active Directory-Authentifizierung (Kerberos), bei der Verbindung mit SQL Operations Studio (preview) | Microsoft Docs
+description: Informationen Sie zum Aktivieren von Kerberos mit Active Directory-Authentifizierung für SQL Operations Studio (preview)
 ms.custom: tools|sos
 ms.date: 11/17/2017
 ms.prod: sql-non-specified

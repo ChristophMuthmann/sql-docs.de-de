@@ -1,6 +1,6 @@
 ---
-title: Was ist SQL Operations Studio (Vorschau)? | Microsoft-Dokumentation
-description: "SQL-Vorgänge Studio (Vorschau) handelt es sich eine kostenlose, leicht, die unter Windows, Mac OS und Linux ausgeführt wird, für die Verwaltung von SQL Server, Azure SQL-Datenbank und Azure SQL Data Warehouse; immer, wenn sie ausgeführt werden."
+title: Was ist SQL Operations Studio (preview)? | Microsoft-Dokumentation
+description: SQL Operations Studio (preview) handelt es sich eine kostenlose, leicht, die unter Windows, Mac OS und Linux ausgeführt wird, für die Verwaltung von SQL Server, Azure SQL-Datenbank und Azure SQL Data Warehouse; immer, wenn sie ausgeführt werden.
 ms.custom: tools|sos
 ms.date: 11/17/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,7 @@ ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: overview
 author: stevestein
 ms.author: sstein

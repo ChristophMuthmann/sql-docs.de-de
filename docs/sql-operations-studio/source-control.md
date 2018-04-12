@@ -1,6 +1,6 @@
 ---
-title: "Datenquellen-Steuerelement in der SQL-Vorgänge Studio (Vorschau) | Microsoft Docs"
-description: "Informationen Sie zum Konfigurieren von Datenquellen-Steuerelement in der SQL-Vorgänge Studio (Vorschau)."
+title: Datenquellen-Steuerelement in der SQL Operations Studio (preview) | Microsoft Docs
+description: Informationen Sie zum Konfigurieren von Datenquellen-Steuerelement in der SQL Operations Studio (preview).
 ms.custom: tools|sos
 ms.date: 11/15/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,7 @@ ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: stevestein
 ms.author: sstein

@@ -1,30 +1,30 @@
 ---
-title: "Quelltabellen und -sichten auswählen (SQL Server-Import/Export-Assistent) | Microsoft-Dokumentation"
-ms.custom: 
-ms.date: 03/16/2017
+title: Quelltabellen und -sichten auswählen (SQL Server-Import/Export-Assistent) | Microsoft-Dokumentation
+ms.custom: ''
+ms.date: 04/02/2018
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: import-export-data
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.impexpwizard.selectsourcetablesandviews.f1
 ms.assetid: f60e1a19-2ea6-403c-89ab-3e60ac533ea0
-caps.latest.revision: 
+caps.latest.revision: 96
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 600e734c11a597cdcbae0279e1604bd96ccfb06f
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: b2424f3f7ad290a3ae81c7b97a39abf55f52e771
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="select-source-tables-and-views-sql-server-import-and-export-wizard"></a>Quelltabellen und -sichten auswählen (SQL Server-Import/Export-Assistent)
   Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Import/Export-Assistent zeigt die Seite **Quelltabellen und -sichten auswählen**an, nachdem Sie angegeben haben, dass Sie eine vollständige Tabelle kopieren möchten, oder nachdem Sie eine Abfrage bereitstellen. Auf dieser Seite wählen Sie die vorhandenen Tabellen und Sichten zum Kopieren aus. Anschließend ordnen Sie die Quelltabellen neuen oder vorhandenen Zieltabellen zu. Optional können Sie auch die Zuordnung einzelner Spalten überprüfen und eine Vorschau von Beispieldaten anzeigen.
@@ -73,6 +73,9 @@ Nachdem Sie die Daten in der Vorschau anzeigen, sollten Sie die Optionen ändern
 
 ## <a name="select-source-and-destination-tables-for-excel"></a>Auswählen von Quell- und Zieltabellen für Excel
 
+> [!IMPORTANT]
+> Ausführliche Informationen über das Herstellen einer Verbindung mit Excel-Dateien sowie Einschränkungen und bekannte Probleme beim Laden von Daten aus oder in Excel-Dateien finden Sie unter [Load data from or to Excel with SQL Server Integration Services (SSIS) (Laden von Daten aus oder in Excel mit SQL Server Integration Services (SSIS))](../load-data-to-from-excel-with-ssis.md).
+
 ### <a name="excel-source-tables"></a>Excel-Quellentabellen
 Die Liste der Quelltabellen und-sichten für eine Excel-Datenquelle enthält zwei Typen von Excel-Objekten.
 -   **Arbeitsblätter:** Die Namen von Arbeitsblättern enden auf das Dollarzeichen ($): z.B. **Sheet1$**.
@@ -80,41 +83,21 @@ Die Liste der Quelltabellen und-sichten für eine Excel-Datenquelle enthält zwe
 
 Sie müssen eine Abfrage schreiben, wenn Sie Daten von oder in einen bestimmten, unbenannten Zellbereich laden möchten: z.B. von oder in **[Sheet1$ A1:B4]**. Wechseln Sie zurück auf die Seite **Tabelle kopieren oder Datenbank abfragen** , uns wählen Sie **Abfrage zum Angeben der zu übertragenden Daten schreiben**aus.
 
-#### <a name="prepare-the-excel-source-data"></a>Vorbereiten der Daten der Excel-Quelle
-Unabhängig davon, ob Sie ein Arbeitsblatt oder einen Bereich als Quelltabelle angeben, liest der Treiber den *zusammenhängenden* Zellenblock ab der ersten nicht leeren Zelle in der linken oberen Ecke des Arbeitsblatts oder Bereichs. Folglich sind keine leeren Zeilen in den Quelldaten erlaubt. Es sind z.B. keine leeren Zellen zwischen den Spaltenkopfzeilen und den Datenzeilen erlaubt. Wenn sich zwischen dem Titel oben auf dem Arbeitsblatt und Ihren Daten eine leere Zeile befindet, können Sie das Arbeitsblatt nicht abfragen. In Excel müssen Sie Ihrem Datenbereich einen Namen zuweisen und den benannten Bereich statt des Arbeitsblatts abfragen.
-
 ### <a name="excel-destination-tables"></a>Excel-Zieltabellen
 Wenn Sie Daten nach Excel exportieren, können Sie das Ziel wie folgt angeben.
 -   **Arbeitsblatt:** Fügen Sie das $-Zeichen an das Ende des Blattnamens an, und schließen Sie die Zeichenfolge in Trennzeichen ein, z.B. **[Sheet1$]**, um ein Arbeitsblatt anzugeben.
 -   **Benannter Bereich:** Verwenden Sie einfach den Namen des Bereichs, z.B. **MyDataRange**, um einen benannten Bereich anzugeben.
 -   **Unbenannter Bereich:** Um einen Bereich von Zellen anzugeben, den Sie nicht benannt haben, fügen Sie das $-Zeichen an das Ende des Blattnamens an, fügen Sie die Bereichsspezifikation hinzu, und schließen Sie die Zeichenfolge in Trennzeichen ein, z.B: **[Sheet1$A1:B4]**.
 
-## <a name="special-considerations-for-excel-sources-and-destinations"></a>Besonderheiten bei Excel-Quellen und -Zielen
-Wenn Sie Excel als Quelle oder Ziel verwenden, sollten Sie auf **Zuordnungen bearbeiten** klicken und die Datentypzuordnungen auf der Seite **Spaltenzuordnungen** überprüfen. 
-
-**Datentypen in Excel-Arbeitsmappen:** Excel ist keine Standarddatenbank. Die Spalten haben keine festen Datentypen. Der Assistent erkennt nur eine begrenzte Anzahl von Excel-Datentypen: numeric, currency, Boolean, date/time, string (255 Zeichen oder weniger) und memo (mehr als 255 Zeichen). Der Assistent fragt eine bestimmte Anzahl von Zeilen in einer vorhandenen Excel-Datenquelle ab (standardmäßig die ersten acht Zeilen), um den Datentyp jeder Spalte zu ermitteln.
-
-Wenn der Assistent explizite Konvertierungen von Datentypen ausführen muss, um Daten aus oder in Excel zu laden, wird i.d.R. die Seite **Datentypzuordnung überprüfen** angezeigt, auf der Sie diese Konvertierungen überprüfen können. Diese Konvertierungen können Folgendes enthalten:
--   Konvertierung zwischen numerischen Excel-Spalten mit doppelter Genauigkeit und numerischen Spalten anderer Typen.
--   Konvertierung zwischen Excel-Zeichenfolgenspalten mit 255 Zeichen und Zeichenfolgenspalten anderer Längen.
--   Konvertierung zwischen Unicode-Excel-Zeichenfolgenspalten und Nicht-Unicode-Zeichenfolgenspalten, die bestimmte Codepages verwenden.
-
-### <a name="special-considerations-for-excel-sources"></a>Besonderheiten bei Excel-Quellen
-**NULL- oder fehlende Werte in den importierten Daten:** Wenn eine Excel-Spalte in den ersten acht Zeilen, die vom Assistenten als Stichprobe entnommen wurden, scheinbar gemischte Datentypen enthält (z.B. numerische Werte gemischt mit Textwerten), wählt der Assistent den am häufigsten verwendeten Datentyp der Spalte und gibt NULL-Werte für die Zellen zurück, die andere Datentypen enthalten. Es besteht keine Möglichkeit, dieses Verhalten des Assistenten zu ändern.
-
-**Abgeschnittene Zeichenfolgen in importierten Daten:** Wenn der Assistent bestimmt, dass eine Excel-Spalte Textdaten enthält, wählt der Assistent anhand des längsten Werts in ersten acht Zeilen den Datentyp aus (string oder memo). Wenn der Assistent in den Stichprobezeilen keine Werte mit mehr als 255 Zeichen findet, wird die Spalte nicht als Memospalte, sondern als Zeichenfolgenspalte mit 255 Zeichen behandelt, und alle Werte mit mehr als 255 Zeichen werden abgeschnitten. Sie müssen zum Importieren von Daten aus einer Memospalte ohne Abschneiden sicherstellen, dass die Memospalte in den ersten acht Zeilen, die vom Assistenten als Stichprobe entnommen wurden, mindestens einen Wert enthält, der länger als 255 Zeichen ist.
-
-### <a name="special-considerations-for-excel-destinations"></a>Besonderheiten bei Excel-Zielen
-**Angeben eines vorhandenen Datenbereichs:** Wenn Sie einen vorhandenen Bereich als Ziel angeben, wird ein Fehler zurückgegeben, sofern dieser weniger *Spalten* als die Quelldaten enthält. Wenn der Bereich, den Sie angeben, jedoch weniger *Zeilen* als die Quelldaten aufweist, schreibt der Assistent weiterhin Zeilen und erweitert die Bereichsdefinition, sodass sie mit der neuen Zeilenanzahl übereinstimmt.
-
-**Speichern von Memodaten (ntext):** Der Assistent muss den Datentyp der Zielspalte als **memo** , nicht als **string**erkennen, damit Sie Zeichenfolgen mit mehr als 255 Zeichen in einer Excel-Spalte erfolgreich speichern können.
--   Wenn die Zieltabelle bereits Datenzeilen enthält, müssen die ersten acht Zeilen, die vom Assistenten als Stichprobe entnommen werden, mindestens eine Zeile mit einem Wert mit mehr als 255 Zeichen in der Memospalte enthalten.
--   Wenn die Zieltabelle vom Assistenten erstellt wird, muss die **CREATE TABLE**-Anweisung **LONGTEXT** (oder Synonyme) als Datentyp für die Memospalte verwenden. Überprüfen Sie die Anweisung **CREATE TABLE**, und bearbeiten Sie diese bei Bedarf, indem Sie auf der Seite **Spaltenzuordnungen** neben der Option **Zieltabelle erstellen** auf **SQL bearbeiten** klicken.
+> [!TIP]
+> Wenn Sie Excel als Quelle oder Ziel verwenden, sollten Sie auf **Zuordnungen bearbeiten** klicken und die Datentypzuordnungen auf der Seite **Spaltenzuordnungen** überprüfen. 
 
 ## <a name="whats-next"></a>Wie geht es weiter?  
  Nach der Auswahl der zu kopierenden vorhandenen Tabellen und Sichten und dem Zuordnen dieser zu ihren Zielen ist **Paket speichern und ausführen**die nächste Seite. Auf dieser Seite geben Sie an, ob der Kopiervorgang sofort ausgeführt werden soll. Abhängig von Ihrer Konfiguration können Sie möglicherweise auch das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Paket speichern, das der Assistent erstellt hat, um es anzupassen und später wiederzuverwenden. Weitere Informationen finden Sie unter [Paket speichern und ausführen](../../integration-services/import-export-data/save-and-run-package-sql-server-import-and-export-wizard.md).
  
  ## <a name="see-also"></a>Siehe auch
-[Erste Schritte mit diesem einfachen Beispiel des Import/Export-Assistenten](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)
+[Erste Schritte mit diesem einfachen Beispiel des Import/Export-Assistenten](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)  
+[Load data from or to Excel with SQL Server Integration Services (SSIS) (Laden von Daten aus oder in Excel mit SQL Server Integration Services (SSIS))](../load-data-to-from-excel-with-ssis.md)
+
 
 

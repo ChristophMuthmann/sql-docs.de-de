@@ -1,6 +1,6 @@
 ---
-title: "SQL-Vorgänge Studio (Vorschau) – häufig gestellte Fragen | Microsoft Docs"
-description: "Häufig gestellte Fragen (FAQ) für SQL-Vorgänge Studio (Vorschau)."
+title: SQL Operations Studio (preview) – häufig gestellte Fragen | Microsoft Docs
+description: Häufig gestellte Fragen (FAQ) für SQL Operations Studio (preview).
 ms.custom: tools|sos
 ms.date: 11/15/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,7 @@ ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: stevestein
 ms.author: sstein

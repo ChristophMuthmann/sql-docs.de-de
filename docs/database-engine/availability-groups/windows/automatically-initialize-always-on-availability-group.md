@@ -1,26 +1,27 @@
 ---
-title: "Automatisches Initialisieren der Always On-Verfügbarkeitsgruppe | Microsoft-Dokumentation"
-ms.custom: 
-ms.date: 08/23/2017
+title: Automatisches Initialisieren der Always On-Verfügbarkeitsgruppe | Microsoft-Dokumentation
+ms.custom: ''
+ms.date: 03/26/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: availability-groups
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 67c6a601-677a-402b-b3d1-8c65494e9e96
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: MikeRayMSFT
 ms.author: v-saume
 manager: craigg
-ms.openlocfilehash: aa2ce39b4cf932d5659adb2ccc1a85b4ff547cac
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 44ff615a44427cdf0e5ed6e06937181762deb7a0
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="automatically-initialize-always-on-availability-group"></a>Automatisches Initialisieren der AlwaysOn-Verfügbarkeitsgruppe
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -169,6 +170,12 @@ Fragen Sie auf dem primären Replikat die DMV `sys.dm_hadr_physical_seeding_stat
 ```sql
 SELECT * FROM sys.dm_hadr_physical_seeding_stats;
 ```
+
+Die zwei Spalten *total_disk_io_wait_time_ms* und *total_network_wait_time_ms* können zum Ermitteln von Leistungsengpässen im automatischen Seedingprozess verwendet werden. Die zwei Spalten sind auch in dem erweiterten Ereignis *hadr_physical_seeding_progress* vorhanden.
+
+**total_disk_io_wait_time_ms** stellt die Zeit dar, die der Sicherungs- bzw. Wiederherstellungsthread auf den Datenträger wartet. Dieser Wert ist von Beginn des Seedingvorgangs an kumulativ. Wenn die Datenträger nicht für das Lesen oder Schreiben des Sicherungsdatenstroms bereit sind, geht der Sicherungs- bzw. Wiederherstellungsthread in einen Ruhezustand über und reaktiviert sich jede Sekunde, um zu überprüfen, ob der Datenträger bereit ist.
+        
+**total_network_wait_time_ms** wird für das primäre und sekundäre Replikat anders interpretiert. Auf dem primären Replikat stellt dieser Indikator die Flusssteuerungsdauer des Netzwerks dar. Auf dem sekundären Replikat stellt er die Zeit dar, die der Wiederherstellungsthread auf eine verfügbare Nachricht zum Schreiben auf den Datenträger wartet.
 
 ### <a name="diagnose-database-initialization-using-automatic-seeding-in-the-error-log"></a>Diagnostizieren der Datenbankinitialisierung mithilfe von automatischem Seeding im Fehlerprotokoll
 
