@@ -98,8 +98,7 @@ Die Developer Edition unterstützt weiterhin nur einen Client für [SQL Server D
   
 <sup>1</sup> Enterprise Edition mit Server + Client Clientzugriffslizenz (CAL) basierte Lizenzierung (für neue Verträge nicht verfügbar) ist auf maximal 20 Kerne pro SQL Server-Instanz beschränkt. Für das auf Prozessorkernen basierende Serverlizenzierungsmodell gelten keine Beschränkungen. Weitere Informationen finden Sie unter [Kapazitätsgrenzen zu berechnen, indem Sie SQL Server-Edition](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).  
  
-##  <a name="RDBMSHA">
-            </a> RDBMS: Hochverfügbarkeit  
+##  <a name="RDBMSHA"></a> RDBMS: Hochverfügbarkeit  
   
 |Funktion|Enterprise|Standard|Web|Express|  
 |-------------|----------------|--------------|---------|------------------------|  
