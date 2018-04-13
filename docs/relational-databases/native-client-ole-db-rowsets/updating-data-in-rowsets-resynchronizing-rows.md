@@ -1,15 +1,15 @@
 ---
 title: Erneutes Synchronisieren von Zeilen | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-ole-db-rowsets
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - synchronization [OLE DB]
@@ -17,7 +17,7 @@ helpviewer_keywords:
 - resynchronizing rows
 - data updates [SQL Server], OLE DB
 ms.assetid: d2d30505-a878-4aa9-b821-53d8118a45a5
-caps.latest.revision: 
+caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg

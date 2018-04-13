@@ -1,15 +1,15 @@
 ---
 title: 'Abrufen von BLOB-Daten mithilfe von IRow:: GetColumns und ISequentialStream | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-ole-db-rowsets
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - fetching BLOB data
@@ -17,7 +17,7 @@ helpviewer_keywords:
 - GetColumns method
 - BLOBs, fetching
 ms.assetid: b57decda-b0c1-4ef6-8c81-491956de2890
-caps.latest.revision: 
+caps.latest.revision: 29
 author: MightyPen
 ms.author: genemi
 manager: craigg
