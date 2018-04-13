@@ -1,16 +1,16 @@
 ---
 title: Anzeigen und Verwenden der Ausgabe des Datenbankoptimierungsratgebers | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: performance
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dta.sessionmonitor.f1
@@ -29,7 +29,7 @@ helpviewer_keywords:
 - reports [SQL Server], tuning
 - viewing tuning output
 ms.assetid: 47f9d9a7-80b0-416d-9d9a-9e265bc190dc
-caps.latest.revision: 
+caps.latest.revision: 34
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
@@ -43,7 +43,7 @@ ms.lasthandoff: 01/18/2018
 # <a name="view-and-work-with-the-output-from-the-database-engine-tuning-advisor"></a>Anzeigen und Verwenden der Ausgabe des Datenbankoptimierungsratgebers
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  Wenn der Datenbankoptimierungsratgeber Datenbanken optimiert, erstellt er Zusammenfassungen, Empfehlungen, Berichte und Optimierungsprotokolle. Sie können die Optimierungsprotokollausgabe dazu verwenden, Probleme bei Optimierungssitzungen des Datenbankoptimierungsratgebers zu beheben. Mithilfe der Zusammenfassungen, Empfehlungen und Berichte können Sie bestimmen, ob Sie Optimierungsempfehlungen implementieren möchten oder die Optimierung fortsetzen möchten, bis Sie die Abfrageleistungsverbesserungen erreicht haben, die Sie für die [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Installation benötigen. Informationen über die Verwendung des Datenbankoptimierungsratgebers zum Erstellen von Arbeitslasten und zum Optimieren einer Datenbank finden Sie unter [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md).  
+  Wenn der Datenbankoptimierungsratgeber Datenbanken optimiert, erstellt er Zusammenfassungen, Empfehlungen, Berichte und Optimierungsprotokolle. Sie können die Optimierungsprotokollausgabe dazu verwenden, Probleme bei Optimierungssitzungen des Datenbankoptimierungsratgebers zu beheben. Mithilfe der Zusammenfassungen, Empfehlungen und Berichte können Sie bestimmen, ob Sie Optimierungsempfehlungen implementieren möchten oder die Optimierung fortsetzen möchten, bis Sie die Abfrageleistungsverbesserungen erreicht haben, die Sie für die [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Installation benötigen. Informationen über die Verwendung des Datenbankoptimierungsratgebers zum Erstellen von Arbeitslasten und zum Optimieren einer Datenbank finden Sie unter [Starten und Verwenden des Datenbankoptimierungsratgebers](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md).  
   
 ##  <a name="View"></a> Anzeigen der Optimierungsausgabe  
  Die folgenden Verfahren beschreiben das Anzeigen von Optimierungsempfehlungen, -zusammenfassungen, -berichten und -protokollen mithilfe der grafischen Benutzeroberfläche (GUI, Graphical User Interface) des Datenbankoptimierungsratgebers. Weitere Informationen zu den Benutzeroberflächenoptionen finden Sie später in diesem Thema unter [Benutzeroberflächenbeschreibungen](#UI) .  
@@ -55,9 +55,9 @@ ms.lasthandoff: 01/18/2018
   
 #### <a name="to-view-tuning-recommendations-with-the-database-engine-tuning-advisor-gui"></a>So zeigen Sie Optimierungsempfehlungen mithilfe der GUI des Datenbankoptimierungsratgebers an  
   
-1.  Optimieren Sie eine Datenbank mithilfe der GUI des Datenbankoptimierungsratgebers oder des Befehlszeilen-Hilfsprogramms **dta** . Weitere Informationen finden Sie unter [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md). Wenn Sie eine vorhandene Optimierungssitzung verwenden möchten, lassen Sie diesen Schritt aus, und fahren Sie mit Schritt 2 fort.  
+1.  Optimieren Sie eine Datenbank mithilfe der GUI des Datenbankoptimierungsratgebers oder des Befehlszeilen-Hilfsprogramms **dta** . Weitere Informationen finden Sie unter [Starten und Verwenden des Datenbankoptimierungsratgebers](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md). Wenn Sie eine vorhandene Optimierungssitzung verwenden möchten, lassen Sie diesen Schritt aus, und fahren Sie mit Schritt 2 fort.  
   
-2.  Starten Sie die grafische Benutzeroberfläche des Datenbankoptimierungsratgebers. Weitere Informationen finden Sie unter [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md). Wenn Sie Optimierungsempfehlungen für eine vorhandene Optimierungssitzung anzeigen möchten, öffnen Sie die Sitzung, indem Sie im Fenster **Sitzungsmonitor**auf den Sitzungsnamen doppelklicken.  
+2.  Starten Sie die grafische Benutzeroberfläche des Datenbankoptimierungsratgebers. Weitere Informationen finden Sie unter [Starten und Verwenden des Datenbankoptimierungsratgebers](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md). Wenn Sie Optimierungsempfehlungen für eine vorhandene Optimierungssitzung anzeigen möchten, öffnen Sie die Sitzung, indem Sie im Fenster **Sitzungsmonitor**auf den Sitzungsnamen doppelklicken.  
   
      Wenn die neue Optimierungssitzung fertig gestellt ist oder das Programm die vorhandene Sitzung geladen hat, wird die Seite **Empfehlungen** angezeigt.  
   
@@ -71,9 +71,9 @@ ms.lasthandoff: 01/18/2018
   
 #### <a name="to-view-the-tuning-summary-and-reports-with-the-database-engine-tuning-advisor-gui"></a>So zeigen Sie die Optimierungszusammenfassungen und -berichte mithilfe der GUI des Datenbankoptimierungsratgebers an  
   
-1.  Optimieren Sie eine Datenbank mithilfe der GUI des Datenbankoptimierungsratgebers oder des Befehlszeilen-Hilfsprogramms **dta** . Weitere Informationen finden Sie unter [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md). Wenn Sie eine vorhandene Optimierungssitzung verwenden möchten, lassen Sie diesen Schritt aus, und fahren Sie mit Schritt 2 fort.  
+1.  Optimieren Sie eine Datenbank mithilfe der GUI des Datenbankoptimierungsratgebers oder des Befehlszeilen-Hilfsprogramms **dta** . Weitere Informationen finden Sie unter [Starten und Verwenden des Datenbankoptimierungsratgebers](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md). Wenn Sie eine vorhandene Optimierungssitzung verwenden möchten, lassen Sie diesen Schritt aus, und fahren Sie mit Schritt 2 fort.  
   
-2.  Starten Sie die grafische Benutzeroberfläche des Datenbankoptimierungsratgebers. Weitere Informationen finden Sie unter [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md). Wenn Sie Optimierungszusammenfassungen und -berichte für eine vorhandene Optimierungssitzung anzeigen möchten, öffnen Sie die Sitzung, indem Sie in **Sitzungsmonitor**auf den Sitzungsnamen doppelklicken.  
+2.  Starten Sie die grafische Benutzeroberfläche des Datenbankoptimierungsratgebers. Weitere Informationen finden Sie unter [Starten und Verwenden des Datenbankoptimierungsratgebers](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md). Wenn Sie Optimierungszusammenfassungen und -berichte für eine vorhandene Optimierungssitzung anzeigen möchten, öffnen Sie die Sitzung, indem Sie in **Sitzungsmonitor**auf den Sitzungsnamen doppelklicken.  
   
 3.  Wenn die neue Optimierungssitzung fertig gestellt ist oder das Programm die vorhandene Sitzung geladen hat, klicken Sie auf die Registerkarte **Berichte** .  
   
@@ -85,7 +85,7 @@ ms.lasthandoff: 01/18/2018
   
 1.  Optimieren Sie eine Datenbank mithilfe der GUI des Datenbankoptimierungsratgebers oder des Befehlszeilen-Hilfsprogramms **dta** . Sie müssen **Optimierungsprotokoll speichern** auf der Registerkarte **Allgemein** aktivieren, wenn Sie die Arbeitsauslastung optimieren möchten. Wenn Sie eine vorhandene Optimierungssitzung verwenden möchten, lassen Sie diesen Schritt aus, und fahren Sie mit Schritt 2 fort.  
   
-2.  Starten Sie die grafische Benutzeroberfläche des Datenbankoptimierungsratgebers. Weitere Informationen finden Sie unter [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md). Wenn Sie Optimierungszusammenfassungen und -berichte für eine vorhandene Optimierungssitzung anzeigen möchten, öffnen Sie die Sitzung, indem Sie im Fenster **Sitzungsmonitor** auf den Sitzungsnamen doppelklicken.  
+2.  Starten Sie die grafische Benutzeroberfläche des Datenbankoptimierungsratgebers. Weitere Informationen finden Sie unter [Starten und Verwenden des Datenbankoptimierungsratgebers](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md). Wenn Sie Optimierungszusammenfassungen und -berichte für eine vorhandene Optimierungssitzung anzeigen möchten, öffnen Sie die Sitzung, indem Sie im Fenster **Sitzungsmonitor** auf den Sitzungsnamen doppelklicken.  
   
 3.  Wenn die neue Optimierungssitzung fertig gestellt ist oder das Programm die vorhandene Sitzung geladen hat, klicken Sie auf die Registerkarte **Status** . Im Bereich **Optimierungsprotokoll** wird der Inhalt des Protokolls angezeigt. Das Protokoll enthält Informationen über Arbeitsauslastungsereignisse, die der Datenbankoptimierungsratgeber nicht analysieren konnte.  
   
@@ -96,9 +96,9 @@ ms.lasthandoff: 01/18/2018
   
 #### <a name="to-manually-implement-tuning-recommendations-with-the-database-engine-tuning-advisor-gui"></a>So implementieren Sie die Optimierungsempfehlungen manuell über die grafische Benutzeroberfläche des Datenbankoptimierungsratgebers  
   
-1.  Optimieren Sie eine Datenbank über die grafische Benutzeroberfläche des Datenbankoptimierungsratgebers oder das Eingabeaufforderungs-Hilfsprogramm **dta** . Weitere Informationen finden Sie unter [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md). Wenn Sie eine vorhandene Optimierungssitzung verwenden möchten, lassen Sie diesen Schritt aus, und fahren Sie mit Schritt 2 fort.  
+1.  Optimieren Sie eine Datenbank über die grafische Benutzeroberfläche des Datenbankoptimierungsratgebers oder das Eingabeaufforderungs-Hilfsprogramm **dta** . Weitere Informationen finden Sie unter [Starten und Verwenden des Datenbankoptimierungsratgebers](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md). Wenn Sie eine vorhandene Optimierungssitzung verwenden möchten, lassen Sie diesen Schritt aus, und fahren Sie mit Schritt 2 fort.  
   
-2.  Starten Sie die grafische Benutzeroberfläche des Datenbankoptimierungsratgebers. Weitere Informationen finden Sie unter [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md). Wenn Sie Optimierungsempfehlungen für eine vorhandene Optimierungssitzung implementieren möchten, öffnen Sie diese, indem Sie in **Sitzungsmonitor**auf den Namen der Sitzung doppelklicken.  
+2.  Starten Sie die grafische Benutzeroberfläche des Datenbankoptimierungsratgebers. Weitere Informationen finden Sie unter [Starten und Verwenden des Datenbankoptimierungsratgebers](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md). Wenn Sie Optimierungsempfehlungen für eine vorhandene Optimierungssitzung implementieren möchten, öffnen Sie diese, indem Sie in **Sitzungsmonitor**auf den Namen der Sitzung doppelklicken.  
   
 3.  Klicken Sie nach dem Beenden der neuen Optimierungssitzung oder dem Laden der vorhandenen Sitzung durch das Tool im Menü **Aktionen** auf **Empfehlungen anwenden** .  
   
@@ -122,7 +122,7 @@ ms.lasthandoff: 01/18/2018
     dta -E -D DatabaseName -if WorkloadFile -s SessionName -a  
     ```  
   
-     **-E** gibt hier an, dass für Ihre Optimierungssitzung eine vertrauenswürdige Verbindung (anstelle einer Anmelde-ID und eines Kennworts) verwendet wird, **-D** gibt den Namen der zu optimierenden Datenbank oder eine durch Trennzeichen getrennte Liste mehrerer Datenbanken, welche die Arbeitsauslastung verwendet, an, **-if** gibt den Namen und den Pfad einer Arbeitsauslastungsdatei an, **-s** gibt den Namen Ihrer Optimierungssitzung an, und **-a** gibt an, dass die Optimierungsempfehlungen nach der Analyse der Arbeitsauslastung ohne vorherige Eingabeaufforderung automatisch durch das Eingabeaufforderungs-Hilfsprogramm **dta** angewendet werden sollen. Weitere Informationen zum Verwenden des Eingabeaufforderungs-Hilfsprogramms **dta** bei der Optimierung von Datenbanken finden Sie unter [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md).  
+     **-E** gibt hier an, dass für Ihre Optimierungssitzung eine vertrauenswürdige Verbindung (anstelle einer Anmelde-ID und eines Kennworts) verwendet wird, **-D** gibt den Namen der zu optimierenden Datenbank oder eine durch Trennzeichen getrennte Liste mehrerer Datenbanken, welche die Arbeitsauslastung verwendet, an, **-if** gibt den Namen und den Pfad einer Arbeitsauslastungsdatei an, **-s** gibt den Namen Ihrer Optimierungssitzung an, und **-a** gibt an, dass die Optimierungsempfehlungen nach der Analyse der Arbeitsauslastung ohne vorherige Eingabeaufforderung automatisch durch das Eingabeaufforderungs-Hilfsprogramm **dta** angewendet werden sollen. Weitere Informationen zum Verwenden des Eingabeaufforderungs-Hilfsprogramms **dta** bei der Optimierung von Datenbanken finden Sie unter [Starten und Verwenden des Datenbankoptimierungsratgebers](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md).  
   
 3.  Drücken Sie die EINGABETASTE.  
   
@@ -138,7 +138,7 @@ ms.lasthandoff: 01/18/2018
   
 ##### <a name="to-evaluate-tuning-recommendations-with-the-database-engine-tuning-advisor-gui"></a>So werten Sie Optimierungsempfehlungen mit der GUI des Datenbankoptimierungsratgebers aus  
   
-1.  Verwenden Sie zum Optimieren einer Datenbank die GUI des Datenbankoptimierungsratgebers. Weitere Informationen finden Sie unter [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md). Wenn Sie eine vorhandene Optimierungssitzung auswerten möchten, doppelklicken Sie auf diese in **Sitzungsmonitor**.  
+1.  Verwenden Sie zum Optimieren einer Datenbank die GUI des Datenbankoptimierungsratgebers. Weitere Informationen finden Sie unter [Starten und Verwenden des Datenbankoptimierungsratgebers](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md). Wenn Sie eine vorhandene Optimierungssitzung auswerten möchten, doppelklicken Sie auf diese in **Sitzungsmonitor**.  
   
 2.  Heben Sie auf der Registerkarte **Empfehlungen** die Auswahl für die physischen Entwurfsstrukturen auf, die Sie nicht verwenden möchten.  
   
@@ -153,7 +153,7 @@ ms.lasthandoff: 01/18/2018
   
 ##### <a name="to-export-tuning-session-results-from-the-database-engine-tuning-advisor-gui-for-what-if-analysis-with-the-dta-command-line-utility"></a>So exportieren Sie die Optimierungssitzungsergebnisse aus der GUI des Datenbankoptimierungsratgebers für die Was-wäre-wenn-Analyse mithilfe des Befehlszeilen-Hilfsprogramms dta  
   
-1.  Verwenden Sie zum Optimieren einer Datenbank die GUI des Datenbankoptimierungsratgebers. Weitere Informationen finden Sie unter [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md). Wenn Sie eine vorhandene Optimierungssitzung auswerten möchten, doppelklicken Sie auf diese in **Sitzungsmonitor**.  
+1.  Verwenden Sie zum Optimieren einer Datenbank die GUI des Datenbankoptimierungsratgebers. Weitere Informationen finden Sie unter [Starten und Verwenden des Datenbankoptimierungsratgebers](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md). Wenn Sie eine vorhandene Optimierungssitzung auswerten möchten, doppelklicken Sie auf diese in **Sitzungsmonitor**.  
   
 2.  Klicken Sie im Menü **Datei** auf **Sitzungsergebnisse exportieren** , und speichern Sie sie als XML-Datei.  
   
@@ -161,16 +161,16 @@ ms.lasthandoff: 01/18/2018
   
 4.  Geben Sie in der neuen XML-Eingabedatei, die Sie in Schritt 3 erstellt haben, Optimierungsoptionen für das **TuningOptions**-Element an. Bearbeiten Sie den **Configuration**-Elementabschnitt (fügen Sie die physischen Entwurfsstrukturen hinzu oder löschen Sie sie, je nachdem, wie Sie Ihre Analyse ausführen möchten). Speichern Sie die Datei, und überprüfen Sie sie mithilfe des XML-Schemas des Datenbankoptimierungsratgebers. Informationen zum Bearbeiten dieser XML-Datei finden Sie unter [XML-Eingabedateireferenz &#40;Datenbankoptimierungsratgeber&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md).  
   
-5.  Verwenden Sie die in Schritt 4 erstellte XML-Datei als Eingabewert für das Befehlszeilen-Hilfsprogramm **dta** . Informationen zur Verwendung von XML-Eingabedateien mit diesem Tool finden Sie im Abschnitt "Optimieren einer Datenbank mithilfe des dta-Hilfsprogramms" in [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md).  
+5.  Verwenden Sie die in Schritt 4 erstellte XML-Datei als Eingabewert für das Befehlszeilen-Hilfsprogramm **dta** . Informationen zur Verwendung von XML-Eingabedateien mit diesem Tool finden Sie im Abschnitt "Optimieren einer Datenbank mithilfe des dta-Hilfsprogramms" in [Starten und Verwenden des Datenbankoptimierungsratgebers](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md).  
   
 ### <a name="using-the-user-specified-configuration-feature-with-the-dta-command-line-utility"></a>Verwenden des vom Benutzer angegebene Konfigurationsfunktion mit dem Befehlszeilen-Hilfsprogramm dta  
  Wenn Sie ein erfahrener XML-Entwickler sind, können Sie eine XML-Eingabedatei des Datenbankoptimierungsratgebers erstellen, in der Sie eine Arbeitsauslastung und eine hypothetische Konfiguration der physischen Datenbankentwurfsstrukturen, wie z. B. Indizes, indizierte Sichten oder Partitionierungen, angeben können. Dann können Sie mithilfe des Befehlszeilen-Dienstprogramms **dta** die Auswirkungen dieser hypothetischen Konfiguration auf die Abfrageleistung Ihrer Datenbank analysieren. In den folgenden schrittweisen Anleitungen wird dieser Prozess Schritt für Schritt beschrieben:  
   
 ##### <a name="to-use-the-user-specified-configuration-feature-with-the-dta-command-line-utility"></a>So verwenden Sie die vom Benutzer angegebene Konfigurationsfunktion mithilfe des Befehlszeilen-Hilfsprogramms dta  
   
-1.  Erstellen Sie eine zu optimierende Arbeitsauslastung. Weitere Informationen zum Ausführen dieser Aufgabe finden Sie unter [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md).  
+1.  Erstellen Sie eine zu optimierende Arbeitsauslastung. Weitere Informationen zum Ausführen dieser Aufgabe finden Sie unter [Starten und Verwenden des Datenbankoptimierungsratgebers](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md).  
   
-2.  Kopieren Sie das [Beispiel für eine XML-Eingabedatei mit benutzerdefinierter Konfiguration &#40;DTA&#41;](../../tools/dta/xml-input-file-sample-with-user-specified-configuration-dta.md), und fügen Sie es in Ihren XML-Editor oder einen Text-Editor ein. Verwenden Sie dieses Beispiel zum Erstellen einer XML-Eingabedatei für Ihre Optimierungssitzung. Informationen zum Ausführen dieses Tasks finden Sie im Abschnitt "Erstellen von XML-Eingabedateien" in [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md).  
+2.  Kopieren Sie das [Beispiel für eine XML-Eingabedatei mit benutzerdefinierter Konfiguration &#40;DTA&#41;](../../tools/dta/xml-input-file-sample-with-user-specified-configuration-dta.md), und fügen Sie es in Ihren XML-Editor oder einen Text-Editor ein. Verwenden Sie dieses Beispiel zum Erstellen einer XML-Eingabedatei für Ihre Optimierungssitzung. Informationen zum Ausführen dieses Tasks finden Sie im Abschnitt "Erstellen von XML-Eingabedateien" in [Starten und Verwenden des Datenbankoptimierungsratgebers](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md).  
   
 3.  Bearbeiten Sie die in der Beispiel-XML-Eingabedatei enthaltenen **TuningOptions** - und **Configuration** -Elemente. Geben Sie im **TuningOptions** -Element an, welche physischen Entwurfsstrukturen der Datenbankoptimierungsratgeber während der Optimierungssitzung berücksichtigen soll. Geben Sie im **Configuration** -Element die physischen Entwurfsstrukturen an, die der hypothetischen Konfiguration der physischen Datenbankentwurfsstrukturen entsprechen, die der Datenbankoptimierungsratgeber analysieren soll. Weitere Informationen darüber, welche Attribute und untergeordneten Elemente Sie mit den übergeordneten Elementen **TuningOptions** und **Configuration** verwenden können, finden Sie unter [XML-Eingabedateireferenz &#40;Datenbankoptimierungsratgeber&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md).  
   
@@ -184,7 +184,7 @@ ms.lasthandoff: 01/18/2018
   
      Das XML-Schema des Datenbankoptimierungsratgebers ist auch online unter [http://schemas.microsoft.com/sqlserver/2004/07/dta](http://schemas.microsoft.com/sqlserver/2004/07/dta)verfügbar.  
   
-6.  Nach dem Erstellen einer Arbeitsauslastung und einer XML-Eingabedatei können Sie die Eingabedatei an das Befehlszeilen-Hilfsprogramm **dta** zur Analyse übergeben. Stellen Sie sicher, dass Sie einen XML-Ausgabedateinamen für das **-ox** -Argument des Hilfsprogramms angeben. Auf diese Weise wird eine XML-Ausgabedatei mit einer empfohlenen Konfiguration erstellt, die im **Configuration** -Element angegeben ist. Wenn Sie den Datenbankoptimierungsratgeber zum Überprüfen einer weiteren, auf der Ausgabe basierenden hypothetischen Konfiguration ausführen möchten, kopieren Sie den **Configuration** -Elementinhalt aus der Ausgabedatei und fügen Sie ihn in eine neue oder in Ihre ursprüngliche XML-Eingabedatei ein. Informationen zum Verwenden einer XML-Eingabedatei mit dem Hilfsprogramm **dta** finden Sie im Abschnitt "Optimieren einer Datenbank mithilfe des dta-Hilfsprogramms" in [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md).  
+6.  Nach dem Erstellen einer Arbeitsauslastung und einer XML-Eingabedatei können Sie die Eingabedatei an das Befehlszeilen-Hilfsprogramm **dta** zur Analyse übergeben. Stellen Sie sicher, dass Sie einen XML-Ausgabedateinamen für das **-ox** -Argument des Hilfsprogramms angeben. Auf diese Weise wird eine XML-Ausgabedatei mit einer empfohlenen Konfiguration erstellt, die im **Configuration** -Element angegeben ist. Wenn Sie den Datenbankoptimierungsratgeber zum Überprüfen einer weiteren, auf der Ausgabe basierenden hypothetischen Konfiguration ausführen möchten, kopieren Sie den **Configuration** -Elementinhalt aus der Ausgabedatei und fügen Sie ihn in eine neue oder in Ihre ursprüngliche XML-Eingabedatei ein. Informationen zum Verwenden einer XML-Eingabedatei mit dem Hilfsprogramm **dta** finden Sie im Abschnitt "Optimieren einer Datenbank mithilfe des dta-Hilfsprogramms" in [Starten und Verwenden des Datenbankoptimierungsratgebers](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md).  
   
      Nach Abschluss der Optimierung können Sie die Optimierungsberichte mithilfe der GUI des Datenbankoptimierungsratgebers anzeigen. Sie können auch die XML-Ausgabedatei öffnen, um über die **TuningSummary** - und **Configuration** -Elemente die Empfehlungen des Datenbankoptimierungsratgebers anzuzeigen. Informationen zum Anzeigen der Ergebnisse der Optimierungssitzung finden Sie weiter oben unter [Anzeigen der Optimierungsausgabe](#View) in diesem Thema. Beachten Sie auch, dass die XML-Ausgabedatei Analyseberichte des Datenbankoptimierungsratgebers enthalten kann.  
   
@@ -193,14 +193,14 @@ ms.lasthandoff: 01/18/2018
 ##  <a name="ReviewEvaluateClone"></a> Überprüfen, Auswerten und Klonen von Optimierungssitzungen  
  Der Datenbankoptimierungsratgeber erstellt jeweils eine neue Optimierungssitzung, wenn Sie die Auswirkungen einer Arbeitsauslastung auf die Datenbank(en) analysieren. Sie können den **Sitzungsmonitor** der grafischen Benutzeroberfläche des Datenbankoptimierungsratgebers dazu verwenden, alle Optimierungssitzungen anzuzeigen und neu zu laden, die für eine bestimmte Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ausgeführt wurden. Dadurch, dass Ihnen alle vorhandenen Optimierungssitzungen zur Verfügung stehen, werden Ihnen die folgenden Operationen erleichtert: Klonen von Sitzungen auf der Grundlage vorhandener Sitzungen, Bearbeiten bestehender Optimierungsempfehlungen und Auswerten der bearbeiteten Sitzungen mit dem Datenbankoptimierungsratgeber sowie Ausführen von Optimierungen in regelmäßigen Abständen zur Überwachung des physischen Entwurfs der Datenbanken. So können Sie Datenbanken beispielsweise einmal im Monat optimieren.  
   
- Bevor Sie die Optimierungssitzungen für eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]überprüfen können, müssen Sie durch das Optimieren von Arbeitsauslastungen mit dem Datenbankoptimierungsratgeber Optimierungssitzungen erstellen. Weitere Informationen finden Sie unter [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md).  
+ Bevor Sie die Optimierungssitzungen für eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]überprüfen können, müssen Sie durch das Optimieren von Arbeitsauslastungen mit dem Datenbankoptimierungsratgeber Optimierungssitzungen erstellen. Weitere Informationen finden Sie unter [Starten und Verwenden des Datenbankoptimierungsratgebers](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md).  
   
 ### <a name="review-existing-tuning-sessions"></a>Überprüfen vorhandener Optimierungssitzungen  
  Führen Sie die folgenden Schritte aus, um die vorhandenen Optimierungssitzungen für eine vorhandene Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]zu durchsuchen.  
   
 ##### <a name="to-review-existing-tuning-sessions"></a>So überprüfen Sie vorhandene Optimierungssitzungen  
   
-1.  Starten Sie die grafische Benutzeroberfläche des Datenbankoptimierungsratgebers. Weitere Informationen finden Sie unter [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md).  
+1.  Starten Sie die grafische Benutzeroberfläche des Datenbankoptimierungsratgebers. Weitere Informationen finden Sie unter [Starten und Verwenden des Datenbankoptimierungsratgebers](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md).  
   
 2.  Alle vorhandenen Optimierungssitzungen werden in der oberen Hälfte des Fensters **Sitzungsmonitor** angezeigt. Die Anzahl der angezeigten Sitzungen ist davon abhängig, wie oft Sie Sitzungen für diese [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz optimiert haben. Verwenden Sie die Bildlaufleisten, um alle Optimierungssitzungen anzuzeigen.  
   
@@ -396,7 +396,7 @@ ms.lasthandoff: 01/18/2018
  Zeigt die Details des ausgewählten Berichts an. Die Spalten des Rasters sind in jedem Bericht unterschiedlich.  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)   
+ [Starten und Verwenden des Datenbankoptimierungsratgebers](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)   
  [dta (Hilfsprogramm)](../../tools/dta/dta-utility.md)  
   
   
