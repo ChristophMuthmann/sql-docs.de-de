@@ -15,15 +15,14 @@ ms.custom: ''
 ms.component: security
 ms.workload: On Demand
 ms.tgt_pltfrm: ''
-ms.devlang: na
 ms.topic: article
 ms.date: 04/03/2018
 ms.author: aliceku
-ms.openlocfilehash: e39e6f8957c1fc2c4f50603af213055cde84d0b6
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: e8e5456b1c6e8ca160e677907a97976c8f2b0374
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/08/2018
 ---
 # <a name="transparent-data-encryption-with-bring-your-own-key-preview-support-for-azure-sql-database-and-data-warehouse"></a>Transparent Data Encryption mit Bring Your Own Key-Unterstützung (Vorschau) für Azure SQL-Datenbank und Data Warehouse
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
@@ -60,7 +59,7 @@ Wenn TDE dafür konfiguriert wird, einen TDE Protector von Key Vault zu verwende
 ### <a name="general-guidelines"></a>Allgemeine Richtlinien
 - Vergewissern Sie sich, dass Azure Key Vault und Azure SQL-Datenbank in demselben Mandanten gespeichert werden.  Mandantenübergreifende Interaktionen von Key Vaults und Servern **werden nicht unterstützt**.
 - Legen Sie fest, welche Abonnements für die erforderlichen Ressourcen verwendet werden sollen. Wenn Sie dem Server später anderen Abonnements zuweisen, ist ein erneutes Setup von TDE mit BYOK erforderlich.
-- Beim Konfigurieren von TDE mit BYOK müssen Sie die Last berücksichtigen, die durch wiederholte wrap-/unwrap-Vorgänge im Schlüsseltresor entsteht. Ein Beispiel: Da alle Datenbanken, die einem logischen Server zugeordnet sind, den gleichen TDE Protector verwenden, löst ein Failover dieses Servers so viele Schlüsselvorgänge im Tresor aus, wie Datenbanken auf dem Server vorhanden sind. Basierend auf unseren Erfahrungen und den dokumentierten [Grenzwerten des Key Vault-Diensts](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-service-limits) empfehlen wir, einer Azure Key Vault-Instanz in einem einzelnen Abonnement höchstens 500 Standard- oder 200-Premium-Datenbanken zuzuordnen, um beim Zugriff auf den TDE Protector im Tresor eine konsistent hohe Verfügbarkeit sicherzustellen. 
+- Beim Konfigurieren von TDE mit BYOK müssen Sie die Last berücksichtigen, die durch wiederholte wrap-/unwrap-Vorgänge im Schlüsseltresor entsteht. Ein Beispiel: Da alle Datenbanken, die einem logischen Server zugeordnet sind, den gleichen TDE Protector verwenden, löst ein Failover dieses Servers so viele Schlüsselvorgänge im Tresor aus, wie Datenbanken auf dem Server vorhanden sind. Basierend auf unseren Erfahrungen und den dokumentierten [Grenzwerten des Key Vault-Diensts](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-service-limits) empfehlen wir, einer Azure Key Vault-Instanz in einem einzelnen Abonnement höchstens 500 Datenbanken mit dem Tarif „Standard“ oder der SKU „Universell“ oder 200 Datenbanken mit dem Tarif „Premium“ oder der SKU „Unternehmenskritisch“ zuzuordnen, um beim Zugriff auf den TDE Protector im Tresor eine konsistente Hochverfügbarkeit sicherzustellen. 
 - Empfehlung: Speichern Sie lokal eine Kopie des TDE Protectors.  Dafür benötigen Sie ein HSM-Gerät, um einen TDE Protector lokal zu erstellen, und ein Schlüsselhinterlegungssystem zum Speichern der lokalen Kopie des TDE Protectors.
 
 
