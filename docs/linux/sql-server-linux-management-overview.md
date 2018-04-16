@@ -1,6 +1,6 @@
 ---
 title: Verwalten von SQLServer on Linux | Microsoft Docs
-description: "Dieser Artikel enthält Links zu allgemeinen Verwaltungsaufgaben und Tools für SQL Server auf Linux ausgeführt wird."
+description: Dieser Artikel enthält Links zu allgemeinen Verwaltungsaufgaben und Tools für SQL Server auf Linux ausgeführt wird.
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -8,8 +8,8 @@ ms.date: 03/17/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.technology: database-engine
 ms.assetid: 6bd8eb0b-593d-467e-87ea-ab1c4dbcd1ea
@@ -36,7 +36,7 @@ Nahezu jede Option in einem Clienttool ausführen kann auch mit Transact-SQL-Anw
 
 ## <a name="sql-server-operations-studio-preview"></a>SQL Server Operationen Studio (Vorschau)
 
-Die neue Microsoft SQL Operations Studio (Vorschau) ist eine plattformübergreifende-Tool zum Verwalten von SQL Server. Weitere Informationen finden Sie unter [Microsoft SQL Operations Studio (Vorschau)](../sql-operations-studio/what-is.md).
+Die neue Microsoft SQL Operations Studio (preview) ist eine plattformübergreifende-Tool zum Verwalten von SQL Server. Weitere Informationen finden Sie unter [Microsoft SQL Operations Studio (preview)](../sql-operations-studio/what-is.md).
 
 ## <a name="sql-server-management-studio-on-windows"></a>SQL Server Management Studio unter Windows
 
