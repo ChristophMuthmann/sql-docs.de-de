@@ -1,30 +1,31 @@
 ---
 title: ODBC-Glossar | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - ODBC [ODBC], glossary
 - glossary [ODBC]
 ms.assetid: e8227000-1944-42e5-a881-1f549e1ff9d1
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4bb77308b74a57fa192acf9aba3fa7d88090d93a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 243085e18fc44c0c2f34c29c314b3978163101be
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="odbc-glossary"></a>ODBC-Glossar
 ## <a name="a"></a>Ein  
@@ -46,7 +47,7 @@ ms.lasthandoff: 11/20/2017
  **Anwendung**  
  Ein ausführbares Programm, das Funktionen der ODBC-API aufruft.  
   
- **anwendungsparameterdeskriptor (APD)**  
+ **Anwendungsparameterdeskriptor (APD)**  
  Ein Deskriptor, der beschreibt, die dynamischen Parameter in einer SQL-Anweisung vor der Konvertierung angegeben, die von der Anwendung verwendet.  
   
  **Zeile Anwendungsdiensts (ARD)**  
@@ -60,7 +61,7 @@ ms.lasthandoff: 11/20/2017
   
 ## <a name="b"></a>B  
  **verhaltensänderung**  
- Eine Änderung in bestimmte Funktionen von ODBC 3.*.x* Verhalten mit ODBC 2.. *X* Verhalten, oder umgekehrt. Durch Ändern des Attributs Umgebung SQL_ATTR_ODBC_VERSION verursacht.  
+ Eine Änderung in bestimmte Funktionen von ODBC 3.*.x* Verhalten mit ODBC 2. *X* Verhalten, oder umgekehrt. Durch Ändern des Attributs Umgebung SQL_ATTR_ODBC_VERSION verursacht.  
   
  **Binary large Object (BLOB)**  
  Alle Binärdaten über eine bestimmte Anzahl von Bytes, beispielsweise 255. In der Regel wesentlich länger. Diese Daten in der Regel an gesendet und abgerufen, die aus der Datenquelle in Teilen. Auch bekannt als *long-Daten*.  
@@ -77,14 +78,14 @@ ms.lasthandoff: 11/20/2017
  **Puffer**  
  Ein Codesegment Anwendungsspeicher verwendet, um Daten zwischen der Anwendung und den Treiber übergeben. Sind Puffer häufig einander paarweise zugeordnet: ein *Datenpuffer* und ein *Länge Datenpuffer*.  
   
- **Byte**  
+ **byte**  
  Acht Bits oder ein Oktett. *Siehe auch* Oktett.  
   
 ## <a name="c"></a>C  
  **C-Datentyp**  
  Der Datentyp einer Variablen in einem C-Programm in diesem Fall die Anwendung.  
   
- **Katalog**  
+ **catalog**  
  Der Satz von Systemtabellen in einer Datenbank, die die Form der Datenbank zu beschreiben. Auch bekannt als ein *Schema* oder *Datenwörterbuch*.  
   
  **Katalogfunktion**  
@@ -96,10 +97,10 @@ ms.lasthandoff: 11/20/2017
  **Client/server**  
  Eine Datenbank-Zugriffsmethode, in denen eine oder mehrere Clients Daten über einen Server zugreifen. Die Clients implementieren normalerweise die Benutzeroberfläche während der Serversteuerelemente Access-Datenbank.  
   
- **Spalte**  
+ **column**  
  Der Container für ein einzelnes Element der Informationen in einer Zeile. Auch bekannt als *Feld*.  
   
- **Commit**  
+ **commit**  
  Um die Änderungen in einer Transaktion permanent zu machen.  
   
  **Parallelität**  
@@ -117,7 +118,7 @@ ms.lasthandoff: 11/20/2017
  **Verbindungshandles**  
  Ein Handle für eine Datenstruktur, die Informationen über eine Verbindung enthält.  
   
- **aktuelle Zeile**  
+ **Aktuelle Zeile**  
  Die Zeile, die derzeit vom Cursor verweist. Positionierte Operationen wirken sich auf die aktuelle Zeile.  
   
  **Cursor**  
@@ -203,7 +204,7 @@ ms.lasthandoff: 11/20/2017
  **ESCAPE-Klausel**  
  Eine Klausel in einer SQL-Anweisung.  
   
- **Führen Sie**  
+ **execute**  
  Um eine SQL­Anweisung ausführen.  
   
 ## <a name="f"></a>V  
@@ -213,7 +214,7 @@ ms.lasthandoff: 11/20/2017
  **Abrufen von Daten**  
  Um eine oder mehrere Zeilen aus einem Resultset abgerufen werden.  
   
- **Feld**  
+ **field**  
  *Finden Sie unter* Spalte.  
   
  **dateibasierte-Treiber**  
@@ -265,7 +266,7 @@ ms.lasthandoff: 11/20/2017
  Ein Vorgang in einer relationalen Datenbank, die die Zeilen in zwei oder mehr Tabellen verknüpft, von übereinstimmenden Werten in angegebenen Spalten.  
   
 ## <a name="k"></a>K  
- **Schlüssel**  
+ **key**  
  Eine Spalte oder Spalten, deren Werte eine Zeile zu identifizieren. *Siehe auch* Fremdschlüssel *und* Primärschlüssel.  
   
  **Keyset**  
@@ -275,7 +276,7 @@ ms.lasthandoff: 11/20/2017
  Einen bildlauffähigen Cursor, der aktualisierte und gelöschte Zeilen erkennt, mit der ein Keyset.  
   
 ## <a name="l"></a>L  
- **Zeichenfolgenliterale**  
+ **literal**  
  Eine zeichendarstellung der einen Datenwert in einer SQL­Anweisung.  
   
  **Sperren**  
@@ -317,7 +318,7 @@ ms.lasthandoff: 11/20/2017
  Gruppe öffnen  
  Ein Unternehmen, das Standards veröffentlicht. Insbesondere, veröffentlicht er SQL Zugriff Gruppe (SAG)-Standards.  
   
- **vollständige Parallelität**  
+ **Vollständige Parallelität**  
  Eine Strategie zum Parallelität zu erhöhen, in denen Zeilen nicht gesperrt werden. Bevor sie aktualisiert oder gelöscht werden, überprüft ein Cursor stattdessen, um festzustellen, ob sie geändert wurden, seit sie zuletzt gelesen wurden. Wenn dies der Fall ist, schlägt die Update- oder Delete. *Siehe auch* eingeschränkte Parallelität.  
   
  **Äußerer join**  
@@ -327,7 +328,7 @@ ms.lasthandoff: 11/20/2017
  Der Besitzer einer Tabelle.  
   
 ## <a name="p"></a>P  
- **Parameter**  
+ **parameter**  
  Eine Variable in einer SQL­Anweisung mit einer parametermarkierung oder Fragezeichen (?) markiert. Parameter werden an Anwendungsvariablen und ihre Werte abgerufen, wenn die Anweisung ausgeführt wird, gebunden.  
   
  **Parameterdeskriptor**  
@@ -357,7 +358,7 @@ ms.lasthandoff: 11/20/2017
  **Primärschlüssel**  
  Eine Spalte oder Spalten, die eine Zeile in einer Tabelle eindeutig identifiziert.  
   
- **Prozedur**  
+ **procedure**  
  Eine Gruppe von eine oder mehrere vorkompilierte SQL-Anweisungen, die als ein benanntes Objekt in einer Datenbank gespeichert sind.  
   
  **Prozedurspalte**  
@@ -367,7 +368,7 @@ ms.lasthandoff: 11/20/2017
  **Qualifizierer**  
  Eine Datenbank, die eine oder mehrere Tabellen enthält.  
   
- **Abfrage**  
+ **query**  
  Eine SQL-Anweisung. In einigen Fällen verwendet, um bedeuten, dass eine **wählen** Anweisung.  
   
  **Bezeichner in Anführungszeichen**  
@@ -414,7 +415,7 @@ ms.lasthandoff: 11/20/2017
  **Skalarfunktion**  
  Eine Funktion, die einen einzelnen Wert aus einem einzelnen Wert generiert. Angenommen, eine Funktion, die die Groß-/Kleinschreibung von Zeichendaten geändert.  
   
- **Schema**  
+ **schema**  
  *Finden Sie unter* Katalog.  
   
  **bildlauffähige cursor**  
@@ -435,7 +436,7 @@ ms.lasthandoff: 11/20/2017
  **ein-Ebenen-Treiber**  
  *Finden Sie unter* dateibasierte Treiber.  
   
- **location**  
+ **SQL**  
  SQL (isql). Eine Sprache, die von relationalen Datenbanken verwendet werden, um Abfragen, aktualisieren und Verwalten von Daten.  
   
  **SQL-Zugriffsgruppe (SAG)**  
@@ -453,7 +454,7 @@ ms.lasthandoff: 11/20/2017
  **SQL-Anweisung**  
  Eine vollständige Ausdruck in SQL, die mit einem Schlüsselwort beginnt und vollständig beschreibt eine Aktion, die ausgeführt werden. Wählen Sie z. B. * FROM Orders. SQL-Anweisungen sollten nicht mit Anweisungen verwechselt werden.  
   
- **Status**  
+ **state**  
  Eine klar definierte Bedingung eines Elements. Beispielsweise hat eine Verbindung sieben Zustände, einschließlich nicht zugeordnete, zugeordnete verbundenen und korrekturbedürftige Daten. Bestimmte Vorgänge möglich nur, wenn ein Element in einem bestimmten Zustand befindet. Beispielsweise kann eine Verbindung freigegeben werden, nur bei im reservierten Zustand und nicht der Fall, z. B. wenn es verbunden ist.  
   
  **Zustandsübergang**  
@@ -471,7 +472,7 @@ ms.lasthandoff: 11/20/2017
  **statische SQL**  
  Ein Typ von embedded SQL-Anweisungen sind in dem SQL hartcodierte und kompiliert, wenn der Rest des Programms kompiliert wird. *Siehe auch* dynamischem SQL.  
   
- **gespeicherte Prozedur**  
+ **Gespeicherte Prozedur**  
  *Finden Sie unter* Prozedur.  
   
 ## <a name="t"></a>T  

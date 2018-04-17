@@ -1,34 +1,34 @@
 ---
 title: Entwerfen von Assemblys | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: clr
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - designing assemblies [SQL Server]
 - assemblies [CLR integration], designing
 ms.assetid: 9c07f706-6508-41aa-a4d7-56ce354f9061
-caps.latest.revision: 
+caps.latest.revision: 29
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d5e491f922a034a55cb65e432e0c005f6cc18fc0
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 769c0aa7f6d9593ab3e2360a0e26876f23f16b41
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="assemblies---designing"></a>Assemblys - entwerfen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-In diesem Thema werden die folgenden Faktoren beschrieben, die Sie beim Entwerfen von Assemblys berücksichtigen sollten:  
+  In diesem Thema werden die folgenden Faktoren beschrieben, die Sie beim Entwerfen von Assemblys berücksichtigen sollten:  
   
 -   Verpacken von Assemblys  
   
@@ -41,7 +41,7 @@ In diesem Thema werden die folgenden Faktoren beschrieben, die Sie beim Entwerfe
   
  Sie sollten Folgendes beachten, wenn Sie Code in einer Assembly verpacken:  
   
--   CLR-benutzerdefinierte Typen und Indizes, die von CLR-benutzerdefinierten Funktionen abhängen, können bewirken, dass sich persistente Daten in der Datenbank befinden, die von der Assembly abhängen. Das Bearbeiten des Codes einer Assembly ist in der Regel komplexer, wenn persistente Daten vorhanden sind, die von der Assembly in der Datenbank abhängen. Auf diesem Grund ist es im Allgemeinen besser, Code, von dem die Abhängigkeiten persistenter Daten abhängen (z. B. benutzerdefinierte Typen und Indizes, die benutzerdefinierte Funktionen verwenden), von Code zu trennen, der keine solchen Abhängigkeiten persistenter Daten aufweist. Weitere Informationen finden Sie unter [implementieren Assemblys](../../relational-databases/clr-integration/assemblies-implementing.md) und [ALTER ASSEMBLY &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-assembly-transact-sql.md).  
+-   CLR-benutzerdefinierte Typen und Indizes, die von CLR-benutzerdefinierten Funktionen abhängen, können bewirken, dass sich persistente Daten in der Datenbank befinden, die von der Assembly abhängen. Das Bearbeiten des Codes einer Assembly ist in der Regel komplexer, wenn persistente Daten vorhanden sind, die von der Assembly in der Datenbank abhängen. Auf diesem Grund ist es im Allgemeinen besser, Code, von dem die Abhängigkeiten persistenter Daten abhängen (z. B. benutzerdefinierte Typen und Indizes, die benutzerdefinierte Funktionen verwenden), von Code zu trennen, der keine solchen Abhängigkeiten persistenter Daten aufweist. Weitere Informationen finden Sie unter [implementieren Assemblys](../../relational-databases/clr-integration/assemblies-implementing.md) und [ALTER ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-assembly-transact-sql.md).  
   
 -   Wenn verwalteter Code höhere Berechtigungen verlangt, ist es besser, diesen Code in einer anderen Assembly als den Code zu speichern, für den die höheren Berechtigungen nicht erforderlich sind.  
   
@@ -64,7 +64,7 @@ In diesem Thema werden die folgenden Faktoren beschrieben, die Sie beim Entwerfe
  Wenn Sie UNSAFE angeben, kann der Code in der Assembly außerdem Vorgänge ausführen, die von der CLR-Überprüfung als typunsicher betrachtet werden. Diese Vorgänge können potenziell auf unkontrollierte Weise auf Speicherpuffer im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Prozessraum zugreifen. UNSAFE-Assemblys können außerdem potenziell das Sicherheitssystem von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder der CLR unterlaufen. UNSAFE-Berechtigungen sollten nur hochgradig vertrauenswürdigen Assemblys durch erfahrene Entwickler oder Administratoren erteilt werden. Nur Mitglieder der **Sysadmin** -Serverrolle kann UNSAFE-Assemblys erstellen.  
   
 ## <a name="restrictions-on-assemblies"></a>Einschränkungen für Assemblys  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setzt bestimmte Einschränkungen für verwalteten Code in Assemblys, um sicherzustellen, dass sie auf eine zuverlässige und skalierbare Weise ausgeführt werden können. Dies bedeutet, dass bestimmte Vorgänge, die die Robustheit des Servers beeinträchtigen könnten, in SAFE- und EXTERNAL_ACCESS-Assemblys nicht zulässig sind.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] belegt verwalteten Code in Assemblys mit einigen Einschränkungen, damit sichergestellt wird, dass diese auf zuverlässige und skalierbare Weise ausgeführt werden können. Dies bedeutet, dass bestimmte Vorgänge, die die Robustheit des Servers beeinträchtigen könnten, in SAFE- und EXTERNAL_ACCESS-Assemblys nicht zulässig sind.  
   
 ### <a name="disallowed-custom-attributes"></a>Unzulässige benutzerdefinierte Attribute  
  Assemblys dürfen nicht mit den folgenden benutzerdefinierten Attributen mit Anmerkungen versehen werden:  
@@ -124,7 +124,7 @@ System.Configuration
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Assemblys &#40; Datenbankmodul &#41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   
+ [Assemblys & #40; Datenbankmodul & #41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   
  [Sicherheit der CLR-Integration](../../relational-databases/clr-integration/security/clr-integration-security.md)  
   
   

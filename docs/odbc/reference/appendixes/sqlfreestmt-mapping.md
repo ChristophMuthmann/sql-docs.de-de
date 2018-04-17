@@ -1,30 +1,31 @@
 ---
 title: SQLFreeStmt Zuordnung | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQLFreeStmt function [ODBC], mapping
 - mapping deprecated functions [ODBC], SQLFreeStmt
 ms.assetid: 267d95f2-4f0c-47ab-9411-5afe105215a2
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c4764fbae07fe1e41c576b14a444dc8b28cf730e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 72f3924b668750030329e118e7201cbc0ea835d8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlfreestmt-mapping"></a>SQLFreeStmt-Zuordnung
 Wenn eine Anwendung aufruft **SQLFreeStmt** mit einem *Option* Argument SQL_DROP über einen ODBC 3.*.x* Treiber, den Aufruf von  

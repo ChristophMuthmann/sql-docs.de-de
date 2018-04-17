@@ -1,24 +1,17 @@
 ---
-title: Installieren von SQL Server-Machine Learning-Features auf virtuellen Azure-Computer | Microsoft Docs
-ms.custom: ''
-ms.date: 03/21/2018
-ms.reviewer: ''
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
+title: Installieren Sie SQL Server-Machine Learning-Features auf virtuellen Azure-Computer | Microsoft Docs
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.workload: Inactive
-ms.openlocfilehash: bb1cd5e695e59c898a0e5dbcad279e1a8796bb63
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: d2b7aefa675bc4cfe8ea6fab463053395d5f45d0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="install-sql-server-machine-learning-features-on-an-azure-virtual-machine"></a>Installieren von SQL Server-Machine learning-Features auf virtuellen Azure-Computer
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

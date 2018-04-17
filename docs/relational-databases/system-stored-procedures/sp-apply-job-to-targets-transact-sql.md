@@ -1,16 +1,16 @@
 ---
 title: Sp_apply_job_to_targets (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_apply_job_to_targets
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_apply_job_to_targets
 ms.assetid: 4a3e9173-7e3c-4100-a9ac-2f5d2c60a8b0
-caps.latest.revision: 
+caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 341a14b2ae6aa3d551ab90d4ff2f931d617aa3f2
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 0a9b3cca205dc3af412ae9c0dfd426b18c05a4fc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spapplyjobtotargets-transact-sql"></a>sp_apply_job_to_targets (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,10 +59,10 @@ sp_apply_job_to_targets { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 >  Entweder *Job_id* oder *Job_name* muss angegeben werden, aber beide können nicht angegeben werden.  
   
  [ **@target_server_groups =**]  **'***target_server_groups***'**  
- Eine durch Trennzeichen getrennte Liste von Zielservergruppen, für die der angegebene Auftrag ausgeführt werden soll. *target_server_groups* is **nvarchar(2048)**, with a default of NULL.  
+ Eine durch Trennzeichen getrennte Liste von Zielservergruppen, für die der angegebene Auftrag ausgeführt werden soll. *Target_server_groups* ist **nvarchar(2048)**, hat den Standardwert NULL.  
   
  [ **@target_servers=** ] **'***target_servers***'**  
- Eine durch Trennzeichen getrennte Liste von Zielservern, für die der angegebene Auftrag ausgeführt werden soll. *target_servers*is **nvarchar(2048)**, with a default of NULL.  
+ Eine durch Trennzeichen getrennte Liste von Zielservern, für die der angegebene Auftrag ausgeführt werden soll. *target_server*ist **nvarchar(2048)**, hat den Standardwert NULL.  
   
  [ **@operation=** ]  **'***operation***'**  
  Gibt an, ob der angegebene Auftrag für die genannten Zielserver oder Zielservergruppen ausgeführt oder davon entfernt werden soll. *Vorgang*ist **vom Datentyp varchar(7)**, hat den Standardwert übernehmen. Gültige Vorgänge sind **übernehmen** und **entfernen**.  
@@ -71,7 +71,7 @@ sp_apply_job_to_targets { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="remarks"></a>Hinweise  
- **Sp_apply_job_to_targets** bietet eine einfache Möglichkeit anzuwenden (oder entfernen) ein Auftrags von mehrere Zielserver aus, und ist eine Alternative zum Aufruf **Sp_add_jobserver** (oder **Sp_delete_jobserver** ) einmal für jeden erforderlichen Zielserver.  
+ **Sp_apply_job_to_targets** bietet eine einfache Möglichkeit anzuwenden (oder entfernen) ein Auftrags von mehrere Zielserver aus, und ist eine Alternative zum Aufruf **Sp_add_jobserver** (oder **Sp_delete_jobserver**) einmal für jeden erforderlichen Zielserver.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Nur Mitglieder der **Sysadmin** -Serverrolle kann diese Prozedur ausführen.  

@@ -1,30 +1,31 @@
 ---
 title: Transaktionsisolation | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - transaction isolation [ODBC]
 - transactions [ODBC], isolation
 ms.assetid: 351bfe5c-3b26-4010-9b9c-22e796135f3b
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f3bf295bdbaf259a9ca305fc1202d58bfe68b05b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 4ce01239b29c22815bf17ca596d72731e451a9e1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="transaction-isolation"></a>Transaktionsisolation
 *Transaktionsisolation* bezieht sich auf den Grad der Interaktion zwischen mehreren gleichzeitigen Transaktionen. Um festzustellen, warum dies wichtig ist, müssen Sie zuerst das Konzept der Serialisierbarkeit betrachten.  

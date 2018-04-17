@@ -1,51 +1,35 @@
 ---
 title: Verbindungszeichenfolgen-Eigenschaften (Analysis Services) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 29a00a41-5b0d-44b2-8a86-1b16fe507768
-caps.latest.revision: 
+caps.latest.revision: 18
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 3fa9fd8e7b7c4722e9acf41f0f7229ee0a1f3ef7
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 9c2daf9234b44f7108339d9a743118373b9b42c1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="connection-string-properties-analysis-services"></a>Verbindungszeichenfolgen-Eigenschaften (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-In diesem Thema sind Eigenschaften für Verbindungszeichenfolgen dokumentiert, die Sie u. U. in einem der Designer- oder Verwaltungstools festlegen bzw. die in Verbindungszeichenfolgen von Clientanwendungen verwendet werden, die eine Verbindung mit Analysis Services-Daten herstellen und diese abfragen. In diesem Dokument wird daher nur auf einen Teilbereich der verfügbaren Eigenschaften eingegangen. Die vollständige Liste umfasst zahlreiche Server- und Datenbankeigenschaften, mit denen eine Verbindung unabhängig davon, wie die Instanz oder Datenbank auf dem Server konfiguriert ist, an spezifische Anwendungen angepasst werden kann.  
+  In diesem Thema sind Eigenschaften für Verbindungszeichenfolgen dokumentiert, die Sie u. U. in einem der Designer- oder Verwaltungstools festlegen bzw. die in Verbindungszeichenfolgen von Clientanwendungen verwendet werden, die eine Verbindung mit Analysis Services-Daten herstellen und diese abfragen. In diesem Dokument wird daher nur auf einen Teilbereich der verfügbaren Eigenschaften eingegangen. Die vollständige Liste umfasst zahlreiche Server- und Datenbankeigenschaften, mit denen eine Verbindung unabhängig davon, wie die Instanz oder Datenbank auf dem Server konfiguriert ist, an spezifische Anwendungen angepasst werden kann.  
   
  Entwickler, die benutzerdefinierte Verbindungszeichenfolgen im Anwendungscode erstellen, finden in der API-Dokumentation für ADOMD.NET-Clients eine ausführlichere Liste: <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>  
   
- Die in diesem Thema beschriebenen Eigenschaften werden von den Analysis Services-Clientbibliotheken, ADOMD.NET, AMO und dem OLE DB-Anbieter für Analysis Services verwendet. Die meisten Eigenschaften für Verbindungszeichenfolgen können mit allen drei Clientbibliotheken verwendet werden. Auf Ausnahmen wird in der Beschreibung hingewiesen.  
-  
- Dieses Thema enthält folgende Abschnitte:  
-  
- [Häufig verwendete Verbindungsparameter](#bkmk_common)  
-  
- [Authentifizierung und Sicherheit](#bkmk_auth)  
-  
- [Spezielle Parameter](#bkmk_special)  
-  
- [Für künftige Verwendung vorbehalten](#bkmk_reserved)  
-  
- [Exemplarische Verbindungszeichenfolgen](#bkmk_examples)  
-  
- [In Analysis Services verwendete Formate für Verbindungszeichenfolgen](#bkmk_supportedstrings)  
-  
- [Verschlüsseln von Verbindungszeichenfolgen](#bkmk_encrypt)  
+ Die in diesem Thema beschriebenen Eigenschaften werden von den Analysis Services-Clientbibliotheken, ADOMD.NET, AMO und dem OLE DB-Anbieter für Analysis Services verwendet. Die meisten Eigenschaften für Verbindungszeichenfolgen können mit allen drei Clientbibliotheken verwendet werden. Auf Ausnahmen wird in der Beschreibung hingewiesen.
   
 > [!NOTE]  
 >  Falls Sie versehentlich zweimal dieselbe Eigenschaft festlegen, wird die letzte Eigenschaft in der Verbindungszeichenfolge verwendet.  
@@ -195,7 +179,7 @@ In diesem Thema sind Eigenschaften für Verbindungszeichenfolgen dokumentiert, d
   
  Um die Verbindungszeichenfolgeninformationen zu verschlüsseln und zu schützen, verwendet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] die Datenschutz-API.  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] verschlüsselt Verbindungszeichenfolgeninformationen für jede [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank mithilfe eines separaten Verschlüsselungsschlüssels. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] erstellt diesen Schlüssel, wenn Sie eine Datenbank erstellen, und verschlüsselt die Informationen zur Verbindungszeichenfolge auf Grundlage des [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Startkontos. Beim Start von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] wird der verschlüsselte Schlüssel für jede Datenbank gelesen, entschlüsselt und gespeichert. Anschließend verwendet[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] den entsprechenden entschlüsselten Schlüssel zum Entschlüsseln der Verbindungszeichenfolgen-Informationen für die Datenquelle, wenn [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] eine Verbindung mit einer Datenquelle herstellen muss.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] verwendet einen separaten Verschlüsselungsschlüssel zum Verschlüsseln der Verbindungszeichenfolgen-Informationen für jede [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] erstellt diesen Schlüssel, wenn Sie eine Datenbank erstellen, und verschlüsselt die Informationen zur Verbindungszeichenfolge auf Grundlage des [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Startkontos. Beim Start von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] wird der verschlüsselte Schlüssel für jede Datenbank gelesen, entschlüsselt und gespeichert. Anschließend verwendet[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] den entsprechenden entschlüsselten Schlüssel zum Entschlüsseln der Verbindungszeichenfolgen-Informationen für die Datenquelle, wenn [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] eine Verbindung mit einer Datenquelle herstellen muss.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Konfigurieren von HTTP-Zugriff auf Analysis Services unter Internetinformationsdienste &#40;IIS&#41; 8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md)   

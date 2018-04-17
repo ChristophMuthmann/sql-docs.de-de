@@ -1,30 +1,31 @@
 ---
 title: SQLSetConnectOption Zuordnung | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQLSetConnectOption function [ODBC], mapping
 - mapping deprecated functions [ODBC], SQLSetConnectOption
 ms.assetid: a1b325cf-0c42-41c1-b141-b5a4fee7e708
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e7c62c78aa97efea5ba2d3c9de19f9ae3082384a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f00b06d0a4a64f1c699267020e20f2ca1d74b220
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlsetconnectoption-mapping"></a>SQLSetConnectOption-Zuordnung
 Wenn eine ODBC-2. *x* Anwendung ruft **SQLSetConnectOption** über einen ODBC 3.*.x* Treiber, den Aufruf von  
@@ -64,4 +65,4 @@ SQLSetConnectOption(hdbc, fOption, vParam)
 ## <a name="setting-statement-options-on-the-connection-level"></a>Festlegen von Optionen auf der Verbindungsebene-Anweisung  
  In ODBC 2. *x*, könnte eine Anwendung aufrufen **SQLSetConnectOption** eine Option-Anweisung festgelegt. Wenn Sie fertig sind, richtet der Treiber die Option-Anweisung als Standard für alle Anweisungen, die für diese Verbindung später zugeordnet. Es ist treiberdefinierten, ob der Treiber mit die Option-Anweisung für alle vorhandenen Anweisungen, die der angegebenen Verbindung zugeordneten setzt.  
   
- Diese Funktion ist veraltet, in ODBC 3.*.x*. ODBC 3.*.x* Treiber müssen nur unterstützt das Festlegen von ODBC 2.. *X* Anweisungsattribute auf Verbindungsebene, die mit ODBC 2. arbeiten sollen. *X* Anwendungen, die dazu. ODBC 3.*.x* Anwendungen Anweisungsattribute auf Verbindungsebene darf nicht festgelegt werden. ODBC 3.*.x* Anweisungsattribute können nicht auf Verbindungsebene, mit Ausnahme der SQL_ATTR_METADATA_ID und SQL_ATTR_ASYNC_ENABLE-Attribute, die Verbindungsattribute und Anweisungsattribute sind, und kann nicht festgelegt werden Legen Sie auf der Verbindungsebene oder Anweisungsebene.
+ Diese Funktion ist veraltet, in ODBC 3.*.x*. ODBC 3.*.x* Treiber müssen nur unterstützt das Festlegen von ODBC 2. *X* Anweisungsattribute auf Verbindungsebene, die mit ODBC 2. arbeiten sollen. *X* Anwendungen, die dazu. ODBC 3.*.x* Anwendungen Anweisungsattribute auf Verbindungsebene darf nicht festgelegt werden. ODBC 3.*.x* Anweisungsattribute können nicht auf Verbindungsebene, mit Ausnahme der SQL_ATTR_METADATA_ID und SQL_ATTR_ASYNC_ENABLE-Attribute, die Verbindungsattribute und Anweisungsattribute sind, und kann nicht festgelegt werden Legen Sie auf der Verbindungsebene oder Anweisungsebene.

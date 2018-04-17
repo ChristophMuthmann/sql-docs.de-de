@@ -1,15 +1,16 @@
 ---
 title: Intervalldatentypen | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - second intervals [ODBC]
@@ -27,16 +28,16 @@ helpviewer_keywords:
 - C data types [ODBC], interval
 - interval fields [ODBC]
 ms.assetid: fba93f65-c1db-44f4-91ba-532f87241cf7
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 394bc2f0efdc061bdaaca1c3fbdacd13e9cbc944
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ce8aff0605f1fc8baa772e5e22409baf1240c556
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="interval-data-types"></a>Interval-Datentypen
 Ein Intervall wird als Differenz zwischen zwei Datumsangaben und Uhrzeiten definiert. Intervalle werden in zwei unterschiedliche Arten ausgedrückt werden. Ist eine *Jahr-Monat* Intervall, in der Intervalle in Jahren und einer ganzzahligen Anzahl von Monaten formuliert. Das andere ist eine *Tag* Intervall, in der Intervalle in Tagen, Minuten und Sekunden formuliert. Diese beiden Arten von Intervallen zielteilmengen verschieden und können nicht kombiniert werden, da Monate unterschiedliche Anzahl von Tagen haben können.  
@@ -47,7 +48,7 @@ Ein Intervall wird als Differenz zwischen zwei Datumsangaben und Uhrzeiten defin
   
  Es gibt 13 Intervall SQL-Datentypen und 13 Intervall C-Datentypen. Jede der Intervalldatentypen C verwendet die gleiche Struktur SQL_INTERVAL_STRUCT, die Intervalldaten enthalten. (Weitere Informationen finden Sie im nächsten Abschnitt [C-Intervall-Struktur](../../../odbc/reference/appendixes/c-interval-structure.md).) Weitere Informationen zu den SQL-Datentypen finden Sie unter [SQL-Datentypen](../../../odbc/reference/appendixes/sql-data-types.md); Weitere Informationen zu den C-Datentypen finden Sie unter [C-Datentypen](../../../odbc/reference/appendixes/c-data-types.md).  
   
-|Typ-ID|Class|Description|  
+|Typ-ID|Klasse|Description|  
 |---------------------|-----------|-----------------|  
 |MONTH|Jahr-Monat|Anzahl der Monate zwischen zwei Datumsangaben.|  
 |YEAR|Jahr-Monat|Anzahl der Jahre zwischen zwei Datumsangaben.|  

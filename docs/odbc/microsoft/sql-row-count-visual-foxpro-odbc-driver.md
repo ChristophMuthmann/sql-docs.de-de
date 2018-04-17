@@ -2,7 +2,7 @@
 title: SQL-Zeilenanzahl (Visual FoxPro-ODBC-Treiber) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: 9d851f8d-94ca-47ae-a4ad-53863be2d404
 caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a99ed6335d59275db4eb9c831e79715b6948aedc
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: fbcca83a8729f4cfa048a46db319f87e24176474
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-row-count-visual-foxpro-odbc-driver"></a>SQL-Zeilenanzahl (Visual FoxPro-ODBC-Treiber)
 > [!NOTE]  

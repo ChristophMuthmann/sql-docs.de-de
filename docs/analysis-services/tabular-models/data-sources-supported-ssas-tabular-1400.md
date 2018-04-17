@@ -8,11 +8,12 @@ ms.assetid: ''
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.openlocfilehash: d153a2ca638c2ab70e147d22d5755e70ab5aba06
-ms.sourcegitcommit: 7246ef88fdec262fa0d34bf0e232f089e03a6911
+monikerRange: '>= sql-analysis-services-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: c32b715ac73fd69e63bad8487950ff1e4df003c9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="data-sources-supported-in-sql-server-analysis-services-tabular-1400-models"></a>Datenquellen unterstützt in SQL Server Analysis Services-Tabellenmodelle 1400
 
@@ -34,7 +35,7 @@ Azure Analysis Services, finden Sie unter [in Azure Analysis Services unterstüt
 |Azure BLOB-Speicher     |   ja       |    nein      |
 |Azure-Tabellenspeicher    |   ja       |    nein      |
 |Azure-Cosmos-DB      |  ja        |  nein        |
-|Azure Data Lake Store     |   ja       |    nein      |
+|Azure Data Lake-Speicher     |   ja       |    nein      |
 |Azure HDInsight HDFS     |     ja     |   nein       |
 |Azure HDInsight Spark (Beta)     |   ja       |   nein       |
 ||||
@@ -49,8 +50,8 @@ Arbeitsspeicherinterne und DirectQuery-Modellen Herstellen einer Verbindung mit 
 |Datenquelle | In-Memory-Anbieter | DirectQuery-Anbieter |
 |  --- | --- | --- |
 | SQL Server |SQL Server Native Client 11.0, Microsoft OLE DB-Anbieter für SQLServer, .NET Framework-Datenanbieter für SQLServer | .NET Framework-Datenanbieter für SQL Server |
-| SQL Server Data Warehouse |SQL Server Native Client 11.0, Microsoft OLE DB-Anbieter für SQLServer, .NET Framework-Datenanbieter für SQLServer | .NET Framework-Datenanbieter für SQL Server |
-| Oracle |Microsoft OLE DB Provider for Oracle, Oracle Data Provider for .NET |Oracle-Datenanbieter für .NET | |
+| SQL Server Datawarehouse |SQL Server Native Client 11.0, Microsoft OLE DB-Anbieter für SQLServer, .NET Framework-Datenanbieter für SQLServer | .NET Framework-Datenanbieter für SQL Server |
+| Oracle |Microsoft OLE DB-Anbieter von Oracle, Oracle-Datenanbieter für .NET |Oracle-Datenanbieter für .NET | |
 | Teradata |OLE DB-Anbieter für Teradata von Teradata-Datenanbieter für .NET |Teradata-Datenanbieter für .NET | |
 | | | |
 
@@ -63,7 +64,7 @@ Arbeitsspeicherinterne und DirectQuery-Modellen Herstellen einer Verbindung mit 
 |---------|---------|---------|
 |Access-Datenbank     | 
 |SQL Server Analysis Services     | 
-|IBM Informix (beta) | 
+|IBM Informix (Beta) | 
 |JSON-Dokument     | 
 |Zeilen aus der Binärdatei     | 
 |MySQL-Datenbank     | 

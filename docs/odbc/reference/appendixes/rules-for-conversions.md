@@ -1,15 +1,16 @@
 ---
-title: "Regeln für Konvertierungen | Microsoft Docs"
-ms.custom: 
+title: Regeln für Konvertierungen | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - numeric data type [ODBC], literals
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - numeric literals [ODBC]
 - literals [ODBC], numeric
 ms.assetid: 89f846a3-001d-496a-9843-ac9c38dc1762
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 441f65fabad5894d1277a9c42ecd6c4a6d9e5fff
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 0e1feb5f75561d95d65cde069f135b9d24c53186
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="rules-for-conversions"></a>Regeln für Konvertierungen
 Die Regeln in diesem Abschnitt gelten für Konvertierungen, die im Zusammenhang mit numerischen Literalen. Für die Zwecke dieser Regeln können sind die folgenden Begriffe definiert:  
@@ -81,9 +82,9 @@ Die Regeln in diesem Abschnitt gelten für Konvertierungen, die im Zusammenhang 
   
     -   Wenn NS kleiner als 0 ist, können Sie das Ergebnis des Y aus:  
   
-         "-" &#124; &#124; YP  
+         "-" &AMP;#124; &AMP;#124; YP  
   
-         wobei "&#124; &#124;" ist der Operator für zeichenfolgenverkettung.  
+         wobei "&#124;&#124;" der Operator für zeichenfolgenverkettung ist.  
   
          Andernfalls können Sie Y YP gleich.  
   

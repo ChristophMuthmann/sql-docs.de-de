@@ -2,7 +2,7 @@
 title: SQLDriverConnect-Funktion | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: e299be1d-5c74-4ede-b6a3-430eb189134f
 caps.latest.revision: 50
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4600a76e303930e941c737313f1db4850f8d5e43
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ab13d8ad4f2bf16cd7b7c0dc8d352363bb89a5b7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqldriverconnect-function"></a>SQLDriveConnect-Funktion
 **Konformität**  
@@ -108,8 +108,8 @@ SQLRETURN SQLDriverConnect(
 |--------------|-----------|-----------------|  
 |01000|Allgemeine Warnung|Treiberspezifische Meldung dient zu Informationszwecken. (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
 |01004|Zeichenfolgedaten wurden rechts abgeschnitten|Der Puffer \* *OutConnectionString* war nicht groß genug, um die gesamte Verbindungszeichenfolge zurückzugeben, damit die Verbindungszeichenfolge abgeschnitten wurden. Die Länge der ungekürzte Verbindungszeichenfolge wird zurückgegeben, **StringLength2Ptr*. (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
-|01 S 00|Ungültiges Attribut für Verbindungszeichenfolge|Ein ungültiges Attribut-Schlüsselwort in der Verbindungszeichenfolge angegeben wurde (*InConnectionString*), aber der Treiber wurde trotzdem eine Verbindung mit der Datenquelle herstellen können. (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
-|01 S 02|Der Optionswert wurde geändert|Der Treiber nicht den angegebenen Wert verweist, zu der *ValuePtr* Argument in **SQLSetConnectAttr** und einen ähnlichen Wert ersetzt. (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
+|01S00|Ungültiges Attribut für Verbindungszeichenfolge|Ein ungültiges Attribut-Schlüsselwort in der Verbindungszeichenfolge angegeben wurde (*InConnectionString*), aber der Treiber wurde trotzdem eine Verbindung mit der Datenquelle herstellen können. (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
+|01S02|Der Optionswert wurde geändert|Der Treiber nicht den angegebenen Wert verweist, zu der *ValuePtr* Argument in **SQLSetConnectAttr** und einen ähnlichen Wert ersetzt. (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
 |01S08|Fehler beim Speichern der Datei-DSN|Die Zeichenfolge in  *\*InConnectionString* enthalten eine **FILEDSN** -Schlüsselwort, aber die DSN-Datei wurde nicht gespeichert. (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
 |01S09|Ungültiges Schlüsselwort|(DM) der Zeichenfolge in  *\*InConnectionString* enthalten eine **SAVEFILE** Schlüsselwort jedoch kein **Treiber** oder ein **FILEDSN** Schlüsselwort. (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
 |08001|Client kann keine Verbindung herstellen|Der Treiber konnte nicht zum Herstellen einer Verbindung mit der Datenquelle.|  
@@ -153,9 +153,9 @@ SQLRETURN SQLDriverConnect(
   
  *Verbindungszeichenfolgen* :: = *leeren Zeichenfolgen*[;] &#124; *Attribut*[;] &#124; *Attribut*; *Verbindungszeichenfolgen*  
   
- *leere Zeichenfolge* :: =*Attribut* :: = *Attribut-Schlüsselwort*=*Attribut / Wert-* &#124; Treiber [{}] =*Attribut / Wert-*[}]  
+ *leere Zeichenfolge* :: =*Attribut* :: = *Attribut-Schlüsselwort*=*Attribut / Wert-* &#124; Treiber [{}] = *Attribut / Wert-*[}]  
   
- *Attribut-Schlüsselwort* :: = DSN &#124; UID &#124; PWD &#124; *-Treiber-definierten-Attribut-Schlüsselwort*  
+ *Attribut-Schlüsselwort* :: DSN = &#124; UID &#124; PWD &#124; *-Treiber-definierten-Attribut-Schlüsselwort*  
   
  *Attribut / Wert-* :: = *-Zeichenfolge*  
   

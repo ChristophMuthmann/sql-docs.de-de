@@ -1,31 +1,32 @@
 ---
 title: Batches von SQL-Anweisungen | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - batches [ODBC]
 - SQL statements [ODBC], batches
 - batches [ODBC], about batches
 ms.assetid: 766488cc-450c-434c-9c88-467f6c57e17c
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d2ae8d60d6e41536bc67bd14f9252c372fdeaa5c
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e7f0119110e1bc57d106163d2e187bf599a0c596
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="batches-of-sql-statements"></a>Batches von SQL-Anweisungen
 Ein Batch von SQL-Anweisungen ist eine Gruppe von mindestens zwei SQL-Anweisungen oder eine einzelne SQL-Anweisung, die dieselbe Wirkung wie eine Gruppe von mindestens zwei SQL-Anweisungen aufweist. In allen Implementationen wird die gesamte Batch-Anweisung ausgeführt, bevor Ergebnisse zur Verfügung stehen. Dies ist häufig effizienter als das Senden getrennter Anweisungen sein, da der Netzwerkdatenverkehr dadurch meist reduziert und die Datenquelle kann die Ausführung eines Batches von SQL-Anweisungen manchmal optimieren. In anderen Implementierungen Aufrufen **SQLMoreResults** löst die Ausführung die nächste Anweisung im Batch. ODBC unterstützt die folgenden Arten von Batches:  

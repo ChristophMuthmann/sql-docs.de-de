@@ -1,36 +1,28 @@
 ---
 title: Binden von Machine Learning-Komponenten auf SQL Server auf Microsoft Machine Learning-Server | Microsoft Docs
-ms.custom: ''
-ms.date: 03/15/2018
-ms.reviewer: ''
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-applies_to:
-- SQL Server (starting with 2016 CTP3)
-ms.author: heidist
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
 author: HeidiSteen
+ms.author: heidist
 manager: cgronlun
-ms.workload: On Demand
-ms.openlocfilehash: c82a1788f7c2c5cf4bca43c4fb03ff5c9eba0e28
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: 3f0818d67bb866326786598f67bb2caac368dda6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="bind-machine-learning-components-on-sql-server-to-microsoft-machine-learning-server"></a>Binden von Machine Learning-Komponenten auf SQL Server auf Microsoft Machine Learning-Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-In diesem Artikel erläutert, wie der _Bindung_, die Sie verwenden können, zum Aktualisieren des Machine learning in SQL Server verwendete Komponenten. Der Prozess der Bindung sperrt die Server in einer Update-Rhythmus basierend auf Versionen von Machine Learning-Server, Version anstelle von SQL Server und Zeitplan aktualisieren.
+In diesem Artikel erläutert, wie der *Bindung* eine (In-Database) Instanz des SQL Server-Machine Learning-Services oder SQL Server R Services in Microsoft Machine Learning-Server zum Aktualisieren von R und Python-Paketen auf einem rasche-Version. 
 
-> [!IMPORTANT]
-> Sie müssen nicht durch diesen Prozess zu verwenden, wenn Upgrades als Teil von SQL Server-Updates abgerufen werden soll. Wenn Sie ein neues Servicepack oder Service Version installieren, werden die Machine Learning-Komponenten immer automatisch auf die neueste Version aktualisiert. Verwenden Sie nur die _Bindung_ verarbeiten, wenn Sie Komponenten mit einer schnellere Geschwindigkeit als von SQL Server Service Releases Authentifizierungsprozesses wird ein Upgrade ausführen möchten.
+Der Prozess der Bindung Änderungen des Dienst-Aktualisierungsmechanismus. Ohne Bindung die Version der R und Python-Pakete werden nur aktualisiert, wenn Sie ein Servicepack oder Kumulatives Update (CU) installieren. Bei der Bindung können neuere Versionen auf der Instanz, unabhängig von der Freigabezeitplan für den CU angewendet werden.
 
-Wenn zu einem beliebigen Zeitpunkt Sie gemäß dem Zeitplan Machine Learning-Server beenden aktualisieren möchten, Sie müssen _Bindung_ der Instanz, wie in beschrieben [in diesem Abschnitt](#bkmk_Unbind), und Deinstallieren von Machine Learning-Server.
+Bindung wirkt sich auf nur die Machine Learning oder R-Komponenten von der Instanz des Datenbankmoduls, nicht der Instanz des Datenbankmoduls selbst. Sie gilt nur für eine Instanz (In-Database). Eine Installation (eigenständig) ist nicht im Gültigkeitsbereich.
+
+Wenn zu einem beliebigen Zeitpunkt für die Wartung für Ihre Machine learning-Komponenten von SQL Server wiederhergestellt werden soll, Sie können _Bindung_ der Instanz, die in beschriebenen [in diesem Abschnitt](#bkmk_Unbind), und Deinstallieren von Machine Learning-Server.
 
 **Gilt für:** SQL Server 2016-R-Services, SqlServer 2017 Machine Learning-Dienste
 
@@ -59,8 +51,8 @@ Finden Sie in der folgenden Tabelle eine Liste der unterstützten Upgrades und A
 
 | SQL Server-Version| Unterstützte Upgrades| Hinweise|
 |-----|-----|------|
-| SQL Server 2016| Machine Learning Server 9.2.1| Erfordert mindestens Service Pack 1 plus CU3. R Services muss installiert und aktiviert werden.|
-| SQL Server 2017| Machine Learning Server 9.2.1| Machine Learning-Services (Datenbankintern) muss installiert und aktiviert werden. |
+| SQL Server 2016| Machine Learning-Server 9.2.1| Erfordert mindestens Service Pack 1 plus CU3. R Services muss installiert und aktiviert werden.|
+| SQL Server 2017| Machine Learning-Server 9.2.1| Machine Learning-Services (Datenbankintern) muss installiert und aktiviert werden. |
 
 ## <a name="bind-or-upgrade-an-instance"></a>Binden oder Aktualisieren einer Instanz
 

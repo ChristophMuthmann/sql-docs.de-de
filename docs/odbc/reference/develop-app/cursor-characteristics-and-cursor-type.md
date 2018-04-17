@@ -1,31 +1,32 @@
 ---
 title: Der Cursormerkmale und Cursortyp | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - scrollable cursors [ODBC]
 - cursors [ODBC], scrollable
 - cursors [ODBC], creating
 ms.assetid: 6f67edd2-ae71-4ca0-9b2d-abf4c20dc17b
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0314dfcc66e783a48a7474b0b0656a93b1bf3822
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f54cc2f954a67d7a9cb3a4dfa6f6a006b652611d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="cursor-characteristics-and-cursor-type"></a>Der Cursormerkmale und Cursortyp
 Eine Anwendung kann die Merkmale eines Cursors anstelle des Cursor-Datentyps (Vorwärtscursor, statische, keysetgesteuerte oder dynamischen) angeben. Zu diesem Zweck wählt die Anwendung den Cursor scrolloptionen (durch Festlegen der SQL_ATTR_CURSOR_SCROLLABLE-Anweisungsattribut) und die Sensitivität (durch Festlegen der SQL_ATTR_CURSOR_SENSITIVITY-Anweisungsattribut) vor dem Öffnen des Cursors für die Anweisung behandeln. Klicken Sie dann wählt der Treiber dem Cursortyp, der möglichst effizient die Merkmale enthält die Anwendung angefordert.  

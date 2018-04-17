@@ -1,15 +1,16 @@
 ---
-title: "Automatische Auffüllung der die IPD | Microsoft Docs"
-ms.custom: 
+title: Automatische Auffüllung der die IPD | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - automatically populating ipd [ODBC]
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - ipd [ODBC]
 - allocating and freeing descriptors [ODBC]
 ms.assetid: 1184a7d8-d557-4140-843b-6633ae6deacc
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: be483c04101007383a4672701ac2cdfefbade862
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f9ff41c33a308b6e1645f81a0f62e311939d971b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="automatic-population-of-the-ipd"></a>Automatische Auffüllung der die IPD
 Einige Treiber können mit der die Felder von der IPD festlegen, nachdem eine parametrisierte Abfrage vorbereitet wurde. Descriptor-Felder werden automatisch mit Informationen über den Parameter, einschließlich der Datentyp, Genauigkeit, Dezimalstellen und andere Eigenschaften aufgefüllt. Dies entspricht dem unterstützen **SQLDescribeParam**. Diese Informationen können besonders nützlich für eine Anwendung sein, wenn es keine andere Möglichkeit zum Ermitteln, z. B. wenn eine ad-hoc-Abfrage mit Parametern ausgeführt wird, die die Anwendung nicht kennt aufweist.  

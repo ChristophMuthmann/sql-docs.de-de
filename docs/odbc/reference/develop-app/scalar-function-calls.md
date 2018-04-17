@@ -2,7 +2,7 @@
 title: Aufrufe von Skalarfunktionen | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,18 +18,18 @@ ms.assetid: 10cb4dcf-4cd8-4a56-8725-d080bd3ffe47
 caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4e69cc7382c73aaedda31a902cc8ed8daff5cff8
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 45ba78e4a7533691c6346dad131b9c3e3fefee73
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="scalar-function-calls"></a>Aufrufe von Skalarfunktionen
 Skalarfunktionen geben einen Wert für jede Zeile zurück. Beispielsweise die Skalarfunktion absoluten Wert eine numerische Spalte als Argument akzeptiert und gibt den absoluten Wert der einzelnen Werte in der Spalte zurück. Ist die-Escapesequenz zum Aufrufen einer Skalarfunktion  
   
- **{fn***Skalarfunktion* **}  **  
+ **{fn***Skalarfunktion* **}**   
   
  wobei *Skalarfunktion* ist eine der Funktionen in [Anhang E: Skalarfunktionen](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md). Weitere Informationen über die Skalarfunktion Escapesequenz finden Sie unter [skalare Funktionsescapesequenz](../../../odbc/reference/appendixes/scalar-function-escape-sequence.md) in Anhang C: SQL-Grammatik.  
   
@@ -49,7 +49,7 @@ SELECT {fn SUBSTRING(Name, 1, CHARINDEX(',', Name) – 1)} FROM Customers
   
  Für eine optimale Interoperabilität sollten Anwendungen verwenden die **konvertieren** Skalarfunktion, um sicherzustellen, dass die Ausgabe eine skalare Funktion der erforderliche Typ ist. Die **konvertieren** Funktion konvertiert die Daten von einem SQL-Datentyp in den angegebenen SQL-Datentyp. Die Syntax der **konvertieren** Funktion ist  
   
- **KONVERTIEREN (** *Value_exp* **,** *Data_type***)**  
+ **KONVERTIEREN (** *Value_exp* **,** *Data_type ***)**  
   
  auf dem *Value_exp* ist ein Spaltenname ist das Ergebnis des anderen Skalarfunktion oder einen literalen Wert und *Data_type* ist ein Schlüsselwort, das entspricht der **#define** Namens wird durch eine SQL-Datentyp Bezeichner gemäß [Anhang D: Datentypen](../../../odbc/reference/appendixes/appendix-d-data-types.md). Beispielsweise die folgende SQL-Anweisung verwendet die **konvertieren** Funktion, um sicherzustellen, dass die Ausgabe der **CURDATE** Funktion ist ein Datum ist, statt einen Zeitstempel oder Zeichen-Daten:  
   

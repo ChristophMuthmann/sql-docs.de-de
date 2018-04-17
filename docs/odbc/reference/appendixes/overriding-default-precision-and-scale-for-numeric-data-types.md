@@ -1,15 +1,16 @@
 ---
-title: "Überschreiben der Standardwerte für die Genauigkeit und Dezimalstellenanzahl für numerische Datentypen | Microsoft Docs"
-ms.custom: 
+title: Überschreiben der Standardwerte für die Genauigkeit und Dezimalstellenanzahl für numerische Datentypen | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - numeric data type [ODBC], precision and scale
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - numeric data type [ODBC]
 - numeric literals [ODBC]
 ms.assetid: 84292334-0e33-4a1b-84de-8c018dd787f3
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e2be244dd3ad258ab3fa6b5679e5989d8a08778e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 56b6c9d61c811517ccc089f424622967c81cd123
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="overriding-default-precision-and-scale-for-numeric-data-types"></a>Überschreiben der Standardwerte für die Genauigkeit und Dezimalstellenanzahl für numerische Datentypen
 Wenn das SQL_DESC_TYPE-Feld in einer ARD auf SQL_C_NUMERIC, durch den Aufruf eines festgelegt ist **SQLBindCol** oder **SQLSetDescField**, Feld SQL_DESC_SCALE in die ARD auf 0 festgelegt ist und das Feld SQL_DESC_PRECISION festgelegt ist Um eine treiberdefinierten standardgenauigkeit. Dies gilt auch, wenn das SQL_DESC_TYPE-Feld in einer APD auf SQL_C_NUMERIC, festgelegt ist, durch den Aufruf eines **SQLBindParameter** oder **SQLSetDescField**. Dies gilt für Eingabe-, Eingabe/Ausgabe oder Output-Parameter.  

@@ -2,7 +2,7 @@
 title: Informationen zu Treibern und Datenquellen | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: 2bb83ef1-4bbe-4be3-8c32-c4d1140aae1d
 caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6422e855b126245fd7118ce2518538aa0305484a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: d0f6f20a4903aaabb7a6c8062cb714b847134cae
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="about-drivers-and-data-sources"></a>Informationen zu Treibern und Datenquellen
 *Treiber* sind die Komponenten, die ODBC-Anforderungen zu verarbeiten und Daten an die Anwendung zurückgegeben. Ggf. ändern, Treiber die Anforderung einer Anwendung in ein Formular, das von der Datenquelle im Klaren sind. Sie müssen den Treiber-Setup-Programm verwenden, hinzufügen oder Löschen einen Treiber von Ihrem Computer.  

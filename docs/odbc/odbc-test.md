@@ -1,15 +1,16 @@
 ---
 title: ODBC-Test | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - ODBC test [ODBC]
@@ -20,16 +21,16 @@ helpviewer_keywords:
 - odbcte32.exe [ODBC]
 - testing ODBC drivers [ODBC]
 ms.assetid: 7f13894c-5697-436c-be3d-fe16e1a02325
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3db72d4424c197589f5b6f4ba07c54bf68070e9d
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 525f0f4dc401455272fcda3630551f35b48bf3ec
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="odbc-test"></a>ODBC-Test
 Testen Sie Microsoft® ODBC ist eine ODBC-fähige Anwendung, die Sie verwenden können, um ODBC-Treiber und der ODBC-Treiber-Manager zu testen. ODBC 3.51 enthält ANSI- und Unicode-kompatible Versionen der ODBC-Test. Die entsprechenden Dateien lauten wie folgt:  

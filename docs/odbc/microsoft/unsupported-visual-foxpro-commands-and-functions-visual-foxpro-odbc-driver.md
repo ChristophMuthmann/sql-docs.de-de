@@ -1,15 +1,16 @@
 ---
-title: "Nicht unterstützte Visual FoxPro-Befehle und Funktionen | Microsoft Docs"
-ms.custom: 
+title: Nicht unterstützte Visual FoxPro-Befehle und Funktionen | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - FoxPro ODBC driver [ODBC], commands and functions
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - Visual FoxPro commands and functions
 - FoxPro ODBC driver
 ms.assetid: afdb6b7e-738d-42ca-8053-67ae50873ca6
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 85d11ebb5fd4245a7c6b5cf7c277e45d8df90011
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 37231b78815901678b1956d89e9bc3720ae1590d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="unsupported-visual-foxpro-commands-and-functions-visual-foxpro-odbc-driver"></a>Nicht unterstützte Visual FoxPro-Befehle und Funktionen (Visual FoxPro-ODBC-Treiber)
 Die folgende Tabelle enthält FoxPro Befehle und Funktionen, die von Microsoft® Visual FoxPro unterstützt werden, werden von der Visual FoxPro-ODBC-Treiber nicht unterstützt.  
@@ -38,8 +39,8 @@ Die folgende Tabelle enthält FoxPro Befehle und Funktionen, die von Microsoft®
   
 ||||  
 |-|-|-|  
-|#DEFINE... #UNDEF|#IF... Präprozessor #ENDIF-Direktive|#IFDEF &#124; #IFNDEF|  
-|#INCLUDE Präprozessor-Direktive|:: Bereichsauflösungsoperator|! Befehl (Siehe &#124; ausführen! Befehl "")|  
+|#DEFINE... #UNDEF|#IF... Präprozessor #ENDIF-Direktive|#IFDEF &AMP;#124; #IFNDEF|  
+|#INCLUDE Präprozessor-Direktive|:: Bereichsauflösungsoperator|! Befehl (Siehe ausführen &#124; ! Befehl "")|  
 |? &#124; ?? Befehl|??? Befehl|\ &#124; \\\ Befehl|  
 |@ ... BOX-Befehl|@ ... CLASS-Befehl|@ ... CLEAR-Befehl|  
 |@ ... Bearbeiten - Befehl Felder bearbeiten|@ ... FILL-Befehl|@ ... GET|  
@@ -66,7 +67,7 @@ Die folgende Tabelle enthält FoxPro Befehle und Funktionen, die von Microsoft®
 |Arbeitsspeicher-Systemvariable _BROWSER|Erstellen von APP-Befehl|Erstellen von EXE-Befehl|  
 |Befehl "Projekt" erstellen|Arbeitsspeicher-Systemvariable _BUILDER||  
   
-## <a name="c"></a>c  
+## <a name="c"></a>C  
   
 ||||  
 |-|-|-|  
@@ -242,7 +243,7 @@ Die folgende Tabelle enthält FoxPro Befehle und Funktionen, die von Microsoft®
 |Umbenennen der CONNECTION-Befehl|Befehl "TABLE" Umbenennen|Stellen Sie vom Befehl wieder her|  
 |Bericht-Befehl|REQUERY-Funktion|Der SYNCHRONISIERUNGSBEFEHL der Fenster|  
 |Der SYNCHRONISIERUNGSBEFEHL der MAKROS|Der SYNCHRONISIERUNGSBEFEHL der Bildschirm|RGBSCHEME ()-Funktion|  
-|Befehl "fortsetzen"|RGB-Funktion|AUSFÜHRUNG &#124;! Befehl|  
+|Befehl "fortsetzen"|RGB-Funktion|FÜHREN SIE &AMP;#124; ! Befehl|  
 |RMDIR-Befehl|Zeile ()-Funktion||  
 |RUNSCRIPT-Befehl|RDLEVEL ()-Funktion||  
   

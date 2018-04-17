@@ -1,31 +1,32 @@
 ---
-title: "Vorbereitete Ausführung ODBC | Microsoft Docs"
-ms.custom: 
+title: Vorbereitete Ausführung ODBC | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - prepared execution [ODBC]
 - SQL statements [ODBC], prepared execution
 - SQL statements [ODBC], executing
 ms.assetid: f08c8a98-31ee-48b2-9dbf-6f31c2166dbb
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6a4f91eb2e4e255007fef3f93504872f791499e7
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 50a07209bdd4e5a49c70e5ab3b2e9a9b4d8bc7eb
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="prepared-execution-odbc"></a>Die vorbereitete Ausführung ODBC
 Die vorbereitete Ausführung ist eine effiziente Möglichkeit, eine Anweisung mehrmals auszuführen. Die Anweisung zuerst kompiliert wird, oder *vorbereitet,* in eines Plans. Der Access-Plan wird dann ausgeführt wird, eine oder mehrere Male zu einem späteren Zeitpunkt. Weitere Informationen zu Access Pläne, finden Sie unter [eine SQL-Anweisung verarbeiten](../../../odbc/reference/processing-a-sql-statement.md).  

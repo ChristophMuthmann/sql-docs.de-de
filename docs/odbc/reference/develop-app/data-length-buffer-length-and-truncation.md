@@ -1,15 +1,16 @@
 ---
-title: "Die Länge der Pufferlänge und Abschneiden | Microsoft Docs"
-ms.custom: 
+title: Die Länge der Pufferlänge und Abschneiden | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - data buffers [ODBC], length
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - length of data buffers [ODBC]
 - buffers [ODBC], length
 ms.assetid: 2825c6e7-b9ff-42fe-84fc-7fb39728ac5d
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d175970f31ac75e3d94fe23bfc89304ac316e3ab
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f6934769c4f78063e24a393877112c2219121740
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="data-length-buffer-length-and-truncation"></a>Die Länge der Pufferlänge und Abschneiden
 Die *Datenlänge* ist die Bytelänge der Daten, die in der Anwendung Datenpuffers gespeichert werden würde, nicht verwendet werden, wie er in der Datenquelle gespeichert wird. Diese Unterscheidung ist wichtig, da die Daten häufig in unterschiedlichen Typen im Datenpuffer als in der Datenquelle gespeichert werden. Daher ist dies für Daten, die an die Datenquelle gesendet werden, die Bytelänge der Daten vor der Konvertierung in den Typ der Datenquelle. Für Daten aus der Datenquelle abgerufen wird ist dies die Bytelänge der Daten nach der Konvertierung in den Datenpuffer Typ und bevor jedes Abschneiden erfolgt.  

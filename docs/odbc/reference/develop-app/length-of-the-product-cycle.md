@@ -1,30 +1,31 @@
 ---
-title: "Länge des Produktzyklus | Microsoft Docs"
-ms.custom: 
+title: Länge des Produktzyklus | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - interoperability [ODBC], product cycle
 - length of the product cycle [ODBC]
 ms.assetid: 4d08d886-6d8b-40fd-8544-13032f4bf6c7
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ddd48de7b988cf16fb8c3ce5d3bc33088f487308
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 7ab57383e7702b981566b67a6c1b21f3e9f767de
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="length-of-the-product-cycle"></a>Länge des Produktzyklus
 Die letzte Fragen zur Interoperabilität ist Zeit. Entwickeln in der Regel eine interoperable Anwendung dauert länger als eine noninteroperable entwickeln. Der Grund ist, dass die Anwendung muss überprüfen Sie die Funktionen des DBMS, unterschiedlich Ausführen derselben Tasks für die verschiedenen DBMS umgehen von einigen DBMS, aber nicht an einem anderen unterstützten Funktionen und usw. an.  

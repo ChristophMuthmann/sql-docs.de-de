@@ -1,30 +1,31 @@
 ---
-title: "Erstellen von interoperablen SQL­Anweisungen | Microsoft Docs"
-ms.custom: 
+title: Erstellen von interoperablen SQL­Anweisungen | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQL statements [ODBC], interoperability
 - interoperability of SQL statements [ODBC], constructing statements
 ms.assetid: dee6f7e2-bcc4-4c74-8c7c-12aeda8a90eb
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 34636d9ead963cf9548d8ff1345424f4283fd1fb
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: b9419a3e242510a0c65ac87f2c1601c59fdafbd8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="constructing-interoperable-sql-statements"></a>Erstellen von interoperablen SQL­Anweisungen
 Wie in den vorherigen Abschnitten erwähnt, sollten interoperable Anwendungen ausführen können, die ODBC-SQL-Grammatik verwenden. Hinter dieser Grammatik verwendet wird, muss jedoch eine Reihe von weiteren Problemen von interoperablen Anwendungen Datenwachstums. Beispielsweise vorgehen eine Anwendung, um eine Funktion, z. B. äußeren Joins zu verwenden, die nicht von allen Datenquellen unterstützt wird?  

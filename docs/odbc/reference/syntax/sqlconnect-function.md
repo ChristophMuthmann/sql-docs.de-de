@@ -2,7 +2,7 @@
 title: SQLConnect-Funktion | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 59075e46-a0ca-47bf-972a-367b08bb518d
 caps.latest.revision: 37
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9f2c2d3e8b60d0a73d1beba4f68148cd956431b4
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e34b622b12cc4de020403eda60bdd6b5d231777d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlconnect-function"></a>SQLConnect-Funktion
 **Konformität**  
@@ -85,7 +85,7 @@ SQLRETURN SQLConnect(
 |SQLSTATE|Fehler|Description|  
 |--------------|-----------|-----------------|  
 |01000|Allgemeine Warnung|Treiberspezifische Meldung dient zu Informationszwecken. (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
-|01 S 02|Der Optionswert wurde geändert|Der Treiber nicht den angegebenen Wert, der die *ValuePtr* Argument in **SQLSetConnectAttr** und einen ähnlichen Wert ersetzt. (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
+|01S02|Der Optionswert wurde geändert|Der Treiber nicht den angegebenen Wert, der die *ValuePtr* Argument in **SQLSetConnectAttr** und einen ähnlichen Wert ersetzt. (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
 |08001|Client kann keine Verbindung herstellen|Der Treiber konnte nicht zum Herstellen einer Verbindung mit der Datenquelle.|  
 |08002|Name der Verbindung verwendet|(DM) dem angegebenen *Verbindungshandle* war bereits zum Herstellen einer Verbindung mit einer Datenquelle und die Verbindung weiterhin geöffnet wurde oder der Benutzer wurde für eine Verbindung suchen verwendet.|  
 |08004|Der Server wies die Verbindung|Die Datenquelle die Einrichtung der Verbindung Gründen abgelehnt Implementierung definiert.|  

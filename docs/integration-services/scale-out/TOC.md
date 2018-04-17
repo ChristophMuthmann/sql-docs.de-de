@@ -9,4 +9,5 @@
 # [Ändern des Kontos für die Scale Out-Protokollierung](change-logdb-account.md)
 # [Verwalten von Zertifikaten für Scale Out](deal-with-certificates-in-ssis-scale-out.md)
 # [Hochverfügbarkeit für Scale Out](scale-out-support-for-high-availability.md)
+# [Hochverfügbarkeit über eine SQLServer-Failoverclusterinstanz](scale-out-failover-cluster-instance.md)
 # [Problembehandlung in Scale Out](troubleshooting-scale-out.md)

@@ -1,27 +1,17 @@
 ---
 title: Arbeiten mit Eingaben und Ausgaben (R in SQL-Schnellstart) | Microsoft Docs
-ms.custom: ''
-ms.date: 07/31/2017
-ms.reviewer: ''
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: ''
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
 ms.topic: tutorial
-dev_langs:
-- R
-- SQL
-ms.author: heidist
 author: HeidiSteen
+ms.author: heidist
 manager: cgronlun
-ms.workload: On Demand
-ms.openlocfilehash: 831ca196f4c45c169f398beb39895c7fa29e405f
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: 9b2a493293f79ed823aa78a5a1d16190b5254449
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="working-with-inputs-and-outputs-r-in-sql-quickstart"></a>Arbeiten mit Eingaben und Ausgaben (R in SQL-Schnellstart)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -135,7 +125,7 @@ EXECUTE sp_execute_external_script
 **Ergebnisse**
 
 *Col1*
-*hello*
+*Hello*
 <code>   </code>
 *world*
 

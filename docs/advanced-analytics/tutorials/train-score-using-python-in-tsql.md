@@ -1,28 +1,17 @@
 ---
 title: Verwendung Python-Modell in SQL zum Trainieren und Bewerten von | Microsoft Docs
-titleSuffix: SQL Server
-ms.custom: ''
-ms.date: 02/28/2018
-ms.reviewer: ''
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: ''
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
 ms.topic: tutorial
-applies_to:
-- SQL Server 2017
-dev_langs:
-- Python
-ms.author: heidist
 author: HeidiSteen
+ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 976ccb21ed125bb65ba52eb05fd8b08664061a31
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: b7f5883356ff6878f869ee10f915bcb93a2dba17
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="use-python-model-in-sql-for-training-and-scoring"></a>Verwenden Sie Python-Modell in SQL zum Trainieren und bewerten
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -105,7 +94,7 @@ In diesem Abschnitt verwenden dieses gleiche Muster zum Trainieren eines Modells
 
     **Ergebnisse**
 
-    |model_name | model |
+    |Model_Name | model |
     |------|------|
     | Naive Bayes | 0x800363736B6C656172... |
     | Naive Bayes-Verfahren Jan 01 2018 9:39:00. | 0x800363736B6C656172... |

@@ -1,29 +1,22 @@
 ---
-title: Installieren Sie neue Python-Pakete unter SQL Server | Microsoft Docs
-ms.date: 02/20/2018
-ms.reviewer: ''
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: python
-ms.technology:
-- r-services
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.author: heidist
+title: Installieren Sie neue Python-Pakete auf SQL Server-Machine Learning | Microsoft Docs
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
 author: HeidiSteen
+ms.author: heidist
 manager: cgronlun
-ms.workload: On Demand
-ms.openlocfilehash: dbf91e37bde5e648113ce2040f695fd41047808d
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: 927d34755dbe291d1b208d968b13d36baf90bc15
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="install-new-python-packages-on-sql-server"></a>Installieren Sie neue Python-Pakete unter SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Dieser Artikel beschreibt, wie neue Python-Pakete auf einer Instanz von SQL Server-2017 zu installieren.
+Dieser Artikel beschreibt, wie neue Python-Pakete auf einer Instanz von SQL Server 2017 Machine Learning Services zu installieren.
 
 Im Allgemeinen ist der Prozess für die Installation der neuen Pakete in einer standardumgebung Python vergleichbar. Allerdings sind einige zusätzliche Schritte erforderlich, wenn der Server nicht über eine Internetverbindung verfügt.
 

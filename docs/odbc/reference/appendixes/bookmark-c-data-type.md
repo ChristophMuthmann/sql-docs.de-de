@@ -1,15 +1,16 @@
 ---
 title: Bookmark-C-Datentyp | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - C data types [ODBC], bookmark C data type
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - bookmarks [ODBC]
 - bookmark C data type [ODBC]
 ms.assetid: add88e48-ada3-4c0c-a5ac-e78903d3ff41
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b3e1547dd65d0a604e36f4a11280cfc3d38ee88f
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 43a9c02694e121eb653d70693587d5728931f747
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="bookmark-c-data-type"></a>Bookmark-C-Datentyp
 Das Lesezeichen C-Datentyp kann eine Anwendung ein Lesezeichen abrufen. Die Lesezeichen C-Typen werden verwendet, nur für Lesezeichenwerte abrufen, die variabler Länge werden können; Sie sollten nicht in andere Datentypen konvertiert werden. Eine Anwendung ruft ein Lesezeichen, das Festlegen von Spalte 0 des Ergebnisses mit **SQLBulkOperations** (mit einem Vorgang des SQL_ADD), **SQLFetch**, **SQLFetchScroll**, oder **SQLGetData**. Weitere Informationen finden Sie unter [Lesezeichen](../../../odbc/reference/develop-app/bookmarks-odbc.md).  
@@ -40,4 +41,4 @@ Das Lesezeichen C-Datentyp kann eine Anwendung ein Lesezeichen abrufen. Die Lese
 |C-Typ-ID|ODBC C-Typdefinition|C-Typ|  
 |-----------------------|--------------------|------------|  
 |SQL_C_BOOKMARK<br />(Veraltet)|LESEZEICHEN|unsigned long int|  
-|SQL_C_VARBOOKMARK|SQLCHAR *|unsigned Char *|
+|SQL_C_VARBOOKMARK|SQLCHAR *|unsigned char *|

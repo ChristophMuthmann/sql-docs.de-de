@@ -1,31 +1,32 @@
 ---
-title: "Datenquellen-Spezifikation Unterschlüssel | Microsoft Docs"
-ms.custom: 
+title: Datenquellen-Spezifikation Unterschlüssel | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - data source specification subkeys [ODBC]
 - registry entries for data sources [ODBC], data source specification subkeys
 - subkeys [ODBC], data source specification subkeys
 ms.assetid: d7e88a07-e6ab-4258-a45d-1ca21234fbec
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6394b29ff1f76fd0f7edd24a3c239de367c3d58b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 5f3080d85b2c01491d94ecb75b956d6c67bc061b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="data-source-specification-subkeys"></a>Data Source-Spezifikation Unterschlüssel
 Jede Datenquelle, die in der ODBC-Datenquellen-Unterschlüssel aufgeführt verfügt über einen Unterschlüssel selbst. Dieser Unterschlüssel verfügt über den gleichen Namen wie der entsprechende Wert unter dem Unterschlüssel ODBC-Datenquellen. Die Werte unter dieser Unterschlüssel müssen die Treiber-DLL auflisten und listet möglicherweise eine Beschreibung der Datenquelle. Wenn der Treiber Konvertierer unterstützt, kann der Name von einem Standard-Konvertierer, das Standard-Konvertierungs-DLL und die Standardoption für die Übersetzung Werteliste. Die Werteliste möglicherweise auch andere Informationen, die vom Treiber bei der Herstellung einer Verbindung mit der Datenquelle erforderlich sind. Der Treiber möglicherweise z. B. einen Servernamen, Datenbanknamen oder Schemaname.  
@@ -34,7 +35,7 @@ Jede Datenquelle, die in der ODBC-Datenquellen-Unterschlüssel aufgeführt verf�
   
 |Name|Datentyp|data|  
 |----------|---------------|----------|  
-|Description|REG_SZ|*Beschreibung*|  
+|Description|REG_SZ|*description*|  
 |Treiber|REG_SZ|*Treiber-DLL-Pfad*|  
 |TranslationDLL|REG_SZ|*Konvertierer-DLL-Pfad*|  
 |TranslationName|REG_SZ|*Konvertierer-name*|  

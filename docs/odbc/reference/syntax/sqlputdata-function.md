@@ -2,7 +2,7 @@
 title: SQLPutData-Funktion | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 9a60f004-1477-4c54-a20c-7378e1116713
 caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6d1a3d60c2a6cd5ed19f0183ba51a5a016ccfc36
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: cfe33eb04b4948dcba85aa2d9549c301eb65c8a6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlputdata-function"></a>SQLPutData-Funktion
 **Konformität**  
@@ -106,7 +106,7 @@ SQLRETURN SQLPutData(
  Wenn **SQLPutData** heißt beim Senden von Daten für einen Parameter in einer SQL­Anweisung, es können SQLSTATE, die von der Funktion aufgerufen, um die Ausführung der Anweisung zurückgegeben werden kann zurückgegeben (**SQLExecute** oder **SQLExecDirect**). Wenn sie, beim Senden von Daten für eine Spalte aufgerufen wird aktualisiert bzw. mit hinzugefügt **SQLBulkOperations** oder aktualisiert wird **SQLSetPos**, können sie alle SQLSTATE, die von zurückgegeben werden kann zurückgeben  **SQLBulkOperations** oder **SQLSetPos**.  
   
 ## <a name="comments"></a>Kommentare  
- **SQLPutData** aufgerufen werden, um Data-at-Execution-Daten für zwei Zwecke angeben: Parameterdaten in einem Aufruf verwendet werden **SQLExecute** oder **SQLExecDirect**, oder die Spaltendaten verwendet werden, wenn eine Zeile aktualisiert oder durch einen Aufruf von hinzugefügt **SQLBulkOperations** oder aktualisiert wird, durch den Aufruf von **SQLSetPos**.  
+ **SQLPutData** aufgerufen werden, um Data-at-Execution-Daten für zwei Zwecke angeben: Parameterdaten in einem Aufruf zu verwendende **SQLExecute** oder **SQLExecDirect**, oder die Spaltendaten verwendet werden, wenn eine Zeile aktualisiert wird oder durch einen Aufruf von hinzugefügt **SQLBulkOperations** oder aktualisiert wird, durch den Aufruf von **SQLSetPos**.  
   
  Wenn eine Anwendung ruft **SQLParamData** bestimmen, welche Daten es sollte zu senden, gibt der Treiber einen Indikator, der die Anwendung kann verwenden, um zu bestimmen, welche, der zu sendenden Parameterdaten oder, in dem Spaltendaten gefunden werden können. Sie gibt überdies SQL_NEED_DATA zurück, der ein Indikator für die Anwendung, die sie aufrufen sollte **SQLPutData** zum Senden der Daten. In der *DataPtr* Argument **SQLPutData**, die Anwendung übergibt einen Zeiger auf den Puffer, die die tatsächlichen Daten für den Parameter oder eine Spalte enthält.  
   

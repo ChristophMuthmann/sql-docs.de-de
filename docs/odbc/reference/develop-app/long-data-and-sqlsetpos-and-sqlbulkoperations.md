@@ -1,15 +1,16 @@
 ---
 title: Long-Daten und SQLSetPos und SQLBulkOperations | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - long data [ODBC]
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - updating data [ODBC], long data
 - SQLBulkOperations function [ODBC], long data
 ms.assetid: e2fdf842-5e4c-46ca-bb21-4625c3324f28
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7684c15df244828211c2b87acd7314a7e05bea5e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 82a51c05c5f40c2f4b2fb24f8b3e43e09d6d4514
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="long-data-and-sqlsetpos-and-sqlbulkoperations"></a>Long-Daten und SQLSetPos und SQLBulkOperations
 Wie bei Parametern in SQL-Anweisungen der Fall ist, long-Daten gesendet werden können, wenn die Aktualisierung mit Zeilen **SQLBulkOperations** oder **SQLSetPos** oder beim Einfügen von Zeilen mit **SQLBulkOperations**. Die Daten werden gesendet, in Teilen, mit mehreren Aufrufen an **SQLPutData**. Spalten, die für die Daten zum Zeitpunkt der Ausführung gesendet werden, werden als bezeichnet *Data-at-Execution-Spalten*.  

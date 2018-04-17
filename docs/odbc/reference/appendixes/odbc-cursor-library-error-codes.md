@@ -1,31 +1,32 @@
 ---
-title: "Fehlercodes für ODBC Cursor Library | Microsoft Docs"
-ms.custom: 
+title: Fehlercodes für ODBC Cursor Library | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - cursor library [ODBC], error codes
 - error codes [ODBC], cursor library
 - ODBC cursor library [ODBC], error codes
 ms.assetid: 9713480e-8744-4f37-a630-20871590d4a1
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4a182979a037ec21f7d86d907bb0f0c2a020191a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 4962fe6c7dc7d7f31b23374dde98ac0bd59ea343
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="odbc-cursor-library-error-codes"></a>ODBC Cursor Library-Fehlercodes
 > [!IMPORTANT]  

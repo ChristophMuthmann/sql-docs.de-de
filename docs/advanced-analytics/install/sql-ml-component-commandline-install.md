@@ -1,26 +1,17 @@
 ---
 title: Befehlszeilen-Installation von SQL Server-Machine Learning-Komponenten | Microsoft Docs
-ms.custom: 
-ms.date: 03/15/2018
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-ms.assetid: 
-caps.latest.revision: 
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.workload: Inactive
-ms.openlocfilehash: c51d8299837f0eda02a07afe1ea4d34d3ecd5e31
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: 1bc0cda53059b715a04d6e9a350e40d3a265d5e0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="install-sql-server-machine-learning-components-from-the-command-line"></a>Installieren von SQL Server-Machine Learning-Komponenten über die Befehlszeile
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -30,7 +21,7 @@ Dieser Artikel enthält Anweisungen zum Installieren SQL Server-Machine learning
 + [In der Datenbank-Instanz](#indb)
 + [Fügen Sie zu einer vorhandenen Datenbank-Engine-Instanz hinzu](#add-existing)
 + [Automatische Installation](#silent)
-+ [Eigenständiger server](#shared-feature)
++ [Eigenständiger Server](#shared-feature)
 
 Sie können automatische, Standard- oder vollständige Interaktion mit der Setup-Benutzeroberfläche angeben. In diesem Artikel stellt eine Ergänzung [Installieren von SQL Server von der Befehlszeile aus](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md), behandelt die Parameter, die nur für R und Python Machine Learning-Komponenten.
 
@@ -57,13 +48,13 @@ Wenn Sie über die Eingabeaufforderung installieren, unterstützt [!INCLUDE[ssNo
 |-----------|-------------|
 | / FEATURES = AdvancedAnalytics | Installiert die Datenbankversion: SQL Server 2017 Machine Learning Services (Datenbankintern) oder SQL Server 2016 R Services (Datenbankintern).  |
 | /FEATURES = SQL_INST_MR | Gilt nur für SQLServer 2017. Kombinieren Sie dies mit AdvancedAnalytics. Installiert die (In-Database) R-Funktion, einschließlich Microsoft R Open und proprietäre R-Pakete. Die SQL Server 2016-R-Services-Funktion ist R-nur, damit es keinen Parameter für diese Version zugreifen gibt.|
-| /FEATURES = SQL_INST_MPY | Gilt nur für SQLServer 2017. Kombinieren Sie dies mit AdvancedAnalytics. Installiert die (In-Database) Python-Funktion, einschließlich Anaconda und proprietäre Python-Pakete. |
+| / FEATURES = SQL_INST_MPY | Gilt nur für SQLServer 2017. Kombinieren Sie dies mit AdvancedAnalytics. Installiert die (In-Database) Python-Funktion, einschließlich Anaconda und proprietäre Python-Pakete. |
 | /FEATURES = SQL_SHARED_MR | Installiert die R-Funktion für die eigenständige Version: SQL Server 2017 Machine Learning-Server (eigenständig) oder SQL Server 2016 R Server (eigenständig). Ein eigenständiger Server ist eine "freigegebene Funktion" nicht auf eine Datenbankmodulinstanz gebunden.|
-| /FEATURES = SQL_SHARED_MPY | Gilt nur für SQLServer 2017. Installiert die Python-Funktion für die eigenständige Version: SQL Server 2017 Machine Learning-Server (eigenständig). Ein eigenständiger Server ist eine "freigegebene Funktion" nicht auf eine Datenbankmodulinstanz gebunden.|
+| / FEATURES = SQL_SHARED_MPY | Gilt nur für SQLServer 2017. Installiert die Python-Funktion für die eigenständige Version: SQL Server 2017 Machine Learning-Server (eigenständig). Ein eigenständiger Server ist eine "freigegebene Funktion" nicht auf eine Datenbankmodulinstanz gebunden.|
 | /IACCEPTROPENLICENSETERMS  | Gibt an, dass Sie die Lizenzbedingungen für die Verwendung der open-Source-R-Komponenten akzeptiert haben. |
-| /IACCEPTPYTHONLICENSETERMS | Gibt an, dass Sie die Lizenzbedingungen für die Verwendung der Python-Komponenten akzeptiert haben. |
+| / IACCEPTPYTHONLICENSETERMS | Gibt an, dass Sie die Lizenzbedingungen für die Verwendung der Python-Komponenten akzeptiert haben. |
 | /IACCEPTSQLSERVERLICENSETERMS | Gibt an, dass Sie die Lizenzbedingungen für die Verwendung von SQL Server akzeptiert haben.|
-| /MRCACHEDIRECTORY | Für offline-Setup legt den Ordner mit der R-Komponente CAB-Dateien. |
+| / MRCACHEDIRECTORY | Für offline-Setup legt den Ordner mit der R-Komponente CAB-Dateien. |
 | /MPYCACHEDIRECTORY | Für offline-Setup legt den Ordner mit den Python-Komponente CAB-Dateien. |
 
 

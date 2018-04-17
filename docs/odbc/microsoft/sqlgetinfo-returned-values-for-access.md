@@ -1,16 +1,16 @@
 ---
-title: "SQLGetInfo zurückgegebenen Werte für den Zugriff | Microsoft Docs"
-ms.custom: 
+title: SQLGetInfo zurückgegebenen Werte für den Zugriff | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - ODBC desktop database drivers [ODBC], Access driver
@@ -19,16 +19,16 @@ helpviewer_keywords:
 - desktop database drivers [ODBC], Access driver
 - Access driver [ODBC], SQLGetInfo
 ms.assetid: c551e07f-30c4-41a2-8991-6010a3511d76
-caps.latest.revision: 
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c56a813ec873293fec2dc846da851fc9d36f2dae
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 37778b8cd5d3ad020cb1af430dbbb33e837f4ae1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlgetinfo-returned-values-for-access"></a>SQLGetInfo zurückgegebenen Werte für den Zugriff
 Die folgende Tabelle enthält die Programmiersprache C# defines für die *fInfoType* Argument und die entsprechenden Werte zurückgegebenes **SQLGetInfo**. Diese Informationen abgerufen werden kann, durch Übergeben der aufgelisteten Programmiersprache C# defines **SQLGetInfo** in der *fInfoType* Argument. Weitere Informationen zu den Werten zurückgegebenes **SQLGetInfo**, finden Sie unter der *ODBC Programmer's Reference*.  
@@ -36,7 +36,7 @@ Die folgende Tabelle enthält die Programmiersprache C# defines für die *fInfoT
 > [!NOTE]  
 >  Wobei **SQLGetInfo** gibt eine 32-Bit-Bitmaske, ein senkrechter Strich (&#124;) stellt ein bitweises OR.  
   
-|InfoType|Rückgabewert|  
+|Infotyp|Rückgabewert|  
 |--------------|--------------------|  
 |SQL_ACCESSIBLE_PROCEDURES|"Y"|  
 |SQL_ACCESSIBLE_TABLES|"Y"|  
@@ -103,7 +103,7 @@ Die folgende Tabelle enthält die Programmiersprache C# defines für die *fInfoT
 |SQL_DRIVER_HSTMT|Verarbeitet die vom Treiber-Manager.|  
 |SQL_DRIVER_NAME|"OdbcJt32.dll"|  
 |SQL_DRIVER_ODBC_VER|"3.51.0000"|  
-|SQL_DRIVER_VER|"4.00.*nnnn*" ( *nnnn*  gibt das Erstellungsdatum)|  
+|SQL_DRIVER_VER|"4.00.*Nnnn*" (*Nnnn* gibt das Erstellungsdatum)|  
 |SQL_DROP_ASSERTION|0|  
 |SQL_DROP_CHARACTER_SET|0|  
 |SQL_DROP_COLLATION|0|  

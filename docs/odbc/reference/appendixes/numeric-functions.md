@@ -1,30 +1,31 @@
 ---
 title: Numerische Funktionen | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - functions [ODBC], numeric functions
 - numeric functions [ODBC]
 ms.assetid: 4fa548dc-e8b0-4179-92ff-81d6a79d10c3
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8a4b3c0cca843e576fd200b6803db8f1bac5adcb
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: dd6bcf73b63e6fdf5dc61209ed990955c19e7851
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="numeric-functions"></a>Numerische Funktionen
 Die folgende Tabelle beschreibt die numerische Funktionen, die in der ODBC-Skalarfunktion Menge enthalten sind. Durch Aufrufen von **SQLGetInfo** mit einem *Informationstyp* von SQL_NUMERIC_FUNCTIONS, kann eine Anwendung ermitteln, welche numerischen Funktionen von einem-Treiber unterstützt werden.  
@@ -45,7 +46,7 @@ Die folgende Tabelle beschreibt die numerische Funktionen, die in der ODBC-Skala
 |**ACOS (** *Float_exp* **)** (ODBC 1.0)|Gibt den Arkuskosinus von *Float_exp* ein Winkel im Bogenmaß ausgedrückten.|  
 |**ASIN (** *Float_exp* **)** (ODBC 1.0)|Gibt den Arkussinus des *Float_exp* ein Winkel im Bogenmaß ausgedrückten.|  
 |**ATAN (** *Float_exp* **)** (ODBC 1.0)|Gibt den Arkustangens von *Float_exp* ein Winkel im Bogenmaß ausgedrückten.|  
-|**ATAN2 (** *float_exp1*, *float_exp2***)** (ODBC 2.0)|Gibt den Arkustangens von der *x* und *y* angegebenen Koordinaten *float_exp1* und *float_exp2*bzw. einen Winkel ausgedrückt als Bogenmaß (Radiant).|  
+|**ATAN2 (** *float_exp1*, *float_exp2 ***)** (ODBC 2.0)|Gibt den Arkustangens von der *x* und *y* angegebenen Koordinaten *float_exp1* und *float_exp2*bzw. einen Winkel ausgedrückt als Bogenmaß (Radiant).|  
 |**CEILING (** *Numeric_exp* **)** (ODBC 1.0)|Gibt die kleinste ganze Zahl größer als oder gleich *Numeric_exp*. Der Rückgabewert ist von den gleichen Datentyp wie der input-Parameter.|  
 |**COS (** *Float_exp* **)** (ODBC 1.0)|Gibt den Kosinus des *Float_exp*, wobei *Float_exp* einen Winkel im Bogenmaß ausgedrückt wird.|  
 |**COT (** *Float_exp* **)** (ODBC 1.0)|Gibt den Kotangens eines *Float_exp*, wobei *Float_exp* einen Winkel im Bogenmaß ausgedrückt wird.|  
@@ -54,14 +55,14 @@ Die folgende Tabelle beschreibt die numerische Funktionen, die in der ODBC-Skala
 |**FLOOR (** *Numeric_exp* **)** (ODBC 1.0)|Gibt der größten ganze Zahl kleiner als oder gleich *Numeric_exp*. Der Rückgabewert ist von den gleichen Datentyp wie der input-Parameter.|  
 |**LOG (** *Float_exp* **)** (ODBC 1.0)|Gibt den natürlichen Logarithmus von *Float_exp*.|  
 |**LOG10 (** *Float_exp* **)** (ODBC 2.0)|Gibt die Basis-10-Logarithmus des *Float_exp*.|  
-|**MOD (** *integer_exp1*, *integer_exp2***)** (ODBC 1.0)|Gibt den Rest (Modulo) von *integer_exp1* geteilt durch *integer_exp2*.|  
+|**MOD (** *integer_exp1*, *integer_exp2 ***)** (ODBC 1.0)|Gibt den Rest (Modulo) von *integer_exp1* geteilt durch *integer_exp2*.|  
 |**PI ()** (ODBC 1.0)|Gibt den konstanten Wert von Pi als Gleitkommawert an.|  
-|**POWER (** *Numeric_exp*, *Integer_exp***)** (ODBC 2.0)|Gibt den Wert der *Numeric_exp* zur Potenz einer *Integer_exp*.|  
+|**POWER (** *Numeric_exp*, *Integer_exp ***)** (ODBC 2.0)|Gibt den Wert der *Numeric_exp* zur Potenz einer *Integer_exp*.|  
 |**BOGENMAß (** *Numeric_exp* **)** (ODBC 2.0)|Gibt die Anzahl der Bogenmaß konvertiert aus *Numeric_exp* Grad.|  
 |**RAND (**[*Integer_exp*]**)** (ODBC 1.0)|Gibt einen zufälligen Gleitkommawert mit *Integer_exp* als optionale Startwert.|  
-|**ROUND (** *Numeric_exp*, *Integer_exp***)** (ODBC 2.0)|Gibt *Numeric_exp* auf gerundet *Integer_exp* wird rechts vom Dezimaltrennzeichen an. Wenn *Integer_exp* negativ ist, *Numeric_exp* wird gerundet, um &#124; *Integer_exp*&#124; Stellen links vom Dezimaltrennzeichen an.|  
+|**ROUND (** *Numeric_exp*, *Integer_exp ***)** (ODBC 2.0)|Gibt *Numeric_exp* auf gerundet *Integer_exp* wird rechts vom Dezimaltrennzeichen an. Wenn *Integer_exp* negativ ist, *Numeric_exp* wird gerundet &#124; *Integer_exp* &#124; links vom Dezimaltrennzeichen platziert.|  
 |**Signieren (** *Numeric_exp* **)** (ODBC 1.0)|Gibt einen Indikator, der das Vorzeichen des *Numeric_exp*. Wenn *Numeric_exp* ist kleiner als 0 (null),-1 zurückgegeben. Wenn *Numeric_exp* gleich 0 (null) ist, wird 0 zurückgegeben. Wenn *Numeric_exp* ist größer als 0 (null), wird 1 zurückgegeben.|  
 |**SIN (** *Float_exp* **)** (ODBC 1.0)|Gibt den Sinus des *Float_exp*, wobei *Float_exp* einen Winkel im Bogenmaß ausgedrückt wird.|  
 |**SQRT (** *Float_exp* **)** (ODBC 1.0)|Gibt die Quadratwurzel von *Float_exp*.|  
 |**TAN (** *Float_exp* **)** (ODBC 1.0)|Gibt den Tangens des *Float_exp*, wobei *Float_exp* einen Winkel im Bogenmaß ausgedrückt wird.|  
-|**TRUNCATE (** *Numeric_exp*, *Integer_exp***)** (ODBC 2.0)|Gibt *Numeric_exp* auf gekürzt *Integer_exp* wird rechts vom Dezimaltrennzeichen an. Wenn *Integer_exp* negativ ist, *Numeric_exp* auf abgeschnitten &#124; *Integer_exp*&#124; Stellen links vom Dezimaltrennzeichen an.|
+|**TRUNCATE (** *Numeric_exp*, *Integer_exp ***)** (ODBC 2.0)|Gibt *Numeric_exp* auf gekürzt *Integer_exp* wird rechts vom Dezimaltrennzeichen an. Wenn *Integer_exp* negativ ist, *Numeric_exp* auf abgeschnitten &#124; *Integer_exp* &#124; links vom Dezimaltrennzeichen platziert.|

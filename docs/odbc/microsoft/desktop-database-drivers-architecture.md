@@ -1,31 +1,32 @@
 ---
 title: Desktop-Treiber Datenbankarchitektur | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Jet-based ODBC drivers [ODBC], architecture
 - ODBC desktop database drivers [ODBC], architecture
 - desktop database drivers [ODBC], architecture
 ms.assetid: 8b4d13f7-ab37-40b4-a9c6-145e7385352f
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3f5c7b12e5413441476e70dc63fe9d3da9284635
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 4b2b68b735a278fd00b4d472eb881594c0bf4245
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="desktop-database-drivers-architecture"></a>Desktop-Treiber-Datenbankarchitektur
 Diese Treiber sind für die Verwendung auf Microsoft Windows 95 oder höher oder Windows NT 4.0 oder Windows 2000 vorgesehen. Nur 32-Bit-Anwendungen werden unter Windows 95 oder höher unterstützt. 16-Bit- und 32-Bit-Anwendungen werden unter Windows NT 4.0 und Windows 2000 unterstützt.  
@@ -37,13 +38,13 @@ Diese Treiber sind für die Verwendung auf Microsoft Windows 95 oder höher oder
   
  Die Anwendung/Treiberarchitektur unter Windows 95 oder höher ist:  
   
- ![App &#47; Treiberarchitektur: Windows 95 und höher](../../odbc/microsoft/media/odbcjetarch1.gif "ODBCJetArch1")  
+ ![App&#47;Treiberarchitektur: Windows 95 und höher](../../odbc/microsoft/media/odbcjetarch1.gif "ODBCJetArch1")  
   
  Die Verwendung dieser Treiber von 16-Bit-Anwendungen unter Windows 95 wird nicht unterstützt.  
   
  Die Anwendung/Treiberarchitektur unter Windows NT 4.0 und Windows 2000 ist:  
   
- ![App &#47; Treiberarchitektur: NT 4.0 oder Windows 2000](../../odbc/microsoft/media/odbcjetarch2.gif "ODBCJetArch2")  
+ ![App&#47;Treiberarchitektur: NT 4.0 oder Windows 2000](../../odbc/microsoft/media/odbcjetarch2.gif "ODBCJetArch2")  
   
  Der Desktop-Datenbanktreiber sind zwei Ebenen-Treiber. In einer Konfiguration mit zwei Ebenen führt der Treiber nicht den Prozess der Analyse, Überprüfung, optimieren und Ausführen der Abfrage aus. Stattdessen führt Microsoft Jet diese Aufgaben. Er verarbeitet die ODBC-API-Aufrufe und fungiert als eine SQL-Datenbankmodul. Microsoft Jet geworden ist ein integraler, untrennbar Teil der Treiber: Es wird mit dem Treiber geliefert und mit dem Treiber befindet, auch wenn keine andere Anwendung auf dem Computer verwendet wird.  
   

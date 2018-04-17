@@ -1,15 +1,16 @@
 ---
 title: Verwalten von Datenquellen | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - deleting data sources [ODBC], ODBC data source administrator
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - removing data sources [ODBC], ODBC data source administrator
 - ODBC data source administrator [ODBC], data source management
 ms.assetid: 67cc4945-4850-4eb4-8da6-b835ddaeca4c
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ea157fd72ab1cc2b37ba32e198bde5ff47eff0fb
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 679edbfc02628e9a78b209961b22f576f627f057
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="managing-data-sources"></a>Verwalten von Datenquellen
 Nachdem Sie einen ODBC-Treiber vom Setupprogramm der Treiber installiert haben, können Sie eine oder mehrere Datenquellen dafür definieren. Der Datenquellenname (DSN) sollte eine eindeutige Beschreibung des ausgewählten angeben; beispielsweise *Payroll* oder *"Accounts Payable"*. Die Benutzer und System-Datenquellen, die für alle Treiber installierten definiert sind, werden aufgeführt, der **Benutzer-DSN** oder **System-DSN** Registerkarten der **ODBC-Datenquellen-Administrator**(Dialogfeld). Die Datei-Datenquellen in einem bestimmten Verzeichnis sind aufgeführt, der **Datei-DSN** Registerkarte; in das Verzeichnis angezeigt werden eingegeben wird die **Suchen in** im Feld der **Datei-DSN** Registerkarte.  

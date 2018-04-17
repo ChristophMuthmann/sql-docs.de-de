@@ -2,7 +2,7 @@
 title: Wählen Sie-SQL-Befehl | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: 2149c3ca-3a71-446d-8d53-3d056e2f301a
 caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3e7295a800b3cc84f6eb64f5dfa762573fe80b6b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 9f300cfb998c0d35aa6c853774fc029445da1015
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="select---sql-command"></a>Wählen Sie-SQL-Befehl
 Ruft Daten aus einer oder mehreren Tabellen ab.  
@@ -54,7 +54,7 @@ FROM [DatabaseName!]Table [Local_Alias]
 > [!NOTE]  
 >  Ein *Unterabfrage*, in der folgenden Argumente bezeichnet werden, wird eine SELECT-Anweisung in eine SELECT-Anweisung und muss in Klammern eingeschlossen werden. Sie können bis zu zwei Unterabfragen auf derselben Ebene haben (nicht geschachtelt) in der WHERE-Klausel. (Siehe dieser Abschnitt der Argumente.) Unterabfragen können mehrere Joinbedingungen enthalten.  
   
- [Alle &#124; DISTINCT] [*Alias*.] *Select_Item* [AS *Column_Name*] [, [*Alias*.] *Select_Item* [AS *Column_Name*]...]  
+ [Alle &#124; DISTINCT]   [*Alias*.] *Select_Item* [AS *Column_Name*] [, [*Alias*.] *Select_Item* [AS *Column_Name*]...]  
  Die SELECT-Klausel gibt an, die Felder, Konstanten und Ausdrücke, die in den Abfrageergebnissen angezeigt werden.  
   
  Standardmäßig alle zeigt alle Zeilen in den Abfrageergebnissen angezeigt.  
@@ -110,7 +110,7 @@ FROM [DatabaseName!]Table [Local_Alias]
   
  *Local_Alias* gibt einen temporären Namen für die Tabelle mit dem Namen im *Tabelle*. Wenn Sie einen lokalen Alias angeben, müssen Sie den lokalen Alias statt des Tabellennamens in der SELECT-Anweisung verwenden. Der lokale Alias wirkt sich nicht auf die Visual FoxPro-Umgebung aus.  
   
- WOBEI *JoinCondition* [AND *JoinCondition* ...]    [Und &#124; ODER *FilterCondition* [AND &#124; ODER *FilterCondition* ...]]  
+ WOBEI *JoinCondition* [AND *JoinCondition* ...]    [AND &#124; oder *FilterCondition* [AND &#124; oder *FilterCondition* ...]]  
  Weist Visual FoxPro und nur bestimmte Datensätze in den Abfrageergebnissen anzuzeigen. Wenn zum Abrufen von Daten aus mehreren Tabellen erforderlich ist.  
   
  *JoinCondition* gibt Felder, die die Tabellen in der FROM-Klausel verknüpft sind. Wenn Sie mehr als eine Tabelle in einer Abfrage einschließen, sollten Sie nach dem ersten eine Join-Bedingung für jede Tabelle angeben.  
@@ -159,7 +159,7 @@ FROM [DatabaseName!]Table [Local_Alias]
   
  Wenn die filterbedingung alle enthält, muss das Feld für alle Werte, die von der Unterabfrage generiert werden, bevor der Datensatz in die Ergebnisse der Abfrage enthalten ist der Vergleich-Bedingung erfüllen.  
   
- **Beispiel 4** *FieldName Vergleich* alle &#124; Einige (*Unterabfrage*)  
+ **Beispiel 4** *FieldName Vergleich* ANY &#124; SOME (*Unterabfrage*)  
   
  `company < ANY ;`  
   

@@ -1,15 +1,16 @@
 ---
-title: "Der ODBC-Lösung | Microsoft Docs"
-ms.custom: 
+title: Der ODBC-Lösung | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - ODBC [ODBC], database access
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - database access [ODBC]
 - standardizing database access [ODBC], using ODBC
 ms.assetid: 34b80790-e010-4b90-8eaa-03189f5d8986
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e0afa0862dc69aa093a662e44732f396e3f48f78
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 55bf55096f8e8b112c8d1d78c5fbf2c221c829ab
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="the-odbc-solution"></a>Der ODBC-Lösung
 Klicken Sie dann die Frage ist, wie ODBC Datenbankzugriff standardisieren? Es gibt zwei architektonische Anforderungen:  

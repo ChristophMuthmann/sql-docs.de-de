@@ -2,7 +2,7 @@
 title: SQLFreeHandle-Funktion | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 17a6fcdc-b05a-4de7-be93-a316f39696a1
 caps.latest.revision: 35
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 96f6d2c94a6b2fb78245c83cbf989e6a707caccc
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 601d1257b99e3c3a9713730ef1ea110905d0143f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlfreehandle-function"></a>SQLFreeHandle-Funktion
 **Konformität**  
@@ -85,7 +85,7 @@ SQLRETURN SQLFreeHandle(
 |--------------|-----------|-----------------|  
 |HY000|Allgemeiner Fehler|Für die es keine spezifischen SQLSTATE wurde und für die keine implementierungsabhängige SQLSTATE definiert wurde, ist ein Fehler aufgetreten. Die zurückgegebene Fehlermeldung **SQLGetDiagRec** in der  *\*MessageText* Puffer beschreibt den Fehler und seiner Ursache.|  
 |HY001|Fehler bei der speicherbelegung|Der Treiber konnte nicht belegt werden, die zur Unterstützung der Ausführung oder den Abschluss der Funktion erforderlich ist.|  
-|HY010|Fehler bei Funktionssequenz|(DM) die *HandleType* Argument SQL_HANDLE_ENV und mindestens eine Verbindung wurde in einem reservierten und nicht verbundenen Zustand. **SQLDisconnect** und **SQLFreeHandle** mit einem *HandleType* SQL_HANDLE_DBC auf, muss für jede Verbindung vor dem Aufruf aufgerufen werden **SQLFreeHandle** mit einem *HandleType* SQL_HANDLE_ENV auf.<br /><br /> (DM) die *HandleType* Argument war SQL_HANDLE_DBC auf, und die Funktion aufgerufen wurde, vor dem Aufruf **SQLDisconnect** für die Verbindung.<br /><br /> (DM) die *HandleType* Argument war SQL_HANDLE_DBC auf. Eine asynchron ausgeführte Funktion aufgerufen wurde *behandeln* und die Funktion wurde noch ausgeführt werden, wenn diese Funktion aufgerufen wurde.<br /><br /> (DM) die *HandleType* Argument war SQL_HANDLE_STMT auf. **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, oder **SQLSetPos** mit das Anweisungshandle aufgerufen und SQL_NEED_DATA zurückgegeben wurde. Diese Funktion wurde aufgerufen, bevor die Daten für alle Data-at-Execution-Parameter oder Spalten gesendet wurden.<br /><br /> (DM) die *HandleType* Argument war SQL_HANDLE_STMT auf. Eine asynchron ausgeführte Funktion wurde aufgerufen, auf das Anweisungshandle oder das zugeordnete Verbindungshandle, und die Funktion wurde noch ausgeführt werden, wenn diese Funktion aufgerufen wurde.<br /><br /> (DM) die *HandleType* Argument war SQL_HANDLE_DESC. Eine asynchron ausgeführte Funktion wurde für das zugeordnete Verbindungshandle aufgerufen wird. und die Funktion wurde noch ausgeführt werden, wenn diese Funktion aufgerufen wurde.<br /><br /> (DM) alle Produktpaket Handles und andere Ressourcen nicht freigegeben wurden vor dem **SQLFreeHandle** aufgerufen wurde.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, oder **SQLMoreResults** für eines der zugeordneten Anweisungshandles hieß die *behandeln* und *HandleType* auf SQL_HANDLE_STMT festgelegt wurde oder SQL_HANDLE_DESC SQL_PARAM_DATA_AVAILABLE zurückgegeben wird. Diese Funktion wurde aufgerufen, bevor Daten für alle gestreamte Parameter abgerufen wurde.|  
+|HY010|Fehler bei Funktionssequenz|(DM) die *HandleType* Argument SQL_HANDLE_ENV und mindestens eine Verbindung wurde in einem reservierten und nicht verbundenen Zustand. **SQLDisconnect** und **SQLFreeHandle** mit einem *HandleType* SQL_HANDLE_DBC auf, muss für jede Verbindung vor dem Aufruf aufgerufen werden **SQLFreeHandle** mit einer *HandleType* SQL_HANDLE_ENV auf.<br /><br /> (DM) die *HandleType* Argument war SQL_HANDLE_DBC auf, und die Funktion aufgerufen wurde, vor dem Aufruf **SQLDisconnect** für die Verbindung.<br /><br /> (DM) die *HandleType* Argument war SQL_HANDLE_DBC auf. Eine asynchron ausgeführte Funktion aufgerufen wurde *behandeln* und die Funktion wurde noch ausgeführt werden, wenn diese Funktion aufgerufen wurde.<br /><br /> (DM) die *HandleType* Argument war SQL_HANDLE_STMT auf. **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, oder **SQLSetPos** mit das Anweisungshandle aufgerufen und SQL_NEED_DATA zurückgegeben wurde. Diese Funktion wurde aufgerufen, bevor die Daten für alle Data-at-Execution-Parameter oder Spalten gesendet wurden.<br /><br /> (DM) die *HandleType* Argument war SQL_HANDLE_STMT auf. Eine asynchron ausgeführte Funktion wurde aufgerufen, auf das Anweisungshandle oder das zugeordnete Verbindungshandle, und die Funktion wurde noch ausgeführt werden, wenn diese Funktion aufgerufen wurde.<br /><br /> (DM) die *HandleType* Argument war SQL_HANDLE_DESC. Eine asynchron ausgeführte Funktion wurde für das zugeordnete Verbindungshandle aufgerufen wird. und die Funktion wurde noch ausgeführt werden, wenn diese Funktion aufgerufen wurde.<br /><br /> (DM) alle Produktpaket Handles und andere Ressourcen nicht freigegeben wurden vor dem **SQLFreeHandle** aufgerufen wurde.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, oder **SQLMoreResults** für eines der zugeordneten Anweisungshandles hieß die *behandeln* und *HandleType* auf SQL_HANDLE_STMT festgelegt wurde oder SQL_HANDLE_DESC SQL_PARAM_DATA_AVAILABLE zurückgegeben wird. Diese Funktion wurde aufgerufen, bevor Daten für alle gestreamte Parameter abgerufen wurde.|  
 |HY013|Speicherverwaltungsfehler|Die *HandleType* Argument war SQL_HANDLE_STMT oder SQL_HANDLE_DESC und Aufruf der Funktion konnte nicht verarbeitet werden, da die zugrunde liegenden Speicherobjekte, möglicherweise aufgrund von unzureichendem Speicher konnte nicht zugegriffen werden.|  
 |HY017|Ungültige Verwendung eines automatisch zugeordneten Deskriptorhandles.|(DM) die *behandeln* Argument wurde an das Handle für einen automatisch zugewiesenen Deskriptor festgelegt.|  
 |HY117|Verbindung wird aufgrund eines unbekannten Transaktionsstatus angehalten. Nur trennen, und nur-Lese Funktionen sind zulässig.|(DM) finden Sie weitere Informationen zum Zustand "angehalten" [SQLEndTran-Funktion](../../../odbc/reference/syntax/sqlendtran-function.md).|  

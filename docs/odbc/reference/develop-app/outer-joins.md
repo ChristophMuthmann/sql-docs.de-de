@@ -1,39 +1,40 @@
 ---
-title: "Äußere Joins | Microsoft Docs"
-ms.custom: 
+title: Äußere Joins | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - outer join escape sequences [ODBC]
 - escape sequences [ODBC], outer join
 ms.assetid: be1a0203-5da9-4871-9566-4bd3fbc0895c
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f217b7392b4db968e612f58b264e17f921a40aae
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: a350621a056226653a2f9906dbf3931dfdfccec6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="outer-joins"></a>Äußere Joins
 ODBC unterstützt die SQL-92 linke, Rechte und vollständige äußere Join-Syntax. Die Escapesequenz für äußere Joins lautet  
   
- **{ABl.** *äußerer Join***}**  
+ **{ABl.** *outer-Joins ***}**  
   
  wobei *äußerer Join* ist  
   
- *Tabellenverweis* {**links &#124; RECHTS &#124; VOLLSTÄNDIGE} OUTER JOIN** {*Tabellenverweis* &#124; *äußerer Join*} **ON** *-Suchbedingung*  
+ *Tabellenverweis* {**Links &#124; rechts &#124; vollständige} ÄUßERER JOIN** {*Tabellenverweis* &#124; *äußerer Join*} **ON**  *-Suchbedingung*  
   
  *Tabellenverweis* gibt einen Tabellennamen und *Suchbedingung* gibt die Join-Bedingung zwischen den *Tabellenverweise*.  
   

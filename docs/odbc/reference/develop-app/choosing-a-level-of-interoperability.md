@@ -2,7 +2,7 @@
 title: Wählen ein Maß an Interoperabilität | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: 1f915832-a7c1-41cd-8c4f-bf6d976951b0
 caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2ea72f7e7a9ebbbb8d621b953f74a12d568d053e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 3cf83e2d651915d485b2d834335c7b38f1c5e089
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="choosing-a-level-of-interoperability"></a>Ein Maß an Interoperabilität auswählen
 Vorausgesetzt, dass die Anwendung ODBC verwendet werden, besteht der nächste Schritt, um zu bestimmen, welche Maß an Interoperabilität erforderlich ist. Das grundlegende Maß an Interoperabilität ist in der Regel eine Funktion des Anwendungstyps: Custom Applications eher nicht interoperabel, vertikale Anwendungen sind tendenziell interoperable zwischen einer begrenzten Anzahl von DBMS und allgemeine Anwendungen sind tendenziell interoperable zwischen allen DBMS.  

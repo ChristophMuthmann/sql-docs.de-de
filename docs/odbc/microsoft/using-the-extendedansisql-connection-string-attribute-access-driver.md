@@ -1,31 +1,32 @@
 ---
 title: Verwenden das Verbindungszeichenfolgen-Attribut ExtendedAnsiSQL | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Access driver [ODBC], ExtendedAnsiSql
 - extendedANSISQL [ODBC]
 - extendedANSISQL [ODBC], about ExtendedAnsiSQL
 ms.assetid: 92675c30-9100-43ae-aa35-041f3006a54f
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e3908aaa9cc9e36895fd22fa2cd9179142aaaf3b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e1abd62f873d785b968cc02ea678b845e930c367
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-the-extendedansisql-connection-string-attribute-access-driver"></a>Verwenden das ExtendedAnsiSQL Verbindungszeichenfolgen-Attribut (Access-Treiber)
 Jet 4.0 verfügt über mehrere neue Funktionen, die in der ODBC-Desktop-Datenbanktreiber Version 4.0 standardmäßig nicht aktiviert sind. Um diese neuen Features nutzen zu können, müssen eine Anwendung ein neues Verbindungsattribut festlegen, die Verbindungszeichenfolge ein neues Attribut hinzuzufügen oder legen Sie das Attribut in einem DSN. Das Attribut heißt ExtendedAnsiSQL und bezieht sich nur für Microsoft ODBC Desktop Database-Treiber 4.0 und höher.  

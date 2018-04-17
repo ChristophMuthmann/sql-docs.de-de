@@ -1,23 +1,17 @@
 ---
 title: Einrichten einer Data Science-Client für die Entwicklung von R in SQL Server | Microsoft Docs
-ms.custom: ''
-ms.date: 10/31/2017
-ms.reviewer: ''
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.author: heidist
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
 author: HeidiSteen
+ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 489d4c3b008aa31c8f36f8018dfb3ea8358963e3
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: dd0b420630846382b9d7cf456352bb606a4f0040
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="set-up-a-data-science-client-for-r-development-on-sql-server"></a>Einrichten eines Data Science-Clients für die Entwicklung von R in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -60,7 +54,7 @@ Die folgenden standard-R-Tools sind in enthalten eine *basieren Installation* vo
 
 Um diese Tools zu suchen, ermitteln Sie die R-Bibliothek, die beim Einrichten von SQL Server oder das eigenständige-Machine learning-Funktion installiert wurde. Z. B. in einer Standardinstallation der R-Tools in diesen Ordnern befinden sich:
 
-+ SQL Server 2016 R Services: `~\Program Files\Microsoft SQL Server\MSSQL13.<instancename>\R_SERVICES\bin\x64`
++ SQL Server 2016-R-Services: `~\Program Files\Microsoft SQL Server\MSSQL13.<instancename>\R_SERVICES\bin\x64`
 + Microsoft R Server eigenständige: `~\Program Files\Microsoft R\R_SERVER\bin\x64`
 + SQL Server 2017 Machine Learning-Dienste: `~\Program Files\Microsoft SQL Server\MSSQL14.<instancename>\R_SERVICES\bin\x64`
 + Machine Learning-Server (eigenständig): `~\Program Files\Microsoft\ML Server\R_SERVER\bin\x64`

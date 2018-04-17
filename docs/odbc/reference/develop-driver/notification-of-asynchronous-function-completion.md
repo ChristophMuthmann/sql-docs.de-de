@@ -1,27 +1,28 @@
 ---
 title: Der asynchrone Funktion Benachrichtigung | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 336565da-4203-4745-bce2-4f011c08e357
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dbccf95ca62f3a77618f36f69523e28e5d85c17a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e5b0c8ceb6924171e304f3bc14d3c0438baa3306
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="notification-of-asynchronous-function-completion"></a>Benachrichtigung über Abschluss des asynchronen Funktion
 Im SDK für Windows 8 hinzugefügt ODBC einen Mechanismus, um Anwendungen zu benachrichtigen, wenn ein asynchroner Vorgang abgeschlossen dem wir als "Benachrichtigung bei Abschluss" bezeichnet werden ist, an. (Siehe [asynchrone Ausführung (Benachrichtigungsmethode)](../../../odbc/reference/develop-app/asynchronous-execution-notification-method.md) für Weitere Informationen.) In diesem Artikel werden einige der Probleme für Entwickler.  

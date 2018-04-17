@@ -2,7 +2,7 @@
 title: Abrufen und Festlegen von Deskriptorfelder | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: 394fe500-803d-463f-ae95-f8eb87b66bc8
 caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 064b1f6e43bea4b01002d6a08d26526a56e03af5
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 6fd244638193748260567d11aca130ce41ab283d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="getting-and-setting-descriptor-fields"></a>Abrufen und Festlegen von Deskriptorfelder
 Dieser Abschnitt beschreibt die Methoden, die eine Anwendung zum Abrufen oder Festlegen der Werte in deskriptorfelder verwenden kann.  

@@ -1,31 +1,32 @@
 ---
-title: "Verbindung Übergänge | Microsoft Docs"
-ms.custom: 
+title: Verbindung Übergänge | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - transitioning states [ODBC], connection
 - connection transitions [ODBC]
 - state transitions [ODBC], connection
 ms.assetid: 6b6e1a47-4a52-41c8-bb9e-7ddeae09913e
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ea7b3761e885778aae1c70ab8d22cd2ef86c1363
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: a26c31885bce6d264e5d80f9f1c32a1d8fcd7c3f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="connection-transitions"></a>Verbindung Übergänge
 ODBC-Verbindungen werden die folgenden Status haben.  
@@ -48,8 +49,8 @@ ODBC-Verbindungen werden die folgenden Status haben.
 |--------------------|--------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
 |C1 [1]|--[5]|--[5]|--[5]|--[5]|--[5]|--[5]|  
 |(SODASS) [2]|C2|--[5]|--[5]|--[5]|--[5]|--[5]|  
-|(SODASS) [3]|(SODASS)|(08003)|(08003)|C5|--[5]|--[5]|  
-|(SODASS) [4]|(SODASS)|(08003)|(08003)|--[5]|--[5]|--[5]|  
+|(SODASS) [3]|(IH)|(08003)|(08003)|C5|--[5]|--[5]|  
+|(SODASS) [4]|(IH)|(08003)|(08003)|--[5]|--[5]|--[5]|  
   
  [1] für diese Zeile zeigt die Übergänge beim *HandleType* SQL_HANDLE_ENV wurde.  
   
@@ -65,13 +66,13 @@ ODBC-Verbindungen werden die folgenden Status haben.
   
 |C0<br /><br /> Keine Env.|C1<br /><br /> Nicht zugeordnet|C2<br /><br /> Belegt|C3<br /><br /> Daten erforderlich|C4<br /><br /> Verbunden|C5<br /><br /> -Anweisung.|C6<br /><br /> Transaction|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(SODASS)|(SODASS)|C4 C3 [d] [s]|--[d] C2 [e] C4 [s]|(08002)|(08002)|(08002)|  
+|(IH)|(IH)|C4 C3 [d] [s]|--[d] C2 [e] C4 [s]|(08002)|(08002)|(08002)|  
   
 ## <a name="sqlclosecursor"></a>SQLCloseCursor  
   
 |C0<br /><br /> Keine Env.|C1<br /><br /> Nicht zugeordnet|C2<br /><br /> Belegt|C3<br /><br /> Daten erforderlich|C4<br /><br /> Verbunden|C5<br /><br /> -Anweisung.|C6<br /><br /> Transaction|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(SODASS)|(SODASS)|(SODASS)|(SODASS)|(SODASS)|--|--[1] C5 [2]|  
+|(IH)|(IH)|(IH)|(IH)|(IH)|--|--[1] C5 [2]|  
   
  [1]. die Verbindung wurde im Manualcommit Modus.  
   
@@ -81,7 +82,7 @@ ODBC-Verbindungen werden die folgenden Status haben.
   
 |C0<br /><br /> Keine Env.|C1<br /><br /> Nicht zugeordnet|C2<br /><br /> Belegt|C3<br /><br /> Daten erforderlich|C4<br /><br /> Verbunden|C5<br /><br /> -Anweisung.|C6<br /><br /> Transaction|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(SODASS)|(SODASS)|(SODASS)|(SODASS)|(SODASS)|--[1] C6 [2]|--|  
+|(IH)|(IH)|(IH)|(IH)|(IH)|--[1] C6 [2]|--|  
   
  [1]. die Verbindung im Autocommit Modus wurde, oder die Datenquelle eine Transaktion nicht beginnen.  
   
@@ -91,13 +92,13 @@ ODBC-Verbindungen werden die folgenden Status haben.
   
 |C0<br /><br /> Keine Env.|C1<br /><br /> Nicht zugeordnet|C2<br /><br /> Belegt|C3<br /><br /> Daten erforderlich|C4<br /><br /> Verbunden|C5<br /><br /> -Anweisung.|C6<br /><br /> Transaction|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(SODASS)|(SODASS)|C4|(08002)|(08002)|(08002)|(08002)|  
+|(IH)|(IH)|C4|(08002)|(08002)|(08002)|(08002)|  
   
 ## <a name="sqlcopydesc-sqlgetdescfield-sqlgetdescrec-sqlsetdescfield-and-sqlsetdescrec"></a>SQLCopyDesc, SQLGetDescField SQLGetDescRec, SQLSetDescField und SQLSetDescRec  
   
 |C0<br /><br /> Keine Env.|C1<br /><br /> Nicht zugeordnet|C2<br /><br /> Belegt|C3<br /><br /> Daten erforderlich|C4<br /><br /> Verbunden|C5<br /><br /> -Anweisung.|C6<br /><br /> Transaction|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(SODASS)|(SODASS)|(SODASS)|(SODASS)|--[1]|--|--|  
+|(IH)|(IH)|(IH)|(IH)|--[1]|--|--|  
   
  [1] ' ist in diesem Zustand befindet werden die für die Anwendung verfügbar nur Deskriptoren Deskriptoren explizit zugeordnet.  
   
@@ -105,26 +106,26 @@ ODBC-Verbindungen werden die folgenden Status haben.
   
 |C0<br /><br /> Keine Env.|C1<br /><br /> Nicht zugeordnet|C2<br /><br /> Belegt|C3<br /><br /> Daten erforderlich|C4<br /><br /> Verbunden|C5<br /><br /> -Anweisung.|C6<br /><br /> Transaction|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(SODASS)|--|--|--|--|--|--|  
+|(IH)|--|--|--|--|--|--|  
   
 ## <a name="sqldisconnect"></a>SQLDisconnect  
   
 |C0<br /><br /> Keine Env.|C1<br /><br /> Nicht zugeordnet|C2<br /><br /> Belegt|C3<br /><br /> Daten erforderlich|C4<br /><br /> Verbunden|C5<br /><br /> -Anweisung.|C6<br /><br /> Transaction|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(SODASS)|(SODASS)|(08003)|C2|C2|C2|25000|  
+|(IH)|(IH)|(08003)|C2|C2|C2|25000|  
   
 ## <a name="sqldriverconnect"></a>SQLDriverConnect  
   
 |C0<br /><br /> Keine Env.|C1<br /><br /> Nicht zugeordnet|C2<br /><br /> Belegt|C3<br /><br /> Daten erforderlich|C4<br /><br /> Verbunden|C5<br /><br /> -Anweisung.|C6<br /><br /> Transaction|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(SODASS)|(SODASS)|C4 s – n [f#]|(08002)|(08002)|(08002)|(08002)|  
+|(IH)|(IH)|C4 s – n [f#]|(08002)|(08002)|(08002)|(08002)|  
   
 ## <a name="sqlendtran"></a>SQLEndTran  
   
 |C0<br /><br /> Keine Env.|C1<br /><br /> Nicht zugeordnet|C2<br /><br /> Belegt|C3<br /><br /> Daten erforderlich|C4<br /><br /> Verbunden|C5<br /><br /> -Anweisung.|C6<br /><br /> Transaction|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
 |(SODASS) [1]|--[3]|--[3]|--[3]|--|--|--[4] oder ([5], [6] und [8]) C4 [5] und [7] C5 [5], [6] und [9]|  
-|(SODASS) [2]|(SODASS)|(08003)|(08003)|--|--|C5|  
+|(SODASS) [2]|(IH)|(08003)|(08003)|--|--|C5|  
   
  [1] für diese Zeile zeigt die Übergänge beim *HandleType* SQL_HANDLE_ENV wurde.  
   
@@ -148,7 +149,7 @@ ODBC-Verbindungen werden die folgenden Status haben.
   
 |C0<br /><br /> Keine Env.|C1<br /><br /> Nicht zugeordnet|C2<br /><br /> Belegt|C3<br /><br /> Daten erforderlich|C4<br /><br /> Verbunden|C5<br /><br /> -Anweisung.|C6<br /><br /> Transaction|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(SODASS)|(SODASS)|(SODASS)|(SODASS)|(SODASS)|--C6 [1] C6 [2] [3]|--|  
+|(IH)|(IH)|(IH)|(IH)|(IH)|--C6 [1] C6 [2] [3]|--|  
   
  [1]. die Verbindung im Autocommit Modus, und die ausgeführte Anweisung nicht wurde eine *Cursor* *Spezifikation* (z. B. eine SELECT-Anweisung) oder die Verbindung wurde im Manualcommit-Modus, und die Anweisung Ausführung eine Transaktion konnte nicht begonnen.  
   
@@ -161,9 +162,9 @@ ODBC-Verbindungen werden die folgenden Status haben.
 |C0<br /><br /> Keine Env.|C1<br /><br /> Nicht zugeordnet|C2<br /><br /> Belegt|C3<br /><br /> Daten erforderlich|C4<br /><br /> Verbunden|C5<br /><br /> -Anweisung.|C6<br /><br /> Transaction|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
 |(SODASS) [1]|C0|(HY010)|(HY010)|(HY010)|(HY010)|(HY010)|  
-|(SODASS) [2]|(SODASS)|(C1)|(HY010)|(HY010)|(HY010)|(HY010)|  
-|(SODASS) [3]|(SODASS)|(SODASS)|(SODASS)|(SODASS)|C4 [5] [6]|--[7] C4 [5] und [8] C5 [6] und [8]|  
-|(SODASS) [4]|(SODASS)|(SODASS)|(SODASS)|--|--|--|  
+|(SODASS) [2]|(IH)|(C1)|(HY010)|(HY010)|(HY010)|(HY010)|  
+|(SODASS) [3]|(IH)|(IH)|(IH)|(IH)|C4 [5] [6]|--[7] C4 [5] und [8] C5 [6] und [8]|  
+|(SODASS) [4]|(IH)|(IH)|(IH)|--|--|--|  
   
  [1] für diese Zeile zeigt die Übergänge beim *HandleType* SQL_HANDLE_ENV wurde.  
   
@@ -185,8 +186,8 @@ ODBC-Verbindungen werden die folgenden Status haben.
   
 |C0<br /><br /> Keine Env.|C1<br /><br /> Nicht zugeordnet|C2<br /><br /> Belegt|C3<br /><br /> Daten erforderlich|C4<br /><br /> Verbunden|C5<br /><br /> -Anweisung.|C6<br /><br /> Transaction|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(SODASS) [1]|(SODASS)|(SODASS)|(SODASS)|(SODASS)|--|C5 [3]: [4]|  
-|(SODASS) [2]|(SODASS)|(SODASS)|(SODASS)|(SODASS)|--|--|  
+|(SODASS) [1]|(IH)|(IH)|(IH)|(IH)|--|C5 [3]: [4]|  
+|(SODASS) [2]|(IH)|(IH)|(IH)|(IH)|--|--|  
   
  [1] für diese Zeile zeigt Transaktionen bei der *Option* Argument ist SQL_CLOSE.  
   
@@ -211,9 +212,9 @@ ODBC-Verbindungen werden die folgenden Status haben.
 |C0<br /><br /> Keine Env.|C1<br /><br /> Nicht zugeordnet|C2<br /><br /> Belegt|C3<br /><br /> Daten erforderlich|C4<br /><br /> Verbunden|C5<br /><br /> -Anweisung.|C6<br /><br /> Transaction|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
 |(SODASS) [1]|--|--|--|--|--|--|  
-|(SODASS) [2]|(SODASS)|--|--|--|--|--|  
-|(SODASS) [3]|(SODASS)|(SODASS)|(SODASS)|(SODASS)|--|--|  
-|(SODASS) [4]|(SODASS)|(SODASS)|(SODASS)|--|--|--|  
+|(SODASS) [2]|(IH)|--|--|--|--|--|  
+|(SODASS) [3]|(IH)|(IH)|(IH)|(IH)|--|--|  
+|(SODASS) [4]|(IH)|(IH)|(IH)|--|--|--|  
   
  [1] für diese Zeile zeigt die Übergänge beim *HandleType* SQL_HANDLE_ENV wurde.  
   
@@ -249,7 +250,7 @@ ODBC-Verbindungen werden die folgenden Status haben.
   
 |C0<br /><br /> Keine Env.|C1<br /><br /> Nicht zugeordnet|C2<br /><br /> Belegt|C3<br /><br /> Daten erforderlich|C4<br /><br /> Verbunden|C5<br /><br /> -Anweisung.|C6<br /><br /> Transaction|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(SODASS)|(SODASS)|(SODASS)|(SODASS)|(SODASS)|--[1] C6 [2]|--C5 [3] [1]|  
+|(IH)|(IH)|(IH)|(IH)|(IH)|--[1] C6 [2]|--C5 [3] [1]|  
   
  [1]. die Verbindung wurde im Autocommit-Modus und der Aufruf von **SQLMoreResults** die Verarbeitung eines Resultsets einer Spezifikation Cursor wurde nicht initialisiert.  
   
@@ -261,13 +262,13 @@ ODBC-Verbindungen werden die folgenden Status haben.
   
 |C0<br /><br /> Keine Env.|C1<br /><br /> Nicht zugeordnet|C2<br /><br /> Belegt|C3<br /><br /> Daten erforderlich|C4<br /><br /> Verbunden|C5<br /><br /> -Anweisung.|C6<br /><br /> Transaction|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(SODASS)|(SODASS)|(08003)|(08003)|--|--|--|  
+|(IH)|(IH)|(08003)|(08003)|--|--|--|  
   
 ## <a name="sqlprepare"></a>SQLPrepare  
   
 |C0<br /><br /> Keine Env.|C1<br /><br /> Nicht zugeordnet|C2<br /><br /> Belegt|C3<br /><br /> Daten erforderlich|C4<br /><br /> Verbunden|C5<br /><br /> -Anweisung.|C6<br /><br /> Transaction|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(SODASS)|(SODASS)|(SODASS)|(SODASS)|(SODASS)|--[1] C6 [2]|--|  
+|(IH)|(IH)|(IH)|(IH)|(IH)|--[1] C6 [2]|--|  
   
  [1]. die Verbindung im Autocommit Modus wurde, oder die Datenquelle eine Transaktion nicht beginnen.  
   
@@ -299,10 +300,10 @@ ODBC-Verbindungen werden die folgenden Status haben.
   
 |C0<br /><br /> Keine Env.|C1<br /><br /> Nicht zugeordnet|C2<br /><br /> Belegt|C3<br /><br /> Daten erforderlich|C4<br /><br /> Verbunden|C5<br /><br /> -Anweisung.|C6<br /><br /> Transaction|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(SODASS)|--|--|(HY010)|--|--|--|  
+|(IH)|--|--|(HY010)|--|--|--|  
   
 ## <a name="all-other-odbc-functions"></a>Alle anderen ODBC-Funktionen  
   
 |C0<br /><br /> Keine Env.|C1<br /><br /> Nicht zugeordnet|C2<br /><br /> Belegt|C3<br /><br /> Daten erforderlich|C4<br /><br /> Verbunden|C5<br /><br /> -Anweisung.|C6<br /><br /> Transaction|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(SODASS)|(SODASS)|(SODASS)|(SODASS)|(SODASS)|--|--|
+|(IH)|(IH)|(IH)|(IH)|(IH)|--|--|

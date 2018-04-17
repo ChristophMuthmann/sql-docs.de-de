@@ -1,32 +1,32 @@
 ---
-title: "Anhang B: ODBC-Übergang Statustabellen | Microsoft Docs"
-ms.custom: 
+title: 'Anhang B: ODBC-Übergang Statustabellen | Microsoft Docs'
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - state transitions [ODBC]
 - transitioning states [ODBC], about state transitions
 - state transitions [ODBC], about state transitions
 ms.assetid: 15088dbe-896f-4296-b397-02bb3d0ac0fb
-caps.latest.revision: 
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2dabd364fb0a7415a4cf05035d06f5a1dd5838e5
-ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
+ms.openlocfilehash: cc14674918571a3536cf0d15389ea4d43367c262
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="appendix-b-odbc-state-transition-tables"></a>Anhang B: ODBC-Übergang Statustabellen
 In den Tabellen in diesem Anhang werden wie die ODBC-Funktionen Übergang von der Umgebung, Verbindungs-, Anweisung und Deskriptor Zustände verursachen. Der Status der Umgebung, die Verbindung, die Anweisung oder die Deskriptor bestimmt in der Regel an, wenn Funktionen, die verwenden den entsprechenden Typ des Handles (Umgebung, Verbindung, Anweisung oder Deskriptor) aufgerufen werden kann. Die Status-Umgebung, Verbindung, anweisungs- und Deskriptorstatuswerte überlappen ungefähr wie in der folgenden Abbildung dargestellt. Angenommen, die genaue Überlappung der Verbindung gibt, C5 und C6 und Anweisung besagt, dass S1 bis S12 ist datenquellenabhängig, da Transaktionen zu unterschiedlichen Zeiten auf verschiedenen Datenquellen starten und Deskriptor Status D1i (implizit Deskriptor zugeordnet) abhängt den Status der Anweisung, die mit der Deskriptor verknüpft ist, ist beim Status D1e (explizit Deskriptor reserviert) unabhängig von den Zustand einer beliebigen Anweisung. Eine Beschreibung der einzelnen Zustände, finden Sie unter [Umgebungsübergänge](../../../odbc/reference/appendixes/environment-transitions.md), [Verbindung Übergänge](../../../odbc/reference/appendixes/connection-transitions.md), [Anweisung Übergänge](../../../odbc/reference/appendixes/statement-transitions.md), und [Deskriptor Übergänge ](../../../odbc/reference/appendixes/descriptor-transitions.md)weiter unten in diesem Anhang.  
@@ -72,9 +72,9 @@ In den Tabellen in diesem Anhang werden wie die ODBC-Funktionen Übergang von de
 |d|Benötigen Sie Daten. Die Funktion hat SQL_NEED_DATA zurückgegeben.|  
 |e|Error (Fehler). Die Funktion hat SQL_ERROR zurückgegeben.|  
 |i|Ungültige Zeile. Der Cursor positioniert wurde in einer Zeile im Resultset Satz und entweder die Zeile wurde wurde gelöscht oder in einem Vorgang für die Zeile ist ein Fehler aufgetreten. Wenn die zeilenstatusarray vorhanden war, wurde der Wert in der zeilenstatusarray für die Zeile SQL_ROW_DELETED oder SQL_ROW_ERROR. (Die zeilenstatusarray wird durch das Anweisungsattribut SQL_ATTR_ROW_STATUS_PTR verwiesen.)|  
-|nf|Nicht gefunden. Die Funktion hat SQL_NO_DATA zurückgegeben. Dies gilt nicht beim **SQLExecDirect**, **SQLExecute**, oder **SQLParamData** gibt SQL_NO_DATA nach der Ausführung einer gesuchten update oder delete-Anweisung.|  
+|Nf|Nicht gefunden. Die Funktion hat SQL_NO_DATA zurückgegeben. Dies gilt nicht beim **SQLExecDirect**, **SQLExecute**, oder **SQLParamData** gibt SQL_NO_DATA nach der Ausführung einer gesuchten update oder delete-Anweisung.|  
 |np|Nicht vorbereitet. Die Anweisung wurde nicht vorbereitet.|  
-|nr|Keine Ergebnisse. Die Anweisung wird nicht oder ein Resultset erstellt wurde.|  
+|Nr.|Keine Ergebnisse. Die Anweisung wird nicht oder ein Resultset erstellt wurde.|  
 |o|Andere Funktion. Eine andere Funktion wurde asynchron ausgeführt.|  
 |p|Vorbereitet. Die Anweisung vorbereitet wurde.|  
 |r|Ergebnisse. Die Anweisung oder hat ein Resultset (möglicherweise leere) erstellt wird.|  

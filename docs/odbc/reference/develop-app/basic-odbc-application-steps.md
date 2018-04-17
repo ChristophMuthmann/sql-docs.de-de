@@ -1,30 +1,31 @@
 ---
 title: Grundlegende ODBC-Anwendung Schritte | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - application process [ODBC]
 - application process [ODBC], about application process
 ms.assetid: a92d1f78-c669-47ad-88c4-0b1a93503dfc
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bf9073f8dc4ec4a3216ee676a0f942c8e2ff982f
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 8879cf9a2d6d56cfb4ac8503b7c8a67d6d2773f8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="basic-odbc-application-steps"></a>Schritte für grundlegende ODBC-Anwendung
 In diesem Abschnitt wird beschrieben, die allgemeine Vorgehensweise des ODBC-Anwendungen. Es ist unwahrscheinlich, dass jede Anwendung all diese Funktionen in genau dieser Reihenfolge aufgerufen. Die meisten Anwendungen verwenden jedoch einige Variante der folgenden Schritte aus. Die grundlegende Schritte werden in der folgenden Abbildung gezeigt.  

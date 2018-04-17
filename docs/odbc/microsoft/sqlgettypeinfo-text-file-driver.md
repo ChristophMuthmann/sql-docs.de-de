@@ -1,30 +1,31 @@
 ---
 title: SQLGetTypeInfo (Text-Datei-Treiber) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQLGetTypeInfo function [ODBC], Text File Driver
 - text file driver [ODBC], SQLGetTypeInfo
 ms.assetid: 05a58975-093c-4bd9-bd72-b5f0026a6e36
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3b3cf7a05b20ea4eb540a59bb28b82bfae0ca9fd
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: a4b84e9e826eb2ad3104f00d9d39224fb2da6303
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlgettypeinfo-text-file-driver"></a>SQLGetTypeInfo (Text-Datei-Treiber)
 > [!NOTE]  

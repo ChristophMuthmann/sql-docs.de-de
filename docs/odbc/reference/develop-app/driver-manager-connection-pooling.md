@@ -1,15 +1,16 @@
 ---
 title: Treibermanager-Verbindungspooling | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - connection pooling [ODBC]
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - connecting to driver [ODBC], connection pooling
 - connecting to data source [ODBC], connection pooling
 ms.assetid: ee95ffdb-5aa1-49a3-beb2-7695b27c3df9
-caps.latest.revision: "32"
+caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d2883c374768723eeff4100113873130eeea6da7
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c18e4e09d620221541bea32dc80391a7e4b5ddd9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="driver-manager-connection-pooling"></a>Treibermanager-Verbindungspooling
 Verbindungspooling ermöglicht einer Anwendung eine Verbindung aus einem Pool von Verbindungen verwendet werden, die nicht für jede Verwendung neu eingerichtet werden müssen. Sobald eine Verbindung erstellt und in einem Pool platziert wurde, kann eine Anwendung diese Verbindung wiederverwenden, ohne die vollständige Verbindungsprozess auszuführen.  
@@ -36,7 +37,7 @@ Verbindungspooling ermöglicht einer Anwendung eine Verbindung aus einem Pool vo
  Zusätzlich zu den Leistungssteigerungen ermöglicht der Verbindungspooling-Architektur eine Umgebung und die zugeordneten Verbindungen von mehreren Komponenten in einem einzelnen Prozess verwendet werden. Dies bedeutet, dass es sich bei eigenständigen Komponenten in demselben Prozess miteinander interagieren können, ohne Berücksichtigung der jeweils anderen. Eine Verbindung in einem Verbindungspool kann wiederholt von mehreren Komponenten verwendet werden.  
   
 > [!NOTE]  
->  Verbindungspooling kann von einer ODBC-Anwendung ODBC 2. Fehler verwendet werden. *x* Verhalten, solange die Anwendung aufrufen kann *SQLSetEnvAttr*. Bei der Verwendung von Verbindungspooling Ausführen der Anwendung muss nicht SQL-Anweisungen, die sich der Datenbank oder im Kontext der Datenbank, z. B. das Ändern Ändern der \< *Datenbank**Namen*>, welche Ändert den Katalog, die von einer Datenquelle verwendet.  
+>  Verbindungspooling kann von einer ODBC-Anwendung ODBC 2. Fehler verwendet werden. *x* Verhalten, solange die Anwendung aufrufen kann *SQLSetEnvAttr*. Wenn Verbindungspooling verwenden, muss die Anwendung nicht SQL-Anweisungen, die die Datenbank oder im Kontext der Datenbank, z. B. veränderte ändern ausgeführt der \< *Datenbank ** Namen*>, welche Änderungen des Katalogs, in eine die Datenquelle.  
   
  Ein ODBC-Treiber muss vollständig threadsicheren und Verbindungen dürfen keine Threadaffinität um Verbindungspooling zu unterstützen. Dies bedeutet, dass der Treiber ist in der Lage, einen Aufruf für jeden Thread zu einem beliebigen Zeitpunkt zu behandeln und Herstellen einer Verbindung in einem Thread, um die Verbindung in einem anderen Thread verwendet und um auf ein dritter Thread zu trennen.  
   

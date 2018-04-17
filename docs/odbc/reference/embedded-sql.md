@@ -1,15 +1,16 @@
 ---
 title: Embedded SQL | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQL [ODBC], embedded SQL
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - ODBC [ODBC], SQL
 - embedded SQL [ODBC]
 ms.assetid: 8eee3527-f225-4aa2-bd18-a16bd3ab0fb7
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: db7c9b02f885c09df1eccbdc27ef2fd895168848
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 1e7d51d8ae632f30528510448e52fc6c363d066d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="embedded-sql"></a>Embedded SQL
 Das erste Verfahren für das Senden von SQL-Anweisungen an das DBMS eingebettet ist SQL. Da SQL keine Variablen und die Control-of-Flow-Anweisungen verwendet werden, wird dies häufig als eine Datenbanksprache verwendet, die in einer konventionellen Programmiersprache, z. B. C# oder COBOL geschriebenes Programm hinzugefügt werden können. Dies ist eine zentrale Vorstellung von embedded SQL: Platzieren von SQL-Anweisungen in einem Programm auf einem Host Programmiersprache geschrieben. Nur kurz, werden die folgenden Techniken zum Einbetten von SQL-Anweisungen in einer Hostsprache verwendet:  

@@ -2,7 +2,7 @@
 title: Anweisungsparametern | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: 58d5b166-2578-4699-a560-1f1e6d86c49a
 caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 08d2365291bf6c402ead138d6182c83de5f27896
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e848b55e9219ea8bd4994efc7ca5d746d0d71be9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="statement-parameters"></a>Anweisungsparametern
 Ein *Parameter* ist eine Variable in einer SQL­Anweisung. Angenommen Sie, dass eine Parts-Tabelle Spalten PartID, Beschreibung und Price verfügt. Ein Teil ohne Parameter hinzufügen, müsste z. B. eine SQL-Anweisung erstellen:  

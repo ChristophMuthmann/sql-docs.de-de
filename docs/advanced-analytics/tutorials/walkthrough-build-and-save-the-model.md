@@ -1,29 +1,17 @@
 ---
 title: Ein R-Modell zu erstellen und speichern in SQL Server | Microsoft Docs
-ms.custom: ''
-ms.date: 07/14/2017
-ms.reviewer: ''
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: ''
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
 ms.topic: tutorial
-applies_to:
-- SQL Server 2016
-dev_langs:
-- R
-ms.assetid: 69b374c1-2042-4861-8f8b-204a6297c0db
-ms.author: heidist
 author: HeidiSteen
+ms.author: heidist
 manager: cgronlun
-ms.workload: Inactive
-ms.openlocfilehash: 71ad6a35d28a3d7975f03e6b7e7589ffee4e18ca
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: c580cc3a6e5fefd7882d4fc58f6eacd6d9999f71
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="build-an-r-model-and-save-to-sql-server"></a>Ein R-Modell zu erstellen und speichern in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -51,7 +39,7 @@ Das Modell erstellen ist eine binäre Klassifizierung, die vorhersagt, ob der Tr
      *Ergebnisse*
 
      *Die logistische Regression Ergebnisse für: Geneigter ~ Passenger_count Trip_distance + Trip_time_in_secs +* Direct_distance *   <br/>*Daten: FeatureDataSource (RxSqlServerData-Datenquelle)*
-     <br/>*Dependent variable(s): tipped*
+     <br/>*Dependent Variable(s): Geneigter*
      <br/>*Gesamtanzahl der unabhängigen Variablen: 5*
      <br/>*Anzahl der gültigen Beobachtungen: 17068*
      <br/>*Anzahl der fehlenden Beobachtungen: 0*
@@ -59,10 +47,10 @@ Das Modell erstellen ist eine binäre Klassifizierung, die vorhersagt, ob der Tr
      <br/>*Koeffizienten:*
      <br/>*Estimate Std. Fehlerwert Z Pr (> | Z |)*
      <br/>*(Intercept) - 2.509e-03 3.223e-02-0.078 0.93793*
-     <br/>*passenger_count   -5.753e-02  1.088e-02  -5.289 1.23e-07 \*\*\**
+     <br/>*Passenger_count-5.753e-02 1.088e-02-5.289 1.23e-07 \*\*\**
      <br/>*trip_distance     -3.896e-02  1.466e-02  -2.658  0.00786 \*\**
      <br/>*Trip_time_in_secs 2.115e-4.336e 04-05 4.878 1.07e-06 \*\*\**
-     <br/>*direct_distance    6.156e-02  2.076e-02   2.966  0.00302 \*\**
+     <br/>*Direct_distance 6.156e-02 2.076e-02 2.966 0.00302 \*\**
      <br/>*---*
      <br/>*Signif. codes:  0 ‘\*\*\*’ 0.001 ‘\*\*’ 0.01 ‘\*’ 0.05 ‘.’ 0.1 ‘ ’ 1*
      <br/>*Anzahl der endgültigen Varianz-kovarianzmatrix Bedingung: 48.3933*

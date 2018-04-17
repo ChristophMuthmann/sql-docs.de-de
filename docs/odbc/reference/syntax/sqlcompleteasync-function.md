@@ -2,7 +2,7 @@
 title: SQLCompleteAsync Funktion | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -20,13 +20,13 @@ ms.assetid: 1b97c46a-d2e5-4540-8239-9d975e5321c6
 caps.latest.revision: 4
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 91a6449e07ff83fd6bb7478bfc52cb077a76c955
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 93a6362bf0a0f7870d1fed5dfeafa5cdf1885cd3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlcompleteasync-function"></a>SQLCompleteAsync-Funktion
 **Konformität**  

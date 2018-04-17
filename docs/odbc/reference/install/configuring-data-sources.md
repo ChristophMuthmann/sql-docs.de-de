@@ -2,7 +2,7 @@
 title: Konfigurieren von Datenquellen | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: f11985c2-c054-4ab4-840e-aca4c585c9d8
 caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e7e8c96fe9ce093f9a5d3d0f09b0dc6a35568d9e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: bf8e6b63991fa3ca850d0bda4793959548e5f691
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="configuring-data-sources"></a>Konfigurieren von Datenquellen
 Informationen zu den Datenquellen werden in der systemregistrierung gespeichert. Benutzer ändern Datenquelleninformationen über eine Anwendung für die Verwaltung. Dies kann der ODBC-Administrator, das ODBC-Systemsteuerung-Gerät oder einen-Verwaltungsprogramm, die von einer Anwendung oder Treiber Developer geschrieben sein.  

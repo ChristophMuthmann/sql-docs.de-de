@@ -4,12 +4,12 @@ description: Beschreibt das Abrufen und Importieren von Daten in der Analysis Se
 ms.prod_service: analysis-services, azure-analysis-services
 services: analysis-services
 ms.suite: pro-bi
-documentationcenter: 
+documentationcenter: ''
 author: Minewiskan
 manager: kfile
-editor: 
-tags: 
-ms.assetid: 
+editor: ''
+tags: ''
+ms.assetid: ''
 ms.service: analysis-services
 ms.devlang: NA
 ms.topic: get-started-article
@@ -17,11 +17,12 @@ ms.tgt_pltfrm: NA
 ms.workload: na
 ms.date: 02/20/2018
 ms.author: owend
-ms.openlocfilehash: 1fd06f563581d42764b5b6f29b3c22d8129f9160
-ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
+monikerRange: '>= sql-analysis-services-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 3dd8c6e562fa1c792ff5bf9c117b687f8d77475b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="get-data"></a>Abrufen von Daten
 
@@ -48,7 +49,7 @@ Dieser Artikel ist Teil eines Lernprogramms zur tabellenmodellierung, das in Rei
   
     Dadurch wird **Daten abrufen**, die schrittweise Anleitung zum Herstellen einer Verbindung mit einer Datenquelle. Wenn Sie nicht tabellarische Modell-Explorer in sehen **Projektmappen-Explorer**, doppelklicken Sie auf **Model.bim** auf das Modell im Designer zu öffnen. 
     
-    ![as-lesson2-getdata](../tutorial-tabular-1400/media/as-lesson2-getdata.png)
+    ![Getdata als lesson2](../tutorial-tabular-1400/media/as-lesson2-getdata.png)
   
 2.  Abrufen der Daten, klicken Sie auf **Datenbank** > **SQL Server-Datenbank** > **verbinden**.  
   
@@ -56,7 +57,7 @@ Dieser Artikel ist Teil eines Lernprogramms zur tabellenmodellierung, das in Rei
 
 4.  Wenn Sie aufgefordert, Anmeldeinformationen einzugeben, müssen Sie die Anmeldeinformationen angeben, die Analysis Services für die Verbindung mit der Datenquelle, die beim Importieren und Verarbeiten von Daten verwendet. In **Identitätswechselmodus**Option **Konto Identität**, geben Sie dann die Anmeldeinformationen ein, und klicken Sie dann auf **verbinden**. Es wird empfohlen, dass Sie ein Konto verwenden, in denen nicht das Kennwort abläuft.
 
-    ![as-lesson2-account](../tutorial-tabular-1400/media/as-lesson2-account.png)
+    ![Konto als 2](../tutorial-tabular-1400/media/as-lesson2-account.png)
   
     > [!NOTE]  
     > Die Verwendung eines Windows-Benutzerkontos und -Kennworts stellt die sicherste Methode für das Herstellen einer Verbindung mit einer Datenquelle dar.
@@ -65,7 +66,7 @@ Dieser Artikel ist Teil eines Lernprogramms zur tabellenmodellierung, das in Rei
   
 6.  Im Navigator, aktivieren Sie das Kontrollkästchen für die folgenden Tabellen: **DimCustomer**, **DimDate**, **DimGeography**, **DimProduct**, **DimProductCategory**, **DimProductSubcategory**, und **FactInternetSales**.  
 
-    ![as-lesson2-select-tables](../tutorial-tabular-1400/media/as-lesson2-select-tables.png)
+    ![als lesson2-Select-Tabellen](../tutorial-tabular-1400/media/as-lesson2-select-tables.png)
   
 Nachdem Sie auf "OK" klicken, wird die Abfrage-Editor geöffnet. Im nächsten Abschnitt wählen Sie nur die Daten, die Sie importieren möchten.
 
@@ -80,14 +81,14 @@ Tabellen in der AdventureWorksDW-Beispieldatenbank enthalten Daten, die nicht in
   
 2.  Mehrfachauswahl (Strg + Klick) **SpanishEducation**, **FrenchEducation**, **SpanishOccupation**, **FrenchOccupation**, und klicken Sie dann mit der rechten Maustaste, und klicken Sie dann auf **Spalten entfernen**. 
 
-    ![as-lesson2-remove-columns](../tutorial-tabular-1400/media/as-lesson2-remove-columns.png)
+    ![als lesson2-Remove-Spalten](../tutorial-tabular-1400/media/as-lesson2-remove-columns.png)
   
     Da die Werte für diese Spalten nicht relevant für die Analyse von Internetverkäufen sind, müssen die Spalten nicht importiert werden. Entfernen nicht erforderlicher Spalten wird das Modell kleiner und effizienter.  
 
     > [!TIP]
     > Wenn Sie ein Fehler unterläuft, können Sie von einem Schritt löschen Sichern **ANGEWENDETE Schritte**.   
     
-    ![as-lesson2-remove-columns](../tutorial-tabular-1400/media/as-lesson2-remove-step.png)
+    ![als lesson2-Remove-Spalten](../tutorial-tabular-1400/media/as-lesson2-remove-step.png)
 
   
 4.  Entfernen die folgenden Spalten in jeder Tabelle, um die übrigen Tabellen zu filtern:  
@@ -151,7 +152,7 @@ Nun, dass Sie nicht benötigte Daten herausgefiltert und in der Vorschau angezei
   
 1.  Überprüfen Sie Ihre Auswahl. Wenn alles in Ordnung ist, klicken Sie auf **Import**. Das Dialogfeld "Datenverarbeitung" zeigt den Status der Daten, die von der Datenquelle in der arbeitsbereichsdatenbank importiert werden.
   
-    ![as-lesson2-success](../tutorial-tabular-1400/media/as-lesson2-success.png) 
+    ![als lesson2-Erfolg](../tutorial-tabular-1400/media/as-lesson2-success.png) 
   
 2.  Klicken Sie auf **Schließen**.  
 

@@ -1,24 +1,17 @@
 ---
-title: Was ist SQL Server-Machine Learning-Services? | Microsoft Docs
-ms.date: 03/07/2018
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.service: ''
-ms.component: ''
-ms.reviewer: ''
-ms.suite: sql
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
+title: Was ist SQL Server-Machine Learning-Services? | Microsoft-Dokumentation
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: overview
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.workload: ''
-ms.openlocfilehash: 77642fa794493a98c56be70f4615f6401e48b3c5
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: d4beafc3c5dcb19c1b46b53d727f36733884daad
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="what-is-sql-server-machine-learning-services"></a>Was ist SQL Server-Machine Learning-Services?
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -71,8 +64,8 @@ SQL Server 2017 Machine Learning Services ist die nächste Generation von SQL Se
 
 | Produktname | Modulversion | Veröffentlichungsdatum |
 |--------------|---------|--------------|
-| SQL Server 2017 Machine Learning Services (Datenbankintern) | R Server 9.2.1 <br/> Python Server 9.2 | Oktober 2017 |
-| SQL Server 2017 Machine Learning-Server (eigenständig) | R Server 9.2.1 <br/> Python Server 9.2 | Oktober 2017 |
+| SQL Server 2017 Machine Learning Services (Datenbankintern) | R Server 9.2.1 <br/> Python-Server 9.2 | Oktober 2017 |
+| SQL Server 2017 Machine Learning-Server (eigenständig) | R Server 9.2.1 <br/> Python-Server 9.2 | Oktober 2017 |
 | SQL Server 2016 R Services (Datenbankintern) | R Server 9.1  | Juli 2017  |
 | SQL Server 2016-R-Server (eigenständig)  |  R Server 9.1 | Juli 2017 |
 

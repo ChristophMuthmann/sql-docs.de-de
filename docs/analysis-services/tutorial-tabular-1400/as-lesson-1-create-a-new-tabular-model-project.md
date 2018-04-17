@@ -4,12 +4,12 @@ description: Beschreibt, wie ein neues Analysis Services Tutorials-Projekt zu er
 ms.prod_service: analysis-services, azure-analysis-services
 services: analysis-services
 ms.suite: pro-bi
-documentationcenter: 
+documentationcenter: ''
 author: Minewiskan
 manager: kfile
-editor: 
-tags: 
-ms.assetid: 
+editor: ''
+tags: ''
+ms.assetid: ''
 ms.service: analysis-services
 ms.devlang: NA
 ms.topic: get-started-article
@@ -17,11 +17,12 @@ ms.tgt_pltfrm: NA
 ms.workload: na
 ms.date: 02/20/2018
 ms.author: owend
-ms.openlocfilehash: 6b8d24a31ade8fe621ef2a71b932e87c13211451
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+monikerRange: '>= sql-analysis-services-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 72b403297be09f8bee1e78b9f545f279936cfa0d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-a-tabular-model-project"></a>Erstellen Sie ein Projekt für tabellarische Modelle
 
@@ -55,7 +56,7 @@ Dieser Artikel ist die erste Lektion in ein Lernprogramm zur tabellenmodellerste
       
 6.  In **Kompatibilitätsgrad**Option **SQL Server 2017 / Azure Analysis Services (1400)**.   
  
-    ![as-lesson1-tmd](../tutorial-tabular-1400/media/as-lesson1-tmd.png)
+    ![als Lektion 1 zu tmd](../tutorial-tabular-1400/media/as-lesson1-tmd.png)
       
     Wenn SQL Server 2017 / Azure Analysis Services (1400) im Compatibility Level Listenfeld nicht angezeigt wird, verwenden Sie nicht die neueste Version von SQL Server Data Tools. Sie können die neueste Version unter [Installieren von SQL Server Data Tools](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt)herunterladen.  
       
@@ -74,7 +75,7 @@ Klicken Sie auf die **Projektmappen-Explorer** Registerkarte. Hier sehen Sie Ihr
   
 Klicken Sie auf **Model.bim**. In der **Eigenschaften** Fenster sehen Sie die Modelleigenschaften, die wichtigste die **DirectQuery-Modus** Eigenschaft. Diese Eigenschaft gibt an, ob das Modell im InMemory-Modus (aus) oder DirectQuery-Modus (On) bereitgestellt wird. In diesem Lernprogramm erstellen und das Modell im InMemory Modus bereitstellen.
 
-![as-lesson1-properties](../tutorial-tabular-1400/media/as-lesson1-properties.png)
+![als Lektion 1 zu Eigenschaften](../tutorial-tabular-1400/media/as-lesson1-properties.png)
   
 Wenn Sie ein Modellprojekt erstellen, bestimmte Modelleigenschaften werden automatisch festgelegt gemäß den datenmodellierungseinstellungen, die angegeben werden können die **Tools** Menü > **Optionen** (Dialogfeld). Die Eigenschaften für die Datensicherung, Beibehaltung des Arbeitsbereichs und den Arbeitsbereichsserver geben an, wie und wo die Arbeitsbereichsdatenbank (Datenbank zur Modellerstellung) gesichert, speicherintern beibehalten und erstellt wird. Sie können diese Einstellungen später ändern, falls erforderlich, aber lassen Sie diese Eigenschaften unverändert.  
 

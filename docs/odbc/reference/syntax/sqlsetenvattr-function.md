@@ -2,7 +2,7 @@
 title: SQLSetEnvAttr-Funktion | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 0343241c-4b15-4d4b-aa2b-2e8ab5215cd2
 caps.latest.revision: 38
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c8a70e7d7de19f4f69a79db56742938ca0d61344
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ef21f18346ad21afbba42d282763db5a527029f9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlsetenvattr-function"></a>SQLSetEnvAttr-Funktion
 **Konformität**  
@@ -61,7 +61,7 @@ SQLRETURN SQLSetEnvAttr(
  *ValuePtr*  
  [Eingabe] Zeiger auf den Wert zugeordnet werden *Attribut*. Abhängig vom Wert der *Attribut*, *ValuePtr* wird ein ganze 32-Bit-Wert sein, und zeigen Sie auf eine Null-terminierte Zeichenfolge.  
   
- *StringLength*  
+ *stringLength*  
  [Eingabe] Wenn *ValuePtr* zeigt auf eine Zeichenfolge oder einen binären Puffer, in dieses Argument muss die Länge des **ValuePtr*. Für Zeichenfolgendaten sollte dieses Argument die Anzahl der Bytes in der Zeichenfolge enthalten.  
   
  Wenn *ValuePtr* ist eine ganze Zahl *StringLength* wird ignoriert.  
@@ -75,7 +75,7 @@ SQLRETURN SQLSetEnvAttr(
 |SQLSTATE|Fehler|Description|  
 |--------------|-----------|-----------------|  
 |01000|Allgemeine Warnung|Treiberspezifische Meldung dient zu Informationszwecken. (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
-|01 S 02|Der Optionswert wurde geändert|Der Treiber nicht den Wert im angegebenen *ValuePtr* und einen ähnlichen Wert ersetzt. (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
+|01S02|Der Optionswert wurde geändert|Der Treiber nicht den Wert im angegebenen *ValuePtr* und einen ähnlichen Wert ersetzt. (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
 |HY000|Allgemeiner Fehler|Für die es keine spezifischen SQLSTATE wurde und für die keine implementierungsabhängige SQLSTATE definiert wurde, ist ein Fehler aufgetreten. Die zurückgegebene Fehlermeldung **SQLGetDiagRec** in der  *\*MessageText* Puffer beschreibt den Fehler und seiner Ursache.|  
 |HY001|Fehler bei der speicherbelegung|Der Treiber konnte nicht belegt werden zur Unterstützung der Ausführung oder den Abschluss der Funktion erforderlich.|  
 |HY009|Ungültige Verwendung des null-Zeiger|Das Attributargument identifiziert ein Umgebung-Attribut, das einen Zeichenfolgenwert erforderlich sind und die *ValuePtr* Argument wurde ein null-Zeiger.|  

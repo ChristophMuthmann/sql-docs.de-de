@@ -1,15 +1,16 @@
 ---
-title: "Thread-Unterstützung (Visual FoxPro-ODBC-Treiber) | Microsoft Docs"
-ms.custom: 
+title: Thread-Unterstützung (Visual FoxPro-ODBC-Treiber) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - thread support [ODBC]
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - FoxPro ODBC driver [ODBC], thread support
 - multithreaded applications [ODBC]
 ms.assetid: 0c6abbbc-012b-41aa-bded-5e7e362d015b
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0c92c727b79c2fc33c98e02580d7980c219c56d6
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e93bfc712c7f06ce239a7425a12ba3498291e385
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="thread-support-visual-foxpro-odbc-driver"></a>Thread-Unterstützung (Visual FoxPro-ODBC-Treiber)
 Der Visual FoxPro-ODBC-Treiber ist threadsicher. Zugriff auf Umgebungshandles (*enn*), Verbindungshandles (*Hdbc*), und Anweisungshandles (*Befehls beschäftigt*) wird in der entsprechenden Semaphoren, um zu verhindern, dass andere Prozesse eingebunden auf zugreifen und möglicherweise ändern internen Datenstrukturen des Treibers.  
