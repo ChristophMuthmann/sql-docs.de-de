@@ -1,7 +1,7 @@
 ---
 title: Sp_addsubscription (Transact-SQL) | Microsoft Docs
 ms.date: 10/28/2015
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: system-stored-procedures
@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 860f2f99457344167af9035d0a9ccc21eebc2577
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: 08b375e45d672ca7f1286a8012ca0c5a6304c481
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddsubscription-transact-sql"></a>sp_addsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -217,13 +217,13 @@ sp_addsubscription [ @publication = ] 'publication'
 > [!NOTE]  
 >  Dieser Parameter wurde als veraltet markiert und wird nur noch bereitgestellt, um Abwärtskompatibilität von Skripts sicherzustellen.  
   
- [ @offloadserver= ] '*remote_agent_server_name*'  
+ [ @offloadserver=] '*Remote_agent_server_name*"  
  Gibt den Netzwerknamen des Servers an, der für die Remoteaktivierung verwendet werden soll. *Remote_agent_server_name*ist **Sysname**, hat den Standardwert NULL.  
   
- [ @dts_package_name= ] '*dts_package_name*'  
+ [ @dts_package_name=] '*Dts_package_name*"  
  Gibt den Namen des DTS-Pakets (Data Transformation Services) an. *Dts_package_name* ist ein **Sysname** hat den Standardwert NULL. Um z. B. ein Paket namens DTSPub_Package anzugeben, wird der Parameter `@dts_package_name = N'DTSPub_Package'` verwendet. Dieser Parameter ist für Pushabonnements verfügbar. Verwenden Sie sp_addpullsubscription_agent, um einem Pullabonnement DTS-Paketinformationen hinzuzufügen.  
   
- [ @dts_package_password= ] '*dts_package_password*'  
+ [ @dts_package_password=] '*Dts_package_password*"  
  Gibt gegebenenfalls das Kennwort des Pakets an. *Dts_package_password* ist **Sysname** hat den Standardwert NULL.  
   
 > [!NOTE]  
@@ -232,7 +232,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @dts_package_location=] '*Dts_package_location*"  
  Gibt den Paketspeicherort an. *Dts_package_location* ist ein **nvarchar(12)**, hat den Standardwert des VERTEILERS. Der Speicherort des Pakets kann distributor oder subscriber sein.  
   
- [ @distribution_job_name= ] '*distribution_job_name*'  
+ [ @distribution_job_name=] '*distribution_job _name*"  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
  [ @publisher= ] '*publisher*'  
@@ -241,7 +241,7 @@ sp_addsubscription [ @publication = ] 'publication'
 > [!NOTE]  
 >  *Publisher* sollte nicht angegeben werden, für eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger.  
   
- [ @backupdevicetype= ] '*backupdevicetype*'  
+ [ @backupdevicetype=] '*Backupdevicetype*"  
  Gibt den Sicherungsmedientyp an, der beim Initialisieren eines Abonnenten von einer Sicherung verwendet wird. *Backupdevicetype* ist **nvarchar(20)**, und kann einen der folgenden Werte:  
   
 |Wert|Description|  
@@ -261,7 +261,7 @@ sp_addsubscription [ @publication = ] 'publication'
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
- [ @password= ] '*password*'  
+ [ @password=] '*Kennwort*"  
  Gibt ein Kennwort für die Sicherung an, falls beim Erstellen der Sicherung ein Kennwort festgelegt wurde. *Kennwort*ist **Sysname**, hat den Standardwert NULL.  
   
  [ @fileidhint= ] *fileidhint*  

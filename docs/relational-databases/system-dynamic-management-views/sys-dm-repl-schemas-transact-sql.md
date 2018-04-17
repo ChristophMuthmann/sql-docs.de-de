@@ -1,16 +1,16 @@
 ---
-title: sys.dm_repl_schemas (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: dm_repl_schemas (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_repl_schemas_TSQL
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_repl_schemas dynamic management function
 ms.assetid: 6f5fefff-8492-4360-bd5b-a97287367914
-caps.latest.revision: 
+caps.latest.revision: 15
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8e4ed91b38fc7175b6e3eff96f1e65415022834d
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: b57aedba448f2ce94f5a5fc7756e3a27d7a95f96
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmreplschemas-transact-sql"></a>sys.dm_repl_schemas (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.lasthandoff: 02/03/2018
 |-----------------|---------------|-----------------|  
 |**artcache_schema_address**|**varbinary(8)**|Speicherinterne Adresse der zwischengespeicherten Schemastruktur für den veröffentlichten Tabellenartikel.|  
 |**tabid**|**bigint**|ID der replizierten Tabelle.|  
-|**indexid**|**smallint**|ID eines gruppierten Indexes für die veröffentlichten Tabelle.|  
+|**IndexID**|**smallint**|ID eines gruppierten Indexes für die veröffentlichten Tabelle.|  
 |**idSch**|**bigint**|ID des Tabellenschemas.|  
 |**tabschema**|**nvarchar(510)**|Name des Tabellenschemas.|  
 |**ccTabschema**|**smallint**|Zeichenlänge des Tabellenschemas.|  
@@ -52,10 +52,10 @@ ms.lasthandoff: 02/03/2018
 |**rowsetid_delete**|**bigint**|ID der gelöschten Zeile.|  
 |**rowsetid_insert**|**bigint**|ID der eingefügten Zeile.|  
 |**num_pk_cols**|**int**|Anzahl der Primärschlüsselspalten.|  
-|**pcitee**|**binary(8000)**|Zeiger auf die Abfrageausdrucksstruktur, die beim Auswerten der berechneten Spalte verwendet wird.|  
+|**pcitee**|**Binary(8000)**|Zeiger auf die Abfrageausdrucksstruktur, die beim Auswerten der berechneten Spalte verwendet wird.|  
 |**re_numtextcols**|**int**|Anzahl von BLOB-Spalten in der replizierten Tabelle.|  
-|**re_schema_lsn_begin**|**binary(8000)**|Erste Protokollsequenznummer (Log Sequence Number, LSN) der Schemaversionsprotokollierung.|  
-|**re_schema_lsn_end**|**binary(8000)**|Letzte LSN der Schemaversionsprotokollierung.|  
+|**re_schema_lsn_begin**|**Binary(8000)**|Erste Protokollsequenznummer (Log Sequence Number, LSN) der Schemaversionsprotokollierung.|  
+|**re_schema_lsn_end**|**Binary(8000)**|Letzte LSN der Schemaversionsprotokollierung.|  
 |**re_numcols**|**int**|Anzahl der veröffentlichten Spalten.|  
 |**re_colid**|**int**|Spalten-ID auf dem Verleger.|  
 |**re_awcName**|**nvarchar(510)**|Name der veröffentlichten Spalte.|  
@@ -73,8 +73,8 @@ ms.lasthandoff: 02/03/2018
 |**re_fAnsiTrim**|**tinyint**|Gibt an, ob ANSI-Kürzung in der veröffentlichten Spalte verwendet wird.|  
 |**re_computed**|**smallint**|Gibt an, ob die veröffentlichte Spalte eine berechnete Spalte ist.|  
 |**se_rowsetid**|**bigint**|ID des Rowsets.|  
-|**se_schema_lsn_begin**|**binary(8000)**|Erste LSN der Schemaversionsprotokollierung.|  
-|**se_schema_lsn_end**|**binary(8000)**|Letzte LSN der Schemaversionsprotokollierung.|  
+|**se_schema_lsn_begin**|**Binary(8000)**|Erste LSN der Schemaversionsprotokollierung.|  
+|**se_schema_lsn_end**|**Binary(8000)**|Letzte LSN der Schemaversionsprotokollierung.|  
 |**se_numcols**|**int**|Anzahl der Spalten.|  
 |**se_colid**|**int**|ID der Spalte auf dem Abonnenten.|  
 |**se_maxlen**|**smallint**|Maximale Länge der Spalte.|  
@@ -97,7 +97,7 @@ ms.lasthandoff: 02/03/2018
   
 ## <a name="see-also"></a>Siehe auch  
  [Dynamische Verwaltungssichten und -funktionen &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Mit der Replikation verbundene dynamische Verwaltungssichten &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/replication-related-dynamic-management-views-transact-sql.md)  
+ [Replikation verbundene dynamische Verwaltungssichten &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/replication-related-dynamic-management-views-transact-sql.md)  
   
   
 

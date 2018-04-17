@@ -2,7 +2,7 @@
 title: SQLInstallDriverEx Funktion | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 1dd74544-f4e9-46e1-9b5f-c11d84fdab4c
 caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4179bf04131f256c5a37cb01c079035a569a07af
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 85c6bcc740743473e8563fc3c3c25e967caff095
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlinstalldriverex-function"></a>SQLInstallDriverEx-Funktion
 **Konformität**  
@@ -106,9 +106,9 @@ BOOL SQLInstallDriverEx(
 ## <a name="comments"></a>Kommentare  
  Die *LpszDriver* Argument ist eine Liste der Attribute in Form von Schlüsselwort-Wert-Paaren. Jedes Paar wird durch ein Nullbyte beendet, und die gesamte Liste wird mit null Byte beendet. (D. h. kennzeichnen zwei null-Bytes am Ende der Liste.) Das Format dieser Liste wird wie folgt aus:  
   
- *Treiber-"DESC"*  **\\** 0Driver**=***-Treiber-DLL-Dateiname*  **\\** 0 [Setup**=***Setup-DLL-Dateiname***\\**0]  
+ *Treiber-"DESC"* **\\**0Driver**=***-Treiber-DLL-Dateiname***\\**0 [Setup **= ***Setup-DLL-Dateiname***\\**0]  
   
- [*-Treiber-Attr-Schlüsselwort1***=***value1***\\**0] [*-Treiber-Attr-Schlüsselwort2*   **=**  *value2***\\**0]...  **\\** 0  
+ [*-Treiber-Attr-Schlüsselwort1***=***value1 ***\\**0] [*-Treiber-Attr-Schlüsselwort2***=*** Wert2 ***\\**0]... **\\**0  
   
  \0 ist, in dem ein Nullbyte und *-Treiber-Attr-Keywordn* alle Treiber-Attribut-Schlüsselwort ist. Die Schlüsselwörter müssen in der angegebenen Reihenfolge angezeigt werden. Beispielsweise nehmen wir an, dass ein Treiber für Textdateien formatierte separate Treiber und -Setup-DLLs verwendet, und mit den Erweiterungen ".txt" und CSV verwenden Sie-Dateien. Die *LpszDriver* Argument für diesen Treiber möglicherweise wie folgt:  
   

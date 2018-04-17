@@ -1,16 +1,16 @@
 ---
-title: sys.dm_tran_version_store_space_usage (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: Sys.dm_tran_version_store_space_usage (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 04/30/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_tran_version_store_space_usage_TSQL
@@ -22,21 +22,22 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_tran_version_store_space_usage dynamic management view
 ms.assetid: 7ab44517-0351-4f91-bdd9-7cf940f03c51
-caps.latest.revision: 
+caps.latest.revision: 10
 author: savjani
 ms.author: pariks
 manager: ajayj
 ms.workload: Inactive
-ms.openlocfilehash: 3108394b7848047bac97ece004bf9c168b0e045c
-ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 0f46c84abe0c62c36f76a3bc8d02576d30357e19
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="sysdmtranversionstorespaceusage-transact-sql"></a>sys.dm_tran_version_store_space_usage (Transact-SQL)
+# <a name="sysdmtranversionstorespaceusage-transact-sql"></a>Sys.dm_tran_version_store_space_usage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
-Gibt eine Tabelle, in dem Gesamtspeicherplatz in Tempdb verwendeten Speicher Versionsdatensätze für jede Datenbank angezeigt. **sys.dm_tran_version_store_space_usage** is efficient and not expensive to run, as it does not navigate through individual version store records, and returns aggregated version store space consumed in tempdb per database.
+Gibt eine Tabelle, in dem Gesamtspeicherplatz in Tempdb verwendeten Speicher Versionsdatensätze für jede Datenbank angezeigt. **Sys.dm_tran_version_store_space_usage** ist effizient und nicht über einzelne Version Store Datensätze navigieren, und gibt die aggregierten Version Store Speicherplatz in ' tempdb ' pro Datenbank ausgeführt wird, nicht aufwändig.
   
 Jeder Versionsdatensatz wird als Binärdaten zusammen mit protokollierungs- oder Statusinformationen gespeichert. Ähnlich wie Datensätze in Datenbanktabellen werden die Versionsspeicherdatensätze in 8192 Bytes umfassenden Seiten gespeichert. Falls ein Datensatz größer ist als 8192 Bytes, wird er in zwei unterschiedliche Datensätze geteilt.  
   

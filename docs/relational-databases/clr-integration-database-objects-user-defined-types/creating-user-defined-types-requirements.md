@@ -1,15 +1,15 @@
 ---
 title: User-Defined Type-Anforderungen | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: clr
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - UDTs [CLR integration], requirements
@@ -22,20 +22,20 @@ helpviewer_keywords:
 - user-defined types [CLR integration], Native serialization
 - UDTs [CLR integration], Native serialization
 ms.assetid: bedc3372-50eb-40f2-bcf2-d6db6a63b7e6
-caps.latest.revision: 
+caps.latest.revision: 31
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a075d6c4c4cc5ccd0477bb33159cf319fb0754b6
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 20e395dbd298fe0b808a847443481c150ba5be3a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="creating-user-defined-types---requirements"></a>Erstellen von benutzerdefinierten Typen - Anforderungen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Sie müssen mehrere wichtige entwurfsentscheidungen für die Erstellung einen benutzerdefinierten Typ (UDT), auf installiert werden, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Für die meisten UDTs wird das Erstellen als Struktur empfohlen, obwohl auch das Erstellen als Klasse möglich ist. Die UDT-Definition muss den Spezifikationen für das Erstellen von UDTs entsprechen, um mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] registriert werden zu können.  
+  Sie müssen mehrere wichtige entwurfsentscheidungen für die Erstellung einen benutzerdefinierten Typ (UDT), auf installiert werden, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Für die meisten UDTs wird das Erstellen als Struktur empfohlen, obwohl auch das Erstellen als Klasse möglich ist. Die UDT-Definition muss den Spezifikationen für das Erstellen von UDTs entsprechen, um mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] registriert werden zu können.  
   
 ## <a name="requirements-for-implementing-udts"></a>Anforderungen für das Implementieren von UDTs  
  Um in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt zu werden, muss der UDT die folgenden Anforderungen in der UDT-Definition implementieren:  
@@ -52,7 +52,7 @@ Sie müssen mehrere wichtige entwurfsentscheidungen für die Erstellung einen be
   
 -   Es darf nur eine Serialisierung eines UDT-Objekts geben. Die Überprüfung schlägt fehl, wenn die Serialisierungs- oder Deserialisierungsroutinen mehr als eine Darstellung eines bestimmten Objekts erkennen.  
   
--   **SqlUserDefinedTypeAttribute.IsByteOrdered** must be **true** to compare data in byte order. Wenn die IComparable-Schnittstelle nicht implementiert wird und **SqlUserDefinedTypeAttribute.IsByteOrdered** ist **"false"**, Vergleiche in Bytereihenfolge fehl.  
+-   **SqlUserDefinedTypeAttribute.IsByteOrdered** muss **"true"** , Daten in Bytereihenfolge zu vergleichen. Wenn die IComparable-Schnittstelle nicht implementiert wird und **SqlUserDefinedTypeAttribute.IsByteOrdered** ist **"false"**, Vergleiche in Bytereihenfolge fehl.  
   
 -   Ein in einer Klasse definierter UDT muss über einen öffentlichen Konstruktor verfügen, der keine Argumente verwendet. Sie können optional zusätzliche überladene Klassenkonstruktoren erstellen.  
   
@@ -115,7 +115,7 @@ Sie müssen mehrere wichtige entwurfsentscheidungen für die Erstellung einen be
  **IsByteOrdered**  
  Ein **booleschen** Wert, der bestimmt, wie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] binäre Vergleiche auf dem UDT ausführt.  
   
- **IsFixedLength**  
+ **"IsFixedLength"**  
  Gibt an, ob alle Instanzen dieses UDTs dieselbe Länge haben.  
   
  **MaxByteSize**  

@@ -1,16 +1,16 @@
 ---
-title: sp_describe_first_result_set (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: Sp_describe_first_result_set (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/17/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_describe_first_result_set
@@ -20,16 +20,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_describe_first_result_set
 ms.assetid: f2355a75-3a8e-43e6-96ad-4f41038f6d22
-caps.latest.revision: 
+caps.latest.revision: 22
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 76c5088e011f4111e67631a5e7cbfed1ff57059b
-ms.sourcegitcommit: 3ed9be04cc7fb9ab1a9ec230c298ad2932acc71b
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 8860d9b24731b311b3161ccdfca0f163ba3204d9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/17/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spdescribefirstresultset-transact-sql"></a>sp_describe_first_result_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -51,7 +52,7 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
  [ **@tsql =** ] **'***Transact-SQL_batch***'**  
  Eine oder mehrere [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen. *Transact-SQL_batch* möglicherweise **Nvarchar (***n***)** oder **nvarchar(max)**.  
   
- [ **@params =** ] **N'***parameters***'**  
+ [  **@params =** ] **N'***Parameter***"**  
  @params Stellt eine deklarationszeichenfolge für Parameter für die [!INCLUDE[tsql](../../includes/tsql-md.md)] Batch, die analog zu sp_executesql bereit ist. Parameter können ggf. werden **nvarchar (n)** oder **nvarchar(max)**.  
   
  Eine Zeichenfolge, die die Definitionen aller Parameter enthält, die in eingebettet wurden die [!INCLUDE[tsql](../../includes/tsql-md.md)] *_batch*. Die Zeichenfolge muss eine Unicode-Konstante oder eine Unicode-Variable sein. Jede Parameterdefinition besteht aus einem Parameternamen und einem Datentyp. *n* ist ein Platzhalter, der zusätzliche Parameterdefinitionen. Jeder in der Anweisung angegebene Parameter muss definiert werden, @params. Wenn die [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisung oder eines Batches in der Anweisung keine Parameter, @params ist nicht erforderlich. NULL wird der Standardwert für diesen Parameter an.  
@@ -66,7 +67,7 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 -   Bei 2 wird jede Abfrage analysiert, als würde sie beim Vorbereiten oder Ausführen eines Cursors verwendet. Damit werden Sichtnamen als Quellspalteninformationen zurückgegeben.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
- **sp_describe_first_result_set** always returns a status of zero on success. Wenn die Prozedur löst einen Fehler aus, und die Prozedur als RPC aufgerufen wird, wird der Rückgabestatus durch den Typ des Fehlers in der Error_type-Spalte der Sys. dm_exec_describe_first_result_set beschriebenen aufgefüllt. Wenn die Prozedur von [!INCLUDE[tsql](../../includes/tsql-md.md)] aufgerufen wird, ist der Rückgabewert immer 0; dies gilt auch bei einem Fehler.  
+ **Sp_describe_first_result_set** immer den Status bei Erfolg NULL zurück. Wenn die Prozedur löst einen Fehler aus, und die Prozedur als RPC aufgerufen wird, wird der Rückgabestatus durch den Typ des Fehlers in der Error_type-Spalte der Sys. dm_exec_describe_first_result_set beschriebenen aufgefüllt. Wenn die Prozedur von [!INCLUDE[tsql](../../includes/tsql-md.md)] aufgerufen wird, ist der Rückgabewert immer 0; dies gilt auch bei einem Fehler.  
   
 ## <a name="result-sets"></a>Resultsets  
  Diese allgemeinen Metadaten werden in den Ergebnismetadaten als Resultset mit einer Zeile für jede Spalte zurückgegeben. Jede Zeile beschreibt den Typ und die NULL-Zulässigkeit der Spalte in dem Format, das im folgenden Abschnitt beschriebenen wird. Wenn die erste Anweisung nicht für alle Steuerelementpfade vorhanden ist, wird ein Resultset mit 0 Zeilen zurückgegeben.  
@@ -75,23 +76,23 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 |-----------------|---------------|-----------------|  
 |**is_hidden**|**Bit NOT NULL**|Gibt an, dass es sich bei der Spalte um eine zusätzliche Spalte zum Suchen von Informationen handelt, die nicht im Resultset angezeigt wird.|  
 |**column_ordinal**|**Int NOT NULL**|Enthält die Ordnungsposition der Spalte im Resultset. Die Position der ersten Spalte wird mit 1 angegeben.|  
-|**name**|**sysname NULL**|Enthält den Namen der Spalte, wenn ein Name bestimmt werden kann. Andernfalls enthält er NULL.|  
+|**name**|**Sysname NULL**|Enthält den Namen der Spalte, wenn ein Name bestimmt werden kann. Andernfalls enthält er NULL.|  
 |**is_nullable**|**Bit NOT NULL**|Enthält den Wert 1, wenn die Spalte NULL-Werte zulässt, 0, wenn die Spalte keinen NULL-Werte zulässt, und 1, wenn nicht ermittelt werden kann, ob die Spalte NULL-Werte zulässt.|  
 |**system_type_id**|**Int NOT NULL**|Enthält die System_type_id des Datentyps der Spalte, wie in sys.types angegeben. Bei CLR-Typen wird von dieser Spalte der Wert 240 zurückgegeben, obwohl von der system_type_name-Spalte NULL zurückgegeben wird.|  
-|**system_type_name**|**nvarchar(256) NULL**|Enthält den Namen und die Argumente (z. B. Länge, Genauigkeit oder Skala), die für den Datentyp der Spalte angegeben wurden. Wenn der Datentyp ein benutzerdefinierter Aliastyp ist, wird der zugrunde liegende Systemtyp hier angegeben. Bei einem benutzerdefinierten CLR-Typ wird NULL in dieser Spalte zurückgegeben.|  
+|**system_type_name**|**nvarchar (256) NULL**|Enthält den Namen und die Argumente (z. B. Länge, Genauigkeit oder Skala), die für den Datentyp der Spalte angegeben wurden. Wenn der Datentyp ein benutzerdefinierter Aliastyp ist, wird der zugrunde liegende Systemtyp hier angegeben. Bei einem benutzerdefinierten CLR-Typ wird NULL in dieser Spalte zurückgegeben.|  
 |**max_length**|**Smallint nicht NULL**|Maximale Länge (in Byte) für die Spalte.<br /><br /> -1 = Spaltendatentyp ist **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, oder **Xml**.<br /><br /> Für **Text** Spalten, die **Max_length** Wert ist 16 oder festlegen, indem **Sp_tableoption 'Text in Row'**.|  
 |**precision**|**"tinyint" NOT NULL**|Die Genauigkeit der Spalte, wenn sie auf numerischen Werten basiert. Andernfalls wird 0 zurückgegeben.|  
 |**scale**|**"tinyint" NOT NULL**|Die Skalierung der Spalte, wenn sie auf numerischen Werten basiert. Andernfalls wird 0 zurückgegeben.|  
-|**collation_name**|**sysname NULL**|Name der Sortierung der Spalte, wenn diese zeichenbasiert ist. Andernfalls wird NULL zurückgegeben.|  
+|**collation_name**|**Sysname NULL**|Name der Sortierung der Spalte, wenn diese zeichenbasiert ist. Andernfalls wird NULL zurückgegeben.|  
 |**user_type_id**|**Int NULL**|Enthält bei CLR- und Aliastypen die user_type_id des Datentyps der Spalte, wie in sys.types angegeben. Andernfalls NULL.|  
-|**user_type_database**|**sysname NULL**|Enthält bei CLR- und Aliastypen den Namen der Datenbank, in der der Typ definiert wurde. Andernfalls NULL.|  
-|**user_type_schema**|**sysname NULL**|Enthält bei CLR- und Aliastypen den Namen des Schemas, in dem der Typ definiert wurde. Andernfalls NULL.|  
-|**user_type_name**|**sysname NULL**|Enthält bei CLR- und Aliastypen den Namen des Typs. Andernfalls NULL.|  
+|**user_type_database**|**Sysname NULL**|Enthält bei CLR- und Aliastypen den Namen der Datenbank, in der der Typ definiert wurde. Andernfalls NULL.|  
+|**user_type_schema**|**Sysname NULL**|Enthält bei CLR- und Aliastypen den Namen des Schemas, in dem der Typ definiert wurde. Andernfalls NULL.|  
+|**user_type_name**|**Sysname NULL**|Enthält bei CLR- und Aliastypen den Namen des Typs. Andernfalls NULL.|  
 |**assembly_qualified_type_name**|**nvarchar(4000)**|Gibt bei CLR-Typen den Namen der Assembly und der Klasse zurück, die den Typ definieren. Andernfalls NULL.|  
 |**xml_collection_id**|**Int NULL**|Enthält die xml_collection_id des Datentyps für die Spalte, wie in sys.columns angegeben. Diese Spalte gibt NULL zurück, wenn der zurückgegebene Typ keiner XML Schema Collection zugeordnet ist.|  
-|**xml_collection_database**|**sysname NULL**|Enthält die Datenbank, in der die XML-Schemaauflistung definiert ist, die diesem Typ zugeordnet wurde. Diese Spalte gibt NULL zurück, wenn der zurückgegebene Typ keiner XML Schema Collection zugeordnet ist.|  
-|**xml_collection_schema**|**sysname NULL**|Enthält das Schema, in dem die XML-Schemaauflistung definiert ist, die diesem Typ zugeordnet wurde. Diese Spalte gibt NULL zurück, wenn der zurückgegebene Typ keiner XML Schema Collection zugeordnet ist.|  
-|**xml_collection_name**|**sysname NULL**|Enthält den Namen der XML-Schemaauflistung, die diesem Typ zugeordnet wurde. Diese Spalte gibt NULL zurück, wenn der zurückgegebene Typ keiner XML Schema Collection zugeordnet ist.|  
+|**xml_collection_database**|**Sysname NULL**|Enthält die Datenbank, in der die XML-Schemaauflistung definiert ist, die diesem Typ zugeordnet wurde. Diese Spalte gibt NULL zurück, wenn der zurückgegebene Typ keiner XML Schema Collection zugeordnet ist.|  
+|**xml_collection_schema**|**Sysname NULL**|Enthält das Schema, in dem die XML-Schemaauflistung definiert ist, die diesem Typ zugeordnet wurde. Diese Spalte gibt NULL zurück, wenn der zurückgegebene Typ keiner XML Schema Collection zugeordnet ist.|  
+|**xml_collection_name**|**Sysname NULL**|Enthält den Namen der XML-Schemaauflistung, die diesem Typ zugeordnet wurde. Diese Spalte gibt NULL zurück, wenn der zurückgegebene Typ keiner XML Schema Collection zugeordnet ist.|  
 |**is_xml_document**|**Bit NOT NULL**|Gibt 1 zurück, wenn der zurückgegebene Datentyp XML ist und für diesen Typ garantiert ist, dass es sich um ein vollständiges XML-Dokument (einschließlich eines Stammknotens) handelt, nicht um ein XML-Fragment. Andernfalls wird 0 zurückgegeben.|  
 |**is_case_sensitive**|**Bit NOT NULL**|Gibt 1 zurück, wenn die Spalte einen Zeichenfolgentyp darstellt, bei dem die Groß-/Kleinschreibung beachtet wird, andernfalls 0.|  
 |**is_fixed_length_clr_type**|**Bit NOT NULL**|Gibt 1 zurück, wenn die Spalte ein CLR-Typ mit fester Länge ist, andernfalls 0.|  
@@ -120,7 +121,7 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
   
  Dabei wird vorausgesetzt, dass keine relevanten Schemaänderungen auf dem Server vorgenommen wurden. Relevanten schemaänderungen auf dem Server nicht einschließen, Erstellen von temporären Tabellen oder Tabellenvariablen im Batch zwischen dem Zeitpunkt, **Sp_describe_first_result_set** aufgerufen wird und die Zeit, die während der Resultset zurückgegeben wird Ausführung, wie schemaänderungen durch Batch b  
   
- **sp_describe_first_result_set** returns an error in any of the following cases.  
+ **Sp_describe_first_result_set** in den folgenden Fällen einen Fehler zurück.  
   
 -   Wenn die Eingabe @tsql ist kein gültiger [!INCLUDE[tsql](../../includes/tsql-md.md)] Batch. Gültigkeit wird bestimmt durch Analysieren der [!INCLUDE[tsql](../../includes/tsql-md.md)] Batch. Alle Fehler, die durch den Batch verursacht während der abfrageoptimierung oder-Ausführung nicht berücksichtigt, wenn festlegen, ob die [!INCLUDE[tsql](../../includes/tsql-md.md)] Batch ist gültig.  
   

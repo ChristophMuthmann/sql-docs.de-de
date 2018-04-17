@@ -1,15 +1,15 @@
 ---
 title: Schreiben von Code von benutzerdefinierten Typen | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: clr
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - VB
@@ -33,20 +33,20 @@ helpviewer_keywords:
 - validating UDT values
 - exposing UDT properties [CLR integration]
 ms.assetid: 1e5b43b3-4971-45ee-a591-3f535e2ac722
-caps.latest.revision: 
+caps.latest.revision: 37
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5bf3a762eb8e8435972d4813d8b3e852d39c8b2d
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: d39df3bcadebc8c6433d11563c6d628ca439f061
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="creating-user-defined-types---coding"></a>Erstellen von benutzerdefinierten Typen - Codierung
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Wenn Sie die Definition eines benutzerdefinierten Typs (UDT) schreiben, müssen Sie verschiedene Funktionen implementieren, abhängig davon, ob Sie den UDT als Klasse oder als Struktur implementieren, sowie abhängig von den von Ihnen gewählten Format- und Serialisierungsoptionen.  
+  Wenn Sie die Definition eines benutzerdefinierten Typs (UDT) schreiben, müssen Sie verschiedene Funktionen implementieren, abhängig davon, ob Sie den UDT als Klasse oder als Struktur implementieren, sowie abhängig von den von Ihnen gewählten Format- und Serialisierungsoptionen.  
   
  Im Beispiel in diesem Abschnitt veranschaulicht die Implementierung einer **Punkt** UDT als eine **Struktur** (oder **Struktur** in Visual Basic). Die **Punkt** UDT besteht aus X- und Y-Koordinaten als implementiert Eigenschaftenprozeduren.  
   
@@ -72,7 +72,7 @@ using Microsoft.SqlServer.Server;
 ## <a name="specifying-attributes"></a>Angeben von Attributen  
  Attribute bestimmen, wie die Serialisierung verwendet wird, um die Speicherdarstellung von UDTs zu erstellen und um UDTs durch Werte an den Client zu übertragen.  
   
- Die **Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute** ist erforderlich. Die **Serializable** Attribut ist optional. Sie können auch angeben, die **Microsoft.SqlServer.Server.SqlFacetAttribute** um Informationen über den Rückgabetyp eines UDTs bereitzustellen. Weitere Informationen finden Sie unter [benutzerdefinierte Attribute für CLR-Routinen](../../relational-databases/clr-integration/database-objects/clr-integration-custom-attributes-for-clr-routines.md).  
+ Die **Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute** ist erforderlich. Die **Serializable** Attribut ist optional. Sie können auch angeben, die **Microsoft.SqlServer.Server.SqlFacetAttribute** um Informationen über den Rückgabetyp eines UDTs bereitzustellen. Weitere Informationen finden Sie unter [Benutzerdefinierte Attribute für CLR-Routinen](../../relational-databases/clr-integration/database-objects/clr-integration-custom-attributes-for-clr-routines.md).  
   
 ### <a name="point-udt-attributes"></a>Attribute des Point-UDT  
  Die **Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute** legt das Speicherformat für die **Punkt** UDT **systemeigene**. **IsByteOrdered** festgelegt ist, um **"true"**, dies garantiert, dass die Ergebnisse der Vergleiche in SQL Server identisch sind, als ob Sie denselben Vergleich in verwaltetem Code stattgefunden hat. Der UDT implementiert die **System.Data.SqlTypes.INullable** Schnittstelle, um der UDT Null aufmerksam zu machen.  
@@ -99,7 +99,7 @@ public struct Point : INullable
   
  Sie müssen eine Eigenschaft namens erstellen **IsNull**, das erforderlich ist, um festzustellen, ob ein Wert von CLR-Code null ist. Wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eine NULL-Instanz eines UDTs findet, wird der UDT mit normalen Behandlungsmethoden für NULL-Werte persistent gespeichert. Der Server vergeudet keine Zeit mit dem Serialisieren oder Deserialisieren des UDTs, wenn dies nicht erforderlich ist, und er verschwendet keinen Platz zum Speichern des NULL-UDTs. Diese Überprüfung auf NULL wird jedes Mal durchgeführt, wenn ein UDT von der CLR übernommen wird. Das heißt, dass mit dem [!INCLUDE[tsql](../../includes/tsql-md.md)]-Konstrukt immer überprüft werden kann, ob UDTs NULL sind. Die **IsNull** Eigenschaft wird auch vom Server verwendet, um zu testen, ob eine Instanz null ist. Sobald der Server bestimmt, dass der UDT NULL ist, kann er seine systemeigene NULL-Behandlung verwenden.  
   
- Die **get()** Methode **IsNull** ist nicht in keiner Weise Sonderfall. Wenn eine **Punkt** Variable  **@p**  ist **Null**, klicken Sie dann  **@p.IsNull**  , standardmäßig als ausgewertet "NULL", nicht "1". Grund hierfür ist die **SqlMethod(OnNullCall)** Attribut von der **IsNull get()** Methode der Standardwert ist "false". Da das Objekt ist **Null**, wenn die Eigenschaft angefordert wird, nicht das Objekt deserialisiert wird, die Methode wird nicht aufgerufen und der Standardwert "NULL" wird zurückgegeben.  
+ Die **get()** Methode **IsNull** ist nicht in keiner Weise Sonderfall. Wenn eine **Punkt** Variable **@p** ist **Null**, klicken Sie dann **@p.IsNull** , standardmäßig als ausgewertet "NULL", nicht "1". Grund hierfür ist die **SqlMethod(OnNullCall)** Attribut von der **IsNull get()** Methode der Standardwert ist "false". Da das Objekt ist **Null**, wenn die Eigenschaft angefordert wird, nicht das Objekt deserialisiert wird, die Methode wird nicht aufgerufen und der Standardwert "NULL" wird zurückgegeben.  
   
 ### <a name="example"></a>Beispiel  
  Im folgenden Beispiel ist die `is_Null`-Variable privat und enthält für die Instanz des UDT den Status NULL. Im Code muss ein entsprechender Wert für `is_Null` verwaltet werden. Der UDT benötigen auch eine statische Eigenschaft namens **Null** , die null-Wertinstanz des UDTS zurückgibt. Dadurch kann der UDT einen NULL-Wert zurückgeben, wenn die Instanz auch in der Datenbank tatsächlich NULL ist.  

@@ -1,16 +1,16 @@
 ---
-title: "Einfügen von Daten mit XML-Updategrams (SQLXML 4.0) | Microsoft Docs"
-ms.custom: 
+title: Einfügen von Daten mit XML-Updategrams (SQLXML 4.0) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - xsi:nil attribute
@@ -36,20 +36,21 @@ helpviewer_keywords:
 - at-identity attribute
 - xml data type [SQL Server], SQLXML
 ms.assetid: 4dc48762-bc12-43fb-b356-ea1b9c1e287e
-caps.latest.revision: 
+caps.latest.revision: 33
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1d06fef3fcdc237740b9590d5d8e75fc9730a34e
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 6db1eec431905e01b75fcc10c94f18f1e0d6436d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="inserting-data-using-xml-updategrams-sqlxml-40"></a>Einfügen von Daten mit XML-Updategrams (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Ein Updategram zeigt einen Einfügevorgang an, wenn eine im Datensatzinstanz die  **\<nach >** blockieren, aber nicht in den entsprechenden  **\<vor >** Block. In diesem Fall fügt das Updategram den Datensatz in die  **\<nach >** -Block in der Datenbank.  
+  Ein Updategram zeigt einen Einfügevorgang an, wenn eine im Datensatzinstanz die  **\<nach >** blockieren, aber nicht in den entsprechenden  **\<vor >** Block. In diesem Fall fügt das Updategram den Datensatz in die  **\<nach >** -Block in der Datenbank.  
   
  Dies ist das Updategramformat für einen Einfügevorgang:  
   
@@ -81,7 +82,7 @@ Ein Updategram zeigt einen Einfügevorgang an, wenn eine im Datensatzinstanz die
  Wenn die  **\<nach >** Block stellt einen Wert für eine bestimmte Spalte keine bereit, das Updategram verwendet den Standardwert, der in das Schema mit Anmerkungen angegeben ist (wenn ein Schema angegeben wurde). Wenn das Schema nicht über einen Standardwert für die Spalte angibt, das Updategram gibt keinen keinen expliziten Wert für diese Spalte und, stattdessen weist der [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Standardwert (falls angegeben), das dieser Spalte. Wenn kein [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Standardwert vorhanden ist, und die Spalte einen NULL-Wert akzeptiert, legt das Updategram den Spaltenwert auf NULL fest. Wenn die Spalte weder einen Standardwert besitzt, noch einen NULL-Wert akzeptiert, schlägt der Befehl fehl, und das Updategram gibt einen Fehler zurück. Das optionale **updg: ReturnId** Attribut wird verwendet, um den Identitätswert zurückzugeben, die vom System generiert wird, wenn ein Datensatz in einer Tabelle mit einer Spalte vom Typ IDENTITY hinzugefügt wird.  
   
 ## <a name="updgid-attribute"></a>updg:id-Attribut  
- Wenn das Updategram nur Datensätze einfügt, wird das Updategram nicht erfordern die **updg: ID** Attribut. Weitere Informationen zu **updg: ID**, finden Sie unter [Aktualisieren von Daten mithilfe von XML-Updategrams &#40; SQLXML 4.0 &#41; ](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/updating-data-using-xml-updategrams-sqlxml-4-0.md).  
+ Wenn das Updategram nur Datensätze einfügt, wird das Updategram nicht erfordern die **updg: ID** Attribut. Weitere Informationen zu **updg: ID**, finden Sie unter [Aktualisieren von Daten mithilfe von XML-Updategrams &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/updating-data-using-xml-updategrams-sqlxml-4-0.md).  
   
 ## <a name="updgat-identity-attribute"></a>updg:at-identity-Attribut  
  Wenn ein Updategram einen Datensatz in eine Tabelle, die eine IDENTITY-Spalte verfügt einfügt, kann das Updategram den vom System zugewiesenen Wert erfassen, indem Sie mit dem optionalen **Updg: zur Identität** Attribut. Das Updategram kann dann diesen Wert in nachfolgenden Vorgängen verwenden. Bei der Ausführung des Updategrams können Sie die Identitätswert, der durch Angabe generiert wird Zurückgeben der **updg: ReturnId** Attribut.  
@@ -94,7 +95,7 @@ Ein Updategram zeigt einen Einfügevorgang an, wenn eine im Datensatzinstanz die
   
  Bevor Sie die updategrambeispiele verwenden, ist Folgendes zu beachten:  
   
--   Die meisten der Beispiele verwenden die Standardzuordnung (d. h. es ist kein Zuordnungsschema im Updategram angegeben). Weitere Beispiele für Updategrams, die Zuordnungsschemas verwenden, finden Sie unter [ein Mapping-Schema mit Anmerkungen angeben, in einem Updategram &#40; SQLXML 4.0 &#41; ](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md).  
+-   Die meisten der Beispiele verwenden die Standardzuordnung (d. h. es ist kein Zuordnungsschema im Updategram angegeben). Weitere Beispiele für Updategrams, die Zuordnungsschemas verwenden, finden Sie unter [ein Mapping-Schema mit Anmerkungen angeben, in einem Updategram &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md).  
   
 -   Die meisten Beispiele verwenden die [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)]-Beispieldatenbank. Alle Updates werden für die Tabellen in dieser Datenbank übernommen.  
   
@@ -418,7 +419,7 @@ CustOrder(OrderID, EmployeeID, OrderType)
 </ROOT>  
 ```  
   
- Weitere Beispiele für Updategrams, die ein Zuordnungsschema angeben, finden Sie unter [ein Mapping-Schema mit Anmerkungen angeben, in einem Updategram &#40; SQLXML 4.0 &#41; ](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md).  
+ Weitere Beispiele für Updategrams, die ein Zuordnungsschema angeben, finden Sie unter [ein Mapping-Schema mit Anmerkungen angeben, in einem Updategram &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md).  
   
 ##### <a name="to-test-the-updategram"></a>So testen Sie das Updategram  
   
@@ -734,6 +735,6 @@ CustOrder(OrderID, EmployeeID, OrderType)
      Weitere Informationen finden Sie unter [mithilfe von ADO zum Ausführen von SQLXML 4.0-Abfragen](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Sicherheitsüberlegungen zu Updategrams &#40; SQLXML 4.0 &#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
+ [Sicherheitsüberlegungen zu Updategrams &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
   
   

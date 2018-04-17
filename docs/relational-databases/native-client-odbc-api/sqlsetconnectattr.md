@@ -1,30 +1,31 @@
 ---
 title: SQLSetConnectAttr | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-odbc-api
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apitype: DLLExport
 helpviewer_keywords:
 - SQLSetConnectAttr function
 ms.assetid: d21b5cf1-3724-43f7-bc96-5097df0677b4
-caps.latest.revision: 
+caps.latest.revision: 106
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d68049b848f3a347e64133c811fbd68b69671be0
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: e26bea1dff6f5ba6bc06f786a88f9265a1677d8f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlsetconnectattr"></a>SQLSetConnectAttr
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -193,7 +194,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NT
 |SQL_MARS_ENABLED_NO|Standard. MARS (Multiple Active Result Sets) ist deaktiviert.|  
 |SQL_MARS_ENABLED_YES|MARS ist aktiviert.|  
   
- Weitere Informationen zu MARS finden Sie unter [mithilfe von Multiple Active Result Sets &#40; MARS &#41; ](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).  
+ Weitere Informationen zu MARS finden Sie unter [mithilfe von Multiple Active Result Sets &#40;MARS&#41;](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).  
   
 ## <a name="sqlcoptssmultisubnetfailover"></a>SQL_COPT_SS_MULTISUBNET_FAILOVER  
  Wenn die Anwendung eine Verbindung zu einer [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]-Verfügbarkeitsgruppe in unterschiedlichen Subnetzen herstellt, wird durch diese Verbindungseigenschaft der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client so konfiguriert, dass der (gegenwärtig) aktive Server schneller erkannt und eine Verbindung schneller hergestellt wird. Beispiel:  
@@ -312,12 +313,12 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_MULTISUBMIT_FAILOVER, SQL_IS_ON, SQL_IS_INTE
 ## <a name="sqlsetconnectattr-support-for-service-principal-names-spns"></a>SQLSetConnectAttr-Unterstützung für Dienstprinzipalnamen (SPNs)  
  SQLSetConnectAttr kann verwendet werden, um den Wert der neuen Verbindungsattribute SQL_COPT_SS_SERVER_SPN und SQL_COPT_SS_FAILOVER_PARTNER_SPN festzulegen. Diese Attribute können nicht festgelegt werden, wenn die Verbindung geöffnet ist. Wenn Sie versuchen, diese Attribute bei geöffneter Verbindung festzulegen, wird der Fehler HY011 mit der Meldung "Der Vorgang ist zu diesem Zeitpunkt ungültig" zurückgegeben. (SQLSetConnectOption kann auch verwendet werden, um diese Werte festgelegt wird.)  
   
- Weitere Informationen zu SPNs finden Sie unter [Dienstprinzipalnamen &#40; Dienstprinzipalnamen &#41; in Clientverbindungen &#40; ODBC &#41; ](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md).  
+ Weitere Informationen zu SPNs finden Sie unter [Dienstprinzipalnamen & #40; Dienstprinzipalnamen & #41; in Clientverbindungen & #40; ODBC & #41; ](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md).  
   
 ## <a name="sqlcoptssconnectiondead"></a>SQL_COPT_SS_CONNECTION_DEAD  
  Dieses Attribut ist schreibgeschützt.  
   
- Weitere Informationen zu SQL_COPT_SS_CONNECTION_DEAD finden Sie unter [SQLGetConnectAttr](../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md) und [Herstellen einer Verbindung mit einer Datenquelle &#40; ODBC &#41;](../../relational-databases/native-client-odbc-communication/connecting-to-a-data-source-odbc.md).  
+ Weitere Informationen zu SQL_COPT_SS_CONNECTION_DEAD finden Sie unter [SQLGetConnectAttr](../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md) und [Herstellen einer Verbindung mit einer Datenquelle &#40;ODBC&#41;](../../relational-databases/native-client-odbc-communication/connecting-to-a-data-source-odbc.md).  
   
 ## <a name="example"></a>Beispiel  
  In diesem Beispiel werden Leistungsdaten protokolliert.  
@@ -371,7 +372,7 @@ SQLSetConnectAttr(hDbc, SQL_COPT_SS_PERF_DATA,
  [SET ANSI_PADDING &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-padding-transact-sql.md)   
  [SET ANSI_WARNINGS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-warnings-transact-sql.md)   
  [SET CONCAT_NULL_YIELDS_NULL &#40;Transact-SQL&#41;](../../t-sql/statements/set-concat-null-yields-null-transact-sql.md)   
- [SET QUOTED_IDENTIFIER &#40; Transact-SQL &#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)   
+ [SET QUOTED_IDENTIFIER & #40; Transact-SQL & #41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)   
  [SQLPrepare-Funktion](http://go.microsoft.com/fwlink/?LinkId=59360)   
  [SQLGetInfo](../../relational-databases/native-client-odbc-api/sqlgetinfo.md)  
   

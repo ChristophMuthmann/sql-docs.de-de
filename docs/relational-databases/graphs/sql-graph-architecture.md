@@ -1,38 +1,39 @@
 ---
 title: SQL-Graph-Architektur | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 04/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: graphs
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 helpviewer_keywords:
 - SQL graph
 - SQL graph, architecture
-ms.assetid: 
-caps.latest.revision: 
+ms.assetid: ''
+caps.latest.revision: 1
 author: shkale-msft
 ms.author: shkale
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 887ac78e70d529c404ee2ed3088f088ed53e4a54
-ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
+monikerRange: = azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions
+ms.openlocfilehash: 40a1cf05c5c17be3c11d25cd5e8792eb504c2fa4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-graph-architecture"></a>Architektur der SQL-Diagramm  
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
 Erfahren Sie, wie SQL-Diagramm entworfen wird. Die Grundlagen wissen es einfacher zu verstehen, andere SQL-Diagramm Artikel.
  
-## <a name="sql-graph-database"></a>SQL Graph Database
+## <a name="sql-graph-database"></a>SQL-Graph-Datenbank
 Benutzer können einem Diagramm pro Datenbank erstellen. Ein Diagramm ist eine Auflistung von Knoten und Edge-Tabellen. Knoten oder Edge Tabellen unter dem alle Schemas in der Datenbank erstellt werden, aber sie alle für ein logisches Diagramm gehören. Eine Knotentabelle ist die Auflistung von ähnlichen Typ der Knoten. Beispielsweise enthält eine Knoten-Personentabelle alle Knoten der Person, die zu einem Diagramm gehören. Auf ähnliche Weise wird eine Rahmentabelle eine Auflistung von ähnlichen Typ der Kanten. Beispielsweise enthält eine Rahmentabelle Freunde alle Seiten, die eine Person an eine andere Person eine Verbindung herstellen. Da Knoten und Kanten in Tabellen gespeichert sind, werden die meisten Vorgänge für reguläre Tabellen unterstützt für Knoten oder Edge-Tabellen unterstützt. 
  
  
@@ -116,7 +117,7 @@ Impliziten Spalten in einer Rahmentabelle
 |from_obj_id_\<hex_string>  |INT    |1  |interne zu Objekt-Id von Knoten  |
 |from_id_\<hex_string>  |bigint |1  |Interne aus Knoten graph_id  |
 |$from_id_\<hex_string> |NVARCHAR   |0  |externe aus Knoten-id  |
-|to_obj_id_\<hex_string>    |INT    |1  |interne Objekt-ID von Knoten  |
+|To_obj_id_\<Hex_string >    |INT    |1  |interne Objekt-ID von Knoten  |
 |to_id_\<hex_string>    |bigint |1  |Für Knoten Graph_id intern  |
 |$to_id_\<hex_string>   |NVARCHAR   |0  |externe Knoten-ID  |
  

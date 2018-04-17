@@ -1,16 +1,16 @@
 ---
 title: Sp_changesubstatus (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changesubstatus
 ms.assetid: 9370e47a-d128-4f15-9224-1c3642770c39
-caps.latest.revision: 
+caps.latest.revision: 31
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9fb31421c8f9398e259b41f652d13a5ff8d565b5
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: f38f61bdb7fe29846b9776e5b9c89dee6c52feda
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spchangesubstatus-transact-sql"></a>sp_changesubstatus (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -73,21 +73,21 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@publication=**] **"***Veröffentlichung***"**  
- Der Name der Veröffentlichung. *Veröffentlichung* ist **Sysname**, hat den Standardwert  **%** . Wenn *Veröffentlichung* nicht angegeben ist, werden alle Veröffentlichungen betroffen sind.  
+ [ **@publication=**] **'***publication***'**  
+ Der Name der Veröffentlichung. *Veröffentlichung* ist **Sysname**, hat den Standardwert **%**. Wenn *Veröffentlichung* nicht angegeben ist, werden alle Veröffentlichungen betroffen sind.  
   
  [  **@article=**] **"***Artikel***"**  
- Der Name des Artikels. Er muss für die Veröffentlichung eindeutig sein. *Artikel* ist **Sysname**, hat den Standardwert  **%** . Wenn *Artikel* nicht angegeben ist, wird allen Artikeln betroffen sind.  
+ Der Name des Artikels. Er muss für die Veröffentlichung eindeutig sein. *Artikel* ist **Sysname**, hat den Standardwert **%**. Wenn *Artikel* nicht angegeben ist, wird allen Artikeln betroffen sind.  
   
  [  **@subscriber=**] **"***Abonnenten***"**  
- Der Name des Abonnenten, dessen Status geändert werden soll. *Abonnenten* ist **Sysname**, hat den Standardwert  **%** . Wenn *Abonnenten* nicht angegeben wird, auf den angegebenen Artikel wird der Status für alle Abonnenten geändert.  
+ Der Name des Abonnenten, dessen Status geändert werden soll. *Abonnenten* ist **Sysname**, hat den Standardwert **%**. Wenn *Abonnenten* nicht angegeben wird, auf den angegebenen Artikel wird der Status für alle Abonnenten geändert.  
   
  [  **@status =**] **"***Status***"**  
  Wird der Abonnementstatus in der **Syssubscriptions** Tabelle. *Status* ist **Sysname**, hat keinen Standardwert und kann einen der folgenden Werte sein.  
   
 |Wert|Description|  
 |-----------|-----------------|  
-|**aktive**|Der Abonnent ist synchronisiert und empfängt Daten.|  
+|**Aktive**|Der Abonnent ist synchronisiert und empfängt Daten.|  
 |**Inaktive**|Es ist ein Eintrag für einen Abonnenten ohne Abonnement vorhanden.|  
 |**abonniert**|Der Abonnent fordert Daten an, ist aber noch nicht synchronisiert.|  
   
@@ -95,7 +95,7 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
  Der vorherige Status für das Abonnement. *Previous_status* ist **Sysname**, hat den Standardwert NULL. Dieser Parameter können Sie alle Abonnements zu ändern, die aktuell diesen Status, und er ermöglicht damit Gruppenfunktionen für eine bestimmte Gruppe von Abonnements verfügen (z. B. Festlegen aller aktiven Abonnements zurück zum **abonniert**).  
   
  [  **@destination_db=**] **"***Destination_db***"**  
- Der Name der Zieldatenbank. *Destination_db* ist **Sysname**, hat den Standardwert  **%** .  
+ Der Name der Zieldatenbank. *Destination_db* ist **Sysname**, hat den Standardwert **%**.  
   
  [  **@frequency_type=**] *Frequency_type*  
  Die Häufigkeit für die Zeitplanung des Verteilungstasks. *Frequency_type* ist **Int**, hat den Standardwert NULL.  
@@ -164,25 +164,25 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
  > [!NOTE]  
 >  Die Aktivierung des Remote-Agents wurde als veraltet markiert und wird nicht mehr unterstützt. Dieser Parameter wird nur zur Aufrechterhaltung der Abwärtskompatibilität von Skripts unterstützt. Festlegen von *Remote_agent_server_name* auf einen beliebigen Wert ungleich NULL wird ein Fehler generiert.  
   
- [  **@dts_package_name** =] **"***Dts_package_name***"**  
+ [ **@dts_package_name**=] **"***Dts_package_name***"**  
  Gibt den Namen des DTS-Pakets (Data Transformation Services) an. *Dts_package_name* ist ein **Sysname**, hat den Standardwert NULL. Z. B. für ein Paket mit dem Namen **DTSPub_Package** würden Sie angeben `@dts_package_name = N'DTSPub_Package'`.  
   
- [  **@dts_package_password** =] **"***Dts_package_password***"**  
+ [ **@dts_package_password**=] **"***Dts_package_password***"**  
  Gibt das Kennwort für das Paket an. *Dts_package_password* ist **Sysname** hat den Standardwert NULL, der gibt an, dass die Kennworteigenschaft bleiben unverändert.  
   
 > [!NOTE]  
 >  Ein DTS-Paket muss über ein Kennwort verfügen.  
   
- [  **@dts_package_location** =] *Dts_package_location*  
+ [ **@dts_package_location**=] *Dts_package_location*  
  Gibt den Paketspeicherort an. *Dts_package_location* ist ein **Int**, hat den Standardwert **0**. Wenn **0**, der Speicherort des Pakets wird auf dem Verteiler. Wenn **1**, der Speicherort des Pakets wird auf dem Abonnenten. Der Speicherort des Pakets kann **Verteiler** oder **Abonnenten**.  
   
- [  **@skipobjectactivation** =] *Skipobjectactivation*  
+ [ **@skipobjectactivation**=] *Skipobjectactivation*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
  [  **@distribution_job_name=** ] **"***distribution_job _name***"**  
  Der Name des Verteilungsauftrags. *distribution_job _name* ist **Sysname**, hat den Standardwert NULL.  
   
- [  **@publisher** =] **"***Publisher***"**  
+ [ **@publisher**=] **"***Publisher***"**  
  Gibt einen nicht-[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger. *Publisher* ist **Sysname**, hat den Standardwert NULL.  
   
 > [!NOTE]  
@@ -200,10 +200,10 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
  Nur Mitglieder der der **Sysadmin** festen Serverrolle **Db_owner** festen Datenbankrolle oder der Ersteller des Abonnements kann ausführen **Sp_changesubstatus**.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Sp_addsubscription &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   
- [Sp_dropsubscription &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)   
+ [Sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   
+ [sp_dropsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)   
  [sp_helpdistributor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdistributor-transact-sql.md)   
- [Sp_helpsubscription &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)   
+ [sp_helpsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

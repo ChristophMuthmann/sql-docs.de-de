@@ -1,15 +1,16 @@
 ---
-title: "Mit der Länge und Indikatorwerte | Microsoft Docs"
-ms.custom: 
+title: Mit der Länge und Indikatorwerte | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - data buffers [ODBC], length
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - length of data buffers [ODBC]
 - buffers [ODBC], length
 ms.assetid: 849792f1-cb1e-4bc2-b568-c0aff0b66199
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6012ca2f1b307f475839c7357e813817e222051e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 5c3a817aa541d397a46ae75d09ed09ccbb550842
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-length-and-indicator-values"></a>Mithilfe der Länge und Indikatorwerte
 Die Längen-/Indikatorpuffers wird verwendet, übergeben Sie die Bytelänge der Daten in den Datenpuffer oder einen speziellen Indikator wie z. B. SQL_NULL_DATA gibt an, dass die Daten NULL sind. Abhängig von der Funktion, in der es verwendet wird, wird ein Längen-/Indikatorpuffers definiert, um eine SQLINTEGER oder ein SQLSMALLINT sein. Aus diesem Grund ist ein einzelnes Argument erforderlich, um es zu beschreiben. Dieses Argument enthält die Bytelänge der Daten selbst oder um einen Indikatorwert, wenn Datenpuffer eine nondeferred Eingabepuffer ist. Es wird oft mit dem Namen *StrLen_or_Ind* oder einem ähnlichen Namen. Beispielsweise folgender code ruft **SQLPutData** , übergeben einen Puffer von Daten vollständig; die Bytelänge (*ValueLen*) direkt übergeben wird, da Datenpuffer (*ValuePtr*) ist ein Eingabepuffer.  
@@ -58,7 +59,7 @@ SQLGetData(hstmt, 1, SQL_C_CHAR, ValuePtr, sizeof(ValuePtr), &ValueLenOrInd);
   
  Die folgende Länge sind als Längenindikator/Werte gültig:  
   
--   *n*, wobei  *n*  > 0.  
+-   *n*, wobei *n* > 0.  
   
 -   0.  
   

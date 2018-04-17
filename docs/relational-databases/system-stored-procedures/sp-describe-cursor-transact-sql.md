@@ -1,16 +1,16 @@
 ---
 title: Sp_describe_cursor (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_describe_cursor
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_describe_cursor
 ms.assetid: 0c836c99-1147-441e-998c-f0a30cd05275
-caps.latest.revision: 
+caps.latest.revision: 22
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 38eae1442b8058b6596efd525196f2f76b4b6dce
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: ce7ca0bb9efe8f00cb65dfe9c8cc1dd1d383544b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spdescribecursor-transact-sql"></a>sp_describe_cursor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -89,10 +89,10 @@ sp_describe_cursor [ @cursor_return = ] output_cursor_variable OUTPUT
 |Parallelität (concurrency)|**tinyint**|1 = schreibgeschützt<br /><br /> 2 = Scrollsperre<br /><br /> 3 = Vollständig|  
 |scrollable|**tinyint**|0 = Vorwärts<br /><br /> 1 = Scrollfähig|  
 |open_status|**tinyint**|0 = Geschlossen<br /><br /> 1 = Geöffnet|  
-|cursor_rows|**decimal(10,0)**|Die Anzahl der kennzeichnenden Zeilen im Resultset. Weitere Informationen finden Sie unter [@@CURSOR_ROWS &#40; Transact-SQL &#41; ](../../t-sql/functions/cursor-rows-transact-sql.md).|  
-|fetch_status|**smallint**|Status des letzten Abrufs für diesen Cursor. Weitere Informationen finden Sie unter [@@FETCH_STATUS &#40; Transact-SQL &#41; ](../../t-sql/functions/fetch-status-transact-sql.md).<br /><br /> 0 = Abruf erfolgreich.<br /><br /> -1 = Abruf fehlerhaft oder außerhalb des zulässigen Bereichs des Cursors.<br /><br /> -2 = Die angeforderte Zeile fehlt.<br /><br /> -9 = Kein Abruf für Cursor.|  
+|cursor_rows|**decimal(10,0)**|Die Anzahl der kennzeichnenden Zeilen im Resultset. Weitere Informationen finden Sie unter [@@CURSOR_ROWS &#40;Transact-SQL&#41;](../../t-sql/functions/cursor-rows-transact-sql.md).|  
+|fetch_status|**smallint**|Status des letzten Abrufs für diesen Cursor. Weitere Informationen finden Sie unter [@@FETCH_STATUS &#40;Transact-SQL&#41;](../../t-sql/functions/fetch-status-transact-sql.md).<br /><br /> 0 = Abruf erfolgreich.<br /><br /> -1 = Abruf fehlerhaft oder außerhalb des zulässigen Bereichs des Cursors.<br /><br /> -2 = Die angeforderte Zeile fehlt.<br /><br /> -9 = Kein Abruf für Cursor.|  
 |column_count|**smallint**|Anzahl der Spalten im Resultset des Cursors|  
-|row_count|**decimal(10,0)**|Anzahl der Zeilen, auf die sich den letzten Vorgang für den Cursor auswirkt. Weitere Informationen finden Sie unter [@@ROWCOUNT &#40; Transact-SQL &#41; ](../../t-sql/functions/rowcount-transact-sql.md).|  
+|row_count|**decimal(10,0)**|Anzahl der Zeilen, auf die sich den letzten Vorgang für den Cursor auswirkt. Weitere Informationen finden Sie unter [@@ROWCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/rowcount-transact-sql.md).|  
 |last_operation|**tinyint**|Letzter Vorgang für den Cursor ausgeführt:<br /><br /> 0 = Für den Cursor wurden keine Vorgänge ausgeführt.<br /><br /> 1 = OPEN<br /><br /> 2 = FETCH<br /><br /> 3 = EINFÜGEN<br /><br /> 4 = UPDATE<br /><br /> 5 = LÖSCHEN<br /><br /> 6 = CLOSE<br /><br /> 7 = DEALLOCATE|  
 |cursor_handle|**int**|Ein eindeutiger Wert für den Cursor innerhalb des Serverbereichs|  
   
@@ -145,10 +145,10 @@ GO
   
 ## <a name="see-also"></a>Siehe auch  
  [Cursor](../../relational-databases/cursors.md)   
- [CURSOR_STATUS &#40; Transact-SQL &#41;](../../t-sql/functions/cursor-status-transact-sql.md)   
+ [CURSOR_STATUS &#40;Transact-SQL&#41;](../../t-sql/functions/cursor-status-transact-sql.md)   
  [DECLARE CURSOR &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-cursor-transact-sql.md)   
- [Sp_cursor_list &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-cursor-list-transact-sql.md)   
- [Sp_describe_cursor_columns &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-describe-cursor-columns-transact-sql.md)   
- [Sp_describe_cursor_tables &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-describe-cursor-tables-transact-sql.md)  
+ [Sp_cursor_list &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursor-list-transact-sql.md)   
+ [Sp_describe_cursor_columns &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-cursor-columns-transact-sql.md)   
+ [Sp_describe_cursor_tables &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-cursor-tables-transact-sql.md)  
   
   

@@ -1,16 +1,16 @@
 ---
 title: Sys.dm_exec_distributed_requests (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DM_EXEC_DISTRIBUTED_REQUESTS
@@ -24,16 +24,17 @@ helpviewer_keywords:
 - PolyBase
 - dm_exec_distributed_sql_requests management view
 ms.assetid: c041d416-d8c6-435e-a563-6a310abd33e3
-caps.latest.revision: 
+caps.latest.revision: 8
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 539bf6f6e4df5860977fdd0703a9bc11a5923d31
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 49ba7e2abc9ae6e83c5438b02fb009d1f13f47e5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmexecdistributedrequests-transact-sql"></a>Sys.dm_exec_distributed_requests (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -45,8 +46,8 @@ ms.lasthandoff: 02/03/2018
 |Spaltenname|Datentyp|Description|Bereich|  
 |-----------------|---------------|-----------------|-----------|  
 |sql_handle|**varbinary(64)**|Der Schlüssel für diese Ansicht. Eindeutige numerische Id der Anforderung zugeordnet ist.|Für alle Anforderungen im System eindeutig.|  
-|execution_id|**nvarchar(32**|Eindeutige numerische Id der Sitzung, in der diese Abfrage ausgeführt wurde, zugeordnet.||  
-|status|**nvarchar(32**|Aktueller Status der Anforderung.|"Ausstehend" fehlgeschlagen "Autorisieren", "AcquireSystemResources", "Initialisieren", "Planung", "Analysieren", "AquireResources", "Wird ausgeführt", "Abbrechen", "Vollständig","", "Abgebrochen".|  
+|execution_id|**Nvarchar (32**|Eindeutige numerische Id der Sitzung, in der diese Abfrage ausgeführt wurde, zugeordnet.||  
+|status|**Nvarchar (32**|Aktueller Status der Anforderung.|"Ausstehend" fehlgeschlagen "Autorisieren", "AcquireSystemResources", "Initialisieren", "Planung", "Analysieren", "AquireResources", "Wird ausgeführt", "Abbrechen", "Vollständig","", "Abgebrochen".|  
 |error_id|**nvarchar(36)**|Eindeutige Id des Fehlers mit der Anforderung verknüpft sind, sofern vorhanden.|Auf NULL festgelegt, wenn kein Fehler aufgetreten ist.|  
 |start_time|**datetime**|Zeitpunkt, an dem die anforderungsausführung gestartet wurde.|für Anforderungen in der Warteschlange 0; andernfalls, gültige DateTime-Wert kleiner oder gleich der aktuellen Zeit.|  
 |end_time|**datetime**|Zeitpunkt, an dem das Modul abgeschlossen Kompilieren die Anforderung.|NULL für in der Warteschlange "oder" aktiv Anforderungen. andernfalls einen gültigen DateTime-Wert kleiner oder gleich der aktuellen Zeit.|  
@@ -55,6 +56,6 @@ ms.lasthandoff: 02/03/2018
 ## <a name="see-also"></a>Siehe auch  
  [PolyBase, Problembehandlung mit dynamischen Verwaltungssichten](http://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
  [Dynamische Verwaltungssichten und -funktionen &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Datenbank verbundene dynamische Verwaltungssichten &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
+ [Datenbank verbundene dynamische Verwaltungssichten &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
   
   

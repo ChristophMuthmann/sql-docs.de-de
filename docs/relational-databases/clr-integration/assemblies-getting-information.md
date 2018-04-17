@@ -1,35 +1,35 @@
 ---
 title: Abrufen von Informationen zu Assemblys | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: clr
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - assemblies [CLR integration], metadata
 - status information [SQL Server], assemblies
 - metadata [SQL Server], assemblies
 ms.assetid: 6aa7f18e-baad-4481-9777-8c3b230b392f
-caps.latest.revision: 
+caps.latest.revision: 20
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c96fde4198ff475f53aa94e09a400e62f26fc8b3
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: ad75eb9cbe0e1eb2e477fe53c116fda1a8df483a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="assemblies---getting-information"></a>Assemblys - abrufen von Informationen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Die folgenden Katalogsichten und Funktionen können nach Metadaten zu Assemblys abgefragt werden.  
+  Die folgenden Katalogsichten und Funktionen können nach Metadaten zu Assemblys abgefragt werden.  
   
  **Beim Abrufen von Informationen zu einzelnen Assemblys**  
   
@@ -62,7 +62,7 @@ Die folgenden Katalogsichten und Funktionen können nach Metadaten zu Assemblys 
 -   [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Assemblys &#40; Datenbankmodul &#41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   
+ [Assemblys & #40; Datenbankmodul & #41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   
  [Entwerfen von Assemblys](../../relational-databases/clr-integration/assemblies-designing.md)   
  [Implementieren von Assemblys](../../relational-databases/clr-integration/assemblies-implementing.md)  
   

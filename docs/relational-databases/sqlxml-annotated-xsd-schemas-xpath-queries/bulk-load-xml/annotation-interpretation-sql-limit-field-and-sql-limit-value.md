@@ -1,16 +1,16 @@
 ---
 title: "' SQL: Limit-Feld und ' SQL: Limit-Wert (SQLXML 4.0) | Microsoft Docs"
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - limiting values [SQLXML]
@@ -20,20 +20,21 @@ helpviewer_keywords:
 - sql:limit-value
 - filtering [SQLXML]
 ms.assetid: 402c21cf-9566-463f-a928-f94270c11db3
-caps.latest.revision: 
+caps.latest.revision: 21
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3cdaba9ced51e09a01947af986ce77a1d66cb6b6
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: b41c51dd840ee91d863b0707e5ea1e3c7bd3253f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="annotation-interpretation---sqllimit-field-and-sqllimit-value"></a>Interpretation von Anmerkungen - Limit-Feld und ' SQL: Limit-Wert
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-XML-Massenladen verarbeitet die **' SQL: Limit-Feld** und **' SQL: Limit-Wert** Anmerkungen nach der jeweiligen Definition. Weitere Informationen finden Sie unter [Werte Filtern mithilfe von ' SQL: Limit-Feld und ' SQL: Limit-Value &#40; SQLXML 4.0 &#41; ](../../../relational-databases/sqlxml-annotated-xsd-schemas-using/filtering-values-using-sql-limit-field-and-sql-limit-value-sqlxml-4-0.md).  
+  XML-Massenladen verarbeitet die **' SQL: Limit-Feld** und **' SQL: Limit-Wert** Anmerkungen nach der jeweiligen Definition. Weitere Informationen finden Sie unter [Werte Filtern mithilfe von ' SQL: Limit-Feld und ' SQL: Limit-Wert &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-using/filtering-values-using-sql-limit-field-and-sql-limit-value-sqlxml-4-0.md).  
   
  Nehmen Sie z. B. an, dass eine Datenbank die folgenden Tabellen enthält:  
   

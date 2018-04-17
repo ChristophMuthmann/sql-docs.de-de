@@ -2,7 +2,7 @@
 title: Sp_add_jobschedule (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/28/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: system-stored-procedures
@@ -25,11 +25,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b2da9a4bf2bc1fb7e2768922b6b5dd4d93452571
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: e3e17e1cb49063da0916f04cac2a8c6a49e6e83c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddjobschedule-transact-sql"></a>sp_add_jobschedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
  [ **@job_id=** ] *job_id*  
  Die ID des Auftrags, dem der Zeitplan hinzugefügt wird. *Job_id* ist **"uniqueidentifier"**, hat keinen Standardwert.  
   
- [ **@job_name=** ] **'***job_name***'**  
+ [  **@job_name=** ] **"***Job_name***"**  
  Der Name des Auftrags, dem der Zeitplan hinzugefügt wird. *Job_name* ist **vom Datentyp nvarchar(128)**, hat keinen Standardwert.  
   
 > [!NOTE]  
@@ -146,7 +146,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
  [ **@schedule_id=***schedule_id***OUTPUT**  
  Die Zeitplan-ID, die dem Zeitplan zugewiesen wird, wenn er erfolgreich erstellt wird. *Schedule_id* ist eine Ausgabevariable vom Typ **Int**, hat keinen Standardwert.  
   
- [ **@schedule_uid**= ] *schedule_uid***OUTPUT**  
+ [ **@schedule_uid**=] *Schedule_uid *** Ausgabe**  
  Ein eindeutiger Bezeichner für den Zeitplan. *Schedule_uid* ist eine Variable des Typs **"uniqueidentifier"**.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  

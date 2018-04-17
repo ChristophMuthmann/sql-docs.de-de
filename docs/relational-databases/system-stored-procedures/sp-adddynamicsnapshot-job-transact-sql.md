@@ -1,16 +1,16 @@
 ---
 title: Sp_adddynamicsnapshot_job (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_adddynamicsnapshot_job
 ms.assetid: ef50ccf6-e360-4e4b-91b9-6706b8fabefa
-caps.latest.revision: 
+caps.latest.revision: 32
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a3b2201611c5b58b795063dd06ecc7c0918c57f4
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 6590dad37937cb5b937ac49e541e2264a266de8d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spadddynamicsnapshotjob-transact-sql"></a>sp_adddynamicsnapshot_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,16 +65,16 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@publication=**] **"***Veröffentlichung***"**  
+ [ **@publication=**] **'***publication***'**  
  Der Name der Veröffentlichung, der der Auftrag für die Momentaufnahme gefilterter Daten hinzugefügt wird. *Veröffentlichung* ist **Sysname**, hat keinen Standardwert.  
   
- [  **@suser_sname** =] **"***Suser_sname***"**  
+ [ **@suser_sname**=] **"***Suser_sname***"**  
  Ist der verwendete Wert beim Erstellen einer Momentaufnahme gefilterter Daten für ein Abonnement, durch den Wert des gefiltert wird die [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md) -Funktion beim Abonnenten. *SUSER_SNAME* ist **Sysname**, hat keinen Standardwert. *SUSER_SNAME* sollte NULL sein, wenn diese Funktion nicht verwendet wird, um die Veröffentlichung dynamisch zu filtern.  
   
- [  **@host_name** =] **"***Host_name***"**  
+ [ **@host_name**=] **"***Host_name***"**  
  Ist der verwendete Wert beim Erstellen einer Momentaufnahme gefilterter Daten für ein Abonnement, durch den Wert des gefiltert wird die [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) -Funktion beim Abonnenten. *HOST_NAME* ist **Sysname**, hat keinen Standardwert. *HOST_NAME* sollte NULL sein, wenn diese Funktion nicht verwendet wird, um die Veröffentlichung dynamisch zu filtern.  
   
- [  **@dynamic_snapshot_jobname** =] **"***Dynamic_snapshot_jobname***"**  
+ [ **@dynamic_snapshot_jobname**=] **"***Dynamic_snapshot_jobname***"**  
  Der Name des erstellten Auftrags für eine Momentaufnahme gefilterter Daten. *Dynamic_snapshot_jobname* ist **Sysname**, mit dem Standardwert NULL und ist ein optionaler OUTPUT-Parameter. Wenn angegeben, *Dynamic_snapshot_jobname* muss in einem eindeutigen Auftrag auf dem Verteiler aufgelöst werden. Wird das Argument nicht angegeben, wird automatisch ein Auftragsname generiert und im Resultset zurückgegeben, wo der Name folgendermaßen erstellt wird:  
   
 ```  
@@ -84,7 +84,7 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
 > [!NOTE]  
 >  Wenn Sie den Namen des Auftrags für eine dynamische Momentaufnahme generieren, können Sie den Namen des Auftrags für eine Standardmomentaufnahme abschneiden.  
   
- [  **@dynamic_snapshot_jobid** =] **"***Dynamic_snapshot_jobid***"**  
+ [ **@dynamic_snapshot_jobid**=] **"***Dynamic_snapshot_jobid***"**  
  Ein Bezeichner des erstellten Auftrags für die Momentaufnahme gefilterter Daten. *Dynamic_snapshot_jobid* ist **"uniqueidentifier"**, mit dem Standardwert NULL und ist ein optionaler OUTPUT-Parameter.  
   
  [  **@frequency_type=**] *Frequency_type*  
@@ -108,7 +108,7 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
 |--------------------------------|-------------------------------------|  
 |**1**|*Frequency_interval* wird nicht verwendet.|  
 |**4** (Standard)|Jede *Frequency_interval* Tagen, bei der Standard ist täglich.|  
-|**8**|*Frequency_interval* kann einen oder mehrere der folgenden (zusammen mit einem [&#124; &#40; Bitweises OR &#41; &#40; Transact-SQL &#41; ](../../t-sql/language-elements/bitwise-or-transact-sql.md) logischer Operator):<br /><br /> **1** = Sonntag &#124; **2** = Montag &#124; **4** = Dienstag &#124; **8** = Mittwoch &#124; **16** = Donnerstag &#124; **32** = Freitag &#124; **64** = Samstag|  
+|**8**|*Frequency_interval* kann einen oder mehrere der folgenden (zusammen mit einem [ &#124; &#40;bitweises OR&#41; &#40;Transact-SQL&#41; ](../../t-sql/language-elements/bitwise-or-transact-sql.md) logischer Operator):<br /><br /> **1** = Sonntag &#124; **2** = Montag &#124; **4** = Dienstag &#124; **8** = Mittwoch &#124; **16** = Donnerstag &#124; **32** = Freitag &#124; **64** = Samstag|  
 |**16**|Auf der *Frequency_interval* Tag des Monats.|  
 |**32**|*Frequency_interval* ist eines der folgenden:<br /><br /> **1** = Sonntag &#124; **2** = Montag &#124; **3** = Dienstag &#124; **4** = Mittwoch &#124; **5** = Donnerstag &#124; **6** = Freitag &#124; **7** = Samstag &#124; **8** = Tag &#124; **9** = Arbeitstag &#124; **10** = Wochenendtag|  
 |**64**|*Frequency_interval* wird nicht verwendet.|  
@@ -155,7 +155,7 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
   
 ## <a name="result-set"></a>Resultset  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|Identifiziert den Auftrag für die Momentaufnahme gefilterter Daten in der [MSdynamicsnapshotjobs](../../relational-databases/system-tables/msdynamicsnapshotjobs-transact-sql.md) -Systemtabelle.|  
 |**dynamic_snapshot_jobname**|**sysname**|Name des Auftrags für eine Momentaufnahme gefilterter Daten.|  
@@ -175,8 +175,8 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
   
 ## <a name="see-also"></a>Siehe auch  
  [Erstellen einer Momentaufnahme für eine Mergeveröffentlichung mit parametrisierten Filtern](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)   
- [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)   
- [ausgeführt werden kann, &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-dropdynamicsnapshot-job-transact-sql.md)   
- [Sp_helpdynamicsnapshot_job &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helpdynamicsnapshot-job-transact-sql.md)  
+ [Parametrisierte Zeilenfilter](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)   
+ [ausgeführt werden kann &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdynamicsnapshot-job-transact-sql.md)   
+ [Sp_helpdynamicsnapshot_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdynamicsnapshot-job-transact-sql.md)  
   
   

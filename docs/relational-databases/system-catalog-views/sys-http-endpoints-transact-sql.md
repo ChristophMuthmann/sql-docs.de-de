@@ -1,16 +1,16 @@
 ---
 title: Sys. http_endpoints (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.http_endpoints
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.http_endpoints catalog view
 ms.assetid: 16f59695-ecd9-457e-8874-055af63f8ea7
-caps.latest.revision: 
+caps.latest.revision: 42
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: af5140f2389501a10a9228c2e133441f072c2efc
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: a345054828024a181517ed274fbe710259fd77c0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="syshttpendpoints-transact-sql"></a>sys.http_endpoints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,8 +40,8 @@ ms.lasthandoff: 11/21/2017
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
-|**< geerbte Spalten >**||Erbt Spalten von [sys.endpoints &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md).|  
-|**Website**|**vom Datentyp nvarchar(128)**|Name des Hostcomputers für die Site, wie in der SITE =-Option angegeben.|  
+|**< geerbte Spalten >**||Erbt Spalten von [sys.endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md).|  
+|**Website**|**nvarchar(128)**|Name des Hostcomputers für die Site, wie in der SITE =-Option angegeben.|  
 |**url_path**|**nvarchar(4000)**|Nur den Pfad betreffender Teil der URL für diesen HTTP-Endpunkt, wie in der PATH =-Option angegeben.|  
 |**is_clear_port_enabled**|**bit**|1 = CLEAR PORT ist mithilfe der PORT = CLEAR-Option aktiviert.|  
 |**CLEAR_PORT**|**int**|Die in der CLEAR PORT =-Option angegebene Anschlussnummer.<br /><br /> NULL = Nicht angegeben.|  
@@ -53,8 +53,8 @@ ms.lasthandoff: 11/21/2017
 |**is_kerberos_auth_enabled**|**bit**|1 = Integrierte Authentifizierung ist mithilfe der AUTHENTICATION = KERBEROS-Option aktiviert.|  
 |**is_ntlm_auth_enabled**|**bit**|1 = Integrierte Authentifizierung ist mithilfe der AUTHENTICATION = NTLM-Option aktiviert.|  
 |**is_integrated_auth_enabled**|**bit**|1 = Integrierte Authentifizierung ist mithilfe der AUTHENTICATION = INTEGRATED-Option aktiviert.|  
-|**authorization_realm**|**vom Datentyp nvarchar(128)**|Hinweis, der als Teil der HTTP-Digestauthentifizierungsabfrage an den Client zurückgegeben wird. Der Wert der AUTH REALM-Option.<br /><br /> Ist NULL, wenn nichts angegeben ist oder wenn die Digestauthentifizierung deaktiviert ist.|  
-|**DEFAULT_LOGON_DOMAIN**|**vom Datentyp nvarchar(128)**|Standardanmeldedomäne, wenn die Standardauthentifizierung aktiviert wird. Der Wert der DEFAULT LOGON DOMAIN-Option.<br /><br /> Ist NULL, wenn nichts angegeben ist oder wenn die Standardauthentifizierung deaktiviert ist.|  
+|**authorization_realm**|**nvarchar(128)**|Hinweis, der als Teil der HTTP-Digestauthentifizierungsabfrage an den Client zurückgegeben wird. Der Wert der AUTH REALM-Option.<br /><br /> Ist NULL, wenn nichts angegeben ist oder wenn die Digestauthentifizierung deaktiviert ist.|  
+|**DEFAULT_LOGON_DOMAIN**|**nvarchar(128)**|Standardanmeldedomäne, wenn die Standardauthentifizierung aktiviert wird. Der Wert der DEFAULT LOGON DOMAIN-Option.<br /><br /> Ist NULL, wenn nichts angegeben ist oder wenn die Standardauthentifizierung deaktiviert ist.|  
 |**is_compression_enabled**|**bit**|1 = Die COMPRESSION = ENABLED-Option ist festgelegt.|  
   
 ## <a name="permissions"></a>Berechtigungen  
@@ -62,6 +62,6 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>Siehe auch  
  [Katalogsichten &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Endpunkte-Katalogsichten &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md)  
+ [Endpunkte-Katalogsichten &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md)  
   
   

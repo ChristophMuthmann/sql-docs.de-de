@@ -1,16 +1,16 @@
 ---
 title: Sys. database_connection_stats (Azure SQL-Datenbank) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/25/2016
-ms.prod: 
+ms.prod: ''
 ms.prod_service: sql-database
-ms.reviewer: 
+ms.reviewer: ''
 ms.service: sql-database
 ms.component: system-catalog-views
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.database_connection_stats
@@ -23,21 +23,22 @@ helpviewer_keywords:
 - sys.database_connection_stats
 - database_connection_stats
 ms.assetid: 5c8cece0-63b0-4dee-8db7-6b43d94027ec
-caps.latest.revision: 
+caps.latest.revision: 13
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 16a713efdc16c13ce50f1f7b2465df55568df194
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
+ms.openlocfilehash: 0ab4255a4c13199a445335eef491ca0986ab3287
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdatabaseconnectionstats-azure-sql-database"></a>sys.database_connection_stats (Azure SQL-Datenbank)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  Enthält Statistiken für [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Datenbank **Konnektivität** Ereignisse, bietet einen Überblick über die Datenbank erfolgreiche und fehlgeschlagene Datenbankverbindungen. Weitere Informationen zu konnektivitätsereignissen finden Sie unter Ereignistypen in [Sys. event_log &#40; Azure SQL-Datenbank &#41; ](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md).  
+  Enthält Statistiken für [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Datenbank **Konnektivität** Ereignisse, bietet einen Überblick über die Datenbank erfolgreiche und fehlgeschlagene Datenbankverbindungen. Weitere Informationen zu konnektivitätsereignissen finden Sie unter Ereignistypen in [Sys. event_log &#40;Azure SQL-Datenbank&#41;](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md).  
   
 |Statistik|Typ|Description|  
 |---------------|----------|-----------------|  
@@ -63,7 +64,7 @@ ms.lasthandoff: 11/21/2017
   
 ### <a name="interval-starttime-and-endtime"></a>
           start_time und end_time des Intervalls  
- Ein Ereignis wird in ein aggregationsintervall eingeschlossen, wenn das Ereignis tritt auf, *auf* oder *nach***Start_time** und *vor*  **End_time** für dieses Intervall. Beispielsweise würde ein Ereignis, das genau zum Zeitpunkt `2012-10-30 19:25:00.0000000` eintritt, nur im zweiten unten gezeigten Intervall aufgenommen werden:  
+ Ein Ereignis wird in ein aggregationsintervall eingeschlossen, wenn das Ereignis tritt auf, *auf* oder *nach *** Start_time** und *vor *** End_time** für dieses Intervall. Beispielsweise würde ein Ereignis, das genau zum Zeitpunkt `2012-10-30 19:25:00.0000000` eintritt, nur im zweiten unten gezeigten Intervall aufgenommen werden:  
   
 ```  
   
@@ -81,7 +82,7 @@ start_time                    end_time
 ### <a name="errors-not-included"></a>Fehler nicht enthalten  
  Diese Sicht enthält möglicherweise nicht alle Verbindungs- und Fehlerinformationen:  
   
--   Diese Ansicht enthält nicht alle [!INCLUDE[ssSDS](../../includes/sssds-md.md)] -Datenbankfehler, die eintreten können, sondern nur die unter den Ereignistypen in [Sys. event_log &#40; Azure SQL-Datenbank &#41; ](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md).  
+-   Diese Ansicht enthält nicht alle [!INCLUDE[ssSDS](../../includes/sssds-md.md)] -Datenbankfehler, die eintreten können, sondern nur die unter den Ereignistypen in [Sys. event_log &#40;Azure SQL-Datenbank&#41;](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md).  
   
 -   Wenn ein Computerfehler innerhalb des [!INCLUDE[ssSDS](../../includes/sssds-md.md)]-Datencenters auftritt, ist es möglich, dass eine geringe Anzahl der Daten des logischen Servers in der Ereignistabelle fehlt.  
   

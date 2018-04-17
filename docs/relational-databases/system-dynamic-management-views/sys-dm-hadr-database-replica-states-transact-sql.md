@@ -1,16 +1,16 @@
 ---
-title: sys.dm_hadr_database_replica_states (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: Sys. dm_hadr_database_replica_states (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 02/11/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_hadr_database_states_TSQL
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], monitoring
 - sys.dm_hadr_database_replica_states dynamic management view
 ms.assetid: 1a17b0c9-2535-4f3d-8013-cd0a6d08f773
-caps.latest.revision: 
+caps.latest.revision: 84
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c69d36319ca4273fad7b1c4890bf27e4e4fa0797
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: d0c1fcebeb62701761134103e16ee8127372858d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmhadrdatabasereplicastates-transact-sql"></a>sys.dm_hadr_database_replica_states (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.lasthandoff: 02/12/2018
 |**replica_id**|**uniqueidentifier**|Der Bezeichner des Verfügbarkeitsreplikats in der Verfügbarkeitsgruppe.|  
 |**group_database_id**|**uniqueidentifier**|Der Bezeichner der Datenbank in der Verfügbarkeitsgruppe. Dieser Bezeichner ist auf jedem Replikat, mit dem diese Datenbank verknüpft ist, identisch.|  
 |**is_local**|**bit**|Gibt an, ob die Verfügbarkeitsdatenbank lokal ist. Folgende Werte sind möglich:<br /><br /> 0 = Die Datenbank ist für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz nicht lokal.<br /><br /> 1 = Die Datenbank ist für die Serverinstanz lokal.|  
-|**is_primary_replica**|**bit**|Gibt 1 zurück, wenn das Replikat primär ist, oder 0 bei einem sekundären Replikat.<br /><br />**Gilt für:** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+|**is_primary_replica**|**bit**|Gibt 1 zurück, wenn das Replikat primär ist, oder 0 bei einem sekundären Replikat.<br /><br />**Gilt für:** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
 |**synchronization_state**|**tinyint**|Status der datenverschiebung, einen der folgenden Werte.<br /><br /> 0 = nicht synchronisiert. Gibt bei einer primären Datenbank an, dass die Datenbank nicht bereit ist, das Transaktionsprotokoll mit den entsprechenden sekundären Datenbanken zu synchronisieren. Gibt bei einer sekundären Datenbank an, dass die Protokollsynchronisierung für die Datenbank aufgrund eines Verbindungsproblems nicht gestartet wurde oder beim Start oder einem Rollenwechsel verschiedene Übergangsstatuswerte durchläuft.<br /><br /> 1 = wird synchronisiert. Gibt bei einer primären Datenbank an, dass diese Datenbank bereit ist, eine Scananforderung von einer sekundären Datenbank zu akzeptieren. Gibt bei einer sekundären Datenbank an, dass eine aktive Datenverschiebung für die Datenbank erfolgt.<br /><br /> 2 = Synchronized. Primäre Datenbanken werden mit dem Status SYNCHRONISIERT und nicht mit dem Status WIRD SYNCHRONISIERT angezeigt. Eine sekundäre Datenbank mit synchronem Commit wird als SYNCHRONISIERT angezeigt, wenn gemäß dem lokalen Cache die Datenbank für das Failover bereit ist und eine Synchronisierung erfolgt.<br /><br /> 3 = zurücksetzen. Gibt die Rollbackphase an, wenn eine sekundäre Datenbank aktiv Seiten von der primären Datenbank abruft.<br />**Vorsicht:** Wenn eine Datenbank auf einem sekundären Replikat im Status REVERTING befindet, das Erzwingen eines Failovers zum sekundären Replikat belässt die Datenbank in einem Zustand, in dem er als primäre Datenbank gestartet werden kann nicht. Entweder muss erneut eine Verbindung mit der Datenbank als sekundäre Datenbank hergestellt werden, oder Sie müssen neue Protokolldatensätze aus einer Protokollsicherung übernehmen.<br /><br /> 4 = wird initialisiert. Gibt die Rollbackphase an, wenn das Transaktionsprotokoll (erforderlich, um eine sekundäre Datenbank auf den gleichen Stand wie die Rückgängig-LSN zu bringen) übermittelt und auf einem sekundären Replikat festgeschrieben wird.<br />**Vorsicht:** Wenn eine Datenbank auf einem sekundären Replikat den Status INITIALIZING aufweist, ist das Erzwingen eines Failovers auf dem sekundären Replikat bewirkt, dass der Datenbank in einem Zustand in der sie als primäre Datenbank gestartet werden. Entweder muss erneut eine Verbindung mit der Datenbank als sekundäre Datenbank hergestellt werden, oder Sie müssen neue Protokolldatensätze aus einer Protokollsicherung übernehmen.|  
 |**synchronization_state_desc**|**nvarchar(60)**|Beschreibung des Datenverschiebungsstatus. Folgende Werte sind möglich:<br /><br /> NOT SYNCHRONIZING<br /><br /> SYNCHRONIZING<br /><br /> SYNCHRONIZED<br /><br /> REVERTING<br /><br /> INITIALIZING|  
 |**is_commit_participant**|**bit**|0 = Ein Transaktionscommit wird nicht in Bezug auf diese Datenbank synchronisiert.<br /><br /> 1 = Ein Transaktionscommit wird in Bezug auf diese Datenbank synchronisiert.<br /><br /> Für eine Datenbank mit einem Verfügbarkeitsreplikat für asynchrone Commits muss dieser Wert immer 0 sein.<br /><br /> Bei einer Datenbank mit einem Verfügbarkeitsreplikat für synchrone Commits ist dieser Wert nur für die primäre Datenbank genau.|  
@@ -79,7 +79,7 @@ ms.lasthandoff: 02/12/2018
 |**last_commit_lsn**|**Numeric(25,0)**|Tatsächliche Protokollfolgenummer, die dem letzten Commitdatensatz im Transaktionsprotokoll entspricht.<br /><br /> Entspricht bei der primären Datenbank dem zuletzt verarbeiteten Commitdatensatz. In den Zeilen für sekundäre Datenbanken wird die Protokollfolgenummer angezeigt, die das sekundäre Replikat dem primären Replikat gesendet hat.<br /><br /> Beim sekundären Replikat ist dies der letzte Commitdatensatz, der wiederholt wurde.|  
 |**last_commit_time**|**datetime**|Die Zeit, die dem letzten Commitdatensatz entspricht.<br /><br /> Bei der sekundären Datenbank ist diese Zeit mit der für die primäre Datenbank identisch.<br /><br /> Auf dem primären Replikat zeigt jede Zeile für die sekundäre Datenbank die Zeit an, die das sekundäre Replikat, das die sekundäre Datenbank hostet, dem primären Replikat zurückgemeldet hat. Der Zeitunterschied zwischen der Zeile für die primäre Datenbank und der Zeile einer bestimmten sekundären Datenbank stellt die ungefähre Wiederherstellungszeit-Zielsetzung dar. Es wird angenommen, dass der Wiederholungsprozess abgefangen wird und dass der Fortschritt vom sekundären Replikat an das primäre Replikat zurückgemeldet wurde.|  
 |**low_water_mark_for_ghosts**|**bigint**|Eine monoton steigende Zahl für die Datenbank, die eine Untergrenze angibt, die für das Cleanup inaktiver Datensätze verwendet wurde. Wenn diese Zahl im Zeitverlauf nicht zunimmt, weist dies darauf hin, dass das Cleanup für inaktive Datensätze möglicherweise nicht erfolgt ist. Um zu entscheiden, welche Zeilen mit inaktiven Datensätzen bereinigt werden sollen, verwendet das primäre Replikat den Mindestwert dieser Spalte für alle Verfügbarkeitsreplikate (einschließlich des primären Replikats) für diese Datenbank.|  
-|**secondary_lag_seconds**|**bigint**|Die Anzahl der Sekunden an, denen das sekundäre Replikat hinter das primäre Replikat während der Synchronisierung wird.<br /><br />**Gilt für:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+|**secondary_lag_seconds**|**bigint**|Die Anzahl der Sekunden an, denen das sekundäre Replikat hinter das primäre Replikat während der Synchronisierung wird.<br /><br />**Gilt für:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
   
 ##  <a name="LSNcolumns"></a> Grundlegendes zu LSN-Spaltenwerten  
  Die Werte der **End_of_log_lsn**, **Last_hardened_lsn**, **Last_received_lsn**, **Last_sent_lsn**, **Wiederherstellung _lsn**, und **Truncation_lsn** Spalten sind keine tatsächlichen protokollfolgenummern (LSNs). Diese Werte stellen eine mit Nullen aufgefüllte Protokollblock-ID dar.  

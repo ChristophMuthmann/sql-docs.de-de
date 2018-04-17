@@ -1,44 +1,45 @@
 ---
-title: "XML-Datentypunterstützung für SQLXML 4.0 | Microsoft Docs"
-ms.custom: 
+title: XML-Datentypunterstützung für SQLXML 4.0 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQLXML, xml data type support
 - xml data type [SQL Server], SQLXML
 ms.assetid: 9a6f5ad8-4a8f-4de7-ac17-81d5ccf78459
-caps.latest.revision: 
+caps.latest.revision: 17
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dfdb6b2fba95fc3e723122e9402e70caede522b1
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 530cd1e4fef24d925af9a6079b6afeeb07ec463d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="xml-data-type-support-in-sqlxml-40"></a>XML-Datentypunterstützung für SQLXML 4.0
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Beginnend mit [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt XML typisierte Daten mithilfe der **Xml** -Datentyp. Dieses Thema enthält Informationen wie SQLXML 4.0 Instanzen von erkennt die **Xml** -Datentyp und implementiert die Unterstützung für sie.  
+  Beginnend mit [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt XML typisierte Daten mithilfe der **Xml** -Datentyp. Dieses Thema enthält Informationen wie SQLXML 4.0 Instanzen von erkennt die **Xml** -Datentyp und implementiert die Unterstützung für sie.  
   
 ## <a name="working-with-xml-data-types"></a>Arbeiten mit XML-Datentypen  
  Um zu verstehen, Weitere Informationen zum Arbeiten mit SQL-Tabellen, die implementieren **Xml** Daten Spalten vom Typ in den folgenden Beispielen werden bereitgestellt:  
   
 |Task|Beispiel|Thema|  
 |----------|-------------|-----------|  
-|Das zuordnen und enthalten eine **Xml** Spalte in eine XML-Sicht|"Zuordnen eines XML-Elements zu einer XML-Datentypspalte"|[Standardzuordnung von XSD-Elementen und-Attributen zu Tabellen und Spalten &#40; SQLXML 4.0 &#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-4-0.md)|  
-|Gewusst wie: Einfügen von Daten in eine **Xml** -Spalte mit Updategrams|"Einfügen von Daten in eine XML-Datentypspalte"|[Einfügen von Daten mithilfe der XML-Updategrams &#40; SQLXML 4.0 &#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/inserting-data-using-xml-updategrams-sqlxml-4-0.md)|  
-|Massenladen von XML-Daten in eine **Xml** Spalte|"Massenladen in XML-Datentypspalten"|[Beispiele für XML-Massenladen &#40; SQLXML 4.0 &#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/xml-bulk-load-examples-sqlxml-4-0.md)|  
+|Das zuordnen und enthalten eine **Xml** Spalte in eine XML-Sicht|"Zuordnen eines XML-Elements zu einer XML-Datentypspalte"|[Standardzuordnung von XSD-Elementen und-Attributen zu Tabellen und Spalten &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-4-0.md)|  
+|Gewusst wie: Einfügen von Daten in eine **Xml** -Spalte mit Updategrams|"Einfügen von Daten in eine XML-Datentypspalte"|[Einfügen von Daten mit XML-Updategrams &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/inserting-data-using-xml-updategrams-sqlxml-4-0.md)|  
+|Massenladen von XML-Daten in eine **Xml** Spalte|"Massenladen in XML-Datentypspalten"|[Beispiele für XML-Massenladen & #40; SQLXML 4.0 & #41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/xml-bulk-load-examples-sqlxml-4-0.md)|  
   
 ## <a name="guidelines-and-limitations"></a>Richtlinien und Einschränkungen  
   

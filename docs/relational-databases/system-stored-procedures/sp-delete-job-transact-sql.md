@@ -1,16 +1,16 @@
 ---
 title: Sp_delete_job (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_delete_job
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_delete_job
 ms.assetid: b85db6e4-623c-41f1-9643-07e5ea38db09
-caps.latest.revision: 
+caps.latest.revision: 43
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: dc32f2328e4153f79a7eb1c7e4115e455078791c
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: c578243ec78605216a3cb5c640e6779e712fec46
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spdeletejob-transact-sql"></a>sp_delete_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,13 +52,13 @@ sp_delete_job { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
  [ **@job_id=** ] *job_id*  
  Die ID des Auftrags, der gelöscht werden soll. *Job_id* ist **"uniqueidentifier"**, hat den Standardwert NULL.  
   
- [ **@job_name=** ] **'***job_name***'**  
+ [  **@job_name=** ] **"***Job_name***"**  
  Der Name des Auftrags, der gelöscht werden soll. *Job_name* ist **Sysname**, hat den Standardwert NULL.  
   
 > [!NOTE]  
 >  Entweder *Job_id* oder *Job_name*muss angegeben werden, beide können nicht angegeben werden.  
   
- [ **@originating_server=** ] **'***server***'**  
+ [  **@originating_server=** ] **"***Server***"**  
  Für die interne Verwendung.  
   
  [ **@delete_history=** ] *delete_history*  
@@ -66,7 +66,7 @@ sp_delete_job { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
   
  Beachten Sie, dass wenn ein Auftrag wird gelöscht, und der Verlauf wird nicht gelöscht, die Verlaufsinformationen für den Auftrag nicht in angezeigt werden die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] grafische Schnittstelle im Auftragsverlauf-Agents, aber die Informationen noch befindet sich in der **Sysjobhistory**-Tabelle in der **Msdb** Datenbank.  
   
- [ **@delete_unused_schedule=** ] *delete_unused_schedule*  
+ [  **@delete_unused_schedule=** ] *Delete_unused_schedule*  
  Gibt an, ob die an diesen Auftrag angefügten Zeitpläne gelöscht werden sollen, falls sie nicht an einen anderen Auftrag angefügt sind. *Delete_unused_schedule* ist **Bit**, hat den Standardwert **1**. Wenn *Delete_unused_schedule* ist **1**, diesen Auftrag angefügten Zeitpläne werden gelöscht, wenn keine anderen Aufträge mit Verweisen auf den Zeitplan. Wenn *Delete_unused_schedule* ist **0**, die Zeitpläne werden nicht gelöscht.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
@@ -76,9 +76,9 @@ sp_delete_job { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
  Keine  
   
 ## <a name="remarks"></a>Hinweise  
- Die  **@originating_server**  Argument ist für die interne Verwendung reserviert.  
+ Die **@originating_server** Argument ist für die interne Verwendung reserviert.  
   
- Die  **@delete_unused_schedule**  Argument bietet Abwärtskompatibilität mit früheren Versionen von SQL Server, indem Sie Zeitpläne, die nicht an einen beliebigen Auftrag angefügt sind, automatisch entfernt werden. Beachten Sie, dass dieser Parameter standardmäßig das Verhalten der Abwärtskompatibilität bietet. Zum Beibehalten der Zeitpläne, die nicht mit einem Auftrag angefügt sind, geben Sie den Wert **0** als die  **@delete_unused_schedule**  Argument.  
+ Die **@delete_unused_schedule** Argument bietet Abwärtskompatibilität mit früheren Versionen von SQL Server, indem Sie Zeitpläne, die nicht an einen beliebigen Auftrag angefügt sind, automatisch entfernt werden. Beachten Sie, dass dieser Parameter standardmäßig das Verhalten der Abwärtskompatibilität bietet. Zum Beibehalten der Zeitpläne, die nicht mit einem Auftrag angefügt sind, geben Sie den Wert **0** als die **@delete_unused_schedule** Argument.  
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] können Aufträge problemlos mithilfe einer grafischen Oberfläche verwaltet werden. Dies ist die empfohlene Vorgehensweise für die Erstellung und Verwaltung der Auftragsinfrastruktur.  
   

@@ -1,16 +1,16 @@
 ---
 title: Sp_change_log_shipping_secondary_database (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_change_log_shipping_secondary_database
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_change_log_shipping_secondary_database
 ms.assetid: 3ebcf2f1-980f-4543-a84b-fbaeea54eeac
-caps.latest.revision: 
+caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fc7ed57e7f6f64f3fc2527cdaff3766690032489
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 0edae5ffcd82e45c348cb382788e5ca6718419ce
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spchangelogshippingsecondarydatabase-transact-sql"></a>sp_change_log_shipping_secondary_database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,10 +58,10 @@ sp_change_log_shipping_secondary_database
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@restore_delay =** ] '*restore_delay*'  
+ [  **@restore_delay =** ] "*Restore_delay*"  
  Die Zeit in Minuten, die der sekundäre Server vor dem Wiederherstellen einer bestimmten Sicherungsdatei wartet. *Restore_delay* ist **Int** und darf nicht NULL sein. Der Standardwert ist 0.  
   
- [ **@restore_all =** ] '*restore_all*'  
+ [  **@restore_all =** ] "*Restore_all*"  
  Falls 1, stellt der sekundäre Server bei Ausführung des Wiederherstellungsauftrags alle verfügbaren Sicherungen des Transaktionsprotokolls wieder her. Andernfalls wird nach der Wiederherstellung einer Datei beendet. *Restore_all* ist **Bit** und darf nicht NULL sein.  
   
  [ **@restore_mode =** ] '*restore_mode*'  
@@ -73,16 +73,16 @@ sp_change_log_shipping_secondary_database
   
  *Wiederherstellen* ist **Bit** und darf nicht NULL sein.  
   
- [ **@disconnect_users =** ] '*disconnect_users*'  
+ [  **@disconnect_users =** ] "*Disconnect_users*"  
  Wird der Wert auf 1 festgelegt, werden die Verbindungen von Benutzern mit der sekundären Datenbank getrennt, wenn ein Wiederherstellungsvorgang durchgeführt wird. Standard = 0. *Disconnect_users* ist **Bit** und darf nicht NULL sein.  
   
- [ **@block_size =** ] '*block_size*'  
+ [  **@block_size =** ] "*Block_size*"  
  Die Größe in Bytes, die als Blockgröße für das Sicherungsmedium verwendet wird. *Block_size* ist **Int** hat den Standardwert "-1".  
   
- [ **@buffer_count =** ] '*buffer_count*'  
+ [  **@buffer_count =** ] "*Buffer_count*"  
  Die Gesamtanzahl der beim Sicherungs- oder Wiederherstellungsvorgang verwendeten Puffer. *Buffer_count* ist **Int** hat den Standardwert "-1".  
   
- [ **@max_transfer_size =** ] '*max_transfer_size*'  
+ [  **@max_transfer_size =** ] "*Max_transfer_size*"  
  Die Größe der maximalen Eingabe- oder Ausgabeanforderung in Bytes, die von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] an das Sicherungsmedium ausgegeben wird. *Max_transfersize* ist **Int** und kann NULL sein.  
   
  [  **@restore_threshold =** ] "*Restore_threshold*"  
@@ -104,7 +104,7 @@ sp_change_log_shipping_secondary_database
  Keine  
   
 ## <a name="remarks"></a>Hinweise  
- **sp_change_log_shipping_secondary_database** must be run from the **master** database on the secondary server. Diese gespeicherte Prozedur führt folgende Aktionen aus:  
+ **Sp_change_log_shipping_secondary_database** muss ausgeführt werden, aus der **master** Datenbank auf dem sekundären Server. Diese gespeicherte Prozedur führt folgende Aktionen aus:  
   
 1.  Ändert die Einstellungen in der **Log_shipping_secondary_database** zeichnet nach Bedarf.  
   
@@ -129,7 +129,7 @@ EXEC master.dbo.sp_change_log_shipping_secondary_database
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Über den Protokollversand &#40; SQLServer &#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [Über den Protokollversand & #40; SQLServer & #41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

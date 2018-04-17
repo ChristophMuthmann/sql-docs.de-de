@@ -2,7 +2,7 @@
 title: Sp_configure_peerconflictdetection (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: system-stored-procedures
@@ -25,11 +25,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f1fed4cb47795554df26deb08f496edba86b5a4d
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: a3a79fda8a5fa7ce29713e9c47ab8d136f24c1ce
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spconfigurepeerconflictdetection-transact-sql"></a>sp_configure_peerconflictdetection (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,12 +56,12 @@ sp_configure_peerconflictdetection [ @publication = ] 'publication'
  [ @publication=] '*publication*'  
  Der Name der Veröffentlichung, für die die Konflikterkennung konfiguriert werden soll. *Veröffentlichung* ist **Sysname**, hat keinen Standardwert.  
   
- [ @action= ] '*action*'  
+ [ @action=] '*Aktion*"  
  Gibt an, ob die Konflikterkennung für eine Veröffentlichung aktiviert oder deaktiviert werden soll. *Aktion* ist **nvarchar(5)**, und kann einen der folgenden Werte.  
   
 |Wert|Description|  
 |-----------|-----------------|  
-|**enable**|Aktiviert die Konflikterkennung für eine Veröffentlichung.|  
+|**Aktivieren**|Aktiviert die Konflikterkennung für eine Veröffentlichung.|  
 |**disable**|Deaktiviert die Konflikterkennung für eine Veröffentlichung.|  
 |NULL (Standard)||  
   
@@ -71,7 +71,7 @@ sp_configure_peerconflictdetection [ @publication = ] 'publication'
  [ @conflict_retention= ] *conflict_retention*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [ @continue_onconflict= ] '*continue_onconflict*' ]  
+ [ @continue_onconflict=] '*Continue_onconflict*"]  
  Legt fest, ob der Verteilungs-Agent nach Erkennung eines Konflikts die Verarbeitung von Änderungen fortsetzt. *Continue_onconflict* ist **nvarchar(5)** hat den Standardwert "false".  
   
 > [!CAUTION]  

@@ -1,16 +1,16 @@
 ---
 title: Sp_manage_jobs_by_login (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_manage_jobs_by_login
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_manage_jobs_by_login
 ms.assetid: 832ec15a-6e92-4eb5-8c4a-af4dba79fbaa
-caps.latest.revision: 
+caps.latest.revision: 27
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2575a298f71475452dffe05b75adeaf41ac8f2fa
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 93e1e2a25ef8ac06b3b60445ab6813949178dbb0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spmanagejobsbylogin-transact-sql"></a>sp_manage_jobs_by_login (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ sp_manage_jobs_by_login
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@action=** ] **'***action***'**  
+ [  **@action=** ] **"***Aktion***"**  
  Die Aktion, die für den angegebenen Anmeldenamen ausgeführt werden soll. *Aktion* ist **varchar(10)**, hat keinen Standardwert. Wenn *Aktion*ist **löschen**, **Sp_manage_jobs_by_login** löscht alle Aufträge, die im Besitz von *Current_owner_login_name*. Wenn *Aktion* ist **zuweisen**, werden alle Aufträge zugewiesen *New_owner_login_name*.  
   
  [  **@current_owner_login_name=** ] **"***Current_owner_login_name***"**  

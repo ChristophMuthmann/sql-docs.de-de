@@ -1,16 +1,16 @@
 ---
-title: sp_polybase_leave_group (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: "\"sp_polybase_leave_group\" aus (Transact-SQL) | Microsoft Docs"
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine-polybase
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sp_polybase_leave_group
@@ -18,18 +18,18 @@ f1_keywords:
 helpviewer_keywords:
 - sp_polybase_leave_group
 ms.assetid: ef87a8f1-5407-47b5-b8bf-bd7d08c0f0fe
-caps.latest.revision: 
+caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e108a8013a6d81eeedf1a27e0e294ab702dd56e4
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 30370777811d51970ec94647715395285ad9c86f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="polybase-stored-procedures---sppolybaseleavegroup"></a>Gespeicherte PolyBase-Prozeduren - "sp_polybase_leave_group" aus
+# <a name="sppolybaseleavegroup-transact-sql"></a>"sp_polybase_leave_group" aus (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Entfernt eine SQL Server-Instanz aus einer PolyBase-Gruppe für horizontale hochskalierungsberechnung an. 

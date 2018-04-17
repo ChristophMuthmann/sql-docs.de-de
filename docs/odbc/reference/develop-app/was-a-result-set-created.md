@@ -2,7 +2,7 @@
 title: Wurde ein Resultset erstellt? | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: 4a83b8cb-2d57-4e64-b497-80bd587ee1f9
 caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a7222a9dcbbf7c979dd46ff554fab5988bcfada4
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 4b2701f568397c2a6714587bf4261f5a4295f226
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="was-a-result-set-created"></a>Wurde ein Resultset erstellt?
 In den meisten Fällen wissen Anwendungsprogrammierer an, ob die Anweisungen, die ihre Anwendung ausgeführt wird, ein Resultset erstellt werden. Dies ist der Fall, wenn die Anwendung hartcodiert SQL-Anweisungen durch den Programmierer verwendet. Es ist normalerweise der Fall, wenn die Anwendung SQL-Anweisungen zur Laufzeit erstellt: der Programmierer kann problemlos Code enthalten, der kennzeichnet, ob eine **wählen** Anweisung oder ein **einfügen** Anweisung wird erstellt. In einigen Situationen kann nicht der Programmierer wissen, ob eine Anweisung ein Resultset erstellt. Dies ist "true", wenn die Anwendung bietet eine Möglichkeit für den Benutzer zur Eingabe und eine SQL­Anweisung ausführen. Es ist auch "true", wenn die Anwendung eine Anweisung zur Laufzeit zum Ausführen einer Prozedur erstellt wird.  

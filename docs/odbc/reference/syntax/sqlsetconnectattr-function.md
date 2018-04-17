@@ -2,7 +2,7 @@
 title: SQLSetConnectAttr-Funktion | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 97fc7445-5a66-4eb9-8e77-10990b5fd685
 caps.latest.revision: 83
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 806acdd35452ff22e922158ed071d41d8e45f031
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 8b5cebd01a7dc517bf4418e3179b1457974fa275
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlsetconnectattr-function"></a>SQLSetConnectAttr-Funktion
 **Konformität**  
@@ -64,7 +64,7 @@ SQLRETURN SQLSetConnectAttr(
  *ValuePtr*  
  [Eingabe] Zeiger auf den Wert zugeordnet werden *Attribut*. Abhängig vom Wert der *Attribut*, *ValuePtr* werden unsigned Integer-Wert, oder zeigen auf eine Null-terminierte Zeichenfolge. Beachten Sie, die der ganzzahligen Typ der *Attribut* Argument Länge nicht behoben finden Sie im Abschnitt "Kommentare" auf Details.  
   
- *StringLength*  
+ *stringLength*  
  [Eingabe] Wenn *Attribut* ist ein ODBC-definierten Attribut und *ValuePtr* zeigt auf eine Zeichenfolge oder einen binären Puffer, in dieses Argument muss die Länge des **ValuePtr*. Für Zeichenfolgendaten sollte dieses Argument die Anzahl der Bytes in der Zeichenfolge enthalten.  
   
  Wenn *Attribut* ist ein ODBC-definierten Attribut und *ValuePtr* ist eine ganze Zahl *StringLength* wird ignoriert.  
@@ -90,7 +90,7 @@ SQLRETURN SQLSetConnectAttr(
 |SQLSTATE|Fehler|Description|  
 |--------------|-----------|-----------------|  
 |01000|Allgemeine Warnung|Treiberspezifische Meldung dient zu Informationszwecken. (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
-|01 S 02|Der Optionswert wurde geändert|Der Treiber nicht den Wert im angegebenen *ValuePtr* und einen ähnlichen Wert ersetzt. (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
+|01S02|Der Optionswert wurde geändert|Der Treiber nicht den Wert im angegebenen *ValuePtr* und einen ähnlichen Wert ersetzt. (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
 |08002|Name der Verbindung verwendet|Die *Attribut* Argument wurde SQL_ATTR_ODBC_CURSORS und der Treiber wurde bereits mit der Datenquelle verbunden.|  
 |08003|Verbindung nicht geöffnet|(DM) eine *Attribut* Wert wurde angegeben, die eine geöffnete Verbindung erforderlich, aber die *Verbindungshandle* war nicht verbunden.|  
 |08S01|Kommunikations-Verbindungsfehler|Die Verbindung zwischen dem Treiber und die Datenquelle mit der der Treiber verbunden wurde aufgetreten ist, bevor die Verarbeitung für die Funktion abgeschlossen.|  
@@ -134,7 +134,7 @@ SQLRETURN SQLSetConnectAttr(
   
  Einige Verbindungsattribute können festgelegt werden, nur verwendet werden, bevor eine Verbindung hergestellt wurde. andere können festgelegt werden, nachdem eine Verbindung hergestellt wurde. Die folgende Tabelle zeigt die Verbindungsattribute, die festgelegt werden müssen, bevor oder nachdem eine Verbindung hergestellt wurde. *Entweder* gibt an, dass das Attribut entweder vor oder nach der Verbindung festgelegt werden kann.  
   
-|attribute|Legen Sie vor oder nach Verbindung?|  
+|Attribut|Legen Sie vor oder nach Verbindung?|  
 |---------------|-------------------------------------|  
 |SQL_ATTR_ACCESS_MODE|Entweder [1]|  
 |SQL_ATTR_ASYNC_DBC_EVENT|Sowohl als auch|  

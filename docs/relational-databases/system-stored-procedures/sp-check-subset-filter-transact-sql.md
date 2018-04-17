@@ -1,16 +1,16 @@
 ---
 title: Sp_check_subset_filter (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -25,16 +25,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_check_subset_filter
 ms.assetid: 525cfcfc-f317-478d-ba84-72e62285f160
-caps.latest.revision: 
+caps.latest.revision: 28
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3341c4f5fc6c637f74dabf913730e6c6e30dfcea
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 77b05fd5b606a7a25f4c6d229aa061643c7fd2b9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spchecksubsetfilter-transact-sql"></a>sp_check_subset_filter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,13 +53,13 @@ sp_check_subset_filter [ @filtered_table = ] 'filtered_table'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@filtered_table** =] **"***Filtered_table***"**  
+ [ **@filtered_table**=] **"***Filtered_table***"**  
  Der Name einer gefilterten Tabelle. *Filtered_table* ist **nvarchar(400)**, hat keinen Standardwert.  
   
- [  **@subset_filterclause**  =] **"***Subset_filterclause***"**  
+ [ **@subset_filterclause** =] **"***Subset_filterclause***"**  
  Die Filterklausel, die getestet wird. *Subset_filterclause* ist **nvarchar(1000)**, hat keinen Standardwert.  
   
- [  **@has_dynamic_filters** =] *Has_dynamic_filters*  
+ [ **@has_dynamic_filters**=] *Has_dynamic_filters*  
  Gibt an, ob die Filterklausel einen parametrisierten Zeilenfilter festlegt. *Has_dynamic_filters* ist **Bit**, hat den Standardwert NULL und ist ein Output-Parameter. Gibt einen Wert von **1** Wenn die Filterklausel ein parametrisierter Zeilenfilter ist.  
   
 ## <a name="result-sets"></a>Resultsets  

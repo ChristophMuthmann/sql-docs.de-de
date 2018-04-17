@@ -1,16 +1,16 @@
 ---
 title: Sp_changesubscription (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 10/28/2015
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -22,21 +22,21 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changesubscription
 ms.assetid: f9d91fe3-47cf-4915-b6bf-14c9c3d8a029
-caps.latest.revision: 
+caps.latest.revision: 40
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5e2a49e9b60927d1838205a5ae594c01ee4a1ffb
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: d94c10040ec7dc82640a17e5454269790acca498
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spchangesubscription-transact-sql"></a>sp_changesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Ändert die Eigenschaften eines Momentaufnahme- oder Transaktionspushabonnements bzw. eines Pullabonnements, das an einem verzögerten Update über eine Warteschlange beteiligt ist. Verwenden Sie zum Ändern der Eigenschaften aller anderen Typen von Pullabonnements [Sp_change_subscription_properties &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md). **Sp_changesubscription** auf dem Verleger für die Veröffentlichungsdatenbank ausgeführt wird.  
+  Ändert die Eigenschaften eines Momentaufnahme- oder Transaktionspushabonnements bzw. eines Pullabonnements, das an einem verzögerten Update über eine Warteschlange beteiligt ist. Verwenden Sie zum Ändern der Eigenschaften aller anderen Typen von Pullabonnements [Sp_change_subscription_properties &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md). **Sp_changesubscription** auf dem Verleger für die Veröffentlichungsdatenbank ausgeführt wird.  
   
 > [!IMPORTANT]  
 >  Beim Konfigurieren eines Verlegers mit einem Remoteverteiler werden die Werte, die für alle Parameter, einschließlich *job_login* und *job_password*, bereitgestellt werden, als Nur-Text an den Verteiler gesendet. Sie sollten die Verbindung zwischen dem Verleger und dem zugehörigen Remoteverteiler verschlüsseln, bevor Sie diese gespeicherte Prozedur ausführen. Weitere Informationen finden Sie unter [Aktivieren von verschlüsselten Verbindungen zum Datenbankmodul &#40;SQL Server-Konfigurations-Manager&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
@@ -57,16 +57,16 @@ sp_changesubscription [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@publication** =] **"***Veröffentlichung***"**  
+ [ **@publication**=] **"***Veröffentlichung***"**  
  Der Name der Veröffentlichung, die geändert werden soll. *Veröffentlichung*ist **Sysname**, hat keinen Standardwert  
   
- [  **@article**  =] **"***Artikel***"**  
+ [ **@article** =] **"***Artikel***"**  
  Der Name des zu ändernden Artikels. *Artikel* ist **Sysname**, hat keinen Standardwert.  
   
- [  **@subscriber**  =] **"***Abonnenten***"**  
+ [ **@subscriber** =] **"***Abonnenten***"**  
  Der Name des Abonnenten. *Abonnenten* ist **Sysname**, hat keinen Standardwert.  
   
- [  **@destination_db**  =] **"***Destination_db***"**  
+ [ **@destination_db** =] **"***Destination_db***"**  
  Ist der Name der Abonnementdatenbank. *Destination_db* ist **Sysname**, hat keinen Standardwert.  
   
  [  **@property=**] **"***Eigenschaft***"**  
@@ -105,7 +105,7 @@ sp_changesubscription [ @publication = ] 'publication'
 ## <a name="remarks"></a>Hinweise  
  **Sp_changesubscription** wird bei der Momentaufnahme- und Transaktionsreplikation verwendet.  
   
- **Sp_changesubscription** können nur zum Ändern der Eigenschaften von Pushabonnements oder Pullabonnements beteiligten verzögerte Aktualisieren der Transaktionsreplikation verwendet werden. Verwenden Sie zum Ändern der Eigenschaften aller anderen Typen von Pullabonnements [Sp_change_subscription_properties &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md).  
+ **Sp_changesubscription** können nur zum Ändern der Eigenschaften von Pushabonnements oder Pullabonnements beteiligten verzögerte Aktualisieren der Transaktionsreplikation verwendet werden. Verwenden Sie zum Ändern der Eigenschaften aller anderen Typen von Pullabonnements [Sp_change_subscription_properties &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md).  
   
  Nach dem Ändern des Anmeldenamens oder Kennworts eines Agents müssen Sie den Agent beenden und neu starten, damit die Änderungen in Kraft treten.  
   
@@ -113,7 +113,7 @@ sp_changesubscription [ @publication = ] 'publication'
  Nur Mitglieder der der **Sysadmin** feste Serverrolle oder **Db_owner** feste Datenbankrolle können ausführen **Sp_changesubscription**.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Sp_addsubscription &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   
- [Sp_dropsubscription &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)  
+ [Sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   
+ [Sp_dropsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)  
   
   

@@ -1,16 +1,16 @@
 ---
 title: Sys.fn_listextendedproperty (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - fn_listextendedproperty
@@ -28,16 +28,17 @@ helpviewer_keywords:
 - extended properties [SQL Server], columns
 - table extended properties [SQL Server]
 ms.assetid: 59bbb91f-a277-4a35-803e-dcb91e847a49
-caps.latest.revision: 
+caps.latest.revision: 32
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c4c9daa724fd73ab9a1da7e4f8d7bf1c510a34d7
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: cdd9b448d0d8e6a6c57a6bae2c9c52a94952f380
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysfnlistextendedproperty-transact-sql"></a>sys.fn_listextendedproperty (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -63,10 +64,10 @@ fn_listextendedproperty (
 ```  
   
 ## <a name="arguments"></a>Argumente  
- { default | '*property_name*' | NULL}  
+ {Standard | "*Property_name*" | NULL}  
  Ist der Name der Eigenschaft. *Property_name* ist **Sysname**. Eine gültige Eingabe ist default, NULL oder ein Eigenschaftsname.  
   
- { default | '*level0_object_type*' | NULL}  
+ {Standard | "*level0_object_type*" | NULL}  
  Der Benutzer oder benutzerdefinierte Typ. *level0_object_type* ist **varchar(128)**, hat den Standardwert NULL. Gültige Eingaben sind ASSEMBLY, CONTRACT, EVENT NOTIFICATION, FILEGROUP, MESSAGE TYPE, PARTITION FUNCTION, PARTITION SCHEME, REMOTE SERVICE BINDING, ROUTE, SCHEMA, SERVICE, TRIGGER, TYPE, USER und NULL.  
   
 > [!IMPORTANT]  
@@ -75,8 +76,8 @@ fn_listextendedproperty (
  {Standard | "*level0_object_name*" | NULL}  
  Der Name des angegebenen Objekttyps der Ebene 0. *level0_object_name* ist **Sysname** hat den Standardwert NULL. Eine gültige Eingabe ist default, NULL oder ein Objektname.  
   
- { default | '*level1_object_type*' | NULL }  
- Der Typ des Objekts der Ebene 1. *level1_object_type* is **varchar(128)** with a default of NULL. Gültige Eingabewerte sind AGGREGATE, DEFAULT, FUNCTION, LOGICAL FILE NAME, PROCEDURE, QUEUE, RULE, SYNONYM, TABLE, TYPE, VIEW, XML SCHEMA COLLECTION und NULL.  
+ {Standard | "*level1_object_type*" | NULL}  
+ Der Typ des Objekts der Ebene 1. *level1_object_type* ist **varchar(128)** hat den Standardwert NULL. Gültige Eingabewerte sind AGGREGATE, DEFAULT, FUNCTION, LOGICAL FILE NAME, PROCEDURE, QUEUE, RULE, SYNONYM, TABLE, TYPE, VIEW, XML SCHEMA COLLECTION und NULL.  
   
 > [!NOTE]  
 >  default ergibt NULL, und 'default' ergibt den Objekttyp DEFAULT.  
@@ -84,8 +85,8 @@ fn_listextendedproperty (
  {Standard | "*level1_object_name*" | NULL}  
  Der Name des angegebenen Objekttyps der Ebene 1. *level1_object_name* ist **Sysname** hat den Standardwert NULL. Eine gültige Eingabe ist default, NULL oder ein Objektname.  
   
- { default | '*level2_object_type*' |NULL }  
- Der Typ des Objekts der Ebene 2. *level2_object_type* is **varchar(128)** with a default of NULL. Gültige Eingaben sind DEFAULT, default (ergibt NULL) und NULL. Gültige Eingabewerte für *level2_object_type* Spalte, CONSTRAINT, EVENT NOTIFICATION, INDEX, PARAMETER, TRIGGER und NULL sind.  
+ {Standard | "*level2_object_type*" | NULL}  
+ Der Typ des Objekts der Ebene 2. *level2_object_type* ist **varchar(128)** hat den Standardwert NULL. Gültige Eingaben sind DEFAULT, default (ergibt NULL) und NULL. Gültige Eingabewerte für *level2_object_type* Spalte, CONSTRAINT, EVENT NOTIFICATION, INDEX, PARAMETER, TRIGGER und NULL sind.  
   
  {Standard | "*level2_object_name*" | NULL}  
  Der Name des angegebenen Objekttyps der Ebene 2. *level2_object_name* ist **Sysname** hat den Standardwert NULL. Eine gültige Eingabe ist default, NULL oder ein Objektname.  
@@ -186,7 +187,7 @@ GO
 ## <a name="see-also"></a>Siehe auch  
  [sp_addextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addextendedproperty-transact-sql.md)   
  [sp_dropextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropextendedproperty-transact-sql.md)   
- [sp_updateextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-updateextendedproperty-transact-sql.md)   
+ [Sp_updateextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-updateextendedproperty-transact-sql.md)   
  [sys.extended_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/extended-properties-catalog-views-sys-extended-properties.md)  
   
   

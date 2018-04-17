@@ -1,15 +1,15 @@
 ---
 title: Sys.external_library_files (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 10/05/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - external_library_files
@@ -23,11 +23,12 @@ helpviewer_keywords:
 author: jeannt
 ms.author: jeannt
 manager: craigg
-ms.openlocfilehash: cf8a1b59827c53bc4ae04f76dbe7084a4ad828d4
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 0278fa01c02bab9da03abb62c375c19e84d1d97d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysexternallibraryfiles-transact-sql"></a>Sys.external_library_files (Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +39,7 @@ Enthält eine Zeile für jede Datei, die aus einer externen Bibliothek besteht.
 |------|------|-----|
 |external_library_id | int |Die ID des Objekts, externe Bibliothek. |
 |content |varbinary(max) |Inhalt des Dateielements externe Bibliothek. |
-|platform |tinyint |ID der die Hostplattform, auf der SQL Server installiert ist. |
+|Plattform |tinyint |ID der die Hostplattform, auf der SQL Server installiert ist. |
 |platform_desc | nvarchar(60) |Name des Host-Plattform. Gültige Werte sind "WINDOWS", "LINUX". |
 
 ### <a name="see-also"></a>Siehe auch  

@@ -1,16 +1,16 @@
 ---
 title: Sp_column_privileges (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_column_privileges_TSQL
@@ -20,16 +20,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_column_privileges
 ms.assetid: a3784301-2517-4b1d-bbd9-47404483fad0
-caps.latest.revision: 
+caps.latest.revision: 36
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f930dc96633f526259dccf89f7fb592a4f9caf10
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 8f3791722797f9c735e7801c989bc155fa9aafc0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spcolumnprivileges-transact-sql"></a>sp_column_privileges (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -58,7 +59,7 @@ sp_column_privileges [ @table_name = ] 'table_name'
  Wenn der aktuelle Benutzer eine Tabelle mit dem angegebenen Namen besitzt, werden die Spalten dieser Tabelle zurückgegeben. Wenn *Table_owner* nicht angegeben wird und der aktuelle Benutzer keine Tabelle mit dem angegebenen *Table_name*, sp_column nach für eine Tabelle mit dem angegebenen *Table_name* gehören dem Datenbankbesitzer. Sofern eine solche Tabelle vorhanden ist, werden die Spalten dieser Tabelle zurückgegeben.  
   
  [ @table_qualifier=] '*Table_qualifier*"  
- Der Name des Tabellenqualifizierers. *TABLE_QUALIFIER* ist *Sysname*, hat den Standardwert NULL. Verschiedene DBMS-Produkte unterstützen eine dreiteilige Namensgebung für Tabellen (*Qualifizierer***.** *Besitzer***.** *Namen*). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt diese Spalte den Datenbanknamen dar. Bei anderen Produkten stellt sie den Servernamen der Datenbankumgebung für die Tabelle dar.  
+ Der Name des Tabellenqualifizierers. *TABLE_QUALIFIER* ist *Sysname*, hat den Standardwert NULL. Verschiedene DBMS-Produkte unterstützen eine dreiteilige Namensgebung für Tabellen (*Qualifizierer***.*** Besitzer***.*** Namen*). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt diese Spalte den Datenbanknamen dar. Bei anderen Produkten stellt sie den Servernamen der Datenbankumgebung für die Tabelle dar.  
   
  [ @column_name=] '*Spalte*"  
  Eine einzelne Spalte, die verwendet wird, wenn nur eine Spalte mit Kataloginformationen empfangen wird. *Spalte* ist **Nvarchar (**384**)**, hat den Standardwert NULL. Wenn *Spalte* ist nicht angegeben ist, werden alle Spalten zurückgegeben. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], *Spalte* dar, der den Namen der Spalte in der sys.columns-Tabelle aufgeführt. *Spalte* kann mithilfe von Platzhalterzeichen Mustervergleich DBMS-spezifische Platzhalterzeichen enthalten. Für eine optimale Interoperabilität sollte der Gatewayclient nur einen ISO-Standardmustervergleich voraussetzen (die Platzhalterzeichen % und _).  
@@ -70,7 +71,7 @@ sp_column_privileges [ @table_name = ] 'table_name'
 |-----------------|---------------|-----------------|  
 |TABLE_QUALIFIER|**sysname**|Tabelle der Name des Prozedurqualifizierers. Dieses Feld kann den Wert NULL annehmen.|  
 |TABLE_OWNER|**sysname**|Name des Tabellenbesitzers. Dieses Feld gibt immer einen Wert zurück.|  
-|TABLE_NAME|**sysname**|Tabellenname. Dieses Feld gibt immer einen Wert zurück.|  
+|table_name|**sysname**|Tabellenname. Dieses Feld gibt immer einen Wert zurück.|  
 |COLUMN_NAME|**sysname**|Der Name der Spalte für jede Spalte des zurückgegebenen TABLE_NAME. Dieses Feld gibt immer einen Wert zurück.|  
 |GRANTOR|**sysname**|Der Datenbank-Benutzername, der dem als GRANTEE aufgeführten Prinzipal Berechtigungen für die mit COLUMN_NAME angegebene Spalte erteilt hat. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ist diese Spalte stets mit dem TABLE_OWNER identisch. Dieses Feld gibt immer einen Wert zurück.<br /><br /> Die GRANTOR-Spalte kann entweder der Datenbankbesitzer (TABLE_OWNER) oder ein anderer Benutzer sein, dem die Berechtigungen vom Datenbankbesitzer mithilfe der WITH GRANT OPTION-Klausel in der GRANT-Anweisung erteilt wurden.|  
 |GRANTEE|**sysname**|Der Datenbank-Benutzername, dem der als GRANTOR aufgeführte Prinzipal Berechtigungen für die mit COLUMN_NAME angegebene Spalte erteilt hat. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] enthält diese Spalte immer einen Datenbankbenutzer aus der sysusers-Tabelle. Dieses Feld gibt immer einen Wert zurück.|  

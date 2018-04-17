@@ -2,7 +2,7 @@
 title: SQLBrowseConnect-Funktion | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -22,16 +22,16 @@ f1_keywords:
 helpviewer_keywords:
 - SQLBrowseConnect function [ODBC]
 ms.assetid: b7f1be66-e6c7-4790-88ec-62b7662103c0
-caps.latest.revision: ''
+caps.latest.revision: 36
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 90c872da50c2d637f79bcc086bea4aaab95608b1
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
+ms.openlocfilehash: 3bbe32ab3098b0e3e7b6ea5ec284a2a86d4f7752
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlbrowseconnect-function"></a>SQLBrowseConnect-Funktion
 **Konformität**  
@@ -54,7 +54,7 @@ SQLRETURN SQLBrowseConnect(
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *ConnectionHandle*  
+ *Verbindungshandle*  
  [Eingabe] Verbindungshandle.  
   
  *InConnectionString*  
@@ -68,7 +68,7 @@ SQLRETURN SQLBrowseConnect(
   
  Wenn *OutConnectionString* NULL ist, *StringLength2Ptr* gibt weiterhin zurück, die Gesamtzahl der Zeichen (mit Ausnahme der Null-Terminierung Zeichen für Zeichendaten) verfügbar, die in den Puffer zurückgegeben verweist *OutConnectionString*.  
   
- *BufferLength*  
+ *Pufferlänge*  
  [Eingabe] Länge in Zeichen, d. h. von der **OutConnectionString* Puffer.  
   
  *StringLength2Ptr*  
@@ -118,11 +118,11 @@ SQLRETURN SQLBrowseConnect(
 ## <a name="inconnectionstring-argument"></a>InConnectionString-Argument  
  Eine Verbindungszeichenfolge für Durchsuchen-Anforderung hat die folgende Syntax:  
   
- *connection-string* ::= *attribute*[`;`] &#124; *attribute* `;` *connection-string*;<br>
- *attribute* ::= *attribute-keyword*`=`*attribute-value* &#124; `DRIVER=`[`{`]*attribute-value*[`}`]<br>
- *attribute-keyword* ::= `DSN` &#124; `UID` &#124; `PWD` &#124; *driver-defined-attribute-keyword*<br>
- *attribute-value* ::= *character-string*<br>
- *driver-defined-attribute-keyword* ::= *identifier*<br>
+ *Verbindungszeichenfolgen* :: = *Attribut*[`;`] &#124; *Attribut* `;` *Verbindungszeichenfolgen*;<br>
+ *Attribut* :: = *Attribut-Schlüsselwort*`=`*Attribut / Wert-* &#124; `DRIVER=`[`{`]*Attribut / Wert-*[`}`]<br>
+ *Attribut-Schlüsselwort* :: = `DSN` &#124; `UID` &#124; `PWD` &#124; *-Treiber-definierten-Attribut-Schlüsselwort*<br>
+ *Attribut / Wert-* :: = *-Zeichenfolge*<br>
+ *Treiber-definierten-Attribut-Schlüsselwort* :: = *Bezeichner*<br>
   
  wobei *Zeichenfolge* wurde NULL oder mehr Zeichen; *Bezeichner* verfügt über eine oder mehrere Zeichen; *Attribut-Schlüsselwort* ist nicht beachtet werden soll; *Attribut / Wert-* möglicherweise Groß-/Kleinschreibung beachtet; und der Wert der **DSN** Schlüsselwort nicht ausschließlich aus Leerzeichen bestehen. Aufgrund der Zeichenfolge und Initialisierung Datei Grammatik, Schlüsselwörter und Attribut Verbindungswerte, die die Zeichen enthalten **[] {} (),? \*=! @** sollte vermieden werden. Aufgrund der Grammatik in die Systeminformationen, Schlüsselwörter und Namen von Datenquellen können den umgekehrten Schrägstrich enthalten (\\) Zeichen. Für einen ODBC-2. *x* Treiber, geschweifte Klammern sind erforderlich, um den Attributwert für das DRIVER-Schlüsselwort.  
   
@@ -133,10 +133,10 @@ SQLRETURN SQLBrowseConnect(
 ## <a name="outconnectionstring-argument"></a>OutConnectionString-Argument  
  Die Durchsuchen-Ergebnis-Verbindungszeichenfolge ist eine Liste der Verbindungsattribute. Ein Verbindungsattribut besteht aus einem Attribut-Schlüsselwort und einen entsprechenden Attributwert. Die Verbindungszeichenfolge der durchsuchen Ergebnis hat die folgende Syntax:  
   
- *connection-string* ::= *attribute*[`;`] &#124; *attribute* `;` *connection-string*<br>
- *attribute* ::= [`*`]*attribute-keyword*`=`*attribute-value*<br>
- *attribute-keyword* ::= *ODBC-attribute-keyword* &#124; *driver-defined-attribute-keyword*<br>
- *ODBC-attribute-keyword* = {`UID` &#124; `PWD`}[`:`*localized-identifier*] *driver-defined-attribute-keyword* ::= *identifier*[`:`*localized-identifier*] *attribute-value* ::= `{` *attribute-value-list* `}` &#124; `?` (The braces are literal; they are returned by the driver.)<br>
+ *Verbindungszeichenfolgen* :: = *Attribut*[`;`] &#124; *Attribut* `;` *Verbindungszeichenfolgen*<br>
+ *Attribut* :: = [`*`]*Attribut-Schlüsselwort*`=`*Attribut / Wert*<br>
+ *Attribut-Schlüsselwort* :: = *ODBC-Attribut-Schlüsselwort* &#124; *-Treiber-definierten-Attribut-Schlüsselwort*<br>
+ *ODBC-Attribut-Schlüsselwort* = {`UID` &#124; `PWD`} [`:`*lokalisiert Bezeichner*] *-definierten-Attribut-Schlüsselwort Driver* :: = *Bezeichner*[`:`*lokalisiert Bezeichner*] *Attribut / Wert-* :: = `{` *Attribut-Wert-List* `}` &#124; `?` (Die Klammern sind literal; sie werden vom Treiber zurückgegeben.)<br>
  *attribute-value-list* ::= *character-string* [`:`*localized-character string*] &#124; *character-string* [`:`*localized-character string*] `,` *attribute-value-list*<br>
   
  wobei *Zeichenfolge* und *lokalisierte Zeichenfolge* NULL oder mehr Zeichen lang sein; *Bezeichner* und *lokalisiert Bezeichner* haben Sie ein oder mehrere Zeichen; *Attribut-Schlüsselwort* ist nicht beachtet werden soll; und *Attribut / Wert-* möglicherweise Groß-/Kleinschreibung beachtet werden. Aufgrund der Verbindung Zeichenfolge und die Initialisierung Datei Grammatik, Schlüsselwörter, lokalisierte Bezeichner und Attributwerte zurück, die die Zeichen enthalten **[] {} (),? \*=! @** sollte vermieden werden. Aufgrund der Grammatik in die Systeminformationen, Schlüsselwörter und Namen von Datenquellen können den umgekehrten Schrägstrich enthalten (\\) Zeichen.  

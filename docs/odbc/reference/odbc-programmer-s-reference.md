@@ -1,8 +1,8 @@
 ---
-title: ODBC-Programmierer &#39; s Verweis | Microsoft Docs
+title: ODBC-Programmierer&#39;s-Referenz | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,15 +18,15 @@ ms.assetid: b33c3c43-ae66-44a3-be17-9cd82624dd96
 caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b934652505039a021d2b08c0fa5314614ce9c609
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 24f7c0aa7abcf2b35cbef34cabbe86944ddcc7d1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="odbc-programmer39s-reference"></a>ODBC Programmer &#39; s-Referenz
+# <a name="odbc-programmer39s-reference"></a>ODBC-Programmierer&#39;s-Referenz
 Die *ODBC Programmer's Reference* enthält folgende Abschnitte.  
   
 -   [Neuigkeiten in ODBC 3.8](../../odbc/reference/what-s-new-in-odbc-3-8.md) Listet die neuen ODBC-Funktionen, die im SDK für Windows 8 hinzugefügt wurden.  
@@ -58,11 +58,11 @@ Die *ODBC Programmer's Reference* enthält folgende Abschnitte.
 |------------|--------------|  
 |WÄHLEN SIE * AUS|Großbuchstaben Geben Sie an SQL-Anweisungen, Makronamen und Begriffe, die auf der Ebene Betriebssystembefehl verwendet.|  
 |`RETCODE SQLFetch(hdbc)`|Die Festbreitenschriftart dient für Beispielbefehlszeilen und Programmcode.|  
-|*Argument*|Kursiv geschriebene Wörter Geben Sie den programmatischen Argumente, Information, dass der Benutzer oder die Anwendung muss bereitstellen oder word Betonung.|  
+|*argument*|Kursiv geschriebene Wörter Geben Sie den programmatischen Argumente, Information, dass der Benutzer oder die Anwendung muss bereitstellen oder word Betonung.|  
 |**SQLEndTran**|Fett formatierte gibt an, dass die Syntax genau wie dargestellt, einschließlich Funktionsnamen, eingegeben werden muss.|  
 |&#124;|Ein senkrechter Strich trennt zwei sich gegenseitig ausschließende Optionen in einer Syntaxzeile.|  
 |...|Ellipsen gibt an, dass Argumente mehrmals wiederholt werden können.|  
-|zugreifen. zugreifen. zugreifen.|Eine Spalte mit den drei Punkten gibt die Fortsetzung des vorherigen Codezeilen an.|  
+|aus. aus. aus.|Eine Spalte mit den drei Punkten gibt die Fortsetzung des vorherigen Codezeilen an.|  
   
 ## <a name="about-the-code-examples"></a>Informationen zu den Codebeispielen  
  Die Codebeispiele in diesem Handbuch dienen nur zur Veranschaulichung. Da sie in erster Linie in ODBC-Prinzipien veranschaulichen geschrieben werden, wurde Effizienz reserviert manchmal Klarheit festgelegt. Darüber hinaus wurden ganze Bereiche des Codes in einigen Fällen aus Gründen der Übersichtlichkeit ausgelassen. Dazu gehören die Definitionen von nicht-ODBC-Funktionen (diese Funktionen nicht, deren Namen mit "SQL starten") und die meisten Fehlerbehandlung.  

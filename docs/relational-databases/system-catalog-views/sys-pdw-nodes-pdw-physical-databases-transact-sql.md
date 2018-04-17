@@ -1,43 +1,44 @@
 ---
-title: sys.pdw_nodes_pdw_physical_databases (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: Sys.pdw_nodes_pdw_physical_databases (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/09/2017
-ms.prod: 
+ms.prod: ''
 ms.prod_service: sql-data-warehouse, pdw
 ms.service: sql-data-warehouse
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 70e0939d-4d97-4ae0-ba16-934e0a80e718
-caps.latest.revision: 
+caps.latest.revision: 9
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 61ffd5ddd2c246b3bcd8910591393779368081b5
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
+ms.openlocfilehash: 54e6403b566cb61425dbdd4918738e009805a8a5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="syspdwnodespdwphysicaldatabases-transact-sql"></a>sys.pdw_nodes_pdw_physical_databases (Transact-SQL)
+# <a name="syspdwnodespdwphysicaldatabases-transact-sql"></a>Sys.pdw_nodes_pdw_physical_databases (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   Enthält eine Zeile für jede physische Datenbank auf einem Serverknoten. Aggregieren Sie die physische Datenbankinformationen, um ausführliche Informationen zu Datenbanken abzurufen. Informationen zu kombinieren, verknüpfen die `sys.pdw_nodes_pdw_physical_databases` auf die `sys.pdw_database_mappings` und `sys.databases` Tabellen.  
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
-|database_id|**int**|Die Objekt-ID für die Datenbank. Beachten Sie, dass dieser Wert nicht identisch mit einem Database_id in die [sys.databases &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) anzeigen.|  
-|physical_name|**sysname**|Der physische Name für die Datenbank auf die Shell/Serverknoten. Dieser Wert ist identisch mit einem Wert in der Spalte Physical_name der [sys.pdw_database_mappings &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-pdw-database-mappings-transact-sql.md) anzeigen.|  
+|database_id|**int**|Die Objekt-ID für die Datenbank. Beachten Sie, dass dieser Wert nicht identisch mit einem Database_id in der [sys.databases &#40;Transact-SQL&#41; ](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) anzeigen.|  
+|physical_name|**sysname**|Der physische Name für die Datenbank auf die Shell/Serverknoten. Dieser Wert ist identisch mit einem Wert in der Spalte Physical_name der [sys.pdw_database_mappings &#40;Transact-SQL&#41; ](../../relational-databases/system-catalog-views/sys-pdw-database-mappings-transact-sql.md) anzeigen.|  
 |pdw_node_id|**int**|Eindeutige numerische Id, die dem Knoten zugeordnet.|  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
 ### <a name="a-returning"></a>A. Zurückgeben von  
  Die folgende Abfrage gibt den Namen und die ID der einzelnen Datenbanken in Master und den entsprechenden Datenbanknamen auf jedem Computeknoten zurück.  

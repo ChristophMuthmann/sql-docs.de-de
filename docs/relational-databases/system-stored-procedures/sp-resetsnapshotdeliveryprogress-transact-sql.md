@@ -1,16 +1,16 @@
 ---
 title: Sp_resetsnapshotdeliveryprogress (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_resetsnapshotdeliveryprogress
 ms.assetid: 5df7d86b-d343-4d9b-88b1-74429ed092e6
-caps.latest.revision: 
+caps.latest.revision: 24
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0aa67918309c5c34bbe3826853c26cf7422c4666
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: ebe29fc0216e9da2875f259034679ca7479ae013
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spresetsnapshotdeliveryprogress-transact-sql"></a>sp_resetsnapshotdeliveryprogress (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,10 +47,10 @@ sp_resetsnapshotdeliveryprogress [ [ @verbose_level = ] verbose_level ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@verbose_level** =] *Verbose_level*  
+ [ **@verbose_level**=] *Verbose_level*  
  Gibt den Umfang der zurückgegebenen Informationen an. *Verbose_level*ist **Int**, hat den Standardwert **1**. Der Wert **1** darauf hin, dass ein Fehler zurückgegeben, wenn die erforderlichen Sperren abgerufen werden können, auf die **MSsnapshotdeliveryprogress** Tabelle und **0** bedeutet, die kein Fehler zurückgegeben wird.  
   
- [  **@drop_table** =] **"***Drop_table***"**  
+ [ **@drop_table**=] **"***Drop_table***"**  
  Gibt an, ob löschen oder Abschneiden der Tabelle, das Informationen über den Status der Momentaufnahme werden soll. *Drop_table* ist **nvarchar(5)**, hat den Standardwert **"false"**. Bei false wird die Tabelle abgeschnitten, und bei true wird die Tabelle gelöscht.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  

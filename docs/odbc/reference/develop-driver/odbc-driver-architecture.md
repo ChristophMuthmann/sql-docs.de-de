@@ -2,7 +2,7 @@
 title: ODBC-Treiberarchitektur | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: 21a62c7c-192e-4718-a16e-aa12b0de4419
 caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 69d4103e9f04da7775f38b436b009f8a3c06a962
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 858bb1d468449b76560a25c1928babddb44f1d1c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="odbc-driver-architecture"></a>ODBC-Treiberarchitektur
 Treiber Writer müssen bewusst sein, dass die Architektur der sprachmonitortreiber auswirken kann, ob eine Anwendung die DBMS-spezifische SQL verwenden kann.  

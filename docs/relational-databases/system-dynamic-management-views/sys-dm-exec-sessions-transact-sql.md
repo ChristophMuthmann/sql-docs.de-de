@@ -1,16 +1,16 @@
 ---
 title: Sys. dm_exec_sessions (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/21/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_exec_sessions_TSQL
@@ -22,16 +22,17 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_sessions dynamic management view
 ms.assetid: 2b7e8e0c-eea0-431e-819f-8ccd12ec8cfa
-caps.latest.revision: 
+caps.latest.revision: 60
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: f2cf9c01c280848403ca2998e550213f2de78ad6
-ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: b7452644412b76854a82d7c6a41c2b15de22db48
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmexecsessions-transact-sql"></a>sys.dm_exec_sessions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -52,7 +53,7 @@ ms.lasthandoff: 02/20/2018
 |client_version|**int**|Die vom Client für die Verbindung mit dem Server verwendete TDS-Protokollversion der Schnittstelle. Der Wert ist für interne Sitzungen NULL. Lässt NULL-Werte zu.|  
 |client_interface_name|**nvarchar(32)**|Name der Bibliothek/Treiber, die vom Client zur Kommunikation mit dem Server verwendet wird. Der Wert ist für interne Sitzungen NULL. Lässt NULL-Werte zu.|  
 |security_id|**varbinary(85)**|Microsoft Windows-Sicherheits-ID, die der Anmeldung zugeordnet ist. Lässt keine NULL-Werte zu.|  
-|login_name|**nvarchar(128)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anmeldename, unter dem die Sitzung gegenwärtig ausgeführt wird. Den ursprünglichen Anmeldenamen, mit dem die Sitzung erstellt wurde, finden Sie unter original_login_name. Kann eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anmeldename oder eine Windows authentifizierter Benutzername Domäne authentifiziert. Lässt keine NULL-Werte zu.|  
+|login_name|**nvarchar(128)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldename, unter dem die Sitzung gegenwärtig ausgeführt wird. Den ursprünglichen Anmeldenamen, mit dem die Sitzung erstellt wurde, finden Sie unter original_login_name. Kann eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anmeldename oder eine Windows authentifizierter Benutzername Domäne authentifiziert. Lässt keine NULL-Werte zu.|  
 |nt_domain|**nvarchar(128)**|**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Die Windows-Domäne für den Client, wenn für die Sitzung die Windows-Authentifizierung oder eine vertrauenswürdige Verbindung verwendet wird. Dieser Wert ist für interne Sitzungen und andere Benutzer als Domänenbenutzer NULL. Lässt NULL-Werte zu.|  
 |nt_user_name|**nvarchar(128)**|**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Der Windows-Benutzername für den Client, wenn für die Sitzung die Windows-Authentifizierung oder eine vertrauenswürdige Verbindung verwendet wird. Dieser Wert ist für interne Sitzungen und andere Benutzer als Domänenbenutzer NULL. Lässt NULL-Werte zu.|  
 |status|**nvarchar(30)**|Status der Sitzung. Mögliche Werte:<br /><br /> **Ausführen** -derzeit eine oder mehrere Anforderungen ausführen<br /><br /> **Sleeping** -derzeit keine Anforderungen ausgeführt<br /><br /> **Ruhende** – Sitzung wurde aufgrund des Verbindungspoolings zurückgesetzt und befindet sich nun im Status vor einer Anmeldung.<br /><br /> **Preconnect** -Sitzung ist in der Klassifizierungsfunktion der Ressourcenkontrolle.<br /><br /> Lässt keine NULL-Werte zu.|  
@@ -85,8 +86,8 @@ ms.lasthandoff: 02/20/2018
 |deadlock_priority|**int**|DEADLOCK_PRIORITY-Einstellung für die Sitzung. Lässt keine NULL-Werte zu.|  
 |row_count|**bigint**|Anzahl der bisher in der Sitzung zurückgegebenen Zeilen. Lässt keine NULL-Werte zu.|  
 |prev_error|**int**|ID des letzten in der Sitzung zurückgegebenen Fehlers. Lässt keine NULL-Werte zu.|  
-|original_security_id|**varbinary(85)**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows Sicherheits-ID, die Original_login_name zugeordnet ist. Lässt keine NULL-Werte zu.|  
-|original_login_name|**nvarchar(128)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anmeldename, der vom Client zum Erstellen dieser Sitzung verwendet. Kann ein authentifizierter Anmeldename von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ein authentifizierter Benutzername einer Windows-Domäne oder ein Benutzer einer eigenständigen Datenbank sein. Beachten Sie, dass für die Sitzung nach der ersten Verbindung möglicherweise viele implizite oder explizite Kontextwechsel erfolgt sind. Z. B. wenn [EXECUTE AS](../../t-sql/statements/execute-as-transact-sql.md) verwendet wird. Lässt keine NULL-Werte zu.|  
+|original_security_id|**varbinary(85)**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Sicherheits-ID, die original_login_name zugeordnet ist. Lässt keine NULL-Werte zu.|  
+|original_login_name|**nvarchar(128)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldename, der vom Client zum Erstellen dieser Sitzung verwendet wurde. Kann ein authentifizierter Anmeldename von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ein authentifizierter Benutzername einer Windows-Domäne oder ein Benutzer einer eigenständigen Datenbank sein. Beachten Sie, dass für die Sitzung nach der ersten Verbindung möglicherweise viele implizite oder explizite Kontextwechsel erfolgt sind. Z. B. wenn [EXECUTE AS](../../t-sql/statements/execute-as-transact-sql.md) verwendet wird. Lässt keine NULL-Werte zu.|  
 |last_successful_logon|**datetime**|**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Zeitpunkt der letzten erfolgreichen Anmeldung für original_login_name, bevor die aktuelle Sitzung gestartet wurde.|  
 |last_unsuccessful_logon|**datetime**|**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Zeitpunkt des letzten nicht erfolgreichen Anmeldeversuchs für original_login_name, bevor die aktuelle Sitzung gestartet wurde.|  
 |unsuccessful_logons|**bigint**|**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Anzahl der nicht erfolgreichen Anmeldeversuche für original_login_name zwischen last_successful_logon und login_time.|  
@@ -190,7 +191,7 @@ WHERE c.session_id = @@SPID;
   
 ## <a name="see-also"></a>Siehe auch  
  [Dynamische Verwaltungssichten und -funktionen &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Ausführung bezogene dynamische Verwaltungssichten und-Funktionen &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
+ [Ausführung dynamische Verwaltungssichten und-Funktionen im Zusammenhang &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   
 

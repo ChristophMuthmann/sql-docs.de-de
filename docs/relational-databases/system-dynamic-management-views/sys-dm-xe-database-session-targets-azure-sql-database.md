@@ -1,28 +1,29 @@
 ---
 title: Sys.dm_xe_database_session_targets (Azure SQL-Datenbank) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: 
+ms.prod: ''
 ms.prod_service: sql-database
-ms.reviewer: 
+ms.reviewer: ''
 ms.service: sql-database
 ms.component: dmv's
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 ms.assetid: 7f353e2a-f8fc-4366-97e4-aa1c49eadaf4
-caps.latest.revision: 
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d3da18c7d3fb07f228b06343678c81c475d34364
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
+ms.openlocfilehash: 7284d59668742f2ad8821ebfb435de469ed31c4e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmxedatabasesessiontargets-azure-sql-database"></a>Sys.dm_xe_database_session_targets (Azure SQL-Datenbank)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -49,6 +50,6 @@ ms.lasthandoff: 02/03/2018
   
 |Von|Aktion|Beziehung|  
 |----------|--------|------------------|  
-|sys.dm_xe_database_session_targets.event_session_address|sys.dm_xe_database_sessions.address|n:1|  
+|Sys.dm_xe_database_session_targets.event_session_address|sys.dm_xe_database_sessions.address|n:1|  
   
   

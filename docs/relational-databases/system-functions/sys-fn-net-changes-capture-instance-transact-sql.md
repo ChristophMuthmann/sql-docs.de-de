@@ -1,16 +1,16 @@
 ---
 title: Sys.fn_net_changes_&lt;Capture_instance&gt; (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server (starting with 2008)
@@ -25,16 +25,16 @@ helpviewer_keywords:
 - fn_net_changes_<capture_instance>
 - sys.fn_net_changes_<capture_instance>
 ms.assetid: 342fa030-9fd9-4b74-ae4d-49f6038a5073
-caps.latest.revision: 
+caps.latest.revision: 16
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d95fad7337666594aa41552a20e6ab5d4f211995
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: b3155994177127d9739b9a908ab439acaf50c979
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysfnnetchangesltcaptureinstancegt-transact-sql"></a>Sys.fn_net_changes_&lt;Capture_instance&gt; (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -80,7 +80,7 @@ fn_net_changes_<capture_instance> ('start_time', 'end_time', '<row_filter_option
   
  Wenn für dieses Argument ein Wert von NULL übergeben wird, entspricht der obere Endpunkt des Abfragebereichs dem oberen Endpunkt des gültigen Bereichs der Aufzeichnungsinstanz.  
   
- *<row_filter_option>* ::= { all | all with mask | all with merge }  
+ *< Row_filter_option >* :: = {alle | alle Daten mit Maske | alle Daten mit Merge}  
  Eine Option, die den Inhalt der Metadatenspalten sowie die im Resultset zurückgegebenen Zeilen bestimmt. Eine der folgenden Optionen ist möglich:  
   
  all  
@@ -104,7 +104,7 @@ fn_net_changes_<capture_instance> ('start_time', 'end_time', '<row_filter_option
   
 |Spaltenname|Spaltentyp|Description|  
 |-----------------|-----------------|-----------------|  
-|\<Spalten aus @column_list>|**varies**|Die Spalten, die im identifiziert werden die **Column_list** Argument an die Sp_cdc_generate_wrapper_function, wenn sie aufgerufen wird, um das Skript zur Erstellung des Wrappers zu generieren. Wenn *Column_list* NULL ist, alle verfolgten Quellspalten werden im Resultset angezeigt.|  
+|\<Spalten aus @column_list>|**Variiert**|Die Spalten, die im identifiziert werden die **Column_list** Argument an die Sp_cdc_generate_wrapper_function, wenn sie aufgerufen wird, um das Skript zur Erstellung des Wrappers zu generieren. Wenn *Column_list* NULL ist, alle verfolgten Quellspalten werden im Resultset angezeigt.|  
 |__CDC_OPERATION|**nvarchar(2)**|Ein Vorgangscode, der angibt, welcher Vorgang auf die Zeile der Zielumgebung angewendet werden muss. Der Vorgang ist variiert basierend auf den Wert des Arguments *Row_filter_option* , die im folgenden Aufruf angegeben wird:<br /><br /> *Row_filter_option* = 'all', 'all with Mask'<br /><br /> 'D' - Löschvorgang<br /><br /> 'I' - Einfügevorgang<br /><br /> 'UN' - Aktualisierungsvorgang<br /><br /> *Row_filter_option* = 'all with Merge'<br /><br /> 'D' - Löschvorgang<br /><br /> 'M' - Einfüge- oder Aktualisierungsvorgang|  
 |\<Spalten aus @update_flag_list>|**bit**|Ein Bitflag, das durch Anfügen von _uflag an den Spaltennamen benannt wird. Ein Wert ungleich NULL das Flag nimmt nur, wenn *Row_filter_option* **= 'all with Mask'** und \__CDC_OPERATION **= un '**. Es wird auf 1 eingestellt, wenn die entsprechende Spalte innerhalb des Abfragefensters geändert wurde. Andernfalls ist es 0.|  
   

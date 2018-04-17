@@ -1,16 +1,16 @@
 ---
 title: dm_fts_parser (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_fts_parser_TSQL
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - sys.dm_fts_parser dynamic management function
 - troubleshooting [SQL Server], full-text search
 ms.assetid: 2736d376-fb9d-4b28-93ef-472b7a27623a
-caps.latest.revision: 
+caps.latest.revision: 37
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 97e1eb8f7c4b37e8f1d3bb84ff7b1607712f729c
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 0494f1586f71d3dc475284e90721f2cc5fc8e502
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmftsparser-transact-sql"></a>sys.dm_fts_parser (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -77,15 +77,15 @@ sys.dm_fts_parser('query_string', lcid, stoplist_id, accent_sensitivity)
 |-----------------|---------------|-----------------|  
 |Schlüsselwort (keyword)|**varbinary(128)**|Die hexadezimale Darstellung eines gegebenen Schlüsselworts, das von einer Wörtertrennung zurückgegeben wurde. Diese Darstellung wird zum Speichern des Schlüsselworts im Volltextindex verwendet. Dieser Wert ist nicht lesbar, aber es eignet sich für ein gegebenes Schlüsselwort mit output bezüglich von anderen dynamischen Verwaltungssichten zurückgegeben, die den Inhalt von einem Volltextindex, z. B. zurückgeben [dm_fts_index_keywords](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-transact-sql.md) und [ dm_fts_index_keywords_by_document](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md).<br /><br /> **Hinweis:** OxFF stellt das Sonderzeichen, die das Ende einer Datei oder das Dataset anzeigt.|  
 |group_id|**int**|Enthält einen ganzzahligen Wert, mit dem die logische Gruppe unterschieden werden kann, aus der ein gegebener Begriff generiert wurde. Beispiel: Mit '`Server AND DB OR FORMSOF(THESAURUS, DB)"`' werden die folgenden group_id-Werte auf Englisch ausgegeben:<br /><br /> 1: Server<br />2: DB<br />3: DB|  
-|phrase_id|**int**|Enthält einen ganzzahligen Wert, der zur Unterscheidung der Fälle dient, in denen alternative Formen für zusammengesetzte Wörter (z. B. "full-text") von der Wörtertrennung ausgegeben werden. Wenn zusammengesetzte Wörter vorhanden sind (z. B. 'multi-millon'), gibt die Wörtertrennung u. U. alternative Formen aus. Diese alternativen Formen (Ausdrücke) müssen in einigen Fällen unterschieden werden.<br /><br /> Beispiel: Mit '`multi-million`' werden die folgenden phrase_id-Werte auf Englisch ausgegeben:<br /><br /> 1 für`multi`<br />1 für`million`<br />2 für`multimillion`|  
-|occurrence|**int**|Gibt die Reihenfolge der einzelnen Begriffe im Analyseergebnis an. Beispiel: Für den Ausdruck "`SQL Server query processor`" enthält die Spalte occurrence die folgenden Vorkommenwerte auf Englisch:<br /><br /> 1 für`SQL`<br />2 für`Server`<br />3 für`query`<br />4 für`processor`|  
+|phrase_id|**int**|Enthält einen ganzzahligen Wert, der zur Unterscheidung der Fälle dient, in denen alternative Formen für zusammengesetzte Wörter (z. B. "full-text") von der Wörtertrennung ausgegeben werden. Wenn zusammengesetzte Wörter vorhanden sind (z. B. 'multi-millon'), gibt die Wörtertrennung u. U. alternative Formen aus. Diese alternativen Formen (Ausdrücke) müssen in einigen Fällen unterschieden werden.<br /><br /> Beispiel: Mit '`multi-million`' werden die folgenden phrase_id-Werte auf Englisch ausgegeben:<br /><br /> 1 für `multi`<br />1 für `million`<br />2 für `multimillion`|  
+|occurrence|**int**|Gibt die Reihenfolge der einzelnen Begriffe im Analyseergebnis an. Beispiel: Für den Ausdruck "`SQL Server query processor`" enthält die Spalte occurrence die folgenden Vorkommenwerte auf Englisch:<br /><br /> 1 für `SQL`<br />2 für `Server`<br />3 für `query`<br />4 für `processor`|  
 |special_term|**nvarchar(4000)**|Enthält Informationen über die Eigenschaften des Begriffs, der von der Wörtertrennung ausgegeben wird. Hierbei gibt es folgende Möglichkeiten:<br /><br /> Genaue Übereinstimmung<br /><br /> Noise word (Füllwort)<br /><br /> End of Sentence (Ende des Satzes)<br /><br /> End of paragraph (Ende des Absatzes)<br /><br /> End of Chapter (Ende des Kapitels)|  
 |display_term|**nvarchar(4000)**|Enthält die Klartextform des Schlüsselworts. Wie bei den Funktionen für den Zugriff auf den Inhalt des Volltextindexes stimmt der angezeigte Begriff aufgrund der Denormalisierungsgrenze u. U. nicht mit dem ursprünglichen Begriff überein. In der Regel ist er jedoch so genau, dass Sie ihn anhand der ursprünglichen Eingabe identifizieren können.|  
 |expansion_type|**int**|Enthält Informationen über die Beschaffenheit der Erweiterung eines gegebenen Begriffs. Hierbei gibt es folgende Möglichkeiten:<br /><br /> 0 = einzelnes Wort, Schreibweise<br /><br /> 2 = Flexionserweiterung<br /><br /> 4 = Thesauruserweiterung/-ersetzung<br /><br /> Nehmen Sie beispielsweise an, dass der Thesaurus "run" als Erweiterung von `jog` definiert:<br /><br /> `<expansion>`<br /><br /> `<sub>run</sub>`<br /><br /> `<sub>jog</sub>`<br /><br /> `</expansion>`<br /><br /> Der Begriff `FORMSOF (FREETEXT, run)` generiert die folgende Ausgabe:<br /><br /> `run` (expansion_type=0)<br /><br /> `runs` (expansion_type=2)<br /><br /> `running` (expansion_type=2)<br /><br /> `ran` (expansion_type=2)<br /><br /> `jog` (expansion_type=4)|  
-|source_term|**nvarchar(4000)**|Der Begriff bzw. der Ausdruck, auf dessen Basis ein gegebener Begriff generiert wurde. Beispiel: Aus der Abfrage von '"`word breakers" AND stemmers'` ergeben sich die folgenden source_term-Werte auf Englisch:<br /><br /> `word breakers`für die display_term`word`<br />`word breakers`für die display_term`breakers`<br />`stemmers`für die display_term`stemmers`|  
+|source_term|**nvarchar(4000)**|Der Begriff bzw. der Ausdruck, auf dessen Basis ein gegebener Begriff generiert wurde. Beispiel: Aus der Abfrage von '"`word breakers" AND stemmers'` ergeben sich die folgenden source_term-Werte auf Englisch:<br /><br /> `word breakers` für die display_term`word`<br />`word breakers` für die display_term`breakers`<br />`stemmers` für die display_term`stemmers`|  
   
 ## <a name="remarks"></a>Hinweise  
- **dm_fts_parser** unterstützt die Syntax und Funktionen von Volltextprädikaten, wie z. B. [CONTAINS](../../t-sql/queries/contains-transact-sql.md) und [FREETEXT](../../t-sql/queries/freetext-transact-sql.md), und Funktionen, wie z. B. [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) und [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md).  
+ **dm_fts_parser** unterstützt die Syntax und Funktionen von Volltextprädikaten, wie z. B. [CONTAINS](../../t-sql/queries/contains-transact-sql.md) und [FREETEXT](../../t-sql/queries/freetext-transact-sql.md), und Funktionen, wie z. B. [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md)und [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md).  
   
 ## <a name="using-unicode-for-parsing-special-characters"></a>Verwenden von Unicode zum Analysieren von Sonderzeichen  
  Wenn Sie eine Abfragezeichenfolge analysieren **dm_fts_parser** verwendet die Sortierung der Datenbank mit der Sie verbunden sind, es sei denn, Sie als Unicode-Zeichenfolge der Abfrage angeben. Aus diesem Grund kann für eine nicht-Unicode-Zeichenfolge, die Sonderzeichen wie ü oder ç enthält die Ausgabe unerwarteter, abhängig von der Sortierung der Datenbank sein. Um eine Abfragezeichenfolge unabhängig von der datenbanksortierung zu verarbeiten, als Präfix die Zeichenfolge mit `N`, d. h. `N'` *Abfragezeichenfolge*`'`.  
@@ -170,7 +170,7 @@ SELECT * FROM sys.dm_fts_parser(N'français', 1036, 5, 1);
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Volltextsuche und semantische Suche dynamische Verwaltungssichten und Funktionen &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)   
+ [Volltextsuche und semantische Suche dynamische Verwaltungssichten und Funktionen &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)   
  [Volltextsuche](../../relational-databases/search/full-text-search.md)   
  [Konfigurieren und Verwalten von Wörtertrennungen und Wortstammerkennungen für die Suche](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
  [Konfigurieren und Verwalten von Thesaurusdateien für die Volltextsuche](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)   

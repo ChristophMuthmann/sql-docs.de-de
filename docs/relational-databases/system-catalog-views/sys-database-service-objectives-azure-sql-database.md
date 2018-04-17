@@ -23,11 +23,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 40f4d0d98cd33a57d6ab1e6f9c46ebd2174c9a15
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
+monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
+ms.openlocfilehash: edde7e88247c0cb8ad05264e4d589258868909ec
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdatabaseserviceobjectives-azure-sql-database"></a>Sys.database_service_objectives (Azure SQL-Datenbank)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
@@ -44,7 +45,7 @@ Ggf. für eine Azure SQL-Datenbank oder einer Azure SQL Data Warehouse die Editi
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |database_id|int|Die ID der Datenbank, eindeutig innerhalb einer Instanz von Azure SQL-Datenbankserver. Mit beigetreten [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).|  
-|-Edition|sysname|Die Dienstebene für die Datenbank oder vorhandenem Data Warehouse: **grundlegende**, **Standard**, **Premium**, **allgemeines**, ** Unternehmenswichtig**, oder **Datawarehouse**.|  
+|-Edition|sysname|Die Dienstebene für die Datenbank oder vorhandenem Data Warehouse: **grundlegende**, **Standard**, **Premium**, **allgemeines**,  **Unternehmenswichtig**, oder **Datawarehouse**.|  
 |service_objective|sysname|Der Tarif der Datenbank. Gibt zurück, wenn die Datenbank in einem elastischen Pool befindet, **ElasticPool**.<br /><br /> Auf der **grundlegende** -Ebene gibt **grundlegende**.<br /><br /> Einzelne Datenbank in eine standard-Dienstebene gibt die aktuell gültigen Werte für diese Ebene zurück.<br /><br /> Einzelne Datenbank in einem Premium-Dienstebene gibt die aktuell gültigen Werte für diese Dienstebene zurück.<br /><br />Einzelne Datenbank in der Dienstebene für allgemeine Zwecke gibt die aktuell gültigen Werte für diese Dienstebene zurück.<br /><br />Einzelne Datenbank in der Dienstebene Geschäftskritisches gibt die aktuell gültigen Werte für diese Dienstebene zurück.<br /><br /> SQL Data Warehouse werden die aktuellen gültigen Werte für SQL Data Warehouse zurückgegeben.|  
 |elastic_pool_name|sysname|Der Name des der [elastischen Pool](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool/) , die die Datenbank angehört. Gibt **NULL** , wenn die Datenbank eine einzelne Datenbank oder eine Warehoue Daten ist.|  
   

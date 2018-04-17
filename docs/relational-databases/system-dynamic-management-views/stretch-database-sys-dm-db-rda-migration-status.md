@@ -1,16 +1,16 @@
 ---
-title: sys.dm_db_rda_migration_status (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: dm_db_rda_migration_status (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-stretch
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_db_rda_migration_status
@@ -22,18 +22,18 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_rda_migration_status dynamic management view
 ms.assetid: faf3901c-a0e0-4e0c-8b1b-86d9f15f34dd
-caps.latest.revision: 
+caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c3b4687e98a7fb917390e7ca8811c50bf543744c
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 2dd2c4a1ab5595f47ce10f720d1e7159e3347bcf
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="stretch-database---sysdmdbrdamigrationstatus"></a>Stretch Database - sys.dm_db_rda_migration_status
+# <a name="stretch-database---sysdmdbrdamigrationstatus"></a>Stretch-Datenbank - dm_db_rda_migration_status
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Enthält eine Zeile für jeden Batch von migrierten Daten aus jeder Stretch-aktivierte Tabelle auf der lokalen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Batches werden durch ihre Start- und Endzeit identifiziert.  

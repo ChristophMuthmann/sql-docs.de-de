@@ -1,16 +1,16 @@
 ---
 title: Sp_changemergepublication (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changemergepublication
 ms.assetid: 81fe1994-7678-4852-980b-e02fedf1e796
-caps.latest.revision: 
+caps.latest.revision: 44
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3f1798cd29ac1ee4afc0d7323866e37711291851
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: d6182a83fce79b3940b4137345d24d14d259c7db
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spchangemergepublication-transact-sql"></a>sp_changemergepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ sp_changemergepublication [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@publication=**] **"***Veröffentlichung***"**  
+ [ **@publication=**] **'***publication***'**  
  Der Name der Veröffentlichung. *Veröffentlichung* ist **Sysname**, hat keinen Standardwert.  
   
  [  **@property=**] **"***Eigenschaft***"**  
@@ -90,7 +90,7 @@ sp_changemergepublication [ @publication= ] 'publication'
 ||**subscriber**|Die Konfliktdatensätze werden auf dem Abonnenten gespeichert, der den Konflikt verursacht hat. Nicht unterstützt für [!INCLUDE[ssEW](../../includes/ssew-md.md)] Abonnenten*.*|  
 ||**both**|Die Konfliktdatensätze werden auf dem Verleger und auf dem Abonnenten gespeichert.|  
 |**conflict_retention**||Ein **Int** , die gibt der Beibehaltungsdauer in Tagen, für die Konflikte beibehalten werden. Festlegen von *Conflict_retention* auf **0** bedeutet, dass kein konfliktcleanup notwendig ist.|  
-|**Beschreibung**||Beschreibung der Veröffentlichung.|  
+|**description**||Beschreibung der Veröffentlichung.|  
 |**dynamic_filters**|**true**|Die Veröffentlichung wird anhand einer dynamischen Klausel gefiltert.|  
 ||**false**|Die Veröffentlichung wird nicht dynamisch gefiltert.|  
 |**enabled_for_internet**|**true**|Die Veröffentlichung ist für das Internet aktiviert. File Transfer Protocol (FTP) kann verwendet werden, um die Momentaufnahmedateien an einen Abonnenten zu übertragen. Die Synchronisierungsdateien für die Veröffentlichung werden im Verzeichnis C:\Programme\Microsoft SQL Server\MSSQL\Repldata\ftp gespeichert.|  
@@ -114,18 +114,18 @@ sp_changemergepublication [ @publication= ] 'publication'
 |**replicate_ddl**|**1**|Anweisungen von Data Definition Language (DDL), die auf dem Verleger ausgeführt werden, werden repliziert.|  
 ||**0**|DDL-Anweisungen werden nicht repliziert.|  
 |**Beibehaltungsdauer**||Dies ist ein **Int** stellt die Anzahl der *Retention_period_unit* Einheiten für das Speichern der Änderungen für die angegebene Veröffentlichung. Wenn das Abonnement nicht innerhalb der Beibehaltungsdauer synchronisiert wird und die ausstehenden Änderungen von einem Cleanupvorgang auf dem Verteiler entfernt wurden, läuft das Abonnement ab und muss erneut initialisiert werden. Die maximal zulässige Beibehaltungsdauer entspricht der Anzahl von Tagen zwischen dem 31. Dezember 9999 und dem aktuellen Datum.<br /><br /> Hinweis: Die Beibehaltungsdauer für mergeveröffentlichungen verfügt über einen Zeitraum von 24 Stunden Aktivierungszeitraum um Abonnenten in unterschiedlichen Zeitzonen aufzunehmen.|  
-|**retention_period_unit**|**Tag**|Die Beibehaltungsdauer wird in Tagen angegeben.|  
-||**Woche**|Die Beibehaltungsdauer wird in Wochen angegeben.|  
-||**Monat**|Die Beibehaltungsdauer wird in Monaten angegeben.|  
-||**Jahr**|Die Beibehaltungsdauer wird in Jahren angegeben.|  
+|**retention_period_unit**|**day**|Die Beibehaltungsdauer wird in Tagen angegeben.|  
+||**week**|Die Beibehaltungsdauer wird in Wochen angegeben.|  
+||**month**|Die Beibehaltungsdauer wird in Monaten angegeben.|  
+||**year**|Die Beibehaltungsdauer wird in Jahren angegeben.|  
 |**snapshot_in_defaultfolder**|**true**|Momentaufnahmedateien werden im Standardmomentaufnahmeordner gespeichert.|  
 ||**false**|Momentaufnahmedateien werden in den alternativen Speicherort, der angegebenen gespeichert *Alt_snapshot_folder*. Diese Kombination gibt an, dass die Momentaufnahmedateien sowohl im Standardspeicherort als auch in alternativen Speicherorten gespeichert werden.|  
 |**snapshot_ready**|**true**|Die Momentaufnahme für die Veröffentlichung ist verfügbar.|  
 ||**false**|Die Momentaufnahme für die Veröffentlichung ist nicht verfügbar.|  
-|**status**|**aktive**|Die Veröffentlichung weist einen aktiven Status auf.|  
+|**status**|**Aktive**|Die Veröffentlichung weist einen aktiven Status auf.|  
 ||**Inaktive**|Die Veröffentlichung weist einen inaktiven Status auf.|  
 |**sync_mode**|**systemeigene** oder<br /><br /> **systemeigene bcp**|Massenkopierprogramm-Ausgabe aller Tabellen im einheitlichen Modus wird für die Anfangsmomentaufnahme verwendet.|  
-||**Zeichen**<br /><br /> oder **Bcp-Zeichen**|Massenkopierprogramm-Ausgabe aller Tabellen im Zeichenmodus wird für die Anfangsmomentaufnahme verwendet. Dies ist für alle Nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Abonnenten erforderlich.|  
+||**character**<br /><br /> oder **Bcp-Zeichen**|Massenkopierprogramm-Ausgabe aller Tabellen im Zeichenmodus wird für die Anfangsmomentaufnahme verwendet. Dies ist für alle Nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Abonnenten erforderlich.|  
 |**use_partition_groups**<br /><br /> Hinweis: Stellen Sie nach der Verwendung von Partition_groups, wenn Sie wieder in den mit **Setupbelongs**, und legen Sie **Use_partition_groups = "false"** in **Changemergearticle**, dies ist möglicherweise nicht richtig wiedergegeben, nachdem eine Momentaufnahme erstellt wird. Die Trigger, die von der Momentaufnahme generiert werden, sind mit Partitionsgruppen kompatibel.<br /><br /> Die problemumgehung für dieses Szenario wird der Status auf inaktiv festlegen, Ändern der **Use_partition_groups**, und klicken Sie dann Status als aktiv festlegen.|**true**|Die Veröffentlichung verwendet vorausberechnete Partitionen.|  
 ||**false**|Die Veröffentlichung verwendet keine vorausberechneten Partitionen.|  
 |**validate_subscriber_info**||Listet die Funktionen auf, die zum Abrufen von Abonnenteninformationen verwendet werden. Überprüft anschließend die dynamischen Filterkriterien, die für den Abonnenten verwendet werden, um zu überprüfen, dass die Informationen konsistent partitioniert werden.|  
@@ -203,8 +203,8 @@ sp_changemergepublication [ @publication= ] 'publication'
 ## <a name="see-also"></a>Siehe auch  
  [Anzeigen und Ändern von Veröffentlichungseigenschaften](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [Ändern von Veröffentlichungs- und Artikeleigenschaften](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
- [Sp_addmergepublication &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)   
- [Sp_dropmergepublication &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-dropmergepublication-transact-sql.md)   
+ [Sp_addmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)   
+ [Sp_dropmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepublication-transact-sql.md)   
  [sp_helpmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)   
  [Gespeicherte Automatisierungsprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   

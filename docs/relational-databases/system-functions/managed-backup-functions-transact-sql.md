@@ -1,16 +1,16 @@
 ---
 title: Verwaltete Sicherung Funktionen (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - smart admin functions
 - functions, smart admin
 ms.assetid: 1d513d9c-05af-446d-8eba-42f55efcc221
-caps.latest.revision: 
+caps.latest.revision: 6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e591d091e6588d1f3f2366a1481b06d90f9b720d
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: f45d9483743de2ce1b42480ab2dddc91e6161e96
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="managed-backup-functions-transact-sql"></a>Verwaltete Sicherung Funktionen (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.lasthandoff: 02/03/2018
   
  [managed_backup.fn_get_health_status &#40;Transact-SQL&#41;](../../relational-databases/system-functions/managed-backup-fn-get-health-status-transact-sql.md)  
   
- [managed_backup.fn_backup_instance_config &#40; Transact-SQL &#41;](../../relational-databases/system-functions/managed-backup-fn-backup-instance-config-transact-sql.md)  
+ [managed_backup.fn_backup_instance_config &#40;Transact-SQL&#41;](../../relational-databases/system-functions/managed-backup-fn-backup-instance-config-transact-sql.md)  
   
 ## <a name="see-also"></a>Siehe auch  
  [SQL Server Managed Backup für Microsoft Azure](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  

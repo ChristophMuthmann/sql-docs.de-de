@@ -1,16 +1,16 @@
 ---
 title: Sys.sysindexes (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-compatibility-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysindexes
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - sysindexes system table
 - sys.sysindexes compatibility view
 ms.assetid: f483d89c-35c4-4a08-8f8b-737fd80d13f5
-caps.latest.revision: 
+caps.latest.revision: 57
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6871dcbbc0259e6aeca7b3d24ff6050b9608f199
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 541b0de942e5b67c4c4be26ed1a6e29578a178ab
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="syssysindexes-transact-sql"></a>sys.sysindexes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -46,15 +46,15 @@ ms.lasthandoff: 02/09/2018
 |-----------------|---------------|-----------------|  
 |**id**|**int**|ID der Tabelle, zu der der Index gehört.|  
 |**status**|**int**|Systemstatusinformationen.<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**first**|**binary(6)**|Zeiger auf die erste Seite oder Stammseite.<br /><br /> Nicht verwendet, wenn **indid** = 0.<br /><br /> NULL = Index ist partitioniert, wenn **Indid** > 1.<br /><br /> NULL = Tabelle ist partitioniert, wenn **indid** gleich 0 oder 1.|  
+|**erste**|**Binary(6)**|Zeiger auf die erste Seite oder Stammseite.<br /><br /> Nicht verwendet, wenn **indid** = 0.<br /><br /> NULL = Index ist partitioniert, wenn **Indid** > 1.<br /><br /> NULL = Tabelle ist partitioniert, wenn **indid** gleich 0 oder 1.|  
 |**indid**|**smallint**|ID des Indexes:<br /><br /> 0 = Heap<br /><br /> 1 = Gruppierter Index<br /><br /> >1 = Nicht gruppierter Index|  
-|**Stamm**|**binary(6)**|Für **Indid** > = 1, **Root** ist der Zeiger auf die Stammseite.<br /><br /> Nicht verwendet, wenn **indid** = 0.<br /><br /> NULL = Index ist partitioniert, wenn **Indid** > 1.<br /><br /> NULL = Tabelle ist partitioniert, wenn **indid** gleich 0 oder 1.|  
+|**Stamm**|**Binary(6)**|Für **Indid** > = 1, **Root** ist der Zeiger auf die Stammseite.<br /><br /> Nicht verwendet, wenn **indid** = 0.<br /><br /> NULL = Index ist partitioniert, wenn **Indid** > 1.<br /><br /> NULL = Tabelle ist partitioniert, wenn **indid** gleich 0 oder 1.|  
 |**minlen**|**smallint**|Mindestgröße einer Zeile.|  
 |**keycnt**|**smallint**|Anzahl der Schlüssel.|  
 |**groupid**|**smallint**|ID der Dateigruppe, für die das Objekt erstellt wurde.<br /><br /> NULL = Index ist partitioniert, wenn **Indid** > 1.<br /><br /> NULL = Tabelle ist partitioniert, wenn **indid** gleich 0 oder 1.|  
-|**dpages**|**int**|Für **indid** = 0 oder **indid** = 1 ist **dpages** die Anzahl der verwendeten Datenseiten.<br /><br /> Für **Indid** > 1, **Dpages** ist die Anzahl der verwendeten Indexseiten.<br /><br /> 0 = Index ist partitioniert, wenn **Indid** > 1.<br /><br /> 0 = Tabelle ist partitioniert, wenn **indid** gleich 0 oder 1.<br /><br /> Bei einem Zeilenüberlauf ist das Ergebnis ungenau.|  
-|**reserved**|**int**|Für **indid** = 0 oder **indid** = 1 ist **reserved** die Anzahl der allen Indizes und Tabellendaten zugeordneten Seiten.<br /><br /> Für **Indid** > 1, **reservierte** ist die Anzahl der für den Index reservierten Seiten.<br /><br /> 0 = Index ist partitioniert, wenn **Indid** > 1.<br /><br /> 0 = Tabelle ist partitioniert, wenn **indid** gleich 0 oder 1.<br /><br /> Bei einem Zeilenüberlauf ist das Ergebnis ungenau.|  
-|**used**|**int**|Für **indid** = 0 oder **indid** = 1 ist **used** die Gesamtanzahl der für alle Indizes und Tabellendaten verwendeten Seiten.<br /><br /> Für **Indid** > 1, **verwendet** ist die Anzahl der Seiten, die für den Index verwendet.<br /><br /> 0 = Index ist partitioniert, wenn **Indid** > 1.<br /><br /> 0 = Tabelle ist partitioniert, wenn **indid** gleich 0 oder 1.<br /><br /> Bei einem Zeilenüberlauf ist das Ergebnis ungenau.|  
+|**Dpages**|**int**|Für **indid** = 0 oder **indid** = 1 ist **dpages** die Anzahl der verwendeten Datenseiten.<br /><br /> Für **Indid** > 1, **Dpages** ist die Anzahl der verwendeten Indexseiten.<br /><br /> 0 = Index ist partitioniert, wenn **Indid** > 1.<br /><br /> 0 = Tabelle ist partitioniert, wenn **indid** gleich 0 oder 1.<br /><br /> Bei einem Zeilenüberlauf ist das Ergebnis ungenau.|  
+|**Reserviert**|**int**|Für **indid** = 0 oder **indid** = 1 ist **reserved** die Anzahl der allen Indizes und Tabellendaten zugeordneten Seiten.<br /><br /> Für **Indid** > 1, **reservierte** ist die Anzahl der für den Index reservierten Seiten.<br /><br /> 0 = Index ist partitioniert, wenn **Indid** > 1.<br /><br /> 0 = Tabelle ist partitioniert, wenn **indid** gleich 0 oder 1.<br /><br /> Bei einem Zeilenüberlauf ist das Ergebnis ungenau.|  
+|**verwendet**|**int**|Für **indid** = 0 oder **indid** = 1 ist **used** die Gesamtanzahl der für alle Indizes und Tabellendaten verwendeten Seiten.<br /><br /> Für **Indid** > 1, **verwendet** ist die Anzahl der Seiten, die für den Index verwendet.<br /><br /> 0 = Index ist partitioniert, wenn **Indid** > 1.<br /><br /> 0 = Tabelle ist partitioniert, wenn **indid** gleich 0 oder 1.<br /><br /> Bei einem Zeilenüberlauf ist das Ergebnis ungenau.|  
 |**rowcnt**|**bigint**|Zeilenanzahl auf Datenebene, basierend auf **indid** = 0 und **indid** = 1.<br /><br /> 0 = Index ist partitioniert, wenn **Indid** > 1.<br /><br /> 0 = Tabelle ist partitioniert, wenn **indid** gleich 0 oder 1.|  
 |**rowmodctr**|**int**|Zählt die Gesamtzahl der eingefügten, gelöschten oder aktualisierten Zeilen, seitdem die Statistiken für die Tabelle zuletzt aktualisiert wurden.<br /><br /> 0 = Index ist partitioniert, wenn **Indid** > 1.<br /><br /> 0 = Tabelle ist partitioniert, wenn **indid** gleich 0 oder 1.<br /><br /> In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] und höher, **Rowmodctr** ist nicht vollständig kompatibel mit früheren Versionen. Weitere Informationen finden Sie in den Hinweisen.|  
 |**reserved3**|**int**|Gibt 0 zurück.<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
@@ -64,7 +64,7 @@ ms.lasthandoff: 02/09/2018
 |**OrigFillFactor**|**tinyint**|Ursprünglicher Füllfaktorwert, der beim Erstellen des Indexes verwendet wurde. Dieser Wert wird nicht aufrechterhalten, kann jedoch hilfreich sein, wenn Sie einen Index neu erstellen müssen und sich nicht an den verwendeten Füllfaktorwert erinnern.|  
 |**StatVersion**|**tinyint**|Gibt 0 zurück.<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**reserved2**|**int**|Gibt 0 zurück.<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**FirstIAM**|**binary(6)**|NULL = Index ist partitioniert.<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**FirstIAM**|**Binary(6)**|NULL = Index ist partitioniert.<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**impid**|**smallint**|Indeximplementierungsflag.<br /><br /> Gibt 0 zurück.<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**lockflags**|**smallint**|Wird zur Einschränkung der berücksichtigten Granularitäten von Sperren für einen Index verwendet. Beispielsweise könnte zur Minimierung der Sperrkosten eine Nachschlagetabelle, die im Wesentlichen schreibgeschützt ist, so eingerichtet werden, dass die Sperrung nur auf Tabellenebene erfolgt.|  
 |**pgmodctr**|**int**|Gibt 0 zurück.<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
@@ -93,7 +93,7 @@ ms.lasthandoff: 02/09/2018
   
 ## <a name="see-also"></a>Siehe auch  
  [Katalogsichten &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Zuordnen von Systemtabellen zu Systemsichten &#40; Transact-SQL &#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
+ [Zuordnen von Systemtabellen zu Systemsichten &#40;Transact-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)  
   
   

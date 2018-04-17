@@ -1,16 +1,16 @@
 ---
-title: sys.dm_db_mirroring_connections (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: dm_db_mirroring_connections (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_db_mirroring_connections
@@ -22,18 +22,18 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_mirroring_connections dynamic management view
 ms.assetid: e4df91b6-0240-45d0-ae22-cb2c0d52e0b3
-caps.latest.revision: 
+caps.latest.revision: 41
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 11d696315b97009d86ff19f850064cd8ce71ebb1
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: db6c85722d00fa29367b33fbe21e14a4f8ba6eab
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="database-mirroring---sysdmdbmirroringconnections"></a>Database Mirroring - sys.dm_db_mirroring_connections
+# <a name="database-mirroring---sysdmdbmirroringconnections"></a>Datenbankspiegelung - dm_db_mirroring_connections
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Gibt für jede für die Datenbankspiegelung hergestellte Verbindung eine Zeile zurück.  
@@ -54,8 +54,8 @@ ms.lasthandoff: 02/03/2018
 |**login_state**|**smallint**|Status des Anmeldeprozesses für diese Verbindung. Mögliche Werte:<br /><br /> 0 = INITIAL<br /><br /> 1 = WAIT LOGIN NEGOTIATE<br /><br /> 2 = ONE ISC<br /><br /> 3 = ONE ASC<br /><br /> 4 = TWO ISC<br /><br /> 5 = TWO ASC<br /><br /> 6 = WAIT ISC Confirm<br /><br /> 7 = WAIT ASC Confirm<br /><br /> 8 = WAIT REJECT<br /><br /> 9 = WAIT PRE-MASTER SECRET<br /><br /> 10 = WAIT VALIDATION<br /><br /> 11 = WAIT ARBITRATION<br /><br /> 12 = ONLINE<br /><br /> 13 = ERROR|  
 |**login_state_desc**|**nvarchar(60)**|Aktueller Anmeldestatus des Remotecomputers. Mögliche Werte:<br /><br /> Verbindungshandshake wird initialisiert.<br /><br /> Verbindungshandshake wartet auf Anmeldungsaushandlungs-Meldung.<br /><br /> Verbindungshandshake hat Sicherheitskontext zur Authentifizierung initialisiert und gesendet.<br /><br /> Verbindungshandshake hat Sicherheitskontext zur Authentifizierung empfangen und akzeptiert.<br /><br /> Verbindungshandshake hat Sicherheitskontext zur Authentifizierung initialisiert und gesendet. Ein optionaler Mechanismus ist für das Authentifizieren der Peers verfügbar.<br /><br /> Verbindungshandshake hat Sicherheitskontext zur Authentifizierung empfangen und gesendet. Ein optionaler Mechanismus ist für das Authentifizieren der Peers verfügbar.<br /><br /> Verbindungshandshake wartet auf Meldung zur Bestätigung der Sicherheitskontextinitialisierung.<br /><br /> Verbindungshandshake wartet auf Meldung zur Bestätigung der Sicherheitskontextannahme.<br /><br /> Verbindungshandshake wartet auf SSPI-Ablehnungsmeldung zur fehlgeschlagenen Authentifizierung.<br /><br /> Verbindungshandshake wartet auf Meldung für Vorstufe des geheimen Hauptschlüssels.<br /><br /> Verbindungshandshake wartet auf Überprüfungsmeldung.<br /><br /> Verbindungshandshake wartet auf Vermittlungsmeldung.<br /><br /> Verbindungshandshake wurde abgeschlossen und ist online (bereit) für Nachrichtenaustausch.<br /><br /> Verbindungsfehler.|  
 |**peer_certificate_id**|**int**|Das lokale Objekt-ID des von der Remoteinstanz zur Authentifizierung verwendete Zertifikats. Der Besitzer dieses Zertifikats muss über CONNECT-Berechtigungen für den Endpunkt der Datenbankspiegelung verfügen.|  
-|**encryption_algorithm**|**smallint**|Der für diese Verbindung verwendete Verschlüsselungsalgorithmus. Lässt NULL-Werte zu. Mögliche Werte:<br /><br /> **Wert:**0<br /><br /> **Beschreibung:** None<br /><br /> **DDL-Option:** deaktiviert<br /><br /> **Wert:**1<br /><br /> **Beschreibung:** RC4<br /><br /> **DDL-Option:** {erforderlich &#124; Required Algorithm RC4}<br /><br /> **Wert:**2<br /><br /> **Beschreibung:** AES<br /><br /> **DDL-Option:** Required Algorithm AES<br /><br /> **Wert:**3<br /><br /> **Beschreibung:** None, RC4<br /><br /> **DDL-Option:** {unterstützt &#124; Unterstützter Algorithmus RC4}<br /><br /> **Wert:**4<br /><br /> **Beschreibung:** keiner, AES<br /><br /> **DDL-Option:** unterstützte RC4-Algorithmus<br /><br /> **Wert:**5<br /><br /> **Beschreibung:** RC4, AES<br /><br /> **DDL-Option:** Required Algorithm AES RC4<br /><br /> **Wert:**6<br /><br /> **Beschreibung:** AES, RC4<br /><br /> **DDL-Option:** Algorithmus AES RC4 erforderlich<br /><br /> **Wert:**7<br /><br /> **Beschreibung:** NONE, RC4, AES<br /><br /> **DDL-Option:** unterstützten Algorithmus RC4 AES<br /><br /> **Wert:**8<br /><br /> **Beschreibung:** keiner, AES, RC4<br /><br /> **DDL-Option:** unterstützte AES RC4-Algorithmus<br /><br /> **Hinweis:** der RC4-Algorithmus wird nur für Abwärtskompatibilität unterstützt. Neues Material kann nur mit RC4 oder RC4_128 verschlüsselt werden, wenn die Datenbank den Kompatibilitätsgrad 90 oder 100 besitzt. (Nicht empfohlen.) Verwenden Sie stattdessen einen neueren Algorithmus, z. B. einen der AES-Algorithmen. In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höhere Versionen mit RC4 oder RC4_128 verschlüsseltes Material kann entschlüsselt werden in jedem Kompatibilitätsgrad.|  
-|**encryption_algorithm_desc**|**nvarchar(60)**|Textdarstellung des Verschlüsselungsalgorithmus. Lässt NULL-Werte zu. Mögliche Werte:<br /><br /> **Beschreibung:** None<br /><br /> **DDL-Option:** deaktiviert<br /><br /> **Beschreibung:** RC4<br /><br /> **DDL-Option:** {erforderlich &#124; Required Algorithm RC4}<br /><br /> **Beschreibung:** AES<br /><br /> **DDL-Option:** erforderlich AES-Algorithmus<br /><br /> **Beschreibung:** NONE, RC4<br /><br /> **DDL-Option:** {unterstützt &#124; Unterstützter Algorithmus RC4}<br /><br /> **Beschreibung:** keiner, AES<br /><br /> **DDL-Option:** Algorithmus RC4 unterstützt<br /><br /> **Beschreibung:** RC4, AES<br /><br /> **DDL-Option:** erforderlich Algorithmus RC4 AES<br /><br /> **Beschreibung:** AES, RC4<br /><br /> **DDL-Option:** Algorithmus AES RC4 erforderlich<br /><br /> **Beschreibung:** NONE, RC4, AES<br /><br /> **DDL-Option:** unterstützten Algorithmus RC4 AES<br /><br /> **Beschreibung:** keiner, AES, RC4<br /><br /> **DDL-Option:** Algorithmus AES RC4 unterstützt|  
+|**encryption_algorithm**|**smallint**|Der für diese Verbindung verwendete Verschlüsselungsalgorithmus. Lässt NULL-Werte zu. Mögliche Werte:<br /><br /> **Wert:**0<br /><br /> **Beschreibung:** None<br /><br /> **DDL-Option:** deaktiviert<br /><br /> **Wert:**1<br /><br /> **Beschreibung:** RC4<br /><br /> **DDL-Option:** {erforderlich &#124; Required Algorithm RC4}<br /><br /> **Wert:**2<br /><br /> **Beschreibung:** AES<br /><br /> **DDL-Option:** Required Algorithm AES<br /><br /> **Wert:**3<br /><br /> **Beschreibung:** None, RC4<br /><br /> **DDL-Option:** {unterstützte &#124; unterstützte RC4-Algorithmus}<br /><br /> **Wert:**4<br /><br /> **Beschreibung:** keiner, AES<br /><br /> **DDL-Option:** unterstützte RC4-Algorithmus<br /><br /> **Wert:**5<br /><br /> **Beschreibung:** RC4, AES<br /><br /> **DDL-Option:** Required Algorithm AES RC4<br /><br /> **Wert:**6<br /><br /> **Beschreibung:** AES, RC4<br /><br /> **DDL-Option:** Algorithmus AES RC4 erforderlich<br /><br /> **Wert:**7<br /><br /> **Beschreibung:** NONE, RC4, AES<br /><br /> **DDL-Option:** unterstützten Algorithmus RC4 AES<br /><br /> **Wert:**8<br /><br /> **Beschreibung:** keiner, AES, RC4<br /><br /> **DDL-Option:** unterstützte AES RC4-Algorithmus<br /><br /> **Hinweis:** der RC4-Algorithmus wird nur für Abwärtskompatibilität unterstützt. Neues Material kann nur mit RC4 oder RC4_128 verschlüsselt werden, wenn die Datenbank den Kompatibilitätsgrad 90 oder 100 besitzt. (Nicht empfohlen.) Verwenden Sie stattdessen einen neueren Algorithmus, z. B. einen der AES-Algorithmen. In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höhere Versionen mit RC4 oder RC4_128 verschlüsseltes Material kann entschlüsselt werden in jedem Kompatibilitätsgrad.|  
+|**encryption_algorithm_desc**|**nvarchar(60)**|Textdarstellung des Verschlüsselungsalgorithmus. Lässt NULL-Werte zu. Mögliche Werte:<br /><br /> **Beschreibung:** None<br /><br /> **DDL-Option:** deaktiviert<br /><br /> **Beschreibung:** RC4<br /><br /> **DDL-Option:** {erforderlich &#124; Algorithmus RC4 erforderlich}<br /><br /> **Beschreibung:** AES<br /><br /> **DDL-Option:** erforderlich AES-Algorithmus<br /><br /> **Beschreibung:** NONE, RC4<br /><br /> **DDL-Option:** {unterstützt &#124; Algorithmus RC4 unterstützt}<br /><br /> **Beschreibung:** keiner, AES<br /><br /> **DDL-Option:** Algorithmus RC4 unterstützt<br /><br /> **Beschreibung:** RC4, AES<br /><br /> **DDL-Option:** erforderlich Algorithmus RC4 AES<br /><br /> **Beschreibung:** AES, RC4<br /><br /> **DDL-Option:** Algorithmus AES RC4 erforderlich<br /><br /> **Beschreibung:** NONE, RC4, AES<br /><br /> **DDL-Option:** unterstützten Algorithmus RC4 AES<br /><br /> **Beschreibung:** keiner, AES, RC4<br /><br /> **DDL-Option:** Algorithmus AES RC4 unterstützt|  
 |**receives_posted**|**smallint**|Die Anzahl asynchroner Netzwerkempfangsvorgänge, die für diese Verbindung noch nicht abgeschlossen wurden.|  
 |**is_receive_flow_controlled**|**bit**|Angabe, ob Netzwerkempfangsvorgänge aus Gründen der Datenflusskontrolle verschoben wurden, da das Netzwerk ausgelastet ist.<br /><br /> 1 = True|  
 |**sends_posted**|**smallint**|Die Anzahl asynchroner Netzwerksendevorgänge, die für diese Verbindung noch nicht abgeschlossen wurden.|  

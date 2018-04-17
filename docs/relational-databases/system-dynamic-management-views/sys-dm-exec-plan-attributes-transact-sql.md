@@ -2,7 +2,7 @@
 title: dm_exec_plan_attributes (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/20/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: dmv's
@@ -27,11 +27,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 43078471bab42b6249f89e4b17536b8aea6cc5d9
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
+ms.openlocfilehash: 555f1592bb16746f351101d4500c64b03ab78efe
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmexecplanattributes-transact-sql"></a>sys.dm_exec_plan_attributes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -83,7 +83,7 @@ Aus der obigen Tabelle **Attribut** können die folgenden Werte aufweisen:
 |hits_cursors|**int**|Die Anzahl der Vorgänge, bei denen ein inaktiver Cursor aus dem zwischengespeicherten Plan abgerufen und wiederverwendet wurde. Der Wert ist ein aggregierter Wert für alle bisherigen Batchausführungen.|  
 |misses_cursors|**int**|Die Anzahl der Vorgänge, bei denen im Cache kein inaktiver Cursor gefunden werden konnte.|  
 |removed_cursors|**int**|Die Anzahl der Cursor, die aufgrund ungenügenden Arbeitsspeichers für den zwischengespeicherten Plan entfernt wurden.|  
-|sql_handle|**varbinary**(64)|Das SQL-Handle für den Batch.|  
+|sql_handle|**Varbinary**(64)|Das SQL-Handle für den Batch.|  
 |merge_action_type|**smallint**|Der Typ des Triggerausführungsplans, der als Ergebnis einer MERGE-Anweisung verwendet wird.<br /><br /> 0 gibt einen Nicht-Triggerplan an, einen Triggerplan, der nicht als Ergebnis einer MERGE-Anweisung ausgeführt wird, oder einen Triggerplan, der als Ergebnis einer MERGE-Anweisung ausgeführt wird, die nur eine DELETE-Aktion angibt.<br /><br /> 1 gibt einen INSERT-Triggerplan an, der als Ergebnis einer MERGE-Anweisung ausgeführt wird.<br /><br /> 2 gibt einen UPDATE-Triggerplan an, der als Ergebnis einer MERGE-Anweisung ausgeführt wird.<br /><br /> 3 gibt einen DELETE-Triggerplan an, der als Ergebnis einer MERGE-Anweisung ausgeführt wird, die eine entsprechende INSERT- oder UPDATE-Aktion enthält.<br /><br /> Bei geschachtelten Triggern, die durch kaskadierende Aktionen ausgeführt werden, ist dieser Wert die Aktion der MERGE-Anweisung, durch die das Kaskadieren verursacht wurde.|  
   
 ## <a name="permissions"></a>Berechtigungen  
@@ -177,7 +177,7 @@ GO
 ## <a name="see-also"></a>Siehe auch  
  [Dynamische Verwaltungssichten und -funktionen &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Ausführung dynamische Verwaltungssichten und-Funktionen im Zusammenhang &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
- [dm_exec_cached_plans &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)   
+ [dm_exec_cached_plans & #40; Transact-SQL & #41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)  
   

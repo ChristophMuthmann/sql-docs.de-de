@@ -1,16 +1,16 @@
 ---
 title: Angeben eines Knotentests im Speicherortpfad (SQLXML 4.0) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - XPath queries [SQLXML], location paths
@@ -18,20 +18,21 @@ helpviewer_keywords:
 - node tests [SQLXML]
 - location path for XPath query
 ms.assetid: f46c30bf-1e24-4435-9ac2-f8ba43a8ff94
-caps.latest.revision: 
+caps.latest.revision: 21
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e7e2483b8bf861a677e1fbe7b417376bb266e7f4
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 52a2be7c03a3e5265a36f40952398279ab4ec589
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="specifying-a-node-test-in-the-location-path-sqlxml-40"></a>Angeben eines Knotentests unter dem Speicherortpfad (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Ein Knotentest gibt den vom Positionsschritt ausgewählten Knotentyp an. Jede Achse (**untergeordneten**, **übergeordneten**, **Attribut**, oder **self**) hat einen Hauptknotentyp. Für die **Attribut** Achse, der Hauptknotentyp ist  **\<Attribut >**. Für die **übergeordneten**, **untergeordneten**, und **self** Achsen, der Hauptknotentyp ist  **\<Element >**.  
+  Ein Knotentest gibt den vom Positionsschritt ausgewählten Knotentyp an. Jede Achse (**untergeordneten**, **übergeordneten**, **Attribut**, oder **self**) hat einen Hauptknotentyp. Für die **Attribut** Achse, der Hauptknotentyp ist  **\<Attribut >**. Für die **übergeordneten**, **untergeordneten**, und **self** Achsen, der Hauptknotentyp ist  **\<Element >**.  
   
 > [!NOTE]  
 >  Der Platzhalterknotentest * (z. B. `child::*`) wird nicht unterstützt.  

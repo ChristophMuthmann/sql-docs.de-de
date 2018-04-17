@@ -2,7 +2,7 @@
 title: SQLFetchScroll-Funktion | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: c0243667-428c-4dda-ae91-3c307616a1ac
 caps.latest.revision: 30
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: df50946b183bcd7072f12f67b8f0293ac5eef080
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e8b244a9b4e6923c6455ea84175ed1557ec4100a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlfetchscroll-function"></a>SQLFetchScroll-Funktion
 **Konformität**  
@@ -200,8 +200,8 @@ SQLRETURN SQLFetchScroll(
 |*(Vor dem start und FetchOffset > 0) ODER (nach dem Ende und FetchOffset < 0)*|*--* <sup>[1]</sup>|  
 |*BeforeStart und FetchOffset < = 0*|*Vor dem start*|  
 |*CurrRowsetStart = 1 und FetchOffset < 0*|*Vor dem start*|  
-|*CurrRowsetStart > 1 AND CurrRowsetStart + FetchOffset < 1 und &#124; FetchOffset &#124; > RowsetSize* <sup>[3]</sup>|*Vor dem start*|  
-|*CurrRowsetStart > 1 AND CurrRowsetStart + FetchOffset < 1 und &#124; FetchOffset &#124; < = RowsetSize* <sup>[3]</sup>|*1* <sup>[2]</sup>|  
+|*CurrRowsetStart > 1 AND CurrRowsetStart + FetchOffset < 1 AND &#124; FetchOffset &#124; > RowsetSize* <sup>[3]</sup>|*Vor dem start*|  
+|*CurrRowsetStart > 1 AND CurrRowsetStart + FetchOffset < 1 AND &#124; FetchOffset &#124; < = RowsetSize* <sup>[3]</sup>|*1* <sup>[2]</sup>|  
 |*1 < = CurrRowsetStart + FetchOffset \<= LastResultRow*|*CurrRowsetStart + FetchOffset*|  
 |*CurrRowsetStart + FetchOffset > LastResultRow*|*Nach dem Ende*|  
 |*Nach dem Ende und FetchOffset > = 0*|*Nach dem Ende*|  
@@ -217,9 +217,9 @@ SQLRETURN SQLFetchScroll(
   
 |Bedingung|Erste Zeile der neuen Rowsets|  
 |---------------|-----------------------------|  
-|*FetchOffset < 0 und &#124; FetchOffset &#124; < = LastResultRow*|*LastResultRow + FetchOffset + 1*|  
-|*FetchOffset < 0 und &#124; FetchOffset &#124; > LastResultRow und &#124; FetchOffset &#124; > RowsetSize* <sup>[2]</sup>|*Vor dem start*|  
-|*FetchOffset < 0 und &#124; FetchOffset &#124; > LastResultRow und &#124; FetchOffset &#124; < = RowsetSize* <sup>[2]</sup>|*1* <sup>[1]</sup>|  
+|*FetchOffset < 0 AND &#124; FetchOffset &#124; < = LastResultRow*|*LastResultRow + FetchOffset + 1*|  
+|*FetchOffset < 0 AND &#124; FetchOffset &#124; > LastResultRow AND &#124; FetchOffset &#124; > RowsetSize* <sup>[2]</sup>|*Vor dem start*|  
+|*FetchOffset < 0 AND &#124; FetchOffset &#124; > LastResultRow AND &#124; FetchOffset &#124; < = RowsetSize* <sup>[2]</sup>|*1* <sup>[1]</sup>|  
 |*FetchOffset = 0*|*Vor dem start*|  
 |*1 < = FetchOffset \<= LastResultRow*|*FetchOffset*|  
 |*FetchOffset > LastResultRow*|*Nach dem Ende*|  
@@ -338,7 +338,7 @@ SQLFetchScroll(hstmt, SQL_FETCH_RELATIVE, 0);
 ## <a name="sqlfetchscroll-and-odbc-2x-drivers"></a>SQLFetchScroll und ODBC 2.x-Treiber  
  Wenn eine Anwendung ruft **SQLFetchScroll** in einem ODBC 2.x-Treiber ordnet der Treiber-Manager diesen Aufruf an **SQLExtendedFetch**. Übergibt die folgenden Werte für die Argumente der **SQLExtendedFetch**.  
   
-|SQLExtendedFetch-argument|value|  
+|SQLExtendedFetch-argument|Wert|  
 |-------------------------------|-----------|  
 |StatementHandle|StatementHandle in **SQLFetchScroll**.|  
 |FetchOrientation|FetchOrientation in **SQLFetchScroll**.|  

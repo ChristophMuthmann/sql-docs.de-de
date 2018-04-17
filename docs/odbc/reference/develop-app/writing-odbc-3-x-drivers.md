@@ -1,15 +1,16 @@
 ---
 title: Schreiben von ODBC 3.x-Treiber | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - upgrading drivers [ODBC]
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - backward compatibility [ODBC], drivers
 - compatibility [ODBC], drivers
 ms.assetid: 9b75f59b-623f-4711-9ca2-e751b3622e00
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b73a32d607bb2fc2c1cd2392ab4d1b436e7ed94d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 27bdcf1a1254b24c87280fbfc86e4374e277a976
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="writing-odbc-3x-drivers"></a>Schreiben von ODBC 3.x-Treiber
 Die folgende Tabelle zeigt die funktionsunterstützung in einer ODBC-3. *x* Treiber und eine ODBC-Anwendung und die Zuordnung, die vom Treiber-Manager ausgeführt, wenn die Funktionen für eine ODBC 3. aufgerufen werden. *X* Treiber.  
@@ -60,7 +61,7 @@ Die folgende Tabelle zeigt die funktionsunterstützung in einer ODBC-3. *x* Trei
 |**SQLError**|nein|Keine [1]|ja|  
 |**SQLExecDirect**|ja|ja|nein|  
 |**SQLExecute**|ja|ja|nein|  
-|**SQLExtendedFetch**|ja|nein|nein|  
+|**SQLExtendedFetch**|ja|Nein|nein|  
 |**SQLFetch**|ja|ja|nein|  
 |**SQLFetchScroll**|ja|ja|nein|  
 |**SQLForeignKeys**|ja|ja|nein|  
@@ -87,7 +88,7 @@ Die folgende Tabelle zeigt die funktionsunterstützung in einer ODBC-3. *x* Trei
 |**SQLNumParams**|ja|ja|nein|  
 |**SQLNumResultCols**|ja|ja|nein|  
 |**SQLParamData**|ja|ja|nein|  
-|**SQLParamOptions**|nein|nein|ja|  
+|**SQLParamOptions**|nein|Nein|ja|  
 |**SQLPrepare**|ja|ja|nein|  
 |**SQLPrimaryKeys**|ja|ja|nein|  
 |**SQLProcedureColumns**|ja|ja|nein|  
@@ -101,7 +102,7 @@ Die folgende Tabelle zeigt die funktionsunterstützung in einer ODBC-3. *x* Trei
 |**SQLSetDescRec**|ja|ja|nein|  
 |**SQLSetEnvAttr**|ja|ja|nein|  
 |**SQLSetPos**|ja|ja|nein|  
-|**SQLSetParam**|nein|nein|ja|  
+|**SQLSetParam**|nein|Nein|ja|  
 |**SQLSetScrollOption**|ja|ja|nein|  
 |**SQLSetStmtAttr**|ja|ja|nein|  
 |**SQLSetStmtOption**|Keine [5]|Keine [1]|ja|  

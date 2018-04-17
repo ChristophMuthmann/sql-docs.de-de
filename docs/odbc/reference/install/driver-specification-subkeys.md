@@ -1,15 +1,16 @@
 ---
-title: "Treiber-Spezifikation Unterschlüssel | Microsoft Docs"
-ms.custom: 
+title: Treiber-Spezifikation Unterschlüssel | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - subkeys [ODBC], driver specification subkeys
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - registry entries for components [ODBC], driver specification subkeys
 - drivers subkey [ODBC]
 ms.assetid: b4d802ef-b199-4e64-b7a5-6f2b3e5e2c80
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 078afea5ea6dfa6e0c3312d8e61cabb37369a2f8
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 52899dd2d473ac083d2d0effaca5b3b1726322c5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="driver-specification-subkeys"></a>Treiber-Spezifikation Unterschlüssel
 Jeder Treiber in den ODBC-Treiber-Unterschlüssel aufgeführt verfügt über einen Unterschlüssel selbst. Dieser Unterschlüssel verfügt über den gleichen Namen wie der entsprechende Wert unter dem Unterschlüssel ODBC-Treiber. Die Werte unter dieser Unterschlüssel auflisten, das die vollständigen Pfade der Treiber und Treiber-Setup-DLLs, die Werte der Treiber Schlüsselwörter zurückgegebenes **SQLDrivers**, und die Verwendungsanzahl der. Die Formate der Werte sind wie in der folgenden Tabelle gezeigt.  
@@ -34,7 +35,7 @@ Jeder Treiber in den ODBC-Treiber-Unterschlüssel aufgeführt verfügt über ein
 |Name|Datentyp|data|  
 |----------|---------------|----------|  
 |APILevel|REG_SZ|**0** &#124; **1** &#124; **2**|  
-|ConnectFunctions|REG_SZ|{**Y**&#124; **N**} {**Y**&#124; **N**} {**Y**&#124; **N**}|  
+|ConnectFunctions|REG_SZ|{**Y**&AMP;#124;**N**} {**Y**&AMP;#124;**N**} {**Y**&AMP;#124;**N**}|  
 |CreateDSN|REG_SZ|*Treiber-Beschreibung*|  
 |Treiber|REG_SZ|*Treiber-DLL-Pfad*|  
 |DriverODBCVer|REG_SZ|*nn.nn*|  

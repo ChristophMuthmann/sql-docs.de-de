@@ -1,16 +1,16 @@
 ---
 title: Sys. asymmetric_keys (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - asymmetric_keys
@@ -22,16 +22,17 @@ dev_langs:
 helpviewer_keywords:
 - sys.asymmetric_keys catalog view
 ms.assetid: bbca796a-9bb5-4a62-9ca8-1d255984553d
-caps.latest.revision: 
+caps.latest.revision: 35
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5c42b7a6bcc17fff443fbbafd960baba6bc359ef
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 13e4e958d485fe7a098d3984dde2c459c6c2a042
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysasymmetrickeys-transact-sql"></a>sys.asymmetric_keys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -48,9 +49,9 @@ ms.lasthandoff: 11/21/2017
 |**Fingerabdruck**|**varbinary(32)**|SHA-1-Hash des Schlüssels. Der Hash ist global eindeutig.|  
 |**Algorithmus**|**char(2)**|Der mit dem Schlüssel verwendete Algorithmus.<br /><br /> 1R = 512-Bit-RSA<br /><br /> 2R = 1024-Bit-RSA<br /><br /> 3R = 2048-Bit-RSA|  
 |**algorithm_desc**|**nvarchar(60)**|Beschreibung des mit dem Schlüssel verwendeten Algorithmus.<br /><br /> RSA_512<br /><br /> RSA_1024<br /><br /> RSA_2048|  
-|**Schlüssellänge**|**int**|Bitlänge des Schlüssels.|  
-|**SID**|**varbinary (85)**|Anmelde-SID für diesen Schlüssel. Bei Extensible Key Management-Schlüsseln ist dieser Wert NULL.|  
-|**string_sid**|**vom Datentyp nvarchar(128)**|Zeichenfolgendarstellung der Anmelde-SID des Schlüssels. Bei Extensible Key Management-Schlüsseln ist dieser Wert NULL.|  
+|**key_length**|**int**|Bitlänge des Schlüssels.|  
+|**SID**|**varbinary(85)**|Anmelde-SID für diesen Schlüssel. Bei Extensible Key Management-Schlüsseln ist dieser Wert NULL.|  
+|**string_sid**|**nvarchar(128)**|Zeichenfolgendarstellung der Anmelde-SID des Schlüssels. Bei Extensible Key Management-Schlüsseln ist dieser Wert NULL.|  
 |**public_key**|**varbinary(max)**|Öffentlicher Schlüssel.|  
 |**attested_by**|**nvarchar(260)**|Nur zur Verwendung durch das System.|  
 |**provider_type**|**nvarchar(120)**|Der Typ des Kryptografieanbieters:<br /><br /> CRYPTOGRAPHIC PROVIDER = Extensible Key Management-Schlüssel<br /><br /> NULL = Nicht-Extensible Key Management-Schlüssel|  

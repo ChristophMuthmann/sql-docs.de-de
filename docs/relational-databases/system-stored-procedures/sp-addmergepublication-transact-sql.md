@@ -2,7 +2,7 @@
 title: Sp_addmergepublication (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: system-stored-procedures
@@ -25,11 +25,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b3f61d6ab3c2154020be3eb1ecf4407f57541918
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 350bb858beee315e45a63cb5d72ab05f45d70848
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddmergepublication-transact-sql"></a>sp_addmergepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -84,10 +84,10 @@ sp_addmergepublication [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@publication =** ] **"***Veröffentlichung***"**  
+ [ **@publication =** ] **'***publication***'**  
  Der Name der Mergeveröffentlichung, die erstellt werden soll. *Veröffentlichung* ist **Sysname**und hat keinen Standardwert und darf nicht das Schlüsselwort alle. Der Name der Veröffentlichung muss innerhalb der Datenbank eindeutig sein.  
   
- [  **@description =** ] **"***Beschreibung***"**  
+ [ **@description =** ] **'***description***'**  
  Ist die Beschreibung der Veröffentlichung. *Beschreibung* ist **nvarchar(255)**, hat den Standardwert NULL.  
   
  [  **@retention =** ] *Aufbewahrung*  
@@ -102,7 +102,7 @@ sp_addmergepublication [ @publication = ] 'publication'
 |Wert|Description|  
 |-----------|-----------------|  
 |**systemeigene** (Standard)|Erstellt eine Massenkopierprogramm-Ausgabe aller Tabellen im einheitlichen Modus.|  
-|**Zeichen**|Erstellt eine Massenkopierprogramm-Ausgabe aller Tabellen im Zeichenmodus. Zur Unterstützung von erforderlich [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEW](../../includes/ssew-md.md)] und nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Abonnenten.|  
+|**character**|Erstellt eine Massenkopierprogramm-Ausgabe aller Tabellen im Zeichenmodus. Zur Unterstützung von erforderlich [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEW](../../includes/ssew-md.md)] und nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Abonnenten.|  
   
  [  **@allow_push =** ] **"***Allow_push***"**  
  Gibt an, ob für die angegebene Veröffentlichung Pushabonnements erstellt werden können. *Allow_push* ist **nvarchar(5)**, hat den Standardwert "true", womit Pushabonnements für die Veröffentlichung zulässig.  
@@ -169,7 +169,7 @@ sp_addmergepublication [ @publication = ] 'publication'
  Gibt die Aufbewahrungsdauer in Tagen an, für die Konflikte beibehalten werden. *Conflict_retention* ist **Int**, hat den Standardwert von 14 Tagen vor dem den Konflikt Konfliktzeile aus der Konflikttabelle.  
   
  [  **@keep_partition_changes =** ] **"***Keep_partition_changes***"**  
- Gibt an, ob Partitionsänderungsoptimierungen zu aktivieren sind, wenn vorausberechnete Partitionen nicht verwendet werden können. *Keep_partition_changes* ist **nvarchar(5)**, Standardwert ist "true". **"false"** bedeutet, die Änderungen partitionieren nicht optimiert werden, und wenn Vorausberechnete Partitionen nicht verwendet werden, die an alle Abonnenten gesendeten Partitionen werden überprüft, wenn Daten in einer Partition ändern. **"true"** bedeutet, die Änderungen partitionieren optimiert werden, und nur Abonnenten, die über Zeilen in den geänderten Partitionen betroffen sind. Legen Sie bei Verwendung vorausberechneter Partitionen *Use_partition_groups* auf **"true"** und legen Sie *Keep_partition_changes* auf **"false"**. Weitere Informationen finden Sie unter [Optimieren Parametrisierter Filter-Leistung mit Vorausberechneten Partitionen ](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md).  
+ Gibt an, ob Partitionsänderungsoptimierungen zu aktivieren sind, wenn vorausberechnete Partitionen nicht verwendet werden können. *Keep_partition_changes* ist **nvarchar(5)**, Standardwert ist "true". **"false"** bedeutet, die Änderungen partitionieren nicht optimiert werden, und wenn Vorausberechnete Partitionen nicht verwendet werden, die an alle Abonnenten gesendeten Partitionen werden überprüft, wenn Daten in einer Partition ändern. **"true"** bedeutet, die Änderungen partitionieren optimiert werden, und nur Abonnenten, die über Zeilen in den geänderten Partitionen betroffen sind. Legen Sie bei Verwendung vorausberechneter Partitionen *Use_partition_groups* auf **"true"** und legen Sie *Keep_partition_changes* auf **"false"**. Weitere Informationen finden Sie unter [parametrisierte Filter-Leistung mit Vorausberechneten Partitionen optimieren](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md).  
   
 > [!NOTE]  
 >  Wenn Sie einen Wert angeben **"true"** für *Keep_partition_changes*, geben Sie den Wert **1** für den Momentaufnahme-Agent-Parameter **- MaxNetworkOptimization** . Weitere Informationen zu diesem Parameter finden Sie unter [Replikationsmomentaufnahme-Agent](../../relational-databases/replication/agents/replication-snapshot-agent.md). Informationen über das Angeben von Agentparametern finden Sie unter [Replikations-Agent-Verwaltung](../../relational-databases/replication/agents/replication-agent-administration.md).  
@@ -248,9 +248,9 @@ sp_addmergepublication [ @publication = ] 'publication'
 |Wert|Version|  
 |-----------|-------------|  
 |**Tag** (Standard)|Die Beibehaltungsdauer wird in Tagen angegeben.|  
-|**Woche**|Die Beibehaltungsdauer wird in Wochen angegeben.|  
-|**Monat**|Die Beibehaltungsdauer wird in Monaten angegeben.|  
-|**Jahr**|Die Beibehaltungsdauer wird in Jahren angegeben.|  
+|**week**|Die Beibehaltungsdauer wird in Wochen angegeben.|  
+|**month**|Die Beibehaltungsdauer wird in Monaten angegeben.|  
+|**year**|Die Beibehaltungsdauer wird in Jahren angegeben.|  
   
  [  **@generation_leveling_threshold=** ] *Generation_leveling_threshold*  
  Gibt die Anzahl der Änderungen, die in einer Generierung enthalten sind. Eine Generierung ist eine Auflistung von Änderungen, die an einen Verleger oder Abonnenten übermittelt werden. *Generation_leveling_threshold* ist **Int**, Standardwert ist 1000.  
@@ -283,7 +283,7 @@ sp_addmergepublication [ @publication = ] 'publication'
   
  Für [!INCLUDE[ssEW](../../includes/ssew-md.md)] -Abonnenten wird der Wert der *Alternate_snapshot_folder* wird nur verwendet, wenn der Wert der *Snapshot_in_default_folder* ist **"false"**.  
   
- Mit aktivierter DDL-Replikation (*Replicate_ddl***= 1**) nicht replizierende-DDL für eine Veröffentlichung ändert, für die Veröffentlichung [Sp_changemergepublication &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md) muss zuerst ausgeführt werden, zum Festlegen von *Replicate_ddl* auf **0**. Nachdem die nicht replizierenden DDL-Anweisungen ausgestellt wurden, **Sp_changemergepublication** erneut ausgeführt werden können, um die DDL-Replikation wieder aktivieren.  
+ Mit aktivierter DDL-Replikation (* Replicate_ddl ***= 1**) nicht replizierende-DDL für eine Veröffentlichung ändert, für die Veröffentlichung [Sp_changemergepublication &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)muss zuerst ausgeführt werden, zum Festlegen von *Replicate_ddl* auf **0**. Nachdem die nicht replizierenden DDL-Anweisungen ausgestellt wurden, **Sp_changemergepublication** erneut ausgeführt werden können, um die DDL-Replikation wieder aktivieren.  
   
 ## <a name="example"></a>Beispiel  
  [!code-sql[HowTo#sp_AddMergePub](../../relational-databases/replication/codesnippet/tsql/sp-addmergepublication-t_1.sql)]  
@@ -295,7 +295,7 @@ sp_addmergepublication [ @publication = ] 'publication'
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  [Veröffentlichen von Daten und Datenbankobjekten](../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
  [sp_changemergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)   
- [Sp_dropmergepublication &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-dropmergepublication-transact-sql.md)   
+ [Sp_dropmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepublication-transact-sql.md)   
  [sp_helpmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)   
  [Gespeicherte Automatisierungsprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
