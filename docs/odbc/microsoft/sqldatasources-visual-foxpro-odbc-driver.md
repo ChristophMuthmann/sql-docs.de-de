@@ -2,7 +2,7 @@
 title: SQLDataSources (Visual FoxPro-ODBC-Treiber) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: 033f8d37-b2dd-4a4e-b93a-70c25b25b72e
 caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 475b312cc2157411cfc4738154f503406ab9cd5b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: d7e636fe7693261360e52d2bf279b1fe204e69b2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqldatasources-visual-foxpro-odbc-driver"></a>SQLDataSources (Visual FoxPro-ODBC-Treiber)
 > [!NOTE]  

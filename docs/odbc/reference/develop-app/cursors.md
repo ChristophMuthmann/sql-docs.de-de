@@ -1,15 +1,16 @@
 ---
 title: Cursors | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - forward-only cursors [ODBC]
@@ -20,16 +21,16 @@ helpviewer_keywords:
 - result sets [ODBC], fetching
 - block cursors [ODBC]
 ms.assetid: 0b114352-3c63-4d33-9220-182ede90e4aa
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: fc2d15d949561f28cf7b9fa653ebf34c602c29bb
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c0c6ae5b9bda276bcd1296fcb475063fea6db204
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="cursors"></a>Cursor
 Eine Anwendung ruft die Daten mit einem *Cursor*. Ein Cursor unterscheidet sich von einem Resultset: ein Resultset ist der Satz von Zeilen, die bestimmten Suchkriterien entspricht, während ein Cursors auf die Software ist, die diese Zeilen an die Anwendung wird zurückgegeben. Der Name *Cursor* anwenden auf Datenbanken, sollten Sie wahrscheinlich die blinkender Cursor auf einem Computer terminal stammt. Ebenso wie diesem Cursor gibt an, die aktuelle Position auf dem Bildschirm und, wo die typisierte Wörter weiter angezeigt wird, gibt einen Cursor für ein Resultset der aktuellen Position im Resultset und welche Zeile als Nächstes zurückgegeben werden an.  

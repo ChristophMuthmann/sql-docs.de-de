@@ -1,15 +1,16 @@
 ---
-title: "ODBC-Funktionen, die nicht ausgeführt werden, indem die Cursorbibliothek | Microsoft Docs"
-ms.custom: 
+title: ODBC-Funktionen, die nicht ausgeführt werden, indem die Cursorbibliothek | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - cursor library [ODBC], functions
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - ODBC functions [ODBC], cursor library
 - ODBC cursor library [ODBC], functions
 ms.assetid: f2941522-75eb-4db9-9468-4800b884dac2
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b72177a8bd43e8efcfb1954c182049fcfe94fcea
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 994de96fdb564b67dc9779bbe86676b6d47ba8d9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="odbc-functions-not-executed-by-the-cursor-library"></a>ODBC-Funktionen, die von der Cursorbibliothek nicht ausgeführt.
 > [!IMPORTANT]  

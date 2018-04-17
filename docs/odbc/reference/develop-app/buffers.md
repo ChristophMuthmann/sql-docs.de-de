@@ -1,15 +1,16 @@
 ---
 title: Puffer | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - input buffers [ODBC]
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - application buffers [ODBC]
 - buffers [ODBC]
 ms.assetid: 42c5226c-cb40-4d1e-809f-2ea50ce6bd55
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ceb263eb42a4ef58c38f18eba98736a4c9de89e2
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: dc0eda167a8ffeb6769b87373d27c5c3019974bb
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="buffers"></a>Puffer
 Ein Puffer ist jedem Teil einer Anwendung Arbeitsspeicher verwendet, um Daten zwischen der Anwendung und den Treiber übergeben. Beispielsweise Anwendungspuffer können zugeordnet werden, oder *gebunden* Resultsetspalten mit **SQLBindCol**. Wie jede Zeile abgerufen wird, werden die Daten für jede Spalte in diesen Puffern zurückgegeben. *Geben Sie Puffer* dienen zum Übergeben von Daten aus der Anwendung an den Treiber; *Ausgabepuffer* werden verwendet, um Daten aus dem Treiber an die Anwendung zurückgegeben.  
@@ -40,7 +41,7 @@ Ein Puffer ist jedem Teil einer Anwendung Arbeitsspeicher verwendet, um Daten zw
   
  Diese Puffer sind in der Regel einander paarweise zugeordnet. *Datenpuffer* werden verwendet, um die Daten selbst zu übergeben, während er sich *Längenindikator/Puffer* werden verwendet, um die Länge der Daten in den Datenpuffer oder ein spezieller Wert z. B. SQL_NULL_DATA gibt an, dass die Daten NULL übergeben. Die Länge der Daten in einen Datenpuffer unterscheidet sich von der Länge des Datenpuffers selbst. Die folgende Abbildung zeigt die Beziehung zwischen den Datenpuffer und Längen-/Indikatorpuffers.  
   
- ![Datenpuffer und Länge &#47; Indikatorpuffers](../../../odbc/reference/develop-app/media/pr09.gif "pr09")  
+ ![Datenpuffer und Länge&#47;Indikatorpuffers](../../../odbc/reference/develop-app/media/pr09.gif "pr09")  
   
  Ein Längen-/Indikatorpuffers ist erforderlich, wenn der Datenpuffer Daten, z. B. Zeichen- oder Binärdaten variabler Länge enthält. Enthält der Datenpuffer Daten fester Länge, z. B. eine ganze Zahl oder Datum Struktur ist ein Längen-/Indikatorpuffers musste nur Indikatorwerte übergeben werden, da die Länge der Daten bereits bekannt ist. Wenn eine Anwendung ein Längen-/Indikatorpuffers mit Daten fester Länge verwendet, ignoriert der Treiber alle Längen darin übergeben.  
   

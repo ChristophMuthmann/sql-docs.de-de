@@ -1,7 +1,7 @@
-# [OLE DB-Treiber für SQL Server (OLE DB)](oledb-driver-for-sql-server-ole-db.md)
+# [OLE DB-Treiber für SQL Server-Programmierung](oledb-driver-for-sql-server-programming.md)
 
 # Spezifische Bereiche
-## [OLE DB-Treiber für SQL Server +](../../oledb/ole-db-driver/creating-a-oledb-driver-for-sql-server-application.md)
+## [Erstellen eines OLE DB-Treibers für SQL Server-Anwendungen +](../../oledb/ole-db-driver/creating-a-oledb-driver-for-sql-server-application.md)
 ## [OLE DB-Datenquellenobjekte +](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)
 ## [Befehle +](../../oledb/ole-db-commands/commands.md)
 ## [Rowsets +](../../oledb/ole-db-rowsets/rowsets.md)
@@ -15,13 +15,12 @@
 ## [Schnittstellen +](../../oledb/ole-db-interfaces/oledb-driver-for-sql-server-ole-db-interfaces.md)
 ## [Vorgehensweise +](../../oledb/ole-db-how-to/ole-db-how-to-topics.md)
 
-# [FILESTREAM-Unterstützung (OLE DB)](filestream-support-ole-db.md)
-# [Große benutzerdefinierte CLR-Typen [OLE DB]](large-clr-user-defined-types-ole-db.md)
-# [Schemarowset-Unterstützung (OLE DB)](schema-rowset-support-ole-db.md)
+# [Große benutzerdefinierte CLR-Typen](large-clr-user-defined-types-ole-db.md)
+# [Schemarowset-Unterstützung](schema-rowset-support-ole-db.md)
 # [Schemarowsets: Verteilte Abfrageunterstützung](schema-rowsets-distributed-query-support.md)
 # [Schemarowsets: LINKEDSERVERS-Rowset](schema-rowsets-linkedservers-rowset.md)
-# [Dienstprinzipalnamen (SPN) in Clientverbindungen (OLE DB)](service-principal-names-spns-in-client-connections-ole-db.md)
-# [Unterstützung für Spalten mit geringer Dichte (OLE DB)](sparse-columns-support-ole-db.md)
+# [Dienstprinzipalnamen (SPN) in Clientverbindungen](service-principal-names-spns-in-client-connections-ole-db.md)
+# [Unterstützung für Sparsespalten](sparse-columns-support-ole-db.md)
 # [Gespeicherte Prozeduren: Aufrufen](stored-procedures-calling.md)
 # [Gespeicherter Prozeduren: Ausführen](stored-procedures-running.md)
 # [Gespeicherte Prozeduren](stored-procedures.md)

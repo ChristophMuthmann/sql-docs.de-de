@@ -1,26 +1,19 @@
 ---
-title: Übersicht über die Sicherheit für Python in SQL Server | Microsoft Docs
-ms.custom: ''
-ms.date: 11/03/2017
-ms.reviewer: ''
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: python
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.author: heidist
+title: Übersicht über die Sicherheit für Python in SQL Server-Machine Learning | Microsoft Docs
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
 author: HeidiSteen
+ms.author: heidist
 manager: cgronlun
-ms.workload: Inactive
-ms.openlocfilehash: c8695dce528e84b1761d67abd99f94dc91c01538
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: d0e2e12dd40dd8a7f7a90beda5a06b751d70aed2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="security-overview-for-python-in-sql-server"></a>Übersicht über die Sicherheit für Python in SQL Server
+# <a name="security-overview-for-python-in-sql-server-machine-learning"></a>Übersicht über die Sicherheit für Python in SQL Server-Machine Learning
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 In diesem Thema wird beschrieben, die Sicherheitsarchitektur, die verwendet wird, die Verbindung der [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Datenbank-Engine und Python-Komponenten. Des Sicherheitsprozesses sind Beispiele für zwei gängige Szenarien: Ausführen von Python in SQL Server mithilfe einer gespeicherten Prozedur und Ausführen von Python mit dem SQL Server als remote computekontext.

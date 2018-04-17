@@ -1,15 +1,16 @@
 ---
-title: "Außerkraftsetzung der führende und Sekunden Genauigkeit für Intervalldatentypen | Microsoft Docs"
-ms.custom: 
+title: Außerkraftsetzung der führende und Sekunden Genauigkeit für Intervalldatentypen | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - data types [ODBC], interval data types
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - interval leading precision [ODBC]
 - interval precision [ODBC]
 ms.assetid: 3d65493f-dce7-4d29-9f59-c63a4e47918c
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 70ae232ed09ab7bd04a2474b5798dd4ed581df39
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 0336aa9334195a706ef59edd7beb1ec482a590d8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="overriding-default-leading-and-seconds-precision-for-interval-data-types"></a>Überschreiben Standard führende und Sekunden Genauigkeit für die Interval-Datentypen
 Wenn das SQL_DESC_TYPE-Feld ein ARD durch Aufrufen von entweder um einen "DateTime" oder "Intervall C" festgelegt ist **SQLBindCol** oder **SQLSetDescField**, Feld SQL_DESC_PRECISION (enthält das Intervall (Sekunden) Genauigkeit) wird auf die folgenden Standardwerte festgelegt:  

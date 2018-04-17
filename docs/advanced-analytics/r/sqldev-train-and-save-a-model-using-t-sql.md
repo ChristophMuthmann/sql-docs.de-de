@@ -1,29 +1,17 @@
 ---
-title: 'Lektion 5: Trainieren, und speichern Sie ein Modell mithilfe des T-SQL | Microsoft Docs'
-ms.custom: ''
-ms.date: 07/26/2016
-ms.reviewer: ''
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-applies_to:
-- SQL Server 2016
-dev_langs:
-- R
-- TSQL
-ms.author: heidist
+title: Lektion 5 trainieren, und speichern Sie ein Modell mithilfe des T-SQL | Microsoft Docs
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: tutorial
 author: HeidiSteen
+ms.author: heidist
 manager: cgronlun
-ms.workload: Inactive
-ms.openlocfilehash: 7684ee7d8135b00a02cae6c1fdbe9c74da3a041c
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: 4d8bedd65e150d94c6030ea6c9c9fc6483bdaafd
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="lesson-5-train-and-save-a-model-using-t-sql"></a>Lektion 5: Trainieren Sie, und speichern Sie ein Modell mithilfe des T-SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

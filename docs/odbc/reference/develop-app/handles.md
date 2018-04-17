@@ -1,15 +1,16 @@
 ---
 title: Behandelt | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - handles [ODBC]
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - driver manager [ODBC], handles
 - handles [ODBC], about handles
 ms.assetid: f663101e-a4cc-402b-b9d7-84d5e975be71
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1c1198607b5a664b14fe6da31c9ebdc4f82bdb8e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ef9fe627d79c0a2040500cd2894dcd90a83bee73
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="handles"></a>Ziehpunkte
 Handles sind nicht transparenten, 32-Bit-Werte, die ein bestimmtes Element identifizieren. in ODBC kann dieses Element aus einer Umgebung, Verbindung, Anweisung oder Deskriptor sein. Wenn die Anwendung aufruft, **SQLAllocHandle**der Treiber-Manager oder der Treiber erstellt ein neues Element vom angegebenen Typ und dessen Handle an die Anwendung zurückgegeben. Die Anwendung später verwendet das Handle zum Identifizieren dieses Elements beim Aufrufen von ODBC-Funktionen. Der Treiber-Manager und der Treiber verwenden das Handle, um Informationen über das Element zu suchen.  

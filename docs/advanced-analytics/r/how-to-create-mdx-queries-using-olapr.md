@@ -1,28 +1,19 @@
 ---
-title: Zum Erstellen von MDX-Abfragen, die mit OlapR | Microsoft Docs
-ms.custom: ''
-ms.date: 11/29/2017
-ms.reviewer: ''
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-dev_langs:
-- R
-ms.author: heidist
+title: 'Vorgehensweise: Erstellen von MDX Abfragen, in R über OlapR in SQL Server-Machine Learning | Microsoft Docs'
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
 author: HeidiSteen
+ms.author: heidist
 manager: cgronlun
-ms.workload: Inactive
-ms.openlocfilehash: 9d917316a9d25b0634605e0f55eae3eda93f8669
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: 76602c41fd6f8d300c240a6072f2a6decec18e3f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="how-to-create-mdx-queries-using-olapr"></a>Vorgehensweise: Erstellen von MDX-Abfragen mit olapR
+# <a name="how-to-create-mdx-queries-in-r-using-olapr"></a>Zum Erstellen von MDX-Abfragen in OlapR mit R
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Die [OlapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) Paket unterstützt MDX-Abfragen für Cubes in SQL Server Analysis Services gehostet. Sie können eine Abfrage für einen vorhandenen Cube zu erstellen, Durchsuchen von Dimensionen und andere Cubeobjekte und fügen Sie in vorhandenen MDX-Abfragen zum Abrufen von Daten.

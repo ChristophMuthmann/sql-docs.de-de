@@ -2,7 +2,7 @@
 title: SQLCancel (Visual FoxPro-ODBC-Treiber) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: 4f7baa1d-37ef-4051-ae13-7dc38033af16
 caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 616a23e5adb6d1236b76e96da50b766ebfaaa6d1
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 4c7c72177c977c3cb9b23ad4507382c3bd4f25af
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlcancel-visual-foxpro-odbc-driver"></a>SQLCancel (Visual FoxPro-ODBC-Treiber)
 > [!NOTE]  

@@ -1,16 +1,16 @@
 ---
-title: "Festlegen von Optionen für die Datei-Texttreiber programmgesteuert | Microsoft Docs"
-ms.custom: 
+title: Festlegen von Optionen für die Datei-Texttreiber programmgesteuert | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - text file driver [ODBC], setting options programmatically
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - desktop database drivers [ODBC], text file driver
 - Jet-based ODBC drivers [ODBC], text file driver
 ms.assetid: cbde2ca1-5d4e-4444-a371-a72f3ac4d92a
-caps.latest.revision: 
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d1a7f971a0ac5d07c451b9a786bdcc563108e3f7
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: ef5cd363c0365c25536a63b60fbbdbd0dd361592
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="setting-options-programmatically-for-the-text-file-driver"></a>Festlegen von Optionen für die Datei-Texttreiber programmgesteuert
 |Option|Description|Methode|  

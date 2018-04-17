@@ -2,7 +2,7 @@
 title: SQLNumParams (Visual FoxPro-ODBC-Treiber) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: 4fe4eec8-6a65-4b1f-aac3-25b14fe4ea94
 caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ce20340f6d961c092a30c4eb761b3b65b430ad7e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ba0ab8986197a1c356112b1d77fa9cdb855babcb
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlnumparams-visual-foxpro-odbc-driver"></a>SQLNumParams (Visual FoxPro-ODBC-Treiber)
 > [!NOTE]  

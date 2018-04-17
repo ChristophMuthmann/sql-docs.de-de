@@ -1,15 +1,15 @@
 ---
-title: "Analysis Services Tutorial ergänzenden Lektion: unregelmäßige Hierarchien | Microsoft Docs"
-description: "Beschreibt, wie in der Analysis Services-Lernprogramm unregelmäßige Hierarchien zu beheben."
+title: 'Analysis Services Tutorial ergänzenden Lektion: unregelmäßige Hierarchien | Microsoft Docs'
+description: Beschreibt, wie in der Analysis Services-Lernprogramm unregelmäßige Hierarchien zu beheben.
 ms.prod_service: analysis-services, azure-analysis-services
 services: analysis-services
 ms.suite: pro-bi
-documentationcenter: 
+documentationcenter: ''
 author: Minewiskan
 manager: kfile
-editor: 
-tags: 
-ms.assetid: 
+editor: ''
+tags: ''
+ms.assetid: ''
 ms.service: analysis-services
 ms.devlang: NA
 ms.topic: get-started-article
@@ -17,11 +17,12 @@ ms.tgt_pltfrm: NA
 ms.workload: na
 ms.date: 02/20/2018
 ms.author: owend
-ms.openlocfilehash: ebadf3498d7047873bfcd79099a02c387618367e
-ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
+monikerRange: '>= sql-analysis-services-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 224e0661a4f4c25592ad326f3e0ce3980e3602b8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="supplemental-lesson---ragged-hierarchies"></a>Ergänzende Lektion - unregelmäßige Hierarchien
 

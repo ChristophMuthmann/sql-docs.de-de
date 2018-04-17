@@ -1,15 +1,16 @@
 ---
 title: Datentypen Paradox | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - ODBC desktop database drivers [ODBC], Paradox driver
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - data types [ODBC], Paradox driver
 - Paradox driver [ODBC], data types
 ms.assetid: 0c9e5d21-9321-49f8-a055-69459e1c9c85
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 40266f580e162ed021c069c1b583748906b3b336
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: cee6fd6f7b13b10a59047964ba0d344ba13b8381
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="paradox-data-types"></a>Paradox-Datentypen
 Der Paradox ODBC-Treiber ordnet Paradox-Datentypen in ODBC-SQL-Datentypen. Die folgende Tabelle listet alle Paradox-Datentypen und zeigt der ODBC-SQL-Datentypen, denen sie zugeordnet sind.  
@@ -64,6 +65,6 @@ Der Paradox ODBC-Treiber ordnet Paradox-Datentypen in ODBC-SQL-Datentypen. Die f
 |ALPHANUMERISCH|Erstellen eine ALPHANUMERISCHE Spalte 0 (null) oder nicht angegebene Länge gibt tatsächlich eine 255 Byte-Spalte.|  
 |BYTES|Wenn Sie NULL in eine binäre Spalte mit dem Treiber Paradox5 einfügen, wird es in 0 geändert.|  
 |LONG|Der größte negative Wert vom Treiber Paradox für Long-Datentyp in Paradox 5 unterstützt. *x* ist kein-2 ^ 31 (-2147483648), da er seit lange Zuordnungen in die ODBC-sein sollten, geben Sie SQL_INTEGER. Der Maximalwert der negativen unterstützt, solange ist tatsächlich-2 ^ 31-1 (-2147483647).|  
-|timestamp|Wenn ein Wert in eine TIMESTAMP-Spalte werden, vom Treiber Paradox eingefügt, und dann anschließend aus der Spalte abgerufen, abweichen der abgerufene Wert aus der eingefügte Wert durch mehr als 1 Sekunde aufgrund Rundung.|  
+|TIMESTAMP|Wenn ein Wert in eine TIMESTAMP-Spalte werden, vom Treiber Paradox eingefügt, und dann anschließend aus der Spalte abgerufen, abweichen der abgerufene Wert aus der eingefügte Wert durch mehr als 1 Sekunde aufgrund Rundung.|  
   
  Weitere Einschränkungen für Datentypen finden Sie in [Datentyp Einschränkungen](../../odbc/microsoft/data-type-limitations.md).

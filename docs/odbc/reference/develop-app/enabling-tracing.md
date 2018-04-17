@@ -2,7 +2,7 @@
 title: Aktivieren der Ablaufverfolgung | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: 48e318bd-2487-4708-a698-ea01f36a45e9
 caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 21f9d8b3d96f2860ed532279acc74ac3f7c717dc
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 792dd9a45cfdd4d1edc8f90ca587d7660b9fc450
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="enabling-tracing"></a>Aktivieren der Ablaufverfolgung
 Ablaufverfolgung kann in der folgenden drei Arten aktiviert werden:  

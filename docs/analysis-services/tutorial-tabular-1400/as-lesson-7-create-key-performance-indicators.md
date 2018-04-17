@@ -4,12 +4,12 @@ description: Beschreibt, wie Key Performance Indicators in Analysis Services Tut
 ms.prod_service: analysis-services, azure-analysis-services
 services: analysis-services
 ms.suite: pro-bi
-documentationcenter: 
+documentationcenter: ''
 author: Minewiskan
 manager: kfile
-editor: 
-tags: 
-ms.assetid: 
+editor: ''
+tags: ''
+ms.assetid: ''
 ms.service: analysis-services
 ms.devlang: NA
 ms.topic: get-started-article
@@ -17,11 +17,12 @@ ms.tgt_pltfrm: NA
 ms.workload: na
 ms.date: 02/20/2018
 ms.author: owend
-ms.openlocfilehash: d4036297bdfc8d2c75061951ff329d20378a57a2
-ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
+monikerRange: '>= sql-analysis-services-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 64159fee697d6437d685743f2a1e3d824fcaeced
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-key-performance-indicators"></a>Erstellen von Leistungskennzahlen
 
@@ -59,7 +60,7 @@ Dieser Artikel ist Teil eines Lernprogramms zur tabellenmodellierung, das in Rei
   
 8.  Wählen Sie unter **Symbolart auswählen**den Symboltyp Diamant (rot), Dreieck (gelb) oder Kreis (grün) aus.
   
-    ![as-lesson7-kpi](../tutorial-tabular-1400/media/as-lesson7-kpi.png)
+    ![als lesson7 kpi](../tutorial-tabular-1400/media/as-lesson7-kpi.png)
     
     > [!TIP]  
     > Beachten Sie die erweiterbare **Beschreibungen** Beschriftung unterhalb der verfügbaren symbolarten. Verwenden Sie eine Beschreibung für die verschiedenen KPI-Elemente, um in Clientanwendungen typbeschreibungen.  

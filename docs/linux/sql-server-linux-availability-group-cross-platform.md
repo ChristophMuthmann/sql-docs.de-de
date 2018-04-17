@@ -1,5 +1,5 @@
 ---
-title: "Konfigurieren Sie SQLServer Always On-Verfügbarkeitsgruppe unter Windows und Linux | Microsoft Docs"
+title: Konfigurieren Sie SQLServer Always On-Verfügbarkeitsgruppe unter Windows und Linux | Microsoft Docs
 description: Konfigurieren Sie SQL Server Availability Group, mit Replikaten unter Windows und Linux.
 author: MikeRayMSFT
 ms.author: mikeray
@@ -8,18 +8,19 @@ ms.date: 01/31/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
-ms.assetid: 
+ms.assetid: ''
 ms.workload: On Demand
-ms.openlocfilehash: 58eb51a5a3ad174e9cd785a7da3ecb482b2f9f28
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 280e0e9534fa29042e20c0a8a965abe62f0d2d51
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="configure-sql-server-always-on-availability-group-on-windows-and-linux-cross-platform"></a>Configure SQL Server AlwaysOn-Verfügbarkeitsgruppe unter Windows und Linux (Cross-Platform)
 
@@ -47,7 +48,7 @@ Die Schritte zum Erstellen der Verfügbarkeitsgruppe sind die Schritte zum Erste
    >[!TIP]
    >Wenn Sie diese Lösung in Azure überprüfen, platzieren Sie beide Server in derselben verfügbarkeitsgruppe, um sicherzustellen, dass sie im Datencenter getrennt werden. 
 
-   Aktivieren von Verfügbarkeitsgruppen
+   **Aktivieren von Verfügbarkeitsgruppen**
 
    Anweisungen hierzu finden Sie unter [aktivieren und Deaktivieren von AlwaysOn-Verfügbarkeitsgruppen (SQL Server)](../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md).
 

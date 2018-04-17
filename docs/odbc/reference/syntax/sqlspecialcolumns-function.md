@@ -2,7 +2,7 @@
 title: SQLSpecialColumns-Funktion | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: bb2d9f21-bda0-4e50-a8be-f710db660034
 caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 80afdd42ee17c77a44035854207812ecac3afb46
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: fe2c39ee38986004947e52bb580a8f8864bb2abd
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlspecialcolumns-function"></a>SQLSpecialColumns-Funktion
 **Konformität**  
@@ -80,7 +80,7 @@ SQLRETURN SQLSpecialColumns(
  *NameLength1*  
  [Eingabe] Länge in Zeichen des **CatalogName*.  
   
- *SchemaName*  
+ *schemaName*  
  [Eingabe] Name des Schemas für die Tabelle. Wenn ein Treiber unterstützt die Schemas für einige Tabellen jedoch nicht für andere, z. B. wenn der Treiber Daten aus anderen DBMS, eine leere Zeichenfolge ruft ("") gibt die Tabellen, die keine Schemas. *SchemaName* ein Zeichenfolgenmuster für die Suche nicht enthalten.  
   
  Wenn das SQL_ATTR_METADATA_ID-Anweisungsattribut auf SQL_TRUE, festgelegt ist *SchemaName* wird als Bezeichner behandelt und seine Fall spielt keine Rolle. Ist er SQL_FALSE, *SchemaName* ist ein normales Argument; wird als solcher behandelt, und der Fall ist von Bedeutung.  
@@ -88,7 +88,7 @@ SQLRETURN SQLSpecialColumns(
  *NameLength2*  
  [Eingabe] Länge in Zeichen des **SchemaName*.  
   
- *Tabellenname*  
+ *TableName*  
  [Eingabe] Tabellenname. Dieses Argument darf nicht null-Zeiger sein. *TableName* ein Zeichenfolgenmuster für die Suche nicht enthalten.  
   
  Wenn das SQL_ATTR_METADATA_ID-Anweisungsattribut auf SQL_TRUE, festgelegt ist *TableName* wird als Bezeichner behandelt und seine Fall spielt keine Rolle. Ist er SQL_FALSE, *TableName* ist ein normales Argument; wird als solcher behandelt, und der Fall ist von Bedeutung.  
@@ -96,7 +96,7 @@ SQLRETURN SQLSpecialColumns(
  *NameLength3*  
  [Eingabe] Länge in Zeichen des **TableName*.  
   
- *Bereich*  
+ *Scope*  
  [Eingabe] Mindestens erforderliche Bereich der Rowid. Die zurückgegebene Rowid möglicherweise größerem Umfang aufweisen. Dies muss eine der folgenden Ressourcen sein:  
   
  SQL_SCOPE_CURROW: Die Rowid ist garantiert gültig, allerdings nur, wenn in dieser Zeile positioniert. Eine spätere erneute Auswahl mit der Rowid möglicherweise keine Zeile zurück, wenn die Zeile aktualisiert wurde, oder durch eine andere Transaktion gelöscht.  

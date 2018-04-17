@@ -1,23 +1,17 @@
 ---
 title: Ändern des benutzerkontenpools für SQL Server-Machine Learning | Microsoft Docs
-ms.date: 11/03/2017
-ms.reviewer: ''
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.author: heidist
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
 author: HeidiSteen
+ms.author: heidist
 manager: cgronlun
-ms.workload: Inactive
-ms.openlocfilehash: 7c1efa87fef881a8b88b0967716ec062cf95e64f
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: 77b84e3117b0a1366f3d0b5f9d74802d938bc86b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="modify-the-user-account-pool-for-sql-server-machine-learning"></a>Ändern des benutzerkontenpools für SQL Server-Machine learning
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -35,7 +29,7 @@ Windows-Kontogruppe wird erstellt, indem [!INCLUDE[ssNoVersion](../../includes/s
 -   In einer Standardinstanz ist der Gruppenname **SQLRUserGroup**. Der Name entspricht dem, ob Sie R, Python oder beides verwenden.
 -   In einer benannten Instanz erhält der Standardgruppenname den Instanznamen als Suffix, z.B. **SQLRUserGroupMyInstanceName**.
 
-Standardmäßig enthält der Benutzerkontenpool 20 Benutzerkonten. In den meisten Fällen 20 ist mehr als ausreichend, um Machine Learning-Aufgaben unterstützen, aber Sie können die Anzahl der Konten ändern.
+Standardmäßig enthält der Benutzerkontenpool 20 Benutzerkonten. In den meisten Fällen 20 ist mehr als ausreichend, um Machine Learning-Aufgaben unterstützen, aber Sie können die Anzahl der Konten ändern. Die maximale Anzahl der Konten ist 100.
 -  In einer Standardinstanz haben die einzelnen Konten Namen von **MSSQLSERVER01** bis **MSSQLSERVER20**.
 -   In einer benannten Instanz sind die Konten nach dem Instanznamen benannt, z.B **MyInstanceName01** bis **MyInstanceName20**.
 
@@ -50,7 +44,7 @@ Die jeweiligen Kennwörter der Benutzerkonten werden nach dem Zufallsprinzip gen
 1. Klicken Sie im SQL Server Configuration Manager auf **SQL Server-Dienste**.
 2. Doppelklicken Sie auf den Launchpad-Dienst von SQL Server und beenden Sie den Dienst, wenn er ausgeführt wird.
 3.  Achten Sie darauf, dass der Startmodus auf der Registerkarte **Dienst** auf „Automatisch“ festgelegt ist. Externe Skripts können nicht gestartet werden, wenn das Launchpad nicht ausgeführt wird.
-4.  Klicken Sie auf die Registerkarte **Erweitert**, und bearbeiten Sie den Wert von **External Users Count** (Anzahl externer Benutzer), wenn nötig. Diese Einstellung steuert können wie viele verschiedene SQL-Benutzer externen Skript Sitzungen gleichzeitig ausführen. Der Standardwert ist 20 Konten.
+4.  Klicken Sie auf die Registerkarte **Erweitert**, und bearbeiten Sie den Wert von **External Users Count** (Anzahl externer Benutzer), wenn nötig. Diese Einstellung steuert können wie viele verschiedene SQL-Benutzer externen Skript Sitzungen gleichzeitig ausführen. Der Standardwert ist 20 Konten. Die maximale Anzahl von Benutzern ist 100.
 5. Sie können die Option **Reset External Users Password** (Kennwörter externer Benutzer zurücksetzen) auch wahlweise auf _Ja_ festlegen, wenn Ihre Organisation eine Richtlinie zum regelmäßigen Ändern des Kennworts hat. Damit werden die verschlüsselten Kennwörter erneut generiert, die Launchpad für die Benutzerkonten verwaltet. Weitere Informationen finden Sie unter [Enforcing Password Policy (Erzwingen der Kennwortrichtlinie)](#bkmk_EnforcePolicy).
 6.  Starten Sie den Launchpad-Dienst neu.
 

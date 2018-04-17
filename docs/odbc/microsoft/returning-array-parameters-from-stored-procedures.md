@@ -1,34 +1,35 @@
 ---
-title: "Zurückgeben der Arrayparameter von gespeicherten Systemprozeduren | Microsoft Docs"
-ms.custom: 
+title: Zurückgeben der Arrayparameter von gespeicherten Systemprozeduren | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - stored procedures [ODBC], ODBC driver for Oracle
 - ODBC driver for Oracle [ODBC], stored procedures
 ms.assetid: 2018069b-da5d-4cee-a971-991897d4f7b5
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f0742b7158ae8a3fe94b325dacc1c29807610e9b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 994644171fbf2ba4e35f4996b75a9b4bdb9db16c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="returning-array-parameters-from-stored-procedures"></a>Zurückgeben von Arrayparameter von gespeicherten Prozeduren
 > [!IMPORTANT]  
->  Diese Funktion wird in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Verwenden Sie stattdessen den ODBC-Treiber von Oracle bereitgestellt.  
+>  Diese Funktion wird in einer zukünftigen Version von Windows entfernt werden. Verwenden Sie diese Funktion beim Entwickeln neuer Anwendungen nicht, und planen Sie das Ändern von Anwendungen, in denen es zurzeit verwendet wird. Verwenden Sie stattdessen den ODBC-Treiber von Oracle bereitgestellt.  
   
  In Oracle 7.3 ist es keine Möglichkeit, ein PL/SQL-Programm einen PL/SQL-Datensatztyp außer zuzugreifen. Weist eine gepackte Prozedur oder Funktion ein formales Argument als einen PL/SQL-Datensatztyp definiert, ist es nicht möglich, formalen Arguments als Parameter gebunden. Verwenden Sie den Typ der PL/SQL-Tabelle in der Microsoft ODBC-Treiber für Oracle, um Arrayparametern aus, die die richtigen Escapesequenzen enthält Prozeduren aufzurufen.  
   

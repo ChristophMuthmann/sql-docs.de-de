@@ -1,30 +1,31 @@
 ---
-title: "Von Katalogfunktionen zurückgegebenen Daten | Microsoft Docs"
-ms.custom: 
+title: Von Katalogfunktionen zurückgegebenen Daten | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - catalog functions [ODBC], result sets
 - functions [ODBC], catalog functions
 ms.assetid: 399e1a64-8766-4c44-81ff-445399b7a1de
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b05067010701d1751056cb99089708b5cbeb67f9
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 0445730e40f1747b4f8e08ebc9ab52ae97308eb7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="data-returned-by-catalog-functions"></a>Daten, die von Katalogfunktionen zurückgegeben werden.
 Jeder Katalogfunktion gibt die Daten als Resultset zurück. Dieses Resultset unterscheidet sich nicht von anderen Resultsets. Er wird in der Regel generiert durch eine vordefinierte parametrisiert **wählen** -Anweisung, die im Treiber fest programmiert oder in einer Prozedur in der Datenquelle gespeichert ist. Informationen zum Abrufen von Daten aus einem Resultset, finden Sie unter [Ergebnis festgelegt erstellt wurde?](../../../odbc/reference/develop-app/was-a-result-set-created.md).  

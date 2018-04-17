@@ -1,15 +1,16 @@
 ---
 title: C-Datentypen | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/12/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - data types [ODBC], C data types
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - C data types [ODBC]
 - C buffers [ODBC]
 ms.assetid: b681d260-3dbb-47df-a616-4910d727add7
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 31de2fc95be1a7ead0b61b2dde493caf8d484fe4
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: a092b4354da4869b56143d090c3ed114567e58eb
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="c-data-types"></a>C-Datentypen
 ODBC C-Datentypen angeben, den Datentyp der C-Puffer zum Speichern von Daten in der Anwendung verwendet wird.  
@@ -39,22 +40,22 @@ ODBC C-Datentypen angeben, den Datentyp der C-Puffer zum Speichern von Daten in 
   
 |C-Typ-ID|ODBC C-Typdefinition|C-Typ|  
 |-----------------------|--------------------|------------|  
-|SQL_C_CHAR|SQLCHAR *|unsigned Char *|  
-|SQL_C_WCHAR|SQLWCHAR *|Wchar_t *|  
+|SQL_C_CHAR|SQLCHAR *|unsigned char *|  
+|SQL_C_WCHAR|SQLWCHAR *|wchar_t *|  
 |SQL_C_SSHORT [j]|SQLSMALLINT|short int|  
 |SQL_C_USHORT [j]|SQLUSMALLINT|short Int ohne Vorzeichen|  
 |SQL_C_SLONG [j]|SQLINTEGER|Long int|  
 |SQL_C_ULONG [j]|SQLUINTEGER|unsigned long int|  
-|SQL_C_FLOAT|SQLREAL|FLOAT|  
+|SQL_C_FLOAT|SQLREAL|float|  
 |SQL_C_DOUBLE|SQLDOUBLE SQLFLOAT|double|  
 |SQL_C_BIT|SQLCHAR|ohne Vorzeichen|  
 |SQL_C_STINYINT [j]|SQLSCHAR|Char mit Vorzeichen|  
 |Der SQL_C_UTINYINT [j]|SQLCHAR|ohne Vorzeichen|  
 |SQL_C_SBIGINT|SQLBIGINT|_int64 [h]|  
 |SQL_C_UBIGINT|SQLUBIGINT|ohne Vorzeichen _int64 [h]|  
-|SQL_C_BINARY|SQLCHAR *|unsigned Char *|  
+|SQL_C_BINARY|SQLCHAR *|unsigned char *|  
 |SQL_C_BOOKMARK [i]|LESEZEICHEN|unsigned long Int [d]|  
-|SQL_C_VARBOOKMARK|SQLCHAR *|unsigned Char *|  
+|SQL_C_VARBOOKMARK|SQLCHAR *|unsigned char *|  
 |Alle C-Intervall-Datentypen|SQL_INTERVAL_STRUCT|Finden Sie unter der [C-Intervall-Struktur](../../../odbc/reference/appendixes/c-interval-structure.md) weiter unten in diesem Anhang.|  
   
  **C-Typbezeichner** SQL_C_TYPE_DATE [c]  
@@ -139,7 +140,7 @@ struct tagSQLGUID {
   
  [c] ' ist in ODBC 2. *x*, die C-Date, Time und Timestamp-Datentypen sind SQL_C_DATE, SQL_C_TIME und SQL_C_TIMESTAMP.  
   
- [d] ODBC 3.*.x* Anwendungen SQL_C_VARBOOKMARK nicht SQL_C_BOOKMARK sollte verwendet werden. Wenn eine ODBC 3.*.x* Anwendung arbeitet mit einer ODBC 2.. *X* -Treiber verwenden, die ODBC 3.*.x* Treibermanager SQL_C_BOOKMARK SQL_C_VARBOOKMARK ordnen.  
+ [d] ODBC 3.*.x* Anwendungen SQL_C_VARBOOKMARK nicht SQL_C_BOOKMARK sollte verwendet werden. Wenn eine ODBC 3.*.x* Anwendung arbeitet mit einer ODBC 2. *X* -Treiber verwenden, die ODBC 3.*.x* Treibermanager SQL_C_BOOKMARK SQL_C_VARBOOKMARK ordnen.  
   
  [e] ein Anzahl wird gespeichert, der *Val* -Feld der Struktur SQL_NUMERIC_STRUCT als skalierte eine ganze Zahl im little-endian-Modus (das am weitesten links stehende Byte wird das unwichtigste Byte). Beispielsweise ist die Anzahl 10,001 Basis-10, mit einer Skala von 4, auf eine ganze Zahl des 100010 skaliert. Da dies 186AA im Hexadezimalformat angegeben ist, wäre der Wert in SQL_NUMERIC_STRUCT "AA 86 01 00 00... 00", mit der Anzahl von Bytes, die durch die SQL_MAX_NUMERIC_LEN definierten **#define**.  
   

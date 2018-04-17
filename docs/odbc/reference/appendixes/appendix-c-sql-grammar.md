@@ -2,7 +2,7 @@
 title: 'Anhang C: SQL-Grammatik | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: 0ee36f09-59e7-4b94-88ca-7ebc0952a3be
 caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8748219f92d5423eaa2fcc597819c4056697fb3a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 930786258b532262eb6d00a2d2c3583e304b34b0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="appendix-c-sql-grammar"></a>Anhang C: SQL-Grammatik
 Dieser Anhang enthält die folgenden Themen.  

@@ -2,7 +2,7 @@
 title: SQLGetCursorName-Funktion | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: e6e92199-7bb6-447c-8987-049a4c6ce05d
 caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 69a0da5196c5724284c2da75dc6c7deb3c3cedcd
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 28220550d868976aded368a88bdc8268cfad490c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlgetcursorname-function"></a>SQLGetCursorName-Funktion
 **Konformität**  
@@ -55,7 +55,7 @@ SQLRETURN SQLGetCursorName(
  *StatementHandle*  
  [Eingabe] Anweisungshandle.  
   
- *CursorName*  
+ *cursorName*  
  [Ausgabe] Zeiger auf einen Puffer, in dem der Name des Cursors zurückgegeben.  
   
  Wenn *CursorName* NULL ist, *NameLengthPtr* gibt weiterhin zurück, die Gesamtzahl der Zeichen (mit Ausnahme der Null-Terminierung Zeichen für Zeichendaten) verfügbaren zurückzugebenden im Puffer verweist *CursorName*.  

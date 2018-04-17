@@ -1,15 +1,16 @@
 ---
 title: Konvertieren von Daten von SQL-in C-Datentypen | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - data conversions from SQL to C types [ODBC]
@@ -22,23 +23,23 @@ helpviewer_keywords:
 - converting data from SQL to c types [ODBC], about converting
 - C data types [ODBC], converting from SQL types
 ms.assetid: 029727f6-d3f0-499a-911c-bcaf9714e43b
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b2133c6b155b163b971f7049cdd8238f091669dc
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: fe89608061d82cf54a16394e5ce1a8f901e23523
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="converting-data-from-sql-to-c-data-types"></a>Konvertieren von Daten von SQL-in C-Datentypen
 Wenn eine Anwendung ruft **SQLFetch**, **SQLFetchScroll**, oder **SQLGetData**, ruft der Treiber die Daten aus der Datenquelle. Wenn erforderlich, in dem der Treiber es an der angegebenen Datentyp abgerufen, die Daten vom Datentyp konvertiert die *TargetType* Argument in **SQLBindCol** oder **SQLGetData.** Schließlich speichert die Daten in den Speicherort, auf die *TargetValuePtr* Argument in **SQLBindCol** oder **SQLGetData** (und das SQL_DESC_DATA_PTR-Feld der ARD).  
   
  Die folgende Tabelle zeigt die unterstützten Konvertierungen von ODBC-SQL-Datentypen in ODBC C-Datentypen. Ein ausgefüllte Kreis gibt an, die Standard-Konvertierung für einen SQL-Datentyp (die C-Datentyp, der die Daten werden, wenn konvertiert werden, der Wert der *TargetType* SQL_C_DEFAULT ist). Ein Kreis gibt eine unterstützte Konvertierung an.  
   
- Für eine ODBC 3.*.x* Anwendung arbeiten mit einer ODBC 2.. *X* Treiber, Konvertierung von treiberspezifischen Daten Typen wird möglicherweise nicht unterstützt.  
+ Für eine ODBC 3.*.x* Anwendung arbeiten mit einer ODBC 2. *X* Treiber, Konvertierung von treiberspezifischen Daten Typen wird möglicherweise nicht unterstützt.  
   
  Das Format der konvertierten Daten wird durch die Einstellung der Windows® Land nicht beeinflusst.  
   

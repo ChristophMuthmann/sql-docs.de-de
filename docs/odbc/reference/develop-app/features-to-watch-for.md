@@ -2,7 +2,7 @@
 title: Funktionen zur Überwachung für | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: 0fb1693b-11c3-43b1-bb16-c3323b7b2d45
 caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0a2e4c0e37d62eccccf1e0af0f2acc28ed09e8b6
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 714aaf94c126b99aaea51cf7e3eef8201a4386da
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="features-to-watch-for"></a>Funktionen, die Überwachung für
 Dieser Abschnitt beschreibt eine Reihe von Funktionen, die Anwendungsentwicklern häufig dauern, bis gewährt. Diese Funktionen in der Tat variieren stark Support-und Art der Unterstützung von DBMS; Fehler beim Code dafür ist wahrscheinlich Probleme verursachen, im interoperablen Anwendungen ausführen können.  

@@ -4,12 +4,12 @@ description: Beschreibt, wie Partitionen in Analysis Services Tutorial-Projekt z
 ms.prod_service: analysis-services, azure-analysis-services
 services: analysis-services
 ms.suite: pro-bi
-documentationcenter: 
+documentationcenter: ''
 author: Minewiskan
 manager: kfile
-editor: 
-tags: 
-ms.assetid: 
+editor: ''
+tags: ''
+ms.assetid: ''
 ms.service: analysis-services
 ms.devlang: NA
 ms.topic: get-started-article
@@ -17,11 +17,12 @@ ms.tgt_pltfrm: NA
 ms.workload: na
 ms.date: 02/20/2018
 ms.author: owend
-ms.openlocfilehash: 417bcbe36a49c44bcb5c8297968e6595d1ed3d91
-ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
+monikerRange: '>= sql-analysis-services-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 9f393e0f7100236df428dcceacf55444048fddef
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-partitions"></a>Erstellen von Partitionen
 
@@ -49,11 +50,11 @@ Dieser Artikel ist Teil eines Lernprogramms zur tabellenmodellierung, das in Rei
 
 5.  Klicken Sie in der Vorschau auf den Pfeil nach unten in der **OrderDate** Spaltenüberschrift, und klicken Sie dann auf **Datum/Uhrzeit-Filter** > **zwischen**.
 
-    ![as-lesson10-query-editor](../tutorial-tabular-1400/media/as-lesson10-query-editor.png)
+    ![als-lesson10-Abfrage-editor](../tutorial-tabular-1400/media/as-lesson10-query-editor.png)
 
 6.  Klicken Sie im Dialogfeld Filterzeilen im **Reihen anzeigen: OrderDate**, lassen Sie **ist nach oder gleich**, und geben Sie dann in das Feld Date **1/1/2010**. Lassen Sie die **und** Operator ausgewählt ist, wählen Sie dann **ist, bevor Sie**, geben Sie dann in das Feld Date **1/1/2011**, und klicken Sie dann auf **OK**.
 
-    ![as-lesson10-filter-rows](../tutorial-tabular-1400/media/as-lesson10-filter-rows.png)
+    ![als-lesson10-Filter-Zeilen](../tutorial-tabular-1400/media/as-lesson10-filter-rows.png)
     
     Beachten Sie im Abfrage-Editor in ANGEWENDETE Schritte finden Sie einen weiteren Schritt mit dem Namen Zeilen gefiltert. Dieser Filter ist nur für die Bestelldaten 2010 aus.
 
@@ -114,7 +115,7 @@ Beachten Sie im Partitions-Manager die **letzten verarbeitet** Spalte für jede 
   
 4.  Aktivieren Sie das Kontrollkästchen in der Spalte **Verarbeiten** für jede der fünf von Ihnen erstellten Partitionen, und klicken Sie anschließend auf **OK**.  
 
-    ![as-lesson10-process-partitions](../tutorial-tabular-1400/media/as-lesson10-process-partitions.png)
+    ![als-lesson10-Prozess-Partitionen](../tutorial-tabular-1400/media/as-lesson10-process-partitions.png)
   
     Wenn Sie für Identitätswechsel-Anmeldeinformationen aufgefordert werden, geben Sie den Windows-Benutzernamen und Kennwort an, das Sie in Lektion 2 angegeben.  
   

@@ -1,27 +1,27 @@
 ---
-title: "Migrieren von PowerPivot für SharePoint 2013 | Microsoft Docs"
-ms.custom: 
+title: Migrieren von PowerPivot für SharePoint 2013 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f698ceb1-d53e-4717-a3a0-225b346760d0
-caps.latest.revision: 
+caps.latest.revision: 18
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 518715f0084ac44b72f40eaabe95e21c8022e77d
-ms.sourcegitcommit: c77a8ac1ab372927c09bf241d486e96881b61ac9
+ms.openlocfilehash: 6d14c449823f55d5c400c9f17ba73724d3ea43a3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="migrate-power-pivot-to-sharepoint-2013"></a>Migrieren von Power Pivot zu SharePoint 2013
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -38,32 +38,20 @@ ms.lasthandoff: 01/29/2018
 |Vorbereiten der SharePoint 2013-Farm|Sichern, Kopieren und Wiederherstellen von Datenbanken|Einbinden von Inhaltsdatenbanken|Migrieren von [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] -Zeitplänen|  
 ||[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]|-SharePoint-Zentraladministration<br /><br /> -Windows PowerShell|-SharePoint-Anwendungsseiten<br /><br /> -Windows PowerShell|  
   
- **In diesem Thema:**  
+##  <a name="bkmk_prepare_sharepoint2013"></a>Vorbereiten der SharePoint 2013-Farm  
   
--   [1) Vorbereiten der SharePoint 2013-Farm](#bkmk_prepare_sharepoint2013)  
-  
--   [2) Sichern, Kopieren und Wiederherstellen der Datenbanken](#bkmk_backup_restore)  
-  
--   [3) Vorbereiten von Webanwendungen und Einbinden von Inhaltsdatenbanken](#bkmk_prepare_mount_databases)  
-  
--   [4) Aktualisieren von PowerPivot-Zeitplänen](#bkmk_upgrade_powerpivot_schedules)  
-  
--   [Zusätzliche Ressourcen](#bkmk_additional_resources)  
-  
-##  <a name="bkmk_prepare_sharepoint2013"></a> 1) Vorbereiten der SharePoint 2013-Farm  
-  
-1.  > [!TIP]  
+  > [!TIP]  
     >  Überprüfen Sie die Authentifizierungsmethode, die in vorhandenen Webanwendungen konfiguriert wurde. SharePoint 2013-Webanwendungen verwenden standardmäßig die anspruchsbasierte Authentifizierung. Für den klassischen Authentifizierungsmodus konfigurierte SharePoint 2010-Webanwendungen erfordern zusätzliche Schritte, um Datenbanken von SharePoint 2010 zu SharePoint 2013 zu migrieren. Wenn die Webanwendungen für den klassischen Authentifizierungsmodus konfiguriert sind, lesen Sie die SharePoint 2013-Dokumentation.  
   
-2.  Installieren Sie eine neue SharePoint Server 2013-Farm.  
+1.  Installieren Sie eine neue SharePoint Server 2013-Farm.  
   
-3.  Installieren Sie eine Instanz eines [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] -Servers im SharePoint-Modus. Weitere Informationen finden Sie unter [Install Analysis Services in Power Pivot Mode](../../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md).  
+2.  Installieren Sie eine Instanz eines [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] -Servers im SharePoint-Modus. Weitere Informationen finden Sie unter [Install Analysis Services in Power Pivot Mode](../../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md).  
   
-4.  Führen Sie das [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] 2013-Installationspaket **spPowerPivot.msi** auf jedem Server in der SharePoint-Farm aus. Weitere Informationen finden Sie unter [Installieren oder Deinstallieren des PowerPivot für SharePoint-Add-In &#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)zu deinstallieren.  
+3.  Führen Sie das [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] 2013-Installationspaket **spPowerPivot.msi** auf jedem Server in der SharePoint-Farm aus. Weitere Informationen finden Sie unter [Installieren oder Deinstallieren des PowerPivot für SharePoint-Add-In &#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)zu deinstallieren.  
   
-5.  Konfigurieren Sie in der SharePoint 2013-Zentraladministration die Excel Services-Dienstanwendung in der Weise, dass sie den im vorangehenden Schritt erstellten [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]-Server im SharePoint-Modus verwendet. Weitere Informationen finden Sie im Abschnitt "Konfigurieren einer grundlegenden Analysis Services-SharePoint-Integration" in [Install Analysis Services in Power Pivot Mode](../../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md).  
+4.  Konfigurieren Sie in der SharePoint 2013-Zentraladministration die Excel Services-Dienstanwendung in der Weise, dass sie den im vorangehenden Schritt erstellten [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]-Server im SharePoint-Modus verwendet. Weitere Informationen finden Sie im Abschnitt "Konfigurieren einer grundlegenden Analysis Services-SharePoint-Integration" in [Install Analysis Services in Power Pivot Mode](../../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md).  
   
-##  <a name="bkmk_backup_restore"></a> 2) Sichern, Kopieren und Wiederherstellen der Datenbanken  
+##  <a name="bkmk_backup_restore"></a>Sichern, kopieren und Wiederherstellen der Datenbanken  
  Der Prozess „SharePoint-Upgrade mit Anfügen der Datenbanken“ umfasst eine Abfolge von Schritten, mit denen [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] -bezogene Inhalts- und Dienstanwendungsdatenbanken auf der SharePoint 2013-Farm gesichert, kopiert und wiederhergestellt werden.  
   
 1.  **Schreibgeschützte Datenbank:** Klicken Sie in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]mit der rechten Maustaste auf den Datenbanknamen, und klicken Sie auf **Eigenschaften**. Legen Sie auf der Seite **Optionen** die Eigenschaft **Datenbank schreibgeschützt** auf **True**fest.  
@@ -76,8 +64,8 @@ ms.lasthandoff: 01/29/2018
   
 5.  **Datenbank mit Lese-/Schreibzugriff:** Legen Sie **Datenbank schreibgeschützt** auf **False**fest.  
   
-##  <a name="bkmk_prepare_mount_databases"></a> 3) Vorbereiten von Webanwendungen und Einbinden von Inhaltsdatenbanken  
- Eine ausführliche Erläuterung der folgenden Anleitungen finden Sie unter [Aktualisieren von Datenbanken von SharePoint 2010 auf SharePoint 2013](http://go.microsoft.com/fwlink/p/?LinkId=256690) (http://go.microsoft.com/fwlink/p/?LinkId=256690).  
+##  <a name="bkmk_prepare_mount_databases"></a>Vorbereiten von Webanwendungen und Einbinden von Inhaltsdatenbanken  
+ Eine ausführlichere Erläuterung der folgenden Verfahren werden soll, finden Sie unter [Aktualisieren von Datenbanken von SharePoint 2010 auf SharePoint 2013](http://go.microsoft.com/fwlink/p/?LinkId=256690) (http://go.microsoft.com/fwlink/p/?LinkId=256690).  
   
 1.  **Datenbank offline schalten:**  
   
@@ -101,7 +89,7 @@ ms.lasthandoff: 01/29/2018
     Mount-SPContentDatabase "SharePoint_Content_O14-KJSP1" -DatabaseServer "[server name]\powerpivot" -WebApplication [web application URL]  
     ```  
   
-     Weitere Informationen finden Sie unter [Anfügen oder Trennen von Inhaltsdatenbanken (SharePoint Server 2010)](http://technet.microsoft.com/library/ff628582.aspx) (http://technet.microsoft.com/library/ff628582.aspx).  
+     Weitere Informationen finden Sie unter [anfügen oder Trennen von Inhaltsdatenbanken (SharePoint Server 2010)](http://technet.microsoft.com/library/ff628582.aspx) (http://technet.microsoft.com/library/ff628582.aspx).  
   
      **Status nach Ausführung des Schritts:**  Nachdem die Inhaltsdatenbanken eingebunden wurden, sehen Benutzer die Dateien, die in der alten Inhaltsdatenbank enthalten waren. Folglich können Benutzer die Arbeitsmappen in der Dokumentbibliothek anzeigen und öffnen.  
   
@@ -115,7 +103,7 @@ ms.lasthandoff: 01/29/2018
   
 2.  **Fehlende PowerPivot-Dateien:** Wenn Fehler bezüglich fehlender [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] -DLLs angezeigt werden, wurde entweder **spPowerPivot.msi** nicht installiert, oder zur Konfiguration von [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] wurde nicht das [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]-Konfigurationstool verwendet.  
   
-##  <a name="bkmk_upgrade_powerpivot_schedules"></a> 4) Aktualisieren von PowerPivot-Zeitplänen  
+##  <a name="bkmk_upgrade_powerpivot_schedules"></a>Aktualisieren von PowerPivot-Zeitplänen  
  In diesem Abschnitt werden die Details und Optionen zum Migrieren von [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] -Zeitplänen beschrieben. Die Migration von Zeitplänen erfolgt in zwei Schritten. Konfigurieren Sie zuerst die [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] -Dienstanwendung für die Verwendung der migrierten Dienstanwendungsdatenbank. Als Nächstes wählen Sie eine der beiden Optionen zur Migration von Zeitplänen aus.  
   
  **Konfigurieren Sie die Dienstanwendung für die Verwendung der migrierten Dienstanwendungsdatenbank.**  
@@ -176,7 +164,7 @@ ms.lasthandoff: 01/29/2018
   
 -   [Aktualisieren von Arbeitsmappen und planmäßige Datenaktualisierungen &#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md).  
   
--   [Übersicht über den Upgradeprozess für SharePoint 2013](http://go.microsoft.com/fwlink/p/?LinkId=256688) (http://go.microsoft.com/fwlink/p/?LinkId=256688).  
+-   [Übersicht über den Upgradeprozess für SharePoint 2013](http://go.microsoft.com/fwlink/p/?LinkId=256688) (http://go.microsoft.com/fwlink/p/?LinkId=256688).  
   
 -   [Vorbereitende Bereinigung vor einem Upgrade auf SharePoint 2013](http://go.microsoft.com/fwlink/p/?LinkId=256689) (http://go.microsoft.com/fwlink/p/?LinkId=256689).  
   

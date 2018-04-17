@@ -2,7 +2,7 @@
 title: GENAUE SET-Befehls | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: 9533d3e0-e7c1-49de-a3a3-0cc4373a91cb
 caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dcb836649993ddb644006986f284f0c0a362ed81
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 12ef2fa98b5e8c451b7c9d047ed33ebea50c5f9e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="set-exact-command"></a>GENAUE SET-Befehl
 Legt die Regeln zum Vergleichen von zwei Zeichenfolgen unterschiedlicher Länge verfährt.  

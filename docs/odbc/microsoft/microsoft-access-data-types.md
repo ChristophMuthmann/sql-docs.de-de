@@ -1,15 +1,16 @@
 ---
 title: Microsoft Access-Datentypen | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - ODBC desktop database drivers [ODBC], Access driver
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - access data types [ODBC]
 - data types [ODBC], Access driver
 ms.assetid: b537348a-bea0-4bd6-84a4-52a75292957f
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: bee1801eb581272762b2f80d25eeb64d0220a256
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 8faac619846998c1be7bc0577761b94bf6dc27ba
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="microsoft-access-data-types"></a>Microsoft Access-Datentypen
 Die folgende Tabelle zeigt die Microsoft Access-Datentypen, die Datentypen, die zum Erstellen von Tabellen verwendet und die ODBC-SQL-Datentypen.  
@@ -71,7 +72,7 @@ ARBINARY|VARBINARY|SQL_VARBINARY|
 |BINARY, VARBINARY und VARCHAR|Erstellen einer BINARY, VARBINARY und VARCHAR-Spalte 0 (null) oder nicht angegebene Länge gibt tatsächlich eine 510-Byte-Spalte.|  
 |BYTE|Obwohl ein Feld für die Microsoft Access Zahl mit einem BYTE gleich Feldgröße nicht signiert ist, kann eine negative Zahl in das Feld eingefügt werden, wenn der Microsoft Access-Treiber verwendet.|  
 |LONGVARCHAR, CHAR und VARCHAR|Ein Zeichenfolgenliteral kann jedes ANSI-Zeichen (1-255 dezimal) enthalten. Verwenden Sie zwei aufeinander folgende einfache Anführungszeichen ("), um ein einfaches Anführungszeichen (') darzustellen.<br /><br /> Verfahren sollte verwendet werden, um Zeichendaten zu übergeben, bei Verwendung von Sonderzeichen in einem Zeichen-Datentypspalte.|  
-|DATE|Datumswerte müssen werden gemäß der kanonischen ODBC-Datumsformat getrennt oder durch das Trennzeichen "DateTime" ("#") als Trennzeichen. Andernfalls wird Microsoft Access als einem arithmetischen Ausdruck den Wert behandelt und löst keine Warnung oder einen Fehler.<br /><br /> Z. B. das Datum "5. März 1996" muss, als dargestellt werden {d ' 1996-03-05 "} oder #03/05/&#1996; andernfalls, wenn nur 03/05/1993 gesendet wird, wird Microsoft Access dies als 3 geteilt durch 5 geteilt durch 1996 ausgewertet. Dieser Wert aufgerundet wird auf die ganze Zahl 0, und da 0 (null) Tag 1899-12-31 zugeordnet wird, ist dies das Datum verwendet.<br /><br /> Einen senkrechten Strich (&#124;) kann nicht in einen Date-Wert verwendet werden, auch wenn es wieder in Anführungszeichen eingeschlossen.|  
+|DATE|Datumswerte müssen werden gemäß der kanonischen ODBC-Datumsformat getrennt oder durch das Trennzeichen "DateTime" ("#") als Trennzeichen. Andernfalls wird Microsoft Access als einem arithmetischen Ausdruck den Wert behandelt und löst keine Warnung oder einen Fehler.<br /><br /> Z. B. das Datum "5. März 1996" muss, als dargestellt werden {d ' 1996-03-05 "} oder #03/05/1996 #; andernfalls, wenn nur 03/05/1993 gesendet wird, wird Microsoft Access dies als 3 geteilt durch 5 geteilt durch 1996 ausgewertet. Dieser Wert aufgerundet wird auf die ganze Zahl 0, und da 0 (null) Tag 1899-12-31 zugeordnet wird, ist dies das Datum verwendet.<br /><br /> Einen senkrechten Strich (&#124;) kann nicht in einen Date-Wert verwendet werden, auch wenn es wieder in Anführungszeichen eingeschlossen.|  
 |GUID|Beschränkt auf Microsoft Access 4.0 Datentyp.|  
 |NUMERIC|Beschränkt auf Microsoft Access 4.0 Datentyp.|  
   

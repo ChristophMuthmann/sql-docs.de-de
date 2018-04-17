@@ -1,15 +1,16 @@
 ---
-title: "Relative und Absolute Durchführen eines Bildlaufs | Microsoft Docs"
-ms.custom: 
+title: Relative und Absolute Durchführen eines Bildlaufs | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - absolute scrolling [ODBC]
@@ -17,19 +18,19 @@ helpviewer_keywords:
 - scrollable cursors [ODBC]
 - cursors [ODBC], scrollable
 ms.assetid: 3d0ff48d-fef5-4c01-bb1d-a583e6269b66
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c7ade62e1c7760b7542b1e4dd82668c11f2947c8
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 41155a5536493ba77941855e0283011ccda7d1a2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="relative-and-absolute-scrolling"></a>Relative und Absolute Durchführen eines Bildlaufs
-Durchführen eines Bildlaufs Optionen in den meisten **SQLFetchScroll** positionieren Sie den Cursor relativ zur aktuellen Position oder eine absolute Position. **SQLFetchScroll** unterstützt das Abrufen des nächsten, vorherigen, ersten und letzten Rowsets als auch als relativen abrufen (das Rowset abrufen,  *n*  Zeilen vom Anfang des aktuellen Rowsets) und absoluten abrufen (Fetch die Rowset ab Zeile  *n* ). Wenn  *n*  ist in einem absoluten Abruf negativ ist, werden Zeilen aus dem Ende des Resultsets gezählt. Folglich bedeutet, dass ein absoluter Abruf von Zeile – 1, das Rowset abzurufen, das mit der letzten Zeile im Resultset beginnt.  
+Durchführen eines Bildlaufs Optionen in den meisten **SQLFetchScroll** positionieren Sie den Cursor relativ zur aktuellen Position oder eine absolute Position. **SQLFetchScroll** unterstützt das Abrufen des nächsten, vorherigen, ersten und letzten Rowsets als auch als relativer abrufen (das Rowset abrufen, *n* Zeilen vom Anfang des aktuellen Rowsets) und absoluten abrufen (Fetch das Rowset starten in Zeile *n*). Wenn *n* ist in einem absoluten Abruf negativ ist, werden Zeilen aus dem Ende des Resultsets gezählt. Folglich bedeutet, dass ein absoluter Abruf von Zeile – 1, das Rowset abzurufen, das mit der letzten Zeile im Resultset beginnt.  
   
  Dynamische Cursor erkennen Zeilen eingefügt und aus dem Resultset gelöscht werden, damit es keine einfache Möglichkeit für dynamische Cursor die Zeile an eine bestimmte Anzahl als das Lesen vom Beginn des Resultsets, abrufen, die Wahrscheinlichkeit gibt zu langsam ausgeführt wird. Darüber hinaus ist absoluten abrufen nicht sehr sinnvoll bei dynamischen Cursorn da Zeilennummern ändern, wie Zeilen eingefügt und gelöscht werden; aus diesem Grund kann die gleiche Anzahl von Zeilen nacheinander abrufen unterschiedliche Zeilen ergeben.  
   

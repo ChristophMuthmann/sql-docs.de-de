@@ -1,25 +1,17 @@
 ---
-title: Operationalisieren von R-Code (Machine Learning-Dienste) | Microsoft Docs
-ms.custom:
-- SQL2016_New_Updated
-ms.date: 07/26/2016
-ms.reviewer: ''
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.author: heidist
+title: Operationalisieren von R-Code in SQL Server-Machine Learning-Services | Microsoft Docs
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
 author: HeidiSteen
+ms.author: heidist
 manager: cgronlun
-ms.workload: Inactive
-ms.openlocfilehash: 460605c8cd9040cbf9586ab91227c5e09ec526cf
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: f5fa7806ad70c37c7d51c5ae2cc9606191560e58
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="operationalize-r-code-machine-learning-services"></a>Operationalisieren von R-Code (Machine Learning-Services)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -30,7 +22,7 @@ Dieser Artikel beschreibt die wichtigsten Punkte für die Datenbankentwickler be
 
 ## <a name="get-started-with-r-code-in-sql-server"></a>Erste Schritte mit R-Code in SQL Server
 
-Bisher hat die Integration von Machine Learning-Lösungen bedeutet eine umfangreiche kann zur Unterstützung von Leistung und Integration. Allerdings-Prozeduren Verschieben von R und Python-Code in einer produktionsumgebung ist viel einfacher, im Microsoft Machine Learning-Services, da der Code in SQL Server ausgeführt werden kann und mithilfe von aufgerufen. Sie können weiterhin Zugriff auf vertraute Tools zu verwenden und müssen keine R-Entwicklungsumgebung installieren. 
+Bisher hat die Integration von Machine Learning-Lösungen bedeutet eine umfangreiche kann zur Unterstützung von Leistung und Integration. Allerdings-Prozeduren Verschieben von R und Python-Code in einer produktionsumgebung ist viel einfacher, in SQL Server Machine Learning-Services, da der Code in SQL Server ausgeführt werden kann und mithilfe von aufgerufen. Sie können weiterhin Zugriff auf vertraute Tools zu verwenden und müssen keine R-Entwicklungsumgebung installieren. 
 
 Weitere Informationen zur grundlegenden Syntax finden Sie unter:
 

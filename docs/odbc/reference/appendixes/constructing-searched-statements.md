@@ -1,15 +1,16 @@
 ---
 title: Erstellen von Anweisungen durchsucht | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - searched statements [ODBC]
@@ -20,16 +21,16 @@ helpviewer_keywords:
 - cursor library [ODBC], searched statements
 - SQL statements [ODBC], searched statements
 ms.assetid: e429254c-c43f-4fbf-98b2-5f1ed53501ff
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 713f020261d4d2365061247603de72fa31787696
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f75e27da3b912e59b55cd6e53ec3b6af0412b866
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="constructing-searched-statements"></a>Erstellen von komplexen Anweisungen
 > [!IMPORTANT]  

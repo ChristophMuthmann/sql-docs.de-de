@@ -1,31 +1,32 @@
 ---
 title: Zeilenweise Bindung | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - row-wise binding [ODBC]
 - result sets [ODBC], binding columns
 - binding columns [ODBC]
 ms.assetid: 4f622cf4-0603-47a1-a48b-944c4ef46364
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4dd3d59875f649c7b797d39fa31ac744457d68ef
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: bf2df3b6aa74ad9e959bdebc2ffcefe32c2a3047
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="row-wise-binding"></a>Zeilenweise Bindung
 Verwenden die zeilenweise Bindung, eine Anwendung definiert eine Struktur, enthält nur ein oder zwei, oder in einigen Fällen mit drei Elemente für jede Spalte, die für die Daten zurückgegeben werden. Das erste Element enthält den Datenwert und das zweite Element enthält die Längen-/Indikatorpuffers. Indikatoren und Längenwerte können in separaten Puffer gespeichert werden, durch die deskriptorfelder SQL_DESC_INDICATOR_PTR und SQL_DESC_OCTET_LENGTH_PTR auf unterschiedliche Werte festlegen; Wenn dies erfolgt, enthält die Struktur ein drittes Element. Klicken Sie dann die Anwendung weist ein Array dieser Strukturen enthält, die so viele Elemente als Zeilen im Rowset vorhanden sind.  
@@ -38,7 +39,7 @@ Address = Bound Address + ((Row Number - 1) * Structure Size)
   
  Zeilen werden, in denen auf die Größe des Rowsets von 1 nummeriert. (Eine wird von die Nummer der Zeile subtrahiert, da Array-Indizierung in C nullbasiert ist.) Die folgende Abbildung zeigt die Funktionsweise der zeilenbezogenen Bindung. Im Allgemeinen werden nur Spalten, die gebunden werden in der Struktur enthalten. Die Struktur kann Felder enthalten, die unabhängig vom stagingstatus sind, um Spalten zu erhalten. Die Spalten in der Struktur in beliebiger Reihenfolge platziert werden können, jedoch in sequenzieller Reihenfolge aus Gründen der Übersichtlichkeit angezeigt.  
   
- ![Zeigt Zeile &#45; hintergrundprüfung Bindung](../../../odbc/reference/develop-app/media/pr22.gif "pr22")  
+ ![Zeigt Zeile&#45;hintergrundprüfung Bindung](../../../odbc/reference/develop-app/media/pr22.gif "pr22")  
   
  Im folgenden Code erstellt z. B. eine Struktur mit Elementen in dem Daten für die Spalten OrderID, Verkäufer und den Status und Länge/Indikatoren für die Spalten Verkäufer und Status zurückgegeben. Belegt 10 dieser Strukturen und bindet sie an die Spalten OrderID, Vertriebsmitarbeiter und Status.  
   

@@ -1,15 +1,16 @@
 ---
 title: Durch Aufrufen von SQLSetPos | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - compatibility [ODBC], SQLSetPos
@@ -18,19 +19,19 @@ helpviewer_keywords:
 - backward compatibility [ODBC], SqlSetPos
 - application upgrades [ODBC], SQLSetPos
 ms.assetid: 846354b8-966c-4c2c-b32f-b0c8e649cedd
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 70351e468a6038a26b7b647d6bc7c64d3263f3d6
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: eac0128a7919f58acc58bce793f9f765fb0d1e07
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="calling-sqlsetpos"></a>SQLSetPos aufrufen
-In ODBC 2. *x*, der Zeiger auf die zeilenstatusarray wurde ein Argument an **SQLExtendedFetch**. Die zeilenstatusarray wurde durch einen Aufruf von später aktualisiert **SQLSetPos**. Einige Treiber wurden basieren auf der Tatsache, dass die dieses Array nicht zwischen ändert **SQLExtendedFetch** und **SQLSetPos**. In ODBC 3. *x*der Zeiger auf das Statusarray einem Beschreibungsfeld und ist daher die Anwendung kann problemlos ändern sie auf ein anderes Array zu verweisen. Dies kann ein Problem bei der Verwendung einer ODBC-3 sein. *x* Anwendung arbeitet mit einer ODBC 2.. *X* Treiber jedoch ist das Aufrufen **SQLSetStmtAttr** der Zeiger für den arraystatus festgelegt und ist der Aufruf von **SQLFetchScroll** zum Abrufen von Daten. Ordnet der Treiber-Manager als Sequenz von Aufrufen an diesen **SQLExtendedFetch**. Im folgenden Code ein Fehler würde normalerweise ausgelöst, wenn der Treiber-Manager die zweite ordnet **SQLSetStmtAttr** rufen Sie bei der Arbeit mit einer ODBC 2.*.x* Treiber:  
+In ODBC 2. *x*, der Zeiger auf die zeilenstatusarray wurde ein Argument an **SQLExtendedFetch**. Die zeilenstatusarray wurde durch einen Aufruf von später aktualisiert **SQLSetPos**. Einige Treiber wurden basieren auf der Tatsache, dass die dieses Array nicht zwischen ändert **SQLExtendedFetch** und **SQLSetPos**. In ODBC 3. *x*der Zeiger auf das Statusarray einem Beschreibungsfeld und ist daher die Anwendung kann problemlos ändern sie auf ein anderes Array zu verweisen. Dies kann ein Problem bei der Verwendung einer ODBC-3 sein. *x* Anwendung arbeitet mit einer ODBC 2. *X* Treiber jedoch ist das Aufrufen **SQLSetStmtAttr** der Zeiger für den arraystatus festgelegt und ist der Aufruf von **SQLFetchScroll** zum Abrufen von Daten. Ordnet der Treiber-Manager als Sequenz von Aufrufen an diesen **SQLExtendedFetch**. Im folgenden Code ein Fehler würde normalerweise ausgelöst, wenn der Treiber-Manager die zweite ordnet **SQLSetStmtAttr** rufen Sie bei der Arbeit mit einer ODBC 2.*.x* Treiber:  
   
 ```  
 SQLSetStmtAttr(hstmt, SQL_ATTR_ROW_STATUS_PTR, rgfRowStatus, 0);  

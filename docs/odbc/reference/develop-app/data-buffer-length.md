@@ -1,15 +1,16 @@
 ---
-title: "Daten zu Puffern Länge | Microsoft Docs"
-ms.custom: 
+title: Daten zu Puffern Länge | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - data buffers [ODBC], length
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - length of data buffers [ODBC]
 - buffers [ODBC], length
 ms.assetid: 7288d143-f9e5-4f90-9b31-2549df79c109
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1b9a95fac384f0df435bd28df9d21f3fa357e6d2
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 1618c59df49bd16311b73c8df593dd12462a6425
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="data-buffer-length"></a>Datenlänge für Puffer
 Die Anwendung übergibt die Bytelänge des Datenpuffers des Treibers in ein Argument, das mit dem Namen *Pufferlänge* oder einem ähnlichen Namen. Z. B. im folgenden Aufruf **SQLBindCol**, die Anwendung gibt die Länge der *ValuePtr* Puffer (**"sizeof" (***ValuePtr***)**):  

@@ -1,27 +1,28 @@
 ---
-title: "Asynchrone Ausführung (Benachrichtigungsmethode) | Microsoft Docs"
-ms.custom: 
+title: Asynchrone Ausführung (Benachrichtigungsmethode) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e509dad9-5263-4a10-9a4e-03b84b66b6b3
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ea68f33ff231a9fb6f257e1cd681e25b3569721a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 070ef059855d4c95b4225676ab67eddcd9c16ad1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="asynchronous-execution-notification-method"></a>Asynchrone Ausführung (Benachrichtigungsmethode)
 ODBC ermöglicht die asynchrone Ausführung der Verbindung und Anweisung Vorgänge. Ein Thread der Anwendung kann eine ODBC-Funktion aufrufen, im asynchronen Modus, und die Funktion zurückgeben kann, bevor der Vorgang abgeschlossen ist, wird der Thread der Anwendung zum Durchführen anderer Aufgaben ermöglichen ist. In Windows 7-SDK für asynchrone-Anweisung oder Verbindungsvorgängen sendet bestimmt eine Anwendung an, dass der asynchrone Vorgang abgeschlossen ist, verwenden der Abrufmethode war. Weitere Informationen finden Sie unter [asynchrone Ausführung (Methode abrufen)](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md). Ab Windows 8-SDK, können Sie feststellen, dass ein asynchroner Vorgang abgeschlossen ist, verwenden die Benachrichtigungsmethode ist.  
@@ -332,7 +333,7 @@ if (SQL_ASYNC_NOTIFICATION_CAPABLE == InfoValue)
   
  Verbindungsattribute SQL_ATTR_ASYNC_DBC_FUNCTION_ENABLE und SQL_ATTR_ASYNC_DBC_EVENT bestimmen, ob ODBC im asynchronen Modus ausgeführt wird, und gibt an, ob ODBC Benachrichtigungsmodus für ein Verbindungshandle ermöglicht. Anweisungsattribute SQL_ATTR_ASYNC_ENABLE und SQL_ATTR_ASYNC_STMT_EVENT bestimmen, ob ODBC im asynchronen Modus ausgeführt wird, und gibt an, ob ODBC Benachrichtigungsmodus für ein Anweisungshandle ermöglicht.  
   
-|SQL_ATTR_ASYNC_ENABLE oder SQL_ATTR_ASYNC_DBC_FUNCTION_ENABLE|SQL_ATTR_ASYNC_STMT_EVENT oder SQL_ATTR_ASYNC_DBC_EVENT|Mode|  
+|SQL_ATTR_ASYNC_ENABLE oder SQL_ATTR_ASYNC_DBC_FUNCTION_ENABLE|SQL_ATTR_ASYNC_STMT_EVENT oder SQL_ATTR_ASYNC_DBC_EVENT|Modus|  
 |-------------------------------------------------------------------------|-------------------------------------------------------------------|----------|  
 |Aktivieren|ungleich null|Asynchrone Benachrichtigung|  
 |Aktivieren|NULL|Asynchronen Abruf|  

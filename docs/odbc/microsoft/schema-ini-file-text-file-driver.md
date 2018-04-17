@@ -1,30 +1,31 @@
 ---
 title: Datei "Schema.ini" (Text-Datei-Treiber) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - schema.ini file [ODBC]
 - text file driver [ODBC], schema.ini file
 ms.assetid: 0c4625c4-c730-4984-b430-9051b7bc0451
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0b71b742ff9c0833bd36deb256dda5169f2a51c7
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 602582886c1eb02e34bad9127e5ab1e55a22a86b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="schemaini-file-text-file-driver"></a>Datei "Schema.ini" (Text-Datei-Treiber)
 Wenn der Text-Treiber verwendet wird, wird das Format der Textdatei mit einer Schema-Informationsdatei bestimmt. Die Schemadatei für die Informationen ist immer mit dem Namen "Schema.ini" und im selben Verzeichnis wie die Textdatenquelle immer beibehalten. Die Schemadatei für die Informationen enthält die IISAM mit Informationen über das allgemeine Format der Datei, den Spaltennamen und Datentypinformationen und mehrere andere Datenmerkmale. Datei "Schema.ini" ist immer erforderlich, für den Zugriff auf Daten fester Länge. Sie sollten die Datei "Schema.ini" verwenden, wenn Ihre Texttabelle enthält, DateTime, Währung oder Dezimaldaten oder jedes Mal, wenn Sie mehr Kontrolle über die Behandlung der Daten in der Tabelle werden soll.  
@@ -85,14 +86,14 @@ ColNameHeader=True
 MaxScanRows=0  
 ```  
   
- Die nächste Eintrag kennzeichnet Felder in einer Tabelle mit der Nummer der Spalte (**Col***n*) Option, die für Zeichen getrennte Dateien optional und für Dateien mit fester Länge, die erforderlich ist. Das Beispiel zeigt die Schema.ini Einträge für zwei Felder, einem 10-stelligen "customernumber" besitzen Textfeld und eine 30 Zeichen CustomerName Textfeld:  
+ Die nächste Eintrag kennzeichnet Felder in einer Tabelle mit der Nummer der Spalte (**Col *** n*) Option, die für Zeichen getrennte Dateien optional und für Dateien mit fester Länge, die erforderlich ist. Das Beispiel zeigt die Schema.ini Einträge für zwei Felder, einem 10-stelligen "customernumber" besitzen Textfeld und eine 30 Zeichen CustomerName Textfeld:  
   
 ```  
 Col1=CustomerNumber Text Width 10  
 Col2=CustomerName Text Width 30  
 ```  
   
- Die Syntax der **Col**  *n*  ist:  
+ Die Syntax der **Col *** n* ist:  
   
 ```  
   
@@ -100,13 +101,13 @@ n=ColumnNametype [#]
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Die folgende Tabelle beschreibt die einzelnen Bestandteile der **Col**  *n*  Eintrag.  
+ Die folgende Tabelle beschreibt die einzelnen Bestandteile der **Col *** n* Eintrag.  
   
 |Parameter|Description|  
 |---------------|-----------------|  
-|*Spaltenname*|Der Textname der Spalte. Wenn der Spaltenname Leerzeichen enthält, müssen Sie ihn in doppelte Anführungszeichen setzen.|  
-|*type*|Datentypen sind wie folgt aus:<br /><br /> **Microsoft Jet-Datentypen**<br /><br /> bit<br /><br /> Byte<br /><br /> Short<br /><br /> Long<br /><br /> Währung<br /><br /> Single<br /><br /> Double<br /><br /> datetime<br /><br /> Textmodus<br /><br /> Memo<br /><br /> **ODBC-Datentypen** Char (identisch mit Text)<br /><br /> "Float" (identisch mit Double)<br /><br /> Ganze Zahl (identisch mit Short)<br /><br /> LongChar (identisch mit Memo)<br /><br /> Datum *Datumsformat*|  
-|**Width**|Der Wert des Literals `Width`. Gibt an, dass die folgende Anzahl legt die Breite der Spalte fest (optional für Zeichen getrennte Dateien; für Dateien mit fester Länge erforderlich).|  
+|*ColumnName*|Der Textname der Spalte. Wenn der Spaltenname Leerzeichen enthält, müssen Sie ihn in doppelte Anführungszeichen setzen.|  
+|*type*|Datentypen sind wie folgt aus:<br /><br /> **Microsoft Jet-Datentypen**<br /><br /> bit<br /><br /> Byte<br /><br /> Short<br /><br /> Long<br /><br /> Währung<br /><br /> Single<br /><br /> Double<br /><br /> datetime<br /><br /> Text<br /><br /> Memo<br /><br /> **ODBC-Datentypen** Char (identisch mit Text)<br /><br /> "Float" (identisch mit Double)<br /><br /> Ganze Zahl (identisch mit Short)<br /><br /> LongChar (identisch mit Memo)<br /><br /> Datum *Datumsformat*|  
+|**Breite**|Der Wert des Literals `Width`. Gibt an, dass die folgende Anzahl legt die Breite der Spalte fest (optional für Zeichen getrennte Dateien; für Dateien mit fester Länge erforderlich).|  
 |*#*|Der ganzzahlige Wert, der die Breite der Spalte bestimmt (erforderlich, wenn **Breite** angegeben ist).|  
   
 ## <a name="selecting-a-character-set"></a>Auswählen eines Zeichensatzes  

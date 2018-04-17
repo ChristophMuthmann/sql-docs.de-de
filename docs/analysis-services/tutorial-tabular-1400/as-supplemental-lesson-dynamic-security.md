@@ -1,15 +1,15 @@
 ---
-title: "Analysis Services Tutorial ergänzenden Lektion: dynamische Sicherheit | Microsoft Docs"
+title: 'Analysis Services Tutorial ergänzenden Lektion: dynamische Sicherheit | Microsoft Docs'
 description: Beschreibt, wie dynamischen Sicherheit zu verwenden, indem Sie mithilfe von Zeilenfiltern in Analysis Services-Lernprogramm.
 ms.prod_service: analysis-services, azure-analysis-services
 services: analysis-services
 ms.suite: pro-bi
-documentationcenter: 
+documentationcenter: ''
 author: Minewiskan
 manager: kfile
-editor: 
-tags: 
-ms.assetid: 
+editor: ''
+tags: ''
+ms.assetid: ''
 ms.service: analysis-services
 ms.devlang: NA
 ms.topic: get-started-article
@@ -17,11 +17,12 @@ ms.tgt_pltfrm: NA
 ms.workload: na
 ms.date: 02/20/2018
 ms.author: owend
-ms.openlocfilehash: 4f304535ab43563b64757ccfc812498df4467762
-ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
+monikerRange: '>= sql-analysis-services-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 268ead0e43a0223e66eeb85f803e86e70f4c237b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="supplemental-lesson---dynamic-security"></a>Ergänzende Lektion - dynamische Sicherheit
 

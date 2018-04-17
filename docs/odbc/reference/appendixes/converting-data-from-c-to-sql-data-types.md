@@ -1,15 +1,16 @@
 ---
 title: Konvertieren von Daten von C-in SQL-Datentypen | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - converting data from c to SQL types [ODBC], about converting
@@ -22,16 +23,16 @@ helpviewer_keywords:
 - data conversions from C to SQL types [ODBC]
 - C data types [ODBC], converting to SQL types
 ms.assetid: ee0afe78-b58f-4d34-ad9b-616bb23653bd
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bb1d1c07f1453886fd91159eabad97dc90b9b191
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: d87c393e9af2b3b24bd50b41287b9323a6e114cf
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="converting-data-from-c-to-sql-data-types"></a>Konvertieren von Daten von C-in SQL-Datentypen
 Wenn eine Anwendung ruft **SQLExecute** oder **SQLExecDirect**, ruft der Treiber die Daten für alle Parameter über gebunden **SQLBindParameter** aus Speicherorte in die Anwendung. Wenn eine Anwendung ruft **SQLSetPos**, der Treiber Ruft die Daten für ein Update oder das Hinzufügen von Spalten mit gebundenen **SQLBindCol**. Für Data-at-Execution-Parameter, die Anwendung sendet die Parameterdaten mit **SQLPutData**. Wenn erforderlich, der Treiber die Daten aus der angegebenen Datentyp konvertiert der *ValueType* Argument in **SQLBindParameter** an der angegebenen Datentyp die *ParameterType*Argument in **SQLBindParameter**, und klicken Sie dann die Daten an die Datenquelle sendet.  

@@ -1,27 +1,17 @@
 ---
 title: Erstellen ein Vorhersagemodells (R in SQL-Schnellstart) | Microsoft Docs
-ms.custom: ''
-ms.date: 07/26/2017
-ms.reviewer: ''
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: ''
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
 ms.topic: tutorial
-dev_langs:
-- R
-- SQL
-ms.author: heidist
 author: HeidiSteen
+ms.author: heidist
 manager: cgronlun
-ms.workload: On Demand
-ms.openlocfilehash: c01d03ff9911a88851b5dd560aaa44e85d4c89ff
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: 3a56ddd95f0282550662cc559ff5a393d0bd236b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-a-predictive-model-r-in-sql-quickstart"></a>Erstellen eines Vorhersagemodells (R in SQL-Schnellstart)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -139,7 +129,7 @@ EXEC sp_execute_external_script
 
 -- Save the generated model
 INSERT INTO [dbo].[stopping_distance_models] (model_name, model)
-VALUES (' latest model', @model)
+VALUES ('latest model', @model)
 ```
 
 **Ergebnisse**

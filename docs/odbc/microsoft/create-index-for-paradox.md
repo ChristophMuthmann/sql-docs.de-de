@@ -1,30 +1,31 @@
 ---
-title: "INDEXERSTELLUNG für Paradox | Microsoft Docs"
-ms.custom: 
+title: INDEXERSTELLUNG für Paradox | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - CREATE INDEX [ODBC]
 - Paradox driver [ODBC], create index
 ms.assetid: 6472bd69-b931-4bc2-a9bf-f1873ed4cdfe
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a64feb77cc0562635b5e432174c58503e459e8ba
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ef256444ea5fe613b92c6d504e9fb972325803ca
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-index-for-paradox"></a>INDEX für Paradox erstellen
 Die Syntax der CREATE INDEX-Anweisung für den Paradox ODBC-Treiber lautet:  
@@ -51,7 +52,7 @@ Die Syntax der CREATE INDEX-Anweisung für den Paradox ODBC-Treiber lautet:
   
 -   Die *Indexname* Argument für einen primären Index muss den Namen der Tabelle nach Bedarf Paradox identisch sein.  
   
- Wenn das Schlüsselwort **UNIQUE** wird weggelassen, wird der Paradox ODBC-Treiber einen nichteindeutiger Index erstellt. Dies umfasst zwei Paradox sekundären Indexdateien mit dem Namen *Tabellenname*. X *nn*  und *Tabellenname*. Y*nn*, wobei  *nn*  ist die Nummer der Spalte in der Tabelle. Nicht eindeutige Indizes gelten die folgenden Einschränkungen:  
+ Wenn das Schlüsselwort **UNIQUE** wird weggelassen, wird der Paradox ODBC-Treiber einen nichteindeutiger Index erstellt. Dies umfasst zwei Paradox sekundären Indexdateien mit dem Namen *Tabellenname*. X*Nn* und *Tabellenname*. Y*Nn*, wobei *Nn* ist die Nummer der Spalte in der Tabelle. Nicht eindeutige Indizes gelten die folgenden Einschränkungen:  
   
 -   Ein nichteindeutiger Index für eine Tabelle erstellt werden kann, muss ein primärer Index für diese Tabelle vorhanden sein.  
   

@@ -1,15 +1,15 @@
 ---
-title: "Analysis Services Tutorial ergänzenden Lektion: Detailzeilen | Microsoft Docs"
+title: 'Analysis Services Tutorial ergänzenden Lektion: Detailzeilen | Microsoft Docs'
 description: Beschreibt, wie ein Detail Zeilen Ausdruck in der Analysis Services-Lernprogramm zu erstellen.
 ms.prod_service: analysis-services, azure-analysis-services
 services: analysis-services
 ms.suite: pro-bi
-documentationcenter: 
+documentationcenter: ''
 author: Minewiskan
 manager: kfile
-editor: 
-tags: 
-ms.assetid: 
+editor: ''
+tags: ''
+ms.assetid: ''
 ms.service: analysis-services
 ms.devlang: NA
 ms.topic: get-started-article
@@ -17,11 +17,12 @@ ms.tgt_pltfrm: NA
 ms.workload: na
 ms.date: 02/20/2018
 ms.author: owend
-ms.openlocfilehash: 7efcdc724792656a917b95892ed699bc57590ce7
-ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
+monikerRange: '>= sql-analysis-services-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: bd138f17df94b94cbe51869b9e364bbd544509f2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="supplemental-lesson---detail-rows"></a>Ergänzende Lektion - Detailzeilen
 
@@ -59,7 +60,7 @@ Was ist die hier ist eine Tabelle mit Spalten und Zeilen mit Daten, die auf das 
 
 2. In **Eigenschaften** > **Detail Zeilen Ausdruck**, klicken Sie auf die Schaltfläche "Editor" der DAX-Editor zu öffnen.
 
-    ![as-lesson-detail-rows-ellipse](../tutorial-tabular-1400/media/as-lesson-detail-rows-ellipse.png)
+    ![als-Lektion-Detail-Zeilen-ellipse](../tutorial-tabular-1400/media/as-lesson-detail-rows-ellipse.png)
 
 3. Geben Sie in DAX-Editor den folgenden Ausdruck ein:
 
@@ -80,7 +81,7 @@ Was ist die hier ist eine Tabelle mit Spalten und Zeilen mit Daten, die auf das 
 
 4. Löschen Sie in Excel das Blatt, das in Schritt 3 erstellt, und doppelklicken Sie auf ein aggregierter Wert. Dieses Mal öffnet mit einer Detail Zeilen Expression-Eigenschaft für das Measure definiert, ein neues Arbeitsblatt, viel nützlicher Daten enthält.
 
-    ![as-lesson-detail-rows-detailsheet](../tutorial-tabular-1400/media/as-lesson-detail-rows-detailsheet.png)
+    ![als-Lektion-Detail-Zeilen-detailsheet](../tutorial-tabular-1400/media/as-lesson-detail-rows-detailsheet.png)
 
 5. Stellen Sie das Modell erneut bereit.
 

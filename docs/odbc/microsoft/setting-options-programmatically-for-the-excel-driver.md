@@ -1,15 +1,16 @@
 ---
-title: "Festlegen von Optionen für Excel-Treibers programmgesteuert | Microsoft Docs"
-ms.custom: 
+title: Festlegen von Optionen für Excel-Treibers programmgesteuert | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Jet-based ODBC drivers [ODBC], Excel driver
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - ODBC desktop database drivers [ODBC], Excel driver
 - Excel driver [ODBC], setting options programmatically
 ms.assetid: b5ee3636-4591-427a-a65a-a2d5926fcc1a
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bd7669339c99e756c9e03fa00cfd60aa2f53cc74
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 673209db52cf70ef8d88aa8417437a8118741ec8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="setting-options-programmatically-for-the-excel-driver"></a>Festlegen von Optionen für Excel-Treibers programmgesteuert
 |Option|Description|Methode|  

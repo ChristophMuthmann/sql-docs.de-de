@@ -1,15 +1,16 @@
 ---
-title: "Desktop-Treiber-Datenbankkompatibilität | Microsoft Docs"
-ms.custom: 
+title: Desktop-Treiber-Datenbankkompatibilität | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - compatibility [ODBC], Unicode
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - desktop database drivers [ODBC], Unicode
 - Jet-based ODBC drivers [ODBC], Unicode
 ms.assetid: dd695638-1a0b-4e27-8a6a-9510ebb5a5ee
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fcb8ad39a2ba24890394bb05cb30f1ddb5b63d2e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 557a7254e9cea7476ee3de706da86519f9ef1fec
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="desktop-database-driver-compatibility"></a>Kompatibilität von Desktop-Datenbank
 Unicode ist, dass eine Methode der Software zeichencodierung, die alle Zeichen behandelt, als mit einer festen Breite von zwei Bytes. Diese Methode dient als Alternative zur Windows-ANSI-zeichencodierung, d. h., da es Zeichen in ein Byte repräsentiert auf 256 Zeichen beschränkt. Da Unicode über 65.000 Zeichen darstellen kann, verfügt es viele Sprachen, deren Zeichen werden nicht dargestellt, in ANSI-Codierung.  

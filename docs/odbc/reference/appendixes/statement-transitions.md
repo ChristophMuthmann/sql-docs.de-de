@@ -1,31 +1,32 @@
 ---
-title: "Anweisung Übergänge | Microsoft Docs"
-ms.custom: 
+title: Anweisung Übergänge | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - transitioning states [ODBC], statement
 - state transitions [ODBC], statement
 - statement transitions [ODBC]
 ms.assetid: 3d70e0e3-fe83-4b4d-beac-42c82495a05b
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 50a20cb922b3f608a9d16cd24d5c288b096e01ca
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: a0566a32a2c34efca52391aea656c6908a7f8906
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="statement-transitions"></a>Anweisung Übergänge
 ODBC-Anweisungen werden die folgenden Status haben.  
@@ -38,7 +39,7 @@ ODBC-Anweisungen werden die folgenden Status haben.
 |S3|Vorbereitete Anweisung. Ein Resultset (möglicherweise leere) wird erstellt.|  
 |S4|Anweisung ausgeführt wird und kein Resultset erstellt wurde.|  
 |S5|Ausgeführte Anweisung und eine (möglicherweise leere) Resultset erstellt wurde. Der Cursor ist geöffnet und positioniert vor der ersten Zeile des Resultsets.|  
-|A6|Cursor positioniert mit **SQLFetch** oder **SQLFetchScroll**.|  
+|S6|Cursor positioniert mit **SQLFetch** oder **SQLFetchScroll**.|  
 |S7|Cursor positioniert mit **SQLExtendedFetch**.|  
 |A8|Funktion benötigt Daten. **SQLParamData** nicht aufgerufen wurde.|  
 |S9|Funktion benötigt Daten. **SQLPutData** nicht aufgerufen wurde.|  
@@ -95,7 +96,7 @@ ODBC-Anweisungen werden die folgenden Status haben.
   
 ## <a name="sqlbulkoperations-cursor-states"></a>SQLBulkOperations (Cursor Staaten)  
   
-|S5<br /><br /> Geöffnet|A6<br /><br /> SQLFetch oder SQLFetchScroll|S7<br /><br /> SQLExtendedFetch|  
+|S5<br /><br /> Geöffnet|S6<br /><br /> SQLFetch oder SQLFetchScroll|S7<br /><br /> SQLExtendedFetch|  
 |-------------------|---------------------------------------|-----------------------------|  
 |--[s] a8 [d] S11 [X]|--[s] a8 [d] S11 [X]|HY010|  
   
@@ -155,7 +156,7 @@ ODBC-Anweisungen werden die folgenden Status haben.
   
 |S0<br /><br /> Nicht zugeordnet|S1<br /><br /> Belegt|S2 – S3<br /><br /> Vorbereitet|S4<br /><br /> ausgeführt|S5 – S7<br /><br /> Cursor|A8 – S10<br /><br /> Daten erforderlich|S11 – S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
-|(SODASS)|S5 [s] S11 [X]|S1 [e] S5 [s] S11 [X]|S1 [e] und [1] S5 [s] und [1] S11 [X] und [1] 24000 [2]|Finden Sie in der nächsten Tabelle|HY010|Die HY010 o NS [c]|  
+|(IH)|S5 [s] S11 [X]|S1 [e] S5 [s] S11 [X]|S1 [e] und [1] S5 [s] und [1] S11 [X] und [1] 24000 [2]|Finden Sie in der nächsten Tabelle|HY010|Die HY010 o NS [c]|  
   
  [1] ' ist das aktuelle Ergebnis ist die letzte oder nur als Ergebnis zurück, oder es sind keine aktuellen Ergebnisse. Weitere Informationen zu verschiedenen Ergebnissen, finden Sie unter [mehrere Ergebnisse](../../../odbc/reference/develop-app/multiple-results.md).  
   
@@ -163,7 +164,7 @@ ODBC-Anweisungen werden die folgenden Status haben.
   
 ## <a name="sqlcolumnprivileges-sqlcolumns-sqlforeignkeys-sqlgettypeinfo-sqlprimarykeys-sqlprocedurecolumns-sqlprocedures-sqlspecialcolumns-sqlstatistics-sqltableprivileges-and-sqltables-cursor-states"></a>SQLColumnPrivileges, SQLColumns SQLForeignKeys, SQLGetTypeInfo, SQLPrimaryKeys, SQLProcedureColumns, SQLProcedures, SQLSpecialColumns, SQLStatistics, SQLTablePrivileges und SQLTables (Cursor Staaten)  
   
-|S5<br /><br /> Geöffnet|A6<br /><br /> SQLFetch oder SQLFetchScroll|S7<br /><br /> SQLExtendedFetch|  
+|S5<br /><br /> Geöffnet|S6<br /><br /> SQLFetch oder SQLFetchScroll|S7<br /><br /> SQLExtendedFetch|  
 |-------------------|---------------------------------------|-----------------------------|  
 |24000|24000[1]|24000|  
   
@@ -240,7 +241,7 @@ ODBC-Anweisungen werden die folgenden Status haben.
   
 |S0<br /><br /> Nicht zugeordnet|S1<br /><br /> Belegt|S2 – S3<br /><br /> Vorbereitet|S4<br /><br /> ausgeführt|S5 – S7<br /><br /> Cursor|A8 – S10<br /><br /> Daten erforderlich|S11 – S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
-|(SODASS)|S4 [s] und [Nr.] S5 [s] und [R] [d] a8 S11 [X]|--[e] und [1] S1 [e] und [2] S4 [s] und [Nr.] S5 [s] und [R] [d] a8 S11 [X]|--[e], [1] und [3] S1 [e], [2] und [3] S4 [s], [Nr.], und [3] S5 [s] [R], und a8 [3] [d] und [3] S11 [X] und [3] 24000 [4]|Finden Sie in der nächsten Tabelle|HY010|NS [c] HY010 [o]|  
+|(IH)|S4 [s] und [Nr.] S5 [s] und [R] [d] a8 S11 [X]|--[e] und [1] S1 [e] und [2] S4 [s] und [Nr.] S5 [s] und [R] [d] a8 S11 [X]|--[e], [1] und [3] S1 [e], [2] und [3] S4 [s], [Nr.], und [3] S5 [s] [R], und a8 [3] [d] und [3] S11 [X] und [3] 24000 [4]|Finden Sie in der nächsten Tabelle|HY010|NS [c] HY010 [o]|  
   
  [1] der Fehler wurde vom Treiber-Manager zurückgegeben.  
   
@@ -252,7 +253,7 @@ ODBC-Anweisungen werden die folgenden Status haben.
   
 ## <a name="sqlexecdirect-cursor-states"></a>SQLExecDirect (Cursor Staaten)  
   
-|S5<br /><br /> Geöffnet|A6<br /><br /> SQLFetch oder SQLFetchScroll|S7<br /><br /> SQLExtendedFetch|  
+|S5<br /><br /> Geöffnet|S6<br /><br /> SQLFetch oder SQLFetchScroll|S7<br /><br /> SQLExtendedFetch|  
 |-------------------|---------------------------------------|-----------------------------|  
 |24000|24000 [1]|24000|  
   
@@ -262,7 +263,7 @@ ODBC-Anweisungen werden die folgenden Status haben.
   
 |S0<br /><br /> Nicht zugeordnet|S1<br /><br /> Belegt|S2 – S3<br /><br /> Vorbereitet|S4<br /><br /> ausgeführt|S5 – S7<br /><br /> Cursor|A8 – S10<br /><br /> Daten erforderlich|S11 – S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
-|(SODASS)|(HY010)|Finden Sie in der nächsten Tabelle|S2 [e], p und [1] S4 [s] [p], [Nr.], und [1] S5 [s] [p], [R] und [1] [d] a8 [p] und [1] S11 [x], [p], und [1] 24000 [p] und [2] HY010 [Np]|Finden Sie unter Cursor-Statustabelle|HY010|NS [c] HY010 [o]|  
+|(IH)|(HY010)|Finden Sie in der nächsten Tabelle|S2 [e], p und [1] S4 [s] [p], [Nr.], und [1] S5 [s] [p], [R] und [1] [d] a8 [p] und [1] S11 [x], [p], und [1] 24000 [p] und [2] HY010 [Np]|Finden Sie unter Cursor-Statustabelle|HY010|NS [c] HY010 [o]|  
   
  [1] ' ist das aktuelle Ergebnis ist die letzte oder nur als Ergebnis zurück, oder es sind keine aktuellen Ergebnisse. Weitere Informationen zu verschiedenen Ergebnissen, finden Sie unter [mehrere Ergebnisse](../../../odbc/reference/develop-app/multiple-results.md).  
   
@@ -276,7 +277,7 @@ ODBC-Anweisungen werden die folgenden Status haben.
   
 ## <a name="sqlexecute-cursor-states"></a>SQLExecute (Cursor Staaten)  
   
-|S5<br /><br /> Geöffnet|A6<br /><br /> SQLFetch oder SQLFetchScroll|S7<br /><br /> SQLExtendedFetch|  
+|S5<br /><br /> Geöffnet|S6<br /><br /> SQLFetch oder SQLFetchScroll|S7<br /><br /> SQLExtendedFetch|  
 |-------------------|---------------------------------------|-----------------------------|  
 |24000 [p] HY010 [Np]|24000 [p], [1] HY010 [Np]|24000 [p] HY010 [Np]|  
   
@@ -290,7 +291,7 @@ ODBC-Anweisungen werden die folgenden Status haben.
   
 ## <a name="sqlextendedfetch-cursor-states"></a>SQLExtendedFetch (Cursor Staaten)  
   
-|S5<br /><br /> Geöffnet|A6<br /><br /> SQLFetch oder SQLFetchScroll|S7<br /><br /> SQLExtendedFetch|  
+|S5<br /><br /> Geöffnet|S6<br /><br /> SQLFetch oder SQLFetchScroll|S7<br /><br /> SQLExtendedFetch|  
 |-------------------|---------------------------------------|-----------------------------|  
 |S7 [s] oder [nf] S11 [X]|S1010|--[s] oder [nf] S11 [X]|  
   
@@ -302,7 +303,7 @@ ODBC-Anweisungen werden die folgenden Status haben.
   
 ## <a name="sqlfetch-and-sqlfetchscroll-cursor-states"></a>SQLFetch und SQLFetchScroll (Cursor Staaten)  
   
-|S5<br /><br /> Geöffnet|A6<br /><br /> SQLFetch oder SQLFetchScroll|S7<br /><br /> SQLExtendedFetch|  
+|S5<br /><br /> Geöffnet|S6<br /><br /> SQLFetch oder SQLFetchScroll|S7<br /><br /> SQLExtendedFetch|  
 |-------------------|---------------------------------------|-----------------------------|  
 |A6 [s] oder [nf] S11 [X]|--[s] oder [nf] S11 [X]|HY010|  
   
@@ -351,7 +352,7 @@ ODBC-Anweisungen werden die folgenden Status haben.
   
 ## <a name="sqlgetdata-cursor-states"></a>SQLGetData (Cursor Staaten)  
   
-|S5<br /><br /> Geöffnet|A6<br /><br /> SQLFetch oder SQLFetchScroll|S7<br /><br /> SQLExtendedFetch|  
+|S5<br /><br /> Geöffnet|S6<br /><br /> SQLFetch oder SQLFetchScroll|S7<br /><br /> SQLExtendedFetch|  
 |-------------------|---------------------------------------|-----------------------------|  
 |24000|--[s] oder [nf] S11 [x] 24000 [b] HY109 [i]|--[s] oder [nf] S11 [x] 24000 [b] HY109 [i]|  
   
@@ -426,7 +427,7 @@ ODBC-Anweisungen werden die folgenden Status haben.
   
 ## <a name="sqlgetstmtattr-cursor-states"></a>SQLGetStmtAttr (Cursor Staaten)  
   
-|S5<br /><br /> Geöffnet|A6<br /><br /> SQLFetch oder SQLFetchScroll|S7<br /><br /> SQLExtendedFetch|  
+|S5<br /><br /> Geöffnet|S6<br /><br /> SQLFetch oder SQLFetchScroll|S7<br /><br /> SQLExtendedFetch|  
 |-------------------|---------------------------------------|-----------------------------|  
 |--[1] 24000[2]|--[1] oder ([V] und [2]) 24000 [b] und [2] HY109 [i] und [2]|--[i] oder ([V] und [2]) 24000 [b] und [2] HY109 [1] und [2]|  
   
@@ -438,7 +439,7 @@ ODBC-Anweisungen werden die folgenden Status haben.
   
 |S0<br /><br /> Nicht zugeordnet|S1<br /><br /> Belegt|S2 – S3<br /><br /> Vorbereitet|S4<br /><br /> ausgeführt|S5 – S7<br /><br /> Cursor|A8 – S10<br /><br /> Daten erforderlich|S11 – S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
-|(SODASS)|--[1]|--[1]|--[s] und [2] S1 [nf], [Np,] und [4] S2 [nf], [p] und [4] S5 [s] und [3] S11 [X]|S1 [nf], [Np,] und [4] S3 [nf], [p] und [4] S4 [s] und [2] S5 [s] und [3] S11 [X]|HY010|NS [c] HY010 [o]|  
+|(IH)|--[1]|--[1]|--[s] und [2] S1 [nf], [Np,] und [4] S2 [nf], [p] und [4] S5 [s] und [3] S11 [X]|S1 [nf], [Np,] und [4] S3 [nf], [p] und [4] S4 [s] und [2] S5 [s] und [3] S11 [X]|HY010|NS [c] HY010 [o]|  
   
  [1]. die Funktion gibt SQL_NO_DATA immer in diesem Status.  
   
@@ -492,7 +493,7 @@ ODBC-Anweisungen werden die folgenden Status haben.
   
 |S0<br /><br /> Nicht zugeordnet|S1<br /><br /> Belegt|S2 – S3<br /><br /> Vorbereitet|S4<br /><br /> ausgeführt|S5 – S7<br /><br /> Cursor|A8 – S10<br /><br /> Daten erforderlich|S11 – S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
-|(SODASS)|S2 [s] und [Nr.] S3 [s] und [R] S11 [X]|--[s] oder ([e] und [1]) S1 [e] und [2] S11 [X]|S1 [e] und [3] S2 [s], [Nr.,] und [3] S3 [s] [R] und [3] S11 [X] und [3] 24000 [4]|Finden Sie in der nächsten Tabelle|HY010|NS [c] HY010 [o]|  
+|(IH)|S2 [s] und [Nr.] S3 [s] und [R] S11 [X]|--[s] oder ([e] und [1]) S1 [e] und [2] S11 [X]|S1 [e] und [3] S2 [s], [Nr.,] und [3] S3 [s] [R] und [3] S11 [X] und [3] 24000 [4]|Finden Sie in der nächsten Tabelle|HY010|NS [c] HY010 [o]|  
   
  [1] die Vorbereitung für einem anderen Grund als überprüfen die Anweisung schlägt fehl (SQLSTATE wurde HY009 [Ungültiger Argumentwert] oder HY090 [ungültige Zeichenfolgen- oder Pufferlänge.]).  
   
@@ -504,7 +505,7 @@ ODBC-Anweisungen werden die folgenden Status haben.
   
 ## <a name="sqlprepare-cursor-states"></a>SQLPrepare (Cursor Staaten)  
   
-|S5<br /><br /> Geöffnet|A6<br /><br /> SQLFetch oder SQLFetchScroll|S7<br /><br /> SQLExtendedFetch|  
+|S5<br /><br /> Geöffnet|S6<br /><br /> SQLFetch oder SQLFetchScroll|S7<br /><br /> SQLExtendedFetch|  
 |-------------------|---------------------------------------|-----------------------------|  
 |24000|24000|24000|  
   
@@ -536,7 +537,7 @@ ODBC-Anweisungen werden die folgenden Status haben.
   
 |S0<br /><br /> Nicht zugeordnet|S1<br /><br /> Belegt|S2 – S3<br /><br /> Vorbereitet|S4<br /><br /> ausgeführt|S5 – S7<br /><br /> Cursor|A8 – S10<br /><br /> Daten erforderlich|S11 – S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
-|(SODASS)|(HY010)|(HY010)|--|--|(HY010)|(HY010)|  
+|(IH)|(HY010)|(HY010)|--|--|(HY010)|(HY010)|  
   
 ## <a name="sqlsetconnectattr"></a>SQLSetConnectAttr  
   
@@ -578,7 +579,7 @@ ODBC-Anweisungen werden die folgenden Status haben.
   
 ## <a name="sqlsetpos-cursor-states"></a>SQLSetPos (Cursor Staaten)  
   
-|S5<br /><br /> Geöffnet|A6<br /><br /> SQLFetch oder SQLFetchScroll|S7<br /><br /> SQLExtendedFetch|  
+|S5<br /><br /> Geöffnet|S6<br /><br /> SQLFetch oder SQLFetchScroll|S7<br /><br /> SQLExtendedFetch|  
 |-------------------|---------------------------------------|-----------------------------|  
 |24000|--[s] [d] a8 S11 [24000 [b] HY109 x] [i]|--[s] [d] a8 S11 [24000 [b] HY109 x] [i]|  
   

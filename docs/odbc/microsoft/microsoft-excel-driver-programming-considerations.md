@@ -1,15 +1,16 @@
 ---
-title: "Überlegungen zur Programmierung von Microsoft Excel-Treiber | Microsoft Docs"
-ms.custom: 
+title: Überlegungen zur Programmierung von Microsoft Excel-Treiber | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Excel driver [ODBC]
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - desktop database drivers [ODBC], Excel driver
 - ODBC desktop database drivers [ODBC], Excel driver
 ms.assetid: d3cf324c-aa52-47a6-b44a-a59a778fad23
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b039054d87d1f2be0ce2be292467029395bc84be
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 16b58c825034900103086d20781a8af2caf909f8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="microsoft-excel-driver-programming-considerations"></a>Überlegungen zur Programmierung von Microsoft Excel-Treiber
 Dieser Abschnitt enthält die folgenden Themen.  

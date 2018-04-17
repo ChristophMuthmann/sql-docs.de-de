@@ -1,15 +1,16 @@
 ---
 title: Aktualisieren von Zeilen durch Lesezeichen mit SQLBulkOperations | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - data updates [ODBC], bookmarks
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - updating data [ODBC], bookmarks
 - updating data [ODBC], SQLBulkOperations
 ms.assetid: c9ad82b7-8dba-45b0-bdb9-f4668b37c0d6
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3c3525f78ece4e5831cc4e84e0d8041ceacc6a05
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c5a561fe33a54f31bcbe554dbf34525812c234e5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="updating-rows-by-bookmark-with-sqlbulkoperations"></a>Aktualisieren von Zeilen durch Lesezeichen mit SQLBulkOperations
 Beim Aktualisieren einer Zeile von Lesezeichen, **SQLBulkOperations** macht die Datenquelle, die eine oder mehrere Zeilen der Tabelle zu aktualisieren. Die Zeilen werden durch das Lesezeichen in einer Lesezeichenspalte gebundenen identifiziert. Die Zeile wird aktualisiert, mit der Daten in die Anwendungspuffer für jede gebundene Spalte (außer wenn der Wert in die Längen-/Indikatorpuffers für eine Spalte SQL_COLUMN_IGNORE ist). Ungebundene Spalten werden nicht aktualisiert werden.  

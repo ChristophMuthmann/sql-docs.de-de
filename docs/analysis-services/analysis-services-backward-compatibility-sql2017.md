@@ -1,15 +1,15 @@
 ---
-title: "Abwärtskompatibilität von SQL Server 2017 Analysis Services | Microsoft Docs"
+title: Abwärtskompatibilität von SQL Server 2017 Analysis Services | Microsoft Docs
 ms.date: 07/11/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.custom: 
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.custom: ''
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - installing Analysis Services, backward compatibility
@@ -19,16 +19,17 @@ helpviewer_keywords:
 - upgrading Analysis Services
 - SSAS, backward compatibility
 - SQL Server Analysis Services, backward compatibility
-ms.assetid: 
+ms.assetid: ''
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 97a19e2f1bf40216163208136d22103eddc89cc2
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+monikerRange: '>= sql-analysis-services-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: c353b84213516227980763b2a3c7e68d83e78a68
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="analysis-services-backward-compatibility-sql-2017"></a>Analysis Services, Abwärtskompatibilität (2017 SQL)
 [!INCLUDE[ssas-appliesto-sql2017](../includes/ssas-appliesto-sql2017.md)]

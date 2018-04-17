@@ -1,26 +1,17 @@
 ---
-title: Data Science-Szenarien und Lösungsvorlagen | Microsoft Docs
-ms.custom: ''
-ms.date: 08/22/2017
-ms.reviewer: ''
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: ''
-ms.technology: ''
-ms.tgt_pltfrm: ''
+title: Data Science-Szenarien und Lösungsvorlagen (SQL Server-Machine Learning) | Microsoft Docs
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
 ms.topic: tutorial
-applies_to:
-- SQL Server 2016
-ms.author: heidist
 author: HeidiSteen
+ms.author: heidist
 manager: cgronlun
-ms.workload: Inactive
-ms.openlocfilehash: d7fb0e16b20089d9d84ef8df66c8b97cc254cda4
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: d67fd15c44d188870989f2ad6498733c5901fb9d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="data-science-scenarios-and-solution-templates"></a>Data Science-Szenarien und -Projektmappenvorlagen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -39,7 +30,7 @@ Jede Lösung enthält Beispieldaten, R-Code oder Python-Code sowie SQL gespeiche
 
 ## <a name="fraud-detection"></a>Betrugserkennung
 
-[Online-Betrug Erkennung Vorlage (SQL Server R Services)](https://github.com/Microsoft/SQL-Server-R-Services-Samples/blob/master/FraudDetection/Introduction.md)
+[Online-Betrug Erkennung Vorlage (SQL Server R Services)](https://github.com/Microsoft/r-server-fraud-detection)
 
 **Was:** die Fähigkeit, betrügerische Transaktionen zu erkennen ist wichtig für Onlineunternehmen. Um Chargeback-Verluste zu verringern, müssen Unternehmen Transaktionen, die mit gestohlenen Zahlungsweise oder Anmeldeinformationen vorgenommen wurden, schnell zu identifizieren. Wenn die betrügerische Transaktionen erkannt werden, ergreifen Unternehmen in der Regel Maßnahmen, um bestimmte Konten so früh wie möglich zu blockieren, um weitere Verluste zu vermeiden. In diesem Szenario erfahren Sie, wie Sie Daten aus Transaktionen, online-Kauf um wahrscheinlich Betrug zu identifizieren.
 

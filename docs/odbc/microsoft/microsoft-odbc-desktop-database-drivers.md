@@ -1,15 +1,16 @@
 ---
 title: Desktop Microsoft ODBC-Datenbanktreiber | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - ODBC desktop database drivers [ODBC]
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - Jet-based ODBC drivers [ODBC], about Jet-based ODBC drivers
 - desktop database drivers [ODBC], about desktop database drivers
 ms.assetid: 4e505c65-a8dd-4283-ae28-313d8a3aa046
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0a57a4fca26e40a5c83d79f4a952e1c9ccbfa1cc
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: d1d35ce2ec2ebd37cf9718a85e07e27ec1348ca2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="microsoft-odbc-desktop-database-drivers"></a>Microsoft ODBC-Datenbanktreiber für Desktop
 ODBC ist eine API, die mit der Datenbank Zugriff Sprache Structured Query Language (SQL) verwendet. Sie können eine Vielzahl von Datenbank-Managementsystemen (DBMS) mit dem gleichen ODBC-Quellcode zugreifen, die direkt in Quellcode einer Anwendung integriert wird. Mit Microsoft ODBC-Desktop-Datenbanktreiber kann ein Benutzer einer ODBC-fähigen Anwendung zu öffnen, Abfrage, und Aktualisieren einer desktop-Datenbank über die ODBC-Schnittstelle.  
@@ -43,7 +44,7 @@ ODBC ist eine API, die mit der Datenbank Zugriff Sprache Structured Query Langua
   
 -   DBASE  
   
--   Textmodus  
+-   Text  
   
  Finden Sie unter [Visual FoxPro-ODBC-Treiber](../../odbc/microsoft/visual-foxpro-odbc-driver.md) für eine ausführliche Dokumentation zu den ODBC-Treiber für Microsoft Visual FoxPro®.  
   

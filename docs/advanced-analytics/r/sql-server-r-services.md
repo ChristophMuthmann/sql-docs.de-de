@@ -1,23 +1,17 @@
 ---
 title: SQLServer Machine Learning und R Services (Datenbankintern) | Microsoft Docs
-ms.date: 03/16/2018
-ms.reviewer: ''
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.author: heidist
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
 author: HeidiSteen
+ms.author: heidist
 manager: cgronlun
-ms.workload: Active
-ms.openlocfilehash: a610ff9393f502070cca28af84418b20c90e13cc
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: 24ef28cd5bfb8e09e3f0ac7dbfe46b5838ce029c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-server-machine-learning-and-r-services-in-database"></a>SQLServer Machine Learning und R Services (Datenbankintern)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -104,7 +98,7 @@ Bisher mussten Datenanalysten verwenden R Probleme mit der Leistung und Skalieru
 
 + **"Revoscaler"**: Diese R-Paket enthält die Implementierung einiger der beliebtesten R-Funktionen neu gestaltet, um die Parallelität und Skalierung bereitzustellen. Das Paket enthält auch Funktionen, die die Leistung und Skalierung weiter erhöhen, indem Berechnungen mittels Push auf den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Computer übertragen werden, der in der Regel über wesentlich mehr Arbeitsspeicher und Rechenleistung verfügt.
 
-+ **revoscalepy**. Diese Python-Clientbibliothek in SQL Server 2017 implementiert die am häufigsten verwendeten Funktionen im "revoscaler", z. B. remote rechenkontexte, und viele Algorithmen, die unterstützt verteilte Verarbeitung.
++ **Revoscalepy**. Diese Python-Clientbibliothek in SQL Server 2017 implementiert die am häufigsten verwendeten Funktionen im "revoscaler", z. B. remote rechenkontexte, und viele Algorithmen, die unterstützt verteilte Verarbeitung.
 
 **Ressourcen**
 

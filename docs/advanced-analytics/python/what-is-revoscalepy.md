@@ -1,28 +1,22 @@
 ---
-title: Einführung in Revoscalepy | Microsoft Docs
-ms.custom: ''
-ms.date: 10/05/2017
-ms.reviewer: ''
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: python
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.author: heidist
+title: Einführung in Python-Paket in SQL Server-Machine Learning Revoscalepy | Microsoft Docs
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
 author: HeidiSteen
+ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: fc59cbc5a34e79a98a787dea34f5ff1440fbe8c3
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: 450aa7cc002da9b42379330141f34ee33eedbde6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="introducing-revoscalepy"></a>Einführung in revoscalepy
+# <a name="introducing-revoscalepy-in-sql-server-machine-learning"></a>Einführung in Revoscalepy in SQL Server-Machine Learning
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-**Revoscalepy** ist eine neue Bibliothek, sofern von Microsoft zur Unterstützung verteilter Datenverarbeitung, compute Remote Kontexte und hohe Leistung Algorithmen für Python.
+**Revoscalepy** von Microsoft zur Unterstützung verteilter Datenverarbeitung, compute Remote Kontexte und hohe Leistung Algorithmen für Python-Entwickler eine neue Python-Bibliothek erfolgt.
 
 Es basiert auf der **"revoscaler"** -Paket für R, die in Microsoft R Server und SQL Server R Services und zielt auf die gleichen Funktionen bieten bereitgestellt wurde:
 
@@ -163,7 +157,7 @@ Zum Ausführen von Python-Code in SQL Server muss installiert sein 2017 von SQL 
 
 Vollständige Dokumentation für diese APIs sind verfügbar, wenn das Produkt veröffentlicht wird. In der Zwischenzeit wird empfohlen, dass Sie die entsprechende Funktion in den Bibliotheken "revoscaler" oder MicrosoftML verweisen.
 
-+ [RevoScaleR](https://msdn.microsoft.com/microsoft-r/scaler/scaler).
++ ["Revoscaler"](https://msdn.microsoft.com/microsoft-r/scaler/scaler).
 + [MicrosoftML](https://msdn.microsoft.com/microsoft-r/microsoftml/microsoftml)
 
 Erhalten Sie Hilfe für eine beliebige Python-Funktion, durch Importieren des Moduls, und dem anschließenden Aufrufen `help()`. Z. B. Ausführung `help(revoscalepy)` aus Python-IDE gibt eine Liste aller Funktionen im Modul Revoscalepy mit ihren Signaturen zurück.

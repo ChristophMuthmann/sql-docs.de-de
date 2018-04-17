@@ -2,7 +2,7 @@
 title: SQLSetConnectAttr (Cursorbibliothek) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: 6f70bbd0-a057-49ef-8b05-4c80b58fc6e6
 caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3366ae3e16b75ef1fea3f388f66675ca4c717bc2
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 00509c103ff59bda9db6d5ec629158e9ff0c21c0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlsetconnectattr-cursor-library"></a>SQLSetConnectAttr (Cursor Library)
 > [!IMPORTANT]  

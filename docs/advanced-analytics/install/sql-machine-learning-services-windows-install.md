@@ -1,24 +1,17 @@
 ---
 title: Installieren von SQL Server 2017 Machine Learning-Services (Datenbankintern) unter Windows | Microsoft Docs
-ms.custom: ''
-ms.date: 03/20/2018
-ms.reviewer: ''
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: python
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.workload: On Demand
-ms.openlocfilehash: a620e7ede1976fbbc50c0c81a595f002410403c8
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
+ms.openlocfilehash: 577d5266c98211949db8d1992bf559161d8ee97d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="install-sql-server-2017-machine-learning-services-in-database-on-windows"></a>Installieren von SQL Server 2017 Machine Learning-Services (Datenbankintern) unter Windows 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -160,7 +153,7 @@ Verwenden Sie die folgenden Schritte aus, um sicherzustellen, dass alle Komponen
 
    Öffnen Sie ein neues **Abfrage** Fenster in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], und führen Sie ein Skript z. B. Folgendes:
     
-    + For R
+    + Für R
     
     ```SQL
     EXEC sp_execute_external_script  @language =N'R',
@@ -172,7 +165,7 @@ Verwenden Sie die folgenden Schritte aus, um sicherzustellen, dass alle Komponen
     GO
     ```
 
-    + For Python
+    + Für Python
     
     ```SQL
     EXEC sp_execute_external_script  @language =N'Python',

@@ -2,7 +2,7 @@
 title: UPDATE - SQL-Befehl | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: ff1e0331-c060-4304-b280-039725b45f63
 caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6fb2e4d3e3010eaba53b36de383c3365d82db289
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c8c1189955ee62fd14484816358feffc38e002c5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="update---sql-command"></a>UPDATE - SQL-Befehl
 Datensätze in einer Tabelle mit neuen Werten aktualisiert.  
@@ -50,7 +50,7 @@ SET Column_Name1 = eExpression1
  Legen Sie *Column_Name1*= *eExpression1*[, *Column_Name2*= *eExpression2*  
  Gibt die Spalten, die aktualisiert werden und die neuen Werte. Wenn Sie die WHERE-Klausel weglassen, wird jede Zeile in der Spalte mit den gleichen Wert aktualisiert.  
   
- WOBEI *FilterCondition1*[AND &#124; ODER *FilterCondition2*...]  
+ WOBEI *FilterCondition1*[AND &#124; oder *FilterCondition2*...]  
  Gibt an, die Datensätze, die mit neuen Werten aktualisiert werden.  
   
  *FilterCondition* gibt die Kriterien, die Datensätze erfüllen muss, um mit neuen Werten aktualisiert werden. Sie können so viele Bedingungen filtern, wie Sie mit den AND-Operator verbindenden einschließen oder OR-Operator. Sie können auch den NOT-Operator verwenden, um den Wert eines logischen Ausdrucks umzukehren, oder Sie können **leere**(), um ein leeres Feld überprüfen.  

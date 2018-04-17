@@ -1,15 +1,16 @@
 ---
-title: "Cursortyp und Parallelität Kombinationen | Microsoft Docs"
-ms.custom: 
+title: Cursortyp und Parallelität Kombinationen | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - ODBC driver for Oracle [ODBC], concurrency options
@@ -17,20 +18,20 @@ helpviewer_keywords:
 - concurrency options [ODBC]
 - ODBC driver for Oracle [ODBC], cursor options
 ms.assetid: db63d610-f86f-4029-9d66-fed616c8a818
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8a5811471e64f2f269747906f490bde04d61d5db
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: d9b963135f30169bdf6e145e4719115b2d805fa2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="cursor-type-and-concurrency-combinations"></a>Cursortyp und Parallelität Kombinationen
 > [!IMPORTANT]  
->  Diese Funktion wird in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Verwenden Sie stattdessen den ODBC-Treiber von Oracle bereitgestellt.  
+>  Diese Funktion wird in einer zukünftigen Version von Windows entfernt werden. Verwenden Sie diese Funktion beim Entwickeln neuer Anwendungen nicht, und planen Sie das Ändern von Anwendungen, in denen es zurzeit verwendet wird. Verwenden Sie stattdessen den ODBC-Treiber von Oracle bereitgestellt.  
   
  Cursortypen steuern, die Funktionalität des Cursors an den Benutzer bereitgestellt wird. Parallelitätsoptionen aktualisierbarkeit und Sperrverhalten eines Resultsets steuern.  
   

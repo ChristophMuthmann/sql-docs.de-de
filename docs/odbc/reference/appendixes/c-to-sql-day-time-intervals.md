@@ -1,15 +1,16 @@
 ---
 title: 'C, um SQL: Tag-Zeitintervalle | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - day-time intervals [ODBC]
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - converting data from c to SQL types [ODBC], day-time intervals
 - intervals [ODBC], converting
 ms.assetid: f9ee1ddb-dec7-4f78-b6e2-5ba34e7d6f59
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f6c08356a4a46c1a1520dcced93cfd11c0920474
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 4720dcb0bde36412da6644f79795f3321a25532e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="c-to-sql-day-time-intervals"></a>C, um SQL: Tag-Zeiträume
 Der Bezeichner für die Tag-Zeitintervall ODBC C-Datentypen sind:  

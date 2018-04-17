@@ -1,15 +1,16 @@
 ---
-title: "Haupt-Level-API-Funktionen (ODBC-Treiber für Oracle) | Microsoft Docs"
-ms.custom: 
+title: Haupt-Level-API-Funktionen (ODBC-Treiber für Oracle) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - functions [ODBC], ODBC driver for Oracle
@@ -17,20 +18,20 @@ helpviewer_keywords:
 - core level API functions [ODBC]
 - ODBC core level API functions [ODBC]
 ms.assetid: 8596eed7-bda6-4cac-ae1f-efde1aab785f
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 118ea5f86f89e73eadd5c0bef79770b438d53f9b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 3b04102f149c96792f769a84535783c235832e2b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="core-level-api-functions-odbc-driver-for-oracle"></a>Core Level-API-Funktionen (ODBC-Treiber für Oracle)
 > [!IMPORTANT]  
->  Diese Funktion wird in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Verwenden Sie stattdessen den ODBC-Treiber von Oracle bereitgestellt.  
+>  Diese Funktion wird in einer zukünftigen Version von Windows entfernt werden. Verwenden Sie diese Funktion beim Entwickeln neuer Anwendungen nicht, und planen Sie das Ändern von Anwendungen, in denen es zurzeit verwendet wird. Verwenden Sie stattdessen den ODBC-Treiber von Oracle bereitgestellt.  
   
  Funktionen, die auf dieser Ebene bilden die minimale Stufe der Schnittstelle-Konformität für ODBC-Treiber.  
   
@@ -43,7 +44,7 @@ ms.lasthandoff: 12/21/2017
 |**SQLCancel**|Bricht die Verarbeitung auf einem Anweisungshandle Befehls beschäftigt ab. In einigen Fällen lässt Oracle keine Abbruch einer ausgeführten Anweisung. Dies bedeutet, dass eine ausgeführte Anweisung weiterhin Oracle Abschluss des Prozesses, zu diesem Zeitpunkt die Ergebnisse aus der Anweisung durch ODBC-Treiber für Oracle abgebrochen werden.|  
 |**SQLColAttributes**|Gibt die Deskriptorinformationen für eine Spalte in einem Resultset zurück. Deskriptorinformationen wird als eine Zeichenfolge, einen 32-Bit-Deskriptor abhängiges-Wert oder einen ganzzahligen Wert zurückgegeben.|  
 |**SQLConnect**|Eine Verbindung mit einer Datenquelle. Oracle-Authentifizierung verwenden, geben Sie "/" als die *SzUID* Parameter und "" als die *SzAuthStr* Parameter.|  
-|**SQLDescribeCol**|Gibt den Namen, Typ, Genauigkeit, Dezimalstellen und NULL-Zulässigkeit der Spalte angegebenen Ergebnis. **Hinweis:****SQLDescribeCol** meldet berechnete Spalten als SQL_VARCHAR.|  
+|**SQLDescribeCol**|Gibt den Namen, Typ, Genauigkeit, Dezimalstellen und NULL-Zulässigkeit der Spalte angegebenen Ergebnis. **Hinweis:****SQLDescribeCol** meldet berechnete Spalten als SQL_VARCHAR.  |  
 |**SQLDisconnect**|Schließt eine Verbindung Wenn Verbindungspooling, für die einer freigegebenen Umgebung aktiviert ist und eine Anwendung ruft **SQLDisconnect** für eine Verbindung in der Umgebung, die Verbindung an den Verbindungspool zurückgegeben und ist weiterhin verfügbar, mit anderen Komponenten verwenden die gleichen freigegebenen Umgebung.|  
 |**SQLError**|Fehler oder Status Informationen zu den letzten Fehler zurückgegeben. Der Treiber behält einen Stapel oder eine Liste von Fehlern, die für zurückgegeben werden, können die *Befehls beschäftigt*, *Hdbc*, und *Henv* Argumente, je nachdem, wie der Aufruf von **SQLError**  erfolgt. Die Fehlerwarteschlange wird nach jeder Anweisung geleert. In der Regel ruft eine Oracle-Fehlermeldung ab, und andernfalls leer ist.|  
 |**SQLExecDirect**|Führt eine neue, nicht vorbereiteter SQL­Anweisung. Der Treiber verwendet die aktuellen Werte der Variablen Marker Parameter auf, wenn alle Parameter in der Anweisung vorhanden sind. Wenn die Tabelle, Sicht oder Feldnamen Leerzeichen enthalten, schließen Sie die Namen wieder in Anführungszeichen eingeschlossen. Wenn Ihre Datenbank eine Tabelle namens enthält z. B. *Meine Tabelle* und das Feld *mein Feld*, schließen Sie jedes Element des Bezeichners wie folgt:<br /><br /> Wählen Sie \`Meine Tabelle\`. \`Meine "Field1"\`, \`Meine Tabelle\`.\` Meine "Field2"\` FROM \`Meine Tabelle "|  

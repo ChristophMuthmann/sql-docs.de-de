@@ -2,7 +2,7 @@
 title: SQLNativeSql (Cursorbibliothek) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: c4459092-1177-4b2a-b7f5-e0083d3bf2b2
 caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a2bd3fd6851cd3d59187a239d7d6aad2ffd269ac
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f9ce0357981dbc7a499bf0dc0cefc52313a2596a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlnativesql-cursor-library"></a>SQLNativeSql (Cursor Library)
 > [!IMPORTANT]  

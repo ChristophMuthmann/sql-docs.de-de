@@ -1,30 +1,31 @@
 ---
-title: "Bildlauffähige Cursortypen | Microsoft Docs"
-ms.custom: 
+title: Bildlauffähige Cursortypen | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - scrollable cursors [ODBC]
 - cursors [ODBC], scrollable
 ms.assetid: dbd32576-0453-4e90-ae45-1a81cee8259d
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 85de42e271f937c7a3de1aacba918bb43ea463d4
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: a777db13717dcd2bda9e308e7d7df27c8edb237e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="scrollable-cursor-types"></a>Bildlauffähige Cursortypen
 Die vier Typen von bildlauffähigen Cursor werden statische, dynamische, keysetgesteuerte und gemischten. Statische Cursor erkennen wenige oder keine Änderungen jedoch relativ billig implementiert werden. Dynamische Cursor erkennen alle Änderungen jedoch aufwendig zu implementieren. Und gemischten, keysetgesteuerter Cursor liegen zwischen, die meisten Änderungen erkennen, aber weniger Kosten als dynamische Cursor.  

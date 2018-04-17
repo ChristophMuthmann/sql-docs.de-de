@@ -4,12 +4,12 @@ description: Beschreibt, wie Beziehungen in der Analysis Services Tutorial-Proje
 ms.prod_service: analysis-services, azure-analysis-services
 services: analysis-services
 ms.suite: pro-bi
-documentationcenter: 
+documentationcenter: ''
 author: Minewiskan
 manager: kfile
-editor: 
-tags: 
-ms.assetid: 
+editor: ''
+tags: ''
+ms.assetid: ''
 ms.service: analysis-services
 ms.devlang: NA
 ms.topic: get-started-article
@@ -17,11 +17,12 @@ ms.tgt_pltfrm: NA
 ms.workload: na
 ms.date: 02/20/2018
 ms.author: owend
-ms.openlocfilehash: 2776649b049254e27851a9d4ce95e8d6dea81067
-ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
+monikerRange: '>= sql-analysis-services-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: eedbdf50d33e7aed380cfb98b3cdf85d7ea9a3f8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-relationships"></a>Erstellen von Beziehungen
 
@@ -82,7 +83,7 @@ Beachten Sie in der Diagrammsicht einen Pfeil ein Sternchen und eine Zahl auf di
 
 Der Pfeil zeigt die filterrichtung. Das Sternchen zeigt diese Tabelle ist die *viele* Seite in der Kardinalität der Beziehung, und die enthält diese Tabelle ist die *eine* Seite der Beziehung. Wenn Sie eine Beziehung bearbeiten müssen. z. B. ändern Sie die Beziehung filterrichtung oder Kardinalität zu, doppelklicken Sie auf die Beziehungslinie, um das Dialogfeld "Beziehung bearbeiten" zu öffnen.
 
-![as-lesson4-edit](../tutorial-tabular-1400/media/as-lesson4-edit.png)
+![als lesson4 bearbeiten](../tutorial-tabular-1400/media/as-lesson4-edit.png)
 
 Diese Funktionen für die erweiterte Modellieren von Daten vorgesehen sind und über den Rahmen dieses Lernprogramms sind. Weitere Informationen finden Sie unter [bidirektionale kreuzfilter für tabellarische Modelle in Analysis Services](../tabular-models/bi-directional-cross-filters-tabular-models-analysis-services.md).
 
@@ -105,7 +106,7 @@ In einigen Fällen müssen Sie möglicherweise zusätzliche Beziehungen zwischen
   
 3.  Erstellen Sie abschließend eine weitere Beziehung. In der **FactInternetSales** Tabelle, klicken Sie auf, und warten Sie, die **ShipDate** Spalte ziehen Sie dann den Cursor an die **Datum** Spalte in der **DimDate** Tabelle, und lassen Sie anschließend.  
     
-     ![as-lesson4-newinactive](../tutorial-tabular-1400/media/as-lesson4-newinactive.png)
+     ![als lesson4 newinactive](../tutorial-tabular-1400/media/as-lesson4-newinactive.png)
   
 ## <a name="whats-next"></a>Wie geht es weiter?
 

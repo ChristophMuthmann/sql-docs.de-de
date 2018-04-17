@@ -1,15 +1,16 @@
 ---
-title: "Schnittstelle Übereinstimmungsebenen | Microsoft Docs"
-ms.custom: 
+title: Schnittstelle Übereinstimmungsebenen | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - interface conformance levels [ODBC]
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - data sources [ODBC], conformance levels
 - ODBC drivers [ODBC], conformance levels
 ms.assetid: 2c470e54-0600-4b2b-b1f3-9885cb28a01a
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0abde908ca3205cc10a35c310b508c5142fcb82c
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: be780023002dba4422a6523f57866661fde593b7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="interface-conformance-levels"></a>Übereinstimmungsebenen-Schnittstelle
 Der Zweck der Abgleich ist auf die Anwendung darüber zu informieren, welche Funktionen, aus dem Treiber verfügbar sind. Ein fehlerisolierung Schema basierend auf Funktionen ist nicht ausreichend dieses Ziel erreichen. In ODBC 3. *x*, Treiber klassifiziert sind, basierend auf den Funktionen, die sie besitzen. Unterstützung der Funktion kann sind die Unterstützung der Funktion; Er kann auch die Unterstützung von einem Beschreibungsfeld, ein Anweisungsattribut, einen Wert "Y" für ein zurückgegebenes Informationstyp enthalten **SQLGetInfo**und so weiter.  

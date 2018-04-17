@@ -1,31 +1,32 @@
 ---
 title: Umgebung, Verbindungs- und Anweisungsattribute | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - environment attributes [ODBC]
 - connection attributes [ODBC]
 - statement attributes [ODBC]
 ms.assetid: 9e15b276-3b7a-428a-b72f-a3ddfe1ba1ce
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7d1270026a19c0e5c07a9590f70096046984e455
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: a84cd4efc498de20dad68d99aa8ad00e47eb3830
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="environment-connection-and-statement-attributes"></a>Umgebung, Verbindungs- und Anweisungsattribute
 ODBC definiert eine Reihe von Attributen, die Umgebungen, Verbindungen und Anweisungen zugeordnet sind.  

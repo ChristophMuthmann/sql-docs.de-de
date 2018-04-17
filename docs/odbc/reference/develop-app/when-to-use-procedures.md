@@ -1,30 +1,31 @@
 ---
 title: Verwendung von Prozeduren | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQL statements [ODBC], procedures
 - procedures [ODBC], about procedures
 ms.assetid: 7dc9e327-dd54-4b10-9f66-9ef5c074f122
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f62c820f57fba7af608a870e00e0b2ddf0ad13b6
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 12f6f62ee39b38378557f84a6c70010471e186f4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="when-to-use-procedures"></a>Verwendung von Prozeduren
 Es gibt diverse Vorteile gegenüber der Verwendung von Prozeduren, alle basiert sowohl auf der Tatsache, dass Prozeduren verschiebt SQL-Anweisungen von der Anwendung an die Datenquelle. Nun muss nur noch in der Anwendung ist eine interoperable Prozeduraufruf. Diese bietet folgende Vorteile:  

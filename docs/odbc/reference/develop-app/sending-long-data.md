@@ -1,30 +1,31 @@
 ---
 title: Long-Daten senden | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - long data [ODBC]
 - sending long data [ODBC]
 ms.assetid: ea989084-a8e6-4737-892e-9ec99dd49caf
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e60a23396a725f449b3b5f37f70bcb28284071d8
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e3dd5ec4edf58bb29772ca565109e5d9c79a3304
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sending-long-data"></a>Long-Daten senden
 Definieren eines DBMS *long-Daten* als beliebiges Zeichen oder Binärdaten über eine bestimmte Größe, z. B. 254 Zeichen. Es eventuell nicht möglich, speichern Sie ein gesamtes Element der long-Daten im Arbeitsspeicher, z. B. wenn das Element ein langer Text-Dokument oder eine Bitmap darstellt. Da diese Daten in einem einzigen Puffer gespeichert werden können, sendet die Datenquelle er an den Treiber in Teilen mit **SQLPutData** Wenn die Anweisung ausgeführt wird. Parameter für die Daten zum Zeitpunkt der Ausführung gesendet werden, werden als bezeichnet *Data-at-Execution-Parameter*.  

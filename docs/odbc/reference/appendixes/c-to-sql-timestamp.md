@@ -1,31 +1,32 @@
 ---
 title: 'C, um SQL: Timestamp | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - data conversions from C to SQL types [ODBC], timestamp
 - timestamp data type [ODBC]
 - converting data from c to SQL types [ODBC], timestamp
 ms.assetid: 0e08bfff-68f9-4648-9558-09b57fea08ad
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9577b649d2812ad087728b7849637f872d4a84b9
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: be38d6accb796666a62324e7a6fd5aefcfa0f372
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="c-to-sql-timestamp"></a>C, um SQL: Timestamp
 Der Bezeichner für den Timestamp ODBC C-Datentyp ist:  
@@ -46,6 +47,6 @@ Der Bezeichner für den Timestamp ODBC C-Datentyp ist:
   
  Informationen, welche Werte in einer Struktur SQL_C_TIMESTAMP gültig sind, finden Sie unter [C-Datentypen](../../../odbc/reference/appendixes/c-data-types.md)weiter oben in diesem Anhang.  
   
- Wenn Zeitstempeldaten C in SQL-Zeichendaten konvertiert werden, werden die resultierende Zeichendaten der "*Yyyy*-*mm*-*Dd* *"hh"*:*mm*:*ss*[. *f...* ] "Format.  
+ Wenn Zeitstempeldaten C in SQL-Zeichendaten konvertiert werden, werden die resultierende Zeichendaten der "*Yyyy*-*mm*-*Dd* *"hh"*:*mm*:*ss*[.*f...*] "Format.  
   
  Der Treiber ignoriert den Längenindikator /-Wert, wenn Daten aus der C-Timestamp-Datentyp zu konvertieren und wird davon ausgegangen, dass die Größe des Datenpuffers die Größe des C-Timestamp-Datentyps. Der Längenindikator /-Wert übergeben der *StrLen_or_Ind* Argument in **SQLPutData** und in den Puffer mit angegebenen der *StrLen_or_IndPtr* Argument in **SQLBindParameter**. Datenpuffer wird angegeben, mit der *DataPtr* Argument in **SQLPutData** und die *ParameterValuePtr* Argument in **SQLBindParameter**.

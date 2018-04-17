@@ -2,7 +2,7 @@
 title: SQLSetDescField-Funktion | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 8c544388-fe9d-4f94-a0ac-fa0b9c9c88a5
 caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3e6a0ee843ce2b78ebc611fee30a5ee8e16fc7e1
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ad3a900242068f8bcfb6f532b5e272cb2afb0ac5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlsetdescfield-function"></a>SQLSetDescField-Funktion
 **Konformität**  
@@ -89,7 +89,7 @@ SQLRETURN SQLSetDescField(
 |SQLSTATE|Fehler|Description|  
 |--------------|-----------|-----------------|  
 |01000|Allgemeine Warnung|Treiberspezifische Meldung dient zu Informationszwecken. (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
-|01 S 02|Der Optionswert wurde geändert|Der Treiber nicht den Wert im angegebenen  *\*ValuePtr* (Wenn *ValuePtr* war ein Zeiger) oder den Wert in *ValuePtr* (Wenn *ValuePtr*  wurde ein ganzzahliger Wert), oder  *\*ValuePtr* ungültig aufgrund Implementierung Arbeitsbedingungen, damit der Treiber einen ähnlichen Wert ersetzt. (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
+|01S02|Der Optionswert wurde geändert|Der Treiber nicht den Wert im angegebenen  *\*ValuePtr* (Wenn *ValuePtr* war ein Zeiger) oder den Wert in *ValuePtr* (Wenn *ValuePtr*  wurde ein ganzzahliger Wert), oder  *\*ValuePtr* ungültig aufgrund Implementierung Arbeitsbedingungen, damit der Treiber einen ähnlichen Wert ersetzt. (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
 |07009|Ungültiger Deskriptorindex|Die *FieldIdentifier* Argument wurde ein Datensatzfeld der *RecNumber* -Argument lautete 0 (null) und die *DescriptorHandle* Argument bezeichnet ein IPD-Handle.<br /><br /> Die *RecNumber* Arguments ist kleiner als 0 (null) und die *DescriptorHandle* Argument ein ARD oder ein APD bezeichnet.<br /><br /> Die *RecNumber* Argument war größer als die maximale Anzahl von Spalten oder Parametern, die die Datenquelle unterstützt werden, und die *DescriptorHandle* Argument ein APD oder ARD bezeichnet.<br /><br /> (DM) die *FieldIdentifier* Argument war SQL_DESC_COUNT, und  *\*ValuePtr* Arguments ist kleiner als 0.<br /><br /> Die *RecNumber* Argument war gleich 0 (null) und die *DescriptorHandle* Argument ein implizit zugeordneten APD bezeichnet. (Dieser Fehler tritt nicht mit einer explizit zugewiesenen Anwendungsdiensts da nicht bekannt ist, ob eine explizit zugewiesene Anwendungsdiensts ein APD oder ARD bis Ausführungszeit.)|  
 |08S01|Kommunikations-Verbindungsfehler|Die Verbindung zwischen dem Treiber und die Datenquelle mit der der Treiber verbunden wurde aufgetreten ist, bevor die Verarbeitung für die Funktion abgeschlossen.|  
 |22001|Zeichenfolgedaten wurden rechts abgeschnitten|Die *FieldIdentifier* Argument war SQL_DESC_NAME, und die *Pufferlänge* Argument wurde ein Wert größer als SQL_MAX_IDENTIFIER_LEN.|  
@@ -146,7 +146,7 @@ SQLRETURN SQLSetDescField(
   
  Die Initialisierung des Headerfelder ist in der Tabelle beschriebenen, das folgt.  
   
-|Header-Feldnamen|Typ|R/W|Default|  
+|Header-Feldnamen|Typ|R/W|Standardwert|  
 |-----------------------|----------|----------|-------------|  
 |SQL_DESC_ALLOC_TYPE|SQLSMALLINT|ARD: R-APD: R IRD: R IPD: R|ARD: SQL_DESC_ALLOC_AUTO für implizite oder SQL_DESC_ALLOC_USER für explizite<br /><br /> APD: SQL_DESC_ALLOC_AUTO für implizite oder SQL_DESC_ALLOC_USER für explizite<br /><br /> IRD: SQL_DESC_ALLOC_AUTO<br /><br /> IPD: SQL_DESC_ALLOC_AUTO|  
 |SQL_DESC_ARRAY_SIZE|SQLULEN ERSTELLT WURDE|ARD: R/W APD: R/W IRD: nicht verwendeter IPD: nicht verwendeter|ARD: [1] APD: [1] IRD: nicht verwendeter IPD: nicht verwendeter|  
@@ -160,7 +160,7 @@ SQL_DESC_COUNT|SQLSMALLINT|ARD: R/W APD: IRD R/W: R IPD: R/W|ARD: 0 APD: IRD 0: 
   
  Die Initialisierung des Datensatzfelder ist wie in der folgenden Tabelle gezeigt.  
   
-|Datensatz-Feldnamen|Typ|R/W|Default|  
+|Datensatz-Feldnamen|Typ|R/W|Standardwert|  
 |-----------------------|----------|----------|-------------|  
 |SQL_DESC_AUTO_UNIQUE_VALUE|SQLINTEGER|ARD: Nicht verwendeter APD: nicht verwendeter IRD: R IPD: nicht verwendeter|ARD: Nicht verwendeter APD: nicht verwendeter IRD: D IPD: nicht verwendeter|  
 |SQL_DESC_BASE_COLUMN_NAME|SQLCHAR *|ARD: Nicht verwendeter APD: nicht verwendeter IRD: R IPD: nicht verwendeter|ARD: Nicht verwendeter APD: nicht verwendeter IRD: D IPD: nicht verwendeter|  

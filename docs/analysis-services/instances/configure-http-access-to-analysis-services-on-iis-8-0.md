@@ -1,31 +1,31 @@
 ---
 title: Konfigurieren von HTTP-Zugriff auf Analysis Services auf IIS 8.0 | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: cf2e2c84-0a69-4cdd-90a1-fb4021936513
-caps.latest.revision: 
+caps.latest.revision: 27
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 5d2ac4e4346e51614787cabdf9eb6956a7c8012f
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: f178be3c4cdd74d0ea1a5aadbb4106a1bf7b285e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="configure-http-access-to-analysis-services-on-iis-80"></a>Konfigurieren von HTTP-Zugriff auf Analysis Services auf IIS 8.0
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-In diesem Artikel wird beschrieben, wie Sie einen HTTP-Endpunkt für den Zugriff auf eine Analysis Services-Instanz einrichten. Sie können den HTTP-Zugriff aktivieren, indem Sie MSMDPUMP.dll konfigurieren, eine ISAPI-Erweiterung, die in Internetinformationsdienste (IIS) ausgeführt wird und Datapump zu und von Clientanwendungen und einem Analysis Services-Server ausführt. Dieser Ansatz bietet eine Alternative zum Herstellen einer Verbindung mit Analysis Services, wenn die BI-Lösung die folgenden Funktionen erfordert:  
+  In diesem Artikel wird beschrieben, wie Sie einen HTTP-Endpunkt für den Zugriff auf eine Analysis Services-Instanz einrichten. Sie können den HTTP-Zugriff aktivieren, indem Sie MSMDPUMP.dll konfigurieren, eine ISAPI-Erweiterung, die in Internetinformationsdienste (IIS) ausgeführt wird und Datapump zu und von Clientanwendungen und einem Analysis Services-Server ausführt. Dieser Ansatz bietet eine Alternative zum Herstellen einer Verbindung mit Analysis Services, wenn die BI-Lösung die folgenden Funktionen erfordert:  
   
 -   Der Clientzugriff erfolgt über Internet- oder Extranetverbindungen, mit Einschränkungen dazu, welche Ports aktiviert werden können,  
   
@@ -42,22 +42,6 @@ In diesem Artikel wird beschrieben, wie Sie einen HTTP-Endpunkt für den Zugriff
  Das Einrichten des HTTP-Zugriffs ist eine Aufgabe nach der Installation. Analysis Services muss bereits installiert sein, damit Sie es für den HTTP-Zugriff konfigurieren können. Als Analysis Services-Administrator müssen Sie Windows-Konten Berechtigungen erteilen, bevor HTTP-Zugriff möglich ist. Darüber hinaus ist es eine bewährte Methode, zuerst zu überprüfen, ob Ihre Installation voll funktionsfähig ist, bevor Sie den Server weiter konfigurieren. Nachdem der HTTP-Zugriff konfiguriert wurde, können Sie den HTTP-Endpunkt und den regulären Netzwerknamen des Servers über TCP/IP verwenden. Durch Einrichten des HTTP-Zugriffs werden andere Methoden für den Datenzugriff nicht ungültig.  
   
  Denken Sie bei der MSMDPUMP-Konfiguration daran, dass zwei Verbindungen zu berücksichtigen sind: Client-zu-IIS, IIS-zu-SSAS. Die Anweisungen in diesem Artikel beziehen sich auf IIS-zu-SSAS. Ihre Clientanwendung erfordert möglicherweise zusätzliche Konfigurationen, bevor sie eine Verbindung mit IIS herstellen kann. Entscheidungen wie die, ob SSL verwendet wird oder wie Bindungen zu konfigurieren sind, sind nicht Gegenstand dieses Artikels. Weitere Informationen zu IIS finden Sie unter [Webserver (IIS)](http://technet.microsoft.com/library/hh831725.aspx) .  
-  
- Dieses Thema enthält folgende Abschnitte:  
-  
--   [Übersicht](#bkmk_overview)  
-  
--   [Erforderliche Komponenten](#bkmk_prereq)  
-  
--   [Kopieren der MSMDPUMP.dll in einen Ordner auf dem Webserver](#bkmk_copy)  
-  
--   [Erstellen eines Anwendungspools und eines virtuellen Verzeichnisses in IIS](#bkmk_appPool)  
-  
--   [Konfigurieren der IIS-Authentifizierung und Hinzufügen der Erweiterung](#bkmk_auth)  
-  
--   [Bearbeiten der Datei MSMDPUMP.INI zum Festlegen des Zielservers](#bkmk_edit)  
-  
--   [Testen der Konfiguration](#bkmk_test)  
   
 ##  <a name="bkmk_overview"></a> Übersicht  
  MSMDPUMP ist eine ISAPI-Erweiterung, die in IIS geladen wird und die Umleitung zu einer lokalen oder Remote-Analysis-Services-Instanz bereitstellt. Durch die Konfiguration dieser ISAPI-Erweiterung erstellen Sie einen HTTP-Endpunkt für eine Analysis Services-Instanz.  
@@ -129,11 +113,11 @@ In diesem Artikel wird beschrieben, wie Sie einen HTTP-Endpunkt für den Zugriff
   
 4.  Stellen Sie sicher, dass der Ordner \inetpub\wwwroot\OLAP auf dem Webserver Folgendes enthält: MSMDPUMP.DLL, MSMDPUMP.INI sowie einen Ordner Resources. Die Ordnerstruktur sollte wie folgt aussehen:  
   
-    -   \<drive>:\inetpub\wwwroot\OLAP\MSMDPUMP.dll  
+    -   \<Laufwerk >: \inetpub\wwwroot\OLAP\MSMDPUMP.dll  
   
-    -   \<drive>:\inetpub\wwwroot\OLAP\MSMDPUMP.ini  
+    -   \<Laufwerk >: \inetpub\wwwroot\OLAP\MSMDPUMP.ini  
   
-    -   \<drive>:\inetpub\wwwroot\OLAP\Resources  
+    -   \<Laufwerk >: \inetpub\wwwroot\OLAP\Resources  
   
 ##  <a name="bkmk_appPool"></a> Schritt 2: Erstellen eines Anwendungspools und eines virtuellen Verzeichnisses in IIS  
  Als Nächstes erstellen Sie einen Anwendungspool und einen Endpunkt für die Datapump.  
@@ -261,7 +245,7 @@ In diesem Artikel wird beschrieben, wie Sie einen HTTP-Endpunkt für den Zugriff
 |-|-|  
 |Anonym|Fügen Sie der Liste „Mitgliedschaft“ das unter **Anmeldeinformationen für anonyme Authentifizierung bearbeiten** in IIS angegebene Konto hinzu. Weitere Informationen finden Sie unter [Anonyme Authentifizierung](http://www.iis.net/configreference/system.webserver/security/authentication/anonymousauthentication),|  
 |Windows-Authentifizierung|Fügen Sie der Liste Mitgliedschaft die Windows-Benutzer- oder -Gruppenkonten hinzu, über die Analysis Services-Daten per Identitätswechsel oder Delegierung angefordert werden.<br /><br /> Falls eingeschränkte Kerberos-Delegierung verwendet wird, benötigen nur die Windows-Benutzer- und -Gruppenkonten, die Zugriff anfordern, Berechtigungen. Für die Anwendungspoolidentität sind keine Berechtigungen erforderlich.|  
-|Standardauthentifizierung|Fügen Sie der Liste Mitgliedschaft die Windows-Benutzer- oder -Gruppenkonten hinzu, die in der Verbindungszeichenfolge übergeben werden.<br /><br /> Falls Sie Anmeldeinformationen über **EffectiveUserName** in der Verbindungszeichenfolge übergeben, muss die Anwendungspoolidentität außerdem über Administratorrechte in der Analysis Services-Instanz verfügen. In SSMS mit der rechten Maustaste die Instanz &#124; **Eigenschaften** &#124; **Sicherheit** &#124; **Hinzufügen**. Geben Sie die Anwendungspoolidentität ein. Wenn Sie die integrierte Standardidentität verwendet haben, wird das Konto angegeben, als **IIS AppPool\DefaultAppPool**.<br /><br /> ![Zeigt, wie das AppPoolIdentity-Konto eingeben](../../analysis-services/instances/media/ssas-httpaccess-iisapppoolidentity.png "wird gezeigt, wie das AppPoolIdentity-Konto eingeben")|  
+|Standardauthentifizierung|Fügen Sie der Liste Mitgliedschaft die Windows-Benutzer- oder -Gruppenkonten hinzu, die in der Verbindungszeichenfolge übergeben werden.<br /><br /> Falls Sie Anmeldeinformationen über **EffectiveUserName** in der Verbindungszeichenfolge übergeben, muss die Anwendungspoolidentität außerdem über Administratorrechte in der Analysis Services-Instanz verfügen. In SSMS mit der Maustaste der Instanz &#124; **Eigenschaften** &#124; **Sicherheit** &#124; **hinzufügen**. Geben Sie die Anwendungspoolidentität ein. Wenn Sie die integrierte Standardidentität verwendet haben, wird das Konto angegeben, als **IIS AppPool\DefaultAppPool**.<br /><br /> ![Zeigt, wie das AppPoolIdentity-Konto eingeben](../../analysis-services/instances/media/ssas-httpaccess-iisapppoolidentity.png "wird gezeigt, wie das AppPoolIdentity-Konto eingeben")|  
   
  Weitere Informationen finden Sie unter [Autorisieren des Zugriffs auf Objekte und Vorgänge &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md).  
   

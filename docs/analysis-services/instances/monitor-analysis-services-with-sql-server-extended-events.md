@@ -1,15 +1,15 @@
 ---
-title: "Überwachen von Analysis Services mit SQLServer erweiterte Ereignisse | Microsoft Docs"
-ms.custom: 
+title: Überwachen von Analysis Services mit SQLServer erweiterte Ereignisse | Microsoft Docs
+ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - XEvents
@@ -18,20 +18,20 @@ f1_keywords:
 - Sql13.ssms.XeASNewEventSession.Targets.f1
 - Sql13.ssms.XeASNewEventSession.Advanced.f1
 ms.assetid: b57cc2fe-52dc-4fa9-8554-5a866e25c6d7
-caps.latest.revision: 
+caps.latest.revision: 11
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: abe5ce23dfb6f16fcc8fb27f16918895f6a51650
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 273ee749ecdb35c2f69331898f643b914fd52360
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="monitor-analysis-services-with-sql-server-extended-events"></a>Überwachen von Analysis Services mit den erweiterten Ereignissen von SQL Server
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
-Die erweiterten Ereignisse (*xEvents*) sind ein kompaktes Ablaufverfolgungs- und Leistungsüberwachungssystem, das sehr wenige Ressourcen verwendet. Dadurch stellen sie ein ideales Tool zum Diagnostizieren von Problemen sowohl auf Produktions- als auch auf Testservern dar. Sie sind zudem hoch skalierbar, konfigurierbar und durch den neuen integrierten Toolsupport in SQL Server 2016 einfacher zu verwenden. In SQL Server Management Studio können Sie bei Verbindungen mit Analysis Services-Instanzen eine Live-Ablaufverfolgung konfigurieren, ausführen und überwachen, ähnlich der Verwendung von SQL Server Profiler. Das Hinzufügen besserer Tools sollte xEvents zu einem sinnvolleren Ersatz für SQL Server Profiler machen und für mehr Symmetrie bei der Diagnostizierung von Problemen in Ihrem Datenbankmodul und Analysis Services-Workloads sorgen.  
+  Die erweiterten Ereignisse (*xEvents*) sind ein kompaktes Ablaufverfolgungs- und Leistungsüberwachungssystem, das sehr wenige Ressourcen verwendet. Dadurch stellen sie ein ideales Tool zum Diagnostizieren von Problemen sowohl auf Produktions- als auch auf Testservern dar. Sie sind zudem hoch skalierbar, konfigurierbar und durch den neuen integrierten Toolsupport in SQL Server 2016 einfacher zu verwenden. In SQL Server Management Studio können Sie bei Verbindungen mit Analysis Services-Instanzen eine Live-Ablaufverfolgung konfigurieren, ausführen und überwachen, ähnlich der Verwendung von SQL Server Profiler. Das Hinzufügen besserer Tools sollte xEvents zu einem sinnvolleren Ersatz für SQL Server Profiler machen und für mehr Symmetrie bei der Diagnostizierung von Problemen in Ihrem Datenbankmodul und Analysis Services-Workloads sorgen.  
   
  Neben [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]können Sie  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Sitzungen für erweiterte Ereignisse auch über die bisherige Methode (Erstellen von XMLA-Skripts) konfigurieren, die in vorherigen Releases unterstützt wurde.  
   
@@ -40,16 +40,11 @@ Die erweiterten Ereignisse (*xEvents*) sind ein kompaktes Ablaufverfolgungs- und
 > [!NOTE]  
 >  Sehen Sie sich dieses [kurze Einführungsvideo](https://www.youtube.com/watch?v=ja2mOHWRVC0&index=1&list=PLv2BtOtLblH1YvzQ5YnjfQFr_oKEvMk19) an, oder lesen Sie den [unterstützenden Blogbeitrag](http://blogs.msdn.com/b/analysisservices/archive/2015/09/22/using-extended-events-with-sql-server-analysis-services-2016-cpt-2-3.aspx) , um mehr über xEvents für Analysis Services in SQL Server 2016 zu erfahren.  
   
-##  <a name="bkmk_top"></a> In diesem Thema  
-  
--   [Verwenden von Management Studio zum Konfigurieren von Analysis Services](#bkmk_ssas_extended_events_ssms)  
-  
--   [XMLA-Skript zum Starten der erweiterten Ereignisse in Analysis Services](#bkmk_script_start)  
   
 ##  <a name="bkmk_ssas_extended_events_ssms"></a> Verwenden von Management Studio zum Konfigurieren von Analysis Services  
  Management Studio stellt sowohl für tabellarische als auch für mehrdimensionale Instanzen einen neuen Ordner namens „Verwaltung“ bereit, der vom Benutzer initiierte xEvent-Sitzungen enthält. Sie können mehrere Sitzungen gleichzeitig ausführen. In der aktuellen Implementierung unterstützt die [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Benutzeroberfläche der erweiterten Ereignisse jedoch nicht das Aktualisieren oder Wiedergeben einer vorhandenen Sitzung.  
   
- ![ssas_extended_events_ssms_start](../../analysis-services/instances/media/ssas-extended-events-ssms-start.png "ssas_extended_events_ssms_start")  
+ ![Ssas_extended_events_ssms_start](../../analysis-services/instances/media/ssas-extended-events-ssms-start.png "Ssas_extended_events_ssms_start")  
   
  **Auswählen von Ereignissen**  
   
@@ -79,7 +74,7 @@ Die erweiterten Ereignisse (*xEvents*) sind ein kompaktes Ablaufverfolgungs- und
   
  **Konfigurieren** ist eine Option am äußersten Ende des Dialogfelds.  
   
- ![ssas-xevents-configure](../../analysis-services/instances/media/ssas-xevents-configure.PNG "ssas-xevents-configure")  
+ ![Konfigurieren von SSAS-Xevents](../../analysis-services/instances/media/ssas-xevents-configure.PNG "Konfigurieren von Ssas-Xevents")  
   
  Wählen Sie bei der Konfiguration auf der Registerkarte „Ereignisfelder“ **TextData** aus, damit dieses Feld neben dem Ereignis auftaucht und dabei Rückgabewerte anzeigt, einschließlich auf dem Server ausgeführter Abfragen.  
   
@@ -139,9 +134,6 @@ Die erweiterten Ereignisse (*xEvents*) sind ein kompaktes Ablaufverfolgungs- und
  *metadata_filename*  
  Der Name der Datei, die die Ereignismetadaten enthält. Für diesen Namen wird ein Zeitstempel als Suffix verwendet, um das Überschreiben von Daten zu vermeiden, wenn die Ablaufverfolgung fortlaufend gesendet wird.  
   
-||  
-|-|  
-|![Pfeilsymbol mit Back Link zum Anfang verwendet](../../analysis-services/instances/media/uparrow16x16.gif "Pfeilsymbol mit Back Link zum Anfang verwendet") [In diesem Thema](#bkmk_top)|  
   
 ##  <a name="bkmk_script_stop"></a> XMLA-Skript zum Beenden der erweiterten Ereignisse in Analysis Services  
  Um das Erweiterte Ereignisse-Ablaufverfolgungsobjekt zu beenden, müssen Sie dieses Objekt mit einem ähnlichen XMLA-Skriptbefehl zum Löschen eines Objekts wie unten dargestellt löschen:  
@@ -167,9 +159,6 @@ Die erweiterten Ereignisse (*xEvents*) sind ein kompaktes Ablaufverfolgungs- und
  *trace_id*  
  Definiert den eindeutigen Bezeichner für die zu löschende Ablaufverfolgung.  
   
-||  
-|-|  
-|![Pfeilsymbol mit Back Link zum Anfang verwendet](../../analysis-services/instances/media/uparrow16x16.gif "Pfeilsymbol mit Back Link zum Anfang verwendet") [In diesem Thema](#bkmk_top)|  
   
 ## <a name="see-also"></a>Siehe auch  
  [Erweiterte Ereignisse](../../relational-databases/extended-events/extended-events.md)  

@@ -2,7 +2,7 @@
 title: SQLPrepare-Funktion | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 332e1b4b-b0ed-4e7a-aa4d-4f35f4f4476b
 caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0f4f752416fd704d3976728eabbe6a8b9d00bd37
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 4a1ad2c08c1b2df085e98581576fabfb93ba6236
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlprepare-function"></a>SQLPrepare-Funktion
 **Konformität**  
@@ -69,7 +69,7 @@ SQLRETURN SQLPrepare(
 |SQLSTATE|Fehler|Description|  
 |--------------|-----------|-----------------|  
 |01000|Allgemeine Warnung|Treiberspezifische Meldung dient zu Informationszwecken. (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
-|01 S 02|Der Optionswert wurde geändert|Ein Attribut angegebene Anweisung war ungültig aufgrund Implementierung Arbeitsbedingungen, damit ein ähnlichen Wert vorübergehend ersetzt wurde. (**SQLGetStmtAttr** aufgerufen werden können, um zu bestimmen, was vorübergehend ersetzten Werts ist.) Der Ersatzwert ist gültig für die *StatementHandle* , bis der Cursor geschlossen wird. Sind die Anweisungsattribute, die geändert werden können: SQL_ATTR_CONCURRENCY SQL_ATTR_CURSOR_TYPE SQL_ATTR_KEYSET_SIZE SQL_ATTR_MAX_LENGTH SQL_ATTR_MAX_ROWS SQL_ATTR_QUERY_TIMEOUT SQL_ATTR_SIMULATE_CURSOR<br /><br /> (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
+|01S02|Der Optionswert wurde geändert|Ein Attribut angegebene Anweisung war ungültig aufgrund Implementierung Arbeitsbedingungen, damit ein ähnlichen Wert vorübergehend ersetzt wurde. (**SQLGetStmtAttr** aufgerufen werden können, um zu bestimmen, was vorübergehend ersetzten Werts ist.) Der Ersatzwert ist gültig für die *StatementHandle* , bis der Cursor geschlossen wird. Sind die Anweisungsattribute, die geändert werden können: SQL_ATTR_CONCURRENCY SQL_ATTR_CURSOR_TYPE SQL_ATTR_KEYSET_SIZE SQL_ATTR_MAX_LENGTH SQL_ATTR_MAX_ROWS SQL_ATTR_QUERY_TIMEOUT SQL_ATTR_SIMULATE_CURSOR<br /><br /> (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
 |08S01|Kommunikations-Verbindungsfehler|Die Verbindung zwischen dem Treiber und die Datenquelle mit der der Treiber verbunden wurde aufgetreten ist, bevor die Verarbeitung für die Funktion abgeschlossen.|  
 |21S01|Die Liste einzufügender Werte stimmt nicht mit Spaltenliste überein.|\**StatementText* enthalten eine **einfügen** -Anweisung und die Anzahl der einzufügenden Werte entsprach nicht den Grad der abgeleiteten Tabelle.|  
 |21S02|Die Spaltenzahl der abgeleiteten Tabelle stimmt nicht mit Spaltenliste überein.|\**StatementText* enthalten eine **CREATE VIEW** -Anweisung und die Anzahl der angegebenen Namen ist nicht demselben Sicherheitsgrad wie die abgeleitete Tabelle, die durch die Abfragespezifikation definiert.|  
@@ -86,7 +86,7 @@ SQLRETURN SQLPrepare(
 |42S11|Index ist bereits vorhanden.|\**StatementText* enthalten eine **CREATE INDEX** -Anweisung und der angegebene Indexname bereits vorhanden.|  
 |42S12|Index wurde nicht gefunden|\**StatementText* enthalten eine **DROP INDEX** -Anweisung und der angegebene Indexname ist nicht vorhanden.|  
 |42S21|Spalte ist bereits vorhanden.|\**StatementText* enthalten eine **ALTER TABLE** -Anweisung und die Spalte angegeben wird, der **hinzufügen** -Klausel ist nicht eindeutig oder eine vorhandene Spalte in der Basistabelle bezeichnet.|  
-|42S22|Spalte wurde nicht gefunden.|\**StatementText* enthalten eine **CREATE INDEX** -Anweisung, und mindestens eine der Spalte in der Spaltenliste angegebene Namen ist nicht vorhanden.<br /><br /> \**StatementText* enthalten eine **GRANT** oder **widerrufen** -Anweisung und einen Namen für die angegebene Spalte nicht vorhanden war.<br /><br /> \**StatementText* enthalten eine **wählen**, **löschen**, **einfügen**, oder **UPDATE** -Anweisung und eine angegebene Spalte Der Name ist nicht vorhanden.<br /><br /> \**StatementText* enthalten eine **CREATE TABLE** -Anweisung und eine Spalte in einer Einschränkung (verweisen auf eine Tabelle nicht erstellt werden) angegeben war nicht vorhanden.|  
+|42S22|Spalte wurde nicht gefunden.|\**StatementText* enthalten eine **CREATE INDEX** -Anweisung, und mindestens eine der Spalte in der Spaltenliste angegebene Namen ist nicht vorhanden.<br /><br /> \**StatementText* enthalten eine **GRANT** oder **widerrufen** -Anweisung und einen Namen für die angegebene Spalte nicht vorhanden war.<br /><br /> \**StatementText* enthalten eine **wählen**, **löschen**, **einfügen**, oder **UPDATE** -Anweisung und eine angegebene Spaltenname ist nicht vorhanden.<br /><br /> \**StatementText* enthalten eine **CREATE TABLE** -Anweisung und eine Spalte in einer Einschränkung (verweisen auf eine Tabelle nicht erstellt werden) angegeben war nicht vorhanden.|  
 |HY000|Allgemeiner Fehler|Für die es keine spezifischen SQLSTATE wurde und für die keine implementierungsabhängige SQLSTATE definiert wurde, ist ein Fehler aufgetreten. Die zurückgegebene Fehlermeldung **SQLGetDiagRec** in der  *\*MessageText* Puffer beschreibt den Fehler und seiner Ursache.|  
 |HY001|Fehler bei der speicherbelegung|Der Treiber konnte nicht belegt werden zur Unterstützung der Ausführung oder den Abschluss der Funktion erforderlich.|  
 |HY008|Der Vorgang wurde abgebrochen|Asynchroner Verarbeitung wurde aktiviert, für die *StatementHandle*. Die Funktion aufgerufen wurde, und die Ausführung vor Abschluss **SQLCancel** oder **SQLCancelHandle** aufgerufen wurde, auf die *StatementHandle*, und klicken Sie dann die Funktion aufgerufen wurde erneut auf die *StatementHandle*.<br /><br /> Die Funktion aufgerufen wurde, und die Ausführung vor Abschluss **SQLCancel** oder **SQLCancelHandle** aufgerufen wurde, auf die *StatementHandle* aus einem anderen Thread in einem Multithread-Anwendung.|  

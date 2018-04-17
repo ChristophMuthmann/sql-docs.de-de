@@ -1,15 +1,16 @@
 ---
-title: "Ausführen von Commits oder Rollbacks für Transaktionen | Microsoft Docs"
-ms.custom: 
+title: Ausführen von Commits oder Rollbacks für Transaktionen | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - rolling back transactions [ODBC]
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - transactions [ODBC], rolling back
 - transactions [ODBC], committing
 ms.assetid: 800f2c1a-6f79-4ed1-830b-aa1a62ff5165
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 534c6181a1634eb4963bc4f448939f335d821e5f
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 3b828c7080737989c4bcefa99f18d715fe04eddc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="committing-and-rolling-back-transactions"></a>Ausführen von Commits oder Rollbacks von Transaktionen
 Um einen commit oder Rollback einer Transaktions im Manualcommit Modus, eine Anwendung ruft **SQLEndTran**. Treiber für DBMS-Systeme, die Transaktionen, in der Regel unterstützen implementieren Sie diese Funktion durch das Ausführen einer **COMMIT** oder **ROLLBACK** Anweisung. Der Treiber-Manager nicht aufgerufen **SQLEndTran** die Verbindung im Autocommit-Modus ist einfach zurückgibt, wenn SQL_SUCCESS zurück, selbst wenn die Anwendung versucht, ein Rollback der Transaktion auszuführen. Da die Treiber für DBMS-Systeme, die keine Transaktionen unterstützen immer im Autocommit Modus sind, können sie entweder implementieren **SQLEndTran** SQL_SUCCESS zurück, ohne jegliche oder überhaupt nicht implementiert.  

@@ -1,15 +1,16 @@
 ---
-title: Treiber-Manager &#39; s-Rolle in der Verbindungsprozess | Microsoft Docs
-ms.custom: 
+title: Treiber-Managers&#39;s-Rolle in der Verbindungsprozess | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - driver manager [ODBC], role in connection process
@@ -17,18 +18,18 @@ helpviewer_keywords:
 - connecting to driver [ODBC], driver manager
 - ODBC driver manager [ODBC]
 ms.assetid: 77c05630-5a8b-467d-b80e-c705dc06d601
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 10766d85c5e06323f534d131abfde582906fe340
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 9f6b57322f96f469060db134eead3c09071e7dde
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="driver-manager39s-role-in-the-connection-process"></a>Treiber-Manager &#39; s-Rolle in der Verbindungsprozess
+# <a name="driver-manager39s-role-in-the-connection-process"></a>Treiber-Managers&#39;s-Rolle in der Verbindungsprozess
 Denken Sie daran, dass Anwendungen keine Treiberfunktionen direkt aufrufen. Stattdessen rufen Sie Treiber-Manager-Funktionen mit dem gleichen Namen und der Treiber-Manager ruft der Treiberfunktionen. In der Regel geschieht dies fast sofort. Beispielsweise ruft die Anwendung **SQLExecute** im Treiber-Manager und nach einigen Fehlern der fehlerprüfung, ruft der Treiber-Manager **SQLExecute** im Treiber.  
   
  Der Verbindungsprozess unterscheidet. Wenn die Anwendung aufruft, **SQLAllocHandle** mit den Optionen SQL_HANDLE_ENV und SQL_HANDLE_DBC auf, ordnet die Funktion behandelt nur in der Treiber-Manager. Diese Funktion im Treiber wird in der Treiber-Manager nicht aufgerufen, da er nicht, welcher Treiber weiß aufrufen. Auf ähnliche Weise, wenn die Anwendung das Handle für eine nicht verbundene Verbindung übergibt **SQLSetConnectAttr** oder **SQLGetConnectAttr**, nur der Treiber-Manager die Funktion führt Folgendes aus. Sie speichert, oder ruft den Wert des Attributs aus der Verbindung zu behandeln und SQLSTATE 08003 (Verbindung nicht geöffnet) beim Abrufen eines Werts für ein Attribut nicht festgelegt wurde und für welche ODBC zurückgegeben keinen Standardwert definiert.  

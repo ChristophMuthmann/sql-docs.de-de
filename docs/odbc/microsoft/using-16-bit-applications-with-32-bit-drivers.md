@@ -1,30 +1,31 @@
 ---
 title: Verwenden von 16-Bit-Anwendungen mit 32-Bit-Treibern | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - ODBC drivers [ODBC], 16-bit applications
 - 16-bit applications with 32-bit drivers [ODBC]
 ms.assetid: 68feb3b7-c01a-4f42-8df9-f9c182d89325
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 95ff3ce88daf4a508145c28ea194a97b9cbbbabe
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: d389ada78e2a04b23b046f9a4c1eab8cff736227
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-16-bit-applications-with-32-bit-drivers"></a>Verwenden von 16-Bit-Anwendungen mit 32-Bit-Treiber
 > [!IMPORTANT]  
@@ -35,7 +36,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="architecture"></a>Aufbau  
  Die folgende Abbildung zeigt, wie die 16-Bit-Anwendungen mit 32-Bit-Treiber kommunizieren. Zwischen der 16-Bit-Treiber-Manager und die 32-Bit-Treiber sind generische thunking DLLs, die 16-Bit-ODBC-Aufrufe für 32-Bit-ODBC-Aufrufe zu konvertieren.  
   
- ![Wie 16 &#45; Bit-apps, die Kommunikation mit 32 &#45; bit-Treiber](../../odbc/microsoft/media/sdka2.gif "sdka2")  
+ ![Wie 16&#45;Bit-apps kommunizieren mit 32&#45;bit-Treiber](../../odbc/microsoft/media/sdka2.gif "sdka2")  
   
 > [!NOTE]  
 >  Jedes Mal, wenn eine 16-Bit-Anwendung mit einem 32-Bit-Treiber interagiert, gibt der 32-Bit-Treiber-Manager immer "2.0" als ODBC-Version vom Treiber unterstützt werden.  
@@ -45,7 +46,7 @@ ms.lasthandoff: 12/21/2017
   
  Die folgende Abbildung zeigt, wie eine 16-Bit-Anwendung eine 32-Bit-Treiber-Setup-DLL aufruft. Zwischen den 16-Bit-Installationsprogramm DLL und der 32-Bit-Treiber ist Setup-DLL für eine generische thunking-DLL, die 16-Bit-Installationsprogramm DLL-Aufrufe für 32-Bit-Installationsprogramm DLL Aufrufe konvertiert.  
   
- ![Wie ein 16 &#45; Bit-Anwendung aufruft, eine 32 &#45; -bit-Treiber-Setup-DLL](../../odbc/microsoft/media/sdka3.gif "sdka3")  
+ ![Wie ein 16&#45;ruft 32 Bit-app&#45;-bit-Treiber-Setup-DLL](../../odbc/microsoft/media/sdka3.gif "sdka3")  
   
  In der Windows on Windows (16-Bit in 32-Bit thunking) eine zusätzliche thunking-DLL, die mit dem Namen Ds32gt.dll konvertiert eine 32-Bit-Installation 16-Bit-Argumentwerte weitergereicht DLL wieder in 16-Bit.  
   

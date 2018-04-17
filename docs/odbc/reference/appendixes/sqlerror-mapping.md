@@ -1,30 +1,31 @@
 ---
 title: SQLError Zuordnung | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - mapping deprecated functions [ODBC], SQLError
 - SQLError function [ODBC], mapping
 ms.assetid: 802ac711-7e5d-4152-9698-db0cafcf6047
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 518814868a7fafe91a166564771af51fd8a49505
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 02c4eaa2a913028b492c45946ec769055561f521
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlerror-mapping"></a>SQLError-Zuordnung
 Wenn eine Anwendung ruft **SQLError** über einen ODBC 3.*.x* Treiber, den Aufruf von  

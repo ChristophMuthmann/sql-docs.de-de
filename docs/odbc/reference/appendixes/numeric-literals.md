@@ -1,15 +1,16 @@
 ---
 title: Numerische Literale | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - data types [ODBC], numeric data types
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - numeric literals [ODBC]
 - literals [ODBC], numeric
 ms.assetid: 9dc23656-61e1-4b62-a07f-64ab716e45d2
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5b0e86350d2f2182e257456192d1e2c18c31f061
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 33b180e63bf3f0c38c930f46e3b4a74a7ab66754
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="numeric-literals"></a>Numerische Literale
 Numerische Literale werden verwendet, wenn numerische Datenwerte in Zeichenfolgen gespeichert werden. Für die Konvertierung von numerischen SQL-Daten an eine SQL_C_CHAR-Zeichenfolge oder Konvertierung von numerischen C-Daten in eine Zeichenfolge SQL_CHAR oder SQL_VARCHAR dient numerischen Literalen Syntax zum angeben, was im Ziel gespeichert werden. Für die Konvertierung von numerischen als SQL_C_CHAR Zeichenfolge zu numerischen SQL-Daten gespeichert oder eine Zahl, die als eine SQL_CHAR-Zeichenfolge, die numerische C-Daten gespeichert wird diese Syntax verwendet, um überprüfen, was in der Datenquelle gespeichert ist.  

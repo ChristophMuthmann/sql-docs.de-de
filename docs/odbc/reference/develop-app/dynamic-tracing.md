@@ -1,30 +1,31 @@
 ---
 title: Dynamische Tracing | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - tracing options [ODBC], dynamic
 - dynamic tracing [ODBC]
 ms.assetid: ebe58a83-a7b0-4747-86c8-2af2940471ef
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 51ea74b8b54bf9d9e26bedf2733147e8552ce08f
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 4ca4985388ef607becef285b8883f8ab24fbad78
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="dynamic-tracing"></a>Dynamische Ablaufverfolgung
 Ablaufverfolgung kann aktiviert oder deaktiviert werden, an einem beliebigen Punkt in einer Anwendung ausführen. Dabei kann es sich um eine Anwendung, um eine beliebige Anzahl von Funktionsaufrufen zu verfolgen.  
