@@ -1,15 +1,15 @@
 ---
 title: Verwenden von System.Transactions | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: clr
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - VB
@@ -19,20 +19,20 @@ helpviewer_keywords:
 - Dispose method
 - System.Transactions namespace
 ms.assetid: 79656ce5-ce46-4c5e-9540-cf9869bd774b
-caps.latest.revision: 
+caps.latest.revision: 16
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 28edabefb40a43db17bb69a484c97e2c55f64274
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 67ccba900d3aa22b5aad79e6112fbc8695298e85
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-systemtransactions"></a>Verwenden von 'System.Transactions'
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Durch den **System.Transactions** -Namespace wird ein neues Transaktionsframework bereitgestellt, das voll in ADO.NET und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CLR (Common Language Runtime) integriert ist. Die **System.Transactions.TransactionScope** -Klasse bewirkt, dass ein Codeblock transaktional wird, indem sie Verbindungen implizit in einer verteilten Transaktion einträgt. Sie müssen am Ende des Codeblocks, der durch **Complete** markiert wird, die **TransactionScope**-Methode aufrufen. Die **Dispose** -Methode wird aufgerufen, wenn die Programmausführung einen Codeblock verlässt, was dazu führt, dass die Transaktion nicht fortgeführt wird, wenn die **Complete** -Methode nicht aufgerufen wird. Wenn eine Ausnahme ausgelöst wurde, die dazu führt, dass der Code den Bereich verlässt, wird die Transaktion als nicht fortgeführt betrachtet.  
+  Durch den **System.Transactions** -Namespace wird ein neues Transaktionsframework bereitgestellt, das voll in ADO.NET und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CLR (Common Language Runtime) integriert ist. Die **System.Transactions.TransactionScope** -Klasse bewirkt, dass ein Codeblock transaktional wird, indem sie Verbindungen implizit in einer verteilten Transaktion einträgt. Sie müssen am Ende des Codeblocks, der durch **Complete** markiert wird, die **TransactionScope**-Methode aufrufen. Die **Dispose** -Methode wird aufgerufen, wenn die Programmausführung einen Codeblock verlässt, was dazu führt, dass die Transaktion nicht fortgeführt wird, wenn die **Complete** -Methode nicht aufgerufen wird. Wenn eine Ausnahme ausgelöst wurde, die dazu führt, dass der Code den Bereich verlässt, wird die Transaktion als nicht fortgeführt betrachtet.  
   
  Wir empfehlen die Verwendung eines **using** -Blocks um sicherzustellen, dass die **Dispose** -Methode für das **TransactionScope** -Objekt aufgerufen wird, wenn der **using** -Block verlassen wird. Wird für ausstehende Transaktionen kein Commit oder Rollback ausgeführt, wird die Leistung unter Umständen stark beeinträchtigt, da der Timeout für **TransactionScope** standardmäßig eine Minute beträgt. Wenn Sie keine **using** -Anweisung verwenden, müssen Sie alle Arbeiten in einem **Try** -Block ausführen und die **Dispose** -Methode im **Finally** -Block explizit aufrufen.  
   

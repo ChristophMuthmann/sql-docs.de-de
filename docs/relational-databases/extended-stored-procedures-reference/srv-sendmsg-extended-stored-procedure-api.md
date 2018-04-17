@@ -1,16 +1,16 @@
 ---
-title: "srv_sendmsg (API für die erweiterte gespeicherte Prozedur) | Microsoft-Dokumentation"
-ms.custom: 
+title: srv_sendmsg (API für die erweiterte gespeicherte Prozedur) | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: extended-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - srv_sendmsg
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - srv_sendmsg
 ms.assetid: efcb50b9-f8ff-4121-bf67-05830171b928
-caps.latest.revision: 
+caps.latest.revision: 30
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5ac42768779bb196ee1200f35289f4f4dc5da836
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
-ms.translationtype: MT
+ms.openlocfilehash: fd9353044e5c6ab8edde8989cfb8eb0c663f29b8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="srvsendmsg-extended-stored-procedure-api"></a>srv_sendmsg (API für erweiterte gespeicherte Prozeduren)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -112,7 +112,7 @@ msglen
 ## <a name="returns"></a>Rückgabewert  
  SUCCEED oder FAIL  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Hinweise  
  Diese Funktion sendet Fehler- oder Informationsmeldungen an den Client. Sie wird für jede zu sendende Meldung einmal aufgerufen.  
   
  Mithilfe von **srv_sendmsg** können Meldungen in beliebiger Reihenfolge gesendet werden, bevor oder nachdem alle Zeilen (sofern vorhanden) mit **srv_sendrow**gesendet wurden. Ggf. müssen alle Meldungen an den Client gesendet werden, bevor der Abschlussstatus mit **srv_senddone**gesendet wird.  

@@ -2,7 +2,7 @@
 title: Sys.dm_db_log_space_usage (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/29/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.service: ''
 ms.component: dmv's
@@ -27,13 +27,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4578d219630f97245d4cf46c6ddb701457e92ac3
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 3b33af43c0f32442303e250e00c13e6d9312dd9a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="sysdmdblogspaceusage-transact-sql"></a>sys.dm_db_log_space_usage (Transact-SQL)
+# <a name="sysdmdblogspaceusage-transact-sql"></a>Sys.dm_db_log_space_usage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
 Gibt Speicherplatz Nutzungsinformationen für das Transaktionsprotokoll. 

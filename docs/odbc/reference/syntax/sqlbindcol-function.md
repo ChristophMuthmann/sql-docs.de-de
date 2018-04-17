@@ -2,7 +2,7 @@
 title: SQLBindCol-Funktion | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 41a37655-84cd-423f-9daa-e0b47b88dc54
 caps.latest.revision: 37
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4b2031680faefcdf0b701ad8065b9d90cd8678f8
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 27b78b2b74e4990ce22d47fd433ae7147fc3d536
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlbindcol-function"></a>SQLBindCol-Funktion
 **Konformität**  
@@ -68,7 +68,7 @@ SQLRETURN SQLBindCol(
  Sie können auch einen erweiterte C-Datentyp angeben. Weitere Informationen finden Sie unter [C-Datentypen in ODBC](../../../odbc/reference/develop-app/c-data-types-in-odbc.md).  
   
  *TargetValuePtr*  
- [Verzögerte Eingabe/Ausgabe] Zeiger auf den Datenpuffer zum Binden an die Spalte. **SQLFetch** und **SQLFetchScroll** Daten in diesen Puffer zurück. **SQLBulkOperations** gibt Daten zurück, in diesem Puffer beim *Vorgang* SQL_FETCH_BY_BOOKMARK; wird abgerufen, Daten aus dieser gepuffert, wenn *Vorgang* ist SQL_ADD oder SQL_UPDATE_BY_BOOKMARK . **SQLSetPos** gibt Daten zurück, in diesem Puffer beim *Vorgang* SQL_REFRESH; ist er ruft Daten ab, aus dieser beim Puffern *Vorgang* SQL_UPDATE ist.  
+ [Verzögerte Eingabe/Ausgabe] Zeiger auf den Datenpuffer zum Binden an die Spalte. **SQLFetch** und **SQLFetchScroll** Daten in diesen Puffer zurück. **SQLBulkOperations** gibt Daten zurück, in diesem Puffer beim *Vorgang* SQL_FETCH_BY_BOOKMARK; ist er ruft Daten ab, aus dieser gepuffert, wenn *Vorgang* SQL_ADD oder SQL_UPDATE_BY_BOOKMARK ist. **SQLSetPos** gibt Daten zurück, in diesem Puffer beim *Vorgang* SQL_REFRESH; ist er ruft Daten ab, aus dieser beim Puffern *Vorgang* SQL_UPDATE ist.  
   
  Wenn *TargetValuePtr* ist ein null-Zeiger der Treiber hebt die Bindung auf den Datenpuffer für die Spalte. Eine Anwendung kann alle Spalten durch den Aufruf Bindung **SQLFreeStmt** mit der Option SQL_UNBIND. Eine Anwendung heben Sie die Bindung des Datenpuffers für eine Spalte kann jedoch weiterhin eine für die Spalte gebundenen Längen-/Indikatorpuffers auftreten, wenn die *TargetValuePtr* Argument im Aufruf **SQLBindCol** ist ein null-Zeiger jedoch *StrLen_or_IndPtr* Argument ist ein gültiger Wert.  
   

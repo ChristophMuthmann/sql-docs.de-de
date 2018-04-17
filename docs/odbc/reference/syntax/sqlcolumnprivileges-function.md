@@ -2,7 +2,7 @@
 title: SQLColumnPrivileges-Funktion | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: ef233d9a-6ed5-4986-9d42-5e0b1a79fb6e
 caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5058ae7c097858469db0aad57509f013e68db7ca
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 419bb70737c37e8cb47e53f7b1179d46b68582fc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlcolumnprivileges-function"></a>SQLColumnPrivileges-Funktion
 **Konformität**  
@@ -68,7 +68,7 @@ SQLRETURN SQLColumnPrivileges(
  *NameLength1*  
  [Eingabe] Länge in Zeichen des **CatalogName*.  
   
- *SchemaName*  
+ *schemaName*  
  [Eingabe] Name des Schemas. Wenn ein Treiber unterstützt die Schemas für einige Tabellen jedoch nicht für andere, z. B. wenn der Treiber Daten aus anderen DBMS, eine leere Zeichenfolge ruft ("") gibt die Tabellen, die keine Schemas. *SchemaName* ein Zeichenfolgenmuster für die Suche nicht enthalten.  
   
  Wenn das SQL_ATTR_METADATA_ID-Anweisungsattribut auf SQL_TRUE, festgelegt ist *SchemaName* wird als Bezeichner behandelt. Ist er SQL_FALSE, *SchemaName* ist ein normales Argument; wird als solcher behandelt, und der Fall ist von Bedeutung.  
@@ -76,7 +76,7 @@ SQLRETURN SQLColumnPrivileges(
  *NameLength2*  
  [Eingabe] Länge in Zeichen des **SchemaName*.  
   
- *Tabellenname*  
+ *TableName*  
  [Eingabe] Tabellenname. Dieses Argument darf nicht null-Zeiger sein. *TableName* ein Zeichenfolgenmuster für die Suche nicht enthalten.  
   
  Wenn das SQL_ATTR_METADATA_ID-Anweisungsattribut auf SQL_TRUE, festgelegt ist *TableName* wird als Bezeichner behandelt und seine Fall spielt keine Rolle. Ist er SQL_FALSE, *TableName* ist ein normales Argument; wird als solcher behandelt, und der Fall ist von Bedeutung.  
@@ -84,7 +84,7 @@ SQLRETURN SQLColumnPrivileges(
  *NameLength3*  
  [Eingabe] Länge in Zeichen des **TableName*.  
   
- *Spaltenname*  
+ *ColumnName*  
  [Eingabe] Zeichenfolge Suchmuster für Spaltennamen verfügbar.  
   
  Wenn das SQL_ATTR_METADATA_ID-Anweisungsattribut auf SQL_TRUE, festgelegt ist *ColumnName* wird als Bezeichner behandelt und seine Fall spielt keine Rolle. Ist er SQL_FALSE, *ColumnName* ist ein Wert Pattern-Argument; wird als solcher behandelt, und der Fall ist von Bedeutung.  

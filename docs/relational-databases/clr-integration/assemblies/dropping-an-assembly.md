@@ -1,15 +1,15 @@
 ---
-title: "Durch Löschen einer Assembly | Microsoft Docs"
-ms.custom: 
+title: Durch Löschen einer Assembly | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: clr
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - removing assemblies
@@ -17,20 +17,20 @@ helpviewer_keywords:
 - assemblies [CLR integration], removing
 - dropping assemblies
 ms.assetid: 03481034-dc91-4488-ab24-ba44243e2690
-caps.latest.revision: 
+caps.latest.revision: 16
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1db4c5af104f3f00db4cdf26c3ab2f7c94800513
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 43dbe5a4d72563217b4c2ad7a74e78aea7e7ac09
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="dropping-an-assembly"></a>Durch Löschen einer Assembly
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Assemblys, die mithilfe der CREATE ASSEMBLY-Anweisung in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] registriert wurden, können gelöscht oder verworfen werden, wenn die von ihnen bereitgestellte Funktionalität nicht mehr benötigt wird. Durch das Löschen einer Assembly werden die Assembly sowie alle zugehörigen Dateien, wie Debugdateien, aus der Datenbank entfernt. Zum Löschen einer Assembly verwenden Sie die DROP ASSEMBLY-Anweisung mit der folgenden Syntax:  
+  Assemblys, die mithilfe der CREATE ASSEMBLY-Anweisung in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] registriert wurden, können gelöscht oder verworfen werden, wenn die von ihnen bereitgestellte Funktionalität nicht mehr benötigt wird. Durch das Löschen einer Assembly werden die Assembly sowie alle zugehörigen Dateien, wie Debugdateien, aus der Datenbank entfernt. Zum Löschen einer Assembly verwenden Sie die DROP ASSEMBLY-Anweisung mit der folgenden Syntax:  
   
 ```  
 DROP ASSEMBLY MyDotNETAssembly  
@@ -76,8 +76,8 @@ SELECT o.name AS major_name, o.type_desc AS major_type_desc
  [Erstellen einer Assembly](../../../relational-databases/clr-integration/assemblies/creating-an-assembly.md)   
  [DROP AGGREGATE &#40;Transact-SQL&#41;](../../../t-sql/statements/drop-aggregate-transact-sql.md)   
  [DROP FUNCTION &#40;Transact-SQL&#41;](../../../t-sql/statements/drop-function-transact-sql.md)   
- [DROP PROCEDURE &#40; Transact-SQL &#41;](../../../t-sql/statements/drop-procedure-transact-sql.md)   
+ [DROP PROCEDURE & #40; Transact-SQL & #41;](../../../t-sql/statements/drop-procedure-transact-sql.md)   
  [DROP TRIGGER &#40;Transact-SQL&#41;](../../../t-sql/statements/drop-trigger-transact-sql.md)   
- [DROP TYPE &#40;Transact-SQL&#41;](../../../t-sql/statements/drop-type-transact-sql.md)  
+ [DROP-Typ &#40;Transact-SQL&#41;](../../../t-sql/statements/drop-type-transact-sql.md)  
   
   

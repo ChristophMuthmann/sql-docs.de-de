@@ -1,8 +1,8 @@
 ---
-title: sys.dm_exec_query_optimizer_info (Transact-SQL) | Microsoft Docs
+title: dm_exec_query_optimizer_info (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: dmv's
@@ -27,11 +27,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 44e298879fcd4493bcf9a817d84a1962cfb377db
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 8744cd8041f08d0b846b388bf0c06e01b2713220
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmexecqueryoptimizerinfo-transact-sql"></a>sys.dm_exec_query_optimizer_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -43,7 +44,7 @@ ms.lasthandoff: 04/05/2018
   
 |Name|Datentyp|Description|  
 |----------|---------------|-----------------|  
-|**counter**|**nvarchar(4000)**|Name des Statistikereignisses des Abfrageoptimierers.|  
+|**Leistungsindikator**|**nvarchar(4000)**|Name des Statistikereignisses des Abfrageoptimierers.|  
 |**occurrence**|**bigint**|Anzahl der Vorkommen von Optimierungsereignissen für diesen Leistungsindikator.|  
 |**value**|**float**|Durchschnittlicher Eigenschaftswert pro Ereignisvorkommen.|  
 |**pdw_node_id**|**int**|**Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Der Bezeichner für den Knoten, dem auf diesem Verteilungspunkt befindet.|  
@@ -54,7 +55,7 @@ Auf [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], erfordert `VIE
 Auf [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], erfordert die `VIEW DATABASE STATE` Berechtigung in der Datenbank.   
     
 ## <a name="remarks"></a>Hinweise  
- **sys.dm_exec_query_optimizer_info** contains the following properties (counters). Alle Vorkommenwerte sind kumulativ und werden beim Neustarten des Systems auf 0 festgelegt. Alle Werte für Wertfelder werden beim Neustarten des Systems auf NULL festgelegt. Alle Wertspaltenwerte, die einen Durchschnitt angeben, verwenden den Vorkommenwert aus derselben Zeile als Nenner bei der Berechnung des Durchschnitts. Alle abfrageoptimierungen werden gemessen, wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bestimmt die Änderungen an **Dm_exec_query_optimizer_info**, einschließlich beide Benutzer und systemgenerierten Abfragen. Ausführung eines bereits zwischengespeicherten Plans ändert sich nicht auf die Werte in **Dm_exec_query_optimizer_info**nur Optimierungen sind von Bedeutung.  
+ **dm_exec_query_optimizer_info** enthält die folgenden Eigenschaften (Leistungsindikatoren). Alle Vorkommenwerte sind kumulativ und werden beim Neustarten des Systems auf 0 festgelegt. Alle Werte für Wertfelder werden beim Neustarten des Systems auf NULL festgelegt. Alle Wertspaltenwerte, die einen Durchschnitt angeben, verwenden den Vorkommenwert aus derselben Zeile als Nenner bei der Berechnung des Durchschnitts. Alle abfrageoptimierungen werden gemessen, wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bestimmt die Änderungen an **Dm_exec_query_optimizer_info**, einschließlich beide Benutzer und systemgenerierten Abfragen. Ausführung eines bereits zwischengespeicherten Plans ändert sich nicht auf die Werte in **Dm_exec_query_optimizer_info**nur Optimierungen sind von Bedeutung.  
   
 |Leistungsindikator|Vorkommen|Wert|  
 |-------------|----------------|-----------|  

@@ -2,7 +2,7 @@
 title: SQLColAttribute-Funktion | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 8c45c598-cb01-4789-a571-e93619a18ed9
 caps.latest.revision: 42
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7470412149bf336be8d07495eab4aa9bdf449a86
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 765cdab2b8619501a29990c9b944b3b98797b4ed
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlcolattribute-function"></a>SQLColAttribute-Funktion
 **Konformität**  
@@ -136,7 +136,7 @@ SQLRETURN SQLColAttribute (
   
  Eine ODBC-3. *x* Treiber muss einen Wert für jedes der deskriptorfelder zurück. Wenn ein Deskriptorfeld nicht für einen Treiber oder eine Datenquelle gilt und, sofern nichts anderes angegeben ist, der Treiber 0 in gibt \* *StringLengthPtr* oder eine leere Zeichenfolge in **CharacterAttributePtr*.  
   
-## <a name="backward-compatibility"></a>Backward Compatibility  
+## <a name="backward-compatibility"></a>Abwärtskompatibilität  
  Der ODBC-3. *x* Funktion **SQLColAttribute** ersetzt die veraltete ODBC 2. *X* Funktion **SQLColAttributes**. Bei der Zuordnung **SQLColAttributes** auf **SQLColAttribute** (bei einer ODBC 2. *X* Anwendung arbeitet mit einer ODBC-3. *X* Treiber), oder die Zuordnung **SQLColAttribute** auf **SQLColAttributes** (Wenn eine ODBC 3. *X* Anwendung arbeitet mit einer ODBC 2. *X* Treiber), der Treiber-Manager übergibt entweder den Wert des *FieldIdentifier* ordnet Sie diesen durch, um einen neuen Wert oder einen Fehler zurückgibt, wie folgt:  
   
 > [!NOTE]  
@@ -152,7 +152,7 @@ SQLRETURN SQLColAttribute (
   
  Die folgende Tabelle enthält die Deskriptor Typen zurückgegebenes **SQLColAttribute**. Der Typ für *NumericAttributePtr* Werte ist **SQLLEN \*** .  
   
-|*FieldIdentifier*|Information<br /><br /> im zurückgegebenen|Description|  
+|*FieldIdentifier*|Informationen<br /><br /> im zurückgegebenen|Description|  
 |-----------------------|---------------------------------|-----------------|  
 |SQL_DESC_AUTO_UNIQUE_VALUE (ODBC 1.0)|*NumericAttributePtr*|SQL_TRUE, wenn die Spalte eine automatische Inkrementierung-Spalte ist.<br /><br /> SQL_FALSE, wenn die Spalte keine automatische Inkrementierung Spalte oder nicht numerisch ist.<br /><br /> Dieses Feld ist für numerische Spalten nur gültig. Eine Anwendung können Sie die Werte in eine Zeile mit einer Autoincrement-Spalte einfügen, jedoch Werte in der Spalte in der Regel kann nicht aktualisiert werden.<br /><br /> Wenn eine Einfügung in eine Autoincrement-Spalte ausgeführt wird, wird ein eindeutiger Wert zum Zeitpunkt des Einfügens in die Spalte eingefügt. Das Inkrement ist nicht definiert, aber Daten datenquellenspezifischen ist. Eine Anwendung sollte nicht davon ausgehen, dass eine Autoincrement-Spalte bei bestimmten Zeitpunkt kein(e) Inkremente ausnahmslos bestimmten startet.|  
 |SQL_DESC_BASE_COLUMN_NAME (ODBC 3.0)|*CharacterAttributePtr*|Legen Sie für das Ergebnis der Name der Basisspalte Spalte ein. Wenn der Name der Basisspalte nicht (wie im Fall von Spalten, die Ausdrücke sind) vorhanden ist, enthält diese Variable eine leere Zeichenfolge.<br /><br /> Diese Informationen werden vom SQL_DESC_BASE_COLUMN_NAME-Datensatzfeld vom IRD zurückgegeben, die ein Feld schreibgeschützt ist.|  

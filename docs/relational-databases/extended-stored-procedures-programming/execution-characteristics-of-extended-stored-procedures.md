@@ -1,30 +1,30 @@
 ---
-title: "Ausführungsmerkmale erweiterter gespeicherter Prozeduren | Microsoft Docs"
-ms.custom: 
+title: Ausführungsmerkmale erweiterter gespeicherter Prozeduren | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: extended-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - extended stored procedures [SQL Server], executing
 - executing extended stored procedures [SQL Server]
 ms.assetid: 6fe1f7e8-cc02-49df-8a2a-d47a96ec3567
-caps.latest.revision: 
+caps.latest.revision: 33
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 01bf617e937f512f8015aa5ec6a2e8379e4aff7d
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: c95aaba427984447539f6c8213e7f69eb3b10b3a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="execution-characteristics-of-extended-stored-procedures"></a>Ausführungsmerkmale erweiterter gespeicherter Prozeduren
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -1,16 +1,16 @@
 ---
-title: "Anforderungen zum Ausführen von SQLXML-Beispielen | Microsoft Docs"
-ms.custom: 
+title: Anforderungen zum Ausführen von SQLXML-Beispielen | Microsoft Docs
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - examples [SQLXML]
@@ -18,20 +18,21 @@ helpviewer_keywords:
 - SQLXML, samples
 - examples [SQLXML], requirements
 ms.assetid: acfee2eb-cf35-4377-9fde-82ad1d938011
-caps.latest.revision: 
+caps.latest.revision: 17
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 80410e7d590df6afb821f1c1e1f9c38539969569
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 40274edc3ea719b182caed2e183bb629557e6477
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="requirements-for-running-sqlxml-examples"></a>Anforderungen zum Ausführen von SQLXML-Beispielen
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Die [SQLXML 4.0-Programmierung](../../relational-databases/sqlxml/sqlxml-4-0-programming-concepts.md) Abschnitt enthält zahlreiche Beispiele. In diesem Thema sind die Anforderungen zum Erstellen funktionstüchtiger Vorlagen anhand dieser Beispiele aufgeführt.  
+  Die [SQLXML 4.0-Programmierung](../../relational-databases/sqlxml/sqlxml-4-0-programming-concepts.md) Abschnitt enthält zahlreiche Beispiele. In diesem Thema sind die Anforderungen zum Erstellen funktionstüchtiger Vorlagen anhand dieser Beispiele aufgeführt.  
   
  Um mithilfe der SQLXML 4.0-Beispiele funktionstüchtige Vorlagen zu erstellen, muss Folgendes installiert sein:  
   
@@ -41,6 +42,6 @@ Die [SQLXML 4.0-Programmierung](../../relational-databases/sqlxml/sqlxml-4-0-pro
   
 -   MDAC 2.6 oder höher  
   
- In vielen Beispielen werden mithilfe der Vorlagen XPath-Abfragen für das XSD-Zuordnungsschema angegeben. Weitere Informationen finden Sie unter [mithilfe Annotated XSD-Schemas in Abfragen &#40; SQLXML 4.0 &#41; ](../../relational-databases/sqlxml/annotated-xsd-schemas/using-annotated-xsd-schemas-in-queries-sqlxml-4-0.md).  
+ In vielen Beispielen werden mithilfe der Vorlagen XPath-Abfragen für das XSD-Zuordnungsschema angegeben. Weitere Informationen finden Sie unter [mithilfe Annotated XSD-Schemas in Abfragen & #40; SQLXML 4.0 & #41; ](../../relational-databases/sqlxml/annotated-xsd-schemas/using-annotated-xsd-schemas-in-queries-sqlxml-4-0.md).  
   
   

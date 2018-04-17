@@ -1,30 +1,31 @@
 ---
 title: Installieren von SMO | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/06/2017
-ms.prod: sql-non-specified
-ms.reviewer: 
+ms.prod: sql
+ms.reviewer: ''
 ms.suite: sql
 ms.prod_service: database-engine
 ms.component: smo
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - installing SMO
 - SMO [SQL Server], installing
 - SQL Server Management Objects, installing
 ms.assetid: 140e9971-4940-4866-89b9-5cec938e2a16
-caps.latest.revision: 
+caps.latest.revision: 46
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 26438c3a9baea978aace0fc1383349f813e6c0d0
-ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
+monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 1acdf8bd989730949aa67a2e9a769d1a0dcb1485
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 #<a name="installing-smo"></a>Installieren von SMO
 

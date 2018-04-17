@@ -1,16 +1,16 @@
 ---
 title: Sys. fn_trace_geteventinfo (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - fn_trace_geteventinfo
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - sys.fn_trace_geteventinfo function
 - status information [SQL Server], events
 ms.assetid: 5b1c858a-ca43-4e2b-9d67-8654daaf0cc5
-caps.latest.revision: 
+caps.latest.revision: 35
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6edca5d67d22522418dfa5f8d1b08ef94623756e
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: ba67df1fde8ed816cf10af795e57eee57659ab6d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysfntracegeteventinfo-transact-sql"></a>sys.fn_trace_geteventinfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ fn_trace_geteventinfo ( trace_id )
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
-|**eventid**|**int**|ID des Ereignisses, dessen Ablauf verfolgt wird.|  
+|**EventID**|**int**|ID des Ereignisses, dessen Ablauf verfolgt wird.|  
 |**columnid**|**int**|Die ID-Nummern aller Spalten, die für jedes Ereignis gesammelt wurden.|  
   
 ## <a name="remarks"></a>Hinweise  

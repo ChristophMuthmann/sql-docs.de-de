@@ -1,16 +1,16 @@
 ---
 title: Sys.sysfulltextcatalogs (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, pdw
-ms.service: 
+ms.service: ''
 ms.component: system-compatibility-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysfulltextcatalogs
@@ -23,16 +23,17 @@ helpviewer_keywords:
 - sys.sysfulltextcatalogs compatibility view
 - sysfulltextcatalogs system table
 ms.assetid: 18ac6ad5-01e8-428f-8422-a9ca29626977
-caps.latest.revision: 
+caps.latest.revision: 38
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 871604113ffcb98b84a70a142c7312871922fc05
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+monikerRange: '>= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 3314d07bcadcc6180f1e38413b2b3471b1983842
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="syssysfulltextcatalogs-transact-sql"></a>sys.sysfulltextcatalogs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -50,7 +51,7 @@ ms.lasthandoff: 02/09/2018
 |**path**|**nvarchar(260)**|Vom Benutzer angegebener Stammpfad.<br /><br /> NULL = Der Pfad wurde nicht angegeben. Der Standardpfad (Installationspfad) wurde verwendet.|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Zuordnen von Systemtabellen zu Systemsichten &#40; Transact-SQL &#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
+ [Zuordnen von Systemtabellen zu Systemsichten &#40;Transact-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
  [Kompatibilitätssichten &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   
   

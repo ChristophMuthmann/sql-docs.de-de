@@ -1,16 +1,16 @@
 ---
 title: Semanticsimilaritytable (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - semanticsimilaritytable
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - semanticsimilaritytable function
 ms.assetid: b49d40ab-7552-438b-ad67-6237dcccb75b
-caps.latest.revision: 
+caps.latest.revision: 18
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8ba25daf71db106e5ecd8877e83edda6e43a5286
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: ed174cb128d87ed23871f46de3c67e01217a2f88
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="semanticsimilaritytable-transact-sql"></a>semanticsimilaritytable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

@@ -1,16 +1,16 @@
 ---
 title: Sys. event_log (Azure SQL-Datenbank) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: 
+ms.prod: ''
 ms.prod_service: sql-database
-ms.reviewer: 
+ms.reviewer: ''
 ms.service: sql-database
 ms.component: system-catalog-views
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - event_log
@@ -23,16 +23,17 @@ helpviewer_keywords:
 - event_log
 - sys.event_log
 ms.assetid: ad5496b5-e5c7-4a18-b5a0-3f985d7c4758
-caps.latest.revision: 
+caps.latest.revision: 26
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 77682d906a1fe24f371e6ec31c11e586398cdba6
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
+ms.openlocfilehash: b8794f8e4268df504452ca8fe73f13eea371dda2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="syseventlog-azure-sql-database"></a>sys.event_log (Azure SQL-Datenbank)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -55,10 +56,10 @@ ms.lasthandoff: 01/02/2018
 |**event_subtype_desc**|**nvarchar(64)**|Die Beschreibung des Ereignisuntertyps.<br /><br /> Finden Sie unter [Ereignistypen](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) eine Liste der möglichen Werte.|  
 |**severity**|**int**|Der Schweregrad des Fehlers. Folgende Werte sind möglich:<br /><br /> 0 = Information<br />1 = Warning<br />2 = Fehler|  
 |**event_count**|**int**|Die Anzahl, wie oft dieses Ereignis eingetreten ist für die angegebene Datenbank innerhalb des angegebenen Zeitintervalls (**Start_time** und **End_time**).|  
-|**Beschreibung**|**nvarchar(max)**|Detaillierte Beschreibung des Ereignisses.<br /><br /> Finden Sie unter [Ereignistypen](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) eine Liste der möglichen Werte.|  
+|**description**|**nvarchar(max)**|Detaillierte Beschreibung des Ereignisses.<br /><br /> Finden Sie unter [Ereignistypen](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) eine Liste der möglichen Werte.|  
 |**additional_data**|**XML**|*Hinweis: Dieser Wert ist immer NULL für Azure SQL-Datenbank V12. Finden Sie unter [Beispiele](#Deadlock) im Abschnitt zum Abrufen von Deadlockereignisse für V12.*<br /><br /> Für **Deadlock** enthält Ereignisse, diese Spalte das deadlockdiagramm. Bei anderen Ereignistypen enthält diese Spalte NULL. |  
   
-##  <a name="EventTypes"></a>Ereignistypen  
+##  <a name="EventTypes"></a> Ereignistypen  
  Die von jeder Zeile in dieser Ansicht aufgezeichneten Ereignisse werden nach einer Kategorie identifiziert (**Event_category**), Ereignistyp (**Event_type**), und einen Subtyp (**Event_subtype**). In der folgenden Tabelle werden die Ereignistypen aufgeführt, die in dieser Sicht gesammelt werden.  
   
  Für Ereignisse in der **Konnektivität** Kategorie zusammenfassende Informationen finden Sie in der Sys. database_connection_stats-Sicht.  
@@ -66,7 +67,7 @@ ms.lasthandoff: 01/02/2018
 > [!NOTE]  
 >  Diese Sicht enthält nicht alle [!INCLUDE[ssSDS](../../includes/sssds-md.md)]-Datenbankereignisse, die eintreten können, sondern nur die hier aufgeführten. Zusätzliche Kategorien, Ereignistypen und Untertypen werden in zukünftigen Versionen von [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ggf. hinzugefügt.  
   
-|**event_category**|**event_type**|**event_subtype**|**event_subtype_desc**|**severity**|**Beschreibung**|  
+|**event_category**|**event_type**|**event_subtype**|**event_subtype_desc**|**severity**|**description**|  
 |-------------------------|---------------------|------------------------|------------------------------|------------------|---------------------|  
 |**Konnektivität**|**connection_successful**|0|**connection_successful**|0|Die Verbindung mit der Datenbank war erfolgreich.|  
 |**Konnektivität**|**connection_failed**|0|**invalid_login_name**|2|Der Anmeldename ist in dieser SQL Server-Version nicht gültig.|  
@@ -102,13 +103,13 @@ ms.lasthandoff: 01/02/2018
   
  Wenn ein Benutzer zum Beispiel aufgrund eines ungültigen Anmeldenamens sieben Mal zwischen 11:00 und 11:05 Uhr am 05.02.2012 (UTC) keine Verbindung mit der Datenbank Database1 herstellen kann, sind diese Informationen in dieser Sicht in einer einzelnen Zeile verfügbar:  
   
-|**database_name**|**start_time**|**end_time**|**event_category**|**event_type**|**event_subtype**|**event_subtype_desc**|**severity**|**event_count**|**Beschreibung**|**additional_data**|  
+|**database_name**|**start_time**|**end_time**|**event_category**|**event_type**|**event_subtype**|**event_subtype_desc**|**severity**|**event_count**|**description**|**additional_data**|  
 |------------------------|---------------------|-------------------|-------------------------|---------------------|------------------------|------------------------------|------------------|----------------------|---------------------|--------------------------|  
 |`Database1`|`2012-02-05 11:00:00`|`2012-02-05 11:05:00`|`connectivity`|`connection_failed`|`4`|`login_failed_for_user`|`2`|`7`|`Login failed for user.`|`NULL`|  
   
 ### <a name="interval-starttime-and-endtime"></a>
           start_time und end_time des Intervalls  
- Ein Ereignis wird in ein aggregationsintervall eingeschlossen, wenn das Ereignis tritt auf, *auf* oder *nach***Start_time** und *vor*  **End_time** für dieses Intervall. Beispielsweise würde ein Ereignis, das genau zum Zeitpunkt `2012-10-30 19:25:00.0000000` eintritt, nur im zweiten unten gezeigten Intervall aufgenommen werden:  
+ Ein Ereignis wird in ein aggregationsintervall eingeschlossen, wenn das Ereignis tritt auf, *auf* oder *nach *** Start_time** und *vor *** End_time** für dieses Intervall. Beispielsweise würde ein Ereignis, das genau zum Zeitpunkt `2012-10-30 19:25:00.0000000` eintritt, nur im zweiten unten gezeigten Intervall aufgenommen werden:  
   
 ```  
 start_time                    end_time  
@@ -149,7 +150,7 @@ SELECT * FROM sys.event_log
 WHERE event_type = 'deadlock'   
     AND database_name = 'Database1';  
 ```  
-<a name="Deadlock"></a>Die folgende Abfrage gibt alle Deadlockereignisse für die Datenbank Database1 (gilt nur für Azure SQL-Datenbank V12).  
+<a name="Deadlock"></a> Die folgende Abfrage gibt alle Deadlockereignisse für die Datenbank Database1 (gilt nur für Azure SQL-Datenbank V12).  
   
 ```  
 WITH CTE AS (  

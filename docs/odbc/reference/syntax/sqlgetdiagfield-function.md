@@ -2,7 +2,7 @@
 title: SQLGetDiagField-Funktion | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 1dbc4398-97a8-4585-bb77-1f7ea75e24c4
 caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c202841d54e01758312c4e8388a78e583de9058c
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f337b8455ba860caaf5e4a5b1bd4be1d0ee86c37
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlgetdiagfield-function"></a>SQLGetDiagField-Funktion
 **Konformität**  
@@ -224,7 +224,7 @@ n-Definition *|"ERSTELLEN SIE DOMÄNE"|SQL_DIAG_CREATE_DOMAIN|
 |*Translation-definition*|"ÜBERSETZUNG ZU ERSTELLEN"|SQL_DIAG_CREATE_TRANSLATION|  
 |*Update-Anweisung positioniert*|"DYNAMISCHE AKTUALISIERUNG CURSOR"|SQL_DIAG_DYNAMIC_UPDATE_CURSOR|  
 |*Update-Anweisung durchsucht*|"WHERE AKTUALISIEREN"|SQL_DIAG_UPDATE_WHERE|  
-|Unknown|*leere Zeichenfolge*|SQL_DIAG_UNKNOWN_STATEMENT|  
+|Unknown|*Leere Zeichenfolge*|SQL_DIAG_UNKNOWN_STATEMENT|  
   
 ## <a name="sequence-of-status-records"></a>Sequenz der Statusdatensätze  
  Statusdatensätze werden in einer Sequenz basierend auf der Zeilennummer und den Typ der Diagnose positioniert. Der Treiber-Manager bestimmt die endgültige Reihenfolge in den statusdatensätzen zurückgegeben, die sie generiert. Der Treiber bestimmt die endgültige Reihenfolge in den statusdatensätzen zurückgegeben, die sie generiert.  

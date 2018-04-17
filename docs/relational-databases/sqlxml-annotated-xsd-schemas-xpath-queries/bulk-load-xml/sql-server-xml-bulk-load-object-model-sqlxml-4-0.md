@@ -1,16 +1,16 @@
 ---
 title: SQL Server XML Bulk Load-Objektmodell (SQLXML 4.0) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - bulk load [SQLXML], object model
@@ -34,20 +34,21 @@ helpviewer_keywords:
 - Execute method
 - XML Bulk Load [SQLXML], object model
 ms.assetid: a9efbbde-ed2b-4929-acc1-261acaaed19d
-caps.latest.revision: 
+caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5b954b9690d8e6f67995a45336296e2ff1f404f1
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: b3b3798be063dd586d74cf4f44d72a48c5f39ccf
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-server-xml-bulk-load-object-model-sqlxml-40"></a>SQL Server XML Bulk Load-Objektmodell (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Die Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] XML-Massenladen-Objektmodell besteht aus den SQLXMLBulkLoad-Objekt. Dieses Objekt unterstützt die folgenden Methoden und Eigenschaften.  
+  Die Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] XML-Massenladen-Objektmodell besteht aus den SQLXMLBulkLoad-Objekt. Dieses Objekt unterstützt die folgenden Methoden und Eigenschaften.  
   
 ## <a name="methods"></a>Methoden  
  Execute  
@@ -71,7 +72,7 @@ Die Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] XML-M
   
  Hinweis: Wenn ID-Propagierung erfolgt, kommt diese Option nicht zur Anwendung, und Einschränkungen werden weiter überprüft. Dies ist der Fall, wenn `KeepIdentity=False` gilt und eine Beziehung definiert ist, in der es sich beim übergeordneten Element um ein Identitätsfeld handelt und der Wert bei der Generierung an das untergeordnete Element übertragen wird.  
   
- ConnectionCommand  
+ "Connectioncommand"  
  Gibt ein vorhandenes Verbindungsobjekt (zum Beispiel das ADO- oder ICommand Command-Objekt), das XML-Massenladen verwendet werden soll. Sie können der "connectioncommand"-Eigenschaft verwenden, anstatt eine Verbindungszeichenfolge anzugeben, mit der ConnectionString-Eigenschaft. Die Transaktionseigenschaft muss auf "true" festgelegt werden, wenn Sie "connectioncommand" verwenden.  
   
  Wenn Sie die "ConnectionString" und "connectioncommand"-Eigenschaft verwenden, verwendet XML-Massenladen die zuletzt angegebene Eigenschaft.  

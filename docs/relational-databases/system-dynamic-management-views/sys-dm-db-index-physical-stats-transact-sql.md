@@ -1,16 +1,16 @@
 ---
-title: sys.dm_db_index_physical_stats (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: Sys. dm_db_index_physical_stats (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_db_index_physical_stats
@@ -23,16 +23,17 @@ helpviewer_keywords:
 - sys.dm_db_index_physical_stats dynamic management function
 - fragmentation [SQL Server]
 ms.assetid: d294dd8e-82d5-4628-aa2d-e57702230613
-caps.latest.revision: 
+caps.latest.revision: 95
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 1bdad59aebb96a2afd2f11172c6068d54213c095
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 048961489aee9c369c8b01a04a083eba32d255dc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmdbindexphysicalstats-transact-sql"></a>sys.dm_db_index_physical_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,7 +43,7 @@ ms.lasthandoff: 02/03/2018
 > [!IMPORTANT]
 > Wenn Sie Abfragen **Sys. dm_db_index_physical_stats** auf einer Serverinstanz, die Always On hostet [lesbares sekundäres Replikat](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md), ein REDO-Blockierungsproblem auftreten. Dies kommt daher, dass diese dynamische Verwaltungssicht eine beabsichtigte gemeinsame Sperre für die angegebene Benutzertabelle oder Sicht erhält, die Anforderungen von einem REDO-Thread für eine X-Sperre dieser Benutzertabelle oder Sicht blockieren kann.  
   
- **Sys. dm_db_index_physical_stats** gibt keine Informationen zu speicheroptimierten Indizes zurück. Informationen zur Verwendung von speicheroptimierten Indizes finden Sie unter [dm_db_xtp_index_stats &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-index-stats-transact-sql.md).  
+ **Sys. dm_db_index_physical_stats** gibt keine Informationen zu speicheroptimierten Indizes zurück. Informationen zur Verwendung von speicheroptimierten Indizes finden Sie unter [dm_db_xtp_index_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-index-stats-transact-sql.md).  
   
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -76,7 +77,7 @@ sys.dm_db_index_physical_stats (
  Geben Sie NULL an, wenn Informationen zu allen Tabellen und Sichten in der angegebenen Datenbank zurückgegeben werden sollen. Bei Angabe von NULL für *Object_id*, müssen Sie auch angeben, NULL für *Index_id* und *Partition_number*.  
   
  *Index_id* | 0 | NULL | -1 | STANDARDWERT  
- Die ID des Indexes. *index_id* is **int**. Gültige Eingaben sind die ID-Nummer eines Indexes, 0, wenn *Object_id* ist ein Heap ist, NULL,-1 oder DEFAULT. Der Standardwert ist-1. NULL,-1 und DEFAULT sind in diesem Kontext gleichwertig.  
+ Die ID des Indexes. *Index_id* ist **Int**. Gültige Eingaben sind die ID-Nummer eines Indexes, 0, wenn *Object_id* ist ein Heap ist, NULL,-1 oder DEFAULT. Der Standardwert ist-1. NULL,-1 und DEFAULT sind in diesem Kontext gleichwertig.  
   
  Geben Sie NULL an, um Informationen zu allen Indizes für eine Basistabelle oder Sicht zurückgegeben. Bei Angabe von NULL für *Index_id*, müssen Sie auch angeben, NULL für *Partition_number*.  
   
@@ -116,7 +117,7 @@ sys.dm_db_index_physical_stats (
 |avg_record_size_in_bytes|**float**|Durchschnittliche Datensatzgröße in Bytes.<br /><br /> Bei einem Index bezieht sich die durchschnittliche Datensatzgröße auf die aktuelle B-Strukturebene in der IN_ROW_DATA-Zuordnungseinheit.<br /><br /> Bei einem Heap auf die durchschnittliche Datensatzgröße in der IN_ROW_DATA-Zuordnungseinheit.<br /><br /> Bei LOB_DATA- oder ROW_OVERFLOW_DATA-Zuordnungseinheiten auf die durchschnittliche Datensatzgröße in der gesamten Zuordnungseinheit.<br /><br /> NULL zurück, wenn *Modus* = LIMITED.|  
 |forwarded_record_count|**bigint**|Anzahl der Datensätze in einem Heap, die weiterleitungszeiger auf einen anderen Datenspeicherort besitzen. (Dieser Status tritt während eines Updates auf, wenn nicht genügend Speicherplatz vorhanden ist, um die neue Zeile am ursprünglichen Speicherort zu speichern.)<br /><br /> NULL für eine beliebige Zuordnungseinheit außer IN_ROW_DATA-Zuordnungseinheiten für einen Heap.<br /><br /> NULL für heaps, wenn *Modus* = LIMITED.|  
 |compressed_page_count|**bigint**|Die Anzahl der komprimierten Seiten.<br /><br /> Bei Heaps sind neu zugeordnete Seiten nicht mit PAGE seitenkomprimiert. Ein Heap wird nur unter zwei besonderen Bedingungen PAGE-komprimiert: wenn Massendaten importiert werden oder wenn ein Heap neu erstellt wird. Typische DML-Vorgänge, die Seitenzuordnungen hervorrufen, werden nicht PAGE-komprimiert. Erstellen Sie einen Heap neu, wenn der compressed_page_count-Wert den gewünschten Schwellenwert überschreitet.<br /><br /> Für Tabellen mit gruppiertem Index gibt der compressed_page_count-Wert die Wirksamkeit der PAGE-Komprimierung an.|  
-|hobt_id|bigint|**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis zur [aktuellen Version](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Für columnstore-Indizes ist dies die ID für ein Rowset, das die internen columnstore-Daten für eine Partition nachverfolgt. Die Rowsets sind, wie Daten heaps gespeicherte oder binäre Strukturen. Sie verfügen über dieselbe Index-ID wie der übergeordnete columnstore-Index. Weitere Informationen finden Sie unter [sys.internal_partitions &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md).<br /><br /> NULL, wenn|  
+|hobt_id|bigint|**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis zur [aktuellen Version](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Für columnstore-Indizes ist dies die ID für ein Rowset, das die internen columnstore-Daten für eine Partition nachverfolgt. Die Rowsets sind, wie Daten heaps gespeicherte oder binäre Strukturen. Sie verfügen über dieselbe Index-ID wie der übergeordnete columnstore-Index. Weitere Informationen finden Sie unter [sys.internal_partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md).<br /><br /> NULL, wenn|  
 |column_store_delete_buffer_state|tinyint|**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis zur [aktuellen Version](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> 0 = NOT_APPLICABLE<br /><br /> 1 = OPEN<br /><br /> 2 = EIN AUSGLEICH DURCHGEFÜHRT<br /><br /> 3 = LEEREN<br /><br /> 4 = ABKOPPELN<br /><br /> 5 = BEREIT|  
 |column_store_delete_buff_state_desc||**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis zur [aktuellen Version](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> NOT_APPLICABLE – der Index der übergeordneten ist kein columnstore-Index.<br /><br /> Öffnen – Löschvorgänge und Scanner verwenden Sie diese.<br /><br /> BELASTUNG – Löschvorgänge werden ein Ausgleich durchgeführt aber Scanner jedoch verwendet werden.<br /><br /> Das leeren – Puffer wird geschlossen, und Zeilen im Puffer für die Delete-Bitmap geschrieben werden.<br /><br /> ABKOPPELN – von Zeilen in der geschlossenen löschungspuffers geschrieben wurden, für die Delete-Bitmap, aber der Puffer wurde nicht abgeschnitten, da Scanner verwendet werden. Neue Scanner müssen nicht die Abschaltung Puffer verwendet werden, da der geöffnete Puffer ausreichend ist.<br /><br /> Soweit sind – diese löschungspuffers verwendet werden kann.|  
   
@@ -183,7 +184,7 @@ GO
   
  **Die logische Fragmentierung**  
   
- Dies ist der Prozentsatz der Seiten, die auf den Blattseiten eines Indexes nicht ordnungsgemäß sortiert sind. Eine außerhalb der normalen Reihenfolge ist eine Seite für die ist die nächste physische Seite zugeordnet, die dem Index nicht der Seite auf den weiter-Pag zeigt*e* Zeiger in der aktuellen Blattseite.  
+ Dies ist der Prozentsatz der Seiten, die auf den Blattseiten eines Indexes nicht ordnungsgemäß sortiert sind. Eine nicht ordnungsgemäß einsortierte Seite ist eine Seite, für die die nächste physische Seite, die dem Index zugeordnet ist, nicht die Seite ist, auf die der Zeiger für die nächste Seit*e* auf der aktuellen Blattseite zeigt.  
   
  **Blockfragmentierung**  
   
@@ -240,7 +241,7 @@ GO
   
  Nach dem Verweigern der VIEW DATABASE STATE-Berechtigung können keine Objekte in der Datenbank zurückgegeben werden, unabhängig von möglicherweise erteilten CONTROL-Berechtigungen für bestimmte Objekte. Auch wenn dem Datenbank-Platzhalter @*Database_id*= NULL angegeben wird, wird die Datenbank ausgelassen.  
   
- Weitere Informationen finden Sie unter [dynamische Verwaltungssichten und-Funktionen &#40; Transact-SQL &#41; ](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).  
+ Weitere Informationen finden Sie unter [dynamische Verwaltungssichten und-Funktionen &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).  
   
 ## <a name="examples"></a>Beispiele  
   
@@ -300,7 +301,7 @@ GO
 ```  
   
 ### <a name="d-using-sysdmdbindexphysicalstats-in-a-script-to-rebuild-or-reorganize-indexes"></a>D. Verwenden von "sys.dm_db_index_physical_stats" in einem Skript, um Indizes neu zu erstellen oder neu zu organisieren  
- Im folgenden Beispiel werden automatisch alle Partitionen in einer Datenbank neu angeordnet oder neu erstellt, die eine durchschnittliche Fragmentierung von über 10 % aufweisen. Zum Ausführen dieser Abfrage ist die VIEW DATABASE STATE-Berechtigung erforderlich. In diesem Beispiel wird `DB_ID` als erster Parameter angegeben, ohne einen Datenbanknamen anzugeben. Ein Fehler wird generiert, wenn die aktuelle Datenbank über einen Kompatibilitätsgrad von 80 oder niedriger verfügt. Zum Beheben des Fehlers ersetzen Sie `DB_ID()` durch einen gültigen Datenbanknamen. Weitere Informationen zu Kompatibilitätsgraden von Datenbanken finden Sie unter [ALTER DATABASE Kompatibilitätsgrad &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
+ Im folgenden Beispiel werden automatisch alle Partitionen in einer Datenbank neu angeordnet oder neu erstellt, die eine durchschnittliche Fragmentierung von über 10 % aufweisen. Zum Ausführen dieser Abfrage ist die VIEW DATABASE STATE-Berechtigung erforderlich. In diesem Beispiel wird `DB_ID` als erster Parameter angegeben, ohne einen Datenbanknamen anzugeben. Ein Fehler wird generiert, wenn die aktuelle Datenbank über einen Kompatibilitätsgrad von 80 oder niedriger verfügt. Zum Beheben des Fehlers ersetzen Sie `DB_ID()` durch einen gültigen Datenbanknamen. Weitere Informationen zu Kompatibilitätsgraden von Datenbanken finden Sie unter [ALTER DATABASE Kompatibilitätsgrad &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   
 ```  
 -- Ensure a USE <databasename> statement has been executed first.  
@@ -436,7 +437,7 @@ select * from sys.dm_db_index_physical_stats (db_id(), object_id ('ExpenseQueue'
  [sys.dm_db_index_usage_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)   
  [sys.dm_db_partition_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)   
  [sys.allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
- [System Views &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
+ [Systemsichten &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
   
   
 

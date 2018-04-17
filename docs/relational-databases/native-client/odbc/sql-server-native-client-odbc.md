@@ -1,15 +1,15 @@
 ---
 title: SQL Server Native Client (ODBC) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client|ODBC
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQLNCLI, ODBC
@@ -20,16 +20,17 @@ helpviewer_keywords:
 - SQL Server Native Client, ODBC
 - ODBC, about SQL Server Native Client ODBC driver
 ms.assetid: 811d5ba3-a2b8-48c0-adbc-8c91f041f458
-caps.latest.revision: 
+caps.latest.revision: 46
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0b17b4b7255a63b3c3d1b5f17f89df8d3cfcf009
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: ee80e0526d04171ad4b6a4fa96799c17763764e9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-server-native-client-odbc"></a>SQL Server Native Client (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -47,15 +48,15 @@ ms.lasthandoff: 01/25/2018
   
 -   [Erstellen eine SQL Server Native Client ODBC-Treiber-Anwendung](../../../relational-databases/native-client/odbc/creating-a-driver-application.md)  
   
--   [Bei der Kommunikation mit SQLServer &#40; ODBC &#41;](../../../relational-databases/native-client-odbc-communication/communicating-with-sql-server-odbc.md)  
+-   [Bei der Kommunikation mit SQLServer &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-communication/communicating-with-sql-server-odbc.md)  
   
--   [Ausführen von Abfragen &#40; ODBC &#41;](../../../relational-databases/native-client-odbc-queries/executing-queries-odbc.md)  
+-   [Ausführen von Abfragen &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-queries/executing-queries-odbc.md)  
   
--   [Verarbeitens von Ergebnissen &#40; ODBC &#41;](../../../relational-databases/native-client-odbc-results/processing-results-odbc.md)  
+-   [Verarbeiten von Ergebnissen &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-results/processing-results-odbc.md)  
   
--   [Verwenden von Cursorn &#40; ODBC &#41;](../../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md)  
+-   [Verwenden von Cursorn & #40; ODBC & #41;](../../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md)  
   
--   [Ausführen von Transaktionen &#40; ODBC &#41;](http://msdn.microsoft.com/library/f431191a-5762-4f0b-85bb-ac99aff29724)  
+-   [Ausführen von Transaktionen & #40; ODBC & #41;](http://msdn.microsoft.com/library/f431191a-5762-4f0b-85bb-ac99aff29724)  
   
 -   [Behandlung von Fehlern und Meldungen](../../../relational-databases/native-client-odbc-error-messages/handling-errors-and-messages.md)  
   
@@ -63,25 +64,25 @@ ms.lasthandoff: 01/25/2018
   
 -   [Verwenden von Katalogfunktionen](../../../relational-databases/native-client/odbc/using-catalog-functions.md)  
   
--   [Ausführen von Massenkopiervorgängen &#40; ODBC &#41;](../../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)  
+-   [Durchführen von Massenkopiervorgängen &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)  
   
 -   [Verwalten von Text und Imagespalten](../../../relational-databases/native-client-odbc-text-image-columns/managing-text-and-image-columns.md)  
   
 -   [Leistungsprofilerstellung des ODBC-Treibers](../../../relational-databases/native-client/odbc/profiling-odbc-driver-performance.md)  
   
--   [Table-Valued Parameters &#40; ODBC &#41;](../../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
+-   [Tabellenwertparameter &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
   
--   [Datum und Uhrzeit-Verbesserungen &#40; ODBC &#41;](../../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
+-   [Datum und Uhrzeit-Verbesserungen & #40; ODBC & #41;](../../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
   
--   [Große benutzerdefinierte CLR-Typen &#40; ODBC &#41;](../../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)  
+-   [Große benutzerdefinierte CLR-Typen &#40;ODBC&#41;](../../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)  
   
--   [FILESTREAM-Unterstützung &#40; ODBC &#41;](../../../relational-databases/native-client/odbc/filestream-support-odbc.md)  
+-   [FILESTREAM-Unterstützung &#40;ODBC&#41;](../../../relational-databases/native-client/odbc/filestream-support-odbc.md)  
   
--   [Dienstprinzipalnamen &#40; Dienstprinzipalnamen &#41; in Clientverbindungen &#40; ODBC &#41;](../../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md)  
+-   [Dienstprinzipalnamen &#40;SPNs&#41; in Clientverbindungen &#40;ODBC&#41;](../../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md)  
   
--   [Unterstützung für Spalten mit geringer Dichte &#40; ODBC &#41;](../../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md)  
+-   [Unterstützung für Spalten mit geringer Dichte &#40;ODBC&#41;](../../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md)  
   
--   [SQL Server Native Client &#40; ODBC &#41; Referenz](http://msdn.microsoft.com/library/06b7edee-8636-49d9-9b5c-2c710bf4fa2d)  
+-   [SQL Server Native Client &#40;ODBC&#41; Verweis](http://msdn.microsoft.com/library/06b7edee-8636-49d9-9b5c-2c710bf4fa2d)  
   
 -   [Vorgehensweisen zu ODBC](../../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)  
   

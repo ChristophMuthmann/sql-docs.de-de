@@ -1,15 +1,15 @@
 ---
 title: dm_external_script_requests | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 06/24/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_external_script_requests
@@ -21,16 +21,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_external_script_requests dynamic management view
 ms.assetid: e7e7c50f-b8b2-403c-b8c8-1955da5636c3
-caps.latest.revision: 
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 55ac900238a49bcad4c0af31b7482b7381b1aadc
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 6b73281b970940caced870dbf75c78946f9f559b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmexternalscriptrequests"></a>sys.dm_external_script_requests
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ Gibt eine Zeile für jedes aktive Workerkonto zurück, das ein externes Skript a
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
-|external_script_request_id|**unique identifier**|Die ID des Prozesses, der die externe Skriptanforderung gesendet hat. Diese ID entspricht der Prozess-ID, wie sie empfangen wurde von [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]|  
+|external_script_request_id|**Eindeutiger Bezeichner**|Die ID des Prozesses, der die externe Skriptanforderung gesendet hat. Dies entspricht dem Prozess-ID beim Empfangen von [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]|  
 |Sprache|**nvarchar**|Schlüsselwort, das einer unterstützten Skriptsprache entspricht. Derzeit wird nur `R` unterstützt.|  
 |degree_of_parallelism|**int**|Zahl, die die Anzahl von parallelen Prozessen angibt, die erstellt wurden. Dieser Wert kann sich von der Anzahl von parallelen Prozessen unterscheiden, die angefordert wurden.|  
 |external_user_name|**nvarchar**|Das Windows-Workerkonto, unter dem das Skript ausgeführt wurde.|  
@@ -91,7 +91,7 @@ external_script_request_id  |Sprache  |degree_of_parallelism  |external_user_nam
   
 ## <a name="see-also"></a>Siehe auch  
  [Dynamische Verwaltungssichten und -funktionen &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Ausführung bezogene dynamische Verwaltungssichten und-Funktionen &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
+ [Ausführung dynamische Verwaltungssichten und-Funktionen im Zusammenhang &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
 [sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md)
 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)  
   

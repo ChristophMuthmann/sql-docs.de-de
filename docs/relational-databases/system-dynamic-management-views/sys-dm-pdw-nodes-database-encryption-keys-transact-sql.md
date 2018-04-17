@@ -1,32 +1,33 @@
 ---
-title: sys.dm_pdw_nodes_database_encryption_keys (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: Sys.dm_pdw_nodes_database_encryption_keys (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/07/2017
-ms.prod: 
+ms.prod: ''
 ms.prod_service: sql-data-warehouse, pdw
 ms.service: sql-data-warehouse
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: e7fd02b2-5d7e-4816-a0af-b58ae2ac3f7a
-caps.latest.revision: 
+caps.latest.revision: 9
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 43b57a1628ff91c37d4667d9bab12f6980958b8c
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
+ms.openlocfilehash: ea3221e859093667883109c1e3977daa753230c1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="sysdmpdwnodesdatabaseencryptionkeys-transact-sql"></a>sys.dm_pdw_nodes_database_encryption_keys (Transact-SQL)
+# <a name="sysdmpdwnodesdatabaseencryptionkeys-transact-sql"></a>Sys.dm_pdw_nodes_database_encryption_keys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   Gibt Informationen über den Verschlüsselungsstatus einer Datenbank und die ihr zugeordneten Verschlüsselungsschlüssel für die Datenbank zurück. **sys.dm_pdw_nodes_database_encryption_keys** provides this information for each node. Weitere Informationen über die datenbankverschlüsselung finden Sie unter [Transparent Data Encryption (SQL Server PDW)](http://msdn.microsoft.com/en-us/b82ad21d-09dd-43dd-8fab-bcf2c8c3ac6d).  
@@ -42,15 +43,14 @@ ms.lasthandoff: 02/03/2018
 |opened_date|**datetime**|Zeigt das Datum an, an dem der Datenbankschlüssel zuletzt geöffnet wurde.|  
 |key_algorithm|**varchar(?)**|Zeigt den Algorithmus an, der für den Schlüssel verwendet wird.|  
 |key_length|**int**|Zeigt die Länge des Schlüssels an.|  
-|
-          encryptor_thumbprint|**varbin**|Zeigt den Fingerabdruck der Verschlüsselung an.|  
+|encryptor_thumbprint|**varbin**|Zeigt den Fingerabdruck der Verschlüsselung an.|  
 |percent_complete|**real**|Prozentualer Anteil der bereits abgeschlossenen Änderung des Verschlüsselungsstatus einer Datenbank. Dieser Wert ist 0, wenn es keine Statusänderung gibt.|  
 |node_id|**int**|Eindeutige numerische Id, die dem Knoten zugeordnet.|  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die VIEW SERVER STATE-Berechtigung auf dem Server.  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
  Das folgende Beispiel verknüpft `sys.dm_pdw_nodes_database_encryption_keys` mit anderen Systemtabellen an den Verschlüsselungsstatus für jeden Knoten von der TDE eine Datenbank geschützt.  
   
 ```  
@@ -68,7 +68,7 @@ ORDER BY D.database_id, PD.pdw_node_ID;
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [SQL Datawarehouse und dynamische Verwaltungssichten für Parallel Datawarehouse &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)   
+ [SQL Datawarehouse und Parallel Data Warehouse-dynamische Verwaltungssichten &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)   
  [CREATE DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-encryption-key-transact-sql.md)   
  [ALTER DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-encryption-key-transact-sql.md)   
  [DROP DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-encryption-key-transact-sql.md)  

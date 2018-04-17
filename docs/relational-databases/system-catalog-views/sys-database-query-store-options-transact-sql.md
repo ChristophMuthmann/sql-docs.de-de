@@ -1,16 +1,16 @@
 ---
-title: sys.database_query_store_options (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: database_query_store_options (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 10/25/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DATABASE_QUERY_STORE_OPTIONS_TSQL
@@ -23,18 +23,19 @@ helpviewer_keywords:
 - database_query_store_options catalog view
 - sys.database_query_store_options catalog view
 ms.assetid: 16b47d55-8019-41ff-ad34-1e0112178067
-caps.latest.revision: 
+caps.latest.revision: 24
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 46710eb543ae038d22052cd55b356df9458201e3
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 1c048c66e20e210f84d26dbff492aede56839fe2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="sysdatabasequerystoreoptions-transact-sql"></a>sys.database_query_store_options (Transact-SQL)
+# <a name="sysdatabasequerystoreoptions-transact-sql"></a>database_query_store_options (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Gibt die Optionen zum Abfragespeicher für diese Datenbank zurück.  
@@ -54,9 +55,9 @@ ms.lasthandoff: 02/01/2018
 |**max_storage_size_mb**|**bigint**|Maximale Datenträgergröße für den Abfragespeicher. Standardwert ist 100 MB.<br />Der Standardwert für die Premium Edition von [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] liegt bei 1 GB, für die Basic Edition von [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] bei 10 MB.<br /><br /> Ändern Sie mithilfe der `ALTER DATABASE <database> SET QUERY_STORE (MAX_STORAGE_SIZE_MB = <size>)` Anweisung.|  
 |**stale_query_threshold_days**|**bigint**|Anzahl der Tage, die keine Richtlinieneinstellungen Abfragen im Abfragespeicher beibehalten werden. Standardwert ist 30. Auf 0 festgelegt, um die Aufbewahrungsrichtlinie zu deaktivieren.<br />Für die Basic-Edition von [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ist der Standardwert 7 Tage.<br /><br /> Ändern Sie mithilfe der `ALTER DATABASE <database> SET QUERY_STORE ( CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = <value> ) )` Anweisung.|  
 |**max_plans_per_query**|**bigint**|Schränkt die maximale Anzahl von gespeicherten Pläne an. Standardwert ist 200. Wenn der Höchstwert erreicht ist, beendet der Abfragespeicher die Erfassung nach neue Pläne für diese Abfrage. Auf 0 festlegen, wird die Einschränkung im Hinblick auf die Anzahl der erfassten Pläne entfernt.<br /><br /> Ändern Sie mithilfe der `ALTER DATABASE<database> SET QUERY_STORE (MAX_PLANS_PER_QUERY = <n>)` Anweisung.|  
-|**query_capture_mode**|**smallint**|Die derzeit aktiven abfrageerfassungsmodus:<br /><br /> 1 = ALL: alle Abfragen werden erfasst. Dies ist der Standardwert für die Konfiguration für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).<br /><br /> 2 = die AUTO - Capture relevanten Abfragen basierend auf der Anzahl und dem Ressourcenverbrauch Ausführung. Dies ist der Standardwert für die Konfiguration für [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].<br /><br /> 3 = keine - Erfassung neuer Abfragen beendet. Der Abfragespeicher wird fortgesetzt, Kompilier- und Laufzeitstatistiken für Abfragen zu erfassen, die bereits erfasst wurden. Verwenden Sie diese Konfiguration mit Vorsicht, da übersehen werden können, um wichtige Abfragen zu erfassen.|  
+|**query_capture_mode**|**smallint**|Die derzeit aktiven abfrageerfassungsmodus:<br /><br /> 1 = ALL: alle Abfragen werden erfasst. Dies ist der Standardwert für die Konfiguration für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).<br /><br /> 2 = die AUTO - Capture relevanten Abfragen basierend auf der Anzahl und dem Ressourcenverbrauch Ausführung. Dies ist der Standardwert für die Konfiguration für [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].<br /><br /> 3 = keine - Erfassung neuer Abfragen beendet. Der Abfragedatenspeicher sammelt weiterhin Statistiken zur Kompilierung und Runtime für Abfragen, die bereits erfasst wurden. Verwenden Sie diese Konfiguration mit Vorsicht, da übersehen werden können, um wichtige Abfragen zu erfassen.|  
 |**query_capture_mode_desc**|**nvarchar(60)**|Die textbeschreibung der tatsächlichen Aufzeichnungsmodus des Abfragespeichers:<br /><br /> Alle (Standard für [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)])<br /><br /> AUTOMATISCH (Standard für [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)])<br /><br /> Keine|  
-|**size_based_cleanup_mode**|**smallint**|Steuert, ob die Bereinigung automatisch aktiviert wird, wenn die Gesamtmenge der Daten maximalen Größe nähert:<br /><br /> 1 = OFF – Größe basierend die Bereinigung nicht automatisch aktiviert.<br /><br /> 2 = die AUTO - Größe basierend die Bereinigung wird automatisch aktiviert, wenn auf den Datenträger erreicht 90 % der Größe **Max_storage_size_mb**. Dies ist der Standardwert für die Konfiguration.<br /><br />Größenbasierte Cleanup entfernt zuerst die am wenigsten aufwändigen und ältesten Abfragen. Es wird bei ca. 80 % des Max_storage_size_mb beendet.|  
+|**size_based_cleanup_mode**|**smallint**|Steuert, ob die Bereinigung automatisch aktiviert wird, wenn sich die Gesamtmenge der Daten der maximalen Größe nähert:<br /><br /> 1 = OFF – Größe basierend die Bereinigung nicht automatisch aktiviert.<br /><br /> 2 = die AUTO - Größe basierend die Bereinigung wird automatisch aktiviert, wenn auf den Datenträger erreicht 90 % der Größe **Max_storage_size_mb**. Dies ist der Standardkonfigurationswert.<br /><br />Ein auf der Größe basierendes Cleanup entfernt die am wenigsten aufwendigen und die ältesten Abfragen. Es wird bei ca. 80 % des Max_storage_size_mb beendet.|  
 |**size_based_cleanup_mode_desc**|**smallint**|Die textbeschreibung des tatsächlichen größenbasierte Cleanup-Modus des Abfragespeichers:<br /><br /> OFF <br /><br /> AUTO (Standardeinstellung)|  
 |**wait_stats_capture_mode**|**smallint**|Steuert, ob der Abfragespeicher Erfassung von wartestatistik ausführt: <br /><br /> 0 = OFF <br /><br /> 1 = ON<br /> **Gilt für**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|
 |**wait_stats_mode_capture_desc**|**nvarchar(60)**|Die textbeschreibung des Aufzeichnungsmodus die tatsächliche Wartezeit-Statistiken: <br /><br /> OFF <br /><br /> (Standard)<br /> **Gilt für**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
@@ -69,12 +70,12 @@ ms.lasthandoff: 02/01/2018
  [sys.query_store_plan &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)   
  [sys.query_store_query &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)   
  [sys.query_store_query_text &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)   
- [sys.query_store_runtime_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md)   
+ [Sys. query_store_runtime_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md)   
  [sys.query_store_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)  
- [Sys.query_store_runtime_stats_interval &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)   
+ [Sys.query_store_runtime_stats_interval &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)   
  [Überwachen der Leistung mit dem Abfragespeicher](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [Katalogsichten &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [sys.fn_stmt_sql_handle_from_sql_stmt &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-stmt-sql-handle-from-sql-stmt-transact-sql.md)   
- [Der Abfragespeicher gespeicherte Systemprozeduren &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)  
+ [Gespeicherte Prozeduren den Abfragespeicher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)  
   
   

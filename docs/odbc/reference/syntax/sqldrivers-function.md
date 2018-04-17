@@ -2,7 +2,7 @@
 title: SQLDrivers-Funktion | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 6b5b7514-e9cb-4cfd-8b7a-ab51dfab9efa
 caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ad4afa4a54b63b759b03774f77ed7ec0371ff931
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 13a9290f18c46b776afe9ab2b17c839ea6fdf6a9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqldrivers-function"></a>SQLDrivers-Funktion
 **Konformität**  

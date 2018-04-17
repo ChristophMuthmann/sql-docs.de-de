@@ -1,16 +1,16 @@
 ---
 title: Parameter (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: system-information-schema-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - PARAMETERS_TSQL
@@ -21,28 +21,29 @@ helpviewer_keywords:
 - PARAMETERS view
 - INFORMATION_SCHEMA.PARAMETERS view
 ms.assetid: 06ded0ca-7d21-4400-864a-b801e855b257
-caps.latest.revision: 
+caps.latest.revision: 35
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: eace79f38d3c2b5cf5f98081d3682a4f81e11435
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 89c64873ca571c838a9415c2d38a8d7e5f561d27
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="parameters-transact-sql"></a>PARAMETERS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Gibt eine Zeile für jeden Parameter einer benutzerdefinierten Funktion oder gespeicherten Prozedur zurück, auf die der aktuelle Benutzer in der aktuellen Datenbank zugreifen kann. Für Funktionen gibt diese Sicht auch eine Zeile mit Informationen zum Rückgabewert zurück.  
   
- Geben Sie zum Abrufen von Informationen aus diesen Sichten den vollqualifizierten Namen des **INFORMATION_SCHEMA.** *View_name*.  
+ Geben Sie zum Abrufen von Informationen aus diesen Sichten den vollqualifizierten Namen des **INFORMATION_SCHEMA. *** View_name*.  
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |**SPECIFIC_CATALOG**|**Nvarchar (**128**)**|Katalogname der Routine, für die dies ein Parameter ist|  
-|**SPECIFIC_SCHEMA**|**Nvarchar (**128**)**|Schemaname der Routine, für die dies ein Parameter ist<br /><br /> **\*\*Wichtige \* \***  verwenden Sie keine INFORMATION_SCHEMA-Sichten, die um das Schema eines Objekts zu bestimmen. Die einzig zuverlässige Möglichkeit zum Finden des Schemas eines Objekts besteht darin, die sys.objects-Katalogsicht abzufragen.|  
+|**SPECIFIC_SCHEMA**|**Nvarchar (**128**)**|Schemaname der Routine, für die dies ein Parameter ist<br /><br /> **\*\* Wichtige \* \***  verwenden Sie keine INFORMATION_SCHEMA-Sichten, die um das Schema eines Objekts zu bestimmen. Die einzig zuverlässige Möglichkeit zum Finden des Schemas eines Objekts besteht darin, die sys.objects-Katalogsicht abzufragen.|  
 |**"SPECIFIC_NAME"**|**Nvarchar (**128**)**|Name der Routine, für die dies ein Parameter ist|  
 |**ORDINAL_POSITION**|**int**|Die Ordnungsposition des Parameters, beginnend bei 1. Für den Rückgabewerts einer Funktion ist dies 0.|  
 |**PARAMETER_MODE**|**Nvarchar (**10**)**|Gibt IN zurück, wenn es ein Eingabeparameter ist, OUT, wenn es ein Ausgabeparameter ist, und INOUT, wenn es ein Eingabe/Ausgabeparameter ist.|  
@@ -72,10 +73,10 @@ ms.lasthandoff: 11/21/2017
 |**SCOPE_NAME**|**Nvarchar (**128**)**|NULL. Zur künftigen Verwendung reserviert.|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Systemsichten &#40; Transact-SQL &#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
- [Informationsschemasichten &#40; Transact-SQL &#41;](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)   
+ [Systemsichten &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
+ [Informationsschemasichten &#40;Transact-SQL&#41;](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)   
  [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
- [Sys.Objects &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
- [Sys.Parameters &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md)  
+ [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
+ [Sys.Parameters & #40; Transact-SQL & #41;](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md)  
   
   

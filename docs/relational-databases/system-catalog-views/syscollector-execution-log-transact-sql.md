@@ -1,16 +1,16 @@
 ---
 title: Syscollector_execution_log (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - syscollector_execution_log_TSQL
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - data collector view
 - syscollector_execution_log view
 ms.assetid: 11554d64-0426-42ce-b7ce-5591f67864d2
-caps.latest.revision: 
+caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f5beb35aa769b1c4755481a187c765fa62068ae2
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 7cf0ba566294c5a89db0e67d0d55a37abf228a17
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="syscollectorexecutionlog-transact-sql"></a>syscollector_execution_log (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ms.lasthandoff: 02/03/2018
 |package_id|**uniqueidentifier**|Gibt den Sammlungssatz oder das Paket an, der bzw. das das Protokoll generiert hat. Lässt NULL-Werte zu.|  
 |package_name|**nvarchar(4000)**|Der Name des Pakets, von dem dieses Protokoll generiert wurde. Lässt NULL-Werte zu.|  
 |package_execution_id|**uniqueidentifier**|Stellt einen Link zur [!INCLUDE[ssIS](../../includes/ssis-md.md)]-Protokolltabelle bereit. Lässt NULL-Werte zu.|  
-|failure_message|**nvarchar(2048)**|Wenn bei einem Sammlungssatz oder einem Paket ein Fehler aufgetreten ist, die aktuelle Fehlermeldung für die jeweilige Komponente. Lässt NULL-Werte zu. Um detailliertere Fehlerinformationen abzurufen, verwenden Sie die [Fn_syscollector_get_execution_details &#40; Transact-SQL &#41; ](../../relational-databases/system-functions/fn-syscollector-get-execution-details-transact-sql.md) Funktion.|  
+|failure_message|**nvarchar(2048)**|Wenn bei einem Sammlungssatz oder einem Paket ein Fehler aufgetreten ist, die aktuelle Fehlermeldung für die jeweilige Komponente. Lässt NULL-Werte zu. Um detailliertere Fehlerinformationen abzurufen, verwenden Sie die [Fn_syscollector_get_execution_details &#40;Transact-SQL&#41; ](../../relational-databases/system-functions/fn-syscollector-get-execution-details-transact-sql.md) Funktion.|  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert SELECT für dc_operator.  

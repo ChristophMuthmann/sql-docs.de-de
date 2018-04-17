@@ -1,30 +1,31 @@
 ---
 title: SQLColumns | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-odbc-api
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apitype: DLLExport
 helpviewer_keywords:
 - SQLColumns function
 ms.assetid: 69d3af44-8196-43ab-8037-cdd06207b171
-caps.latest.revision: 
+caps.latest.revision: 62
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 661c678e8d98d1b4d3f88c29d6d0b786b4e686d4
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 8e48fa527d745b920e2a664f8e8982b18cc53038
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlcolumns"></a>SQLColumns
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -72,29 +73,29 @@ ms.lasthandoff: 01/24/2018
 |SS_IS_COMPUTED|Smallint|Für eine Spalte vom Datentyp TABLE_TYPE ist dies SQL_TRUE, wenn es sich um eine berechnete Spalte handelt, andernfalls SQL_FALSE.|  
 |SS_IS_IDENTITY|Smallint|SQL_TRUE, wenn die Spalte eine Identitätsspalte ist, andernfalls SQL_FALSE.|  
   
- Weitere Informationen zu Tabellenwertparametern finden Sie unter [Table-Valued Parameters &#40; ODBC &#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
+ Weitere Informationen zu Tabellenwertparametern finden Sie unter [Table-Valued Parameters & #40; ODBC & #41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   
 ## <a name="sqlcolumns-support-for-enhanced-date-and-time-features"></a>SQLColumns-Unterstützung für erweiterte Funktionen für Datum und Uhrzeit  
  Informationen über die zurückgegebenen Werte für Datum/Uhrzeit-Typen finden Sie unter [Katalogmetadaten](../../relational-databases/native-client-odbc-date-time/metadata-catalog.md).  
   
- Weitere Informationen finden Sie unter [Datum und Uhrzeit-Verbesserungen &#40; ODBC &#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
+ Weitere Informationen finden Sie unter [Datum und Uhrzeit-Verbesserungen & #40; ODBC & #41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
 ## <a name="sqlcolumns-support-for-large-clr-udts"></a>SQLColumns-Unterstützung für große CLR-UDTs  
- **SQLColumns** unterstützt große CLR-benutzerdefinierte Typen (UDTs). Weitere Informationen finden Sie unter [Large CLR User-Defined Datentypen &#40; ODBC &#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
+ **SQLColumns** unterstützt große CLR-benutzerdefinierte Typen (UDTs). Weitere Informationen finden Sie unter [Large CLR User-Defined Datentypen & #40; ODBC & #41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## <a name="sqlcolumns-support-for-sparse-columns"></a>SQLColumns-Unterstützung für Spalten mit geringer Dichte  
  Zwei [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bestimmte Spalten wurden dem Resultset für SQLColumns hinzugefügt:  
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
-|SS_IS_SPARSE|**"Smallint"**|SQL_TRUE, wenn die Spalte eine Sparsespalte ist, andernfalls SQL_FALSE.|  
-|SS_IS_COLUMN_SET|**"Smallint"**|Wenn die Spalte ist der **Column_set** Spalte, ist dies SQL_TRUE, andernfalls SQL_FALSE.|  
+|SS_IS_SPARSE|**"smallint"**|SQL_TRUE, wenn die Spalte eine Sparsespalte ist, andernfalls SQL_FALSE.|  
+|SS_IS_COLUMN_SET|**"smallint"**|Wenn die Spalte ist der **Column_set** Spalte, ist dies SQL_TRUE, andernfalls SQL_FALSE.|  
   
  In Übereinstimmung mit der ODBC-Spezifikation werden SS_IS_SPARSE und SS_IS_COLUMN_SET vor alle treiberspezifischen Spalten, die hinzugefügt wurden, angezeigt werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Versionen älter als [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], sowie nach allen Spalten, die von ODBC selbst.  
   
  Von SQLColumns zurückgegebene Resultset hängt von der Einstellung von SQL_SOPT_SS_NAME_SCOPE ab. Weitere Informationen finden Sie unter [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md).  
   
- Weitere Informationen zu Spalten mit geringer Dichte in ODBC, finden Sie unter [Sparse Columns Support &#40; ODBC &#41;](../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md).  
+ Weitere Informationen zu Spalten mit geringer Dichte in ODBC, finden Sie unter [Sparse Columns Support &#40;ODBC&#41;](../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [SQLColumns-Funktion](http://go.microsoft.com/fwlink/?LinkId=59336)   

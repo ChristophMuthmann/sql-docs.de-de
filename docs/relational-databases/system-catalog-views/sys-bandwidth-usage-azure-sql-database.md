@@ -1,16 +1,16 @@
 ---
 title: Sys. bandwidth_usage (Azure SQL-Datenbank) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: 
+ms.prod: ''
 ms.prod_service: sql-database
-ms.reviewer: 
+ms.reviewer: ''
 ms.service: sql-database
 ms.component: system-catalog-views
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - bandwidth_usage
@@ -23,16 +23,17 @@ helpviewer_keywords:
 - sys.bandwidth_usage
 - bandwidth_usage
 ms.assetid: 43ed8435-f059-4907-b5c0-193a258b394a
-caps.latest.revision: 
+caps.latest.revision: 21
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d30cab1768b293c7cbc2e53729f8e8e8564a53d3
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
+ms.openlocfilehash: b61df6847269b609ba6a474b0ad87a355d5abe9b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysbandwidthusage-azure-sql-database"></a>sys.bandwidth_usage (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -50,7 +51,7 @@ ms.lasthandoff: 11/21/2017
 |**Uhrzeit**|Die Stunde, als die Bandbreite verwendet wurde. Die Zeilen in dieser Sicht enthalten stündliche Angaben. Beispielsweise bedeutet 2009-09-19 02:00:00.000, dass die Bandbreite am 19. September 2009 zwischen 2:00 Uhr und 3:00 Uhr verwendet wurde.|  
 |**database_name**|Der Name der Datenbank, die Bandbreite verwendet hat.|  
 |**Richtung**|Der Typ der Bandbreite, der verwendet wurde. Dies kann eine der folgenden Optionen sein:<br /><br /> Eingehend: Daten, die auf verschoben werden die [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Ausgehend: Daten, die ausgehende der [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
-|**Klasse**|Die Klasse der Bandbreite, die verwendet wurde. Dies kann eine der folgenden Optionen sein:<br />Interne: Daten, die innerhalb der Azure Platform verschoben werden.<br />Externe Datenquellen: Daten, die aus dem Azure-Plattform heraus verschoben werden.<br /><br /> Diese Klasse ist nur zurückgegeben, wenn die Datenbank sich in einer kontinuierlichen kopienbeziehung zwischen Regionen befindet ([!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)]). Wenn eine bestimmte Datenbank nicht in jeder fortlaufenden kopierbeziehung beteiligt ist, werden keine "Interlink"-Zeilen zurückgegeben. Weitere Informationen finden Sie im Abschnitt "Hinweise" weiter unten in diesem Thema.|  
+|**class**|Die Klasse der Bandbreite, die verwendet wurde. Dies kann eine der folgenden Optionen sein:<br />Interne: Daten, die innerhalb der Azure Platform verschoben werden.<br />Externe Datenquellen: Daten, die aus dem Azure-Plattform heraus verschoben werden.<br /><br /> Diese Klasse ist nur zurückgegeben, wenn die Datenbank sich in einer kontinuierlichen kopienbeziehung zwischen Regionen befindet ([!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)]). Wenn eine bestimmte Datenbank nicht in jeder fortlaufenden kopierbeziehung beteiligt ist, werden keine "Interlink"-Zeilen zurückgegeben. Weitere Informationen finden Sie im Abschnitt "Hinweise" weiter unten in diesem Thema.|  
 |**Zeitraum**|Der Zeitraum, der die Verwendung des Auftretens ist Haupt- und OffPeak. Die Spitzenzeit basiert auf der Region, in der der Server erstellt wurde. Wenn ein -Server beispielsweise in der Region "US_Northwest" erstellt wurde, liegt die Spitzenzeit laut Definition zwischen 10:00 Uhr und 18:00 Uhr PST.|  
 |**Menge**|Die Menge der verwendeten Bandbreite in KB.|  
   

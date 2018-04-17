@@ -1,30 +1,31 @@
 ---
 title: Massenkopieren mithilfe einer Formatdatei (ODBC) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-odbc-how-to
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - bulk copy using format file [ODBC]
 - ODBC, bulk copy operations
 ms.assetid: 970fd3af-f918-4fc3-a5b1-92596515d4de
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 39817debb4c61657af78127c22e6bca498680786
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 153fff032765438908337340f2146322d8275198
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="bulk-copy-by-using-a-format-file-odbc"></a>Massenkopieren mithilfe einer Formatdatei (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -194,7 +195,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Das Massenkopieren mit der SQL Server-ODBC-Treiber Themen zur Vorgehensweise &#40; ODBC &#41;](../../../relational-databases/native-client-odbc-how-to/bulk-copy/bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)   
+ [Das Massenkopieren mit der SQL Server-ODBC-Treiber Themen zur Vorgehensweise & #40; ODBC & #41;](../../../relational-databases/native-client-odbc-how-to/bulk-copy/bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)   
  [Verwenden von Datendateien und Formatdateien](../../../relational-databases/native-client-odbc-bulk-copy-operations/using-data-files-and-format-files.md)  
   
   

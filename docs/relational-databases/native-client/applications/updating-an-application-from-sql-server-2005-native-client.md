@@ -1,29 +1,30 @@
 ---
 title: Aktualisieren einer Anwendung von SQL Server 2005 Native Client | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client|applications
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQL Server Native Client, updating applications
 ms.assetid: 1e1e570c-7f14-4e16-beab-c328e3fbdaa8
-caps.latest.revision: 
+caps.latest.revision: 42
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7a0765a262b2775f81b35969a638ff6f3583357e
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: a2181b027627e89b14c774185fa15a8cec2c3444
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="updating-an-application-from-sql-server-2005-native-client"></a>Aktualisieren einer Anwendung von SQL Server 2005 Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,12 +34,12 @@ ms.lasthandoff: 01/25/2018
   
  Wenn Sie ein Upgrade von Microsoft Data Access Components (MDAC) auf [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client durchführen, werden Ihnen möglicherweise auch einige Unterschiede im Verhalten auffallen. Weitere Informationen finden Sie unter [Aktualisieren einer Anwendung von MDAC auf SQL Server Native Client](../../../relational-databases/native-client/applications/updating-an-application-to-sql-server-native-client-from-mdac.md).  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client 9.0 Lieferumfang [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client 10.0 Lieferumfang [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)].  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 10.5 war im Lieferumfang von [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] enthalten. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 11.0 war im Lieferumfang von [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] und [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] enthalten.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 9.0 Lieferumfang [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 10.0 Lieferumfang [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)].  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 10.5 war im Lieferumfang von [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] enthalten. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 11.0 war im Lieferumfang von [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] und [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] enthalten.  
   
 |Geändertes Verhalten in SQL Server Native Client seit [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]|Description|  
 |------------------------------------------------------------------------------------|-----------------|  
 |OLE DB füllt nur Zahlen bis zur definierten Anzahl von Dezimalstellen auf.|Für Konvertierungen, in denen Daten an den Server gesendet [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (ab [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]) nachfolgende Nullen in Daten nur bis zu maximal füllt **"DateTime"** Werte. In SQL Server Native Client 9.0 wurden Zahlen bis zu 9 Stellen aufgefüllt.|  
-|Überprüfen Sie DBTYPE_DBTIMESTAMP für ICommandWithParameter::SetParameterInfo.|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client (ab [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]) implementiert die OLE DB-Anforderung *bScale* in ICommandWithParameter::SetParameterInfo, um die Genauigkeit der Sekundenbruchteile für DBTYPE_DBTIMESTAMP festgelegt werden.|  
+|Überprüfen Sie DBTYPE_DBTIMESTAMP für ICommandWithParameter::SetParameterInfo.|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (ab [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]) implementiert die OLE DB-Anforderung *bScale* in ICommandWithParameter::SetParameterInfo, um die Genauigkeit der Sekundenbruchteile für DBTYPE_DBTIMESTAMP festgelegt werden.|  
 |Die **Sp_columns** gibt die gespeicherte Prozedur **"NO"** anstelle von **"NO"** für die Spalte IS_NULLABLE.|Ab [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 10.0 ([!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]), **Sp_columns** gibt die gespeicherte Prozedur **"NO"** anstelle von **"NO"** für eine IS_NULLABLE-Spalte .|  
 |SQLSetDescRec und SQLBindParameter SQLBindCol führen jetzt überprüft.|Vor [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 10.0 festlegen SQL_DESC_DATA_PTR nicht dazu führen, dass eine konsistenzprüfung für einen Deskriptortyp in SQLSetDescRec, SQLBindParameter oder SQLBindCol.|  
 |SQLCopyDesc ist jetzt Deskriptor überprüft.|Vor [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 10.0 SQLCopyDesc keine konsistenzprüfung, wenn das SQL_DESC_DATA_PTR-Feld auf einen bestimmten Datensatz festgelegt wurde.|  

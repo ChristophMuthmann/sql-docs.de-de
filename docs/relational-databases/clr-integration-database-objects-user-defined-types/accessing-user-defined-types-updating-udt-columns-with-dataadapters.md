@@ -1,15 +1,15 @@
 ---
 title: Aktualisieren von UDT-Spalten mit "DataAdapters" | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: clr
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - TSQL
@@ -25,20 +25,20 @@ helpviewer_keywords:
 - user-defined types [CLR integration], ADO.NET
 - data adapters [CLR integration]
 ms.assetid: 4489c938-ba03-4fdb-b533-cc3f5975ae50
-caps.latest.revision: 
+caps.latest.revision: 12
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ac456dc7617804afbc78ca423ff8e4651c5ccef5
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: b27e47e8aa8563b004f0ad7b07163ecd3891ffb2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="accessing-user-defined-types---updating-udt-columns-with-dataadapters"></a>Zugreifen auf benutzerdefinierte Typen – Aktualisieren von UDT-Spalten mit "DataAdapters"
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Benutzerdefinierte Typen (UDTs) werden unterstützt, mit einem **System.Data.DataSet** und ein **System.Data.SqlClient.SqlDataAdapter** abrufen und Ändern von Daten.  
+  Benutzerdefinierte Typen (UDTs) werden unterstützt, mit einem **System.Data.DataSet** und ein **System.Data.SqlClient.SqlDataAdapter** abrufen und Ändern von Daten.  
   
 ## <a name="populating-a-dataset"></a>Auffüllen eines Datasets  
  Mit einer [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT-Anweisung können Sie UDT-Spaltenwerte zum Auffüllen eines Datasets mit einem Datenadapter auswählen. Im folgende Beispiel wird davon ausgegangen, dass Sie haben eine **Punkte** Tabelle mit der folgenden Struktur und einigen Beispieldaten definiert. Die folgenden [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisungen erstellen die **Punkte** Tabelle und einige Zeilen eingefügt.  
@@ -92,7 +92,7 @@ INSERT INTO dbo.Points_ts (id, p) VALUES (4, CONVERT(Point, '4,6'));
   
  Das folgende ADO.NET-Beispiel verfügt über zwei Methoden:  
   
--   **UserProvidedCommands**, das veranschaulicht, wie angeben **InsertCommand**, **UpdateCommand**, und **DeleteCommand** -Objekte zum Aktualisieren der **Punkt** UDT in der **Punkt** Tabelle (der keine **Zeitstempel** Spalte).  
+-   **UserProvidedCommands**, das veranschaulicht, wie angeben **InsertCommand**, **UpdateCommand**, und **DeleteCommand** -Objekte zum Aktualisieren der  **Punkt** UDT in der **Punkt** Tabelle (der keine **Zeitstempel** Spalte).  
   
 -   **CommandBuilder**, die veranschaulicht, wie eine **SqlCommandBuilder** in der **Points_ts** Tabelle, enthält die **Zeitstempel** Spalte.  
   

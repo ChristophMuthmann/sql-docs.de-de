@@ -1,16 +1,16 @@
 ---
 title: database_permissions (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/11/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - database_permissions
@@ -22,16 +22,17 @@ dev_langs:
 helpviewer_keywords:
 - sys.database_permissions catalog view
 ms.assetid: c1e261f8-6cb0-4759-b5f1-5ec233602655
-caps.latest.revision: 
+caps.latest.revision: 50
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e499f4dbcda2415ee4631585be2de284721bc1ec
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: d4d1655b9d7a4f0f7502b06b506865f7082e4cf8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdatabasepermissions-transact-sql"></a>sys.database_permissions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -43,15 +44,15 @@ ms.lasthandoff: 11/21/2017
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
-|**Klasse**|**tinyint**|Identifiziert die Klasse, die die Berechtigung vorhanden ist.<br /><br /> 0 = Datenbank<br />1 = Objekt oder Spalte<br />3 = Schema<br />4 = Datenbankprinzipal<br />5 = Assembly - **betrifft**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br />6 = Typ<br />10 = XML Schema Collection - <br />                      **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br />15 = Nachrichtentyp - **betrifft**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br />16 = Dienstvertrag - **betrifft**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br />17 = Dienst - **betrifft**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br />18 = Remotedienstbindung - **betrifft**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br />19 = Route - **betrifft**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br />23 = Volltextkatalog - **betrifft**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br />24 = symmetrischer Schlüssel - **betrifft**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br />25 = Certificate - **betrifft**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br />26 = asymmetrischer Schlüssel - **betrifft**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+|**class**|**tinyint**|Identifiziert die Klasse, die die Berechtigung vorhanden ist.<br /><br /> 0 = Datenbank<br />1 = Objekt oder Spalte<br />3 = Schema<br />4 = Datenbankprinzipal<br />5 = Assembly - **betrifft**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br />6 = Typ<br />10 = XML Schema Collection - <br />                      **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br />15 = Nachrichtentyp - **betrifft**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br />16 = Dienstvertrag - **betrifft**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br />17 = Dienst - **betrifft**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br />18 = Remotedienstbindung - **betrifft**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br />19 = Route - **betrifft**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br />23 = Volltextkatalog - **betrifft**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br />24 = symmetrischer Schlüssel - **betrifft**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br />25 = Certificate - **betrifft**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br />26 = asymmetrischer Schlüssel - **betrifft**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
 |**class_desc**|**nvarchar(60)**|Beschreibung der Klasse, in der die Berechtigung vorhanden ist.<br /><br /> DATABASE<br /><br /> OBJECT_OR_COLUMN<br /><br /> SCHEMA<br /><br /> DATABASE_PRINCIPAL<br /><br /> ASSEMBLY<br /><br /> TYPE<br /><br /> XML_SCHEMA_COLLECTION<br /><br /> MESSAGE_TYPE<br /><br /> SERVICE_CONTRACT<br /><br /> SERVICE<br /><br /> REMOTE_SERVICE_BINDING<br /><br /> ROUTE<br /><br /> FULLTEXT_CATALOG<br /><br /> SYMMETRIC_KEYS<br /><br /> CERTIFICATE<br /><br /> ASYMMETRIC_KEY|  
 |**major_id**|**int**|ID des Objekts, für das die Berechtigung vorhanden ist, interpretiert nach der Klasse. In der Regel die **Major_id** ist einfach die Art der ID, die auf die Klasse darstellt. <br /><br /> 0 = die Datenbank selbst <br /><br /> > 0 = Objekt-IDs für Benutzerobjekte <br /><br /> \<0 = Objekt-IDs für Systemobjekte |  
 |**minor_id**|**int**|Sekundäre ID des Objekts, für das die Berechtigung vorhanden ist, interpretiert nach der Klasse. Häufig die **Major_id** ist 0 (null), da es keine Unterkategorie für die Klasse des Objekts verfügbar. Andernfalls ist es die Spalten-ID einer Tabelle.|  
 |**grantee_principal_id**|**int**|Datenbankprinzipal-ID, der die Berechtigungen erteilt werden.|  
 |**grantor_principal_id**|**int**|Datenbankprinzipal-ID des Berechtigenden dieser Berechtigungen.|  
-|**Typ**|**char(4)**|Datenbank-Berechtigungstyp. Eine Liste der Berechtigungstypen finden Sie in der folgenden Tabelle.|  
-|**permission_name**|**vom Datentyp nvarchar(128)**|Berechtigungsname.|  
-|**Status**|**char(1)**|Der Berechtigungsstatus:<br /><br /> D = Verweigern<br /><br /> R = Aufheben<br /><br /> G = Erteilen<br /><br /> W = Erteilen mit WITH GRANT OPTION|  
+|**type**|**char(4)**|Datenbank-Berechtigungstyp. Eine Liste der Berechtigungstypen finden Sie in der folgenden Tabelle.|  
+|**permission_name**|**nvarchar(128)**|Berechtigungsname.|  
+|**state**|**char(1)**|Der Berechtigungsstatus:<br /><br /> D = Verweigern<br /><br /> R = Aufheben<br /><br /> G = Erteilen<br /><br /> W = Erteilen mit WITH GRANT OPTION|  
 |**state_desc**|**nvarchar(60)**|Beschreibung des Berechtigungsstatus:<br /><br /> DENY<br /><br /> REVOKE<br /><br /> GRANT<br /><br /> GRANT_WITH_GRANT_OPTION|  
 
 ## <a name="database-permissions"></a>Datenbankberechtigungen   
@@ -117,7 +118,7 @@ Die folgenden Typen von Berechtigungen sind möglich.
 |DABO |ADMINISTER DATABASE BULK OPERATIONS | DATABASE |
 |DL|DELETE|DATABASE, OBJECT, SCHEMA|  
 |EAES |EXECUTE ANY EXTERNAL SCRIPT |DATABASE |
-|EX|EXECUTE|ASSEMBLY, DATABASE, OBJECT, SCHEMA, TYPE, XML SCHEMA COLLECTION|  
+|EX|Führen Sie|ASSEMBLY, DATABASE, OBJECT, SCHEMA, TYPE, XML SCHEMA COLLECTION|  
 |IM|IMPERSONATE|Benutzer|  
 |IN|INSERT|DATABASE, OBJECT, SCHEMA|  
 |RC|RECEIVE|OBJECT|  
@@ -174,7 +175,7 @@ JOIN sys.schemas AS s
   
 ## <a name="see-also"></a>Siehe auch  
  [Securables](../../relational-databases/security/securables.md)   
- [Berechtigungshierarchie &#40;Datenbankmodul&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)   
+ [Berechtigungshierarchie &#40;Datenbankmodul &#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)   
  [Sicherheitskatalogsichten &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [Katalogsichten &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   

@@ -1,16 +1,16 @@
 ---
 title: Sys.trusted_assemblies (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 06/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - trusted_assemblies_TSQL
@@ -21,19 +21,20 @@ dev_langs:
 - TSQL
 helpviewer_keywords:
 - sys.trusted_assemblies
-ms.assetid: 
-caps.latest.revision: 
+ms.assetid: ''
+caps.latest.revision: ''
 author: tmullaney
 ms.author: thmullan
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 71d13ae733551a3c475176343250f9ee671756f3
-ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 71e66e31adb43937fe4d1bfc5166b46fa5a69ba4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="systrustedassemblies-transact-sql"></a>sys.trusted_assemblies (Transact-SQL)  
+# <a name="systrustedassemblies-transact-sql"></a>Sys.trusted_assemblies (Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
 Enthält eine Zeile für jede vertrauenswürdige Assembly für den Server an.

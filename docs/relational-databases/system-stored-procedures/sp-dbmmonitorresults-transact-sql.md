@@ -1,16 +1,16 @@
 ---
 title: Sp_dbmmonitorresults (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_dbmmonitorresults
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - sp_dbmmonitorresults
 - database mirroring [SQL Server], monitoring
 ms.assetid: d575e624-7d30-4eae-b94f-5a7b9fa5427e
-caps.latest.revision: 
+caps.latest.revision: 46
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ce88354c3d378dbfa2e7bc71acd57ed52aaf5131
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: cfa798863af2c43f00908accf30c8d03c06202f9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spdbmmonitorresults-transact-sql"></a>sp_dbmmonitorresults (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -91,7 +91,7 @@ sp_dbmmonitorresults database_name
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |**database_name**|**sysname**|Name einer gespiegelten Datenbank.|  
-|**role**|**int**|Aktuelle Spiegelungsrolle der Serverinstanz:<br /><br /> 1 = Prinzipal<br /><br /> 2 = Spiegel|  
+|**Rolle ""**|**int**|Aktuelle Spiegelungsrolle der Serverinstanz:<br /><br /> 1 = Prinzipal<br /><br /> 2 = Spiegel|  
 |**mirroring_state**|**int**|Status der Datenbank:<br /><br /> 0 = angehalten<br /><br /> 1 = getrennt<br /><br /> 2 = Wird synchronisiert<br /><br /> 3 = Ausstehendes Failover<br /><br /> 4 = Synchronisiert|  
 |**witness_status**|**int**|Verbindungsstatus des Zeugen in der Datenbank-Spiegelungssitzung der Datenbank:<br /><br /> 0 = Unbekannt<br /><br /> 1 = Verbunden<br /><br /> 2 = Getrennt|  
 |**log_generation_rate**|**int**|Umfang des seit dem vorhergehenden Update des Spiegelungsstatus dieser Datenbank generierten Protokolls in KB/s.|  
@@ -125,10 +125,10 @@ EXEC sp_dbmmonitorresults AdventureWorks2012, 2, 0;
   
 ## <a name="see-also"></a>Siehe auch  
  [Überwachen der Datenbankspiegelung &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
- [sp_dbmmonitorchangemonitoring &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangemonitoring-transact-sql.md)   
+ [Sp_dbmmonitorchangemonitoring &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangemonitoring-transact-sql.md)   
  [sp_dbmmonitoraddmonitoring &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitoraddmonitoring-transact-sql.md)   
  [sp_dbmmonitordropmonitoring &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitordropmonitoring-transact-sql.md)   
- [sp_dbmmonitorhelpmonitoring &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorhelpmonitoring-transact-sql.md)   
+ [Sp_dbmmonitorhelpmonitoring &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorhelpmonitoring-transact-sql.md)   
  [sp_dbmmonitorupdate &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorupdate-transact-sql.md)  
   
   

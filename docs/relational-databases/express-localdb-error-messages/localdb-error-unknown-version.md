@@ -1,27 +1,27 @@
 ---
 title: LOCALDB_ERROR_UNKNOWN_VERSION | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: localdb
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: f2a04023-ed42-4516-b59c-7a1b8a5395d4
-caps.latest.revision: 
+caps.latest.revision: 8
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 93cd4c05bec0c9a2074de6a17146aa3539522d5c
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 81fef353549a368bd9a76f40324de46fa43cd8b4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="localdberrorunknownversion"></a>LOCALDB_ERROR_UNKNOWN_VERSION
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

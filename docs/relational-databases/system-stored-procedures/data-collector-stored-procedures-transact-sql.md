@@ -1,16 +1,16 @@
 ---
-title: "Gespeicherte Prozeduren (Transact-SQL) für den Datensammler | Microsoft Docs"
-ms.custom: 
+title: Gespeicherte Prozeduren (Transact-SQL) für den Datensammler | Microsoft Docs
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -19,16 +19,16 @@ helpviewer_keywords:
 - system stored procedures [SQL Server], data collector
 - data collector [SQL Server], stored procedures
 ms.assetid: 9dd2824f-ea55-439b-8cd5-3a81fedb1432
-caps.latest.revision: 
+caps.latest.revision: 30
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b9230680af9f7e0457f6c4c8379937c992db03dd
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 10dd520d29d11d4c25e4a4b114855582334439d9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="data-collector-stored-procedures-transact-sql"></a>Gespeicherte Prozeduren für den Datensammler (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

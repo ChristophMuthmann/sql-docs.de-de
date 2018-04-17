@@ -1,16 +1,16 @@
 ---
-title: sys.dm_cryptographic_provider_keys (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: dm_cryptographic_provider_keys (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_cryptographic_provider_keys_TSQL
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_cryptographic_provider_keys dynamic management function
 ms.assetid: 5a8c1421-c56b-44b5-96e5-4f01782a0c7c
-caps.latest.revision: 
+caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 84149c495867b1479e09edcd24e32c2191608fc8
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 9f5fe7cb4292ac1b8d5acaaf368df308805d4318
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmcryptographicproviderkeys-transact-sql"></a>sys.dm_cryptographic_provider_keys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ dm_cryptographic_provider_keys ( provider_id )
 |**key_thumbprint**|**varbinary(32)**|Fingerabdruck des Anbieters des Schlüssels.|  
 |**algorithm_id**|**int**|ID des Algorithmus beim Anbieter.|  
 |**algorithm_tag**|**int**|Tag des Algorithmus beim Provider.|  
-|**key_type**|**nchar(256)**|Typ des Schlüssels beim Anbieter.|  
+|**key_type**|**NCHAR(256)**|Typ des Schlüssels beim Anbieter.|  
 |**key_length**|**int**|Länge des Schlüssels beim Anbieter.|  
   
 ## <a name="permissions"></a>Berechtigungen  

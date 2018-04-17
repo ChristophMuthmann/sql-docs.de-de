@@ -1,16 +1,16 @@
 ---
 title: Sys. server_permissions (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, pdw
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.server_permissions_TSQL
@@ -22,16 +22,17 @@ dev_langs:
 helpviewer_keywords:
 - sys.server_permissions catalog view
 ms.assetid: 7d78bf17-6c64-4166-bd0b-9e9e20992136
-caps.latest.revision: 
+caps.latest.revision: 36
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 96312970ada17baf213e436e338986423526f470
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 7164ece21806f87f9684e1befc78daf9e0f92166
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysserverpermissions-transact-sql"></a>sys.server_permissions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -40,15 +41,15 @@ ms.lasthandoff: 11/21/2017
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
-|**Klasse**|**tinyint**|Identifiziert die Klasse, in der die Berechtigung vorhanden ist.<br /><br /> 100 = Server<br /><br /> 101 = Serverprinzipal<br /><br /> 105 = Endpunkt|  
+|**class**|**tinyint**|Identifiziert die Klasse, in der die Berechtigung vorhanden ist.<br /><br /> 100 = Server<br /><br /> 101 = Serverprinzipal<br /><br /> 105 = Endpunkt|  
 |**class_desc**|**nvarchar(60)**|Beschreibung der Klasse, in der die Berechtigung vorhanden ist. Einer der folgenden Werte:<br /><br /> **SERVER**<br /><br /> **SERVER_PRINCIPAL**<br /><br /> **ENDPOINT**|  
 |**major_id**|**int**|ID des sicherbaren Elements, für das die Berechtigung vorhanden ist. Der Wert wird gemäß der Klasse interpretiert. Bei den meisten Elementen ist dies die ID, die die Klasse darstellt. Die Interpretation für Elemente, die nicht dem Standard entsprechen, lautet wie folgt:<br /><br /> 100 = immer 0|  
 |**minor_id**|**int**|Sekundäre ID des Elements, für das die Berechtigung vorhanden ist. Der Wert wird gemäß der Klasse interpretiert.|  
 |**grantee_principal_id**|**int**|Serverprinzipal-ID, der die Berechtigungen erteilt werden.|  
 |**grantor_principal_id**|**int**|Serverprinzipal-ID des Berechtigenden dieser Berechtigungen.|  
-|**Typ**|**char(4)**|Typ der Serverberechtigung. Eine Liste der Berechtigungstypen finden Sie in der folgenden Tabelle.|  
-|**permission_name**|**vom Datentyp nvarchar(128)**|Berechtigungsname.|  
-|**Status**|**char(1)**|Der Berechtigungsstatus:<br /><br /> D = Verweigern<br /><br /> R = Aufheben<br /><br /> G = Erteilen<br /><br /> W = Mit Grant-Option erteilen|  
+|**type**|**char(4)**|Typ der Serverberechtigung. Eine Liste der Berechtigungstypen finden Sie in der folgenden Tabelle.|  
+|**permission_name**|**nvarchar(128)**|Berechtigungsname.|  
+|**state**|**char(1)**|Der Berechtigungsstatus:<br /><br /> D = Verweigern<br /><br /> R = Aufheben<br /><br /> G = Erteilen<br /><br /> W = Mit Grant-Option erteilen|  
 |**state_desc**|**nvarchar(60)**|Beschreibung des Berechtigungsstatus:<br /><br /> DENY<br /><br /> REVOKE<br /><br /> GRANT<br /><br /> GRANT_WITH_GRANT_OPTION|  
   
 |Berechtigungstyp|Berechtigungsname|Betroffenes sicherungsfähiges Element|  

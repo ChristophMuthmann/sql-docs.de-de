@@ -1,29 +1,30 @@
 ---
-title: "Erstellen, ändern und Löschen von Standardwerten | Microsoft Docs"
-ms.custom: 
+title: Erstellen, ändern und Löschen von Standardwerten | Microsoft Docs
+ms.custom: ''
 ms.date: 08/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: smo
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - defaults [SMO]
 ms.assetid: c30ac3b9-8150-4264-ba4c-c549f44261ab
-caps.latest.revision: 
+caps.latest.revision: 46
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: edd16a7f12eef15d28508c01744537a4aa67e346
-ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
+monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 25351ba042dce5e75d78fced1d41c5e967a41fdc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="creating-altering-and-removing-defaults"></a>Erstellen, Ändern und Löschen von Standardwerten
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -33,7 +34,7 @@ ms.lasthandoff: 01/12/2018
  Die <xref:Microsoft.SqlServer.Management.Smo.DefaultRuleBase.TextBody%2A> Eigenschaft von der <xref:Microsoft.SqlServer.Management.Smo.Default> Objekt dient zum Festlegen des Werts eingefügt werden. Dies kann eine Konstante oder eine [!INCLUDE[tsql](../../../includes/tsql-md.md)]-Anweisung sein, die einen konstanten Wert zurückgibt, z. B. GETDATE(). Die <xref:Microsoft.SqlServer.Management.Smo.DefaultRuleBase.TextBody%2A>-Eigenschaft kann über die <xref:Microsoft.SqlServer.Management.Smo.DefaultRuleBase.Alter%2A>-Methode nicht geändert werden. Stattdessen die <xref:Microsoft.SqlServer.Management.Smo.Default> Objekt muss gelöscht und neu erstellt werden.  
   
 ## <a name="example"></a>Beispiel  
- Zum Verwenden eines angegebenen Codebeispiels müssen Sie die Programmierumgebung, Programmiervorlage und die zu verwendende Programmiersprache auswählen, um Ihre Anwendung zu erstellen. Weitere Informationen finden Sie unter [Erstellen eines Visual C &#35; SMO-Projekts in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Zum Verwenden eines angegebenen Codebeispiels müssen Sie die Programmierumgebung, Programmiervorlage und die zu verwendende Programmiersprache auswählen, um Ihre Anwendung zu erstellen. Weitere Informationen finden Sie unter [Erstellen eines Visual C&#35; SMO-Projekts in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="creating-altering-and-removing-a-default-in-visual-basic"></a>Erstellen, Ändern und Löschen eines Standardwerts in Visual Basic  
  Dieses Codebeispiel zeigt, wie erstellt ein Standard, der einfachen Text ist, und ein anderer Standardwert, der eine [!INCLUDE[tsql](../../../includes/tsql-md.md)] Anweisung. Der Standard muss mithilfe der Spalte angefügt werden die <xref:Microsoft.SqlServer.Management.Smo.DefaultRuleBase.BindToColumn%2A> Methode und getrennt werden, mithilfe der <xref:Microsoft.SqlServer.Management.Smo.DefaultRuleBase.UnbindFromColumn%2A> Methode.  

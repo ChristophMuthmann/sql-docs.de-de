@@ -1,8 +1,8 @@
 ---
-title: sys.dm_exec_query_memory_grants (Transact-SQL) | Microsoft Docs
+title: dm_exec_query_memory_grants (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.service: ''
 ms.component: dmv's
@@ -27,11 +27,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5a203f7cc7752a92eddbeee8b35bfdefd3f21fe6
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: f564f6b610996d00d366a4ade1af8204d688a44f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmexecquerymemorygrants-transact-sql"></a>sys.dm_exec_query_memory_grants (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -48,7 +49,7 @@ ms.lasthandoff: 04/05/2018
 |**session_id**|**smallint**|ID (SPID) der Sitzung, in der die Abfrage ausgeführt wird.|  
 |**request_id**|**int**|ID der Anforderung. Ist im Kontext der Sitzung eindeutig.|  
 |**scheduler_id**|**int**|ID des Zeitplanungsmoduls, der diese Abfrage plant.|  
-|**dop**|**smallint**|Grad an Parallelität für diese Abfrage.|  
+|**DOP**|**smallint**|Grad an Parallelität für diese Abfrage.|  
 |**request_time**|**datetime**|Datum und Uhrzeit, zu der die Abfrage die Arbeitsspeicherzuweisung angefordert hat.|  
 |**grant_time**|**datetime**|Datum und Uhrzeit, zu der die Arbeitsspeicherzuweisung für die Abfrage erfolgt ist. NULL, wenn noch kein Arbeitsspeicher zugewiesen wurde.|  
 |**requested_memory_kb**|**bigint**|Insgesamt angeforderter Arbeitsspeicher in Kilobytes.|  

@@ -1,16 +1,16 @@
 ---
 title: Sys. sql_expression_dependencies (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.sql_expression_dependencies
@@ -22,23 +22,24 @@ dev_langs:
 helpviewer_keywords:
 - sys.sql_expression_dependencies catalog view
 ms.assetid: 78a218e4-bf99-4a6a-acbf-ff82425a5946
-caps.latest.revision: 
+caps.latest.revision: 42
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 099229e10b875d738e970d8f2c4a0c9ac3e7b5e6
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 2e856435a18b89d9708112bd81ca2c8976371165
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="syssqlexpressiondependencies-transact-sql"></a>sys.sql_expression_dependencies (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
   Enthält eine Zeile für jede Namensabhängigkeit in einer benutzerdefinierten Entität in der aktuellen Datenbank. Dies schließt Abhängigkeiten zwischen systemintern kompilierte, skalare benutzerdefinierte Funktionen und andere [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Module. Eine Abhängigkeit zwischen zwei Entitäten wird erstellt, wenn eine Entität, die *Entität verwiesen*, angezeigt wird, namentlich in einem persistenten SQL-Ausdruck, der einer anderen Entität, die mit dem Namen der *verweisende Entität*. Wird beispielsweise in der Definition einer Sicht auf eine Tabelle verwiesen, hängt die Sicht als verweisende Entität von der Tabelle ab, der Entität, auf die verwiesen wird. Wenn die Tabelle gelöscht wird, ist die Sicht unbrauchbar.  
   
- Weitere Informationen finden Sie unter [Skalarfunktionen für In-Memory OLTP](../../relational-databases/in-memory-oltp/scalar-user-defined-functions-for-in-memory-oltp.md).  
+ Weitere Informationen dazu finden Sie unter [Benutzerdefinierte Skalarfunktionen für In-Memory-OLTP](../../relational-databases/in-memory-oltp/scalar-user-defined-functions-for-in-memory-oltp.md).  
   
  Sie können diese Katalogsicht verwenden, um einen Bericht mit den Abhängigkeitsinformationen für die folgenden Entitäten zu erstellen:  
   
@@ -61,7 +62,7 @@ ms.lasthandoff: 11/21/2017
 |is_schema_bound_reference|**bit**|1 = Entität, auf die verwiesen wird, ist schemagebunden.<br /><br /> 0 = Entität, auf die verwiesen wird, ist nicht schemagebunden.<br /><br /> Lässt keine NULL-Werte zu.|  
 |referenced_class|**tinyint**|Klasse der Entität, auf die verwiesen wird.<br /><br /> 1 = Objekt oder Spalte<br /><br /> 6 = Typ<br /><br /> 10 = XML-Schemaauflistung<br /><br /> 21 = Partitionsfunktion<br /><br /> Lässt keine NULL-Werte zu.|  
 |referenced_class_desc|**nvarchar(60)**|Klassenbeschreibung der Entität, auf die verwiesen wird.<br /><br /> OBJECT_OR_COLUMN<br /><br /> TYPE<br /><br /> XML_SCHEMA_COLLECTION<br /><br /> PARTITION_FUNCTION<br /><br /> Lässt keine NULL-Werte zu.|  
-|referenced_server_name|**sysname**|Servername der Entität, auf die verwiesen wird.<br /><br /> Diese Spalte wird für serverübergreifende Abhängigkeiten aufgefüllt, die auf der Angabe eines gültigen vierteiligen Namens basieren. Informationen zu mehrteiligen Namen finden Sie unter [Transact-SQL-Syntaxkonventionen &#40; Transact-SQL &#41; ](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).<br /><br /> NULL für nicht schemagebundene Entitäten, für die ohne Angabe eines vierteiligen Namens auf die Entität verwiesen wurde.<br /><br /> NULL für schemagebundene Entitäten, da sich müssen in derselben Datenbank und aus diesem Grund können nur definiert werden mithilfe ein zweiteiligen (*schema.object*) Namen.|  
+|referenced_server_name|**sysname**|Servername der Entität, auf die verwiesen wird.<br /><br /> Diese Spalte wird für serverübergreifende Abhängigkeiten aufgefüllt, die auf der Angabe eines gültigen vierteiligen Namens basieren. Informationen zu mehrteiligen Namen finden Sie unter [Transact-SQL-Syntaxkonventionen &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).<br /><br /> NULL für nicht schemagebundene Entitäten, für die ohne Angabe eines vierteiligen Namens auf die Entität verwiesen wurde.<br /><br /> NULL für schemagebundene Entitäten, da sich müssen in derselben Datenbank und aus diesem Grund können nur definiert werden mithilfe ein zweiteiligen (*schema.object*) Namen.|  
 |referenced_database_name|**sysname**|Datenbankname der Entität, auf die verwiesen wird.<br /><br /> Diese Spalte wird für datenbankübergreifende oder serverübergreifende Verweise aufgefüllt, die auf der Angabe eines gültigen dreiteiligen oder vierteiligen Namens basieren.<br /><br /> NULL für nicht schemagebundene Verweise, wenn auf Basis eines einteiligen oder zweiteiligen Namens angegeben.<br /><br /> NULL für schemagebundene Entitäten, da sich müssen in derselben Datenbank und aus diesem Grund können nur definiert werden mithilfe ein zweiteiligen (*schema.object*) Namen.|  
 |referenced_schema_name|**sysname**|Schema, in das die Entität gehört, auf die verwiesen wird.<br /><br /> NULL für nicht schemagebundene Verweise, in denen ohne Angabe des Schemanamens auf die Entität verwiesen wird.<br /><br /> Niemals NULL für schemagebundene Verweise, da schemagebundene Entitäten mit einem zweiteiligen Namen definiert werden müssen und mit diesem zweiteiligen Namen auf sie verwiesen werden muss.|  
 |referenced_entity_name|**sysname**|Name der Entität, auf die verwiesen wird. Lässt keine NULL-Werte zu.|  
@@ -77,24 +78,24 @@ ms.lasthandoff: 11/21/2017
 |-----------------|------------------------|-----------------------|  
 |Tabelle|Ja*|ja|  
 |Sicht|ja|ja|  
-|Gefilterter Index|Ja**|Nein|  
-|Gefilterte Statistik|Ja**|Nein|  
+|Gefilterter Index|Ja**|nein|  
+|Gefilterte Statistik|Ja**|nein|  
 |Gespeicherte [!INCLUDE[tsql](../../includes/tsql-md.md)]-Prozedur***|ja|ja|  
-|Gespeicherte CLR-Prozedur|Nein|ja|  
+|Gespeicherte CLR-Prozedur|nein|ja|  
 |Benutzerdefinierte Funktion in [!INCLUDE[tsql](../../includes/tsql-md.md)]|ja|ja|  
-|CLR-benutzerdefinierte Funktion|Nein|ja|  
-|CLR-Trigger (DML und DDL)|Nein|Nein|  
-|DML-Trigger in [!INCLUDE[tsql](../../includes/tsql-md.md)]|ja|Nein|  
-|DDL-Trigger auf Datenbankebene in [!INCLUDE[tsql](../../includes/tsql-md.md)]|ja|Nein|  
-|DDL-Trigger auf Serverebene in [!INCLUDE[tsql](../../includes/tsql-md.md)]|ja|Nein|  
-|Erweiterte gespeicherte Prozeduren|Nein|ja|  
-|Warteschlange|Nein|ja|  
-|Synonym|Nein|ja|  
-|Typ (Alias und CLR-benutzerdefinierter Typ)|Nein|ja|  
-|XML-Schemaauflistung|Nein|ja|  
-|Partitionsfunktion|Nein|ja|  
+|CLR-benutzerdefinierte Funktion|nein|ja|  
+|CLR-Trigger (DML und DDL)|nein|nein|  
+|DML-Trigger in [!INCLUDE[tsql](../../includes/tsql-md.md)]|ja|nein|  
+|DDL-Trigger auf Datenbankebene in [!INCLUDE[tsql](../../includes/tsql-md.md)]|ja|nein|  
+|DDL-Trigger auf Serverebene in [!INCLUDE[tsql](../../includes/tsql-md.md)]|ja|nein|  
+|Erweiterte gespeicherte Prozeduren|nein|ja|  
+|Warteschlange|nein|ja|  
+|Synonym|nein|ja|  
+|Typ (Alias und CLR-benutzerdefinierter Typ)|nein|ja|  
+|XML-Schemaauflistung|nein|ja|  
+|Partitionsfunktion|nein|ja|  
   
- \*Eine Tabelle als verweisende Entität nachverfolgt wird, nur, wenn er verweist auf eine [!INCLUDE[tsql](../../includes/tsql-md.md)] -Modul, einen benutzerdefinierten Typ oder XML-schemaauflistung in der Definition eines berechnete Spalte, einer CHECK-Einschränkung oder einer DEFAULT-Einschränkung.  
+ \* Eine Tabelle als verweisende Entität nachverfolgt wird, nur, wenn er verweist auf eine [!INCLUDE[tsql](../../includes/tsql-md.md)] -Modul, einen benutzerdefinierten Typ oder XML-schemaauflistung in der Definition eines berechnete Spalte, einer CHECK-Einschränkung oder einer DEFAULT-Einschränkung.  
   
  ** Jede im Filterprädikat verwendete Spalte wird als verweisende Entität aufgezeichnet.  
   

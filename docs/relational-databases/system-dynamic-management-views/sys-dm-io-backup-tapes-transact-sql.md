@@ -1,16 +1,16 @@
 ---
 title: dm_io_backup_tapes (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_io_backup_tapes
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_io_backup_tapes dynamic management view
 ms.assetid: 2e27489e-cf69-4a89-9036-77723ac3de66
-caps.latest.revision: 
+caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 80f1fdab524409956921aa9087177b2ef9d8ae7f
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 3ac436bf8cecfd0f1c255e769dcfcd9b7420cc84
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmiobackuptapes-transact-sql"></a>sys.dm_io_backup_tapes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ ms.lasthandoff: 02/03/2018
 |**spid**|**int**|Sitzungs-ID. Diese identifiziert den Benutzer des Bandes. Lässt NULL-Werte zu.|  
 |**Befehl**|**int**|Der Befehl, durch den die Sicherung ausgeführt wird. Lässt NULL-Werte zu.|  
 |**command_desc**|**nvarchar(120)**|Beschreibung des Befehls. Lässt NULL-Werte zu.|  
-|**media_family_id**|**int**|Index der Medienfamilie (1... *n* ),  *n*  ist die Anzahl der Medienfamilien im Mediensatz. Lässt NULL-Werte zu.|  
+|**media_family_id**|**int**|Index der Medienfamilie (1... *n*), *n* ist die Anzahl der Medienfamilien im Mediensatz. Lässt NULL-Werte zu.|  
 |**media_set_name**|**nvarchar(256)**|Name des Mediensatzes (sofern vorhanden) gemäß Angabe durch die Option MEDIANAME zum Zeitpunkt der Erstellung des Mediensatzes. Lässt NULL-Werte zu.|  
 |**media_set_guid**|**uniqueidentifier**|Bezeichner, der den Mediensatz eindeutig identifiziert. Lässt NULL-Werte zu.|  
 |**media_sequence_number**|**int**|Index eines Volumes innerhalb einer Medienfamilie (1... *n*). Lässt NULL-Werte zu.|  
@@ -64,7 +64,7 @@ ms.lasthandoff: 02/03/2018
   
 ## <a name="see-also"></a>Siehe auch  
  [Dynamische Verwaltungssichten und -funktionen &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Ich O in Verbindung mit dynamischen Verwaltungssichten und-Funktionen &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/i-o-related-dynamic-management-views-and-functions-transact-sql.md)  
+ [Ich O dynamische Verwaltungssichten und-Funktionen im Zusammenhang &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/i-o-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   
 

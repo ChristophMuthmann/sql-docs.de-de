@@ -1,16 +1,16 @@
 ---
 title: Sys. database_files (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 09/19/2016
-ms.prod: 
+ms.prod: ''
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.database_files
@@ -22,16 +22,17 @@ dev_langs:
 helpviewer_keywords:
 - sys.database_files catalog view
 ms.assetid: 0f5b0aac-c17d-4e99-b8f7-d04efc9edf44
-caps.latest.revision: 
+caps.latest.revision: 61
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1dc7218ee0d36f7bd233be92870e32e627401734
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 01995248dd1b769c1d598500bdd97d04852206d1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdatabasefiles-transact-sql"></a>sys.database_files (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,21 +41,21 @@ ms.lasthandoff: 11/21/2017
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
-|**FILE_ID**|**int**|ID der Datei in der Datenbank|  
+|**file_id**|**int**|ID der Datei in der Datenbank|  
 |**file_guid**|**uniqueidentifier**|GUID der Datei.<br /><br /> NULL = Die Datenbank wurde von einer früheren Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aktualisiert.|  
-|**Typ**|**tinyint**|Dateityp:<br /><br /> 0 = Zeilen (schließt Dateien von Volltextkatalogen ein, die auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] aktualisiert werden oder darin erstellt werden.)<br /><br /> 1 = Protokoll<br /><br /> 2 = FILESTREAM<br /><br /> 3 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 4 = Volltext (Volltextkataloge vor [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]; Volltextkataloge, die auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] aktualisiert werden oder darin erstellt werden, geben den Dateityp 0 zurück.)|  
+|**type**|**tinyint**|Dateityp:<br /><br /> 0 = Zeilen (schließt Dateien von Volltextkatalogen ein, die auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] aktualisiert werden oder darin erstellt werden.)<br /><br /> 1 = Protokoll<br /><br /> 2 = FILESTREAM<br /><br /> 3 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 4 = Volltext (Volltextkataloge vor [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]; Volltextkataloge, die auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] aktualisiert werden oder darin erstellt werden, geben den Dateityp 0 zurück.)|  
 |**type_desc**|**nvarchar(60)**|Beschreibung des Dateityps:<br /><br /> ROWS (schließt Dateien von Volltextkatalogen ein, die auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] aktualisiert werden oder darin erstellt werden.)<br /><br /> LOG<br /><br /> FILESTREAM<br /><br /> FULLTEXT (Volltextkataloge vor [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].)|  
 |**data_space_id**|**int**|Der Wert kann 0 oder größer sein. Der Wert 0 stellt die Datenbankprotokolldatei dar, und ein Wert größer als 0 stellt die ID der Dateigruppe dar, in der diese Datendatei gespeichert ist.|  
 |**name**|**sysname**|Logischer Name der Datei in der Datenbank|  
 |**physical_name**|**nvarchar(260)**|Betriebssystem-Dateiname Wenn die Datenbank, indem Sie eine AlwaysOn gehostet wird [lesbares sekundäres Replikat](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md), **Physical_name** gibt den Dateispeicherort der primären Replikatdatenbank. Für den richtigen Speicherort einer lesbaren sekundären Datenbank, Abfragen [sys.sysaltfiles](../../relational-databases/system-compatibility-views/sys-sysaltfiles-transact-sql.md).|  
-|**Status**|**tinyint**|Dateistatus:<br /><br /> 0 = ONLINE<br /><br /> 1 = RESTORING<br /><br /> 2 = RECOVERING<br /><br /> 3 = RECOVERY_PENDING<br /><br /> 4 = SUSPECT<br /><br /> 5 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 6 = OFFLINE<br /><br /> 7 = DEFUNCT|  
-|**state_desc**|**nvarchar(60)**|Beschreibung des Dateistatus:<br /><br /> ONLINE<br /><br /> RESTORING<br /><br /> RECOVERING<br /><br /> RECOVERY_PENDING<br /><br /> SUSPECT<br /><br /> OFFLINE<br /><br /> DEFUNCT<br /><br /> Weitere Informationen finden Sie unter [Dateistatus](../../relational-databases/databases/file-states.md).|  
-|**Größe**|**int**|Aktuelle Größe der Datei in Seiten mit einer Größe von 8 KB.<br /><br /> 0 = Nicht zutreffend<br /><br /> Größe stellt bei einer Datenbank-Momentaufnahme den maximalen Speicherplatz, den die Momentaufnahme für die Datei verwenden kann.<br /><br /> Für FILESTREAM-dateigruppencontainern gibt Größe an, dass die aktuelle Größe des Containers verwendet.|  
+|**state**|**tinyint**|Dateistatus:<br /><br /> 0 = ONLINE<br /><br /> 1 = RESTORING<br /><br /> 2 = RECOVERING<br /><br /> 3 = RECOVERY_PENDING<br /><br /> 4 = SUSPECT<br /><br /> 5 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 6 = OFFLINE<br /><br /> 7 = DEFUNCT|  
+|**state_desc**|**nvarchar(60)**|Beschreibung des Dateistatus:<br /><br /> ONLINE<br /><br /> RESTORING<br /><br /> RECOVERING<br /><br /> RECOVERY_PENDING<br /><br /> SUSPECT<br /><br /> OFFLINE<br /><br /> DEFUNCT<br /><br /> Weitere Informationen finden Sie im Abschnitt [Dateistatus](../../relational-databases/databases/file-states.md).|  
+|**size**|**int**|Aktuelle Größe der Datei in Seiten mit einer Größe von 8 KB.<br /><br /> 0 = Nicht zutreffend<br /><br /> Größe stellt bei einer Datenbank-Momentaufnahme den maximalen Speicherplatz, den die Momentaufnahme für die Datei verwenden kann.<br /><br /> Für FILESTREAM-dateigruppencontainern gibt Größe an, dass die aktuelle Größe des Containers verwendet.|  
 |**max_size**|**int**|Maximale Dateigröße in Seiten mit einer Größe von 8 KB:<br /><br /> 0 = Keine Vergrößerung zulässig.<br /><br /> -1 = Datei wird vergrößert, bis der Datenträger voll ist.<br /><br /> 268435456 = Protokolldatei wird bis zu einer maximalen Größe von 2 TB vergrößert.<br /><br /> Für FILESTREAM-dateigruppencontainern gibt Max_size die maximale Größe des Containers.<br /><br /> Beachten Sie, dass die Datenbanken, die mit einer unbegrenzten Protokolldateigröße aktualisiert werden-1 für die maximale Größe der Protokolldatei gemeldet werden.|  
-|**Wachstum**|**int**|0 = Die Datei hat eine feste Größe und wird nicht vergrößert.<br /><br /> >0 = Die Datei wird automatisch vergrößert.<br /><br /> Wenn Is_percent_growth = 0, Schrittweite für die Vergrößerung in Schritten von 8-KB-Seiten, gerundet auf die nächsten 64 KB ist.<br /><br /> Wenn Is_percent_growth = 1, Vergrößerung als ganzzahliger Prozentwert.|  
+|**growth**|**int**|0 = Die Datei hat eine feste Größe und wird nicht vergrößert.<br /><br /> >0 = Die Datei wird automatisch vergrößert.<br /><br /> Wenn Is_percent_growth = 0, Schrittweite für die Vergrößerung in Schritten von 8-KB-Seiten, gerundet auf die nächsten 64 KB ist.<br /><br /> Wenn Is_percent_growth = 1, Vergrößerung als ganzzahliger Prozentwert.|  
 |**is_media_read_only**|**bit**|1 = Die Datei befindet sich auf einem schreibgeschützten Medium.<br /><br /> 0 = Die Datei befindet sich auf einem Lese/Schreib-Medium.|  
 |**is_read_only**|**bit**|1 = Die Datei ist als schreibgeschützt gekennzeichnet.<br /><br /> 0 = Die Datei ist als Lese/Schreib-Datei gekennzeichnet.|  
-|**is_sparse**|**bit**|1 = Die Datei ist eine Sparsedatei.<br /><br /> 0 = Die Datei ist keine Sparsedatei.<br /><br /> Weitere Informationen finden Sie unter [Anzeigen der Größe der Datei mit geringer Dichte einer Datenbank-Momentaufnahme &#40;Transact-SQL&#41;](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md).|  
+|**is_sparse**|**bit**|1 = Die Datei ist eine Datei mit geringer Dichte.<br /><br /> 0 = Die Datei ist keine Datei mit geringer Dichte.<br /><br /> Weitere Informationen finden Sie unter [Anzeigen der Größe der Datei mit geringer Dichte einer Datenbank-Momentaufnahme &#40;Transact-SQL&#41;](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md).|  
 |**is_percent_growth**|**bit**|1 = Die Vergrößerung der Datei erfolgt prozentual.<br /><br /> 0 = Absolute Vergrößerung in Seiten.|  
 |**is_name_reserved**|**bit**|1 = der gelöschte Dateiname (Name oder Physical_name) kann erst nach der nächsten protokollsicherung wiederverwendet. Wenn Dateien aus einer Datenbank gelöscht werden, bleiben die logischen Namen bis zur nächsten Protokollsicherung reserviert. Diese Spalte ist nur beim vollständigen und beim massenprotokollierten Wiederherstellungsmodell relevant.|  
 |**create_lsn**|**numeric(25,0)**|Protokollfolgenummer (LSN, Log Sequence Number), bei der die Datei erstellt wurde|  
@@ -91,8 +92,8 @@ Weitere Informationen zum Verwenden [!INCLUDE[ssSDS_md](../../includes/sssds-md.
  [Datenbanken und Dateikatalogsichten &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)   
  [Dateistatus](../../relational-databases/databases/file-states.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
- [Sys. master_files &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
- [Database Files and Filegroups](../../relational-databases/databases/database-files-and-filegroups.md)   
- [Sys. data_spaces &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)  
+ [sys.master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
+ [Datenbankdateien und Dateigruppen](../../relational-databases/databases/database-files-and-filegroups.md)   
+ [Sys. data_spaces & #40; Transact-SQL & #41;](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)  
   
   

@@ -1,16 +1,16 @@
 ---
 title: Sp_helpsrvrolemember (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_helpsrvrolemember
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_helpsrvrolemember
 ms.assetid: d0714913-8d6b-4de3-b042-3ae9934f839d
-caps.latest.revision: 
+caps.latest.revision: 27
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 36c1ac793a550b453508928b6544e95ed20b37b5
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 91e88ec91181cff6e7129a5af41c3476604f7c76
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelpsrvrolemember-transact-sql"></a>sp_helpsrvrolemember (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -67,20 +67,20 @@ sp_helpsrvrolemember [ [ @srvrolename = ] 'role' ]
   
 ## <a name="result-sets"></a>Resultsets  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |ServerRole|**sysname**|Name der Serverrolle.|  
 |MemberName|**sysname**|Name eines Mitglieds von ServerRole|  
-|MemberSID|**varbinary (85)**|Sicherheits-ID von MemberName|  
+|MemberSID|**varbinary(85)**|Sicherheits-ID von MemberName|  
   
 ## <a name="remarks"></a>Hinweise  
  Verwenden Sie Sp_helprolemember, um die Mitglieder einer Datenbankrolle anzuzeigen.  
   
  Alle Anmeldenamen sind Mitglied der Public. Sp_helpsrvrolemember erkennt die public-Rolle nicht, da intern, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht öffentlichen als Rolle implementiert.  
   
- Hinzufügen oder Entfernen von Serverrollen, Mitgliedern finden Sie unter [ALTER SERVER ROLE &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-server-role-transact-sql.md).  
+ Hinzufügen oder Entfernen von Serverrollen, Mitgliedern finden Sie unter [ALTER SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md).  
   
- Sp_helpsrvrolemember akzeptiert eine benutzerdefinierte Serverrolle als Argument. Um die Mitglieder einer benutzerdefinierten Serverrolle zu ermitteln, finden Sie unter den Beispielen in [ALTER SERVER ROLE &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-server-role-transact-sql.md).  
+ Sp_helpsrvrolemember akzeptiert eine benutzerdefinierte Serverrolle als Argument. Um die Mitglieder einer benutzerdefinierten Serverrolle zu ermitteln, finden Sie unter den Beispielen in [ALTER SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md).  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die Mitgliedschaft in der public-Rolle.  
@@ -93,10 +93,10 @@ EXEC sp_helpsrvrolemember 'sysadmin';
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Sp_helprole &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helprole-transact-sql.md)   
- [Sp_helprolemember &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helprolemember-transact-sql.md)   
+ [Sp_helprole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helprole-transact-sql.md)   
+ [Sp_helprolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helprolemember-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Gespeicherte Systemprozeduren &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [Security Stored Procedures &#40;Transact-SQL&#41; (Gespeicherte Sicherheitsprozeduren (Transact-SQL))](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [Sicherheitsfunktionen &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)  
   
   

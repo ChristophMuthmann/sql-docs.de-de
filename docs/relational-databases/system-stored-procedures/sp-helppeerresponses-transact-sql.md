@@ -1,16 +1,16 @@
 ---
 title: Sp_helppeerresponses (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helppeerresponses
 ms.assetid: e55789d1-43fb-4a37-9e5e-60ccef122a5d
-caps.latest.revision: 
+caps.latest.revision: 31
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 44abb0462f6360ea1823383f318c41998240545e
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 312020da93e5df6ea6f2f4cf0fcc482e8f4b94bd
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelppeerresponses-transact-sql"></a>sp_helppeerresponses (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ sp_helppeerresponses [ @request_id = ] request_id
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@request_id** =] *Request_id*  
+ [ **@request_id**=] *Request_id*  
  Die ID einer bestimmten Statusanforderung. *Request_id* ist **Int**, hat keinen Standardwert.  
   
 ## <a name="result-sets"></a>Resultsets  
@@ -70,7 +70,7 @@ sp_helppeerresponses [ @request_id = ] request_id
  Nur Mitglieder der der **Sysadmin** feste Serverrolle oder die **Db_owner** feste Datenbankrolle können ausführen **Sp_helppeerresponses**.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Sp_deletepeerrequesthistory &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-deletepeerrequesthistory-transact-sql.md)   
- [Sp_helppeerrequests &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helppeerrequests-transact-sql.md)  
+ [Sp_deletepeerrequesthistory &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-deletepeerrequesthistory-transact-sql.md)   
+ [Sp_helppeerrequests &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helppeerrequests-transact-sql.md)  
   
   

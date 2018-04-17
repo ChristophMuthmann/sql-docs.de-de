@@ -1,16 +1,16 @@
 ---
-title: "Ausführen von XPath-Abfragen (verwaltete SQLXML-Klassen) | Microsoft Docs"
-ms.custom: 
+title: Ausführen von XPath-Abfragen (verwaltete SQLXML-Klassen) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - XPath queries [SQLXML], SQLXML Managed Classes
@@ -19,20 +19,21 @@ helpviewer_keywords:
 - mapping schema [SQLXML], XPath queries
 - SQLXML Managed Classes, executing XPath queries
 ms.assetid: 8bef4c4d-bf0e-4236-a875-fd7d3e058396
-caps.latest.revision: 
+caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0465bebf92f57739858f3c478fdd7f467ebd3cff
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 9b4a81c2b7f54c1de8707d42ff32b836835aa121
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="executing-xpath-queries-sqlxml-managed-classes"></a>Ausführen von XPath-Abfragen (verwaltete SQLXML-Klassen)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-In diesem Beispiel wird dargestellt, wie XPath-Abfragen für ein Zuordnungsschema ausgeführt werden.  
+  In diesem Beispiel wird dargestellt, wie XPath-Abfragen für ein Zuordnungsschema ausgeführt werden.  
   
  Betrachten wir das folgende Schema:  
   

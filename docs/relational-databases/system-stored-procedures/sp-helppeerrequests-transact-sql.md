@@ -1,16 +1,16 @@
 ---
 title: Sp_helppeerrequests (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,21 +20,21 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helppeerrequests
 ms.assetid: 37bd503e-46c4-47c6-996e-be7ffe636fe8
-caps.latest.revision: 
+caps.latest.revision: 21
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3d2ea35c01385de46ded538c98faf701e34d3892
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: c5266359d366acad62f7ef5e4def8c176ea12682
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelppeerrequests-transact-sql"></a>sp_helppeerrequests (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Gibt Informationen zu allen statusanforderungen empfangen von Teilnehmern in einer Peer-zu-Peer-Replikationstopologie, in denen diese Anforderungen, durch das Ausführen initiiert wurden [Sp_requestpeerresponse &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md) in einer beliebigen veröffentlichten Datenbank in der Topologie. Diese gespeicherte Prozedur wird für die Veröffentlichungsdatenbank auf einem Verleger ausgeführt, der an der Peer-zu-Peer-Replikationstopologie beteiligt ist. Weitere Informationen finden Sie unter [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md).  
+  Gibt Informationen zu allen statusanforderungen empfangen von Teilnehmern in einer Peer-zu-Peer-Replikationstopologie, in denen diese Anforderungen, durch das Ausführen initiiert wurden [Sp_requestpeerresponse &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md) jederzeit veröffentlichte Datenbank in der Topologie. Diese gespeicherte Prozedur wird für die Veröffentlichungsdatenbank auf einem Verleger ausgeführt, der an der Peer-zu-Peer-Replikationstopologie beteiligt ist. Weitere Informationen finden Sie unter [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md).  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,20 +47,20 @@ sp_helppeerrequests [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@publication** =] **"***Veröffentlichung***"**  
+ [ **@publication**=] **"***Veröffentlichung***"**  
  Der Name der Veröffentlichung in einer Peer-zu-Peer-Topologie, für die Statusanforderungen gesendet wurden. *Veröffentlichung* ist **Sysname**, hat keinen Standardwert.  
   
- [  **@description** =] **"***Beschreibung***"**  
- Wert, der zum Identifizieren einzelner statusanforderungen verwendet werden kann und dadurch können Sie zurückgegebene Antworten Filtern auf der Grundlage von angegeben beim Aufrufen von benutzerdefinierten Informationen [Sp_requestpeerresponse &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md). *Beschreibung* ist **nvarchar(4000)**, hat den Standardwert  **%** . Standardmäßig werden alle Statusanforderungen für die Veröffentlichung zurückgegeben. Dieser Parameter wird verwendet, um nur statusanforderungen mit einer Beschreibung entspricht dem Wert im angegebenen zurückgeben *Beschreibung*, wobei die Zeichenfolgen verglichen werden mithilfe einer [wie &#40; Transact-SQL &#41; ](../../t-sql/language-elements/like-transact-sql.md) Klausel.  
+ [ **@description**=] **"***Beschreibung***"**  
+ Wert, der zum Identifizieren einzelner statusanforderungen, wodurch Sie zurückgegebene Antworten, die basierend auf Benutzer Filtern definiert angegeben beim Aufrufen von Informationen verwendet werden kann [Sp_requestpeerresponse &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md). *Beschreibung* ist **nvarchar(4000)**, hat den Standardwert **%**. Standardmäßig werden alle Statusanforderungen für die Veröffentlichung zurückgegeben. Dieser Parameter wird verwendet, um nur statusanforderungen mit einer Beschreibung entspricht dem Wert im angegebenen zurückgeben *Beschreibung*, wobei die Zeichenfolgen verglichen werden mithilfe einer [wie &#40;Transact-SQL&#41; ](../../t-sql/language-elements/like-transact-sql.md)Klausel.  
   
 ## <a name="result-sets"></a>Resultsets  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|Identifiziert eine Anforderung.|  
 |**Veröffentlichung**|**sysname**|Name der Veröffentlichung, für die die Statusanforderung gesendet wurde.|  
 |**sent_date**|**datetime**|Datum und Uhrzeit, zu der die Statusanforderung gesendet wurde.|  
-|**Beschreibung**|**nvarchar(4000)**|Benutzerdefinierte Informationen, die zum Identifizieren einzelner Statusanforderungen verwendet werden können.|  
+|**description**|**nvarchar(4000)**|Benutzerdefinierte Informationen, die zum Identifizieren einzelner Statusanforderungen verwendet werden können.|  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
@@ -74,7 +74,7 @@ sp_helppeerrequests [ @publication = ] 'publication'
  Nur Mitglieder der der **Sysadmin** feste Serverrolle oder die **Db_owner** feste Datenbankrolle können ausführen **Sp_helppeerrequests**.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Sp_deletepeerrequesthistory &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-deletepeerrequesthistory-transact-sql.md)   
- [Sp_helppeerresponses &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql.md)  
+ [Sp_deletepeerrequesthistory &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-deletepeerrequesthistory-transact-sql.md)   
+ [Sp_helppeerresponses &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql.md)  
   
   

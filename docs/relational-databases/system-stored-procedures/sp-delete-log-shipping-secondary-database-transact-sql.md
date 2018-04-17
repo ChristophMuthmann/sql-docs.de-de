@@ -1,16 +1,16 @@
 ---
 title: Sp_delete_log_shipping_secondary_database (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_delete_log_shipping_secondary_database_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_delete_log_shipping_secondary_database
 ms.assetid: c71b21c0-ec04-4fbd-9735-01128b736935
-caps.latest.revision: 
+caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6d1a0406ce09b9a6b55193f3f935e6a3a95d17c3
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: f95db54a944a0152bd46fad1dd9371346e6d893c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spdeletelogshippingsecondarydatabase-transact-sql"></a>sp_delete_log_shipping_secondary_database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ sp_delete_log_shipping_secondary_database
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@secondary_database =** ] '*secondary_database*'  
+ [  **@secondary_database =** ] "*Secondary_database*"  
  Der Name der sekundären Datenbank. *secondary_database* ist vom Datentyp **sysname**und hat keinen Standardwert.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
@@ -63,7 +63,7 @@ sp_delete_log_shipping_secondary_database
  Nur Mitglieder der festen Serverrolle **sysadmin** können diese Prozedur ausführen.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Über den Protokollversand &#40; SQLServer &#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [Über den Protokollversand & #40; SQLServer & #41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

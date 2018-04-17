@@ -1,8 +1,8 @@
 ---
-title: sys.pdw_replicated_table_cache_state (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: Sys.pdw_replicated_table_cache_state (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 07/03/2017
-ms.prod: 
+ms.prod: ''
 ms.prod_service: sql-data-warehouse
 ms.service: sql-data-warehouse
 ms.component: system-catalog-views
@@ -10,7 +10,7 @@ ms.reviewer: barbkess
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -18,13 +18,14 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5efc510645a6a5648c4d1e2c6e2c05567159e6e2
-ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
+monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
+ms.openlocfilehash: 007c65e55302532e6dd3f4fbd5df701d33c11616
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="syspdwreplicatedtablecachestate-transact-sql"></a>sys.pdw_replicated_table_cache_state (Transact-SQL)
+# <a name="syspdwreplicatedtablecachestate-transact-sql"></a>Sys.pdw_replicated_table_cache_state (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
   Gibt den Status des Caches, die einer replizierten Tabelle nach zugeordneten **Object_id**.  

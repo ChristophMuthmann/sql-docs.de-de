@@ -1,31 +1,32 @@
 ---
 title: Installieren von ODBC-Komponenten | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - installing ODBC components [ODBC]
 - installing ODBC components [ODBC], about installing
 - ODBC [ODBC], component installation
 ms.assetid: b7e48e9c-8912-4003-b4ef-30aa44de06a7
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 790d398aff2723557f0e944fad87cd03fbc9819c
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 010922f0f92b1e4f49df5f44340d30404289bdc3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="installing-odbc-components"></a>Installieren von ODBC-Komponenten
 > [!NOTE]  

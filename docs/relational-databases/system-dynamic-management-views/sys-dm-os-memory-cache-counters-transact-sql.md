@@ -1,8 +1,8 @@
 ---
-title: sys.dm_os_memory_cache_counters (Transact-SQL) | Microsoft Docs
+title: Sys. dm_os_memory_cache_counters (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/18/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: dmv's
@@ -27,11 +27,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c5a513e851ed7a521009d39c927d2e5f94335994
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
+ms.openlocfilehash: d16da7e5bbc38b7017da1f94741d4c4955e3485d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmosmemorycachecounters-transact-sql"></a>sys.dm_os_memory_cache_counters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

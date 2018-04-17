@@ -1,29 +1,30 @@
 ---
-title: "Unterstützung des OLE DB-Tabellenwertparameter-Typ | Microsoft Docs"
-ms.custom: 
+title: Unterstützung des OLE DB-Tabellenwertparameter-Typ | Microsoft Docs
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-ole-db-table-valued-parameters
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - table-valued parameters (OLE DB), API support (OLE DB)
 ms.assetid: 147036a0-260e-4f81-8b3b-89209e023a32
-caps.latest.revision: 
+caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 84b7677ea2dea591b25f64101577b0bf51b26142
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 8ca6098b630ba9c8b2550f1caf6d4804f6b73d0f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ole-db-table-valued-parameter-type-support"></a>OLE DB-Typunterstützung für Tabellenwertparameter
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -63,13 +64,13 @@ CoType RowsetTVP
  Konvertierungen zu und von DBTYPE_TABLE für andere Typen werden nicht unterstützt. IConvertType::CanConvert gibt S_FALSE für nicht unterstützte Konvertierung für jede Anforderung als DBTYPE_TABLE an DBTYPE_TABLE Konvertierung zurück. Dies geht davon aus DBCONVERTFLAGS_PARAMETER für das Command-Objekt.  
   
 ## <a name="methods"></a>Methoden  
- Weitere Informationen zu OLE DB-Methoden, die Tabellenwertparameter unterstützen, finden Sie unter [OLE DB Table-Valued Parameter unterstützt &#40; Methoden &#41; ](../../relational-databases/native-client-ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support-methods.md).  
+ Weitere Informationen zu OLE DB-Methoden, die Tabellenwertparameter unterstützen, finden Sie unter [OLE DB Table-Valued Parameter unterstützt &#40;Methoden&#41;](../../relational-databases/native-client-ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support-methods.md).  
   
 ## <a name="properties"></a>Eigenschaften  
- Weitere Informationen zu OLE DB-Eigenschaften, die Tabellenwertparameter unterstützen, finden Sie unter [OLE DB Table-Valued Parameter unterstützt &#40; Datenbankeigenschaften &#41; ](../../relational-databases/native-client-ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support-properties.md).  
+ Weitere Informationen zu OLE DB-Eigenschaften, die Tabellenwertparameter unterstützen, finden Sie unter [OLE DB Table-Valued Parameter unterstützt &#40;Eigenschaften&#41;](../../relational-databases/native-client-ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support-properties.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Table-Valued Parameters &#40; OLE DB &#41;](../../relational-databases/native-client-ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)   
- [Verwenden des Table-Valued Parameters &#40; OLE DB &#41;](../../relational-databases/native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md)  
+ [Tabellenwertparameter &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)   
+ [Verwenden des Table-Valued Parameters & #40; OLE DB & #41;](../../relational-databases/native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md)  
   
   

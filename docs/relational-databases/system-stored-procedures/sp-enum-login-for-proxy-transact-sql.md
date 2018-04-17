@@ -1,16 +1,16 @@
 ---
 title: Sp_enum_login_for_proxy (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_enum_login_for_proxy_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_enum_login_for_proxy
 ms.assetid: 62a75019-248a-44c8-a5cc-c79f55ea3acf
-caps.latest.revision: 
+caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8235a8c0fa9febcad446f9a6c48eecf6c470d592
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 1d8deedb9e4a534c5d30534cf874e8be8af17324
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spenumloginforproxy-transact-sql"></a>sp_enum_login_for_proxy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,13 +49,13 @@ sp_enum_login_for_proxy
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@name** =] '*Namen*"  
+ [ **@name**=] '*Namen*"  
  Der Name des eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Prinzipal, Anmeldung, Serverrolle oder **Msdb** -Datenbankrolle, für die Proxys aufgelistet werden sollen. Der Name ist **nvarchar(256)**, hat den Standardwert NULL.  
   
  [ **@proxy_id**= ] *id*  
  Die Proxy-ID des Proxys, zu dem die Informationen aufgelistet werden sollen. Die *Proxy_id* ist **Int**, hat den Standardwert NULL. Entweder die *Id* oder *Proxy_name* kann angegeben werden.  
   
- [ **@proxy_name**= ] **'***proxy_name***'**  
+ [ **@proxy_name**=] **"***Proxy_name***"**  
  Der Name des Proxys, zu dem Informationen aufgelistet werden sollen. Die *Proxy_name* ist **Sysname**, hat den Standardwert NULL. Entweder die *Id* oder *Proxy_name* kann angegeben werden.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  

@@ -1,16 +1,16 @@
 ---
 title: Sp_addmergepushsubscription_agent (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addmergepushsubscription_agent
 ms.assetid: 808a1925-be46-4999-8d69-b3a83010ec81
-caps.latest.revision: 
+caps.latest.revision: 29
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9692ecde71557a4898d7fb9892cdffdd37cbbcd2
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 22e385bb20e0c82e2011f6950e8ea8258c87b117
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddmergepushsubscriptionagent-transact-sql"></a>sp_addmergepushsubscription_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -71,7 +71,7 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@publication =** ] **"***Veröffentlichung***"**  
+ [ **@publication =** ] **'***publication***'**  
  Der Name der Veröffentlichung. *Veröffentlichung* ist **Sysname**, hat keinen Standardwert.  
   
  [  **@subscriber =** ] **"***Abonnenten***"**  
@@ -186,10 +186,10 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
  [  **@active_end_time_of_day =** ] *Active_end_time_of_day*  
  Die Tageszeit, ab der der Merge-Agent nicht mehr geplant ist. Dabei wird das Format HHMMSS verwendet. *Active_end_time_of_day* ist **Int**, hat den Standardwert NULL.  
   
- [  **@active_start_date =** ] *Active_start_date*  
+ [ **@active_start_date =** ] *active_start_date*  
  Das Datum, an dem der Merge-Agent zum ersten Mal geplant ist. Dabei wird das Format JJJJMMTT verwendet. *Active_start_date* ist **Int**, hat den Standardwert NULL.  
   
- [  **@active_end_date =** ] *Active_end_date*  
+ [ **@active_end_date =** ] *active_end_date*  
  Das Datum, ab dem der Merge-Agent nicht mehr geplant ist. Dabei wird das Format JJJJMMTT verwendet. *Active_end_date* ist **Int**, hat den Standardwert NULL.  
   
  [  **@enabled_for_syncmgr =** ] **"***Enabled_for_syncmgr***"**  
@@ -210,9 +210,9 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
 ## <a name="see-also"></a>Siehe auch  
  [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)   
  [Abonnieren von Veröffentlichungen](../../relational-databases/replication/subscribe-to-publications.md)   
- [Sp_addmergesubscription &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)   
- [Sp_changemergesubscription &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md)   
- [Sp_dropmergesubscription &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md)   
- [Sp_helpmergesubscription &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql.md)  
+ [Sp_addmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)   
+ [Sp_changemergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md)   
+ [Sp_dropmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md)   
+ [Sp_helpmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql.md)  
   
   

@@ -1,16 +1,16 @@
 ---
 title: Sp_changearticlecolumndatatype (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changearticlecolumndatatype
 ms.assetid: 0db80e08-fb77-4d0c-aa41-455b13ffa9b4
-caps.latest.revision: 
+caps.latest.revision: 30
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1defb009948d01147e4b8f9e333cdd108c8bbba9
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 08ed5f6f79b78dcb251ebd632f0cf6c70ffec1ee
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spchangearticlecolumndatatype-transact-sql"></a>sp_changearticlecolumndatatype (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,19 +62,19 @@ sp_changearticlecolumndatatype [ @publication= ] 'publication'
  [  **@article =** ] **"***Artikel***"**  
  Der Name des Artikels. *Artikel* ist **Sysname**, hat keinen Standardwert.  
   
- [  **@column** =] **"***Spalte***"**  
+ [ **@column**=] **"***Spalte***"**  
  Der Name der Spalte, für die die Datentypzuordnung geändert werden soll. *Spalte* ist **Sysname**, hat keinen Standardwert.  
   
- [  **@type**  =] **"***Typ***"**  
+ [ **@type** =] **"***Typ***"**  
  Der Name des der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datentyp in der Spalte "Ziel". *Typ* ist **Sysname**, hat den Standardwert NULL.  
   
- [  **@length**  =] *Länge*  
+ [ **@length** =] *Länge*  
  Die Länge des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentyps in der Zielspalte. *Länge* ist **"bigint"**, hat den Standardwert NULL.  
   
- [  **@precision** =] *mit einfacher Genauigkeit*  
+ [ **@precision**=] *mit einfacher Genauigkeit*  
  Die Genauigkeit des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentyps in der Zielspalte. *Genauigkeit* ist **"bigint"**, hat den Standardwert NULL.  
   
- [  **@publisher** =] **"***Publisher***"**  
+ [ **@publisher**=] **"***Publisher***"**  
  Gibt einen nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger. *Publisher* ist **Sysname**, hat den Standardwert NULL.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  

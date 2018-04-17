@@ -1,16 +1,16 @@
 ---
-title: sys.dm_db_mirroring_auto_page_repair (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: dm_db_mirroring_auto_page_repair (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_db_mirroring_auto_page_repair_TSQL
@@ -24,16 +24,16 @@ helpviewer_keywords:
 - database mirroring [SQL Server], automatic page repair
 - sys.dm_db_mirroring_auto_page_repair dynamic management view
 ms.assetid: 49f0fc2a-e25e-47e1-a135-563adb509af1
-caps.latest.revision: 
+caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 35b8224cfb63709a6096aaa937aa19dd04d9c212
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: d71ed7405b896a4e8542a66f445a7b6ed9376092
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="database-mirroring---sysdmdbmirroringautopagerepair"></a>Datenbankspiegelung - dm_db_mirroring_auto_page_repair
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ ms.lasthandoff: 02/03/2018
 ## <a name="see-also"></a>Siehe auch  
  [Automatische Seitenreparatur (Verfügbarkeitsgruppen: Datenbankspiegelung)](../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md)   
  [Dynamische Verwaltungssichten und -funktionen &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Suspect_pages &#40; Transact-SQL &#41;](../../relational-databases/system-tables/suspect-pages-transact-sql.md)   
+ [Suspect_pages & #40; Transact-SQL & #41;](../../relational-databases/system-tables/suspect-pages-transact-sql.md)   
  [Verwalten der suspect_pages-Tabelle &#40;SQL Server&#41;](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md)  
   
   

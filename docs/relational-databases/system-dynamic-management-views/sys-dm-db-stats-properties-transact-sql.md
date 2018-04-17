@@ -1,16 +1,16 @@
 ---
 title: Sys. dm_db_stats_properties (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 12/18/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_db_stats_properties_TSQL
@@ -22,16 +22,17 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_stats_properties
 ms.assetid: 8a54889d-e263-4881-9fcb-b1db410a9453
-caps.latest.revision: 
+caps.latest.revision: 13
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3406cfffce07260fc425c2850e548d006f9d796a
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 31a4637f2bdfdddc220ccb930dd4873956ddbf3a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmdbstatsproperties-transact-sql"></a>sys.dm_db_stats_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -57,13 +58,13 @@ sys.dm_db_stats_properties (object_id, stats_id)
 |-----------------|---------------|-----------------|  
 |object_id|**int**|ID des Objekts (Tabelle oder indizierte Sicht), für das die Eigenschaften des Statistikobjekts zurückgegeben werden sollen.|  
 |stats_id|**int**|Die ID des Statistikobjekts. Diese ist innerhalb der Tabelle oder indizierten Sicht eindeutig. Weitere Informationen finden Sie unter [sys.stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md).|  
-|last_updated|**datetime2**|Datum und Uhrzeit der letzten Aktualisierung des Statistikobjekts. Weitere Informationen finden Sie unter der ["Hinweise"](#Remarks) Abschnitt auf dieser Seite.|  
+|last_updated|**datetime2**|Datum und Uhrzeit der letzten Aktualisierung des Statistikobjekts. Weitere Informationen finden Sie im Abschnitt [Hinweise](#Remarks) dieses Artikels.|  
 |rows|**bigint**|Gesamtanzahl der Zeilen in der Tabelle oder indizierten Sicht zum Zeitpunkt der letzten Aktualisierung der Statistik. Wenn die Statistik gefiltert wird oder einem gefilterten Index entspricht, kann die Anzahl der Zeilen geringer als die Anzahl der Zeilen in der Tabelle sein.|  
 |rows_sampled|**bigint**|Gesamtzahl der Zeilen, die für die statistischen Berechnungen in die Stichprobe aufgenommen wurden.|  
 |steps|**int**|Anzahl der Schritte im Histogramm. Weitere Informationen finden Sie unter [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)enthalten.|  
 |unfiltered_rows|**bigint**|Gesamtanzahl der Zeilen in der Tabelle vor dem Anwenden des Filterausdrucks (für gefilterte Statistiken). Wenn die Statistik nicht gefiltert ist, entspricht „unfiltered_rows“ dem in der rows-Spalte zurückgegebenen Wert.|  
 |modification_counter|**bigint**|Gesamtanzahl der Änderungen für die führende Statistikspalte (auf der das Histogramm basiert) seit der letzten Aktualisierung der Statistik.<br /><br /> Speicheroptimierte Tabellen: ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] enthält diese Spalte: Gesamtzahl der Änderungen für die Tabelle, die seit der letzten Statistiken aktualisiert wurden oder die Datenbank wurde neu gestartet.|  
-|persisted_sample_percent|**float**|Beibehalten von Prozentsatz für die Stichprobe verwendet wird, für die Statistik-Updates, die einen Sampling Prozentsatz nicht explizit angeben. Wenn der Wert 0 (null) ist, ist kein Prozentsatz der beibehaltenen Beispiel für diese Statistik festgelegt.<br /><br /> **Gilt für:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4|  
+|persisted_sample_percent|**float**|Der persistierte Prozentwert für die Stichprobe wird für Aktualisierungen von Statistiken verwendet, die keinen expliziten Prozentwert für die Stichprobenentnahme angibt. Wenn der Wert 0 (null) ist, wird kein persistierter Prozentwert für diese Statistik festgelegt.<br /><br /> **Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4|  
   
 ## <a name="Remarks"></a> Hinweise  
  **Sys. dm_db_stats_properties** unter einer der folgenden Bedingungen ein leeres Rowset zurück:  
@@ -75,7 +76,7 @@ sys.dm_db_stats_properties (object_id, stats_id)
   
  Dieses Verhalten ermöglicht die sichere Verwendung von **dm_db_stats_properties** Wenn Cross angewendet auf Zeilen in Sichten wie z. B. **sys.objects** und **sys.stats**.  
  
-Statistiken Aktualisierungsdatum befindet sich in der [Statistik-Blob-Objekt](../../relational-databases/statistics/statistics.md#DefinitionQOStatistics) zusammen mit den [Histogramm](../../relational-databases/statistics/statistics.md#histogram) und [dichtevektor](../../relational-databases/statistics/statistics.md#density), nicht in den Metadaten. Wenn keine Daten gelesen werden, um statistische Daten zu generieren, die Statistik-Blob nicht erstellt, das Datum ist nicht verfügbar, und die *Last_updated* Spalte ist NULL. Dies ist der Fall für gefilterte Statistiken für die das Prädikat keine Zeilen zurückgibt, oder für neue, leere Tabellen.
+Das Aktualisierungsdatum für die Statistiken befindet sich gemeinsam mit dem [Histogramm](../../relational-databases/statistics/statistics.md#histogram) und [Dichtevektor](../../relational-databases/statistics/statistics.md#density) nicht in den Metadaten, sondern im [Statistik-Blobobjekt](../../relational-databases/statistics/statistics.md#DefinitionQOStatistics). Wenn keine Daten gelesen werden, um statistische Daten zu generieren, die Statistik-Blob nicht erstellt, das Datum ist nicht verfügbar, und die *Last_updated* Spalte ist NULL. Dies ist der Fall bei gefilterten Statistiken oder neuen und leeren Tabellen, für die das Prädikat keine Zeilen zurückgibt.
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert, dass der Benutzer über SELECT-Berechtigungen für Statistikspalten verfügt, Besitzer der Tabelle oder Mitglied der festen Serverrolle `sysadmin`, der festen Datenbankrolle `db_owner` oder der festen Datenbankrolle `db_ddladmin` ist.  
@@ -115,7 +116,7 @@ WHERE modification_counter > 1000;
  [sys.stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)   
  [Objektbezogene dynamische Verwaltungssichten und -funktionen &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/object-related-dynamic-management-views-and-functions-transact-sql.md)   
  [Dynamische Verwaltungssichten und -funktionen &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  
- [sys.dm_db_incremental_stats_properties (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-incremental-stats-properties-transact-sql.md)  
+ [Sys.dm_db_incremental_stats_properties (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-incremental-stats-properties-transact-sql.md)  
  [sys.dm_db_stats_histogram (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md) 
   
 

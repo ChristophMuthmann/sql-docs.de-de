@@ -1,36 +1,37 @@
 ---
-title: "Ausführen eines Updategrams mit ADO (SQLXML 4.0) | Microsoft Docs"
-ms.custom: 
+title: Ausführen eines Updategrams mit ADO (SQLXML 4.0) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - ADO [SQLXML]
 - updategrams [SQLXML], ADO
 - executing updategrams [SQLXML]
 ms.assetid: 78610ca0-f763-45fc-ac64-da5c192cc3e5
-caps.latest.revision: 
+caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: df6dbe2042e78b92207c990c8633776c38a9cc0f
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 5c80a6c28e05f940f5c3cf3010edd6e08a99258d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="executing-an-updategram-by-using-ado-sqlxml-40"></a>Ausführen eines Updategrams mit ADO (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Diese [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic-Anwendung verwendet ADO, um eine Verbindung mit einer Instanz von Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] herzustellen und ein Updategram auszuführen. Das Updategram aktualisiert den Nachnamen eines bestimmten Mitarbeiters. In diesem Beispiel wird die AdventureWorks-Musterdatenbank verwendet.  
+  Diese [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic-Anwendung verwendet ADO, um eine Verbindung mit einer Instanz von Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] herzustellen und ein Updategram auszuführen. Das Updategram aktualisiert den Nachnamen eines bestimmten Mitarbeiters. In diesem Beispiel wird die AdventureWorks-Musterdatenbank verwendet.  
   
  Diese Beispielanwendung zeigt Folgendes:   
   

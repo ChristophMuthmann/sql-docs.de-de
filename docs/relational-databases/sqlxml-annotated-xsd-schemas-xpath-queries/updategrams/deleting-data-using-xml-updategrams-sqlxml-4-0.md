@@ -1,16 +1,16 @@
 ---
-title: "Löschen von Daten mit XML-Updategrams (SQLXML 4.0) | Microsoft Docs"
-ms.custom: 
+title: Löschen von Daten mit XML-Updategrams (SQLXML 4.0) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - <after> block
@@ -19,20 +19,21 @@ helpviewer_keywords:
 - mapping-schema attribute
 - record deletions [SQLXML]
 ms.assetid: 4fb116d7-7652-474a-a567-cb475a20765c
-caps.latest.revision: 
+caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ec9979c3c6f474cfd0702da990fa71be57d37bbf
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 9d71554373fab48fe3636500a70c800d66ec9863
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="deleting-data-using-xml-updategrams-sqlxml-40"></a>Löschen von Daten mit XML-Updategrams (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Ein Updategram zeigt einen Löschvorgang an, wenn eine in Datensatzinstanz der  **\<vor >** Block, jedoch ohne entsprechende Datensätze in der  **\<nach >** Block. In diesem Fall löscht das Updategram den Datensatz in die  **\<vor >** Block aus der Datenbank.  
+  Ein Updategram zeigt einen Löschvorgang an, wenn eine in Datensatzinstanz der  **\<vor >** Block, jedoch ohne entsprechende Datensätze in der  **\<nach >** Block. In diesem Fall löscht das Updategram den Datensatz in die  **\<vor >** Block aus der Datenbank.  
   
  Dies ist das Updategramformat für einen Löschvorgang:  
   
@@ -54,7 +55,7 @@ Ein Updategram zeigt einen Löschvorgang an, wenn eine in Datensatzinstanz der  
  Wenn ein Element im Updategram angegebene mehr als eine Zeile in der Tabelle entspricht, oder eine beliebige Zeile stimmt nicht überein, wird das Updategram einen Fehler zurück und bricht die gesamte  **\<Sync >** Block. Nur ein Datensatz kann gleichzeitig von einem Element im Updategram gelöscht werden.  
   
 ## <a name="examples"></a>Beispiele  
- Die Beispiele in diesem Abschnitt verwenden die Standardzuordnung (d. h. es ist kein Zuordnungsschema im Updategram angegeben). Weitere Beispiele für Updategrams, die Zuordnungsschemas verwenden, finden Sie unter [ein Mapping-Schema mit Anmerkungen angeben, in einem Updategram &#40; SQLXML 4.0 &#41; ](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md).  
+ Die Beispiele in diesem Abschnitt verwenden die Standardzuordnung (d. h. es ist kein Zuordnungsschema im Updategram angegeben). Weitere Beispiele für Updategrams, die Zuordnungsschemas verwenden, finden Sie unter [ein Mapping-Schema mit Anmerkungen angeben, in einem Updategram &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md).  
   
  Um funktionierende Beispiele, die über folgende Beispiele zu erstellen, müssen Sie in angegebenen Anforderungen erfüllen [Anforderungen für die Ausführung von SQLXML-Beispielen](../../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
@@ -88,15 +89,15 @@ Ein Updategram zeigt einen Löschvorgang an, wenn eine in Datensatzinstanz der  
   
 ##### <a name="to-test-the-updategram"></a>So testen Sie das Updategram  
   
-1.  Vollständiges Beispiel B ("Einfügen mehrerer Datensätze mithilfe eines Updategrams") in [Einfügen von Daten mithilfe von XML-Updategrams &#40; SQLXML 4.0 &#41; ](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/inserting-data-using-xml-updategrams-sqlxml-4-0.md).  
+1.  Vollständiges Beispiel B ("Einfügen mehrerer Datensätze mithilfe eines Updategrams") in [Einfügen von Daten mithilfe von XML-Updategrams &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/inserting-data-using-xml-updategrams-sqlxml-4-0.md).  
   
-2.  Kopieren Sie das oben angegebene Updategram in Editor, und speichern Sie sie als Updategram-RemoveShifts.xml in demselben Ordner befindet, als abgeschlossen ("Einfügen mehrerer Datensätze mithilfe eines Updategrams") verwendet wurde, im [Einfügen von Daten mithilfe von XML-Updategrams &#40; SQLXML 4.0 &#41; ](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/inserting-data-using-xml-updategrams-sqlxml-4-0.md).  
+2.  Kopieren Sie das oben angegebene Updategram in Editor, und speichern Sie sie als Updategram-RemoveShifts.xml in demselben Ordner befindet, als abgeschlossen ("Einfügen mehrerer Datensätze mithilfe eines Updategrams") verwendet wurde, im [Einfügen von Daten mithilfe von XML-Updategrams &#40;SQLXML 4.0&#41; ](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/inserting-data-using-xml-updategrams-sqlxml-4-0.md).  
   
 3.  Erstellen und verwenden Sie das SQLXML 4.0-Testskript (Sqlxml4test.vbs), um das Updategram auszuführen.  
   
      Weitere Informationen finden Sie unter [mithilfe von ADO zum Ausführen von SQLXML 4.0-Abfragen](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Sicherheitsüberlegungen zu Updategrams &#40; SQLXML 4.0 &#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
+ [Sicherheitsüberlegungen zu Updategrams &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
   
   

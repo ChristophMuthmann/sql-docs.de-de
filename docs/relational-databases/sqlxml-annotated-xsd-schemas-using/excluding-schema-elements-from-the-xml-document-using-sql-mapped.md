@@ -1,16 +1,16 @@
 ---
-title: "Ausschließen von Schemaelementen aus der XML-Dokument mit Sql: zugeordnet | Microsoft Docs"
-ms.custom: 
+title: 'Ausschließen von Schemaelementen aus der XML-Dokument mit Sql: zugeordnet | Microsoft Docs'
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - element does not map [SQLXML]
@@ -25,20 +25,21 @@ helpviewer_keywords:
 - attribute mapping [SQLXML], excluding schema elements
 - table/view mapping [SQLXML], excluding schema elements
 ms.assetid: 7d2649dd-0038-4a2c-b16d-f80f7c306966
-caps.latest.revision: 
+caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 104c3958a6964967629c32ad22a5371a41226f67
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: ccb3a9d274191ef11c031872062b07e5058acf54
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="excluding-schema-elements-from-the-xml-document-using-sqlmapped"></a>Ausschließen von Schemaelementen aus der XML-Dokument mit Sql: zugeordnet
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Aufgrund der Standardzuordnung werden alle Elemente und Attribute im XSD-Schema einer Datenbanktabelle/-sicht und -spalte zugeordnet. Erstellen Sie ein Element in der XSD-Schema, die auf keiner Datenbanktabelle (Sicht) oder – Spalte zugeordnet ist und nicht in der XML-Code angezeigt, werden sollen, können Sie angeben der **Sql: zugeordnet** Anmerkung.  
+  Aufgrund der Standardzuordnung werden alle Elemente und Attribute im XSD-Schema einer Datenbanktabelle/-sicht und -spalte zugeordnet. Erstellen Sie ein Element in der XSD-Schema, die auf keiner Datenbanktabelle (Sicht) oder – Spalte zugeordnet ist und nicht in der XML-Code angezeigt, werden sollen, können Sie angeben der **Sql: zugeordnet** Anmerkung.  
   
  Die **Sql: zugeordnet** -Anmerkung ist besonders hilfreich, wenn das Schema kann nicht geändert werden, oder wenn das Schema zum Validieren von XML aus anderen Quellen und noch nicht in der Datenbank gespeicherten Daten enthält. Die **Sql: zugeordnet** -Anmerkung unterscheidet sich von **Sql: ist Konstante** , die nicht zugeordneten Elemente und Attribute im XML-Dokument nicht angezeigt werden.  
   
@@ -112,6 +113,6 @@ Aufgrund der Standardzuordnung werden alle Elemente und Attribute im XSD-Schema 
  Beachten Sie, dass die ContactID, FirstName und LastName vorhanden sind, HomeAddress ist, nicht verwendet werden, da das Zuordnungsschema für 0 angegeben jedoch die **Sql: zugeordnet** Attribut.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Standardzuordnung von XSD-Elementen und-Attributen zu Tabellen und Spalten &#40; SQLXML 4.0 &#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-4-0.md)  
+ [Standardzuordnung von XSD-Elementen und-Attributen zu Tabellen und Spalten &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-4-0.md)  
   
   

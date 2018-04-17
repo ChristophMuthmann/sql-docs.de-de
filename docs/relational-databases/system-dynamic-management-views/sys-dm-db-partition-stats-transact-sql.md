@@ -1,16 +1,16 @@
 ---
 title: Sys. dm_db_partition_stats (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_db_partition_stats
@@ -22,16 +22,17 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_partition_stats dynamic management view
 ms.assetid: 9db9d184-b3a2-421e-a804-b18ebcb099b7
-caps.latest.revision: 
+caps.latest.revision: 30
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: fd061684962fe1d779b3f35f472b35ca52f45e95
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 668a7e12b4159aa5d3cc69fdc3937d817941cdd1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmdbpartitionstats-transact-sql"></a>sys.dm_db_partition_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -61,7 +62,7 @@ ms.lasthandoff: 02/03/2018
 |**distribution_id**|**int**|**Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Die eindeutige numerische Id, die die Verteilung.|  
   
 ## <a name="remarks"></a>Hinweise  
- **sys.dm_db_partition_stats** displays information about the space used to store and manage in-row data LOB data, and row-overflow data for all partitions in a database. Es wird eine Zeile pro Partition angezeigt.  
+ **Sys. dm_db_partition_stats** zeigt Informationen zum Speicherplatz, der zum Speichern und Verwalten von Daten in Zeilen LOB-Daten und zeilenüberlaufdaten für alle Partitionen in einer Datenbank. Es wird eine Zeile pro Partition angezeigt.  
   
  Die Zahlen, auf denen die Ausgabe basiert, werden im Arbeitsspeicher zwischengespeichert oder auf einem Datenträger in unterschiedlichen Systemtabellen gespeichert.  
   
@@ -72,7 +73,7 @@ ms.lasthandoff: 02/03/2018
  Die Gesamtanzahl für eine einzelne Tabelle oder einen Index kann durch das Addieren der Zahlen für alle relevanten Partitionen bestimmt werden.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert die VIEW DATABASE STATE-Berechtigung zum Abfragen der **dm_db_partition_stats** -verwaltungssicht. Weitere Informationen zu Berechtigungen für dynamische Verwaltungssichten finden Sie unter [dynamische Verwaltungssichten und-Funktionen &#40; Transact-SQL &#41; ](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).  
+ Erfordert die VIEW DATABASE STATE-Berechtigung zum Abfragen der **dm_db_partition_stats** -verwaltungssicht. Weitere Informationen zu Berechtigungen für dynamische Verwaltungssichten finden Sie unter [dynamische Verwaltungssichten und-Funktionen &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).  
   
 ## <a name="examples"></a>Beispiele  
   
@@ -112,7 +113,7 @@ GO
   
 ## <a name="see-also"></a>Siehe auch  
  [Dynamische Verwaltungssichten und -funktionen &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Datenbank verbundene dynamische Verwaltungssichten &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
+ [Datenbank verbundene dynamische Verwaltungssichten &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
   
   
 

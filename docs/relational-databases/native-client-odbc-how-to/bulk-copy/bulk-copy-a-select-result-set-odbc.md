@@ -1,31 +1,32 @@
 ---
 title: Massenkopieren eine SELECT-Resultsets (ODBC) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-odbc-how-to
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - bulk copy [ODBC]
 - bulk copy [ODBC], data files
 - bulk copy [ODBC], about bulk copy
 ms.assetid: 63d5a87b-4d5f-449b-8c77-9f9cc6b190d4
-caps.latest.revision: 
+caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cd028d3d10f7bb2a5fb621d5a019331c21609068
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: cf93291e22fc4da2d49d13b81a1fb3a56e4d9692
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="bulk-copy-a-select-result-set-odbc"></a>Massenkopieren eines SELECT-Resultsets (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -58,7 +59,7 @@ ms.lasthandoff: 01/25/2018
   
 6.  Rufen Sie [bcp_exec](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md) auf, um den Massenkopiervorgang auszuführen.  
   
- Wenn Sie diese Schritte ausführen, wird die Datei im systemeigenen Format erstellt. Sie können die Datenwerte in andere Datentypen konvertieren, mithilfe von [Bcp_colfmt](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md). Weitere Informationen finden Sie unter [Erstellen einer Formatdatei für Massenkopieren &#40; ODBC &#41;](../../../relational-databases/native-client-odbc-how-to/bulk-copy/create-a-bulk-copy-format-file-odbc.md).  
+ Wenn Sie diese Schritte ausführen, wird die Datei im systemeigenen Format erstellt. Sie können die Datenwerte in andere Datentypen konvertieren, mithilfe von [Bcp_colfmt](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md). Weitere Informationen finden Sie unter [Erstellen einer Formatdatei für Massenkopieren &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/bulk-copy/create-a-bulk-copy-format-file-odbc.md).  
   
 ## <a name="example"></a>Beispiel  
  Sie benötigen eine ODBC-Datenquelle mit dem Namen AdventureWorks, deren Standarddatenbank die AdventureWorks-Beispieldatenbank ist. (Sie können die AdventureWorks-Beispieldatenbank von der Homepage [Microsoft SQL Server Samples and Community Projects](http://go.microsoft.com/fwlink/?LinkID=85384) herunterladen.) Diese Datenquelle muss auf dem ODBC-Treiber basieren, der vom Betriebssystem bereitgestellt wird (der Treibername lautet "SQL Server"). Wenn Sie dieses Beispiel als 32-Bit-Anwendung entwickeln und unter einem 64-Bit-Betriebssystem ausführen, müssen Sie die ODBC-Datenquelle mit dem ODBC-Administrator in %windir%\SysWOW64\odbcad32.exe erstellen.  
@@ -172,6 +173,6 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Das Massenkopieren mit der SQL Server-ODBC-Treiber Themen zur Vorgehensweise &#40; ODBC &#41;](../../../relational-databases/native-client-odbc-how-to/bulk-copy/bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)  
+ [Das Massenkopieren mit der SQL Server-ODBC-Treiber Themen zur Vorgehensweise & #40; ODBC & #41;](../../../relational-databases/native-client-odbc-how-to/bulk-copy/bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)  
   
   

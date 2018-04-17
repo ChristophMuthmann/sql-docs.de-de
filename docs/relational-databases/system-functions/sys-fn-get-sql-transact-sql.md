@@ -1,16 +1,16 @@
 ---
-title: sys.fn_get_sql (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: Sys.fn_get_sql (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - fn_get_sql
@@ -26,16 +26,16 @@ helpviewer_keywords:
 - valid SQL handles [SQL Server]
 - SQL handles
 ms.assetid: d5fe49b5-0813-48f2-9efb-9187716b2fd4
-caps.latest.revision: 
+caps.latest.revision: 39
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 941417a97ce739173e2aba195d51ec845848186f
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: d2f4572bfe948456f98e446d05e8c5601490431c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysfngetsql-transact-sql"></a>sys.fn_get_sql (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.lasthandoff: 02/09/2018
   Gibt den Text der SQL-Anweisung für das angegebene SQL-Handle zurück.  
   
 > [!IMPORTANT]  
->  Dieses Feature wird in einer künftigen Version von Microsoft SQL Server entfernt. Verwenden Sie diese Funktion beim Entwickeln neuer Anwendungen nicht, und planen Sie das Ändern von Anwendungen, in denen es zurzeit verwendet wird. Verwenden Sie stattdessen sys.dm_exec_sql_text. Weitere Informationen finden Sie unter [Sys. dm_exec_sql_text &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md).  
+>  Dieses Feature wird in einer künftigen Version von Microsoft SQL Server entfernt. Verwenden Sie diese Funktion beim Entwickeln neuer Anwendungen nicht, und planen Sie das Ändern von Anwendungen, in denen es zurzeit verwendet wird. Verwenden Sie stattdessen sys.dm_exec_sql_text. Weitere Informationen finden Sie unter [Sys. dm_exec_sql_text &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md).  
   
  
   
@@ -67,11 +67,11 @@ sys.fn_get_sql ( SqlHandle )
 |dbid|**smallint**|Datenbank-ID Für Ad-hoc-Anweisungen und vorbereitete SQL-Anweisungen, die ID der Datenbank, in der die Anweisungen kompiliert wurden.|  
 |objectid|**int**|ID des Datenbankobjekts. Dieser Wert ist für Ad-hoc-SQL-Anweisungen NULL.|  
 |number|**smallint**|Gibt die Nummer der Gruppe an, wenn die Prozeduren gruppiert sind.<br /><br /> 0 = Einträge sind keine Prozeduren.<br /><br /> NULL = Ad-hoc-SQL-Anweisungen.|  
-|encrypted|**bit**|Zeigt an, ob das Objekt verschlüsselt ist.<br /><br /> 0 = nicht verschlüsselt<br /><br /> 1 = Verschlüsselt.|  
+|encrypted|**bit**|Zeigt an, ob das Objekt verschlüsselt ist.<br /><br /> 0 = Nicht verschlüsselt<br /><br /> 1 = Verschlüsselt.|  
 |text|**text**|Der Text der SQL-Anweisung. Der Wert ist für verschlüsselte Objekte NULL.|  
   
 ## <a name="remarks"></a>Hinweise  
- Sie erhalten ein gültiges SQL-Handle aus der Spalte sql_handle-Wert, der die [Sys. dm_exec_requests &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) -verwaltungssicht.  
+ Sie erhalten ein gültiges SQL-Handle aus der Spalte sql_handle-Wert, der die [Sys. dm_exec_requests &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) -verwaltungssicht.  
   
  Wenn Sie ein Handle, das nicht mehr übergeben vorhanden ist, im Cache, Fn_get_sq**l** gibt ein leeres Resultset zurück. Wenn Sie ein ungültiges Handle übergeben, wird die Ausführung des Batches beendet und eine Fehlermeldung zurückgegeben.  
   

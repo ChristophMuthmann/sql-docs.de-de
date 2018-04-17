@@ -2,7 +2,7 @@
 title: Sp_add_data_file_recover_suspect_db (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: system-stored-procedures
@@ -25,11 +25,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cb770c0580af43309daa81a2aad56e327864bc4f
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: 8fb5dd0e5f06271e2af3a8e7efd66b9b1c2ddf10
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spadddatafilerecoversuspectdb-transact-sql"></a>sp_add_data_file_recover_suspect_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ sp_add_data_file_recover_suspect_db [ @dbName= ] 'database'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@dbName=** ] **'***database* **'**  
+ [  **@dbName=** ] **"*** Datenbank* **"**  
  Der Name der Datenbank. *Datenbank* ist **Sysname**, hat keinen Standardwert.  
   
  [  **@filegroup=** ] **"*** Filegroup_name* **"**  
@@ -61,7 +61,7 @@ sp_add_data_file_recover_suspect_db [ @dbName= ] 'database'
  [  **@name=** ] **"*** Logical_file_name* **"**  
  Der Name, der in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zum Verweis auf die Datei verwendet wird. Der Name muss auf dem Server eindeutig sein. *Logical_file_name* ist **nvarchar(260)**, hat keinen Standardwert.  
   
- [ **@filename=** ] **'***os_file_name* **'**  
+ [  **@filename=** ] **"*** logische* **"**  
  Der Pfad und der Dateiname, die vom Betriebssystem für die Datei verwendet werden. Die Datei muss sich auf einer Instanz des [!INCLUDE[ssDE](../../includes/ssde-md.md)]s befinden. *physischer Dateiname* ist **nvarchar(260)**, hat keinen Standardwert.  
   
  [ **@size=** ] **'***size* **'**  
@@ -72,7 +72,7 @@ sp_add_data_file_recover_suspect_db [ @dbName= ] 'database'
   
  Wenn *Max_size* nicht angegeben ist, wird die Datei wird vergrößert, bis der Datenträger voll ist. Das Anwendungsprotokoll von [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows warnt den Administrator, bevor der Speicherplatz auf einem Datenträger erschöpft ist.  
   
- [ **@filegrowth=** ] **'***growth_increment* **'**  
+ [  **@filegrowth=** ] **"*** Growth_increment* **"**  
  Die Menge an Speicherplatz, die der Datei jedes Mal dann hinzugefügt wird, wenn neuer Speicherplatz erforderlich wird. *Growth_increment* ist **nvarchar(20)**, hat den Standardwert NULL. Durch den Wert 0 wird angezeigt, dass die Datei nicht vergrößert wird. Geben Sie eine ganze Zahl (ohne Dezimalstellen) an. Der Wert kann in MB, KB oder Prozent (%) angegeben werden. Wenn der Wert in Prozent angegeben wird, ist growth increment der angegebene Prozentsatz der Dateigröße zum Zeitpunkt der Vergrößerung. Bei Zahlen ohne Angabe von MB, KB oder % wird standardmäßig MB verwendet.  
   
  Wenn *Growth_increment* NULL ist, der Standardwert ist 10 % und der Mindestwert beträgt 64 KB. Die angegebene Größe wird auf den nächsten durch 64 KB teilbaren Wert gerundet.  

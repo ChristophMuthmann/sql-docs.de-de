@@ -1,16 +1,16 @@
 ---
 title: dm_exec_cursors (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/09/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_exec_cursors_TSQL
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_cursors dynamic management function
 ms.assetid: f520b63c-36af-40f1-bf71-6901d6331d3d
-caps.latest.revision: 
+caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7e659c10857c8a5248707e592738375fc5c7c483
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 3765face3d65bbb56f65bd9383aa21f62225e79d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmexeccursors-transact-sql"></a>sys.dm_exec_cursors (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ dm_exec_cursors (session_id | 0 )
 |**session_id**|**int**|ID der Sitzung, die diesen Cursor enthält.|  
 |**cursor_id**|**int**|ID des Cursorobjekts.|  
 |**name**|**nvarchar(256)**|Name des Cursors gemäß der Definition durch den Benutzer.|  
-|**properties**|**nvarchar(256)**|Gibt die Eigenschaften des Cursors an. Die Werte der folgenden Eigenschaften werden zu einem Wert dieser Spalte verkettet:<br />Deklarationsschnittstelle<br />Cursortyp <br />Cursorparallelität<br />Cursorbereich<br />Cursorschachtelungsebene<br /><br /> Angenommen, die in dieser Spalte zurückgegebene Wert "t-SQL &#124; möglicherweise Dynamische &#124; Optimistische &#124; Global (0) ".|  
+|**Eigenschaften**|**nvarchar(256)**|Gibt die Eigenschaften des Cursors an. Die Werte der folgenden Eigenschaften werden zu einem Wert dieser Spalte verkettet:<br />Deklarationsschnittstelle<br />Cursortyp <br />Cursorparallelität<br />Cursorbereich<br />Cursorschachtelungsebene<br /><br /> In dieser Spalte zurückgegebene Wert möglicherweise z. B. "TSQL &#124; dynamische &#124; Optimistic &#124; Global (0)".|  
 |**sql_handle**|**varbinary(64)**|Handle zum Text des Batches, durch den der Cursor deklariert wurde.|  
 |**statement_start_offset**|**int**|Anzahl von Zeichen im derzeit ausgeführten Batch oder in der derzeit ausgeführten gespeicherten Prozedur, an der die derzeit ausgeführte Anweisung beginnt. Kann verwendet werden, zusammen mit der **Sql_handle**, die **Statement_end_offset**, und die [Sys. dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md) dynamische Verwaltungsfunktion zum Abrufen der zurzeit die Anweisung für die Anforderung.|  
 |**statement_end_offset**|**int**|Anzahl von Zeichen im derzeit ausgeführten Batch oder in der derzeit ausgeführten gespeicherten Prozedur, an der die derzeit ausgeführte Anweisung endet. Kann zusammen mit **sql_handle**, **statement_start_offset**und der dynamischen Verwaltungsfunktion **sys.dm_exec_sql_text** zum Abrufen der zurzeit ausgeführten Anweisung für die Anforderung verwendet werden.|  
@@ -73,7 +73,7 @@ dm_exec_cursors (session_id | 0 )
 |**ansi_position**|**int**|Cursorposition innerhalb des Fetchpuffers.|  
 |**worker_time**|**bigint**|Der Zeitaufwand in Mikrosekunden zum Ausführen dieses Cursors durch den Arbeitsthread.|  
 |**reads**|**bigint**|Anzahl von Lesevorgängen, die der Cursor ausgeführt hat.|  
-|**writes**|**bigint**|Anzahl von Schreibvorgängen, die der Cursor ausgeführt hat.|  
+|**Schreibt**|**bigint**|Anzahl von Schreibvorgängen, die der Cursor ausgeführt hat.|  
 |**dormant_duration**|**bigint**|Millisekunden seit dem Start der letzten Abfrage (Öffnen oder Abrufen) für diesen Cursor.|  
   
 ## <a name="permissions"></a>Berechtigungen  
@@ -126,7 +126,7 @@ GO
   
 ## <a name="see-also"></a>Siehe auch  
  [Dynamische Verwaltungssichten und -funktionen &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Ausführung bezogene dynamische Verwaltungssichten und-Funktionen &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
+ [Ausführung dynamische Verwaltungssichten und-Funktionen im Zusammenhang &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
  [sys.dm_exec_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)  
   
   

@@ -2,7 +2,7 @@
 title: Zusammenfassung der ODBC-Funktion | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: 7aa635da-e6b7-439f-8e9b-c3860e24de5e
 caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9aab042c14953c170d86dda5fcd3432a471a12b6
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 2f02221f02c41c74f56d37b4c8b414103e5238bb
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="odbc-function-summary"></a>Zusammenfassung der ODBC-Funktion
 In der folgenden Tabelle listet ODBC-Funktionen, gruppiert nach Typ der Aufgabe, und enthält die Konformität Bezeichnung und eine kurze Beschreibung zum Zweck der einzelnen Funktionen. Weitere Informationen zur Konformität Bezeichnungen finden Sie unter [ODBC und die Standard-CLI](../../../odbc/reference/odbc-and-the-standard-cli.md). Weitere Informationen zur Syntax und Semantik für die einzelnen Funktionen finden Sie unter [ODBC API Reference](../../../odbc/reference/syntax/odbc-api-reference.md).  

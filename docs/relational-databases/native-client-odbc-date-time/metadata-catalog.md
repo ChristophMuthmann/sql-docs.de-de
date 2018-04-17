@@ -1,30 +1,31 @@
 ---
 title: Katalogmetadaten | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-odbc-date-time
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - metadata [ODBC]
 - catalog metadata [ODBC]
 ms.assetid: b82665be-8cb1-4ad3-ac15-2e590bdc1815
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e7b3d671bc21676ca81bddf4bd4df81c8985a585
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 0f4315d5fa95e0d2c67a65d21f68ff74797979a9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="metadata---catalog"></a>Metadaten - Katalog
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -73,6 +74,6 @@ ms.lasthandoff: 01/25/2018
 |USERTYPE|0|0|12|22|0|0|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Metadata &#40;ODBC&#41;](http://msdn.microsoft.com/library/99133efc-b1f2-46e9-8203-d90c324a8e4c)  
+ [Metadaten &#40;ODBC&#41;](http://msdn.microsoft.com/library/99133efc-b1f2-46e9-8203-d90c324a8e4c)  
   
   

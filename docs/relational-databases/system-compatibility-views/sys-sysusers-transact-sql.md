@@ -1,16 +1,16 @@
 ---
 title: Sys.sysusers (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: system-compatibility-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.sysusers
@@ -23,16 +23,17 @@ helpviewer_keywords:
 - sysusers system table
 - sys.sysusers compatibility view
 ms.assetid: 5f0e6a8d-c983-44f6-97e9-aab5bff67d18
-caps.latest.revision: 
+caps.latest.revision: 36
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 661d42fbc8b55250ac38fb84e44faa33701c20b2
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 2450923afb141599da29d9c17cda7528e7b07111
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="syssysusers-transact-sql"></a>sys.sysusers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -44,13 +45,13 @@ ms.lasthandoff: 02/09/2018
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
-|**uid**|**smallint**|In dieser Datenbank eindeutiger Benutzername.<br /><br /> 1 = Datenbankbesitzer<br /><br /> Führt zu einem Überlauf oder gibt NULL zurück, wenn die Anzahl von Benutzern und Rollen 32.767 übersteigt.|  
+|**UID**|**smallint**|In dieser Datenbank eindeutiger Benutzername.<br /><br /> 1 = Datenbankbesitzer<br /><br /> Führt zu einem Überlauf oder gibt NULL zurück, wenn die Anzahl von Benutzern und Rollen 32.767 übersteigt.|  
 |**status**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**name**|**sysname**|Der in dieser Datenbank eindeutige Benutzer- oder Gruppenname.|  
-|**sid**|**varbinary(85)**|Sicherheitsbezeichner für diesen Eintrag.|  
-|**roles**|**varbinary(2048)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**SID**|**varbinary(85)**|Sicherheitsbezeichner für diesen Eintrag.|  
+|**Rollen**|**varbinary(2048)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**createdate**|**datetime**|Datum, an dem das Konto hinzugefügt wurde.|  
-|**updatedate**|**datetime**|Datum, an dem das Konto zuletzt geändert wurde.|  
+|**updateDate**|**datetime**|Datum, an dem das Konto zuletzt geändert wurde.|  
 |**altuid**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> Führt zu einem Überlauf oder gibt NULL zurück, wenn die Anzahl von Benutzern und Rollen 32.767 übersteigt.|  
 |**password**|**varbinary(256)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**gid**|**smallint**|ID der Gruppe, zu der dieser Benutzer gehört. Wenn **uid** mit **gid**identisch ist, definiert dieser Eintrag eine Gruppe. Führt zu einem Überlauf oder gibt NULL zurück, wenn die kombinierte Anzahl von Gruppen und Benutzern 32.767 übersteigt.|  
@@ -66,7 +67,7 @@ ms.lasthandoff: 02/09/2018
 |**isapprole**|**int**|1 = Konto ist eine Anwendungsrolle.|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Zuordnen von Systemtabellen zu Systemsichten &#40; Transact-SQL &#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
+ [Zuordnen von Systemtabellen zu Systemsichten &#40;Transact-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
  [Kompatibilitätssichten &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   
   

@@ -1,16 +1,16 @@
 ---
 title: fulltext_index_fragments (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - fulltext_index_fragments
@@ -25,16 +25,17 @@ helpviewer_keywords:
 - troubleshooting [SQL Server], full-text search
 - sys.fulltext_index_fragments catalog view
 ms.assetid: a82e5018-5d88-45c0-9a47-c251e17a6cdb
-caps.latest.revision: 
+caps.latest.revision: 18
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d131a8fc53f13c412d058d2971f9156e32c669ec
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 76f1e3328666b9ce34e219deb85f5a4259d78235
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysfulltextindexfragments-transact-sql"></a>sys.fulltext_index_fragments (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -73,7 +74,7 @@ GO
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
- [Katalogsichten für Objekte &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+ [Katalogsichten für Objekte &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [Auffüllen von Volltextindizes](../../relational-databases/search/populate-full-text-indexes.md)  
   
   

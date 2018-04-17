@@ -1,37 +1,38 @@
 ---
 title: sp_datatype_info_90 (SQL Datawarehouse) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/13/2017
-ms.prod: 
+ms.prod: ''
 ms.prod_service: sql-data-warehouse, pdw
 ms.service: sql-data-warehouse
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 1d043964-dc6e-4c3e-ab61-bc444d5e25ae
-caps.latest.revision: 
+caps.latest.revision: 9
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0989c6224160fdad3059083358eb2ef84b5990e3
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
+ms.openlocfilehash: 0cca052fb77b2f6bc2db691f884043079197d439
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="spdatatypeinfo90-sql-data-warehouse"></a>sp_datatype_info_90 (SQL Data Warehouse)
+# <a name="spdatatypeinfo90-sql-data-warehouse"></a>sp_datatype_info_90 (SQL Datawarehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   Gibt Informationen zu den von der aktuellen Umgebung unterstützten Datentypen zurück.  
   
- ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Thema Linksymbol") [Transact-SQL-Syntaxkonventionen &#40; Transact-SQL &#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol zum Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions &#40;Transact-SQL&#41; (Transact-SQL-Syntaxkonventionen (Transact-SQL))](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -83,7 +84,7 @@ sp_datatype_info_90 [ [ @data_type = ] data_type ]
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die Mitgliedschaft in der public-Rolle.  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
  Das folgende Beispiel ruft Informationen für die **Sysname** und **Nvarchar** Datentypen durch Angabe der *Data_type* Wert `-9`.  
   
 ```  

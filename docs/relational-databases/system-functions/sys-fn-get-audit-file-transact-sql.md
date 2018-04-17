@@ -2,7 +2,7 @@
 title: Sys. fn_get_audit_file (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.service: ''
 ms.component: system-functions
@@ -23,16 +23,17 @@ helpviewer_keywords:
 - sys.fn_get_audit_file function
 - fn_get_audit_file function
 ms.assetid: d6a78d14-bb1f-4987-b7b6-579ddd4167f5
-caps.latest.revision: ''
+caps.latest.revision: 27
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 982113b9acc85b0dd340e2850ad6efb463a500cb
-ms.sourcegitcommit: 7246ef88fdec262fa0d34bf0e232f089e03a6911
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 6dc30f57484714d70c7777a30ee43246c5980fcf
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysfngetauditfile-transact-sql"></a>sys.fn_get_audit_file (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -53,7 +54,7 @@ fn_get_audit_file ( file_pattern,
  *file_pattern*  
  Gibt das Verzeichnis oder den Pfad und den Dateinamen für den zu lesenden Überwachungsdateisatz an. Der Typ ist **nvarchar(260)**. 
  
- - **SQL Server**:
+ - **SQLServer**:
     
     Dieses Argument muss sowohl einen Pfad (Laufwerksbuchstabe oder Netzwerkfreigabe) als auch einen Dateinamen umfassen. Diese können ein Platzhalterzeichen enthalten. Ein einzelnes Sternchen (*) kann verwendet werden, mehrere Dateien von einem überwachungsdateisatz gesammelt. Beispiel:  
   
@@ -63,7 +64,7 @@ fn_get_audit_file ( file_pattern,
   
     -   **\<path>\LoginsAudit_{GUID}_00_29384.sqlaudit** - Collect a specific audit file.  
   
- - **Azure SQL Database**:
+ - **Azure SQL-Datenbank**:
  
     Dieses Argument wird verwendet, eine Blob-URL (einschließlich der speicherendpunkt und Container) angeben. Während ein Sternchen-Platzhalter nicht unterstützt, können Sie eine partielle (Blob) Dateinamenpräfix (anstelle der vollständigen Blob-Name) verwenden, um mehrere Dateien (Blobs) zu sammeln, die mit diesem Präfix beginnen. Beispiel:
  

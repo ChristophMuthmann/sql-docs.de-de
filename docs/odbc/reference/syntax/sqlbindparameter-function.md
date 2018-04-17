@@ -2,7 +2,7 @@
 title: SQLBindParameter-Funktion | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 38349d4b-be03-46f9-9d6a-e50dd144e225
 caps.latest.revision: 52
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 299e4ced3e6047f7d3e205d384d3191d43e70ef1
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 54a22ecb571f6a6831023ee5c5d6c18149bff575
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlbindparameter-function"></a>SQLBindParameter-Funktion
 **Konformität**  
@@ -70,7 +70,7 @@ SQLRETURN SQLBindParameter(
  *InputOutputType*  
  [Eingabe] Der Typ des Parameters. Weitere Informationen finden Sie unter "*InputOutputType* Argument" in "Kommentare".  
   
- *Werttyp*  
+ *ValueType*  
  [Eingabe] Der C-Datentyp des Parameters. Weitere Informationen finden Sie unter "*ValueType* Argument" in "Kommentare".  
   
  *ParameterType*  
@@ -131,7 +131,7 @@ SQLRETURN SQLBindParameter(
  Wenn *ParameterNumber* im Aufruf **SQLBindParameter** ist größer als der Wert der SQL_DESC_COUNT, **SQLSetDescField** wird aufgerufen, um den Wert der SQL_DESC_ erhöhen Anzahl der zu *ParameterNumber*.  
   
 ## <a name="inputoutputtype-argument"></a>InputOutputType-Argument  
- Die *InputOutputType* Argument gibt den Typ des Parameters. Dieses Argument legt die SQL_DESC_PARAMETER_TYPE Feld die IPD fest. Alle Parameter im SQL-Anweisungen, die keine Prozeduren, z. B. Aufrufen **einfügen** -Anweisungen sind *input**Parameter*. In Prozeduraufrufen können eingegeben werden, Eingabe/Ausgabe- oder Ausgabeparameter enthalten. (Eine Anwendung ruft **SQLProcedureColumns** zum Bestimmen des Typs eines Parameters in einem Prozeduraufruf; Parameter, dessen Typ kann nicht bestimmt, werden als Eingabeparameter angesehen.)  
+ Die *InputOutputType* Argument gibt den Typ des Parameters. Dieses Argument legt die SQL_DESC_PARAMETER_TYPE Feld die IPD fest. Alle Parameter im SQL-Anweisungen, die keine Prozeduren, z. B. Aufrufen **einfügen** -Anweisungen sind *Eingabe ** Parameter*. In Prozeduraufrufen können eingegeben werden, Eingabe/Ausgabe- oder Ausgabeparameter enthalten. (Eine Anwendung ruft **SQLProcedureColumns** zum Bestimmen des Typs eines Parameters in einem Prozeduraufruf; Parameter, dessen Typ kann nicht bestimmt, werden als Eingabeparameter angesehen.)  
   
  Die *InputOutputType* Argument ist einer der folgenden Werte:  
   
@@ -152,7 +152,7 @@ SQLRETURN SQLBindParameter(
   
      Nachdem die Anweisung ausgeführt wird, gibt der Treiber Daten für den Parameter an die Anwendung, es sei denn, die *ParameterValuePtr* und *StrLen_or_IndPtr* Argumente sind beide null-Zeiger in diesem Fall die Treiber verwirft den Ausgabewert. Wenn die Datenquelle, die nicht über einen Wert für ein Output-Parameter zurückgibt, wird der Treiber setzt die **StrLen_or_IndPtr* Puffer auf SQL_NULL_DATA.  
   
--   SQL_PARAM_INPUT_OUTPUT_STREAM. Gibt an, dass ein Eingabe-/Ausgabeparameter gestreamt werden sollen. **SQLGetData** Parameterwerte in Teilen lesen können. *Pufferlänge* wird ignoriert, da die Länge des Puffers beim Aufruf von bestimmt wird **SQLGetData**. Der Wert von der *StrLen_or_IndPtr* Puffer muss SQL_NULL_DATA, SQL_DEFAULT_PARAM, SQL_DATA_AT_EXEC oder das Ergebnis des SQL_LEN_DATA_AT_EXEC Makros enthalten. Wenn es an der Ausgabe gestreamt wird, muss ein Parameter als Data-at-Execution (DAE) Parameter an der Eingabe gebunden werden. *ParameterValuePtr* kann jeder nicht-Null-Zeiger-Wert, der zurückgegebenen **SQLParamData** wie, dessen Wert die benutzerdefinierten token-übergebene mit *ParameterValuePtr* für beide Eingaben und die Ausgabe. Weitere Informationen finden Sie unter [Abrufen von Ausgabeparametern mit SQLGetData](../../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md).  
+-   SQL_PARAM_INPUT_OUTPUT_STREAM. Gibt an, dass ein Eingabe-/Ausgabeparameter gestreamt werden sollen. **SQLGetData** Parameterwerte in Teilen lesen können. *Pufferlänge* wird ignoriert, da die Länge des Puffers beim Aufruf von bestimmt wird **SQLGetData**. Der Wert von der *StrLen_or_IndPtr* Puffer muss SQL_NULL_DATA, SQL_DEFAULT_PARAM, SQL_DATA_AT_EXEC oder das Ergebnis des SQL_LEN_DATA_AT_EXEC Makros enthalten. Wenn es an der Ausgabe gestreamt wird, muss ein Parameter als Data-at-Execution (DAE) Parameter an der Eingabe gebunden werden. *ParameterValuePtr* kann jeder nicht-Null-Zeiger-Wert, der zurückgegebenen **SQLParamData** wie, dessen Wert die benutzerdefinierten token-übergebene mit *ParameterValuePtr* für sowohl Eingabe- und die Ausgabe. Weitere Informationen finden Sie unter [Abrufen von Ausgabeparametern mit SQLGetData](../../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md).  
   
 -   SQL_PARAM_OUTPUT_STREAM. Identisch mit SQL_PARAM_INPUT_OUTPUT_STREAM, für ein Output-Parameter. **StrLen_or_IndPtr* wird an der Eingabe ignoriert.  
   
@@ -166,7 +166,7 @@ SQLRETURN SQLBindParameter(
 |SQL_PARAM_OUTPUT_STREAM|An der Eingabe ignoriert.|Ausgabestream|*ParameterValuePtr* kann keinem Zeigerwert, der zurückgegebenen **SQLParamData** wie, dessen Wert die benutzerdefinierten token-übergebene mit *ParameterValuePtr*.|  
 |SQL_PARAM_INPUT_OUTPUT AN|SQL_LEN_DATA_AT_EXEC (*Len*) oder SQL_DATA_AT_EXEC|Eingabe in Teilen und gebundene Ausgabepuffer|*ParameterValuePtr* ist die Adresse des Ausgabepuffers, die auch von zurückgegeben werden **SQLParamData** wie, dessen Wert die benutzerdefinierten token-übergebene mit *ParameterValuePtr*.|  
 |SQL_PARAM_INPUT_OUTPUT AN|Nicht SQL_LEN_DATA_AT_EXEC (*Len*) oder SQL_DATA_AT_EXEC|Eingabe gebunden, Puffer und gebundene Ausgabepuffer|*ParameterValuePtr* ist die Adresse des freigegebenen e/a-Puffers.|  
-L_PARAM_INPUT_OUTPUT_STREAM|SQL_LEN_DATA_AT_EXEC (*Len*) oder SQL_DATA_AT_EXEC|Eingabe in Teilen und gestreamte Ausgabe|*ParameterValuePtr* kann beliebiger Zeigerwert ungleich Null-, die von zurückgegeben werden sein **SQLParamData** wie, dessen Wert die benutzerdefinierten token-übergebene mit *ParameterValuePtr* für beide Eingabe und Ausgabe.|  
+L_PARAM_INPUT_OUTPUT_STREAM|SQL_LEN_DATA_AT_EXEC (*Len*) oder SQL_DATA_AT_EXEC|Eingabe in Teilen und gestreamte Ausgabe|*ParameterValuePtr* kann beliebiger Zeigerwert ungleich Null-, die von zurückgegeben werden sein **SQLParamData** wie, dessen Wert die benutzerdefinierten token-übergebene mit *ParameterValuePtr* für beide Eingaben und die Ausgabe.|  
   
 > [!NOTE]  
 >  Der Treiber muss entscheiden, welche SQL-Typen zulässig sind, wenn eine Anwendung eines Ausgabe- oder i / o-Parameter gebunden, wie gestreamt. Der Treiber-Manager generiert keinen Fehler für eine ungültige SQL-Typ.  

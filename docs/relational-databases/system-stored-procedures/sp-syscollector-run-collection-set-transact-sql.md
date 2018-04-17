@@ -1,16 +1,16 @@
 ---
-title: sp_syscollector_run_collection_set (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: Sp_syscollector_run_collection_set (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_syscollector_run_collection_set_TSQL
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - sp_syscollector_run_collection_set
 - data collector [SQL Server], stored procedures
 ms.assetid: 7bbaee48-dfc7-45c0-b11f-c636b6a7e720
-caps.latest.revision: 
+caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 749ab839921de15a534be8a091f98dee64197ae7
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 768067dbc8616241003897c1791e0f2bae73706c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spsyscollectorruncollectionset-transact-sql"></a>sp_syscollector_run_collection_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ sp_syscollector_run_collection_set [[ @collection_set_id = ] collection_set_id ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@collection_set_id =** ] *collection_set_id*  
+ [  **@collection_set_id =** ] *Collection_set_id*  
  Der eindeutige lokale Bezeichner für den Sammlungssatz. *Collection_set_id* ist **Int** und muss einen Wert aufweisen, wenn *Namen* ist NULL.  
   
  [ **@name =** ] **'***name***'**  
@@ -65,7 +65,7 @@ sp_syscollector_run_collection_set [[ @collection_set_id = ] collection_set_id ]
 ## <a name="remarks"></a>Hinweise  
  Entweder *Collection_set_id* oder *Namen* muss über einen Wert verfügen, können nicht beide NULL sein.  
   
- Diese Prozedur startet die Sammlungs- und Uploadaufträge für den angegebenen Sammlungssatz und startet umgehend den Auftrag des Sammlungs-Agent aus, wenn der Sammlungssatz verfügt über seine  **@collection_mode**  ohne Zwischenspeicherung (1) festgelegt. Weitere Informationen finden Sie unter [Sp_syscollector_create_collection_set &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md).  
+ Diese Prozedur startet die Sammlungs- und Uploadaufträge für den angegebenen Sammlungssatz und startet umgehend den Auftrag des Sammlungs-Agent aus, wenn der Sammlungssatz verfügt über seine **@collection_mode** ohne Zwischenspeicherung (1) festgelegt. Weitere Informationen finden Sie unter [Sp_syscollector_create_collection_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md).  
   
  sp_sycollector_run_collection_set kann auch verwendet werden, um einen Sammlungssatz auszuführen, der über keinen Zeitplan verfügt.  
   

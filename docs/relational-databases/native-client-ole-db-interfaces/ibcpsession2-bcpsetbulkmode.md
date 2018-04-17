@@ -1,36 +1,37 @@
 ---
 title: 'Ibcpsession2:: Bcpsetbulkmode | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-ole-db-interfaces
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - BCPSetBulkMode function
 ms.assetid: babba19f-e67b-450c-b0e6-523a0f9d23ab
-caps.latest.revision: 
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3b3b66909225f1628376b03fc060523446a492b5
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: d78324adee9782046c0bf9742c12ef9ef55f5dfd
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ibcpsession2bcpsetbulkmode"></a>IBCPSession2::BCPSetBulkMode
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  Ibcpsession2:: Bcpsetbulkmode bietet eine Alternative zum [ibcpsession:: BCPColFmt &#40; OLE DB &#41;](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md) zum Angeben des Spaltenformats. Im Gegensatz zu ibcpsession:: BCPColFmt, bei dem einzelne spaltenformatattribute festgelegt, werden alle Attribute ibcpsession2:: Bcpsetbulkmode fest.  
+  Ibcpsession2:: Bcpsetbulkmode bietet eine Alternative zum [ibcpsession:: BCPColFmt & #40; OLE DB & #41;](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md) zum Angeben des Spaltenformats. Im Gegensatz zu ibcpsession:: BCPColFmt, bei dem einzelne spaltenformatattribute festgelegt, werden alle Attribute ibcpsession2:: Bcpsetbulkmode fest.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -369,6 +370,6 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [IBCPSession2 &#40; OLE DB &#41;](../../relational-databases/native-client-ole-db-interfaces/ibcpsession2-ole-db.md)  
+ [IBCPSession2 & #40; OLE DB & #41;](../../relational-databases/native-client-ole-db-interfaces/ibcpsession2-ole-db.md)  
   
   

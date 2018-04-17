@@ -1,16 +1,16 @@
 ---
 title: Sys. dm_exec_query_plan (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/02/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_exec_query_plan_TSQL
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_query_plan dynamic management function
 ms.assetid: e26f0867-9be3-4b2e-969e-7f2840230770
-caps.latest.revision: 
+caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5dca7ee8a3721df6992bab61e9228e3bfe73c6ac
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: a0fd45444b5ad29cb2c6887924ff13320b32b9a7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmexecqueryplan-transact-sql"></a>sys.dm_exec_query_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -82,7 +82,7 @@ sys.dm_exec_query_plan ( plan_handle )
   
  Wenn bei einer Ad-hoc-Abfrage einfache oder erzwungene Parametrisierung verwendet wird, ist in der Spalte **query_plan** nur der Anweisungstext enthalten, nicht der tatsächliche Abfrageplan. Rufen Sie zum Zurückgeben des Abfrageplans **sys.dm_exec_query_plan** für das Planhandle der vorbereiteten parametrisierten Abfrage auf. Können Sie bestimmen, ob die Abfrage parametrisiert wurde die **Sql** Spalte die [sys.syscacheobjects](../../relational-databases/system-compatibility-views/sys-syscacheobjects-transact-sql.md) Sicht oder der Textspalte der [Sys. dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)-verwaltungssicht.  
   
- Aufgrund einer Beschränkung der im **xml** -Datentyp zulässigen Anzahl geschachtelter Ebenen kann **sys.dm_exec_query_plan** keine Abfragepläne zurückgeben, die 128 oder mehr Ebenen geschachtelter Elemente aufweisen. In früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verhinderte diese Bedingung das Zurückgeben des Abfrageplans, wobei der Fehler 6335 generiert wurde. In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 und höheren Versionen der **Query_plan** Spalte gibt NULL zurück. Sie können die [Sys. dm_exec_text_query_plan &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-text-query-plan-transact-sql.md) dynamische Verwaltungsfunktion, um die Ausgabe des Abfrageplans im Textformat zurückgeben.  
+ Aufgrund einer Beschränkung der im **xml** -Datentyp zulässigen Anzahl geschachtelter Ebenen kann **sys.dm_exec_query_plan** keine Abfragepläne zurückgeben, die 128 oder mehr Ebenen geschachtelter Elemente aufweisen. In früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verhinderte diese Bedingung das Zurückgeben des Abfrageplans, wobei der Fehler 6335 generiert wurde. In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 und höheren Versionen der **Query_plan** Spalte gibt NULL zurück. Sie können die [Sys. dm_exec_text_query_plan &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-text-query-plan-transact-sql.md) dynamische Verwaltungsfunktion, um die Ausgabe des Abfrageplans im Textformat zurückgeben.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Zum Ausführen von **sys.dm_exec_query_plan**muss ein Benutzer Mitglied der festen Serverrolle **sysadmin** sein oder über die VIEW SERVER STATE-Berechtigung auf dem Server verfügen.  
@@ -162,7 +162,7 @@ GO
   
 ## <a name="see-also"></a>Siehe auch  
  [Dynamische Verwaltungssichten und -funktionen &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [dm_exec_cached_plans &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)   
+ [dm_exec_cached_plans & #40; Transact-SQL & #41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)   
  [sys.dm_exec_query_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)   
  [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)   
  [sp_who &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)   

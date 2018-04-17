@@ -1,16 +1,16 @@
 ---
-title: sys.dm_hadr_availability_replica_cluster_states (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: Sys. dm_hadr_availability_replica_cluster_states (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_hadr_availability_replica_cluster_states_TSQL
@@ -24,16 +24,16 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], WSFC clusters
 - sys.dm_hadr_availability_replica_cluster_states dynamic management view
 ms.assetid: 2e0dd780-6a71-4f4b-b7f7-6e063bec71d6
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 652c5fc73d2e89b1be60d4f2ed1d7b18ae341c99
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 4a647115bf80e7079302659d351bba747a82e680
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmhadravailabilityreplicaclusterstates-transact-sql"></a>sys.dm_hadr_availability_replica_cluster_states (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

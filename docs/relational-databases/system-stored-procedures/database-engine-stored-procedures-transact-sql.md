@@ -1,16 +1,16 @@
 ---
 title: Gespeicherte Prozeduren (Transact-SQL) das Datenbankmodul | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/02/2015
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -19,16 +19,16 @@ helpviewer_keywords:
 - system stored procedures [SQL Server], Database Engine
 - stored procedures [SQL Server], Database Engine
 ms.assetid: 2ce018e9-1a3b-4530-a87d-842456a555ad
-caps.latest.revision: 
+caps.latest.revision: 42
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 406c8e28f1516078d8d4daaecb452a3ed86ac79c
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 0e56f74fdfd0957547e2c31c0ab87cc7bea72fde
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="database-engine-stored-procedures-transact-sql"></a>Gespeicherte Prozeduren für das Datenbankmodul (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

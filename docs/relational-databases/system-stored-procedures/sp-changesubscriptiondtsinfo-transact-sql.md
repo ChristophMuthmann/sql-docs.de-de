@@ -1,16 +1,16 @@
 ---
 title: Sp_changesubscriptiondtsinfo (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changesubscriptiondtsinfo
 ms.assetid: 64fc085f-f81b-493b-b59a-ee6192d9736d
-caps.latest.revision: 
+caps.latest.revision: 16
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6b551a265d30632f7ee96c86b78191388099c7d0
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: c6f1998ee847522f1237a55f5b6174861b774d69
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spchangesubscriptiondtsinfo-transact-sql"></a>sp_changesubscriptiondtsinfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,16 +52,16 @@ sp_changesubscriptiondtsinfo [ [ @job_id = ] job_id ]
  [  **@job_id=**] *Job_id*  
  Die Auftrags-ID des Verteilungs-Agents für das Pushabonnement. *Job_id* ist **varbinary(16)**, hat keinen Standardwert. Um die Verteilungsauftrags-ID zu suchen, führen Sie **Sp_helpsubscription** oder **Sp_helppullsubscription**.  
   
- [  **@dts_package_name** =] **"***Dts_package_name***"**  
+ [ **@dts_package_name**=] **"***Dts_package_name***"**  
  Gibt den Namen des DTS-Pakets an. *Dts_package_name* ist ein **Sysname**, hat den Standardwert NULL. Z. B. zum Angeben eines Pakets mit dem Namen **DTSPub_Package**, würden Sie angeben `@dts_package_name = N'DTSPub_Package'`.  
   
- [  **@dts_package_password** =] **"***Dts_package_password***"**  
+ [ **@dts_package_password**=] **"***Dts_package_password***"**  
  Gibt das Kennwort für das Paket an. *Dts_package_password* ist **Sysname** hat den Standardwert NULL, der gibt an, dass die Kennworteigenschaft bleiben unverändert.  
   
 > [!NOTE]  
 >  Ein DTS-Paket muss über ein Kennwort verfügen.  
   
- [  **@dts_package_location** =] **"***Dts_package_location***"**  
+ [ **@dts_package_location**=] **"***Dts_package_location***"**  
  Gibt den Paketspeicherort an. *Dts_package_location* ist ein **nvarchar(12)**, hat den Standardwert NULL, der angibt, dass der Speicherort des Pakets ist, verbleiben soll, nicht geändert. Der Speicherort des Pakets kann geändert werden, um **Verteiler** oder **Abonnenten**.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  

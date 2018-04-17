@@ -1,16 +1,16 @@
 ---
 title: Angeben eines Zuordnungsschemas in einem Updategram (SQLXML 4.0) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - annotated XSD schemas, updategrams
@@ -23,25 +23,26 @@ helpviewer_keywords:
 - mapping schema [SQLXML], updategrams
 - sql:inverse
 ms.assetid: 2e266ed9-4cfb-434a-af55-d0839f64bb9a
-caps.latest.revision: 
+caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b7114229a879e05222d67cbb0147ced02628bfe9
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 7d9b0918551889ee6474e00bdfb46c83eb5598dd
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-40"></a>Angeben eines Zuordnungsschemas mit Anmerkungen in einem Updategram (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-In diesem Thema wird erläutert, wie das in einem Updategram angegebene Zuordnungsschema (XSD oder XDR) zur Verarbeitung von Updates verwendet wird. In einem Updategram, können Sie angeben, der Name des Zuordnungsschemas verwenden Sie bei der Zuordnung der Elemente und Attribute im Updategram zu Tabellen und Spalten in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Wenn in einem Updategram ein Zuordnungsschema angegeben ist, müssen die im Updategram festgelegten Element- und Attributnamen den Elementen und Attributen im Zuordnungsschema zugeordnet werden.  
+  In diesem Thema wird erläutert, wie das in einem Updategram angegebene Zuordnungsschema (XSD oder XDR) zur Verarbeitung von Updates verwendet wird. In einem Updategram, können Sie angeben, der Name des Zuordnungsschemas verwenden Sie bei der Zuordnung der Elemente und Attribute im Updategram zu Tabellen und Spalten in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Wenn in einem Updategram ein Zuordnungsschema angegeben ist, müssen die im Updategram festgelegten Element- und Attributnamen den Elementen und Attributen im Zuordnungsschema zugeordnet werden.  
   
  Um ein Zuordnungsschema anzugeben, verwenden Sie die **Zuordnungsschema** Attribut von der  **\<Sync >** Element. Die folgenden Beispiele zeigen zwei Updategrams: ein Updategram, das ein einfaches Zuordnungsschema verwendet, und ein Updategram, das ein komplexeres Schema verwendet.  
   
 > [!NOTE]  
->  Diese Dokumentation setzt voraus, dass Sie mit Vorlagen und der Unterstützung von Zuordnungsschemas in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vertraut sind. Weitere Informationen finden Sie unter [Einführung in XSD-Schemas mit Anmerkungen versehen &#40; SQLXML 4.0 &#41; ](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md). Ältere Anwendungen, die XDR verwenden, finden Sie unter [XDR-Schemas mit Anmerkungen versehen &#40; veraltet in SQLXML 4.0 &#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md).  
+>  Diese Dokumentation setzt voraus, dass Sie mit Vorlagen und der Unterstützung von Zuordnungsschemas in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vertraut sind. Weitere Informationen finden Sie unter [Einführung in XSD-Schemas mit Anmerkungen versehen & #40; SQLXML 4.0 & #41; ](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md). Ältere Anwendungen, die XDR verwenden, finden Sie unter [XDR-Schemas mit Anmerkungen versehen &#40;in SQLXML 4.0 veraltet&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md).  
   
 ## <a name="dealing-with-data-types"></a>Umgehen mit Datentypen  
  Wenn im Schema angegeben die **Image**, **binäre**, oder **Varbinary** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Datentyp (mit **SQL: DataType**) verwendet und keine Geben Sie einen XML-Datentyp, der XML-Datentyp ist, geht das Updategram **binary Base64**. Wenn Ihre Daten **bin.base** geben, müssen Sie den Typ explizit angeben (**dt:type=bin.base** oder **Type = "xsd: hexBinary"**).  
@@ -238,7 +239,7 @@ In diesem Thema wird erläutert, wie das in einem Updategram angegebene Zuordnun
 ```  
   
 ### <a name="c-inserting-a-record-by-using-the-parent-child-relationship-and-inverse-annotation-specified-in-the-xsd-schema"></a>C. Einfügen eines Datensatzes durch Verwenden der im XSD-Schema angegebenen Über-/Unterordnungsbeziehung und der inverse-Anmerkung  
- In diesem Beispiel wird veranschaulicht, wie die updategramlogik die über-/ unterordnungsbeziehung, angegeben in der XSD zur Verarbeitung von Updates verwendet und wie die **Inverse** Anmerkung verwendet wird. Weitere Informationen zu den **Inverse** Anmerkung, finden Sie unter [des SQL: Inverse-Attribut angeben, auf die SQL: Relationship &#40; SQLXML 4.0 &#41; ](../../../relational-databases/sqlxml-annotated-xsd-schemas-using/specifying-the-sql-inverse-attribute-on-sql-relationship-sqlxml-4-0.md).  
+ In diesem Beispiel wird veranschaulicht, wie die updategramlogik die über-/ unterordnungsbeziehung, angegeben in der XSD zur Verarbeitung von Updates verwendet und wie die **Inverse** Anmerkung verwendet wird. Weitere Informationen zu den **Inverse** Anmerkung, finden Sie unter [angeben des SQL: Inverse-Attribut für SQL: Relationship &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-using/specifying-the-sql-inverse-attribute-on-sql-relationship-sqlxml-4-0.md).  
   
  In diesem Beispiel wird davon ausgegangen, dass in den folgenden Tabellen sind die **Tempdb** Datenbank:  
   
@@ -331,6 +332,6 @@ In diesem Thema wird erläutert, wie das in einem Updategram angegebene Zuordnun
      Weitere Informationen finden Sie unter [mithilfe von ADO zum Ausführen von SQLXML 4.0-Abfragen](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Sicherheitsüberlegungen zu Updategrams &#40; SQLXML 4.0 &#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
+ [Sicherheitsüberlegungen zu Updategrams &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
   
   

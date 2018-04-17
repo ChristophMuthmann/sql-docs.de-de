@@ -1,16 +1,16 @@
 ---
 title: Sys.dm_db_log_stats (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 05/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_db_log_stats_TSQL
@@ -21,19 +21,20 @@ dev_langs:
 - TSQL
 helpviewer_keywords:
 - sys.dm_db_log_stats dynamic management function
-ms.assetid: 
-caps.latest.revision: 
+ms.assetid: ''
+caps.latest.revision: ''
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 281e3c2c74361698ddf67a4e9a607c559bd74ccb
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 86fef416f6fc07dad933d05cea6b477e813d1348
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="sysdmdblogstats-transact-sql"></a>sys.dm_db_log_stats (Transact-SQL)   
+# <a name="sysdmdblogstats-transact-sql"></a>Sys.dm_db_log_stats (Transact-SQL)   
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
 Gibt Informationen und Attribute der Zusammenfassung auf Transaktionsprotokolldateien Datenbanken zurück. Verwenden Sie diese Informationen für die Überwachung und Diagnose Transaction Log SoH an.   
@@ -48,9 +49,9 @@ Gibt Informationen und Attribute der Zusammenfassung auf Transaktionsprotokollda
   
 ## <a name="arguments"></a>Argumente  
 
-*database_id* | NULL | **DEFAULT**
+*Database_id* | NULL | **Standard**
 
-Ist die ID der Datenbank. `database_id`is `int`. Gültige Eingaben sind die ID einer Datenbank `NULL`, oder `DEFAULT`. Der Standardwert ist `NULL`. `NULL`und `DEFAULT` sind gleichwertig im Kontext der aktuellen Datenbank.  
+Ist die ID der Datenbank. `database_id` ist `int`. Gültige Eingaben sind die ID einer Datenbank `NULL`, oder `DEFAULT`. Der Standardwert ist `NULL`. `NULL` und `DEFAULT` sind gleichwertig im Kontext der aktuellen Datenbank.  
 Die integrierte Funktion [DB_ID](../../t-sql/functions/db-id-transact-sql.md) kann angegeben werden. Bei Verwendung `DB_ID` ohne Angabe eines Datenbanknamens, muss der Kompatibilitätsgrad der aktuellen Datenbank 90 oder höher sein.
 
   
@@ -105,7 +106,7 @@ CROSS APPLY sys.dm_db_log_stats(s.database_id);
 
 ## <a name="see-also"></a>Siehe auch  
 [Dynamische Verwaltungssichten und -funktionen &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
-[Datenbank verbundene dynamische Verwaltungssichten &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
+[Datenbank verbundene dynamische Verwaltungssichten &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
 [sys.dm_db_log_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)   
 [sys.dm_db_log_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md)    
   

@@ -1,16 +1,16 @@
 ---
 title: availability_groups (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.availability_groups_TSQL
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], monitoring
 - sys.availability_groups catalog view
 ms.assetid: da7fa55f-c008-45d9-bcfc-3513b02d9e71
-caps.latest.revision: 
+caps.latest.revision: 42
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9a11cf2be1634440517fa0e21a3a1d0b9c749dca
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 308566c623ccc10efaee06258594581a6ba3c37e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysavailabilitygroups-transact-sql"></a>sys.availability_groups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ ms.lasthandoff: 02/03/2018
 |**automated_backup_preference**|**tinyint**|Bevorzugter Speicherort zum Durchführen von Sicherungen auf den Verfügbarkeitsdatenbanken in dieser Verfügbarkeitsgruppe. Im folgenden sind die möglichen Werte und deren Beschreibungen.<br /><br /> <br /><br /> 0: primäre. Sicherungen sollten immer auf dem primären Replikat erfolgen.<br /><br /> 1: nur sekundär. Die Durchführung von Sicherungen auf einem sekundären Replikat wird bevorzugt.<br /><br /> 2: Sekundär bevorzugen. Die Durchführung von Sicherungen auf einem sekundären Replikat wird bevorzugt, aber die Durchführung von Sicherungen auf dem primären Replikat wird akzeptiert, wenn kein sekundäres Replikat für Sicherungsvorgänge verfügbar ist. Dies ist das Standardverhalten.<br /><br /> 3: eines der Replikate. Keine Präferenz, ob Sicherungen auf dem primären Replikat oder einem sekundären Replikat durchgeführt werden.<br /><br /> <br /><br /> Weitere Informationen finden Sie unter [Aktive sekundäre Replikate: Sicherung auf sekundären Replikaten &#40;Always On-Verfügbarkeitsgruppen&#41;](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)wichtig sind.|  
 |**automated_backup_preference_desc**|**nvarchar(60)**|Beschreibung des **Automated_backup_preference**, eine von:<br /><br /> PRIMARY<br /><br /> SECONDARY_ONLY<br /><br /> SECONDARY<br /><br /> Keine|  
 |**version**|**smallint**|Die Version der Metadaten der verfügbarkeitsgruppe im Windows-Failovercluster gespeichert. Diese Versionsnummer wird erhöht, wenn neue Funktionen hinzugefügt werden.|  
-|**basic_features**|**bit**|Gibt an, ob dies eine Basis-verfügbarkeitsgruppe ist. Weitere Informationen finden Sie unter [Basis-Verfügbarkeitsgruppen &#40; Always On-Verfügbarkeitsgruppen &#41; ](../../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md).|  
+|**basic_features**|**bit**|Gibt an, ob dies eine Basis-verfügbarkeitsgruppe ist. Weitere Informationen finden Sie unter [Basis-Verfügbarkeitsgruppen &#40;Always On-Verfügbarkeitsgruppen&#41;](../../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md).|  
 |**dtc_support**|**bit**|Gibt an, ob die DTC-Unterstützung für diese verfügbarkeitsgruppe aktiviert wurde. Die **DTC_SUPPORT** Option **CREATE AVAILABILITY GROUP** diese Einstellung steuert.|  
 |**db_failover**|**bit**|Gibt an, ob die verfügbarkeitsgruppe ein Failover für Datenbank-integritätszuständen unterstützt. Die **DB_FAILOVER** Option **CREATE AVAILABILITY GROUP** diese Einstellung steuert.|  
 |**is_distributed**|**bit**|Gibt an, ob dies eine verteilte verfügbarkeitsgruppe ist. Weitere Informationen finden Sie unter [Verteilte Verfügbarkeitsgruppen &#40;AlwaysOn-Verfügbarkeitsgruppen&#41;](../../database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups.md).|  
@@ -74,7 +74,7 @@ ms.lasthandoff: 02/03/2018
 ## <a name="see-also"></a>Siehe auch  
  [sys.availability_replicas &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-availability-replicas-transact-sql.md)   
  [Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
- [Überwachen von Verfügbarkeitsgruppen &#40; Transact-SQL &#41;](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
+ [Überwachen von Verfügbarkeitsgruppen & #40; Transact-SQL & #41;](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
  [Überwachen von Verfügbarkeitsgruppen &#40;Transact-SQL&#41;](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)  
   
   

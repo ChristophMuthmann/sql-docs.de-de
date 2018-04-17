@@ -2,7 +2,7 @@
 title: Sp_altermessage (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: system-stored-procedures
@@ -25,11 +25,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0922bc2c5365b31c1f4b385e43b10302f6465c52
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: 969713a50ccb6b495c191f4262f6a6c837617bc2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaltermessage-transact-sql"></a>sp_altermessage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ sp_altermessage [ @message_id = ] message_number   ,[ @parameter = ]'write_to_lo
  [ **@message_id =** ] *Message_number*  
  Ist die Fehlernummer der zu ändernden Meldung **sys.messages**. *Message_number* ist **Int** verfügt über keinen Standardwert.  
   
- [ **@parameter =** ] **'***write_to_log*'  
+ [  **@parameter =** ] **"*** Write_to_log*"  
  Wird verwendet, mit **@parameter_value** , um anzugeben, dass die Meldung an die [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Anwendungsprotokoll. *Write_to_log* ist **Sysname** verfügt über keinen Standardwert. *Write_to_log* muss auf WITH_LOG oder NULL festgelegt werden. Wenn *Write_to_log* auf WITH_LOG oder NULL, und der Wert für festgelegt **@parameter_value** ist **"true"**, wird die Meldung in das Windows-Anwendungsprotokoll geschrieben. Wenn *Write_to_log* festgelegt ist, auf WITH_LOG oder NULL und der Wert für **@parameter_value** ist **"false"**, die Nachricht nicht immer in das Windows-Anwendungsprotokoll geschrieben, aber möglicherweise geschrieben, abhängig davon, wie der Fehler ausgelöst wurde. Wenn *Write_to_log* angegeben wird, den Wert für **@parameter_value** muss auch angegeben werden.  
   
 > [!NOTE]  

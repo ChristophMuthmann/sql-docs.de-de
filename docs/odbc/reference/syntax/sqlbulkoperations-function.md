@@ -2,7 +2,7 @@
 title: SQLBulkOperations-Funktion | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 7029d0da-b0f2-44e6-9114-50bd96f47196
 caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1872238d5e017ef8b6bd3fbfb2dc185051fc3557
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: efc1d363d11982e0732fc50ca66a665520b59c39
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlbulkoperations-function"></a>SQLBulkOperations-Funktion
 **Konformität**  

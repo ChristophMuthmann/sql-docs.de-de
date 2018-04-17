@@ -1,16 +1,16 @@
 ---
 title: Sp_check_join_filter (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -26,21 +26,21 @@ f1_keywords:
 helpviewer_keywords:
 - sp_check_join_filter
 ms.assetid: e9699d59-c8c9-45f6-a561-f7f95084a540
-caps.latest.revision: 
+caps.latest.revision: 14
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ab650e6465ac5c872e90acc890a83d17f286b446
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 6fb8f08e4b52debeba4e71011750733a2c760df1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spcheckjoinfilter-transact-sql"></a>sp_check_join_filter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Wird dazu verwendet, einen Joinfilter zwischen zwei Tabellen zu überprüfen, um festzustellen, ob die Joinfilterklausel gültig ist. Diese gespeicherte Prozedur gibt außerdem Informationen zum angegebenen Joinfilter zurück, u. a. mit dem Hinweis, ob der Filter für die angegebene Tabelle zusammen mit vorausberechneten Partitionen verwendet werden kann. Diese gespeicherte Prozedur wird auf dem Verleger für die Veröffentlichung ausgeführt. Weitere Informationen finden Sie unter [Optimieren Parametrisierter Filter-Leistung mit Vorausberechneten Partitionen ](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md).  
+  Wird dazu verwendet, einen Joinfilter zwischen zwei Tabellen zu überprüfen, um festzustellen, ob die Joinfilterklausel gültig ist. Diese gespeicherte Prozedur gibt außerdem Informationen zum angegebenen Joinfilter zurück, u. a. mit dem Hinweis, ob der Filter für die angegebene Tabelle zusammen mit vorausberechneten Partitionen verwendet werden kann. Diese gespeicherte Prozedur wird auf dem Verleger für die Veröffentlichung ausgeführt. Weitere Informationen finden Sie unter [parametrisierte Filter-Leistung mit Vorausberechneten Partitionen optimieren](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md).  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -54,13 +54,13 @@ sp_check_join_filter [ @filtered_table = ] 'filtered_table'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@filtered_table** =] **"***Filtered_table***"**  
+ [ **@filtered_table**=] **"***Filtered_table***"**  
  Der Name einer gefilterten Tabelle. *Filtered_table* ist **nvarchar(400)**, hat keinen Standardwert.  
   
- [  **@join_table** =] **"***Join_table***"**  
+ [ **@join_table**=] **"***Join_table***"**  
  Der Name einer Tabelle mit *Filtered_table*. *Join_table* ist **nvarchar(400)**, hat keinen Standardwert.  
   
- [  **@join_filterclause**  =] **"***Join_filterclause***"**  
+ [ **@join_filterclause** =] **"***Join_filterclause***"**  
  Die Joinfilterklausel, die getestet wird. *Join_filterclause* ist **nvarchar(1000)**, hat keinen Standardwert.  
   
 ## <a name="result-sets"></a>Resultsets  

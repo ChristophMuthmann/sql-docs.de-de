@@ -1,15 +1,15 @@
 ---
 title: Verfolgen und Wiedergeben von Ereignissen | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: smo
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - replaying events
@@ -17,16 +17,17 @@ helpviewer_keywords:
 - events [SMO], replaying
 - events [SMO], tracing
 ms.assetid: f41b3f85-2f6c-4c3e-9776-8c73d2cc7a53
-caps.latest.revision: 
+caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6a5501861717bf21e6004730b38f93b309c40e0e
-ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
+monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 514c1dd7bf0bd2d3e8708368391d61bc39c0ed62
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="tracing-and-replaying-events"></a>Verfolgen und Wiedergeben von Ereignissen
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]

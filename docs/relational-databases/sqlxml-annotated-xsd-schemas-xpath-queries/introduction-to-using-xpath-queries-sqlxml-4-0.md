@@ -1,39 +1,40 @@
 ---
-title: "Einführung in die Verwendung von XPath-Abfragen (SQLXML 4.0) | Microsoft Docs"
-ms.custom: 
+title: Einführung in die Verwendung von XPath-Abfragen (SQLXML 4.0) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - XPath queries [SQLXML], about XPath queries
 - W3C XPath specification
 - XPath queries [SQLXML], functionality
 ms.assetid: 01050a8e-0ccc-4a02-a4eb-b48be5c3f4f3
-caps.latest.revision: 
+caps.latest.revision: 29
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b08c314d50376e55d9825658aabc75385bbbe0be
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 628efe2628353992667474d8c5cff2b9eb88e228
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="introduction-to-using-xpath-queries-sqlxml-40"></a>Einführung in die Verwendung von XPath-Abfragen (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-XPath (XML Path Language)-Abfragen können als Teil einer URL oder in einer Vorlage angegeben werden. Das Zuordnungsschema bestimmt die Struktur des resultierenden Fragments, und die Werte werden aus der Datenbank abgerufen. Dieser Vorgang ähnelt prinzipiell dem Erstellen von Sichten mit der CREATE VIEW-Anweisung und dem Schreiben von SQL-Abfragen für diese Sichten.  
+  XPath (XML Path Language)-Abfragen können als Teil einer URL oder in einer Vorlage angegeben werden. Das Zuordnungsschema bestimmt die Struktur des resultierenden Fragments, und die Werte werden aus der Datenbank abgerufen. Dieser Vorgang ähnelt prinzipiell dem Erstellen von Sichten mit der CREATE VIEW-Anweisung und dem Schreiben von SQL-Abfragen für diese Sichten.  
   
 > [!NOTE]  
->  Um XPath-Abfragen in SQLXML 4.0 verstehen zu können, müssen Sie XML-Sichten und verwandte Konzepte wie Vorlagen und Zuordnungsschemas kennen. Weitere Informationen finden Sie unter [Einführung in XSD-Schemas mit Anmerkungen versehen &#40; SQLXML 4.0 &#41; ](../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md), und die vom World Wide Web Consortium (W3C) definierten Standard.  
+>  Um XPath-Abfragen in SQLXML 4.0 verstehen zu können, müssen Sie XML-Sichten und verwandte Konzepte wie Vorlagen und Zuordnungsschemas kennen. Weitere Informationen finden Sie unter [Einführung in XSD-Schemas mit Anmerkungen versehen &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md), und die vom World Wide Web Consortium (W3C) definierten Standard.  
   
  Ein XML-Dokument besteht aus Knoten, z. B. Elementknoten, Attributknoten, Textknoten usw. Betrachten Sie z. B. folgendes XML-Dokument:  
   
@@ -57,7 +58,7 @@ XPath (XML Path Language)-Abfragen können als Teil einer URL oder in einer Vorl
   
  XPath ist eine Diagrammnavigationssprache, die verwendet wird, um eine Gruppe von Knoten aus einem XML-Dokument auszuwählen. Jeder XPath-Operator wählt eine Knotengruppe aus, die auf einer von einem vorherigen XPath-Operator ausgewählten Knotengruppe basiert. Angenommen, eine Reihe von  **\<Kunden >** XPath-Knoten können auswählen, alle  **\<Reihenfolge >** Knoten mit der **Datum** -Attributwert **"7/14/1999"**. Die resultierende Knotengruppe enthält alle Bestellungen mit dem Bestelldatum 14.7.1999.  
   
- Die XPath-Sprache wurde vom World Wide Web Consortium (W3C) als Standardnavigationssprache definiert. SQLXML 4.0 implementiert eine Teilmenge der XPath-Spezifikation des W3C, die Sie unter der Adresse http://www.w3.org/TR/1999/PR-xpath-19991008.html finden.  
+ Die XPath-Sprache wurde vom World Wide Web Consortium (W3C) als Standardnavigationssprache definiert. SQLXML 4.0 implementiert eine Teilmenge der W3C-XPath-Spezifikation, das sich in http://www.w3.org/TR/1999/PR-xpath-19991008.html.  
   
  Nachfolgend werden die Hauptunterschiede zwischen der XPath-Implementierung des W3C und der SQLXML 4.0-Implementierung beschrieben.  
   
@@ -76,11 +77,11 @@ XPath (XML Path Language)-Abfragen können als Teil einer URL oder in einer Vorl
      Das Fehlen einer Dokumentreihenfolge bedeutet auch, dass der Zeichenfolgenwert eines Knotens nur dann ausgewertet werden kann, wenn der betreffende Knoten nur einer Spalte in nur einer Zeile zugeordnet werden kann. Ein Element mit untergeordneten Elementen oder einem IDREFS-Knoten oder NMTOKENS-Knoten kann nicht in eine Zeichenfolge konvertiert werden.  
   
     > [!NOTE]  
-    >  In einigen Fällen die **Key-Felder** -Anmerkung oder Schlüssel aus der **Beziehung** Anmerkung kann in einer deterministischen Dokumentreihenfolge führen. Dies ist nicht der primäre Verwendungszweck dieser Anmerkungen Informationen jedoch finden Sie unter [Identifizieren von Schlüsselspalten mithilfe von SQL: Key-Felder &#40; SQLXML 4.0 &#41; ](../../relational-databases/sqlxml-annotated-xsd-schemas-using/identifying-key-columns-using-sql-key-fields-sqlxml-4-0.md) und [angeben von Beziehungen mithilfe von SQL: Relationship &#40; SQLXML 4.0 &#41; ](../../relational-databases/sqlxml-annotated-xsd-schemas-using/specifying-relationships-using-sql-relationship-sqlxml-4-0.md).  
+    >  In einigen Fällen die **Key-Felder** -Anmerkung oder Schlüssel aus der **Beziehung** Anmerkung kann in einer deterministischen Dokumentreihenfolge führen. Dies ist nicht der primäre Verwendungszweck dieser Anmerkungen Informationen jedoch finden Sie unter [Identifizieren von Schlüsselspalten mithilfe von SQL: Key-Felder &#40;SQLXML 4.0&#41; ](../../relational-databases/sqlxml-annotated-xsd-schemas-using/identifying-key-columns-using-sql-key-fields-sqlxml-4-0.md) und [angeben von Beziehungen mit Sql: Beziehung &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/specifying-relationships-using-sql-relationship-sqlxml-4-0.md).  
   
 -   **Datentypen**  
   
-     SQLXML 4.0 weist Einschränkungen hinsichtlich der Implementierung der XPath- **Zeichenfolge**, **Anzahl**, und **booleschen** -Datentypen. Weitere Informationen finden Sie unter [XPath-Datentypen &#40; SQLXML 4.0 &#41; ](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/xpath-data-types-sqlxml-4-0.md).  
+     SQLXML 4.0 weist Einschränkungen hinsichtlich der Implementierung der XPath- **Zeichenfolge**, **Anzahl**, und **booleschen** -Datentypen. Weitere Informationen finden Sie unter [XPath-Datentypen &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/xpath-data-types-sqlxml-4-0.md).  
   
 -   **Produktübergreifende Abfragen**  
   
@@ -99,25 +100,25 @@ XPath (XML Path Language)-Abfragen können als Teil einer URL oder in einer Vorl
   
 |Funktion|Element|Link zu Beispielabfragen|  
 |-------------|----------|----------------------------|  
-|Achsen|**Attribut**, **untergeordneten**, **übergeordneten**, und **self** Achsen|[Angeben von Achsen in XPath-Abfragen &#40; SQLXML 4.0 &#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-axes-in-xpath-queries-sqlxml-4-0.md)|  
-|Prädikate mit booleschen Werten einschließlich aufeinander folgender und geschachtelter Prädikate||[Angeben von arithmetischen Operatoren in XPath-Abfragen &#40; SQLXML 4.0 &#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-arithmetic-operators-in-xpath-queries-sqlxml-4-0.md)|  
-|Alle relationalen Operatoren|=, !=, <, \<=, >, >=|[Angeben von relationalen Operatoren in XPath-Abfragen &#40; SQLXML 4.0 &#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-relational-operators-in-xpath-queries-sqlxml-4-0.md)|  
-|Arithmetische Operatoren|+, -, *, div|[Angeben von arithmetischen Operatoren in XPath-Abfragen &#40; SQLXML 4.0 &#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-arithmetic-operators-in-xpath-queries-sqlxml-4-0.md)|  
-|Explizite Konvertierungsfunktionen|**number()**, **string()**, **Boolean()**|[Angeben von expliziten Konvertierungsfunktionen in XPath-Abfragen &#40; SQLXML 4.0 &#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-explicit-conversion-functions-in-xpath-queries-sqlxml-4-0.md)|  
-|Boolesche Operatoren|AND, OR|[Angeben von booleschen Operatoren in XPath-Abfragen &#40; SQLXML 4.0 &#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-boolean-operators-in-xpath-queries-sqlxml-4-0.md)|  
-|Boolesche Funktionen|**true()**, **false()**, **not()**|[Angeben von booleschen Funktionen in XPath-Abfragen &#40; SQLXML 4.0 &#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-boolean-functions-in-xpath-queries-sqlxml-4-0.md)|  
-|XPath-Variablen||[Angeben von XPath-Variablen in XPath-Abfragen &#40; SQLXML 4.0 &#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-xpath-variables-in-xpath-queries-sqlxml-4-0.md)|  
+|Achsen|**Attribut**, **untergeordneten**, **übergeordneten**, und **self** Achsen|[Angeben von Achsen in XPath-Abfragen &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-axes-in-xpath-queries-sqlxml-4-0.md)|  
+|Prädikate mit booleschen Werten einschließlich aufeinander folgender und geschachtelter Prädikate||[Angeben von arithmetischen Operatoren in XPath-Abfragen &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-arithmetic-operators-in-xpath-queries-sqlxml-4-0.md)|  
+|Alle relationalen Operatoren|=, !=, <, \<=, >, >=|[Angeben von relationalen Operatoren in XPath-Abfragen &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-relational-operators-in-xpath-queries-sqlxml-4-0.md)|  
+|Arithmetische Operatoren|+, -, *, div|[Angeben von arithmetischen Operatoren in XPath-Abfragen &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-arithmetic-operators-in-xpath-queries-sqlxml-4-0.md)|  
+|Explizite Konvertierungsfunktionen|**Number()**, **string()**, **Boolean()**|[Angeben von expliziten Konvertierungsfunktionen in XPath-Abfragen &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-explicit-conversion-functions-in-xpath-queries-sqlxml-4-0.md)|  
+|Boolesche Operatoren|AND, OR|[Angeben von booleschen Operatoren in XPath-Abfragen &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-boolean-operators-in-xpath-queries-sqlxml-4-0.md)|  
+|Boolesche Funktionen|**True()**, **"false()" "**, **" NOT()""**|[Angeben von booleschen Funktionen in XPath-Abfragen &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-boolean-functions-in-xpath-queries-sqlxml-4-0.md)|  
+|XPath-Variablen||[Angeben von XPath-Variablen in XPath-Abfragen &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-xpath-variables-in-xpath-queries-sqlxml-4-0.md)|  
   
 ## <a name="unsupported-functionality"></a>Nicht unterstützte Funktionalität  
  In der folgenden Tabelle werden die Funktionen der XPath-Sprache aufgeführt, die in SQLXML 4.0 nicht implementiert sind.  
   
 |Funktion|Element|  
 |-------------|----------|  
-|Achsen|**ancestor**, **ancestor-or-self**, **descendant**, **descendant-or-self (//)**, **following**, **following-sibling**, **namespace**, **preceding**, **preceding-sibling**|  
+|Achsen|**Vorgänger**, **Vorgänger-or-Self**, **untergeordneten**, **Descendant-or-Self (/ /)**, **folgenden**,  **Nachfolgend-nebengeordnete Elemente**, **Namespace**, **vorhergehenden**, **vorausgehend-nebengeordnete**|  
 |Prädikate mit numerischen Werten||  
 |Arithmetische Operatoren|mod|  
-|Knotenfunktionen|**ancestor**, **ancestor-or-self**, **descendant**, **descendant-or-self (//)**, **following**, **following-sibling**, **namespace**, **preceding**, **preceding-sibling**|  
-|Zeichenfolgenfunktionen|**string()**, **concat()**, **starts-with()**, **contains()**, **substring-before()**, **substring-after()**, **substring()**, **string-length()**, **normalize()**, **translate()**|  
+|Knotenfunktionen|**Vorgänger**, **Vorgänger-or-Self**, **untergeordneten**, **Descendant-or-Self (/ /)**, **folgenden**,  **Nachfolgend-nebengeordnete Elemente**, **Namespace**, **vorhergehenden**, **vorausgehend-nebengeordnete**|  
+|Zeichenfolgenfunktionen|**String()**, **concat()**, **starts-with()**, **contains()**, **substring-before()**,  **substring-After()**, **substring()**, **string-length()**, **normalize()**, **translate()**|  
 |Boolesche Funktionen|**lang()**|  
 |Numerische Funktionen|**sum()**, **floor()**, **ceiling()**, **round()**|  
 |Union-operator|&#124;|  

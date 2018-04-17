@@ -1,16 +1,16 @@
 ---
-title: "srv_getbindtoken (API für erweiterte gespeicherte Prozeduren) | Microsoft-Dokumentation"
-ms.custom: 
+title: srv_getbindtoken (API für erweiterte gespeicherte Prozeduren) | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: extended-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - srv_getbindtoken
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - srv_getbindtoken
 ms.assetid: c947d011-08ac-4fb8-b925-3da6e0999277
-caps.latest.revision: 
+caps.latest.revision: 36
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a7deeadc2003fa6dd4dba53e11efc2c135240696
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
-ms.translationtype: MT
+ms.openlocfilehash: 029b284c408e03c47ead21880cfcbc838d53148f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="srvgetbindtoken-extended-stored-procedure-api"></a>srv_getbindtoken (API für erweiterte gespeicherte Prozeduren)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -66,7 +66,7 @@ bindtoken
 ## <a name="returns"></a>Rückgabewert  
  SUCCEED oder FAIL.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Hinweise  
   
 ### <a name="to-bind-an-extended-stored-procedure-session-to-the-client-session-that-called-it-so-they-share-the-same-transaction-lock-space"></a>So binden Sie eine Sitzung der erweiterten gespeicherten Prozedur an die Clientsitzung, die die Prozedur aufgerufen hat, sodass beide Sitzungen denselben Transaktionssperrbereich nutzen  
   
@@ -82,8 +82,8 @@ bindtoken
 > [!IMPORTANT]  
 >  Sie sollten den Quellcode der erweiterten gespeicherten Prozeduren sorgfältig prüfen, und Sie sollten die kompilierten DLL-Dateien testen, bevor Sie sie auf einem Produktionsserver installieren. Weitere Informationen zum Überprüfen und Testen der Sicherheit finden Sie auf dieser [Microsoft-Website](http://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409http://msdn.microsoft.com/security/).  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [sp_bindsession (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-bindsession-transact-sql.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Sp_bindsession & #40; Transact-SQL & #41;](../../relational-databases/system-stored-procedures/sp-bindsession-transact-sql.md)   
  [sp_getbindtoken (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-getbindtoken-transact-sql.md)  
   
   

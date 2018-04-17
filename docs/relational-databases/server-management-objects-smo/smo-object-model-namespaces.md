@@ -1,15 +1,15 @@
 ---
 title: SMO-Namespaces | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/02/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: smo
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - object models [SMO]
@@ -17,16 +17,17 @@ helpviewer_keywords:
 - namespaces [SMO]
 - SQL Server Management Objects, namespaces
 ms.assetid: 7bfabe4d-9f4c-4bc9-b998-93bd2b50ee8a
-caps.latest.revision: 
+caps.latest.revision: 39
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 235af9320f130e7b5440491765c964b4fa1771de
-ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
+monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: fceb541634be6d449a426b75d1ad5fbf0f74c401
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="smo-object-model-namespaces"></a>SMO-Objektmodellnamespaces
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]

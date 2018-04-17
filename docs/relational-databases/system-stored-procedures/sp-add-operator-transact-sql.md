@@ -1,16 +1,16 @@
 ---
 title: Sp_add_operator (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/09/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_add_operator
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_operator
 ms.assetid: 817cd98a-4dff-4ed8-a546-f336c144d1e0
-caps.latest.revision: 
+caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 534a5b973d0d35d660a07fc85bb8c7934f13a5c5
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: c91f79397a84f6277f4bb891144a5fceb40d02ce
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddoperator-transact-sql"></a>sp_add_operator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -78,25 +78,25 @@ sp_add_operator [ @name = ] 'name'
  [ **@pager_address=** ] **'***pager_address***'**  
  Gibt die Pageradresse des Operators an. Diese Zeichenfolge wird direkt an das E-Mail-System übergeben. *Pager_address* ist **narchar(100)**, hat den Standardwert NULL.  
   
- [ **@weekday_pager_start_time=** ] *weekday_pager_start_time*  
+ [  **@weekday_pager_start_time=** ] *Weekday_pager_start_time*  
  Die Angabe der Uhrzeit, nach der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent von Montag bis Freitag Pagerbenachrichtigungen an den angegebenen Operator sendet. *Weekday_pager_start_time*ist **Int**, hat den Standardwert **090000**, womit 9:00 Uhr im 24-Stunden-Format an und muss im Format HHMMSS eingegeben werden.  
   
- [ **@weekday_pager_end_time=** ] *weekday_pager_end_time*  
+ [  **@weekday_pager_end_time=** ] *Weekday_pager_end_time*  
  Die Uhrzeit, nach der **SQLServerAgent** Dienst nicht mehr sendet Pagerbenachrichtigungen an den angegebenen Operator Angabe von Montag bis Freitag. *Weekday_pager_end_time*ist **Int**, hat einen Standardwert 180000. dieser gibt 18:00 Uhr im 24-Stunden-Format an und muss im Format HHMMSS eingegeben werden.  
   
- [ **@saturday_pager_start_time =**] *saturday_pager_start_time*  
+ [  **@saturday_pager_start_time =**] *Saturday_pager_start_time*  
  Die Uhrzeit, nach der **SQLServerAgent** -Dienst samstags Pagerbenachrichtigungen an den angegebenen Operator sendet. *Saturday_pager_start_time* ist **Int**, hat den Standardwert 090000, womit 9:00 Uhr im 24-Stunden-Format an und muss im Format HHMMSS eingegeben werden.  
   
- [ **@saturday_pager_end_time=** ] *saturday_pager_end_time*  
+ [  **@saturday_pager_end_time=** ] *Saturday_pager_end_time*  
  Die Uhrzeit, nach der **SQLServerAgent** Dienst sendet nicht mehr Pagerbenachrichtigung an den angegebenen Operator an Samstagen am stärksten. *Saturday_pager_end_time*ist **Int**, hat den Standardwert **180000**, womit 18:00 Uhr im 24-Stunden-Format an und muss im Format HHMMSS eingegeben werden.  
   
- [ **@sunday_pager_start_time=** ] *sunday_pager_start_time*  
+ [  **@sunday_pager_start_time=** ] *Sunday_pager_start_time*  
  Die Uhrzeit, nach der **SQLServerAgent** -Dienst sonntags Pagerbenachrichtigungen an den angegebenen Operator sendet. *Sunday_pager_start_time*ist **Int**, hat den Standardwert **090000**, womit 9:00 Uhr im 24-Stunden-Format an und muss im Format HHMMSS eingegeben werden.  
   
- [ **@sunday_pager_end_time =**] *sunday_pager_end_time*  
+ [  **@sunday_pager_end_time =**] *Sunday_pager_end_time*  
  Die Uhrzeit, nach der **SQLServerAgent** Dienst sendet nicht mehr Pagerbenachrichtigung an den angegebenen Operator an Sonntagen. *Sunday_pager_end_time*ist **Int**, hat den Standardwert **180000**, womit 18:00 Uhr im 24-Stunden-Format an und muss im Format HHMMSS eingegeben werden.  
   
- [ **@pager_days=** ] *pager_days*  
+ [  **@pager_days=** ] *Pager_days*  
  Eine Zahl, die die Tage angibt, an denen der Operator für Pagerbenachrichtigungen verfügbar ist (entsprechend der angegebenen Anfangs-/Endzeit). *Pager_days*ist **"tinyint"**, hat den Standardwert **0** , der angibt, des Operators wird nie für den Empfang von Pagerbenachrichtigungen verfügbar. Gültige Werte reichen von **0** über **127**. *Pager_days*berechnet, indem die einzelnen Werte für die erforderlichen Tage addiert. Beispielsweise wird von Montag bis Freitag **2**+**4**+**8**+**16** + **32** = **62**. In der folgenden Tabelle werden die Werte für die einzelnen Wochentage aufgelistet.  
   
 |Wert|Beschreibung|  

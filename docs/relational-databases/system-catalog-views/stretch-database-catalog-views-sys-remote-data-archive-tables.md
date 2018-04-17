@@ -1,16 +1,16 @@
 ---
-title: sys.remote_data_archive_tables (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: Sys. remote_data_archive_tables (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-stretch
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.remote_data_archive_tables
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.remote_data_archive_tables catalog view
 ms.assetid: 765069b7-60fd-414c-875f-3455460b75cd
-caps.latest.revision: 
+caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7f54cab8762e510ed8d34e0e1dd08a1efda6c92d
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 29d6916024358efb9e806a5f8d1eeaf6a3715d89
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="stretch-database-catalog-views---sysremotedataarchivetables"></a>Stretch-Datenbank-Katalogsichten - Sys. remote_data_archive_tables
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

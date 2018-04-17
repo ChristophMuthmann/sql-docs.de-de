@@ -1,16 +1,16 @@
 ---
 title: Sys. fulltext_languages (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.fulltext_languages
@@ -23,16 +23,17 @@ helpviewer_keywords:
 - languages [full-text search]
 - sys.fulltext_languages catalog view
 ms.assetid: 2ed6b53d-1cf2-4763-9d58-36ea24a610ef
-caps.latest.revision: 
+caps.latest.revision: 54
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fb66c10f797c7951f54125c7b5b99cfc25f983ee
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 812217f478e8574aac2d2066df6ab87d9b117a0c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysfulltextlanguages-transact-sql"></a>sys.fulltext_languages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,7 +42,7 @@ ms.lasthandoff: 02/03/2018
    
 |Column|Datentyp|Description|  
 |------------|---------------|-----------------|  
-|**lcid**|**int**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Gebietsschemabezeichner (LCID) für die Sprache.|  
+|**lcid**|**int**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Gebietsschemabezeichner (Locale Identifier, LCID) für die Sprache.|  
 |**name**|**sysname**|Der Wert des Alias in [sys.syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) entsprechend dem Wert der **Lcid** oder die Zeichenfolgendarstellung des numerischen LCID-WERTS.|  
   
 ## <a name="values-returned-for-default-languages"></a>Werte, die für Standardsprachen zurückgegeben wurden  
@@ -110,7 +111,7 @@ ms.lasthandoff: 02/03/2018
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
- [sp_fulltext_load_thesaurus_file &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-load-thesaurus-file-transact-sql.md)   
+ [Sp_fulltext_load_thesaurus_file &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-load-thesaurus-file-transact-sql.md)   
  [sp_fulltext_service &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)   
  [Konfigurieren und Verwalten von Wörtertrennungen und Wortstammerkennungen für die Suche](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
  [Konfigurieren und Verwalten von Thesaurusdateien für die Volltextsuche](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)   

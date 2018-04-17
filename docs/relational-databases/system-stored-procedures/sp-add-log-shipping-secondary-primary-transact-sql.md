@@ -1,16 +1,16 @@
 ---
 title: Sp_add_log_shipping_secondary_primary (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_add_log_shipping_secondary_primary_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_log_shipping_secondary_primary
 ms.assetid: bfbbbee2-c255-4a59-a963-47d6e980a8e2
-caps.latest.revision: 
+caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c83d0a0062f7f7affc19e91b929bb16831a8946d
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 223065b249eee4d6468e965f7626c7febe656011
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddlogshippingsecondaryprimary-transact-sql"></a>sp_add_log_shipping_secondary_primary (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,31 +60,31 @@ sp_add_log_shipping_secondary_primary
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@primary_server** = ] '*primary_server*'  
+ [ **@primary_server** =] '*Primary_server*"  
  Der Name der primären Instanz von der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] in der Protokollversandkonfiguration. *primary_server* ist vom Datentyp **sysname** und darf nicht NULL sein.  
   
- [ **@primary_database** = ] '*primary_database*'  
+ [ **@primary_database** =] '*Primary_database*"  
  Der Name der Datenbank auf dem primären Server. *primary_database* ist vom Datentyp **sysname**und hat keinen Standardwert.  
   
- [ **@backup_source_directory** = ] '*backup_source_directory*'  
+ [ **@backup_source_directory** =] '*Backup_source_directory*"  
  Das Verzeichnis, in dem die Dateien der Transaktionsprotokollsicherung gespeichert werden. *backup_source_directory* ist vom Datentyp **nvarchar(500)** und darf nicht NULL sein.  
   
- [ **@backup_destination_directory** = ] '*backup_destination_directory*'  
+ [ **@backup_destination_directory** =] '*Backup_destination_directory*"  
  Das Verzeichnis auf dem sekundären Server, in das Sicherungsdateien kopiert werden *backup_destination_directory* ist vom Datentyp **nvarchar(500)** und darf nicht NULL sein.  
   
- [ **@copy_job_name** = ] '*copy_job_name*'  
+ [ **@copy_job_name** =] '*Copy_job_name*"  
  Der Name für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agentauftrag, der erstellt wird, um Transaktionsprotokollsicherungen auf den sekundären Server zu kopieren. *Copy_job_name* ist **Sysname** und darf nicht NULL sein.  
   
- [  **@restore_job_name**  =] '*Restore_job_name*"  
+ [ **@restore_job_name** =] '*Restore_job_name*"  
  Der Name des der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Auftrag auf dem sekundären Server, die die Sicherungen in der sekundären Datenbank wiederherstellt. *Restore_job_name* ist **Sysname** und darf nicht NULL sein.  
   
- [ **@file_retention_period** = ] '*file_retention_period*'  
+ [ **@file_retention_period** =] '*File_retention_period*"  
  Die Zeitdauer in Minuten an, die in eine Sicherungsdatei, auf dem sekundären Server im angegebenen Pfad beibehalten wird die @backup_destination_directory Parameter vor dem Löschvorgang. *history_retention_period* ist vom Datentyp **int**. Der Standardwert ist NULL. Der Wert 14420 wird verwendet, falls kein anderer Wert angegeben wird.  
   
- [ **@monitor_server** = ] '*monitor_server*'  
+ [ **@monitor_server** =] '*Monitor_server*"  
  Der Name des Überwachungsservers. *Monitor_server* ist **Sysname**, hat keinen Standardwert und darf nicht NULL sein.  
   
- [ **@monitor_server_security_mode** = ] '*monitor_server_security_mode*'  
+ [ **@monitor_server_security_mode** =] '*Monitor_server_security_mode*"  
  Der Sicherheitsmodus, der zum Herstellen einer Verbindung mit dem Überwachungsserver verwendet wird.  
   
  1 = Windows-Authentifizierung  
@@ -93,19 +93,19 @@ sp_add_log_shipping_secondary_primary
   
  *monitor_server_security_mode* ist vom Datentyp **bit** und darf nicht NULL sein.  
   
- [  **@monitor_server_login**  =] '*Monitor_server_login*"  
+ [ **@monitor_server_login** =] '*Monitor_server_login*"  
  Der Benutzername für das Konto, das zum Zugreifen auf den Überwachungsserver verwendet wird.  
   
- [  **@monitor_server_password**  =] '*Monitor_server_password*"  
+ [ **@monitor_server_password** =] '*Monitor_server_password*"  
  Das Kennwort des Kontos, das zum Zugreifen auf den Überwachungsserver verwendet wird.  
   
- [ **@copy_job_id** = ] '*copy_job_id*' OUTPUT  
- Die dem Kopierauftrag zugeordnete ID auf dem sekundären Server *copy_job_id* is **uniqueidentifier** and cannot be NULL.  
+ [ **@copy_job_id** =] '*copy_ job_id*' Ausgabe  
+ Die dem Kopierauftrag zugeordnete ID auf dem sekundären Server *copy_ job_id* ist **"uniqueidentifier"** und darf nicht NULL sein.  
   
- [ **@restore_job_id** = ] '*restore_job_id*' OUTPUT  
+ [ **@restore_job_id** =] '*Restore_job_id*"Ausgabe  
  Die dem Wiederherstellungsauftrag zugeordnete ID auf dem sekundären Server *Restore_job_id* ist **"uniqueidentifier"** und darf nicht NULL sein.  
   
- [ **@secondary_id** = ] '*secondary_id*' OUTPUT  
+ [ **@secondary_id** =] '*Secondary_id*"Ausgabe  
  Die ID für den sekundären Server in der Protokollversandkonfiguration. *Secondary_id* ist **"uniqueidentifier"** und darf nicht NULL sein.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
@@ -155,7 +155,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Über den Protokollversand &#40; SQLServer &#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [Über den Protokollversand & #40; SQLServer & #41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

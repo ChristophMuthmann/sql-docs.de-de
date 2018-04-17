@@ -2,7 +2,7 @@
 title: SQLGetConnectAttr-Funktion | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 2cb4ffa8-19d3-4664-8c2f-6682cdcc3f33
 caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 11e1ae7c2dc3de4611687349295bdd3344c46d47
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 9bdc72acac47f44f65b5902c56e1436f5c647341
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlgetconnectattr-function"></a>SQLGetConnectAttr-Funktion
 **Konformität**  

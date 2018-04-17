@@ -1,16 +1,16 @@
 ---
 title: Sys. database_scoped_configurations (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/16/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - database_scoped_configurations
@@ -20,16 +20,17 @@ f1_keywords:
 helpviewer_keywords:
 - sys.database_scoped_configurations catalog view
 ms.assetid: 8899310a-3464-4d38-9f2f-88396c4e7dc2
-caps.latest.revision: 
+caps.latest.revision: 13
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 84a4da130f637e85e4ebc950db5568f1fa8876f2
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 94affb513c3e7d0b9cdc6111599b9861025b86e8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdatabasescopedconfigurations-transact-sql"></a>Sys. database_scoped_configurations (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -39,7 +40,7 @@ ms.lasthandoff: 02/03/2018
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |**configuration_id**|**int**|Die ID der Konfigurationsoption.|  
-|**name**|**nvarchar(60)**|Der Name der Konfigurationsoption. Informationen zu den möglichen Konfigurationen finden Sie unter [ALTER DATABASE SCOPED CONFIGURATION &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).|  
+|**name**|**nvarchar(60)**|Der Name der Konfigurationsoption. Informationen zu den möglichen Konfigurationen finden Sie unter [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).|  
 |**value**|**sqlvariant**|Der Wert für diese Konfigurationsoption für das primäre Replikat festgelegt.|  
 |**value_for_secondary**|**sqlvariant**|Der Wert für diese Konfigurationsoption für die sekundären Replikate.|  
   
@@ -49,7 +50,7 @@ ms.lasthandoff: 02/03/2018
 ## <a name="remarks"></a>Hinweise  
  Wenn NULL zurückgegeben wird, als der Wert für **Value_for_secondary**, dies bedeutet, dass die sekundäre Datenbank auf Primär festgelegt ist.  
  
- Datenbankweit gültige Konfiguration wie die Einstellungen mit der Datenbank übernommen. Dies bedeutet, dass bei eine bestimmte Datenbank wiederhergestellt oder angefügt wird, die vorhandenen Konfigurationseinstellungen bleiben.
+ Die datenbankweit gültigen Konfigurationseinstellungen werden mit der Datenbank übertragen. Dies bedeutet, dass die vorhandenen Konfigurationseinstellungen bei der Wiederherstellung oder dem Anfügen einer bestimmten Datenbank erhalten bleiben.
   
 ## <a name="see-also"></a>Siehe auch  
  [ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)  

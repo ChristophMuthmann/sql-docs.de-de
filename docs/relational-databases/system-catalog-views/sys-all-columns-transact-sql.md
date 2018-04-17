@@ -1,16 +1,16 @@
 ---
 title: Sys. ALL_COLUMNS (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - all_columns_TSQL
@@ -22,23 +22,24 @@ dev_langs:
 helpviewer_keywords:
 - sys.all_columns catalog view
 ms.assetid: 40e04fe9-0b64-4799-84c0-57f128b2bdc2
-caps.latest.revision: 
+caps.latest.revision: 48
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d422394e7d23f4bef5554d420a5ca28bc53492de
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 93f61e8ae7e9835a9dca3469b5050b4751c51805
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysallcolumns-transact-sql"></a>sys.all_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Zeigt die Union aller Spalten an, die zu benutzerdefinierten Objekten und Systemobjekten gehören.  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |object_id|**int**|Die ID des Objekts, zu dem diese Spalte gehört.|  
 |name|**sysname**|Der Name der Spalte. Ist eindeutig innerhalb des Objekts.|  
@@ -62,7 +63,7 @@ ms.lasthandoff: 11/21/2017
 |is_xml_document|**bit**|1 = Der Inhalt ist ein vollständiges XML-Dokument.<br /><br /> 0 = Der Inhalt ist ein Dokumentfragment, oder der Spaltendatentyp ist nicht XML.|  
 |xml_collection_id|**int**|Ungleich 0, wenn der Spaltendatentyp ist **Xml** und XML typisiert ist. Der Wert ist die ID der Auflistung mit dem prüfenden XML-Schemanamespace der Spalte.<br /><br /> 0 = Keine XML-Schemaauflistung.|  
 |default_object_id|**int**|ID des Standardobjekts, unabhängig davon, ob es eine eigenständige [sp_bindefault](../../relational-databases/system-stored-procedures/sp-bindefault-transact-sql.md), oder eine DEFAULT-Einschränkung in der Zeile, auf Spaltenebene. Die parent_object_id-Spalte eines DEFAULT-Inlineobjekts ist ein Verweis auf die Tabelle selbst.<br /><br /> 0 = Kein Standard.|  
-|rule_object_id|**int**|ID der eigenständigen Regel, die mithilfe von sys.sp_bindrule gebunden wird.<br /><br /> 0 = Keine eigenständige Regel.<br /><br /> CHECK-Einschränkungen auf Spaltenebene finden Sie unter [check_constraints &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-check-constraints-transact-sql.md).|  
+|rule_object_id|**int**|ID der eigenständigen Regel, die mithilfe von sys.sp_bindrule gebunden wird.<br /><br /> 0 = Keine eigenständige Regel.<br /><br /> CHECK-Einschränkungen auf Spaltenebene finden Sie unter [check_constraints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-check-constraints-transact-sql.md).|  
 |is_sparse|bit|1 = Spalte ist eine Sparsespalte. Weitere Informationen finden Sie unter [Verwenden von Spalten mit geringer Dichte](../../relational-databases/tables/use-sparse-columns.md).|  
 |is_column_set|bit|1 = Spalte ist ein Spaltensatz. Weitere Informationen finden Sie unter [Verwenden von Spaltensätzen](../../relational-databases/tables/use-column-sets.md).|  
 |"generated_always_type"|**tinyint**|**Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Der numerische Wert, der den Typ der Spalte darstellt:<br /><br /> 0 = NOT_APPLICABLE<br /><br /> 1 = AS_ROW_START<br /><br /> 2 = AS_ROW_END|  
@@ -72,11 +73,11 @@ ms.lasthandoff: 11/21/2017
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Weitere Informationen finden Sie unter [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Katalogsichten für Objekte &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+ [Katalogsichten für Objekte &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [Katalogsichten &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Abfragen von SQL Server-Systemkatalogs – häufig gestellte Fragen](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
  [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
- [Sys. system_columns &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-system-columns-transact-sql.md)   
- [computed_columns &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-computed-columns-transact-sql.md)  
+ [sys.system_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-system-columns-transact-sql.md)   
+ [computed_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-computed-columns-transact-sql.md)  
   
   

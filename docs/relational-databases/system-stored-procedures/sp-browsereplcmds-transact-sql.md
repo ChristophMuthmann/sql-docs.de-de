@@ -1,16 +1,16 @@
 ---
 title: Sp_browsereplcmds (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_browsereplcmds
 ms.assetid: 30abcb41-1d18-4f43-a692-4c80914c0450
-caps.latest.revision: 
+caps.latest.revision: 34
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9e7a2a18736c95d11447d2330ffbe48c99da3a2f
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 2e7bc94efc680663436b0cc77692c35aaa36bac7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spbrowsereplcmds-transact-sql"></a>sp_browsereplcmds (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +69,7 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
  Gibt an, ob Befehle mit dem angegebenen *Article_id* werden zurückgegeben. *Article_id* ist **Int**, hat den Standardwert NULL.  
   
  [  **@command_id =**] *Command_id*  
- Ist der Speicherort des Befehls in [MSrepl_commands &#40; Transact-SQL &#41; ](../../relational-databases/system-tables/msrepl-commands-transact-sql.md) decodiert werden. *Command_id* ist **Int**, hat den Standardwert NULL. Wenn angegeben, alle anderen Parameter müssen angegeben werden außerdem und *Xact_seqno_start*muss identisch mit *Xact_seqno_end*.  
+ Ist der Speicherort des Befehls in [MSrepl_commands &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/msrepl-commands-transact-sql.md) decodiert werden. *Command_id* ist **Int**, hat den Standardwert NULL. Wenn angegeben, alle anderen Parameter müssen angegeben werden außerdem und *Xact_seqno_start*muss identisch mit *Xact_seqno_end*.  
   
  [  **@agent_id =**] *agent_id-Wert*  
  Gibt an, dass nur Befehle für einen bestimmten Replikations-Agent zurückgegeben werden. *Agent_id* ist **Int**, hat den Standardwert NULL.  
@@ -88,13 +88,13 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
 |**originator_srvname**|**sysname**|Server, von dem die Transaktion stammt|  
 |**originator_db**|**sysname**|Datenbank, von der die Transaktion stammt|  
 |**article_id**|**int**|ID des Artikels.|  
-|**Typ**|**int**|Der Typ des Befehls.|  
+|**type**|**int**|Der Typ des Befehls.|  
 |**verbleiben**|**bit**|Zeigt an, ob dies ein Teilbefehl ist.|  
 |**Hashkey**|**int**|Nur interne Verwendung.|  
 |**originator_publication_id**|**int**|ID der Veröffentlichung, von der die Transaktion stammt|  
 |**originator_db_version**|**int**|Version der Datenbank, von der die Transaktion stammt|  
 |**originator_lsn**|**varbinary(16)**|Identifiziert die Protokollfolgenummer (LSN, Log Sequence Number) für den Befehl in der ursprünglichen Veröffentlichung Peer-zu-Peer-Transaktionsreplikation verwendet.|  
-|**Befehl**|**nvarchar(1024)**|[!INCLUDE[tsql](../../includes/tsql-md.md)]-Befehl.|  
+|**Befehl**|**nvarchar(1024)**|[!INCLUDE[tsql](../../includes/tsql-md.md)] -Befehl.|  
 |**command_id**|**int**|ID des Befehls in [MSrepl_commands](../../relational-databases/system-tables/msrepl-commands-transact-sql.md).|  
   
  Lange Befehle können auf mehrere Zeilen des Resultsets aufgeteilt werden.  
@@ -107,7 +107,7 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
   
 ## <a name="see-also"></a>Siehe auch  
  [sp_replcmds &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)   
- [Sp_replshowcmds &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-replshowcmds-transact-sql.md)   
+ [Sp_replshowcmds &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replshowcmds-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

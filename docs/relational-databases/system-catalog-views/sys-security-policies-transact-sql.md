@@ -1,16 +1,16 @@
 ---
 title: Sys. security_policies (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - Azure SQL Database
@@ -26,23 +26,24 @@ helpviewer_keywords:
 - sys.security_policies catalog view
 - security_policies catalog view
 ms.assetid: 35362f5b-e601-4049-9e1d-c5307e823831
-caps.latest.revision: 
+caps.latest.revision: 9
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9e30a903e31ce8ba7951f9756a8fd258375fb8e2
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 6b588dcf21742dac41c9501bf165f7f9df04da62
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="syssecuritypolicies-transact-sql"></a>Sys. security_policies (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Gibt eine Zeile für jede Sicherheitsrichtlinie in der Datenbank zurück.  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |name|**sysname**|Der Name der Sicherheitsrichtlinie, der innerhalb der Datenbank eindeutig ist.|  
 |object_id|**int**|Die ID der Sicherheitsrichtlinie.|  

@@ -1,15 +1,15 @@
 ---
-title: "Programmierung für SQL Server Native Client | Microsoft Docs"
-ms.custom: 
+title: Programmierung für SQL Server Native Client | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQLNCLI, about SQL Server Native Client
@@ -20,16 +20,17 @@ helpviewer_keywords:
 - SQLNCLI
 - native data access [SQL Server Native Client]
 ms.assetid: 14ba2cb1-a424-4e4d-b224-0bf1015ab801
-caps.latest.revision: 
+caps.latest.revision: 66
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 80e90fe4e92edb1cc3cd7dd60e8f948b00cf4377
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 5bff3e9339fe8f37ef4d9f3631ab495d41734c57
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-server-native-client-programming"></a>Programmierung für SQL Server Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -69,7 +70,7 @@ ms.lasthandoff: 01/25/2018
  [SQL Server Native Client &#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)  
  Bietet Informationen zur Verwendung des OLE DB-Anbieter von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
   
- [SQL Server Native Client &#40; ODBC &#41;](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)  
+ [SQL Server Native Client & #40; ODBC & #41;](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)  
  Bietet Informationen zur Verwendung des ODBC-Treibers von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
   
  [Finden weiterer SQL Server Native Client-Informationen](../../relational-databases/native-client/finding-more-sql-server-native-client-information.md)  

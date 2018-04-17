@@ -1,16 +1,16 @@
 ---
 title: Sys. conversation_endpoints (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - conversation_endpoints_TSQL
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.conversation_endpoints catalog view
 ms.assetid: 2ed758bc-2a9d-4831-8da2-4b80e218f3ea
-caps.latest.revision: 
+caps.latest.revision: 47
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5cbfc13a807b2ec7c61ab2f12ec6f6cfe9f4ae82
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 19d599519d01b9f9ea7619c6d69fdc0212172889
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysconversationendpoints-transact-sql"></a>sys.conversation_endpoints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.lasthandoff: 02/03/2018
 |conversation_group_id|**uniqueidentifier**|Bezeichner für die Konversationsgruppe, zu der diese Konversation gehört. Lässt keine NULL-Werte zu.|  
 |service_id|**int**|Bezeichner des Diensts für diese Seite der Konversation. Lässt keine NULL-Werte zu.|  
 |lifetime|**datetime**|Ablaufdatum/-zeitpunkt für diese Konversation. Lässt keine NULL-Werte zu.|  
-|state|**char(2)**|Der aktuelle Status der Konversation. Lässt keine NULL-Werte zu. Folgende Angaben sind möglich:<br /><br /> Daher ausgehende gestartet. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]eine BEGIN CONVERSATION-Anweisung für diese Konversation verarbeitet, aber noch keine Nachrichten gesendet wurden.<br /><br /> SI eingehende gestartet. Eine andere Instanz gestartet, eine neue Konversation mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], aber [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wurde noch nicht vollständig empfangen die erste Nachricht. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]möglicherweise erstellen Sie die Konversation in diesem Zustand, wenn die erste Meldung fragmentiert ist oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Nachrichten in falscher Reihenfolge empfängt. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] könnte die Konversation jedoch im Status CO (Konversation begonnen) erstellen, wenn die erste empfangene Übertragung für die Konversation die erste Nachricht vollständig enthält.<br /><br /> CO Konversation. Die Konversation wurde aufgenommen, und beide Seiten der Konversation können Nachrichten senden. Der Großteil der Kommunikation für einen Standarddienst findet in diesem Status der Konversation statt.<br /><br /> DI Disconnected eingehende. Die Remoteseite der Konversation hat eine END CONVERSATION-Anweisung ausgegeben. Die Konversation verbleibt in diesem Status, bis die lokale Seite der Konversation eine END CONVERSATION-Anweisung ausgibt. Eine Anwendung kann weiter Nachrichten für die Konversation empfangen. Da die Remoteseite der Konversation die Konversation beendet hat, kann eine Anwendung in dieser Konversation keine Nachrichten mehr senden. Wenn eine Anwendung eine END CONVERSATION-Anweisung ausgibt, geht die Konversation in den CD-Status (Geschlossen) über.<br /><br /> Führen Sie die ausgehende Konversation beenden. Die lokale Seite der Konversation hat eine END CONVERSATION-Anweisung ausgegeben. Die Konversation bleibt so lange in diesem Status, bis die Remoteseite der Konversation END CONVERSATION anerkennt. Eine Anwendung kann keine Nachrichten für die Konversation senden oder empfangen. Wenn die Remoteseite der Konversation die END CONVERSATION-Anweisung bestätigt, geht die Konversation in den CD-Zustand (Geschlossen) über.<br /><br /> ER-Fehler. An diesem Endpunkt ist ein Fehler aufgetreten. Die Fehlermeldung wird in die Anwendungswarteschlange eingefügt. Wenn die Anwendungswarteschlange leer ist, deutet dies darauf hin, dass die Fehlermeldung bereits von der Anwendung verarbeitet wurde.<br /><br /> CD geschlossen. Der Konversationsendpunkt wird nicht mehr verwendet.|  
+|state|**char(2)**|Der aktuelle Status der Konversation. Lässt keine NULL-Werte zu. Folgende Angaben sind möglich:<br /><br /> Daher ausgehende gestartet. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eine BEGIN CONVERSATION-Anweisung für diese Konversation verarbeitet, aber noch keine Nachrichten gesendet wurden.<br /><br /> SI eingehende gestartet. Eine andere Instanz gestartet, eine neue Konversation mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], aber [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wurde noch nicht vollständig empfangen die erste Nachricht. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] möglicherweise erstellen Sie die Konversation in diesem Zustand, wenn die erste Meldung fragmentiert ist oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Nachrichten in falscher Reihenfolge empfängt. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] könnte die Konversation jedoch im Status CO (Konversation begonnen) erstellen, wenn die erste empfangene Übertragung für die Konversation die erste Nachricht vollständig enthält.<br /><br /> CO Konversation. Die Konversation wurde aufgenommen, und beide Seiten der Konversation können Nachrichten senden. Der Großteil der Kommunikation für einen Standarddienst findet in diesem Status der Konversation statt.<br /><br /> DI Disconnected eingehende. Die Remoteseite der Konversation hat eine END CONVERSATION-Anweisung ausgegeben. Die Konversation verbleibt in diesem Status, bis die lokale Seite der Konversation eine END CONVERSATION-Anweisung ausgibt. Eine Anwendung kann weiter Nachrichten für die Konversation empfangen. Da die Remoteseite der Konversation die Konversation beendet hat, kann eine Anwendung in dieser Konversation keine Nachrichten mehr senden. Wenn eine Anwendung eine END CONVERSATION-Anweisung ausgibt, geht die Konversation in den CD-Status (Geschlossen) über.<br /><br /> Führen Sie die ausgehende Konversation beenden. Die lokale Seite der Konversation hat eine END CONVERSATION-Anweisung ausgegeben. Die Konversation bleibt so lange in diesem Status, bis die Remoteseite der Konversation END CONVERSATION anerkennt. Eine Anwendung kann keine Nachrichten für die Konversation senden oder empfangen. Wenn die Remoteseite der Konversation die END CONVERSATION-Anweisung bestätigt, geht die Konversation in den CD-Zustand (Geschlossen) über.<br /><br /> ER-Fehler. An diesem Endpunkt ist ein Fehler aufgetreten. Die Fehlermeldung wird in die Anwendungswarteschlange eingefügt. Wenn die Anwendungswarteschlange leer ist, deutet dies darauf hin, dass die Fehlermeldung bereits von der Anwendung verarbeitet wurde.<br /><br /> CD geschlossen. Der Konversationsendpunkt wird nicht mehr verwendet.|  
 |state_desc|**nvarchar(60)**|Beschreibung des Konversationsstatus des Endpunkts. In dieser Spalte ist NULL zulässig. Folgende Angaben sind möglich:<br /><br /> **STARTED_OUTBOUND**<br /><br /> **STARTED_INBOUND**<br /><br /> **KONVERSATION**<br /><br /> **DISCONNECTED_INBOUND**<br /><br /> **DISCONNECTED_OUTBOUND**<br /><br /> **GESCHLOSSEN**<br /><br /> **ERROR**|  
 |far_service|**nvarchar(256)**|Name des Diensts auf der Remoteseite der Konversation. Lässt keine NULL-Werte zu.|  
 |far_broker_instance|**nvarchar(128)**|Die Brokerinstanz für die Remoteseite der Konversation. Lässt NULL-Werte zu.|  
@@ -58,7 +58,7 @@ ms.lasthandoff: 02/03/2018
 |security_timestamp|**datetime**|Zeitpunkt, zu dem der lokale Sitzungsschlüssel erstellt wurde. Lässt keine NULL-Werte zu.|  
 |dialog_timer|**datetime**|Zeitpunkt, zu dem der Konversationszeitgeber für diesen Dialog eine DialogTimer-Nachricht sendet. Lässt keine NULL-Werte zu.|  
 |send_sequence|**bigint**|Nächste Nachrichtennummer in der Sendesequenz. Lässt keine NULL-Werte zu.|  
-|last_send_tran_id|**binary(6)**|Interne Transaktions-ID der letzten Transaktion, die eine Nachricht senden soll. Lässt keine NULL-Werte zu.|  
+|last_send_tran_id|**Binary(6)**|Interne Transaktions-ID der letzten Transaktion, die eine Nachricht senden soll. Lässt keine NULL-Werte zu.|  
 |end_dialog_sequence|**bigint**|Die Sequenznummer der Nachricht über das Beenden des Dialogs. Lässt keine NULL-Werte zu.|  
 |receive_sequence|**bigint**|Erwartete nächste Nachrichtennummer in der Nachrichtenempfangssequenz. Lässt keine NULL-Werte zu.|  
 |receive_sequence_frag|**int**|Erwartete nächste Nachrichtenfragmentnummer in der Nachrichtenempfangssequenz. Lässt keine NULL-Werte zu.|  

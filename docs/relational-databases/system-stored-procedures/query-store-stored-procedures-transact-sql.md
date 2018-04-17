@@ -1,16 +1,16 @@
 ---
 title: Der Abfragespeicher gespeicherte Prozeduren (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/29/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -19,16 +19,17 @@ helpviewer_keywords:
 - stored procedures [SQL Server], query store
 - query store [SQL Server], stored procedures
 ms.assetid: 9bddbb74-e67a-43e3-b89e-896c498e53cb
-caps.latest.revision: 
+caps.latest.revision: 6
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ca31170c1508dd09ce0ba4b1a5d2fb02c58e8e09
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 1b1e497e68afb81efb7b81fac3e0730785859397
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="query-store-stored-procedures-transact-sql"></a>Der Abfragespeicher gespeicherte Prozeduren (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

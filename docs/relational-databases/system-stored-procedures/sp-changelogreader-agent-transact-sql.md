@@ -1,16 +1,16 @@
 ---
 title: Sp_changelogreader_agent (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changelogreader_agent
 ms.assetid: 929b2fa7-1267-41d0-8b69-e9ab26a62c0f
-caps.latest.revision: 
+caps.latest.revision: 21
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 42668e8b915af31cf746800fc65312caf84ad88e
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 57125f65478b438dfbd4e5939691e33e0af47e15
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spchangelogreaderagent-transact-sql"></a>sp_changelogreader_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,31 +52,31 @@ sp_changelogreader_agent [ [ @job_login = ] 'job_login' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@job_login** =] **"***Job_login***"**  
+ [ **@job_login**=] **"***Job_login***"**  
  Der Anmeldename für das Windows-Konto, unter dem der Agent ausgeführt wird. *Job_login* ist **nvarchar(257)**, hat den Standardwert NULL. *Dies kann nicht geändert werden, für einen nicht-* [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *Verleger.*  
   
- [  **@job_password** =] **"***Job_password***"**  
+ [ **@job_password**=] **"***Job_password***"**  
  Das Kennwort für das [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Konto, unter dem der Agent ausgeführt wird. *Job_password* ist **Sysname**, hat den Standardwert NULL.  
   
 > [!IMPORTANT]  
 >  Benutzer sollten nach Möglichkeit dazu aufgefordert werden, Anmeldeinformationen zur Laufzeit anzugeben. Wenn Anmeldeinformationen in einer Skriptdatei gespeichert werden müssen, muss die Datei an einem sicheren Ort gespeichert werden, um unberechtigten Zugriff zu vermeiden.  
   
- [  **@publisher_security_mode** =] *Publisher_security_mode*  
+ [ **@publisher_security_mode**=] *Publisher_security_mode*  
  Der vom Agent beim Herstellen der Verbindung mit dem Verleger verwendete Sicherheitsmodus. *Publisher_security_mode* ist **"smallint"**, hat den Standardwert NULL. **0** gibt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung und **1** gibt die Windows-Authentifizierung.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
- [  **@publisher_login** =] **"***Publisher_login***"**  
+ [ **@publisher_login**=] **"***Publisher_login***"**  
  Der Anmeldename, der beim Herstellen der Verbindung mit dem Verleger verwendet wird. *Publisher_login* ist **Sysname**, hat den Standardwert NULL. *Publisher_login* muss angegeben werden, wenn *Publisher_security_mode* ist **0**. Wenn *Publisher_login* ist NULL und *Publisher_security_mode* ist **1**, und klicken Sie dann das Windows-Konto im angegebenen *Job_login* wird verwendet, wenn Herstellen einer Verbindung mit dem Verleger.  
   
- [  **@publisher_password** =] **"***Publisher_password***"**  
+ [ **@publisher_password**=] **"***Publisher_password***"**  
  Das Kennwort, das beim Herstellen der Verbindung mit dem Verleger verwendet wird. *Publisher_password* ist **Sysname**, hat den Standardwert NULL.  
   
 > [!IMPORTANT]  
 >  Verwenden Sie kein leeres Kennwort. Verwenden Sie ein sicheres Kennwort. Benutzer sollten nach Möglichkeit dazu aufgefordert werden, Anmeldeinformationen zur Laufzeit anzugeben. Wenn Anmeldeinformationen in einer Skriptdatei gespeichert werden müssen, muss die Datei an einem sicheren Ort gespeichert werden, um unberechtigten Zugriff zu vermeiden.  
   
- [  **@publisher** =] **"***Publisher***"**  
+ [ **@publisher**=] **"***Publisher***"**  
  Der Name des Verlegers. *Publisher* ist **Sysname**, hat den Standardwert NULL. Dieser Parameter wird nur für Nicht-SQL Server-Verleger unterstützt.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
@@ -94,7 +94,7 @@ sp_changelogreader_agent [ [ @job_login = ] 'job_login' ]
   
 ## <a name="see-also"></a>Siehe auch  
  [Anzeigen und Ändern von Replikationssicherheitseinstellungen](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
- [Sp_helplogreader_agent &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helplogreader-agent-transact-sql.md)   
+ [Sp_helplogreader_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helplogreader-agent-transact-sql.md)   
  [sp_addlogreader_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md)  
   
   

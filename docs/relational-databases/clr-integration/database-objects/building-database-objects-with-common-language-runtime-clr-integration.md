@@ -1,15 +1,15 @@
 ---
 title: Erstellen von Datenbankobjekten mit Common Language Runtime (CLR)-Integration | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: clr
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - routines [CLR integration]
@@ -19,20 +19,20 @@ helpviewer_keywords:
 - building database objects [CLR integration]
 - .NET Framework routines [SQL Server]
 ms.assetid: ce34132c-bfa3-447b-9131-b6e17c672efe
-caps.latest.revision: 
+caps.latest.revision: 48
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bffc0c6796955eee2a23bc4885c3cfc23a7e9304
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 7c54c2eedd7ac1ff5e265378cc81ac366e58c2fc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="building-database-objects-with-common-language-runtime-clr-integration"></a>Erstellen von Datenbankobjekten mit CLR-Integration (Common Language Runtime)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Datenbankobjekte können mithilfe der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Integration in .NET Framework Common Language Runtime (CLR) erstellt werden. Verwalteter Code, der innerhalb eines ausführt [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] wird als eine "CLR-Routine" bezeichnet Es gibt folgende Routinen:  
+  Datenbankobjekte können mithilfe der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Integration in .NET Framework Common Language Runtime (CLR) erstellt werden. Verwalteter Code, der innerhalb eines ausführt [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] wird als eine "CLR-Routine" bezeichnet Es gibt folgende Routinen:  
   
 -   Benutzerdefinierte Skalarwertfunktionen (Skalar-UDFs)  
   
@@ -79,6 +79,6 @@ Datenbankobjekte können mithilfe der [!INCLUDE[ssNoVersion](../../../includes/s
  Beschreibt die Implementierung und Verwendung von CLR-Triggern.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Common Language Runtime &#40; CLR &#41; Übersicht über die Integration](../../../relational-databases/clr-integration/common-language-runtime-integration-overview.md)  
+ [Common Language Runtime & #40; CLR & #41; Übersicht über die Integration](../../../relational-databases/clr-integration/common-language-runtime-integration-overview.md)  
   
   

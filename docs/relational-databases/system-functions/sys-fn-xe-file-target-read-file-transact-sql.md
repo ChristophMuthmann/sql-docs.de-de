@@ -1,16 +1,16 @@
 ---
-title: sys.fn_xe_file_target_read_file (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: Sys. fn_xe_file_target_read_file (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 06/22/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - fn_xe_file_target_read_file_TSQL
@@ -24,16 +24,17 @@ helpviewer_keywords:
 - fn_xe_file_target_read_file function
 - sys.fn_xe_file_target_read_file function
 ms.assetid: cc0351ae-4882-4b67-b0d8-bd235d20c901
-caps.latest.revision: 
+caps.latest.revision: 20
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6284bd7690c715ed47177b42a5a1f5beb4b4b6a3
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: c0e86cd808ab02710bbd8e59a3064319da62efdc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysfnxefiletargetreadfile-transact-sql"></a>sys.fn_xe_file_target_read_file (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,7 +42,7 @@ ms.lasthandoff: 02/09/2018
   Liest Dateien, die vom asynchronen Dateiziel der erweiterten Ereignisse erstellt werden. Pro Zeile wird ein Ereignis im XML-Format zurückgegeben.  
   
 > [!WARNING]  
->  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] akzeptieren im XEL- und XEM-Format generierte Ablaufverfolgungsergebnisse. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]Erweiterte Ereignisse-unterstützen nur Ablaufverfolgungsergebnisse im XEL-Format. Verwenden Sie SQL Server Management Studio, um Ablaufverfolgungsergebnisse im XEL-Format lesen zu können.    
+>  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] akzeptieren im XEL- und XEM-Format generierte Ablaufverfolgungsergebnisse. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Erweiterte Ereignisse-unterstützen nur Ablaufverfolgungsergebnisse im XEL-Format. Verwenden Sie SQL Server Management Studio, um Ablaufverfolgungsergebnisse im XEL-Format lesen zu können.    
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -63,13 +64,13 @@ sys.fn_xe_file_target_read_file ( path, mdpath, initial_file_name, initial_offse
 >  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] erfordert keine der *Mdpath* Parameter. Er wird jedoch beibehalten, um die Abwärtskompatibilität für in früheren Versionen von SQL Server erstellte Protokolldateien aufrechtzuerhalten.  
   
  *initial_file_name*  
- Die erste Datei zum Lesen aus *Pfad*. *initial_file_name* is **nvarchar(260)**. Es gibt keinen Standardwert. Wenn **null** wird angegeben, wie das Argument, das alle Dateien aus *Pfad* gelesen werden.  
+ Die erste Datei zum Lesen aus *Pfad*. *"initial_file_name"* ist **nvarchar(260)**. Es gibt keinen Standardwert. Wenn **null** wird angegeben, wie das Argument, das alle Dateien aus *Pfad* gelesen werden.  
   
 > [!NOTE]  
 >  *"initial_file_name"* und *Initial_offset* werden paarargumente. Wenn Sie einen Wert für eines der beiden Argumente angeben, müssen Sie auch einen Wert für das andere Argument angeben.  
   
  *initial_offset*  
- Wird verwendet, um den letzten zuvor gelesenen Offset anzugeben und überspringt alle Ereignisse bis (einschließlich) des Offsets. Die Ereignisenumeration startet nach dem angegebenen Offset. *initial_offset* is **bigint**. Wenn **null** wird angegeben, wie das Argument die gesamte Datei gelesen werden.  
+ Wird verwendet, um den letzten zuvor gelesenen Offset anzugeben und überspringt alle Ereignisse bis (einschließlich) des Offsets. Die Ereignisenumeration startet nach dem angegebenen Offset. *Initial_offset* ist **"bigint"**. Wenn **null** wird angegeben, wie das Argument die gesamte Datei gelesen werden.  
   
 ## <a name="table-returned"></a>Zurückgegebene Tabelle  
   
@@ -81,7 +82,7 @@ sys.fn_xe_file_target_read_file ( path, mdpath, initial_file_name, initial_offse
 |event_data|**nvarchar(max)**|Der Ereignisinhalt im XML-Format. Lässt keine NULL-Werte zu.|  
 |file_name|**nvarchar(260)**|Der Name der Datei, die das Ereignis enthält. Lässt keine NULL-Werte zu.|  
 |file_offset|**bigint**|Der Offset des Blocks in der Datei, der das Ereignis enthält. Lässt keine NULL-Werte zu.|  
-|timestamp_utc|**datetime2**|**Gilt für**: [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br />Das Datum und die Uhrzeit (UTC-Zeitzone) des Ereignisses. Lässt keine NULL-Werte zu.|  
+|timestamp_utc|**datetime2**|**Gilt für**: [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br />Das Datum und die Uhrzeit (UTC-Zeitzone) des Ereignisses. Lässt keine NULL-Werte zu.|  
 
   
 ## <a name="remarks"></a>Hinweise  

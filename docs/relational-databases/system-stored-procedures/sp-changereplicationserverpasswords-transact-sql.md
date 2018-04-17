@@ -1,16 +1,16 @@
 ---
 title: Sp_changereplicationserverpasswords (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changereplicationserverpasswords
 ms.assetid: 9333da96-3a1c-4adb-9a74-5dac9ce596df
-caps.latest.revision: 
+caps.latest.revision: 27
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fcd1cbfd5532703196e47d06f920ef7cfa81f019
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: d5a6e71440f8b167af8c875873f60da183ff3572
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spchangereplicationserverpasswords-transact-sql"></a>sp_changereplicationserverpasswords (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,23 +49,23 @@ sp_changereplicationserverpasswords [ @login_type = ] login_type
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@login_type**  =] *Login_type*  
+ [ **@login_type** =] *Login_type*  
  Der Authentifizierungstyp für die angegebenen Anmeldeinformationen. *LOGIN_TYPE* ist **"tinyint"**, hat keinen Standardwert.  
   
  **1** = integrierte Windows-Authentifizierung  
   
  **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung  
   
- [  **@login**  =] **"***Anmeldung***"**  
+ [ **@login** =] **"***Anmeldung***"**  
  Der Name des Windows-Kontos oder der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldung, das bzw. die geändert wird. *Anmeldung* ist **nvarchar(257)**, hat keinen Standardwert  
   
- [  **@password**  =] **"***Kennwort***"**  
+ [ **@password** =] **"***Kennwort***"**  
  Das neue Kennwort gespeichert werden für den angegebenen *Anmeldung*. *Kennwort* ist **Sysname**, hat keinen Standardwert.  
   
 > [!NOTE]  
 >  Nachdem Sie ein Replikationskennwort geändert haben, müssen Sie jeden Agent, der dieses Kennwort verwendet, beenden und neu starten, damit die Änderung für diesen Agent in Kraft tritt.  
   
- [  **@server**  =] **"***Server***"**  
+ [ **@server** =] **"***Server***"**  
  Die Serververbindung, für die das gespeicherte Kennwort geändert wird. *Server* ist **Sysname**, und kann einen der folgenden Werte:  
   
 |Wert|Description|  
@@ -73,7 +73,7 @@ sp_changereplicationserverpasswords [ @login_type = ] login_type
 |**Verteiler**|Alle Agentverbindungen zum Verteiler|  
 |**publisher**|Alle Agentverbindungen zum Verleger|  
 |**subscriber**|Alle Agentverbindungen zum Abonnenten|  
-|**%**(Standard)|Alle Agentverbindungen zu allen Servern in einer Replikationstopologie|  
+|**%** (Standard)|Alle Agentverbindungen zu allen Servern in einer Replikationstopologie|  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  

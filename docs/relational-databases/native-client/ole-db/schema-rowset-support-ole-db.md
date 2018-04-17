@@ -1,15 +1,15 @@
 ---
-title: "Schemarowset-Unterstützung (OLE DB) | Microsoft Docs"
-ms.custom: 
+title: Schemarowset-Unterstützung (OLE DB) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-ole-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - schema rowsets [OLE DB]
@@ -18,16 +18,17 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, schema rowsets
 - rowsets [OLE DB], schema
 ms.assetid: a75b4b69-b095-4690-9b31-a2b32a67489e
-caps.latest.revision: 
+caps.latest.revision: 42
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: afc0125c35d0eafbf70232ce5c10227b08f210b4
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 79d765007c56c9e73d0de79ec1510afc45e93772
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="schema-rowset-support-ole-db"></a>Schemarowset-Unterstützung (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -61,10 +62,10 @@ ms.lasthandoff: 01/25/2018
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Unterstützung für verteilte Abfragen in Schemarowsets](../../../relational-databases/native-client/ole-db/schema-rowsets-distributed-query-support.md)  
   
- [LINKEDSERVERS-Rowset &#40; OLE DB &#41;](../../../relational-databases/native-client/ole-db/schema-rowsets-linkedservers-rowset.md)  
+ [LINKEDSERVERS-Rowset &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/schema-rowsets-linkedservers-rowset.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [SQL Server Native Client &#40; OLE DB &#41;](../../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)   
+ [SQL Server Native Client & #40; OLE DB & #41;](../../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)   
  [Verwenden von benutzerdefinierten Typen](../../../relational-databases/native-client/features/using-user-defined-types.md)  
   
   

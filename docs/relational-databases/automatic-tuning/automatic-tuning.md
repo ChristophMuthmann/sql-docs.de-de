@@ -3,7 +3,7 @@ title: Automatische Optimierung | Microsoft Docs
 description: Erfahren Sie mehr über die automatische Optimierung in SQL Server und Azure SQL-Datenbank
 ms.custom: ''
 ms.date: 08/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.service: ''
 ms.component: automatic-tuning
@@ -21,11 +21,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 2f08de0fadb8fbc237af89a3132cfd747c9d62c7
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
+monikerRange: = azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions
+ms.openlocfilehash: e49c26384d432c7a18b8c5997ac84b2ed18cc782
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="automatic-tuning"></a>Automatische Optimierung
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -74,6 +75,8 @@ Darüber hinaus [!INCLUDE[ssde_md](../../includes/ssde_md.md)] können Sie diese
 
 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] erkennt automatisch alle potenziellen Plan Wahl-Regression, einschließlich des Plans, der statt des falschen Plans verwendet werden soll.
 Wenn die [!INCLUDE[ssde_md](../../includes/ssde_md.md)] wendet den letzten bekannten guten Plan, automatisch die Leistung des erzwungenen Plans überwacht. Wenn erzwungene Plan nicht besser als zurückgestellte Plan ist, wird der neue Plan unforced werden und die [!INCLUDE[ssde_md](../../includes/ssde_md.md)] wird einen neuen Plan kompiliert. Wenn [!INCLUDE[ssde_md](../../includes/ssde_md.md)] stellt sicher, dass der erzwungene Plan ist besser als zurückgestellte, erzwungenen Plans bis zu einer Neukompilierung (z. B. auf die nächste Änderung Statistiken oder dem Schema) beibehalten, sofern der zurückgestellten Plan besser ist.
+
+Hinweis: Alle Pläne automatisch erzwungen werden nicht Persit auf einen Neustart des SQL Server-Instanz.
 
 ### <a name="enabling-automatic-plan-choice-correction"></a>Aktivieren der automatischen Plan Wahl Korrektur
 
@@ -143,6 +146,8 @@ FROM sys.dm_db_tuning_recommendations
 
 Obwohl [!INCLUDE[ssde_md](../../includes/ssde_md.md)] enthält alle Informationen erforderlich, um den Plan planauswahlregression; kontinuierliche Überwachung, und Beheben von Leistungsproblemen zu identifizieren sind möglicherweise ein zeitraubender Prozess. Automatische Optimierung wird dieser Prozess wesentlich einfacher.
 
+Hinweis: Die Daten in dieser DMV bleibt nach einem Neustart des SQL Server-Instanz nicht bestehen.
+
 ## <a name="automatic-index-management"></a>Automatische indexverwaltung
 
 In [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)], indexverwaltung ist einfach da [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] lernt über Ihre arbeitsauslastung und stellt sicher, dass Ihre Daten immer optimal indiziert ist. Richtige Indexentwurf ist entscheidend für eine optimale Leistung Ihrer arbeitsauslastung und automatische indexverwaltung ermöglicht Ihnen Ihre Indizes zu optimieren. Automatische indexverwaltung kann entweder Beheben von Leistungsproblemen in falsch indizierte Datenbanken oder verwalten und verbessern Sie die Indizes für das Datenbankschema der vorhandenen. Automatische Optimierung [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] führt die folgenden Aktionen aus:
@@ -179,9 +184,9 @@ Ohne automatische indexverwaltung, müssten die Benutzer manuell Abfragen [Sys. 
 ## <a name="see-also"></a>Siehe auch  
  [ALTER DATABASE SET AUTOMATIC_TUNING &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
  [sys.database_automatic_tuning_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-automatic-tuning-options-transact-sql.md)  
- [sys.dm_db_tuning_recommendations &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md)   
+ [Sys.dm_db_tuning_recommendations &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md)   
  [sys.dm_db_missing_index_details &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md)   
  [sp_query_store_force_plan &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-force-plan-transact-sql.md)     
  [sp_query_store_unforce_plan &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-unforce-plan-transact-sql.md)           
- [sys.database_query_store_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
+ [database_query_store_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
  [JSON-Funktionen](../../relational-databases/json/index.md)

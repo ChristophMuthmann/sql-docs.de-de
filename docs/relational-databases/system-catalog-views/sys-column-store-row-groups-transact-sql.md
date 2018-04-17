@@ -1,16 +1,16 @@
 ---
 title: column_store_row_groups (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.column_store_row_groups_TSQL
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.column_store_row_groups catalog view
 ms.assetid: 76e7fef2-d1a4-4272-a2bb-5f5dcd84aedc
-caps.latest.revision: 
+caps.latest.revision: 17
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1ea17802f24a60df24fdc4107f52a5170ca4f0ea
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 74dad9d3d3ee2db8c53d8f95d208afb1c6628b2d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="syscolumnstorerowgroups-transact-sql"></a>sys.column_store_row_groups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -42,10 +42,10 @@ ms.lasthandoff: 11/21/2017
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|Die ID der Tabelle, in der dieser Index definiert ist.|  
 |**index_id**|**int**|ID des Indexes, der diesen columnstore-Index enthält.|  
-|**Partitionsnummer**|**int**|ID der Tabellenpartition, die die row_group_id der Zeilengruppe enthält. Sie können partition_number verwenden, um diese DMV mit sys.partitions zu verknüpfen.|  
+|**partition_number**|**int**|ID der Tabellenpartition, die die row_group_id der Zeilengruppe enthält. Sie können partition_number verwenden, um diese DMV mit sys.partitions zu verknüpfen.|  
 |**row_group_id**|**int**|Die dieser Zeilengruppe zugeordnete Zeilengruppenzahl. Diese ist innerhalb der Partition eindeutig.<br /><br /> -1 = Ende einer in-Memory-Tabelle.|  
 |**delta_store_hobt_id**|**bigint**|Die Hobt_id für offene Zeilengruppe im deltastore.<br /><br /> NULL, wenn die Zeilengruppe nicht im deltastore vorhanden ist.<br /><br /> NULL für das Ende einer in-Memory-Tabelle.|  
-|**Status**|**tinyint**|Die der state_description zugeordnete ID.<br /><br /> 0 = INVISIBLE<br /><br /> 1 = OPEN<br /><br /> 2 = CLOSED<br /><br /> 3 = COMPRESSED <br /><br /> 4 = TOMBSTONE|  
+|**state**|**tinyint**|Die der state_description zugeordnete ID.<br /><br /> 0 = INVISIBLE<br /><br /> 1 = OPEN<br /><br /> 2 = CLOSED<br /><br /> 3 = COMPRESSED <br /><br /> 4 = TOMBSTONE|  
 |**state_description**|**nvarchar(60)**|Beschreibung des persistenten Status der Zeilengruppe:<br /><br /> INVISIBLE – Ein ausgeblendetes komprimiertes Segment wird gerade aus Daten in einem Deltastore erstellt. Lesevorgänge nutzen den Deltastore, bis das unsichtbare komprimierte Segment abgeschlossen ist. Anschließend werden das neue Segment sichtbar gemacht und der Quelldeltastore entfernt.<br /><br /> OPEN: Eine Zeilengruppe mit Lese-/Schreibzugriff, die neue Datensätze akzeptiert. Eine offene Zeilengruppe befindet sich weiterhin im rowstore-Format und wurde nicht in das columnstore-Format komprimiert.<br /><br /> CLOSED: Eine Zeilengruppe, die aufgefüllt, aber vom Tupelverschiebungsprozess noch nicht komprimiert wurde.<br /><br /> COMPRESSED: Eine Zeilengruppe, die aufgefüllt und komprimiert wurde.|  
 |**total_rows**|**bigint**|Gesamtzahl der Zeilen, die in der Zeilengruppe physisch gespeichert sind. Einige wurden u. U. gelöscht, sind aber weiterhin gespeichert. Die maximale Anzahl der Zeilen in einer Zeilengruppe beträgt 1.048.576 (hexadezimal FFFFF).|  
 |**deleted_rows**|**bigint**|Gesamtzahl der Zeilen in der Zeilengruppe, die als gelöscht markiert sind. Dies ist für DELTA-Zeilengruppen immer 0.|  
@@ -84,14 +84,14 @@ ORDER BY object_name(i.object_id), i.name, row_group_id;
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Katalogsichten für Objekte &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+ [Katalogsichten für Objekte &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [Katalogsichten &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Abfragen von SQL Server-Systemkatalogs – häufig gestellte Fragen](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
  [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
- [Sys. ALL_COLUMNS &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-all-columns-transact-sql.md)   
- [computed_columns &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-computed-columns-transact-sql.md)   
+ [sys.all_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-all-columns-transact-sql.md)   
+ [sys.computed_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-computed-columns-transact-sql.md)   
  [Beschreibung von Columnstore-Indizes](~/relational-databases/indexes/columnstore-indexes-overview.md)     
- [column_store_dictionaries &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-column-store-dictionaries-transact-sql.md)   
+ [sys.column_store_dictionaries &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-store-dictionaries-transact-sql.md)   
  [sys.column_store_segments &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-store-segments-transact-sql.md)  
   
   

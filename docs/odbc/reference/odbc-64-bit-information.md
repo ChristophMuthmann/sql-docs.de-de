@@ -1,27 +1,28 @@
 ---
 title: 64-Bit-ODBC-Informationen | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ed9851ce-44ee-4c8e-b626-1d0b52da30fe
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c1c7c878a850134d625c6c956449a400672ad6f7
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c61f0177f6f4634c5ab3a68eb7bfbd267f4ee84a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="odbc-64-bit-information"></a>64-Bit-ODBC-Informationen
 Ab Windows Server 2003, haben die 64-Bit-ODBC-Bibliotheken Microsoft-Betriebssystemen unterstützt. Die ODBC-Header und Bibliotheken, die zuerst im Lieferumfang von MDAC 2.7 SDK enthalten Änderungen um Programmierer zum einfachen Schreiben von Code für die neue 64-Bit-Plattformen ermöglichen. Sicherstellen, dass Ihr Code, die verwendet unten aufgeführten ODBC definiert Typen, können Sie sowohl für 64-Bit- und 32-Bit-Plattformen basierend auf demselben Quellcode kompilieren der **_WIN64** oder **WIN32** Makros.  

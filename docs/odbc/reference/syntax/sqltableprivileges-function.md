@@ -2,7 +2,7 @@
 title: SQLTablePrivileges-Funktion | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 8cfdb64f-64c5-47e6-ad57-0533ac630afa
 caps.latest.revision: 27
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6554826bdd2e63a6ce3baad75f747d3e923216a5
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 8a7ab7a3ce90677e0d403aaf430fa3859e9dc2a0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqltableprivileges-function"></a>SQLTablePrivileges-Funktion
 **Konformität**  
@@ -66,7 +66,7 @@ SQLRETURN SQLTablePrivileges(
  *NameLength1*  
  [Eingabe] Länge in Zeichen des **CatalogName*.  
   
- *SchemaName*  
+ *schemaName*  
  [Eingabe] Zeichenfolge Suchmuster für Schemanamen. Wenn ein Treiber unterstützt die Schemas für einige Tabellen jedoch nicht für andere, z. B. wenn der Treiber Daten aus anderen DBMS, eine leere Zeichenfolge ruft ("") gibt die Tabellen, die keine Schemas.  
   
  Wenn das SQL_ATTR_METADATA_ID-Anweisungsattribut auf SQL_TRUE, festgelegt ist *SchemaName* wird als Bezeichner behandelt und seine Fall spielt keine Rolle. Ist er SQL_FALSE, *SchemaName* ist ein Wert Pattern-Argument; wird als solcher behandelt, und der Fall ist von Bedeutung.  
@@ -74,7 +74,7 @@ SQLRETURN SQLTablePrivileges(
  *NameLength2*  
  [Eingabe] Länge in Zeichen des **SchemaName*.  
   
- *Tabellenname*  
+ *TableName*  
  [Eingabe] Zeichenfolge Suchmuster für Tabellennamen auf Richtigkeit.  
   
  Wenn das SQL_ATTR_METADATA_ID-Anweisungsattribut auf SQL_TRUE, festgelegt ist *TableName* wird als Bezeichner behandelt und seine Fall spielt keine Rolle. Ist er SQL_FALSE, *TableName* ist ein Wert Pattern-Argument; wird als solcher behandelt, und der Fall ist von Bedeutung.  

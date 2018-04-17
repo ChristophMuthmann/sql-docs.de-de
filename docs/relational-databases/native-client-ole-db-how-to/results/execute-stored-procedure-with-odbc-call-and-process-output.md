@@ -1,36 +1,37 @@
 ---
-title: "Führen Sie die gespeicherte Prozedur mit dem ODBC aufrufen und Verarbeiten von Ausgabe | Microsoft Docs"
-ms.custom: 
+title: Führen Sie die gespeicherte Prozedur mit dem ODBC aufrufen und Verarbeiten von Ausgabe | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-ole-db-how-to
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - stored procedures [ODBC]
 - ODBC CALL syntax
 ms.assetid: 921a24d1-ea09-4a3c-980a-4dcbd0a43d31
-caps.latest.revision: 
+caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6ad365634ebdf29349a37ad47df9a043b30c8b16
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: f8400d955e5617f3ffc5be5e365566384c533fdd
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="execute-stored-procedure-with-odbc-call-and-process-output"></a>Führen Sie die gespeicherte Prozedur mit dem ODBC aufrufen und Verarbeiten von Ausgabe
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]gespeicherte Prozeduren können ganzzahlige Rückgabecodes und Ausgabeparameter aufweisen. Die Rückgabecodes und Ausgabeparameter werden im letzten Paket des Servers gesendet und stehen der Anwendung demnach erst zur Verfügung, wenn das Rowset vollständig freigegeben wurde. Wenn der Befehl mehrere Ergebnisse zurückgibt, stehen Ausgabeparameterdaten zur Verfügung, wenn **IMultipleResults::GetResult** DB_S_NORESULT zurückgibt oder die **IMultipleResults** -Schnittstelle vollständig freigegeben wird, je nachdem, was zuerst eintritt.  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] gespeicherte Prozeduren können ganzzahlige Rückgabecodes und Ausgabeparameter aufweisen. Die Rückgabecodes und Ausgabeparameter werden im letzten Paket des Servers gesendet und stehen der Anwendung demnach erst zur Verfügung, wenn das Rowset vollständig freigegeben wurde. Wenn der Befehl mehrere Ergebnisse zurückgibt, stehen Ausgabeparameterdaten zur Verfügung, wenn **IMultipleResults::GetResult** DB_S_NORESULT zurückgibt oder die **IMultipleResults** -Schnittstelle vollständig freigegeben wird, je nachdem, was zuerst eintritt.  
   
 > [!IMPORTANT]  
 >  Verwenden Sie nach Möglichkeit die Windows-Authentifizierung. Wenn die Windows-Authentifizierung nicht verfügbar ist, fordern Sie die Benutzer auf, ihre Anmeldeinformationen zur Laufzeit einzugeben. Die Anmeldeinformationen sollten nicht in einer Datei gespeichert werden. Wenn Sie die Anmeldeinformationen persistent speichern müssen, sollten Sie sie mit der [Win32 Crypto-API](http://go.microsoft.com/fwlink/?LinkId=64532)verschlüsseln.  
@@ -363,6 +364,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Verarbeiten von Ergebnissen Gewusst-wie-Themen zur Vorgehensweise &#40; OLE DB &#41;](../../../relational-databases/native-client-ole-db-how-to/results/processing-results-how-to-topics-ole-db.md)  
+ [Verarbeiten von Ergebnissen Gewusst-wie-Themen zur Vorgehensweise & #40; OLE DB & #41;](../../../relational-databases/native-client-ole-db-how-to/results/processing-results-how-to-topics-ole-db.md)  
   
   

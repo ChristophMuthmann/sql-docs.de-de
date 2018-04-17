@@ -1,16 +1,16 @@
 ---
 title: Sys. master_files (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, pdw
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.master_files
@@ -22,23 +22,24 @@ dev_langs:
 helpviewer_keywords:
 - sys.master_files catalog view
 ms.assetid: 803b22f2-0016-436b-a561-ce6f023d6b6a
-caps.latest.revision: 
+caps.latest.revision: 56
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1c0ee418f8b04c8a549fb107698bd1f2df5648b2
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: d56dde664eba328a74db87d7c3ce22aef014ff6e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysmasterfiles-transact-sql"></a>sys.master_files (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
 
   Enthält eine Zeile pro Datei einer Datenbank, wie Sie in der master-Datenbank gespeichert. Dies ist eine einzelne, systemweite Sicht.  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |database_id|**int**|ID der Datenbank, auf die sich diese Datei bezieht Die Masterdatabase_id ist immer 1.|  
 |file_id|**int**|ID der Datei in der Datenbank Die ID der primären Datei ist immer 1.|  
@@ -49,13 +50,13 @@ ms.lasthandoff: 11/21/2017
 |name|**sysname**|Logischer Name der Datei in der Datenbank|  
 |physical_name|**nvarchar(260)**|Betriebssystem-Dateiname|  
 |state|**tinyint**|Dateistatus:<br /><br /> 0 = ONLINE<br /><br /> 1 = RESTORING<br /><br /> 2 = RECOVERING<br /><br /> 3 = RECOVERY_PENDING<br /><br /> 4 = SUSPECT<br /><br /> 5 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 6 = OFFLINE<br /><br /> 7 = DEFUNCT|  
-|state_desc|**nvarchar(60)**|Beschreibung des Dateistatus:<br /><br /> ONLINE<br /><br /> RESTORING<br /><br /> RECOVERING<br /><br /> RECOVERY_PENDING<br /><br /> SUSPECT<br /><br /> OFFLINE<br /><br /> DEFUNCT<br /><br /> Weitere Informationen finden Sie unter [Dateistatus](../../relational-databases/databases/file-states.md).|  
+|state_desc|**nvarchar(60)**|Beschreibung des Dateistatus:<br /><br /> ONLINE<br /><br /> RESTORING<br /><br /> RECOVERING<br /><br /> RECOVERY_PENDING<br /><br /> SUSPECT<br /><br /> OFFLINE<br /><br /> DEFUNCT<br /><br /> Weitere Informationen finden Sie im Abschnitt [Dateistatus](../../relational-databases/databases/file-states.md).|  
 |size|**int**|Die aktuelle Dateigröße in Seiten mit einer Größe von 8 KB. Größe stellt bei einer Datenbank-Momentaufnahme den maximalen Speicherplatz, den die Momentaufnahme für die Datei verwenden kann.<br /><br /> Hinweis: Dieses Feld wird als 0 (null) für FILESTREAM-Container aufgefüllt. Abfrage der *Sys. database_files* -Katalogsicht für die tatsächliche Größe der FILESTREAM-Container.|  
 |max_size|**int**|Maximale Dateigröße in Seiten mit einer Größe von 8 KB:<br /><br /> 0 = Keine Vergrößerung zulässig.<br /><br /> -1 = Datei wird vergrößert, bis der Datenträger voll ist.<br /><br /> 268435456 = Protokolldatei wird bis zu einer maximalen Größe von 2 TB vergrößert.<br /><br /> Hinweis: Datenbanken, die mit einer unbegrenzten Protokolldateigröße aktualisiert werden werden-1 für die maximale Größe der Protokolldatei gemeldet.|  
 |growth|**int**|0 = Die Datei hat eine feste Größe und wird nicht vergrößert.<br /><br /> >0 = Die Datei wird automatisch vergrößert.<br /><br /> Wenn Is_percent_growth = 0, Schrittweite für die Vergrößerung in Schritten von 8-KB-Seiten, gerundet auf die nächsten 64 KB ist<br /><br /> Wenn Is_percent_growth = 1, Vergrößerung als ganzzahliger Prozentwert.|  
 |is_media_read_onlyF|**bit**|1 = Die Datei befindet sich auf einem schreibgeschützten Medium.<br /><br /> 0 = Die Datei befindet sich auf einem Medium mit Lese-/Schreibzugriff.|  
 |is_read_only|**bit**|1 = Die Datei ist als schreibgeschützt gekennzeichnet.<br /><br /> 0 = Die Datei ermöglicht den Lese-/Schreibzugriff.|  
-|is_sparse|**bit**|1 = Die Datei ist eine Sparsedatei.<br /><br /> 0 = Die Datei ist keine Sparsedatei.<br /><br /> Weitere Informationen finden Sie unter [Anzeigen der Größe der Datei mit geringer Dichte einer Datenbank-Momentaufnahme &#40;Transact-SQL&#41;](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md).|  
+|is_sparse|**bit**|1 = Die Datei ist eine Datei mit geringer Dichte.<br /><br /> 0 = Die Datei ist keine Datei mit geringer Dichte.<br /><br /> Weitere Informationen finden Sie unter [Anzeigen der Größe der Datei mit geringer Dichte einer Datenbank-Momentaufnahme &#40;Transact-SQL&#41;](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md).|  
 |is_percent_growth|**bit**|1 = Die Vergrößerung der Datei erfolgt prozentual.<br /><br /> 0 = Absolute Vergrößerung in Seiten.|  
 |is_name_reserved|**bit**|1 = Der gelöschte Dateiname kann wiederverwendet werden. Eine Sicherung des Protokolls muss vorgenommen werden, bevor Sie der Namen (Name oder Physical_name) für einen neuen Dateinamen wiederverwendet werden kann.<br /><br /> 0 = Der Dateiname kann nicht wiederverwendet werden.|  
 |create_lsn|**numeric(25,0)**|Protokollfolgenummer (LSN, Log Sequence Number), bei der die Datei erstellt wurde|  

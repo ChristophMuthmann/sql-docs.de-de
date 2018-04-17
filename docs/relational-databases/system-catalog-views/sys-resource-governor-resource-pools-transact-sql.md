@@ -1,16 +1,16 @@
 ---
-title: sys.resource_governor_resource_pools (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: resource_governor_resource_pools (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 08/09/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.resource_governor_resource_pools
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.resource_governor_resource_pools catalog view
 ms.assetid: 56793e9c-aa90-452e-88c6-d9b799239888
-caps.latest.revision: 
+caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1cd20bb4d33bf67b3f0adf0683ae8fd8046e8728
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: e80dc7855c85537f1b153ab8431ced452792686b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysresourcegovernorresourcepools-transact-sql"></a>sys.resource_governor_resource_pools (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,14 +51,14 @@ ms.lasthandoff: 02/03/2018
 |max_iops_per_volume|**int**|**Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Die maximalen E/A-Vorgänge pro Sekunde (IOPS) pro Volumeeinstellung für diesen Pool. 0 = unbegrenzt. Lässt keine NULL-Werte zu.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die Katalogsicht zeigt die gespeicherten Metadaten an. Überprüfen die Konfiguration im Arbeitsspeicher, verwenden die entsprechende dynamische verwaltungssicht [dm_resource_governor_resource_pools &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md).  
+ Die Katalogsicht zeigt die gespeicherten Metadaten an. Überprüfen die Konfiguration im Arbeitsspeicher, verwenden die entsprechende dynamische verwaltungssicht [dm_resource_governor_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md).  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die VIEW ANY DEFINITION-Berechtigung, um Inhalte anzuzeigen, und erfordert die CONTROL SERVER-Berechtigung, um Inhalte zu ändern.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Katalogsichten der Ressourcenkontrolle &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql.md)   
- [sys.dm_resource_governor_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)   
+ [Katalogsichten der Ressourcenkontrolle &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql.md)   
+ [dm_resource_governor_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)   
  [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)   
  [sys.resource_governor_external_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-external-resource-pools-transact-sql.md)  
   

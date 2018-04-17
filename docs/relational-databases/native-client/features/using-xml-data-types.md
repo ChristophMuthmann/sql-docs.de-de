@@ -1,15 +1,15 @@
 ---
 title: Verwenden von XML-Datentypen | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client|features
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - IRowsetChange interface
@@ -32,16 +32,17 @@ helpviewer_keywords:
 - XML [SQL Server], SQL Server Native Client
 - COLUMNS rowset
 ms.assetid: a7af5b72-c5c2-418d-a636-ae4ac6270ee5
-caps.latest.revision: 
+caps.latest.revision: 44
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5e6532d74b6a1a3e1859cb9fb768dcc5816c9b7a
-ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 55d4d1870ae0224270384db643640bc5d93fd419
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-xml-data-types"></a>Verwenden von XML-Datentypen
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -278,6 +279,6 @@ ms.lasthandoff: 03/19/2018
   
 ## <a name="see-also"></a>Siehe auch  
  [SQL Server Native Client-Funktionen](../../../relational-databases/native-client/features/sql-server-native-client-features.md)   
- [ISSCommandWithParameters &#40; OLE DB &#41;](../../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md)  
+ [ISSCommandWithParameters & #40; OLE DB & #41;](../../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md)  
   
   

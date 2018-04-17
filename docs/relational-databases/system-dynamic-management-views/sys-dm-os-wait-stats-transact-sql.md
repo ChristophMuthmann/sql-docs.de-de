@@ -2,7 +2,7 @@
 title: Sys. dm_os_wait_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/04/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: dmv's
@@ -27,16 +27,17 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: c37a8f78d18a3315c188959f2f8403ef055c3155
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 55eaa65cc99bdc2e25e860be65570be6c8e32bdd
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmoswaitstats-transact-sql"></a>sys.dm_os_wait_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Gibt Informationen zu allen Wartevorgängen in den Threads zurück, die ausgeführt wurden. In dieser aggregierten Sicht können Sie Leistungsprobleme bei [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sowie bei bestimmten Abfragen und Batches diagnostizieren. [sys.dm_exec_session_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-session-wait-stats-transact-sql.md) provides similar information by session.  
+Gibt Informationen zu allen Wartevorgängen in den Threads zurück, die ausgeführt wurden. In dieser aggregierten Sicht können Sie Leistungsprobleme bei [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sowie bei bestimmten Abfragen und Batches diagnostizieren. [Sys. dm_exec_session_wait_stats &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-session-wait-stats-transact-sql.md) enthält ähnliche Informationen von der Sitzung.  
   
 > [!NOTE] 
 > Aufrufen von **[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] oder [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]**, verwenden Sie den Namen **sys.dm_pdw_nodes_os_wait_stats**.  
@@ -793,7 +794,7 @@ Dieser Befehl setzt alle Leistungsindikatoren auf 0 zurück.
 |REMOTE_DATA_ARCHIVE_SCHEMA_TASK_QUEUE |TBD <br /> **Gilt für**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |REPL_CACHE_ACCESS |Tritt während der Synchronisierung für einen Replikationsartikelcache auf. Während dieser Wartezeiten wird der Replikationsprotokollleser angehalten, und Anweisungen der Datendefinitionssprache (Data Definition Language, DDL) für eine veröffentlichte Tabelle werden blockiert.| 
 |REPL_HISTORYCACHE_ACCESS |TBD| 
-|REPL_SCHEMA_ACCESS |Tritt während der Synchronisierung von Versionsinformationen des Replikationsschemas auf. Dieser Status ist vorhanden, wenn DDL-Anweisungen für das replizierte Objekt ausgeführt werden und wenn der Protokollleser ein versionsspezifisches Schema auf der Basis des Auftretens von DDL erstellt oder verwendet.| 
+|REPL_SCHEMA_ACCESS |Tritt während der Synchronisierung von Versionsinformationen des Replikationsschemas auf. Dieser Status ist vorhanden, wenn DDL-Anweisungen für das replizierte Objekt ausgeführt werden und wenn der Protokollleser ein versionsspezifisches Schema auf der Basis des Auftretens von DDL erstellt oder verwendet. Konflikte kann für diesen Wartetyp angezeigt werden, wenn Sie viele veröffentlichte Datenbanken auf einem Verleger mit der Transaktionsreplikation und der veröffentlichten Datenbanken sehr aktiv sind.| 
 |REPL_TRANFSINFO_ACCESS |TBD <br /> **Gilt für**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |REPL_TRANHASHTABLE_ACCESS |TBD| 
 |REPL_TRANTEXTINFO_ACCESS |TBD <br /> **Gilt für**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
@@ -1028,7 +1029,7 @@ Dieser Befehl setzt alle Leistungsindikatoren auf 0 zurück.
 ## <a name="see-also"></a>Siehe auch  
     
  [SQL Server-Betriebssystem verbundene dynamische Verwaltungssichten &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
- [sys.dm_exec_session_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-session-wait-stats-transact-sql.md)   
+ [Sys. dm_exec_session_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-session-wait-stats-transact-sql.md)   
  [Sys. dm_db_wait_stats &#40;Azure SQL-Datenbank&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-wait-stats-azure-sql-database.md)  
   
   

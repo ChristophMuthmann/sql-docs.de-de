@@ -1,29 +1,30 @@
 ---
 title: Parameter- und Ergebnismetadaten | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-odbc-date-time
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - metadata [ODBC]
 ms.assetid: 1518e6e5-a6a8-4489-b779-064c5624df53
-caps.latest.revision: 
+caps.latest.revision: 27
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 788f1a9835ca2a50274699a6c13701d9bb8ee7ea
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 84bcee1d3ad21b34060b4f73936fd0a77a472994
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="metadata---parameter-and-result"></a>Metadaten - Parameter und Resultsets
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -53,7 +54,7 @@ ms.lasthandoff: 01/25/2018
   
  Manchmal treten in Wertbereichen Diskontinuitäten auf. Zum Beispiel fehlt 9 in der Angabe 8,10..16. Der Grund dafür ist das Hinzufügen eines Dezimaltrennzeichens, wenn die Genauigkeit von Bruchteilen größer als 0 (NULL) ist.  
   
- **datetime2** wird zurückgegeben, als Typname für **Smalldatetime** und **"DateTime"** , da der Treiber dies als einen gemeinsamen Typ verwendet für die Übermittlung aller **SQL_TYPE_TIMESTAMP**  Werte an den Server.  
+ **datetime2** wird zurückgegeben, als Typname für **Smalldatetime** und **"DateTime"** , da der Treiber dies als einen gemeinsamen Typ verwendet für die Übermittlung aller **SQL_TYPE_TIMESTAMP** Werte an den Server.  
   
  SQL_CA_SS_VARIANT_SQL_TYPE ist ein neues Deskriptorfeld. Dieses Feld wurde IRD und IPD So aktivieren Sie die Anwendungen an die zugeordnete Werttyp hinzugefügt **Sqlvariant** (sql_ssvariant verknüpften) Spalten und Parametern  
   
@@ -102,6 +103,6 @@ ms.lasthandoff: 01/25/2018
 |SQL_DESC_UNSIGNED|SQL_TRUE|SQL_TRUE|SQL_TRUE|SQL_TRUE|SQL_TRUE|SQL_TRUE|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Metadata &#40;ODBC&#41;](http://msdn.microsoft.com/library/99133efc-b1f2-46e9-8203-d90c324a8e4c)  
+ [Metadaten &#40;ODBC&#41;](http://msdn.microsoft.com/library/99133efc-b1f2-46e9-8203-d90c324a8e4c)  
   
   

@@ -1,35 +1,36 @@
 ---
-title: sys.pdw_nodes_column_store_row_groups (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: Sys.pdw_nodes_column_store_row_groups (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: 
+ms.prod: ''
 ms.prod_service: sql-data-warehouse, pdw
 ms.service: sql-data-warehouse
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 17a4c925-d4b5-46ee-9cd6-044f714e6f0e
-caps.latest.revision: 
+caps.latest.revision: 10
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 75e4229fde3cae66cdd2172c0f2bea0cbf63bf10
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
+ms.openlocfilehash: aaef7f97fe07d30061318d8cad08eb1b667e0ccb
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="syspdwnodescolumnstorerowgroups-transact-sql"></a>sys.pdw_nodes_column_store_row_groups (Transact-SQL)
+# <a name="syspdwnodescolumnstorerowgroups-transact-sql"></a>Sys.pdw_nodes_column_store_row_groups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  Enthält Informationen zu gruppierten columnstore-Indizes auf Segmentbasis der Administrator System Management in Entscheidungen [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. **sys.pdw_nodes_column_store_row_groups** has a column for the total number of rows physically stored (including those marked as deleted) and a column for the number of rows marked as deleted. Verwendung **sys.pdw_nodes_column_store_row_groups** um zu bestimmen, welche Gruppen, haben Sie einen hohen Prozentsatz der gelöschten Zeilen, und sollte neu erstellt.  
+  Enthält Informationen zu gruppierten columnstore-Indizes auf Segmentbasis der Administrator System Management in Entscheidungen [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. **Sys.pdw_nodes_column_store_row_groups** verfügt über eine Spalte für die Gesamtzahl der physisch gespeicherten Zeilen (einschließlich jenen, als gelöscht markiert) und eine Spalte für die Anzahl der Zeilen, die als gelöscht markiert. Verwendung **sys.pdw_nodes_column_store_row_groups** um zu bestimmen, welche Gruppen, haben Sie einen hohen Prozentsatz der gelöschten Zeilen, und sollte neu erstellt.  
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
@@ -58,9 +59,9 @@ ms.lasthandoff: 02/03/2018
  Wenn eine columnstore-Zeilengruppe aufgefüllt wurde, wird sie komprimiert und akzeptiert keine neuen Zeilen mehr. Wenn aus einer komprimierten Gruppe Zeilen gelöscht werden, verbleiben sie zwar, werden aber als gelöscht gekennzeichnet. Updates einer komprimierten Gruppe werden als Löschvorgang für die komprimierte Gruppe und als Einfügevorgang für eine offene Gruppe implementiert.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert **VIEW SERVER STATE** Berechtigung.  
+ Erfordert die **VIEW SERVER STATE**-Berechtigung.  
   
-## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] und[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
  Das folgende Beispiel verknüpft die **sys.pdw_nodes_column_store_row_groups** Tabelle mit anderen Systemtabellen, um Informationen über bestimmte Tabellen zurückzugeben. Die berechnete `PercentFull`-Spalte ist eine Schätzung der Effizienz der Zeilengruppe. Zum Suchen von Informationen zu einer einzelnen Tabelle entfernen Kommentar Bindestriche vor der WHERE-Klausel aus, und geben Sie einen Tabellennamen.  
   
 ```  
@@ -113,7 +114,7 @@ ORDER BY 1, 2
   
 ## <a name="see-also"></a>Siehe auch  
  [SQL Datawarehouse und Parallel Datawarehouse-Katalogsichten](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
- [CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)   
+ [Erstellen von columnstore-INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)   
  [sys.pdw_nodes_column_store_segments &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-segments-transact-sql.md)   
  [sys.pdw_nodes_column_store_dictionaries &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-dictionaries-transact-sql.md)  
   

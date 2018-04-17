@@ -1,16 +1,16 @@
 ---
 title: Sp_check_for_sync_trigger (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_check_for_sync_trigger
 ms.assetid: 54a1e2fd-c40a-43d4-ac64-baed28ae4637
-caps.latest.revision: 
+caps.latest.revision: 14
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 586498365ee695ee5dc92252af47ad7706e1adfb
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 38dfc81498173fe6024095889d06d222d4d98201
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spcheckforsynctrigger-transact-sql"></a>sp_check_for_sync_trigger (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ sp_check_for_sync_trigger [ @tabid = ] 'tabid'
  Gibt die Position an, an der die gespeicherte Prozedur ausgeführt wird. *Fonpublisher* ist **Bit**, hat den Standardwert 0. Bei 0 findet die Ausführung auf dem Abonnenten und bei 1 auf dem Verleger statt.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
- 0 zeigt an, dass die gespeicherte Prozedur nicht im Kontext eines sofort aktualisierbaren Triggers aufgerufen wird. 1 gibt an, dass es im Kontext eines sofort aktualisierbaren Triggers aufgerufen wird, ist der Typ des Triggers zurückgegeben wird  *@trigger_op* .  
+ 0 zeigt an, dass die gespeicherte Prozedur nicht im Kontext eines sofort aktualisierbaren Triggers aufgerufen wird. 1 gibt an, dass es im Kontext eines sofort aktualisierbaren Triggers aufgerufen wird, ist der Typ des Triggers zurückgegeben wird *@trigger_op*.  
   
 ## <a name="remarks"></a>Hinweise  
  **Sp_check_for_sync_trigger** wird bei Momentaufnahme- und Transaktionsreplikation verwendet.  

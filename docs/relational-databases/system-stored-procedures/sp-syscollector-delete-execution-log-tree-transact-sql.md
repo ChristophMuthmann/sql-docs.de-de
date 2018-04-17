@@ -1,16 +1,16 @@
 ---
 title: Sp_syscollector_delete_execution_log_tree (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_syscollector_delete_execution_log_tree_TSQL
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - sp_syscollector_delete_execution_log_tree
 - data collector [SQL Server], stored procedures
 ms.assetid: 0a9a7c5b-c3cc-40ca-b524-e948a8cce4e4
-caps.latest.revision: 
+caps.latest.revision: 13
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c02f490c3bbb604088001e9efd24ae4cadaee96a
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 6353c668342f49f8bbb1f053210701f8ab79dbdb
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spsyscollectordeleteexecutionlogtree-transact-sql"></a>sp_syscollector_delete_execution_log_tree (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ sp_syscollector_delete_execution_log_tree[ @log_id = ] log_id
  Der eindeutige Bezeichner für das Sammlungssatzprotokoll. *log_id* ist **int**  
   
  [ **@from_collection_set =** ] *from_collection_set*  
- Der Bezeichner für den Sammlungssatz. *from_collection_set* is **bit=1**.  
+ Der Bezeichner für den Sammlungssatz. *From_collection_set* ist **Bit 1 =**.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  

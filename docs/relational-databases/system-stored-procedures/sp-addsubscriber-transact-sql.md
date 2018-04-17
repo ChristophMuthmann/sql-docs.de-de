@@ -1,16 +1,16 @@
 ---
 title: Sp_addsubscriber (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addsubscriber
 ms.assetid: b8a584ea-2a26-4936-965b-b84f026e39c0
-caps.latest.revision: 
+caps.latest.revision: 26
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 48dba20940cff922fa3bdacd78471d57fbec7707
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 364f88ae30fa71cd5f2a39dea897252b967d8228
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddsubscriber-transact-sql"></a>sp_addsubscriber (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +77,7 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
   
 |Wert|Description|  
 |-----------|-----------------|  
-|**0** (Standardwert)|[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Abonnenten|  
+|**0** (Standardwert)|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Abonnenten|  
 |**1**|ODBC-Datenquellenserver|  
 |**2**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Jet-Datenbank|  
 |**3**|OLE DB-Anbieter|  
@@ -213,7 +213,7 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
  [  **@encrypted_password=**] *Encrypted_password*  
  Dieser Parameter wurde als veraltet markiert und wird zur Abwärtskompatibilität bereitgestellt, nur festlegen *Encrypted_password* auf einen beliebigen Wert aber **0** führt zu einem Fehler.  
   
- [  **@publisher** =] **"***Publisher***"**  
+ [ **@publisher**=] **"***Publisher***"**  
  Gibt einen Nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Verleger an. *Publisher* ist **Sysname**, hat den Standardwert NULL.  
   
 > [!NOTE]  
@@ -234,9 +234,9 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
   
 ## <a name="see-also"></a>Siehe auch  
  [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)   
- [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
- [Sp_changesubscriber &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-changesubscriber-transact-sql.md)   
- [Sp_dropsubscriber &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-dropsubscriber-transact-sql.md)   
- [Sp_helpsubscriberinfo &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md)  
+ [Erstellen eines Pullabonnements](../../relational-databases/replication/create-a-pull-subscription.md)   
+ [Sp_changesubscriber &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changesubscriber-transact-sql.md)   
+ [Sp_dropsubscriber &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscriber-transact-sql.md)   
+ [Sp_helpsubscriberinfo &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md)  
   
   

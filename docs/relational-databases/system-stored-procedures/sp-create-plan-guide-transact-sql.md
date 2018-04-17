@@ -2,7 +2,7 @@
 title: Sp_create_plan_guide (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: system-stored-procedures
@@ -25,11 +25,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 70caae94a352f014757bd00099b43019c08f4a2c
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: d213b79938f0856d9e17b36366958a89e7ecd2be
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spcreateplanguide-transact-sql"></a>sp_create_plan_guide (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
  [ @name =] N'*Plan_guide_name*"  
  Der Name der Planhinweisliste. Die Gültigkeit der Namen von Planhinweislisten beschränkt sich auf die aktuelle Datenbank. *Plan_guide_name* muss den Regeln für entsprechen [Bezeichner](../../relational-databases/databases/database-identifiers.md) und kann nicht gestartet werden mit dem Nummernzeichen (#). Die maximale Länge des *Plan_guide_name* beträgt 124 Zeichen.  
   
- [ @stmt = ] N'*statement_text*'  
+ [ @stmt =] N'*Statement_text*"  
  Ist eine [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung, für die eine Planhinweisliste erstellt werden soll. Wenn die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Abfrageoptimierer erkennt eine Abfrage, die entspricht *Statement_text*, *Plan_guide_name* tritt in Kraft. Für die Erstellung einer Planhinweisliste erfolgreich ausgeführt werden kann *Statement_text* muss angezeigt werden, in dem durch angegebenen Kontext den @type, @module_or_batch, und @params Parameter.  
   
  *Statement_text* muss angegeben werden, auf eine Weise, die für die Übereinstimmung mit der entsprechenden Anweisung im Batch oder Modul, das durch den Abfrageoptimierer ermöglicht @module_or_batch und @params. Weitere Informationen finden Sie unter dem Abschnitt "Hinweise". Die Größe des *Statement_text* wird nur durch den verfügbaren Arbeitsspeicher des Servers beschränkt.  

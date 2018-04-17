@@ -1,16 +1,16 @@
 ---
 title: Sys. dm_sql_referenced_entities (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/09/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_sql_referenced_entities_TSQL
@@ -22,16 +22,17 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_sql_referenced_entities dynamic management function
 ms.assetid: 077111cb-b860-4d61-916f-bac5d532912f
-caps.latest.revision: 
+caps.latest.revision: 46
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8af92c77cf5ab1f1c43f5c4cb529fe97b7de787a
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: a1ca935166f5d7f955594aafc2e8ff96ee566d8d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmsqlreferencedentities-transact-sql"></a>sys.dm_sql_referenced_entities (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -71,12 +72,12 @@ sys.dm_sql_referenced_entities (
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ *schema_name*. ] *referencing_entity_name*  
+ [ *Schema_name*. ] *Referencing_entity_name*  
  Der Name der verweisenden Entität. *Schema_name* ist erforderlich, wenn die verweisende Klasse OBJECT ist.  
   
  *schema_name.referencing_entity_name* ist **nvarchar(517)**.  
   
- *<referencing_class>* ::=  { OBJECT | DATABASE_DDL_TRIGGER   | SERVER_DDL_TRIGGER }  
+ *< Referencing_class >* :: = {OBJECT | DATABASE_DDL_TRIGGER | SERVER_DDL_TRIGGER}  
  Klasse der angegebenen verweisenden Entität. Pro Anweisung kann nur eine Klasse angegeben werden.  
   
  *< Referencing_class >* ist **nvarchar(60)**.  
@@ -86,7 +87,7 @@ sys.dm_sql_referenced_entities (
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |referencing_minor_id|**int**|Die Spalten-ID, wenn es sich bei der verweisenden Entität um eine Spalte handelt. Andernfalls ist der Wert 0. Lässt keine NULL-Werte zu.|  
-|referenced_server_name|**sysname**|Servername der Entität, auf die verwiesen wird.<br /><br /> Diese Spalte wird für serverübergreifende Abhängigkeiten aufgefüllt, die auf der Angabe eines gültigen vierteiligen Namens basieren. Informationen zu mehrteiligen Namen finden Sie unter [Transact-SQL-Syntaxkonventionen &#40; Transact-SQL &#41; ](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).<br /><br /> NULL für nicht schemagebundene Abhängigkeiten, für die ohne Angabe eines vierteiligen Namens auf die Entität verwiesen wurde.<br /><br /> NULL für schemagebundene Entitäten, da sich müssen in derselben Datenbank und aus diesem Grund können nur definiert werden mithilfe ein zweiteiligen (*schema.object*) Namen.|  
+|referenced_server_name|**sysname**|Servername der Entität, auf die verwiesen wird.<br /><br /> Diese Spalte wird für serverübergreifende Abhängigkeiten aufgefüllt, die auf der Angabe eines gültigen vierteiligen Namens basieren. Informationen zu mehrteiligen Namen finden Sie unter [Transact-SQL-Syntaxkonventionen &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).<br /><br /> NULL für nicht schemagebundene Abhängigkeiten, für die ohne Angabe eines vierteiligen Namens auf die Entität verwiesen wurde.<br /><br /> NULL für schemagebundene Entitäten, da sich müssen in derselben Datenbank und aus diesem Grund können nur definiert werden mithilfe ein zweiteiligen (*schema.object*) Namen.|  
 |referenced_database_name|**sysname**|Datenbankname der Entität, auf die verwiesen wird.<br /><br /> Diese Spalte wird für datenbankübergreifende oder serverübergreifende Verweise aufgefüllt, die auf der Angabe eines gültigen dreiteiligen oder vierteiligen Namens basieren.<br /><br /> NULL für nicht schemagebundene Verweise, wenn auf Basis eines einteiligen oder zweiteiligen Namens angegeben.<br /><br /> NULL für schemagebundene Entitäten, da sich müssen in derselben Datenbank und aus diesem Grund können nur definiert werden mithilfe ein zweiteiligen (*schema.object*) Namen.|  
 |referenced_schema_name|**sysname**|Schema, in das die Entität gehört, auf die verwiesen wird.<br /><br /> NULL für nicht schemagebundene Verweise, in denen ohne Angabe des Schemanamens auf die Entität verwiesen wird.<br /><br /> Niemals NULL für schemagebundene Verweise.|  
 |referenced_entity_name|**sysname**|Name der Entität, auf die verwiesen wird. Lässt keine NULL-Werte zu.|  
@@ -128,14 +129,14 @@ sys.dm_sql_referenced_entities (
 |-----------------|------------------------|-----------------------|  
 |Tabelle|Ja*|ja|  
 |Sicht|ja|ja|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] gespeicherte Prozedur **|ja|ja|  
+|In [!INCLUDE[tsql](../../includes/tsql-md.md)] gespeicherte Prozedur**|ja|ja|  
 |Gespeicherte CLR-Prozedur|nein|ja|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] Benutzerdefinierte Funktion (user-defined function)|ja|ja|  
+|Benutzerdefinierte Funktion in [!INCLUDE[tsql](../../includes/tsql-md.md)]|ja|ja|  
 |CLR-benutzerdefinierte Funktion|nein|ja|  
 |CLR-Trigger (DML und DDL)|nein|nein|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] DML-Trigger|ja|nein|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] DDL-Trigger auf Datenbankebene|ja|nein|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] DDL-Trigger auf Serverebene|ja|nein|  
+|DML-Trigger in [!INCLUDE[tsql](../../includes/tsql-md.md)]|ja|nein|  
+|DDL-Trigger auf Datenbankebene in [!INCLUDE[tsql](../../includes/tsql-md.md)]|ja|nein|  
+|DDL-Trigger auf Serverebene in [!INCLUDE[tsql](../../includes/tsql-md.md)]|ja|nein|  
 |Erweiterte gespeicherte Prozeduren|nein|ja|  
 |Warteschlange|nein|ja|  
 |Synonym|nein|ja|  
@@ -143,7 +144,7 @@ sys.dm_sql_referenced_entities (
 |XML-Schemaauflistung|nein|ja|  
 |Partitionsfunktion|nein|ja|  
   
- \*Eine Tabelle als verweisende Entität nachverfolgt wird, nur, wenn er verweist auf eine [!INCLUDE[tsql](../../includes/tsql-md.md)] -Modul, einen benutzerdefinierten Typ oder XML-schemaauflistung in der Definition eines berechnete Spalte, einer CHECK-Einschränkung oder einer DEFAULT-Einschränkung.  
+ \* Eine Tabelle als verweisende Entität nachverfolgt wird, nur, wenn er verweist auf eine [!INCLUDE[tsql](../../includes/tsql-md.md)] -Modul, einen benutzerdefinierten Typ oder XML-schemaauflistung in der Definition eines berechnete Spalte, einer CHECK-Einschränkung oder einer DEFAULT-Einschränkung.  
   
  ** Nummerierte gespeicherte Prozeduren mit einem ganzzahligen Wert größer als 1 werden weder als verweisende Entität noch als Entität, auf die verwiesen wird, aufgezeichnet.  
   

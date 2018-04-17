@@ -1,15 +1,15 @@
 ---
 title: Verwenden von benutzerdefinierten Typen | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client|features
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - DBPROPSET_DATASOURCEINFO property set
@@ -23,16 +23,17 @@ helpviewer_keywords:
 - data access [SQL Server Native Client], user-defined types
 - ISSCommandWithParameters interface
 ms.assetid: e15d8169-3517-4323-9c9e-0f5c34aff7df
-caps.latest.revision: 
+caps.latest.revision: 45
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8092282c18758860ee76f9e61108aa6db1551bc8
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: b498bf2030a3d3feecf061a932ba851e5fdb34bf
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-user-defined-types"></a>Verwenden von benutzerdefinierten Typen
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -111,7 +112,7 @@ ms.lasthandoff: 01/25/2018
 |ASSEMBLY_BINARY|DBTYPE_BYTES|Die Binärdarstellung der Assembly.|  
   
 #### <a name="the-sqlassemblies-dependencies-schema-rowset"></a>Das SQL_ASSEMBLIES_ DEPENDENCIES-Schemarowset  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB-Anbieter macht ein neues anbieterspezifischen Schemarowset, das die Assemblyabhängigkeiten für einen bestimmten Server beschreibt. ASSEMBLY_SERVER wird möglicherweise vom Aufrufer als DBTYPE_WSTR angegeben, ist aber nicht im Rowset vorhanden. Ohne Angabe wird das Rowset standardmäßig für den aktuellen Server festgelegt. Das SQL_ASSEMBLY_DEPENDENCIES-Schemarowset wird in der folgenden Tabelle definiert.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter macht ein neues anbieterspezifischen Schemarowset, das die Assemblyabhängigkeiten für einen bestimmten Server beschreibt. ASSEMBLY_SERVER wird möglicherweise vom Aufrufer als DBTYPE_WSTR angegeben, ist aber nicht im Rowset vorhanden. Ohne Angabe wird das Rowset standardmäßig für den aktuellen Server festgelegt. Das SQL_ASSEMBLY_DEPENDENCIES-Schemarowset wird in der folgenden Tabelle definiert.  
   
 |Spaltenname|Typ|Description|  
 |-----------------|----------|-----------------|  
@@ -121,7 +122,7 @@ ms.lasthandoff: 01/25/2018
 |REFERENCED_ASSEMBLY_ID|DBTYPE_UI4|Die Objekt-ID der referenzierten Assembly.|  
   
 #### <a name="the-sqlusertypes-schema-rowset"></a>Das SQL_USER_TYPES-Schemarowset  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB-Anbieter verfügbar macht, neues Schemarowset, SQL_USER_TYPES, die beschreibt, wann die registrierten UDTs für einen bestimmten Server hinzugefügt wird. UDT_SERVER muss vom Aufrufer als DBTYPE_WSTR angegeben werden, ist aber nicht im Rowset vorhanden. Das SQL_USER_TYPES-Schemarowset wird in der folgenden Tabelle definiert.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter verfügbar macht, neues Schemarowset, SQL_USER_TYPES, die beschreibt, wann die registrierten UDTs für einen bestimmten Server hinzugefügt wird. UDT_SERVER muss vom Aufrufer als DBTYPE_WSTR angegeben werden, ist aber nicht im Rowset vorhanden. Das SQL_USER_TYPES-Schemarowset wird in der folgenden Tabelle definiert.  
   
 |Spaltenname|Typ|Description|  
 |-----------------|----------|-----------------|  
@@ -215,6 +216,6 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="see-also"></a>Siehe auch  
  [SQL Server Native Client-Funktionen](../../../relational-databases/native-client/features/sql-server-native-client-features.md)   
- [ISSCommandWithParameters &#40; OLE DB &#41;](../../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md)  
+ [ISSCommandWithParameters & #40; OLE DB & #41;](../../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md)  
   
   

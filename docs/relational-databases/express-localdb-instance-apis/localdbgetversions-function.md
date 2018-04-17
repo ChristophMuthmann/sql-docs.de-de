@@ -1,16 +1,16 @@
 ---
 title: LocalDBGetVersions-Funktion | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: localdb
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - LocalDBGetVersions
@@ -18,16 +18,16 @@ apilocation:
 - sqluserinstance.dll
 apitype: DLLExport
 ms.assetid: 033a9c6b-0d7f-4f8a-ab60-33cd6fee0d33
-caps.latest.revision: 
+caps.latest.revision: 8
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: aa3f06c06decc0c731627a506f09c275ea0115db
-ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
+ms.openlocfilehash: 0c5b50ff841cbac9a3935af7a610187426b3d00a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="localdbgetversions-function"></a>LocalDBGetVersions-Funktion
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

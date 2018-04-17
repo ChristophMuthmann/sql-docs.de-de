@@ -1,16 +1,16 @@
 ---
 title: 'Issasynchstatus:: Waitforasynchcompletion (OLE DB) | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-ole-db-interfaces
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - ISSAsynchStatus::WaitForAsynchCompletion (OLE DB)
@@ -18,16 +18,17 @@ apitype: COM
 helpviewer_keywords:
 - WaitForAsynchCompletion method
 ms.assetid: 9f65e9e7-eb93-47a1-bc42-acd4649fbd0e
-caps.latest.revision: 
+caps.latest.revision: 30
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e3210b6185477a476e84a515fda6bd9749e9664b
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: a2387cb3a1f4fc9db4759f489a5ae13cc49bc36c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="issasynchstatuswaitforasynchcompletion-ole-db"></a>ISSAsynchStatus::WaitForAsynchCompletion (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -79,6 +80,6 @@ HRESULT WaitForAsynchCompletion(
   
 ## <a name="see-also"></a>Siehe auch  
  [Ausführen von asynchronen Vorgängen](../../relational-databases/native-client/features/performing-asynchronous-operations.md)   
- [ISSAsynchStatus &#40; OLE DB &#41;](../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-ole-db.md)  
+ [ISSAsynchStatus & #40; OLE DB & #41;](../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-ole-db.md)  
   
   

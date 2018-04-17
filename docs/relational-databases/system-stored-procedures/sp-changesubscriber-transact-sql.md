@@ -1,16 +1,16 @@
 ---
 title: Sp_changesubscriber (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changesubscriber
 ms.assetid: d453c451-e957-490f-b968-5e03aeddaf10
-caps.latest.revision: 
+caps.latest.revision: 26
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4b52c51d2e516b8d4c4f787c8e5d56d95922b2d4
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 9fd7a0652f2c1f00ec2d577d0c8e74efdc19558d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spchangesubscriber-transact-sql"></a>sp_changesubscriber (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -75,7 +75,7 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
  Die Anmelde-ID für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung. *login* ist vom Datentyp **sysname**und hat den Standardwert NULL.  
   
  [  **@password=**] **"***Kennwort***"**  
- Ist die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierungskennwort. *Kennwort* ist **Sysname**, hat den Standardwert  **%** . **%**Gibt an, dass keine Änderung an der Password-Eigenschaft vorhanden ist.  
+ Ist die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierungskennwort. *Kennwort* ist **Sysname**, hat den Standardwert **%**. **%** Gibt an, dass keine Änderung an der Password-Eigenschaft vorhanden ist.  
   
  [  **@commit_batch_size=**] *Commit_batch_size*  
  Wird nur aus Gründen der Abwärtskompatibilität unterstützt.  
@@ -153,7 +153,7 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
 |**0**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung|  
 |**1**|Windows-Authentifizierung|  
   
- [  **@publisher** =] **"***Publisher***"**  
+ [ **@publisher**=] **"***Publisher***"**  
  Gibt einen Nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Verleger an. *Publisher* ist **Sysname**, hat den Standardwert NULL.  
   
 > [!NOTE]  
@@ -169,10 +169,10 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
  Nur Mitglieder der **Sysadmin** -Serverrolle kann ausführen **Sp_changesubscriber**.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Sp_addsubscriber &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addsubscriber-transact-sql.md)   
- [Sp_dropsubscriber &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-dropsubscriber-transact-sql.md)   
+ [Sp_addsubscriber &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscriber-transact-sql.md)   
+ [Sp_dropsubscriber &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscriber-transact-sql.md)   
  [sp_helpdistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdistributiondb-transact-sql.md)   
- [sp_helpserver (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
+ [Sp_helpserver & #40; Transact-SQL & #41;](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
  [sp_helpsubscriberinfo &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

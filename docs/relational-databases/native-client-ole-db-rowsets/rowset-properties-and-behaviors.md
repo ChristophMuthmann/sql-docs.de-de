@@ -1,15 +1,15 @@
 ---
 title: Rowset-Eigenschaften und Verhaltensweisen | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-ole-db-rowsets
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - rowsets [OLE DB], properties
@@ -17,16 +17,17 @@ helpviewer_keywords:
 - properties [OLE DB]
 - OLE DB rowsets, properties
 ms.assetid: 9baabcb6-0114-42f2-89f8-d8d66b3c8c14
-caps.latest.revision: 
+caps.latest.revision: 47
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fad9cc93c8faa050d537e687604a8934d3ee3386
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: ba87afc52aa46599a4453a457536fc62ff91b3a5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="rowset-properties-and-behaviors"></a>Eigenschaften und Verhaltensweisen von Rowsets
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -45,7 +46,7 @@ ms.lasthandoff: 01/24/2018
 |DBPROP_BOOKMARKTYPE|R/w: schreibgeschützt<br /><br /> Standard: DBPROPVAL_BMK_NUMERIC<br /><br /> Beschreibung: Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter implementiert nur numerische Lesezeichen. Ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter-Lesezeichen ist 32-Bit-Ganzzahl ohne Vorzeichen vom Typ DBTYPE_UI4.|  
 |DBPROP_CACHEDEFERRED|Diese Rowseteigenschaft wird nicht durch implementiert die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter. Beim Versuch, den Eigenschaftswert zu lesen oder zu schreiben, wird ein Fehler generiert.|  
 |DBPROP_CANFETCHBACKWARDS DBPROP_CANSCROLLBACKWARDS|R/w: Lesen/Schreiben<br /><br /> Standard: VARIANT_FALSE<br /><br /> Beschreibung: Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter unterstützt rückwärts-scrollen und-Abrufen in nicht sequenziellen Rowsets. Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter erstellt ein durch Cursor unterstütztes Rowset aus, wenn entweder DBPROP_CANFETCHBACKWARDS oder DBPROP_CANSCROLLBACKWARDS den Wert VARIANT_TRUE aufweist. Weitere Informationen finden Sie unter [Rowsets und SQL Server-Cursor](../../relational-databases/native-client-ole-db-rowsets/rowsets-and-sql-server-cursors.md).|  
-|DBPROP_CANHOLDROWS|R/w: Lesen/Schreiben<br /><br /> Standard: VARIANT_FALSE<br /><br /> Beschreibung: standardmäßig die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter gibt DB_E_ROWSNOTRELEASED, wenn der Consumer versucht, erhalten weitere Zeilen für ein Rowset während der ausstehenden Änderungen für die derzeit im Rowset vorhanden sein. Dieses Verhalten kann geändert werden.<br /><br /> Das Festlegen von DBPROP_CANHOLDROWS und DBPROP_IRowsetChange auf VARIANT_TRUE impliziert ein mit Lesezeichen versehenes Rowset. Wenn beide Eigenschaften auf VARIANT_TRUE festgelegt ist, sind die **IRowsetLocate** Schnittstelle für das Rowset verfügbar ist und DBPROP_BOOKMARKS und DBPROP_LITERALBOOKMARKS sind beide den Wert VARIANT_TRUE auf.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB-Anbieter Rowsets, die Lesezeichen enthalten, werden von unterstützt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Cursor.|  
+|DBPROP_CANHOLDROWS|R/w: Lesen/Schreiben<br /><br /> Standard: VARIANT_FALSE<br /><br /> Beschreibung: standardmäßig die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter gibt DB_E_ROWSNOTRELEASED, wenn der Consumer versucht, erhalten weitere Zeilen für ein Rowset während der ausstehenden Änderungen für die derzeit im Rowset vorhanden sein. Dieses Verhalten kann geändert werden.<br /><br /> Das Festlegen von DBPROP_CANHOLDROWS und DBPROP_IRowsetChange auf VARIANT_TRUE impliziert ein mit Lesezeichen versehenes Rowset. Wenn beide Eigenschaften auf VARIANT_TRUE festgelegt ist, sind die **IRowsetLocate** Schnittstelle für das Rowset verfügbar ist und DBPROP_BOOKMARKS und DBPROP_LITERALBOOKMARKS sind beide den Wert VARIANT_TRUE auf.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter Rowsets, die Lesezeichen enthalten, werden von unterstützt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Cursor.|  
 |DBPROP_CHANGEINSERTEDROWS|R/w: Lesen/Schreiben<br /><br /> Standard: VARIANT_FALSE<br /><br /> Beschreibung: Diese Eigenschaft kann nur auf VARIANT_TRUE festgelegt werden, wenn das Rowset einen keysetgesteuerten Cursor verwendet.|  
 |DBPROP_COLUMNRESTRICT|R/w: schreibgeschützt<br /><br /> Standard: VARIANT_FALSE<br /><br /> Beschreibung: Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter legt die Eigenschaft auf VARIANT_TRUE fest, wenn eine Spalte in einem Rowset nicht vom Consumer geändert werden kann. Andere Spalten im Rowset können möglicherweise aktualisiert werden, und die Zeilen selbst können gelöscht werden.<br /><br /> Wenn die Eigenschaft auf VARIANT_TRUE festgelegt ist, überprüft der Consumer die *DwFlags* Member der DBCOLUMNINFO-Struktur zu bestimmen, ob der Wert einer einzelnen Spalte geschrieben werden kann. Für veränderbare Spalten *DwFlags* DBCOLUMNFLAGS_WRITE aufweist.|  
 |DBPROP_COMMANDTIMEOUT|R/w: Lesen/Schreiben<br /><br /> Standard: 0<br /><br /> Beschreibung: standardmäßig die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter gibt kein Timeout für die **ICommand:: Execute** Methode.|  
@@ -75,8 +76,8 @@ ms.lasthandoff: 01/24/2018
 |DBPROP_MAYWRITECOLUMN|Diese Rowseteigenschaft wird nicht durch implementiert die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter. Beim Versuch, den Eigenschaftswert zu lesen oder zu schreiben, wird ein Fehler generiert.|  
 |DBPROP_MEMORYUSAGE|Diese Rowseteigenschaft wird nicht durch implementiert die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter. Beim Versuch, den Eigenschaftswert zu lesen oder zu schreiben, wird ein Fehler generiert.|  
 |DBPROP_NOTIFICATIONGRANULARITY|Diese Rowseteigenschaft wird nicht durch implementiert die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter. Beim Versuch, den Eigenschaftswert zu lesen oder zu schreiben, wird ein Fehler generiert.|  
-|DBPROP_NOTIFICATIONPHASES|R/w: schreibgeschützt<br /><br /> Default: DBPROPVAL_NP_OKTODO &#124; DBPROPVAL_NP_ABOUTTODO &#124;  DBPROPVAL_NP_SYNCHAFTER &#124; DBPROPVAL_NP_FAILEDTODO &#124;  DBPROPVAL_NP_DIDEVENT<br /><br /> Beschreibung: Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter unterstützt alle benachrichtigungsphasen.|  
-|DBPROP_NOTIFYCOLUMNSET DBPROP_NOTIFYROWDELETE DBPROP_NOTIFYROWFIRSTCHANGE DBPROP_NOTIFYROWINSERT DBPROP_NOTIFYROWRESYNCH DBPROP_NOTIFYROWSETRELEASE DBPROP_NOTIFYROWSETFETCH-POSITIONCHANGE DBPROP_NOTIFYROWUNDOCHANGE DBPROP_NOTIFYROWUNDODELETE DBPROP_NOTIFYROWUNDOINSERT DBPROP_NOTIFYROWUPDATE|R/w: schreibgeschützt<br /><br /> Default: DBPROPVAL_NP_OKTODO &#124;  DBPROPVAL_NP_ABOUTTODO<br /><br /> Beschreibung: Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieters können abgebrochen werden vor dem Versuch, eine Änderung des Rowsets vorzunehmen angegeben. Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter keinen phasenabbruch, nachdem der Versuch abgeschlossen wurde.|  
+|DBPROP_NOTIFICATIONPHASES|R/w: schreibgeschützt<br /><br /> Standard: DBPROPVAL_NP_OKTODO &#124; DBPROPVAL_NP_ABOUTTODO &#124; DBPROPVAL_NP_SYNCHAFTER &#124; DBPROPVAL_NP_FAILEDTODO &#124; DBPROPVAL_NP_DIDEVENT<br /><br /> Beschreibung: Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter unterstützt alle benachrichtigungsphasen.|  
+|DBPROP_NOTIFYCOLUMNSET DBPROP_NOTIFYROWDELETE DBPROP_NOTIFYROWFIRSTCHANGE DBPROP_NOTIFYROWINSERT DBPROP_NOTIFYROWRESYNCH DBPROP_NOTIFYROWSETRELEASE DBPROP_NOTIFYROWSETFETCH-POSITIONCHANGE DBPROP_NOTIFYROWUNDOCHANGE DBPROP_NOTIFYROWUNDODELETE DBPROP_NOTIFYROWUNDOINSERT DBPROP_NOTIFYROWUPDATE|R/w: schreibgeschützt<br /><br /> Standard: DBPROPVAL_NP_OKTODO &#124; DBPROPVAL_NP_ABOUTTODO<br /><br /> Beschreibung: Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieters können abgebrochen werden vor dem Versuch, eine Änderung des Rowsets vorzunehmen angegeben. Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter keinen phasenabbruch, nachdem der Versuch abgeschlossen wurde.|  
 |DBPROP_ORDEREDBOOKMARKS|Diese Rowseteigenschaft wird nicht durch implementiert die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter. Beim Versuch, den Eigenschaftswert zu lesen oder zu schreiben, wird ein Fehler generiert.|  
 |DBPROP_OTHERINSERT DBPROP_OTHERUPDATEDELETE DBPROP_OWNINSERT DBPROP_OWNUPDATEDELETE|R/w: Lesen/Schreiben<br /><br /> Standard: VARIANT_FALSE<br /><br /> Beschreibung: Die Einstellung ändern Sichtbarkeit Eigenschaften Ursachen der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter verwenden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Cursor zur Unterstützung des Rowsets. Weitere Informationen finden Sie unter [Rowsets und SQL Server-Cursor](../../relational-databases/native-client-ole-db-rowsets/rowsets-and-sql-server-cursors.md).|  
 |DBPROP_QUICKRESTART|R/w: Lesen/Schreiben<br /><br /> Standard: VARIANT_FALSE<br /><br /> Beschreibung: Die Festlegung auf VARIANT_TRUE fest, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter versucht, einen Servercursor für das Rowset zu verwenden.|  
@@ -98,7 +99,7 @@ ms.lasthandoff: 01/24/2018
   
 |Eigenschafts-ID|Description|  
 |-----------------|-----------------|  
-|SSPROP_COLUMN_ID|Spalte: ColumnID<br /><br /> R/w: schreibgeschützt<br /><br /> Type: VT_U12 &#124; VT_ARRAY<br /><br /> Standard: VT_EMPTY<br /><br /> Beschreibung: Ein Array von ganzzahligen Werten, die die Ordnungsposition (1-basiert) der Ergebnisspalte einer COMPUTE-Klausel innerhalb der aktuellen [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT-Anweisung darstellen. Dies ist die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter-Entsprechung des ODBC SQL_CA_SS_COLUMN_ID-Attributs.|  
+|SSPROP_COLUMN_ID|Spalte: ColumnID<br /><br /> R/w: schreibgeschützt<br /><br /> Typ: VT_U12 &#124; VT_ARRAY<br /><br /> Standard: VT_EMPTY<br /><br /> Beschreibung: Ein Array von ganzzahligen Werten, die die Ordnungsposition (1-basiert) der Ergebnisspalte einer COMPUTE-Klausel innerhalb der aktuellen [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT-Anweisung darstellen. Dies ist die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter-Entsprechung des ODBC SQL_CA_SS_COLUMN_ID-Attributs.|  
 |SSPROP_DEFERPREPARE|Spalte: No<br /><br /> R/w: Lesen/Schreiben<br /><br /> Typ: VT_BOOL<br /><br /> Standard: VARIANT_TRUE<br /><br /> Beschreibung: VARIANT_TRUE: bei der vorbereiteten Ausführung die befehlsvorbereitung verzögert, bis **ICommand:: Execute** aufgerufen wird oder ein metaeigenschaftsvorgang durchgeführt wird. Wenn die Eigenschaft festgelegt ist auf<br /><br /> VARIANT_FALSE: Die Anweisung wird vorbereitet, wenn **ICommandPrepare:: Prepare** ausgeführt wird.|  
 |SSPROP_IRowsetFastLoad|Spalte: No<br /><br /> R/w: Lesen/Schreiben<br /><br /> Typ: VT_BOOL<br /><br /> Standard: VARIANT_FALSE<br /><br /> Beschreibung: Legen Sie diese Eigenschaft auf VARIANT_TRUE fest, zum Öffnen eines Fastload-Rowsets durch **IOpenRowset:: OPENROWSET**. Diese Eigenschaft kann nicht festgelegt werden, **ICommandProperties:: SetProperties**.|  
 |SSPROP_ISSAsynchStatus|Spalte: No.<br /><br /> R/w: Lesen/Schreiben<br /><br /> Typ: VT_BOOL<br /><br /> Standard: VARIANT_FALSE<br /><br /> Beschreibung: Legen Sie diese Eigenschaft auf VARIANT_TRUE fest, um asynchrone Vorgänge unter Verwendung ermöglichen der [ISSAsynchStatus](../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-ole-db.md) Schnittstelle.|  

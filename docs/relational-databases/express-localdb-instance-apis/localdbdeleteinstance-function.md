@@ -1,16 +1,16 @@
 ---
 title: LocalDBDeleteInstance-Funktion | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: localdb
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - LocalDBDeleteInstance
@@ -18,16 +18,16 @@ apilocation:
 - sqluserinstance.dll
 apitype: DLLExport
 ms.assetid: 37cb2a7e-672a-4223-b6f3-a94d7b8d58cd
-caps.latest.revision: 
+caps.latest.revision: 18
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4be45b2af8c9f90ae628975a8b4820b77ae64632
-ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
+ms.openlocfilehash: 08e57ef689b54a5e2b7a2eda03fc8644c9b49d6f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="localdbdeleteinstance-function"></a>LocalDBDeleteInstance-Funktion
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

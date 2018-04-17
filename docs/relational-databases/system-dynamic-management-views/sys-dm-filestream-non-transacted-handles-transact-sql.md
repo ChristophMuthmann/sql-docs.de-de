@@ -1,16 +1,16 @@
 ---
-title: sys.dm_filestream_non_transacted_handles (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: dm_filestream_non_transacted_handles (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_filestream_non_transacted_handles_TSQL
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_filestream_non_transacted_handles dynamic management view
 ms.assetid: 507ec125-67dc-450a-9081-94cde5444a92
-caps.latest.revision: 
+caps.latest.revision: 14
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bb4ba44df1372fbad89ac21e24d1e27233a99b27
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: bb27d263081cac5975e8a68a1cf13004fb1d2759
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmfilestreamnontransactedhandles-transact-sql"></a>sys.dm_filestream_non_transacted_handles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.lasthandoff: 02/03/2018
 |----------------|--------------|---------------------|  
 |database_id|int|ID der Datenbank, die dem Handle zugeordnet ist.|  
 |object_id|int|Objekt-ID der FileTable, der das Handle zugeordnet ist.|  
-|handle_id|int|Eindeutiger Handlekontextbezeichner. Anhand der [Sp_kill_filestream_non_transacted_handles &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-kill-filestream-non-transacted-handles.md) gespeicherten Prozedur an ein bestimmtes Handle abzubrechen.|  
+|handle_id|int|Eindeutiger Handlekontextbezeichner. Anhand der [Sp_kill_filestream_non_transacted_handles &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-kill-filestream-non-transacted-handles.md) gespeicherten Prozedur an ein bestimmtes Handle abzubrechen.|  
 |file_object_type|int|Typ des Handles. Gibt die Ebene der Hierarchie an, für die das Handle geöffnet wurde, d. h. die Datenbank oder das Element.|  
 |file_object_type_desc|nvarchar(120)|“UNDEFINED",<br />“SERVER_ROOT",<br />“DATABASE_ROOT",<br />“TABLE_ROOT",<br />“TABLE_ITEM"|  
 |correlation_process_id|varbinary(8)|Enthält einen eindeutigen Bezeichner für den Prozess, von dem die Anforderung stammt.|  

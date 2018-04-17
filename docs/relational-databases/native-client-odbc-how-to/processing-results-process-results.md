@@ -1,29 +1,30 @@
 ---
 title: Verarbeiten von Ergebnissen (ODBC) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-odbc-how-to
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - processing results [ODBC]
 ms.assetid: 4810fe3f-78ee-4f0d-8bcc-a4659fbcf46f
-caps.latest.revision: 
+caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 129b7cd35a8b502552035eef7cc8557f787f89b1
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: a3c0c06c569015c3ebbc7194d0f91be6010674ad
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="processing-results---process-results"></a>Verarbeitens von Ergebnissen - Verarbeiten von Ergebnissen
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -68,6 +69,6 @@ Verarbeitung der Ergebnisse in einer ODBC-Anwendung besteht, die Merkmale des Re
 >  Um das Verarbeiten eines Resultsets abzubrechen, bevor [SQLFetch](http://go.microsoft.com/fwlink/?LinkId=58401) SQL_NO_DATA zurückgibt, rufen Sie [SQLCloseCursor](../../relational-databases/native-client-odbc-api/sqlclosecursor.md) auf.  
   
 ## <a name="see-also"></a>Siehe auch  
-[Abrufen von Resultsetinformationen &#40; ODBC &#41;](../../relational-databases/native-client-odbc-how-to/processing-results-retrieve-result-set-information.md)   
+[Abrufen von Resultsetinformationen & #40; ODBC & #41;](../../relational-databases/native-client-odbc-how-to/processing-results-retrieve-result-set-information.md)   
   
   

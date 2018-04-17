@@ -1,31 +1,31 @@
 ---
 title: SQLServer Express LocalDB-Fehlermeldungsverweis | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: localdb
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: ee413207-d6f5-4938-82a1-0e245037e246
-caps.latest.revision: 
+caps.latest.revision: 8
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cdaaf5e15d664352715622db595a07e3ed6898fd
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 4585b75ab56ccf2fbf50cb6f319e8e20786ee280
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-server-express-localdb-reference---error-messages"></a>SQLServer Express LocalDB-Verweis - Fehlermeldungen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Dieser Abschnitt enthält Referenzinformationen zu folgenden SQL Server Express LocalDB-Fehlermeldungen:  
+  Dieser Abschnitt enthält Referenzinformationen zu folgenden SQL Server Express LocalDB-Fehlermeldungen:  
   
  [LOCALDB_ERROR_ADMIN_RIGHTS_REQUIRED](../../relational-databases/express-localdb-error-messages/localdb-error-admin-rights-required.md)  
  Administratorberechtigungen sind erforderlich, um diesen Vorgang auszuführen.  

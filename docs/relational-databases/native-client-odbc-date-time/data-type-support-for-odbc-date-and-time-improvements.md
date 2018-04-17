@@ -1,30 +1,31 @@
 ---
-title: "Datentypunterstützung für ODBC-Datum und Uhrzeit-Verbesserungen | Microsoft Docs"
-ms.custom: 
+title: Datentypunterstützung für ODBC-Datum und Uhrzeit-Verbesserungen | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-odbc-date-time
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - date/time [ODBC], data type support
 - ODBC, date/time improvements
 ms.assetid: 8e0d9ba2-3ec1-4680-86e3-b2590ba8e2e9
-caps.latest.revision: 
+caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 17acf73e2a190b1a9f55c07dc24d7ce391056aee
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: b92a4e5cbb678e4c40bda526b0796e4a3beaf696
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="data-type-support-for-odbc-date-and-time-improvements"></a>Datentypunterstützung für ODBC-Datum und Uhrzeit-Verbesserungen
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -70,7 +71,7 @@ ms.lasthandoff: 01/25/2018
 |Smalldatetime|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|'yyyy-mm-dd hh:hh:ss'<br /><br /> Dieser Datentyp verfügt über eine Genauigkeit von einer Minute. Die zweite Komponente ist 0 (null) auf Ausgabe und wird auf Eingabe vom Server gerundet.|  
 |Datum|SQL_TYPE_DATE<br /><br /> SQL_DATE|'yyyy-mm-dd'|  
 |Zeit|SQL_SS_TIME2|'hh:mm:ss[.9999999]'<br /><br /> Sekundenbruchteile können optional mit bis zu sieben Ziffern angegeben werden.|  
-|Datetime2|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|'yyyy-mm-dd hh:mm:ss[.9999999]'<br /><br /> Sekundenbruchteile können optional mit bis zu sieben Ziffern angegeben werden.|  
+|Datetime2|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|'Yyyy-mm-Dd hh: mm: [.9999999]'<br /><br /> Sekundenbruchteile können optional mit bis zu sieben Ziffern angegeben werden.|  
 |DatetimeOFFSET|SQL_SS_TIMESTAMPOFFSET|'yyyy-mm-dd hh:mm:ss[.9999999] +/- hh:mm'<br /><br /> Sekundenbruchteile können optional mit bis zu sieben Ziffern angegeben werden.|  
   
  Für date/time-Literale gibt es keine Änderungen der ODBC-Escapesequenzen.  
@@ -145,6 +146,6 @@ typedef struct tagSS_TIMESTAMPOFFSET_STRUCT {
  Wenn die **Timezone_hour** negativ ist, die **Timezone_minute** muss negativ oder 0 (null). Wenn die **Timezone_hour** positiv ist, wird die **Timezone_minute** muss positiv sein oder 0 (null). Wenn die **Timezone_hour** ist 0 (null), die s**Timezone_minute** möglicherweise einen beliebigen Wert im Bereich von-59 bis + 59 annehmen.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datum und Uhrzeit-Verbesserungen &#40; ODBC &#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
+ [Datum und Uhrzeit-Verbesserungen & #40; ODBC & #41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
   
   

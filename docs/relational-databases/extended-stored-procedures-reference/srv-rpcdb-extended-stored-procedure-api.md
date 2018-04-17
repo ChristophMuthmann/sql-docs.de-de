@@ -1,16 +1,16 @@
 ---
-title: "srv_rpcdb (API für erweiterte gespeicherte Prozeduren) | Microsoft-Dokumentation"
-ms.custom: 
+title: srv_rpcdb (API für erweiterte gespeicherte Prozeduren) | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: extended-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - srv_rpcdb
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - srv_rpcdb
 ms.assetid: d52bfd22-7a7c-4ab0-af65-df96ff359e6f
-caps.latest.revision: 
+caps.latest.revision: 30
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 17798468b38998bea8ca06c2d2c73407bde37014
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
-ms.translationtype: MT
+ms.openlocfilehash: 87733e70dbfc3621e34c637c8f6b481d999d12a0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="srvrpcdb-extended-stored-procedure-api"></a>srv_rpcdb (API für erweiterte gespeicherte Prozeduren)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ SRV_PROC * srvproc,int *len );
 ## <a name="returns"></a>Rückgabewert  
  Ein DBCHAR-Zeiger auf die NULL-terminierte Zeichenfolge für den Datenbanknamensteil der aktuellen remote gespeicherten Prozedur. Wenn keine aktuelle remote gespeicherte Prozedur vorhanden ist, wird NULL zurückgegeben, und der *len*-Parameter wird auf –1 gesetzt.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Hinweise  
  Diese Funktion gibt nur die Datenbankkomponente des Objektnamens der remote gespeicherten Prozedur zurück. Sie schließt die optionalen Spezifizierer für Besitzer, den remote gespeicherten Prozedurnamen und die Nummer der remote gespeicherten Prozedur nicht ein.  
   
 > [!IMPORTANT]  

@@ -2,7 +2,7 @@
 title: Sp_add_job (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: system-stored-procedures
@@ -25,11 +25,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9f83b2b206b38783e53d2fb0ccdbf724a78b17d7
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: baa693e0765a8796a4f6fbed3284d440f5a1327d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddjob-transact-sql"></a>sp_add_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ sp_add_job [ @job_name = ] 'job_name'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@job_name =** ] **'***job_name***'**  
+ [  **@job_name =** ] **"***Job_name***"**  
  Der Name des Auftrags. Der Name muss eindeutig sein und dürfen nicht den Prozentsatz (**%**) Zeichen. *Job_name*ist **vom Datentyp nvarchar(128)**, hat keinen Standardwert.  
   
  [ **@enabled =** ] *enabled*  
@@ -101,13 +101,13 @@ sp_add_job [ @job_name = ] 'job_name'
  [ **@notify_level_page =** ] *page_level*  
  Ein Wert, der angibt, wann nach dem Abschluss dieses Auftrags eine Pagernachricht gesendet werden soll. *Page_level*ist **Int**, hat den Standardwert **0**, die "nie" bedeutet. *Page_level*verwendet die gleichen Werte wie *ist NULL*.  
   
- [ **@notify_email_operator_name =** ] **'***email_name***'**  
+ [  **@notify_email_operator_name =** ] **"***e-Mail-Name***"**  
  Der e-Mail-Name der Person, die für das Senden von E-mail, wenn *Email_level* erreicht ist. *e-Mail-Name* ist **Sysname**, hat den Standardwert NULL.  
   
  [ **@notify_netsend_operator_name =** ] **'***netsend_name***'**  
  Der Name des Operators, an den nach dem Abschluss dieses Auftrags die Netzwerknachricht gesendet wird. *Netsend_name*ist **Sysname**, hat den Standardwert NULL.  
   
- [ **@notify_page_operator_name =** ] **'***page_name***'**  
+ [  **@notify_page_operator_name =** ] **"***Seitenname***"**  
  Der Name der Person, die nach dem Abschluss dieses Auftrags per Pager benachrichtigt werden soll. *Seitenname*ist **Sysname**, hat den Standardwert NULL.  
   
  [ **@delete_level =** ] *delete_level*  

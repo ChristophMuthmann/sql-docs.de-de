@@ -1,16 +1,16 @@
 ---
 title: Sp_addsynctriggers (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addsynctriggers
 ms.assetid: e37d0c3b-19bf-4719-9535-96ba361372b3
-caps.latest.revision: 
+caps.latest.revision: 29
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bf7770a9388c18922aeb551246c314caba5860fe
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 7e99ea52a8bd206da42168f1aed59589561de47e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddsynctriggers-transact-sql"></a>sp_addsynctriggers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -72,13 +72,13 @@ sp_addsynctriggers [ @sub_table = ] 'sub_table'
  [  **@sub_table_owner=**] **"***Sub_table_owner***"**  
  Entspricht dem Namen des Eigentümers der Abonnententabelle. *Sub_table_owner* ist **Sysname**, hat keinen Standardwert.  
   
- [  **@publisher=**] **"***Publisher***"**  
+ [ **@publisher=**] **'***publisher***'**  
  Entspricht dem Namen des Verlegerservers. *Publisher* ist **Sysname**, hat keinen Standardwert.  
   
- [  **@publisher_db=**] **"***Publisher_db***"**  
+ [ **@publisher_db=**] **'***publisher_db***'**  
  Der Name der Verlegerdatenbank. *Publisher_db* ist **Sysname**, hat keinen Standardwert. Mit NULL wird die aktuelle Datenbank verwendet.  
   
- [  **@publication=**] **"***Veröffentlichung***"**  
+ [ **@publication=**] **'***publication***'**  
  Der Name der Veröffentlichung. *Veröffentlichung* ist **Sysname**, hat keinen Standardwert.  
   
  [  **@ins_proc=**] **"***Ins_proc***"**  
@@ -117,7 +117,7 @@ sp_addsynctriggers [ @sub_table = ] 'sub_table'
  [  **@distributor =** ] **"***Verteiler***"**  
  Entspricht dem Namen des Verteilers. *Verteiler* ist **Sysname**, hat keinen Standardwert.  
   
- [  **@pubversion** =] *Pubversion*  
+ [ **@pubversion**=] *Pubversion*  
  Gibt die Version des Verlegers an. *Pubversion* ist **Int**, hat den Standardwert 1. **1** darauf hin, dass die verlegerversion [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Servicepack 2 oder früher; **2** darauf hin, dass der Verleger [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 3 (SP3) oder höher. *Pubversion* muss explizit festgelegt werden, um **2** Wenn die Verleger-Version ist [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] SP3 oder höher.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
@@ -131,7 +131,7 @@ sp_addsynctriggers [ @sub_table = ] 'sub_table'
   
 ## <a name="see-also"></a>Siehe auch  
  [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   
- [Sp_script_synctran_commands &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-script-synctran-commands-transact-sql.md)   
+ [Sp_script_synctran_commands &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-script-synctran-commands-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

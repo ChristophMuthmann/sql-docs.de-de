@@ -1,16 +1,16 @@
 ---
 title: Sp_dsninfo (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_dsninfo
 ms.assetid: 34648615-814b-42bc-95a3-50e86b42ec4d
-caps.latest.revision: 
+caps.latest.revision: 27
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4882ce3dd87c60f4fceaeb2b770c8879fadf3b78
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: aa1403655e8ad134f8d214cffcecf916c881bb40
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spdsninfo-transact-sql"></a>sp_dsninfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,10 +60,10 @@ sp_dsninfo [ @dsn =] 'dsn'
 |-----------|-----------------|  
 |**DBMS_NAME**|Gibt den Anbieter der Datenquelle an.|  
 |**DBMS_VERSION**|Gibt die Version der Datenquelle an.|  
-|**DATENBANKNAME**|Gibt den Datenbanknamen an.|  
+|**DATABASE_NAME**|Gibt den Datenbanknamen an.|  
 |**SQL_SUBSCRIBER**|Gibt an, dass die Datenquelle ein Abonnent sein kann.|  
   
- [  **@login =**] **"***Anmeldung***"**  
+ [ **@login =**] **'***login***'**  
  Der Anmeldename für die Datenquelle. Wenn die Datenquelle einen Anmeldenamen aufweist, geben Sie NULL an, oder lassen Sie den Parameter weg. *Anmeldung*ist **varchar(128)**, hat den Standardwert NULL.  
   
  [  **@password =**] **"***Kennwort***"**  
@@ -96,7 +96,7 @@ sp_dsninfo [ @dsn =] 'dsn'
  Nur Mitglieder der **Sysadmin** -Serverrolle kann ausführen **Sp_dsninfo**.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Sp_enumdsn &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-enumdsn-transact-sql.md)   
+ [Sp_enumdsn &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-enumdsn-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

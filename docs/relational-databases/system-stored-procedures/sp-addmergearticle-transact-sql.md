@@ -1,16 +1,16 @@
 ---
 title: Sp_addmergearticle (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addmergearticle
 ms.assetid: 0df654ea-24e2-4c61-a75a-ecaa7a140a6c
-caps.latest.revision: 
+caps.latest.revision: 69
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cd9d9ead2695338116dd3da6a60285756cb433c6
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 9ac83f7ffeb53b501090c7fe1e5f65e08eee07d0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddmergearticle-transact-sql"></a>sp_addmergearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -91,7 +91,7 @@ sp_addmergearticle [ @publication = ] 'publication'
  [  **@source_object=** ] **"***Source_object***"**  
  Entspricht dem zu veröffentlichenden Datenbankobjekt. *Source_object* ist **Sysname**, hat keinen Standardwert. Weitere Informationen zu den Objekttypen, die mithilfe der Mergereplikation veröffentlicht werden können, finden Sie unter [Veröffentlichen von Daten und Datenbankobjekte](../../relational-databases/replication/publish/publish-data-and-database-objects.md).  
   
- [  **@type=** ] **"***Typ***"**  
+ [ **@type=** ] **'***type***'**  
  Entspricht dem Artikeltyp. *Typ* ist **Sysname**, hat den Standardwert **Tabelle**, und kann einen der folgenden Werte.  
   
 |Wert|Description|  
@@ -120,10 +120,10 @@ sp_addmergearticle [ @publication = ] 'publication'
   
 |Wert|Description|  
 |-----------|-----------------|  
-|**keine**|Wenn die Tabelle bereits auf dem Abonnenten vorhanden ist, wird keine Aktion ausgeführt.|  
+|**Keine**|Wenn die Tabelle bereits auf dem Abonnenten vorhanden ist, wird keine Aktion ausgeführt.|  
 |**Löschen**|Ein Löschvorgang wird auf der Grundlage der WHERE-Klausel im Teilmengenfilter ausgegeben.|  
 |**Drop** (Standard)|Die Tabelle wird vor dem erneuten Erstellen gelöscht. Zur Unterstützung von erforderlich [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEW](../../includes/ssew-md.md)] Abonnenten.|  
-|**Abschneiden**|Schneidet die Zieltabelle ab.|  
+|**truncate**|Schneidet die Zieltabelle ab.|  
   
  [  **@creation_script=** ] **"***Creation_script***"**  
  Entspricht dem Pfad und Namen eines optionalen Artikelschemaskripts, mit dem der Artikel in der Abonnementdatenbank erstellt wird. *Creation_script* ist **nvarchar(255)**, hat den Standardwert NULL.  
@@ -171,7 +171,7 @@ sp_addmergearticle [ @publication = ] 'publication'
 |**0x400000000**|Repliziert die Komprimierungsoption für Daten und Indizes. Weitere Informationen finden Sie unter [Data Compression](../../relational-databases/data-compression/data-compression.md).|  
 |**0 x 800000000**|Legen Sie diese Option fest, um FILESTREAM-Daten in einer eigenen Dateigruppe auf dem Abonnenten zu speichern. Wenn diese Option nicht festgelegt wird, werden FILESTREAM-Daten in der Standarddateigruppe gespeichert. Bei der Replikation werden keine Dateigruppen erstellt. Daher müssen Sie beim Festlegen dieser Option die Dateigruppe erstellen, bevor Sie die Momentaufnahme auf dem Abonnenten anwenden. Weitere Informationen zum Erstellen von Objekten vor dem Anwenden der Momentaufnahme finden Sie unter [Ausführen von Skripts vor und nach der Momentaufnahme angewendet wird](../../relational-databases/replication/execute-scripts-before-and-after-the-snapshot-is-applied.md).<br /><br /> Siehe die verwandte Option **0 x 100000000**.|  
 |**0x1000000000**|Konvertiert von common Language Runtime (CLR) eine benutzerdefinierte Typen (UDTs) in **varbinary(max)** , sodass Spalten vom Typ UDT auf Abonnenten repliziert werden können, die ausgeführt werden [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].|  
-|**0x2000000000**|Konvertiert die **Hierarchyid** Datentyp, **varbinary(max)** sodass Spalten vom Typ **Hierarchyid** repliziert werden können, an die Abonnenten, die ausgeführt werden [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Weitere Informationen zur Verwendung von **Hierarchyid** -Spalten in replizierten Tabellen finden Sie unter [Hierarchyid &#40; Transact-SQL &#41; ](../../t-sql/data-types/hierarchyid-data-type-method-reference.md).|  
+|**0x2000000000**|Konvertiert die **Hierarchyid** Datentyp, **varbinary(max)** sodass Spalten vom Typ **Hierarchyid** repliziert werden können, an die Abonnenten, die ausgeführt werden [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Weitere Informationen zur Verwendung von **Hierarchyid** -Spalten in replizierten Tabellen finden Sie unter [Hierarchyid &#40;Transact-SQL&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md).|  
 |**0x4000000000**|Repliziert die gefilterten Indizes in der Tabelle. Weitere Informationen zu gefilterten Indizes finden Sie unter [Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md).|  
 |**0x8000000000**|Konvertiert die **Geography** und **Geometrie** Datentypen zu **varbinary(max)** , sodass Spalten dieser Typen auf Abonnenten repliziert werden können, die ausgeführtwerden[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].|  
 |**0x10000000000**|Repliziert Indizes für Spalten vom Typ **Geography** und **Geometrie**.|  
@@ -232,7 +232,7 @@ sp_addmergearticle [ @publication = ] 'publication'
  **1** gibt an, dass die Signatur überprüft wird, um festzustellen, ob sie aus einer vertrauenswürdigen Quelle stammt.  
   
  [  **@destination_object=** ] **"***Destination_object***"**  
- Entspricht dem Namen des Objekts in der Abonnementdatenbank. *Destination_object* ist **Sysname**, hat den Standardwert des  **@source_object** . Dieser Parameter kann nur angegeben werden, wenn der Artikel vom Typ schema only ist, wie z. B. ein Artikel für gespeicherte Prozeduren, Sichten und UDFs. Wenn der Artikel angegebene einen Tabellenartikel, der Wert in  *@source_object*  überschreibt den Wert in *Destination_object*.  
+ Entspricht dem Namen des Objekts in der Abonnementdatenbank. *Destination_object* ist **Sysname**, hat den Standardwert des **@source_object**. Dieser Parameter kann nur angegeben werden, wenn der Artikel vom Typ schema only ist, wie z. B. ein Artikel für gespeicherte Prozeduren, Sichten und UDFs. Wenn der Artikel angegebene einen Tabellenartikel, der Wert in *@source_object* überschreibt den Wert in *Destination_object*.  
   
  [  **@allow_interactive_resolver=** ] **"***Allow_interactive_resolver***"**  
  Aktiviert oder deaktiviert die Verwendung des interaktiven Konfliktlösers für einen Artikel. *Allow_interactive_resolver* ist **nvarchar(5)**, hat den Standardwert "false". **"true"** ermöglicht die Verwendung des interaktiven Konfliktlösers für den Artikel. **"false"** deaktiviert sie.  
@@ -315,7 +315,7 @@ sp_addmergearticle [ @publication = ] 'publication'
 |**1**|Änderungen sind auf dem Abonnenten zulässig, werden jedoch nicht auf den Verleger hochgeladen.|  
 |**2**|Änderungen sind auf dem Abonnenten nicht zulässig.|  
   
- Ändern von *Subscriber_upload_options* muss das Abonnement durch Aufrufen von bewirken [Sp_reinitmergepullsubscription &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-reinitmergepullsubscription-transact-sql.md).  
+ Ändern von *Subscriber_upload_options* muss das Abonnement durch Aufrufen von bewirken [Sp_reinitmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-reinitmergepullsubscription-transact-sql.md).  
   
 > [!NOTE]  
 >  Wenn die Quelltabelle eines Artikels bereits in einer anderen Veröffentlichung, den Wert des veröffentlicht wurde *Subscriber_upload_options* muss für beide Artikel gleich sein.  
@@ -325,7 +325,7 @@ sp_addmergearticle [ @publication = ] 'publication'
   
 |Wert|Description|  
 |-----------|-----------------|  
-|**keine**|Deaktiviert die Verwaltung des Identitätsbereichs.|  
+|**Keine**|Deaktiviert die Verwaltung des Identitätsbereichs.|  
 |**Manuell**|Markiert die Identitätsspalte mithilfe von NOT FOR REPLICATION, um die manuelle Identitätsbereichsverwaltung zu ermöglichen.|  
 |**Auto**|Gibt die automatisierte Verwaltung von Identitätsbereichen an.|  
 |Null(Default)|Wird standardmäßig auf **keine**Wenn der Wert der *Auto_identity_range* nicht **"true"**.|  

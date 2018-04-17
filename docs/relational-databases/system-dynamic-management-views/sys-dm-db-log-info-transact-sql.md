@@ -1,16 +1,16 @@
 ---
 title: Sys.dm_db_log_info (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/11/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sys.dm_db_log_info
@@ -22,18 +22,19 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_log_info dynamic management view
 ms.assetid: f6b40060-c17d-472f-b0a3-3b350275d487
-caps.latest.revision: 
+caps.latest.revision: 4
 author: savjani
 ms.author: pariks
 manager: ajayj
 ms.workload: Inactive
-ms.openlocfilehash: 56064f19713bf3e5da29109520045762474d4539
-ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: c19ffdd3cdee50b12d43b70fbbb0e8f95c150bab
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="sysdmdbloginfo-transact-sql"></a>sys.dm_db_log_info (Transact-SQL)
+# <a name="sysdmdbloginfo-transact-sql"></a>Sys.dm_db_log_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
 Gibt [virtuelle Protokolldatei (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) Informationen des Transaktionsprotokolls. Beachten Sie, dass es sich bei allen Transaktionsprotokolldateien in der Tabellenausgabe kombiniert werden. Jede Zeile in der Ausgabe eine VLF im Transaktionsprotokoll darstellt und bietet Informationen zu diesem VLF im Protokoll.

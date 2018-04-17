@@ -27,11 +27,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c1e77bcfcfd4e27981f63fd2802fd6b76c18fe1f
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
+ms.openlocfilehash: c7c1d272d3bcbfd85002624b15a69bd2bc31e0e7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="syselasticpoolresourcestats-azure-sql-database"></a>Sys.elastic_pool_resource_stats (Azure SQL-Datenbank)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -47,12 +48,12 @@ ms.lasthandoff: 04/08/2018
 |**start_time**|**datetime2**|UTC-Zeit, die den Anfang des Berichtsintervalls von 15 Sekunden.|  
 |**end_time**|**datetime2**|UTC-Zeit, die das Ende des Berichtsintervalls von 15 Sekunden.|  
 |**elastic_pool_name**|**nvarchar(128)**|Der Name des elastischen Pools.|  
-|**avg_cpu_percent**|**decimal(5,2)**|Durchschnittliche servernutzung als Prozentwert der maximalen Kapazität des Pools.|  
-|**avg_data_io_percent**|**decimal(5,2)**|Durchschnittliche e/a-Auslastung in Prozent basierend auf den Grenzwert des Pools.|  
-|**avg_log_write_percent**|**decimal(5,2)**|Durchschnittliche schreibressourcenauslastung in Prozent des Grenzwerts des Pools.|  
-|**avg_storage_percent**|**decimal(5,2)**|Durchschnittliche speicherauslastung in Prozent, der die Speicherkapazität des Pools an.|  
-|**max_worker_percent**|**decimal(5,2)**|Maximale gleichzeitige Arbeitsthreads (Anforderungen) als Prozentwert der maximalen Kapazität des Pools für.|  
-|**max_session_percent**|**decimal(5,2)**|Maximaler gleichzeitiger Sitzungen als Prozentwert der maximalen Kapazität des Pools für.|  
+|**avg_cpu_percent**|**decimal(5,2) wird**|Durchschnittliche servernutzung als Prozentwert der maximalen Kapazität des Pools.|  
+|**avg_data_io_percent**|**decimal(5,2) wird**|Durchschnittliche e/a-Auslastung in Prozent basierend auf den Grenzwert des Pools.|  
+|**avg_log_write_percent**|**decimal(5,2) wird**|Durchschnittliche schreibressourcenauslastung in Prozent des Grenzwerts des Pools.|  
+|**avg_storage_percent**|**decimal(5,2) wird**|Durchschnittliche speicherauslastung in Prozent, der die Speicherkapazität des Pools an.|  
+|**max_worker_percent**|**decimal(5,2) wird**|Maximale gleichzeitige Arbeitsthreads (Anforderungen) als Prozentwert der maximalen Kapazität des Pools für.|  
+|**max_session_percent**|**decimal(5,2) wird**|Maximaler gleichzeitiger Sitzungen als Prozentwert der maximalen Kapazität des Pools für.|  
 |**elastic_pool_dtu_limit**|**int**|Aktuelle max elastischen Pool-dtu-Einstellung für diesen elastischen Pool während dieses Intervalls.|  
 |**elastic_pool_storage_limit_mb**|**bigint**|Aktuelle max elastischen Pool Speicherobergrenze für diesen elastischen Pool in Megabyte während dieses Intervalls festlegen.|  
   

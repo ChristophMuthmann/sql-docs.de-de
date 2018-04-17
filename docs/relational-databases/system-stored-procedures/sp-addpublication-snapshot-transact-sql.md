@@ -1,16 +1,16 @@
 ---
 title: Sp_addpublication_snapshot (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addpublication_snapshot
 ms.assetid: 192b6214-df6e-44a3-bdd4-9d933a981619
-caps.latest.revision: 
+caps.latest.revision: 39
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9de7dc82dd63e8ea6b23d9c561a8fd7ea83da435
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 6a04d94d0a650eb0349e599814fc2f1f614d4732
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddpublicationsnapshot-transact-sql"></a>sp_addpublication_snapshot (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -66,7 +66,7 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@publication=**] **"***Veröffentlichung***"**  
+ [ **@publication=**] **'***publication***'**  
  Der Name der Veröffentlichung. *Veröffentlichung* ist **Sysname**, hat keinen Standardwert.  
   
  [  **@frequency_type=**] *Frequency_type*  
@@ -89,9 +89,9 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
 |------------------------------|-----------------------------------|  
 |**1**|*Frequency_interval* wird nicht verwendet.|  
 |**4** (Standard)|Jede *Frequency_interval* Tagen, bei der Standard ist täglich.|  
-|**8**|*Frequency_interval* kann einen oder mehrere der folgenden (zusammen mit einem [&#124; (Bitweises OR) ](../../t-sql/language-elements/bitwise-or-transact-sql.md) logischer Operator):<br /><br /> **1** = Sonntag &#124;<br /><br /> **2** = Montag &#124;<br /><br /> **4** = Dienstag &#124;<br /><br /> **8** = Mittwoch &#124;<br /><br /> **16** = Donnerstag &#124;<br /><br /> **32** = Freitag &#124;<br /><br /> **64** = Samstag|  
+|**8**|*Frequency_interval* kann einen oder mehrere der folgenden (zusammen mit einem [ &#124; (bitweises OR)](../../t-sql/language-elements/bitwise-or-transact-sql.md) logischer Operator):<br /><br /> **1** = Sonntag&#124;<br /><br /> **2** = Montag&#124;<br /><br /> **4** = Dienstag&#124;<br /><br /> **8** = Mittwoch&#124;<br /><br /> **16** = Donnerstag&#124;<br /><br /> **32** = Freitag&#124;<br /><br /> **64** = Samstag|  
 |**16**|Auf der *Frequency_interval* Tag des Monats.|  
-|**32**|*Frequency_interval* ist eines der folgenden:<br /><br /> **1** = Sonntag &#124;<br /><br /> **2** = Montag &#124;<br /><br /> **3** = Dienstag &#124;<br /><br /> **4** = Mittwoch &#124;<br /><br /> **5** = Donnerstag &#124;<br /><br /> **6** = Freitag &#124;<br /><br /> **7** = Samstag &#124;<br /><br /> **8** = Tag &#124;<br /><br /> **9** = Arbeitstag &#124;<br /><br /> **10** = Wochenendtag|  
+|**32**|*Frequency_interval* ist eines der folgenden:<br /><br /> **1** = Sonntag&#124;<br /><br /> **2** = Montag&#124;<br /><br /> **3** = Dienstag&#124;<br /><br /> **4** = Mittwoch&#124;<br /><br /> **5** = Donnerstag&#124;<br /><br /> **6** = Freitag&#124;<br /><br /> **7** = Samstag&#124;<br /><br /> **8** = Tag&#124;<br /><br /> **9** = Arbeitstag&#124;<br /><br /> **10** = Wochenendtag|  
 |**64**|*Frequency_interval* wird nicht verwendet.|  
 |**128**|*Frequency_interval* wird nicht verwendet.|  
   
@@ -129,31 +129,31 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
  [  **@snapshot_job_name =** ] **"***Snapshot_agent_name***"**  
  Der Name eines vorhandenen Auftrags des Momentaufnahme-Agents, wenn ein vorhandener Auftrag verwendet wird. *Snapshot_agent_name* ist **nvarchar(100)** hat den Standardwert NULL. Dieser Parameter dient der internen Verwendung und sollte beim Erstellen einer neuen Veröffentlichung nicht angegeben werden. Wenn *Snapshot_agent_name* angegeben ist, klicken Sie dann *Job_login* und *Job_password* muss NULL sein.  
   
- [  **@publisher_security_mode** =] *Publisher_security_mode*  
+ [ **@publisher_security_mode**=] *Publisher_security_mode*  
  Der vom Agent beim Herstellen der Verbindung mit dem Verleger verwendete Sicherheitsmodus. *Publisher_security_mode* ist **"smallint"**, hat den Standardwert 1. **0** gibt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung und **1** gibt die Windows-Authentifizierung. Der Wert **0** muss angegeben werden, für nicht -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Herausgeber. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
- [  **@publisher_login** =] **"***Publisher_login***"**  
+ [ **@publisher_login**=] **"***Publisher_login***"**  
  Der Anmeldename, der beim Herstellen der Verbindung mit dem Verleger verwendet wird. *Publisher_login* ist **Sysname**, hat den Standardwert NULL. *Publisher_login* muss angegeben werden, wenn *Publisher_security_mode* ist **0**. Wenn *Publisher_login* ist NULL und *Publisher_security_mode* ist **1**, und klicken Sie dann das Windows-Konto im angegebenen *Job_login* verwendet werden Wenn eine Verbindung mit dem Verleger herstellen.  
   
- [  **@publisher_password** =] **"***Publisher_password***"**  
+ [ **@publisher_password**=] **"***Publisher_password***"**  
  Das Kennwort, das beim Herstellen der Verbindung mit dem Verleger verwendet wird. *Publisher_password* ist **Sysname**, hat den Standardwert NULL.  
   
 > [!IMPORTANT]  
 >  Speichern Sie keine Authentifizierungsinformationen in Skriptdateien. Es wird empfohlen, Anmeldenamen und Kennwörter zur Laufzeit bereitzustellen, um die Sicherheit zu verbessern.  
   
- [  **@job_login** =] **"***Job_login***"**  
+ [ **@job_login**=] **"***Job_login***"**  
  Der Anmeldename für das Windows-Konto, unter dem der Agent ausgeführt wird. *Job_login* ist **nvarchar(257)**, hat den Standardwert NULL. Das Windows-Konto wird stets für Agent-Verbindungen mit dem Verteiler verwendet. Sie müssen diesen Parameter angeben, wenn Sie einen neuen Auftrag des Momentaufnahme-Agents erstellen.  
   
 > [!NOTE]  
->  Für nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Herausgeber, diese Angabe muss die gleiche Anmeldung im angegebenen [Sp_adddistpublisher &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md).  
+>  Für nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Herausgeber, diese Angabe muss die gleiche Anmeldung im angegebenen [Sp_adddistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md).  
   
- [  **@job_password** =] **"***Job_password***"**  
+ [ **@job_password**=] **"***Job_password***"**  
  Das Kennwort für das Windows-Konto, unter dem der Agent ausgeführt wird. *Job_password* ist **Sysname**, hat keinen Standardwert. Sie müssen diesen Parameter angeben, wenn Sie einen neuen Auftrag des Momentaufnahme-Agents erstellen.  
   
 > [!IMPORTANT]  
 >  Speichern Sie keine Authentifizierungsinformationen in Skriptdateien. Es wird empfohlen, Anmeldenamen und Kennwörter zur Laufzeit bereitzustellen, um die Sicherheit zu verbessern.  
   
- [  **@publisher** =] **"***Publisher***"**  
+ [ **@publisher**=] **"***Publisher***"**  
  Gibt einen Nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Verleger an. *Publisher* ist **Sysname**, hat den Standardwert NULL.  
   
 > [!NOTE]  
@@ -172,11 +172,11 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
  Nur Mitglieder der der **Sysadmin** feste Serverrolle oder **Db_owner** feste Datenbankrolle können ausführen **Sp_addpublication_snapshot**.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
+ [Erstellen einer Veröffentlichung](../../relational-databases/replication/publish/create-a-publication.md)   
  [Erstellen und Anwenden der Momentaufnahme](../../relational-databases/replication/create-and-apply-the-snapshot.md)   
- [Sp_addpublication &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   
- [Sp_changepublication_snapshot &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql.md)   
- [Sp_startpublication_snapshot &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-startpublication-snapshot-transact-sql.md)   
+ [sp_addpublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   
+ [Sp_changepublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql.md)   
+ [Sp_startpublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-startpublication-snapshot-transact-sql.md)   
  [Gespeicherte Automatisierungsprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

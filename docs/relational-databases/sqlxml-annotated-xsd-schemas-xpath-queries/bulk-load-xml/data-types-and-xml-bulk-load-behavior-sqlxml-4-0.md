@@ -1,36 +1,37 @@
 ---
 title: Datentypen und XML-Massenladen (SQLXML 4.0)-Ladeverhalten | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - bulk load [SQLXML], data types
 - data types [SQLXML], XML Bulk Load
 - XML Bulk Load [SQLXML], data types
 ms.assetid: d1ac1939-1f6c-4398-b7a7-a79ca608a4f1
-caps.latest.revision: 
+caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7d5e25e9d3a2df2e15c2dc9bf86d6d90acd1d450
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 8315130a7228d0d5dce2f8baa2f337f16015ae23
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="data-types-and-xml-bulk-load-behavior-sqlxml-40"></a>Datentypen und XML-Massenladenverhalten (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Die Datentypen, die im Zuordnungsschema angegeben werden (XSD- oder XDR-Typ und **SQL: DataType**) werden im Allgemeinen ignoriert werden, außer in den folgenden Fällen:  
+  Die Datentypen, die im Zuordnungsschema angegeben werden (XSD- oder XDR-Typ und **SQL: DataType**) werden im Allgemeinen ignoriert werden, außer in den folgenden Fällen:  
   
  Bei XSD:  
   
@@ -38,7 +39,7 @@ Die Datentypen, die im Zuordnungsschema angegeben werden (XSD- oder XDR-Typ und 
   
 -   Wird von Massenladen in eine Spalte mit **"uniqueidentifier"** Geben Sie in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] und der XSD-Wert ist eine GUID, die enthält geschweifte Klammern ({und}), Sie müssen angeben, **SQL: datatype = "Uniqueidentifier"** an Entfernen Sie die geschweiften Klammern, bevor der Wert in die Spalte eingefügt wird. Wenn **SQL: DataType** nicht angegeben wird, wird der Wert in geschweiften Klammern gesendet, und der Vorgang schlägt fehl.  
   
- Weitere Informationen zu **SQL: DataType**, finden Sie unter [Datentypumwandlungen und die SQL: DataType-Anmerkung &#40; SQLXML 4.0 &#41; ](../../../relational-databases/sqlxml-annotated-xsd-schemas-using/data-type-coercions-and-the-sql-datatype-annotation-sqlxml-4-0.md).  
+ Weitere Informationen zu **SQL: DataType**, finden Sie unter [Datentypumwandlungen und die SQL: DataType-Anmerkung &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-using/data-type-coercions-and-the-sql-datatype-annotation-sqlxml-4-0.md).  
   
  Bei XDR:  
   

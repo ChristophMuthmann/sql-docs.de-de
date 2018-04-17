@@ -1,15 +1,15 @@
 ---
 title: dm_external_script_execution_stats | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 09/16/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_external_script_execution_stats
@@ -21,16 +21,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_external_script_execution_stats dynamic management view
 ms.assetid: 2e99f026-ceb2-42a2-a549-c71d31ed0cf4
-caps.latest.revision: 
+caps.latest.revision: 5
 author: jeannt
 ms.author: jeannt
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8306c682ddf8e376e13629cc6fe13472e08f59b0
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: dde009d600a7b0213fba5cce1713852b87924659
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmexternalscriptexecutionstats"></a>sys.dm_external_script_execution_stats
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

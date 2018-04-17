@@ -1,16 +1,16 @@
 ---
 title: Sp_grantdbaccess (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_grantdbaccess
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_grantdbaccess
 ms.assetid: 3eb09513-03f1-42f8-9917-3a1f3a579bec
-caps.latest.revision: 
+caps.latest.revision: 33
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4e8e67cc8f4672a650f7909fc71a759c3a856fcf
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 35cf1ad4a7181ef39b04e355092f98ff1adda230
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spgrantdbaccess-transact-sql"></a>sp_grantdbaccess (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/27/2017
   Fügt der aktuellen Datenbank einen Datenbankbenutzer hinzu.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Verwendung [CREATE USER](../../t-sql/statements/create-user-transact-sql.md) stattdessen.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Verwendung [CREATE USER](../../t-sql/statements/create-user-transact-sql.md) stattdessen.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -50,17 +50,16 @@ sp_grantdbaccess [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@loginame =** ] **"***Anmeldung* **"**  
- Der Name der Windows-Gruppe, Windows-Anmeldung oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldung, die dem neuen Datenbankbenutzer zugeordnet ist. Namen von Windows-Gruppen und Windows-Anmeldungen müssen mit einem Windows-Domänennamen im Format *Domain*\\*login*gekennzeichnet werden, wie z. B. **LONDON\Joeb**. Der Anmeldename darf noch keinem Benutzer in der Datenbank zugewiesen sein. *login* ist vom Datentyp **sysname**und hat keinen Standardwert.  
+ [  **@loginame =** ]  **"*** Anmeldung* **"** ist der Name der Windows-Gruppe, Windows-Anmeldung oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anmeldung, die die neue Datenbank zugeordnet werden Benutzer. Namen der Windows-Gruppen und Windows-Anmeldenamen müssen mit einem Windows-Domänennamen im Format qualifiziert werden *Domäne*\\*Anmeldung *, z. B. **LONDON\Joeb**. Der Anmeldename darf noch keinem Benutzer in der Datenbank zugewiesen sein. *login* ist vom Datentyp **sysname**und hat keinen Standardwert.  
   
  [  **@name_in_db=**] **"***Name_in_db***"** [ **Ausgabe**]  
- Der Name für den neuen Datenbankbenutzer. *name_in_db* ist eine OUTPUT-Variable vom Datentyp **sysname**. Der Standardwert ist NULL. Wenn dieses Argument nicht angegeben ist, wird *login* verwendet. Bei Angabe als OUTPUT-Variable mit dem Wert NULL,  **@name_in_db**  festgelegt ist, um *Anmeldung*. *name_in_db* darf in der aktuellen Datenbank noch nicht vorhanden sein.  
+ Der Name für den neuen Datenbankbenutzer. *name_in_db* ist eine OUTPUT-Variable vom Datentyp **sysname**. Der Standardwert ist NULL. Wenn dieses Argument nicht angegeben ist, wird *login* verwendet. Bei Angabe als OUTPUT-Variable mit dem Wert NULL, **@name_in_db** festgelegt ist, um *Anmeldung*. *name_in_db* darf in der aktuellen Datenbank noch nicht vorhanden sein.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder 1 (Fehler)  
   
 ## <a name="remarks"></a>Hinweise  
- **sp_grantdbaccess** ruft CREATE USER auf, wodurch zusätzliche Optionen unterstützt werden. Informationen zum Erstellen von Datenbankbenutzern finden Sie unter [CREATE USER &#40; Transact-SQL &#41; ](../../t-sql/statements/create-user-transact-sql.md). Verwenden Sie zum Entfernen eines Datenbankbenutzers aus einer Datenbank [DROP USER](../../t-sql/statements/drop-user-transact-sql.md).  
+ **sp_grantdbaccess** ruft CREATE USER auf, wodurch zusätzliche Optionen unterstützt werden. Informationen zum Erstellen von Datenbankbenutzern finden Sie unter [CREATE USER &#40;Transact-SQL&#41;](../../t-sql/statements/create-user-transact-sql.md). Verwenden Sie zum Entfernen eines Datenbankbenutzers aus einer Datenbank [DROP USER](../../t-sql/statements/drop-user-transact-sql.md).  
   
  **sp_grantdbaccess** kann nicht innerhalb einer benutzerdefinierten Transaktion ausgeführt werden.  
   
@@ -76,9 +75,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Gespeicherte Systemprozeduren &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [Security Stored Procedures &#40;Transact-SQL&#41; (Gespeicherte Sicherheitsprozeduren (Transact-SQL))](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [CREATE USER &#40;Transact-SQL&#41;](../../t-sql/statements/create-user-transact-sql.md)   
- [DROP USER &#40; Transact-SQL &#41;](../../t-sql/statements/drop-user-transact-sql.md)   
+ [DROP USER & #40; Transact-SQL & #41;](../../t-sql/statements/drop-user-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

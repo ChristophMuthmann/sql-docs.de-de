@@ -1,16 +1,16 @@
 ---
 title: Sp_addrole (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_addrole
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_addrole
 ms.assetid: e8a21642-8440-419a-8585-93d3d9d44f00
-caps.latest.revision: 
+caps.latest.revision: 33
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 070e1d0e71b49689e547dc29300bf5a5476d17ec
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 551ac618a2643fabfed717677e0892c8781f52e9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddrole-transact-sql"></a>sp_addrole (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ sp_addrole [ @rolename = ] 'role' [ , [ @ownername = ] 'owner' ]
 ## <a name="remarks"></a>Hinweise  
  Die Namen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbankrollen können zwischen 1 und 128 Zeichen (Buchstaben, Sonderzeichen und Ziffern) enthalten. Die Namen von Datenbankrollen können nicht: einen umgekehrten Schrägstrich enthalten (\\), NULL, oder eine leere Zeichenfolge (**''**).  
   
- Nachdem Sie eine Datenbankrolle hinzugefügt haben, verwenden [Sp_addrolemember &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md) der Rolle Prinzipale hinzu. Wenn mit den Anweisungen GRANT, DENY oder REVOKE Berechtigungen auf die Datenbankrolle angewendet werden, erben die Mitglieder der Datenbankrolle die Berechtigungen, als würden die Berechtigungen direkt auf die Konten dieser Mitglieder angewendet.  
+ Nachdem Sie eine Datenbankrolle hinzugefügt haben, verwenden Sie [Sp_addrolemember &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md) zu der Rolle Prinzipale hinzuzufügen. Wenn mit den Anweisungen GRANT, DENY oder REVOKE Berechtigungen auf die Datenbankrolle angewendet werden, erben die Mitglieder der Datenbankrolle die Berechtigungen, als würden die Berechtigungen direkt auf die Konten dieser Mitglieder angewendet.  
   
 > [!NOTE]  
 >  Neue Serverrollen können nicht erstellt werden. Rollen können nur auf der Datenbankebene erstellt werden.  
@@ -80,7 +80,7 @@ EXEC sp_addrole 'Managers';
   
 ## <a name="see-also"></a>Siehe auch  
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Gespeicherte Systemprozeduren &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [Security Stored Procedures &#40;Transact-SQL&#41; (Gespeicherte Sicherheitsprozeduren (Transact-SQL))](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [CREATE ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-role-transact-sql.md)  
   
   

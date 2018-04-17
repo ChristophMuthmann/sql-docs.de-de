@@ -1,16 +1,16 @@
 ---
 title: Sp_dropdevice (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/09/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_dropdevice_TSQL
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - backup devices [SQL Server], deleting
 - sp_dropdevice
 ms.assetid: c8b07189-7c35-414b-acc1-45bd6e7e17c3
-caps.latest.revision: 
+caps.latest.revision: 37
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1286184ef82308ed12c8c8209b14eeb2a83f86a9
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: ce2a6f5a8b9f2af96891185e04b3b39945c7badc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spdropdevice-transact-sql"></a>sp_dropdevice (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ sp_dropdevice [ @logicalname = ] 'device'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@logicalname=** ] **'***device***'**  
+ [  **@logicalname=** ] **"***Gerät***"**  
  Ist der logische Name des Datenbank- oder Sicherungsmediums gemäß **master.dbo.sysdevices.name**. *Gerät* ist **Sysname**, hat keinen Standardwert.  
   
  [ **@delfile=** ] **'***delfile***'**  
@@ -75,7 +75,7 @@ EXEC sp_dropdevice 'tapedump1';
   
 ## <a name="see-also"></a>Siehe auch  
  [Sicherungsmedien &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)   
- [Löschen eines Sicherungsmediums &#40; SQLServer &#41;](../../relational-databases/backup-restore/delete-a-backup-device-sql-server.md)   
+ [Löschen eines Sicherungsmediums &#40;SQLServer&#41;](../../relational-databases/backup-restore/delete-a-backup-device-sql-server.md)   
  [sp_addumpdevice &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md)   
  [sp_helpdb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdb-transact-sql.md)   
  [sp_helpdevice &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdevice-transact-sql.md)   

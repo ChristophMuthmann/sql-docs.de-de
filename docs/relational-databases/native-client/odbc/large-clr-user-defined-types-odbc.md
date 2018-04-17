@@ -1,30 +1,31 @@
 ---
-title: "Große benutzerdefinierte CLR-Typen (ODBC) | Microsoft Docs"
-ms.custom: 
+title: Große benutzerdefinierte CLR-Typen (ODBC) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client|ODBC
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - ODBC, large user-defined types
 - large user-defined types [ODBC]
 ms.assetid: ddce337e-bb6e-4a30-b7cc-4969bb1520a9
-caps.latest.revision: 
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4da32a24c00ca9539cca04c3886d19f73f9ab578
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: ed85a2386d3d02df2af2e22805cea464cf2d130d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="large-clr-user-defined-types-odbc"></a>Große benutzerdefinierte CLR-Typen (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -142,7 +143,7 @@ ms.lasthandoff: 01/25/2018
 |SQL_C_BINARY|Supported|  
 |SQL_C_CHAR|Unterstützt *|  
   
- \*Binäre Daten werden in eine hexadezimale Zeichenfolge konvertiert.  
+ \* Binäre Daten werden in eine hexadezimale Zeichenfolge konvertiert.  
   
  Die unterstützten Konvertierungen von C- zu SQL-Datentypen sind wie folgt:  
   
@@ -152,7 +153,7 @@ ms.lasthandoff: 01/25/2018
 |SQL_C_BINARY|Supported|  
 |SQL_C_CHAR|Unterstützt *|  
   
- \*Einer hexadezimalen Zeichenfolge in Binärdaten Konvertierung erfolgt.  
+ \* Einer hexadezimalen Zeichenfolge in Binärdaten Konvertierung erfolgt.  
   
 ## <a name="sqlvariant-support-for-udts"></a>SQL_VARIANT-Unterstützung für UDTs  
  UDTs werden in SQL_VARIANT-Spalten nicht unterstützt.  
@@ -219,7 +220,7 @@ ms.lasthandoff: 01/25/2018
 ### <a name="sqlgetdescrec"></a>SQLGetDescRec  
  Für UDTs werden folgende Werte zurückgegeben:  
   
-|SQL-Datentyp|Typ|SubType|Länge|Genauigkeit|Dezimalstellen|  
+|SQL-Datentyp|Typ|Untertyp|Länge|Genauigkeit|Dezimalstellen|  
 |-------------------|----------|-------------|------------|---------------|-----------|  
 |SQL_SS_UDT<br /><br /> (Länge kleiner oder gleich 8.000 Bytes)|SQL_SS_UDT|0|*n*|n|0|  
 |SQL_SS_UDT<br /><br /> (Länge größer als 8.000 Bytes)|SQL_SS_UDT|0|SQL_SS_LENGTH_UNLIMITED (0)|SQL_SS_LENGTH_UNLIMITED (0)|0|  
@@ -239,7 +240,7 @@ ms.lasthandoff: 01/25/2018
 ### <a name="sqlsetdescrec"></a>SQLSetDescRec  
  Die zulässigen Werte für UDTs lauten wie folgt:  
   
-|SQL-Datentyp|Typ|SubType|Länge|Genauigkeit|Dezimalstellen|  
+|SQL-Datentyp|Typ|Untertyp|Länge|Genauigkeit|Dezimalstellen|  
 |-------------------|----------|-------------|------------|---------------|-----------|  
 |SQL_SS_UDT<br /><br /> (Länge kleiner oder gleich 8.000 Bytes)|SQL_SS_UDT|0|*n*|*n*|0|  
 |SQL_SS_UDT<br /><br /> (Länge größer als 8.000 Bytes)|SQL_SS_UDT|0|SQL_SS_LENGTH_UNLIMITED (0)|SQL_SS_LENGTH_UNLIMITED (0)|0|  

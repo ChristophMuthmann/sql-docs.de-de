@@ -1,16 +1,16 @@
 ---
-title: sys.dm_db_incremental_stats_properties (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: Sys.dm_db_incremental_stats_properties (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 12/18/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server 2014
@@ -24,16 +24,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_incremental_stats_properties
 ms.assetid: aa0db893-34d1-419c-b008-224852e71307
-caps.latest.revision: 
+caps.latest.revision: 7
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6187179f6599404dac86f92403cba507eb5e5fcc
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 89309e660606a4ce9845ce71748fb37061d5628a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmdbincrementalstatsproperties-transact-sql"></a>sys.dm_db_incremental_stats_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ sys.dm_db_incremental_stats_properties (object_id, stats_id)
 |object_id|**int**|ID des Objekts (Tabelle), für das die Eigenschaften des Statistikobjekts zurückgegeben werden sollen.|  
 |stats_id|**int**|Die ID des Statistikobjekts. Ist eindeutig innerhalb der Tabelle. Weitere Informationen finden Sie unter [sysenthalten.stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)enthalten.|
 |partition_number|**int**|Nummer der Partition, die den Teil der Tabelle enthält.|  
-|last_updated|**datetime2**|Datum und Uhrzeit der letzten Aktualisierung des Statistikobjekts. Weitere Informationen finden Sie unter der ["Hinweise"](#Remarks) Abschnitt auf dieser Seite.|  
+|last_updated|**datetime2**|Datum und Uhrzeit der letzten Aktualisierung des Statistikobjekts. Weitere Informationen finden Sie im Abschnitt [Hinweise](#Remarks) dieses Artikels.|  
 |rows|**bigint**|Gesamtanzahl der Zeilen in der Tabelle zum Zeitpunkt der letzten Aktualisierung der Statistik. Wenn die Statistik gefiltert wird oder einem gefilterten Index entspricht, kann die Anzahl der Zeilen geringer als die Anzahl der Zeilen in der Tabelle sein.|  
 |rows_sampled|**bigint**|Gesamtzahl der Zeilen, die für die statistischen Berechnungen in die Stichprobe aufgenommen wurden.|  
 |steps|**int**|Anzahl der Schritte im Histogramm. Weitere Informationen finden Sie unter [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)enthalten.|  
@@ -79,7 +79,7 @@ sys.dm_db_incremental_stats_properties (object_id, stats_id)
  
  Dieses Verhalten ermöglicht die sichere Verwendung von `sys.dm_db_incremental_stats_properties` , wenn die Funktion übergreifend auf Zeilen in Sichten wie `sys.objects` und `sys.stats`angewendet wird. Diese Methode kann Eigenschaften für die Statistik zurückgeben, die den einzelnen Partitionen entsprechen. Verwenden Sie stattdessen „dm_db_stats_properties“, um die Eigenschaften für die zusammengeführten Statistiken für alle Partitionen kombiniert anzuzeigen. 
 
-Statistiken Aktualisierungsdatum befindet sich in der [Statistik-Blob-Objekt](../../relational-databases/statistics/statistics.md#DefinitionQOStatistics) zusammen mit den [Histogramm](../../relational-databases/statistics/statistics.md#histogram) und [dichtevektor](../../relational-databases/statistics/statistics.md#density), nicht in den Metadaten. Wenn keine Daten gelesen werden, um statistische Daten zu generieren, die Statistik-Blob nicht erstellt, das Datum ist nicht verfügbar, und die *Last_updated* Spalte ist NULL. Dies ist der Fall für gefilterte Statistiken für die das Prädikat keine Zeilen zurückgibt, oder für neue, leere Tabellen.
+Das Aktualisierungsdatum für die Statistiken befindet sich gemeinsam mit dem [Histogramm](../../relational-databases/statistics/statistics.md#histogram) und [Dichtevektor](../../relational-databases/statistics/statistics.md#density) nicht in den Metadaten, sondern im [Statistik-Blobobjekt](../../relational-databases/statistics/statistics.md#DefinitionQOStatistics). Wenn keine Daten gelesen werden, um statistische Daten zu generieren, die Statistik-Blob nicht erstellt, das Datum ist nicht verfügbar, und die *Last_updated* Spalte ist NULL. Dies ist der Fall bei gefilterten Statistiken oder neuen und leeren Tabellen, für die das Prädikat keine Zeilen zurückgibt.
 
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert, dass der Benutzer über SELECT-Berechtigungen für Statistikspalten verfügt, Besitzer der Tabelle oder Mitglied der festen Serverrolle `sysadmin`, der festen Datenbankrolle `db_owner` oder der festen Datenbankrolle `db_ddladmin` ist.  

@@ -1,16 +1,16 @@
 ---
 title: Sp_addqueued_artinfo (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addqueued_artinfo
 ms.assetid: decdb6eb-3dcd-4053-a21d-fd367c3fbafb
-caps.latest.revision: 
+caps.latest.revision: 20
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d9d843930ab1626ac4caadc169567163043e8b1b
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: a9616ca0c5e420ae43c9e7a2cfd3611d7db26201
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddqueuedartinfo-transact-sql"></a>sp_addqueued_artinfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,16 +64,16 @@ sp_addqueued_artinfo [ @artid= ] 'artid'
  [  **@article=**] **"***Artikel***"**  
  Der Name des Artikels, für den ein Skript erstellt werden soll. *Artikel* ist **Sysname**, hat keinen Standardwert  
   
- [  **@publisher=**] **"***Publisher***"**  
+ [ **@publisher=**] **'***publisher***'**  
  Entspricht dem Namen des Verlegerservers. *Publisher* ist **Sysname**, hat keinen Standardwert.  
   
- [  **@publisher_db=**] **"***Publisher_db***"**  
+ [ **@publisher_db=**] **'***publisher_db***'**  
  Der Name der Verlegerdatenbank. *Publisher_db* ist **Sysname**, hat keinen Standardwert.  
   
- [  **@publication=**] **"***Veröffentlichung***"**  
+ [ **@publication=**] **'***publication***'**  
  Der Name der Veröffentlichung, für die ein Skript erstellt werden soll. *Veröffentlichung* ist **Sysname**, hat keinen Standardwert.  
   
- [  **@dest_table=** ] *' Dest_table***"**  
+ [  **@dest_table=** ] *"Dest_table ***"**  
  Entspricht dem Namen der Zieltabelle. *Dest_table* ist **Sysname**, hat keinen Standardwert.  
   
  [ **@owner =** ] **"***Besitzer***"**  
@@ -95,8 +95,8 @@ sp_addqueued_artinfo [ @artid= ] 'artid'
   
 ## <a name="see-also"></a>Siehe auch  
  [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   
- [Sp_script_synctran_commands &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-script-synctran-commands-transact-sql.md)   
- [MSsubscription_articles &#40; Transact-SQL &#41;](../../relational-databases/system-tables/mssubscription-articles-transact-sql.md)   
+ [Sp_script_synctran_commands &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-script-synctran-commands-transact-sql.md)   
+ [MSsubscription_articles &#40;Transact-SQL&#41;](../../relational-databases/system-tables/mssubscription-articles-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -1,16 +1,16 @@
 ---
-title: sp_syspolicy_delete_policy_category_subscription (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: Sp_syspolicy_delete_policy_category_subscription (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_syspolicy_delete_policy_category_subscription_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_syspolicy_delete_policy_category_subscription
 ms.assetid: eeab0120-c869-4c95-a79d-6dc418d0b23a
-caps.latest.revision: 
+caps.latest.revision: 7
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ed35ec758bbdf05594275f47482169db93a1e088
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 48466fca4c206e119b63adf58c8d24e8e6524f31
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spsyspolicydeletepolicycategorysubscription-transact-sql"></a>sp_syspolicy_delete_policy_category_subscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ sp_syspolicy_delete_policy_category_subscription [ @policy_category_subscription
   
 ## <a name="arguments"></a>Argumente  
  [ **@policy_category_subscription_id=** ] *policy_category_subscription_id*  
- Der Bezeichner für das Richtlinienkategorieabonnement. *policy_category_subscription_id* is **int**.  
+ Der Bezeichner für das Richtlinienkategorieabonnement. *Policy_category_subscription_id* ist **Int**.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
@@ -79,7 +79,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Richtlinienbasierte Verwaltung gespeicherte Systemprozeduren &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
- [sp_syspolicy_update_policy_category_subscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-update-policy-category-subscription-transact-sql.md)  
+ [Gespeicherte Prozeduren Richtlinie der richtlinienbasierten Verwaltung &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
+ [Sp_syspolicy_update_policy_category_subscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-update-policy-category-subscription-transact-sql.md)  
   
   

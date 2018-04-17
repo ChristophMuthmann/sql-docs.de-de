@@ -1,8 +1,8 @@
 ---
-title: sys.dm_tran_top_version_generators (Transact-SQL) | Microsoft Docs
+title: Sys. dm_tran_top_version_generators (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: dmv's
@@ -27,16 +27,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 74c9005515c0f4d7c86b669963d638c215000847
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: fb9349aa160422a89084f846b47b7ba246e82128
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmtrantopversiongenerators-transact-sql"></a>sys.dm_tran_top_version_generators (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Gibt eine virtuelle Tabelle für die Objekte zurück, die die meisten Versionen im Versionsspeicher erzeugen. **sys.dm_tran_top_version_generators** returns the top 256 aggregated record lengths that are grouped by the **database_id** and **rowset_id**. **sys.dm_tran_top_version_generators** retrieves data by querying the **dm_tran_version_store** virtual table. **sys.dm_tran_top_version_generators** is an inefficient view to run because this view queries the version store, and the version store can be very large. Die Verwendung dieser Funktion wird empfohlen, um die größten Consumer des Versionsspeichers zu suchen.  
+  Gibt eine virtuelle Tabelle für die Objekte zurück, die die meisten Versionen im Versionsspeicher erzeugen. **Sys. dm_tran_top_version_generators** gibt die obersten 256 aggregierten Datensatzlängen gruppiert werden, die die **Database_id** und **Rowset_id**. **Sys. dm_tran_top_version_generators** Ruft Daten ab, durch Abfragen der **Dm_tran_version_store** virtuelle Tabelle. **Sys. dm_tran_top_version_generators** ist ineffizient, ausgeführt werden, da in dieser Ansicht der Versionsspeicher abgefragt und der Versionsspeicher sehr umfangreich sein kann. Die Verwendung dieser Funktion wird empfohlen, um die größten Consumer des Versionsspeichers zu suchen.  
   
 > [!NOTE]  
 >  Aufrufen von [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] oder [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], verwenden Sie den Namen **sys.dm_pdw_nodes_tran_top_version_generators**.  

@@ -1,15 +1,15 @@
 ---
 title: Verwenden von Multiple Active Resultsets (MARS) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client|features
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, MARS
@@ -20,22 +20,23 @@ helpviewer_keywords:
 - MARS [SQL Server]
 - SQL Server Native Client ODBC driver, MARS
 ms.assetid: ecfd9c6b-7d29-41d8-af2e-89d7fb9a1d83
-caps.latest.revision: 
+caps.latest.revision: 56
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 89795f3d6b11a93316a2a448dce2ed562db27d02
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 33f2a5f9139621f426f6b1bcd12ba1f626dd40f8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-multiple-active-result-sets-mars"></a>Verwenden von Multiple Active Result Sets (MARS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]führte die Unterstützung für mehrere aktive Resultsets (MARS) in Anwendungen, die Zugriff auf die [!INCLUDE[ssDE](../../../includes/ssde-md.md)]. In früheren Versionen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] konnten Datenbankanwendungen nicht mehrere aktive Anweisungen über eine Verbindung verwalten. Beim Verwenden von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Standardresultsets musste die Anwendung alle Resultsets aus einem Batch verarbeiten oder abbrechen, bevor ein anderer Batch auf dieser Verbindung ausgeführt werden konnte. In [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] wurde ein neues Verbindungsattribut eingeführt, das es Anwendungen ermöglicht, mehr als eine ausstehende Anforderung pro Verbindung und mehr als ein aktives Standardresultset pro Verbindung anzugeben.  
+  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] führte die Unterstützung für mehrere aktive Resultsets (MARS) in Anwendungen, die Zugriff auf die [!INCLUDE[ssDE](../../../includes/ssde-md.md)]. In früheren Versionen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] konnten Datenbankanwendungen nicht mehrere aktive Anweisungen über eine Verbindung verwalten. Beim Verwenden von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Standardresultsets musste die Anwendung alle Resultsets aus einem Batch verarbeiten oder abbrechen, bevor ein anderer Batch auf dieser Verbindung ausgeführt werden konnte. In [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] wurde ein neues Verbindungsattribut eingeführt, das es Anwendungen ermöglicht, mehr als eine ausstehende Anforderung pro Verbindung und mehr als ein aktives Standardresultset pro Verbindung anzugeben.  
   
  MARS vereinfacht den Anwendungsentwurf mit den folgenden neuen Fähigkeiten:  
   
@@ -79,7 +80,7 @@ ms.lasthandoff: 01/25/2018
  Sie vermeiden Probleme, indem Sie den Verbindungsstatus (SET, USE) und Transaktionen (BEGIN TRAN, COMMIT, ROLLBACK) an Stelle von [!INCLUDE[tsql](../../../includes/tsql-md.md)]-Anweisungen mit API-Aufrufen verwalten. Schließen Sie diese Anweisungen zudem nicht in Batches mit mehreren Anweisungen ein, die auch Zwischenergebnispunkte enthalten, und serialisieren Sie die Ausführung solcher Batches durch Verarbeitung oder Abbruch aller Ergebnisse.  
   
 > [!NOTE]  
->  Ein Batch oder eine gespeicherte Prozedur, die bei Aktivierung von MARS eine manuelle oder implizite Transaktion startet, muss diese Transaktion vor Ausführung des Batchs abschließen. Andernfalls führt [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nach Abschluss des Batchs einen Rollback für alle von der Transaktion vorgenommenen Änderungen aus. Eine derartige Transaktion wird von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] als Transaktion im Bereich des Batchs verwaltet. Dieser Transaktionstyp wurde in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] neu eingeführt, um vorhandene, gut konzipierte gespeicherte Prozeduren verwenden zu können, wenn MARS aktiviert ist. Weitere Informationen über Transaktionen im batchbereich finden Sie unter [Transaction-Anweisungen &#40; Transact-SQL &#41; ](~/t-sql/statements/statements.md).  
+>  Ein Batch oder eine gespeicherte Prozedur, die bei Aktivierung von MARS eine manuelle oder implizite Transaktion startet, muss diese Transaktion vor Ausführung des Batchs abschließen. Andernfalls führt [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nach Abschluss des Batchs einen Rollback für alle von der Transaktion vorgenommenen Änderungen aus. Eine derartige Transaktion wird von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] als Transaktion im Bereich des Batchs verwaltet. Dieser Transaktionstyp wurde in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] neu eingeführt, um vorhandene, gut konzipierte gespeicherte Prozeduren verwenden zu können, wenn MARS aktiviert ist. Weitere Informationen über Transaktionen im batchbereich finden Sie unter [Transaktionsanweisungen &#40;Transact-SQL&#41;](~/t-sql/statements/statements.md).  
   
  Ein Beispiel der Verwendung von MARS aus ADO finden Sie unter [mithilfe von ADO mit SQL Server Native Client](../../../relational-databases/native-client/applications/using-ado-with-sql-server-native-client.md).  
   
@@ -116,7 +117,7 @@ Data Source=MSSQL; Initial Catalog=AdventureWorks; Integrated Security=SSPI; Mul
   
  **MARS und columnstore-Indizes**  
   
- SQL Server (ab 2016) unterstützt MARS mit columnstore-Indizes. SQL Server 2014 verwendet MARS für schreibgeschützte Verbindungen zu Tabellen mit einem columnstore-Index.    SQL Server 2014 unterstützt jedoch nicht MARS für gleichzeitige Data Manipulation Language (DML)-Vorgängen für eine Tabelle mit einem columnstore-Index. In diesem Fall wird SQL Server beendet die Verbindungen und Transaktionen abgebrochen.   SQL Server 2012 wurde nur-Lese columnstore-Indizes und MARS gilt nicht für sie.  
+ SQL Server (ab 2016) unterstützt MARS mit columnstore-Indizes. SQL Server 2014 verwendet MARS für schreibgeschützte Verbindungen mit Tabellen mit einem Columnstore-Index.    SQL Server 2014 unterstützt MARS jedoch nicht für gleichzeitige DML-Vorgänge (Data Manipulation Language, Datenbearbeitungssprache) für eine Tabelle mit einem Columnstore-Index. In diesem Fall wird SQL Server beendet die Verbindungen und Transaktionen abgebrochen.   SQL Server 2012 wurde nur-Lese columnstore-Indizes und MARS gilt nicht für sie.  
   
 ## <a name="sql-server-native-client-ole-db-provider"></a>SQL Server Native Client OLE DB-Anbieter  
  Die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter unterstützt MARS durch Hinzufügen der SSPROP_INIT_MARSCONNECTION Initialisierungseigenschaft-Datenquellen, die in der Eigenschaftengruppe DBPROPSET_SQLSERVERDBINIT implementiert wird. Darüber hinaus eine neue Verbindungszeichenfolgen-Schlüsselwort, **MarsConn**aufgenommen wurde. Er akzeptiert **"true"** oder **"false"** Werte. **"false"** ist die Standardeinstellung.  

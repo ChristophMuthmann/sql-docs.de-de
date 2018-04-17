@@ -1,5 +1,5 @@
 ---
-title: sys.pdw_nodes_column_store_segments (Transact-SQL) | Microsoft Docs
+title: Sys.pdw_nodes_column_store_segments (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/28/2018
 ms.prod: ''
@@ -20,13 +20,14 @@ author: hirokib
 ms.author: elbutter;barbkess
 manager: jrj
 ms.workload: Inactive
-ms.openlocfilehash: 8e3daa47eea78bb90c736a42e7e541bea62e5ac4
-ms.sourcegitcommit: 9f4330a4b067deea396b8567747a6771f35e6eee
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
+ms.openlocfilehash: 6096185bec4378bd5d6b2f478796f8a2e34f5e1d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="syspdwnodescolumnstoresegments-transact-sql"></a>sys.pdw_nodes_column_store_segments (Transact-SQL)
+# <a name="syspdwnodescolumnstoresegments-transact-sql"></a>Sys.pdw_nodes_column_store_segments (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
 Enthält eine Zeile für jede Spalte in einem columnstore-Index.  
@@ -89,7 +90,7 @@ ORDER BY    table_nm
 
 ## <a name="see-also"></a>Siehe auch  
  [SQL Datawarehouse und Parallel Datawarehouse-Katalogsichten](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
- [CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)   
+ [Erstellen von columnstore-INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)   
  [sys.pdw_nodes_column_store_row_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-row-groups-transact-sql.md)   
  [sys.pdw_nodes_column_store_dictionaries &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-dictionaries-transact-sql.md)  
 

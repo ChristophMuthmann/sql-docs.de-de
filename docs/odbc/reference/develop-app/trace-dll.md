@@ -1,30 +1,31 @@
 ---
 title: Verfolgen Sie die DLL | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - trace DLLs [ODBC]
 - tracing options [ODBC], trace DLLs
 ms.assetid: 5ab99bd3-cdc3-4e2c-8827-932d1fcb6e00
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f7eb679c8d7182dd0edd3a96caafa824a8722962
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 0ad14958f2dc3967fe8bc041c8144f932b99ec5a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="trace-dll"></a>Trace-DLL
 Die DLL, die von der Ablaufverfolgung ist der ODBC-Kernkomponenten. Die Ablaufverfolgung, die DLL wird derzeit als eine DLL-Beispiel in der ODBC-Komponente des Windows SDK bereitgestellt und wurde, enthalten früher Microsoft Data Access Components (MDAC) SDK. Daher sind der Registrierungseintrag, Schnittstelle und Beispielcode für die Ablaufverfolgung DLL verfügbar. Diese DLL kann von einer Ablaufverfolgung durch einen ODBC-Benutzer oder einem Drittanbieter erstellte DLL ersetzt werden. Eine benutzerdefinierte Ablaufverfolgung DLL Unternehmensservern benötigen einen anderen Namen als die ursprüngliche Beispiel Ablaufverfolgung DLL. Trace-DLLs im Verzeichnis "System" installiert werden müssen, oder sie können nicht geladen werden. Verbindungszeichenfolgen für die Verbindung werden nicht in die Ablaufverfolgung DLL vom Treiber-Manager übergeben.  

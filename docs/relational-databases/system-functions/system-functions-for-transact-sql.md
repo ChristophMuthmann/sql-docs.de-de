@@ -1,32 +1,32 @@
 ---
-title: Systemfunktionen (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: Systemfunktionen (Transact-SQL) | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 11/02/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 helpviewer_keywords:
 - system stored functions [SQL Server]
 ms.assetid: 8ad860e7-e054-4186-80a2-03977e42531d
-caps.latest.revision: 
+caps.latest.revision: 15
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 19d3881db4d3c5e199c1c34c10af14d369936459
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 72b090182b17ca40266e686ad725f238c6e94087
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="system-functions-for-transact-sql"></a>Systemfunktionen für Transact-SQL
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

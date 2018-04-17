@@ -1,16 +1,16 @@
 ---
 title: ROUTINEN (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: system-information-schema-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ROUTINES_TSQL
@@ -21,16 +21,17 @@ helpviewer_keywords:
 - ROUTINES view
 - INFORMATION_SCHEMA.ROUTINES view
 ms.assetid: c75561b2-c9a1-48a1-9afa-a5896b6454cf
-caps.latest.revision: 
+caps.latest.revision: 50
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 159bcda90286cfe2582cd88f41c39e682bf2097e
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: caf1f7cc37ab428b4f5c0ec1c57fdb0fbed4b214
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="routines-transact-sql"></a>ROUTINES (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -45,10 +46,10 @@ ms.lasthandoff: 11/21/2017
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |SPECIFIC_CATALOG|**Nvarchar (**128**)**|Spezifischer Name des Katalogs. Dieser Name ist derselbe wie für ROUTINE_CATALOG.|  
-|SPECIFIC_SCHEMA|**Nvarchar (**128**)**|Spezifischer Name des Schemas.<br /><br /> **\*\*Wichtige \* \***  verwenden Sie keine INFORMATION_SCHEMA-Sichten, die um das Schema eines Objekts zu bestimmen. Die einzig zuverlässige Möglichkeit zum Finden des Schemas eines Objekts besteht darin, die sys.objects-Katalogsicht abzufragen.|  
+|SPECIFIC_SCHEMA|**Nvarchar (**128**)**|Spezifischer Name des Schemas.<br /><br /> **\*\* Wichtige \* \***  verwenden Sie keine INFORMATION_SCHEMA-Sichten, die um das Schema eines Objekts zu bestimmen. Die einzig zuverlässige Möglichkeit zum Finden des Schemas eines Objekts besteht darin, die sys.objects-Katalogsicht abzufragen.|  
 |SPECIFIC_NAME|**Nvarchar (**128**)**|Spezifischer Name des Katalogs. Dieser Name ist derselbe wie für ROUTINE_NAME.|  
 |ROUTINE_CATALOG|**Nvarchar (**128**)**|Katalogname der Funktion.|  
-|ROUTINE_SCHEMA|**Nvarchar (**128**)**|Name des Schemas, das diese Funktion enthält.<br /><br /> **\*\*Wichtige \* \***  verwenden Sie keine INFORMATION_SCHEMA-Sichten, die um das Schema eines Objekts zu bestimmen. Die einzig zuverlässige Möglichkeit zum Finden des Schemas eines Objekts besteht darin, die sys.objects-Katalogsicht abzufragen.|  
+|ROUTINE_SCHEMA|**Nvarchar (**128**)**|Name des Schemas, das diese Funktion enthält.<br /><br /> **\*\* Wichtige \* \***  verwenden Sie keine INFORMATION_SCHEMA-Sichten, die um das Schema eines Objekts zu bestimmen. Die einzig zuverlässige Möglichkeit zum Finden des Schemas eines Objekts besteht darin, die sys.objects-Katalogsicht abzufragen.|  
 |ROUTINE_NAME|**Nvarchar (**128**)**|Name der Funktion.|  
 |ROUTINE_TYPE|**Nvarchar (**20**)**|Gibt PROCEDURE für gespeicherte Prozeduren und FUNCTION für Funktionen zurück.|  
 |MODULE_CATALOG|**Nvarchar (**128**)**|NULL. Zur künftigen Verwendung reserviert.|  
@@ -97,10 +98,10 @@ ms.lasthandoff: 11/21/2017
 |LAST_ALTERED|**datetime**|Zeitpunkt der letzten Änderung der Funktion.|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Systemsichten &#40; Transact-SQL &#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
- [Informationsschemasichten &#40; Transact-SQL &#41;](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)   
+ [Systemsichten &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
+ [Informationsschemasichten &#40;Transact-SQL&#41;](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)   
  [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
- [Sys.Objects &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
+ [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
  [sys.procedures &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-procedures-transact-sql.md)   
  [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)  
   

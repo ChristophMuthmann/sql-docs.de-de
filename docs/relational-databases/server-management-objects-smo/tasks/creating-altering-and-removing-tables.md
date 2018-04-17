@@ -1,35 +1,37 @@
 ---
-title: "Erstellen, ändern und Löschen von Tabellen | Microsoft Docs"
-ms.custom: 
+title: Erstellen, ändern und Löschen von Tabellen | Microsoft Docs
+ms.custom: ''
 ms.date: 08/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: smo
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - tables [SMO]
 ms.assetid: ff0bcfff-812f-4999-b0c7-736a97804c2b
-caps.latest.revision: 
+caps.latest.revision: 48
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 18973e4478424fa37d6d769cc1fecbaf692a512b
-ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
+monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 9731e726c4874d7a7d703256e247db188d54e23c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="creating-altering-and-removing-tables"></a>Erstellen, Ändern und Löschen von Tabellen
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects (SMO) werden Tabellen durch dargestellt die <xref:Microsoft.SqlServer.Management.Smo.Table> Objekt. In der SMO-Objekthierarchie befindet sich das <xref:Microsoft.SqlServer.Management.Smo.Table>-Objekt unter dem <xref:Microsoft.SqlServer.Management.Smo.Database>-Objekt.  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+  In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects (SMO) werden Tabellen durch dargestellt die <xref:Microsoft.SqlServer.Management.Smo.Table> Objekt. In der SMO-Objekthierarchie befindet sich das <xref:Microsoft.SqlServer.Management.Smo.Table>-Objekt unter dem <xref:Microsoft.SqlServer.Management.Smo.Database>-Objekt.  
   
 ## <a name="example"></a>Beispiel  
- Um die bereitgestellten Codebeispiele verwenden zu können, müssen Sie die Programmierumgebung, die Vorlage und die Programmiersprache wählen, in denen die Anwendung erstellt werden soll. Weitere Informationen finden Sie unter [Erstellen eines Visual C &#35; SMO-Projekts in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Um die bereitgestellten Codebeispiele verwenden zu können, müssen Sie die Programmierumgebung, die Vorlage und die Programmiersprache wählen, in denen die Anwendung erstellt werden soll. Weitere Informationen finden Sie unter [Erstellen eines Visual C&#35; SMO-Projekts in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="creating-altering-and-removing-a-table-in-visual-basic"></a>Erstellen, Ändern und Löschen einer Tabelle in Visual Basic  
  In diesem Codebeispiel wird eine Tabelle erstellt, die über mehrere Spalten mit unterschiedlichen Typen und Zwecken verfügt. Der Code bietet darüber hinaus Beispiele dafür, wie ein Identitätsfeld und ein Primärschlüssel erstellt und wie Tabelleneigenschaften geändert werden.  

@@ -1,16 +1,16 @@
 ---
 title: Sys. dm_db_wait_stats (Azure SQL-Datenbank) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: 
+ms.prod: ''
 ms.prod_service: sql-database
-ms.reviewer: 
+ms.reviewer: ''
 ms.service: sql-database
 ms.component: dmv's
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_db_wait_stats_TSQL
@@ -23,16 +23,17 @@ helpviewer_keywords:
 - sys.dm_db_wait_stats dynamic management view
 - dm_db_wait_stats
 ms.assetid: 00abd0a5-bae0-4d71-b173-f7a14cddf795
-caps.latest.revision: 
+caps.latest.revision: 15
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d4d15404469382da4d8ab135e0619f4d6a9360d0
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
+ms.openlocfilehash: 4e1545f2df00c9f3ddfb66d5b3b84424e5b3ce7f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmdbwaitstats-azure-sql-database"></a>sys.dm_db_wait_stats (Azure SQL-Datenbank)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -70,7 +71,7 @@ ms.lasthandoff: 02/03/2018
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die VIEW DATABASE STATE-Berechtigung auf dem Server.  
   
-##  <a name="WaitTypes"></a>Wartetypen  
+##  <a name="WaitTypes"></a> Wartetypen  
  Ressourcenwartevorgänge  
  Ressourcenwartevorgänge finden dann statt, wenn ein Arbeitsthread den Zugriff auf eine Ressource anfordert, die nicht verfügbar ist, da sie von einem anderen Arbeitsthread verwendet wird oder noch nicht zur Verfügung steht. Beispiele für Ressourcenwartevorgänge sind Sperren, Latches, Netzwerk- und Datenträger-E/A-Wartevorgänge. Sperren und Latchwartevorgänge sind Vorgänge, die auf Synchronisierungsobjekte warten.  
   
@@ -200,27 +201,27 @@ ms.lasthandoff: 02/03/2018
 |LATCH_SH|Tritt beim Warten auf einen SH-Latch (gemeinsamen Latch) auf. Dazu gehören keine Pufferlatches oder Transaktionsmarkierungslatches. Eine Liste von LATCH_*-Wartevorgängen ist in sys.dm_os_latch_stats verfügbar. Beachten Sie, dass sys.dm_os_latch_stats die Wartevorgänge LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX und LATCH_DT in einer Gruppe zusammenfasst.|  
 |LATCH_UP|Tritt beim Warten auf einen UP-Latch (Updatelatch) auf. Dazu gehören keine Pufferlatches oder Transaktionsmarkierungslatches. Eine Liste von LATCH_*-Wartevorgängen ist in sys.dm_os_latch_stats verfügbar. Beachten Sie, dass sys.dm_os_latch_stats die Wartevorgänge LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX und LATCH_DT in einer Gruppe zusammenfasst.|  
 |LAZYWRITER_SLEEP|Tritt auf, wenn Tasks für verzögertes Schreiben angehalten werden. Dieser Wartetyp gibt die Zeitdauer von wartenden Hintergrundtasks an. Wenn Sie nach durch den Benutzer bedingtem Hängen des Computers suchen, sollten Sie diesen Status nicht verwenden.|  
-|LCK_M_BU|Tritt auf, wenn ein Task darauf wartet, eine Massenupdatesperre (BU-Sperre) abzurufen. Einer der sperrenkompatibilität finden Sie unter [Sys. dm_tran_locks &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_IS|Tritt auf, wenn ein Task darauf wartet, eine beabsichtigte gemeinsame Sperre (IS-Sperre) abzurufen. Einer der sperrenkompatibilität finden Sie unter [Sys. dm_tran_locks &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_IU|Tritt auf, wenn ein Task darauf wartet, eine beabsichtigte Updatesperre (IU-Sperre) abzurufen. Einer der sperrenkompatibilität finden Sie unter [Sys. dm_tran_locks &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_IX|Tritt auf, wenn ein Task darauf wartet, eine beabsichtigte exklusive Sperre (IX-Sperre) abzurufen. Einer der sperrenkompatibilität finden Sie unter [Sys. dm_tran_locks &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_RIn_NL|Tritt auf, wenn ein Task darauf wartet, eine NULL-Sperre für den aktuellen Schlüsselwert und eine Einfügungssperre zwischen dem aktuellen und dem vorherigen Schlüssel abzurufen. Eine NULL-Sperre für den Schlüssel ist eine Sperre, die sofort aufgehoben wird. Einer der sperrenkompatibilität finden Sie unter [Sys. dm_tran_locks &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_RIn_S|Tritt auf, wenn ein Task darauf wartet, eine gemeinsame Sperre für den aktuellen Schlüsselwert und eine Einfügungssperre zwischen dem aktuellen und dem vorherigen Schlüssel abzurufen. Einer der sperrenkompatibilität finden Sie unter [Sys. dm_tran_locks &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_RIn_U|Ein Task wartet darauf, eine Updatesperre für den aktuellen Schlüsselwert und eine Einfügungssperre zwischen dem aktuellen und dem vorherigen Schlüssel abzurufen. Einer der sperrenkompatibilität finden Sie unter [Sys. dm_tran_locks &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_RIn_X|Tritt auf, wenn ein Task darauf wartet, eine exklusive Sperre für den aktuellen Schlüsselwert und eine Einfügungssperre zwischen dem aktuellen und dem vorherigen Schlüssel abzurufen. Einer der sperrenkompatibilität finden Sie unter [Sys. dm_tran_locks &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_RS_S|Tritt auf, wenn ein Task darauf wartet, eine gemeinsame Sperre für den aktuellen Schlüsselwert und eine freigegebene Bereichssperre zwischen dem aktuellen und dem vorherigen Schlüssel abzurufen. Einer der sperrenkompatibilität finden Sie unter [Sys. dm_tran_locks &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_RS_U|Tritt auf, wenn ein Task darauf wartet, eine Updatesperre für den aktuellen Schlüsselwert und eine Bereichsupdatesperre zwischen dem aktuellen und dem vorherigen Schlüssel abzurufen. Einer der sperrenkompatibilität finden Sie unter [Sys. dm_tran_locks &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_RX_S|Tritt auf, wenn ein Task darauf wartet, eine gemeinsame Sperre für den aktuellen Schlüsselwert und eine exklusive Bereichssperre zwischen dem aktuellen und dem vorherigen Schlüssel abzurufen. Einer der sperrenkompatibilität finden Sie unter [Sys. dm_tran_locks &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_RX_U|Tritt auf, wenn ein Task darauf wartet, eine Updatesperre für den aktuellen Schlüsselwert und eine exklusive Bereichssperre zwischen dem aktuellen und dem vorherigen Schlüssel abzurufen. Einer der sperrenkompatibilität finden Sie unter [Sys. dm_tran_locks &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_RX_X|Tritt auf, wenn ein Task darauf wartet, eine exklusive Sperre für den aktuellen Schlüsselwert und eine exklusive Bereichssperre zwischen dem aktuellen und dem vorherigen Schlüssel abzurufen. Einer der sperrenkompatibilität finden Sie unter [Sys. dm_tran_locks &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_S|Tritt auf, wenn ein Task darauf wartet, eine gemeinsame Sperre abzurufen. Einer der sperrenkompatibilität finden Sie unter [Sys. dm_tran_locks &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_SCH_M|Tritt auf, wenn ein Task darauf wartet, eine Schemaänderungssperre abzurufen. Einer der sperrenkompatibilität finden Sie unter [Sys. dm_tran_locks &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_SCH_S|Tritt auf, wenn ein Task darauf wartet, eine gemeinsame Schemasperre abzurufen. Einer der sperrenkompatibilität finden Sie unter [Sys. dm_tran_locks &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_SIU|Tritt auf, wenn ein Task darauf wartet, eine gemeinsame Sperre mit beabsichtigter Updatesperre abzurufen. Einer der sperrenkompatibilität finden Sie unter [Sys. dm_tran_locks &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_SIX|Tritt auf, wenn ein Task darauf wartet, eine gemeinsame Sperre mit beabsichtigter exklusiver Sperre abzurufen. Einer der sperrenkompatibilität finden Sie unter [Sys. dm_tran_locks &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_U|Tritt auf, wenn ein Task darauf wartet, eine Updatesperre abzurufen. Einer der sperrenkompatibilität finden Sie unter [Sys. dm_tran_locks &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_UIX|Tritt auf, wenn ein Task darauf wartet, eine Updatesperre mit beabsichtigter exklusiver Sperre abzurufen. Einer der sperrenkompatibilität finden Sie unter [Sys. dm_tran_locks &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_X|Tritt auf, wenn ein Task darauf wartet, eine exklusive Sperre abzurufen. Einer der sperrenkompatibilität finden Sie unter [Sys. dm_tran_locks &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_BU|Tritt auf, wenn ein Task darauf wartet, eine Massenupdatesperre (BU-Sperre) abzurufen. Einer der sperrenkompatibilität finden Sie unter [Sys. dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_IS|Tritt auf, wenn ein Task darauf wartet, eine beabsichtigte gemeinsame Sperre (IS-Sperre) abzurufen. Einer der sperrenkompatibilität finden Sie unter [Sys. dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_IU|Tritt auf, wenn ein Task darauf wartet, eine beabsichtigte Updatesperre (IU-Sperre) abzurufen. Einer der sperrenkompatibilität finden Sie unter [Sys. dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_IX|Tritt auf, wenn ein Task darauf wartet, eine beabsichtigte exklusive Sperre (IX-Sperre) abzurufen. Einer der sperrenkompatibilität finden Sie unter [Sys. dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_RIn_NL|Tritt auf, wenn ein Task darauf wartet, eine NULL-Sperre für den aktuellen Schlüsselwert und eine Einfügungssperre zwischen dem aktuellen und dem vorherigen Schlüssel abzurufen. Eine NULL-Sperre für den Schlüssel ist eine Sperre, die sofort aufgehoben wird. Einer der sperrenkompatibilität finden Sie unter [Sys. dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_RIn_S|Tritt auf, wenn ein Task darauf wartet, eine gemeinsame Sperre für den aktuellen Schlüsselwert und eine Einfügungssperre zwischen dem aktuellen und dem vorherigen Schlüssel abzurufen. Einer der sperrenkompatibilität finden Sie unter [Sys. dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_RIn_U|Ein Task wartet darauf, eine Updatesperre für den aktuellen Schlüsselwert und eine Einfügungssperre zwischen dem aktuellen und dem vorherigen Schlüssel abzurufen. Einer der sperrenkompatibilität finden Sie unter [Sys. dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_RIn_X|Tritt auf, wenn ein Task darauf wartet, eine exklusive Sperre für den aktuellen Schlüsselwert und eine Einfügungssperre zwischen dem aktuellen und dem vorherigen Schlüssel abzurufen. Einer der sperrenkompatibilität finden Sie unter [Sys. dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_RS_S|Tritt auf, wenn ein Task darauf wartet, eine gemeinsame Sperre für den aktuellen Schlüsselwert und eine freigegebene Bereichssperre zwischen dem aktuellen und dem vorherigen Schlüssel abzurufen. Einer der sperrenkompatibilität finden Sie unter [Sys. dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_RS_U|Tritt auf, wenn ein Task darauf wartet, eine Updatesperre für den aktuellen Schlüsselwert und eine Bereichsupdatesperre zwischen dem aktuellen und dem vorherigen Schlüssel abzurufen. Einer der sperrenkompatibilität finden Sie unter [Sys. dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_RX_S|Tritt auf, wenn ein Task darauf wartet, eine gemeinsame Sperre für den aktuellen Schlüsselwert und eine exklusive Bereichssperre zwischen dem aktuellen und dem vorherigen Schlüssel abzurufen. Einer der sperrenkompatibilität finden Sie unter [Sys. dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_RX_U|Tritt auf, wenn ein Task darauf wartet, eine Updatesperre für den aktuellen Schlüsselwert und eine exklusive Bereichssperre zwischen dem aktuellen und dem vorherigen Schlüssel abzurufen. Einer der sperrenkompatibilität finden Sie unter [Sys. dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_RX_X|Tritt auf, wenn ein Task darauf wartet, eine exklusive Sperre für den aktuellen Schlüsselwert und eine exklusive Bereichssperre zwischen dem aktuellen und dem vorherigen Schlüssel abzurufen. Einer der sperrenkompatibilität finden Sie unter [Sys. dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_S|Tritt auf, wenn ein Task darauf wartet, eine gemeinsame Sperre abzurufen. Einer der sperrenkompatibilität finden Sie unter [Sys. dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_SCH_M|Tritt auf, wenn ein Task darauf wartet, eine Schemaänderungssperre abzurufen. Einer der sperrenkompatibilität finden Sie unter [Sys. dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_SCH_S|Tritt auf, wenn ein Task darauf wartet, eine gemeinsame Schemasperre abzurufen. Einer der sperrenkompatibilität finden Sie unter [Sys. dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_SIU|Tritt auf, wenn ein Task darauf wartet, eine gemeinsame Sperre mit beabsichtigter Updatesperre abzurufen. Einer der sperrenkompatibilität finden Sie unter [Sys. dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_SIX|Tritt auf, wenn ein Task darauf wartet, eine gemeinsame Sperre mit beabsichtigter exklusiver Sperre abzurufen. Einer der sperrenkompatibilität finden Sie unter [Sys. dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_U|Tritt auf, wenn ein Task darauf wartet, eine Updatesperre abzurufen. Einer der sperrenkompatibilität finden Sie unter [Sys. dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_UIX|Tritt auf, wenn ein Task darauf wartet, eine Updatesperre mit beabsichtigter exklusiver Sperre abzurufen. Einer der sperrenkompatibilität finden Sie unter [Sys. dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_X|Tritt auf, wenn ein Task darauf wartet, eine exklusive Sperre abzurufen. Einer der sperrenkompatibilität finden Sie unter [Sys. dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
 |LOG_RATE_GOVERNOR|Tritt auf, wenn die Datenbank auf ein Kontingent zum Schreiben des Protokolls wartet.|  
 |LOGBUFFER|Tritt auf, wenn ein Task auf Speicherplatz im Protokollpuffer zum Speichern eines Protokolldatensatzes wartet. Durchgehend hohe Werte können darauf hinweisen, dass die Protokollgeräte die Menge der vom Server generierten Protokolldaten nicht bewältigen können.|  
 |LOGGENERATION|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  

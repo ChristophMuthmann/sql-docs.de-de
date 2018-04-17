@@ -1,16 +1,16 @@
 ---
-title: "Behandeln von Parallelitätsproblemen in Updategrams (SQLXML 4.0) Datenbank | Microsoft Docs"
-ms.custom: 
+title: Behandeln von Parallelitätsproblemen in Updategrams (SQLXML 4.0) Datenbank | Microsoft Docs
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - <before> block
@@ -23,20 +23,21 @@ helpviewer_keywords:
 - concurrency [SQLXML]
 - intermediate concurrency protection [SQLXML]
 ms.assetid: d4b908d1-b25b-4ad9-8478-9cd882e8c44e
-caps.latest.revision: 
+caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1e19d8397d59b4c85d60593c63faa5bc6f0f2ea4
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 328bb2b98ffe4a6a266463aa8fe0d8348ebbd975
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="handling-database-concurrency-issues-in-updategrams-sqlxml-40"></a>Behandlungsdatenbankparallelität gibt in Updategrams (SQLXML 4.0) heraus
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Wie andere Datenbankupdatemechanismen müssen Updategrams gleichzeitige Updates von Daten in einer Mehrbenutzerumgebung verarbeiten können. Updategrams verwenden die Steuerung durch vollständige Parallelität, bei der ausgewählte Felddaten als Momentaufnahmen verglichen werden, um sicherzustellen, dass die zu aktualisierenden Daten seit ihrem letzten Abruf aus der Datenbank nicht von einer anderen Benutzeranwendung geändert wurden. Updategrams schließen diese momentaufnahmewerte in den  **\<vor >** -Block der Updategrams. Vor dem Aktualisieren der Datenbank, überprüft das Updategram die Werte, die im angegebenen der  **\<vor >** Block für den aktuellen Werten in der Datenbank, um sicherzustellen, dass das Update gültig ist.  
+  Wie andere Datenbankupdatemechanismen müssen Updategrams gleichzeitige Updates von Daten in einer Mehrbenutzerumgebung verarbeiten können. Updategrams verwenden die Steuerung durch vollständige Parallelität, bei der ausgewählte Felddaten als Momentaufnahmen verglichen werden, um sicherzustellen, dass die zu aktualisierenden Daten seit ihrem letzten Abruf aus der Datenbank nicht von einer anderen Benutzeranwendung geändert wurden. Updategrams schließen diese momentaufnahmewerte in den  **\<vor >** -Block der Updategrams. Vor dem Aktualisieren der Datenbank, überprüft das Updategram die Werte, die im angegebenen der  **\<vor >** Block für den aktuellen Werten in der Datenbank, um sicherzustellen, dass das Update gültig ist.  
   
  Die Steuerung durch vollständige Parallelität bietet drei Ebenen des Schutzes in einem Updategram: Niedrig (kein), mittel und hoch. Sie können entscheiden, welche Ebene des Schutzes Sie benötigen, indem Sie das Updategram entsprechend festlegen.  
   
@@ -195,6 +196,6 @@ Wie andere Datenbankupdatemechanismen müssen Updategrams gleichzeitige Updates 
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Sicherheitsüberlegungen zu Updategrams &#40; SQLXML 4.0 &#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
+ [Sicherheitsüberlegungen zu Updategrams &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
   
   

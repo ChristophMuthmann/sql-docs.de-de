@@ -1,16 +1,16 @@
 ---
 title: Sp_dropmergepartition (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,17 @@ f1_keywords:
 helpviewer_keywords:
 - sp_dropmergepartition
 ms.assetid: 1be511c1-79ff-4947-9379-78d83b7b8945
-caps.latest.revision: 
+caps.latest.revision: 30
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 07a21df98865031af637616abed3151785db68b5
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 8c1325d298eb41ae36d03b49fde4edae59c8a679
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spdropmergepartition-transact-sql"></a>sp_dropmergepartition (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -48,13 +49,13 @@ sp_dropmergepartition [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@publication** ] = **"***Veröffentlichung***"**  
+ [ **@publication**] = **"***Veröffentlichung***"**  
  Der Name der Veröffentlichung. *Veröffentlichung* ist **Sysname**, hat keinen Standardwert.  
   
- [  **@suser_sname** =] **"***Suser_sname***"**  
+ [ **@suser_sname**=] **"***Suser_sname***"**  
  Ist der Wert der [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md) -Funktion auf dem Abonnenten verwendet wird, um die Partition zu definieren. *SUSER_SNAME* ist **Sysname**, hat keinen Standardwert.  
   
- [  **@host_name**  =] **"***Host_name***"**  
+ [ **@host_name** =] **"***Host_name***"**  
  Ist der Wert der [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) -Funktion auf dem Abonnenten verwendet wird, um die Partition zu definieren. *HOST_NAME* ist **Sysname**, hat keinen Standardwert.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  

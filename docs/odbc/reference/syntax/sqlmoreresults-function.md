@@ -2,7 +2,7 @@
 title: SQLMoreResults-Funktion | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: bf169ed5-4d55-412c-b184-12065a726e89
 caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b1905665f1505cd484a6d2ab5c1f83008efc2298
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 032a1976d87f46072f594eb4e2336f9c1877dfdd
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlmoreresults-function"></a>SQLMoreResults-Funktion
 **Konformität**  
@@ -61,7 +61,7 @@ SQLRETURN SQLMoreResults(
 |SQLSTATE|Fehler|Description|  
 |--------------|-----------|-----------------|  
 |01000|Allgemeine Warnung|Treiberspezifische Meldung dient zu Informationszwecken. (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
-|01 S 02|Optionswert wurde geändert.|Der Wert eines Attributs Anweisung als Batch geändert wurde verarbeitet. (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
+|01S02|Optionswert wurde geändert.|Der Wert eines Attributs Anweisung als Batch geändert wurde verarbeitet. (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
 |08S01|Kommunikations-Verbindungsfehler|Die Verbindung zwischen dem Treiber und die Datenquelle mit der der Treiber verbunden wurde aufgetreten ist, bevor die Verarbeitung für die Funktion abgeschlossen.|  
 |40001|Serialisierungsfehler aufgetreten|Die Transaktion wurde aufgrund eines Deadlocks Ressource mit einer anderen Transaktion ein Rollback ausgeführt.|  
 |40003|Unbekannte Anweisungsvervollständigung|Fehler bei der zugeordnete Verbindung während der Ausführung dieser Funktion und der Status der Transaktion kann nicht bestimmt werden.|  

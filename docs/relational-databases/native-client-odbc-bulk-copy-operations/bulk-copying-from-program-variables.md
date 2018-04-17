@@ -1,15 +1,15 @@
 ---
 title: Massenkopieren aus Programmvariablen | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-odbc-bulk-copy-operations
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - bulk copy [ODBC], program variables
@@ -20,16 +20,17 @@ helpviewer_keywords:
 - ODBC, bulk copy operations
 - program variables [ODBC]
 ms.assetid: e4284a1b-7534-4b34-8488-b8d05ed67b8c
-caps.latest.revision: 
+caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 255e91a51f92c09f8ed1ba872cb5c8bdc052fd52
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 5f00c8542691fcbdd66e5a35151161b3a901f439
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="bulk-copying-from-program-variables"></a>Massenkopieren aus Programmvariablen
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -64,12 +65,12 @@ ms.lasthandoff: 01/25/2018
 |ODBC SQL-Datentyp|ODBC C-Datentyp|Bcp_bind *Typ* Parameter|SQL Server-Datentyp|  
 |-----------------------|----------------------|--------------------------------|--------------------------|  
 |SQL_CHAR|SQL_C_CHAR|SQLCHARACTER|**character**<br /><br /> **char**|  
-|SQL_VARCHAR|SQL_C_CHAR|SQLCHARACTER|**varchar**<br /><br /> **unterschiedliche Zeichen**<br /><br /> **Char varying**<br /><br /> **sysname**|  
+|SQL_VARCHAR|SQL_C_CHAR|SQLCHARACTER|**varchar**<br /><br /> **unterschiedliche Zeichen**<br /><br /> **char varying**<br /><br /> **sysname**|  
 |SQL_LONGVARCHAR|SQL_C_CHAR|SQLCHARACTER|**text**|  
 |SQL_WCHAR|SQL_C_WCHAR|SQLNCHAR|**nchar**|  
 |SQL_WVARCHAR|SQL_C_WCHAR|SQLNVARCHAR|**nvarchar**|  
 |SQL_WLONGVARCHAR|SQL_C_WCHAR|SQLNTEXT|**ntext**|  
-|SQL_DECIMAL|SQL_C_CHAR|SQLCHARACTER|**decimal**<br /><br /> **dec**<br /><br /> **money**<br /><br /> **smallmoney**|  
+|SQL_DECIMAL|SQL_C_CHAR|SQLCHARACTER|**decimal**<br /><br /> **DEC**<br /><br /> **money**<br /><br /> **smallmoney**|  
 |SQL_NUMERIC|SQL_C_NUMERIC|SQLNUMERICN|**numeric**|  
 |SQL_BIT|SQL_C_BIT|SQLBIT|**bit**|  
 |SQL_TINYINT (mit Vorzeichen)|SQL_C_SSHORT|SQLINT2|**smallint**|  
@@ -77,7 +78,7 @@ ms.lasthandoff: 01/25/2018
 |SQL_SMALL_INT (mit Vorzeichen)|SQL_C_SSHORT|SQLINT2|**smallint**|  
 |SQL_SMALL_INT (ohne Vorzeichen)|SQL_C_SLONG|SQLINT4|**int**<br /><br /> **integer**|  
 |SQL_INTEGER (mit Vorzeichen)|SQL_C_SLONG|SQLINT4|**int**<br /><br /> **integer**|  
-|SQL_INTEGER (ohne Vorzeichen)|SQL_C_CHAR|SQLCHARACTER|**decimal**<br /><br /> **dec**|  
+|SQL_INTEGER (ohne Vorzeichen)|SQL_C_CHAR|SQLCHARACTER|**decimal**<br /><br /> **DEC**|  
 |SQL_BIGINT (mit und ohne Vorzeichen)|SQL_C_CHAR|SQLCHARACTER|**bigint**|  
 |SQL_REAL|SQL_C_FLOAT|SQLFLT4|**real**|  
 |SQL_FLOAT|SQL_C_DOUBLE|SQLFLT8|**float**|  
@@ -91,7 +92,7 @@ ms.lasthandoff: 01/25/2018
 |SQL_GUID|SQL_C_GUID|SQLUNIQUEID|**uniqueidentifier**|  
 |SQL_INTERVAL_|SQL_C_CHAR|SQLCHARACTER|**char**|  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ist nicht signiert haben **"tinyint"**ohne Vorzeichen **"smallint"**, oder ohne Vorzeichen **Int** Datentypen. Um den Verlust von Datenwerten zu vermeiden, beim Migrieren dieser Datentypen, erstellen die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Tabelle mit dem nächstgrößeren ganzzahligen Datentyp. Um zu verhindern, dass Benutzer später Werte außerhalb des für den ursprünglichen Datentyp zulässigen Bereichs hinzufügen, wenden Sie eine Regel auf die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Spalte an, mit der die zulässigen Werte entsprechend eingeschränkt werden:  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ist nicht signiert haben **"tinyint"**ohne Vorzeichen **"smallint"**, oder ohne Vorzeichen **Int** Datentypen. Um den Verlust von Datenwerten zu vermeiden, beim Migrieren dieser Datentypen, erstellen die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Tabelle mit dem nächstgrößeren ganzzahligen Datentyp. Um zu verhindern, dass Benutzer später Werte außerhalb des für den ursprünglichen Datentyp zulässigen Bereichs hinzufügen, wenden Sie eine Regel auf die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Spalte an, mit der die zulässigen Werte entsprechend eingeschränkt werden:  
   
 ```  
 CREATE TABLE Sample_Ints(STinyIntCol   SMALLINT,  
@@ -111,7 +112,7 @@ sp_bindrule USmallInt_Rule, 'Sample_Ints.USmallIntCol'
 GO  
 ```  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Interval-Datentypen unterstützt nicht direkt. Eine Anwendung kann jedoch intervallescapesequenzen speichern, als Zeichenfolgen in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Zeichenspalte. Die Anwendung kann sie zur späteren Verwendung lesen, sie können aber nicht in [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen verwendet werden.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Interval-Datentypen unterstützt nicht direkt. Eine Anwendung kann jedoch intervallescapesequenzen speichern, als Zeichenfolgen in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Zeichenspalte. Die Anwendung kann sie zur späteren Verwendung lesen, sie können aber nicht in [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen verwendet werden.  
   
  Die Funktionen zum Massenkopieren verwendet werden können, zum schnellen Laden von Daten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , die aus einer ODBC-Datenquelle gelesen wurden. Verwenden Sie [SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md) verwenden, um die Spalten eines Resultsets an Programmvariablen zu binden, klicken Sie dann **Bcp_bind** dieselben Programmvariablen an einen Massenkopiervorgang zu binden. Aufrufen von [SQLFetchScroll](../../relational-databases/native-client-odbc-api/sqlfetchscroll.md) oder **SQLFetch** dann eine Zeile mit Daten aus der ODBC-Datenquelle abruft, in der Programmvariablen, und der Aufruf [Bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) Massenkopie der Daten aus den Programmvariablen nach [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -120,6 +121,6 @@ GO
  Sie können nicht gelesen werden Daten aus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in Programmvariablen mit Massenkopiervorgängen besteht wie eine "Bcp_readrow"-Funktion keine Aktion. Sie können nur Daten aus der Anwendung an den Server senden.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Ausführen von Massenkopiervorgängen &#40; ODBC &#41;](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)  
+ [Durchführen von Massenkopiervorgängen &#40;ODBC&#41;](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)  
   
   

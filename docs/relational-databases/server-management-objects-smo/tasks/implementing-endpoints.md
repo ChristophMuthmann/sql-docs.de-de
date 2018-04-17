@@ -1,29 +1,30 @@
 ---
 title: Implementieren von Endpunkten | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: smo
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - endpoints [SMO]
 ms.assetid: f8674dbb-9bc0-488f-9def-e9e0ce1ddf86
-caps.latest.revision: 
+caps.latest.revision: 45
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a1d8ce479654f80d54c1a5aef6fb63138e13dbc6
-ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
+monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 8693e688aa88e0551d129f3c9b2e0a7d636b2894
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="implementing-endpoints"></a>Implementieren von Endpunkten
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -55,7 +56,7 @@ ms.lasthandoff: 01/12/2018
  Wenn der Endpunkt erstellt wurde und vollständig definiert ist, kann Datenbankbenutzern, Gruppen, Rollen und Anmeldungen der Zugriff gewährt, aufgehoben oder verweigert werden.  
   
 ## <a name="example"></a>Beispiel  
- Für das folgende Codebeispiel müssen Sie die Programmierungsumgebung, die Programmiervorlage und die Programmiersprache auswählen, um Ihre Anwendung zu erstellen. Weitere Informationen finden Sie unter [Erstellen eines Visual C &#35; SMO-Projekts in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Für das folgende Codebeispiel müssen Sie die Programmierungsumgebung, die Programmiervorlage und die Programmiersprache auswählen, um Ihre Anwendung zu erstellen. Weitere Informationen finden Sie unter [Erstellen eines Visual C&#35; SMO-Projekts in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="creating-a-database-mirroring-endpoint-service-in-visual-basic"></a>Erstellen eines Datenbankspiegelungs-Endpunkt-Diensts in Visual Basic  
  Im Codebeispiel wird veranschaulicht, wie ein Datenbankspiegelungs-Endpunkt in SMO erstellt wird. Dies ist notwendig, bevor Sie einen Datenbankspiegel erstellen. Verwenden Sie <xref:Microsoft.SqlServer.Management.Smo.Database.IsMirroringEnabled%2A> und andere Eigenschaften auf dem <xref:Microsoft.SqlServer.Management.Smo.Database>-Objekt, um einen Datenbankspiegel zu erstellen.  

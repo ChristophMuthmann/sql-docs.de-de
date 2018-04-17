@@ -1,16 +1,16 @@
 ---
 title: Sp_changepublication (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/29/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changepublication
 ms.assetid: c36e5865-25d5-42b7-b045-dc5036225081
-caps.latest.revision: 
+caps.latest.revision: 42
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f05323e102e4f68d7281dd517eaee00abfcdcdc7
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 8db735195ad0667944ca3e3710e629791662fd7f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spchangepublication-transact-sql"></a>sp_changepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@publication =** ] **"***Veröffentlichung***"**  
+ [ **@publication =** ] **'***publication***'**  
  Der Name der Veröffentlichung. *Veröffentlichung* ist **Sysname**, hat den Standardwert NULL.  
   
  [  **@property =** ] **"***Eigenschaft***"**  
@@ -84,7 +84,7 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ||**Sub reinit**|Wenn für Updateabonnenten ein Konflikt auftritt, muss das Abonnement erneut initialisiert werden. Diese Eigenschaft kann nur geändert werden, wenn keine aktiven Abonnements vorhanden sind. Diese Option wird für Oracle-Verleger nicht unterstützt.|  
 ||**Sub wins**|Richtlinie zur Konfliktlösung für Updateabonnenten, bei der der Abonnent den Konflikt gewinnt. Diese Eigenschaft kann nur geändert werden, wenn keine aktiven Abonnements vorhanden sind. Diese Option wird für Oracle-Verleger nicht unterstützt.|  
 |**conflict_retention**||**Int** , der die Konfliktaufbewahrungsdauer in Tagen angibt. Die Standardaufbewahrungsdauer beträgt 14 Tage. **0** bedeutet, dass kein konfliktcleanup notwendig ist. Diese Option wird für Oracle-Verleger nicht unterstützt.|  
-|**Beschreibung**||Eine optionale Beschreibung der Veröffentlichung.|  
+|**description**||Eine optionale Beschreibung der Veröffentlichung.|  
 |**enabled_for_het_sub**|**true**|Aktiviert die Unterstützung von Nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Abonnenten durch die Veröffentlichung. **Enabled_for_het_sub** kann nicht geändert werden, wenn Abonnements für die Veröffentlichung vorhanden sind. Müssen Sie möglicherweise ausführen [gespeicherte Replikationsprozeduren (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) zur Einhaltung der folgenden Anforderungen vor der Einstellung **Enabled_for_het_sub** auf "true":<br /> - **Allow_queued_tran** muss **"false"**.<br /> - **Allow_sync_tran** muss **"false"**.<br /> Ändern von **Enabled_for_het_sub** auf **"true"** möglicherweise vorhandene veröffentlichungseinstellungen geändert. Weitere Informationen finden Sie unter [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md). Diese Eigenschaft kann für Nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Veröffentlichungen nicht geändert werden.|  
 ||**false**|Die Veröffentlichung unterstützt Nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Abonnenten nicht. Diese Eigenschaft kann für Nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Veröffentlichungen nicht geändert werden.|  
 |**enabled_for_internet**|**true**|Die Veröffentlichung ist für das Internet aktiviert. FTP (File Transfer Protocol) kann dazu verwendet werden, die Momentaufnahmedateien an einen Abonnenten zu übermitteln. Die Synchronisierungsdateien für die Veröffentlichung werden im folgenden Verzeichnis abgelegt: C:\Programme\Microsoft SQL Server\MSSQL\Repldata\ftp. *Ftp_address* darf nicht NULL sein. Diese Eigenschaft kann für Nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Veröffentlichungen nicht geändert werden.|  
@@ -106,8 +106,8 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 |**pre_snapshot_script**||Gibt den Speicherort einer Skriptdatei von [!INCLUDE[tsql](../../includes/tsql-md.md)] an, die der Verteilungs-Agent ausführt, bevor alle anderen Skripts für replizierte Objekte und Daten während der Anfangssynchronisierung angewendet wurden.|  
 |**publish_to_ActiveDirectory**|**true**|Dieser Parameter wurde als veraltet markiert und wird nur zum Sicherstellen der Abwärtskompatibilität von Skripts unterstützt. Für [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory ist das Hinzufügen von Veröffentlichungsinformationen nicht länger möglich.|  
 ||**false**|Entfernt die Veröffentlichungsinformationen aus Active Directory.|  
-|**Warteschlangentyp**|**SQL**|Verwendet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zum Speichern von Transaktionen. Diese Eigenschaft kann nur geändert werden, wenn keine aktiven Abonnements vorhanden sind.<br /><br /> Hinweis: Unterstützung für die Verwendung von [!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queuing wurde eingestellt. Angeben des Werts **Msmq** für *Wert* führt zu einem Fehler.|  
-|**repl_freq**|**fortlaufende**|Veröffentlicht die Ausgabe aller protokollbasierten Transaktionen.|  
+|**queue_type**|**sql**|Verwendet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zum Speichern von Transaktionen. Diese Eigenschaft kann nur geändert werden, wenn keine aktiven Abonnements vorhanden sind.<br /><br /> Hinweis: Unterstützung für die Verwendung von [!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queuing wurde eingestellt. Angeben des Werts **Msmq** für *Wert* führt zu einem Fehler.|  
+|**repl_freq**|**Fortlaufende**|Veröffentlicht die Ausgabe aller protokollbasierten Transaktionen.|  
 ||**Momentaufnahme**|Veröffentlicht nur geplante Synchronisierungsereignisse.|  
 |**replicate_ddl**|**1**|Auf dem Verleger ausgeführte Anweisungen der Datendefinitionssprache (DDL, Data Definition Language) werden repliziert. Diese Eigenschaft kann für Nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Veröffentlichungen nicht geändert werden.|  
 ||**0**|DDL-Anweisungen werden nicht repliziert. Diese Eigenschaft kann für Nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Veröffentlichungen nicht geändert werden. Die Replikation von Schemaänderungen kann nicht deaktiviert werden, wenn Peer-zu-Peer-Replikation verwendet wird.|  
@@ -116,10 +116,10 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 |**Beibehaltungsdauer**||**Int** , die Beibehaltungsdauer in Stunden für Abonnementaktivitäten darstellt. Wenn ein Abonnement innerhalb der Beibehaltungsdauer nicht aktiv ist, wird es entfernt.|  
 |**snapshot_in_defaultfolder**|**true**|Momentaufnahmedateien werden im Standardmomentaufnahmeordner gespeichert. Wenn *Alt_snapshot_folder*ebenfalls angegeben wird, werden momentaufnahmedateien in der Standardeinstellung und der alternativen Speicherorten gespeichert.|  
 ||**false**|Momentaufnahmedateien am alternativen Speicherort vom angegebenen gespeichert sind *Alt_snapshot_folder*.|  
-|**status**|**aktive**|Veröffentlichungsdaten sind für Abonnenten sofort beim Erstellen der Veröffentlichung verfügbar. Diese Option wird für Oracle-Verleger nicht unterstützt.|  
+|**status**|**Aktive**|Veröffentlichungsdaten sind für Abonnenten sofort beim Erstellen der Veröffentlichung verfügbar. Diese Option wird für Oracle-Verleger nicht unterstützt.|  
 ||**Inaktive**|Veröffentlichungsdaten sind für Abonnenten nicht beim Erstellen der Veröffentlichung verfügbar. Diese Option wird für Oracle-Verleger nicht unterstützt.|  
-|**sync_method**|**systemeigene**|Verwendet beim Synchronisieren von Abonnements eine Massenkopierausgabe aller Tabellen im einheitlichen Modus.|  
-||**Zeichen**|Verwendet beim Synchronisieren von Abonnements eine Massenkopierausgabe aller Tabellen im Zeichenmodus.|  
+|**sync_method**|**native**|Verwendet beim Synchronisieren von Abonnements eine Massenkopierausgabe aller Tabellen im einheitlichen Modus.|  
+||**character**|Verwendet beim Synchronisieren von Abonnements eine Massenkopierausgabe aller Tabellen im Zeichenmodus.|  
 ||**gleichzeitige**|Verwendet eine Massenkopierprogramm-Ausgabe aller Tabellen im einheitlichen Modus, sperrt jedoch die Tabellen beim Generieren der Momentaufnahme nicht. Nicht für die Momentaufnahmereplikation gültig.|  
 ||**' concurrent_c '**|Verwendet eine Massenkopierprogramm-Ausgabe aller Tabellen im Zeichenmodus, sperrt jedoch die Tabellen beim Generieren der Momentaufnahme nicht. Nicht für die Momentaufnahmereplikation gültig.|  
 |**Aufgaben-ID**||Diese Eigenschaft wurde als veraltet markiert und wird nicht mehr unterstützt.|  
@@ -138,7 +138,7 @@ Weitere Informationen zu den Eigenschaften, bei deren Änderung die Generierung 
   - **0** gibt an, dass Änderungen am Artikel nicht das Abonnement erneut initialisiert werden können. Wenn die gespeicherte Prozedur erkennt, dass die Änderung die Neuinitialisierung vorhandener Abonnements erfordert, tritt ein Fehler auf, und es werden keine Änderungen durchgeführt.  
   - **1** gibt an, dass Änderungen am Artikel bewirken, das vorhandene Abonnement erneut initialisiert werden dass, und die Berechtigung für den erneuten Initialisierung der Abonnements erteilt.  
   
-[  **@publisher**  =] **"***Publisher***"**  
+[ **@publisher** = ] **'***publisher***'**  
  Gibt einen Nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Verleger an. *Publisher* ist **Sysname**, hat den Standardwert NULL.  
   
   > [!NOTE]  
@@ -180,8 +180,8 @@ Zum Auflisten von veröffentlichungsobjekten in Active Directory mit den **Publi
 ## <a name="see-also"></a>Siehe auch  
  [Anzeigen und Ändern von Veröffentlichungseigenschaften](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [Ändern von Veröffentlichungs- und Artikeleigenschaften](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
- [Sp_addpublication &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   
- [Sp_droppublication &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-droppublication-transact-sql.md)   
+ [sp_addpublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   
+ [Sp_droppublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droppublication-transact-sql.md)   
  [sp_helppublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)   
  [Gespeicherte Automatisierungsprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   

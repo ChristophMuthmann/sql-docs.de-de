@@ -1,16 +1,16 @@
 ---
-title: "srv_rpcoptions (API für erweiterte gespeicherte Prozeduren) | Microsoft-Dokumentation"
-ms.custom: 
+title: srv_rpcoptions (API für erweiterte gespeicherte Prozeduren) | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: extended-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - srv_rpcoptions
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - srv_rpcoptions
 ms.assetid: dbcce5d1-d5a1-4379-9597-04e43af5923d
-caps.latest.revision: 
+caps.latest.revision: 30
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 151157986bee12807eccf4919248fbeb7dbcc29a
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
-ms.translationtype: MT
+ms.openlocfilehash: fc2f288092e7e10c41dbdd84064bff4671dccf73
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="srvrpcoptions-extended-stored-procedure-api"></a>srv_rpcoptions (API für erweiterte gespeicherte Prozeduren)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ srvproc
 ## <a name="returns"></a>Rückgabewert  
  Eine Bitmap mit den in einer logischen Darstellung ODER für die derzeit remote gespeicherte Prozedur verbundenen Laufzeitflags. Wenn keine aktuelle remote gespeicherte Prozedur vorhanden ist, wird 0 zurückgegeben und eine Meldung generiert.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Hinweise  
  In der folgenden Tabelle werden die einzelnen Laufzeitflags beschrieben.  
   
 |Laufzeitflag|Description|  

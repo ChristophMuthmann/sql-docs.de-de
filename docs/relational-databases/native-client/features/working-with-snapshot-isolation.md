@@ -1,15 +1,15 @@
 ---
 title: Arbeiten mit Snapshot-Isolation | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client|features
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - data access [SQL Server Native Client], snapshot isolation
@@ -25,16 +25,17 @@ helpviewer_keywords:
 - concurrency [SQL Server Native Client]
 - SQLSetConnectAttr function
 ms.assetid: 39e87eb1-677e-45dd-bc61-83a4025a7756
-caps.latest.revision: 
+caps.latest.revision: 29
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 848b9654969eac2a75171f1987d463ef21582736
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: a36c899674aab66bad87f2d8ce4ae16b967136a7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="working-with-snapshot-isolation"></a>Arbeiten mit Momentaufnahmeisolation
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

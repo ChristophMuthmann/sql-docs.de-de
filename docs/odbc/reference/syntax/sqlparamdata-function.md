@@ -2,7 +2,7 @@
 title: SQLParamData-Funktion | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 68fe010d-9539-4e5b-a260-c8d32423b1db
 caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4449d7b0af1c8138680d11b71b0a696d5f2d65fa
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 395cf795659b47398639f30fbd863b1f2d385e55
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlparamdata-function"></a>SQLParamData-Funktion
 **Konformität**  
@@ -73,7 +73,7 @@ SQLRETURN SQLParamData(
 |HY000|Allgemeiner Fehler|Für die es keine spezifischen SQLSTATE wurde und für die keine implementierungsabhängige SQLSTATE definiert wurde, ist ein Fehler aufgetreten. Die zurückgegebene Fehlermeldung **SQLGetDiagRec** in der  *\*MessageText* Puffer beschreibt den Fehler und seiner Ursache.|  
 |HY001|Fehler bei der speicherbelegung|Der Treiber konnte nicht belegt werden, die zur Unterstützung der Ausführung oder den Abschluss der Funktion erforderlich ist.|  
 |HY008|Der Vorgang wurde abgebrochen|Asynchroner Verarbeitung wurde aktiviert, für die *StatementHandle*. Die Funktion aufgerufen wurde, und die Ausführung vor Abschluss **SQLCancel** oder **SQLCancelHandle** aufgerufen wurde, auf die *StatementHandle*; die Funktion wurde dann erneut auf aufgerufen die *StatementHandle*.<br /><br /> Die Funktion aufgerufen wurde, und die Ausführung vor Abschluss **SQLCancel** oder **SQLCancelHandle** aufgerufen wurde, auf die *StatementHandle* aus einem anderen Thread in einem Multithread-Anwendung.|  
-|HY010|Fehler bei Funktionssequenz|(DM) der vorherigen Funktionsaufruf war keinen Aufruf von **SQLExecDirect**, **SQLExecute**, **SQLBulkOperations**, oder **SQLSetPos** , in denen die Zurückgeben von Code war SQL_NEED_DATA oder der letzten Funktionsaufruf einen Aufruf von **SQLPutData**.<br /><br /> Die vorherigen Funktionsaufruf wurde ein Aufruf von **SQLParamData**.<br /><br /> (DM) eine asynchron ausgeführte Funktion das, das zugeordnete Verbindungshandle hieß die *StatementHandle*. Diese asynchronen Funktion wurde weiterhin ausgeführt, wenn die **SQLParamData** Funktion aufgerufen wurde.<br /><br /> (DM) hieß eine asynchron ausgeführte Funktion (nicht auf dieses Objekt) für die *StatementHandle* und wurde noch ausgeführt werden, wenn diese Funktion aufgerufen wurde.<br /><br /> **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, oder **SQLSetPos** wurde aufgerufen, die *StatementHandle* und zurückgegebenen SQL_NEED_DATA zurück. **SQLCancel** wurde aufgerufen, bevor die Daten für alle Data-at-Execution-Parameter oder Spalten gesendet wurden.|  
+|HY010|Fehler bei Funktionssequenz|(DM) der vorherigen Funktionsaufruf war keinen Aufruf von **SQLExecDirect**, **SQLExecute**, **SQLBulkOperations**, oder **SQLSetPos** , in denen die Zurückgeben von Code war SQL_NEED_DATA oder der letzten Funktionsaufruf einen Aufruf von **SQLPutData**.<br /><br /> Die vorherigen Funktionsaufruf wurde ein Aufruf von **SQLParamData**.<br /><br /> (DM) eine asynchron ausgeführte Funktion das, das zugeordnete Verbindungshandle hieß die *StatementHandle*. Diese asynchronen Funktion wurde weiterhin ausgeführt, wenn die **SQLParamData** Funktion aufgerufen wurde.<br /><br /> (DM) hieß eine asynchron ausgeführte Funktion (nicht auf dieses Objekt) für die *StatementHandle* und wurde noch ausgeführt werden, wenn diese Funktion aufgerufen wurde.<br /><br /> **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, oder **SQLSetPos** wurde aufgerufen, die *StatementHandle* und zurückgegebene SQL_NEED_DATA zurück. **SQLCancel** wurde aufgerufen, bevor die Daten für alle Data-at-Execution-Parameter oder Spalten gesendet wurden.|  
 |HY013|Speicherverwaltungsfehler|Der Funktionsaufruf konnte nicht verarbeitet werden, da die zugrunde liegenden Speicherobjekte, möglicherweise aufgrund von unzureichendem Speicher konnte nicht zugegriffen werden.|  
 |HY117|Verbindung wird aufgrund eines unbekannten Transaktionsstatus angehalten. Nur trennen, und nur-Lese Funktionen sind zulässig.|(DM) finden Sie weitere Informationen zum Zustand "angehalten" [SQLEndTran-Funktion](../../../odbc/reference/syntax/sqlendtran-function.md).|  
 |HYT01|Verbindungstimeout abgelaufen|Das Verbindungstimeout ist abgelaufen, bevor die Datenquelle auf die Anforderung geantwortet hat. Das Verbindungstimeout wird über festgelegt **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT.|  
@@ -84,7 +84,7 @@ SQLRETURN SQLParamData(
  Wenn **SQLParamData** heißt beim Senden von Daten für einen Parameter in einer SQL­Anweisung, es können SQLSTATE, die von der Funktion aufgerufen, um die Ausführung der Anweisung zurückgegeben werden kann zurückgegeben (**SQLExecute** oder **SQLExecDirect**). Wenn sie, beim Senden von Daten für eine Spalte aufgerufen wird aktualisiert bzw. mit hinzugefügt **SQLBulkOperations** oder aktualisiert wird **SQLSetPos**, können sie alle SQLSTATE, die von zurückgegeben werden kann zurückgeben  **SQLBulkOperations** oder **SQLSetPos**.  
   
 ## <a name="comments"></a>Kommentare  
- **SQLParamData** aufgerufen werden, um Data-at-Execution-Daten für zwei Zwecke angeben: Parameterdaten, die in einem Aufruf verwendet werden, **SQLExecute** oder **SQLExecDirect**, oder die Daten für die Spalte, die verwendet werden Wenn eine Zeile aktualisiert oder durch einen Aufruf von hinzugefügt **SQLBulkOperations** oder durch einen Aufruf von aktualisiert **SQLSetPos**. Zum Zeitpunkt der Ausführung **SQLParamData** zurück an die Anwendung, die ein Indikator für die Daten der Treiber erforderlich ist.  
+ **SQLParamData** aufgerufen werden, um Data-at-Execution-Daten für zwei Zwecke bereitstellen: Parameterdaten, die in einem Aufruf verwendet werden, **SQLExecute** oder **SQLExecDirect**, oder Spaltendaten, die werden verwendet, wenn eine Zeile aktualisiert oder durch einen Aufruf von hinzugefügt **SQLBulkOperations** oder durch einen Aufruf von aktualisiert **SQLSetPos**. Zum Zeitpunkt der Ausführung **SQLParamData** zurück an die Anwendung, die ein Indikator für die Daten der Treiber erforderlich ist.  
   
  Wenn eine Anwendung ruft **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, oder **SQLSetPos**, gibt der Treiber SQL_NEED_ Daten bei Bedarf Data-at-Execution-Daten. Eine Anwendung ruft dann **SQLParamData** bestimmen, welche Daten senden. Wenn der Treiber die Parameterdaten erforderlich ist, gibt der Treiber der  *\*ValuePtrPtr* den Wert, der die Anwendung im Rowset Puffer nehmen die Ausgabe puffert. Die Anwendung kann diesen Wert verwenden, um zu bestimmen, welche Parameterdaten der Treiber anfordert. Wenn der Treiber die Spaltendaten erforderlich ist, gibt der Treiber der  *\*ValuePtrPtr* Puffern Sie die Adresse, die die Spalte ursprünglich wie folgt, gebunden wurde:  
   

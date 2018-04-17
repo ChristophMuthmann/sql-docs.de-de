@@ -1,41 +1,43 @@
 ---
-title: "Erstellen, ändern und Löschen von benutzerdefinierten Funktionen | Microsoft Docs"
-ms.custom: 
+title: Erstellen, ändern und Löschen von benutzerdefinierten Funktionen | Microsoft Docs
+ms.custom: ''
 ms.date: 08/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: smo
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - user-defined functions [SMO]
 ms.assetid: 0ebebd3b-0775-41c2-989d-aa4cf81af12a
-caps.latest.revision: 
+caps.latest.revision: 49
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b79a796d469d9e5ccd686a526f18bb16ed972cc0
-ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
+monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 03700168dc8531c438a6814463a20bbf9fb51a15
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="creating-altering-and-removing-user-defined-functions"></a>Erstellen, Ändern und Löschen von benutzerdefinierten Funktionen
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]Die <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction> Objekt bietet Funktionen, die Benutzer programmgesteuert benutzerdefinierte Funktionen in verwalten kann [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Benutzerdefinierte Funktionen unterstützen sowohl Eingabe- und Ausgabeparameter als auch direkte Verweise auf Tabellenspalten.  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+  Die <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction> Objekt bietet Funktionen, die Benutzer programmgesteuert benutzerdefinierte Funktionen in verwalten kann [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Benutzerdefinierte Funktionen unterstützen sowohl Eingabe- und Ausgabeparameter als auch direkte Verweise auf Tabellenspalten.  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]erfordert, dass Assemblys in einer Datenbank, bevor diese registriert werden, können in gespeicherten Prozeduren verwendet werden, benutzerdefinierte Funktionen, Trigger und benutzerdefinierten Datentypen. SMO unterstützt diese Funktion mit dem <xref:Microsoft.SqlServer.Management.Smo.SqlAssembly>-Objekt.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] erfordert, dass Assemblys in einer Datenbank, bevor diese registriert werden, können in gespeicherten Prozeduren verwendet werden, benutzerdefinierte Funktionen, Trigger und benutzerdefinierten Datentypen. SMO unterstützt diese Funktion mit dem <xref:Microsoft.SqlServer.Management.Smo.SqlAssembly>-Objekt.  
   
  Die <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction> -Objekt verweist auf die .NET-Assembly mit den <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction.AssemblyName%2A>, <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction.ClassName%2A>, und <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction.MethodName%2A> Eigenschaften.  
   
  Wenn der <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction> Objekt auf eine .NET-Assembly verweist, müssen Sie die Assembly registrieren, durch das Erstellen einer <xref:Microsoft.SqlServer.Management.Smo.SqlAssembly> Objekt und das Hinzufügen zu der <xref:Microsoft.SqlServer.Management.Smo.SqlAssemblyCollection> -Objekt, das gehört der <xref:Microsoft.SqlServer.Management.Smo.Database> Objekt.  
   
 ## <a name="example"></a>Beispiel  
- Zum Verwenden eines angegebenen Codebeispiels müssen Sie die Programmierumgebung, Programmiervorlage und die zu verwendende Programmiersprache auswählen, um Ihre Anwendung zu erstellen. Weitere Informationen finden Sie unter [Erstellen eines Visual C &#35; SMO-Projekts in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Zum Verwenden eines angegebenen Codebeispiels müssen Sie die Programmierumgebung, Programmiervorlage und die zu verwendende Programmiersprache auswählen, um Ihre Anwendung zu erstellen. Weitere Informationen finden Sie unter [Erstellen eines Visual C&#35; SMO-Projekts in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="creating-a-scalar-user-defined-function-in-visual-basic"></a>Erstellen einer benutzerdefinierten Skalarfunktion in Visual Basic  
  In diesem Codebeispiel wird veranschaulicht, wie zum Erstellen und entfernen eine benutzerdefinierte Skalarfunktion, die eine Eingabe hat <xref:System.DateTime> -Objektparameter und einen ganzzahligen Rückgabetyp in [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]. Die benutzerdefinierte Funktion wird erstellt, auf die [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] Datenbank. Im Beispiel wird die benutzerdefinierte Funktion ISOweek erstellt, die ein Datumsargument annimmt und die Nummer der ISO-Woche berechnet. Damit diese Funktion ordnungsgemäß berechnet wird, muss die DATEFIRST-Option der Datenbank auf 1 festgelegt werden, bevor die Funktion aufgerufen wird.  

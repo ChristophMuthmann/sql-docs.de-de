@@ -2,7 +2,7 @@
 title: SQLSetStmtAttr-Funktion | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 7abc5260-733a-48d4-9974-2d1a6a9ea5f6
 caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: be7fb7064f3e6508b481011ed2aa05068542cef9
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: fab28d7076d4a529b1b77a340deb2f2e411da334
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlsetstmtattr-function"></a>SQLSetStmtAttr-Funktion
 **Konformität**  
@@ -82,7 +82,7 @@ SQLRETURN SQLSetStmtAttr(
   
  Wenn die *Attribut* Argument ist ein Wert treiberspezifische *ValuePtr* möglicherweise eine Ganzzahl mit Vorzeichen.  
   
- *StringLength*  
+ *stringLength*  
  [Eingabe] Wenn *Attribut* ist ein ODBC-definierten Attribut und *ValuePtr* zeigt auf eine Zeichenfolge oder einen binären Puffer, in dieses Argument muss die Länge des \* *ValuePtr*. Wenn *Attribut* ist ein ODBC-definierten Attribut und *ValuePtr* ist eine ganze Zahl *StringLength* wird ignoriert.  
   
  Wenn *Attribut* ist ein Attribut treiberdefinierten die Anwendung zeigt die Art des Attributs an den Treiber-Manager an, indem die *StringLength* Argument. *StringLength* können die folgenden Werte aufweisen:  
@@ -104,7 +104,7 @@ SQLRETURN SQLSetStmtAttr(
 |SQLSTATE|Fehler|Description|  
 |--------------|-----------|-----------------|  
 |01000|Allgemeine Warnung|Treiberspezifische Meldung dient zu Informationszwecken. (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
-|01 S 02|Der Optionswert wurde geändert|Der Treiber nicht den Wert im angegebenen *ValuePtr*, oder der Wert im angegebenen *ValuePtr* ungültig aufgrund Implementierung Arbeitsbedingungen, damit der Treiber einen ähnlichen Wert ersetzt. (**SQLGetStmtAttr** aufgerufen werden, um vorübergehend ersetzten Werts zu ermitteln.) Der Ersatzwert ist gültig für die *StatementHandle* , bis der Cursor geschlossen wird, an welchem Punkt das Anweisungsattribut zurückgesetzt auf seinen ursprünglichen Wert. Die Anweisungsattribute, die geändert werden können, sind:<br /><br /> SQL_ ATTR_CONCURRENCY SQL_ ATTR_CURSOR_TYPE SQL_ ATTR_KEYSET_SIZE SQL_ ATTR_MAX_LENGTH SQL_ ATTR_MAX_ROWS SQL_ ATTR_QUERY_TIMEOUT SQL_ATTR_ROW_ARRAY_SIZE SQL_ ATTR_SIMULATE_CURSOR<br /><br /> (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
+|01S02|Der Optionswert wurde geändert|Der Treiber nicht den Wert im angegebenen *ValuePtr*, oder der Wert im angegebenen *ValuePtr* ungültig aufgrund Implementierung Arbeitsbedingungen, damit der Treiber einen ähnlichen Wert ersetzt. (**SQLGetStmtAttr** aufgerufen werden, um vorübergehend ersetzten Werts zu ermitteln.) Der Ersatzwert ist gültig für die *StatementHandle* , bis der Cursor geschlossen wird, an welchem Punkt das Anweisungsattribut zurückgesetzt auf seinen ursprünglichen Wert. Die Anweisungsattribute, die geändert werden können, sind:<br /><br /> SQL_ ATTR_CONCURRENCY SQL_ ATTR_CURSOR_TYPE SQL_ ATTR_KEYSET_SIZE SQL_ ATTR_MAX_LENGTH SQL_ ATTR_MAX_ROWS SQL_ ATTR_QUERY_TIMEOUT SQL_ATTR_ROW_ARRAY_SIZE SQL_ ATTR_SIMULATE_CURSOR<br /><br /> (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
 |08S01|Kommunikations-Verbindungsfehler|Die Verbindung zwischen dem Treiber und die Datenquelle mit der der Treiber verbunden wurde aufgetreten ist, bevor die Verarbeitung für die Funktion abgeschlossen.|  
 |24000|Ungültiger Cursorstatus|Die *Attribut* SQL_ATTR_CONCURRENCY SQL_ATTR_CURSOR_TYPE, SQL_ATTR_SIMULATE_CURSOR oder SQL_ATTR_USE_BOOKMARKS wurde und der Cursor geöffnet war.|  
 |HY000|Allgemeiner Fehler|Für die es keine spezifischen SQLSTATE wurde und für die keine implementierungsabhängige SQLSTATE definiert wurde, ist ein Fehler aufgetreten. Die zurückgegebene Fehlermeldung **SQLGetDiagRec** in der  *\*MessageText* Puffer beschreibt den Fehler und seiner Ursache.|  
@@ -166,7 +166,7 @@ SQLRETURN SQLSetStmtAttr(
 ## <a name="statement-attributes"></a>Anweisungsattribute  
  Die aktuell definierten Attribute und die Version von ODBC, in denen sie eingeführt wurden, werden in der folgenden Tabelle angezeigt. Es wird erwartet, dass weitere Attribute von Treibern, die von verschiedenen Datenquellen nutzen definiert werden. ODBC ist ein Bereich von Attributen reserviert. Entwickler müssen Werte für die eigene Verwendung treiberspezifische von Open Group reservieren. Weitere Informationen finden Sie unter [Treiber-spezifische Datentypen, Deskriptor Typen Informationstypen, Diagnosetypen und Attribute](../../../odbc/reference/develop-app/driver-specific-data-types-descriptor-information-diagnostic.md).  
   
-|attribute|*ValuePtr* Inhalt|  
+|Attribut|*ValuePtr* Inhalt|  
 |---------------|-------------------------|  
 |SQL_ATTR_APP_PARAM_DESC (ODBC 3.0)|Das Handle für die APD für nachfolgende Aufrufe **SQLExecute** und **SQLExecDirect** des Anweisungshandles. Der erste Wert dieses Attributs ist der Deskriptor implizit zugeordnet werden, wenn die Anweisung ursprünglich zugeordnet wurde. Wenn der Wert dieses Attributs auf SQL_NULL_DESC oder das Handle, das ursprünglich zugeordnet wurde, für den Deskriptor festgelegt ist, einen explizit zugewiesenen APD-Handle, das zuvor das Anweisungshandle zugeordnet wurde von ihm getrennt ist und das Anweisungshandle zurückgesetzt wird, um die implizit reserviert APD Handle.<br /><br /> Dieses Attribut kann nicht festgelegt werden, um ein Deskriptor-Handle, das implizit für eine andere Anweisung zugewiesen wurde oder eine andere Deskriptorhandles, die implizit in derselben Anweisung festgelegt wurde; implizit zugeordneten Deskriptorhandles darf nicht mehr als eine Anweisung oder Deskriptorhandles zugeordnet sein.|  
 |SQL_ATTR_APP_ROW_DESC (ODBC 3.0)|Das Handle für die ARD für nachfolgende Abrufe des Anweisungshandles. Der erste Wert dieses Attributs ist der Deskriptor implizit zugeordnet werden, wenn die Anweisung ursprünglich zugeordnet wurde. Wenn der Wert dieses Attributs auf SQL_NULL_DESC oder das Handle, das ursprünglich zugeordnet wurde, für den Deskriptor festgelegt ist, einen explizit zugewiesenen ARD-Handle, das zuvor das Anweisungshandle zugeordnet wurde von ihm getrennt ist und das Anweisungshandle zurückgesetzt wird, um die implizit reserviert ARD Handle.<br /><br /> Dieses Attribut kann nicht festgelegt werden, um ein Deskriptor-Handle, das implizit für eine andere Anweisung zugewiesen wurde oder eine andere Deskriptorhandles, die implizit in derselben Anweisung festgelegt wurde; implizit zugeordneten Deskriptorhandles darf nicht mehr als eine Anweisung oder Deskriptorhandles zugeordnet sein.|  

@@ -2,7 +2,7 @@
 title: SQLGetData-Funktion | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: e3c1356a-5db7-4186-85fd-8b74633317e8
 caps.latest.revision: 46
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0a23ddb9ee932b67bddd35edfcc9d64228b36f18
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: bd10d34093e7aa1bcbe901555c6b23ffc6368fbb
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlgetdata-function"></a>SQLGetData-Funktion
 **Konformität**  
@@ -134,7 +134,7 @@ SQLRETURN SQLGetData(
 |IM018|**SQLCompleteAsync** nicht zum Abschließen des vorherigen asynchrone Vorgangs auf diesem Handle aufgerufen wurde.|Wenn die vorherigen Funktionsaufruf auf das Handle SQL_STILL_EXECUTING zurückgibt und Benachrichtigungsmodus aktiviert ist, **SQLCompleteAsync** muss aufgerufen werden, auf das Handle nach der Verarbeitung und der Vorgang abgeschlossen werden.|  
   
 ## <a name="comments"></a>Kommentare  
- **SQLGetData** Daten in einer angegebenen Spalte zurück. **SQLGetData** kann aufgerufen werden, erst nach einer oder mehreren Zeilen aus dem Resultset von abgerufen wurden **SQLFetch**, **SQLFetchScroll**, oder **SQLExtendedFetch** . Wenn Daten variabler Länge in einem einzigen Aufruf zurückzugebenden zu groß ist **SQLGetData** (aufgrund einer Einschränkung in der Anwendung) **SQLGetData** in Teilen abrufen können. Es ist möglich, einige Spalten in einer Zeile und der Aufruf binden **SQLGetData** für andere, obwohl dies einigen Einschränkungen unterliegt. Weitere Informationen finden Sie unter [Abrufen von Long-Daten](../../../odbc/reference/develop-app/getting-long-data.md).  
+ **SQLGetData** Daten in einer angegebenen Spalte zurück. **SQLGetData** kann aufgerufen werden, erst nach einer oder mehreren Zeilen aus dem Resultset von abgerufen wurden **SQLFetch**, **SQLFetchScroll**, oder **SQLExtendedFetch**. Wenn Daten variabler Länge in einem einzigen Aufruf zurückzugebenden zu groß ist **SQLGetData** (aufgrund einer Einschränkung in der Anwendung) **SQLGetData** in Teilen abrufen können. Es ist möglich, einige Spalten in einer Zeile und der Aufruf binden **SQLGetData** für andere, obwohl dies einigen Einschränkungen unterliegt. Weitere Informationen finden Sie unter [Abrufen von Long-Daten](../../../odbc/reference/develop-app/getting-long-data.md).  
   
  Informationen zur Verwendung **SQLGetData** mit gestreamte Output-Parameter finden Sie unter [Abrufen von Ausgabeparametern mit SQLGetData](../../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md).  
   

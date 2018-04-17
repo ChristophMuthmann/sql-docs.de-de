@@ -1,15 +1,16 @@
 ---
 title: Der ODBC-Cursorbibliothek | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - ODBC cursor library [ODBC], about cursor library
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - cursors [ODBC], cursor library
 - block cursors [ODBC]
 ms.assetid: 32fb7df0-953a-4f68-b041-7d2852e45d0f
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 45bce6d2b39ee15bcabd362b0a2fbfba377fe386
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e1d6f7c6e532622d8bd0ee8fb637754f5df19429
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="the-odbc-cursor-library"></a>Der ODBC-Cursorbibliothek
 > [!IMPORTANT]  

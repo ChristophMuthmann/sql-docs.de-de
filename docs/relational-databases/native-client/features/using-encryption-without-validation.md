@@ -1,15 +1,15 @@
 ---
-title: "Verwenden von Verschlüsselung ohne Überprüfung | Microsoft Docs"
-ms.custom: 
+title: Verwenden von Verschlüsselung ohne Überprüfung | Microsoft Docs
+ms.custom: ''
 ms.date: 12/21/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client|features
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - data access [SQL Server Native Client], encryption
@@ -18,16 +18,17 @@ helpviewer_keywords:
 - encryption [SQL Server Native Client]
 - SQL Server Native Client, encryption
 ms.assetid: f4c63206-80bb-4d31-84ae-ccfcd563effa
-caps.latest.revision: 
+caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 943a6aa49feee1d9bbd7a8fdc59392479e104735
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: c8c40eb1e9ef2be64d07e87becb07e125af26053
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-encryption-without-validation"></a>Verwenden von Verschlüsselung ohne Überprüfung
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

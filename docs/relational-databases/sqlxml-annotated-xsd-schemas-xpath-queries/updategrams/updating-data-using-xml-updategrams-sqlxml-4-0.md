@@ -1,16 +1,16 @@
 ---
 title: Aktualisieren von Daten mit XML-Updategrams (SQLXML 4.0) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - IDREF type attribute [SQLXML]
@@ -29,20 +29,21 @@ helpviewer_keywords:
 - updg:before attribute
 - record updates [SQLXML]
 ms.assetid: 90ef8a33-5ae3-4984-8259-608d2f1d727f
-caps.latest.revision: 
+caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 01df178b47bb3aac688d12e54760cd530706fd94
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 613fe19b4cb3a63b1998cfa5ef2c6a7368481c6c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="updating-data-using-xml-updategrams-sqlxml-40"></a>Aktualisieren von Daten mit XML-Updategrams (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Wenn Sie vorhandene Daten aktualisieren, müssen Sie angeben, sowohl die  **\<vor >** und  **\<nach >** blockiert. Die Elemente im angegebenen der  **\<vor >** und  **\<nach >** Blöcke beschreiben die gewünschte Änderung. Verwendet das Updategram die angegebene(n) Element(e), werden die  **\<vor >** Block, um die vorhandene Datensätze in der Datenbank zu identifizieren. Die entsprechenden Elemente in der  **\<nach >** -Block zeigen an, wie die Datensätze nach Ausführen des Updatevorgangs aussehen soll. Aus diesen Informationen erstellt das Updategram eine SQL-Anweisung, die entspricht der  **\<nach >** Block. Das Updategram verwendet dann diese Anweisung, um die Datenbank zu aktualisieren.  
+  Wenn Sie vorhandene Daten aktualisieren, müssen Sie angeben, sowohl die  **\<vor >** und  **\<nach >** blockiert. Die Elemente im angegebenen der  **\<vor >** und  **\<nach >** Blöcke beschreiben die gewünschte Änderung. Verwendet das Updategram die angegebene(n) Element(e), werden die  **\<vor >** Block, um die vorhandene Datensätze in der Datenbank zu identifizieren. Die entsprechenden Elemente in der  **\<nach >** -Block zeigen an, wie die Datensätze nach Ausführen des Updatevorgangs aussehen soll. Aus diesen Informationen erstellt das Updategram eine SQL-Anweisung, die entspricht der  **\<nach >** Block. Das Updategram verwendet dann diese Anweisung, um die Datenbank zu aktualisieren.  
   
  Dies ist das Updategramformat für einen Updatevorgang:  
   
@@ -95,7 +96,7 @@ Wenn Sie vorhandene Daten aktualisieren, müssen Sie angeben, sowohl die  **\<vo
 ## <a name="examples"></a>Beispiele  
  Bevor Sie die Updategrambeispiele verwenden, beachten Sie Folgendes:  
   
--   Die meisten der Beispiele verwenden die Standardzuordnung (d. h. es ist kein Zuordnungsschema im Updategram angegeben). Weitere Beispiele für Updategrams, die Zuordnungsschemas verwenden, finden Sie unter [ein Mapping-Schema mit Anmerkungen angeben, in einem Updategram &#40; SQLXML 4.0 &#41; ](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md).  
+-   Die meisten der Beispiele verwenden die Standardzuordnung (d. h. es ist kein Zuordnungsschema im Updategram angegeben). Weitere Beispiele für Updategrams, die Zuordnungsschemas verwenden, finden Sie unter [ein Mapping-Schema mit Anmerkungen angeben, in einem Updategram &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md).  
   
 -   Die meisten der Beispiele verwenden die AdventureWorks-Beispieldatenbank. Alle Updates werden für die Tabellen in dieser Datenbank übernommen. Sie können die AdventureWorks-Datenbank wiederherstellen.  
   
@@ -352,7 +353,7 @@ Wenn Sie vorhandene Daten aktualisieren, müssen Sie angeben, sowohl die  **\<vo
   
      Weitere Informationen finden Sie unter [mithilfe von ADO zum Ausführen von SQLXML 4.0-Abfragen](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
- Weitere Beispiele für Updategrams, die Zuordnungsschemas verwenden, finden Sie unter [ein Mapping-Schema mit Anmerkungen angeben, in einem Updategram &#40; SQLXML 4.0 &#41; ](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md).  
+ Weitere Beispiele für Updategrams, die Zuordnungsschemas verwenden, finden Sie unter [ein Mapping-Schema mit Anmerkungen angeben, in einem Updategram &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md).  
   
 ### <a name="f-using-a-mapping-schema-with-idrefs-attributes"></a>F. Verwenden eines Zuordnungsschemas mit IDREFS-Attributen  
  Dieses Beispiel veranschaulicht, wie Updategrams die IDREFS-Attribute im Zuordnungsschema verwenden, um Datensätze in mehreren Tabellen zu aktualisieren. Nehmen Sie für dieses Beispiel an, dass die Datenbank aus den folgenden Tabellen besteht:  
@@ -560,9 +561,9 @@ Wenn Sie vorhandene Daten aktualisieren, müssen Sie angeben, sowohl die  **\<vo
 </Schema>  
 ```  
   
- Weitere Beispiele für Updategrams, die Zuordnungsschemas verwenden, finden Sie unter [ein Mapping-Schema mit Anmerkungen angeben, in einem Updategram &#40; SQLXML 4.0 &#41; ](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md).  
+ Weitere Beispiele für Updategrams, die Zuordnungsschemas verwenden, finden Sie unter [ein Mapping-Schema mit Anmerkungen angeben, in einem Updategram &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Sicherheitsüberlegungen zu Updategrams &#40; SQLXML 4.0 &#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
+ [Sicherheitsüberlegungen zu Updategrams &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
   
   

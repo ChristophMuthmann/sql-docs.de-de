@@ -1,15 +1,15 @@
 ---
 title: Persistente Datenquellenobjekte | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-ole-db-data-source-objects
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - OLE DB data source objects [SQL Server Native Client]
@@ -17,16 +17,17 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, persisted data source objects
 - persisted data source objects
 ms.assetid: dfdacc81-42fe-4f20-8969-bed1f743defe
-caps.latest.revision: 
+caps.latest.revision: 29
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ad9a783383cb243ffc21097300bfabcc1762acac
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: e3e70e77ad864c80532d99c551bdac824949147f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="persisted-data-source-objects"></a>Persistente Datenquellenobjekte
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -237,6 +238,6 @@ HRESULT InitFromPersistedDS
  Die **IPersistFile:: Save** Methode kann aufgerufen werden, vor oder nach dem Aufruf **IDBInitialize:: Initialize**. Aufrufen der Methode nach einer erfolgreichen Rückgabe von **IDBInitialize:: Initialize** wird sichergestellt, dass eine gültige datenquellenspezifikation persistent ist.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datenquellenobjekte &#40; OLE DB &#41;](../../relational-databases/native-client-ole-db-data-source-objects/data-source-objects-ole-db.md)  
+ [Datenquellenobjekte & #40; OLE DB & #41;](../../relational-databases/native-client-ole-db-data-source-objects/data-source-objects-ole-db.md)  
   
   

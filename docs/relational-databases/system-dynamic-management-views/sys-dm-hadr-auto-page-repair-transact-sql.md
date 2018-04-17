@@ -1,16 +1,16 @@
 ---
-title: "Sys. dm_hadr_auto_page_repair – (Transact-SQL) | Microsoft Docs"
-ms.custom: 
+title: Sys. dm_hadr_auto_page_repair – (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_hadr_auto_page_repair_TSQL
@@ -24,16 +24,16 @@ helpviewer_keywords:
 - automatic page repair
 - sys.dm_hadr_auto_page_repair dynamic management view
 ms.assetid: d7840adf-4a1b-41ac-bc94-102c07ad1c79
-caps.latest.revision: 
+caps.latest.revision: 8
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 72750c250e45c6a3fba647ae212b0a5b63a11abc
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 97aefe435d8c1db569aa10f4521b9af96f0c9899
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmhadrautopagerepair-transact-sql"></a>sys.dm_hadr_auto_page_repair (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ ms.lasthandoff: 02/03/2018
   
 ## <a name="see-also"></a>Siehe auch  
  [Automatische Seitenreparatur (Verfügbarkeitsgruppen: Datenbankspiegelung)](../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md)   
- [Suspect_pages &#40; Transact-SQL &#41;](../../relational-databases/system-tables/suspect-pages-transact-sql.md)   
+ [Suspect_pages & #40; Transact-SQL & #41;](../../relational-databases/system-tables/suspect-pages-transact-sql.md)   
  [Verwalten der suspect_pages-Tabelle &#40;SQL Server&#41;](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md)  
   
   

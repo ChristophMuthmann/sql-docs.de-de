@@ -1,16 +1,16 @@
 ---
 title: Sys. database_mirroring_witnesses (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.database_mirroring_witnesses
@@ -24,16 +24,16 @@ helpviewer_keywords:
 - sys.database_mirroring_witnesses catalog view
 - witness [SQL Server], sys.database_mirroring_witnesses catalog view
 ms.assetid: 0dd5b794-733b-4a3c-b5a4-62f9f1f0f22d
-caps.latest.revision: 
+caps.latest.revision: 46
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3ce23f7d9f763bf08842a1f121c881fb5fbdcee0
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 42d31f59d652e7f92f4051dab3af741c6f161c73
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="database-mirroring-witness-catalog-views---sysdatabasemirroringwitnesses"></a>Database Mirroring Witness-Katalogsichten - Sys. database_mirroring_witnesses
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ ms.lasthandoff: 02/03/2018
 |**family_guid**|**uniqueidentifier**|Bezeichner der Sicherungsfamilie für die Datenbank. Wird zur Erkennung übereinstimmender Wiederherstellungsstatus verwendet.|  
 |**is_suspended**|**bit**|Die datenbankspiegelung wird angehalten.|  
 |**is_suspended_sequence_number**|**int**|Die Sequenznummer für die Einstellung **Is_suspended**.|  
-|**partner_sync_state**|**tinyint**|Synchronisierungsstatus der Spiegelungssitzung:<br /><br /> 5 = die Partner sind synchronisiert. Failover ist eventuell möglich. Informationen zu den Anforderungen für Failovercluster finden Sie unter [Rollenwechsel während einer Datenbank-Spiegelungssitzung &#40; SQLServer &#41; ](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md).<br /><br /> 6 = die Partner sind nicht synchronisiert. Failover ist jetzt nicht möglich.|  
+|**partner_sync_state**|**tinyint**|Synchronisierungsstatus der Spiegelungssitzung:<br /><br /> 5 = die Partner sind synchronisiert. Failover ist eventuell möglich. Informationen zu den Anforderungen für Failovercluster finden Sie unter [Rollenwechsel während einer Datenbank-Spiegelungssitzung &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md).<br /><br /> 6 = die Partner sind nicht synchronisiert. Failover ist jetzt nicht möglich.|  
 |**partner_sync_state_desc**|**nvarchar(60)**|Beschreibung des Synchronisierungsstatus der Spiegelungssitzung:<br /><br /> SYNCHRONIZED<br /><br /> UNSYNCHRONIZED|  
   
 ## <a name="permissions"></a>Berechtigungen  

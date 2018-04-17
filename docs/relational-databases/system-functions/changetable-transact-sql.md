@@ -1,16 +1,16 @@
 ---
 title: CHANGETABLE (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/08/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CHANGETABLE_TSQL
@@ -21,16 +21,17 @@ helpviewer_keywords:
 - CHANGETABLE
 - change tracking [SQL Server], CHANGETABLE
 ms.assetid: d405fb8d-3b02-4327-8d45-f643df7f501a
-caps.latest.revision: 
+caps.latest.revision: 34
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6fa552ec5c819773153118be3b45374570b5d6e2
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 16aa30d9074e2cd1508f896c1076538ff7371738
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="changetable-transact-sql"></a>CHANGETABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -70,9 +71,9 @@ CHANGETABLE (
   
  Wenn der Wert NULL ist, werden alle nachverfolgten Änderungen zurückgegeben.  
   
- *Last_sync_version* , um sicherzustellen, dass es nicht zu alt ist, da einige oder alle Änderungsinformationen entsprechend der für die Datenbank konfigurierten Beibehaltungsdauer bereinigt wurden möglicherweise überprüft werden soll. Weitere Informationen finden Sie unter [CHANGE_TRACKING_MIN_VALID_VERSION &#40; Transact-SQL &#41; ](../../relational-databases/system-functions/change-tracking-min-valid-version-transact-sql.md) und [ALTER DATABASE SET-Optionen &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
+ *Last_sync_version* , um sicherzustellen, dass es nicht zu alt ist, da einige oder alle Änderungsinformationen entsprechend der für die Datenbank konfigurierten Beibehaltungsdauer bereinigt wurden möglicherweise überprüft werden soll. Weitere Informationen finden Sie unter [CHANGE_TRACKING_MIN_VALID_VERSION &#40;Transact-SQL&#41; ](../../relational-databases/system-functions/change-tracking-min-valid-version-transact-sql.md) und [ALTER DATABASE SET-Optionen &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
   
- VERSION *table*, { <primary_key_values> }  
+ VERSION *Tabelle*, {< Primary_key_values >}  
  Gibt die letzten Änderungsnachverfolgungsinformationen für eine angegebene Zeile zurück. Primärschlüsselwerte müssen die Zeile identifizieren. <primary_key_values> identifiziert die Primärschlüsselspalten und gibt die Werte an. Die Namen der Primärschlüsselspalten können in beliebiger Reihenfolge angegeben werden.  
   
  *Tabelle*  
@@ -84,7 +85,7 @@ CHANGETABLE (
  *Wert*  
  Der Wert des Primärschlüssels. Wenn mehrere Primärschlüsselspalten vorhanden sind, die Werte müssen angegeben werden in der gleichen Reihenfolge wie die Spalten angezeigt, in werden der *Column_name* Liste.  
   
- [AS] *table_alias* [ (*column_alias* [ ,...*n* ] ) ]  
+ [AS] *Table_alias* [(*Spaltenalias* [,... *n* ])]  
  Stellt Namen für die Ergebnisse bereit, die von CHANGETABLE zurückgegeben werden.  
   
  *table_alias*  
@@ -105,7 +106,7 @@ CHANGETABLE (
 |-----------------|---------------|-----------------|  
 |SYS_CHANGE_VERSION|**bigint**|Versionswert, der der letzten Änderung an der Zeile zugeordnet ist.|  
 |SYS_CHANGE_CREATION_VERSION|**bigint**|Versionswerte, die dem letzten Einfügevorgang zugeordnet sind.|  
-|SYS_CHANGE_OPERATION|**nchar(1)**|Gibt den Typ der Änderung an:<br /><br /> **U** = aktualisieren<br /><br /> **Ich** = einfügen<br /><br /> **D** = löschen|  
+|SYS_CHANGE_OPERATION|**NCHAR(1)-Wert**|Gibt den Typ der Änderung an:<br /><br /> **U** = aktualisieren<br /><br /> **Ich** = einfügen<br /><br /> **D** = löschen|  
 |SYS_CHANGE_COLUMNS|**varbinary(4100)**|Listet die Spalten auf, die sich seit last_sync_version (der Baseline) geändert haben. Beachten Sie, dass berechnete Spalten nie als geändert aufgelistet sind.<br /><br /> Der Wert ist NULL, wenn eine der folgenden Bedingungen zutrifft:<br /><br /> Die Änderungsnachverfolgung für Spalten ist nicht aktiviert.<br /><br /> Der Vorgang ist ein Einfüge- oder Löschvorgang.<br /><br /> Alle Nicht-Primärschlüsselspalten wurden in einem Vorgang aktualisiert. Dieser Binärwert sollte nicht direkt interpretiert werden. Verwenden Sie stattdessen zum Interpretieren [CHANGE_TRACKING_IS_COLUMN_IN_MASK()](../../relational-databases/system-functions/change-tracking-is-column-in-mask-transact-sql.md).|  
 |SYS_CHANGE_CONTEXT|**varbinary(128)**|Änderungskontextinformationen, die Sie optional angeben können, mit der [WITH](../../relational-databases/system-functions/with-change-tracking-context-transact-sql.md) -Klausel als Teil einer INSERT-, Update- oder DELETE-Anweisung.|  
 |\<Wert der Primärschlüsselspalte >|Identisch mit den Benutzertabellenspalten.|Die Primärschlüsselwerte für die nachverfolgte Tabelle. Diese Werte identifizieren jede Zeile in der Benutzertabelle eindeutig.|  
@@ -221,6 +222,6 @@ WHERE
  [Nachverfolgen von Datenänderungen &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   
  [CHANGE_TRACKING_IS_COLUMN_IN_MASK &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-is-column-in-mask-transact-sql.md)   
  [CHANGE_TRACKING_CURRENT_VERSION &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-current-version-transact-sql.md)   
- [CHANGE_TRACKING_MIN_VALID_VERSION &#40; Transact-SQL &#41;](../../relational-databases/system-functions/change-tracking-min-valid-version-transact-sql.md)  
+ [CHANGE_TRACKING_MIN_VALID_VERSION &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-min-valid-version-transact-sql.md)  
   
   

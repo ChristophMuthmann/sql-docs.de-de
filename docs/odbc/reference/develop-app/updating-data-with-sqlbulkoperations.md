@@ -1,31 +1,32 @@
 ---
 title: Aktualisieren von Daten mit SQLBulkOperations | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQLBulkOperations function [ODBC], updating data
 - data updates [ODBC], SQLBulkOperations
 - updating data [ODBC], SQLBulkOperations
 ms.assetid: 7645a704-341e-4267-adbe-061a9fda225b
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7a05bb864486c97c9b5debbc5022f3d62bb8b2fb
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: df37a52b772c5bca3465e12d17ea425440a12a4d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="updating-data-with-sqlbulkoperations"></a>Aktualisieren von Daten mit SQLBulkOperations
 Anwendungen können Vorgänge Bulk Update, Delete, Fetch oder Einfügen auf die zugrunde liegende Tabelle in der Datenquelle mit einem Aufruf von **SQLBulkOperations**. Aufrufen von **SQLBulkOperations** ist eine praktische Alternative zum Erstellen und Ausführen einer SQL-Anweisung. Sie können einen ODBC-Treiber positionierte Updates zu unterstützen, auch wenn die Datenquelle positionierte SQL-Anweisungen nicht unterstützt. Es ist Teil des dem Paradigma vollständige Datenbankzugriff durch Funktionsaufrufe erreichen.  

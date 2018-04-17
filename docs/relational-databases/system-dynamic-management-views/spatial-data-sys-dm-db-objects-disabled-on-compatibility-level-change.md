@@ -1,16 +1,16 @@
 ---
-title: sys.dm_db_objects_disabled_on_compatibility_level_change (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: Sys. dm_db_objects_disabled_on_compatibility_level_change (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_db_objects_disabled_on_compatibility_level_change
@@ -22,16 +22,17 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_objects_disabled_on_compatibility_level_change catalog view
 ms.assetid: a5d70064-0330-48b9-b853-01eba50755d0
-caps.latest.revision: 
+caps.latest.revision: 16
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f52daf2257ac6a2d8ea34d61ed2dd869b0363bce
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 41ab66459cda7c03e92c7a197f4a35a89c54696b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spatial-data---sysdmdbobjectsdisabledoncompatibilitylevelchange"></a>Räumliche Daten - Sys. dm_db_objects_disabled_on_compatibility_level_change
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -58,7 +59,7 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
 |**class_desc**|**nvarchar(60)**|OBJECT oder COLUMN für Einschränkungen<br /><br /> INDEX für Indizes und Heaps|  
 |**major_id**|**int**|OBJECT ID der Einschränkungen<br /><br /> OBJECT ID der Tabelle, die Indizes und Heaps enthält|  
 |**minor_id**|**int**|NULL für Einschränkungen<br /><br /> Index_id für Indizes und Heaps|  
-|**dependency**|**nvarchar(60)**|Beschreibung der Abhängigkeit, die bewirkt, dass die Einschränkung oder der Index deaktiviert wird. Die gleichen Werte werden auch in den Warnungen verwendet, die während des Upgrades ausgelöst werden. Einige Beispiele dafür sind:<br /><br /> "space" für eine systeminterne Funktion<br /><br /> "geometry" für einen System-UDT<br /><br /> "geography::Parse" für eine Methode eines System-UDTs|  
+|**Abhängigkeit**|**nvarchar(60)**|Beschreibung der Abhängigkeit, die bewirkt, dass die Einschränkung oder der Index deaktiviert wird. Die gleichen Werte werden auch in den Warnungen verwendet, die während des Upgrades ausgelöst werden. Einige Beispiele dafür sind:<br /><br /> "space" für eine systeminterne Funktion<br /><br /> "geometry" für einen System-UDT<br /><br /> "geography::Parse" für eine Methode eines System-UDTs|  
   
 ## <a name="general-remarks"></a>Allgemeine Hinweise  
  Persistente berechnete Spalten, die systeminterne Funktionen verwenden, werden bei einer Änderung des Kompatibilitätsgrads deaktiviert. Darüber hinaus werden persistierte berechnete Spalten, die eine Geometry-Methode oder Geography-Methode verwenden, beim Upgrade einer Datenbank deaktiviert.  
@@ -70,35 +71,35 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
   
  Wenn die folgenden Funktionen im Ausdruck einer persistierten berechneten Spalte verwendet werden, bewirken sie, dass Indizes und Einschränkungen, die auf diese Spalten verweisen, bei einer Änderung des Kompatibilitätsgrads von 100 auf 110 oder höher deaktiviert werden:  
   
--   **Soundex**  
+-   **SOUNDEX**  
   
--   **Geography:: GeomFromGML**  
+-   **Geografie:: GeomFromGML**  
   
--   **Geography:: STGeomFromText**  
+-   **Geografie:: STGeomFromText**  
   
--   **Geography:: STLineFromText**  
+-   **Geografie:: STLineFromText**  
   
--   **Geography:: STPolyFromText**  
+-   **Geografie:: STPolyFromText**  
   
--   **Geography:: STMPointFromText**  
+-   **Geografie:: STMPointFromText**  
   
 -   **Geography:: STMLineFromText**  
   
--   **Geography:: STMPolyFromText**  
+-   **Geografie:: STMPolyFromText**  
   
 -   **Geography:: STGeomCollFromText**  
   
 -   **Geography:: STGeomFromWKB**  
   
--   **Geography:: STLineFromWKB**  
+-   **Geografie:: STLineFromWKB**  
   
--   **Geography:: STPolyFromWKB**  
+-   **Geografie:: STPolyFromWKB**  
   
--   **Geography:: STMPointFromWKB**  
+-   **Geografie:: STMPointFromWKB**  
   
 -   **Geography:: STMLineFromWKB**  
   
--   **Geography:: STMPolyFromWKB**  
+-   **Geografie:: STMPolyFromWKB**  
   
 -   **Geografie:: STUnion**  
   
@@ -106,7 +107,7 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
   
 -   **Geografie:: STDifference**  
   
--   **Geography:: STSymDifference**  
+-   **Geografie:: STSymDifference**  
   
 -   **Geografie:: STBuffer**  
   

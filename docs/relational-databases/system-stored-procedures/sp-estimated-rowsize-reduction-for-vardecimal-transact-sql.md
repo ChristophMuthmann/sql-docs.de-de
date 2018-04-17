@@ -1,16 +1,16 @@
 ---
 title: Sp_estimated_rowsize_reduction_for_vardecimal (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_estimated_rowsize_reduction_for_vardecimal
@@ -24,16 +24,16 @@ helpviewer_keywords:
 - estimate decimal compression
 - table compression [SQL Server]
 ms.assetid: 0fe45983-f9f2-4c7f-938a-0fd96e1cbe8d
-caps.latest.revision: 
+caps.latest.revision: 23
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bd67eb412ba93dd19a828963f2f10d0589d1987c
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: cf5b858da943d056d80b135ad98e31ce534b1c9d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spestimatedrowsizereductionforvardecimal-transact-sql"></a>sp_estimated_rowsize_reduction_for_vardecimal (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/27/2017
   Schätzt die Verringerung der durchschnittlichen Zeilengröße ab, wenn Sie das vardecimal-Speicherformat für eine Tabelle aktivieren. Verwenden Sie diese Zahl, um die Gesamtverringerung der Tabellengröße abzuschätzen. Da zur Berechnung der durchschnittlichen Verringerung der Zeilengröße die Stichprobenuntersuchung verwendet wird, betrachten Sie dies nur als Schätzung. In seltenen Fällen kann sich die Zeilengröße erhöhen, nachdem Sie das vardecimal-Speicherformat aktiviert haben.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Verwenden Sie stattdessen die ROW-Komprimierung und die PAGE-Komprimierung. Weitere Informationen finden Sie unter [Data Compression](../../relational-databases/data-compression/data-compression.md). Auswirkung einer Komprimierung auf die Größe der Tabellen und Indizes, finden Sie unter [Sp_estimate_data_compression_savings &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md).  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Verwenden Sie stattdessen die ROW-Komprimierung und die PAGE-Komprimierung. Weitere Informationen finden Sie unter [Data Compression](../../relational-databases/data-compression/data-compression.md). Auswirkung einer Komprimierung auf die Größe der Tabellen und Indizes, finden Sie unter [Sp_estimate_data_compression_savings &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md).  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -89,7 +89,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Sp_db_vardecimal_storage_format &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-db-vardecimal-storage-format-transact-sql.md)   
- [Sp_tableoption &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)  
+ [Sp_db_vardecimal_storage_format &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-db-vardecimal-storage-format-transact-sql.md)   
+ [sp_tableoption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)  
   
   

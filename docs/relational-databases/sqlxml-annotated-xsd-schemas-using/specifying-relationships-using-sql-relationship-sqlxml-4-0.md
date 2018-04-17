@@ -1,16 +1,16 @@
 ---
 title: 'Angeben von Beziehungen mithilfe von SQL: Relationship (SQLXML 4.0) | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - IDREFS relationships [SQLXML]
@@ -31,20 +31,21 @@ helpviewer_keywords:
 - hierarchical relationships [SQLXML]
 - named relationships [SQLXML]
 ms.assetid: 98820afa-74e1-4e62-b336-6111a3dede4c
-caps.latest.revision: 
+caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bb997dc9775115708cfd5e39162dfd8d474d2838
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 048b90bb17952147d254e0dc89a28dc58fe9532c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="specifying-relationships-using-sqlrelationship-sqlxml-40"></a>Angeben von Beziehungen mit 'sql:relationship' (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Die Elemente in einem XML-Dokument können in Beziehung gesetzt werden. Die Elemente können hierarchisch geschachtelt sein, und es können ID-, IDREF- oder IDREFS-Beziehungen zwischen den Elementen angegeben werden.  
+  Die Elemente in einem XML-Dokument können in Beziehung gesetzt werden. Die Elemente können hierarchisch geschachtelt sein, und es können ID-, IDREF- oder IDREFS-Beziehungen zwischen den Elementen angegeben werden.  
   
  In einem XSD-Schema, z. B. eine  **\<Kunden >** Element enthält  **\<Reihenfolge >** untergeordnete Elemente. Wenn das Schema der AdventureWorks-Datenbank zugeordnet ist die  **\<Kunden >** -Element der Sales.Customer-Tabelle zugeordnet und die  **\<Reihenfolge >** -Element ordnet die Sales.SalesOrderHeader-Tabelle. Da Kunden Bestellungen aufgeben, stehen die zugrunde liegenden Tabellen Sales.Customer und Sales.SalesOrderHeader in Beziehung,. CustomerID in der Sales.SalesOrderHeader-Tabelle ist ein Fremdschlüssel, der auf den Primärschlüssel CustomerID in der Sales.Customer-Tabelle verweist. Sie können diese Beziehungen unter Elementen dieses Zuordnungsschemas mit Einrichten der **SQL: Relationship** Anmerkung.  
   
@@ -67,7 +68,7 @@ Die Elemente in einem XML-Dokument können in Beziehung gesetzt werden. Die Elem
  **parent-key**  
  Gibt den übergeordneten Schlüssel des übergeordneten Elements an. Wenn der übergeordnete Schlüssel aus mehreren Spalten besteht, werden Werte mit einer Leerstelle angegeben. Es besteht eine positionelle Zuordnung zwischen den Werten, die für den mehrspaltigen Schlüssel und für den entsprechenden untergeordneten Schlüssel festgelegt wurden.  
   
- **Child**  
+ **Untergeordnetes Element**  
  Gibt die untergeordnete Beziehung (Tabelle) an.  
   
  **child-key**  
@@ -394,7 +395,7 @@ Die Elemente in einem XML-Dokument können in Beziehung gesetzt werden. Die Elem
   
  Die  **\<Reihenfolge >** Element ist ein untergeordnetes Element von der  **\<Kunden >** Element. **\<SQL: Relationship >** angegeben ist, auf die  **\<Reihenfolge >** untergeordnetes Element; daher werden Bestellungen eines Kunden als untergeordnete Elemente des angezeigt  **\<Kunden >**.  
   
- Die  **\<Reihenfolge >** Element enthält die  **\<OrderDetail >** untergeordnetes Element. **\<SQL: Relationship >** angegeben  **\<OrderDetail >** untergeordnetes Element, sodass die Details einer Bestellung als untergeordnete Elemente dieses angezeigt  **\<Reihenfolge >**  Element.  
+ Die  **\<Reihenfolge >** Element enthält die  **\<OrderDetail >** untergeordnetes Element. **\<SQL: Relationship >** angegeben  **\<OrderDetail >** untergeordnetes Element, sodass die Details einer Bestellung als untergeordnete Elemente dieses angezeigt **\<Reihenfolge >** Element.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

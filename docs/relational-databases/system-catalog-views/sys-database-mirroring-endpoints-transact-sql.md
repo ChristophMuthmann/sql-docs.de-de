@@ -1,16 +1,16 @@
 ---
-title: sys.database_mirroring_endpoints (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: database_mirroring_endpoints (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.database_mirroring_endpoints_TSQL
@@ -25,16 +25,16 @@ helpviewer_keywords:
 - database mirroring [SQL Server], catalog views
 - sys.database_mirroring_endpoints catalog view
 ms.assetid: f2285199-97ad-473c-a52d-270044dd862b
-caps.latest.revision: 
+caps.latest.revision: 49
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b9bc0c2229fe72265957d39991f2b67a1b395f0b
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: b52d5a18294171a5da03c10d78307a3c478b89bd
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdatabasemirroringendpoints-transact-sql"></a>sys.database_mirroring_endpoints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,8 +46,8 @@ ms.lasthandoff: 02/03/2018
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
-|**\<geerbte Spalten >**|—|Erbt Spalten von **sys.endpoints** (Weitere Informationen finden Sie unter [sys.endpoints &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md)).|  
-|**role**|**tinyint**|Spiegelungsrolle. Folgende Werte sind möglich:<br /><br /> **0** = keine<br /><br /> **1** = Partner<br /><br /> **2** = Witness<br /><br /> **3** = all<br /><br /> Hinweis: Dieser Wert ist nur für die datenbankspiegelung relevant.|  
+|**\<geerbte Spalten >**|—|Erbt Spalten von **sys.endpoints** (Weitere Informationen finden Sie unter [sys.endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md)).|  
+|**Rolle ""**|**tinyint**|Spiegelungsrolle. Folgende Werte sind möglich:<br /><br /> **0** = keine<br /><br /> **1** = Partner<br /><br /> **2** = Witness<br /><br /> **3** = all<br /><br /> Hinweis: Dieser Wert ist nur für die datenbankspiegelung relevant.|  
 |**role_desc**|**nvarchar(60)**|Beschreibung der Spiegelungsrolle. Folgende Werte sind möglich:<br /><br /> **NONE**<br /><br /> **PARTNER**<br /><br /> **ZEUGEN**<br /><br /> **ALL**<br /><br /> Hinweis: Dieser Wert ist nur für die datenbankspiegelung relevant.|  
 |**is_encryption_enabled**|**bit**|**1** bedeutet, dass die Verschlüsselung aktiviert ist.<br /><br /> **0** bedeutet, dass die Verschlüsselung ist deaktiviert.|  
 |**connection_auth**|**tinyint**|Der Typ von Verbindungsauthentifizierung, der für Verbindungen mit diesem Endpunkt erforderlich ist. Folgende Werte sind möglich:<br /><br /> **1** -NTLM<br /><br /> **2** – KERBEROS<br /><br /> **3** -AUSHANDELN<br /><br /> **4** -ZERTIFIKAT<br /><br /> **5** -NTLM, ZERTIFIKAT<br /><br /> **6** -KERBEROS, ZERTIFIKAT<br /><br /> **7** -AUSHANDELN, ZERTIFIKAT<br /><br /> **8** -ZERTIFIKAT, NTLM<br /><br /> **9** -ZERTIFIKAT, KERBEROS<br /><br /> **10** -ZERTIFIKAT, AUSHANDELN|  
@@ -65,11 +65,11 @@ ms.lasthandoff: 02/03/2018
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Weitere Informationen finden Sie unter [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Angeben der Endpunkt-URL beim Hinzufügen oder Ändern eines Verfügbarkeitsreplikats &#40; SQLServer &#41;](../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)   
+ [Geben Sie die Endpunkt-URL beim Hinzufügen oder Ändern eines Verfügbarkeitsreplikats &#40;SQLServer&#41;](../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)   
  [sys.availability_replicas &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-availability-replicas-transact-sql.md)   
  [sys.database_mirroring &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md)   
  [sys.database_mirroring_witnesses &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/database-mirroring-witness-catalog-views-sys-database-mirroring-witnesses.md)   
- [Der Datenbankspiegelungs-Endpunkt &#40; SQLServer &#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
+ [Der Datenbankspiegelungs-Endpunkt & #40; SQLServer & #41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
  [Häufig gestellte Fragen zu Abfragen des SQL Server-Systemkatalogs](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  
   
   

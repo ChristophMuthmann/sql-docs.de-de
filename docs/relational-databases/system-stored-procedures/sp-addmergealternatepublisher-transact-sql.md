@@ -1,16 +1,16 @@
 ---
 title: Sp_addmergealternatepublisher (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addmergealternatepublisher
 ms.assetid: de46e0b1-d946-4021-bff6-2d8e3187656d
-caps.latest.revision: 
+caps.latest.revision: 32
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c3d8d79556c49b1eb63a38e74b23e28c8fb09e18
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: a950911984d454e9b5b579f8ed5d1ce4510aaa81
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddmergealternatepublisher-transact-sql"></a>sp_addmergealternatepublisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,13 +54,13 @@ sp_addmergealternatepublisher [ @publisher= ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@publisher=**] **"***Publisher***"**  
+ [ **@publisher=**] **'***publisher***'**  
  Der Name des Verlegers. *Publisher* ist **Sysname**, hat keinen Standardwert.  
   
- [  **@publisher_db=**] **"***Publisher_db***"**  
+ [ **@publisher_db=**] **'***publisher_db***'**  
  Der Name der Veröffentlichungsdatenbank. *Publisher_db* ist **Sysname**, hat keinen Standardwert.  
   
- [  **@publication=**] **"***Veröffentlichung***"**  
+ [ **@publication=**] **'***publication***'**  
  Der Name der Veröffentlichung. *Veröffentlichung* ist **Sysname**, hat keinen Standardwert.  
   
  [  **@alternate_publisher=**] **"***Alternate_synchronization_partner***"**  
@@ -91,7 +91,7 @@ sp_addmergealternatepublisher [ @publisher= ] 'publisher'
  Nur Mitglieder der der **Sysadmin** feste Serverrolle oder **Db_owner** feste Datenbankrolle können ausführen **Sp_addmergealternatepublisher**.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Sp_dropmergealternatepublisher &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-dropmergealternatepublisher-transact-sql.md)   
+ [Sp_dropmergealternatepublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergealternatepublisher-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

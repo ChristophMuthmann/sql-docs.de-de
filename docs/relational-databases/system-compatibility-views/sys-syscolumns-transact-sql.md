@@ -1,16 +1,16 @@
 ---
 title: Sys.syscolumns (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-enginel, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: system-compatibility-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.syscolumns
@@ -23,16 +23,17 @@ helpviewer_keywords:
 - syscolumns system table
 - sys.syscolumns compatibility view
 ms.assetid: 863fd87b-ff33-4ac5-9aa9-df21140681da
-caps.latest.revision: 
+caps.latest.revision: 32
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 15de1e84d8b3dcbe9d1949cb0ba745cfea671287
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 1f1f149934c0d92df8a1184bc57a5fcb02f7673c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="syssyscolumns-transact-sql"></a>sys.syscolumns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -55,10 +56,10 @@ ms.lasthandoff: 02/09/2018
 |**colid**|**smallint**|Spalten- oder Parameter-ID|  
 |**xoffset**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**bitpos**|**tinyint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**reserved**|**tinyint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**Reserviert**|**tinyint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**colstat**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**cdefault**|**int**|ID des Standards für diese Spalte|  
-|**domain**|**int**|ID der Regel oder CHECK-Einschränkung für diese Spalte|  
+|**Domäne**|**int**|ID der Regel oder CHECK-Einschränkung für diese Spalte|  
 |**number**|**smallint**|Nummer der Unterprozedur, wenn die Prozedur gruppiert ist.<br /><br /> 0 = Einträge, die sich nicht auf eine Prozedur beziehen.|  
 |**colorder**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**autoval**|**varbinary(8000)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
@@ -72,11 +73,11 @@ ms.lasthandoff: 02/09/2018
 |**scale**|**int**|Dezimalstellen in dieser Spalte.<br /><br /> NULL = Datentyp nicht numerisch.|  
 |**iscomputed**|**int**|Flag, das anzeigt, ob die Spalte berechnet ist:<br /><br /> 0 = Nicht berechnet<br /><br /> 1 = Berechnet|  
 |**isoutparam**|**int**|Gibt an, ob der Prozedurparameter ein Ausgabeparameter ist.<br /><br /> 1 = True<br /><br /> 0 = False|  
-|**isnullable**|**int**|Gibt an, ob die Spalte NULL-Werte zulässt.<br /><br /> 1 = True<br /><br /> 0 = False|  
-|**collation**|**sysname**|Name der Sortierung der Spalte. NULL, wenn es keine zeichenbasierte Spalte ist.|  
+|**IsNullable**|**int**|Gibt an, ob die Spalte NULL-Werte zulässt.<br /><br /> 1 = True<br /><br /> 0 = False|  
+|**Sortierung**|**sysname**|Name der Sortierung der Spalte. NULL, wenn es keine zeichenbasierte Spalte ist.|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Zuordnen von Systemtabellen zu Systemsichten &#40; Transact-SQL &#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
+ [Zuordnen von Systemtabellen zu Systemsichten &#40;Transact-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
  [Kompatibilitätssichten &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   
   

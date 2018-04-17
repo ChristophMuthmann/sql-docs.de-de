@@ -1,15 +1,15 @@
 ---
-title: "Unterstützung von Dienstprinzipalnamen (SPN) in Clientverbindungen | Microsoft Docs"
-ms.custom: 
+title: Unterstützung von Dienstprinzipalnamen (SPN) in Clientverbindungen | Microsoft Docs
+ms.custom: ''
 ms.date: 08/08/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client|features
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQL Server Native Client, SPNs
@@ -17,16 +17,17 @@ helpviewer_keywords:
 - OLE DB, SPNs
 - SPNs [SQL Server]
 ms.assetid: 96598c69-ce9a-4090-aacb-d546591e8af7
-caps.latest.revision: 
+caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: fe0670bbb967a10d2d14750f2a32a321cc912fce
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 9281aae9e4e6aef2a48c0f99362689512613b405
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="service-principal-name-spn-support-in-client-connections"></a>Unterstützung von Dienstprinzipalnamen (SPN) in Clientverbindungen
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,9 +35,9 @@ ms.lasthandoff: 01/25/2018
 
   Beginnend mit [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], Unterstützung für Dienstprinzipalnamen (SPNs) wurde erweitert, damit die um gegenseitigen Authentifizierung über alle Protokolle hinweg zu ermöglichen. In früheren Versionen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], SPNs wurden nur für Kerberos statt TCP unterstützt bei der Standardeinstellung SPN für die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Instanz in Active Directory registriert wurde.  
   
- SPNs werden vom Authentifizierungsprotokoll verwendet, um zu bestimmen, das Konto, in dem eine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Instanz ausgeführt wird. Ist das Konto der Instanz bekannt, kann mithilfe der Kerberos-Authentifizierung die gegenseitige Authentifizierung von Client und Server durchgeführt werden. Ist das Konto der Instanz nicht bekannt, wird die NTML-Authentifizierung verwendet, die nur die Authentifizierung des Clients durch den Server durchführt. Derzeit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client führt die Suche Authentifizierung den SPN von der Instanz-Namen und den Netzwerkverbindungseigenschaften abgeleitet. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]versuchen, SPNs beim Start zu registrieren, oder sie können manuell registriert werden. Die Registrierung schlägt jedoch fehl, wenn das Konto, dass die Registrierung der SPNs vornimmt, nicht über ausreichende Zugriffsrechte verfügt.  
+ SPNs werden vom Authentifizierungsprotokoll verwendet, um zu bestimmen, das Konto, in dem eine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Instanz ausgeführt wird. Ist das Konto der Instanz bekannt, kann mithilfe der Kerberos-Authentifizierung die gegenseitige Authentifizierung von Client und Server durchgeführt werden. Ist das Konto der Instanz nicht bekannt, wird die NTML-Authentifizierung verwendet, die nur die Authentifizierung des Clients durch den Server durchführt. Derzeit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client führt die Suche Authentifizierung den SPN von der Instanz-Namen und den Netzwerkverbindungseigenschaften abgeleitet. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] versuchen, SPNs beim Start zu registrieren, oder sie können manuell registriert werden. Die Registrierung schlägt jedoch fehl, wenn das Konto, dass die Registrierung der SPNs vornimmt, nicht über ausreichende Zugriffsrechte verfügt.  
   
- Domänen- und Computerkonten werden automatisch in Active Directory registriert. Diese können als SPNs verwendet werden, oder Administratoren können ihre eigenen SPNs definieren. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Stellt die Authentifizierung verwalten und auch zuverlässiger sicherer, da Clients direkt den zu verwendenden SPN festlegen.  
+ Domänen- und Computerkonten werden automatisch in Active Directory registriert. Diese können als SPNs verwendet werden, oder Administratoren können ihre eigenen SPNs definieren. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Stellt die Authentifizierung verwalten und auch zuverlässiger sicherer, da Clients direkt den zu verwendenden SPN festlegen.  
   
 > [!NOTE]  
 >  Ein von einer Clientanwendung festgelegter SPN wird nur verwendet, wenn eine Verbindung mit integrierten Sicherheitsfunktionen von Windows hergestellt wird.  
@@ -78,7 +79,7 @@ ms.lasthandoff: 01/25/2018
  Das neue Verbindungsverhalten ist clientseitig implementiert und daher kein spezifisches Verhalten von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="linked-servers-and-delegation"></a>Verbindungsserver und Delegierung  
- Wenn Verbindungsserver erstellt werden, die  **@provstr**  Parameter [Sp_addlinkedserver](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) kann verwendet werden, um den Server und Failoverpartner SPNs anzugeben. Diese Vorgehensweise hat den gleichen Vorteil wie das Festlegen von SPNs in Clientverbindungszeichenfolgen: Es ist einfacher und zuverlässiger, Verbindungen mit Kerberos-Authentifizierung herzustellen.  
+ Wenn Verbindungsserver erstellt werden, die **@provstr** Parameter [Sp_addlinkedserver](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) kann verwendet werden, um den Server und Failoverpartner SPNs anzugeben. Diese Vorgehensweise hat den gleichen Vorteil wie das Festlegen von SPNs in Clientverbindungszeichenfolgen: Es ist einfacher und zuverlässiger, Verbindungen mit Kerberos-Authentifizierung herzustellen.  
   
  Delegierung über Verbindungsserver erfordert die Kerberos-Authentifizierung.  
   
@@ -111,9 +112,9 @@ ms.lasthandoff: 01/25/2018
 ## <a name="odbc-and-ole-db-syntax-supporting-spns"></a>SPNs, die ODBC und OLE DB-Syntax unterstützen  
  Informationen zur Syntax finden Sie in den folgenden Themen:  
   
--   [Dienstprinzipalnamen &#40; Dienstprinzipalnamen &#41; in Clientverbindungen &#40; ODBC &#41;](../../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md)  
+-   [Dienstprinzipalnamen &#40;SPNs&#41; in Clientverbindungen &#40;ODBC&#41;](../../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md)  
   
--   [Dienstprinzipalnamen &#40; Dienstprinzipalnamen &#41; in Clientverbindungen &#40; OLE DB &#41;](../../../relational-databases/native-client/ole-db/service-principal-names-spns-in-client-connections-ole-db.md)  
+-   [Dienstprinzipalnamen &#40;SPNs&#41; in Clientverbindungen &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/service-principal-names-spns-in-client-connections-ole-db.md)  
   
  Informationen zu Beispielanwendungen, die diese Funktion veranschaulichen, finden Sie unter [Beispiele zur Programmierbarkeit von SQL Server-Daten](http://msftdpprodsamples.codeplex.com/).  
   

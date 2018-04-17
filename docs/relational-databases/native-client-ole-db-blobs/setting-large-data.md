@@ -1,15 +1,15 @@
 ---
-title: "Festlegen großer Datenmengen | Microsoft Docs"
-ms.custom: 
+title: Festlegen großer Datenmengen | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-ole-db-blobs
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - IRowsetChange interface
@@ -18,16 +18,17 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, BLOBs
 - large data, OLE objects
 ms.assetid: 9d0c524b-22b0-475a-9ff5-5a69a6393b46
-caps.latest.revision: 
+caps.latest.revision: 40
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9d1cb93b8c5d7f9b9a0b596d1a29762f849f630c
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 04db1fb7879c99bf29c3a3dde07b7f28474fcd9f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="setting-large-data"></a>Festlegen großer Datenmengen
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

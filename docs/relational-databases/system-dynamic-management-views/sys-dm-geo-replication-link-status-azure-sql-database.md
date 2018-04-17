@@ -1,16 +1,16 @@
 ---
 title: Sys.dm_geo_replication_link_status (Azure SQL-Datenbank) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 10/13/2016
-ms.prod: 
+ms.prod: ''
 ms.prod_service: sql-database
-ms.reviewer: 
+ms.reviewer: ''
 ms.service: sql-database
 ms.component: dmv's
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - dm_geo_replication_link_status
@@ -21,16 +21,17 @@ helpviewer_keywords:
 - dm_geo_replication_link_status dynamic management view
 - sys.dm_geo_replication_link_status dynamic management view
 ms.assetid: d763d679-470a-4c21-86ab-dfe98d37e9fd
-caps.latest.revision: 
+caps.latest.revision: 15
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 37bb0b6c2252a213824e24c51178711a704d2e85
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
+ms.openlocfilehash: 1ae55c28a53990f82c572de63669e7cb8adbe1fd
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmgeoreplicationlinkstatus-azure-sql-database"></a>Sys.dm_geo_replication_link_status (Azure SQL-Datenbank)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -71,8 +72,8 @@ FROM sys.dm_geo_replication_link_status;
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [ALTER DATABASE &#40; Azure SQL-Datenbank &#41;](../../t-sql/statements/alter-database-azure-sql-database.md)   
- [Sys.geo_replication_links &#40; Azure SQL-Datenbank &#41;](../../relational-databases/system-dynamic-management-views/sys-geo-replication-links-azure-sql-database.md)   
- [Sys. dm_operation_status &#40; Azure SQL-Datenbank &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md)  
+ [ALTER_DATABASE &#40;Azure SQL-Datenbank&#41;](../../t-sql/statements/alter-database-azure-sql-database.md)   
+ [Sys.geo_replication_links &#40;Azure SQL-Datenbank&#41;](../../relational-databases/system-dynamic-management-views/sys-geo-replication-links-azure-sql-database.md)   
+ [Sys. dm_operation_status &#40;Azure SQL-Datenbank&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md)  
   
   

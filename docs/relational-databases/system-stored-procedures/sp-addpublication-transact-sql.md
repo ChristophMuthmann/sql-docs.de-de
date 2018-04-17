@@ -1,16 +1,16 @@
 ---
 title: Sp_addpublication (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addpublication
 ms.assetid: c7167ed1-2b7e-4824-b82b-65f4667c4407
-caps.latest.revision: 
+caps.latest.revision: 69
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1e47d331f57abede1d4b0e20ebba44cced109035
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 296a54187b415d79a4cc036f9111091cb6b1b415
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddpublication-transact-sql"></a>sp_addpublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -92,22 +92,22 @@ sp_addpublication [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@publication=**] **"***Veröffentlichung***"**  
+ [ **@publication=**] **'***publication***'**  
  Der Name der Veröffentlichung, die erstellt werden soll. *Veröffentlichung* ist **Sysname**, hat keinen Standardwert. Dieser Name muss innerhalb der Datenbank eindeutig sein.  
   
  [  **@taskid=**] *Taskid*  
- Nur für Abwärtskompatibilität unterstützt. Verwenden Sie [Sp_addpublication_snapshot &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md).  
+ Nur für Abwärtskompatibilität unterstützt. Verwenden Sie [Sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md).  
   
  [  **@restricted=**] **"***eingeschränkte***"**  
  Nur für Abwärtskompatibilität unterstützt. Verwenden Sie *Default_access*.  
   
- [  **@sync_method=**] *' Sync_method***"**  
+ [  **@sync_method=**] *"Sync_method ***"**  
  Der Synchronisierungsmodus. *Sync_method* ist **vom Datentyp nvarchar(13)**, und kann einen der folgenden Werte.  
   
 |Wert|Description|  
 |-----------|-----------------|  
-|**systemeigene**|Erstellt eine Massenkopierprogramm-Ausgabe aller Tabellen im einheitlichen Modus. *Für Oracle-Verlegern nicht unterstützt*.|  
-|**Zeichen**|Erstellt eine Massenkopierprogramm-Ausgabe aller Tabellen im Zeichenmodus. *Für einen Oracle-Verleger* **Zeichen** *gilt nur für die momentaufnahmereplikation*.|  
+|**native**|Erstellt eine Massenkopierprogramm-Ausgabe aller Tabellen im einheitlichen Modus. *Für Oracle-Verlegern nicht unterstützt*.|  
+|**character**|Erstellt eine Massenkopierprogramm-Ausgabe aller Tabellen im Zeichenmodus. *Für einen Oracle-Verleger* **Zeichen** *gilt nur für die momentaufnahmereplikation*.|  
 |**gleichzeitige**|Erzeugt eine Massenkopierprogramm-Ausgabe aller Tabellen im einheitlichen Modus, sperrt jedoch die Tabellen während der Erstellung der Momentaufnahme nicht. Wird nur für Transaktionsveröffentlichungen unterstützt. *Für Oracle-Verlegern nicht unterstützt*.|  
 |**' concurrent_c '**|Erzeugt eine Massenkopierprogramm-Ausgabe aller Tabellen im Zeichenmodus, sperrt jedoch die Tabellen während der Erstellung der Momentaufnahme nicht. Wird nur für Transaktionsveröffentlichungen unterstützt.|  
 |**Datenbank-Momentaufnahme**|Erstellt aus einer Datenbankmomentaufnahme eine Massenkopierprogramm-Ausgabe aller Tabellen im einheitlichen Modus. Datenbank-Momentaufnahmen stehen nicht in jeder Edition von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Eine Liste der Funktionen, die von den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Editionen unterstützt werden, finden Sie unter [Von den SQL Server 2016-Editionen unterstützte Funktionen](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).|  
@@ -130,7 +130,7 @@ sp_addpublication [ @publication = ] 'publication'
   
 |Wert|Description|  
 |-----------|-----------------|  
-|**aktive**|Die Veröffentlichungsdaten sind für Abonnenten sofort verfügbar.|  
+|**Aktive**|Die Veröffentlichungsdaten sind für Abonnenten sofort verfügbar.|  
 |**Inaktive** (Standard)|Die Veröffentlichungsdaten sind für Abonnenten zunächst nicht verfügbar, wenn die Veröffentlichung erstellt wird (die Abonnierung ist möglich, aber die Abonnements werden nicht verarbeitet).|  
   
  *Für Oracle-Verlegern nicht unterstützt*.  
@@ -175,7 +175,7 @@ sp_addpublication [ @publication = ] 'publication'
  Aktiviert oder deaktiviert das Hinzufügen von Änderungen beim Abonnenten zu Warteschlangen, bis sie beim Verleger angewendet werden können. *Allow_queued_updating* ist **nvarchar(5)** hat den Standardwert "false". Wenn **"false"**, Änderungen auf dem Abonnenten werden nicht in die Warteschlange eingereiht. **"true"** ist *für Oracle-Verlegern nicht unterstützt*.  
   
  [  **@snapshot_in_defaultfolder=** ] **"***Snapshot_in_default_folder***"**  
- Gibt an, ob Momentaufnahmedateien im Standardordner gespeichert werden. *Snapshot_in_default_folder* ist **nvarchar(5)** hat den Standardwert "true". Wenn **"true"**, momentaufnahmedateien im Standardordner gefunden werden können. Wenn **"false"**, sind momentaufnahmedateien im alternativen vom angegebenen Speicherort gespeichert *Alternate_snapshot_folder*. Alternative Speicherorte können sich auf einem anderen Server, auf einem Netzlaufwerk oder auf Wechselmedien befinden (z. B. auf CD-ROM oder auf einem Wechseldatenträger). Momentaufnahmedateien können auch auf einer FTP-Site gespeichert werden, um zu einem späteren Zeitpunkt vom Abonnenten abgerufen zu werden. Beachten Sie, dass dieser Parameter kann "true" sein und dennoch fehlgeschlagene einen Speicherort der  **@alt_snapshot_folder**  Parameter. Diese Kombination gibt an, dass die Momentaufnahmedateien sowohl im Standardpfad als auch im alternativen Pfad gespeichert werden.  
+ Gibt an, ob Momentaufnahmedateien im Standardordner gespeichert werden. *Snapshot_in_default_folder* ist **nvarchar(5)** hat den Standardwert "true". Wenn **"true"**, momentaufnahmedateien im Standardordner gefunden werden können. Wenn **"false"**, sind momentaufnahmedateien im alternativen vom angegebenen Speicherort gespeichert *Alternate_snapshot_folder*. Alternative Speicherorte können sich auf einem anderen Server, auf einem Netzlaufwerk oder auf Wechselmedien befinden (z. B. auf CD-ROM oder auf einem Wechseldatenträger). Momentaufnahmedateien können auch auf einer FTP-Site gespeichert werden, um zu einem späteren Zeitpunkt vom Abonnenten abgerufen zu werden. Beachten Sie, dass dieser Parameter kann "true" sein und dennoch fehlgeschlagene einen Speicherort der **@alt_snapshot_folder** Parameter. Diese Kombination gibt an, dass die Momentaufnahmedateien sowohl im Standardpfad als auch im alternativen Pfad gespeichert werden.  
   
  [  **@alt_snapshot_folder=** ] **"***Alternate_snapshot_folder***"**  
  Gibt den Speicherort des anderen Ordners für die Momentaufnahme an. *Alternate_snapshot_folder* ist **nvarchar(255)** hat den Standardwert NULL.  
@@ -187,7 +187,7 @@ sp_addpublication [ @publication = ] 'publication'
  Gibt einen Zeiger auf eine **.sql** Dateispeicherort. *Post_snapshot_script* ist **nvarchar(255)**, hat den Standardwert NULL. Der Verteilungs-Agent führt das nach der Momentaufnahme ausgeführte Skript aus, nachdem alle anderen Skripts für replizierte Objekte und Daten während der Erstsynchronisierung angewendet wurden. Das Skript wird beim Herstellen der Verbindung mit der Abonnementdatenbank in dem vom Verteilungs-Agent verwendeten Sicherheitskontext ausgeführt.  
   
  [  **@compress_snapshot=** ] **"***Compress_snapshot***"**  
- Gibt an, dass die Momentaufnahme, die geschrieben wird die  **@alt_snapshot_folder**  Speicherort ist in komprimiert die [!INCLUDE[msCoName](../../includes/msconame-md.md)] CAB-Format. *Compress_snapshot* ist **nvarchar(5)**, hat den Standardwert "false". **"false"** gibt an, dass die Momentaufnahme nicht komprimiert wird. **"true"** gibt an, dass die Momentaufnahme komprimiert wird. Momentaufnahmedateien, die größer als 2 Gigabyte (GB) sind, können nicht komprimiert werden. Komprimierte Momentaufnahmedateien werden an dem Speicherort dekomprimiert, an dem der Verteilungs-Agent ausgeführt wird. Pullabonnements werden normalerweise mit komprimierten Momentaufnahmen verwendet, sodass die Dateien auf dem Abonnenten dekomprimiert werden. Die Momentaufnahme im Standardordner kann nicht komprimiert werden.  
+ Gibt an, dass die Momentaufnahme, die geschrieben wird die **@alt_snapshot_folder** Speicherort ist in komprimiert die [!INCLUDE[msCoName](../../includes/msconame-md.md)] CAB-Format. *Compress_snapshot* ist **nvarchar(5)**, hat den Standardwert "false". **"false"** gibt an, dass die Momentaufnahme nicht komprimiert wird. **"true"** gibt an, dass die Momentaufnahme komprimiert wird. Momentaufnahmedateien, die größer als 2 Gigabyte (GB) sind, können nicht komprimiert werden. Komprimierte Momentaufnahmedateien werden an dem Speicherort dekomprimiert, an dem der Verteilungs-Agent ausgeführt wird. Pullabonnements werden normalerweise mit komprimierten Momentaufnahmen verwendet, sodass die Dateien auf dem Abonnenten dekomprimiert werden. Die Momentaufnahme im Standardordner kann nicht komprimiert werden.  
   
  [  **@ftp_address =** ] **"***Ftp_address***"**  
  Die Netzwerkadresse des FTP-Diensts für den Verteiler. *Ftp_address* ist **Sysname**, hat den Standardwert NULL. Gibt an, wo die Veröffentlichungsmomentaufnahmedateien für den Verteilungs-Agent oder Merge-Agent eines Abonnenten zum Abholen gespeichert sind. Da diese Eigenschaft für jede Veröffentlichung gespeichert wird, kann jede Veröffentlichung einen anderen haben *Ftp_address*. Die Veröffentlichung muss die Weitergabe von Momentaufnahmen über FTP unterstützen.  
@@ -235,7 +235,7 @@ sp_addpublication [ @publication = ] 'publication'
   
 |Wert|Description|  
 |-----------|-----------------|  
-|**SQL**|Verwendet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zum Speichern von Transaktionen.|  
+|**sql**|Verwendet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zum Speichern von Transaktionen.|  
 |NULL (Standard)|Standardmäßig **Sql**, dadurch wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zum Speichern von Transaktionen.|  
   
 > [!NOTE]  
@@ -243,7 +243,7 @@ sp_addpublication [ @publication = ] 'publication'
   
  *Für Oracle-Verlegern nicht unterstützt*.  
   
- [  **@add_to_active_directory =** ] **"***hinzufügen**_**To_active_directory***"**  
+ [  **@add_to_active_directory =** ] **"*** hinzufügen**_**To_active_directory ***"**  
  Dieser Parameter wurde als veraltet markiert und wird nur zum Sicherstellen der Abwärtskompatibilität von Skripts unterstützt. Für [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory ist das Hinzufügen von Veröffentlichungsinformationen nicht länger möglich.  
   
  [  **@logreader_job_name =** ] **"***Logreader_agent_name***"**  
@@ -275,11 +275,11 @@ sp_addpublication [ @publication = ] 'publication'
  [  **@replicate_ddl =** ] *Replicate_ddl*  
  Gibt an, ob für die Veröffentlichung die Schemareplikation unterstützt wird. *Replicate_ddl* ist **Int**, hat den Standardwert **1** für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Herausgeber und **0** für nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Herausgeber. **1** gibt an, dass die Anweisungen des Data Definition Language (DDL) wird auf dem Verleger ausgeführte repliziert werden, und **0** gibt an, dass die DDL-Anweisungen nicht repliziert werden. *Schemareplikation wird für Oracle-Verlegern nicht unterstützt.* Weitere Informationen finden Sie unter [Vornehmen von Schemaänderungen in Veröffentlichungsdatenbanken](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md).  
   
- Die  *@replicate_ddl*  Parameter wird berücksichtigt, wenn eine DDL-Anweisung eine Spalte hinzugefügt. Die  *@replicate_ddl*  Parameter wird ignoriert, wenn eine DDL-Anweisung ändert oder eine Spalte aus den folgenden Gründen löscht.  
+ Die *@replicate_ddl* Parameter wird berücksichtigt, wenn eine DDL-Anweisung eine Spalte hinzugefügt. Die *@replicate_ddl* Parameter wird ignoriert, wenn eine DDL-Anweisung ändert oder eine Spalte aus den folgenden Gründen löscht.  
   
--   Wenn eine Spalte gelöscht wird, muss die Sysarticlecolumns aktualisiert werden, um zu verhindern, dass neue DML-Anweisungen die gelöschte Spalte, die der Verteilungs-Agent fehlschlagen würde aufnehmen. Die  *@replicate_ddl*  Parameter wird ignoriert, da die Replikation immer die schemaänderung replizieren muss.  
+-   Wenn eine Spalte gelöscht wird, muss die Sysarticlecolumns aktualisiert werden, um zu verhindern, dass neue DML-Anweisungen die gelöschte Spalte, die der Verteilungs-Agent fehlschlagen würde aufnehmen. Die *@replicate_ddl* Parameter wird ignoriert, da die Replikation immer die schemaänderung replizieren muss.  
   
--   Wenn eine Spalte geändert wird, hat sich möglicherweise der Quelldatentyp oder die NULL-Zulässigkeit geändert. Dies hat zur Folge, dass DML-Anweisungen einen Wert enthalten, der möglicherweise nicht mit der Tabelle beim Abonnenten kompatibel ist. Solche DML-Anweisungen können bewirken, dass der Verteilungs-Agent fehlschlägt. Die  *@replicate_ddl*  Parameter wird ignoriert, da die Replikation immer die schemaänderung replizieren muss.  
+-   Wenn eine Spalte geändert wird, hat sich möglicherweise der Quelldatentyp oder die NULL-Zulässigkeit geändert. Dies hat zur Folge, dass DML-Anweisungen einen Wert enthalten, der möglicherweise nicht mit der Tabelle beim Abonnenten kompatibel ist. Solche DML-Anweisungen können bewirken, dass der Verteilungs-Agent fehlschlägt. Die *@replicate_ddl* Parameter wird ignoriert, da die Replikation immer die schemaänderung replizieren muss.  
   
 -   Wenn eine DDL-Anweisung eine neue Spalte hinzufügt, schließt Sysarticlecolumns nicht die neue Spalte. DML-Anweisungen versuchen nicht, Daten für die neue Spalte zu replizieren. Der Parameter wird berücksichtigt, da sowohl das Replizieren als auch das Nicht-Replizieren der DDL akzeptabel ist.  
   
@@ -385,12 +385,12 @@ sp_addpublication [ @publication = ] 'publication'
  Nur Mitglieder der der **Sysadmin** feste Serverrolle oder **Db_owner** feste Datenbankrolle können ausführen **Sp_addpublication**. Für Anmeldungen unter Verwendung der Windows-Authentifizierung muss in der Datenbank ein Konto vorhanden sein, das das zugehörige Windows-Benutzerkonto darstellt. Ein Benutzerkonto für eine Windows-Gruppe reicht in diesem Fall nicht aus.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Sp_addlogreader_agent &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md)   
- [Sp_addpublication_snapshot &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)   
+ [Sp_addlogreader_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md)   
+ [Sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)   
  [sp_changepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)   
- [Sp_droppublication &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-droppublication-transact-sql.md)   
+ [Sp_droppublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droppublication-transact-sql.md)   
  [sp_helppublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)   
- [Sp_replicationdboption &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md)   
+ [Sp_replicationdboption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md)   
  [Veröffentlichen von Daten und Datenbankobjekten](../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
  [Gespeicherte Automatisierungsprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   

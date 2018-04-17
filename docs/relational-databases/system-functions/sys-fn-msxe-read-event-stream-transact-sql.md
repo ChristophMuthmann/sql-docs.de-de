@@ -1,16 +1,16 @@
 ---
-title: sys.fn_MSxe_read_event_stream (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: Sys.fn_MSxe_read_event_stream (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - fn_MSxe_read_event_stream_TSQL
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - sys.fn_MSxe_read_event_stream
 - fn_MSxe_read_event_stream
 ms.assetid: 5edb1162-625a-41e0-8ec9-1edc8ab9a74a
-caps.latest.revision: 
+caps.latest.revision: 9
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8af9aee0b125ac55a7df79ba6fd047308778b342
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: f25b102f1292d4220079ba5e7f89e2752fa9ef4a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysfnmsxereadeventstream-transact-sql"></a>sys.fn_MSxe_read_event_stream (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ sys.fn_MSxe_read_event_stream ( session_name)
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *Session_name*  
+ *Sitzungsname*  
  Der Name einer Sitzung, die auf dem Server ausgeführt wird.  
   
 ## <a name="table-returned"></a>Zurückgegebene Tabelle  

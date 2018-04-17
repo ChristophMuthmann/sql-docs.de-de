@@ -2,7 +2,7 @@
 title: SQLExecute-Funktion | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 9286a01d-cde2-4b90-af94-9fd7f8da48bf
 caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0b1660fbd60346aff1c4ef24dcba32a778a00d5e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: def8205423e1f79045cb54e80cf9bc33c4d8246d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlexecute-function"></a>SQLExecute-Funktion
 **Konformität**  
@@ -66,9 +66,9 @@ SQLRETURN SQLExecute(
 |01004|Zeichenfolgedaten wurden rechts abgeschnitten|Das Abschneiden von nicht leeren Zeichen oder Binärdaten ungleich NULL führte Zeichenfolgen- oder Binärdaten für ein Output-Parameter zurückgegeben. Falls es sich um einen Zeichenfolgenwert handelt, wurde es rechts abgeschnitten. (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
 |01006|Berechtigung nicht aufgehoben.|Die vorbereitete Anweisung zugeordneten der *StatementHandle* wurde eine **widerrufen** -Anweisung und der Benutzer verfügte nicht über die angegebene Berechtigung. (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
 |01007|Berechtigung nicht gewährt.|Die vorbereitete Anweisung zugeordneten der *StatementHandle* wurde eine **GRANT** -Anweisung und der Benutzer konnte nicht erteilt werden die angegebene Berechtigung.|  
-|01 S 02|Der Optionswert wurde geändert|Ein Attribut angegebene Anweisung war ungültig aufgrund Implementierung Arbeitsbedingungen, damit ein ähnlichen Wert vorübergehend ersetzt wurde. (**SQLGetStmtAttr** aufgerufen werden können, um zu bestimmen, was vorübergehend ersetzten Werts ist.) Der Ersatzwert ist gültig für die *StatementHandle* , bis der Cursor geschlossen wird, an welchem Punkt das Anweisungsattribut zurückgesetzt auf seinen ursprünglichen Wert. Sind die Anweisungsattribute, die geändert werden können: SQL_ATTR_CONCURRENCY, SQL_ATTR_CURSOR_TYPE SQL_ATTR_KEYSET_SIZE, SQL_ATTR_MAX_LENGTH, SQL_ATTR_MAX_ROWS, SQL_ATTR_QUERY_TIMEOUT und SQL_ATTR_SIMULATE_CURSOR. (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
+|01S02|Der Optionswert wurde geändert|Ein Attribut angegebene Anweisung war ungültig aufgrund Implementierung Arbeitsbedingungen, damit ein ähnlichen Wert vorübergehend ersetzt wurde. (**SQLGetStmtAttr** aufgerufen werden können, um zu bestimmen, was vorübergehend ersetzten Werts ist.) Der Ersatzwert ist gültig für die *StatementHandle* , bis der Cursor geschlossen wird, an welchem Punkt das Anweisungsattribut zurückgesetzt auf seinen ursprünglichen Wert. Sind die Anweisungsattribute, die geändert werden können: SQL_ATTR_CONCURRENCY, SQL_ATTR_CURSOR_TYPE SQL_ATTR_KEYSET_SIZE, SQL_ATTR_MAX_LENGTH, SQL_ATTR_MAX_ROWS, SQL_ATTR_QUERY_TIMEOUT und SQL_ATTR_SIMULATE_CURSOR. (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
 |01S07|Teilbereiche wurden abgeschnitten.|Die Daten für eine Eingabe/Ausgabe zurückgegeben oder Output-Parameter wurde abgeschnitten, dass der Bruchteil der Zeitkomponente eines Datentyps Zeit, Timestamp- oder Intervall abgeschnitten wurde oder der Bruchteil der einen numerischen Datentyp abgeschnitten wurde.<br /><br /> (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
-|07002|COUNT-Feld ist ungültig.|Die angegebene Anzahl von Parametern **SQLBindParameter** ist kleiner als die Anzahl von Parametern in der SQL-Anweisung, die in enthaltenen \* *StatementText*.<br /><br /> **SQLBindParameter** aufgerufen wurde, wobei *ParameterValuePtr* auf ein null-Zeiger festgelegt *StrLen_or_IndPtr* nicht auf SQL_NULL_DATA oder SQL_DATA_AT_EXEC, festgelegt und  *InputOutputType* nicht, dass die Anzahl von Parametern in angegeben festgelegt SQL_PARAM_OUTPUT, **SQLBindParameter** war größer als die Anzahl von Parametern in der SQL-Anweisung, die in enthaltenen **StatementText*.|  
+|07002|COUNT-Feld ist ungültig.|Die angegebene Anzahl von Parametern **SQLBindParameter** ist kleiner als die Anzahl von Parametern in der SQL-Anweisung, die in enthaltenen \* *StatementText*.<br /><br /> **SQLBindParameter** aufgerufen wurde, wobei *ParameterValuePtr* auf ein null-Zeiger festgelegt *StrLen_or_IndPtr* nicht auf SQL_NULL_DATA oder SQL_DATA_AT_EXEC, festgelegt und *InputOutputType*  nicht, dass die Anzahl von Parametern in angegeben festgelegt SQL_PARAM_OUTPUT, **SQLBindParameter** war größer als die Anzahl von Parametern in der SQL-Anweisung, die in enthaltenen **StatementText* .|  
 |07006|Eingeschränkte Datentypattribut|Der Datenwert durch identifiziert die *ValueType* Argument in **SQLBindParameter** für der gebundene Parameter nicht in den identifizierten Datentyp konvertiert werden konnte die *ParameterType*Argument in **SQLBindParameter**.<br /><br /> Der Datenwert zurückgegeben, für einen Parameter gebunden werden, wie SQL_PARAM_INPUT_OUTPUT oder SQL_PARAM_OUTPUT nicht in der identifizierten Datentyp konvertiert werden konnte die *ValueType* Argument in **SQLBindParameter**.<br /><br /> (Wenn die Datenwerte für eine oder mehrere Zeilen nicht konvertiert werden konnte, aber eine oder mehrere Zeilen wurden erfolgreich zurückgegeben, diese Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
 |07007|Restricted-Parameters Wert Verletzung|Der Parametertyp SQL_PARAM_INPUT_OUTPUT_STREAM wird nur für einen Parameter verwendet, die Daten sendet und empfängt in Teilen. Ein gebundener Eingabepuffer ist für diesen Parameter nicht zulässig.<br /><br /> Dieser Fehler tritt auf, wenn der Parametertyp SQL_PARAM_INPUT_OUTPUT ist, und die \* *StrLen_or_IndPtr* im angegebenen **SQLBindParameter** stimmt nicht mit SQL_NULL_DATA SQL_DEFAULT_ PARAM, SQL_LEN_DATA_AT_EXEC(len) oder SQL_DATA_AT_EXEC.|  
 |07S01|Ungültige Verwendung des Standardparameters|Legen Sie ein Parameterwert mit **SQLBindParameter**, SQL_DEFAULT_PARAM und der entsprechende Parameter wurde nicht für eine kanonische Prozeduraufruf ODBC-Parameter.|  

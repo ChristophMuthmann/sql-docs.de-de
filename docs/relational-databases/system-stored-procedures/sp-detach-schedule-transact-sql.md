@@ -1,16 +1,16 @@
 ---
 title: Sp_detach_schedule (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_detach_schedule
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_detach_schedule
 ms.assetid: 9a1fc335-1bef-4638-a33a-771c54a5dd19
-caps.latest.revision: 
+caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 784a8439519ad3a99edd35a085f306e838227151
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 01ea4f9566f3a50b37f782b5e601b0aae734df19
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spdetachschedule-transact-sql"></a>sp_detach_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,22 +52,22 @@ sp_detach_schedule
  [ **@job_id=** ] *job_id*  
  Die ID des Auftrags, aus dem der Zeitplan entfernt werden soll. *Job_id* ist **"uniqueidentifier"**, hat den Standardwert NULL.  
   
- [ **@job_name=** ] **'***job_name***'**  
+ [  **@job_name=** ] **"***Job_name***"**  
  Der Name des Auftrags, aus dem der Zeitplan entfernt werden soll. *Job_name* ist **Sysname**, hat den Standardwert NULL.  
   
 > [!NOTE]  
 >  Entweder *Job_id* oder *Job_name* muss angegeben werden, aber beide können nicht angegeben werden.  
   
- [ **@schedule_id=** ] *schedule_id*  
+ [  **@schedule_id=** ] *Schedule_id*  
  Die ID des Zeitplans, der aus dem Auftrag entfernt werden soll. *Schedule_id* ist **Int**, hat den Standardwert NULL.  
   
- [ **@schedule_name=** ] **'***schedule_name***'**  
+ [  **@schedule_name=** ] **"***Schedule_name***"**  
  Der Name des Zeitplans, der aus dem Auftrag entfernt werden soll. *Schedule_name* ist **Sysname**, hat den Standardwert NULL.  
   
 > [!NOTE]  
 >  Entweder *Schedule_id* oder *Schedule_name* muss angegeben werden, aber beide können nicht angegeben werden.  
   
- [ **@delete_unused_schedule=** ] *delete_unused_schedule*  
+ [  **@delete_unused_schedule=** ] *Delete_unused_schedule*  
  Gibt an, ob nicht verwendete Auftragszeitpläne gelöscht werden sollen. *Delete_unused_schedule* ist **Bit**, hat den Standardwert **0**, was bedeutet, dass alle Zeitpläne beibehalten werden, auch wenn keine Aufträge auf sie verweist. Wenn auf festgelegt **1**, werden nicht verwendete Auftragszeitpläne gelöscht, wenn keine Aufträge auf sie verweist.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
@@ -89,7 +89,7 @@ sp_detach_schedule
   
  Weitere Informationen zu den Berechtigungen dieser Rollen finden Sie unter [Feste Datenbankrollen des SQL Server-Agents](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] überprüft, um festzustellen, ob der Benutzer Besitzer des Zeitplans ist. Nur Mitglieder der **Sysadmin** -Serverrolle kann Zeitpläne von Aufträgen, die im Besitz eines anderen Benutzers trennen.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] überprüft, ob der Benutzer der Besitzer des Zeitplans ist. Nur Mitglieder der **Sysadmin** -Serverrolle kann Zeitpläne von Aufträgen, die im Besitz eines anderen Benutzers trennen.  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird eine Zuordnung zwischen einem `'NightlyJobs'`-Zeitplan und einem `'BackupDatabase'`-Auftrag entfernt.  

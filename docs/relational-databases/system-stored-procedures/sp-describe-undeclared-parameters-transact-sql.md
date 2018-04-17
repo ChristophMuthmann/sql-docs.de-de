@@ -1,16 +1,16 @@
 ---
 title: Sp_describe_undeclared_parameters (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_describe_undeclared_parameters
@@ -20,21 +20,22 @@ dev_langs:
 helpviewer_keywords:
 - sp_describe_undeclared_parameters
 ms.assetid: 6f016da6-dfee-4228-8b0d-7cd8e7d5a354
-caps.latest.revision: 
+caps.latest.revision: 22
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bae5aebe0afe1861251628bd0eb447ab97b226dd
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 55becb87f41fdc54aa4e618dc5be80d5292b1ea3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spdescribeundeclaredparameters-transact-sql"></a>sp_describe_undeclared_parameters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  Gibt ein Resultset, das Metadaten zu nicht deklarierten Parametern in enthält eine [!INCLUDE[tsql](../../includes/tsql-md.md)] Batch. Berücksichtigt jeden Parameter, der verwendet wird die  **@tsql**  batch, aber nicht im deklariert  **@params** . Ein Resultset wird zurückgegeben, das für jeden dieser Parameter eine Zeile mit den abgeleiteten Typinformationen für diesen Parameter enthält. Die Prozedur gibt ein leeres Resultset, wenn die  **@tsql**  eingabebatch hat keine Parameter mit Ausnahme derjenigen, die in deklariert  **@params** .  
+  Gibt ein Resultset, das Metadaten zu nicht deklarierten Parametern in enthält eine [!INCLUDE[tsql](../../includes/tsql-md.md)] Batch. Berücksichtigt jeden Parameter, der verwendet wird die **@tsql** batch, aber nicht im deklariert **@params**. Ein Resultset wird zurückgegeben, das für jeden dieser Parameter eine Zeile mit den abgeleiteten Typinformationen für diesen Parameter enthält. Die Prozedur gibt ein leeres Resultset, wenn die **@tsql** eingabebatch hat keine Parameter mit Ausnahme derjenigen, die in deklariert **@params**.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,11 +49,11 @@ sp_describe_undeclared_parameters
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@tsql =** ] **"***Transact SQL_batch***"**  
+ [ **@tsql =** ] **'***Transact-SQL_batch***'**  
  Eine oder mehrere [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen. *Transact-SQL_batch* möglicherweise **Nvarchar (***n***)** oder **nvarchar(max)**.  
   
  [  **@params =** ] **N'***Parameter***"**  
- @paramsStellt eine deklarationszeichenfolge für Parameter für die [!INCLUDE[tsql](../../includes/tsql-md.md)] Batch, ähnlich wie mit der Funktionsweise von Sp_executesql funktioniert. *Parameter* möglicherweise **Nvarchar (***n***)** oder **nvarchar(max)**.  
+ @params Stellt eine deklarationszeichenfolge für Parameter für die [!INCLUDE[tsql](../../includes/tsql-md.md)] Batch, ähnlich wie mit der Funktionsweise von Sp_executesql funktioniert. *Parameter* möglicherweise **Nvarchar (***n***)** oder **nvarchar(max)**.  
   
  Eine Zeichenfolge, die die Definitionen aller Parameter enthält, die eingebetteten *Transact SQL_batch*. Die Zeichenfolge muss eine Unicode-Konstante oder eine Unicode-Variable sein. Jede Parameterdefinition besteht aus einem Parameternamen und einem Datentyp. Dabei ist n ein Platzhalter für zusätzlicher Parameterdefinitionen. Wenn die Transact-SQL-Anweisung oder den Batch in der Anweisung keine Parameter enthält @params ist nicht erforderlich. Der Standardwert für diesen Parameter ist NULL.  
   
@@ -203,7 +204,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
     -   **vom Datentyp varchar(8000)**, **varchar(max)**, **nvarchar(4000)**, und **nvarchar(max)** – andere string-Datentypen (z. B. **Text**, **char(8000)**, **nvarchar(30)**usw.) werden nicht berücksichtigt.  
   
-    -   **varbinary(8000)** und **varbinary(max)** – andere binäre Datentypen werden nicht berücksichtigt (z. B. **Image**, **binary(8000)**,  **varbinary(30)**usw..).  
+    -   **varbinary(8000)** und **varbinary(max)** – andere binäre Datentypen werden nicht berücksichtigt (z. B. **Image**, **binary(8000)**, **Varbinary (30)** usw.).  
   
     -   **Datum**, **time(7)**, **Smalldatetime**, **"DateTime"**, **datetime2(7)**, **datetimeoffset(7)**  – Andere Daten- und Uhrzeittypen, z. B. **time(4)**, werden nicht berücksichtigt.  
   
@@ -234,7 +235,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
     SELECT * FROM t WHERE Col_Int = Col_smallint + @p  
     ```  
   
-     In diesem Fall **Int** und **"smallint"** erzeugen eine Konvertierung. Jeder andere Datentyp erzeugt mehr als eine Konvertierung. Da **Int** hat Vorrang vor **"smallint"**, **Int** wird zum @p. Weitere Informationen zur Rangfolge von Datentypen finden Sie unter [Rangfolge der Datentypen &#40; Transact-SQL &#41; ](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
+     In diesem Fall **Int** und **"smallint"** erzeugen eine Konvertierung. Jeder andere Datentyp erzeugt mehr als eine Konvertierung. Da **Int** hat Vorrang vor **"smallint"**, **Int** wird zum @p. Weitere Informationen zur Rangfolge von Datentypen finden Sie unter [Datentyppriorität &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
   
      Diese Regel gilt nur, wenn zwischen jedem Datentyp, der nach Regel 1 genauso wenige Konvertierungen wie ein anderer erzeugt, und dem Datentyp mit dem höchsten Rang eine implizite Konvertierung erfolgt. Wenn keine implizite Konvertierung erfolgt, tritt bei der Datentypableitung ein Fehler auf. In der Abfrage z. B. `SELECT @p FROM t`,-Datentyp Abzug schlägt fehl, da ein beliebiger für Datentyp @p gut wäre. Beispielsweise besteht keine implizite Konvertierung von **Int** auf **Xml**.  
   
@@ -280,8 +281,8 @@ WHERE object_id = @id OR NAME = @name',
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Sp_describe_first_result_set &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)   
- [Sys. dm_exec_describe_first_result_set &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)   
- [Sys. dm_exec_describe_first_result_set_for_object &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)  
+ [sp_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)   
+ [sys.dm_exec_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)   
+ [sys.dm_exec_describe_first_result_set_for_object &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)  
   
   

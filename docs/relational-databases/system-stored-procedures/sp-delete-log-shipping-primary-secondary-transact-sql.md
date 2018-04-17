@@ -1,16 +1,16 @@
 ---
 title: Sp_delete_log_shipping_primary_secondary (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_delete_log_shipping_primary_secondary_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_delete_log_shipping_primary_secondary
 ms.assetid: d6f71a12-f7b1-4a1c-9639-a533b8287b0c
-caps.latest.revision: 
+caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3e8946935b8f3f81e4d59c90724807862e0ccca7
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: d7a45607a05be5a46b7d8d418500c6122405ebb7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spdeletelogshippingprimarysecondary-transact-sql"></a>sp_delete_log_shipping_primary_secondary (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,13 +49,13 @@ sp_delete_log_shipping_primary_secondary
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@primary_database =** ] **'***primary_database***'**  
+ [  **@primary_database =** ] **"***Primary_database***"**  
  Der Name der Datenbank auf dem primären Server. *primary_database* ist vom Datentyp **sysname**und hat keinen Standardwert.  
   
  [ **@secondary_server =** ] **'***secondary_server***'**  
  Der Name des sekundären Servers. *secondary_server* ist vom Datentyp **sysname**und hat keinen Standardwert.  
   
- [ **@secondary_database =** ] **'***secondary_database***'**  
+ [  **@secondary_database =** ] **"***Secondary_database***"**  
  Der Name der sekundären Datenbank. *secondary_database* ist vom Datentyp **sysname**und hat keinen Standardwert.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
@@ -65,7 +65,7 @@ sp_delete_log_shipping_primary_secondary
  Keine.  
   
 ## <a name="remarks"></a>Hinweise  
- **sp_delete_log_shipping_primary_secondary** must be run from the **master** database on the primary server. Diese gespeicherte Prozedur entfernt den Eintrag für eine sekundäre Datenbank aus **Log_shipping_primary_secondaries** auf dem primären Server.  
+ **Sp_delete_log_shipping_primary_secondary** muss ausgeführt werden, aus der **master** Datenbank auf dem primären Server. Diese gespeicherte Prozedur entfernt den Eintrag für eine sekundäre Datenbank aus **Log_shipping_primary_secondaries** auf dem primären Server.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die Mitgliedschaft in der festen Serverrolle **sysadmin** .  
@@ -82,7 +82,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Über den Protokollversand &#40; SQLServer &#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [Über den Protokollversand & #40; SQLServer & #41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

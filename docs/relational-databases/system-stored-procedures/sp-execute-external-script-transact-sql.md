@@ -2,7 +2,7 @@
 title: Sp_execute_external_script (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/22/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: system-stored-procedures
@@ -22,18 +22,18 @@ dev_langs:
 helpviewer_keywords:
 - sp_execute_external_script
 ms.assetid: de4e1fcd-0e1a-4af3-97ee-d1becc7f04df
-caps.latest.revision: ''
+caps.latest.revision: 34
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 487b669cc7d664194cd769bde564faec9454479b
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
+ms.openlocfilehash: b767e69b44d8303aab12a21e942e21c9a9741da4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="spexecuteexternalscript-transact-sql"></a>sp_execute_external_script (Transact-SQL)
+# <a name="spexecuteexternalscript-transact-sql"></a>Sp_execute_external_script (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Führt das Skript, das als Argument an einen externen Speicherort bereitgestellt. Das Skript muss in einer unterstützten und registrierten Sprache geschrieben werden. Auszuführende **Sp_execute_external_script**, Sie müssen zunächst aktivieren externer Skripts, die mit der Anweisung `sp_configure 'external scripts enabled', 1;`.  
@@ -64,11 +64,11 @@ sp_execute_external_script
  Externe sprachschrift Domänenmodells ein literal oder eine Variable angegeben. *Skript* ist **nvarchar(max)**.  
   
  [ @input_data_1_name = N'*input_data_1_name*"]  
- Gibt den Namen der Variablen, die zur Darstellung von definierten Abfrage @input_data_1. Der Datentyp der Variablen im externen Skript hängt von der Sprache ab. Im Falle von R wird die Eingabevariable einem Datenrahmen. Im Fall von Python muss die Eingabe tabellarische sein. *input_data_1_name* is **sysname**.  
+ Gibt den Namen der Variablen, die zur Darstellung von definierten Abfrage @input_data_1. Der Datentyp der Variablen im externen Skript hängt von der Sprache ab. Im Falle von R wird die Eingabevariable einem Datenrahmen. Im Fall von Python muss die Eingabe tabellarische sein. *input_data_1_name* ist **Sysname**.  
   
  Standardwert ist `InputDataSet`.  
   
- [ @input_data_1 =  N'*input_data_1*' ]  
+ [ @input_data_1 = N'*input_data_1*"]  
  Gibt an, die Eingabedaten unter Verwendung des Skripts in Form von externen verwendet eine [!INCLUDE[tsql](../../includes/tsql-md.md)] Abfrage. Der Datentyp des *input_data_1* ist **nvarchar(max)**.
   
  [ @output_data_1_name = N'*output_data_1_name*"]  
@@ -129,15 +129,15 @@ Dieses Problem zu umgehen **Umwandlung** die Spalte oder den Wert in einen unter
   
 -   **timestamp**  
   
--   **datetime2**, **datetimeoffset**, **time**  
+-   **datetime2**, **"DateTimeOffset"**, **Zeit**  
   
 -   **sql_variant**  
   
--   **text**, **image**  
+-   **Text**, **Bild**  
   
 -   **xml**  
   
--   **hierarchyid**, **geometry**, **geography**  
+-   **Hierarchyid**, **Geometrie**, **Geography**  
   
 -   Benutzerdefinierte CLR-Typen
 

@@ -1,15 +1,15 @@
 ---
 title: Erstellen von Anwendungen mit SQL Server Native Client | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client|applications
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - data access [SQL Server Native Client], building applications
@@ -17,16 +17,17 @@ helpviewer_keywords:
 - applications [SQL Server Native Client]
 - SQL Server Native Client, building applications
 ms.assetid: 254a2b48-f0e3-43b5-a48d-3d666c2a779f
-caps.latest.revision: 
+caps.latest.revision: 21
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 834eb3d75a973b46255d690a504c2a3d17a68c48
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 4f4cf78541c48739b4ddcf94cd879fc7a56fe18d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="building-applications-with-sql-server-native-client"></a>Erstellen von Anwendungen mit SQL Server Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

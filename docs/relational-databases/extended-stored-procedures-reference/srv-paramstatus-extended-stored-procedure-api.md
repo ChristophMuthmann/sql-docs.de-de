@@ -1,16 +1,16 @@
 ---
-title: "srv_paramstatus (API für erweiterte gespeicherte Prozeduren) | Microsoft-Dokumentation"
-ms.custom: 
+title: srv_paramstatus (API für erweiterte gespeicherte Prozeduren) | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: extended-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - srv_paramstatus
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - srv_paramstatus
 ms.assetid: 86cecd45-0b09-42e9-8152-32a12a1c2b7a
-caps.latest.revision: 
+caps.latest.revision: 29
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4ca30a57ad4196eb66c6cf9b7ea262d092fe5936
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
-ms.translationtype: MT
+ms.openlocfilehash: f091544fe79d09664350a312973e9d26a1a90cab
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="srvparamstatus-extended-stored-procedure-api"></a>'srv_paramstatus' (API für erweiterte gespeicherte Prozeduren)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ n
  Gibt die Anzahl der Parameter an. Die erste Parameternummer ist 1.  
   
 ## <a name="returns"></a>Rückgabewert  
- **int** mit Statusflags für den Parameter. Aktuell gibt es nur einen Flag: Wenn das Bit 0 auf 1 festgelegt ist, ist der Parameter ein Rückgabeparameter. Wenn kein *n*-ter Parameter vorhanden ist oder es keine remote gespeicherte Prozedur gibt, wird –1 zurückgegeben.  
+ **int** mit Statusflags für den Parameter. Aktuell gibt es nur einen Flag: Wenn das Bit 0 auf 1 festgelegt ist, ist der Parameter ein Rückgabeparameter. Wenn es keinen *n*-ten Parameter oder keine remote gespeicherte Prozedur gibt, wird -1 zurückgegeben.  
   
 ## <a name="remarks"></a>Hinweise  
  Diese Routine gibt die Statusflags für einen Aufrufparameter einer remote gespeicherten Prozedur zurück.  

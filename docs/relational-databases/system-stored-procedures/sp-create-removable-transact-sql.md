@@ -1,16 +1,16 @@
 ---
 title: Sp_create_removable (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_create_removable
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_create_removable
 ms.assetid: 06e36ae5-f70d-4a26-9a7f-ee4b9360b355
-caps.latest.revision: 
+caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e7b5a66828c1ee49734e720137d3a0ededc0098e
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: c74f780b4e981fad39e7b6da6a531305000910cc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spcreateremovable-transact-sql"></a>sp_create_removable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,33 +65,33 @@ sp_create_removable
  [ **@dbname=** ] **'***dbname***'**  
  Der Name der Datenbank, die zur Verwendung auf austauschbaren Medien erstellt werden soll. *Dbname* ist **Sysname**.  
   
- [ **@syslogical=** ] **'***syslogical***'**  
+ [  **@syslogical=** ] **"***Syslogical***"**  
  Der logische Name der Datei, die die Systemkatalogtabellen enthält. *Syslogical* ist **Sysname**.  
   
- [ **@sysphysical=** ] **'***sysphysical***'**  
+ [  **@sysphysical=** ] **"***Sysphysical***"**  
  Der physische Name (einschließlich vollständiger Pfadangabe) der Datei, die die Datentabellen enthält. Enthält einen vollqualifizierten Pfad der Datei, die die Systemkatalogtabellen enthält. *Sysphysical* ist **nvarchar(260)**.  
   
  [ **@syssize=** ] *syssize*  
  Die in MB angegebene Größe der Datei, die die Systemkatalogtabellen enthält. *Syssize* ist **Int**. Die minimale *Syssize* ist 1.  
   
- [ **@loglogical=** ] **'***loglogical***'**  
+ [  **@loglogical=** ] **"***Loglogical***"**  
  Der logische Name der Datei, die das Transaktionsprotokoll enthält. *Loglogical* ist **Sysname**.  
   
- [ **@logphysical=** ] **'***logphysical***'**  
+ [  **@logphysical=** ] **"***Logphysical***"**  
  Der physische Name (einschließlich vollständiger Pfadangabe) der Datei, die die Datentabellen enthält. Enthält einen vollqualifizierten Pfad der Datei, die die Transaktionsprotokolltabellen enthält. *Logphysical* ist **nvarchar(260)**.  
   
- [ **@logsize=** ] *logsize*  
+ [  **@logsize=** ] *Logsize*  
  Die in MB angegebene Größe der Datei, die das Transaktionsprotokoll enthält. *Logsize* ist **Int**. Die minimale *Logsize* ist 1.  
   
- [ **@datalogical1=** ] **'***datalogical***'**  
+ [  **@datalogical1=** ] **"***Datalogical***"**  
  Der logische Name der Datei, die die Datentabellen enthält. *Datalogical* ist **Sysname**.  
   
  Die Anzahl von Datendateien muss zwischen 1 und 16 liegen. In der Regel wird mehr als eine Datendatei erstellt, wenn zu erwarten ist, dass die Datenbank umfangreich wird und auf mehrere Datenträger verteilt werden muss.  
   
- [ **@dataphysical1=** ] **'***dataphysical***'**  
+ [  **@dataphysical1=** ] **"***Dataphysical***"**  
  Der physische Name (einschließlich vollständiger Pfadangabe) der Datei, die die Datentabellen enthält. Enthält einen vollqualifizierten Pfad der Datei, die die Datentabellen enthält. *Dataphysical* ist **nvarchar(260)**.  
   
- [ **@datasize1=** ] **'***datasize***'**  
+ [  **@datasize1=** ] **"***Datasize***"**  
  Die in MB angegebene Größe der Datei, die die Datentabellen enthält. *Datasize* ist **Int**. Die minimale *Datasize* ist 1.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
@@ -118,7 +118,7 @@ sp_create_removable
 |Wiederherstellen|Getrennt|  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] keine Daten und Protokolldateien fest führt Berechtigungen Datei.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] legt keine Berechtigungen für Daten und Protokolldateien fest.  
   
 ## <a name="examples"></a>Beispiele  
  In diesem Beispiel wird die `inventory`-Datenbank als austauschbare Datenbank erstellt.  

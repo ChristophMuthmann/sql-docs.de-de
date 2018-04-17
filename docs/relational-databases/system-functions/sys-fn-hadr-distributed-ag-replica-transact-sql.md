@@ -1,16 +1,16 @@
 ---
-title: sys.fn_hadr_distributed_ag_replica (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: Sys.fn_hadr_distributed_ag_replica (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.fn_hadr_distributed_ag_replica
@@ -22,18 +22,18 @@ dev_langs:
 helpviewer_keywords:
 - sys.fn_hadr_distributed_ag_replica
 ms.assetid: a1e5f9cb-c350-4bb4-a04f-7394f6f25d62
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f53f1eac87a7b02197412283e8413849c1450f86
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 780fb8e20efd3b8d40ed88c2382cbfdc01852b05
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="sysfnhadrdistributedagreplica-transact-sql"></a>sys.fn_hadr_distributed_ag_replica (Transact-SQL)
+# <a name="sysfnhadrdistributedagreplica-transact-sql"></a>Sys.fn_hadr_distributed_ag_replica (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Verwendet, um die lokale verfügbarkeitsgruppe ein Replikat in einer verteilten verfügbarkeitsgruppe zuzuordnen.  
@@ -48,7 +48,7 @@ sys.fn_hadr_distributed_ag_replica( lag_Id, replica_id )
 ```  
   
 ## <a name="arguments"></a>Argumente  
- '*lag_Id*'  
+ "*Lag_Id*"  
  Ist der Bezeichner der verteilten verfügbarkeitsgruppe. *Lag_Id* Typ **"uniqueidentifier"**.  
   
  "*Replica_id*"  
@@ -63,7 +63,7 @@ sys.fn_hadr_distributed_ag_replica( lag_Id, replica_id )
   
 ## <a name="examples"></a>Beispiele  
   
-### <a name="using-sysfnhadrdistributedagreplica"></a>Using sys.fn_hadr_distributed_ag_replica  
+### <a name="using-sysfnhadrdistributedagreplica"></a>Verwenden von sys.fn_hadr_distributed_ag_replica  
  Das folgende Beispiel gibt eine Tabelle mit der lokalen Verfügbarkeit Gruppen-ID, die dem angegebenen verteilte verfügbarkeitsgruppe und dem Replikat zugeordnet ist.  
   
 ```  
@@ -75,9 +75,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [AlwaysOn-Verfügbarkeitsgruppen Funktionen &#40; Transact-SQL &#41;](../../relational-databases/system-functions/always-on-availability-groups-functions-transact-sql.md)   
- [AlwaysOn-Verfügbarkeitsgruppen &#40; SQLServer &#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
- [Verteilte Verfügbarkeitsgruppen &#40; AlwaysOn-Verfügbarkeitsgruppen &#41;](../../database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups.md)  
+ [Funktionen von AlwaysOn-Verfügbarkeitsgruppen &#40;Transact-SQL&#41;](../../relational-databases/system-functions/always-on-availability-groups-functions-transact-sql.md)   
+ [AlwaysOn-Verfügbarkeitsgruppen & #40; SQLServer & #41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
+ [Verteilte Verfügbarkeitsgruppen &#40;AlwaysOn-Verfügbarkeitsgruppen&#41;](../../database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups.md)  
  [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;;](../../t-sql/statements/create-availability-group-transact-sql.md)   
  [ALTER AVAILABILITY GROUP &#40; Transact-SQL &#41;](../../t-sql/statements/alter-availability-group-transact-sql.md)  
   

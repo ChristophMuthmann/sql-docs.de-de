@@ -1,16 +1,16 @@
 ---
 title: Sp_addrolemember (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/20/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_addrolemember_TSQL
@@ -20,16 +20,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_addrolemember
 ms.assetid: a583c087-bdb3-46d2-b9e5-3921b3e6d10b
-caps.latest.revision: 
+caps.latest.revision: 59
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 1781efa697597d05cbbc734f0c531ce5e9f40633
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 6824949456bebb7c06ad188664b5911eae52b3d0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddrolemember-transact-sql"></a>sp_addrolemember (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -37,7 +38,7 @@ ms.lasthandoff: 11/21/2017
   Fügt einer Datenbankrolle in der aktuellen Datenbank einen Datenbankbenutzer, eine Datenbankrolle, einen Windows-Anmeldenamen oder eine Windows-Gruppe hinzu.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Verwendung [ALTER ROLE](../../t-sql/statements/alter-role-transact-sql.md) stattdessen.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Verwendung [ALTER ROLE](../../t-sql/statements/alter-role-transact-sql.md) stattdessen.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -73,7 +74,7 @@ sp_addrolemember 'role', 'security_account'
   
  Sp_addrolemember kann keiner festen Datenbankrolle, feste Serverrolle oder Dbo zu einer Rolle hinzufügen. Sp_addrolemember kann nicht innerhalb einer benutzerdefinierten Transaktion ausgeführt werden.  
   
- Verwenden Sie ausschließlich sp_addrolemember, um einer Datenbankrolle ein Mitglied hinzuzufügen. Um einer Serverrolle ein Mitglied hinzuzufügen, verwenden Sie [Sp_addsrvrolemember &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md).  
+ Verwenden Sie ausschließlich sp_addrolemember, um einer Datenbankrolle ein Mitglied hinzuzufügen. Um einer Serverrolle ein Mitglied hinzuzufügen, verwenden Sie [Sp_addsrvrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md).  
   
 ## <a name="permissions"></a>Berechtigungen  
  Für das Hinzufügen von Mitgliedern zu flexiblen Datenbankrollen muss eine der folgenden Bedingungen erfüllt sein:  
@@ -108,7 +109,7 @@ GO
 EXEC sp_addrolemember 'Production', 'Mary5';  
 ```  
   
-## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] und[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
 ### <a name="c-adding-a-windows-login"></a>C. Hinzufügen eines Windows-Anmeldenamens  
  Im folgenden Beispiel wird die Anmeldung `LoginMary` auf die `AdventureWorks2008R2` Datenbank als Benutzer `UserMary`. Der Benutzer `UserMary` wird dann der `Production`-Rolle hinzugefügt.  
@@ -132,9 +133,9 @@ EXEC sp_addrolemember 'Production', 'UserMary'
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Gespeicherte Systemprozeduren &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [Security Stored Procedures &#40;Transact-SQL&#41; (Gespeicherte Sicherheitsprozeduren (Transact-SQL))](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sp_addsrvrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md)   
- [Sp_droprolemember &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)   
+ [Sp_droprolemember & #40; Transact-SQL & #41;](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)   
  [sp_grantdbaccess &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grantdbaccess-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Rollen auf Datenbankebene](../../relational-databases/security/authentication-access/database-level-roles.md)  

@@ -1,16 +1,16 @@
 ---
 title: Sys. internal_tables (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.internal_tables
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - internal tables
 - sys.internal_tables catalog view
 ms.assetid: a5821c70-f150-4676-8476-3a31f7403dca
-caps.latest.revision: 
+caps.latest.revision: 52
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cc5ab8560914be149128c55f563bc9e5b422d4d5
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 9f0f30bc972bf0af35d582b908da6e163917b965
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysinternaltables-transact-sql"></a>sys.internal_tables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.lasthandoff: 11/21/2017
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
-|**\<Von sys.objects geerbte Spalten >**||Eine Liste der Spalten, die diese Sicht erbt, finden Sie unter [sys.objects &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).|  
+|**\<Von sys.objects geerbte Spalten >**||Eine Liste der Spalten, die diese Sicht erbt, finden Sie unter [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).|  
 |**internal_type**|**tinyint**|Der Typ der internen Tabelle:<br /><br /> 201 = **Queue_messages**<br /><br /> 202 = **Xml_index_nodes**<br /><br /> 203 = **Fulltext_catalog_freelist**<br /><br /> 205 = **Query_notification**<br /><br /> 206 = **Service_broker_map**<br /><br /> 207 = **Extended_indexes** (z. B. ein räumlicher Index)<br /><br /> 208 = **Filestream_tombstone**<br /><br /> 209 = **Change_tracking**<br /><br /> 210 = **Tracked_committed_transactions**|  
 |**internal_type_desc**|**nvarchar(60)**|Die Beschreibung des Typs der internen Tabelle:<br /><br /> QUEUE_MESSAGES<br /><br /> XML_INDEX_NODES<br /><br /> FULLTEXT_CATALOG_FREELIST<br /><br /> FULLTEXT_CATALOG_MAP<br /><br /> QUERY_NOTIFICATION<br /><br /> SERVICE_BROKER_MAP<br /><br /> EXTENDED_INDEXES<br /><br /> FILESTREAM_TOMBSTONE<br /><br /> CHANGE_TRACKING<br /><br /> TRACKED_COMMITTED_TRANSACTIONS|  
 |**Parent_ID**|**int**|ID des übergeordneten Elements, unabhängig davon, ob es über einen Schemabereich verfügt oder nicht. Andernfalls 0, wenn es kein übergeordnetes Element gibt.<br /><br /> **Queue_messages** = **Object_id** der Warteschlange<br /><br /> **Xml_index_nodes** = **Object_id** des XML-Indexes<br /><br /> **Fulltext_catalog_freelist** = **Fulltext_catalog_id** des Volltext-Katalogs<br /><br /> **Fulltext_index_map** = **Object_id** des Volltext-Indexes<br /><br /> **Query_notification**, oder **Service_broker_map** = 0<br /><br /> **Extended_indexes** = **Object_id** eines erweiterten Indexes, z. B. ein räumlicher Index<br /><br /> **Object_id** der Tabelle, für welche Tabelle die änderungsnachverfolgung aktiviert ist = **Change_tracking**|  
@@ -182,6 +182,6 @@ GO
   
 ## <a name="see-also"></a>Siehe auch  
  [Katalogsichten &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Katalogsichten für Objekte &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)  
+ [-Objekt Katalogsichten &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)  
   
   

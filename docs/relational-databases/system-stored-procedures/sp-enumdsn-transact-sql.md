@@ -1,16 +1,16 @@
 ---
 title: Sp_enumdsn (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_enumdsn
 ms.assetid: 171cbc7d-7406-4cb0-8602-9405243bfd1d
-caps.latest.revision: 
+caps.latest.revision: 26
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e8d4dcb23cf06385d4c26a198f17e806bdc0671a
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 471fa93ccd1c9e48f0baa1fa270a7a7db7b7d4af
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spenumdsn-transact-sql"></a>sp_enumdsn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ sp_enumdsn
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |**Datenquellenname**|**sysname**|Name der Datenquelle.|  
-|**Description**|**varchar(255)**|Beschreibung der Datenquelle.|  
+|**Beschreibung**|**varchar(255)**|Beschreibung der Datenquelle.|  
 |**Typ**|**int**|Typ der Datenquelle:<br /><br /> **1** = ODBC-DSN<br /><br /> **3** = OLE DB-Datenquelle|  
 |**Anbietername**|**varchar(255)**|Name des OLE DB-Anbieters. Der Wert ist NULL für einen ODBC-DSN.|  
   
@@ -66,7 +66,7 @@ sp_enumdsn
  Nur Mitglieder der **Sysadmin** -Serverrolle kann ausführen **Sp_enumdsn**.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Sp_dsninfo &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-dsninfo-transact-sql.md)   
+ [Sp_dsninfo &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dsninfo-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

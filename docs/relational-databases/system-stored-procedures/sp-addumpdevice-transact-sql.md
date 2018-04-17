@@ -1,16 +1,16 @@
 ---
 title: Sp_addumpdevice (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_addumpdevice_TSQL
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - backup devices [SQL Server], defining
 - sp_addumpdevice
 ms.assetid: c2d2ae49-0808-46d8-8444-db69a69d0ec3
-caps.latest.revision: 
+caps.latest.revision: 49
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dad0547ea803cfbf709b36f078d552435c848900
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 444dbea29259eca54e815ce49c73df3986db8e11
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddumpdevice-transact-sql"></a>sp_addumpdevice (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,18 +54,18 @@ sp_addumpdevice [ @devtype = ] 'device_type'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@devtype=** ] **'***device_type***'**  
+ [  **@devtype=** ] **"***Device_type***"**  
  Ist der Typ des Sicherungsmediums. *Device_type* ist **varchar(20)**, hat keinen Standardwert und kann einen der folgenden Werte sein.  
   
 |Wert|Description|  
 |-----------|-----------------|  
 |**disk**|Festplattendatei als Sicherungsmedium.|  
-|**tape**|Alle von [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows unterstützten Bandmedien.<br /><br /> Die Unterstützung für Bandsicherungsgeräte wird in zukünftigen Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]entfernt. Verwenden Sie diese Funktion beim Entwickeln neuer Anwendungen nicht, und planen Sie das Ändern von Anwendungen, in denen es zurzeit verwendet wird.|  
+|**Band**|Alle von [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows unterstützten Bandmedien.<br /><br /> Die Unterstützung für Bandsicherungsgeräte wird in zukünftigen Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]entfernt. Verwenden Sie diese Funktion beim Entwickeln neuer Anwendungen nicht, und planen Sie das Ändern von Anwendungen, in denen es zurzeit verwendet wird.|  
   
  [  **@logicalname =** ] **"***Logical_name***"**  
  Der logische Name des Sicherungsmediums, das in der BACKUP- und in der RESTORE-Anweisung verwendet wird. *Logical_name* ist **Sysname**, hat keinen Standardwert und darf nicht NULL sein.  
   
- [ **@physicalname =** ] **'***physical_name***'**  
+ [  **@physicalname =** ] **"***Physical_name***"**  
  Der physische Name des Sicherungsmediums. Physische Namen müssen den Regeln für Dateinamen des Betriebssystems oder den UNC-Konventionen für Netzwerkgeräte entsprechen und einen vollständigen Pfad angeben. *Physical_name* ist **nvarchar(260)**, hat keinen Standardwert-Wert und darf nicht NULL sein.  
   
  Beim Erstellen eines Sicherungsmediums auf einem Remotenetzwerk-Speicherort sollten Sie sicherstellen, dass das Benutzerkonto, unter dem [!INCLUDE[ssDE](../../includes/ssde-md.md)] gestartet wurde, über entsprechende Schreibberechtigungen auf dem Remotecomputer verfügt.  
@@ -78,7 +78,7 @@ sp_addumpdevice [ @devtype = ] 'device_type'
  [ **@cntrltype =** ] **'***controller_type***'**  
  Veraltet. Dieser Parameter wird ignoriert, wenn er angegeben wird. Er wird lediglich aus Gründen der Abwärtskompatibilität unterstützt. Neuen Implementierungen von **Sp_addumpdevice** sollte dieser Parameter weggelassen.  
   
- [ **@devstatus =** ] **'***device_status***'**  
+ [  **@devstatus =** ] **"***Device_status***"**  
  Veraltet. Dieser Parameter wird ignoriert, wenn er angegeben wird. Er wird lediglich aus Gründen der Abwärtskompatibilität unterstützt. Neuen Implementierungen von **Sp_addumpdevice** sollte dieser Parameter weggelassen.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  

@@ -1,16 +1,16 @@
 ---
 title: Sp_cursorprepare (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_cursor_prepare_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_cursor_prepare
 ms.assetid: 6207e110-f4bf-4139-b3ec-b799c9cb3ad7
-caps.latest.revision: 
+caps.latest.revision: 10
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b588770141c5d5593ef209e190203354c0ae4891
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 1134a3edbbbf1a838207a122e43bbafb5ac0e18b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spcursorprepare-transact-sql"></a>sp_cursorprepare (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
 > [!NOTE]  
 >  Die Regeln zum Angeben der *Stmt* -Werts entsprechen denen für Sp_cursoropen, mit der Ausnahme, die die *Stmt* String-Datentyp muss **Ntext**.  
   
- *Optionen*  
+ *options*  
  Ein optionaler Parameter, der eine Beschreibung der Spalten im Cursorresultset zurückgibt. *Optionen* erfordert die folgenden **Int** Eingabewert.  
   
 |Wert|Description|  
@@ -125,12 +125,12 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
 ## <a name="examples"></a>Beispiele  
  Wenn *Stmt* parametrisiert und der *Scrollopt* PARAMETERIZED_STMT-Wert ist auf, die das Format der Zeichenfolge lautet wie folgt:  
   
- {  *\<Name der lokalen Variablen >**\<Datentyp >* } [,... *n* ]  
+ {  *\<Name der lokalen Variablen > **\<Datentyp >* } [,... *n* ]  
   
 ## <a name="see-also"></a>Siehe auch  
- [Sp_cursorexecute &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-cursorexecute-transact-sql.md)   
- [Sp_cursoropen &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)   
- [Sp_cursorunprepare &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-cursorunprepare-transact-sql.md)   
+ [Sp_cursorexecute &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursorexecute-transact-sql.md)   
+ [sp_cursoropen &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)   
+ [Sp_cursorunprepare &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursorunprepare-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

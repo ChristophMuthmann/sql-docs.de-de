@@ -1,16 +1,16 @@
 ---
 title: Sp_attach_single_file_db (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_attach_single_file_db
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_attach_single_file_db
 ms.assetid: 13bd1044-9497-4293-8390-1f12e6b8e952
-caps.latest.revision: 
+caps.latest.revision: 68
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 53b3e03d87ff8efb9be90b8cd85b9ce0951c0f40
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 57c9194019652552f84611977006fa91710092cd
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spattachsinglefiledb-transact-sql"></a>sp_attach_single_file_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ sp_attach_single_file_db [ @dbname= ] 'dbname'
  [ **@dbname=** ] **'***dbname***'**  
  Der Name der Datenbank, die an den Server angefügt werden soll. Der Name muss eindeutig sein. *Dbname* ist **Sysname**, hat den Standardwert NULL.  
   
- [ **@physname=** ] **'***physical_name***'**  
+ [  **@physname=** ] **"***Physical_name***"**  
  Ist der physische Name, einschließlich des Pfads der Datenbankdatei. *Physical_name* ist **nvarchar(260)**, hat den Standardwert NULL.  
   
 > [!NOTE]  
@@ -81,7 +81,7 @@ sp_attach_single_file_db [ @dbname= ] 'dbname'
  Verwenden Sie diese Prozedur nicht für eine replizierte Datenbank.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Weitere Informationen dazu, wie Berechtigungen behandelt werden, wenn eine Datenbank angefügt wird, finden Sie unter [CREATE DATABASE &#40; SQL Server Transact-SQL &#41; ](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
+ Weitere Informationen dazu, wie Berechtigungen behandelt werden, wenn eine Datenbank angefügt wird, finden Sie unter [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] getrennt und eine Datei aus [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] an den aktuellen Server angefügt.  
