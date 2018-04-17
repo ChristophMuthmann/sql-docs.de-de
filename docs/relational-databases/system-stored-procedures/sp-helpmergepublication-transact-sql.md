@@ -1,16 +1,16 @@
 ---
 title: Sp_helpmergepublication (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpmergepublication
 ms.assetid: dfe1e1e1-9a65-406a-aced-6385a078e135
-caps.latest.revision: 
+caps.latest.revision: 55
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0e346c8555438ba3c8a26772c2f130ae0a4bed48
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: d5005db95a4153259dd000cda87823368255a722
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelpmergepublication-transact-sql"></a>sp_helpmergepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,31 +51,31 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ @publication  **=**  ] **"***Veröffentlichung***"**  
- Der Name der Veröffentlichung. *Veröffentlichung*ist **Sysname**, hat den Standardwert  **%** , womit Informationen zu allen mergeveröffentlichungen in der aktuellen Datenbank zurückgegeben.  
+ [ @publication **=** ] **"***Veröffentlichung***"**  
+ Der Name der Veröffentlichung. *Veröffentlichung*ist **Sysname**, hat den Standardwert **%**, womit Informationen zu allen mergeveröffentlichungen in der aktuellen Datenbank zurückgegeben.  
   
- [ @found  **=**  ] **"***gefunden***"** Ausgabe  
+ [ @found **=** ] **"***gefunden***"** Ausgabe  
  Ein Flag zur Angabe zurückgegebener Zeilen. *gefunden*ist **Int** und ein OUTPUT-Parameter hat den Standardwert NULL. **1** gibt an, die Veröffentlichung gefunden wurde. **0** gibt an, die Veröffentlichung wurde nicht gefunden.  
   
- [ @publication_id  **=** ] **"***Publication_id***"** Ausgabe  
+ [ @publication_id **=**] **"***Publication_id***"** Ausgabe  
  Die Veröffentlichung-ID. *Publication_id* ist **"uniqueidentifier"** und ein OUTPUT-Parameter hat den Standardwert NULL.  
   
- [ @reserved  **=** ] **"***reservierte***"**  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]*reservierte* ist **nvarchar(20)**, hat den Standardwert NULL.  
+ [ @reserved **=**] **"***reservierte***"**  
+ [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *reservierte* ist **nvarchar(20)**, hat den Standardwert NULL.  
   
- [ @publisher  **=**  ] **"***Publisher***"**  
+ [ @publisher **=** ] **"***Publisher***"**  
  Der Name des Verlegers. *Publisher* ist **Sysname**, hat den Standardwert NULL.  
   
- [@publisher_db  **=**  ] **"***Publisher_db***"**  
+ [@publisher_db **=** ] **"***Publisher_db***"**  
  Der Name der Veröffentlichungsdatenbank. *Publisher_db* ist **Sysname**, hat den Standardwert NULL.  
   
 ## <a name="result-sets"></a>Resultsets  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |id|**int**|Sequenzielle Position der Veröffentlichung in der Liste im Resultset.|  
 |name|**sysname**|Name der Veröffentlichung.|  
-|Beschreibung|**nvarchar(255)**|Beschreibung der Veröffentlichung.|  
+|description|**nvarchar(255)**|Beschreibung der Veröffentlichung.|  
 |status|**tinyint**|Gibt an, wann Veröffentlichungsdaten verfügbar sind.|  
 |retention|**int**|Die Zeit, die Metadaten zu Änderungen in Artikeln in der Veröffentlichung gespeichert werden sollen. Die Einheiten für diesen Zeitraum kann Tage, Wochen, Monate oder Jahre sein. Informationen zu Einheiten finden Sie in der retention_period_unit-Spalte.|  
 |sync_mode|**tinyint**|Synchronisierungsmodus dieser Veröffentlichung.<br /><br /> **0** = systemeigenes Massenkopierprogramm (**Bcp** Hilfsprogramm)<br /><br /> **1** = Massenkopieren von Zeichen|  
@@ -116,7 +116,7 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 |allow_subscriber_initiated_snapshot|**bit**|Legt fest, ob Abonnenten den Prozess für die Generierung eine Momentaufnahme für gefilterte Daten initiieren können. Der Wert **1** bedeutet, dass Abonnenten den momentaufnahmeprozess initiieren können.|  
 |allow_web_synchronization|**bit**|Legt fest, ob die Veröffentlichung für die Websynchronisierung aktiviert ist. Der Wert **1** bedeutet, dass die websynchronisierung aktiviert ist.|  
 |web_synchronization_url|**nvarchar(500)**|Die für die Websynchronisierung verwendete Internet-URL.|  
-|allow_partition_realignment|**bit**|Legt fest, ob Löschvorgänge an den Abonnenten gesendet werden, wenn die Änderung der Zeile auf dem Verleger zum Ändern der Partition führt. Der Wert **1** bedeutet, dass Löschvorgänge an den Abonnenten gesendet werden.  Weitere Informationen finden Sie unter [Sp_addmergepublication &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md).|  
+|allow_partition_realignment|**bit**|Legt fest, ob Löschvorgänge an den Abonnenten gesendet werden, wenn die Änderung der Zeile auf dem Verleger zum Ändern der Partition führt. Der Wert **1** bedeutet, dass Löschvorgänge an den Abonnenten gesendet werden.  Weitere Informationen finden Sie unter [Sp_addmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md).|  
 |retention_period_unit|**tinyint**|Definiert die Einheit, die beim Definieren der Beibehaltung verwendet wird. Dies kann einer der folgenden Werte sein:<br /><br /> **0** = Tag<br /><br /> **1** = Woche<br /><br /> **2** = Monat<br /><br /> **3** = Jahr|  
 |has_downloadonly_articles|**bit**|Gibt an, ob es sich bei Artikeln, die zur Veröffentlichung gehören, um nur herunterladbare Artikel handelt. Der Wert **1** gibt an, dass nur herunterladbare Artikel vorhanden sind.|  
 |decentralized_conflicts|**int**|Gibt an, ob die Konfliktdatensätze auf dem Abonnenten gespeichert werden, der den Konflikt verursacht hat. Der Wert **0** gibt an, dass Konfliktdatensätze auf dem Abonnenten nicht gespeichert werden. Ein Wert von 1 gibt an, dass Konfliktdatensätze auf dem Abonnenten gespeichert werden.|  
@@ -137,9 +137,9 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
   
 ## <a name="see-also"></a>Siehe auch  
  [Anzeigen und Ändern von Veröffentlichungseigenschaften](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
- [Sp_addmergepublication &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)   
+ [Sp_addmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)   
  [sp_changemergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)   
- [Sp_dropmergepublication &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-dropmergepublication-transact-sql.md)   
+ [Sp_dropmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepublication-transact-sql.md)   
  [Gespeicherte Automatisierungsprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

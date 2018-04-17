@@ -1,16 +1,16 @@
 ---
 title: Sp_register_custom_scripting (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_register_custom_scripting
 ms.assetid: a8159282-de3b-4b9e-bdc9-3d3fce485c7f
-caps.latest.revision: 
+caps.latest.revision: 29
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 16274b71d1ce14b2a143e5d6ce723bcb64cbaebd
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 2b0f249f4c70ec6892ca6cb576dad0d70c60527b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spregistercustomscripting-transact-sql"></a>sp_register_custom_scripting (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,17 +49,17 @@ sp_register_custom_scripting [ @type  = ] 'type'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@type**  =] **"***Typ***"**  
+ [ **@type** =] **"***Typ***"**  
  Der Typ der benutzerdefinierten gespeicherten Prozedur oder des Skripts, die bzw. das registriert wird. *Typ* ist **varchar(16)**, hat keinen Standardwert und kann einen der folgenden Werte sein.  
   
 |Wert|Description|  
 |-----------|-----------------|  
-|**Einfügen**|Die registrierte, benutzerdefinierte gespeicherte Prozedur wird ausgeführt, wenn eine INSERT-Anweisung repliziert wird.|  
-|**Aktualisieren**|Die registrierte, benutzerdefinierte gespeicherte Prozedur wird ausgeführt, wenn eine UPDATE-Anweisung repliziert wird.|  
+|**insert**|Die registrierte, benutzerdefinierte gespeicherte Prozedur wird ausgeführt, wenn eine INSERT-Anweisung repliziert wird.|  
+|**Update**|Die registrierte, benutzerdefinierte gespeicherte Prozedur wird ausgeführt, wenn eine UPDATE-Anweisung repliziert wird.|  
 |**Löschen**|Die registrierte, benutzerdefinierte gespeicherte Prozedur wird ausgeführt, wenn eine DELETE-Anweisung repliziert wird.|  
 |**custom_script**|Das Skript wird am Ende des DDL-Triggers (Data Definition Language) ausgeführt.|  
   
- [  **@value** =] **"***Wert***"**  
+ [ **@value**=] **"***Wert***"**  
  Der Name einer gespeicherten Prozedur oder der Name und vollqualifizierter Pfad der [!INCLUDE[tsql](../../includes/tsql-md.md)]-Skriptdatei, die registriert wird. *Wert* ist **nvarchar(1024)**, hat keinen Standardwert.  
   
 > [!NOTE]  
@@ -67,10 +67,10 @@ sp_register_custom_scripting [ @type  = ] 'type'
   
  Wenn der Wert der *Typ* ist **Custom_script**, den Namen und den vollständigen Pfad ein [!INCLUDE[tsql](../../includes/tsql-md.md)] -Skriptdatei erwartet. Andernfalls *Wert* muss der Name einer registrierten gespeicherten Prozedur sein.  
   
- [  **@publication** =] **"***Veröffentlichung***"**  
+ [ **@publication**=] **"***Veröffentlichung***"**  
  Der Name der Veröffentlichung, für die die benutzerdefinierte gespeicherte Prozedur bzw. das Skript registriert wird. *Veröffentlichung* ist **Sysname**, hat den Standardwert **NULL**.  
   
- [  **@article** =] **"***Artikel***"**  
+ [ **@article**=] **"***Artikel***"**  
  Der Name des Artikels, für den die benutzerdefinierte gespeicherte Prozedur bzw. das Skript registriert wird. *Artikel* ist **Sysname**, hat den Standardwert **NULL**.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
@@ -85,6 +85,6 @@ sp_register_custom_scripting [ @type  = ] 'type'
  Nur Mitglieder der der **Sysadmin** festen Serverrolle die **Db_owner** feste Datenbankrolle oder der **Db_ddladmin** feste Datenbankrolle können ausführen **"sp_" Register_custom_scripting**.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Sp_unregister_custom_scripting &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-unregister-custom-scripting-transact-sql.md)  
+ [Sp_unregister_custom_scripting &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-unregister-custom-scripting-transact-sql.md)  
   
   

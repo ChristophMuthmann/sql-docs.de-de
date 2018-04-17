@@ -1,16 +1,16 @@
 ---
 title: Sp_send_dbmail (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sendmail_sp_TSQL
@@ -21,16 +21,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_send_dbmail
 ms.assetid: f1d7a795-a3fd-4043-ac4b-c781e76dab47
-caps.latest.revision: 
+caps.latest.revision: 72
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 7293e16e45c465fa2cfeda2d11888b4dc450d380
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 1c33d72b5f89c73e409f82d9e8c851aa740dd54e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spsenddbmail-transact-sql"></a>sp_send_dbmail (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -70,17 +70,17 @@ sp_send_dbmail [ [ @profile_name = ] 'profile_name' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@profile_name=** ] **'***profile_name***'**  
- Der Name des Profils, von dem die Nachricht gesendet werden soll. Die *Profile_name* ist vom Typ **Sysname**, hat den Standardwert NULL. Die *Profile_name* muss der Name eines vorhandenen Datenbank-Mail-Profils sein. Wenn kein *Profile_name* angegeben wird, **Sp_send_dbmail** als privates Standardprofil für den aktuellen Benutzer verwendet. Wenn der Benutzer nicht über ein privates Standardprofil verfügt **Sp_send_dbmail** verwendet das öffentliche Standardprofil für den **Msdb** Datenbank. Wenn der Benutzer verfügt nicht über ein privates Standardprofil und es kein öffentliches Standardprofil für die Datenbank ist  **@profile_name**  muss angegeben werden.  
+ [  **@profile_name=** ] **"***Profile_name***"**  
+ Der Name des Profils, von dem die Nachricht gesendet werden soll. Die *Profile_name* ist vom Typ **Sysname**, hat den Standardwert NULL. Die *Profile_name* muss der Name eines vorhandenen Datenbank-Mail-Profils sein. Wenn kein *Profile_name* angegeben wird, **Sp_send_dbmail** als privates Standardprofil für den aktuellen Benutzer verwendet. Wenn der Benutzer nicht über ein privates Standardprofil verfügt **Sp_send_dbmail** verwendet das öffentliche Standardprofil für den **Msdb** Datenbank. Wenn der Benutzer verfügt nicht über ein privates Standardprofil und es kein öffentliches Standardprofil für die Datenbank ist **@profile_name** muss angegeben werden.  
   
  [ **@recipients=** ] **'***recipients***'**  
- Eine durch Semikolons getrennte Liste der E-Mail-Adressen, an die die Nachricht gesendet werden soll. Die Empfängerliste ist vom Typ **varchar(max)**. Obwohl dieser Parameter optional ist, ist mindestens eine der  **@recipients** ,  **@copy_recipients** , oder  **@blind_copy_recipients**  muss angegeben werden, oder **"sp_" Send_dbmail** gibt einen Fehler zurück.  
+ Eine durch Semikolons getrennte Liste der E-Mail-Adressen, an die die Nachricht gesendet werden soll. Die Empfängerliste ist vom Typ **varchar(max)**. Obwohl dieser Parameter optional ist, ist mindestens eine der **@recipients**, **@copy_recipients**, oder **@blind_copy_recipients** muss angegeben werden, oder **"sp_" Send_dbmail** gibt einen Fehler zurück.  
   
  [ **@copy_recipients=** ] **'***copy_recipients***'**  
- Eine durch Semikolons getrennte Liste der E-Mail-Adressen, an die eine Kopie der Nachricht gesendet werden soll. Die Kopie Empfängerliste ist vom Typ **varchar(max)**. Obwohl dieser Parameter optional ist, ist mindestens eine der  **@recipients** ,  **@copy_recipients** , oder  **@blind_copy_recipients**  muss angegeben werden, oder **"sp_" Send_dbmail** gibt einen Fehler zurück.  
+ Eine durch Semikolons getrennte Liste der E-Mail-Adressen, an die eine Kopie der Nachricht gesendet werden soll. Die Kopie Empfängerliste ist vom Typ **varchar(max)**. Obwohl dieser Parameter optional ist, ist mindestens eine der **@recipients**, **@copy_recipients**, oder **@blind_copy_recipients** muss angegeben werden, oder **"sp_" Send_dbmail** gibt einen Fehler zurück.  
   
- [ **@blind_copy_recipients=** ] **'***blind_copy_recipients***'**  
- Eine durch Semikolons getrennte Liste der E-Mail-Adressen, an die eine Kopie der Nachricht als BCC-Empfänger gesendet werden soll. Der Blindkopie Empfängerliste ist vom Typ **varchar(max)**. Obwohl dieser Parameter optional ist, ist mindestens eine der  **@recipients** ,  **@copy_recipients** , oder  **@blind_copy_recipients**  muss angegeben werden, oder **"sp_" Send_dbmail** gibt einen Fehler zurück.  
+ [  **@blind_copy_recipients=** ] **"***Blind_copy_recipients***"**  
+ Eine durch Semikolons getrennte Liste der E-Mail-Adressen, an die eine Kopie der Nachricht als BCC-Empfänger gesendet werden soll. Der Blindkopie Empfängerliste ist vom Typ **varchar(max)**. Obwohl dieser Parameter optional ist, ist mindestens eine der **@recipients**, **@copy_recipients**, oder **@blind_copy_recipients** muss angegeben werden, oder **"sp_" Send_dbmail** gibt einen Fehler zurück.  
   
  [ **@from_address=** ] **'***from_address***'**  
  Der Wert der Absenderadresse der E-Mail-Nachricht. Dies ist ein optionaler Parameter, mit dem die Einstellungen im Mailprofil überschrieben werden. Dieser Parameter ist vom Typ **varchar(MAX)**. SMTP-Sicherheitseinstellungen stellen fest, ob diese Überschreibungen akzeptiert werden. Wenn kein Parameter angegeben ist, wird der Standardwert NULL verwendet.  
@@ -88,7 +88,7 @@ sp_send_dbmail [ [ @profile_name = ] 'profile_name' ]
  [ **@reply_to=** ] **'***reply_to***'**  
  Der Wert der Antwortadresse der E-Mail-Nachricht. Er akzeptiert nur eine E-Mail-Adresse als gültigen Wert. Dies ist ein optionaler Parameter, mit dem die Einstellungen im Mailprofil überschrieben werden. Dieser Parameter ist vom Typ **varchar(MAX)**. SMTP-Sicherheitseinstellungen stellen fest, ob diese Überschreibungen akzeptiert werden. Wenn kein Parameter angegeben ist, wird der Standardwert NULL verwendet.  
   
- [ **@subject=** ] **'***subject***'**  
+ [  **@subject=** ] **"***Betreff***"**  
  Ist der Betreff der e-Mail-Nachricht an. Der Betreff ist vom Typ **nvarchar(255)**. Wenn Sie keinen Betreff angeben, wird standardmäßig 'SQL Server-Nachricht' verwendet.  
   
  [ **@body=** ] **'***body***'**  
@@ -103,7 +103,7 @@ sp_send_dbmail [ [ @profile_name = ] 'profile_name' ]
   
  Der Standardwert ist TEXT.  
   
- [ **@importance=** ] **'***importance***'**  
+ [  **@importance=** ] **"***Wichtigkeit***"**  
  Die Bedeutung der Nachricht. Der Parameter ist vom Typ **varchar(6)**. Der Parameter kann einen der folgenden Werte enthalten:  
   
 -   Low  
@@ -114,7 +114,7 @@ sp_send_dbmail [ [ @profile_name = ] 'profile_name' ]
   
  Der Standardwert ist Normal.  
   
- [ **@sensitivity=** ] **'***sensitivity***'**  
+ [  **@sensitivity=** ] **"***Empfindlichkeit***"**  
  Die Vertraulichkeit der Nachricht. Der Parameter ist vom Typ **varchar(12)**. Der Parameter kann einen der folgenden Werte enthalten:  
   
 -   Normal  
@@ -133,33 +133,33 @@ sp_send_dbmail [ [ @profile_name = ] 'profile_name' ]
  [ **@query=** ] **'***query***'**  
  Eine auszuführende Abfrage. Die Ergebnisse der Abfrage können als Datei angefügt oder in den Text der E-Mail-Nachricht eingeschlossen werden. Die Abfrage ist vom Typ **nvarchar(max)**, er darf eine beliebige gültige [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisungen. Beachten Sie, dass die Abfrage, in einer separaten Sitzung, also lokale Variablen in der aufrufenden Skript ausgeführt wird **Sp_send_dbmail** sind für die Abfrage nicht verfügbar.  
   
- [ **@execute_query_database=** ] **'***execute_query_database***'**  
- Der Datenbankkontext, in dem die gespeicherte Prozedur die Abfrage ausführt. Der Parameter ist vom Typ **Sysname**, hat den Standardwert der aktuellen Datenbank. Dieser Parameter ist nur verfügbar wenn  **@query**  angegeben ist.  
+ [  **@execute_query_database=** ] **"***Execute_query_database***"**  
+ Der Datenbankkontext, in dem die gespeicherte Prozedur die Abfrage ausführt. Der Parameter ist vom Typ **Sysname**, hat den Standardwert der aktuellen Datenbank. Dieser Parameter ist nur verfügbar wenn **@query** angegeben ist.  
   
  [ **@attach_query_result_as_file=** ] *attach_query_result_as_file*  
  Gibt an, ob das Resultset der Abfrage als Anlage zurückgegeben wird. *Attach_query_result_as_file* ist vom Typ **Bit**, hat den Standardwert 0.  
   
- Wenn der Wert 0 ist, sind die Ergebnisse der Abfrage im Text der e-Mail-Nachricht hinter dem Inhalt des enthalten die  **@body**  Parameter. Ist der Wert 1, werden die Ergebnisse als Anlage zurückgegeben. Dieser Parameter ist nur verfügbar wenn  **@query**  angegeben ist.  
+ Wenn der Wert 0 ist, sind die Ergebnisse der Abfrage im Text der e-Mail-Nachricht hinter dem Inhalt des enthalten die **@body** Parameter. Ist der Wert 1, werden die Ergebnisse als Anlage zurückgegeben. Dieser Parameter ist nur verfügbar wenn **@query** angegeben ist.  
   
  [  **@query_attachment_filename=** ] *Query_attachment_filename*  
  Gibt an, welcher Dateiname für das Resultset der Abfrageanlage verwendet wird. *Query_attachment_filename* ist vom Typ **nvarchar(255)**, hat den Standardwert NULL. Dieser Parameter wird ignoriert, wenn *Attach_query_result* ist 0. Wenn *Attach_query_result* ist 1 und dieser Parameter ist NULL, Database Mail erstellt einen beliebigen Dateinamen.  
   
  [ **@query_result_header=** ] *query_result_header*  
- Gibt an, ob die Abfrageergebnisse Spaltenheader einschließen. Der Wert für query_result_header ist vom Typ **Bit**. Bei einem Wert von 1 enthalten die Abfrageergebnisse Spaltenheader. Bei einem Wert von 0 enthalten die Abfrageergebnisse keine Spaltenheader. Dieser Parameter ist standardmäßig **1**. Dieser Parameter ist nur verfügbar wenn  **@query**  angegeben ist.  
+ Gibt an, ob die Abfrageergebnisse Spaltenheader einschließen. Der Wert für query_result_header ist vom Typ **Bit**. Bei einem Wert von 1 enthalten die Abfrageergebnisse Spaltenheader. Bei einem Wert von 0 enthalten die Abfrageergebnisse keine Spaltenheader. Dieser Parameter ist standardmäßig **1**. Dieser Parameter ist nur verfügbar wenn **@query** angegeben ist.  
   
  [ **@query_result_width** = ] *query_result_width*  
- Die Linienstärke in Zeichen, die zum Formatieren der Ergebnisse der Abfrage verwendet wird. Die *Query_result_width* ist vom Typ **Int**, hat den Standardwert von 256. Der Wert muss zwischen 10 and 32767 liegen. Dieser Parameter ist nur verfügbar wenn  **@query**  angegeben ist.  
+ Die Linienstärke in Zeichen, die zum Formatieren der Ergebnisse der Abfrage verwendet wird. Die *Query_result_width* ist vom Typ **Int**, hat den Standardwert von 256. Der Wert muss zwischen 10 and 32767 liegen. Dieser Parameter ist nur verfügbar wenn **@query** angegeben ist.  
   
- [ **@query_result_separator=** ] **'***query_result_separator***'**  
+ [  **@query_result_separator=** ] **"***Query_result_separator***"**  
  Das Zeichen, der zum Trennen der Spalten in der Ausgabe einer Abfrage verwendet wird. Das Trennzeichen ist vom Typ **char(1)**. Der Standardwert ist ' ' (Leerzeichen).  
   
  [  **@exclude_query_output=** ] *Exclude_query_output*  
  Gibt an, ob die Ausgabe der Abfrageausführung in der E-Mail-Nachricht zurückgegeben werden soll. **Exclude_query_output** bit und hat den Standardwert 0. Wenn dieser Parameter gleich 0 ist, der die **Sp_send_dbmail** gespeicherte Prozedur zwar die Meldung, die als Ergebnis der Ausführung der Abfrage zurückgegeben werden, in der Konsole ausgibt. Wenn dieser Parameter gleich 1, die Ausführung der **Sp_send_dbmail** gespeicherte Prozedur wird keine abfrageausführungsnachrichten auf der Konsole gedruckt.  
   
- [ **@append_query_error=** ] *append_query_error*  
- Gibt an, ob die E-mail zu senden, die einen Fehler zurückgibt, aus der Abfrage der  **@query**  Argument. **Append_query_error** ist **Bit**, hat den Standardwert 0. Ist dieser Parameter auf 1 festgelegt, sendet Datenbank-E-Mail die E-Mail-Nachricht und bezieht die Abfragefehlermeldung in den Text der E-Mail-Nachricht ein. Wenn dieser Parameter 0 ist, Database Mail sendet keine e-Mail-Nachricht und **Sp_send_dbmail** endet mit dem Rückgabecode 1, Fehler angibt.  
+ [  **@append_query_error=** ] *Append_query_error*  
+ Gibt an, ob die E-mail zu senden, die einen Fehler zurückgibt, aus der Abfrage der **@query** Argument. **Append_query_error** ist **Bit**, hat den Standardwert 0. Ist dieser Parameter auf 1 festgelegt, sendet Datenbank-E-Mail die E-Mail-Nachricht und bezieht die Abfragefehlermeldung in den Text der E-Mail-Nachricht ein. Wenn dieser Parameter 0 ist, Database Mail sendet keine e-Mail-Nachricht und **Sp_send_dbmail** endet mit dem Rückgabecode 1, Fehler angibt.  
   
- [ **@query_no_truncate=** ] *query_no_truncate*  
+ [  **@query_no_truncate=** ] *Query_no_truncate*  
  Gibt an, ob die Abfrage mit der Option auszuführen, das Abschneiden von Datentypen für große variabler Länge vermeidet (**varchar(max)**, **nvarchar(max)**, **varbinary(max)** **Xml**, **Text**, **Ntext**, **Image**, und eine benutzerdefinierte Datentypen). Wenn fetgelegt, enthalten die Abfrageergebnisse keine Spaltenheader. Die *Query_no_truncate* Wert ist vom Typ **Bit**. Bei einem Wert von 0 oder wenn kein Wert angegeben ist, werden die Spalten in der Abfrage auf 256 Zeichen abgeschnitten. Bei einem Wert von 1 werden die Spalten in der Abfrage nicht abgeschnitten. Dieser Parameter hat den Standardwert 0.  
   
 > [!NOTE]  
@@ -186,17 +186,17 @@ sp_send_dbmail [ [ @profile_name = ] 'profile_name' ]
   
  **Sysmail_stop_sp** beendet Sie Database Mail durch das Beenden von Service Broker-Objekte, die vom externen Programm verwendet. **Sp_send_dbmail** nimmt e-Mail weiterhin, wenn Database Mail beendet wird, mit **Sysmail_stop_sp**. Starten Sie Datenbank-E-Mail mithilfe von **sysmail_start_sp**.  
   
- Wenn  **@profile**  nicht angegeben ist, **Sp_send_dbmail** ein Standardprofil verwendet. Falls der Benutzer, der die E-Mail-Nachricht sendet, über ein privates Standardprofil verfügt, verwendet Datenbank-E-Mail dieses Profil. Wenn der Benutzer keine als privates Standardprofil verfügt **Sp_send_dbmail** als öffentliches Standardprofil verwendet. Wenn keine als privates Standardprofil für den Benutzer und keine als öffentliches Standardprofil **Sp_send_dbmail** gibt einen Fehler zurück.  
+ Wenn **@profile** nicht angegeben ist, **Sp_send_dbmail** ein Standardprofil verwendet. Falls der Benutzer, der die E-Mail-Nachricht sendet, über ein privates Standardprofil verfügt, verwendet Datenbank-E-Mail dieses Profil. Wenn der Benutzer keine als privates Standardprofil verfügt **Sp_send_dbmail** als öffentliches Standardprofil verwendet. Wenn keine als privates Standardprofil für den Benutzer und keine als öffentliches Standardprofil **Sp_send_dbmail** gibt einen Fehler zurück.  
   
- **Sp_send_dbmail** e-Mail-Nachrichten ohne Inhalt wird nicht unterstützt. Um eine e-Mail-Nachricht zu senden, müssen Sie angeben, mindestens eine der  **@body** ,  **@query** ,  **@file_attachments** , oder  **@subject** . Andernfalls **Sp_send_dbmail** gibt einen Fehler zurück.  
+ **Sp_send_dbmail** e-Mail-Nachrichten ohne Inhalt wird nicht unterstützt. Um eine e-Mail-Nachricht zu senden, müssen Sie angeben, mindestens eine der **@body**, **@query**, **@file_attachments**, oder **@subject**. Andernfalls **Sp_send_dbmail** gibt einen Fehler zurück.  
   
- Datenbank-E-Mail verwendet den [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Sicherheitskontext des aktuellen Benutzers, um den Dateizugriff zu steuern. Aus diesem Grund mit authentifizierten Benutzern [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung kann nicht angefügt werden Dateien mit  **@file_attachments** . Windows lässt nicht zu, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anmeldeinformationen von einem Remotecomputer für einen anderen Remotecomputer bereitstellt. Aus diesem Grund kann Datenbank-E-Mail möglicherweise Dateien aus einer Netzwerkfreigabe nicht anfügen, wenn der Befehl von einem anderen Computer als dem Computer mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt wird.  
+ Datenbank-E-Mail verwendet den [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Sicherheitskontext des aktuellen Benutzers, um den Dateizugriff zu steuern. Aus diesem Grund mit authentifizierten Benutzern [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung kann nicht angefügt werden Dateien mit **@file_attachments**. Windows lässt nicht zu, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anmeldeinformationen von einem Remotecomputer für einen anderen Remotecomputer bereitstellt. Aus diesem Grund kann Datenbank-E-Mail möglicherweise Dateien aus einer Netzwerkfreigabe nicht anfügen, wenn der Befehl von einem anderen Computer als dem Computer mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt wird.  
   
- Wenn beide  **@query**  und  **@file_attachments**  angegeben werden und die Datei wurde nicht gefunden, die Abfrage weiterhin ausgeführt, aber die E-mail wird nicht gesendet.  
+ Wenn beide **@query** und **@file_attachments** angegeben werden und die Datei wurde nicht gefunden, die Abfrage weiterhin ausgeführt, aber die E-mail wird nicht gesendet.  
   
  Wird eine Abfrage angegeben, wird das Resultset als Inlinetext formatiert. Binärdaten im Ergebnis werden im hexadezimalen Format gesendet.  
   
- Die Parameter  **@recipients** ,  **@copy_recipients** , und  **@blind_copy_recipients**  sind durch Semikolons getrennte Listen mit e-Mail-Adressen. Mindestens einer dieser Parameter muss angegeben werden oder **Sp_send_dbmail** gibt einen Fehler zurück.  
+ Die Parameter **@recipients**, **@copy_recipients**, und **@blind_copy_recipients** sind durch Semikolons getrennte Listen mit e-Mail-Adressen. Mindestens einer dieser Parameter muss angegeben werden oder **Sp_send_dbmail** gibt einen Fehler zurück.  
   
  Beim Ausführen von **Sp_send_dbmail** ohne einen bereits verwendeten Transaktionskontext, Database Mail gestartet wird, und führt einen Commit für eine implizite Transaktion. Beim Ausführen von **Sp_send_dbmail** von innerhalb einer vorhandenen Transaktion Database Mail basiert auf dem Benutzer, ein commit oder ein Rollback von Änderungen. Es wird keine innere Transaktion gestartet.  
   
@@ -268,7 +268,7 @@ EXEC msdb.dbo.sp_send_dbmail @recipients='yourfriend@Adventure-Works.com',
 ## <a name="see-also"></a>Siehe auch  
  [Datenbank-E-Mail](../../relational-databases/database-mail/database-mail.md)   
  [Database Mail Configuration Objects](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
- [Database Mail gespeicherte Systemprozeduren &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)   
+ [Database Mail gespeicherte Prozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)   
  [sp_addrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)  
   
   

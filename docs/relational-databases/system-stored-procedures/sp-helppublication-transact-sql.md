@@ -1,16 +1,16 @@
 ---
 title: Sp_helppublication (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helppublication
 ms.assetid: e801c3f0-dcbd-4b4a-b254-949a05f63518
-caps.latest.revision: 
+caps.latest.revision: 49
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: aa78ce2aa9ed1ba80a7ee733a2e458ba231d968f
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 7160c358f0969c967cb0995e410f7e75427285bc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelppublication-transact-sql"></a>sp_helppublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,13 +48,13 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@publication =** ] **"***Veröffentlichung***"**  
- Entspricht dem Namen der anzuzeigenden Veröffentlichung. *Veröffentlichung* ist vom Datentyp Sysname und hat den Standardwert  **%** , womit Informationen zu allen Veröffentlichungen zurückgegeben.  
+ [ **@publication =** ] **'***publication***'**  
+ Entspricht dem Namen der anzuzeigenden Veröffentlichung. *Veröffentlichung* ist vom Datentyp Sysname und hat den Standardwert **%**, womit Informationen zu allen Veröffentlichungen zurückgegeben.  
   
  [  **@found =** ] **"***gefunden***"** Ausgabe  
  Ein Flag zur Angabe zurückgegebener Zeilen. *gefunden*ist **Int** und ein OUTPUT-Parameter hat den Standardwert **23456**. **1** gibt an, die Veröffentlichung gefunden wurde. **0** gibt an, die Veröffentlichung wurde nicht gefunden.  
   
- [  **@publisher**  =] **"***Publisher***"**  
+ [ **@publisher** = ] **'***publisher***'**  
  Gibt einen nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger. *Publisher* ist vom Datentyp Sysname und hat den Standardwert NULL.  
   
 > [!NOTE]  
@@ -71,7 +71,7 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 |Task (task)||Dieser Parameter wird aus Gründen der Abwärtskompatibilität verwendet.|  
 |replication frequency|**tinyint**|Art der Replikationshäufigkeit:<br /><br /> **0** = transaktionsveröffentlichung<br /><br /> **1** = Momentaufnahme|  
 |synchronization method|**tinyint**|Synchronisierungsmethode:<br /><br /> **0** = systemeigenes Massenkopierprogramm (**Bcp** Hilfsprogramm)<br /><br /> **1** = Massenkopieren von Zeichen<br /><br /> **3** = gleichzeitig, d., das systemeigene Massenkopieren h. (**Bcp**Dienstprogramm) wird verwendet, aber Tabellen werden während der Erstellung der Momentaufnahme nicht gesperrt.<br /><br /> **4** = Concurrent_c, dies bedeutet, dass das Massenkopieren von Zeichen wird verwendet, aber Tabellen werden während der Erstellung der Momentaufnahme nicht gesperrt.|  
-|Beschreibung|**nvarchar(255)**|Optionale Beschreibung für die Veröffentlichung.|  
+|description|**nvarchar(255)**|Optionale Beschreibung für die Veröffentlichung.|  
 |immediate_sync|**bit**|Gibt an, ob die Synchronisierungsdateien bei jeder Ausführung des Momentaufnahme-Agents erstellt oder neu erstellt werden.|  
 |enabled_for_internet|**bit**|Gibt an, ob die Synchronisierungsdateien für die Veröffentlichung im Internet über FTP (File Transfer Protocol) oder andere Dienste bereitgestellt werden.|  
 |allow_push|**bit**|Gibt an, ob Pushabonnements für die Veröffentlichung zulässig sind.|  
@@ -109,7 +109,7 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 |enabled_for_het_sub|**int**|Gibt an, ob die Veröffentlichung Nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Abonnenten unterstützt. Der Wert **1** bedeutet, dass nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Abonnenten unterstützt werden. Der Wert **0** bedeutet, dass nur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Abonnenten unterstützt werden. Weitere Informationen finden Sie unter [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md).|  
 |enabled_for_p2p_conflictdetection|**int**|Gibt an, ob der Verteilungs-Agent Konflikte für eine Veröffentlichung erkennt, die für die Peer-zu-Peer-Replikation aktiviert ist. Der Wert **1** bedeutet, dass Konflikte erkannt werden. Weitere Informationen finden Sie unter [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).|  
 |originator_id|**int**|Gibt eine ID für einen Knoten in einer Peer-zu-Peer-Topologie an. Diese ID wird für die konflikterkennung verwendet, wenn **enabled_for_p2p_conflictdetection** festgelegt ist, um **1**. Zum Anzeigen einer Liste der bereits verwendeten IDs fragen Sie die [Mspeer_originatorid_history](../../relational-databases/system-tables/mspeer-originatorid-history-transact-sql.md) -Systemtabelle ab.|  
-|p2p_continue_onconflict|**int**|Gibt an, ob der Verteilungs-Agent bei Erkennung eines Konflikts die Verarbeitung von Änderungen fortsetzt. Der Wert **1** bedeutet, dass der Agent Verarbeitung von Änderungen fortsetzt.<br /><br /> **\*\*Vorsicht \* \***  es wird empfohlen, dass Sie den Standardwert verwenden **0**. Wenn diese Option festgelegt wird, um **1**, den Verteilungs-Agent versucht, die Datenkonvergenz in der Topologie herbeizuführen, indem die konfliktverursachende Zeile von dem Knoten mit der höchsten Absender-ID angewendet Bei dieser Methode ist keine Konvergenz garantiert. Sie sollten sicherstellen, dass die Topologie nach der Erkennung eines Konflikts konsistent ist. Weitere Informationen finden Sie im Abschnitt "Konfliktbehandlung" unter [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).|  
+|p2p_continue_onconflict|**int**|Gibt an, ob der Verteilungs-Agent bei Erkennung eines Konflikts die Verarbeitung von Änderungen fortsetzt. Der Wert **1** bedeutet, dass der Agent Verarbeitung von Änderungen fortsetzt.<br /><br /> **\*\* Vorsicht \* \***  es wird empfohlen, dass Sie den Standardwert verwenden **0**. Wenn diese Option festgelegt wird, um **1**, den Verteilungs-Agent versucht, die Datenkonvergenz in der Topologie herbeizuführen, indem die konfliktverursachende Zeile von dem Knoten mit der höchsten Absender-ID angewendet Bei dieser Methode ist keine Konvergenz garantiert. Sie sollten sicherstellen, dass die Topologie nach der Erkennung eines Konflikts konsistent ist. Weitere Informationen finden Sie im Abschnitt "Konfliktbehandlung" unter [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).|  
 |alllow_partition_switch|**int**|Gibt an, ob ALTER TABLE…SWITCH-Anweisungen für die veröffentlichte Datenbank ausgeführt werden können. Weitere Informationen finden Sie unter [Replicate Partitioned Tables and Indexes](../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md).|  
 |replicate_partition_switch|**int**|Gibt an, ob ALTER TABLE…SWITCH-Anweisungen, die für die veröffentlichte Datenbank ausgeführt werden, auf Abonnenten repliziert werden sollen. Diese Option gilt nur, wenn *Allow_partition_switch* festgelegt ist, um **1**.|  
   
@@ -131,9 +131,9 @@ sp_helppublication [ [ @publication = ] 'publication' ]
   
 ## <a name="see-also"></a>Siehe auch  
  [Anzeigen und Ändern von Veröffentlichungseigenschaften](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
- [Sp_addpublication &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   
+ [sp_addpublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   
  [sp_changepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)   
- [Sp_droppublication &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-droppublication-transact-sql.md)   
+ [Sp_droppublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droppublication-transact-sql.md)   
  [Gespeicherte Automatisierungsprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

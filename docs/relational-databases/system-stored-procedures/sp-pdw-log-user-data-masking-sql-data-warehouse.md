@@ -1,30 +1,31 @@
 ---
 title: Sp_pdw_log_user_data_masking (SQL Data Warehouse) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: 
+ms.prod: ''
 ms.prod_service: sql-data-warehouse, pdw
 ms.service: sql-data-warehouse
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - sql-data-warehouse
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 43c63b42-03cb-4fb5-8362-ec3b7e22a590
-caps.latest.revision: 
+caps.latest.revision: 8
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e401596add887d6bfc3f7fc7bd6b5255128b251c
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
+ms.openlocfilehash: dc0552d5baf1c35e4ffa02ae6f05f7a397a5523a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sppdwloguserdatamasking-sql-data-warehouse"></a>Sp_pdw_log_user_data_masking (SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -34,7 +35,7 @@ ms.lasthandoff: 02/03/2018
 > [!IMPORTANT]  
 >  Die [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] Aktivitätsprotokolle betroffen **Sp_pdw_log_user_data_masking** sind bestimmte [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] Aktivitätsprotokolle. **Sp_pdw_log_user_data_masking** wirkt sich nicht auf die Datenbank-Transaktionsprotokolle oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Fehlerprotokolle.  
   
- **Hintergrund:** In der Standardkonfiguration [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] Aktivitätsprotokolle enthalten vollständige [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen, und es in einigen Fällen enthalten Benutzerdaten in Operationen wie z. B. **einfügen**, **UPDATE**, und **wählen** Anweisungen. Wenn auf dem Gerät ein Problem vorliegt ermöglicht dies die Analyse der Bedingungen, die das Problem ohne Bedarf an, das Problem zu reproduzieren verursacht hat. Um zu verhindern, dass die Benutzerdaten in geschriebenen [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] Aktivitätsprotokolle, Kunden können die Benutzer die datenmaskierung aktivieren, indem Sie mit dieser gespeicherten Prozedur. Die Anweisungen werden noch geschrieben werden, um [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] Aktivitätsprotokolle jedoch alle die Literale in Anweisungen, die Benutzerdaten enthalten möglicherweise werden maskierte; durch einige vordefinierte Konstante Werte ersetzt.  
+ **Hintergrund:** In der Standardkonfiguration [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] Aktivitätsprotokolle enthalten vollständige [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen, und es in einigen Fällen enthalten Benutzerdaten in Operationen wie z. B. **einfügen**,  **UPDATE**, und **wählen** Anweisungen. Wenn auf dem Gerät ein Problem vorliegt ermöglicht dies die Analyse der Bedingungen, die das Problem ohne Bedarf an, das Problem zu reproduzieren verursacht hat. Um zu verhindern, dass die Benutzerdaten in geschriebenen [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] Aktivitätsprotokolle, Kunden können die Benutzer die datenmaskierung aktivieren, indem Sie mit dieser gespeicherten Prozedur. Die Anweisungen werden noch geschrieben werden, um [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] Aktivitätsprotokolle jedoch alle die Literale in Anweisungen, die Benutzerdaten enthalten möglicherweise werden maskierte; durch einige vordefinierte Konstante Werte ersetzt.  
   
  Wenn transparente datenverschlüsselung auf dem Gerät aktiviert ist, der den Benutzerdaten in maskiert [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] Aktivitätsprotokolle ist automatisch aktiviert.  
   
@@ -82,7 +83,7 @@ EXEC sp_pdw_log_user_data_masking 1;
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [sp_pdw_database_encryption &#40;SQL Data Warehouse&#41;](../../relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse.md)   
+ [sp_pdw_database_encryption aktiviert werden &#40;SQL Data Warehouse&#41;](../../relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse.md)   
  [sp_pdw_database_encryption_regenerate_system_keys &#40;SQL Data Warehouse&#41;](../../relational-databases/system-stored-procedures/sp-pdw-database-encryption-regenerate-system-keys-sql-data-warehouse.md)  
   
   

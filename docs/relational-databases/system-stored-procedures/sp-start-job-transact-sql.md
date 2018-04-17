@@ -1,16 +1,16 @@
 ---
 title: Sp_start_job (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_start_job
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_start_job
 ms.assetid: 8a91df6a-eb84-4512-9a17-4a6e32a9538a
-caps.latest.revision: 
+caps.latest.revision: 36
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 5939e906cee691c2b6f13ff10677eb4f4129622f
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 89cf8ae7b00aa917d626fd47070835690b56e1f4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spstartjob-transact-sql"></a>sp_start_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ sp_start_job
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@job_name=** ] **'***job_name***'**  
+ [  **@job_name=** ] **"***Job_name***"**  
  Der Name des Auftrags, der gestartet werden soll. Entweder *Job_id* oder *Job_name* muss angegeben werden, aber beide können nicht angegeben werden. *Job_name* ist **Sysname**, hat den Standardwert NULL.  
   
  [ **@job_id=** ] *job_id*  
@@ -61,13 +61,13 @@ sp_start_job
  [ **@error_flag=** ] *error_flag*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [ **@server_name=** ] **'***server_name***'**  
+ [  **@server_name=** ] **"***Server_name***"**  
  Der Zielserver, auf dem der Auftrag gestartet werden soll. *Server_name* ist **vom Datentyp nvarchar(128)**, hat den Standardwert NULL. *Server_name* muss eines der Zielserver, dem der Auftrag derzeit gerichtet, sein.  
   
- [ **@step_name=** ] **'***step_name***'**  
+ [  **@step_name=** ] **"***Step_name***"**  
  Der Name des Schritts, mit dem die Ausführung des Auftrags beginnen soll. Gilt nur für lokale Aufträge. *Step_name* ist **Sysname**, hat den Standardwert NULL  
   
- [ **@output_flag=** ] *output_flag*  
+ [  **@output_flag=** ] *Output_flag*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  

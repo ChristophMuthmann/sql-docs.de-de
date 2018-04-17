@@ -1,16 +1,16 @@
 ---
 title: Backupset (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, pdw
-ms.service: 
+ms.service: ''
 ms.component: system-tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - backupset
@@ -22,21 +22,22 @@ helpviewer_keywords:
 - backup media [SQL Server], backupset system table
 - backup sets [SQL Server]
 ms.assetid: 6ff79bbf-4acf-4f75-926f-38637ca8a943
-caps.latest.revision: 
+caps.latest.revision: 70
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: dd98b3e7e120e186901d8120243a35d620411ba2
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: '>= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 1675b6703b8729458ff10fae7d83a2c56328ee59
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="backupset-transact-sql"></a>backupset (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
 
-  Enthält eine Zeile für jeden Sicherungssatz. Ein *Sicherungssatz* enthält die Sicherung von einem einzelnen, erfolgreichen Sicherungsvorgang. Die Anweisungen RESTORE, RESTORE FILELISTONLY, RESTORE HEADERONLY und RESTORE VERIFYONLY verarbeiten einen einzelnen Sicherungssatz innerhalb des Mediensatzes auf den angegebenen Sicherungsmedien.  
+  Enthält eine Zeile für jeden Sicherungssatz. Ein *Sicherungssatz* enthält die Sicherung aus einem einzelnen, erfolgreichen Sicherungsvorgang. Die Anweisungen RESTORE, RESTORE FILELISTONLY, RESTORE HEADERONLY und RESTORE VERIFYONLY verarbeiten einen einzelnen Sicherungssatz innerhalb des Mediensatzes auf den angegebenen Sicherungsmedien.  
   
  Diese Tabelle wird in der **msdb** -Datenbank gespeichert.  
 
@@ -52,17 +53,17 @@ ms.lasthandoff: 02/03/2018
 |**last_media_number**|**smallint**|Mediennummer des Mediums, bei dem der Sicherungssatz endet. Kann den Wert NULL haben.|  
 |**catalog_family_number**|**tinyint**|Familiennummer des Mediums, das den Beginn des Sicherungssatzverzeichnisses enthält. Kann den Wert NULL haben.|  
 |**catalog_media_number**|**smallint**|Mediennummer des Mediums, das den Beginn des Sicherungssatzverzeichnisses enthält. Kann den Wert NULL haben.|  
-|**position**|**int**|Position des Sicherungssatzes, die in dem Wiederherstellungsvorgang zum Suchen nach dem geeigneten Sicherungssatz und den geeigneten Dateien verwendet wird. Kann den Wert NULL haben. Weitere Informationen finden Sie in der Datei in [BACKUP &#40; Transact-SQL &#41; ](../../t-sql/statements/backup-transact-sql.md).|  
+|**position**|**int**|Position des Sicherungssatzes, die in dem Wiederherstellungsvorgang zum Suchen nach dem geeigneten Sicherungssatz und den geeigneten Dateien verwendet wird. Kann den Wert NULL haben. Weitere Informationen finden Sie in der Datei in [Sicherung &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md).|  
 |**expiration_date**|**datetime**|Datum und Uhrzeit des Zeitpunkts, zu dem die Gültigkeit des Sicherungssatzes endet. Kann den Wert NULL haben.|  
 |**software_vendor_id**|**int**|ID des Softwareanbieters, der den Sicherungsmedienheader schreibt. Kann den Wert NULL haben.|  
 |**name**|**nvarchar(128)**|Name des Sicherungssatzes. Kann den Wert NULL haben.|  
 |**description**|**nvarchar(255)**|Beschreibung des Sicherungssatzes. Kann den Wert NULL haben.|  
 |**user_name**|**nvarchar(128)**|Name des Benutzers, der den Sicherungsvorgang durchführt. Kann den Wert NULL haben.|  
-|**software_major_version**|**tinyint**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Hauptversionsnummer. Kann den Wert NULL haben.|  
-|**software_minor_version**|**tinyint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Nummer der Nebenversion. Kann den Wert NULL haben.|  
-|**software_build_version**|**smallint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Buildnummer. Kann den Wert NULL haben.|  
+|**software_major_version**|**tinyint**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Die Hauptversionsnummer. Kann den Wert NULL haben.|  
+|**software_minor_version**|**tinyint**|Nebenversionsnummer von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Kann den Wert NULL haben.|  
+|**software_build_version**|**smallint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Buildnummer. Kann den Wert NULL haben.|  
 |**time_zone**|**smallint**|Unterschied zwischen der Ortszeit (am Standort, an dem der Sicherungsvorgang stattfindet) und der UTC (Coordinated Universal Time, Koordinierte Weltzeit) in 15-Minuten-Intervallen. Die Werte können zwischen -48 und +48 (einschließlich) liegen. Durch den Wert 127 wird angegeben, dass die Abweichung nicht bekannt ist. So entspricht z. B. der Wert -20 der Eastern Standard Time (EST) bzw. einer Zeit, die fünf Stunden nach der UTC liegt. Kann den Wert NULL haben.|  
-|**mtf_minor_version**|**tinyint**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Band Nebenversionsnummer Format an. Kann den Wert NULL haben.|  
+|**mtf_minor_version**|**tinyint**|Nebenversionsnummer von [!INCLUDE[msCoName](../../includes/msconame-md.md)] Tape Format. Kann den Wert NULL haben.|  
 |**first_lsn**|**numeric(25,0)**|Protokollfolgenummer des ersten oder ältesten Protokolldatensatzes im Sicherungssatz. Kann den Wert NULL haben.|  
 |**last_lsn**|**numeric(25,0)**|Protokollfolgenummer des nächsten Protokolldatensatzes nach dem Sicherungssatz. Kann den Wert NULL haben.|  
 |**checkpoint_lsn**|**numeric(25,0)**|Protokollfolgenummer des Protokolldatensatzes, bei dem die Wiederholung beginnen muss. Kann den Wert NULL haben.|  
@@ -100,9 +101,9 @@ ms.lasthandoff: 02/03/2018
 |**fork_point_lsn**|**numeric(25,0)**|Wenn **First_recovery_fork_guid** stimmt nicht mit **Last_recovery_fork_guid**, dies ist die protokollfolgenummer des verzweigungspunkts. Andernfalls ist der Wert NULL.|  
 |**database_guid**|**uniqueidentifier**|Eindeutige ID für die Datenbank. Dies entspricht **BindingID** von RESTORE HEADERONLY. Wenn die Datenbank wiederhergestellt wird, wird ein neuer Wert zugewiesen.|  
 |**family_guid**|**uniqueidentifier**|Eindeutige ID der ursprünglichen Datenbank zum Zeitpunkt der Erstellung. Dieser Wert bleibt unverändert, wenn die Datenbank wiederhergestellt wird, und zwar auch dann, wenn sie mit einem anderen Namen wiederhergestellt wird.|  
-|**differential_base_lsn**|**numeric(25,0)**|Basis-LSN für differenzielle Sicherungen. Für eine einzelne Sicherung auf differenzieller Basis; Änderungen mit LSNs, die größer als oder gleich **Differential_base_lsn** werden in die differenzielle Sicherung eingeschlossen.<br /><br /> Bei einer differenziellen ist der Wert NULL, und die Basis-LSN muss auf Dateiebene bestimmt werden (siehe [Backupfile &#40; Transact-SQL &#41; ](../../relational-databases/system-tables/backupfile-transact-sql.md)).<br /><br /> Bei nicht differenziellen Sicherungstypen ist der Wert immer NULL.|  
+|**differential_base_lsn**|**numeric(25,0)**|Basis-LSN für differenzielle Sicherungen. Für eine einzelne Sicherung auf differenzieller Basis; Änderungen mit LSNs, die größer als oder gleich **Differential_base_lsn** werden in die differenzielle Sicherung eingeschlossen.<br /><br /> Bei einer differenziellen ist der Wert NULL, und die Basis-LSN muss auf Dateiebene bestimmt werden (siehe [Backupfile &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupfile-transact-sql.md)).<br /><br /> Bei nicht differenziellen Sicherungstypen ist der Wert immer NULL.|  
 |**differential_base_guid**|**uniqueidentifier**|Bei einer differenziellen Sicherung auf der Basis einer Sicherung entspricht dieser Wert dem eindeutigen Bezeichner der differenziellen Basis.<br /><br /> Bei einer differenziellen Sicherung auf der Basis mehrerer Sicherungen ist der Wert NULL, und die Basis für die differenzielle Sicherung muss auf Dateiebene bestimmt werden.<br /><br /> Bei nicht differenziellen Sicherungstypen ist der Wert NULL.|  
-|**compressed_backup_size**|**Numeric(20,0)**|Gesamtbytezahl der auf einem Datenträger gespeicherten Sicherung.<br /><br /> Um der Komprimierungsrate verwenden **Compressed_backup_size** und **Backup_size**.<br /><br /> Während einer **Msdb** ein Upgrade ausführen, wird dieser Wert auf NULL festgelegt. Dies gibt eine nicht komprimierte Sicherung an.|  
+|**compressed_backup_size**|**numeric(20,0)**|Gesamtbytezahl der auf einem Datenträger gespeicherten Sicherung.<br /><br /> Um der Komprimierungsrate verwenden **Compressed_backup_size** und **Backup_size**.<br /><br /> Während einer **Msdb** ein Upgrade ausführen, wird dieser Wert auf NULL festgelegt. Dies gibt eine nicht komprimierte Sicherung an.|  
 |**key_algorithm**|**nvarchar(32)**|Der Verschlüsselungsalgorithmus, der zum Verschlüsseln der Sicherung verwendet wird. Der NO_Encryption-Wert gab an, dass die Sicherung nicht verschlüsselt wurde.|  
 |**encryptor_thumbprint**|**varbinary(20)**|Der Fingerabdruck der Verschlüsselung, der verwendet werden kann, um das Zertifikat oder den asymmetrischen Schlüssel in der Datenbank zu ermitteln. Wenn die Sicherung nicht verschlüsselt wurde, ist dieser Wert NULL.|  
 |**encryptor_type**|**nvarchar(32)**|Der verwendete Verschlüsselungstyp: Zertifikat oder Asymmetrischer Schlüssel. aus. Wenn die Sicherung nicht verschlüsselt wurde, ist dieser Wert NULL.|  
@@ -113,7 +114,7 @@ ms.lasthandoff: 02/03/2018
  Um die Anzahl der Zeilen in dieser Tabelle und in anderen Tabellen sicherungs- und Verlaufstabellen zu verringern, führen Sie die [Sp_delete_backuphistory](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md) gespeicherte Prozedur.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Sichern und Wiederherstellen von Tabellen &#40; Transact-SQL &#41;](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)   
+ [Sichern und Wiederherstellen von Tabellen &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)   
  [backupfile &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupfile-transact-sql.md)   
  [backupfilegroup &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupfilegroup-transact-sql.md)   
  [backupmediafamily &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupmediafamily-transact-sql.md)   
@@ -122,6 +123,6 @@ ms.lasthandoff: 02/03/2018
  [Mediensätze, Medienfamilien und Sicherungssätze &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)   
  [Wiederherstellungsmodelle &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md)   
  [RESTORE HEADERONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)   
- [Sichern und Wiederherstellen von Tabellen &#40; Transact-SQL &#41;](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)  
+ [Sichern und Wiederherstellen von Tabellen &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)  
   
   

@@ -1,16 +1,16 @@
 ---
 title: Sp_setdefaultdatatypemapping (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_setdefaultdatatypemapping
 ms.assetid: 7394e8ca-4ce1-4e99-a784-205007c2c248
-caps.latest.revision: 
+caps.latest.revision: 15
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 28b267b8e03fed032811aeaa98bbbf8b7c4b515c
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: acc35763731c38a7c0eddac9b89c2649ce88f176
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spsetdefaultdatatypemapping-transact-sql"></a>sp_setdefaultdatatypemapping (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -66,7 +66,7 @@ sp_setdefaultdatatypemapping [ [ @mapping_id = ] mapping_id ]
  [  **@mapping_id=** ] *Mapping_id*  
  Identifiziert eine vorhandene Datentypzuordnung.  *Mapping_id* ist **Int**, mit dem Standardwert NULL. Bei Angabe von *Mapping_id*, und klicken Sie dann die verbleibenden Parameter nicht erforderlich sind.  
   
- [  **@source_dbms** =] **"***Source_dbms***"**  
+ [ **@source_dbms**=] **"***Source_dbms***"**  
  Der Name des Datenbank-Managementsystems (Database Management System, DBMS), aus dem die Datentypen zugeordnet werden. *Source_dbms* ist **Sysname**, und kann einen der folgenden Werte.  
   
 |Wert|Description|  
@@ -80,7 +80,7 @@ sp_setdefaultdatatypemapping [ [ @mapping_id = ] mapping_id ]
  [  **@source_version=** ] **"***Source_version***"**  
  Die Versionsnummer des Quell-DBMS. *Source_version* ist **varchar(10)**, hat den Standardwert NULL.  
   
- [  **@source_type** =] **"***Source_type***"**  
+ [ **@source_type**=] **"***Source_type***"**  
  Der Datentyp im Quell-DBMS. *Source_type* ist **Sysname**. Sie müssen diesen Parameter angeben, wenn *Mapping_id* ist NULL.  
   
  [  **@source_length_min=** ] *Source_length_min*  
@@ -104,7 +104,7 @@ sp_setdefaultdatatypemapping [ [ @mapping_id = ] mapping_id ]
  [  **@source_nullable=** ] *Source_nullable*  
  Gibt an, ob der Datentyp im Quell-DBMS den Wert NULL unterstützt. *Source_nullable* ist **Bit**, hat den Standardwert NULL. **1** bedeutet, dass NULL-Werte unterstützt werden.  
   
- [  **@destination_dbms**  =] **"***Destination_dbms***"**  
+ [ **@destination_dbms** =] **"***Destination_dbms***"**  
  Der Name des Ziel-DBMS. *Destination_dbms* ist **Sysname**, und kann einen der folgenden Werte.  
   
 |Wert|Description|  
@@ -115,10 +115,10 @@ sp_setdefaultdatatypemapping [ [ @mapping_id = ] mapping_id ]
 |**SYBASE**|Das Ziel ist eine Sybase-Datenbank.|  
 |NULL (Standard)||  
   
- [  **@destination_version** =] **"***Destination_version***"**  
+ [ **@destination_version**=] **"***Destination_version***"**  
  Ist die Produktversion des Ziel-DBMS. *Destination_version* ist **varchar(10)**, hat den Standardwert NULL.  
   
- [  **@destination_type** =] **"***Destination_type***"**  
+ [ **@destination_type**=] **"***Destination_type***"**  
  Der im Ziel-DBMS aufgelistete Datentyp. *Destination_type* ist **Sysname**, hat den Standardwert NULL.  
   
  [  **@destination_length=** ] *Destination_length*  
@@ -146,7 +146,7 @@ sp_setdefaultdatatypemapping [ [ @mapping_id = ] mapping_id ]
   
 ## <a name="see-also"></a>Siehe auch  
  [Angeben von Datentypzuordnungen für einen Oracle-Verleger](../../relational-databases/replication/publish/specify-data-type-mappings-for-an-oracle-publisher.md)   
- [Sp_getdefaultdatatypemapping &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-getdefaultdatatypemapping-transact-sql.md)   
- [Sp_helpdatatypemap &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helpdatatypemap-transact-sql.md)  
+ [Sp_getdefaultdatatypemapping &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-getdefaultdatatypemapping-transact-sql.md)   
+ [sp_helpdatatypemap &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdatatypemap-transact-sql.md)  
   
   

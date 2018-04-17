@@ -1,16 +1,16 @@
 ---
 title: Sp_server_info (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_server_info
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_server_info
 ms.assetid: 2dc2c262-3cfa-4a84-8127-3632ba583543
-caps.latest.revision: 
+caps.latest.revision: 39
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0261a011e7c331745494070efb5a3d38e37ffa23
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: ab2bee2085b2b86015225f67a99bb01d833efb9d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spserverinfo-transact-sql"></a>sp_server_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,10 +57,10 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |**ATTRIBUTE_ID**|**int**|ID-Nummer des Attributs.|  
-|**ATTRIBUTNAME**|**Varchar (**60**)**|Der Attributname.|  
+|**ATTRIBUTE_NAME**|**Varchar (**60**)**|Der Attributname.|  
 |**ATTRIBUTE_VALUE**|**Varchar (**255**)**|Aktuelle Einstellung des Attributs.|  
   
- Die Attribute sind in der folgenden Tabelle aufgeführt. [!INCLUDE[msCoName](../../includes/msconame-md.md)]ODBC-Clientbibliotheken verwenden zurzeit die Attribute **1**, **2**, **18**, **22**, und **500** an Verbindungszeit.  
+ Die Attribute sind in der folgenden Tabelle aufgeführt. [!INCLUDE[msCoName](../../includes/msconame-md.md)] ODBC-Clientbibliotheken verwenden zurzeit die Attribute **1**, **2**, **18**, **22**, und **500** beim Herstellen der Verbindung Zeit.  
   
 |ATTRIBUTE_ID|Beschreibung in ATTRIBUTE_NAME|ATTRIBUTE_VALUE|  
 |-------------------|---------------------------------|----------------------|  
@@ -101,7 +101,7 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
  Erfordert SELECT-Berechtigung für das Schema.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Katalog gespeicherte Prozeduren &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
+ [Gespeicherte Prozeduren für Kataloginformationen &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -1,16 +1,16 @@
 ---
 title: InstanceName-Eigenschaft (ClientSettings-Klasse) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: wmi
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - InstanceName Property (ClientSettings Class)
@@ -20,16 +20,16 @@ apitype: MOFDef
 helpviewer_keywords:
 - InstanceName property
 ms.assetid: 58dacb4a-751a-491f-9adb-88ec6afc797c
-caps.latest.revision: 
+caps.latest.revision: 27
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2831e693837e911b0cba030045f5bc080490acec
-ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
+ms.openlocfilehash: f97ebeee50e7cb67932aab4d09e585949798fd5f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="clientsettings-class---instancename-property"></a>ClientSettings-Klasse - InstanceName-Eigenschaft
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

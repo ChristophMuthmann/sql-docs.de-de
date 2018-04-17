@@ -1,16 +1,16 @@
 ---
 title: Sp_trace_create (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_trace_create_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_trace_create
 ms.assetid: f3a43597-4c5a-4520-bcab-becdbbf81d2e
-caps.latest.revision: 
+caps.latest.revision: 38
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d370ebe5730f9b87d7303c067b9edc1a14d27509
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 39bdde1095f5780fac2f27a9da1e834e6c3af968
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sptracecreate-transact-sql"></a>sp_trace_create (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@traceid=** ] *trace_id*  
+ [  **@traceid=** ] *Trace_id*  
  Ist die Nummer des vom zugewiesenen [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in die neue Ablaufverfolgung. Benutzereingaben werden ignoriert. *Trace_id* ist **Int**, hat den Standardwert NULL. Der Benutzer verwendet die *Trace_id* zu identifizieren, ändern und Steuern der Ablaufverfolgung, die von dieser gespeicherten Prozedur definierten Wert.  
   
  [ **@options=** ] *option_value*  
@@ -71,7 +71,7 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
  [ **@tracefile=** ] *'**trace_file**'*  
  Gibt den Speicherort und den Dateinamen zum Schreiben der Ablaufverfolgung an. *Ablaufverfolgungs_Datei* ist **nvarchar(245)** hat keinen Standardwert. *Ablaufverfolgungs_Datei* kann entweder ein lokales Verzeichnis (z. B. N 'C:\MSSQL\Trace\trace.trc') oder ein UNC-Angabe für eine Freigabe oder einen Pfad (N'\\\\*Servername*\\*Sharename* \\ *Directory*\trace.trc').  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Fügt eine **trc** Erweiterung für alle Namen von Ablaufverfolgungsdateien. Wenn die Option TRACE_FILE_ROLLOVER und ein *Max_file_size* angegeben sind, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eine neue Ablaufverfolgungsdatei erstellt, wenn die maximale Größe die ursprünglichen Ablaufverfolgungsdatei vergrößert wird. Die neue Datei hat den gleichen Namen wie die ursprüngliche Datei, aber _ *n*  wird angehängt, um die Angabe der Abfolge, beginnend mit **1**. Wenn die erste Ablaufverfolgungsdatei heißt beispielsweise **filename.trc**, die zweite Datei heißt **filename_1.trc**.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Fügt eine **trc** Erweiterung für alle Namen von Ablaufverfolgungsdateien. Wenn die Option TRACE_FILE_ROLLOVER und ein *Max_file_size* angegeben sind, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eine neue Ablaufverfolgungsdatei erstellt, wenn die maximale Größe die ursprünglichen Ablaufverfolgungsdatei vergrößert wird. Die neue Datei hat den gleichen Namen wie die ursprüngliche Datei, aber _*n* wird angehängt, um die Angabe der Abfolge, beginnend mit **1**. Wenn die erste Ablaufverfolgungsdatei heißt beispielsweise **filename.trc**, die zweite Datei heißt **filename_1.trc**.  
   
  Wenn Sie die Option TRACE_FILE_ROLLOVER verwenden, sollten im ursprünglichen Dateinamen keine Unterstriche enthalten sein. Bei Verwendung von Unterstrichen tritt Folgendes auf:  
   
@@ -84,7 +84,7 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
   
  *Ablaufverfolgungs_Datei* kann nicht angegeben werden, wenn die Option TRACE_PRODUCE_BLACKBOX verwendet wird.  
   
- [ **@maxfilesize=** ] *max_file_size*  
+ [  **@maxfilesize=** ] *Max_file_size*  
  Gibt die Maximalgröße in Megabyte (MB) an, auf die eine Ablaufverfolgungsdatei vergrößert werden kann. *Wert für Max_file_size* ist **"bigint"**, hat den Standardwert des **5**.  
   
  Wenn dieser Parameter ohne die Option TRACE_FILE_ROLLOVER angegeben wird, beendet die Ablaufverfolgung Aufzeichnung in der Datei an, wenn der verwendete Speicherplatz auf den angegebenen Betrag überschreitet *Max_file_size*.  
@@ -130,7 +130,7 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
  Für **Sp_trace_create**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienstkonto muss über die Schreibberechtigung auf den Ordner der Ablaufverfolgungsdatei verfügen. Wenn das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Dienstkonto kein Administrator auf dem Computer ist, auf dem die Ablaufverfolgungsdatei gespeichert ist, müssen Sie dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Dienstkonto explizit die Schreibberechtigung erteilen.  
   
 > [!NOTE]  
->  Sie können mit erstellte Ablaufverfolgungsdatei automatisch laden **Sp_trace_create** in eine Tabelle mit den **Fn_trace_gettable** -Systemfunktion. Informationen zur Verwendung dieser Systemfunktion finden Sie unter [Sys. fn_trace_gettable &#40; Transact-SQL &#41; ](../../relational-databases/system-functions/sys-fn-trace-gettable-transact-sql.md).  
+>  Sie können mit erstellte Ablaufverfolgungsdatei automatisch laden **Sp_trace_create** in eine Tabelle mit den **Fn_trace_gettable** -Systemfunktion. Informationen zur Verwendung dieser Systemfunktion finden Sie unter [Sys. fn_trace_gettable &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-gettable-transact-sql.md).  
   
  Ein Beispiel zum Verwenden gespeicherter Prozeduren der Ablaufverfolgung finden Sie unter [Erstellen einer Ablaufverfolgung &#40;Transact-SQL&#41;](../../relational-databases/sql-trace/create-a-trace-transact-sql.md).  
   

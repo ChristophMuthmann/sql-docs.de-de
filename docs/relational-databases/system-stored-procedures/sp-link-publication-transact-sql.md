@@ -1,16 +1,16 @@
 ---
 title: Sp_link_publication (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_link_publication
 ms.assetid: 1945ed24-f9f1-4af6-94ca-16d8e864706e
-caps.latest.revision: 
+caps.latest.revision: 41
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7d23e5dc68133f607d5058351bf8b620d13aaaa5
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: d80016d32818b0435903b71e6b2f1444fc1ae28d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="splinkpublication-transact-sql"></a>sp_link_publication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,16 +58,16 @@ sp_link_publication [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@publisher** =] **"***Publisher***"**  
+ [ **@publisher**=] **"***Publisher***"**  
  Der Name des Verlegers, mit dem eine Verbindung hergestellt werden soll. *Publisher* ist **Sysname**, hat keinen Standardwert.  
   
- [  **@publisher_db** =] **"***Publisher_db***"**  
+ [ **@publisher_db**=] **"***Publisher_db***"**  
  Der Name der Verlegerdatenbank, mit der eine Verbindung hergestellt werden soll. *Publisher_db* ist **Sysname**, hat keinen Standardwert.  
   
- [  **@publication** =] **"***Veröffentlichung***"**  
+ [ **@publication**=] **"***Veröffentlichung***"**  
  Der Name der Veröffentlichung, mit der eine Verbindung hergestellt werden soll. *Veröffentlichung* ist **Sysname**, hat keinen Standardwert.  
   
- [  **@security_mode** =] *Security_mode*  
+ [ **@security_mode**=] *Security_mode*  
  Der Sicherheitsmodus, der vom Abonnenten verwendet wird, um für das unmittelbare Update eine Verbindung mit einem Remoteverleger herzustellen. *Security_mode* ist **Int**, und kann einen der folgenden Werte sein. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
 |Wert|Beschreibung|  
@@ -76,10 +76,10 @@ sp_link_publication [ @publisher = ] 'publisher'
 |**1**|Verwendet den Sicherheitskontext ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung oder Windows-Authentifizierung) des Benutzers, der die Änderung auf dem Abonnenten ausführt.<br /><br /> Hinweis: Dieses Konto muss auch auf dem Verleger mit ausreichenden Berechtigungen vorhanden sein. Bei Verwendung der Windows-Authentifizierung muss die Delegierung von Sicherheitskonten unterstützt werden.|  
 |**2**|Verwendet eine vorhandene, benutzerdefinierte verbindungsserveranmeldung mit erstellt **Sp_link_publication**.|  
   
- [  **@login** =] **"***Anmeldung***"**  
+ [ **@login**=] **"***Anmeldung***"**  
  Die Anmeldung ist. *login* ist vom Datentyp **sysname**und hat den Standardwert NULL. Dieser Parameter muss angegeben, wann *Security_mode* ist **0**.  
   
- [  **@password** =] **"***Kennwort***"**  
+ [ **@password**=] **"***Kennwort***"**  
  Ist das Kennwort. *Kennwort* ist **Sysname**, hat den Standardwert NULL. Dieser Parameter muss angegeben, wann *Security_mode* ist **0**.  
   
  [  **@distributor=** ] **"***Verteiler***"**  
@@ -91,9 +91,9 @@ sp_link_publication [ @publisher = ] 'publisher'
 ## <a name="remarks"></a>Hinweise  
  **Sp_link_publication** wird von Abonnements mit sofortigem Update bei der Transaktionsreplikation verwendet.  
   
- **Sp_link_publication** kann für Push-und Pullabonnements verwendet werden. Der Aufruf ist vor oder nach dem Erstellen des Abonnements möglich. Ein Eintrag eingefügt oder aktualisiert werden, der [MSsubscription_properties &#40; Transact-SQL &#41; ](../../relational-databases/system-tables/mssubscription-properties-transact-sql.md) -Systemtabelle.  
+ **Sp_link_publication** kann für Push-und Pullabonnements verwendet werden. Der Aufruf ist vor oder nach dem Erstellen des Abonnements möglich. Ein Eintrag eingefügt oder aktualisiert werden, der [MSsubscription_properties &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/mssubscription-properties-transact-sql.md) -Systemtabelle.  
   
- Bei Pushabonnements kann der Eintrag gelöscht werden durch [Sp_subscription_cleanup &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-subscription-cleanup-transact-sql.md). Bei Pullabonnements müssen Sie der Eintrag gelöscht werden durch [Sp_droppullsubscription &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md) oder [Sp_subscription_cleanup &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-subscription-cleanup-transact-sql.md). Sie können auch aufrufen **Sp_link_publication** mit einem NULL-Kennwort, deaktivieren Sie den Eintrag in der [MSsubscription_properties &#40; Transact-SQL &#41; ](../../relational-databases/system-tables/mssubscription-properties-transact-sql.md) Sicherheitsrisiken-Systemtabelle.  
+ Bei Pushabonnements kann der Eintrag gelöscht werden durch [Sp_subscription_cleanup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-subscription-cleanup-transact-sql.md). Bei Pullabonnements müssen Sie der Eintrag gelöscht werden durch [Sp_droppullsubscription &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md) oder [Sp_subscription_cleanup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-subscription-cleanup-transact-sql.md). Sie können auch aufrufen **Sp_link_publication** mit einem NULL-Kennwort, deaktivieren Sie den Eintrag in der [MSsubscription_properties &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/mssubscription-properties-transact-sql.md) Sicherheitsrisiken-Systemtabelle.  
   
  Der Standardmodus, der von einem Abonnenten mit sofortigem Update verwendet wird, wenn eine Verbindung zum Verleger hergestellt wird, ermöglicht nicht die Verwendung einer Verbindung mit der Windows-Authentifizierung. Wenn Sie eine Verbindung mit der Windows-Authentifizierung herstellen möchten, muss ein Verbindungsserver für den Verleger eingerichtet werden. Der Abonnent mit sofortigem Update sollte diese Verbindung dann für das Update des Abonnenten verwenden. Dies erfordert die **Sp_link_publication** für die Ausführung mit *Security_mode* = **2**. Bei Verwendung der Windows-Authentifizierung muss die Delegierung von Sicherheitskonten unterstützt werden.  
   
@@ -104,9 +104,9 @@ sp_link_publication [ @publisher = ] 'publisher'
  Nur Mitglieder der der **Sysadmin** -Serverrolle kann ausführen **Sp_link_publication**.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Sp_droppullsubscription &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md)   
- [Sp_helpsubscription_properties &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)   
- [Sp_subscription_cleanup &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-subscription-cleanup-transact-sql.md)   
+ [Sp_droppullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md)   
+ [Sp_helpsubscription_properties &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)   
+ [Sp_subscription_cleanup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-subscription-cleanup-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -1,16 +1,16 @@
 ---
 title: Sp_purge_jobhistory (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_purge_jobhistory_TSQL
@@ -20,16 +20,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_purge_jobhistory
 ms.assetid: 237f9bad-636d-4262-9bfb-66c034a43e88
-caps.latest.revision: 
+caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7f50228e089d71a6cf3a8d74225e1e26f42844fd
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 5ca210be5b062f7e09c3010597a37294f71379ca
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sppurgejobhistory-transact-sql"></a>sp_purge_jobhistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -49,16 +50,16 @@ sp_purge_jobhistory
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@job_name=** ] **'***job_name***'**  
+ [  **@job_name=** ] **"***Job_name***"**  
  Der Name des Auftrags, für den die Verlaufsdatensätze gelöscht werden sollen. *Job_name*ist **Sysname**, hat den Standardwert NULL. Entweder *Job_id* oder *Job_name* muss angegeben werden, aber beide können nicht angegeben werden.  
   
 > [!NOTE]  
 >  Mitglieder der **Sysadmin** -Serverrolle oder Mitglieder der der **SQLAgentOperatorRole** feste Datenbankrolle können ausführen **Sp_purge_jobhistory** ohne Angabe einer *Job_name* oder *Job_id*. Wenn **Sysadmin** -Benutzer diese Argumente nicht angeben, wird der Auftragsverlauf für alle lokalen und Multiserveraufträge innerhalb der angegebenen Zeit gelöscht *Oldest_date*. Wenn **SQLAgentOperatorRole** -Benutzer diese Argumente nicht angeben, wird der Auftragsverlauf für alle lokalen Aufträge innerhalb der angegebenen Zeit gelöscht *Oldest_date*.  
   
  [ **@job_id=** ] *job_id*  
- Die ID des Auftrags für die zu löschenden Datensätze. *Job_id*ist **"uniqueidentifier"**, hat den Standardwert NULL. Entweder *Job_id* oder *Job_name* muss angegeben werden, aber beide können nicht angegeben werden. Siehe den Hinweis in der Beschreibung der  **@job_name**  Informationen **Sysadmin** oder **SQLAgentOperatorRole** Benutzer dieses Argument verwenden können.  
+ Die ID des Auftrags für die zu löschenden Datensätze. *Job_id*ist **"uniqueidentifier"**, hat den Standardwert NULL. Entweder *Job_id* oder *Job_name* muss angegeben werden, aber beide können nicht angegeben werden. Siehe den Hinweis in der Beschreibung der **@job_name** Informationen **Sysadmin** oder **SQLAgentOperatorRole** Benutzer dieses Argument verwenden können.  
   
- [ **@oldest_date** = ] *oldest_date*  
+ [ **@oldest_date** =] *Oldest_date*  
  Der älteste Datensatz, der im Verlauf beibehalten werden soll. *Oldest_date* ist **"DateTime"**, hat den Standardwert NULL. Wenn *Oldest_date* angegeben wird, **Sp_purge_jobhistory** entfernt nur Datensätze, die älter sind als der angegebene Wert ist.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
@@ -110,6 +111,6 @@ GO
  [sp_help_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
  [sp_help_jobhistory &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-jobhistory-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Erteilen von Objektberechtigungen &#40; Transact-SQL &#41;](../../t-sql/statements/grant-object-permissions-transact-sql.md)  
+ [GRANT (Objektberechtigungen) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-object-permissions-transact-sql.md)  
   
   

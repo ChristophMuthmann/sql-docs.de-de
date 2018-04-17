@@ -1,16 +1,16 @@
 ---
 title: Sp_tableoption (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 09/11/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_tableoption_TSQL
@@ -20,16 +20,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_tableoption
 ms.assetid: 0a57462c-1057-4c7d-bce3-852cc898341d
-caps.latest.revision: 
+caps.latest.revision: 60
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3b468d62444bd3c9217cc7f931a2786034baec12
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: c6bfbbed0bdb29be74871fcc62a76fce2f3555d5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sptableoption-transact-sql"></a>sp_tableoption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -63,8 +64,8 @@ sp_tableoption [ @TableNamePattern = ] 'table'
 |table lock on bulk load|Eine deaktivierte Option (Standard) führt dazu, dass der Massenladevorgang auf benutzerdefinierten Tabellen Zeilensperren erhält. Wenn diese Option aktiviert ist, erhalten die Massenladevorgänge auf benutzerdefinierten Tabellen eine Massenupdatesperre.|  
 |insert row lock|Nicht mehr unterstützt.<br /><br /> Diese Option wirkt sich nicht auf das Sperrverhalten von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aus und ist nur aus Gründen der Kompatibilität mit vorhandenen Skripts und Prozeduren enthalten.|  
 |text in row|Beim Wert OFF oder 0 (deaktivierte Option, Standard) wird das aktuelle Verhalten nicht geändert, und es gibt keine BLOBs in Zeilen.<br /><br /> Wenn angegeben und @OptionValue ist ON (aktiviert) oder einen ganzzahligen Wert von 24 bis 7000 aufweist, werden neue **Text**, **Ntext**, oder **Image** -Zeichenfolgen direkt in der Datenzeile gespeichert. Alle vorhandenen BLOB-Daten (BLOB: **Text**, **Ntext**, oder **Image** Daten) wird für den Text im Zeilenformat geändert werden, wenn der BLOB-Wert aktualisiert wird. Weitere Informationen finden Sie in den Hinweisen.|  
-|LARGE VALUE TYPES OUT OF ROW|1 = **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **Xml** und umfangreichen benutzerdefinierten Typ (UDT) Spalten in der Tabelle gespeichert sind außerhalb von Zeilen mit einem 16-Byte-Zeiger auf den Stamm.<br /><br /> 0 = **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **Xml** und große UDT-Werte werden direkt in der Datenzeile bis zu einem Höchstwert gespeichert. von 8.000 Bytes und so lange wie der Wert in den Datensatz passen. Überschreitet der Wert die Größe des Datensatzes, wird ein Zeiger innerhalb der Zeilen gespeichert, während der Rest außerhalb der Zeilen im LOB-Speicherbereich gespeichert wird. 0 ist der Standardwert.<br /><br /> Großer benutzerdefinierter Typ (UDT) gilt für: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. <br /><br /> Verwenden Sie die TEXTIMAGE_ON-Option von [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) zum Angeben eines Speicherorts für die Speicherung großer Datentypen. |  
-|vardecimal-Speicherformat|**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Bei TRUE, ON oder 1 ist die festgelegte Tabelle für das vardecimal-Speicherformat aktiviert. Bei FALSE, OFF oder 0 ist die Tabelle für das vardecimal-Speicherformat nicht aktiviert. Das Vardecimal-Speicherformat kann aktiviert werden, nur, wenn die Datenbank das Vardecimal-Speicherformat aktiviert wurde, mithilfe von [Sp_db_vardecimal_storage_format](../../relational-databases/system-stored-procedures/sp-db-vardecimal-storage-format-transact-sql.md). In [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher, **Vardecimal** Speicherformat ist veraltet. Verwenden Sie stattdessen die ROW-Komprimierung. Weitere Informationen finden Sie unter [Data Compression](../../relational-databases/data-compression/data-compression.md). 0 ist der Standardwert.|  
+|LARGE VALUE TYPES OUT OF ROW|1 = **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **Xml** und umfangreichen benutzerdefinierten Typ (UDT) Spalten in der Tabelle gespeichert sind außerhalb von Zeilen mit einem 16-Byte-Zeiger auf den Stamm.<br /><br /> 0 = **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **Xml** und große UDT-Werte werden direkt in der Datenzeile bis zu einem Höchstwert gespeichert. von 8.000 Bytes und so lange wie der Wert in den Datensatz passen. Überschreitet der Wert die Größe des Datensatzes, wird ein Zeiger innerhalb der Zeilen gespeichert, während der Rest außerhalb der Zeilen im LOB-Speicherbereich gespeichert wird. Der Standardwert ist 0 (null).<br /><br /> Großer benutzerdefinierter Typ (UDT) gilt für: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. <br /><br /> Verwenden Sie die TEXTIMAGE_ON-Option von [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) zum Angeben eines Speicherorts für die Speicherung großer Datentypen. |  
+|vardecimal-Speicherformat|**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Bei TRUE, ON oder 1 ist die festgelegte Tabelle für das vardecimal-Speicherformat aktiviert. Bei FALSE, OFF oder 0 ist die Tabelle für das vardecimal-Speicherformat nicht aktiviert. Das Vardecimal-Speicherformat kann aktiviert werden, nur, wenn die Datenbank das Vardecimal-Speicherformat aktiviert wurde, mithilfe von [Sp_db_vardecimal_storage_format](../../relational-databases/system-stored-procedures/sp-db-vardecimal-storage-format-transact-sql.md). In [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher, **Vardecimal** Speicherformat ist veraltet. Verwenden Sie stattdessen die ROW-Komprimierung. Weitere Informationen finden Sie unter [Data Compression](../../relational-databases/data-compression/data-compression.md). Der Standardwert ist 0 (null).|  
   
  [ @OptionValue =] '*Wert*"  
  Ist, ob die *Option_name* ist aktiviert (TRUE, ON oder 1) oder deaktiviert (FALSE, OFF oder 0). *Wert* ist **varchar(12)**, hat keinen Standardwert. *Wert* wird Groß-/Kleinschreibung nicht beachtet.  
@@ -85,7 +86,7 @@ sp_tableoption [ @TableNamePattern = ] 'table'
   
 -   text in row ist aktiviert.  
   
--   Die Länge der Zeichenfolge ist kürzer als die im angegebenen Grenzwert@OptionValue  
+-   Die Länge der Zeichenfolge ist kürzer als die im angegebenen Grenzwert @OptionValue  
   
 -   Es steht genügend Speicherplatz in der Datenzeile zur Verfügung.  
   
@@ -143,6 +144,6 @@ EXEC sp_tableoption 'Production.WorkOrderRouting',
  [sys.tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md)   
  [OBJECTPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/objectproperty-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Datenbankmodul gespeicherte Systemprozeduren &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
+ [Gespeicherte Datenbankmodulprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
   
   

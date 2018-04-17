@@ -2,7 +2,7 @@
 title: Sp_update_schedule (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: system-stored-procedures
@@ -25,11 +25,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 23d1d4b4cfdc7fb19cffff63de8cae84b2606d6e
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: 5e7d510de0d66a72278cbacdbdfa9eedf49851ba
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spupdateschedule-transact-sql"></a>sp_update_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,10 +65,10 @@ sp_update_schedule
  [ **@schedule_id =** ] *schedule_id*  
  Der Bezeichner des Zeitplans, der geändert werden soll. *Schedule_id* ist **Int**, hat keinen Standardwert. Entweder *Schedule_id* oder *Schedule_name* muss angegeben werden.  
   
- [ **@name =** ]  **'***schedule_name***'**  
+ [  **@name =** ] **"***Schedule_name***"**  
  Der Name des zu ändernden Zeitplan. *Schedule_name*ist **Sysname**, hat keinen Standardwert. Entweder *Schedule_id* oder *Schedule_name* muss angegeben werden.  
   
- [ **@new_name**= ] *new_name*  
+ [ **@new_name**=] *Neuer_Name*  
  Der neue Name des Zeitplans. *New_name* ist **Sysname**, hat den Standardwert NULL. Wenn *New_name* NULL ist, der Namen des Zeitplans bleibt unverändert.  
   
  [ **@enabled =** ] *enabled*  
@@ -141,7 +141,7 @@ sp_update_schedule
  [ **@active_end_time =** ] *active_end_time*  
  Die Zeit an einem beliebigen Tag zwischen *Active_start_date* und *Active_end_date* zu der die Ausführung eines Auftrags. *Active_end_time*ist **Int**, hat den Standardwert **235959**, womit 23:59:59 Uhr im 24-Stunden-Format an und muss im Format HHMMSS eingegeben werden.  
   
- [ **@owner_login_name**= ] **'***owner_login_name***'**]  
+ [ **@owner_login_name**=] **"***Owner_login_name***"**]  
  Der Name des Serverprinzipals, der Besitzer des Zeitplans ist. *Owner_login_name* ist **Sysname**, hat den Standardwert NULL, gibt an, dass der Zeitplan im Besitz des Erstellers ist.  
   
  [ **@automatic_post =**] *automatic_post*  

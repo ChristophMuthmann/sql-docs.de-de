@@ -1,16 +1,16 @@
 ---
 title: Sp_mergecleanupmetadata (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_mergecleanupmetadata
 ms.assetid: 892f8628-4cbe-4cc3-b959-ed45ffc24064
-caps.latest.revision: 
+caps.latest.revision: 17
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7f13d51e68d864410bab57b2723fd2e89cac18dd
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 1f4d2e6e866cff9c4c48e874871f7cfdf113a0d3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spmergecleanupmetadata-transact-sql"></a>sp_mergecleanupmetadata (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,8 +47,8 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@publication =** ] **"***Veröffentlichung***"**  
- Der Name der Veröffentlichung. *Veröffentlichung* ist **Sysname**, hat den Standardwert  **%** , die Metadaten für alle Veröffentlichungen bereinigt. Die Veröffentlichung muss bereits vorhanden sein, wenn sie explizit angegeben wird.  
+ [ **@publication =** ] **'***publication***'**  
+ Der Name der Veröffentlichung. *Veröffentlichung* ist **Sysname**, hat den Standardwert **%**, die Metadaten für alle Veröffentlichungen bereinigt. Die Veröffentlichung muss bereits vorhanden sein, wenn sie explizit angegeben wird.  
   
  [  **@reinitialize_subscriber =** ] **"***Abonnenten***"**  
  Gibt an, ob der Abonnent erneut zu initialisieren ist. *Abonnenten* ist **nvarchar(5)**, kann **"true"** oder **"false"**, hat den Standardwert **"true"**. Wenn **"true"**, Abonnements für die erneute Initialisierung gekennzeichnet. Wenn **"false"**, die Abonnements werden nicht für die erneute Initialisierung markiert.  
@@ -65,9 +65,9 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
 > [!NOTE]  
 >  Wenn mehrere Veröffentlichungen in einer Datenbank vorhanden sind, und eine für diese Veröffentlichungen eine unbegrenzte Aufbewahrungsdauer für Veröffentlichungen verwendet (**@retention**=**0**) ausführen  **Sp_mergecleanupmetadata** keinen Cleanup der Merge Replication Metadaten zur änderungsnachverfolgung für die Datenbank. Aus diesem Grund sollten Sie die unbegrenzte Aufbewahrungsdauer für Veröffentlichungen mit Vorsicht verwenden.  
   
- Beim Ausführen dieser gespeicherten Prozedur können Sie auswählen, ob durch Festlegen von Abonnenten erneut initialisieren der  **@reinitialize_subscriber**  Parameter **"true"** (Standard) oder **"false"**. Wenn **Sp_mergecleanupmetadata** ausgeführt wird, mit der  **@reinitialize_subscriber**  Parametersatz auf **"true"**, eine Momentaufnahme wird erneut auf dem Abonnenten angewendet, selbst wenn das Abonnement wurde erstellt, ohne dass eine anfangsmomentaufnahme (beispielsweise, wenn die momentaufnahmedaten und das Schema wurden manuell angewendet oder auf dem Abonnenten bereits vorhandenen Zeichenfolgenform). Festlegen des Parameters auf **"false"** sollte mit Vorsicht, verwendet werden, da die Veröffentlichung ist nicht erneut initialisiert werden, Sie sicherstellen müssen, dass Daten auf dem Verleger und Abonnent synchronisiert werden.  
+ Beim Ausführen dieser gespeicherten Prozedur können Sie auswählen, ob durch Festlegen von Abonnenten erneut initialisieren der **@reinitialize_subscriber** Parameter **"true"** (Standard) oder **"false"**. Wenn **Sp_mergecleanupmetadata** ausgeführt wird, mit der **@reinitialize_subscriber** Parametersatz auf **"true"**, eine Momentaufnahme wird erneut auf dem Abonnenten angewendet, selbst wenn das Abonnement wurde erstellt, ohne dass eine anfangsmomentaufnahme (beispielsweise, wenn die momentaufnahmedaten und das Schema wurden manuell angewendet oder auf dem Abonnenten bereits vorhandenen Zeichenfolgenform). Festlegen des Parameters auf **"false"** sollte mit Vorsicht, verwendet werden, da die Veröffentlichung ist nicht erneut initialisiert werden, Sie sicherstellen müssen, dass Daten auf dem Verleger und Abonnent synchronisiert werden.  
   
- Unabhängig vom Wert der  **@reinitialize_subscriber** , **Sp_mergecleanupmetadata** schlägt fehl, wenn vorhanden sind Mergeprozesse, die versuchen, Änderungen an einen Verleger oder einen Wiederveröffentlichungsabonnenten am hochgeladen werden. der Zeitpunkt, zu die gespeicherte Prozedur aufgerufen wird.  
+ Unabhängig vom Wert der **@reinitialize_subscriber**, **Sp_mergecleanupmetadata** schlägt fehl, wenn vorhanden sind Mergeprozesse, die versuchen, Änderungen an einen Verleger oder einen Wiederveröffentlichungsabonnenten am hochgeladen werden. der Zeitpunkt, zu die gespeicherte Prozedur aufgerufen wird.  
   
  **Ausführen von Sp_mergecleanupmetadata mit @reinitialize_subscriber = "true":**  
   
@@ -127,8 +127,8 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
  Zum Verwenden dieser gespeicherten Prozedur muss der Verleger [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] ausführen. Die Abonnenten müssen ausgeführt werden, entweder [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] oder [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0, Service Pack 2.  
   
 ## <a name="see-also"></a>Siehe auch  
- [MSmerge_genhistory &#40; Transact-SQL &#41;](../../relational-databases/system-tables/msmerge-genhistory-transact-sql.md)   
- [MSmerge_contents &#40; Transact-SQL &#41;](../../relational-databases/system-tables/msmerge-contents-transact-sql.md)   
- [MSmerge_tombstone &#40; Transact-SQL &#41;](../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md)  
+ [MSmerge_genhistory &#40;Transact-SQL&#41;](../../relational-databases/system-tables/msmerge-genhistory-transact-sql.md)   
+ [MSmerge_contents &#40;Transact-SQL&#41;](../../relational-databases/system-tables/msmerge-contents-transact-sql.md)   
+ [MSmerge_tombstone &#40;Transact-SQL&#41;](../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md)  
   
   

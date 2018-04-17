@@ -29,13 +29,13 @@ ms.assetid: a6330b74-4e52-42a4-91ca-3f440b3223cf
 caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9a3f85d368fa842f0e43eb8b0168c2d30741bfb2
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 4bc059b4e7da83f69180f93a8ac4b514767b2e69
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="xml-construction-xquery"></a>XML-Konstruktion (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -553,7 +553,7 @@ test
 ### <a name="other-direct-xml-constructors"></a>Andere direkte XML-Konstruktoren  
  Die Konstruktoren für Verarbeitungsanweisungen und XML-Kommentare verwenden dieselbe Syntax wie die ihnen entsprechenden XML-Konstrukte. Berechnete Konstruktoren für Textknoten werden ebenfalls unterstützt. Sie werden jedoch hauptsächlich zum Konstruieren von Textknoten in der XML-Datenbearbeitungssprache verwendet.  
   
- **Hinweis** ein Beispiel der Verwendung einer expliziten textknotenkonstruktors finden Sie unter Beispiel in [Insert &#40; XML DML &#41; ](../t-sql/xml/insert-xml-dml.md).  
+ **Hinweis** ein Beispiel der Verwendung einer expliziten textknotenkonstruktors finden Sie unter Beispiel in [einfügen &#40;XML DML&#41;](../t-sql/xml/insert-xml-dml.md).  
   
  In der folgenden Abfrage enthält der konstruierte XML-Code ein Element, zwei Attribute, einen Kommentar und eine Verarbeitungsanweisung. Beachten Sie, dass vor <`FirstLocation`> ein Komma steht, da eine Sequenz konstruiert wird.  
   
@@ -590,7 +590,7 @@ where ProductModelID=7;
 ```  
   
 ## <a name="using-computed-constructors"></a>Verwenden von berechneten Konstruktoren  
- zugreifen. In diesem Fall geben Sie die Schlüsselwörter an, die den Typ des zu konstruierenden Knotens identifizieren. Es werden nur folgende Schlüsselwörter unterstützt:  
+ aus. In diesem Fall geben Sie die Schlüsselwörter an, die den Typ des zu konstruierenden Knotens identifizieren. Es werden nur folgende Schlüsselwörter unterstützt:  
   
 -   element  
   

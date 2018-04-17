@@ -1,16 +1,16 @@
 ---
 title: Sys. sp_rda_deauthorize_db (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-stretch
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.sp_rda_deauthorize_db
@@ -20,18 +20,18 @@ dev_langs:
 helpviewer_keywords:
 - sys.sp_rda_deauthorize_db stored procedure
 ms.assetid: 2e362e15-2cd5-4856-9f0b-54df56b0866b
-caps.latest.revision: 
+caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d6ad14f46d0fece2e33fcf9bae5c8c124828bcf2
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: bbb2e26a84113d4c6e2a950217c2522542bbb475
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="syssprdadeauthorizedb-transact-sql"></a>sys.sp_rda_deauthorize_db (Transact-SQL)
+# <a name="syssprdadeauthorizedb-transact-sql"></a>Sys. sp_rda_deauthorize_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Entfernt die authentifizierte Verbindung zwischen einer lokalen Stretch-aktivierte Datenbank und der Azure-Remotedatenbank an. Führen Sie **Sp_rda_deauthorize_db** Wenn die Remotedatenbank nicht erreichbar ist oder in einem inkonsistenten Zustand und Verhaltens der Abfrage für alle Stretch-aktivierten Tabellen in der Datenbank geändert werden soll.  
@@ -53,9 +53,9 @@ sp_rda_deauthorize_db
 ## <a name="remarks"></a>Hinweise  
  Nach dem Ausführen **Sp_rda_deauthorize_db** , alle Abfragen für Stretch aktivierte Datenbanken und Tabellen fehl. D. h., ist der Abfragemodus auf deaktiviert festgelegt. Um diesen Modus beenden, führen Sie einen der folgenden Schritte.  
   
--   Run [sys.sp_rda_reauthorize_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md) to reconnect to the remote Azure database. Dieser Vorgang setzt automatisch den Abfragemodus zu LOCAL_AND_REMOTE, dies ist das Standardverhalten für Stretch-Datenbank. D. h. zurückgeben Abfragen Ergebnisse lokale und Remotedaten.  
+-   Führen Sie [sp_rda_reauthorize_db &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md) eine Verbindung mit der Azure-Remotedatenbank herstellen. Dieser Vorgang setzt automatisch den Abfragemodus zu LOCAL_AND_REMOTE, dies ist das Standardverhalten für Stretch-Datenbank. D. h. zurückgeben Abfragen Ergebnisse lokale und Remotedaten.  
   
--   Run [sys.sp_rda_set_query_mode &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-rda-set-query-mode-transact-sql.md) with the LOCAL_ONLY argument to let queries continue to run against local data only.  
+-   Führen Sie [sp_rda_set_query_mode &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sys-sp-rda-set-query-mode-transact-sql.md) und dem LOCAL_ONLY-Argument können Abfragen weiterhin nur lokale Daten ausführen können.  
   
 ## <a name="see-also"></a>Siehe auch  
  [sys.sp_rda_set_query_mode &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-rda-set-query-mode-transact-sql.md)   

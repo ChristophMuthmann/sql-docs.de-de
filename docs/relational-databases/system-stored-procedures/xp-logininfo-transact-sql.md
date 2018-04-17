@@ -1,16 +1,16 @@
 ---
 title: Xp_logininfo (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - xp_logininfo_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - xp_logininfo
 ms.assetid: ee7162b5-e11f-4a0e-a09c-1878814dbbbd
-caps.latest.revision: 
+caps.latest.revision: 32
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b77eb07126cc739908713d8172695db9098d20d9
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: eba6f4d759844c9ac7e48f8ffccc9888fbf81b95
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="xplogininfo-transact-sql"></a>xp_logininfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ xp_logininfo [ [ @acctname = ] 'account_name' ]
  Der Name eines Windows-Benutzers oder einer Gruppe gewährt Zugriff auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *account_name* ist vom Datentyp **sysname**und hat den Standardwert NULL. Wenn *account_name* nicht angegeben wird, werden alle Windows-Gruppen und Windows-Benutzer ausgegeben, denen explizit Anmeldeberechtigungen gewährt wurden. *account_name* muss vollqualifiziert sein. Beispiel: 'ADVWKS4\macraes' oder 'VORDEFINIERT\Administratoren'.  
   
  **'all'** | **'members'**  
- Gibt an, ob für das Konto die Informationen zu allen Berechtigungspfaden oder nur die Informationen zu den Mitgliedern der Windows-Gruppe ausgegeben werden sollen. **@option**ist **varchar(10)**, hat den Standardwert NULL. Sofern nicht **all** angegeben wurde, wird nur der erste Berechtigungspfad angezeigt.  
+ Gibt an, ob für das Konto die Informationen zu allen Berechtigungspfaden oder nur die Informationen zu den Mitgliedern der Windows-Gruppe ausgegeben werden sollen. **@option** ist **varchar(10)**, hat den Standardwert NULL. Sofern nicht **all** angegeben wurde, wird nur der erste Berechtigungspfad angezeigt.  
   
  [  **@privilege =** ] *Variable_name*  
  Ein Ausgabeparameter, der die Berechtigungsstufe des angegebenen Windows-Kontos zurückgibt. *variable_name* ist vom Datentyp **varchar(10)**. Der Standardwert ist "Not wanted". Die zurückgegebene Privilegstufe ist **user**, **admin**oder **null**.  
@@ -68,7 +68,7 @@ xp_logininfo [ [ @acctname = ] 'account_name' ]
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |**Kontoname**|**sysname**|Der vollqualifizierte Windows-Kontoname.|  
-|**Typ**|**char(8)-Wert zurück**|Der Windows-Kontotyp. Gültige Werte sind **user** oder **group**.|  
+|**type**|**char(8)-Wert zurück**|Der Windows-Kontotyp. Gültige Werte sind **user** oder **group**.|  
 |**Berechtigung**|**char(9)**|Zugriffsprivileg für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Gültige Werte sind **admin**, **user**oder **null**.|  
 |**zugeordnete Anmeldename**|**sysname**|Für Benutzerkonten, die Benutzerprivileg **Anmeldename zugeordnet** der zugeordnete Anmeldename angezeigt, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versucht, bei der Anmeldung mit diesem Konto zugeordneten Regeln mit dem Domänennamen zu verwenden.|  
 |**Berechtigungspfad**|**sysname**|Die Gruppenmitgliedschaft, die dem Konto den Zugriff ermöglicht hat.|  
@@ -99,6 +99,6 @@ EXEC xp_logininfo 'BUILTIN\Administrators';
  [sp_grantlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
  [sp_revokelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-revokelogin-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Allgemeine erweiterte gespeicherte Prozeduren &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)  
+ [Gespeicherte allgemeine erweiterte Prozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)  
   
   

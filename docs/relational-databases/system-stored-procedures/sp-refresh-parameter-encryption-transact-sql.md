@@ -1,16 +1,16 @@
 ---
 title: "\"sp_refresh_parameter_encryption\" (Transact-SQL) | Microsoft Docs"
-ms.custom: 
+ms.custom: ''
 ms.date: 01/11/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sp_refresh_parameter_encryption
@@ -21,16 +21,17 @@ helpviewer_keywords:
 - sp_refresh_parameter_encryption
 - Always Encrypted, sp_refresh_parameter_encryption
 ms.assetid: 00b44baf-fcf0-4095-aabe-49fa87e77316
-caps.latest.revision: 
+caps.latest.revision: 3
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a9343880058cef4ef86ce16613bc43821e8e8a24
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 564d0bd6479d185ce37e1f4c293d73b87756edf8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sprefreshparameterencryption-transact-sql"></a>"sp_refresh_parameter_encryption" (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -56,7 +57,7 @@ sys.sp_refresh_parameter_encryption [ @name = ] 'module_name'
 Der Name der gespeicherten Prozedur, der benutzerdefinierten Funktion, der Sicht, des DML-Triggers, des DDL-Triggers auf Datenbankebene oder des DDL-Triggers auf Serverebene. *Modulname* nicht mit eine common Language Runtime (CLR) gespeicherte Prozedur oder eine CLR-Funktion. *Modulname* darf nicht schemagebunden sein. *Modulname* ist `nvarchar`, hat keinen Standardwert. *Modulname* kann ein mehrteiliger Bezeichner sein, aber nur auf Objekte in der aktuellen Datenbank verweisen.
 
 [  **@namespace =** ] **"** < Klasse > **"**   
-Klasse des angegebenen Moduls. Wenn *Modulname* wird ein DDL-Trigger `<class>` ist erforderlich. `<class>`is `nvarchar(20)`. Gültige Eingaben sind `DATABASE_DDL_TRIGGER` und `SERVER_DDL_TRIGGER`.    
+Klasse des angegebenen Moduls. Wenn *Modulname* wird ein DDL-Trigger `<class>` ist erforderlich. `<class>` ist `nvarchar(20)`. Gültige Eingaben sind `DATABASE_DDL_TRIGGER` und `SERVER_DDL_TRIGGER`.    
 
 ## <a name="return-code-values"></a>Rückgabecodewerte  
 
@@ -71,7 +72,7 @@ Die verschlüsselungsmetadaten für Parameter eines Moduls kann, falls veralten:
 
 Wenn Verschlüsselungseigenschaften einer Tabelle geändert werden, `sp_refresh_parameter_encryption` sollte ausgeführt werden, für alle Module, die direkt oder indirekt auf die Tabelle verweisen. Diese gespeicherte Prozedur kann auf diese Module in beliebiger Reihenfolge aufgerufen werden, ohne dass des Benutzers zum ersten Aktualisierung der inneren Module vor dem Verschieben an seine Aufrufer.
 
-`sp_refresh_parameter_encryption`wirkt sich nicht auf Berechtigungen, erweiterte Eigenschaften, oder `SET` Optionen, die dem Objekt zugeordnet sind. 
+`sp_refresh_parameter_encryption` wirkt sich nicht auf Berechtigungen, erweiterte Eigenschaften, oder `SET` Optionen, die dem Objekt zugeordnet sind. 
 
 Um einen DDL-Trigger auf Serverebene zu aktualisieren, führen Sie diese gespeicherte Prozedur aus dem Kontext einer beliebigen Datenbank aus.
 
