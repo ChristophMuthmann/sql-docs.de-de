@@ -1,16 +1,16 @@
 ---
 title: Sys. sp_rda_reauthorize_db (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-stretch
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_rda_reauthorize_db
@@ -20,18 +20,18 @@ dev_langs:
 helpviewer_keywords:
 - sys.sp_rda_reauthorize_db stored procedure
 ms.assetid: f6f3e4b2-8c72-4d23-a5de-fe671ca5c5cd
-caps.latest.revision: 
+caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3450d9d9dc491e0c3c57b560281148929d0ce907
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: a62cae8b4c47975d7d0941458fefbafea7c6288a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="syssprdareauthorizedb-transact-sql"></a>sys.sp_rda_reauthorize_db (Transact-SQL)
+# <a name="syssprdareauthorizedb-transact-sql"></a>Sys. sp_rda_reauthorize_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Stellt die authentifizierte Verbindung zwischen einer lokalen Datenbank für Stretch und der Remotedatenbank aktiviert.  
@@ -50,13 +50,13 @@ sp_rda_reauthorize_db @credential = @credential, @with_copy = @with_copy [ , @az
  Ist die datenbankbezogenen Anmeldeinformationen der lokalen aktivierter Funktion Stretch-Datenbank zugeordnet.  
   
  @with_copy = *@with_copy*  
- Gibt an, ob eine Kopie der Remotedaten und Herstellen einer Verbindung mit der Kopie (empfohlen). *@with_copy*ist vom Datentyp bit.  
+ Gibt an, ob eine Kopie der Remotedaten und Herstellen einer Verbindung mit der Kopie (empfohlen). *@with_copy* ist vom Datentyp bit.  
   
  @azure_servername = *@azure_servername*  
- Gibt den Namen des Azure-Servers, der die Remotedaten enthält. *@azure_servername*ist vom Datentyp Sysname.  
+ Gibt den Namen des Azure-Servers, der die Remotedaten enthält. *@azure_servername* ist vom Datentyp Sysname.  
   
  @azure_databasename = *@azure_databasename*  
- Gibt den Namen der Azure-Datenbank, die die Remotedaten enthält. *@azure_databasename*ist vom Datentyp Sysname.  
+ Gibt den Namen der Azure-Datenbank, die die Remotedaten enthält. *@azure_databasename* ist vom Datentyp Sysname.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder >0 (Fehler)  

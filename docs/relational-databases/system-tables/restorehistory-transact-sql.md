@@ -1,16 +1,16 @@
 ---
 title: Restorehistory (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - restorehistory
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - restorehistory system table
 ms.assetid: 9140ecc1-d912-4d76-ae70-e2a857da6d44
-caps.latest.revision: 
+caps.latest.revision: 28
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 23a73eb1e9f0b442c01f053e960f2f48e54a2740
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 8f042e3948af90c8eeda86490e1bdda53a181f8d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="restorehistory-transact-sql"></a>restorehistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.lasthandoff: 02/03/2018
 |**user_name**|**nvarchar(128)**|Name des Benutzers, der den Wiederherstellungsvorgang ausgeführt hat. Kann den Wert NULL haben.|  
 |**backup_set_id**|**int**|Eindeutige ID, die den wiederhergestellten Sicherungssatz bezeichnet. Verweise **backupset(backup_set_id)**.|  
 |**restore_type**|**char(1)**|Typ des Wiederherstellungsvorgangs:<br /><br /> D = Datenbank<br /><br /> F = Datei<br /><br /> G = Dateigruppe<br /><br /> I = Differenziell<br /><br /> L = Protokoll<br /><br /> V = Nur überprüfen<br /><br /> Kann den Wert NULL haben.|  
-|**replace**|**bit**|Zeigt an, ob der Wiederherstellungsvorgang die Option REPLACE angegeben hat:<br /><br /> 1 = Angegeben<br /><br /> 0 = Nicht angegeben<br /><br /> Kann den Wert NULL haben.<br /><br /> Wenn eine Datenbank mit einer Datenbankmomentaufnahme wiederhergestellt wird, ist 0 die einzige mögliche Option.|  
+|**Ersetzen Sie**|**bit**|Zeigt an, ob der Wiederherstellungsvorgang die Option REPLACE angegeben hat:<br /><br /> 1 = Angegeben<br /><br /> 0 = Nicht angegeben<br /><br /> Kann den Wert NULL haben.<br /><br /> Wenn eine Datenbank mit einer Datenbankmomentaufnahme wiederhergestellt wird, ist 0 die einzige mögliche Option.|  
 |**recovery**|**bit**|Zeigt an, ob der Wiederherstellungsvorgang die Option RECOVERY oder NORECOVERY angegeben hat:<br /><br /> 1 = RECOVERY<br /><br /> Kann den Wert NULL haben.<br /><br /> Wenn eine Datenbank mit einer Datenbankmomentaufnahme wiederhergestellt wird, ist 1 die einzige Option.<br /><br /> 0 = NORECOVERY|  
 |**restart**|**bit**|Zeigt an, ob der Wiederherstellungsvorgang die Option RESTART angegeben hat:<br /><br /> 1 = Angegeben<br /><br /> 0 = Nicht angegeben<br /><br /> Kann den Wert NULL haben.<br /><br /> Wenn eine Datenbank mit einer Datenbankmomentaufnahme wiederhergestellt wird, ist 0 die einzige mögliche Option.|  
 |**stop_at**|**datetime**|Zeitpunkt, bis zu dem die Datenbank wiederhergestellt wurde. Kann den Wert NULL haben.|  
@@ -56,9 +56,9 @@ ms.lasthandoff: 02/03/2018
  Um die Anzahl der Zeilen in dieser Tabelle und in anderen Tabellen sicherungs- und Verlaufstabellen zu verringern, führen Sie die [Sp_delete_backuphistory](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md) gespeicherte Prozedur.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Sichern und Wiederherstellen von Tabellen &#40; Transact-SQL &#41;](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)   
+ [Sichern und Wiederherstellen von Tabellen &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)   
  [restorefile &#40;Transact-SQL&#41;](../../relational-databases/system-tables/restorefile-transact-sql.md)   
  [restorefilegroup &#40;Transact-SQL&#41;](../../relational-databases/system-tables/restorefilegroup-transact-sql.md)   
- [System Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  
+ [Systemtabellen &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  
   
   

@@ -1,16 +1,16 @@
 ---
 title: Sp_fulltext_table (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_fulltext_table_TSQL
@@ -20,16 +20,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_fulltext_table
 ms.assetid: a765f311-07fc-4af3-b74c-e9a027fbecce
-caps.latest.revision: 
+caps.latest.revision: 17
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1827d90dab1dc4be8acbc3cf3e00bfe97d4b1bae
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 9bb3305149fac1fd1747341634f06414c76c3be3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spfulltexttable-transact-sql"></a>sp_fulltext_table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -55,7 +56,7 @@ sp_fulltext_table
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@tabname=**] **'***qualified_table_name***'**  
+ [  **@tabname=**] **"***Qualified_table_name***"**  
  Ein ein- oder zweiteiliger Tabellenname. Die Tabelle muss in der aktuellen Datenbank vorhanden sein. *qualified_table_name* weist den Datentyp **nvarchar(517)**auf und hat keinen Standardwert.  
   
  [ **@action=**] **'***action***'**  
@@ -76,10 +77,10 @@ sp_fulltext_table
 |**start_incremental**|Startet eine inkrementelle Auffüllung des Volltextindexes für die Tabelle.|  
 |**Beenden**|Beendet das vollständige oder inkrementelle Auffüllen.|  
   
- [ **@ftcat=**] **'***fulltext_catalog_name***'**  
+ [  **@ftcat=**] **"***Fulltext_catalog_name***"**  
  Bei einer **create** -Aktion ein gültiger, vorhandener Volltextkatalogname. Bei allen anderen Aktionen muss dieser Parameter NULL sein. *fulltext_catalog_name* ist vom Datentyp **sysname**. Der Standardwert ist NULL.  
   
- [ **@keyname=**] **'***unique_index_name***'**  
+ [  **@keyname=**] **"***Unique_index_name***"**  
  Bei einer **create** *qualified_table_name* -Aktion ein gültiger, einspaltiger und eindeutiger Index ungleich NULL für. Bei allen anderen Aktionen muss dieser Parameter NULL sein. *unique_index_name* ist vom Datentyp **sysname**. Der Standardwert ist NULL.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
@@ -103,7 +104,7 @@ sp_fulltext_table
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="a-enabling-a-table-for-full-text-indexing"></a>A. Aktivieren der Volltextindizierung für eine Tabelle  
- Im folgenden Beispiel werden Volltextindexmetadaten für die `Document` -Tabelle der `AdventureWorks` -Datenbank erstellt. `Cat_Desc`ist ein Volltextkatalog. `PK_Document_DocumentID` ist ein eindeutiger, einspaltiger Index für `Document`.  
+ Im folgenden Beispiel werden Volltextindexmetadaten für die `Document` -Tabelle der `AdventureWorks` -Datenbank erstellt. `Cat_Desc` ist ein Volltextkatalog. `PK_Document_DocumentID` ist ein eindeutiger, einspaltiger Index für `Document`.  
   
 ```  
 USE AdventureWorks2012;  
@@ -141,9 +142,9 @@ GO
  [INDEXPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/indexproperty-transact-sql.md)   
  [OBJECTPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/objectproperty-transact-sql.md)   
  [sp_help_fulltext_tables &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-tables-transact-sql.md)   
- [sp_help_fulltext_tables_cursor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-tables-cursor-transact-sql.md)   
+ [Sp_help_fulltext_tables_cursor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-tables-cursor-transact-sql.md)   
  [sp_helpindex &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpindex-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Volltextsuche und semantische Suche gespeicherte Systemprozeduren &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)  
+ [Volltextsuche und semantische Suche von gespeicherten Prozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)  
   
   

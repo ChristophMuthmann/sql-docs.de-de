@@ -1,16 +1,16 @@
 ---
 title: Sp_mergearticlecolumn (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_mergearticlecolumn
 ms.assetid: b4f2b888-e094-4759-a472-d893638995eb
-caps.latest.revision: 
+caps.latest.revision: 20
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 083d6d27d9417a76f9cafc1c3726e3f7c10df6d7
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 383b9a3f9994fa8ad627e143b59beac666248596
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spmergearticlecolumn-transact-sql"></a>sp_mergearticlecolumn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ sp_mergearticlecolumn [ @publication = ] 'publication'
  [  **@column =**] **"***Spalte***"**  
  Identifiziert die Spalten, für die die vertikale Partition erstellt werden soll. *Spalte* ist **Sysname**, hat den Standardwert NULL. Bei den Werten NULL und `@operation = N'add'` werden dem Artikel standardmäßig alle Spalten in der Quelltabelle hinzugefügt. *Spalte* darf nicht NULL sein, wenn *Vorgang* festgelegt ist, um **löschen**. Führen Sie zum Ausschließen von Spalten aus einem Artikel **Sp_mergearticlecolumn** , und geben Sie *Spalte* und `@operation = N'drop'` für jede Spalte, die entfernt werden aus dem angegebenen *Artikel*.  
   
- [  **@operation =**] **"***Vorgang***"**  
+ [ **@operation =**] **'***operation***'**  
  Der Replikationsstatus. *Vorgang* ist **nvarchar(4)**, hat den Standardwert ADD. **Hinzufügen** markiert die Spalte für die Replikation. **Drop** wird die Spalte gelöscht.  
   
  [  **@schema_replication=**] **"***Schema_replication***"**  
@@ -77,7 +77,7 @@ sp_mergearticlecolumn [ @publication = ] 'publication'
   
  **1** gibt an, dass Änderungen am Mergeartikel bewirken, dass die Momentaufnahme ungültig ist, wird möglicherweise Wenn dies zutrifft, wird ein Wert von **1** Berechtigung für das Auftreten der neuen Momentaufnahme erteilt.  
   
- [  **@force_reinit_subscription =]***Force_reinit_subscription*  
+ [* *@force_reinit_subscription =] *** Force_reinit_subscription*  
  Aktiviert oder deaktiviert die Möglichkeit, das Abonnement erneut zu initialisieren. *Force_reinit_subscription* ist vom Datentyp bit mit dem Standardwert **0**.  
   
  **0** gibt an, dass Änderungen am Mergeartikel nicht werden dazu, dass das Abonnement erneut initialisiert werden.  
@@ -103,7 +103,7 @@ sp_mergearticlecolumn [ @publication = ] 'publication'
  Nur Mitglieder der der **Sysadmin** feste Serverrolle oder **Db_owner** feste Datenbankrolle können ausführen **Sp_mergearticlecolumn**.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Definieren und Ändern eines Verknüpfungsfilters zwischen Mergeartikeln](../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)   
+ [Define and Modify a Join Filter Between Merge Articles](../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)   
  [Definieren und Ändern eines parametrisierten Zeilenfilters für einen Mergeartikel](../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)   
  [Filtern von veröffentlichten Daten](../../relational-databases/replication/publish/filter-published-data.md)   
  [Gespeicherte Automatisierungsprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  

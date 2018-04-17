@@ -1,16 +1,16 @@
 ---
 title: Sp_server_diagnostics (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_server_diagnostics
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_server_diagnostics
 ms.assetid: 62658017-d089-459c-9492-c51e28f60efe
-caps.latest.revision: 
+caps.latest.revision: 31
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5a4b8748f024649ec2980e46d8e828afcffc553c
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: a3bd7cf97a37e2e01cb1d593ee1370c3d5430162
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spserverdiagnostics-transact-sql"></a>sp_server_diagnostics (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@repeat_interval**  =] **"***Repeat_interval_in_seconds***"**  
+ [ **@repeat_interval** =] **"***Repeat_interval_in_seconds***"**  
  Gibt das Zeitintervall an, in dem die gespeicherte Prozedur ausgeführt wird, um erneut Zustandsinformationen zu senden.  
   
  *Repeat_interval_in_seconds* ist **Int** hat den Standardwert 0. Die gültigen Parameterwerte sind 0 sowie alle Werte größer oder gleich 5. Die gespeicherte Prozedur muss mindestens 5 Sekunden lang ausgeführt werden, um vollständige Daten zurückzugeben. Der minimale Wert für die Ausführung der gespeicherten Prozedur im Wiederholungsmodus beträgt 5 Sekunden.  
@@ -64,7 +64,7 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
 ## <a name="result-sets"></a>Resultsets  
 **Sp_server_diagnostics** gibt die folgenden Informationen zurück  
   
-|Spalte|Datentyp|Description|  
+|Column|Datentyp|Description|  
 |------------|---------------|-----------------|  
 |**creation_time**|**datetime**|Gibt den Zeitstempel der Zeilenerstellung an. Jede Zeile in einem einzelnen Rowset weist denselben Zeitstempel auf.|  
 |**component_type**|**sysname**|Gibt an, ob die Zeile Informationen für enthält die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanzebene Komponente oder für eine Always On-verfügbarkeitsgruppe:<br /><br /> Instanz<br /><br /> AlwaysOn: AvailabilityGroup|  

@@ -1,16 +1,16 @@
 ---
 title: Sysmergepublications (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sysmergepublications system table
 ms.assetid: 7f82c6c3-22d1-47c0-a92b-4d64b98cc455
-caps.latest.revision: 
+caps.latest.revision: 42
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 95059187ddd567212027d73dbd361e1ee9d2e7a7
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: a359e3b0da52dcbd9e0fd3feea88b494432a0419
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysmergepublications-transact-sql"></a>sysmergepublications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.lasthandoff: 11/21/2017
 |**publisher**|**sysname**|Entspricht dem Namen des Standardservers.|  
 |**publisher_db**|**sysname**|Der Name der Standardverlegerdatenbank.|  
 |**name**|**sysname**|Der Name der Veröffentlichung.|  
-|**Beschreibung**|**nvarchar(255)**|Eine kurze Beschreibung der Veröffentlichung.|  
+|**description**|**nvarchar(255)**|Eine kurze Beschreibung der Veröffentlichung.|  
 |**Beibehaltungsdauer**|**int**|Die Beibehaltungsdauer für den gesamten veröffentlichungssatz, in denen die Einheit ist durch den Wert von der **Retention_period_unit** Spalte.|  
 |**publication_type**|**tinyint**|Zeigt an, ob die Veröffentlichung gefiltert wird.<br /><br /> **0** = nicht gefiltert.<br /><br /> **1** = gefiltert.|  
 |**pubid**|**uniqueidentifier**|Die eindeutige ID für diese Veröffentlichung. Dieser Wert wird beim Hinzufügen der Veröffentlichung generiert.|  
@@ -89,17 +89,17 @@ ms.lasthandoff: 11/21/2017
 |**snapshot_jobid**|**Binary(16)**|Identifiziert den Agentauftrag, der die Momentaufnahme generiert, wenn der Abonnent den Momentaufnahmeprozess initiieren kann.|  
 |**allow_web_synchronization**|**bit**|Gibt an, ob die Veröffentlichung für die websynchronisierung aktiviert ist, in dem **1** bedeutet, dass die websynchronisierung für die Veröffentlichung aktiviert ist.|  
 |**web_synchronization_url**|**nvarchar(500)**|Gibt den Standardwert für die Internet-URL an, die für die Websynchronisierung verwendet wird.|  
-|**allow_partition_realignment**|**bit**|Gibt an, ob Löschvorgänge an den Abonnenten gesendet werden, wenn durch eine Änderung der Zeile auf dem Verleger die Partition geändert wird.<br /><br /> **0** = Daten einer alten Partition verbleiben auf dem Abonnenten, auf die Daten auf dem Verleger vorgenommene Änderungen nicht an diesen Abonnenten repliziert werden, wobei ein auf dem Abonnenten vorgenommene Änderungen an den Verleger repliziert werden.<br /><br /> **1** = Löschvorgänge auf dem Abonnenten, um die Ergebnisse einer partitionsänderung widerzuspiegeln, durch das Entfernen von Daten, die nicht mehr Bestandteil der Partition des Abonnenten ist.<br /><br /> Weitere Informationen finden Sie unter [Sp_addmergepublication &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md).<br /><br /> Hinweis: Daten, die auf dem Abonnenten verbleiben, wenn dieser Wert ist **0** behandelt werden soll, als wäre er schreibgeschützt ist, dies wird jedoch nicht zwingend erzwungen vom Replikationssystem.|  
+|**allow_partition_realignment**|**bit**|Gibt an, ob Löschvorgänge an den Abonnenten gesendet werden, wenn durch eine Änderung der Zeile auf dem Verleger die Partition geändert wird.<br /><br /> **0** = Daten einer alten Partition verbleiben auf dem Abonnenten, auf die Daten auf dem Verleger vorgenommene Änderungen nicht an diesen Abonnenten repliziert werden, wobei ein auf dem Abonnenten vorgenommene Änderungen an den Verleger repliziert werden.<br /><br /> **1** = Löschvorgänge auf dem Abonnenten, um die Ergebnisse einer partitionsänderung widerzuspiegeln, durch das Entfernen von Daten, die nicht mehr Bestandteil der Partition des Abonnenten ist.<br /><br /> Weitere Informationen finden Sie unter [Sp_addmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md).<br /><br /> Hinweis: Daten, die auf dem Abonnenten verbleiben, wenn dieser Wert ist **0** behandelt werden soll, als wäre er schreibgeschützt ist, dies wird jedoch nicht zwingend erzwungen vom Replikationssystem.|  
 |**retention_period_unit**|**tinyint**|Definiert die Einheit, die beim Definieren von verwendet *Aufbewahrung*, was kann einen der folgenden Werte:<br /><br /> **0** = Tag.<br /><br /> **1** = Woche.<br /><br /> **2** = Monat.<br /><br /> **3** = Jahr.|  
 |**decentralized_conflicts**|**int**|Gibt an, ob die Konfliktdatensätze auf dem Abonnenten gespeichert werden, der den Konflikt verursacht hat:<br /><br /> **0** = die Konfliktdatensätze werden auf dem Abonnenten nicht gespeichert.<br /><br /> **1** = die Konfliktdatensätze werden auf dem Abonnenten gespeichert.|  
 |**generation_leveling_threshold**|**int**|Gibt die Anzahl der Änderungen an, die in einer Generierung enthalten sind. Eine Generierung ist eine Auflistung von Änderungen, die an einen Verleger oder Abonnenten übermittelt werden.|  
 |**automatic_reinitialization_policy**|**bit**|Gibt an, ob Änderungen vom Abonnenten vor einer automatischen erneuten Initialisierung hochgeladen werden.<br /><br /> **1** = Änderungen werden vor einer automatischen neuinitialisierung vom Abonnenten hochgeladen.<br /><br /> **0** = Änderungen werden vor einer automatischen neuinitialisierung nicht hochgeladen.|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Replikationstabellen &#40; Transact-SQL &#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [Replikationssichten &#40; Transact-SQL &#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
- [Sp_addmergepublication &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)   
+ [Replikationstabellen &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Replikationssichten &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
+ [Sp_addmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)   
  [sp_changemergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)   
- [Sp_helpmergepublication &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)  
+ [Sp_helpmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)  
   
   

@@ -1,16 +1,16 @@
 ---
 title: sp_cdc_add_job (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_cdc_add_job_TSQL
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_cdc_add_job
 ms.assetid: c4458738-ed25-40a6-8294-a26ca5a05bd9
-caps.latest.revision: 
+caps.latest.revision: 29
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9f9816967ff9cc8824f4f231a268b203f1c70c92
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 58f17196962c2ca05ebf1c2e56ce78621dbb9ac7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysspcdcaddjob-transact-sql"></a>sys.sp_cdc_add_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,17 +61,17 @@ sys.sp_cdc_add_job [ @job_type = ] 'job_type'
  [  **@start_job=** ] *Start_job*  
  Ein Flag, das angibt, ob der Auftrag sofort nach dem Hinzufügen gestartet werden soll. *Start_job* ist **Bit** hat den Standardwert 1.  
   
- [  **@maxtrans**  ] = *Max_trans*  
+ [ **@maxtrans** ] = *Max_trans*  
  Maximale Anzahl der in jedem Scanzyklus zu verarbeitenden Transaktionen. *Max_trans* ist **Int** hat den Standardwert von 500. Wenn dieser Wert angegeben ist, muss er eine positive ganze Zahl annehmen.  
   
  *Max_trans* ist nur für aufzeichnungsaufträge gültig.  
   
- [  **@maxscans**  ]  **=**  *Max_scans*  
+ [ **@maxscans** ] **= *** Max_scans*  
  Maximale Anzahl der Scanzyklen, die ausgeführt werden sollen, um alle Zeilen aus dem Protokoll zu extrahieren. *Max_scans* ist **Int** hat den Standardwert 10.  
   
  *Max_scan* ist nur für aufzeichnungsaufträge gültig.  
   
- [  **@continuous**  ]  **=**  *fortlaufende*  
+ [ **@continuous** ] **= *** fortlaufende*  
  Gibt an, ob der Aufzeichnungsauftrag kontinuierlich (1) oder nur einmal (0) ausgeführt wird. *kontinuierliche* ist **Bit** hat den Standardwert 1.  
   
  Wenn *fortlaufende* = 1, der [Sp_cdc_scan](../../relational-databases/system-stored-procedures/sys-sp-cdc-scan-transact-sql.md) Auftrag überprüft das Protokoll und verarbeitet bis zu (*Max_trans* \* *Max_scans*) Transaktionen. Er wartet dann die Anzahl der Sekunden, die im angegebenen *Polling_interval* vor Beginn des nächsten protokollscans.  
@@ -80,12 +80,12 @@ sys.sp_cdc_add_job [ @job_type = ] 'job_type'
   
  *fortlaufende* ist nur für aufzeichnungsaufträge gültig.  
   
- [  **@pollinginterval**  ]  **=**  *Polling_interval*  
+ [ **@pollinginterval** ] **= *** Polling_interval*  
  Anzahl der Sekunden zwischen Protokollscan navigieren. *Polling_interval* ist **"bigint"** hat den Standardwert 5.  
   
  *Polling_interval* ist nur für aufzeichnungsaufträge gültig Wenn Aufträge *fortlaufende* auf 1 festgelegt ist. Wenn angegeben, kann der Wert nicht negativ sein und 24 Stunden nicht übersteigen. Wenn der Wert 0 angegeben ist, wird zwischen den Protokollscans nicht gewartet.  
   
- [  **@retention**  ]  **=**  *Aufbewahrung*  
+ [ **@retention** ] **= *** Aufbewahrung*  
  Anzahl der Minuten, für die Änderungsdatenzeilen in Änderungstabellen beibehalten werden sollen. *Aufbewahrung* ist **"bigint"** Standardwert ist 4320 (72 Stunden). Der Maximalwert beträgt 52494800 (100 Jahre). Wenn dieser Wert angegeben ist, muss er eine positive ganze Zahl annehmen.  
   
  *Aufbewahrung* ist nur für cleanupaufträge gültig.  
@@ -104,7 +104,7 @@ sys.sp_cdc_add_job [ @job_type = ] 'job_type'
   
  Da die Cleanup- und Aufzeichnungsaufträge standardmäßig erstellt werden, ist diese gespeicherte Prozedur nur dann erforderlich, wenn ein Auftrag explizit gelöscht wurde und erneut erstellt werden muss.  
   
- Der Name des Auftrags ist **cdc.** *< Database_name >***_cleanup** oder **cdc.** *< Database_name >***_capture**, wobei *< Database_name >* ist der Name der aktuellen Datenbank. Wenn ein Auftrag mit dem gleichen Namen bereits vorhanden ist, wird der Name mit einem Punkt angefügt (**.**) gefolgt von ein eindeutiger Bezeichner, z. B.: **cdc. AdventureWorks_capture. A1ACBDED-13FC-428C-8302-10100EF74F52**.  
+ Der Name des Auftrags ist **cdc. ***< Datenbankname >***_cleanup** oder **cdc. ***< Datenbankname >***_capture**, wobei *< Database_name >* ist der Name der aktuellen Datenbank. Wenn ein Auftrag mit dem gleichen Namen bereits vorhanden ist, wird der Name mit einem Punkt angefügt (**.**) gefolgt von ein eindeutiger Bezeichner, z. B.: **cdc. AdventureWorks_capture. A1ACBDED-13FC-428C-8302-10100EF74F52**.  
   
  Verwenden Sie zum Anzeigen der aktuellen Konfigurations eines Cleanup- oder aufzeichnungsauftrag Auftrags [Sp_cdc_help_jobs](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md). Verwenden Sie zum Ändern der Konfiguration eines Auftrags [Sp_cdc_change_job](../../relational-databases/system-stored-procedures/sys-sp-cdc-change-job-transact-sql.md).  
   
@@ -136,8 +136,8 @@ EXEC sys.sp_cdc_add_job
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [cdc_jobs &#40; Transact-SQL &#41;](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)   
- [Sys. sp_cdc_enable_table &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)   
+ [cdc_jobs &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)   
+ [sys.sp_cdc_enable_table &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)   
  [Über Change Data Capture &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)  
   
   

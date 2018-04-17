@@ -2,7 +2,7 @@
 title: Sp_update_alert (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: system-stored-procedures
@@ -25,11 +25,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7d39736eed19992c5fa20bb1231aed3bcb20e3b0
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: 64a669e37edf07ff897c94122e7e49d5899c1b6c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spupdatealert-transact-sql"></a>sp_update_alert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -87,7 +87,7 @@ sp_update_alert
  [ **@delay_between_responses =**] *delay_between_responses*  
  Die neue Wartezeit zwischen Antworten auf die Warnung in Sekunden. *Delay_between_responses* ist **Int**, hat den Standardwert NULL.  
   
- [ **@notification_message =**] **'***notification_message***'**  
+ [  **@notification_message =**] **"***Notification_message***"**  
  Der überarbeitete Text einer zusätzlichen Nachricht, die an den Operator gesendet werden, als Teil der e-Mail- **net Send**,- oder Pagerbenachrichtigung. *Notification_message* ist **vom Datentyp nvarchar(512)**, hat den Standardwert NULL.  
   
  [ **@include_event_description_in =**] *include_event_description_in*  

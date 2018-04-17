@@ -1,16 +1,16 @@
 ---
 title: Sp_update_job (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/09/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_update_job
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_update_job
 ms.assetid: cbdfea38-9e42-47f3-8fc8-5978b82e2623
-caps.latest.revision: 
+caps.latest.revision: 39
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 03171bfdee98063c9bf460b9555c1a7c5d02568d
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: f9b2702c847457fec32085efec94b0d25e840fa8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spupdatejob-transact-sql"></a>sp_update_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
   
 ## <a name="arguments"></a>Argumente  
  [ **@job_id =**] *job_id*  
- Die ID des Auftrags, der aktualisiert werden soll. *job_id*is **uniqueidentifier**.  
+ Die ID des Auftrags, der aktualisiert werden soll. *Job_id*ist **"uniqueidentifier"**.  
   
  [ **@job_name =**] **'***job_name***'**  
  Der Name des Auftrags. *Job_name*ist **vom Datentyp nvarchar(128)**.  
@@ -78,13 +78,13 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
  Gibt an, ob der Auftrag aktiviert ist (**1**) oder nicht aktiviert (**0**). *aktiviert*ist **"tinyint"**.  
   
  [ **@description =**] **'***description***'**  
- Die Beschreibung des Auftrags. *description* is **nvarchar(512)**.  
+ Die Beschreibung des Auftrags. *Beschreibung* ist **vom Datentyp nvarchar(512)**.  
   
  [ **@start_step_id =**] *step_id*  
  Die ID des ersten Schritts zum Ausführen des Auftrags. *Step_id*ist **Int**.  
   
  [ **@category_name =**] **'***category***'**  
- Die Auftragskategorie. *category*is **nvarchar(128)**.  
+ Die Auftragskategorie. *Kategorie*ist **vom Datentyp nvarchar(128)**.  
   
  [ **@owner_login_name =**] **'***login***'**  
  Der Name der Anmeldung, die im Besitz des Auftrags ist. *Anmeldung*ist **vom Datentyp nvarchar(128)** nur Mitglieder der der **Sysadmin** festen Serverrolle kann den Auftragsbesitz ändern.  
@@ -100,25 +100,25 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
 |**3**|Always|  
   
  [ **@notify_level_email =**] *email_level*  
- Gibt an, wann nach dem Abschluss dieses Auftrags eine E-Mail gesendet werden soll. *email_level*is **int**. *email_level*uses the same values as *eventlog_level*.  
+ Gibt an, wann nach dem Abschluss dieses Auftrags eine E-Mail gesendet werden soll. *Email_level*ist **Int**. *Email_level*verwendet die gleichen Werte wie *ist NULL*.  
   
  [ **@notify_level_netsend =**] *netsend_level*  
- Gibt an, wann nach dem Abschluss dieses Auftrags eine Netzwerkmeldung gesendet werden soll. *netsend_level*is **int**. *netsend_level*uses the same values as *eventlog_level*.  
+ Gibt an, wann nach dem Abschluss dieses Auftrags eine Netzwerkmeldung gesendet werden soll. *Netsend_level*ist **Int**. *Netsend_level*verwendet die gleichen Werte wie *ist NULL*.  
   
  [ **@notify_level_page =**] *page_level*  
- Gibt an, wann nach dem Abschluss dieses Auftrags eine Seite gesendet werden soll. *page_level*is **int**. *page_level*uses the same values as *eventlog_level*.  
+ Gibt an, wann nach dem Abschluss dieses Auftrags eine Seite gesendet werden soll. *Page_level*ist **Int**. *Page_level*verwendet die gleichen Werte wie *ist NULL*.  
   
- [ **@notify_email_operator_name =**] **'***operator_name***'**  
+ [  **@notify_email_operator_name =**] **"***Operatorname***"**  
  Der Name des Operators, an die e-Mail-Nachricht, wenn gesendet wird *Email_level* erreicht ist. *e-Mail-Name* ist **vom Datentyp nvarchar(128)**.  
   
  [ **@notify_netsend_operator_name =**] **'***netsend_operator***'**  
  Der Name des Operators, an den die Netzwerknachricht gesendet wird. *Netsend_operator* ist **vom Datentyp nvarchar(128)**.  
   
  [ **@notify_page_operator_name =**] **'***page_operator***'**  
- Der Name des Operators, an den eine Seite gesendet wird. *page_operator* is **nvarchar(128)**.  
+ Der Name des Operators, an den eine Seite gesendet wird. *Page_operator* ist **vom Datentyp nvarchar(128)**.  
   
  [ **@delete_level =**] *delete_level*  
- Gibt an, wann der Auftrag gelöscht werden soll. *delete_value*is **int**. *delete_level*uses the same values as *eventlog_level*.  
+ Gibt an, wann der Auftrag gelöscht werden soll. *delete_level*ist **Int**. *Auftrag nie gelöscht*verwendet die gleichen Werte wie *ist NULL*.  
   
  [ **@automatic_post =**] *automatic_post*  
  Reserviert.  

@@ -1,16 +1,16 @@
 ---
 title: dbo.sysalerts (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 10/24/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dbo.sysalerts
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sysalerts system table
 ms.assetid: a2c2f50d-61f3-4951-996a-add5ad092cc2
-caps.latest.revision: 
+caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7565ee20e5fdec3a94c413b8204629ce6ee2f48d
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 271452f516e231e22140664c049dacdaea5257a9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="dbosysalerts-transact-sql"></a>dbo.sysalerts (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,12 +42,12 @@ ms.lasthandoff: 02/03/2018
 |-----------------|---------------|-----------------|  
 |**id**|**int**|Warnungs-ID.|  
 |**name**|**sysname**|Name der Warnung.|  
-|**event_source**|**nvarchar(100)**|Die Quelle des Ereignisses: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**event_source**|**Nvarchar(100)**|Die Quelle des Ereignisses: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**event_category_id**|**int**|Zur künftigen Verwendung reserviert.|  
 |**event_id**|**int**|Zur künftigen Verwendung reserviert.|  
 |**message_id**|**int**|Benutzerdefinierte Nachrichten-ID oder Verweis auf die **sysmessages** -Nachricht, die diese Warnung auslöst.|  
 |**severity**|**int**|Schweregrad, der diese Warnung auslöst.|  
-|**enabled**|**tinyint**|Status der Warnung:<br /><br /> **0** = Deaktiviert.<br /><br /> **1** = Aktiviert.|  
+|**Aktiviert**|**tinyint**|Status der Warnung:<br /><br /> **0** = Deaktiviert.<br /><br /> **1** = Aktiviert.|  
 |**delay_between_responses**|**int**|Wartezeit in Sekunden zwischen den Benachrichtigungen für diese Warnung.|  
 |**last_occurrence_date**|**int**|Letztes Auftreten (Datum) der Warnung.|  
 |**last_occurrence_time**|**int**|Letztes Auftreten (Tageszeit) der Warnung.|  
@@ -56,7 +56,7 @@ ms.lasthandoff: 02/03/2018
 |**notification_message**|**nvarchar(512)**|Zusätzliche, mit der Warnung gesendete Informationen.|  
 |**include_event_description**|**tinyint**|Bitmaske, die darstellt, ob die Ereignisbeschreibung per E-mail, Pager oder Net Send gesendet wird. Diagramm unten für Werte angezeigt.|  
 |**database_name**|**nvarchar(512)**|Datenbank, in der die Warnung auftreten muss, damit sie ausgelöst wird.|  
-|**event_description_keyword**|**nvarchar(100)**|Muster, dem der Fehler entsprechen muss, damit die Warnung ausgelöst wird.|  
+|**event_description_keyword**|**Nvarchar(100)**|Muster, dem der Fehler entsprechen muss, damit die Warnung ausgelöst wird.|  
 |**occurrence_count**|**int**|Anzahl der Warnungsauftritte.|  
 |**count_reset_date**|**int**|Tag (Datum), an dem die Anzahl auf **0**zurückgesetzt wird.|  
 |**count_reset_time**|**int**|Tageszeit, zu der die Anzahl auf **0**zurückgesetzt wird.|  

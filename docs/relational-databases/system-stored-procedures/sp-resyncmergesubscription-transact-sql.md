@@ -2,7 +2,7 @@
 title: Sp_resyncmergesubscription (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: system-stored-procedures
@@ -25,11 +25,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 676257b0429fa236780c435c934852fb7258a4b7
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: 93c48af023d34b5c73f1ea69c8bb6e26538cd8d6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spresyncmergesubscription-transact-sql"></a>sp_resyncmergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,13 +61,13 @@ sp_resyncmergesubscription [ [ @publisher = ] 'publisher' ]
  [ **@publication** =] **"***Veröffentlichung***"**  
  Der Name der Veröffentlichung. *Veröffentlichung*ist **Sysname**, hat keinen Standardwert.  
   
- [ **@subscriber** = ] **'***subscriber***'**  
+ [ **@subscriber** =] **"***Abonnenten***"**  
  Der Name des Abonnenten. *Abonnenten* ist **Sysname**, hat den Standardwert NULL. Der Wert NULL ist zulässig, wenn die gespeicherte Prozedur auf dem Abonnenten ausgeführt wird. Wenn die gespeicherte Prozedur auf dem Verleger ausgeführt wird, muss ein Abonnent angegeben werden.  
   
  [ **@subscriber_db** = ] **'***subscriber_db***'**  
  Ist der Name der Abonnementdatenbank. *Subscription_db* ist **Sysname**, hat den Standardwert NULL. Der Wert NULL ist zulässig, wenn die gespeicherte Prozedur auf dem Abonnenten in der Abonnementdatenbank ausgeführt wird. Wenn die gespeicherte Prozedur auf dem Verleger ausgeführt wird, muss ein Abonnent angegeben werden.  
   
- [ **@resync_type** = ] *resync_type*  
+ [ **@resync_type** =] *Resync_type*  
  Legt fest, wann die erneute Synchronisierung gestartet werden soll. *Resync_type* ist **Int**, und kann einen der folgenden Werte.  
   
 |Wert|Beschreibung|  

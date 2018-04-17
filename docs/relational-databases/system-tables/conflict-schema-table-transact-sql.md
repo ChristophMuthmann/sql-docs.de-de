@@ -1,16 +1,16 @@
 ---
 title: Conflict_&lt;Schema&gt;_&lt;Tabelle&gt; (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/15/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - conflict_
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - conflict_<schema>_<table>
 ms.assetid: 15ddd536-db03-454e-b9b5-36efe1f756d7
-caps.latest.revision: 
+caps.latest.revision: 12
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cfb2f078495256ee53d021bb09801323bdca094f
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: d9c5faa805785b856aca59ff2cd026b6ee9cf5c0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="conflictltschemagtlttablegt-transact-sql"></a>Conflict_&lt;Schema&gt;_&lt;Tabelle&gt; (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,14 +48,14 @@ ms.lasthandoff: 11/21/2017
 |__$pre_version|**Varbinary (32)**|Version der Datenbank, aus der die konfliktverursachende Änderung stammt.|  
 |__$reason_code|**int**|Auflösungscode für den Konflikt. Folgende Werte sind möglich:<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> <br /><br /> Weitere Informationen finden Sie unter **__ $Reason_text**.|  
 |__$reason_text|**Nvarchar (720)**|Auflösung für den Konflikt. Folgende Werte sind möglich:<br /><br /> Aufgelöst (1)<br /><br /> Nicht aufgelöst (2)<br /><br /> Unbekannt (0)|  
-|__$update_bitmap|**Varbinary (**  *n*  **)**. Größe variiert je nach Inhalt.|Bitmap, die angibt, welche Spalten im Fall eines UPDATE/UPDATE-Konflikts aktualisiert wurden.|  
+|__$update_bitmap|**Varbinary (** *n* **)**. Größe variiert je nach Inhalt.|Bitmap, die angibt, welche Spalten im Fall eines UPDATE/UPDATE-Konflikts aktualisiert wurden.|  
 |__$inserted_date|**datetime**|Datum und Uhrzeit, zu der die Konfliktzeile in diese Tabelle eingefügt wurde.|  
 |__$row_id|**timestamp**|Zeilenversion, die mit der Zeile verknüpft ist, die den Konflikt verursacht hat.|  
 |__$change_id|**Binär (8)**|Für eine lokale Zeile entspricht dieser Wert der __$row_id der eingehenden Zeile, die in Konflikt mit der lokalen Zeile steht. Dieser Wert ist NULL für eine eingehende Zeile.|  
 |\<basistabellenspaltennamen >|\<Tabelle Spalte Basistypen >|Die Konflikttabelle enthält eine Spalte für jede Spalte in der Basistabelle.|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Replikationstabellen &#40; Transact-SQL &#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Replikationstabellen &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Replikationssichten &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

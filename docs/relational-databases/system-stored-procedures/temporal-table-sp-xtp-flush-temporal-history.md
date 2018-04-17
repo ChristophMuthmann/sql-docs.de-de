@@ -1,16 +1,16 @@
 ---
 title: Sp_xtp_flush_temporal_history | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 02/21/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - SQL Server (starting with 2016 CTP3)
@@ -22,18 +22,19 @@ f1_keywords:
 helpviewer_keywords:
 - sp_xtp_flush_temporal_history
 ms.assetid: 322e3170-93f8-468a-a123-104ce7bd7fad
-caps.latest.revision: 
+caps.latest.revision: 7
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f68bb1a07ba3edb33c99339b53b0f85e343576ad
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 0999855aba5137327e287cd8f3fa1ac5b66c041a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="temporal-table---spxtpflushtemporalhistory"></a>Temporale Tabelle - sp_xtp_flush_temporal_history
+# <a name="spxtpflushtemporalhistory-transact-sql"></a>Sp_xtp_flush_temporal_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Ruft die datenleerungsaufgabe, um alle durchgeführten Zeilen aus dem staging in-Memory-Tabelle in die datenträgerbasierte Verlaufstabelle zu verschieben.  

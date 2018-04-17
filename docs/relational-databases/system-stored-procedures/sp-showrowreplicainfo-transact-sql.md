@@ -1,16 +1,16 @@
 ---
 title: Sp_showrowreplicainfo (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_showrowreplicainfo
 ms.assetid: 6a9dbc1a-e1e1-40c4-97cb-8164a2288f76
-caps.latest.revision: 
+caps.latest.revision: 28
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d584c011b61c8b8ad9e3fc55f10a1e7a2512fa97
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 87857390035273ca2350f90175cc4254f182bb7c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spshowrowreplicainfo-transact-sql"></a>sp_showrowreplicainfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@ownername** =] **"***%ownername***"**  
+ [ **@ownername**=] **"***%ownername***"**  
  Der Name des Tabellenbesitzers. *%ownername* ist **Sysname**, hat den Standardwert NULL. Dieser Parameter ist hilfreich für differenzierte Tabellen, wenn eine Datenbank mehrere Tabellen mit dem gleichen Namen enthält, aber jede Tabelle einen unterschiedlichen Besitzer aufweist.  
   
  [  **@tablename =**] **"***Tablename***"**  
@@ -58,18 +58,18 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
  [  **@rowguid =**] *Rowguid*  
  Der eindeutige Bezeichner der Zeile. *ROWGUID* ist **"uniqueidentifier"**, hat keinen Standardwert.  
   
- [  **@show** =] **"***anzeigen***"**  
+ [ **@show**=] **"***anzeigen***"**  
  Bestimmt den Umfang der Informationen, die im Resultset zurückgegeben werden sollen. *anzeigen* ist **nvarchar(20)** hat den Standardwert von beiden. Wenn **Zeile**, nur Zeilenversionsinformationen zurückgegeben. Wenn **Spalten**, nur spaltenversionsinformationen zurückgegeben. Wenn **sowohl**, sowohl Zeilen-als auch spaltenversionsinformationen zurückgegeben.  
   
 ## <a name="result-sets-for-row-information"></a>Resultsets für Zeileninformationen  
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
-|**Servername**|**sysname**|Name des Servers mit der Datenbank, in der der Eintrag der Zeilenversion vorgenommen wurde.|  
+|**server_name**|**sysname**|Name des Servers mit der Datenbank, in der der Eintrag der Zeilenversion vorgenommen wurde.|  
 |**db_name**|**sysname**|Name der Datenbank, in der dieser Eintrag vorgenommen wurde.|  
 |**db_nickname**|**Binary(6)**|Spitzname der Datenbank, in der dieser Eintrag vorgenommen wurde.|  
 |**version**|**int**|Version des Eintrags.|  
-|**current_state**|**vom Datentyp nvarchar(9)**|Gibt Informationen zum aktuellen Status der Zeile zurück.<br /><br /> **y** -Zeilendaten entspricht dem aktuellen Zustand der Zeile.<br /><br /> **n**-Die Zeilendaten stellt nicht den aktuellen Zustand der Zeile dar.<br /><br /> **\<n/v >** – nicht zutreffend.<br /><br /> **\<Unbekannte >** -aktuellen Zustand kann nicht bestimmt werden.|  
+|**current_state**|**vom Datentyp nvarchar(9)**|Gibt Informationen zum aktuellen Status der Zeile zurück.<br /><br /> **y** -Zeilendaten entspricht dem aktuellen Zustand der Zeile.<br /><br /> **n** -Zeilendaten stellt nicht den aktuellen Zustand der Zeile dar.<br /><br /> **\<n/v >** – nicht zutreffend.<br /><br /> **\<Unbekannte >** -aktuellen Zustand kann nicht bestimmt werden.|  
 |**rowversion_table**|**NCHAR(17)**|Gibt an, ob die Zeilenversionen im rowsetcache der [MSmerge_contents](../../relational-databases/system-tables/msmerge-contents-transact-sql.md) Tabelle oder die [MSmerge_tombstone](../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md) Tabelle.|  
 |**Kommentar**|**nvarchar(255)**|Zusätzliche Informationen zu diesem Zeilenversionseintrag. Normalerweise ist dieses Feld leer.|  
   
@@ -77,7 +77,7 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
-|**Servername**|**sysname**|Name des Servers mit der Datenbank, in der Eintrag der Spaltenversion vorgenommen wurde.|  
+|**server_name**|**sysname**|Name des Servers mit der Datenbank, in der Eintrag der Spaltenversion vorgenommen wurde.|  
 |**db_name**|**sysname**|Name der Datenbank, in der dieser Eintrag vorgenommen wurde.|  
 |**db_nickname**|**Binary(6)**|Spitzname der Datenbank, in der dieser Eintrag vorgenommen wurde.|  
 |**version**|**int**|Version des Eintrags.|  

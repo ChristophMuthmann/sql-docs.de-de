@@ -1,16 +1,16 @@
 ---
 title: sp_cdc_help_change_data_capture (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_cdc_help_change_data_capture_TSQL
@@ -24,16 +24,16 @@ helpviewer_keywords:
 - sys.sp_cdc_help_change_data_capture
 - sp_cdc_help_change_data_capture
 ms.assetid: 91fd41f5-1b4d-44fe-a3b5-b73eff65a534
-caps.latest.revision: 
+caps.latest.revision: 25
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6d3c187f86ab51d8a96a4ea0115830963f058ff1
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 637b9edcc51832e37289057e4513ca18f30ef446
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysspcdchelpchangedatacapture-transact-sql"></a>sys.sp_cdc_help_change_data_capture (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -81,7 +81,7 @@ sys.sp_cdc_help_change_data_capture
 |start_lsn|**binary(10)**|Protokollfolgenummer (Log Sequence Number, LSN), die den unteren Endpunkt zum Abfragen der Änderungstabelle darstellt.<br /><br /> NULL = Der untere Endpunkt wurde nicht erstellt.|  
 |end_lsn|**binary(10)**|LSN, die den oberen Endpunkt zum Abfragen der Änderungstabelle darstellt. In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hat diese Spalte immer den Wert NULL.|  
 |supports_net_changes|**bit**|Die Unterstützung für Nettoänderungen ist aktiviert.|  
-|has_drop_pending|**bit**|Nicht im verwendet [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].|  
+|has_drop_pending|**bit**|Wird in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] nicht verwendet.|  
 |role_name|**sysname**|Name der Datenbankrolle, mit deren Hilfe der Zugriff auf die Änderungsdaten gesteuert wird.<br /><br /> NULL = Eine Rolle wird nicht verwendet.|  
 |index_name|**sysname**|Name des Indexes, mit dessen Hilfe Zeilen in der Quelltabelle eindeutig identifiziert werden.|  
 |filegroup_name|**sysname**|Name der Dateigruppe, in der sich die Änderungstabelle befindet.<br /><br /> NULL = Die Änderungstabelle befindet sich in der Standarddateigruppe der Datenbank.|  

@@ -1,16 +1,16 @@
 ---
 title: Sp_helppullsubscription (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helppullsubscription
 ms.assetid: a0d9c3f1-1fe9-497c-8e2f-5b74f47a7346
-caps.latest.revision: 
+caps.latest.revision: 26
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e121aacbf65adc239f5474af32a863fc5d65f1f4
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 54c20f748133b02604a59c96ae75004e7bbc6a93
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelppullsubscription-transact-sql"></a>sp_helppullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,14 +49,14 @@ sp_helppullsubscription [ [ @publisher = ] 'publisher' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@publisher=**] **"***Publisher***"**  
- Ist der Name des Remoteservers. *Publisher* ist **Sysname**, hat den Standardwert  **%** , womit Informationen zu allen Verlegern zurückgegeben werden.  
+ [ **@publisher=**] **'***publisher***'**  
+ Ist der Name des Remoteservers. *Publisher* ist **Sysname**, hat den Standardwert **%**, womit Informationen zu allen Verlegern zurückgegeben werden.  
   
- [  **@publisher_db=**] **"***Publisher_db***"**  
- Der Name der Verlegerdatenbank. *Publisher_db* ist **Sysname**, hat den Standardwert  **%** , wobei alle Verlegerdatenbanken zurückgegeben.  
+ [ **@publisher_db=**] **'***publisher_db***'**  
+ Der Name der Verlegerdatenbank. *Publisher_db* ist **Sysname**, hat den Standardwert **%**, wobei alle Verlegerdatenbanken zurückgegeben.  
   
- [  **@publication=**] **"***Veröffentlichung***"**  
- Der Name der Veröffentlichung. *Veröffentlichung* ist **Sysname**, hat den Standardwert  **%** , wobei alle Veröffentlichungen zurückgegeben. Wenn dieser Parameter gleich ALL, nur Pullabonnements mit Independent_agent ist = **0** werden zurückgegeben.  
+ [ **@publication=**] **'***publication***'**  
+ Der Name der Veröffentlichung. *Veröffentlichung* ist **Sysname**, hat den Standardwert **%**, wobei alle Veröffentlichungen zurückgegeben. Wenn dieser Parameter gleich ALL, nur Pullabonnements mit Independent_agent ist = **0** werden zurückgegeben.  
   
  [  **@show_push=**] **"***Show_push***"**  
  Gibt an, ob alle Pushabonnements zurückgegeben werden sollen. *Show_push*ist **nvarchar(5)**, hat den Standardwert "false", ist die keine Pushabonnements zurückgegeben.  
@@ -70,7 +70,7 @@ sp_helppullsubscription [ [ @publisher = ] 'publisher' ]
 |**Veröffentlichung**|**sysname**|Name der Veröffentlichung.|  
 |**independent_agent**|**bit**|Zeigt an, ob ein Verteilungs-Agent im Einzelplatzmodus für diese Veröffentlichung vorhanden ist.|  
 |**Abonnementtyp**|**int**|Abonnementtyp für die Veröffentlichung.|  
-|**Verteilungs-agent**|**nvarchar(100)**|Verteilungs-Agent für die Verarbeitung des Abonnements.|  
+|**Verteilungs-agent**|**Nvarchar(100)**|Verteilungs-Agent für die Verarbeitung des Abonnements.|  
 |**veröffentlichungsbeschreibung**|**nvarchar(255)**|Beschreibung der Veröffentlichung.|  
 |**Zeitpunkt der letzten Aktualisierung**|**Datum**|Zeitpunkt, zu dem die Abonnementinformationen aktualisiert wurden. Dies ist eine UNICODE-Zeichenfolge aus ISO-Datum (114) + ODBC-Zeit (121). Das Format ist yyyymmdd hh:mi:sss.mmm, wobei yyyy das Jahr, mm den Monat, dd den Tag, hh die Stunde, mi die Minute, sss die Sekunden und mmm die Millisekunden angibt.|  
 |**Abonnementname**|**varchar(386)**|Name des Abonnements.|  
@@ -116,8 +116,8 @@ sp_helppullsubscription [ [ @publisher = ] 'publisher' ]
  Nur Mitglieder der der **Sysadmin** feste Serverrolle oder die **Db_owner** feste Datenbankrolle können ausführen **Sp_helppullsubscription** .  
   
 ## <a name="see-also"></a>Siehe auch  
- [Sp_addpullsubscription &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)   
- [Sp_droppullsubscription &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md)   
+ [Sp_addpullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)   
+ [Sp_droppullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

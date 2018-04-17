@@ -1,16 +1,16 @@
 ---
 title: Sp_replicationdboption (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_replicationdboption
 ms.assetid: d021864e-3f21-4d1a-89df-6c1086f753bf
-caps.latest.revision: 
+caps.latest.revision: 32
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 584c9ed9f4a9d0e00bcbd0de05788a1841189899
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: ab96eb1cc914000666bb09e34b38974d1e9b9524
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spreplicationdboption-transact-sql"></a>sp_replicationdboption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ sp_replicationdboption [ @dbname= ] 'db_name'
 |**Veröffentlichen von Merge**|Die Datenbank kann für die Mergeveröffentlichung verwendet werden.|  
 |**Veröffentlichen**|Die Datenbank kann für andere Veröffentlichungstypen verwendet werden.|  
 |**Abonnieren**|Die Datenbank ist eine Abonnementdatenbank.|  
-|**Synchronisieren Sie mit der Sicherung**|Die Datenbank ist für eine koordinierte Sicherung aktiviert. Weitere Informationen finden Sie unter [aktivieren koordinierter Sicherungen für Transaktionsreplikation &#40; Replikationsprogrammierung mit Transact-SQL &#41; ](../../relational-databases/replication/administration/enable-coordinated-backups-for-transactional-replication.md).|  
+|**Synchronisieren Sie mit der Sicherung**|Die Datenbank ist für eine koordinierte Sicherung aktiviert. Weitere Informationen finden Sie unter [aktivieren koordinierter Sicherungen für die Transaktionsreplikation &#40;Replikationsprogrammierung mit Transact-SQL&#41;](../../relational-databases/replication/administration/enable-coordinated-backups-for-transactional-replication.md).|  
   
  [  **@value=**] **"***Wert***"**  
  Gibt an, ob die angegebene Replikationsdatenbankoption aktiviert oder deaktiviert wird. *Wert* ist **Sysname**, und kann **"true"** oder **"false"**. Wenn dieser Wert ist **"false"** und *Optname* ist **Merge veröffentlichen**, Abonnements für die Veröffentlichungsdatenbank Merge werden ebenfalls gelöscht.  
@@ -87,10 +87,10 @@ sp_replicationdboption [ @dbname= ] 'db_name'
   
 ## <a name="see-also"></a>Siehe auch  
  [Konfigurieren der Veröffentlichung und der Verteilung](../../relational-databases/replication/configure-publishing-and-distribution.md)   
- [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
+ [Erstellen einer Veröffentlichung](../../relational-databases/replication/publish/create-a-publication.md)   
  [Löschen einer Veröffentlichung](../../relational-databases/replication/publish/delete-a-publication.md)   
  [Deaktivieren der Veröffentlichung und Verteilung](../../relational-databases/replication/disable-publishing-and-distribution.md)   
- [Sys.sysdatabases &#40; Transact-SQL &#41;](../../relational-databases/system-compatibility-views/sys-sysdatabases-transact-sql.md)   
+ [Sys.sysdatabases &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysdatabases-transact-sql.md)   
  [Gespeicherte Automatisierungsprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

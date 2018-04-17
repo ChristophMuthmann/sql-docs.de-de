@@ -1,16 +1,16 @@
 ---
 title: Sp_replmonitorchangepublicationthreshold (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_replmonitorchangepublicationthreshold
 ms.assetid: 2c3615d8-4a1a-4162-b096-97aefe6ddc16
-caps.latest.revision: 
+caps.latest.revision: 26
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7e24fd4746ee5a93489e55b6cf16edc0150c647b
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: cf3ff13767e7d5f91e73b477e9587b2ea2fb4991
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spreplmonitorchangepublicationthreshold-transact-sql"></a>sp_replmonitorchangepublicationthreshold (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,16 +54,16 @@ sp_replmonitorchangepublicationthreshold [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@publisher**  =] **"***Publisher***"**  
+ [ **@publisher** = ] **'***publisher***'**  
  Der Name des Verlegers. *Publisher* ist **Sysname**, hat keinen Standardwert.  
   
- [  **@publisher_db**  =] **"***Publisher_db***"**  
+ [ **@publisher_db** = ] **'***publisher_db***'**  
  Der Name der veröffentlichten Datenbank. *Publisher_db* ist **Sysname**, hat keinen Standardwert.  
   
- [  **@publication**  =] **"***Veröffentlichung***"**  
+ [ **@publication** =] **"***Veröffentlichung***"**  
  Der Name der Veröffentlichung, deren Attribute für den Überwachungsschwellenwert geändert werden. *Veröffentlichung* ist **Sysname**, hat keinen Standardwert.  
   
- [  **@publication_type**  =] *Publication_type*  
+ [ **@publication_type** =] *Publication_type*  
  Der Typ der Veröffentlichung. *Publication_type* ist **Int**, und kann einen der folgenden Werte sein.  
   
 |Wert|Beschreibung|  
@@ -73,7 +73,7 @@ sp_replmonitorchangepublicationthreshold [ @publisher = ] 'publisher'
 |**2**|Mergeveröffentlichung.|  
 |NULL (Standard)|Replikationsversuche zum Bestimmen des Veröffentlichungstyps.|  
   
- [  **@metric_id**  =] *Metric_id*  
+ [ **@metric_id** =] *Metric_id*  
  Die ID der Schwellenwertmetrik für die Veröffentlichung, die geändert wird. *Metric_id* ist **Int**, hat den Standardwert NULL und kann einen der folgenden Werte sein.  
   
 |Wert|Metrikname|  
@@ -88,16 +88,16 @@ sp_replmonitorchangepublicationthreshold [ @publisher = ] 'publisher'
   
  Geben Sie *Metric_id* oder *Thresholdmetricname*. Wenn *Thresholdmetricname* angegeben ist, klicken Sie dann *Metric_id* sollte NULL sein.  
   
- [  **@thresholdmetricname**  =] **"***Thresholdmetricname***"**  
+ [ **@thresholdmetricname** =] **"***Thresholdmetricname***"**  
  Der Name der Schwellenwertmetrik für die Veröffentlichung, die geändert wird. *Thresholdmetricname* ist **Sysname**, hat den Standardwert NULL. Geben Sie *Thresholdmetricname* oder *Metric_id*. Wenn *Metric_id* angegeben ist, klicken Sie dann *Thresholdmetricname* sollte NULL sein.  
   
- [  **@value**  =] *Wert*  
+ [ **@value** =] *Wert*  
  Der neue Wert der Schwellenwertmetrik für die Veröffentlichung. *Wert* ist **Int**, hat den Standardwert NULL. Wenn **null**, und klicken Sie dann der Metrikwert nicht aktualisiert wird.  
   
- [  **@shouldalert**  =] *Shouldalert*  
+ [ **@shouldalert** =] *Shouldalert*  
  Gibt an, ob eine Warnung generiert wird, wenn die Schwellenwertmetrik für die Veröffentlichung erreicht wird. *Shouldalert* ist **Bit**, hat den Standardwert NULL. Der Wert **1** bedeutet, dass eine Warnung generiert wird, und der Wert der **0** bedeutet, dass keine Warnung generiert wird.  
   
- [  **@mode**  =] *Modus*  
+ [ **@mode** =] *Modus*  
  Gibt an, ob die Schwellenwertmetrik für die Veröffentlichung aktiviert ist. *Modus* ist **"tinyint"**, hat den Standardwert **1**. Der Wert **1** bedeutet, dass die Überwachung dieser Metrik aktiviert ist, und der Wert der **2** bedeutet, dass die Überwachung dieser Metrik deaktiviert ist.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  

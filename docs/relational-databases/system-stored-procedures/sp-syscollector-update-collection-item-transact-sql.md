@@ -1,16 +1,16 @@
 ---
 title: Sp_syscollector_update_collection_item (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/09/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_syscollector_update_collection_item
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - data collector [SQL Server], stored procedures
 - sp_syscollector_update_collection_item
 ms.assetid: 7a0d36c8-c6e9-431d-a5a4-6c1802bce846
-caps.latest.revision: 
+caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 680a82e86a1d958a81c9b5c238ac4015307ce51c
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 07a19b6f4d3d80c615bc1193f3b8af9950c97f96
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spsyscollectorupdatecollectionitem-transact-sql"></a>sp_syscollector_update_collection_item (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,10 +56,10 @@ sp_syscollector_update_collection_item
  [ @collection_item_id = ] *collection_item_id*  
  Ist der eindeutige Bezeichner, der das sammelelement identifiziert. *Collection_item_id* ist **Int** hat den Standardwert NULL. *Collection_item_id* muss einen Wert aufweisen, wenn *Namen* ist NULL.  
   
- [ @name = ] '*name*'  
+ [ @name =] '*Namen*"  
  Der Name des Sammelelements. *Namen* ist **Sysname** hat den Standardwert NULL. *Namen* muss einen Wert aufweisen, wenn *Collection_item_id* ist NULL.  
   
- [ @new_name = ] '*new_name*'  
+ [ @new_name =] '*New_name*"  
  Der neue Name für das Sammelelement. *New_name* ist **Sysname**, und kann nicht verwendet, eine leere Zeichenfolge sein.  
   
  *New_name* muss eindeutig sein. Wenn Sie eine Liste der aktuellen Namen von Sammelelementen abrufen möchten, fragen Sie die syscollector_collection_items-Systemsicht ab.  
@@ -67,7 +67,7 @@ sp_syscollector_update_collection_item
  [ @frequency =] *Häufigkeit*  
  Die Häufigkeit (in Sekunden), mit der Daten durch dieses Sammelelement aufgezeichnet werden. *Häufigkeit* ist **Int**, hat den Standardwert 5. Dies ist der Minimalwert, der angegeben werden können.  
   
- [ @parameters = ] '*parameters*'  
+ [ @parameters =] '*Parameter*"  
  Die Eingabeparameter für das Sammelelement. *Parameter* ist **Xml** hat den Standardwert NULL. Die *Parameter* Schema muss das Schema für Parameter des sammlertyps entspricht.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
@@ -96,7 +96,7 @@ WHERE collection_item_id = <collection_item_id>;
 -   @parameters  
   
 ## <a name="examples"></a>Beispiele  
- Die folgenden Beispiele basieren auf dem sammelelement, das im Beispiel definiert erstellten [Sp_syscollector_create_collection_item &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-item-transact-sql.md).  
+ Die folgenden Beispiele basieren auf dem sammelelement, das im Beispiel definiert erstellten [Sp_syscollector_create_collection_item &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-item-transact-sql.md).  
   
 ### <a name="a-changing-the-collection-frequency"></a>A. Ändern der Sammlungshäufigkeit  
  Im folgenden Beispiel wird die Sammlungshäufigkeit für das angegebene Sammelelement geändert.  
@@ -147,7 +147,7 @@ GO
 ## <a name="see-also"></a>Siehe auch  
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Datensammlung](../../relational-databases/data-collection/data-collection.md)   
- [sp_syscollector_create_collection_item &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-item-transact-sql.md)   
+ [Sp_syscollector_create_collection_item &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-item-transact-sql.md)   
  [syscollector_collection_items &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/syscollector-collection-items-transact-sql.md)  
   
   

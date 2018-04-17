@@ -1,16 +1,16 @@
 ---
 title: Sp_help_job (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/02/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_help_job_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_job
 ms.assetid: 8a8b6104-e0e4-4d07-a2c3-f4243ee0d6fa
-caps.latest.revision: 
+caps.latest.revision: 27
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9d91594f032409dbe2597dd859a549c17b795e04
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: e195e4fb851b1b301b1ccac9501ae5be107e0689
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelpjob-transact-sql"></a>sp_help_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -66,7 +66,7 @@ sp_help_job { [ @job_id = ] job_id
  Der Name des Auftrags. *Job_name* ist **Sysname**, hat den Standardwert NULL.  
   
 > [!NOTE]  
->  Entweder *Job_id* oder *Job_name* muss angegeben werden, aber beide können nicht angegeben werden.  
+>  So zeigen Sie einen bestimmten Auftrag können entweder an *Job_id* oder *Job_name* muss angegeben werden.  Lassen Sie beide *Job_id* und *Job_name* zum Zurückgeben von Informationen zu allen Aufträgen.
   
  [ **@job_aspect =**] **'***job_aspect***'**  
  Das Auftragsattribut, das angezeigt werden soll. *Job_aspect* ist **varchar(9)**, hat den Standardwert NULL und kann einen der folgenden Werte sein.  
@@ -76,13 +76,13 @@ sp_help_job { [ @job_id = ] job_id
 |**ALL**|Auftragsaspektinformationen|  
 |**JOB**|Auftragsinformationen|  
 |**ZEITPLÄNE**|Zeitplaninformationen|  
-|**STEPS**|Auftragsschrittinformationen|  
-|**TARGETS**|Zielinformationen|  
+|**SCHRITTE**|Auftragsschrittinformationen|  
+|**ZIELE**|Zielinformationen|  
   
  [ **@job_type =**] **'***job_type***'**  
  Der Typ von Aufträgen, die im Bericht enthalten sein sollen. *Der Standardwert ist* ist **varchar(12)**, hat den Standardwert NULL. *Der Standardwert ist* kann **lokale** oder **mit mehreren Servern**.  
   
- [ **@owner_login_name =**] **'***login_name***'**  
+ [  **@owner_login_name =**] **"***Login_name***"**  
  Der Anmeldename für den Besitzer des Auftrags. *Login_name* ist **Sysname**, hat den Standardwert NULL.  
   
  [ **@subsystem =**] **'***subsystem***'**  
@@ -113,11 +113,11 @@ sp_help_job { [ @job_id = ] job_id
  [ **@date_created =**] *date_created*  
  Das Datum, an dem der Auftrag erstellt wurde. *Date_created*ist **"DateTime"**, hat den Standardwert NULL.  
   
- [ **@date_last_modified =**] *date_modified*  
+ [  **@date_last_modified =**] *Date_modified*  
  Das Datum, an dem der Auftrag zuletzt geändert wurde. *DATE_MODIFIED* ist **"DateTime"**, hat den Standardwert NULL.  
   
- [ **@description =**] **'***description_pattern***'**  
- Die Beschreibung des Auftrags. *description_pattern* is **nvarchar(512)**, with a default of NULL. *ist NULL* kann die SQL Server-Platzhalterzeichen für den Mustervergleich enthalten.  
+ [  **@description =**] **"***ist NULL***"**  
+ Die Beschreibung des Auftrags. *ist NULL* ist **vom Datentyp nvarchar(512)**, hat den Standardwert NULL. *ist NULL* kann die SQL Server-Platzhalterzeichen für den Mustervergleich enthalten.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
@@ -130,7 +130,7 @@ sp_help_job { [ @job_id = ] job_id
 |**job_id**|**uniqueidentifier**|Die eindeutige ID des Auftrags.|  
 |**originating_server**|**nvarchar(30)**|Name des Servers, von dem der Auftrag stammt|  
 |**name**|**sysname**|Name des Auftrags.|  
-|**enabled**|**tinyint**|Zeigt an, ob der Auftrag für die Ausführung aktiviert ist.|  
+|**Aktiviert**|**tinyint**|Zeigt an, ob der Auftrag für die Ausführung aktiviert ist.|  
 |**description**|**nvarchar(512)**|Beschreibung für den Auftrag.|  
 |**start_step_id**|**int**|ID des Schrittes in dem Auftrag, bei dem die Ausführung beginnen soll.|  
 |**category**|**sysname**|Auftragskategorie|  
@@ -196,12 +196,12 @@ sp_help_job { [ @job_id = ] job_id
 |-----------------|---------------|-----------------|  
 |**schedule_id**|**int**|Bezeichner des Zeitplans (eindeutig für alle Aufträge)|  
 |**schedule_name**|**sysname**|Name des Zeitplans (eindeutig nur für diesen Auftrag)|  
-|**enabled**|**int**|Gibt an, ob der Zeitplan aktiv ist (**1**) oder nicht (**0**).|  
+|**Aktiviert**|**int**|Gibt an, ob der Zeitplan aktiv ist (**1**) oder nicht (**0**).|  
 |**freq_type**|**int**|Zeigt an, wann der Auftrag ausgeführt werden soll:<br /><br /> **1** = einmal<br /><br /> **4** = täglich<br /><br /> **8** = wöchentlich<br /><br /> **16** = monatlich<br /><br /> **32** = monatlich, relativ zu den **Freq_interval**<br /><br /> **64** = ausgeführt werden, wenn **SQLServerAgent** -Dienst gestartet wird.|  
-|**freq_interval**|**int**|Tage, wenn der Auftrag ausgeführt wird. Der Wert hängt vom Wert der **Freq_type**. Weitere Informationen finden Sie unter [Sp_add_schedule &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)|  
-|**freq_subday_type**|**Int**|Einheiten für **Freq_subday_interval**. Weitere Informationen finden Sie unter [Sp_add_schedule &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)|  
-|**freq_subday_interval**|**int**|Anzahl der **Freq_subday_type** -Perioden zwischen den einzelnen Ausführungen des Auftrags auftreten. Weitere Informationen finden Sie unter [Sp_add_schedule &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)|  
-|**freq_relative_interval**|**int**|Auftreten des geplanten Auftrags von der **Freq_interval** in jedem Monat. Weitere Informationen finden Sie unter [Sp_add_schedule &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)|  
+|**freq_interval**|**int**|Tage, wenn der Auftrag ausgeführt wird. Der Wert hängt vom Wert der **Freq_type**. Weitere Informationen finden Sie unter [Sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)|  
+|**freq_subday_type**|**Int**|Einheiten für **Freq_subday_interval**. Weitere Informationen finden Sie unter [Sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)|  
+|**freq_subday_interval**|**int**|Anzahl der **Freq_subday_type** -Perioden zwischen den einzelnen Ausführungen des Auftrags auftreten. Weitere Informationen finden Sie unter [Sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)|  
+|**freq_relative_interval**|**int**|Auftreten des geplanten Auftrags von der **Freq_interval** in jedem Monat. Weitere Informationen finden Sie unter [Sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)|  
 |**freq_recurrence_factor**|**int**|Anzahl der Monate zwischen der geplanten Ausführung des Auftrags|  
 |**active_start_date**|**int**|Datum, an dem die Ausführung des Auftrags beginnen soll|  
 |**active_end_date**|**int**|Datum, an dem die Ausführung des Auftrags beendet werden soll|  

@@ -1,16 +1,16 @@
 ---
 title: Sp_helpsubscription_properties (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpsubscription_properties
 ms.assetid: 7a76a645-97eb-47ac-b3ea-e2d75012cbed
-caps.latest.revision: 
+caps.latest.revision: 18
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 060aad04898e9ce47c91cf835b107e4c2efc39e3
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 78637041673509151652fd1e6d4125c8e41e2aa2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelpsubscriptionproperties-transact-sql"></a>sp_helpsubscription_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,14 +49,14 @@ sp_helpsubscription_properties [ [ @publisher = ] 'publisher' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@publisher=**] **"***Publisher***"**  
- Der Name des Verlegers. *Publisher* ist **Sysname**, hat den Standardwert  **%** , Informationen über alle Verleger zurückgegeben.  
+ [ **@publisher=**] **'***publisher***'**  
+ Der Name des Verlegers. *Publisher* ist **Sysname**, hat den Standardwert **%**, Informationen über alle Verleger zurückgegeben.  
   
- [  **@publisher_db=**] **"***Publisher_db***"**  
- Der Name der Verlegerdatenbank. *Publisher_db* ist **Sysname**, hat den Standardwert  **%** , Informationen über alle Verlegerdatenbanken zurückgegeben.  
+ [ **@publisher_db=**] **'***publisher_db***'**  
+ Der Name der Verlegerdatenbank. *Publisher_db* ist **Sysname**, hat den Standardwert **%**, Informationen über alle Verlegerdatenbanken zurückgegeben.  
   
- [  **@publication=**] **"***Veröffentlichung***"**  
- Der Name der Veröffentlichung. *Veröffentlichung* ist **Sysname**, hat den Standardwert  **%** , womit Informationen zu allen Veröffentlichungen zurückgegeben.  
+ [ **@publication=**] **'***publication***'**  
+ Der Name der Veröffentlichung. *Veröffentlichung* ist **Sysname**, hat den Standardwert **%**, womit Informationen zu allen Veröffentlichungen zurückgegeben.  
   
  [  **@publication_type=**] *Publication_type*  
  Ist der Typ der Veröffentlichung. *Publication_type* ist **Int**, hat den Standardwert NULL. Wenn angegeben, *Publication_type* muss eines der folgenden Werte sein:  
@@ -97,11 +97,11 @@ sp_helpsubscription_properties [ [ @publisher = ] 'publisher' ]
 |**dynamic_snapshot_location**|**nvarchar(255)**|Gibt den Pfad zum Ordner an, in dem die Momentaufnahmedateien gespeichert werden.|  
 |**use_web_sync**|**bit**|Gibt an, ob das Abonnement über HTTPS synchronisiert werden kann ein Wert von **1** bedeutet, dass dieses Feature aktiviert ist.|  
 |**internet_url**|**nvarchar(260)**|URL, die den Speicherort der replikationsüberwachung für die websynchronisierung darstellt.|  
-|**sich**|**vom Datentyp nvarchar(128)**|Der Anmeldename, der vom Merge-Agent zum Herstellen einer Verbindung mit dem Webserver verwendet wird, der die Websynchronisierung mithilfe der Standardauthentifizierung hostet.|  
+|**sich**|**nvarchar(128)**|Der Anmeldename, der vom Merge-Agent zum Herstellen einer Verbindung mit dem Webserver verwendet wird, der die Websynchronisierung mithilfe der Standardauthentifizierung hostet.|  
 |**internet_password**|**nvarchar(524)**|Das Kennwort für den Anmeldenamen, der vom Merge-Agent zum Herstellen einer Verbindung mit dem Webserver verwendet wird, der die Websynchronisierung mithilfe der Standardauthentifizierung hostet.|  
 |**internet_security_mode**|**int**|Der verwendete Authentifizierungsmodus beim Herstellen einer Verbindung mit dem Webserver, der die websynchronisierung, wobei der Wert hostet **1** bedeutet, dass Windows-Authentifizierung und den Wert **0** bedeutet, dass die Standardauthentifizierung.|  
 |**internet_timeout**|**int**|Zeit in Sekunden, bevor eine Anforderung für eine Websynchronisierung abläuft.|  
-|**Hostname**|**vom Datentyp nvarchar(128)**|Gibt den Wert für HOST_NAME() an, wenn diese Funktion in der WHERE-Klausel eines parametrisierten Zeilenfilters verwendet wird.|  
+|**Hostname**|**nvarchar(128)**|Gibt den Wert für HOST_NAME() an, wenn diese Funktion in der WHERE-Klausel eines parametrisierten Zeilenfilters verwendet wird.|  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  

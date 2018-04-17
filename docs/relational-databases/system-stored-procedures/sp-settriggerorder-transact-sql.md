@@ -1,16 +1,16 @@
 ---
 title: Sp_settriggerorder (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_settriggerorder
@@ -20,16 +20,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_settriggerorder
 ms.assetid: 8b75c906-7315-486c-bc59-293ef12078e8
-caps.latest.revision: 
+caps.latest.revision: 54
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 690831cac89e20932cbf3c8759af569e01097238
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 73a6c088b2d33c77877cadf6a80f030f8faeeaef
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spsettriggerorder-transact-sql"></a>sp_settriggerorder (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,10 +50,10 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@triggername=** ] **"**[ *Triggerschema***.**] *Auslösername***"**  
- Der Name des Triggers, dessen Reihenfolge ggf. festgelegt oder geändert wird, und das Schema, zu dem er gehört. [*Triggerschema***.**] *Auslösername* ist **Sysname**. Wenn der Name keinem Trigger entspricht oder wenn der Name dem INSTEAD OF-Trigger entspricht, gibt die Prozedur einen Fehler zurück. *Triggerschema* kann für DDL- oder Logon-Trigger angegeben werden.  
+ [  **@triggername=** ] **"**[ *Triggerschema ***.**] *Auslösername *** "**  
+ Der Name des Triggers, dessen Reihenfolge ggf. festgelegt oder geändert wird, und das Schema, zu dem er gehört. [*Triggerschema ***.**]* Auslösername * ist **Sysname**. Wenn der Name keinem Trigger entspricht oder wenn der Name dem INSTEAD OF-Trigger entspricht, gibt die Prozedur einen Fehler zurück. *Triggerschema* kann für DDL- oder Logon-Trigger angegeben werden.  
   
- [ **@order=** ] **'***value***'**  
+ [ **@order=** ] **'***Wert***'**  
  Die Einstellung für die neue Reihenfolge des Triggers. *Wert* ist **varchar(10)** und eine der folgenden Werte sind möglich.  
   
 > [!IMPORTANT]  
@@ -62,7 +63,7 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
 |-----------|-----------------|  
 |**Erster**|Trigger wird zuerst ausgelöst|  
 |**Letzter**|Trigger wird zuletzt ausgelöst|  
-|**Keine**|Trigger wird in nicht definierter Reihenfolge ausgelöst|  
+|**InclusionThresholdSetting**|Trigger wird in nicht definierter Reihenfolge ausgelöst|  
   
  [  **@stmttype=** ] **"***Statement_type***"**  
  Gibt die SQL-Anweisung an, die den Trigger auslöst. *Statement_type* ist **varchar(50)-Spalte** möglich INSERT-, Update-, DELETE-, LOGON oder eine [!INCLUDE[tsql](../../includes/tsql-md.md)] anweisungsereignisses abgelesen [DDL-Ereignisse](../../relational-databases/triggers/ddl-events.md). Ereignisgruppen können nicht angegeben werden.  
@@ -70,7 +71,7 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
  Ein Trigger kann als festgelegt werden, als die **erste** oder **letzten** Trigger für einen Anweisungstyp erst nach, dass Trigger als Trigger für diesen Anweisungstyp definiert wurde. Beispielsweise ausgelöst **TR1** kann gekennzeichnet werden **erste** für die Einfügung in Tabelle **T1** Wenn **TR1** als ein INSERT-Trigger definiert ist. Die [!INCLUDE[ssDE](../../includes/ssde-md.md)] gibt einen Fehler zurück, wenn **TR1**, die nur als INSERT-Trigger definiert ist, wird als festgelegt eine **erste**, oder **letzten**, Trigger für eine UPDATE-Anweisung. Weitere Informationen finden Sie im Abschnitt mit Hinweisen.  
   
  **@namespace=** { **'DATABASE'** | **'SERVER'** | NULL}  
- Wenn *Auslösername* wird ein DDL-Trigger  **@namespace**  gibt an, ob *Auslösername* mit Datenbankbereich oder einem Serverbereich erstellt wurde. Wenn *Auslösername* ist ein Logon-Trigger SERVER muss angegeben werden. Weitere Informationen zu DDL-Triggerbereich, finden Sie unter [DDL-Trigger](../../relational-databases/triggers/ddl-triggers.md). Wenn nicht angegeben, oder wenn NULL angegeben ist, *Auslösername* ein DML-Trigger.  
+ Wenn *Auslösername* wird ein DDL-Trigger **@namespace** gibt an, ob *Auslösername* mit Datenbankbereich oder einem Serverbereich erstellt wurde. Wenn *Auslösername* ist ein Logon-Trigger SERVER muss angegeben werden. Weitere Informationen zu DDL-Triggerbereich, finden Sie unter [DDL-Trigger](../../relational-databases/triggers/ddl-triggers.md). Wenn nicht angegeben, oder wenn NULL angegeben ist, *Auslösername* ein DML-Trigger.  
   
 ||  
 |-|  
@@ -137,7 +138,7 @@ sp_settriggerorder @triggername= 'ddlDatabaseTriggerLog', @order='First', @stmtt
   
 ## <a name="see-also"></a>Siehe auch  
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Datenbankmodul gespeicherte Systemprozeduren &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Gespeicherte Datenbankmodulprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [ALTER TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-trigger-transact-sql.md)  
   
   

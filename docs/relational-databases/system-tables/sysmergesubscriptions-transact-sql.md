@@ -1,16 +1,16 @@
 ---
 title: Sysmergesubscriptions (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sysmergesubscriptions system table
 ms.assetid: 6adc78da-991d-4c08-98c3-ecb4762e0e99
-caps.latest.revision: 
+caps.latest.revision: 22
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cd713b90c4d295eee99953c6561e9a7d057fc39b
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 1cc4216c383ee387b495e7933fd5da7a4832479e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysmergesubscriptions-transact-sql"></a>sysmergesubscriptions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ ms.lasthandoff: 11/21/2017
 |subscriber_type|**int**|Der Typ des Abonnenten:<br /><br /> **1** = global.<br /><br /> **2** = lokal.<br /><br /> **3** = anonym.|  
 |subscription_type|**int**|Der Typ des Abonnements:<br /><br /> **0** = Push.<br /><br /> **1** = Pullabonnement.<br /><br /> **2** = anonym.|  
 |sync_type|**tinyint**|Typ der Synchronisierung:<br /><br /> **1** = Automatic.<br /><br /> **2** = keine Synchronisierung.|  
-|Beschreibung|**nvarchar(255)**|Kurze Beschreibung des Abonnements.|  
+|description|**nvarchar(255)**|Kurze Beschreibung des Abonnements.|  
 |priority|**real**|Gibt die Priorität des Abonnements an und lässt die Implementierung von prioritätsbasierten Routinen zur Konfliktlösung zu. Ist gleich **0,00** für alle lokalen oder anonymen Abonnements.|  
 |recgen|**bigint**|Die Nummer der zuletzt empfangenen Generierung.|  
 |recguid|**uniqueidentifier**|Die eindeutige ID der zuletzt empfangenen Generierung.|  
@@ -69,7 +69,7 @@ ms.lasthandoff: 11/21/2017
 |cleanedup_unsent_changes|**bit**|Gibt an, dass Metadaten für nicht gesendete Änderungen auf dem Abonnenten bereinigt wurden.|  
 |replica_version|**int**|Identifiziert die Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für den Abonnenten, zu dem das Abonnement gehört. Die folgenden Werte sind möglich:<br /><br /> **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> **100** = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
 |supportability_mode|**int**|Nur interne Verwendung.|  
-|application_name|**vom Datentyp nvarchar(128)**|Nur interne Verwendung.|  
+|application_name|**nvarchar(128)**|Nur interne Verwendung.|  
 |subscriber_number|**int**|Nur interne Verwendung.|  
 |last_makegeneration_datetime|**datetime**|Der letzte **"DateTime"** , die der Makegeneration-Prozess für den Verleger ausgeführt wurden. Weitere Informationen finden Sie unter den - MakeGenerationInterval-Parameter im [Replikationsmerge-Agent](../../relational-databases/replication/agents/replication-merge-agent.md).|  
   

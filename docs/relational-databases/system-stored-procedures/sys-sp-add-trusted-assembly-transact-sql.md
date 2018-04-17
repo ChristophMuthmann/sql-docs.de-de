@@ -1,16 +1,16 @@
 ---
 title: Sys.sp_add_trusted_assembly (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 06/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_add_trusted_assembly_TSQL
@@ -21,17 +21,18 @@ dev_langs:
 - TSQL
 helpviewer_keywords:
 - sys.sp_add_trusted_assembly
-ms.assetid: 
-caps.latest.revision: 
+ms.assetid: ''
+caps.latest.revision: ''
 author: tmullaney
 ms.author: thmullan
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b634a990abcd9f763c851eaf1fbdde4d022ca25e
-ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: d71afb0e41469e3b73f65bcb9232733861645476
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysspaddtrustedassembly-transact-sql"></a>Sys.sp_add_trusted_assembly (Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +58,7 @@ Diese Prozedur fügt eine Assembly [sys.trusted_assemblies](../../relational-dat
 [ @hash =] '*Wert*"  
 Der Hashwert des SHA2_512 der Assembly in der Liste der vertrauenswürdigen Assemblys für den Server hinzuzufügen. Vertrauenswürdige Assemblys können beim Laden [strikte Sicherheit der CLR](../../database-engine/configure-windows/clr-strict-security.md) aktiviert ist, auch wenn die Assembly nicht signiert ist oder die Datenbank ist nicht als vertrauenswürdig gekennzeichnet.
 
-[ @description = ] '*description*'  
+[ @description =] '*Beschreibung*"  
 Optionale benutzerdefinierte Beschreibung der Assembly. Microsoft empfiehlt die Verwendung des kanonischen Namens, der den einfachen Namen, Versionsnummer, Kultur, öffentlicher Schlüssel und Architektur der Assembly, vertrauen codiert. Dieser Wert eindeutig kennzeichnet die Assembly, auf der Seite der common Language Runtime (CLR) und entspricht der Wert Clr_name in sys.assemblies. 
 
 ## <a name="permissions"></a>Berechtigungen

@@ -1,16 +1,16 @@
 ---
 title: Sp_helprotect (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_helprotect
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_helprotect
 ms.assetid: faaa3e40-1c95-43c2-9fdc-c61a1d3cc0c3
-caps.latest.revision: 
+caps.latest.revision: 24
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7c254488d42940c2f88b395082db1cd0079f79f3
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 3e0942b8d2b66a76db9e50616f63d6d7a3cc959e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelprotect-transact-sql"></a>sp_helprotect (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ sp_helprotect [ [ @name = ] 'object_statement' ]
   
 ## <a name="arguments"></a>Argumente  
  [  **@name =** ] **"***Object_statement***"**  
- Der Name des Objekts in der aktuellen Datenbank oder der Name einer Anweisung mit den auszugebenden Berechtigungen.  *Object_statement* ist **nvarchar(776)**, hat den Standardwert NULL, womit alle Objekt- und Anweisungsberechtigungen Berechtigungen. Handelt es sich um ein Objekt (Tabelle, Sicht, gespeicherte Prozedur oder erweiterte gespeicherte Prozedur), muss dieses ein gültiges Objekt in der aktuellen Datenbank sein. Der Objektname kann einen besitzerqualifizierer im Format *Besitzer***.** *Objekt*.  
+ Der Name des Objekts in der aktuellen Datenbank oder der Name einer Anweisung mit den auszugebenden Berechtigungen.  *Object_statement* ist **nvarchar(776)**, hat den Standardwert NULL, womit alle Objekt- und Anweisungsberechtigungen Berechtigungen. Handelt es sich um ein Objekt (Tabelle, Sicht, gespeicherte Prozedur oder erweiterte gespeicherte Prozedur), muss dieses ein gültiges Objekt in der aktuellen Datenbank sein. Der Objektname kann einen besitzerqualifizierer im Format *Besitzer***.*** Objekt*.  
   
  Wenn *Object_statement* ist eine Anweisung einer CREATE-Anweisung sind möglich.  
   
@@ -65,7 +65,7 @@ sp_helprotect [ [ @name = ] 'object_statement' ]
  [  **@grantorname =** ] **"***Grantor***"**  
  Der Name des Prinzipals, der die Berechtigungen gewährt hat. *GRANTOR* ist **Sysname**, hat den Standardwert NULL, womit alle Informationen für Berechtigungen, die von einem Prinzipal in der Datenbank zurückgegeben.  
   
- [  **@permissionarea =** ] **"***Typ***"**  
+ [ **@permissionarea =** ] **'***type***'**  
  Ist eine Zeichenfolge, die angibt, ob die Berechtigungen für Modellobjekte anzeigen (Zeichenfolge **o**), Anweisungsberechtigungen (Zeichenfolge **s**), oder beide (**os**). *Typ* ist **varchar(10)**, hat den Standardwert **os**. *Typ* kann eine beliebige Kombination von **o** und **s**mit oder ohne Kommas bzw. Leerzeichen zwischen **o** und **s**.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
@@ -143,7 +143,7 @@ EXEC sp_helprotect @name = 'CREATE TABLE';
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Gespeicherte Systemprozeduren &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [Security Stored Procedures &#40;Transact-SQL&#41; (Gespeicherte Sicherheitsprozeduren (Transact-SQL))](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [DENY &#40;Transact-SQL&#41;](../../t-sql/statements/deny-transact-sql.md)   
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
  [REVOKE &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-transact-sql.md)   

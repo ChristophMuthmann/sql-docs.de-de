@@ -1,15 +1,15 @@
 ---
 title: Sp_rxPredict | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_rxPredict
@@ -22,18 +22,18 @@ author: jeannt
 ms.author: jeannt
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f4e397cf366cc0f12b738a369556e91de3e83878
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: cef37349cd363ad7baea6300f3d236eefafd0046
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sprxpredict"></a>sp_rxPredict  
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
 Generiert einen vorhergesagten Wert auf Grundlage eines gespeicherten Modells.
 
-Stellt die Bewertung auf Machine Learning-Modellen in nahezu in Echtzeit. `sp_rxPredict`ist eine gespeicherte Prozedur bereitgestellt, die als Wrapper für die `rxPredict` -Funktion in ["revoscaler"](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler) und [MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package). Es ist in C++ geschrieben wurde und ist speziell für die Bewertung Vorgänge optimiert. Es unterstützt sowohl R oder Python machine Learning-Modellen.
+Stellt die Bewertung auf Machine Learning-Modellen in nahezu in Echtzeit. `sp_rxPredict` ist eine gespeicherte Prozedur bereitgestellt, die als Wrapper für die `rxPredict` -Funktion in ["revoscaler"](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler) und [MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package). Es ist in C++ geschrieben wurde und ist speziell für die Bewertung Vorgänge optimiert. Es unterstützt sowohl R oder Python machine Learning-Modellen.
 
 **Dieses Thema gilt für**:  
 - SQL Server 2017  
@@ -73,10 +73,10 @@ Der Benutzer muss `EXECUTE` Berechtigung für die Datenbank.
 
 Erfordert eine der folgenden Editionen:  
 - SQL Server 2017 Machine Learning Services (einschließlich Microsoft R Server 9.1.0)  
-- Microsoft Machine Learning Server  
+- Microsoft Machine Learning-Server  
 - SQL Server R Services 2016 mit einer Aktualisierung der R-Services-Instanz für Microsoft R Server 9.1.0 oder höher  
 
-### <a name="supported-algorithms"></a>Algorithmen unterstützt:
+### <a name="supported-algorithms"></a>Unterstützte Algorithmen
 
 Eine Liste der unterstützten Algorithmen, finden Sie unter [Echtzeit Bewertung](../../advanced-analytics/real-time-scoring.md).
 
@@ -98,9 +98,9 @@ EXEC sp_rxPredict @model = @model,
 @inputData = N'SELECT * FROM data';
 ```
 
-Abgesehen davon, dass eine gültige SQL-Abfrage, die Eingabedaten in  *@inputData*  Spalten, die kompatibel mit den Spalten im Modell gespeicherten enthalten.
+Abgesehen davon, dass eine gültige SQL-Abfrage, die Eingabedaten in *@inputData* Spalten, die kompatibel mit den Spalten im Modell gespeicherten enthalten.
 
-`sp_rxPredict`unterstützt nur die folgenden .NET Spaltentypen: double, Float, Short, Ushort, long, ulong-Typ und Zeichenfolge. Sie müssen möglicherweise den nicht unterstützten Typen der Eingabedaten herausfiltern, bevor Sie sie für die Bewertung in Echtzeit zu verwenden. 
+`sp_rxPredict` unterstützt nur die folgenden .NET Spaltentypen: double, Float, Short, Ushort, long, ulong-Typ und Zeichenfolge. Sie müssen möglicherweise den nicht unterstützten Typen der Eingabedaten herausfiltern, bevor Sie sie für die Bewertung in Echtzeit zu verwenden. 
 
   Informationen zur entsprechenden SQL-Datentypen finden Sie unter [SQL-CLR-Typzuordnung](https://msdn.microsoft.com/library/bb386947.aspx) oder [Zuordnen von CLR-Parameterdaten](../clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md).
 

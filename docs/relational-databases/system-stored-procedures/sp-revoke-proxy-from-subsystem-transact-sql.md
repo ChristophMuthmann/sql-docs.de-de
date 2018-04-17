@@ -1,16 +1,16 @@
 ---
-title: sp_revoke_proxy_from_subsystem (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: Sp_revoke_proxy_from_subsystem (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_revoke_login_from_subsystem
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_revoke_proxy_from_subsystem
 ms.assetid: b87bc8ba-3ea8-4aed-b54b-32c3d82d9d2a
-caps.latest.revision: 
+caps.latest.revision: 37
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3408c3ddee13886edaaa410341379ee50d4f9cb3
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 9a088cad68d795b4975194cc86c5997e801dcb89
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sprevokeproxyfromsubsystem-transact-sql"></a>sp_revoke_proxy_from_subsystem (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ sp_revoke_proxy_from_subsystem
  [ **@proxy_id** = ] *id*  
  Die Proxy-ID des Proxys, für den der Zugriff aufgehoben werden soll. Die *Proxy_id* ist **Int**, hat den Standardwert NULL. Entweder *Proxy_id* oder *Proxy_name* muss angegeben werden, aber beide können nicht angegeben werden.  
   
- [ **@proxy_name** = ] **'***proxy_name***'**  
+ [ **@proxy_name** =] **"***Proxy_name***"**  
  Der Name des Proxys, für den der Zugriff aufgehoben werden soll. Die *Proxy_name* ist **Sysname**, hat den Standardwert NULL. Entweder *Proxy_id* oder *Proxy_name* muss angegeben werden, aber beide können nicht angegeben werden.  
   
  [ **@subsystem_id** = ] *id*  
@@ -61,7 +61,7 @@ sp_revoke_proxy_from_subsystem
   
 |Wert|Beschreibung|  
 |-----------|-----------------|  
-|**2**|ActiveX-Skript<br /><br /> **\*\*Wichtige \* \***  das ActiveX Scripting-Subsystem daraus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents in einer zukünftigen Version von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Verwenden Sie diese Funktion beim Entwickeln neuer Anwendungen nicht, und planen Sie das Ändern von Anwendungen, in denen es zurzeit verwendet wird.|  
+|**2**|ActiveX-Skript<br /><br /> **\*\* Wichtige \* \***  das ActiveX Scripting-Subsystem daraus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents in einer zukünftigen Version von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Verwenden Sie diese Funktion beim Entwickeln neuer Anwendungen nicht, und planen Sie das Ändern von Anwendungen, in denen es zurzeit verwendet wird.|  
 |**3**|Betriebssystem (CmdExec)|  
 |**4**|Replikationsmomentaufnahme-Agent|  
 |**5**|Replikationsprotokolllese-Agent|  
@@ -70,10 +70,10 @@ sp_revoke_proxy_from_subsystem
 |**8**|Warteschlangenlese-Agent der Microsoft SQL Server-Replikation|  
 |**9**|Analysis Services-Befehl|  
 |**10**|Analysis Services-Abfrage|  
-|**11**|[!INCLUDE[ssIS](../../includes/ssis-md.md)] -Paketausführung|  
+|**11**|[!INCLUDE[ssIS](../../includes/ssis-md.md)]-Paketausführung|  
 |**12**|PowerShell-Skript|  
   
- [  **@subsystem_name** =] **"***Subsystem_name***"**  
+ [ **@subsystem_name**=] **"***Subsystem_name***"**  
  Der Name des Subsystems, für das der Zugriff aufgehoben werden soll. Die *Subsystem_name* ist **Sysname**, hat den Standardwert NULL. Entweder *Subsystem_id* oder *Subsystem_name* muss angegeben werden, aber beide können nicht angegeben werden. In der folgenden Tabelle werden die Werte für jedes Subsystem aufgelistet.  
   
 |Wert|Description|  
@@ -87,7 +87,7 @@ sp_revoke_proxy_from_subsystem
 |QueueReader|Warteschlangenlese-Agent der Microsoft SQL Server-Replikation|  
 |ANALYSISQUERY|Analysis Services-Befehl|  
 |ANALYSISCOMMAND|Analysis Services-Abfrage|  
-|Dts|[!INCLUDE[ssIS](../../includes/ssis-md.md)] -Paketausführung|  
+|Dts|[!INCLUDE[ssIS](../../includes/ssis-md.md)]-Paketausführung|  
 |PowerShell|PowerShell-Skript|  
   
 ## <a name="remarks"></a>Hinweise  
@@ -112,7 +112,7 @@ EXEC dbo.sp_revoke_proxy_from_subsystem
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [SQL Server-Agent-gespeicherte Prozeduren &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
+ [SQL Server-Agent-Prozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
  [Implementieren von Sicherheit für SQL Server-Agent](http://msdn.microsoft.com/library/d770d35c-c8de-4e00-9a85-7d03f45a0f0d)   
  [sp_grant_proxy_to_subsystem &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grant-proxy-to-subsystem-transact-sql.md)  
   

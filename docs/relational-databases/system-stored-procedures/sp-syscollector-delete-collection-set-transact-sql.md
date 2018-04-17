@@ -1,16 +1,16 @@
 ---
-title: sp_syscollector_delete_collection_set (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: Sp_syscollector_delete_collection_set (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_syscollector_delete_collection_set_TSQL
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - data collector [SQL Server], stored procedures
 - sp_syscollector_delete_collecton_set
 ms.assetid: 29c63a74-4db4-4068-bd57-9fb519b0c598
-caps.latest.revision: 
+caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b731d14f7b0dc8e583ad5625ac3d7bf013be013d
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: ad4e28e13d3bbc600df16d7c682b577a6411a7a9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spsyscollectordeletecollectionset-transact-sql"></a>sp_syscollector_delete_collection_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,14 +51,14 @@ sp_syscollector_delete_collection_set [[ @collection_set_id = ] collection_set_i
  [ @collection_set_id = ] *collection_set_id*  
  Der eindeutige Bezeichner für den Sammlungssatz. *Collection_set_id* ist **Int** und muss einen Wert aufweisen, wenn *Namen* ist NULL.  
   
- [ @name = ] '*name*'  
+ [ @name =] '*Namen*"  
  Ist der Name des Sammlungssatzes. *Namen* ist **Sysname** und muss einen Wert aufweisen, wenn *Collection_set_id* ist NULL.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="remarks"></a>Hinweise  
- sp_syscollector_delete_collection_set must be run in the context of the msdb system database.  
+ Sp_syscollector_delete_collection_set muss im Kontext der Msdb-Systemdatenbank ausgeführt werden.  
   
  Entweder *Collection_set_id* oder *Namen* muss über einen Wert verfügen, können nicht beide NULL sein. Um diese Werte abzurufen, Fragen Sie die Syscollector_collection_set-Systemsicht.  
   

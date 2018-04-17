@@ -1,16 +1,16 @@
 ---
 title: Sp_table_privileges (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_table_privileges
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_table_privileges
 ms.assetid: 0512e688-4fc0-4557-8dc8-016672c1e3fe
-caps.latest.revision: 
+caps.latest.revision: 36
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3f71b84e9f2aa0f732178a302f3d131f0a448dc0
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 2eb872a8ca079bbde96ad3667d687618cba7414a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sptableprivileges-transact-sql"></a>sp_table_privileges (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ sp_table_privileges [ @table_name = ] 'table_name'
 |-----------------|---------------|-----------------|  
 |TABLE_QUALIFIER|**sysname**|Tabelle der Name des Prozedurqualifizierers. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt diese Spalte den Datenbanknamen dar. Dieses Feld kann den Wert NULL annehmen.|  
 |TABLE_OWNER|**sysname**|Name des Tabellenbesitzers. Dieses Feld gibt immer einen Wert zurück.|  
-|TABLE_NAME|**sysname**|Tabellenname. Dieses Feld gibt immer einen Wert zurück.|  
+|table_name|**sysname**|Tabellenname. Dieses Feld gibt immer einen Wert zurück.|  
 |GRANTOR|**sysname**|Der Datenbankbenutzername, der dem aufgelisteten GRANTEE Berechtigungen für TABLE_NAME erteilt hat. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ist diese Spalte stets mit dem TABLE_OWNER identisch. Dieses Feld gibt immer einen Wert zurück. Zudem kann die GRANTOR-Spalte entweder der Datenbankbesitzer (TABLE_OWNER) oder ein Benutzer sein, dem der Datenbankbesitzer mithilfe der WITH GRANT OPTION-Klausel in der GRANT-Anweisung die Berechtigung erteilt hat.|  
 |GRANTEE|**sysname**|Der Datenbank-Benutzername, dem vom aufgeführten GRANTOR Berechtigungen für TABLE_NAME erteilt wurden. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], enthält diese Spalte immer einen Datenbankbenutzer aus der Ansicht sys.database_principalssystem. Dieses Feld gibt immer einen Wert zurück.|  
 |PRIVILEGE|**sysname**|Eine der verfügbaren Tabellenberechtigungen. Tabellenberechtigungen können folgende Werte annehmen (bzw. auch andere Werte, die von der Datenquelle bei der Definition der Implementierung unterstützt werden):<br /><br /> SELECT = GRANTEE kann Daten aus einer oder mehreren Spalten abrufen.<br /><br /> INSERT = GRANTEE kann in einer oder mehreren Spalten Daten für neue Zeilen bereitstellen.<br /><br /> UPDATE = GRANTEE kann vorhandene Daten in einer oder mehreren Spalten ändern.<br /><br /> DELETE = GRANTEE kann Zeilen aus der Tabelle entfernen.<br /><br /> REFERENCES = der Berechtigte (GRANTEE) kann bei einer Primär-/Fremdschlüssel-Beziehung auf eine Spalte in einer Fremdschlüsseltabelle verweisen. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden Primär-/Fremdschlüsselbeziehungen über Tabelleneinschränkungen definiert.<br /><br /> Der dem GRANTEE durch ein bestimmtes Tabellenprivileg erteilte Aktionsbereich ist datenquellenabhängig. Beispielsweise kann der GRANTEE mit dem UPDATE-Privileg alle Spalten in einer Tabelle für eine Datenquelle aktualisieren, während er für eine andere Datenquelle nur die Spalten aktualisieren kann, für die der GRANTOR das UPDATE-Privileg besitzt.|  
@@ -95,7 +95,7 @@ EXEC sp_table_privileges
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Katalog gespeicherte Prozeduren &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
+ [Gespeicherte Prozeduren für Kataloginformationen &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

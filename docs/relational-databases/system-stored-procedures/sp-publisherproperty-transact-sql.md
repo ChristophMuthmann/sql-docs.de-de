@@ -1,16 +1,16 @@
 ---
 title: Sp_publisherproperty (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_publisherproperty
 ms.assetid: 0ed1ebc1-a1bd-4aed-9f46-615c5cf07827
-caps.latest.revision: 
+caps.latest.revision: 27
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 782dada24606bdd5ece4057bb47b7df6a6a9a9db
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 7446f507b688010f3044ff237d778f9b31b54fe8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sppublisherproperty-transact-sql"></a>sp_publisherproperty (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,10 +48,10 @@ sp_publisherproperty [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@publisher**  =] **"***Publisher***"**  
+ [**@publisher** =] **"***Publisher***"**  
  Der Name des heterogenen Verlegers. *Publisher* ist **Sysname**, hat keinen Standardwert.  
   
- [ **@propertyname**  =] **"***Propertyname***"**  
+ [**@propertyname** =] **"***Propertyname***"**  
  Der Name der Eigenschaft, die festgelegt wird. *PropertyName* ist **Sysname**, und kann einen der folgenden Werte.  
   
 |Wert|Description|  
@@ -62,14 +62,14 @@ sp_publisherproperty [ @publisher = ] 'publisher'
   
  Wenn *Propertyname* wird weggelassen, alle festlegbare Eigenschaften zurückgegeben werden.  
   
- [ **@propertyvalue**  =] **"***Propertyvalue***"**  
+ [**@propertyvalue** =] **"***Propertyvalue***"**  
  Der neue Wert für die Eigenschafteneinstellung. *PropertyValue* ist **Sysname**, hat den Standardwert NULL. Wenn *Propertyvalue* weggelassen wird, wird die aktuelle Einstellung für die Eigenschaft zurückgegeben wird.  
   
 ## <a name="result-sets"></a>Resultsets  
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
-|**Eigenschaftenname**|**sysname**|Gibt die folgenden Veröffentlichungseigenschaften zurück, die festgelegt werden können:<br /><br /> **xactsetbatching**<br /><br /> **xactsetjob**<br /><br /> **xactsetjobinterval**|  
+|**propertyname**|**sysname**|Gibt die folgenden Veröffentlichungseigenschaften zurück, die festgelegt werden können:<br /><br /> **xactsetbatching**<br /><br /> **xactsetjob**<br /><br /> **xactsetjobinterval**|  
 |**Eigenschaftswert**|**sysname**|Ist die aktuelle Einstellung für die Eigenschaft in der **Propertyname** Spalte.|  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  

@@ -1,16 +1,16 @@
 ---
 title: Sp_replmonitorhelpsubscription (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_replmonitorhelpsubscription
 ms.assetid: a681b2db-c82d-4624-a10c-396afb0ac42f
-caps.latest.revision: 
+caps.latest.revision: 32
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 24254591967a08df8a46446e485af1be5760c862
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 44fccedae1010ec6b79268552a990c88ba5975a3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spreplmonitorhelpsubscription-transact-sql"></a>sp_replmonitorhelpsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,16 +53,16 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@publisher**  =] **"***Publisher***"**  
+ [ **@publisher** = ] **'***publisher***'**  
  Der Name des Verlegers, dessen Status überwacht wird. *Publisher* ist **Sysname**, hat den Standardwert NULL. Wenn **null**, Informationen zu allen Verlegern, die die Verwendung des Verteilers zurückgegeben.  
   
- [  **@publisher_db**  =] **"***Publisher_db***"**  
+ [ **@publisher_db** = ] **'***publisher_db***'**  
  Der Name der veröffentlichten Datenbank. *Publisher_db* ist **Sysname**, hat den Standardwert NULL. Lautet der Wert NULL, werden Informationen für alle veröffentlichten Datenbanken auf dem Verleger zurückgegeben.  
   
- [  **@publication**  =] **"***Veröffentlichung***"**  
+ [ **@publication** =] **"***Veröffentlichung***"**  
  Der Name der Veröffentlichung, die überwacht wird. *Veröffentlichung* ist **Sysname**, hat den Standardwert NULL.  
   
- [  **@publication_type**  =] *Publication_type*  
+ [ **@publication_type** =] *Publication_type*  
  Der Typ der Veröffentlichung. *Publication_type* ist **Int**, und kann einen der folgenden Werte sein.  
   
 |Wert|Beschreibung|  
@@ -72,7 +72,7 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
 |**2**|Mergeveröffentlichung.|  
 |NULL (Standard)|Die Replikation versucht, den Veröffentlichungstyp zu ermitteln.|  
   
- [  **@mode**  =] *Modus*  
+ [ **@mode** =] *Modus*  
  Der Filterungsmodus, der beim Zurückgeben von Abonnementüberwachungsinformationen verwendet werden soll. *Modus* ist **Int**, und kann einen der folgenden Werte sein.  
   
 |Wert|Description|  
@@ -86,11 +86,11 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
 |**6**|Gibt nur Abonnements zurück, für die zurzeit eine Synchronisierung im Gange ist.|  
 |**7**|Gibt nur Abonnements zurück, für die zurzeit keine Synchronisierung im Gange ist.|  
   
- [  **@topnum**  =] *Topnum*  
+ [ **@topnum** =] *Topnum*  
  Beschränkt das Resultset auf die angegebene Anzahl von Abonnements am Anfang der zurückgegebenen Daten. *Topnum* ist **Int**, hat keinen Standardwert.  
   
- [  **@exclude_anonymous**  =] *Exclude_anonymous*  
- Gibt an, ob anonyme Pullabonnements aus dem Resultset ausgeschlossen werden. *Exclude_anonymous* ist **Bit**, hat den Standardwert **0**; ein Wert vom **1** bedeutet, dass anonyme Abonnements ausgeschlossen, und der Wert  **0** bedeutet, dass sie enthalten sind.  
+ [ **@exclude_anonymous** =] *Exclude_anonymous*  
+ Gibt an, ob anonyme Pullabonnements aus dem Resultset ausgeschlossen werden. *Exclude_anonymous* ist **Bit**, hat den Standardwert **0**; ein Wert vom **1** bedeutet, dass anonyme Abonnements ausgeschlossen, und der Wert **0**  bedeutet, dass sie enthalten sind.  
   
  [  **@refreshpolicy=** ] *Refreshpolicy*  
  Nur interne Verwendung.  
@@ -107,7 +107,7 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
 |**Veröffentlichung**|**sysname**|Ist der Name einer Veröffentlichung.|  
 |**publication_type**|**int**|Ist vom Typ der Veröffentlichung, die folgenden Werte sind möglich:<br /><br /> **0** = transaktionsveröffentlichung<br /><br /> **1** = momentaufnahmeveröffentlichung<br /><br /> **2** = Mergeveröffentlichung|  
 |**Untertyp**|**int**|Der Abonnementtyp, der einen der folgenden Werte haben kann:<br /><br /> **0** = Push<br /><br /> **1** = Pullabonnement<br /><br /> **2** = anonym|  
-|**Latenz**|**int**|Die längste Latenzzeit (in Sekunden) für Datenänderungen, die vom Protokolllese-Agent oder vom Verteilungs-Agent für eine Transaktionsveröffentlichung weitergegeben werden.|  
+|**latency**|**int**|Die längste Latenzzeit (in Sekunden) für Datenänderungen, die vom Protokolllese-Agent oder vom Verteilungs-Agent für eine Transaktionsveröffentlichung weitergegeben werden.|  
 |**"LatencyThreshold"**|**int**|Die maximale Latenzzeit für die Transaktionsveröffentlichung, bei deren Überschreiten eine Warnung ausgegeben wird.|  
 |**agentnotrunning**|**int**|Der Zeitraum (in Stunden), während dem der Agent nicht ausgeführt wird.|  
 |**agentnotrunningthreshold**|**int**|Der Zeitraum (in Stunden), während dem der Agent nicht ausgeführt und bei dessen Erreichen eine Warnung ausgegeben wird.|  

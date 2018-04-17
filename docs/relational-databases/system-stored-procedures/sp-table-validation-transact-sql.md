@@ -1,16 +1,16 @@
 ---
 title: Sp_table_validation (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/08/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_table_validation_TSQL
@@ -18,16 +18,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_table_validation
 ms.assetid: 31b25f9b-9b62-496e-a97e-441d5fd6e767
-caps.latest.revision: 
+caps.latest.revision: 33
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bd5182a0e742db6ef535a30e94ddb2b4da5f669a
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: e4d146cdd2620af70d2fafb6de06341a7bfabf6e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sptablevalidation-transact-sql"></a>sp_table_validation (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -86,9 +86,9 @@ sp_table_validation [ @table = ] 'table'
  Wenn der Verteilungs-Agent ausgeführt wird **Sp_table_validation**, gibt an, ob der Verteilungs-Agent sofort nach Abschluss der Überprüfung heruntergefahren werden soll. *Shutdown_agent* ist **Bit**, hat den Standardwert **0**. Wenn **0**, der Replikations-Agent nicht heruntergefahren. Wenn **1**, Fehler 20578 wird ausgelöst, und der Replikations-Agent ist Signal zum Herunterfahren. Dieser Parameter wird ignoriert, wenn **Sp_table_validation** direkt von einem Benutzer ausgeführt wird.  
   
  [  **@table_name =**] *Table_name*  
- Der Tabellenname der für Ausgabemeldungen verwendeten Sicht. *TABLE_NAME* ist **Sysname**, hat den Standardwert  **@table** .  
+ Der Tabellenname der für Ausgabemeldungen verwendeten Sicht. *TABLE_NAME* ist **Sysname**, hat den Standardwert **@table**.  
   
- [  **@column_list** =] **"***Column_list***"**  
+ [ **@column_list**=] **"***Column_list***"**  
  Die Liste der Spalten, die in der Prüfsummenfunktion verwendet werden sollen. *Column_list* ist **nvarchar(4000)**, hat den Standardwert NULL. Aktiviert die Überprüfung von Mergeartikeln, um eine Spaltenliste anzugeben, die berechnete Spalten und Timestampspalten ausschließt.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
@@ -109,10 +109,10 @@ sp_table_validation [ @table = ] 'table'
  Auszuführende **Sp_table_validation**, benötigen Sie SELECT-Berechtigungen für die zu überprüfende Tabelle.  
   
 ## <a name="see-also"></a>Siehe auch  
- [CHECKSUM &#40; Transact-SQL &#41;](../../t-sql/functions/checksum-transact-sql.md)   
+ [CHECKSUM &#40;Transact-SQL&#41;](../../t-sql/functions/checksum-transact-sql.md)   
  [@@ROWCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/rowcount-transact-sql.md)   
- [Sp_article_validation &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md)   
- [Sp_publication_validation &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-publication-validation-transact-sql.md)   
+ [Sp_article_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md)   
+ [Sp_publication_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-publication-validation-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

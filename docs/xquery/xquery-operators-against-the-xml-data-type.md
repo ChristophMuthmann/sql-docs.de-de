@@ -24,13 +24,13 @@ ms.assetid: 39ca3d2e-e928-4333-872b-75c4ccde8e79
 caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8fc773e1770b907b6eba5e4d09372f0654054d47
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: ac5a80100f76b63286d0744503427f9f58bc0750
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="xquery-operators-against-the-xml-data-type"></a>XQuery-Operatoren für den xml-Datentyp
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -43,14 +43,14 @@ ms.lasthandoff: 12/05/2017
   
 -   Operatoren für allgemeine Vergleiche (=,! =, \<, >, \<=, > =)  
   
- Weitere Informationen zu diesen Operatoren finden Sie unter [Vergleichsausdrücke &#40; XQuery &#41;](../xquery/comparison-expressions-xquery.md)  
+ Weitere Informationen zu diesen Operatoren finden Sie unter [Vergleichsausdrücke &#40;XQuery&#41;](../xquery/comparison-expressions-xquery.md)  
   
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="a-using-general-operators"></a>A. Verwenden von allgemeinen Operatoren  
  Die folgende Abfrage zeigt die Verwendung allgemeiner Operatoren, die für Sequenzen gelten, sowie das Vergleichen von Sequenzen. Die Abfrage ruft eine Sequenz von Rufnummern für jeden Kunden aus der **AdditionalContactInfo** Spalte die **Kontakt** Tabelle. Diese Sequenz wird dann mit der Sequenz von zwei Rufnummern ("111-111-1111", "222-2222") verglichen.  
   
- Die Abfrage verwendet die  **=**  Vergleichsoperator. Jeder Knoten in der Sequenz auf rechts neben der  **=**  Operator wird verglichen, wobei jeder Knoten in der Sequenz auf der linken Seite. Wenn die Knoten entsprechen, der knotenvergleich **"true"**. Der Wert wird anschließend in einen int-Wert konvertiert und mit 1 verglichen; die Abfrage gibt dann die Kunden-ID zurück.  
+ Die Abfrage verwendet die **=** Vergleichsoperator. Jeder Knoten in der Sequenz auf rechts neben der **=** Operator wird verglichen, wobei jeder Knoten in der Sequenz auf der linken Seite. Wenn die Knoten entsprechen, der knotenvergleich **"true"**. Der Wert wird anschließend in einen int-Wert konvertiert und mit 1 verglichen; die Abfrage gibt dann die Kunden-ID zurück.  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -100,7 +100,7 @@ FROM Production.ProductModel
 where ProductModelID=19  
 ```  
   
- Da beide der Operanden den **Eq** Operator atomare Werte sind, wird der wertoperator in der Abfrage verwendet. Sie können die gleiche Abfrage mithilfe des allgemeinen Vergleichsoperators schreiben (  **=**  ).  
+ Da beide der Operanden den **Eq** Operator atomare Werte sind, wird der wertoperator in der Abfrage verwendet. Sie können die gleiche Abfrage mithilfe des allgemeinen Vergleichsoperators schreiben ( **=** ).  
   
 ## <a name="see-also"></a>Siehe auch  
  [XQuery-Funktionen für den Xml-Datentyp](../xquery/xquery-functions-against-the-xml-data-type.md)   

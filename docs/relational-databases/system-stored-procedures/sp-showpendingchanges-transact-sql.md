@@ -1,16 +1,16 @@
 ---
 title: Sp_showpendingchanges (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_showpendingchanges
 ms.assetid: 8013a792-639d-4550-b262-e65d30f9d291
-caps.latest.revision: 
+caps.latest.revision: 17
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a80816191ac9ad2cd9a210c59268b23f4ea3a093
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 54a87a2162049fe6e3ec450a60836afffa406973
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spshowpendingchanges-transact-sql"></a>sp_showpendingchanges (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,16 +52,16 @@ sp_showpendingchanges [ [ @destination_server = ] 'destination_server' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ @destination_server  **=**  ] **"***Destination_server***"**  
+ [ @destination_server **=** ] **"***Destination_server***"**  
  Der Name des Servers, auf dem die replizierten Änderungen angewendet werden. *Destination_server* ist **Sysname**, mit dem Standardwert NULL.  
   
- [ @publication  **=**  ] **"***Veröffentlichung***"**  
+ [ @publication **=** ] **"***Veröffentlichung***"**  
  Der Name der Veröffentlichung. *Veröffentlichung* ist **Sysname**, hat den Standardwert NULL. Wenn *Veröffentlichung* angegeben ist, werden die Ergebnisse auf die angegebene Veröffentlichung beschränkt.  
   
- [ @article  **=**  ] **"***Artikel***"**  
+ [ @article **=** ] **"***Artikel***"**  
  Der Name des Artikels. *Artikel* ist **Sysname**, hat den Standardwert NULL. Wenn *Artikel* angegeben ist, werden die Ergebnisse nur auf den angegebenen Artikel beschränkt.  
   
- [ @show_rows  **=**  ] *Show_rows*  
+ [ @show_rows **=** ] *Show_rows*  
  Gibt an, ob das Resultset spezifischere Informationen zu ausstehenden Änderungen, die mit einem Standardwert von enthält **0**. Wenn ein Wert von **1** angegeben ist, wird das Resultset enthält die Spalten Is_delete und Rowguid.  
   
 ## <a name="result-set"></a>Resultset  

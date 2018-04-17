@@ -1,16 +1,16 @@
 ---
 title: FlagValue-Eigenschaft (ServerSettingsGeneralFlag-Klasse) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: wmi
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - FlagValue Property (ServerSettingsGeneralFlag Class)
@@ -20,16 +20,16 @@ apitype: MOFDef
 helpviewer_keywords:
 - FlagValue property
 ms.assetid: a32f0ef0-f5f6-4e71-96c7-7d4617dedf0e
-caps.latest.revision: 
+caps.latest.revision: 30
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 58322dbf247913eb8403562ef1e1dc41eb4e7f45
-ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
+ms.openlocfilehash: a8caa6c1f613285ad1ca8204c53116a1ec371ef9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="flagvalue-property-serversettingsgeneralflag-class"></a>FlagValue-Eigenschaft (ServerSettingsGeneralFlag-Klasse)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
