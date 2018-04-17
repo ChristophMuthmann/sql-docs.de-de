@@ -1,8 +1,8 @@
 ---
-redirect_url: /sql/connect/oledb/ole-db/sql-server-native-client-ole-db
-ms.openlocfilehash: 8d27e247aa9ede5c0899895c6610c834412c23d6
-ms.sourcegitcommit: 9f4330a4b067deea396b8567747a6771f35e6eee
+redirect_url: /sql/connect/oledb/ole-db/oledb-driver-for-sql-server-programming
+ms.openlocfilehash: 932f118cc33cc4ea8a0f1a20ed9b361e8565f748
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 04/16/2018
 ---
