@@ -1,16 +1,16 @@
 ---
 title: DATABASEPROPERTYEX (Transact-SQL) | Microsoft-Dokumentation
-ms.custom: 
-ms.date: 07/29/2017
+ms.custom: ''
+ms.date: 04/04/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DATABASEPROPERTYEX
@@ -22,16 +22,16 @@ helpviewer_keywords:
 - displaying database properties
 - database properties [SQL Server]
 ms.assetid: 8a9e0ffb-28b5-4640-95b2-a54e3e5ad941
-caps.latest.revision: 
+caps.latest.revision: 84
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a67b74ad595fdf7b6f3a63dbd2ea2c9e5793f54f
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: a04544f76b509e1461d26574cd2179ec63ee5ad8
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="databasepropertyex-transact-sql"></a>DATABASEPROPERTYEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -61,34 +61,34 @@ Ein Ausdruck, der den Namen der zurückzugebenden Datenbankeigenschaft darstellt
 |---|---|---|
 |Sortierung|Standardsortierungsname der Datenbank|Sortierungsname<br /><br /> NULL = Die Datenbank wurde nicht gestartet.<br /><br /> Basisdatentyp: **nvarchar(128)**|  
 |ComparisonStyle|Die Windows-Vergleichsart der Sortierung. ComparisonStyle ist eine Bitmap, die mit den folgenden Werten für die möglichen Formate berechnet wird.<br /><br /> Groß-/Kleinschreibung ignorieren: 1<br /><br /> Akzente ignorieren: 2<br /><br /> Kana ignorieren: 65536<br /><br /> Breite ignorieren: 131072<br /><br /> <br /><br /> Der Standardwert 196.609 ist beispielsweise das Ergebnis der Kombination der Optionen Groß-/Kleinschreibung ignorieren, Kana ignorieren und Breite ignorieren.|Gibt die Vergleichsart zurück.<br /><br /> Gibt für alle binären Sortierungen 0 zurück.<br /><br /> Basisdatentyp: **int**|  
-|Edition|Die Edition oder Dienstebene der Datenbank.|**Gilt für**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].<br /><br /> <br /><br /> Web = Web Edition-Datenbank<br /><br /> Business = Business Edition-Datenbank<br /><br /> Standard<br /><br /> Standard<br /><br /> Premium<br /><br /> System (für die master-Datenbank)<br /><br /> NULL = Die Datenbank wurde nicht gestartet.<br /><br /> Basisdatentyp: **nvarchar**(64)|  
-|IsAnsiNullDefault|Die Datenbank befolgt ISO-Regeln für das Zulassen von NULL-Werten.|1 = TRUE,<br /><br /> 0 = FALSE<br /><br /> NULL = Ungültige Eingabe<br /><br /> Basisdatentyp: **int**|  
-|IsAnsiNullsEnabled|Alle Vergleiche mit einem NULL-Wert werden zu einem unbekannten Wert ausgewertet.|1 = TRUE,<br /><br /> 0 = FALSE<br /><br /> NULL = Ungültige Eingabe<br /><br /> Basisdatentyp: **int**|  
-|IsAnsiPaddingEnabled|Zeichenfolgen werden vor dem Vergleich oder Einfügen auf dieselbe Länge aufgefüllt.|1 = TRUE,<br /><br /> 0 = FALSE<br /><br /> NULL = Ungültige Eingabe<br /><br /> Basisdatentyp: **int**|  
-|IsAnsiWarningsEnabled|Fehler- oder Warnmeldungen werden ausgegeben, wenn Standardfehlerbedingungen auftreten.|1 = TRUE,<br /><br /> 0 = FALSE<br /><br /> NULL = Ungültige Eingabe<br /><br /> Basisdatentyp: **int**|  
-|IsArithmeticAbortEnabled|Abfragen werden beendet, wenn während der Abfrageausführung ein Überlauffehler oder ein Fehler aufgrund einer Division durch Null auftritt.|1 = TRUE,<br /><br /> 0 = FALSE<br /><br /> NULL = Ungültige Eingabe<br /><br /> Basisdatentyp: **int**|  
-|IsAutoClose|Die Datenbank wird ordnungsgemäß heruntergefahren, und Ressourcen werden freigegeben, nachdem der letzte Benutzer die Anwendung beendet hat.|1 = TRUE,<br /><br /> 0 = FALSE<br /><br /> NULL = Ungültige Eingabe<br /><br /> Basisdatentyp: **int**|  
-|IsAutoCreateStatistics|Der Abfrageoptimierer erstellt Statistiken für einzelne Spalten nach Bedarf, um die Abfrageleistung zu verbessern.|1 = TRUE,<br /><br /> 0 = FALSE<br /><br /> NULL = Ungültige Eingabe<br /><br /> Basisdatentyp: **int**|  
-|IsAutoCreateStatisticsIncremental|Automatisch erstellte Statistiken für einzelne Spalten sind inkrementell, falls möglich.|**Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> <br /><br /> 1 = TRUE,<br /><br /> 0 = FALSE<br /><br /> NULL = Ungültige Eingabe<br /><br /> Basisdatentyp: **int**|  
-|IsAutoShrink|Datenbankdateien sind Kandidaten für das automatische periodische Verkleinern.|1 = TRUE,<br /><br /> 0 = FALSE<br /><br /> NULL = Ungültige Eingabe<br /><br /> Basisdatentyp: **int**|  
-|IsAutoUpdateStatistics|Der Abfrageoptimierer aktualisiert vorhandene Statistiken, wenn sie von einer Abfrage verwendet werden und veraltet sein könnten.|1 = TRUE,<br /><br /> 0 = FALSE<br /><br /> NULL = Ungültige Eingabe<br /><br /> Basisdatentyp: **int**|
-|IsClone|Die Datenbank ist nur eine Kopie der Schemas und Statistiken einer Benutzerdatenbank.|**Gilt für:** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Service Pack 2<br /><br /> <br /><br /> 1 = TRUE,<br /><br /> 0 = FALSE<br /><br /> NULL = Ungültige Eingabe<br /><br /> Basisdatentyp: **int**| 
-|IsCloseCursorsOnCommitEnabled|Cursor, die beim Ausführen eines Commits für eine Transaktion geöffnet sind, werden geschlossen.|1 = TRUE,<br /><br /> 0 = FALSE<br /><br /> NULL = Ungültige Eingabe<br /><br /> Basisdatentyp: **int**|  
-|IsFulltextEnabled|Die Datenbank ist für die Volltext- und semantische Indizierung aktiviert.|**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> <br /><br /> 1 = TRUE,<br /><br /> 0 = FALSE<br /><br /> NULL = Ungültige Eingabe<br /><br /> Basisdatentyp: **int**<br /><br /> **Hinweis:** Der Wert dieser Eigenschaft hat keine Auswirkungen. In Benutzerdatenbanken ist die Volltextsuche standardmäßig aktiviert. Diese Spalte wird in zukünftigen Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht mehr bereitgestellt. Verwenden Sie diese Spalte nicht beim Entwickeln neuer Anwendungen, und planen Sie zum frühstmöglichen Zeitpunkt die Umstellung von Anwendungen, in denen diese Spalten zurzeit verwendet werden.|  
-|IsInStandBy|Die Datenbank ist im Schreibschutzmodus online. Die Wiederherstellung des Protokolls ist zulässig.|1 = TRUE,<br /><br /> 0 = FALSE<br /><br /> NULL = Ungültige Eingabe<br /><br /> Basisdatentyp: **int**|  
-|IsLocalCursorsDefault|Cursordeklarationen werden standardmäßig auf LOCAL festgelegt.|1 = TRUE,<br /><br /> 0 = FALSE<br /><br /> NULL = Ungültige Eingabe<br /><br /> Basisdatentyp: **int**|  
-|IsMemoryOptimizedElevateToSnapshotEnabled|Auf speicheroptimierte Tabellen wird mit der SNAPSHOT-Isolation zugegriffen, wenn die Sitzungseinstellung TRANSACTION ISOLATION LEVEL auf eine niedrigere Isolationsstufe festgelegt ist (READ COMMITTED oder READ UNCOMMITTED).|**Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> <br /><br /> 1 = TRUE,<br /><br /> 0 = FALSE<br /><br /> Basisdatentyp: **int**|  
-|IsMergePublished|Die Tabellen einer Datenbank können zur Mergereplikation veröffentlicht werden, wenn die Replikation installiert ist.|1 = TRUE,<br /><br /> 0 = FALSE<br /><br /> NULL = Ungültige Eingabe<br /><br /> Basisdatentyp: **int**|  
-|IsNullConcat|Der Operand für die NULL-Verkettung ergibt NULL.|1 = TRUE,<br /><br /> 0 = FALSE<br /><br /> NULL = Ungültige Eingabe<br /><br /> Basisdatentyp: **int**|  
-|IsNumericRoundAbortEnabled|Fehler werden generiert, wenn ein Genauigkeitsverlust in Ausdrücken auftritt.|1 = TRUE,<br /><br /> 0 = FALSE<br /><br /> NULL = Ungültige Eingabe<br /><br /> Basisdatentyp: **int**|  
-|IsParameterizationForced|Die SET-Option PARAMETERIZATION wurde für die Datenbank auf FORCED festgelegt.|1 = TRUE,<br /><br /> 0 = FALSE<br /><br /> NULL = Ungültige Eingabe|  
-|IsQuotedIdentifiersEnabled|Für Bezeichner können doppelte Anführungszeichen verwendet werden.|1 = TRUE,<br /><br /> 0 = FALSE<br /><br /> NULL = Ungültige Eingabe<br /><br /> Basisdatentyp: **int**|  
-|IsPublished|Falls die Replikation installiert ist, können die Tabellen der Datenbank für die Momentaufnahme- oder Transaktionsreplikation veröffentlicht werden.|1 = TRUE,<br /><br /> 0 = FALSE<br /><br /> NULL = Ungültige Eingabe<br /><br /> Basisdatentyp: **int**|  
-|IsRecursiveTriggersEnabled|Das rekursive Auslösen von Triggern ist aktiviert.|1 = TRUE,<br /><br /> 0 = FALSE<br /><br /> NULL = Ungültige Eingabe<br /><br /> Basisdatentyp: **int**|  
-|IsSubscribed|Die Datenbank wurde für eine Veröffentlichung abonniert.|1 = TRUE,<br /><br /> 0 = FALSE<br /><br /> NULL = Ungültige Eingabe<br /><br /> Basisdatentyp: **int**|  
-|IsSyncWithBackup|Die Datenbank ist entweder eine veröffentlichte oder eine Verteilungsdatenbank. Sie kann ohne Unterbrechung der Transaktionsreplikation wiederhergestellt werden.|1 = TRUE,<br /><br /> 0 = FALSE<br /><br /> NULL = Ungültige Eingabe<br /><br /> Basisdatentyp: **int**|  
-|IsTornPageDetectionEnabled|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] erkennt unvollständige E/A-Vorgänge, die durch Stromausfälle oder andere Systemunterbrechungen verursacht wurden.|1 = TRUE,<br /><br /> 0 = FALSE<br /><br /> NULL = Ungültige Eingabe<br /><br /> Basisdatentyp: **int**|  
-|IsXTPSupported|Gibt an, ob die Datenbank In-Memory-OLTP unterstützt, d.h. das Erstellen und Verwenden von speicheroptimierten Tabellen und nativ kompilierten Modulen.<br /><br /> Spezifisch für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:<br /><br /> IsXTPSupported ist unabhängig von der Existenz von MEMORY_OPTIMIZED_DATA-Dateigruppen, die für die Erstellung von In-Memory-OLTP-Objekten benötigt werden.|**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[ssSDS](../../includes/sssds-md.md)].<br /><br /> **Gilt für**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].<br /><br /> <br /><br /> 1 = TRUE,<br /><br /> 0 = FALSE<br /><br /> NULL = Eingabe ist ungültig, ein Fehler oder nicht anwendbar.<br /><br /> Basisdatentyp: **int**|  
+|Edition|Die Edition oder Dienstebene der Datenbank.|**Gilt für**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].<br /><br /> <br /><br /> Universell<br /><br /> Unternehmenskritisch<br /><br /> Standard<br /><br /> Standard<br /><br /> Premium<br /><br /> System (für die master-Datenbank)<br /><br /> NULL = Die Datenbank wurde nicht gestartet.<br /><br /> Basisdatentyp: **nvarchar**(64)|  
+|IsAnsiNullDefault|Die Datenbank befolgt ISO-Regeln für das Zulassen von NULL-Werten.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = Ungültige Eingabe<br /><br /> Basisdatentyp: **int**|  
+|IsAnsiNullsEnabled|Alle Vergleiche mit einem NULL-Wert werden zu einem unbekannten Wert ausgewertet.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = Ungültige Eingabe<br /><br /> Basisdatentyp: **int**|  
+|IsAnsiPaddingEnabled|Zeichenfolgen werden vor dem Vergleich oder Einfügen auf dieselbe Länge aufgefüllt.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = Ungültige Eingabe<br /><br /> Basisdatentyp: **int**|  
+|IsAnsiWarningsEnabled|Fehler- oder Warnmeldungen werden ausgegeben, wenn Standardfehlerbedingungen auftreten.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = Ungültige Eingabe<br /><br /> Basisdatentyp: **int**|  
+|IsArithmeticAbortEnabled|Abfragen werden beendet, wenn während der Abfrageausführung ein Überlauffehler oder ein Fehler aufgrund einer Division durch Null auftritt.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = Ungültige Eingabe<br /><br /> Basisdatentyp: **int**|  
+|IsAutoClose|Die Datenbank wird ordnungsgemäß heruntergefahren, und Ressourcen werden freigegeben, nachdem der letzte Benutzer die Anwendung beendet hat.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = Ungültige Eingabe<br /><br /> Basisdatentyp: **int**|  
+|IsAutoCreateStatistics|Der Abfrageoptimierer erstellt Statistiken für einzelne Spalten nach Bedarf, um die Abfrageleistung zu verbessern.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = Ungültige Eingabe<br /><br /> Basisdatentyp: **int**|  
+|IsAutoCreateStatisticsIncremental|Automatisch erstellte Statistiken für einzelne Spalten sind inkrementell, falls möglich.|**Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> <br /><br /> 1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = Ungültige Eingabe<br /><br /> Basisdatentyp: **int**|  
+|IsAutoShrink|Datenbankdateien sind Kandidaten für das automatische periodische Verkleinern.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = Ungültige Eingabe<br /><br /> Basisdatentyp: **int**|  
+|IsAutoUpdateStatistics|Der Abfrageoptimierer aktualisiert vorhandene Statistiken, wenn sie von einer Abfrage verwendet werden und veraltet sein könnten.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = Ungültige Eingabe<br /><br /> Basisdatentyp: **int**|
+|IsClone|Die Datenbank ist nur eine Kopie der Schemas und Statistiken einer Benutzerdatenbank.|**Gilt für:** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Service Pack 2<br /><br /> <br /><br /> 1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = Ungültige Eingabe<br /><br /> Basisdatentyp: **int**| 
+|IsCloseCursorsOnCommitEnabled|Cursor, die beim Ausführen eines Commits für eine Transaktion geöffnet sind, werden geschlossen.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = Ungültige Eingabe<br /><br /> Basisdatentyp: **int**|  
+|IsFulltextEnabled|Die Datenbank ist für die Volltext- und semantische Indizierung aktiviert.|**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> <br /><br /> 1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = Ungültige Eingabe<br /><br /> Basisdatentyp: **int**<br /><br /> **Hinweis:** Der Wert dieser Eigenschaft hat keine Auswirkungen. In Benutzerdatenbanken ist die Volltextsuche standardmäßig aktiviert. Diese Spalte wird in zukünftigen Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht mehr bereitgestellt. Verwenden Sie diese Spalte nicht beim Entwickeln neuer Anwendungen, und planen Sie zum frühstmöglichen Zeitpunkt die Umstellung von Anwendungen, in denen diese Spalten zurzeit verwendet werden.|  
+|IsInStandBy|Die Datenbank ist im Schreibschutzmodus online. Die Wiederherstellung des Protokolls ist zulässig.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = Ungültige Eingabe<br /><br /> Basisdatentyp: **int**|  
+|IsLocalCursorsDefault|Cursordeklarationen werden standardmäßig auf LOCAL festgelegt.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = Ungültige Eingabe<br /><br /> Basisdatentyp: **int**|  
+|IsMemoryOptimizedElevateToSnapshotEnabled|Auf speicheroptimierte Tabellen wird mit der SNAPSHOT-Isolation zugegriffen, wenn die Sitzungseinstellung TRANSACTION ISOLATION LEVEL auf eine niedrigere Isolationsstufe festgelegt ist (READ COMMITTED oder READ UNCOMMITTED).|**Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> <br /><br /> 1 = TRUE<br /><br /> 0 = FALSE<br /><br /> Basisdatentyp: **int**|  
+|IsMergePublished|Die Tabellen einer Datenbank können zur Mergereplikation veröffentlicht werden, wenn die Replikation installiert ist.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = Ungültige Eingabe<br /><br /> Basisdatentyp: **int**|  
+|IsNullConcat|Der Operand für die NULL-Verkettung ergibt NULL.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = Ungültige Eingabe<br /><br /> Basisdatentyp: **int**|  
+|IsNumericRoundAbortEnabled|Fehler werden generiert, wenn ein Genauigkeitsverlust in Ausdrücken auftritt.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = Ungültige Eingabe<br /><br /> Basisdatentyp: **int**|  
+|IsParameterizationForced|Die SET-Option PARAMETERIZATION wurde für die Datenbank auf FORCED festgelegt.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = Ungültige Eingabe|  
+|IsQuotedIdentifiersEnabled|Für Bezeichner können doppelte Anführungszeichen verwendet werden.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = Ungültige Eingabe<br /><br /> Basisdatentyp: **int**|  
+|IsPublished|Falls die Replikation installiert ist, können die Tabellen der Datenbank für die Momentaufnahme- oder Transaktionsreplikation veröffentlicht werden.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = Ungültige Eingabe<br /><br /> Basisdatentyp: **int**|  
+|IsRecursiveTriggersEnabled|Das rekursive Auslösen von Triggern ist aktiviert.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = Ungültige Eingabe<br /><br /> Basisdatentyp: **int**|  
+|IsSubscribed|Die Datenbank wurde für eine Veröffentlichung abonniert.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = Ungültige Eingabe<br /><br /> Basisdatentyp: **int**|  
+|IsSyncWithBackup|Die Datenbank ist entweder eine veröffentlichte oder eine Verteilungsdatenbank. Sie kann ohne Unterbrechung der Transaktionsreplikation wiederhergestellt werden.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = Ungültige Eingabe<br /><br /> Basisdatentyp: **int**|  
+|IsTornPageDetectionEnabled|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] erkennt unvollständige E/A-Vorgänge, die durch Stromausfälle oder andere Systemunterbrechungen verursacht wurden.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = Ungültige Eingabe<br /><br /> Basisdatentyp: **int**|  
+|IsXTPSupported|Gibt an, ob die Datenbank In-Memory-OLTP unterstützt, d.h. das Erstellen und Verwenden von speicheroptimierten Tabellen und nativ kompilierten Modulen.<br /><br /> Spezifisch für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:<br /><br /> IsXTPSupported ist unabhängig von der Existenz von MEMORY_OPTIMIZED_DATA-Dateigruppen, die für die Erstellung von In-Memory-OLTP-Objekten benötigt werden.|**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[ssSDS](../../includes/sssds-md.md)].<br /><br /> **Gilt für**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].<br /><br /> <br /><br /> 1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = Eingabe ist ungültig, ein Fehler oder nicht anwendbar.<br /><br /> Basisdatentyp: **int**|  
 |LCID|Der Windows-Gebietsschemabezeichner (Locale Identifier, LCID) der Sortierung.|LCID-Wert (im Dezimalformat).<br /><br /> Basisdatentyp: **int**|  
 |MaxSizeInBytes|Maximale Datenbankgröße in Bytes.|**Gilt für**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].<br /><br /> <br /><br /> 1073741824<br /><br /> 5368709120<br /><br /> 10737418240<br /><br /> 21474836480<br /><br /> 32212254720<br /><br /> 42949672960<br /><br /> 53687091200<br /><br /> NULL = Die Datenbank wurde nicht gestartet<br /><br /> Basisdatentyp: **bigint**|  
 |Wiederherstellung|Wiederherstellungsmodell für die Datenbank.|FULL = Vollständiges Wiederherstellungsmodell<br /><br /> BULK_LOGGED = Massenprotokolliertes Modell<br /><br /> SIMPLE = Einfaches Wiederherstellungsmodell<br /><br /> Basisdatentyp: **nvarchar(128)**|  

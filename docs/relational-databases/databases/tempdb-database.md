@@ -1,16 +1,16 @@
 ---
 title: tempdb-Datenbank | Microsoft-Dokumentation
-description: "Dieser Artikel enthält Details zur Konfiguration und Verwendung der tempdb-Datenbank in SQL Server und Azure SQL-Datenbank."
+description: Dieser Artikel enthält Details zur Konfiguration und Verwendung der tempdb-Datenbank in SQL Server und Azure SQL-Datenbank.
 ms.custom: P360
 ms.date: 12/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: databases
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - temporary tables [SQL Server], tempdb database
@@ -22,14 +22,15 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.reviewer: carlrab
-ms.openlocfilehash: 813f361d52b4f4bbd3a9b9f5693278d08ac9432c
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 33bbb4114d0be681030d288851d169704210fcde
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="tempdb-database"></a>tempdb-Datenbank
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Die **tempdb**-Systemdatenbank ist eine globale Ressource, die für alle Benutzer verfügbar ist, die mit der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder mit SQL-Datenbank verbunden sind. Tempdb wird verwendet, um Folgendes zu speichern:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+  Die **tempdb**-Systemdatenbank ist eine globale Ressource, die für alle Benutzer verfügbar ist, die mit der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder mit SQL-Datenbank verbunden sind. Tempdb wird verwendet, um Folgendes zu speichern:  
   
 - Temporäre **Benutzerobjekte**, die explizit erstellt werden, z.B. globale oder lokale temporäre Tabellen und Indizes, temporäre gespeicherte Prozeduren, Tabellenvariablen, in Tabellenwertfunktionen zurückgegebene Tabellen oder Cursor.  
 - **Interne Objekte**, die von der Datenbank-Engine erstellt werden. Dazu gehören:
@@ -105,6 +106,9 @@ Vorgänge innerhalb von **tempdb** werden minimal protokolliert, sodass ein Roll
   
 ## <a name="tempdb-database-in-sql-database"></a>Tempdb-Datenbank in SQL-Datenbank
 
+
+### <a name="tempdb-sizes-for-dtu-based-service-tiers"></a>Tempdb-Größen für DTU-basierte Diensttarife
+
 |SLO|Maximale Dateigröße für tempdb-Daten (MB)|Anzahl von tempdb-Datendateien|Maximale Datengröße für tempdb (MB)|
 |---|---:|---:|---:|
 |Standard|14,225|1|14,225|
@@ -128,6 +132,9 @@ Vorgänge innerhalb von **tempdb** werden minimal protokolliert, sodass ein Roll
 |Elastischer Basic-Pool (alle DTU-Konfigurationen)|14,225|12|170,700| 
 ||||
 
+### <a name="tempdb-sizes-for-vcore-based-service-tiers"></a>Tempdb-Größen für auf virtuellen Kern basierende Diensttarife
+
+Siehe auf virtuellen Kern basierende Ressourcenlimits](https://review.docs.microsoft.com/azure/sql-database/sql-database-vcore-resource-limits)
 
 ## <a name="restrictions"></a>Restrictions  
  Die folgenden Operationen können mit der **tempdb** -Datenbank nicht ausgeführt werden:  

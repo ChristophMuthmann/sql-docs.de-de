@@ -1,16 +1,16 @@
 ---
 title: Tabellenhinweise (Transact-SQL) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 08/31/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|queries
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - TABLE_HINT_TSQL
@@ -39,16 +39,16 @@ helpviewer_keywords:
 - NOEXPAND table hint
 - PAGLOCK table hint
 ms.assetid: 8bf1316f-c0ef-49d0-90a7-3946bc8e7a89
-caps.latest.revision: 
+caps.latest.revision: 174
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: ea3f60e74aeb855a0d168646c341a1f6a8d7104c
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 036b2c26536aaa1257bfbb41075d570149b04e54
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="hints-transact-sql---table"></a>Hinweise (Transact-SQL): Tabelle
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -129,7 +129,7 @@ WITH  ( <table_hint> [ [, ]...n ] )
 ```  
   
 ## <a name="arguments"></a>Argumente  
- WITH **(** \<table_hint> **)** [ [**,** ]...*n* ]  
+ WITH **(** \<<table_hint>**)** [ [**,** ]...*n* ]  
  Bis auf einige Ausnahmen werden Tabellenhinweise nur dann in der FROM-Klausel unterstützt, wenn die Hinweise mit dem WITH-Schlüsselwort angegeben werden. Tabellenhinweise müssen zudem mit Klammern angegeben werden.  
   
 > [!IMPORTANT]  
@@ -137,13 +137,13 @@ WITH  ( <table_hint> [ [, ]...n ] )
   
  Die folgenden Tabellentipps sind mit und ohne WITH-Schlüsselwort zulässig: NOLOCK, READUNCOMMITTED, UPDLOCK, REPEATABLEREAD, SERIALIZABLE, READCOMMITTED, TABLOCK, TABLOCKX, PAGLOCK, ROWLOCK, NOWAIT, READPAST, XLOCK, SNAPSHOT und NOEXPAND. Wenn diese Tabellenhinweise ohne das WITH-Schlüsselwort angegeben werden, sollten die Hinweise allein angegeben werden. Zum Beispiel:  
   
-```  
+```sql  
 FROM t (TABLOCK)  
 ```  
   
  Wenn der Hinweis mit einer anderen Option angegeben wird, muss er mit dem WITH-Schlüsselwort angegeben werden:  
   
-```  
+```sql  
 FROM t WITH (TABLOCK, INDEX(myindex))  
 ```  
   
@@ -155,7 +155,7 @@ FROM t WITH (TABLOCK, INDEX(myindex))
  NOEXPAND  
  Gibt an, dass indizierte Sichten nicht für den Zugriff auf zugrunde liegende Tabellen erweitert werden, wenn der Abfrageoptimierer die Abfrage verarbeitet. Der Abfrageoptimierer behandelt die Sicht wie eine Tabelle mit einem gruppierten Index. NOEXPAND gilt nur für indizierte Sichten. Weitere Informationen finden Sie in den Hinweisen.  
   
- INDEX  **(***index_value* [**,**... *n* ] ) | INDEX =  ( *index_value***)**  
+ INDEX **(***index_value* [**,**... *n* ] ) | INDEX =  ( *index_value***)**  
  Mit der INDEX()-Syntax werden die Namen oder IDs der Indizes angegeben, die der Abfrageoptimierer beim Verarbeiten der Anweisung verwenden soll. Die alternative INDEX = Syntax gibt einen einzigen Indexwert an. Pro Tabelle ist nur ein Indexhinweis zulässig.  
   
  Falls ein gruppierter Index vorhanden ist, erzwingt INDEX(0) einen Scan des gruppierten Index, und INDEX(1) erzwingt einen Scan des gruppierten Index oder eine Suche im gruppierten Index. Falls kein gruppierter Index vorhanden ist, erzwingt INDEX(0) einen Tabellenscan, und INDEX(1) wird als Fehler interpretiert.  
@@ -203,7 +203,7 @@ FROM t WITH (TABLOCK, INDEX(myindex))
 |Mit einem INDEX-Hinweis kombiniert|`FROM dbo.MyTable WITH (FORCESEEK, INDEX (MyIndex))`|Der Abfrageoptimierer berücksichtigt nur Indexsuchvorgänge für den Zugriff auf die Tabelle oder Sicht über den angegebenen Index.|  
 |Durch Angabe eines Index und von Indexspalten parametrisiert|`FROM dbo.MyTable WITH (FORCESEEK (MyIndex (col1, col2, col3)))`|Der Abfrageoptimierer berücksichtigt nur Indexsuchvorgänge für den Zugriff auf die Tabelle oder Sicht über den angegebenen Index mit mindestens den angegebenen Indexspalten.|  
   
- Beachten Sie bei Verwendung des FORCESEEK-Hinweises (mit oder ohne Parameter) die folgenden Richtlinien:  
+Beachten Sie bei Verwendung des FORCESEEK-Hinweises (mit oder ohne Parameter) die folgenden Richtlinien:  
   
 -   Der Hinweis kann als Tabellenhinweis oder Abfragehinweis angegeben werden. Weitere Informationen zu Abfragehinweisen finden Sie unter [Abfragehinweise &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md).  
   
@@ -215,7 +215,7 @@ FROM t WITH (TABLOCK, INDEX(myindex))
   
 -   Wenn die Verwendung von FORCESEEK bewirkt, dass kein Plan gefunden wird, dann wird der Fehler 8622 zurückgegeben.  
   
- Bei Angabe von FORCESEEK mit Indexparametern gelten die folgenden Richtlinien und Einschränkungen:  
+Bei Angabe von FORCESEEK mit Indexparametern gelten die folgenden Richtlinien und Einschränkungen:  
   
 -   Der Hinweis kann nicht für Tabellen angegeben werden, die Ziel einer INSERT-, UPDATE- oder DELETE-Anweisung sind.  
   
@@ -351,7 +351,7 @@ FROM t WITH (TABLOCK, INDEX(myindex))
   
  Auf die speicheroptimierte Tabelle wird unter der SNAPSHOT-Isolation zugegriffen. SNAPSHOT kann nur mit speicheroptimierten Tabellen verwendet werden (nicht mit datenträgerbasierten Tabellen). Weitere Informationen finden Sie unter [Einführung in speicheroptimierte Tabellen](../../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md).  
   
-```  
+```sql 
 SELECT * FROM dbo.Customers AS c   
 WITH (SNAPSHOT)   
 LEFT JOIN dbo.[Order History] AS oh   
@@ -403,7 +403,7 @@ LEFT JOIN dbo.[Order History] AS oh
 ## <a name="filtered-index-hints"></a>Gefilterte Indexhinweise  
  Ein gefilterter Index kann als Tabellenhinweis verwendet werden, bewirkt jedoch, dass der Abfrageoptimierer den Fehler 8622 generiert, wenn er nicht alle Zeilen abdeckt, die durch die Abfrage ausgewählt werden. Es folgt ein Beispiel für einen ungültigen gefilterten Indexhinweis. Im folgenden Beispiel wird der gefilterte Index `FIBillOfMaterialsWithComponentID` erstellt und anschließend als Indexhinweis für eine SELECT-Anweisung verwendet. Das gefilterte Indexprädikat schließt Datenzeilen für die ComponentIDs 533, 324 und 753 ein. Das Abfrageprädikat schließt ebenfalls Datenzeilen für die ComponentIDs 533, 324 und 753 ein, erweitert das Resultset jedoch um die ComponentIDs 855 und 924, die nicht im gefilterten Index enthalten sind. Deshalb kann der Abfrageoptimierer den gefilterten Indexhinweis nicht verwenden und generiert den Fehler 8622. Weitere Informationen finden Sie unter [Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md).  
   
-```  
+```sql  
 IF EXISTS (SELECT name FROM sys.indexes  
     WHERE name = N'FIBillOfMaterialsWithComponentID'   
     AND object_id = OBJECT_ID(N'Production.BillOfMaterials'))  
@@ -442,7 +442,7 @@ GO
  Damit der Optimierer einen Index für eine indizierte Sicht verwendet, geben Sie die Option NOEXPAND an. Dieser Hinweis kann nur dann verwendet werden, wenn die Sicht ebenfalls in der Abfrage angegeben wurde. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt keinen Hinweis zur Verfügung, um die Verwendung einer bestimmten indizierten Sicht in einer Abfrage, die die Sicht nicht direkt in der FROM-Klausel benennt, zu erzwingen. Der Abfrageoptimierer zieht jedoch die Verwendung indizierter Sichten in Erwägung, selbst wenn in der Abfrage nicht direkt auf sie verwiesen wird.  
   
 ## <a name="using-a-table-hint-as-a-query-hint"></a>Verwenden eines Tabellenhinweises als Abfragehinweis  
- *Tabellenhinweise* können mit der OPTION (TABLE HINT)-Klausel auch als Abfragehinweis angegeben werden. Es wird empfohlen, einen Tabellenhinweis nur im Kontext einer [Planhinweisliste](../../relational-databases/performance/plan-guides.md) als einen Abfragehinweis zu verwenden. Für Ad-hoc-Abfragen geben Sie diese Hinweise nur als Tabellenhinweise an. Weitere Informationen finden Sie unter [Abfragehinweise &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md).  
+ *Tabellenhinweise* können mit der OPTION (TABLE HINT)-Klausel auch als Abfragehinweis angegeben werden. Es wird empfohlen, einen Tabellenhinweis nur im Kontext einer [Planhinweisliste](../../relational-databases/performance/plan-guides.md) als Abfragehinweis zu verwenden. Für Ad-hoc-Abfragen geben Sie diese Hinweise nur als Tabellenhinweise an. Weitere Informationen finden Sie unter [Abfragehinweise &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md).  
   
 ## <a name="permissions"></a>Berechtigungen  
  Für die KEEPIDENTITY, IGNORE_CONSTRAINTS- und IGNORE_TRIGGERS-Hinweise werden ALTER-Berechtigungen für die Tabelle benötigt.  
@@ -463,7 +463,7 @@ GO
 ### <a name="b-using-the-forceseek-hint-to-specify-an-index-seek-operation"></a>B. Verwenden des FORCESEEK-Hinweises zum Angeben eines Indexsuchvorgangs  
  Im folgenden Beispiel wird der Abfrageoptimierer mithilfe des FORCESEEK-Tipps ohne Indexangabe gezwungen, einen Indexsuchvorgang in der `Sales.SalesOrderDetail`-Tabelle in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Datenbank durchzuführen.  
   
-```  
+```sql
 SELECT *  
 FROM Sales.SalesOrderHeader AS h  
 INNER JOIN Sales.SalesOrderDetail AS d WITH (FORCESEEK)  

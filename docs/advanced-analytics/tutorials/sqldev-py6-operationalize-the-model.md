@@ -1,28 +1,17 @@
 ---
-title: 'Schritt 6: Operationalisieren die Python-Modell mithilfe von SQL Server | Microsoft Docs'
-ms.custom: ''
-ms.date: 10/17/2017
-ms.reviewer: ''
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: ''
-ms.technology: ''
-ms.tgt_pltfrm: ''
+title: Schritt 6 Operationalisieren die Python-Modell mithilfe von SQL Server | Microsoft Docs
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
 ms.topic: tutorial
-applies_to:
-- SQL Server 2017
-dev_langs:
-- Python
-- TSQL
-ms.author: heidist
 author: HeidiSteen
+ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: a93461ee03122a3bf70dc37cc2d0f639531d1bcf
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: aedd6beeb720c24a6960950abc6a29c1bf89a5fa
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="step-6-operationalize-the-python-model-using-sql-server"></a>Schritt 6: Operationalisieren Sie die Python-Modell mithilfe von SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -332,7 +321,7 @@ GO
 Nachdem Sie die gespeicherten Prozeduren erstellt wurden, ist es einfach, eine Bewertung, die basierend auf einem Modell zu generieren. Öffnen Sie einfach ein neues **Abfrage** Fenster und eingeben oder Einfügen von Parametern für jede der merkmalspalten. Die sieben erforderlichen Werte für diese Funktion Spalten, in Reihenfolge sind:
     
 + *passenger_count*
-+ *trip_distance* v*trip_time_in_secs*
++ *Trip_distance* v*Trip_time_in_secs*
 + *pickup_latitude*
 + *pickup_longitude*
 + *dropoff_latitude*
