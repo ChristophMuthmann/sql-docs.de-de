@@ -1,16 +1,16 @@
 ---
 title: ASCII (Transact-SQL) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ASCII_TSQL
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - code [SQL Server], ASCII
 - leftmost character of expression
 ms.assetid: 45c2044a-0593-4805-8bae-0fad4bde2e6b
-caps.latest.revision: 
+caps.latest.revision: 37
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: b933f33b8eb6b3909eaf7cb0afcd8bfe19862dee
-ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.openlocfilehash: 31edb66f5d213a7b2241f5f97d9733cb9e0cb523
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="ascii-transact-sql"></a>ASCII (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -55,10 +55,10 @@ Ein [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) des Ty
  **int**  
   
 ## <a name="remarks"></a>Remarks
-Die Abkürzung ASCII steht für American Standard Code for Information Interchange. Dabei handelt es sich um einen Zeichencodierungsstandard, der von Computern verwendet wird. Eine Liste mit ASCII-Zeichen finden Sie im Abschnitt **Printable characters (Darstellbare Zeichen)** des [ASCII](https://www.wikipedia.org/wiki/ASCII)-Artikels.
+Die Abkürzung ASCII steht für **A**merican **S**tandard **C**ode for **I**nformation **I**nterchange. Es dient als ein Zeichencodierungsstandard für moderne Computer. Eine Liste mit ASCII-Zeichen finden Sie im Abschnitt **Printable characters (Darstellbare Zeichen)** des Artikels [ASCII](https://www.wikipedia.org/wiki/ASCII).
 
 ## <a name="examples"></a>Beispiele  
-Im folgenden Beispiel, in dem von einem ASCII-Zeichensatz ausgegangen wird, wird der Wert `ASCII` für sechs Zeichen zurückgegeben.
+In diesem Beispiel, in dem von einem ASCII-Zeichensatz ausgegangen wird, wird der Wert `ASCII` für sechs Zeichen zurückgegeben.
   
 ```sql
 SELECT ASCII('A') AS A, ASCII('B') AS B,   

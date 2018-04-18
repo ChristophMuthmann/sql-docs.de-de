@@ -1,16 +1,16 @@
 ---
 title: CREATE COLUMNSTORE INDEX (Transact-SQL) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE_COLUMNSTORE_INDEX_TSQL
@@ -31,16 +31,16 @@ helpviewer_keywords:
 - CREATE COLUMNSTORE INDEX statement
 - CREATE INDEX statement
 ms.assetid: 7e1793b3-5383-4e3d-8cef-027c0c8cb5b1
-caps.latest.revision: 
+caps.latest.revision: 76
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: ccf03c6b2d3d7798f3bad65b340657bf2b21b751
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 461809bcf59b143f39d62b4cca7919a09168638f
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -320,13 +320,13 @@ Die SET-Optionen in der Spalte Erforderlicher Wert sind immer dann erforderlich,
 -   TINYINT  
 -   bit  
 -   nvarchar [ ( *n* ) ] 
--   nvarchar(max)  (Gilt für [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] und Azure SQL-Datenbank zum Premiumtarif, nur in gruppierten Columnstore-Indizes)   
+-   nvarchar(max) (Gilt für [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)], den Premium-Tarif und den Standard-Tarif (S3 und höher) sowie alle Tarife der vCore-Angebote, ausschließlich in gruppierten Columnstore-Indizes)   
 -   nchar [ ( *n* ) ]  
 -   varchar [ ( *n* ) ]  
--   varchar(max)  (Gilt für [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] und Azure SQL-Datenbank zum Premiumtarif, nur in gruppierten Columnstore-Indizes)
+-   varchar(max) (Gilt für [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)], den Premium-Tarif und den Standard-Tarif (S3 und höher) sowie alle Tarife der vCore-Angebote, ausschließlich in gruppierten Columnstore-Indizes)
 -   char [ ( *n* ) ]  
 -   varbinary [ ( *n* ) ] 
--   varbinary(max)  (Gilt für [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] und Azure SQL-Datenbank zum Premiumtarif, nur in gruppierten Columnstore-Indizes)
+-   varbinary (max) (Gilt für [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] und Azure SQL Database zum Premium- und Standard-Tarif (S3 und höher) sowie alle Tarife der vCore-Angebote, ausschließlich in gruppierten Columnstore-Indizes)
 -   binary [ ( *n* ) ]  
 -   uniqueidentifier  (Gilt für [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und höher)
   
@@ -349,7 +349,7 @@ Wenn die zugrunde liegende Tabelle eine Spalte enthält, die einen Datentyp aufw
 -   Kann nicht mithilfe der **ALTER INDEX**-Anweisung geändert werden. Um den nicht gruppierten Index zu ändern, müssen Sie stattdessen den columnstore-Index löschen und neu erstellen. Sie können einen Columnstore-Index mithilfe von **ALTER INDEX** deaktivieren und neu erstellen.  
 -   Kann nicht mit dem Schlüsselwort **INCLUDE** erstellt werden.  
 -   Darf nicht das Schlüsselwort **ASC** oder das Schlüsselwort **DESC** zum Sortieren des Index enthalten. Columnstore-Indizes werden gemäß den Komprimierungsalgorithmen sortiert. Durch die Sortierung würden viele der Leistungsvorteile entfernt werden.  
--   Darf keine LOB-Spalten (Large Object) vom Typ nvarchar(max), varchar(max) bzw. varbinary(max) in gruppierten Columnstore-Indizes enthalten. LOB-Datentypen werden in gruppierten Columnstore-Indizes nur von Versionen ab [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] und von der Azure SQL-Datenbank mit konfiguriertem Premium-Tarif unterstützt. Frühere Versionen unterstützen LOB-Datentypen in gruppierten und nicht gruppierten Columnstore-Indizes nicht.
+-   Darf keine LOB-Spalten (Large Object) vom Typ nvarchar(max), varchar(max) bzw. varbinary(max) in gruppierten Columnstore-Indizes enthalten. LOB-Datentypen werden in gruppierten Columnstore-Indizes nur von Versionen ab [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] und von der Azure SQL-Datenbank mit konfiguriertem Premium- und Standard-Tarif (S3 und höher) sowie allen Angebotstarifen unterstützt. Frühere Versionen unterstützen LOB-Datentypen in gruppierten und nicht gruppierten Columnstore-Indizes nicht.
 
 
  **Columnstore-Indizes können mit den folgenden Features nicht kombiniert werden:**  

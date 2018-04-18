@@ -1,16 +1,16 @@
 ---
 title: ASIN (Transact-SQL) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ASIN_TSQL
@@ -22,21 +22,21 @@ helpviewer_keywords:
 - sine
 - arcsine
 ms.assetid: 6256dd7d-83d5-486e-a933-1d59afc7e417
-caps.latest.revision: 
+caps.latest.revision: 35
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 687c8bfde3b2f78d0136044ebe75c7206cb31d90
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 19cffa5a72ded3ac274fd032fd97a664bd57c09c
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="asin-transact-sql"></a>ASIN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Gibt den Winkel im Bogenmaß (Radiant) zurück, dessen Sinus dem angegebenen **float**-Ausdruck entspricht. Dies wird auch als Arkussinus bezeichnet.
+Eine Funktion, die den Winkel im Bogenmaß zurück gibt, dessen Sinus dem angegebenen **float**-Ausdruck entspricht. Dies wird auch als **Arkussinus** bezeichnet.
   
 ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -48,13 +48,13 @@ ASIN ( float_expression )
   
 ## <a name="arguments"></a>Argumente  
 *float_expression*  
-Ein [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) vom Typ **float** oder von einem Typ, der implizit in float konvertiert werden kann, mit einem Wert von -1 bis 1. Bei Werten außerhalb dieses Bereichs wird NULL zurückgegeben und ein Domänenfehler gemeldet.
+Ein [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) vom Typ **float** oder von einem Typ, der implizit in float konvertiert werden kann. Nur ein Wert von -1,00 bis 1,00 ist gültig. Bei Werten außerhalb dieses Bereichs wird NULL zurückgegeben und ASIN meldet einen Domänenfehler.
   
 ## <a name="return-types"></a>Rückgabetypen
 **float**
   
 ## <a name="examples"></a>Beispiele  
-Im folgenden Beispiel wird ein **float**-Ausdruck verwendet und der ASIN des angegebenen Winkels zurückgegeben.
+In diesem Beispiel wird ein **float**-Ausdruck verwendet und der ASIN-Wert des angegebenen Winkels zurückgegeben.
   
 ```sql
 /* The first value will be -1.01. This fails because the value is   
@@ -96,13 +96,13 @@ The ASIN of the angle is: 0.147811
 ```  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
-Das folgende Beispiel gibt den Arkussinus von 1,00 zurück.
+In diesem Beispiel wird ein Arkussinus von 1,00 zurückgegeben.
   
 ```sql
 SELECT ASIN(1.00) AS asinCalc;  
 ```  
   
-Im folgenden Beispiel wird ein Fehler zurückgegeben, da der Arkussinus für einen Wert außerhalb des zulässigen Bereichs erforderlich ist.
+In diesem Beispiel wird ein Fehler zurückgegeben, da der Arkussinus für einen Wert außerhalb des zulässigen Bereichs erforderlich ist.
   
 ```sql
 SELECT ASIN(1.1472738) AS asinCalc;  

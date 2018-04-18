@@ -1,16 +1,16 @@
 ---
 title: ALTER INDEX (Transact-SQL) | Microsoft-Dokumentation
-ms.custom: 
-ms.date: 11/24/2017
+ms.custom: ''
+ms.date: 04/03/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: tsql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER INDEX
@@ -48,16 +48,16 @@ helpviewer_keywords:
 - index rebuild [SQL Server]
 - index reorganize [SQL Server]
 ms.assetid: b796c829-ef3a-405c-a784-48286d4fb2b9
-caps.latest.revision: 
+caps.latest.revision: 222
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: a5bf734d607c6954c1652df9b9814a31b2224740
-ms.sourcegitcommit: 0a9c29c7576765f3b5774b2e087852af42ef4c2d
+ms.openlocfilehash: ed76514d94521f8efefdbcc0dda4f51aaeb871fd
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -330,7 +330,7 @@ PAD_INDEX = { ON | OFF }
  ON  
  Der Prozentsatz des mit FILLFACTOR angegebenen freien Speicherplatzes wird für die Zwischenebenenseiten des Indexes angewendet. Wenn FILLFACTOR nicht zu dem Zeitpunkt angegeben wird, an dem PAD_INDEX auf ON festgelegt wird, wird der in [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) gespeicherte Füllfaktorwert verwendet.  
   
- OFF oder *fillfactor* ist nicht angegeben.  
+ OFF oder *fillfactor* ist nicht angegeben  
  Die Zwischenebenenseiten werden nahezu vollständig gefüllt. Dabei bleibt genügend Platz für mindestens eine Zeile der maximal zulässigen Größe eines Indexes erhalten. Dies erfolgt auf der Grundlage des Schlüsselsatzes in den Zwischenseiten.  
   
  Weitere Informationen finden Sie unter [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).  
@@ -355,7 +355,7 @@ FILLFACTOR = *fillfactor*
  Gibt an, ob die Ergebnisse der Sortierung in **tempdb** gespeichert werden sollen. Der Standardwert ist OFF.  
   
  ON  
- Die Zwischenergebnisse der Sortierung, mit denen der Index erstellt wird, werden in **tempdb** gespeichert. Wenn sich **tempdb** auf einem anderen Datenträgersatz befindet als die Benutzerdatenbank, kann die zum Erstellen eines Index erforderliche Zeit reduziert werden. Sie erhöht jedoch den Betrag an Speicherplatz, der während der Indexerstellung verwendet wird.  
+ Die Zwischenergebnisse von Sortierungen, mit denen der Index erstellt wird, werden in **tempdb** gespeichert. Wenn sich **tempdb** auf einem anderen Datenträgersatz befindet als die Benutzerdatenbank, kann die zum Erstellen eines Index erforderliche Zeit reduziert werden. Sie erhöht jedoch den Betrag an Speicherplatz, der während der Indexerstellung verwendet wird.  
   
  OFF  
  Die Zwischenergebnisse der Sortierung werden in derselben Datenbank gespeichert wie der Index.  
@@ -375,7 +375,7 @@ FILLFACTOR = *fillfactor*
   
  IGNORE_DUP_KEY kann für Indizes, die für eine Sicht erstellt werden, für nicht eindeutige Indizes, XML-Indizes sowie für räumliche und gefilterte Indizes nicht auf ON festgelegt werden.  
   
- Verwenden Sie zum Anzeigen von IGNORE_DUP_KEY [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md).  
+ Um IGNORE_DUP_KEY anzuzeigen, verwenden Sie [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md).  
   
  In abwärtskompatibler Syntax ist WITH IGNORE_DUP_KEY gleichwertig mit WITH IGNORE_DUP_KEY = ON.  
   
@@ -481,7 +481,7 @@ ALLOW_PAGE_LOCKS **=** { **ON** | OFF }
  
 **Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) und [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
- Überschreibt die Konfigurationsoption **Max. Grad an Parallelität** für die Dauer des Indexvorgangs. Weitere Informationen finden Sie unter [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). Sie können mit MAXDOP die Anzahl der Prozessoren begrenzen, die bei der Ausführung paralleler Pläne verwendet werden. Maximal sind 64 Prozessoren zulässig.  
+ Überschreibt die Konfigurationsoption **max degree of parallelism** (Max. Grad an Parallelität) für die Dauer des Indexvorgangs. Weitere Informationen finden Sie unter [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). Sie können mit MAXDOP die Anzahl der Prozessoren begrenzen, die bei der Ausführung paralleler Pläne verwendet werden. Maximal sind 64 Prozessoren zulässig.  
   
 > [!IMPORTANT]
 >  Obwohl die MAXDOP-Option syntaktisch für alle XML-Indizes unterstützt wird, verwendet ALTER INDEX gegenwärtig für einen räumlichen Index oder einen primären XML-Index nur einen einzelnen Prozessor.  
@@ -536,7 +536,7 @@ Der Standardwert ist 0 Minuten.
   
  Gilt nur für columnstore-Indizes, einschließlich nicht gruppierter und gruppierter columnstore-Indizes. Durch COLUMNSTORE_ARCHIVE wird die angegebene Partition weiter in eine geringere Größe komprimiert. Dies empfiehlt sich bei der Archivierung und in Situationen, in denen es auf eine geringere Speichergröße und nicht auf den zusätzlichen Zeitaufwand für das Speichern und Abrufen ankommt.  
   
- Weitere Informationen zur Komprimierung finden Sie unter [Datenkomprimierung](../../relational-databases/data-compression/data-compression.md).  
+ Weitere Informationen zur Datenkomprimierung finden Sie unter [Datenkomprimierung](../../relational-databases/data-compression/data-compression.md).  
   
  ON PARTITIONS **(** { \<partition_number_expression> | \<range> } [**,**...n] **)**  
     
@@ -544,7 +544,7 @@ Der Standardwert ist 0 Minuten.
   
  Gibt die Partitionen an, für die die DATA_COMPRESSION-Einstellung gilt. Wenn der Index nicht partitioniert ist, erzeugt das ON PARTITIONS-Argument einen Fehler. Wenn die ON PARTITIONS-Klausel nicht angegeben wird, gilt die DATA_COMPRESSION-Option für alle Partitionen eines partitionierten Indexes.  
   
- \<partition_number_expression> kann auf folgende Weise angegeben werden:  
+ \<partition_number_expression> kann auf die folgenden Weisen angegeben werden:  
   
 -   Geben Sie die Nummer der Partition an, beispielsweise: ON PARTITIONS (2).  
   
@@ -587,7 +587,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
   
 **Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) und [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
   
- Die Wartezeit (ein ganzzahliger Wert in Minuten), während der die Sperren der Onlineindexneuerstellung mit niedriger Priorität warten, wenn der DDL-Befehl ausgeführt wird. Wenn der Vorgang während des **MAX_DURATION**-Zeitraums blockiert wird, wird eine der **ABORT_AFTER_WAIT**-Aktionen ausgeführt. **MAX_DURATION** wird immer in Minuten angegeben. Das Wort **MINUTES** kann ausgelassen werden.  
+ Die Wartezeit (ein ganzzahliger Wert in Minuten), während der die Sperren der Onlineindexneuerstellung mit niedriger Priorität warten, wenn der DDL-Befehl ausgeführt wird. Wenn der Vorgang während des **MAX_DURATION**-Zeitraums blockiert wird, wird eine der **ABORT_AFTER_WAIT**-Aktionen ausgeführt. **MAX_DURATION** wird immer in Minuten angegeben, und das Wort **MINUTES** kann ausgelassen werden.  
  
  ABORT_AFTER_WAIT = [**NONE** | **SELF** | **BLOCKERS** } ]  
    
@@ -887,7 +887,7 @@ ALTER INDEX cci_FactInternetSales2 ON FactInternetSales2 REORGANIZE PARTITION = 
 ### <a name="c-compress-all-open-and-closed-delta-rowgroups-into-the-columnstore"></a>C. Komprimieren aller OPEN- und CLOSED-Delta-Zeilengruppen im Columnstore  
  **Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) und [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 
   
- Mit dem Befehl REORGANIZE WITH (COMPRESS_ALL_ROW_GROUPS = ON) werden alle OPEN- und CLOSED-Delta-Zeilengruppen als eine komprimierte Zeilengruppe im Columnstore komprimiert. Dadurch werden die Deltastores geleert, und es werden alle Zeilen im Columnstore komprimiert. Dies ist insbesondere nach dem Ausführen einer Vielzahl von Einfügevorgängen nützlich, da die Zeilen bei diesen Vorgängen in einem oder mehreren Deltastores gespeichert werden.  
+ Mit dem Befehl REORGANIZE WITH (COMPRESS_ALL_ROW_GROUPS = ON) werden alle OPEN- und CLOSED-Delta-Zeilengruppen als eine komprimierte Zeilengruppe im Columnstore komprimiert. Dadurch wird der Deltastore geleert, und es werden alle Zeilen im Columnstore komprimiert. Dies ist insbesondere nach dem Ausführen einer Vielzahl von Einfügevorgängen nützlich, da die Zeilen bei diesen Vorgängen in einer oder mehreren Delta-Zeilengruppen gespeichert werden.  
   
  Mit REORGANIZE werden Zeilengruppen bis zur einer maximalen Anzahl von \<= 1.024.576 Zeilen kombiniert. Nach dem Komprimieren aller OPEN- und CLOSED-Zeilengruppen werden nicht mehr viele komprimierte Zeilengruppen übrig bleiben, die nur wenige Zeilen enthalten. Bestmöglich gefüllte Zeilengruppen verringern die komprimierte Größe und verbessern die Abfrageleistung.  
   
@@ -1124,7 +1124,7 @@ WITH (DATA_COMPRESSION = PAGE);
 GO  
 ```  
   
-Weitere Beispiele zur Datenkomprimierung finden Sie unter [Datenkomprimierung](../../relational-databases/data-compression/data-compression.md).  
+Weitere Beispiele für die Datenkomprimierung finden Sie unter [Datenkomprimierung](../../relational-databases/data-compression/data-compression.md).  
  
 ### <a name="j-online-resumable-index-rebuild"></a>J. Onlineneuerstellung von fortsetzbaren Indizes
 

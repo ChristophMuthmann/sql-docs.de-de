@@ -16,11 +16,11 @@ author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f1a9ab49828410519b1aa5a36eb0804d4d7b50a5
-ms.sourcegitcommit: ccb05cb5a4cccaf7ffa9e85a4684fa583bab914e
+ms.openlocfilehash: f1a04505be156fcb10394e6cccb431f3c2206871
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/08/2018
 ---
 # <a name="columnstore-indexes---what39s-new"></a>Columnstore-Indizes - Neuigkeiten
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,7 +28,7 @@ ms.lasthandoff: 03/22/2018
   Zusammenfassung der Columnstore-Funktionen, die für die einzelnen Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und die aktuellen Releases von [!INCLUDE[ssSDS](../../includes/sssds-md.md)], [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] verfügbar sind.  
 
  > [!NOTE]
- > Für [!INCLUDE[ssSDS](../../includes/sssds-md.md)] sind Columnstore-Indizes in den Tarifen SQL-Datenbank Premium und Standard (S3 und höher) verfügbar. Für SQL Server (2016 SP1 und höher) sind Columnstore-Indizes in allen Editionen verfügbar. Für SQL Server (2016 und niedriger) sind Columnstore-Indizes nur in der Enterprise Edition verfügbar.
+ > Für [!INCLUDE[ssSDS](../../includes/sssds-md.md)] sind Columnstore-Indizes in den Tarifen SQL-Datenbank Premium und Standard (S3 und höher) sowie in allen vCore-Tarifen verfügbar. Für SQL Server (2016 SP1 und höher) sind Columnstore-Indizes in allen Editionen verfügbar. Für SQL Server (2016 und niedriger) sind Columnstore-Indizes nur in der Enterprise Edition verfügbar.
  
 ## <a name="feature-summary-for-product-releases"></a>Zusammenfassung der Funktionen für Produktversionen  
  In dieser Tabelle sind die wichtigsten Funktionen für Columnstore-Indizes sowie die Produkte zusammengefasst, in denen sie verfügbar sind.  
@@ -119,7 +119,8 @@ In-Memory-OLTP-basierte DMVs enthalten Updates für den Columnstore:
   
 ### <a name="limitations"></a>Einschränkungen  
   
--   MERGE wird deaktiviert, wenn ein B-Strukturindex für einen gruppierten Columnstore-Index definiert wird.  
+
+  
 -   Für In-Memory-Tabellen muss ein Columnstore-Index alle Spalten enthalten. Der Columnstore-Index kann keine gefilterte Bedingung haben.  
 -   Für In-Memory-Tabellen können Abfragen für Columnstore-Indizes nur im InterOP-Modus und nicht im einheitlichen In-Memory-Modus ausgeführt werden. Parallele Ausführung wird unterstützt.  
   

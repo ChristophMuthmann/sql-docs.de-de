@@ -1,16 +1,16 @@
 ---
 title: ASYMKEYPROPERTY (Transact-SQL) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ASYMKEYPROPERTY_TSQL
@@ -20,21 +20,21 @@ dev_langs:
 helpviewer_keywords:
 - ASYMKEYPROPERTY
 ms.assetid: a30581f2-e1b1-4996-93e6-527ff96b7c42
-caps.latest.revision: 
+caps.latest.revision: 13
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 808f7c8d840f18d9e09fe9906e366fb7feb76cff
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: f4738a706c6f6d717a4346e8dc67169d1f795e74
+ms.sourcegitcommit: 094c46e7fa6de44735ed0040c65a40ec3d951b75
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="asymkeyproperty-transact-sql"></a>ASYMKEYPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Gibt die Eigenschaften eines asymmetrischen Schlüssels zurück.
+Diese Funktion gibt die Eigenschaften eines asymmetrischen Schlüssels zurück.
   
 ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -46,13 +46,13 @@ ASYMKEYPROPERTY (Key_ID , 'algorithm_desc' | 'string_sid' | 'sid')
   
 ## <a name="arguments"></a>Argumente  
 *Key_ID*  
-Die Key_ID eines asymmetrischen Schlüssels in der Datenbank. Um die Key_ID zu ermitteln, wenn Sie nur den Schlüsselnamen kennen, verwenden Sie die ASYMKEY_ID. *Key_ID* ist vom Datentyp **int**.
+Die Key_ID eines asymmetrischen Schlüssels in der Datenbank. Wenn Sie nur den Schlüsselnamen kennen, verwenden Sie ASYMKEY_ID, um die KEY_ID zu finden. *Key_ID* weist den Datentyp **int** auf.
   
 **‚**algorithm_desc**’**  
 Gibt an, dass die Ausgabe die Algorithmusbeschreibung des asymmetrischen Schlüssels zurückgibt. Nur verfügbar für aus einem EKM-Modul erstellte asymmetrische Schlüssel.
   
 **‚**string_sid**’**  
-Gibt an, dass die Ausgabe die SID des asymmetrischen Schlüssels im **nvarchar()** -Format zurückgibt.
+Gibt an, dass die Ausgabe die SID des asymmetrischen Schlüssels im **nvarchar()**-Format zurückgibt.
   
 **'**sid**'**  
 Gibt an, dass die Ausgabe die SID des asymmetrischen Schlüssels im Binärformat zurückgibt.
@@ -61,7 +61,7 @@ Gibt an, dass die Ausgabe die SID des asymmetrischen Schlüssels im Binärformat
 **sql_variant**
   
 ## <a name="permissions"></a>Berechtigungen  
-Erfordert bestimmte Berechtigungen für den asymmetrischen Schlüssel, und dem Aufrufer darf die VIEW-Berechtigung für den asymmetrischen Schlüssel nicht verweigert worden sein.
+Erfordert mindestens eine passende Berechtigung für den asymmetrischen Schlüssel, und dem Aufrufer darf die VIEW-Berechtigung für den asymmetrischen Schlüssel nicht verweigert worden sein. Weitere Informationen zu Berechtigungen für asymmetrische Schlüssel finden Sie unter [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md).
   
 ## <a name="examples"></a>Beispiele  
 Das folgende Beispiel gibt die Eigenschaften des asymmetrischen Schlüssels mit der Key_ID 256 zurück.

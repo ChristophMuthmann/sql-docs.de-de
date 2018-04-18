@@ -1,16 +1,16 @@
 ---
 title: Handbuch zum SQL Server Indexentwurf | Microsoft-Dokumentation
-ms.custom: 
-ms.date: 12/1/2017
+ms.custom: ''
+ms.date: 04/03/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: relational-databases-misc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - index design guide
@@ -24,16 +24,16 @@ helpviewer_keywords:
 - sql server index design guide
 - sql server index design guidance
 ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
-caps.latest.revision: 
+caps.latest.revision: 3
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c11d217a3818d872071bb466ac2221e2c8adc3f7
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: b6e1617f3ea9d4f725d2a95b9b1d55fbacf85876
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="sql-server-index-design-guide"></a>Handbuch zum SQL Server Indexentwurf
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -630,7 +630,7 @@ WHERE b = CONVERT(Varbinary(4), 1);
 
 Ein *columnstore index* ist eine Technologie zum Speichern, Abrufen und Verwalten von Daten mithilfe eines spaltenbasierten Datenformats, das als Columnstore bezeichnet wird. Weitere Informationen finden Sie unter [Columnstore-Indizes: Übersicht](../relational-databases/indexes/columnstore-indexes-overview.md). 
 
-**Gilt für**: [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].
+Versionsinformationen finden Sie unter [Columnstore-Indizes – Neuigkeiten](/sql/relational-databases/indexes/columnstore-indexes-what-s-new).
 
 ### <a name="columnstore-index-architecture"></a>Columnstore-Indizes: Architektur
 
@@ -649,7 +649,7 @@ Ein Columnstore-Index speichert die meisten Daten physisch im Columnstore-Format
 
 Ein Columnstore-Index speichert einige Zeilen auch physisch in einem Rowstore-Format, ein sogenannter Deltastore. Beim Deltastore, auch Delta-Zeilengruppe genannt, handelt es sich um einen Aufbewahrungsort für Zeilen, die eine zu geringe Anzahl darstellen, um in den Columnstore komprimiert zu werden. Jede Deltazeilengruppe wird als gruppierter B-Strukturindex implementiert. 
 
-- Ein **Deltastore** ist ein Aufbewahrungsort für Zeilen, die eine zu geringe Anzahl darstellen, um in den Columnstore komprimiert zu werden. Der Deltastore ist ein Rowstore. 
+- Der **Deltastore** ist ein Aufbewahrungsort für Zeilen, die eine zu geringe Anzahl darstellen, um in den Columnstore komprimiert zu werden. Der Deltastore speichert die Zeilen im Rowstore-Format. 
   
 #### <a name="operations-are-performed-on-rowgroups-and-column-segments"></a>Vorgänge werden für Zeilengruppen und Spaltensegmente ausgeführt
 

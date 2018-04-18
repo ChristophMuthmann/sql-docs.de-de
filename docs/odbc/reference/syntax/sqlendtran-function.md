@@ -2,7 +2,7 @@
 title: SQLEndTran-Funktion | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: ff375ce1-eb50-4693-b1e6-70181a6dbf9f
 caps.latest.revision: 29
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 15ba9ff7d28101201842071929b34dfa7ec1d455
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ea99ca26105d3c31330108979a5b182329aa6ba5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlendtran-function"></a>SQLEndTran-Funktion
 **Konformität**  
@@ -113,9 +113,9 @@ SQLRETURN SQLEndTran(
   
  Um zu bestimmen, wie Transaktionsvorgänge Cursor auswirken, eine Anwendung ruft **SQLGetInfo** mit den Optionen SQL_CURSOR_ROLLBACK_BEHAVIOR und SQL_CURSOR_COMMIT_BEHAVIOR. Weitere Informationen finden Sie unter den folgenden Abschnitten sowie unter [Auswirkungen von Transaktionen für Cursor und vorbereitete Anweisungen](../../../odbc/reference/develop-app/effect-of-transactions-on-cursors-and-prepared-statements.md).  
   
- Wenn der SQL_CURSOR_ROLLBACK_BEHAVIOR oder SQL_CURSOR_COMMIT_BEHAVIOR SQL_CB_DELETE, Wert **SQLEndTran** schließt und löscht alle geöffneten Cursor für alle Anweisungen, die der Verbindung zugeordnet und verwirft alle ausstehenden Ergebnisse. **SQLEndTran** einer beliebigen Anweisung in einem zugeordneten (Vorbereitung) Status; vorhanden bleibt die Anwendung die berichtsteile können sie für nachfolgende SQL-Abfragen oder durch Aufrufen **SQLFreeStmt** oder **SQLFreeHandle** mit einem *HandleType* von SQL_HANDLE_STMT auf, um sie freizugeben.  
+ Wenn der SQL_CURSOR_ROLLBACK_BEHAVIOR oder SQL_CURSOR_COMMIT_BEHAVIOR SQL_CB_DELETE, Wert **SQLEndTran** schließt und löscht alle geöffneten Cursor für alle Anweisungen, die der Verbindung zugeordnet und verwirft alle ausstehenden Ergebnisse. **SQLEndTran** einer beliebigen Anweisung in einem zugeordneten (Vorbereitung) Status; vorhanden bleibt die Anwendung die berichtsteile können sie für nachfolgende SQL-Abfragen oder durch Aufrufen **SQLFreeStmt** oder **SQLFreeHandle** mit eine *HandleType* von SQL_HANDLE_STMT auf, um sie freizugeben.  
   
- Wenn der SQL_CURSOR_ROLLBACK_BEHAVIOR oder SQL_CURSOR_COMMIT_BEHAVIOR SQL_CB_CLOSE, Wert **SQLEndTran** schließt alle geöffneten Cursor für alle Anweisungen, die der Verbindung zugeordnet. **SQLEndTran** einer beliebigen Anweisung in einem Status ' vorbereitet '; vorhanden bleibt die Anwendung aufrufen kann **SQLExecute** für eine Anweisung, die die Verbindung erst nach Aufrufen von zugeordnet **SQLPrepare** .  
+ Wenn der SQL_CURSOR_ROLLBACK_BEHAVIOR oder SQL_CURSOR_COMMIT_BEHAVIOR SQL_CB_CLOSE, Wert **SQLEndTran** schließt alle geöffneten Cursor für alle Anweisungen, die der Verbindung zugeordnet. **SQLEndTran** einer beliebigen Anweisung in einem Status ' vorbereitet '; vorhanden bleibt die Anwendung aufrufen kann **SQLExecute** für eine Anweisung, die die Verbindung erst nach Aufrufen von zugeordnet **SQLPrepare**.  
   
  Wenn der SQL_CURSOR_ROLLBACK_BEHAVIOR oder SQL_CURSOR_COMMIT_BEHAVIOR SQL_CB_PRESERVE, Wert **SQLEndTran** wirkt sich nicht auf die geöffnete Cursor, die der Verbindung zugeordnet. Cursor bleiben in der Zeile, die sie vor dem Aufruf von verweist **SQLEndTran**.  
   

@@ -1,16 +1,16 @@
 ---
 title: AVG (Transact-SQL) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - AVG_TSQL
@@ -24,21 +24,21 @@ helpviewer_keywords:
 - values [SQL Server], average
 - average values
 ms.assetid: 4534b705-d946-441b-9b5d-5fbe561c9131
-caps.latest.revision: 
+caps.latest.revision: 52
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 40240e2c06055d61eb047c319349f4869b9979df
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 1d242be45c89ed55d5a1dfed3753676c90e314f3
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="avg-transact-sql"></a>AVG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Gibt den Mittelwert der Werte in einer Gruppe zurück. NULL-Werte werden ignoriert.
+Diese Funktion gibt den Mittelwert der Werte in einer Gruppe zurück. Sie ignoriert NULL-Werte.
   
 ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -54,7 +54,7 @@ ALL
 Wendet die Aggregatfunktion auf alle Werte an. ALL ist die Standardeinstellung.
   
 DISTINCT  
-Gibt an, dass AVG nur für jede eindeutige Instanz eines Werts ausgeführt werden soll, unabhängig davon, wie oft der Wert vorkommt.
+Gibt an, dass AVG nur eine eindeutige Instanz eines Werts verwendet, unabhängig davon, wie oft der Wert vorkommt.
   
 *expression*  
 Ein [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) der genauen numerischen oder ungefähren numerischen Datentypkategorie, mit Ausnahme des **bit**-Datentyps. Aggregatfunktionen und Unterabfragen sind nicht zulässig.
@@ -63,7 +63,7 @@ OVER **(** [ *partition_by_clause* ] *order_by_clause***)**
 *partition_by_clause* unterteilt das von der FROM-Klausel erzeugte Resultset in Partitionen, auf die die Funktion angewendet wird. Wird dies nicht angegeben, verarbeitet die Funktion alle Zeilen des Abfrageresultsets als einzelne Gruppe. *order_by_clause* bestimmt die logische Reihenfolge, in der der Vorgang ausgeführt wird. *order_by_clause* ist erforderlich. Weitere Informationen finden Sie unter [OVER-Klausel &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).
   
 ## <a name="return-types"></a>Rückgabetypen
-Der Rückgabetyp wird durch den Typ des ausgewerteten Ergebnisses von *expression* bestimmt.
+Der Rückgabetyp wird durch das ausgewertete Ergebnis von *expression* bestimmt.
   
 |Ausdrucksergebnis|Rückgabetyp|  
 |---|---|
@@ -78,14 +78,14 @@ Der Rückgabetyp wird durch den Typ des ausgewerteten Ergebnisses von *expressio
 ## <a name="remarks"></a>Remarks  
 Wenn der Datentyp von *expression* ein Aliasdatentyp ist, ist der Rückgabetyp ebenfalls ein Aliasdatentyp. Wird der Basisdatentyp des Aliasdatentyps jedoch heraufgestuft, beispielsweise von **tinyint** zu **int**, handelt es sich beim Rückgabetyp um den heraufgestuften Datentyp und nicht um den Aliasdatentyp.
   
-AVG () berechnet den Durchschnitt einer Menge von Werten, indem die Summe dieser Werte durch die Anzahl der Nicht-NULL-Werte dividiert wird. Wenn die Summe größer als der vom Datentyp des Rückgabewerts unterstützte Höchstwert ist, wird ein Fehler zurückgegeben.
+AVG () berechnet den Durchschnitt einer Menge von Werten, indem die Summe dieser Werte durch die Anzahl der Nicht-NULL-Werte dividiert wird. Wenn die Summe größer als der vom Datentyp des Rückgabewerts unterstützte Höchstwert ist, gibt AVG() einen Fehler zurück.
   
 AVG ist eine deterministische Funktion, wenn sie ohne die OVER- und ORDER BY-Klauseln angegeben wird. Sie ist nicht deterministisch, wenn sie mit den OVER- und ORDER BY-Klauseln angegeben wird. Weitere Informationen finden Sie unter [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).
   
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="a-using-the-sum-and-avg-functions-for-calculations"></a>A. Verwenden der Funktionen SUM und AVG für Berechnungen  
-Im folgenden Beispiel werden die durchschnittlichen Urlaubstage und die Summe der Krankheitstage (in Stunden) der stellvertretenden Direktoren von [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] berechnet. Beide Aggregatfunktionen erzeugen jeweils einen zusammenfassenden Wert aller abgerufenen Zeilen. Im Beispiel wird die [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Datenbank verwendet.
+In diesem Beispiel werden die durchschnittlichen Urlaubstage und die Summe der Krankheitstage der stellvertretenden Direktoren von [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] (in Stunden) berechnet. Beide Aggregatfunktionen erzeugen jeweils einen zusammenfassenden Wert aller abgerufenen Zeilen. Im Beispiel wird die [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Datenbank verwendet.
   
 ```sql
 SELECT AVG(VacationHours)AS 'Average vacation hours',   
@@ -105,7 +105,7 @@ Average vacation hours       Total sick leave hours
 ```
   
 ### <a name="b-using-the-sum-and-avg-functions-with-a-group-by-clause"></a>B. Verwenden der Funktionen SUM und AVG mit einer GROUP BY-Klausel  
-In Verbindung mit einer `GROUP BY`-Klausel erzeugt jede Aggregatfunktion einen einzelnen Wert für jede Gruppe anstelle eines Werts für die gesamte Tabelle. Im folgenden Beispiel werden für alle Vertriebsgebiete in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Datenbank Zusammenfassungswerte erzeugt. In der Zusammenfassung werden die durchschnittlichen Bonusleistungen von Vertriebsmitarbeitern der einzelnen Regionen und die Summe der Verkaufszahlen für das laufende Jahr pro Region aufgelistet.
+In Verbindung mit einer `GROUP BY`-Klausel erzeugt jede Aggregatfunktion einen einzelnen Wert für jede Gruppe anstelle eines gemeinsamen Werts für die gesamte Tabelle. Im folgenden Beispiel werden für alle Vertriebsgebiete in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Datenbank Zusammenfassungswerte erzeugt. In der Zusammenfassung werden die durchschnittlichen Bonusleistungen von Vertriebsmitarbeitern der einzelnen Regionen und die Summe der Verkaufszahlen für das laufende Jahr pro Region aufgelistet.
   
 ```sql
 SELECT TerritoryID, AVG(Bonus)as 'Average bonus', SUM(SalesYTD) as 'YTD sales'  
@@ -135,7 +135,7 @@ NULL        0.00                  1252127.9471
 ```  
   
 ### <a name="c-using-avg-with-distinct"></a>C. Verwenden von AVG mit DISTINCT  
-Mit der folgenden Anweisung wird der durchschnittliche Listenpreis der Produkte in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Datenbank zurückgegeben. Durch Angabe von DISTINCT werden nur eindeutige Werte in der Berechnung berücksichtigt.
+Mit dieser Anweisung wird der durchschnittliche Listenpreis der Produkte in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Datenbank zurückgegeben. Wenn DISTINCT verwendet wird, werden bei der Berechnung nur eindeutige Werte beachtet.
   
 ```sql
 SELECT AVG(DISTINCT ListPrice)  
@@ -206,7 +206,7 @@ BusinessEntityID TerritoryID SalesYear   SalesYTD             MovingAvg         
   
 ```  
   
-In diesem Beispiel ist PARTITION BY nicht in der OVER-Klausel enthalten. Folglich wird die Funktion auf alle von der Abfrage zurückgegebenen Zeilen angewendet. Die in der OVER-Klausel angegebene ORDER BY-Klausel bestimmt die logische Reihenfolge, auf die die AVG-Funktion angewendet wird. Die Abfrage gibt einen gleitenden Durchschnitt der Jahresumsätze für alle Vertriebsgebiete zurück, die in der WHERE-Klausel angegeben sind. Die in der SELECT-Anweisung angegebene ORDER BY-Klausel bestimmt die Reihenfolge, in der die Zeilen der Abfrage angezeigt werden.
+In diesem Beispiel ist PARTITION BY nicht in der OVER-Klausel enthalten. Folglich wird die Funktion auf alle von der Abfrage zurückgegebenen Zeilen angewendet. Die in der OVER-Klausel angegebene ORDER BY-Klausel bestimmt die logische Reihenfolge, in der die AVG-Funktion angewendet wird. Die Abfrage gibt einen gleitenden Durchschnitt der Jahresumsätze für alle Vertriebsgebiete zurück, die in der WHERE-Klausel angegeben sind. Die in der SELECT-Anweisung angegebene ORDER BY-Klausel bestimmt die Reihenfolge, in der diese Anweisung die Zeilen der Abfrage anzeigt.
   
 ```sql
 SELECT BusinessEntityID, TerritoryID   

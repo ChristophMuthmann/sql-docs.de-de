@@ -1,16 +1,16 @@
 ---
-title: "Columnstore-Indizes: Übersicht | Microsoft-Dokumentation"
-ms.custom: 
-ms.date: 03/07/2016
+title: 'Columnstore-Indizes: Übersicht | Microsoft-Dokumentation'
+ms.custom: ''
+ms.date: 04/03/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: indexes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - indexes creation, columnstore
@@ -19,16 +19,16 @@ helpviewer_keywords:
 - columnstore index, described
 - xVelocity, columnstore indexes
 ms.assetid: f98af4a5-4523-43b1-be8d-1b03c3217839
-caps.latest.revision: 
+caps.latest.revision: 80
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: a7a01a3b1aab2ffa1850434928f4de3bce39bcd4
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: df76c7156e506fa9e01763e8f12ba1873c943f0e
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="columnstore-indexes---overview"></a>Columnstore-Indizes: Übersicht
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -74,12 +74,16 @@ ms.lasthandoff: 02/12/2018
   
  Um die Fragmentierung der Spaltensegmente zu verringern und die Leistung zu verbessern, können einige Daten im Columnstore-Index vorübergehend in einem gruppierten Index, der als Deltastore bezeichnet wird, sowie in einer B-Struktur mit IDs der gelöschten Zeilen gespeichert werden. Die Deltastore-Vorgänge werden im Hintergrund verarbeitet. Damit die richtigen Abfrageergebnisse zurückgegeben werden, kombiniert der gruppierte Columnstore-Index Abfrageergebnisse aus dem Columnstore und dem Deltastore.  
   
- Deltastore  
- Ein *Deltastore* wird nur in Kombination mit gruppierten Columnstore-Indizes verwendet und stellt seinerseits einen gruppierten Index dar, der die Komprimierung und Leistung für Columnstore verbessert, indem er Zeilen speichert, bis die Anzahl der gespeicherten Zeilen einen Schwellenwert erreicht, bei dem die Zeilen dann in den Columnstore verschoben werden.  
+ Delta-Zeilengruppe  
+ Eine *Delta-Zeilengruppe* wird nur in Kombination mit Columnstore-Indizes verwendet und stellt seinerseits einen gruppierten Index dar, der die Komprimierung und Leistung für Columnstore verbessert, indem er Zeilen speichert, bis die Anzahl der gespeicherten Zeilen einen Schwellenwert erreicht, bei dem die Zeilen dann in den Columnstore verschoben werden.  
+
+ Wenn eine Delta-Zeilengruppe die maximale Zeilenanzahl erreicht, wird sie geschlossen. Ein Tupelverschiebungsvorgang überprüft auf geschlossene Zeilengruppen. Wenn die geschlossene Zeilengruppe gefunden wird, wird sie komprimiert und im Columnstore-Index gespeichert.  
   
- Während eines umfassenden Massenladevorgangs werden die meisten Zeilen ohne Umweg über den Deltastore direkt in den Columnstore verschoben. Einige Zeilen am Ende des Massenladevorgangs erreichen möglicherweise nicht die notwendige Anzahl für die minimale Größe einer Zeilengruppe von 102.400 Zeilen. Wenn dieser Fall auftritt, werden die letzten Zeilen in den Deltastore und nicht in den Columnstore aufgenommen. Bei kleinen Massenladevorgängen mit weniger als 102.400 Zeilen werden alle Zeilen direkt in den Deltastore verschoben.  
+Deltastore: Ein Columnstore-Index kann über mehr als eine Delta-Zeilengruppe verfügen.  Alle Delta-Zeilengruppen werden gemeinsam als *Deltastore* bezeichnet.   
+
+Während eines umfassenden Massenladevorgangs werden die meisten Zeilen ohne Umweg über den Deltastore direkt in den Columnstore verschoben. Einige Zeilen am Ende des Massenladevorgangs erreichen möglicherweise nicht die notwendige Anzahl für die minimale Größe einer Zeilengruppe von 102.400 Zeilen. Wenn dieser Fall auftritt, werden die letzten Zeilen in den Deltastore und nicht in den Columnstore aufgenommen. Bei kleinen Massenladevorgängen mit weniger als 102.400 Zeilen werden alle Zeilen direkt in den Deltastore verschoben.  
   
- Wenn der Deltastore die maximale Zeilenanzahl erreicht, wird er geschlossen. Ein Tupelverschiebungsvorgang überprüft auf geschlossene Zeilengruppen. Wenn die geschlossene Zeilengruppe gefunden wird, wird sie komprimiert und im Columnstore-Index gespeichert.  
+
   
  Nicht gruppierter Columnstore-Index  
  Ein *nicht gruppierter Columnstore-Index* und ein gruppierter Columnstore-Index sind funktional gleich. Der Unterschied besteht darin, dass ein nicht gruppierter Index ein sekundärer Index ist, der für eine Rowstore-Tabelle erstellt wird, während einer gruppierter Columnstore-Index den primären Speicher für die gesamte Tabelle darstellt.  

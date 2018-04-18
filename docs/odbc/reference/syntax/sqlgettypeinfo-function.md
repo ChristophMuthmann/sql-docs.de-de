@@ -2,7 +2,7 @@
 title: SQLGetTypeInfo-Funktion | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: bdedb044-8924-4ca4-85f3-8b37578e0257
 caps.latest.revision: 21
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 508b89f5ff60b5cf64a03d167bf1ad4476edb734
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 4afbb9ce8ffce9ca1eb4cea099d11f6cf92ebb80
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlgettypeinfo-function"></a>SQLGetTypeInfo-Funktion
 **Konformität**  
@@ -56,7 +56,7 @@ SQLRETURN SQLGetTypeInfo(
  *StatementHandle*  
  [Eingabe] Anweisungshandle für das Resultset.  
   
- *Datentyp*  
+ *DataType*  
  [Eingabe] Der SQL-Datentyp. Diese Angabe muss einen der Werte in der [SQL-Datentypen](../../../odbc/reference/appendixes/sql-data-types.md) Abschnitt Anhang D: Datentypen oder treiberspezifischen SQL-Datentyp. SQL_ALL_TYPES gibt an, dass Informationen zu allen Datentypen zurückgegeben werden sollen.  
   
 ## <a name="returns"></a>Rückgabewert  
@@ -68,7 +68,7 @@ SQLRETURN SQLGetTypeInfo(
 |SQLSTATE|Fehler|Description|  
 |--------------|-----------|-----------------|  
 |01000|Allgemeine Warnung|Treiberspezifische Meldung dient zu Informationszwecken. (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
-|01 S 02|Der Optionswert wurde geändert|Ein Attribut angegebene Anweisung war ungültig aufgrund Implementierung Arbeitsbedingungen, damit ein ähnlichen Wert vorübergehend ersetzt wurde. (Rufen **SQLGetStmtAttr** vorübergehend ersetzten Werts bestimmt.) Der Ersatzwert ist gültig für die *StatementHandle* , bis der Cursor geschlossen wird. Sind die Anweisungsattribute, die geändert werden können: SQL_ATTR_CONCURRENCY, SQL_ATTR_CURSOR_TYPE SQL_ATTR_KEYSET_SIZE, SQL_ATTR_MAX_LENGTH, SQL_ATTR_MAX_ROWS, SQL_ATTR_QUERY_TIMEOUT und SQL_ATTR_SIMULATE_CURSOR. (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
+|01S02|Der Optionswert wurde geändert|Ein Attribut angegebene Anweisung war ungültig aufgrund Implementierung Arbeitsbedingungen, damit ein ähnlichen Wert vorübergehend ersetzt wurde. (Rufen **SQLGetStmtAttr** vorübergehend ersetzten Werts bestimmt.) Der Ersatzwert ist gültig für die *StatementHandle* , bis der Cursor geschlossen wird. Sind die Anweisungsattribute, die geändert werden können: SQL_ATTR_CONCURRENCY, SQL_ATTR_CURSOR_TYPE SQL_ATTR_KEYSET_SIZE, SQL_ATTR_MAX_LENGTH, SQL_ATTR_MAX_ROWS, SQL_ATTR_QUERY_TIMEOUT und SQL_ATTR_SIMULATE_CURSOR. (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
 |08S01|Kommunikations-Verbindungsfehler|Die Verbindung zwischen dem Treiber und die Datenquelle mit der der Treiber verbunden wurde aufgetreten ist, bevor die Verarbeitung für die Funktion abgeschlossen.|  
 |24000|Ungültiger Cursorstatus|Ein Cursor auf geöffnet war die *StatementHandle,* und **SQLFetch** oder **SQLFetchScroll** hatte aufgerufen wurde. Dieser Fehler wird vom Treiber-Manager zurückgegeben, wenn **SQLFetch** oder **SQLFetchScroll** wurden keine SQL_NO_DATA zurückgegeben und wird vom Treiber zurückgegeben, wenn **SQLFetch** oder **SQLFetchScroll** SQL_NO_DATA zurückgegeben hat.<br /><br /> Ein Resultset wurde geöffnet, auf die *StatementHandle*, aber **SQLFetch** oder **SQLFetchScroll** nicht aufgerufen wurde.|  
 |40001|Serialisierungsfehler aufgetreten|Die Transaktion wurde aufgrund eines Deadlocks Ressource mit einer anderen Transaktion ein Rollback ausgeführt.|  
@@ -118,7 +118,7 @@ SQLRETURN SQLGetTypeInfo(
 > [!NOTE]  
 >  **SQLGetTypeInfo** möglicherweise nicht alle Datentypen zurück. Beispielsweise kann ein Treiber keinen benutzerdefinierten Datentypen zurück. Clientanwendungen können einen beliebigen gültigen Datentyp aufweisen, unabhängig davon, ob sie von zurückgegeben werden **SQLGetTypeInfo**. Die Datentypen zurückgegebenes **SQLGetTypeInfo** werden von der Datenquelle unterstützt. Sie werden zur Verwendung in Anweisungen (Data Definition Language, Datendefinitionssprache) gedacht. Treiber können Rückgabedaten Resultset mit Datentypen, außer von zurückgegebenen Typen **SQLGetTypeInfo**. Erstellen Sie das Resultset für eine Katalogfunktion auf, kann der Treiber einen Datentyp, der nicht unterstützt wird von der Datenquelle verwenden.  
   
-|Spaltenname|Spalte<br /><br /> number|Datentyp|Kommentare|  
+|Spaltenname|Column<br /><br /> number|Datentyp|Kommentare|  
 |-----------------|-----------------------|---------------|--------------|  
 |TYPE_NAME (ODBC 2.0)|1|Varchar, die nicht NULL|Name der Daten-Quelle vom Änderungsmanagement angeforderten Datentyp; z. B. "CHAR()", "VARCHAR()", "MONEY", "LONG VARBINARY" oder "CHAR () für BIT-Daten". Anwendungen müssen verwenden Sie diesen Namen in **CREATE TABLE** und **ALTER TABLE** Anweisungen.|  
 |DATA_TYPE (ODBC 2.0)|2|Smallint nicht NULL|SQL-Datentyp. Dies kann einen ODBC-SQL-Datentyp oder treiberspezifischen SQL-Datentyp sein. Für "DateTime" oder ein Zeitintervall Datentypen gibt diese Spalte den präzise-Datentyp (z. B. SQL_TYPE_TIME oder SQL_INTERVAL_YEAR_TO_MONTH) zurück. Eine Liste der gültigen ODBC SQL-Datentypen, finden Sie unter [SQL-Datentypen](../../../odbc/reference/appendixes/sql-data-types.md) in Anhang D:-Datentypen. Informationen zu treiberspezifischen SQL-Datentypen finden Sie unter der Treiber-Dokumentation.|  

@@ -1,15 +1,16 @@
 ---
-title: "Blockieren von Cursorn, scrollfähige Cursor und Abwärtskompatibilität | Microsoft Docs"
-ms.custom: 
+title: Blockieren von Cursorn, scrollfähige Cursor und Abwärtskompatibilität | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - scrollable cursors [ODBC]
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - backward compatibility [ODBC], cursors
 - block cursors [ODBC]
 ms.assetid: d9d271f6-d2d9-49b9-a365-4909ca06caae
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 00e83e48a76e3c9159b50eb63fe4aec657baf928
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 7e25e546b359dd7178739e074664c3239fcfbdba
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="block-cursors-scrollable-cursors-and-backward-compatibility"></a>Blockcursor, scrollfähige Cursor und Abwärtskompatibilität
 Das Vorhandensein beider **SQLFetchScroll** und **SQLExtendedFetch** stellt den ersten Clear Teilen in ODBC zwischen der API Application Programming Interface (), die den Satz von Funktionen ist die Ruft Anwendung und der Service Provider-Schnittstelle (SPI), also den Satz von Funktionen der Treiber implementiert. Diese Teilung ist erforderlich, damit ODBC 3. *x*, welche verwendet **SQLFetchScroll**, Bealigned mit den Standards und auch mit ODBC-2 kompatibel sein. *X*, welche verwendet **SQLExtendedFetch**.  

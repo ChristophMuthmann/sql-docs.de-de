@@ -1,31 +1,32 @@
 ---
 title: 'Anhang A: ODBC-Fehlercodes | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - error codes [ODBC]
 - SQLSTATE [ODBC]
 - error codes [ODBC], SQLSTATE
 ms.assetid: c06902e4-721d-42e2-b818-05f0e18e4ce0
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: af6533afbeb3b47c548e5475604136ae5fdc894b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 59a42d5183add7c67b8d6f506b79f860248478dc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="appendix-a-odbc-error-codes"></a>Anhang A: ODBC-Fehlercodes
 Dieses Thema erläutert SQLSTATE-Werten für ODBC 3. *x*. Weitere Informationen zu ODBC 3. *x* SQLSTATE-Werten finden Sie unter [SQLSTATE-Zuordnungen](../../../odbc/reference/develop-app/sqlstate-mappings.md).  
@@ -46,9 +47,9 @@ Dieses Thema erläutert SQLSTATE-Werten für ODBC 3. *x*. Weitere Informationen 
 |01004|Zeichenfolgedaten Sie rechts abgeschnitten|**SQLBrowseConnect**<br /><br /> **SQLBulkOperations**<br /><br /> **SQLColAttribute**<br /><br /> **SQLDataSources**<br /><br /> **SQLDescribeCol**<br /><br /> **SQLDriverConnect**<br /><br /> **SQLDrivers**<br /><br /> **SQLExecDirect**<br /><br /> **SQLExecute**<br /><br /> **SQLExtendedFetch**<br /><br /> **SQLFetch**<br /><br /> **SQLFetchScroll**<br /><br /> **SQLGetConnectAttr**<br /><br /> **SQLGetCursorName**<br /><br /> **SQLGetData**<br /><br /> **SQLGetDescField**<br /><br /> **SQLGetDescRec**<br /><br /> **SQLGetEnvAttr**<br /><br /> **SQLGetInfo**<br /><br /> **SQLGetStmtAttr**<br /><br /> **SQLNative**<br /><br /> **SQL-SQLParamData**<br /><br /> **SQLPutData**<br /><br /> **SQLSetCursorName**|  
 |01006|Berechtigung nicht aufgehoben.|**SQLExecDirect**<br /><br /> **SQLExecute**<br /><br /> **SQLParamData**|  
 |01007|Berechtigung nicht gewährt.|**SQLExecDirect**<br /><br /> **SQLExecute**<br /><br /> **SQLParamData**|  
-|01 S 00|Ungültiges Attribut für Verbindungszeichenfolge|**SQLBrowseConnect**<br /><br /> **SQLDriverConnec**|  
+|01S00|Ungültiges Attribut für Verbindungszeichenfolge|**SQLBrowseConnect**<br /><br /> **SQLDriverConnec**|  
 |01 S 01|Fehler in Zeile|**SQLBulkOperations**<br /><br /> **SQLExtendedFetch**<br /><br /> **SQLSetPos**|  
-|01 S 02|Der Optionswert wurde geändert|**SQLBrowseConnect**<br /><br /> **SQLConnect**<br /><br /> **SQLDriverConnect**<br /><br /> **SQLExecDirect**<br /><br /> **SQLExecute**<br /><br /> **SQLParamData**<br /><br /> **SQLPrepare**<br /><br /> **SQLSetConnectAttr**<br /><br /> **SQLSetDescField**<br /><br /> **SQLSetEnvAttr**<br /><br /> **SQLSetStmtAttr**|  
+|01S02|Der Optionswert wurde geändert|**SQLBrowseConnect**<br /><br /> **SQLConnect**<br /><br /> **SQLDriverConnect**<br /><br /> **SQLExecDirect**<br /><br /> **SQLExecute**<br /><br /> **SQLParamData**<br /><br /> **SQLPrepare**<br /><br /> **SQLSetConnectAttr**<br /><br /> **SQLSetDescField**<br /><br /> **SQLSetEnvAttr**<br /><br /> **SQLSetStmtAttr**|  
 |01S06|Es wurde versucht abzurufen, bevor das Resultset das erste Rowset zurückgab|**SQLExtendedFetch**<br /><br /> **SQLFetchScroll**|  
 |01S07|Teilbereiche wurden abgeschnitten.|**SQLBulkOperations**<br /><br /> **SQLExecDirect**<br /><br /> **SQLExecute**<br /><br /> **SQLExtendedFetch**<br /><br /> **SQLFetch**<br /><br /> **SQLFetchScroll**<br /><br /> **SQLGetData**<br /><br /> **SQLParamData**<br /><br /> **SQLSetPos**|  
 |01S08|Fehler beim Speichern der Datei-DSN|**SQLDriverConnect**|  

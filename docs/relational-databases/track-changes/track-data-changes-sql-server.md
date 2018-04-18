@@ -1,16 +1,16 @@
 ---
-title: "Nachverfolgen von Datenänderungen (SQL Server) | Microsoft-Dokumentation"
-ms.custom: 
+title: Nachverfolgen von Datenänderungen (SQL Server) | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 08/08/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: track-changes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - change data capture [SQL Server], compared to change tracking
@@ -22,16 +22,16 @@ helpviewer_keywords:
 - change data capture [SQL Server], security
 - change data capture [SQL Server], other SQL Server features and
 ms.assetid: 7a34be46-15b4-4b6b-8497-cfd8f9f14234
-caps.latest.revision: 
+caps.latest.revision: 39
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: d4f7c4422a192f60fec25e56553558041a579483
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 99a8b9bc80dc23ab4d67d72acdb507447d8e9433
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/08/2018
 ---
 # <a name="track-data-changes-sql-server"></a>Nachverfolgen von Datenänderungen (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ ms.lasthandoff: 02/09/2018
   
 -   Funktionen werden bereitgestellt, um Änderungsinformationen abzurufen.  
   
--   Niedriger Aufwand für DML-Vorgänge. Bei der synchronen Änderungsnachverfolgung entsteht immer ein gewisser Aufwand. Allerdings kann dieser Aufwand durch Verwendung der Änderungsnachverfolgung minimiert werden. Der Aufwand ist dabei in vielen Fällen geringer als bei der Verwendung alternativer Lösungen, insbesondere solcher Lösungen, die die Verwendung von Triggern erfordern.  
+-   Niedriger Aufwand für DML-Vorgänge. Bei der synchronen Änderungsnachverfolgung entsteht immer ein gewisser Aufwand. Allerdings kann dieser Aufwand durch Verwendung der Änderungsnachverfolgung minimiert werden. Der Aufwand ist dabei in vielen Fällen geringer als bei der Verwendung alternativer Lösungen, insbesondere bei solchen Lösungen, die die Verwendung von Triggern erfordern.  
   
 -   Die Änderungsnachverfolgung basiert auf Transaktionen, für die ein Commit ausgeführt wurde. Die Reihenfolge der Änderungen wird durch den Commitzeitpunkt der Transaktion bestimmt. Auf diese Weise werden bei umfangreichen und überlappenden Transaktionen zuverlässige Ergebnisse erzielt. Benutzerdefinierte Lösungen, in denen **timestamp** -Werte verwendet werden, müssen speziell für solche Szenarien entworfen werden.  
   
@@ -71,7 +71,7 @@ ms.lasthandoff: 02/09/2018
 ##  <a name="Capture"></a> Change Data Capture  
  Change Data Capture stellt Änderungsverlaufsinformationen für Benutzertabellen bereit, indem sowohl die Tatsache, dass DML-Änderungen vorgenommen wurden, als auch die geänderten Daten erfasst werden. Die Änderungen werden über einen asynchronen Prozess durch Lesen des Transaktionsprotokolls erfasst, der keine großen Auswirkungen auf die Systemleistung hat.  
   
- Wie in der folgenden Abbildung gezeigt, werden die an Benutzertabellen vorgenommenen Änderungen in entsprechenden Änderungstabellen aufgezeichnet. Diese Änderungstabellen stellen eine Übersicht über den Änderungsverlauf dar. Die von [bereitgestellten](../../relational-databases/system-functions/change-data-capture-functions-transact-sql.md)Change Data Capture [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Funktionen ermöglichen die einfache und systematische Verarbeitung der Änderungsdaten.  
+ Wie in der folgenden Abbildung gezeigt, werden die an Benutzertabellen vorgenommenen Änderungen in entsprechenden Änderungstabellen aufgezeichnet. Diese Änderungstabellen stellen eine Übersicht über den Änderungsverlauf dar. Die von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bereitgestellten [Change Data Capture](../../relational-databases/system-functions/change-data-capture-functions-transact-sql.md)-Funktionen ermöglichen die einfache und systematische Verarbeitung der Änderungsdaten.  
   
  ![Konzeptdarstellung von Change Data Capture](../../relational-databases/track-changes/media/cdcart1.gif "Conceptual illustration of change data capture")  
   
@@ -87,7 +87,7 @@ ms.lasthandoff: 02/09/2018
  Für den Zugriff auf die mit einer Änderungsinstanz verbundenen Änderungsdaten muss dem Benutzer die Zugriffsberechtigung für alle aufgezeichneten Spalten der zugeordneten Quelltabelle erteilt werden. Wenn bei Erstellung der Aufzeichnungsinstanz eine Gatingrolle angegeben wird, muss der Aufrufer außerdem Mitglied der angegebenen Gatingrolle sein. Andere allgemeine Change Data Capture-Funktionen für den Zugriff auf Metadaten stehen für alle Datenbankbenutzer mit der Rolle public zur Verfügung. Der Zugriff auf die zurückgegebenen Metadaten wird jedoch in der Regel auch hier durch die Zugriffsberechtigungen auf die zugrunde liegenden Quelltabellen und die Mitgliedschaft in definierten Gatingrollen beschränkt.  
   
  **Anwendung von DDL-Vorgängen auf Change Data Capture-aktivierte Quelltabellen**  
- Wenn eine Tabelle für Change Data Capture aktiviert ist, können DDL-Vorgänge nur von Mitgliedern der festen Serverrolle **sysadmin**bzw. von Mitgliedern der Datenbankrolle **db_owner**oder **db_ddladmin**auf die Tabelle angewendet werden. Wenn Benutzer, denen die Berechtigung zur Ausführung von DDL-Vorgängen auf die Tabelle explizit erteilt wurde, diesen Vorgang versuchen, wird die Fehlermeldung 22914 zurückgegeben.  
+ Wenn eine Tabelle für Change Data Capture aktiviert ist, können DDL-Vorgänge nur von Mitgliedern der festen Serverrolle **sysadmin**bzw. von Mitgliedern der Datenbankrolle **db_owner**oder **db_ddladmin**auf die Tabelle angewendet werden. Wenn Benutzer, denen die Berechtigung zur Ausführung von DDL-Vorgängen auf die Tabelle explizit erteilt wurde, diese Vorgänge versuchen, wird die Fehlermeldung 22914 zurückgegeben.  
   
 ### <a name="data-type-considerations-for-change-data-capture"></a>Überlegungen zum Datentyp für Change Data Capture  
  Alle Basisspaltentypen werden von Change Data Capture unterstützt. In der folgenden Tabelle sind jeweils das Verhalten und die Einschränkungen verschiedener Spaltentypen aufgeführt.  
@@ -146,7 +146,7 @@ ms.lasthandoff: 02/09/2018
 ##  <a name="Tracking"></a> Change Tracking  
  Bei der Änderungsnachverfolgung wird die Tatsache erfasst, dass Zeilen in einer Tabelle geändert wurden. Die geänderten Daten werden nicht erfasst. Hierdurch können Anwendungen die geänderten Zeilen ermitteln, wobei die aktuellen Zeilendaten direkt von den Benutzertabellen abgerufen werden. Im Hinblick auf den Verlauf ist die Änderungsnachverfolgung also nicht so aussagekräftig wie Change Data Capture. Der Vorteil für die Anwendungen, die keine Verlaufsinformationen erfordern, liegt darin, dass viel weniger Speicherplatz benötigt wird, da die Änderungsdaten nicht aufgezeichnet werden. Zur Nachverfolgung der Änderungen wird ein synchroner Nachverfolgungsmechanismus verwendet. Dieser wurde so konzipiert, dass er sich minimal auf die Leistung der DML-Vorgänge auswirkt.  
   
- Die folgende Abbildung zeigt ein Synchronisierungsszenario, in dem die Verwendung der Änderungsnachverfolgung vorteilhaft ist. In diesem Szenario erfordert eine Anwendung die folgenden Informationen: alle Zeilen in der Tabelle, die seit der letzten Synchronisierung der Tabelle geändert wurden, und nur die aktuellen Zeilendaten. Da zur Nachverfolgung der Änderungen ein synchroner Mechanismus verwendet wird, kann eine Anwendung die bidirektionale Synchronisierung anwenden und eventuelle Konflikte zuverlässig ermitteln.  
+ Die folgende Abbildung zeigt ein Synchronisierungsszenario, in dem die Verwendung der Änderungsnachverfolgung vorteilhaft ist. In diesem Szenario erfordert eine Anwendung folgende Informationen: alle Zeilen in der Tabelle, die seit der letzten Synchronisierung der Tabelle geändert wurden, und nur die aktuellen Zeilendaten. Da zur Nachverfolgung der Änderungen ein synchroner Mechanismus verwendet wird, kann eine Anwendung die bidirektionale Synchronisierung anwenden und eventuelle Konflikte zuverlässig ermitteln.  
   
  ![Konzeptdarstellung der Änderungsnachverfolgung](../../relational-databases/track-changes/media/cdcart2.gif "Konzeptdarstellung der Änderungsnachverfolgung")  
   
