@@ -2,7 +2,7 @@
 title: SQLForeignKeys-Funktion | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 07f3f645-f643-4d39-9a10-70a72f24e608
 caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ba8f395a556d976f2698ce9646db2e830e7a69aa
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 935c3236085794ef0d9cb4acb18568c4309fd191
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlforeignkeys-function"></a>SQLForeignKeys-Funktion
 **Konformität**  
@@ -164,7 +164,7 @@ SQLRETURN SQLForeignKeys(
   
  Die Länge von VARCHAR-Spalten werden nicht in der Tabelle angezeigt; die tatsächliche Länge hängen von der Datenquelle ab. Um zu bestimmen, die tatsächliche Länge der PKTABLE_CAT FKTABLE_CAT, PKTABLE_SCHEM oder FKTABLE_SCHEM, PKTABLE_NAME oder FKTABLE_NAME, und PKCOLUMN_NAME oder FKCOLUMN_NAME Spalten kann eine Anwendung aufrufen **SQLGetInfo** mit der SQL_MAX_ CATALOG_NAME_LEN, SQL_MAX_SCHEMA_NAME_LEN SQL_MAX_TABLE_NAME_LEN und SQL_MAX_COLUMN_NAME_LEN-Optionen.  
   
- Die folgenden Spalten wurden umbenannt für ODBC 3.*. X.* Die Spalte Namensänderungen wirken Abwärtskompatibilität sich nicht, da Anwendungen Spaltennummer binden.  
+ Die folgenden Spalten wurden umbenannt für ODBC 3*. X.* Die Spalte Namensänderungen wirken Abwärtskompatibilität sich nicht, da Anwendungen Spaltennummer binden.  
   
 |ODBC 2.0-Spalte|ODBC 3.*.x* Spalte|  
 |---------------------|-----------------------|  

@@ -2,7 +2,7 @@
 title: SQLColumns-Funktion | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 4a3618b7-d2b8-43c6-a1fd-7a4e6fa8c7d0
 caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7cb9d78a2ee194779f9e01dfd313ae4846d5a804
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 86cf72d9a0f061b4cdec3416df315c1e8f9fe91b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlcolumns-function"></a>SQLColumns-Funktion
 **Konformität**  
@@ -69,7 +69,7 @@ SQLRETURN SQLColumns(
  *NameLength1*  
  [Eingabe] Länge in Zeichen des **CatalogName*.  
   
- *SchemaName*  
+ *schemaName*  
  [Eingabe] Zeichenfolge Suchmuster für Schemanamen. Wenn ein Treiber unterstützt die Schemas für einige Tabellen jedoch nicht für andere, z. B. wenn der Treiber Daten aus anderen DBMS, eine leere Zeichenfolge ruft ("") gibt an, die Tabellen, die keine Schemas aufweisen.  
   
 > [!NOTE]  
@@ -78,7 +78,7 @@ SQLRETURN SQLColumns(
  *NameLength2*  
  [Eingabe] Länge in Zeichen des **SchemaName*.  
   
- *Tabellenname*  
+ *TableName*  
  [Eingabe] Zeichenfolge Suchmuster für Tabellennamen auf Richtigkeit.  
   
 > [!NOTE]  
@@ -87,7 +87,7 @@ SQLRETURN SQLColumns(
  *NameLength3*  
  [Eingabe] Länge in Zeichen des **TableName*.  
   
- *Spaltenname*  
+ *ColumnName*  
  [Eingabe] Zeichenfolge Suchmuster für Spaltennamen verfügbar.  
   
 > [!NOTE]  
@@ -154,7 +154,7 @@ SQLRETURN SQLColumns(
 |SCALE|DECIMAL_DIGITS|  
 |RADIX|NUM_PREC_RADIX|  
   
- Die folgenden Spalten wurden zurückgegebenes Resultset hinzugefügt **SQLColumns** für ODBC 3.. *X*:  
+ Die folgenden Spalten wurden zurückgegebenes Resultset hinzugefügt **SQLColumns** für ODBC 3. *X*:  
   
 |||  
 |-|-|  
@@ -164,7 +164,7 @@ SQLRETURN SQLColumns(
   
  Die folgende Tabelle listet die Spalten im Resultset. Zusätzliche Spalten nach Spalte 18 (IS_NULLABLE) können vom Treiber definiert werden. Eine Anwendung sollte treiberspezifischen Spalten zuzugreifen, beginnend am Ende das Resultset statt eine explizite Ordnungsposition anzugeben. Weitere Informationen finden Sie unter [Daten von Katalogfunktionen zurückgegeben](../../../odbc/reference/develop-app/data-returned-by-catalog-functions.md).  
   
-|Spaltenname|Spalte<br /><br /> number|Datentyp|Kommentare|  
+|Spaltenname|Column<br /><br /> number|Datentyp|Kommentare|  
 |-----------------|-----------------------|---------------|--------------|  
 |TABLE_CAT (ODBC 1.0)|1|Varchar|Name des Katalogs; NULL, wenn Sie auf die Datenquelle nicht verfügbar. Wenn ein Treiber Kataloge für einige Tabellen unterstützt jedoch nicht für andere, z. B. wenn der Treiber Daten aus anderen DBMS abruft, wird eine leere Zeichenfolge zurückgegeben ("") für diese Tabellen, denen keine Kataloge vorhanden sind.|  
 |NACH "TABLE_SCHEM" (ODBC 1.0)|2|Varchar|Schemanamen; NULL, wenn Sie auf die Datenquelle nicht verfügbar. Wenn ein Treiber Schemas für einige Tabellen unterstützt jedoch nicht für andere, z. B. wenn der Treiber Daten aus anderen DBMS abruft, wird eine leere Zeichenfolge zurückgegeben ("") für diese Tabellen, die keine Schemas aufweisen.|  

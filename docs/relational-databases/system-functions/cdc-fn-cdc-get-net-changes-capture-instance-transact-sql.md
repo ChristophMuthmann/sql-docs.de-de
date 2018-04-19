@@ -1,16 +1,16 @@
 ---
-title: cdc.fn_cdc_get_net_changes_&lt;capture_instance&gt; (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: CDC. fn_cdc_get_net_changes_&lt;Capture_instance&gt; (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -19,18 +19,18 @@ helpviewer_keywords:
 - change data capture [SQL Server], querying metadata
 - cdc.fn_cdc_get_net_changes_<capture_instance>
 ms.assetid: 43ab0d1b-ead4-471c-85f3-f6c4b9372aab
-caps.latest.revision: 
+caps.latest.revision: 29
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8eef147e95d841605c01fa8a0597aae1d32cc831
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 1fc46b0a9c671c82b03e9a4d4166513dc77315da
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="cdcfncdcgetnetchangesltcaptureinstancegt-transact-sql"></a>cdc.fn_cdc_get_net_changes_&lt;capture_instance&gt; (Transact-SQL)
+# <a name="cdcfncdcgetnetchangesltcaptureinstancegt-transact-sql"></a>CDC. fn_cdc_get_net_changes_&lt;Capture_instance&gt; (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Gibt eine nettoänderungszeile für jede Quellzeile, die innerhalb eines bestimmten Bereichs (Log Sequence Zahlen, LSN) geändert.  
@@ -41,7 +41,7 @@ ms.lasthandoff: 02/09/2018
   
  Wenn eine Quellzeile mehrere Änderungen während des LSN-Bereichs ist, wird eine einzelne Zeile, die den endgültigen Inhalt der Zeile wiedergibt von den unten beschriebenen enumerationsfunktion zurückgegeben. Z. B. wenn eine Transaktion eine Zeile in der Quelltabelle eingefügt, und eine nachfolgende Transaktion innerhalb des LSN-Bereichs eine oder mehrere Spalten in dieser Zeile aktualisiert, gibt die Funktion nur **eine** Zeile, der die aktualisierte Spaltenwerte enthält.  
   
- Diese Enumerationsfunktion wird erstellt, wenn eine Quelltabelle für Change Data Capture aktiviert wird und die Nettonachverfolgung angegeben ist. Um die Nettonachverfolgung zu aktivieren, muss die Quelltabelle einen Primärschlüssel oder einen eindeutigen Index aufweisen. Der Funktionsname wird abgeleitet und verwendet das Format CDC. fn_cdc_get_net_changes_*Capture_instance*, wobei *Capture_instance* ist der Wert für die Aufzeichnungsinstanz angegeben werden, wenn die Quelltabelle wurde für Change Data Capture aktiviert. Weitere Informationen finden Sie unter [Sys. sp_cdc_enable_table &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md).  
+ Diese Enumerationsfunktion wird erstellt, wenn eine Quelltabelle für Change Data Capture aktiviert wird und die Nettonachverfolgung angegeben ist. Um die Nettonachverfolgung zu aktivieren, muss die Quelltabelle einen Primärschlüssel oder einen eindeutigen Index aufweisen. Der Funktionsname wird abgeleitet und verwendet das Format CDC. fn_cdc_get_net_changes_*Capture_instance*, wobei *Capture_instance* ist der Wert für die Aufzeichnungsinstanz angegeben werden, wenn die Quelltabelle wurde für Change Data Capture aktiviert. Weitere Informationen finden Sie unter [sp_cdc_enable_table &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md).  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -60,16 +60,16 @@ cdc.fn_cdc_get_net_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
   
 ## <a name="arguments"></a>Argumente  
  *from_lsn*  
- Legen Sie die LSN, die den unteren Endpunkt des LSN-Bereichs in das Ergebnis eingeschlossen darstellt. *from_lsn* is **binary(10)**.  
+ Legen Sie die LSN, die den unteren Endpunkt des LSN-Bereichs in das Ergebnis eingeschlossen darstellt. *From_lsn* ist **("Binary(10)")**.  
   
- Nur Zeilen aus der [cdc. &#91; Capture_instance &#93; _CT](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md) Änderungstabelle mit einem Wert in __ $Start_lsn größer als oder gleich *From_lsn* im Resultset enthalten sind.  
+ Nur Zeilen aus der [cdc.&#91; Capture_instance&#93;_CT](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md) Änderungstabelle mit einem Wert in __ $Start_lsn größer als oder gleich *From_lsn* im Resultset enthalten sind.  
   
  *to_lsn*  
- Legen Sie die LSN, die für den oberen Endpunkt des LSN-Bereichs in das Ergebnis eingeschlossen werden sollen. *to_lsn* is **binary(10)**.  
+ Legen Sie die LSN, die für den oberen Endpunkt des LSN-Bereichs in das Ergebnis eingeschlossen werden sollen. *To_lsn* ist **("Binary(10)")**.  
   
- Nur Zeilen aus der [cdc. &#91; Capture_instance &#93; _CT](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md) Änderungstabelle mit einem Wert in __ $Start_lsn kleiner als oder gleich *From_lsn* gleich *To_lsn* sind im Resultset enthalten.  
+ Nur Zeilen aus der [cdc.&#91; Capture_instance&#93;_CT](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md) Änderungstabelle mit einem Wert in __ $Start_lsn kleiner als oder gleich *From_lsn* gleich *To_lsn* im Resultset enthalten sind.  
   
- *<row_filter_option>* ::= { all | all with mask | all with merge }  
+ *< Row_filter_option >* :: = {alle | alle Daten mit Maske | alle Daten mit Merge}  
  Eine Option, die den Inhalt der Metadatenspalten sowie die im Resultset zurückgegebenen Zeilen bestimmt. Eine der folgenden Optionen ist möglich:  
   
  all  
@@ -101,7 +101,7 @@ cdc.fn_cdc_get_net_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird die Funktion `cdc.fn_cdc_get_net_changes_HR_Department` melden die net Änderungen an der Quelltabelle `HumanResources.Department` während eines bestimmten Zeitintervalls.  
   
- Zuerst wird die `GETDATE`-Funktion verwendet, um den Anfang des Zeitintervalls zu markieren. Nachdem mehrere DML-Anweisungen auf die Quelltabelle angewendet wurden, wird die `GETDATE`-Funktion erneut aufgerufen, um das Ende des Zeitintervalls zu identifizieren. Die Funktion [fn_cdc_map_time_to_lsn](../../relational-databases/system-functions/sys-fn-cdc-map-time-to-lsn-transact-sql.md) wird dann verwendet werden, um Change Data Capture Abfragebereichs begrenzt, die den LSN-Werte des angegebenen Zeitintervalls zuordnen. Schließlich wird die `cdc.fn_cdc_get_net_changes_HR_Department`-Funktion abgefragt, um die Nettoänderungen an der Quelltabelle für das Zeitintervall zu erhalten. Beachten Sie, dass die eingefügte und anschließend gelöschte Zeile nicht in dem von der Funktion zurückgegebenen Resultset aufgeführt wird. Der Grund dafür ist, dass eine in einem Abfragefenster zuerst hinzugefügte und dann gelöschte Zeile keine Nettoänderung in der Quelltabelle für das Intervall erzeugt. Bevor Sie dieses Beispiel auszuführen, müssen Sie zuerst ausführen, Beispiel B im [Sys. sp_cdc_enable_table &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md).  
+ Zuerst wird die `GETDATE`-Funktion verwendet, um den Anfang des Zeitintervalls zu markieren. Nachdem mehrere DML-Anweisungen auf die Quelltabelle angewendet wurden, wird die `GETDATE`-Funktion erneut aufgerufen, um das Ende des Zeitintervalls zu identifizieren. Die Funktion [fn_cdc_map_time_to_lsn](../../relational-databases/system-functions/sys-fn-cdc-map-time-to-lsn-transact-sql.md) wird dann verwendet werden, um Change Data Capture Abfragebereichs begrenzt, die den LSN-Werte des angegebenen Zeitintervalls zuordnen. Schließlich wird die `cdc.fn_cdc_get_net_changes_HR_Department`-Funktion abgefragt, um die Nettoänderungen an der Quelltabelle für das Zeitintervall zu erhalten. Beachten Sie, dass die eingefügte und anschließend gelöschte Zeile nicht in dem von der Funktion zurückgegebenen Resultset aufgeführt wird. Der Grund dafür ist, dass eine in einem Abfragefenster zuerst hinzugefügte und dann gelöschte Zeile keine Nettoänderung in der Quelltabelle für das Intervall erzeugt. Bevor Sie dieses Beispiel auszuführen, müssen Sie zuerst ausführen, Beispiel B im [sp_cdc_enable_table &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md).  
   
 ```  
 USE AdventureWorks2012;  
