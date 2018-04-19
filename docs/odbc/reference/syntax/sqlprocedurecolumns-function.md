@@ -2,7 +2,7 @@
 title: SQLProcedureColumns-Funktion | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 4ca37b28-a6df-465b-8988-d422d37fc025
 caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c5d5ceb9f955d8eb583181d789847eeb79d1b0a5
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 7c509d2e02535a7bb30a167eba3ee1f93c70c234
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlprocedurecolumns-function"></a>SQLProcedureColumns-Funktion
 **Konformität**  
@@ -68,7 +68,7 @@ SQLRETURN SQLProcedureColumns(
  *NameLength1*  
  [Eingabe] Länge in Zeichen des **CatalogName*.  
   
- *SchemaName*  
+ *schemaName*  
  [Eingabe] Zeichenfolge Suchmuster für Prozedur Schemanamen. Wenn ein Treiber Schemas unterstützt, bei einigen Prozeduren, jedoch nicht für andere, z. B. wenn der Treiber Daten aus anderen DBMS, eine leere Zeichenfolge ruft ("") gibt die Prozeduren, die keine Schemas.  
   
  Wenn das SQL_ATTR_METADATA_ID-Anweisungsattribut auf SQL_TRUE, festgelegt ist *SchemaName* wird als Bezeichner behandelt und seine Fall spielt keine Rolle. Ist er SQL_FALSE, *SchemaName* ist ein Wert Pattern-Argument; wird als solcher behandelt, und der Fall ist von Bedeutung.  
@@ -84,7 +84,7 @@ SQLRETURN SQLProcedureColumns(
  *NameLength3*  
  [Eingabe] Länge in Zeichen des **ProcName*.  
   
- *Spaltenname*  
+ *ColumnName*  
  [Eingabe] Zeichenfolge Suchmuster für Spaltennamen verfügbar.  
   
  Wenn das SQL_ATTR_METADATA_ID-Anweisungsattribut auf SQL_TRUE, festgelegt ist *ColumnName* wird als Bezeichner behandelt und seine Fall spielt keine Rolle. Ist er SQL_FALSE, *ColumnName* ist ein Wert Pattern-Argument; wird als solcher behandelt, und der Fall ist von Bedeutung.  
@@ -147,7 +147,7 @@ SQLRETURN SQLProcedureColumns(
 |SCALE|DECIMAL_DIGITS|  
 |RADIX|NUM_PREC_RADIX|  
   
- Das zurückgegebene Resultset wurden die folgenden Spalten hinzugefügt **SQLProcedureColumns** für ODBC 3.. *X*:  
+ Das zurückgegebene Resultset wurden die folgenden Spalten hinzugefügt **SQLProcedureColumns** für ODBC 3. *X*:  
   
 -   COLUMN_DEF  
   

@@ -1,16 +1,16 @@
 ---
-title: cdc.fn_cdc_get_all_changes_&lt;capture_instance&gt;  (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: CDC. fn_cdc_get_all_changes_&lt;Capture_instance&gt; (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server (starting with 2008)
@@ -21,18 +21,18 @@ helpviewer_keywords:
 - change data capture [SQL Server], querying metadata
 - cdc.fn_cdc_get_all_changes_<capture_instance>
 ms.assetid: c6bad147-1449-4e20-a42e-b51aed76963c
-caps.latest.revision: 
+caps.latest.revision: 31
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4e56ac770a416d4597fd766d0d8e8612cccac262
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: dc2457099b01c10da59eeff031b6532d2b8a4ace
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="cdcfncdcgetallchangesltcaptureinstancegt--transact-sql"></a>cdc.fn_cdc_get_all_changes_&lt;capture_instance&gt;  (Transact-SQL)
+# <a name="cdcfncdcgetallchangesltcaptureinstancegt--transact-sql"></a>CDC. fn_cdc_get_all_changes_&lt;Capture_instance&gt; (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Gibt eine Zeile für jede auf die Quelltabelle innerhalb des angegebenen Bereichs der Protokollfolgenummer (Log Sequence Number, LSN) angewendete Änderung an. Wenn an einer Quellzeile während des Intervalls mehrere Änderungen vorgenommen wurden, wird jede Änderung im zurückgegebenen Resultset dargestellt. Zusätzlich zum Zurückgeben der Änderungsdaten stellen vier Metadatenspalten die Informationen bereit, die Sie zum Anwenden der Änderungen auf eine andere Datenquelle benötigen. Über Zeilenfilterungsoptionen werden der Inhalt der Metadatenspalten sowie die im Resultset zurückgegebenen Zeilen bestimmt. Wenn die Filteroption 'all' angegeben ist, verfügt jede Änderung über genau eine Zeile, um die Änderung zu identifizieren. Wenn die Option 'all update old' angegeben ist, werden die Updatevorgänge in zwei Zeilen dargestellt: Eine enthält die Werte der aufgezeichneten Spalten vor dem Update und die andere enthält die Werte der aufgezeichneten Spalten nach dem Update.  
@@ -55,14 +55,14 @@ cdc.fn_cdc_get_all_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
   
 ## <a name="arguments"></a>Argumente  
  *from_lsn*  
- Der LSN-Wert, der den unteren Endpunkt des LSN-Bereichs darstellt, der im Resultset enthalten sein soll. *from_lsn* is **binary(10)**.  
+ Der LSN-Wert, der den unteren Endpunkt des LSN-Bereichs darstellt, der im Resultset enthalten sein soll. *From_lsn* ist **("Binary(10)")**.  
   
- Nur Zeilen aus der [cdc. &#91; Capture_instance &#93; _CT](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md) Änderungstabelle mit einem Wert in **__ $Start_lsn** größer als oder gleich *From_lsn* befinden sich die Resultset.  
+ Nur Zeilen aus der [cdc.&#91; Capture_instance&#93;_CT](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md) Änderungstabelle mit einem Wert in **__ $Start_lsn** größer als oder gleich *From_lsn* im Resultset enthalten sind.  
   
  *to_lsn*  
- Der LSN-Wert, der den oberen Endpunkt des LSN-Bereichs darstellt, der im Resultset enthalten sein soll. *to_lsn* is **binary(10)**.  
+ Der LSN-Wert, der den oberen Endpunkt des LSN-Bereichs darstellt, der im Resultset enthalten sein soll. *To_lsn* ist **("Binary(10)")**.  
   
- Nur Zeilen aus der [cdc. &#91; Capture_instance &#93; _CT](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md) Änderungstabelle mit einem Wert in **__ $Start_lsn** kleiner als oder gleich *From_lsn* oder gleich*To_lsn* im Resultset enthalten sind.  
+ Nur Zeilen aus der [cdc.&#91; Capture_instance&#93;_CT](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md) Änderungstabelle mit einem Wert in **__ $Start_lsn** kleiner als oder gleich *From_lsn* gleich *To_lsn* enthalten sind im Resultset.  
   
  <row_filter_option> ::= { all | all update old }  
  Eine Option, die den Inhalt der Metadatenspalten sowie die im Resultset zurückgegebenen Zeilen bestimmt.  

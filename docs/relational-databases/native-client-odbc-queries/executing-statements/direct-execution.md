@@ -1,15 +1,15 @@
 ---
-title: "Direkte Ausführung | Microsoft Docs"
-ms.custom: 
+title: Direkte Ausführung | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-odbc-queries
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - ODBC applications, statements
@@ -17,16 +17,17 @@ helpviewer_keywords:
 - SQLExecDirect function
 - statements [ODBC], direct execution
 ms.assetid: fa36e1af-ed98-4abc-97c1-c4cc5d227b29
-caps.latest.revision: 
+caps.latest.revision: 38
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b8b0dbe099a36f7571f024e34838337f38b5ddef
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 7ff1baa498a99f9e9279d1c104df179fa34cbea3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="direct-execution"></a>Direkte Ausführung
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,7 +39,7 @@ ms.lasthandoff: 01/25/2018
   
  In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] wurde die Leistung bei der direkten Ausführung von häufig ausgeführten Anweisungen in Mehrbenutzerumgebungen wesentlich verbessert. Durch den Einsatz von SQLExecDirect mit Parametermarkierungen für häufig ausgeführte SQL-Anweisungen wird zudem beinahe die gleiche Effizienz wie bei der vorbereiteten Ausführung erzielt.  
   
- Beim Verbinden mit einer Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber verwendet [Sp_executesql](../../../relational-databases/system-stored-procedures/sp-executesql-transact-sql.md) der SQL-Anweisung oder im angegebenen Batch übertragen **SQLExecDirect**. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]verfügt über eine Logik, um schnell eine SQL-Anweisung festzustellen oder Ausführung von Batches mit **Sp_executesql** entspricht der Anweisung oder der Batch, die einen Ausführungsplan, der bereits im Arbeitsspeicher generiert. Wenn eine Übereinstimmung gefunden wird, nutzt [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] den vorhandenen Plan, anstatt einen neuen Plan zu kompilieren. Dies bedeutet, die häufig mit ausgeführte SQL-Anweisungen ausgeführt **SQLExecDirect** in einem System mit vielen Benutzern profitieren von der Großteil der planwiederverwertungsvorteilen, die nur für gespeicherte Prozeduren, die in früheren Versionen von verfügbarwaren.[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ Beim Verbinden mit einer Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber verwendet [Sp_executesql](../../../relational-databases/system-stored-procedures/sp-executesql-transact-sql.md) der SQL-Anweisung oder im angegebenen Batch übertragen **SQLExecDirect**. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] verfügt über eine Logik, um schnell eine SQL-Anweisung festzustellen oder Ausführung von Batches mit **Sp_executesql** entspricht der Anweisung oder der Batch, die einen Ausführungsplan, der bereits im Arbeitsspeicher generiert. Wenn eine Übereinstimmung gefunden wird, nutzt [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] den vorhandenen Plan, anstatt einen neuen Plan zu kompilieren. Dies bedeutet, die häufig mit ausgeführte SQL-Anweisungen ausgeführt **SQLExecDirect** in einem System mit vielen Benutzern profitieren von der Großteil der planwiederverwertungsvorteilen, die nur für gespeicherte Prozeduren, die in früheren Versionen von verfügbarwaren[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
  Die Vorteile der erneuten Nutzung von Ausführungsplänen können jedoch nur umgesetzt werden, wenn mehrere Benutzer die gleiche SQL-Anweisungen oder den gleichen Batch ausführen. Befolgen Sie diese Codierungskonventionen, um die Wahrscheinlichkeit zu erhöhen, dass die SQL-Anweisungen, die von unterschiedlichen Clients ausgeführt werden, sich soweit ähneln, dass die Ausführungspläne wiederverwendet werden können:  
   
@@ -51,6 +52,6 @@ ms.lasthandoff: 01/25/2018
  Bei Ausführung alle Anweisungen mit **SQLExecDirect** werden diesen Konventionen codiert, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] können wiederverwenden Ausführungspläne bei Gelegenheit.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Ausführen von Anweisungen &#40; ODBC &#41;](../../../relational-databases/native-client-odbc-queries/executing-statements/executing-statements-odbc.md)  
+ [Ausführen von Anweisungen & #40; ODBC & #41;](../../../relational-databases/native-client-odbc-queries/executing-statements/executing-statements-odbc.md)  
   
   

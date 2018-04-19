@@ -2,7 +2,7 @@
 title: SQLDescribeCol-Funktion | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: eddef353-83f3-4a3c-8f24-f9ed888890a4
 caps.latest.revision: 35
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4967b2de98246e3ae8eedb91ecfcbf507b2afc8c
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f19de730a9755627863ad2b8e12df6a5e0b1dbc1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqldescribecol-function"></a>SQLDescribeCol-Funktion
 **Konformität**  
@@ -63,7 +63,7 @@ SQLRETURN SQLDescribeCol(
  *ColumnNumber*  
  [Eingabe] Die Spaltennummer der Ergebnisdaten, sortiert sequenziell in aufsteigender Spaltenreihenfolge, beginnend mit 1. Die *ColumnNumber* Argument kann auch auf 0 festgelegt werden, um die Lesezeichenspalte zu beschreiben.  
   
- *Spaltenname*  
+ *ColumnName*  
  [Ausgabe] Ein Zeiger auf einen Null-terminierte Puffer in den Namen der Spalte zurückgegeben. Dieser Wert wird aus dem SQL_DESC_NAME-Feld der IRD gelesen. Wenn die Spalte keinen Namen hat oder den Namen der Spalte nicht bestimmt werden kann, gibt der Treiber eine leere Zeichenfolge zurück.  
   
  Wenn *ColumnName* NULL ist, *NameLengthPtr* gibt weiterhin zurück, die Gesamtzahl der Zeichen (mit Ausnahme der Null-Terminierung Zeichen für Zeichendaten) verfügbaren zurückzugebenden im Puffer verweist *ColumnName*.  
@@ -77,9 +77,9 @@ SQLRETURN SQLDescribeCol(
  *DataTypePtr*  
  [Ausgabe] Zeiger auf einen Puffer, in dem den SQL-Datentyp der Spalte zurückgegeben. Dieser Wert wird aus dem Feld SQL_DESC_CONCISE_TYPE vom IRD gelesen. Dadurch wird einer der Werte in [SQL-Datentypen](../../../odbc/reference/appendixes/sql-data-types.md), oder treiberspezifischen SQL-Datentyp. Wenn der Datentyp bestimmt werden kann, kehrt der Treiber SQL_UNKNOWN_TYPE zurück.  
   
- In ODBC 3. *x*, SQL_TYPE_DATE, SQL_TYPE_TIME und SQL_TYPE_TIMESTAMP wird zurückgegeben,  *\*DataTypePtr* für Datum, Uhrzeit oder Zeitstempeldaten bzw.; in ODBC 2.. *X*, SQL_DATE, SQL_TIME oder SQL_TIMESTAMP zurückgegeben wird. Der Treiber-Manager führt die erforderlichen Zuordnungen, wenn eine ODBC-2. *x* Anwendung arbeitet mit einer ODBC-3. *X* Treiber oder wenn eine ODBC 3.. *X* Anwendung arbeitet mit einer ODBC 2.. *X* Treiber.  
+ In ODBC 3. *x*, SQL_TYPE_DATE, SQL_TYPE_TIME und SQL_TYPE_TIMESTAMP wird zurückgegeben,  *\*DataTypePtr* für Datum, Uhrzeit oder Zeitstempeldaten bzw.; in ODBC 2. *X*, SQL_DATE, SQL_TIME oder SQL_TIMESTAMP zurückgegeben wird. Der Treiber-Manager führt die erforderlichen Zuordnungen, wenn eine ODBC-2. *x* Anwendung arbeitet mit einer ODBC-3. *X* Treiber oder wenn eine ODBC 3. *X* Anwendung arbeitet mit einer ODBC 2. *X* Treiber.  
   
- Wenn *ColumnNumber* entspricht 0 (für eine Lesezeichenspalte), wird im SQL_BINARY zurückgegeben  *\*DataTypePtr* für Lesezeichen variabler Länge. (SQL_INTEGER wird zurückgegeben, wenn von einer ODBC 3. Lesezeichen verwendet werden. *x* Anwendung arbeiten mit einer ODBC 2.. *X* Treiber oder von einer ODBC 2.. *X* Anwendung arbeiten mit einem ODBC 3.. *X* Treiber.)  
+ Wenn *ColumnNumber* entspricht 0 (für eine Lesezeichenspalte), wird im SQL_BINARY zurückgegeben  *\*DataTypePtr* für Lesezeichen variabler Länge. (SQL_INTEGER wird zurückgegeben, wenn von einer ODBC 3. Lesezeichen verwendet werden. *x* Anwendung arbeiten mit einer ODBC 2. *X* Treiber oder von einer ODBC 2. *X* Anwendung arbeiten mit einem ODBC 3. *X* Treiber.)  
   
  Weitere Informationen zu diesen Datentypen finden Sie unter [SQL-Datentypen](../../../odbc/reference/appendixes/sql-data-types.md) in Anhang D:-Datentypen. Informationen zu treiberspezifischen SQL-Datentypen finden Sie unter der Treiber-Dokumentation.  
   
@@ -123,7 +123,7 @@ SQLRETURN SQLDescribeCol(
 |IM017|Abrufintervall ist im Modus für asynchrone Benachrichtigung deaktiviert.|Sobald das Benachrichtigungsmodell verwendet wird, ist die Abruf deaktiviert.|  
 |IM018|**SQLCompleteAsync** nicht zum Abschließen des vorherigen asynchrone Vorgangs auf diesem Handle aufgerufen wurde.|Wenn die vorherigen Funktionsaufruf auf das Handle SQL_STILL_EXECUTING zurückgibt und Benachrichtigungsmodus aktiviert ist, **SQLCompleteAsync** muss aufgerufen werden, auf das Handle nach der Verarbeitung und der Vorgang abgeschlossen werden.|  
   
- **SQLDescribeCol** zurückgeben kann eine beliebige SQLSTATE, die von zurückgegeben werden kann **SQLPrepare** oder **SQLExecute** beim Aufruf nach **SQLPrepare** und vor  **SQLExecute**, je nachdem, wenn die Datenquelle für die SQL-Anweisung, die das Anweisungshandle zugeordnet auswertet.  
+ **SQLDescribeCol** zurückgeben kann eine beliebige SQLSTATE, die von zurückgegeben werden kann **SQLPrepare** oder **SQLExecute** beim Aufruf nach **SQLPrepare** und vor dem **SQLExecute**, je nachdem, wenn die Datenquelle für die SQL-Anweisung, die das Anweisungshandle zugeordnet auswertet.  
   
  Aus Gründen der Leistung eine Anwendung sollte nicht aufrufen **SQLDescribeCol** vor der Ausführung einer Anweisung.  
   
