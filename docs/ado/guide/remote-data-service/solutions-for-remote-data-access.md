@@ -1,30 +1,30 @@
 ---
-title: "Lösungen für Remotedatenzugriff | Microsoft Docs"
-ms.prod: sql-non-specified
+title: Lösungen für Remotedatenzugriff | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - RDS [ADO]
 ms.assetid: d311cc67-7db7-4c43-9590-d465564695e4
-caps.latest.revision: 
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2377f7a33f8426d7081806980618c432a56bba42
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 84030d05131d8a410690a6896b5173da356240c3
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="solutions-for-remote-data-access"></a>Lösungen für Remotedatenzugriff
 ## <a name="the-issue"></a>Das Problem  

@@ -5,12 +5,12 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.suite: sql
 ms.tgt_pltfrm: ''
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: ado
 ms.technology: drivers
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ADO, glossary
 ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
@@ -18,11 +18,11 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f24e579d2cd1802b42ce4ae2cbc2d8b5b8e447e6
-ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
+ms.openlocfilehash: 6d53fe64298c22c145be537221aa20425bce0e51
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="ado-glossary"></a>ADO-Glossar
 In diesem Thema werden Begriffe, die relevant für ADO definiert.  
@@ -53,7 +53,7 @@ In diesem Thema werden Begriffe, die relevant für ADO definiert.
  Bindungseintrag  
  Eine Zuordnung zwischen einem Feld in einer Tabelle und einer Variablen. In den Visual C++ ADO-Erweiterungen **Recordset** Felder C/C++-Variablen zugeordnet werden.  
   
- bitmask  
+ Bitmaske  
  Ein numerischer Wert vorgesehen für ein Bit für Bit Wertvergleich mit anderen numerischen Werten in der Regel so kennzeichnen Sie die Optionen im Parameter oder Rückgabewerte. Dieser Vergleich erfolgt normalerweise mit bitweisen logischen Operatoren, wie z. B. **und** und **oder** in Visual Basic **&** und **&#124;** in C++.  
   
  Zum Beispiel das ADO- **FieldAttributeEnum** Werte können als Bitmasken verwendet werden, um die Attribute eines Felds zu bestimmen. Angenommen Sie, Sie möchten, um festzustellen, ob ein Feld aktualisiert wurde. Sie können mit dem folgenden Ausdruck in Visual Basic dafür testen:`Field.Attributes AND adFldUpdatable`  
@@ -78,7 +78,7 @@ In diesem Thema werden Begriffe, die relevant für ADO definiert.
   
  Kapitelspalten stellen das Definieren einer *über-/* Beziehung, in dem die *übergeordneten* ist die **Recordset** , enthält der Kapitelspalte und die  *untergeordnete* ist die **Recordset** durch das Kapitel dargestellt.  
   
- chapter-alias  
+ Kapitel-alias  
  Ein Alias, der auf die Spalte, angefügt an das übergeordnete Element verweist.  
   
  Zeichensatz  
@@ -116,7 +116,7 @@ In diesem Thema werden Begriffe, die relevant für ADO definiert.
  Eine Anzahl von einzelnen Dateien, die zusammen in einer physischen Datei gebunden. Jede einzelne Datei in einer Verbunddatei kann zugegriffen werden, als handele es sich um einen einzelnen physischen Datei.  
   
  Konstante  
- Ein numerisch oder String-Wert, der nicht geändert wird. Benannte ADO-Enumerationen (Enumerationskonstanten) können z. B. in Ihrem Code anstelle der eigentlichen Werte verwendet werden **AdUseClient** ist eine Konstante, deren Wert 3 ist. (Const adUseClient = 3). Siehe auch *Enumeration*.  
+ Ein numerisch oder String-Wert, der nicht geändert wird. Benannte ADO-Enumerationen (Enumerationskonstanten) können z. B. in Ihrem Code anstelle der eigentlichen Werte verwendet werden **AdUseClient** ist eine Konstante, deren Wert 3 ist. (Const AdUseClient = 3). Siehe auch *Enumeration*.  
   
  cursor  
  Ein Datenbankelement, das zum Navigieren in Datensätzen, Updateability der Daten und die Sichtbarkeit von Änderungen an der Datenbank vorgenommen werden, die von anderen Benutzern gesteuert.  
@@ -234,7 +234,7 @@ In diesem Thema werden Begriffe, die relevant für ADO definiert.
  parent (parent)  
  Der steuernde Seite einer hierarchischen Beziehung. In einer hierarchischen Struktur besitzt ein übergeordnetes Element ein oder mehrere untergeordnete Knoten direkt unter ihm in der Hierarchie. Siehe auch übergeordneten Alias, über-/ unterordnungsbeziehung, untergeordnetes Element.  
   
- parent-alias  
+ übergeordneten alias  
  Ein Alias, der auf das übergeordnete Element verweist. Siehe auch alias übergeordneten.  
   
  Parent-Child-Beziehung  

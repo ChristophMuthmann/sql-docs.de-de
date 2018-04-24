@@ -1,17 +1,17 @@
 ---
 title: DefinedSize-Eigenschaft (ADOX) | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - _Column::DefinedSize
@@ -22,18 +22,18 @@ f1_keywords:
 helpviewer_keywords:
 - DefinedSize property [ADOX]
 ms.assetid: 762b8937-c31c-4e90-bb85-506d991e8280
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c6a316c2cbd05fd4ec0df58d79f48b1f3922509f
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 162d2d0725c440130e702ac4f6c4b9a810d2b159
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
-# <a name="definedsize-property-adox"></a>DefinedSize Property (ADOX)
+# <a name="definedsize-property-adox"></a>DefinedSize-Eigenschaft (ADOX)
 Gibt die festgelegte maximale Größe der Spalte an.  
   
 ## <a name="settings-and-return-values"></a>Einstellungen und Rückgabewerte  

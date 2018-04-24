@@ -1,32 +1,32 @@
 ---
 title: CompareBookmarks-Methode (Beispiel) (VB) | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - CompareBookmarks method [ADO], Visual Basic example
 ms.assetid: f156aa48-bfc2-40d1-962b-7b08855776c6
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f018ed177dbf616ce59f088c8960ebab4fbd2c97
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 8dcc7c3e73b1a863588dec7c53f9133ff6dc67a7
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="comparebookmarks-method-example-vb"></a>CompareBookmarks-Methode (Beispiel) (VB)
 Dieses Beispiel zeigt die [CompareBookmarks](../../../ado/reference/ado-api/comparebookmarks-method-ado.md) Methode. Der relative Wert von Lesezeichen ist nur selten erforderlich, es sei denn, ein bestimmtes Lesezeichens aus irgendeinem Grund spezielle.  

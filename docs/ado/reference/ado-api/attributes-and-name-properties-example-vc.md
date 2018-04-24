@@ -1,33 +1,33 @@
 ---
 title: Attribute und Namen Eigenschaften (VC++-Beispiel) | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Attributes property [ADO], VC++ example
 - Name property [ADO], VC++ example
 ms.assetid: 2db7c9ca-d7d0-4c8e-840b-b27d7933ec40
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 04002f424c40ac91ea44e1625c879033392e796a
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: b52fcef9fd7d1ee4e0aa7ceb207f548a1186fd2b
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="attributes-and-name-properties-example-vc"></a>Attribute und Namen Eigenschaften (VC++-Beispiel)
 Dieses Beispiel zeigt den Wert des der [Attribute](../../../ado/reference/ado-api/attributes-property-ado.md) -Eigenschaft für [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md), [Feld](../../../ado/reference/ado-api/field-object.md), und [Eigenschaft](../../../ado/reference/ado-api/property-object-ado.md) Objekte. Er verwendet die [Namen](../../../ado/reference/ado-api/name-property-ado.md) Eigenschaft zum Anzeigen der Namen der einzelnen **Feld** und **Eigenschaft** Objekt.  

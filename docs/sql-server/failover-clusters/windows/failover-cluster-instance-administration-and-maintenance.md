@@ -1,15 +1,16 @@
 ---
 title: Verwaltung und Wartung von Failoverclusterinstanzen | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: failover-clusters
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - user accounts [SQL Server], failover clustering
@@ -25,19 +26,20 @@ helpviewer_keywords:
 - removing nodes
 - virtual servers [SQL Server], adding nodes
 ms.assetid: 2d5c63e9-8061-45c3-94db-8dd3100b8a91
-caps.latest.revision: "35"
+caps.latest.revision: 35
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 964ce2dcfcff3edb1de4822ee01982583062f958
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 1a05ccc3c7e1bec3419dd8555f40cd3576456f80
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="failover-cluster-instance-administration-and-maintenance"></a>Verwaltung und Wartung von Failoverclusterinstanzen
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Wartungsaufgaben wie das Hinzufügen von Knoten zu einer vorhandenen Always On-Failoverclusterinstanz (FCI) oder das Entfernen daraus werden mithilfe des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Setupprogramms ausgeführt. Andere Verwaltungsaufgaben wie das Ändern der IP-Adressressource oder das Wiederherstellen nach bestimmten FCI-Szenarien werden mit dem Failovercluster-Manager-Snap-In ausgeführt, welches das Verwaltungs-Snap-In für den WSFC (Windows Server Failover Clustering)-Dienst darstellt.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Wartungsaufgaben wie das Hinzufügen oder Entfernen von Knoten aus einer vorhandenen Always On-Failoverclusterinstanz (FCI) werden mithilfe des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Setupprogramms ausgeführt. Andere Verwaltungsaufgaben wie das Ändern der IP-Adressressource oder das Wiederherstellen nach bestimmten FCI-Szenarien werden mit dem Failovercluster-Manager-Snap-In ausgeführt, welches das Verwaltungs-Snap-In für den WSFC (Windows Server Failover Clustering)-Dienst darstellt.  
   
 ## <a name="maintaining-a-failover-cluster-instance"></a>Warten einer Failoverclusterinstanz  
  Nachdem Sie eine FCI installiert haben, können Sie sie mithilfe des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Setupprogramms ändern oder reparieren. Beispielsweise können Sie einer FCI zusätzliche Knoten hinzufügen, eine FCI als eigenständige Instanz ausführen oder einen Knoten aus einer FCI-Konfiguration entfernen.  
@@ -68,7 +70,7 @@ ms.lasthandoff: 12/05/2017
 |Beschreibt das Verfahren zum Wiederherstellen nach einem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Failovercluster-Fehler.|[Wiederherstellen nach einem Fehler der Failoverclusterinstanz](../../../sql-server/failover-clusters/windows/recover-from-failover-cluster-instance-failure.md)|  
 |Beschreibt das Verfahren zum Ändern der IP-Adressressource für eine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Failoverclusterinstanz.|[Ändern der IP-Adresse einer Failoverclusterinstanz](../../../sql-server/failover-clusters/windows/change-the-ip-address-of-a-failover-cluster-instance.md)|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Konfigurieren der HealthCheckTimeout-Eigenschafteneinstellungen](../../../sql-server/failover-clusters/windows/configure-healthchecktimeout-property-settings.md)   
  [Konfigurieren von FailureConditionLevel-Eigenschafteneinstellungen](../../../sql-server/failover-clusters/windows/configure-failureconditionlevel-property-settings.md)   
  [Anzeigen und Lesen des Failoverclusterinstanz-Diagnoseprotokolls](../../../sql-server/failover-clusters/windows/view-and-read-failover-cluster-instance-diagnostics-log.md)  

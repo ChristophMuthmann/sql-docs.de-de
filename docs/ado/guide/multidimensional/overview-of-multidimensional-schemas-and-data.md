@@ -1,30 +1,30 @@
 ---
-title: "Übersicht über multidimensionale Schemas und Daten | Microsoft Docs"
-ms.prod: sql-non-specified
+title: Übersicht über multidimensionale Schemas und Daten | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - multidimensional schemas and data
 ms.assetid: ce37fa06-c581-4d80-9a9b-c3aa66408909
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 518cb68ec75fb998ee2a53500db0dc096a38d678
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 061c8df1aff59c97df54a973491d333858288fd4
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="overview-of-multidimensional-schemas-and-data"></a>Übersicht über multidimensionale Schemas und Daten
 ## <a name="understanding-multidimensional-schemas"></a>Grundlegendes zu MDX-Schemas  
@@ -65,15 +65,15 @@ Hamburg, Munich, Stuttgart}
   
  Jede Ebene weist eine Menge von Elementen, wie folgt aus:  
   
--   The World `= {All}`  
+-   die Welt `= {All}`  
   
--   Kontinente`= {North America, Europe}`  
+-   Kontinente `= {North America, Europe}`  
   
--   Ländern`= {Canada, USA, UK, Germany}`  
+-   Ländern `= {Canada, USA, UK, Germany}`  
   
--   Regionen`= {Canada-East, Canada-West, USA-NE, USA-NW, USA-SE, USA-SW, England, Ireland, Scotland, Wales, Germany-North, Germany-South}`  
+-   Regionen `= {Canada-East, Canada-West, USA-NE, USA-NW, USA-SE, USA-SW, England, Ireland, Scotland, Wales, Germany-North, Germany-South}`  
   
--   Städte`= {Ottawa, Toronto, Vancouver, Calgary, Seattle, Boise, Los Angeles, Houston, Shreveport, Miami, Boston, New York, London, Dover, Glasgow, Edinburgh, Cardiff, Pembroke, Belfast, Derry, Berlin, Hamburg, Munich, Stuttgart}`  
+-   Städte `= {Ottawa, Toronto, Vancouver, Calgary, Seattle, Boise, Los Angeles, Houston, Shreveport, Miami, Boston, New York, London, Dover, Glasgow, Edinburgh, Cardiff, Pembroke, Belfast, Derry, Berlin, Hamburg, Munich, Stuttgart}`  
   
 ### <a name="members"></a>Element  
  Elemente auf der Blattebene einer Hierarchie haben keine untergeordneten Elemente und Elemente auf der Stammebene gibt es kein übergeordnetes. Alle anderen Elemente verfügen über mindestens ein übergeordnetes Element und mindestens ein untergeordnetes Element. Ein partielle Durchlauf der Hierarchie in der Geography-Dimension ergibt z. B. die folgenden über-und untergeordneten Beziehungen:  

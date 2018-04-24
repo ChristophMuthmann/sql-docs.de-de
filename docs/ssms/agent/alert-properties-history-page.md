@@ -15,16 +15,17 @@ ms.topic: article
 f1_keywords:
 - sql13.ag.alert.history.f1
 ms.assetid: f5359f5c-93a3-4a4a-8286-e9fe6f0196c7
-caps.latest.revision: ''
+caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3abf8ef423858ee50d81160882f27ccfb829a404
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: b86b1f409ff1e95162c3ae1b21a092cd6ebaa698
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="alert-properties-history-page"></a>Warnungseigenschaften (Seite Verlauf)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

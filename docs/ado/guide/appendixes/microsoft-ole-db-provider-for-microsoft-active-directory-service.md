@@ -1,33 +1,33 @@
 ---
-title: "Microsoft OLE DB-Anbieter für Microsoft Active Directory-Dienst | Microsoft Docs"
-ms.prod: sql-non-specified
+title: Microsoft OLE DB-Anbieter für Microsoft Active Directory-Dienst | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - ADSI provider [ADO]
 - Active Directory Service Interfaces provider [ADO]
 - providers [ADO], OLE DB provider for Active Directory service
 - OLE DB provider for Active Directory service [ADO]
 ms.assetid: f9e81452-5675-4cfc-9949-cfbd2fe57534
-caps.latest.revision: 
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3824623cb28c6902b4a96542f149e537df41cb5d
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 5fbfe4b445df4375bee52a8bccc4db87d0040798
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-active-directory-service"></a>Microsoft OLE DB-Anbieter für Microsoft Active Directory-Dienst
 Die Active Directory Service Interfaces (ADSI)-Anbieter ermöglicht ADO zur Verbindung mit heterogenen Verzeichnisdienste über ADSI. So erhält ADO-Anwendungen nur-Lese Zugriff auf die Microsoft Windows NT 4.0 oder Microsoft Windows 2000-Verzeichnisdienste, zusätzlich zu den LDAP-kompatibles Verzeichnisdienst und Novell-Verzeichnisdienste. ADSI selbst basiert auf ein Anbietermodell, damit bei einem neuen Anbieter gewähren Zugriff auf ein anderes Verzeichnis wird die ADO-Anwendung darauf nahtlos zugreifen werden. Der ADSI-Anbieter Freethread- und Unicode aktiviert ist.  
@@ -102,11 +102,11 @@ objectClass='user' AND objectCategory='Person'"
 |[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)|Lese-/Schreibzugriff|  
 |[ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)|Schreibgeschützt|  
 |[BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|Schreibgeschützt|  
-|[Bookmark](../../../ado/reference/ado-api/bookmark-property-ado.md)|Lese-/Schreibzugriff|  
+|[Lesezeichen](../../../ado/reference/ado-api/bookmark-property-ado.md)|Lese-/Schreibzugriff|  
 |[CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)|Lese-/Schreibzugriff|  
 |[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)|immer **AdUseServer**|  
-|[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|always **adOpenStatic**|  
-|[EditMode](../../../ado/reference/ado-api/editmode-property.md)|always **adEditNone**|  
+|[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|immer **AdOpenStatic**|  
+|[EditMode](../../../ado/reference/ado-api/editmode-property.md)|immer **AdEditNone**|  
 |[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|Schreibgeschützt|  
 |[Filter](../../../ado/reference/ado-api/filter-property.md)|Lese-/Schreibzugriff|  
 |[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)|Lese-/Schreibzugriff|  
@@ -139,7 +139,7 @@ objectClass='user' AND objectCategory='Person'"
 |[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)|ja|  
 |[Öffnen](../../../ado/reference/ado-api/open-method-ado-recordset.md)|ja|  
 |[Requery](../../../ado/reference/ado-api/requery-method.md)|ja|  
-|[Resync](../../../ado/reference/ado-api/resync-method.md)|ja|  
+|[Erneut synchronisieren](../../../ado/reference/ado-api/resync-method.md)|ja|  
 |[Unterstützt](../../../ado/reference/ado-api/supports-method.md)|ja|  
 |[Update](../../../ado/reference/ado-api/update-method.md)|nein|  
 |[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|nein|  

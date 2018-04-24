@@ -1,17 +1,17 @@
 ---
 title: AppendChunk-Methode (ADO) | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - _Parameter::AppendChunk
@@ -19,16 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - AppendChunk method [ADO]
 ms.assetid: c648b5a8-d4f1-4d16-836e-3957feb03617
-caps.latest.revision: 
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 32430fd62de54adfba22af5d3ea5447a70fd75a7
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 092419c105249df56e4258ccc3555e504c2e6b57
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="appendchunk-method-ado"></a>AppendChunk-Methode (ADO)
 Fügt Daten an eine große Text- oder Binärdaten [Feld](../../../ado/reference/ado-api/field-object.md), oder auf eine [Parameter](../../../ado/reference/ado-api/parameter-object.md) Objekt.  

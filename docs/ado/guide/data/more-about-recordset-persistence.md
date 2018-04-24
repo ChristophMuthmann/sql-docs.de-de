@@ -1,33 +1,33 @@
 ---
 title: Weitere Informationen zum Recordset Persistenz | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - persisting data [ADO]
 - data updates [ADO], persisting data
 - data persistence [ADO]
 - updating data [ADO], persisting data
 ms.assetid: a9b287f5-04b0-4514-8143-f67879ca9842
-caps.latest.revision: 
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c5dedcc3c1326c8b71844637c24f81835472ae9e
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: febf4b165cef77e26ec79de08b14ce97e944526b
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="more-about-recordset-persistence"></a>Weitere Informationen zum Recordset Persistenz
 Das ADO-Recordset-Objekt unterstützt das Speichern von einer **Recordset** Objekt in eine Datei mit der [speichern](../../../ado/reference/ado-api/save-method.md) Methode. Möglicherweise existiert die dauerhaft gespeicherte Datei auf einem lokalen Laufwerk, Server, oder als eine URL auf einem Web site. Später, kann die Datei wiederhergestellt werden, entweder mit der [öffnen](../../../ado/reference/ado-api/open-method-ado-recordset.md) Methode der **Recordset** Objekt oder die [Execute](../../../ado/reference/ado-api/execute-method-ado-connection.md) Methode der [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md) -Objekt.  

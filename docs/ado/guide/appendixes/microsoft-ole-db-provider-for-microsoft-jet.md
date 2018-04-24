@@ -1,32 +1,32 @@
 ---
-title: "Microsoft OLE DB-Anbieter für Microsoft Jet | Microsoft Docs"
-ms.prod: sql-non-specified
+title: Microsoft OLE DB-Anbieter für Microsoft Jet | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Jet provider for OLE DB [ADO]
 - providers [ADO], OLE DB provider for Microsoft Jet
 - OLE DB provider for Microsoft Jet [ADO]
 ms.assetid: fd956da1-5203-40af-aa7e-fc13a6c6581f
-caps.latest.revision: 
+caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5d703eff7e65b590961a4bc78a70032050e1b395
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 253de8c53055269efb6a9e15c9d9a5ca940606e8
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-jet-overview"></a>Microsoft OLE DB-Anbieter für Microsoft Jet-Übersicht
 Der OLE DB-Anbieter für Microsoft Jet können ADO auf Microsoft Jet-Datenbanken zugreifen.
@@ -76,7 +76,7 @@ Microsoft.Jet.OLEDB.4.0
 |Jet OLEDB:Engine Typ (DBPROP_JETOLEDB_ENGINE)|Gibt an, das Speichermodul verwendet, um die aktuellen Daten zuzugreifen.|
 |Jet Exclusive Async Verzögerung (DBPROP_JETOLEDB_EXCLUSIVEASYNCDELAY)|Gibt die maximale Zeitspanne in Millisekunden, die Jet verzögern kann asynchrone Schreibvorgänge auf Datenträger, wenn die Datenbank exklusiv genutzt wird.<br /><br /> Diese Eigenschaft wird ignoriert, es sei denn, **Jet OLEDB: Flush Transaktionstimeout** auf 0 festgelegt ist.|
 |Jet OLEDB: Flush Transaktionstimeout (DBPROP_JETOLEDB_FLUSHTRANSACTIONTIMEOUT)|Gibt die Menge an Zeit warten, bevor Daten in einem Cache zum asynchronen schreiben tatsächlich geschrieben werden auf den Datenträger. Diese Einstellung überschreibt die Werte für **Jet OLEDB: Shared Async Delay** und **Jet Exclusive Async Delay**.|
-|Jet OLEDB:Global Bulk Transactions (DBPROP_JETOLEDB_GLOBALBULKNOTRANSACTIONS)|Gibt an, ob SQL Massentransaktionen sind.|
+|Jet OLEDB: globale Massentransaktionen (DBPROP_JETOLEDB_GLOBALBULKNOTRANSACTIONS)|Gibt an, ob SQL Massentransaktionen sind.|
 |Jet OLEDB: globale partielle Bulk Operations (DBPROP_JETOLEDB_GLOBALBULKPARTIAL)|Gibt das Kennwort, das beim Öffnen der Datenbank verwendet.|
 |Jet OLEDB: ausdrückliches Commit-Synchronisierung (DBPROP_JETOLEDB_IMPLICITCOMMITSYNC)|Gibt an, ob Änderungen, die in internen implizite Transaktionen vorgenommen wurden, im Modus für synchrone oder asynchrone geschrieben werden.|
 |Jet OLEDB:Lock Verzögerung (DBPROP_JETOLEDB_LOCKDELAY)|Gibt die Anzahl der Millisekunden, die gewartet wird, bevor Sie versuchen, eine Sperre abzurufen, nachdem ein vorheriger Versuch fehlgeschlagen ist.|
@@ -90,7 +90,7 @@ Microsoft.Jet.OLEDB.4.0
 |Jet OLEDB:Recycle Long-Wert-Seiten (DBPROP_JETOLEDB_RECYCLELONGVALUEPAGES)|Gibt an, ob Jet aggressiv versuchen soll, um BLOB-Seiten freizugeben, wenn sie freigegeben werden.|
 |Jet OLEDB:Registry Pfad (DBPROP_JETOLEDB_REGPATH)|Gibt an, die Windows-Registrierungsschlüssel, der Werte für das Jet-Datenbankmodul enthält.|
 |Jet OLEDB:Reset ISAM Stats (DBPROP_JETOLEDB_RESETISAMSTATS)|Gibt an, ob das Schema **Recordset** DBSCHEMA_JETOLEDB_ISAMSTATS sollten Leistungsindikatoren zurücksetzen, nachdem er Leistungsinformationen zurückgegeben.|
-|Jet OLEDB:Shared Async Delay (DBPROP_JETOLEDB_SHAREDASYNCDELAY)|Gibt die maximale Menge an Zeit in Millisekunden, Jet asynchrone Schreibvorgänge auf Datenträger, wenn die Datenbank, in den Mehrbenutzermodus geöffnet wird verzögern kann.|
+|Jet OLEDB: Shared Async Verzögerung (DBPROP_JETOLEDB_SHAREDASYNCDELAY)|Gibt die maximale Menge an Zeit in Millisekunden, Jet asynchrone Schreibvorgänge auf Datenträger, wenn die Datenbank, in den Mehrbenutzermodus geöffnet wird verzögern kann.|
 |Jet OLEDB: System Database (DBPROP_JETOLEDB_SYSDBPATH)|Gibt den Pfad und Dateiname für Arbeitsgruppen-Informationsdatei (Systemdatenbank) an.|
 |Jet OLEDB:Transaction Commit-Modus (DBPROP_JETOLEDB_TXNCOMMITMODE)|Gibt an, ob Jet Daten synchron auf den Datenträger schreibt, oder asynchron, wenn eine Transaktion ein Commit ausgeführt wird.|
 |Jet OLEDB:User Commit Synchronisierung (DBPROP_JETOLEDB_USERCOMMITSYNC)|Gibt an, ob Änderungen, die in Transaktionen vorgenommen wurden, im Modus für synchrone oder asynchrone geschrieben werden.|
@@ -100,7 +100,7 @@ Microsoft.Jet.OLEDB.4.0
 
 |Eigenschaftsname|Description|
 |-------------------|-----------------|
-|Jet OLEDB:Bulk Transactions (DBPROP_JETOLEDB_BULKNOTRANSACTIONS)|Gibt an, ob SQL-Massenvorgänge durchgeführt werden. Umfangreicher Massenvorgänge können fehlschlagen, wenn aufgrund von Verzögerungen bei der Ressource durchgeführt.|
+|Jet OLEDB:Bulk Transaktionen (DBPROP_JETOLEDB_BULKNOTRANSACTIONS)|Gibt an, ob SQL-Massenvorgänge durchgeführt werden. Umfangreicher Massenvorgänge können fehlschlagen, wenn aufgrund von Verzögerungen bei der Ressource durchgeführt.|
 |Jet OLEDB: Enable Fat Cursor (DBPROP_JETOLEDB_ENABLEFATCURSOR)|Gibt an, ob mehrere Zeilen beim Auffüllen eines Recordsets für remote Zeilenquellen Jet zwischengespeichert werden soll.|
 |Jet OLEDB:Fat Cursor Cachegröße (DBPROP_JETOLEDB_FATCURSORMAXROWS)|Gibt die Anzahl der Zeilen in Cache an, wenn Remotedaten Zwischenspeichern verwenden. Dieser Wert wird ignoriert, es sei denn, **Jet OLEDB: Enable Fat Cursor** ist "true".|
 |Jet OLEDB: inkonsistente (DBPROP_JETOLEDB_INCONSISTENT)|Gibt an, ob Abfrageergebnisse inkonsistente Updates zulassen.|
@@ -139,7 +139,7 @@ Microsoft.Jet.OLEDB.4.0
 |Spaltendefinition|DBPROP_COLUMNDEFINITION|
 |Aktuellen Katalog|DBPROP_CURRENTCATALOG|
 |Datenquelle|DBPROP_INIT_DATASOURCE|
-|Datenquellenname|DBPROP_DATASOURCENAME|
+|Datenquellenname|RÜCKGABEWERT|
 |Datenquellenobjekt Threadingmodell|DBPROP_DSOTHREADMODEL|
 |Der DBMS-Name|DBPROP_DBMSNAME|
 |DBMS-Version|DBPROP_DBMSVER|
@@ -160,7 +160,7 @@ Microsoft.Jet.OLEDB.4.0
 |Update mit mehreren Tabellen|DBPROP_MULTITABLEUPDATE|
 |NULL-Sortierung|DBPROP_NULLCOLLATION|
 |NULL-Verkettungsverhalten|DBPROP_CONCATNULLBEHAVIOR|
-|OLE DB Version|DBPROP_PROVIDEROLEDBVER|
+|OLE DB-Version|DBPROP_PROVIDEROLEDBVER|
 |Unterstützung für OLE-Objekt|DBPROP_OLEOBJECTS|
 |Öffnen Sie die Schemarowset-Unterstützung|DBPROP_OPENROWSETSUPPORT|
 |ORDER BY-Spalten in der Select-Liste|DBPROP_ORDERBYCOLUMNSINSELECT|

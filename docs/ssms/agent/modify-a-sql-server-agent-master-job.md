@@ -17,16 +17,17 @@ helpviewer_keywords:
 - jobs [SQL Server Agent], master jobs
 - master SQL Server Agent job [SQL Server]
 ms.assetid: 4fd5e734-1a57-47d7-b3af-03a726b619a4
-caps.latest.revision: ''
+caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5a3f7c14ae651d42d507e047dc56e8e9410080fd
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: ddc9137b0e579a4135730dc6dc222e8e363ff36d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="modify-a-sql-server-agent-master-job"></a>Ändern eines Masterauftrags für einen SQL Server-Agent
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

@@ -1,31 +1,31 @@
 ---
 title: Schreiben einen eigene benutzerdefinierten Ereignishandler | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - DataFactory handler in RDS [ADO]
 - customized handler in RDS [ADO]
 ms.assetid: d447712a-e123-47b5-a3a4-5d366cfe8d72
-caps.latest.revision: 
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7e311f541cbca186a18d19f3ec2f22ff547cf69a
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 2aebf16b3fea3933b1ef9b565b7f76b17d8c2b71
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="writing-your-own-customized-handler"></a>Schreiben Sie einen eigene benutzerdefinierten Handler
 Sie möchten einem eigenen Handler zu schreiben, wenn Sie einen IIS-Server-Administrator möchte die Standardeinstellung für die Unterstützung von RDS werden jedoch mehr Kontrolle über die benutzeranforderungen und Zugriffsrechte.  

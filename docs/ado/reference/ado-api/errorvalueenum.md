@@ -1,33 +1,33 @@
 ---
 title: ErrorValueEnum | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - ErrorValueEnum
 helpviewer_keywords:
 - ErrorValueEnum enumeration [ADO]
 ms.assetid: 9469ba3a-5e4f-4a10-bbb8-a51a6c9660ea
-caps.latest.revision: 
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a79af3564a177da2953b053ce943a2d740e4cc7d
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: a8a543a2e8816a23d420dd7bb007ae157d676f98
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="errorvalueenum"></a>ErrorValueEnum
 Gibt den Typ des ADO-Laufzeitfehler.  
@@ -56,7 +56,7 @@ Gibt den Typ des ADO-Laufzeitfehler.
 |**adErrDataConversion**|3421 -2146824867 0x800A0D5D|Anwendung verwendet einen Wert des falschen Typs für den aktuellen Vorgang.|  
 |**adErrDataOverflow**|3721 -2146824567 0x800A0E89|Datenwert ist zu groß, um durch den Felddatentyp dargestellt werden.|  
 |**adErrDelResOutOfScope**|3738 -2146824550 0x800A0E9A|Die URL des Objekts gelöscht werden soll, liegt außerhalb des Bereichs des aktuellen Datensatzes.|  
-|**adErrDenyNotSupported**|3750 -2146824538 0x800A0EA6|Anbieter unterstützt keine freigabebeschränkungen.|  
+|**adErrDenyNotSupported**|3750-2146824538 0x800A0EA6|Anbieter unterstützt keine freigabebeschränkungen.|  
 |**adErrDenyTypeNotSupported**|3751 -2146824537 0x800A0EA7|Die angeforderte Art der Einschränkung für die Freigabe unterstützt Anbieter nicht.|  
 |**adErrFeatureNotAvailable**|3251 -2146825037 0x800A0CB3|Objekt oder der Anbieter kann nicht auf den angeforderten Vorgang auszuführen.|  
 |**adErrFieldsUpdateFailed**|3749 -2146824539 0x800A0EA5|Fehler beim Aktualisieren der Felder. Weitere Informationen zu untersuchen der **Status** Eigenschaft der einzelnen Feldobjekte.|  
@@ -68,10 +68,10 @@ Gibt den Typ des ADO-Laufzeitfehler.
 |**adErrInvalidParamInfo**|3708 -2146824580 0x800A0E7C|**Parameter** falsch definiert ist. Inkonsistente oder unvollständige Informationen wurden bereitgestellt.|  
 |**adErrInvalidTransaction**|3714 -2146824574 0x800A0E82|Die koordinierende Transaktion ist ungültig oder wurde nicht gestartet.|  
 |**adErrInvalidURL**|3729 -2146824559 0x800A0E91|URL enthält ungültige Zeichen. Stellen Sie sicher, dass die URL korrekt eingegeben wurden.|  
-|**adErrItemNotFound**|3265 -2146825023 0x800A0CC1|Element kann nicht in der Auflistung gefunden werden, der der angeforderte Name oder Ordinalzahl entspricht.|  
-|**adErrNoCurrentRecord**|3021 -2146825267 0x800A0BCD|Entweder **BOF** oder **EOF** ist "true", oder der aktuelle Datensatz wurde gelöscht. Der angeforderte Vorgang ist einen aktuellen Datensatz erforderlich.|  
+|**adErrItemNotFound**|3265-2146825023 0x800A0CC1|Element kann nicht in der Auflistung gefunden werden, der der angeforderte Name oder Ordinalzahl entspricht.|  
+|**adErrNoCurrentRecord**|3021-2146825267 0x800A0BCD|Entweder **BOF** oder **EOF** ist "true", oder der aktuelle Datensatz wurde gelöscht. Der angeforderte Vorgang ist einen aktuellen Datensatz erforderlich.|  
 |**adErrNotExecuting**|3715 -2146824573 0x800A0E83|Vorgang kann während der Ausführung nicht ausgeführt werden.|  
-|**adErrNotReentrant**|3710 -2146824578 0x800A0E7E|Vorgang kann während der Verarbeitung des Ereignisses ausgeführt werden.|  
+|**adErrNotReentrant**|3710-2146824578 0x800A0E7E|Vorgang kann während der Verarbeitung des Ereignisses ausgeführt werden.|  
 |**adErrObjectClosed**|3704 -2146824584 0x800A0E78|Vorgang ist nicht zulässig, wenn das Objekt geschlossen ist.|  
 |**adErrObjectInCollection**|3367 -2146824921 0x800A0D27|Objekt ist bereits in der Auflistung. Kann nicht angefügt werden.|  
 |**adErrObjectNotSet**|3420 -2146824868 0x800A0D5C|Objekt ist nicht mehr gültig.|  
@@ -98,7 +98,7 @@ Gibt den Typ des ADO-Laufzeitfehler.
 |**adErrVolumeNotFound**|3733 -2146824555 0x800A0E95|Das Speichergerät, die von der URL angegebene kann nicht Anbieter gefunden werden. Stellen Sie sicher, dass die URL korrekt eingegeben wurden.|  
 |**adErrWriteFile**|3004 -2146825284 0x800A0BBC|Schreiben in Datei fehlgeschlagen.|  
 |**adWrnSecurityDialog**|3717 -2146824571 0x800A0E85|Nur zur internen Verwendung. Darf nicht verwendet werden.|  
-|**adWrnSecurityDialogHeader**|3718 -2146824570 0x800A0E86|Nur zur internen Verwendung. Darf nicht verwendet werden.|  
+|**adWrnSecurityDialogHeader**|3718-2146824570 0x800A0E86|Nur zur internen Verwendung. Darf nicht verwendet werden.|  
   
 ## <a name="adowfc-equivalent"></a>ADO/WFC-Entsprechung  
  Paket: **com.ms.wfc.data**  

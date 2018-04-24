@@ -1,33 +1,33 @@
 ---
-title: "Stream (ADO für Visual C++-Syntax) | Microsoft Docs"
-ms.prod: sql-non-specified
+title: Stream (ADO für Visual C++-Syntax) | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 dev_langs:
 - C++
 helpviewer_keywords:
 - Stream collection [ADO]
 ms.assetid: dddcceef-9296-4fb3-8eca-94b17d0148de
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 54fedd82115df28db578c866a24ebc7ba0d345af
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: ea9cd2d9a1d8238ddf11b587f1f7d9d8eba54e26
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="stream-ado-for-visual-c-syntax"></a>Stream (ADO für Visual C++-Syntax)
 ## <a name="methods"></a>Methoden  

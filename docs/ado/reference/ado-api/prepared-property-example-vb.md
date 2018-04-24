@@ -1,32 +1,32 @@
 ---
-title: "Beispiel für Dateneigenschaften (VB) vorbereitet | Microsoft Docs"
-ms.prod: sql-non-specified
+title: Beispiel für Dateneigenschaften (VB) vorbereitet | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Prepared property [ADO], Visual Basic example
 ms.assetid: e3a3db2d-7f73-4288-ad08-5468f251d610
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f15594f3892b3f5aa87185f70ad258565fa214b8
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 4eeaad753c494b5b1a4be3de61704244309cc659
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="prepared-property-example-vb"></a>Beispiel für vorbereitete-Eigenschaft (VB)
 In diesem Beispiel wird veranschaulicht, die [Prepared](../../../ado/reference/ado-api/prepared-property-ado.md) Eigenschaft öffnen Sie zwei [Befehl](../../../ado/reference/ado-api/command-object-ado.md) Objekte – ein vorbereitetes und ein nicht vorbereitet.  

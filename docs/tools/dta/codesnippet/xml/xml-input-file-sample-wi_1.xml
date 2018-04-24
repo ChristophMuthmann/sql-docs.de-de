@@ -1,51 +1,16 @@
-<DTAXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/sqlserver/2004/07/dta">
-  <metadata xmlns="">
-    <meta name="ms.openlocfilehash" value="f07645272c8ec7a8e0d58be852c1822fd4a871de" />
-    <meta name="ms.sourcegitcommit" value="9678eba3c2d3100cef408c69bcfe76df49803d63" />
-    <meta name="ms.translationtype" value="MT" />
-    <meta name="ms.contentlocale" value="de-DE" />
-    <meta name="ms.lasthandoff" value="11/09/2017" />
-  </metadata>
-  <DTAInput>
-    <Server>
-      <Name>MyServerName</Name>
-      <!-- To tune multiple databases, list them and their associated tables in the following section. -->
-      <Database>
-        <Name>MyDatabaseName</Name>
-        <Schema>
-          <Name>MyDatabaseSchemaName</Name>
-          <!-- You can list as many tables as necessary in the following section. -->
-          <Table>
-            <Name>MyTableName1</Name>
-          </Table>
-          <Table>
-            <Name>MyTableName2</Name>
-          </Table>
-        </Schema>
-      </Database>
-    </Server>
-    <Workload>
-      <!-- The Weight attributes shown with the following EventString elements are optional. -->
-      <EventString Weight="100.01">
-        SELECT * FROM MyTableName1 WHERE
-        MyColumnName1 &gt; 200
-        ORDER BY ColumnName1
-      </EventString>
-      <EventString Weight="10.02">
-        SELECT * FROM MyTableName2 WHERE
-        MyColumnName2 BETWEEN 2 AND 25000
-        ORDER BY ColumnName2
-      </EventString>
-    </Workload>
-    <TuningOptions>
-      <TuningTimeInMin>120</TuningTimeInMin>
-      <StorageBoundInMB>1500</StorageBoundInMB>
-      <FeatureSet>IDX</FeatureSet>
-      <Partitioning>NONE</Partitioning>
-      <KeepExisting>NONE</KeepExisting>
-      <OnlineIndexOperation>OFF</OnlineIndexOperation>
-      <!-- The following tuning option specifies the first database to which the Database Engine Tuning Advisor connects when tuning the workload. This element is optional. -->
-      <DatabaseToConnect>MyDatabaseName</DatabaseToConnect>
-    </TuningOptions>
-  </DTAInput>
-</DTAXML>
+<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="xml-input-file-sample-wi_1.xml" source-language="en-US" target-language="de-DE">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-71b872e" tool-company="Microsoft" />
+      <xliffext:skl_file_name xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">24bf6c48-3d38-4340-bf08-88bf340edf45f07645272c8ec7a8e0d58be852c1822fd4a871de.skl</xliffext:skl_file_name>
+      <xliffext:version xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">1.2</xliffext:version>
+      <xliffext:ms.openlocfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">f07645272c8ec7a8e0d58be852c1822fd4a871de</xliffext:ms.openlocfilehash>
+      <xliffext:ms.sourcegitcommit xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">9678eba3c2d3100cef408c69bcfe76df49803d63</xliffext:ms.sourcegitcommit>
+      <xliffext:ms.lasthandoff xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">11/09/2017</xliffext:ms.lasthandoff>
+    </header>
+    <body>
+      <group id="content" extype="content" />
+    </body>
+  </file>
+</xliff>

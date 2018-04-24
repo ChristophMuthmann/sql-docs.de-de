@@ -1,32 +1,33 @@
 ---
-title: "SQL Server: Überwachungspartner | Microsoft-Dokumentation"
-description: "Liste mit Partnerunternehmen, die Lösungen zur Überwachung von SQL Server anbieten."
+title: 'SQL Server: Überwachungspartner | Microsoft-Dokumentation'
+description: Liste mit Partnerunternehmen, die Lösungen zur Überwachung von SQL Server anbieten.
 services: sql-server
 documentationcenter: NA
 author: MikeRayMSFT
-manager: jhubbard
-editor: 
-ms.assetid: 
-ms.service: database-engine
-ms.component: 
+manager: craigg
+editor: ''
+ms.assetid: ''
+ms.service: ''
+ms.component: sql-non-specified
 ms.suite: sql
 ms.devlang: NA
 ms.topic: article
 ms.tgt_pltfrm: NA
 ms.workload: sql-server
-ms.custom: 
+ms.custom: ''
 ms.date: 11/02/2017
-ms.prod: sql-server
-ms.prod_service: sql-non-specified
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
 ms.author: mikeray
-ms.openlocfilehash: 2ca2610369beb92f557656c2cee88e87d5ebeb77
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c6873ceb09c2cb7f2f9761c9b5c0ffe74d8b4f3c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-server-monitoring-partners"></a>SQL Server-Überwachungspartner
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Es gibt eine große Auswahl an branchenführenden Tools zur Überwachung Ihrer SQL Server-Dienste. Im Folgenden werden Partnerunternehmen von Microsoft aufgelistet, die Überwachungslösungen für Microsoft SQL Server anbieten.
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Es gibt eine große Auswahl an branchenführenden Tools zur Überwachung Ihrer SQL Server-Dienste. Im Folgenden werden Partnerunternehmen von Microsoft aufgelistet, die Überwachungslösungen für Microsoft SQL Server anbieten.
 
 <!--
 |![PartnerShortName][1] |**PartnerShortName**<br>PartnerShortName Brief description of the type of products that partner provides. <br><br>List of supported versions of SQL Server, OS, OS platforms/distros Server 2005 SP4 – SQL Server 2016 on Windows |[Datasheet][PartnerShortName_datasheet]<br>[Marketplace][PartnerShortName_marketplace]<br>[Website][PartnerShortName_website]<br>[Twitter][PartnerShortName_twitter]<br>[Video][PartnerShortName_youtube]|[![veem_video](./media/partner-hadr-sql-server/PartnerShortName_video.png)](https://www.youtube.com/channel/**************)

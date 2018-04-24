@@ -1,29 +1,29 @@
 ---
-title: "SQL Server: Partner für Hochverfügbarkeit und Notfallwiederherstellung | Microsoft-Dokumentation"
-description: "Liste mit Partnerunternehmen, die Lösungen zur Überwachung von SQL Server anbieten."
+title: 'SQL Server: Partner für Hochverfügbarkeit und Notfallwiederherstellung | Microsoft-Dokumentation'
+description: Liste mit Partnerunternehmen, die Lösungen zur Überwachung von SQL Server anbieten.
 services: sql-server
 documentationcenter: NA
 author: MikeRayMSFT
-manager: jhubbard
-editor: 
-ms.assetid: 
-ms.service: 
+manager: craigg
+editor: ''
+ms.assetid: ''
+ms.service: ''
 ms.component: sql-non-specified
 ms.suite: sql
 ms.devlang: NA
 ms.topic: article
 ms.tgt_pltfrm: NA
 ms.workload: sql-server
-ms.custom: 
+ms.custom: ''
 ms.date: 09/17/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.author: mikeray
-ms.openlocfilehash: 18a740fa623665b6978bf5897f5654657602270d
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 9c2c64526878cd5a499f6ee58d20a54bd878081f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-server-high-availability-and-disaster-recovery-partners"></a>SQL Server: Partner für Hochverfügbarkeit und Notfallwiederherstellung
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

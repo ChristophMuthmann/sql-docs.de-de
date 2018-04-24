@@ -1,17 +1,17 @@
 ---
 title: Append-Methode (ADOX-Tabellen) | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - Tables::Append
@@ -19,16 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - Append method [ADOX]
 ms.assetid: a362ed51-314c-4783-9598-538dbf755f3d
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0da2252e54696f8473319572b6c7c8e534f8257b
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: b0895a9f1d3a55845b746fa4e0adb37b84952047
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="append-method-adox-tables"></a>Append-Methode (ADOX-Tabellen)
 Fügt ein neues [Tabelle](../../../ado/reference/adox-api/table-object-adox.md) -Objekt an die [Tabellen](../../../ado/reference/adox-api/tables-collection-adox.md) Auflistung.  

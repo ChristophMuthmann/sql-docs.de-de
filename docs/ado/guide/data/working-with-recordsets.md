@@ -1,30 +1,30 @@
 ---
 title: Arbeiten mit Recordsets | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Recordset object [ADO]
 ms.assetid: bdf9a56a-de4a-44de-9111-2f11ab7b16ea
-caps.latest.revision: 
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b29d34907c7e4dcccc8494101c819cca05c02066
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: e6e91a7596f2ad9e0e7e9cae31f28304809411f1
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="working-with-recordsets"></a>Arbeiten mit Recordsets
 Die **Recordset** Objekt verfügt über integrierte Funktionen, mit denen Sie die Reihenfolge der Daten in das Resultset für die Suche nach einem bestimmten Datensatz basierend auf Kriterien, die Sie bereitstellen und sogar diese Suchvorgänge mithilfe von Indizes optimieren ändern können. Gibt an, ob diese Funktionen zur Verfügung stehen, hängt von den Anbieter sowie in einigen Fällen –, beispielsweise von der [Index](../../../ado/reference/ado-api/index-property.md) Eigenschaft – die Struktur der Datenquelle selbst.  
@@ -62,7 +62,7 @@ Die **Recordset** Objekt verfügt über integrierte Funktionen, mit denen Sie di
   
  Der Vergleichsoperator für das Kriterium kann"**>**"(größer als),"**\<**" (kleiner als), "=" (gleich), "> =" (größer als oder gleich), "< =" (kleiner oder gleich), " <> "(nicht gleich), oder"LIKE"(Mustervergleich).  
   
- Das kriteriumwert kann es sich um eine Zeichenfolge, eine Gleitkommazahl oder ein Datum sein. Zeichenfolgenwerte werden in einfache Anführungszeichen oder "#" (Nummernzeichen) gesetzt (z. B. "State ="WA"" oder "Status = #WA #"). Datumswerte in ein "#" (Nummernzeichen) als Trennzeichen (z. B. "Start_date > #7/22/&#97;").  
+ Das kriteriumwert kann es sich um eine Zeichenfolge, eine Gleitkommazahl oder ein Datum sein. Zeichenfolgenwerte werden in einfache Anführungszeichen oder "#" (Nummernzeichen) gesetzt (z. B. "State ="WA"" oder "Status = #WA #"). Datumswerte in ein "#" (Nummernzeichen) als Trennzeichen (z. B. "Start_date > #7/22/97 #").  
   
  Wenn der Vergleichsoperator "wie" ist, darf der Zeichenfolgenwert ein Sternchen (*), um ein oder mehr Vorkommen eines beliebigen Zeichens oder einer Teilzeichenfolge gefunden. Z. B. "Zustand wie bin\*" "Maine und Massachusetts. Führende und nachfolgende Sternchen können auch eine Teilzeichenfolge finden, die die Werte enthalten ist. Z. B. "State wie"\*als\*"" Alaska, Arkansas und Massachusetts übereinstimmt.  
   
@@ -94,7 +94,7 @@ Die **Recordset** Objekt verfügt über integrierte Funktionen, mit denen Sie di
   
 -   *Feldname* muss ein gültigen Feldnamen aus der **Recordset**. Wenn das Feldname Leerzeichen enthält, müssen Sie den Namen in eckige Klammern einschließen.  
   
--   *Operator* muss eines der folgenden sein:  **\<** ,  **>** ,  **\< =** ,  **>=**  ,  **<>** ,  **=** , oder **wie**.  
+-   *Operator* muss eines der folgenden sein: **\<**, **>**, **\< =**, **>=** , **<>**, **=**, oder **wie**.  
   
 -   *Wert* ist der Wert, mit denen Sie die Feldwerte vergleichen (z. B. `'Smith'`, `#8/24/95#`, `12.345`, oder `$50.00`). Verwenden Sie einfache Anführungszeichen (') mit Zeichenfolgen und Nummernzeichen (`#`) mit Datumsangaben. Für Zahlen können Sie das Dezimaltrennzeichen, Dollarzeichen sowie die wissenschaftliche Schreibweise. Wenn *Operator* ist **wie**, *Wert* können Platzhalterzeichen verwenden. Nur das Sternchen (\*) und Prozentzeichen (%) Platzhalter Zeichen sind zulässig und sie müssen das letzte Zeichen in der Zeichenfolge sein. *Wert* darf nicht null sein.  
   

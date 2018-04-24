@@ -1,33 +1,33 @@
 ---
 title: Visual C++-Erweiterungen-Header | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - ADO, Visual C++
 - Visual C++ [ADO]
 ms.assetid: e492d307-24cb-489c-a5b0-99cdc09b07da
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bd4add0612acdf4d55dc8ba17d0ba13b9c2f804d
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: b4b2563ea21fa749a7ccb6aec797fee7f688d706
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="visual-c-extensions-header"></a>Visual C++-Erweiterungen-Header
 Die folgende Kopfzeile **icrsint.h**, die Schnittstelle, die Clients zum Abrufen von Feldern aus können Sie details einer **Recordset** in Variablen, die in einer abgeleiteten Klasse definierten **CADORecordBinding**. Sie müssen ein ADO-Bindung-Makro für jedes Feld angeben, die Sie zugreifen möchten.  

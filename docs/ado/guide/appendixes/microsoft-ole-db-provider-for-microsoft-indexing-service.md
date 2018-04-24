@@ -1,32 +1,32 @@
 ---
-title: "Microsoft OLE DB-Anbieter für Microsoft Indexdienst | Microsoft Docs"
-ms.prod: sql-non-specified
+title: Microsoft OLE DB-Anbieter für Microsoft Indexdienst | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Indexing Service provider [ADO]
 - providers [ADO], OLE DB provider for Microsoft Indexing service
 - OLE DB provider for Microsoft Indexing service [ADO]
 ms.assetid: f86a0598-5097-471b-8318-d2c859d085f2
-caps.latest.revision: 
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 861d5d18c3a3ba72d4f4b5ef6fc01f0e6a0e9fc8
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: f84d13fa3f4e2da728c914f2228233a04e64643f
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-indexing-service-overview"></a>Microsoft OLE DB-Anbieter für Microsoft Indexing Service – Übersicht
 Microsoft OLE DB-Anbieter für Microsoft Indexdienst bietet programmgesteuerten nur-Lese Zugriff auf System- und Web-Daten, die vom Microsoft Indexdienst indiziert Datei. ADO-Anwendungen können SQL-Abfragen zum Abrufen von Inhalten und Eigenschaftsinformationen ausgeben.
@@ -79,11 +79,11 @@ MSIDXS
 |[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)|Lese-/Schreibzugriff|
 |[ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)|Schreibgeschützt|
 |[BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|Schreibgeschützt|
-|[Bookmark](../../../ado/reference/ado-api/bookmark-property-ado.md)*|Lese-/Schreibzugriff|
+|[Lesezeichen](../../../ado/reference/ado-api/bookmark-property-ado.md)*|Lese-/Schreibzugriff|
 |[CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)|Lese-/Schreibzugriff|
 |[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)|immer **AdUseServer**|
-|[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|always **adOpenStatic**|
-|[EditMode](../../../ado/reference/ado-api/editmode-property.md)|always **adEditNone**|
+|[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|immer **AdOpenStatic**|
+|[EditMode](../../../ado/reference/ado-api/editmode-property.md)|immer **AdEditNone**|
 |[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|Schreibgeschützt|
 |[Filter](../../../ado/reference/ado-api/filter-property.md)|Lese-/Schreibzugriff|
 |[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)|Lese-/Schreibzugriff|
@@ -115,7 +115,7 @@ MSIDXS
 |[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)|ja|
 |[Öffnen](../../../ado/reference/ado-api/open-method-ado-recordset.md)|ja|
 |[Requery](../../../ado/reference/ado-api/requery-method.md)|ja|
-|[Resync](../../../ado/reference/ado-api/resync-method.md)|ja|
+|[Erneut synchronisieren](../../../ado/reference/ado-api/resync-method.md)|ja|
 |[Unterstützt](../../../ado/reference/ado-api/supports-method.md)|ja|
 |[Update](../../../ado/reference/ado-api/update-method.md)|nein|
 |[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|nein|

@@ -1,32 +1,32 @@
 ---
 title: Source-Eigenschaft (VB)-Beispiel | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Source property [ADO], Visual Basic example
 ms.assetid: 7c83eb01-71c7-4c5d-9778-6270471c8164
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3d26368119e985202b74986215cf8df4307fd4ce
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: aeb159dbc2b8632108c492b2477b530f0a0d9cff
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="source-property-example-vb"></a>Beispiel der Source-Eigenschaft (VB)
 Dieses Beispiel zeigt die [Quelle](../../../ado/reference/ado-api/source-property-ado-recordset.md) Eigenschaft öffnen Sie drei [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekte auf verschiedenen Datenquellen basieren.  

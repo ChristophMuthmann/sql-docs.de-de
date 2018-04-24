@@ -1,33 +1,33 @@
 ---
-title: "Verbindung (ADO für Visual C++-Syntax) | Microsoft Docs"
-ms.prod: sql-non-specified
+title: Verbindung (ADO für Visual C++-Syntax) | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 dev_langs:
 - C++
 helpviewer_keywords:
 - Connection collection [ADO], ADO for Visual C++ syntax
 ms.assetid: cb5e1e15-c5b4-44ab-892f-bf1ae601d0a5
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 81f3d53f8203f5e0d36f52ea5c937fe7cceb5770
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 894fa9984b4d28588ff328d9d5d607c8f21de6be
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="connection-ado-for-visual-c-syntax"></a>Verbindung (ADO für Visual C++-Syntax)
 ## <a name="methods"></a>Methoden  

@@ -1,6 +1,6 @@
 ---
 title: FieldStatusEnum | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: ado
@@ -11,7 +11,7 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.suite: sql
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - FieldStatusEnum
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e04f98c5691a66b02a4c5daa8d745f529a9820e0
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: 4f0ff45d215ea7e4165bf12c0cd69a5ebc69860a
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="fieldstatusenum"></a>FieldStatusEnum
 Gibt an, die [Status](../../../ado/reference/ado-api/status-property-ado-field.md) von einem [Field-Objekt](../../../ado/reference/ado-api/field-object.md).  

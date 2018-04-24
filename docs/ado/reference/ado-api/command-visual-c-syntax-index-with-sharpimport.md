@@ -1,33 +1,33 @@
 ---
 title: 'Befehl (Visual C++-Syntax Index mit #import) | Microsoft Docs'
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 dev_langs:
 - C++
 helpviewer_keywords:
 - 'Command collection [ADO], Visual C++ syntax index with #import'
 ms.assetid: ccb6ffbc-7303-4124-8a0c-f6356f2c82d9
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 61afd9aa8eaf18e5154ec2279d87c0cccb58c547
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: e8fbc6ad300f64125a4cc718ed3c9b6a951be7cb
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="command-visual-c-syntax-index-with-import"></a>Befehl (Visual C++-Syntax Index mit #import)
 ## <a name="methods"></a>Methoden  

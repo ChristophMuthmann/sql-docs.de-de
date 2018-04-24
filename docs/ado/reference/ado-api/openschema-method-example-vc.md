@@ -1,32 +1,32 @@
 ---
 title: OpenSchema-Methode (VC++-Beispiel) | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - OpenSchema method [ADO], VC++ example
 ms.assetid: 6f3da460-0f49-41e0-999d-a754ec1d887e
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 017efa1dd3f4ef516511b9d90cfcf851b1895e86
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: cc462cb777219f5bd6d84b6fbf0dc5be75e53f14
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="openschema-method-example-vc"></a>OpenSchema-Methode (VC++-Beispiel)
 Dieses Beispiel verwendet die [OpenSchema](../../../ado/reference/ado-api/openschema-method.md) -Methode zum Anzeigen der Namen und den Typ der einzelnen Tabellen in der ***Pubs*** Datenbank.  

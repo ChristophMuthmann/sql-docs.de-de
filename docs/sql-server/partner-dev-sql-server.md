@@ -1,32 +1,33 @@
 ---
 title: 'SQL Server: Entwicklungspartner | Microsoft-Dokumentation'
-description: "Liste mit Partnerunternehmen, die Entwicklungslösungen für SQL Server anbieten."
+description: Liste mit Partnerunternehmen, die Entwicklungslösungen für SQL Server anbieten.
 services: sql-server
 documentationcenter: NA
 author: MikeRayMSFT
-manager: jhubbard
-editor: 
-ms.assetid: 
-ms.service: 
+manager: craigg
+editor: ''
+ms.assetid: ''
+ms.service: ''
 ms.component: sql-non-specified
 ms.suite: sql
 ms.devlang: NA
 ms.topic: article
 ms.tgt_pltfrm: NA
 ms.workload: sql-server
-ms.custom: 
+ms.custom: ''
 ms.date: 17/09/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.author: mikeray
-ms.openlocfilehash: 291991498ddf8deb28f77f2551b7e835086495cf
-ms.sourcegitcommit: 16347f3f5ed110b5ce4cc47e6ac52b880eba9f5f
+ms.openlocfilehash: f604e1c50e28e07274531e885ecd026097e9bca3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-server-development-partners"></a>SQL Server: Entwicklungspartner
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Es gibt eine große Auswahl an branchenführenden Tools zur Unterstützung bei der Entwicklung von Datenbanklösungen mit SQL Server.  Im Folgenden werden Partnerunternehmen von Microsoft aufgelistet, die Entwicklungslösungen für Microsoft SQL Server anbieten.
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Es gibt eine große Auswahl an branchenführenden Tools zur Unterstützung bei der Entwicklung von Datenbanklösungen mit SQL Server.  Im Folgenden werden Partnerunternehmen von Microsoft aufgelistet, die Entwicklungslösungen für Microsoft SQL Server anbieten.
 
 ## <a name="our-development-partners"></a>Unsere Entwicklungspartner
 | Partner | Description | Links |

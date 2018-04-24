@@ -1,32 +1,32 @@
 ---
 title: Internet, die Publishing-Szenario | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - ADO, Internet publishing
 - publishing to Internet [ADO]
 - Internet publishing [ADO]
 ms.assetid: 2f551969-0fd9-41ee-b81d-100975a4bdc2
-caps.latest.revision: 
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4595cb4cadc4ebf3a2599af3f228bc6d47aaacb0
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 5a56198a0168e3a1653a3e7df9031cd495a1de4b
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="internet-publishing-scenario"></a>Internet, die Publishing-Szenario
 Dieses Codebeispiel veranschaulicht das Verwenden von ADO mit der Microsoft OLE DB-Anbieter für Internet Publishing. In diesem Szenario erstellen Sie eine Visual Basic-Anwendung, die verwendet **Recordset**, **Datensatz**, und **Stream** Objekte zur Anzeige der Inhalte von Ressourcen mit veröffentlicht. das Internet, die Publishing-Provider.  

@@ -8,18 +8,18 @@ ms.date: 02/22/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
 ms.workload: Active
-ms.openlocfilehash: 9aa37f843d446357997bf553ca87d2d93b41bfb9
-ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
+ms.openlocfilehash: fd3b175cd8440d17da0f341cd13f65bb044f45a0
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/24/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-ubuntu"></a>Schnellstart: Installieren von SQL Server, und erstellen Sie eine Datenbank für Ubuntu
 
@@ -34,7 +34,7 @@ In diesem Schnellstart installieren Sie zunächst SQL Server 2017 auf Ubuntu 16.
 
 Sie benötigen einen Computer Ubuntu 16.04 mit **mindestens 2 GB** des Arbeitsspeichers.
 
-Um Ubuntu auf Ihrem eigenen Computer zu installieren, wechseln Sie zu [http://www.ubuntu.com/download/server](http://www.ubuntu.com/download/server). Sie können auch Ubuntu virtuelle Computer in Azure erstellen. Finden Sie unter [erstellen und verwalten Sie virtuelle Linux-Computer mit der Azure-CLI](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm).
+Um Ubuntu auf Ihrem eigenen Computer zu installieren, wechseln Sie zu [ http://www.ubuntu.com/download/server ](http://www.ubuntu.com/download/server). Sie können auch Ubuntu virtuelle Computer in Azure erstellen. Finden Sie unter [erstellen und verwalten Sie virtuelle Linux-Computer mit der Azure-CLI](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm).
 
 > [!NOTE]
 > Zu diesem Zeitpunkt die [Windows-Subsystem für Linux](https://msdn.microsoft.com/commandline/wsl/about) für Windows 10 als Installationsziel für eine wird nicht unterstützt.
@@ -96,29 +96,45 @@ An diesem Punkt wird SQL Server ausgeführt wird, auf dem Computer Ubuntu und is
 
 Um eine Datenbank erstellen zu können, müssen Sie die Verbindung mit einem Tool, das auf dem SQL Server Transact-SQL-Anweisungen ausgeführt werden kann. Die folgenden Schritte aus der SQL Server-Befehlszeilentools zu installieren: [Sqlcmd](../tools/sqlcmd-utility.md) und [Bcp](../tools/bcp-utility.md).
 
-1. Importieren Sie die öffentlichen Repositorys GPG Schlüssel:
+Verwenden Sie die folgenden Schritte zum Installieren der **Mssql-Tools** auf Ubuntu. 
+
+1. Importieren Sie die öffentlichen Repositorys GPG Schlüssel.
 
    ```bash
-   wget -qO- https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
+   curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
    ```
 
-1. Registrieren Sie das Repository Microsoft Ubuntu:
+1. Registrieren Sie die Microsoft Ubuntu-Repositorys.
 
    ```bash
-   sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/16.04/prod.list)"
+   curl https://packages.microsoft.com/config/ubuntu/16.04/prod.list | sudo tee /etc/apt/sources.list.d/msprod.list
    ```
 
-1. Aktualisieren Sie die Liste der Datenquellen, und führen Sie den Installationsbefehl mit dem UnixODBC Developer-Paket:
+1. Aktualisieren Sie die Liste der Datenquellen, und führen Sie den Installationsbefehl den UnixODBC Developer-Paket aus.
 
    ```bash
-   sudo apt-get update
-   sudo apt-get install -y mssql-tools unixodbc-dev
+   sudo apt-get update 
+   sudo apt-get install mssql-tools unixodbc-dev
    ```
 
-1. Fügen Sie der Einfachheit halber `/opt/mssql-tools/bin/` auf Ihre **Pfad** -Umgebungsvariablen angegeben. Dadurch können Sie die Tools ausführen, ohne den vollständigen Pfad anzugeben. Führen Sie die folgenden Befehle zum Ändern der **Pfad** für anmeldesitzungen und interaktive/nicht-Anmeldung Sitzungen:
+   > [!Note] 
+   > Beim Aktualisieren auf die neueste Version der **Mssql-Tools** führen Sie die folgenden Befehle:
+   >    ```bash
+   >   sudo apt-get update 
+   >   sudo apt-get install mssql-tools 
+   >   ```
+
+1. **Optionale**: Hinzufügen `/opt/mssql-tools/bin/` auf Ihre **Pfad** -Umgebungsvariable in der Bash-Shell.
+
+   Vornehmen **Sqlcmd/Bcp** zugegriffen werden kann, aus der Bash-Shell für anmeldesitzungen, Ändern der **Pfad** in der **~/.bash_profile** Datei mit dem folgenden Befehl:
 
    ```bash
    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
+   ```
+
+   Vornehmen **Sqlcmd/Bcp** zugegriffen werden kann, aus der Bash-Shell für interaktive/nicht-anmeldesitzungen, Ändern der **Pfad** in der **~/.bashrc** -Datei mit den folgenden Befehl aus:
+
+   ```bash
    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
    source ~/.bashrc
    ```
@@ -128,7 +144,7 @@ Um eine Datenbank erstellen zu können, müssen Sie die Verbindung mit einem Too
 >
 > * [SQL Server Operations Studio (Vorschauversion)](../sql-operations-studio/what-is.md)
 > * [SQL Server Management Studio](sql-server-linux-develop-use-ssms.md)
-> * [Visual Studio Code](sql-server-linux-develop-use-vscode.md).
+> * [Visual Studio-Code](sql-server-linux-develop-use-vscode.md).
 > * [mssql-cli (Vorschauversion)](https://blogs.technet.microsoft.com/dataplatforminsider/2017/12/12/try-mssql-cli-a-new-interactive-command-line-tool-for-sql-server/)
 
 [!INCLUDE [Connect, create, and query data](../includes/sql-linux-quickstart-connect-query.md)]

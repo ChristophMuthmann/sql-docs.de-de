@@ -1,27 +1,27 @@
 ---
-title: "Ergänzende Datenschutzbestimmungen zu SQL Server | Microsoft-Dokumentation"
+title: Ergänzende Datenschutzbestimmungen zu SQL Server | Microsoft-Dokumentation
 ms.date: 2/22/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
-ms.service: 
+ms.service: ''
 ms.component: sql-non-specified
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.custom: 
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.custom: ''
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-f1_keywords: 
-helpviewer_keywords: 
+f1_keywords: ''
+helpviewer_keywords: ''
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 70b44fdd6b00473fe08c234a83eb55a99e7d55aa
-ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
+ms.openlocfilehash: 59b3efa45ffde217eb1e21a428888e3baeff7383
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-server-privacy-supplement"></a>Ergänzende Datenschutzbestimmungen zu SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

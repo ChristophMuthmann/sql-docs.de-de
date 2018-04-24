@@ -1,17 +1,17 @@
 ---
 title: Clear-Methode (ADO) | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - Errors::raw_Clear
@@ -19,16 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - Clear method [ADO]
 ms.assetid: 0a61ba7a-20b8-426a-91a0-9040e7c5a98a
-caps.latest.revision: 
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b843c14580d792dac671dfa198d23444829db78d
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: b1e19263664607c1237d00b17523b492d4be013d
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="clear-method-ado"></a>Clear-Methode (ADO)
 Entfernt alle der [Fehler](../../../ado/reference/ado-api/error-object.md) Objekte aus der [Fehler](../../../ado/reference/ado-api/errors-collection-ado.md) Auflistung.  

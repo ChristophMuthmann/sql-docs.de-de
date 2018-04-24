@@ -1,17 +1,17 @@
 ---
-title: "ADO für Visual C++-Syntax Index mit #import | Microsoft Docs"
-ms.prod: sql-non-specified
+title: 'ADO für Visual C++-Syntax Index mit #import | Microsoft Docs'
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 dev_langs:
 - C++
@@ -20,16 +20,16 @@ helpviewer_keywords:
 - 'ADO for Visual C++ syntax with #import [ADO]'
 - '#import [ADO]'
 ms.assetid: 5930ccd2-5bab-448a-b0bf-773b8a83e87c
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8829dcf3f55d7281ee2db8f3f09b474e95bc26a7
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 8d878875f2e7f9002e00acef81fafaa89153b933
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="ado-for-visual-c-syntax-index-with-import"></a>ADO für Visual C++-Syntax Index mit #import
 Dieser Index ist ein Querverweis auf die ADO-Sprachreferenz basiert auf Microsoft Visual C++ und die **#import** Richtlinie.  

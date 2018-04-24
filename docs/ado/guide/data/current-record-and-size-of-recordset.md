@@ -1,31 +1,31 @@
 ---
-title: "Aktueller Datensatz und Größe der Recordset | Microsoft Docs"
-ms.prod: sql-non-specified
+title: Aktueller Datensatz und Größe der Recordset | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - record location [ADO]
 - current record [ADO]
 ms.assetid: e63ff331-8655-4be7-82c6-e6cd6cc9d16d
-caps.latest.revision: 
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6cc6f4bbded2e78203d95820cc590f6c69380fcd
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 90b5953c0a2232816fc3c1d228fe358aa5ae9c59
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="current-record-and-size-of-recordset"></a>Aktueller Datensatz und Größe des Recordsets
 In diesem Abschnitt wird beschrieben, wie die aktuelle Position des Cursors im Beispiel finden **Recordset** in [JScript-Codebeispiel wird ein Recordset zurückzugebenden](../../../ado/guide/data/jscript-code-example-to-return-a-recordset.md).  

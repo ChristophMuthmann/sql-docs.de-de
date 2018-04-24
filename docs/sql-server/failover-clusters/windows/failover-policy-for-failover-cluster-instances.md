@@ -18,16 +18,17 @@ ms.assetid: 39ceaac5-42fa-4b5d-bfb6-54403d7f0dc9
 caps.latest.revision: 45
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 09a372b1e2b2f2b9026259918d3b11ed3ad2d3b6
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 91a6c3525ed89624bca7289bd76963cd932b9623
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="failover-policy-for-failover-cluster-instances"></a>Failoverrichtlinie für Failoverclusterinstanzen
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] In einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Failoverclusterinstanz (FCI) kann jeweils nur ein Knoten Besitzer der WSFC-Clusterressourcengruppe (Windows Server Failover Cluster) sein. Die Clientanforderungen werden durch diesen Knoten in der FCI behandelt. Falls ein Fehler auftritt und kein erfolgreicher Neustart möglich ist, geht die Gruppe in den Besitz eines anderen WSFC-Knotens in der FCI über. Dieser Prozess wird als Failover bezeichnet. [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] erhöht die Zuverlässigkeit der Fehlererkennung und bietet eine flexible Failoverrichtlinie.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  In einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Failoverclusterinstanz (FCI) kann jeweils nur ein Knoten Besitzer der WSFC-Clusterressourcengruppe (Windows Server Failover Cluster) sein. Die Clientanforderungen werden durch diesen Knoten in der FCI behandelt. Falls ein Fehler auftritt und kein erfolgreicher Neustart möglich ist, geht die Gruppe in den Besitz eines anderen WSFC-Knotens in der FCI über. Dieser Prozess wird als Failover bezeichnet. [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] erhöht die Zuverlässigkeit der Fehlererkennung und bietet eine flexible Failoverrichtlinie.  
   
  Eine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -FCI ist im Hinblick auf die Failovererkennung vom zugrunde liegenden WSFC-Dienst abhängig. Daher wird das Failoververhalten für die FCI durch zwei Mechanismen bestimmt: Der erste Mechanismus wird durch die systemeigenen WSFC-Funktionen und der zweite durch die Funktionen bereitgestellt, die vom [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Setup hinzugefügt werden.  
   
@@ -99,7 +100,7 @@ ms.lasthandoff: 12/05/2017
   
  Informieren Sie sich unter [sp_server_diagnostics &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md), da diese gespeicherte Systemprozedur eine wichtige Funktion im Hinblick auf Fehlerbedingungsebenen erfüllt.  
   
-|Ebene|Bedingung|Beschreibung|  
+|Ebene|Bedingung|Description|  
 |-----------|---------------|-----------------|  
 |0|Kein automatischer Failover oder Neustart|Gibt an, dass bei einer Fehlerbedingung nicht automatisch ein Failover oder Neustart ausgelöst wird. Diese Ebene ist nur für die Systemwartung vorgesehen.|  
 |1|Failover oder Neustart bei Serverausfall|Gibt an, dass ein Neustart oder ein Failover des Server ausgelöst wird, wenn die folgende Bedingung zutrifft:<br /><br /> SQL Server-Dienst ist ausgefallen.|  
@@ -115,7 +116,7 @@ ms.lasthandoff: 12/05/2017
   
  Informationen zum Verwalten der Quorumintegrität finden Sie unter [WSFC-Quorummodi und Abstimmungskonfiguration &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-server-configuration-transact-sql.md)  
   
   

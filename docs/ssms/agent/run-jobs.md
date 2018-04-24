@@ -18,16 +18,17 @@ helpviewer_keywords:
 - jobs [SQL Server Agent], manually running
 - manual job processing [SQL Server]
 ms.assetid: cd445949-dc10-42fc-8785-4db74c9723ad
-caps.latest.revision: ''
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0ea1ebd13df87d76784baaae59ca1701581d23f8
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: aa26b1264df34fe0fd9a6b5a102a5840bd05c55c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="run-jobs"></a>Ausführen von Aufträgen
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

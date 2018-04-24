@@ -1,32 +1,32 @@
 ---
 title: RDS-Lernprogramm (VBScript) | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 02/14/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - RDS tutorial [ADO], VBScript
 ms.assetid: e2a48c4d-88b1-43ff-a202-9cdec54997d2
-caps.latest.revision: 
+caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 70617ccbb2b0b874c68ea45cc72390bd98a52061
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: e10d1b994594cbab9ae6197a9681ddc8c56196b9
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="rds-tutorial-vbscript"></a>RDS-Lernprogramm (VBScript)
 Dies ist die RDS-Lernprogramm, in Microsoft Visual Basic Scripting Edition geschrieben. Eine Beschreibung der Zweck dieses Lernprogramms finden Sie in der [RDS-Lernprogramm](../../../ado/guide/remote-data-service/rds-tutorial.md).  

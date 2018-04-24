@@ -1,33 +1,33 @@
 ---
 title: ActualSize und DefinedSize Eigenschaften (VC++-Beispiel) | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - ActualSize property [ADO], VC++ example
 - DefinedSize property [ADO], VC++ example
 ms.assetid: 05f7cc97-b806-41d2-939d-a955d10844c4
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 82c81e702bf1e3da1a0ab22416c8430c94f3534e
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 8f483b858fdfeb92744b83abdac8ba7d7b01b29f
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="actualsize-and-definedsize-properties-example-vc"></a>ActualSize und DefinedSize Eigenschaften (VC++-Beispiel)
 Dieses Beispiel verwendet die [ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md) und [DefinedSize](../../../ado/reference/ado-api/definedsize-property.md) Eigenschaften die definierte Größe und die tatsächliche Größe eines Felds angezeigt.  

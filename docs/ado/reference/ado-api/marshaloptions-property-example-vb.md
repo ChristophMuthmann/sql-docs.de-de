@@ -1,32 +1,32 @@
 ---
 title: Marshalling-Beispiel (VB) | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - MarshalOptions property [ADO], Visual Basic example
 ms.assetid: ae576b2c-65aa-4838-872a-85e618806dc8
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 52b47718ea0fdc01f768b460e5f18f1773353bee
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: d302bbf545381afa3b429965bb280c3b540e27ae
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="marshaloptions-property-example-vb"></a>Marshalling-Beispiel (VB)
 Dieses Beispiel verwendet die [MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md) Eigenschaft, um anzugeben, welche Zeilen an den Server gesendet werden – alle Zeilen oder nur geänderte Zeilen.  
@@ -139,5 +139,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [MarshalOptions Property (ADO)](../../../ado/reference/ado-api/marshaloptions-property-ado.md)   
+ [Marshalling (ADO)](../../../ado/reference/ado-api/marshaloptions-property-ado.md)   
  [MarshalOptionsEnum](../../../ado/reference/ado-api/marshaloptionsenum.md)

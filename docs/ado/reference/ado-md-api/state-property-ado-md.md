@@ -1,17 +1,17 @@
 ---
 title: State-Eigenschaft (ADO MD) | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - State
@@ -19,16 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - State property [ADO MD]
 ms.assetid: 06d480ca-9eb6-4570-a45d-a73539bddd32
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1886dae43bdb764a67fa5e44b1e8fe9744c0cb5f
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: f10a12bd20d96c361cfa7b60738ba7d68586b1e0
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="state-property-ado-md"></a>State-Eigenschaft (ADO MD)
 Gibt den aktuellen Status der das Cellset an.  

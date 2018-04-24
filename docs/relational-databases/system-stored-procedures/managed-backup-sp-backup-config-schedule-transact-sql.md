@@ -28,11 +28,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1749de4fc4791416ddbac8421ff6a4bfe774a772
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: d0dbcf8b2ad99cc9c6fab558061d3671b70c9ce9
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="managedbackupspbackupconfigschedule-transact-sql"></a>sp_backup_config_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,8 @@ ms.lasthandoff: 04/16/2018
   
 ```vb  
 EXEC managed_backup.sp_backup_config_schedule   
-    [@database_name = ] 'database_name'    ,[@scheduling_option = ] {'Custom' | 'System'}  
+    [@database_name = ] 'database_name'
+    ,[@scheduling_option = ] {'Custom' | 'System'}  
     ,[@full_backup_freq_type = ] {'Daily' | 'Weekly'}  
     ,[@days_of_week = ] 'days_of_the_week'  
     ,[@backup_begin_time = ] 'begin time of the backup window'  

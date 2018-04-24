@@ -1,32 +1,32 @@
 ---
-title: "Registrieren ein benutzerdefiniertes Geschäftsobjekt | Microsoft Docs"
-ms.prod: sql-non-specified
+title: Registrieren ein benutzerdefiniertes Geschäftsobjekt | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - custom business object in RDS [ADO]
 - registering custom business objects in RDS [ADO]
 - business objects in RDS [ADO]
 ms.assetid: e9032ad8-d14c-42e3-ba13-cb5f00084a79
-caps.latest.revision: 
+caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1b95345c2c3818330bf442b56671192d9a47cad6
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: fd6bd1d650f3aedabe1f6b13bc0503e0961b7ffe
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="registering-a-custom-business-object"></a>Registrieren ein benutzerdefiniertes Geschäftsobjekt
 Um ein benutzerdefiniertes Geschäftsobjekt (.dll oder .exe) erfolgreich über den Webserver zu starten, muss das Geschäftsobjekt ProgID in der Registrierung eingegeben werden, wie in diesem Verfahren beschrieben. Dieses Feature von RDS schützt die Sicherheit Ihres Webservers, indem nur zulässige ausführbare Dateien ausgeführt.  

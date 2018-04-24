@@ -1,30 +1,30 @@
 ---
 title: ADO-Glossar | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - ADO, glossary
 ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
-caps.latest.revision: 
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1b27ecc0b3905a12d453cc53d6ac941fc80708f9
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: d327b5e991127a533d4b599daf8c52cfb2dba1ba
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="ado-glossary-terms"></a>ADO-Glossar
 In diesem Thema werden Begriffe, die relevant für ADO definiert.
@@ -47,7 +47,7 @@ In diesem Thema werden Begriffe, die relevant für ADO definiert.
 ## <a name="b"></a>B
  Binden Eintrag eine Zuordnung zwischen einem Feld in einer Tabelle und einer Variablen an. In den Visual C++ ADO-Erweiterungen **Recordset** Felder C/C++-Variablen zugeordnet werden.
 
- Bitmaske ein numerischer Wert für die ein Bit für Bit Wertvergleich mit anderen numerischen Werten in der Regel mit Flagoptionen, die im Parameter oder Rückgabewerte vorgesehen. Dieser Vergleich erfolgt normalerweise mit bitweisen logischen Operatoren, wie z. B. **und** und **oder** in Visual Basic  **&**  und **&#124;** in C++.
+ Bitmaske ein numerischer Wert für die ein Bit für Bit Wertvergleich mit anderen numerischen Werten in der Regel mit Flagoptionen, die im Parameter oder Rückgabewerte vorgesehen. Dieser Vergleich erfolgt normalerweise mit bitweisen logischen Operatoren, wie z. B. **und** und **oder** in Visual Basic **&** und **&#124;** in C++.
 
  Zum Beispiel das ADO- **FieldAttributeEnum** Werte können als Bitmasken verwendet werden, um die Attribute eines Felds zu bestimmen. Angenommen Sie, Sie möchten, um festzustellen, ob ein Feld aktualisiert wurde. Sie können mit dem folgenden Ausdruck in Visual Basic dafür testen:`Field.Attributes AND adFldUpdatable`
 
@@ -92,7 +92,7 @@ In diesem Thema werden Begriffe, die relevant für ADO definiert.
 
  Eine Anzahl von einzelnen Dateien, die zusammen in einer physischen Datei gebunden. Jede einzelne Datei in einer Verbunddatei kann zugegriffen werden, als handele es sich um einen einzelnen physischen Datei.
 
- Konstante ein numerisch oder String-Wert, der nicht geändert wird. Benannte ADO-Enumerationen (Enumerationskonstanten) können z. B. in Ihrem Code anstelle der eigentlichen Werte verwendet werden **AdUseClient** ist eine Konstante, deren Wert 3 ist. (Const adUseClient = 3). Siehe auch *Enumeration*.
+ Konstante ein numerisch oder String-Wert, der nicht geändert wird. Benannte ADO-Enumerationen (Enumerationskonstanten) können z. B. in Ihrem Code anstelle der eigentlichen Werte verwendet werden **AdUseClient** ist eine Konstante, deren Wert 3 ist. (Const AdUseClient = 3). Siehe auch *Enumeration*.
 
  Cursor ein Datenbankelement, das zum Navigieren in Datensätzen, Updateability der Daten und die Sichtbarkeit von Änderungen an der Datenbank vorgenommen werden, die von anderen Benutzern gesteuert.
 
@@ -126,7 +126,7 @@ In diesem Thema werden Begriffe, die relevant für ADO definiert.
  dynamische Eigenschaft A-Eigenschaft für einen Datenanbieter oder die Cursordienst spezifisch. Die **Eigenschaften** Auflistung eines Objekts wird automatisch mit diesen ausgefüllt ("dynamisch"). Ein Objekt hat keine dynamischen Eigenschaften, bis er mit einer Datenquelle über einen bestimmten Datenanbieter verbunden ist. Siehe auch Data-Anbieter, Cursor.
 
 ## <a name="e"></a>E
- Die Liste der änderungsbereiche ein benannter Konstanten. Aufgezählter Werte müssen nicht eindeutig sein. Jedoch muss der Name der einzelnen Werte innerhalb des Bereichs eindeutig sein, in dem die Enumeration definiert ist. In ADO Enumerationen dienen zum numerischen Parameter und Rückgabewerte, Bedeutung in ADO-Code hinzufügen und den Entwickler von numerischen Werten geschützt werden (die sich von Version zu Version ändern können). Um beispielsweise einen statischen Öffnen **Recordset**, verwenden Sie die **AdOpenStatic** Enumerationswert:`Recordset.Open ,,adOpenStatic`
+ Die Liste der änderungsbereiche ein benannter Konstanten. Aufgezählter Werte müssen nicht eindeutig sein. Jedoch muss der Name der einzelnen Werte innerhalb des Bereichs eindeutig sein, in dem die Enumeration definiert ist. In ADO Enumerationen dienen zum numerischen Parameter und Rückgabewerte, Bedeutung in ADO-Code hinzufügen und den Entwickler von numerischen Werten geschützt werden (die sich von Version zu Version ändern können). Um beispielsweise einen statischen Öffnen **Recordset**, verwenden Sie die **AdOpenStatic** Enumerationswert: `Recordset.Open ,,adOpenStatic`
 
  Auch bezeichnet als *Enumerationskonstante*. Siehe auch *Konstanten*.
 

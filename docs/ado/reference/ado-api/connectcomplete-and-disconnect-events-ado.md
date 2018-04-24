@@ -1,17 +1,17 @@
 ---
 title: ConnectComplete und Disconnect-Ereignisse (ADO) | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - Disconnect
@@ -22,16 +22,16 @@ helpviewer_keywords:
 - Disconnect event [ADO]
 - ConnectComplete event [ADO]
 ms.assetid: 568f5252-d069-4d99-a01b-2ada87ad1304
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7ca521c0e850dd7fdacee6cd594b5c9f23a289d3
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 268f9bb86667b94437ea2745753a823b4fdb9dbe
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="connectcomplete-and-disconnect-events-ado"></a>ConnectComplete und Disconnect-Ereignisse (ADO)
 Die **ConnectComplete** Ereignis wird aufgerufen, nachdem eine Verbindung gestartet wird. Die **trennen** Ereignis wird aufgerufen, nachdem eine Verbindung beendet.  

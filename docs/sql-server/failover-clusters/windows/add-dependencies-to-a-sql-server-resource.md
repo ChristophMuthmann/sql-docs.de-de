@@ -1,15 +1,16 @@
 ---
-title: "Hinzufügen von Abhängigkeiten zu einer Ressource von SQL Server | Microsoft-Dokumentation"
-ms.custom: 
+title: Hinzufügen von Abhängigkeiten zu einer Ressource von SQL Server | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: failover-clusters
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - resource dependencies [SQL Server]
@@ -17,25 +18,26 @@ helpviewer_keywords:
 - clusters [SQL Server], dependencies
 - dependencies [SQL Server], clustering
 ms.assetid: 25dbb751-139b-4c8e-ac62-3ec23110611f
-caps.latest.revision: "33"
+caps.latest.revision: 33
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ab2f55e272b4d882ea867cfc210eae24c542da38
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: a0b7dc1fee54afb366518547f4c2c9518843d0ed
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="add-dependencies-to-a-sql-server-resource"></a>Hinzufügen von Abhängigkeiten zu einer Ressource von SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] In diesem Thema wird beschrieben, wie einer AlwaysOn-Failoverclusterinstanz-Ressource (FCI) mithilfe des Failovercluster-Manager-Snap-Ins Abhängigkeiten hinzugefügt werden. Das Failovercluster-Manager-Snap-In ist die Clusterverwaltungsanwendung für den WSFC (Windows Server Failover Clustering)-Dienst.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  In diesem Thema wird beschrieben, wie einer AlwaysOn-Failoverclusterinstanz-Ressource mithilfe des Failovercluster-Manager-Snap-Ins Abhängigkeiten hinzugefügt werden. Das Failovercluster-Manager-Snap-In ist die Clusterverwaltungsanwendung für den WSFC (Windows Server Failover Clustering)-Dienst.  
   
 -   **Vorbereitungen:**  [Einschränkungen](#Restrictions), [Voraussetzungen](#Prerequisites)  
   
 -   **Hinzufügen einer Abhängigkeit zu einer SQL Server-Ressource mit:** [Windows-Failovercluster-Manager](#WinClusManager)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
   
 ###  <a name="Restrictions"></a> Einschränkungen  
  Beachten Sie, dass, wenn Sie der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Gruppe weitere Ressourcen hinzufügen, diese Ressourcen immer über eigene eindeutige SQL-Netzwerknamen und SQL-IP-Adressen verfügen müssen.  
@@ -60,7 +62,7 @@ ms.lasthandoff: 12/05/2017
   
      Wenn Sie MS DTC in der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Gruppe installieren und gleichzeitig andere Ressourcen von MS DTC abhängig sind, steht MS DTC nicht zur Verfügung, wenn diese Gruppe offline ist oder ein Failover eintritt. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] empfiehlt, MS DTC möglichst in eine eigene Gruppe mit eigener physischer Datenträgerressource einzufügen.  
   
-###  <a name="Prerequisites"></a> Voraussetzungen  
+###  <a name="Prerequisites"></a> Erforderliche Komponenten  
  Wenn Sie [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in einer WSFC-Ressourcengruppe mit mehreren Laufwerken installieren und die Daten auf einem dieser Laufwerke speichern möchten, wird festgelegt, dass die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Ressource ausschließlich von diesem Laufwerk abhängig ist. Um Daten oder Protokolle auf einem anderen Datenträger zu speichern, müssen Sie zuerst der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Ressource eine Abhängigkeit für den zusätzlichen Datenträger hinzufügen.  
   
 ##  <a name="WinClusManager"></a> Verwenden des Failovercluster-Manager-Snap-Ins  

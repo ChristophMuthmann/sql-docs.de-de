@@ -1,17 +1,17 @@
 ---
 title: PrimaryKey-Eigenschaft (ADOX) | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - _Index::PrimaryKey
@@ -22,18 +22,18 @@ f1_keywords:
 helpviewer_keywords:
 - PrimaryKey property [ADOX]
 ms.assetid: 30185312-5e09-4804-852d-e505d660113a
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b2b40b25a9bdf53aadc9f68f1950fbad5785fa1f
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: b5eb1723e8f3b396e02e174d1c751c0a49d26ddc
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
-# <a name="primarykey-property-adox"></a>PrimaryKey Property (ADOX)
+# <a name="primarykey-property-adox"></a>PrimaryKey-Eigenschaft (ADOX)
 Gibt an, ob der Index den Primärschlüssel für die Tabelle darstellt.  
   
 ## <a name="settings-and-return-values"></a>Einstellungen und Rückgabewerte  

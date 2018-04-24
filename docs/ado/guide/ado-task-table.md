@@ -5,12 +5,12 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.suite: sql
 ms.tgt_pltfrm: ''
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: ado
 ms.technology: drivers
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - tasks [ADO]
 - ADO, tasks
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f196a8254ac201194c345afaf5ae7c1a04d4e53c
-ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
+ms.openlocfilehash: d1d0863acca38d81c73568846f3dc81f4f221602
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="ado-programming-task-table"></a>ADO-Programmierung Aufgabe Tabelle
 Die folgende Tabelle enthält Programmieraufgaben, die der *ADO-Programmiererhandbuch* und stellt Verweise für jede Aufgabe bereit. Diese Verweise können textbeschreibungen oder Codebeispiele, die in denen Sie Informationen zur Funktion für ADO finden können, die vom Task ausgeführten sein.

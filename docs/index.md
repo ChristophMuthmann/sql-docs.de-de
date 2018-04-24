@@ -5,14 +5,14 @@ title: Microsoft SQL-Dokumentation | Microsoft-Dokumentation
 description: Erfahren Sie mehr über SQL
 author: barbkess
 ms.author: barbkess
-ms.topic: article
+ms.topic: hub-page
 ms.technology:
 - database-engine
-ms.openlocfilehash: 3d3fb586dab22c8f3e8c7a8a3b4f4b9c94bd31be
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: bb2801c057770c2dc96c0e69208d7f04463e60e3
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 <div id="main" class="v2">
     <div class="container">

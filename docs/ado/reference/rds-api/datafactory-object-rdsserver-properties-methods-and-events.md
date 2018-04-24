@@ -1,30 +1,30 @@
 ---
 title: DataFactory-Objekt (RDSServer) Eigenschaften, Methoden und Ereignisse | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - DataFactory object [ADO], members
 ms.assetid: 36a1f49b-91f4-44f4-b6e2-52fc7ed06d7e
-caps.latest.revision: 
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7ee3dc0d82f2bc052c169c97bb7cf5ff8d608f8f
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 8cd3fe2c802dfb6d19b42cb5def495044ccde66e
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="datafactory-object-rdsserver-properties-methods-and-events"></a>DataFactory-Objekt (RDSServer) Eigenschaften, Methoden und Ereignisse
 > [!IMPORTANT]

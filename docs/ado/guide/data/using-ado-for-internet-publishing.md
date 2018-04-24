@@ -1,33 +1,33 @@
 ---
-title: "Mithilfe von ADO für Internet Publishing | Microsoft Docs"
-ms.prod: sql-non-specified
+title: Mithilfe von ADO für Internet Publishing | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - ADO, Internet publishing
 - publishing to Internet [ADO]
 - Internet publishing [ADO]
 - urls [ADO]
 ms.assetid: d399fce4-b70b-418f-8110-3deb3448863c
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 609f4574c7f8cf9cb13fd2d5b21f3504ec3ce9fb
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 642f4eb6f145b7488766688c758660521c74fa8f
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="using-ado-for-internet-publishing"></a>Mithilfe von ADO für Internet Publishing
 [Der OLE DB-Anbieter für Internet Publishing](../../../ado/guide/data/the-ole-db-provider-for-internet-publishing.md) zeigt ein Beispiel hierfür den Zugriff auf heterogene Daten mit ADO. Obwohl in den Beispielen in diesem Abschnitt spezifisch sind für die Verwendung die Publishing Internetanbieter ist, sollte die veranschaulichten Prinzipien ähnlich sein, bei Verwendung von ADO mit anderen Anbietern für heterogene Daten, z. B. einen Anbieter zu einem e-Mail-Store.  
@@ -60,6 +60,6 @@ ms.lasthandoff: 02/09/2018
 -   [Records and Provider-Supplied Fields (Datensätze und von Anbietern bereitgestellte Felder)](../../../ado/guide/data/records-and-provider-supplied-fields.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Record Object (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
+ [Das Datensatzobjekt (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
  [Streamobjekt (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)   
  [ADO-Verlauf](../../../ado/guide/ado-history.md)

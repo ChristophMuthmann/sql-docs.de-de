@@ -1,35 +1,35 @@
 ---
 title: LockType-Eigenschaft (ADO) | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - Recordset15::LockType
 helpviewer_keywords:
 - LockType property [ADO]
 ms.assetid: 9920c14e-033a-4de1-8149-0ce9737a3246
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 231ca93c71468fc46ed7729170b2c58e224b1d6f
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 8f98fea2139f64bffc214c392747a21bc41678de
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
-# <a name="locktype-property-ado"></a>LockType Property (ADO)
+# <a name="locktype-property-ado"></a>LockType-Eigenschaft (ADO)
 Gibt den Typ der Sperren auf Datensätze während der Bearbeitung.  
   
 ## <a name="settings-and-return-values"></a>Einstellungen und Rückgabewerte  

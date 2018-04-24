@@ -1,33 +1,33 @@
 ---
 title: Anbieter und DefaultDatabase Eigenschaften (VC++-Beispiel) | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - provider property [ADO], VC++ example
 - DefaultDatabase property [ADO], VC++ example
 ms.assetid: d9868c99-425a-4b10-af67-1929ed513fda
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4ba904b64819f50cfaf404ec3690a9b0db76d75c
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: d1529314e0e14f1cae6de34196961a22b9e4bef4
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="provider-and-defaultdatabase-properties-example-vc"></a>Anbieter und DefaultDatabase Eigenschaften (VC++-Beispiel)
 Dieses Beispiel zeigt die [Anbieter](../../../ado/reference/ado-api/provider-property-ado.md) Eigenschaft öffnen Sie drei [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md) -Objekte mit verschiedenen Anbietern. Darüber hinaus verwendet der [DefaultDatabase](../../../ado/reference/ado-api/defaultdatabase-property.md) Eigenschaft, um die Standarddatenbank für den Microsoft ODBC-Datenanbieter festzulegen.  

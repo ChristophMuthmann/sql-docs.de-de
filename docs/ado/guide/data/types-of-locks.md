@@ -1,17 +1,17 @@
 ---
 title: Typen von Sperren | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - AdLockBatchOptimistic [ADO]
 - AdLockReadOnly [ADO]
@@ -20,16 +20,16 @@ helpviewer_keywords:
 - AdLockOptimistic [ADO]
 - AdLockPessimistic [ADO]
 ms.assetid: 12a978c0-b8a0-4ef0-87f0-a43c13659272
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9bec4523ea458998ff19481de467cc6493d03ed2
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: c2c3605e7d5c39253023f7827c84f17588de6938
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="types-of-locks"></a>Typen von Sperren
 ## <a name="adlockbatchoptimistic"></a>adLockBatchOptimistic  

@@ -1,31 +1,31 @@
 ---
-title: "Erkennen und Lösen von Konflikten | Microsoft Docs"
-ms.prod: sql-non-specified
+title: Erkennen und Lösen von Konflikten | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - conflicts [ADO], detecting and resolving
 - ADO, detecting and resolving conflicts
 ms.assetid: b28fdd26-c1a4-40ce-a700-2b0c9d201514
-caps.latest.revision: 
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 61f54b700be8ec03e56bf63999dc7f93b8d5fcdb
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 0bb8451f5d4355b521f794501b4a431b02fc2f06
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="detecting-and-resolving-conflicts"></a>Erkennen und Lösen von Konflikten
 Wenn Sie das Recordset in unmittelbarer Modus arbeiten, ist wesentlich weniger fehleranfällig für Parallelitätsprobleme auftreten. Andererseits, wenn Ihre Anwendung BatchUpdates Modus verwendet, liegt möglicherweise eine gute chance, dass ein Benutzer ändert einen Datensatz, vor dem Speichern von Änderungen, die von einem anderen Benutzer, die den gleichen Datensatz bearbeiten vorgenommen wurden. In diesem Fall sollten Sie die Anwendung den Konflikt Datenbindungsvorgängen erfolgreich behandelt. Sie können Ihr Wunsch sein, die letzte Person, die ein Update an den Server senden "gewinnt". Oder Sie können die letzten Benutzer, um zu entscheiden, welche Vorrang haben soll, indem ihm mithilfe einer Auswahl zwischen den beiden in Konflikt stehenden Werten bereitstellen möchten.  

@@ -15,16 +15,17 @@ ms.topic: article
 f1_keywords:
 - sql13.ag.target.download.f1
 ms.assetid: e4043087-816c-4b66-8cd5-f0eba13a7649
-caps.latest.revision: ''
+caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 67fe64dd9cc21b4ba6ce654fb9de065a603fc9d7
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: b6747125aefd3779d874c2eb3ae052ecd25f0b76
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="target-servers-download-instructions-tab"></a>Zielserver (Registerkarte Anweisungen zum Herunterladen)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
