@@ -1,16 +1,16 @@
 ---
 title: IS_SRVROLEMEMBER (Transact-SQL) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - IS_SRVROLEMEMBER_TSQL
@@ -22,16 +22,16 @@ helpviewer_keywords:
 - IS_SRVROLEMEMBER function
 - members [SQL Server], verifying
 ms.assetid: 3241a44a-6958-415b-b8b7-2a1207c36ab3
-caps.latest.revision: 
+caps.latest.revision: 65
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 342eadd8e537611cc292c95ebfa41b98c222c920
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 1ae1dac9be576e6f1c6c2c83164bd83e2716d658
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="issrvrolemember-transact-sql"></a>IS_SRVROLEMEMBER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ IS_SRVROLEMEMBER ( 'role' [ , 'login' ] )
   
 ## <a name="arguments"></a>Argumente  
  **'** *role* **'**  
- Der Name der zu überprüfenden Serverrolle. *role* ist vom Typ **sysname**.  
+ Der Name der zu überprüfenden Serverrolle. *role* weist den Typ **sysname** auf.  
   
  Gültige Werte für *role* sind benutzerdefinierte Serverrollen sowie die folgenden festen Serverrollen:  
   

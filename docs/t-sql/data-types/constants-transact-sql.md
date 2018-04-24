@@ -1,16 +1,16 @@
 ---
 title: Konstanten (Transact-SQL) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 7/22/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|data-types
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -34,16 +34,17 @@ helpviewer_keywords:
 - real data type
 - negative values
 ms.assetid: 58ae3ff3-b1d5-41b2-9a2f-fc7ab8c83e0e
-caps.latest.revision: 
+caps.latest.revision: 22
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: aae955a177f637e3c359eabf02679025cbecdb3a
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 885899dae5157d8c2ea90b8c31835de27f93e01a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="constants-transact-sql"></a>Konstanten (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -210,6 +211,6 @@ SQL Server unterstützt Zeichen- und Unicode-Zeichenfolgenkonstanten, die erweit
 ## <a name="see-also"></a>Siehe auch
 [Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
 [Ausdrücke &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)  
-[Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)
+[Operatoren &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)
   
   

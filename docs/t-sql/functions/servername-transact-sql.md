@@ -2,7 +2,7 @@
 title: '@@SERVERNAME (Transact-SQL) | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 09/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.service: ''
 ms.component: t-sql|functions
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - '@@SERVERNAME function'
 - local servers [SQL Server]
 ms.assetid: b0ef33fb-954a-4294-b05b-a87c14ce25a3
-caps.latest.revision: ''
+caps.latest.revision: 34
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 40f441998f2f5055bdacb0ac6d796a6d3ad56f68
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: c268dfc87f0ec2e3b99a688abda5a73c472d027b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="x40x40servername-transact-sql"></a>&#x40;&#x40;SERVERNAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

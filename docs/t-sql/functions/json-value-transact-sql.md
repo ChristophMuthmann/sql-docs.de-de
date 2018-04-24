@@ -1,16 +1,16 @@
 ---
 title: JSON_VALUE (Transact-SQL) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 07/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: douglasl
 ms.suite: sql
 ms.technology:
 - dbe-json
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - JSON_VALUE
@@ -20,16 +20,16 @@ helpviewer_keywords:
 - JSON, extracting
 - JSON, querying
 ms.assetid: cd016e14-11eb-4eaf-bf05-c7cfcc820a10
-caps.latest.revision: 
-author: douglaslMS
-ms.author: douglasl
+caps.latest.revision: 18
+author: jovanpop-msft
+ms.author: jovanpop
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: ab4c14769dc51c6d5b97a6ad2fe6f0cb06fad4e0
-ms.sourcegitcommit: 19e1c4067142d33e8485cb903a7a9beb7d894015
+ms.openlocfilehash: a3f1fd830bf81f9110f40e4623e49fb64356fc76
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="jsonvalue-transact-sql"></a>JSON_VALUE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -93,9 +93,9 @@ SET @jsonInfo=N'{
  }'  
 ```  
   
- Die folgende Tabelle vergleicht das Verhalten von **JSON_VALUE** im Lax-Modus und im Strict-Modus. Weitere Informationen zu den optionalen Pfadmodusangaben (lax oder strict) finden Sie unter [JSON-Pfadausdrücke &#40;SQLServer&#41; ](../../relational-databases/json/json-path-expressions-sql-server.md).  
+ Die folgende Tabelle vergleicht das Verhalten von **JSON_VALUE** im Lax-Modus und im Strict-Modus. Weitere Informationen zu den optionalen Path-Modusangaben (Lax oder Strict) finden Sie unter [JSON Path Expressions &#40;SQL Server&#41; (JSON-Pfadausdrücke (SQL Server))](../../relational-databases/json/json-path-expressions-sql-server.md).  
   
-|Pfad|Rückgabewert im Lax-Modus|Rückgabewert im strict-Modus|Weitere Informationen|  
+|Pfad|Rückgabewert im Lax-Modus|Rückgabewert im Strict-Modus|Weitere Informationen|  
 |----------|------------------------------|---------------------------------|---------------|  
 |$|NULL|Fehler|Kein Skalarwert.<br /><br /> Verwenden Sie stattdessen **JSON_QUERY**.|  
 |$.info.type|N'1'|N'1'|N/V|  
@@ -148,7 +148,7 @@ CREATE TABLE dbo.Store
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [JSON Path Expressions &#40;SQL Server&#41; (JSON-Pfadausdrücke &#40;SQL Server&#41;)](../../relational-databases/json/json-path-expressions-sql-server.md)   
+ [JSON-Pfadausdrücke &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)   
  [JSON-Daten &#40;SQL Server&#41;](../../relational-databases/json/json-data-sql-server.md)  
   
   

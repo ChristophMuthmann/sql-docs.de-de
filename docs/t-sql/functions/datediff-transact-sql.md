@@ -1,16 +1,16 @@
 ---
 title: DATEDIFF (Transact-SQL) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 07/29/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DATEDIFF_TSQL
@@ -33,23 +33,24 @@ helpviewer_keywords:
 - crossing date time boundaries [SQL Server]
 - calculating dates times [SQL Server]
 ms.assetid: eba979f2-1a8d-4cce-9d75-b74f9b519b37
-caps.latest.revision: 
+caps.latest.revision: 52
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: c7eaab4807f87aca3de9d4fb318c9069f5efdc67
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: be399382bedbcdd97c90db6bd83d70d01056ab59
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="datediff-transact-sql"></a>DATEDIFF (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Gibt die Anzahl (ganze Zahl mit Vorzeichen) der angegebenen *datepart*-Begrenzungen zurück, die zwischen den angegebenen Werten für *startdate* und *enddate* überschritten wurden.
   
-Größere Unterschiede finden Sie unter [DATEDIFF_BIG &#40;Transact-SQL&#41;](../../t-sql/functions/datediff-big-transact-sql.md). Eine Übersicht über alle Datums- und Uhrzeitdatentypen und zugehörige Funktionen für [!INCLUDE[tsql](../../includes/tsql-md.md)] finden Sie unter [Datums- und Uhrzeitdatentypen und zugehörige Funktionen &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).
+Größere Unterschiede finden Sie unter [DATEDIFF_BIG &#40;Transact-SQL&#41;](../../t-sql/functions/datediff-big-transact-sql.md). Eine Übersicht über alle Datums- und Uhrzeitdatentypen und zugehörige Funktionen für [!INCLUDE[tsql](../../includes/tsql-md.md)] finden Sie unter [Date and Time Data Types and Functions &#40;Transact-SQL&#41; (Datums- und Uhrzeitdatentypen und zugehörige Funktionen)](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).
   
 ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -91,7 +92,7 @@ Weitere Informationen finden Sie unter *startdate*.
   
 ## <a name="return-value"></a>Rückgabewert  
   
--   Jedes *datepart*-Argument und die zugehörigen Abkürzungen geben denselben Wert zurück.  
+-   Jedes *datepart*-Argument und die zugehörigen Abkürzungen geben den gleichen Wert zurück.  
   
 Wenn der Rückgabewert außerhalb des Bereichs für **int** liegt (-2,147,483,648 to +2,147,483,647), wird ein Fehler zurückgegeben. Der maximale Unterschied zwischen *startdate* und *enddate* beträgt für **millisecond** 24 Tage, 20 Stunden, 31 Minuten und 23,647 Sekunden. Für **second** beträgt der maximale Unterschied 68 Jahre.
   
@@ -129,7 +130,7 @@ DATEPART wandelt Zeichenfolgenliterale implizit in den **datetime2**-Typ um. Dah
 Das Angeben von SET DATEFIRST hat keine Auswirkungen auf DATEDIFF. DATEDIFF verwendet immer Sonntag als ersten Wochentag, um zu gewährleisten, dass die Funktion deterministisch ist.
   
 ## <a name="examples"></a>Beispiele  
-In den folgenden Beispielen werden verschiedene Typen von Ausdrücken als Argumente für den *startdate*-Parameter und den *enddate*-Parameter verwendet.
+In den folgenden Beispielen werden verschiedene Typen von Ausdrücken als Argumente für den *startdate*- und den *enddate*-Parameter verwendet.
   
 ### <a name="a-specifying-columns-for-startdate-and-enddate"></a>A. Angeben von Spalten für startdate und enddate  
 Im folgenden Beispiel wird die Anzahl der Tagesbegrenzungen berechnet, die von den Datumsangaben in zwei Spalten in einer Tabelle überschritten wurden.
@@ -233,7 +234,7 @@ GO
 ```  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
-In den folgenden Beispielen werden verschiedene Typen von Ausdrücken als Argumente für den *startdate*-Parameter und den *enddate*-Parameter verwendet.
+In den folgenden Beispielen werden verschiedene Typen von Ausdrücken als Argumente für den *startdate*- und den *enddate*-Parameter verwendet.
   
 ### <a name="i-specifying-columns-for-startdate-and-enddate"></a>I. Angeben von Spalten für startdate und enddate  
 Im folgenden Beispiel wird die Anzahl der Tagesbegrenzungen berechnet, die von den Datumsangaben in zwei Spalten in einer Tabelle überschritten wurden.

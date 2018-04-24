@@ -1,34 +1,34 @@
 ---
-title: "Aufheben der Berechtigungen für eine XML-Schemaauflistung | Microsoft-Dokumentation"
-ms.custom: 
+title: Aufheben der Berechtigungen für eine XML-Schemaauflistung | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: xml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - revoking permissions [SQL Server]
 ms.assetid: 4e542b70-2d56-4a65-8a39-96a1ed477ca6
-caps.latest.revision: 
+caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dc855ac7206e483b4a024d2fa31876a73ffa80b3
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: a48b7a877f5fa5db06d0fd30f513aace1d3d899f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="revoke-permissions-on-an-xml-schema-collection"></a>Aufheben der Berechtigungen für eine XML-Schemaauflistung
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-Die Berechtigung zum Erstellen einer XML-Schemaauflistung kann mithilfe eines der folgenden Verfahren aufgehoben werden:  
+  Die Berechtigung zum Erstellen einer XML-Schemaauflistung kann mithilfe eines der folgenden Verfahren aufgehoben werden:  
   
 -   Aufheben der ALTER-Berechtigung für das relationale Schema. Der Prinzipal kann in diesem Fall keine XML-Schemaauflistung im relationalen Schema erstellen. Der Prinzipal kann dies jedoch auch weiterhin in anderen relationalen Schemas in der gleichen Datenbank.  
   

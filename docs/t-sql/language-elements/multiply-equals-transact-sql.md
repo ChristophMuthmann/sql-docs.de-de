@@ -1,16 +1,16 @@
 ---
 title: '*= (Multiplikationszuweisung) (Transact-SQL) | Microsoft-Dokumentation'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|language-elements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - '*=_TSQL'
@@ -24,16 +24,17 @@ helpviewer_keywords:
 - '*= (multiply equals)'
 - '*= (multiplication assignment)'
 ms.assetid: 816ff5dc-9a40-4c07-8351-39c194dbc079
-caps.latest.revision: 
+caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c0979f2a61d15c5edd6aec72a8db07309db3cc2c
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 058dbf10fc267a938efad9d9bdb4f90708df828a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="-multiplication-assignment-transact-sql"></a>(Multiplikationszuweisung) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -59,8 +60,8 @@ expression *= expression
  Weitere Informationen finden Sie unter [&#42; &#40;Multiplication&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/multiply-transact-sql.md).  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [Compound Operators &#40;Transact-SQL&#41; (Verbundoperatoren &#40;Transact-SQL&#41;)](../../t-sql/language-elements/compound-operators-transact-sql.md)   
+ [Verbundoperatoren &#40;Transact-SQL&#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   
  [Ausdrücke &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
- [Operators &#40;Transact-SQL&#41; (Operatoren (Transact-SQL))](../../t-sql/language-elements/operators-transact-sql.md)  
+ [Operatoren &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)  
   
   

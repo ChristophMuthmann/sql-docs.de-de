@@ -2,7 +2,7 @@
 title: GO (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 07/27/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
 ms.service: ''
 ms.component: t-sql|language-elements
@@ -29,11 +29,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 6c029c375f40e114c6b01f80c3e69bd5841a3521
-ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
+ms.openlocfilehash: 4117ce0c7c85c4fb9cf92258dd16218b42a8612c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-server-utilities-statements---go"></a>Anweisungen für SQL Server-Hilfsprogramme - GO
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

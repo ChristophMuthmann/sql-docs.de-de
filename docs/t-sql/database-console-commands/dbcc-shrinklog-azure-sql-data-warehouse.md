@@ -2,7 +2,7 @@
 title: DBCC SHRINKLOG (Parallel Data Warehouse) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/16/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-data-warehouse, pdw
 ms.service: ''
 ms.component: t-sql|database-console-commands
@@ -14,16 +14,17 @@ ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
-caps.latest.revision: ''
+caps.latest.revision: 11
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: fc02884ed88c056eb2a7fedb57f7de701377ee37
-ms.sourcegitcommit: 3ed9be04cc7fb9ab1a9ec230c298ad2932acc71b
+monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: ed5957f1ce77f14cf3231702c1b268c75dc5841d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/17/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="dbcc-shrinklog-parallel-data-warehouse"></a>DBCC SHRINKLOG (Parallel Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]

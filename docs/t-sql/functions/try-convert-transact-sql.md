@@ -2,7 +2,7 @@
 title: TRY_CONVERT (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.service: ''
 ms.component: t-sql|functions
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - TRY_CONVERT function
 ms.assetid: 3e6e7825-6482-4cb2-a8c2-9abc99e265a6
-caps.latest.revision: ''
+caps.latest.revision: 17
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 5fedc9777146d24cb04fb7652344f244babc8246
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 2ef43a22ebbdd936ec6be0ef1fec1186e80caffc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="tryconvert-transact-sql"></a>TRY_CONVERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

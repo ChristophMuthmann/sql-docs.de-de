@@ -2,7 +2,7 @@
 title: BACKUP (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/30/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
 ms.service: ''
 ms.component: t-sql|statements
@@ -53,11 +53,12 @@ author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: ad21db12a4d147f8d999c7774a773082cbc6b1b5
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: e49f7f6f0849382ba7558c106c339c331679a5b5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -212,7 +213,7 @@ LOG **Gilt für:** SQL Server
   
  Weitere Informationen finden Sie unter [Vollständige Dateisicherungen &#40;SQL Server&#41;](../../relational-databases/backup-restore/full-file-backups-sql-server.md) und [Sichern von Dateien und Dateigruppen &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-files-and-filegroups-sql-server.md).  
   
- READ_WRITE_FILEGROUPS [ **,** FILEGROUP = { *logical_filegroup_name* | **@***logical_filegroup_name_var* } [ **,**...*n* ] ]  
+ READ_WRITE_FILEGROUPS [ **,** FILEGROUP = { *logical_filegroup_name* | **@***logical_filegroup_name_var* } [ **,**...* n* ] ]  
  Gibt eine Teilsicherung an. Eine Teilsicherung umfasst alle Dateien mit Lese-/Schreibzugriff in einer Datenbank: die primäre Dateigruppe und alle beliebigen sekundären Dateigruppen mit Lese-/Schreibzugriff sowie auch alle angegebenen schreibgeschützten Dateien oder Dateigruppen.  
   
  READ_WRITE_FILEGROUPS  
@@ -233,7 +234,7 @@ TO \<backup_device> [ **,**...*n* ]Gibt an, dass es sich bei dem zugehörigen Sa
   
 \<backup_device> **Gilt für:** SQL Server Gibt ein logisches oder physisches Sicherungsmedium an, das für den Sicherungsvorgang verwendet werden soll.  
   
- { *logical_device_name* | **@***logical_device_name_var* } **Gilt für:** SQL Server Der logische Name des Sicherungsmediums, auf dem die Datenbank gesichert wird. Der logische Name muss den Regeln für Bezeichner entsprechen. Bei der Angabe als Variable (*logical_device_name_var*) kann der Name des Sicherungsmediums entweder als Zeichenfolgenkonstante (@*logical_device_name_var***=** Name des logischen Sicherungsmediums) oder als Variable eines Zeichenfolgen-Datentyps (mit Ausnahme der Datentypen **ntext** oder **text**) angegeben werden.  
+ { *logical_device_name* | **@***logical_device_name_var* } **Gilt für:** SQL Server Der logische Name des Sicherungsmediums, auf dem die Datenbank gesichert wird. Der logische Name muss den Regeln für Bezeichner entsprechen. Bei der Angabe als Variable (* logical_device_name_var *) kann der Name des Sicherungsmediums entweder als Zeichenfolgenkonstante (@* logical_device_name_var***=** Name des logischen Sicherungsmediums) oder als Variable eines Zeichenfolgen-Datentyps (mit Ausnahme der Datentypen **ntext** oder **text**) angegeben werden.  
   
  {DISK | TAPE | URL} **=** { **'***physical_device_name***'** | **@***physical_device_name_var* | 'NUL' } **Gilt für:** DISK, TAPE und URL gelten für SQL Server. Nur URL gilt für die verwaltete SQL-Datenbankinstanz Gibt eine Datenträgerdatei oder ein Bandmedium oder einen Microsoft Azure Blob Storage-Dienst an. Das URL-Format wird zum Erstellen von Sicherungen im Windows Azure-Speicherdienst verwendet. Weitere Informationen finden Sie unter [SQL Server-Sicherung und -Wiederherstellung mit dem Microsoft Azure Blob Storage Service](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). Ein Tutorial finden Sie unter [Tutorial: SQL Server-Sicherung und -Wiederherstellung im Windows Azure-BLOB-Speicherdienst](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md). 
 
@@ -358,7 +359,7 @@ Wenn keine der Optionen angegeben wird, wird das Ablaufdatum durch die Konfigura
 > [!IMPORTANT]  
 > Diese Optionen verhindern nur, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eine Datei überschreibt. Bänder können mit anderen Methoden gelöscht werden, und Dateien auf einem Datenträger können mit entsprechenden Betriebssystembefehlen gelöscht werden. Weitere Informationen zur Prüfung des Ablaufdatums finden Sie unter SKIP und FORMAT in diesem Thema.  
   
-EXPIREDATE **=** { **'***date***'** | **@***date_var* } Gibt an, wann der Sicherungssatz abläuft und überschrieben werden kann. Wenn dieses Datum als Variable (@*date_var*) bereitgestellt wird, muss es dem konfigurierten Systemformat **datetime** genügen und als eines der folgenden Elemente angegeben werden:  
+EXPIREDATE **=** { **'***date***'** | **@***date_var* } Gibt an, wann der Sicherungssatz abläuft und überschrieben werden kann. Wenn dieses Datum als Variable (@* date_var*) bereitgestellt wird, muss es dem konfigurierten Systemformat **datetime** genügen und als eines der folgenden Elemente angegeben werden:  
   
 -   Eine Zeichenfolgekonstante (@*date_var* **=** date)  
 -   Eine Variable mit einem Zeichenfolgen-Datentyp (mit Ausnahme der Datentypen **ntext** oder **text**)  
