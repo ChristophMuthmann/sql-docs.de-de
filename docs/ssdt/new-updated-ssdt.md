@@ -118,21 +118,21 @@ SSDT für Visual Studio 2017 (15.5.0) befindet sich nicht mehr in der Vorschauph
 1. Die Benutzeroberfläche des Setups wurde lokalisiert.
 1. Die Qualität des Symbols wurde verbessert.
 
-**Integration Services (IS)**
+**Integration Services**
 1. Im Bereitstellungsassistenten wurde ein Schritt zur Paketvalidierung hinzugefügt, wenn eine Bereitstellung an Azure SSIS IR in ADF durchgeführt wird, wobei mögliche Kompatibilitätsprobleme in SSIS-Paketen bei der Ausführung in Azure SSIS IR erkannt werden. Weitere Informationen finden Sie unter [Überprüfen von in Azure bereitgestellten SSIS-Paketen](..\integration-services\lift-shift\ssis-azure-validate-packages.md).
 1. Die SSIS-Erweiterung wurde lokalisiert.
 
 **Behebung von Programmfehlern**
 
 
-**Integration Services (IS)**
+**Integration Services**
 1. Korrigiert: Das Layout des Verbindungs-Managers von OLE DB und ADO.NET ist beschädigt.
 2. Korrigiert: Beim Bearbeiten einer Aufgabe zum Verarbeiten von Dimensionen wird der Fehler „Assembly nicht gefunden“ ausgegeben.
 
 **Bekannte Probleme**
 
 
-Die SSIS-Aufgabe „Paket ausführen“ (**Integration Services (IS)**) unterstützt kein Debuggen, wenn ExecuteOutOfProcess auf TRUE festgelegt ist. Dieses Problem gilt nur für das Debuggen. Das Speichern, Bereitstellen und Ausführen über „DTExec.exe“ oder den SSIS-Katalog wird nicht beeinträchtigt.
+Die SSIS-Aufgabe „Paket ausführen“ (**Integration Services**) unterstützt kein Debuggen, wenn ExecuteOutOfProcess auf TRUE festgelegt ist. Dieses Problem gilt nur für das Debuggen. Das Speichern, Bereitstellen und Ausführen über „DTExec.exe“ oder den SSIS-Katalog wird nicht beeinträchtigt.
 
 
 
