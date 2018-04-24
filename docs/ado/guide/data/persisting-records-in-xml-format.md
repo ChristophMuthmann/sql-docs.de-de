@@ -1,17 +1,17 @@
 ---
-title: "Beibehalten von Datensätzen im XML-Format | Microsoft Docs"
-ms.prod: sql-non-specified
+title: Beibehalten von Datensätzen im XML-Format | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - persisting data [ADO]
 - data updates [ADO], persisting data
@@ -19,16 +19,16 @@ helpviewer_keywords:
 - XML persistence [ADO]
 - updating data [ADO], persisting data
 ms.assetid: f3113ec4-ae31-428f-89c6-bc1024f128ea
-caps.latest.revision: 
+caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 538905bce39a603b6bda5f1164ae52c70ee2be24
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: ea27e9718ca2fd2814e950e0242625e8c78bb72d
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="persisting-records-in-xml-format"></a>Beibehalten von Datensätzen im XML-Format
 Wie beim ADTG **Recordset** Persistenz im XML-Format ist mit der Microsoft OLE DB-Anbieter für Persistenz implementiert. Dieser Anbieter generiert einen Vorwärtscursor, schreibgeschützte Rowset aus einer gespeicherten XML-Datei oder einem Stream, die die Schemainformationen von ADO generierten enthält. Auf ähnliche Weise kann es dauern, eine ADO **Recordset**, Generieren von XML, und speichern Sie sie in einer Datei oder jedes Objekt, das die COM implementiert **IStream** Schnittstelle. (Eine Datei ist sogar noch ein weiteres Beispiel für ein Objekt, das unterstützt **IStream**.) Für Version 2.5 und höher, ADO basiert auf Microsoft XML Parser (MSXML) beim Laden der XML-Daten in der **Recordset**; daher msxml.dll ist erforderlich.  
