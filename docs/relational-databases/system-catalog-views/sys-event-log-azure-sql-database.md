@@ -28,12 +28,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: b8794f8e4268df504452ca8fe73f13eea371dda2
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+monikerRange: = azuresqldb-current || = sqlallproducts-allversions
+ms.openlocfilehash: b0b69c68a213531d66162b42267cb0fac634de18
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="syseventlog-azure-sql-database"></a>sys.event_log (Azure SQL-Datenbank)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]

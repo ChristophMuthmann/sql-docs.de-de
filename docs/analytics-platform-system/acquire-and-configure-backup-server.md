@@ -1,28 +1,22 @@
 ---
-title: Erwerben Sie und konfigurieren Sie einen Sicherungsserver für APS PDW
-author: barbkess
-ms.author: barbkess
+title: Erwerben und einen Sicherungsserver - Parallel Data Warehouse konfigurieren | Microsoft Docs
+description: Dieser Artikel beschreibt, wie einem nicht-Appliance-Windows-Betriebssystem als Sicherungsserver für die Verwendung mit die Sicherung und Wiederherstellung Funktionen Analytics Platform System (APS) und Parallel Data Warehouse (PDW) konfigurieren.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.suite: sql
-ms.custom: ''
-ms.technology: mpp-data-warehouse
-description: Konfigurieren von einem nicht-Appliance-Windows-Betriebssystem als Sicherungsserver für die Verwendung mit der Sicherung und Wiederherstellungsfunktionen in Analytics Platform System (APS) und SQL Server Parallel Data Warehouse (PDW).
-ms.date: 10/20/2016
-ms.topic: article
-caps.latest.revision: 20
-ms.assetid: f8b769fe-c864-4d65-abcb-a9a287061702
-ms.openlocfilehash: 564a70d5fa483f2c34ef2598213a2c22074daf80
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 4464857e2b1e71a96f87e95d45df0577df987176
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="acquire-and-configure-a-backup-server"></a>Erwerben und Konfigurieren eines backup-Servers
-Dieses Thema beschreibt, wie ein nicht-Appliance-Windows-System als backup Server für die Verwendung mit der Sicherung und Wiederherstellung-Funktionen in Analytics Platform System (APS) und SQL Server Parallel Data Warehouse (PDW) konfigurieren.  
+# <a name="acquire-and-configure-a-backup-server-for-parallel-data-warehouse"></a>Erwerben Sie und konfigurieren Sie einen Sicherungsserver für Parallel Data Warehouse
+Dieser Artikel beschreibt, wie einem nicht-Appliance-Windows-Betriebssystem als Sicherungsserver für die Verwendung mit die Sicherung und Wiederherstellung Funktionen Analytics Platform System (APS) und Parallel Data Warehouse (PDW) konfigurieren.  
   
   
 ## <a name="Basics"></a>Grundlagen der Backup-server  

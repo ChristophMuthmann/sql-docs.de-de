@@ -1,33 +1,33 @@
 ---
 title: Befehl "und" CommandText-Eigenschaft-Beispiel (VB) | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - CommandText property [ADOX], Visual Basic example
 - Command property [ADOX], Visual Basic example
 ms.assetid: 413263a8-05c0-4404-929d-69f82b987ba3
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a813a0e9f9de83659a95139438b8f9860ae5bc47
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 5df90309633edec5fbf11cdc7c39ff90d1b1dcf3
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="command-and-commandtext-properties-example-vb"></a>Befehl "und" CommandText-Eigenschaft-Beispiel (VB)
 Der folgende Code veranschaulicht, wie die [Befehl](../../../ado/reference/adox-api/command-property-adox.md) Eigenschaft, um den Text einer Prozedur zu aktualisieren.  

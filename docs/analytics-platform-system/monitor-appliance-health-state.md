@@ -1,29 +1,22 @@
 ---
-title: Integritätsstatus des Monitors Appliance (Analytics Platform System)
-author: barbkess
-ms.author: barbkess
+title: Überwachen der Integrität der Appliance – Analytics Platform System
+description: So überwachen Sie den Status eines Geräts Analytics Platform System mithilfe der Verwaltungskonsole oder durch direkte Abfrage der dynamischen Verwaltungssichten Parallel Data Warehouse.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 91132e3c-3137-4670-adaa-8a7b234fb8d2
-caps.latest.revision: 12
-ms.openlocfilehash: 346e7f00973a59ce23ebe4fb4e018157c7a03c84
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: d8616d291dcaa8afadc01c9bd237903ca6c13573
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="monitor-appliance-health-state"></a>Integritätsstatus des Monitors Appliance
-In diesem Thema erläutert, wie den Status einer SQL Server PDW Appliance mithilfe der Verwaltungskonsole oder durch direkte Abfrage der SQL Server PDW dynamischen Management-Ansichten überwachen.  
+In diesem Artikel erläutert, wie den Status eines Geräts Analytics Platform System mithilfe der Verwaltungskonsole oder durch direkte Abfrage der dynamischen Verwaltungssichten Parallel Data Warehouse überwachen. 
   
 ## <a name="to-monitor-the-appliance-state"></a>Zum Überwachen des Status der Anwendung  
 Ein Systemadministrator können der Verwaltungskonsole oder der SQL Server PDW dynamische Verwaltungssichten (DMVs) Sie die vollständige Hierarchie von Knoten, Komponenten und Software abrufen. Das folgende Diagramm bietet eine allgemeine Vorstellung der Komponenten, die von SQL Server PDW überwacht.  
@@ -77,7 +70,7 @@ Mögliche Werte für die Status-Eigenschaft zurückgegeben werden:
   
 -   Okay  
   
--   NonCritical  
+-   Nicht schwerwiegender  
   
 -   Kritisch  
   

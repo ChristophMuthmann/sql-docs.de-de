@@ -1,27 +1,21 @@
 ---
-title: Laden von Daten mit Integrationsservices
-author: barbkess
-ms.author: barbkess
+title: Laden Sie mit Integration Services – Parallel Datawarehouse | Microsoft Docs
+description: Stellt Referenz- und Bereitstellung von Informationen zum Laden von Daten in Parallel Data Warehouse (PDW) mit SQL Server Integration Services (SSIS)-Pakete bereit.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.suite: sql
-ms.custom: ''
-ms.technology: mpp-data-warehouse
-description: Stellt Referenz- und Bereitstellung von Informationen zum Laden von Daten in SQL Server Parallel Data Warehouse mithilfe von SQL Server Integration Services (SSIS)-Pakete bereit.
-ms.date: 10/20/2016
-ms.topic: article
-ms.assetid: 9bdb559a-a91c-4342-8a6e-438cb93f975c
-caps.latest.revision: 69
-ms.openlocfilehash: d32e6b97d036437f6a28b81622873d14854d304f
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: efc077bda6d05642107a6e8694d53418401ff12c
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="load-data-with-integration-services"></a>Laden von Daten mit Integration Services
+# <a name="load-data-with-integration-services-to-parallel-data-warehouse"></a>Laden von Daten mit Integration Services Parallel Data Warehouse
 Stellt Referenz- und Bereitstellung von Informationen zum Laden von Daten in SQL Server Parallel Data Warehouse mithilfe von SQL Server Integration Services (SSIS)-Pakete bereit.  
   
 <!-- MISSING LINKS
@@ -227,7 +221,7 @@ Geben Sie das Ziel für den Datenfluss.
   
     Für Ethernet-Verbindungen **Servernamen**: Geben Sie die IP-Adresse der Steuerelement-Knoten-Cluster, Komma, Port 17001. Beispielsweise 10.192.63.134,17001.  
   
-    **User:**`user1`  
+    **Benutzer:**`user1`  
   
     **Kennwort:**`password1`  
   

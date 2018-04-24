@@ -1,33 +1,33 @@
 ---
 title: Verwenden von Visual C++-Erweiterungen | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Visual C++ [ADO], using VC++ extensions
 - ADO, Visual C++
 ms.assetid: ff759185-df41-4507-8d12-0921894ffbd9
-caps.latest.revision: 
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 304b814ee6e190e3b29dfbbd1a4ce2ee48ff1763
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 80dd87f6946abc4cc37af7d75de6d36a8bb9980e
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="visual-c-extensions"></a>Visual C++-Erweiterungen
 ## <a name="the-iadorecordbinding-interface"></a>Die IADORecordBinding-Schnittstelle
@@ -96,23 +96,23 @@ Update(CADORecordBinding *binding)
  **BEGIN_ADO_BINDING**(*Klasse*)
 
 ### <a name="fixed-length-data"></a>Daten fester Länge
- **ADO_FIXED_LENGTH_ENTRY**(*Ordinal, DataType, Buffer, Status, Modify*)
+ **ADO_FIXED_LENGTH_ENTRY**(*Ordnungszahl, Datentyp, Puffer, den Status ändern*)
 
- **ADO_FIXED_LENGTH_ENTRY2**(*Ordinal, DataType, Buffer, Modify*)
+ **ADO_FIXED_LENGTH_ENTRY2**(*Ordnungszahl, Datentyp, Puffer ändern*)
 
 ### <a name="numeric-data"></a>Numerische Daten
- **ADO_NUMERIC_ENTRY**(*Ordinal, DataType, Buffer, Precision, Scale, Status, Modify*)
+ **ADO_NUMERIC_ENTRY**(*Ordnungszahl, Datentyp, Puffer, Genauigkeit, Dezimalstellen, Status ändern*)
 
- **ADO_NUMERIC_ENTRY2**(*Ordinal, DataType, Buffer, Precision, Scale, Modify*)
+ **ADO_NUMERIC_ENTRY2**(*Ändern der Ordnungszahl "," DataType "," Puffer "," Precision, Scale,*)
 
 ### <a name="variable-length-data"></a>Daten variabler Länge
- **ADO_VARIABLE_LENGTH_ENTRY**(*Ordinal, DataType, Buffer, Size, Status, Length, Modify*)
+ **ADO_VARIABLE_LENGTH_ENTRY**(*Ordnungszahl, Datentyp, Puffer, Größe, Status, Länge ändern*)
 
- **ADO_VARIABLE_LENGTH_ENTRY2**(*Ordinal, DataType, Buffer, Size, Status, Modify*)
+ **ADO_VARIABLE_LENGTH_ENTRY2**(*Ordnungszahl, Datentyp, Puffer, Größe, den Status ändern*)
 
- **ADO_VARIABLE_LENGTH_ENTRY3**(*Ordinal, DataType, Buffer, Size, Length, Modify*)
+ **ADO_VARIABLE_LENGTH_ENTRY3**(*ändern Ordnungszahl, Datentyp, Puffer, Größe, Länge,*)
 
- **ADO_VARIABLE_LENGTH_ENTRY4**(*Ordinal, DataType, Buffer, Size, Modify*)
+ **ADO_VARIABLE_LENGTH_ENTRY4**(*Ordnungszahl, Datentyp, Puffer, Größe, ändern*)
 
 ### <a name="end-binding-entries"></a>Binden Einträge Ende
  **END_ADO_BINDING**()

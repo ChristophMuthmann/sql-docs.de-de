@@ -1,28 +1,22 @@
 ---
-title: Übersicht über die Parallel Data Warehouse
-author: barbkess
-ms.author: barbkess
+title: Parallel Data Warehouse-Komponenten – Analytics Platform System | Microsoft Docs
+description: Dieser Artikel erläutert die Appliance-Software und die Software nicht Appliance Bestandteile Analytics Platform System.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.suite: sql
-ms.custom: ''
-ms.technology: mpp-data-warehouse
-description: In diesem Thema wird erläutert, die Appliance-Software und die Software nicht Appliance Bestandteile Analytics Platform System.
-ms.date: 01/05/2017
-ms.topic: article
-ms.assetid: db0c4a43-a66d-4c44-ab91-791c5785f71c
-caps.latest.revision: 20
-ms.openlocfilehash: 42fb92c30c0487603f2ad8e870886f25b4c1655a
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 09813eecdcc933619955de8d94e83079cad0c68f
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="parallel-data-warehouse-overview"></a>Übersicht über die Parallel Data Warehouse
-In diesem Thema wird erläutert, die Appliance-Software und die Software nicht Appliance Bestandteile Analytics Platform System.  
+# <a name="parallel-data-warehouse-components---analytics-platform-system"></a>Parallel Data Warehouse-Komponenten - Analyseplattformsystem
+Dieser Artikel erläutert die Appliance-Software und die Software nicht Appliance Bestandteile Analytics Platform System.  
   
 <!-- MISSING LINKS
 
@@ -110,7 +104,7 @@ Analyseplattformsystem führt die Authentifizierung zwischen den Knoten Analytic
 DNS-Dienst  
 Windows Domain Name Service (DNS) löst Domänennamen in IP-Adressen für die Appliance Analytics Platform System.  
   
-### <a name="windows-deployment-service"></a>Windows Deployment Service  
+### <a name="windows-deployment-service"></a>Windows-Bereitstellungsdienste  
 Windows-Verwaltungsinstrumentation (Windows Deployment Service, WDS) wird das Betriebssystem Windows Server, auf dem Gerät bereitgestellt. Es wird auf jedem Host und die virtuelle Maschine über das Gerät bereitgestellt werden.  
   
 Der DHCP-Dienst erstellt IP-Adressen, damit die Hosts innerhalb der Domäne der Anwendung die Appliance-Netzwerk verbinden können, ohne eine vorkonfiguriert, dass IP-Adresse.  
@@ -255,7 +249,7 @@ Die Admin-Konsole basiert auf System Sicht Abfragen. Sie können Abfragen, die S
 
 Weitere Informationen finden Sie unter [überwachen die Appliance von mithilfe von Systemsichten &#40;Analyseplattformsystem&#41;](monitor-the-appliance-by-using-system-views.md) 
   
-### <a name="system-center-operations-manager"></a>System Center Operations Manager  
+### <a name="system-center-operations-manager"></a>System Center Operationsmanager  
 Es sind System Center Operations Manager (SCOM) Management Packs für SQL Server PDW. 
 
 Um die Einheit für SCOM konfigurieren zu können, finden Sie unter [überwachen die Appliance by Using System Center Operations Manager &#40;Analyseplattformsystem&#41;](monitor-the-appliance-by-using-system-center-operations-manager.md)  

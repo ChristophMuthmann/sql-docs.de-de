@@ -1,29 +1,22 @@
 ---
-title: Überwachen Sie die Anwendung mithilfe von Systemsichten (Analytics Platform System)
-author: barbkess
-ms.author: barbkess
+title: Überwachung mit Systemsichten - Analytics Platform System | Microsoft Docs
+description: Diese Artikel werden die Systemsichten, die Sie verwenden können, für die Überwachung der Analytics Platform System Appliance aufgelistet.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: d6e34c16-12ba-4a6f-80a7-391bca5ba534
-caps.latest.revision: 8
-ms.openlocfilehash: c6e756946e7ed558d6875bf5b330e1ebc9c35f5d
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 363e18441d95884b025de2ec07f0fed276852eb0
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="monitor-the-appliance-by-using-system-views"></a>Überwachen Sie die Anwendung mithilfe von Systemsichten
-Dieses Thema listet die Systemsichten, die Sie für die Überwachung von SQL Server PDW verwenden können.  
+# <a name="monitor-the-appliance-with-system-views---analytics-platform-system"></a>Überwachen Sie das Gerät mit Systemsichten - Analyseplattformsystem
+In diesem Artikel werden die Systemsichten, die Sie verwenden können, für die Überwachung von SQL Server PDW aufgelistet.  
   
 ## <a name="to-monitor-the-appliance-by-using-system-views"></a>Überwachen die Appliance mithilfe von Systemsichten  
 SQL Server PDW enthält umfassende Systemsichten, die erhalten Sie detaillierte Informationen zur Integrität der Appliance, Status und Leistung zu ermöglichen. Diese Tabelle enthält Links zu Systemsichten, die für jede Überwachungsfunktionen verwendet werden können.  

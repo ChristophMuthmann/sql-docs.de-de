@@ -1,29 +1,22 @@
 ---
-title: Appliance-Verwaltungsaufgaben (Analytics Platform System)
-author: barbkess
-ms.author: barbkess
+title: Appliance-Verwaltungsaufgaben – Analytics Platform System | Microsoft Docs
+description: Dieses Handbuch beschreibt die Appliance Verwaltungsaufgaben für Analytics Platform System (APS) ausführen.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 516d05a9-b791-4ad3-b8cf-ba34a854e309
-caps.latest.revision: 25
-ms.openlocfilehash: 584de02b3a22224de8b60ba476259a98de31c0ba
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 9012ddc562e9252367c7204383fa4ccc06f06345
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="appliance-management-tasks"></a>Appliance-Verwaltungsaufgaben
-Dieses Handbuch beschreibt, wie für SQL Server PDW Appliance-Verwaltungsaufgaben ausführen.  
+# <a name="appliance-management-tasks-for-analytics-platform-system"></a>Appliance-Verwaltungstasks für Analytics Platform System
+Dieses Handbuch beschreibt die Appliance Verwaltungsaufgaben für Analytics Platform System (APS) ausführen.  
   
 ## <a name="guide-sections"></a>Handbuch Abschnitte  
   

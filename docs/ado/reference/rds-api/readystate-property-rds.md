@@ -2,29 +2,29 @@
 title: ReadyState-Eigenschaft (RDS) | Microsoft Docs
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.component: reference
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 helpviewer_keywords:
 - ReadyState property [ADO]
 ms.assetid: 5be75bc7-1171-4440-a37e-c8cc6b5cd865
-caps.latest.revision: 
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c5496f5b5c98efa6f4754d131d74627f9ab75984
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 78a5b98cdf0eff5cb84165e8fd38b58c2b87e58a
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="readystate-property-rds"></a>ReadyState-Eigenschaft (RDS)
 Gibt den Status einer [DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) Objekt abgerufen, Daten in seiner [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekt.  

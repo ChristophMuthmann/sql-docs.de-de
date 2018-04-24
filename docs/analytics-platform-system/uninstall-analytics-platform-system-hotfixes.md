@@ -1,28 +1,21 @@
 ---
-title: Deinstallieren Sie Analytics Platform System Hotfixes (Analytics Platform System)
-author: barbkess
-ms.author: barbkess
+title: Deinstallieren Sie Analytics Platform System-Hotfixes auf | Microsoft Docs
+description: Analyseplattformsystem Hotfixes zu deinstallieren.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: c9ab596d-3f5a-48e2-bce7-c9be99b8c23b
-caps.latest.revision: 21
-ms.openlocfilehash: 56c6731d5a39741574999d94532b9505adaf6380
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 83e57a676ee0eff21eb3a736484d8e286cdeee01
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="uninstall-analytics-platform-system-hotfixes"></a>Deinstallieren Sie Analytics Platform System Hotfixes
+# <a name="uninstall-analytics-platform-system-hotfixes"></a>Deinstallieren Sie Analytics Platform System-hotfixes 
 Die folgenden Schritte beschreiben, wie eine zuvor installierte Analytics Platform System Update zu deinstallieren.  
   
 ## <a name="before-you-begin"></a>Vorbereitungen  

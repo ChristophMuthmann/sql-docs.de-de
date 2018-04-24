@@ -1,32 +1,32 @@
 ---
 title: Beispiel-InternetTimeout-Eigenschaft (VB) | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - InternetTimeout property [ADO], Visual Basic example
 ms.assetid: b35d2f4a-449c-4170-aab6-9ff88c890043
-caps.latest.revision: 
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 19b9b578c44b062ad2715f32c4f9b5f6a5cb1622
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: e764e47405cad3807166aac2026d372b2442f5df
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="internettimeout-property-example-vb"></a>Beispiel-InternetTimeout-Eigenschaft (VB)
 > [!IMPORTANT]

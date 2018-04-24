@@ -2,30 +2,30 @@
 title: SQL-Eigenschaft-Beispiel (VBScript) | Microsoft Docs
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.component: reference
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - SQL property [ADO], VBScript example
 ms.assetid: 32c33bcf-3320-4836-9e2e-99c8978ce581
-caps.latest.revision: 
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d1ddca15f0848be1a3cc6fb9789d2ccba8d638cf
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 562a1d58bbf4414d13445140898e846f44adab14
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="sql-property-example-vbscript"></a>SQL-Eigenschaft-Beispiel (VBScript)
 > [!IMPORTANT]

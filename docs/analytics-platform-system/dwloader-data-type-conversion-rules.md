@@ -1,27 +1,21 @@
 ---
-title: Konvertierungsregeln für Dwloader-Datentyp
-author: barbkess
-ms.author: barbkess
+title: Dwloader Datentyp Konvertierungsregeln - Parallel Data Warehouse | Microsoft Docs
+description: Dieses Thema beschreibt die Eingabedaten-Formate und impliziten datentypkonvertierungen, Dwloader, Command-Line-Ladeprogramm unterstützt, wenn Daten in Parallel Data Warehouse (PDW) geladen."
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.suite: sql
-ms.custom: ''
-ms.technology: mpp-data-warehouse
-description: Dieses Thema beschreibt die Eingabedaten-Formate und impliziten datentypkonvertierungen, Dwloader, Befehlszeilen-Ladeprogramm beim Laden von Daten in PDW unterstützt.
-ms.date: 10/20/2016
-ms.topic: article
-ms.assetid: 79c48520-b08b-4b15-a943-a551cc90a2c4
-caps.latest.revision: 30
-ms.openlocfilehash: 6910358803673c34d2381d071340e2ec7c8f2a0b
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: ecfc29c92bc99827ee943ff665524ff49e82a8df
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="data-type-conversion-rules-for-dwloader"></a>Konvertierungsregeln für Dwloader-Datentyp
+# <a name="data-type-conversion-rules-for-dwloader---parallel-data-warehouse"></a>Konvertierungsregeln für Dwloader – Parallel Data Warehouse-Datentyp
 In diesem Thema wird beschrieben, die Eingabedaten-Formate und impliziten datentypkonvertierungen, [Dwloader Command-Line-Ladeprogramm](dwloader.md) beim Laden von Daten in PDW unterstützt. Die implizite datenkonvertierungen auftreten, wenn die Eingabedaten nicht den Datentyp in der SQL Server PDW-Zieltabelle übereinstimmt. Verwenden Sie diese Informationen beim Entwerfen Ihrer Ladevorgang, um sicherzustellen, dass Ihre Daten in SQL Server PDW erfolgreich geladen wird.  
    
   
@@ -128,7 +122,7 @@ In der folgenden Tabelle definiert, das Standardformat und die Regeln zum Laden 
   
 |Input-Datentyp|Beispiele für die Eingabedaten|Die Konvertierung in den bit-Datentyp|  
 |-------------------|-----------------------|-------------------------------|  
-|Zeichenfolgenliteral im **Ganzzahl** Format|'ffffffffff'<br /><br />Beispiel: "1" oder "321"|Ein Ganzzahlwert, formatiert als Zeichenfolgenliteral darf keinen negativen Wert enthalten. Der Wert "-123" generiert z. B. einen Fehler.<br /><br />Ein Wert größer als 1 wird in 1 konvertiert. Beispielsweise wird der Wert "123" in 1 konvertiert.|  
+|Zeichenfolgenliteral im **Ganzzahl** Format|"Ffffffffff"<br /><br />Beispiel: "1" oder "321"|Ein Ganzzahlwert, formatiert als Zeichenfolgenliteral darf keinen negativen Wert enthalten. Der Wert "-123" generiert z. B. einen Fehler.<br /><br />Ein Wert größer als 1 wird in 1 konvertiert. Beispielsweise wird der Wert "123" in 1 konvertiert.|  
 |Ein Zeichenfolgenliteral handeln|'TRUE' oder 'FALSE'<br /><br />Beispiel: "true"|Der Wert "TRUE" wird in 1 konvertiert. der Wert "FALSE" wird in 0 konvertiert.|  
 |Integer-literal|fffffffn<br /><br />Beispiel: 1 oder 321|Ein Wert größer als 1 oder kleiner als 0 wird in 1 konvertiert. Beispielsweise werden Werte 123 "und"-123 in 1 konvertiert.|  
 |Decimal-literal|fffnn.fffn<br /><br />Beispiel: 1234.5678|Ein Wert größer als 1 oder kleiner als 0 wird in 1 konvertiert. Beispielsweise werden Werte 123,45 "und"-123.45 in 1 konvertiert.|  
@@ -148,7 +142,7 @@ In der folgenden Tabelle definiert die Regeln zum Laden von literalen Werten in 
 |-------------------|-----------------------|  
 |Integer-literal|321312313123|  
 |Decimal-literal|123344.34455|  
-|Floating-Point-literal|3.12323E+14|  
+|Floating-Point-literal|3.12323E + 14|  
   
 ### <a name="int-bigint-tinyint-smallint-data-types"></a>"Int", "bigint", "tinyint", "smallint"-Datentypen  
 In der folgenden Tabelle definiert die Regeln zum Laden von literalen Werten in einer Spalte vom Typ **Int**, **"bigint"**, **"tinyint"**, oder **"smallint"**. Die Datenquelle kann nicht die für den angegebenen Datentyp zulässigen Bereichs nicht überschreiten. Z. B. den Bereich für **"tinyint"** ist 0 bis 255 und der Bereich für **Int** wird von – 2.147.483.648 bis 2.147.483.647.  

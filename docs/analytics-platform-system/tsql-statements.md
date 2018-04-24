@@ -1,41 +1,31 @@
 ---
-title: T-SQL-Anweisungen Analytics Platform System Parallel Data Warehouse | Microsoft Docs
-author: barbkess
-ms.author: barbkess
+title: T-SQL-Anweisungen - Parallel Data Warehouse | Microsoft Docs
+description: T-SQL-Anweisungen für analytische Platform System (APS) SQL Server Parallel Data Warehouse (PDW).
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.suite: sql
-ms.custom: ''
-ms.technology: mpp-data-warehouse
-description: Transact-SQL (T-SQL)-Anweisungen für analytische Platform System (APS) SQL Server Parallel Data Warehouse (PDW).
-documentationcenter: NA
-editor: ''
-ms.assetid: 0abc5934-1e67-491a-b7d7-8b520d1ae98e
-ms.devlang: NA
-ms.topic: article
-ms.tgt_pltfrm: NA
-ms.workload: data-services
-ms.date: 12/15/2016
-ms.openlocfilehash: 2109e1aaa48fb95da2b4d8b36aee7bbc86ea4ef4
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 86bf74778ab78fc42ad1151a341e5c2d232da7aa
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="t-sql-topics"></a>T-SQL-Themen
+# <a name="t-sql-statements-for-parallel-data-warehouse"></a>T-SQL-Anweisungen für Parallel Data Warehouse
 Transact-SQL (T-SQL)-Anweisungen für analytische Platform System (APS) SQL Server Parallel Data Warehouse (PDW).
 
 ## <a name="data-definition-language-ddl-statements"></a>Anweisungen von Data Definition Language (DDL)
 * [ALTER DATABASE](../t-sql/statements/alter-database-azure-sql-data-warehouse.md)
 * [ALTER INDEX](../t-sql/statements/alter-index-transact-sql.md)
 * [ALTER PROCEDURE](../t-sql/statements/alter-procedure-transact-sql.md)
-* [ALTER SCHEMA](../t-sql/statements/alter-schema-transact-sql.md)
+* [ÄNDERN VON SCHEMAS](../t-sql/statements/alter-schema-transact-sql.md)
 * [ALTER TABLE-ANWEISUNG](../t-sql/statements/alter-table-transact-sql.md)
 * [COLUMNSTORE-INDEX ERSTELLEN](../t-sql/statements/create-columnstore-index-transact-sql.md)
-* [CREATE DATABASE](../t-sql/statements/create-database-azure-sql-data-warehouse.md)
+* [DATENBANK ERSTELLEN](../t-sql/statements/create-database-azure-sql-data-warehouse.md)
 * [ERSTELLEN VON DATENBANKWEITE ANMELDEINFORMATIONEN](../t-sql/statements/create-database-scoped-credential-transact-sql.md)
 * [ERSTELLEN DER EXTERNEN DATENQUELLE](../t-sql/statements/create-external-data-source-transact-sql.md)
 * [ERSTELLEN EINES EXTERNEN DATEIFORMATS](../t-sql/statements/create-external-file-format-transact-sql.md)
@@ -106,7 +96,7 @@ Transact-SQL (T-SQL)-Anweisungen für analytische Platform System (APS) SQL Serv
 * [CLOSE MASTER KEY](../t-sql/statements/close-master-key-transact-sql.md)
 * [ZERTIFIKAT ERSTELLEN](../t-sql/statements/create-certificate-transact-sql.md)
 * [ERSTELLEN SIE DATENBANK-VERSCHLÜSSELUNGSSCHLÜSSEL](../t-sql/statements/create-database-encryption-key-transact-sql.md)
-* [CREATE LOGIN](../t-sql/statements/create-login-transact-sql.md)
+* [ANMELDUNGSERSTELLUNG](../t-sql/statements/create-login-transact-sql.md)
 * [ERSTELLEN VON HAUPTSCHLÜSSEL](../t-sql/statements/create-master-key-transact-sql.md)
 * [ERSTELLEN DER ROLLE ""](../t-sql/statements/create-role-transact-sql.md)
 * [BENUTZER ERSTELLEN](../t-sql/statements/create-user-transact-sql.md)

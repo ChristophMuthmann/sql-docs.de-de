@@ -1,28 +1,21 @@
 ---
-title: Schalten Sie die Appliance APS aktiviert oder deaktiviert (Analytics Platform System)
-author: barbkess
-ms.author: barbkess
+title: Schalten Sie das Gerät ein- oder ausschalten - Analytics Platform System | Microsoft Docs
+description: Schalten Sie das Gerät aktiviert oder deaktiviert für Analytics Platform System
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 2258f8e3-e7a1-4455-8a5e-10d4d15775d6
-caps.latest.revision: 45
-ms.openlocfilehash: 04473682d04a5b3ff26a5dec0081300d83052f09
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 54829190d03a889ade31383662bf192516934012
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="power-the-aps-appliance-on-or-off"></a>Schalten Sie die Appliance APS ein- oder ausschalten
+# <a name="power-the-appliance-on-or-off-for-analytics-platform-system"></a>Schalten Sie das Gerät aktiviert oder deaktiviert für Analytics Platform System
 In diesem Thema wird beschrieben, wie zum Einschalten oder Ausschalten der Analytics Platform Systemappliance, die Parallel Data Warehouse ausgeführt wird, und optional eine HDInsight-Region ausgeführt werden. Mithilfe dieser Informationen beim Verschieben einer Analytics Platform System Appliance oder Power auf eine Anwendung nach einem schwerwiegenden Stromausfall.  
   
 Das Gerät eingeschaltet, ein- oder ausschalten ist nicht identisch mit der Appliance-Dienste starten und beenden. Informationen zu diesem Thema finden Sie unter [PDW-Dienststatus &#40;Analyseplattformsystem&#41;](pdw-services-status.md). Informationen zum Aktivieren oder Deaktivieren einer SQL Server 2008 Parallel Data Warehouse bereitstellen finden Sie unter der SQL Server 2008 Parallel Data Warehouse-Hilfedatei. Informationen zum Aktivieren oder Deaktivieren einer SQL Server 2012 AU1 oder AU2 Parallel Data Warehouse bereitstellen finden Sie unter der Hilfedatei für diesen Versionen.  

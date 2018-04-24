@@ -1,32 +1,32 @@
 ---
 title: Indizes Append-(VC++-Methodenbeispiel) | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Indexes Append method [ADOX], VC++ example
 ms.assetid: 33c559c4-4db7-4850-9309-2743a7ae5521
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f77126d6f6f852a5868a8476b8c0a16e0d553d31
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 1edfe0a3c1ba6613c3aa34d3645691d3dc1bc141
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="indexes-append-method-example-vc"></a>Indizes Append-(VC++-Methodenbeispiel)
 Der folgende Code veranschaulicht, wie ein neuer Index erstellt wird. Der Index ist auf zwei Spalten in der Tabelle.  

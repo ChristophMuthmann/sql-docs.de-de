@@ -1,27 +1,21 @@
 ---
-title: Hardwarekonfigurationen (Analytics Platform System)
-author: barbkess
-ms.author: barbkess
+title: – Hardwarekonfigurationen – Analytics Platform System | Microsoft Docs
+description: Das Analytics Platform System (APS) Appliance Hardware basiert skalierbare Einheiten, damit Sie die richtige Menge an Verarbeitungs- und Ihren geschäftsanforderungen entsprechend erwerben. Die Appliance Skalierung von Speicher für Parallel Data Warehouse aus wenigen Terabyte über 6 Petabytes Daten.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.suite: sql
-ms.custom: ''
-ms.technology: mpp-data-warehouse
-description: Das Analytics Platform System (APS) Hardware basiert skalierbare Einheiten, damit Sie die richtige Menge an Verarbeitungs- und Ihren geschäftsanforderungen entsprechend erwerben.
-ms.date: 01/05/2017
-ms.topic: article
-ms.assetid: f95945b7-97ae-4ab9-bae5-c792a516acea
-caps.latest.revision: 9
-ms.openlocfilehash: d6f4b25584826d637db0a5f51ebe8ede458136c2
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 5677298e1924959c83cd95b86845e37eab7340e9
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="hardware-configurations"></a>Hardwarekonfigurationen
+# <a name="hardware-configurations---analytics-platform-system"></a>– Hardwarekonfigurationen – Analytics Platform System
 Das Analytics Platform System (APS) Hardware basiert skalierbare Einheiten, damit Sie die richtige Menge an Verarbeitungs- und Ihren geschäftsanforderungen entsprechend erwerben. Die Appliance skaliert Speicher für SQL Server Parallel Data Wareouse (PDW) aus wenigen Terabytes auf mehr als 6 Petabytes Daten.  
   
 ## <a name="contents"></a>Inhalt  

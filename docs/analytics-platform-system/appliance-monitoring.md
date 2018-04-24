@@ -1,29 +1,22 @@
 ---
-title: Appliance (Analytics Platform System) überwachen
-author: barbkess
-ms.author: barbkess
+title: Überwachen der Appliance - Analytics Platform System | Microsoft Docs
+description: Dieses Überwachung Appliance-Handbuch beschreibt die Tools und Aufgaben für die Überwachung der Appliance Analytics Platform System.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 253864fb-9178-41d2-a0ae-5dd9fd0a4fda
-caps.latest.revision: 25
-ms.openlocfilehash: f361b56581fd5a8dadb4ff41c387074abc006879
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: f87734a14337e7e35655439ddf70f0a126147eb7
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="appliance-monitoring"></a>Überwachen der Anwendung
-Dieses Monitoring Appliance-Handbuch beschreibt die Tools und Aufgaben für die Überwachung der SQL Server PDW Appliance.  
+# <a name="appliance-monitoring-for-analytics-platform-system"></a>Einheit für Analytics Platform System überwachen
+Dieses Überwachung Appliance-Handbuch beschreibt die Tools und Aufgaben für die Überwachung der Appliance Analytics Platform System.  
   
 ## <a name="Basics"></a>Überwachungsgrundlagen und Tools  
 Die Werte und die Informationen, die überwacht werden, kann auf der SQL Server PDW Appliance sind umfangreiche. Beispielsweise sind die folgenden Überwachungsaufgaben.  
@@ -55,7 +48,7 @@ SQL Server PDW enthält umfassende Systemsichten, die erhalten Sie detaillierte 
   
 -   [Überwachen Sie die Anwendung mithilfe von Systemsichten &#40;Analyseplattformsystem&#41;](monitor-the-appliance-by-using-system-views.md)  
   
-System Center Operations Manager (SCOM)  
+System Center Operationsmanager (SCOM)  
 SQL Server PDW verfügt über umfassende Integration in System Center Operations Manager. Die Management Packs für SQL Server PDW sind als kostenloser Download verfügbar. Weitere Informationen zur Verwendung von System Center zum Überwachen von SQL Server PDW finden Sie hier:  
   
 -   [Überwachen Sie die Anwendung mit System Center Operationsmanager &#40;Analyseplattformsystem&#41;](monitor-the-appliance-by-using-system-center-operations-manager.md)  

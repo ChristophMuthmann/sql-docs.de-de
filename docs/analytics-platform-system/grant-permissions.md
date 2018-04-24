@@ -1,26 +1,22 @@
 ---
-title: Berechtigungen erteilen
-author: barbkess
-ms.author: barbkess
+title: GRANT-T-SQL-Berechtigungen - Parallel Data Warehouse | Microsoft Docs
+description: GRANT-T-SQL-Berechtigungen für Datenbankvorgängen in Parallel Data Warehouse.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.openlocfilehash: 35542a9ea2544f0bdd357d3609937e1596e00a3f
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 01ef7b199a07be8bbc2dc1dee40d9c4d5771db1b
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="grant-permissions"></a>Berechtigungen erteilen
+# <a name="grant-t-sql-permissions-for-parallel-data-warehouse"></a>GRANT-T-SQL-Berechtigungen für Parallel Data Warehouse
+GRANT-T-SQL-Berechtigungen für Datenbankvorgängen in Parallel Data Warehouse.
 
 ## <a name="grant-permissions-to-submit-database-queries"></a>Erteilen Sie Berechtigungen zum Übermitteln von Datenbankabfragen
 Dieser Abschnitt beschreibt, wie zum Gewähren von Berechtigungen für Datenbankrollen und Benutzer zum Abfragen von Daten auf der SQL Server PDW Appliance.  
@@ -249,7 +245,7 @@ GO
 Admin-Anmeldungen erstellen zu können, finden Sie unter [fester Serverrollen](pdw-permissions.md#fixed-server-roles).  
   
 ## <a name="see-also"></a>Siehe auch
-[CREATE LOGIN](../t-sql/statements/create-login-transact-sql.md)  
+[ANMELDUNGSERSTELLUNG](../t-sql/statements/create-login-transact-sql.md)  
 [BENUTZER ERSTELLEN](../t-sql/statements/create-user-transact-sql.md)  
 [ERSTELLEN DER ROLLE ""](../t-sql/statements/create-role-transact-sql.md)  
 [Auslastungstest](load-overview.md)  

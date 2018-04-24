@@ -1,17 +1,17 @@
 ---
 title: SaveToFile-Methode | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - _Stream::raw_SaveToFile
@@ -19,16 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - SaveToFile method [ADO]
 ms.assetid: 8a8594f2-422b-4d2e-94f8-7fe337445900
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 64fa2093400ac9c003397659be3d9d6f4251eee2
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 132917094275866ae650201cbf3f5dc811274b72
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="savetofile-method"></a>SaveToFile-Methode
 Speichert den binären Inhalt von einem [Stream](../../../ado/reference/ado-api/stream-object-ado.md) in eine Datei.  

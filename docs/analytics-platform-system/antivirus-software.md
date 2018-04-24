@@ -1,28 +1,21 @@
 ---
-title: Antivirus-Software (Analytics Platform System)
-author: barbkess
-ms.author: barbkess
+title: Antivirus-Software - Analytics Platform System | Microsoft Docs
+description: Wenn Ihr Rechenzentrum antivirus-Software erfordert, verwenden Sie diese Richtlinien antivirus-Software auf Analytics Platform System zu installieren. Es wird empfohlen, antivirus-Software, wenn sie über gute zwingend Ihres Rechenzentrums ist nicht installiert.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 60ab9a88-d339-4917-a38b-f9481aef38fd
-caps.latest.revision: 29
-ms.openlocfilehash: 27e3bc7eae50c0418c0dcb4df99565b3f0edeadf
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: ed050520a53aea596b2f315047c68d593c578f27
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="antivirus-software"></a>Antivirus Software
+# <a name="antivirus-software-for-analytics-platform-system"></a>Antivirus-Software für Analyseplattformsystem
 Wenn Ihr Rechenzentrum antivirus-Software erfordert, verwenden Sie diese Richtlinien antivirus-Software auf Analytics Platform System zu installieren. Es wird empfohlen, antivirus-Software, wenn sie über gute zwingend Ihres Rechenzentrums ist nicht installiert.  
   
 > [!WARNING]  
@@ -37,9 +30,9 @@ Um die antivirus-Software auf physischen Hosts installieren, schließen Sie die 
   
 **Schließen Sie diese Verzeichnisse:**  
   
--   C:\ProgramData\Microsoft\Windows\Hyper-V - Virtual machine configuration directory  
+-   C:\ProgramData\Microsoft\Windows\Hyper-V - Konfigurationsverzeichnis für die virtuelle Maschine  
   
--   C:\Users\Public\Documents\Hyper-V\Virtual Hard Disks - Default virtual hard disk drive directory  
+-   C:\Users\Public\Documents\Hyper-V\Virtual Festplatten - Standardverzeichnis für die virtuelle Festplatte  
   
 -   C:\clusterStorage - Verzeichnisse virtuelle Festplattenlaufwerk  
   
@@ -68,7 +61,7 @@ Um die antivirus-Software auf den virtuellen Computern zu installieren, schließ
   
 -   G:\  
   
-***appliance_domain*-VMM**  
+***Appliance_domain * – VMM**  
   
 -   Keine Einschränkungen  
   
@@ -76,7 +69,7 @@ Um die antivirus-Software auf den virtuellen Computern zu installieren, schließ
   
 -   Keine Einschränkungen  
   
-***appliance_domain*-ISCSI01**  
+***Appliance_domain *-ISCSI01**  
   
 -   C:\iscsitarget  
   

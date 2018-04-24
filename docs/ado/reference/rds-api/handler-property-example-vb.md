@@ -1,32 +1,32 @@
 ---
-title: "Beispiel für Dateneigenschaften Handler (VB) | Microsoft Docs"
-ms.prod: sql-non-specified
+title: Beispiel für Dateneigenschaften Handler (VB) | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Handler property [ADO], Visual Basic example
 ms.assetid: 9664f9a6-65fc-4e7f-be3d-3e4b501b558a
-caps.latest.revision: 
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f43ffa45dfb9c42fdef684cf44a5932d5799194b
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 86d44df7b576cd75b2708a7bf7d350e31e845479
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="handler-property-example-vb"></a>Beispiel für Dateneigenschaften Handler (VB)
 > [!IMPORTANT]

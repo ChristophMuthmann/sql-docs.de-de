@@ -1,28 +1,21 @@
 ---
-title: Grundlegendes zu Verwaltungskonsole Warnungen (Analytics Platform System)
-author: barbkess
-ms.author: barbkess
+title: Verwaltungskonsolenwarnungen - Analytics Platform System | Microsoft Docs
+description: Grundlegendes zu Admin Console-Warnungen in Analytics Platform System (APS).
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 0c4aa221-55c2-44cf-9eaa-3bf7bd55e51a
-caps.latest.revision: 10
-ms.openlocfilehash: 51e7260a3c1c920d102320bc288167001da43921
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 2d1473e3ac769cd70c6985e15efdb59dfc1039ef
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="understanding-admin-console-alerts"></a>Grundlegendes zu Warnungen-Verwaltungskonsole
+# <a name="understanding-admin-console-alerts-in-analytics-platform-system"></a>Grundlegendes zu Admin Console-Warnungen in Analytics Platform System
 Warnungen werden angezeigt, in der Einheit **Admin Console** und **System Center Operations Manager** (SCOM). Verwenden Sie diese Liste der Warnungen, um zu bestimmen, welche Warnungen zusätzliche untersucht werden müssen.  
   
 Informationen zum Herstellen einer Verbindung mit der **-Verwaltungskonsole** mithilfe von Internet Explorer finden Sie unter [überwachen Sie die Anwendung mithilfe der Verwaltungskonsole &#40;Analyseplattformsystem&#41;](monitor-the-appliance-by-using-the-admin-console.md). Informationen zu **SCOM**, finden Sie unter [überwachen die Appliance by Using System Center Operations Manager &#40;Analyseplattformsystem&#41;](monitor-the-appliance-by-using-system-center-operations-manager.md)  
@@ -132,7 +125,7 @@ Warnungen sind in alphabetischer Reihenfolge nach aufgeführt der **Warnungsname
 |SAS-Hostbusadapter weist Bedingung auf Fehler.|ja|Fehler|Warnung|Der SAS-Hostbusadapter meldet, dass der Gesamtzustand des HBA in einem fehlerhaften Zustand, einschließlich aller physischen Laufwerken, die von ihm gesteuert wird. Dies erfordert, dass eine Komponente zu ersetzende (Hersteller Status: Fehler). Hersteller-Status wird in der Komponente "Hba_device_rollup_status"-Eigenschaft angegeben.|Überprüfen Sie den Knoten Windows-Ereignisprotokoll Details oder wenden Sie sich an Gerätehersteller.|  
 |SAS-Hostbusadapter hat normalen Status an.|nein|Operational|Information|Der SAS-Hostbusadapter funktioniert wieder normal (Hersteller Status: ok). Hersteller-Status wird in der Komponente "Hba_device_rollup_status"-Eigenschaft angegeben.||  
 |SAS-Hostbusadapter hat einen unbekannten Status.|ja|Heruntergestuft|Warnung|Der SAS-Hostbusadapter-Status konnte nicht bestimmt werden (Status Hersteller: andere). Hersteller-Status wird in der Komponente "Hba_device_status"-Eigenschaft angegeben.|Überprüfen Sie den Knoten Windows-Ereignisprotokoll Details oder wenden Sie sich an Gerätehersteller.|  
-|SQL Server hat KRITISCHEN Status.|ja|NonOperational|Fehler|Dieser Dienst befindet sich im Status "Kritisch" und wird nicht mehr ausgeführt (Status: angehalten) oder der Übergangsstatus werden beendet wird (Status: StopPending).  Status wird in der Komponente "Sql_server_service_status"-Eigenschaft angegeben.|Überprüfen Sie die Details des Knotens Windows-Ereignisprotokoll.|  
+|SQL Server hat KRITISCHEN Status.|ja|Nicht mehr funktionstüchtig|Fehler|Dieser Dienst befindet sich im Status "Kritisch" und wird nicht mehr ausgeführt (Status: angehalten) oder der Übergangsstatus werden beendet wird (Status: StopPending).  Status wird in der Komponente "Sql_server_service_status"-Eigenschaft angegeben.|Überprüfen Sie die Details des Knotens Windows-Ereignisprotokoll.|  
 |SQL Server hat die normale Status.|nein|Operational|Information|Dieser Dienst wird normal ausgeführt werden (Status: ausgeführt). Status wird in der Komponente "Sql_server_service_status"-Eigenschaft angegeben.||  
 |Speicher-Gehäuse-Lüfter hat es sich um den Status DEGRADED.|ja|Heruntergestuft|Warnung|Der Speicher-Gehäuse-Lüfter meldet, dass es defekt ist (Hersteller Status: 10,15). Hersteller-Status wird in der Komponente "Storage_fan_status"-Eigenschaft angegeben.|Überprüfen Sie den Knoten Windows-Ereignisprotokoll Details oder wenden Sie sich an Gerätehersteller.|  
 |Speicher-Gehäuse-Lüfter hat einen Status fehlgeschlagen.|ja|Fehler|Warnung|Der Speicher-Gehäuse-Lüfter meldet, dass es sich im Status "Fehler" befindet. Dies erfordert, dass eine Komponente zu ersetzende (Hersteller Status: 20,25). Hersteller-Status wird in der Komponente "Storage_fan_status"-Eigenschaft angegeben.|Überprüfen Sie den Knoten Windows-Ereignisprotokoll Details oder wenden Sie sich an Gerätehersteller.|  

@@ -8,11 +8,11 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 227da5cd4ba9ae91019556cc9bac00aee770a525
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 7cea8b82337ca7d5b4cd17b1038a1eccc99370be
+ms.sourcegitcommit: beaad940c348ab22d4b4a279ced3137ad30c658a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="viewing-r-or-python-packages-installed-on-sql-server"></a>Anzeigen von R oder Python-Pakete, die auf SQL Server installiert
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -113,7 +113,7 @@ import pkg_resources
 pckg_name = "revoscalepy"
 pckgs = pandas.DataFrame([(i.key) for i in pip.get_installed_distributions()], columns = ["key"])
 installed_pckg = pckgs.query(''key == @pckg_name'')
-print("Package", pckg_name, "is", "not" if installed_pckg.empty else "", "installed")
+print("Package", pckg_name, "is", "not" if installed_pckg.empty else "", "installed")'
 ```
 
 ## <a name="view-installed-packages-using-a-utility-or-ide"></a>Anzeigen der installierten Pakete, die über ein Dienstprogramm oder der IDE

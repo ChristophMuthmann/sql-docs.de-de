@@ -1,33 +1,33 @@
 ---
 title: NumericScale und Genauigkeit Eigenschaften-Beispiel (VB) | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - NumericScale property [ADO], Visual Basic example
 - Precision property [ADO], Visual Basic example
 ms.assetid: 9c1e2322-c225-49d1-a120-a343f23cea73
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d24b7d6fa72a8559b8f0e0f1ec3243006be5f0f3
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: e71eb45888921c483b411e7e978d9b7e9996b947
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="numericscale-and-precision-properties-example-vb"></a>NumericScale und Genauigkeit Eigenschaften-Beispiel (VB)
 Dieses Beispiel verwendet die [NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md) und [Genauigkeit](../../../ado/reference/ado-api/precision-property-ado.md) anzuzeigenden numerischen Dezimalstellen und die Genauigkeit der Felder in Eigenschaften der ***Rabatte*** Tabelle mit den  ***Pubs*** Datenbank.  
@@ -82,6 +82,6 @@ End Sub
   
 ## <a name="see-also"></a>Siehe auch  
  [Field-Objekt](../../../ado/reference/ado-api/field-object.md)   
- [NumericScale Property (ADO)](../../../ado/reference/ado-api/numericscale-property-ado.md)   
+ [NumericScale-Eigenschaft (ADO)](../../../ado/reference/ado-api/numericscale-property-ado.md)   
  [Parameter-Objekt](../../../ado/reference/ado-api/parameter-object.md)   
  [Precision-Eigenschaft (ADO)](../../../ado/reference/ado-api/precision-property-ado.md)

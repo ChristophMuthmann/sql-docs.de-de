@@ -8,18 +8,18 @@ ms.date: 02/20/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
-ms.assetid: 
+ms.assetid: ''
 ms.workload: On Demand
-ms.openlocfilehash: e6d21c8f2e7636ee787bbd735b3d69b71ac20671
-ms.sourcegitcommit: 57f45ee008141ddf009b1c1195442529e0ea1508
+ms.openlocfilehash: 523959047c7b7cd7cce36138650b8cc52873f73e
+ms.sourcegitcommit: f3aa02a0f27cc1d3d5450f65cc114d6228dd9d49
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 04/23/2018
 ---
 # <a name="configure-sql-server-settings-with-environment-variables-on-linux"></a>Konfigurieren von SQL Server mit Umgebungsvariablen unter Linux
 
@@ -53,6 +53,7 @@ Mehrere verschiedene Umgebungsvariablen können Sie SQL Server-2017 unter Linux 
 | **MSSQL_AGENT_ENABLED** | SQL Server-Agent zu aktivieren. Beispielsweise "true" aktiviert ist, und 'false' ist deaktiviert. Agent ist standardmäßig deaktiviert.  |
 | **MSSQL_MASTER_DATA_FILE** | Legt den Speicherort der master-Datenbank-Datendatei an. |
 | **MSSQL_MASTER_LOG_FILE** | Legt den Speicherort der master-Datenbank-Protokolldatei fest. |
+| **MSSQL_ERROR_LOG_FILE** | Legt den Speicherort der Dateien im Fehlerprotokoll. |
 
 
 ## <a name="example-initial-setup"></a>Beispiel: Anfangssetup

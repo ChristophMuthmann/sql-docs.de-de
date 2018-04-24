@@ -2,30 +2,30 @@
 title: Eigenschaft ReadyState-Beispiel (VBScript) | Microsoft Docs
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.component: reference
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - ReadyState property [ADO], VBScript example
 ms.assetid: e3e18da4-0511-4ece-a35d-699978bc28c6
-caps.latest.revision: 
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 49aac89e8d209582ac461080a02bfd3e2d3db397
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 646d79362beca6d0790b1890dac5f2476a8c4cd4
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="readystate-property-example-vbscript"></a>Eigenschaft ReadyState-Beispiel (VBScript)
 > [!IMPORTANT]
