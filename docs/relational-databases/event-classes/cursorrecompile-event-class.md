@@ -1,34 +1,35 @@
 ---
 title: CursorRecompile-Ereignisklasse | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - CursorRecompile event class
 ms.assetid: ab351c50-eed4-493a-87ed-89ec10933477
-caps.latest.revision: 
+caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c0ee637a8fa29bb999ca30d30e5626b199103fa2
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 843a78d9dfa3df8c9e752830626d9f3d4b8b72bf
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="cursorrecompile-event-class"></a>CursorRecompile-Ereignisklasse
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Die **CursorRecompile** -Ereignisklasse beschreibt Cursorneukompilierungs-Ereignisse, die in API-Cursorn (Application Programming Interface, Anwendungsprogrammierschnittstelle) auftreten. Cursorneukompilierungs-Ereignisse treten auf, wenn das [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] einen Transact-SQL-Cursor aufgrund einer Schemaänderung erneut kompiliert.  
+  Die **CursorRecompile** -Ereignisklasse beschreibt Cursorneukompilierungs-Ereignisse, die in API-Cursorn (Application Programming Interface, Anwendungsprogrammierschnittstelle) auftreten. Cursorneukompilierungs-Ereignisse treten auf, wenn das [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] einen Transact-SQL-Cursor aufgrund einer Schemaänderung erneut kompiliert.  
   
  Schließen Sie die **CursorRecompile** -Ereignisklasse in Ablaufverfolgungen ein, die die Leistung von Cursorn aufzeichnen. Wenn die **CursorRecompile** -Ereignisklasse in eine Ablaufverfolgung eingeschlossen wird, hängt der Aufwand davon ab, wie häufig Cursor für die Datenbank während der Ablaufverfolgung verwendet werden. Wenn Cursor sehr häufig verwendet werden, kann die Ablaufverfolgung die Leistung erheblich beeinträchtigen.  
   

@@ -1,35 +1,36 @@
 ---
 title: Speichern von Deadlock Graphs (SQL Server Profiler) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: performance
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - deadlocks [SQL Server], saving deadlock graphs
 - graphs [SQL Server]
 - saving deadlock graphs
 ms.assetid: bf1fc906-abd6-4a89-842e-da0d66b2defe
-caps.latest.revision: 
+caps.latest.revision: 26
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0aaa9c41b63479eda21bf1f0e862639c50160495
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: b32263a3881b6fe5b99b4c150e1c1ab3e17f70bc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="save-deadlock-graphs-sql-server-profiler"></a>Speichern von Deadlock Graphs (SQL Server Profiler)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] In diesem Thema wird beschrieben, wie ein Deadlock Graph mit [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] gespeichert wird. Deadlock Graphs werden als XML-Dateien gespeichert.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  In diesem Thema wird beschrieben, wie ein Deadlock Graph mithilfe von [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]gespeichert wird. Deadlock Graphs werden als XML-Dateien gespeichert.  
   
 ## <a name="save-deadlock-graph-events-separately"></a>Separates Speichern von Deadlock Graph-Ereignissen  
   

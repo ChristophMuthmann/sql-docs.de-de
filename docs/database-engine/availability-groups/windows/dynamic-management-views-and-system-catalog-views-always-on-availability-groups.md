@@ -13,12 +13,12 @@ ms.assetid: 4320a4a4-6183-462b-8bda-e7424e7cb706
 caps.latest.revision: 6
 author: rothja
 ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: e5f2a99558f2979de4420bf036737716672d0886
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
+manager: craigg
+ms.openlocfilehash: f4eae7c3933ccc815905d560a44ef739636c4fec
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="dynamic-management-views-and-system-catalog-views-always-on-availability-groups"></a>Dynamische Verwaltungssichten und Systemkatalogsichten (Always On-Verfügbarkeitsgruppen)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

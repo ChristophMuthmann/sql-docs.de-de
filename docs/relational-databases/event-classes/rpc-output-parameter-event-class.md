@@ -1,34 +1,35 @@
 ---
 title: RPC Output Parameter-Ereignisklasse | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - RPC Output Parameter event class
 ms.assetid: 8c830d11-7e88-4c3e-98e9-ba72c8c99b02
-caps.latest.revision: 
+caps.latest.revision: 32
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d3b324de1b0c5dd10d6db95257838339bd6b6e17
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 2ac782a1cc2d60d78fb7219550e32a6fa13b850d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="rpc-output-parameter-event-class"></a>RPC Output Parameter-Ereignisklasse
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Die RPC Output Parameter-Ereignisklasse führt Ablaufverfolgungen für die Ausgabeparameterwerte von Remoteprozeduraufrufen (RPC, Remote Procedure Calls) nach deren Ausführung aus.  
+  Die RPC Output Parameter-Ereignisklasse führt Ablaufverfolgungen für die Ausgabeparameterwerte von Remoteprozeduraufrufen (RPC, Remote Procedure Calls) nach deren Ausführung aus.  
   
  Verwenden Sie diese Klasse, um die von gespeicherten Prozeduren zurückgegebenen Ausgabewerte zu untersuchen. Erzeugt eine Anwendung nach der Ausführung eines Remoteprozeduraufrufs beispielsweise nicht die erwarteten Ausgabewerte, können Sie diese Ereignisklasse verwenden, um das Problem zwischen dem Clientcode und dem Servercode zu isolieren.  
   

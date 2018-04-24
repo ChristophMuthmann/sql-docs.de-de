@@ -1,34 +1,34 @@
 ---
 title: 'Beispiel: Angeben der XMLTEXT-Direktive | Microsoft-Dokumentation'
-ms.custom: 
+ms.custom: ''
 ms.date: 04/05/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: xml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - XMLTEXT directive
 ms.assetid: e78008ec-51e8-4fd1-b86f-1058a781de17
-caps.latest.revision: 
+caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e71a67f991291f1426fbf3a583169b339f69c110
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: fdc8aad3f516e5bbdc9aa455e6ca1017f52f789e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="example-specifying-the-xmltext-directive"></a>Beispiel: Angeben der XMLTEXT-Direktive
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-Dieses Beispiel veranschaulicht, wie Daten in der Überlaufspalte mithilfe der **XMLTEXT** -Direktive in einer `SELECT` -Anweisung im EXPLICIT-Modus verarbeitet werden.  
+  Dieses Beispiel veranschaulicht, wie Daten in der Überlaufspalte mithilfe der **XMLTEXT** -Direktive in einer `SELECT` -Anweisung im EXPLICIT-Modus verarbeitet werden.  
   
  Sie sehen hier die `Person` -Tabelle. In dieser Tabelle speichert die `Overflow` -Spalte den unverbrauchten Teil des XML-Dokuments.  
   

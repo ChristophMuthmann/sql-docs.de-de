@@ -1,34 +1,35 @@
 ---
 title: Attention-Ereignisklasse | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Attention event class
 ms.assetid: da996305-181b-4cec-8388-c3b66677ed27
-caps.latest.revision: 
+caps.latest.revision: 28
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 963e676b887c310d04023b3e59e2fb1ed5ff5858
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: ba1336b6999f6d70049874dc4463a31c8a80d4e2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="attention-event-class"></a>Attention-Ereignisklasse
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Die **Attention** -Ereignisklasse zeigt an, dass ein zu beachtendes Ereignis aufgetreten ist, wie z.B. Clientunterbrechungsanforderungen oder das Unterbrechen von Clientverbindungen. Abbruchvorgänge können auch als Teil des Implementierens von Timeouts für Datenzugriffstreiber betrachtet werden.  
+  Die **Attention** -Ereignisklasse zeigt an, dass ein zu beachtendes Ereignis aufgetreten ist, wie z.B. Clientunterbrechungsanforderungen oder das Unterbrechen von Clientverbindungen. Abbruchvorgänge können auch als Teil des Implementierens von Timeouts für Datenzugriffstreiber betrachtet werden.  
   
 ## <a name="attention-event-class-data-columns"></a>Datenspalten der Attention-Ereignisklasse  
   

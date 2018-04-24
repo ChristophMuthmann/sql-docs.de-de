@@ -1,34 +1,35 @@
 ---
 title: Execution Warnings (Ereignisklasse) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Execution Warnings event class
 ms.assetid: 2c69e321-dc9a-4483-886d-81350adae2be
-caps.latest.revision: 
+caps.latest.revision: 35
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fbbb94df2b55743b10061b51a0eab5d477b26719
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 62f8eaeb2aefce674b03341aecb2ecfdf7610895
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="execution-warnings-event-class"></a>Execution Warnings (Ereignisklasse)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Die Execution Warnings-Ereignisklasse gibt Warnungen zu Arbeitsspeicherzuweisungen an, die während der Ausführung einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anweisung oder einer gespeicherten Prozedur aufgetreten sind. Durch Überwachung dieser Ereignisklasse kann ermittelt werden, ob Abfragen vor der weiteren Verarbeitung mindestens eine Sekunde warten mussten, oder ob der erste Versuch zum Abrufen des Arbeitsspeichers fehlgeschlagen ist. Informationen zu Abfragewartezeiten können zur Aufklärung von Systemkonflikten beitragen, die die Leistung beeinträchtigen können.  
+  Die Execution Warnings-Ereignisklasse gibt Warnungen zu Arbeitsspeicherzuweisungen an, die während der Ausführung einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anweisung oder einer gespeicherten Prozedur aufgetreten sind. Durch Überwachung dieser Ereignisklasse kann ermittelt werden, ob Abfragen vor der weiteren Verarbeitung mindestens eine Sekunde warten mussten, oder ob der erste Versuch zum Abrufen des Arbeitsspeichers fehlgeschlagen ist. Informationen zu Abfragewartezeiten können zur Aufklärung von Systemkonflikten beitragen, die die Leistung beeinträchtigen können.  
   
 ## <a name="execution-warnings-event-class-data-columns"></a>Execution Warnings-Ereignisklasse (Datenspalten)  
   

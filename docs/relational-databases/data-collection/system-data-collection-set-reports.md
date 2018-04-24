@@ -1,16 +1,16 @@
 ---
-title: "Berichte der Systemdaten-Sammlungssätze | Microsoft-Dokumentation"
-ms.custom: 
+title: Berichte der Systemdaten-Sammlungssätze | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: data-collection
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - data collector [SQL Server], server activity
@@ -23,20 +23,20 @@ helpviewer_keywords:
 - query statistics reports [SQL Server]
 - disk usage reports [SQL Server]
 ms.assetid: 0b126b8d-4fe7-443d-8a9a-c266350181e5
-caps.latest.revision: 
+caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a2395391111bcd8b21fd030d02bc4756aa98d1fc
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 9a7edb1ffcbc2a1679bdae6f01ff0fed50562704
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="system-data-collection-set-reports"></a>Berichte der Systemdaten-Sammlungssätze
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Der Datensammler stellt einen Verlaufsbericht für jeden der Systemdaten-Sammlungssätze bereit. Jeder der folgenden Berichte verwendet Daten, die im Verwaltungs-Data Warehouse gespeichert werden:  
+  Der Datensammler stellt einen Verlaufsbericht für jeden der Systemdaten-Sammlungssätze bereit. Jeder der folgenden Berichte verwendet Daten, die im Verwaltungs-Data Warehouse gespeichert werden:  
   
 -   [Zusammenfassung der Datenträgerverwendung](#Disk)  
   
@@ -137,7 +137,7 @@ Der Datensammler stellt einen Verlaufsbericht für jeden der Systemdaten-Sammlun
 |Speicherauslastung|Diese Unterberichte werden aufgerufen, indem Sie auf einen beliebigen Punkt auf den Diagrammlinien für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder das System im Diagramm Speicherauslastung klicken.<br /><br /> **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** : Der Bericht „ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Speicherauslastung“ enthält Diagramme für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Prozessspeichernutzung, für Arbeitsspeicher-Leistungsindikatoren, für die interne Arbeitsspeichernutzung nach Typ und eine Tabelle mit Daten zur durchschnittlichen Arbeitsspeichernutzung nach Komponententyp.<br /><br /> **System**: Der Bericht „Systemspeicherverwendung“ enthält Diagramme für die Speicherauslastung, Zwischenspeicher- und Seiten-Trefferquoten und eine Tabelle mit Informationen über den Arbeitssatz und die privaten Bytes für jeden Prozess.|  
 |Datenträger-E/A-Nutzung|Diese Unterberichte werden aufgerufen, indem Sie auf einen beliebigen Punkt auf den Diagrammlinien für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder das System im Diagramm Datenträger-E/A-Verwendung klicken.<br /><br /> **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** : Der Bericht „ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenträger-E/A-Verwendung“ enthält Diagramme für die Antwortzeit und die Übertragungsrate des Datenträgers. Eine zusätzliche Tabelle bietet Statistiken virtueller Dateien anhand von Datenträger, Datenbank und Datei.<br /><br /> **System**: Der Bericht „Systemdatenträgerverwendung“ enthält Diagramme für die Antwortzeit des Datenträgers, die durchschnittliche Warteschlangenlänge des Datenträgers, die Übertragungsrate des Datenträgers und eine Tabelle mit Informationen über Schreib- und Lesezugriffe für jeden Prozess.|  
 |Netzwerkauslastung|Es sind keine weiteren Berichte verfügbar.|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Wartevorgänge|Das Diagramm für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Wartevorgänge zeigt Wartevorgänge in den Threads, die ausgeführt wurden, nach Kategorie an. Sie können auf einen ausführlichen Bericht zugreifen, indem Sie auf ein beliebiges Segment im Diagramm klicken. Neben der grafischen Darstellung von Statistikdaten zu den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Wartevorgängen während eines engeren Zeitrahmens liefert dieser Bericht Informationen über Wartevorgangskategorien im Tabellenformat. Für jede Kategorie, z. B. CPU und deren Unterkategorien, zeigt die Tabelle die Anzahl der Wartevorgänge, die Wartezeit und den Prozentsatz der Gesamtwartezeit an.|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Wartevorgänge|Das Diagramm für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Wartevorgänge zeigt Wartevorgänge in den Threads, die ausgeführt wurden, nach Kategorie an. Sie können auf einen ausführlichen Bericht zugreifen, indem Sie auf ein beliebiges Segment im Diagramm klicken. Neben der grafischen Darstellung von Statistikdaten zu den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Wartevorgängen während eines engeren Zeitrahmens liefert dieser Bericht Informationen über Wartevorgangskategorien im Tabellenformat. Für jede Kategorie, z. B. CPU und deren Unterkategorien, zeigt die Tabelle die Anzahl der Wartevorgänge, die Wartezeit und den Prozentsatz der Gesamtwartezeit an.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Aktivität|Verschiedene Aspekte der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Aktivität sind über das Diagramm zur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Aktivität abrufbar. Sie können folgende Berichte durch Klicken auf einen Punkt auf der Diagrammlinie SQL-Kompilierungen/Sekunde abrufen:<br /><br /> <br /><br /> Verbindungen und Sitzungen<br /><br /> Anforderungen<br /><br /> Plancache-Trefferquote<br /><br /> tempdb-Eigenschaften|  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  

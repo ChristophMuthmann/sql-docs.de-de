@@ -1,34 +1,35 @@
 ---
 title: Hash Warning-Ereignisklasse | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Hash Warning event class
 ms.assetid: cb93c620-4be9-4362-8bf0-af3f2048bdaf
-caps.latest.revision: 
+caps.latest.revision: 39
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7e3d82475509a6707001787ff1c08ab66636292c
-ms.sourcegitcommit: 7e9380e53341755df13fce130ab3287918a8e44c
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: f7a3dbd06508d22c4b37acb3966104d7e3418276
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="hash-warning-event-class"></a>Hash Warning-Ereignisklasse
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Mit der Hash Warning-Ereignisklasse können Sie überwachen, ob während eines Hashvorgangs eine Hashrekursion oder eine Beendigung des Hashings (Hashabbruch) aufgetreten ist.  
+  Mit der Hash Warning-Ereignisklasse können Sie überwachen, ob während eines Hashvorgangs eine Hashrekursion oder eine Beendigung des Hashings (Hashabbruch) aufgetreten ist.  
   
  Die Hashrekursion tritt auf, wenn die Eingabe für den verfügbaren Arbeitsspeicher zu groß ist und deshalb auf mehrere Partitionen verteilt wird, die separat verarbeitet werden. Sollten diese Partitionen für den Arbeitsspeicher immer noch zu groß sein, werden sie in Unterpartitionen aufgeteilt, die dann ebenfalls separat verarbeitet werden. Dieser Vorgang wird so lange fortgesetzt, bis jede Partition in den verfügbaren Arbeitsspeicher passt oder die maximale Rekursionsebene erreicht ist (die in der IntegerData-Datenspalte angezeigt wird).  
   

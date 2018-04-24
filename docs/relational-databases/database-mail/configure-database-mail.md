@@ -2,7 +2,7 @@
 title: Konfigurieren des Datenbank-E-Mail-Features | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: database-mail
@@ -47,21 +47,21 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 3d88087b9d1142919f844155c805e2284e954e54
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+ms.openlocfilehash: 258e534b2291712f322cfb1dd611c3fb7a0c876c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="configure-database-mail"></a>Konfigurieren des Datenbank-E-Mail-Features
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Dieses Thema beschreibt die Aktivierung und Konfiguration von Datenbank-E-Mails mithilfe des Assistenten zum Konfigurieren von Datenbank-E-Mails sowie die Erstellung eines Datenbank-E-Mail-Konfigurationsskripts anhand von Vorlagen.  
   
--   **Before you begin:**  [Limitations and Restrictions](#Restrictions), [Security](#Security)  
+-   **Vorbereitungen:**  [Einschränkungen](#Restrictions), [Sicherheit](#Security)  
   
 -   **So konfigurieren Sie Datenbank-E-Mails mit folgenden Komponenten:**  [Assistent zum Konfigurieren von Datenbank-E-Mail](#DBWizard), [Vorlagen](#Template)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
  Verwenden Sie die Option **DatabaseMail XPs** , um Datenbank-E-Mail auf diesem Server zu aktivieren. Weitere Informationen finden Sie im Referenzthema [Database Mail XPs (Serverkonfigurationsoption)](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) .  
   
 ###  <a name="Restrictions"></a> Einschränkungen  
@@ -225,7 +225,7 @@ ms.lasthandoff: 04/10/2018
  **Standardauthentifizierung**  
  Geben Sie den für den SMTP-Server erforderlichen Benutzernamen und das Kennwort ein.  
   
- **Benutzername**  
+ **User name**  
  Hier können Sie den Benutzernamen anzeigen und bearbeiten, mit dem die Datenbank-E-Mail sich beim SMTP-Server anmeldet. Der Benutzername ist erforderlich, wenn der SMTP-Server die Standardauthentifizierung erfordert.  
   
  **Kennwort**  
@@ -369,7 +369,7 @@ ms.lasthandoff: 04/10/2018
   
  Ein Profil kann ein Standardprofil sein. In diesem Fall können Benutzer oder Rollen E-Mails mithilfe des Profils senden, ohne das Profil explizit anzugeben. Falls der Benutzer oder die Rolle, die/der die E-Mail-Nachricht sendet, über ein privates Standardprofil verfügt, verwendet Datenbank-E-Mail dieses Profil. Verfügt der Benutzer oder die Rolle nicht über ein privates Standardprofil, verwendet **sp_send_dbmail** das öffentliche Standardprofil für die **msdb** -Datenbank. Falls weder ein privates Standardprofil für den Benutzer oder die Rolle noch ein öffentliches Standardprofil für die Datenbank vorhanden ist, gibt **sp_send_dbmail** einen Fehler zurück.  
   
- **Benutzername**  
+ **User name**  
  Wählen Sie in der **msdb** -Datenbank einen Benutzer oder eine Rolle aus.  
   
  **Zugriff**  

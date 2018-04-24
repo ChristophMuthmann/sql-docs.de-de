@@ -1,34 +1,35 @@
 ---
 title: Audit Login GDR-Ereignisklasse | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Audit Login GDR event class
 ms.assetid: cc0560d9-bbb9-4263-a1f3-827c80167f8c
-caps.latest.revision: 
+caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c151cb15d32b0e5f53d49164db6831050cb1b050
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 1d10730b5bce67c2438d7ca8ca7de9e9feffa400
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="audit-login-gdr-event-class"></a>Audit Login GDR-Ereignisklasse
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Die **Audit Login GDR** -Ereignisklasse tritt auf, wenn ein [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Anmeldungsrecht hinzugefügt oder entfernt wird. Diese Ereignisklasse ist für die gespeicherten Prozeduren **sp_grantlogin**, **sp_revokelogin**und **sp_denylogin** .  
+  Die **Audit Login GDR** -Ereignisklasse tritt auf, wenn ein [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Anmeldungsrecht hinzugefügt oder entfernt wird. Diese Ereignisklasse ist für die gespeicherten Prozeduren **sp_grantlogin**, **sp_revokelogin**und **sp_denylogin** .  
   
  Es kann sein, dass diese Ereignisklasse in einer zukünftigen Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]entfernt wird. Es wird empfohlen, dass Sie stattdessen die **Audit Server Principal Management** -Ereignisklasse verwenden.  
   

@@ -13,12 +13,12 @@ ms.assetid: dfd2b639-8fd4-4cb9-b134-768a3898f9e6
 caps.latest.revision: 13
 author: rothja
 ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 0d41627a8c08e2fd06a9d5fdb391f5e626599233
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
+manager: craigg
+ms.openlocfilehash: 6ad77dc80e9c54dffba133e06428dca24f2f704b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="monitor-performance-for-always-on-availability-groups"></a>Überwachen der Leistung für Always On-Verfügbarkeitsgruppen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -236,7 +236,7 @@ Um die Richtlinien zu erstellen, befolgen Sie die nachfolgenden Anweisungen für
 |--------------|-----------------|  
 |[Problembehandlung: Verfügbarkeitsgruppe hat RTO überschritten](troubleshoot-availability-group-exceeded-rto.md)|Nach einem automatischen Failover oder einem geplanten manuellen Failover ohne Datenverlust überschreitet die Failoverzeit die RTO. Ein anderer Fall: Wenn Sie die Failoverzeit eines sekundären Replikats im synchronen Commitmodus (z.B. eines Partners für das automatische Failover) einschätzen, stellen Sie fest, dass diese Ihre RTO überschreitet.|  
 |[Problembehandlung: Verfügbarkeitsgruppe hat RPO überschritten](troubleshoot-availability-group-exceeded-rpo.md)|Nachdem Sie ein erzwungenes manuelles Failover ausgeführt haben, ist der Datenverlust größer als Ihre RPO. Ein anderer Fall: Wenn Sie den möglichen Datenverlust eines sekundäres Replikats im asynchronen Commitmodus berechnen, stellen Sie fest, dass dieser Ihre RPO überschreitet.|  
-|[Problembehandlung: Änderungen am primären Replikat werden nicht beim sekundären Replikat widergespiegelt](troubleshoot-primary-changes-not-reflected-on-secondary.md)|Die Clientanwendung führt erfolgreich ein Update für das primäre Replikat durch, wobei jedoch die Abfrage des sekundären Replikats ergibt, dass die Änderung nicht widergespiegelt wird.|  
+|[Problembehandlung: Änderungen am primären Replikat spiegeln sich nicht im sekundären Replikat wider](troubleshoot-primary-changes-not-reflected-on-secondary.md)|Die Clientanwendung führt erfolgreich ein Update für das primäre Replikat durch, wobei jedoch die Abfrage des sekundären Replikats ergibt, dass die Änderung nicht widergespiegelt wird.|  
   
 ##  <a name="BKMK_XEVENTS"></a> Nützliche erweiterte Ereignisse  
  Für die Behandlung von Problemen mit Replikaten im Zustand **Wird synchronisiert** sind folgende erweiterte Ereignisse nützlich.  

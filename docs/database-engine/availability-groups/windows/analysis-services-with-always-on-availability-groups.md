@@ -1,27 +1,28 @@
 ---
-title: "Analysis Services mit Always On-Verfügbarkeitsgruppen | Microsoft-Dokumentation"
-ms.custom: 
+title: Analysis Services mit Always On-Verfügbarkeitsgruppen | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 05/17/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: availability-groups
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 14d16bfd-228c-4870-b463-a283facda965
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 3f6c3afd409b4c1d7ddf2ad5e099078dfa5238f8
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 4340ed907ffac7f4f0e53540061907a391362ed2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="analysis-services-with-always-on-availability-groups"></a>Analysis Services mit Always On-Verfügbarkeitsgruppen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +43,7 @@ ms.lasthandoff: 11/20/2017
   
  [Rückschreiben mithilfe einer Always On-Verfügbarkeitsdatenbank](#bkmk_writeback)  
   
-##  <a name="bkmk_prereq"></a> Voraussetzungen  
+##  <a name="bkmk_prereq"></a> Erforderliche Komponenten  
  Sie benötigen auf allen Replikaten eine SQL Server-Anmeldung. Verfügbarkeitsgruppen, Listener und Datenbanken müssen von einem Mitglied der **sysadmin** -Rolle konfiguriert werden. Benutzer benötigen jedoch für den Zugriff auf die Datenbank von einem Analysis Services-Client aus lediglich **db_datareader** -Berechtigungen.  
   
  Verwenden Sie einen Datenanbieter, der das TDS (Tabular Data Stream)-Protokoll, Version 7.4 oder höher, unterstützt, z. B. SQL Server Native Client 11.0 oder den Datenanbieter für SQL Server in .NET Framework 4.02.  
@@ -201,7 +202,7 @@ ms.lasthandoff: 11/20/2017
   
 4.  Stellen Sie in [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]eine Verbindung mit dem sekundären Replikat her.  
   
-5.  Erweitern Sie die Knoten **Always On High Availability** (Always On Hochverfügbarkeit) und **Verfügbarkeitsgruppen** .  
+5.  Erweitern Sie den Knoten **Hohe Verfügbarkeit (immer aktiviert)** und den Knoten **Verfügbarkeitsgruppen** .  
   
 6.  Klicken Sie mit der rechten Maustaste auf die Verfügbarkeitsgruppe, für die ein Failover ausgeführt werden soll, und wählen Sie den Befehl **Failover** aus. Dadurch wird der Assistent für das Failover von Verfügbarkeitsgruppen gestartet. Wählen Sie mithilfe des Assistenten aus, welches Replikat als neues primäres Replikat verwendet werden soll.  
   
@@ -233,7 +234,7 @@ ms.lasthandoff: 11/20/2017
   
  Erstellen Sie hierzu in einem Analysis Services-Modell eine zusätzliche Datenquelle, um die Lese-/Schreibverbindung zu unterstützen. Wenn Sie die zusätzliche Datenquelle erstellen, verwenden Sie den gleichen Listenernamen und die gleiche Datenbank, die Sie in der schreibgeschützten Verbindung angegeben haben. Behalten Sie jedoch die Standardeinstellung bei, die READWRITE-Verbindungen unterstützt, statt **Anwendungszweck**zu ändern. Jetzt können Sie der Datenquelle neue Fakten- oder Dimensionstabellen hinzufügen, die auf der Datenquelle mit Lese-/Schreibzugriff basieren, und dann für die neuen Tabellen Rückschreiben aktivieren.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Verfügbarkeitsgruppenlistener, Clientkonnektivität und Anwendungsfailover &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)   
  [Aktive sekundäre Replikate: Lesbare sekundäre Replikate (Always On-Verfügbarkeitsgruppen)](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
  [Always On Policies for Operational Issues with Always On Availability Groups (SQL Server) (Always On-Richtlinien für Betriebsprobleme mit Always On-Verfügbarkeitsgruppen (SQL Server))](../../../database-engine/availability-groups/windows/always-on-policies-for-operational-issues-always-on-availability.md)   

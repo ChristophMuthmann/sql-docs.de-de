@@ -1,27 +1,27 @@
 ---
-title: "Abschließen des Datenbankmodul-Upgrades | Microsoft-Dokumentation"
-ms.custom: 
+title: Abschließen des Datenbankmodul-Upgrades | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 10/23/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: install-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - server-general
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 3f08087e-e532-416c-8caa-e0ec88c57596
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9248c9f2868246d1b8da927d6563b3de8d7cb8cd
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 66e3ca91859ef6bd27f1b50ef8c76d439fb1fdcc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="complete-the-database-engine-upgrade"></a>Abschließen des Datenbankmodul-Upgrades
 

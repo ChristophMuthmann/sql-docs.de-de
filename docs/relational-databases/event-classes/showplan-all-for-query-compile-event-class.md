@@ -1,34 +1,35 @@
 ---
 title: Showplan All for Query Compile-Ereignisklasse | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Showplan All for Query Compile event class
 ms.assetid: bb1dc446-5e6c-43d6-9db8-78c76cc2e01f
-caps.latest.revision: 
+caps.latest.revision: 37
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 72cff9b0f6567430b31b7ac70523d3b50f55f4ab
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 586f5665f4aa91d7ba5f90dc1eb86e68e01f873a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="showplan-all-for-query-compile-event-class"></a>Showplan All for Query Compile-Ereignisklasse
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Die Showplan All for Query Compile-Ereignisklasse tritt auf, wenn [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eine SQL-Anweisung kompiliert. Schließen Sie diese Ereignisklasse ein, um die Showplan-Operatoren zu identifizieren. Die enthaltenen Informationen sind eine Teilmenge der in der Showplan XML For Query Compile-Ereignisklasse verfügbaren Informationen.  
+  Die Showplan All for Query Compile-Ereignisklasse tritt auf, wenn [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eine SQL-Anweisung kompiliert. Schließen Sie diese Ereignisklasse ein, um die Showplan-Operatoren zu identifizieren. Die enthaltenen Informationen sind eine Teilmenge der in der Showplan XML For Query Compile-Ereignisklasse verfügbaren Informationen.  
   
  Die Showplan All for Query Compile-Ereignisklasse zeigt vollständige Kompilierungszeitdaten an. Bei Ablaufverfolgungen, die „Showplan All for Query Compile“ enthalten, kann ein erheblicher Verwaltungsaufwand anfallen. Um dieses Problem zu minimieren, beschränken Sie die Verwendung dieser Ereignisklasse auf Ablaufverfolgungen, die bestimmte Probleme nur für einen kurzen Zeitraum überwachen.  
   

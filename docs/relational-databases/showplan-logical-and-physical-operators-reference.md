@@ -1,16 +1,16 @@
 ---
 title: Referenz zu logischen und physischen Showplanoperatoren | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 10/12/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: relational-databases-misc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.showplan.leftouterjoin.f1
@@ -138,20 +138,21 @@ helpviewer_keywords:
 - ActualRebinds attribute
 - execution plans [SQL Server], reading output
 ms.assetid: e43fd0fe-5ea7-4ffe-8d52-759ef6a7c361
-caps.latest.revision: 
+caps.latest.revision: 51
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 605d3ff10ac725358ec51e28357f8b03cfcee094
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 9fc11ac48b6827fcf0f92ceb4ab7e05d6699f10e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="showplan-logical-and-physical-operators-reference"></a>Referenz zu logischen und physischen Showplanoperatoren
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Operatoren beschreiben, wie eine Abfrage oder eine DML-Anweisung (Data Manipulation Language) in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ausgeführt wird. Der Abfrageoptimierer verwendet Operatoren, um einen Abfrageplan für das in der Abfrage angegebene Ergebnis zu erstellen, oder zum Ausführen des in der DML-Anweisung angegebenen Vorgangs. Der Abfrageplan ist eine Struktur, die aus physischen Operatoren besteht. Sie können den Abfrageplan mit den SET SHOWPLAN-Anweisungen, den grafischen Ausführungsplanoptionen in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], oder den SQL Server Profiler Showplan-Ereignisklassen anzeigen.  
+  Operatoren beschreiben, wie eine Abfrage oder eine DML-Anweisung (Data Manipulation Language) in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ausgeführt wird. Der Abfrageoptimierer verwendet Operatoren, um einen Abfrageplan für das in der Abfrage angegebene Ergebnis zu erstellen, oder zum Ausführen des in der DML-Anweisung angegebenen Vorgangs. Der Abfrageplan ist eine Struktur, die aus physischen Operatoren besteht. Sie können den Abfrageplan mit den SET SHOWPLAN-Anweisungen, den grafischen Ausführungsplanoptionen in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], oder den SQL Server Profiler Showplan-Ereignisklassen anzeigen.  
   
  Operatoren werden als logische und physische Operatoren klassifiziert.  
   
@@ -283,7 +284,7 @@ Operatoren beschreiben, wie eine Abfrage oder eine DML-Anweisung (Data Manipulat
 |![Split-Operator (Symbol)](../relational-databases/media/split-32x.gif "Split-Operator (Symbol)")|**Split**|Der **Split** -Operator wird zum Optimieren der Aktualisierungsverarbeitung verwendet. Er teilt jeden Aktualisierungsvorgang in einen Lösch- und einen Einfügevorgang auf. **Split** ist ein logischer und physischer Operator.|  
 |![Spool-Operator (Symbol)](../relational-databases/media/spool-32x.gif "Spool-Operator (Symbol)")|**Spool**|Mit dem **Spool** -Operator wird ein Zwischenabfrageergebnis in die **tempdb** -Datenbank geschrieben.|  
 |![Stream Aggregate-Operator (Symbol)](../relational-databases/media/stream-aggregate-32x.gif "Stream Aggregate-Operator (Symbol)")|**Stream Aggregate**|Der **Stream Aggregate** -Operator gruppiert Zeilen nach einer oder mehreren Spalten und berechnet einen oder mehrere Aggregatausdrücke, die von der Abfrage zurückgegeben wurden. Auf die Ausgabe dieses Operators kann durch spätere Operatoren in der Abfrage verwiesen werden, die Ausgabe kann an den Client zurückgegeben werden oder beides. Für den **Stream Aggregate** -Operator muss die Eingabe innerhalb der Gruppen nach den Spalten sortiert sein. Der Optimierer verwendet vor diesem Operator einen **Sort** -Operator, wenn die Daten nicht bereits durch einen vorherigen **Sort** -Operator oder durch einen geordneten Indexsuch- oder Scanvorgang sortiert wurden. In der SHOWPLAN_ALL-Anweisung oder im grafischen Ausführungsplan in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]sind die Spalten im GROUP BY-Prädikat in der Spalte **Argument** aufgelistet, und die Aggregatausdrücke sind in der Spalte **Defined Values** aufgelistet. **Stream Aggregate** ist ein physischer Operator.|  
-|![Switch-Operator (Symbol)](../relational-databases/media/switch-32x.gif "Switch-Operator (Symbol)")|**Schalter**|**Schalter** ist ein spezieller Verkettungsiterator, der über *n* Eingaben verfügt. Mit jedem **Switch** -Operator ist ein Ausdruck verbunden. Abhängig vom Rückgabewert des Ausdrucks (zwischen 0 und *n*-1) kopiert **Schalter** den entsprechenden Eingabedatenstrom in den Ausgabedatenstrom. Eine Verwendungsmöglichkeit von **Switch** besteht in der Implementierung von Abfrageplänen, die schnelle Vorwärtscursor mit bestimmten Operatoren, z.B. dem **TOP** -Operator, enthalten. **Switch** ist sowohl ein logischer als auch ein physischer Operator.|  
+|![Switch-Operator (Symbol)](../relational-databases/media/switch-32x.gif "Switch-Operator (Symbol)")|**Schalter**|**Switch** ist ein spezieller Verkettungsiterator, der über *n* Eingaben verfügt. Mit jedem **Switch** -Operator ist ein Ausdruck verbunden. Abhängig vom Rückgabewert des Ausdrucks (zwischen 0 und *n*-1) kopiert **Switch** den entsprechenden Eingabedatenstrom in den Ausgabedatenstrom. Eine Verwendungsmöglichkeit von **Switch** besteht in der Implementierung von Abfrageplänen, die schnelle Vorwärtscursor mit bestimmten Operatoren, z.B. dem **TOP** -Operator, enthalten. **Switch** ist sowohl ein logischer als auch ein physischer Operator.|  
 |![Table Delete-Operator (Symbol)r](../relational-databases/media/table-delete-32x.gif "Table Delete-Operator (Symbol)")|**Table Delete**|Mit dem physischen Operator **Table Delete** werden Zeilen aus der in der **Argument** -Spalte angegebenen Tabelle des Abfrageausführungsplans gelöscht.|  
 |![Table Insert-Operator (Symbol)](../relational-databases/media/table-insert-32x.gif "Table Insert-Operator (Symbol)")|**Table Insert**|Durch den Operator **Table Insert** werden Eingabezeilen in die in der **Argument** -Spalte des Abfrageausführungsplans angegebene Tabelle eingefügt. Die **Argument** -Spalte enthält auch ein SET:()-Prädikat, mit dem der Wert angegeben wird, auf den die einzelnen Spalten festgelegt sind. Wenn **Table Insert** keine untergeordneten Elemente für Eingabewerte enthält, wird die eingefügte Zeile aus dem Insert-Operator selbst übernommen. **Table Insert** ist ein physischer Operator.|  
 |![Table Merge-Operator](../relational-databases/media/table-merge-32x.gif "Table Merge-Operator")|**Table Merge**|Der **Table Merge** -Operator wendet einen Mergedatenstrom auf einen Heap an. Der Operator löscht oder aktualisiert Zeilen in der Tabelle, die in der **Argument** -Spalte des Operators angegeben ist, bzw. fügt Zeilen in diese ein. Der tatsächlich ausgeführte Vorgang ist vom Laufzeitwert der in der **Argument** -Spalte des Operators angegebenen **ACTION** -Spalte abhängig. **Table Merge** ist ein physischer Operator.|  

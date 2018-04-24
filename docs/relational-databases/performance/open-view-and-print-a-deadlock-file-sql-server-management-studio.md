@@ -1,16 +1,16 @@
 ---
-title: "Öffnen, Anzeigen und Drucken einer Deadlockdatei (SQL Server Management Studio) | Microsoft-Dokumentation"
-ms.custom: 
+title: Öffnen, Anzeigen und Drucken einer Deadlockdatei (SQL Server Management Studio) | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: performance
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - deadlocks [SQL Server], printing files
@@ -18,19 +18,21 @@ helpviewer_keywords:
 - opening deadlock files
 - printing deadlock files
 ms.assetid: 5061b13f-2cb7-457a-b8d0-fbd437b510ab
-caps.latest.revision: 
+caps.latest.revision: 14
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ce9c52fb2842133193893bd4d551e54a1aeed015
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 41955827aec0f8fb52a7356d2ad55c39bc53416e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="open-view-and-print-a-deadlock-file-sql-server-management-studio"></a>Öffnen, Anzeigen und Drucken einer Deadlockdatei (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Wenn von [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] ein Deadlock generiert wird, können Sie die entsprechenden Informationen in einer Datei speichern. Nach dem Speichern können Sie die Deadlockdatei zum Anzeigen oder Drucken in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] öffnen.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+  Wenn von [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] ein Deadlock generiert wird, können Sie die entsprechenden Informationen in einer Datei speichern. Nach dem Speichern können Sie die Deadlockdatei zum Anzeigen oder Drucken in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] öffnen.  
   
 ## <a name="open-and-view-a-deadlock-file"></a>Öffnen und Anzeigen einer Deadlockdatei  
   

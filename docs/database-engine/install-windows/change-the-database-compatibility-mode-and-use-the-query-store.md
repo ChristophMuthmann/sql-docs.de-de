@@ -1,31 +1,31 @@
 ---
-title: "Ändern des Datenbank-Kompatibilitätsmodus und Verwenden des Abfragespeichers | Microsoft-Dokumentation"
-ms.custom: 
+title: Ändern des Datenbank-Kompatibilitätsmodus und Verwenden des Abfragespeichers | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 07/21/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: install-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - setup-install
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - query plans [SQL Server], migrating
 - upgrading SQL Server, migrating query plans
 - plan guides [SQL Server], migrating query plans
 ms.assetid: 7e02a137-6867-4f6a-a45a-2b02674f7e65
-caps.latest.revision: 
+caps.latest.revision: 19
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 2701a951f0c8847b028e3a87717ad9ac3a965529
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 0b7898f984d22ad6606bf84585aa6554c2290b29
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="change-the-database-compatibility-mode-and-use-the-query-store"></a>Ändern des Datenbank-Kompatibilitätsmodus und Verwenden des Abfragespeichers
 

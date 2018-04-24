@@ -1,34 +1,35 @@
 ---
 title: SP:CacheRemove (Ereignisklasse) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SP:CacheRemove event class
 ms.assetid: aaa3c5c4-2d3a-4832-a473-ce9bd4fb1c17
-caps.latest.revision: 
+caps.latest.revision: 36
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 882338123b5ebf4c398834bcc2709b4acd126360
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 77b7418c30f78df735796dbf5c1545ec50782d40
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spcacheremove-event-class"></a>SP:CacheRemove-Ereignisklasse
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Die SP:CacheRemove-Ereignisklasse zeigt an, dass die gespeicherte Prozedur aus dem Plancache entfernt wurde.  
+  Die SP:CacheRemove-Ereignisklasse zeigt an, dass die gespeicherte Prozedur aus dem Plancache entfernt wurde.  
   
 ## <a name="spcacheremove-event-class-data-columns"></a>Datenspalten der SP:CacheRemove-Ereignisklasse  
   

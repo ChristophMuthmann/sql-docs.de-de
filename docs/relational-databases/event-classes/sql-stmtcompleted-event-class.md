@@ -1,34 +1,35 @@
 ---
 title: SQL:StmtCompleted-Ereignisklasse | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQL:StmtCompleted event class
 ms.assetid: a55f005d-e020-423c-8940-c24ea1b20104
-caps.latest.revision: 
+caps.latest.revision: 32
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ea9c327fcaf3d29b9ab282f1e7b018f457e2737f
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: d6ffda59468fbeed43caee6930d1ab6d1fff797a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlstmtcompleted-event-class"></a>SQL:StmtCompleted-Ereignisklasse
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Die SQL:StmtCompleted-Ereignisklasse zeigt an, dass die Ausführung einer [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung abgeschlossen wurde.  
+  Die SQL:StmtCompleted-Ereignisklasse zeigt an, dass die Ausführung einer [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung abgeschlossen wurde.  
   
 ## <a name="sqlstmtcompleted-event-class-data-columns"></a>Datenspalten der SQL:StmtCompleted-Ereignisklasse  
   

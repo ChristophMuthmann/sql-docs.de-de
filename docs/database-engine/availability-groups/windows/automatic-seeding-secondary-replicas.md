@@ -1,31 +1,31 @@
 ---
-title: "Automatisches Seeding für sekundäre Replikate (SQL Server) | Microsoft-Dokumentation"
-description: "Verwenden Sie das automatische Seeding zum Initialisieren sekundärer Replikate."
+title: Automatisches Seeding für sekundäre Replikate (SQL Server) | Microsoft-Dokumentation
+description: Verwenden Sie das automatische Seeding zum Initialisieren sekundärer Replikate.
 services: data-lake-analytics
-ms.custom: 
+ms.custom: ''
 ms.date: 09/25/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: availability-groups
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-high-availability
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Automatic seeding [SQL Server], secondary replica
-ms.assetid: 
-caps.latest.revision: 
+ms.assetid: ''
+caps.latest.revision: ''
 author: allanhirt
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 60bb5a01191de574b7fcac4eb11d73190c94aac8
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 26f82aff3a960e4e6c112e7530b17fd5ed4de651
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="automatic-seeding-for-secondary-replicas"></a>Automatisches Seeding für sekundäre Replikate
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

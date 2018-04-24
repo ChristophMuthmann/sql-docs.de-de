@@ -13,12 +13,12 @@ ms.assetid: afa8caff-f325-48d9-a8ef-a30beab60389
 caps.latest.revision: 6
 author: rothja
 ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: d05f65155310f80778d1697d6d4a1a0188796fde
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
+manager: craigg
+ms.openlocfilehash: 6b74bcf7846c296a7d3d9f1e559712da9f46fc68
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="always-on-availability-groups-wait-types"></a>Wartetypen von Always On-Verfügbarkeitsgruppen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

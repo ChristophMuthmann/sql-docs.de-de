@@ -1,30 +1,31 @@
 ---
-title: "Erste Schritte mit Berechtigungen für das Datenbankmodul | Microsoft-Dokumentation"
-ms.custom: 
+title: Erste Schritte mit Berechtigungen für das Datenbankmodul | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 01/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 helpviewer_keywords:
 - permissions [SQL Server], getting started
 ms.assetid: 051af34e-bb5b-403e-bd33-007dc02eef7b
-caps.latest.revision: 
+caps.latest.revision: 15
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4292564f8e3e392bd01d5b1e580e1f28251840bd
-ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: f6d87f2072d7380d9d1592fc106e256c55361b2d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="getting-started-with-database-engine-permissions"></a>Erste Schritte mit Berechtigungen für das Datenbankmodul
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -164,9 +165,9 @@ GRANT CONTROL ON DATABASE::SalesDB TO Ted;
  Die erste oben aufgeführte Berechtigung (`GRANT SELECT ON OBJECT::Region TO Ted;`) ist die präziseste, d.h., diese Anweisung ist die geringstmögliche Berechtigung, die die Berechtigung `SELECT`erteilt. Zu ihr gehören keine Berechtigungen für untergeordnete Objekte. Es ist ein gutes Prinzip, stets die geringstmögliche Berechtigung zu erteilen. Führen Sie die Erteilung jedoch auf höheren Ebenen aus (eigentlich ein Widerspruch), um das Erteilungssystem zu vereinfachen. Wenn also Ted Berechtigungen für das gesamte Schema braucht, erteilen Sie die Berechtigung `SELECT` einmal auf Schemaebene, anstatt `SELECT` mehrfach auf Tabellen- oder Sichtebene zu erteilen. Der Entwurf der Datenbank hat viel Einfluss den möglichen Erfolg dieser Strategie. Diese Strategie funktioniert am besten, wenn Ihre Datenbank so konzipiert ist, dass Objekte, die identische Berechtigungen benötigen, in einem einzigen Schema enthalten sind.  
   
 ## <a name="list-of-permissions"></a>Liste der Berechtigungen  
- [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] hat 230 Berechtigungen. [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] hat 219 Berechtigungen. [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] hat 214 Berechtigungen. [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] hat 195 Berechtigungen. [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]Obwohl , [!INCLUDE[ssDW](../../../includes/ssdw-md.md)], und [!INCLUDE[ssAPS](../../../includes/ssaps-md.md)] einige Berechtigungen bereitstellen, die nicht für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]gelten, haben sie insgesamt weniger Berechtigungen, da sie nur einen Teil des Datenbankmoduls verfügbar machen. Die folgende Grafik zeigt die Berechtigungen und ihre Beziehungen zueinander. Einige der Berechtigungen auf höherer Ebene (z.B. `CONTROL SERVER`) sind mehrmals aufgeführt. In diesem Thema ist nicht ausreichend Platz, um das Poster entsprechend darzustellen. Klicken Sie auf das Bild zum Herunterladen der **Poster zu den Datenbankmodulberechtigungen** im PDF-Format.  
-  
-[![Datenbankmodulberechtigungen](../../../relational-databases/security/media/database-engine-permissions.PNG)](https://aka.ms/sql-permissions-poster)
+ [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] hat 230 Berechtigungen. [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] hat 219 Berechtigungen. [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] hat 214 Berechtigungen. [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] hat 195 Berechtigungen. [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]Obwohl , [!INCLUDE[ssDW](../../../includes/ssdw-md.md)], und [!INCLUDE[ssAPS](../../../includes/ssaps-md.md)] einige Berechtigungen bereitstellen, die nicht für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]gelten, haben sie insgesamt weniger Berechtigungen, da sie nur einen Teil des Datenbankmoduls verfügbar machen. 
+ 
+ [!INCLUDE[database-engine-permissions](../../../includes/paragraph-content/database-engine-permissions.md)]
  
  Eine Grafik mit den Beziehungen zwischen den [!INCLUDE[ssDE](../../../includes/ssde-md.md)]-Prinzipalen und Servern und Datenbankobjekten finden Sie unter [Berechtigungshierarchie &#40;Datenbankmodul&#41;](../../../relational-databases/security/permissions-hierarchy-database-engine.md).  
   

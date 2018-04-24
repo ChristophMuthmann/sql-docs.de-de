@@ -1,30 +1,30 @@
 ---
 title: MSSQLSERVER_3313 | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 04/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: errors-events
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 helpviewer_keywords:
 - 3313 (Database Engine error)
 ms.assetid: a244227b-8553-42df-9435-034f906c4c74
-caps.latest.revision: 
+caps.latest.revision: 11
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: de26c9d0961ebcbe5494a1d31006a14f8d7a308a
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 1bae1ec85a3a0b8b54cf63f09c1aefc5863498aa
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="mssqlserver3313"></a>MSSQLSERVER_3313
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.lasthandoff: 11/21/2017
   
 |||  
 |-|-|  
-|Produktname|SQL Server|  
+|Produktname|SQL Server|  
 |Ereignis-ID|3313|  
 |Ereignisquelle|MSSQLSERVER|  
 |Komponente|SQLEngine|  
@@ -48,11 +48,11 @@ Falls dieser Fehler für **tempdb**auftritt, wird die [!INCLUDE[ssNoVersion](../
 ## <a name="user-action"></a>Benutzeraktion  
 Dieser Fehler kann auf vorübergehende Systemschwierigkeiten zurückzuführen sein, die beim Versuch, die Serverinstanz zu starten oder eine Datenbank wiederherzustellen, aufgetreten sind. Es kann jedoch auch ein dauerhafter Fehler vorliegen, der bei jedem Versuch auftritt, die Datenbank zu starten. Um Informationen zur Ursache zu erhalten, überprüfen Sie das Windows-Ereignisprotokoll auf einen vorangehenden Fehler, der Aufschluss über den aktuellen Fehler geben könnte.  
   
-Bei Auftreten dieses Fehlerzustands generiert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in der Regel drei Dateien im Ordner **LOG** von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Die Datei „SQLDump*nnnn*.txt“ enthält weiterführende Diagnoseinformationen zu den Fehlern, u.a. Details zur Transaktion und zur Seite, auf der das Problem aufgetreten ist. Diese Informationen werden in der Regel vom Produktsupportteam genutzt, um die Fehlerursache zu analysieren.  
+Bei Auftreten dieses Fehlerzustands generiert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in der Regel drei Dateien im Ordner **LOG** von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Die Datei „SQLDump*nnnn*.txt“ enthält weiterführende Diagnoseinformationen zu den Fehlern, einschließlich Details zur Transaktion und zur Seite, auf der das Problem aufgetreten ist. Diese Informationen werden in der Regel vom Produktsupportteam genutzt, um die Fehlerursache zu analysieren.  
   
 Um Informationen zur Ursache dieses Auftretens von Fehler 3313 zu erhalten, überprüfen Sie das Windows-Ereignisprotokoll auf einen vorangehenden Fehler, der Aufschluss über den aktuellen Fehler geben könnte. Die entsprechende Benutzeraktion hängt davon ab, ob die Informationen im Windows-Ereignisprotokoll angeben, dass der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Fehler durch eine vorübergehende Bedingung oder einen dauerhaften Fehler verursacht wurde. Informationen zu den Benutzeraktionen zum Beheben von Fehler 3313 finden Sie in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Onlinedokumentation.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [ALTER DATABASE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql-set-options.md)  
 [DBCC CHECKDB &#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)  
 [Vollständige Datenbankwiederherstellungen &#40;einfaches Wiederherstellungsmodell&#41;](~/relational-databases/backup-restore/complete-database-restores-simple-recovery-model.md)  

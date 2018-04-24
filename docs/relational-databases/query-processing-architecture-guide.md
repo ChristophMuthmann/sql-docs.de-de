@@ -1,31 +1,31 @@
 ---
 title: Handbuch zur Architektur der Abfrageverarbeitung | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 02/16/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: relational-databases-misc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - guide, query processing architecture
 - query processing architecture guide
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
-caps.latest.revision: 
+caps.latest.revision: 5
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 625481946af508b626a6bc142113298298a7fca2
-ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
+ms.openlocfilehash: 1f1e2a721201fbc1e497cdd65daab9ec46ad9c06
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="query-processing-architecture-guide"></a>Handbuch zur Architektur der Abfrageverarbeitung
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -322,9 +322,9 @@ Der Ausführungsplan für gespeicherte Prozeduren und Trigger wird getrennt von 
 
 ## <a name="execution-plan-caching-and-reuse"></a>Zwischenspeichern und Wiederverwenden von Ausführungsplänen
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] verfügt über einen Arbeitsspeicherpool, der zum Speichern von Ausführungsplänen und Datenpuffern verwendet wird. Der Prozentsatz des Pools, der entweder für Ausführungspläne oder für Datenpuffer zugeordnet wird, verändert sich dynamisch in Abhängigkeit vom Status des Systems. Der Teil des Arbeitsspeicherpools, der zum Speichern von Ausführungsplänen verwendet wird, wird Plancache genannt.
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] verfügt über einen Arbeitsspeicherpool, der zum Speichern von Ausführungsplänen und von Datenpuffern verwendet wird. Der Prozentsatz des Pools, der entweder für Ausführungspläne oder für Datenpuffer zugeordnet wird, verändert sich dynamisch in Abhängigkeit vom Status des Systems. Der Teil des Arbeitsspeicherpools, der zum Speichern von Ausführungsplänen verwendet wird, wird Plancache genannt.
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Ausführungspläne weisen die folgenden Hauptkomponenten auf: 
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Ausführungspläne weisen die folgenden Hauptkomponenten auf: 
 
 * Abfrageausführungsplan: Bei dem größten Teil des Ausführungsplans handelt es sich um eine eintrittsinvariante, schreibgeschützte Datenstruktur, die von einer beliebigen Anzahl von Benutzern verwendet werden kann. Man bezeichnet diesen Teil als Abfrageplan. Im Abfrageplan wird kein Benutzerkontext gespeichert. Im Arbeitsspeicher befinden sich immer nur eine oder zwei Kopien des Abfrageplans: eine Kopie für alle seriellen Ausführungen und eine weitere für alle parallelen Ausführungen. Die parallele Kopie deckt alle parallelen Ausführungen ab, und zwar unabhängig von ihrem Grad an Parallelität. 
 * Ausführungskontext: Jeder Benutzer, der die Abfrage zurzeit ausführt, verfügt über eine Datenstruktur mit den Daten, die für diese Ausführung spezifisch sind, z.B. Parameterwerte. Diese Datenstruktur wird als Ausführungskontext bezeichnet. Die Datenstrukturen des Ausführungskontexts werden wiederverwendet. Wenn ein Benutzer eine Abfrage ausführt und eine der Strukturen nicht verwendet wird, wird diese Struktur erneut initialisiert, und zwar diesmal mit dem Kontext für den neuen Benutzer. 
@@ -816,7 +816,7 @@ Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] unterstützt zw
         Employees);
   ```
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] verwendet OLE DB für die Kommunikation zwischen der relationalen Engine und der Speicher-Engine. Das relationale Modul zerlegt jede Transact-SQL-Anweisung in eine Reihe von Vorgängen für einfache OLE DB-Rowsets, die durch das Speichermodul aus den Basistabellen geöffnet werden. Dies bedeutet, dass das relationale Modul einfache OLE DB-Rowsets auch für jede OLE DB-Datenquelle öffnen kann.  
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] verwendet OLE DB für die Kommunikation zwischen dem relationalen Modul und dem Speichermodul. Das relationale Modul zerlegt jede Transact-SQL-Anweisung in eine Reihe von Vorgängen für einfache OLE DB-Rowsets, die durch das Speichermodul aus den Basistabellen geöffnet werden. Dies bedeutet, dass das relationale Modul einfache OLE DB-Rowsets auch für jede OLE DB-Datenquelle öffnen kann.  
 ![oledb_storage](../relational-databases/media/oledb-storage.gif)  
 Das relationale Modul verwendet die OLE DB-API (Application Programming Interface), um die Rowsets auf Verbindungsservern zu öffnen, die Zeilen abzurufen und Transaktionen zu verwalten.
 
@@ -832,7 +832,7 @@ Wenn möglich, verlagert [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 
 
 ## <a name="query-processing-enhancements-on-partitioned-tables-and-indexes"></a>Verbesserte Abfrageverarbeitung bei partitionierten Tabellen und Indizes
 
-[!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] verbessert die Leistung der Abfrageverarbeitung in partitionierten Tabellen für viele parallele Pläne, verändert die Art der Darstellung paralleler und serieller Pläne und erweitert die Partitionierungsinformationen in Kompilierzeit- und Laufzeitausführungsplänen. In diesem Thema werden diese Verbesserungen vorgestellt. Außerdem erhalten Sie Hinweise zur Interpretation der Abfrageausführungspläne für partitionierte Tabellen und Indizes sowie zu bewährten Methoden zur Verbesserung der Abfrageleistung bei partitionierten Objekten. 
+[!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] hat für viele parallele Pläne eine bessere Leistung bei der Verarbeitung von Abfragen in partitionierten Tabellen, eine geänderte Art der Darstellung paralleler und serieller Pläne und bessere Partitionierungsinformationen in Kompilierzeit- und Laufzeitausführungsplänen ermöglicht. In diesem Thema werden diese Verbesserungen vorgestellt. Außerdem erhalten Sie Hinweise zur Interpretation der Abfrageausführungspläne für partitionierte Tabellen und Indizes sowie zu bewährten Methoden zur Verbesserung der Abfrageleistung bei partitionierten Objekten. 
 
 > [!NOTE]
 > Partitionierte Tabellen und Indizes werden nur in der Enterprise Edition, Developer Edition und Evaluation Edition von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] unterstützt.
@@ -873,7 +873,7 @@ Mit diesen Tools können Sie die folgenden Informationen abrufen:
 
 #### <a name="partition-information-enhancements"></a>Bessere Partitionierungsinformationen
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] stellt erweiterte Partitionierungsinformationen sowohl für Kompilierzeit- als auch für Laufzeitausführungspläne bereit. Die Ausführungspläne enthalten jetzt die folgenden Informationen:
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] stellt verbesserte Partitionierungsinformationen sowohl für Kompilierzeit- als auch für Laufzeitausführungspläne bereit. Die Ausführungspläne enthalten jetzt die folgenden Informationen:
 
 * Ein optionales `Partitioned` -Attribut, das anzeigt, dass für eine partitionierte Tabelle ein Operator wie `seek`, `scan`, `insert`, `update`, `merge`oder `delete`ausgeführt wird.  
 * Ein neues `SeekPredicateNew` -Element mit einem `SeekKeys` -Unterelement, das `PartitionID` als führende Indexschlüsselspalte sowie Filterbedingungen enthält, mit denen Bereichssuchen für `PartitionID`festgelegt werden. Das Vorhandensein von zwei `SeekKeys` -Unterelementen zeigt an, dass für `PartitionID` ein Skip-Scan-Vorgang verwendet wird.   

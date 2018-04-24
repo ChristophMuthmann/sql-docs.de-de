@@ -13,12 +13,12 @@ ms.assetid: c1862d8a-5f82-4647-a280-3e588b82a6dc
 caps.latest.revision: 5
 author: rothja
 ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 9032bf3629f98fb4bf840010567e2a97ef6c4127
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
+manager: craigg
+ms.openlocfilehash: 1888bcb32b61c45dd6a3761476ca5c931168280f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="always-on-availability-groups-health-diagnostics-log"></a>Integritätsdiagnoseprotokoll für Always On-Verfügbarkeitsgruppen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -1,34 +1,35 @@
 ---
 title: Audit Database Scope GDR-Ereignisklasse | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Audit Database Scope GDR event class
 ms.assetid: 1641a38a-ef24-46ce-b2f4-bf732858c771
-caps.latest.revision: 
+caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7fe601abc220ce29ed3e1a0a9513fcf39060b24b
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 75d9b15bce4a40b6c50375e3e876231209de44ef
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="audit-database-scope-gdr-event-class"></a>Audit Database Scope GDR (Ereignisklasse)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Die **Audit Database Scope GDR** -Ereignisklasse tritt immer auf, wenn Benutzer in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für ausschließlich datenbankrelevante Vorgänge ein GRANT-, REVOKE- oder DENY für eine Anweisungsberechtigung ausgeben, beispielsweise das Gewähren von Berechtigungen für eine Datenbank.  
+  Die **Audit Database Scope GDR** -Ereignisklasse tritt immer auf, wenn Benutzer in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für ausschließlich datenbankrelevante Vorgänge ein GRANT-, REVOKE- oder DENY für eine Anweisungsberechtigung ausgeben, beispielsweise das Gewähren von Berechtigungen für eine Datenbank.  
   
 ## <a name="audit-database-scope-gdr-event-class-data-columns"></a>Audit Database Scope GDR-Ereignisklasse (Datenspalten)  
   

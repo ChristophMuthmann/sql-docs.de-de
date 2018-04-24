@@ -1,16 +1,16 @@
 ---
-title: "Beispiele für Massenzugriff auf Daten in Azure Blob Storage | Microsoft-Dokumentation"
-ms.custom: 
+title: Beispiele für Massenzugriff auf Daten in Azure Blob Storage | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 01/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: import-export
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - bulk importing [SQL Server], from Azure blob storage
@@ -18,16 +18,17 @@ helpviewer_keywords:
 - BULK INSERT, Azure blob storage
 - OPENROWSET, Azure blob storage
 ms.assetid: f7d85db3-7a93-400e-87af-f56247319ecd
-caps.latest.revision: 
+caps.latest.revision: 2
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 49c119ef6d35649cfc5d5f8825490f996ad418ac
-ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 938363bb92c6225d4f93388eed8f7f74dd43716a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="examples-of-bulk-access-to-data-in-azure-blob-storage"></a>Beispiele für Massenzugriff auf Daten in Azure Blob Storage
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]

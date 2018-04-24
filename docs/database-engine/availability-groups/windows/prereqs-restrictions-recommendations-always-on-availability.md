@@ -1,15 +1,16 @@
 ---
-title: "Voraussetzungen, Einschränkungen und Empfehlungen für Always On-Verfügbarkeitsgruppen | Microsoft-Dokument"
-ms.custom: 
+title: Voraussetzungen, Einschränkungen und Empfehlungen für Always On-Verfügbarkeitsgruppen | Microsoft-Dokument
+ms.custom: ''
 ms.date: 05/02/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: availability-groups
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Availability Groups [SQL Server], server instance
@@ -21,16 +22,16 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], databases
 - Availability Groups [SQL Server]
 ms.assetid: edbab896-42bb-4d17-8d75-e92ca11f7abb
-caps.latest.revision: "151"
+caps.latest.revision: 151
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: d127b3479e6bb38483d39556884d1498d9c662c2
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 0a81bf1cc891f467819a115dcb253fe2507a8c57
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="prereqs-restrictions-recommendations---always-on-availability-groups"></a>Voraussetzungen, Einschränkungen und Empfehlungen (Always On-Verfügbarkeitsgruppen)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

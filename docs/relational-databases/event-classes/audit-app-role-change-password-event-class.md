@@ -1,34 +1,35 @@
 ---
 title: Audit App Role Change Password (Ereignisklasse) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Audit App Role Change Password event class
 ms.assetid: 28a76c12-e997-48bb-bb0e-9624237a188e
-caps.latest.revision: 
+caps.latest.revision: 29
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 955bfc1abcf47c9feff471ccc49d6f9cabd8bef6
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 3cd0706f4503fbb62999a8ce3ec54d22560258c6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="audit-app-role-change-password-event-class"></a>Audit App Role Change Password (Ereignisklasse)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Die **Audit App Role Change Password** -Ereignisklasse tritt immer dann auf, wenn für eine Anwendungsrolle ein Kennwort geändert wird.  
+  Die **Audit App Role Change Password** -Ereignisklasse tritt immer dann auf, wenn für eine Anwendungsrolle ein Kennwort geändert wird.  
   
 ## <a name="audit-app-role-change-password-event-class-data-columns"></a>Audit App Role Change Password-Ereignisklasse (Datenspalten)  
   

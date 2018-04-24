@@ -1,16 +1,16 @@
 ---
 title: Bearbeiten von SQLCMD-Skripts mit dem Abfrage-Editor | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-scripting
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - scripts [SQL Server], SQLCMD scripts
@@ -19,19 +19,21 @@ helpviewer_keywords:
 - Query Editor [Database Engine], SQLCMD scripts
 - scripts [SQL Server], SQL Server Management Studio
 ms.assetid: f77b866d-c330-47c9-9e74-0b8d8dff4b31
-caps.latest.revision: 
+caps.latest.revision: 42
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 35f569c6d26c888566eb8dbb47f1472101158d61
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 383564a5aed33b7263c0c4ade4b0339f9afbfe87
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="edit-sqlcmd-scripts-with-query-editor"></a>Bearbeiten von SQLCMD-Skripts mit dem Abfrage-Editor
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Mit dem [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Abfrage-Editor in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] können Sie Abfragen als SQLCMD-Skripts schreiben und bearbeiten. Sie verwenden SQLCMD-Skripts, wenn Sie Windows-Systembefehle und [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen in einem Skript verarbeiten müssen.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  Mit dem [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] können Sie Abfragen als SQLCMD-Skripts schreiben und bearbeiten. Sie verwenden SQLCMD-Skripts, wenn Sie Windows-Systembefehle und [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen in einem Skript verarbeiten müssen.  
   
 ## <a name="sqlcmd-mode"></a>SQLCMD-Modus  
  Wenn Sie den [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor zum Schreiben oder Bearbeiten von SQLCMD-Skripts verwenden möchten, müssen Sie den SQLCMD-Skriptmodus aktivieren. Standardmäßig ist der SQLCMD-Skriptmodus im Abfrage-Editor nicht aktiviert. Zum Aktivieren des Skriptmodus klicken Sie auf das Symbol **SQLCMD-Modus** auf der Symbolleiste, oder wählen Sie im Menü **Abfrage** die Option **SQLCMD-Modus** aus.  

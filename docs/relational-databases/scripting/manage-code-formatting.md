@@ -1,16 +1,16 @@
 ---
 title: Verwalten der Codeformatierung | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-scripting
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - indenting code [SQL Server]
@@ -29,19 +29,21 @@ helpviewer_keywords:
 - text [SQL Server]
 - unindenting code
 ms.assetid: ddbac4d2-6bdc-4467-a352-e869ec880eed
-caps.latest.revision: 
+caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 96141b7eb166d6ffd8e082890ce005a0cc52c650
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 39aa0603bd5932c9b36185abacc56cc01e2aff19
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="manage-code-formatting"></a>Verwalten der Codeformatierung
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Mit dem Editor können Sie Code formatieren, z.B. mit Einzug, ausgeblendetem Text, URLs usw. Außerdem können Sie mit dem intelligenten Einzug den Code automatisch bei der Eingabe formatieren.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  Mit dem Editor können Sie Code formatieren, z. B. mit Einzug, ausgeblendetem Text, URLs usw. Außerdem können Sie mit dem intelligenten Einzug den Code automatisch bei der Eingabe formatieren.  
   
 ## <a name="indenting"></a>Einzug  
  Für den Texteinzug stehen drei verschiedene Stile zur Auswahl. Außerdem können Sie angeben, aus wie vielen Leerzeichen ein Einzug oder Tabstopp besteht und ob der Editor für den Einzug Tabulatoren oder Leerzeichen verwenden soll.  

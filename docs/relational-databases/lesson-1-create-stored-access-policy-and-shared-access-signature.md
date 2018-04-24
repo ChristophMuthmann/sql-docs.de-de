@@ -2,7 +2,7 @@
 title: 'Lektion 1: Erstellen einer gespeicherten Zugriffsrichtlinie und SAS | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 06/02/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: tutorial
@@ -20,11 +20,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 86a4c906a808fcb9cf311f689ed10cd437f27123
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
+ms.openlocfilehash: b387ca70fab713e7ca1f3e96dc5dff2f64c24e58
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="lesson-1-create-stored-access-policy-and-shared-access-signature"></a>Lektion 1: Erstellen einer gespeicherten Zugriffsrichtlinie und SAS
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

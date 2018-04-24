@@ -1,16 +1,16 @@
 ---
 title: Handbuch zur Architektur und Verwaltung von Transaktionsprotokollen in SQL Server | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: relational-databases-misc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - transaction log architecture guide
@@ -23,16 +23,17 @@ helpviewer_keywords:
 - vlf size
 - transaction log internals
 ms.assetid: 88b22f65-ee01-459c-8800-bcf052df958a
-caps.latest.revision: 
+caps.latest.revision: 3
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c8d5917a0faed7d4861a03097a2072db3cfa0670
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: e6d9a9107e0ddb997492bec813938120e0fd6bf1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-server-transaction-log-architecture-and-management-guide"></a>Handbuch zur Architektur und Verwaltung von Transaktionsprotokollen in SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -92,7 +93,7 @@ Es wird empfohlen, den Protokolldateien für eine optimale VLF-Verteilung mithil
  - Der mit dem Argument `SIZE` festgelegte *size*-Wert von `ALTER DATABASE` ist die Anfangsgröße der Protokolldatei.
  - Der *growth_increment*-Wert (auch als Wert für die automatische Vergrößerung bezeichnet), der mit dem Argument `FILEGROWTH` von `ALTER DATABASE` festgelegt wird, entspricht der Menge von Speicherplatz, die der Datei immer dann hinzugefügt wird, wenn neuer Speicherplatz erforderlich wird. 
  
-Weitere Informationen zu den Argumenten `FILEGROWTH` und `SIZE` von `ALTER DATABASE` finden Sie unter [ALTER DATABASE-Optionen FILE und FILEGROUP &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).
+Weitere Informationen zu den Argumenten `FILEGROWTH` und `SIZE` von `ALTER DATABASE` finden Sie unter [ALTER DATABASE-Optionen FILE und FILEGROUP & #40;Transact-SQL& #41;](../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).
 
 > [!TIP]
 > Informationen darüber, wie Sie die optimale VLF-Verteilung für die aktuelle Größe des Transaktionsprotokolls aller Datenbanken in einer bestimmten Instanz sowie die benötigten Wachstumsinkremente zum Erreichen der erforderlichen Größe ermitteln, finden Sie in [diesem Skript](http://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs).

@@ -13,12 +13,12 @@ ms.assetid: 01a9e3c1-2a5f-4b98-a424-0ffc15d312cf
 caps.latest.revision: 7
 author: rothja
 ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 413b82b4149b96d6708c9e8a592ea3b4f7e253e9
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
+manager: craigg
+ms.openlocfilehash: feb219239a2f686d11a79c5df474cc61c9874bd7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="clusterlog-always-on-availability-groups"></a>CLUSTER.LOG (Always On-Verfügbarkeitsgruppen)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

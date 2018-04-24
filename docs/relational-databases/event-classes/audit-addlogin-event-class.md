@@ -1,34 +1,35 @@
 ---
 title: Audit Addlogin-Ereignisklasse | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Audit Addlogin event class
 ms.assetid: 6e0633dc-889e-49ef-bace-3c50958db2dd
-caps.latest.revision: 
+caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 307e71a029c1e2aba66394d323ffe04017df153f
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 5dc30ba9153b294c968429d380108033e613b1fd
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="audit-addlogin-event-class"></a>Audit Addlogin-Ereignisklasse
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Die **Audit Addlogin** -Ereignisklasse tritt auf, wenn ein [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldename hinzugefügt oder entfernt wird.  
+  Die **Audit Addlogin** -Ereignisklasse tritt auf, wenn ein [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldename hinzugefügt oder entfernt wird.  
   
  Wenn Sie beim Hinzufügen des Anmeldenamens zusätzliche Eigenschaften festlegen, z. B. eine Standarddatenbank, sind die Informationen zu diesen Eigenschaften in der **TextData** -Spalte dieses Ereignisses zu finden. Wenn Sie diese Eigenschaften beim Hinzufügen eines Anmeldenamens festlegen, tritt kein Ereignis der **Audit Login Change Property** -Ereignisklasse auf.  
   

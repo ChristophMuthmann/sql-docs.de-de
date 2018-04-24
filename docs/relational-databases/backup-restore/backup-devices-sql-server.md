@@ -2,7 +2,7 @@
 title: Sicherungsmedien (SQL Server) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/12/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: backup-restore
@@ -33,11 +33,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: fda4874de4ba9df6c8bab86ca8201dff76b28f33
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+ms.openlocfilehash: 45ff0eb0fb8129ce38664540e2168ff92d5f84f1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="backup-devices-sql-server"></a>Sicherungsmedien (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -75,7 +75,7 @@ ms.lasthandoff: 04/10/2018
   
  TO DISK **=** { **'***Name_des_physischen_Sicherungsgeräts***'** | **@***Name_des_physischen_Sicherungsgeräts_Variable* }  
   
- Beispiel:  
+ Zum Beispiel:  
   
 ```sql  
 BACKUP DATABASE AdventureWorks2012   
@@ -125,7 +125,7 @@ GO
 ## <a name="specify-a-universal-naming-convention-unc-name"></a>Angeben eines UNC-Namen (Universal Naming Convention)  
  Zum Angeben einer Netzwerkfreigabe in einem Sicherungs- oder Wiederherstellungsbefehl verwenden Sie den vollqualifizierten UNC-Namen der Datei für das Sicherungsmedium. Ein UNC-Name weist das Format **\\\\***Systemname***\\***Freigabename***\\***Pfad***\\***Dateiname* auf.  
   
- Beispiel:  
+ Zum Beispiel:  
   
 ```sql  
 BACKUP DATABASE AdventureWorks2012   
@@ -136,7 +136,7 @@ GO
  
 ##  <a name="TapeDevices"></a> Verwenden von Bandgeräten  
   
-> **HINWEIS:** Die Unterstützung für Bandsicherungsgeräte wird in zukünftigen Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]entfernt. Verwenden Sie diese Funktion beim Entwickeln neuer Anwendungen nicht, und planen Sie das Ändern von Anwendungen, in denen es zurzeit verwendet wird.  
+> **HINWEIS:** Die Unterstützung für Bandsicherungsgeräte wird in zukünftigen Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden.  
    
  Zum Sichern von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Daten auf Band ist mindestens ein Bandlaufwerk erforderlich, das vom [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Betriebssystem unterstützt wird. Verwenden Sie für diese Laufwerke nur die vom Hersteller des Laufwerks empfohlenen Bänder. Weitere Informationen zum Installieren eines Bandlaufwerks finden Sie in der Dokumentation zum Windows-Betriebssystem.  
   
@@ -155,7 +155,7 @@ GO
   
  TO TAPE **=** { **'***Name_des_physischen_Sicherungsgeräts***'** | **@***Name_des_physischen_Sicherungsgeräts_Variable* }  
   
- Beispiel:  
+ Zum Beispiel:  
   
 ```sql  
 BACKUP LOG AdventureWorks2012   

@@ -1,31 +1,32 @@
 ---
-title: "Überspringen einer Tabellenspalte mithilfe einer Formatdatei (SQL Server) | Microsoft-Dokumentation"
-ms.custom: 
+title: Überspringen einer Tabellenspalte mithilfe einer Formatdatei (SQL Server) | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 02/15/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: import-export
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-bulk-import-export
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - skipping columns when importing
 - format files [SQL Server], skipping columns
 ms.assetid: 30e0e7b9-d131-46c7-90a4-6ccf77e3d4f3
-caps.latest.revision: 
+caps.latest.revision: 50
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ffe13b9772d5c281897fa2e9099060e6858660b6
-ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 71ad1ae945f4b8aca1ef1fa259b5ffb78fd753af
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="use-a-format-file-to-skip-a-table-column-sql-server"></a>Überspringen einer Tabellenspalte mithilfe einer Formatdatei (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -99,8 +100,8 @@ Sie können eine Tabellenspalte auslassen, indem Sie eine standardmäßige Nicht
 Die bevorzugte Methode zum Überspringen einer Spalte umfasst die folgenden drei Schritte:
 
 1.   Löschen Sie zuerst alle Formatdateizeilen, in denen Felder beschrieben werden, die in der Quelldatendatei fehlen.
-2.   Ändern Sie anschließend den Wert „Reihenfolge der Felder der Hostdatei“ für die einzelnen Formatdateizeilen, die auf eine gelöschte Zeile folgen. Das Ziel besteht darin, mithilfe der „Host file field order“-Werte (Reihenfolge der Felder der Hostdatei) von 1 bis *n*die eigentliche Position der einzelnen Datenfelder in der Datendatei zu erhalten.
-3.   Abschließend muss der Wert im Feld „Spaltenanzahl“ entsprechend der tatsächlichen Anzahl der Felder in der Datendatei verringert werden.  
+2.   Ändern Sie anschließend den Wert "Reihenfolge der Felder der Hostdatei" für die einzelnen Formatdateizeilen, die auf eine gelöschte Zeile folgen. Das Ziel besteht darin, mithilfe der „Host file field order“-Werte (Reihenfolge der Felder der Hostdatei) von 1 bis *n*die eigentliche Position der einzelnen Datenfelder in der Datendatei zu erhalten.
+3.   Abschließend muss der Wert im Feld "Spaltenanzahl" entsprechend der tatsächlichen Anzahl der Felder in der Datendatei verringert werden.  
   
 Das folgende Beispiel basiert ebenfalls auf der Standardformatdatei für die Tabelle `myTestSkipCol`. In dieser geänderten Formatdatei wird `Col1`das erste Datenfeld zugeordnet, `Col2`wird ausgelassen, und das zweite Datenfeld wird `Col3`zugeordnet. Die Zeile für `Col2` wurde gelöscht. Das Trennzeichen nach dem ersten Feld wurde ebenfalls von `\t` in `,` geändert.
   
@@ -113,7 +114,7 @@ Das folgende Beispiel basiert ebenfalls auf der Standardformatdatei für die Tab
   
 #### <a name="option-2---modify-the-row-definition"></a>Option 2: Ändern der Zeilendefinition
 
-Alternativ können Sie eine Tabellenspalte auslassen, indem Sie die Definition der Formatdateizeile ändern, die der Tabellenspalte entspricht. In dieser Formatdateizeile müssen die Werte „prefix length“, „host file data length“ und „server column order“ auf 0 festgelegt werden. Außerdem müssen die Felder „terminator“ und „column collation“ auf „“ (d.h. auf einen leeren oder NULL-Wert) festgelegt werden. Für „server column name“ (Serverspaltenname)muss eine Zeichenfolge eingegeben werden, die nicht leer ist. Dabei muss es sich jedoch auch nicht um den tatsächlichen Spaltennamen handeln. Für die verbleibenden Formatfelder sind die entsprechenden Standardwerte erforderlich.  
+Alternativ können Sie eine Tabellenspalte auslassen, indem Sie die Definition der Formatdateizeile ändern, die der Tabellenspalte entspricht. In dieser Formatdateizeile müssen die Werte "prefix length", "host file data length" und "server column order" auf 0 festgelegt werden. Außerdem müssen die Felder „terminator“ und „column collation“ auf „“ (d.h. auf einen leeren oder NULL-Wert) festgelegt werden. Für „server column name“ (Serverspaltenname)muss eine Zeichenfolge eingegeben werden, die nicht leer ist. Dabei muss es sich jedoch auch nicht um den tatsächlichen Spaltennamen handeln. Für die verbleibenden Formatfelder sind die entsprechenden Standardwerte erforderlich.  
   
 Das folgende Beispiel wird ebenfalls von der Standardformatdatei der `myTestSkipCol` -Tabelle abgeleitet.  
   
@@ -153,7 +154,7 @@ bcp WideWorldImporters..myTestSkipCol format nul -f myTestSkipCol_Default.xml -c
 ```  
   
 > [!IMPORTANT]  
->  Möglicherweise müssen Sie mit dem `-S`-Argument den Namen der Serverinstanz angeben, mit der Sie eine Verbindung herstellen. Außerdem kann es erforderlich sein, den Benutzernamen und das entsprechende Kennwort mit den Argumenten `-U` und `-P` anzugeben. Weitere Informationen finden Sie unter [bcp (Hilfsprogramm)](../../tools/bcp-utility.md).  
+>  Möglicherweise müssen Sie mit dem `-S`-Argument den Namen der Serverinstanz angeben, mit der Sie eine Verbindung herstellen. Außerdem kann es erforderlich sein, den Benutzernamen und das entsprechende Kennwort mit den Argumenten `-U` und `-P` anzugeben. Weitere Informationen finden Sie unter [bcp Utility](../../tools/bcp-utility.md).  
  
 Mit dem zuvor genannten Befehl wird eine XML-Formatdatei namens `myTestSkipCol_Default.xml` erstellt. Diese Formatdatei wird auch als *Standardformatdatei* bezeichnet. Es handelt sich hierbei um die Form, in der Dateien von **bcp**generiert werden. Mit einer Standardformatdatei wird eine 1:1-Entsprechung zwischen den Feldern in der Datendatei und den Spalten in der Tabelle beschrieben.  
   

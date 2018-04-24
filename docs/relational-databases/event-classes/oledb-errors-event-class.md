@@ -1,34 +1,35 @@
 ---
 title: OLEDB Errors-Ereignisklasse | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - OLEDB Errors event class
 ms.assetid: 0ce1e906-5d92-42f2-ab38-8771ad5ca008
-caps.latest.revision: 
+caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 91e0272bfabcf627048567ef9366d5f0306a0236
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 68a64d0402fe0928f32cdd82c0203d5044b77142
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="oledb-errors-event-class"></a>OLEDB Errors-Ereignisklasse
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Die OLEDB Errors-Ereignisklasse tritt in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf, wenn beim Aufruf eines OLE DB-Anbieters ein Fehler zurückgegeben wird. Verwenden Sie diese Ereignisklasse in Ablaufverfolgungen, um ein fehlgeschlagenes HRESULT von einem OLE DB-Anbieter anzuzeigen.  
+  Die OLEDB Errors-Ereignisklasse tritt in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf, wenn beim Aufruf eines OLE DB-Anbieters ein Fehler zurückgegeben wird. Verwenden Sie diese Ereignisklasse in Ablaufverfolgungen, um ein fehlgeschlagenes HRESULT von einem OLE DB-Anbieter anzuzeigen.  
   
  Wenn die OLEDB Errors-Ereignisklasse in eine Ablaufverfolgung eingeschlossen ist, ist der Verarbeitungsaufwand davon abhängig, wie häufig im Rahmen der Ablaufverfolgung OLE DB-Anbieterfehler für die Datenbank auftreten. Wenn solche Fehler häufig auftreten, kann die Gesamtleistung durch die Ablaufverfolgung erheblich beeinträchtigt werden.  
   

@@ -1,31 +1,32 @@
 ---
-title: "Konfigurieren von Speicherplätzen mit NVDIMM-N-Zurückschreibcache | Microsoft Dokumentation"
-ms.custom: 
+title: Konfigurieren von Speicherplätzen mit NVDIMM-N-Zurückschreibcache | Microsoft Dokumentation
+ms.custom: ''
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: performance
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 861862fa-9900-4ec0-9494-9874ef52ce65
-caps.latest.revision: 
+caps.latest.revision: 8
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8f44b4ff58ecef4ea1b7da5c9ceb7673368af194
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: d24f8c39d4ab76c7887fb100a6235a1a8d775279
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="configuring-storage-spaces-with-a-nvdimm-n-write-back-cache"></a>Konfigurieren von Speicherplätzen mit NVDIMM-N-Zurückschreibcache
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Windows Server 2016 unterstützt NVDIMM-N-Geräte, die extrem schnelle Eingabe-/Ausgabevorgänge (E/A-Vorgänge) ermöglichen. Eine hervorragende Möglichkeit der Verwendung solcher Geräte ist ein Zurückschreibcache, um niedrige Schreiblatenzen zu erreichen. In diesem Thema wird erläutert, wie ein gespiegelter Speicherplatz mit einem gespiegelten NVDIMM-N-Zurücksückschreibcache als virtuelles Laufwerk eingerichtet werden kann, um das SQL Server-Transaktionsprotokoll zu speichern. Wenn Sie den Speicherplatz auch dazu verwenden möchten, Datentabellen oder andere Daten zu speichern, können Sie weitere Datenträger in den Speicherpool aufnehmen oder, wenn Isolation wichtig ist, mehrere Pools erstellen.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Windows Server 2016 unterstützt NVDIMM-N-Geräte, die extrem schnelle Eingabe-/Ausgabevorgänge (E/A-Vorgänge) ermöglichen. Eine hervorragende Möglichkeit der Verwendung solcher Geräte ist ein Zurückschreibcache, um niedrige Schreiblatenzen zu erreichen. In diesem Thema wird erläutert, wie ein gespiegelter Speicherplatz mit einem gespiegelten NVDIMM-N-Zurücksückschreibcache als virtuelles Laufwerk eingerichtet werden kann, um das SQL Server-Transaktionsprotokoll zu speichern. Wenn Sie den Speicherplatz auch dazu verwenden möchten, Datentabellen oder andere Daten zu speichern, können Sie weitere Datenträger in den Speicherpool aufnehmen oder, wenn Isolation wichtig ist, mehrere Pools erstellen.  
   
  Ein Channel 9-Video zur Nutzung dieser Technik finden Sie unter [Using Non-volatile Memory (NVDIMM-N) as Block Storage in Windows Server 2016](https://channel9.msdn.com/Events/Build/2016/P466).  
   

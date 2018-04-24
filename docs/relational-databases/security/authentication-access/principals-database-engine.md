@@ -1,16 +1,16 @@
 ---
 title: Prinzipale (Datenbankmodul) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 01/09/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.roleproperties.selectroll.f1
@@ -31,16 +31,17 @@ helpviewer_keywords:
 - users [SQL Server], principals
 - '##MS_SQLReplicationSigningCertificate##'
 ms.assetid: 3f7adbf7-6e40-4396-a8ca-71cbb843b5c2
-caps.latest.revision: 
+caps.latest.revision: 57
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ab67ccf5240ad3797bf744b56e615a92fa95d9bd
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: c071c953f36a1e32612366c6cbb7a4a1666ef5f9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="principals-database-engine"></a>Prinzipale (Datenbankmodul)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -67,7 +68,7 @@ ms.lasthandoff: 12/01/2017
 
 ## <a name="dbo-user-and-dbo-schema"></a>dbo-Benutzer und dbo-Schema
 
-Der `dbo`-Benutzer ist ein spezieller Benutzerprinzipal in jeder Datenbank. Alle SQL Server-Administratoren, Mitglieder der festen Serverrolle `sysadmin`, der `sa`-Anmeldename und die Besitzer der Datenbank treten in Datenbanken als `dbo`-Benutzer auf. Der `dbo`-Benutzer besitzt alle Berechtigungen in der Datenbank; er unterliegt keinen Beschränkungen und kann nicht gelöscht werden. Zwar steht `dbo` für Datenbankbesitzer, doch ist das `dbo`-Benutzerkonto nicht identisch mit der festen Datenbankrolle `db_owner`, und die feste Datenbankrolle `db_owner` ist wiederum nicht identisch mit dem Benutzerkonto, das als Besitzer der Datenbank vermerkt ist.     
+Der `dbo`-Benutzer ist ein spezieller Benutzerprinzipal in jeder Datenbank. Alle SQL Server-Administratoren, Mitglieder der festen Serverrolle `sysadmin`, der `sa`-Anmeldename und die Besitzer der Datenbank treten in Datenbanken als `dbo`-Benutzer auf. Der `dbo`-Benutzer besitzt alle Berechtigungen in der Datenbank; er unterliegt keinen Beschränkungen und kann nicht gelöscht werden. `dbo` steht für Datenbankbesitzer. Doch das `dbo`-Benutzerkonto ist nicht identisch mit der festen Datenbankrolle `db_owner`, und die feste Datenbankrolle `db_owner` ist wiederum nicht identisch mit dem Benutzerkonto, das als Besitzer der Datenbank aufgezeichnet ist.     
 Der `dbo`-Benutzer besitzt das `dbo`-Schema. Das `dbo`-Schema ist das Standardschema für alle Benutzer, sofern kein anderes Schema angegeben wird.  Das `dbo`-Schema kann nicht gelöscht werden.
   
 ## <a name="public-server-role-and-database-role"></a>Serverrolle und Datenbankrolle „public“  
@@ -93,7 +94,7 @@ Jeder Anmeldename gehört zu der festen Serverrolle `public`, und jeder Datenban
  Jede Datenbank enthält einen `guest`. Dem `guest` -Benutzer erteilte Berechtigungen werden von Benutzern geerbt, die Zugriff auf die Datenbank, jedoch kein Benutzerkonto in der Datenbank besitzen. Der `guest`-Benutzer kann nicht gelöscht werden. Er kann jedoch deaktiviert werden, indem seine CONNECT-Berechtigung aufgehoben wird. Die CONNECT-Berechtigung kann durch Ausführen von `REVOKE CONNECT FROM GUEST;` in einer beliebigen Datenbank mit Ausnahme der `master`- oder `tempdb`-Datenbank aufgehoben werden.  
   
   
-## <a name="related-tasks"></a>Verwandte Aufgaben  
+## <a name="related-tasks"></a>Related Tasks  
  Informationen zum Entwerfen eines Berechtigungssystems finden Sie unter [Getting Started with Database Engine Permissions](../../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).  
   
  Dieser Abschnitt der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Onlinedokumentation umfasst die folgenden Themen:  
@@ -106,7 +107,7 @@ Jeder Anmeldename gehört zu der festen Serverrolle `public`, und jeder Datenban
   
 -   [Anwendungsrollen](../../../relational-databases/security/authentication-access/application-roles.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Sichern von SQL Server](../../../relational-databases/security/securing-sql-server.md)   
  [sys.database_principals &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)   
  [sys.server_principals &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   

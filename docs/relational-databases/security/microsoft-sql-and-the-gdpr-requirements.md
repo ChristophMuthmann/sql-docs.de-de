@@ -2,7 +2,7 @@
 title: Microsoft SQL und die Anforderungen der Datenschutz-Grundverordnung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 05/24/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.reviewer: ''
@@ -14,11 +14,12 @@ caps.latest.revision: 2
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: 228cc003bfdd61bd0ead16e34810e52caf143438
-ms.sourcegitcommit: 094c46e7fa6de44735ed0040c65a40ec3d951b75
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 4053a417a7afbf9f3d5bb605d314440852ee923e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="guide-to-enhancing-privacy-and-addressing-gdpr-requirements-with-the-microsoft-sql-platform"></a>Anleitung zur Verbesserung des Datenschutzes und zur Erfüllung der Anforderungen der Datenschutz-Grundverordnung mit der SQL-Plattform von Microsoft
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

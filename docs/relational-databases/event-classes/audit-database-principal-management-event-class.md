@@ -1,34 +1,35 @@
 ---
 title: Audit Database Principal Management-Ereignisklasse | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Audit Database Principal Management event class
 ms.assetid: 594eec78-677c-4500-ae9b-e400abf6f39c
-caps.latest.revision: 
+caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 404a0b01294facff15f3f09ba3b6d98ba5e1d567
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 0c4ef25cc986974d67451647b6cd33b0c0199c22
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="audit-database-principal-management-event-class"></a>Audit Database Principal Management-Ereignisklasse
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Die **Audit Database Principal Management** -Ereignisklasse tritt auf, wenn Prinzipale, wie z. B. Benutzer, in einer Datenbank erstellt, geändert oder gelöscht werden.  
+  Die **Audit Database Principal Management** -Ereignisklasse tritt auf, wenn Prinzipale, wie z. B. Benutzer, in einer Datenbank erstellt, geändert oder gelöscht werden.  
   
 ## <a name="audit-database-principal-management-event-class-data-columns"></a>Datenspalten der Audit Database Principal Management-Ereignisklasse  
   

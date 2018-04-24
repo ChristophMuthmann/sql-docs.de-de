@@ -1,31 +1,31 @@
 ---
-title: "Replikationskonflikt-Viewer und interaktiver Konfliktlöser von Microsoft | Microsoft-Dokumentation"
-ms.custom: 
+title: Replikationskonflikt-Viewer und interaktiver Konfliktlöser von Microsoft | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: replication
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - replication conflict viewer [SQL Server]
 - interactive resolver [SQL Server replication]
 ms.assetid: 641bd224-fcde-4ad4-9518-369cbeb398e4
-caps.latest.revision: 
+caps.latest.revision: 22
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6628a7ab0a239604442aa8421ff78c2bcf29902f
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+ms.openlocfilehash: 62d1e0ccad87d7e79edc213a41f785f0711e1e74
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="microsoft-replication-conflict-viewer-and-interactive-resolver"></a>Replikationskonflikt-Viewer und interaktiver Konfliktlöser von Microsoft
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

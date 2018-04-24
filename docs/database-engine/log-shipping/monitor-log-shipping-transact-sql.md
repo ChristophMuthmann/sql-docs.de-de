@@ -1,15 +1,16 @@
 ---
-title: "Überwachen des Protokollversands (Transact-SQL) | Microsoft-Dokumentation"
-ms.custom: 
+title: Überwachen des Protokollversands (Transact-SQL) | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: log-shipping
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - log shipping [SQL Server], status
@@ -20,19 +21,20 @@ helpviewer_keywords:
 - status information [SQL Server], log shipping
 - monitoring log shipping [SQL Server]
 ms.assetid: acf3cd99-55f7-4287-8414-0892f830f423
-caps.latest.revision: "29"
+caps.latest.revision: 29
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4399ef7bef888655c6c69926b622612ba9bb84d8
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 60cb24f05e6c7793cea3dfd49ee7946651e129ff
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="monitor-log-shipping-transact-sql"></a>Überwachen des Protokollversands (Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Nach der Konfiguration des Protokollversands können Sie Informationen zum Status aller Protokollversandserver überwachen. Der Verlauf und der Status von Protokollversandvorgängen werden immer lokal durch die Protokollversandaufträge gespeichert. Der Verlauf und der Status des Sicherungsvorgangs werden auf dem primären Server gespeichert, und der Verlauf und der Status von Kopier- und Wiederherstellungsvorgängen werden auf dem sekundären Server gespeichert. Falls Sie einen Remoteüberwachungsserver implementiert haben, werden diese Informationen auch auf dem Überwachungsserver gespeichert.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Nach der Konfiguration des Protokollversands können Sie Informationen zum Status aller Protokollversandserver überwachen. Der Verlauf und der Status von Protokollversandvorgängen werden immer lokal durch die Protokollversandaufträge gespeichert. Der Verlauf und der Status des Sicherungsvorgangs werden auf dem primären Server gespeichert, und der Verlauf und der Status von Kopier- und Wiederherstellungsvorgängen werden auf dem sekundären Server gespeichert. Falls Sie einen Remoteüberwachungsserver implementiert haben, werden diese Informationen auch auf dem Überwachungsserver gespeichert.  
   
  Sie können Warnungen konfigurieren, die ausgelöst werden, falls Protokollversandvorgänge nicht wie geplant ausgeführt werden können. Fehler werden durch einen Warnungsauftrag ausgelöst, der den Status der Sicherungs- und Wiederherstellungsvorgänge überwacht. Sie können Warnungen definieren, mit denen ein Operator benachrichtigt wird, wenn diese Fehler ausgelöst werden. Falls ein Überwachungsserver konfiguriert ist, wird ein Warnungsauftrag auf dem Überwachungsserver ausgeführt, der Fehler für alle Vorgänge in der Protokollversandkonfiguration auslöst. Falls kein Überwachungsserver angegeben ist, wird ein Warnungsauftrag in der primären Serverinstanz ausgeführt, die den Sicherungsvorgang überwacht. Falls kein Überwachungsserver angegeben ist, wird außerdem ein Warnungsauftrag in jeder sekundären Serverinstanz ausgeführt, um die lokalen Kopier- und Wiederherstellungsvorgänge zu überwachen.  
   

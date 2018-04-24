@@ -1,28 +1,29 @@
 ---
 title: 'Columnstore-Indizes: Data Warehouse | Microsoft-Dokumentation'
-ms.custom: 
+ms.custom: ''
 ms.date: 12/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: indexes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 21fd153b-116d-47fc-a926-f1528299a391
-caps.latest.revision: 
+caps.latest.revision: 15
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9bc429301acd87544925195879ba116983454627
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: bce265c81c06adf13b70e5e4c05565b44120bb94
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="columnstore-indexes---data-warehouse"></a>Columnstore-Indizes: Data Warehouse
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +31,7 @@ ms.lasthandoff: 02/12/2018
   Columnstore-Indizes sind in Verbindung mit der Partitionierung unverzichtbar für die Erstellung eines [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Data Warehouse.  
   
 ## <a name="whats-new"></a>Neuigkeiten  
- [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] stellt diese Funktionen für Columnstore-Leistungsverbesserungen vor:  
+ In[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] wurden die folgenden Funktionen für Columnstore-Leistungsverbesserungen eingeführt:  
   
 -   AlwaysOn unterstützt das Abfragen eines Columnstore-Indexes auf einem lesbaren sekundären Replikat.  
 -   Multiple Active Result Sets (MARS) unterstützt Columnstore-Indizes.  

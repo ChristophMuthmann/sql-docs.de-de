@@ -1,34 +1,35 @@
 ---
 title: RPC:Starting (Ereignisklasse) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - RPC:Starting event class
 ms.assetid: 1d5c3e53-0104-41f7-ab8b-732462d859f8
-caps.latest.revision: 
+caps.latest.revision: 32
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: aef42040d1ead1ac131cd30bac21b9a743342a7f
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 44fbcb3a1aa759fe8510d1d9050c0d9e832d99fa
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="rpcstarting-event-class"></a>RPC:Starting (Ereignisklasse)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Die RPC:Starting-Ereignisklasse zeigt an, dass ein Remoteprozeduraufruf gestartet wurde.  
+  Die RPC:Starting-Ereignisklasse zeigt an, dass ein Remoteprozeduraufruf gestartet wurde.  
   
 ## <a name="rpcstarting-event-class-data-columns"></a>RPC:Starting-Ereignisklasse (Datenspalten)  
   

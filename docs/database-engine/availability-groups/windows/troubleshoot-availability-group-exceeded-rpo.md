@@ -13,12 +13,12 @@ ms.assetid: 38de1841-9c99-435a-998d-df81c7ca0f1e
 caps.latest.revision: 8
 author: rothja
 ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: e9dca78d979817cca6bc98d80946fe6d3792f070
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
+manager: craigg
+ms.openlocfilehash: ab808ad9a647ca68094ec9d46219b5a59a1c1a17
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="troubleshoot-availability-group-exceeded-rpo"></a>Problembehandlung: Verfügbarkeitsgruppe hat RPO überschritten
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

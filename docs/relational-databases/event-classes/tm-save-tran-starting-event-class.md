@@ -1,34 +1,35 @@
 ---
 title: 'TM: Save Tran Starting-Ereignisklasse | Microsoft-Dokumentation'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - 'TM: Save Tran Starting event class'
 ms.assetid: 6f19fe7c-a452-4323-b957-7e17d13bf8fd
-caps.latest.revision: 
+caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0640c3a09d1666ab028e3049e16db61d60484cf2
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 45b1c6cf46844342435af1f2815cb0144550b3cf
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="tm-save-tran-starting-event-class"></a>TM: Save Tran Starting-Ereignisklasse
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Mit der Ereignisklasse TM: Save Tran Starting  wird der Beginn einer SAVE TRANSACTION-Anforderung angegeben. Die Anforderung wird vom Client über eine Schnittstelle zur Transaktionsverwaltung gesendet.  
+  Mit der Ereignisklasse TM: Save Tran Starting  wird der Beginn einer SAVE TRANSACTION-Anforderung angegeben. Die Anforderung wird vom Client über eine Schnittstelle zur Transaktionsverwaltung gesendet.  
   
 ## <a name="tm-save-tran-starting-event-class-data-columns"></a>Datenspalten in der TM: Save Tran Starting-Ereignisklasse  
   

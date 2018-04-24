@@ -1,16 +1,16 @@
 ---
 title: Erstellen von geschachtelten Triggern | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: triggers
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-dml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - recursive DML triggers [SQL Server]
@@ -23,20 +23,21 @@ helpviewer_keywords:
 - indirect recursion [SQL Server]
 - nested DML triggers
 ms.assetid: cd522dda-b4ab-41b8-82b0-02445bdba7af
-caps.latest.revision: 
+caps.latest.revision: 32
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: db111a07ce666d9b2cde477febe8680b45327c6b
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: d3a37b5abbf9c29dd52a94033980c5b637546487
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-nested-triggers"></a>Erstellen von geschachtelten Triggern
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
-Sowohl DML-Trigger als auch DDL-Trigger werden geschachtelt, wenn ein Trigger eine Aktion ausführt, die einen anderen Trigger auslöst. Diese Aktionen können andere Trigger auslösen usw. DML- und DDL-Trigger können bis auf 32 Ebenen geschachtelt werden. Sie können über die **Geschachtelte Trigger** -Serverkonfigurationsoption steuern, ob AFTER-Trigger geschachtelt werden können. INSTEAD OF-Trigger (nur DML-Trigger können INSTEAD OF-Trigger sein) können unabhängig von dieser Einstellung geschachtelt werden.  
+  Sowohl DML-Trigger als auch DDL-Trigger werden geschachtelt, wenn ein Trigger eine Aktion ausführt, die einen anderen Trigger auslöst. Diese Aktionen können andere Trigger auslösen usw. DML- und DDL-Trigger können bis auf 32 Ebenen geschachtelt werden. Sie können über die **Geschachtelte Trigger** -Serverkonfigurationsoption steuern, ob AFTER-Trigger geschachtelt werden können. INSTEAD OF-Trigger (nur DML-Trigger können INSTEAD OF-Trigger sein) können unabhängig von dieser Einstellung geschachtelt werden.  
   
 > [!NOTE]  
 >  Alle Verweise auf verwalteten Code aus einem Trigger von [!INCLUDE[tsql](../../includes/tsql-md.md)] zählen als eine Ebene hinsichtlich der Schachtelungsgrenze von 32 Ebenen. Methoden, die aus verwaltetem Code aufgerufen werden, werden nicht mitgezählt.  

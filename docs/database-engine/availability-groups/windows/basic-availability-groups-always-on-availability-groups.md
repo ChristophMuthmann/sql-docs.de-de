@@ -1,27 +1,27 @@
 ---
-title: "Basis-Verfügbarkeitsgruppen (Always On-Verfügbarkeitsgruppen) | Microsoft-Dokumentation"
-ms.custom: 
+title: Basis-Verfügbarkeitsgruppen (Always On-Verfügbarkeitsgruppen) | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 02/01/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: availability-groups
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-high-availability
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 285adbc7-ac9b-40f6-b4a9-3f1591d3b632
-caps.latest.revision: 
+caps.latest.revision: 9
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ba38095f11a5f40ec6b9a9398217a98f390d146d
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: e63ba118f2b27bd20c5c707749289b77e94f9576
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="basic-availability-groups-always-on-availability-groups"></a>Basis-Verfügbarkeitsgruppen (AlwaysOn-Verfügbarkeitsgruppen)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

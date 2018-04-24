@@ -1,34 +1,35 @@
 ---
 title: User Error Message-Ereignisklasse | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - User Error Message event class
 ms.assetid: d7594261-ccd9-487c-9678-11875ba57fb7
-caps.latest.revision: 
+caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bffe045c4ff0dbd58cd7b866102152fe28207ce7
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: e23805b81115d19b6c31b5c1bf912442dea1d760
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="user-error-message-event-class"></a>User Error Message-Ereignisklasse
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Die User Error Message-Ereignisklasse zeigt die Fehlermeldung an, die der Benutzer bei einem Fehler oder einer Ausnahme sieht. Der Text der Fehlermeldung wird im TextData-Feld angezeigt.  
+  Die User Error Message-Ereignisklasse zeigt die Fehlermeldung an, die der Benutzer bei einem Fehler oder einer Ausnahme sieht. Der Text der Fehlermeldung wird im TextData-Feld angezeigt.  
   
 ## <a name="user-error-message-event-class-data-columns"></a>Datenspalten der User Error Message-Ereignisklasse  
   

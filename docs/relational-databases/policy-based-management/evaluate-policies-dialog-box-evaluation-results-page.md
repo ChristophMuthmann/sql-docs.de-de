@@ -1,33 +1,34 @@
 ---
 title: Dialogfeld 'Richtlinien auswerten', Seite 'Auswertungsergebnisse' | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: performance-monitor
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.dmf.evalpoliciesresults.f1
 ms.assetid: 203091e2-043f-4adb-a9de-fd071492c693
-caps.latest.revision: 
+caps.latest.revision: 16
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bc11b243f15c6046a342aec2279a86cd1ec2c69c
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: b714680da0189a11910a0aee4f2298285546d32c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="evaluate-policies-dialog-box-evaluation-results-page"></a>Dialogfeld 'Richtlinien auswerten', Seite 'Auswertungsergebnisse'
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Mithilfe dieses Dialogfelds können Sie die Ergebnisse der Richtlinienauswertung anzeigen und richtlinienbasierte Verwaltungsrichtlinien auf einen Satz von Zielen anwenden, die mit den Richtlinien nicht übereinstimmen.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Mithilfe dieses Dialogfelds können Sie die Ergebnisse der Richtlinienauswertung anzeigen und richtlinienbasierte Verwaltungsrichtlinien auf einen Satz von Zielen anwenden, die mit den Richtlinien nicht übereinstimmen.  
   
 ## <a name="options"></a>Tastatur  
  **Ergebnisse: Richtlinie**  

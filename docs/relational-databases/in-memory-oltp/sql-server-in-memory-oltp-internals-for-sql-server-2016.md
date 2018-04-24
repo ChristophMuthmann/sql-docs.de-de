@@ -1,28 +1,28 @@
 ---
-title: "Merkmale von SQL Server In-Memory-OLTP für SQL Server 2016 | Microsoft-Dokumentation"
-ms.custom: 
+title: Merkmale von SQL Server In-Memory-OLTP für SQL Server 2016 | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 09/14/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: in-memory-oltp
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine-imoltp
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: b14da361-a6b8-4d85-b196-7f2f13650f44
-caps.latest.revision: 
+caps.latest.revision: 2
 author: jodebrui
 ms.author: jodebrui
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 43f0aab1ed990ab2a01deead8886c4eb58892794
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 1681e156caea430ca3eab32544e0baf8133d5736
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-server-in-memory-oltp-internals-for-sql-server-2016"></a>Merkmale von SQL Server In-Memory-OLTP für SQL Server 2016
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -1,33 +1,34 @@
 ---
-title: "Überwachen und Erzwingen von Best Practices mit der richtlinienbasierten Verwaltung | Microsoft-Dokumentation"
-ms.custom: 
+title: Überwachen und Erzwingen von Best Practices mit der richtlinienbasierten Verwaltung | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: performance-monitor
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Best Practices [Database Engine]
 ms.assetid: 46788407-187e-4b0b-bfe4-529af8d77c60
-caps.latest.revision: 
+caps.latest.revision: 27
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f48c7d177acea6812a7b10610a2ab67930b3e9e2
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: beb9c70a9aee3dae1237fe1a1a12ebf57aa0c03f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="monitor-and-enforce-best-practices-by-using-policy-based-management"></a>Überwachen und Erzwingen von Best Practices mit der richtlinienbasierten Verwaltung
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Mit der richtlinienbasierten Verwaltung können Sie bewährte Methoden für [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] überwachen. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt eine Reihe von Richtliniendateien bereit, die Sie als Richtlinien für Best Practices importieren und für die Auswertung der Richtlinien für einen Zielsatz mit Instanzen, Instanzobjekten, Datenbanken oder Datenbankobjekten verwenden können. Sie können Richtlinien manuell auswerten, Richtlinien zum Auswerten eines Zielsatzes entsprechend einem Zeitplan festlegen oder Richtlinien zum Auswerten eines Zielsatzes entsprechend einem Ereignis angeben. Weitere Informationen finden Sie unter [Verwalten von Servern mit der richtlinienbasierten Verwaltung](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Mit der richtlinienbasierten Verwaltung können Sie bewährte Methoden für [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]überwachen. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt eine Reihe von Richtliniendateien bereit, die Sie als Richtlinien für Best Practices importieren und für die Auswertung der Richtlinien für einen Zielsatz mit Instanzen, Instanzobjekten, Datenbanken oder Datenbankobjekten verwenden können. Sie können Richtlinien manuell auswerten, Richtlinien zum Auswerten eines Zielsatzes entsprechend einem Zeitplan festlegen oder Richtlinien zum Auswerten eines Zielsatzes entsprechend einem Ereignis angeben. Weitere Informationen finden Sie unter [Verwalten von Servern mit der richtlinienbasierten Verwaltung](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md).  
   
 ## <a name="policy-and-rules-for-database-engine"></a>Richtlinie und Regeln für Datenbankmodul  
  Die folgende Tabelle enthält die Richtlinien, die in der Installation von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] enthalten sind, sowie Informationen über die Regeln für bewährte Methoden, die von den einzelnen Richtlinien ausgewertet werden. Die Richtlinien werden als XML-Dateien gespeichert und werden in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]importiert. Weitere Informationen über das Importieren von Richtlinien finden Sie unter [Importieren einer Richtlinie der richtlinienbasierten Verwaltung](../../relational-databases/policy-based-management/import-a-policy-based-management-policy.md).  

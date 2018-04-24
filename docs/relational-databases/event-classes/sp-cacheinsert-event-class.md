@@ -1,34 +1,35 @@
 ---
 title: SP:CacheHit (Ereignisklasse) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SP:CacheInsert event class
 ms.assetid: 37fb9bec-b462-4563-8e50-ec84d5407e20
-caps.latest.revision: 
+caps.latest.revision: 36
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a162db1162eb99902b7afab84aa42f83205ba5ee
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 6bfe3e8896feaa0238fd3b38f09304f2b72bb01a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spcacheinsert-event-class"></a>SP:CacheInsert (Ereignisklasse)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Die SP:CacheInsert-Ereignisklasse zeigt an, dass die gespeicherte Prozedur in den Prozedurcache eingefügt wurde.  
+  Die SP:CacheInsert-Ereignisklasse zeigt an, dass die gespeicherte Prozedur in den Prozedurcache eingefügt wurde.  
   
 ## <a name="spcacheinsert-event-class-data-columns"></a>Datenspalten der SP:CacheInsert-Ereignisklasse  
   

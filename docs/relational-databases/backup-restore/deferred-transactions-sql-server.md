@@ -1,16 +1,16 @@
 ---
-title: "Verzögerte Transaktionen (SQL Server) | Microsoft-Dokumentation"
-ms.custom: 
+title: Verzögerte Transaktionen (SQL Server) | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: backup-restore
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-backup-restore
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - I/O [SQL Server], database recovery
@@ -18,19 +18,20 @@ helpviewer_keywords:
 - deferred transactions
 - modifying transaction deferred state
 ms.assetid: 6fc0f9b6-d3ea-4971-9f27-d0195d1ff718
-caps.latest.revision: 
+caps.latest.revision: 45
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 990768fa64b5da13d633c28ae64a0ab0c95e78b7
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: ebdce0b5f382f30437ee0fa78cb9d9bdba4ed2c4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="deferred-transactions-sql-server"></a>Markierte Transaktionen [SQL Server]
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Enterprise kann eine beschädigte Transaktion verzögert werden, wenn für das Rollback (Rückgängig machen) erforderliche Daten während des Starts der Datenbank offline sind. Bei einer *verzögerten Transaktion* handelt es sich um eine Transaktion, für die kein Commit ausgeführt wird, wenn die Rollforwardphase beendet wird, und bei der ein Fehler auftritt, sodass für die Transaktion kein Rollback ausgeführt werden kann. Da kein Rollback ausgeführt werden kann, wird die Transaktion verzögert.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise kann eine beschädigte Transaktion verzögert werden, wenn für das Rollback (Rückgängig machen) erforderliche Daten während des Starts der Datenbank offline sind. Bei einer *verzögerten Transaktion* handelt es sich um eine Transaktion, für die kein Commit ausgeführt wird, wenn die Rollforwardphase beendet wird, und bei der ein Fehler auftritt, sodass für die Transaktion kein Rollback ausgeführt werden kann. Da kein Rollback ausgeführt werden kann, wird die Transaktion verzögert.  
   
 > [!NOTE]  
 >  Beschädigte Transaktionen werden nur in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise verzögert. In anderen Editionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]kann eine beschädigte Transaktion nicht gestartet werden.  
