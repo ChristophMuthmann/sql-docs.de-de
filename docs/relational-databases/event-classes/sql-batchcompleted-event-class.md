@@ -1,34 +1,35 @@
 ---
 title: SQL:BatchCompleted-Ereignisklasse | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQL:BatchCompleted event class
 ms.assetid: 1be023e8-7a98-4400-b9e7-b24f6a3fc5ca
-caps.latest.revision: 
+caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8b3336353df19adf186229e237592c9ae331076d
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 94a5e848453d55957e62abc9be4a688fbd1df105
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlbatchcompleted-event-class"></a>SQL:BatchCompleted (Ereignisklasse)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Die SQL:BatchCompleted-Ereignisklasse gibt an, dass der [!INCLUDE[tsql](../../includes/tsql-md.md)] -Batch abgeschlossen ist.  
+  Die SQL:BatchCompleted-Ereignisklasse gibt an, dass der [!INCLUDE[tsql](../../includes/tsql-md.md)] -Batch abgeschlossen ist.  
   
 ## <a name="sqlbatchcompleted-event-class-data-columns"></a>SQL:BatchCompleted-Ereignisklasse (Datenspalten)  
   

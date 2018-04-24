@@ -1,30 +1,32 @@
-﻿---
+---
 title: Datenbankmodulinstanzen (SQL Server) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: configure-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: af9ae643-9866-4014-b36f-11ab556a773e
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 64065e9cf9ce2429ba98b8ca46bac3b000020d6b
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 14c823a19e267f0e32196a1e44598fc3fa308662
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="database-engine-instances-sql-server"></a>Datenbankmodulinstanzen (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Eine Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] ist eine Kopie der ausführbaren Datei **sqlservr.exe**, die als Betriebssystemdienst ausgeführt wird. Von jeder Instanz werden mehrere Systemdatenbanken und eine oder mehrere Benutzerdatenbanken verwaltet. Auf einem Computer können mehrere Instanzen von [!INCLUDE[ssDE](../../includes/ssde-md.md)]ausgeführt werden. Anwendungen stellen eine Verbindung mit der Instanz her, um Tasks in einer durch die Instanz verwalteten Datenbank auszuführen.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Eine Instanz des [!INCLUDE[ssDE](../../includes/ssde-md.md)] s ist eine Kopie der ausführbaren Datei **sqlservr.exe** , die als Betriebssystemdienst ausgeführt wird. Von jeder Instanz werden mehrere Systemdatenbanken und eine oder mehrere Benutzerdatenbanken verwaltet. Auf einem Computer können mehrere Instanzen von [!INCLUDE[ssDE](../../includes/ssde-md.md)]ausgeführt werden. Anwendungen stellen eine Verbindung mit der Instanz her, um Tasks in einer durch die Instanz verwalteten Datenbank auszuführen.  
   
 ## <a name="instances"></a>Instanzen  
  Eine Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] wird als Dienst ausgeführt, der alle Anwendungsanforderungen für Daten in den Datenbanken behandelt, die von der betreffenden Instanz verwaltet werden. Es handelt sich um das Ziel der Verbindungsanforderungen (Anmeldungen) von Anwendungen. Wenn sich Anwendung und Instanz auf getrennten Computern befinden, wird die Verbindung über eine Netzwerkverbindung hergestellt. Wenn sich Anwendung und Instanz auf demselben Computer befinden, kann die SQL Server-Verbindung als Netzwerkverbindung oder als Verbindung im Arbeitsspeicher ausgeführt werden. Wenn eine Verbindung hergestellt wurde, sendet eine Anwendung über die Verbindung [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen an die Instanz. Die Instanz löst die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen in Vorgänge für die Daten und Objekte in den Datenbanken auf, und wenn den Anmeldeinformationen die erforderlichen Berechtigungen gewährt wurden, werden die Tasks ausgeführt. Alle abgerufenen Daten werden zusammen mit gegebenenfalls vorhandenen Meldungen, z. B. zu Fehlern, an die Anwendung zurückgegeben.  

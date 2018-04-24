@@ -1,66 +1,67 @@
 ---
-title: "SQL Server Audit-Datensätze | Microsoft-Dokumentation"
-ms.custom: 
+title: SQL Server Audit-Datensätze | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 08/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - audit records [SQL Server]
 ms.assetid: 7a291015-df15-44fe-8d53-c6d90a157118
-caps.latest.revision: 
+caps.latest.revision: 19
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e9b78d8f726e89b0807ea04bfb52f3732226741c
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: ee9a108347a7c480ff0986de2e9041e3eb3a5805
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-server-audit-records"></a>SQL Server Audit-Datensätze
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Die Funktion [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit ermöglicht es, Ereignisgruppen und Ereignisse auf Server- und auf Datenbankebene zu überwachen. Weitere Informationen finden Sie unter [SQL Server Audit &#40;Datenbankmodul&#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md). [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Die Funktion [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit ermöglicht es, Ereignisgruppen und Ereignisse auf Serverebene und auf Datenbankebene zu überwachen. Weitere Informationen finden Sie unter [SQL Server Audit &#40;Datenbankmodul&#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md). [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]installiert haben.  
   
  Überwachungen bestehen aus null oder mehr Überwachungsaktionselementen, die in einem *Überwachungsziel*aufgezeichnet werden. Beim Überwachungsziel kann es sich um eine Binärdatei, das Windows-Sicherheitsereignisprotokoll oder das Windows-Anwendungsereignisprotokoll handeln. Die an das Ziel gesendeten Datensätze können die in der folgenden Tabelle beschriebenen Elemente enthalten:  
   
-|Spaltenname|Beschreibung|Typ|Immer verfügbar|  
+|Spaltenname|Description|Typ|Immer verfügbar|  
 |-----------------|-----------------|----------|----------------------|  
 |**event_time**|Datum und Uhrzeit der Auslösung des überwachbaren Vorgangs.|**datetime2**|ja|  
 |**sequence_no**|Hält die Reihenfolge der Datensätze innerhalb eines einzelnen Überwachungsdatensatzes fest, der zu groß für den Schreibpuffer für Überwachungen ist.|**int**|ja|  
 |**action_id**|ID der Aktion<br /><br /> Tipp: Damit **action_id** als Prädikat verwendet werden kann, muss eine Konvertierung von einer Zeichenfolge in einen numerischen Wert durchgeführt werden. Weitere Informationen finden Sie unter [Filtern von SQL Server Audit nach dem action_id-Prädikat oder class_type-Prädikat](http://blogs.msdn.com/b/sqlsecurity/archive/2012/10/03/filter-sql-server-audit-on-action-id-class-type-predicate.aspx).|**varchar(4)**|ja|  
 |**succeeded**|Gibt an, ob die Berechtigungsprüfung für die Aktion, die das Überwachungsereignis ausgelöst hat, erfolgreich war oder fehlgeschlagen ist. |**bit**<br /> 1 = Erfolg, <br />0 = Fehler|ja|  
-|**permission_bitmask**|Zeigt, sofern anwendbar, die Berechtigungen an, die gewährt, verweigert oder widerrufen wurden.|**bigint**|Nein|  
-|**is_column_permission**|Flag, das eine Berechtigung auf Spaltenebene angibt.|**bit** <br />1 = TRUE, <br />0 = False|Nein|  
+|**permission_bitmask**|Zeigt, sofern anwendbar, die Berechtigungen an, die gewährt, verweigert oder widerrufen wurden.|**bigint**|nein|  
+|**is_column_permission**|Flag, das eine Berechtigung auf Spaltenebene angibt.|**bit** <br />1 = TRUE, <br />0 = False|nein|  
 |**session_id**|Die ID der Sitzung, in der das Ereignis aufgetreten ist.|**int**|ja|  
 |**server_principal_id**|ID des Anmeldekontexts, in dem die Aktion ausgeführt wird.|**int**|ja|  
-|**database_principal_id**|ID des Datenbankbenutzerkontexts, in dem die Aktion ausgeführt wird.|**int**|Nein|  
-|**object_id**|Die primäre ID der Entität, bei der die Überwachung aufgetreten ist. Folgende IDs sind möglich:<br /><br /> Serverobjekte<br /><br /> Datenbanken<br /><br /> Datenbankobjekte<br /><br /> Schemaobjekte|**int**|Nein|  
+|**database_principal_id**|ID des Datenbankbenutzerkontexts, in dem die Aktion ausgeführt wird.|**int**|nein|  
+|**object_id**|Die primäre ID der Entität, bei der die Überwachung aufgetreten ist. Folgende IDs sind möglich:<br /><br /> Serverobjekte<br /><br /> Datenbanken<br /><br /> Datenbankobjekte<br /><br /> Schemaobjekte|**int**|nein|  
 |**target_server_principal_id**|Serverprinzipal, für den die überwachbare Aktion gilt.|**int**|ja|  
-|**target_database_principal_id**|Datenbankprinzipal, für den die überwachbare Aktion gilt.|**int**|Nein|  
+|**target_database_principal_id**|Datenbankprinzipal, für den die überwachbare Aktion gilt.|**int**|nein|  
 |**class_type**|Typ der überwachbaren Entität, bei der die Überwachung auftritt.|**varchar(2)**|ja|  
 |**session_server_principal_name**|Serverprinzipal für die Sitzung.|**sysname**|ja|  
 |**server_principal_name**|Aktuelle Anmeldung.|**sysname**|ja|  
 |**server_principal_sid**|Aktuelle Anmeldungs-SID.|**varbinary**|ja|  
-|**database_principal_name**|Aktueller Benutzer.|**sysname**|Nein|  
-|**target_server_principal_name**|Zielanmeldung der Aktion.|**sysname**|Nein|  
-|**target_server_principal_sid**|SID der Zielanmeldung.|**varbinary**|Nein|  
-|**target_database_principal_name**|Zielbenutzer der Aktion.|**sysname**|Nein|  
+|**database_principal_name**|Aktueller Benutzer.|**sysname**|nein|  
+|**target_server_principal_name**|Zielanmeldung der Aktion.|**sysname**|nein|  
+|**target_server_principal_sid**|SID der Zielanmeldung.|**varbinary**|nein|  
+|**target_database_principal_name**|Zielbenutzer der Aktion.|**sysname**|nein|  
 |**server_instance_name**|Der Name der Serverinstanz, in der die Überwachung aufgetreten ist. Verwendet das standardmäßige machine\instance-Format.|**nvarchar(120)**|ja|  
-|**database_name**|Der Datenbankkontext, in dem die Aktion aufgetreten ist.|**sysname**|Nein|  
-|**schema_name**|Der Schemakontext, in dem die Aktion aufgetreten ist.|**sysname**|Nein|  
-|**object_name**|Der Name der Entität, bei der die Überwachung aufgetreten ist. Folgende Namen sind möglich:<br /><br /> Serverobjekte<br /><br /> Datenbanken<br /><br /> Datenbankobjekte<br /><br /> Schemaobjekte<br /><br /> TSQL-Anweisung (falls vorhanden)|**sysname**|Nein|  
-|**statement**|TSQL-Anweisung (falls vorhanden)|**nvarchar(4000)**|Nein|  
-|**additional_information**|Zusätzliche Informationen über das als XML gespeicherte Ereignis.|**nvarchar(4000)**|Nein|  
+|**database_name**|Der Datenbankkontext, in dem die Aktion aufgetreten ist.|**sysname**|nein|  
+|**schema_name**|Der Schemakontext, in dem die Aktion aufgetreten ist.|**sysname**|nein|  
+|**object_name**|Der Name der Entität, bei der die Überwachung aufgetreten ist. Folgende Namen sind möglich:<br /><br /> Serverobjekte<br /><br /> Datenbanken<br /><br /> Datenbankobjekte<br /><br /> Schemaobjekte<br /><br /> TSQL-Anweisung (falls vorhanden)|**sysname**|nein|  
+|**statement**|TSQL-Anweisung (falls vorhanden)|**nvarchar(4000)**|nein|  
+|**additional_information**|Zusätzliche Informationen über das als XML gespeicherte Ereignis.|**nvarchar(4000)**|nein|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Einige Aktionen geben nicht den Wert einer Spalte ein, da er auf die Aktion nicht anwendbar sein könnte.  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit speichert 4000 Datenzeichen für Zeichenfelder in einem Überwachungsdatensatz. Wenn die Werte **additional_information** und **statement** , die von einer überwachbaren Aktion zurückgegeben wurden, mehr als 4000 Zeichen zurückgeben, wird die Spalte **sequence_no** dazu verwendet, mehrere Datensätze in einen Überwachungsbericht für eine einzelne Überwachungsaktion zu schreiben, um diese Daten aufzuzeichnen. Der Prozess sieht folgendermaßen aus:  

@@ -1,30 +1,31 @@
 ---
-title: "Neues im Datenbankmodul – SQL Server 2016 | Microsoft-Dokumentation"
-ms.custom: 
+title: Neues im Datenbankmodul – SQL Server 2016 | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 07/26/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: database-engine
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - what's new [SQL Server Database Engine]
 - Database Engine [SQL Server], what's new
 ms.assetid: 8f625d5a-763c-4440-97b8-4b823a6e2439
-caps.latest.revision: "431"
+caps.latest.revision: 431
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 0e5018b6b111790d2ff0415180e0608798da44ac
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 329ddc437d53421f93fb4c18c0b4f138ebdbd5e2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="whats-new-in-database-engine---sql-server-2016"></a>Neues im Datenbankmodul – SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -372,7 +373,7 @@ Zahlreiche Verbesserungen unterstützen die Features, die in anderen Abschnitten
 - Sieben neue Ansichten unterstützen die Abfragespeicherfunktion. Weitere Informationen finden Sie unter [Katalogsichten des Abfragespeichers &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md).
 - 24 neue Spalten werden zu [sys.dm_exec_query_stats &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md) hinzugefügt, um Informationen zu Speicherzuweisungen bereitzustellen.
 - Zwei neue Abfragehinweise (MIN_GRANT_PERCENT und MAX_GRANT_PERCENT) werden hinzugefügt, um Arbeitsspeicherzuweisungen festzulegen. Weitere Informationen finden Sie unter [Abfragehinweise &#40;Transact-SQL&#41;](../t-sql/queries/hints-transact-sql-query.md).
-- [sys.dm_exec_session_wait_stats &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-exec-session-wait-stats-transact-sql.md) bietet einen Bericht pro Sitzung, ähnlich dem serverweiten [dm_os_wait_stats &#40; Transact-SQL &#41;](../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md).
+- [sys.dm_exec_session_wait_stats &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-exec-session-wait-stats-transact-sql.md) bietet einen Bericht pro Sitzung, ähnlich dem serverweiten [dm_os_wait_stats & #40; Transact-SQL & #41;](../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md).
 - [sys.dm_exec_function_stats &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-exec-function-stats-transact-sql.md) stellt Statistiken zur Ausführung in Bezug auf Skalarwertfunktionen zur Verfügung.
 - Ab [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] werden Einträge in [sys.dm_db_index_usage_stats &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md) wie vor [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] beibehalten.
 - Informationen zu Anweisungen, die an eine Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] übergeben werden, können durch die neue dynamische Verwaltungsfunktion [sys.dm_exec_input_buffer &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-exec-input-buffer-transact-sql.md) zurückgegeben werden.

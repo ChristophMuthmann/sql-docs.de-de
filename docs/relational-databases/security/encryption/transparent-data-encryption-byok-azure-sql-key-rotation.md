@@ -1,30 +1,31 @@
 ---
-title: "PowerShell – Rotieren der TDE-Schutzvorrichtung – Azure SQL | Microsoft-Dokumentation"
-description: "Erfahren Sie, wie Sie die Transparent Data Encryption-Schutzvorrichtung (TDE) für einen Server von Azure SQL Server rotieren können."
-keywords: 
+title: PowerShell – Rotieren der TDE-Schutzvorrichtung – Azure SQL | Microsoft-Dokumentation
+description: Erfahren Sie, wie Sie die Transparent Data Encryption-Schutzvorrichtung (TDE) für einen Server von Azure SQL Server rotieren können.
+keywords: ''
 services: sql-database
-documentationcenter: 
+documentationcenter: ''
 author: becczhang
 manager: jhubbard
-editor: 
-ms.prod: 
-ms.reviewer: 
+editor: ''
+ms.prod: ''
+ms.reviewer: ''
 ms.suite: sql
 ms.prod_service: sql-database, sql-data-warehouse
 ms.service: sql-database
-ms.custom: 
+ms.custom: ''
 ms.component: security
 ms.workload: Inactive
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.devlang: na
 ms.topic: article
 ms.date: 08/07/2017
 ms.author: ryzhang26
-ms.openlocfilehash: 85a1d74907dc3e6b887a172247850b9bc4452b31
-ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
+monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
+ms.openlocfilehash: 43784cd826223281f922a0165b0e742979ea2c47
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="rotate-the-transparent-data-encryption-tde-protector-using-powershell"></a>Rotieren einer Transparent Data Encryption-Schutzvorrichtung (TDE) mithilfe von PowerShell 
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]

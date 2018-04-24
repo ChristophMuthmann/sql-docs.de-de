@@ -13,12 +13,12 @@ ms.assetid: 39d0c98d-75af-4dd1-b908-30d31af56f2a
 caps.latest.revision: 4
 author: rothja
 ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 535e8612c3b569a7dfcd9bbe88572e0fdc8c1f29
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
+manager: craigg
+ms.openlocfilehash: d776c9447925c494df3245efb487409d272b9d99
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-server-error-log-always-on-availability-groups"></a>SQL Server-Fehlerprotokoll (Always On-Verfügbarkeitsgruppen)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

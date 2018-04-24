@@ -1,34 +1,35 @@
 ---
 title: Audit Login Change Property (Ereignisklasse) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Audit Login Change Property event class
 ms.assetid: 47c8f045-37e5-471e-bf01-55d988ed47c1
-caps.latest.revision: 
+caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6f92e1ef79f71bc123a71c67a9cbea5489c6d5a1
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 5ecc764e0e89b472d1b39d01110ca45df5214b0f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="audit-login-change-property-event-class"></a>Audit Login Change Property (Ereignisklasse)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Die Ereignisklasse **Audit Login Change Property** tritt auf, wenn Sie die gespeicherte Prozedur **sp_defaultdb** oder **sp_defaultlanguage** oder die ALTER LOGIN-Anweisung verwenden, um die Eigenschaft eines Benutzernamens zu ändern.  
+  Die Ereignisklasse **Audit Login Change Property** tritt auf, wenn Sie die gespeicherte Prozedur **sp_defaultdb** oder **sp_defaultlanguage** oder die ALTER LOGIN-Anweisung verwenden, um die Eigenschaft eines Benutzernamens zu ändern.  
   
 ## <a name="audit-login-change-property-event-class-data-columns"></a>Datenspalten in der Audit Login Change Property-Ereignisklasse  
   

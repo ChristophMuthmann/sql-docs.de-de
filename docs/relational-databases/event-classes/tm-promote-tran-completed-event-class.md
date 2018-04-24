@@ -1,34 +1,35 @@
 ---
 title: 'TM: Promote Tran Completed-Ereignisklasse | Microsoft-Dokumentation'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - 'TM: Promote Tran Completed event class'
 ms.assetid: 839beaed-b094-467a-9b97-8764e9451fc0
-caps.latest.revision: 
+caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 974b69a9771aecc02e9d916499f9fe7262f41f79
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 0d735006fa3a9a8ce89ac734dce9064b87aa051a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="tm-promote-tran-completed-event-class"></a>TM: Promote Tran Completed-Ereignisklasse
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Die TM: Promote Tran Completed-Ereignisklasse zeigt an, dass eine PROMOTE TRANSACTION-Anforderung abgeschlossen wurde. Die Anforderung wird vom Client über die Schnittstelle für die Transaktionsverwaltung gesendet.  
+  Die TM: Promote Tran Completed-Ereignisklasse zeigt an, dass eine PROMOTE TRANSACTION-Anforderung abgeschlossen wurde. Die Anforderung wird vom Client über die Schnittstelle für die Transaktionsverwaltung gesendet.  
   
 ## <a name="tm-promote-tran-completed-event-class-data-columns"></a>Datenspalten der TM: Promote Tran Completed-Ereignisklasse  
   

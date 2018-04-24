@@ -1,30 +1,30 @@
 ---
 title: MSSQLSERVER_7923 | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 04/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: errors-events
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 helpviewer_keywords:
 - 7923 (Database Engine error)
 ms.assetid: b09a95e2-0ffe-4847-aa77-51e6639259f6
-caps.latest.revision: 
+caps.latest.revision: 12
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c83486a1fe3ea1c40db840606978b67517d70ee0
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 2015fe496e17e020904a1bf82706f45274bf107d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="mssqlserver7923"></a>MSSQLSERVER_7923
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.lasthandoff: 11/21/2017
   
 |||  
 |-|-|  
-|Produktname|SQL Server|  
+|Produktname|SQL Server|  
 |Ereignis-ID|7923|  
 |Ereignisquelle|MSSQLSERVER|  
 |Komponente|SQLEngine|  
@@ -44,5 +44,5 @@ ms.lasthandoff: 11/21/2017
 Dies ist eine Informationsmeldung vom DBCC CHECKALLOC-Befehl. Sie weist den Tabellennamen und die zugehörige ID oben in einer Liste mit Zuordnungsinformationen für alle Zuordnungseinheiten in der Tabelle auf.  
   
 ## <a name="user-action"></a>Benutzeraktion  
-Keine  
+InclusionThresholdSetting  
   

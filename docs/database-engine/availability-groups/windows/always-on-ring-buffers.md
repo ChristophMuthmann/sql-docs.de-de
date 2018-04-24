@@ -13,12 +13,12 @@ ms.assetid: 47bb7a1a-c0a5-473c-a7db-d9f4bf3ee650
 caps.latest.revision: 7
 author: rothja
 ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 9adc4927435a8502327d42319f428669b2bc87ca
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
+manager: craigg
+ms.openlocfilehash: f7cca7af1978aae48099e30fe85b96d1226d7876
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="always-on-availability-groups-ring-buffers"></a>Ringpuffer für Always On-Verfügbarkeitsgruppen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

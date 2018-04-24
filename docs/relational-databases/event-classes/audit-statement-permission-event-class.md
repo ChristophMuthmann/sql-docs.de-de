@@ -1,34 +1,35 @@
 ---
 title: Audit Statement Permission-Ereignisklasse | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Audit Statement Permission event class
 ms.assetid: 84ababe0-166e-4b1e-903b-bee6c1f005e7
-caps.latest.revision: 
+caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: db99329ebf08184c1be6c17138cfeab80ecef889
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 23f4c43f596274c0540fc4b84cff94db561c9628
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="audit-statement-permission-event-class"></a>Audit Statement Permission-Ereignisklasse
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Die **Audit Statement Permission** -Ereignisklasse tritt immer dann auf, wenn eine Anweisungsberechtigung (wie CREATE TABLE) verwendet wird.  
+  Die **Audit Statement Permission** -Ereignisklasse tritt immer dann auf, wenn eine Anweisungsberechtigung (wie CREATE TABLE) verwendet wird.  
   
  Die **Audit Statement Permission** -Ereignisklasse ist in zukünftigen Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]möglicherweise nicht mehr enthalten. Es wird empfohlen, stattdessen die **Audit Schema Object Management** -Ereignisklasse zu verwenden.  
   

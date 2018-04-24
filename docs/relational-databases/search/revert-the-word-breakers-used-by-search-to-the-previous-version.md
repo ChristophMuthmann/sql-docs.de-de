@@ -1,28 +1,29 @@
 ---
-title: "Wiederherstellen der von der Suche verwendeten Wörtertrennungen auf die vorherige Version | Microsoft-Dokumentation"
-ms.custom: 
+title: Wiederherstellen der von der Suche verwendeten Wörtertrennungen auf die vorherige Version | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: search
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-search
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 29b4488e-4c6a-4bf0-a64d-19e2fdafa7ae
-caps.latest.revision: 
+caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a3ad97ccd909c55268cf2be050d913fdc931433a
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 49069efde39f405aa2c3c67e8951197fa26188d3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="revert-the-word-breakers-used-by-search-to-the-previous-version"></a>Wiederherstellen der von der Suche verwendeten Wörtertrennungen auf die vorherige Version
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -114,7 +115,7 @@ ms.lasthandoff: 02/13/2018
     > [!WARNING]  
     >  Diese Änderung wirkt sich auf alle Sprachen aus, die NaturalLanguage6.dll sowohl in der aktuellen als auch der früherer Version verwenden.  
   
-4.  Starten Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]neu.  
+4.  Starten Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] neu.  
   
 ###  <a name="nl6nl6restore"></a> So stellen Sie aktuelle Komponenten wieder her  
   
@@ -125,7 +126,7 @@ ms.lasthandoff: 02/13/2018
     > [!WARNING]  
     >  Diese Änderung wirkt sich auf alle Sprachen aus, die NaturalLanguage6.dll sowohl in der aktuellen als auch der früherer Version verwenden.  
   
-3.  Starten Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]neu.  
+3.  Starten Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] neu.  
   
 ##  <a name="newnl6"></a> Sprachen, für die nur der Dateiname der vorherigen Wörtertrennung NaturalLanguage6.dll ist  
  Für die Sprachen in der folgenden Tabelle unterscheidet sich der Dateiname für die vorherige Wörtertrennung vom Dateinamen der neuen Version. Der vorherige Dateiname ist NaturalLanguage6.dll. Um zur früheren Version wiederherzustellen, müssen Sie die aktuelle Version von NaturalLanguage6.dll mit einer früheren Version der gleichen Datei überschreiben. Sie müssen auch einen Satz von Registrierungseinträgen ändern, um die vorherige oder aktuelle Version der Komponenten anzugeben.  
@@ -178,7 +179,7 @@ ms.lasthandoff: 02/13/2018
   
 9. Wenn die ausgewählte Sprache eine Wortstammerkennung verwendet, aktualisieren Sie dann den **StemmerClass** -Schlüsselwert auf den Wert aus der Tabelle für die aktuelle Wortstammerkennung.  
   
-10. Starten Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]neu.  
+10. Starten Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] neu.  
   
 ###  <a name="newnl6restore"></a> So stellen Sie aktuelle Komponenten wieder her  
   
@@ -207,7 +208,7 @@ ms.lasthandoff: 02/13/2018
   
 7.  Wenn die ausgewählte Sprache eine Wortstammerkennung verwendet, aktualisieren Sie dann den **StemmerClass** -Schlüsselwert auf den Wert aus der Tabelle für die vorherige Wortstammerkennung.  
   
-8.  Starten Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]neu.  
+8.  Starten Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] neu.  
   
 ###  <a name="newnl6values"></a> Dateinamen und Registrierungswerte zum Wiederherstellen von Wörtertrennungen und Wortstammerkennungen  
  Verwenden Sie die folgende Liste von Dateinamen und Registrierungseinträgen zusammen mit den Anweisungen im vorangehenden Abschnitt. Verwenden Sie die vorherigen Werte, um die frühere Version wiederherzustellen, oder verwenden Sie die aktuellen Werte, um die aktuelle Version der Komponenten wiederherzustellen.  
@@ -299,7 +300,7 @@ ms.lasthandoff: 02/13/2018
   
 6.  Wenn die ausgewählte Sprache eine Wortstammerkennung verwendet, aktualisieren Sie dann den **StemmerClass** -Schlüsselwert auf den Wert aus der Tabelle für die aktuelle Wortstammerkennung.  
   
-7.  Starten Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]neu.  
+7.  Starten Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] neu.  
   
 ###  <a name="newnewrestore"></a> So stellen Sie die vorherigen Komponenten wieder her  
   
@@ -323,7 +324,7 @@ ms.lasthandoff: 02/13/2018
   
 6.  Wenn die ausgewählte Sprache eine Wortstammerkennung verwendet, aktualisieren Sie dann den **StemmerClass** -Schlüsselwert auf den Wert aus der Tabelle für die vorherige Wortstammerkennung.  
   
-7.  Starten Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]neu.  
+7.  Starten Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] neu.  
   
 ###  <a name="newnewvalues"></a> Dateinamen und Registrierungswerte zum Wiederherstellen von Wörtertrennungen und Wortstammerkennungen  
  Verwenden Sie die folgende Liste von Dateinamen und Registrierungseinträgen zusammen mit den Anweisungen im vorangehenden Abschnitt. Verwenden Sie die vorherigen Werte, um die frühere Version wiederherzustellen, oder verwenden Sie die aktuellen Werte, um die aktuelle Version der Komponenten wiederherzustellen.  

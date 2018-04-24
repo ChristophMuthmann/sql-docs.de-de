@@ -1,33 +1,34 @@
 ---
 title: Implementieren eines CASE-Ausdrucks in einer nativ kompilierten gespeicherten Prozedur | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 11/21/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: in-memory-oltp
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine-imoltp
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 2f82db01-da7e-4a7d-8bc0-48b245e6f768
-caps.latest.revision: 
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6419acc6380b15d289d3ac3602d6a28c0fc5c75b
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 884aa0d1acc75bac791dfdcc8ef1c10eceb1a02e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="implementing-a-case-expression-in-a-natively-compiled-stored-procedure"></a>Implementieren eines CASE-Ausdrucks in einer systemintern kompilierten gespeicherten Prozedur
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-**Gilt für:** [!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull_md.md)] und SQL Server ab Version [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]
+**Gilt für:**  [!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull_md.md)] und SQL Server ab Version [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]
 
 CASE-Ausdrücke werden in nativ kompilierten gespeicherten T-SQL-Modulen unterstützt. Das folgende Beispiel zeigt, wie Sie den CASE-Ausdruck in einer Abfrage verwenden können. 
 
@@ -50,7 +51,7 @@ EXEC dbo.usp_SOHOnlineOrderResult
 GO  
 ``` 
 
-**Gilt für:** [!INCLUDE[ssSQL14-md](../../includes/ssSQL14-md.md)] und SQL Server ab Version [!INCLUDE[ssSQL15-md](../../includes/ssSQL15-md.md)]
+**Gilt für:**  [!INCLUDE[ssSQL14-md](../../includes/ssSQL14-md.md)] und SQL Server ab Version [!INCLUDE[ssSQL15-md](../../includes/ssSQL15-md.md)]
 
   CASE-Ausdrücke werden *nicht* in nativ kompilierten T-SQL-Modulen unterstützt. Das folgende Beispiel zeigt eine Möglichkeit, die Funktionalität eines CASE-Ausdrucks in einer systemintern kompilierten gespeicherten Prozedur zu implementieren.  
   

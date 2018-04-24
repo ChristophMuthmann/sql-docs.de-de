@@ -1,34 +1,35 @@
 ---
 title: CursorImplicitConversion (Ereignisklasse) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - CursorImplicitConversion event class
 ms.assetid: 44d12e23-146a-42e6-bb38-1f2f6a035bad
-caps.latest.revision: 
+caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 62c9ff7500944f749523a2aa42f01d8106bf54d5
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: d7e3f4bb563b1386392b5dd8892eb22bf000a0c0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="cursorimplicitconversion-event-class"></a>CursorImplicitConversion (Ereignisklasse)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Die **CursorImplicitConversion** -Ereignisklasse beschreibt Ereignisse zu impliziten Cursorkonvertierungen, die bei API-Cursorn (Application Programming Interfaces, Schnittstellen für Anwendungsprogrammierung) oder [!INCLUDE[tsql](../../includes/tsql-md.md)] -Cursorn auftreten. Ereignisse zu impliziten Cursorkonvertierungen treten auf, wenn [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] eine Transact-SQL-Anweisung ausführt, die von Servercursorn des angeforderten Typs nicht unterstützt wird. [!INCLUDE[ssDE](../../includes/ssde-md.md)] gibt einen Fehler zurück, der anzeigt, dass sich der Cursortyp geändert hat.  
+  Die **CursorImplicitConversion** -Ereignisklasse beschreibt Ereignisse zu impliziten Cursorkonvertierungen, die bei API-Cursorn (Application Programming Interfaces, Schnittstellen für Anwendungsprogrammierung) oder [!INCLUDE[tsql](../../includes/tsql-md.md)] -Cursorn auftreten. Ereignisse zu impliziten Cursorkonvertierungen treten auf, wenn [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] eine Transact-SQL-Anweisung ausführt, die von Servercursorn des angeforderten Typs nicht unterstützt wird. [!INCLUDE[ssDE](../../includes/ssde-md.md)] gibt einen Fehler zurück, der anzeigt, dass sich der Cursortyp geändert hat.  
   
  Schließen Sie die **CursorImplicitConversion** -Ereignisklasse in Ablaufverfolgungen ein, die die Leistung von Cursorn aufzeichnen.  
   

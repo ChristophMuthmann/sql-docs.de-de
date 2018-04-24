@@ -2,7 +2,7 @@
 title: Angeben von Feld- und Zeilenabschlusszeichen (SQL Server) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: import-export
@@ -19,16 +19,17 @@ helpviewer_keywords:
 - row terminators [SQL Server]
 - terminators [SQL Server]
 ms.assetid: f68b6782-f386-4947-93c4-e89110800704
-caps.latest.revision: ''
+caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 8d596be8f4ae978a3eafe58d1cf9e8e52241f49c
-ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: ce4a92bea3af9709fadfbf4ba9b4dc356afd9fb3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="specify-field-and-row-terminators-sql-server"></a>Angeben von Feld- und Zeilenabschlusszeichen (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -46,13 +47,13 @@ ms.lasthandoff: 03/20/2018
 |Neue-Zeile-Zeichen|\n<br /><br /> Dies ist das Standardzeilenabschlusszeichen.|  
 |Wagenrücklauf/Zeilenvorschub|\r|  
 |Umgekehrter Schrägstrich*|\\\|  
-|NULL-Abschlusszeichen (nicht sichtbares Abschlusszeichen)\*\*|\0|  
+|NULL-Abschlusszeichen (nicht sichtbares Abschlusszeichen)**|\0|  
 |Jedes Zeichen, das gedruckt werden kann (Steuerzeichen können nicht gedruckt werden, ausgenommen Null, Tabstopp, Neue Zeile und Wagenrücklauf)|(*, A, t, l usw.)|  
-|Eine Zeichenfolge von bis zu 10 Zeichen, die gedruckt werden können, einschließlich einiger oder aller oben aufgeführten Abschlusszeichen|(\*\*\t\*\*, Ende, !!!!!!!!!!, \t - \n usw.)|  
+|Eine Zeichenfolge von bis zu 10 Zeichen, die gedruckt werden können, einschließlich einiger oder aller oben aufgeführten Abschlusszeichen|(**\t\*\*, Ende, !!!!!!!!!!, \t - \n usw.)|  
   
  *Um ein Steuerzeichen zu erzeugen, können in Verbindung mit dem Escapezeichen des umgekehrten Schrägstrichs nur die Zeichen t, n, r, 0 und '\0' verwendet werden.  
   
- \*\*Obwohl das NULL-Steuerzeichen (\0) beim Drucken nicht sichtbar ist, handelt es sich dabei um ein eigenständiges Zeichen in der Datendatei. Dies bedeutet, dass das Verwenden des Null-Steuerzeichens als Feld- oder Zeilenabschlusszeichen einen Unterschied dazu darstellt, überhaupt kein Feld- oder Zeilenabschlusszeichen zu verwenden.  
+ **Obwohl das NULL-Steuerzeichen (\0) beim Drucken nicht sichtbar ist, handelt es sich dabei um ein eigenständiges Zeichen in der Datendatei. Dies bedeutet, dass das Verwenden des Null-Steuerzeichens als Feld- oder Zeilenabschlusszeichen einen Unterschied dazu darstellt, überhaupt kein Feld- oder Zeilenabschlusszeichen zu verwenden.  
   
 > [!IMPORTANT]  
 >  Wenn ein Abschlusszeichen innerhalb der Daten auftritt, wird es als Abschlusszeichen, nicht als Daten interpretiert, und die Daten nach diesem Zeichen als zum nächsten Feld oder Datensatz zugehörig interpretiert. Wählen Sie deshalb die Abschlusszeichen mit Bedacht aus, um sicherzustellen, dass sie nicht anderweitig in Ihren Daten vorkommen. Beispielsweise ist ein niedriges Ersatzzeichen als Feldabschlusszeichen keine gute Wahl, wenn die Daten dieses niedrige Ersatzzeichen enthalten.  
@@ -90,7 +91,7 @@ ms.lasthandoff: 03/20/2018
         >  Nachdem Sie interaktiv alle Felder in einem **bcp**-Befehl angegeben haben, werden Sie vom Befehl dazu aufgefordert, Ihre Antworten für die einzelnen Felder in einer Nicht-XML-Formatdatei zu speichern. Weitere Informationen zu Nicht-XML-Formatdateien finden Sie unter [Nicht-XML-Formatdateien &#40;SQL Server&#41;](../../relational-databases/import-export/non-xml-format-files-sql-server.md).  
   
 ### <a name="guidelines-for-using-terminators"></a>Richtlinien für die Verwendung von Abschlusszeichen  
- In einigen Fällen ist ein Abschlusszeichen für **char** - oder **nchar** -Datenfelder nützlich. Beispiel:  
+ In einigen Fällen ist ein Abschlusszeichen für **char** - oder **nchar** -Datenfelder nützlich. Zum Beispiel:  
   
 -   Für eine Datenspalte, die einen NULL-Wert in einer Datendatei enthält, die in ein Programm importiert wird, das die Präfixlängeninformation nicht interpretieren kann.  
   
@@ -105,7 +106,7 @@ ms.lasthandoff: 03/20/2018
   
  Der Befehl **bcp** verfügt über folgende Schalter.  
   
-|Schalter|Beschreibung|  
+|Schalter|Description|  
 |------------|-----------------|  
 |**-c**|Gibt an, dass die Datenfelder als Zeichendaten geladen werden.|  
 |**-t** `,`|Gibt ein Komma (,) als Feldabschlusszeichen an.|  
@@ -144,7 +145,7 @@ bcp AdventureWorks.HumanResources.Department out C:\myDepartment-c-t.txt -c -t, 
   
      Für den OPENROWSET-Massenrowsetanbieter können Abschlusszeichen nur in der Formatdatei angegeben werden. Dies ist bis auf Datentypen für große Objekte vorgeschrieben. Wenn von einer Zeichendatendatei ein nicht-standardmäßiges Abschlusszeichen verwendet wird, muss dieses in der Formatdatei definiert werden. Weitere Informationen finden Sie unter [Erstellen einer Formatdatei &#40;SQL Server&#41;](../../relational-databases/import-export/create-a-format-file-sql-server.md) und [Massenimport von Daten mithilfe einer Formatdatei &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md).  
   
-     Weitere Informationen zur OPENROWSET BULK-Klausel finden Sie unter [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md).  
+     Weitere Informationen zur OPENROWSET BULK-Klausel finden Sie unter [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)zu markieren.  
   
 ### <a name="examples"></a>Beispiele  
  In den Beispielen in diesem Abschnitt wird jeweils ein Massenimport von Zeichendaten aus der `Department-c-t.txt` -Datendatei, die im vorhergehenden Beispiel erstellt wurde, in die `myDepartment` -Tabelle in der [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] -Beispieldatenbank ausgeführt. Vor dem Ausführen dieser Beispiele müssen Sie diese Tabelle erstellen. Führen Sie zum Erstellen dieser Tabelle unter dem **dbo** -Schema im [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] -Abfrage-Editor den folgenden Code aus:  
@@ -174,7 +175,7 @@ bcp AdventureWorks..myDepartment in C:\myDepartment-c-t.txt -c -t , -r \n -T
 #### <a name="b-using-bulk-insert-to-interactively-specify-terminators"></a>B. Verwenden von BULK INSERT zum interaktiven Angeben von Abschlusszeichen  
  Im folgenden Beispiel wird ein Massenimport der `Department-c-t.txt` -Datendatei mithilfe einer `BULK INSERT` -Anweisung ausgeführt, die die in der folgenden Tabelle aufgeführten Qualifizierer verwendet.  
   
-|Option|Attribut|  
+|Option|attribute|  
 |------------|---------------|  
 |DATAFILETYPE **='**char**'**|Gibt an, dass die Datenfelder als Zeichendaten geladen werden.|  
 |FIELDTERMINATOR **='**`,`**'**|Gibt ein Komma (`,`) als Feldabschlusszeichen an.|  
@@ -194,7 +195,7 @@ BULK INSERT myDepartment FROM 'C:\myDepartment-c-t.txt'
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [bcp Utility](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   

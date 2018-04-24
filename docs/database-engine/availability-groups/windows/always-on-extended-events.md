@@ -13,12 +13,12 @@ ms.assetid: 5950f98a-3950-473d-95fd-cde3557b8fc2
 caps.latest.revision: 6
 author: rothja
 ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 29966508374b8deec94ac60dd151ab7379ede1e7
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
+manager: craigg
+ms.openlocfilehash: 3c8783a42bc64b340858daa8c84f51633f09ffd4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="always-on-availability-groups-extended-events"></a>Erweiterte Ereignisse von Always On-Verfügbarkeitsgruppen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

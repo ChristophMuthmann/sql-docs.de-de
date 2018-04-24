@@ -2,7 +2,7 @@
 title: Ermitteln effektiver Datenbankmodulberechtigungen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: security
@@ -16,16 +16,17 @@ helpviewer_keywords:
 - permissions, effective
 - effective permissions
 ms.assetid: 273ea09d-60ee-47f5-8828-8bdc7a3c3529
-caps.latest.revision: ''
+caps.latest.revision: 5
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4d93f80a8a662edd4e84309aa95803dc0e3cc57c
-ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 7d4142a9779b689d26d775d33926496e78fec7d1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="determining-effective-database-engine-permissions"></a>Ermitteln effektiver Datenbankmodulberechtigungen
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -91,9 +92,8 @@ Um die Berechtigungen zu verstehen, die jeder Rolle gewährt werden, finden Sie 
 
 Dieses System ist flexibel, was bedeutet, dass es kompliziert sein kann, wenn die Personen, die es einrichten, präzise sein möchten. Zur Vereinfachung könnten Sie Rollen erstellen, Rollen Berechtigungen zuweisen und dann Personengruppen zu den Rollen hinzufügen. Und es ist einfacher, wenn das Entwicklungsteam für die Datenbank die Aktivitäten nach Schema trennt und dann die Rollenberechtigungen für ein ganzes Schema statt für einzelne Tabellen oder Prozeduren erteilt. Reale Szenarios sind komplex, und Geschäftsanforderungen können unerwartete Sicherheitsanforderungen schaffen.   
 
-Die folgende Grafik zeigt die Berechtigungen und ihre Beziehungen zueinander. Einige der Berechtigungen auf höherer Ebene (z.B. `CONTROL SERVER`) sind mehrmals aufgeführt. In diesem Artikel ist nicht ausreichend Platz, um das Poster entsprechend darzustellen. Klicken Sie auf das Bild zum Herunterladen der **Poster zu den Datenbankmodulberechtigungen** im PDF-Format.  
-  
- [![Datenbankmodulberechtigungen](../../../relational-databases/security/media/database-engine-permissions.PNG)](https://aka.ms/sql-permissions-poster)
+[!INCLUDE[database-engine-permissions](../../../includes/paragraph-content/database-engine-permissions.md)]
+
 
 ### <a name="security-classes"></a>Sicherheitsklassen
 

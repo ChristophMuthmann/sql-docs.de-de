@@ -13,12 +13,12 @@ ms.assetid: 57801bcc-4d51-4ffc-8454-b9cb6eddbfe0
 caps.latest.revision: 5
 author: rothja
 ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: a9d5bcfbeffd5aee89d7595d7553f4504c2c7712
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
+manager: craigg
+ms.openlocfilehash: adf59a29503b8435f88e77e03a8a41904d405593
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="useful-tools-for-troubleshooting"></a>Hilfreiche Tools für die Problembehandlung
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

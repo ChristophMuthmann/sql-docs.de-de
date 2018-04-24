@@ -1,33 +1,34 @@
 ---
-title: "Datenbank wiederherstellen (Seite „Optionen“) | Microsoft-Dokumentation"
-ms.custom: 
+title: Datenbank wiederherstellen (Seite „Optionen“) | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: backup-restore
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-backup-restore
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.restoredb.options.f1
 ms.assetid: 9a75d48b-c25f-40f3-8ea1-32cfa8211754
-caps.latest.revision: 
+caps.latest.revision: 68
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0bdd383335126a36265bc917c1679dbd5ab0dc3e
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 28b95a2a33bde272ca34132f5b2cf7e18bcc0eb1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="restore-database-options-page"></a>Datenbank wiederherstellen (Seite Optionen)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Verwenden Sie im Dialogfeld **Datenbank wiederherstellen** die Seite **Optionen**, um das Verhalten und das Ergebnis des Wiederherstellungsvorgangs zu ändern.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Verwenden Sie im Dialogfeld **Datenbank wiederherstellen** die Seite **Optionen** , um das Verhalten und das Ergebnis des Wiederherstellungsvorgangs zu ändern.  
   
  **So verwenden Sie SQL Server Management Studio zum Wiederherstellen einer Datenbanksicherung**  
   

@@ -1,34 +1,35 @@
 ---
 title: Audit Add Role-Ereignisklasse | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Audit Add Role event class
 ms.assetid: 4ea55922-608c-4db2-8b3f-873862755bba
-caps.latest.revision: 
+caps.latest.revision: 30
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2778e11c0ab2cc417dce4fd13d05426a6de340b1
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: fa214f5d5c3c85eb2b73f2c4170f04653e5f033d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="audit-add-role-event-class"></a>Audit Add Role (Ereignisklasse)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Die **Audit Add Role** -Ereignisklasse tritt auf, wenn eine Datenbankrolle einer Datenbank hinzugefügt oder daraus entfernt wird. Diese Ereignisklasse wird von den gespeicherten Prozeduren **sp_addrole** und **sp_droprole** verwendet.  
+  Die **Audit Add Role** -Ereignisklasse tritt auf, wenn eine Datenbankrolle einer Datenbank hinzugefügt oder daraus entfernt wird. Diese Ereignisklasse wird von den gespeicherten Prozeduren **sp_addrole** und **sp_droprole** verwendet.  
   
  Diese Ereignisklasse ist möglicherweise aus einer zukünftigen Version von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]entfernt. Es wird empfohlen, stattdessen die **Audit Database Principal Management** -Ereignisklasse zu verwenden.  
   

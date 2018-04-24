@@ -2,12 +2,12 @@
 title: Aktualisieren von SQL Server-Instanzen auf Windows Server 2008/2008 R2/2012-Clustern | Microsoft-Dokumentation
 ms.date: 1/25/2018
 ms.suite: sql
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database engine
 ms.component: failover-clustuers
 ms.technology:
 - dbe-high-availability
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - upgrading failover clusters
@@ -15,13 +15,13 @@ helpviewer_keywords:
 - failover clustering [SQL Server], upgrading
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3337f1c438f303775d923ec12b14891c13b36c03
-ms.sourcegitcommit: 0a9c29c7576765f3b5774b2e087852af42ef4c2d
+ms.openlocfilehash: a448edf54d4a7aa61b308d133dd1dfbdbfe4f39d
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="upgrade-sql-server-instances-running-on-windows-server-20082008-r22012-clusters"></a>Aktualisieren von SQL Server-Instanzen auf Windows Server 2008/2008 R2/2012-Clustern
 

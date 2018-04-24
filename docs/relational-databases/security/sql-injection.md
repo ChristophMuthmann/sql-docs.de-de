@@ -1,33 +1,35 @@
 ---
 title: SQL Injection | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-security
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQL Injection
 ms.assetid: eb507065-ac58-4f18-8601-e5b7f44213ab
-caps.latest.revision: 
+caps.latest.revision: 7
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5de3575bfac8b2e13e6d02835d5355b1e6b78cfa
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 6fc38f900f84abba5f1e5efab47772703f246317
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-injection"></a>SQL Injection
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Bei einem Angriff durch Einschleusung von SQL-Befehlen wird ein Schadsoftware in Zeichenfolgen eingefügt, die später zur Analyse und Ausführung an eine Instanz von SQL Server übergeben werden. Sie sollten jede Prozedur, die SQL-Anweisungen erstellt, nach Injection-Anfälligkeiten überprüfen, denn SQL Server führt alle empfangenen gültigen Abfragen aus. Auch parametrisierte Daten können von einem technisch versierten Angreifer manipuliert werden.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  Bei einem SQL-Injection-Angriff wird ein bösartiger Code in Zeichenfolgen eingefügt, die später zur Analyse und Ausführung an eine Instanz von SQL Server übergeben werden. Sie sollten jede Prozedur, die SQL-Anweisungen erstellt, nach Injection-Anfälligkeiten überprüfen, denn SQL Server führt alle empfangenen gültigen Abfragen aus. Auch parametrisierte Daten können von einem technisch versierten Angreifer manipuliert werden.  
   
 ## <a name="how-sql-injection-works"></a>Funktionsweise von SQL Injection  
  Die Primärform von SQL-Injection besteht aus dem direkten Einfügen des Codes in Benutzereingabevariablen, die mit SQL-Befehlen verkettet und ausgeführt werden. Bei einem weniger direkten Angriff wird bösartiger Code in Zeichenfolgen eingefügt, die in einer Tabelle oder als Metadaten gespeichert werden sollen. Wenn die gespeicherten Zeichenfolgen später in einem dynamischen SQL-Befehl verkettet werden, wird der bösartige Code ausgeführt.  
@@ -343,7 +345,7 @@ GO
   
  Wenn Sie Werte vom Typ „sysname“ verketten, sollten Sie temporäre Variablen verwenden, die groß genug sind, um die maximale Anzahl von 128 Zeichen pro Wert aufzunehmen. Falls möglich, sollten Sie `QUOTENAME()` direkt innerhalb von dynamischem [!INCLUDE[tsql](../../includes/tsql-md.md)]aufrufen. Andernfalls können Sie die erforderliche Puffergröße so berechnen, wie es im vorherigen Abschnitt beschrieben wird.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   
  [REPLACE &#40;Transact-SQL&#41;](../../t-sql/functions/replace-transact-sql.md)   
  [QUOTENAME &#40;Transact-SQL&#41;](../../t-sql/functions/quotename-transact-sql.md)   

@@ -1,34 +1,35 @@
 ---
 title: CursorOpen-Ereignisklasse | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - CursorClose event class
 ms.assetid: 5c9bd070-4e4c-4281-b896-1e61a4bd403e
-caps.latest.revision: 
+caps.latest.revision: 37
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e35763a70260b8d542ca290c91a27cb9e290ecbb
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: bd9435c4e5eccff10877e1b645abfd96d1887520
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="cursorclose-event-class"></a>CursorClose-Ereignisklasse
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-CursorClose-Ereignisse treten auf, wenn vom [!INCLUDE[ssDE](../../includes/ssde-md.md)] ein Cursor geschlossen und freigegeben wird. Die **CursorClose** -Ereignisklasse beschreibt CursorClose-Ereignisse, die in API-Cursorn (Application Programming Interface, Anwendungsprogrammierschnittstelle) auftreten. Diese Ereignisklasse tritt auf, wenn eine [!INCLUDE[tsql](../../includes/tsql-md.md)] -Cursoranweisung durch ODBC, OLE DB oder DB-Library geschlossen wird.  
+  CursorClose-Ereignisse treten auf, wenn vom [!INCLUDE[ssDE](../../includes/ssde-md.md)] ein Cursor geschlossen und freigegeben wird. Die **CursorClose** -Ereignisklasse beschreibt CursorClose-Ereignisse, die in API-Cursorn (Application Programming Interface, Anwendungsprogrammierschnittstelle) auftreten. Diese Ereignisklasse tritt auf, wenn eine [!INCLUDE[tsql](../../includes/tsql-md.md)] -Cursoranweisung durch ODBC, OLE DB oder DB-Library geschlossen wird.  
   
  Schließen Sie die **CursorClose** -Ereignisklasse in Ablaufverfolgungen ein, die die Leistung von Cursorn aufzeichnen. Der Aufwand hängt davon ab, wie oft Cursor für die Datenbank während der Ablaufverfolgung verwendet werden. Falls Cursor intensiv verwendet werden, kann die Leistung durch die Ablaufverfolgung erheblich beeinträchtigt werden.  
   
