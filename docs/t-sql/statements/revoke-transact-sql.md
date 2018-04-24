@@ -1,16 +1,16 @@
 ---
 title: REVOKE (Transact-SQL) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 07/26/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - REVOKE_TSQL
@@ -31,16 +31,17 @@ helpviewer_keywords:
 - permissions [SQL Server], revoking
 - dropping permissions
 ms.assetid: 9d31d3e7-0883-45cd-bf0e-f0361bbb0956
-caps.latest.revision: 
+caps.latest.revision: 41
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3f96892b5671d9616a3c809aa6b83fbcaa071b6d
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: af52c3516d374d02e19abb757765cc23adad4fe3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="revoke-transact-sql"></a>REVOKE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -98,7 +99,7 @@ REVOKE
 >  Falls der Prinzipal die angegebene Berechtigung ohne GRANT OPTION besitzt, wird die Berechtigung selbst aufgehoben.  
   
  ALL  
-**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Gilt für** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
  Mit dieser Option werden nicht alle möglichen Berechtigungen aufgehoben. Das Aufheben mit ALL entspricht dem Aufheben der folgenden Berechtigungen.  
   
@@ -144,7 +145,7 @@ REVOKE
  AS *principal*  
  Verwenden Sie die Prinzipalklausel AS, um anzugeben, dass Sie eine Berechtigung aufheben, die von einem anderen Prinzipal erteilt wurde. Nehmen Sie beispielsweise an, dass die Benutzerin Mary der principal_id 12 und der Benutzer Raul der principal_id 15 entspricht. Die Benutzer Mary und Raul erteilen dem Benutzer Steven die gleiche Berechtigung. Dann gibt die Tabelle „sys.database_permissions“ die Berechtigungen zweimal an, jedoch mit einem jeweils anderen Wert von „grantor_principal_id“. Mary könnte in diesem Fall die Klausel `AS RAUL` verwenden, um die von Raul erteilten Berechtigungen zu entfernen.
  
-In dieser Anweisung impliziert die Verwendung der Anweisung AS nicht die Fähigkeit, die Identität eines anderen Benutzers anzunehmen.  
+In dieser Anweisung impliziert die Verwendung von AS nicht die Fähigkeit, die Identität eines anderen Benutzers anzunehmen.  
   
 ## <a name="remarks"></a>Remarks  
  Die vollständige Syntax der REVOKE-Anweisung ist sehr komplex. Das Syntaxdiagramm oben wurde vereinfacht, um die Struktur hervorzuheben. Die vollständige Syntax zum Aufheben von Berechtigungen für bestimmte sicherungsfähige Elemente wird in den Artikeln beschrieben, die unter [Für sicherungsfähige Elemente spezifische Syntax](#securable) weiter unten in diesem Artikel aufgelistet werden.  

@@ -1,16 +1,16 @@
 ---
 title: EXECUTE (Transact-SQL) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 08/07/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|language-elements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - EXEC
@@ -33,16 +33,17 @@ helpviewer_keywords:
 - switching execution context
 - EXECUTE statement
 ms.assetid: bc806b71-cc55-470a-913e-c5f761d5c4b7
-caps.latest.revision: 
+caps.latest.revision: 104
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: e974faeb95631f73cd8f902194329c6eb54e825f
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 5246803f6ef63d130a0af894fb4230fad8644ae9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="execute-transact-sql"></a>EXECUTE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -214,7 +215,7 @@ Execute a character string
  Ein Benutzer kann ein in einer anderen Datenbank erstelltes Modul ausführen, wenn er Besitzer des Moduls ist oder die entsprechende Berechtigung dafür hat, es in dieser Datenbank auszuführen. Ein Benutzer kann ein Modul auf einem anderen Server mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausführen, wenn er die entsprechende Berechtigung besitzt, diesen Server zu verwenden (Remotezugriff) und das Modul in dieser Datenbank auszuführen. Wird ein Servername, aber kein Datenbankname angegeben, sucht [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] das Modul in der Standarddatenbank des Benutzers.  
   
  ;*number*  
-**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Gilt für** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
  Eine optionale ganze Zahl zum Gruppieren von Prozeduren mit dem gleichen Namen. Dieser Parameter wird nicht bei erweiterten gespeicherten Prozeduren verwendet.  
   
@@ -271,7 +272,7 @@ Execute a character string
  Gibt den Kontext an, in dem die Anweisung ausgeführt wird.  
   
  Anmeldung  
-**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Gilt für** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
  Gibt an, dass der Kontext, der als Identität angenommen werden soll, ein Anmeldename ist. Der Identitätswechselbereich ist der Server.  
   
@@ -459,7 +460,7 @@ GO
 ### <a name="d-using-execute-with-a-remote-stored-procedure"></a>D. Verwenden von EXECUTE mit einer remote gespeicherten Prozedur  
  Im folgenden Beispiel wird die gespeicherte Prozedur `uspGetEmployeeManagers` auf dem Remoteserver `SQLSERVER1` ausgeführt und der Rückgabestatus, der anzeigt, ob die Ausführung erfolgreich war oder nicht, in `@retstat` gespeichert.  
   
-**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Gilt für** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
 ```  
 DECLARE @retstat int;  
@@ -518,7 +519,7 @@ EXECUTE dbo.ProcTestDefaults DEFAULT, 'I', @p3 = DEFAULT;
 ### <a name="g-using-execute-with-at-linkedservername"></a>G. Verwenden von EXECUTE mit AT linked_server_name  
  Das folgende Beispiel übergibt eine Befehlszeichenfolge an einen Remoteserver. Der Verbindungsserver `SeattleSales` wird erstellt, der auf eine andere Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verweist und eine DDL-Anweisung (`CREATE TABLE`) auf diesem Verbindungsserver ausführt.  
   
-**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Gilt für** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
 ```  
 EXEC sp_addlinkedserver 'SeattleSales', 'SQL Server'  
@@ -550,7 +551,7 @@ GO
 ### <a name="j-using-execute-to-query-an-oracle-database-on-a-linked-server"></a>J. Verwenden von EXECUTE zum Abfragen einer Oracle-Datenbank auf einem Verbindungsserver  
  Das folgende Beispiel führt mehrere `SELECT`-Anweisungen auf dem Oracle-Remoteserver aus. Zunächst wird der Oracle-Server als Verbindungsserver hinzugefügt und der Anmeldename für den Verbindungsserver erstellt.  
   
-**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Gilt für** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
 ```  
 -- Setup the linked server.  
@@ -593,7 +594,7 @@ GO
 ### <a name="l-using-a-parameter-with-execute-and-at-linkedservername"></a>L. Verwenden eines Parameters mit EXECUTE und AT linked_server_name  
  Im folgenden Beispiel wird eine Befehlszeichenfolge an einen Remoteserver übergeben, indem ein Fragezeichen (`?`) als Platzhalter für einen Parameter verwendet wird. Im Beispiel wird zunächst ein Verbindungsserver `SeattleSales` erstellt, der auf eine andere Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verweist. Anschließend wird eine `SELECT`-Anweisung auf diesem Verbindungsserver ausgeführt. In der `SELECT`-Anweisung wird das Fragezeichen als Platzhalter für den `ProductID`-Parameter (`952`) verwendet, der hinter der Anweisung angegeben wird.  
   
-**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Gilt für** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
 ```  
 -- Setup the linked server.  

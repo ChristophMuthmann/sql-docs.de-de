@@ -1,30 +1,30 @@
 ---
 title: JSON-Funktionen (Transact-SQL) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 07/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: douglasl
 ms.suite: sql
 ms.technology:
 - dbe-json
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 helpviewer_keywords:
 - JSON functions
 ms.assetid: ec97d451-06af-44a3-8304-305d410cfc8e
-caps.latest.revision: 
-author: douglaslMS
-ms.author: douglasl
+caps.latest.revision: 8
+author: jovanpop-msft
+ms.author: jovanpop
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4606234eb9e7fae8a6ef95746f333c9a4bb28e0d
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 6719bec3725ab4b953dc97e42c66817c344472f6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="json-functions-transact-sql"></a>JSON-Funktionen (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ Verwenden Sie die Funktionen, die auf den Seiten in diesem Abschnitt beschrieben
 |Funktion|Description|  
 |--------------|-----------------|  
 |[ISJSON](../../t-sql/functions/isjson-transact-sql.md)|Testet, ob eine Zeichenfolge gültiges JSON enthält.|  
-|[JSON_VALUE](../../t-sql/functions/json-value-transact-sql.md)|Extrahiert einen skalaren Wert aus einer JSON-Zeichenfolge.|  
+|[JSON_VALUE](../../t-sql/functions/json-value-transact-sql.md)|Extrahiert einen Skalarwert aus einer JSON-Zeichenfolge.|  
 |[JSON_QUERY](../../t-sql/functions/json-query-transact-sql.md)|Extrahiert ein Objekt oder ein Array aus einer JSON-Zeichenfolge.|  
 |[JSON_MODIFY](../../t-sql/functions/json-modify-transact-sql.md)|Aktualisiert den Wert einer Eigenschaft in einer JSON-Zeichenfolge und gibt die aktualisierte JSON-Zeichenfolge zurück.|
 

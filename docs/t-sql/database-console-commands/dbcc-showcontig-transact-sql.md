@@ -1,16 +1,16 @@
 ---
 title: DBCC SHOWCONTIG (Transact-SQL) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 07/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|database-console-commands
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DBCC_SHOWCONTIG_TSQL
@@ -27,16 +27,16 @@ helpviewer_keywords:
 - fragmentation [SQL Server]
 - index defragmenting [SQL Server]
 ms.assetid: 1df2123a-1197-4fff-91a3-25e3d8848aaa
-caps.latest.revision: 
+caps.latest.revision: 78
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: fb7faf36132e131c0fd771480e89318492c71372
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: ebc23e00ed03e4e4cca50b4a1655c373816d563e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="dbcc-showcontig-transact-sql"></a>DBCC SHOWCONTIG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ Zeigt Fragmentierungsinformationen für die Daten und Indizes der angegebenen Ta
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Verwenden Sie stattdessen [sys.dm_db_index_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md).  
   
-**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis zur [aktuellen Version](http://go.microsoft.com/fwlink/p/?LinkId=299658))
+**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis zur [aktuellen Version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).
   
 ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -102,11 +102,11 @@ In der folgenden Tabelle finden Sie eine Beschreibung der Informationen des Resu
 |**Gescannte Seiten**|Anzahl der Seiten in der Tabelle oder im Index.|  
 |**Gescannte Blöcke**|Anzahl der Blöcke in der Tabelle oder im Index.|  
 |**Blockwechsel**|Gibt an, wie oft die DBCC-Anweisung von einem Block zu einem anderen gewechselt hat, während die Anweisung die Seiten der Tabelle oder des Indexes durchlaufen hat.|  
-|**Seiten pro Block (Durchschnitt)**|Die Anzahl der Seiten pro Block in der Seitenkette.|  
+|**Mittlere pro Block (Durchschnitt)**|Die Anzahl der Seiten pro Block in der Seitenkette.|  
 |**Scandichte [Bester Wert:Tatsächlicher Wert]**|Ein Prozentwert. Es handelt sich um das Verhältnis zwischen **Bester Wert** und **Tatsächlicher Wert**. Dieser Wert ist 100, wenn alle Daten zusammenhängen. Liegt der Wert unter 100, sind sie fragmentiert.<br /><br /> **Bester Wert** ist die ideale Anzahl von Blockwechseln, wenn alle Daten zusammenhängend verknüpft sind. **Tatsächlicher Wert** ist die tatsächliche Anzahl von Blockwechseln.|  
 |**Logische Scanfragmentierung**|Prozentsatz der Seiten, die beim Scannen der Blattseiten eines Indexes nicht richtig einsortiert waren. Diese Zahl ist für Heaps nicht relevant. Eine nicht ordnungsgemäß einsortierte Seite ist eine Seite, für die die nächste physische Seite, die dem Index zugeordnet ist, nicht die Seite ist, auf die der Zeiger für die nächste Seit*e* auf der aktuellen Blattseite zeigt.|  
 |**Blockscanfragmentierung**|Prozentsatz der Blöcke, die beim Scannen der Blattseiten eines Indexes nicht richtig einsortiert waren. Diese Zahl ist für Heaps nicht relevant. Ein nicht richtig einsortierter Block ist ein Block, für den der Block, der die aktuelle Seite eines Indexes enthält, physisch nicht der nächste Block nach dem Block ist, der die vorherige Seite des Indexes enthält.<br /><br /> Hinweis: Diese Zahl ist bedeutungslos, wenn der Index mehrere Dateien umfasst.|  
-|**Bytes frei pro Seite (Durchschnitt)**|Die durchschnittliche Anzahl von freien Bytes auf den gescannten Seiten. Je größer die Zahl, desto weniger sind die Seiten belegt. Kleinere Zahlen sind besser, wenn der Index nur über wenige zufällige Einfügungen verfügt. Diese Zahl wird auch von der Zeilengröße beeinflusst. Große Zeilen können einen höheren Wert verursachen.|  
+|**Mittlere frei pro Seite (Durchschnitt)**|Die durchschnittliche Anzahl von freien Bytes auf den gescannten Seiten. Je größer die Zahl, desto weniger sind die Seiten belegt. Kleinere Zahlen sind besser, wenn der Index nur über wenige zufällige Einfügungen verfügt. Diese Zahl wird auch von der Zeilengröße beeinflusst. Große Zeilen können einen höheren Wert verursachen.|  
 |**Mittlere Seitendichte (voll)**|Die durchschnittliche Seitendichte in Prozent. Dieser Wert berücksichtigt die Zeilengröße. Daher informiert der Wert genauer über den Füllungsgrad der Seiten. Je höher die Prozentwerte, desto besser.|  
   
 Wenn *table_id* und FAST angegeben sind, gibt DBCC SHOWCONTIG ein Resultset mit nur den folgenden Spalten zurück.
@@ -174,7 +174,7 @@ Bei einer starken Fragmentierung eines Indexes gibt es folgende Möglichkeiten z
 -   Erstellen Sie den Index neu.  
      Verwenden Sie ALTER INDEX mit REBUILD, um den Index neu zu erstellen. Weitere Informationen finden Sie unter [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md).  
   
-Die Statistiken **Bytes frei pro Seite (Durchschnitt)** und **Mittlere Seitendichte (voll)** im Resultset zeigen den Füllungsgrad der Indexseiten an. Die Zahl für **Bytes frei pro Seite (Durchschnitt)** sollte klein und die Zahl für **Mittlere Seitendichte (voll)** sollte groß sein, wenn ein Index nur über wenige zufällige Einfügungen verfügt. Durch Löschen und Neuerstellen eines Indexes mit der angegebenen FILLFACTOR-Option können diese Statistiken verbessert werden. Außerdem komprimiert ALTER INDEX mit REORGANIZE einen Index, wobei der Wert für FILLFACTOR berücksichtigt wird. Dadurch wird diese Statistik verbessert.
+Die Statistiken **Bytes frei pro Seite (Durchschnitt)** und **Mittlere Seitendichte (voll)** im Resultset zeigen den Füllungsgrad der Indexseiten an. Die Statistiken **Bytes frei pro Seite (Durchschnitt)** sollte klein und die Zahl für **Mittlere Seitendichte (voll)** sollte groß sein, wenn ein Index nur über wenige zufällige Einfügungen verfügt. Durch Löschen und Neuerstellen eines Indexes mit der angegebenen FILLFACTOR-Option können diese Statistiken verbessert werden. Außerdem komprimiert ALTER INDEX mit REORGANIZE einen Index, wobei der Wert für FILLFACTOR berücksichtigt wird. Dadurch wird diese Statistik verbessert.
   
 > [!NOTE]  
 >  Ein Index mit zahlreichen zufälligen Einfügungen und sehr vollen Seiten verfügt über eine höhere Anzahl von Seitenteilungen. Dadurch entsteht mehr Fragmentierung.  

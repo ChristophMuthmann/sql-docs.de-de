@@ -1,31 +1,31 @@
 ---
 title: TYPE-Direktive in FOR XML-Abfragen | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: xml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - FOR XML clause, TYPE directive
 - TYPE directive
 ms.assetid: a3df6c30-1f25-45dc-b5a9-bd0e41921293
-caps.latest.revision: 
+caps.latest.revision: 40
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 20d3894f0f2eecbf491e20f10b0258686848b401
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 2552660cf0500a5274095765f0540e9ddcee6701
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="type-directive-in-for-xml-queries"></a>TYPE-Direktive in FOR XML-Abfragen
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -79,7 +79,7 @@ GO
 ```  
   
 ### <a name="querying-results-of-a-for-xml-query"></a>Abfragen von Ergebnissen einer FOR XML-Abfrage  
- FOR XML-Abfragen geben XML-Daten zurück. Folglich können Sie Methoden vom Typ **xml** wie **query()** und **value()**auf das von FOR XML-Abfragen zurückgegebene XML-Ergebnis anwenden.  
+ FOR XML-Abfragen geben XML-Daten zurück. Folglich können Sie Methoden vom Typ **xml** wie **query()** und **value()** auf das von FOR XML-Abfragen zurückgegebene XML-Ergebnis anwenden.  
   
  In der folgenden Abfrage wird die `query()`-Methode des **xml**-Datentyps verwendet, um das Ergebnis der `FOR XML`-Abfrage abzufragen. Weitere Informationen finden Sie unter [query&#40;&#41;-Methode &#40;xml-Datentyp&#41;](../../t-sql/xml/query-method-xml-data-type.md).  
   
@@ -134,7 +134,7 @@ SELECT @FirstPhoneFromAdditionalContactInfo;
  Der XQuery-Pfadausdruck in der `value()`-Methode ruft die erste Telefonnummer des Kundenkontakts mit der `BusinessEntityID` `1` ab.  
   
 > [!NOTE]  
->  Wenn die TYPE-Direktive nicht angegeben ist, wird das Ergebnis der FOR XML-Abfrage als **nvarchar(max)**zurückgegeben.  
+>  Wenn die TYPE-Direktive nicht angegeben ist, wird das Ergebnis der FOR XML-Abfrage als **nvarchar(max)** zurückgegeben.  
   
 ### <a name="using-for-xml-query-results-in-insert-update-and-delete-transact-sql-dml"></a>Verwenden von FOR XML-Abfrageergebnissen in INSERT-, UPDATE- und DELETE-Anweisungen (Transact-SQL-DML)  
  Das folgende Beispiel stellt dar, wie FOR XML-Abfragen in DML-Anweisungen (DML, Data Manipulation Language) verwendet werden können. In diesem Beispiel gibt die `FOR XML` -Abfrage eine Instanz vom Typ **xml** zurück. Die `INSERT` -Anweisung fügt diese XML-Daten in eine Tabelle ein.  
