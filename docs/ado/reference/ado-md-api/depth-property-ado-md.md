@@ -1,17 +1,17 @@
 ---
 title: Tiefe-Eigenschaft (ADO MD) | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - Level::Depth
@@ -19,16 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - Depth property [ADO MD]
 ms.assetid: e41f2644-617d-4c09-80a4-feb5cf736186
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5c84c7bf380e80177dd8dab9c9a80db86dc67af6
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: f79c7a2efa207ef018c342382c7882fa7fccdb16
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="depth-property-ado-md"></a>Tiefe-Eigenschaft (ADO MD)
 Gibt die Anzahl von Ebenen zwischen den [Ebene](../../../ado/reference/ado-md-api/level-object-ado-md.md) und den Stamm der Hierarchie.  

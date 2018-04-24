@@ -1,29 +1,22 @@
 ---
-title: Importieren Sie das SCOM Management Pack für PDW (Analytics Platform System)
-author: barbkess
-ms.author: barbkess
+title: Importieren von SCOM-Management Pack - Analyseplattformsystem | Microsoft Docs
+description: Führen Sie diese Schritte aus, um die System Center Operations Manager (SCOM) Management Packs für Analytics Platform System (APS) importieren. Die Management Packs sind erforderlich, Parallel Data Warehouse von SCOM überwacht.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: fa735041-8e58-4886-ae3b-36f3c6298b12
-caps.latest.revision: 6
-ms.openlocfilehash: d8accd7106cce2274e60793e123779e87b8dfd49
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: e60d87ae58b0804a0a7296f8b489df7441683c5b
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="import-the-scom-management-pack-for-pdw"></a>Importieren Sie das SCOM Management Pack für PDW
-Führen Sie diese Schritte aus, um die System Center Operations Manager (SCOM) Management Packs für SQL Server PDW zu importieren. Die Management Packs sind erforderlich, zum Überwachen von SQL Server PDW aus SCOM.  
+# <a name="import-the-scom-management-pack---analytics-platform-system"></a>Importieren Sie das SCOM-Management Pack - Analyseplattformsystem
+Führen Sie diese Schritte aus, um die System Center Operations Manager (SCOM) Management Packs für Analytics Platform System (APS) importieren. Die Management Packs sind erforderlich, Parallel Data Warehouse von SCOM überwacht. 
   
 ## <a name="BeforeBegin"></a>Vorbereitungen  
 **Erforderliche Komponenten**  

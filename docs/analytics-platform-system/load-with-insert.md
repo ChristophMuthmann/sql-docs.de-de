@@ -1,27 +1,21 @@
 ---
-title: Laden von Daten mit INSERT
-author: barbkess
-ms.author: barbkess
+title: Laden von Daten mit INSERT - Parallel Data Warehouse | Microsoft Docs
+description: Mit der T-SQL-INSERT-Anweisung zum Laden von Daten in Parallel Data Warehouse (PDW), Tabelle repliziert oder verteilt.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.suite: sql
-ms.custom: ''
-ms.technology: mpp-data-warehouse
-description: Sie können die t-SQL-INSERT-Anweisung verwenden, zum Laden von Daten in eine SQLServer Parallel Datawarehouse (PDW) verteilt, oder der replizierten Tabelle.
-ms.date: 10/20/2016
-ms.topic: article
-ms.assetid: 6e951b0e-e95b-4fd1-b5f3-c65607aee0d8
-caps.latest.revision: 21
-ms.openlocfilehash: d11799aabdf3f0695a1a8e33add730886a4bcbbe
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: a505a099e239049aab40c616c9e98e44e328537c
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="load-data-with-insert"></a>Laden von Daten mit INSERT
+# <a name="load-data-with-insert-into-parallel-data-warehouse"></a>Laden Sie Daten mit INSERT in Parallel Data Warehouse
 
 Sie können die t-SQL-INSERT-Anweisung verwenden, zum Laden von Daten in eine SQLServer Parallel Datawarehouse (PDW) verteilt, oder der replizierten Tabelle. Weitere Informationen zum Einfügen, finden Sie unter [einfügen](../t-sql/statements/insert-transact-sql.md). Für replizierte Tabellen und alle nichtverteilungsspalte Spalten in einer verteilten Tabelle verwendet PDW SQL Server, um die Datenwerte in der Anweisung in den Datentyp der Spalte "Ziel" angegebenen implizit zu konvertieren. Weitere Informationen zu Konvertierungsregeln für SQL Server-Daten, finden Sie unter [datentypkonvertierung für SQL](http://msdn.microsoft.com/library/ms191530&#40;v=sql11&#40;.aspx). Für verteilungsspalten unterstützt PDW jedoch nur eine Teilmenge von impliziten Konvertierungen, die SQL Server unterstützt. Wenn Sie die INSERT-Anweisung zum Laden von Daten in eine verteilungsspalte verwenden, müssen daher die Quelldaten in eines der Formate, die in den folgenden Tabellen definiert angegeben werden.  
   
@@ -31,7 +25,7 @@ In der folgenden Tabelle definiert, der akzeptierten Literaltypen, Format und Ko
   
 |Literaltypzeichen|Format|Aufgrund von Konvertierungsregeln|  
 |----------------|----------|--------------------|  
-|Binäres literal|0x*hexidecimal_string*<br /><br />Beispiel: 0x12Ef|Binäre Literale müssen 0 X vorangestellt werden.<br /><br />Die Länge der Quelle darf die angegebene Anzahl von Bytes für den Datentyp nicht überschreiten.<br /><br />Wenn die Länge der Quelle geringer als ist die **binäre** -Datentyp, werden die Daten nach rechts mit Nullen aufgefüllt, um die Größe der Daten zu erreichen aufgefüllt.|  
+|Binäres literal|0 X*Hexidecimal_string*<br /><br />Beispiel: 0x12Ef|Binäre Literale müssen 0 X vorangestellt werden.<br /><br />Die Länge der Quelle darf die angegebene Anzahl von Bytes für den Datentyp nicht überschreiten.<br /><br />Wenn die Länge der Quelle geringer als ist die **binäre** -Datentyp, werden die Daten nach rechts mit Nullen aufgefüllt, um die Größe der Daten zu erreichen aufgefüllt.|  
   
 ## <a name="InsertingLiteralsDateTime"></a>Legen Sie Literale in Datums- und Uhrzeittypen  
 Mit Zeichenwerten enthalten, die in bestimmten Formaten, die in einfache Anführungszeichen eingeschlossen werden Datums- und Zeitliterale dargestellt. In den folgenden Tabellen definieren, die zulässige Literaltypen, Format und Konvertierungsregeln zum Einfügen von Datum oder Uhrzeit-literal in einer SQL Server PDW-Distribution-Spalte vom Typ **"DateTime"**, **Smalldatetime**, **Datum**, **Zeit**, **"DateTimeOffset"**, oder **datetime2**.  
@@ -97,7 +91,7 @@ In der folgenden Tabelle definiert, die akzeptierte Formate und die Regeln zum E
   
 |Literaltypzeichen|format|Aufgrund von Konvertierungsregeln|  
 |----------------|----------|--------------------|  
-|Zeichenfolgenliteral im **Ganzzahl** Format|'nnnnnnnnnn'<br /><br />Beispiel: "1" oder "321"|Ein Ganzzahlwert, formatiert als Zeichenfolgenliteral darf keinen negativen Wert enthalten. Der Wert "-123" generiert z. B. einen Fehler.<br /><br />Ein Wert größer als 1 wird in 1 konvertiert. Beispielsweise wird der Wert "123" in 1 konvertiert.|  
+|Zeichenfolgenliteral im **Ganzzahl** Format|"Nnnnnnnnnn"<br /><br />Beispiel: "1" oder "321"|Ein Ganzzahlwert, formatiert als Zeichenfolgenliteral darf keinen negativen Wert enthalten. Der Wert "-123" generiert z. B. einen Fehler.<br /><br />Ein Wert größer als 1 wird in 1 konvertiert. Beispielsweise wird der Wert "123" in 1 konvertiert.|  
 |Ein Zeichenfolgenliteral handeln|'TRUE' oder 'FALSE'<br /><br />Beispiel: "true"|Der Wert "TRUE" wird in 1 konvertiert. der Wert "FALSE" wird in 0 konvertiert.|  
 |Integer-literal|nnnnnnnn<br /><br />Beispiel: 1 oder 321|Ein Wert größer als 1 oder kleiner als 0 wird in 1 konvertiert. Beispielsweise werden Werte 123 "und"-123 in 1 konvertiert.|  
 |Decimal-literal|nnnnn.nnnn<br /><br />Beispiel: 1234.5678|Ein Wert größer als 1 oder kleiner als 0 wird in 1 konvertiert. Beispielsweise werden Werte 123,45 "und"-123.45 in 1 konvertiert.|  
@@ -107,7 +101,7 @@ In der folgenden Tabelle definiert, die akzeptierte Formate und die Regeln zum E
   
 |Literaltypzeichen|Format|  
 |----------------|----------|  
-|Zeichenfolgenliteral im **Ganzzahl** Format|'nnnnnnnnnnnn'<br /><br />Beispiel: "321312313123"|  
+|Zeichenfolgenliteral im **Ganzzahl** Format|"Nnnnnnnnnnnn"<br /><br />Beispiel: "321312313123"|  
 |Zeichenfolgenliteral im **decimal** Format|"nnnnnn.nnnnn"<br /><br />Beispiel: "123344.34455"|  
 |Integer-literal|nnnnnnnnnnnn<br /><br />Beispiel: 321312313123|  
 |Decimal-literal|nnnnnn.nnnnn<br /><br />Beispiel: "123344.34455"|  
@@ -117,9 +111,9 @@ In der folgenden Tabelle definiert, die akzeptierte Formate und die Regeln zum E
   
 |Literaltypzeichen|Format|  
 |----------------|----------|  
-|Zeichenfolgenliteral im **Ganzzahl** Format|'nnnnnnnnnnnn'<br /><br />Beispiel: "321312313123"|  
+|Zeichenfolgenliteral im **Ganzzahl** Format|"Nnnnnnnnnnnn"<br /><br />Beispiel: "321312313123"|  
 |Zeichenfolgenliteral im **decimal** Format|"nnnnnn.nnnnn"<br /><br />Beispiel: "123344.34455"|  
-|Zeichenfolgenliteral im **Gleitkomma** Format|'n.nnnnnE+nn'<br /><br />Beispiel: "3.12323E + 14"|  
+|Zeichenfolgenliteral im **Gleitkomma** Format|"n.nnnnnE+nn"<br /><br />Beispiel: "3.12323E + 14"|  
 |Integer-literal|nnnnnnnnnnnn<br /><br />Beispiel: 321312313123|  
 |Decimal-literal|nnnnnn.nnnnn<br /><br />Beispiel: 123344.34455|  
 |Floating-Point-literal|n.nnnnnE+nn<br /><br />Beispiel: 3.12323E + 14|  
@@ -129,7 +123,7 @@ In der folgenden Tabelle definiert, die akzeptierte Formate und die Regeln zum E
   
 |Literaltyp|Format|Aufgrund von Konvertierungsregeln|  
 |------------|------|----------------|
-|Zeichenfolgenliteral im **Ganzzahl** Format|'nnnnnnnnnnnnnn'<br /><br />Beispiel: "321312313123"| Keine |  
+|Zeichenfolgenliteral im **Ganzzahl** Format|"Nnnnnnnnnnnnnn"<br /><br />Beispiel: "321312313123"| Keine |  
 |Integer-literal|nnnnnnnnnnnnnn<br /><br />Beispiel: 321312313123| Keine|  
 |Decimal-literal|nnnnnn.nnnnn<br /><br />Beispiel: 123344.34455|Die Werte, die rechts neben dem Dezimaltrennzeichen werden abgeschnitten.|  
   
@@ -138,7 +132,7 @@ Money-Literalwerte werden als Zahlen mit einem optionalen Dezimaltrennzeichen un
   
 |Literaltypzeichen|Format|Aufgrund von Konvertierungsregeln|  
 |----------------|----------|--------------------|  
-|Zeichenfolgenliteral im **Ganzzahl** Format|'nnnnnnnn'<br /><br />Beispiel: "123433"|Fehlende Ziffern nach dem Dezimaltrennzeichen werden auf 0 festgelegt, wenn der Wert eingefügt wird. Beispielsweise wird das literal "12345" als 12345.0000 eingefügt.|  
+|Zeichenfolgenliteral im **Ganzzahl** Format|"Nnnnnnnn"<br /><br />Beispiel: "123433"|Fehlende Ziffern nach dem Dezimaltrennzeichen werden auf 0 festgelegt, wenn der Wert eingefügt wird. Beispielsweise wird das literal "12345" als 12345.0000 eingefügt.|  
 |Zeichenfolgenliteral im **decimal** Format|"nnnnnn.nnnnn"<br /><br />Beispiel: "123344.34455"|Wenn die Anzahl der Ziffern nach dem Dezimaltrennzeichen 4 überschreiten, wird der Wert auf den nächsten Wert aufgerundet. Beispielsweise wird der Wert "123344.34455" als 123344.3446 eingefügt.|  
 |Zeichenfolgenliteral im **Money** Format|'$nnnnnn.nnnn'<br /><br />Beispiel: "$123456.7890"|Die optionalen Währungssymbol ist nicht mit dem Wert eingefügt.<br /><br />Wenn die Anzahl der Ziffern nach dem Dezimaltrennzeichen 4 überschreiten, wird der Wert auf den nächsten Wert aufgerundet.|  
 |Integer-literal|nnnnnnnn<br /><br />Beispiel: 123433|Fehlende Ziffern nach dem Dezimaltrennzeichen werden auf 0 festgelegt, wenn der Wert eingefügt wird. Beispielsweise wird das literal 12345 als 12345.0000 eingefügt.|  

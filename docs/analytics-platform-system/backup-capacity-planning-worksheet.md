@@ -1,27 +1,21 @@
 ---
-title: Sicherungsserver Kapazitätsplanung Arbeitsblatt (SQLServer PDW)
-author: barbkess
-ms.author: barbkess
+title: Kapazitätsplanung für Backup-Server - Parallel Data Warehouse | Microsoft Docs
+description: Mit diesem Arbeitsblatt Kapazität können Sie bestimmen die Anforderungen für die backup-Server zum Ausführen von Parallel Data Warehouse-Datenbank sichern und wiederherstellen. Hiermit können Sie Ihren Plan für Kaufverhalten neue oder Bereitstellung vorhandene Sicherungsserver erstellen.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.suite: sql
-ms.custom: ''
-ms.technology: mpp-data-warehouse
-description: Mit diesem Arbeitsblatt Kapazität unterstützt Sie beim Bestimmen der Anforderungen für die backup-Server zum Ausführen von SQL Server PDW Sicherung und Wiederherstellung.
-ms.date: 01/05/2017
-ms.topic: article
-ms.assetid: 36294bf6-6dde-481f-a190-d4382b04c030
-caps.latest.revision: 6
-ms.openlocfilehash: 1548d284f78043e5f878bafe9922480fe762dbfe
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 500bebab375a0d0b94032a1855af3844bc2e6fa7
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="backup-server-capacity-planning-worksheet"></a>Sicherungsserver Capacity planning Arbeitsblatt
+# <a name="backup-server-capacity-planning-worksheet---parallel-data-warehouse"></a>Sicherungsserver Capacity planning Arbeitsblatt - Parallel Data Warehouse
 Mit diesem Arbeitsblatt Kapazität unterstützt Sie beim Bestimmen der Anforderungen für die backup-Server zum Ausführen von SQL Server PDW Sicherung und Wiederherstellung. Hiermit können Sie Ihren Plan für Kaufverhalten neue oder Bereitstellung vorhandene Sicherungsserver erstellen.  
   
 Dieses Arbeitsblatt ist eine Ergänzung zu den Anweisungen in [erwerben und Konfigurieren eines Servers für die Sicherung](acquire-and-configure-backup-server.md).  

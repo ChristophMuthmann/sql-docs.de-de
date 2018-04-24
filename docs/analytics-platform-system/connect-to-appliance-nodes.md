@@ -1,28 +1,21 @@
 ---
-title: Herstellen einer Verbindung mit der Appliance-Knoten (Analytics Platform System)
-author: barbkess
-ms.author: barbkess
+title: Herstellen einer Verbindung mit Gerät Knoten – Analytics Platform System | Microsoft Docs
+description: Dieser Artikel beschreibt die verschiedenen Möglichkeiten, auf die einzelnen Knoten in der Einheit Analytics Platform System herstellen.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: f975aa91-c816-4b29-89bf-923ab5b4abb4
-caps.latest.revision: 19
-ms.openlocfilehash: 9b95bc8285625170c9c9b4a91eeae99dcd3907a5
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 2d7d634023c5fc3d0a6f522b5f60933ce3b96272
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="connect-to-appliance-nodes"></a>Herstellen einer Verbindung mit der Appliance-Knoten
+# <a name="connect-to-appliance-nodes-in-analytics-platform-system"></a>Herstellen einer Verbindung mit Gerät Knoten im Analytics Platform System
 Dieser Artikel beschreibt die verschiedenen Möglichkeiten, auf die einzelnen Knoten in der Einheit Analytics Platform System herstellen.  
   
 ## <a name="connecting-with-hadoop"></a>Herstellen einer Verbindung mit Hadoop  

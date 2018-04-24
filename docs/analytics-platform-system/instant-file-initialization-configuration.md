@@ -1,26 +1,19 @@
 ---
-title: Sofortige Initialisierung Dateikonfiguration (Analytics Platform System)
-author: barbkess
-ms.author: barbkess
+title: Konfigurieren der sofortigen Dateiinitialisierung - Analyseplattformsystem | Microsoft Docs
+description: Konfigurieren Sie sofortige Dateiinitialisierung für Analytics Platform System. Sofortige dateiinitialisierung ist eine SQL Server-Funktion, die Datei Datenvorgänge schneller ausführen kann.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 58be8982-4d2e-4aa3-bcdd-874a062d2f9d
-caps.latest.revision: 20
-ms.openlocfilehash: 1e28ff30c727dfe1132b5568bb12a333c51927d5
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 20498cc4e2c4ad959fce263984b58e3186630cea
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="instant-file-initialization-configuration"></a>Sofortige Initialisierung Dateikonfiguration
 Sofortige dateiinitialisierung ist eine SQL Server-Funktion, die Datei Datenvorgänge schneller ausführen kann. Überprüfen das Kontrollkästchen, um die sofortige Dateiinitialisierung einschalten verbessert die Leistung von SQL Server PDW. Jedoch wenn dadurch ein Sicherheitsrisiko Business für Sie darstellt, dann lassen Sie das Kontrollkästchen deaktiviert.  

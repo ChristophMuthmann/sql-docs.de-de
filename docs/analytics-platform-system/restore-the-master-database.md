@@ -1,28 +1,21 @@
 ---
-title: Wiederherstellen der Master-Datenbank (Analytics Platform System)
-author: barbkess
-ms.author: barbkess
+title: Wiederherstellen der master-Datenbank – Analytics Platform System | Microsoft Docs
+description: Wiederherstellen Sie den master-Datenbank in Analytics Platform System an.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 7870021a-0d89-422e-b8ea-1cc95b45c139
-caps.latest.revision: 11
-ms.openlocfilehash: 0f1acb692198873897d5dc26e2074beab4517e44
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 184184f332225e76e152c2d909cfff788b4fea91
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="restore-the-master-database"></a>Wiederherstellen der Master-Datenbank
+# <a name="restore-the-master-database-in-analytics-platform-system"></a>Wiederherstellen der master-Datenbank in Analytics Platform System
 Die **Restore Master** Seite von SQL Server PDW-Konfigurations-Manager können Sie die master-Datenbank aus einer Sicherung wiederherstellen.  
   
 ## <a name="before-you-begin"></a>Vorbereitungen  

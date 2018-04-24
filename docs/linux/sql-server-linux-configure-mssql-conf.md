@@ -1,6 +1,6 @@
 ---
 title: SQL Server-Einstellungen unter Linux konfigurieren | Microsoft Docs
-description: "Dieser Artikel beschreibt, wie der Mssql-Conf-Tool verwenden, um die Einstellungen für SQL Server-2017 unter Linux konfigurieren."
+description: Dieser Artikel beschreibt, wie der Mssql-Conf-Tool verwenden, um die Einstellungen für SQL Server-2017 unter Linux konfigurieren.
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -8,18 +8,18 @@ ms.date: 02/20/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
 ms.workload: On Demand
-ms.openlocfilehash: 7b921f563b769a1a4c6a3edb5089a04050d0df74
-ms.sourcegitcommit: 57f45ee008141ddf009b1c1195442529e0ea1508
+ms.openlocfilehash: 8ec5bd425731b296c4e15c56d654f291bd4c511b
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>Konfigurieren von SQL Server unter Linux mit dem Mssql-Conf-tool
 
@@ -62,7 +62,7 @@ ms.lasthandoff: 02/21/2018
 
 ## <a id="agent"></a> Aktivieren Sie SQL Server-Agent
 
-Die **sqlagent.enabled** kann festgelegt werden, [SQL Server-Agent](sql-server-linux-run-sql-server-agent-job.md). Standardmäßig ist SQL Server-Agent deaktiviert.
+Die **sqlagent.enabled** kann festgelegt werden, [SQL Server-Agent](sql-server-linux-run-sql-server-agent-job.md). Standardmäßig ist SQL Server-Agent deaktiviert. Wenn **sqlagent.enabled** ist nicht in die Einstellungsdatei mssql.conf vorhanden, und klicken Sie dann SQL Server wird intern davon ausgegangen, dass SQL Server-Agent aktiviert ist.
 
 Um diese Einstellungen zu ändern, verwenden Sie die folgenden Schritte aus:
 
@@ -357,7 +357,7 @@ Die erste Phase Erfassung wird gesteuert, indem die **coredump.coredumptype** Ei
 
     | Typ | Description |
     |-----|-----|
-    | **mini** | Mini lautet der kleinste Dump-Dateityp. Verwendet er die Linux-System-Informationen, um zu bestimmen, Threads und Module im Prozess. Das Speicherabbild enthält nur die Host-Umgebung Threadstapel und Modulen. Es enthält keine indirekte Speicherreferenzen oder Globals. |
+    | **Mini** | Mini lautet der kleinste Dump-Dateityp. Verwendet er die Linux-System-Informationen, um zu bestimmen, Threads und Module im Prozess. Das Speicherabbild enthält nur die Host-Umgebung Threadstapel und Modulen. Es enthält keine indirekte Speicherreferenzen oder Globals. |
     | **miniplus** | MiniPlus Mini ähnelt, aber sie zusätzlichen Arbeitsspeicher enthält. Er versteht im Rahmen der SQLPAL und der hostumgebung die folgenden Speicherbereiche das Speicherabbild hinzufügen:</br></br> -Globals verschiedene</br> -Alle Arbeitsspeicher über 64TB</br> -Alle Regionen in gefunden benannte **/proc/$ pid/Zuordnungen**</br> -Indirekte Arbeitsspeicher von Threads und Stapel</br> -Thread Informationen</br> -Der Teb und den Peb des verknüpften</br> -Modulinformationen</br> -Struktur VMM und VAD |
     | **filtered** | Gefilterte mithilfe einer Subtraktion basierende entwerfen, in dem alle Arbeitsspeicher des Prozesses enthalten ist, sofern nicht ausdrücklich ausgeschlossen. Der Entwurf versteht im Rahmen der SQLPAL und der hostumgebung, Ausschließen von bestimmten Regionen von das Speicherabbild.
     | **full** | Vollständige befindet, die alle Regionen enthält vollständige prozessdump **/proc/$ pid/Zuordnungen**. Dies wird nicht gesteuert, indem **coredump.captureminiandfull** Einstellung. |
@@ -478,7 +478,7 @@ Die folgenden Optionen konfigurieren TLS für eine Instanz von SQL Server auf de
 |**network.tlscert** |Der absolute Pfad zu dem Zertifikat-Datei mit [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] für TLS-Verbindungen verwendet. Beispiel: `/etc/ssl/certs/mssql.pem` der Zertifikatsdatei muss der Mssql-Konto zugänglich sein. Microsoft empfiehlt, Einschränken des Zugriffs auf die Datei mit `chown mssql:mssql <file>; chmod 400 <file>`. |
 |**network.tlskey** |Der absolute Pfad zum privaten Schlüssel Datei, die mit [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] für TLS-Verbindungen verwendet. Beispiel: `/etc/ssl/private/mssql.key` der Zertifikatsdatei muss der Mssql-Konto zugänglich sein. Microsoft empfiehlt, Einschränken des Zugriffs auf die Datei mit `chown mssql:mssql <file>; chmod 400 <file>`. |
 |**network.tlsprotocols** |Eine durch Trennzeichen getrennte Liste der TLS-Protokolle von SQL Server zulässig sind. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] immer versucht, die stärkste zulässige Protokoll ausgehandelt. Wenn ein Client ein zulässige Protokoll nicht unterstützt [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] lehnt der Verbindungsversuch fehl.  Aus Kompatibilitätsgründen sind alle unterstützten Protokolle (1,2, 1.1, 1.0) standardmäßig zulässig.  Wenn Ihre Clients TLS 1.2 unterstützt, empfiehlt Microsoft, sodass nur TLS 1.2. |
-|**network.tlsciphers** |Gibt an, welche Chiffren zulässig sind [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] für TLS. Diese Zeichenfolge muss formatiert werden, pro [OpenSSLs-Chiffre Listenformat](https://www.openssl.org/docs/man1.0.2/apps/ciphers.html). Im Allgemeinen müssen Sie nicht diese Option zu ändern. <br /> Standardmäßig sind die folgenden Chiffren zulässig: <br /> `ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES128-SHA256:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA:ECDHE-ECDSA-AES128-SHA:ECDHE-RSA-AES256-SHA:ECDHE-RSA-AES128-SHA:AES256-GCM-SHA384:AES128-GCM-SHA256:AES256-SHA256:AES128-SHA256:AES256-SHA:AES128-SHA` |
+|**Network.tlsciphers** |Gibt an, welche Chiffren zulässig sind [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] für TLS. Diese Zeichenfolge muss formatiert werden, pro [OpenSSLs-Chiffre Listenformat](https://www.openssl.org/docs/man1.0.2/apps/ciphers.html). Im Allgemeinen müssen Sie nicht diese Option zu ändern. <br /> Standardmäßig sind die folgenden Chiffren zulässig: <br /> `ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES128-SHA256:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA:ECDHE-ECDSA-AES128-SHA:ECDHE-RSA-AES256-SHA:ECDHE-RSA-AES128-SHA:AES256-GCM-SHA384:AES128-GCM-SHA256:AES256-SHA256:AES128-SHA256:AES256-SHA:AES128-SHA` |
 | **network.kerberoskeytabfile** |Pfad zu der Kerberos-Keytab-Datei |
 
 Ein Beispiel der Verwendung von TLS-Einstellungen finden Sie unter [Verschlüsseln von Verbindungen zu SQL Server on Linux](sql-server-linux-encrypted-connections.md).
@@ -537,7 +537,7 @@ sudo cat /var/opt/mssql/mssql.conf
 
 Beachten Sie, dass alle Einstellungen in dieser Datei nicht angezeigt. die Standardwerte verwenden. Der nächste Abschnitt enthält ein Beispiel für **mssql.conf** Datei.
 
-## <a name="mssqlconf-format"></a>mssql.conf format
+## <a name="mssqlconf-format"></a>MSSQL.conf-format
 
 Die folgenden **/var/opt/mssql/mssql.conf** Datei bietet ein Beispiel für jede Einstellung. Verwenden Sie dieses Format manuell vornehmen von Änderungen an der **mssql.conf** Datei nach Bedarf. Wenn Sie die Datei manuell ändern, müssen Sie SQL Server neu starten, bevor die Änderungen angewendet werden. Verwenden der **mssql.conf** Datei mit Docker, benötigen Sie Docker [behält Ihre Daten](sql-server-linux-configure-docker.md). Fügen Sie zuerst eine vollständige **mssql.conf** Datei auf Ihrem Hostverzeichnis, und führen Sie den Container. Es ist ein Beispiel hierzu finden Sie unter [Kundenfeedback](sql-server-linux-customer-feedback.md).
 

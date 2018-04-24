@@ -1,30 +1,30 @@
 ---
 title: Katalogsichten Objekteigenschaften, Methoden und Ereignisse (ADO MD) | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Catalog object [ADO MD], members
 ms.assetid: e9566718-9122-490d-8a8e-da8f605246f2
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9650ee49fdaf68a5655f87c6f2fe8fd49b72af61
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 7df444ab62f4109ad145040c8b6fa2235cdc6594
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="catalog-object-properties-methods-and-events-ado-md"></a>Katalog-Objekteigenschaften, Methoden und Ereignisse (ADO MD)
 ## <a name="propertiescollections"></a>Eigenschaften-Sammlungen  

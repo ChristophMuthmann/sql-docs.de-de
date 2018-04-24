@@ -1,28 +1,22 @@
 ---
-title: Arbeitsauslastungsverwaltung (SQLServer PDW)
-author: barbkess
-ms.author: barbkess
+title: Arbeitsauslastungsverwaltung in Analytics Platform System | Microsoft Docs
+description: Arbeitsauslastungsverwaltung in Analytics Platform System.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/12/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 69063b1a-a8f3-453a-83ab-afbe7eb4f463
-caps.latest.revision: 11
-ms.openlocfilehash: 6dde6c1af7b704e5bd1ed0e03516ad94f191ad9d
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 6fba7a7e5dfded26d617ac905449a4799c19249b
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="workload-management"></a>Arbeitsauslastungsverwaltung
+# <a name="workload-management-in-analytics-platform-system"></a>Arbeitsauslastungsverwaltung in Analyseplattformsystem
+
 Verwaltungsfunktionen für SQL Server-PDW-arbeitsauslastung können Benutzer und Administratoren Zuweisen von Anforderungen an die Konfiguration des Speichers und Parallelität vorab festgelegt. Verwenden Sie arbeitsauslastungsverwaltung zum Verbessern der Leistung Ihrer arbeitsauslastung entweder consistent "und" gemischte, indem Anforderungen an die entsprechenden Ressourcen haben, ohne alle Anforderungen ewig eingabeereignisübermittlung ermöglicht.  
   
 Mit der arbeitsauslastung containerverwaltungstechniken in SQL Server PDW könnten Sie z. B.:  
@@ -145,7 +139,7 @@ SQL-Anweisungen und Vorgänge, die Ressourcenklassen unterliegen:
 ## <a name="Limits"></a>Einschränkungen  
 Die Ressourcenklassen steuern, Arbeitsspeicher und Parallelität Zuordnungen.  Sie keine e/a-Vorgänge steuern.  
   
-## <a name="Metadata"></a>Metadata  
+## <a name="Metadata"></a>Metadaten  
 DMVs, die Informationen über Ressourcenklassen und Klassenmember Ressourcen enthalten.  
   
 -   [sys.server_role_members](../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md)  
@@ -162,11 +156,11 @@ Verwandte Systemsichten verfügbar gemacht werden, aus der SQL Server-DMVs auf d
   
 -   sys.dm_pdw_nodes_resource_governor_resource_pools  
   
--   sys.dm_pdw_nodes_resource_governor_workload_groups  
+-   Sys.dm_pdw_nodes_resource_governor_workload_groups  
   
 -   sys.dm_pdw_nodes_resource_governor_resource_pools  
   
--   sys.dm_pdw_nodws_resource_governor_workload_groups  
+-   Sys.dm_pdw_nodws_resource_governor_workload_groups  
   
 -   sys.dm_pdw_nodes_exec_sessions  
   

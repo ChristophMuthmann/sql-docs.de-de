@@ -1,28 +1,21 @@
 ---
-title: Verwenden Sie eine DNS-Weiterleitung zum Auflösen von nicht-Appliance DNS-Namen (APS)
-author: barbkess
-ms.author: barbkess
+title: Verwenden Sie eine DNS-Weiterleitung in Analytics Platform System | Microsoft Docs"
+description: Verwenden Sie eine DNS-Weiterleitung zum Auflösen von nicht-Appliance DNS-Namen in Analytics Platform System.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 123d8a83-b7fd-4dc9-90d4-fa01af2d629d
-caps.latest.revision: 21
-ms.openlocfilehash: 1d94319bd4d9ad3c25f74ca3393031d7ab916ee2
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 2f707d4c681c695105daf23d5fc640279bb83658
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="use-a-dns-forwarder-to-resolve-non-appliance-dns-names"></a>Verwenden Sie nicht-Appliance DNS-Namen auflösen einer DNS-Weiterleitungsservers
+# <a name="use-a-dns-forwarder-to-resolve-non-appliance-dns-names-in-analytics-platform-system"></a>Verwenden Sie nicht Appliance DNS-Namen in Analytics Platform System Auflösen einer DNS-Weiterleitungsservers
 DNS-Weiterleitung für die Active Directory-Domänendienste-Knoten konfiguriert werden kann (***Appliance_domain *-AD01** und ***Appliance_domain *-AD02**) der Appliance Analytics Platform System zu ermöglichen Skripts und softwareanwendungen auf externe Servern zugreifen.  
   
 ## <a name="ResolveDNS"></a>Mithilfe einer DNS-Weiterleitungsservers  

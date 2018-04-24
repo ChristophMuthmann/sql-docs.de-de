@@ -1,29 +1,22 @@
 ---
-title: Appliance-Netzwerkkonfiguration (Analytics Platform System)
-author: barbkess
-ms.author: barbkess
+title: Netzwerkkonfiguration für die Appliance - Analytics Platform System | Microsoft Docs
+description: Das Analytics Platform System (APS)-Gerät wird erstellt und mit einem Update von IP-Adressen in allen Servern und Geräten aus der IHV Herstellerstandort konfiguriert. Bei der Übermittlung der Appliance muss die externen (Ethernet) IP-Adresse gerichtet neu konfiguriert werden, um die kundenspezifischen Daten Center Anforderungen entsprechen.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 8e2b9abe-963d-479b-a4a7-1739fcb3e249
-caps.latest.revision: 27
-ms.openlocfilehash: fcee7a037b3fbffc56e923f9be875074628398c3
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 2db040c63d3c31f93cd0b72e48422e806aef01e0
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="appliance-network-configuration"></a>Appliance-Netzwerkkonfiguration
-Die SQL Server PDW-Anwendung wird erstellt und mit einem Update von IP-Adressen in allen Servern und Geräten aus der IHV Herstellerstandort konfiguriert. Bei der Übermittlung der Appliance muss die externen (Ethernet) IP-Adresse gerichtet neu konfiguriert werden, um die kundenspezifischen Daten Center Anforderungen entsprechen.  
+# <a name="appliance-network-configuration-for-analytics-platform-system"></a>Appliance-Netzwerkkonfiguration für Analytics Platform System
+Das Analytics Platform System (APS)-Gerät wird erstellt und mit einem Update von IP-Adressen in allen Servern und Geräten aus der IHV Herstellerstandort konfiguriert. Bei der Übermittlung der Appliance muss die externen (Ethernet) IP-Adresse gerichtet neu konfiguriert werden, um die kundenspezifischen Daten Center Anforderungen entsprechen.  
   
 > [!NOTE]  
 > PDW-V1 erforderlich 8 IP-externe (*Kunden mit Internetzugriff*) Adressen für die externe Verbindung an jeden des Steuerelements rack-Knoten. PDW-2012 (V2) verbessert die Netzwerkkommunikation, verfügbar machen, jede Komponente der Anwendung extern über IP-Adressen an. Dieser Ansatz bietet einen robusteren Entwurf reduziert Kosten, und erhöht die Flexibilität und verbessert die datenverschiebung, Laden von Daten und Hadoop-Integration. Die Anzahl der erforderlichen IP-Adressen hängt davon ab, die Anzahl der Knoten in der Einheit und das Vorhandensein von Features wie HDInsight. Um dieser größeren Block von IP-Adressen zu unterstützen, sollte der Kunde eine getrenntes Subnetz für PDW einrichten. In diesem Subnetz werden genügend IP-Adressraum (bis zu 250 Adressen), um die Komponenten von bis zu 5 PDW Racks Rechnung zu tragen.  

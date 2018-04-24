@@ -1,29 +1,23 @@
 ---
-title: Fehlermeldungen (SQLServer PDW)
-author: barbkess
-ms.author: barbkess
+title: Fehlermeldungen - Parallel Data Warehouse | Microsoft Docs
+description: Parallel Data Warehouse (PDW)-Fehlermeldungen zu melden Fehler und Probleme aufgetreten, durch die PDW-Komponenten und können auch SQL Server-Fehlern, die Diagnoseinformationen werden über PDW einschließen. Diese Fehlermeldungen verwenden eine einheitliche Syntax zum Darstellen von Informationen. Grundlegendes zu dieser Syntax können Sie Probleme identifizieren und beheben.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/13/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: e6223cba-2dec-4b8a-bc10-e2ef6a821fe0
-caps.latest.revision: 9
-ms.openlocfilehash: 38512cbdb3f43144ecfdf4c3ca3dc28c4a019e16
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 33bdf11388ae52959d264e2df091e9c9669b159b
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="error-messages"></a>Fehlermeldungen
-SQL Server PDW-Fehlermeldungen zu melden Fehler und Probleme aufgetreten, durch die SQL Server PDW-Komponenten und können auch SQL Server-Fehlern, die Diagnoseinformationen werden über SQL Server PDW einschließen. Diese Fehlermeldungen verwenden eine einheitliche Syntax zum Darstellen von Informationen. Grundlegendes zu dieser Syntax können Sie identifizieren und Beheben von Problemen auf SQL Server PDW.  
+# <a name="error-messages-in-parallel-data-warehouse"></a>Fehlermeldungen in Parallel Data Warehouse
+
+Parallel Data Warehouse (PDW)-Fehlermeldungen zu melden Fehler und Probleme aufgetreten, durch die PDW-Komponenten und können auch SQL Server-Fehlern, die Diagnoseinformationen werden über PDW einschließen. Diese Fehlermeldungen verwenden eine einheitliche Syntax zum Darstellen von Informationen. Grundlegendes zu dieser Syntax können Sie identifizieren und Beheben von Problemen auf SQL Server PDW.  
   
 ## <a name="Basics"></a>Fehler-Nachricht-Grundlagen  
 Fehlermeldungen, die zurückgegeben werden, führen Sie die gleiche Syntax.  

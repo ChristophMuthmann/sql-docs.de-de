@@ -1,29 +1,22 @@
 ---
-title: Bestimmen Sie, welche Clusterknoten (Analytics Platform System) ist fehlgeschlagen.
-author: barbkess
-ms.author: barbkess
+title: Bestimmen der fehlerhaften Clusterknoten - Analytics Platform System | Microsoft Docs
+description: Dieser Artikel beschreibt, wie Sie den Namen des Knotens Analytics Platform System (APS) zu ermitteln, die fehlgeschlagen ein Clusterfailover aufgetreten ist und eine Cluster-Failover-Warnung ausgelöst wurde. Im Rahmen der Problembehandlung eines clusterfailovers durchgeführt müssen Sie den Namen des Knotens ermitteln, die nicht vor der Kontaktaufnahme mit Microsoft, um das Problem zu beheben.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 1e001117-a1b6-4357-bf25-e85aba3f1cf0
-caps.latest.revision: 21
-ms.openlocfilehash: 201d11f7c3e5e7d50e1138ab41edf4fbdb60a6b9
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 031c8033e91d7a7f74ca8c4409bc02296a22ebcf
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="determine-which-cluster-node-failed"></a>Feststellen Sie, welche Clusterknoten fehlgeschlagen
-In diesem Thema wird beschrieben, wie Sie den Namen des SQL Server PDW-Knotens zu ermitteln, die fehlgeschlagen ein Clusterfailover aufgetreten ist und eine Cluster-Failover-Warnung ausgelöst wurde. Im Rahmen der Problembehandlung eines clusterfailovers durchgeführt müssen Sie den Namen des Knotens ermitteln, die nicht vor der Kontaktaufnahme mit Microsoft, um das Problem zu beheben.  
+# <a name="determine-which-cluster-node-failed-for-analytics-platform-system"></a>Bestimmen Sie die Cluster Fehler bei Knoten für Analytics Platform System
+Dieses Thema beschreibt, wie Sie den Namen des Knotens Analytics Platform System (APS) zu ermitteln, die fehlgeschlagen ein Clusterfailover aufgetreten ist und eine Cluster-Failover-Warnung ausgelöst wurde. Im Rahmen der Problembehandlung eines clusterfailovers durchgeführt müssen Sie den Namen des Knotens ermitteln, die nicht vor der Kontaktaufnahme mit Microsoft, um das Problem zu beheben.  
   
 ## <a name="Background"></a>Im Hintergrund  
 Für hohe Verfügbarkeit in SQL Server PDW werden die Knoten "Zugriffssteuerung" und die Serverknoten als aktiv oder Passiv Komponenten des Windows-Failovercluster konfiguriert. Wenn ein aktiver Server nicht auf kritische System-Anforderungen reagieren, wird der passive Server ein Failover und führt die Funktionen des Servers, der Fehler.  

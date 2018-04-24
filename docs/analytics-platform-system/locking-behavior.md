@@ -1,29 +1,22 @@
 ---
-title: Sperrverhalten (SQLServer PDW)
-author: barbkess
-ms.author: barbkess
+title: Sperrverhalten - Parallel Data Warehouse | Microsoft Docs
+description: Erfahren Sie, wie Parallel Data Warehouse verwendet sperren, um die Integrität von Transaktionen sicherzustellen und um die Konsistenz der Datenbanken beizubehalten, wenn mehrere Benutzer gleichzeitig auf Daten zugreifen.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/13/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: c55c636e-b767-4a0c-8184-be991a10801f
-caps.latest.revision: 27
-ms.openlocfilehash: db8b05abe5d3eea3a927cdf410e7aa8df5ed2032
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 3f9862fed432036dcb4a3905fb3af1d3132349a5
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="locking-behavior"></a>Sperrverhalten
-SQL Server PDW verwendet sperren, um die Integrität von Transaktionen sicherzustellen und um die Konsistenz der Datenbanken beizubehalten, wenn mehrere Benutzer gleichzeitig auf Daten zugreifen.  
+# <a name="locking-behavior-in-parallel-data-warehouse"></a>Sperrverhalten in Parallel Data Warehouse
+Erfahren Sie, wie Parallel Data Warehouse verwendet sperren, um die Integrität von Transaktionen sicherzustellen und um die Konsistenz der Datenbanken beizubehalten, wenn mehrere Benutzer gleichzeitig auf Daten zugreifen.  
   
 ## <a name="Basics"></a>Grundlagen der Sperren  
 **Modi**  

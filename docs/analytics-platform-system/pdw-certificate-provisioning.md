@@ -1,29 +1,22 @@
 ---
-title: PDW-Zertifikatbereitstellung (Analytics Platform System)
-author: barbkess
-ms.author: barbkess
+title: PDW zertifikatbereitstellung - Analytics Platform System | Microsoft Docs
+description: Die Seite PDW Zertifikatbereitstellung von Analytics Platform System Configuration Manager importiert oder von PDW-Region verwendeten Zertifikats entfernt.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 0a423b7d-c6ea-45c1-80b0-26758170594c
-caps.latest.revision: 22
-ms.openlocfilehash: a08a739c490f0cbd49f615441f557d5200107443
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: ea52c615f4629b579f5f239513c84d851de9e487
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="pdw-certificate-provisioning"></a>PDW-Zertifikatbereitstellung
-Die **PDW Zertifikatbereitstellung** auf der Seite das Analytics Platform System**Configuration Manager** importiert oder von der PDW-Region verwendeten Zertifikats entfernt. Verwenden, kann ein Zertifikat zum Verschlüsseln von Verbindungen sicheren Kommunikation mit dem Steuerungsknoten über SQL Server-Clients, Tools, mit denen die SQL Server PDW-Treiber unterstützen die [Admin Console](monitor-the-appliance-by-using-the-admin-console.md), und lädt Sie Integration Services.  
+# <a name="pdw-certificate-provisioning---analytics-platform-system"></a>PDW zertifikatbereitstellung - Analyseplattformsystem
+Die **PDW Zertifikatbereitstellung** auf der Seite das Analytics Platform System **Configuration Manager** importiert oder von der PDW-Region verwendeten Zertifikats entfernt. Verwenden, kann ein Zertifikat zum Verschlüsseln von Verbindungen sicheren Kommunikation mit dem Steuerungsknoten über SQL Server-Clients, Tools, mit denen die SQL Server PDW-Treiber unterstützen die [Admin Console](monitor-the-appliance-by-using-the-admin-console.md), und lädt Sie Integration Services.  
   
 ## <a name="prerequisites"></a>Erforderliche Komponenten  
 Vor dem Installieren des Zertifikats an, führen Sie folgende Schritte aus:  

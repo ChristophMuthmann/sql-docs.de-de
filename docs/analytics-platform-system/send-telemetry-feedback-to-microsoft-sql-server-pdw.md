@@ -1,35 +1,28 @@
 ---
-title: Senden Sie Telemetrie Feedback an Microsoft (SQLServer PDW)
-author: barbkess
-ms.author: barbkess
+title: Telemetrie-Feedback - Analytics Platform System | Microsoft Docs
+description: Senden Sie Telemetriedaten an Microsoft für Analytics Platform System.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 40a994f0-7eff-4db9-9572-401d6e1187a0
-caps.latest.revision: 18
-ms.openlocfilehash: 970533d5c0220ac651074977f7f522a480d5e2a4
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 747274cd03e9cbd5dd2eab4423458700331358dd
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="send-telemetry-feedback-to-microsoft"></a>Telemetriedaten an Microsoft senden
-Analyseplattformsystem ist eine optionale Telemetrie-Funktion, die Verwaltungskonsole Daten an Microsoft zu senden. Wir empfehlen Ihnen, aktivieren Sie diese Option, um uns dabei, das Produkt zu verbessern.  
+# <a name="send-telemetry-feedback-to-microsoft-for-analytics-platform-system"></a>Senden Sie Telemetrie für Analytics Platform System an Microsoft
+Analyseplattformsystem ist eine optionale Telemetrie-Funktion, die Verwaltungskonsole Daten an Microsoft zu senden. 
   
 > [!NOTE]  
 > In dieser Version überwacht Microsoft Telemetriedaten nicht aktiv. Die Daten werden nur zu Analysezwecken gesammelt wird.  
   
 ## <a name="privacy"></a>Datenschutz  
-Um die maximale Datenschutz zu gewährleisten, wird Sie ohne Aktivierung der Telemetrie APS geliefert. Bevor Sie diese Funktion aktivieren, lesen Sie zunächst die [Microsoft Analytics Platform System Privacy Statement](http://go.microsoft.com/fwlink/?LinkId=400902). Klicken Sie dann auf opt-in Ausführen des PowerShell-Skripts, die im folgenden beschrieben.  
+Um die maximale Datenschutz zu gewährleisten, wird Sie ohne Aktivierung der Telemetrie APS geliefert. Bevor Sie diese Funktion aktivieren, lesen Sie zunächst die [Microsoft Analytics Platform System Privacy Statement](http://go.microsoft.com/fwlink/?LinkId=400902). Um sich zu registrieren, führen Sie das PowerShell-Skript, das im folgenden beschrieben.  
   
 ## <a name="enable"></a>Aktivieren Sie Telemetrie  
 **DNS-Weiterleitung:** Senden von Telemetriedaten an Microsoft Analytics Platform System für die Verbindung mit dem Internet über einen DNS-Weiterleitung erforderlich. Um dieses Feature zu aktivieren, müssen Sie die DNS-Weiterleitung auf allen Hosts und virtuellen aktivieren. Aufrufen der `Enable-RemoteMonitoring` -Befehl mit der `SetupDnsForwarder` Option aus, um ordnungsgemäß konfigurieren Sie die DNS-Weiterleitung, und aktivieren Sie Telemetrie. Aufrufen der `Enable-RemoteMonitoring` Befehl ohne die `SetupDnsForwarder` option, wenn DNS-Weiterleitung bereits konfiguriert ist und Sie nur Taktüberwachung aktivieren möchten.  
@@ -116,9 +109,10 @@ Wenden Sie sich an CSS um Unterstützung zu erhalten, wenn Sie sehen Fehler oder
   
 Es gibt keinen Schaden beim Ausführen der `Disable-RemoteMonitoring` Befehl mehrmals.  
   
-## <a name="see-also"></a>Siehe auch  
-[Überwachen Sie die Anwendung mithilfe der Verwaltungskonsole &#40;Analyseplattformsystem&#41;](monitor-the-appliance-by-using-the-admin-console.md)  
-[Überwachen Sie die Anwendung mithilfe von Systemsichten &#40;Analyseplattformsystem&#41;](monitor-the-appliance-by-using-system-views.md)  
-[Überwachen Sie die Anwendung mit System Center Operationsmanager &#40;Analyseplattformsystem&#41;](monitor-the-appliance-by-using-system-center-operations-manager.md)  
-[Verwenden Sie nicht-Appliance DNS-Namen auflösen eine DNS-Weiterleitung &#40;Analyseplattformsystem&#41;](use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md)  
+## <a name="next-steps"></a>Nächste Schritte
+Weitere Informationen finden Sie in den folgenden Themen:
+- [Überwachen Sie die Anwendung mithilfe der Verwaltungskonsole &#40;Analyseplattformsystem&#41;](monitor-the-appliance-by-using-the-admin-console.md)  
+- [Überwachen Sie die Anwendung mithilfe von Systemsichten &#40;Analyseplattformsystem&#41;](monitor-the-appliance-by-using-system-views.md)  
+- [Überwachen Sie die Anwendung mit System Center Operationsmanager &#40;Analyseplattformsystem&#41;](monitor-the-appliance-by-using-system-center-operations-manager.md)  
+- [Verwenden Sie nicht-Appliance DNS-Namen auflösen eine DNS-Weiterleitung &#40;Analyseplattformsystem&#41;](use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md)  
   

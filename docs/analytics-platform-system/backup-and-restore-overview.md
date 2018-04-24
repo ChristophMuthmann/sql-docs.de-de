@@ -1,28 +1,22 @@
 ---
-title: Sichern und Wiederherstellen
-author: barbkess
-ms.author: barbkess
+title: Sichern und Wiederherstellen – Parallel Data Warehouse | Microsoft Docs
+description: Beschreibt, wie die Daten sichern und Wiederherstellen funktioniert für Parallel Data Warehouse (PDW). Sicherungs-und Wiederherstellungsvorgänge sind für die Wiederherstellung im Notfall verwendet werden. Sicherung und Wiederherstellung können auch zum Kopieren einer Datenbank auf einem Gerät in einer anderen Anwendung verwendet werden.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.suite: sql
-ms.custom: ''
-ms.technology: mpp-data-warehouse
-description: Beschreibt, wie die Daten sichern und Wiederherstellen von Works für SQL Server Parallel Data Warehouse (PDW).
-ms.date: 10/20/2016
-ms.topic: article
-ms.assetid: d4669957-270a-4e50-baf3-14324ca63049
-caps.latest.revision: 50
-ms.openlocfilehash: b4ac7a3a0b9f005ac05646ad03dcf3123036462e
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 118b9ced12e01ac6655d85969bb61717f2b31e0b
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="backup-and-restore"></a>Sichern und Wiederherstellen
-Beschreibt, wie die Daten sichern und Wiederherstellen von Works für SQL Server Parallel Data Warehouse (PDW). Sicherungs-und Wiederherstellungsvorgänge sind für die Wiederherstellung im Notfall verwendet werden. Sicherung und Wiederherstellung können auch zum Kopieren einer Datenbank auf einem Gerät in einer anderen Anwendung verwendet werden.  
+Beschreibt, wie die Daten sichern und Wiederherstellen funktioniert für Parallel Data Warehouse (PDW). Sicherungs-und Wiederherstellungsvorgänge sind für die Wiederherstellung im Notfall verwendet werden. Sicherung und Wiederherstellung können auch zum Kopieren einer Datenbank auf einem Gerät in einer anderen Anwendung verwendet werden.  
     
 ## <a name="BackupRestoreBasics"></a>Grundlagen der Sicherung und Wiederherstellung  
 Eine PDW *datenbanksicherung* ist eine Kopie einer Anwendungsdatenbank, in einem Format gespeichert, sodass er zum Wiederherstellen der ursprünglichen Datenbank in einer Anwendung verwendet werden kann.  

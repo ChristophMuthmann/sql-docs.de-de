@@ -1,44 +1,33 @@
 ---
-title: 'T-SQL - Sprachelemente: Parallel Data Warehouse Analytics Platform System | Microsoft Docs'
-author: barbkess
-ms.author: barbkess
+title: 'T-SQL - Sprachelemente: Parallel Data Warehouse | Microsoft Docs'
+description: T-SQL-Sprachelemente für analytische Platform System (APS) SQL Server Parallel Data Warehouse (PDW).
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.suite: sql
-ms.custom: ''
-ms.technology: mpp-data-warehouse
-description: Sprachelemente für Transact-SQL (T-SQL) für analytische Platform System (APS) SQL Server Parallel Data Warehouse (PDW).
-services: sql-data-warehouse
-documentationcenter: NA
-editor: ''
-ms.assetid: ea0b9a3e-e489-458e-addc-cc153e5cc158
-ms.devlang: NA
-ms.topic: article
-ms.tgt_pltfrm: NA
-ms.workload: data-services
-ms.date: 12/15/2016
-ms.openlocfilehash: fc6d1b69896ffeef0402d0b359f3b978bf43d961
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: d9e2011ef30864e35245f59cab0861ea116d1502
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="language-elements"></a>Language elements (Sprachelemente)
-Sprachelemente für Transact-SQL (T-SQL) für analytische Platform System (APS) SQL Server Parallel Data Warehouse (PDW).
+# <a name="t-sql-language-elements-for-parallel-data-warehouse"></a>T-SQL-Sprachelemente für Parallel Data Warehouse
+T-SQL-Sprachelemente für analytische Platform System (APS) SQL Server Parallel Data Warehouse (PDW).
 
 ## <a name="core-elements"></a>Zentrale Elemente
 * [Syntaxkonventionen](../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 * [Objekt-Benennungsregeln](../relational-databases/databases/database-identifiers.md)
 * [Reservierte Schlüsselwörter](../t-sql/language-elements/reserved-keywords-transact-sql.md)
-* [collations](https://msdn.microsoft.com/library/ff848763.aspx)
-* [comments](../t-sql/language-elements/comment-transact-sql.md)
+* [Sortierungen](https://msdn.microsoft.com/library/ff848763.aspx)
+* [Kommentare](../t-sql/language-elements/comment-transact-sql.md)
 * [constants](../t-sql/data-types/constants-transact-sql.md)
 * [Datentypen](../t-sql/data-types/data-types-transact-sql.md)
 * [EXECUTE](../t-sql/language-elements/execute-transact-sql.md)
-* [expressions](../t-sql/language-elements/expressions-transact-sql.md)
+* [Ausdrücke](../t-sql/language-elements/expressions-transact-sql.md)
 * [KILL](../t-sql/language-elements/kill-transact-sql.md)
 * [Problemumgehung für IDENTITY-Eigenschaft](../t-sql/statements/create-table-transact-sql-identity-property.md)
 * [PRINT](../t-sql/language-elements/print-transact-sql.md)
@@ -235,7 +224,7 @@ Sprachelemente für Transact-SQL (T-SQL) für analytische Platform System (APS) 
 * [XACT_STATE](../t-sql/functions/xact-state-transact-sql.md)
 
 ## <a name="transactions"></a>Transaktionen
-* [transactions](../t-sql/language-elements/transactions-sql-data-warehouse.md)
+* [Transaktionen](../t-sql/language-elements/transactions-sql-data-warehouse.md)
 
 ## <a name="diagnostic-sessions"></a>Diagnosesitzungen
 * [CREATE DIAGNOSTICS SESSION](../t-sql/language-elements/create-diagnostics-session-transact-sql.md)
