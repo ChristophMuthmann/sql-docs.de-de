@@ -1,34 +1,35 @@
 ---
 title: Lock:Released (Ereignisklasse) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Released event class
 ms.assetid: a150c300-72fa-4231-8f41-f1abd550a429
-caps.latest.revision: 
+caps.latest.revision: 35
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a977b5093165e7a5532f9b7312d43c272566b23b
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 43adf0086a623bc434d8214feefc05867076aa96
+ms.sourcegitcommit: beaad940c348ab22d4b4a279ced3137ad30c658a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="lockreleased-event-class"></a>Lock:Released (Ereignisklasse)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Die Lock:Released-Ereignisklasse zeigt an, dass eine Sperre einer Ressource, wie z. B. einer Seite, freigegeben wurde.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Die Lock:Released-Ereignisklasse zeigt an, dass eine Sperre einer Ressource, wie z. B. einer Seite, freigegeben wurde.  
   
  Die Ereignisklassen Lock:Acquired und Lock:Released können zum Überwachen verwendet werden, wenn Objekte gesperrt werden, der Sperrentyp bekannt ist und wenn aufgezeichnet wurde, wie lange die Sperren beibehalten wurden. Sperren, die für längere Zeit beibehalten werden, können zu Konflikten führen und sollten untersucht werden. So kann z. B. eine Anwendung Sperren für Zeilen in einer Tabelle erhalten und anschließend auf Benutzereingaben warten. Da bis zur Benutzereingabe längere Zeit vergehen kann, besteht die Möglichkeit, dass die Sperren andere Benutzer blockieren. In diesem Fall sollte die Anwendung geändert werden, damit Sperranforderungen nur bei Bedarf ausgegeben werden und keine Benutzereingaben notwendig sind, wenn Sperren bereits eingerichtet wurden.  
   

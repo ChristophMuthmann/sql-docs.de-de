@@ -1,16 +1,16 @@
 ---
-title: "[^] (Platzhalterzeichen – nicht zu suchende(s) Zeichen) (Transact-SQL) | Microsoft-Dokumentation"
-ms.custom: 
+title: '[^] (Platzhalterzeichen – nicht zu suchende(s) Zeichen) (Transact-SQL) | Microsoft-Dokumentation'
+ms.custom: ''
 ms.date: 12/06/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|language-elements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - Azure SQL Database
@@ -26,16 +26,16 @@ helpviewer_keywords:
 - wildcard characters [SQL Server]
 - '[^] (wildcard - character(s) not to match)'
 ms.assetid: b970038f-f4e7-4a5d-96f6-51e3248c6aef
-caps.latest.revision: 
+caps.latest.revision: 36
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: cef479bc6f0368a2d08a99265551cf7860b677e6
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 5b1359fa93f4c0d1828db7b77435f056e48ac0ec
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="-wildcard---characters-not-to-match-transact-sql"></a>\[^\] (Platzhalterzeichen – nicht zu suchende(s) Zeichen) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

@@ -16,18 +16,21 @@ f1_keywords:
 - sql13.dqs.kb.createcd.f1
 - sql13.dqs.dm.cdproperties.f1
 ms.assetid: c7f0bd84-a02e-4a81-885d-985e6415c499
-caps.latest.revision: ''
+caps.latest.revision: 21
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2d358802cd5500359b4132e6db6868485e317773
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: 8edd709f2a753d75c5208b82ac8cd6d885d83db6
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="create-a-composite-domain"></a>Erstellen einer Verbunddomäne
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   In diesem Thema wird beschrieben, wie eine Verbunddomäne in einer Wissensdatenbank in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) erstellt wird. Eine Verbunddomäne besteht aus einer oder mehreren Einzeldomänen, die für ein einzelnes Datenfeld gelten. Weitere Informationen zu Verbunddomänen finden Sie unter [Verwalten einer Verbunddomäne](../data-quality-services/managing-a-composite-domain.md).  
   
  Es gibt zwei Möglichkeiten, eine neue Verbunddomäne zu erstellen. Erstens während des Strukturschritts der Wissensermittlungsaktivität, wenn Sie gerade ein Datenbeispiel analysieren, um einer neuen oder vorhandenen Wissensdatenbank Wissen hinzuzufügen. Zweitens während der Domänenverwaltungsaktivität, wenn Sie eine neue Domäne erstellen, anstatt eine vorhandene zu ändern. Um eine Verbunddomäne zu erstellen, müssen Sie bereits mindestens zwei Einzeldomänen erstellt haben, um die Verbunddomäne hinzufügen zu können. Nur die Einzeldomänen, die bereits erstellt wurden und keiner vorhandenen Verbunddomäne hinzugefügt wurden, sind verfügbar, wenn Sie eine neue Verbunddomäne erstellen. Eine Einzeldomäne kann nur genau einer Verbunddomäne hinzugefügt werden, und eine Verbunddomäne kann keiner anderen Verbunddomäne hinzugefügt werden.  

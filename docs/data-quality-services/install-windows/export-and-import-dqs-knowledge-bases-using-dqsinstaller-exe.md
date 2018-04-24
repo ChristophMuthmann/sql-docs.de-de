@@ -13,18 +13,21 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 8234c63b-a018-4e55-8184-9a6bdf03274d
-caps.latest.revision: ''
+caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8060994f8f7da132b848150f1c005140b9eba2c6
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: 4145ef8b52e5d1a2c0610550ffe7cf40766a2906
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="export-and-import-dqs-knowledge-bases-using-dqsinstallerexe"></a>Export und Importieren von DQS-Wissensdatenbanken mit DQSInstaller.exe
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   Bei einer vorhandenen DQS-Installation können Sie alle Wissensdatenbanken auf dem [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] gleichzeitig in eine DQS-Sicherungsdatei (DQSB) exportieren und dann später die DQSB-Datei verwenden, um alle Wissensdatenbanken gleichzeitig auf einen anderen [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] zu importieren, indem Sie die Datei DQSInstaller.exe an der Eingabeaufforderung ausführen. Weitere Informationen zum Ausführen von DQSInstaller.exe von der Eingabeaufforderung finden Sie unter [Run DQSInstaller.exe from Command Prompt](../../data-quality-services/install-windows/run-dqsinstaller-exe-to-complete-data-quality-server-installation.md#CommandPrompt) in [Run DQSInstaller.exe to Complete Data Quality Server Installation](../../data-quality-services/install-windows/run-dqsinstaller-exe-to-complete-data-quality-server-installation.md).  
   
  Diese Funktion ermöglicht es Ihnen, sofort eine Sicherung *aller* Wissensdatenbanken in [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] durchzuführen, ohne jede Wissensdatenbank einzeln mithilfe des [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]in eine DQS-Datei exportieren zu müssen. Auf ähnliche Weise können Sie *alle* Wissensdatenbanken gleichzeitig aus der Sicherungsdatei in einen anderen [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] importieren, ohne jede Wissensdatenbank einzeln aus einer DQS-Datei mithilfe des [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]importieren zu müssen. Dies ist besonders nützlich beim Sichern und Wiederherstellen der Wissensdatenbanken, wenn Sie [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] auf einem Computer deinstallieren und dann auf einem anderen Computer neu installieren. Sie können ganz einfach alle Wissensdatenbanken in einer vorhandenen Installation von [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] in eine DQS-Sicherungsdatei (.dqsb) exportieren und dann alle Wissensdatenbanken aus der Sicherungsdatei importieren, nachdem Sie [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] auf einem anderen Computer installiert haben.  

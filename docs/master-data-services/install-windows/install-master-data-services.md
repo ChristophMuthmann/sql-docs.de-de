@@ -1,30 +1,33 @@
 ---
-title: "Installationsaufgaben für Master Data Services | Microsoft-Dokumentation"
-ms.custom: 
+title: Installationsaufgaben für Master Data Services | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 03/24/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: install-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - setup-install
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: bb7aa3e7-8807-42c8-884f-0e41d7a20837
-caps.latest.revision: 
+caps.latest.revision: 32
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9a0b5d444d3f1f28d4453a8c266b19beaf080440
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: 30435254dd2f8124098a484dd7c28d2755b11d4b
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="installation-tasks-for-master-data-services"></a>Installationsaufgaben für Master Data Services
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   Dieser Artikel enthält eine Übersicht über die Installationsaufgaben sowie Links zu Anweisungen. Eine exemplarische Vorgehensweise zum Installieren und Konfigurieren von Master Data Services finden Sie unter [Master Data Services – Installation und Konfiguration](../../master-data-services/master-data-services-installation-and-configuration.md). 
   
 -   [Installationsvorbereitung](#preinstall): Überprüfen Sie die Systemanforderungen, bevor Sie [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]installieren.  

@@ -1,30 +1,31 @@
 ---
 title: CREATE TABLE AS SELECT (Azure SQL Data Warehouse) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 10/07/2016
-ms.prod: 
+ms.prod: ''
 ms.prod_service: sql-data-warehouse, pdw
-ms.reviewer: 
+ms.reviewer: ''
 ms.service: sql-data-warehouse
 ms.component: t-sql|statements
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: d1e08f88-64ef-4001-8a66-372249df2533
-caps.latest.revision: 
+caps.latest.revision: 40
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 429c2dc727d844c35943fa599e6fbcb911df04ac
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
+ms.openlocfilehash: 4a20e31dca149315c050657e9632d3e7fb3b8c92
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-table-as-select-azure-sql-data-warehouse"></a>CREATE TABLE AS SELECT (Azure SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -291,7 +292,7 @@ DROP TABLE DimCustomer2_old;
 
 <a name="examples-table-distribution-bk"></a>
 
-## <a name="examples-for-table-distribution"></a>Beispiele für die Verteilung von Tabellen
+## <a name="examples-for-table-distribution"></a>Beispiele für die Tabellenverteilung
 
 <a name="ctas-change-distribution-method-bk"></a>
 

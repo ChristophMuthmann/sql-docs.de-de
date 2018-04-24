@@ -16,18 +16,21 @@ f1_keywords:
 - sql13.dqs.dm.testcdrule.f1
 - sql13.dqs.dm.cdrules.f1
 ms.assetid: 0f3f5ba4-cc47-4d66-866e-371a042d1f21
-caps.latest.revision: ''
+caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9a9d5e5885832d83f27e061f2a54987a8c8e4f8a
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: a1199bd1bc03a29b5e2469b501bc2d9be7124abe
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="create-a-cross-domain-rule"></a>Erstellen einer domänenübergreifenden Regel
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   In diesem Thema wird beschrieben, wie eine domänenübergreifende Regel für eine Verbunddomäne in einer Wissensdatenbank in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) erstellt wird. Eine domänenübergreifende Regel testet die Beziehung zwischen Werten in einzelnen Domänen, die in einer Verbunddomäne enthalten sind. Eine domänenübergreifende Regel muss über eine Verbunddomäne hinweg wahr sein, damit Domänenwerte als genau betrachtet werden und den Geschäftsanforderungen entsprechen. Eine domänenübergreifende Regel wird verwendet, um Domänenwerte zu validieren, zu korrigieren und zu standardisieren.  
   
  Die If-Klausel und die Then-Klausel einer domänenübergreifenden Regel sind jeweils für eine der einzelnen Domänen in der Verbunddomäne definiert. Jede Klausel muss für eine andere einzelne Domäne definiert werden. Eine domänenübergreifende Regel muss sich auf mehrere einzelne Domänen beziehen; Sie können keine einfache Domänenregel (für nur eine einzelne Domäne) für eine Verbunddomäne definieren. Dies wäre der Fall, wenn Sie eine Domänenregel für eine einzelne Domäne definieren. Die If-Klausel und die Then-Klausel können jeweils eine oder mehrere Bedingungen enthalten.  

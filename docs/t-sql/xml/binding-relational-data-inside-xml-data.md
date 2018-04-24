@@ -1,16 +1,16 @@
 ---
 title: Einbinden relationaler Daten in XML-Daten | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 07/26/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|xml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -22,16 +22,16 @@ helpviewer_keywords:
 - variables [XML in SQL Server], relational data binding
 - columns [XML in SQL Server], relational data binding
 ms.assetid: 03d013a9-b53f-46c3-9628-da77f099c74a
-caps.latest.revision: 
+caps.latest.revision: 36
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 87dca9b5bcd70335a6121b1be1e49f4cc352826e
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 24fb6baf5c60d7fec9596d9c2893ab7aadd5528b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="binding-relational-data-inside-xml-data"></a>Einbinden relationaler Daten in XML-Daten
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

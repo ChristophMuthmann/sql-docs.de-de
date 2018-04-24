@@ -1,32 +1,35 @@
 ---
-title: "Erstellen des Dialogfeldes der Website (Konfigurations-Manager für Master Data Services) | Microsoft-Dokumentation"
-ms.custom: 
+title: Erstellen des Dialogfeldes der Website (Konfigurations-Manager für Master Data Services) | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.mds.configmanager.createsite.f1
 ms.assetid: 179c9c1e-3b06-421b-b71b-1cb64d104f5e
-caps.latest.revision: 
+caps.latest.revision: 10
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0cbb31101e60f32070abdde870fb7dfcd2c497b9
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: c46c77c3dd090110531d3fcc2aabda9855e82329
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="create-website-dialog-box-master-data-services-configuration-manager"></a>Website erstellen (Dialogfeld im Konfigurations-Manager für Master Data Services)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   Verwenden Sie das Dialogfeld **Website erstellen** , um eine neue Website auf dem lokalen Computer zu erstellen. Wenn Sie in [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]eine Website erstellen, wird diese den Internetinformationsdiensten (IIS) auf dem lokalen Computer mit einer Stammanwendung hinzugefügt, die als die [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] -Webanwendung konfiguriert ist. Darüber hinaus wird ein neuer Anwendungspool erstellt und die Webanwendung in diesen Anwendungspool eingefügt.  
   
 ## <a name="web-site"></a>Website  
@@ -50,7 +53,7 @@ ms.lasthandoff: 03/05/2018
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Webkonfiguration &#40;Seite im Konfigurations-Manager für Master Data Sevices&#41;](../master-data-services/web-configuration-page-master-data-services-configuration-manager.md)   
-[Master Data Services – Installation und Konfiguration](../master-data-services/master-data-services-installation-and-configuration.md) [Webanwendungsanforderungen &#40; Master Data Services &#41;](../master-data-services/install-windows/web-application-requirements-master-data-services.md)   
+[Master Data Services – Installation und Konfiguration](../master-data-services/master-data-services-installation-and-configuration.md) [Webanwendungsanforderungen & #40; Master Data Services & #41;](../master-data-services/install-windows/web-application-requirements-master-data-services.md)   
  [Erstellen einer Master Data Manager-Webanwendung &#40;Master Data Services&#41;](../master-data-services/install-windows/create-a-master-data-manager-web-application-master-data-services.md)  
   
   

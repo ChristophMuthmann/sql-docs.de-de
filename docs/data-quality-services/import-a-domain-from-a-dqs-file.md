@@ -13,18 +13,21 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: fabd88b0-22b3-4543-a993-6d5b202ded80
-caps.latest.revision: ''
+caps.latest.revision: 18
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 54a1d2f72e65b054336f27cf629a40fec7abaa15
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: 69b7f5a369330a6dd961926189f465f6eea7e81a
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="import-a-domain-from-a-dqs-file"></a>Importieren einer Domäne aus einer DQS-Datei
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   In diesem Thema wird beschrieben, wie eine Domäne aus einer DQS-Datei in eine vorhandene Wissensdatenbank in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) importiert wird. Eine DQS-Datendatei wird erstellt, indem eine Domäne oder eine Wissensdatenbank aus der Anwendung [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] exportiert wird. Eine DQS-Datendatei wird verschlüsselt und kann nicht angezeigt werden.  
   
  Durch das Verwenden einer DQS-Datendatei zum Exportieren einer Domäne aus einer Wissensdatenbank und Importieren in eine andere Wissensdatenbank wird der Wissensgenerierungsprozess vereinfacht, Zeit gespart und der Aufwand verringert. Auf diese Weise haben Sie die Möglichkeit, eine Domäne und ihr Wissen zusammen mit anderen zu nutzen und somit Zeit zu sparen. Sie können eine Einzeldomäne oder eine Verbunddomäne (mit mehreren Einzeldomänen) importieren. Eine DQS-Datei, die eine Einzeldomäne enthält, umfasst alle Domänendaten einschließlich Domäneneigenschaften, Werten und Regeldaten, aber keine Informationen zu den zugeordneten Verweisdaten. Eine DQS-Datei, die eine Verbunddomäne enthält, umfasst alle Verbunddomänendaten, einschließlich aller Domänendaten für die Einzeldomänen, die in der Verbunddomäne enthalten sind, und die Eigenschaften, Wertbeziehungen und CD-Regeln der Verbunddomäne, aber keine zugeordneten Verweisdaten. Veröffentlichte und unveröffentlichte Daten werden importiert.  

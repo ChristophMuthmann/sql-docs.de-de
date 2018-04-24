@@ -1,16 +1,16 @@
 ---
 title: column_definition (Transact-SQL) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 05/05/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - column_definition
@@ -23,16 +23,17 @@ helpviewer_keywords:
 - column properties [SQL Server]
 - column definitions [SQL Server]
 ms.assetid: a1742649-ca29-4d9b-9975-661cdbf18f78
-caps.latest.revision: 
+caps.latest.revision: 78
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d50bda05bd0487a60e9a909500be2ea3d65fed92
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 40b95f6475239b533811526025dedf3055b5c09b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="alter-table-columndefinition-transact-sql"></a>ALTER TABLE column_definition (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -205,11 +206,11 @@ SPARSE
  Gibt Spaltenverschlüsselungsschlüssel an. Weitere Informationen finden Sie unter [CREATE COLUMN ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-column-encryption-key-transact-sql.md).  
   
 ENCRYPTION_TYPE = { DETERMINISTIC | RANDOMIZED }  
- Die**deterministische Verschlüsselung** verwendet eine Methode, die immer denselben verschlüsselten Wert für jeden angegebenen Klartextwert generiert. Die Verwendung der deterministischen Verschlüsselung ermöglicht die Suche mit einer Gleichheitsüberprüfung, das Gruppieren und das Verknüpfen von Tabellen mitt Gleichheitsjoins, basierend auf verschlüsselten Werten. Jedoch erlaubt sie nicht autorisierten Benutzern möglicherweise, Informationen zu verschlüsselten Werten zu erraten, indem sie die Muster in den verschlüsselten Spalten untersuchen. Das Verknüpfen zweier Tabellen mit deterministisch verschlüsselten Spalten ist nur möglich, wenn die Spalten mit demselben Spaltenverschlüsselungsschlüssel verschlüsselt sind. Die deterministische Verschlüsselung muss eine Spaltensortierung mit einer binary2-Sortierreihenfolge für Zeichenspalten verwenden.  
+ Die**deterministische Verschlüsselung** verwendet eine Methode, die immer denselben verschlüsselten Wert für jeden angegebenen Klartextwert generiert. Die Verwendung der deterministischen Verschlüsselung ermöglicht die Suche mit einer Gleichheitsüberprüfung, das Gruppieren und das Verknüpfen von Tabellen mit Gleichheitsjoins, basierend auf verschlüsselten Werten. Jedoch erlaubt sie nicht autorisierten Benutzern möglicherweise, Informationen zu verschlüsselten Werten zu erraten, indem sie die Muster in den verschlüsselten Spalten untersuchen. Das Verknüpfen zweier Tabellen mit deterministisch verschlüsselten Spalten ist nur möglich, wenn die Spalten mit demselben Spaltenverschlüsselungsschlüssel verschlüsselt sind. Die deterministische Verschlüsselung muss eine Spaltensortierung mit einer binary2-Sortierreihenfolge für Zeichenspalten verwenden.  
   
  Die**zufällige Verschlüsselung** verwendet eine Methode, die Daten in einer weniger vorhersagbaren Weise verschlüsselt. Die zufällige Verschlüsselung ist sicherer, verhindert aber die Gleichheitssuche, Gruppierung und Verknüpfung für verschlüsselte Spalten. Spalten mit zufälliger Verschlüsselung können nicht indiziert werden.  
   
- Verwenden Sie die deterministische Verschlüsselung für Spalten, die Such- oder Gruppierungsparameter enthalten, so z.B. eine Personalausweisnummer. Verwenden Sie die zufällige Verschlüsselung für Daten wie Kreditkartennummern, die nicht mit anderen Datensätzen gruppiert sind oder die zum Verknüpfen von Daten verwendet werden und die nicht durchsucht werden, weil Sie andere Spalten verwenden (wie Transaktionsnummern), um die Zeile zu finden, die die relevante verschlüsselte Spalte enthält.  
+ Verwenden Sie die deterministische Verschlüsselung für Spalten, die Such- oder Gruppierungsparameter enthalten, so z.B. eine Personalausweisnummer. Verwenden Sie die zufällige Datenverschlüsselung für Daten (z.B. Kreditkartennummern), die nicht mit anderen Datensätzen gruppiert oder in Jointabellen verwendet werden und nach denen nicht gesucht wird, wenn andere Spalten verwendet werden (z.B. Transaktionsnummern), um die Zeile zu suchen, die die betreffende verschlüsselte Spalte enthält.  
   
  Spalten müssen einen qualifizierenden Datentyp aufweisen.  
   

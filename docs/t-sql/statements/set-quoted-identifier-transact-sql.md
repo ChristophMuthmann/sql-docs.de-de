@@ -1,16 +1,16 @@
 ---
 title: SET QUOTED_IDENTIFIER (Transact-SQL) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 02/03/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - QUOTED_IDENTIFIER_TSQL
@@ -27,16 +27,17 @@ helpviewer_keywords:
 - ISO delimited identifiers rules
 - SET QUOTED_IDENTIFIER statement
 ms.assetid: 10f66b71-9241-4a3a-9292-455ae7252565
-caps.latest.revision: 
+caps.latest.revision: 48
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 207cf23523a315a0a4a4bc923ae9e52d7b82f8b0
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 252947a607e85ace9a787f76881c490944274f86
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="set-quotedidentifier-transact-sql"></a>SET QUOTED_IDENTIFIER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -66,7 +67,7 @@ SET QUOTED_IDENTIFIER ON
   
  Wenn SET QUOTED_IDENTIFIER auf OFF festgelegt ist, können Literalzeichenfolgen in Ausdrücken in einfache oder doppelte Anführungszeichen eingeschlossen werden. Eine in doppelte Anführungszeichen eingeschlossene Literalzeichenfolge kann eingebundene einfache Anführungszeichen, wie z. B. Apostrophe, enthalten.  
   
- SET QUOTED_IDENTIFIER muss beim Erstellen oder Ändern von Indizes auf berechneten Spalten oder indizierten Sichten auf ON festgelegt sein. Wenn SET QUOTED_IDENTIFIER auf OFF festgelegt ist, schlagen die CREATE-, UPDATE-, INSERT- und DELETE-Anweisungen in Tabellen mit Indizes auf berechneten Spalten oder indizierten Sichten fehl. Weitere Informationen zu den erforderlichen Einstellungen der SET-Option mit indizierten Sichten und Indizes für berechnete Spalten finden Sie in den Überlegungen zum Verwenden der SET-Anweisungen unter [SET Statements &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md).  
+ SET QUOTED_IDENTIFIER muss beim Erstellen oder Ändern von Indizes auf berechneten Spalten oder indizierten Sichten auf ON festgelegt sein. Wenn SET QUOTED_IDENTIFIER auf OFF festgelegt ist, schlagen die CREATE-, UPDATE-, INSERT- und DELETE-Anweisungen in Tabellen mit Indizes auf berechneten Spalten oder indizierten Sichten fehl. Weitere Informationen zu den erforderlichen Einstellungen der SET-Option mit indizierten Sichten und Indizes für berechnete Spalten finden Sie in den Überlegungen zum Verwenden der SET-Anweisungen unter [SET-Anweisungen &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md).  
   
  SET QUOTED_IDENTIFIER muss beim Erstellen eines gefilterten Indexes auf ON festgelegt sein.  
   

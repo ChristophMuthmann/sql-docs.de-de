@@ -1,32 +1,35 @@
 ---
 title: Erlernen von SQL Server Master Data Services | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 02/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 keywords:
 - Erlernen von SQL
 ms.assetid: 87516551-a3b6-4b29-928b-ddd25672a98c
-caps.latest.revision: 
+caps.latest.revision: 19
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 34d9c876e8fab97fcce0f81421d918af4741a47f
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: 278a2575212d8e9d6f8c0815f84f7c0f92fa145a
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="learn-sql-server-master-data-services"></a>Erlernen von SQL Server Master Data Services
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   
   
 ## <a name="training"></a>Training  

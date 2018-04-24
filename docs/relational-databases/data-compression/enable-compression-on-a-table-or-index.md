@@ -1,15 +1,15 @@
 ---
-title: "Aktivieren der Komprimierung für eine Tabelle oder einen Index | Microsoft-Dokumentation"
-ms.custom: 
+title: Aktivieren der Komprimierung für eine Tabelle oder einen Index | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.reviewer: 
+ms.prod: sql
+ms.reviewer: ''
 ms.suite: SQL
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: data-compression
 ms.technology:
 - dbe-data-compression
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.compwiz.compressiontype.f1
@@ -24,16 +24,17 @@ helpviewer_keywords:
 - data compression wizard
 - compression [SQL Server], enable
 ms.assetid: b7442cff-e616-475a-9c5a-5a765089e5f2
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: affe8cf85b5a4d3d9b692273bdf569a80287f305
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 632fbcd80361de5090cb10505a8a77d7ed67d4ba
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="enable-compression-on-a-table-or-index"></a>Aktivieren der Komprimierung für eine Tabelle oder einen Index
 
@@ -157,7 +158,7 @@ ms.lasthandoff: 01/18/2018
   
             -   Wenn Sie **Einmalig um**auswählen, geben Sie im Feld **Einmalig um** die spezifische Tageszeit ein, zu der der Auftragszeitplan ausgeführt werden soll. Geben Sie die Stunde, Minute und Sekunde des Tages sowie AM oder PM ein.  
   
-            -   Wenn Sie **Alle**auswählen, geben Sie an, wie oft der Auftragszeitplan an dem unter **Häufigkeit**ausgewählten Tag ausgeführt werden soll. Wenn Sie z.B. möchten, dass der Auftragszeitplan am Tag seiner Ausführung alle 2 Stunden wiederholt wird, wählen Sie **Alle**aus, geben in das erste Feld „2“ ein und wählen in der Liste **Stunde(n)** aus. Aus dieser Liste können Sie auch **Minute(n)** und **Sekunde(n)**auswählen. Beachten Sie, dass die größte im ersten Feld zugelassene Zahl "100" ist.  
+            -   Wenn Sie **Alle**auswählen, geben Sie an, wie oft der Auftragszeitplan an dem unter **Häufigkeit**ausgewählten Tag ausgeführt werden soll. Wenn Sie z.B. möchten, dass der Auftragszeitplan am Tag seiner Ausführung alle 2 Stunden wiederholt wird, wählen Sie **Alle**aus, geben in das erste Feld „2“ ein und wählen in der Liste **Stunde(n)** aus. Aus dieser Liste können Sie auch **Minute(n)** und **Sekunde(n)** auswählen. Beachten Sie, dass die größte im ersten Feld zugelassene Zahl "100" ist.  
   
                  Geben Sie im Feld **Start** die Zeit ein, zu der die Ausführung des Auftragszeitplans beginnen soll. Geben Sie im Feld **Ende** die Zeit ein, zu der die Ausführung des Auftragszeitplans enden soll. Geben Sie die Stunde, Minute und Sekunde des Tages sowie AM oder PM ein.  
   
@@ -210,7 +211,7 @@ ms.lasthandoff: 01/18/2018
   
 #### <a name="to-enable-compression-on-a-table"></a>So aktivieren Sie die Komprimierung für eine Tabelle  
   
-1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
+1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   
@@ -228,7 +229,7 @@ ms.lasthandoff: 01/18/2018
   
 #### <a name="to-enable-compression-on-an-index"></a>So aktivieren Sie die Komprimierung für einen Index  
   
-1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
+1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   

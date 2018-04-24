@@ -1,16 +1,16 @@
 ---
-title: "REVOKE (Berechtigungen für Datenbankprinzipal) (Transact-SQL) | Microsoft-Dokumentation"
-ms.custom: 
+title: REVOKE (Berechtigungen für Datenbankprinzipal) (Transact-SQL) | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 08/10/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - REVOKE statement, users
 - application roles [SQL Server], permissions
 ms.assetid: c45e1086-c25b-48bb-a764-4a893e983db2
-caps.latest.revision: 
+caps.latest.revision: 30
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c02242a5428a6ae7c2426efd517809f8e374da4e
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 245ed94d998e7240734f8f4f032a4c871aee877f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="revoke-database-principal-permissions-transact-sql"></a>REVOKE (Berechtigungen für Datenbankprinzipal) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -105,22 +105,22 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
  Gibt eine Anwendungsrolle an.  
   
  *Database_user_mapped_to_Windows_User*  
-**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Gilt für** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
  Gibt einen Datenbankbenutzer an, der einem Windows-Benutzer zugeordnet ist.  
   
  *Database_user_mapped_to_Windows_Group*  
-**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Gilt für** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
  Gibt einen Datenbankbenutzer an, der einer Windows-Gruppe zugeordnet ist.  
   
  *Database_user_mapped_to_certificate*  
-**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Gilt für** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
  Gibt einen Datenbankbenutzer an, der einem Zertifikat zugeordnet ist.  
   
  *Database_user_mapped_to_asymmetric_key*  
-**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Gilt für** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
  Gibt einen Datenbankbenutzer an, der einem asymmetrischen Schlüssel zugeordnet ist.  
   
@@ -161,7 +161,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die CONTROL-Berechtigung für den angegebenen Prinzipal oder eine höhere Berechtigung, die die CONTROL-Berechtigung impliziert.  
   
- Empfänger der CONTROL-Berechtigung für eine Datenbank, z.B. Mitglieder der festen Datenbankrolle **db_owner**, können jede Berechtigung für ein beliebiges sicherungsfähiges Element in der Datenbank erteilen.  
+ Empfänger der CONTROL-Berechtigung für eine Datenbank, wie z.B. Mitglieder der festen Datenbankrolle **db_owner**, können jede beliebige Berechtigung für jedes beliebige sicherungsfähige Element in der Datenbank erteilen.  
   
 ## <a name="examples"></a>Beispiele  
   

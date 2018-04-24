@@ -13,19 +13,22 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 9c6b996c-e768-4bf5-837f-5436ed9cea1d
-caps.latest.revision: ''
+caps.latest.revision: 67
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 648620fc2da4fd3e033feec89531fea3ec7dceae
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: 0322456ec2158fe673b59141f6ce66e4a9a3d2d6
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="data-quality-services"></a>Data Quality Services
-  [!INCLUDE[ssDQSnoversionLong](../includes/ssdqsnoversionlong-md.md)] (DQS) ist ein wissensorientiertes Data Quality-Produkt. DQS ermöglicht es Ihnen, eine Wissensdatenbank zu erstellen und sie zum Ausführen einer Vielzahl wichtiger Datenqualitätstasks zu verwenden, einschließlich Korrektur, Erweiterung, Standardisierung und Deduplizierung der Daten. DQS ermöglicht es Ihnen, eine Datenbereinigung mit Cloud-basierten Verweisdatendiensten auszuführen, die von Verweisdatenanbieter bereitgestellt werden. DQS ermöglicht Ihnen auch die Profilerstellung. Selbige ist in die Data Quality-Tasks integriert, womit Sie die Integrität Ihrer Daten analysieren können.  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+ [!INCLUDE[ssDQSnoversionLong](../includes/ssdqsnoversionlong-md.md)] (DQS) ist ein wissensorientiertes Data Quality-Produkt. DQS ermöglicht es Ihnen, eine Wissensdatenbank zu erstellen und sie zum Ausführen einer Vielzahl wichtiger Datenqualitätstasks zu verwenden, einschließlich Korrektur, Erweiterung, Standardisierung und Deduplizierung der Daten. DQS ermöglicht es Ihnen, eine Datenbereinigung mit Cloud-basierten Verweisdatendiensten auszuführen, die von Verweisdatenanbieter bereitgestellt werden. DQS ermöglicht Ihnen auch die Profilerstellung. Selbige ist in die Data Quality-Tasks integriert, womit Sie die Integrität Ihrer Daten analysieren können.  
   
  DQS besteht aus [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] und [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]. Beide werden als Teil von [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]installiert. [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] ist eine SQL Server-Instanz-Funktion, die aus drei SQL Server-Katalogen mit Data Quality-Funktionalität und -Speicher besteht. [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] ist eine freigegebene Funktion von SQL Server, die Geschäftsbenutzer, IT-Mitarbeiter und IT-Experten zum Ausführen von computergesteuerten Data Quality-Analysen und zum interaktiven Verwalten der Datenqualität verwenden können. Sie können auch Data Quality-Prozesse mit [!INCLUDE[ssDQSCleansingLong](../includes/ssdqscleansinglong-md.md)] und Data Quality-Funktionen von Master Data Services (MDS) ausführen, die jeweils auf DQS basieren.  
   

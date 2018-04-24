@@ -1,33 +1,36 @@
 ---
 title: Erstellen eines Textattributs (Master Data Services) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - attributes [Master Data Services], creating text attributes
 - creating text attributes [Master Data Services]
 ms.assetid: cd8b57de-364d-42a3-9273-c1c6b992bb40
-caps.latest.revision: 
+caps.latest.revision: 8
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 019f04c6d1cbcc4f484dcb9325bb89658c19fe39
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: 4f5de079515a4463a5dd50ee59b717ba88ac7451
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="create-a-text-attribute-master-data-services"></a>Erstellen eines Textattributs (Master Data Services)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   Erstellen Sie in [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]ein Textattribut, wenn Sie möchten, dass Benutzer eine Textzeichenfolge als Attributwert eingeben.  
   
 ## <a name="prerequisites"></a>Voraussetzungen  

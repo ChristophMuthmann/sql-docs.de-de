@@ -1,16 +1,16 @@
 ---
 title: SET ANSI_NULLS (Transact-SQL) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 12/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-data-warehouse, pdw, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - SET_ANSI_NULLS_TSQL
@@ -27,16 +27,17 @@ helpviewer_keywords:
 - null values [SQL Server], comparison operators
 - comparison operators [SQL Server], null values
 ms.assetid: aae263ef-a3c7-4dae-80c2-cc901e48c755
-caps.latest.revision: 
+caps.latest.revision: 43
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: a6ef51bb13ae7372175a390a3d8c5509550a3ad1
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 4581fc2b98249f58100f448c30ecb2975ccb593b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="set-ansinulls-transact-sql"></a>SET ANSI_NULLS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -86,7 +87,7 @@ SET ANSI_NULLS ON
   
  Die Einstellung von SET ANSI_NULLS wird zur Ausführungszeit und nicht zur Analysezeit festgelegt.  
   
- Führen Sie die folgende Abfrage aus, um die aktuelle Einstellung anzuzeigen:
+ Um die aktuelle Einstellung anzuzeigen, führen Sie die folgende Abfrage aus:
   
 ```  
 DECLARE @ANSI_NULLS VARCHAR(3) = 'OFF';  

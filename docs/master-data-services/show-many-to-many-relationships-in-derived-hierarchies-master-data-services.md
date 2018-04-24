@@ -1,30 +1,33 @@
 ---
 title: Anzeigen von m:n-Beziehungen in abgeleiteten Hierarchien (Master Data Services) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 8b2a9c43-40e0-48f7-a6a9-325beb9f27da
-caps.latest.revision: 
+caps.latest.revision: 13
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e97bda2761c85e690bf43e568371d7dc25584b41
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: bbe98747dd35a5320ef2878a72908cae8825b595
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="show-many-to-many-relationships-in-derived-hierarchies-master-data-services"></a>Anzeigen von m:n-Beziehungen in abgeleiteten Hierarchien (Master Data Services)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   Abgeleitete Hierarchien zeigen (DH) 1:n-Beziehungen an und können jetzt auch m:n-Beziehungen anzeigen.  
   
 ## <a name="many-to-many-m2m-relationships"></a>m:n-Beziehungen  
@@ -56,7 +59,7 @@ ms.lasthandoff: 03/05/2018
   
  ![mds_hierarchies_available_entities_and_hierarchies](../master-data-services/media/mds-hierarchies-available-entities-and-hierarchies.PNG "mds_hierarchies_available_entities_and_hierarchies")  
   
- Dies ist ein weiteres Beispiel dafür, dass ein untergeordnetes Element unter mehreren übergeordneten Elementen angezeigt werden kann: Schulungskurs **1 {Master Data Services 101}** wird sowohl unter **6 {Hillman, Reinout N}** als auch unter **40 {Ford, Jeffrey L}**angezeigt.  
+ Dies ist ein weiteres Beispiel dafür, dass ein untergeordnetes Element unter mehreren übergeordneten Elementen angezeigt werden kann: Schulungskurs **1 {Master Data Services 101}** wird sowohl unter **6 {Hillman, Reinout N}** als auch unter **40 {Ford, Jeffrey L}** angezeigt.  
   
  Die Elemente der Zuordnungsentität **ClassRegistration** werden nicht innerhalb der abgeleiteten Hierarchie angezeigt. Sie werden lediglich zum Definieren der Beziehungen zwischen übergeordneten und untergeordneten Elementen in der Hierarchie verwendet.  
   

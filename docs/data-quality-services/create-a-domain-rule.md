@@ -16,18 +16,21 @@ f1_keywords:
 - sql13.dqs.dm.testdomainrule.f1
 - sql13.dqs.dm.rules.f1
 ms.assetid: 339fa10d-e22c-4468-b366-080c33f1a23f
-caps.latest.revision: ''
+caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 44c7b7392737306ffa78958d46e53f7904c688da
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: 54f62f31531b6b4f24305169db5acbdf36f5cdb5
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="create-a-domain-rule"></a>Erstellen einer Domänenregel
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   In diesem Thema wird beschrieben, wie Sie eine Domänenregel in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) erstellen. Eine Domänenregel ist eine Bedingung, mit der Domänenwerte validiert, korrigiert und standardisiert werden. Eine Domänenregel muss über eine Domäne hinweg wahr sein, damit Domänenwerte als genau betrachtet werden und den Geschäftsanforderungen entsprechen. Domänenregeln können Überprüfungsregeln enthalten, die für die Überprüfung von Domänenwerten, aber nicht für die Korrektur von Daten in Data Quality-Projekten verwendet werden. Regeln umfassen auch Standardisierungsregeln, die auf gültige Daten angewendet und in der Datenkorrektur verwendet werden.  
   
 ##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  

@@ -17,18 +17,21 @@ f1_keywords:
 - sql13.dqs.kb.kbmatchingpolicy.f1
 - sql13.dqs.kb.kbmatchingresults.f1
 ms.assetid: cce77a06-ca31-47b6-8146-22edf001d605
-caps.latest.revision: ''
+caps.latest.revision: 43
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5c9fe7a9614c1b389362edd0b40284508329fc1b
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: cc6cc423dc00cb7a9615102217bfd3736d8ca7a1
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="create-a-matching-policy"></a>Erstellen einer Abgleichsrichtlinie
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   In diesem Thema wird beschrieben, wie eine Abgleichsrichtlinie eine Wissensdatenbank in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) erstellt wird. Sie bereiten den Abgleichsprozess in DQS vor, indem Sie die Abgleichsrichtlinienaktivität für Beispieldaten ausführen. In dieser Aktivität erstellen und testen Sie eine oder mehrere Abgleichsregeln in der Richtlinie und veröffentlichen dann die Wissensdatenbank, um die Abgleichsregeln zur Verwendung öffentlich verfügbar zu machen. Es kann nur eine Abgleichsrichtlinie in einer Wissensdatenbank geben, aber diese Richtlinie kann mehrere Abgleichsregeln enthalten.  
   
  Die Abgleichsrichtlinienerstellung wird in drei Phasen ausgeführt: ein Zuordnungsprozess, in dem Sie die Datenquelle identifizieren und Domänen zu Spalten zuordnen, ein Abgleichsrichtlinienprozess, in dem Sie eine oder mehrere Abgleichsregeln erstellen und jede Abgleichsregel separat testen, und ein Abgleichsergebnisseprozess, in dem Sie alle Abgleichsregeln zusammen ausführen und die Richtlinie der Wissensdatenbank hinzufügen, wenn Sie mit ihr zufrieden sind. Jeder dieser Prozesse wird auf einer separaten Seite des Abgleichsrichtlinienaktivitäts-Assistenten ausgeführt, sodass Sie zwischen den Seiten hin und her wechseln, den Prozess erneut auszuführen, einen bestimmten Abgleichsrichtlinienprozess schließen und dann zur gleichen Phase des Prozesses zurückkehren können. Nach dem gemeinsamen Testen aller Regeln können Sie, falls erforderlich, zur Seite **Abgleichsrichtlinie** zurückkehren, eine einzelne Regel ändern, sie wieder separat testen und zur Seite **Abgleichsergebnisse** zurückkehren, um alle Regeln erneut gemeinsam auszuführen. DQS stellt Ihnen Statistiken zu den Quelldaten, den Abgleichsregeln und den Abgleichsergebnissen bereit, die es Ihnen ermöglichen, informierte Entscheidungen zur Abgleichsrichtlinie zu treffen, damit Sie sie optimieren können.  

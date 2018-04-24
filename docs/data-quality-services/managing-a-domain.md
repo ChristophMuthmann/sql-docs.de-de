@@ -13,18 +13,21 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: c5ab71a3-0dac-45b1-be8e-93bf7e0e03ce
-caps.latest.revision: ''
+caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7e988d58dc4f160ae85273762173d129c2cc9c2c
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: 53bd688bc68e8715409e663c7e2977a74e891989
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="managing-a-domain"></a>Verwalten einer Domäne
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   In diesem Thema wird die Verwendung von Domänen in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) beschrieben. Eine Domäne enthält eine semantische Darstellung der Daten in einem bestimmten Feld in der Datenquelle, die analysiert werden soll. Eine Domäne ist Teil einer Wissensdatenbank, die Sie für eine Datenquelle erstellen, und das Wissen, das Sie durch Analysieren einer Beispieldatenquelle oder dem Importieren von Daten erhalten, wird den in der Wissensdatenbank definierten Domänen hinzugefügt. Das Wissen in diesen Domänen wird später verwendet, um Bereinigungen und Abgleiche in einem Data Quality-Projekt auszuführen. Domänen sind der Kern aller Aktivitäten in Data Quality Services.  
   
  Eine Domäne wird einem Datenquellenfeld zugeordnet und in den Wissensermittlungs-, Domänenverwaltungs- und Abgleichsaktivitäten aufgefüllt. Wie Sie Daten aus der Datenquelle und den Ausgabedaten in einen Bericht laden, wird in den Domäneneigenschaften definiert. Wenn Sie einen Verweisdatenanbieter für das Bereinigen von Daten verwenden, fügen Sie einen Verweisdatendienst an eine Einzel- oder Verbunddomäne an. Sie erstellen Regeln, die auf die Daten in einer Domäne angewendet werden, und Sie können begriffsbasierte Beziehungen für eine Domäne erstellen. Sie können Daten in der Domäne anzeigen und korrigieren.  

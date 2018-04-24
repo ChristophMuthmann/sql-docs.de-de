@@ -1,33 +1,36 @@
 ---
 title: Systemeinstellungen (Master Data Services) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Master Data Services, system settings
 - system settings [Master Data Services]
 ms.assetid: 83075cdf-f059-4646-8ba2-19be8202f130
-caps.latest.revision: 
+caps.latest.revision: 17
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c5f82834be298872df88b00bda5d8184d179ab2a
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: b986b4472b882b2dcd9c9e589cfa17372694d72b
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="system-settings-master-data-services"></a>Systemeinstellungen (Master Data Services)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   Sie können für alle Webanwendungen und Webdienste, die einer [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] -Datenbank zugeordnet sind, Systemeinstellungen konfigurieren.  
   
  Viele dieser Einstellungen können im [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] auf der Seite **Datenbank** konfiguriert werden. Andere können in der Tabelle Systemeinstellungen (mdm.tblSystemSetting) in der Datenbank [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] konfiguriert werden.  

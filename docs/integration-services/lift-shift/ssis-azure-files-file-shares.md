@@ -3,17 +3,18 @@ title: Speichern und Abrufen von Dateien auf Dateifreigaben (lokal und in Azure)
 description: In diesem Artikel wird beschrieben, wie Sie das Dateisystem und Dateifreigaben sowohl lokal als auch in Azure mit SSIS verwenden.
 ms.date: 11/27/2017
 ms.topic: article
-ms.prod: sql-non-specified
-ms.technology: integration-services
+ms.prod: sql
+ms.technology:
+- integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5b6034787f2e6ab34e583c06d219d7415c82d055
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: b9fb260101c1f814c85360d3fe5998b6e9234101
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="store-and-retrieve-files-on-file-shares-on-premises-and-in-azure-with-ssis"></a>Speichern und Abrufen von Dateien auf lokalen Dateifreigaben und Dateifreigaben in Azure mit SSIS
 In diesem Artikel wird beschrieben, wie Sie SSIS-Pakete (SQL Server Integration Services) aktualisieren, wenn Sie Pakete, die lokale Dateisysteme verwenden, per Lift & Shift zu SSIS in Azure migrieren.

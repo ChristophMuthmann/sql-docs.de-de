@@ -1,34 +1,35 @@
 ---
 title: Lock:Timeout (timeout &gt; 0)-Ereignisklasse | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Timeout event class
 ms.assetid: d755833a-d7eb-4973-9352-67a2fba2442a
-caps.latest.revision: 
+caps.latest.revision: 38
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 30cd2031c1ebe36385f4a7f99fea9461ef5d6a48
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: cf56ffc92a8e144945120fe9a821eae7f3d97dbf
+ms.sourcegitcommit: beaad940c348ab22d4b4a279ced3137ad30c658a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="locktimeout-timeout-gt-0-event-class"></a>Lock:Timeout (timeout &gt; 0)-Ereignisklasse
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Die **Lock:Timeout (timeout > 0)**-Ereignisklasse gibt an, dass für die Anforderung einer Sperre für eine Ressource, z.B. eine Seite, ein Timeout aufgetreten ist, da eine andere Transaktion eine blockierende Sperre für die angeforderte Ressource aufrechterhält. Diese Ereignisklasse unterscheidet sich von der **Lock:Timeout** -Ereignisklasse nur dadurch, dass sie keine Ereignisse einschließt, in denen der Timeoutwert gleich 0 (null) ist.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Die **Lock:Timeout (timeout > 0)**-Ereignisklasse gibt an, dass für die Anforderung einer Sperre für eine Ressource, z.B. eine Seite, ein Timeout aufgetreten ist, da eine andere Transaktion eine blockierende Sperre für die angeforderte Ressource aufrechterhält. Diese Ereignisklasse unterscheidet sich von der **Lock:Timeout** -Ereignisklasse nur dadurch, dass sie keine Ereignisse einschließt, in denen der Timeoutwert gleich 0 (null) ist.  
   
  Schließen Sie die **Lock:Timeout (timeout > 0)**-Ereignisklasse in Ablaufverfolgungen ein, bei denen Sie Sperren oder sonstige Prozesse mit einem Timeoutwert von 0 verwenden. Dies ermöglicht Ihnen, festzustellen, wo tatsächlich Timeouts auftreten, ohne dass Timeouts mit dem Wert 0 angezeigt werden.  
   

@@ -2,7 +2,7 @@
 title: Tabellenhinweise (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/31/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.service: ''
 ms.component: t-sql|queries
@@ -44,11 +44,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 036b2c26536aaa1257bfbb41075d570149b04e54
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 186ee73093ca80e547b61bb00ee81ca540fb600a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="hints-transact-sql---table"></a>Hinweise (Transact-SQL): Tabelle
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

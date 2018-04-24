@@ -1,33 +1,36 @@
 ---
-title: "Löschen eines Attributs (Master Data Services) | Microsoft-Dokumentation"
-ms.custom: 
+title: Löschen eines Attributs (Master Data Services) | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - attributes [Master Data Services], deleting
 - deleting attributes [Master Data Services]
 ms.assetid: ec3e66f7-0e35-43d7-a80d-64899948ebfe
-caps.latest.revision: 
+caps.latest.revision: 6
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 698b641fdfed99e4d1fcad0609e140977e63cf33
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: 4eace30393cdae91b61c5308a9e563e978f9e50e
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="delete-an-attribute-master-data-services"></a>Löschen eines Attributs (Master Data Services)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]können Sie ein Attribut löschen, wenn Sie das Attribut und alle zugehörigen Attributwerte dauerhaft entfernen möchten.  
   
 ## <a name="prerequisites"></a>Voraussetzungen  

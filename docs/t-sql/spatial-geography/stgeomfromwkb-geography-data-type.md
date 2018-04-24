@@ -1,16 +1,16 @@
 ---
 title: STGeomFromWKB (geography-Datentyp) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 07/30/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|spatial-geography
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - STGeomFromWKB_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - STGeomFromWKB method
 ms.assetid: 79d39d88-5440-49a7-9247-190eafce3f4f
-caps.latest.revision: 
+caps.latest.revision: 18
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9f04ae71af072f1fac08141da284a463baaff27c
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 2bdf24fc923404f51044794bb1f3a00e5419d2af
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="stgeomfromwkb-geography-data-type"></a>STGeomFromWKB (geography-Datentyp)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ STGeomFromWKB ( 'WKB_geography' , SRID )
  Diese Methode löst **ArgumentException** aus, wenn die Eingabe eine gegenüberliegende Kante enthält.  
   
 ## <a name="examples"></a>Beispiele  
- Im folgenden Beispiel wird `STGeomFromWKB()` verwendet, um eine `geography` -Instanz zu erstellen.  
+ Im folgenden Beispiel wird `STGeomFromWKB()` verwendet, um eine `geography`-Instanz zu erstellen.  
   
 ```  
 DECLARE @g geography;  

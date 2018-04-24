@@ -1,35 +1,37 @@
 ---
 title: 'Tutorial: Schreiben von Transact-SQL-Anweisungen | Microsoft-Dokumentation'
-ms.custom: 
+ms.custom: ''
 ms.date: 08/03/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 helpviewer_keywords:
 - Transact-SQL statements, tutorials
 - Transact-SQL tutorials
 - tutorials [Transact-SQL]
 ms.assetid: 2addc9be-67d0-423d-a457-192fe9d7d058
-caps.latest.revision: 
+caps.latest.revision: 21
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 22ddf6026a91dbbc2f7f1919497fa796b76ecc34
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 65cb72c3cac7c51c702b97c2bcdbb8a793a818de
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="tutorial-writing-transact-sql-statements"></a>Lernprogramm: Schreiben von Transact-SQL-Anweisungen
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]Willkommen beim Tutorial zum Schreiben von [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisungen. Dieses Lernprogramm richtet sich an Benutzer, die noch keine Erfahrung mit dem Schreiben von SQL-Anweisungen haben. Neuen Benutzern wird der Einstieg erleichtert, indem einige einfache Anweisungen zum Erstellen von Tabellen und Einfügen von Daten behandelt werden. In diesem Lernprogramm wird [!INCLUDE[tsql](../includes/tsql-md.md)]- die Implementierung des SQL-Standards durch [!INCLUDE[msCoName](../includes/msconame-md.md)] - verwendet. Dieses Lernprogramm ist als kurze Einführung in die [!INCLUDE[tsql](../includes/tsql-md.md)] -Sprache und nicht als Ersatz für eine [!INCLUDE[tsql](../includes/tsql-md.md)] -Schulung gedacht. Die Anweisungen in diesem Lernprogramm wurden absichtlich einfach gestaltet und geben nicht die Komplexität einer typischen Produktionsdatenbank wieder.  
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
+Willkommen beim Lernprogramm zum Schreiben von [!INCLUDE[tsql](../includes/tsql-md.md)] -Anweisungen. Dieses Lernprogramm richtet sich an Benutzer, die noch keine Erfahrung mit dem Schreiben von SQL-Anweisungen haben. Neuen Benutzern wird der Einstieg erleichtert, indem einige einfache Anweisungen zum Erstellen von Tabellen und Einfügen von Daten behandelt werden. In diesem Lernprogramm wird [!INCLUDE[tsql](../includes/tsql-md.md)]- die Implementierung des SQL-Standards durch [!INCLUDE[msCoName](../includes/msconame-md.md)] - verwendet. Dieses Lernprogramm ist als kurze Einführung in die [!INCLUDE[tsql](../includes/tsql-md.md)] -Sprache und nicht als Ersatz für eine [!INCLUDE[tsql](../includes/tsql-md.md)] -Schulung gedacht. Die Anweisungen in diesem Lernprogramm wurden absichtlich einfach gestaltet und geben nicht die Komplexität einer typischen Produktionsdatenbank wieder.  
   
 >**HINWEIS:** Wenn Sie ein Anfänger auf diesem Gebiet sind, ist es möglicherweise einfacher für Sie [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] zu verwenden, anstatt [!INCLUDE[tsql](../includes/tsql-md.md)] -Anweisungen zu schreiben.  
   

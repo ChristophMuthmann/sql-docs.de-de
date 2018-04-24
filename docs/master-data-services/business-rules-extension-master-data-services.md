@@ -1,30 +1,33 @@
 ---
-title: "Geschäftsregelerweiterung (Master Data Services) | Microsoft-Dokumentation"
-ms.custom: 
+title: Geschäftsregelerweiterung (Master Data Services) | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 4c18be5f-a3fa-45a8-9be6-0f45f58bbc9e
-caps.latest.revision: 
+caps.latest.revision: 16
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7a6de9fcabc39738fc2be3a76389ef16398f8c1f
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: 8b93f9dc688a2674396ec0d069339c8a8ada9fbf
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="business-rules-extension-master-data-services"></a>Geschäftsregelerweiterung (Master Data Services)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   Sie können in [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]benutzerdefinierte SQL-Skripts als Erweiterung vordefinierter Bedingungen und Aktionen anwenden.  
   
 > [!NOTE]  

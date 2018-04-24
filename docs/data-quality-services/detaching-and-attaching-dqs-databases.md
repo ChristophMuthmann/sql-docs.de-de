@@ -13,18 +13,21 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 830e33bc-dd15-4f8e-a4ac-d8634b78fe45
-caps.latest.revision: ''
+caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4d2e84f851fb8fdba29424de7ee9664b4724e2ec
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: d0b805297ba84fe30dbc393dd73a968bc32f6a52
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="detaching-and-attaching-dqs-databases"></a>Trennen und Anfügen von DQS-Datenbanken
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   In diesem Thema wird beschrieben, wie DQS-Datenbanken getrennt und angefügt werden.  
   
 ##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
@@ -49,7 +52,7 @@ ms.lasthandoff: 03/22/2018
 -   Sie müssen über die Rolle „dqs_administrator“ in der DQS_MAIN-Datenbank verfügen, um ausgeführte Aktivitäten abzubrechen oder ausgeführte Prozesse in DQS anzuhalten.  
   
 ##  <a name="Detach"></a> Trennen von DQS-Datenbanken  
- Wenn Sie eine DQS-Datenbank unter Verwendung von SQL Server Management Studio trennen, verbleiben die getrennten Dateien auf dem Computer und können erneut an dieselbe SQL Server-Instanz angefügt oder auf einen anderen Server verschoben und dort angefügt werden. Die DQS-Datenbankdateien befinden sich auf dem Data Quality Services-Computer normalerweise im folgenden Ordner: C:\Programme\Microsoft SQL Server\MSSQL13.*<Instanzname>*\MSSQL\DATA.  
+ Wenn Sie eine DQS-Datenbank unter Verwendung von SQL Server Management Studio trennen, verbleiben die getrennten Dateien auf dem Computer und können erneut an dieselbe SQL Server-Instanz angefügt oder auf einen anderen Server verschoben und dort angefügt werden. Die DQS-Datenbankdateien befinden sich auf dem Data Quality Services-Computer normalerweise im folgenden Ordner: C:\Programme\Microsoft SQL Server\MSSQL13.*<Instanzname>* \MSSQL\DATA.  
   
 1.  Starten Sie Microsoft SQL Server Management Studio, und stellen Sie eine Verbindung mit der entsprechenden SQL Server-Instanz her.  
   

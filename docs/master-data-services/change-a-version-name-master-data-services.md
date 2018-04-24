@@ -1,32 +1,35 @@
 ---
-title: "Ändern eines Versionsnamens (Master Data Services) | Microsoft-Dokumentation"
-ms.custom: 
+title: Ändern eines Versionsnamens (Master Data Services) | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - versions [Master Data Services], changing name
 ms.assetid: cba8b814-155f-49c5-b636-afddc5b0de4f
-caps.latest.revision: 
+caps.latest.revision: 7
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bf34c0dea713d14e3e9d89d285101c63b0a785d1
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: d15f9f17d26033b29c345dba7bca215e8abe241f
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="change-a-version-name-master-data-services"></a>Ändern eines Versionsnamens (Master Data Services)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   Ändern Sie in [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]den Versionsnamen, um ihn für die Organisation anzupassen.  
   
 ## <a name="prerequisites"></a>Voraussetzungen  

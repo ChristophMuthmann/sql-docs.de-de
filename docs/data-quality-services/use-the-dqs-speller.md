@@ -13,18 +13,21 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 65e4e53e-2699-4cae-a9e0-fe78547755b5
-caps.latest.revision: ''
+caps.latest.revision: 15
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0a362ebc450559580430a952b99fb0aebe93e97a
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: 7a8e9efc399d840f56b92162ad557863f4a4fa66
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="use-the-dqs-speller"></a>Verwenden der DQS-Rechtschreibprüfung
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   Die [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS)-Rechtschreibprüfung überprüft die Syntax, Rechtschreibung und Satzstruktur von Zeichenfolgenwerten in einer Domäne. Die Rechtschreibprüfung ist eine eigenständige, clientseitige Funktion, die nicht in serverseitige Module integriert ist und keine Auswirkungen auf aktuelle Abläufe oder Status hat. Mit der Rechtschreibprüfung werden die Zeichenfolgenwerte identifiziert, bei denen es sich möglicherweise um Fehler handelt. Diese werden an der gleichen Stelle, an der andere manuelle Änderungen an Domänenwerten vorgenommen werden, mit einem roten Unterstrich markiert. Dazu gehören die folgenden Stellen:  
   
 -   Die Seite **Domänenwerte verwalten** der Aktivität **Wissensermittlung**  

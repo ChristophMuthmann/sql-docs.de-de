@@ -1,30 +1,33 @@
 ---
-title: "Ändern der Reihenfolge von Attributen | Microsoft-Dokumentation"
-ms.custom: 
+title: Ändern der Reihenfolge von Attributen | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 835a032c-e37c-4f35-8ab0-5e4ae25c2e9b
-caps.latest.revision: 
+caps.latest.revision: 5
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 169ef20e949c2880cf79b9634aeed9e41927726c
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: 5bfbb5634bda5458994ea466ae48f77fb0536f37
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="change-the-order-of-attributes"></a>Ändern der Reihenfolge von Attributen
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]können Sie die Reihenfolge der Attribute ändern.  
   
 ## <a name="prerequisites"></a>Voraussetzungen  

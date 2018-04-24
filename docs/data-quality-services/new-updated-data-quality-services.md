@@ -10,13 +10,16 @@ ms.suite: sql
 ms.prod_service: sql-non-specified
 ms.component: dqs
 ms.date: 02/03/2018
-ms.openlocfilehash: c90dbd42d77d7654a24f96076221f9d37fabf426
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: 62283c1e1cc1c809dc46d808d894527dc78415c0
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="new-and-recently-updated-data-quality-services-for-sql-server"></a>Neu und kürzlich aktualisiert: Data Quality Services für SQL Server
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
 
 
 

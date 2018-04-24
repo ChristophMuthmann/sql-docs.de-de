@@ -13,18 +13,21 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 47821eff-800b-4053-8d36-e42bbc267f54
-caps.latest.revision: ''
+caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 67a253241fff3c1391fba522d6b3b659d03272bb
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: 30940f751b646723e6cac7565b468a54a26bb1ee
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="managing-a-composite-domain"></a>Verwalten einer Verbunddomäne
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   In diesem Thema wird die Verwendung von Verbunddomänen in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) beschrieben. In einigen Fällen können die Daten eines Felds in einer einzelnen Domäne nicht zufriedenstellend dargestellt werden, und Sie können die Daten nur darstellen, indem Sie einzelne Domänen gruppieren. Hierzu erstellen Sie eine Verbunddomäne. Eine Verbunddomäne besteht aus zwei oder mehreren einzelnen Domänen. Sie wird einem Datenfeld zugeordnet, das aus mehreren verwandten Begriffen besteht, die nicht analysiert werden, aber in einem einzelnen zusammengesetzten Wert enthalten sind. Jeder Begriff im Wert wird durch eine andere einzelne Domäne dargestellt. Nachdem Sie einzelne Domänen in Verbunddomänen aufgenommen und dann die Verbunddomäne dem Datenfeld zugeordnet haben, können Sie Wissen zu den Daten in diesem Feld in der Wissensdatenbank erstellen, indem Sie Wissen in den einzelnen Domänen erstellen. Eine Verbunddomäne ist wie eine einzelne Domäne eine semantische Darstellung der Daten in einem einzelnen Datenfeld.  
   
  Die einzelnen Domänen in einer Verbunddomäne müssen einen gemeinsamen Wissensbereich haben. Beispiel: ein Adressenfeld mit Daten für Straße, Ort, Bundesland, Land und Postleitzahl. Die anderen Begriffe in diesem Feld könnten andere Datentypen haben. Ordnen Sie deswegen diese Begriffe den einzelnen Domänen zu. Ein anderes Beispiel ist ein Feld mit dem vollständigen Namen, das Daten für den Vornamen, zweiten Vornamen und Nachnamen aufweist. Um eine Verbunddomäne zu verwenden, müssen Sie die Daten im Feld in anderen einzelnen Domänen analysieren können, wobei eine Verbunddomäne für das Feld und eine einzelne Domäne für einen Teil des Felds erstellt wird.  

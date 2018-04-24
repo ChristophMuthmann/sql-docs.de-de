@@ -10,13 +10,16 @@ ms.suite: sql
 ms.prod_service: sql-non-specified
 ms.component: mds
 ms.date: 02/03/2018
-ms.openlocfilehash: ff1df4f37caad96fafd9e7a2a4e531dcd9bb45d7
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: 865151771870698da1307dfcfc80c1e2e691bdc0
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="new-and-recently-updated-master-data-services-for-sql-server"></a>Neu und kürzlich aktualisiert: Master Data Services für SQL Server
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
 
 
 

@@ -15,18 +15,21 @@ ms.topic: article
 f1_keywords:
 - sql13.dqs.dm.domainproperties.f1
 ms.assetid: 8a3c88ca-31d6-4f75-9aca-cf027c6d9845
-caps.latest.revision: ''
+caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a8a99290e1b6f298d7e3cf0c9b86254026b693de
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: 522b09e704b6536d5b2748dae71fd2710a664b9e
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="set-domain-properties"></a>Festlegen von Domäneneigenschaften
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   In diesem Thema wird beschrieben, wie Domäneneigenschaften in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) festgelegt werden.  
   
 ##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  

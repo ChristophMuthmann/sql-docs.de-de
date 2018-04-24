@@ -2,7 +2,7 @@
 title: Abfragehinweise (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/11/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.service: ''
 ms.component: t-sql|queries
@@ -57,16 +57,16 @@ helpviewer_keywords:
 - EXTERNALPUSHDOWN query hint
 - USE HINT query hint
 ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
-caps.latest.revision: ''
+caps.latest.revision: 136
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: f13c32bbc1852c06a88df7a9ab24443be9d1c4d5
-ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
+ms.openlocfilehash: d937872a3c00b453a58932dd127c3e3acc99c9f3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="hints-transact-sql---query"></a>Hinweise (Transact-SQL) – Abfrage
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -291,7 +291,7 @@ ms.lasthandoff: 03/15/2018
 > [!IMPORTANT] 
 > Einige USE HINT-Hinweise stehen möglicherweise mit Ablaufverfolgungsflags, die auf globaler Ebene oder auf Sitzungsebene aktiviert sind, oder mit Einstellungen für die datenbankweit gültige Konfiguration in Konflikt. In diesem Fall hat der Hinweis auf Abfrageebene (USE HINT) immer Vorrang. Wenn ein USE HINT-Hinweis mit einem anderen Abfragehinweis oder einem auf Abfrageebene aktivierten Ablaufverfolgungsflag (z.B. QUERYTRACEON) in Konflikt steht, generiert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] beim Versuch der Abfrageausführung einen Fehler. 
 
- USE PLAN N**'***xml_plan***'**     
+ USE PLAN N **'***xml_plan***'**     
  Zwingt den Abfrageoptimierer, einen vorhandenen Abfrageplan für eine Abfrage zu verwenden, die mit **'***xml_plan***'** angegeben wird. USE PLAN kann nicht für die Anweisungen INSERT, UPDATE, MERGE oder DELETE angegeben werden.  
   
 TABLE HINT **(***exposed_object_name* [ **,** \<table_hint> [ [**,** ]...*n* ] ] **)** Wendet den angegebenen Tabellenhinweis auf die Tabelle oder die Ansicht an, die *exposed_object_name* entspricht. Es wird empfohlen, einen Tabellenhinweis nur im Kontext einer [Planhinweisliste](../../relational-databases/performance/plan-guides.md) als Abfragehinweis zu verwenden.  

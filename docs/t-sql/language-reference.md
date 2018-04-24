@@ -1,16 +1,16 @@
 ---
 title: Transact-SQL-Referenz (Datenbank-Engine) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 04/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sql13.tsqlref.f1
@@ -18,16 +18,17 @@ f1_keywords:
 helpviewer_keywords:
 - Transact-SQL
 ms.assetid: dbba47d7-e08e-4435-b876-35dced1f325d
-caps.latest.revision: 
+caps.latest.revision: 14
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 9bc588f23d4a78d035a46c7e5c1adcb600af1ce2
-ms.sourcegitcommit: aebbfe029badadfd18c46d5cd6456ea861a4e86d
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 454c6e5c3f8562b52292daa15141797d5e3b9fcd
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="transact-sql-reference-database-engine"></a>Transact-SQL-Referenz (Datenbankmodul)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]

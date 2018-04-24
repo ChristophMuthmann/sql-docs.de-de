@@ -1,15 +1,15 @@
 ---
-title: "Schätzen der Größe eines nicht gruppierten Index | Microsoft-Dokumentation"
-ms.custom: 
+title: Schätzen der Größe eines nicht gruppierten Index | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
-ms.reviewer: 
+ms.prod: sql
+ms.reviewer: ''
 ms.suite: SQL
 ms.prod_service: database-engine, sql-database
 ms.component: indexes
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - space allocation [SQL Server], index size
@@ -21,16 +21,17 @@ helpviewer_keywords:
 - designing databases [SQL Server], estimating size
 - calculating table size
 ms.assetid: c183b0e4-ef4c-4bfc-8575-5ac219c25b0a
-caps.latest.revision: 
+caps.latest.revision: 40
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 03eaa651f6184c9dc1dc53913e1662798664b983
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 7833781de08018827b43fa0a4055184c7d437b88
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="estimate-the-size-of-a-nonclustered-index"></a>Schätzen der Größe eines nicht gruppierten Index
 

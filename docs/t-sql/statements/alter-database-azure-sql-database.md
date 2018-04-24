@@ -18,11 +18,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ddec688efe7ce468b7af1c05389b9cc1e86cf4c4
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
+monikerRange: = azuresqldb-current || = sqlallproducts-allversions
+ms.openlocfilehash: a6c9d1740936f82b2058716d71f801792f2fd6f7
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="alter-database-azure-sql-database"></a>ALTER DATABASE (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -265,7 +266,7 @@ Der MAXSIZE-Wert für das DTU-basierte Modell muss – wenn angegeben –ein gü
  
 **vCore-basiertes Modell**
 
-**Universelle Dienstebene**
+**Dienstebene „Universell“**
 
 |MAXSIZE|GP_Gen4_1|GP_Gen4_2|GP_Gen4_4|GP_Gen4_8|GP_Gen4_16|
 |:--- | --: |--: |--: |--: |--: |

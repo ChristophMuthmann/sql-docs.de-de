@@ -13,18 +13,21 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a778bb5b-8e35-4a7b-b04a-ae2b46dec21b
-caps.latest.revision: ''
+caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9a14de91ab26b1ea02b9416844dd1fbbef4e15dc
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: fd52b0733e5addcf212fc907a44d8a9e3fcb241d
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="data-profiling-and-notifications-in-dqs"></a>Datenprofilerstellung und Benachrichtigungen in DQS
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   Datenprofilerstellung in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) ist der Prozess des Analysierens der Daten in einer vorhandenen Datenquelle und des Anzeigens von Statistiken zu den Daten in DQS-Aktivitäten. Sie versorgt Sie mit automatischen Messungen der Datenqualität. DQS-Profilerstellung wird in DQS-Wissensverwaltung und Data Quality-Projekte integriert. Sie ist dynamisch und anpassbar. Die Profilerstellung hat zwei Hauptziele: erstens, Sie durch Data Quality-Prozesse zu führen und Ihre Entscheidungen zu unterstützen, und zweitens, die Effektivität der Prozesse zu bewerten. Der DQS-Profilerstellungsprozess hat die folgenden Vorteile:  
   
 -   Die Profilerstellung stellt einen Einblick in die Qualität der Quelldaten bereit und hilft Ihnen, Data Quality-Probleme zu identifizieren.  

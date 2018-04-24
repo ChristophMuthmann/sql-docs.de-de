@@ -1,30 +1,33 @@
 ---
-title: "Speichern einer Shortcutabfragedatei (MDS-Add-In für Excel) | Microsoft-Dokumentation"
-ms.custom: 
+title: Speichern einer Shortcutabfragedatei (MDS-Add-In für Excel) | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: microsoft-excel-add-in
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 98385f84-67cc-421a-b729-91847954e03e
-caps.latest.revision: 
+caps.latest.revision: 8
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bfafab8167aa88862eadbb1c4c308acf5e1a2b0e
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: 1991eaec025dac386a05425495f0a1dd1ada7042
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="save-a-shortcut-query-file-mds-add-in-for-excel"></a>Speichern einer Shortcutabfragedatei (MDS-Add-In für Excel)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   Speichern Sie in [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]eine Shortcutabfragedatei, wenn Sie häufig auf den gleichen Satz Daten zugreifen müssen.  
   
 ## <a name="prerequisites"></a>Voraussetzungen  

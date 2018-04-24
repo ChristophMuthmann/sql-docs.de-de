@@ -1,16 +1,16 @@
 ---
-title: "DENY (Berechtigungen für Serverprinzipal) (Transact-SQL) | Microsoft-Dokumentation"
-ms.custom: 
+title: DENY (Berechtigungen für Serverprinzipal) (Transact-SQL) | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 06/09/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -24,16 +24,16 @@ helpviewer_keywords:
 - servers [SQL Server], permissions
 - logins [SQL Server], denying access
 ms.assetid: 859affa7-0567-47d1-9490-57c1abbd619b
-caps.latest.revision: 
+caps.latest.revision: 32
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 795c7dcc946966859e5d81382df75a4bb646e38d
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: af4268ee85ecae1aecee702eabdf775f284b4161
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="deny-server-principal-permissions-transact-sql"></a>DENY (Berechtigungen für Serverprinzipal) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

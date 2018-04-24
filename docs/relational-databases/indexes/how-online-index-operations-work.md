@@ -1,11 +1,11 @@
 ---
-title: "Funktionsweise von Onlineindexvorgängen | Microsoft-Dokumentation"
-ms.custom: 
+title: Funktionsweise von Onlineindexvorgängen | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 02/17/2017
-ms.prod: sql-non-specified
-ms.reviewer: 
+ms.prod: sql
+ms.reviewer: ''
 ms.technology: dbe-indexes
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - online index operations
@@ -15,20 +15,21 @@ helpviewer_keywords:
 - temporary mapping index [SQL Server]
 - index temporary mappings [SQL Server]
 ms.assetid: eef0c9d1-790d-46e4-a758-d0bf6742e6ae
-caps.latest.revision: 
+caps.latest.revision: 28
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.suite: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: indexes
 ms.workload: Inactive
-ms.openlocfilehash: 3a06dc9f01b2cf889605770beb57940b7f10558b
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 72625d173021cb8bd543edd7930e5a38e0c30020
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="how-online-index-operations-work"></a>Funktionsweise von Onlineindexvorgängen
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

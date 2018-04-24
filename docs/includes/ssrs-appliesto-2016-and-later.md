@@ -8,10 +8,10 @@ ms.topic: include
 ms.date: 03/26/2018
 ms.author: maggies
 ms.custom: include file
-ms.openlocfilehash: 542a0e814fd4bad3b04f141169a3742c3419f37b
-ms.sourcegitcommit: d6881107b51e1afe09c2d8b88b98d075589377de
+ms.openlocfilehash: bd7b806f1a279c24eccafdb7cf1c4d0d9193df38
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 ![ja](media/yes.png)SQL Server Reporting Services (2016 und höher)

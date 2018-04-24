@@ -1,16 +1,16 @@
 ---
 title: OPENJSON (Transact-SQL) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 07/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: douglasl
 ms.suite: sql
 ms.technology:
 - dbe-json
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - OPENJSON
@@ -20,16 +20,16 @@ helpviewer_keywords:
 - JSON, importing
 - JSON, converting from
 ms.assetid: 233d0877-046b-4dcc-b5da-adeb22f78531
-caps.latest.revision: 
-author: douglaslMS
-ms.author: douglasl
+caps.latest.revision: 32
+author: jovanpop-msft
+ms.author: jovanpop
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: fe464bedc22fa5ebc47fc7f783e75b994d0cff49
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: f79a0ffa4db3d2779eb18e28570cefb643def1cc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="openjson-transact-sql"></a>OPENJSON (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -366,7 +366,7 @@ DECLARE @json NVARCHAR(max)  = N'{
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [JSON Pfadausdrücke &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)   
+ [JSON-Pfadausdrücke &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)   
  [Konvertieren von JSON-Daten in Zeilen und Spalten mit OPENJSON &#40;SQL Server&#41;](../../relational-databases/json/convert-json-data-to-rows-and-columns-with-openjson-sql-server.md)   
  [Verwenden von OPENJSON mit dem Standardschema &#40;SQL Server&#41;](../../relational-databases/json/use-openjson-with-the-default-schema-sql-server.md)   
  [Verwenden von OPENJSON mit einem expliziten Schema &#40;SQL Server&#41;](../../relational-databases/json/use-openjson-with-an-explicit-schema-sql-server.md)  

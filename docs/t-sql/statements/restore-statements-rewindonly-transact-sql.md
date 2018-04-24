@@ -1,16 +1,16 @@
 ---
 title: RESTORE REWINDONLY (Transact-SQL) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 08/10/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - RESTORE_REWINDONLY_TSQL
@@ -25,16 +25,16 @@ helpviewer_keywords:
 - rewinding backup devices
 - RESTORE REWINDONLY statement
 ms.assetid: 7f825b40-2264-4608-9809-590d0f09d882
-caps.latest.revision: 
+caps.latest.revision: 50
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bf67d54e58f08296878c0781158e7b878b0b2a49
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 8e1a07916c12d4043afd21daaa33cf77a222072f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="restore-statements---rewindonly-transact-sql"></a>RESTORE-Anweisungen - REWINDONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +69,7 @@ FROM <backup_device> [ ,...n ]
   
  { *logical_backup_device_name* | **@***logical_backup_device_name_var* } Dies ist der logische Name der von **sp_addumpdevice** erstellten Sicherungsmedien, von denen die Datenbank wiederhergestellt wird. Der Name muss den Regeln für Bezeichner entsprechen. Bei der Angabe als Variable (**@***logical_backup_device_name_var*) kann der Name des Sicherungsmediums entweder als Zeichenfolgenkonstante (**@***logical_backup_device_name_var* = *logical_backup_device_name*) oder als Variable eines Zeichenfolgen-Datentyps (mit Ausnahme der Datentypen **ntext** oder **text**) angegeben werden.  
   
- {DISK | TAPE } **=** { **'***physical_backup_device_name***'** | **@***physical_backup_device_name_var* } Ermöglicht die Wiederherstellung von Sicherungen vom angegebenen Datenträger oder vom Bandmedium. Die Gerätetypen von Datenträgern und Bändern müssen durch die tatsächlichen Namen des Geräts angegeben werden (z.B. vollständiger Pfad und Dateiname): DISK = 'C:\Programme\Microsoft SQL Server\MSSQL\BACKUP\Mybackup.bak' oder TAPE = '\\\\.\TAPE0'. Bei der Angabe als Variable (**@***physical_backup_device_name_var*) kann der Name des Geräts entweder als Zeichenfolgenkonstante (**@***physical_backup_device_name_var* = '*physcial_backup_device_name*') oder als Variable eines Zeichenfolgen-Datentyps (mit Ausnahme der Datentypen **ntext** oder **text**) angegeben werden.  
+ {DISK | TAPE } **=** { **'***physical_backup_device_name***'** | **@***physical_backup_device_name_var* } Ermöglicht die Wiederherstellung von Sicherungen vom angegebenen Datenträger oder vom Bandmedium. Die Gerätetypen von Datenträgern und Bändern müssen durch die tatsächlichen Namen des Geräts angegeben werden (z.B. vollständiger Pfad und Dateiname): DISK = 'C:\Programme\Microsoft SQL Server\MSSQL\BACKUP\Mybackup.bak' oder TAPE = '\\\\.\TAPE0'. Bei der Angabe als Variable (**@***physical_backup_device_name_var*) kann der Name des Geräts entweder als Zeichenfolgenkonstante (**@***physical_backup_device_name_var* = '* physcial_backup_device_name*') oder als Variable eines Zeichenfolgen-Datentyps (mit Ausnahme der Datentypen **ntext** oder **text**) angegeben werden.  
   
  Wenn Sie einen Netzwerkserver mit einem UNC-Namen (der einen Computernamen enthalten muss) verwenden, geben Sie die Geräteart Datenträger (DISK) an. Weitere Informationen zum Verwenden von UNC-Namen finden Sie unter [Sicherungsmedien &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).  
   

@@ -18,18 +18,21 @@ f1_keywords:
 - sql13.dqs.dqproject.correction.f1
 - sql13.dqs.dqproject.export.f1
 ms.assetid: c96b13ad-02a6-4646-bcc7-b4a8d490f5cc
-caps.latest.revision: ''
+caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ed7b80a8efa3f80ba349144afa2b931e4d255ec1
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: 419f6ae4c8c7c5e19117aaeb86d730e1c625ee44
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="cleanse-data-using-dqs-internal-knowledge"></a>Bereinigen von Daten mit (internem) DQS-Wissen
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   In diesem Thema wird beschrieben, wie die Daten mithilfe eines Data Quality-Projekts in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) gereinigt werden. Die Datenbereinigung wird mithilfe einer Wissensdatenbank, die in DQS gegen ein hochwertiges Dataset erstellt wurde, für die Quelldaten ausgeführt. Weitere Informationen finden Sie unter [Aufbau einer Wissensdatenbank](../data-quality-services/building-a-knowledge-base.md).  
   
  Die Datenbereinigung wird in vier Phasen ausgeführt: eine *Zuordnungsphase* , in der Sie die zu reinigende Datenquelle identifizieren und den erforderlichen Domänen in einer Wissensdatenbank zuordnen, einer *computerunterstützten Bereinigungsphase* , in der DQS die Wissensdatenbank auf die zu bereinigenden Daten anwendet und Änderungen an den Quelldaten vorschlägt/vornimmt, eine *interaktive Bereinigungsphase* , in der Data Stewards die Datenänderungen analysieren und annehmen/ablehnen können, und schließlich die *Exportphase* , in der die Sie die bereinigten Daten exportieren können. Jeder dieser Prozesse wird auf einer separaten Seite des Bereinigungsaktivitäts-Assistenten ausgeführt, sodass Sie zwischen den Seiten hin und her wechseln, den Prozess erneut auszuführen, einen bestimmten Bereinigungsprozess schließen und dann zur gleichen Phase des Prozesses zurückkehren können. DQS stellt Ihnen Statistiken zu den Quelldaten und den Bereinigungsergebnissen bereit, die es Ihnen ermöglichen, informierte Entscheidungen zur Datenbereinigung zu treffen.  

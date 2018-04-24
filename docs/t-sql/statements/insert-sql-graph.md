@@ -1,34 +1,35 @@
 ---
 title: INSERT (SQL-Graph) | Microsoft-Dokumentation
-description: "INSERT-Syntax für SQL-Graph-Knoten- oder Edgetabellen."
+description: INSERT-Syntax für SQL-Graph-Knoten- oder Edgetabellen.
 ms.date: 05/12/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 helpviewer_keywords:
 - INSERT statement [SQL Server], SQL graph
 - SQL graph, INSERT statement
-ms.assetid: 
-caps.latest.revision: 
+ms.assetid: ''
+caps.latest.revision: 1
 author: shkale-msft
 ms.author: shkale
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6bac7f1d7da67f319a9c84425b370bb61a35ca19
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: = azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions
+ms.openlocfilehash: d7d93bfc1ffa3e926bc8e9dcdea46183a0801155
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="insert-sql-graph"></a>INSERT (SQL-Graph)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]

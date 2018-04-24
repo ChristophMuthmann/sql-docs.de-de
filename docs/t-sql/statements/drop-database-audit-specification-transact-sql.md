@@ -1,16 +1,16 @@
 ---
 title: DROP DATABASE AUDIT SPECIFICATION (Transact-SQL) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DROP_DATABASE_AUDIT_SPECIFICATION_TSQL
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - database audit specification
 - DROP DATABASE AUDIT SPECIFICATION statement
 ms.assetid: 3c387c6e-9a67-4daa-b64a-c87f6b3c9c4f
-caps.latest.revision: 
+caps.latest.revision: 14
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 50a7d069903fc9cf4485b115a7ab9a29a53dcbde
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 62fc391ac06e7665c0d3328cc630f03d02232516
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="drop-database-audit-specification-transact-sql"></a>DROP DATABASE AUDIT SPECIFICATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ DROP DATABASE AUDIT SPECIFICATION audit_specification_name
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="a-dropping-a-database-audit-specification"></a>A. Löschen einer Datenbank-Überwachungsspezifikation  
- Im folgenden Beispiel wird eine Überwachung namens `HIPAA_Audit_DB_Specification`gelöscht.  
+ Im folgenden Beispiel wird eine Überwachung namens `HIPAA_Audit_DB_Specification` gelöscht.  
   
 ```  
 DROP DATABASE AUDIT SPECIFICATION HIPAA_Audit_DB_Specification;  

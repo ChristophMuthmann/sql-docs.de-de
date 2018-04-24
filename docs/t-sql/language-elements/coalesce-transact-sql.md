@@ -1,16 +1,16 @@
 ---
 title: COALESCE (Transact-SQL) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 08/30/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|language-elements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - COALESCE
@@ -23,16 +23,17 @@ helpviewer_keywords:
 - first nonnull expressions [SQL Server]
 - nonnull expressions
 ms.assetid: fafc0dba-f8a8-4aad-9b7f-908e34b74d88
-caps.latest.revision: 
+caps.latest.revision: 52
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: fddb9a8535472c153adf036b5afed9584cfbd3d7
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 7360a1927ce460c96c127d6a4f2d5d59668337e0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="coalesce-transact-sql"></a>COALESCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -49,7 +50,7 @@ COALESCE ( expression [ ,...n ] )
   
 ## <a name="arguments"></a>Argumente  
  *expression*  
- Ein [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) eines beliebigen Typs.  
+ Ein [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) beliebigen Typs.  
   
 ## <a name="return-types"></a>Rückgabetypen  
  Gibt den Datentyp des *expression*-Ausdrucks zurück, der in der Datentyprangfolge am höchsten steht. Falls für alle Ausdrücke NULL nicht zulässig ist, wird das Ergebnis entsprechend eingegeben.  

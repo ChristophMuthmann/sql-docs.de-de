@@ -1,30 +1,33 @@
 ---
 title: Bearbeiten eines Modellbereitstellungspakets | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 6b0fdb7d-83dd-4392-9011-4ae642c471f1
-caps.latest.revision: 
+caps.latest.revision: 7
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b2bdfa27750d9eaa882c70a4fcf5b13030375268
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: dfc1f6630feb4e8345ddb92291b178a19d4e47a7
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="edit-a-model-deployment-package"></a>Bearbeiten eines Modellbereitstellungspakets
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   In diesem Thema wird beschrieben, wie ausgewählte Teile eines Modells statt eines ganzen Modells in MDS bereitgestellt werden. Hierzu bearbeiten Sie mit dem Modellpaketeditor ein MDS-Modellpaket.  
   
  Der Modellpaketeditor-Assistent ermöglicht es Ihnen, bestimmte Entitäten, abgeleitete Hierarchien, Abonnementsichten und Geschäftsregeln in einem Modell auszuwählen, die Sie in ein MDS-Paket einschließen und dann später bereitstellen möchten. Sie können die Teile des Modells auslassen, die Sie nicht bereitstellen wollen. Wenn Sie eine Entität auswählen, werden alle abhängigen Objekte in dieser Entität automatisch auch ausgewählt.  

@@ -1,16 +1,16 @@
 ---
 title: STBuffer (geography-Datentyp) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|spatial-geography
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - STBuffer (geography Data Type)
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - STBuffer (geography Data Type)
 ms.assetid: cb4deab8-642b-44d9-b3d9-85114d64021e
-caps.latest.revision: 
+caps.latest.revision: 19
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e6bd49bb41c8db0fa702e97e5ad8316961e7af15
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 99dcf5b7921c1121bbb7aa3036063086c8b7560b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="stbuffer-geography-data-type"></a>STBuffer (geography-Datentyp)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ ms.lasthandoff: 01/25/2018
   
  `STBuffer()` gibt in bestimmten Fällen eine Instanz von **FullGlobe** zurück. Beispielsweise gibt `STBuffer()` eine **FullGlobe**-Instanz zurück, wenn der Pufferabstand größer als der Abstand vom Äquator zu den Polen ist. Ein Puffer kann nicht über die vollständige Kugel hinausgehen.  
   
- Diese Methode löst in **FullGlobe**-Instanzen eine **ArgumentException** aus, bei denen der Abstand des Puffers die folgende Einschränkung überschreitet:  
+ Diese Methode löst eine **ArgumentException** in **FullGlobe**-Instanzen aus, bei denen der Abstand des Puffers die folgende Einschränkung überschreitet:  
   
  0,999 \* *π* * minorAxis \* minorAxis / majorAxis (~0.999 \* 1/2 Kugelumfang)  
   

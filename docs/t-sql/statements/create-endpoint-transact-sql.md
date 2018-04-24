@@ -1,16 +1,16 @@
 ---
 title: CREATE ENDPOINT (Transact-SQL) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 08/10/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ENDPOINT
@@ -34,16 +34,16 @@ helpviewer_keywords:
 - SERVICE_BROKER option
 - Availability Groups [SQL Server], endpoint
 ms.assetid: 6405e7ec-0b5b-4afd-9792-1bfa5a2491f6
-caps.latest.revision: 
+caps.latest.revision: 135
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c1d87ac5214da9a3458cdffd41bdd457a433afab
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: ec23f963b501a6067d7884de378eee8260ca96ae
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-endpoint-transact-sql"></a>CREATE ENDPOINT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -154,7 +154,7 @@ FOR DATABASE_MIRRORING (
  LISTENER_PORT **=***listenerPort*  
  Gibt die Portnummer an, die für Verbindungen vom Service Broker-TCP/IP überwacht wird. Gemäß der Konvention wird 4022 verwendet, aber jede Zahl zwischen 1024 und 32767 ist gültig.  
   
- LISTENER_IP **=** ALL | **(***4-part-ip* **)** | **(** "*ip_address_v6*" **)**  
+ LISTENER_IP **=** ALL | **(***4-part-ip* **)** | **(** "* ip_address_v6*" **)**  
  Gibt die IP-Adresse an, auf der der Endpunkt lauscht. Der Standardwert ist ALL. Das bedeutet, dass die Überwachung lässt eine Verbindung an einer gültigen IP-Adresse zulässt.  
   
  Wenn Sie die Datenbankspiegelung mit einer IP-Adresse anstelle eines vollqualifizierten Domänennamens (`ALTER DATABASE SET PARTNER = partner_IP_address` oder `ALTER DATABASE SET WITNESS = witness_IP_address`) konfigurieren, müssen Sie beim Erstellen von Spiegelungsendpunkten `LISTENER_IP =IP_address` anstelle von `LISTENER_IP=ALL` angeben.  

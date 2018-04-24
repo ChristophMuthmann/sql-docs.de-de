@@ -1,15 +1,15 @@
 ---
-title: "Schätzen der Größe eines gruppierten Indexes | Microsoft-Dokumentation"
-ms.custom: 
+title: Schätzen der Größe eines gruppierten Indexes | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.reviewer: 
+ms.prod: sql
+ms.reviewer: ''
 ms.suite: SQL
 ms.prod_service: database-engine, sql-database
 ms.component: indexes
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - space allocation [SQL Server], index size
@@ -24,16 +24,17 @@ helpviewer_keywords:
 - designing databases [SQL Server], estimating size
 - calculating table size
 ms.assetid: 2b5137f8-98ad-46b5-9aae-4c980259bf8d
-caps.latest.revision: 
+caps.latest.revision: 49
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: af9ddff95b36fadee6dcd25d864ae77128fb6676
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: ced08c7066b193602963b65c06c927d5d8494e4f
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="estimate-the-size-of-a-clustered-index"></a>Schätzen der Größe eines gruppierten Indexes
 
@@ -189,7 +190,7 @@ ms.lasthandoff: 01/18/2018
   
 8.  Berechnen Sie die Anzahl der inneren Knotenseiten im Index:  
   
-     ***Num_Index_Pages =*** ∑Level ***(Num_Leaf_Pages / (Index_Rows_Per_Page***^Level***))***  
+     ***Num_Index_Pages =*** ∑Level ***(Num_Leaf_Pages / (Index_Rows_Per_Page***^Level ***))***  
   
      wobei 1 <= Level <= ***Non-leaf_Levels***  
   

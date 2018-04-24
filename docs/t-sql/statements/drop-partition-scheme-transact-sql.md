@@ -1,16 +1,16 @@
 ---
 title: DROP PARTITION SCHEME (Transact-SQL) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DROP PARTITION SCHEME
@@ -24,16 +24,16 @@ helpviewer_keywords:
 - removing partition schemes
 - partition schemes [SQL Server], removing
 ms.assetid: 6efbc87c-1c92-4e43-96a7-e0f30f1db185
-caps.latest.revision: 
+caps.latest.revision: 17
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c410a37aca0ad2b7c8ca662f76d9af8d9fc6d75a
-ms.sourcegitcommit: 50e54dda407f362262b86941f68b7d80516db7fb
+ms.openlocfilehash: 9a456b7d2d209b6e972f74c8b5549d918e1e8956
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/06/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="drop-partition-scheme-transact-sql"></a>DROP PARTITION SCHEME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

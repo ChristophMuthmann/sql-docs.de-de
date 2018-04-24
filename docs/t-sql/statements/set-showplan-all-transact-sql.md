@@ -1,16 +1,16 @@
 ---
 title: SET SHOWPLAN_XML (Transact-SQL) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - SET SHOWPLAN_ALL
@@ -29,16 +29,16 @@ helpviewer_keywords:
 - stopping statement execution
 - estimated execution information [SQL Server]
 ms.assetid: a500b682-bae4-470f-9e00-47de905b851b
-caps.latest.revision: 
+caps.latest.revision: 40
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: cdaf86a6eb550574b507edfba130a277fde395b4
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 9349a83fc0857a323b79f8a964eeb5660f554dd1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="set-showplanall-transact-sql"></a>SET SHOWPLAN_ALL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -102,7 +102,7 @@ SET SHOWPLAN_ALL { ON | OFF }
 ## <a name="examples"></a>Beispiele  
  In den beiden folgenden Anweisungen werden die SET SHOWPLAN_ALL-Einstellungen verwendet, um zu zeigen, wie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Verwendung von Indizes in Abfragen analysiert und optimiert.  
   
- In der ersten Abfrage wird der Vergleichsoperator Gleich (=) in der WHERE-Klausel auf eine indizierte Spalte angewendet. Daher wird in der **LogicalOp**-Spalte der Wert Clustered Index Seek und in der **Argument**-Spalte der Indexname angezeigt.  
+ In der ersten Abfrage wird der Vergleichsoperator (=) in der WHERE-Klausel auf eine indizierte Spalte angewendet. Daher wird in der **LogicalOp**-Spalte der Wert Clustered Index Seek und in der **Argument**-Spalte der Indexname angezeigt.  
   
  In der zweiten Abfrage wird der LIKE-Operator in der WHERE-Klausel verwendet. Deshalb muss [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einen Scan des gruppierten Indexes ausführen und die Daten finden, die die Bedingung in der WHERE-Klausel erfüllen. Als Folge werden in der **LogicalOp**-Spalte der Wert Clustered Index Scan und in der **Argument**-Spalte der Indexname angezeigt. Weiterhin werden in der **LogicalOp**-Spalte der Wert Filter und in der **Argument**-Spalte die Bedingung aus der WHERE-Klausel angezeigt.  
   

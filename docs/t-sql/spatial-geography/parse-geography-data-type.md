@@ -1,16 +1,16 @@
 ---
 title: Parse (geography-Datentyp) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 07/30/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|spatial-geography
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - Parse method
 - Parse (geography Data Type)
 ms.assetid: 21c402fa-fd0f-4d09-a097-49cee0316d4e
-caps.latest.revision: 
+caps.latest.revision: 18
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c29c43af7034f86fa993fc5f12046200216ec57f
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 0299e71b9204c5a02da084ba915c5c0af2431d38
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="parse-geography-data-type"></a>Parse (geography-Datentyp)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ Parse ( 'geography_tagged_text' )
  Diese Methode löst **ArgumentException** aus, wenn die Eingabe eine gegenüberliegende Kante enthält.  
   
 ## <a name="examples"></a>Beispiele  
- Im folgenden Beispiel wird `Parse()` verwendet, um eine `geography` -Instanz zu erstellen.  
+ Im folgenden Beispiel wird `Parse()` verwendet, um eine `geography`-Instanz zu erstellen.  
   
 ```  
 DECLARE @g geography;   

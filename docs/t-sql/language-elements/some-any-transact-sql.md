@@ -1,16 +1,16 @@
 ---
 title: SOME | ANY (Transact-SQL) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|language-elements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - Azure SQL Database
@@ -27,16 +27,16 @@ helpviewer_keywords:
 - SOME | ANY keyword
 - single-column set of values [SQL Server]
 ms.assetid: 1f717ad6-f67b-4980-9397-577ecb0e5789
-caps.latest.revision: 
+caps.latest.revision: 41
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d81a0d9fb87a11aa7bc109c003d7b723c20c8e77
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 0a79c7a06edb70b694481e4c30b0244ebd39e2ef
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="some--any-transact-sql"></a>SOME | ANY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -70,7 +70,7 @@ scalar_expression { = | < > | ! = | > | > = | ! > | < | < = | ! < }
  **Boolean**  
   
 ## <a name="result-value"></a>Ergebniswert  
- SOME oder ANY geben **TRUE** zurück, wenn der angegebene Vergleich für ein Paar (*scalar_expression***,***x*) TRUE ergibt, wenn *x* ein Wert im Einspaltensatz ist. Andernfalls wird **FALSE** zurückgegeben.  
+ SOME oder ANY geben **TRUE** zurück, wenn der angegebene Vergleich für ein Paar (*scalar_expression ***,*** x*) TRUE ergibt, wenn *x* ein Wert im Einspaltensatz ist. Andernfalls wird **FALSE** zurückgegeben.  
   
 ## <a name="remarks"></a>Remarks  
  SOME erfordert, dass *scalar_expression* mit mindestens einem von der Unterabfrage zurückgegebenen Wert positiv verglichen wird. Anweisungen, die erfordern, dass *scalar_expression* mit jedem von der Unterabfrage zurückgegebenen Wert positiv verglichen wird, finden Sie unter [ALL &#40;Transact-SQL&#41;](../../t-sql/language-elements/all-transact-sql.md). Wenn die Unterabfrage beispielsweise die Werte 2 und 3 zurückgibt, ergibt *scalar_expression* = SOME (Unterabfrage) für *scalar_express* = 2 TRUE. Wenn die Unterabfrage beispielsweise die Werte 2 und 3 zurückgibt, ergibt *scalar_expression* = ALL (Unterabfrage) FALSE, da einige Werte der Unterabfrage (der Wert 3) die Kriterien des Ausdrucks nicht erfüllen.  
@@ -153,7 +153,7 @@ EXECUTE ManyDaysToComplete 49080, 1 ;
  [ALL &#40;Transact-SQL&#41;](../../t-sql/language-elements/all-transact-sql.md)   
  [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)   
  [Integrierte Funktionen &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
- [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [Operatoren &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)   
  [IN &#40;Transact-SQL&#41;](../../t-sql/language-elements/in-transact-sql.md)  

@@ -1,16 +1,16 @@
 ---
 title: HASHBYTES (Transact-SQL) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 07/29/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - HASHBYTES_TSQL
@@ -21,16 +21,17 @@ helpviewer_keywords:
 - hash input
 - HASHBYTES
 ms.assetid: 0ea6a4d1-313e-4f70-b939-dd2cd570f6d6
-caps.latest.revision: 
+caps.latest.revision: 38
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 63552f4b6fb61b3b24d4d670b9ea255d8e417699
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 2bac5b4c4a36331619752ba25e9cb11382fe4129
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="hashbytes-transact-sql"></a>HASHBYTES (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -59,7 +60,7 @@ HASHBYTES ( '<algorithm>', { @input | 'input' } )
   
  Die Ausgabe entspricht dem Algorithmusstandard: 128 Bits (16 Bytes) für MD2, MD4 und MD5; 160 Bits (20 Bytes) für SHA und SHA1; 256 Bits (32 Bytes) für SHA2_256 und 512 Bits (64 Bytes) für SHA2_512.  
   
-**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Gilt für** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
  Bei [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und früher sind zulässige Eingabewerte auf 8.000 Byte beschränkt.  
   

@@ -13,18 +13,21 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 51eff161-6ecd-4ee4-8187-1dd8ef4814bd
-caps.latest.revision: ''
+caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: efa8807737e6c307b51b5edc9da2a048096285ef
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: 515bcfaebccd6d2da63fe4d351e5b1569c933286
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="building-a-knowledge-base"></a>Aufbau einer Wissensdatenbank
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   Eine Wissensdatenbank in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) ist ein Repository des Wissens zu den Daten. Sie ermöglicht es Ihnen, die Daten zu verstehen und ihre Integrität aufrechtzuerhalten. Eine Wissensdatenbank besteht aus Domänen, die jeweils die Daten in einem Datenfeld darstellen. Die Wissensdatenbank wird von DQS zur Datenbereinigung und Deduplizierung in einer Datenbank verwendet. Um die Wissensdatenbank für die Datenbereinigung vorzubereiten, können Sie eine computergestützte Analyse eines Datenbeispiels ausführen und die Werte in den Domänen interaktiv verwalten. Mithilfe von DQS können Sie Wissen importieren, Regeln und Beziehungen erstellen, Datenwerte direkt ändern und eine Standarddatenbank verwenden.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  

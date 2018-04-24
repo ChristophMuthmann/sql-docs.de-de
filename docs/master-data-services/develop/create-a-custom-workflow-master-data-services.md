@@ -1,31 +1,34 @@
 ---
 title: Erstellen eines benutzerdefinierten Workflows (Master Data Services) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: develop
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
 ms.assetid: 8e4403e9-595c-4b6b-9d0c-f6ae1b2bc99d
-caps.latest.revision: 
+caps.latest.revision: 8
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c7b982bce7e48811dbfa9874fba2a3084374ff5e
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: e9068bb0564b0b4f0635175efb1a1805bcd2f4e5
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="create-a-custom-workflow-master-data-services"></a>Erstellen eines benutzerdefinierten Workflows (Master Data Services)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] verwendet Geschäftsregeln, um auf Basis der von Ihnen festgelegten Bedingungen grundlegende Workflowlösungen zu erstellen, beispielsweise das automatische Update und Validieren von Daten sowie das Senden von E-Mail-Benachrichtigungen. Wenn Sie Verarbeitungsfunktionen benötigen, die komplexer als die anhand der integrierten Workflowaktionen bereitgestellten Funktionen sind, verwenden Sie einen benutzerdefinierten Workflow. Ein benutzerdefinierter Workflow ist eine .NET-Assembly, die Sie erstellen. Wenn die Workflowassembly aufgerufen wird, kann der Code jede Aktion ausführen, die in Ihrer Situation erforderlich ist. Erfordert Ihr Workflow beispielsweise eine komplexe Ereignisverarbeitung wie Genehmigungen mit mehreren Ebenen oder komplizierte Entscheidungsstrukturen, können Sie [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] so konfigurieren, dass ein benutzerdefinierter Workflow gestartet wird, der die Daten analysiert und den Empfänger der Daten für die Genehmigung bestimmt.  
   
 ## <a name="how-custom-workflows-are-processed"></a>Verarbeitung von benutzerdefinierten Workflows  

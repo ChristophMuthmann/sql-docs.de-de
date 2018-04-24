@@ -2,7 +2,7 @@
 title: ALTER SERVER AUDIT (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/10/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
 ms.service: ''
 ms.component: t-sql|statements
@@ -22,16 +22,17 @@ helpviewer_keywords:
 - audits [SQL Server], specification
 - ALTER SERVER AUDIT statement
 ms.assetid: 63426d31-7a5c-4378-aa9e-afcf4f64ceb3
-caps.latest.revision: ''
+caps.latest.revision: 43
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f8c65e86bb3bea70a771cfcabf6b6e9049c6826a
-ms.sourcegitcommit: 6e16d1616985d65484c72f5e0f34fb2973f828f4
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 7bedbd1b8244c337fc0d325eff850dd89b7c7160
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="alter-server-audit--transact-sql"></a>ALTER SERVER AUDIT (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

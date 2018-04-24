@@ -1,16 +1,16 @@
 ---
 title: Angeben von Metaeigenschaften in OPENXML | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: xml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - overflow in XML document [SQL Server]
@@ -19,20 +19,20 @@ helpviewer_keywords:
 - extracting information of XML nodes [SQL Server]
 - OPENXML statement, metaproperties
 ms.assetid: 29bfd1c6-3f9a-43c4-924a-53d438e442f4
-caps.latest.revision: 
+caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 968f1a5b32bbc6c2e6f2f955083e8fd247e3fc82
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 69c23031657fd8c3ae75e49e1942b6a3828a59fa
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="specify-metaproperties-in-openxml"></a>Angeben von Metaeigenschaften in OPENXML
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-Metaeigenschaftsattribute in einem XML-Dokument sind Attribute, die die Eigenschaften eines XML-Objekts (z. B. Element, Attribut oder ein beliebiger anderer DOM-Knoten) beschreiben. Diese Attribute sind nicht physisch im Text des XML-Dokuments enthalten. Vielmehr stellt OPENXML diese Metaeigenschaften für alle XML-Objekte bereit. Die Metaeigenschaften ermöglichen es Ihnen, Informationen (wie etwa die relative Position oder Namespaceinformationen) über XML-Knoten zu extrahieren. Diese Informationen bieten Ihnen mehr Details, als in der Textdarstellung zu sehen sind.  
+  Metaeigenschaftsattribute in einem XML-Dokument sind Attribute, die die Eigenschaften eines XML-Objekts (z. B. Element, Attribut oder ein beliebiger anderer DOM-Knoten) beschreiben. Diese Attribute sind nicht physisch im Text des XML-Dokuments enthalten. Vielmehr stellt OPENXML diese Metaeigenschaften für alle XML-Objekte bereit. Die Metaeigenschaften ermöglichen es Ihnen, Informationen (wie etwa die relative Position oder Namespaceinformationen) über XML-Knoten zu extrahieren. Diese Informationen bieten Ihnen mehr Details, als in der Textdarstellung zu sehen sind.  
   
  Sie können diese Metaeigenschaften Rowsetspalten in einer OPENXML-Anweisung mithilfe des *ColPattern* -Parameters zuordnen. Die Spalten enthalten die Werte der Metaeigenschaften, denen sie zugeordnet werden. Weitere Informationen zur Syntax von OPENXML finden Sie unter [OPENXML &#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md).  
   

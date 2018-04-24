@@ -1,16 +1,16 @@
 ---
 title: ALL (Transact-SQL) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|language-elements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - Azure SQL Database
@@ -24,16 +24,16 @@ helpviewer_keywords:
 - single-column set of values [SQL Server]
 - ALL (Transact-SQL)
 ms.assetid: 4b0c002e-1ffd-4425-a980-11fdc1f24af7
-caps.latest.revision: 
+caps.latest.revision: 40
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 142fbd5b352a73e382f89a61f60fba6373902172
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 60f49c0e10546fadaa245eb160318dd1923867ca
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="all-transact-sql"></a>ALL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ scalar_expression { = | <> | != | > | >= | !> | < | <= | !< } ALL ( subquery )
  **Boolean**  
   
 ## <a name="result-value"></a>Ergebniswert  
- Gibt TRUE zurück, wenn der angegebene Vergleich für alle Paare (*scalar_expression***,***x)* TRUE ergibt, wenn *x* ein Wert im Einspaltensatz ist. Andernfalls wird FALSE zurückgegeben.  
+ Gibt TRUE zurück, wenn der angegebene Vergleich für alle Paare (*scalar_expression ***,*** x)* TRUE ergibt, wenn *x* ein Wert im Einspaltensatz ist. Andernfalls wird FALSE zurückgegeben.  
   
 ## <a name="remarks"></a>Remarks  
  ALL erfordert, dass der Vergleich von *scalar_expression* mit jedem der von der Unterabfrage zurückgegebenen Wert positiv ausfällt. Wenn die Unterabfrage beispielsweise die Werte 2 und 3 zurückgibt, ergibt *scalar_expression* <= ALL (Unterabfrage) für *scalar_expression* = 2 TRUE. Wenn die Unterabfrage beispielsweise die Werte 2 und 3 zurückgibt, ergibt *scalar_expression* = ALL (Unterabfrage) FALSE, da einige Werte der Unterabfrage (der Wert 3) die Kriterien des Ausdrucks nicht erfüllen.  
@@ -120,7 +120,7 @@ EXECUTE DaysToBuild 49080, 1 ;
  [Ausdrücke &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [Integrierte Funktionen &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
  [LIKE &#40;Transact-SQL&#41;](../../t-sql/language-elements/like-transact-sql.md)   
- [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [Operatoren &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)   
  [IN &#40;Transact-SQL&#41;](../../t-sql/language-elements/in-transact-sql.md)  

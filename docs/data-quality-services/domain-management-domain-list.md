@@ -15,18 +15,21 @@ ms.topic: article
 f1_keywords:
 - sql13.dqs.dm.domainlist.f1
 ms.assetid: 8df305f0-97ea-4226-811b-979ed862e1f0
-caps.latest.revision: ''
+caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2b682b08105123c33df88fb7ffdf6624bc58407c
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: bcb00df40d89a33b1e2aaa701aad21fdc451dbc1
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="domain-management-domain-list"></a>Domänenverwaltung: Domänenliste
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   In diesem Thema werden die Steuerelemente in der Liste „Domänen“ auf der Seite **Domänenverwaltung** in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) beschrieben. Verwenden Sie diesen Bereich, um eine Domäne auszuwählen, für die Verwaltungsvorgänge ausgeführt werden sollen. Der gleiche Bereich wird für alle Seiten im Registerkartenformat auf der Seite **Domänenverwaltung** verwendet.  
   
 ## <a name="options"></a>Tastatur  

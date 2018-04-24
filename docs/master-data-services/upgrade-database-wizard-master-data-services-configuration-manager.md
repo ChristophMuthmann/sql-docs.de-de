@@ -1,30 +1,33 @@
 ---
-title: "Datenbankupgrade-Assistent (Konfigurations-Manager für Master Data Services) | Microsoft-Dokumentation"
-ms.custom: 
+title: Datenbankupgrade-Assistent (Konfigurations-Manager für Master Data Services) | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: b74edba7-d0a2-456b-9673-b1e02bcdea43
-caps.latest.revision: 
+caps.latest.revision: 6
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a32a4640de0d668ad12c5ac2ba403076037a45d7
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: 87d52c52db0f17dea7f9f6ecf029cb9be15d874a
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="upgrade-database-wizard-master-data-services-configuration-manager"></a>Datenbankupgrade-Assistent (Konfigurations-Manager für Master Data Services)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   Mit dem **Datenbankupgrade-Assistenten** können Sie [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] -Datenbanken aktualisieren.  
   
 ## <a name="action"></a>Aktion  

@@ -1,33 +1,36 @@
 ---
-title: "Zuweisen von Berechtigungen für Funktionsbereiche (Master Data Services) | Microsoft-Dokumentation"
-ms.custom: 
+title: Zuweisen von Berechtigungen für Funktionsbereiche (Master Data Services) | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - permissions [Master Data Services], assigning functional area permissions
 - functional area permissions [Master Data Services], assigning
 ms.assetid: af6fe2f3-37d0-4413-ab27-b3a0fb95eb50
-caps.latest.revision: 
+caps.latest.revision: 6
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 10adbe13447c77ed80f9737c70b5a23e8e6d4529
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: ee73144dd5a33d4f962a52745a35f953fec0950e
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="assign-functional-area-permissions-master-data-services"></a>Zuweisen von Berechtigungen für Funktionsbereiche (Master Data Services)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   Weisen Sie Funktionsbereichberechtigungen zu, um Benutzern oder Gruppen Zugriff auf die Funktionsbereiche von [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]zu gewähren.  
   
 ## <a name="prerequisites"></a>Voraussetzungen  

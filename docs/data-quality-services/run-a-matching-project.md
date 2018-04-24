@@ -17,18 +17,21 @@ f1_keywords:
 - sql13.dqs.matchingproject.matching.f1
 - sql13.dqs.matchingproject.export.f1
 ms.assetid: 6aa9d199-83ce-4b5d-8497-71eef9258745
-caps.latest.revision: ''
+caps.latest.revision: 36
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cd76d59bc0c13742633185766f559bd3d189e228
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: ae48076185149d0ba1306260459ec7b34dcc8123
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="run-a-matching-project"></a>Ausführen eines Abgleichsprojekts
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   In diesem Thema wird beschrieben, wie ein Datenabgleich in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) ausgeführt wird. Der Abgleichsprozess identifiziert anhand von Abgleichsregeln in der Abgleichsrichtlinie Cluster von übereinstimmenden Datensätzen, legt basierend auf einer Survivorship-Regel einen Datensatz von jedem Cluster als Survivor fest und exportiert die Ergebnisse. DQS führt den Abgleichsprozess, auch Deduplizierung genannt, in einem computerunterstützten Prozess aus, Sie erstellen die Abgleichsregeln jedoch interaktiv und wählen die Survivorship-Regel aus mehreren Optionen aus, so dass Sie den Abgleichsprozess selbst steuern können.  
   
  Der Abgleich erfolgt in drei Phasen: ein Zuordnungsprozess, in dem Sie die Datenquelle identifizieren und der Datenquelle Domänen zuordnen, ein Abgleichsprozess, in dem Sie die Abgleichsanalyse ausführen, und ein Survivorship- sowie Exportprozess, in denen Sie die Survivorship-Regel festlegen und die Abgleichsergebnisse exportieren. Jede dieser Prozesse wird auf einer separaten Seite des Abgleichsaktivitäts-Assistenten ausgeführt, sodass Sie zwischen den Seiten hin und her wechseln, den Prozess erneut auszuführen, einen bestimmten Abgleichsprozess schließen und dann zur gleichen Phase des Prozesses zurückkehren können. DQS stellt Ihnen Statistiken zu den Quelldaten, den Abgleichsregeln und den Abgleichsergebnissen bereit, die es Ihnen ermöglichen, informierte Entscheidungen zum Abgleich zu treffen und den Abgleichsprozess zu optimieren.  

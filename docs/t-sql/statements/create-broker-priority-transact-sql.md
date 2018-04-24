@@ -1,16 +1,16 @@
 ---
 title: CREATE BROKER PRIORITY (Transact-SQL) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE BROKER PRIORITY
@@ -28,16 +28,16 @@ dev_langs:
 helpviewer_keywords:
 - CREATE BROKER PRIORITY statement
 ms.assetid: e0bbebfa-b7c3-4825-8169-7281f7e6de98
-caps.latest.revision: 
+caps.latest.revision: 40
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 524909a3f12040460950448e77c177f3b1aeef8d
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 9503c441d1c57bf84e27b6190b1afc751be8861e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-broker-priority-transact-sql"></a>CREATE BROKER PRIORITY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -88,9 +88,9 @@ FOR CONVERSATION
  *LocalServiceName*  
  Gibt an, dass die Konversationspriorität für Folgendes übernommen werden kann:  
   
--   Jeden Konversationsendpunkt für den Initiator, dessen Initiatordienstname *LocalServiceName* entspricht.  
+-   Jeder Konversationsendpunkt für den Initiator, dessen Initiatordienstname *LocalServiceName* entspricht.  
   
--   Jeden Konversationsendpunkt für das Ziel, dessen Zieldienstname *LocalServiceName* entspricht.  
+-   Jeder Konversationsendpunkt für das Ziel, dessen Zieldienstname *LocalServiceName* entspricht.  
   
  ANY  
  -   Gibt an, dass die Konversationspriorität unabhängig vom Namen des vom Endpunkt verwendeten lokalen Diensts für jeden Konversationsendpunkt übernommen werden kann.  
@@ -105,9 +105,9 @@ FOR CONVERSATION
  '*RemoteServiceName*'  
  Gibt an, dass die Konversationspriorität für Folgendes übernommen werden kann:  
   
--   Jeden Konversationsendpunkt für den Initiator, dessen zugeordneter Zieldienstname *RemoteServiceName* entspricht.  
+-   Jeder Konversationsendpunkt für den Initiator, dessen zugeordneter Zieldienstname *RemoteServiceName* entspricht.  
   
--   Jeden Konversationsendpunkt für das Ziel, dessen zugeordneter Initiatordienstname *RemoteServiceName* entspricht.  
+-   Jeder Konversationsendpunkt für das Ziel, dessen zugeordneter Initiatordienstname *RemoteServiceName* entspricht.  
   
  ANY  
  Gibt an, dass die Konversationspriorität unabhängig vom Namen des dem Endpunkt zugeordneten Remotediensts für jeden Konversationsendpunkt übernommen werden kann.  

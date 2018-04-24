@@ -18,13 +18,16 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3e10456b5254bc007420eb6850f00ede131f31aa
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 6cd8e4f68f0167b9179d4108c59755da5619787e
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="business-rule-examples-master-data-services"></a>Beispiele für Geschäftsregeln (Master Data Services)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
 Dieser Artikel zeigt Beispiele von Geschäftsregeln für [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]. Sie finden diese Beispiele in den Beispielmodellen, die in Ihrer Installation von [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]enthalten sind.   
   
 Anweisungen dazu, wie Sie die Beispielmodelle bereitstellen, finden Sie unter [Master Data Services – Installation und Konfiguration](../master-data-services/master-data-services-installation-and-configuration.md).  

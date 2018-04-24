@@ -1,34 +1,37 @@
 ---
 title: Administratoren (Master Data Services) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - administrators [Master Data Services], about administrators
 - administrators [Master Data Services]
 - models [Master Data Services], administrators
 ms.assetid: d330aa4e-6ade-4b09-b376-1b15d6c78f7d
-caps.latest.revision: 
+caps.latest.revision: 14
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 11e0c1225adf86349c2d049e231463e1c7c1bea6
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: 35d55601c62191416e9de04901db074f3eb5d4d0
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="administrators-master-data-services"></a>Administratoren (Master Data Services)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   In diesem Artikel werden die verschiedenen Administratortypen in [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]beschrieben: Modelladministrator, Entitätsadministrator und Administrator.  
   
 ## <a name="model-administrators"></a>Modelladministratoren  

@@ -2,7 +2,7 @@
 title: FROM (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/16/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: t-sql|queries
@@ -36,16 +36,17 @@ helpviewer_keywords:
 - UPDATE statement [SQL Server], FROM clause
 - derived tables
 ms.assetid: 36b19e68-94f6-4539-aeb1-79f5312e4263
-caps.latest.revision: ''
+caps.latest.revision: 97
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 0a78b022ae6b344531130c55fb08bfc3684f8e23
-ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 18b042ae05331e65f4d10657536f360f17328ed7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="from-transact-sql"></a>FROM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]

@@ -1,16 +1,16 @@
 ---
 title: Erstellen von indizierten Sichten | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 01/22/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-views
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - indexed views [SQL Server], creating
@@ -20,16 +20,17 @@ helpviewer_keywords:
 - indexed views [SQL Server]
 - views [SQL Server], indexed views
 ms.assetid: f86dd29f-52dd-44a9-91ac-1eb305c1ca8d
-caps.latest.revision: 
+caps.latest.revision: 79
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 505c016f769a76c2908f607617db99a04e857ef1
-ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 2212ab366b387a5382b37624964b14b96ebf1de7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-indexed-views"></a>Erstellen von indizierten Sichten
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -94,7 +95,7 @@ Zusätzlich zu den Anforderungen bzgl. SET-Optionen und deterministischen Funkti
   
 -   Wenn Sie den Index erstellen, muss die Option `IGNORE_DUP_KEY` auf OFF (Standardeinstellung) festgelegt sein.    
   
--   Auf Tabellen muss in der Sichtdefinition mit dem zweiteiligen Namen *Schema***.***Tabellenname* verwiesen werden.    
+-   Auf Tabellen muss in der Sichtdefinition mit dem zweiteiligen Namen *Schema ***.*** Tabellenname* verwiesen werden.    
   
 -   Benutzerdefinierte Funktionen, auf die in der Sicht verwiesen wird, müssen mit der Option `WITH SCHEMABINDING` erstellt werden.    
   

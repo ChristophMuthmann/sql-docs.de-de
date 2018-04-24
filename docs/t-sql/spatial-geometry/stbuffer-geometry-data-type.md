@@ -1,16 +1,16 @@
 ---
 title: STBuffer (geometry-Datentyp) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 08/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|spatial-geography
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - STBuffer (geometry Data Type)
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - STBuffer (geometry Data Type)
 ms.assetid: ca6bf2dc-1d38-4503-b87e-f2ea033d36ba
-caps.latest.revision: 
+caps.latest.revision: 29
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ff65df2a1216a29b15a0458e9e4537c748140714
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 1bd6a6d96afc57058db986f921d70afee4e9b7fb
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="stbuffer-geometry-data-type"></a>STBuffer (geometry-Datentyp)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -167,7 +167,7 @@ Gibt ein geometrisches Objekt zurück, dass die Vereinigung aller Punkte darstel
  SELECT @g.STBuffer(1.6).ToString();
  ```  
   
- Von den ersten beiden **SELECT** -Anweisungen wird eine Instanz von `MultiPolygon` zurückgegeben, da der *distance* -Parameter kleiner oder gleich 1/2 des Abstands zwischen den beiden Punkten (1 1) und (1 4) ist. Von der dritten **SELECT** -Anweisung gibt `Polygon` zurückgegeben, da sich die zwischengespeicherten Instanzen der beiden Punkte (1 1) und (1 4) überschneiden.  
+ Von den ersten beiden **SELECT** -Anweisungen wird eine Instanz von `MultiPolygon` zurückgegeben, da der *distance* -Parameter kleiner oder gleich 1/2 des Abstands zwischen den beiden Punkten (1 1) und (1 4) ist. Von der dritten **SELECT**-Anweisung gibt `Polygon` zurückgegeben, da sich die zwischengespeicherten Instanzen der beiden Punkte (1 1) und (1 4) überschneiden.  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [BufferWithTolerance &#40;geometry-Datentyp&#41;](../../t-sql/spatial-geometry/bufferwithtolerance-geometry-data-type.md)   

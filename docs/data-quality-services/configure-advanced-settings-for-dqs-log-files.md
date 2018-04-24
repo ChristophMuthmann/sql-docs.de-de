@@ -16,18 +16,21 @@ helpviewer_keywords:
 - log files,advanced settings
 - dqs log files,advanced settings
 ms.assetid: 1d565748-9759-425c-ae38-4d2032a86868
-caps.latest.revision: ''
+caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a2a545e26c56dac47cafbbdf3c5ff114e5ec4620
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: db40c8c5102e941bfbf7138b4c80653c6ab4feed
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="configure-advanced-settings-for-dqs-log-files"></a>Konfigurieren der erweiterten Einstellungen für DQS-Protokolldateien
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   In diesem Thema wird beschrieben, wie erweiterte Einstellungen für [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] - und [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] -Protokolldateien konfiguriert werden, z. B. das Festlegen der maximalen Rolldateigröße für Protokolldateien, das Festlegen des Zeitstempelschemas von Ereignissen usw.  
   
 > [!NOTE]  

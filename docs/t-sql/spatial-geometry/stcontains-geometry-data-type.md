@@ -1,16 +1,16 @@
 ---
 title: STContains (geometry-Datentyp) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 08/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|spatial-geography
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - STContains (geometry Data Type)
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - STContains (geometry Data Type)
 ms.assetid: 865ceca1-9200-45ed-a7d8-e286e2679fdc
-caps.latest.revision: 
+caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 369893addea2994e3f807d4191bebe2181decfd5
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: a7ae3154bb70f81aa87cdd41c0f16f0237bb5933
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="stcontains-geometry-data-type"></a>STContains (geometry-Datentyp)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ Gibt 1 zurück, wenn eine **geometry** -Instanz eine andere **geometry** -Instan
  `STContains()` gibt immer NULL zurück, wenn die SRIDs (Spatial Reference IDs) der **geometry**-Instanzen nicht übereinstimmen.  
   
 ## <a name="examples"></a>Beispiele  
- Im folgenden Beispiel wird `STContains()` verwendet, um zwei `geometry` -Instanzen daraufhin zu überprüfen, ob die erste Instanz die zweite Instanz enthält.  
+ Im folgenden Beispiel wird `STContains()` verwendet, um zwei `geometry`-Instanzen daraufhin zu überprüfen, ob die erste Instanz die zweite Instanz enthält.  
   
 ```  
 DECLARE @g geometry;  

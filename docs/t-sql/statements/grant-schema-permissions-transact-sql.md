@@ -1,16 +1,16 @@
 ---
 title: GRANT-Schemaberechtigungen (Transact-SQL) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 06/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -20,16 +20,17 @@ helpviewer_keywords:
 - GRANT statement, schemas
 - granting permissions [SQL Server], schemas
 ms.assetid: b2aa1fc8-e7af-45d2-9f80-737543c8aa95
-caps.latest.revision: 
+caps.latest.revision: 31
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 35e4775e421102931c0864dee97be0a862901416
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 0e7d350c70a92621bdbebf695c09e2272171e84e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="grant-schema-permissions-transact-sql"></a>GRANT-Schemaberechtigungen (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -51,7 +52,7 @@ GRANT permission  [ ,...n ] ON SCHEMA :: schema_name
  *permission*  
  Gibt eine Berechtigung an, die für ein Schema erteilt werden kann. Eine Liste der Berechtigungen finden Sie im Abschnitt zu den Hinweisen weiter unten in diesem Thema.  
   
- ON SCHEMA **::** schema*_name*  
+ ON SCHEMA **::** schema *_name*  
  Gibt das Schema an, für das die Berechtigung erteilt wird. Der Bereichsqualifizierer **::** ist erforderlich.  
   
  *database_principal*  

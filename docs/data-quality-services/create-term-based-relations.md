@@ -15,18 +15,21 @@ ms.topic: article
 f1_keywords:
 - sql13.dqs.dm.kbtermsbased.f1
 ms.assetid: 66db9277-d892-4dae-8a82-060fd3ba6949
-caps.latest.revision: ''
+caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 28e8894e78e95eb69cba639b4d60825982244ab9
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: 94db4c27897da2ebbd399d7946085b15f5f7b68d
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="create-term-based-relations"></a>Erstellen von begriffsbasierten Beziehungen
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   In diesem Thema wird die Erstellung von begriffsbasierten Beziehungen für eine Domäne in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) beschrieben. Mithilfe von begriffsbasierten Beziehungen (Term-based Relation, TBR) können Sie eine Korrektur an einem Begriff vornehmen, der Teil eines Werts in einer Domäne ist. Mehrere Werte, die abgesehen von der Schreibweise eines gemeinsamen Teils identisch sind, werden als identische Synonyme angesehen. Sie können z. B. eine begriffsbasierte Beziehung einrichten, die den Begriff „Inc.“ in „Incorporated“ ändert. Der Begriff „Inc.“ wird jedes Mal geändert, wenn er in der Domäne vorkommt. Instanzen von „Contoso, Inc.“ werden in „Contoso, Incorporated“ geändert, und die beiden Werte werden als exakte Synonyme angesehen.  
   
  Um begriffsbasierte Beziehungen zu verwenden, erstellen Sie eine Liste mit Wert-/Ersetzungswertpaaren, z. B. „Inc.“ und „Incorporated“ oder „Senior“ und „Sr.“. Durch die Verwendung einer begriffsbasierten Beziehung können Sie einen Begriff in der gesamten Domäne ändern, ohne manuell einzelne Domänenwerte als Synonyme festzulegen. Sie können angeben, dass ein Wert korrigiert wird, auch wenn er nicht zuvor von der Wissensermittlung erkannt wurde. Wenn eine Transformation aufgrund einer begriffsbasierten Beziehung dazu führt, dass zwei Werte identisch sind, erstellt DQS zwischen ihnen eine Synonymbeziehung (in der Wissensermittlung), eine Korrekturbeziehung (in der Datenkorrektur) oder eine genaue Übereinstimmung (beim Abgleich).  

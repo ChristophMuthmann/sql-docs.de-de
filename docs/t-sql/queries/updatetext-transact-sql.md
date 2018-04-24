@@ -1,16 +1,16 @@
 ---
 title: UPDATETEXT (Transact-SQL) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 10/23/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|queries
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - UPDATETEXT
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - data updates [SQL Server], UPDATETEXT statement
 - UPDATETEXT statement
 ms.assetid: d73c28ee-3972-4afd-af8d-ebbbd9e50793
-caps.latest.revision: 
+caps.latest.revision: 34
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c4d7c7a51daeba116e695ba9cae797f0d69c70cf
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: be77fa4aba2ef2a6fb45ce209846b825a487e837
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="updatetext-transact-sql"></a>UPDATETEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.lasthandoff: 01/25/2018
   Aktualisiert ein vorhandenes **text**-, **ntext**-, oder **image**-Feld. Verwenden Sie UPDATETEXT, um nur einen Teil einer vorhandenen **text**-, **ntext**- oder **image**-Spalte zu ändern. Verwenden Sie WRITETEXT, um ein ganzes **text**-, **ntext**- oder **image**-Feld zu aktualisieren und zu ersetzen.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Verwenden Sie stattdessen die Datentypen für große Werte und die **.**WRITE-Klausel der [UPDATE](../../t-sql/queries/update-transact-sql.md)-Anweisung.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Verwenden Sie stattdessen die Datentypen für große Werte und die **.** WRITE-Klausel der [UPDATE](../../t-sql/queries/update-transact-sql.md)-Anweisung.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -67,7 +67,7 @@ UPDATETEXT [BULK] { table_name.dest_column_name dest_text_ptr }
  Der Name der zu aktualisierenden Tabelle oder der zu aktualisierenden Spalte vom Datentyp **text**, **ntext** oder **image**. Tabellen- und Spaltennamen müssen den Regeln für [Bezeichner](../../relational-databases/databases/database-identifiers.md) entsprechen. Das Angeben des Datenbank- und des Besitzernamens ist optional.  
   
  *dest_text_ptr*  
- Ein Textzeigerwert (von der TEXTPTR-Funktion zurückgegeben), der auf die zu aktualisierenden Daten von **text**, **ntext** oder **image** zeigt. *dest_text_ptr* muss vom Datentyp **binary(**16**)** sein.  
+ Ein Textzeigerwert (von der TEXTPTR-Funktion zurückgegeben), der auf die zu aktualisierenden Daten von **text**, **ntext** oder **image** zeigt. *dest_text_ptr* muss vom Datentyp **binary(** 16 **)** sein.  
   
  *insert_offset*  
  Die nullbasierte Startposition für das Update. Für **text**- oder **image**-Spalten stellt *insert_offset* die Zahl der ab dem Beginn der vorhandenen Spalte auszulassenden Bytes dar, bevor neue Daten eingefügt werden. Für **ntext**-Spalten stellt *insert_offset* die Anzahl von Zeichen dar (jedes **ntext**-Zeichen verwendet 2 Bytes). Die vorhandenen **text**-, **ntext**- oder **image**-Daten, die an dieser nullbasierten Startposition beginnen, werden nach rechts verschoben, um Platz für die neuen Daten zu schaffen. Mit dem Wert 0 werden die neuen Daten am Beginn der vorhandenen Daten eingefügt. Mit dem Wert NULL werden die neuen Daten an den vorhandenen Datenwert angefügt.  

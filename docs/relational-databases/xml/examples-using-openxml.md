@@ -1,16 +1,16 @@
 ---
 title: 'Beispiele: Verwenden von OPENXML | Microsoft-Dokumentation'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: xml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - ColPattern [XML in SQL Server]
@@ -29,20 +29,20 @@ helpviewer_keywords:
 - element-centric mapping [SQL Server]
 - edge tables
 ms.assetid: 689297f3-adb0-4d8d-bf62-cfda26210164
-caps.latest.revision: 
+caps.latest.revision: 36
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6e399083e8f1d12d5a762074e2f4746d452f3e75
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 0e9a46da6f60eeefced877db413a54f5f900ebb8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="examples-using-openxml"></a>Beispiele: Verwenden von OPENXML
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-In den Beispielen dieses Themas wird die Verwendung von OPENXML zum Erstellen einer Rowsetansicht eines XML-Dokuments veranschaulicht. Informationen zur Syntax von OPENXML finden Sie unter [OPENXML &#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md). Die Beispiele geben alle Aspekte von OPENXML wieder, ausgenommen der Angabe von Metaeigenschaften in OPENXML. Weitere Informationen zum Angeben von Metaeigenschaften in OPENXML finden Sie unter [Angeben von Metaeigenschaften in OPENXML](../../relational-databases/xml/specify-metaproperties-in-openxml.md).  
+  In den Beispielen dieses Themas wird die Verwendung von OPENXML zum Erstellen einer Rowsetansicht eines XML-Dokuments veranschaulicht. Informationen zur Syntax von OPENXML finden Sie unter [OPENXML &#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md). Die Beispiele geben alle Aspekte von OPENXML wieder, ausgenommen der Angabe von Metaeigenschaften in OPENXML. Weitere Informationen zum Angeben von Metaeigenschaften in OPENXML finden Sie unter [Angeben von Metaeigenschaften in OPENXML](../../relational-databases/xml/specify-metaproperties-in-openxml.md).  
   
 ## <a name="examples"></a>Beispiele  
  Beim Abrufen der Daten wird *rowpattern* zur Identifizierung der Knoten im XML-Dokument, die die Zeilen bestimmen, verwendet. *rowpattern* wird in der XPath-Sprache ausgedrückt, die in der MSXML XPath-Implementierung verwendet wird. Wenn z. B. das Muster mit einem Element oder Attribut endet, wird eine Zeile für jeden von *rowpattern*ausgewählten Element- oder Attributknoten erstellt.  
@@ -302,7 +302,7 @@ LILAS      Carlos Gonzlez
   
 -   Der Wert des *flags*-Parameters wird auf **1** festgelegt, was die attributzentrierte Zuordnung anzeigt. Folglich werden die XML-Attribute den in *SchemaDeclaration*definierten Rowsetspalten zugeordnet.  
   
--   In *SchemaDeclaration* (in der WITH-Klausel) stimmen die Rowsetspaltennamen **oid** und **amount** mit den entsprechenden XML-Attributnamen überein. Deshalb wird der *ColPattern* -Parameter nicht angegeben. Für die **comment** -Spalte im Rowset wird die XPath-Funktion **text()**als *ColPattern*angegeben. Dadurch wird die im *flags*-Parameter angegebene attributzentrierte Zuordnung überschrieben, und die Spalte enthält die Blattwert-Zeichenfolge des Elementinhalts.  
+-   In *SchemaDeclaration* (in der WITH-Klausel) stimmen die Rowsetspaltennamen **oid** und **amount** mit den entsprechenden XML-Attributnamen überein. Deshalb wird der *ColPattern* -Parameter nicht angegeben. Für die **comment** -Spalte im Rowset wird die XPath-Funktion **text()** als *ColPattern*angegeben. Dadurch wird die im *flags*-Parameter angegebene attributzentrierte Zuordnung überschrieben, und die Spalte enthält die Blattwert-Zeichenfolge des Elementinhalts.  
   
  Schließlich ruft die SELECT-Anweisung alle Spalten in dem von OPENXML bereitgestellten Rowset ab.  
   

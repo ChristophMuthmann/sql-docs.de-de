@@ -1,16 +1,16 @@
 ---
-title: "[ ] (Platzhalterzeichen – zu suchende(s) Zeichen) (Transact-SQL) | Microsoft-Dokumentation"
-ms.custom: 
+title: '[ ] (Platzhalterzeichen – zu suchende(s) Zeichen) (Transact-SQL) | Microsoft-Dokumentation'
+ms.custom: ''
 ms.date: 12/06/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|language-elements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - Match
@@ -23,16 +23,17 @@ helpviewer_keywords:
 - wildcard characters [SQL Server]
 - '[ ] (wildcard - character(s) to match)'
 ms.assetid: 57817576-0bf1-49ed-b05d-fac27e8fed7a
-caps.latest.revision: 
+caps.latest.revision: 32
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 04fcf0d9e76db380430bfbf4c4ed6e5fadf14afb
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 975848a7434badb238b91175cf29e5bfe09843cc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="--wildcard---characters-to-match-transact-sql"></a>\[ \] (Platzhalterzeichen – zu suchende(s) Zeichen) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,7 +41,7 @@ ms.lasthandoff: 01/25/2018
   Entspricht jedem einzelnen Zeichen im Bereich oder der Menge, der bzw. die innerhalb der Klammern `[ ]` angegeben ist. Diese Platzhalterzeichen können in Zeichenfolgenvergleichen verwendet werden, bei denen Mustervergleiche wie `LIKE` und `PATINDEX` durchgeführt werden.  
   
 ## <a name="examples"></a>Beispiele  
-### <a name="a-simple-example"></a>A) Einfaches Beispiel   
+### <a name="a-simple-example"></a>A: Einfaches Beispiel   
 Im folgenden Beispiel werden Namen zurückgegeben, die mit dem Buchstaben `m` beginnen. `[n-z]` legt fest, dass der zweite Buchstaben zwischen `n` und `z` liegen muss. Durch das Prozent-Platzhalterzeichen `%` wird angegeben, dass auf das zweite Zeichen entweder kein weiteres Zeichen oder beliebige Zeichen folgen können. Die Datenbanken `model` und `msdb` erfüllen diese Kriterien. Die `master`-Datenbank erfüllt dieses Kriterium nicht und wird aus dem Resultset ausgeschlossen.
  
 ```sql
@@ -58,7 +59,7 @@ msdb
  Möglicherweise haben Sie aber zusätzliche qualifizierende Datenbanken installiert.
 
 
-### <a name="b-more-complex-example"></a>B) Komplexeres Beispiel   
+### <a name="b-more-complex-example"></a>B: Komplexeres Beispiel   
  Im folgenden Beispiel wird mithilfe des []-Operators nach den IDs und Namen aller [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)]-Mitarbeiter gesucht, deren Adressen eine vierstellige Postleitzahl enthalten.  
   
 ```sql  

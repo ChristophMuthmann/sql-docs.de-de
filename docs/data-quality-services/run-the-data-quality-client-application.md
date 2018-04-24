@@ -16,18 +16,21 @@ f1_keywords:
 - sql13.dqs.browseforservers.f1
 - sql13.dqs.connecttoserver.f1
 ms.assetid: 0b2aa202-7ab2-4c9d-b0f1-802588053a1e
-caps.latest.revision: ''
+caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 67aac939d1dcbdd657fab1934445782af5c9f52a
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: 220f642af8fc1c7b00f9a30027e69a380c414e1a
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="run-the-data-quality-client-application"></a>Ausführen der Data Quality-Clientanwendung
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   Führen Sie [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]aus, und melden Sie sich bei einem [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]an.  
   
 ##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
@@ -43,7 +46,7 @@ ms.lasthandoff: 03/22/2018
 ##  <a name="Run"></a> Data Quality Client ausführen  
  So führen Sie [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] auf dem Computer aus, auf dem Sie ihn installiert haben:  
   
-1.  Klicken Sie auf **Start**, zeigen Sie auf **Alle Programme**, klicken Sie auf **[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]**und anschließend auf **Data Quality Services**, und klicken Sie dann auf **Data Quality Client**.  
+1.  Klicken Sie auf **Start**, zeigen Sie auf **Alle Programme**, klicken Sie auf **[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]** und anschließend auf **Data Quality Services**, und klicken Sie dann auf **Data Quality Client**.  
   
 2.  Gehen Sie im Dialogfeld **Verbindung mit Server herstellen** wie folgt vor:  
   

@@ -1,31 +1,34 @@
 ---
-title: "Beispiel für einen benutzerdefinierten Workflow (Master Data Services) | Microsoft-Dokumentation"
-ms.custom: 
+title: Beispiel für einen benutzerdefinierten Workflow (Master Data Services) | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: develop
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
 ms.assetid: dfd1616c-a75c-4f32-bdb1-7569e367bf41
-caps.latest.revision: 
+caps.latest.revision: 6
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c74cfee1a0febd3cd4925eedfef57d504718dac4
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: 3d9750cb6135232befc8773940af2f1c393342df
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="create-a-custom-workflow---example"></a>Erstellen eines benutzerdefinierten Workflows – Beispiel
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   Wenn Sie in [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] eine benutzerdefinierte Klassenbibliothek für den Workflow erstellen, erstellen Sie eine Klasse, die die Schnittstelle „Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender“ implementiert. Diese Schnittstelle beinhaltet eine Methode, <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender.StartWorkflow%2A>, die beim Start eines Workflows vom SQL Server MDS Workflow Integration Service aufgerufen wird. Die <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender.StartWorkflow%2A>-Methode enthält zwei Parameter: *workflowType* enthält den Text, den Sie in [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] in das Textfeld **Workflowtyp** eingegeben haben, und *dataElement* enthält Metadaten sowie Elementdaten für das Element, das die Workflowgeschäftsregel ausgelöst hat.  
   
 ## <a name="custom-workflow-example"></a>Beispiel für einen benutzerdefinierten Workflow  

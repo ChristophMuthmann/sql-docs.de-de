@@ -1,34 +1,37 @@
 ---
-title: "Erstellen eines domänenbasierten Attributs (Master Data Services) | Microsoft-Dokumentation"
-ms.custom: 
+title: Erstellen eines domänenbasierten Attributs (Master Data Services) | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 07/25/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - domain-based attributes [Master Data Services], creating
 - creating domain-based attributes [Master Data Services]
 - attributes [Master Data Services], creating domain-based attributes
 ms.assetid: 11c31c9f-e6cc-47b7-b76a-d691f84c93c6
-caps.latest.revision: 
+caps.latest.revision: 12
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3df3be60589fd790b4cd56c1abec5b3fcd15e1d9
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: 583b416b09a1c02cce3962a25c1b5f7dd4718447
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="create-a-domain-based-attribute-master-data-services"></a>Erstellen eines domänenbasierten Attributs (Master Data Services)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   Erstellen Sie in [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]ein domänenbasiertes Attribut, um die Werte eines Attributs mit Elementen aus einer Entität aufzufüllen.  
   
 ## <a name="prerequisites"></a>Voraussetzungen  

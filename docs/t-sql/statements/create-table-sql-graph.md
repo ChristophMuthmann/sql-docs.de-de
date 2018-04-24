@@ -1,16 +1,16 @@
 ---
 title: CREATE TABLE (SQL-Graph) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 05/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - SQL_GRAPH_TSQL
@@ -33,17 +33,18 @@ helpviewer_keywords:
 - NODE
 - EDGE
 - SQL graph, CREATE TABLE statement
-ms.assetid: 
-caps.latest.revision: 
+ms.assetid: ''
+caps.latest.revision: 1
 author: shkale-msft
 ms.author: shkale
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: fe8ace1b8f8c55c14d4807514fcb1436f6966fed
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: f54fc1df1d31914c8ceb29d1788b8d092579612c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-table-sql-graph"></a>CREATE TABLE (SQL-Graph)
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -127,6 +128,6 @@ Im folgenden Beispiel wird das Erstellen von `EDGE`-Tabellen veranschaulicht.
 
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
- [INSERT (SQL Graph)](../../t-sql/statements/insert-sql-graph.md)]  
+ [INSERT (SQL-Graph)](../../t-sql/statements/insert-sql-graph.md)]  
  [Graph Processing with SQL Server 2017 (Graph-Verarbeitung mit SQL Server-2017)](../../relational-databases/graphs/sql-graph-overview.md)
 

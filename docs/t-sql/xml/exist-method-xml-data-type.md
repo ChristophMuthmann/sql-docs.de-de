@@ -1,16 +1,16 @@
 ---
 title: exist()-Methode (xml Data Type) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 07/26/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|xml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - exist() method
 - exist method
 ms.assetid: a55b75e0-0a17-4787-a525-9b095410f7af
-caps.latest.revision: 
+caps.latest.revision: 35
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 74fc65730d0c46858c282b9625c86d1ab651ec49
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 3d0c4bf029fe2f5ed930c18b86ae5d6d2153b300
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="exist-method-xml-data-type"></a>exist()-Methode (XML-Datentyp)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -82,7 +82,7 @@ select @f;
   
 -   Der Wert des Attributs **@Somedate** ist nicht typisiert. Beim Vergleichen wird der Wert implizit in den Typ auf der rechten Seite des Vergleichs, den **xs:date** -Datentyp, umgewandelt.  
   
--   Anstelle von **cast as xs:date()**können Sie die **xs:date()** -Konstruktorfunktion verwenden. Weitere Informationen finden Sie unter [Konstruktorfunktionen &#40;XQuery&#41;](../../xquery/constructor-functions-xquery.md).  
+-   Anstelle von **cast as xs:date()** können Sie die **xs:date()** -Konstruktorfunktion verwenden. Weitere Informationen finden Sie unter [Konstruktorfunktionen &#40;XQuery&#41;](../../xquery/constructor-functions-xquery.md).  
   
  Das folgende Beispiel ähnelt dem vorherigen Beispiel, verwendet aber ein <`Somedate`>-Element.  
   
@@ -165,6 +165,6 @@ WHERE CatalogDescription.exist('
  [Vergleichen von typisiertem XML mit nicht typisiertem XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [Erstellen von Instanzen der XML-Daten](../../relational-databases/xml/create-instances-of-xml-data.md)   
  [XML-Datentypmethoden](../../t-sql/xml/xml-data-type-methods.md)   
- [XML-Datenänderungssprache &#40;XML-DML&#41;](../../t-sql/xml/xml-data-modification-language-xml-dml.md)  
+ [XML DML &#40;Data Modification Language&#41;](../../t-sql/xml/xml-data-modification-language-xml-dml.md)  
   
   

@@ -1,34 +1,37 @@
 ---
-title: "Übersicht: Exportieren von Daten (Master Data Services) | Microsoft-Dokumentation"
-ms.custom: 
+title: 'Übersicht: Exportieren von Daten (Master Data Services) | Microsoft-Dokumentation'
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - exporting data [Master Data Services]
 - subscription views [Master Data Services]
 - subscription views [Master Data Services], about subscription views
 ms.assetid: 8b74409a-ea70-45f8-84c7-da6905e4901a
-caps.latest.revision: 
+caps.latest.revision: 12
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1d2a7c7eccfffebd6e3d4000b302c1f9241ddc9d
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: 8ffaa16b21821ea29e7cc90e6f3cdec33255f3d6
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="overview-exporting-data-master-data-services"></a>Übersicht: Exportieren von Daten (Master Data Services)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   In diesem Artikel werden die Abonnementsichtformate vorgestellt und erläutert, wann die Sichten aufgrund von Änderungen an Modellobjekten bearbeitet werden müssen.  
   
  Sie werden eine Abonnementsicht erstellen, um [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] -Daten in ein abonnierendes System wie [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]zu exportieren. Sie nutzen das abonnierende System dazu, die Daten in der [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] -Datenbank anzuzeigen.  Informationen zum Erstellen der Abonnementsicht finden Sie unter [Erstellen einer Abonnementsicht zum Exportieren von Daten &#40;Master Data Services&#41;](../master-data-services/create-a-subscription-view-to-export-data-master-data-services.md)  

@@ -13,18 +13,21 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: b5879041-db1e-4c6c-b49a-33784ade2942
-caps.latest.revision: ''
+caps.latest.revision: 32
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c1323581e2546d233ab86d4c51fd0b3b0edb6fce
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: 6181580187e07434f77cb6ea6cf4e27c2cabdbce
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="dqs-knowledge-bases-and-domains"></a>DQS-Wissensdatenbanken und -Domänen
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   In diesem Thema wird beschrieben, was eine Wissensdatenbank in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) ist. Zum Bereinigen von Daten müssen Sie über Wissen zu den Daten verfügen. Um Informationen für ein Data Quality-Projekt vorzubereiten, müssen Sie eine Wissensdatenbank (Knowledge Base, KB) erstellen und verwalten, die von DQS verwendet werden kann, um falsche oder ungültige Daten zu identifizieren. Mit DQS können Sie sowohl computerunterstützte als auch interaktive Prozesse verwenden, um Ihre Wissensdatenbank zu erstellen, aufzubauen und zu aktualisieren. Informationen in einer Wissensdatenbank werden in Domänen verwalten, wobei jede für ein Datenfeld spezifisch ist. Die Wissensdatenbank ist ein Repository des Wissens zu den Daten. Sie ermöglicht es Ihnen, die Daten zu verstehen und ihre Integrität aufrechtzuerhalten.  
   
  DQS-Wissensdatenbanken bieten die folgenden Vorteile:  

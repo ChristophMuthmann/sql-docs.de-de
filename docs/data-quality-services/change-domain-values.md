@@ -15,18 +15,21 @@ ms.topic: article
 f1_keywords:
 - sql13.dqs.dm.values.f1
 ms.assetid: 8c90ab70-3aea-4eaf-a174-4159485c87d3
-caps.latest.revision: ''
+caps.latest.revision: 31
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: da3b93c059c363d1690a614c7c61e1947559580e
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: 7dfd8c89dc12f19a9397b3a9053e4a7c979ad12e
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="change-domain-values"></a>Ändern von Domänenwerten
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   In diesem Thema wird beschrieben, wie die Metadaten in einer Wissensdatenbank in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) geändert und erweitert werden. Nachdem Sie Wissen durch die Wissensermittlung generiert haben, Wissen in die Wissensdatenbank oder Domänen importiert haben, oder eine Wissensdatenbank basierend auf einer anderen Wissensdatenbank erstellt haben, können Sie die Datenwerte interaktiv ändern. Die Generierung der Wissensdatenbank nutzt nicht nur computerunterstützte Prozesse, sondern ermöglicht Ihnen,, eigenes Wissen zu verwenden, um die Datenwerte zu überprüfen und sie wie folgt zu ändern:  
   
 -   Hinzufügen eines Domänenwerts zur Wertliste oder Auswählen eines Werts und Löschen des Werts aus der Liste  
