@@ -1,31 +1,31 @@
 ---
-title: "Microsoft Data strukturiert werden, Dienst für OLE DB (ADO-Dienstanbieter) | Microsoft Docs"
-ms.prod: sql-non-specified
+title: Microsoft Data strukturiert werden, Dienst für OLE DB (ADO-Dienstanbieter) | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - providers [ADO], data shaping service for OLE DB
 - data shaping service for OLE DB [ADO]
 ms.assetid: 523009ce-e01b-4e2d-a7df-816d7688aff0
-caps.latest.revision: 
+caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bcdf661427b97fe58681a6747a3b074e4965f4b8
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 0423618659c31453ca6d87da77a87bc4fd40aec1
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="microsoft-data-shaping-service-for-ole-db-overview"></a>Microsoft Data strukturiert werden, Dienst für OLE DB-Übersicht
 > [!IMPORTANT]

@@ -1,32 +1,32 @@
 ---
 title: Find Methodenbeispiel (VB) | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Find method [ADO], Visual Basic example
 ms.assetid: bbf27dcc-9815-4e2f-8ea8-b8c9fe6dedd6
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 2e3dc1b6668341674acf545ff06f10bc37fe0fe1
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: b609ca6b6ec82964a3adc114f4dcf72bd036b90d
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="find-method-example-vb"></a>Find Methodenbeispiel (VB)
 Dieses Beispiel verwendet die [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) des Objekts [suchen](../../../ado/reference/ado-api/find-method-ado.md) -Methode zum Suchen und die Anzahl der Business Titel in die ***Pubs*** Datenbank. Im Beispiel wird davon ausgegangen, dass der zugrunde liegende Anbieter eine ähnliche Funktionalität nicht unterstützt.  

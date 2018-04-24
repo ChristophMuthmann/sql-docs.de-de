@@ -1,28 +1,28 @@
 ---
-title: "Schritt 4: Füllen Sie das Textfeld Details | Microsoft Docs"
-ms.prod: sql-non-specified
+title: 'Schritt 4: Füllen Sie das Textfeld Details | Microsoft Docs'
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: cb4273e2-c907-4a86-a621-3bf110088228
-caps.latest.revision: 
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 78f0c3e899400e1bf56a9b00ce1521a23b638189
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: ec55effbd2433a777e58617fd01f50d4c271f5ae
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="step-4-populate-the-details-text-box"></a>Schritt 4: Füllen Sie das Textfeld "Details"
 Um das Textfeld "Details" aufzufüllen, erstellen Sie eine neue Unterroutine namens **RecFields** und fügen Sie den folgenden Code:  

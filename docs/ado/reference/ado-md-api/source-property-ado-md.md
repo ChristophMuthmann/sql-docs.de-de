@@ -1,17 +1,17 @@
 ---
 title: Source-Eigenschaft (ADO MD) | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - Cellset::Source
@@ -19,16 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - Source property [ADO MD]
 ms.assetid: 875a99ea-7f1a-4570-87b1-5ecbebbcf845
-caps.latest.revision: 
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1acecf9cbaa00746b23a4655bd845f42af23693e
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: e44bdedd485fa212dc94e5d2eeece51317c56507
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="source-property-ado-md"></a>Source-Eigenschaft (ADO MD)
 Gibt die Quelle für die Daten in der [Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md).  

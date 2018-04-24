@@ -1,33 +1,33 @@
 ---
 title: SchemaEnum | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - SchemaEnum
 helpviewer_keywords:
 - SchemaEnum enumeration [ADO]
 ms.assetid: 21c97651-297f-469f-b5b5-c48af72b62a8
-caps.latest.revision: 
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dc84741e1963b2c484e82eea7bc3de08cf12da13
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: a5f76b03c61f1ea8576df0bb74acccbc37f7d811
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="schemaenum"></a>SchemaEnum
 Gibt den Typ des Schemas **Recordset** , die die [OpenSchema](../../../ado/reference/ado-api/openschema-method.md) Methode abgerufen.  
@@ -54,17 +54,17 @@ Gibt den Typ des Schemas **Recordset** , die die [OpenSchema](../../../ado/refer
 |**adSchemaConstraintColumnUsage**|6|Die Spalten, die von referenziellen Einschränkungen, unique-Einschränkungen, Check-Einschränkungen und Assertionen verwendet, die im Katalog definierten und Eigentümer ein angegebener Benutzer zurückgegeben.<br /><br /> (CONSTRAINT_COLUMN_USAGE-Rowset)|TABLE_CATALOG TABLE_SCHEMA TABLE_NAME COLUMN_NAME|  
 |**adSchemaConstraintTableUsage**|7|Gibt die Tabellen zurück, die von referenziellen Einschränkungen, unique-Einschränkungen, Check-Einschränkungen und Assertionen im Katalog definierten und Eigentümer ein angegebener Benutzer verwendet werden.<br /><br /> (CONSTRAINT_TABLE_USAGE-Rowset)|TABLE_CATALOG TABLE_SCHEMA TABLE_NAME|  
 |**adSchemaCubes**|32|Informationen zu den verfügbaren Cubes zurückgegeben in einem Schema (oder im Katalog, wenn der Anbieter keine Schemas unterstützt).<br /><br /> (CUBES Rowset *)|CATALOG_NAME SCHEMA_NAME CUBE_NAME|  
-|**adSchemaDBInfoKeywords**|30|Gibt eine Liste der Anbieter-spezifischen Schlüsselwörter zurück.<br /><br /> (IDBInfo::GetKeywords)|\<None>|  
-|**adSchemaDBInfoLiterals**|31|Gibt eine Liste von anbieterspezifischen Literalen in Textbefehle verwendet.<br /><br /> (IDBInfo::GetLiteralInfo)|\<None>|  
+|**adSchemaDBInfoKeywords**|30|Gibt eine Liste der Anbieter-spezifischen Schlüsselwörter zurück.<br /><br /> (IDBInfo:: GetKeywords)|\<keine >|  
+|**adSchemaDBInfoLiterals**|31|Gibt eine Liste von anbieterspezifischen Literalen in Textbefehle verwendet.<br /><br /> (IDBInfo::GetLiteralInfo)|\<keine >|  
 |**adSchemaDimensions**|33|Gibt Informationen zu den Dimensionen in einem bestimmten Cube zurück. Es wurde eine Zeile für jede Dimension.<br /><br /> (DIMENSIONS-Schemarowset)|CATALOG_NAME SCHEMA_NAME CUBE_NAME DIMENSION_NAME DIMENSION_UNIQUE_NAME|  
 |**adSchemaForeignKeys**|27|Gibt die im Katalog von einem angegebenen Benutzer definierten Fremdschlüsselspalten an.<br /><br /> (FOREIGN_KEYS-Rowsets)|PK_TABLE_CATALOG PK_TABLE_SCHEMA PK_TABLE_NAME FK_TABLE_CATALOG FK_TABLE_SCHEMA FK_TABLE_NAME|  
-|**adSchemaHierarchies**|34|Gibt Informationen zu den Hierarchien in einer Dimension zurück.<br /><br /> (HIERARCHIES-Schemarowset)|CATALOG_NAME SCHEMA_NAME CUBE_NAME DIMENSION_UNIQUE_NAME HIERARCHY_NAME HIERARCHY_UNIQUE_NAME|  
+|**adSchemaHierarchies**|34|Gibt Informationen zu den Hierarchien in einer Dimension zurück.<br /><br /> (HIERARCHIES-Schemarowset)|CATALOG_NAME SCHEMA_NAME CUBE_NAME DIMENSION_UNIQUE_NAME HIERARCHIENAME HIERARCHY_UNIQUE_NAME|  
 |**adSchemaIndexes**|12|Gibt die im Katalog definierten Indizes, die von einem angegebenen Benutzer gehören.<br /><br /> (INDIZES Rowset)|"TABLE_CATALOG" TABLE_SCHEMA INDEX_NAME TYP TABLE_NAME|  
-|**adSchemaKeyColumnUsage**|8|Gibt zurück, die im Katalog definierten Spalten, die von einem bestimmten Benutzer als Schlüssel eingeschränkt sind.<br /><br /> (KEY_COLUMN_USAGE Rowset)|CONSTRAINT_CATALOG CONSTRAINT_SCHEMA CONSTRAINT_NAME "TABLE_CATALOG" TABLE_SCHEMA TABLE_NAME COLUMN_NAME|  
-|**adSchemaLevels**|35|Gibt Informationen zu den Ebenen in einer Dimension zurück.<br /><br /> (LEVELS-Schemarowset)|CATALOG_NAME SCHEMA_NAME CUBE_NAME DIMENSION_UNIQUE_NAME HIERARCHY_UNIQUE_NAME LEVEL_NAME LEVEL_UNIQUE_NAME|  
+|**adSchemaKeyColumnUsage**|8|Gibt zurück, die im Katalog definierten Spalten, die von einem bestimmten Benutzer als Schlüssel eingeschränkt sind.<br /><br /> (KEY_COLUMN_USAGE-Rowset)|CONSTRAINT_CATALOG CONSTRAINT_SCHEMA CONSTRAINT_NAME "TABLE_CATALOG" TABLE_SCHEMA TABLE_NAME COLUMN_NAME|  
+|**adSchemaLevels**|35|Gibt Informationen zu den Ebenen in einer Dimension zurück.<br /><br /> (LEVELS-Schemarowset)|CATALOG_NAME SCHEMA_NAME CUBE_NAME DIMENSION_UNIQUE_NAME HIERARCHY_UNIQUE_NAME EBENENNAME LEVEL_UNIQUE_NAME|  
 |**adSchemaMeasures**|36|Gibt Informationen zu den verfügbaren Measures zurück.<br /><br /> (MEASURES-Schemarowset)|CATALOG_NAME SCHEMA_NAME CUBE_NAME MEASURE_NAME MEASURE_UNIQUE_NAME|  
-|**adSchemaMembers**|38|Gibt Informationen zu den verfügbaren Elementen zurück.<br /><br /> (Member Rowset)|CATALOG_NAME SCHEMA_NAME CUBE_NAME DIMENSION_UNIQUE_NAME HIERARCHY_UNIQUE_NAME LEVEL_UNIQUE_NAME LEVEL_NUMBER MEMBER_NAME MEMBER_UNIQUE_NAME MEMBER_CAPTION MEMBER_TYPE Tree operator. Weitere Informationen finden Sie in der OLE DB für Online Analytical Processing (OLAP).|  
-|**adSchemaPrimaryKeys**|28|Gibt die im Katalog von einem angegebenen Benutzer definierten Primärschlüsselspalten zurück.<br /><br /> (PRIMARY_KEYS Rowset)|PK_TABLE_CATALOG PK_TABLE_SCHEMA PK_TABLE_NAME|  
+|**adSchemaMembers**|38|Gibt Informationen zu den verfügbaren Elementen zurück.<br /><br /> (Member Rowset)|Catalog_name SCHEMA_NAME CUBE_NAME DIMENSION_UNIQUE_NAME HIERARCHY_UNIQUE_NAME LEVEL_UNIQUE_NAME LEVEL_NUMBER MEMBER_NAME MEMBER_UNIQUE_NAME MEMBER_CAPTION MEMBER_TYPE Tree-Operator. Weitere Informationen finden Sie in der OLE DB für Online Analytical Processing (OLAP).|  
+|**adSchemaPrimaryKeys**|28|Gibt die im Katalog von einem angegebenen Benutzer definierten Primärschlüsselspalten zurück.<br /><br /> (PRIMARY_KEYS-Rowset)|PK_TABLE_CATALOG PK_TABLE_SCHEMA PK_TABLE_NAME|  
 |**adSchemaProcedureColumns**|29|Gibt Informationen zu den Spalten von Rowsets zurück, die von Prozeduren zurückgegeben werden.<br /><br /> (PROCEDURE_COLUMNS Rowset)|PROCEDURE_CATALOG PROCEDURE_SCHEMA PROCEDURE_NAME COLUMN_NAME|  
 |**adSchemaProcedureParameters**|26|Gibt Informationen zu den Parametern und Rückgabecodes von Prozeduren zurück.<br /><br /> (PROCEDURE_PARAMETERS-Rowset)|PROCEDURE_CATALOG PROCEDURE_SCHEMA PROCEDURE_NAME PARAMETER_NAME|  
 |**adSchemaProcedures**|16|Gibt die im Katalog definierten Prozeduren, die von einem angegebenen Benutzer gehören.<br /><br /> (Rowset PROZEDUREN)|PROCEDURE_CATALOG PROCEDURE_SCHEMA PROCEDURE_NAME PROCEDURE_TYPE|  
@@ -73,7 +73,7 @@ Gibt den Typ des Schemas **Recordset** , die die [OpenSchema](../../../ado/refer
 |**adSchemaProviderTypes**|22|Gibt die vom Datenanbieter unterstützten (Basis-) Datentypen zurück.<br /><br /> (PROVIDER_TYPES-Rowset)|DATA_TYPE BEST_MATCH|  
 |**AdSchemaReferentialConstraints**|9|Gibt zurück, die im Katalog definierten referenziellen Einschränkungen, die von einem angegebenen Benutzer gehören.<br /><br /> (REFERENTIAL_CONSTRAINTS-Rowset)|CONSTRAINT_CATALOG CONSTRAINT_SCHEMA CONSTRAINT_NAME|  
 |**adSchemaSchemata**|17|Gibt die Schemas (Datenbankobjekte), die von einem angegebenen Benutzer gehören.<br /><br /> (Schemarowset)|CATALOG_NAME SCHEMA_NAME SCHEMA_OWNER|  
-|**adSchemaSQLLanguages**|18|Gibt die Übereinstimmungsebenen, Optionen und Dialekte von der SQL-Implementierung Verarbeitung von Daten im Katalog definierten unterstützt.<br /><br /> (SQL_LANGUAGES Rowset)|\<None>|  
+|**adSchemaSQLLanguages**|18|Gibt die Übereinstimmungsebenen, Optionen und Dialekte von der SQL-Implementierung Verarbeitung von Daten im Katalog definierten unterstützt.<br /><br /> (SQL_LANGUAGES Rowset)|\<keine >|  
 |**adSchemaStatistics**|19|Gibt die im Katalog definierten Statistiken, die von einem angegebenen Benutzer gehören.<br /><br /> (Statistiken Rowset)|TABLE_CATALOG TABLE_SCHEMA TABLE_NAME|  
 |**adSchemaTableConstraints**|10|Gibt die tabelleneinschränkungen im Katalog definierten, die von einem angegebenen Benutzer gehören.<br /><br /> (TABLE_CONSTRAINTS-Rowset)|CONSTRAINT_CATALOG CONSTRAINT_SCHEMA CONSTRAINT_NAME TABLE_CATALOG TABLE_SCHEMA TABLE_NAME CONSTRAINT_TYPE|  
 |**adSchemaTablePrivileges**|14|Gibt die Berechtigungen für Tabellen, die im Katalog definierten und zur Verfügung, oder von einem angegebenen Benutzer erteilt werden.<br /><br /> (TABLE_PRIVILEGES-Rowset)|TABLE_CATALOG TABLE_SCHEMA TABLE_NAME GRANTOR GRANTEE|  

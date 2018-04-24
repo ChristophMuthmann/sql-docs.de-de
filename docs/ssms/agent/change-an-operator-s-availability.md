@@ -25,16 +25,17 @@ helpviewer_keywords:
 - disabling operators
 - operators (users) [Database Engine], changing availability with Management Studio
 ms.assetid: 10d58b92-b67b-47e2-af9c-9f9fd6968bba
-caps.latest.revision: ''
+caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1ec08d44900188c1fead39549bcaac549dbc7cfe
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 22375b35cae3e2c26c199777cb96c7b4987bfa84
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="change-an-operator39s-availability"></a>Ändern der Verfügbarkeit eines Operators
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

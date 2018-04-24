@@ -18,16 +18,17 @@ helpviewer_keywords:
 - SQL Server Agent jobs, disabling
 - jobs [SQL Server Agent], disabling
 ms.assetid: 5041261f-0c32-4d4a-8bee-59a6c16200dd
-caps.latest.revision: ''
+caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e303ecf27aa5001b60796084f71a18d441b9a6e5
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: aab79ea6cdbf068e024b2a17b44f7f343ed0a73a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="disable-or-enable-a-job"></a>Deaktivieren oder Aktivieren eines Auftrags
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

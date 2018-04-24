@@ -1,6 +1,6 @@
 ---
 title: Mitwirken an der SQL Server-Dokumentation | Microsoft-Dokumentation
-ms.date: 03/19/2018
+ms.date: 04/12/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
 ms.service: ''
@@ -15,11 +15,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 1885c57cfcf21dcdb877fc4c59b229636b74c137
-ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 380a7bebec1080f40ec10e3c59e6e1f105a5d2ae
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-contribute-to-sql-server-documentation"></a>Mitwirken an der SQL Server-Dokumentation
 
@@ -36,7 +37,7 @@ Wenn Sie zur Dokumentation beitragen möchten, stehen Ihnen zwei Hauptworkflows 
 
 ## <a id="githubui"></a> Bearbeiten von Inhalten im Browser
 
-Die folgenden Schritte bieten einen Überblick über einfache Bearbeitungen von SQL Server-Inhalten im Browser. Der vollständige Prozess ist im Artikel [GitHub-Beitragsworkflow für geringfügige oder selten vorkommende Änderungen](https://docs.microsoft.com/contribute/contribute/light-workflow) dokumentiert.
+Die folgenden Schritte bieten einen Überblick über einfache Bearbeitungen von SQL Server-Inhalten im Browser. Der vollständige Prozess ist im Artikel [GitHub-Beitragsworkflow für geringfügige oder selten vorkommende Änderungen](https://docs.microsoft.com/contribute/light-workflow) dokumentiert.
 
 1. In jedem Artikel und auch im vorliegenden Beitrag befindet sich rechts auf der Seite die Schaltfläche **Bearbeiten**. Suchen Sie zunächst einen Artikel, den Sie ändern möchten, und klicken Sie anschließend auf **Bearbeiten**.
 
@@ -49,7 +50,7 @@ Die folgenden Schritte bieten einen Überblick über einfache Bearbeitungen von 
    ![Schaltfläche „Bearbeiten“](./media/sql-server-docs-contribute/edit-button.png)
 
    > [!NOTE]
-   > Sie müssen bei GitHub angemeldet sein, um einen Artikel zu bearbeiten. Wenn Sie kein GitHub-Konto besitzen, finden Sie unter [Einrichten eines GitHub-Kontos](https://docs.microsoft.com/contribute/contribute/get-started-setup-github) weitere Informationen. Nachdem Sie ein neues Konto erstellt haben, müssen Sie Ihre E-Mail-Adresse bei GitHub bestätigen, damit Sie Bearbeitungen vornehmen können.
+   > Sie müssen bei GitHub angemeldet sein, um einen Artikel zu bearbeiten. Wenn Sie kein GitHub-Konto besitzen, finden Sie unter [Einrichten eines GitHub-Kontos](https://docs.microsoft.com/contribute/get-started-setup-github) weitere Informationen. Nachdem Sie ein neues Konto erstellt haben, müssen Sie Ihre E-Mail-Adresse bei GitHub bestätigen, damit Sie Bearbeitungen vornehmen können.
 
 1. Bearbeiten Sie nun den Artikel im Browser. Alle Artikel sind in Markdown geschrieben. Weitere Informationen zu dieser Auszeichnungssprache finden Sie bei Bedarf im Artikel zu [Markdown-Grundlagen](https://help.github.com/articles/getting-started-with-writing-and-formatting-on-github/). Außerdem können Sie sich in bereits veröffentlichten Artikeln ansehen, wie vorhandene Markdown-Elemente gerendert werden.
 
@@ -65,7 +66,7 @@ Die folgenden Schritte bieten einen Überblick über einfache Bearbeitungen von 
 
    ![Pull Request erstellen](./media/sql-server-docs-contribute/create-pull-request2.png)
 
-Nun werden Sie in den Kommentaren des Pull Requests durch die verbleibenden Prozessschritte geführt. Den vollständigen Prozess und weitere Informationen finden Sie im [Leitfaden für Mitwirkende an der Dokumentation](https://docs.microsoft.com/contribute/contribute/light-workflow).
+Nun werden Sie in den Kommentaren des Pull Requests durch die verbleibenden Prozessschritte geführt. Den vollständigen Prozess und weitere Informationen finden Sie im [Leitfaden für Mitwirkende an der Dokumentation](https://docs.microsoft.com/contribute/light-workflow).
 
 ## <a id="tools"></a> Lokales Bearbeiten von Inhalten mit Tools
 
@@ -73,10 +74,10 @@ Eine weitere Bearbeitungsoption besteht darin, das **sql-docs**- oder **azure-do
 
 Weitere Informationen zu dieser Bearbeitungsoption finden Sie in den folgenden Artikeln:
 
-- [Einrichten eines GitHub-Kontos](https://docs.microsoft.com/contribute/contribute/get-started-setup-github)
-- [Install content authoring tools (Installieren von Erstellungstools für Inhalte)](https://docs.microsoft.com/contribute/contribute/get-started-setup-tools)
-- [Lokales Einrichten von Git für die Dokumentation](https://docs.microsoft.com/contribute/contribute/get-started-setup-local)
-- [Verwenden von Tools zum Einreichen von Änderungen](https://docs.microsoft.com/contribute/contribute/full-workflow)
+- [Einrichten eines GitHub-Kontos](https://docs.microsoft.com/contribute/get-started-setup-github)
+- [Install content authoring tools (Installieren von Erstellungstools für Inhalte)](https://docs.microsoft.com/contribute/get-started-setup-tools)
+- [Lokales Einrichten von Git für die Dokumentation](https://docs.microsoft.com/contribute/get-started-setup-local)
+- [Verwenden von Tools zum Einreichen von Änderungen](https://docs.microsoft.com/contribute/full-workflow)
 
 Wenn Sie einen Pull Request mit umfassenden Änderungen an der Dokumentation einreichen, wird in GitHub ein Kommentar angezeigt, in dem Sie aufgefordert werden, online eine **Lizenzvereinbarung für Mitwirkende** zu übermitteln. Sie müssen dieses Onlineformular ausfüllen, damit Ihr Pull Request akzeptiert wird.
 

@@ -1,31 +1,31 @@
 ---
 title: ADO-Methoden | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - ADO, methods
 - methods [ADO]
 ms.assetid: a38c5670-ba28-44f3-bd5b-fcb46880e904
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e35be40ea3023338048bf729b9f4cea5b6048449
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 4a2b180e8886931819dafe089e9012dcaa578694
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="ado-methods"></a>ADO-Methoden
 |||  
@@ -46,12 +46,12 @@ ms.lasthandoff: 02/09/2018
 |[CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md)|Erstellt ein neues **Parameter** Objekt, das die angegebenen Eigenschaften verfügt.|  
 |[Löschen Sie (ADO-Parameters-Auflistung)](../../../ado/reference/ado-api/delete-method-ado-parameters-collection.md)|Löscht ein Objekt aus der **Parameter** Auflistung.|  
 |[Löschen Sie (ADO Fields-Auflistung)](../../../ado/reference/ado-api/delete-method-ado-fields-collection.md)|Löscht ein Objekt aus der **Felder** Auflistung.|  
-|[Delete (ADO Recordset)](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|Löscht den aktuellen Datensatz oder eine Gruppe von Datensätzen.|  
+|[Löschen Sie (ADO-Recordset)](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|Löscht den aktuellen Datensatz oder eine Gruppe von Datensätzen.|  
 |[DeleteRecord](../../../ado/reference/ado-api/deleterecord-method-ado.md)|Löscht eine Datei oder Verzeichnis und alle Unterverzeichnisse.|  
-|[Execute (ADO Command)](../../../ado/reference/ado-api/execute-method-ado-command.md)|Führt die Abfrage, die SQL-Anweisung oder die gespeicherte Prozedur, die im angegebenen der **CommandText** Eigenschaft.|  
-|[Execute (ADO Connection)](../../../ado/reference/ado-api/execute-method-ado-connection.md)|Führt die angegebene Abfrage, SQL-Anweisung, gespeicherte Prozedur oder anbieterspezifischen Text.|  
+|[Führen Sie (ADO-Befehl)](../../../ado/reference/ado-api/execute-method-ado-command.md)|Führt die Abfrage, die SQL-Anweisung oder die gespeicherte Prozedur, die im angegebenen der **CommandText** Eigenschaft.|  
+|[Führen Sie (ADO-Verbindung)](../../../ado/reference/ado-api/execute-method-ado-connection.md)|Führt die angegebene Abfrage, SQL-Anweisung, gespeicherte Prozedur oder anbieterspezifischen Text.|  
 |[Suchen](../../../ado/reference/ado-api/find-method-ado.md)|Sucht eine **Recordset** für die Zeile, die die angegebenen Kriterien erfüllt.|  
-|[Leeren](../../../ado/reference/ado-api/flush-method-ado.md)|Erzwingt, dass der Inhalt des der **Stream** verbleiben in der ADO-Puffer, in der zugrunde liegenden Objekts, dem die **Stream** zugeordnet ist.|  
+|[leeren](../../../ado/reference/ado-api/flush-method-ado.md)|Erzwingt, dass der Inhalt des der **Stream** verbleiben in der ADO-Puffer, in der zugrunde liegenden Objekts, dem die **Stream** zugeordnet ist.|  
 |[get_OLEDBCommand-Methode](../../../ado/reference/ado-api/get-oledbcommand-method.md)|Gibt den zugrunde liegenden OLE DB-Befehl, weitergeben zuerst alle Parameterinformationen für den ADO-Befehl festgelegt, um den OLE DB-Befehl.|  
 |[GetChildren](../../../ado/reference/ado-api/getchildren-method-ado.md)|Gibt eine **Recordset** darstellen, deren Zeilen, die Dateien und Unterverzeichnisse im Verzeichnis dargestellt, die von diesem **Datensatz**.|  
 |[GetChunk](../../../ado/reference/ado-api/getchunk-method-ado.md)|Gibt alle oder einen Teil des Inhalts eines große Text-oder Binärdaten **Feld** Objekt.|  
@@ -73,18 +73,18 @@ ms.lasthandoff: 02/09/2018
 |[ReadText](../../../ado/reference/ado-api/readtext-method.md)|Liest eine angegebene Anzahl von Zeichen aus einem Textobjekt **Stream** Objekt.|  
 |[Aktualisieren](../../../ado/reference/ado-api/refresh-method-ado.md)|Aktualisiert die Objekte in einer Auflistung von verfügbaren Objekte entsprechend, und spezifische an den Anbieter an.|  
 |[Requery](../../../ado/reference/ado-api/requery-method.md)|Aktualisiert die Daten in einem **Recordset** Objekt durch erneutes Ausführen der Abfrage auf der das Objekt basiert.|  
-|[Resync](../../../ado/reference/ado-api/resync-method.md)|Aktualisiert die Daten in der aktuellen **Recordset** -Objekt, oder **Felder** Auflistung von einem **Datensatz** Objekt, aus der zugrunde liegenden Datenbank.|  
+|[Erneut synchronisieren](../../../ado/reference/ado-api/resync-method.md)|Aktualisiert die Daten in der aktuellen **Recordset** -Objekt, oder **Felder** Auflistung von einem **Datensatz** Objekt, aus der zugrunde liegenden Datenbank.|  
 |[Speichern](../../../ado/reference/ado-api/save-method.md)|Speichert die **Recordset** in einer Datei oder **Stream** Objekt.|  
 |[SaveToFile](../../../ado/reference/ado-api/savetofile-method.md)|Speichert den binären Inhalt von einem **Stream** in eine Datei.|  
 |[Seek](../../../ado/reference/ado-api/seek-method.md)|Sucht den Index des eine **Recordset** schnell die Zeile finden, die mit den angegebenen Werten übereinstimmt, und ändert die aktuelle Zeilenposition Zeile.|  
 |[SetEOS](../../../ado/reference/ado-api/seteos-method.md)|Legt die Position, die das Ende des Streams fest.|  
 |[SkipLine](../../../ado/reference/ado-api/skipline-method.md)|Überspringt eine gesamte Zeile, beim Lesen eines Text-Streams.|  
-|[Stat](../../../ado/reference/ado-api/stat-method.md)|Ruft die statistische Informationen zu einem geöffneten Datenstrom ab.|  
+|[STAT](../../../ado/reference/ado-api/stat-method.md)|Ruft die statistische Informationen zu einem geöffneten Datenstrom ab.|  
 |[Unterstützt](../../../ado/reference/ado-api/supports-method.md)|Bestimmt, ob ein angegebener **Recordset** Objekt unterstützt eine bestimmte Art von Funktionen.|  
 |[Update](../../../ado/reference/ado-api/update-method.md)|Speichert alle Änderungen an der aktuellen Zeile ein **Recordset** -Objekt, oder die **Felder** Auflistung von einem **Datensatz** Objekt.|  
 |[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|Schreibt alle ausstehenden BatchUpdates auf den Datenträger an.|  
 |[Schreiben](../../../ado/reference/ado-api/write-method.md)|Schreibt binäre Daten in einem **Stream** Objekt.|  
-|[WriteText](../../../ado/reference/ado-api/writetext-method.md)|Schreibt eine angegebene Zeichenfolge an eine **Stream** Objekt.|  
+|[WRITETEXT-Anweisung](../../../ado/reference/ado-api/writetext-method.md)|Schreibt eine angegebene Zeichenfolge an eine **Stream** Objekt.|  
   
 ## <a name="see-also"></a>Siehe auch  
  [ADO-API-Referenz](../../../ado/reference/ado-api/ado-api-reference.md)   

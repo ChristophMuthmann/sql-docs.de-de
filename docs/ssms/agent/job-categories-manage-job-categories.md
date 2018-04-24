@@ -17,16 +17,17 @@ f1_keywords:
 helpviewer_keywords:
 - Job Categories dialog box
 ms.assetid: 38276438-40b1-43ce-9aae-6805be6d9332
-caps.latest.revision: ''
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e7131f7023d0c240cd1a5f277527264f4476da96
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: e1a24047bc2d1bc79bcb5a054607df822d5b24b7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="job-categories---manage-job-categories"></a>Auftragskategorien – Auftragskategorien verwalten
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

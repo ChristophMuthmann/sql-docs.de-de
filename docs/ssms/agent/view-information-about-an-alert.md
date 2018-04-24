@@ -24,11 +24,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: edd9053514a593ea946a15d3d3071ad2b6e27093
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: a6f1e0be2382e9981886616af207ab94185ee9f1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="view-information-about-an-alert"></a>View Information About an Alert
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -42,7 +43,7 @@ In diesem Thema wird beschrieben, wie Sie Infodermationen in Bezug auf [!INCLUDE
   
 -   **Vorbereitungen:**  
   
-    [Sicherheit](#Security)  
+    [Security](#Security)  
   
 -   **So zeigen Sie Informationen zu einer Warnung an mit**  
   
@@ -85,7 +86,7 @@ Standardmäßig können nur Mitglieder der festen Serverrolle **sysadmin** Infor
   
 #### <a name="to-view-information-about-an-alert"></a>So zeigen Sie Informationen zu einer Warnung an  
   
-1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde_md.md)]-Instanz her.  
+1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde_md.md)]-Instanz her.  
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   

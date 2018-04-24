@@ -1,15 +1,16 @@
 ---
-title: "Hochverfügbarkeitslösungen (SQL Server) | Microsoft-Dokumentation"
-ms.custom: 
+title: Hochverfügbarkeitslösungen (SQL Server) | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 05/19/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: failover-clusters
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - high availability [SQL Server], solutions
@@ -18,19 +19,20 @@ helpviewer_keywords:
 - availability [SQL Server]
 - server availability [SQL Server]
 ms.assetid: b2eda634-0f8e-4703-801b-7ba895544ff5
-caps.latest.revision: "84"
+caps.latest.revision: 84
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 7af2a4035d3c528189cca77a4506e98db1acd93c
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 2e8a25e4cca326edaa40fb850f8b5deed0a175bb
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="high-availability-solutions-sql-server"></a>Lösungen mit hoher Verfügbarkeit (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] In diesem Thema werden mehrere Hochverfügbarkeitslösungen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vorgestellt, die die Verfügbarkeit von Servern oder Datenbanken verbessern. Eine Lösung mit hoher Verfügbarkeit unterdrückt die Auswirkungen eines Hardware- oder Softwarefehlers und hält die Verfügbarkeit von Anwendungen aufrecht, damit die Ausfallzeiten für Benutzer so gering wie möglich gehalten werden.    
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  In diesem Thema werden mehrere Hochverfügbarkeitslösungen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vorgestellt, die die Verfügbarkeit von Servern oder Datenbanken verbessern. Eine Lösung mit hoher Verfügbarkeit unterdrückt die Auswirkungen eines Hardware- oder Softwarefehlers und hält die Verfügbarkeit von Anwendungen aufrecht, damit die Ausfallzeiten für Benutzer so gering wie möglich gehalten werden.    
     
    
 >  **Hinweis!** Möchten Sie wissen, welche [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Editionen eine bestimmte Hochverfügbarkeitslösung unterstützen? Informationen dazu finden Sie im Artikel [Von den SQL Server 2016-Editionen unterstützte Funktionen](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)im Abschnitt „Hohe Verfügbarkeit (Always On)“.    
@@ -39,7 +41,7 @@ ms.lasthandoff: 12/05/2017
 ##  <a name="TermsAndDefinitions"></a> Übersicht über SQL Server-Hochverfügbarkeitslösungen    
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sind mehrere Optionen zum Einrichten von Hochverfügbarkeit für einen Server oder eine Datenbank verfügbar. Die Hochverfügbarkeitsoptionen umfassen Folgendes:    
     
-*  Always On-Failoverclusterinstanzen    
+*  AlwaysOn-Failoverclusterinstanzen    
  Als Teil des Always On-Angebots von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nutzen Always On-Failoverclusterinstanzen die Funktionalität des Windows Server-Failoverclustering (WSFC), um durch Redundanz auf Serverinstanzebene (eine *Failoverclusterinstanz* [FCI]) lokale Hochverfügbarkeit zu bieten. Eine FCI ist eine einzelne Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Diese ist auf Windows Server-Failoverclustering-Knoten (WSFC) und möglicherweise auf mehreren Subnetzen installiert. In einem Netzwerk wird eine FCI als eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] angezeigt, die auf einem einzelnen Computer ausgeführt wird. Die FCI bietet jedoch die Möglichkeit zur Failoverbereitstellung von einem WSFC-Knoten zu einem anderen, wenn der aktuelle Knoten nicht verfügbar ist.    
     
  Weitere Informationen finden Sie unter [Always On-Failoverclusterinstanzen &#40;SQL Server&#41;](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)hostet.    
@@ -65,7 +67,7 @@ Die Datenbankspiegelung stellt eine Softwarelösung dar, mit der die Verfügbark
     
        >  Wenn Sie eine Edition von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausführen, die [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]nicht unterstützt, empfiehlt sich die Verwendung des Protokollversands. Informationen dazu, welche [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Editionen [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]unterstützen, finden Sie im Artikel [Von den SQL Server 2016-Editionen unterstützte Funktionen](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)im Abschnitt „Hohe Verfügbarkeit (Always On)“.    
     
-## <a name="see-also"></a>Siehe auch    
+## <a name="see-also"></a>Weitere Informationen finden Sie unter    
  [Windows Server-Failoverclustering &#40;WSFC&#41; mit SQL Server](../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)     
  [Datenbankspiegelung: Interoperabilität und Koexistenz &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-interoperability-and-coexistence-sql-server.md)     
  [Als veraltet markierte Funktionen des Datenbankmoduls in SQL Server 2016](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)    

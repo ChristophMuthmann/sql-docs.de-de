@@ -1,32 +1,32 @@
 ---
 title: Cancel-Methode (Beispiel) (VB) | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Cancel method [ADO], Visual Basic example
 ms.assetid: 5c0530ad-68d0-4cba-b1af-9386d566c7c5
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 63c0512622045cb4c65820826cbb8e120a91ead4
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: f2ac42411d014ab9515148267b66e6b270f70bfe
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="cancel-method-example-vb"></a>Cancel-Methode (Beispiel) (VB)
 Dieses Beispiel verwendet die ["Abbrechen"](../../../ado/reference/ado-api/cancel-method-ado.md) Methode zum Abbrechen der Ausführung einer Befehls auf einen [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md) Objekt, wenn die Verbindung ausgelastet ist.  

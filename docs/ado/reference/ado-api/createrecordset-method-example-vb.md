@@ -1,32 +1,32 @@
 ---
 title: CreateRecordset-Methode (Beispiel) (VB) | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - CreateRecordset method [RDS], Visual Basic example
 ms.assetid: 2de8fd02-0f49-4d47-8bd3-397726d1c644
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: aab6469e8b8352ed1981831509469323f803599a
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: f06b4b5d22f3e55b2f7296f44691cd922e487808
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="createrecordset-method-example-vb"></a>CreateRecordset-Methode (Beispiel) (VB)
 Sie erstellen eine [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekt, und geben Sie die Informationen in der Spalte. Sie können dann Einfügen von Daten in der **Recordset** Objekt, und die zugrunde liegenden Rowset Puffer einfügungen.  

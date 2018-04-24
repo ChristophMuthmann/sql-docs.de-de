@@ -1,17 +1,17 @@
 ---
 title: Resync-Methode | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - Recordset20::raw_Resync
@@ -21,16 +21,16 @@ f1_keywords:
 helpviewer_keywords:
 - Resync method [ADO]
 ms.assetid: 73b355d4-a4c0-434b-bfc4-039b1c76b32e
-caps.latest.revision: 
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 68c8642b778f6fe73f30096101308328b7b46ebc
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: e6e2301c18615ec139a408fa2b5adb7a132e4b04
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="resync-method"></a>Resync-Methode
 Aktualisiert die Daten in der aktuellen [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) -Objekt, oder [Felder](../../../ado/reference/ado-api/fields-collection-ado.md) Auflistung von einem [Datensatz](../../../ado/reference/ado-api/record-object-ado.md) Objekt, aus der zugrunde liegenden Datenbank.  

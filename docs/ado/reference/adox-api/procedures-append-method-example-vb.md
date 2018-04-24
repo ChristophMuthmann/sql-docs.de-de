@@ -1,32 +1,32 @@
 ---
 title: Prozeduren Append-Methode (Beispiel) (VB) | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Append method [ADOX], Visual Basic example
 ms.assetid: ce83b966-474b-4f57-8eb9-370996dfc5c0
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8982cc8970cfbb79912688b038f1745d9d4b5612
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: a46c7dd2ab095a6bc50dab15cf3a1b9a1cb3024d
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="procedures-append-method-example-vb"></a>Prozeduren Append-Methode (Beispiel) (VB)
 Der folgende Code veranschaulicht, wie eine [Befehl](../../../ado/reference/ado-api/command-object-ado.md) Objekt und die [Prozeduren](../../../ado/reference/adox-api/procedures-collection-adox.md) Auflistung [Append](../../../ado/reference/adox-api/append-method-adox-procedures.md) Methode, um eine neue Prozedur in der zugrunde liegenden Datenquelle zu erstellen.  

@@ -1,6 +1,6 @@
 ---
 title: ADO für Visual C++-Syntax Index COM | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: ado
@@ -11,7 +11,7 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.suite: sql
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apitype: COM
 dev_langs:
 - C++
@@ -24,11 +24,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 081d81654e6898496e81b809b9c4925020630181
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: c3486f6e10162286b43ab1eab39042577c8d5fc4
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="ado-for-visual-c-syntax-index-for-com"></a>ADO für Visual C++-Syntax Index für COM
 Dieser Index ist ein Querverweis auf der Grundlage von Microsoft Visual C++ ADO-Sprachreferenz.  

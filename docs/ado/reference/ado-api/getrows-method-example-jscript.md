@@ -1,32 +1,32 @@
 ---
 title: GetRows-Methode (Beispiel) (JScript) | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - JScript
 helpviewer_keywords:
 - Getrows method [ADO], JScript example
 ms.assetid: d33467a5-5a56-450d-98c1-c3ce6f9f103c
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a6b3d16d4d9fb84d56a3bb7941f03348410d7d3d
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: eba9296e18e8a25613c73b23bf4b0858eb341cb6
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="getrows-method-example-jscript"></a>GetRows-Methode (Beispiel) (JScript)
 Dieses Beispiel verwendet die [GetRows](../../../ado/reference/ado-api/getrows-method-ado.md) Methode zum Abrufen aller Zeilen der *Custiomers* aus Tabelle eine [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) und ein Array mit den resultierenden Daten zu füllen. Die **GetRows** Methode wird in zwei Fällen weniger als die gewünschte Anzahl von Zeilen zurück: entweder If [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) erreicht wurde oder wenn **GetRows** hat versucht, einen Datensatz abzurufen, die wurde von einem anderen Benutzer gelöscht. Die Funktion gibt **"false"** nur, wenn der zweite Fall tritt auf. Ausschneiden und fügen Sie den folgenden Code in Editor oder einem anderen Texteditor und speichern Sie diese als **GetRowsJS.asp**.  

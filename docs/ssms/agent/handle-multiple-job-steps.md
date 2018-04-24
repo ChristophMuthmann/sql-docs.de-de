@@ -19,16 +19,17 @@ helpviewer_keywords:
 - SQL Server Agent jobs, job steps
 - control of flow for jobs [SQL Server]
 ms.assetid: 7aba19ff-72b3-45f6-8e54-23f4988d63a8
-caps.latest.revision: ''
+caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 79692f0272c617544c3f368f9062dc5ff875fa49
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 9c0c7e5cb4c442d6dc430d34623c7bef2d19cfb5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="handle-multiple-job-steps"></a>Handhaben mehrerer Auftragsschritte
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

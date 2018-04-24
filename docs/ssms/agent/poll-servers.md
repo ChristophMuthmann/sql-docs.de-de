@@ -19,16 +19,17 @@ helpviewer_keywords:
 - master servers [SQL Server], polling
 - polling interval [SQL Server]
 ms.assetid: 96f5fd43-3edd-4418-9dd0-4d34e618890e
-caps.latest.revision: ''
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4157f5773cca95a02e8d89c3c535f409c0a9a54c
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 24a83e0d072c8db34796a6a7cb5a4ce807c6e3de
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="poll-servers"></a>Abfragen von Servern
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

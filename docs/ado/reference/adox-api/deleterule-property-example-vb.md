@@ -1,32 +1,32 @@
 ---
-title: "Beispiel für DeleteRule-Eigenschaft (VB) | Microsoft Docs"
-ms.prod: sql-non-specified
+title: Beispiel für DeleteRule-Eigenschaft (VB) | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - DeleteRule property [ADOX], Visual Basic example
 ms.assetid: 9ba00118-a80d-4a6d-a7d6-4f5492fb7ded
-caps.latest.revision: 
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 58016abfd80a4d293c537a1ee67ea3894bfcae48
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: e7a235a3f40b99300ed4be9ec15fad457272b340
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="deleterule-property-example-vb"></a>Beispiel für DeleteRule-Eigenschaft (VB)
 Dieses Beispiel zeigt die [DeleteRule](../../../ado/reference/adox-api/deleterule-property-adox.md) Eigenschaft eine [Schlüssel](../../../ado/reference/adox-api/key-object-adox.md) Objekt. Der Code Fügt eine neue [Tabelle](../../../ado/reference/adox-api/table-object-adox.md) und definiert dann einen neuen Primärschlüssel festlegen **DeleteRule** auf **AdRICascade**.  

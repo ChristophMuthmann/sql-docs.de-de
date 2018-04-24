@@ -22,16 +22,17 @@ helpviewer_keywords:
 - SQL Server Agent jobs, target servers
 - target servers [SQL Server], creating
 ms.assetid: 13aabe2d-67fe-4c67-8d49-2928dd705b7a
-caps.latest.revision: ''
+caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 86ed814263982adb67b31f628d58c039d41438d7
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 6d75f53c5e49c04718c251aafbc85303800ee213
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="make-a-target-server"></a>Erstellen eines Zielservers
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

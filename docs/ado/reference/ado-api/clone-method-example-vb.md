@@ -1,32 +1,32 @@
 ---
 title: Clone-Methode (Beispiel) (VB) | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Clone method [ADO], Visual Basic example
 ms.assetid: 64cb1753-e074-4a2d-8b74-7c35f3f6f64d
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e12ea632c58e1b9c332d6b981551baa404c82371
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 4b84981e9d8a98136e7b2395274ead8c0335efae
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="clone-method-example-vb"></a>Clone-Methode (Beispiel) (VB)
 Dieses Beispiel verwendet die [Klon](../../../ado/reference/ado-api/clone-method-ado.md) Methode zum Erstellen von Kopien einer [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) und dann ermöglicht dem Benutzer, der den Datensatz Zeiger jeder Kopie unabhängig zu positionieren.  

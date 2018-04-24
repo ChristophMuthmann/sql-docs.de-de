@@ -1,29 +1,29 @@
 ---
 title: SQL Server 2017 Release Notes | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 10/30/2017
-ms.prod: sql-server
+ms.prod: sql
 ms.prod_service: sql-non-specified
-ms.service: server-general
-ms.component: 
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: server-general
-ms.tgt_pltfrm: 
+ms.technology: supportability
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 13942af8-5a40-4cef-80f5-918386767a47
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 0cc5502883bd349f8a2586f901d5088c4edacf65
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+monikerRange: = sql-server-2017 || = sqlallproducts-allversions
+ms.openlocfilehash: 15e778c6b38f61905a7bf4167cf3ce65d418e942
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="sql-server-2017-release-notes"></a>Versionsanmerkungen zu SQL Server 2017
-[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)] In den folgenden Artikeln werden Einschränkungen und Probleme mit SQL Server 2017 beschrieben. Verwandte Informationen finden Sie unter:
+[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
+In den folgenden Artikeln werden Einschränkungen und Probleme mit SQL Server 2017 beschrieben. Verwandte Informationen finden Sie unter:
 - [Neues in SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md)
 - [SQL Server unter Linux: Anmerkungen zu dieser Version](https://docs.microsoft.com/sql/linux/sql-server-linux-release-notes)
 - [SQL Server 2017 Cumulative updates (Kumulative Updates für SQL Server 2017)](http://aka.ms/sql2017cu) für Informationen zu den aktuellen kumulativen Updates

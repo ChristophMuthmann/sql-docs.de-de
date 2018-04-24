@@ -1,33 +1,33 @@
 ---
 title: Hierarchy-Objekt (ADO MD) | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - Hierarchy
 helpviewer_keywords:
 - Hierarchy object [ADO MD]
 ms.assetid: 034af340-ac79-494e-ba5e-2b57da1cb9de
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 355560aecba3e18317aa91ed1a09dcc9ed344f5f
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 1904398172f9a7b1eaad57e3c4cda11a00fad22e
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="hierarchy-object-ado-md"></a>Hierarchy-Objekt (ADO MD)
 Stellt eine Möglichkeit dar, in dem die Mitglieder einer [Dimension](../../../ado/reference/ado-md-api/dimension-object-ado-md.md) aggregiert werden können oder die "Rollup wird erstellt." Eine Dimension kann entlang einer oder mehrerer Hierarchien aggregiert werden.  
@@ -68,6 +68,6 @@ Stellt eine Möglichkeit dar, in dem die Mitglieder einer [Dimension](../../../a
 ## <a name="see-also"></a>Siehe auch  
  [CubeDef-Beispiel (VBScript)](../../../ado/reference/ado-md-api/cubedef-example-vbscript.md)   
  [Dimensionsobjekt (ADO MD)](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)   
- [Hierarchies Collection (ADO MD)](../../../ado/reference/ado-md-api/hierarchies-collection-ado-md.md)   
+ [Hierarchies-Auflistung (ADO MD)](../../../ado/reference/ado-md-api/hierarchies-collection-ado-md.md)   
  [Levels-Auflistung (ADO MD)](../../../ado/reference/ado-md-api/levels-collection-ado-md.md)   
  [Properties-Collection (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)

@@ -1,33 +1,33 @@
 ---
 title: Beibehalten von Daten | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - persisting data [ADO]
 - data updates [ADO], persisting data
 - data persistence [ADO]
 - updating data [ADO], persisting data
 ms.assetid: 21c162ca-2845-4dd8-a49d-e715aba8c461
-caps.latest.revision: 
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 533801c5f6717ec32a821a79acadce3f953c8d71
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 915f1d4e8ac954302c35eb430bb36bb72b33ef14
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="persisting-data"></a>Beibehalten von Daten
 Tragbare Computer (z. B. mit Laptops) hat die Notwendigkeit von Anwendungen generiert, die in einem verbundenen und nicht verbundenen Zustand ausgeführt werden kann. ADO hat Unterstützung für diese hinzugefügt, durch die Vergabe des Entwicklers der Möglichkeit zum Speichern eines Clientcursors **Recordset** auf den Datenträger, und Laden Sie es später erneut.  

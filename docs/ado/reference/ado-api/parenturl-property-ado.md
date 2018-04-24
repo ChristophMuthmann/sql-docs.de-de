@@ -1,33 +1,33 @@
 ---
 title: ParentURL-Eigenschaft (ADO) | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - _Record::ParentURL
 helpviewer_keywords:
 - ParentURL property [ADO]
 ms.assetid: 65120ce6-3900-4cd4-b322-3b9816d74737
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: eca04999eece256ef22503c4d227ffcec297c79a
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 00583d9a57d420797bd54a3535a5d27b364373df
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="parenturl-property-ado"></a>ParentURL-Eigenschaft (ADO)
 Gibt eine absolute URL-Zeichenfolge, die auf das übergeordnete Element verweist [Datensatz](../../../ado/reference/ado-api/record-object-ado.md) des aktuellen **Datensatz** Objekt.  

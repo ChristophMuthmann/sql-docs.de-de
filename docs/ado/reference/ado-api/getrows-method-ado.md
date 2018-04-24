@@ -1,17 +1,17 @@
 ---
 title: GetRows-Methode (ADO) | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - Recordset15::GetRows
@@ -19,16 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - Getrows method [ADO]
 ms.assetid: 14b92860-4171-47d9-a413-dd60dd6a8880
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1fb0ab2e6673a85b7204cacfbeed5bf4968970b9
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 9ba89fccb177566a6f130b4c8b0afa5ea5176b63
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="getrows-method-ado"></a>GetRows-Methode (ADO)
 Ruft mehrere Datensätze eine [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) -Objekt in ein Array.  

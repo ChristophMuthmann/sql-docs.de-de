@@ -1,30 +1,23 @@
 ---
-title: Konfigurieren von externen SMP-SQL-Server zum Empfangen der Remotetabelle Kopien (PDW)
-author: barbkess
-ms.author: barbkess
+title: SQL-Server für den Empfang von Kopien der Remotetabelle - Parallel Data Warehouse konfigurieren | Microsoft Docs
+description: Beschreibt, wie eine externe SMP SQL Server-Instanz zum Empfangen der Remotetabelle Kopien von Parallel Data Warehouse zu konfigurieren.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/13/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 6bbd2ed6-064e-4b45-b67b-608dc0f2b2bc
-caps.latest.revision: 13
-ms.openlocfilehash: 94b62dbae331c19fa97c1625a53804f4cd96bfa5
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: ae6799d468d57dec04046b443c613823c0a8cb8c
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="configure-an-external-smp-sql-server-to-receive-remote-table-copies"></a>Konfigurieren Sie eine externe SMP-SQL-Server für den Empfang von Kopien der Remotetabelle
-Beschreibt, wie eine externe SQL Server-Instanz zum Empfangen der Remotetabelle Kopien von SQL Server PDW konfiguriert.  
-  
+# <a name="configure-an-external-smp-sql-server-to-receive-remote-table-copies---parallel-data-warehouse"></a>Konfigurieren Sie eine externe SMP-SQL-Server für den Empfang von Remotetabelle Kopien - Parallel Data Warehouse
+Beschreibt, wie eine externe SQL Server-Instanz zum Empfangen der Remotetabelle Kopien von Parallel Data Warehouse konfiguriert.  
+
 Dieses Thema beschreibt eine der Konfigurationsschritte zum Konfigurieren von remote-Tabelle kopieren. Eine Übersicht über die Konfigurationsschritte finden Sie unter [Remotekopie Tabelle](remote-table-copy.md).  
   
 ## <a name="before-you-begin"></a>Vorbereitungen  

@@ -1,31 +1,31 @@
 ---
 title: Verbindung (ADO - WFC-Syntax) | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 helpviewer_keywords:
 - Connection collection [ADO], ADO/WFC syntax
 ms.assetid: 8cfc35bb-91e2-47da-ad4c-982e9162cd51
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: db507899d827973d66a18e34628ae1aa435e0323
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 7a3c3d98fb2edda85d3ccb9bd4768a85f921af5d
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="connection-ado---wfc-syntax"></a>Verbindung (ADO - WFC-Syntax)
 ## <a name="package-commswfcdata"></a>Paket com.ms.wfc.data  

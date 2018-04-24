@@ -1,6 +1,6 @@
 ---
 title: Parameter (ADO - WFC-Syntax) | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: ado
@@ -11,7 +11,7 @@ ms.date: 02/15/2017
 ms.reviewer: ''
 ms.suite: sql
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apitype: COM
 helpviewer_keywords:
 - Parameter collection [ADO], ADO/WFC syntax
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 05f3e2f6f6b3985c1c68604e6e9829c1b1f3eef1
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: 675fbf3f2b94fa5f93dde4a6197fe084b7c4c9dd
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="parameter-ado---wfc-syntax"></a>Parameter (ADO - WFC-Syntax)
 ## <a name="package-commswfcdata"></a>Paket com.ms.wfc.data  

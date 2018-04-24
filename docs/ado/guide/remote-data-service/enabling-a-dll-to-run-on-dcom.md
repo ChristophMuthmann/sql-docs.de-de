@@ -1,32 +1,32 @@
 ---
-title: "Aktivieren eine DLL für die Ausführung auf DCOM | Microsoft Docs"
-ms.prod: sql-non-specified
+title: Aktivieren eine DLL für die Ausführung auf DCOM | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - DLL on DCOM in RDS [ADO]
 - DCOM in RDS [ADO]
 - business objects in RDS [ADO]
 ms.assetid: 5f1c2205-191c-4fb4-9bd9-84c878ea46ed
-caps.latest.revision: 
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 65401d1e0f3da015982d27aa7608cba4046313a2
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: f21cdd1b8a60a978ad87923f2e5039554533146d
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="enabling-a-dll-to-run-on-dcom"></a>Aktivieren einer DLL zur Ausführung auf DCOM
 > [!IMPORTANT]

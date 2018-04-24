@@ -1,32 +1,32 @@
 ---
 title: Beispiel der Count-Eigenschaft (VB) | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Count property [ADO], Visual Basic example
 ms.assetid: 35033910-623b-449a-a57d-baff3ed5ab8f
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4ab29cd1d57ebdb721085c7f743d96b2c0052ea6
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: dac5210691ea6a0bfdb8f4e1d51661b65bfe68ee
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="count-property-example-vb"></a>Beispiel der Count-Eigenschaft (VB)
 Dieses Beispiel zeigt die [Anzahl](../../../ado/reference/ado-api/count-property-ado.md) Eigenschaft mit zwei Sammlungen in der ***Mitarbeiter*** Datenbank. Die Eigenschaft ruft die Anzahl der Objekte in jeder Auflistung ab und legt die Obergrenze für Schleifen an, die diese Auflistungen aufgezählt werden. Eine andere Möglichkeit, diese Auflistungen aufgezählt werden, ohne die **Anzahl** Eigenschaft verwendet werden würde `For Each...Next` Anweisungen.  

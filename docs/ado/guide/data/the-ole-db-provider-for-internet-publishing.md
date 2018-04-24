@@ -1,17 +1,17 @@
 ---
-title: "Der OLE DB-Anbieter für Internet Publishing | Microsoft Docs"
-ms.prod: sql-non-specified
+title: Der OLE DB-Anbieter für Internet Publishing | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - OLE DB provider for Internet publishing [ADO]
 - ADO, Internet publishing
@@ -19,16 +19,16 @@ helpviewer_keywords:
 - Internet publishing [ADO]
 - providers [ADO], OLE DB provider for Internet publishing
 ms.assetid: 4869aafa-7401-4ce1-93ce-45406a60274f
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 128d8531f1a5f4c2ebff06b9db8b1510964bdcd4
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: c3dfd95a9df4e67effa659e3d76d92ce1927d778
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="the-ole-db-provider-for-internet-publishing"></a>Der OLE DB-Anbieter für Internet Publishing
 Das ADO [Datensatz](../../../ado/reference/ado-api/record-object-ado.md) und [Stream](../../../ado/reference/ado-api/stream-object-ado.md) Objekte können verwendet werden mit der Microsoft OLE DB-Anbieter für Internet Publishing (Internet Publishing-Anbieter) aufrufen und Bearbeiten von Ressourcen, z. B. Web-Ordner oder Dateien von Microsoft FrontPage verwaltet werden. Mit ADO, geben Sie die Quelle eine **Datensatz**, **Stream**, oder [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) eine URL sein. Sie können dann hochladen, herunterladen, verschieben, kopieren, und löschen Sie Ressourcen oder Ressourceneigenschaften direkt bearbeiten.  

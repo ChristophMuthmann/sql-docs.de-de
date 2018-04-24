@@ -1,33 +1,33 @@
 ---
 title: Update- und CancelUpdate Methoden (VC++-Beispiel) | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - CancelUpdate method [ADO]
 - Update method [ADO], VC++ example
 ms.assetid: cc59d23a-2f38-42f9-8b65-ed89009e87ec
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d10d112d6c8ed067959e949adf1480f38bcabae1
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: d7a0b61b2ef929f154e903ad325c7a9e3914a65b
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="update-and-cancelupdate-methods-example-vc"></a>Update- und CancelUpdate Methoden (VC++-Beispiel)
 Dieses Beispiel zeigt die [Update](../../../ado/reference/ado-api/update-method.md) Methode in Verbindung mit der [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) Methode.  

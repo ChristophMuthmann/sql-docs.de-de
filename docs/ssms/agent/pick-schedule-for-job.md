@@ -17,16 +17,17 @@ f1_keywords:
 helpviewer_keywords:
 - Pick Schedule for Job dialog box
 ms.assetid: 6de2025d-c25c-47b9-9a25-18c294935c15
-caps.latest.revision: ''
+caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cbae4854bff8396f64e04a662d0e2b48548934b7
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: d13bc6a60f5c8eeffd69a42fa79d962099b02c34
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="pick-schedule-for-job"></a>Zeitplan für Auftrag auswählen
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

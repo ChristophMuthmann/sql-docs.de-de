@@ -1,26 +1,26 @@
 ---
 title: ADO-dynamische Property-Index | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - dynamic properties [ADO], index
 ms.assetid: 80d389dd-46ef-459f-b0d4-6f712fc4f32d
-caps.latest.revision: 
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5c56ef6d6a146d1613bdd11618fadb3b11296fe7
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 3d646865c5fc95ed032c0cc21e973a3204162201
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="ado-dynamic-property-index"></a>ADO-dynamische Property-Index
 Datenanbieter, Dienstanbieter und Dienstkomponenten können dynamische Eigenschaften zum Hinzufügen der **Eigenschaften** Sammlungen von der geöffnete [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md) und [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) -Objekte. Ein angegebenen Anbieter möglicherweise auch weitere Eigenschaften einfügen, wenn diese Objekte geöffnet werden. Einige dieser Eigenschaften sind aufgeführt, der [dynamische Eigenschaften der ADO](../../../ado/reference/ado-api/ado-dynamic-properties.md) Abschnitt. Weitere sind aufgeführt, unter bestimmten Anbieter in der [Anhang A: Anbieter](../../../ado/guide/appendixes/appendix-a-providers.md) Abschnitt.  
@@ -43,7 +43,7 @@ Datenanbieter, Dienstanbieter und Dienstkomponenten können dynamische Eigenscha
 |Verbindungstimeout|DBPROP_INIT_TIMEOUT|  
 |Aktuellen Katalog|DBPROP_CURRENTCATALOG|  
 |Datenquelle|DBPROP_INIT_DATASOURCE|  
-|Datenquellenname|DBPROP_DATASOURCENAME|  
+|Datenquellenname|RÜCKGABEWERT|  
 |Datenquellenobjekt Threadingmodell|DBPROP_DSOTHREADMODEL|  
 |Der DBMS-Name|DBPROP_DBMSNAME|  
 |DBMS-Version|DBPROP_DBMSVER|  
@@ -68,7 +68,7 @@ Datenanbieter, Dienstanbieter und Dienstkomponenten können dynamische Eigenscha
 |NULL-Sortierung|DBPROP_NULLCOLLATION|  
 |NULL-Verkettungsverhalten|DBPROP_CONCATNULLBEHAVIOR|  
 |OLE DB-Dienste|DBPROP_INIT_OLEDBSERVICES|  
-|OLE DB Version|DBPROP_PROVIDEROLEDBVER|  
+|OLE DB-Version|DBPROP_PROVIDEROLEDBVER|  
 |Unterstützung für OLE-Objekt|DBPROP_OLEOBJECTS|  
 |Öffnen Sie die Schemarowset-Unterstützung|DBPROP_OPENROWSETSUPPORT|  
 |ORDER BY-Spalten in der Select-Liste|DBPROP_ORDERBYCOLUMNSINSELECT|  
@@ -118,7 +118,7 @@ Datenanbieter, Dienstanbieter und Dienstkomponenten können dynamische Eigenscha
 |IRowsetIdentity|DBPROP_IROWSETIDENTITY|  
 |IRowsetInfo|DBPROP_IROWSETINFO|  
 |IRowsetLocate|DBPROP_IROWSETLOCATE|  
-|IRowsetRefresh|DBPROP_IROWSETREFRESH|  
+|IRowsetRefresh abgelöst|DBPROP_IROWSETREFRESH|  
 |IRowsetResynch||  
 |IRowsetScroll|DBPROP_IROWSETSCROLL|  
 |IRowsetUpdate|DBPROP_IROWSETUPDATE|  

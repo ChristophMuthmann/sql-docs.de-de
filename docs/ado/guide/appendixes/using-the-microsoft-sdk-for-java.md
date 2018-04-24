@@ -1,31 +1,31 @@
 ---
-title: "Mit dem Microsoft-SDK für Java | Microsoft Docs"
-ms.prod: sql-non-specified
+title: Mit dem Microsoft-SDK für Java | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 02/15/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Java (Microsoft SDK for)
 - Microsoft SDK for Java [ADO]
 ms.assetid: 2d7cb5b5-8307-49dd-b07e-c07069bb1626
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 53d61d4cd48f8792cafb24971f7b454c4d16c19e
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 7b12135a32e66e18a32961abe95dc35bb333e2f4
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="using-the-microsoft-sdk-for-java"></a>Mithilfe des Microsoft-SDK für Java
 

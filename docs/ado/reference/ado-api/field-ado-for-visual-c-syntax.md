@@ -1,33 +1,33 @@
 ---
-title: "Feld (ADO für Visual C++-Syntax) | Microsoft Docs"
-ms.prod: sql-non-specified
+title: Feld (ADO für Visual C++-Syntax) | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 dev_langs:
 - C++
 helpviewer_keywords:
 - Field collection [ADO], ADO for Visual C++ syntax
 ms.assetid: 04631b08-3937-440b-ac09-cd166f239908
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f74a4f0e1a9a180c700fa283ef5fe9d98cf5e1eb
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: f1f089eead8435a81c48b002eccfe1b2b8b78775
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="field-ado-for-visual-c-syntax"></a>Feld (ADO für Visual C++-Syntax)
 ## <a name="methods"></a>Methoden  

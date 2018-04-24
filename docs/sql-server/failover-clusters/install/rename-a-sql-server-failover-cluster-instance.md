@@ -1,15 +1,16 @@
 ---
 title: Umbenennen einer SQL Server-Failoverclusterinstanz|Microsoft-Dokumente
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: failover-clusters
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: setup-install
-ms.tgt_pltfrm: 
+ms.technology:
+- setup-install
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - clusters [SQL Server], virtual servers
@@ -17,19 +18,20 @@ helpviewer_keywords:
 - virtual servers [SQL Server], failover clustering
 - failover clustering [SQL Server], virtual servers
 ms.assetid: 2a49d417-25fb-4760-8ae5-5871bfb1e6f3
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 59f761ee41f888f65960f9a58589c441419f40d0
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: da7b8e146a9b5fb7d4ce98a8f31ecc48ca71c4a5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="rename-a-sql-server-failover-cluster-instance"></a>Umbenennen einer SQL Server-Failoverclusterinstanz
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Wenn eine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanz Teil eines Failoverclusters ist, unterscheidet sich der Vorgang des Umbenennens des virtuellen Servers vom Umbenennen einer eigenständigen Instanz. Weitere Informationen finden Sie unter [Umbenennen eines Computers, der eine eigenständige Instanz von SQL Server hostet](../../../database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Wenn eine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Instanz Teil eines Failoverclusters ist, unterscheidet sich der Vorgang des Umbenennens des virtuellen Servers vom Umbenennen einer eigenständigen Instanz. Weitere Informationen finden Sie unter [Umbenennen eines Computers, der eine eigenständige Instanz von SQL Server hostet](../../../database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md).  
   
  Der Name des virtuellen Servers ist immer mit dem SQL-Netzwerknamen (dem Netzwerknamen des virtuellen Servers mit SQL Server) identisch. Sie können zwar den Namen des virtuellen Servers ändern, nicht jedoch den Instanznamen. Sie können z. B. einen virtuellen Server namens VS1\instance1 in einen anderen Namen ändern, z. B. in SQL35\instance1, der Instanzanteil des Namens, instance1, bleibt jedoch unverändert.  
   
@@ -87,7 +89,7 @@ ms.lasthandoff: 12/05/2017
   
 -   Aktualisieren Sie die Auftragsschritte, die vom Servernamen abhängen. Weitere Informationen finden Sie unter [Manage Job Steps](http://msdn.microsoft.com/library/51352afc-a0a4-428b-8985-f9e58bb57c31).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Umbenennen eines Computers, der eine eigenständige Instanz von SQL Server hostet](../../../database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md)  
   
   

@@ -1,6 +1,6 @@
 ---
 title: Filter-Eigenschaft | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: ado
@@ -11,23 +11,23 @@ ms.date: 03/20/2018
 ms.reviewer: ''
 ms.suite: sql
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - Recordset15::Filter
 helpviewer_keywords:
 - Filter property
 ms.assetid: 80263a7a-5d21-45d1-84fc-34b7a9be4c22
-caps.latest.revision: ''
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8c3b06134dcf65ead3a97577a6d08fd46ec2f52e
-ms.sourcegitcommit: ccb05cb5a4cccaf7ffa9e85a4684fa583bab914e
+ms.openlocfilehash: 7b8e5bfa7cce9bd808dc562a6d702a8cb28727d2
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="filter-property"></a>Filter-Eigenschaft
 Gibt einen Filter für Daten in einem [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
@@ -52,7 +52,7 @@ Die Zeichenfolge der Suchkriterien besteht aus Klauseln in der Form *FieldName O
   
 -   Operator muss eine der folgenden sein: \<, >, \<=, > =, <>, =, oder **wie**.  
   
--   Ist gleich dem Wert, mit denen Sie die Feldwerte vergleichen (z. B. 'Smith' #8/24/&#95;, 12.345 oder 50,00 $). Verwenden Sie einfache Anführungszeichen mit Zeichenfolgen und Nummernzeichen (#) mit Datumsangaben aus. Für Zahlen können Sie das Dezimaltrennzeichen, Dollarzeichen sowie die wissenschaftliche Schreibweise. Wenn Operator **wie**, Wert kann Platzhalter verwenden. Nur das Sternchen (*) und Prozentzeichen (%)-Platzhalter sind zulässig, und sie müssen das letzte Zeichen in der Zeichenfolge sein. Wert darf nicht null sein.  
+-   Ist gleich dem Wert, mit denen Sie die Feldwerte vergleichen (z. B. 'Smith' #8/24/95 #, 12.345 oder 50,00 $). Verwenden Sie einfache Anführungszeichen mit Zeichenfolgen und Nummernzeichen (#) mit Datumsangaben aus. Für Zahlen können Sie das Dezimaltrennzeichen, Dollarzeichen sowie die wissenschaftliche Schreibweise. Wenn Operator **wie**, Wert kann Platzhalter verwenden. Nur das Sternchen (*) und Prozentzeichen (%)-Platzhalter sind zulässig, und sie müssen das letzte Zeichen in der Zeichenfolge sein. Wert darf nicht null sein.  
   
 > [!NOTE]
 >  Um einfache Anführungszeichen (') in den Filterwert einzuschließen, verwenden Sie zwei einfache Anführungszeichen zur Darstellung. Beispielsweise um lautet filtern, die Zeichenfolge der Suchkriterien muss `"col1 = 'O''Malley'"`. Um einfache Anführungszeichen am Anfang und Ende der Filterwert einzuschließen, schließen Sie die Zeichenfolge mit dem Nummernzeichen (#). Angenommen, um auf "1" zu filtern, die Zeichenfolge der Suchkriterien muss `"col1 = #'1'#"`.  
@@ -95,7 +95,7 @@ Nur Filter in Form von Kriterienzeichenfolgen den Inhalt einer dauerhaften betre
   
 -   Änderungen, die auf alle Felder in einer Tabelle mit mehreren Schlüsseln vorgenommen wurden.  
   
-Die folgende Tabelle enthält die Auswirkungen der **AdFilterPendingRecords** in verschiedenen Kombinationen von Filterung und Änderungen. Die linke Spalte zeigt die möglichen Änderungen. Änderungen können auf die nicht als Schlüssel Felder, auf das Schlüsselfeld in einer Tabelle oder eines der wichtigsten Felder in einer Tabelle mit mehreren Schlüsseln vorgenommen werden. Die oberste Zeile zeigt das Filterkriterium an. Filterung kann auf eines der Felder nicht sortiert das Schlüsselfeld in einer Tabelle oder eines der wichtigsten Felder in einer Tabelle mit mehreren Schlüsseln basieren. Die sich überschneidenden Zellen die Ergebnisse aufgeführt. Ein  **+**  Pluszeichens (+) bedeutet, dass diese Anwendung **AdFilterPendingRecords** führt zu einer nicht leeren **Recordset**. Ein  **-**  Minuszeichen (-) bedeutet, dass eine leere **Recordset**.  
+Die folgende Tabelle enthält die Auswirkungen der **AdFilterPendingRecords** in verschiedenen Kombinationen von Filterung und Änderungen. Die linke Spalte zeigt die möglichen Änderungen. Änderungen können auf die nicht als Schlüssel Felder, auf das Schlüsselfeld in einer Tabelle oder eines der wichtigsten Felder in einer Tabelle mit mehreren Schlüsseln vorgenommen werden. Die oberste Zeile zeigt das Filterkriterium an. Filterung kann auf eines der Felder nicht sortiert das Schlüsselfeld in einer Tabelle oder eines der wichtigsten Felder in einer Tabelle mit mehreren Schlüsseln basieren. Die sich überschneidenden Zellen die Ergebnisse aufgeführt. Ein **+** Pluszeichens (+) bedeutet, dass diese Anwendung **AdFilterPendingRecords** führt zu einer nicht leeren **Recordset**. Ein **-** Minuszeichen (-) bedeutet, dass eine leere **Recordset**.  
   
 ||Nicht-Schlüssel|Einzelner Schlüssel|Mehrere Schlüssel|
 |-|--------------|----------------|-------------------|

@@ -1,17 +1,17 @@
 ---
 title: Erstellen Sie ein neue Foreign Key (VC++-Beispiel) | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -22,16 +22,16 @@ helpviewer_keywords:
 - Keys Append method [ADOX], VC++ example
 - RelatedColumn property [ADOX], VC++ example
 ms.assetid: 28495b8f-18dc-482c-995d-a120f6ae2006
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 79fb82f1c3a761643c4f23c1a3299642eab74d61
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 4fd508d81e1b8dab41bf9fc2c406c82f1deabce1
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="keys-append-method-key-type-relatedcolumn-relatedtable-and-updaterule-properties-example-vc"></a>Append-Keys-Methode, Typ des Schlüssels, RelatedColumn, RelatedTable und UpdateRule Eigenschaften (VC++-Beispiel)
 Der folgende Code veranschaulicht, wie einen neue foreign Key. Es wird davon ausgegangen, dass zwei Tabellen (Customers und Orders) vorhanden sein.  

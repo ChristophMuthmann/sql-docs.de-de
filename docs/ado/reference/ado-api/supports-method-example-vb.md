@@ -1,32 +1,32 @@
 ---
-title: "Unterstützt Methodenbeispiel (VB) | Microsoft Docs"
-ms.prod: sql-non-specified
+title: Unterstützt Methodenbeispiel (VB) | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Supports method [ADO], Visual Basic example
 ms.assetid: 135aab26-ff5c-4fd9-910f-65cdead0b47e
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f078404d2f524b0ae98cf875724a744f8b0d034e
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 112c820325e0cc28ebd5ee28adf6459f742fcd04
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="supports-method-example-vb"></a>Unterstützt-Methode (Beispiel) (VB)
 Dieses Beispiel verwendet die [unterstützt](../../../ado/reference/ado-api/supports-method.md) Methode, um die Optionen, die von einem Recordset unterstützt anzuzeigen, die mit verschiedenen Cursortypen geöffnet. Die Prozedur DisplaySupport ist zum Ausführen dieser Prozedur erforderlich.  

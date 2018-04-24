@@ -1,34 +1,36 @@
 ---
 title: Problembehandlung bei Failoverclustern | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 10/21/2015
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: failover-clusters
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - troublshooting, failover clustering
 - failover clustering, troubleshooting
 - cluster troubleshooting
 ms.assetid: 84012320-5a7b-45b0-8feb-325bf0e21324
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 5c68c3b282241cfe56e60762e70d2d22e4a64d7b
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 85d9a421358b026cab07832965f8e27dc7efb071
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="failover-cluster-troubleshooting"></a>Problembehandlung bei Failoverclustern
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] In diesem Thema finden Sie Informationen zu den folgenden Punkten:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  In diesem Thema finden Sie Informationen zu den folgenden Punkten:  
   
 -   Grundlegende Schritte bei der Problembehandlung.  
   
@@ -190,7 +192,7 @@ Failoverclustering wird mit einer integrierten Schutzvorrichtung geliefert, um b
   
  Wenn die erweiterten gespeicherten Prozeduren COM-Komponenten verwenden, muss der Systemadministrator die COM-Komponenten auf jedem Knoten des Clusters registrieren. Die Informationen zum Laden und Ausführen von COM-Komponenten müssen in der Registrierung des aktiven Knotens vorhanden sein, damit die Komponenten erstellt werden. Andernfalls verbleiben die Informationen in der Registrierung des Computers, auf dem die COM-Komponenten zuerst registriert wurden.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Lesen und Anzeigen der Setupprotokolldateien von SQL Server](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)   
  [Funktionsweise erweiterter gespeicherter Prozeduren](../../../relational-databases/extended-stored-procedures-programming/how-extended-stored-procedures-work.md)   
  [Ausführungsmerkmale erweiterter gespeicherter Prozeduren](../../../relational-databases/extended-stored-procedures-programming/execution-characteristics-of-extended-stored-procedures.md)  

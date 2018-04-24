@@ -15,16 +15,17 @@ ms.topic: article
 f1_keywords:
 - sql13.ag.alert.options.f1
 ms.assetid: 6e4f41aa-832d-46ba-b6b5-cf1d3b15d33f
-caps.latest.revision: ''
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0f86a156d1e7f659e5460d92d80454eb34a4644a
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 481129c0bec7e195fb8194615b334fdbeb5f4cc2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="alert-properties---new-alert-options-page"></a>Warnungseigenschaften – Neue Warnung (Seite „Optionen“)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

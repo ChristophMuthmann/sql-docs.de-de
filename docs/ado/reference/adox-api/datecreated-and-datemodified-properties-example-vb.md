@@ -1,33 +1,33 @@
 ---
 title: DateCreated und DateModified-Eigenschaften-Beispiel (VB) | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - DateCreated property [ADOX], Visual Basic example
 - DateModified property [ADOX], Visual Basic example
 ms.assetid: d608ea35-6e68-402f-8184-a5041e408678
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6ca73e36516f1f3a94e6c06e3be45bd89c9a58b8
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 980317e2751bfa3619245b40dfb31a7e2b5248f1
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="datecreated-and-datemodified-properties-example-vb"></a>DateCreated und DateModified-Eigenschaften-Beispiel (VB)
 Dieses Beispiel zeigt die [DateCreated](../../../ado/reference/adox-api/datecreated-property-adox.md) und [DateModified](../../../ado/reference/adox-api/datemodified-property-adox.md) Eigenschaften, indem er ein neues [Spalte](../../../ado/reference/adox-api/column-object-adox.md) zu einem vorhandenen [Tabelle](../../../ado/reference/adox-api/table-object-adox.md) und Erstellen eines neuen **Tabelle**. Das DateOutput Verfahren ist erforderlich, damit dieses Beispiel ausführen.  

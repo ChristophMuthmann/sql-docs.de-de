@@ -1,17 +1,17 @@
 ---
 title: Levels-Auflistung (ADO MD) | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - Levels
@@ -19,16 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - Levels collection [ADO MD]
 ms.assetid: fed8684a-b428-4ee4-8f8d-928abe4ad9ad
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 92bf82467e307747235a6e0d7c84906cdde5eb8c
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: cc644909b698c42d54b9e5b1768f6d547195d562
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="levels-collection-ado-md"></a>Levels-Auflistung (ADO MD)
 Enthält die [Ebene](../../../ado/reference/ado-md-api/level-object-ado-md.md) Objekte, die eine Hierarchie bilden.  

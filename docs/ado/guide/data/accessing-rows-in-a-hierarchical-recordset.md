@@ -1,31 +1,31 @@
 ---
 title: Zugreifen auf Zeilen in einem hierarchischen Recordset | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - hierarchical Recordsets [ADO]
 - data shaping [ADO], hierarchical Recordsets
 ms.assetid: 25f1d2a1-6d5e-4457-aa07-5db5c75dee18
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 829afb6aecaa50b521a86201351f6c071d934b5f
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: e7767fdbd933884116c77a67d1930171edf8a878
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="accessing-rows-in-a-hierarchical-recordset-example"></a>Zugreifen auf Zeilen in einem hierarchischen Recordset (Beispiel)
 Das folgende Beispiel zeigt die Schritte in einer hierarchischen Zugriff Zeilen zum [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md):
@@ -75,4 +75,4 @@ End Sub
 ```
 
 ## <a name="see-also"></a>Siehe auch
- [Übersicht über die Strukturierung Daten](../../../ado/guide/data/data-shaping-overview.md) [Field-Objekt](../../../ado/reference/ado-api/field-object.md) [Fields-Auflistung (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md) [formale Grammatik für Formen](../../../ado/guide/data/formal-shape-grammar.md) [strukturiert werden, Dienst für Microsoft-Daten OLE DB (ADO-Dienstanbieter)](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md) [Anbieter für die Strukturierung der Daten erforderlichen](../../../ado/guide/data/required-providers-for-data-shaping.md) [Form APPEND-Klausel](../../../ado/guide/data/shape-append-clause.md) [Form Befehle im allgemeinen](../../../ado/guide/data/shape-commands-in-general.md) [Shape-COMPUTE-Klausel](../../../ado/guide/data/shape-compute-clause.md) [Visual Basic für Applikationen-Funktionen](../../../ado/guide/data/visual-basic-for-applications-functions.md)
+ [Übersicht über die Strukturierung Daten](../../../ado/guide/data/data-shaping-overview.md) [Field-Objekt](../../../ado/reference/ado-api/field-object.md) [Fields-Auflistung (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md) [formale Grammatik für Formen](../../../ado/guide/data/formal-shape-grammar.md) [Microsoft Data strukturiert werden, Dienst für OLE DB (ADO-Dienstanbieter) ](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md) [Anbieter für die Strukturierung der Daten erforderlichen](../../../ado/guide/data/required-providers-for-data-shaping.md) [Form APPEND-Klausel](../../../ado/guide/data/shape-append-clause.md) [Befehle in Form Allgemeine](../../../ado/guide/data/shape-commands-in-general.md) [Shape-COMPUTE-Klausel](../../../ado/guide/data/shape-compute-clause.md) [Visual Basic für Applikationen-Funktionen](../../../ado/guide/data/visual-basic-for-applications-functions.md)

@@ -1,32 +1,32 @@
 ---
 title: Parameters-Auflistung, Eigenschaft Befehlsbeispiel (VB) | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Command property [ADOX], Visual Basic example
 ms.assetid: 7df1089e-69b7-476e-9244-19947c087351
-caps.latest.revision: 
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d746f1f1ad92a215440ac9b1d3a3e74a24212df8
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 34e551dccdd6e8f688fc0a7214e096c67ee3f091
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="parameters-collection-command-property-example-vb"></a>Parameters-Auflistung, Eigenschaft Befehlsbeispiel (VB)
 Der folgende Code veranschaulicht, wie die [Befehl](../../../ado/reference/adox-api/command-property-adox.md) Eigenschaft mit dem [Befehl](../../../ado/reference/ado-api/command-object-ado.md) Parameterinformationen für die Prozedur abzurufenden Objekts.  

@@ -1,17 +1,17 @@
 ---
 title: RDS (RDS) | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - DataControl
@@ -19,16 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - DataControl object [ADO]
 ms.assetid: d85ea4fc-451c-436e-97b8-58f92b149dd0
-caps.latest.revision: 
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d7b3e0927f902f52138cdb37091df14652845fa4
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 88fa818b04e55e7d6ad8c8c1c8d984e5cd0680bf
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="datacontrol-object-rds"></a>RDS (RDS)
 Bindet eine Datenabfrage [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) an eine oder mehrere Steuerelemente (z. B. ein Textfeld, ein Datenraster-Steuerelement oder ein Kombinationsfeld) zum Anzeigen der **Recordset** Daten auf einer Webseite.  
@@ -58,7 +58,7 @@ Bindet eine Datenabfrage [Recordset](../../../ado/reference/ado-api/recordset-ob
  Alle Eigenschaften in der **RDS. DataControl** sind optional, da der benutzerdefinierten Geschäftsobjekte ihre Funktionalität ersetzen können.  
   
 > [!NOTE]
->  Wenn Sie mehrere Ergebnisse Abfragen nur die ersten [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) zurückgegeben wird. Wenn mehrere Resultsets benötigt werden, weisen Sie jedes Element einen eigenen **DataControl**. Ein Beispiel für eine Abfrage für mehrere Ergebnisse kann Folgendes sein:`"Select * from Authors, Select * from Topics"`  
+>  Wenn Sie mehrere Ergebnisse Abfragen nur die ersten [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) zurückgegeben wird. Wenn mehrere Resultsets benötigt werden, weisen Sie jedes Element einen eigenen **DataControl**. Ein Beispiel für eine Abfrage für mehrere Ergebnisse kann Folgendes sein: `"Select * from Authors, Select * from Topics"`  
   
  Hinzufügen von "DFMode = 20;" zur Verbindungszeichenfolge bei der Verwendung der **RDS. DataControl** Objekt kann die Leistung Ihres Servers verbessern, bei der Aktualisierung von Daten. Mit dieser Einstellung wird die **RDSServer.DataFactory** Objekt auf dem Server verwendet einen Modus weniger ressourcenintensiv. Die folgenden Funktionen sind jedoch nicht in dieser Konfiguration verfügbar:  
   

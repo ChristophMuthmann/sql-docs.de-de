@@ -1,35 +1,35 @@
 ---
 title: ConnectionTimeout-Eigenschaft (ADO) | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - Connection15::ConnectionTimeout
 helpviewer_keywords:
 - ConnectionTimeout property [ADO]
 ms.assetid: 8904a403-1383-4b4b-b53d-5c01d6f5deac
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 61efa2fd5ab730f9cf5373a72e58209c25134bc4
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 2afc58e30418e7725a08baf5be72eeac9ad0ccf9
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
-# <a name="connectiontimeout-property-ado"></a>ConnectionTimeout Property (ADO)
+# <a name="connectiontimeout-property-ado"></a>ConnectionTimeout-Eigenschaft (ADO)
 Gibt an, wie lange gewartet wird, beim Herstellen einer Verbindung, bevor der Versuch beendet und ein Fehler generiert.  
   
 ## <a name="settings-and-return-values"></a>Einstellungen und Rückgabewerte  

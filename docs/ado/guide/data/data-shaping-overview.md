@@ -1,30 +1,30 @@
 ---
-title: "Übersicht über die Strukturierung Daten | Microsoft Docs"
-ms.prod: sql-non-specified
+title: Übersicht über die Strukturierung Daten | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - data shaping [ADO], overview
 ms.assetid: 4cb5fd29-4e56-46ac-ae48-a6771c321c0c
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c5ebd3d67ffc5c3f3aba0f481182c5812f4523a5
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 34d9ee09d74ca1907f293dab73189b172db73de0
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="data-shaping-overview"></a>Daten strukturieren (Übersicht)
 *Strukturieren von Daten* bedeutet hierarchische Beziehungen zwischen mindestens zwei logische Entitäten in einer Abfrage zu erstellen. Die Hierarchie sehen in über-/ unterordnungsbeziehungen zwischen einem Datensatz einer [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md), und einen oder mehrere Datensätze (auch bekannt als Kapitel) eines anderen **Recordset**. In einer über-/ unterordnungsbeziehung, die das übergeordnete Element **Recordset** enthält das untergeordnete Element **Recordset**. Ein Beispiel für eine hierarchische Beziehung ist Customers und Orders. Für jeden Kunden in einer Datenbank können NULL oder mehr Aufträge vorhanden sein. Die hierarchische Beziehung kann rekursiv sein, was bedeutet, dass zwei Ebenen untergeordneten Datensätze in einen untergeordneten Datensatz geschachtelt werden können. Im Prinzip kann ein hierarchischer Datensatz Anzeigetiefe geschachtelt werden. In der Praxis ADO schränkt die Rekursion bis maximal 512 **Recordset**s.  

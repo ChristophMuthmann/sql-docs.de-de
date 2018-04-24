@@ -1,31 +1,31 @@
 ---
-title: "Vorwärtscursor | Microsoft Docs"
-ms.prod: sql-non-specified
+title: Vorwärtscursor | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - cursors [ADO], forward-only
 - forward-only cursors [ADO]
 ms.assetid: 2b1e062f-3294-4a6f-8241-a17045c4df18
-caps.latest.revision: 
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b84ab8335e94adecf130fd2301f697a02eceee37
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 90ca5c097080d09276bc66754264fcf6ada658ea
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="forward-only-cursors"></a>Vorwärtscursor
 Der übliche Standardnamespace Cursortyp, bezeichnet einen Cursor Vorwärtscursor (oder nicht scrollfähige) kann über das Resultset nur vorwärts bewegen. Ein Vorwärtscursor unterstützt keine Bildläufe (die Möglichkeit, im Resultset vorwärts und rückwärts zu bewegen); Es unterstützt nur das Abrufen von Zeilen vom Anfang bis zum Ende des Resultsets. Mit einigen Vorwärtscursor (z. B. mit der SQL Server-Cursorbibliothek), werden alle INSERT-, Update- und Delete-Anweisungen, die aktuelle Benutzer (oder anderer Benutzer ausgeführt werden), dass Zeilen im Resultset auswirken angezeigt werden, wenn die Zeilen abgerufen werden. Da sich der Cursor nicht rückwärts gescrollt werden kann, sind jedoch Änderungen an Zeilen in der Datenbank vorgenommen wurden, nachdem die jeweilige Zeile abgerufen wurde nicht über den Cursor sichtbar.  

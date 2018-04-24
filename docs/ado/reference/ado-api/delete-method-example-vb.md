@@ -1,32 +1,32 @@
 ---
-title: "Löschen von Methodenbeispiel (VB) | Microsoft Docs"
-ms.prod: sql-non-specified
+title: Löschen von Methodenbeispiel (VB) | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Delete method [ADO], Visual Basic example
 ms.assetid: 0c80e71b-9e3f-4d05-ab2a-9e78798dad88
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8ded21b30930614fc0df71f8f9f5b74714227365
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: e701190eca1d6ac8aaef6ea0a0018d106ea78bb6
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="delete-method-example-vb"></a>Löschen von Methodenbeispiel (VB)
 Dieses Beispiel verwendet die [löschen](../../../ado/reference/ado-api/delete-method-ado-recordset.md) -Methode entfernt einen angegebenen Datensatz aus einem [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  

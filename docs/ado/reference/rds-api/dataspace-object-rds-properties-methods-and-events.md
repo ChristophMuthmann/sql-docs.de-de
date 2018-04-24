@@ -1,31 +1,31 @@
 ---
 title: Datenspeicher (RDS) Objekteigenschaften, Methoden und Ereignisse | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 helpviewer_keywords:
 - DataSpace object [RDS], members
 ms.assetid: c4a1f2e7-19ff-465e-9d9a-275ac0f4dc6a
-caps.latest.revision: 
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d0eaa3d6d8695d2c8454a324513fea458e6f72a1
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 5ac7b5195587ef7fcdb280a90f1ed5ce19a1f731
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="dataspace-object-rds-properties-methods-and-events"></a>Datenspeicher (RDS) Objekteigenschaften, Methoden und Ereignisse
 > [!IMPORTANT]

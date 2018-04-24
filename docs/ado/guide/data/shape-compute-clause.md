@@ -1,32 +1,32 @@
 ---
 title: Form von COMPUTE-Klausel | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - shape commands [ADO]
 - compute clause [ADO]
 - data shaping [ADO], COMPUTE clause
 ms.assetid: 3fdfead2-b5ab-4163-9b1d-3d2143a5db8c
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 53ebeab9edfa1d9fc339f080d4a9de995053f77a
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 5a157d7d77bd6beefae7c3258039953c5e5e4995
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="shape-compute-clause"></a>Shape-COMPUTE-Klausel
 Eine Form "COMPUTE-Klausel generiert ein übergeordnetes Element **Recordset**, einen Verweis auf das untergeordnete Element, dessen Spalten bestehen aus **Recordset**; Dies ist optional Spalten, deren Inhalt neue, Kapitel oder berechnete Spalten werden, oder die Ergebnis der Ausführung von Aggregatfunktionen auf dem untergeordneten Element **Recordset** oder eine zuvor geformten **Recordset**; und alle Spalten aus den untergeordneten **Recordset** abgelesen Das optionale BY-Klausel.  
@@ -89,7 +89,7 @@ SHAPE {select * from Orders} AS orders             COMPUTE orders, SUM(orders.Or
 |OR|Medford|200,000|  
 |OR|Portland|400,000|  
 |CA|Los Angeles|800,000|  
-|CA|San Diego|600,000|  
+|CA|SAN Diego|600,000|  
 |WA|Tacoma|500,000|  
 |OR|Corvallis|300,000|  
   
@@ -122,7 +122,7 @@ rst.Open  "SHAPE {select * from demographics} AS rs "  & _
 |Status|Ort|Auffüllung|  
 |-----------|----------|----------------|  
 |CA|Los Angeles|800,000|  
-|CA|San Diego|600,000|  
+|CA|SAN Diego|600,000|  
   
 ## <a name="child2"></a>Child2  
   

@@ -19,16 +19,17 @@ helpviewer_keywords:
 - historical information [SQL Server], jobs
 - displaying job history
 ms.assetid: 3bbd1556-abdb-48a3-b249-546eace76343
-caps.latest.revision: ''
+caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4fdfbb2e9ea8bfbeaa49857467a4f0ff4815d645
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: aba88bd0bb8ae14a207f5b33baca98cf8bb47b42
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="view-the-job-history"></a>View the Job History
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

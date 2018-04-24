@@ -1,30 +1,30 @@
 ---
-title: "Schützen von RDS | Microsoft Docs"
-ms.prod: sql-non-specified
+title: Schützen von RDS | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - RDS security [ADO]
 ms.assetid: 82fb1330-d6c6-4c17-ad3e-d417ff822b25
-caps.latest.revision: 
+caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2d36700bc704f575d69207398499823a173b4f58
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: a2ca5439c462cb8a81738e518f58832083c6a7e9
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="securing-rds-applications"></a>Schützen von RDS
 Dieses Thema enthält Sicherheitsinformationen für RDS.  

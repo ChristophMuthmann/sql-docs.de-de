@@ -1,17 +1,17 @@
 ---
 title: WillChangeRecordset- und RecordsetChangeComplete-Ereignisse (ADO) | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - Recordset::RecordsetChangeComplete
@@ -22,16 +22,16 @@ helpviewer_keywords:
 - RecordsetChangeComplete event [ADO]
 - WillChangeRecordset event [ADO]
 ms.assetid: d5d44659-e0d9-46d9-a297-99c43555082f
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b720776cd7c230e55e77cb37f7a66de3ad6772b6
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: d6695b7b7b2f6d750c1291c4fdea02de76a5e303
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="willchangerecordset-and-recordsetchangecomplete-events-ado"></a>WillChangeRecordset- und RecordsetChangeComplete-Ereignisse (ADO)
 Die **WillChangeRecordset** Ereignis wird aufgerufen, bevor ein ausstehender Vorgang ändert die [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md). Die **RecordsetChangeComplete** Ereignis wird aufgerufen, nachdem die **Recordset** hat sich geändert.  

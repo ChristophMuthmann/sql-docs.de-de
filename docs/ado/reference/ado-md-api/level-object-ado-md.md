@@ -1,33 +1,33 @@
 ---
 title: Level-Objekt (ADO MD) | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - Level
 helpviewer_keywords:
 - Level object [ADO MD]
 ms.assetid: 37815869-ed30-45fd-9aea-0a986c1b305c
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f690e2efc97b4da9ea588e5028055fb758b93a48
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: e01d18edab653fd79a4b5122b8270d5b894feddd
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="level-object-ado-md"></a>Ebenenobjekt (ADO MD)
 Enthält eine Menge von Elementen, von die jedes denselben Rang innerhalb einer Hierarchie besitzt.  

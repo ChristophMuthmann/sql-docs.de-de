@@ -1,31 +1,31 @@
 ---
 title: Adresse Buch Datenbindungsfunktionen Objekt | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - RDS scenarios [ADO], data-binding object
 - address book application scenario [ADO], data-binding object
 ms.assetid: 080c1925-d453-4b89-92ac-c93591490518
-caps.latest.revision: 
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9689d8c41a899c9446f3f21ede83ea88c68b77a3
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 353e086d8350364a07486eba2334c76b470237db
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="address-book-data-binding-object"></a>Adressobjekt Book-Datenbindung
 Das Adressbuch-Anwendung verwendet die [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) Objekt so binden Sie Daten aus der SQL Server-Datenbank auf ein visuelles Objekt (in diesem Fall eine DHTML-Tabelle) in der Anwendung Client HTML-Seite. Ereignisgesteuerte VBScript-Programmlogik verwendet die [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) an:  
@@ -68,7 +68,7 @@ Initial Catalog=AddrBookDb;Integrated Security=SSPI;">
 |Parameter|Description|  
 |---------------|-----------------|  
 |[SERVER](../../../ado/reference/rds-api/server-property-rds.md)|Wenn Sie HTTP verwenden, wird der Wert ist der Name des Servercomputers vorangestellt `http://`.|  
-|[EINE VERBINDUNG HERSTELLEN](../../../ado/reference/rds-api/connect-property-rds.md)|Stellt die erforderlichen Verbindungsinformationen für die **RDS. DataControl** zur Verbindung mit SQL Server.|  
+|[CONNECT](../../../ado/reference/rds-api/connect-property-rds.md)|Stellt die erforderlichen Verbindungsinformationen für die **RDS. DataControl** zur Verbindung mit SQL Server.|  
 |[SQL](../../../ado/reference/rds-api/sql-property.md)|Legt fest oder gibt die Abfragezeichenfolge zum Abrufen der [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).|  
   
 ## <a name="see-also"></a>Siehe auch  

@@ -1,17 +1,17 @@
 ---
 title: Type-Eigenschaft (Spalte) (ADOX) | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - _Column::Type
@@ -22,16 +22,16 @@ f1_keywords:
 helpviewer_keywords:
 - Type property [ADOX]
 ms.assetid: 5c6718b6-f728-478a-8afb-5d17b0a91d1f
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 351f97881ab3fc50fe9caf2218ca832845db511a
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 58343ded9e02a6ba3903e39382aef7061595e1b0
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="type-property-column-adox"></a>Type-Eigenschaft (Spalte) (ADOX)
 Gibt den Datentyp einer Spalte an.  

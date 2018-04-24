@@ -1,33 +1,33 @@
 ---
 title: Dimension-Objekt (ADO MD) | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - Dimension
 helpviewer_keywords:
 - Dimension object [ADO MD]
 ms.assetid: 66adbbd2-23a3-4c19-a91b-84c31309aa1b
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9a222c6495302f06e5fa2b8dd0e0d355869e3d40
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: e4818afd2bbf7392385c3516be1d762266cd2b60
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="dimension-object-ado-md"></a>Dimensionsobjekt (ADO MD)
 Stellt eine der Dimensionen eines mehrdimensionalen Cubes, die, die eine oder mehrere Hierarchien von Elementen enthält.  
@@ -49,7 +49,7 @@ Stellt eine der Dimensionen eines mehrdimensionalen Cubes, die, die eine oder me
 |----------|-----------------|  
 |CatalogName|Der Name des Katalogs, zu dem dieser Cube gehört.|  
 |CubeName|Der Name des Cubes.|  
-|DefaultHierarchy|Der eindeutige Name der Standardhierarchie.|  
+|Standardhierarchie|Der eindeutige Name der Standardhierarchie.|  
 |Description|Eine aussagekräftige Beschreibung des Cubes.|  
 |DimensionCaption|Eine Bezeichnung oder Beschriftung, die der Dimension zugeordnet werden soll.|  
 |DimensionCardinality|Die Anzahl der Elemente in der Dimension.|  
@@ -68,5 +68,5 @@ Stellt eine der Dimensionen eines mehrdimensionalen Cubes, die, die eine oder me
  [CubeDef-Beispiel (VBScript)](../../../ado/reference/ado-md-api/cubedef-example-vbscript.md)   
  [CubeDef-Objekt (ADO MD)](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)   
  [Auflistung von Dimensionen (ADO MD)](../../../ado/reference/ado-md-api/dimensions-collection-ado-md.md)   
- [Hierarchies Collection (ADO MD)](../../../ado/reference/ado-md-api/hierarchies-collection-ado-md.md)   
+ [Hierarchies-Auflistung (ADO MD)](../../../ado/reference/ado-md-api/hierarchies-collection-ado-md.md)   
  [Properties-Collection (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)

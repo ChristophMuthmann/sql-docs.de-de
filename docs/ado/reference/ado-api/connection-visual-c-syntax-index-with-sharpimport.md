@@ -1,33 +1,33 @@
 ---
 title: 'Verbindung (Visual C++-Syntax Index mit #import) | Microsoft Docs'
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 dev_langs:
 - C++
 helpviewer_keywords:
 - 'Connection collection [ADO], Visual C++ syntax index with #import'
 ms.assetid: 03f47eda-840d-4cab-83d9-ccddd873f342
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 840e50f51f2fdb2853f80634941eb883576457e8
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 68c29cbe04fc0f4c9473c0cf61114cfe5aa2ff67
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="connection-visual-c-syntax-index-with-import"></a>Verbindung (Visual C++-Syntax Index mit #import)
 ## <a name="methods"></a>Methoden  

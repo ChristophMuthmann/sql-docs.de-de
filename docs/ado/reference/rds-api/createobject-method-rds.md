@@ -1,31 +1,31 @@
 ---
 title: CreateObject-Methode (RDS) | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 helpviewer_keywords:
 - CreateObject method [ADO]
 ms.assetid: dec96be6-0b31-4953-9c9a-e962b5afcd18
-caps.latest.revision: 
+caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: aeca3cd5d525a3712511a3d7fd59f82210c041e0
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 355c56509e8c06b0d687e5d6164cf0e7c4abe93c
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="createobject-method-rds"></a>CreateObject-Methode (RDS)
 Erstellt den Proxy für das Zielobjekt für Business und gibt einen Zeiger darauf zurück. Die Proxy-Pakete und marshallt Daten an den serverseitigen Stub für die Kommunikation mit dem Business-Objekt zum Senden von Anforderungen und Daten über das Internet. Für Objekte der in-Process-Komponente keine Proxys verwendet werden, nur ein Zeiger auf das Objekt wird bereitgestellt.  
@@ -38,10 +38,10 @@ Erstellt den Proxy für das Zielobjekt für Business und gibt einen Zeiger darau
   
 |Protokoll|Syntax|  
 |--------------|------------|  
-|HTTP|Set object = DataSpace.CreateObject("ProgId", "http://awebsrvr")|  
-|HTTPS|Set object = DataSpace.CreateObject("ProgId", "https://awebsrvr")|  
-|DCOM|Set object = DataSpace.CreateObject("ProgId", "computername")|  
-|In-Process|Set object = DataSpace.CreateObject("ProgId", "")|  
+|HTTP|Satzobjekt = DataSpace.CreateObject ("ProgId", "http://awebsrvr")|  
+|HTTPS|Satzobjekt = DataSpace.CreateObject ("ProgId", "https://awebsrvr")|  
+|DCOM|Satzobjekt = DataSpace.CreateObject ("ProgId", "Computername")|  
+|In-Process|Satzobjekt = DataSpace.CreateObject ("ProgId", "")|  
   
 ## <a name="parameters"></a>Parameter  
  *Objekt*  

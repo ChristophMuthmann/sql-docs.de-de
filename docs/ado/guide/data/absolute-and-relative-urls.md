@@ -1,32 +1,32 @@
 ---
 title: Absoluten und relativen URLs | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - relative URLs [ADO]
 - absolute URLs [ADO]
 - URLs [ADO]
 ms.assetid: 6a34a7ef-50cc-4c3d-82f7-106b9a8f3caf
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3564236b7b6bee2ae21f1b78a4275fb615aa2e4e
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 2482386f131b7e49134b5fdcbfaae7d0ec339b74
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="absolute-and-relative-urls"></a>Absoluten und relativen URLs
 Eine URL gibt den Speicherort der ein Ziel auf einem Computer lokal oder im Netzwerk gespeichert. Das Ziel kann eine Datei, Verzeichnis, HTML-Seite, Bild, Programm usw.*.*  
@@ -39,7 +39,7 @@ Eine URL gibt den Speicherort der ein Ziel auf einem Computer lokal oder im Netz
   
  Eine relative URL in der Regel besteht ausschließlich aus der *Pfad*, und optional die *Ressource*, aber keine *Schema* oder *Server*. In den folgenden Tabellen definieren die einzelnen Bestandteile von der vollständigen URL-Format.  
   
- *scheme*  
+ *Partitionsschema*  
  Gibt an, wie die *Ressource* erfolgen muss.  
   
  *server*  
@@ -96,5 +96,5 @@ recordset.Open "", "URL=http://YourServer/Winnt/",,,adCmdTableDirect
   
 ## <a name="see-also"></a>Siehe auch  
  [Verbindungsobjekt (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
- [Record Object (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
+ [Das Datensatzobjekt (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
  [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

@@ -1,17 +1,17 @@
 ---
 title: Properties-Auflistung (ADO) | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - _ADO::get_Properties
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - Properties collection [ADO]
 ms.assetid: 1d539aa8-ce0d-4418-ab03-8d0a3c1e9d82
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5652eb78750806f916d510e4558f12aa6718b30d
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: ff2263878757708306f4eca0f2475cc77f7ac04a
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="properties-collection-ado"></a>Properties-Auflistung (ADO)
 Enthält alle der [Eigenschaft](../../../ado/reference/ado-api/property-object-ado.md) Objekte für eine bestimmte Instanz eines Objekts.  

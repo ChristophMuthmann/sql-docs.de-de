@@ -1,39 +1,16 @@
-<DTAXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/sqlserver/2004/07/dta">
-  <metadata xmlns="">
-    <meta name="ms.openlocfilehash" value="fbfbde3078a0d2e5a3e884b97dedc076b5c9cf7a" />
-    <meta name="ms.sourcegitcommit" value="9678eba3c2d3100cef408c69bcfe76df49803d63" />
-    <meta name="ms.translationtype" value="MT" />
-    <meta name="ms.contentlocale" value="de-DE" />
-    <meta name="ms.lasthandoff" value="11/09/2017" />
-  </metadata>
-  <DTAInput>
-    <Server>
-      <Name>MyServerName</Name>
-      <!-- To tune multiplate databases, list them and their associated tables in the following section. -->
-      <Database>
-        <Name>MyDatabaseName</Name>
-        <Schema>
-          <Name>MyDatabaseSchemaName</Name>
-          <!-- You can list as many tables as necessary in the following section. -->
-          <Table>
-            <Name>MyTableName1</Name>
-          </Table>
-          <Table>
-            <Name>MyTableName2</Name>
-          </Table>
-        </Schema>
-      </Database>
-    </Server>
-    <Workload>
-      <!-- The following element specifies a workload file, which can be a trace file or a Transact-SQL script file. -->
-      <File>c:\PathToYourWorkloadFile</File>
-    </Workload>
-    <TuningOptions>
-      <TuningTimeInMin>60</TuningTimeInMin>
-      <FeatureSet>IDX_IV</FeatureSet>
-      <Partitioning>NONE</Partitioning>
-      <KeepExisting>NONE</KeepExisting>
-      <OnlineIndexOperation>OFF</OnlineIndexOperation>
-    </TuningOptions>
-  </DTAInput>
-</DTAXML>
+<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" original="simple-xml-input-file-sa_1.xml" source-language="en-US" target-language="de-DE">
+    <header>
+      <tool tool-id="mdxliff" tool-name="mdxliff" tool-version="1.0-71b872e" tool-company="Microsoft" />
+      <xliffext:skl_file_name xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">24bf6c48-3d38-4340-bf08-88bf340edf45fbfbde3078a0d2e5a3e884b97dedc076b5c9cf7a.skl</xliffext:skl_file_name>
+      <xliffext:version xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">1.2</xliffext:version>
+      <xliffext:ms.openlocfilehash xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">fbfbde3078a0d2e5a3e884b97dedc076b5c9cf7a</xliffext:ms.openlocfilehash>
+      <xliffext:ms.sourcegitcommit xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">9678eba3c2d3100cef408c69bcfe76df49803d63</xliffext:ms.sourcegitcommit>
+      <xliffext:ms.lasthandoff xmlns:xliffext="urn:microsoft:content:schema:xliffextensions">11/09/2017</xliffext:ms.lasthandoff>
+    </header>
+    <body>
+      <group id="content" extype="content" />
+    </body>
+  </file>
+</xliff>

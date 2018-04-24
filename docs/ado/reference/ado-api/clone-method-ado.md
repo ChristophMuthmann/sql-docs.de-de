@@ -1,17 +1,17 @@
 ---
 title: Clone-Methode (ADO) | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - Recordset20::Clone
@@ -19,16 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - Clone method [ADO]
 ms.assetid: ad49265f-1c05-4271-9bbf-7c00010ac18c
-caps.latest.revision: 
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: db5785a40527f4f85558961068d2cb67eeabbfbc
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 6b3914edd6127a76903f52c0c186c28e533ce4b1
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="clone-method-ado"></a>Clone-Methode (ADO)
 Erstellt ein Duplikat [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekt aus einer vorhandenen **Recordset** Objekt. Optional gibt an, dass der Klon schreibgeschützt ist.  

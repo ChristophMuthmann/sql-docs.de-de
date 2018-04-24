@@ -1,17 +1,17 @@
 ---
 title: Columns-Auflistung (ADOX) | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - Index::Columns
@@ -21,16 +21,16 @@ f1_keywords:
 helpviewer_keywords:
 - Columns collection [ADOX]
 ms.assetid: 23b9fea8-4f76-4a51-95ce-1a6ce4560b34
-caps.latest.revision: 
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: afacdd2d86d25382c6026dba8d3deda55d05c99a
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 55a18cf99276b50cf623944a2318d1484f50ea3f
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="columns-collection-adox"></a>Columns-Auflistung (ADOX)
 Enthält alle [Spalte](../../../ado/reference/adox-api/column-object-adox.md) Objekte von einer Tabelle, Index oder Schlüssel.  

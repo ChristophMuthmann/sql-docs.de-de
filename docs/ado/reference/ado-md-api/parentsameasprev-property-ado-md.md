@@ -1,17 +1,17 @@
 ---
-title: ParentSameAsPrev Property (ADO MD) | Microsoft Docs
-ms.prod: sql-non-specified
+title: ParentSameAsPrev-Eigenschaft (ADO MD) | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - ParentSameAsPrev
@@ -19,18 +19,18 @@ f1_keywords:
 helpviewer_keywords:
 - ParentSameAsPrev property [ADO MD]
 ms.assetid: 510842e0-e8dc-4b33-9517-bd1c6df0cf3c
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3fef78fc9764a98f6cf2f2cb19e72816926480d0
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 8945882c98af6a452c328c00a39af07c98ad7763
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
-# <a name="parentsameasprev-property-ado-md"></a>ParentSameAsPrev Property (ADO MD)
+# <a name="parentsameasprev-property-ado-md"></a>ParentSameAsPrev-Eigenschaft (ADO MD)
 Gibt an, ob das übergeordnete Element von dieser Position [Member](../../../ado/reference/ado-md-api/member-object-ado-md.md) ist das übergeordnete Element des unmittelbar vorangehenden Elements entspricht.  
   
 ## <a name="return-values"></a>Rückgabewerte  

@@ -1,30 +1,30 @@
 ---
 title: Verbindungs-Objekteigenschaften, Methoden und Ereignisse | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Connection object [ADO], members
 ms.assetid: f571b74d-b796-4009-9c66-6a36ab995a2a
-caps.latest.revision: 
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e96ada9caa9c455ea67e677592151780bf9f67ef
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 78173778b52fe6dfaf1a03b0c8c541d86027fa63
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="connection-object-properties-methods-and-events"></a>Verbindungs-Objekteigenschaften, Methoden und Ereignisse
 ## <a name="propertiescollections"></a>Eigenschaften-Sammlungen  

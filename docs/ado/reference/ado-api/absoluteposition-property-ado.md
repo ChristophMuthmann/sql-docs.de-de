@@ -1,33 +1,33 @@
 ---
 title: AbsolutePosition-Eigenschaft (ADO) | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - Recordset15::AbsolutePosition
 helpviewer_keywords:
 - AbsolutePosition property [ADO]
 ms.assetid: 79f8ee5e-fc70-46d8-8c29-ebf943c66592
-caps.latest.revision: 
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e2d1df667bb580d451e527e458d83703940483f4
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 8d87b4b2295b3798f3c9179bd1ebc3cfdaa99e16
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="absoluteposition-property-ado"></a>AbsolutePosition-Eigenschaft (ADO)
 Gibt die Ordnungsposition einer [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) aktuellen Datensatz des Objekts.  

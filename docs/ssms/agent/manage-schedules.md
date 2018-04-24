@@ -15,16 +15,17 @@ ms.topic: article
 f1_keywords:
 - sql13.ag.job.manageschedules.f1
 ms.assetid: f56c0736-dccc-41d2-afcf-71344aff143a
-caps.latest.revision: ''
+caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 631e4d3d3b3a97ca2b80c5e21f04b12d4238a8b5
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 2c94550a2ef4f6ab3206462350314e575ca8a6e2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="manage-schedules"></a>Zeitpläne verwalten
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

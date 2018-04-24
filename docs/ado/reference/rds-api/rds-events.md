@@ -2,29 +2,29 @@
 title: RDS-Ereignisse | Microsoft Docs
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.component: reference
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - events [ADO], RDS
 - RDS events [ADO]
 ms.assetid: e03739e0-8169-46d6-9956-556b644a7645
-caps.latest.revision: 
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ac3d6acd41d4b911d87c925e7949d39e441a0351
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: cc8c60289c5990ae54754c9d31d68970d7f2f7b4
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="rds-events"></a>RDS-Ereignisse
 > [!IMPORTANT]
@@ -32,7 +32,7 @@ ms.lasthandoff: 02/09/2018
   
 |||  
 |-|-|  
-|[onError (RDS)](../../../ado/reference/rds-api/onerror-event-rds.md)|Wird aufgerufen, wenn während eines Vorgangs ein Fehler auftritt.|  
-|[onReadyStateChange (RDS)](../../../ado/reference/rds-api/onreadystatechange-event-rds.md)|Wird aufgerufen, wenn der Wert der **ReadyState** -Eigenschaft ändert.|
+|[OnError (RDS)](../../../ado/reference/rds-api/onerror-event-rds.md)|Wird aufgerufen, wenn während eines Vorgangs ein Fehler auftritt.|  
+|["onreadystatechange" (RDS)](../../../ado/reference/rds-api/onreadystatechange-event-rds.md)|Wird aufgerufen, wenn der Wert der **ReadyState** -Eigenschaft ändert.|
 
 

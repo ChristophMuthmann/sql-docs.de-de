@@ -1,36 +1,36 @@
 ---
 title: Vor dem Installieren des Failoverclusterings | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 08/24/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: failover-clusters
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - setup-install
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - clusters [SQL Server], preinstallation checklist
 - installing failover clusters
 - failover clustering [SQL Server], preinstallation checklist
 ms.assetid: a655225d-8c54-4b30-95fd-31f588167899
-caps.latest.revision: 
+caps.latest.revision: 141
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ad89b5180e55bbbcdde55e2856588ca46695baa1
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 61839a9371b86805b6b939c2b6fbe0f86d42c64e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="before-installing-failover-clustering"></a>Vor dem Installieren des Failoverclusterings
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Bevor Sie einen SQL Server-Failovercluster installieren, müssen Sie die Hardware und das Betriebssystem auswählen, unter dem SQL Server ausgeführt werden soll. Außerdem müssen Sie das Windows Server Failover Clustering (WSFC) konfigurieren und Überlegungen zu Netzwerk, Sicherheit und anderer Software überprüfen, die auf dem Failovercluster ausgeführt werden soll.  
+  Bevor Sie einen SQL Server-Failovercluster installieren, müssen Sie die Hardware und das Betriebssystem auswählen, unter dem SQL Server ausgeführt werden soll. Außerdem müssen Sie das Windows Server Failover Clustering (WSFC) konfigurieren und Überlegungen zu Netzwerk, Sicherheit und anderer Software überprüfen, die auf dem Failovercluster ausgeführt werden soll.  
   
  Wenn ein Windows-Cluster über ein lokales Laufwerk verfügt und der zugehörige Laufwerkbuchstabe auch für mindestens einen Clusterknoten als freigegebenes Laufwerk verwendet wird, kann [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] auf diesem Laufwerk nicht installiert werden.  
   
@@ -212,7 +212,7 @@ Bevor Sie einen SQL Server-Failovercluster installieren, müssen Sie die Hardwar
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Failovercluster stellt bei einem Failover mithilfe des Windows Server-Failoverclusters sicher, dass die IP-Abhängigkeitsbedingungen gültig sind.  
   
--   [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] erfordert, dass sich alle Clusterserver in der gleichen Active Directory-Domäne befinden. Daher müssen sich alle Clusterknoten eines [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Multisubnetz-Failoverclusters in der gleichen Active Directory-Domäne befinden, auch wenn sie Teil unterschiedlicher Subnetze sind.  
+-   [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] erfordert, dass sich alle Clusterserver in der gleichen Active Directory-Domäne befinden. Daher müssen sich alle Clusterknoten eines [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Multisubnetz-Failoverclusters in der gleichen Active Directory-Domäne befinden, auch wenn sie Teil unterschiedlicher Subnetze sind.  
   
 #### <a name="ip-address-and-ip-address-resource-dependencies"></a>IP-Adressen und Abhängigkeiten von IP-Adressressourcen  
   

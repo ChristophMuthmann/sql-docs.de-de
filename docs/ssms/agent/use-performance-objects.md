@@ -28,11 +28,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 73a727c385ce24f9d1490de52e1e563510d3dfa5
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: d5033120057e83f6fd155466a35188be04068ef6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="use-performance-objects"></a>Verwenden von Leistungsobjekten
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -48,7 +49,7 @@ Die folgende Tabelle veranschaulicht, wie die Leistungsobjekte des [!INCLUDE[ssN
   
 |Instanztyp|Objektname|  
 |-----------------|---------------|  
-|Standardwert|**SQLAgent:***Objekt*:*Zähler*|  
+|Default|**SQLAgent:***Objekt*:*Zähler*|  
 |Benannt|**SQLAgent$**<br /> ***Instanzname*:***Objekt*:*Zähler*|  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] beinhaltet die folgenden Leistungsobjekte für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Agent.  
@@ -60,7 +61,7 @@ Die folgende Tabelle veranschaulicht, wie die Leistungsobjekte des [!INCLUDE[ssN
 |[SQLAgent:Warnungen](http://msdn.microsoft.com/en-us/e5e37f74-ee88-46d0-ad8f-71fd1b1fa64a)|Informationen zur Anzahl der Warnungen und Benachrichtigungen|  
 |[SQLAgent:Statistik](http://msdn.microsoft.com/en-us/ebe92bfa-0721-48aa-9ba6-e7904ad265a1)|Allgemeine Leistungsinformationen|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Überwachen und Optimieren der Leistung](http://msdn.microsoft.com/en-us/87f23f03-0f19-4b2e-bfae-efa378f7a0d4)  
 [Vorgehensweise: Starten des Systemmonitors (Windows)](http://msdn.microsoft.com/en-us/5e51bb79-5737-470b-9c47-fac330c001c5)  
   

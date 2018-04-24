@@ -1,32 +1,32 @@
 ---
 title: IndexNulls-Eigenschaft (VC++-Beispiel) | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - IndexNulls property [ADOX], VC++ example
 ms.assetid: ee407e03-4889-4a22-b031-ca542d637c96
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5f95c5468b61a37649a3fd8e11529ac70d76298b
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 51b185c22f36a7a878639e1d4871e2f4e1a584a1
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="indexnulls-property-example-vc"></a>IndexNulls-Eigenschaft (VC++-Beispiel)
 Dieses Beispiel zeigt die [IndexNulls](../../../ado/reference/adox-api/indexnulls-property-adox.md) Eigenschaft ein [Index](../../../ado/reference/adox-api/index-object-adox.md). Der Code erstellt einen neuen Index und legt den Wert des **IndexNulls** basierend auf Benutzereingaben. Anschließend wird die **Index** wird angefügt, um die **Mitarbeiter** [Tabelle](../../../ado/reference/adox-api/table-object-adox.md) in der *Northwind* [Katalog](../../../ado/reference/adox-api/catalog-object-adox.md). Die neue **Index** wird angewendet, um eine [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) basierend auf der **Mitarbeiter** Tabelle, und die **Recordset** wird geöffnet. Ein neuer Datensatz hinzugefügt wird die **Mitarbeiter** Tabelle mit einer **Null** Wert des indizierten Felds. Gibt an, ob diese neue Datensatz angezeigt wird, hängt davon ab, die Einstellung von der **IndexNulls** Eigenschaft.  

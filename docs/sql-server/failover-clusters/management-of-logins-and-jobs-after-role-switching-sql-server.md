@@ -18,16 +18,17 @@ ms.assetid: fc2fc949-746f-40c7-b5d4-3fd51ccfbd7b
 caps.latest.revision: 25
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ff1ff9689876177cb55aaeea6689e49a478fd6d2
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 8829a826c0e31d1c37cf7b65478cbd781cf89d0c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="management-of-logins-and-jobs-after-role-switching-sql-server"></a>Verwaltung von Anmeldenamen und Aufträgen nach einem Rollenwechsel (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Bei der Bereitstellung einer Lösung für hohe Verfügbarkeit oder Notfallwiederherstellung für eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank ist wichtig, relevante Informationen, die in der **master**- oder **msdb**-Datenbank für die Datenbank gespeichert sind, zu reproduzieren. Zu relevanten Informationen gehören normalerweise die Aufträge der primären/Prinzipaldatenbank sowie die Anmeldenamen der Benutzer oder Prozesse, die eine Verbindung mit der Datenbank herstellen müssen. Diese Informationen sollten auf jeder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz dupliziert werden, die eine sekundäre/Spiegeldatenbank hostet. Nach dem Rollenwechsel sollten die Informationen möglichst in der neuen primären/Prinzipaldatenbank programmgesteuert reproduziert werden.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Bei der Bereitstellung einer Lösung für hohe Verfügbarkeit oder Notfallwiederherstellung für eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank ist es wichtig, relevante Informationen, die in der **master** - oder **msdb** -Datenbank für die Datenbank gespeichert sind, zu reproduzieren. Zu relevanten Informationen gehören normalerweise die Aufträge der primären/Prinzipaldatenbank sowie die Anmeldenamen der Benutzer oder Prozesse, die eine Verbindung mit der Datenbank herstellen müssen. Diese Informationen sollten auf jeder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz dupliziert werden, die eine sekundäre/Spiegeldatenbank hostet. Nach dem Rollenwechsel sollten die Informationen möglichst in der neuen primären/Prinzipaldatenbank programmgesteuert reproduziert werden.  
   
 ## <a name="logins"></a>Anmeldungen  
  Anmeldenamen, denen eine Berechtigung für den Zugriff auf die Prinzipaldatenbank zugewiesen wurde, sollten auf jeder Serverinstanz reproduziert werden, die eine Kopie der Datenbank hostet. Wenn die primäre/Prinzipalrolle gewechselt wird, können ausschließlich Benutzer, deren Anmeldenamen auf der neuen primären/Prinzipalserverinstanz enthalten sind, auf die neue primäre/Prinzipaldatenbank zugreifen. Benutzer, deren Anmeldenamen nicht auf der neuen primären/Prinzipalserverinstanz definiert wurden, sind verwaist und können nicht auf die Datenbank zugreifen.  
@@ -44,7 +45,7 @@ ms.lasthandoff: 12/05/2017
   
  Weitere Informationen finden Sie unter [Orphaned Users with Database Mirroring and Log Shipping](http://blogs.msdn.com/b/sqlserverfaq/archive/2009/04/13/orphaned-users-with-database-mirroring-and-log-shipping.aspx) (Verwaiste Benutzer bei Datenbankspiegelung und Protokollversand) (Blog zum Datenbankmodul).  
   
-## <a name="jobs"></a>Aufträge  
+## <a name="jobs"></a>Jobs  
  Aufträge, wie z. B. Sicherungsaufträge, erfordern besondere Aufmerksamkeit. Nach einem Rollenwechsel muss der Datenbankbesitzer oder der Systemadministrator die Aufträge für die neue primäre/Prinzipaldatenbank gewöhnlich erneut erstellen.  
   
  Wenn die frühere primäre/Prinzipalserverinstanz verfügbar ist, sollten Sie die ursprünglichen Aufträge auf dieser Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]löschen. Sie sollten beachten, dass Aufträge in der aktuellen Spiegeldatenbank fehlerhaft sind, weil sich die Datenbank im Status RESTORING befindet und dadurch nicht verfügbar ist.  
@@ -52,7 +53,7 @@ ms.lasthandoff: 12/05/2017
 > [!NOTE]  
 >  Unterschiedliche Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sind möglicherweise anders konfiguriert und verfügen u. U. über abweichende Laufwerkbuchstaben. Bei den Aufträgen für die einzelnen Partner müssen derartige Unterschiede berücksichtigt werden.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Verwalten von Metadaten beim Bereitstellen einer Datenbank auf einer anderen Serverinstanz &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)   
  [Problembehandlung bei verwaisten Benutzern &#40;SQL Server&#41;](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md)  
   

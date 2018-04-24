@@ -1,6 +1,6 @@
 ---
 title: Microsoft OLE DB-Anbieter für SQLServer | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: ado
@@ -11,7 +11,7 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.suite: sql
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - providers [ADO], OLE DB provider for SQL Server
 - OLE DB provider for SQL Server [ADO]
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 69e32ae7ddb254e18d0789f22bb6471da17a0c5e
-ms.sourcegitcommit: 9f4330a4b067deea396b8567747a6771f35e6eee
+ms.openlocfilehash: 2ec6a57af7dcc0e964445800823aef1c13aa1a4a
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="microsoft-ole-db-provider-for-sql-server-overview"></a>Microsoft OLE DB-Anbieter für SQL Server-Übersicht
 Microsoft OLE DB-Anbieter für SQL Server, SQLOLEDB, ermöglicht ADO, Microsoft SQL Server anzumelden.
@@ -158,7 +158,7 @@ EXECUTE SalesByCategory 'Produce', '1995'
 |Verbindungstimeout|DBPROP_INIT_TIMEOUT|
 |Aktuellen Katalog|DBPROP_CURRENTCATALOG|
 |Datenquelle|DBPROP_INIT_DATASOURCE|
-|Datenquellenname|DBPROP_DATASOURCENAME|
+|Datenquellenname|RÜCKGABEWERT|
 |Datenquellenobjekt Threadingmodell|DBPROP_DSOTHREADMODEL|
 |Der DBMS-Name|DBPROP_DBMSNAME|
 |DBMS-Version|DBPROP_DBMSVER|
@@ -180,7 +180,7 @@ EXECUTE SalesByCategory 'Produce', '1995'
 |Update mit mehreren Tabellen|DBPROP_MULTITABLEUPDATE|
 |NULL-Sortierung|DBPROP_NULLCOLLATION|
 |NULL-Verkettungsverhalten|DBPROP_CONCATNULLBEHAVIOR|
-|OLE DB Version|DBPROP_PROVIDEROLEDBVER|
+|OLE DB-Version|DBPROP_PROVIDEROLEDBVER|
 |Unterstützung für OLE-Objekt|DBPROP_OLEOBJECTS|
 |Öffnen Sie die Schemarowset-Unterstützung|DBPROP_OPENROWSETSUPPORT|
 |ORDER BY-Spalten in der Select-Liste|DBPROP_ORDERBYCOLUMNSINSELECT|

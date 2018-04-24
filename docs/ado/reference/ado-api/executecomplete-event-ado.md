@@ -1,17 +1,17 @@
 ---
 title: ExecuteComplete-Ereignis (ADO) | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - Connection::ExecuteComplete
@@ -19,16 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - ExecuteComplete event [ADO]
 ms.assetid: 62470d42-e511-494c-bec4-ad4591734b7b
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bda38ed41e57c84d629ff6f301575e963d893f5e
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 358d60a1e4628d46c0b261cad70e1d1efbc38edc
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="executecomplete-event-ado"></a>ExecuteComplete-Ereignis (ADO)
 Die **ExecuteComplete** Ereignis wird aufgerufen, nachdem ein Befehl beendet wurde.  

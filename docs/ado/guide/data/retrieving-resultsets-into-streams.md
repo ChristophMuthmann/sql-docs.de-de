@@ -1,32 +1,32 @@
 ---
 title: Abrufen von Resultsets in Streams | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - streams [ADO], retrieving query results
 - query results into stream [ADO]
 - retrieving results into stream [ADO]
 ms.assetid: 996c1321-c926-4f57-8297-85c8c20de974
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 34f1cc4730f984427d207162694c68e3641be575
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 16d1518d2ddbe5accc6b55fdc0b778a6381e1a5f
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="retrieving-resultsets-into-streams"></a>Abrufen von Resultsets in Streams
 Anstatt das Empfangen von Ergebnissen in der herkömmlichen **Recordset** -Objekt ADO kann stattdessen Abfrageergebnisse in einen Stream abzurufen. Das ADO **Stream** Objekt (oder andere Objekte, die die COM unterstützt **IStream** Benutzeroberfläche, z. B. die ASP **anfordern** und **Antwort** Objekte ) kann verwendet werden, um diese Ergebnisse enthalten. Eine Verwendung für diese Funktion wird zum Abrufen von Ergebnissen im XML-Format. Mit SQL Server können z. B. XML-Ergebnisse auf verschiedene Weise, wie z. B. mithilfe der FOR XML-Klausel mit einer SQL SELECT-Abfrage oder eine XPath-Abfrage zurückgegeben.  

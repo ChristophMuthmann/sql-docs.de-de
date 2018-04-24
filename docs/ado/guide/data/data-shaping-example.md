@@ -1,30 +1,30 @@
 ---
 title: Daten strukturieren Beispiel | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - data shaping [ADO], about data shaping
 ms.assetid: 1bfdcad4-52e1-45bc-ad21-783657ef0a44
-caps.latest.revision: 
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e05526425f2ee5f6a2d776439f28f0fca244d4cc
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 0685e0c593a77f5369513fa9b39fe61f89498ff4
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="data-shaping-example"></a>Daten strukturiert werden, Beispiel
 Die folgenden Daten strukturieren Befehl veranschaulicht, wie eine hierarchische erstellen **Recordset** aus der **Kunden** und **Aufträge** Tabellen in der Northwind-Datenbank.  
@@ -42,7 +42,7 @@ RELATE customerID TO customerID)
 |CustomerID|ContactName|OrderID|OrderDate|CustomerID|  
 |----------------|-----------------|-------------|---------------|----------------|  
 |ALFKI|Maria Ander|10643<br /><br /> 10692<br /><br /> 10702<br /><br /> 10835<br /><br /> 10952<br /><br /> 11011|1997-08-25<br /><br /> 1997-10-03<br /><br /> 1997-10-13<br /><br /> 1998-01-15<br /><br /> 1998-03-16<br /><br /> 1998-04-09|ALFKI<br /><br /> ALFKI<br /><br /> ALFKI<br /><br /> ALFKI<br /><br /> ALFKI<br /><br /> ALFKI|  
-|ANATR|Ana Trujillo|10308<br /><br /> 10625<br /><br /> 10759<br /><br /> 10926|1996-09-18<br /><br /> 1997-08-08<br /><br /> 1997-11-28<br /><br /> 1998-03-04|ANATR<br /><br /> ANATR<br /><br /> ANATR<br /><br /> ANATR|  
+|ANATR|ANA Trujillo|10308<br /><br /> 10625<br /><br /> 10759<br /><br /> 10926|1996-09-18<br /><br /> 1997-08-08<br /><br /> 1997-11-28<br /><br /> 1998-03-04|ANATR<br /><br /> ANATR<br /><br /> ANATR<br /><br /> ANATR|  
   
  In einer SHAPE-Befehl APPEND verwendet, um ein untergeordnetes Element erstellen **Recordset** im Zusammenhang mit der übergeordneten **Recordset** (wie aus den anbieterspezifischen-Befehl zurückgegeben, sofort nach dem Form-Schlüsselwort, die behandelt wurde früher) von der RELATE-Klausel. Die über- und untergeordneten in der Regel haben mindestens eine Spalte gemeinsam: der Wert der Spalte in einer Zeile des übergeordneten Elements ist identisch mit dem Wert der Spalte in allen Zeilen des untergeordneten Elements.  
   

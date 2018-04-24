@@ -1,32 +1,32 @@
 ---
 title: AddNew-Methode (VC++-Beispiel) | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - AddNew method [ADO], VC++ example
 ms.assetid: 9cc8774b-6711-4837-b442-959eaf79343e
-caps.latest.revision: 
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f0d21735e8def12818c037e554aaab4050fb7be4
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 7ee204cdcd73fcd5d7311454e4258c5f07a3ceac
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="addnew-method-example-vc"></a>AddNew-Methode (VC++-Beispiel)
 Dieses Beispiel verwendet die [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) Methode, um einen neuen Eintrag mit dem angegebenen Namen zu erstellen.  

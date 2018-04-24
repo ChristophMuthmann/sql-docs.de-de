@@ -1,17 +1,17 @@
 ---
 title: UpdateBatch-Methode | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - Recordset15::UpdateBatch
@@ -19,16 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - UpdateBatch method [ADO]
 ms.assetid: 23f9314c-b027-4a51-aeae-50caa2977740
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5da32525c4ff0d04c19704efd2aa04050d3db93d
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 8e57895a558021b9ea363b5af8f7c853cc286778
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="updatebatch-method"></a>UpdateBatch-Methode
 Schreibt alle ausstehenden BatchUpdates auf den Datenträger an.  
@@ -71,5 +71,5 @@ recordset.UpdateBatch AffectRecords, PreserveStatus
  [UpdateBatch und CancelBatch Methoden (VC++-Beispiel)](../../../ado/reference/ado-api/updatebatch-and-cancelbatch-methods-example-vc.md)   
  [CancelBatch-Methode (ADO)](../../../ado/reference/ado-api/cancelbatch-method-ado.md)   
  [Clear-Methode (ADO)](../../../ado/reference/ado-api/clear-method-ado.md)   
- [LockType Property (ADO)](../../../ado/reference/ado-api/locktype-property-ado.md)   
+ [LockType-Eigenschaft (ADO)](../../../ado/reference/ado-api/locktype-property-ado.md)   
  [Update-Methode](../../../ado/reference/ado-api/update-method.md)

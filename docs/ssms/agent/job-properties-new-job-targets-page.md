@@ -15,16 +15,17 @@ ms.topic: article
 f1_keywords:
 - sql13.ag.job.targets.f1
 ms.assetid: 7e7ba084-af0e-4356-bb43-4d1c232129e4
-caps.latest.revision: ''
+caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1002269c653255edeb1c0912202fe943a3477bfa
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: a8e1cc7fdddc6ef0859137b2a7cbb193b9d09565
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="job-properties---new-job-targets-page"></a>Auftragseigenschaften – Neuer Auftrag (Seite „Ziele“)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

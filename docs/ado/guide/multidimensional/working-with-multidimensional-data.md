@@ -1,35 +1,35 @@
 ---
 title: Arbeiten mit mehrdimensionalen Daten | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - multidimensional data [ADO]
 ms.assetid: 84387746-aa3e-44fd-ad6c-a8214a6966dc
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c96d7fda2e02aeefa6225f1cea602f6ed6c7dc2e
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 07cb3078fd8d47d9c843eec09b4ee6bc72c820db
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="working-with-multidimensional-data"></a>Arbeiten mit mehrdimensionalen Daten
 Ein *Cellset* ist das Ergebnis einer Abfrage auf mehrdimensionalen Daten. Er besteht aus einer Auflistung von Achsen, in der Regel nicht mehr als vier Achsen und in der Regel nur zwei oder drei. Ein *Achse* ist eine Auflistung von Elementen aus einer oder mehreren Dimensionen, die suchen oder Filtern bestimmte Werte in einem Cube verwendet wird.  
   
- Ein *Position* entspricht einem Punkt auf einer Achse. Für eine Achse bestehend aus einer einzelnen Dimensions ist sind diese Positionen eine Teilmenge der Dimensionselemente. Wenn eine Achse besteht aus mehreren Dimensionen, jede Position ist eine zusammengesetzte Entität hat  *n*  Teile Where  *n*  ist die Anzahl der Dimensionen, die entlang dieser Achse ausgerichtet. Jeder Teil der Position ist ein Element aus einer einzelnen Dimension.  
+ Ein *Position* entspricht einem Punkt auf einer Achse. Für eine Achse bestehend aus einer einzelnen Dimensions ist sind diese Positionen eine Teilmenge der Dimensionselemente. Wenn eine Achse besteht aus mehreren Dimensionen, jede Position ist eine zusammengesetzte Entität hat *n* Teile Where *n* ist die Anzahl der Dimensionen, die entlang dieser Achse ausgerichtet. Jeder Teil der Position ist ein Element aus einer einzelnen Dimension.  
   
  Z. B. wenn die geografischen Daten und Dimensionen aus einem Cube mit Verkaufsdaten entlang der x-Achse eines cellSets ausgerichtet sind, kann eine Position entlang dieser Achse die Elemente "USA" und "Agents". enthalten In diesem Beispiel erfordert das Ermitteln einer Position entlang der x-Achse, dass Elemente aus jeder Dimension auf der Achse ausgerichtet sind.  
   

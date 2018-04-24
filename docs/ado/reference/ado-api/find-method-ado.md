@@ -1,17 +1,17 @@
 ---
 title: Find-Methode (ADO) | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - Recordset15::raw_Find
@@ -19,16 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - Find method [ADO]
 ms.assetid: 55c9810a-d8ca-46c2-a9dc-80e7ee7aa188
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: be29e1bc1126673f59dbd66f5f3c432b3ed2cc85
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: d1e46954ec7a0983927b1d375615fe6e6cbf10ee
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="find-method-ado"></a>Find-Methode (ADO)
 Sucht eine [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) für die Zeile, die die angegebenen Kriterien erfüllt. Optional kann die Richtung der Suche, Startzeile und Offset von der Startzeile angegeben werden. Wenn die Kriterien erfüllt sind, wird die aktuelle Zeilenposition bei dem gefundenen Datensatz festgelegt. Andernfalls wird die Position festgelegt, Ende (oder Start) von der **Recordset**.  
@@ -45,10 +45,10 @@ Find (Criteria, SkipRows, SearchDirection, Start)
  Ein **Zeichenfolge** Wert, der eine Anweisung zu verwendenden Spaltennamen, Vergleichsoperator und-Wert angeben, in die Suche enthält.  
   
  *SkipRows*  
- Optional*.* Ein **lange** Wert, dessen Standardwert ist 0 (null), der angibt, das Zeilenoffset wurde aus der aktuellen Zeile oder *starten* Lesezeichen, um die Suche zu starten. Standardmäßig wird die Suche für die aktuelle Zeile gestartet.  
+ Optionale*.* Ein **lange** Wert, dessen Standardwert ist 0 (null), der angibt, das Zeilenoffset wurde aus der aktuellen Zeile oder *starten* Lesezeichen, um die Suche zu starten. Standardmäßig wird die Suche für die aktuelle Zeile gestartet.  
   
  *SearchDirection*  
- Optional*.* Ein [SearchDirectionEnum](../../../ado/reference/ado-api/searchdirectionenum.md) Wert, der angibt, ob die Suche auf der aktuellen Zeile oder die nächste verfügbare Zeile in die Richtung der Suche beginnen soll. Eine Suche nicht erfolgreiche beendet wird, am Ende der **Recordset** ist der Wert **AdSearchForward**. Eine Suche nicht erfolgreiche beendet wird, am Anfang der **Recordset** ist der Wert **AdSearchBackward**.  
+ Optionale*.* Ein [SearchDirectionEnum](../../../ado/reference/ado-api/searchdirectionenum.md) Wert, der angibt, ob die Suche auf der aktuellen Zeile oder die nächste verfügbare Zeile in die Richtung der Suche beginnen soll. Eine Suche nicht erfolgreiche beendet wird, am Ende der **Recordset** ist der Wert **AdSearchForward**. Eine Suche nicht erfolgreiche beendet wird, am Anfang der **Recordset** ist der Wert **AdSearchBackward**.  
   
  *Start*  
  Optional. Ein **Variant** Lesezeichen, das als die Startposition für die Suche funktioniert.  
@@ -58,7 +58,7 @@ Find (Criteria, SkipRows, SearchDirection, Start)
   
  Der Vergleichsoperator im *Kriterien* möglicherweise "**>**"(größer als),"**\<**" (kleiner als), "=" (gleich), "> =" (größer als oder gleich) "< =" (kleiner oder gleich), "<>" (ungleich) oder "like" (Mustervergleich).  
   
- Der Wert in *Kriterien* kann eine Zeichenfolge, eine Gleitkommazahl oder ein Datum sein. Zeichenfolgenwerte werden in einfache Anführungszeichen oder "#" (Nummernzeichen) gesetzt (z. B. "State ="WA"" oder "Status = #WA #"). Datumswerte in ein "#" (Nummernzeichen) als Trennzeichen (z. B. "Start_date > #7/22/&#97;"). Diese Werte enthalten können, Stunden, Minuten und Sekunden Zeitstempel an, jedoch dürfen nicht für Millisekunden oder Fehlermeldungen angezeigt.  
+ Der Wert in *Kriterien* kann eine Zeichenfolge, eine Gleitkommazahl oder ein Datum sein. Zeichenfolgenwerte werden in einfache Anführungszeichen oder "#" (Nummernzeichen) gesetzt (z. B. "State ="WA"" oder "Status = #WA #"). Datumswerte in ein "#" (Nummernzeichen) als Trennzeichen (z. B. "Start_date > #7/22/97 #"). Diese Werte enthalten können, Stunden, Minuten und Sekunden Zeitstempel an, jedoch dürfen nicht für Millisekunden oder Fehlermeldungen angezeigt.  
   
  Wenn der Vergleichsoperator "wie" ist, kann der Zeichenfolgenwert ein Sternchen (*), um ein oder mehr Vorkommen eines beliebigen Zeichens oder einer Teilzeichenfolge gefunden enthalten. Z. B. "Zustand wie bin\*" "Maine und Massachusetts. Führende und nachfolgende Sternchen können auch um eine Teilzeichenfolge innerhalb der Werte zu suchen. Z. B. "State wie"\*als\*"" Alaska, Arkansas und Massachusetts übereinstimmt.  
   

@@ -1,17 +1,17 @@
 ---
 title: NumericScale-Eigenschaft (ADO) | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - _Parameter::NumericScale
@@ -19,16 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - NumericScale property [ADO]
 ms.assetid: 29a02992-64be-4fcd-be13-445cba205893
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 21e85b7e9645761a6d25227113deb5d3eb564720
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 028ac413213ec2cef2fd09bf523d2a5272d3c84a
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="numericscale-property-ado"></a>NumericScale-Eigenschaft (ADO)
 Gibt die Dezimalstellen der numerischen Werte in einer [Parameter](../../../ado/reference/ado-api/parameter-object.md) oder [Feld](../../../ado/reference/ado-api/field-object.md) Objekt.  

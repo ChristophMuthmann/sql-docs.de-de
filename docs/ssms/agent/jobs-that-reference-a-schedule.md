@@ -18,16 +18,17 @@ f1_keywords:
 helpviewer_keywords:
 - Jobs Referencing a Schedule dialog box
 ms.assetid: b6ecb6eb-9514-4ac1-b67c-31e3d39db4d9
-caps.latest.revision: ''
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 29b7ffc233d5ad1f9544be4b43903113d6bdd507
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 9b2353543db00f84dfb4989d2425a82863b11f5c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="jobs-that-reference-a-schedule"></a>Aufträge mit Verweisen auf einen Zeitplan
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

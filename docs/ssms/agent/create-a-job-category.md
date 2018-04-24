@@ -22,11 +22,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2f46b6e05f402d43688ae6c11b821e7cea58b0a9
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: eeeb066b7d8daeef9c22ccfffe5514cab8502e64
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-a-job-category"></a>Erstellen einer Auftragskategorie
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -44,7 +45,7 @@ In diesem Thema wird beschrieben, wie Sie eine Auftragskategorie in [!INCLUDE[ss
   
     [Einschränkungen](#Restrictions)  
   
-    [Sicherheit](#Security)  
+    [Security](#Security)  
   
 -   **So erstellen Sie eine Auftragskategorie mit**  
   
@@ -88,7 +89,7 @@ Weitere Informationen zu diesen Dialogfeldern finden Sie unter [Auftragskategori
   
 #### <a name="to-create-a-job-category"></a>So erstellen Sie eine Auftragskategorie  
   
-1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde_md.md)]-Instanz her.  
+1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde_md.md)]-Instanz her.  
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   

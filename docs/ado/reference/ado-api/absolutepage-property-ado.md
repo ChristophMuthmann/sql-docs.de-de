@@ -1,33 +1,33 @@
 ---
 title: AbsolutePage-Eigenschaft (ADO) | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - Recordset15::AbsolutePage
 helpviewer_keywords:
 - AbsolutePage property [ADO]
 ms.assetid: ddb58a35-ec3a-423c-a504-3c65e62c23d4
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 677b512a88fe3b6e695bd460cb0d4dea00ed673d
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 728ccf4b50b32c20ac0f4bd8963c1cda07d224a7
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="absolutepage-property-ado"></a>AbsolutePage-Eigenschaft (ADO)
 Gibt an, auf der Seite zum aktuelle Datensatz befindet.  

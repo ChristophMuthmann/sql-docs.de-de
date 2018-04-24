@@ -1,6 +1,6 @@
 ---
 title: ActualSize-Eigenschaft (ADO) | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: ado
@@ -11,23 +11,23 @@ ms.date: 03/20/2018
 ms.reviewer: ''
 ms.suite: sql
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - Field20::ActualSize
 helpviewer_keywords:
 - ActualSize property [ADO]
 ms.assetid: 722803d0-cef5-4d4c-b79d-3f2f58052229
-caps.latest.revision: ''
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 51a0f6f574795c7344f68db2d2c3065d353f16b2
-ms.sourcegitcommit: ccb05cb5a4cccaf7ffa9e85a4684fa583bab914e
+ms.openlocfilehash: 633d48411c4b4755d050050500d220c41125947b
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="actualsize-property-ado"></a>ActualSize-Eigenschaft (ADO)
 Gibt die tatsächliche Länge der der Wert eines Felds in Bytes an.  

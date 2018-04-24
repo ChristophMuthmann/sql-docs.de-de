@@ -1,30 +1,30 @@
 ---
 title: 'Tables-Auflistung: Eigenschaften, Methoden und Ereignisse | Microsoft Docs'
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Tables collection [ADOX], members
 ms.assetid: 98101a52-53a6-4287-a8d9-2a7c76c3e0b9
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 356ea7d747cbc18d2d5f6c1d58e9c4e88c75b03a
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: d872a0b915941014791a4019bbac5dc42bf95e18
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="tables-collection-properties-methods-and-events"></a>Tabellen Auflistungseigenschaften, Methoden und Ereignisse
 ## <a name="properties"></a>Eigenschaften  

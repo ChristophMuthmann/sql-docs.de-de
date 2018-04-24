@@ -1,33 +1,33 @@
 ---
 title: Prepared-Eigenschaft (ADO) | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - Command15::Prepared
 helpviewer_keywords:
 - Prepared property [ADO]
 ms.assetid: 11ca8825-765e-4bb4-a6ce-3f6564ad8755
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c5b45f14d0513dfda61688dc664affbf760c8598
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 452777c142b01b21a258e6f5432c48b243d45a40
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="prepared-property-ado"></a>Vorbereitete-Eigenschaft (ADO)
 Gibt an, ob eine kompilierte Version des Speichern einer [Befehl](../../../ado/reference/ado-api/command-object-ado.md) vor der Ausführung.  

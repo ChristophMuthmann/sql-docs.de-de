@@ -1,31 +1,31 @@
 ---
 title: RDS-Verwendung und Sicherheit | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - RDS [ADO]
 - remote data service [ADO]
 ms.assetid: b8ac3739-05d3-4818-8201-a763795fb8b4
-caps.latest.revision: 
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f4bf63dba64d4c30ca29629a1a385df45a9f79b1
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 0641b18cc77a0f7e913014ac6669f82d85a68b77
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="rds-usage-and-security"></a>RDS-Verwendung und Sicherheit
 Verwenden Sie die Informationen in diesem Abschnitt zum Einrichten des Servers und RDS schnell zu verwenden. Dieser Abschnitt enthält spezifische Konfigurationsschritte, die möglicherweise an, die bei der Implementierung von RDS, beschreibt einige der wichtigsten Beziehungen zwischen RDS und anderen Technologien und Lösungen für Probleme, die auftreten können, bei der Einrichtung der Bestimmung einer RDS-Lösung.  

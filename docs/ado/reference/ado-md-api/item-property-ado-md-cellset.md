@@ -1,17 +1,17 @@
 ---
 title: Item-Eigenschaft (ADO MD Cellset) | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - Item
@@ -19,16 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - Item property [ADO MD]
 ms.assetid: 0e93d79b-b12e-4e98-889e-c2dfcca20fd0
-caps.latest.revision: 
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f3fa95d6c1441fe81db90d868e08717ff39d37fe
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 82ac69cd33e87d480ccd1908f4e7c7d778f7726d
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="item-property-ado-md-cellset"></a>Eigenschaft "Element" (ADO MD Cellset)
 Ruft eine Zelle aus einem [Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) über dessen Koordinaten.  

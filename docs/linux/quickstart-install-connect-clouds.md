@@ -1,22 +1,22 @@
 ---
 title: Erste Schritte mit SQL Server-2017 in der Cloud | Microsoft Docs
-description: "Dieser Schnellstart veranschaulicht, wie der SQL Server-2017 unter Linux in der Cloud Ihrer Wahl ausführen."
+description: Dieser Schnellstart veranschaulicht, wie der SQL Server-2017 unter Linux in der Cloud Ihrer Wahl ausführen.
 author: annashres
 ms.author: annashres
 manager: craigg
 ms.date: 10/25/2017
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.component: 
+ms.component: ''
 ms.custom: sql-linux
 ms.technology: database-engine
-ms.assetid: 
-ms.openlocfilehash: 3966bb71f4112c12d340ab9780586013d8732206
-ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
+ms.assetid: ''
+ms.openlocfilehash: 29ed2b218f4d9c746f9356a2a57bbacd845b4df6
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/24/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="quickstart-run-the-sql-server-2017-in-the-cloud"></a>Schnellstart: Führen Sie die SQL Server-2017 in der cloud
 
@@ -29,7 +29,7 @@ In diesem Schnellstart installieren Sie SQL Server-2017 unter Red Hat Enterprise
 
 ## <a name="amazon-web-services"></a>Amazon Web Services
 1.  Erstellen Sie eine Linux AMI mit mindestens 2 GB Arbeitsspeicher aus dem marketplace 
-    * [RHEL 7.3+](https://aws.amazon.com/marketplace/pp/B00KWBZVK6)
+    * [RHEL 7.3 +](https://aws.amazon.com/marketplace/pp/B00KWBZVK6)
     * [SLES v12 SP2](https://aws.amazon.com/marketplace/pp/B00PMM99PI)
     * [Ubuntu 16.04](https://aws.amazon.com/marketplace/pp/B01JBL2M0O)
 1.  Herstellen einer Verbindung mit der AMI mit ssh
@@ -53,9 +53,9 @@ In diesem Schnellstart installieren Sie SQL Server-2017 unter Red Hat Enterprise
     * Am oberen Rand der Systemsteuerung, befolgen Sie die **Networking** verknüpfen, und wählen Sie dann **Firewalls**
     * Fügen Sie eine eingehende Regel zum Zulassen von Datenverkehr an den Port auf dem SQL Server (standardmäßig TCP-Port 1433) lauscht hinzu
     
-## <a name="google-cloud-platform"></a>Google Cloud Platform
+## <a name="google-cloud-platform"></a>Google Cloud-Plattform
 1.  Erstellen Sie eine Linux-Image mit mindestens 2 GB Arbeitsspeicher aus dem Cloud-Startprogramm 
-    * [RHEL 7.3+](https://console.cloud.google.com/launcher/details/rhel-cloud/rhel-7)
+    * [RHEL 7.3 +](https://console.cloud.google.com/launcher/details/rhel-cloud/rhel-7)
     * [SLES v12 SP2](https://console.cloud.google.com/launcher/details/suse-cloud/sles-12)
     * [Ubuntu 16.04](https://console.cloud.google.com/launcher/details/ubuntu-os-cloud/ubuntu-xenial)
 1.  Herstellen einer Verbindung mit dem Image mit ssh

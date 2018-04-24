@@ -1,30 +1,30 @@
 ---
 title: ADO-Fehler | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 02/15/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - errors [ADO]
 ms.assetid: 9bb84114-a1df-4122-a1b8-ad98dcd85cc3
-caps.latest.revision: 
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 06fc6433f6f1d5f00b7b6d619dce9169e1fb67c3
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 7319f978370134775d7f89593716beac9fb73fab
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="ado-run-time-errors"></a>ADO-Laufzeitfehler
 ADO-Fehler werden in Ihrem Programm als Laufzeitfehler gemeldet. Das Abfangen von Fehlern-Mechanismus von der Programmiersprache können zum Abfangen und behandeln. In Visual Basic verwenden, z. B. die **On Error** Anweisung. In Visual C++ hängt von der Methode, die Sie verwenden, um die ADO-Bibliotheken zugreifen. #Import verwenden eine **Try-Catch-** Block. Andernfalls müssen C++-Programmierer das Fehlerobjekt explizit durch den Aufruf abrufen **GetErrorInfo**. Die folgenden Visual Basic-Unterprozedur veranschaulicht Auffangen einen ADO-Fehler:

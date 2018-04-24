@@ -23,16 +23,17 @@ helpviewer_keywords:
 - multiple instances of SQL Server
 - target servers [SQL Server]
 ms.assetid: 44d8365b-42bd-4955-b5b2-74a8a9f4a75f
-caps.latest.revision: ''
+caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d949f07a6e9de07c80062540b790d225c577412e
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 4b185c60e54c76ed84752d3830202ec8fdbc64ba
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="automated-administration-across-an-enterprise"></a>Automatisierte Verwaltung in einem Unternehmen
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

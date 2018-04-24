@@ -1,33 +1,33 @@
 ---
 title: AbsolutePosition- und CursorLocation Eigenschaften (VC++-Beispiel) | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - CursorLocation property [ADO], VC++ example
 - AbsolutePosition property [ADO], VC++ example
 ms.assetid: 48c07216-d199-4822-89f8-ce928d3d2b74
-caps.latest.revision: 
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5c938ab769c47f0d474f39f98ea8a164b77ecc74
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 1628e2215327cf8c9cb4923ec2e501b3dabfb9cd
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="absoluteposition-and-cursorlocation-properties-example-vc"></a>AbsolutePosition- und CursorLocation Eigenschaften (VC++-Beispiel)
 In diesem Beispiel wird veranschaulicht, wie die [AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md) Eigenschaft kann den Fortschritt einer Schleife, die alle Datensätze der listet verfolgen eine [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md). Er verwendet die [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) Eigenschaft zum Aktivieren der **AbsolutePosition** Eigenschaft, indem Sie den Cursor auf einen Clientcursor festgelegt.  

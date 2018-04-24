@@ -1,17 +1,17 @@
 ---
 title: 'Auflistungen (Visual C++-Syntax Index mit #import) | Microsoft Docs'
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 dev_langs:
 - C++
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - 'ADO for Visual C++ syntax with #import [ADO]'
 - '#import [ADO]'
 ms.assetid: 36fbca8e-1884-44b5-806b-d15e30f42fe6
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 488f5dcc74f6b5b1d1ea89c794511a96dc3dea81
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: c9495051ca7a4035eb32d1376eb0fe4dae6ad98a
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="collections-visual-c-syntax-index-with-import"></a>Auflistungen (Visual C++-Syntax Index mit #import)
 Es ist hilfreich zu wissen, dass Sammlungen bestimmte allgemeine Methoden und Eigenschaften erbt.  

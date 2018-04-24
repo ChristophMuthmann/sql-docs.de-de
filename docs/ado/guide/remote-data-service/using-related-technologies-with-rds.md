@@ -1,30 +1,30 @@
 ---
 title: RDS in Beziehung stehenden Technologien mit | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - RDS related technologies [ADO]
 ms.assetid: a98a7245-06a7-455c-82ef-950807b9f1e7
-caps.latest.revision: 
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 57452cdc7cd0542bd81308f223c559118391204c
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: d6dcfb2375daefdfd55c1e5ec4beb5d4879e7eb8
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="using-related-technologies-with-rds"></a>Verwenden von verwandten Technologien mit RDS
 Dieser Abschnitt enthält die folgenden Themen.  
@@ -48,7 +48,7 @@ Dieser Abschnitt enthält die folgenden Themen.
   
  **Microsoft Internet Explorer** Weitere Informationen zu Microsoft Internet Explorer, finden Sie unter der Website Microsoft Internet ExplorerWeb und der MSDN Library und Web Workshop-Website.  
   
- **Microsoft Windows NT Server/Windows 2000 Server** For more information about security in Microsoft Windows NT Server or Windows 2000 Server, see the Microsoft Windows Web site.  
+ **Microsoft Windows NT Server-Windows 2000 Server** finden Sie weitere Informationen zur Sicherheit in Microsoft Windows NT Server oder Windows 2000 Server unter der Microsoft Windows-Website.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Grundlegendes zu RDS](../../../ado/guide/remote-data-service/rds-fundamentals.md)

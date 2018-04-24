@@ -1,33 +1,33 @@
 ---
-title: "Verbindung Close-Methode, Beispiel für die Tabelle Type-Eigenschaft (VB) | Microsoft Docs"
-ms.prod: sql-non-specified
+title: Verbindung Close-Methode, Beispiel für die Tabelle Type-Eigenschaft (VB) | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Close method [ADOX], Visual Basic example
 - Type property [ADOX], Visual Basic example
 ms.assetid: f88e7a3b-19ed-46e2-b2ce-3b611d9b8166
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1bdc520343baf5e00091aab8d683b6e6ea8456f4
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 69019c3a7cc9af1d841ea5fbb27be5180fd2c95e
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="connection-close-method-table-type-property-example-vb"></a>Connection-Methode schließen, Beispiel für die Tabelle Type-Eigenschaft (VB)
 Festlegen der [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) Eigenschaft **nichts** sollten die Verbindung mit dem Katalog schließen. Zugeordnete Sammlungen werden leer sein. Alle Objekte, die von Schemaobjekten im Katalog erstellt wurden, werden verwaist. Alle Eigenschaften auf jene Objekte, die zwischengespeichert wurden, bleiben verfügbar, aber ein Versuch zum Lesen von Eigenschaften, der einen Aufruf an den Anbieter erfordert, schlägt fehl.  

@@ -1,17 +1,17 @@
 ---
-title: "Erstellen eine neue Fremdschlüssel-Beziehung zwischen Tabellen-Beispiel (VB) | Microsoft Docs"
-ms.prod: sql-non-specified
+title: Erstellen eine neue Fremdschlüssel-Beziehung zwischen Tabellen-Beispiel (VB) | Microsoft Docs
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - UpdateRule property [ADOX], Visual Basic example
 - RelatedColumn property [ADOX], Visual Basic example
 ms.assetid: 13b5b1c3-6af6-439e-bb65-976578ba6bc2
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 705ff3187e9502168d278d7059acd1ee5fcbd9d4
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: db31277dcc4f43eb06a3be9ba39ea8e1ec9f61a2
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="keys-append-method-key-type-relatedcolumn-relatedtable-and-updaterule-properties-example-vb"></a>Append-Keys-Methode, Typ des Schlüssels, RelatedColumn, RelatedTable und UpdateRule Eigenschaften Beispiel (VB)
 Der folgende Code veranschaulicht das Erstellen einer neuen Fremdschlüssel-Beziehung zwischen zwei vorhandenen Tabellen, die mit dem Namen **Kunden** und **Aufträge**.  

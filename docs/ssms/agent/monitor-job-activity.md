@@ -24,16 +24,17 @@ helpviewer_keywords:
 - performance [SQL Server], jobs
 - current activity
 ms.assetid: 71cb432b-631d-4b8b-9965-e731b3d8266d
-caps.latest.revision: ''
+caps.latest.revision: 6
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 32b468a8846e73561d365c5c0630fdf83ad4be72
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 4d004aa4f74c2fb32a65db15c113d49f37cbd3ed
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="monitor-job-activity"></a>Überwachen der Auftragsaktivität
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

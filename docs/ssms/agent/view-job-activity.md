@@ -18,16 +18,17 @@ helpviewer_keywords:
 - SQL Server Agent jobs, viewing
 - displaying job activity
 ms.assetid: 5c284e5e-7775-435d-ac49-f3f12a27ddc7
-caps.latest.revision: ''
+caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5073c138fc35bf7e1a42727f1d69ad6632e016a2
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 43c9857e4579e1d72434fe14db513daa5fee0492
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="view-job-activity"></a>Auftragsaktivitäten anzeigen
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

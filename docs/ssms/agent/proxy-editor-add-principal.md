@@ -15,16 +15,17 @@ ms.topic: article
 f1_keywords:
 - sql13.ag.proxy.editor.f1
 ms.assetid: 9d33749f-9653-4691-9a0f-06ed7dd6166f
-caps.latest.revision: ''
+caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 85a94ec5b951378def074d712a4e5dd42786d7f9
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 9aa3b256cd9c11ad5ab6548e2a997500af9bc8c2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="proxy-editor---add-principal"></a>Proxy-Editor – Prinzipal hinzufügen
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
