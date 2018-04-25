@@ -1,26 +1,26 @@
 ---
 title: SQL Server-Eigenschaften (Registerkarte "Start Parameter") | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: configuration-manager
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 16942624-5374-446c-8de4-ee6ed34d6e94
-caps.latest.revision: 
+caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: c845f8c174f96ba2e0dd5595d49721ae800777e2
 ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
-ms.translationtype: MT
+ms.translationtype: MTE
 ms.contentlocale: de-DE
 ms.lasthandoff: 02/03/2018
 ---
@@ -28,7 +28,7 @@ ms.lasthandoff: 02/03/2018
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 Verwenden Sie dieses Dialogfeld, um Startparameter für [!INCLUDE[ssDE](../../includes/ssde-md.md)]hinzuzufügen oder zu entfernen. Startparameter können große Auswirkungen auf die Leistung von [!INCLUDE[ssDE](../../includes/ssde-md.md)] haben. Lesen Sie vor dem Hinzufügen oder Ändern von Startparametern das Thema "Verwenden der Startoptionen für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienst" in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Onlinedokumentation.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
  **Startparameter angeben**  
  Um einen Parameter hinzuzufügen, geben Sie den Parameter ein, und klicken Sie anschließend auf **Hinzufügen**.  
   
@@ -38,7 +38,7 @@ Verwenden Sie dieses Dialogfeld, um Startparameter für [!INCLUDE[ssDE](../../in
  Um einen Parameter zu entfernen, wählen Sie den Parameter aus, und klicken Sie anschließend auf **Entfernen**.  
   
 ## <a name="parameter-format"></a>Parameterformat  
- Geben Sie kein Trennzeichen zwischen Parametern ein. Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Konfigurations-Manager fügt das Trennzeichen automatisch hinzu. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Konfigurations-Manager erzwingt die folgenden parameteranforderungen.  
+ Geben Sie kein Trennzeichen zwischen Parametern ein. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Manager fügt das Trennzeichen automatisch hinzu. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Manager erzwingt die folgenden Parameteranforderungen.  
   
 -   Führende und nachfolgende Leerzeichen jedes Startparameters werden abgeschnitten.  
   
@@ -68,7 +68,7 @@ Verwenden Sie dieses Dialogfeld, um Startparameter für [!INCLUDE[ssDE](../../in
   
 |Parameter|Kurze Beschreibung|  
 |---------------|-----------------------|  
-|-m|Startet eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] im Einzelbenutzermodus.|  
+|-M|Startet eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] im Einzelbenutzermodus.|  
 |-T1204|Gibt die an einem Deadlock beteiligten Ressourcen und Sperrentypen sowie den aktuell betroffenen Befehl zurück.|  
 |-T1224|Deaktiviert die Sperrenausweitung basierend auf der Anzahl von Sperren.|  
 |-T3608|Verhindert, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] automatisch gestartet wird und andere Datenbanken als die master-Datenbank wiederhergestellt werden|  
