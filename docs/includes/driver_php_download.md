@@ -1,1 +1,1 @@
-![Herunterladen](../ssdt/media/download.png)[PHP-Treiber herunterladen](https://www.microsoft.com/download/details.aspx?id=55642)
+![Herunterladen](../ssdt/media/download.png)[PHP-Treiber herunterladen](https://go.microsoft.com/fwlink/?linkid=871846)

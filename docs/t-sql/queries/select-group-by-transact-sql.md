@@ -1,16 +1,16 @@
 ---
 title: GROUP BY (Transact-SQL) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|queries
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - GROUP
@@ -34,16 +34,17 @@ helpviewer_keywords:
 - groups [SQL Server], tables divided into groups
 - summary values [SQL Server]
 ms.assetid: 40075914-6385-4692-b4a5-62fe44ae6cb6
-caps.latest.revision: 
+caps.latest.revision: 80
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 5e99efe49620003de40659dd4bfd959dacef986c
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: f83c1fa093977eb77fec9f58c0f02223ce581212
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="select---group-by--transact-sql"></a>SELECT – GROUP BY – Transact-SQL
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -349,7 +350,7 @@ Die GROUP BY-Klausel unterstützt alle GROUP BY-Features, die in SQL 2006-Standa
 |Funktion|SQL Server Integration Services|SQL Server, Kompatibilitätsgrad 100 oder höher|SQL Server 2008 oder höher, mit Kompatibilitätsgrad 90.|  
 |-------------|-------------------------------------|--------------------------------------------------|-----------------------------------------------------------|  
 |DISTINCT-Aggregate|Nicht unterstützt für WITH CUBE oder WITH ROLLUP.|Unterstützt für WITH CUBE, WITH ROLLUP, GROUPING SETS, CUBE oder ROLLUP.|Wie bei Kompatibilitätsgrad 100|  
-|Benutzerdefinierte Funktion mit CUBE- oder ROLLUP-Namen in der GROUP BY-Klausel|Benutzerdefinierte Funktionen **dbo.cube(***arg1***,***...argN***)** oder **dbo.rollup(***arg1***,**...*argN***)** in der GROUP BY-Klausel sind zulässig.<br /><br /> Beispiel: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|Benutzerdefinierte Funktionen **dbo.cube (***arg1***,**...argN**)** oder **dbo.rollup(**arg1**,***...argN***)** in der GROUP BY-Klausel sind nicht zulässig.<br /><br /> Beispiel: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`<br /><br /> Es wird folgende Fehlermeldung zurückgegeben: "Incorrect syntax near the keyword 'cube'&#124;'rollup'." (Falsche Syntax in der Nähe des 'cube'&#124;'rollup'-Schlüsselworts.).<br /><br /> Ersetzen Sie `dbo.cube` durch `[dbo].[cube]` oder `dbo.rollup` durch `[dbo].[rollup]`, um dieses Problem zu vermeiden.<br /><br /> Das folgende Beispiel ist zulässig: `SELECT SUM (x) FROM T  GROUP BY [dbo].[cube](y);`|Benutzerdefinierte Funktionen *dbo.cube ***(arg1***,***...argN*) oder **dbo.rollup(***arg1***,***...argN***)** in der GROUP BY-Klausel sind zulässig.<br /><br /> Beispiel: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|  
+|Benutzerdefinierte Funktion mit CUBE- oder ROLLUP-Namen in der GROUP BY-Klausel|Benutzerdefinierte Funktionen **dbo.cube(***arg1***,***...argN***)** oder **dbo.rollup(***arg1***,**...*argN***)** in der GROUP BY-Klausel sind zulässig.<br /><br /> Beispiel: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|Benutzerdefinierte Funktionen **dbo.cube (***arg1***,**...argN **)** oder **dbo.rollup(** arg1 **,***...argN***)** in der GROUP BY-Klausel sind nicht zulässig.<br /><br /> Beispiel: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`<br /><br /> Es wird folgende Fehlermeldung zurückgegeben: "Incorrect syntax near the keyword 'cube'&#124;'rollup'." (Falsche Syntax in der Nähe des 'cube'&#124;'rollup'-Schlüsselworts.).<br /><br /> Ersetzen Sie `dbo.cube` durch `[dbo].[cube]` oder `dbo.rollup` durch `[dbo].[rollup]`, um dieses Problem zu vermeiden.<br /><br /> Das folgende Beispiel ist zulässig: `SELECT SUM (x) FROM T  GROUP BY [dbo].[cube](y);`|Benutzerdefinierte Funktionen *dbo.cube ***(arg1***,***...argN*) oder **dbo.rollup(***arg1***,***...argN***)** in der GROUP BY-Klausel sind zulässig.<br /><br /> Beispiel: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|  
 |GROUPING SETS|Nicht unterstützt|Supported|Supported|  
 |CUBE|Nicht unterstützt|Supported|Nicht unterstützt|  
 |ROLLUP|Nicht unterstützt|Supported|Nicht unterstützt|  
