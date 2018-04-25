@@ -2,7 +2,7 @@
 title: Sqlsrv_send_stream_data | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: php
@@ -20,21 +20,21 @@ helpviewer_keywords:
 - API Reference, sqlsrv_send_stream_data
 - streaming data
 ms.assetid: 826c2d45-694f-42b8-b12b-cd4523a31883
-caps.latest.revision: ''
+caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7c8ea12c087a5702776a596f1f5b989e04733078
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
-ms.translationtype: MT
+ms.openlocfilehash: 4115270329837b33ecd336067bc2699fc5e04d58
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: MTE
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlsrvsendstreamdata"></a>sqlsrv_send_stream_data
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Sendet Daten aus Parameterstreams an den Server. Bis zu acht Kilobyte (8 KB) Daten mit jedem Aufruf gesendet **Sqlsrv_send_stream_data**.  
+Sendet Daten aus Parameterstreams an den Server. Mit jedem Aufruf werden bis zu acht Kilobyte (8 KB) Daten an sqlsrv_send_stream_data** gesendet.  
   
 > [!NOTE]  
 > In der Standardeinstellung werden alle Streamdaten an den Server gesendet, wenn eine Abfrage ausgeführt wird. Wenn dieses Standardverhalten nicht geändert wird, müssen Sie **sqlsrv_send_stream_data** nicht verwenden, um Datenstromdaten an den Server zu senden. Informationen zum Ändern des Standardverhaltens finden Sie im Parameter-Abschnitt [sqlsrv_query](../../connect/php/sqlsrv-query.md) oder [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md).  
@@ -101,7 +101,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [API-Referenz für den SQLSRV-Treiber](../../connect/php/sqlsrv-driver-api-reference.md)  
 
 [Aktualisieren von Daten &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)  

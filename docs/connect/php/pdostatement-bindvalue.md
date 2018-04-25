@@ -2,7 +2,7 @@
 title: PDOStatement::bindValue | Microsoft Docs
 ms.custom: ''
 ms.date: 10/24/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: php
@@ -13,16 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 13bc4ece-420e-4887-8809-bf0705ddf126
-caps.latest.revision: ''
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5974992934c574eb070c211320f57df169fca9b3
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
-ms.translationtype: MT
+ms.openlocfilehash: eaad375b8f537e7d220adc8e1779ebdd8c9da07f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: MTE
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="pdostatementbindvalue"></a>PDOStatement::bindValue
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -37,16 +37,16 @@ bool PDOStatement::bindValue($parameter, $value[, $data_type]);
 ```  
   
 #### <a name="parameters"></a>Parameter  
-$*Parameter*: ein (gemischter) Parameterbezeichner. Für Sie Platzhalter mit einer Anweisung mit dem Namen, verwenden Sie einen Parameternamen an (: Name). Für eine vorbereitete Anweisung mit der fragezeichensyntax ist es der 1-basierte Index des Parameters.
+$parameter *: Ein* gemischter Parameterbezeichner. Ein Parametername :name für eine Anweisung, die benannte Platzhalter verwendet. Für eine vorbereitete Anweisung mit der Fragezeichensyntax stellt dieser den 1-basierten Index des Parameters dar.
   
-$*Wert*: der (gemischte) Wert, der an den Parameter gebunden.  
+$value *: Der* gemischte Wert, der an den Parameter gebunden wird.  
   
-$*Data_type*: der optionale (Integer-)-Datentyp, der durch eine Konstante PDO:: param_ * dargestellt wird. Der Standardwert ist PDO::PARAM_STR.  
+$data*type*: Der optionale Datentyp ganze Zahl, der durch die Konstante PDO::PARAM dargestellt wird. Der Standardwert ist PDO::PARAM_STR.  
   
 ## <a name="return-value"></a>Rückgabewert  
 „true“ bei Erfolg, andernfalls „false“.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
   
 Unterstützung für PDO wurde in Version 2.0 von [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]hinzugefügt.  
   
@@ -103,7 +103,7 @@ $stmt->bindValue(1, $input, PDO::PARAM_STR);
 $stmt->execute();
 ```
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [PDOStatement-Klasse](../../connect/php/pdostatement-class.md)
 
 [PDO](http://php.net/manual/book.pdo.php)  

@@ -1,35 +1,36 @@
 ---
-title: 'Schritt 3: Machbarkeitsnachweis Herstellen einer Verbindung mit SQL mit Node.js | Microsoft Docs'
-ms.custom: 
+title: 'Schritt 3: Machbarkeitsnachweis für Verbindungen mit SQL mithilfe von Node.js'
+ms.custom: ''
 ms.date: 08/08/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: node-js
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 5d5b41b6-129a-40b1-af8b-7e8fbd4a84bb
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 664c786e36fc9938fca34f71cffb9b50d3c2e1c5
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 87a0721ba0ca4448ad6f47670f315ea0877f0a71
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: MTE
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="step-3-proof-of-concept-connecting-to-sql-using-nodejs"></a>Schritt 3: Machbarkeitsnachweis Herstellen einer Verbindung mit SQL mit Node.js
+# <a name="step-3-proof-of-concept-connecting-to-sql-using-nodejs"></a>Schritt 3: Machbarkeitsnachweis für Verbindungen mit SQL mithilfe von Node.js
 
 ![Download-nach-unten-Eingekreister](../../ssdt/media/download.png)[zum Herunterladen der Node.js SQL-Treiber](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
 In diesem Beispiel soll ein Proof of Concept nur berücksichtigt werden.  Der Beispielcode ist aus Gründen der Übersichtlichkeit vereinfacht und von Microsoft empfohlene bewährte Methoden stellt nicht notwendigerweise dar. Andere Beispiele, die die gleiche entscheidenden Funktion verwenden, sind auf Github verfügbar:
 
-- [https://github.com/tediousjs/tedious/BLOB/Master/Examples/](https://github.com/tediousjs/tedious/blob/master/examples/)
+- [https://github.com/tediousjs/tedious/blob/master/examples/](https://github.com/tediousjs/tedious/blob/master/examples/)
   
 ## <a name="step-1-connect"></a>Schritt 1: Verbinden  
   
@@ -51,7 +52,7 @@ Die **neue Verbindung** Funktion dient zum Herstellen einer SQL-Datenbank.
     });  
 ```  
   
-## <a name="step-2--execute-a-query"></a>Schritt 2: Ausführen einer Abfrage  
+## <a name="step-2--execute-a-query"></a>Abfrage ausführen.  
   
   
 Alle SQL-Anweisungen werden ausgeführt, mit der **neue Request()** Funktion. Wenn die Anweisung Zeilen, z. B. eine select-Anweisung zurückgegeben werden können Sie abrufen, diese mithilfe der **request.on()** Funktion. Wenn keine Zeilen vorhanden sind, gibt die Funktion request.on() leere Listen zurück.  

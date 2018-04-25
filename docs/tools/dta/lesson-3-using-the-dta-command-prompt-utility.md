@@ -24,12 +24,12 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 676d70c67a0be45b3362632c038d60e90448e90c
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: MTE
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/17/2018
 ---
 # <a name="lesson-3-using-the-dta-command-prompt-utility"></a>Lektion 3: Verwenden des Befehlszeilenprogramms dta
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Die **Dta** Befehlszeilen-Hilfsprogramm bietet Funktionen, die zusätzlich zu den von der Datenbankmodul-Optimierungsratgeber bereitgestellt.  
+Mit dem Befehlszeilenprogramm [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]dta** wird die Funktionalität des Datenbankoptimierungsratgebers erweitert.  
   
 Sie können mit Ihren bevorzugten XML-Tools Eingabedateien für das Befehlszeilenprogramm erstellen und dabei das XML-Schema des Datenbankoptimierungsratgebers verwenden. Dieses Schema wird zusammen mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installiert. Es befindet sich unter: C:\Programme (x86)\Microsoft SQL Server\110\Tools\Binn\schemas\sqlserver\2004\07\dta\dtaschema.xsd.  
   
@@ -47,8 +47,8 @@ Die Lektion enthält die folgenden Themen:
   
 -   Starten des Befehlzeilenprogramms **dta** und Optimieren einer Arbeitsauslastung  
   
-## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
-[Starten des Befehlzeilenprogramms Dta und Optimieren einer Arbeitsauslastung](../../tools/dta/lesson-3-1-starting-the-dta-command-prompt-utility-and-tuning-a-workload.md)  
+## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
+[Starten des Befehlzeilenprogramms dta und Optimieren einer Arbeitsauslastung](../../tools/dta/lesson-3-1-starting-the-dta-command-prompt-utility-and-tuning-a-workload.md)  
   
   
   

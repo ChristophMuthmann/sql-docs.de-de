@@ -1,27 +1,28 @@
 ---
-title: "Schritt 1: Konfigurieren der Entwicklungsumgebung für Ruby-Entwicklung | Microsoft Docs"
-ms.custom: 
+title: 'Schritt 1: Konfigurieren der Entwicklungsumgebung für Ruby-Entwicklung'
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ruby
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 8cdbadeb-f640-406c-977c-d2d44b7b5368
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1f50042c6ae0233b5bc39ce2879391d1d5340741
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 30a38b0a73eae053b36ccc8c2f3c30b9c8e21319
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: MTE
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="step-1-configure-development-environment-for-ruby-development"></a>Schritt 1: Konfigurieren der Entwicklungsumgebung für Ruby-Entwicklung
 Sie müssen Ihre Entwicklungsumgebung mit den Voraussetzungen zu konfigurieren, um die Entwicklung einer Anwendung mithilfe der Ruby-Treiber für SQL Server.    
@@ -36,8 +37,8 @@ Wenn Ihr Computer keinen Ruby, installieren Sie es. Für neue Benutzer Ruby wird
   
 2.  **Installieren von Ruby**  
 Sobald das Installationsprogramm heruntergeladen wurde, führen Sie folgende Schritte aus:  
-a. Doppelklicken Sie auf die Datei, um das Installationsprogramm zu starten.  
-b. Wählen Sie Ihre Sprache aus, und akzeptieren.  
+A. Doppelklicken Sie auf die Datei, um das Installationsprogramm zu starten.  
+B. Wählen Sie Ihre Sprache aus, und akzeptieren.  
 c.  Wählen Sie auf der Seite Installation Einstellungen die Kontrollkästchen neben sowohl den Pfad und ordnen RB und .rbw-Dateien mit dieser Installation Ruby ausführbaren Dateien Ruby hinzufügen.  
   
 3.  **Ruby DevKit herunterladen**  
@@ -45,8 +46,8 @@ DevKit von der Seite "RubyInstaller" herunterladen
   
 4.  **Installieren von Ruby DevKit**  
 Nachdem der Download abgeschlossen ist, führen Sie folgende Schritte aus:  
-a. Doppelklicken Sie auf die Datei. Sie aufgefordert, wo die Dateien zu extrahieren.  
-b. Klicken Sie auf die Schaltfläche "...", und wählen Sie "C:\DevKit". Sie benötigen wahrscheinlich in diesem Ordner zuerst zu erstellen, indem Sie auf "Neuen Ordner erstellen".  
+A. Doppelklicken Sie auf die Datei. Sie aufgefordert, wo die Dateien zu extrahieren.  
+B. Klicken Sie auf die Schaltfläche "...", und wählen Sie "C:\DevKit". Sie benötigen wahrscheinlich in diesem Ordner zuerst zu erstellen, indem Sie auf "Neuen Ordner erstellen".  
 c. Klicken Sie auf "OK", und klicken Sie dann "extrahieren", um die Dateien zu extrahieren.  
   
 5. **Öffnen von cmd.exe**  

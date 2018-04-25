@@ -1,8 +1,8 @@
 ---
-title: 'Schritt 1: Konfigurieren der Entwicklungsumgebung für PHP-Entwicklung | Microsoft Docs'
+title: 'Schritt 1: Konfigurieren der Entwicklungsumgebung für PHP-Entwicklung'
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: php
@@ -13,16 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 0bce6022-00bd-45c6-9671-eaa9dfa395a8
-caps.latest.revision: ''
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 884d732a4490f5241a78af097179c8dca836adf2
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
-ms.translationtype: MT
+ms.openlocfilehash: 962d90c76bfbb6022fa7b9fff05d721c03ed8fce
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: MTE
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="step-1-configure-environment-for-php-development"></a>Schritt 1: Konfigurieren der Umgebung für die PHP-Entwicklung
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

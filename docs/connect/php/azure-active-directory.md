@@ -1,25 +1,26 @@
 ---
 title: Azure Active Directory | Microsoft Docs
 ms.date: 07/13/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
 ms.suite: sql
-ms.custom: 
-ms.technology: drivers
+ms.custom: ''
+ms.technology:
+- drivers
 ms.topic: article
 author: david-puglielli
 ms.author: v-dapugl
 manager: v-hakaka
 ms.workload: Inactive
-ms.openlocfilehash: eb13c1a57c63ce013a3b546572994106b8b1ffc0
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 462b141c365e0140236c78af451c73b110911765
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: MTE
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="connect-using-azure-active-directory-authentication"></a>Herstellen einer Verbindung mithilfe von Azure Active Directory-Authentifizierung
+# <a name="connect-using-azure-active-directory-authentication"></a>Gewusst wie: Herstellen einer Verbindung mithilfe der Azure Active Directory-Authentifizierung
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 [Azure Active Directory](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-whatis) (Azure AD) ist eine zentrale Benutzer-ID-Management-Technologie, die als Alternative zur arbeitet [SQL Server-Authentifizierung](../../connect/php/how-to-connect-using-sql-server-authentication.md). Azure AD ermöglicht Verbindungen mit Microsoft Azure SQL-Datenbank und SQL Data Warehouse mit verbundenen Identitäten in Azure AD mit einem Benutzernamen und Kennwort, integrierte Windows-Authentifizierung oder eine Azure AD-Zugriffstokens; die PHP-Treiber für SQL Server bieten teilweise Unterstützung für diese Funktionen.
@@ -130,5 +131,5 @@ Im folgende Beispiel wird die genauso wie oben mit dem PDO_SQLSRV-Treiber.
 
     ?>
 ```
-## <a name="see-also"></a>Siehe auch  
-[Mithilfe von Azure Active Directory mit dem ODBC-Treiber](https://docs.microsoft.com/en-us/sql/connect/odbc/using-azure-active-directory)
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+[Verwenden von Azure Active Directory mit dem ODBC-Treiber](https://docs.microsoft.com/en-us/sql/connect/odbc/using-azure-active-directory)

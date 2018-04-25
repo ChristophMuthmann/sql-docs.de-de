@@ -1,54 +1,54 @@
 ---
 title: Datenquellen (Assistentenbildschirm 3) (Odbcdriver for SQLServer) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 09/27/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
-caps.latest.revision: 
+caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a0a97971dcd8a16a2ac15b1013dbbe96a43f21c0
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
-ms.translationtype: MT
+ms.openlocfilehash: 02b09a88240fad6cd4b6e4bea41cf26e71e4a080
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: MTE
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="data-source-wizard-screen-3"></a>Assistent Datenquellenbildschirm 3
+# <a name="data-source-wizard-screen-3"></a>Datenquellen-Assistent (Bildschirm 3)
 
 Geben Sie die Standarddatenbank, verschiedene ANSI-Optionen, die vom Treiber verwendet werden sollen, und den Namen eines Spiegelservers an.
 
-## <a name="options"></a>enthalten
+## <a name="options"></a>Tastatur
 
-### <a name="change-the-default-database-to"></a>Ändern Sie die Standarddatenbank auf
+### <a name="change-the-default-database-to"></a>&Die Standarddatenbank ändern auf:
 
-Gibt den Namen der Standarddatenbank für jede mit dieser Datenquelle hergestellte Verbindung an. Wenn dieses Kästchen deaktiviert ist, verwenden Verbindungen die für die Anmelde-ID auf dem Server definierte Standarddatenbank. Wenn dieses Kästchen aktiviert ist, überschreibt die in dem Kästchen bezeichnete Datenbank die für die Anmelde-ID definierte Standarddatenbank. Wenn die **Datenbank-Dateinamen anfügen** Feld hat den Namen einer primären Datei, die durch die primäre Datei beschriebene Datenbank als Datenbank anhand des Datenbanknamens, der im angegebenen angefügt ist die **die Standarddatenbank ändern, um**Feld.
+Gibt den Namen der Standarddatenbank für jede mit dieser Datenquelle hergestellte Verbindung an. Wenn dieses Kästchen deaktiviert ist, verwenden Verbindungen die für die Anmelde-ID auf dem Server definierte Standarddatenbank. Wenn dieses Kästchen aktiviert ist, überschreibt die in dem Kästchen bezeichnete Datenbank die für die Anmelde-ID definierte Standarddatenbank. Wenn das Kästchen Datenbank-Dateinamen anfügen **den Namen einer primären Datei hat, wird die durch die primäre Datei beschriebene Datenbank als Datenbank mithilfe des in dem Kästchen Standarddatenbank ändern in** angegebenen Datenbanknamens angefügt.
 
 Es ist effizienter, die Standarddatenbank für die Anmelde-ID zu verwenden, als eine Standarddatenbank in der ODBC-Datenquelle anzugeben.
 
 ### <a name="mirror-server"></a>Spiegelserver
 
-Gibt den Namen des Failoverpartners der zu spiegelnden Datenbank an. Wenn Sie ein Datenbanknamen in nicht angezeigt wird die **die Standarddatenbank ändern auf** Feld oder der angezeigte Name ist die Standarddatenbank **Spiegelserver** abgeblendet.
+Gibt den Namen des Failoverpartners der zu spiegelnden Datenbank an. Wenn ein Datenbankname in dem Feld Die Standarddatenbank ändern auf **nicht angezeigt wird oder der angezeigte Name die Standarddatenbank ist, ist der Spiegelserver** ausgegraut.
 
 Optional können Sie einen Serverprinzipalnamen (SPN) für den Spiegelserver angeben. Der SPN für den Spiegelserver wird zur gegenseitigen Authentifizierung zwischen Client und Server verwendet.
 
 ### <a name="attach-database-filename"></a>Datenbank-Dateinamen anfügen
 
-Gibt den Namen der primären Datei für eine anfügbare Datenbank an. Diese Datenbank wird angefügt und als Standarddatenbank für die Datenquelle verwendet. Geben Sie den vollständigen Pfad und den Dateinamen für die primäre Datei an. Der Datenbankname angegeben, der **die Standarddatenbank ändern auf** als Namen für die angefügte Datenbank verwendet.
+Gibt den Namen der primären Datei für eine anfügbare Datenbank an. Diese Datenbank wird angefügt und als Standarddatenbank für die Datenquelle verwendet. Geben Sie den vollständigen Pfad und den Dateinamen für die primäre Datei an. Der im Feld Die Standarddatenbank ändern auf** angegebene Datenbankname wird als Name für die angefügte Datenbank verwendet.
 
-### <a name="use-ansi-quoted-identifiers"></a>Verwenden Sie ANSI-Bezeichner in Anführungszeichen
+### <a name="use-ansi-quoted-identifiers"></a>ANSI-Anführungszeichen verwenden
 
-Gibt an, dass QUOTED_IDENTIFIERS auf festgelegt werden, wenn der ODBC-Treiber für SQL Server eine Verbindung herstellt. Wenn dieses Kontrollkästchen aktiviert ist, erzwingt SQL Server ANSI-Regeln für Anführungszeichen. Doppelte Anführungszeichen können nur für Bezeichner verwendet werden, z. B. Spalten- und Tabellennamen. Zeichenfolgen müssen in einfache Anführungszeichen eingeschlossen werden:
+Gibt an, dass QUOTED_IDENTIFIERS auf ON festgelegt werden soll, wenn der  Native Client-ODBC-Treiber eine Verbindung herstellt. Wenn dieses Kontrollkästchen aktiviert wird, erzwingt  ANSI-Regeln für Anführungszeichen. Doppelte Anführungszeichen können nur für Bezeichner verwendet werden, z. B. Spalten- und Tabellennamen. Zeichenfolgen müssen in einfache Anführungszeichen eingeschlossen werden:
 
 ```
 SELECT "LastName"
@@ -58,29 +58,29 @@ WHERE "LastName" = 'O''Brien'
 
 Wenn dieses Kontrollkästchen deaktiviert wird, treten bei Anwendungen, die Bezeichner verwenden, wie z. B. das Abfragehilfsprogramm von Microsoft, das mit Microsoft Excel geliefert wird, Fehler beim Generieren von SQL-Anweisungen mit Bezeichnern in Anführungsstrichen auf.
 
-### <a name="use-ansi-nulls-paddings-and-warnings"></a>ANSI-Nullen,-Auffüllungen und-Warnungen verwenden
+### <a name="use-ansi-nulls-paddings-and-warnings"></a>ANSI-Nullen, -Auffü&llungen und -Warnungen verwenden.
 
-Gibt an, dass die Optionen ANSI_NULLS, ANSI_WARNINGS und ANSI_PADDINGS auf festgelegt werden, wenn der ODBC-Treiber für SQL Server eine Verbindung herstellt.
+Gibt an, dass die Optionen ANSI_NULLS, ANSI_WARNINGS und ANSI_PADDINGS auf ON festgelegt werden sollen, wenn der  Native Client-ODBC-Treiber eine Verbindung herstellt.
 
 Wenn ANSI_NULLS auf ON festgelegt ist, erzwingt der Server ANSI-Regeln beim Vergleichen von Spalten für NULL. Die ANSI-Syntax „IS NULL“ oder „IS NOT NULL“ muss für alle NULL-Vergleiche verwendet werden. Die Transact-SQL-Syntax „= NULL“ wird nicht unterstützt.
 
-Legen Sie für ANSI_WARNINGS auf On gibt SQL Server Warnmeldungen für Bedingungen, die gegen ANSI-Regeln, aber die Regeln von Transact-SQL nicht verletzt werden. Beispiele für solche Fehler sind das Abschneiden von Daten bei der Ausführung einer INSERT- oder UPDATE-Anweisung oder das Stoßen auf einen Nullwert während einer Aggregatfunktion. 
+Wenn ANSI_WARNINGS auf ON festgelegt sind, gibt  Warnmeldungen für Bedingungen aus, die gegen ANSI-Regeln, aber nicht gegen Regeln von Transact-SQL verstoßen. Beispiele für solche Fehler sind das Abschneiden von Daten bei der Ausführung einer INSERT- oder UPDATE-Anweisung oder das Stoßen auf einen Nullwert während einer Aggregatfunktion. 
 
-ANSI_PADDING festgelegt, nachfolgende Leerzeichen nach **Varchar** -Werten und nachfolgende Nullen auf **Varbinary** Werte werden nicht automatisch gekürzt.
+Wenn ANSI_PADDING auf ON festgelegt ist, werden nachfolgende Leerzeichen nach varchar **-Werten und nachfolgende Nullen nach varbinary**-Werten nicht automatisch gekürzt.
 
 ### <a name="application-intent"></a>Anwendungsabsicht
 
-Deklariert den Arbeitsauslastungstyp der Anwendung beim Herstellen einer Verbindung mit einem Server. Mögliche Werte sind **ReadOnly** und **ReadWrite**.
+Deklariert den Arbeitsauslastungstyp der Anwendung beim Herstellen einer Verbindung mit einem Server. Mögliche Werte sind „ReadOnly“ und „ReadWrite“.
 
 ### <a name="multi-subnet-failover"></a>Multisubnetz-Failover.
 
 Wenn Ihre Anwendung eine hohe Verfügbarkeit und Disaster Recovery (AlwaysOn-Verfügbarkeitsgruppen) verfügbarkeitsgruppe (AG) in verschiedenen Subnetzen eine Verbindung herstellt, aktiviert **-multisubnetz-Failovercluster.** konfiguriert die ODBC-Treiber für SQL Server, um die schnellere Erkennung und Verbindung mit dem (gerade) aktiven Server bereitzustellen.
 
-### <a name="transparent-network-ip-resolution"></a>Transparentes Netzwerk-IP-Auflösung.
+### <a name="transparent-network-ip-resolution"></a>Transparente Netzwerk-IP-Adressauflösung
 
 Ändert das Verhalten des **multisubnetzfailover** um schnellere wiederverbindung während des Failovers zu ermöglichen. Finden Sie unter [mithilfe transparenten Netzwerk IP-Auflösung](../../../connect/odbc/using-transparent-network-ip-resolution.md) für Weitere Informationen.
 
-### <a name="column-encryption"></a>Column Encryption.
+### <a name="column-encryption"></a>Spaltenverschlüsselung
 
 Ermöglicht die automatische Entschlüsselung und Verschlüsselung von Datenübertragungen von und von mit verschlüsselten Spalten der [Always Encrypted](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md) Feature in SQL Server 2016 und höher verfügbar.
 
@@ -98,6 +98,6 @@ Zurück zum vorherigen Bildschirm des Assistenten.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-[Data Source-Assistent (Bildschirm 2)](../../../connect/odbc/windows/dsn-wizard-2.md)
+[Datenquellen-Assistent (Bildschirm 2)](../../../connect/odbc/windows/dsn-wizard-2.md)
 
-[Data Source-Assistent (Bildschirm 4)](../../../connect/odbc/windows/dsn-wizard-4.md)
+[Datenquellen-Assistent (Bildschirm 4)](../../../connect/odbc/windows/dsn-wizard-4.md)

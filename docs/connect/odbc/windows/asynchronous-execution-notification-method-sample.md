@@ -1,34 +1,35 @@
 ---
-title: "Beispiel für asynchrone Ausführung (Benachrichtigungsmethode) | Microsoft Docs"
-ms.custom: 
+title: Beispiel für asynchrone Ausführung (Benachrichtigungsmethode)
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 55c51fff-119d-445f-8732-c1569966e559
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 62d8485bec26053efd84891407255eeba2103492
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: e971ee6725f27afcd8f8b9c8accdd37176f1cf6c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: MTE
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="asynchronous-execution-notification-method-sample"></a>Beispiel für asynchrone Ausführung (Benachrichtigungsmethode)
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-  Die Codebeispiele in diesem Thema veranschaulichen, wie Sie mithilfe der [asynchrone Ausführung (Benachrichtigungsmethode)](http://msdn.microsoft.com/library/hh405038(VS.85).aspx).  
+  Die Codebeispiele in diesem Thema demonstrieren, wie die [asynchrone Ausführung ](http://msdn.microsoft.com/library/hh405038(VS.85).aspx) Benachrichtigungsmethode verwendet werden kann.  
   
- Diese Funktion verwendet die asynchrone Benachrichtigung, um fünf Verbindungen zu öffnen und führt eine Abfrage in einer einzelnen Verbindung-Anweisung aus.  
+ Diese Funktion verwendet die asynchrone Benachrichtigung, um fünf Verbindungen zu öffnen und führt für jede der Verbindungen eine Abfrage zur Anweisung aus.  
   
 ```  
   
@@ -356,7 +357,7 @@ int _tmain(int argc, _TCHAR* argv[])
 }
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Microsoft ODBC Driver for SQL Server on Windows](../../../connect/odbc/windows/microsoft-odbc-driver-for-sql-server-on-windows.md)  
   
   

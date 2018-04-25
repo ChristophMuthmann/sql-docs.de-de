@@ -2,7 +2,7 @@
 title: Sqlsrv_close | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: php
@@ -19,16 +19,16 @@ helpviewer_keywords:
 - sqlsrv_close
 - API Reference, sqlsrv_close
 ms.assetid: 6ac6209c-a134-4f8f-b88b-8eefaa1cbc7f
-caps.latest.revision: ''
+caps.latest.revision: 25
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cb772c02196c2c47dd0c5f8542fdb23ef3745fdb
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
-ms.translationtype: MT
+ms.openlocfilehash: acee29ec49e4bd0d8e303248a2a527d5697b42aa
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: MTE
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlsrvclose"></a>sqlsrv_close
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -49,7 +49,7 @@ sqlsrv_close( resource $conn )
 Der boolesche Wert **true** , außer die Funktion wird mit einem ungültigen Parameter aufgerufen. Wenn die Funktion mit einem ungültigen Parameter aufgerufen wird, wird **false** zurückgegeben.  
   
 > [!NOTE]  
-> **NULL** ist ein gültiger Parameter für diese Funktion. Dadurch kann die Funktion mehrmals in einem Skript aufgerufen werden. Beispielsweise, wenn Sie eine Verbindung in einem Fehlerzustand schließen und wieder am Ende des Skripts schließen, der zweite Aufruf von **Sqlsrv_close** zurück **"true"** , da der erste Aufruf von **Sqlsrv_ Schließen Sie** wird Sie (im Fehlerzustand) die Verbindungsressource auf **null**.  
+> **NULL** ist ein gültiger Parameter für diese Funktion. Dadurch kann die Funktion mehrmals in einem Skript aufgerufen werden. Wenn Sie z. B. eine Verbindung in einem Fehlerzustand schließen und sie erneut am Ende des Skripts schließen, wird der zweite Aufruf von sqlsrv_close **den Wert true** zurückgeben, da der erste Aufruf von sqlsrv_close **(im Fehlerzustand) die Verbindungsressource auf NULL** setzt.  
   
 ## <a name="example"></a>Beispiel  
 Im folgenden Beispiel wird eine Verbindung geschlossen. Das Beispiel setzt voraus, dass SQL Server auf dem lokalen Computer installiert ist. Wenn das Beispiel über die Befehlszeile ausgeführt wird, werden alle Ausgaben in die Konsole geschrieben.  
@@ -76,7 +76,7 @@ echo "Connection closed.\n";
 ?>  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [API-Referenz für den SQLSRV-Treiber](../../connect/php/sqlsrv-driver-api-reference.md)
 
 [Informationen zu den Codebeispielen in der Dokumentation](../../connect/php/about-code-examples-in-the-documentation.md)  

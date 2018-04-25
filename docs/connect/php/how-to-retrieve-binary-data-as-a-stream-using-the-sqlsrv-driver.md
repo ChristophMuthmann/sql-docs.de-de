@@ -1,8 +1,8 @@
 ---
-title: 'Vorgehensweise: Abrufen von Binärdaten als Stream mit dem SQLSRV-Treiber | Microsoft Docs'
+title: 'Gewusst wie: Abrufen von Binärdaten als Stream mithilfe des SQLSRV-Treibers'
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: php
@@ -16,21 +16,21 @@ helpviewer_keywords:
 - retrieving data, as a binary stream
 - streaming data
 ms.assetid: cd8d6382-abe6-48ee-9d10-4e6c52c0cb9a
-caps.latest.revision: ''
+caps.latest.revision: 21
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f992cf6f54469da63d910e2fb1d53be4b026e06b
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
-ms.translationtype: MT
+ms.openlocfilehash: bc64286141b6ec0736ae6427d4a55af8afa75269
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: MTE
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-retrieve-binary-data-as-a-stream-using-the-sqlsrv-driver"></a>Vorgehensweise: Abrufen von Binärdaten als Stream mithilfe des SQLSRV-Treibers
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Abrufen von Daten als Stream ist nur verfügbar im SQLSRV-Treiber von der [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], und ist nicht im PDO_SQLSRV-Treiber verfügbar.  
+Das Abrufen von Daten als Stream ist nur im SQLSRV-Treiber von [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] und nicht im PDO_SQLSRV-Treiber verfügbar.  
   
 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] nutzt PHP-Streams zum Abrufen großer Binärdatenmengen vom Server. Dieses Thema veranschaulicht, wie Binärdaten als Stream abgerufen werden.  
   
@@ -39,7 +39,7 @@ Verwenden der Streams zum Abrufen von Binärdaten, z. B. Bildern, verzichtet auf
 ## <a name="example"></a>Beispiel  
 Im folgenden Beispiel werden Binärdaten, z. B. ein Bild, aus der *Production.ProductPhoto* -Tabelle der AdventureWorks-Datenbank abgerufen. Das Bild wird als Stream abgerufen und im Browser angezeigt.  
   
-Das Abrufen von Bilddaten als Stream erfolgt mithilfe von [sqlsrv_fetch](../../connect/php/sqlsrv-fetch.md) und [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md) mit einem binären Stream als Rückgabetyp. Der Rückgabetyp wird angegeben, unter Verwendung der Konstanten **SQLSRV_PHPTYPE_STREAM**. Informationen zu **Sqlsrv** -Konstanten finden Sie [Konstanten &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).  
+Das Abrufen von Bilddaten als Stream erfolgt mithilfe von [sqlsrv_fetch](../../connect/php/sqlsrv-fetch.md) und [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md) mit einem binären Stream als Rückgabetyp. Der Rückgabetyp wird unter Verwendung der Konstanten SQLSRV_PHPTYPE_STREAM** angegeben. Informationen zu **sqlsrv**-Konstanten finden Sie unter [Konstanten &#40;Microsoft-Treiber für PHP für SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).  
   
 Das Beispiel setzt voraus, dass SQL Server und die [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) -Datenbank auf dem lokalen Computer installiert sind. Wenn das Beispiel über den Browser ausgeführt wird, werden alle Ausgaben im Browser geschrieben.  
   
@@ -94,9 +94,9 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-Die Angabe des Rückgabetyps im Beispiel veranschaulicht, wie der PHP-Rückgabetyp als binärer Stream angegeben wird. Technisch gesehen ist es nicht erforderlich im Beispiel weil der *LargePhoto* Feld wurde von SQL Server-Typ varbinary(max) und wird daher standardmäßig als binärer Stream zurückgegeben. Informationen zu PHP-Datentypen finden Sie unter [Default PHP Data Types](../../connect/php/default-php-data-types.md). Weitere Informationen zum Angeben von PHP-Rückgabetypen finden Sie unter [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md).  
+Die Angabe des Rückgabetyps im Beispiel veranschaulicht, wie der PHP-Rückgabetyp als binärer Stream angegeben wird. Technisch gesehen ist er nicht zwingend im Beispiel anzugeben, weil das *LargePhoto*-Feld den SQL Server-Typ „varbinarymax“ aufweist und dieser daher standardmäßig als binärer Stream zurückgegeben wird. Informationen zu PHP-Datentypen finden Sie unter [Default PHP Data Types](../../connect/php/default-php-data-types.md). Weitere Informationen zum Angeben von PHP-Rückgabetypen finden Sie unter [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Abrufen von Daten](../../connect/php/retrieving-data.md)
 
 [Abrufen von Daten als Stream mit dem SQLSRV-Treiber](../../connect/php/retrieving-data-as-a-stream-using-the-sqlsrv-driver.md)

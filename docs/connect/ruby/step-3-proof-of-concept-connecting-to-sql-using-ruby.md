@@ -1,29 +1,30 @@
 ---
-title: 'Schritt 3: Machbarkeitsnachweis Herstellen einer Verbindung mit SQL Ruby mit | Microsoft Docs'
-ms.custom: 
+title: 'Schritt 3: Machbarkeitsnachweis für Verbindungen mit SQL mithilfe von Ruby'
+ms.custom: ''
 ms.date: 08/08/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ruby
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: cac20b18-0a6d-4243-bbda-a5d1b9476441
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 481061c2d37bd4b6c6cf0c5c131f2c8a24f3025f
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 925c3385ce112d8aa86381e8d5ea6924e4173a3b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: MTE
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="step-3-proof-of-concept-connecting-to-sql-using-ruby"></a>Schritt 3: Machbarkeitsnachweis Herstellen einer Verbindung mit SQL mit Ruby
+# <a name="step-3-proof-of-concept-connecting-to-sql-using-ruby"></a>Schritt 3: Machbarkeitsnachweis für Verbindungen mit SQL mithilfe von Ruby
 
 In diesem Beispiel soll ein Proof of Concept nur berücksichtigt werden.  Der Beispielcode ist aus Gründen der Übersichtlichkeit vereinfacht und von Microsoft empfohlene bewährte Methoden stellt nicht notwendigerweise dar.  
   
@@ -38,7 +39,7 @@ Die [TinyTDS::Client](https://github.com/rails-sqlserver/tiny_tds) Funktion dien
     database: 'AdventureWorks', azure:true  
 ```  
   
-## <a name="step-2--execute-a-query"></a>Schritt 2: Ausführen einer Abfrage  
+## <a name="step-2--execute-a-query"></a>Abfrage ausführen.  
   
 Kopieren Sie den folgenden Code in eine leere Datei. Rufen Sie diese test.rb. Dann führen sie durch Eingabe des folgenden Befehls von der Befehlszeile aus:  
   

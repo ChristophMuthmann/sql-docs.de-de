@@ -1,8 +1,8 @@
 ---
-title: PDO::errorInfo | Microsoft Docs
+title: 'PDO:: errorInfo | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: php
@@ -13,16 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 9d5481d5-13bc-4388-b3aa-78676c0fc709
-caps.latest.revision: ''
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 41051d4425903e1a59392187e48c5defef4620c5
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
-ms.translationtype: MT
+ms.openlocfilehash: aa20f4bb1f833a43f2cfc8ae99423db8d6af7751
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: MTE
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="pdoerrorinfo"></a>PDO::errorInfo
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -43,17 +43,17 @@ Ein Array mit Fehlerinformationen über den zuletzt ausgeführten Vorgang des Da
   
 -   Der treiberspezifische Fehlercode  
   
--   Die treiberspezifische Fehlermeldung.  
+-   Die treiberspezifische Fehlermeldung  
   
-Wenn kein Fehler vorliegt oder wenn der SQLSTATE nicht festgelegt ist, sind die treiberspezifischen Felder NULL.  
+Wenn kein Fehler vorliegt oder wenn der SQLSTATE nicht festgelegt ist, werden die treiberspezifischen Felder NULL sein.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
 PDO::errorInfo ruft nur die Fehlerinformationen für Vorgänge ab, die direkt in der Datenbank ausgeführt werden. Verwenden Sie PDOStatement::errorInfo, wenn eine PDOStatement-Instanz mit PDO::prepare oder PDO::query erstellt wird.  
   
 Unterstützung für PDO wurde in Version 2.0 von [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]hinzugefügt.  
   
 ## <a name="example"></a>Beispiel  
-In diesem Beispiel wird der Name der Spalte falsch geschrieben (`Cityx` anstelle von `City`), verursacht einen Fehler, der dann gemeldet wird.  
+In diesem Beispiel ist der Name der Spalte falsch geschrieben `Cityx` anstelle von `City` und verursacht einen Fehler, der dann gemeldet wird.  
   
 ```  
 <?php  
@@ -67,7 +67,7 @@ print_r ($conn->errorInfo());
 ?>  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [PDO-Klasse](../../connect/php/pdo-class.md)
 
 [PDO](http://php.net/manual/book.pdo.php)  

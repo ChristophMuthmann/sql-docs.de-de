@@ -1,8 +1,8 @@
 ---
-title: Abrufen von Zeichendaten als Stream mit dem SQLSRV-Treiber | Microsoft Docs
+title: 'Gewusst wie: Abrufen von Zeichendaten als Stream mit dem SQLSRV-Treiber'
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: php
@@ -16,30 +16,30 @@ helpviewer_keywords:
 - retrieving data, as a character stream
 - streaming data
 ms.assetid: 3c0dbca4-abfc-4449-b133-66c819681840
-caps.latest.revision: ''
+caps.latest.revision: 27
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d118d8ded53f2de55510f92c908259e3a4b5659b
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
-ms.translationtype: MT
+ms.openlocfilehash: 4a2af695b619c54e23d2d08cc451408c7aa9889e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: MTE
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-retrieve-character-data-as-a-stream-using-the-sqlsrv-driver"></a>Vorgehensweise: Abrufen von Zeichendaten als Stream mit dem SQLSRV-Treiber
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Abrufen von Daten als Stream ist nur verfügbar im SQLSRV-Treiber von der [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], und ist nicht im PDO_SQLSRV-Treiber verfügbar.  
+Das Abrufen von Daten als Stream ist nur im SQLSRV-Treiber von [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] und nicht im PDO_SQLSRV-Treiber verfügbar.  
   
 Der SQLSRV-Treiber nutzt PHP-Streams zum Abrufen großer Datenmengen vom Server. Im Beispiel in diesem Thema wird veranschaulicht, wie Zeichendaten als Stream abgerufen werden.  
   
 ## <a name="example"></a>Beispiel  
-Im folgenden Beispiel wird eine einzelne Zeile von der *Production.ProductReview* -Tabelle der AdventureWorks-Datenbank abgerufen. Die *Kommentare* -Feld der zurückgegebenen Zeile wird als Stream abgerufen und angezeigt, indem Sie die PHP [Fpassthru](http://php.net/manual/function.fpassthru.php) Funktion.  
+Im folgenden Beispiel wird eine einzelne Zeile von der *Production.ProductReview* -Tabelle der AdventureWorks-Datenbank abgerufen. Das *Comments* -Feld der zurückgegebenen Zeile wird als Stream abgerufen und mithilfe der PHP-Funktion [fpassthru](http://php.net/manual/function.fpassthru.php) angezeigt.  
   
-Das Abrufen von Daten als Stream erfolgt mithilfe von [sqlsrv_fetch](../../connect/php/sqlsrv-fetch.md) und [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md) als Zeichenstream spezifizierten Rückgabetyp. Der Rückgabetyp wird angegeben, unter Verwendung der Konstanten **SQLSRV_PHPTYPE_STREAM**. Informationen zu **Sqlsrv** -Konstanten finden Sie [Konstanten &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).  
+Das Abrufen von Daten als Stream erfolgt mithilfe von [sqlsrv_fetch](../../connect/php/sqlsrv-fetch.md) und [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md) als Zeichenstream spezifizierten Rückgabetyp. Der Rückgabetyp wird unter Verwendung der Konstanten SQLSRV_PHPTYPE_STREAM** angegeben. Informationen zu **sqlsrv**-Konstanten finden Sie unter [Konstanten &#40;Microsoft-Treiber für PHP für SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).  
   
-Das Beispiel setzt voraus, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] und [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) -Datenbank auf dem lokalen Computer installiert sind. Wenn das Beispiel über die Befehlszeile ausgeführt wird, werden alle Ausgaben in die Konsole geschrieben.  
+Das Beispiel setzt voraus, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] und die [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) -Datenbank auf dem lokalen Computer installiert sind. Wenn das Beispiel über die Befehlszeile ausgeführt wird, werden alle Ausgaben in die Konsole geschrieben.  
   
 ```  
 <?php  
@@ -98,7 +98,7 @@ sqlsrv_close( $conn);
   
 Die ersten drei Felder werden entsprechend des jeweiligen PHP-Standardtyps zurückgegeben, da für sie kein PHP-Rückgabetyp angegeben ist. Informationen zu PHP-Datentypen finden Sie unter [Default PHP Data Types](../../connect/php/default-php-data-types.md). Weitere Informationen zum Angeben von PHP-Rückgabetypen finden Sie unter [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Abrufen von Daten](../../connect/php/retrieving-data.md)
 
 [Abrufen von Daten als Stream mit dem SQLSRV-Treiber](../../connect/php/retrieving-data-as-a-stream-using-the-sqlsrv-driver.md)
