@@ -1,16 +1,16 @@
 ---
 title: Sequenztyps | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ helpviewer_keywords:
 - sequence type matching [XQuery]
 - XQuery, sequence type matching
 ms.assetid: 8c56fb69-ca04-4aba-b55a-64ae216c492d
-caps.latest.revision: 
+caps.latest.revision: 16
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5a86a8fdfbae6fb345839d281141c3606abae804
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 9cdde5fe0d26b6e3be5645377df17d7d04e8dcd0
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="type-system---sequence-type-matching"></a>Geben Sie die System - Sequenztyps
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.lasthandoff: 02/09/2018
   
 -   Sie möchten vielleicht wissen, ob der Ausdruck ein XML-Element oder einen Attributknoten eines bestimmten Namens oder Typs zurückgibt.  
   
- Zur Sequenztypzuordnung können Sie den booleschen `instance of`-Operator verwenden. Weitere Informationen zu den `instance of` Ausdruck finden Sie unter [SequenceType-Ausdrücke &#40; XQuery &#41; ](../xquery/sequencetype-expressions-xquery.md).  
+ Zur Sequenztypzuordnung können Sie den booleschen `instance of`-Operator verwenden. Weitere Informationen zu den `instance of` Ausdruck finden Sie unter [SequenceType-Ausdrücke &#40;XQuery&#41;](../xquery/sequencetype-expressions-xquery.md).  
   
 ## <a name="comparing-the-atomic-value-type-returned-by-an-expression"></a>Vergleichen des Typs des von einem Ausdruck zurückgegebenen atomaren Werts  
  Wenn ein Ausdruck eine Sequenz aus atomaren Werten zurückgibt, müssen Sie eventuell herausfinden, welchen Typ der Wert in der Sequenz aufweist. Die folgenden Beispiele zeigen, wie die Sequenztypsyntax verwendet werden kann, um den Typ des von einem Ausdruck zurückgegebenen atomaren Werts auszuwerten.  
@@ -442,6 +442,6 @@ RETURN
 -   Explizites Abfragen von **xsi: Type** oder **xsi: nil** wird nicht unterstützt.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Typsystem &#40; XQuery &#41;](../xquery/type-system-xquery.md)  
+ [Typsystem &#40;XQuery&#41;](../xquery/type-system-xquery.md)  
   
   

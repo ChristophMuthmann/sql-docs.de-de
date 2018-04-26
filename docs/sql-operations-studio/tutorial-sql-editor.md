@@ -1,9 +1,9 @@
 ---
-title: 'Lernprogramm: Verwenden den SQL Operations Studio (preview) Transact-SQL-Editor zum Erstellen von Datenbankobjekten | Microsoft Docs'
-description: Dieses Lernprogramm veranschaulicht die wichtigsten Funktionen in SQL Operations Studio (preview), die mithilfe des T-SQL-vereinfachen.
+title: 'Lernprogramm: Verwenden den SQL-Vorgänge Studio (Vorschau) Transact-SQL-Editor zum Erstellen von Datenbankobjekten | Microsoft Docs'
+description: Dieses Lernprogramm veranschaulicht die wichtigsten Funktionen in SQL Operations Studio (Vorschau), die mithilfe des T-SQL-vereinfachen.
 ms.custom: tools|sos
 ms.date: 03/13/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
@@ -14,11 +14,11 @@ author: erickangMSFT
 ms.author: erickang
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: db9cc8185742980b649f9fcc11eced5687201464
-ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
+ms.openlocfilehash: 5fec80de2d2e86871926a36c7d1601a217b1b737
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="tutorial-use-the-transact-sql-editor-to-create-database-objects---includename-sosincludesname-sos-shortmd"></a>Tutorial: Verwenden von Transact-SQL-Editor zum Erstellen von Datenbankobjekten- [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
@@ -63,14 +63,14 @@ Dieses Lernprogramm erfordert die SQL Server- oder Azure SQL-Datenbank *Tutorial
 
 ## <a name="use-t-sql-snippets-to-create-stored-procedures"></a>Verwenden Sie zum Erstellen gespeicherter Prozeduren T-SQL-Ausschnitten
 
-SQL Operations Studio stellt viele integrierte T-SQL-Ausschnitte für das schnelle Erstellen von Anweisungen bereit.
+SQL-Vorgänge Studio stellt viele integrierte T-SQL-Ausschnitte für das schnelle Erstellen von Anweisungen bereit.
 
 
 1. Öffnen Sie einen neues Abfrage-Editor, indem Sie mit **STRG + N**.
 
 2. Typ **Sql** im Editor, Pfeil nach unten bis zum **SqlCreateStoredProcedure**, und drücken Sie die *Registerkarte* Schlüssel (oder *EINGABETASTE*) gespeicherten erstellen laden Prozedur-Ausschnitt.
 
-   ![snippet-list](./media/tutorial-sql-editor/snippet-list.png)
+   ![Snippet-Liste](./media/tutorial-sql-editor/snippet-list.png)
 
 3. Der erstellen-gespeicherte Prozedur-Ausschnitt enthält zwei Felder, die zur schnellen Bearbeitung einrichten *StoredProcedureName* und *SchemaName*. Wählen Sie *StoredProcedureName*, mit der rechten Maustaste, und wählen **ändern alle Vorkommen**. Geben Sie nun *GetCustomer* und alle *StoredProcedureName* Einträge zu ändern, um *GetCustomer*.
 
@@ -117,7 +117,7 @@ Nun wird die gespeicherte Prozedur erstellt, und die **Ergebnisse** Bereich zeig
 
 ## <a name="use-peek-definition"></a>Verwenden von "Definition einsehen" 
 
-SQL Operations Studio bietet die Möglichkeit zum Anzeigen der Definition einer Objekte mit der Peek-Definition-Funktion. In diesem Abschnitt wird eine zweite gespeicherte Prozedur erstellt und "Definition einsehen" verwendet, um festzustellen, welche Spalten in einer Tabelle, um schnell den Text der gespeicherten Prozedur zu erstellen sind.
+SQL-Vorgänge Studio bietet die Möglichkeit zum Anzeigen der Definition einer Objekte mit der Peek-Definition-Funktion. In diesem Abschnitt wird eine zweite gespeicherte Prozedur erstellt und "Definition einsehen" verwendet, um festzustellen, welche Spalten in einer Tabelle, um schnell den Text der gespeicherten Prozedur zu erstellen sind.
 
 1. Öffnen Sie einen neuen Editor durch Drücken von **STRG + N**. 
 

@@ -1,27 +1,28 @@
 ---
-title: "Ausführen von Testfällen (OracleToSQL) | Microsoft Docs"
-ms.prod: sql-non-specified
+title: Ausführen von Testfällen (OracleToSQL) | Microsoft Docs
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-oracle
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: fc208cdb-7373-4f6b-8f6c-cdff9d3dcd02
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: 6d9e4e71813ff5b092ba1b67db207abd9b1adc44
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: bff5a571a8ad60e2baa3ea1211d6aff97c01c5ea
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="running-test-cases-oracletosql"></a>Ausführen von Testfällen (OracleToSQL)
 Wenn SSMA Tester einen Testfall ausgeführt wird, führt die Objekte, die zu Testzwecken ausgewählt und erstellt einen Bericht über die Ergebnisse der Überprüfung. Wenn die Ergebnisse auf beiden Plattformen identisch sind, war der Test erfolgreich. Die Entsprechung von Objekten zwischen Oracle und [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] richtet sich danach die schemazuordnung Einstellungen für das aktuelle SSMA-Projekt.  
@@ -39,7 +40,7 @@ Wenn der Test abgeschlossen ist, ist der Testfall Bericht erstellt. Klicken Sie 
   
 ## <a name="test-case-execution-steps"></a>Testfall Ausführungsschritte folgen  
   
-### <a name="prerequisites"></a>Voraussetzungen  
+### <a name="prerequisites"></a>Erforderliche Komponenten  
 SSMA-Tester wird überprüft, ob alle erforderlichen Komponenten für die Ausführung des Tests vor Beginn des Tests erfüllt sind. Wenn bestimmte Bedingungen nicht erfüllt sind, wird eine Fehlermeldung angezeigt.  
   
 ### <a name="initialization"></a>Initialisierung  
@@ -51,8 +52,8 @@ Wird davon ausgegangen Sie, dass die überprüfte Tabelle USER_TABLE heißt. Bei
 |-|-|-|  
 |Name|Typ|Description|  
 |USER_TABLE$ "TRG"|Trigger (trigger)|Trigger, der die Änderungen in der überprüften Tabelle überwachen.|  
-|USER_TABLE$ AUD|-Tabelle|Die Tabelle, in dem überschriebene, und gelöschte Zeilen gespeichert werden.|  
-|USER_TABLE$ AUDID|-Tabelle|Die Tabelle, in dem neue und geänderte Zeilen gespeichert werden.|  
+|USER_TABLE$ AUD|table|Die Tabelle, in dem überschriebene, und gelöschte Zeilen gespeichert werden.|  
+|USER_TABLE$ AUDID|table|Die Tabelle, in dem neue und geänderte Zeilen gespeichert werden.|  
 |USER_TABLE|Ansicht|Vereinfachte Darstellung der tabellenänderungen.|  
 |NEUE USER_TABLE$|Ansicht|Vereinfachte Darstellung der eingefügten Zeilen überschrieben.|  
 |USER_TABLE$ NEW_ID|Ansicht|Kennung des eingefügten und geänderten Zeilen.|  
@@ -70,12 +71,12 @@ Und die folgenden Objekte werden erstellt am [!INCLUDE[ssNoVersion](../../includ
 ||||  
 |-|-|-|  
 |Name|Typ|Description|  
-|USER_TABLE$ Aud|-Tabelle|Die Tabelle, in dem überschriebene, und gelöschte Zeilen gespeichert werden.|  
-|USER_TABLE$ AudID|-Tabelle|Die Tabelle, in dem neue und geänderte Zeilen gespeichert werden.|  
+|USER_TABLE$ Aud|table|Die Tabelle, in dem überschriebene, und gelöschte Zeilen gespeichert werden.|  
+|USER_TABLE$ AudID|table|Die Tabelle, in dem neue und geänderte Zeilen gespeichert werden.|  
 |USER_TABLE|Ansicht|Vereinfachte Darstellung der tabellenänderungen.|  
-|USER_TABLE$ neue|Ansicht|Vereinfachte Darstellung der eingefügten Zeilen überschrieben.|  
-|USER_TABLE$ new_id|Ansicht|Kennung des eingefügten und geänderten Zeilen.|  
-|USER_TABLE$ alte|Ansicht|Vereinfachte Darstellung der Zeilen gelöscht und überschrieben.|  
+|USER_TABLE$new|Ansicht|Vereinfachte Darstellung der eingefügten Zeilen überschrieben.|  
+|USER_TABLE$new_id|Ansicht|Kennung des eingefügten und geänderten Zeilen.|  
+|USER_TABLE$old|Ansicht|Vereinfachte Darstellung der Zeilen gelöscht und überschrieben.|  
   
 ### <a name="test-object-calls"></a>Testen der Aufrufe  
 SSMA-Tester an diesem Punkt ruft jedes Objekt, das für die Tests ausgewählt, vergleichen Sie die Ergebnisse und zeigt den Bericht.  
@@ -84,10 +85,10 @@ SSMA-Tester an diesem Punkt ruft jedes Objekt, das für die Tests ausgewählt, v
 Während der Finalisierung bereinigt SSMA Tester die zusätzlichen Objekte erstellt, auf die **Initialisierung** Schritt.  
   
 ## <a name="next-step"></a>Nächster Schritt  
-[Anzeigen von Berichten Testfall &#40; OracleToSQL &#41;](../../ssma/oracle/viewing-test-case-reports-oracletosql.md)  
+[Anzeigen von Berichten Testfall &#40;OracleToSQL&#41;](../../ssma/oracle/viewing-test-case-reports-oracletosql.md)  
   
 ## <a name="see-also"></a>Siehe auch  
-[Auswählen und Konfigurieren von Objekten zum Test &#40; OracleToSQL &#41;](../../ssma/oracle/selecting-and-configuring-objects-to-test-oracletosql.md)  
-[Auswählen und Konfigurieren von betroffenen Objekten &#40; OracleToSQL &#41;](../../ssma/oracle/selecting-and-configuring-affected-objects-oracletosql.md)  
-[Testen von migriert Datenbankobjekte &#40; OracleToSQL &#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
+[Auswählen und Konfigurieren von Objekten mit Test &#40;OracleToSQL&#41;](../../ssma/oracle/selecting-and-configuring-objects-to-test-oracletosql.md)  
+[Auswählen und Konfigurieren von betroffene Objekte &#40;OracleToSQL&#41;](../../ssma/oracle/selecting-and-configuring-affected-objects-oracletosql.md)  
+[Testen von Datenbankobjekten migriert &#40;OracleToSQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
   

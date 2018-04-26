@@ -1,6 +1,6 @@
 ---
 title: Herstellen einer Verbindung mit Oracle-Datenbank (OracleToSQL) | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-oracle
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: On Demand
-ms.openlocfilehash: df379493d026c3cc3da3bf01ea036e8f32072625
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 8c0c85182da6de1e2cb80cda8c628788651e89ef
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="connecting-to-oracle-database-oracletosql"></a>Herstellen einer Verbindung mit Oracle-Datenbank (OracleToSQL)
 Zum Migrieren von Oracle-Datenbanken zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], Sie müssen die Verbindung mit der Oracle-Datenbank, die Sie migrieren möchten. Wenn Sie eine Verbindung herstellen, SSMA Ruft Metadaten zu allen Oracle-Schemas ab und zeigt ihn dann in der Oracle-Metadaten-Explorer-Bereich an. SSMA speichert Informationen über den Datenbankserver, aber die Kennwörter werden nicht gespeichert.  
@@ -98,7 +98,7 @@ Wenn Sie eine Verbindung mit einer Datenbank herstellen, SSMA liest die Datenban
   
     `Data Source=MyOracleDB;Integrated Security=yes;`  
   
-    Weitere Informationen finden Sie unter [auf Oracle Verbinden &#40; OracleToSQL &#41;](../../ssma/oracle/connect-to-oracle-oracletosql.md).  
+    Weitere Informationen finden Sie unter [auf Oracle Verbinden &#40;OracleToSQL&#41;](../../ssma/oracle/connect-to-oracle-oracletosql.md).  
   
 ## <a name="reconnecting-to-oracle"></a>Erneutes Herstellen einer Verbindung mit Oracle  
 Die Verbindung mit dem Datenbankserver bleibt aktiv, bis Sie das Projekt schließen. Wenn Sie das Projekt erneut öffnen, müssen Sie neu, wenn eine aktive Verbindung mit der Datenbank verwendet werden soll. Sie können offline arbeiten, bis Sie verwenden möchten, aktualisieren Sie Metadaten an, und laden die Datenbankobjekte in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], und Daten migrieren.  
@@ -133,5 +133,5 @@ Metadaten für die Oracle-Datenbank wird nicht automatisch aktualisiert. Die Met
 -   Der nächste Schritt des Migrationsvorgangs besteht darin [Herstellen einer Verbindung mit einer Instanz von SQL Server](http://msdn.microsoft.com/en-us/1b2a8059-1829-4904-a82f-9c06de1e245f).  
   
 ## <a name="see-also"></a>Siehe auch  
-[Migrieren von Oracle-Datenbanken zu SQLServer &#40; OracleToSQL &#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
+[Migrieren von Oracle-Datenbanken zu SQLServer &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
   

@@ -6,7 +6,7 @@ ms.author: jroth
 manager: craigg
 ms.date: 04/20/2018
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: ''
@@ -15,11 +15,11 @@ ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
 ms.workload: Active
-ms.openlocfilehash: 786153cf6d3f9cee30a01d3b6e3a94646a75eecc
-ms.sourcegitcommit: f3aa02a0f27cc1d3d5450f65cc114d6228dd9d49
+ms.openlocfilehash: e5c8cc35d7cd539b5b00a077cf0468aac533f897
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Versionshinweise für SQL Server-2017 unter Linux
 

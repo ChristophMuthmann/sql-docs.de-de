@@ -1,9 +1,9 @@
 ---
-title: Sichern und Wiederherstellen eine Datenbank mithilfe von SQL Operations Studio (preview) | Microsoft Docs
-description: Weitere Informationen Sie zum Sichern und Wiederherstellen einer Datenbank mithilfe von SQL Operations Studio (preview)
+title: Sichern und Wiederherstellen eine Datenbank mithilfe von SQL-Vorgänge Studio (Vorschau) | Microsoft Docs
+description: Weitere Informationen Sie zum Sichern und Wiederherstellen einer Datenbank mithilfe von SQL-Vorgänge Studio (Vorschau)
 ms.custom: tools|sos
 ms.date: 11/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
@@ -14,13 +14,13 @@ author: erickangMSFT
 ms.author: erickang
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 46ef55aa54275e356eff9674aac10a27b36d758e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: baf76f3d403f74bc84ecafc4d2c84bce340a0e2e
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="backup-and-restore-using-includename-sosincludesname-sos-shortmd"></a>Sicherung und Wiederherstellung verwendet[!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="backup-and-restore-using-includename-sosincludesname-sos-shortmd"></a>Sicherung und Wiederherstellung verwendet [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
 In diesem Lernprogramm erfahren Sie, wie Sie [!INCLUDE[name-sos](../includes/name-sos-short.md)] an:
 > [!div class="checklist"]
@@ -34,7 +34,7 @@ In diesem Lernprogramm erfahren Sie, wie Sie [!INCLUDE[name-sos](../includes/nam
 
 Dieses Lernprogramm erfordert SQL Server *TutorialDB*. Zum Erstellen der *TutorialDB* Datenbank, führen Sie eines der folgenden Schnellstarts:
 
-- [Eine Verbindung herstellen Sie und Fragen Sie mithilfe des SQL Server ab[!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
+- [Eine Verbindung herstellen Sie und Fragen Sie mithilfe des SQL Server ab [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
 
 
 ## <a name="backup-a-database"></a>Sichern einer Datenbank

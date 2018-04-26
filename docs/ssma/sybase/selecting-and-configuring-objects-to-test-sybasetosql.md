@@ -2,7 +2,7 @@
 title: Auswählen und Konfigurieren von Objekten mit Test (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-sybase
@@ -24,11 +24,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3ee6efee5172d5261c5f8fa5e23507b9bb2b931b
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 26d6e9d0a07ddc32f20c80f3d0d476131721d969
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="selecting-and-configuring-objects-to-test-sybasetosql"></a>Auswählen und Konfigurieren von Objekten mit Test (SybaseToSQL)
 In diesem Schritt wählen Sie die Objekte zu testen, und konfigurieren Einstellungen für den Vergleich von Prozeduren und Funktionen Output-Parameter als auch die Rückgabewerte von Funktionen.  
@@ -48,14 +48,14 @@ Aktivieren Sie die von den ausgewählten Parameter in Vergleichsberichte für Er
   
 -   Falls gewünscht **"true"**, SSMA wird nach dem Ausführen der Prozedur für Sybase mit den entsprechenden Wert auf den Ausgabewert dieses Parameters vergleichen [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]  
   
--   Falls gewünscht**"false"**, der Parameter vom Ergebnisbereich Überprüfung ausgeschlossen werden.  
+-   Falls gewünscht **"false"**, der Parameter vom Ergebnisbereich Überprüfung ausgeschlossen werden.  
   
 ### <a name="use-custom-scale"></a>Benutzerdefinierte Skalierung verwenden  
 Für Parameter des ungefähre und feste Länge numerischen Datentyp aufweisen können Sie einen benutzerdefinierten Maßstab für den Vergleich festlegen.  
   
 -   Falls gewünscht **"true"**, numerische Werte werden entsprechend dem gerundet werden die **vergleichen Skalierung** Wert, bevor diese verglichen werden.  
   
--   Falls gewünscht**"false"**, genauen numerische Vergleich werden.  
+-   Falls gewünscht **"false"**, genauen numerische Vergleich werden.  
   
 ### <a name="comparing-scale"></a>Vergleichen von Skala  
 Nur verfügbar, wenn die **Verwenden benutzerdefinierter Maßstab** Option wird festgelegt, um **"true"**. Dies ist die Genauigkeit für einen numerischen Vergleich.  

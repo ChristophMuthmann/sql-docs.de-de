@@ -1,6 +1,6 @@
 ---
 title: Referenz zur Benutzeroberfläche (DB2ToSQL) | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-db2
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cf237368144d4072ea1e6f3a3e130a0d0608650f
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 5bd7b694ba638e9e069c7f61bb7a84b6eeb54670
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="user-interface-reference-db2tosql"></a>Referenz zur Benutzeroberfläche (DB2ToSQL)
 Dieser Abschnitt enthält Hilfethemen für [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) for DB2.  
@@ -37,7 +37,7 @@ Die folgende Tabelle enthält die SSMA-Dialogfelder:
 |-|-|  
 |Thema|Description|  
 |[Erweiterte Objektauswahl &#40;DB2ToSQL&#41;](../../ssma/db2/advanced-object-selection-db2tosql.md)|Verwenden der **erweiterte Objekt auswählen** Dialogfeld Suchen Datenbankobjekte mit Filterkriterien, und klicken Sie dann zu aktivieren oder deaktivieren diese Objekte.|  
-|[Assessment Report &#40;DB2ToSQL&#41;](../../ssma/db2/assessment-report-db2tosql.md)|Verwenden Sie zum Anzeigen der Ergebnisse der Konvertierung von DB2-Objekten, die den Bewertungsbericht [!INCLUDE[tsql](../../includes/tsql_md.md)] -Syntax und die Uhrzeit und die Komplexität einer Migration zu schätzen [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].|  
+|[Bewertungsbericht &#40;DB2ToSQL&#41;](../../ssma/db2/assessment-report-db2tosql.md)|Verwenden Sie zum Anzeigen der Ergebnisse der Konvertierung von DB2-Objekten, die den Bewertungsbericht [!INCLUDE[tsql](../../includes/tsql_md.md)] -Syntax und die Uhrzeit und die Komplexität einer Migration zu schätzen [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].|  
 |[Herstellen einer Verbindung mit DB2-Datenbank &#40;DB2ToSQL&#41;](../../ssma/db2/connecting-to-db2-database-db2tosql.md)|Verwenden der **Herstellen einer Verbindung mit DB2** Dialogfeld Verbindung mit der DB2-Datenbank, die Sie migrieren möchten.|  
 |[Herstellen einer Verbindung mit SQLServer &#40;DB2ToSQL&#41;](../../ssma/db2/connect-to-sql-server-db2tosql.md)|Verwenden der **Herstellen einer Verbindung mit SQL Server** im Dialogfeld für die Verbindung mit der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] , die Sie migrieren möchten.|  
 |[Migration Datenbericht &#40;DB2ToSQL&#41;](../../ssma/db2/data-migration-report-db2tosql.md)|Zeigt die Ergebnisse der Migration von Daten aus DB2 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].|  

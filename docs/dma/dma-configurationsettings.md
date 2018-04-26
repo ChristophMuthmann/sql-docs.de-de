@@ -2,7 +2,7 @@
 title: Konfigurationseinstellungen (SQL Server Data Migration Assistant) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/31/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: dma
 ms.service: ''
 ms.component: ''
@@ -21,11 +21,11 @@ author: HJToland3
 ms.author: jtoland
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3dde0c93d09a8c273e74820428a617a24f7ee150
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c6fbe8b8a2912e7dfcc4b5f656255132e27e8a72
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="configuration-settings-for-data-migration-assistant"></a>Konfigurationseinstellungen für Data-Migrations-Assistent
 

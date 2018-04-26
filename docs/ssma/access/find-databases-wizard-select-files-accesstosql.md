@@ -1,6 +1,6 @@
 ---
 title: Datenbanken-Assistent (Select-Dateien) suchen (AccessToSQL) | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-access
@@ -23,11 +23,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5d1f3250b044706f742310a575135b0526484403
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: a984e654c14f4ee5b65d49a88dc911b082682581
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="find-databases-wizard-select-files-accesstosql"></a>Datenbanken-Assistent (Select-Dateien) suchen (AccessToSQL)
 Die Seite "Dateien auswählen" des Assistenten Datenbanken Suchen listet die Dateien, die während der Suche gefunden wurden. Wählen Sie die Zeile, die den Dateinamen enthält, zum Auswählen einer Datei SSMA hinzu. Wenn Sie alle Dateien ausgewählt haben, klicken Sie auf **Weiter** zum Anzeigen der Seite zur Auswahl überprüfen.  

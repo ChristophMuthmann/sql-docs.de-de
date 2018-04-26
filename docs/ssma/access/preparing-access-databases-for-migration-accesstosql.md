@@ -1,15 +1,16 @@
 ---
-title: "Vorbereiten von Access-Datenbanken für die Migration (AccessToSQL) | Microsoft Docs"
-ms.prod: sql-non-specified
+title: Vorbereiten von Access-Datenbanken für die Migration (AccessToSQL) | Microsoft Docs
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-access
-ms.custom: 
+ms.custom: ''
 ms.date: 08/15/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
@@ -26,16 +27,16 @@ helpviewer_keywords:
 - versions of Access
 - workgroup security
 ms.assetid: 9b80a9e0-08e7-4b4d-b5ec-cc998d3f5114
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.workload: On Demand
-ms.openlocfilehash: fb7743e870b97882ad2bcec0428b3047f28f538d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e427612a8d0dea7020b1d58bced56e7350110d4e
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="preparing-access-databases-for-migration-accesstosql"></a>Vorbereiten von Access-Datenbanken für die Migration (AccessToSQL)
 Vor dem Migrieren von Access-Datenbanken zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], müssen Sie feststellen, welche Datenbanken zu migrieren, und stellen Sie sicher, dass diese Datenbanken für die Migration bereit sind.  
@@ -46,7 +47,7 @@ Das Jet-Datenbankmodul, die als das Datenbankmodul für den Zugriff verwendet wi
 Nach dem Migrieren von Datenbanken zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], können Sie weiterhin Zugriff mithilfe von verknüpften Tabellen verwenden oder Sie können manuell migrieren Ihrer Anwendungen auf [!INCLUDE[msCoName](../../includes/msconame_md.md)] .NET Framework-basierten Code, der direkt mit interagiert [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
   
 ## <a name="determining-which-databases-to-migrate"></a>Bestimmen die zu migrierenden Datenbanken  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]Migration Assistant (SSMA) for Access kann den Zugriff auf Datenbanken gesucht. Sie können dann exportieren Sie Metadaten zu diesen Datenbanken dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Weitere Informationen zum Exportieren und Abfragen von Metadaten finden Sie unter [exportieren eine Inventur Zugriff](http://msdn.microsoft.com/7e1941fb-3d14-4265-aff6-c77a4026d0ed).  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) for Access kann den Zugriff auf Datenbanken gesucht. Sie können dann exportieren Sie Metadaten zu diesen Datenbanken dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Weitere Informationen zum Exportieren und Abfragen von Metadaten finden Sie unter [exportieren eine Inventur Zugriff](http://msdn.microsoft.com/7e1941fb-3d14-4265-aff6-c77a4026d0ed).  
 
    > [!NOTE]
    > Nicht alle Funktionen für Zugriff und Einstellungen von unterstützt werden oder können problemlos konvertiert werden können, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Vor der Migration von Datenbanken finden Sie unter [inkompatible Zugriffsfeatures](http://msdn.microsoft.com/99d45b9c-e3b9-4d56-8c25-b594b887ace1).

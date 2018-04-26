@@ -1,16 +1,16 @@
 ---
 title: Typsystem (XQuery) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/10/2016
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -28,16 +28,16 @@ helpviewer_keywords:
 - built-in XML schema types [SQL Server]
 - xs prefix [XML in SQL Server]
 ms.assetid: 22d6f861-d058-47ee-b550-cbe9092dcb12
-caps.latest.revision: 
+caps.latest.revision: 28
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5e0c8e060eede58292de8f47a39c563059927513
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: d84021e20c56be6d889ba1936d385432a5d8e481
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="type-system-xquery"></a>Typensystem (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,14 +52,14 @@ ms.lasthandoff: 02/09/2018
   
 -   Der Unterschied zwischen dem typisierten Wert und dem Zeichenfolgenwert eines Knotens.  
   
--   Die [Funktion von Daten &#40; XQuery &#41; ](../xquery/data-accessor-functions-data-xquery.md) und [Zeichenfolge Function &#40; XQuery &#41; ](../xquery/data-accessor-functions-string-xquery.md).  
+-   Die [Data-Funktion &#40;XQuery&#41; ](../xquery/data-accessor-functions-data-xquery.md) und [string-Funktion &#40;XQuery&#41;](../xquery/data-accessor-functions-string-xquery.md).  
   
 -   Zuordnen des von einem Ausdruck zurückgegebenen Sequenztyps  
   
 ## <a name="built-in-types-of-xml-schema"></a>Integrierte Typen des XML-Schemas  
  Die integrierten Typen des XML-Schemas besitzen das vordefinierte Namespacepräfix xs. Zu diesen Typen zählen **xs: Integer** und **xs: String**. Alle diese integrierten Typen werden unterstützt. Sie können diese Typen verwenden, wenn Sie eine XML-Schemaauflistung erstellen.  
   
- Beim Abfragen von typisiertem XML-Code wird der statische und dynamische Typ der Knoten durch die XML-Schemaauflistung bestimmt, die der abgefragten Spalte oder Variablen zugeordnet ist. Weitere Informationen zu statischen und dynamischen Typen finden Sie unter [Ausdruckskontext und Ausdrucksauswertung &#40; XQuery &#41; ](../xquery/expression-context-and-query-evaluation-xquery.md). Die folgende Abfrage wird angegeben, z. B. für eine typisierte **Xml** Spalte (`Instructions`). Der Ausdruck verwendet `instance of`, um zu überprüfen, ob der typisierte Wert des zurückgegebenen `LotSize`-Attributs den `xs:decimal`-Typ aufweist.  
+ Beim Abfragen von typisiertem XML-Code wird der statische und dynamische Typ der Knoten durch die XML-Schemaauflistung bestimmt, die der abgefragten Spalte oder Variablen zugeordnet ist. Weitere Informationen zu statischen und dynamischen Typen finden Sie unter [Ausdruckskontext und Ausdrucksauswertung &#40;XQuery&#41;](../xquery/expression-context-and-query-evaluation-xquery.md). Die folgende Abfrage wird angegeben, z. B. für eine typisierte **Xml** Spalte (`Instructions`). Der Ausdruck verwendet `instance of`, um zu überprüfen, ob der typisierte Wert des zurückgegebenen `LotSize`-Attributs den `xs:decimal`-Typ aufweist.  
   
 ```  
 SELECT Instructions.query('  
@@ -110,9 +110,9 @@ SELECT @x.query( '/a[1] instance of element()')
   
  Sie können die **data()** oder **string()** Funktion zum Abrufen des Werts eines Knotens:  
   
--   Die [Funktion von Daten &#40; XQuery &#41; ](../xquery/data-accessor-functions-data-xquery.md) den typisierten Wert eines Knotens zurückgibt.  
+-   Die [Data-Funktion &#40;XQuery&#41; ](../xquery/data-accessor-functions-data-xquery.md) den typisierten Wert eines Knotens zurückgibt.  
   
--   Die [Zeichenfolge Function &#40; XQuery &#41; ](../xquery/data-accessor-functions-string-xquery.md) gibt den Zeichenfolgenwert des Knotens zurück.  
+-   Die [string-Funktion &#40;XQuery&#41; ](../xquery/data-accessor-functions-string-xquery.md) gibt den Zeichenfolgenwert des Knotens zurück.  
   
  In der folgenden XML-Schemaauflistung wird das <`root`>-Element des ganzzahligen Typs definiert:  
   

@@ -2,7 +2,7 @@
 title: Herstellen einer Verbindung mit der Sybase ASE (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-sybase
@@ -23,11 +23,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7ab617555d71bb2067b1c2d2c8e073e74af6e908
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 3c663218b700acb40892a763db93d02629388d27
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="connecting-to-sybase-ase-sybasetosql"></a>Herstellen einer Verbindung mit der Sybase ASE (SybaseToSQL)
 Zum Migrieren von Datenbanken von Sybase Adaptive Server Enterprise (ASE) zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure, Sie müssen die Verbindung mit dem Adaptive Server mit den Datenbanken, die Sie migrieren möchten. Wenn Sie eine Verbindung herstellen, SSMA Ruft Metadaten zu allen Datenbanken auf dem Adaptive Server ab, und Sie werden Datenbankmetadaten in der Sybase-Metadaten-Explorer-Bereich angezeigt. SSMA speichert Informationen über den Datenbankserver, aber die Kennwörter werden nicht gespeichert.  
@@ -39,21 +39,21 @@ Metadaten zu den adaptiven Server wird nicht automatisch aktualisiert. Stattdess
 ## <a name="required-ase-permissions"></a>ASE erforderliche Berechtigungen  
 Das Konto, mit dem Herstellen einer ASE, benötigen mindestens **öffentlichen** Zugriff auf die master-Datenbank und alle Quelldatenbanken auf migriert werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure. Um Berechtigungen für Tabellen auswählen, die migriert werden, muss der Benutzer darüber hinaus SELECT-Berechtigungen für die folgenden Systemtabellen verfügen:  
   
--   [source_db].dbo.sysobjects  
+-   [Source_db].dbo.sysobjects  
   
--   [source_db].dbo.syscolumns  
+-   [Source_db].dbo.syscolumns  
   
--   [source_db].dbo.sysusers  
+-   [Source_db].dbo.sysusers  
   
--   [source_db].dbo.systypes  
+-   [Source_db].dbo.systypes  
   
--   [source_db].dbo.sysconstraints  
+-   [Source_db].dbo.sysconstraints  
   
--   [source_db].dbo.syscomments  
+-   [Source_db].dbo.syscomments  
   
--   [source_db].dbo.sysindexes  
+-   [Source_db].dbo.sysindexes  
   
--   [source_db].dbo.sysreferences  
+-   [Source_db].dbo.sysreferences  
   
 -   master.dbo.sysdatabases  
   

@@ -6,20 +6,20 @@ ms.author: mikeray
 manager: craigg
 ms.date: 03/17/2017
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 0250ba2b-8cdd-450e-9109-bf74f70e1247
 ms.workload: Inactive
-ms.openlocfilehash: 9760b93a1e224c35617b4161d8996ff0ed3dff67
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: 52792f4ef8734afbc45d491277e8671af19b234c
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sql-server-on-linux-vdi-client-sdk-specification"></a>SQL Server auf Linux VDI-Client-SDK-Spezifikation
 
@@ -146,7 +146,7 @@ Das Kapitel enthält Beschreibungen der einzelnen Clientfunktionen. Die Beschrei
 | |**VD_E_INVALID** |Der Gerätename ist ungültig. Es ist nicht mit den Namen bekannt, dass die Gruppe bilden.
 
 **"Hinweise"** VD_E_OPEN ohne Problem zurückgegeben werden. Der Client möglicherweise OpenDevice mittels einer Schleife aufrufen, bis dieser Code zurückgegeben wird.
-Wenn mehrere Geräte, z. B. konfiguriert ist  *n*  Geräte das virtuelle Gerät zurück  *n*  eindeutige Geräte-Schnittstellen.
+Wenn mehrere Geräte, z. B. konfiguriert ist *n* Geräte das virtuelle Gerät zurück *n* eindeutige Geräte-Schnittstellen.
 
 Die `GetConfiguration` -Funktion kann verwendet werden, warten, bis die Geräte geöffnet werden können.
 Wenn diese Funktion nicht erfolgreich ist, wird ein null-Wert durch die PpVirtualDevice zurückgegeben.

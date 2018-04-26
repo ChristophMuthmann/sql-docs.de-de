@@ -1,25 +1,25 @@
-﻿---
-title: "Installieren von SQL Server-Agent für Linux | Microsoft Docs"
+---
+title: Installieren von SQL Server-Agent für Linux | Microsoft Docs
 description: Dieser Artikel beschreibt, wie der SQL Server-Agent unter Linux zu installieren.
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 02/20/2018
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 77f16adc-e6cb-4a57-82f3-7b9780369868
 ms.workload: On Demand
-ms.openlocfilehash: bec1837a2e4084d01858815346c5a7563199a220
-ms.sourcegitcommit: 57f45ee008141ddf009b1c1195442529e0ea1508
+ms.openlocfilehash: 1135e7844515ffd051e937c7804c654b3143ac36
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="install-sql-server-agent-on-linux"></a>Installieren von SQL Server-Agent für Linux
 

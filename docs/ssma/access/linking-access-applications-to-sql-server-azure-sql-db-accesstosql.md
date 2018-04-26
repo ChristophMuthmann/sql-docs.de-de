@@ -1,15 +1,16 @@
 ---
-title: "Verknüpfen von Access-Anwendungen mit SQLServer - Azure SQL-Datenbank | Microsoft Docs"
-ms.prod: sql-non-specified
+title: Verknüpfen von Access-Anwendungen mit SQLServer - Azure SQL-Datenbank | Microsoft Docs
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-access
-ms.custom: 
+ms.custom: ''
 ms.date: 08/17/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
@@ -28,16 +29,16 @@ helpviewer_keywords:
 - slow performance
 - unlinking tables
 ms.assetid: 82374ad2-7737-4164-a489-13261ba393d4
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.workload: On Demand
-ms.openlocfilehash: aa06650106584d975c6bf45855473dc1d80a100d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 1a1b658217a8d18642daca9028ae01334b22395c
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="linking-access-applications-to-sql-server---azure-sql-db-accesstosql"></a>Verknüpfen von Access-Anwendungen mit SQL Server - Azure SQL-Datenbank (AccessToSQL)
 Wenn Sie die vorhandenen Access-Anwendungen mit verwenden möchten [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], können Sie die ursprünglichen Access-Tabellen verknüpfen, um die migrierten [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure-Tabellen. Verknüpfen die Access-Datenbank ändert, sodass Ihre Abfragen, Formulare, Berichte und Datenzugriffsseiten die Daten im Verwenden der [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure-Datenbank nicht die Daten in der Access-Datenbank.  
@@ -57,7 +58,7 @@ Wenn Sie eine Access-Tabelle zu verknüpfen einer [!INCLUDE[ssNoVersion](../../i
   
 2.  Mit der rechten Maustaste **Tabellen**, und wählen Sie dann **Link**.  
   
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]Migration Assistant (SSMA) for Access sichert die ursprünglichen Access-Tabelle und eine verknüpfte Tabelle erstellt.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) for Access sichert die ursprünglichen Access-Tabelle und eine verknüpfte Tabelle erstellt.  
   
 Nachdem Sie die Tabellen verknüpft, werden die Tabellen in SSMA mit einem kleinen Linksymbol angezeigt. In Access erscheinen die Tabellen mit einem "verknüpfte"-Symbol, also eine Kugel mit einem Pfeil darauf zeigen.  
   
@@ -134,7 +135,7 @@ Recordset.LastModified
 ```  
   
 ### <a name="new-records-are-not-available"></a>Neue Datensätze sind nicht verfügbar  
-**Ursache:** beim Hinzufügen eines Datensatzes zu einem [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure-Tabelle mit VBA, wenn die Tabellenfeld eindeutiger Index den Standardwert hat, und Sie keinen Wert zu diesem Feld der neue Datensatz wird nicht angezeigt weisen, bis Sie die Tabelle erneut öffnen [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure. Wenn Sie versuchen, einen Wert aus der neue Datensatz abrufen, erhalten Sie die folgende Fehlermeldung angezeigt:  
+**Ursache:** beim Hinzufügen eines Datensatzes zu einem [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure-Tabelle mit VBA, wenn die Tabellenfeld eindeutiger Index den Standardwert hat, und Sie keinen Wert zu diesem Feld der neue Datensatz wird nicht angezeigt weisen, bis Sie die Tabelle erneut öffnen [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder S SQL Azure. Wenn Sie versuchen, einen Wert aus der neue Datensatz abrufen, erhalten Sie die folgende Fehlermeldung angezeigt:  
   
 `Run-time error '3167' Record is deleted.`  
   

@@ -1,61 +1,62 @@
 ---
 title: Generieren von Berichten (OracleToSQL) | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-oracle
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Report Generation in Oracle Console, synchronize-target
 - Report Generation in Oracle Console,refresh-from-database
 - Report Generation in Oracle Console,write-summary-report-to
 ms.assetid: ccad6262-01e1-447a-bd2b-c105154c80ce
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: aaadc1f77e9fb7e0179f46f4a2186322aa2ad656
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 8d3abe0e02eca67da132cd4f89ed592a00b16383
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="generating-reports-oracletosql"></a>Generieren von Berichten (OracleToSQL)
 Berichte über bestimmte Aktivitäten mit Befehlen durchgeführt werden in SSMA-Konsole auf Objektebene-Struktur generiert.  
   
 Verwenden Sie das folgende Verfahren zum Generieren von Berichten:  
   
-1.  Geben Sie die **schreiben Zusammenfassung-Bericht-in** Parameter. Der verknüpfte Bericht wird als Dateiname gespeichert (falls angegeben), oder geben Sie im Ordner "". Der Dateiname ist System vordefiniert, wie in der Tabelle unten WHERE-, erwähnt  **&lt; n &gt;**  ist die Anzahl von eindeutigen Dateinamen, die mit einer Ziffer bei jeder Ausführung desselben Befehls inkrementiert.  
+1.  Geben Sie die **schreiben Zusammenfassung-Bericht-in** Parameter. Der verknüpfte Bericht wird als Dateiname gespeichert (falls angegeben), oder geben Sie im Ordner "". Der Dateiname ist System vordefiniert, wie in der Tabelle unten WHERE-, erwähnt **&lt;n&gt;** ist die Anzahl von eindeutigen Dateinamen, die mit einer Ziffer bei jeder Ausführung desselben Befehls inkrementiert.  
   
     Die Berichte Vis gegenüber Befehle sind:  
   
     ||||  
     |-|-|-|  
-    |**"SL". Nein.**|**Befehl**|**Berichtstitel**|  
+    |**Sl. Nein.**|**Befehl**|**Berichtstitel**|  
     |1|Generieren von Bewertungsbericht|AssessmentReport&lt;n&gt;. XML|  
     |2|Convert-schema|SchemaConversionReport&lt;n&gt;. XML|  
     |3|Migrieren von Daten|DataMigrationReport&lt;n&gt;. XML|  
     |4|Convert-Sql-Anweisung|ConvertSQLReport&lt;n&gt;. XML|  
-    |5|Synchronisieren von Ziel|TargetSynchronizationReport&lt;n&gt;. XML|  
+    |5|Synchronisieren von Ziel|TargetSynchronizationReport&lt;n&gt;.XML|  
     |6|Aktualisieren von Datenbank|SourceDBRefreshReport&lt;n&gt;. XML|  
   
     > [!IMPORTANT]  
     > Ein Ausgabebericht unterscheidet sich von Assessment-Bericht. Die erste ist ein Bericht auf die Leistung eines ausgeführten Befehls beim, die zweite Datei ist ein XML-Bericht für die programmgesteuerte Nutzung.  
   
-    Für die Befehlsoptionen für das Ausgabeberichte (von "SL". Nein. 2 bis 4, oben), finden Sie in der [Ausführen der Konsole SSMA &#40; OracleToSQL &#41;](../../ssma/oracle/executing-the-ssma-console-oracletosql.md) Abschnitt.  
+    Für die Befehlsoptionen für das Ausgabeberichte (von "SL". Nein. 2 bis 4, oben), finden Sie in der [SSMA-Konsole ausführen &#40;OracleToSQL&#41; ](../../ssma/oracle/executing-the-ssma-console-oracletosql.md) Abschnitt.  
   
 2.  Geben Sie den Umfang der Details, die Sie in den Ausgabebericht mithilfe der Einstellungen des Berichts Ausführlichkeit wünschen:  
   
     ||||  
     |-|-|-|  
-    |**"SL". Nein.**|**Installationsbefehl und Parametersatz**|**Beschreibung der Ausgabe**|  
+    |**Sl. Nein.**|**Installationsbefehl und Parametersatz**|**Beschreibung der Ausgabe**|  
     |1|Ausführliche = "false"|Generiert einen zusammenfassenden Bericht der Aktivität.|  
     |2|Ausführliche = "true"|Generiert einen zusammengefassten und detaillierten Statusbericht für jede Aktivität an.|  
   
@@ -66,7 +67,7 @@ Verwenden Sie das folgende Verfahren zum Generieren von Berichten:
   
     ||||  
     |-|-|-|  
-    |**"SL". Nein.**|**Installationsbefehl und Parametersatz**|**Beschreibung der Ausgabe**|  
+    |**Sl. Nein.**|**Installationsbefehl und Parametersatz**|**Beschreibung der Ausgabe**|  
     |1|Melden von Fehlern = "false"|Keine Details zu Fehler / Warnung / Informationen Nachrichten.|  
     |2|Melden von Fehlern = "true"|Detaillierter Fehler / Warnung / Informationen Nachrichten.|  
   
@@ -94,7 +95,7 @@ Verwenden Sie das folgende Verfahren zum Generieren von Berichten:
 ```  
   
 ### <a name="synchronize-target"></a>Synchronisieren von Ziel:  
-Der Befehl **synchronisieren Ziel** hat **Bericht Fehler zu** -Parameter, der den Speicherort der Fehlerbericht für den Synchronisierungsvorgang angibt. Klicken Sie dann eine Datei namens **TargetSynchronizationReport&lt;n&gt;. XML** wird am angegebenen Speicherort erstellt, in denen  **&lt; n &gt;**  ist die Anzahl von eindeutigen Dateinamen, die mit einer Ziffer bei jeder Ausführung desselben Befehls inkrementiert.  
+Der Befehl **synchronisieren Ziel** hat **Bericht Fehler zu** -Parameter, der den Speicherort der Fehlerbericht für den Synchronisierungsvorgang angibt. Klicken Sie dann eine Datei namens **TargetSynchronizationReport&lt;n&gt;. XML** wird am angegebenen Speicherort erstellt, in denen **&lt;n&gt;** ist die Anzahl von eindeutigen Dateinamen, die mit einer Ziffer bei jeder Ausführung desselben Befehls inkrementiert.  
   
 **Hinweis:** , wenn der Ordnerpfad angegeben ist, und klicken Sie dann 'Bericht-Fehler-to'-Parameter ein optionales Attribut für den Befehl "Synchronisieren-Ziel ist".  
   
@@ -120,7 +121,7 @@ Der Befehl **synchronisieren Ziel** hat **Bericht Fehler zu** -Parameter, der de
 -   Fail-Skript  
   
 ### <a name="refresh-from-database"></a>Aktualisierung aus Datenbank:  
-Der Befehl **Aktualisierung aus Datenbank** hat **Bericht Fehler zu** -Parameter, der den Speicherort der Fehlerbericht für den Aktualisierungsvorgang angibt. Klicken Sie dann eine Datei namens **SourceDBRefreshReport&lt;n&gt;. XML** wird am angegebenen Speicherort erstellt, in denen  **&lt; n &gt;**  ist die Anzahl von eindeutigen Dateinamen, die mit einer Ziffer bei jeder Ausführung desselben Befehls inkrementiert.  
+Der Befehl **Aktualisierung aus Datenbank** hat **Bericht Fehler zu** -Parameter, der den Speicherort der Fehlerbericht für den Aktualisierungsvorgang angibt. Klicken Sie dann eine Datei namens **SourceDBRefreshReport&lt;n&gt;. XML** wird am angegebenen Speicherort erstellt, in denen **&lt;n&gt;** ist die Anzahl von eindeutigen Dateinamen, die mit einer Ziffer bei jeder Ausführung desselben Befehls inkrementiert.  
   
 **Hinweis:** , wenn der Ordnerpfad angegeben ist, und klicken Sie dann 'Bericht-Fehler-to'-Parameter ein optionales Attribut für den Befehl "Synchronisieren-Ziel ist".  
   

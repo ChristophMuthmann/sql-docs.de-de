@@ -1,9 +1,9 @@
 ---
-title: 'Lernprogramm: Aktivieren des Tabelle Speicherplatz Nutzung Beispiel Einblicke Widgets in SQL Operations Studio (preview) | Microsoft Docs'
-description: Dieses Lernprogramm veranschaulicht, wie die Tabelle Speicherplatz Nutzung Beispiel Einblicke Widget im Datenbank-Dashboard SQL Operations Studio (preview) aktiviert.
+title: 'Lernprogramm: Aktivieren des Tabelle Speicherplatz Nutzung Beispiel Einblicke Widgets in SQL-Vorgänge Studio (Vorschau) | Microsoft Docs'
+description: Dieses Lernprogramm veranschaulicht, wie die Tabelle Speicherplatz Nutzung Beispiel Einblicke Widget im Datenbank-Dashboard SQL-Vorgänge Studio (Vorschau) aktiviert.
 ms.custom: tools|sos
 ms.date: 03/19/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
@@ -14,11 +14,11 @@ author: erickangMSFT
 ms.author: erickang
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 09a1ebe6fda1baf546923887f28b51d416a80b59
-ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
+ms.openlocfilehash: 6ec260eb6c82bfcac0e38251375fc9b58af55db1
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="tutorial-enable-the-table-space-usage-sample-insight-widget-using-includename-sosincludesname-sos-shortmd"></a>Lernprogramm: Aktivieren der Tabelle Speicherplatz Nutzung Beispiel Einblicke Widget mit [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
@@ -70,7 +70,7 @@ Die **dashboard.database.widgets** Abschnitt sollte wie in der folgenden Abbildu
 
 7. Anzeigen der *Tabelle Speicherplatz* Insight-Widget wie in der folgenden Abbildung gezeigt: 
 
-   ![Widget](./media/tutorial-table-space-sql-server/insight-table-space-result.png)
+   ![Widgets](./media/tutorial-table-space-sql-server/insight-table-space-result.png)
 
 
 ## <a name="working-with-the-insight-chart"></a>Arbeiten mit der Insight-Diagramm

@@ -1,6 +1,6 @@
 ---
 title: Auswählen und Konfigurieren von Objekten mit Test (OracleToSQL) | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-oracle
@@ -20,17 +20,17 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: 51688e76b4493b6f4fa5eda7712d1e60ac498c99
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 2186b7c2e52cbba438dd48b32a2f884e3ccf04fb
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="selecting-and-configuring-objects-to-test-oracletosql"></a>Auswählen und Konfigurieren von Objekten mit Test (OracleToSQL)
 In diesem Schritt wählen Sie die Objekte zu testen, und konfigurieren Einstellungen für den Vergleich von Prozeduren und Funktionen Output-Parameter als auch die Rückgabewerte von Funktionen.  
   
 ## <a name="selection-of-objects-to-test"></a>Auswahl von Objekten, die Tests  
-Überprüfen Sie in der Oracle-Objektstruktur befindet sich auf der linken Seite des Fensters die Objekte, die Sie während des Testens aufrufen möchten. Die vollständige Liste der getestet werden Objekte in der [migriert Datenbankobjekte testen &#40; OracleToSQL &#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md) Thema.  
+Überprüfen Sie in der Oracle-Objektstruktur befindet sich auf der linken Seite des Fensters die Objekte, die Sie während des Testens aufrufen möchten. Die vollständige Liste der getestet werden Objekte in der [migriert Datenbankobjekte testen &#40;OracleToSQL&#41; ](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md) Thema.  
   
 Wenn Tester SSMA eines der Objekte, die zu Testzwecken ausgewählt nicht unterstützt wird, sehen Sie die Verknüpfung mit der Bezeichnung **einige ausgewählte Objekte enthalten Fehler** unter der Struktur der Objekte. Klicken Sie auf diesen Link an die Gründe, warum diese Objekte nicht getestet werden können, und um die Auswahl der falschen Objekte zu löschen.  
   
@@ -44,14 +44,14 @@ Aktivieren Sie die von den ausgewählten Parameter in Vergleichsberichte für Er
   
 -   Falls gewünscht **"true"**, SSMA wird den Ausgabewert dieses Parameters vergleichen, nach dem Ausführen der Prozedur auf Oracle mit den entsprechenden Wert für SQL Server.
   
--   Falls gewünscht**"false"**, der Parameter vom Ergebnisbereich Überprüfung ausgeschlossen werden.  
+-   Falls gewünscht **"false"**, der Parameter vom Ergebnisbereich Überprüfung ausgeschlossen werden.  
   
 ### <a name="use-custom-scale"></a>Benutzerdefinierte Skalierung verwenden  
 Für Parameter des numerischen Datentyp aufweisen können Sie einen benutzerdefinierten Maßstab für den Vergleich festlegen.  
   
 -   Falls gewünscht **"true"**, numerische Werte werden entsprechend dem gerundet werden die **vergleichen Skalierung** Wert, bevor diese verglichen werden.  
   
--   Falls gewünscht**"false"**, genauen numerische Vergleich werden.  
+-   Falls gewünscht **"false"**, genauen numerische Vergleich werden.  
   
 ### <a name="comparing-scale"></a>Vergleichen von Skala  
 Nur verfügbar, wenn die **Verwenden benutzerdefinierter Maßstab** Option wird festgelegt, um **"true"**. Dies ist die Genauigkeit für einen numerischen Vergleich.  
@@ -87,8 +87,8 @@ Steuert, wie nachfolgende Leerzeichen werden während des Vergleichs behandelt.
 Sie können die Werte der Eingabeparameter angeben, auf die **rufen Werte** Seite. Die **Aufruf hinzufügen** Schaltfläche wird einen neuen Aufruf mit leeren Parameterwerten hinzugefügt. Die **entfernen Aufrufe** Schaltfläche entfernt den aktuellen Aufruf.  
   
 ## <a name="next-step"></a>Nächster Schritt  
-[Auswählen und Konfigurieren von betroffenen Objekten &#40; OracleToSQL &#41;](../../ssma/oracle/selecting-and-configuring-affected-objects-oracletosql.md)  
+[Auswählen und Konfigurieren von betroffene Objekte &#40;OracleToSQL&#41;](../../ssma/oracle/selecting-and-configuring-affected-objects-oracletosql.md)  
   
 ## <a name="see-also"></a>Siehe auch  
-[Testen von migriert Datenbankobjekte &#40; OracleToSQL &#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
+[Testen von Datenbankobjekten migriert &#40;OracleToSQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
   

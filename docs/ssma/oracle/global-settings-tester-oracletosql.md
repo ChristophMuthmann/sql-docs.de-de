@@ -1,34 +1,35 @@
 ---
 title: Globale Einstellungen (Tester) (OracleToSQL) | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-oracle
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 4acc0f2a-85ba-4c99-856a-89030f5c418e
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: 4aa9d87eefc0b268fbd8fca9cabf26e7cd27b663
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 925bc59b0dfbef77cb7b5c17d011078a7d6316ac
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="global-settings-tester-oracletosql"></a>Globale Einstellungen (Tester) (OracleToSQL)
 Verwenden Sie die Seite "Tester" von der **globale Einstellungen** Dialogfeld Einstellungen für SSMA Tester angeben.  
   
 Die Tester-Einstellungen für den Zugriff auf die **Tools** klicken Sie im Menü **globale Einstellungen**, und klicken Sie auf **Tester** unten im linken Bereich.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>enthalten  
 **Testfähig Objekt analysis**  
 Diese Einstellung gibt an, ob die Analyse der testfähig Objekte. Wählen Sie **Ja** Wenn SSMA Tester zu analysieren und suchen automatisch die abhängigen Objekte gelöscht werden sollen. Standard-Option festgelegt ist **Ja**.  
   
@@ -70,5 +71,5 @@ Die folgenden Optionen sind für diese Einstellung verfügbar:
 2.  nein  
   
 ## <a name="see-also"></a>Siehe auch  
-[Beenden Testfall Vorbereitung &#40; OracleToSQL &#41;](../../ssma/oracle/finishing-test-case-preparation-oracletosql.md)  
+[Abschließen des Testfalls Vorbereitung &#40;OracleToSQL&#41;](../../ssma/oracle/finishing-test-case-preparation-oracletosql.md)  
   

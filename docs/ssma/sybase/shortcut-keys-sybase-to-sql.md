@@ -2,7 +2,7 @@
 title: Tastenkombinationen (Sybase zu SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-sybase
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9b3c57039077f2a64366fa89e2bcbafe8bb3f84d
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 563c5e6b1a04d42f7d34d13383048db0bdbadf47
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="shortcut-keyssybase-to-sql"></a>Tastenkombinationen (Sybase zu SQL)
 Sie können Tastenkombinationen verwenden, zum Navigieren durch SSMA-Anwendung. Weitere Informationen finden Sie in den nachfolgenden Themen.  

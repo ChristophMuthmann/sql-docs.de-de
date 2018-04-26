@@ -1,30 +1,31 @@
 ---
 title: Erstellen von Skriptdateien (AccessToSQL) | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-access
-ms.custom: 
+ms.custom: ''
 ms.date: 08/17/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 64dfe192-965c-49d4-a3ea-848fbc5f619f
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.workload: Inactive
-ms.openlocfilehash: d39055374caa0697c073b6abfc8d99e87ed42bb1
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 7b249b133ffb2316046f65786e0ac41f3a034e0e
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="creating-script-files-accesstosql"></a>Erstellen von Skriptdateien (AccessToSQL)
 Der erste Schritt vor dem Starten SSMA-Konsolenanwendung auf die Skriptdatei erstellt wird und bei Bedarf den Wert der Variablen-Datei und die Server-Verbindung erstellen.  
@@ -71,7 +72,7 @@ BenutzerKonfigurierbar-Optionen:
   
     </output-providers>  
     ```  
-    *oder*  
+    *Oder*  
   
     ```xml  
     <…All commands…>  
@@ -108,7 +109,7 @@ BenutzerKonfigurierbar-Optionen:
   
     </output-providers>  
     ```  
-    *oder*  
+    *Oder*  
   
     ```xml  
     <migrate-data>  
@@ -141,7 +142,7 @@ BenutzerKonfigurierbar-Optionen:
   
     </output-providers>  
     ```  
-    *oder*  
+    *Oder*  
   
     ```xml  
     <!-- Connect to target database -->  
@@ -174,7 +175,7 @@ BenutzerKonfigurierbar-Optionen:
   
     </output-providers>  
     ```  
-    *oder*  
+    *Oder*  
   
     ```xml  
     <!--synchronization-->  
@@ -185,7 +186,7 @@ BenutzerKonfigurierbar-Optionen:
   
     </synchronize-target>  
     ```  
-    *oder*  
+    *Oder*  
   
     ```xml  
     <!--data migration-->  
@@ -220,7 +221,7 @@ BenutzerKonfigurierbar-Optionen:
   
     </output-providers>  
     ```  
-    *oder*  
+    *Oder*  
   
     ```xml  
     <convert-schema object-name="ssma.TT1">  
@@ -273,7 +274,7 @@ BenutzerKonfigurierbar-Optionen:
   
     </output-providers>  
     ```  
-    *oder*  
+    *Oder*  
   
     ```xml  
     <…All commands…>  
@@ -315,7 +316,7 @@ BenutzerKonfigurierbar-Optionen:
   
     </output-providers>  
     ```  
-    *oder*  
+    *Oder*  
   
     ```xml  
     <…All commands…>  
@@ -348,7 +349,7 @@ Nicht konfigurierbare Option ist:
 -   **Maximale Verbindungswiederherstellungsversuchen:** bei eine bereits eingerichteten Verbindung ein Timeout oder aufgrund von Netzwerkfehlern unterbricht, der Server ist erforderlich, um die Verbindung hergestellt werden. Der erneuten Herstellen einer Verbindung versucht dürfen maximal **5** Wiederholungen nach, die die Konsole wird automatisch beim erneuten Verbindungsversuch ausgeführt. Die Einrichtung der automatischen erneuten Herstellen einer Verbindung wird der Aufwand bei der erneuten Ausführen des Skripts reduziert.  
   
 ## <a name="server-connection-parameters"></a>Server-Verbindungsparameter  
-Server-Verbindungsparameter können in der Skriptdatei oder in der Datei der Server-Verbindung definiert werden. Finden Sie in der [erstellen, die Server-Connection-Dateien &#40; AccessToSQL &#41; ](../../ssma/access/creating-the-server-connection-files-accesstosql.md) Abschnitt, um weitere Details.  
+Server-Verbindungsparameter können in der Skriptdatei oder in der Datei der Server-Verbindung definiert werden. Finden Sie in der [erstellen die Server-Verbindungsdateien &#40;AccessToSQL&#41; ](../../ssma/access/creating-the-server-connection-files-accesstosql.md) Abschnitt, um weitere Details.  
   
 ## <a name="script-commands"></a>Skriptbefehle  
 Die Skriptdatei enthält eine Sequenz von Migration Workflowbefehle in das XML-Format. Die SSMA-Konsolenanwendung verarbeitet die Migration in der Reihenfolge der Befehle, die angezeigt werden, in der Skriptdatei an.  
@@ -394,14 +395,14 @@ Vorlagen 3 Skriptdateien (zum Ausführen von verschiedenen Szenarios), bestehend
   
 Sie können Vorlagen (Dateien) ausgeführt wird, nachdem eine Änderung der Parameter für Relevanz darin angezeigt.  
   
-Vollständige Liste der Befehle des Skripts befinden sich im [Ausführen der Konsole SSMA &#40; AccessToSQL &#41;](../../ssma/access/executing-the-ssma-console-accesstosql.md)  
+Vollständige Liste der Befehle des Skripts befinden sich im [Ausführen der Konsole SSMA &#40;AccessToSQL&#41;](../../ssma/access/executing-the-ssma-console-accesstosql.md)  
   
 ## <a name="script-file-validation"></a>Skript-dateiüberprüfung  
 Benutzer kann problemlos überprüfen Benutzervoreinstellung Skriptdatei anhand der Schemadefinitionsdatei **"A2SSConsoleScriptSchema.xsd"** in den Ordner "Schemas" verfügbar.  
   
 ## <a name="next-step"></a>Nächster Schritt
-Im nächsten Schritt in der Konsole funktioniert [erstellen Variable Wertdateien &#40; AccessToSQL &#41; ](../../ssma/access/creating-variable-value-files-accesstosql.md).  
+Im nächsten Schritt in der Konsole Betrieb [Variable Value-Dateien erstellen &#40;AccessToSQL&#41;](../../ssma/access/creating-variable-value-files-accesstosql.md).  
   
 ## <a name="see-also"></a>Siehe auch  
-[Erstellen Variablenwert Dateien &#40; AccessToSQL &#41;](../../ssma/access/creating-variable-value-files-accesstosql.md)  
+[Erstellen von Dateien Variablenwert &#40;AccessToSQL&#41;](../../ssma/access/creating-variable-value-files-accesstosql.md)  
   

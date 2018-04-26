@@ -2,7 +2,7 @@
 title: Konvertieren von Sybase ASE-Datenbankobjekte (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-sybase
@@ -23,11 +23,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7f906350096e57c5be0f238dabdfd838d050080a
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 94dd2dd9d2c7dab4e8c29c1bc109c5fbb7c5313c
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="converting-sap-ase-database-objects-sybasetosql"></a>Konvertieren von SAP ASE-Datenbankobjekte (SybaseToSQL)
 Nachdem Sie auf SAP Adaptive Server Enterprise (ASE) verbunden sind, verbunden [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure und Festlegen von Projekt- und Datenoptionen für die Zuordnung, können Sie Datenbankobjekte auf SAP Adaptive Server Enterprise (ASE) konvertieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder Azure SQL-Datenbank -Objekte.  
@@ -69,7 +69,7 @@ Um ASE Datenbankobjekte zu konvertieren, wählen Sie zuerst die Objekte, die Sie
 ||||  
 |-|-|-|  
 |**char_length_nvarchar**|**index_colorder**|**ssma_datepart**|  
-|**char_length_varchar**|**inttohex**|**substring_nvarchar**|  
+|**char_length_varchar**|**INTTOHEX**|**substring_nvarchar**|  
 |**charindex_nvarchar**|**ssma_datediff**|**substring_varbinary**|  
 |**charindex_varchar**|**hextoint**|**substring_varchar**|  
 |**ulowsurr**|**to_unichar**|**ssma_current_time**|  

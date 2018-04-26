@@ -1,6 +1,6 @@
 ---
 title: Referenz zur Benutzeroberfläche (MySQLToSQL) | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-mysql
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c58f4cd84e2d5264a92c8cfaf302d8ed9915f4cc
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 50426d858148dd1771f0fdab9566513a358cfbcd
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="user-interface-reference-mysqltosql"></a>Referenz zur Benutzeroberfläche (MySQLToSQL)
 Dieser Abschnitt enthält Hilfethemen für SQL Server Migration Assistant (SSMA) für MySQL.  
@@ -37,7 +37,7 @@ Die folgende Tabelle enthält die SSMA-Dialogfelder:
 |-|-|  
 |**Thema**|**Beschreibung**|  
 |[Erweiterte Objektauswahl &#40;MySQLToSQL&#41;](../../ssma/mysql/advanced-object-selection-mysqltosql.md)|Verwenden der **erweiterte Objekt auswählen** Dialogfeld Suchen Datenbankobjekte mit Filterkriterien, und klicken Sie dann zu aktivieren oder deaktivieren diese Objekte.|  
-|[Assessment Report &#40;MySQLToSQL&#41;](../../ssma/mysql/assessment-report-mysqltosql.md)|Verwenden Sie den Bericht zum Anzeigen der Ergebnisse der Konvertierung von MySQL-Objekten in Transact-SQL-Syntax und zum Schätzen der Zeit und die Komplexität einer Migration zu SQL Server.|  
+|[Bewertungsbericht &#40;MySQLToSQL&#41;](../../ssma/mysql/assessment-report-mysqltosql.md)|Verwenden Sie den Bericht zum Anzeigen der Ergebnisse der Konvertierung von MySQL-Objekten in Transact-SQL-Syntax und zum Schätzen der Zeit und die Komplexität einer Migration zu SQL Server.|  
 |[Herstellen einer Verbindung mit MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/connect-to-mysql-mysqltosql.md)|Verwenden der **Herstellen einer Verbindung mit MySQL** Dialogfeld Verbindung mit der MySQL-Datenbank, die Sie migrieren möchten.|  
 |[Herstellen einer Verbindung mit SQLServer](http://msdn.microsoft.com/en-us/d73abd3a-80df-4293-b973-1723069db049)|Verwenden der **Herstellen einer Verbindung mit SQL Server** im Dialogfeld Verbindung mit SQL Server-Instanz, in dem Sie migrieren möchten.|  
 |[Herstellen einer Verbindung mit Azure SQL-Datenbank &#40;MySQLToSQL&#41;](../../ssma/mysql/connect-to-azure-sql-db-mysqltosql.md)|Verwenden der **Herstellen einer Verbindung mit SQL Azure** Dialogfeld Verbindung mit der Instanz von SQL Azure, in dem Sie migrieren möchten.|  

@@ -1,9 +1,9 @@
 ---
-title: Schneller Zugriff auf Einblicke und häufige Aufgaben bei der SQL Operations Studio (preview) | Microsoft Docs
-description: Weitere Informationen Sie zum Anzeigen von aufschlussreiche Widgets in SQL Operations Studio (preview).
+title: Schneller Zugriff auf Einblicke und häufige Aufgaben bei der SQL-Vorgänge Studio (Vorschau) | Microsoft Docs
+description: Weitere Informationen Sie zum Anzeigen von aufschlussreiche Widgets in SQL-Vorgänge Studio (Vorschau).
 ms.custom: tools|sos
 ms.date: 11/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
@@ -14,13 +14,13 @@ author: yualan
 ms.author: alayu
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7b501b653920d2a8ff7e3e8ed4656c8154b344f6
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ad7fcbab5a01828cccd855da2d65ba3199e0b41b
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="dashboards-in-includename-sosincludesname-sos-shortmd"></a>Dashboards in[!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="dashboards-in-includename-sosincludesname-sos-shortmd"></a>Dashboards in [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
 Ein Dashboard, mit der rechten Maustaste einen Server oder Datenbank anzeigen und auswählen **verwalten**.
 
@@ -107,11 +107,11 @@ Mithilfe von [!INCLUDE[name-sos](../includes/name-sos-short.md)]des Insight Akti
 
 ## <a name="sample-insight-action-definition"></a>Beispiel Einblicke Aktionsdefinition
 
-```"actions"{}```definiert eine Insight-Aktion an. Aktion kann z. B. über einen bestimmten Gültigkeitsbereich definiert werden ```"server"```, ```"database"``` usw. und [!INCLUDE[name-sos](../includes/name-sos-short.md)] übergibt den aktuellen Kontext Verbindungsinformationen an die Aktion. 
+```"actions"{}``` definiert eine Insight-Aktion an. Aktion kann z. B. über einen bestimmten Gültigkeitsbereich definiert werden ```"server"```, ```"database"``` usw. und [!INCLUDE[name-sos](../includes/name-sos-short.md)] übergibt den aktuellen Kontext Verbindungsinformationen an die Aktion. 
 
-Z. B. beim Wiederherstellungsvorgang für Datenbank "wideworldimporters", gestartet wird ```"database": "${Database}"``` Definition gibt an, dass übergeben ```Database``` Spaltenwert in die Abfrageergebnisse, um die Wiederherstellungsaktion. Stellen Sie dann Aktion gestartet wird, für die Datenbank wieder her. ```"types"```ist ein Json-Array und im Array können mehrere Aktionen aufgeführt werden. Es wird im Grunde ein Kontextmenü dieses Benutzers kann Insight Details im Dialogfeld "auf und führen Sie die Aktion. 
+Z. B. beim Wiederherstellungsvorgang für Datenbank "wideworldimporters", gestartet wird ```"database": "${Database}"``` Definition gibt an, dass übergeben ```Database``` Spaltenwert in die Abfrageergebnisse, um die Wiederherstellungsaktion. Stellen Sie dann Aktion gestartet wird, für die Datenbank wieder her. ```"types"``` ist ein Json-Array und im Array können mehrere Aktionen aufgeführt werden. Es wird im Grunde ein Kontextmenü dieses Benutzers kann Insight Details im Dialogfeld "auf und führen Sie die Aktion. 
 
-> [!INCLUDE[name-sos](../includes/name-sos-short.md)]Vorschau 0.17.1 hat "Sicherung", "Wiederherstellen", "neue Abfrage" und "neue-Datenbank" als Aktionstypen aktiviert.
+> [!INCLUDE[name-sos](../includes/name-sos-short.md)] Vorschau 0.17.1 hat "Sicherung", "Wiederherstellen", "neue Abfrage" und "neue-Datenbank" als Aktionstypen aktiviert.
 
 ```json
 "details": {

@@ -1,6 +1,6 @@
 ---
 title: Konvertieren, laden und migrieren (AccessToSQL) | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-access
@@ -25,11 +25,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 33b560de98751eec68916e5efe648d17262135f9
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: f338d343490f19f100821627fb55658a3abd4dee
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="convert-load-and-migrate-accesstosql"></a>Konvertieren Sie, laden und migrieren Sie (AccessToSQL)
 Die **konvertieren, laden und migrieren** Dialogfeld Migrationsstatus meldet, wenn Sie die Schaltfläche mit den konvertieren, laden und migrieren oder den Migrations-Assistenten verwenden.  

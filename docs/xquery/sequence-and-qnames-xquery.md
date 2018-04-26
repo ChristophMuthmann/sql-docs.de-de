@@ -1,16 +1,16 @@
 ---
 title: Sequenz und QNames (XQuery) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -22,16 +22,16 @@ helpviewer_keywords:
 - QName [XQuery]
 - predefined namespaces [XML in SQL Server]
 ms.assetid: 3593ac26-dd78-4bf0-bb87-64fbcac5f026
-caps.latest.revision: 
+caps.latest.revision: 22
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f75694958ca453d1b630a0c02c422d35c6ff4c34
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: e61106a4f6eb07ee5c0f20bcad761f564263af90
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sequence-and-qnames-xquery"></a>Sequenz und QNames (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -155,7 +155,7 @@ WHERE ProductModelID=7;
  Jede Datenbank, die Sie erstellen, besitzt die **Sys** XML-schemaauflistung. Sie reserviert diese Schemas, sodass auf sie von jeder benutzererstellten XML-Schemaauflistung zugegriffen werden kann.  
   
 > [!NOTE]  
->  Diese Implementierung unterstützt nicht das `local`-Präfix, das in der XQuery-Spezifikation unter http://www.w3.org/2004/07/xquery-local-functions beschrieben wird.  
+>  Diese Implementierung unterstützt nicht die `local` Präfix, das in der XQuery-Spezifikation in http://www.w3.org/2004/07/xquery-local-functions.  
   
 ## <a name="see-also"></a>Siehe auch  
  [XQuery Basics (XQuery-Grundlagen)](../xquery/xquery-basics.md)  

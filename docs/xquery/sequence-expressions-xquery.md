@@ -1,16 +1,16 @@
 ---
-title: "Sequence-Ausdrücke (XQuery) | Microsoft Docs"
-ms.custom: 
+title: Sequence-Ausdrücke (XQuery) | Microsoft Docs
+ms.custom: ''
 ms.date: 08/09/2016
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - XML
@@ -19,21 +19,21 @@ helpviewer_keywords:
 - expressions [XQuery], sequence
 - filtering sequences [XQuery]
 ms.assetid: 41e18b20-526b-45d2-9bd9-e3b7d7fbce4e
-caps.latest.revision: 
+caps.latest.revision: 22
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 50ed3ac28bad010247c8d117c950bb898305807a
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 8bed36d0c784da74731e92404d5849386ec8756d
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sequence-expressions-xquery"></a>Sequenzausdrücke (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] unterstützt die XQuery-Operatoren, die zum Erstellen, Filtern und Kombinieren einer Sequenz von Elementen verwendet werden. Ein Element kann es sich um ein atomarer Wert oder ein Knoten sein.  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] unterstützt die XQuery-Operatoren, die zum Konstruieren, Filtern und Kombinieren einer Sequenz von Elementen verwendet werden. Ein Element kann es sich um ein atomarer Wert oder ein Knoten sein.  
   
 ## <a name="constructing-sequences"></a>Konstruieren von Sequenzen  
  Mithilfe des Kommaoperators können Sie eine Sequenz konstruieren, die Items zu einer einzigen Sequenz verkettet.  
@@ -138,7 +138,7 @@ Page only in case of emergencies.
 ```  
   
 ## <a name="filtering-sequences"></a>Filtern von Sequenzen  
- Sie können die durch einen Ausdruck zurückgegebene Sequenz filtern, indem Sie dem Ausdruck ein Prädikat hinzufügen. Weitere Informationen finden Sie unter [Pfadausdrücke &#40; XQuery &#41; ](../xquery/path-expressions-xquery.md). Beispielsweise gibt die folgende Abfrage eine Sequenz von drei <`a`>-Elementknoten zurück:  
+ Sie können die durch einen Ausdruck zurückgegebene Sequenz filtern, indem Sie dem Ausdruck ein Prädikat hinzufügen. Weitere Informationen finden Sie unter [Pfadausdrücke &#40;XQuery&#41;](../xquery/path-expressions-xquery.md). Beispielsweise gibt die folgende Abfrage eine Sequenz von drei <`a`>-Elementknoten zurück:  
   
 ```  
 declare @x xml  

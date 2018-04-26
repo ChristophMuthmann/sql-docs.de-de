@@ -1,27 +1,28 @@
 ---
 title: Projekteinstellungen (GUI) (OracleToSQL) | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-oracle
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 9727df6d-b0f5-464b-a349-d32b626cedef
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: 2f97219f1039eb027646119c223cfbc09e81c2f8
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 153de9ef870a78e15c085e18f37c9c94103277d0
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="project-settings-gui-oracletosql"></a>Projekteinstellungen (GUI) (OracleToSQL)
 Die GUI-projekteinstellungen können Sie konfigurieren die Darstellung von Daten auf die **Daten** Registerkarte und, ob nach der Konvertierung den Assessment-Bericht angezeigt werden oder nicht.  
@@ -32,7 +33,7 @@ Die GUI-Bereich finden Sie in der **Projekteinstellungen** und **Projekt Standar
   
 -   Verwenden der **Projekt Standardeinstellungen** im Dialogfeld Optionen der Benutzeroberfläche für alle Projekte festgelegt. Die GUI-Einstellungen für den Zugriff auf die **Tools** klicken Sie im Menü **Projekt Standardeinstellungen**, wählen Sie die Migration-Projekttyp, die für die Einstellungen sind erforderlich, angezeigt oder geändert werden **Migration Zielversion** Dropdown-Liste, und klicken Sie dann auf **GUI** unten im linken Bereich.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>enthalten  
 **Maximale Anzahl für die Quelle**  
 Konfiguriert die Anzahl von Zeilen mit Daten, die angezeigt wird, auf die **Daten** Registerkarte für die ausgewählte Quelltabelle.  
   

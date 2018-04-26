@@ -1,6 +1,6 @@
 ---
 title: Herstellen einer Verbindung mit DB2 (DB2ToSQL) | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-db2
@@ -21,13 +21,13 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 27b590cbfefdbc01e67e4049ffa3d920afd08b1f
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 5d6ba7b6cb1440a918160dbd9660930d4896a8d7
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="connect-to-db2-db2tosql"></a>Connect To DB2 (DB2ToSQL)
+# <a name="connect-to-db2-db2tosql"></a>Herstellen einer Verbindung mit DB2 (DB2ToSQL)
 Verwenden der **Herstellen einer Verbindung mit DB2** Dialogfeld Verbindung mit der DB2-Datenbank, die Sie migrieren möchten.  
   
 Zum Zugriff auf dieses Dialogfeld, in dem **Datei** klicken Sie im Menü **Herstellen einer Verbindung mit DB2**. Wenn Sie zuvor eine Verbindung hergestellt haben, wird der Befehl ist **eine erneute Verbindung mit DB2**.  

@@ -1,25 +1,25 @@
 ---
-title: "RHEL Cluster für SQL Server-Verfügbarkeitsgruppe konfigurieren | Microsoft Docs"
-description: 
+title: RHEL Cluster für SQL Server-Verfügbarkeitsgruppe konfigurieren | Microsoft Docs
+description: ''
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.date: 06/14/2017
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: b7102919-878b-4c08-a8c3-8500b7b42397
 ms.workload: Inactive
-ms.openlocfilehash: c90eb7d5f11456a13dfa3d4354070bc506d030e5
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: e073b59b4fd29db9abf8ad602298c0f10301f178
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="configure-rhel-cluster-for-sql-server-availability-group"></a>Konfigurieren von Cluster RHEL für SQL Server-Verfügbarkeitsgruppe
 
@@ -37,7 +37,7 @@ Weitere Informationen zu Clusterkonfiguration, Optionen für Agents und Manageme
 
 In den folgenden Abschnitten exemplarisch die Schritte zum Einrichten eines Clusters Schrittmacher und fügen Sie einer verfügbarkeitsgruppe als Ressource im Cluster für hohe Verfügbarkeit.
 
-## <a name="roadmap"></a>Roadmap
+## <a name="roadmap"></a>Roadmap für die
 
 Die Schritte zum Erstellen einer verfügbarkeitsgruppe auf Linux-Servern zwecks hoher Verfügbarkeit unterscheiden sich von den Schritten in einem Windows Server-Failovercluster. Die folgende Liste beschreibt die allgemeinen Schritte: 
 

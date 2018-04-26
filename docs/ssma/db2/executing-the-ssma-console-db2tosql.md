@@ -1,6 +1,6 @@
 ---
 title: Ausführen der Konsole SSMA (DB2ToSQL) | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-db2
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f491f5afc0beea80943e976c64785afba200ad7c
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 816c37c3ac9c26c80d0f3a95ed27af135b9e874c
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="executing-the-ssma-console-db2tosql"></a>Ausführen der Konsole SSMA (DB2ToSQL)
 Microsoft stellt Ihnen Dateibefehle auszuführen und zu steuern SSMA Aktivitäten eine Reihe robuster Skript. In den folgenden Abschnitten ausführlich identisch. Die Konsolenanwendung verwendet bestimmte Standardskripts Dateibefehle als aufgezählte in diesem Abschnitt.  
@@ -45,7 +45,7 @@ Erstellt ein neues SSMA-Projekt.
   
 -   `project-name` Gibt den Namen des Projekts an. {string}  
   
--   `overwrite-if-exists`Optionales Attribut gibt an, ob ein vorhandenes Projekt überschrieben werden soll. {boolean}  
+-   `overwrite-if-exists`Optionales Attribut gibt an, ob ein vorhandenes Projekt überschrieben werden soll. {Boolean}  
   
 -   `project-type:`Optionales Attribut. Gibt den Projekttyp z. B. "Sql Server 2005" Projekt oder "Sql Server 2008" Project oder Project "Sql Server 2012" oder "Sql Server 2014" Projekt oder "Sql Azure". Der Standardwert ist "Sql Server 2014".  
   
@@ -133,7 +133,7 @@ Die Verbindung mit Datenbank-Befehle können mit der Datenbank herstellen.
   
 **Befehl**  
   
-connect-source-database  
+Verbinden-Quelldatenbank  
   
 -   Führt die Verbindung mit der Quelldatenbank und lädt hohe Ebene Metadaten von der Quelldatenbank, aber nicht alle Metadaten.  
   
@@ -150,7 +150,7 @@ Das Name-Attribut für jede Verbindung im Server-Abschnitt des Server-Verbindung
 ```  
 **Befehl**  
   
-force-load-source/target-database  
+Force-Load-/ Ziel-Quelldatenbank  
   
 -   Lädt die Quellmetadaten an.  
   
@@ -180,7 +180,7 @@ oder
 ```  
 **Befehl**  
   
-reconnect-source-database  
+Schließen Sie Quelldatenbank  
   
 -   Verbindung mit der Quelldatenbank, aber keine Metadaten im Gegensatz zu den Befehl Connect Quelldatenbank wird nicht geladen.  
   
@@ -195,7 +195,7 @@ reconnect-source-database
 ```  
 **Befehl**  
   
-connect-target-database  
+Verbinden-Zieldatenbank  
   
 -   Eine Verbindung mit SQL Server-Zieldatenbank her und lädt vollständig hohe Ebene Metadaten der Zieldatenbank, aber nicht die Metadaten.  
   
@@ -212,7 +212,7 @@ Das Name-Attribut für jede Verbindung im Server-Abschnitt des Server-Verbindung
 ```  
 **Befehl**  
   
-reconnect-target-database  
+Schließen Sie Zieldatenbank  
   
 -   Erneut mit der Zieldatenbank, aber keine Metadaten, im Gegensatz zu den Befehl Connect der Zieldatenbank wird nicht geladen.  
   
@@ -305,7 +305,7 @@ Die Befehle für die Migration konvertieren das Schema der Zieldatenbank, die de
   
 **Befehl**  
   
-convert-schema  
+Convert-schema  
   
 -   Schemakonvertierung von der Quelle in das Zielschema durchgeführt.  
   
@@ -505,11 +505,11 @@ Synchronisieren von Ziel
   
 -   `on-error:` Gibt an, ob die Synchronisierungsfehler als Warnungen oder Fehler angegeben. Verfügbare Optionen für auf Fehler:  
   
-    -   report-total-as-warning  
+    -   Bericht insgesamt als Warnung  
   
-    -   report-each-as-warning  
+    -   Bericht-each-als-Warnung  
   
-    -   fail-script  
+    -   Fail-Skript  
   
 -   `report-errors-to:` Speicherort der Fehlerbericht angibt, für der Synchronisierungsvorgang (optionales Attribut), wenn nur Ordnerpfad angegeben ist, dann Datei namentlich **TargetSynchronizationReport.XML** wird erstellt.  
   
@@ -554,7 +554,7 @@ oder
 ```  
 **Befehl**  
   
-refresh-from-database  
+Aktualisieren von Datenbank  
   
 -   Aktualisiert die Datenquelle Objekte aus der Datenbank.  
   
@@ -570,11 +570,11 @@ Ist eine oder mehrere Metabase-Knoten als-Befehlszeilenparameter erforderlich.
   
 -   `on-error:` Gibt an, ob die Aktualisierung Fehler als Warnungen oder Fehler angegeben. Verfügbare Optionen für auf Fehler:  
   
-    -   report-total-as-warning  
+    -   Bericht insgesamt als Warnung  
   
-    -   report-each-as-warning  
+    -   Bericht-each-als-Warnung  
   
-    -   fail-script  
+    -   Fail-Skript  
   
 -   `report-errors-to:` Speicherort der Fehlerbericht angibt, für der Aktualisierungsvorgang (optionales Attribut) Wenn nur Ordnerpfad angegeben ist, klicken Sie dann Datei namentlich **SourceDBRefreshReport.XML** wird erstellt.  
   
@@ -619,7 +619,7 @@ Die Befehle Skriptgenerierung zwei Aufgaben ausführen: sie helfen bei der speic
   
 **Befehl**  
   
-save-as-script  
+"Save-als-Script"  
   
 Zum Speichern von den Skripts für die Objekte in einer Datei, wenn erwähnt Metabasis = Ziel, dies ist eine Alternative zum Synchronisationsbefehl, in denen in wir erhalten die Skripts und führen Sie die gleiche in der Zieldatenbank.  
   

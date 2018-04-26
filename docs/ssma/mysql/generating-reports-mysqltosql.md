@@ -1,6 +1,6 @@
 ---
 title: Generieren von Berichten (MySQLToSQL) | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-mysql
@@ -23,11 +23,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b452d85718dbdca6ade3c40417fa8b200ea74cdc
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 44e368d2839725a99b3c2d38db6c24e1c9114537
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="generating-reports-mysqltosql"></a>Generieren von Berichten (MySQLToSQL)
 Berichte über bestimmte Aktivitäten mit Befehlen durchgeführt werden in SSMA-Konsole auf Objektebene-Struktur generiert.  
@@ -42,11 +42,11 @@ Verwenden Sie das folgende Verfahren zum Generieren von Berichten:
     |-|-|-|  
     |**Sl. Nein.**|**Befehl**|**Berichtstitel**|  
     |1|Generieren von Bewertungsbericht|AssessmentReport&lt;n&gt;. XML|  
-    |2|convert-schema|SchemaConversionReport&lt;n&gt;.XML|  
-    |3|Migrieren von Daten|DataMigrationReport&lt;n&gt;.XML|  
-    |4|Convert-Sql-Anweisung|ConvertSQLReport&lt;n&gt;.XML|  
+    |2|Convert-schema|SchemaConversionReport&lt;n&gt;. XML|  
+    |3|Migrieren von Daten|DataMigrationReport&lt;n&gt;. XML|  
+    |4|Convert-Sql-Anweisung|ConvertSQLReport&lt;n&gt;. XML|  
     |5|Synchronisieren von Ziel|TargetSynchronizationReport&lt;n&gt;.XML|  
-    |6|refresh-from-database|SourceDBRefreshReport&lt;n&gt;.XML|  
+    |6|Aktualisieren von Datenbank|SourceDBRefreshReport&lt;n&gt;. XML|  
   
     > [!IMPORTANT]  
     > Ein Ausgabebericht unterscheidet sich von Assessment-Bericht. Die erste ist ein Bericht auf die Leistung eines ausgeführten Befehls beim, die zweite Datei ist ein XML-Bericht für die programmgesteuerte Nutzung.  
@@ -117,11 +117,11 @@ Der Befehl **synchronisieren Ziel** hat **Bericht Fehler zu** -Parameter, der de
   
 **Bei Fehler:** gibt an, ob die Synchronisierungsfehler als Warnungen oder Fehler angegeben. Verfügbare Optionen für auf Fehler:  
   
--   report-total-as-warning  
+-   Bericht insgesamt als Warnung  
   
--   report-each-as-warning  
+-   Bericht-each-als-Warnung  
   
--   fail-script  
+-   Fail-Skript  
   
 ### <a name="refresh-from-database"></a>Aktualisierung aus Datenbank:  
 Der Befehl **Aktualisierung aus Datenbank** hat **Bericht Fehler zu** -Parameter, der den Speicherort der Fehlerbericht für den Aktualisierungsvorgang angibt. Klicken Sie dann eine Datei namens **SourceDBRefreshReport&lt;n&gt;. XML** wird am angegebenen Speicherort erstellt, in denen **&lt;n&gt;** ist die Anzahl von eindeutigen Dateinamen, die mit einer Ziffer bei jeder Ausführung desselben Befehls inkrementiert.  
@@ -147,11 +147,11 @@ Der Befehl **Aktualisierung aus Datenbank** hat **Bericht Fehler zu** -Parameter
   
 **Bei Fehler:** gibt an, ob die Aktualisierung Fehler als Warnungen oder Fehler anzugeben. Verfügbare Optionen für auf Fehler:  
   
--   report-total-as-warning  
+-   Bericht insgesamt als Warnung  
   
--   report-each-as-warning  
+-   Bericht-each-als-Warnung  
   
--   fail-script  
+-   Fail-Skript  
   
 ## <a name="see-also"></a>Siehe auch  
 [Ausführen der Konsole SSMA (MySQL)](http://msdn.microsoft.com/en-us/e3e9f7e4-0619-4861-a202-3d5d39953b26)  

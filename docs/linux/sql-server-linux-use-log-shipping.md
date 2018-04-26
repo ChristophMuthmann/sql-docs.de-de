@@ -1,25 +1,25 @@
 ---
-title: "Konfigurieren des Protokollversands für SQL Server on Linux | Microsoft Docs"
-description: "Dieses Lernprogramm zeigt ein einfaches Beispiel dafür, wie eine SQL Server-Instanz unter Linux auf einer sekundären Instanz, die unter Verwendung des Protokollversands repliziert."
+title: Konfigurieren des Protokollversands für SQL Server on Linux | Microsoft Docs
+description: Dieses Lernprogramm zeigt ein einfaches Beispiel dafür, wie eine SQL Server-Instanz unter Linux auf einer sekundären Instanz, die unter Verwendung des Protokollversands repliziert.
 author: meet-bhagdev
 ms.author: meetb
 manager: craigg
 ms.date: 04/19/2017
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
-ms.assetid: 
+ms.assetid: ''
 ms.workload: Inactive
-ms.openlocfilehash: af88c21dc246238274ab66b47bb76302f0a86f06
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: e2c893dac95b63431ac8ea6260e4769b98444bd9
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="get-started-with-log-shipping-on-linux"></a>Erste Schritte mit Protokollversand unter Linux
 

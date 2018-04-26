@@ -6,7 +6,7 @@ ms.author: jroth
 manager: craigg
 ms.date: 03/22/2018
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: ''
@@ -14,11 +14,11 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Active
-ms.openlocfilehash: 6fdf6679230141dd2dedb35a9ae7e9cc0fb1b9cb
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: 4d59b7f4d2c88640f3f925949f8938e689d1e029
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sql-server-on-linux-frequently-asked-questions-faq"></a>Häufig gestellte Fragen (FAQS) SQLServer on Linux
 
@@ -78,7 +78,7 @@ Die folgenden Abschnitte enthalten allgemeine Fragen und Antworten für SQL Serv
 
 1. **Gibt es ein Tool wie SSMS, die auf dem Linux ausgeführt wird?**
 
-   Die neue Microsoft SQL Operations Studio (Vorschau) ist eine plattformübergreifende-Tool zum Verwalten von SQL Server. Weitere Informationen finden Sie unter [Neuigkeiten von Microsoft SQL Operations Studio (Vorschau)](../sql-operations-studio/what-is.md).
+   Die neue Microsoft SQL Operations Studio (preview) ist eine plattformübergreifende-Tool zum Verwalten von SQL Server. Weitere Informationen finden Sie unter [Neuigkeiten von Microsoft SQL Operations Studio (Vorschau)](../sql-operations-studio/what-is.md).
 
 1. **Sind Sie Befehle wie Sqlcmd und Bcp unter Linux verfügbar?**
 

@@ -7,14 +7,14 @@ ms.author: genemi
 ms.topic: article
 ms.custom: UpdArt.exe
 ms.suite: sql
-ms.prod_service: sql-non-specified
+ms.prod_service: sql
 ms.component: xquery
 ms.date: 02/03/2018
-ms.openlocfilehash: 65e9c176bfd3e19c646b3d3466f648e358b8ab27
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: 6f1360af556ce6b8b6e575570ee972557d65ed53
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="new-and-recently-updated-xquery-for-sql-server"></a>Neue und kürzlich aktualisierte: XQuery für SQLServer
 

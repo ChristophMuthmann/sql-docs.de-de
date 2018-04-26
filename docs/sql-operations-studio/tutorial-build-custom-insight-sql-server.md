@@ -1,9 +1,9 @@
 ---
-title: 'Lernprogramm: Erstellen Sie ein Widget eines benutzerdefinierten Einblicke in SQL Operations Studio (preview) | Microsoft Docs'
-description: Dieses Lernprogramm veranschaulicht, wie benutzerdefinierte Insight-Widgets erstellen, und fügen sie Datenbank- und Dashboards im SQL Operations Studio (preview) hinzu.
+title: 'Lernprogramm: Erstellen Sie ein Widget eines benutzerdefinierten Einblicke in SQL-Vorgänge Studio (Vorschau) | Microsoft Docs'
+description: Dieses Lernprogramm veranschaulicht, wie benutzerdefinierte Insight-Widgets erstellen, und fügen sie Datenbank- und Dashboards im SQL-Vorgänge Studio (Vorschau) hinzu.
 ms.custom: tools|sos
 ms.date: 11/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
@@ -14,11 +14,11 @@ author: erickangMSFT
 ms.author: erickang
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 344cf021a4a0abc13fc8c531875c604095c8c0d1
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 97a5177bf4f0dd9e5ae3ae1b097285bd7a8d42b5
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="tutorial-build-a-custom-insight-widget"></a>Lernprogramm: Erstellen Sie eine benutzerdefinierte Insight-widget
 
@@ -35,8 +35,8 @@ Bei diesem Lernprogramm erfahren Sie, wie Sie:
 
 Dieses Lernprogramm erfordert die SQL Server- oder Azure SQL-Datenbank *TutorialDB*. Zum Erstellen der *TutorialDB* Datenbank, führen Sie eines der folgenden Schnellstarts:
 
-- [Eine Verbindung herstellen Sie und Fragen Sie mithilfe des SQL Server ab[!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
-- [Eine Verbindung herstellen Sie und Fragen Sie mithilfe des Azure SQL-Datenbank ab[!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-database.md)
+- [Eine Verbindung herstellen Sie und Fragen Sie mithilfe des SQL Server ab [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
+- [Eine Verbindung herstellen Sie und Fragen Sie mithilfe des Azure SQL-Datenbank ab [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-database.md)
 
 
 ## <a name="run-your-own-query-and-view-the-result-in-a-chart-view"></a>Eine eigene Abfrage auszuführen und das Ergebnis in einer Diagrammsicht anzeigen

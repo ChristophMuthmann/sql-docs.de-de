@@ -1,6 +1,6 @@
 ---
 title: Zugriff auf Lager Schemas (AccessToSQL) | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-access
@@ -48,11 +48,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d68215dd768a2fbd4e6723d7ca98ef9a5c96c72d
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: a279ed084f4d7dc3b2574ed71332acf9bfe61c8f
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="access-inventory-schemas-accesstosql"></a>Access-Inventur-Schemas (AccessToSQL)
 In den folgenden Abschnitten wird beschrieben, die Tabellen, die von SSMA erstellt werden, wenn Sie zu Access-Schemas exportieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
@@ -104,11 +104,11 @@ Spaltenmetadaten ist exportiert der **SSMA_Access_InventoryColumns** Tabelle. Di
 |**TableId**|**uniqueidentifier**|Identifiziert die Tabelle, die diese Spalte enthält.|  
 |**ColumnId**|**int**|Eine ganze Zahl erhöht die Spalte angibt. **ColumnId** ist der Primärschlüssel für die Tabelle.|  
 |**ColumnName**|**nvarchar(4000)**|Name der Spalte.|  
-|**IsNullable**|**bit**|Gibt an, ob die Spalte null-Werte enthalten kann. Wenn der Wert 1 ist, kann die Spalte null-Werte enthalten. Wenn der Wert 0 ist, kann nicht in die Spalte null-Werte enthalten. Beachten Sie, dass die Validierungsregel auch verwendet werden kann, um zu verhindern, dass null-Werte.|  
+|**isNullable**|**bit**|Gibt an, ob die Spalte null-Werte enthalten kann. Wenn der Wert 1 ist, kann die Spalte null-Werte enthalten. Wenn der Wert 0 ist, kann nicht in die Spalte null-Werte enthalten. Beachten Sie, dass die Validierungsregel auch verwendet werden kann, um zu verhindern, dass null-Werte.|  
 |**DataType**|**nvarchar(4000)**|Der Access-Datentyp der Spalte, wie z. B. **Text** oder **lang**.|  
 |**IsAutoIncrement**|**bit**|Gibt an, ob ganzzahligen Werten in die Spalte automatisch inkrementiert wird. Wenn der Wert 1 ist, werden die ganzen Zahlen automatisch inkrementiert.|  
 |**Ordinal**|**smallint**|Die Reihenfolge der Spalte in der Tabelle, beginnend mit 0 (null).|  
-|**DefaultValue**|**nvarchar(4000)**|Der Standardwert für die Spalte.|  
+|**"DefaultValue"**|**nvarchar(4000)**|Der Standardwert für die Spalte.|  
 |**ValidationRule**|**nvarchar(4000)**|Die Regel, die zum Überprüfen der Daten, die hinzugefügt oder aktualisiert werden, in der Spalte verwendet wird.|  
   
 ## <a name="indexes"></a>Indizes  
@@ -170,7 +170,7 @@ Makro-Metadaten werden exportiert, auf die **SSMA_Access_InventoryMacros** Tabel
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|Identifiziert die Datenbank, die das Makro enthält.|  
 |**MacroId**|**int**|Inkrementelle eine ganze Zahl, die das Makro identifiziert. Diese Spalte ist der Primärschlüssel für die Tabelle.|  
-|**MacroName**|**nvarchar(4000)**|Der Name des Makros.|  
+|**Makroname**|**nvarchar(4000)**|Der Name des Makros.|  
   
 ## <a name="reports"></a>Berichte  
 Berichtsmetadaten ist exportiert der **SSMA_Access_InventoryReports** Tabelle. Diese Tabelle enthält die folgenden Spalten:  
@@ -188,7 +188,7 @@ Metadaten des Moduls ist exportiert der **SSMA_Access_InventoryModules** Tabelle
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|Identifiziert die Datenbank, die das Modul enthält.|  
 |**ModuleId**|**int**|Inkrementelle eine ganze Zahl, die das Modul identifiziert. Diese Spalte ist der Primärschlüssel für die Tabelle.|  
-|**ModuleName**|**nvarchar(4000)**|Der Name des Moduls.|  
+|**"ModuleName"**|**nvarchar(4000)**|Der Name des Moduls.|  
   
 ## <a name="see-also"></a>Siehe auch  
 [Exporting an Access Inventory (Exportieren eines Access-Inventars)](http://msdn.microsoft.com/en-us/7e1941fb-3d14-4265-aff6-c77a4026d0ed)  

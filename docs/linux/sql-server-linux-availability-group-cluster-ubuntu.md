@@ -1,25 +1,25 @@
 ---
-title: "Ubuntu-Cluster für SQL Server-Verfügbarkeitsgruppe konfigurieren | Microsoft Docs"
-description: 
+title: Ubuntu-Cluster für SQL Server-Verfügbarkeitsgruppe konfigurieren | Microsoft Docs
+description: ''
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.date: 01/30/2018
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: dd0d6fb9-df0a-41b9-9f22-9b558b2b2233
 ms.workload: Inactive
-ms.openlocfilehash: 5f52c5f83ca91b196f0bf2f05e98fb73133b4c8a
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: 842e09ffd1a9d219f3d39362f51f18187446a9b2
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="configure-ubuntu-cluster-and-availability-group-resource"></a>Ubuntu-Cluster und die Verfügbarkeitsgruppenressource konfigurieren
 
@@ -32,7 +32,7 @@ Dieses Dokument erläutert, wie Sie einen Cluster mit drei Knoten auf Ubuntu ers
 
 In den folgenden Abschnitten exemplarisch die Schritte zum Einrichten einer Lösung mit Failovercluster. 
 
-## <a name="roadmap"></a>Roadmap
+## <a name="roadmap"></a>Roadmap für die
 
 Die Schritte zum Erstellen einer verfügbarkeitsgruppe auf Linux-Servern zwecks hoher Verfügbarkeit unterscheiden sich von den Schritten in einem Windows Server-Failovercluster. Die folgende Liste beschreibt die allgemeinen Schritte: 
 

@@ -1,6 +1,6 @@
 ---
 title: Projekteinstellungen (Konvertierung) (DB2ToSQL) | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-db2
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 389d5da7b3940464150ca52618595fd8bd518fb8
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 5ad3409125f4e6862304e02f05b03bcf821923ba
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="project-settings-conversion-db2tosql"></a>Projekteinstellungen (Konvertierung) (DB2ToSQL)
 Die Seite "Konvertierung", der die **Projekteinstellungen** Dialogfeld enthält Einstellungen, anpassen, wie SSMA zu DB2-Syntax konvertiert [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Syntax.  
@@ -81,7 +81,7 @@ Diese Einstellung gibt an, wie DB2-Schemas in SQL Server-Schemas zugeordnet werd
   
 1.  **Schema für Datenbank:** In diesem Modus DB2-Schema "sch1" wird standardmäßig auf 'Dbo' SQL Server-Datenbankschemas in SQL Server-Datenbank "sch1" zugeordnet werden.  
   
-2.  **Schema zum Schema:**In diesem Modus DB2 wird standardmäßig auf "sch1" SQL Server-Datenbankschemas in SQL Server-Standarddatenbank angegeben wird, klicken Sie im Dialogfeld "Verbindung" Schema "sch1" zugeordnet werden.  
+2.  **Schema zum Schema:** In diesem Modus DB2 wird standardmäßig auf "sch1" SQL Server-Datenbankschemas in SQL Server-Standarddatenbank angegeben wird, klicken Sie im Dialogfeld "Verbindung" Schema "sch1" zugeordnet werden.  
   
 Bei Auswahl einer Konvertierungsmodus in der **Modus** Feld SSMA gilt die folgende Einstellung:  
   
@@ -174,7 +174,7 @@ Die folgende Tabelle zeigt, wie SSMA DB2 Sperrmodi konvertiert:
   
 |||  
 |-|-|  
-|DB2 Lock Mode|SQL Server-Tabellenhinweis|  
+|DB2-Sperrmodus|SQL Server-Tabellenhinweis|  
 |FREIGABE DER ZEILE|ROWLOCK, HOLDLOCK|  
 |EXKLUSIVE ZEILE|ROWLOCK, XLOCK, HOLDLOCK|  
 |FREIGABE UPDATE = ZEILE FREIGABE|ROWLOCK, HOLDLOCK|  

@@ -1,16 +1,16 @@
 ---
 title: Angeben eines Knotentests in einem Pfadausdrucksschritt | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - XML
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - axis step [XQuery]
 - node test [XQuery]
 ms.assetid: ffe27a4c-fdf3-4c66-94f1-7e955a36cadd
-caps.latest.revision: 
+caps.latest.revision: 24
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1fd2f4955285cec9ba0569ac39138088b8015df5
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 3ff610c579553847dc82193cff9a28b474f0b433
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="path-expressions---specifying-node-test"></a>Path-Ausdrücken - angeben eines Knotentests
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.lasthandoff: 02/09/2018
   
 -   [0 (null) oder mehr schrittqualifizierern (optional)](../xquery/path-expressions-specifying-predicates.md)  
   
- Weitere Informationen finden Sie unter [Pfadausdrücke &#40; XQuery &#41; ](../xquery/path-expressions-xquery.md).  
+ Weitere Informationen finden Sie unter [Pfadausdrücke &#40;XQuery&#41;](../xquery/path-expressions-xquery.md).  
   
  Ein Knotentest ist eine Bedingung und die zweite Komponente eines Achsenschritts in einem Pfadausdruck. Alle von einem Schritt ausgewählten Knoten müssen diese Bedingung erfüllen. Für den Pfadausdruck `/child::ProductDescription` ist `ProductDescription` der Knotentest. Dieser Schritt ruft nur die untergeordneten Elementknoten ab, deren Name ProductDescription lautet.  
   

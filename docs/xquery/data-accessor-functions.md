@@ -1,16 +1,16 @@
 ---
 title: Data Accessor-Funktionen | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -19,16 +19,16 @@ dev_langs:
 helpviewer_keywords:
 - data-accessor functions [XQuery]
 ms.assetid: 31bad04f-7c74-4773-9f83-612704fdd21c
-caps.latest.revision: 
+caps.latest.revision: 30
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7a6b3cc974ae32047d88e1355a870cc97806c22d
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: f70f14b553182c4f52d9c27ec0972fd3d5978026
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="data-accessor-functions"></a>Data Accessor-Funktionen
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -44,11 +44,11 @@ ms.lasthandoff: 02/09/2018
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
--   [eine Zeichenfolge Function &#40; XQuery &#41;](../xquery/data-accessor-functions-string-xquery.md)  
+-   [String-Funktion &#40;XQuery&#41;](../xquery/data-accessor-functions-string-xquery.md)  
   
--   [Data-Funktion &#40; XQuery &#41;](../xquery/data-accessor-functions-data-xquery.md)  
+-   [Data-Funktion &#40;XQuery&#41;](../xquery/data-accessor-functions-data-xquery.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Path-Ausdrücken &#40; XQuery &#41;](../xquery/path-expressions-xquery.md)  
+ [Path-Ausdrücken &#40;XQuery&#41;](../xquery/path-expressions-xquery.md)  
   
   

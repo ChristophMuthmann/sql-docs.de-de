@@ -1,10 +1,10 @@
 ---
-title: Erstellen von Codeausschnitten in SQL Operations Studio (preview) | Microsoft Docs
-description: Informationen Sie zum Erstellen und Verwenden von SQL-Codeausschnitte in SQL Operations Studio (preview)
+title: Erstellen von Codeausschnitten in SQL-Vorgänge Studio (Vorschau) | Microsoft Docs
+description: Informationen Sie zum Erstellen und Verwenden von SQL-Codeausschnitte in SQL-Vorgänge Studio (Vorschau)
 ms.custom: tools|sos
 ms.date: 11/15/2017
 ms.reviewer: alayu; erickang; sstein
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
@@ -14,17 +14,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4670c824b1e52776c3d81d097beeb4ccd9e62e2d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f51c14d2c3824baa1b2730d352b94d9cfdc097bc
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="create-and-use-code-snippets-to-quickly-create-transact-sql-t-sql-scripts-in-includename-sosincludesname-sos-shortmd"></a>Erstellen und Verwenden von Codeausschnitten, Transact-SQL (T-SQL)-Skripts in schnell erstellen[!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="create-and-use-code-snippets-to-quickly-create-transact-sql-t-sql-scripts-in-includename-sosincludesname-sos-shortmd"></a>Erstellen und Verwenden von Codeausschnitten, Transact-SQL (T-SQL)-Skripts in schnell erstellen [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
 Codeausschnitte in [!INCLUDE[name-sos](../includes/name-sos-short.md)] sind Vorlagen, die erleichtern die Datenbanken und Datenbankobjekte erstellen. 
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)]bietet mehrere T-SQL-Ausschnitte, um Ihnen zu helfen, schnell generieren die korrekte Syntax. 
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] bietet mehrere T-SQL-Ausschnitte, um Ihnen zu helfen, schnell generieren die korrekte Syntax. 
 
 Benutzerdefinierte Codeausschnitte können auch erstellt werden.
 
@@ -61,7 +61,7 @@ Sie können eigene Ausschnitte definieren. Um die SQL-Ausschnittdatei für die B
 1. Wählen Sie **SQL**:
 
    > [!NOTE]
-   > [!INCLUDE[name-sos](../includes/name-sos-short.md)]erbt seine Code Snippet-Funktionalität von Visual Studio-Code, damit in diesem Artikel insbesondere erläutert die Verwendung von SQL-Ausschnitten. Ausführlichere Informationen finden Sie unter [eigene Ausschnitte erstellen](https://code.visualstudio.com/docs/editor/userdefinedsnippets) in der Dokumentation zu Visual Studio-Code. 
+   > [!INCLUDE[name-sos](../includes/name-sos-short.md)] erbt seine Code Snippet-Funktionalität von Visual Studio-Code, damit in diesem Artikel insbesondere erläutert die Verwendung von SQL-Ausschnitten. Ausführlichere Informationen finden Sie unter [eigene Ausschnitte erstellen](https://code.visualstudio.com/docs/editor/userdefinedsnippets) in der Dokumentation zu Visual Studio-Code. 
 
    ![Ersetzen Sie die Vorlagenfeld](media/code-snippets/select-sql.png)
 

@@ -1,24 +1,24 @@
 ---
 title: Konfigurieren von Failover Cluster Instanz Speicher iSCSI - SQL Server on Linux | Microsoft Docs
-description: 
+description: ''
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.date: 08/28/2017
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: 19a7f03471af7aaf9e55fe371e02f9201cf1464f
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: 4033289cb388e9ba06260b482af613054e70760c
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="configure-failover-cluster-instance---iscsi---sql-server-on-linux"></a>Konfigurieren der Failover-Clusterinstanz - iSCSI - SQL Server on Linux
 
@@ -200,7 +200,7 @@ Weitere Informationen zu iSCSI-Initiator zu den unterstützten-Verteilungen find
     ls /var/opt/mssql/data
     ```
 
-    ![45-CopyMove][8]
+    ![45 CopyMove][8]
  
    *    Typ `exit` So wechseln Sie zurück an den Root-Benutzer.
 
@@ -250,7 +250,7 @@ Weitere Informationen zu iSCSI-Initiator zu den unterstützten-Verteilungen find
     
    *    Geben Sie `exit` kein Stammverzeichnis sein.
 
-   *    Start SQL Server. Wenn alles ordnungsgemäß kopiert wurde und angewendeten Sicherheitsfunktionen ordnungsgemäß, SQL Server sollte als gestartet.
+   *    Starten Sie SqlServer. Wenn alles ordnungsgemäß kopiert wurde und angewendeten Sicherheitsfunktionen ordnungsgemäß, SQL Server sollte als gestartet.
 
     ```bash
     sudo systemctl start mssql-server

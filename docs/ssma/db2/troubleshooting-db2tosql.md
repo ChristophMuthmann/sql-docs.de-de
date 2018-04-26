@@ -1,6 +1,6 @@
 ---
 title: Problembehandlung (DB2ToSQL) | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-db2
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cb613aec99f1801a310ce9104d67fd04891f5041
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 5537c346dd4fd7b05efea4f009baff19b8061976
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="troubleshooting-db2tosql"></a>Problembehandlung (DB2ToSQL)
 Es ist nicht ungewöhnlich, führen Sie in der Migration Probleme in der Mitte der Konsole Skripts oder Befehle ausführen.  

@@ -7,14 +7,14 @@ ms.author: genemi
 ms.topic: article
 ms.custom: UpdArt.exe
 ms.suite: sql
-ms.prod_service: sql-non-specified
+ms.prod_service: sql
 ms.component: samples
 ms.date: 02/03/2018
-ms.openlocfilehash: 758ce1d48b6a8dc961635ee7dcb4023867d727d1
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: 2e6cf28a11ecad76cb6362941d8cc6d38a225471
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="new-and-recently-updated-samples-for-sql-server"></a>Neue und kürzlich aktualisierte: Beispiele für SQLServer
 

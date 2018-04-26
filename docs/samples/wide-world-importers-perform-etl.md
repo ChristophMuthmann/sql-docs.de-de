@@ -1,7 +1,7 @@
 ---
 title: WideWorldImportersDW - ETL-Workflows | Microsoft Docs
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod: sql
+ms.prod_service: sql
 ms.service: ''
 ms.component: samples
 ms.technology:
@@ -17,11 +17,11 @@ ms.author: barbkess
 manager: craigg
 robots: noindex,nofollow
 ms.workload: Inactive
-ms.openlocfilehash: 5b475ee3299431327237efdeee723a88dd832784
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: 65001407ac1991fe80c8b20e64aa795585a2e6c9
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="wideworldimportersdw-etl-workflow"></a>WideWorldImportersDW ETL-Workflows
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ Dimensionen werden zuerst geladen, gefolgt von Faktentabellen. Das Paket kann zu
 
 Der Workflow wird wie folgt:
 
- ![WideWorldImporters ETL workflow](media/wide-world-importers/wideworldimporters-etl-workflow.png)
+ ![WideWorldImporters ETL-Workflows](media/wide-world-importers/wideworldimporters-etl-workflow.png)
 
 Er beginnt mit einem funktioniert Task "Ausdruck" Umstellungsjahr für Angaben mit geeigneten Zeitpunkt. Dieses Mal wird die aktuelle Uhrzeit kleiner einigen Minuten. (Dies ist robuster als das Anfordern von Daten direkt auf die aktuelle Zeit). Es schneidet dann alle Millisekunden ab dem Zeitpunkt ab.
 
@@ -61,7 +61,7 @@ Laden Sie die SSIS-Paket-Datei **tägliche ETL.ispac**.
 
 Quellcode und erstellen die Beispieldatenbank ist aus folgendem Ort verfügbar.
 
-[wide-world-importers](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/wwi-integration-etl)
+[Wide World-Importers befinden](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/wwi-integration-etl)
 
 ## <a name="install"></a>Install
 

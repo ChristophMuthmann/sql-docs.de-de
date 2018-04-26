@@ -1,31 +1,31 @@
 ---
-title: "Übersicht über Data Migration Assistant (SQLServer) | Microsoft Docs"
-ms.custom: 
+title: Übersicht über Data Migration Assistant (SQLServer) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/15/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: dma
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - sql-dma
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
-keywords: 
+keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, overview
-ms.assetid: 
-caps.latest.revision: 
+ms.assetid: ''
+caps.latest.revision: ''
 author: HJToland3
 ms.author: jtoland
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c387e5bb2a0b5cef10217b32807f88a8aee6c627
-ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
+ms.openlocfilehash: af981f81b580715ece62786f08941d1e9d5cbcb8
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="overview-of-data-migration-assistant"></a>Übersicht über Data-Migrations-Assistenten
 

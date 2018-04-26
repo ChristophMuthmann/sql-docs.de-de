@@ -1,6 +1,6 @@
 ---
 title: Neues Projekt (DB2ToSQL) | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-db2
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b7a050dda5c3bf8b2ab323f338c780546b2aee58
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: b924c533c0ca36b30332970d973e4d8b09b25a07
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="new-project-db2tosql"></a>Neues Projekt (DB2ToSQL)
 Verwenden der **neues Projekt** (Dialogfeld), um ein neues SSMA-Projekt zu erstellen. Für den Zugriff auf die **neues Projekt** Dialogfeld auf die **Datei** Menü klicken Sie auf **neues Projekt**.  
@@ -46,5 +46,5 @@ Wählen Sie eine Version der Zieldatenbank über den folgenden Liste:
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2016  
   
--   Azure SQL DB  
+-   Azure SQL-Datenbank  
   

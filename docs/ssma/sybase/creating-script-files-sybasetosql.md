@@ -2,7 +2,7 @@
 title: Erstellen von Skriptdateien (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-sybase
@@ -26,13 +26,13 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9639d7527d910e61cd799ab616f10eb20b5262e4
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 7125d91c2c5e2a64dab36e75337f695b81e1b99e
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="creating-script-files-sybasetosql"></a>Creating Script Files (SybaseToSQL)
+# <a name="creating-script-files-sybasetosql"></a>Erstellen von Skriptdateien (SybaseToSQL)
 Der erste Schritt vor dem Starten SSMA-Konsolenanwendung auf die Skriptdatei erstellt wird und bei Bedarf den Wert der Variablen-Datei und die Server-Verbindung erstellen.  
   
 Die Skriptdatei kann begrenzt in drei Abschnitte unterteilt werden..,:  

@@ -1,6 +1,6 @@
 ---
 title: Neue GUI-Funktionen in SSMA für Access to SQL | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-access
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8ed90f86af4d9a9d529401935e18c24ccd4e64d4
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 5e1d78081ab845f2cb03f4b6b1aa0114515060f4
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="new-gui-features-in-ssma-for-access-to-sql"></a>Neue GUI-Funktionen in SSMA für Access to SQL
 In diesem Kapitel wird beschrieben, neuen Features von SSMA-Benutzeroberfläche  

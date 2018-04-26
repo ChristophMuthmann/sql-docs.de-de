@@ -7,14 +7,14 @@ ms.author: genemi
 ms.topic: article
 ms.custom: UpdArt.exe
 ms.suite: sql
-ms.prod_service: sql-non-specified
+ms.prod_service: sql
 ms.component: mdx
 ms.date: 02/03/2018
-ms.openlocfilehash: e7b2d221733d8481fa0e7a41db11355bdd9026ec
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: dfb13d22768f0ec1de95a7aa903fddaf61d62b7b
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="new-and-recently-updated-multidimensional-expressions-mdx-for-sql-server"></a>Neue und kürzlich aktualisierte: Mehrdimensionale Ausdrücke (MDX) für SQLServer
 

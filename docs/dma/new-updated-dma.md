@@ -7,14 +7,14 @@ ms.author: genemi
 ms.topic: article
 ms.custom: UpdArt.exe
 ms.suite: sql
-ms.prod_service: sql-non-specified
+ms.prod_service: sql
 ms.component: dma
 ms.date: 02/03/2018
-ms.openlocfilehash: 236cd49678974c9bc625be9b363e92b84d803d49
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: f3404cca85907d98d240c05a3fb3727c89e025b6
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="new-and-recently-updated-data-migration-assistant-dma-for-sql-server"></a>Neue und kürzlich aktualisierte: Data Migration Assistant (DMA) für SQLServer
 

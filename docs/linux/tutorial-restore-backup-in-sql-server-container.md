@@ -6,19 +6,19 @@ ms.author: jroth
 manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: ea1aa01f3917c0d6ee4423861a3bf4fb985f53fa
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: ad11495a927d5ca37e15cb872a200a55beb93b35
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="restore-a-sql-server-database-in-a-linux-docker-container"></a>Wiederherstellen einer SQL Server-Datenbank in einem Linux-Docker-container
 
@@ -35,16 +35,16 @@ Dieses Lernprogramm veranschaulicht, wie verschoben und Wiederherstellen einer S
 
 ## <a name="prerequisites"></a>Erforderliche Komponenten
 
-* Docker-Modul 1.8 für ein beliebiges unterstützt für Mac/Windows, Linux-Distribution oder Docker. Weitere Informationen finden Sie unter [installieren Sie Docker](https://docs.docker.com/engine/installation/).
-* Mindestens 2 GB Speicherplatz
+* Docker-Engine 1.8 und höher auf unterstütztem Linux-Betriebssystem oder Docker für Mac bzw. Windows. Weitere Informationen finden Sie unter [Install Docker (Installieren von Docker)](https://docs.docker.com/engine/installation/).
+* Mindestens 2 GB freier Speicherplatz auf dem Datenträger
 * Mindestens 2 GB RAM
-* [Systemanforderungen für SQL Server on Linux](sql-server-linux-setup.md#system).
+* [Systemanforderungen von SQL Server unter Linux](sql-server-linux-setup.md#system)
 
-## <a name="pull-and-run-the-container-image"></a>Ziehen Sie aus, und führen Sie das Container-Bild
+## <a name="pull-and-run-the-container-image"></a>Übertragen mithilfe von Pull und Ausführen von Containerimages
 
 1. Öffnen Sie ein Terminal Bash auf Linux/Mac oder einer mit erhöhten Rechten auf Windows PowerShell-Sitzung.
 
-1. Ziehen Sie die SQL Server 2017 Linux-Container-Image von Docker Hub.
+1. Übertragen Sie das Linux-Containerimage von SQL Server 2017 mithilfe von Pull aus dem Docker-Hub.
 
     ```bash
     sudo docker pull microsoft/mssql-server-linux:2017-latest
@@ -76,9 +76,9 @@ Dieses Lernprogramm veranschaulicht, wie verschoben und Wiederherstellen einer S
     Dieser Befehl erstellt einen 2017 von SQL Server-Container mit der Developer Edition (Standard). SQL Server-Port **1433** wird verfügbar gemacht werden, auf dem Host als Port **1401**. Das optionale `-v sql1data:/var/opt/mssql` Parameter erstellt einen Daten-Volume-Container mit dem Namen **sql1ddata**. Dient zur persistenten Speicherung der Daten, die von SQL Server erstellt.
 
    > [!NOTE]
-   > Der Prozess zum Ausführen von SQL Server-Editionen Produktion in Containern ist etwas anders. Weitere Informationen finden Sie unter [ausführen Produktion containerimages](sql-server-linux-configure-docker.md#production). Wenn Sie die gleichen Containernamen und Ports verwenden, funktioniert die restliche in dieser exemplarischen Vorgehensweise weiterhin mit Produktions-Containern.
+   > Der Prozess zum Ausführen von SQL Server-Editionen Produktion in Containern ist etwas anders. Weitere Informationen finden Sie unter [Run production container images (Ausführen von Containerimages für Produktionsumgebungen)](sql-server-linux-configure-docker.md#production). Wenn Sie die gleichen Containernamen und Ports verwenden, funktioniert die restliche in dieser exemplarischen Vorgehensweise weiterhin mit Produktions-Containern.
 
-1. Verwenden Sie zum Anzeigen der Docker-Containers die `docker ps` Befehl.
+1. Verwenden Sie den Befehl `docker ps`, um Ihre Docker-Container anzeigen zu lassen.
 
     ```bash
     sudo docker ps -a
@@ -88,7 +88,7 @@ Dieses Lernprogramm veranschaulicht, wie verschoben und Wiederherstellen einer S
     docker ps -a
     ```
  
-1. Wenn die **STATUS** Spalte zeigt den Status **einrichten**, klicken Sie dann SQL Server ausgeführt wird, in dem Container und am Port gelauscht angegeben, der **PORTS** Spalte. Wenn die **STATUS** Spalte für die SQL Server-Container zeigt **Exited**, finden Sie unter der [Problembehandlung Abschnitt des Handbuchs Konfiguration](sql-server-linux-configure-docker.md#troubleshooting).
+1. Wenn in der Spalte **STATUS** **Up** (Aktiv) eingetragen ist, wird SQL Server im Container ausgeführt und überwacht den Port, der in der Spalte **PORTS** angegeben ist. Wenn in der Spalte **STATUS** Ihres SQL Server-Containers **Exited** (Beendet) steht, lesen Sie bitte im [Abschnitt „Problembehebung“ im Konfigurationshandbuch](sql-server-linux-configure-docker.md#troubleshooting) nach.
 
    ```
    $ sudo docker ps -a
@@ -97,7 +97,7 @@ Dieses Lernprogramm veranschaulicht, wie verschoben und Wiederherstellen einer S
    941e1bdf8e1d        microsoft/mssql-server-linux   "/bin/sh -c /opt/m..."   About an hour ago   Up About an hour    0.0.0.0:1401->1433/tcp   sql1
    ```
 
-## <a name="change-the-sa-password"></a>Ändern Sie das SA-Kennwort
+## <a name="change-the-sa-password"></a>Ändern des Systemadministratorkennworts
 
 [!INCLUDE [Change docker password](../includes/sql-server-linux-change-docker-password.md)]
 

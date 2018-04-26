@@ -2,7 +2,7 @@
 title: Neue GUI-Funktionen in SSMA für Sybase (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-sybase
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 321c8e193c93ba34d15c7f8882d4284d08fabdf3
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 7ac834e7136b5ea988c2f0a328c0d3e0cde9696e
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="new-gui-features-in-ssma-for-sybase-sybasetosql"></a>Neue GUI-Funktionen in SSMA für Sybase (SybaseToSQL)
 In diesem Kapitel wird beschrieben, neuen Features von SSMA-Benutzeroberfläche.  

@@ -1,16 +1,16 @@
 ---
-title: "Primäre Ausdrücke (XQuery) | Microsoft Docs"
-ms.custom: 
+title: Primäre Ausdrücke (XQuery) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -24,16 +24,16 @@ helpviewer_keywords:
 - literals [XQuery]
 - context item expressions [XQuery]
 ms.assetid: d4183c3e-12b5-4ca0-8413-edb0230cb159
-caps.latest.revision: 
+caps.latest.revision: 20
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 339cb237a14869c2d747d81e32bc572ba003a5e3
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 6ee901d54e5cf68eb5de1e20c448289eab83dbfb
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="primary-expressions-xquery"></a>Primärausdrücke (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.lasthandoff: 02/09/2018
 ## <a name="literals"></a>Literale  
  XQuery-Literale können numerische oder Zeichenfolgenliterale sein. Ein Zeichenfolgenliteral kann vordefinierte Entitätsverweise enthalten; ein Entitätsverweis ist eine Abfolge von Zeichen. Die Abfolge beginnt mit einem kaufmännischen Und-Zeichen, das ein einzelnes Zeichen darstellt, das anderenfalls syntaktische Signifikanz besitzen könnte. Darauf folgen die vordefinierten Entitätsverweise für XQuery.  
   
-|Entitätsverweis|Darstellt|  
+|Entitätsverweis|repräsentiert|  
 |----------------------|----------------|  
 |&lt;|\<|  
 |&gt;|>|  
@@ -54,7 +54,7 @@ ms.lasthandoff: 02/09/2018
  Ein Zeichenfolgenliteral kann auch einen Zeichenverweis enthalten, einen Verweis im XML-Stil auf ein Unicode-Zeichen, das durch seinen dezimalen oder hexadezimalen Codepunkt identifiziert wird. Beispielsweise kann das Eurosymbol dargestellt werden, durch den Zeichenverweis "&\#8364;".  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] verwendet XML, Version 1.0 als Grundlage für die Analyse.  
+>  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] verwendet XML, Version 1.0, als Basis für die Analyse.  
   
 ### <a name="examples"></a>Beispiele  
  Die folgenden Beispiele veranschaulichen die Verwendung von Literalen sowie Entitäts- und Zeichenverweisen.  
@@ -191,6 +191,6 @@ SELECT @var.query('/ROOT[1]/a[./@attr]')
 -   Funktionsimport wird nicht unterstützt.  
   
 ## <a name="see-also"></a>Siehe auch  
- [XML-Konstruktion &#40; XQuery &#41;](../xquery/xml-construction-xquery.md)  
+ [XML-Konstruktion &#40;XQuery&#41;](../xquery/xml-construction-xquery.md)  
   
   

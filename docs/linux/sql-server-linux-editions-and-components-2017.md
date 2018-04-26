@@ -2,7 +2,7 @@
 title: Editionen und unterstützten Funktionen von SQL Server-2017 ~ Linux | Microsoft Docs
 ms.custom: sql-linux
 ms.date: 09/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: ''
@@ -33,11 +33,11 @@ caps.latest.revision: 121
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: da867b1125d4ee444a0e04e34d729484bee43514
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: 34cbe09cba95cd6f41da3bd5c4be0cbed5eab57c
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017-on-linux"></a>Editionen und unterstützten Funktionen von SQL Server-2017 unter Linux
 

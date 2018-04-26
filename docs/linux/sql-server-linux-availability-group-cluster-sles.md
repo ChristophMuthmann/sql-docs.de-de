@@ -1,25 +1,25 @@
 ---
-title: "SLES Cluster für SQL Server-Verfügbarkeitsgruppe konfigurieren | Microsoft Docs"
-description: 
+title: SLES Cluster für SQL Server-Verfügbarkeitsgruppe konfigurieren | Microsoft Docs
+description: ''
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.date: 05/17/2017
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 85180155-6726-4f42-ba57-200bf1e15f4d
 ms.workload: Inactive
-ms.openlocfilehash: 9b0c068ce56a2f499ee452b56ca54025485163f5
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: 4fa3cd388fc1f4d22ee781721145d0fc4c465682
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="configure-sles-cluster-for-sql-server-availability-group"></a>SLES Cluster für SQL Server-Verfügbarkeitsgruppe zu konfigurieren.
 
@@ -33,7 +33,7 @@ Weitere Informationen für die Clusterkonfiguration, Ressourcenoptionen-Agent, M
 >SQL Server Integration in Schrittmacher unter Linux ist an diesem Punkt nicht als gekoppelten als mit WSFC unter Windows. SQL Server-Dienst unter Linux ist nicht clusterfähig. Schrittmacher steuert alle Clusterressourcen, die verfügbarkeitsgruppenressource einschließlich Orchestrierung. Unter Linux sollten Sie nicht immer auf Verfügbarkeit Gruppe dynamische Verwaltungssichten (DMVs) abhängig, die Clusterinformationen z. B. sys. dm_hadr_cluster bereitstellen. Außerdem virtuellen Netzwerknamen bezieht sich auf WSFC, es gibt keine Entsprechung in Schrittmacher identisch. Sie können einen Listener für die Verwendung für transparente wiederverbindung nach einem Failover weiterhin erstellen, jedoch müssen Sie manuell den verfügbarkeitsgruppenlistener-Namen in der DNS-Server für die IP-Adresse verwendet, um die virtuelle IP-Adressressource erstellen (wie in den folgenden Abschnitten erläutert) registrieren.
 
 
-## <a name="roadmap"></a>Roadmap
+## <a name="roadmap"></a>Roadmap für die
 
 Das Verfahren zum Erstellen einer verfügbarkeitsgruppe für hohe Verfügbarkeit unterscheidet sich zwischen Linux-Servern und einem Windows Server-Failovercluster. Die folgende Liste beschreibt die allgemeinen Schritte: 
 

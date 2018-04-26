@@ -1,25 +1,25 @@
 ---
 title: Verwalten von SQLServer on Linux mit PowerShell | Microsoft Docs
-description: "Dieser Artikel enthält eine Übersicht über die Verwendung von PowerShell unter Windows mit SQL Server on Linux."
+description: Dieser Artikel enthält eine Übersicht über die Verwendung von PowerShell unter Windows mit SQL Server on Linux.
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: a3492ce1-5d55-4505-983c-d6da8d1a94ad
 ms.workload: Inactive
-ms.openlocfilehash: f7324a270323950444741cfe713ad0eb5f01aa10
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: 8869f87ec6e69844155a2bf0361a90e07b30de24
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="use-powershell-on-windows-to-manage-sql-server-on-linux"></a>Verwenden von PowerShell unter Windows zum Verwalten von SQLServer on Linux
 
@@ -76,7 +76,7 @@ Kopieren Sie die folgenden Befehle an der PowerShell-Eingabeaufforderung. Wenn S
 - Erstellen Sie eine Instanz von der [Server](https://msdn.microsoft.com/en-us/library/microsoft.sqlserver.management.smo.server.aspx) Objekt
 - Herstellen einer Verbindung mit der **Server** und einige Eigenschaften anzeigen
 
-Denken Sie daran, ersetzen Sie  **\<Your_server_instance\>**  mit der IP-Adresse oder den Hostnamen Ihrer 2017 von SQL Server-Instanz unter Linux.
+Denken Sie daran, ersetzen Sie **\<Your_server_instance\>** mit der IP-Adresse oder den Hostnamen Ihrer 2017 von SQL Server-Instanz unter Linux.
 
 ```powershell
 # Prompt for credentials to login into SQL Server
@@ -116,7 +116,7 @@ Kopieren Sie die folgenden Befehle an der PowerShell-Eingabeaufforderung. Sie m�
 - Verwenden der **Get-SqlErrorLog** -Cmdlet zum Herstellen einer Verbindung mit der 2017 von SQL Server-Instanz unter Linux und Abrufen von Fehler protokolliert seit **gestern**
 - Die Ausgabe an die **Out GridView** Cmdlet
 
-Denken Sie daran, ersetzen Sie  **\<Your_server_instance\>**  mit der IP-Adresse oder den Hostnamen Ihrer 2017 von SQL Server-Instanz unter Linux.
+Denken Sie daran, ersetzen Sie **\<Your_server_instance\>** mit der IP-Adresse oder den Hostnamen Ihrer 2017 von SQL Server-Instanz unter Linux.
 
 ```powershell
 # Prompt for credentials to login into SQL Server

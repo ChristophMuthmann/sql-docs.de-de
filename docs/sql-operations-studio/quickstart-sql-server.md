@@ -1,9 +1,9 @@
 ---
-title: 'Schnellstart: Verbinden und Abfragen von SQL Server mithilfe von SQL Operations Studio (preview) | Microsoft Docs'
-description: Dieser Schnellstart veranschaulicht, wie SQL Operations Studio (preview) eine Verbindung mit SQL Server, und führen Sie eine Abfrage
+title: 'Schnellstart: Verbinden und Abfragen von SQL Server mithilfe von SQL-Vorgänge Studio (Vorschau) | Microsoft Docs'
+description: Dieser Schnellstart veranschaulicht, wie SQL-Vorgänge Studio (Vorschau) eine Verbindung mit SQL Server, und führen Sie eine Abfrage
 ms.custom: tools|sos
 ms.date: 03/08/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
@@ -14,11 +14,11 @@ author: yualan
 ms.author: alayu
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5c0f78537429026583fe970a65426bc909a46557
-ms.sourcegitcommit: 6c06267f3eeeb3f0d6fc4c57e1387621720ca8bf
+ms.openlocfilehash: a1820cd0a69313afa2a57b6d96721f375307cb71
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="quickstart-connect-and-query-sql-server-using-includename-sosincludesname-sos-shortmd"></a>Schnellstart: Eine Verbindung herstellen Sie und Fragen Sie mithilfe des SQL Server ab [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 Dieser Schnellstart veranschaulicht, wie [!INCLUDE[name-sos](../includes/name-sos-short.md)] zum Herstellen einer Verbindung mit SQL Server, und verwenden dann Transact-SQL (T-SQL)-Anweisungen zum Erstellen der *TutorialDB* verwendet [!INCLUDE[name-sos](../includes/name-sos-short.md)] Lernprogramme.
@@ -30,12 +30,12 @@ Um diesen Schnellstart durchzuführen, müssen Sie [!INCLUDE[name-sos](../includ
 - [Installieren Sie [!INCLUDE[name-sos](../includes/name-sos-short.md)] ](download.md).
 
 Wenn Sie Zugriff auf einen SQL-Server haben, wählen Sie Ihre Plattform aus den folgenden Links (Stellen Sie sicher, dass Sie Ihre SQL-Anmeldung und Kennwort merken!):
-- [Windows - Download SQL Server 2017 Developer Edition](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)
-- [MacOS - Herunterladen von SQL Server-2017 für Docker](https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker)
+- [Windows: Herunterladen der SQL Server 2017 Developer Edition](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)
+- [macOS: Herunterladen von SQL Server 2017 für Docker](https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker)
 - [Linux - Download SQL Server 2017 Developer Edition](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-overview#install) -müssen Sie nur die Schritte bis zu *Create "und" Abfragedaten*.
 
 
-## <a name="connect-to-a-sql-server"></a>Herstellen einer Verbindung mit einem SQLServer
+## <a name="connect-to-a-sql-server"></a>Herstellen einer Verbindung mit SQL Server
 
    
 1. Starten Sie **[!INCLUDE[name-sos](../includes/name-sos-short.md)]**.
@@ -56,7 +56,7 @@ Wenn Sie Zugriff auf einen SQL-Server haben, wählen Sie Ihre Plattform aus den 
 
 
 
-## <a name="create-a-database"></a>Erstellen Sie eine Datenbank
+## <a name="create-a-database"></a>Erstellen einer Datenbank
 
 Die folgenden Schritte erstellen Sie eine Datenbank namens **TutorialDB**:
 

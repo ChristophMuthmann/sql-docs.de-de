@@ -2,7 +2,7 @@
 title: Projekteinstellungen (Zuordnung) (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-sybase
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 411cb12d17399e43ebdc454f5f55a5c5595972a2
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: d113993ad9cbfa46e471748ae5840fab3c96d26b
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="project-settings-type-mapping-sybasetosql"></a>Projekteinstellungen (Zuordnung) (SybaseToSQL)
 Die Seite "Type Mapping", der die **Projekteinstellungen** Dialogfeld enthält Einstellungen, anpassen, wie SSMA für Sybase Adaptive Server Enterprise (ASE)-Datentypen in konvertiert [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Datentypen.  
@@ -69,28 +69,28 @@ Die folgende Tabelle enthält die Standard-Typzuordnung zwischen ASE und [!INCLU
 |**bit**|**bit**|  
 |**char**|**char**|  
 |**char varying**|**varchar**|  
-|**Char varying [\*... 8000]**|**varchar[\*]**|  
-|**char varying[8001..\*]**|**varchar(max)**|  
+|**Char varying [\*... 8000]**|**Varchar [\*]**|  
+|**Char varying [8001..\*]**|**varchar(max)**|  
 |**Char [\*... 8000]**|**char[\*]**|  
 |**char[8001..\*;]**|**varchar(max)**|  
 |**character**|**char**|  
 |**unterschiedliche Zeichen**|**varchar**|  
-|**unterschiedliche Zeichen [\*... 8000]**|**varchar[\*]**|  
-|**character varying[8001..\*]**|**varchar(max)**|  
+|**unterschiedliche Zeichen [\*... 8000]**|**Varchar [\*]**|  
+|**unterschiedliche Zeichen [8001..\*]**|**varchar(max)**|  
 |**Zeichen [\*... 8000]**|**char[\*]**|  
-|**character[8001..\*]**|**varchar(max)**|  
+|**Zeichen [8001..\*]**|**varchar(max)**|  
 |**Datum**|**Datum**|  
-|**datetime**|**datetime2[3]**|  
-|**dec**|**decimal**|  
-|**dec[\*..\*]**|**decimal[\*]**|  
+|**datetime**|**datetime2 [3]**|  
+|**DEC**|**decimal**|  
+|**DEC [\*... \*]**|**Dezimal [\*]**|  
 |**dec[\*..\*][\*..\*]**|**decimal[\*][\*]**|  
 |**decimal**|**decimal**|  
-|**decimal[\*..\*]**|**decimal[\*]**|  
-|**decimal[\*..\*][\*..\*]**|**decimal[\*][\*]**|  
+|**Dezimal [\*... \*]**|**Dezimal [\*]**|  
+|**Dezimal [\*... \*][\*.. \*]**|**decimal[\*][\*]**|  
 |**mit doppelter Genauigkeit**|**float[53]**|  
 |**float**|**float[53]**|  
-|**float[\*..15]**|**float[24]**|  
-|**float[16..\*]**|**float[53]**|  
+|**"float" [\*... 15]**|**float[24]**|  
+|**"float" [16..\*]**|**float[53]**|  
 |**image**|**image**|  
 |**int**|**int**|  
 |**integer**|**int**|  
@@ -99,35 +99,35 @@ Die folgende Tabelle enthält die Standard-Typzuordnung zwischen ASE und [!INCLU
 |**National char**|**nchar**|  
 |**National Char [\*... 4000]**|**nchar[\*]**|  
 |**National Char varying**|**nvarchar**|  
-|**National Char varying [\*... 4000]**|**nvarchar[\*]**|  
+|**National Char varying [\*... 4000]**|**Nvarchar [\*]**|  
 |**National Char varying [4001..\*]**|**nvarchar(max)**|  
 |**National Char [4001..\*]**|**nvarchar(max)**|  
 |**nationale Zeichensätze**|**nchar**|  
 |**nationale Zeichensätze [\*... 4000]**|**nchar[\*]**|  
 |**nationale Zeichensätze [4001..\*]**|**nvarchar(max)**|  
 |**nationale Zeichensätze varying**|**nvarchar**|  
-|**nationale Zeichensätze varying [\*... 4000]**|**nvarchar[\*]**|  
+|**nationale Zeichensätze varying [\*... 4000]**|**Nvarchar [\*]**|  
 |**nationale Zeichensätze varying [4001..\*]**|**nvarchar(max)**|  
 |**National varchar**|**nvarchar**|  
-|**National Varchar [\*... 4000]**|**nvarchar[\*]**|  
+|**National Varchar [\*... 4000]**|**Nvarchar [\*]**|  
 |**National Varchar [4001..\*]**|**nvarchar(max)**|  
 |**nchar**|**nchar**|  
 |**NCHAR varying**|**nvarchar**|  
-|**NCHAR varying [\*... 4000]**|**nvarchar[\*]**|  
-|**nchar varying[4001..\*]**|**nvarchar(max)**|  
+|**NCHAR varying [\*... 4000]**|**Nvarchar [\*]**|  
+|**NCHAR varying [4001..\*]**|**nvarchar(max)**|  
 |**NCHAR [\*... 4000]**|**nchar[\*]**|  
-|**nchar[4001..\*]**|**nvarchar(max)**|  
+|**NCHAR [4001..\*]**|**nvarchar(max)**|  
 |**numeric**|**numeric**|  
-|**numeric[\*..\*]**|**numeric[\*]**|  
-|**numeric[\*..\*][\*..\*]**|**numeric[\*][\*]**|  
+|**numerische [\*... \*]**|**numeric[\*]**|  
+|**numerische [\*... \*][\*.. \*]**|**numeric[\*][\*]**|  
 |**nvarchar**|**nvarchar**|  
-|**Nvarchar [\*... 4000]**|**nvarchar[\*]**|  
-|**nvarchar[4001..\*]**|**nvarchar(max)**|  
+|**Nvarchar [\*... 4000]**|**Nvarchar [\*]**|  
+|**Nvarchar [4001..\*]**|**nvarchar(max)**|  
 |**real**|**float[24]**|  
 |**smalldatetime**|**smalldatetime**|  
 |**smallint**|**smallint**|  
 |**smallmoney**|**smallmoney**|  
-|**sysname**|**nvarchar[128]**|  
+|**sysname**|**Nvarchar [128]**|  
 |**sysname[\*..\*]**|**nvarchar[255]**|  
 |**text**|**text**|  
 |**Uhrzeit**|**time[3]**|  
@@ -135,22 +135,22 @@ Die folgende Tabelle enthält die Standard-Typzuordnung zwischen ASE und [!INCLU
 |**tinyint**|**tinyint**|  
 |**unichar**|**nchar**|  
 |**UNICHAR-varying**|**nvarchar**|  
-|**UNICHAR-varying [\*... 4000]**|**nvarchar[\*]**|  
-|**unichar varying[4001..\*]**|**nvarchar(max)**|  
+|**UNICHAR-varying [\*... 4000]**|**Nvarchar [\*]**|  
+|**UNICHAR-varying [4001..\*]**|**nvarchar(max)**|  
 |**UNICHAR [\*... 4000]**|**nchar[\*]**|  
-|**unichar[4001..\*]**|**nvarchar(max)**|  
+|**UNICHAR [4001..\*]**|**nvarchar(max)**|  
 |**unitext**|**nvarchar(max)**|  
 |**univarchar**|**nvarchar**|  
-|**univarchar[\*..4000]**|**nvarchar[\*]**|  
-|**univarchar[4001..\*]**|**nvarchar(max)**|  
-|**unsigned bigint**|**numeric[20][0]**|  
+|**Univarchar [\*... 4000]**|**Nvarchar [\*]**|  
+|**Univarchar [4001..\*]**|**nvarchar(max)**|  
+|**ohne Vorzeichen "bigint"**|**numeric[20][0]**|  
 |**Int ohne Vorzeichen**|**bigint**|  
 |**ohne Vorzeichen "smallint"**|**int**|  
-|**unsigned tinyint**|**tinyint**|  
+|**ohne Vorzeichen "tinyint"**|**tinyint**|  
 |**varbinary**|**varbinary**|  
-|**varbinary[\*..8000]**|**varbinary[\*]**|  
+|**Varbinary [\*... 8000]**|**varbinary[\*]**|  
 |**varbinary[8001..\*]**|**varbinary(max)**|  
 |**varchar**|**varchar**|  
-|**Varchar [\*... 8000]**|**varchar[\*]**|  
+|**Varchar [\*... 8000]**|**Varchar [\*]**|  
 |**varchar[8001..\*]**|**varchar(max)**|  
   

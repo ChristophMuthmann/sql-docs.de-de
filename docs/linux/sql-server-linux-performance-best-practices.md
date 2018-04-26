@@ -1,24 +1,24 @@
 ---
-title: "Leistung bewährte Methoden für SQL Server on Linux | Microsoft Docs"
-description: "In diesem Artikel bieten Leistung best Practices und Richtlinien für die Ausführung von SQL Server-2017 unter Linux."
+title: Leistung bewährte Methoden für SQL Server on Linux | Microsoft Docs
+description: In diesem Artikel bieten Leistung best Practices und Richtlinien für die Ausführung von SQL Server-2017 unter Linux.
 author: rgward
 ms.author: bobward
 manager: craigg
 ms.date: 09/14/2017
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: a5cc1b84780ce8b3ea471ee567a7296ab2b183b9
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: a0e9c5dde8f5bc9ef2e8a7ac285a8152b0c34e9c
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="performance-best-practices-and-configuration-guidelines-for-sql-server-2017-on-linux"></a>Bewährte Methoden für Leistung und Konfigurationsrichtlinien für SQL Server-2017 unter Linux
 
@@ -78,7 +78,7 @@ Die folgende Tabelle enthält Empfehlungen für die datenträgereinstellungen:
 | Einstellung | Wert | Weitere Informationen |
 |---|---|---|
 | Datenträger-Read-Aheads | 4096 | Finden Sie unter der **Blockdev** Befehl |
-| Sysctl-Einstellungen | kernel.sched_min_granularity_ns = 10000000<br/>kernel.sched_wakeup_granularity_ns = 15000000<br/>vm.dirty_ratio = 40<br/>vm.dirty_background_ratio = 10<br/>vm.swappiness=10 | Finden Sie unter der **Sysctl** Befehl |
+| Sysctl-Einstellungen | Kernel.sched_min_granularity_ns = 10000000<br/>Kernel.sched_wakeup_granularity_ns = 15000000<br/>vm.dirty_ratio = 40<br/>vm.dirty_background_ratio = 10<br/>vm.swappiness=10 | Finden Sie unter der **Sysctl** Befehl |
 
 ### <a name="kernel-setting-auto-numa-balancing-for-multi-node-numa-systems"></a>Kernel-Einstellung Auto Numa Lastenausgleich für NUMA-Systemen mit mehreren Knoten
 
@@ -104,7 +104,7 @@ Verwenden der **Noatime** Attribut mit einem beliebigen Dateisystem, der zum Spe
 
 Die meisten Linux-Installationen sollten diese Option standardmäßig befinden sich auf. Es wird empfohlen, die meisten konsistente Leistung zu erzielen, um diese Konfigurationsoption aktiviert zu lassen.
 
-### <a name="swapfile"></a>swapfile
+### <a name="swapfile"></a>Auslagerungsdatei
 
 Stellen Sie sicher, dass Sie auf einer ordnungsgemäß konfigurierten Swapfile zur Vermeidung einer unzureichenden Arbeitsspeicher verfügen. Wenden Sie sich an Ihre Linux-Dokumentation für das Erstellen und streamingbedarf eine Auslagerungsdatei.
 

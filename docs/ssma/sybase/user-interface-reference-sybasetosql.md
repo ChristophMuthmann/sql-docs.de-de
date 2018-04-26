@@ -2,7 +2,7 @@
 title: Referenz zur Benutzeroberfläche (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-sybase
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0587d8217cfb51535d0bc9d0e99d7f0384eab851
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: f7fd4a94c0c08ddb2c66d0fc24f53b77c0ae6f4c
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="user-interface-reference-sybasetosql"></a>Referenz zur Benutzeroberfläche (SybaseToSQL)
 Dieser Abschnitt enthält Hilfethemen für [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) for Sybase.  
@@ -35,7 +35,7 @@ Dieser Abschnitt enthält Hilfethemen für [!INCLUDE[ssNoVersion](../../includes
 |Thema|Description|  
 |---------|---------------|  
 |[Erweiterte Objektauswahl &#40;SybaseToSQL&#41;](../../ssma/sybase/advanced-object-selection-sybasetosql.md)|Verwenden der **erweiterte Objekt auswählen** Dialogfeld Suchen Datenbankobjekte mit Filterkriterien, und klicken Sie dann zu aktivieren oder deaktivieren diese Objekte.|  
-|[Assessment Report &#40;SybaseToSQL&#41;](../../ssma/sybase/assessment-report-sybasetosql.md)|Verwenden Sie zum Anzeigen der Ergebnisse der Konvertierung von Sybase Adaptive Server Enterprise (ASE)-Objekten, die Bewertungsbericht [!INCLUDE[tsql](../../includes/tsql_md.md)] Syntax und die Uhrzeit und die Komplexität einer Migration zu schätzen [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure.|  
+|[Bewertungsbericht &#40;SybaseToSQL&#41;](../../ssma/sybase/assessment-report-sybasetosql.md)|Verwenden Sie zum Anzeigen der Ergebnisse der Konvertierung von Sybase Adaptive Server Enterprise (ASE)-Objekten, die Bewertungsbericht [!INCLUDE[tsql](../../includes/tsql_md.md)] Syntax und die Uhrzeit und die Komplexität einer Migration zu schätzen [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure.|  
 |[Herstellen einer Verbindung mit SQLServer &#40;SybaseToSQL&#41;](../../ssma/sybase/connect-to-sql-server-sybasetosql.md)|Verwenden der **Herstellen einer Verbindung mit SQL Server** im Dialogfeld für die Verbindung mit der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] , die Sie migrieren möchten.|  
 |[Herstellen einer Verbindung mit Azure SQL-Datenbank &#40;SybaseToSQL&#41;](../../ssma/sybase/connect-to-azure-sql-db-sybasetosql.md)|Verwenden der **Herstellen einer Verbindung mit SQL Azure** Dialogfeld Verbindung mit der Instanz von SQL Azure, in dem Sie migrieren möchten.|  
 |[Herstellen einer Verbindung mit der Sybase &#40;SybaseToSQL&#41;](../../ssma/sybase/connect-to-sybase-sybasetosql.md)|Verwenden der **Herstellen einer Verbindung mit der Sybase** Dialogfeld Verbindung mit ASE.|  

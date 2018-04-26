@@ -1,28 +1,28 @@
 ---
-title: "Neuheiten bei SSMA für Oracle (OracleToSQL) | Microsoft Docs"
-ms.prod: sql-non-specified
+title: Neuheiten bei SSMA für Oracle (OracleToSQL) | Microsoft Docs
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-oracle
-ms.custom: 
+ms.custom: ''
 ms.date: 03/01/2018
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - sql-ssma
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f305ebb6-7393-4a43-abb3-6332b739d690
-caps.latest.revision: 
+caps.latest.revision: 24
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 63bc96b49c351d9923c5e4d4ae59056c7911ae40
-ms.sourcegitcommit: 6a5b80cac78fe5c2d2567a391daa335f9b4b3637
+ms.openlocfilehash: 39d030541bbfd12503078542f97bfc8cd780af12
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/01/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="whats-new-in-ssma-for-oracle-oracletosql"></a>Was ist neu in SSMA für Oracle (OracleToSQL)
 In diesem Thema werden die SSMA für Oracle-Änderungen in jeder Version aufgelistet.  
@@ -43,7 +43,7 @@ Die v7.6-Version von SSMA für Oracle wurde verbessert, mit der targeted Korrekt
 > [!IMPORTANT]
 > SSMA v7.4 und höhere Versionen .net 4.5.2 ist eine Voraussetzung für Installation, und die 32-Bit-Version des Tools wurde eingestellt.
 
-## <a name="ssma-v75"></a>SSMA v7.5
+## <a name="ssma-v75"></a>SSMA 7.5
 Die Version 7.5 von SSMA für Oracle enthält die folgenden Änderungen:
 - Durch mehrere Verbesserungen an größere Barrierefreiheit für Personen mit behinderungen stellen Sie sicher, verbessert.
 - Zur Verbesserung der Qualität und Konvertierung Metrik mit dem Ziel Updates aktualisiert, z. B. verbesserte Behandlung von Datums-und "float" während der Datenmigration, basierend auf Kundenfeedback.
@@ -73,7 +73,7 @@ Die v7.4-Version von SSMA für Oracle enthält die folgenden Änderungen:
 > [!IMPORTANT]
 > .NET 4.5.2 ist eine Voraussetzung für die Installation von SSMA v7.4. Darüber hinaus wird v7.4 ab, die 32-Bit-Version von SSMA nicht mehr unterstützt wird.
 
-## <a name="ssma-v73"></a>SSMA v7.3
+## <a name="ssma-v73"></a>SSMA V7. 3
 Die V7. 3-Version von SSMA für Oracle enthält die folgenden Änderungen:
 - Verbesserte Qualität und Konvertierung Metrik mit dem Ziel Korrekturen, die basierend auf Kundenfeedback.
 - SSMA Extensibility Framework verfügbar gemacht werden, über die folgenden Elemente:
@@ -86,7 +86,7 @@ Die V7. 3-Version von SSMA für Oracle enthält die folgenden Änderungen:
       - Beispielprojekt für die Konvertierung herunterladen dies [Blogbeitrag](https://blogs.msdn.microsoft.com/datamigration/ssmafororacleconversionsample/).
 
 
-## <a name="ssma-v72"></a>SSMA v7.2
+## <a name="ssma-v72"></a>SSMA V7. 2
 Die V7. 2-Version von SSMA für Oracle enthält die folgenden Änderungen:
 - Verbesserte Qualität und Konvertierung Metrik mit dem Ziel Korrekturen, die basierend auf Kundenfeedback.
 - Telemetrie-Erweiterungen bieten eine bessere Datenpunkte, um Kundenprobleme zu beheben und zu verbessern SSMAs-Wechselkurse.

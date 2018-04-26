@@ -1,30 +1,31 @@
 ---
 title: Befehlszeilenoptionen in SSMA-Konsole (AccessToSQL) | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-access
-ms.custom: 
+ms.custom: ''
 ms.date: 08/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: c1f3b3f0-0f3e-4e07-b745-2fbdde85c67e
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.workload: Inactive
-ms.openlocfilehash: c1d26043b33ea902aec4ae7976ad8b215829bf34
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 7f1e71cefafab7e905b83b66c87eebbc88dc852c
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="command-line-options-in-the-ssma-console-accesstosql"></a>Befehlszeilenoptionen in der Konsole SSMA (AccessToSQL)
 Microsoft stellt Ihnen eine Reihe robuster Befehlszeilenoptionen auszuführen und zu steuern SSMA-Aktivitäten. Die folgenden Abschnitte enthalten zusätzliche Details.  
@@ -166,21 +167,21 @@ Zeigt eine syntaxzusammenfassung der Optionen SSMA-Konsole:
   
 `C:\>SSMAforAccessConsole.EXE -?`  
   
-Einer tabellarischen Ansicht der Befehlszeilenoptionen SSMA-Konsole finden Sie unter [Anhang - 1 &#40; AccessToSQL &#41; ](../../ssma/access/appendix-1-accesstosql.md).  
+Einer tabellarischen Ansicht der Befehlszeilenoptionen SSMA-Konsole finden Sie unter [Anhang - 1 &#40;AccessToSQL&#41;](../../ssma/access/appendix-1-accesstosql.md).  
   
 ### <a name="securepassword-help-option-securepassword--help"></a>Option SecurePassword Hilfe: – Securepassword-? / Help  
 Zeigt eine syntaxzusammenfassung der Optionen SSMA-Konsole:  
   
 `C:\>SSMAforAccessConsole.EXE -securepassword -?`  
   
-Einer tabellarischen Ansicht der Befehlszeilenoptionen SSMA-Konsole finden Sie unter [Anhang - 1 &#40; AccessToSQL &#41;](../../ssma/access/appendix-1-accesstosql.md)  
+Einer tabellarischen Ansicht der Befehlszeilenoptionen SSMA-Konsole finden Sie unter [Anhang - 1 &#40;AccessToSQL&#41;](../../ssma/access/appendix-1-accesstosql.md)  
   
 ### <a name="next-steps"></a>Nächste Schritte  
 Der nächste Schritt hängt davon ab, auf die Anforderungen Ihres Projekts:  
   
-1.  Zur Angabe eines Kennworts oder einer Exportieren / Importieren von Kennwörtern, finden Sie unter [Verwalten von Kennwörtern &#40; AccessToSQL &#41; ](../../ssma/access/managing-passwords-accesstosql.md).  
+1.  Zur Angabe eines Kennworts oder einer Exportieren / Importieren von Kennwörtern, finden Sie unter [Verwalten von Kennwörtern &#40;AccessToSQL&#41;](../../ssma/access/managing-passwords-accesstosql.md).  
   
-2.  Generieren von Berichten, finden Sie unter [Generieren von Berichten &#40; AccessToSQL &#41; ](../../ssma/access/generating-reports-accesstosql.md).  
+2.  Generieren von Berichten, finden Sie unter [Generieren von Berichten &#40;AccessToSQL&#41;](../../ssma/access/generating-reports-accesstosql.md).  
   
-3.  Behandlung von Problemen in der Konsole, finden Sie unter [Problembehandlung &#40; AccessToSQL &#41; ](../../ssma/access/troubleshooting-accesstosql.md).  
+3.  Behandlung von Problemen in der Konsole, finden Sie unter [Problembehandlung &#40;AccessToSQL&#41;](../../ssma/access/troubleshooting-accesstosql.md).  
   

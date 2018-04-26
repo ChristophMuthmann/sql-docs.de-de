@@ -2,7 +2,7 @@
 title: Bewährte Methoden für das Data Migration Assistant (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: dma
 ms.service: ''
 ms.component: ''
@@ -21,11 +21,11 @@ author: HJToland3
 ms.author: jtoland
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f8842ca064494bc7ead99eb34d6ea2cc76bb2679
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 3b903d62a78b420ae6a267449b81919bd9db876e
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="best-practices-for-running-data-migration-assistant"></a>Bewährte Methoden für die Ausführung von Data-Migrations-Assistent
 Dieser Artikel enthält die folgenden best Practice-Informationen für die Installation, Bewertungen und Migration.
