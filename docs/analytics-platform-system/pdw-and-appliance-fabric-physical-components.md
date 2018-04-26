@@ -1,29 +1,22 @@
 ---
-title: PDW Appliance Fabric physische Komponenten und (Analytics Platform System)
-author: barbkess
-ms.author: barbkess
+title: Appliance physische Komponenten – Analytics Platform System | Microsoft Docs
+description: Namen und Beschreibungen für die PDW und Appliance, physischen Fabric-Komponenten.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 7748d3da-0b7c-4ec6-9c22-4897758ba573
-caps.latest.revision: 17
-ms.openlocfilehash: 64a594c84d7be91939362ff0886a994147b76d93
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 0adbd92d1a29a98a80de65268c53ea63e3941d07
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="pdw-and-appliance-fabric-physical-components"></a>Physische PDW und Appliance-Fabric-Komponenten
-Namen und Beschreibungen für die PDW und Appliance, physischen Fabric-Komponenten. PDW-Region enthält alle diese Komponenten.  
+# <a name="appliance-physical-components---analytics-platform-system"></a>Physische Komponenten der Appliance - Analyseplattformsystem
+Namen und Beschreibungen für die PDW und Appliance, physischen Fabric-Komponenten. 
   
 <!-- MISSING LINKS See also [HDInsight Physical Components &#40;Analytics Platform System&#41;](hdinsight-physical-components.md).  -->  
   
@@ -56,7 +49,7 @@ Ein virtueller Computer, der den Compute-Knoten ausgeführt wird. In diesem Diag
 Diese Komponenten sind Bestandteil des Fabrics Appliance.  
   
 ### <a name="virtual-machines"></a>Virtuelle Computer  
-*appliance_domain*-WDS  
+*Appliance_domain*- Windows-Bereitstellungsdienste  
 Dieses Hosts für virtuelle Maschinen Windows Deployment Services (WDS), das Analytics Platform System verwendet werden Windows-Betriebssystemen über das Anwendungsnetzwerk bereitstellen. Außerdem wird den DHCP-Dienst, wodurch die Appliance-Hosts für die Appliance-Netzwerk ohne eine vorkonfiguriert, dass IP-Adresse hostet.  
   
 Die *Appliance_domain*- WDS-VM auf HST01 ausgeführt wird und ein Failover zu HST02. Die WDS-VM und der VMM-VM Bereitstellen von Windows auf physischen Hosts während der Installation der Anwendung. Führen Sie während des Lebenszyklus Appliance WDS "und" VMM Vorgänge wie das Ersetzen eines Hosts.  

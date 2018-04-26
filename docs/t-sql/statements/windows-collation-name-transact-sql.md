@@ -227,7 +227,7 @@ SELECT * FROM sys.fn_helpcollations() WHERE name NOT LIKE 'SQL%';
   
  <sup>1</sup> Nur-Unicode-Windows-Sortierungen unterstützen nur Daten auf Spaltenebene und Ausdrucksebene. Sie können nicht für Sortierungen auf Server- oder Datenbankebene verwendet werden.  
   
- <sup>2</sup> Wie bei der chinesischen Sortierung (Taiwan) werden bei Chinesisch (Macao) die Regeln für Chinesisch (vereinfacht) verwendet. Im Unterschied zu Chinesisch (Taiwan) wird jedoch Codepage 950 verwendet.  
+ <sup>2</sup> Wie bei der chinesischen Sortierung (Taiwan) werden bei Chinesisch (Macau, SAR) die Regeln für Chinesisch (vereinfacht) verwendet. Im Unterschied zu Chinesisch (Taiwan) wird jedoch Codepage 950 verwendet.  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Sortierung und Unicode-Unterstützung](../../relational-databases/collations/collation-and-unicode-support.md)   
