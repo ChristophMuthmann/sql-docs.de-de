@@ -1,27 +1,29 @@
 ---
-title: "Data-Tier Application Framework – Lizenzbedingungen | Microsoft-Dokumentation"
-ms.custom: 
+title: Data-Tier Application Framework – Lizenzbedingungen | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssdt
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssdt
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssdt
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 68b76541-ab99-436a-982b-f18c46bc6fe3
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1f149d3f9f87cc9306cf7e0ee316a326c0fd7956
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: e1984a2e71de0a605346d23b0b99ac8a7aed0afb
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="data-tier-application-framework---license-terms"></a>Data-Tier Application Framework – Lizenzbedingungen
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -83,7 +85,7 @@ von Microsoft für diese Software, sofern diese Elemente nicht von anderen Bedin
     -   die Software oder diesen Vertrag an Dritte übertragen  
     -   die Software für kommerzielle Softwarehostingdienste verwenden  
       
-4.  **DRITTANBIETERHINWEISE.** Die Software kann Drittanbietercode enthalten, den Microsoft, nicht der Drittanbieter, unter den in diesem Vertrag dargelegten Bestimmungen an Sie lizenziert. Hinweise zu Drittanbietercode sind gegebenenfalls nur zu Ihrer Information angegeben. Darüber hinaus werden Skripts von Drittanbietern, die mit dieser Software verknüpft sind bzw. von ihr aufgerufen oder referenziert werden, von den Drittanbietern, die Eigentümer des Codes sind, an Sie lizenziert und nicht von Microsoft. Siehe die Nutzungsbestimmungen für ASP.NET Ajax CDN: http://www.asp.net/ajaxlibrary/CDN.ashx.  
+4.  **DRITTANBIETERHINWEISE.** Die Software kann Drittanbietercode enthalten, den Microsoft, nicht der Drittanbieter, unter den in diesem Vertrag dargelegten Bestimmungen an Sie lizenziert. Hinweise zu Drittanbietercode sind gegebenenfalls nur zu Ihrer Information angegeben. Darüber hinaus erhalten Sie für Skripts von Drittanbietern, die mit dieser Software verknüpft sind bzw. von ihr aufgerufen oder referenziert werden, von diesen Drittanbietern, und nicht von Microsoft, Lizenzen. Weitere Informationen erhalten Sie in den Nutzungsbedingungen für ASP.NET Ajax CDN: http://www.asp.net/ajaxlibrary/CDN.ashx.  
   
 5.  **SICHERUNGSKOPIE.** Sie dürfen eine Sicherungskopie der Software erstellen. Sie dürfen diese nur zur erneuten Installation der Software verwenden.  
   

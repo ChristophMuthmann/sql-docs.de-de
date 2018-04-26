@@ -1,30 +1,30 @@
 ---
 title: Stretch Database | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 06/27/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: stretch-database
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-stretch
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Stretch Database
 ms.assetid: ce6db775-21a5-40bc-95a1-f560376d4ee2
-caps.latest.revision: 
+caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 30361d4466b7495945a7dae857bbcd52fd86103a
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 5356a2578b5c5d25dba440729e4f902ecb886dc6
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="stretch-database"></a>Stretch Database
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -50,7 +50,7 @@ ms.lasthandoff: 02/09/2018
  Bleiben Sie gelassen, wenn Sie für Ihre wichtigsten Anwendungen ein sicheres Stretching in die Cloud durchführen. Das Always Encrypted-Feature von SQL Server bietet Schutz für Ihre Daten während des Verschiebens. Sicherheit auf Zeilenebene, (RLS, Row Level Security) und andere hoch entwickelte Sicherheitsfeatures von SQL Server funktionieren auch in Kombination mit Stretch Database und schützen Ihre Daten.  
   
 ## <a name="what-does-stretch-database-do"></a>Wie funktioniert Stretch Database?  
- Nachdem Sie Stretch Database für eine SQL Server-Instanz, eine Datenbank und mindestens eine Tabelle aktiviert haben, beginnt Stretch Database in Hintergrund, Ihre kalten Daten nach Azure zu migrieren.  
+ Nachdem Sie Stretch Database für eine SQL Server-Instanz und eine Datenbank aktiviert und mindestens eine Tabelle ausgewählt haben, beginnt Stretch Database im Hintergrund, Ihre kalten Daten zu Azure zu migrieren.  
   
 -   Wenn Sie kalte Daten in einer separaten Tabelle speichern, können Sie die gesamte Tabelle migrieren.  
   

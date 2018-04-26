@@ -1,29 +1,22 @@
 ---
-title: PDW-Berechtigungen (SQLServer PDW)
-author: barbkess
-ms.author: barbkess
+title: Berechtigungen in Parallel Datawarehouse | Microsoft Docs
+description: Dieser Artikel beschreibt die Anforderungen und Optionen für die Verwaltung von Datenbankberechtigungen für Parallel Data Warehouse.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 7e271980-bec8-424b-9f68-cea11b4e64e8
-caps.latest.revision: 23
-ms.openlocfilehash: 95843be163714be27e6eeb7f28825e98a5371e19
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 16ed81d3349cd1e641a66a95d9993e2a86ca4098
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="pdw-permissions"></a>PDW-Berechtigungen
-Dieses Thema beschreibt die Anforderungen und Optionen für die Verwaltung von Datenbankberechtigungen für SQL Server PDW.  
+# <a name="managing-permissions-in-parallel-data-warehouse"></a>Verwalten von Berechtigungen in Parallel Data Warehouse
+Dieser Artikel beschreibt die Anforderungen und Optionen für die Verwaltung von Datenbankberechtigungen für SQL Server PDW.  
   
 ## <a name="BackupRestoreBasics"></a>Grundlagen der Datenbank-Engine-Berechtigung  
 Berechtigungen für das Datenbankmodul auf SQL Server PDW werden auf Serverebene über Anmeldungen, und klicken Sie auf der Datenbankebene über Datenbankbenutzer und benutzerdefinierte Datenbankrollen verwaltet.  

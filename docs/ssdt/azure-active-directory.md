@@ -1,26 +1,27 @@
 ---
-title: "Azure Active Directory-Unterstützung in SQL Server Data Tools (SSDT) | Microsoft-Dokumentation"
-ms.custom: 
+title: Azure Active Directory-Unterstützung in SQL Server Data Tools (SSDT) | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 03/05/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssdt
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - tools-ssdt
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 14a6ae78a0ed5969ce3ab65dbd09b81680076fdb
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+monikerRange: = azuresqldb-current || = sqlallproducts-allversions
+ms.openlocfilehash: 7ea6a2c1a0617eaa7855470f8f8edf87308c9d22
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="azure-active-directory-support-in-sql-server-data-tools-ssdt"></a>Azure Active Directory-Unterstützung in SQL Server Data Tools (SSDT)
 
@@ -64,7 +65,7 @@ Die MFA wird von Azure AD über dieses zusätzliche MFA-Popupfenster während de
 - Die Option *Interaktive Active Directory-Authentifizierung* wird nur bei Verbindung mit einer Azure SQL-Datenbank unterstützt. Für SQL Server (lokal oder auf einem virtuellen Computer) oder Azure SQL Data Warehouse wird die Option nicht unterstützt.
 - *Interaktive Active Directory-Authentifizierung* wird im Verbindungsdialog im *Server-Explorer* nicht unterstützt. Sie müssen eine Verbindung über SSDT mit *SQL Server-Objekt-Explorer* herstellen.
 - Die Integration für einmaliges Anmelden mit dem aktuell angemeldeten Visual Studio-Konto wird für SSDT nicht unterstützt.
-- Die SQLPackage.exe-Datei, die während der Installation von Visual Studio im Erweiterungsverzeichnis installiert wurde, ist nicht für die Verwendung von dort aus gedacht. Um die SQLpackage.exe-Datei mit AAD zu verwenden, wechseln Sie zu https://www.microsoft.com/en-us/download/details.aspx?id=55088 
+- Die SQLPackage.exe-Datei, die während der Installation von Visual Studio im Erweiterungsverzeichnis installiert wurde, ist nicht für die Verwendung von dort aus gedacht. Um „SQLpackage.exe“ mit AAD zu verwenden, wechseln Sie zu https://www.microsoft.com/en-us/download/details.aspx?id=55088. 
 - Ein SSD-Datenvergleich wird für die AAD-Authentifizierung, einschließlich der neuen  Authentifizierungsmethode, nicht unterstützt.  
 
 

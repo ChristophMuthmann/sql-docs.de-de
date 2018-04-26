@@ -25,16 +25,16 @@ helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], tutorials
 - scripts [SQL Server], SQL Server Management Studio
 ms.assetid: d2bade70-07cf-4d94-b5d2-88aecb538ed1
-caps.latest.revision: ''
+caps.latest.revision: 22
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: e6d1650a126991292680a40a0faa76f5ae8ffa42
-ms.sourcegitcommit: ccb05cb5a4cccaf7ffa9e85a4684fa583bab914e
+ms.openlocfilehash: 879326583f507b44a23955a42857fd6a8cea911b
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="tutorials-for-sql-server-management-studio-ssms"></a>Tutorials zu SQL Server Management Studio (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -45,31 +45,31 @@ Dieses Tutorial zu SQL Server Management Studio (SSMS) bietet eine Einführung i
 
 Die folgenden Tutorials helfen Ihnen dabei, die Darstellung von Informationen in SSMS besser zu verstehen und die zugehörigen Features effektiv zu nutzen.
   
-Am besten machen Sie sich mit SSMS vertraut, indem Sie einige praktische Aufgaben durchführen. In den Tutorials machen Sie sich mit den unterschiedlichen Features vertraut, die in SSMS verfügbar sind.  Außerdem erfahren Sie, wie Sie die Komponenten von SSMS verwalten und Features finden, die Sie regelmäßig verwenden.  
+Am besten machen Sie sich mit SSMS vertraut, indem Sie einige praktische Aufgaben durchführen. In diesen Tutorials machen Sie sich mit den unterschiedlichen Features vertraut, die in SSMS verfügbar sind.  Außerdem erfahren Sie, wie Sie die Komponenten von SSMS verwalten und Features finden, die Sie regelmäßig verwenden.  
 
 Folgende Themen werden behandelt: 
 
   
 - [Tutorial: Connect & Query SQL Server using SSMS (Tutorial: Herstellen einer Verbindung mit und Abfragen von SQL Server über SSMS)](connect-query-sql-server.md)
 
-    In diesem Artikel erfahren Sie, wie Sie eine Verbindung mit einer SQL Server-Instanz herstellen. Außerdem lernen Sie einige grundlegende T-SQL-Befehle (Transact-SQL) kennen, mit denen Sie eine neue Datenbank erstellen und anschließend abfragen. 
+    In diesem Tutorial erfahren Sie, wie Sie eine Verbindung mit einer SQL Server-Instanz herstellen. Außerdem lernen Sie einige grundlegende T-SQL-Befehle (Transact-SQL) kennen, mit denen Sie eine neue Datenbank erstellen und anschließend abfragen. 
 
 - [Tutorial: Scripting Objects in SSMS (Tutorial: Erstellung von Skripts für Objekte in SSMS)](scripting-ssms.md)
 
-    In diesem Artikel erfahren Sie, wie Sie Skripts für verschiedene Objekte wie Datenbanken und Abfragen in SSMS erstellen. 
+    In diesem Tutorial erfahren Sie, wie Sie Skripts für verschiedene Objekte wie Datenbanken und Abfragen in SSMS erstellen. 
 
 - [Tutorial: Using Templates in SSMS (Tutorial: Verwenden von Vorlagen in SSMS)](templates-ssms.md)
    
-    In diesem Artikel erfahren Sie, wie Sie mit bereits vorhandenen Vorlagen in SSMS arbeiten können. 
+    In diesem Tutorial erfahren Sie, wie Sie mit bereits vorhandenen Vorlagen in SSMS arbeiten können. Vorlagen sind ein wenig bekanntes Feature, das eine Reihe von Transact-SQL-Codeausschnitten für unterschiedliche Datenbankadministrationsaufgaben speichert. 
 
 - [Tutorial: SSMS Configuration (Tutorial: SSMS-Konfiguration)](ssms-configuration.md)
 
-    In diesem Artikel lernen Sie die Grundlagen zur Konfiguration der SSMS-Umgebung kennen. 
+    In diesem Tutorial lernen Sie die Grundlagen zum Konfigurieren Ihrer SSMS-Umgebung kennen, z.B. die Änderung des Umgebungslayouts. Es werden ebenso die unterschiedlichen SSMS-Komponenten erklärt. 
   
 
 - [Tutorial: Additional Tips and Tricks for using SSMS (Tutorial: Zusätzliche Tipps und Tricks für die Verwendung von SSMS)](ssms-tricks.md)
 
-    In diesem Artikel lernen Sie zusätzliche Tipps und Tricks zur Nutzung von SSMS kennen. Folgende Themen werden dabei behandelt:
+    In diesem Tutorial lernen Sie zusätzliche Tipps und Tricks zur Nutzung von SSMS kennen. Folgende Themen werden dabei behandelt:
     - Kommentieren von Text und Aufheben von Auskommentierungen
     - Verwenden von Texteinzügen
     - Filtern von Objekten im Objekt-Explorer

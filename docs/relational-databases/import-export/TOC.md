@@ -30,6 +30,7 @@
 ### [Auslassen eines Datenfelds mithilfe einer Formatdatei](use-a-format-file-to-skip-a-data-field-sql-server.md)  
 ### [Verwenden einer Formatdatei zum Zuordnen von Tabellenspalten zu Datendateifeldern](use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)
 # [Importieren von Flatfiles mit dem Assistenten zum Importieren von Flatfiles](import-flat-file-wizard.md)
+## [Melden von Fehlern beim Importieren von Flatfile](reporting-import-flat-file-failures.md)
 # [Importieren und Exportieren mit dem Import/Export-Assistenten](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)
 # [Importieren aus Excel](import-data-from-excel-to-sql.md) 
 # [Importieren von JSON-Dokumenten](../json/import-json-documents-into-sql-server.md)

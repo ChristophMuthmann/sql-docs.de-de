@@ -29,8 +29,10 @@
 #### [Topologien für die Websynchronisierung](topologies-for-web-synchronization.md)  
 ### [Konfigurieren von IIS für die Websynchronisierung](configure-iis-for-web-synchronization.md)  
 ### [Konfigurieren von IIS 7 für die Websynchronisierung](configure-iis-7-for-web-synchronization.md)  
+
 ## [Verteilung konfigurieren](configure-distribution.md)  
 ### [Konfigurieren der Veröffentlichung und der Verteilung](configure-publishing-and-distribution.md)  
+### [Konfigurieren der Verteilung in AG](configure-distribution-availability-group.md)
 ### [Anzeigen und Ändern der Verteiler- und Verlegereigenschaften](view-and-modify-distributor-and-publisher-properties.md)  
 ### [Deaktivieren der Veröffentlichung und Verteilung](disable-publishing-and-distribution.md)  
 ### [Aktivieren einer Datenbank für die Replikation (SQL Server Management Studio)](enable-a-database-for-replication-sql-server-management-studio.md)  
@@ -38,6 +40,7 @@
 ### [Angeben des standardmäßigen Momentaufnahmespeicherorts (SQL Server Management Studio)](specify-the-default-snapshot-location-sql-server-management-studio.md)  
 ### [Festlegen der Beibehaltungsdauer für die Verteilung bei Transaktionsveröffentlichungen (SQL Server Management Studio)](set-distribution-retention-period-for-transactional-publications.md)  
 ### [Festlegen der Beibehaltungsdauer für den Verlauf (SQL Server Management Studio)](set-the-history-retention-period-sql-server-management-studio.md)  
+
 ## [Subscribe to Publications](subscribe-to-publications.md)  
 ### [Erstellen eines Pullabonnements](create-a-pull-subscription.md)  
 ### [Erstellen eines Pushabonnements](create-a-push-subscription.md)  
