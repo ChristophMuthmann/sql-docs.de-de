@@ -1,16 +1,16 @@
 ---
 title: Verwalten und Problembehandlung von Stretch Database | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 06/27/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: stretch-database
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-stretch
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Stretch Database, managing
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - managing Stretch Database
 - troubleshooting Stretch Database
 ms.assetid: 6334db3e-9297-44df-8d53-211187a95520
-caps.latest.revision: 
+caps.latest.revision: 42
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 55c3cefee2008ed430e1af1fecc5162a3c165473
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: fbf7811bb7ccbd1ba7867797ab326642c5d7587e
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="manage-and-troubleshoot-stretch-database"></a>Verwalten und Problembehandlung von Stretch Database
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]

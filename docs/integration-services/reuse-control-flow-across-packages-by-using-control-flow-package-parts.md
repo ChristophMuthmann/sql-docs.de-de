@@ -1,16 +1,16 @@
 ---
-title: "Wiederverwenden der Ablaufsteuerung für Pakete mithilfe von Ablaufsteuerungs-Paketteilen | Microsoft-Dokumentation"
-ms.custom: 
+title: Wiederverwenden der Ablaufsteuerung für Pakete mithilfe von Ablaufsteuerungs-Paketteilen | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.toolboxcontrolflowtemplate.f1
@@ -18,16 +18,16 @@ f1_keywords:
 - sql13.dts.designer.addcopyexistingpackagepart.f1
 - sql13.dts.designer.packagepart.general.f1
 ms.assetid: 1edc91d9-1fab-4fe5-aed3-6f581fe32c18
-caps.latest.revision: 
+caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ce2aeb6c2900004ea99d6bfeb9d9ff06f8a81114
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 228db331a34b05c7450f1460dd8014f15d571987
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="reuse-control-flow-across-packages-by-using-control-flow-package-parts"></a>Wiederverwenden der Ablaufsteuerung für Pakete mithilfe von Ablaufsteuerungs-Paketteilen
   Sie können einen häufig verwendeten Ablaufsteuerungstask oder Container in einer eigenständigen Teiledatei (einer DTSXP-Datei) speichern und in einem oder mehreren Paketen unter Verwendung von Ablaufsteuerungs-Paketteilen mehrmalig wiederverwenden. Die Wiederverwendbarkeit erleichtert das Design und die Verwaltung von SSIS-Paketen.  

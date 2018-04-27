@@ -2,7 +2,7 @@
 title: Erstellen eines Modells (MDS-Add-In für Excel) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: mds
 ms.service: ''
 ms.component: microsoft-excel-add-in
@@ -18,11 +18,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 45a26047f3393d9bce1e222f305ef4eac6704421
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 1b81355ef887fd0be154d1dfdc32cdda711a8b3d
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="building-a-model-mds-add-in-for-excel"></a>Erstellen eines Modells (MDS-Add-In für Excel)
 

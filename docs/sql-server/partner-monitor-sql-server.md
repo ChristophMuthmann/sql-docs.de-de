@@ -16,14 +16,14 @@ ms.tgt_pltfrm: NA
 ms.workload: sql-server
 ms.custom: ''
 ms.date: 11/02/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.author: mikeray
-ms.openlocfilehash: c6873ceb09c2cb7f2f9761c9b5c0ffe74d8b4f3c
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: e7dc7ef0c75255fc11c3c02a819b9ba5646f8ac9
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sql-server-monitoring-partners"></a>SQL Server-Überwachungspartner
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

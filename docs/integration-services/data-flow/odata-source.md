@@ -1,16 +1,16 @@
 ---
 title: OData-Quelle | Microsoft-Dokumentation
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.DTS.DESIGNER.ODATASOURCE.F1
@@ -18,16 +18,16 @@ f1_keywords:
 - sql13.dts.designer.odatasource.columns.f1
 - sql13.dts.designer.odatasource.erroroutput.f1
 ms.assetid: cc9003c9-638e-432b-867e-e949d50cec90
-caps.latest.revision: 
+caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 035483d63bdd8e28a5d0089f5a7dc783917aeacf
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 9640bcc3af0bc8503ec0bdfaaf9116cc56aec3a1
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="odata-source"></a>OData-Quelle
 Verwenden Sie die OData-Quellkomponente in einem SSIS-Paket, um Daten aus einem Open Data Protocol (OData)-Dienst zu nutzen. Die Komponente unterstützt die OData v3 und v4-Protokolle.  

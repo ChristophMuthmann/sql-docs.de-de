@@ -2,7 +2,7 @@
 title: Serverkonfiguration (Master Data Services) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/26/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: mds
 ms.service: ''
 ms.component: non-specific
@@ -20,11 +20,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d96039d5c3174c1b23bcebe2d99de2b2cf6ab9e6
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 940adfbf55168fd9ee04cb8fcf7946354e0f14f5
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="server-configuration-mds-configuration-manager"></a>Serverkonfiguration (Master Data Services)
 

@@ -1,8 +1,8 @@
 ---
 title: Mitwirken an der SQL Server-Dokumentation | Microsoft-Dokumentation
 ms.date: 04/12/2018
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod: sql
+ms.prod_service: sql
 ms.service: ''
 ms.component: sql-non-specified
 ms.reviewer: ''
@@ -16,11 +16,11 @@ ms.author: jroth
 manager: craigg
 ms.workload: Active
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 380a7bebec1080f40ec10e3c59e6e1f105a5d2ae
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 0c6bfbb93b714f8a5bee6150982c687214b91e75
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-contribute-to-sql-server-documentation"></a>Mitwirken an der SQL Server-Dokumentation
 

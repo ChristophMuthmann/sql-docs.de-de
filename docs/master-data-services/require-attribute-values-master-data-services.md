@@ -2,7 +2,7 @@
 title: Erfordern von Attributwerten (Master Data Services) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: mds
 ms.service: ''
 ms.component: non-specific
@@ -21,11 +21,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 24a5223d6a47c25f242474e5fc14b49014613da6
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 068866999258ec2bc3c1ff9f6ad4bf80565c6daf
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="require-attribute-values-master-data-services"></a>Erfordern von Attributwerten (Master Data Services)
 

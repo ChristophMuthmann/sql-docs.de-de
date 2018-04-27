@@ -2,7 +2,7 @@
 title: Sicherheit von Datenbankobjekten (Master Data Services) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: mds
 ms.service: ''
 ms.component: non-specific
@@ -21,11 +21,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6f1860afff1e4311deac446756a69514c1a5d084
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 45d8bcc9bbd1e37063ed2eb6f20ae36175a03602
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="database-object-security-master-data-services"></a>Sicherheit von Datenbankobjekten (Master Data Services)
 

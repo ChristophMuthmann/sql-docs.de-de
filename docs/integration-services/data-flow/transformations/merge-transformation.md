@@ -1,16 +1,16 @@
 ---
-title: "Transformation für Zusammenführen | Microsoft-Dokumentation"
-ms.custom: 
+title: Transformation für Zusammenführen | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.mergetrans.f1
@@ -22,16 +22,16 @@ helpviewer_keywords:
 - combining datasets
 - datasets [Integration Services], merging
 ms.assetid: cff8690c-07ac-46a0-aab5-20bd4848c677
-caps.latest.revision: 
+caps.latest.revision: 43
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: fb8e3884d531a2e5ebac5444e27aaade5495366d
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 1fe1a0a6c2553a30774f7c255fb8b49a5470e983
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="merge-transformation"></a>Transformation für Zusammenführen
   Die Transformation für Zusammenführen fasst zwei sortierte Datasets zu einem Dataset zusammen. Die Zeilen aus jedem Dataset werden basierend auf Werten in den Schlüsselspalten in die Ausgabe eingefügt.  

@@ -2,7 +2,7 @@
 title: Anzeigen aller Anmerkungen oder Transaktionen für ein Element (MDS-Add-In für Excel) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: mds
 ms.service: ''
 ms.component: microsoft-excel-add-in
@@ -18,11 +18,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 63465ce922f8ab2ffc6257206aa5f80a5af4d2a8
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: d1b046b13552985ce254517263736067c7bc79a7
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="view-all-annotations-or-transactions-for-a-member-mds-add-in-for-excel"></a>Anzeigen aller Anmerkungen oder Transaktionen für ein Element (MDS-Add-In für Excel)
 

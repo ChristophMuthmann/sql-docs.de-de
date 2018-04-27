@@ -1,33 +1,35 @@
 ---
 title: Argumente (Dialogfeld) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Arguments dialog box
 - arguments [SQL Server Management Studio]
 ms.assetid: 9a918855-efb8-44dc-9e6b-df0a2dac3651
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7743e5c7933a665395e786320faa330033d4bd3e
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 0a163341a8ea70ee68a56515be8614d3da74f09a
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="arguments-dialog-box"></a>Argumente (Dialogfeld)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Im Dialogfeld **Argumente** werden neue oder vorhandene Argumente für ein Tool angegeben. Dieses Dialogfeld wird angezeigt, wenn Sie ein externes Tool starten, für das die Option **Zur Argumenteingabe auffordern** im Dialogfeld **Externe Tools** ausgewählt ist.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Im Dialogfeld **Argumente** werden neue oder vorhandene Argumente für ein Tool angegeben. Dieses Dialogfeld wird angezeigt, wenn Sie ein externes Tool starten, für das die Option **Zur Argumenteingabe auffordern** im Dialogfeld **Externe Tools** ausgewählt ist.  
   
 ## <a name="options"></a>Tastatur  
 **Argumente**  

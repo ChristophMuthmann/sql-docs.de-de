@@ -1,31 +1,31 @@
 ---
 title: '! (Logisches NOT) (SSIS-Ausdruck) | Microsoft-Dokumentation'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: expressions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - logical Not (!)
 - '! (logical Not)'
 ms.assetid: d5c4d1e1-7be4-4d25-bcd9-5b6ddb53b3b3
-caps.latest.revision: 
+caps.latest.revision: 35
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 68cee85e74159fc68783aded9f117c415d1bd15a
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 5ed910ae4b31c3fc9cc3a48202a2267025469056
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="-logical-not-ssis-expression"></a>! (Logisches NOT) (SSIS-Ausdruck)
   Negiert einen booleschen Operanden.  
@@ -43,7 +43,7 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>Argumente  
  *boolean_expression*  
- Ein gültiger Ausdruck, der zu einem booleschen Wert ausgewertet wird. Weitere Informationen finden Sie unter [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
+ Ein gültiger Ausdruck, der zu einem booleschen Wert ausgewertet wird. Weitere Informationen finden Sie unter [Integration Services Datentypen](../../integration-services/data-flow/integration-services-data-types.md).  
   
 ## <a name="result-types"></a>Ergebnistypen  
  DT_BOOL  

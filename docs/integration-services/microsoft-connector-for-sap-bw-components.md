@@ -1,28 +1,28 @@
 ---
-title: "Komponenten von Microsoft Connector für SAP BW | Microsoft-Dokumentation"
-ms.custom: 
+title: Komponenten von Microsoft Connector für SAP BW | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: bdf81735-dba7-45ef-8794-0eb67c01475a
-caps.latest.revision: 
+caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d98e29495b55551f81ec74ab38062b3f54d49824
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: e8bf1c7c66841656a442fc496e355c2d4ef41360
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="microsoft-connector-for-sap-bw-components"></a>Microsoft Connector for SAP BW Components
   Dieser Abschnitt enthält Themen, in denen die drei Komponenten von [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector 1.1 for SAP BW beschrieben werden:  

@@ -1,30 +1,30 @@
 ---
-title: "Vorbereiten zur Abfrage der Änderungsdaten | Microsoft-Dokumentation"
-ms.custom: 
+title: Vorbereiten zur Abfrage der Änderungsdaten | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: change-data-capture
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - incremental load [Integration Services],preparing query
 ms.assetid: 9ea2db7a-3dca-4bbf-9903-cccd2d494b5f
-caps.latest.revision: 
+caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 83a9a9297270598346b6f4b7c43891ece83e2254
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: d7baab9d80ed096f5bccdc239db06830ebda5ba7
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="prepare-to-query-for-the-change-data"></a>Vorbereiten zur Abfrage der Änderungsdaten
   In der Ablaufsteuerung eines [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Pakets, das ein inkrementelles Laden von Änderungsdaten ausführt, besteht der dritte und letzte Task darin, die Abfrage der Änderungsdaten vorzubereiten und einen Datenflusstask hinzuzufügen.  
@@ -179,7 +179,7 @@ ms.lasthandoff: 01/25/2018
         > [!NOTE]  
         >  Die **else** -Klausel in diesem Beispiel generiert eine Abfrage für das erste Laden der Änderungsdaten, indem für das Startdatum und die Startzeit ein NULL-Wert übergeben wird. Dieses Beispiel befasst sich nicht mit dem Szenario, in dem Änderungen, die vor der Aktivierung von Change Data Capture vorgenommen wurden, auch ins Data Warehouse hochgeladen werden müssen.  
   
-3.  Nehmen Sie auf der Seite **Parameterzuordnung** vom **Editor für den Task 'SQL ausführen'**die folgende Zuordnung vor:  
+3.  Nehmen Sie auf der Seite **Parameterzuordnung** vom **Editor für den Task 'SQL ausführen'** die folgende Zuordnung vor:  
   
     1.  Ordnen Sie dem Parameter 0 die DataReady-Variable zu.  
   
@@ -187,7 +187,7 @@ ms.lasthandoff: 01/25/2018
   
     3.  Ordnen Sie dem Parameter 2 die ExtractEndTime-Variable zu.  
   
-4.  Ordnen Sie auf der Seite **Resultset** vom **Editor für den Task 'SQL ausführen'**der SqlDataQuery-Variablen den Ergebnisnamen zu.  
+4.  Ordnen Sie auf der Seite **Resultset** vom **Editor für den Task 'SQL ausführen'** der SqlDataQuery-Variablen den Ergebnisnamen zu.  
   
      Der Ergebnisname ist der Name der einzelnen Spalte, die zurückgegeben wird, SqlDataQuery.  
   

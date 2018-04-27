@@ -7,14 +7,14 @@ ms.author: genemi
 ms.topic: article
 ms.custom: UpdArt.exe
 ms.suite: sql
-ms.prod_service: sql-non-specified
+ms.prod_service: sql
 ms.component: mds
 ms.date: 02/03/2018
-ms.openlocfilehash: 865151771870698da1307dfcfc80c1e2e691bdc0
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 388a2dc3f257c648e7896b153aa149ee7e7b3e1e
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="new-and-recently-updated-master-data-services-for-sql-server"></a>Neu und kürzlich aktualisiert: Master Data Services für SQL Server
 

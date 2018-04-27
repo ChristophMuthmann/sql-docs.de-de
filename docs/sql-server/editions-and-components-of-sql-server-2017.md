@@ -2,8 +2,8 @@
 title: Editionen und unterstützte Funktionen von SQL Server 2017 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/10/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod: sql
+ms.prod_service: sql
 ms.service: ''
 ms.component: sql-non-specified
 ms.reviewer: ''
@@ -42,11 +42,11 @@ ms.author: mikeray
 manager: craigg
 ms.workload: Active
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9b2fc5b5571127ccab0a0dc4b4656a6d9378057d
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: d8f8d323562539f08ed75cb67f6b4e2aaa52a522
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017"></a>Editionen und unterstützten Funktionen von SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]

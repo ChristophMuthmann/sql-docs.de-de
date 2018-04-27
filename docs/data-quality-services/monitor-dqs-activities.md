@@ -2,7 +2,7 @@
 title: Überwachen der DQS-Aktivitäten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: data-quality-services
 ms.service: ''
 ms.component: data-quality-services
@@ -23,11 +23,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cd68d5affb0b904d9e3b9f544e219b5ae2b147c2
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 5a23aa9aa637daca87d8ab4a1fd886054d3b4af5
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="monitor-dqs-activities"></a>Überwachen der DQS-Aktivitäten
 

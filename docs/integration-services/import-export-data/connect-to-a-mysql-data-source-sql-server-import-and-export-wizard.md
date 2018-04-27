@@ -1,28 +1,28 @@
 ---
 title: Herstellen einer Verbindung mit einer MySQL-Datenquelle (SQL Server-Import/Export-Assistent) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 06/20/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: import-export-data
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 3d7c5a38-18d3-4cc9-a241-04422cb250d3
-caps.latest.revision: 
+caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d011a5b39f6aded3bc305c922b5d2788026559e2
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 04a967c0bae2c99eb9cfc418e6a13c4c8b5bd6aa
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="connect-to-a-mysql-data-source-sql-server-import-and-export-wizard"></a>Herstellen einer Verbindung mit einer MySQL-Datenquelle (SQL Server-Import/Export-Assistent)
 In diesem Artikel wird erläutert, wie Sie eine Verbindung mit einer **MySQL**-Datenquelle über die Seiten **Datenquelle auswählen** oder **Ziel auswählen** des SQL Server-Import/Export-Assistenten herstellen. Es gibt mehrere Datenanbieter, die Sie verwenden können, um eine Verbindung mit MySQL herzustellen.

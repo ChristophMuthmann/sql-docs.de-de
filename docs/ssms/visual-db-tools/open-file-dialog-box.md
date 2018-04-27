@@ -1,33 +1,35 @@
 ---
-title: "Datei öffnen (Dialogfeld) | Microsoft-Dokumentation"
-ms.custom: 
+title: Datei öffnen (Dialogfeld) | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - vs.openfile
 - vs.openproject
 ms.assetid: 3e01b9f5-2b0a-4fb3-9da8-984d27d17b8a
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b410bc86b35e2cacc83e9a367a9609e271c34290
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 64e6cada38ed4c4c91579ca372f298d0ee0f28fc
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="open-file-dialog-box"></a>Datei öffnen (Dialogfeld)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Verwenden Sie das Dialogfeld **Datei öffnen**, um eine vorhandene Datei von einem Datenträger zu öffnen. Außerdem können Sie dieses Dialogfeld dazu verwenden, eine bereits geöffnete Datei mit unterschiedlichen Sprachcodierungsoptionen zu öffnen.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Verwenden Sie das Dialogfeld **Datei öffnen** , um eine vorhandene Datei von einem Datenträger zu öffnen. Außerdem können Sie dieses Dialogfeld dazu verwenden, eine bereits geöffnete Datei mit unterschiedlichen Sprachcodierungsoptionen zu öffnen.  
   
 Um auf dieses Dialogfeld zuzugreifen, wählen Sie im Menü **Datei** die Option **Öffnen** und dann **Datei**aus. Dieses Dialogfeld wird auch angezeigt, wenn Sie Dateien von anderen Elementen aus öffnen, z. B. dem Dialogfeld **Externe Tools** . Um das ähnliche Dialogfeld **Projekt öffnen** zu öffnen, wählen Sie im Menü **Datei**den Befehl **Öffnen** und dann **Projekt/Projektmappe** aus.  
   

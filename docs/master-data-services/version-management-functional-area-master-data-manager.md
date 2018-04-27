@@ -2,7 +2,7 @@
 title: Funktionsbereich „Versionsverwaltung“ (Master Data Manager) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: mds
 ms.service: ''
 ms.component: non-specific
@@ -18,11 +18,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f102d3297b1c64a48befcca8dd7d9931eefe35fc
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 994f7a3c2fe553072db8564493f005bc0d89cfc8
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="version-management-functional-area-master-data-manager"></a>Funktionsbereich "Versionsverwaltung" (Master Data Manager)
 

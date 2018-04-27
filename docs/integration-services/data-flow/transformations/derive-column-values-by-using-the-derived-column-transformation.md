@@ -1,16 +1,16 @@
 ---
-title: "Ableiten von Spaltenwerten mithilfe der Transformation für abgeleitete Spalten | Microsoft-Dokumentation"
-ms.custom: 
+title: Ableiten von Spaltenwerten mithilfe der Transformation für abgeleitete Spalten | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - columns [Integration Services]
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - columns [Integration Services], values
 - Derived Column transformation
 ms.assetid: 28b07746-fc6f-42b2-b741-9de6fac3f29c
-caps.latest.revision: 
+caps.latest.revision: 48
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 80c5df3dec8351c6ab47e596081a5c4f8f7fd3fb
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 6d000e5e4886efe6299c70141e8c46b87a1b6504
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="derive-column-values-by-using-the-derived-column-transformation"></a>Ableiten von Spaltenwerten mithilfe der Transformation für abgeleitete Spalten
   Das Paket muss bereits mindestens einen Datenflusstask und eine Quelle enthalten, damit Sie eine Transformation für abgeleitete Spalten hinzufügen und konfigurieren können.  

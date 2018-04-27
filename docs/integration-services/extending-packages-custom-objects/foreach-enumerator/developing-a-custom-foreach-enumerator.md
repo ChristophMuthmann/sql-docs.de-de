@@ -1,15 +1,15 @@
 ---
 title: Entwickeln eines benutzerdefinierten Foreach-Enumerators | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: extending-packages-custom-objects
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - custom foreach enumerators [Integration Services], about custom foreach enumerators
 - foreach enumerators [Integration Services]
 ms.assetid: bffe26e0-1b9a-47ad-bae6-6b708cb4cf4f
-caps.latest.revision: 
+caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 70fd72d198ff7f6ce5b7a79bbeed1a40f92c8aac
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 29cfa63180a30f2b90df11ee4290738f1a4f5c04
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="developing-a-custom-foreach-enumerator"></a>Entwickeln eines benutzerdefinierten ForEach-Enumerators
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] verwendet Foreach-Enumeratoren, um die Elementen in einer Auflistung zu durchlaufen und die gleichen Tasks für jedes Element auszuführen. [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] enthält eine Vielzahl von Foreach-Enumeratoren, die die am häufigsten verwendeten Auflistungen unterstützen. Dazu gehören alle Dateien in einem Ordner, alle Tabellen in einer Datenbank oder alle Elemente einer in einer Paketvariablen gespeicherten Liste. Sollten die verfügbaren Foreach-Enumeratoren und Auflistungen Ihre Anforderungen nicht vollständig erfüllen, können Sie einen benutzerdefinierten Foreach-Enumerator erstellen.  

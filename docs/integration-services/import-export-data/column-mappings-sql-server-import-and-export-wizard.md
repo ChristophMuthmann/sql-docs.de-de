@@ -1,30 +1,30 @@
 ---
 title: Spaltenzuordnungen (SQL Server-Import/Export-Assistent) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: import-export-data
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.impexpwizard.columnmapandtransform.f1
 ms.assetid: eadc54a6-f936-4ffc-91d7-fbfd2bdcab93
-caps.latest.revision: 
+caps.latest.revision: 69
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d4658903e7454c5a001f27b3bda781be34e6a55b
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: fc3edf9fab16758bfeb6f99549329b69f3da0352
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="column-mappings-sql-server-import-and-export-wizard"></a>Spaltenzuordnungen (SQL Server-Import/Export-Assistent)
   Nachdem Sie die zu kopierenden vorhandenen Tabellen und Ansichten ausgewählt oder die von Ihnen angegebene Abfrage überprüft und danach auf **Zuordnungen bearbeiten**geklickt haben, wird im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Import/Export-Assistent das Dialogfeld **Spaltenzuordnungen** angezeigt. Auf dieser Seite können Sie die Zielspalten für die aus den Quellspalten zu kopierenden Daten angeben und konfigurieren. Häufig müssen Sie auf dieser Seite nichts ändern.

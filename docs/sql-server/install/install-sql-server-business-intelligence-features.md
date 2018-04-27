@@ -2,7 +2,7 @@
 title: Installieren von SQL Server 2016 Business Intelligence-Funktionen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/02/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: install
@@ -17,11 +17,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 2b5037c5dbab3dcad22d1ca7379b8e389eeea006
-ms.sourcegitcommit: 094c46e7fa6de44735ed0040c65a40ec3d951b75
+ms.openlocfilehash: 21344c5df86e86fb7da0f56a5c4cae9ecf158718
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="install-sql-server-business-intelligence-features"></a>Installieren von SQL Server 2016 Business Intelligence-Funktionen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

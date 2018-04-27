@@ -1,16 +1,16 @@
 ---
-title: "Erste Schritte durch Ausführen des Assistenten zum Aktivieren von Stretch für eine Datenbank | Microsoft-Dokumentation"
-ms.custom: 
+title: Erste Schritte durch Ausführen des Assistenten zum Aktivieren von Stretch für eine Datenbank | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 08/05/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: stretch-database
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-stretch
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 f1_keywords:
 - sql13.swb.stretchwizard.f1
@@ -26,16 +26,16 @@ helpviewer_keywords:
 - Stretch Database, wizard
 - Enable Database for Stretch Wizard
 ms.assetid: 855dd9fc-f80c-4dbc-bf46-55a9736bfe15
-caps.latest.revision: 
+caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 976561b457dc1eac740df5075bf0a02fd5a95a23
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 7118acfb258ef91deb7a1a22db609f6956f8dfe8
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="get-started-by-running-the-enable-database-for-stretch-wizard"></a>Erste Schritte durch Ausführen des Assistenten zum Aktivieren von Stretch für eine Datenbank
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]

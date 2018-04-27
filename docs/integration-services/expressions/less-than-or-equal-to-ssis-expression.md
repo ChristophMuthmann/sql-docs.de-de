@@ -1,31 +1,31 @@
 ---
 title: '&lt;= (Kleiner als oder gleich) (SSIS-Ausdruck) | Microsoft-Dokumentation'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: expressions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - <= (less than or equal to operator)
 - less than or equal to operator (<=)
 ms.assetid: 946c5630-dccf-4dae-9cfd-6ea823641ab2
-caps.latest.revision: 
+caps.latest.revision: 47
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6bde98256931ad7d4f345e0265ea524eef6f898f
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 884658312eabe0bc70c05b43e61b8f22bbee78cd
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="lt-less-than-or-equal-to-ssis-expression"></a>&lt;= (Kleiner als oder gleich) (SSIS-Ausdruck)
   Führt einen Vergleich aus, um zu ermitteln, ob der erste Ausdruck kleiner oder gleich dem zweiten Ausdruck ist. Die Ausdrucksauswertung konvertiert viele Datentypen automatisch vor dem Vergleich.  

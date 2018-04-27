@@ -2,7 +2,7 @@
 title: Zuordnung von Datentypen mit dem SQL Server-Import/Export-Assistenten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/11/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
 ms.service: ''
 ms.component: import-export-data
@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1796ece3b0fb24b0fb5a4026ce12a085d4744a77
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+ms.openlocfilehash: 984beda9e79c525d45334959f0a866fcb2868080
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="data-type-mapping-in-the-sql-server-import-and-export-wizard"></a>Zuordnung von Datentypen mit dem SQL Server-Import/Export-Assistenten
  Im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Import/Export-Assistenten können Sie den Namen, den Datentyp und die Datentypeigenschaften von Spalten in neuen Zieltabellen und -dateien festlegen. Allerdings können Sie keine benutzerdefinierten Konvertierungen für Spaltenwerte angeben. Daher ist die integrierte Zuordnung von Datentypen von der Quelle zum Ziel wichtig.  
@@ -35,7 +35,7 @@ Der Assistent verwendet die von [!INCLUDE[ssNoVersion](../../includes/ssnoversio
  Wenn Sie eine vorhandene Zuordnungsdatei bearbeiten oder dem Ordner eine neue Zuordnungsdatei hinzufügen, müssen Sie den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Import/Export-Assistenten bzw. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] schließen und anschließend erneut öffnen, um die neue oder geänderte Zuordnungsdatei zu laden.  
  
 ## <a name="you-can-change-an-existing-mapping-file"></a>Sie können eine vorhandene Zuordnungsdatei ändern
-Wenn Ihr Unternehmen verschiedene Zuordnungen zwischen Datentypen erfordert, können Sie die Zuordnungsdateien aktualisieren, um die vom Assistenten durchgeführten Zuordnungen zu ändern. Wenn Sie z. B. möchten, dass der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **nchar** -Datentyp beim Übertragen von Daten von **in DB2 dem DB2-Datentyp** GRAPHIC **VARin DB2 dem DB2-Datentyp** VARGRAPHIC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zugeordnet wird, ändern Sie die **nchar** -Zuordnung in der Zuordnungsdatei **SqlClientToIBMDB2.xml** so, dass **in DB2 dem DB2-Datentyp** statt **VARin DB2 dem DB2-Datentyp.**verwendet wird.  
+Wenn Ihr Unternehmen verschiedene Zuordnungen zwischen Datentypen erfordert, können Sie die Zuordnungsdateien aktualisieren, um die vom Assistenten durchgeführten Zuordnungen zu ändern. Wenn Sie z. B. möchten, dass der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **nchar** -Datentyp beim Übertragen von Daten von **in DB2 dem DB2-Datentyp** GRAPHIC **VARin DB2 dem DB2-Datentyp** VARGRAPHIC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zugeordnet wird, ändern Sie die **nchar** -Zuordnung in der Zuordnungsdatei **SqlClientToIBMDB2.xml** so, dass **in DB2 dem DB2-Datentyp** statt **VARin DB2 dem DB2-Datentyp.** verwendet wird.  
   
 ## <a name="you-can-add-a-new-mapping-file"></a>Sie können eine neue Zuordnungsdatei hinzufügen
 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] installiert Zuordnungen zwischen vielen häufig verwendeten Kombinationen von Quelle und Ziel. Sie können auch dem Verzeichnis **MappingFiles** neue Zuordnungsdateien hinzufügen, um weitere Quellen und Ziele zu unterstützen. Die neuen Zuordnungsdateien müssen dem veröffentlichten XSD-Schema entsprechen und einer eindeutigen Kombination aus Quelle und Ziel zugeordnet sein. Das Schema für Zuordnungsdateien, **DataTypeMapping.xsd**, ist [hier](http://schemas.microsoft.com/sqlserver/2008/07/IntegrationServices/DataTypeMapping/DataTypeMapping.xsd)veröffentlicht.

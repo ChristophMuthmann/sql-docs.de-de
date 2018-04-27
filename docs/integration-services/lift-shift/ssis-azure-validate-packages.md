@@ -1,22 +1,23 @@
 ---
-title: "Überprüfen von in Azure bereitgestellten SSIS-Paketen | Microsoft-Dokumentation"
+title: Überprüfen von in Azure bereitgestellten SSIS-Paketen | Microsoft-Dokumentation
 ms.date: 11/27/2017
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: lift-shift
 ms.suite: sql
-ms.custom: 
-ms.technology: integration-services
+ms.custom: ''
+ms.technology:
+- integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 15f838e93a5473a2d2345ae8c297f9b92eb2a23e
-ms.sourcegitcommit: 19e1c4067142d33e8485cb903a7a9beb7d894015
+ms.openlocfilehash: 6e2bf8f48751d819293edbaa0e40a85e74b0c513
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="validate-ssis-packages-deployed-to-azure"></a>Überprüfen von in Azure bereitgestellten SSIS-Paketen
 Wenn Sie auf einem Azure-Server ein SSIS-Projekt (SQL Server Integration Services) in der SSIS-Katalogdatenbank (SSISDB) bereitstellen, fügt der Assistent für die Paketbereitstellung hinter der Seite **Überprüfen** einen zusätzlichen Überprüfungsschritt hinzu. In diesem Überprüfungsschritt werden die im Projekt enthaltenen Pakete auf bekannte Probleme hin überprüft, die möglicherweise eine erwartungsgemäße Ausführung in der Azure SSIS Integration Runtime verhindern. Anschließend zeigt der Assistent alle zutreffenden Warnungen auf der Seite **Überprüfen** an.

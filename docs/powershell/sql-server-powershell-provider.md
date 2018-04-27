@@ -1,15 +1,16 @@
 ---
 title: SQL Server PowerShell-Anbieter | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: powershell
-ms.service: 
+ms.service: ''
 ms.component: powershell
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - PowerShell [SQL Server], provider
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - PowerShell [SQL Server], SMO
 - SQL Server Management Objects, PowerShell
 ms.assetid: b97acc43-fcd2-4ae5-b218-e183bab916f9
-caps.latest.revision: "61"
+caps.latest.revision: 61
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 25efe8ce2a9ee4bd0af52a04e6f2d09f47a60396
-ms.sourcegitcommit: 779f3398e4e3f4c626d81ae8cedad153bee69540
+ms.openlocfilehash: 669c6fd2c0395569ee1169b5d493c6476f1b558f
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sql-server-powershell-provider"></a>SQL Server PowerShell-Anbieter
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

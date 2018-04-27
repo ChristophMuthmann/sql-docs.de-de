@@ -1,28 +1,28 @@
 ---
-title: "Zuordnen von Spalten zu Verbunddomänen | Microsoft-Dokumentation"
-ms.custom: 
+title: Zuordnen von Spalten zu Verbunddomänen | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d9422412-8a3d-45ae-af7f-072c902a09ba
-caps.latest.revision: 
+caps.latest.revision: 5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f8fb2e38ea252928a84dfaa8404d1b29b0bb6f33
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 4db874af0599526ceca5f7a8648436ec88b7f074
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="map-columns-to-composite-domains"></a>Zuordnen von Spalten zu Verbunddomänen
   Eine Verbunddomäne besteht aus mindestens zwei einzelnen Domänen. Sie können der Domäne mehrere Spalten oder eine einzelne Spalte mit durch Trennzeichen getrennten Werten zuordnen.  

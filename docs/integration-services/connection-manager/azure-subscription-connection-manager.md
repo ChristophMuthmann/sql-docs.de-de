@@ -1,31 +1,31 @@
 ---
 title: Azure-Abonnementverbindungs-Manager | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/02/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: connection-manager
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.afpsubscrconn.f1
 - sql14.dts.designer.afpsubscrconn.f1
 ms.assetid: e1225327-c308-4c50-8f44-c411f52ef378
-caps.latest.revision: 
+caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 494d60bbf70d31c5bec944d5ad2c1e543d5c7b53
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 46ad04f550a01f932954f089f9c1f61e8e63d378
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="azure-subscription-connection-manager"></a>Azure-Abonnementverbindungs-Manager
   Der **Azure HDInsight-Verbindungs-Manager** ermöglicht die Verbindung eines SSIS-Pakets mit einem Azure-Abonnement, indem die Werte verwendet werden, die Sie für die folgenden Eigenschaften angeben: Azure-Abonnement-ID und das Verwaltungszertifikat.  

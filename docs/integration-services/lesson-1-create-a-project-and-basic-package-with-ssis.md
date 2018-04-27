@@ -1,30 +1,30 @@
 ---
 title: 'Lektion 1: Erstellen eines Projekts und Basispakets mit SSIS | Microsoft-Dokumentation'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: tutorial
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 84d0b877-603f-4f8e-bb6b-671558ade5c2
-caps.latest.revision: 
+caps.latest.revision: 35
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: b00736e0429de4a0ef10df5cf41b3e791ef4aeee
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 4d501dc2b06c68726466d90d14587218c03d4d0d
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="lesson-1-create-a-project-and-basic-package-with-ssis"></a>Lesson 1: Create a Project and Basic Package with SSIS
 

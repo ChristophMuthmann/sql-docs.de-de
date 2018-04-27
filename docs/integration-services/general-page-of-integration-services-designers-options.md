@@ -1,30 +1,30 @@
 ---
-title: "Seite „Allgemein“ der Integration Services-Designer-Optionen | Microsoft-Dokumentation"
-ms.custom: 
+title: Seite „Allgemein“ der Integration Services-Designer-Optionen | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - VS.ToolsOptionsPages.Business_Intelligence_Designers.Data_Transformation_Designers.General
 ms.assetid: d695690a-923b-4036-945e-7621e8651deb
-caps.latest.revision: 
+caps.latest.revision: 30
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c9ba20c680534988a8112b9621f68155304020c1
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 3effecbc99e5a5b64c91ccd0ac98a226797208d7
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="general-page-of-integration-services-designers-options"></a>Seite „Allgemein“ der Integration Services-Designer-Optionen
   Verwenden Sie die Seite **Allgemein** der Seite **Integration Services-Designer** im Dialogfeld **Optionen** , um die Optionen für das Laden, Anzeigen und Aktualisieren von Paketen festzulegen.  

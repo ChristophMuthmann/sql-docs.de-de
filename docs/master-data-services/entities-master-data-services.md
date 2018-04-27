@@ -2,7 +2,7 @@
 title: Entitäten (Master Data Services) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 04/01/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: mds
 ms.service: ''
 ms.component: non-specific
@@ -21,11 +21,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0d7c11b995bf42a55ce3673120550b8aa4896b19
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: c48710bf7b09d0374d2b4eebf09ccd34ad7d7c23
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="entities-master-data-services"></a>Entitäten (Master Data Services)
 

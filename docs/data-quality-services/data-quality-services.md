@@ -2,7 +2,7 @@
 title: Data Quality Services | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 10/12/2013
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: data-quality-services
 ms.service: ''
 ms.component: data-quality-services
@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0322456ec2158fe673b59141f6ce66e4a9a3d2d6
-ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
+ms.openlocfilehash: fc18002ff8bfe8e8dbf6fbd5ed9d86f71b8b5b35
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="data-quality-services"></a>Data Quality Services
 

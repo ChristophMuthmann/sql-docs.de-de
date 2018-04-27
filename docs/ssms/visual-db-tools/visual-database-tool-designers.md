@@ -1,15 +1,16 @@
 ---
 title: Designer in Visual Database Tools | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - data sources [SQL Server]
@@ -22,19 +23,20 @@ helpviewer_keywords:
 - Visual Database Tools [SQL Server], designers
 - Properties window [Visual Database Tools]
 ms.assetid: bd0ca68e-6f69-42dd-bcb5-ce511673769c
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6f9174882f49b0307617ddc0576c146cabe6d22d
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 2837ff14b83af7aaec007fee657440778cef5895
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="visual-database-tool-designers"></a>Designer in Visual Database Tools
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Visual Database Tools kombiniert eine Reihe von Entwurfstools, die zur Bearbeitung von Datenquellen verwendet werden können. Sie können damit Abfragen erstellen, die Datenbankstruktur entwerfen oder ändern und Daten aktualisieren. Die Tools heißen Datenbankdiagramm-Designer, Tabellen-Designer und Abfrage- und Sicht-Designer.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Visual Database Tools kombiniert eine Reihe von Entwurfstools, die zur Bearbeitung von Datenquellen verwendet werden können. Sie können damit Abfragen erstellen, die Datenbankstruktur entwerfen oder ändern und Daten aktualisieren. Die Tools heißen Datenbankdiagramm-Designer, Tabellen-Designer und Abfrage- und Sicht-Designer.  
   
 ## <a name="properties-window"></a>Eigenschaftenfenster  
 Das Eigenschaftenfenster ist keine Eigenheit von Visual Database Tools; an dieser Stelle können Sie jedoch verschiedene Änderungen vornehmen. Hier werden die Eigenschaften des aktuell ausgewählten Elements (z. B. eine Tabelle) angezeigt. Diese Eigenschaften (vom Namen der Eigenschaften bis zur Sortierung einer Spalte) können geändert werden. Einige Eigenschaften werden im Eigenschaftenfenster angezeigt, müssen jedoch mit einem anderen Tool geändert werden.  

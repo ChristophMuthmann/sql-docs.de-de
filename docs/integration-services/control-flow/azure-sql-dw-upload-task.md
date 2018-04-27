@@ -2,7 +2,7 @@
 title: Azure SQL DW-Uploadtask | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 12/16/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
 ms.service: ''
 ms.component: control-flow
@@ -16,23 +16,23 @@ f1_keywords:
 - SQL13.DTS.DESIGNER.AFPDWUPTASK.F1
 - sql14.dts.designer.afpdwuptask.f1
 ms.assetid: eef82c89-228a-4dc7-9bd0-ea00f57692f5
-caps.latest.revision: ''
+caps.latest.revision: 5
 author: Lingxi-Li
 ms.author: lingxl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2d6c95bda5faf7f3ccf8f6b9bc4774a66d482e51
-ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
+ms.openlocfilehash: bff2df8d44cf8406a507fb764cb409f766f15bab
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="azure-sql-dw-upload-task"></a>Azure SQL DW-Uploadtask
 Der **Azure SQL DW-Uploadtask** ermöglicht einem SSIS-Paket, lokale Daten in eine Tabelle in Azure SQL Data Warehouse (DW) hochzuladen. Das gegenwärtig unterstützte Quelldatenformat ist Text mit Trennzeichen in UTF8-Codierung. Der Hochladevorgang folgt dem effizienten PolyBase-Ansatz gemäß Beschreibung im Artikel [Azure SQL Data Warehouse Loading Patterns and Strategies](https://blogs.msdn.microsoft.com/sqlcat/2016/02/06/azure-sql-data-warehouse-loading-patterns-and-strategies/)(Azure SQL Data Warehouse: Muster und Strategien zum Laden). Insbesondere werden Daten zunächst in Azure Blob Storage und dann in Azure SQL Data Warehouse hochgeladen. Darum ist ein Azure Blob Storage-Konto erforderlich, um diesen Task zu verwenden.
 
 Der **Azure SQL DW-Uploadtask** ist eine Komponente des [SQL Server Integration Services-Feature Packs (SSIS) für Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md).
 
-Um einen **Azure SQL DW-Uploadtask**hinzuzufügen, ziehen Sie ihn mittels Drag & Drop aus der SSIS-Toolbox auf den Designercanvas, und doppelklicken Sie, oder klicken Sie mit der rechten Maustaste darauf, und klicken Sie anschließend auf **Bearbeiten** , um das Dialogfeld des Task-Editors anzuzeigen.
+Um einen **Azure SQL DW-Uploadtask**hinzuzufügen, ziehen Sie ihn mittels Drag &amp; Drop aus der SSIS-Toolbox auf den Designercanvas, und doppelklicken Sie, oder klicken Sie mit der rechten Maustaste darauf, und klicken Sie anschließend auf **Bearbeiten** , um das Dialogfeld des Task-Editors anzuzeigen.
 
 Konfigurieren Sie auf der Seite **Allgemein** die folgenden Eigenschaften.
 
@@ -40,7 +40,7 @@ Feld|Description
 -----|-----------
 LocalDirectory|Gibt das lokale Verzeichnis mit den Datendateien an, die hochgeladen werden sollen.
 Rekursiv|Gibt an, ob Unterverzeichnisse rekursiv durchsucht werden sollen.
-FileName|Geben Sie einen Namensfilter zum Auswählen von Dateien mit einem bestimmten Namensmuster an. Beispiel: „MeinArbeitsblatt\*.xsl\* “ schließt „MeinArbeitsblatt001.xsl“ und „MeinArbeitsblattABC.xslx“ ein.
+FileName|Geben Sie einen Namensfilter zum Auswählen von Dateien mit einem bestimmten Namensmuster an. Beispiel: „MeinArbeitsblatt*.xsl\* “ schließt „MeinArbeitsblatt001.xsl“ und „MeinArbeitsblattABC.xslx“ ein.
 RowDelimiter|Gibt ein oder mehrere Zeichen an, die das Ende jeder Zeile markieren.
 ColumnDelimiter|Gibt ein oder mehrere Zeichen an, die das Ende jeder Spalte markieren. Beispiel: &#124; (senkrechter Strich), \t (Tabulator), ' (einfaches Anführungszeichen), " (doppeltes Anführungszeichen) und 0x5c (umgekehrter Schrägstrich).
 IsFirstRowHeader|Gibt an, ob die erste Zeile in jeder Datendatei Spaltennamen statt tatsächlicher Daten enthält.

@@ -2,7 +2,7 @@
 title: catalog.deny_permission (SSISDB-Datenbank) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
 ms.service: ''
 ms.component: system-stored-procedures
@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a04ae959af4c0a23b3a954e590df424aa1536949
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+ms.openlocfilehash: b354bace5929c4d53d492de3d07590975ab7cf1b
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="catalogdenypermission-ssisdb-database"></a>catalog.deny_permission (SSISDB-Datenbank)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ catalog.deny_permission [ @object_type = ] object_type
  5 (anderer Fehler)  
   
 ## <a name="result-sets"></a>Resultsets  
- Keine  
+ InclusionThresholdSetting  
   
 ## <a name="permissions"></a>Berechtigungen  
  Diese gespeicherte Prozedur erfordert eine der folgenden Berechtigungen:  
@@ -76,7 +76,7 @@ catalog.deny_permission [ @object_type = ] object_type
   
 -   Mitgliedschaft in der Serverrolle **sysadmin**  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Mit dieser gespeicherten Prozedur können Sie die in der folgenden Tabelle beschriebenen Typen von Berechtigungen verweigern:  
   
 |permission_type-Wert|Berechtigungsname|Berechtigungsbeschreibung|Anwendbare Objekttypen|  

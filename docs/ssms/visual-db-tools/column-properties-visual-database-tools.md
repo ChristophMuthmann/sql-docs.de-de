@@ -1,15 +1,16 @@
 ---
 title: Spalteneigenschaften (Visual Database Tools) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - vdt.designers.properties.Column.ColumnIdentitySpec
@@ -18,19 +19,20 @@ f1_keywords:
 - vdt.designers.properties.Column.ColumnComputedColumnSpec
 - vdt.designers.properties.Column.ColumnFulltextSpec
 ms.assetid: e549a2a8-4154-4ec8-b146-614564169b39
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3605540ac694a2597e607428d5928d42f42ce14b
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 1da9055fcd5d40f937c15f400b080fd3dc302333
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="column-properties-visual-database-tools"></a>Spalteneigenschaften (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Für Spalten gibt es zwei Sätze von Eigenschaften: einen vollständigen Satz, der im Tabellen-Designer auf der Registerkarte **Spalteneigenschaften** angezeigt wird (nur für [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]-Datenbanken verfügbar), und eine Teilmenge, die im Server-Explorer im Eigenschaftenfenster angezeigt wird.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Für Spalten gibt es zwei Sätze von Eigenschaften: einen vollständigen Satz, der im Tabellen-Designer auf der Registerkarte **Spalteneigenschaften** angezeigt wird (nur für [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Datenbanken verfügbar), und eine Teilmenge, die im Server-Explorer im Eigenschaftenfenster angezeigt wird.  
   
 > [!NOTE]  
 > Die in diesem Thema behandelten Eigenschaften sind nicht alphabetisch, sondern nach Kategorie angeordnet.  

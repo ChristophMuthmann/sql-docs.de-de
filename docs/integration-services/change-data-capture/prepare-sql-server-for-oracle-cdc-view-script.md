@@ -1,28 +1,28 @@
 ---
-title: "Vorbereiten von SQL Server für Oracle CDC – Skript anzeigen | Microsoft-Dokumentation"
-ms.custom: 
+title: Vorbereiten von SQL Server für Oracle CDC – Skript anzeigen | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: change-data-capture
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d0c8f942-4c96-456f-ad10-577577c0f74e
-caps.latest.revision: 
+caps.latest.revision: 5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0827118bb8b850331a37af5e58a1e60e554eaf67
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: d3829a1a49be5392c7eb24183fb34871ba17cb17
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="prepare-sql-server-for-oracle-cdc-view-script"></a>Vorbereiten von SQL Server für Oracle CDC – Skript anzeigen
   Dieses Dialogfeld zeigt das Skript Prepare SQL an, mit dem die MSXDBCDC-Datenbank erstellt wird. Diese Datenbank muss sich auf einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz befinden, damit sie mit Oracle CDC for SQL Server verwendet werden kann.  

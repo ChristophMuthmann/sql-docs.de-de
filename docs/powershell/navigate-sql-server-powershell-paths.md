@@ -1,27 +1,28 @@
 ---
 title: Navigieren in SQL Server PowerShell-Pfaden | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: powershell
-ms.service: 
+ms.service: ''
 ms.component: powershell
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d68aca48-d161-45ed-9f4f-14122ed30218
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7ebc5363df3c0f557cf31ea6c7e7b47bf7c77165
-ms.sourcegitcommit: 779f3398e4e3f4c626d81ae8cedad153bee69540
+ms.openlocfilehash: b438b9695dfedff07fe67f41fc120b9e53e5c161
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="navigate-sql-server-powershell-paths"></a>Navigieren in SQL Server PowerShell-Pfaden
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

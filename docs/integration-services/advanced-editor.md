@@ -1,16 +1,16 @@
 ---
 title: Erweiterter Editor | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.advancededitor.columnproperties.f1
@@ -19,16 +19,16 @@ f1_keywords:
 - sql13.dts.designer.advancededitor.connections.f1
 - sql13.dts.designer.advancededitor.columnmappings.f1
 ms.assetid: 5ad0ac71-fa8b-4c26-bd42-e6ef00c87571
-caps.latest.revision: 
+caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e6c929bf7a8aa3525049e295e83541547fa420f7
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: e80170862c78d78049d4346f51145917784f052b
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="advanced-editor"></a>Erweiterter Editor
   Verwenden Sie das Dialogfeld **Erweiterter Editor** , um Eigenschaften für das ausgewählte [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Objekt zu konfigurieren.  

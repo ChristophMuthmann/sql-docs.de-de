@@ -2,7 +2,7 @@
 title: Übersicht über Master Data Services (MDS) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 02/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: mds
 ms.service: ''
 ms.component: non-specific
@@ -23,11 +23,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 8702bafc6b62d4c75d9dc76a32931e16dbe84e76
-ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
+ms.openlocfilehash: d2f03949fa0edab709dcdf14a71daad12d12022b
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="master-data-services-overview-mds"></a>Übersicht über Master Data Services (MDS)
 

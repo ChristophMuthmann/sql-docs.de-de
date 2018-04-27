@@ -7,14 +7,14 @@ ms.author: genemi
 ms.topic: article
 ms.custom: UpdArt.exe
 ms.suite: sql
-ms.prod_service: sql-non-specified
+ms.prod_service: sql
 ms.component: sql-server
 ms.date: 02/03/2018
-ms.openlocfilehash: bcbf9a579fce8d27eaa53471190dbe850774c146
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: 9d16ef6e59a911b8963bfda46cad9ed6d8e8109c
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="new-and-recently-updated-sql-server-docs"></a>Neu und zuletzt kürzlich aktualisiert: Dokumentation zu SQL Server Data Tools
 

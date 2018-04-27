@@ -1,30 +1,31 @@
 ---
 title: Azure Data Lake Store Source | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/02/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: integration-services
-ms.tgt_pltfrm: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - SQL13.DTS.DESIGNER.AFPADLSSRC.F1
 - sql14.dts.designer.afpadlssrc.f1
 ms.assetid: f9c3311f-7316-48d6-bf10-d810e70b4304
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: da63d0250bc374ab93d3c8df8375837aabac7223
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: d03aa0122d4c11bf5ef38b7013ef121870e39d0a
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="azure-data-lake-store-source"></a>Azure Data Lake Store Source
   Die Komponente **Azure Data Lake Store Source** ermöglicht einem SSIS-Paket das Lesen von Daten aus Azure Data Lake Store. Die unterstützten Dateiformate sind: Text und Avro.

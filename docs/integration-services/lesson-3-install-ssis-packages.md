@@ -1,30 +1,30 @@
 ---
 title: 'Lektion 3: Installieren von SSIS-Paketen | Microsoft-Dokumentation'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: tutorial
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - SQL Server 2016
 ms.assetid: 87bc4d82-39d8-424f-886f-98cf1e4bb07a
-caps.latest.revision: 
+caps.latest.revision: 16
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 49293fcda9932c5168dcfde85eb78883591d096c
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 39413f7074ed5ca2b99380101bc4bdbbf7a4bc00
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="lesson-3-install-ssis-packages"></a>Lektion 3: Installieren von SSIS-Paketen
 In [Lektion 2: Erstellen des Bereitstellungspakets](../integration-services/lesson-2-create-the-deployment-bundle-in-ssis.md)haben Sie ein Bereitstellungsprogramm und das Bereitstellungspaket erstellt, das die Elemente enthält, die für die Installation der Pakete auf einem anderen Computer erforderlich sind. Sie haben außerdem die Dateiliste im Bereitstellungspaket überprüft und den Inhalt der Manifestdatei untersucht, die beim Erstellen des Bereitstellungshilfsprogramms erstellt wurde.  

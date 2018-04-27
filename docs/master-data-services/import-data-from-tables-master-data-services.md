@@ -2,7 +2,7 @@
 title: Importieren von Daten aus Tabellen (Master Data Services) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: mds
 ms.service: ''
 ms.component: non-specific
@@ -18,11 +18,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5e512f1be655b9ab51bbbc64c7756540aa505b57
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 116b77fc24240b1dee46db994f6dbb541d6e6da2
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="import-data-from-tables-master-data-services"></a>Importieren von Daten aus Tabellen (Master Data Services)
 

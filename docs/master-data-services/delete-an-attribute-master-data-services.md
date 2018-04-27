@@ -2,7 +2,7 @@
 title: Löschen eines Attributs (Master Data Services) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: mds
 ms.service: ''
 ms.component: non-specific
@@ -21,11 +21,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4eace30393cdae91b61c5308a9e563e978f9e50e
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 55f4057ab310cc260ee80bbc2631b04ae9b1b354
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="delete-an-attribute-master-data-services"></a>Löschen eines Attributs (Master Data Services)
 

@@ -1,28 +1,28 @@
 ---
-title: "Benutzerdefinierte Eigenschaften des Ziels für SQL Server Compact Edition | Microsoft-Dokumentation"
-ms.custom: 
+title: Benutzerdefinierte Eigenschaften des Ziels für SQL Server Compact Edition | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: b66e93fe-ce62-401b-a31f-619c7b8b1f3e
-caps.latest.revision: 
+caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ce28db72a40b3f101f3f3e1004ce74f41e85af53
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: f80fdc8eaa8c6a99f5a3c489f3d34fff4bf66803
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sql-server-compact-edition-destination-custom-properties"></a>Benutzerdefinierte Eigenschaften des Ziels für SQL Server Compact Edition
   Das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact-Ziel verfügt sowohl über benutzerdefinierte Eigenschaften als auch über die Eigenschaften, die allen Datenflusskomponenten gemeinsam sind.  

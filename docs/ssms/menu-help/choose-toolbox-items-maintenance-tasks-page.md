@@ -2,7 +2,7 @@
 title: Toolboxelemente auswählen (Seite Wartungstasks) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms-menu
@@ -23,14 +23,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5f53e840362768dde02db91d5305f043fc384985
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: f471d5997f3fe20639ca37606f3b82e3ac53fa63
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="choose-toolbox-items-maintenance-tasks-page"></a>Toolboxelemente auswählen (Seite Wartungstasks)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Auf dieser Registerkarte des Dialogfelds **Toolbox anpassen** wird eine Liste aller Wartungstaskkomponenten angezeigt, die auf Ihrem Computer registriert sind. Außerdem können Sie festlegen, welche Komponenten in der Toolbox angezeigt werden. Sie können das Dialogfeld **Toolbox anpassen** über das Menü **Extras** öffnen. Zum Sortieren der Komponentenliste wählen Sie eine der Spaltenüberschriften.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Auf dieser Registerkarte des Dialogfelds **Toolbox anpassen** wird eine Liste aller Wartungstaskkomponenten angezeigt, die auf Ihrem Computer registriert sind. Außerdem können Sie festlegen, welche Komponenten in der Toolbox angezeigt werden. Sie können das Dialogfeld **Toolbox anpassen** über das Menü **Extras** öffnen. Zum Sortieren der Komponentenliste wählen Sie eine der Spaltenüberschriften.  
   
 ## <a name="options"></a>Tastatur  
 Die Registerkarte **Wartungstasks** enthält die folgenden Spalten mit Informationen.  

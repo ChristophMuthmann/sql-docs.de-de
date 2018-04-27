@@ -1,30 +1,30 @@
 ---
 title: 'Schritt 2: Aktivieren und Konfigurieren von Paketkonfigurationen | Microsoft-Dokumentation'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: tutorial
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 005218ab-8dd5-48e9-a185-6bc60cd43a7a
-caps.latest.revision: 
+caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 1a63c43606d2a27da3469c4cedb83654c79c1bf1
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 05badd9b5954f079adab16d57b9c428d6c733db7
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="lesson-5-2---enabling-and-configuring-package-configurations"></a>Lektion 5-2: Aktivieren und Konfigurieren von Paketkonfigurationen
 In dieser Aufgabe konvertieren Sie das Projekt in das Paketbereitstellungsmodell und aktivieren Paketkonfigurationen mithilfe des Paketkonfigurations-Assistenten. Sie verwenden diesen Assistenten zum Generieren einer XML-Konfigurationsdatei, die Konfigurationseinstellungen für die **Directory** -Eigenschaft des Foreach-Schleifencontainers enthält. Der Wert der Directory-Eigenschaft wird durch eine neue Variable auf Paketebene bereitgestellt, die Sie zur Laufzeit aktualisieren können. Zusätzlich füllen Sie einen neuen Beispieldatenordner auf, der während des Testens verwendet wird.  
@@ -52,7 +52,7 @@ In dieser Aufgabe konvertieren Sie das Projekt in das Paketbereitstellungsmodell
   
 9. Klicken Sie im **Eigenschaftsausdrucks-Editor**in die Liste **Eigenschaft** , und wählen Sie **Verzeichnis**aus.  
   
-10. Klicken Sie im Feld **Ausdruck** auf die Schaltfläche mit den Auslassungspunkten**(…)**.  
+10. Klicken Sie im Feld **Ausdruck** auf die Schaltfläche mit den Auslassungspunkten **(…)**.  
   
 11. Erweitern Sie im **Ausdrucks-Generator**den Ordner Variablen, und ziehen Sie die Variable **User::varFolderName** in das Feld **Ausdruck** .  
   
@@ -64,7 +64,7 @@ In dieser Aufgabe konvertieren Sie das Projekt in das Paketbereitstellungsmodell
   
 ### <a name="to-enable-package-configurations"></a>So aktivieren Sie Paketkonfigurationen  
   
-1.  Klicken Sie im **Menü 'Projekt'**auf **In Paketbereitstellungsmodell konvertieren**.  
+1.  Klicken Sie im **Menü 'Projekt'** auf **In Paketbereitstellungsmodell konvertieren**.  
   
 2.  Klicken Sie in der Warnungs-Eingabeaufforderung auf **OK** , nachdem die Konvertierung abgeschlossen ist, und klicken Sie im Dialogfeld **In Paketbereitstellungsmodell konvertieren** auf **OK** .  
   

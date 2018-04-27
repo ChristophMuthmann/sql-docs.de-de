@@ -1,27 +1,28 @@
 ---
 title: Verwenden von SQL Server PowerShell-Pfaden | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: powershell
-ms.service: 
+ms.service: ''
 ms.component: powershell
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f31d8e2c-8d59-4fee-ac2a-324668e54262
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dc98aaf3301bd66cf3a820d4c4ce9273090eaebf
-ms.sourcegitcommit: 779f3398e4e3f4c626d81ae8cedad153bee69540
+ms.openlocfilehash: 883fc60ab7414bcd2600fbe5573fae50ebaa445c
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="work-with-sql-server-powershell-paths"></a>Verwenden von SQL Server PowerShell-Pfaden
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

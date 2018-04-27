@@ -2,7 +2,7 @@
 title: 'Automatische Seitenreparatur (Verfügbarkeitsgruppen: Datenbankspiegelung) | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 05/17/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: failover-clusters
@@ -23,11 +23,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3977d1893d009b9a427a28d4f320d31c1e747d03
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 9d40bfda55e6d789e4585f812547ef911294c8ec
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="automatic-page-repair-availability-groups-database-mirroring"></a>Automatische Seitenreparatur (Verfügbarkeitsgruppen: Datenbankspiegelung)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

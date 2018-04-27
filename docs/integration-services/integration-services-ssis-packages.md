@@ -1,16 +1,16 @@
 ---
 title: Integration Services-Pakete (SSIS) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 08/31/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQL Server Integration Services packages, about packages
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - Integration Services packages, about packages
 - Integration Services packages
 ms.assetid: 9266bc64-7e1a-4e78-913b-a8deaa9843bf
-caps.latest.revision: 
+caps.latest.revision: 72
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 54d83a301d72577eadd7e042977b572c7f8f1a57
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: ddec07e9150696f640a2f7e45c7234a10c6954dd
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="integration-services-ssis-packages"></a>Integration Services-Pakete (SSIS)
   Bei einem Paket handelt es sich um eine organisierte Auflistung von Verbindungen, Ablaufsteuerungselementen, Datenflusselementen, Ereignishandlern, Variablen, Parametern und Konfigurationen, die Sie entweder mit den grafischen Designtools von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] oder programmgesteuert erstellen.  Sie speichern dann das fertige Paket in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], dem [!INCLUDE[ssIS](../includes/ssis-md.md)] -Paketspeicher oder im Dateisystem, oder Sie können das ssISnoversion-Projekt auf dem Server [!INCLUDE[ssIS](../includes/ssis-md.md)] bereitstellen. Das Paket ist jene Arbeitseinheit, die abgerufen, ausgeführt und gespeichert wird.  

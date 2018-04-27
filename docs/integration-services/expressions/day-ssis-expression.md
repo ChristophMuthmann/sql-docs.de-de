@@ -1,31 +1,31 @@
 ---
 title: DAY (SSIS-Ausdruck) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: expressions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - DAY function
 - dates [Integration Services], DAY
 ms.assetid: d8447187-49df-45b7-a98e-142ad44fd3e2
-caps.latest.revision: 
+caps.latest.revision: 38
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 417f08ab011404918c1f87ecb4aaf14a08e6f4fa
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 936856191fe40b72ac5a5082c2efdc6df56bef94
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="day-ssis-expression"></a>DAY (SSIS-Ausdruck)
   Gibt eine ganze Zahl zurück, die den datepart-Wert für den Tag eines Datums darstellt.  
@@ -47,7 +47,7 @@ DAY(date)
 ## <a name="remarks"></a>Remarks  
  DAY gibt ein NULL-Ergebnis zurück, wenn das Argument NULL ist.  
   
- Ein Datumsliteral muss explizit in einen der date-Datentypen umgewandelt werden. Weitere Informationen finden Sie unter [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
+ Ein Datumsliteral muss explizit in einen der date-Datentypen umgewandelt werden. Weitere Informationen finden Sie unter [Integration Services Datentypen](../../integration-services/data-flow/integration-services-data-types.md).  
   
 > [!NOTE]  
 >  Der Ausdruck wird nicht überprüft, wenn ein Datumsliteral explizit in einen der folgenden Datumsdatentypen umgewandelt wird: DT_DBTIMESTAMPOFFSET oder DT_DBTIMESTAMP2.  

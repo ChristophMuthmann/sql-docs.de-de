@@ -1,30 +1,30 @@
 ---
-title: "Schritt 4: Hinzufügen von Paketkonfigurationen | Microsoft-Dokumentation"
-ms.custom: 
+title: 'Schritt 4: Hinzufügen von Paketkonfigurationen | Microsoft-Dokumentation'
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: tutorial
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - SQL Server 2016
 ms.assetid: e04a5321-63d5-4ec5-85b9-cb4eaf6c87f6
-caps.latest.revision: 
+caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5dc54fff85b068f6ef494bb242949abcc598cfb3
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 38a65a674bed451fb0fbe094459a45e733635ee5
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="lesson-1-4---adding-package-configurations"></a>Lektion 1-4: Hinzufügen von Paketkonfigurationen
 In diesem Schritt fügen Sie jedem Paket eine Konfiguration hinzu. Konfigurationen aktualisieren die Werte von Paketeigenschaften und Paketobjekten zur Laufzeit.  

@@ -2,7 +2,7 @@
 title: SQL Server-PowerShell | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/04/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: powershell
 ms.service: ''
 ms.component: powershell
@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: d9dc11888ffd63ad97031e666d4e63893dc2db3e
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
+ms.openlocfilehash: 320bcd2ff6d62fd015a011850e387b1f3e85e8c7
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sql-server-powershell"></a>SQL Server-PowerShell
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

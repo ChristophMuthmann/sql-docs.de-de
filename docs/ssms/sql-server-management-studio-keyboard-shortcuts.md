@@ -2,7 +2,7 @@
 title: Tastenkombinationen für SQL Server Management Studio | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms
@@ -28,11 +28,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 8d206355149899d1e8f9df816d45b2f64fe2c4cb
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+ms.openlocfilehash: 0a1533dcb778741661206bdf35ab35e5d2efe865
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sql-server-management-studio-keyboard-shortcuts"></a>Tastenkombinationen für SQL Server Management Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -221,7 +221,7 @@ ms.lasthandoff: 04/10/2018
 |Wechseln zwischen Abfrage- und Ergebnisbereich|F6|F6|  
 |Kopieren des Ergebnisrasters und der Kopfzeilen in die Zwischenablage|STRG+UMSCHALT+C|Keine Entsprechung|  
 |Wechseln zum nächsten aktiven Fenster in [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]|ALT+F6|ALT+F6|  
-|Öffnen[!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]|STRG+ALT+P|STRG+ALT+P|  
+|Öffnen [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]|STRG+ALT+P|STRG+ALT+P|  
 |Anzeigen des Dialogfelds "Abfrage-Designer" über das Fenster des Abfrage-Editors|STRG+UMSCHALT+Q|Keine Entsprechung|  
 |Ausführen der gespeicherten Systemprozedur **sp_help**|ALT+F1|ALT+F1|  
 |Ausführen der gespeicherten Systemprozedur **sp_who**|STRG+1|STRG+1|  
@@ -242,7 +242,7 @@ ms.lasthandoff: 04/10/2018
 |------------|-----------------------------|---------------------------------|  
 |Einfügen einer neuen Zeile|EINGABE oder UMSCHALT+EINGABE|EINGABE oder UMSCHALT+EINGABE|  
 |Auslagern der Zeichen auf eine Seite des Cursors (gilt nicht für den SQL-Editor)|STRG+T|STRG+T|  
-|Löschen eines Zeichens rechts vom Cursor|DELETE|DELETE|  
+|Löschen eines Zeichens rechts vom Cursor|Delete|Delete|  
 |Löschen eines Zeichens links vom Cursor|RÜCKTASTE<br /><br /> oder<br /><br /> UMSCHALT+<br /><br /> RÜCKTASTE|RÜCKTASTE<br /><br /> oder<br /><br /> UMSCHALT+<br /><br /> RÜCKTASTE|  
 |Löschen des Leerzeichens in der Auswahl oder Löschen des Leerzeichens, das an den Cursor angrenzt, wenn keine Auswahl getroffen wurde|STRG+K, C|Keine Entsprechung|  
 |Einfügen der für den Editor konfigurierten Anzahl von Leerzeichen|TAB|TAB|  
@@ -467,7 +467,7 @@ ms.lasthandoff: 04/10/2018
 |Wechseln zum vorherigen Steuerelement auf der Seite|UMSCHALT+TAB|Keine Entsprechung|  
 |Anzeigen des Rasters auf der Entwurfsoberfläche|EINGABE|Keine Entsprechung|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Anpassen von Menüs und Tastenkombinationen](http://msdn.microsoft.com/library/fb4edf3c-71b6-4645-b1d1-ddfdd69f0d7b)  
   
   

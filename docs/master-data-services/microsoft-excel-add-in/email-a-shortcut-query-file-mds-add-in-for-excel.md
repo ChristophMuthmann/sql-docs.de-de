@@ -2,7 +2,7 @@
 title: Senden einer Shortcutabfragedatei (MDS-Add-In für Excel) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: mds
 ms.service: ''
 ms.component: microsoft-excel-add-in
@@ -18,11 +18,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 00d51ace2c2e5bb86acae6ccd18994c9a8de749c
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 8ad14b963b832b5c2da3275a63321a6e368c01a6
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="email-a-shortcut-query-file-mds-add-in-for-excel"></a>Senden einer Shortcutabfragedatei (MDS-Add-In für Excel)
 

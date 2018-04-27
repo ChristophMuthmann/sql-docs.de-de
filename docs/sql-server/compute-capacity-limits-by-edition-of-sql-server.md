@@ -2,8 +2,8 @@
 title: Rechenkapazitätsgrenzen von bestimmten Editionen von SQL Server | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/06/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod: sql
+ms.prod_service: sql
 ms.service: ''
 ms.component: sql-non-specified
 ms.reviewer: ''
@@ -22,11 +22,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 50adedb266ef265f7e829826bb4acc54cd60dfbb
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 66a446fe6ffb9286ee204c7ed9a8722e24ed2c2a
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="compute-capacity-limits-by-edition-of-sql-server"></a>Rechenkapazitätsgrenzen von bestimmten Editionen von SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

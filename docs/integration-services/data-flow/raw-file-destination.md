@@ -1,16 +1,16 @@
 ---
 title: Rohdatendatei-Ziel | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.rawfiledest.f1
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - writing raw data
 - Raw File destination
 ms.assetid: d311b458-aefc-4b4d-b1a1-4c0ebbb34214
-caps.latest.revision: 
+caps.latest.revision: 59
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1a9ce999e727a77b303b9978f59dc980b7d2ca21
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 5bf84808e33f47667720fc4aad9f3a81ee72e0b7
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="raw-file-destination"></a>Raw File Destination
   Das Rohdatendatei-Ziel schreibt Rohdaten in eine Datei. Die Daten liegen im systemeigenen Zielformat vor, sodass die Daten nicht übersetzt und kaum analysiert werden müssen. Dies bedeutet, dass das Rohdatendatei-Ziel Daten schneller als andere Ziele, wie z. B. Flatfile- und OLE DB-Ziele, schreiben kann.  

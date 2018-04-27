@@ -1,27 +1,28 @@
 ---
 title: Verwalten der Authentifizierung in PowerShell des Datenbankmoduls | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: powershell
-ms.service: 
+ms.service: ''
 ms.component: powershell
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ab9212a6-6628-4f08-a38c-d3156e05ddea
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f2693e570fd1db9a823cd602c871f699e14c06e6
-ms.sourcegitcommit: 779f3398e4e3f4c626d81ae8cedad153bee69540
+ms.openlocfilehash: 4d3682878ce033a4cc927beddde3d7ca0bc83f1e
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="manage-authentication-in-database-engine-powershell"></a>Verwalten der Authentifizierung in PowerShell des Datenbankmoduls
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

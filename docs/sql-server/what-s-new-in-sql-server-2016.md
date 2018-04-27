@@ -2,8 +2,8 @@
 title: Was ist neu in SQLServer 2016
 ms.custom: ''
 ms.date: 07/21/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod: sql
+ms.prod_service: sql
 ms.service: ''
 ms.component: sql-non-specified
 ms.reviewer: ''
@@ -25,11 +25,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 0c8b7cbe768aa6c443bf803f3a4fcf65f50dfeb6
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: d6ac83721d53902cca28f109056c140836054c0c
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="whats-new-in-sql-server-2016"></a>Was ist neu in SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]  

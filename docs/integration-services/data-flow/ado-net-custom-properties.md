@@ -1,28 +1,28 @@
 ---
 title: Benutzerdefinierte Eigenschaften von ADO.NET | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e062a9ab-1e6b-4061-845a-4f8a0552b09d
-caps.latest.revision: 
+caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2823f22fa0396451fbf5de1b5dd3840559ca1e02
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 5739a81624bce259ade7a8b9c2b5cd4564b4756f
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="ado-net-custom-properties"></a>Benutzerdefinierte Eigenschaften von ADO.NET
   **Benutzerdefinierte Eigenschaften von Quellen**  

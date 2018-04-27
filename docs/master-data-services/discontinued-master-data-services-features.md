@@ -2,7 +2,7 @@
 title: Nicht mehr unterstützte Funktionen von Master Data Services | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: mds
 ms.service: ''
 ms.component: non-specific
@@ -18,11 +18,11 @@ author: leolimsft
 ms.author: lle
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: ff82209d7aa638a97c4b27972bd46633593a9d1d
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 757744ca58a377d00a345c4c7e2b671b29c8a84e
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="discontinued-master-data-services-features"></a>Eingestellte Master Data Services-Funktionen
 

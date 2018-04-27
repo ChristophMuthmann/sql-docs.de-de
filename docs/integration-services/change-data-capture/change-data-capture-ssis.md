@@ -1,31 +1,31 @@
 ---
 title: Change Data Capture (SSIS) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: change-data-capture
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - incremental loads [SQL Server change data capture]
 - change data capture [SQL Server], Integration Services and
 ms.assetid: c4aaba1b-73e5-4187-a97b-61c10069cc5a
-caps.latest.revision: 
+caps.latest.revision: 38
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d4b1a7480113be51245c8c01a087a65ce616cb2c
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 0be4c20b38af55e9476d94ac6be2803f93e24e50
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="change-data-capture-ssis"></a>Change Data Capture (SSIS)
   In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]bietet Change Data Capture eine effektive Lösung für die Herausforderung, inkrementelles Laden aus Quelltabellen in Data Marts und Data Warehouses effizient auszuführen.  

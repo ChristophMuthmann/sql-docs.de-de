@@ -2,7 +2,7 @@
 title: Erstellen einer Wissensdatenbank | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/04/2013
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: data-quality-services
 ms.service: ''
 ms.component: data-quality-services
@@ -21,11 +21,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 228c1fafe286aed263fe8093f8a7b739918c1dee
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: cc53cc2fe0e492e46a7367a8ed9c9454939e6c3a
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="create-a-knowledge-base"></a>Erstellen einer Wissensdatenbank
 

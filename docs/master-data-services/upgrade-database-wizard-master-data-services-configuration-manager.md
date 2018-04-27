@@ -2,7 +2,7 @@
 title: Datenbankupgrade-Assistent (Konfigurations-Manager für Master Data Services) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/20/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: mds
 ms.service: ''
 ms.component: non-specific
@@ -18,11 +18,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 87d52c52db0f17dea7f9f6ecf029cb9be15d874a
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: d89de9f5031fc8834299079518190ea12ca7e630
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="upgrade-database-wizard-master-data-services-configuration-manager"></a>Datenbankupgrade-Assistent (Konfigurations-Manager für Master Data Services)
 

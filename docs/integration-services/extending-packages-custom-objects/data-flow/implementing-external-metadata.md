@@ -1,15 +1,15 @@
 ---
 title: Implementieren externer Metadaten | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: extending-packages-custom-objects
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
@@ -27,16 +27,16 @@ helpviewer_keywords:
 - custom data flow components [Integration Services], external metadata
 - external metadata [Integration Services]
 ms.assetid: 8f5bd3ed-3e79-43a4-b6c1-435e4c2cc8cc
-caps.latest.revision: 
+caps.latest.revision: 36
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8c3c5b7a6d9aa9eb87c80d5a5937b3d26d6c33d2
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 8cb55c70d4f30ced2538bea128672dfc66563916
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="implementing-external-metadata"></a>Implementieren externer Metadaten
   Wenn die Verbindung einer Komponente mit einer Datenquelle getrennt ist, können Sie mithilfe der <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSExternalMetadataColumnCollection100>-Schnittstelle die Spalten in den Eingabe- und Ausgabespaltenauflistungen anhand der Spalten der externen Datenquelle überprüfen. Mit dieser Schnittstelle können Sie eine Momentaufnahme der Spalten der externen Datenquelle verwalten und diese Spalten den Eingabe- und Ausgabespaltenauflistungen der Komponente zuordnen.  

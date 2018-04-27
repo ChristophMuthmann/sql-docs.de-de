@@ -1,15 +1,15 @@
 ---
 title: Herstellen einer Verbindung mit Datenquellen in einem benutzerdefinierten Task | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: extending-packages-custom-objects
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
@@ -25,16 +25,16 @@ helpviewer_keywords:
 - connections [Integration Services], external data sources
 - SSIS custom tasks, external data sources
 ms.assetid: 9f0b3a43-3eaa-4b3c-bb08-29b630c11306
-caps.latest.revision: 
+caps.latest.revision: 51
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a708c9c85fccff10691014d4696147b7d3bb39e8
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 07d083f6a5d705f5b93f5e49846efa9d7990faac
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="connecting-to-data-sources-in-a-custom-task"></a>Herstellen einer Verbindung mit Datenquellen in einem benutzerdefinierten Task
   Tasks stellen eine Verbindung mit externen Datenquellen her, um Daten mit einem Verbindungs-Manager abzurufen oder zu speichern. Zur Entwurfszeit stellt ein Verbindungs-Manager eine logische Verbindung dar und beschreibt Schlüsselinformationen wie den Servernamen und Authentifizierungseigenschaften. Zur Laufzeit rufen Tasks die <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.AcquireConnection%2A>-Methode des Verbindung-Managers auf, um die physische Verbindung mit der Datenquelle herzustellen.  

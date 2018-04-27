@@ -2,7 +2,7 @@
 title: Importieren von Bereinigungsprojektwerten in eine Domäne | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: data-quality-services
 ms.service: ''
 ms.component: data-quality-services
@@ -20,11 +20,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8d2b62c96f00c9d95ae79c9b213431061e56dbce
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: dbc67e41dc12b72f8f9ce8dc62d12032b1d608f4
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="import-cleansing-project-values-into-a-domain"></a>Importieren von Bereinigungsprojektwerten in eine Domäne
 

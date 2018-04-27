@@ -2,7 +2,7 @@
 title: Deinstallieren von Reporting Services | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: install
@@ -17,11 +17,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: b0a53119fd02e99b49a68ff62a5d8bb76df89661
-ms.sourcegitcommit: 094c46e7fa6de44735ed0040c65a40ec3d951b75
+ms.openlocfilehash: 4ff4774b488dcc5ef5b42894003bebe561f2fa55
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="uninstall-reporting-services"></a>Deinstallieren von Reporting Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

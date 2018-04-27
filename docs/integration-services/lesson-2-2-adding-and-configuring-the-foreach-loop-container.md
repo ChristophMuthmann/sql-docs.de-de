@@ -1,30 +1,30 @@
 ---
-title: "Schritt 2: Hinzufügen und Konfigurieren des Foreach-Schleifencontainers | Microsoft-Dokumentation"
-ms.custom: 
+title: 'Schritt 2: Hinzufügen und Konfigurieren des Foreach-Schleifencontainers | Microsoft-Dokumentation'
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: tutorial
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 88a973cc-0f23-4ecf-adb6-5b06279c2df6
-caps.latest.revision: 
+caps.latest.revision: 36
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 80a4fa426a322346de99aafef393e75a67e7e82a
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: dcbdf3baf515ac83a4910193ef0bd25b8f3f597a
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="lesson-2-2---adding-and-configuring-the-foreach-loop-container"></a>Lektion 2-2 – Hinzufügen und Konfigurieren des Foreach-Schleifencontainers
 In dieser Aufgabe fügen Sie die Möglichkeit zum Schleifendurchlauf für einen Ordner von Flatfiles hinzu und wenden die auch in Lektion 1 verwendete Datenflusstransformation auf jede dieser Flatfiles an. Dies geschieht durch das Hinzufügen eines Foreach-Schleifencontainers zur Ablaufsteuerung und dessen Konfigurierung.  
@@ -54,7 +54,7 @@ Nachdem Sie diese Änderungen am Paket vorgenommen haben, iteriert der Foreach-S
   
 4.  Geben Sie auf der Seite **Allgemein** im Dialogfeld **Foreach-Schleifen-Editor** für **Name** **Foreach File in Folder**(Foreach-Datei in Ordner) ein. Klicken Sie auf **OK**.  
   
-5.  Klicken Sie mit der rechten Maustaste auf den Foreach-Schleifencontainer, klicken Sie auf **Eigenschaften**, und prüfen Sie im Eigenschaftenfenster, ob die Eigenschaft **LocaleID** auf **Englisch (USA)**festgelegt ist.  
+5.  Klicken Sie mit der rechten Maustaste auf den Foreach-Schleifencontainer, klicken Sie auf **Eigenschaften**, und prüfen Sie im Eigenschaftenfenster, ob die Eigenschaft **LocaleID** auf **Englisch (USA)** festgelegt ist.  
   
 ### <a name="to-configure-the-enumerator-for-the-foreach-loop-container"></a>So konfigurieren Sie den Enumerator für den Foreach-Schleifencontainer  
   

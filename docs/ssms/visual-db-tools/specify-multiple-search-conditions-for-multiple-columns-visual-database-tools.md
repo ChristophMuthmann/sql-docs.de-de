@@ -1,15 +1,16 @@
 ---
-title: "Angeben mehrerer Suchbedingungen für mehrere Spalten | Microsoft-Dokumentation"
-ms.custom: 
+title: Angeben mehrerer Suchbedingungen für mehrere Spalten | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - search criteria [SQL Server], multiple conditions
@@ -18,19 +19,20 @@ helpviewer_keywords:
 - OR operator
 - AND, Criteria pane
 ms.assetid: 06617729-0d0b-4da2-9890-b7e2f5cdbc7b
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 44f66f8b551962c6737db71f8e058514cc69c5b1
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 153299bc0ae2b310599d7ac02a6d826ebdc8e497
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="specify-multiple-search-conditions-for-multiple-columns-visual-database-tools"></a>Angeben mehrerer Suchbedingungen für mehrere Spalten (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Sie können den Bereich der Abfrage erweitern oder einschränken, indem Sie verschiedene Spalten in die Suchbedingung aufnehmen. Auf diese Weise können Sie beispielsweise folgende Vorgänge durchführen:  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Sie können den Bereich der Abfrage erweitern oder einschränken, indem Sie verschiedene Spalten in die Suchbedingung aufnehmen. Auf diese Weise können Sie beispielsweise folgende Vorgänge durchführen:  
   
 -   Sie können nach Mitarbeitern suchen, die entweder seit mehr als fünf Jahren in der Firma arbeiten oder bestimmte Tätigkeiten ausführen.  
   

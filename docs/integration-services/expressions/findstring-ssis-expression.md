@@ -2,7 +2,7 @@
 title: FINDSTRING (SSIS-Ausdruck) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
 ms.service: ''
 ms.component: expressions
@@ -20,11 +20,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 56520a56a70622e23e7c407ed788f8f8f0ba3dc6
-ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
+ms.openlocfilehash: 60fc5f15d74d1b735f77734883017a878ea2b8d3
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="findstring-ssis-expression"></a>FINDSTRING (SSIS-Ausdruck)
   Gibt den Speicherort für das angegebene Auftreten einer Zeichenfolge innerhalb eines Zeichenausdrucks zurück. Das Ergebnis ist der einsbasierte Index für das Auftreten. Der string-Parameter muss zu einem Zeichenausdruck und der occurrence-Parameter zu einer ganzen Zahl ausgewertet werden. Wenn die Zeichenfolge nicht gefunden wird, wird 0 zurückgegeben. Wenn die Zeichenfolge weniger auftritt als im occurrence-Argument angegeben, wird ebenfalls 0 zurückgegeben.  

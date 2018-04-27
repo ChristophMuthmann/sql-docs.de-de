@@ -2,7 +2,7 @@
 title: Löschen einer Zeile (MDS-Add-In für Excel) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: mds
 ms.service: ''
 ms.component: microsoft-excel-add-in
@@ -18,11 +18,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c6691111b168fc526db8be9a0cb393e9e7ba868d
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 4d601c76886b27ae86160af19a25039e8c02f243
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="delete-a-row-mds-add-in-for-excel"></a>Löschen einer Zeile (MDS-Add-In für Excel)
 

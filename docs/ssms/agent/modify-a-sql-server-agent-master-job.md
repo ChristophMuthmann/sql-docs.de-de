@@ -2,7 +2,7 @@
 title: Ändern eines Masterauftrags für einen SQL Server-Agent (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 02/28/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms-agent
@@ -23,11 +23,11 @@ ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: ddc9137b0e579a4135730dc6dc222e8e363ff36d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 5bb7b11ed1c338d9f5cd5ea19c82e3ac0c49f410
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="modify-a-sql-server-agent-master-job"></a>Ändern eines Masterauftrags für einen SQL Server-Agent
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

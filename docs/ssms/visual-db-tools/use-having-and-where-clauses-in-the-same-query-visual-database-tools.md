@@ -1,15 +1,16 @@
 ---
 title: Verwenden von HAVING- und WHERE-Klauseln in derselben Abfrage | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - search criteria [SQL Server], excluding rows
@@ -22,19 +23,20 @@ helpviewer_keywords:
 - WHERE clause, search criteria
 - excluding rows
 ms.assetid: 1e07cf56-b4b7-4c49-8ddd-c276812a7148
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: ab0f50e4144fa734290adf39d3de11c709208ddc
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 417bc39cf328ef9af8877553da8db4039d23e5f8
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="use-having-and-where-clauses-in-the-same-query-visual-database-tools"></a>Verwenden von HAVING- und WHERE-Klauseln in derselben Abfrage (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] In einigen Fällen empfiehlt es sich, einzelne Zeilen aus Gruppen auszuschließen (mit einer WHERE-Klausel), bevor eine Bedingung auf Gruppen als Ganzes angewendet wird (mit einer HAVING-Klausel).  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+In einigen Fällen kann es sinnvoll sein, einzelne Zeilen aus Gruppen auszuschließen (mit einer WHERE-Klausel), bevor eine Bedingung auf Gruppen als Ganzes (mithilfe der HAVING-Klausel) angewendet wird.  
   
 Die HAVING-Klausel ähnelt der WHERE-Klausel, gilt jedoch nur für Gruppen als Ganzes (d. h. für die Zeilen im Resultset, die Gruppen darstellen), während die WHERE-Klausel auf einzelne Zeilen angewendet wird. Eine Abfrage kann sowohl eine WHERE-Klausel als auch eine HAVING-Klausel enthalten. Dabei trifft Folgendes zu:  
   

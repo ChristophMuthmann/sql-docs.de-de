@@ -1,28 +1,28 @@
 ---
 title: Benutzerdefinierte Eigenschaften des CDC-Steuerungstasks | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: control-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 2a073699-79a2-4ea1-a68e-fc17a80b74ba
-caps.latest.revision: 
+caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 40805d8c0f2e070df89344babfbc607a7cd6c66f
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 2c6e91a8131da19b8c3c38a261bf93bbaa464f0b
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="cdc-control-task-custom-properties"></a>Benutzerdefinierte Eigenschaften des CDC-Steuerungstasks
   In der folgenden Tabelle werden die benutzerdefinierten Eigenschaften des CDC-Steuerungstasks beschrieben. Alle Eigenschaften weisen Lese-/Schreibzugriff auf.  
@@ -30,7 +30,7 @@ ms.lasthandoff: 01/25/2018
 |Eigenschaftenname|Datentyp|Description|  
 |-------------------|---------------|-----------------|  
 |Verbindung|ADO.NET-Verbindung|Eine ADO.NET-Verbindung zur [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -CDC-Datenbank für Zugriff auf die Änderungstabellen und den CDC-Status, falls diese Daten in derselben Datenbank gespeichert werden.<br /><br /> Die Verbindung muss zu einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank hergestellt werden, die für CDC aktiviert ist und in der sich die ausgewählte Änderungstabelle befindet.|  
-|TaskOperation|Ganze Zahl (Enumeration)|Der ausgewählte Vorgang für den CDC-Steuerungstask. Die möglichen Werte sind **Mark Initial Load Start**, **Mark Initial Load End**, **Mark CDC Start**, **Get Processing Range**, **Mark Processed Range**und **Reset CDC State**.<br /><br /> Wenn Sie beim Arbeiten mit **CDC (also nicht mit Oracle) die Option**MarkCdcStart **,**MarkInitialLoadStart **oder** MarkInitialLoadEnd [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auswählen, muss im Verbindungs-Manager ein Benutzer mit der Berechtigung  **db_owner** oder **sysadmin**angegeben werden.<br /><br /> Weitere Informationen zu diesen Vorgängen finden Sie unter [CDC Control Task Editor](../../integration-services/control-flow/cdc-control-task-editor.md) und [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md).|  
+|TaskOperation|Ganze Zahl (Enumeration)|Der ausgewählte Vorgang für den CDC-Steuerungstask. Die möglichen Werte sind **Mark Initial Load Start**, **Mark Initial Load End**, **Mark CDC Start**, **Get Processing Range**, **Mark Processed Range**und **Reset CDC State**.<br /><br /> Wenn Sie beim Arbeiten mit **CDC (also nicht mit Oracle) die Option**MarkCdcStart **,** MarkInitialLoadStart **oder** MarkInitialLoadEnd [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auswählen, muss im Verbindungs-Manager ein Benutzer mit der Berechtigung  **db_owner** oder **sysadmin**angegeben werden.<br /><br /> Weitere Informationen zu diesen Vorgängen finden Sie unter [CDC Control Task Editor](../../integration-services/control-flow/cdc-control-task-editor.md) und [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md).|  
 |OperationParameter|Zeichenfolge|Wird momentan mit dem **MarkCdcStart** -Vorgang verwendet. Dieser Parameter ermöglicht eine zusätzliche Eingabe, die für den jeweiligen Vorgang erforderlich ist. Beispiel: Für den **MarkCdcStart** -Vorgang erforderliche LSN-Nummer|  
 |StateVariable|Zeichenfolge|Eine SSIS-Paketvariable, die den CDC-Status des aktuellen CDC-Kontexts speichert. Der CDC-Steuerungstask liest und schreibt den Status in die **StateVariable** und führt das Laden oder das Speichern in einem persistenten Speicher nur durch, wenn **AutomaticStatePersistence** ausgewählt wird. Weitere Informationen finden Sie unter [Definieren einer Statusvariablen](../../integration-services/data-flow/define-a-state-variable.md).|  
 |AutomaticStatePersistence|Boolean|Der CDC-Steuerungstask liest den CDC-Status aus der CDC-Statuspaketvariablen. Nach einem Vorgang aktualisiert der CDC-Steuerungstask den Wert der CDC-Statuspaketvariablen. Die **AutomaticStatePersistence** -Eigenschaft teilt dem CDC-Steuerungstask mit, wer zwischen den Ausführungen des SSIS-Pakets für das Beibehalten des CDC-Statuswerts zuständig ist.<br /><br /> Wenn diese Eigenschaft den Wert **true**hat, lädt der CDC-Steuerungstask den Wert der CDC-Statusvariablen automatisch aus einer Statustabelle. Wenn der CDC-Steuerungstask den Wert der CDC-Statusvariablen aktualisiert, wird auch der dazugehörige Wert von **table.stores**mit dem gleichen Status aktualisiert, der Status in einer speziellen Tabelle gespeichert und die Statusvariable aktualisiert. Der Entwickler kann steuern, welche [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank diese Statustabelle und ihren Namen enthält. Die Struktur dieser Statustabelle wird vordefiniert.<br /><br /> Wenn **false**gilt, führt der CDC-Steuerungstask das Beibehalten seines Werts nicht durch. Wenn true gilt, speichert der CDC-Steuerungstask den Status in einer speziellen Tabelle und aktualisiert die StateVariable.<br /><br /> Der Standardwert ist **true**und gibt an, dass die Statusbeibehaltung automatisch aktualisiert wird.|  

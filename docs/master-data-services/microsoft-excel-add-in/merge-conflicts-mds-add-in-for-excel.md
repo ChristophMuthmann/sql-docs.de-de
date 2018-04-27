@@ -2,7 +2,7 @@
 title: Konflikte zusammenführen (MDS-Add-In für Excel) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: mds
 ms.service: ''
 ms.component: microsoft-excel-add-in
@@ -18,11 +18,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fd0eb09c16ca108270b69669825e2ced4dd28631
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 0764aa9c7ff87d7fbbc0ac85fc39132fdcb6029f
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="merge-conflicts-mds-add-in-for-excel"></a>Konflikte zusammenführen (MDS-Add-In für Excel)
 

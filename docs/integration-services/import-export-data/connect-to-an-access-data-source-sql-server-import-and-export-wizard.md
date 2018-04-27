@@ -1,28 +1,28 @@
 ---
 title: Herstellen einer Verbindung mit einer Access-Datenquelle (SQL Server-Import/Export-Assistent) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 06/20/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: import-export-data
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: b44c159a-c33d-4f3c-bdb8-9832f35317c8
-caps.latest.revision: 
+caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e3217fe03497c2d72f3ce0a2c321df5e089ce4e1
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 9cfa774cf95334de48e79c0a6db9ee08ab8b709c
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="connect-to-an-access-data-source-sql-server-import-and-export-wizard"></a>Herstellen einer Verbindung mit einer Access-Datenquelle (SQL Server-Import/Export-Assistent)
 In diesem Artikel wird erläutert, wie Sie eine Verbindung mit einer **Microsoft Access**-Datenquelle über die Seiten **Datenquelle auswählen** oder **Ziel auswählen** des SQL Server-Import/Export-Assistenten herstellen.

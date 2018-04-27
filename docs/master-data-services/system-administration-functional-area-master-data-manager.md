@@ -2,7 +2,7 @@
 title: Funktionsbereich „Systemverwaltung“ (Master Data Manager) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 04/01/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: mds
 ms.service: ''
 ms.component: non-specific
@@ -18,11 +18,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ed7a2faa6496d1f9f0a4b5a06074ca33f5996c9e
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: faa8085ca2df175dfd233ff9b3c74718f3370ef7
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="system-administration-functional-area-master-data-manager"></a>Funktionsbereich "Systemverwaltung" (Master Data Manager)
 

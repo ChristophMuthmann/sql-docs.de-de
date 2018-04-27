@@ -27,11 +27,11 @@ ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: bf75cf8e0b611e3647f0ca61eccf0b055736003a
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 10e6b3b0b66746280c70da06fbdb1427800f1ba7
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="nchar-transact-sql"></a>NCHAR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -61,8 +61,8 @@ NCHAR ( integer_expression )
   
 ```  
 CREATE DATABASE test COLLATE Finnish_Swedish_100_CS_AS_SC;  
-DECLARE @d nvarchar(10) = N'ࣅ炙   
--– Old style method.  
+DECLARE @d nvarchar(10) = N'𣅿';
+-- Old style method.  
 SELECT NCHAR(0xD84C) + NCHAR(0xDD7F);   
   
 -- Preferred method.   

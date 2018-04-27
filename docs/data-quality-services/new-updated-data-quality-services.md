@@ -7,14 +7,14 @@ ms.author: genemi
 ms.topic: article
 ms.custom: UpdArt.exe
 ms.suite: sql
-ms.prod_service: sql-non-specified
+ms.prod_service: sql
 ms.component: dqs
 ms.date: 02/03/2018
-ms.openlocfilehash: 62283c1e1cc1c809dc46d808d894527dc78415c0
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 0b5d293dfa5f440dc11b47e0a7a3d71aab8ee444
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="new-and-recently-updated-data-quality-services-for-sql-server"></a>Neu und kürzlich aktualisiert: Data Quality Services für SQL Server
 

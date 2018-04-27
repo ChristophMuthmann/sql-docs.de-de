@@ -1,28 +1,28 @@
 ---
 title: Integration Services (SSIS) in einem Cluster | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: service
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 0216266d-d866-4ea2-bbeb-955965f4d7c2
-caps.latest.revision: 
+caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 15c927bf78faa7705a27dafce3517de7f05e50d4
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: e76d8815ad02797233c8daada93fc54e5433d106
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="integration-services-ssis-in-a-cluster"></a>Integration Services (SSIS) in einem Cluster
   Für [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ist Clustering nicht zu empfehlen, da es sich beim [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Dienst nicht um einen Cluster- oder clusterfähigen Dienst handelt, der auch keine Failoverunterstützung zwischen Clusterknoten bietet. In einer Clusterumgebung sollte [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] deshalb auf jedem Knoten im Cluster als eigenständiger Dienst installiert und gestartet werden.  
@@ -38,7 +38,7 @@ ms.lasthandoff: 01/25/2018
   
 -   **Wenn ein Failover auftritt, wird die Paketausführung nicht neu gestartet.**
     
-    Zur Wiederherstellung nach Paketfehlern können Pakete an Prüfpunkten neu gestartet werden. Dazu muss der Dienst nicht als Clusterressource konfiguriert sein. Weitere Informationen finden Sie unter [Restart Packages by Using Checkpoints](../../integration-services/packages/restart-packages-by-using-checkpoints.md).  
+    Zur Wiederherstellung nach Paketfehlern können Pakete an Prüfpunkten neu gestartet werden. Dazu muss der Dienst nicht als Clusterressource konfiguriert sein. Weitere Informationen finden Sie unter [Neustarten von Paketen mit Prüfpunkten](../../integration-services/packages/restart-packages-by-using-checkpoints.md).  
   
 -   Wenn Sie den [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Dienst in einer anderen Ressourcengruppe als [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]konfigurieren, können Sie [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] auf Clientcomputern nicht zum Verwalten von Paketen verwenden, die in der msdb-Datenbank gespeichert sind. Der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Dienst kann in diesem Doppelhopszenario keine Anmeldeinformationen delegieren.  
   

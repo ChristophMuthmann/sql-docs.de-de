@@ -7,14 +7,14 @@ ms.author: genemi
 ms.topic: article
 ms.custom: UpdArt.exe
 ms.suite: sql
-ms.prod_service: sql-non-specified
+ms.prod_service: sql
 ms.component: ssdt
 ms.date: 02/03/2018
-ms.openlocfilehash: ad139f5ff9389c1a04a7f077d61facc7643db323
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: 2b754531dd25a21444a24a30af14f528ec26a170
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="new-and-recently-updated-sql-server-data-tools-ssdt"></a>Neu und zuletzt kürzlich aktualisiert: SQL Server Data Tools (SSDT)
 

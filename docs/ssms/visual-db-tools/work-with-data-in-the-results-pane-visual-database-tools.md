@@ -1,15 +1,16 @@
 ---
 title: Verwenden von Daten im Ergebnisbereich (Visual Database Tools) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - View Designer, Results pane
@@ -21,19 +22,20 @@ helpviewer_keywords:
 - queries [SQL Server], results
 - Results pane
 ms.assetid: 4f8a0080-91ef-4442-83ae-53be2f478c54
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 506bb355413caeac330509853278f667bf73ee49
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 6eea731585668ee27cc81e330744e5aa4fac60e6
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="work-with-data-in-the-results-pane-visual-database-tools"></a>Verwenden von Daten im Ergebnisbereich (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Nach der Ausführung einer Abfrage oder Sicht werden die Ergebnisse im Ergebnisbereich angezeigt. Sie können anschließend mit diesen Ergebnissen arbeiten. Sie können z. B. Zeilen hinzufügen und löschen, Daten eingeben oder ändern und bequem durch umfangreiche Resultsets navigieren.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Nach der Ausführung einer Abfrage oder Sicht werden die Ergebnisse im Ergebnisbereich angezeigt. Sie können anschließend mit diesen Ergebnissen arbeiten. Sie können z. B. Zeilen hinzufügen und löschen, Daten eingeben oder ändern und bequem durch umfangreiche Resultsets navigieren.  
   
 Die folgenden Informationen können Ihnen helfen, Probleme zu vermeiden und mit den Resultsets effektiv zu arbeiten.  
   
@@ -123,7 +125,7 @@ Das, was die Datenbank an den Ergebnisbereich zurückgibt, wird größtenteils v
   
 -   Binäre Datentypen sind für Benutzer, die im Ergebnisbereich arbeiten, häufig nicht sinnvoll, und für den Download dieser Datentypen kann sehr viel Zeit benötigt werden. Deshalb werden sie als *<Binary data>* oder *Null*dargestellt.  
   
--   Genauigkeit und Skalierung können nicht immer bewahrt werden. Der Ergebnisbereich unterstützt beispielsweise eine Genauigkeit von 27. Liegen die Daten in einem Datentyp mit höherer Genauigkeit vor, können die Daten abgeschnitten oder als *<Unable to read data>*dargestellt werden.  
+-   Genauigkeit und Skalierung können nicht immer bewahrt werden. Der Ergebnisbereich unterstützt beispielsweise eine Genauigkeit von 27. Liegen die Daten in einem Datentyp mit höherer Genauigkeit vor, können die Daten abgeschnitten oder als *<Unable to read data>* dargestellt werden.  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Ausführen grundlegender Vorgänge mit Abfragen &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  

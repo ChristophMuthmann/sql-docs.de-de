@@ -1,15 +1,16 @@
 ---
-title: "Löschen von Abfrageergebnissen (Visual Database Tools) | Microsoft-Dokumentation"
-ms.custom: 
+title: Löschen von Abfrageergebnissen (Visual Database Tools) | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - result sets [SQL Server], queries
@@ -18,19 +19,20 @@ helpviewer_keywords:
 - Results pane
 - clearing query results
 ms.assetid: 4ed9692e-5170-47d4-8b0b-028c967d47ff
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bb44998b653be36584e8f27e78719b81b76630b0
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 87c6f56316a8fb2caba0d0dc465432f46f243921
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="clear-query-results-visual-database-tools"></a>Löschen von Abfrageergebnissen (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Nachdem Sie im **Abfrage- und Sicht-Designer** eine Abfrage ausgeführt haben, können Sie den Inhalt des Ergebnisbereichs löschen. Diese Vorgehensweise gilt für Abfragen, die mithilfe der Optionen **Sicht öffnen** oder **Tabelle öffnen** im Objekt-Explorer erstellt wurden. In[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]kann nach dem Ausführen einer Abfrage im Abfrage-Editor der Inhalt des Ergebnisbereichs nur durch Schließen des Abfrage-Editorfensters oder durch Ausführen einer weiteren Abfrage gelöscht werden.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Nachdem Sie im **Abfrage- und Sicht-Designer**eine Abfrage ausgeführt haben, können Sie den Inhalt des Ergebnisbereichs löschen. Diese Vorgehensweise gilt für Abfragen, die mithilfe der Optionen **Sicht öffnen** oder **Tabelle öffnen** im Objekt-Explorer erstellt wurden. In[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]kann nach dem Ausführen einer Abfrage im Abfrage-Editor der Inhalt des Ergebnisbereichs nur durch Schließen des Abfrage-Editorfensters oder durch Ausführen einer weiteren Abfrage gelöscht werden.  
   
 > [!NOTE]  
 > Damit werden keine Änderungen rückgängig gemacht, die Sie an der Datenbank vorgenommen haben. Weitere Informationen zur Funktionsweise des Ergebnisbereichs finden Sie unter [Verwenden von Daten im Ergebnisbereich &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-data-in-the-results-pane-visual-database-tools.md).  

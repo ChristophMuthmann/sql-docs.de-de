@@ -1,16 +1,16 @@
 ---
-title: "Identifizieren ähnlicher Datenzeilen mithilfe der Transformation für Fuzzygruppierung | Microsoft-Dokumentation"
-ms.custom: 
+title: Identifizieren ähnlicher Datenzeilen mithilfe der Transformation für Fuzzygruppierung | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Fuzzy Grouping transformation
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - similar data rows [Integration Services]
 - fuzzy matches
 ms.assetid: ffcb41a6-e23d-49ea-8c32-ac980e3dc495
-caps.latest.revision: 
+caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 138dc14412f8d0b3f6ea20dbb8fb5bfa09101649
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: ef250666051d2cff5371e67cf39734d521911829
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="identify-similar-data-rows-by-using-the-fuzzy-grouping-transformation"></a>Identifizieren ähnlicher Datenzeilen mithilfe der Transformation für Fuzzygruppierung
   Das Paket muss bereits mindestens einen Datenflusstask und eine Quelle enthalten, damit Sie eine Transformation für Fuzzygruppierung hinzufügen und konfigurieren können.  

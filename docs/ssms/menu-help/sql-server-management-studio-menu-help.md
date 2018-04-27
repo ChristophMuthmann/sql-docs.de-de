@@ -1,33 +1,35 @@
 ---
-title: "SQL Server Management Studio-Hilfemenü | Microsoft-Dokumentation"
-ms.custom: 
+title: SQL Server Management Studio-Hilfemenü | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-menu
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], Help
 - SQL Server Management Studio Help [SQL Server], menu items
 ms.assetid: 5b8b2e45-bee6-42c8-93d6-31432f4d5699
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f1a8a62081f11a1475f73505d5963616c663621f
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 70f0db0beaf901244698b848d29a45cb3619712d
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sql-server-management-studio-menu-help"></a>SQL Server Management Studio-Hilfemenü
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Dieser Abschnitt enthält die F1-Hilfe für die Dialogfelder und Seiten, die in der Menüleiste von [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] verfügbar sind.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Dieser Abschnitt enthält die F1-Hilfe für die Dialogfelder und Seiten, die in der Menüleiste von [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)]verfügbar sind.  
   
 [Informationen zu SQL Server Management Studio](../../ssms/menu-help/about-sql-server-management-studio.md)  
   

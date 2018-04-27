@@ -2,7 +2,7 @@
 title: Ändern des Namens einer Geschäftsregel (Master Data Services) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: mds
 ms.service: ''
 ms.component: non-specific
@@ -20,11 +20,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 98fec5fa6268539b486e19b8f5e5854a234168c3
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 0b8c80525fe0f90d2f64df62f41e05303fa42676
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="change-a-business-rule-name-master-data-services"></a>Ändern des Namens einer Geschäftsregel (Master Data Services)
 

@@ -2,7 +2,7 @@
 title: Objekte auswählen (Objekt-Explorer) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms-objects
@@ -20,14 +20,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0d0caa751a54dba0f3e6d36f1d757d440c24d3ec
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 0fdf458f4300e184fc00a8ee8116e7147f66b4d3
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="select-objects-object-explorer"></a>Objekte auswählen (Objekt-Explorer)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Verwenden Sie das Dialogfeld **Objekte auswählen**, um der Liste in einem anderen Dialogfeld ein Objekt hinzuzufügen. Der Titel des Dialogfelds und die darin verfügbaren Optionen hängen davon ab, wie es geöffnet wurde. Es werden nur verfügbare Optionen angezeigt. Wenn Sie z. B. einen Besitzer für ein neues Objekt auswählen, sind nur Benutzernamen verfügbar.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Verwenden Sie das Dialogfeld **Objekte auswählen** , um der Liste in einem anderen Dialogfeld ein Objekt hinzuzufügen. Der Titel des Dialogfelds und die darin verfügbaren Optionen hängen davon ab, wie es geöffnet wurde. Es werden nur verfügbare Optionen angezeigt. Wenn Sie z. B. einen Besitzer für ein neues Objekt auswählen, sind nur Benutzernamen verfügbar.  
   
 ## <a name="options"></a>Tastatur  
 **Wählen Sie Objekttypen aus**  

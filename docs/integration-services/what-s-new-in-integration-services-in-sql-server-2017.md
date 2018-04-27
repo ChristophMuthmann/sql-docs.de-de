@@ -1,28 +1,28 @@
 ---
 title: Neuigkeiten in Integration Services in SQL Server 2017 | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 09/28/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e26d7884-e772-46fa-bfdc-38567fe976a1
-caps.latest.revision: 
+caps.latest.revision: 4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0357907777cfec8cf65c36a074cc8e91c4d0e02c
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 513b790c69959b56e210259283874a48ce7a457c
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2017"></a>Neuigkeiten in Integration Services in SQL Server 2017
 Dieses Thema beschreibt die Funktionen, die in [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]hinzugefügt oder aktualisiert wurden.

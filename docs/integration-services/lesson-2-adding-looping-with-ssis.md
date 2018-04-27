@@ -1,30 +1,30 @@
 ---
-title: "Lektion 2: Hinzufügen von Schleifen mit SSIS | Microsoft-Dokumentation"
-ms.custom: 
+title: 'Lektion 2: Hinzufügen von Schleifen mit SSIS | Microsoft-Dokumentation'
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: tutorial
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 01f2ed61-1e5a-4ec6-b6a6-2bd070c64077
-caps.latest.revision: 
+caps.latest.revision: 32
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 683a2db5f7af5292051b5ce5c4cec9d49d465c2e
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 92f764dd7bf97b30d0320122031e613bf5f6666b
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="lesson-2-adding-looping-with-ssis"></a>Lesson 2: Adding Looping with SSIS
 In [Lektion 1: Erstellen eines Projekts und Basispakets mit SSIS](../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md)haben Sie ein Paket erstellt, mit dem Daten aus einer einzelnen Flatfilequelle zunächst extrahiert, anschließend mithilfe der Suchtransformationen transformiert und schließlich in die Faktentabelle **FactCurrency** der **AdventureWorksDW2012** -Beispieldatenbank geladen wurden.  

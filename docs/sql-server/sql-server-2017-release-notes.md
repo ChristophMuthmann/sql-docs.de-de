@@ -3,7 +3,7 @@ title: SQL Server 2017 Release Notes | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 10/30/2017
 ms.prod: sql
-ms.prod_service: sql-non-specified
+ms.prod_service: sql
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: supportability
@@ -15,11 +15,11 @@ ms.author: craigg
 manager: craigg
 ms.workload: Active
 monikerRange: = sql-server-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: 15e778c6b38f61905a7bf4167cf3ce65d418e942
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 33e55dfeb1123dc5528cfc358600d06ecaede364
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sql-server-2017-release-notes"></a>Versionsanmerkungen zu SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -85,7 +85,7 @@ Es gibt keine Anmerkungen zu dieser Version von SQL Server für Windows. Siehe: 
 ![horizontal_bar](../sql-server/media/horizontal-bar.png)
 ## <a name="sql-server-2017-ctp-21-may--2017"></a>SQL Server 2017 CTP 2.1 (Mai 2017)
 ### <a name="documentation-ctp-21"></a>Dokumentation (CTP 2.1)
-- **Problem und Kundenbeeinträchtigung:** Die Dokumentation für [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] ist eingeschränkt, und die Inhalte sind im [!INCLUDE[ssSQL15_md](../includes/sssql15-md.md)] -Dokumentationssatz enthalten.  Inhalte in Artikeln, die für [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] spezifisch sind, sind mit **Gilt für:**gekennzeichnet. 
+- **Problem und Kundenbeeinträchtigung:** Die Dokumentation für [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] ist eingeschränkt, und die Inhalte sind im [!INCLUDE[ssSQL15_md](../includes/sssql15-md.md)] -Dokumentationssatz enthalten.  Inhalte in Artikeln, die für [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] spezifisch sind, sind mit **Gilt für:** gekennzeichnet. 
 - **Problem und Kundenbeeinträchtigung:** Für [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]sind keine Offlineinhalte verfügbar.
 
 ### <a name="sql-server-reporting-services-ctp-21"></a>SQL Server Reporting Services (CTP 2.1)
@@ -131,7 +131,7 @@ Es gibt keine Anmerkungen zu dieser Version von SQL Server für Windows. Siehe: 
 ![horizontal_bar](../sql-server/media/horizontal-bar.png)
 ## <a name="sql-server-2017-ctp-20-april--2017"></a>SQL Server 2017 CTP 2.0 (April 2017)
 ### <a name="documentation-ctp-20"></a>Dokumentation (CTP 2.0)
-- **Problem und Kundenbeeinträchtigung:** Die Dokumentation für [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] ist eingeschränkt, und die Inhalte sind im [!INCLUDE[ssSQL15_md](../includes/sssql15-md.md)] -Dokumentationssatz enthalten.  Inhalte in Artikeln, die für [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] spezifisch sind, sind mit **Gilt für:**gekennzeichnet. 
+- **Problem und Kundenbeeinträchtigung:** Die Dokumentation für [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] ist eingeschränkt, und die Inhalte sind im [!INCLUDE[ssSQL15_md](../includes/sssql15-md.md)] -Dokumentationssatz enthalten.  Inhalte in Artikeln, die für [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] spezifisch sind, sind mit **Gilt für:** gekennzeichnet. 
 - **Problem und Kundenbeeinträchtigung:** Für [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]sind keine Offlineinhalte verfügbar.
 
 ### <a name="always-on-availability-groups"></a>AlwaysOn-Verfügbarkeitsgruppen
@@ -154,5 +154,7 @@ Es gibt keine Anmerkungen zu dieser Version von SQL Server für Windows. Siehe: 
 - [SQL Server-Update Center – Links und Informationen zu allen unterstützten Versionen](https://msdn.microsoft.com/library/ff803383.aspx)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
+
+[!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]
 
 ![MS_Logo_X-Small](../sql-server/media/ms-logo-x-small.png)

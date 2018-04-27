@@ -2,8 +2,8 @@
 title: Programm zur Verbesserung der Benutzerfreundlichkeit für SQL Server Data Tools | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 10/21/2016
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod: sql
+ms.prod_service: sql
 ms.service: ''
 ms.component: sql-non-specified
 ms.reviewer: ''
@@ -19,11 +19,11 @@ ms.author: sstein
 manager: craigg
 ms.workload: On Demand
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 58e671eb7e69bbc0487065342b141a5c5bfb1e9a
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: beae11de576f8f6c413271ee2b532454d03613fe
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="customer-experience-improvement-program-for-sql-server-data-tools"></a>Programm zur Verbesserung der Benutzerfreundlichkeit für SQL Server Data Tools
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

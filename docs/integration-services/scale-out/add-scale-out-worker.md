@@ -1,28 +1,28 @@
 ---
-title: "Hinzufügen eines SSIS Scale Out-Workers mit dem Manager für horizontales Hochskalieren | Microsoft-Dokumentation"
+title: Hinzufügen eines SSIS Scale Out-Workers mit dem Manager für horizontales Hochskalieren | Microsoft-Dokumentation
 ms.description: This article describes how to add an SSIS Scale Out Worker to an existing Scale Out environment by using Scale Out Manager.
-ms.custom: 
+ms.custom: ''
 ms.date: 12/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: scale-out
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
-caps.latest.revision: 
+caps.latest.revision: 1
 author: haoqian
 ms.author: haoqian
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9fb097365def44d943a7fe6193a4a6498f4d9e37
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: cc6cbcb96dc80e1d2f9c68c298ac21aa478ff763
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="add-a-scale-out-worker-with-scale-out-manager"></a>Hinzufügen eines SSIS Scale Out-Workers mit dem Manager für horizontales Hochskalieren
 

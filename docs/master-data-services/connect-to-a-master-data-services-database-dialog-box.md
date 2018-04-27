@@ -2,7 +2,7 @@
 title: Verbindung mit einer Master Data Services-Datenbank herstellen (Dialogfeld) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/20/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: mds
 ms.service: ''
 ms.component: non-specific
@@ -20,11 +20,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d587f4065861ba7d3aa0ce2d4031fc27bce17f18
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 124d70b1c0696bdc47834796e82a83b03f867f4c
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="connect-to-a-master-data-services-database-dialog-box"></a>Verbindung mit einer Master Data Services-Datenbank herstellen (Dialogfeld)
 

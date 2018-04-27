@@ -7,14 +7,14 @@ ms.author: genemi
 ms.topic: article
 ms.custom: UpdArt.exe
 ms.suite: sql
-ms.prod_service: sql-non-specified
+ms.prod_service: sql
 ms.component: database-engine
 ms.date: 02/03/2018
-ms.openlocfilehash: 41c188fd99e273c475e2cc1c2335f59ba710f083
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: cc728acbbf5bdc9fb4c8547d4d85b1d578f4e1dc
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="new-and-recently-updated-database-engine-docs"></a>Neue und kürzlich aktualisierte Dokumentation zu Datenbankmodulen
 

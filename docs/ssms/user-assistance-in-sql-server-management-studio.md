@@ -1,33 +1,35 @@
 ---
-title: "Benutzerunterstützung in SQL Server Management Studio | Microsoft-Dokumentation"
-ms.custom: 
+title: Benutzerunterstützung in SQL Server Management Studio | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Help [SQL Server Management Studio]
 - SQL Server Management Studio [SQL Server], user assistance
 ms.assetid: 3c33a474-e507-4712-86fe-ae40e8370319
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 94bba147f35fe23d2276f4f32596c5a2890f56f1
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: cfda21263685171ed479841d4b4bf6cc08311f3e
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="user-assistance-in-sql-server-management-studio"></a>Benutzerunterstützung in SQL Server Management Studio
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Die Benutzerunterstützung ist in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] über das Menü „?“ und die [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)]-Onlinedokumentation verfügbar. Über das Menü ? in [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] können Sie auf verschiedene Arten Informationen zu [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)]abrufen. Außerdem erhalten Sie über dieses Menü Zugriff auf die [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] -Community und MSDN Onlineressourcen, die bislang noch nicht über die Hilfeumgebung verfügbar waren. Darüber hinaus lässt sich die Hilfeumgebung jetzt so konfigurieren, dass sie in der [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] -Umgebung oder in einem eigenen externen Fenster gestartet wird.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Die Benutzerunterstützung ist in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] über das Menü ? und die [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)]-Onlinedokumentation verfügbar. Über das Menü ? in [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] können Sie auf verschiedene Arten Informationen zu [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)]abrufen. Außerdem erhalten Sie über dieses Menü Zugriff auf die [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] -Community und MSDN Onlineressourcen, die bislang noch nicht über die Hilfeumgebung verfügbar waren. Darüber hinaus lässt sich die Hilfeumgebung jetzt so konfigurieren, dass sie in der [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] -Umgebung oder in einem eigenen externen Fenster gestartet wird.  
   
 ## <a name="the-help-interface"></a>Die Hilfeoberfläche  
 Die Optionen **Inhalt** und **Index** verfügen über eine Benutzeroberfläche und eine Funktionalität, mit denen Benutzer von [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] bereits vertraut sind. Folgende andere Optionen sind verfügbar:  

@@ -2,7 +2,7 @@
 title: Ändern des Namens einer Attributgruppe (Master Data Services) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: mds
 ms.service: ''
 ms.component: non-specific
@@ -20,11 +20,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 51e4aa3776647931c3bd520db10a4d6c0819fb26
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 7d6b1b121094aa5baff127ff4e68cb9b47547b4b
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="change-an-attribute-group-name-master-data-services"></a>Ändern des Namens einer Attributgruppe (Master Data Services)
 

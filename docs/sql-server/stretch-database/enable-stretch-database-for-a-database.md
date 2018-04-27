@@ -1,31 +1,31 @@
 ---
-title: "Aktivieren von Stretch Database für eine Datenbank | Microsoft-Dokumentation"
-ms.custom: 
+title: Aktivieren von Stretch Database für eine Datenbank | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 08/05/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: stretch-database
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-stretch
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Stretch Database, enabling database
 - enabling database for Stretch Database
 ms.assetid: 37854256-8c99-4566-a552-432e3ea7c6da
-caps.latest.revision: 
+caps.latest.revision: 70
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 754e4cb8c56b3c118f7c3d0716b250b860fd73f6
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: b977d38ef82901ddb6431e63a360545c7380f27d
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="enable-stretch-database-for-a-database"></a>Enable Stretch Database for a database
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]

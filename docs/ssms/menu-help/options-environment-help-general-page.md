@@ -2,7 +2,7 @@
 title: Optionen (Umgebung – Hilfe – Seite „Allgemein“) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms-menu
@@ -20,14 +20,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d5b9be182f2af8ab60469591d63fb847da20f244
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: dc0345c6f41952682df010ed9f643a21e8c49829
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="options-environment---help---general-page"></a>Optionen (Umgebung – Hilfe – Seite „Allgemein“)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Im Dialogfeld **Optionen** wählen Sie Dokumentationssätze aus und entscheiden, ob Themen intern in [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] oder extern in einem separaten Fenster angezeigt werden sollen. Zum Zugreifen auf dieses Dialogfeld klicken Sie im Menü **Extras** auf **Optionen** . Erweitern Sie dann im Knoten **Umgebung** den Eintrag **Hilfe** , und klicken Sie auf **Allgemein**.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Im Dialogfeld **Optionen** wählen Sie Dokumentationssätze aus und entscheiden, ob Themen intern in [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] oder extern in einem separaten Fenster angezeigt werden sollen. Zum Zugreifen auf dieses Dialogfeld klicken Sie im Menü **Extras** auf **Optionen** . Erweitern Sie dann im Knoten **Umgebung** den Eintrag **Hilfe** , und klicken Sie auf **Allgemein**.  
   
 > [!NOTE]  
 > Änderungen an den Optionen auf dieser Seite werden erst wirksam, wenn die Umgebung neu gestartet wurde.  

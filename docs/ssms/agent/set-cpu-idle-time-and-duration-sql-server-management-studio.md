@@ -2,7 +2,7 @@
 title: Festlegen der Leerlaufzeit und Leerlaufdauer der CPU (SQL Server Management Studio) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms-agent
@@ -25,11 +25,11 @@ ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 4ee3aad02c461a06dc36d8eaf4cf53b388c674f1
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 81fdb194bd1b4e317e744274f584e86be6d978d4
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="set-cpu-idle-time-and-duration-sql-server-management-studio"></a>Festlegen der Leerlaufzeit und Leerlaufdauer der CPU (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ In diesem Thema wird erläutert, wie Sie die CPU-Leerlaufbedingung für den Serv
   
 2.  Klicken Sie mit der rechten Maustaste auf **SQL Server-Agent**, klicken Sie auf **Eigenschaften**, und wählen Sie dann die Seite **Erweitert** aus.  
   
-3.  Führen Sie unter **Bedingung für 'CPU im Leerlauf'**eine der folgenden Aktionen aus :  
+3.  Führen Sie unter **Bedingung für 'CPU im Leerlauf'** eine der folgenden Aktionen aus :  
   
     -   Aktivieren Sie **Bedingung für 'CPU im Leerlauf' definieren**.  
   

@@ -2,7 +2,7 @@
 title: Speicherorte (Dialogfeld) (Visual Database Tools) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms-visual-db
@@ -20,14 +20,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b813bc94aa5afcd2cb537de0bfc8cba9d925d034
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 9bc38b08444da663b817dc1a9fc749bb87f2eade
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="location-dialog-box-visual-database-tools"></a>Speicherorte (Dialogfeld) (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Verwenden Sie dieses Dialogfeld, um den Ordner mit den gewünschten Dateien zu suchen und auszuwählen. Dieses Dialogfeld übergibt den Pfad des ausgewählten Ordners an das aufrufende Dialogfeld. Es gibt folgende Möglichkeiten, um auf dieses Dialogfeld zuzugreifen:  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Verwenden Sie dieses Dialogfeld, um den Ordner mit den gewünschten Dateien zu suchen und auszuwählen. Dieses Dialogfeld übergibt den Pfad des ausgewählten Ordners an das aufrufende Dialogfeld. Es gibt folgende Möglichkeiten, um auf dieses Dialogfeld zuzugreifen:  
   
 -   Wählen Sie im Menü **Datei** die Option **Neu** aus, und wählen Sie **Projekt**aus. Wählen Sie im Dialogfeld **Neues Projekt** die Option **Durchsuchen**aus. Das Dialogfeld **Speicherort** wird mit dem Titel **Projektspeicherort**geöffnet.  
   

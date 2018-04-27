@@ -1,16 +1,16 @@
 ---
-title: "Tools zur Problembehandlung für die Paketausführung | Microsoft-Dokumentation"
-ms.custom: 
+title: Tools zur Problembehandlung für die Paketausführung | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 08/26/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: troubleshooting
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQL Server Integration Services packages, troubleshooting
@@ -19,16 +19,16 @@ helpviewer_keywords:
 - errors [Integration Services], troubleshooting
 - packages [Integration Services], troubleshooting
 ms.assetid: f18d6ff6-e881-444c-a399-730b52130e7c
-caps.latest.revision: 
+caps.latest.revision: 59
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c38f451a062f7280413950e89aa482cea2d23125
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: ac15ea4e6c42c5f299303a9d2335563e819cc98c
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="troubleshooting-tools-for-package-execution"></a>Behandlung von Problemen mit Paketausführungstools
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] enthält Funktionen und Tools, die Sie zur Behandlung von Problemen beim Ausführen von Paketen nach deren Fertigstellung und Bereitstellung verwenden können.  
@@ -84,7 +84,7 @@ ms.lasthandoff: 01/25/2018
   
     1.  **Erstellen einer übergeordneten Tabelle zum Protokollieren aller Paketausführungen**. Diese übergeordnete Tabelle enthält nur eine einzige Zeile pro Paketausführung und verwendet die ExecutionID zur Verlinkung mit den untergeordneten Datensätzen in der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Protokollierungstabelle. Zum Erstellen dieser neuen Zeile und Aufzeichnen der Startzeit können Sie am Anfang eines jeden Pakets den Task 'SQL ausführen' verwenden. Anschließend können Sie am Ende des Pakets den Task 'SQL ausführen' erneut verwenden, um die Beendigungszeit, Dauer und den Status in der Zeile zu aktualisieren.  
   
-    2.  **Hinzufügen von Überwachungsinformationen zum Datenfluss**. Sie können mit der Überwachungstransformation Informationen zu Zeilen im Datenfluss hinzufügen, die Daten zur Paketausführung enthalten, durch die die betreffende Zeile erstellt oder geändert wurde. Die Überwachungstransformation stellt neun Arten von Informationen bereit, wie z.B. PackageName und ExecutionInstanceGUID. Weitere Informationen finden Sie unter [Überwachungstransformation](../../integration-services/data-flow/transformations/audit-transformation.md). Wenn Sie zu Überwachungszwecken jede Zeile mit benutzerdefinierten Informationen versehen möchten, können Sie diese Informationen mithilfe einer Transformation für abgeleitete Spalten den Zeilen im Datenfluss hinzufügen. Weitere Informationen finden Sie unter [Transformation für abgeleitete Spalten](../../integration-services/data-flow/transformations/derived-column-transformation.md).  
+    2.  **Hinzufügen von Überwachungsinformationen zum Datenfluss**. Sie können mit der Überwachungstransformation Informationen zu Zeilen im Datenfluss hinzufügen, die Daten zur Paketausführung enthalten, durch die die betreffende Zeile erstellt oder geändert wurde. Die Überwachungstransformation stellt neun Arten von Informationen bereit, wie z.B. PackageName und ExecutionInstanceGUID. Weitere Informationen finden Sie unter [Audit Transformation](../../integration-services/data-flow/transformations/audit-transformation.md). Wenn Sie zu Überwachungszwecken jede Zeile mit benutzerdefinierten Informationen versehen möchten, können Sie diese Informationen mithilfe einer Transformation für abgeleitete Spalten den Zeilen im Datenfluss hinzufügen. Weitere Informationen finden Sie unter [Transformation für abgeleitete Spalten](../../integration-services/data-flow/transformations/derived-column-transformation.md).  
   
     3.  **Erwägen der Aufzeichnung von Zeilenanzahldaten**. Erwägen Sie, eine separate Tabelle mit Informationen zur Zeilenanzahl zu erstellen, in der jede Paketausführungsinstanz über ihre ExecutionID identifiziert wird. Verwenden Sie die Transformation für Zeilenanzahl, um an wichtigen Stellen im Datenfluss die Zeilenanzahl in einer Reihe von Variablen zu speichern. Verwenden Sie den Task 'SQL ausführen', um nach Beendigung des Datenflusses die Variablenreihe zur späteren Analyse und Berichterstattung in eine Zeile der Tabelle einzufügen.  
   

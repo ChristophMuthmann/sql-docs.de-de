@@ -2,7 +2,7 @@
 title: Installationsaufgaben für Master Data Services | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/24/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: mds
 ms.service: ''
 ms.component: install-windows
@@ -18,11 +18,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 30435254dd2f8124098a484dd7c28d2755b11d4b
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: b7e423cfefd8f7859173a73f05ac07d01807b5fc
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="installation-tasks-for-master-data-services"></a>Installationsaufgaben für Master Data Services
 

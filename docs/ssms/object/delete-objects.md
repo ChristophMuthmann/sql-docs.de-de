@@ -2,7 +2,7 @@
 title: Objekte löschen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms-objects
@@ -22,14 +22,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9b56c909bf8038ed70460bbea6ee98ba539bd3cb
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: be72d1116bb3972d9995068631d2c61e82d67dbd
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="delete-objects"></a>Objekte löschen
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] In diesem Dialogfeld können Sie eine Datenbank oder ein Datenbankobjekt löschen.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+In diesem Dialogfeld können Sie eine Datenbank oder ein Datenbankobjekt löschen.  
   
 ## <a name="uielement-list"></a>Liste der Benutzeroberflächenelemente  
 **Zu löschendes Objekt**  

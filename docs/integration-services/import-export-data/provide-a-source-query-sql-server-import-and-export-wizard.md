@@ -2,7 +2,7 @@
 title: Angeben einer Quellabfrage (SQL Server-Import/Export-Assistent) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
 ms.service: ''
 ms.component: import-export-data
@@ -20,11 +20,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 485faeca41d64c744a091c0efd4be8a05109a6b8
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: e6ac0fde9af282e3aa6c0a37ba817e5b9265bec5
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="provide-a-source-query-sql-server-import-and-export-wizard"></a>Quellabfrage angeben (SQL Server-Import/Export-Assistent)
 Wenn Sie angegeben haben, dass Sie eine Abfrage zum Auswählen der zu kopierenden Daten bereitstellen möchten, zeigt der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Import/Export-Assistent **Quellabfrage angeben**an. Auf dieser Seite schreiben und testen Sie die SQL-Abfrage, die die Daten sammelt, die aus der Datenquelle in das Ziel kopiert werden sollen. Sie können außerdem den Text einer gespeicherten Abfrage einfügen oder den Abfragetext aus einer Datei laden.

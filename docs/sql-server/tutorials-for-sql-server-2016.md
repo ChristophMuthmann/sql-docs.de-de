@@ -2,8 +2,8 @@
 title: Tutorials für SQL Server | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 10/31/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod: sql
+ms.prod_service: sql
 ms.service: ''
 ms.component: sql-non-specified
 ms.reviewer: ''
@@ -18,11 +18,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 0e3008eeda76820c94b4b9f55af639c551b2d4ca
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: f78dda74c079f5c6d1df2b8f407973cb744c85a3
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="tutorials-for-sql-server"></a>Tutorials für SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

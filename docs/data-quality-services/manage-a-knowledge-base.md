@@ -2,7 +2,7 @@
 title: Verwalten einer Wissensdatenbank | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/04/2013
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: data-quality-services
 ms.service: ''
 ms.component: data-quality-services
@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 64d6dd124b28928d72ac4fd19be9d18db84327d4
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: e459a5bcc3701be1bf47c810b60e01e64f1cd5b1
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="manage-a-knowledge-base"></a>Verwalten einer Wissensdatenbank
 

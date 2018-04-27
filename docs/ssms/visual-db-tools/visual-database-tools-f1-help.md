@@ -2,7 +2,7 @@
 title: Visual Database Tools – F1-Hilfe | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms-visual-db
@@ -20,14 +20,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b5c1404c4f5dceb9ca5ef5b6a9be5c8a64a24dd7
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: ae151529619af34a8d801ef0efa1f82818e4d977
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="visual-database-tools-f1-help"></a>Visual Database Tools - F1-Hilfe
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] In diesen Themen werden die Befehle und Optionen in den Dialogfeldern und Eigenschaftenfenstern für Visual Database Tools-Elemente, wie beispielsweise das Fenster Tabelleneigenschaften und die Registerkarte Spalteneigenschaften behandelt.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+In diesen Themen werden die Befehle und Optionen in den Dialogfeldern und Eigenschaftenfenstern für Visual Database Tools-Elemente, wie beispielsweise das Fenster Tabelleneigenschaften und die Registerkarte Spalteneigenschaften behandelt.  
   
 Drücken Sie zum Zugreifen auf Dialogfeldthemen F1, wenn ein Dialogfeld geöffnet ist und es fokussiert ist. Klicken Sie zum Zugreifen auf Eigenschaftenfensterthemen auf das Eigenschaftenfenster, und drücken Sie F1.  
   

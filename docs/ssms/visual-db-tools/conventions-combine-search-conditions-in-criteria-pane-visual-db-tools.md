@@ -1,15 +1,16 @@
 ---
-title: "Konventionen für das Kombinieren von Suchbedingungen im Kriterienbereich | Microsoft-Dokumentation"
-ms.custom: 
+title: Konventionen für das Kombinieren von Suchbedingungen im Kriterienbereich | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - search conditions [SQL Server], combining
@@ -21,19 +22,20 @@ helpviewer_keywords:
 - AND, Criteria pane
 - multiple AND clauses
 ms.assetid: d4859be5-ff5b-48b2-a101-ad40c6dbcc68
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8d99326f7d045aff95bf753d7f1ff68826f313af
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 410f2e6428629e6466c4906287cb12a3015aaf20
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="conventions-for-combining-search-conditions-in-the-criteria-pane-visual-database-tools"></a>Konventionen für das Kombinieren von Suchbedingungen im Kriterienbereich (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Abfragen können eine beliebige Anzahl von Suchbedingungen enthalten, die mit beliebig vielen AND-Operatoren und OR-Operatoren verknüpft werden können. Eine Abfrage mit mehreren AND-Klauseln und OR-Klauseln kann sehr komplex sein. Es ist daher hilfreich zu wissen, wie eine Abfrage bei der Ausführung interpretiert wird und wie sie im [Kriterienbereich](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md) und im [SQL-Bereich](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md) dargestellt wird.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Abfragen können eine beliebige Anzahl von Suchbedingungen enthalten, die mit beliebig vielen AND-Operatoren und OR-Operatoren verknüpft werden können. Eine Abfrage mit mehreren AND-Klauseln und OR-Klauseln kann sehr komplex sein. Es ist daher hilfreich zu wissen, wie eine Abfrage bei der Ausführung interpretiert wird und wie sie im [Kriterienbereich](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md) und im [SQL-Bereich](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md) dargestellt wird.  
   
 > [!NOTE]  
 > Ausführliche Informationen zu Suchbedingungen, die nur einen AND- oder OR-Operator enthalten, finden Sie unter [Angeben mehrerer Suchbedingungen für eine Spalte &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/specify-multiple-search-conditions-for-one-column-visual-database-tools.md) und [Angeben mehrerer Suchbedingungen für mehrere Spalten &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/specify-multiple-search-conditions-for-multiple-columns-visual-database-tools.md).  

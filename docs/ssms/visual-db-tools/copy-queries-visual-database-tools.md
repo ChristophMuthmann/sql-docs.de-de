@@ -1,33 +1,35 @@
 ---
 title: Kopieren von Abfragen (Visual Database Tools) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - copying queries
 - queries [SQL Server], copying
 ms.assetid: 46cd1557-cf3d-40b8-b489-8446e0984e0f
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ab739b0a046413d3566ed7bf3346b6095a403b3b
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: c863511bcde1e392f52ed089110678b3c3f49a7f
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="copy-queries-visual-database-tools"></a>Kopieren von Abfragen (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Sie können die Anweisungen einer Abfrage in eine neue Abfrage kopieren, um sie als Arbeitsgrundlage zu verwenden.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Sie können die Anweisungen einer Abfrage in eine neue Abfrage kopieren, um sie als Arbeitsgrundlage zu verwenden.  
   
 ### <a name="to-copy-a-query"></a>So kopieren Sie eine Abfrage  
   

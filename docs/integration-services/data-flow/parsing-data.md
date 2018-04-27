@@ -1,34 +1,34 @@
 ---
 title: Analysieren von Daten | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - parsing [Integration Services]
 - data parsing [Integration Services]
 ms.assetid: 8893ea9d-634c-4309-b52c-6337222dcb39
-caps.latest.revision: 
+caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 48579e225f90fe074aaaffa22f6424f1fe90dddd
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: cb782fd7afea0efd551d70586eb1e0828b35829f
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="parsing-data"></a>Analysieren von Daten
-  Mit Datenflüssen in Paketen werden Daten zwischen heterogenen Datenspeichern extrahiert und geladen, die eine Reihe von standardmäßigen und benutzerdefinierten Datentypen verwenden können. In einem Datenfluss werden mit [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Quellen Daten extrahiert, Zeichenfolgendaten analysiert und Daten in einen [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Datentyp konvertiert. Nachfolgende Transformationen können Daten analysieren, um sie in einen anderen Datentyp zu konvertieren oder um Spaltenkopien mit anderen Datentypen zu erstellen. Mit Ausdrücken in Komponenten können außerdem Argumente und Operanden in andere Datentypen umgewandelt werden. Wenn die Daten in einen Datenspeicher geladen werden, kann schließlich das Ziel die Daten analysieren, um sie in einen vom Ziel verwendeten Datentyp zu konvertieren. Weitere Informationen finden Sie unter [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
+  Mit Datenflüssen in Paketen werden Daten zwischen heterogenen Datenspeichern extrahiert und geladen, die eine Reihe von standardmäßigen und benutzerdefinierten Datentypen verwenden können. In einem Datenfluss werden mit [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Quellen Daten extrahiert, Zeichenfolgendaten analysiert und Daten in einen [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Datentyp konvertiert. Nachfolgende Transformationen können Daten analysieren, um sie in einen anderen Datentyp zu konvertieren oder um Spaltenkopien mit anderen Datentypen zu erstellen. Mit Ausdrücken in Komponenten können außerdem Argumente und Operanden in andere Datentypen umgewandelt werden. Wenn die Daten in einen Datenspeicher geladen werden, kann schließlich das Ziel die Daten analysieren, um sie in einen vom Ziel verwendeten Datentyp zu konvertieren. Weitere Informationen finden Sie unter [Integration Services Datentypen](../../integration-services/data-flow/integration-services-data-types.md).  
   
 ## <a name="two-types-of-parsing"></a>Zwei Analysetypen  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] stellt zwei Analysemethoden zum Konvertieren von Daten bereit: schnelle Analyse und Standardanalyse.  
@@ -47,7 +47,7 @@ Die schnelle Analyse stellt schnelle, einfache Routinen zum Analysieren von Date
   
  Wenn der Datenfluss im Paket eine gebietsschemabezogene Analyse erfordert, wird stattdessen die Standardanalyse empfohlen. So erkennt die schnelle Analyse beispielsweise keine gebietsschemabezogenen Daten mit Dezimalsymbolen wie dem Komma, anderen Datenformaten als dem Jahr-Monat-Datum-Format und Währungssymbolen.  
   
- Abgeschnittene Darstellungen, die mindestens ein Datumsteil implizieren, wie z. B. ein Jahrhundert, ein Jahr oder ein Monat, werden von der schnellen Analyse nicht erkannt. Die schnelle Analyse erkennt z.B. weder das Format**-JJMM**, das ein Jahr und einen Monat in einem implizierten Jahrhundert angibt, noch**--MM**, das einen Monat in einem implizierten Jahr angibt. Bestimmte Darstellungen mit reduzierter Genauigkeit werden jedoch erkannt. Beispielsweise erkennt die schnelle Analyse das Format 'hhmm;', das nur die Stunde und die Minute angibt, sowie '**YYYY**', das nur das Jahr angibt.  
+ Abgeschnittene Darstellungen, die mindestens ein Datumsteil implizieren, wie z. B. ein Jahrhundert, ein Jahr oder ein Monat, werden von der schnellen Analyse nicht erkannt. Die schnelle Analyse erkennt z.B. weder das Format **-JJMM**, das ein Jahr und einen Monat in einem implizierten Jahrhundert angibt, noch **--MM**, das einen Monat in einem implizierten Jahr angibt. Bestimmte Darstellungen mit reduzierter Genauigkeit werden jedoch erkannt. Beispielsweise erkennt die schnelle Analyse das Format 'hhmm;', das nur die Stunde und die Minute angibt, sowie '**YYYY**', das nur das Jahr angibt.  
   
  Die schnelle Analyse wird auf Spaltenebene angegeben. In der Flatfilequelle und der Transformation für Datenkonvertierung können Sie die schnelle Analyse für Ausgabespalten festlegen. Eingaben und Ausgaben können gebietsschemabezogene und gebietsschemaneutrale Spalten enthalten.  
  
@@ -55,7 +55,7 @@ Die schnelle Analyse stellt schnelle, einfache Routinen zum Analysieren von Date
 Die schnelle Analyse stellt schnelle, einfache und gebietsschemabezogene Routinen zum Analysieren von Daten bereit. Nur bestimmte Formate für integer-Datentypen werden von der schnellen Analyse unterstützt.  
   
 ### <a name="integer-data-type"></a>Integer-Datentyp
- Die integer-Datentypen von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sind DT_I1, DT_UI1, DT_I2, DT_UI2, DT_I4, DT_UI4, DT_I8 und DT_UI8. Weitere Informationen finden Sie unter [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
+ Die integer-Datentypen von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sind DT_I1, DT_UI1, DT_I2, DT_UI2, DT_I4, DT_UI4, DT_I8 und DT_UI8. Weitere Informationen finden Sie unter [Integration Services Datentypen](../../integration-services/data-flow/integration-services-data-types.md).  
   
  Die schnelle Analyse unterstützt die folgenden Formate für integer-Datentypen:  
   
@@ -113,7 +113,7 @@ Die schnelle Analyse stellt schnelle, einfache Routinen zum Analysieren von Date
   
  Die schnelle Analyse gibt die Daten als DT_DBDATE aus. Datumswerte in abgeschnittenen Formaten werden aufgefüllt. Beispielsweise wird YYYY zu YYYY0101.  
   
- Weitere Informationen finden Sie unter [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
+ Weitere Informationen finden Sie unter [Integration Services Datentypen](../../integration-services/data-flow/integration-services-data-types.md).  
   
 ### <a name="time-data-type"></a>Zeitdatentyp
  Die schnelle Analyse unterstützt die folgenden Zeichenfolgenformate für Zeitdaten:  
@@ -141,7 +141,7 @@ Die schnelle Analyse stellt schnelle, einfache Routinen zum Analysieren von Date
     |-HH|Abgeschnittene Formate, die die Anzahl von Stunden angeben, die von der koordinierten Weltzeit (UTC) subtrahiert werden, um die lokale Zeit zu ermitteln.|  
     |Z|Ein Wert von 0, der angibt, dass die Zeit in UTC dargestellt wird.|  
   
-     Die Formate für alle Zeit- und Datums-/Zeitdaten können ein Zeitzonenelement enthalten. Das System ignoriert jedoch den Zeitzonenwert, außer wenn die Daten vom Typ DT_DBTIMESTAMPOFFSET sind. Weitere Informationen finden Sie unter [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
+     Die Formate für alle Zeit- und Datums-/Zeitdaten können ein Zeitzonenelement enthalten. Das System ignoriert jedoch den Zeitzonenwert, außer wenn die Daten vom Typ DT_DBTIMESTAMPOFFSET sind. Weitere Informationen finden Sie unter [Integration Services Datentypen](../../integration-services/data-flow/integration-services-data-types.md).  
   
      Bei Formaten, die ein Zeitzonenelement enthalten, gibt es kein Leerzeichen zwischen dem Zeitelement und dem Zeitzonenelement, wie das folgende Beispiel zeigt:  
   
@@ -168,7 +168,7 @@ Die schnelle Analyse stellt schnelle, einfache Routinen zum Analysieren von Date
   
  Die schnelle Analyse gibt die Zeichenfolgen als DT_DBTIME und DT_DBTIME2 aus. Zeitwerte in abgeschnittenen Formaten werden aufgefüllt. Beispielsweise wird HH:MI als HH:MM:00.000 ausgegeben.  
   
- Weitere Informationen finden Sie unter [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
+ Weitere Informationen finden Sie unter [Integration Services Datentypen](../../integration-services/data-flow/integration-services-data-types.md).  
   
 ### <a name="datetime-data-type"></a>Datums-/Zeitdatentyp  
  Die schnelle Analyse unterstützt die folgenden Zeichenfolgenformate für Datums-/Zeitdaten:  
@@ -189,7 +189,7 @@ Die schnelle Analyse stellt schnelle, einfache Routinen zum Analysieren von Date
 |Day|01 für den Tag des Monats hinzufügen.|  
 |Month|01 für den Monat des Jahres hinzufügen.|  
   
- Weitere Informationen finden Sie unter [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
+ Weitere Informationen finden Sie unter [Integration Services Datentypen](../../integration-services/data-flow/integration-services-data-types.md).  
   
 ## <a name="enable-fast-parse"></a>Aktivieren der schnellen Analyse
 Die Fast Parse-Eigenschaft muss für jede Spalte der Quelle oder Transformation festgelegt werden, die die schnelle Analyse verwendet. Verwenden Sie zum Festlegen der Eigenschaft den Erweiterten Editor der Flatfilequelle und der Transformation für Datenkonvertierung.  

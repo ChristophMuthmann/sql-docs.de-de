@@ -1,15 +1,16 @@
 ---
 title: Eigenschaftenfenster (F1-Hilfe, Management Studio) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-menu
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - .SPID
@@ -25,19 +26,20 @@ helpviewer_keywords:
 - Properties window [SQL Server Management Studio]
 - SQL Server Management Studio Help [SQL Server], properties window
 ms.assetid: f682ff0d-0161-4b42-a689-26eeb077d9e9
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 868c16ecea52d24010ca2012756cfc00e7cdd15a
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 8844861dbce0cd3993e8dc437b8c71dfe8844215
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="properties-window-f1-help-management-studio"></a>Eigenschaftenfenster (F1-Hilfe, Management Studio)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Mithilfe des Fensters **Eigenschaften** können Sie die Eigenschaften ausgewählter Elemente anzeigen. Zudem können Sie mithilfe des Fensters **Eigenschaften** Datei-, Projekt- und Projektmappeneigenschaften anzeigen. Das Fenster **Eigenschaften** ist verfügbar, wenn Sie im Menü **Ansicht** auf **Eigenschaftenfenster** klicken.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Mithilfe des Fensters **Eigenschaften** können Sie die Eigenschaften ausgewählter Elemente anzeigen. Zudem können Sie mithilfe des Fensters **Eigenschaften** Datei-, Projekt- und Projektmappeneigenschaften anzeigen. Das Fenster **Eigenschaften** ist verfügbar, wenn Sie im Menü **Ansicht** auf **Eigenschaftenfenster** klicken.  
   
 Im Fenster **Eigenschaften** werden unterschiedliche Arten der Bearbeitung von Feldern angezeigt, je nachdem, welche Bearbeitung für die bestimmte Eigenschaft erforderlich ist. Die in Grau angezeigten Eigenschaften sind schreibgeschützt.  
   

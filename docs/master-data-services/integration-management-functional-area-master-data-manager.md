@@ -2,7 +2,7 @@
 title: Funktionsbereich „Integrationsmanagement“ (Master Data Manager) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 04/01/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: mds
 ms.service: ''
 ms.component: non-specific
@@ -18,11 +18,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 43f6e8d3d63e2f5b40414185f1d2033151a994f4
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 61892301cb71acbf9b020138600a709485ee54f6
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="integration-management-functional-area-master-data-manager"></a>Funktionsbereich "Integrationsmanagement" (Master Data Manager)
 

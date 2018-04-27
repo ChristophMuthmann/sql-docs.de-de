@@ -1,16 +1,16 @@
 ---
 title: XML-Quelle | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.xmlsource.f1
@@ -22,16 +22,16 @@ helpviewer_keywords:
 - XML source [Integration Services]
 - XML Source Editor
 ms.assetid: 68c27ea5-e93d-4e26-bfb2-d967ca0a5282
-caps.latest.revision: 
+caps.latest.revision: 47
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: abc73a10f3538df038d9b4488199666288a3ca57
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 9e862605c34de37a9937cacd396a5fb645aac76c
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="xml-source"></a>XML-Quelle
   Die XML-Quelle liest eine XML-Datendatei und füllt die Spalten in der Quellausgabe mit den Daten.  
@@ -64,13 +64,13 @@ ms.lasthandoff: 01/25/2018
   
  Falls die XML-Datendatei Elemente enthält, die nicht im XSD-Code vorhanden sind, werden diese ignoriert und es wird keine Ausgabe dafür generiert. Wenn andererseits in der XML-Datendatei Elemente fehlen, die im XSD-Code dargestellt sind, enthält die Ausgabe Spalten mit NULL-Werten.  
   
- Wenn die Daten aus der XML-Datendatei extrahiert werden, werden sie in einen Datentyp von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] konvertiert. Die XML-Quelle kann XML-Daten jedoch nicht in die Datentypen DT_TIME2 oder DT_DBTIMESTAMP2 konvertieren, da diese Datentypen nicht von der Quelle unterstützt werden. Weitere Informationen finden Sie unter [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
+ Wenn die Daten aus der XML-Datendatei extrahiert werden, werden sie in einen Datentyp von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] konvertiert. Die XML-Quelle kann XML-Daten jedoch nicht in die Datentypen DT_TIME2 oder DT_DBTIMESTAMP2 konvertieren, da diese Datentypen nicht von der Quelle unterstützt werden. Weitere Informationen finden Sie unter [Integration Services Datentypen](../../integration-services/data-flow/integration-services-data-types.md).  
   
  Im XSD-Code oder Inlineschema kann der Datentyp für Elemente angegeben sein. Andernfalls weist der **Quellen-Editor für XML** der Spalte in der Ausgabe, die das Element enthält, den Unicode-Zeichenfolgen-Datentyp (DT_WSTR) zu und legt als Spaltenlänge 255 Zeichen fest.  
   
  Wenn im Schema die maximale Länge eines Elements angegeben ist, wird die Länge der Ausgabespalte auf diesen Wert festgelegt. Ist die maximale Länge größer als die Länge, die von dem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Datentyp unterstützt wird, in den das Element konvertiert wird, werden die Daten auf die maximale Länge des Datentyps abgeschnitten. Besitzt z. B. eine Zeichenfolge die Länge 5000, wird sie auf 4000 Zeichen abgeschnitten, da die maximale Länge des DT_WSTR-Datentyps 4000 Zeichen beträgt. Ebenso werden Bytedaten auf 8000 Zeichen, die maximale Länge des DT_BYTES-Datentyps, abgeschnitten. Wenn im Schema keine maximale Länge angegeben ist, wird die Standardlänge von Spalten mit einem der Datentypen auf 255 festgelegt. Das Abschneiden von Daten in der XML-Quelle wird auf die gleiche Weise gehandhabt wie das Abschneiden in anderen Datenflusskomponenten. Weitere Informationen finden Sie unter [Fehlerbehandlung in Daten](../../integration-services/data-flow/error-handling-in-data.md).  
   
- Sie können den Datentyp und die Spaltenlänge ändern. Weitere Informationen finden Sie unter [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
+ Sie können den Datentyp und die Spaltenlänge ändern. Weitere Informationen finden Sie unter [Integration Services Datentypen](../../integration-services/data-flow/integration-services-data-types.md).  
   
 ## <a name="configuration-of-the-xml-source"></a>Konfiguration der XML-Quelle  
  Die XML-Quelle unterstützt drei verschiedene Datenzugriffsmodi. Sie können den Dateispeicherort der XML-Datendatei, eine Variable mit dem Dateispeicherort oder eine Variable mit den XML-Daten angeben.  

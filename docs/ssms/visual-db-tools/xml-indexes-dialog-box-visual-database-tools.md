@@ -2,7 +2,7 @@
 title: Dialogfeld „XML-Indizes“ (Visual Database Tools) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms-visual-db
@@ -20,14 +20,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f47274fe87b23da05550d05b28af1b003fa9a2bc
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 3cda93dbe33a812a21a5a3575c730cb36e48dfb8
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="xml-indexes-dialog-box-visual-database-tools"></a>XML-Indizes (Dialogfeld) (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Verwenden Sie das Dialogfeld **XML-Indizes**, um Indizes für Spalten vom Datentyp XML zu erstellen, denn diese können nicht mithilfe des Dialogfelds **Index/Schlüssel** indiziert werden. Jede XML-Spalte kann mehrere XML-Indizes aufweisen, aber der zuerst erstellte Index (der primäre Index) bildet die Basis für alle weiteren Indizes (die sekundären Indizes). Wenn Sie den primären XML-Index löschen, werden auch die sekundären Indizes gelöscht.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Verwenden Sie das Dialogfeld **XML-Indizes** , um Indizes für Spalten vom Datentyp XML zu erstellen, denn diese können nicht mithilfe des Dialogfelds **Index/Schlüssel** indiziert werden. Jede XML-Spalte kann mehrere XML-Indizes aufweisen, aber der zuerst erstellte Index (der primäre Index) bildet die Basis für alle weiteren Indizes (die sekundären Indizes). Wenn Sie den primären XML-Index löschen, werden auch die sekundären Indizes gelöscht.  
   
 ## <a name="options"></a>Tastatur  
 **Ausgewählter XML-Index**  

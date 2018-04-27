@@ -2,7 +2,7 @@
 title: Durchführen eines Upgrades für Integration Services | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
 ms.service: ''
 ms.component: install-windows
@@ -23,11 +23,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 56b70314f149d8eb2f8a9a0143ac43aae3d31afc
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
+ms.openlocfilehash: 5c86e29ad22c13612cb203ddc1858f07fcfa8995
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="upgrade-integration-services"></a>Upgrade von Integration Services
   Wenn [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] oder höher derzeit auf Ihrem Computer installiert ist, können Sie auf [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]aktualisieren.  

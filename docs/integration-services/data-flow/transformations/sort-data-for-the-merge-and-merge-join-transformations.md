@@ -1,31 +1,31 @@
 ---
-title: "Sortieren von Daten für die Transformationen für Zusammenführen und Zusammenführungsjoin | Microsoft-Dokumentation"
-ms.custom: 
+title: Sortieren von Daten für die Transformationen für Zusammenführen und Zusammenführungsjoin | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - sort attributes [Integration Services]
 - output columns [Integration Services]
 ms.assetid: 22ce3f5d-8a88-4423-92c2-60a8f82cd4fd
-caps.latest.revision: 
+caps.latest.revision: 31
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c64f31c7708a8612db85206d164cda6e75e7c848
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 7188f56238b8fff9d44322ca1801e7de4f49407b
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sort-data-for-the-merge-and-merge-join-transformations"></a>Sortieren von Daten für die Transformationen für Zusammenführen und Zusammenführungsjoin
   In [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]erfordern die Transformationen für Zusammenführen und Zusammenführungsjoin sortierte Daten für ihre Eingaben. Die Eingabedaten müssen physisch sortiert werden, und die Sortierungsoptionen müssen für die Ausgaben und die Ausgabespalten in der Quelle oder Upstreamtransformation festgelegt werden. Wenn die Sortierungsoptionen anzeigen, dass die Daten sortiert sind, dies jedoch in Wirklichkeit nicht der Fall ist, sind die Ergebnisse des Vorgangs der Zusammenführung oder des Zusammenführungsjoins nicht vorhersagbar.  

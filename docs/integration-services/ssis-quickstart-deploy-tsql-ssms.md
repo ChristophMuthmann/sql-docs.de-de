@@ -2,22 +2,23 @@
 title: Bereitstellen eines SSIS-Projekts mit Transact-SQL (SSMS) | Microsoft-Dokumentation
 ms.date: 09/25/2017
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: quick-start
 ms.suite: sql
-ms.custom: 
-ms.technology: integration-services
+ms.custom: ''
+ms.technology:
+- integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fa245a3411b175e1bf9b8f95d473d2980eb0f47c
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 65991b38dfecff6a57b9fba0343b43307ec9c2fc
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="deploy-an-ssis-project-from-ssms-with-transact-sql"></a>Bereitstellen eines SSIS-Projekts aus SSMS mit Transact-SQL
 

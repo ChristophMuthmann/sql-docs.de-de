@@ -1,15 +1,16 @@
 ---
-title: "Öffnen des Datenbankdiagramm-Designers (Visual Database Tools) | Microsoft-Dokumentation"
-ms.custom: 
+title: Öffnen des Datenbankdiagramm-Designers (Visual Database Tools) | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - opening Database Diagram Designer
@@ -17,19 +18,20 @@ helpviewer_keywords:
 - database diagrams [SQL Server], Database Diagram Designer
 - diagrams [SQL Server], Database Diagram Designer
 ms.assetid: 9427c418-1e2f-464f-8a6c-9109f053e832
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f80f91be3c5ad55103011beb0f56c8a9e0595968
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: d9fccbecb1e3985b3d871d47a0444e6a8244a680
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="open-database-diagram-designer-visual-database-tools"></a>Öffnen des Datenbankdiagramm-Designers (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Der Datenbankdiagramm-Designer ist ein visuelles Tool, mit dem Sie eine Datenbank, mit der Sie eine Verbindung hergestellt haben, entwerfen und anzeigen können. Beim Entwerfen einer Datenbank können Sie mithilfe des Datenbank-Designers Tabellen, Spalten, Schlüssel, Indizes, Beziehungen und Einschränkungen erstellen, bearbeiten oder löschen. Zur Darstellung einer Datenbank können Sie ein oder mehrere Diagramme erstellen, die die Tabellen, Spalten, Schlüssel oder Beziehungen innerhalb der Datenbank teilweise oder ganz anzeigen.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Der Datenbankdiagramm-Designer ist ein visuelles Tool, mit dem Sie eine Datenbank, mit der Sie eine Verbindung hergestellt haben, entwerfen und anzeigen können. Beim Entwerfen einer Datenbank können Sie mithilfe des Datenbank-Designers Tabellen, Spalten, Schlüssel, Indizes, Beziehungen und Einschränkungen erstellen, bearbeiten oder löschen. Zur Darstellung einer Datenbank können Sie ein oder mehrere Diagramme erstellen, die die Tabellen, Spalten, Schlüssel oder Beziehungen innerhalb der Datenbank teilweise oder ganz anzeigen.  
   
 Sie können den Datenbankdiagramm-Designer öffnen, indem Sie ein neues oder vorhandenes Diagramm öffnen.  
   

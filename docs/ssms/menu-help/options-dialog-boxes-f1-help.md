@@ -1,33 +1,35 @@
 ---
 title: Optionen (Dialogfelder, F1-Hilfe) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-menu
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Options [SQL Server Management Studio], dialog boxes
 - Options [SQL Server Management Studio]
 ms.assetid: b98d2631-530a-43b4-8491-f724f8e4a23a
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 14a3f463d74000c9d7df7d089073f93fa00fc3f4
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 483d23cdd54b1d6325f19f6cb581ca58e869801e
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="options-dialog-boxes-f1-help"></a>Optionen (Dialogfelder, F1-Hilfe)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Dieser Abschnitt enthält die F1-Hilfe zu Dialogfeldern, die angezeigt werden, wenn Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] im Menü **Extras** auf **Optionen** klicken.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Dieser Abschnitt enthält die F1-Hilfe zu Dialogfeldern, die angezeigt werden, wenn Sie in **im Menü** Extras **auf** Optionen [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]klicken.  
   
 [Optionen &#40;Designer - Analysis Services-Designer – Allgemein&#41;](../../ssms/menu-help/options-designers-analysis-services-designers-general.md)  
   

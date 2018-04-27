@@ -1,30 +1,30 @@
 ---
-title: "Suchtransformation im Vollcachemodus – OLE DB-Verbindungs-Manager | Microsoft-Dokumentation"
-ms.custom: 
+title: Suchtransformation im Vollcachemodus – OLE DB-Verbindungs-Manager | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: connection-manager
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Lookup transformation [Integration Services]
 ms.assetid: c4150e1b-bdff-4f7a-af4c-3401c34def83
-caps.latest.revision: 
+caps.latest.revision: 17
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6d69961ae90e09cc218fc24cfe6ffe364c63ee2f
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: a4c0035ede0be79e1a37e144099155be9b30fd9a
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="lookup-transformation-full-cache-mode---ole-db-connection-manager"></a>Suchtransformation im Vollcachemodus – OLE DB-Verbindungs-Manager
   Sie können die Transformation für Suche so konfigurieren, dass der Vollcachemodus und ein OLE DB-Verbindungs-Manager verwendet werden. Im Vollcachemodus wird das Verweisdataset in den Cache geladen, bevor die Transformation für Suche ausgeführt wird.  
@@ -76,7 +76,7 @@ ms.lasthandoff: 01/25/2018
     >  Die Transformation für Suche ordnet automatisch Spalten mit dem gleichen Namen und dem gleichen Datentyp zu.  
   
     > [!NOTE]  
-    >  Die Spalten müssen übereinstimmende Datentypen aufweisen, damit sie zugeordnet werden. Weitere Informationen finden Sie unter [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
+    >  Die Spalten müssen übereinstimmende Datentypen aufweisen, damit sie zugeordnet werden. Weitere Informationen finden Sie unter [Integration Services Datentypen](../../integration-services/data-flow/integration-services-data-types.md).  
   
 11. Schließen Sie Suchspalten in die Ausgabe ein, indem Sie die folgenden Schritte ausführen:  
   

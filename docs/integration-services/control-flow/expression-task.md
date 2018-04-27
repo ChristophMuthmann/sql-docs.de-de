@@ -1,30 +1,30 @@
 ---
-title: "Task „Ausdruck“ | Microsoft-Dokumentation"
-ms.custom: 
+title: Task „Ausdruck“ | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: control-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.DTS.DESIGNER.EXPRESSIONTASK.F1
 ms.assetid: 1d7f042d-508d-4e1a-b83a-86a18e23b85f
-caps.latest.revision: 
+caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a2040034f97bc9ffb1007ac2344654e42b112a97
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: a454b5b23fb97594b82dd23eba78e54e2b261826
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="expression-task"></a>Task 'Ausdruck'
   Der Task "Ausdruck" erstellt Ausdrücke für die Festlegung von Variablenwerte zur Laufzeit mit dem Ausdruck-Generator und wertet diese aus. Wenn Sie den Task bearbeiten, wird der [Expression Builder](../../integration-services/expressions/expression-builder.md) gestartet.  

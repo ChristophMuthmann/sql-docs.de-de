@@ -2,7 +2,7 @@
 title: Hochverfügbarkeit und Notfallwiederherstellung für Master Data Services | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 07/28/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: mds
 ms.service: ''
 ms.component: installing-mds-in-an-alwayson-group-environment
@@ -18,11 +18,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2abe9f51dd271ed5524ebb7ee63475e99d0697b4
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: b26338410fcf3ed5741805c6f1e2be584150bcb6
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="high-availability-and-disaster-recovery-for-master-data-services"></a>Hochverfügbarkeit und Notfallwiederherstellung für Master Data Services
 

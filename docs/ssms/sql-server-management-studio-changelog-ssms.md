@@ -2,7 +2,7 @@
 title: SQL Server Management Studio – Änderungsprotokoll (SSMS) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 04/17/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms
@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: d44dda667b1b3cb22a1f3612132905f4cc520648
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 641bb062bc450f83a79ae3a5fa8d9f0d6dcfde94
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio – Änderungsprotokoll (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -59,7 +59,7 @@ Objekt-Explorer:
 Datenklassifizierung:
 - allgemeine Verbesserungen und Fehlerbehebungen
 
-**Integration Services (IS)**
+**Integration Services**
 
 - Unterstützung für die Bereitstellung von Paketen in einer [verwalteten SQL-Datenbank-Instanz](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)
 
@@ -102,7 +102,7 @@ Datenbank-E-Mail:
 
 - Ein Problem wurde behoben, durch das beim Ändern einer Datenquelle für Modelle mit Kompatibilitätsgrad 1400 in SSMS die Änderungen nicht auf dem Server gespeichert wurden.
 
-**Integration Services (IS)**
+**Integration Services**
 
 - Ein Problem wurde behoben, durch das in SSMS keine SSIS-Katalogknoten oder -Berichte bei einer Verbindung mit einer verwalteten SQL-Datenbank-Instanz angezeigt wurden.
 
@@ -223,7 +223,7 @@ Assistent zum Importieren von Flatfiles:
 Abfragespeicher:
 - Der Bericht „Rückläufige Abfragen“ beim Erweitern der Liste der verfügbaren Berichte im Abfragespeicher wurde wiederhergestellt.
 
-**Integration Services (IS)**
+**Integration Services**
 - Neue Funktion zur Paketüberprüfung im Bereitstellungs-Assistenten, die dem Benutzer hilft, Komponenten innerhalb von SSIS-Paketen zu erkennen, die in Azure-SSIS IR nicht unterstützt werden.
 
 ### <a name="bug-fixes"></a>Behebung von Programmfehlern
@@ -365,7 +365,7 @@ Allgemein verfügbar | Buildnummer: 14.0.17199.0
 - *Rückläufige Abfragen* fehlen in der Liste der Berichte im Abfragespeicher im Objekt-Explorer.
    - Problemumgehung: Klicken Sie mit der rechten Maustaste auf den Knoten **Abfragespeicher**, und wählen Sie **View Regressed Queries (Rückläufige Abfragen anzeigen)** aus.
 
-**Integration Services (IS)**
+**Integration Services**
 
 - Der [Ausführungspfad] in [Katalog].[Ereignismeldungen] ist für Paketausführungen in Scale Out falsch. Der [Ausführungspfad] beginnt mit „\Package“ anstelle des Objektnamens des ausführbaren Pakets. Beim Anzeigen der Übersichtsberichte von Paketausführungen in SSMA kann der Link zum „Ausführungspfad“ in der Übersicht über die Ausführung nicht funktionieren. Klicken Sie im Übersichtsbericht auf „Nachrichten anzeigen“, um alle Ereignismeldungen zu prüfen.
 
@@ -427,7 +427,7 @@ Allgemein verfügbar | Buildnummer: 14.0.17177.0
 
 - Neue AAD-Rollenmemberauswahl für Benutzer ohne E-Mail-Adressen in AS Azure-Modellen in SSMS
 
-**Integration Services (IS)**
+**Integration Services**
 
 - Eine neue Spalte („Anzahl von Ausführungen“) wurde dem Ausführungsbericht für SSIS hinzugefügt
 
@@ -496,7 +496,7 @@ The connection is broken and recovery is not possible. The client driver attempt
 - Es wurde ein sehr seltenes Problem behoben, bei dem das Dialogfeld „Datenbank löschen“ beim Laden einen Fehler auslösen konnte
 - Es wurde ein Problem behoben, das beim Versuch auftreten konnte, Partitionen im Modell mit Kompatibilitätsgrad 1400 anzuzeigen, die eine Mischung aus SQL-Abfragen und Partitionsdefinitionen enthalten
 
-**Integration Services (IS)**
+**Integration Services**
 - Es wurde ein Problem behoben, bei dem die Berichte zu Ausführungsinformationen des SSISDB-Katalogs nicht angezeigt werden konnten
 - Es wurde ein Problem in SSMS behoben, bei dem eine große Anzahl von Projekten/Paketen zu Leistungsproblemen führen konnte
 

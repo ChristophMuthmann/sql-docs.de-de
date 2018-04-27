@@ -1,16 +1,16 @@
 ---
 title: SQL Server Integration Services | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 keywords:
 - SSIS
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - data integration [Integration Services]
 - Data Transformation Services
 ms.assetid: c4398655-5657-4ae4-a690-a380790fe84f
-caps.latest.revision: 
+caps.latest.revision: 51
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 48d2b81acab290fc27ca351c8e630b8a9cfc5f77
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 073a8ba49306d2cb7add65cc70910080537bbe04
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sql-server-integration-services"></a>SQL Server Integration Services
 

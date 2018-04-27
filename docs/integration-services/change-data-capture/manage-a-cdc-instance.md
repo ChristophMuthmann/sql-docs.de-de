@@ -1,30 +1,30 @@
 ---
 title: Verwalten einer CDC-Instanz | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: change-data-capture
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - manIns
 ms.assetid: cfed22c8-c666-40ca-9e73-24d93e85ba92
-caps.latest.revision: 
+caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b61e0362a4b29f1721a08469f8df529861e10174
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 8840756a2036b5c2a62d2aa456773a46167a51fe
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="manage-a-cdc-instance"></a>Verwalten einer CDC-Instanz
   Sie können die CDC Designer Console zum Anzeigen von Informationen zu den erstellten Instanzen und zum Verwalten des Betriebs der Instanzen verwenden.  
@@ -77,7 +77,7 @@ ms.lasthandoff: 01/25/2018
     |||  
     |-|-|  
     |![Fehler](../../integration-services/change-data-capture/media/error.gif "Fehler")|**Fehler**: Die Oracle CDC-Instanz wird nicht ausgeführt, da ein nicht wiederholbarer Fehler aufgetreten ist. Die folgenden Unterstatus sind verfügbar:<br /><br /> **Misconfigured**: Es ist ein Konfigurationsfehler aufgetreten, der einen manuellen Eingriff erfordert.<br /><br /> **Kennwort erforderlich**: Für die Oracle CDC-Instanz wurde kein Kennwort festgelegt, oder das Kennwort ist nicht gültig.<br /><br /> **Unerwartet**: Alle anderen nicht behebbaren Fehler.|  
-    |![OK](../../integration-services/change-data-capture/media/okay.gif "OK")|**Wird ausgeführt:**Die CDC-Instanz wird ausgeführt und verarbeitet Änderungsdatensätze. Die folgenden Unterstatus sind verfügbar:<br /><br /> **Im Leerlauf**: Alle Änderungsdatensätze wurden verarbeitet und in den Zieländerungstabellen gespeichert. Es sind keine aktiven Transaktionen mehr vorhanden.<br /><br /> **Processing**: Es werden Änderungsdatensätze verarbeitet, die noch nicht in die Änderungstabellen geschrieben wurden.|  
+    |![OK](../../integration-services/change-data-capture/media/okay.gif "OK")|**Wird ausgeführt:** Die CDC-Instanz wird ausgeführt und verarbeitet Änderungsdatensätze. Die folgenden Unterstatus sind verfügbar:<br /><br /> **Im Leerlauf**: Alle Änderungsdatensätze wurden verarbeitet und in den Zieländerungstabellen gespeichert. Es sind keine aktiven Transaktionen mehr vorhanden.<br /><br /> **Processing**: Es werden Änderungsdatensätze verarbeitet, die noch nicht in die Änderungstabellen geschrieben wurden.|  
     |![Beenden](../../integration-services/change-data-capture/media/stop.gif "Beenden")|**Beendet**: Die CDC-Instanz wird nicht ausgeführt. Der Status Beendet gibt an, dass die CDC-Instanz auf normale Weise beendet wurde.|  
     |![Angehalten](../../integration-services/change-data-capture/media/paused.gif "Angehalten")|**Angehalten**: Die CDC-Instanz wird ausgeführt, aber die Verarbeitung wurde aufgrund eines wiederholbaren Fehlers angehalten. Die folgenden Unterstatus sind verfügbar:<br /><br /> **Getrennt**: Die Verbindung zur Oracle-Quelldatenbank kann nicht hergestellt werden. Die Verarbeitung wird fortgesetzt, nachdem die Verbindung wiederhergestellt wurde.<br /><br /> **Speicher**: Der Speicher ist voll. Die Verarbeitung wird fortgesetzt, wenn zusätzlicher Speicher verfügbar wird.<br /><br /> **Logger**: Die Protokollierung ist mit Oracle verbunden, kann aber die Oracle-Transaktionsprotokolle aufgrund eines vorübergehenden Problems nicht lesen, weil z. B. ein erforderliches Transaktionsprotokoll nicht verfügbar ist.|  
   
@@ -93,15 +93,15 @@ ms.lasthandoff: 01/25/2018
   
     -   **Last change timestamp**: Die Ortszeit der letzten Änderung, die für die Oracle CDC-Instanz in den Transaktionsprotokollen der Oracle-Quelldatenbank sichtbar ist. Hierbei werden Informationen zur aktuellen Latenzzeit der CDC-Instanz beim Lesen des Oracle-Transaktionsprotokolls bereitgestellt.  
   
-    -   **Transaction log head CN:**Die letzte Änderungsnummer (CN), die aus dem Oracle-Transaktionsprotokoll gelesen wurde.  
+    -   **Transaction log head CN:** Die letzte Änderungsnummer (CN), die aus dem Oracle-Transaktionsprotokoll gelesen wurde.  
   
     -   **Transaction log tail CN**: Die Änderungsnummer zur Wiederherstellung oder zum Neustarten der CDC-Instanz. Die Oracle CDC-Instanz greift auf diese Position zurück, falls ein Neustart durchgeführt wird oder ein anderer Fehler auftritt (einschließlich Clusterfailover).  
   
-    -   **Current CN:**Die letzte Änderungsnummer (SCN) in der Oracle-Quelldatenbank (nicht das Transaktionsprotokoll).  
+    -   **Current CN:** Die letzte Änderungsnummer (SCN) in der Oracle-Quelldatenbank (nicht das Transaktionsprotokoll).  
   
-    -   **Aktive Transaktionen:**Die aktuelle Anzahl von Oracle-Quelltransaktionen, die von der Oracle CDC-Instanz verarbeitet werden und für die noch keine Entscheidung getroffen wurde (Commit/Rollback).  
+    -   **Aktive Transaktionen:** Die aktuelle Anzahl von Oracle-Quelltransaktionen, die von der Oracle CDC-Instanz verarbeitet werden und für die noch keine Entscheidung getroffen wurde (Commit/Rollback).  
   
-    -   **Bereitgestellte Transaktionen:**Die aktuelle Anzahl von Oracle-Quelltransaktionen, die für die Tabelle [cdc.xdbcdc_staged_transactions](../../integration-services/change-data-capture/the-oracle-cdc-databases.md#BKMK_cdcxdbcdc_staged_transactions) bereitgestellt werden.  
+    -   **Bereitgestellte Transaktionen:** Die aktuelle Anzahl von Oracle-Quelltransaktionen, die für die Tabelle [cdc.xdbcdc_staged_transactions](../../integration-services/change-data-capture/the-oracle-cdc-databases.md#BKMK_cdcxdbcdc_staged_transactions) bereitgestellt werden.  
   
 -   **Indikatoren**: In diesem Abschnitt können Sie die folgenden Informationen überwachen.  
   

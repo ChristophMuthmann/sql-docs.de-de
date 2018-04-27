@@ -2,7 +2,7 @@
 title: Aufheben der Unterdrückung von Warnungen für das Ausführen von benutzerdefinierten Berichten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms-objects
@@ -20,14 +20,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ef82982f5a18595c28fd8fb20a1ba28c43936f9d
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 83cfba9bd32f1b3174410ae348bce1f31304a50d
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="unsuppress-run-custom-report-warnings"></a>Aufheben der Unterdrückung von Warnungen für das Ausführen von benutzerdefinierten Berichten
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Für benutzerdefinierte Berichte gibt es zwei Warndialogfelder. In diesem Thema wird beschrieben, wie die Unterdrückung der Anzeige dieser Felder in [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]aufgehoben werden kann.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Für benutzerdefinierte Berichte gibt es zwei Warndialogfelder. In diesem Thema wird beschrieben, wie die Unterdrückung der Anzeige dieser Felder in [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]aufgehoben werden kann.  
   
 Standardmäßig wird das Dialogfeld **Benutzerdefinierten Bericht ausführen** vor dem Ausführen eines benutzerdefinierten Berichts angezeigt. Wenn Sie das Kontrollkästchen **Diese Meldung nicht mehr anzeigen** aktivieren, wird das Dialogfeld nicht mehr angezeigt. Standardmäßig wird das Dialogfeld **Benutzerdefinierten Bericht ausführen** auch dann angezeigt, wenn Sie einen benutzerdefinierten Bericht öffnen und dann auf einen Link klicken, um einen anderen benutzerdefinierten Bericht zu öffnen. In diesem Dialogfeld wird der vollständige Pfad zur benutzerdefinierten Drillthroughberichtsdatei angezeigt. Wenn Sie das Kontrollkästchen **Diese Meldung nicht mehr anzeigen** aktivieren, wird das Dialogfeld nicht mehr angezeigt.  
   
@@ -41,7 +42,7 @@ Standardmäßig wird das Dialogfeld **Benutzerdefinierten Bericht ausführen** v
   
 3.  Ändern Sie **<SuppressWarning>true\<\/Suppress Warning> in <SuppressWarning>false\<\/SupressWarning>**.  
   
-4.  Starten Sie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]neu.  
+4.  Starten Sie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] neu.  
   
 #### <a name="to-unsuppress-the-drill-through-custom-report-warning-dialog-box"></a>So heben Sie die Unterdrückung des Warndialogfelds für den benutzerdefinierten Drillthroughbericht auf  
   
@@ -51,7 +52,7 @@ Standardmäßig wird das Dialogfeld **Benutzerdefinierten Bericht ausführen** v
   
 3.  Ändern Sie **<SuppressDrillthroughWarning>true\<\/SupressDrillthroughWarning> in <SuppressDrillthroughWarning>false\<\/SupressDrillthroughWarning>**.  
   
-4.  Starten Sie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]neu.  
+4.  Starten Sie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] neu.  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Benutzerdefinierte Berichte in Management Studio](../../ssms/object/custom-reports-in-management-studio.md)  

@@ -1,27 +1,28 @@
 ---
-title: "Ändern des Kontos für die Scale Out-Protokollierung | Microsoft-Dokumentation"
+title: Ändern des Kontos für die Scale Out-Protokollierung | Microsoft-Dokumentation
 ms.description: This article describes how to change the user account for SSIS Scale Out logging
-ms.custom: 
+ms.custom: ''
 ms.date: 12/13/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: scale-out
 ms.reviewer: douglasl
 ms.suite: sql
-ms.technology: integration-services
-ms.tgt_pltfrm: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: ''
 ms.topic: article
-caps.latest.revision: "1"
+caps.latest.revision: 1
 author: haoqian
 ms.author: haoqian
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8976c44653ea37b7571d4e54d405be223f9728a4
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: b3901d42e254aff571c28cc2137092f9614e5e1e
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="change-the-account-for-scale-out-logging"></a>Ändern des Kontos für die Scale Out-Protokollierung
 Beim Ausführen von SSIS-Paketen in Scale Out werden die Ereignismeldungen mit einem automatisch erstellten Benutzerkonto mit dem Namen **##MS_SSISLogDBWorkerAgentLogin##** in der SSISDB-Datenbank protokolliert. Bei der Anmeldung dieses Benutzers wird die SQL Server-Authentifizierung verwendet.

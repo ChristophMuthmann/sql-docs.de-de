@@ -2,7 +2,7 @@
 title: Herstellen einer Verbindung mit der SSISDB-Katalogdatenbank in Azure | Microsoft-Dokumentation
 ms.date: 09/25/2017
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
 ms.service: ''
 ms.component: lift-shift
@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 148cd6e05063902fb0e171e498ce08c7e05b92e7
-ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
+ms.openlocfilehash: c9316c291ac650628bff880303c49822eca99700
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="connect-to-the-ssisdb-catalog-database-on-azure"></a>Herstellen einer Verbindung mit der SSISDB-Katalogdatenbank in Azure
 

@@ -2,7 +2,7 @@
 title: Azure Active Directory-Unterstützung in SQL Server Data Tools (SSDT) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/05/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssdt
@@ -17,11 +17,11 @@ ms.author: sstein
 manager: craigg
 ms.workload: Active
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 7ea6a2c1a0617eaa7855470f8f8edf87308c9d22
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 1e8f19c1dcc629ec6e97aa02cd23be1c101ad596
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="azure-active-directory-support-in-sql-server-data-tools-ssdt"></a>Azure Active Directory-Unterstützung in SQL Server Data Tools (SSDT)
 

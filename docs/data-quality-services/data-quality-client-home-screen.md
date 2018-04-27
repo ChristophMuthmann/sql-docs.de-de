@@ -2,7 +2,7 @@
 title: Startbildschirm des Data Quality-Clients | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 02/29/2012
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: data-quality-services
 ms.service: ''
 ms.component: data-quality-services
@@ -20,11 +20,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2cfbc7192c1e8ecb4b8873ecade45a0b3f67a4e8
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: a44fc6d4aef8ffc49a9e16cc1d4b9084792b6580
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="data-quality-client-home-screen"></a>Startbildschirm des Data Quality-Clients
 

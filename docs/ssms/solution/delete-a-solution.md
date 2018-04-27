@@ -1,34 +1,36 @@
 ---
-title: "Löschen einer Projektmappe | Microsoft-Dokumentation"
-ms.custom: 
+title: Löschen einer Projektmappe | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-solutions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - removing solutions
 - solutions [SQL Server Management Studio], deleting
 - deleting solutions
 ms.assetid: 750bb2ac-4f69-4c8d-9db5-3f33837b6dff
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 734a0e6e42282eed62416cc0d360b6d7bc53f6a7
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 1722390a94ec7791c4dac9228497790fc4905542
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="delete-a-solution"></a>Löschen einer Projektmappe
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Wenn Sie eine Projektmappe unwiderruflich löschen, werden die Dateien aus dem physischen Speicher und die Dateielemente aus der Projektmappe entfernt.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Wenn Sie eine Projektmappe unwiderruflich löschen, werden die Dateien aus dem physischen Speicher und die Dateielemente aus der Projektmappe entfernt.  
   
 > [!NOTE]  
 > Im Gegensatz zu Projekten und Elementen kann eine Projektmappe nur unwiderruflich gelöscht und nicht vorübergehend entfernt werden.  

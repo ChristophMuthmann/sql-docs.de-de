@@ -1,16 +1,16 @@
 ---
-title: "Transformation für Fuzzygruppierung | Microsoft-Dokumentation"
-ms.custom: 
+title: Transformation für Fuzzygruppierung | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.fuzzygroupingtrans.f1
@@ -31,16 +31,16 @@ helpviewer_keywords:
 - data cleaning [Integration Services]
 - duplicate data [Integration Services]
 ms.assetid: e43f17bd-9d13-4a8f-9f29-cce44cac1025
-caps.latest.revision: 
+caps.latest.revision: 58
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 03ffaa3d6dda388fc660feafc68a57fd8ce6346c
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: a12b82c9a0c33438edad684b3fd7a6b5228435d4
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="fuzzy-grouping-transformation"></a>Transformation für Fuzzygruppierung
   Die Transformation für Fuzzygruppierung führt Datenbereinigungsaufgaben durch, indem Datenzeilen identifiziert werden, die wahrscheinlich Duplikate sind, und eine kanonische Datenzeile ausgewählt wird, die zum Standardisieren der Daten verwendet wird.  
@@ -50,7 +50,7 @@ ms.lasthandoff: 01/25/2018
   
  Für die Transformation der Fuzzygruppierung ist eine Verbindung zu einer Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] erforderlich, damit die temporären [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Tabellen erstellt werden können, die der Transformationsalgorithmus zur Durchführung benötigt. Die Verbindung muss für einen Benutzer aufgelöst sein, der die Berechtigung zum Erstellen von Tabellen in der Datenbank besitzt.  
   
- Um die Transformation zu konfigurieren, müssen Sie die Eingabespalten auswählen, die zum Identifizieren von Duplikaten verwendet werden sollen, und Sie müssen für jede Spalte den Typ der Übereinstimmung auswählen – entweder fuzzy oder genau. Mit einer genauen Übereinstimmung wird garantiert, dass nur Zeilen mit identischen Werten in dieser Spalte gruppiert werden. Die genaue Übereinstimmung kann für Spalten aller [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] -Datentypen verwendet werden, mit Ausnahme von DT_TEXT, DT_NTEXT und DT_IMAGE. Bei der Fuzzyübereinstimmung werden Zeilen gruppiert, die annähernd dieselben Werte aufweisen. Die Methode zur Ermittlung der annähernden Übereinstimmung von Daten basiert auf einem vom Benutzer angegebenen Ähnlichkeitsergebnis. Zur Fuzzyübereinstimmung können nur Spalten mit den Datentypen DT_WSTR und DT_STR verwendet werden. Weitere Informationen finden Sie unter [Integration Services Data Types](../../../integration-services/data-flow/integration-services-data-types.md).  
+ Um die Transformation zu konfigurieren, müssen Sie die Eingabespalten auswählen, die zum Identifizieren von Duplikaten verwendet werden sollen, und Sie müssen für jede Spalte den Typ der Übereinstimmung auswählen – entweder fuzzy oder genau. Mit einer genauen Übereinstimmung wird garantiert, dass nur Zeilen mit identischen Werten in dieser Spalte gruppiert werden. Die genaue Übereinstimmung kann für Spalten aller [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] -Datentypen verwendet werden, mit Ausnahme von DT_TEXT, DT_NTEXT und DT_IMAGE. Bei der Fuzzyübereinstimmung werden Zeilen gruppiert, die annähernd dieselben Werte aufweisen. Die Methode zur Ermittlung der annähernden Übereinstimmung von Daten basiert auf einem vom Benutzer angegebenen Ähnlichkeitsergebnis. Zur Fuzzyübereinstimmung können nur Spalten mit den Datentypen DT_WSTR und DT_STR verwendet werden. Weitere Informationen finden Sie unter [Integration Services Datentypen](../../../integration-services/data-flow/integration-services-data-types.md).  
   
  Die Transformationsausgabe umfasst alle Eingabespalten, eine oder mehrere Spalten mit standardisierten Daten sowie eine Spalte, die das Ähnlichkeitsergebnis enthält. Das Ergebnis ist ein Dezimalwert zwischen 0 und 1. Die kanonische Zeile weist ein Ergebnis von 1 auf. Andere Zeilen in der Fuzzygruppierung weisen Ergebnisse auf, die angeben, wie stark die Zeile mit der kanonischen Zeile übereinstimmt. Je näher das Ergebnis an 1 liegt, desto genauer stimmt die Zeile mit der kanonischen Zeile überein. Wenn die Fuzzygruppierung Zeilen enthält, die genaue Duplikate der kanonischen Zeile sind, besitzen diese Zeilen ebenfalls das Ergebnis 1. Die Transformation entfernt doppelte Zeilen nicht, sondern gruppiert diese, indem ein Schlüssel erstellt wird, der die kanonische Zeile in Bezug zu ähnlichen Zeilen stellt.  
   

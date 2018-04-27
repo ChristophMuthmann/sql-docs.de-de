@@ -2,7 +2,7 @@
 title: Dialogfeld 'Räumliche Indizes' (Visual Database Tools) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms-visual-db
@@ -20,14 +20,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bfaa6bfd65d898bedcbf7568f86c99b9c4b6a952
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 452b561ad55bd845902ab6b03edf9b98d621fb0c
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="spatial-indexes-dialog-box-visual-database-tools"></a>Dialogfeld 'Räumliche Indizes' (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Verwenden Sie das Dialogfeld **Räumliche Indizes**, um Indizes für Spalten des Datentyps **geometry** oder **geography** (*räumliche Spalten*) zu erstellen, denn diese können nicht mithilfe des Dialogfelds **Index/Schlüssel** indiziert werden. Jede räumliche Spalte kann mehr als einen räumlichen Index aufweisen, jedoch müssen sie einzeln erstellt werden.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Verwenden Sie das Dialogfeld **Räumliche Indizes** , um Indizes für Spalten des Datentyps **geometry** oder **geography** (*räumliche Spalten*) zu erstellen, denn diese können nicht mithilfe des Dialogfelds **Index/Schlüssel** indiziert werden. Jede räumliche Spalte kann mehr als einen räumlichen Index aufweisen, jedoch müssen sie einzeln erstellt werden.  
   
 Weitere Informationen über die Einschränkungen bei der Erstellung von räumlichen Indizes finden Sie unter [Übersicht über räumliche Indizes](http://msdn.microsoft.com/en-us/b1ae7b78-182a-459e-ab28-f743e43f8293).  
   

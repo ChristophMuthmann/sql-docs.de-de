@@ -2,7 +2,7 @@
 title: Dialogfeld „Speichern (nicht zulässig)“ | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms-visual-db
@@ -20,14 +20,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e20cf232c629564cb43bcaaa0e3e8ce184ec04f8
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: da0d22d41f447914aa99d805f228b65e361b8b8f
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="save-not-permitted-dialog-box"></a>Dialogfeld 'Speichern (nicht zulässig)'
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Das Dialogfeld **Speichern** (nicht zulässig) warnt Sie, dass das Speichern von Änderungen nicht zulässig ist, da die von Ihnen vorgenommenen Änderungen erfordern, dass die aufgelisteten Tabellen gelöscht und neu erstellt werden.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Das Dialogfeld **Speichern (nicht zulässig)** warnt Sie, dass das Speichern von Änderungen nicht zulässig ist, da die von Ihnen vorgenommenen Änderungen erfordern, dass die aufgelisteten Tabellen gelöscht und neu erstellt werden.  
   
 Die folgenden Aktionen können die erneute Erstellung einer Tabelle erfordern:  
   

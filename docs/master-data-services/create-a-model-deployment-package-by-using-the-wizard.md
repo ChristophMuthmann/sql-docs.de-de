@@ -2,7 +2,7 @@
 title: Erstellen eines Modellbereitstellungspakets mithilfe des Assistenten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: mds
 ms.service: ''
 ms.component: non-specific
@@ -22,11 +22,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e5c23d47b558aec6cb99e203d737b6d84a06bc90
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 70141f5f54c5a34ed08b03b23b7c50f3874f162a
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="create-a-model-deployment-package-by-using-the-wizard"></a>Erstellen eines Modellbereitstellungspakets mithilfe des Assistenten
 

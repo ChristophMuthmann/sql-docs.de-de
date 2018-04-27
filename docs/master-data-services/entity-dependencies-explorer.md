@@ -2,7 +2,7 @@
 title: Entitätsabhängigkeiten-Explorer | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 04/06/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: mds
 ms.service: ''
 ms.component: non-specific
@@ -20,11 +20,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 649a73bbc5aee77f3a8dfc069949fc3b14d09cc6
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: da0f75ce495a2791523dd30a3bbef0cfce71d081
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="entity-dependencies-explorer"></a>Entitätsabhängigkeiten-Explorer
 

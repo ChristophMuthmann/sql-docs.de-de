@@ -2,7 +2,7 @@
 title: Explizite Hierarchien (Master Data Services) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 04/01/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: mds
 ms.service: ''
 ms.component: non-specific
@@ -22,11 +22,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a59736d8f64a7c0c1a11d4bc85f62cd6f4a7c1ee
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 0e0cb5e004e3b119ab6656e74e5fb3e6f2f50cf1
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="explicit-hierarchies-master-data-services"></a>Explizite Hierarchien (Master Data Services)
 

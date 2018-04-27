@@ -2,7 +2,7 @@
 title: Ändern des Namens einer abgeleiteten Hierarchie (Master Data Services) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: mds
 ms.service: ''
 ms.component: non-specific
@@ -20,11 +20,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8b12aa22b0b512bc1d8050f461767e6134bc77d1
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: b16420fb54440622ad32018f1a9d20fef886e36d
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="change-a-derived-hierarchy-name-master-data-services"></a>Ändern des Namens einer abgeleiteten Hierarchie (Master Data Services)
 

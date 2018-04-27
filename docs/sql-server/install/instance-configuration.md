@@ -2,7 +2,7 @@
 title: Hilfe zum Installations-Assistenten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 2017-04-21
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: install
@@ -23,11 +23,11 @@ ms.author: mikeray
 manager: craigg
 robots: noindex,nofollow
 ms.workload: On Demand
-ms.openlocfilehash: 4ef290dacb4863511444c1267ce98a28a9e80926
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 83510ac86914e6079f5bc52262ac475c6585c630
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="installation-wizard-help"></a>Hilfe zum Installations-Assistenten
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

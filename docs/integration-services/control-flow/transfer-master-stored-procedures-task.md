@@ -1,16 +1,16 @@
 ---
-title: "In master gespeicherte Prozeduren übertragen (Task) | Microsoft-Dokumentation"
-ms.custom: 
+title: In master gespeicherte Prozeduren übertragen (Task) | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: control-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.transfermasterspstask.f1
@@ -19,16 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - Transfer Master Stored Procedures task [Integration Services]
 ms.assetid: 81702560-48a3-46d1-a469-e41304c7af8e
-caps.latest.revision: 
+caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9fd702ba3b0b498a8ede7e0ed32632b53ba27770
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 29c00c7920f1b80b2344d43df74efb84daa80903
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="transfer-master-stored-procedures-task"></a>In master gespeicherte Prozeduren übertragen (Task)
   Der Task „In 'master' gespeicherte Prozeduren übertragen“ überträgt mindestens eine benutzerdefinierte gespeicherte Prozedur zwischen den **master** -Datenbanken der Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Um eine gespeicherte Prozedur von der **master** -Datenbank zu übertragen, muss dbo der Besitzer der gespeicherten Prozedur sein.  

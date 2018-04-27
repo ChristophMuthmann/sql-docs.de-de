@@ -2,7 +2,7 @@
 title: Problembehandlung bei Failoverclustern | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 10/21/2015
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: failover-clusters
@@ -22,11 +22,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 85d9a421358b026cab07832965f8e27dc7efb071
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: c5731a212d0bee700c0d1ad7ba3c4367c125d57b
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="failover-cluster-troubleshooting"></a>Problembehandlung bei Failoverclustern
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -93,12 +93,12 @@ Failoverclustering wird mit einer integrierten Schutzvorrichtung geliefert, um b
 ### <a name="problem-incorrect-use-of-command-prompt-syntax-to-install-sql-server"></a>Problem: Falsche Verwendung der Eingabeaufforderungssyntax für die Installation von SQL Server  
  **Problem 1:** Setupprobleme sind schwer zu diagnostizieren, wenn der **/qn** -Schalter an der Eingabeaufforderung verwendet wird, da **/qn** alle Dialogfelder und Fehlermeldungen für das Setup unterdrückt. Wenn der **/qn** -Schalter angegeben ist, werden alle Setupmeldungen, einschließlich aller Fehlermeldungen, in Setupprotokolldateien geschrieben. Weitere Informationen finden Sie unter [Lesen und Anzeigen der Setupprotokolldateien von SQL Server](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).  
   
- **Lösung 1:**Verwenden Sie anstelle des **/qn** -Schalters den **/qb** -Schalter. Wenn Sie den **/qb** -Schalter verwenden, wird bei jedem Schritt die Standardbenutzeroberfläche mit allen Fehlermeldungen angezeigt.  
+ **Lösung 1:** Verwenden Sie anstelle des **/qn** -Schalters den **/qb** -Schalter. Wenn Sie den **/qb** -Schalter verwenden, wird bei jedem Schritt die Standardbenutzeroberfläche mit allen Fehlermeldungen angezeigt.  
   
 ### <a name="problem-sql-server-cannot-log-on-to-the-network-after-it-migrates-to-another-node"></a>Problem: SQL Server kann sich nach der Migration auf einen anderen Knoten nicht am Netzwerk anmelden  
  **Problem 1:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Dienstkonten kann kein Kontakt mit einem Domänencontroller hergestellt werden.  
   
- **Lösung 1:**Überprüfen Sie die Ereignisprotokolle in Hinblick auf Netzwerkprobleme wie Adapterfehler oder DNS-Probleme. Überprüfen Sie, ob Sie Ihren Domänencontroller pingen können.  
+ **Lösung 1:** Überprüfen Sie die Ereignisprotokolle in Hinblick auf Netzwerkprobleme wie Adapterfehler oder DNS-Probleme. Überprüfen Sie, ob Sie Ihren Domänencontroller pingen können.  
   
  **Problem 2:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Dienstkontokennwörter stimmen nicht auf allen Clusterknoten überein, oder vom Knoten wird ein [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Dienst, der von einem fehlerhaften Knoten migriert wurde, nicht neu gestartet.  
   

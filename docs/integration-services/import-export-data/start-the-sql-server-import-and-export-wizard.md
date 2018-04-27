@@ -1,16 +1,16 @@
 ---
 title: Starten des SQL Server-Import/Export-Assistenten | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 06/20/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: import-export-data
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQL Server Import and Export Wizard
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - Import and Export Wizard
 - starting Import and Export Wizard
 ms.assetid: 5fc4f6d1-1f6f-444e-9aeb-827f85e1c405
-caps.latest.revision: 
+caps.latest.revision: 130
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 48cd6b4f32630b48b0e2ccd92400020d6bfa6e91
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 6e1016714fa05b35e4a762cb162fce7ce1a34305
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="start-the-sql-server-import-and-export-wizard"></a>Starten des SQL Server-Import/Export-Assistenten
 

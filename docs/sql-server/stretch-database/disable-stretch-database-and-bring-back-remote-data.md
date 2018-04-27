@@ -1,31 +1,31 @@
 ---
-title: "Deaktivieren von Stretch Database und Zurückholen von Remotedaten | Microsoft-Dokumentation"
-ms.custom: 
+title: Deaktivieren von Stretch Database und Zurückholen von Remotedaten | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 08/05/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: stretch-database
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-stretch
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Stretch Database, disabling
 - disabling Stretch Database
 ms.assetid: c1bbb24e-47e3-46aa-b786-fcadf9fb65ce
-caps.latest.revision: 
+caps.latest.revision: 33
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fdaf098327c8cd6e6abcd830e72627a4fa2f30c8
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 791ead536a9e5582ddb06886b8003e598507b273
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="disable-stretch-database-and-bring-back-remote-data"></a>Deaktivieren von Stretch Database und Zurückholen von Remotedaten
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]

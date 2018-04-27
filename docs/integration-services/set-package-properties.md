@@ -1,16 +1,16 @@
 ---
 title: Festlegen von Paketeigenschaften | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Integration Services packages, properties
@@ -28,16 +28,16 @@ helpviewer_keywords:
 - version properties [Integration Services]
 - SQL Server Integration Services packages, properties
 ms.assetid: 13f81c3e-2b18-4f83-b445-a2f4a2c560aa
-caps.latest.revision: 
+caps.latest.revision: 40
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 17db392a965b35d668404127d778bf7ef7ecc875
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 89564adcf11f815413fefaeb2701431c37b898c4
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="set-package-properties"></a>Festlegen von Paketeigenschaften
   Wenn Sie ein Paket in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] mithilfe der grafischen Benutzeroberfläche von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] erstellen, legen Sie die Eigenschaften des Paketobjekts im Eigenschaftenfenster fest.  
@@ -72,7 +72,7 @@ ms.lasthandoff: 01/25/2018
  In den folgenden Tabellen sind die Paketeigenschaften nach Kategorie aufgelistet.  
   
 ###  <a name="Checkpoints"></a> Prüfpunkte  
- Mit den Eigenschaften in dieser Kategorie können Sie das Paket von dem Punkt an, an dem der Fehler in der Paketablaufsteuerung auftrat, neu starten, anstatt das Paket vom Beginn der Ablaufsteuerung erneut auszuführen. Weitere Informationen finden Sie unter [Restart Packages by Using Checkpoints](../integration-services/packages/restart-packages-by-using-checkpoints.md).  
+ Mit den Eigenschaften in dieser Kategorie können Sie das Paket von dem Punkt an, an dem der Fehler in der Paketablaufsteuerung auftrat, neu starten, anstatt das Paket vom Beginn der Ablaufsteuerung erneut auszuführen. Weitere Informationen finden Sie unter [Neustarten von Paketen mit Prüfpunkten](../integration-services/packages/restart-packages-by-using-checkpoints.md).  
   
 |Eigenschaft|Description|  
 |--------------|-----------------|  

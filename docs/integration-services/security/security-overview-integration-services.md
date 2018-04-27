@@ -1,16 +1,16 @@
 ---
-title: "Sicherheitsübersicht (Integration Services) | Microsoft-Dokumentation"
-ms.custom: 
+title: Sicherheitsübersicht (Integration Services) | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SSIS packages, security
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - Integration Services packages, security
 - SQL Server Integration Services packages, security
 ms.assetid: 01aa0b88-d477-4581-9a3b-2efc3de2b133
-caps.latest.revision: 
+caps.latest.revision: 73
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 234895749b48f44601cddb76e4ca95783602a6e4
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 1bff92603483a8f2120dac95412d388c752dffbd
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="security-overview-integration-services"></a>Sicherheitsübersicht (Integration Services)
   Sicherheit in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] besteht aus mehreren Ebenen, die eine umfangreiche und flexible Sicherheitsumgebung bereitstellen. Diese Sicherheitsebenen umfassen die Verwendung digitaler Signaturen, Paketeigenschaften, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbankrollen und Betriebssystemberechtigungen. Die meisten dieser Sicherheitsfunktionen können den Kategorien Identität und Zugriffssteuerung zugeordnet werden.  
@@ -126,7 +126,7 @@ ms.lasthandoff: 01/25/2018
  Weitere Informationen finden Sie unter [Paketkonfigurationen](../../integration-services/packages/package-configurations.md), [Erstellen von Paketkonfigurationen](../../integration-services/packages/create-package-configurations.md)und [Überlegungen zur Sicherheit bei SQL Server-Installationen](../../sql-server/install/security-considerations-for-a-sql-server-installation.md).  
   
 ### <a name="checkpoint-files"></a>Prüfpunktdateien  
- Wenn die vom Paket verwendete Prüfpunktdatei vertrauliche Informationen enthält, sollten Sie entsprechend mithilfe einer Zugriffssteuerungsliste den Speicherort oder Ordner schützen, in dem Sie die Datei speichern. In Prüfpunktdateien werden aktuelle Statusinformationen zum Fortschritt des Pakets sowie die aktuellen Werte von Variablen gespeichert. Beispielsweise kann das Paket eine benutzerdefinierte Variable mit einer Telefonnummer enthalten. Weitere Informationen finden Sie unter [Restart Packages by Using Checkpoints](../../integration-services/packages/restart-packages-by-using-checkpoints.md).  
+ Wenn die vom Paket verwendete Prüfpunktdatei vertrauliche Informationen enthält, sollten Sie entsprechend mithilfe einer Zugriffssteuerungsliste den Speicherort oder Ordner schützen, in dem Sie die Datei speichern. In Prüfpunktdateien werden aktuelle Statusinformationen zum Fortschritt des Pakets sowie die aktuellen Werte von Variablen gespeichert. Beispielsweise kann das Paket eine benutzerdefinierte Variable mit einer Telefonnummer enthalten. Weitere Informationen finden Sie unter [Neustarten von Paketen mit Prüfpunkten](../../integration-services/packages/restart-packages-by-using-checkpoints.md).  
   
 ### <a name="log-files"></a>Protokolldateien  
  Protokolleinträge, die in das Dateisystem geschrieben werden, sollten ebenfalls mithilfe einer Zugriffssteuerungsliste geschützt werden. Protokolleinträge können auch in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabellen gespeichert und mithilfe der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sicherheit geschützt werden. Protokolleinträge können vertrauliche Informationen enthalten. Angenommen, das Paket enthält einen Task SQL ausführen, mit dem eine SQL-Anweisung erstellt wird, die auf eine Telefonnummer verweist. In diesem Fall enthält der Protokolleintrag der SQL-Anweisung die Telefonnummer. Die SQL-Anweisung kann auch private Informationen zu Tabellen- und Spaltennamen in Datenbanken anzeigen. Weitere Informationen finden Sie unter [Integration Services-Protokollierung &#40;SSIS&#41;](../../integration-services/performance/integration-services-ssis-logging.md).  

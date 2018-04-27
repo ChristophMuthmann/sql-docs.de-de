@@ -1,16 +1,16 @@
 ---
 title: SSIS-Designer | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 08/31/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.controlflowwindow.f1
@@ -27,16 +27,16 @@ helpviewer_keywords:
 - SSIS Designer, about SSIS Designer
 - Integration Services, SSIS Designer
 ms.assetid: 006d68ea-1b5c-4c1e-8079-3910288e012c
-caps.latest.revision: 
+caps.latest.revision: 59
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1ee578aff11c393694215b85f9c26d3c442e9aa7
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 51c7e6a03694fa9b40cd201c439b12c73ca65484
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="ssis-designer"></a>SSIS-Designer
   [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer ist ein grafisches Tool, mit dem Sie [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Pakete erstellen und verwalten können. [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer ist in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] im Rahmen eines [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Projekts verfügbar.  

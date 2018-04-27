@@ -1,30 +1,30 @@
 ---
-title: "Angeben eines Intervalls von Änderungsdaten | Microsoft-Dokumentation"
-ms.custom: 
+title: Angeben eines Intervalls von Änderungsdaten | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: change-data-capture
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - incremental load [Integration Services],specifying interval
 ms.assetid: 17899078-8ba3-4f40-8769-e9837dc3ec60
-caps.latest.revision: 
+caps.latest.revision: 30
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 262f93736e963785054686dd573389670d44bc46
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 6691390fea6e32f050e9a2b08d6cfc91773f1196
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="specify-an-interval-of-change-data"></a>Angeben eines Intervalls von Änderungsdaten
   In der Ablaufsteuerung eines [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Pakets, das ein inkrementelles Laden von Änderungsdaten ausführt, ist der erste Task die Berechnung der Endpunkte des Änderungsintervalls. Diese Endpunkte sind **datetime** -Werte und werden in Paketvariablen für die spätere Verwendung im Paket gespeichert.  
@@ -104,7 +104,7 @@ ms.lasthandoff: 01/25/2018
   
         ```  
   
-3.  Ordnen Sie auf der Seite **Resultset** vom **Editor für den Task 'SQL ausführen'**der ExtractStartTime-Paketvariablen das ExtractStartTime-Ergebnis und der ExtractEndTime-Paketvariablen das ExtractEndTime-Ergebnis zu.  
+3.  Ordnen Sie auf der Seite **Resultset** vom **Editor für den Task 'SQL ausführen'** der ExtractStartTime-Paketvariablen das ExtractStartTime-Ergebnis und der ExtractEndTime-Paketvariablen das ExtractEndTime-Ergebnis zu.  
   
     > [!NOTE]  
     >  Wenn Sie einen Ausdruck verwenden, um den Wert einer [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Variablen festzulegen, wird der Ausdruck jedes Mal ausgewertet, wenn auf den Wert der Variablen zugegriffen wird.  

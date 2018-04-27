@@ -1,32 +1,32 @@
 ---
-title: "Konvertieren des Datentyps mithilfe der Transformation für Datenkonvertierung | Microsoft-Dokumentation"
-ms.custom: 
+title: Konvertieren des Datentyps mithilfe der Transformation für Datenkonvertierung | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - converting data types [Integration Services]
 - Data Conversion transformation
 - data types [Integration Services], converting
 ms.assetid: 4aabbe4f-7666-4672-865a-9627bd25fbfd
-caps.latest.revision: 
+caps.latest.revision: 41
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ebd3fc40649e77cfb42b291132f6e1168381c427
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 75f6afc48e68e2a62d83f6b3533025ede830b9ad
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="convert-data-type-by-using-data-conversion-transformation"></a>Konvertieren des Datentyps mithilfe der Transformation für Datenkonvertierung
   Um eine Transformation für Datenkonvertierung hinzuzufügen und zu konfigurieren, muss das Paket bereits mindestens einen Datenflusstask und eine Quelle enthalten.  

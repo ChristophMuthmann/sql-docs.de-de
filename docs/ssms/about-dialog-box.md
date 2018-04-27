@@ -2,7 +2,7 @@
 title: Informationen über das Dialogfeld „Info“| Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms
@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 18cdfd21fecbed78ce6ff31d624e344a542cccd0
-ms.sourcegitcommit: f3aa02a0f27cc1d3d5450f65cc114d6228dd9d49
+ms.openlocfilehash: b34b19a1e01be7f5bceead0396ffc6fd15516321
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="about-dialog-box"></a>Info (Dialogfeld)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]  

@@ -2,8 +2,8 @@
 title: Hilfeinhalt und Help Viewer für SQL Server | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 12/15/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod: sql
+ms.prod_service: sql
 ms.service: ''
 ms.component: sql-non-specified
 ms.technology: server-general
@@ -21,11 +21,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e6ac779e6ec7aa16f386df20a517305a2757dedd
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 2e809edd12049ed249500b4662495a82ece748df
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sql-server-offline-help-and-help-viewer"></a>Offlinehilfe und Help Viewer für SQL Server
 

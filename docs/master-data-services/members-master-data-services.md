@@ -2,7 +2,7 @@
 title: Elemente (Master Data Services) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: mds
 ms.service: ''
 ms.component: non-specific
@@ -25,11 +25,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 502942c22f426ba01d22bc0d02a0e13bcc55d7a3
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: cbdc3ece7e5ad3693ecfb52ea1270596453226d8
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="members-master-data-services"></a>Elemente (Master Data Services)
 

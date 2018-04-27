@@ -1,34 +1,36 @@
 ---
 title: Zusammenfassen von Abfrageergebnissen (Visual Database Tools) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - summarizing query results
 - queries [SQL Server], results
 - aggregate queries [SQL Server]
 ms.assetid: c9e15350-ed57-4d95-814d-815fbebfd86b
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 37946b24586881c8a9105fd882af71dd075ab7ab
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: bf1e57b23b8a8442e7bd74f96c7046c75fee9564
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="summarize-query-results-visual-database-tools"></a>Zusammenfassen von Abfrageergebnissen (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Wenn Sie Aggregatabfragen erstellen, folgen diese bestimmten logischen Prinzipien. Beispielsweise können Sie keine Inhalte aus einzelnen Zeilen einer zusammenfassenden Abfrage anzeigen lassen. Der Abfrage- und Sicht-Designer unterstützt Sie bei der Einhaltung dieser Prinzipien durch das Verhalten von [Diagrammbereich](../../ssms/visual-db-tools/diagram-pane-visual-database-tools.md) und [Kriterienbereich](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md) .  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Wenn Sie Aggregatabfragen erstellen, folgen diese bestimmten logischen Prinzipien. Beispielsweise können Sie keine Inhalte aus einzelnen Zeilen einer zusammenfassenden Abfrage anzeigen lassen. Der Abfrage- und Sicht-Designer unterstützt Sie bei der Einhaltung dieser Prinzipien durch das Verhalten von [Diagrammbereich](../../ssms/visual-db-tools/diagram-pane-visual-database-tools.md) und [Kriterienbereich](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md) .  
   
 Wenn Sie sich mit den für Aggregatabfragen gültigen Prinzipien und dem Verhalten des Abfrage- und Sicht-Designers vertraut machen, hilft dies beim Entwurf logisch richtiger Aggregatabfragen. Als vorrangiges Prinzip ist zu beachten, dass Aggregatabfragen ausschließlich zusammenfassende Informationen liefern können. Ein Großteil der folgenden Prinzipien beschreibt daher die Methoden, mit denen Sie in einer Aggregatabfrage auf einzelne Datenspalten verweisen können.  
   

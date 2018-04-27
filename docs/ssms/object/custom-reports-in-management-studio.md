@@ -2,7 +2,7 @@
 title: Benutzerdefinierte Berichte in Management Studio | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms-objects
@@ -22,14 +22,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: be381dfcba80135f5c76694ab2f19f2942e0f5a8
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: e7e82988bfac7bc479f699f9c8a4db97ec73b99c
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="custom-reports-in-management-studio"></a>Benutzerdefinierte Berichte in Management Studio
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] wird von vielen Objekt-Explorer-Knoten ein Satz von Standardberichten angezeigt, die von [!INCLUDE[msCoName](../../includes/msconame_md.md)] erstellt werden. In diesen Berichten werden häufig angeforderte Serverinformationen zusammengefasst. Seit [!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)] Service Pack 2 können in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull_md.md)] von [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)]erstellte benutzerdefinierte Berichte von Administratoren ausgeführt werden.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]wird von vielen Objekt-Explorer-Knoten ein Satz von Standardberichten angezeigt, die von [!INCLUDE[msCoName](../../includes/msconame_md.md)]erstellt werden. In diesen Berichten werden häufig angeforderte Serverinformationen zusammengefasst. Seit [!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)] Service Pack 2 können in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull_md.md)] von [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)]erstellte benutzerdefinierte Berichte von Administratoren ausgeführt werden.  
   
 ## <a name="implementation"></a>Implementierung  
 Benutzerdefinierte Berichte werden als RDL-Dateien gespeichert und mithilfe der Berichtsdefinitionssprache (Report Definition Language, RDL) erstellt. In der Berichtsdefinitionssprache sind Informationen zum Datenabruf und Datenlayout für einen Bericht in einem XML-Format enthalten. Die Berichtsdefinitionssprache ist ein offenes Schema. Entwickler können die Berichtsdefinitionssprache mit zusätzlichen Attributen und Elementen erweitern. Jede gültige [!INCLUDE[tsql](../../includes/tsql_md.md)] -Anweisung in einem Bericht kann von Berichten ausgeführt wird.  

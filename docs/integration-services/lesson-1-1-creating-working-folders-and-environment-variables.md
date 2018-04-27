@@ -1,30 +1,30 @@
 ---
 title: 'Schritt 1: Erstellen von Arbeitsordnern und Umgebungsvariablen | Microsoft-Dokumentation'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: tutorial
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - SQL Server 2016
 ms.assetid: 45091ba2-ea3d-4399-9814-489d812b42cc
-caps.latest.revision: 
+caps.latest.revision: 19
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 06b762b3411f13eff291746467d9217487e94655
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: d3beca5c2797133584ae83bf238b263e1de7b5a9
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="lesson-1-1---creating-working-folders-and-environment-variables"></a>Lektion 1-1: Erstellen von Arbeitsordnern und Umgebungsvariablen
 In dieser Aufgabe erstellen Sie den Arbeitsordner (C:\DeploymentTutorial) und die neuen Systemumgebungsvariablen (`DataTransfer` und `LoadXMLData`), die in späteren Lernprogrammaufgaben verwendet werden.  

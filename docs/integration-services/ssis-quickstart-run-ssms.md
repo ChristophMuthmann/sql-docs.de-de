@@ -1,23 +1,24 @@
 ---
-title: "Ausführen eines SSIS-Pakets mit SSMS | Microsoft-Dokumentation"
+title: Ausführen eines SSIS-Pakets mit SSMS | Microsoft-Dokumentation
 ms.date: 09/25/2017
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: quick-start
 ms.suite: sql
-ms.custom: 
-ms.technology: integration-services
+ms.custom: ''
+ms.technology:
+- integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 53ad81ce3021f14e6d0638e7e60a050f892bb8bf
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 540eb0d40c571b4dde94d91814d89ceb18986337
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="run-an-ssis-package-with-sql-server-management-studio-ssms"></a>Ausführen eines SSIS-Pakets mit SQL Server Management Studio (SSMS)
 In diesem Schnellstart wird erläutert, wie Sie SQL Server Management Studio (SSMS) verwenden müssen, um eine Verbindung mit der SSIS-Katalogdatenbank herzustellen, und wie Sie anschließend ein im SSIS-Katalog gespeichertes SSIS-Paket im Objekt-Explorer in SSMS ausführen.

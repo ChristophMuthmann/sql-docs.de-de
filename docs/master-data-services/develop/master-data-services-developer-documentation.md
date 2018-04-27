@@ -2,7 +2,7 @@
 title: Master Data Services Developer Documentation | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: mds
 ms.service: ''
 ms.component: develop
@@ -19,11 +19,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7047fee6a927e59379d8adba10058fb3ebea48ff
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 0f648215c4ef6b6f568c6184cb412fc059997ab7
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="master-data-services-developer-documentation"></a>Master Data Services Developer Documentation
 

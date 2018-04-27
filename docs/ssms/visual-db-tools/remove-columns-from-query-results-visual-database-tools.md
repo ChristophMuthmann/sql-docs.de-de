@@ -1,15 +1,16 @@
 ---
 title: Entfernen von Spalten aus Abfrageergebnissen (Visual Database Tools)|Microsoft-Dokumente
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - columns [SQL Server], deleting
@@ -19,19 +20,20 @@ helpviewer_keywords:
 - deleting columns
 - queries [SQL Server], results
 ms.assetid: a7de7a87-4249-49bd-863d-dc0b40a49e78
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 80bc4b357c8abbe7fc34d36c82203d4568fc5c6e
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: cac88f744cfc8c7db3fe7ad280036c657ae7ec38
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="remove-columns-from-query-results-visual-database-tools"></a>Entfernen von Spalten aus Abfrageergebnissen (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Wenn Sie in einer Auswahlabfrage eine Spalte verwenden, die Sie im Resultset nicht anzeigen lassen bzw. der Auswahlliste der Abfrage nicht hinzufügen möchten, können Sie diese aus der Ausgabe entfernen. Die aus den Abfrageergebnissen entfernte Spalte können Sie zum Festlegen von Suchbedingungen oder für Sortierzwecke weiter verwenden.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Wenn Sie in einer Auswahlabfrage eine Spalte verwenden, die Sie im Resultset nicht anzeigen lassen bzw. der Auswahlliste der Abfrage nicht hinzufügen möchten, können Sie diese aus der Ausgabe entfernen. Die aus den Abfrageergebnissen entfernte Spalte können Sie zum Festlegen von Suchbedingungen oder für Sortierzwecke weiter verwenden.  
   
 > [!NOTE]  
 > Informationen, wie Sie eine Spalte vollständig aus einer Abfrage entfernen, finden Sie unter [Entfernen von Spalten aus Abfragen &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/remove-columns-from-queries-visual-database-tools.md).  

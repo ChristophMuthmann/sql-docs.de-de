@@ -1,7 +1,7 @@
 ---
 title: Spezifikationen der maximalen Kapazität für SQL Server | Microsoft-Dokumentation
 ms.date: 11/6/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: sql-non-specified
@@ -29,11 +29,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 2b1465f6816523cd057aec54b6685a09141e2d72
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: a3ea59d5ca021560eb2dcd8f5010415df36d0792
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>Spezifikationen der maximalen Kapazität für SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

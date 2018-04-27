@@ -1,30 +1,30 @@
 ---
-title: "Unterstützen von mehreren Zielversionen in benutzerdefinierten Komponenten | Microsoft-Dokumentation"
-ms.custom: 
+title: Unterstützen von mehreren Zielversionen in benutzerdefinierten Komponenten | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: extending-packages-custom-objects
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - SQL Server (starting with 2016)
 ms.assetid: ec611374-16bf-4a56-8fd9-45d3ddd7befc
-caps.latest.revision: 
+caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b6ed067a54cc867ed091dd27f5a4af91954045f1
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+ms.openlocfilehash: a52c661a199cde093dbc012a1467c0c53ae93137
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="support-multi-targeting-in-your-custom-components"></a>Unterstützen von mehreren Zielversionen in benutzerdefinierten Komponenten
  Sie können nun den SSIS-Designer in SQL Server Data Tools (SSDT) verwenden, um Pakete zu erstellen, zu verwalten und auszuführen, die auf SQL Server 2016, SQL Server 2014 oder SQL Server 2012 ausgerichtet sind. SSDT für Visual Studio 2015 können Sie unter [Download Latest SQL Server Data Tools (Herunterladen der aktuellen Version von SQL Server Data Tools)](../../ssdt/download-sql-server-data-tools-ssdt.md) herunterladen. 

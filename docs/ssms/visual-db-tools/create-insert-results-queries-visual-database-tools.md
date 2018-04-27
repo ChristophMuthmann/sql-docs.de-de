@@ -1,15 +1,16 @@
 ---
-title: "Erstellen von Abfragen zum Einfügen von Ergebnissen (Visual Database Tools) | Microsoft-Dokumentation"
-ms.custom: 
+title: Erstellen von Abfragen zum Einfügen von Ergebnissen (Visual Database Tools) | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - queries [SQL Server], types
@@ -18,19 +19,20 @@ helpviewer_keywords:
 - Insert Results query
 - queries [SQL Server], results
 ms.assetid: 8770d630-09cc-47ec-a0e9-e9de2d7bbc89
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 77d9cd92950ddecc334fd5d75c3092bc5b3b4214
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: f263be2f5d69dcd6f877bba15f3644b214df58f7
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="create-insert-results-queries-visual-database-tools"></a>Erstellen von Abfragen zum Einfügen von Ergebnissen (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Mit einer Abfrage zum Einfügen von Ergebnissen können Sie Zeilen aus einer Tabelle in eine andere oder innerhalb einer Tabelle kopieren. Aus der Tabelle `titles` können Sie beispielsweise mit einer Abfrage zum Einfügen von Ergebnissen Informationen über alle Titel eines Herausgebers in eine zweite Tabelle kopieren, die dem betreffenden Herausgeber zur Verfügung gestellt werden kann. Das Erstellen einer Abfrage zum Einfügen von Ergebnissen ähnelt dem Erstellen von Abfragen zum Erstellen von Tabellen. Im Unterschied dazu werden jedoch Zeilen in eine vorhandene Tabelle kopiert.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Mit einer Abfrage zum Einfügen von Ergebnissen können Sie Zeilen aus einer Tabelle in eine andere oder innerhalb einer Tabelle kopieren. Aus der Tabelle `titles` können Sie beispielsweise mit einer Abfrage zum Einfügen von Ergebnissen Informationen über alle Titel eines Herausgebers in eine zweite Tabelle kopieren, die dem betreffenden Herausgeber zur Verfügung gestellt werden kann. Das Erstellen einer Abfrage zum Einfügen von Ergebnissen ähnelt dem Erstellen von Abfragen zum Erstellen von Tabellen. Im Unterschied dazu werden jedoch Zeilen in eine vorhandene Tabelle kopiert.  
   
 > [!TIP]  
 > Sie können Zeilen auch durch Ausschneiden und Einfügen von einer Tabelle in eine andere kopieren. Erstellen Sie eine Abfrage für jede Tabelle, und führen Sie die Abfragen aus. Kopieren Sie die gewünschten Zeilen von einem Ergebnisdatenblatt in ein anderes.  

@@ -3,7 +3,7 @@ title: SQL Server 2014 Release Notes | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2018
 ms.prod: sql
-ms.prod_service: sql-non-specified
+ms.prod_service: sql
 ms.component: sql-non-specified
 ms.technology: server-general
 ms.reviewer: ''
@@ -17,11 +17,11 @@ ms.author: craigg
 manager: jhubbard
 ms.workload: Inactive
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: 727798fd3cc320f90586f476e4ee43f0a1867f3f
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: b99ca79f410a47f5bf03159579e880b1159de341
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sql-server-2014-release-notes"></a>SQL Server 2014 Release Notes
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]

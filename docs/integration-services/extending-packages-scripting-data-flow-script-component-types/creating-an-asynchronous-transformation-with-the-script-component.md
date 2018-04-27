@@ -1,15 +1,15 @@
 ---
 title: Erstellen einer asynchronen Transformation mit der Skriptkomponente | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: extending-packages-scripting-data-flow-script-component-types
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
@@ -20,16 +20,16 @@ helpviewer_keywords:
 - transformation components [Integration Services]
 - Script component [Integration Services], transformation components
 ms.assetid: 0d814404-21e4-4a68-894c-96fa47ab25ae
-caps.latest.revision: 
+caps.latest.revision: 63
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7a7d607fda10fa8e3ae020e6b702867e9f8ef0a2
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: c7a8ecd16aa8ea4957b54195feb66b3b8824d6b1
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="creating-an-asynchronous-transformation-with-the-script-component"></a>Erstellen einer asynchronen Transformation mit der Skriptkomponente
   Transformationskomponenten dienen im Datenfluss eines [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Pakets dazu, Daten auf dem Weg von der Quelle zum Ziel zu ändern und zu analysieren. Eine Transformation mit synchronen Ausgaben verarbeitet jede eingegebene Zeile, während sie die Komponente durchläuft. Eine Transformation mit asynchronen Ausgaben kann die Fertigstellung ihrer Verarbeitung abwarten, bis die Transformation alle Eingabezeilen empfangen hat. Die Transformation kann bestimmte Zeilen auch ausgeben, bevor sie alle Eingabezeilen empfangen hat. In diesem Thema wird eine asynchrone Transformation erläutert. Wenn die Verarbeitung eine synchrone Transformation erfordert, finden Sie weitere Informationen unter [Creating a Synchronous Transformation with the Script Component (Erstellen einer synchronen Transformation mit der Skriptkomponente)](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md). Weitere Informationen zu den Unterschieden zwischen synchronen und asynchronen Komponenten finden Sie unter [Understanding Synchronous and Asynchronous Transformations (Grundlegendes zu synchronen und asynchronen Transformationen)](../../integration-services/understanding-synchronous-and-asynchronous-transformations.md).  

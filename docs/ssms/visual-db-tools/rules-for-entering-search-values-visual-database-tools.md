@@ -1,15 +1,16 @@
 ---
-title: "Regeln für das Eingeben von Suchwerten (Visual Database Tools) | Microsoft-Dokumentation"
-ms.custom: 
+title: Regeln für das Eingeben von Suchwerten (Visual Database Tools) | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - time [SQL Server], searches
@@ -22,19 +23,20 @@ helpviewer_keywords:
 - text value searches [SQL Server]
 - numeric value searches [SQL Server]
 ms.assetid: 3c8134b7-83f4-41b4-99c8-e3949a685ff5
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 979bc40803391e773624d9d7f2b9e43e3bad5ee6
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 3a7ec652816ed43eb37e0ee6987c26ac36c1463d
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="rules-for-entering-search-values-visual-database-tools"></a>Regeln für das Eingeben von Suchwerten (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] In diesem Thema werden die Konventionen erläutert, die beim Eingeben der folgenden Arten von Literalwerten für eine Suchbedingung beachtet werden müssen:  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+In diesem Thema werden die Konventionen erläutert, die beim Eingeben der folgenden Arten von Literalwerten für eine Suchbedingung beachtet werden müssen:  
   
 -   Textwerte  
   

@@ -1,30 +1,30 @@
 ---
-title: "Schritt 6: Hinzufügen und Konfigurieren von Suchtransformationen | Microsoft Docs"
-ms.custom: 
+title: 'Schritt 6: Hinzufügen und Konfigurieren von Suchtransformationen | Microsoft Docs'
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: tutorial
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 5c59f723-9707-4407-80ae-f05f483cf65f
-caps.latest.revision: 
+caps.latest.revision: 38
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 797ae8c8901f4fe102a6689bb1f752a1de3fa4ac
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 41d236698902fde3dd771650c98fb8ce0117b73c
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="lesson-1-6---adding-and-configuring-the-lookup-transformations"></a>Lektion 1-6: Hinzufügen und Konfigurieren von Suchtransformationen
 Nach dem Konfigurieren der Flatfilequelle zum Extrahieren von Daten aus der Quelldatei besteht die nächste Aufgabe darin, die Suchtransformationen zu definieren, die zum Abrufen der Werte für **CurrencyKey** und **DateKey**erforderlich sind. Von einer Transformation zum Suchen wird eine Suche durchgeführt, indem Daten in der angegebenen Eingabespalte mit einer Spalte in einem referenzierten Dataset verknüpft werden. Bei dem Verweisdataset kann es sich um eine vorhandene Tabelle oder Sicht, eine neue Tabelle oder das Ergebnis einer SQL-Anweisung handeln. In diesem Lernprogramm stellt die Transformation für Suche stellt mithilfe eines OLE DB-Verbindungs-Managers eine Verbindung mit der Datenbank her, die die Daten enthält, die als Quelle des Verweisdatasets dienen.  
@@ -100,7 +100,7 @@ In beiden Fällen verwendet die Suchtransformation den OLE DB-Verbindungs-Manage
   
     1.  Stellen Sie im **OLE DB-Verbindungs-Manager** sicher, dass **localhost.AdventureWorksDW2012** angezeigt wird.rd.  
   
-    2.  Geben Sie im Feld **Tabelle oder Sicht verwenden** den Eintrag **[dbo].[DimDate]**ein, oder wählen Sie diesen Eintrag aus.  
+    2.  Geben Sie im Feld **Tabelle oder Sicht verwenden** den Eintrag **[dbo].[DimDate]** ein, oder wählen Sie diesen Eintrag aus.  
   
 8.  Wählen Sie auf der Seite **Spalten** die folgenden Optionen aus:  
   

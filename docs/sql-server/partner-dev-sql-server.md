@@ -16,14 +16,14 @@ ms.tgt_pltfrm: NA
 ms.workload: sql-server
 ms.custom: ''
 ms.date: 17/09/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.author: mikeray
-ms.openlocfilehash: f604e1c50e28e07274531e885ecd026097e9bca3
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 5c521aedfe299cda0de1da462db21b1f34942249
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sql-server-development-partners"></a>SQL Server: Entwicklungspartner
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

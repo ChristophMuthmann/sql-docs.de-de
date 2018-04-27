@@ -1,28 +1,28 @@
 ---
-title: "Erweiterte Ereignisse für Stretch Database | Microsoft-Dokumentation"
-ms.custom: 
+title: Erweiterte Ereignisse für Stretch Database | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 06/14/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: stretch-database
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-stretch
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 70485e74-2e25-4e7e-be6c-9dd1780a42e3
-caps.latest.revision: 
+caps.latest.revision: 4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d17c9eec2443602cde7465426f7349beb4e0a6e1
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: d43be04bcbd1304ee6934135367ebd2272934442
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="extended-events-for-stretch-database"></a>Erweiterte Ereignisse für Stretch Database
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]

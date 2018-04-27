@@ -2,7 +2,7 @@
 title: Tabellenwertobjekt-Eigenschaften (Visual Database Tools) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms-visual-db
@@ -20,14 +20,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 59393ef73eb121fced9a2c7d0232c49d707d1efd
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 80af649c5ab068f4aebfc357bdd565577ce30046
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="table-valued-object-properties-visual-database-tools"></a>Tabellenwertobjekt-Eigenschaften (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Diese Eigenschaften werden im Eigenschaftenfenster angezeigt, wenn Sie im **Abfrage- und Sicht-Designer** ein Tabellenwertobjekt auswählen. Das Tabellenwertobjekt kann eine Sicht, ein Synonym, eine abgeleitete Tabelle oder eine Tabellenwertfunktion sein. Soweit nicht anders angegeben, sind die Eigenschaften im Fenster **Eigenschaften** schreibgeschützt.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Diese Eigenschaften werden im Eigenschaftenfenster angezeigt, wenn Sie im **Abfrage- und Sicht-Designer**ein Tabellenwertobjekt auswählen. Das Tabellenwertobjekt kann eine Sicht, ein Synonym, eine abgeleitete Tabelle oder eine Tabellenwertfunktion sein. Soweit nicht anders angegeben, sind die Eigenschaften im Fenster **Eigenschaften** schreibgeschützt.  
   
 > [!NOTE]  
 > Die in diesem Thema behandelten Eigenschaften sind nicht alphabetisch, sondern nach Kategorie angeordnet.  

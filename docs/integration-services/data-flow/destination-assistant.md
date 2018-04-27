@@ -1,31 +1,31 @@
 ---
 title: Ziel-Assistent | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.destinationassistant.f1
 - sql13.DTS.DESIGNER.DESTINATIONASSIST.F1
 ms.assetid: 10a40921-a2c2-4ac8-be28-311f8500fbf6
-caps.latest.revision: 
+caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 62e4fb6f0d7f368ec96f647ee7befa8826a7812c
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 6d68c072208b12fb05e9c5fe5ced781945679c35
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="destination-assistant"></a>Ziel-Assistent
   Der Ziel-Assistenten hilft beim Erstellen einer Zielkomponente und eines Verbindungs-Managers. Die Komponente befindet sich im Abschnitt **Favoriten** der SSIS-Toolbox.  

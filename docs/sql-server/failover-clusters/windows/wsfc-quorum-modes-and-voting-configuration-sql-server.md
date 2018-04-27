@@ -2,7 +2,7 @@
 title: WSFC-Quorummodi und Abstimmungskonfiguration (SQL Server) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 10/03/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: failover-clusters
@@ -22,11 +22,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 13c6e85b191619c61c4a38ffabf4db6f3310af39
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: a9382e91602435cf7941bdbcb6c3fce006058f31
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="wsfc-quorum-modes-and-voting-configuration-sql-server"></a>WSFC-Quorummodi und Abstimmungskonfiguration (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

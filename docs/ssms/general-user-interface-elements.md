@@ -1,33 +1,35 @@
 ---
-title: "Allgemeine Benutzeroberflächenelemente | Microsoft-Dokumentation"
-ms.custom: 
+title: Allgemeine Benutzeroberflächenelemente | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], user interface elements
 - user interface [SQL Server Management Studio]
 ms.assetid: 436d9afb-09c3-4838-9b54-4449a5178d0f
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4ab10f8b0aaab9cc0c967187dea73e10739164f6
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 74acdb7ea0144eb21268c6f294b4199b25897e18
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="general-user-interface-elements"></a>Allgemeine Benutzeroberflächenelemente
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Der **Editor**, das Fenster **Eigenschaften** und die **Toolbox** zählen zu den grundlegenden Elementen von [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)].  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Der **Editor**, das **Eigenschaftenfenster** und die **Toolbox** zählen zu den grundlegenden Elementen von [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)].  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
 [Info (Dialogfeld)](../ssms/about-dialog-box.md)  

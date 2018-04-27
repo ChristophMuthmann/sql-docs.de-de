@@ -1,15 +1,15 @@
 ---
 title: Entwickeln einer benutzerdefinierten Transformationskomponente mit asynchronen Ausgaben | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: extending-packages-custom-objects-data-flow-types
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
@@ -27,16 +27,16 @@ helpviewer_keywords:
 - PrimeOutput method
 - data flow components [Integration Services], transformation components
 ms.assetid: 1c3e92c7-a4fa-4fdd-b9ca-ac3069536274
-caps.latest.revision: 
+caps.latest.revision: 57
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a184989c8a8ca4b8ea24b27f8d1bc3d8323cbc56
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 46e9fe6edb867d04e33c44239605a1137a3be0d6
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="developing-a-custom-transformation-component-with-asynchronous-outputs"></a>Entwickeln einer benutzerdefinierten Transformationskomponente mit asynchronen Ausgaben
   Verwenden Sie eine Komponente mit asynchronen Ausgaben dann, wenn eine Transformation keine Zeilen ausgeben kann, solange die Komponente nicht alle ihre Eingabezeilen empfangen hat, oder wenn die Transformation nicht genau eine Ausgabezeile für jede als Eingabe empfangene Zeile erstellt. Die Transformation für das Aggregieren kann z. B. erst dann eine Summe über mehrere Zeilen errechnen, wenn sie alle Zeilen gelesen hat. Dagegen können Sie jederzeit eine Komponente mit synchronen Ausgaben verwenden, wenn Sie jede Datenzeile beim Durchlaufen verändern. Sie können die Daten für jede vorhandene Zeile verändern, oder Sie können eine oder mehrere neue Spalten erstellen, wovon jede einen Wert für jede einzelne der Eingabzeilen aufweist. Weitere Informationen zu den Unterschieden zwischen synchronen und asynchronen Komponenten finden Sie unter [Grundlegendes zu synchronen und asynchronen Transformationen](../../integration-services/understanding-synchronous-and-asynchronous-transformations.md).  

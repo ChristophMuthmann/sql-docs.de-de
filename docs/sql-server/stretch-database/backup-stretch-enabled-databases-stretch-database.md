@@ -1,31 +1,31 @@
 ---
 title: Sichern von Stretch-aktivierten Datenbanken (Stretch Database) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 06/14/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: stretch-database
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-stretch
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Stretch Database, backing up
 - backups (Stretch Database)
 ms.assetid: 18f0dff0-d8ce-4bee-a935-76ed6dfb3208
-caps.latest.revision: 
+caps.latest.revision: 41
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8e28871ff432c9763b928293103e80468e37d69e
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: b6adec5954ed06a8bd745aab37e2cdefd67ed8b7
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="backup-stretch-enabled-databases-stretch-database"></a>Sichern von Stretch-fähigen Datenbanken (Stretch Database)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]

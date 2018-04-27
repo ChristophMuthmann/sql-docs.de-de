@@ -2,7 +2,7 @@
 title: Problembehandlung bei verwaisten Benutzern (SQL Server) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 07/14/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: failover-clusters
@@ -27,11 +27,11 @@ ms.author: mikeray
 manager: craigg
 ms.workload: Active
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: ba2292c8b8284b78526e0cf3c72c387c793cffab
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: eb4f53fe13290dde4949b6d225f7eecc274922b9
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="troubleshoot-orphaned-users-sql-server"></a>Problembehandlung bei verwaisten Benutzern (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

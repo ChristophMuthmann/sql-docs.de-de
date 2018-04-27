@@ -2,7 +2,7 @@
 title: Ändern von Domänenwerten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/08/2011
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: data-quality-services
 ms.service: ''
 ms.component: data-quality-services
@@ -20,11 +20,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7dfd8c89dc12f19a9397b3a9053e4a7c979ad12e
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: edd1349a8faee57a77570183f06e00ecaaf71ea4
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="change-domain-values"></a>Ändern von Domänenwerten
 

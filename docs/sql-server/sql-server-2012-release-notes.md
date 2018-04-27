@@ -1,10 +1,8 @@
 ---
 title: Versionsanmerkungen zu SQL Server 2012 | Microsoft-Dokumentation
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-non-specified
-ms.service: ''
-ms.component: sql-non-specified
-ms.technology: server-general
+ms.technology: supportability
 ms.custom: ''
 ms.date: 01/31/2017
 ms.reviewer: ''
@@ -14,19 +12,20 @@ ms.topic: article
 helpviewer_keywords:
 - Release Notes, SQL Server
 ms.assetid: 9ccb390a-67a9-4593-85ea-2b4c41c4620f
-caps.latest.revision: 21
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e7adc5d4b4fdcf8886b2c8d08bce8de90d9b3eb1
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+monikerRange: = sql-server-2014 || = sqlallproducts-allversions
+ms.openlocfilehash: 6786ab20e983647a9b83ee383017fc8bd106d8a4
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="sql-server-2012-release-notes"></a>Versionsanmerkungen zu SQL Server 2012
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)] In diesen Versionsanmerkungen werden bekannte Probleme beschrieben, mit denen Sie sich vertraut machen sollten, bevor Sie mit der Installation oder Problembehandlung in Microsoft SQL Server 2012 beginnen ([zum Herunterladen hier klicken](http://go.microsoft.com/fwlink/?LinkId=238647)). Die Anmerkungen zu dieser Version sind nur online und nicht auf den Installationsmedien verfügbar und werden regelmäßig aktualisiert.  
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+In diesen Versionsanmerkungen werden bekannte Probleme beschrieben, mit denen Sie sich vertraut machen sollten, bevor Sie mit der Installation oder Problembehandlung in Microsoft SQL Server 2012 ([zum Herunterladen hier klicken](http://go.microsoft.com/fwlink/?LinkId=238647)) beginnen. Die Anmerkungen zu dieser Version sind nur online und nicht auf den Installationsmedien verfügbar und werden regelmäßig aktualisiert.  
   
 Informationen zu den ersten Schritten sowie zur Installation von SQL Server 2012 erhalten Sie in der SQL Server 2012-Infodatei. Die Infodatei steht auf den Installationsmedien und auf der [Infodatei](http://download.microsoft.com/download/3/B/D/3BD9DD65-D3E3-43C3-BB50-0ED850A82AD5/ENU/Readme.htm) -Downloadseite zur Verfügung. Weitere Informationen finden Sie auch in der [SQL Server-Onlinedokumentation](http://go.microsoft.com/fwlink/?LinkId=190948) und in den [SQL Server-Foren](http://go.microsoft.com/fwlink/?LinkId=213599).  
   
@@ -99,7 +98,7 @@ Bei der Installation von SQL Server unter Windows Server 2008 R2 Server Core SP1
   
 **Problemumgehung:** Führen Sie zum Einrichten der Semantic Language Statistics-Datenbank als erforderliche Komponente für die semantische Indizierung folgende Schritte aus:  
   
-1.  Suchen Sie das Windows Installer-Paket SemanticLanguageDatabase.msi auf den SQL Server-Installationsmedien, und führen Sie es aus, um die Datenbank zu extrahieren. Laden Sie die Semantic Language Statistics-Datenbank für SQL Server 2012 Express vom [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=35582) (http://go.microsoft.com/fwlink/?LinkId=221787) herunter, und führen Sie dann das Windows Installer-Paket aus.  
+1.  Suchen Sie das Windows Installer-Paket SemanticLanguageDatabase.msi auf den SQL Server-Installationsmedien, und führen Sie es aus, um die Datenbank zu extrahieren. Laden Sie die Semantic Language Statistics-Datenbank für SQL Server 2012 Express aus dem [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=35582) (http://go.microsoft.com/fwlink/?LinkId=221787)) herunter, und führen Sie dann das Windows Installer-Paket aus.  
   
 2.  Verschieben Sie die Datenbank in einen geeigneten Datenordner. Falls Sie die Datenbank im Standardverzeichnis belassen, müssen die Berechtigungen geändert werden, bevor sie erfolgreich angefügt werden kann.  
   
@@ -234,15 +233,15 @@ Weitere Informationen zum Reparieren einer SQL Server-Instanz finden Sie unter [
   
 `Setup has detected that the .NET Framework version 4 needs to be repaired. Do not restart your computer until Setup is complete.`  
   
-**Problemumgehung:**Reparieren Sie die .NET Framework 4-Installation nach dem Betriebssystemupgrade. Weitere Informationen finden Sie unter [Wie Sie eine vorhandene Installation von .NET Framework reparieren](http://support.microsoft.com/kb/306160).  
+**Problemumgehung:** Reparieren Sie die .NET Framework 4-Installation nach dem Betriebssystemupgrade. Weitere Informationen finden Sie unter [Wie Sie eine vorhandene Installation von .NET Framework reparieren](http://support.microsoft.com/kb/306160).  
   
 ### <a name="112-sql-server-edition-upgrade-requires-a-restart"></a>1.12 SQL Server-Editionsupgrade erfordert einen Neustart  
-**Problem:**Wenn Sie für eine SQL Server 2012-Instanz ein Editionsupgrade ausführen, werden einige Funktionen der neuen Edition u. U. nicht sofort aktiviert.  
+**Problem:** Wenn Sie für eine SQL Server 2012-Instanz ein Editionsupgrade ausführen, werden einige Funktionen der neuen Edition u. U. nicht sofort aktiviert.  
   
-**Problemumgehung:**Starten Sie den Computer nach dem Editionsupgrade einer SQL Server 2012-Instanz neu. Weitere Informationen zu den in SQL Server 2012 unterstützten Upgrades finden Sie unter [Unterstützte Versions- und Editionsupgrades](http://msdn.microsoft.com/library/ms143393.aspx).  
+**Problemumgehung:** Starten Sie den Computer nach dem Editionsupgrade einer SQL Server 2012-Instanz neu. Weitere Informationen zu den in SQL Server 2012 unterstützten Upgrades finden Sie unter [Unterstützte Versions- und Editionsupgrades](http://msdn.microsoft.com/library/ms143393.aspx).  
   
 ### <a name="113-database-with-read-only-filegroup-or-files-cannot-be-upgraded"></a>1.13 Datenbanken mit schreibgeschützten Dateigruppen bzw. Dateien können nicht aktualisiert werden  
-**Problem:**Sie können eine Datenbank nicht aktualisieren, indem Sie die Datenbank entweder anfügen oder von einer Sicherung wiederherstellen, wenn die Datenbank bzw. die darin enthaltenen Dateien/Dateigruppen schreibgeschützt sind.  Fehler 3415 wird zurückgegeben.  Dieses Problem tritt auch bei einem direkten Upgrade einer SQL Server-Instanz auf. Das heißt, Sie versuchen, eine vorhandene SQL Server-Instanz zu ersetzen, indem Sie SQL Server 2012 installieren, und mindestens eine der vorhandenen Datenbanken ist auf schreibgeschützt festgelegt.  
+**Problem:** Sie können eine Datenbank nicht aktualisieren, indem Sie die Datenbank entweder anfügen oder von einer Sicherung wiederherstellen, wenn die Datenbank bzw. die darin enthaltenen Dateien/Dateigruppen schreibgeschützt sind.  Fehler 3415 wird zurückgegeben.  Dieses Problem tritt auch bei einem direkten Upgrade einer SQL Server-Instanz auf. Das heißt, Sie versuchen, eine vorhandene SQL Server-Instanz zu ersetzen, indem Sie SQL Server 2012 installieren, und mindestens eine der vorhandenen Datenbanken ist auf schreibgeschützt festgelegt.  
   
 **Problemumgehung:** Stellen Sie vor dem Upgrade sicher, dass für die Datenbank sowie die zugehörigen Dateien/Dateigruppen der Lese-/Schreibzugriff aktiviert ist.  
   
@@ -260,7 +259,7 @@ Weitere Informationen zum Reparieren einer SQL Server-Instanz finden Sie unter [
   
 Wenn bei Verwendung von SQL Server Management Studio 2012 (SSMS) eine SQL-Datei im Editor geöffnet ist und eine Verbindung mit einer SQL Server-Instanz besteht, kann von einer MDX- oder DMX-Datei keine Verbindung mit einer AS-Serverinstanz hergestellt werden, wenn die Datei in derselben SSMS-Instanz geöffnet wird. Auch wenn eine MDX- oder DMX-Datei bereits im Editor in SSMS geöffnet und mit einer AS-Serverinstanz verbunden ist, kann von einer SQL-Datei, die in derselben SSMS-Instanz geöffnet wird, keine Verbindung mit einer SQL Server-Instanz hergestellt werden.  
   
-**Problemumgehung:**Sie haben folgende Möglichkeiten, um das Problem zu beheben.  
+**Problemumgehung:** Sie haben folgende Möglichkeiten, um das Problem zu beheben.  
   
 -   Starten Sie eine weitere SSMS-Instanz, um die MDX-/DMX-Datei zu öffnen.  
   
@@ -303,14 +302,14 @@ Bei der Arbeit mit tabellarischen Modellen verursacht der AS-Verarbeitungstask P
 ## <a name="BOL"></a>3.0 Onlinedokumentation  
   
 ### <a name="31-help-viewer-for-sql-server-crashes-in-environments-configured-to-run-only-ipv6"></a>3.1 Der Hilfe-Viewer für SQL Server stürzt in Umgebungen ab, die ausschließlich für die Ausführung von IPv6 konfiguriert sind  
-**Problem:**Wenn die Umgebung ausschließlich für die Ausführung von IPv6 konfiguriert ist, stürzt der Hilfe-Viewer von SQL Server 2012 ab, und Sie erhalten die folgende Fehlermeldung:  
+**Problem:** Wenn die Umgebung ausschließlich für die Ausführung von IPv6 konfiguriert ist, stürzt der Hilfe-Viewer von SQL Server 2012 ab, und Sie erhalten die folgende Fehlermeldung:  
   
 `HelpLibAgent.exe has stopped working.`  
   
 > [!IMPORTANT]  
 > Dies gilt für alle Umgebungen, für die ausschließlich IPv6 aktiviert ist. Umgebungen mit IPv4 (bzw. einer Kombination von IPv4 und IPv6) sind nicht betroffen.  
   
-**Problemumgehung:**Zur Vermeidung des Problems aktivieren Sie IPv4, oder befolgen Sie die nachstehenden Anweisungen, um einen Registrierungseintrag hinzuzufügen und eine Zugriffssteuerungsliste (ACL) zu erstellen und den Hilfe-Viewer für IPv6 zu aktivieren:  
+**Problemumgehung:** Zur Vermeidung des Problems aktivieren Sie IPv4, oder befolgen Sie die nachstehenden Anweisungen, um einen Registrierungseintrag hinzuzufügen und eine Zugriffssteuerungsliste (ACL) zu erstellen und den Hilfe-Viewer für IPv6 zu aktivieren:  
   
 1.  Erstellen Sie einen Registrierungsschlüssel mit dem Namen "IPv6" und einem Wert von "1 (DWORD(32 Bit))" unter HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Help\v1.0.  
   
@@ -347,7 +346,7 @@ Bei der Arbeit mit tabellarischen Modellen verursacht der AS-Verarbeitungstask P
 ### <a name="45-controls-do-not-scale-properly-on-large-font-sizes"></a>4.5 Steuerelemente werden bei großen Schriftgraden nicht richtig skaliert  
 **Problem:** Wenn Sie die Textgröße auf „Größer – 150 %“ (in Windows Server 2008 oder Windows 7) ändern oder die Einstellung Benutzerdefinierte DPI-Auflösung auf 200 % (in Windows 7) festlegen, sind die Schaltflächen **Abbrechen** und **Erstellen** auf der Seite **Neue Wissensdatenbank** nicht verfügbar.  
   
-**Problemumgehung:**Um das Problem zu beheben, legen Sie einen kleineren Schriftgrad fest.  
+**Problemumgehung:** Um das Problem zu beheben, legen Sie einen kleineren Schriftgrad fest.  
   
 ### <a name="46-screen-resolution-of-800x600-is-not-supported"></a>4.6 Eine Bildschirmauflösung von 800 x 600 wird nicht unterstützt  
 **Problem:** Die Data Quality Client-Anwendung wird nicht richtig angezeigt, wenn die Bildschirmauflösung auf 800 x 600 festgelegt ist.  
@@ -380,7 +379,7 @@ Wenn Sie in einem Data Quality-Bereinigungsprojekt ein Feld in den Quelldaten ei
 **Problemumgehung:** Entfernen Sie das Semikolon (;) aus dem Tabellennamen in der Excel-Datei, in der die zuzuordnenden Quelldaten enthalten sind, und wiederholen Sie den Vorgang.  
   
 ### <a name="414-issue-with-date-or-datetime-values-in-unmapped-source-fields-in-excel-during-cleansing-and-matching"></a>4.14 Problem mit Date-Werten oder DateTime-Werten in nicht zugeordneten Quellfeldern in Excel bei der Bereinigung und beim Abgleich  
-**Problem:**Wenn die Quelldaten im Excel-Format vorliegen und Quellfelder mit Werten vom Datentyp **Date** oder **DateTime** nicht zugeordnet wurden, geschieht während Bereinigungs- und Abgleichsaktivitäten Folgendes:  
+**Problem:** Wenn die Quelldaten im Excel-Format vorliegen und Quellfelder mit Werten vom Datentyp **Date** oder **DateTime** nicht zugeordnet wurden, geschieht während Bereinigungs- und Abgleichsaktivitäten Folgendes:  
   
 -   Die nicht zugeordneten **Date** -Werte werden im YYYYMMDD-Format angezeigt und exportiert.  
   
@@ -444,7 +443,7 @@ Dies wird an einem Beispiel deutlich. Im Beispiel wird der Benutzer "Domain\user
 **Problemumgehung:** Diese beiden Funktionen sollten in der Server Core-SKU von Windows Server 2008, Windows Server 2008 R2 und Windows Server 7 weder installiert noch verwendet werden.  
   
 ### <a name="52-sql-server-management-studio-depends-on-visual-studio-2010-sp1"></a>5.2 SQL Server Management Studio ist von Visual Studio 2010 SP1 abhängig  
-**Problem:**Zum ordnungsgemäßen Ausführen von SQL Server 2012 Management Studio ist Visual Studio 2010 SP1 erforderlich. Die Deinstallation von Visual Studio 2010 SP1 kann Funktionsverluste in SQL Server Management Studio verursachen und Management Studio in einen nicht unterstützten Status versetzen. In diesem Fall können folgende Probleme auftreten:  
+**Problem:** Zum ordnungsgemäßen Ausführen von SQL Server 2012 Management Studio ist Visual Studio 2010 SP1 erforderlich. Die Deinstallation von Visual Studio 2010 SP1 kann Funktionsverluste in SQL Server Management Studio verursachen und Management Studio in einen nicht unterstützten Status versetzen. In diesem Fall können folgende Probleme auftreten:  
   
 -   Befehlszeilenparameter für ssms.exe funktionieren nicht ordnungsgemäß.  
   
@@ -454,7 +453,7 @@ Dies wird an einem Beispiel deutlich. Im Beispiel wird der Benutzer "Domain\user
   
 -   Abfragen können im normalen Benutzermodus nicht debuggt werden.  
   
-**Problemumgehung:**Installieren Sie Visual Studio 2010 SP1 erneut, und starten Sie Management Studio neu.  
+**Problemumgehung:** Installieren Sie Visual Studio 2010 SP1 erneut, und starten Sie Management Studio neu.  
   
 ### <a name="53-x64-operating-systems-require-64-bit-powershell-20"></a>5.3 x64-Betriebssysteme benötigen die 64-Bit-Version von PowerShell 2.0  
 **Problem:** 32-Bit-Installationen von Windows PowerShell Extensions für SQL Server werden für SQL Server 2012-Instanzen unter 64-Bit-Betriebssystemen nicht unterstützt.  
@@ -478,7 +477,7 @@ Ungültiger Objektname 'sys.federations'. (Microsoft SQL Server, Error: 208)</pr
 ### <a name="55-new-maintenance-plan-layout-not-compatible-with-earlier-sql-server-tools"></a>5.5 Das neue Layout für Wartungspläne ist mit früheren SQL Server-Tools nicht kompatibel  
 **Problem:** Wenn Sie mit den SQL Server 2012-Verwaltungstools einen vorhandenen Wartungsplan aus einer vorherigen Version der SQL Server-Verwaltungstools (SQL Server 2008 R2, SQL Server 2008 oder SQL Server 2005) ändern, wird der Wartungsplan in einem neuen Format gespeichert. Frühere Versionen der SQL Server-Verwaltungstools unterstützen dieses neue Format nicht.  
   
-**Problemumgehung:**Keine  
+**Problemumgehung:** Keine  
   
 ### <a name="56-intellisense-has-limitations-when-logged-in-to-a-contained-database"></a>5.6 Die IntelliSense-Funktionalität ist nach der Anmeldung bei einer eigenständigen Datenbank eingeschränkt  
 Problem: IntelliSense funktioniert in SQL Server Management Studio (SSMS) und SQL Server Data Tools (SSDT) nicht erwartungsgemäß, wenn eigenständige Benutzer bei eigenständigen Datenbanken angemeldet sind. In diesen Fällen tritt das folgende Verhalten auf:  
@@ -489,7 +488,7 @@ Problem: IntelliSense funktioniert in SQL Server Management Studio (SSMS) und SQ
   
 3.  Die QuickInfo-Hilfe für integrierte Funktionen wird nicht ausgeführt.  
   
-**Problemumgehung:**Keine  
+**Problemumgehung:** Keine  
   
 ### <a name="57-alwayson-availability-groups"></a>5.7 AlwaysOn-Verfügbarkeitsgruppen  
 Bevor Sie eine Verfügbarkeitsgruppe erstellen, lesen Sie den Abschnitt [Voraussetzungen, Einschränkungen und Empfehlungen für AlwaysOn-Verfügbarkeitsgruppen (SQL Server)](http://go.microsoft.com/?linkid=9753168) in der Onlinedokumentation. Eine Einführung in AlwaysOn-Verfügbarkeitsgruppen finden Sie unter [AlwaysOn-Verfügbarkeitsgruppen (SQL Server)](http://go.microsoft.com/?linkid=9753166)in der Onlinedokumentation.  
@@ -503,17 +502,17 @@ In diesem Abschnitt werden die Treiberunterstützung für AlwaysOn-Verfügbarkei
   
 In der folgenden Tabelle ist die Treiberunterstützung für AlwaysOn-Verfügbarkeitsgruppen zusammengefasst:  
   
-|Treiber|Multisubnetz-Failover|Anwendungszweck|Schreibgeschütztes Routing|Multisubnetz-Failover: Schnelleres Endpunktfailover in einzelnen Subnetzen|Multisubnetz-Failover: Auflösung benannter Instanzen für SQL-Clusterinstanzen|  
+|Treiber|Multisubnetz-Failover|Application Intent|Schreibgeschütztes Routing|Multisubnetz-Failover: Schnelleres Endpunktfailover in einzelnen Subnetzen|Multisubnetz-Failover: Auflösung benannter Instanzen für SQL-Clusterinstanzen|  
 |----------|--------------------------|----------------------|----------------------|------------------------------------------------------------------|---------------------------------------------------------------------------------|  
 |SQL Native Client 11.0 ODBC|ja|ja|ja|ja|ja|  
-|SQL Native Client 11.0 OLEDB|Nein|Ja|ja|Nein|Nein|  
-|ADO.NET mit .NET Framework 4.0 mit Konnektivitätspatch**\&#42;**|Benutzerkontensteuerung|ja|ja|ja|Benutzerkontensteuerung|  
-|ADO.NET mit .NET Framework 3.5 SP1 mit Konnektivitätspatch **\&#42;\&#42;**|Benutzerkontensteuerung|ja|ja|ja|ja|  
-|Microsoft JDBC Driver 4.0 für SQL Server|ja|ja|ja|ja|Benutzerkontensteuerung|  
+|SQL Native Client 11.0 OLEDB|nein|ja|ja|nein|nein|  
+|ADO.NET mit .NET Framework 4.0 mit Konnektivitätspatch**\&#42;**|ja|ja|ja|ja|Benutzerkontensteuerung|  
+|ADO.NET mit .NET Framework 3.5 SP1 mit Konnektivitätspatch **\&#42;\&#42;**|ja|ja|ja|ja|ja|  
+|Microsoft JDBC-Treiber 4.0 für SQL Server|ja|ja|ja|ja|ja|  
   
-**\&#42;** Laden Sie das Konnektivitätspatch für ADO.NET mit .NET Framework 4.0 herunter: [http://support.microsoft.com/kb/2600211](http://support.microsoft.com/kb/2600211).  
+**\&#42;** Download des Konnektivitätspatches für ADO.NET mit .NET Framework 4.0: [http://support.microsoft.com/kb/2600211](http://support.microsoft.com/kb/2600211).  
   
-**\&#42;\&#42;** Laden Sie das Konnektivitätspatch für ADO.NET mit .NET Framework 3.5 SP1 herunter: [http://support.microsoft.com/kb/2654347](http://support.microsoft.com/kb/2654347).  
+**\&#42;\&#42;** Download des Konnektivitätspatches für ADO.NET mit .NET Framework 3.5 SP1: [http://support.microsoft.com/kb/2654347](http://support.microsoft.com/kb/2654347).  
   
 **MultiSubnetFailover-Schlüsselwort und zugehörige Funktionen**  
   
@@ -539,9 +538,9 @@ MultiSubnetFailover ist ein neues Schlüsselwort für Verbindungszeichenfolgen, 
   
 -   Wenn Sie nicht über die Berechtigung zur Bearbeitung von Clusterressourcen verfügen, ändern Sie den Wert für das Verbindungstimeout in 30 Sekunden (20-sekündiger TCP-Timeoutzeitraum plus Puffer von 10 Sekunden).  
   
-    **Vorteile:**Beim Eintreten eines subnetzübergreifenden Failovers ist die Clientwiederherstellungszeit nur kurz.  
+    **Vorteile:** Beim Eintreten eines subnetzübergreifenden Failovers ist die Clientwiederherstellungszeit nur kurz.  
   
-    **Nachteile:**Für die Hälfte der Clientverbindungen sind mehr als 20 Sekunden erforderlich.  
+    **Nachteile:** Für die Hälfte der Clientverbindungen sind mehr als 20 Sekunden erforderlich.  
   
 -   Wenn Sie über die notwendigen Berechtigungen zum Bearbeiten der Clusterressourcen verfügen, sollten Sie den Netzwerknamen des Verfügbarkeitsgruppenlisteners auf **RegisterAllProvidersIP**=0 festlegen. Weitere Informationen finden Sie unter "Beispiel-PowerShell-Skript zur Deaktivierung von RegisterAllProvidersIP und zur Reduzierung der Gültigkeitsdauer (TTL)" weiter unten in diesem Abschnitt.  
   
@@ -603,7 +602,7 @@ CDC Service für Oracle ist ein Windows-Dienst, der Oracle-Transaktionsprotokoll
 ### <a name="71-fixing-an-mds-installation-in-a-cluster"></a>7.1 Reparieren einer MDS-Installation in einem Cluster  
 **Problem:** Wenn Sie eine gruppierte Instanz der RTM-Version von SQL Server 2012 installieren, während das Kontrollkästchen **Master Data Services** aktiviert ist, werden MDS auf einem einzelnen Knoten installiert, sind jedoch auf zusätzlichen Knoten, die Sie dem Cluster hinzufügen, weder verfügbar noch funktionsfähig.  
   
-**Problemumgehung:**Um dieses Problem zu beheben, müssen Sie mithilfe der folgenden Schritte die kumulative Version 1 (CU1) für SQL Server 2012 installieren:  
+**Problemumgehung:** Um dieses Problem zu beheben, müssen Sie mithilfe der folgenden Schritte die kumulative Version 1 (CU1) für SQL Server 2012 installieren:  
   
 1.  Stellen Sie sicher, dass keine SQL-/MDS-Installation vorhanden ist.  
   
@@ -614,7 +613,7 @@ CDC Service für Oracle ist ein Windows-Dienst, der Oracle-Transaktionsprotokoll
 Weitere Informationen zu diesen Problemen sowie zum Ausführen der oben angegebenen Schritte finden Sie unter [http://support.microsoft.com/kb/2683467](http://support.microsoft.com/kb/2683467).  
   
 ### <a name="72-microsoft-silverlight-5-required"></a>7.2 Microsoft Silverlight 5 ist erforderlich  
-Um in der Master Data Manager-Webanwendung arbeiten zu können, muss Silverlight 5.0 auf dem Clientcomputer installiert sein. Falls Sie nicht über die erforderliche Version von Silverlight verfügen, werden Sie aufgefordert, diese zu installieren, wenn Sie zu einem Bereich der Webanwendung navigieren, in dem sie erforderlich ist. Sie können Silverlight 5 von [http://go.microsoft.com/fwlink/?LinkId=243096](http://go.microsoft.com/fwlink/?LinkId=243096)installieren.  
+Um in der Master Data Manager-Webanwendung arbeiten zu können, muss Silverlight 5.0 auf dem Clientcomputer installiert sein. Falls Sie nicht über die erforderliche Version von Silverlight verfügen, werden Sie aufgefordert, diese zu installieren, wenn Sie zu einem Bereich der Webanwendung navigieren, in dem sie erforderlich ist. Sie können Silverlight 5 von [http://go.microsoft.com/fwlink/?LinkId=243096](http://go.microsoft.com/fwlink/?LinkId=243096) installieren.  
   
 ![Horizontal_bar](media/horizontal-bar.png "Horizontal_bar")  
   
@@ -635,7 +634,7 @@ SQL Server 2012 enthält StreamInsight 2.0. StreamInsight 2.0 erfordert eine Mic
 ### <a name="101-link-to-install-upgrade-advisor-is-not-enabled-on-chinese-hk-operating-systems"></a>10.1 Link zur Installation von Upgrade Advisor ist auf chinesischen (HK) Betriebssystemen nicht aktiviert  
 Problem: Beim Versuch, Upgrade Advisor auf einer unterstützten Windows-Version unter chinesischen (Hongkong) Betriebssystemen zu installieren, ist der Link zur Installation von Upgrade Advisor möglicherweise nicht aktiviert.  
   
-**Problemumgehung:**Suchen Sie die Datei **SQLUA.msi** je nach Betriebssystemarchitektur auf den SQL Server 2012-Medien unter `\1028_CHT_LP\x64\redist\Upgrade Advisor` oder unter `\1028_CHT_LP\x86\redist\Upgrade Advisor`.  
+**Problemumgehung:** Suchen Sie die Datei **SQLUA.msi** je nach Betriebssystemarchitektur auf den SQL Server 2012-Medien unter `\1028_CHT_LP\x64\redist\Upgrade Advisor` oder unter `\1028_CHT_LP\x86\redist\Upgrade Advisor`.  
   
 ![Horizontal_bar](media/horizontal-bar.png "Horizontal_bar")  
   

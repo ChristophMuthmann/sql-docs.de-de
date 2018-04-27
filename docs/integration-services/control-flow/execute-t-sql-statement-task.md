@@ -1,16 +1,16 @@
 ---
-title: "T-SQL-Anweisung ausführen (Task) | Microsoft-Dokumentation"
-ms.custom: 
+title: T-SQL-Anweisung ausführen (Task) | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: control-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.executetsqlstatementtask.f1
@@ -19,16 +19,16 @@ helpviewer_keywords:
 - statements [Integration Services]
 - Execute T-SQL Statement task [Integration Services]
 ms.assetid: 7e9086ca-d27e-46c0-bfad-d61333ebd55e
-caps.latest.revision: 
+caps.latest.revision: 35
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ec1d7b5264d880b3cec0ec8b6348441e89147d6c
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: fcd31f958756315370b171151b677c2425d0d92b
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="execute-t-sql-statement-task"></a>T-SQL-Anweisung ausführen (Task)
   Mit dem Task T-SQL-Anweisung ausführen werden Transact-SQL-Anweisungen ausgeführt. Weitere Informationen finden Sie unter [Transact-SQL-Referenz &#40;Datenbankmodul&#41;](../../t-sql/transact-sql-reference-database-engine.md) und [Integration Services-Abfragen &#40;SSIS&#41;](../../integration-services/integration-services-ssis-queries.md).  

@@ -1,16 +1,16 @@
 ---
-title: "Transformation für Fuzzysuche | Microsoft-Dokumentation"
-ms.custom: 
+title: Transformation für Fuzzysuche | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.fuzzylookuptrans.f1
@@ -36,16 +36,16 @@ helpviewer_keywords:
 - missing values replaced [Integration Services]
 - similarity thresholds [Integration Services]
 ms.assetid: 019db426-3de2-4ca9-8667-79fd9a47a068
-caps.latest.revision: 
+caps.latest.revision: 75
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 44e9a7db02aacfbccbca74377a6f0ee33fc5d02c
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 7c6411c62431bb4c929049cca93805bf49ad5678
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="fuzzy-lookup-transformation"></a>Transformation für Fuzzysuche
   Die Transformation für Fuzzysuche führt Aufgaben zum Datencleanup durch, wie das Standardisieren von Daten, das Korrigieren von Daten und das Bereitstellen fehlender Werte.  

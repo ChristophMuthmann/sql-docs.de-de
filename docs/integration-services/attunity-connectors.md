@@ -1,27 +1,28 @@
 ---
-title: "Microsoft Connectors für Oracle und Teradata von Attunity (SSIS) | Microsoft-Dokumentation"
+title: Microsoft Connectors für Oracle und Teradata von Attunity (SSIS) | Microsoft-Dokumentation
 ms.date: 05/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.custom: 
-ms.technology: integration-services
-ms.tgt_pltfrm: 
+ms.custom: ''
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: ''
 ms.topic: article
-ms.assetid: 
-caps.latest.revision: 
+ms.assetid: ''
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0085e6bac892da01043e76843e51f43be3509cee
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 21475a5fc0c8083df04ee57a2dfa86be701f3e61
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="microsoft-connectors-for-oracle-and-teradata-by-attunity-for-integration-services-ssis"></a>Microsoft Connectors für Oracle und Teradata von Attunity für Integration Services (SSIS)
 

@@ -1,16 +1,16 @@
 ---
-title: "SQL Server-Objekte übertragen (Task) | Microsoft-Dokumentation"
-ms.custom: 
+title: SQL Server-Objekte übertragen (Task) | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: control-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.transfersqlserverobjectstask.f1
@@ -19,16 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - Transfer SQL Server Objects task [Integration Services]
 ms.assetid: fe86d6e5-e415-406c-88f3-dc3ef71bd5f0
-caps.latest.revision: 
+caps.latest.revision: 35
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d27b4617e47266a377d2412c79d126ea0cd6dc48
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 956c8c9d3f8e15bc6397fe8ab48151cef15630bc
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="transfer-sql-server-objects-task"></a>SQL Server-Objekte kopieren (Task)
   Mit dem Task „ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Objekte übertragen“ wird mindestens ein Typ von Objekten in eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank zwischen Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]übertragen. Der Task kann z. B. Tabellen und gespeicherte Prozeduren kopieren. Je nach [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Version, die als Quelle verwendet wird, stehen verschiedene Objekttypen zum Kopieren zur Verfügung. Nur eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank enthält z.B. Schemas und benutzerdefinierte Aggregate.  

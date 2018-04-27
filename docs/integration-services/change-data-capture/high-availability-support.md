@@ -1,28 +1,28 @@
 ---
-title: "Unterstützung für hohe Verfügbarkeit | Microsoft-Dokumentation"
-ms.custom: 
+title: Unterstützung für hohe Verfügbarkeit | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: change-data-capture
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 2e0f6d3f-0536-46d9-8630-835e199515bf
-caps.latest.revision: 
+caps.latest.revision: 5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6498c36d78e4252689415b9139c5cd60de7a78ad
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: dd0e55ccc5bf52927ad9b238978dccbfe816ba99
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="high-availability-support"></a>Unterstützung für hohe Verfügbarkeit
   Der CDC Service for Oracle ist für Hochverfügbarkeit ausgelegt. Die folgenden Funktionen stellen einen Teil der Unterstützung für Hochverfügbarkeit dar:  

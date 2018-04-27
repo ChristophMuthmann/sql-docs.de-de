@@ -2,7 +2,7 @@
 title: Erlernen von SQL Server Master Data Services | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 02/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: mds
 ms.service: ''
 ms.component: non-specific
@@ -20,11 +20,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 278a2575212d8e9d6f8c0815f84f7c0f92fa145a
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 7151d5eebdf7992092a23cf943deb8f0e1ad0c28
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="learn-sql-server-master-data-services"></a>Erlernen von SQL Server Master Data Services
 

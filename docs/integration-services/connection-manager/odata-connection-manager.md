@@ -1,19 +1,19 @@
 ---
 title: OData-Verbindungs-Manager | Microsoft-Dokumentation
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: connection-manager
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 3caa4372-aff3-4c0f-9ecd-97870948b8d0
-caps.latest.revision: 
+caps.latest.revision: 9
 f1_keywords:
 - sql13.dts.designer.odatasource.connectionmanager.f1
 - sql13.dts.designer.odataconnectionmanager.f1
@@ -21,11 +21,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 331cf4ff00eeda4b1c1d22c021138ae67d6d23b9
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 67bb8489c9dd702f26f8d17ec85e8f59f353476b
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="odata-connection-manager"></a>OData-Verbindungs-Manager
  Stellen Sie eine Verbindung mit einer OData-Quelle mit einem OData-Verbindungs-Manager her. Eine OData-Quellkomponente stellt über einen OData-Verbindungs-Manager eine Verbindung mit einer OData-Quelle her und verwendet die Daten des Diensts. Weitere Informationen finden Sie unter [OData Source](../../integration-services/data-flow/odata-source.md).  

@@ -1,15 +1,16 @@
 ---
 title: Angeben von Suchkriterien (Visual Database Tools) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Query Designer [SQL Server], Criteria pane
@@ -24,19 +25,20 @@ helpviewer_keywords:
 - Visual Database Tools [SQL Server], queries
 - limiting rows returned
 ms.assetid: 25fb4e31-6dbf-4cf6-8e47-0dd0998c836c
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d811d773e5cb85f94e32aa27cdf3c746b35089ff
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 8f41f7f80bc0fae960794aa5bf28265e1086c578
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="specify-search-criteria-visual-database-tools"></a>Angeben von Suchkriterien (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Die Anzahl der von einer Abfrage zurückgegebenen Zeilen kann durch Suchkriterien eingeschränkt werden.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Die Anzahl der von einer Abfrage zurückgegebenen Zeilen kann durch Suchkriterien eingeschränkt werden.  
   
 Einzelheiten zu den einzelnen Schritten beim Erstellen von Suchkriterien finden Sie unter den in der folgenden Tabelle aufgeführten Themen.  
   

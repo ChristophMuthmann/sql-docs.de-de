@@ -2,22 +2,23 @@
 title: Bereitstellen eines SSIS-Pakets mit Transact-SQL (VS Code) | Microsoft-Dokumentation
 ms.date: 09/25/2017
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: quick-start
 ms.suite: sql
-ms.custom: 
-ms.technology: integration-services
+ms.custom: ''
+ms.technology:
+- integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9f4e5d15cc4ef8c7b51f2fa79e0ff35e7f53d9df
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f55f50ce68e2401da09794863b4d02f30b45c3df
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="deploy-an-ssis-project-from-visual-studio-code-with-transact-sql"></a>Bereitstellen eines SSIS-Pakets aus Visual Studio Code mit Transact-SQL
 In diesem Schnellstart wird erläutert, wie Sie Visual Studio Code verwenden müssen, um eine Verbindung mit der SSIS-Katalogdatenbank herzustellen, und wie Sie anschließend Transact-SQL-Anweisungen verwenden müssen, um ein im SSIS-Katalog gespeichertes SSIS-Projekt bereitzustellen.
@@ -35,7 +36,7 @@ Prüfen Sie, bevor Sie beginnen, ob Sie die neueste Version von Visual Studio Co
 
 ## <a name="set-language-mode-to-sql-in-vs-code"></a>Festlegen des Sprachmodus auf SQL in VS Code
 
-Legen Sie den Sprachmodus auf `mssql`SQL **in Visual Studio Code fest, um** -Befehle und T-SQL IntelliSense zu aktivieren.
+Legen Sie den Sprachmodus auf `mssql`SQL**in Visual Studio Code fest, um**-Befehle und T-SQL IntelliSense zu aktivieren.
 
 1. Öffnen Sie zuerst Visual Studio Code und dann ein neues Fenster. 
 

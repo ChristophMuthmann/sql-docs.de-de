@@ -6,8 +6,8 @@ ms.author: anshrest
 manager: craigg
 ms.date: 07/12/2017
 ms.topic: article
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod: sql
+ms.prod_service: sql
 ms.service: ''
 ms.component: sql-non-specified
 ms.suite: sql
@@ -15,11 +15,11 @@ ms.custom: ''
 ms.technology: database-engine
 ms.assetid: ''
 ms.workload: Inactive
-ms.openlocfilehash: 4c4de14abb12d3cdb74c9169d45b20093022b3db
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: e8cf92af285ccd9da0e83ff7739e70d44c2aa310
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="configure-sql-server-to-send-feedback-to-microsoft"></a>Konfigurieren von SQL Server zum Senden von Feedback an Microsoft
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

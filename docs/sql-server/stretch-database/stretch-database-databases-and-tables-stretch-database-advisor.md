@@ -1,16 +1,16 @@
 ---
-title: "Identifizieren von Datenbanken und Tabellen für Stretch Database | Microsoft-Dokumentation"
-ms.custom: 
+title: Identifizieren von Datenbanken und Tabellen für Stretch Database | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 10/30/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: stretch-database
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-stretch
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Stretch Database, identifying databases
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - identifying databases for Stretch Database
 - identifying tables for Stretch Database
 ms.assetid: 81bd93d8-eef8-4572-88d7-5c37ab5ac2bf
-caps.latest.revision: 
+caps.latest.revision: 29
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c5b4c49b5b2e1c098503bab4e61c8bad0d75f891
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 4d7db19e7ffec2c7d7792e77e4311b5e90630d78
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="identify-databases-and-tables-for-stretch-database-with-data-migration-assistant"></a>Identifizieren von Datenbanken und Tabellen für Stretch Database von Data Migration Assistant
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]

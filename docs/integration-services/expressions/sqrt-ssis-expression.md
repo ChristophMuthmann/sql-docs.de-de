@@ -1,31 +1,31 @@
 ---
 title: SQRT (SSIS-Ausdruck) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: expressions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQRT function
 - square root of given expression
 ms.assetid: 54a75389-c501-4e22-87b8-905f66d6a3a5
-caps.latest.revision: 
+caps.latest.revision: 33
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9567112da5d6be5200425744c8fd208d49490ad0
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: d28d1a3b9eb9294ad9aca492afc91efb6e31b673
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sqrt-ssis-expression"></a>SQRT (SSIS-Ausdruck)
   Gibt die Quadratwurzel eines numerischen Ausdrucks zurück.  
@@ -39,7 +39,7 @@ SQRT(numeric_expression)
   
 ## <a name="arguments"></a>Argumente  
  *numeric_expression*  
- Ein numerischer Ausdruck mit einem beliebigen numerischen Datentyp. Weitere Informationen finden Sie unter [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
+ Ein numerischer Ausdruck mit einem beliebigen numerischen Datentyp. Weitere Informationen finden Sie unter [Integration Services Datentypen](../../integration-services/data-flow/integration-services-data-types.md).  
   
 ## <a name="result-types"></a>Ergebnistypen  
  DT_R8  

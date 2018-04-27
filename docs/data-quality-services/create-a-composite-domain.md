@@ -2,7 +2,7 @@
 title: Erstellen einer Verbunddomäne | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/22/2011
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: data-quality-services
 ms.service: ''
 ms.component: data-quality-services
@@ -21,11 +21,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8edd709f2a753d75c5208b82ac8cd6d885d83db6
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: ffc4144af8ca96c6574803f41b3760fbe96c9ca4
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="create-a-composite-domain"></a>Erstellen einer Verbunddomäne
 

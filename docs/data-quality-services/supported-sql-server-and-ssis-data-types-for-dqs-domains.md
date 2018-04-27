@@ -2,7 +2,7 @@
 title: Unterstützte SQL Server- und SSIS-Datentypen für DQS-Domänen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/08/2011
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: data-quality-services
 ms.service: ''
 ms.component: data-quality-services
@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a8561c00a279ed600f9b6227ae1e4693948ff19b
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 140f1c3bc11805b8852dea795fc9cfc3da5e602d
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="supported-sql-server-and-ssis-data-types-for-dqs-domains"></a>Unterstützte SQL Server- und SSIS-Datentypen für DQS-Domänen
 

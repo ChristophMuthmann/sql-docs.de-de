@@ -1,16 +1,16 @@
 ---
 title: SQL Server Integration Services-Datentypen | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - modifying data types
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - Integration Services, data types
 - SQL Server Integration Services, data types
 ms.assetid: 896fc3e8-3aa6-4396-ba82-5d7741cffa56
-caps.latest.revision: 
+caps.latest.revision: 98
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 2b27cb51a9b5090fc8495de50c597579eb100f6f
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 929ae55c02aa0e5c5172c072c192b88902a0a07f
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="integration-services-data-types"></a>SQL Server Integration Services-Datentypen
   Wenn Daten an einen Datenfluss in einem Paket weitergegeben werden, konvertiert die Quelle, die die Daten extrahiert, diese in einen [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Datentyp. Numerischen Daten wird ein numerischer Datentyp, Zeichenfolgendaten wird ein Zeichendatentyp und Daten ein Datumsdatentyp zugewiesen. Anderen Daten, wie z. B. GUIDs und BLOBs (Binary Large Object Blocks), werden ebenfalls entsprechende [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Datentypen zugewiesen. Falls Daten von einem Datentyp sind, der nicht in einen [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Datentyp konvertiert werden kann, tritt ein Fehler auf.  
@@ -84,7 +84,7 @@ ms.lasthandoff: 01/25/2018
   
 -   Verwenden Sie die Transformation für Datenkonvertierung, um den Datentyp einer Spalte von einem Datentyp in einen anderen umzuwandeln. Weitere Informationen finden Sie unter [Data Conversion Transformation](../../integration-services/data-flow/transformations/data-conversion-transformation.md).  
   
--   Verwenden Sie die Transformation für abgeleitete Spalten, um eine Kopie einer Spalte zu erstellen, die einen anderen Datentyp als die ursprüngliche Spalte aufweist. Weitere Informationen finden Sie unter [Derived Column Transformation](../../integration-services/data-flow/transformations/derived-column-transformation.md).  
+-   Verwenden Sie die Transformation für abgeleitete Spalten, um eine Kopie einer Spalte zu erstellen, die einen anderen Datentyp als die ursprüngliche Spalte aufweist. Weitere Informationen finden Sie unter [Transformation für abgeleitete Spalten](../../integration-services/data-flow/transformations/derived-column-transformation.md).  
   
 ### <a name="converting-between-strings-and-datetime-data-types"></a>Konvertieren zwischen Zeichenfolgen und Datums-/Uhrzeitdatentypen  
  In der folgenden Tabelle sind die Ergebnisse der Umwandlung oder der Konvertierung zwischen Datums- und Uhrzeitdatentypen und Zeichenfolgen aufgelistet:  

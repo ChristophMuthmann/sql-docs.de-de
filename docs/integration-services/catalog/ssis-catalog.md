@@ -1,32 +1,32 @@
 ---
 title: SSIS-Katalog | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: service
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.ssis.ssms.iscreatecatalog.f1
 - sql13.ssis.ssms.iscatalogprop.general.f1
 - sql13.ssis.dbupgradewizard.f1
 ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
-caps.latest.revision: 
+caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: b8812ba8a3a96fc17ab9c9ec5083699ef5a7d03b
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 50a4beefe7038fbce957209b9c34863d076bec41
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="ssis-catalog"></a>SSIS-Katalog
   Der **SSISDB**-Katalog ist der zentrale Punkt zum Arbeiten mit [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)]-Projekten (SSIS), die Sie auf dem [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)]-Server bereitgestellt haben. Sie legen beispielsweise Projekt- und Paketparameter fest, konfigurieren Umgebungen, um Laufzeitwerte für Pakete anzugeben, führen Pakete aus, behandeln Paketprobleme und verwalten [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] -Servervorgänge.  
@@ -49,7 +49,7 @@ ms.lasthandoff: 01/25/2018
 > [!NOTE]
 > Wenn die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz, an die die **SSISDB** -Datenbank angefügt wurde, beendet wird oder nicht reagiert, wird der Prozess ISServerExec.exe beendet. Eine Meldung wird in ein Windows-Ereignisprotokoll geschrieben.  
 >   
->  Wenn für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Ressourcen ein Failover als Teil eines Clusterfailovers durchgeführt wird, werden die ausgeführten Pakete nicht neu gestartet. Sie können Prüfpunkte verwenden, um Pakete neu zu starten. Weitere Informationen finden Sie unter [Restart Packages by Using Checkpoints](../../integration-services/packages/restart-packages-by-using-checkpoints.md).  
+>  Wenn für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Ressourcen ein Failover als Teil eines Clusterfailovers durchgeführt wird, werden die ausgeführten Pakete nicht neu gestartet. Sie können Prüfpunkte verwenden, um Pakete neu zu starten. Weitere Informationen finden Sie unter [Neustarten von Paketen mit Prüfpunkten](../../integration-services/packages/restart-packages-by-using-checkpoints.md).  
   
 ## <a name="features-and-capabilities"></a>Features und Funktionen  
   

@@ -1,16 +1,16 @@
 ---
-title: "Transformation für abgeleitete Spalten | Microsoft-Dokumentation"
-ms.custom: 
+title: Transformation für abgeleitete Spalten | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 03/02/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.derivedcolumntrans.f1
@@ -22,16 +22,16 @@ helpviewer_keywords:
 - columns [Integration Services], derivations
 - Derived Column transformation
 ms.assetid: 8eba755e-8e48-4233-bd1e-09a46bf2692f
-caps.latest.revision: 
+caps.latest.revision: 60
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 66e45a47fd340aa62b852193ec75aac7c1cde8ed
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 11848095ae04a257063601dc41aa8f146386775f
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="derived-column-transformation"></a>Transformation für abgeleitete Spalten
   Mit der Transformation für abgeleitete Spalten werden neue Spaltenwerte erstellt, indem Ausdrücke auf Transformationseingabespalten angewendet werden. Ein Ausdruck kann eine beliebige Kombination von Variablen, Funktionen, Operatoren und Spalten aus der Transformationseingabe enthalten. Das Ergebnis kann als neue Spalte hinzugefügt oder in eine vorhandene Spalte als Ersatzwert eingefügt werden. Die Transformation für abgeleitete Spalten kann mehrere abgeleitete Spalten definieren, und jede Variable oder Eingabespalte kann in mehreren Ausdrücken verwendet werden.  
@@ -44,7 +44,7 @@ ms.lasthandoff: 01/25/2018
   
 -   Anwenden mathematischer Funktionen auf numerische Daten und Speichern des Ergebnisses in einer abgeleiteten Spalte. Beispielsweise können Sie mithilfe des Ausdrucks **die Länge und die Genauigkeit der numerischen**SalesTax `ROUND(SalesTax, 2)`-Spalte in eine Zahl mit zwei Dezimalstellen ändern.  
   
--   Erstellen von Ausdrücken, die Eingabespalten und Variablen vergleichen. Beispielsweise können Sie mithilfe des Ausdrucks **die** Version **-Variable mit den Daten in der**ProductVersion **-Spalte vergleichen und in Abhängigkeit vom Ergebnis des Vergleichs den Wert von** Version **bzw.**ProductVersion `ProductVersion == @Version? ProductVersion : @Version`verwenden.  
+-   Erstellen von Ausdrücken, die Eingabespalten und Variablen vergleichen. Beispielsweise können Sie mithilfe des Ausdrucks **die** Version **-Variable mit den Daten in der**ProductVersion **-Spalte vergleichen und in Abhängigkeit vom Ergebnis des Vergleichs den Wert von** Version **bzw.** ProductVersion `ProductVersion == @Version? ProductVersion : @Version`verwenden.  
   
 -   Extrahieren von Elementen eines datetime-Werts. Beispielsweise können Sie mithilfe des Ausdrucks `DATEPART("year",GETDATE())`und den Funktionen "GETDATE" und "DATEPART" das aktuelle Jahr extrahieren.  
   
@@ -104,7 +104,7 @@ ms.lasthandoff: 01/25/2018
  **Verwandte Themen:** [Integration Services-Ausdrücke &#40;SSIS&#41;](../../../integration-services/expressions/integration-services-ssis-expressions.md), [Operatoren &#40;SSIS-Ausdruck&#41;](../../../integration-services/expressions/operators-ssis-expression.md) und [Funktionen &#40;SSIS-Ausdruck&#41;](../../../integration-services/expressions/functions-ssis-expression.md)  
   
  **Datentyp**  
- Beim Hinzufügen von Daten zu einer neuen Spalte wertet das Dialogfeld **Transformations-Editor für abgeleitete Spalten** automatisch den Ausdruck aus und legt den Datentyp entsprechend fest. Der Wert dieser Spalte ist schreibgeschützt. Weitere Informationen finden Sie unter [Integration Services Data Types](../../../integration-services/data-flow/integration-services-data-types.md).  
+ Beim Hinzufügen von Daten zu einer neuen Spalte wertet das Dialogfeld **Transformations-Editor für abgeleitete Spalten** automatisch den Ausdruck aus und legt den Datentyp entsprechend fest. Der Wert dieser Spalte ist schreibgeschützt. Weitere Informationen finden Sie unter [Integration Services Datentypen](../../../integration-services/data-flow/integration-services-data-types.md).  
   
  **Länge**  
  Beim Hinzufügen von Daten zu einer neuen Spalte wertet das Dialogfeld **Transformations-Editor für abgeleitete Spalten** automatisch den Ausdruck aus und legt die Spaltenlänge für Zeichenfolgendaten entsprechend fest. Der Wert dieser Spalte ist schreibgeschützt.  

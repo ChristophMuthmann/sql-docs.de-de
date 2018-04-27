@@ -1,31 +1,32 @@
 ---
-title: "Abfrageausdrücke und eindeutige Ressourcennamen | Microsoft-Dokumentation"
-ms.custom: 
+title: Abfrageausdrücke und eindeutige Ressourcennamen | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: powershell
-ms.service: 
+ms.service: ''
 ms.component: powershell
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - query expressions
 - unique resource names
 - URN
 ms.assetid: e0d30dbe-7daf-47eb-8412-1b96792b6fb9
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 87e90bc33f653b36eac95fd8f525d5eb235ed1ea
-ms.sourcegitcommit: 779f3398e4e3f4c626d81ae8cedad153bee69540
+ms.openlocfilehash: 47241e1734104bb1d787b4d006aa7d7769181651
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="query-expressions-and-uniform-resource-names"></a>Abfrageausdrücke und eindeutige Ressourcennamen
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
