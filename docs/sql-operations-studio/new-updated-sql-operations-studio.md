@@ -1,22 +1,22 @@
 ---
-title: Aktualisiert - SQL Operations Studio Docs | Microsoft Docs
-description: Aktualisierter Inhalt in zuletzt geänderten Dokumentation für SQL Operations Studio Codeausschnitte anzeigen
+title: Aktualisiert - SQL-Vorgänge Studio Docs | Microsoft Docs
+description: Aktualisierter Inhalt in zuletzt geänderten Dokumentation für SQL-Vorgänge Studio Codeausschnitte anzeigen
 manager: craigg
 author: MightyPen
 ms.author: genemi
 ms.topic: article
 ms.custom: UpdArt.exe
 ms.suite: sql
-ms.prod_service: sql-non-specified
+ms.prod_service: sql
 ms.component: ssops
 ms.date: 02/03/2018
-ms.openlocfilehash: 339cf28ac985e1614b4aaece3fb099d0144a309a
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: 0b75d515624e2452c8af625bf7c31c1859786a48
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="new-and-recently-updated-sql-operations-studio-docs"></a>Neue und zuletzt aktualisiert: SQL Operations Studio Docs
+# <a name="new-and-recently-updated-sql-operations-studio-docs"></a>Neue und zuletzt aktualisiert: SQL-Vorgänge Studio Docs
 
 
 
@@ -41,7 +41,7 @@ Neueste Updates werden für folgenden Datumsbereich und Betreff gemeldet:
 Die folgenden Links leiten Sie zu den neuen Artikeln weiter, die erst kürzlich erstellt wurden.
 
 
-1. [Versionshinweise für SQL Operations Studio (preview)](release-notes.md)
+1. [Versionshinweise für SQL-Vorgänge Studio (Vorschau)](release-notes.md)
 
 
 
@@ -67,7 +67,7 @@ Kopieren Sie für diese und andere Gründe Code nicht von diesen verwendet, und 
 
 Diese kompakte Liste enthält Links zu den aktualisierten Artikeln, die im Abschnitt Auszüge aufgeführt sind.
 
-1. [Herunterladen und Installieren von SQL Operations Studio (preview)](#TitleNum_1)
+1. [Herunterladen und Installieren von SQL-Vorgänge Studio (Vorschau)](#TitleNum_1)
 
 
 
@@ -78,7 +78,7 @@ Diese kompakte Liste enthält Links zu den aktualisierten Artikeln, die im Absch
 
 <a name="TitleNum_1"/>
 
-### <a name="1-nbsp-download-and-install-sql-operations-studio-previewdownloadmd"></a>1. &nbsp; [Herunterladen und Installieren von SQL Operations Studio (preview)](download.md)
+### <a name="1-nbsp-download-and-install-sql-operations-studio-previewdownloadmd"></a>1. &nbsp; [Herunterladen und Installieren von SQL-Vorgänge Studio (Vorschau)](download.md)
 
 *Aktualisiert: 18.1.2018* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
 
@@ -94,25 +94,25 @@ Diese kompakte Liste enthält Links zu den aktualisierten Artikeln, die im Absch
 |Platform|Herunterladen|Veröffentlichungsdatum|
 |:---|:---|:---|
 |Windows|[Installationsprogramm](https://go.microsoft.com/fwlink/?linkid=866480)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=866479)|17 Januar 2018 |
-|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=866481)|17 Januar 2018 |
+|MacOS|[.zip](https://go.microsoft.com/fwlink/?linkid=866481)|17 Januar 2018 |
 |Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=866484)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=866483)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=866482)|17 Januar 2018|
 
 Einzelheiten über die neueste Version finden Sie unter der [Anmerkungen zu dieser Version](release-notes.md).
 
-**Abrufen von SQL Operations Studio (preview) für Windows**
+**Abrufen von SQL-Vorgänge Studio (Vorschau) für Windows**
 
 
-Diese Version von SQL Operations Studio (preview) enthält einen standardmäßigen Windows Installer-Umgebung und eine ZIP:
+Diese Version von SQL-Vorgänge Studio (Vorschau) enthält einen standardmäßigen Windows Installer-Umgebung und eine ZIP:
 
 **Installationsprogramm**
 
-1. Herunterladen und Ausführen der [SQL Operations Studio (preview)-Installationsprogramm für Windows](https://go.microsoft.com/fwlink/?linkid=866480).
-1. Starten Sie die Anwendung SQL Operations Studio (preview).
+1. Herunterladen und Ausführen der [SQL Operations Studio (Vorschau)-Installationsprogramm für Windows](https://go.microsoft.com/fwlink/?linkid=866480).
+1. Starten Sie die Anwendung SQL Operations Studio (Vorschau).
 
 
 **ZIP-Datei**
 
-1. Herunterladen [SQL Operations Studio (preview) ZIP für Windows](https://go.microsoft.com/fwlink/?linkid=866479).
+1. Herunterladen [SQL Operations Studio (Vorschau) ZIP für Windows](https://go.microsoft.com/fwlink/?linkid=866479).
 
 
 

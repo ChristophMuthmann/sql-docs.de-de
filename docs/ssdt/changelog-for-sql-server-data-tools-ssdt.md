@@ -1,34 +1,66 @@
 ---
-title: "Änderungsprotokoll für SQL Server Data Tools (SSDT) | Microsoft-Dokumentation"
-ms.custom: 
-ms.date: 02/09/2018
+title: Änderungsprotokoll für SQL Server Data Tools (SSDT) | Microsoft-Dokumentation
+ms.custom: ''
+ms.date: 04/10/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssdt
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - tools-ssdt
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: b071f8b8-c8e5-44e0-bbb6-04804dd1863a
-caps.latest.revision: 
+caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: cd69c5ff505f60aacd131976a5f42edef02a4d4d
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: fc65a1f3cc8cd112309851665c847c76ca691393
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>Änderungsprotokoll für SQL Server Data Tools (SSDT)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Dieses Änderungsprotokoll wird für [SQL Server Data Tools (SSDT)](download-sql-server-data-tools-ssdt.md) verwendet.  
   
 Ausführliche Beiträge zu den Neuigkeiten und Änderungen finden Sie auf [the SSDT Team blog (dem SSDT-Team-Blog)](https://blogs.msdn.microsoft.com/ssdt/)
+
+
+
+## <a name="ssdt-for-visual-studio-2017-1560"></a>SSDT für Visual Studio 2017 (15.6.0)
+Buildnummer: 14.0.16162.0  
+Releasedatum: 10. April 2018
+  
+### <a name="whats-new"></a>Neues
+
+**SSIS:**
+
+1.  Korrigiert: Die AS-Verarbeitungsaufgabe protokolliert keine Verarbeitungsschritte für SQL Server 2016 und SQL Server 2017.
+2.  Korrigiert: Zugriffsverletzung während des Öffnens von DTSX mit sehr langen, nicht englischsprachigen Aufgabennamen in SSDT.
+3.  Korrigiert: Variablenliste von ScriptTask verschwindet manchmal in der Benutzeroberfläche des Tasks.
+4.  Korrigiert: Das Hinzufügen einer Kopie vorhandener Pakete schlägt fehl, wenn das Paket in SQL Server gespeichert ist.
+5.  Korrigiert: Der Fokus bleibt beim Zugriff auf das Kombinationsfeld in einigen Dialogfeldern des Editors hängen.
+6.  Korrigiert: Der Hintergrund ändert sich beim Wechseln ins VS-Design nicht.
+7.  Korrigiert: Anmerkungs- und Ladebezeichnung sind im dunklen Design nicht sichtbar.
+8.  Korrigiert: Die Statuseigenschaft wird für deaktivierte Elemente der SSIS-Toolbox nicht ordnungsgemäß definiert.
+9.  Korrigiert: Fehler bei der Ausführung von WebServiceTask.
+10. Korrigiert: Die Paketbereitstellung schlägt fehl, wenn die Verbindungszeichenfolge auf eine Variable festgelegt wird, die über einen Ausdruck verfügt, der von den Projektparametern abhängig ist.
+
+**Installationsprogramm:**
+
+1.  Fügen Sie den Link zum „Programm zur Verbesserung der Benutzerfreundlichkeit für SQL Server Data Tools“ zu den Datenschutzbestimmungen hinzu.
+2.  Korrigiert: Das Visual Studio-Installer-Fenster erscheint bei der Auswahl von „Neue SQL Server Data Tools für Visual Studio 2017-Instanz installieren“.
+
+### <a name="known-issues"></a>Bekannte Probleme:
+1.  Der SSIS-Task zum Ausführen eines Pakets unterstützt kein Debugging, wenn „ExecuteOutOfProcess“ auf TRUE festgelegt ist. Dieses Problem gilt nur für das Debuggen. Das Speichern, Bereitstellen und Ausführen über „DTExec.exe“ oder den SSIS-Katalog wird nicht beeinträchtigt.
+
+
 
 ## <a name="ssdt-for-visual-studio-2017-1552"></a>SSDT für Visual Studio 2017 (15.5.2)
 Buildnummer: 14.0.16156.0
@@ -49,7 +81,7 @@ Buildnummer: 14.0.16156.0
 - Korrigiert: Beim Herunterladen einer Nutzlast tritt manchmal der Fehler „Die angegebene Datei wurde nicht gefunden (0x80070002)“ auf.  
 
 ### <a name="known-issues"></a>Bekannte Probleme
-- Der SSIS-Task zum Ausführen eines Pakets unterstützt kein Debugging, wenn „ExecuteOutOfProcess“ auf TRUE festgelegt ist. Dieses Problem gilt nur für das Debuggen. Das Speichern, Bereitstellen und Ausführen über „DTExec.exe“ oder den SSIS-Katalog wird nicht beeinträchtigt.
+- Der SSIS-Task zum Ausführen eines Pakets unterstützt kein Debugging, wenn *ExecuteOutOfProcess* auf *TRUE* festgelegt ist. Dieses Problem gilt nur für das Debuggen. Das Speichern, Bereitstellen und Ausführen über „DTExec.exe“ oder den SSIS-Katalog wird nicht beeinträchtigt.
 
 
 

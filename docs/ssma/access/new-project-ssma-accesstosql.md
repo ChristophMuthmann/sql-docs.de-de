@@ -1,6 +1,6 @@
 ---
 title: Neues Projekt (SSMA) (AccessToSQL) | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-access
@@ -23,11 +23,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2f788be62ba1dae50f3bcefd9993cfec38aa5549
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 43cd7ed2b546e8042e5a621cf1a8e5cd750b39cc
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="new-project-ssma-accesstosql"></a>Neues Projekt (SSMA) (AccessToSQL)
 Verwenden der **neues Projekt** (Dialogfeld), um ein neues SSMA-Projekt zu erstellen. Für den Zugriff auf die **neues Projekt** Dialogfeld auf die **Datei** Menü klicken Sie auf **neues Projekt**.  

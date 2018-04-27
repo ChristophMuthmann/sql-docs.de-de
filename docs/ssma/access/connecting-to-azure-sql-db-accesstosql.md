@@ -1,6 +1,6 @@
 ---
 title: Herstellen einer Verbindung mit Azure SQL-Datenbank (AccessToSQL) | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-access
@@ -30,11 +30,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e5bf0afdc08b67a73bc4972ce3d01ee79ebdd925
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: c78aa196d878274d2071a731ada132cb47ff9d0d
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="connecting-to-azure-sql-db-accesstosql"></a>Herstellen einer Verbindung mit Azure SQL-Datenbank (AccessToSQL)
 Um Access-Datenbanken zu SQL Azure zu migrieren, müssen Sie mit der Zielinstanz von SQL Azure verbinden. Wenn Sie eine Verbindung herstellen, wird SSMA Ruft Metadaten zu allen Datenbanken in der Instanz von SQL Azure ab und Datenbank-Metadaten in der SQL Azure-Metadaten-Explorer zeigt. SSMA speichert Informationen über die Instanz von SQL Azure verbunden sind, jedoch werden Kennwörter nicht gespeichert.  

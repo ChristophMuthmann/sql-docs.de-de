@@ -1,6 +1,6 @@
 ---
 title: Hinzufügen und Entfernen von Access-Datenbankdateien (AccessToSQL) | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-access
@@ -40,11 +40,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9553d01b1fb8c96281fd108d84645d785bd9f028
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: fc44607d172ebc1f8d7d09b68ba77d68002de2bb
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="adding-and-removing-access-database-files-accesstosql"></a>Hinzufügen und Entfernen von Access-Datenbankdateien (AccessToSQL)
 Migrieren von Access-Daten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure, müssen Sie mindestens eine Access-Datenbanken die SSMA-Projekt hinzufügen. Diese Datenbanken müssen Access 97 oder höher sein. Wenn Sie Datenbanken aus einer früheren Version von Access verfügen, müssen Sie die Datenbanken auf eine neuere Version konvertieren. Dazu öffnen und speichern die Datenbanken in Access 97 oder höher, bevor Sie sie SSMA hinzufügen.  
