@@ -2,7 +2,7 @@
 title: Änderungsprotokoll für SQL Server Data Tools (SSDT) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 04/10/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssdt
@@ -19,11 +19,11 @@ ms.author: sstein
 manager: craigg
 ms.workload: Active
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: fc65a1f3cc8cd112309851665c847c76ca691393
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: b3a732222875ec5ce447e005bde41d982408d8b8
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>Änderungsprotokoll für SQL Server Data Tools (SSDT)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -109,19 +109,19 @@ SSDT für Visual Studio 2017 (15.5.0) befindet sich nicht mehr in der Vorschauph
 1. Die Benutzeroberfläche des Setups wurde lokalisiert.
 1. Die Qualität des Symbols wurde verbessert.
 
-**Integration Services (IS)**
+**Integration Services**
 1. Im Bereitstellungsassistenten wurde ein Schritt zur Paketvalidierung hinzugefügt, wenn eine Bereitstellung an Azure SSIS IR in ADF durchgeführt wird, wobei mögliche Kompatibilitätsprobleme in SSIS-Paketen bei der Ausführung in Azure SSIS IR erkannt werden. Weitere Informationen finden Sie unter [Überprüfen von in Azure bereitgestellten SSIS-Paketen](..\integration-services\lift-shift\ssis-azure-validate-packages.md).
 1. Die SSIS-Erweiterung wurde lokalisiert.
 
 ### <a name="bug-fixes"></a>Behebung von Programmfehlern
 
-**Integration Services (IS)**
+**Integration Services**
 1. Korrigiert: Das Layout des Verbindungs-Managers von OLE DB und ADO.NET ist beschädigt.
 2. Korrigiert: Beim Bearbeiten einer Aufgabe zum Verarbeiten von Dimensionen wird der Fehler „Assembly nicht gefunden“ ausgegeben.
 
 ### <a name="known-issues"></a>Bekannte Probleme
 
-Die SSIS-Aufgabe „Paket ausführen“ (**Integration Services (IS)**) unterstützt kein Debuggen, wenn ExecuteOutOfProcess auf TRUE festgelegt ist. Dieses Problem gilt nur für das Debuggen. Das Speichern, Bereitstellen und Ausführen über „DTExec.exe“ oder den SSIS-Katalog wird nicht beeinträchtigt.
+Die SSIS-Aufgabe „Paket ausführen“ (**Integration Services**) unterstützt kein Debuggen, wenn ExecuteOutOfProcess auf TRUE festgelegt ist. Dieses Problem gilt nur für das Debuggen. Das Speichern, Bereitstellen und Ausführen über „DTExec.exe“ oder den SSIS-Katalog wird nicht beeinträchtigt.
 
 
 
@@ -136,7 +136,7 @@ Buildnummer: 14.0.61712.050
   - Automatische Typerkennung: Ist diese Option aktiviert, versucht der Abfrage-Editor für moderne Datenquellen Datentypen für unstrukturierte Abfragen zu erkennen, während diese geladen werden. Wenn die Erkennung Erfolg hatte, kann ein neuer Schritt zur Abfrage hinzugefügt werden.
   - Hintergrundanalyse ausführen: Ist diese Option aktiviert, führt der Abfrage-Editor für moderne Datenquellen Abfragen mit der Datenquelle aus, während diese geladen werden, um das Ausgabeschema der Abfrage zu analysieren.
 
-**Integration Services (IS)**
+**Integration Services**
 - Im Bereitstellungsassistenten wurde ein Schritt zur Paketvalidierung hinzugefügt, wenn eine Bereitstellung an Azure SSIS IR in ADF durchgeführt wird, wobei mögliche Kompatibilitätsprobleme in SSIS-Paketen bei der Ausführung in Azure SSIS IR erkannt werden. Weitere Informationen finden Sie unter [Überprüfen von in Azure bereitgestellten SSIS-Paketen](..\integration-services\lift-shift\ssis-azure-validate-packages.md).
 
 
