@@ -1,28 +1,28 @@
 ---
 title: Systemanforderungen, Installation und Treiberdateien | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 02/14/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d90fa182-1dab-4d6f-bd85-a04dd1479986
-caps.latest.revision: 
+caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8e23264905c2a8b706b32a906d7dbf2dc3dd165b
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
-ms.translationtype: MT
+ms.openlocfilehash: 7a6ce94207d79c58c5d615be723b3d44d69cdaf9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="system-requirements-installation-and-driver-files"></a>Systemanforderungen, Installation und Treiberdateien
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]

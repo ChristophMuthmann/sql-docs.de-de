@@ -1,27 +1,28 @@
 ---
 title: DateTimeOffset-Elemente | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 9ee3cff7-a422-4805-8516-a8d9d1eb2731
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3d6d81c7a0a853123467ba09adc01c48bcdac089
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 7c43f0a62e25fdee7e8e972e681ba2761f952e41
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="datetimeoffset-members"></a>DateTimeOffset-Elemente
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,7 +44,7 @@ ms.lasthandoff: 11/18/2017
 |[getMinutesOffset](../../../connect/jdbc/reference/getminutesoffset-method-datetimeoffset.md)|Gibt den Offset in Minuten von GMT dieses **"DateTimeOffset"** Objekt.|  
 |[getTimestamp](../../../connect/jdbc/reference/gettimestamp-method-datetimeoffset.md)|Gibt den Punkt zurück, in der Zeitangabe, die von diesem **"DateTimeOffset"** Objekt als ein java.sql.Timestamp.|  
 |[hashCode](../../../connect/jdbc/reference/hashcode-method-datetimeoffset.md)|Gibt einen Hashcodewert für das Objekt zurück.|  
-|[toString](../../../connect/jdbc/reference/tostring-method-datetimeoffset.md)|Gibt eine Zeichenfolgendarstellung der **"DateTimeOffset"** Objekt.|  
+|[ToString](../../../connect/jdbc/reference/tostring-method-datetimeoffset.md)|Gibt eine Zeichenfolgendarstellung der **"DateTimeOffset"** Objekt.|  
 |[valueOf](../../../connect/jdbc/reference/valueof-method-datetimeoffset.md)|Erstellt eine **"DateTimeOffset"** Objekt, einen Zeitpunkt in einem bestimmten Offset von GMT darstellt.|  
   
 ## <a name="inherited-methods"></a>Geerbte Methoden  

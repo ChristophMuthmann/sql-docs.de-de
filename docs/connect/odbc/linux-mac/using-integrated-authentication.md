@@ -2,7 +2,7 @@
 title: Mithilfe der integrierten Authentifizierung | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: 9499ffdf-e0ee-4d3c-8bca-605371eb52d9
 caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 162b94d551ea8625b6b22fafec61e19038dc2051
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: edc89fa38ae3b4554f44290cf36073d6c6a0625b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-integrated-authentication"></a>Nutzung der Integrierten Authentifizierung
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -89,7 +89,7 @@ Entwickler können eine Anwendung bereitstellen, die einen Verbindungsserver ode
   
 -   Die Anwendungsserver als eine andere Datenbank authentifiziert und eine Verbindung mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)].  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]als Datenbankbenutzer in eine andere Datenbank authentifiziert ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)].  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] als Datenbankbenutzer in eine andere Datenbank authentifiziert ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)].  
   
 Nachdem die integrierte Authentifizierung konfiguriert ist, werden Anmeldeinformationen für den Verbindungsserver übergeben.  
   
@@ -101,17 +101,17 @@ Für den Zugriff auf [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)
   
 Es ist ein Fehler mit `-T` mit der `-U` oder `-P` Option.
   
-## <a name="supported-syntax-for-an-spn-registered-by-includessnoversionincludesssnoversionmdmd"></a>Unterstützte Syntax für einen SPN registriert von[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]
+## <a name="supported-syntax-for-an-spn-registered-by-includessnoversionincludesssnoversionmdmd"></a>Unterstützte Syntax für einen SPN registriert von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]
 
 Die Syntax, die SPNs in der Verbindungszeichenfolge oder Verbindungsattribute verwenden lautet wie folgt:  
 
-|Syntax|Beschreibung|  
+|Syntax|Description|  
 |----------|---------------|  
 |MSSQLSvc/*fqdn*:*port*|Der vom Anbieter erstellte Standard-SPN, wenn TCP verwendet wird. *port* ist eine TCP-Portnummer. *fqdn* ist ein vollqualifizierter Domänenname.|  
   
 ## <a name="authenticating-a-linux-or-macos-computer-with-active-directory"></a>Authentifizieren einen Linux- oder MacOS Computer mit Active Directory
 
-Geben Sie zum Konfigurieren von Kerberos, Daten in die `krb5.conf` Datei. `krb5.conf`befindet sich im `/etc/` aber erhalten Sie in eine andere Datei, die mit der Syntax, z. B. `export KRB5_CONFIG=/home/dbapp/etc/krb5.conf`. Im folgenden ist ein Beispiel für `krb5.conf` Datei:  
+Geben Sie zum Konfigurieren von Kerberos, Daten in die `krb5.conf` Datei. `krb5.conf` befindet sich im `/etc/` aber erhalten Sie in eine andere Datei, die mit der Syntax, z. B. `export KRB5_CONFIG=/home/dbapp/etc/krb5.conf`. Im folgenden ist ein Beispiel für `krb5.conf` Datei:  
   
 ```  
 [libdefaults]  
@@ -137,6 +137,6 @@ Weitere Informationen zum Authentifizieren von Linux oder MacOS Computer mit Act
 ## <a name="see-also"></a>Siehe auch  
 [Programmierrichtlinien](../../../connect/odbc/linux-mac/programming-guidelines.md)
 
-[Versionsanmerkungen](../../../connect/odbc/linux-mac/release-notes.md)
+[Anmerkungen zu dieser Version](../../../connect/odbc/linux-mac/release-notes.md)
 
 [Mithilfe von Azure Active Directory](../../../connect/odbc/using-azure-active-directory.md)

@@ -1,7 +1,7 @@
 ---
 title: Using Always Encrypted mit dem PHP-Treiber für SQLServer | Microsoft Docs
 ms.date: 01/08/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: php
@@ -14,11 +14,11 @@ author: v-kaywon
 ms.author: v-kaywon
 manager: mbarwin
 ms.workload: Inactive
-ms.openlocfilehash: 588a0471866b1b33a3e485b321193edfd0c9187d
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
-ms.translationtype: MT
+ms.openlocfilehash: 2896e0d2d121219fae926bd6304cd4415e0a6214
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-always-encrypted-with-the-php-drivers-for-sql-server"></a>Mit "immer verschlüsselt" mit der PHP-Treibern für SQLServer
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -99,7 +99,7 @@ Die folgenden Beispiele veranschaulichen, wie die SQLSRV- und PDO_SQLSRV-Treiber
   -   SQLSRV-Treiber:
    -   Wenn der Benutzer den Treiber, um zu bestimmen, die SQL-Typen für die verschlüsselte Spalten möchte, muss der Benutzer verwenden `sqlsrv_prepare` und `sqlsrv_execute`.
    -   Wenn `sqlsrv_query` wird bevorzugt, der Benutzer ist verantwortlich für die SQL-Typen für alle Parameter angeben. Der angegebene SQL-Typ muss die Länge einer Zeichenfolge für Zeichenfolgen-Datentypen und die Dezimalstellen und Genauigkeit für Dezimaltypen enthalten.
-  -   PDO_SQLSRV Driver:
+  -   PDO_SQLSRV-Treiber:
    -   Das Anweisungsattribut `PDO::SQLSRV_ATTR_DIRECT_QUERY` wird in einer parametrisierten Abfrage nicht unterstützt.
    -   Das Anweisungsattribut `PDO::ATTR_EMULATE_PREPARES` wird in einer parametrisierten Abfrage nicht unterstützt.
    
@@ -292,5 +292,5 @@ Die PHP-Treiber erbt auch die Einschränkungen auferlegt werden vom ODBC-Treiber
 ## <a name="see-also"></a>Siehe auch  
 [Programmierhandbuch für den PHP-SQL-Treiber](../../connect/php/programming-guide-for-php-sql-driver.md)
 [API-Referenz für den SQLSRV-Treiber](../../connect/php/sqlsrv-driver-api-reference.md)  
-[PDO_SQLSRV Driver API Reference](../../connect/php/pdo-sqlsrv-driver-reference.md)  
+[API-Referenz zum Treiber PDO_SQLSRV](../../connect/php/pdo-sqlsrv-driver-reference.md)  
   

@@ -2,7 +2,7 @@
 title: 'Vorgehensweise: Ausführen von parametrisierten Abfragen | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: php
@@ -16,16 +16,16 @@ helpviewer_keywords:
 - updating data
 - parameterized queries
 ms.assetid: dc7d0ede-a9b6-4ce2-977e-4d1e7ec2131c
-caps.latest.revision: ''
+caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 23660f3d7ddbaf45ac39674c4eba23092e3ae2d2
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
-ms.translationtype: MT
+ms.openlocfilehash: 0c6bc8d8ca5634a28992c24abf9281ff510d0238
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-perform-parameterized-queries"></a>Vorgehensweise: Ausführen von parametrisierten Abfragen
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

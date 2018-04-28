@@ -22,7 +22,7 @@ manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: f1386fadc062414b58c29677f68773f1e35eee98
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 04/16/2018
 ---
@@ -43,7 +43,7 @@ Um die Beispielanwendung „AdventureWorks Product Reviews“ auszuführen, muss
   
 -   Ihr System erfüllt die Anforderungen für [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. Ausführliche Informationen finden Sie unter [System Requirements for Microsoft Drivers for PHP for SQL Server](../../connect/php/system-requirements-for-the-php-sql-driver.md).  
 -   Die „adventureworks_demo.php“- und „photo.php“-Dateien befinden sich im Stammverzeichnis Ihres Webservers. Die Dateien müssen den weiter unten in diesem Dokument gelisteten Code enthalten.  
--   SQL Server 2005 oder SQL Server 2008 mit der [AdventureWorks2008](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) -Datenbank ist auf dem lokalen Computer installiert.  
+-   SQL Server 2005 oder SQL Server 2008 mit der [AdventureWorks2008](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) Datenbank angefügt wurde, auf dem lokalen Computer installiert ist.  
 -   Ein Webbrowser ist installiert.  
   
 ## <a name="demonstrates"></a>Veranschaulicht  
@@ -562,7 +562,7 @@ sqlsrv_close( $conn );
 ?>  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Siehe auch  
 [Verbinden mit dem Server](../../connect/php/connecting-to-the-server.md)
 
 [Vergleichen von Ausführungsfunktionen](../../connect/php/comparing-execution-functions.md)

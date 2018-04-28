@@ -1,30 +1,33 @@
 ---
 title: GetTypeInfo-Methode (SQLServerDatabaseMetaData) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerDatabaseMetaData.getTypeInfo
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerDatabaseMetaData.getTypeInfo
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 23208f01-c1bf-4235-b29c-9051d3df59a3
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2424ec8f3b484272d2311ac7880cc8810561bd2e
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 032ddf6a5f266fa68c6a735dd7f59cf4df02c68e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="gettypeinfo-method-sqlserverdatabasemetadata"></a>getTypeInfo-Methode (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -52,20 +55,20 @@ public java.sql.ResultSet getTypeInfo()
 |Name|Typ|Description|  
 |----------|----------|-----------------|  
 |TYPE_NAME|**String**|Der Name des Datentyps.|  
-|DATA_TYPE|**kurze**|Der SQL-Datentyp aus "java.sql.Types".|  
+|DATA_TYPE|**short**|Der SQL-Datentyp aus "java.sql.Types".|  
 |PRECISION|**int**|Die Gesamtanzahl von signifikanten Stellen.|  
 |LITERAL_PREFIX|**String**|Die Zeichen, die einer Konstante vorangestellt werden.|  
 |LITERAL_SUFFIX|**String**|Die Zeichen, die eine Konstante beenden.|  
 |CREATE_PARAMS|**String**|Die Beschreibung der Erstellungsparameter für den Datentyp.|  
-|NULLABLE|**kurze**|Gibt an, ob die Spalte einen NULL-Wert enthalten kann. Mögliche Werte:<br /><br /> typeNoNulls (0)<br /><br /> typeNullable (1)<br /><br /> typeNullableUnknown (2)|  
+|NULLABLE|**short**|Gibt an, ob die Spalte einen NULL-Wert enthalten kann. Mögliche Werte:<br /><br /> typeNoNulls (0)<br /><br /> typeNullable (1)<br /><br /> typeNullableUnknown (2)|  
 |CASE_SENSITIVE|**boolean**|Gibt an, ob bei dem Datentyp die Groß-/Kleinschreibung berücksichtigt wird. "**" true "**"Wenn der Typ ist die Groß-/Kleinschreibung beachtet, andernfalls"**" false "**".|  
-|SEARCHABLE|**kurze**|Gibt an, ob die Spalte in einer SQL-Klausel vom Typ "WHERE" verwendet werden kann. Mögliche Werte:<br /><br /> typePredNone (0)<br /><br /> typePredChar (1)<br /><br /> typePredBasic (2)<br /><br /> typeSeachable (3)|  
+|SEARCHABLE|**short**|Gibt an, ob die Spalte in einer SQL-Klausel vom Typ "WHERE" verwendet werden kann. Mögliche Werte:<br /><br /> typePredNone (0)<br /><br /> typePredChar (1)<br /><br /> typePredBasic (2)<br /><br /> typeSeachable (3)|  
 |UNSIGNED_ATTRIBUTE|**boolean**|Gibt das Vorzeichen des Datentyps an. "**" true "**"Wenn der Typ ohne Vorzeichen ist, andernfalls"**" false "**".|  
 |FIXED_PREC_SCALE|**boolean**|Gibt an, dass es sich bei dem Datentyp um eine Währung handeln kann. "**" true "**" ist der Datentyp Währung handelt; andernfalls "**" false "**".|  
 |AUTO_INCREMENT|**boolean**|Gibt an, dass der Datentyp automatisch inkrementiert werden kann. "**" true "**"Wenn "der Typ kann werden für automatisch inkrementiert wurde, andernfalls"**"false"**".|  
 |LOCAL_TYPE_NAME|**String**|Der lokalisierte Name des Datentyps.|  
-|MINIMUM_SCALE|**kurze**|Die maximale Anzahl von Stellen rechts des Dezimalzeichens.|  
-|MAXIMUM_SCALE|**kurze**|Die Mindestanzahl von Stellen rechts des Dezimalzeichens.|  
+|MINIMUM_SCALE|**short**|Die maximale Anzahl von Stellen rechts des Dezimalzeichens.|  
+|MAXIMUM_SCALE|**short**|Die Mindestanzahl von Stellen rechts des Dezimalzeichens.|  
 |SQL_DATA_TYPE|**int**|Wird vom JDBC-Treiber nicht unterstützt.|  
 |SQL_DATETIME_SUB|**int**|Wird vom JDBC-Treiber nicht unterstützt.|  
 |NUM_PREC_RADIX|**int**|Die Anzahl von Bits oder Stellen zum Berechnen der höchsten Zahl, die eine Spalte enthalten kann.|  

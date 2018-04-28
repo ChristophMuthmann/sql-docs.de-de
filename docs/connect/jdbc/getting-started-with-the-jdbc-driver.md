@@ -2,7 +2,7 @@
 title: Erste Schritte mit der JDBC-Treiber | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: jdbc
@@ -16,13 +16,13 @@ ms.assetid: 5f4c5d0d-c8d9-48e6-b0a5-56d308140c51
 caps.latest.revision: 3
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0d34785b887c804083c3e844eb64185c6b910d89
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: 0e53db2d61726b7d2edef99b3bb1578304dd1525
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="getting-started-with-the-jdbc-driver"></a>Erste Schritte mit der JDBC-Treiber
 

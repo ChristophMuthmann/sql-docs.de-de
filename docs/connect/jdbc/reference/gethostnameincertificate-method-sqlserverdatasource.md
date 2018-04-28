@@ -1,30 +1,33 @@
 ---
 title: GetHostNameInCertificate-Methode (SQLServerDataSource) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: getHostNameInCertificate Method (SQLServerDataSource)
-apilocation: getHostNameInCertificate Method (SQLServerDataSource)
+apiname:
+- getHostNameInCertificate Method (SQLServerDataSource)
+apilocation:
+- getHostNameInCertificate Method (SQLServerDataSource)
 apitype: Assembly
 ms.assetid: 45ea04e2-9ea5-4171-9136-d09f8a95e128
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1fca55d9ba571f8c54a3efd766f4b02a72da3295
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: b0e9312b4c8d8162c069cf9c73ce82c5313fd428
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="gethostnameincertificate-method-sqlserverdatasource"></a>getHostNameInCertificate-Methode (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

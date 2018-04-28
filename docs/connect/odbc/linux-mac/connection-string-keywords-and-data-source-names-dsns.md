@@ -1,32 +1,32 @@
 ---
 title: Herstellen einer Verbindung mit SQLServer | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - data source names
 - connection string keywords
 - DSNs
 ms.assetid: f95cdbce-e7c2-4e56-a9f7-8fa3a920a125
-caps.latest.revision: 
+caps.latest.revision: 41
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b6ad6278da1a3e325356058df51238dc34018bf0
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
-ms.translationtype: MT
+ms.openlocfilehash: aff97d687a4519d2451895772ba33f2a2ec3c4f1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="connecting-to-sql-server"></a>Herstellen einer Verbindung mit SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -67,7 +67,7 @@ Alternativ Sie können die DSN-Informationen in einer Vorlagendatei hinzufügen,
  - **Odbcinst -i -s -f** *Template_file*  
  
 Sie können überprüfen, ob Ihr Treiber funktioniert mit `isql` So testen Sie die Verbindung, oder Sie können diesen Befehl verwenden:
- - **Bcp-master.INFORMATION_SCHEMA.TABLES out OutFile.dat -S <server> - U <name> - P<password>**  
+ - **Bcp-master.INFORMATION_SCHEMA.TABLES out OutFile.dat -S <server> - U <name> - P <password>**  
 
 ## <a name="using-secure-sockets-layer-ssl"></a>Secure Sockets Layer (SSL) verwenden  
 Sie können Secure Sockets Layer (SSL) zum Verschlüsseln von Verbindungen mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]. SSL schützt [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Benutzernamen und Kennwörter über das Netzwerk. SSL überprüft auch die Identität des Servers, um Schutz vor „man-in-the-middle“-Attacken (MITM) zu bieten.  
@@ -95,9 +95,9 @@ SSL verwendet die OpenSSL-Bibliothek. Die folgende Tabelle zeigt die minimalen u
 |------------|---------------------------|--------------------------------------------|
 |Debian 9|1.1.0|/etc/ssl/certs|
 |Debian 8.71 |1.0.1|/etc/ssl/certs|
-|macOS 10.13|1.0.2|/usr/local/etc/openssl/certs|
-|macOS 10.12|1.0.2|/usr/local/etc/openssl/certs|
-|OS X 10.11|1.0.2|/usr/local/etc/openssl/certs|
+|MacOS 10,13|1.0.2|/usr/local/etc/OpenSSL/certs|
+|MacOS 10.12|1.0.2|/usr/local/etc/OpenSSL/certs|
+|OS X 10.11|1.0.2|/usr/local/etc/OpenSSL/certs|
 |Red Hat Enterprise Linux 7|1.0.1|/etc/pki/tls/cert.pem|
 |Red Hat Enterprise Linux 6|1.0.0-10|/etc/pki/tls/cert.pem|
 |SuSE Linux Enterprise 12 |1.0.1|/etc/ssl/certs|

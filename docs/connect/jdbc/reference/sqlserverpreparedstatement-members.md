@@ -1,27 +1,28 @@
 ---
 title: SQLServerPreparedStatement-Elemente | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 2363902f-d4c6-4cd4-a5fc-86079eb9e418
-caps.latest.revision: "38"
+caps.latest.revision: 38
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 05f80d22f4eb968f6db9ce24a8c5e9808bd43356
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 1926d376ac2653dcc7b4d6b0481bbe968d9469d6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlserverpreparedstatement-members"></a>SQLServerPreparedStatement-Elemente
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -45,12 +46,12 @@ ms.lasthandoff: 11/18/2017
 |Name|Description|  
 |----------|-----------------|  
 |[addBatch](../../../connect/jdbc/reference/addbatch-method-sqlserverpreparedstatement.md)|Der Batch von Befehlen für dieses Objekt für die Anweisung hinzugefügt einen Satz von Parametern.|  
-|[Abbrechen](../../../connect/jdbc/reference/cancel-method-sqlserverstatement.md)|(Geerbt von [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Bricht die SQL-Anweisung, die derzeit von diesem Anweisungsobjekt ausgeführt wird.|  
+|[cancel](../../../connect/jdbc/reference/cancel-method-sqlserverstatement.md)|(Geerbt von [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Bricht die SQL-Anweisung, die derzeit von diesem Anweisungsobjekt ausgeführt wird.|  
 |[clearBatch](../../../connect/jdbc/reference/clearbatch-method-sqlserverpreparedstatement.md)|Leert die aktuelle Liste der SQL-Befehlen für dieses [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) Objekt.|  
 |[clearParameters](../../../connect/jdbc/reference/clearparameters-method-sqlserverpreparedstatement.md)|Löscht umgehend die aktuellen Parameterwerte.|  
 |[clearWarnings](../../../connect/jdbc/reference/clearwarnings-method-sqlserverstatement.md)|(Geerbt von [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Löscht alle Warnungen, die auf diesem Anweisungsobjekt gemeldet werden.|  
-|[Schließen Sie](../../../connect/jdbc/reference/close-method-sqlserverpreparedstatement.md)|Gibt die Datenbank und der JDBC-Ressourcen von diesem Anweisungsobjekt sofort gewartet, sondern deren automatische Freigabe werden frei.|  
-|[Führen Sie](../../../connect/jdbc/reference/execute-method-sqlserverpreparedstatement.md)|Führt die SQL-Anweisung in diesem Anweisungsobjekt, die einen beliebigen SQL-Anweisung handeln kann.|  
+|[close](../../../connect/jdbc/reference/close-method-sqlserverpreparedstatement.md)|Gibt die Datenbank und der JDBC-Ressourcen von diesem Anweisungsobjekt sofort gewartet, sondern deren automatische Freigabe werden frei.|  
+|[execute](../../../connect/jdbc/reference/execute-method-sqlserverpreparedstatement.md)|Führt die SQL-Anweisung in diesem Anweisungsobjekt, die einen beliebigen SQL-Anweisung handeln kann.|  
 |[executeBatch](../../../connect/jdbc/reference/executebatch-method-sqlserverpreparedstatement.md)|Übermittelt einen Befehlsbatch zur Ausführung an die Datenbank. Werden alle Befehle erfolgreich ausgeführt, wird ein Array mit Updatezählungen zurückgegeben.|  
 |[executeQuery](../../../connect/jdbc/reference/executequery-method-sqlserverpreparedstatement.md)|Führt die SQL-Abfrage in diesem Anweisungsobjekt und gibt die [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) -Objekt, das von der Abfrage generiert wird.|  
 |[executeUpdate](../../../connect/jdbc/reference/executeupdate-method-sqlserverpreparedstatement.md)|Führt die SQL-Anweisung in diesem Anweisungsobjekt, der eine SQL INSERT, UPDATE, MERGE oder DELETE-Anweisung sein muss; oder eine SQL-Anweisung, die nichts, z. B. eine DDL-Anweisung zurückgibt.|  
@@ -81,7 +82,7 @@ ms.lasthandoff: 11/18/2017
 |[setBlob](../../../connect/jdbc/reference/setblob-method-sqlserverpreparedstatement.md)|Legt den angegebenen Parameter mit dem angegebenen Blob-Objekt.|  
 |[SetBoolean](../../../connect/jdbc/reference/setboolean-method-sqlserverpreparedstatement.md)|Legt den angegebenen Parameter auf den angegebenen **booleschen** Wert.|  
 |[setByte](../../../connect/jdbc/reference/setbyte-method-sqlserverpreparedstatement.md)|Legt den angegebenen Parameter auf den angegebenen **Byte** Wert.|  
-|[setBytes](../../../connect/jdbc/reference/setbytes-method-sqlserverpreparedstatement.md)|Legt den angegebenen Parameter in das angegebene Array von Bytes an.|  
+|[SetBytes](../../../connect/jdbc/reference/setbytes-method-sqlserverpreparedstatement.md)|Legt den angegebenen Parameter in das angegebene Array von Bytes an.|  
 |[setCharacterStream](../../../connect/jdbc/reference/setcharacterstream-method-sqlserverpreparedstatement.md)|Legt den angegebenen Parameter mit dem angegebenen Reader-Objekt.|  
 |[setClob](../../../connect/jdbc/reference/setclob-method-sqlserverpreparedstatement.md)|Legt den angegebenen Parameter mit dem angegebenen Clob-Objekt.|  
 |[setCursorName](../../../connect/jdbc/reference/setcursorname-method-sqlserverstatement.md)|(Geerbt von [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Legt die SQL-Cursornamen auf die angegebene Zeichenfolge, die durch nachfolgende verwendet werden ausführen Methoden.|  
@@ -106,13 +107,13 @@ ms.lasthandoff: 11/18/2017
 |[setRef](../../../connect/jdbc/reference/setref-method-sqlserverpreparedstatement.md)|Legt den angegebenen Parameter mit dem angegebenen Ref-Objekt.|  
 |[setResponseBuffering](../../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md)|(Geerbt von [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Legt den antwortpuffermodus für dieses [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) -Objekt, Groß-/Kleinschreibung **vollständige Zeichenfolge** oder **adaptive**.|  
 |[setShort](../../../connect/jdbc/reference/setshort-method-sqlserverpreparedstatement.md)|Legt den angegebenen Parameter auf den angegebenen **kurze** Wert.|  
-|[setString](../../../connect/jdbc/reference/setstring-method-sqlserverpreparedstatement.md)|Legt den angegebenen Parameter auf den angegebenen **Zeichenfolge** Wert.|  
+|[SetString](../../../connect/jdbc/reference/setstring-method-sqlserverpreparedstatement.md)|Legt den angegebenen Parameter auf den angegebenen **Zeichenfolge** Wert.|  
 |[setSQLXML](../../../connect/jdbc/reference/setsqlxml-method-sqlserverpreparedstatement.md)|Legt den angegebenen Parameter auf den angegebenen **SQLXML** Objekt.|  
 |[setTime](../../../connect/jdbc/reference/settime-method-sqlserverpreparedstatement.md)|Legt den angegebenen Parameter auf den angegebenen Uhrzeitwert fest.|  
 |[setTimestamp](../../../connect/jdbc/reference/settimestamp-method-sqlserverpreparedstatement.md)|Legt den angegebenen Parameter auf den angegebenen Zeitstempelwert fest.|  
 |[setUnicodeStream](../../../connect/jdbc/reference/setunicodestream-method-sqlserverpreparedstatement.md)|Legt die angegebene Parameternummer auf den angegebenen Eingabedatenstrom mit der angegebenen Anzahl von Bytes fest.|  
 |[setURL](../../../connect/jdbc/reference/seturl-method-sqlserverpreparedstatement.md)|Legt den angegebenen Parameter auf den angegebenen URL-Wert fest.|  
-|[Entpacken](../../../connect/jdbc/reference/unwrap-method-sqlserverpreparedstatement.md)|Gibt ein Objekt, das für den Zugriff auf die angegebene Schnittstelle implementiert die [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]-spezifischen Methoden.|  
+|[unwrap](../../../connect/jdbc/reference/unwrap-method-sqlserverpreparedstatement.md)|Gibt ein Objekt, das für den Zugriff auf die angegebene Schnittstelle implementiert die [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]-spezifischen Methoden.|  
   
 ## <a name="inherited-methods"></a>Geerbte Methoden  
   

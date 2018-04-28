@@ -1,27 +1,28 @@
 ---
-title: "Verwenden eine SQL-Anweisung zum Ändern von Daten | Microsoft Docs"
-ms.custom: 
+title: Verwenden eine SQL-Anweisung zum Ändern von Daten | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 4704199b-c0ae-4c77-8a2e-6963715b4ffb
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 27923be2ebcb56c79dc08ecec1fc1b27de7c04a3
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 7ac1d0c5ada6d7895384e6133de189818e8cf824
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-an-sql-statement-to-modify-data"></a>Ändern von Daten mit SQL-Anweisungen
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

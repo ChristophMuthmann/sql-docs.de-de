@@ -20,7 +20,7 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: aa20f4bb1f833a43f2cfc8ae99423db8d6af7751
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 04/16/2018
 ---
@@ -43,17 +43,17 @@ Ein Array mit Fehlerinformationen über den zuletzt ausgeführten Vorgang des Da
   
 -   Der treiberspezifische Fehlercode  
   
--   Die treiberspezifische Fehlermeldung  
+-   Die treiberspezifische Fehlermeldung.  
   
-Wenn kein Fehler vorliegt oder wenn der SQLSTATE nicht festgelegt ist, werden die treiberspezifischen Felder NULL sein.  
+Wenn kein Fehler vorliegt oder wenn der SQLSTATE nicht festgelegt ist, sind die treiberspezifischen Felder NULL.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Hinweise  
 PDO::errorInfo ruft nur die Fehlerinformationen für Vorgänge ab, die direkt in der Datenbank ausgeführt werden. Verwenden Sie PDOStatement::errorInfo, wenn eine PDOStatement-Instanz mit PDO::prepare oder PDO::query erstellt wird.  
   
 Unterstützung für PDO wurde in Version 2.0 von [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]hinzugefügt.  
   
 ## <a name="example"></a>Beispiel  
-In diesem Beispiel ist der Name der Spalte falsch geschrieben `Cityx` anstelle von `City` und verursacht einen Fehler, der dann gemeldet wird.  
+In diesem Beispiel wird der Name der Spalte falsch geschrieben (`Cityx` anstelle von `City`), verursacht einen Fehler, der dann gemeldet wird.  
   
 ```  
 <?php  
@@ -67,7 +67,7 @@ print_r ($conn->errorInfo());
 ?>  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Siehe auch  
 [PDO-Klasse](../../connect/php/pdo-class.md)
 
 [PDO](http://php.net/manual/book.pdo.php)  

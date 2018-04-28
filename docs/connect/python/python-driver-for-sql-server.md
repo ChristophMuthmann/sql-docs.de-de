@@ -1,27 +1,28 @@
 ---
-title: "Python-Treiber für SQLServer | Microsoft Docs"
-ms.custom: 
+title: Python-Treiber für SQLServer | Microsoft Docs
+ms.custom: ''
 ms.date: 08/08/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: python
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 3a1568d1-917b-46d3-b5cb-facdc740408f
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: cbf629eb140f10bf36cb8fdfa961f64a7cfe411e
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 3091eb8867b34e37c799e2e035ae9382dded82f7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="python-sql-driver"></a>Python-SQL-Treiber
 

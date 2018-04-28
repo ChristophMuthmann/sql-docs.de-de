@@ -1,30 +1,33 @@
 ---
 title: GetTime-Methode (java.lang.String, java.util.Calendar) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerCallableStatement.getTime (java.lang.String, java.util.Calendar)
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerCallableStatement.getTime (java.lang.String, java.util.Calendar)
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 3d4c67c2-a3c8-4a26-a159-89c5d63fda0b
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f24f1bcc53cb6675d12cfceb206514dadc7c9f9b
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 7cfdba6a0f7fdbdf85f9881b5e2f0e6f243848a1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="gettime-method-javalangstring-javautilcalendar"></a>getTime-Methode (java.lang.String, java.util.Calendar)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -60,7 +63,7 @@ public java.sql.Time getTime(java.lang.String sCol,
  Finden Sie im Diagramm, die mit dem Titel "Konvertierungen für Abrufmethoden" in [Grundlegendes zu Datentypkonvertierungen](../../../connect/jdbc/understanding-data-type-conversions.md) welcher [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] -Datentypen können mit dieser Methode abgerufen werden.  
   
 ## <a name="see-also"></a>Siehe auch  
- [GetTime-Methode &#40; SQLServerCallableStatement &#41;](../../../connect/jdbc/reference/gettime-method-sqlservercallablestatement.md)   
+ [GetTime-Methode &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/gettime-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement-Elemente](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement-Klasse](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

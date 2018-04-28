@@ -20,7 +20,7 @@ manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: c829a111b86430a8deaa71bdbda0c5a6a5d7ead4
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 04/16/2018
 ---
@@ -35,7 +35,7 @@ Dieser Abschnitt enthält Informationen zu den Systemanforderungen für die Verw
 * [Schritt 3: Machbarkeitsnachweis für Verbindungen mit SQL mithilfe von PHP](../../connect/php/step-3-proof-of-concept-connecting-to-sql-using-php.md)  
 * [Schritt 4: Herstellen belastbarer SQL-Verbindungen mit PHP](../../connect/php/step-4-connect-resiliently-to-sql-with-php.md)  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Siehe auch  
 [Beispielanwendung &#40;SQLSRV-Treiber&#41;](../../connect/php/example-application-sqlsrv-driver.md)
 
 [Programmierhandbuch für den Microsoft-Treiber für PHP für SQLServer](../../connect/php/programming-guide-for-php-sql-driver.md)

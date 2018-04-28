@@ -1,30 +1,33 @@
 ---
 title: GetSuperTables-Methode (SQLServerDatabaseMetaData) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerDatabaseMetaData.getSuperTables
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerDatabaseMetaData.getSuperTables
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 085461de-367b-4832-88aa-010813d2bc41
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fdda31ad9072b5c4353038011cf700633125997e
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 0872fafea828b7052c6620d1c811baa8b5f4182c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="getsupertables-method-sqlserverdatabasemetadata"></a>getSuperTables-Methode (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +47,7 @@ public java.sql.ResultSet getSuperTables(java.lang.String catalog,
 ```  
   
 #### <a name="parameters"></a>Parameter  
- *Katalog*  
+ *catalog*  
   
  Ein **Zeichenfolge** , enthält der Name des Katalogs.  
   

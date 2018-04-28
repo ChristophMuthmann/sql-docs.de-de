@@ -2,7 +2,7 @@
 title: Using Always Encrypted with the Odbcdriver für SQLServer | Microsoft Docs
 ms.custom: ''
 ms.date: 10/01/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -15,14 +15,14 @@ ms.topic: article
 ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 caps.latest.revision: 3
 ms.author: v-chojas
-manager: jhubbard
+manager: craigg
 author: MightyPen
 ms.workload: On Demand
-ms.openlocfilehash: 1456db9e5474f2970508b4bc035915744172b3df
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
-ms.translationtype: MT
+ms.openlocfilehash: 653e9680cdaac667f0a00fd84700f07210fffb5d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>Mit "immer verschlüsselt" mit dem ODBC-Treiber für SQLServer
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -391,7 +391,7 @@ Die folgenden Verbindungszeichenfolgen zeigen, wie Azure Key Vault mit den beide
 DRIVER=ODBC Driver 13 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultClientSecret;KeyStorePrincipalId=<clientId>;KeyStoreSecret=<secret>
 ```
 
-**Username/Password**
+**Benutzername/Kennwort**
 
 ```
 DRIVER=ODBC Driver 13 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultPassword;KeyStorePrincipalId=<username>;KeyStoreSecret=<password>

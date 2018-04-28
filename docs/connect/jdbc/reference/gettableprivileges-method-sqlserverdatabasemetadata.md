@@ -1,30 +1,33 @@
 ---
 title: GetTablePrivileges-Methode (SQLServerDatabaseMetaData) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerDatabaseMetaData.getTablePrivileges
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerDatabaseMetaData.getTablePrivileges
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 0610d667-a16d-4201-a14b-0a40048911e1
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b0164ce48c06196a71bd9831bb5b66b4a2ad4395
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: c69f10e3e297b04251a673b9234936c0f118065a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="gettableprivileges-method-sqlserverdatabasemetadata"></a>getTablePrivileges-Methode (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,11 +44,11 @@ public java.sql.ResultSet getTablePrivileges(java.lang.String catalog,
 ```  
   
 #### <a name="parameters"></a>Parameter  
- *Katalog*  
+ *catalog*  
   
  Ein **Zeichenfolge** , enthält der Name des Katalogs. Durch Festlegen dieses Parameters auf NULL wird angegeben, dass der Katalogname nicht verwendet werden muss.  
   
- *Schema*  
+ *schema*  
   
  Ein **Zeichenfolge** , die dem schemanamenmuster enthält. Durch Festlegen dieses Parameters auf NULL wird angegeben, dass der Schemaname nicht verwendet werden muss.  
   
@@ -68,7 +71,7 @@ public java.sql.ResultSet getTablePrivileges(java.lang.String catalog,
 |----------|----------|-----------------|  
 |TABLE_CAT|**String**|Der Katalogname.|  
 |TABLE_SCHEM|**String**|Der Tabellenschemaname.|  
-|TABLE_NAME|**String**|Der Tabellenname.|  
+|table_name|**String**|Der Tabellenname.|  
 |GRANTOR|**String**|Das Objekt, von dem der Zugriff gewährt wird.|  
 |GRANTEE|**String**|Das Objekt, von dem der Zugriff empfangen wird.|  
 |PRIVILEGE|**String**|Der Typ des gewährten Zugriffs.|  

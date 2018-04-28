@@ -1,30 +1,33 @@
 ---
 title: GetBigDecimal-Methode (Int, Int) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerCallableStatement.getBigDecimal (int, int)
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerCallableStatement.getBigDecimal (int, int)
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: d9351b35-7046-4852-a612-72d4c46b2bbb
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 462dbb1dec813f3e0677fe1f66af801a9fab6845
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 7277da376ddc9348ee664b6cd98ca487fb9452e2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="getbigdecimal-method-int-int"></a>getBigDecimal-Methode (int, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,7 +46,7 @@ public java.math.BigDecimal getBigDecimal(int index,
 ```  
   
 #### <a name="parameters"></a>Parameter  
- *Index*  
+ *index*  
   
  Ein **Int** , der die Indexnummer des Parameters angibt.  
   
@@ -61,7 +64,7 @@ public java.math.BigDecimal getBigDecimal(int index,
  Diese GetBigDecimal-Methode wird von der GetBigDecimal-Methode in der java.sql.CallableStatement-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Siehe auch  
- [GetBigDecimal-Methode &#40; SQLServerCallableStatement &#41;](../../../connect/jdbc/reference/getbigdecimal-method-sqlservercallablestatement.md)   
+ [GetBigDecimal-Methode &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getbigdecimal-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement-Elemente](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement-Klasse](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

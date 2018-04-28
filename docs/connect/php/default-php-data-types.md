@@ -2,7 +2,7 @@
 title: Default PHP Data Types | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: php
@@ -16,16 +16,16 @@ helpviewer_keywords:
 - default data types
 - converting data types
 ms.assetid: b66c301d-3d20-45b8-a112-225d8f01c0bd
-caps.latest.revision: ''
+caps.latest.revision: 40
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ac611fe1d08c157dd9f6b4a67298ba318b62053f
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
-ms.translationtype: MT
+ms.openlocfilehash: 7229fe738950549fb6089ba8481658228397afa6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="default-php-data-types"></a>PHP-Standarddatentypen
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -52,14 +52,14 @@ Die folgende Tabelle enthält den SQL Server-Datentyp (der Datentyp, der vom Ser
 |float|Float|8-Bit-Zeichen<sup>1</sup>|  
 |geography|Datenstrom|Binär<sup>3</sup>|  
 |Geometrie|Datenstrom|Binär<sup>3</sup>|  
-|image<sup>5</sup>|Datenstrom<sup>2</sup>|Binär<sup>3</sup>|  
+|Bild<sup>5</sup>|Datenstrom<sup>2</sup>|Binär<sup>3</sup>|  
 |int|Integer|8-Bit-Zeichen<sup>1</sup>|  
 |money|String|8-Bit-Zeichen<sup>1</sup>|  
 |NCHAR|String|8-Bit-Zeichen<sup>1</sup>|  
 |numeric|String|8-Bit-Zeichen<sup>1</sup>|  
 |nvarchar|String|8-Bit-Zeichen<sup>1</sup>|  
 |nvarchar(MAX)|Datenstrom<sup>2</sup>|8-Bit-Zeichen<sup>1</sup>|  
-|ntext<sup>6</sup>|Datenstrom<sup>2</sup>|8-Bit-Zeichen<sup>1</sup>|  
+|Ntext<sup>6</sup>|Datenstrom<sup>2</sup>|8-Bit-Zeichen<sup>1</sup>|  
 |real|Float|8-Bit-Zeichen<sup>1</sup>|  
 |smalldatetime|Datetime|8-Bit-Zeichen<sup>1</sup>|  
 |smallint|Integer|8-Bit-Zeichen<sup>1</sup>|  
@@ -70,7 +70,7 @@ Die folgende Tabelle enthält den SQL Server-Datentyp (der Datentyp, der vom Ser
 |timestamp|String|8-Bit-Zeichen<sup>1</sup>|  
 |tinyint|Integer|8-Bit-Zeichen<sup>1</sup>|  
 |UDT|Datenstrom<sup>2</sup>|Binär<sup>3</sup>|  
-|uniqueidentifier|String<sup>9</sup>|8-Bit-Zeichen<sup>1</sup>|  
+|uniqueidentifier|Zeichenfolge<sup>9</sup>|8-Bit-Zeichen<sup>1</sup>|  
 |varbinary|Datenstrom<sup>2</sup>|Binär<sup>3</sup>|  
 |varbinary(MAX)|Datenstrom<sup>2</sup>|Binär<sup>3</sup>|  
 |varchar|String|8-Bit-Zeichen<sup>1</sup>|  

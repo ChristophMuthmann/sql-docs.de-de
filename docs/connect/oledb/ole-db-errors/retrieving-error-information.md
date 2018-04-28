@@ -3,7 +3,7 @@ title: Abrufen von Fehlerinformationen | Microsoft Docs
 description: Abrufen von Fehlerinformationen, die mithilfe von OLE DB-Treiber für SQL Server
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: ole-db-errors
@@ -22,13 +22,13 @@ helpviewer_keywords:
 - OLE DB error handling, examples
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fc70a5d2e124e34414b8ea9b30e00531b95f1d5d
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: 0bd6631b678009c48bc871d36b9b14c5470dba62
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="retrieving-error-information"></a>Abrufen von Fehlerinformationen
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

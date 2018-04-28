@@ -2,7 +2,7 @@
 title: 'Schritt 4: Herstellen belastbarer SQL mit ADO.NET | Microsoft Docs'
 ms.custom: ''
 ms.date: 08/08/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: ado-net
@@ -18,13 +18,13 @@ ms.assetid: 9b608b0b-6b38-42da-bb83-79df8c170cd7
 caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4c95f481bdd001ff85a63db9ebcc1c4438008447
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: f7ccf61c8c1e440ed8ae9533e61cbbf74d156eb8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="step-4-connect-resiliently-to-sql-with-adonet"></a>Schritt 4: Herstellen Sie belastbarer SQL mit ADO.NET
 
@@ -276,7 +276,7 @@ Es gibt zahlreiche Möglichkeiten können Sie einen vorübergehenden Fehler, um 
 Das Codebeispiel enthält:  
   
 - Eine kleine zweite Klasse **TestSqlException**, mit dem Namen einer Eigenschaft **Anzahl**.  
-- `//throw new TestSqlException(4060);`, die Sie kommentieren können.  
+- `//throw new TestSqlException(4060);` , die Sie kommentieren können.  
   
 Auskommentieren der Throw-Anweisung, und diese erneut kompilieren, nächsten Ausführung des **RetryAdo2.exe** ähnlich der folgenden ausgegeben.  
   

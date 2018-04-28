@@ -3,7 +3,7 @@ title: Lesen einer FILESTREAM-Spalte in eine Datei mithilfe von IBCPSession (OLE
 description: Lesen einer FILESTREAM-Spalte in eine Datei mithilfe von IBCPSession (OLE DB)
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: ole-db-how-to
@@ -15,20 +15,20 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3828927497b98a0c9c24a17e669c492dec60bde1
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: 2d83f3cab28f30588825707db4aed1bb93c7fc3d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="read-a-filestream-column-to-file-using-ibcpsession-ole-db"></a>Lesen einer FILESTREAM-Spalte in eine Datei mithilfe von IBCPSession (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   Dieses Beispiel liest mithilfe der IBCPSession-Schnittstelle eine FILESTREAM-Spalte in eine Datei und schreibt eine Formatdatei.  
   
- Weitere Informationen zur Filestream-Funktion finden Sie unter [FILESTREAM-Unterstützung &#40;OLE DB-&#41;](../../../oledb/ole-db/filestream-support-ole-db.md).  
+ Weitere Informationen zur Filestream-Funktion finden Sie unter [FILESTREAM-Unterstützung](../../../oledb/features/filestream-support.md).  
   
 ## <a name="example"></a>Beispiel  
  Stellen Sie sicher, dass die INCLUDE-Umgebungsvariable das Verzeichnis einschließt, das msoledbsql.h enthält.  

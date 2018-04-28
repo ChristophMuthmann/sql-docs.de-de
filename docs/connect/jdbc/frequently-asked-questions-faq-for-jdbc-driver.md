@@ -1,33 +1,33 @@
 ---
-title: "Häufig gestellte Fragen (FAQ) zu JDBC-Treiber | Microsoft Docs"
-ms.custom: 
+title: Häufig gestellte Fragen (FAQ) zu JDBC-Treiber | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: cbc0e397-ecf2-4494-87b2-a492609bceae
-caps.latest.revision: 
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9e2ca76d6aa4703349ea3232392dee17ace44643
-ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
-ms.translationtype: MT
+ms.openlocfilehash: b2872e0674a8195b2460c229a1244cc399a936b5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="frequently-asked-questions-faq-for-jdbc-driver"></a>Häufig gestellte Fragen (FAQ) zu JDBC-Treiber
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  Dieser Artikel enthält Antworten auf häufig gestellte Fragen zu Microsoft JDBC Driver for SQL Server.  
+  Dieser Artikel enthält Antworten auf häufig gestellte Fragen zum Microsoft JDBC-Treiber für SQL Server.  
   
 ## <a name="frequently-asked-questions"></a>Häufig gestellte Fragen  
 **Wie kann ich Verbessern der JDBC-Treiber?**  
@@ -39,7 +39,7 @@ Der JDBC-Treiber ist Open Source- und der Quellcode befinden sich auf [GitHub](h
  **Was sollte ich noch wissen meinen Treiber aktualisiere?**  
  Der Microsoft JDBC Driver 6.4 unterstützt der JDBC 4.1, 4.2 und 4.3 (teilweise)-Spezifikationen und enthält drei JAR-Klassenbibliotheken im Installationspaket wie folgt:  
   
-|JAR|JDBC-Spezifikation|JDK Version|  
+|JAR|JDBC-Spezifikation|JDK-Version|  
 |-|-|-|  
 |mssql-jdbc-6.4.0.jre9.jar|JDBC 4.3 (teilweise), 4.2 und 4.1|JDK 9.0|  
 |mssql-jdbc-6.4.0.jre8.jar|JDBC 4.2 und 4.1|JDK 8.0|  
@@ -47,21 +47,21 @@ Der JDBC-Treiber ist Open Source- und der Quellcode befinden sich auf [GitHub](h
 
  Die Microsoft JDBC Driver 6.2 unterstützt die JDBC 4.0, 4.1 und 4.2-Spezifikation und enthält zwei JAR-Klassenbibliotheken in das Installationspaket wie folgt:  
   
-|JAR|JDBC-Spezifikation|JDK Version|  
+|JAR|JDBC-Spezifikation|JDK-Version|  
 |-|-|-|  
 |mssql-jdbc-6.2.1.jre8.jar|JDBC 4.2, 4.1 und 4.0|JDK 8.0|  
 |mssql-jdbc-6.2.1.jre7.jar|JDBC 4.1 und 4.0|JDK 7.0|  
  
  Microsoft JDBC Driver 6.0 und 4.2 für SQL Server unterstützt JDBC 4.0, 4.1 und 4.2-Spezifikationen, und wie folgt zwei JAR-Klassenbibliotheken in das Installationspaket einbeziehen:  
   
-|JAR|JDBC-Spezifikation|JDK Version|   
+|JAR|JDBC-Spezifikation|JDK-Version|   
 |-|-|-|  
 |sqljdbc42.jar|JDBC 4.2, 4.1 und 4.0|JDK 8.0|  
 |sqljdbc41.jar|JDBC 4.1 und 4.0|JDK 7.0|  
   
  Der Microsoft JDBC Driver 4.1 für SQL Server unterstützt die JDBC 4.0-Spezifikation und enthält eine JAR-Klassenbibliothek im Installationspaket wie folgt:  
   
-|JAR|JDBC-Spezifikation|JDK Version|    
+|JAR|JDBC-Spezifikation|JDK-Version|    
 |-|-|-|  
 |sqljdbc41.jar|JDBC 4.0|JDK 7.0 and 6.0|
   
@@ -69,7 +69,7 @@ Der JDBC-Treiber ist Open Source- und der Quellcode befinden sich auf [GitHub](h
  Im Allgemeinen wird der Treiber abwärtskompatibel, damit Sie nicht benötigen, um Ihre vorhandenen Anwendungen zu ändern, bei einer treiberaktualisierung ausgelegt. Wenn eine neue Treiberversion eine unterbrechende Änderung, führt der [Anmerkungen zu dieser Version für den JDBC-Treiber](../../connect/jdbc/release-notes-for-the-jdbc-driver.md) Abschnitt enthält detaillierte Informationen zu dieser Änderung und die Auswirkungen auf vorhandene Anwendungen. Darüber hinaus finden Sie in den Versionsanmerkungen des Treibers eine Liste bekannter Probleme und der in diesem Release behobenen Fehler.  
   
  **Wie viel kostet der Treiber?**  
- Microsoft JDBC Driver for SQL steht Ihnen kostenlos zur Verfügung.  
+ Der Microsoft JDBC-Treiber für SQL steht Ihnen kostenlos zur Verfügung.  
   
  **Kann ich den Treiber Weitervertreiben?** Die JDBC-Treiber 4.1, 4.2, 6.0, 6.2 und 6.4 sind verteilbar. Überprüfen Sie die Klausel "Verteilbarer Code" in die Lizenzverträge angezeigt. 
    
@@ -114,7 +114,7 @@ Der Treiber wurde mit allen wichtigen Anwendungsserver getestet, wie z. B. IBM W
  Diese Treiberversionen stehen nicht zum Download zur Verfügung, da sie nicht mehr unterstützt werden. Wir werden die Java-Unterstützung für Clientkonnektivität kontinuierlich verbessern. Daher wird dringend empfohlen, die Sie mit der neuesten Version von Microsoft JDBC Driver arbeiten.  
   
 **Ich verwende JRE 1.4. Welcher Treiber ist mit JRE 1.4 kompatibel?**  
- Kunden, die SAP-Produkte verwenden und die Unterstützung für JRE 14. benötigen, können [SAP Service Marketplace](http://service.sap.com/) um den Treiber Microsoft JDBC Driver 1.2 zu erhalten.  
+ Kunden, die SAP-Produkte verwenden und die Unterstützung für JRE 14. benötigen, können [SAP Service Marketplace](http://service.sap.com/) um den Microsoft JDBC-Treiber 1.2 zu erhalten.  
   
 **Kann der Treiber mit FIPS-validierten Algorithmen kommunizieren?**  
  Der Microsoft JDBC-Treiber enthält keine kryptografischen Algorithmen. Wenn ein Kunde nutzt, Betriebssystem, Anwendung und JVM-Algorithmen, die akzeptable von Federal Information Processing Standards (FIPS) bewertet werden und den Treiber konfiguriert, um diese Algorithmen verwenden, verwendet der Treiber nur die festgelegten Algorithmen für die Kommunikation.  

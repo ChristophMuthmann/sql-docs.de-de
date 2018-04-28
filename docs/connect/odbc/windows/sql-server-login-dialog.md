@@ -2,7 +2,7 @@
 title: Dialogfeld "SQL Server-Anmeldung" (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/21/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -16,13 +16,13 @@ ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 caps.latest.revision: 22
 author: MightyPen
 ms.author: v-jizho2
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 367559719da374be358f93821572df4365a278d7
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
-ms.translationtype: MT
+ms.openlocfilehash: f0269dc584bbc2b6b95deee6de85a3c52d7a731f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-server-login-dialog-box-odbc"></a>Dialogfeld „SQL Server-Anmeldung“ (ODBC)
 

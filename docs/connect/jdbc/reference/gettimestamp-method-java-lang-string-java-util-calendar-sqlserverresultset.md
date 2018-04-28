@@ -1,30 +1,33 @@
 ---
 title: GetTimestamp-Methode (java.lang.String, java.util.Calendar) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerResultSet.getTimestamp (java.lang.String, java.util.Calendar)
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerResultSet.getTimestamp (java.lang.String, java.util.Calendar)
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 44474000-8951-49ee-93a5-c8cb879eaf55
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 62466b3b77d2ce85fcc9573804b1cd8b7347280e
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: ac6b4f68cd0da3e3dadc1ee6c768fdc518176c11
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="gettimestamp-method-javalangstring-javautilcalendar-sqlserverresultset"></a>GetTimestamp-Methode (java.lang.String, java.util.Calendar) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,7 +43,7 @@ public java.sql.Timestamp getTimestamp(java.lang.String colName,
 ```  
   
 #### <a name="parameters"></a>Parameter  
- *colName*  
+ *ColName*  
   
  Ein **Zeichenfolge** , die den Namen der Spalte enthält.  
   
@@ -60,7 +63,7 @@ public java.sql.Timestamp getTimestamp(java.lang.String colName,
  Diese Methode gibt nur Werte aus [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] DateTime- und Smalldatetime-Spalten.  
   
 ## <a name="see-also"></a>Siehe auch  
- [GetTimestamp-Methode &#40; SQLServerResultSet &#41;](../../../connect/jdbc/reference/gettimestamp-method-sqlserverresultset.md)   
+ [GetTimestamp-Methode &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/gettimestamp-method-sqlserverresultset.md)   
  [SQLServerResultSet-Elemente](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet-Klasse](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

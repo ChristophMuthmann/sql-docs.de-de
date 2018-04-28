@@ -3,7 +3,7 @@ title: Datum und Uhrzeit-Verbesserungen (OLE DB) | Microsoft Docs
 description: Datum und Uhrzeit-Verbesserungen (OLE DB)
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: ole-db-date-time
@@ -18,13 +18,13 @@ helpviewer_keywords:
 - OLE DB, date/time improvements
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b237922b02d8f037f0116452a378c31774a149f1
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: 56a6458e7923e1ae2365e09ae382179981470ab8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="date-and-time-improvements-ole-db"></a>Datum und Uhrzeit-Verbesserungen (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,7 +37,7 @@ ms.lasthandoff: 04/06/2018
  [Datentypunterstützung für OLE DB-Datum- und Uhrzeit-Verbesserungen](../../oledb/ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md)  
  Enthält Informationen zu OLE DB (OLE DB-Treiber für SQL Server) Datentypen, unterstützen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Datums-und Uhrzeitdatentypen.  
   
- [Metadata &#40;OLE DB&#41;](../../oledb/ole-db-date-time/metadata-parameter-and-rowset.md)  
+ [Metadaten &#40;OLE DB&#41;](../../oledb/ole-db-date-time/metadata-parameter-and-rowset.md)  
  Enthält Informationen über die DBBINDING-Struktur **ICommandWithParameters:: GetParameterInfo**, **ICommandWithParameters:: SetParameterInfo**, **IColumnsRowset:: GetColumnsRowset**, und Exchange Activesync**ColumnsInfo::GetColumnInfo**. Stellt auch Informationen über Updates auf OLE DB-Schemarowsets bereit.  
   
  [Bindungen und Konvertierungen &#40;OLE DB&#41;](../../oledb/ole-db-date-time/conversions-ole-db.md)  
@@ -54,6 +54,6 @@ ms.lasthandoff: 04/06/2018
  
   
 ## <a name="see-also"></a>Siehe auch  
- [OLE DB-Treiber für SQLServer &#40;OLE DB&#41;](../../oledb/ole-db/oledb-driver-for-sql-server-ole-db.md)  
+ [OLE DB-Treiber für SQL Server-Programmierung](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)  
   
   

@@ -1,30 +1,33 @@
 ---
 title: RowDeleted-Methode (SQLServerResultSet) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerResultSet.rowDeleted
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerResultSet.rowDeleted
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 9c6db315-e614-4604-b020-41af6a214cc1
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1e4615318e2ca36d7524d25b0c5fcbf003711ee7
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 96a38e82a5a5d7435f1b5ee256189855d6ab7a7c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="rowdeleted-method-sqlserverresultset"></a>RowDeleted-Methode (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -50,7 +53,7 @@ public boolean rowDeleted()
  Eine gelöschte Zeile hinterlässt in einem Resultset ggf. eine sichtbare Lücke. Diese Methode kann verwendet werden, um Löcher in einem Resultset zu ermitteln. Der zurückgegebene Wert hängt davon ab, ob dies [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) -Objekt löschungen kann ermittelt werden.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]Gelöschte Zeilen für alle aktualisierbaren Cursortypen erkennt, obwohl die Erkennung für Vorwärtscursor und dynamische Cursor flüchtig ist.  
+>  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Gelöschte Zeilen für alle aktualisierbaren Cursortypen erkennt, obwohl die Erkennung für Vorwärtscursor und dynamische Cursor flüchtig ist.  
   
 ## <a name="see-also"></a>Siehe auch  
  [SQLServerResultSet-Elemente](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

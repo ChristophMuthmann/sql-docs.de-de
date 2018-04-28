@@ -3,7 +3,7 @@ title: SQL Server-Meldungsergebnisse | Microsoft Docs
 description: SQL Server-Meldungsergebnisse
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: ole-db-errors
@@ -19,13 +19,13 @@ helpviewer_keywords:
 - OLE DB error handling, SQL Server message results
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 08c47b78d764e62d3e13f55b8a9aa1081d234782
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: 586926250d1234c15cc77511800105b2c58f1e60
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-server-message-results"></a>SQL Server-Meldungsergebnisse
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

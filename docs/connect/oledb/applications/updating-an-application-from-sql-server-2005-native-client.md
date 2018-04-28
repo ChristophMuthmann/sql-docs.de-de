@@ -3,7 +3,7 @@ title: Aktualisieren einer Anwendung von SQL Server 2005 Native Client | Microso
 description: Aktualisieren einer Anwendung von SQL Server 2005 Native Client
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: oledb|applications
@@ -17,16 +17,18 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, updating applications
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e583abd0a5d84d4842a441fcb8093bbfcf6b9b26
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: 8c5548467122f2669fe049b39e6bc9800e2160b7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="updating-an-application-from-sql-server-2005-native-client"></a>Aktualisieren einer Anwendung von SQL Server 2005 Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   In diesem Artikel werden die Änderungen, die in OLE DB-Treiber für SQL Server seit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
 
@@ -39,17 +41,14 @@ ms.lasthandoff: 04/06/2018
 |OLE DB füllt nur Zahlen bis zur definierten Anzahl von Dezimalstellen auf.|Für Konvertierungen, in dem konvertierte Daten an den Server gesendet werden, füllt der OLE DB-Treiber für SQL Server nachfolgende Nullen in Daten nur bis zu maximal **"DateTime"** Werte. In SQL Server Native Client 9.0 wurden Zahlen bis zu 9 Stellen aufgefüllt.|  
 |Überprüfen Sie DBTYPE_DBTIMESTAMP für ICommandWithParameter::SetParameterInfo.|OLE DB-Treiber für SQL Server implementiert die OLE DB-Anforderung *bScale* in ICommandWithParameter::SetParameterInfo, um die Genauigkeit der Sekundenbruchteile für DBTYPE_DBTIMESTAMP festgelegt werden.|  
 |Die **Sp_columns** gibt die gespeicherte Prozedur **"NO"** anstelle von **"NO"** für die Spalte IS_NULLABLE.|In OLE DB-Treiber für SQL Server **Sp_columns** gibt die gespeicherte Prozedur **"NO"** anstelle von **"NO"** für eine IS_NULLABLE-Spalte.|  
-|SQLSetDescRec und SQLBindParameter SQLBindCol führen jetzt überprüft.|Vor [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 10.0 festlegen SQL_DESC_DATA_PTR nicht dazu führen, dass eine konsistenzprüfung für einen Deskriptortyp in SQLSetDescRec, SQLBindParameter oder SQLBindCol.|  
-|SQLCopyDesc ist jetzt Deskriptor überprüft.|Vor [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 10.0 SQLCopyDesc keine konsistenzprüfung, wenn das SQL_DESC_DATA_PTR-Feld auf einen bestimmten Datensatz festgelegt wurde.|  
-|SQLGetDescRec überprüft die deskriptorkonsistenz nicht mehr.|Vor [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 10.0 ausgeführt SQLGetDescRec eine konsistenzprüfung an, wenn das SQL_DESC_DATA_PTR-Feld festgelegt wurde. Die ODBC-Spezifikation erfordert dies nicht, und in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 10.0 ([!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]) sowie in höheren Versionen wird diese Konsistenzprüfung nicht mehr ausgeführt.|  
 |Es wird ein anderer Fehler zurückgegeben, wenn das Datum außerhalb des zulässigen Bereichs liegt.|Für die **"DateTime"** Typ, eine andere Fehlernummer von zurückgegeben werden, OLE DB-Treiber für SQL Server für einen Termin außerhalb des Bereichs als in früheren Versionen zurückgegeben wurde.<br /><br /> Insbesondere [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 9.0 gab 22007 für alle außerhalb des gültigen Bereichs Jahreswerte in zeichenfolgenkonvertierungen **"DateTime"**, und der OLE DB-Treiber für SQL Server die Fehlernummer 22008 zurück, wenn das Datum innerhalb des Bereichs von unterstützt**datetime2** aber außerhalb des Bereichs von unterstützten **"DateTime"** oder **Smalldatetime**.|  
 |**"DateTime"** Wert Sekundenbruchteile abgeschnitten und nicht round If Rundung den Tag ändern wird.|Vor [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 10.0, das Clientverhalten für **"DateTime"** Werte, die an den Server gesendet wird, diese gerundet wird, auf das nächste 1/300stel einer Sekunde. In OLE DB-Treiber für SQL Server bewirkt, dass dieses Szenario ein Abschneiden von Sekundenbruchteilen Wenn Rundung den Tag ändert.|  
 |Mögliche Trunction der Sekunden für **"DateTime"** Wert.|Eine Anwendung, die mit OLE DB-Treiber für SQL Server die Herstellung der erstellten eine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 2005-Server herstellt, schneidet Sekunden und Sekundenbruchteile für einen Zeitteil der Daten an den Server gesendet werden, wenn Sie an eine Datetime-Spalte mit einem Typbezeichner DBTYPE_DBTIMESTAMP (Binden OLE DB) oder SQL_TIMESTAMP (ODBC) und einer Skala von 0.<br /><br /> Beispiel:<br /><br /> Eingabedaten: 1994-08-21 21:21:36.000<br /><br /> Einfügedaten: 1994-08-21 21:21:00.000|  
 |Die OLE DB-Datenkonvertierung von DBTYPE_DBTIME in DBTYPE_DATE kann keine Änderung des Tages mehr bewirken.|In früheren Versionen als [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 10.0 bewirkte der OLE DB-Konvertierungscode eine Änderung des Tages, wenn der Uhrzeitanteil eines DBTYPE_DATE-Werts innerhalb einer halben Sekunde vor Mitternacht lag. In OLE DB-Treiber für SQL Server, dem Tag wird nicht geändert (Sekundenbruchteile werden abgeschnitten und nicht gerundet).|  
-|IBCPSession::BCColFmt Konvertierung ändert.|Bei Verwendung von IBCPSession::BCOColFmt SQLDATETIME oder SQLDATETIME in einen Zeichenfolgen-Datentyp zu konvertieren, wird im OLE DB-Treiber für SQL Server ein Dezimalstellenwert exportiert. Z. B. wenn der Typ SQLDATETIME in den Typ SQLNVARCHARMAX Versionen vor [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 10.0 zurückgegeben<br /> 1989-02-01 00:00:00.<br />OLE DB-Treiber für SQL Server zurückgegeben. <br />1989-02-01 00:00:00.0000000.|  
+|IBCPSession::BCColFmt Konvertierung ändert.|Bei Verwendung von IBCPSession::BCOColFmt SQLDATETIME oder SQLDATETIME in einen Zeichenfolgen-Datentyp zu konvertieren, wird im OLE DB-Treiber für SQL Server ein Dezimalstellenwert exportiert. Z. B. wenn der Typ SQLDATETIME in den Typ SQLNVARCHARMAX Versionen vor [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 10.0 zurückgegeben<br /> 1989-02-01 00:00:00.<br />OLE DB-Treiber für SQL Server zurückgegeben. <br />1989-02-01-00:00:00.0000000.|  
 |Benutzerdefinierte Anwendungen, die die BCP API verwenden, können jetzt Warnungen anzeigen.|Die BCP API erzeugt jetzt für alle Typen Warnmeldungen, wenn die Datenlänge die angegebene Länge eines Felds überschreitet. Früher wurde diese Warnung nur für Zeichentypen ausgegeben, aber nicht für alle Typen.|  
 |Einfügen einer leeren Zeichenfolge in eine **Sql_variant** gebunden, wie ein Datum/Uhrzeit-Typ einen Fehler generiert.|In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 9.0, Einfügen von eine leere Zeichenfolge in eine **Sql_variant** gebunden, wie ein Datum/Uhrzeit-Typ kein Fehler generiert. OLE DB-Treiber für SQL Server generiert in dieser Situation ordnungsgemäß einen Fehler auf.|  
-|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] kann andere Ergebnisse zurückgeben, wenn ein Trigger ausgeführt wird.|Eingeführten Änderungen [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] kann dazu führen, dass eine Anwendung andere Ergebnisse zurückgegeben, die von einer Anweisung, die aufgrund ein Triggers ausgeführt werden, wenn **NOCOUNT OFF** gültig war. In dieser Situation kann die Anwendung einen Fehler generieren. Um diesen Fehler zu beheben, legen **NOCOUNT ON** im Trigger, oder rufen Sie SQLMoreResults, um zum nächsten Ergebnis zu wechseln.|  
+|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] kann andere Ergebnisse zurückgeben, wenn ein Trigger ausgeführt wird.|Eingeführten Änderungen [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] kann dazu führen, dass eine Anwendung andere Ergebnisse zurückgegeben, die von einer Anweisung, die aufgrund ein Triggers ausgeführt werden, wenn **NOCOUNT OFF** gültig war. In dieser Situation kann die Anwendung einen Fehler generieren. Um diesen Fehler zu beheben, legen **NOCOUNT ON** im Trigger.|  
 
 ## <a name="see-also"></a>Siehe auch   
- [OLE DB-Treiber für SQL Server-Programmierung](../../oledb/oledb-driver-for-sql-server-programming.md)
+ [OLE DB-Treiber für SQL-Server](../../oledb/oledb-driver-for-sql-server.md)

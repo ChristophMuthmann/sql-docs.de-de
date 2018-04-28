@@ -3,7 +3,7 @@ title: Systemanforderungen für OLE DB-Treiber für SQLServer | Microsoft Docs
 description: Anforderungen für OLE DB-Treiber für SQLServer
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: oledb
@@ -20,16 +20,18 @@ helpviewer_keywords:
 - MSOLEDBSQL, system requirements
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5169c841784230d1ad4d99472dd636a490c750ce
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: 6c465001d1e09ac229b0dc8cfd16124df3143e3d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="system-requirements-for-ole-db-driver-for-sql-server"></a>Systemanforderungen für OLE DB-Treiber für SQLServer
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../includes/driver_oledb_download.md)]
 
   Um Datenzugriffsfunktionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], wie z. B. MARS, zu verwenden, muss die folgende Software installiert sein:  
 
@@ -69,7 +71,7 @@ ms.lasthandoff: 04/06/2018
 
  IDBInfo:: GetKeywords gibt stets eine Schlüsselwortliste, die die Serverversion für die Verbindung entspricht und ist nicht betroffen von **DataTypeCompatibility**.  
 
-|Datentyp|OLE DB-Treiber für SQLServer<br /><br />SQL Server 2005|SQL Server Native Client 11.0<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|OLE DB-Treiber für SQLServer|Windows Data Access Components, MDAC und<br /><br /> OLE DB-Treiber für SQL Server OLE DB-Anwendungen mit DataTypeCompatibility = 80|  
+|Datentyp|SQL Server Native Client<br /><br />SQL Server 2005|SQL Server Native Client 11.0<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|OLE DB-Treiber für SQLServer|Windows Data Access Components, MDAC und<br /><br /> OLE DB-Treiber für SQL Server OLE DB-Anwendungen mit DataTypeCompatibility = 80|  
 |---------------|--------------------------------------------------|-------------------------------------------------------------|-------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|  
 |CLR-UDT (\<= 8 Kb)|udt|Udt|Udt|Varbinary|  
 |varbinary(max)|varbinary|varbinary|varbinary|image|  
@@ -83,5 +85,5 @@ ms.lasthandoff: 04/06/2018
 |Uhrzeit|Uhrzeit|varchar|varchar|Varchar|  
 
 ## <a name="see-also"></a>Siehe auch  
- [OLE DB-Treiber für SQL Server-Programmierung](../oledb/oledb-driver-for-sql-server-programming.md)   
+ [OLE DB-Treiber für SQLServer](../oledb/oledb-driver-for-sql-server.md)   
  [Installation des OLE DB-Treibers für SQL Server](../oledb/applications/installing-oledb-driver-for-sql-server.md)  

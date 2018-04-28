@@ -3,7 +3,7 @@ title: 'Issasynchstatus:: Waitforasynchcompletion (OLE DB) | Microsoft Docs'
 description: ISSAsynchStatus::WaitForAsynchCompletion (OLE DB)
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: ole-db-interfaces
@@ -20,13 +20,13 @@ helpviewer_keywords:
 - WaitForAsynchCompletion method
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6284e27540f13ad69ffb14a220bd54a7bad178cc
-ms.sourcegitcommit: 9f4330a4b067deea396b8567747a6771f35e6eee
-ms.translationtype: MT
+ms.openlocfilehash: 0dfdb088a39d294d87e3c503c372c426a3ca22f2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="issasynchstatuswaitforasynchcompletion-ole-db"></a>ISSAsynchStatus::WaitForAsynchCompletion (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -76,6 +76,6 @@ HRESULT WaitForAsynchCompletion(
   
 ## <a name="see-also"></a>Siehe auch  
  [Ausführen von asynchronen Vorgängen](../../oledb/features/performing-asynchronous-operations.md)   
- [ISSAsynchStatus &#40; OLE DB &#41;](../../oledb/ole-db-interfaces/issasynchstatus-ole-db.md)  
+ [ISSAsynchStatus & #40; OLE DB & #41;](../../oledb/ole-db-interfaces/issasynchstatus-ole-db.md)  
   
   

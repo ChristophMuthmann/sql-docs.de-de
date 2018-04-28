@@ -2,7 +2,7 @@
 title: Behandeln von Fehlern und Warnungen | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: php
@@ -13,16 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 0afea5d5-8797-4a85-b1b4-8cde1f3888a3
-caps.latest.revision: ''
+caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5fdc9a0691cdb237da7a69f8aee4ba507547fd78
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
-ms.translationtype: MT
+ms.openlocfilehash: e2ef204c923d59fe2213df23010283b27677bb71
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="handling-errors-and-warnings"></a>Behandeln von Fehlern und Warnungen
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

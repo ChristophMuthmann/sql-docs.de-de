@@ -1,27 +1,28 @@
 ---
-title: "Unterstützung für nationale Zeichensätze | Microsoft Docs"
-ms.custom: 
+title: Unterstützung für nationale Zeichensätze | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 4fceacfd-df4f-40cd-b7a2-5e5e58a5979f
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9be09b40e72a19a498913bf824e73b52db6596a2
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: eb6c55580a3162de11db16f36ca03b4f0289d29b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="national-character-set-support"></a>Unterstützung für nationale Zeichensätze
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

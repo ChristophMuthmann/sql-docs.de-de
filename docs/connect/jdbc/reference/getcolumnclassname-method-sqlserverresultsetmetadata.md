@@ -1,30 +1,33 @@
 ---
 title: GetColumnClassName-Methode (SQLServerResultSetMetaData) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerResultSetMetaData.getColumnClassName
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerResultSetMetaData.getColumnClassName
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 2c118790-5dd2-4b10-93b6-7f065ee324ce
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2e398d757b7c967713f4fb4f418ac397e5f09d21
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 11e09bd404348f7f670f339238a7bf36a75cdf4a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="getcolumnclassname-method-sqlserverresultsetmetadata"></a>getColumnClassName-Methode (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +42,7 @@ public java.lang.String getColumnClassName(int column)
 ```  
   
 #### <a name="parameters"></a>Parameter  
- *Spalte*  
+ *column*  
   
  Ein **Int** , der den Spaltenindex angibt.  
   

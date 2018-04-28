@@ -1,5 +1,5 @@
 ---
-title: 'Schritt 2: Erstellen einer SQL-Datenbank für die pymssql-Python-Entwicklung'
+title: 'Schritt 2: Erstellen eine SQL-Datenbank für Pymssql Python-Entwicklung | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,11 +20,11 @@ manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 5a49c9ed0f979ebf7005a43d55ecbabd92ae76b4
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 04/16/2018
 ---
-# <a name="step-2-create-a-sql-database-for-pymssql-python-development"></a>Schritt 2: Erstellen einer SQL-Datenbank für die pymssql-Python-Entwicklung
+# <a name="step-2-create-a-sql-database-for-pymssql-python-development"></a>Schritt 2: Erstellen einer SQL-Datenbank für Pymssql Python-Entwicklung
 [!INCLUDE[Driver_Python_Download](../../../includes/driver_python_download.md)]
 
 [!INCLUDE[CreateDatabase](../../../includes/createdatabase.md)]

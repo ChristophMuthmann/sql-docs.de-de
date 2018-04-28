@@ -1,28 +1,28 @@
 ---
-title: "Versionshinweise für den JDBC-Treiber | Microsoft Docs"
-ms.custom: 
+title: Versionshinweise für den JDBC-Treiber | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 074f211e-984a-4b76-bb15-ee36f5946f12
-caps.latest.revision: 
+caps.latest.revision: 206
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 49710c98aad4af9373dd35ebf50960f32d999c10
-ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
-ms.translationtype: MT
+ms.openlocfilehash: d5377db31ae77ea39ad5d73e26453182a7e6b09c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="release-notes-for-the-jdbc-driver"></a>Anmerkungen zu dieser Version für den JDBC-Treiber
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -62,7 +62,7 @@ Der JDBC-Treiber unterstützt jetzt Sql_variant-Datentypen mit SQL Server verwen
     ```
     java.lang.String cannot be cast to java.sql.Timestamp
     ```
-    Workaround: use "getString()" or "getObject()" methods instead.
+    Problemumgehung: Verwenden Sie stattdessen "getString()" oder "getObject()"-Methode.
 
 2. TVP verwenden mit SQL-Varianten, für null-Werte
 
@@ -144,7 +144,7 @@ System.out.println("Driver version: " + conn.getMetaData().getDriverVersion());
   
  Der Treiber unterstützt jetzt transparente Verbindungen mit AlwaysOn-Verfügbarkeitsgruppen. Der Treiber ermittelt die aktuellen AlwaysOn-Topologie Ihrer Serverinfrastruktur schnell und transparent eine Verbindung mit dem derzeit aktiven Server her.  
   
-## <a name="updates-in-microsoft-jdbc-driver-42-for-sql-server-and-later"></a>Updates in Microsoft JDBC Driver 4.2 für SQL Server und höheren Versionen  
+## <a name="updates-in-microsoft-jdbc-driver-42-for-sql-server-and-later"></a>Updates im Microsoft JDBC-Treiber 4.2 für SQL Server und höheren Versionen  
 Der Microsoft JDBC Driver 4.2 für SQL Server ist vollständig kompatibel mit den JDBC-Spezifikationen 4.1 und 4.2. Der Support im 4.2 Paket enthaltenen heißen gemäß deren Einhaltung der JDBC-API-Version. Beispielsweise ist die Datei "sqljdbc42.jar" aus dem 4.2-Paket JDBC-API 4.2-kompatibel. Ebenso ist die Datei "sqljdbc41.jar" JDBC-API 4.1 einhalten.
 
 Um sicherzustellen, dass Sie die Rechte "sqljdbc42.jar" oder "sqljdbc41.jar" haben, führen Sie die folgenden Codezeilen. Wenn die Ausgabe "Driver, Version: 4.2.6420.100", Sie verfügen über die JDBC Driver 4.2-Paket.
@@ -172,7 +172,7 @@ System.out.println("Driver version: " + conn.getMetaData().getDriverVersion());
   
  Es wurde eine neue Verbindungseigenschaft hinzugefügt, um mehr Flexibilität für Kerberos-Verbindungen zu ermöglichen. Einzelheiten finden Sie in [mithilfe von integrierten Kerberos-Authentifizierung zum Herstellen einer Verbindung mit SQL Server](../../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md).  
   
-## <a name="updates-in-microsoft-jdbc-driver-41-for-sql-server-and-later"></a>Updates in Microsoft JDBC Driver 4.1 für SQL Server und höheren Versionen  
+## <a name="updates-in-microsoft-jdbc-driver-41-for-sql-server-and-later"></a>Updates im Microsoft JDBC-Treiber 4.1 für SQL Server und höheren Versionen  
  **Unterstützung für JDK 7**  
   
  Unterstützung für Java Development Kit (JDK), Version 7.0, zusätzlich zu JDK 6.0 und 5.0.  

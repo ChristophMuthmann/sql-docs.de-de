@@ -20,7 +20,7 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 2bea66627882dc61cce0b82ab69788a3c4178cf5
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 04/16/2018
 ---
@@ -37,12 +37,12 @@ string PDOStatement::fetchColumn ([ $column_number ] );
 ```  
   
 #### <a name="parameters"></a>Parameter  
-$$: Eine optionale ganze Zahl, die die nullbasierte Spaltennummer angibt. Der Standardwert ist 0 (die erste Spalte in der Zeile).  
+$*Zeile/relative*: eine optionale ganze Zahl, die die nullbasierte Spaltennummer angibt. Der Standardwert ist 0 (die erste Spalte in der Zeile).  
   
 ## <a name="return-value"></a>Rückgabewert  
 Eine Spalte oder „false“, wenn keine weiteren Zeilen vorhanden sind.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Hinweise  
 Unterstützung für PDO wurde in Version 2.0 von [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]hinzugefügt.  
   
 ## <a name="example"></a>Beispiel  
@@ -60,7 +60,7 @@ Unterstützung für PDO wurde in Version 2.0 von [!INCLUDE[ssDriverPHP](../../in
 ?>  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Siehe auch  
 [PDOStatement-Klasse](../../connect/php/pdostatement-class.md)
 
 [PDO](http://php.net/manual/book.pdo.php)  

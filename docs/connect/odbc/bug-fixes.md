@@ -22,7 +22,7 @@ manager: kenvh
 ms.workload: Active
 ms.openlocfilehash: 58da69ed6c4b7b046f8d1bc1ddf4e23b71b99a29
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 04/16/2018
 ---

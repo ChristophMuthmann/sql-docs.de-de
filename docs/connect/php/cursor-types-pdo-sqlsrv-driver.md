@@ -1,27 +1,28 @@
 ---
 title: Cursortypen (PDO_SQLSRV-Treiber) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 49ea6a6e-78d4-40f8-85eb-180b527f0537
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6d9757631940208f0f3ded1fe90eec8fbfd1b061
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: fef4910ae38fba0d101e95e9f7ad0c73d4541b72
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="cursor-types-pdosqlsrv-driver"></a>Cursortypen (PDO_SQLSRV-Treiber)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -35,9 +36,9 @@ Vor, Version 3.0 der [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], 
   
 Sie können den Typ des serverseitigen Cursor angeben, mithilfe von PDO:: Prepare oder pdostatement:: setAttribute entweder Cursortyp auswählen:  
   
--   PDO:: ATTR_CURSOR = > PDO:: CURSOR_FWDONLY  
+-   PDO:: ATTR_CURSOR = &GT; PDO:: CURSOR_FWDONLY  
   
--   PDO:: ATTR_CURSOR = > PDO:: CURSOR_SCROLL  
+-   PDO:: ATTR_CURSOR = &GT; PDO:: CURSOR_SCROLL  
   
 Sie können einen Keyset- oder dynamischen Cursor anfordern, durch Angeben von PDO:: attr_cursor = > PDO:: cursor_scroll, und übergeben Sie den entsprechenden Wert zu sqlsrv_attr_cursor_scroll_type. Mögliche Werte, die an sqlsrv_attr_cursor_scroll_type übergeben werden:  
   

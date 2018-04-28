@@ -2,7 +2,7 @@
 title: JDBC Driver-Unterstützung für hohe Verfügbarkeit, Wiederherstellung im Notfall | Microsoft Docs
 ms.custom: ''
 ms.date: 04/04/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: jdbc
@@ -16,13 +16,13 @@ ms.assetid: 62de4be6-b027-427d-a7e5-352960e42877
 caps.latest.revision: 40
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1e41503e9b319d1e4372d93d835c4791563fd2da
-ms.sourcegitcommit: 094c46e7fa6de44735ed0040c65a40ec3d951b75
-ms.translationtype: MT
+ms.openlocfilehash: 5ad954bb250765d29dd6600ca98e4a01844f1831
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="jdbc-driver-support-for-high-availability-disaster-recovery"></a>JDBC Driver-Unterstützung für hohe Verfügbarkeit, Notfallwiederherstellung
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

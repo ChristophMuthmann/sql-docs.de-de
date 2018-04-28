@@ -1,30 +1,33 @@
 ---
 title: Execute-Methode (java.lang.String, int[]) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 02/07/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerStatement.execute (javal.lang.String.int[])
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerStatement.execute (javal.lang.String.int[])
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: dc73d1c3-e756-43af-b1fc-ac438cbd0965
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3fa9cc8796aeb415a58b8c4d65c2f346f57febb0
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 86e02aa3ec56deffefe81ad5ebe4d282ecd10d53
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="execute-method-javalangstring-int"></a>execute-Methode (java.lang.String, int[])
 
@@ -39,7 +42,7 @@ public final boolean execute(
 ```
 
 #### <a name="parameters"></a>Parameter
-*SQL*
+*sql*
 
 Ein **Zeichenfolge** , die eine SQL-Anweisung enthält.
 
@@ -58,7 +61,7 @@ Diese Execute-Methode wird von der Execute-Methode in der java.sql.Statement-Sch
 
 ## <a name="see-also"></a>Siehe auch
 
-[Execute-Methode &#40; SQLServerStatement &#41;](./execute-method-sqlserverstatement.md)
+[Execute-Methode &#40;SQLServerStatement&#41;](./execute-method-sqlserverstatement.md)
 
 [SQLServerStatement-Elemente](./sqlserverstatement-members.md)
 

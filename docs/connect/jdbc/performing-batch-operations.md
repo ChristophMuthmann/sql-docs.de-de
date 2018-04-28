@@ -1,27 +1,28 @@
 ---
-title: "Ausführen von Batchvorgängen | Microsoft Docs"
-ms.custom: 
+title: Ausführen von Batchvorgängen | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 1a576d95-7da6-4b7b-8b32-59e5b4d354c4
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 44acde56f2ddc25c66b7e896089499c5597ae779
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: d7d2354686c312a353766d4af8b0b52d4f63e1e2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="performing-batch-operations"></a>Ausführen von Batchvorgängen
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

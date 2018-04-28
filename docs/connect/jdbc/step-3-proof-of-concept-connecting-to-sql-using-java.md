@@ -1,27 +1,28 @@
 ---
 title: 'Schritt 3: Machbarkeitsnachweis Herstellen einer Verbindung mit SQL Java mit | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 1504a348-1774-47ab-8967-288ec3985ae4
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6bdda6d24e2f1437eb251315d5b91efc7ab1016d
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: b4e5d6288a7ac269f60c4c8a0ca37bf52a932f10
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-java"></a>Schritt 3: Machbarkeitsnachweis Herstellen einer Verbindung mit SQL mit Java
   

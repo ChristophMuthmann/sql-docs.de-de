@@ -3,7 +3,7 @@ title: Verwenden von Verschlüsselung ohne Überprüfung | Microsoft Docs
 description: Verwenden von Verschlüsselung ohne Überprüfung
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: oledb|features
@@ -21,13 +21,13 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, encryption
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: be4885de83c5d189b1772c6fe04eff1a744cafef
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: ec40a58e50a1221dc321b9f4a4cfdb6c923f3f2a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-encryption-without-validation"></a>Verwenden von Verschlüsselung ohne Überprüfung
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

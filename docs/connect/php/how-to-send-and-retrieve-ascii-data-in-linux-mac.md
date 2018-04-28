@@ -1,15 +1,15 @@
 ---
 title: 'Vorgehensweise: Senden und Abrufen von ASCII-Daten in Linux und MacOS (SQL) | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 01/16/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
 ms.suite: sql
 ms.technology:
 - drivers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - retrieving data, ASCII data
@@ -20,11 +20,11 @@ author: yitam
 ms.author: v-yitam
 manager: mbarwin
 ms.workload: On Demand
-ms.openlocfilehash: 5fbd86bb120a64d509b6349a589308eda9c26bf8
-ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
-ms.translationtype: MT
+ms.openlocfilehash: 7f4fae285dbda78011f5e56d6c063fb402ae856f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-send-and-retrieve-ascii-data-in-linux-and-macos"></a>Vorgehensweise: Senden und Abrufen von ASCII-Daten in Linux und MacOS 
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

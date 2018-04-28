@@ -1,30 +1,33 @@
 ---
 title: Position-Methode (Byte, long) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerBlob.position (byte[], long)
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerBlob.position (byte[], long)
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 787412c2-4342-49c8-9ca2-7a9ddcd3277c
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c1abb3e2df956be93b8aee42b1b1b6b14e62d0fe
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: ebb49b2e46b8ed809993b3de57001f59c8b78123
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="position-method-byte-long"></a>Position-Methode (Byte, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +47,7 @@ public long position(byte[] bPattern,
   
  Das zu suchende Muster.  
   
- *Starten*  
+ *start*  
   
  Der Startindex, in dem gesucht werden soll.  
   
@@ -58,7 +61,7 @@ public long position(byte[] bPattern,
  Diese Position-Methode wird von der Position-Methode in der java.sql.Blob-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Positionieren Sie die Methode &#40; SQLServerBlob &#41;](../../../connect/jdbc/reference/position-method-sqlserverblob.md)   
+ [Position-Methode &#40;SQLServerBlob&#41;](../../../connect/jdbc/reference/position-method-sqlserverblob.md)   
  [SQLServerBlob-Methoden](../../../connect/jdbc/reference/sqlserverblob-methods.md)   
  [SQLServerBlob-Elemente](../../../connect/jdbc/reference/sqlserverblob-members.md)   
  [SQLServerBlob-Klasse](../../../connect/jdbc/reference/sqlserverblob-class.md)  

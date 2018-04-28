@@ -3,7 +3,7 @@ title: OLE DB-API-Unterstützung für Datum und Uhrzeit-Verbesserungen | Microso
 description: OLE DB-API-Unterstützung für Datum und Uhrzeit-Verbesserungen
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: ole-db-date-time
@@ -15,13 +15,13 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3b614acdd644369ae3cf04f88edac5a88163e767
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: 68ebef42b7a83d9bfb4c5e21ae1a773aa0bece90
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ole-db-api-support-for-date-and-time-enhancements"></a>OLE DB-API-Unterstützung für Datum und Uhrzeit-Verbesserungen
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,7 +33,7 @@ ms.lasthandoff: 04/06/2018
 |IAccessor::CreateAccessor|Ein Flag wird hinzugefügt, in der DBBINDING-Struktur, um Anwendungen zu unterscheiden zwischen ermöglichen **"DateTime"**, **datetime2**, und **Smalldatetime** Werte. Weitere Informationen finden Sie unter [Parameter und Rowsets Metadata](../../oledb/ole-db-date-time/metadata-parameter-and-rowset.md).|  
 |IBCPSession::BCPColFmt|Weitere Informationen finden Sie unter [Massenkopieränderungen für erweiterte Datums- und Uhrzeittypen &#40;OLE DB-&#41;](../../oledb/ole-db-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db.md).|  
 |ICommandWithParameters::GetParameterInfo|Weitere Informationen finden Sie unter[Parameter und Rowsets Metadata](../../oledb/ole-db-date-time/metadata-parameter-and-rowset.md).|  
-|ICommandWithParameters::SetParameterinfo|Weitere Informationen finden Sie unter[Parameter und Rowsets Metadata](../../oledb/ole-db-date-time/metadata-parameter-and-rowset.md).|  
+|ICommandWithParameters:: SetParameterInfo|Weitere Informationen finden Sie unter[Parameter und Rowsets Metadata](../../oledb/ole-db-date-time/metadata-parameter-and-rowset.md).|  
 |IColumnsRowset::GetColumnsRowset|Weitere Informationen finden Sie unter[Parameter und Rowsets Metadata](../../oledb/ole-db-date-time/metadata-parameter-and-rowset.md).|  
 |IColumnsInfo::GetColumnInfo|Weitere Informationen finden Sie unter[Parameter und Rowsets Metadata](../../oledb/ole-db-date-time/metadata-parameter-and-rowset.md).|  
 |IDBSchemaRowset::GetRowset|Einzelheiten zu den betroffenen Schemarowsets finden Sie[Datum und Uhrzeit und Schemarowsets](../../oledb/ole-db-date-time/metadata-date-and-time-and-schema-rowsets.md).|  

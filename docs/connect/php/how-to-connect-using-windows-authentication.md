@@ -2,7 +2,7 @@
 title: 'Vorgehensweise: Herstellen einer Verbindung mithilfe der Windows-Authentifizierung | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: php
@@ -15,16 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - connecting to the server, Windows Authentication
 ms.assetid: f403a4e0-b0a8-4939-9dc1-e1209626367e
-caps.latest.revision: ''
+caps.latest.revision: 35
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7b82c96b78bb81e1b8749f6a0d3899662c54d780
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
-ms.translationtype: MT
+ms.openlocfilehash: a42cc3c9860a2d2f73020ac32ce58690f4d34bdf
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-connect-using-windows-authentication"></a>Vorgehensweise: Herstellen einer Verbindung mithilfe der Windows-Authentifizierung
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

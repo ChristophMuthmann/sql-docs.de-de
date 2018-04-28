@@ -26,7 +26,7 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: acee29ec49e4bd0d8e303248a2a527d5697b42aa
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 04/16/2018
 ---
@@ -49,7 +49,7 @@ sqlsrv_close( resource $conn )
 Der boolesche Wert **true** , außer die Funktion wird mit einem ungültigen Parameter aufgerufen. Wenn die Funktion mit einem ungültigen Parameter aufgerufen wird, wird **false** zurückgegeben.  
   
 > [!NOTE]  
-> **NULL** ist ein gültiger Parameter für diese Funktion. Dadurch kann die Funktion mehrmals in einem Skript aufgerufen werden. Wenn Sie z. B. eine Verbindung in einem Fehlerzustand schließen und sie erneut am Ende des Skripts schließen, wird der zweite Aufruf von sqlsrv_close **den Wert true** zurückgeben, da der erste Aufruf von sqlsrv_close **(im Fehlerzustand) die Verbindungsressource auf NULL** setzt.  
+> **NULL** ist ein gültiger Parameter für diese Funktion. Dadurch kann die Funktion mehrmals in einem Skript aufgerufen werden. Beispielsweise, wenn Sie eine Verbindung in einem Fehlerzustand schließen und wieder am Ende des Skripts schließen, der zweite Aufruf von **Sqlsrv_close** zurück **"true"** , da der erste Aufruf von **Sqlsrv_ Schließen Sie** wird Sie (im Fehlerzustand) die Verbindungsressource auf **null**.  
   
 ## <a name="example"></a>Beispiel  
 Im folgenden Beispiel wird eine Verbindung geschlossen. Das Beispiel setzt voraus, dass SQL Server auf dem lokalen Computer installiert ist. Wenn das Beispiel über die Befehlszeile ausgeführt wird, werden alle Ausgaben in die Konsole geschrieben.  
@@ -76,7 +76,7 @@ echo "Connection closed.\n";
 ?>  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Siehe auch  
 [API-Referenz für den SQLSRV-Treiber](../../connect/php/sqlsrv-driver-api-reference.md)
 
 [Informationen zu den Codebeispielen in der Dokumentation](../../connect/php/about-code-examples-in-the-documentation.md)  

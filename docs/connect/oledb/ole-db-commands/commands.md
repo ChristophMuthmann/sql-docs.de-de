@@ -3,7 +3,7 @@ title: Befehle | Microsoft Docs
 description: Befehle in OLE DB-Treiber für SQLServer
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: ole-db-commands
@@ -18,13 +18,13 @@ helpviewer_keywords:
 - commands [OLE DB]
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 634a9a8fd9f7d7dfc2e181e9914539941de6f8dd
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: 06f42b26f9d0cc541abd602ad58c79310dc6edbc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="commands"></a>Befehle
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,6 +40,6 @@ ms.lasthandoff: 04/06/2018
 -   [Mehrere Rowsetergebnisse generierende Befehle](../../oledb/ole-db-commands/commands-generating-multiple-rowset-results.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [OLE DB-Treiber für SQLServer &#40;OLE DB&#41;](../../oledb/ole-db/oledb-driver-for-sql-server-ole-db.md)  
+ [OLE DB-Treiber für SQL Server-Programmierung](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)  
   
   

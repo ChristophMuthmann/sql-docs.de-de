@@ -1,30 +1,33 @@
 ---
 title: SetDate-Methode auf der Date-Wert - Int | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerPreparedStatement.setDate (int, java.sql.Date)
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerPreparedStatement.setDate (int, java.sql.Date)
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 12e5a4cc-45a2-4779-bbfc-e4da66829588
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1f6011bc3a9bbf0e2b75a6137ba954605bcff3d8
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 2716440c04dc35b33b3bdfa6348f325ffc2982e2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="setdate-method-int-javasqldate"></a>setDate-Methode (int, java.sql.Date)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -55,7 +58,7 @@ public final void setDate(int n,
  Diese SetDate-Methode wird von der SetDate-Methode in der java.sql.PreparedStatement-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Siehe auch  
- [SetDate-Methode &#40; SQLServerPreparedStatement &#41;](../../../connect/jdbc/reference/setdate-method-sqlserverpreparedstatement.md)   
+ [SetDate-Methode &#40;sqlserverpreparedstatement-Klasse&#41;](../../../connect/jdbc/reference/setdate-method-sqlserverpreparedstatement.md)   
  [SQLServerPreparedStatement-Elemente](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   
  [SQLServerPreparedStatement-Klasse](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)  
   

@@ -1,26 +1,27 @@
 ---
-title: "Beispiel für grundlegende Datentypen | Microsoft Docs"
-ms.custom: 
+title: Beispiel für grundlegende Datentypen | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 59ac80cf-fc66-4493-933d-38e479c5f54d
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.openlocfilehash: ccdc5f5a4c096daa6b340a207bd4c620bca765ee
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+manager: craigg
+ms.openlocfilehash: 1d9adb32f085d666813885083f5c897f6b243e9d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="basic-data-types-sample"></a>Standarddatentypen - Beispiel
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -170,6 +171,6 @@ public class basicDT {
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Arbeiten mit Datentypen &#40; JDBC &#41;](../../../connect/jdbc/working-with-data-types-jdbc.md)  
+ [Arbeiten mit Datentypen &#40;JDBC&#41;](../../../connect/jdbc/working-with-data-types-jdbc.md)  
   
   

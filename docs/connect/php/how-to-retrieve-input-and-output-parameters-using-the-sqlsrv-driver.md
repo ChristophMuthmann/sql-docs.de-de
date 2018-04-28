@@ -1,8 +1,8 @@
 ---
 title: 'Vorgehensweise: Abrufen von e/a-Parameter mit dem SQLSRV-Treiber | Microsoft Docs'
 ms.custom: ''
-ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.date: 04/12/2018
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: php
@@ -15,16 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - stored procedure support
 ms.assetid: 9a7c5f60-67f9-4968-a3a8-c256ee481da2
-caps.latest.revision: ''
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 36a13b70c105ea6dfa27d7a261d2e926b122b569
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
-ms.translationtype: MT
+ms.openlocfilehash: 23853aac469b7ff614c67c695b9a04f7453abda2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver"></a>How to: Retrieve Input and Output Parameters Using the SQLSRV Driver
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -106,7 +106,7 @@ $employeeId = 4;
 $vacationHrs = 8;  
 $params = array(   
                  array($employeeId, SQLSRV_PARAM_IN),  
-                 array($vacationHrs, SQLSRV_PARAM_INOUT)  
+                 array(&$vacationHrs, SQLSRV_PARAM_INOUT)  
                );  
   
 /* Execute the query. */  
@@ -128,7 +128,37 @@ sqlsrv_free_stmt( $stmt3);
 sqlsrv_close( $conn);  
 ?>  
 ```  
-  
+
+> [!NOTE]
+> Beim Binden ein Eingabe-/Ausgabeparameter an einen Typ "bigint", wenn der Wert außerhalb des Bereichs der annehmen kann ein [Ganzzahl](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md), Sie müssen die SQL-Feldtyp als SQLSRV_SQLTYPE_BIGINT angeben. Andernfalls kann er eine Ausnahme "der Wert außerhalb des gültigen Bereichs" führen.
+
+## <a name="example"></a>Beispiel  
+Dieses Codebeispiel zeigt, wie einen große Bigint-Wert als eine Eingabe-/Ausgabeparameter zu binden.  
+
+```
+<?php
+$serverName = "(local)";
+$connectionInfo = array("Database"=>"testDB");  
+$conn = sqlsrv_connect($serverName, $connectionInfo);  
+if ($conn === false) {  
+    echo "Could not connect.\n";  
+    die(print_r(sqlsrv_errors(), true));  
+}  
+
+// Assume the stored procedure spTestProcedure exists, which retrieves a bigint value of some large number
+// e.g. 9223372036854
+$bigintOut = 0;
+$outSql = "{CALL spTestProcedure (?)}";
+$stmt = sqlsrv_prepare($conn, $outSql, array(array(&$bigintOut, SQLSRV_PARAM_INOUT, null, SQLSRV_SQLTYPE_BIGINT)));
+sqlsrv_execute($stmt);
+echo "$bigintOut\n";   // Expect 9223372036854
+
+sqlsrv_free_stmt($stmt);  
+sqlsrv_close($conn);  
+
+?>
+```
+
 ## <a name="see-also"></a>Siehe auch  
 [Gewusst wie: Angeben der Parameterrichtung mit dem SQLSRV-Treiber](../../connect/php/how-to-specify-parameter-direction-using-the-sqlsrv-driver.md)
 

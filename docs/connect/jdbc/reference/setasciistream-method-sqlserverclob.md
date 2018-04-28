@@ -1,30 +1,33 @@
 ---
 title: SetAsciiStream-Methode (SQLServerClob) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerClob.setAsciiStream
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerClob.setAsciiStream
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 6e1779df-3b2a-41d1-8dca-99692cc9da14
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f501c9c610319e0cad34dfabfe70dbf3f6cfffe2
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: f3bff352cab3a282312a2205211ee9060dba0a99
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="setasciistream-method-sqlserverclob"></a>setAsciiStream-Methode (SQLServerClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

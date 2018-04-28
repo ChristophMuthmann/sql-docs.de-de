@@ -1,30 +1,33 @@
 ---
 title: GetObjectInstance-Methode (SQLServerDataSourceObjectFactory) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerDataSourceObjectFactory.getObjectInstance
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerDataSourceObjectFactory.getObjectInstance
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 0a1503e2-e991-4d70-a223-087fc63baf73
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: aa9417d9b20ae5c1858c3c8f10019383565c4330
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 38ed185d36188d4889ee35e9188aa907324c9038
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="getobjectinstance-method-sqlserverdatasourceobjectfactory"></a>getObjectInstance-Methode (SQLServerDataSourceObjectFactory)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -50,11 +53,11 @@ public java.lang.Object getObjectInstance(java.lang.Object ref,
   
  Der Name des Objekts.  
   
- *c*  
+ *C*  
   
  Der Kontext relativ zum angegebenen Namen.  
   
- *h*  
+ *H*  
   
  Die Umgebung, die beim Erstellen des Objekts verwendet wird.  
   

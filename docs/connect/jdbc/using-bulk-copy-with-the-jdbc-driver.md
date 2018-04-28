@@ -1,27 +1,28 @@
 ---
 title: Verwenden von Massenkopieren mit dem JDBC-Treiber | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 21e19635-340d-49bb-b39d-4867102fb5df
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f4a714ce9ea2a076b922de3fc66851fa58110eb4
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 823621895cf0e3d234a3194fa60937b0c8398cb2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-bulk-copy-with-the-jdbc-driver"></a>Verwenden von Massenkopieren mit dem JDBC Driver
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -39,7 +40,7 @@ ms.lasthandoff: 11/18/2017
 -   Einen Massenkopiervorgang mit einer Transaktion  
   
 > [!NOTE]  
->  Wenn Sie den Microsoft JDBC Driver 4.1 für SQL Server (der die SQLServerBulkCopy-Klasse nicht unterstützt) oder eine frühere Version verwenden, können Sie stattdessen die SQL Server Transact-SQL-Anweisung „BULK INSERT“ ausführen.  
+>  Wenn Sie den Microsoft JDBC-Treiber 4.1 für SQL Server (der die SQLServerBulkCopy-Klasse nicht unterstützt) oder eine frühere Version verwenden, können Sie stattdessen die SQL Server Transact-SQL-Anweisung „BULK INSERT“ ausführen.  
   
 ## <a name="bulk-copy-example-setup"></a>Einrichten des Massenkopierbeispiels  
  Die Klasse „SQLServerBulkCopy“ kann nur verwendet werden, um Daten in SQL Server-Tabellen zu schreiben. Die in diesem Thema gezeigten Codebeispiele verwenden die SQL Server-Beispieldatenbank „AdventureWorks“. Um eine Änderung der vorhandenen Codebeispiele zu vermeiden, schreiben die Codebeispiele Daten in Tabellen, die zuvor von Ihnen erstellt werden.  
@@ -51,7 +52,7 @@ ms.lasthandoff: 11/18/2017
 > [!NOTE]  
 >  Die Codebeispiele zu „SQLServerBulkCopy“ werden nur zur Verfügung gestellt, um die Syntax für die Verwendung von „SQLServerBulkCopy“ zu veranschaulichen. Wenn sich die Quell- und Zieltabellen in der gleichen SQL Server-Instanz befinden, ist die Verwendung einer Transact-SQL-Anweisung „INSERT … SELECT“ zum Kopieren der Daten einfacher und schneller.  
   
-###  <a name="BKMK_TableSetup"></a>Tabelleneinrichtung  
+###  <a name="BKMK_TableSetup"></a> Tabelleneinrichtung  
  Zum Erstellen der Tabellen, die für die ordnungsgemäße Ausführung der Codebeispiele erforderlich sind, müssen Sie die folgenden Transact-SQL-Anweisungen in einer SQL Server-Datenbank ausführen.  
   
 ```  
@@ -460,7 +461,7 @@ public class Program
   
 ```  
   
-##  <a name="BKMK_TransactionBulk"></a>Transaktionen und Massenkopiervorgänge  
+##  <a name="BKMK_TransactionBulk"></a> Transaktionen und Massenkopiervorgänge  
  Massenkopiervorgänge können als isolierte Vorgänge oder im Rahmen einer aus mehreren Schritten bestehenden Transaktion ausgeführt werden. Diese zweite Option ermöglicht Ihnen das Ausführen mehrerer Massenkopiervorgänge innerhalb der gleichen Transaktion sowie die Durchführung weiterer Datenbankvorgänge (wie etwa Einfüge-, Aktualisierungs- und Löschvorgänge), während die Möglichkeit zum Commit oder Rollback der gesamten Transaktion erhalten bleibt.  
   
  Standardmäßig wird ein Massenkopiervorgang als isolierter Vorgang ausgeführt. Der Massenkopiervorgang erfolgt nicht transaktional, ohne Möglichkeit zum Rollback. Wenn Sie für den Massenkopiervorgang beim Auftreten eines Fehlers einen teilweisen oder vollständigen Rollback ausführen müssen, können Sie eine verwaltete SQLServerBulkCopy-Transaktion verwenden oder den Massenkopiervorgang innerhalb einer vorhandenen Transaktion ausführen.  

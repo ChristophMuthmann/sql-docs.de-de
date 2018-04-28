@@ -1,32 +1,33 @@
 ---
 title: Grundlegendes zu den Datentypen des JDBC-Treiber | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 7802328d-4d23-4775-9573-4169b127d258
-caps.latest.revision: "27"
+caps.latest.revision: 27
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1c9599a6e71ee0fbf171ba9c8619cafac8332cc5
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 8aedc06687d574be4392157d667fde74325be431
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="understanding-the-jdbc-driver-data-types"></a>Grundlegendes zu den Datentypen in JDBC Driver
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]unterstützt die Verwendung von JDBC grundlegenden und erweiterten Datentypen in einer Java-Anwendung, verwendet [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] als Datenbank.  
+  [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] unterstützt die Verwendung von JDBC grundlegenden und erweiterten Datentypen in einer Java-Anwendung, verwendet [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] als Datenbank.  
   
  Der JDBC-Typsystem vermittelt die Konvertierung zwischen [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Datentypen und Java-Typen und Objekte. Die JDBC-Typen beruhen auf den SQL-92- und SQL-99-Typen. Der JDBC-Treiber befolgt die JDBC-Spezifikation und stellt eine optimale Balance zwischen Vorhersehbarkeit und Flexibilität bereit.  
   

@@ -2,7 +2,7 @@
 title: Microsoft JDBC Driver für SQLServer | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.component: jdbc
 ms.reviewer: ''
@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: a7ccbec6a54b6709f04d39659517aeae5415127d
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: 47e7eba43c09d52c75c9a3f42b77db304be7ee35
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="microsoft-jdbc-driver-for-sql-server"></a>Microsoft JDBC-Treiber für SQL Server
 
@@ -29,7 +29,7 @@ ms.lasthandoff: 04/06/2018
 
 Stärkere Interoperabilität stellt Microsoft einen Java Database Connectivity (JDBC)-Treiber für die Verwendung mit SQL Server und Azure SQL-Datenbank. Der Treiber ist kostenlos und stellt die Java Database Connectivity aus allen Java Anwendungen, Anwendungsservern oder Applets mit aktiviertem Java bereit. Dieser Treiber ist ein JDBC-Treiber vom Typ 4, der die Database Connectivity über die standardmäßigen JDBC-Anwendungsprogrammierschnittstellen (Application Programming Interfaces, APIs) zur Verfügung stellt.
 
-Microsoft JDBC Driver for SQL Server wurde auf Kompatibilität mit wichtigen Anwendungsservern wie IBM WebSphere und SAP NetWeaver getestet.
+Der Microsoft JDBC-Treiber für SQL Server wurde auf Kompatibilität mit wichtigen Anwendungsservern wie IBM WebSphere und SAP NetWeaver getestet.
   
 ## <a name="getting-started"></a>Erste Schritte  
 * [Step 1: Configure development environment for Java development (Schritt 1: Konfigurieren der Entwicklungsumgebung für Java-Entwicklung)](step-1-configure-development-environment-for-java-development.md)  

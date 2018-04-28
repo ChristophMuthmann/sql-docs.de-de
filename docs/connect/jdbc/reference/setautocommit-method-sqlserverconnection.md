@@ -1,30 +1,33 @@
 ---
 title: SetAutoCommit-Methode (SQLServerConnection) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerConnection.setAutoCommit
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerConnection.setAutoCommit
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: db1e22d2-e53f-474e-8c99-cb1fff7f491a
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c59314ab0ecc4260442f13206e327f91a7ea8b59
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 7bf6842881256a5de4da2805b2c07c5f64fbeff4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="setautocommit-method-sqlserverconnection"></a>SetAutoCommit-Methode (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

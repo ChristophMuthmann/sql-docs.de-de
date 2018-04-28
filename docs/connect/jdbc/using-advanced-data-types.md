@@ -1,27 +1,28 @@
 ---
 title: Mithilfe von erweiterten Datentypen | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: b39461d3-48d6-4048-8300-1a886c00756d
-caps.latest.revision: "58"
+caps.latest.revision: 58
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5ca19754f3332c1832405085ad1b04fb36380bd9
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: df610dec98d98d497b21b5e297781fa0a3375bf8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-advanced-data-types"></a>Verwenden von erweiterten Datentypen
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -50,7 +51,7 @@ ms.lasthandoff: 11/18/2017
 >  CLOB-Werte verwendet werden können, mit [!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)] (oder höher) Datentypen mit umfangreichen Werten. Insbesondere können CLOB-Typen verwendet werden, mit der **varchar(max)** und **nvarchar(max)** -Datentypen BLOB-Typen können verwendet werden mit **varbinary(max)** und **Bild**  Datentypen sowie NCLOB-Typen mit verwendet werden können **Ntext** und **nvarchar(max)**.  
   
 ## <a name="large-value-data-types"></a>Datentypen mit umfangreichen Werten  
- In früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], arbeiten mit Datentypen mit umfangreichen Werten Typen eine besondere Behandlung erforderlich. Datentypen mit umfangreichen Werten sind solche, die die maximale Zeilengröße von 8 KB überschreiten. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]Führt einen maximalbezeichner für **Varchar**, **Nvarchar**, und **Varbinary** Datentypen um Speicherung von Werten zu ermöglichen, die so groß wie 2 ^ 31 Byte. Spalten der Tabelle und [!INCLUDE[tsql](../../includes/tsql_md.md)] Variablen festlegbaren **varchar(max)**, **nvarchar(max)**, oder **varbinary(max)** Datentypen.  
+ In früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], arbeiten mit Datentypen mit umfangreichen Werten Typen eine besondere Behandlung erforderlich. Datentypen mit umfangreichen Werten sind solche, die die maximale Zeilengröße von 8 KB überschreiten. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Führt einen maximalbezeichner für **Varchar**, **Nvarchar**, und **Varbinary** Datentypen um Speicherung von Werten zu ermöglichen, die so groß wie 2 ^ 31 Byte. Spalten der Tabelle und [!INCLUDE[tsql](../../includes/tsql_md.md)] Variablen festlegbaren **varchar(max)**, **nvarchar(max)**, oder **varbinary(max)** Datentypen.  
   
  Die Verarbeitung von Typen mit umfangreichen Werten umfasst hauptsächlich das Abrufen aus einer Datenbank sowie das Hinzufügen zu einer Datenbank. Die folgenden Abschnitte beschreiben die verschiedenen Verfahren für diese Aufgaben.  
   
@@ -139,7 +140,7 @@ rs.updateRow();
  Weitere Informationen zu Typen mit umfangreichen Werten finden Sie in der SQL Server-Onlinedokumentation unter "Verwenden von Datentypen mit umfangreichen Werten".  
   
 ## <a name="xml-data-type"></a>XML-Datentyp  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]Stellt eine **Xml** -Datentyp, der ermöglicht Ihnen das Speichern von XML-Dokumenten und-Fragmenten in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Datenbank. Die **Xml** -Datentyp ist ein integrierter Datentyp in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], und einige auf ähnliche Weise wie andere integrierten Typen wie **Int** und **Varchar**. Wie andere integrierte Typen können Sie mit der **Xml** -Datentyp als Spaltentyp, wenn Sie eine Tabelle erstellen, als Variablentyp, Parametertyp oder Funktionsrückgabetyp; oder in [!INCLUDE[tsql](../../includes/tsql_md.md)] Funktionen CAST und CONVERT.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Stellt eine **Xml** -Datentyp, der ermöglicht Ihnen das Speichern von XML-Dokumenten und-Fragmenten in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Datenbank. Die **Xml** -Datentyp ist ein integrierter Datentyp in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], und einige auf ähnliche Weise wie andere integrierten Typen wie **Int** und **Varchar**. Wie andere integrierte Typen können Sie mit der **Xml** -Datentyp als Spaltentyp, wenn Sie eine Tabelle erstellen, als Variablentyp, Parametertyp oder Funktionsrückgabetyp; oder in [!INCLUDE[tsql](../../includes/tsql_md.md)] Funktionen CAST und CONVERT.  
   
  In der JDBC-Treiber die **Xml** -Datentyp kann als Zeichenfolge, Byte-Array, Datenstrom, CLOB-, BLOB- oder SQLXML-Objekt zugeordnet werden. Der Standard lautet Zeichenfolge. Ab JDBC Driver, Version 2.0, unterstützt der JDBC-Treiber die JDBC 4.0-API, in der die SQLXML-Schnittstelle eingeführt wurde. Die SQLXML-Schnittstelle definiert Methoden zum interagieren und Bearbeiten von XML-Daten. Die **SQLXML** -Datentyp zugeordnet, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] **Xml** -Datentyp. Weitere Informationen zum Lesen und Schreiben von XML-Daten in bzw. aus einer relationalen Datenbank mit der **SQLXML** Java-Datentyp finden Sie unter [unterstützende XML-Daten](../../connect/jdbc/supporting-xml-data.md).  
   
@@ -151,7 +152,7 @@ rs.updateRow();
   
 -   Zugriff auf XML-Daten als Bytearray mit führender Bytereihenfolgemarke (Byte Order Mark, BOM) bei Codierung in UTF-16 für den Austausch mit anderen XML-Prozessoren und Datenträgerdateien  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]setzt eine führende BOM für UTF-16-codierte XML. Die Anwendung muss diese bereitstellen, wenn XML-Parameterwerte als Bytearrays angegeben werden. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]XML-Werte gibt immer als UTF-16-ohne BOM Zeichenfolgen oder Codierungsdeklaration eingebettete aus. Wenn XML-Werte als "byte[]", "BinaryStream" oder "Blob" abgerufen werden, steht vor dem Wert ein UTF-16-BOM.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] setzt eine führende BOM für UTF-16-codierte XML. Die Anwendung muss diese bereitstellen, wenn XML-Parameterwerte als Bytearrays angegeben werden. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] XML-Werte gibt immer als UTF-16-ohne BOM Zeichenfolgen oder Codierungsdeklaration eingebettete aus. Wenn XML-Werte als "byte[]", "BinaryStream" oder "Blob" abgerufen werden, steht vor dem Wert ein UTF-16-BOM.  
   
  Weitere Informationen zu den **Xml** -Datentyp, finden Sie unter "Xml-Datentyp" in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Books Online.  
   

@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Senden und Abrufen von UTF-8-Daten mithilfe der integrierten UTF-8-Unterstützung'
+title: 'Vorgehensweise: Senden und Abrufen von UTF-8-Daten mithilfe der eingebauten UTF-8-Unterstützung | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/23/2018
 ms.prod: sql
@@ -24,7 +24,7 @@ manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: bfa4082a1911eb2b423c62ba0d2cbceedd58fbdc
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 04/16/2018
 ---
@@ -43,12 +43,12 @@ Gehen Sie zum Senden/Abrufen von UTF-8-codierten Daten an den/vom Server wie fol
   
     Wenn Sie einen Zeichensatz als Teil der Verbindungsoptionen angeben, geht der Treiber davon aus, dass auch die anderen Optionszeichenfolgen der Verbindung den gleichen Zeichensatz verwenden. Auch beim Servernamen und den Abfragezeichenfolgen geht er vom selben Zeichensatz aus.  
   
-Beachten Sie, dass Sie zwar UTF-8 oder „SQLSRV_ENC_CHAR“ an CharacterSet** übergeben können, aber nicht „SQLSRV_ENC_BINARY“. Die Standardcodierung ist „SQLSRV_ENC_CHAR“.  
+Sie können übergeben, UTF-8 oder "sqlsrv_enc_char" an **CharacterSet**, aber Sie können keine SQLSRV_ENC_BINARY übergeben. Die Standardcodierung ist „SQLSRV_ENC_CHAR“.  
   
 ## <a name="example"></a>Beispiel  
-Im folgenden Beispiel wird veranschaulicht, wie Sie bei der Herstellung der Verbindung, durch die Festlegung auf den UTF-8 Zeichensatz, das Senden und Empfangen von UTF-8-codierten Daten ermöglichen. Das Beispiel aktualisiert die Spalte „Kommentare“ der Tabelle „Produktion.ProduktReview“ auf eine angegebene Review-ID. Das Beispiel ruft auch die neuen, aktualisierten Daten auf und zeigt sie an. Beachten Sie, dass die Spalte „Comments“ den Typ nvarchar(3850).** aufweist. Beachten Sie, dass Daten vor dem Senden an den Server mit der PHP-Funktion utf8_encode** in UTF-8-Codierung konvertiert werden. Dies erfolgt nur zu Demonstrationszwecken. In einem realen Anwendungsszenario würden Sie mit UTF-8-codierten Daten beginnen.  
+Im folgenden Beispiel wird veranschaulicht, wie Sie bei der Herstellung der Verbindung, durch die Festlegung auf den UTF-8 Zeichensatz, das Senden und Empfangen von UTF-8-codierten Daten ermöglichen. Das Beispiel aktualisiert die Spalte „Kommentare“ der Tabelle „Produktion.ProduktReview“ auf eine angegebene Review-ID. Das Beispiel ruft auch die neuen, aktualisierten Daten auf und zeigt sie an. Beachten Sie, dass die Kommentare-Spalte vom Typ **nvarchar(3850).** Beachten Sie, dass sie vor dem Senden von Daten an den Server in UTF-8-Codierung mit der PHP konvertiert wird **utf8_encode** Funktion. Dies erfolgt nur zu Demonstrationszwecken. In einem realen Anwendungsszenario würden Sie mit UTF-8-codierten Daten beginnen.  
   
-Das Beispiel setzt voraus, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] und die [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) -Datenbank auf dem lokalen Computer installiert sind. Wenn das Beispiel über den Browser ausgeführt wird, werden alle Ausgaben im Browser geschrieben.  
+Das Beispiel setzt voraus, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] und [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) -Datenbank auf dem lokalen Computer installiert sind. Wenn das Beispiel über den Browser ausgeführt wird, werden alle Ausgaben im Browser geschrieben.  
   
 ```  
 <?php  
@@ -132,7 +132,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-Informationen zum Speichern von Unicode-Daten finden Sie unter [Arbeiten mit Unicode-Daten](https://msdn.microsoft.com/library/ms175180.aspx).  
+Informationen zum Speichern von Unicode-Daten finden Sie unter [arbeiten mit Unicode-Daten](https://msdn.microsoft.com/library/ms175180.aspx).  
   
 ## <a name="example"></a>Beispiel  
 Das folgende Beispiel ähnelt dem ersten Beispiel, aber statt der Festlegung des UTF-8-Zeichensatzes für die Verbindung, veranschaulicht dieses Beispiel die Festlegung des UTF-8-Zeichensatzes für die Spalte.  
@@ -225,7 +225,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Siehe auch  
 [Abrufen von Daten](../../connect/php/retrieving-data.md)
 
 [Arbeiten mit ASCII-Daten in nicht-Windows](../../connect/php/how-to-send-and-retrieve-ascii-data-in-linux-mac.md)

@@ -1,30 +1,33 @@
 ---
 title: GetColumnPrivileges-Methode (SQLServerDatabaseMetaData) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerDatabaseMetaData.getColumnPrivileges
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerDatabaseMetaData.getColumnPrivileges
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 4ab6a671-9573-4b95-8c23-364306c60d25
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e2d0e071acf8df933f42fb1adea31ad759763096
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 6b88af8e4af62f556bd22a3769d587ad214a1273
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="getcolumnprivileges-method-sqlserverdatabasemetadata"></a>getColumnPrivileges-Methode (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,11 +45,11 @@ public java.sql.ResultSet getColumnPrivileges(java.lang.String catalog,
 ```  
   
 #### <a name="parameters"></a>Parameter  
- *Katalog*  
+ *catalog*  
   
  Ein **Zeichenfolge** , enthält der Name des Katalogs.  
   
- *Schema*  
+ *schema*  
   
  Ein **Zeichenfolge** , die den Schemanamen enthält.  
   
@@ -73,7 +76,7 @@ public java.sql.ResultSet getColumnPrivileges(java.lang.String catalog,
 |----------|----------|-----------------|  
 |TABLE_CAT|**String**|Der Katalogname.|  
 |TABLE_SCHEM|**String**|Der Tabellenschemaname.|  
-|TABLE_NAME|**String**|Der Tabellenname.|  
+|table_name|**String**|Der Tabellenname.|  
 |COLUMN_NAME|**String**|Der Spaltenname.|  
 |GRANTOR|**String**|Das Objekt, von dem der Zugriff gewährt wird.|  
 |GRANTEE|**String**|Das Objekt, von dem der Zugriff empfangen wird.|  

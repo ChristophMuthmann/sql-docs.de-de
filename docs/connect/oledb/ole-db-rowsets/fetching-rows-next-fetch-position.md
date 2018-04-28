@@ -3,7 +3,7 @@ title: Nächste Abrufposition | Microsoft Docs
 description: Das Abrufen von Zeilen - nächste Abrufposition
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: ole-db-rowsets
@@ -20,13 +20,13 @@ helpviewer_keywords:
 - rowsets [OLE DB], fetching
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7c5870fefce6e4d989235f5ec1d0672e4b77866d
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: 22867097b8eb0cb89e2a1853c14d911ba2bcfab2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="fetching-rows---next-fetch-position"></a>Das Abrufen von Zeilen - nächste Abrufposition
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

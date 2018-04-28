@@ -1,30 +1,33 @@
 ---
 title: supportsANSI92IntermediateSQL-Methode (SQLServerDatabaseMetaData) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerDatabaseMetaData.supportsANSI92IntermediateSQL
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerDatabaseMetaData.supportsANSI92IntermediateSQL
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 4d6e8301-0633-4565-91c6-a80910954461
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b1b01e1aa41ca85c3233562d557d75d6e25f9d11
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: a330ce42d9578e7302c8c86a8592ebb293c0c038
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="supportsansi92intermediatesql-method-sqlserverdatabasemetadata"></a>supportsANSI92IntermediateSQL-Methode (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -3,7 +3,7 @@ title: Die Verwendung der Datenbankspiegelung | Microsoft Docs
 description: Verwendung von datenbankspiegelung mit OLE DB-Treiber für SQL Server
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: oledb|features
@@ -22,13 +22,13 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, database mirroring
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3f219ba1c5d0be11569be6d46fdaf7073d3de9cb
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: 3abdb1363cf147d493b38d2fcbc657632e9d764b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-database-mirroring"></a>Verwenden der Datenbankspiegelung
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

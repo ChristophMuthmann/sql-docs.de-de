@@ -2,7 +2,7 @@
 title: Versionshinweise für die Microsoft-Treiber für PHP für SQLServer | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: php
@@ -15,16 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - what's new in version 1.1
 ms.assetid: 91cca3d2-ba99-4a6d-b0de-beb9699cb3f8
-caps.latest.revision: ''
+caps.latest.revision: 37
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7b3fcec71d77e78e12b002374c44de66faca8759
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
-ms.translationtype: MT
+ms.openlocfilehash: 6fc3b3b4e815aaa5dba9d49e90ce7e2a4774c2a9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="release-notes-for-the-microsoft-drivers-for-php-for-sql-server"></a>Versionshinweise für Microsoft Drivers for PHP for SQLServer
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

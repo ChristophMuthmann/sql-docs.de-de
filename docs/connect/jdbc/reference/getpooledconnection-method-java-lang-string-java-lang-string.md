@@ -1,30 +1,33 @@
 ---
 title: GetPooledConnection-Methode (java.lang.String, java.lang.String) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerConnectionPoolDataSource.getPooledConnection (java.lang.String, java.lang.String)
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerConnectionPoolDataSource.getPooledConnection (java.lang.String, java.lang.String)
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: f2e6391d-9aaf-4b09-ae1c-a27c1ada6301
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6a28924aab79628830fe2f51e6b8642f12be2bfd
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: e3e721141f616d9abba8baeed0e239d4476d8dea
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="getpooledconnection-method-javalangstring-javalangstring"></a>getPooledConnection-Methode (java.lang.String, java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,7 +43,7 @@ public javax.sql.PooledConnection getPooledConnection(java.lang.String user,
 ```  
   
 #### <a name="parameters"></a>Parameter  
- *Benutzer*  
+ *user*  
   
  Ein **Zeichenfolge** , die den Benutzernamen enthält.  
   

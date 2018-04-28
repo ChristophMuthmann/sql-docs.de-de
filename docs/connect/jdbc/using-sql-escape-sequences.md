@@ -1,27 +1,28 @@
 ---
 title: Verwenden von SQL-Escapesequenzen | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 00f9e25a-088e-4ac6-aa75-43eacace8f03
-caps.latest.revision: "25"
+caps.latest.revision: 25
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: df370e44bf2af1a41d926866ea0c2427cccffe59
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: edf033fd91ecdd9ddd5ad33ce9a19e32f58b8bba
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-sql-escape-sequences"></a>Verwenden von SQL-Escapesequenzen
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -96,7 +97,7 @@ SELECT {fn UCASE(Name)} FROM Employee
 |Literaltyp|Description|Wertformat|  
 |------------------|-----------------|------------------|  
 |d|Datum|yyyy-mm-dd|  
-|t|Uhrzeit|hh:mm:ss [1]|  
+|t|Zeit|hh:mm:ss [1]|  
 |ts|Zeitstempel|yyyy-mm-dd hh:mm:ss[.f...]|  
   
  Beispiel:  

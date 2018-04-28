@@ -3,7 +3,7 @@ title: OLE DB-Treiber für SQL Server-Funktionen | Microsoft Docs
 description: OLE DB-Treiber für SQL Server-Funktionen
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: oledb|features
@@ -19,16 +19,18 @@ helpviewer_keywords:
 - data access [OLE DB Driver for SQL Server], features
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6c56a145ecfbb986c7ec0124202ff61e89036657
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: 66f48a985dd0ddafc6f147c45b3fc3be76f7ec19
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ole-db-driver-for-sql-server-features"></a>OLE DB-Treiber für SQL Server-Funktionen
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   Zusätzlich zu den Funktionen von Windows (früher Microsoft) Data Access Components (WDAC) verfügbar gemacht werden, implementiert die OLE DB-Treiber für SQL Server auch viele weitere Funktionen verfügbar machen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Funktionalität.  
   
@@ -100,7 +102,7 @@ ms.lasthandoff: 04/06/2018
  Wird die OLE DB-Treiber für SQL Server-Unterstützung für die "LocalDB"-Funktion erläutert.  
   
 ## <a name="see-also"></a>Siehe auch  
- [OLE DB-Treiber für SQL Server-Programmierung](../../oledb/oledb-driver-for-sql-server-programming.md)      
+ [OLE DB-Treiber für SQLServer](../../oledb/oledb-driver-for-sql-server.md)      
  [OLE DB-Themen zur Vorgehensweise](../../oledb/ole-db-how-to/ole-db-how-to-topics.md)   
  [Installation des OLE DB-Treibers für SQL Server](../../oledb/applications/installing-oledb-driver-for-sql-server.md)  
   

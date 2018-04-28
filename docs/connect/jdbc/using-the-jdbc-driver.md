@@ -1,28 +1,28 @@
 ---
 title: Mit dem JDBC-Treiber | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 6faaf05b-8b70-4ed2-9b44-eee5897f1cd0
-caps.latest.revision: 
+caps.latest.revision: 54
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 9118a82f333b14f9ba468c039255ff3e6a1280d7
-ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
-ms.translationtype: MT
+ms.openlocfilehash: 03423c0e7d1c95ce193f915c8e80db90b0c237fc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-the-jdbc-driver"></a>Verwenden des JDBC-Treibers
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -62,7 +62,7 @@ ms.lasthandoff: 03/02/2018
   
  Sie müssen sicherstellen, dass die CLASSPATH-Anweisung nur einen enthält [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], z. B. Mssql-Jdbc-6.4.0.jre7.jar, Mssql-Jdbc-6.4.0.jre8.jar oder Mssql-Jdbc-6.4.0.jre9.jar.   
 
-### <a name="for-microsoft-jdbc-driver-62"></a>For Microsoft JDBC Driver 6.2
+### <a name="for-microsoft-jdbc-driver-62"></a>Für Microsoft JDBC Driver 6.2
  Die **Mssql-Jdbc-6.2.1.jre7.jar** oder **Mssql-Jdbc-6.2.1.jre8.jar** Dateien werden an folgendem Speicherort installiert:  
   
  \<*Installationsverzeichnis*> \sqljdbc_\<*Version*>\\<*Sprache*> \mssql-jdbc-6.2.1.jre7.jar 
@@ -110,7 +110,7 @@ ms.lasthandoff: 03/02/2018
  Jeder IDE-Hersteller verwendet eine andere Methode, um den Klassenpfad in der IDE festzulegen. Es reicht nicht aus, den Klassenpfad lediglich im Betriebssystem festzulegen. Sie müssen "sqljdbc.jar", "sqljdbc4.jar" oder "sqljdbc41.jar" an den IDE-Klassenpfad anhängen.  
   
 ### <a name="servlets-and-jsps"></a>Servlets und JSPs  
- Servlets und JSPs werden in einem Servlet-/JSP-Modul wie Tomcat ausgeführt. Der Klassenpfad muss wie in der Dokumentation für das Servlet-/JSP-Modul angegeben festgelegt werden. Es reicht nicht aus, den Klassenpfad lediglich im Betriebssystem festzulegen. Einige Servlet-/JSP-Module verfügen über Setupfenster, in denen Sie den Klassenpfad des Moduls festlegen können. In dieser Situation müssen Sie die richtige JAR-Datei für den JDBC-Treiber an den vorhandenen Klassenpfad des Moduls anhängen und das Modul neu starten. In anderen Situationen können Sie den Treiber bereitstellen, indem Sie "sqljdbc.jar", "sqljdbc4.jar" oder "sqljdbc41.jar" bei der Modulinstallation in ein bestimmtes Verzeichnis kopieren, z. B. "lib". Der Klassenpfad für den Modultreiber kann auch in einer modulspezifischen Konfigurationsdatei angegeben werden.  
+ Servlets und JSPs werden in einer Servlet-/JSP-Engine wie Tomcat ausgeführt. Der Klassenpfad muss wie in der Dokumentation für die Servlet-/JSP-Engine angegeben festgelegt werden. Es reicht nicht aus, den Klassenpfad lediglich im Betriebssystem festzulegen. Einige Servlet-/JSP-Engines verfügen über Setupfenster, in denen Sie den Klassenpfad der Engine festlegen können. In dieser Situation müssen Sie die richtige JAR-Datei für den JDBC-Treiber an den vorhandenen Klassenpfad der Engine anhängen und die Engine neu starten. In anderen Situationen können Sie den Treiber bereitstellen, indem Sie "sqljdbc.jar", "sqljdbc4.jar" oder "sqljdbc41.jar" bei der Engine-Installation in ein bestimmtes Verzeichnis kopieren, z. B. "lib". Der Klassenpfad für den Engine-Treiber kann auch in einer Engine-spezifischen Konfigurationsdatei angegeben werden.  
   
 ### <a name="enterprise-java-beans"></a>Enterprise Java Beans  
  Enterprise Java Beans (EJB) werden in einem EJB-Container ausgeführt. EJB-Container sind von verschiedenen Herstellern erhältlich. Java-Applets werden in einem Browser ausgeführt, aber von einem Webserver heruntergeladen. Kopieren Sie "sqljdbc.jar", "sqljdbc4.jar" oder "sqljdbc41.jar" in das Stammverzeichnis des Webservers, und geben Sie den Namen der JAR-Datei in das HTML-archivregisterkarte des Applets an, z. B. `<applet ... archive=sqljdbc.jar>`.  

@@ -3,7 +3,7 @@ title: Unterstützung von Spalten mit geringer Dichte in OLE DB-Treiber für SQL
 description: Unterstützung von Spalten mit geringer Dichte in OLE DB-Treiber für SQL Server
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: oledb|features
@@ -18,13 +18,13 @@ helpviewer_keywords:
 - sparse columns, OLE DB
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ffb8b7f18cf9c1653e5c77217f1d1dd339333fcf
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: 08de456a687ffdde2889cb3bd26bd5dbfa39a5dc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sparse-columns-support-in-ole-db-driver-for-sql-server"></a>Unterstützung von Spalten mit geringer Dichte in OLE DB-Treiber für SQLServer
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -67,6 +67,6 @@ ms.lasthandoff: 04/06/2018
  Jedoch wenn **Queryout** wird verwendet, für das Exportieren und Sie Spalten mit geringer Dichte, die Elemente der Spaltensatz mit geringer Dichte nach Name verweisen, Sie können keine keinen direkten Import in eine Tabelle mit gleicher Struktur ausführen. Dies ist, da BCP Metadaten konsistent mit verwendet werden, eine **wählen \***  Vorgang für den Import und nicht zuordnen kann **Column_set** -Elementspalten diesen Metadaten. So importieren Sie **Column_set** -Elementspalten einzeln zu definieren, eine Ansicht für die Tabelle, die auf den gewünschten verweist **Column_set** Spalten, und Sie müssen den Importvorgang mithilfe der Sicht ausführen.  
   
 ## <a name="see-also"></a>Siehe auch  
- [OLE DB-Treiber für SQL Server-Programmierung](../../oledb/oledb-driver-for-sql-server-programming.md)  
+ [OLE DB-Treiber für SQL-Server](../../oledb/oledb-driver-for-sql-server.md)  
   
   

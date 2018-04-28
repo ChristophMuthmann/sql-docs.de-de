@@ -1,27 +1,28 @@
 ---
 title: SQLServerDatabaseMetaData-Elemente | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 327ba0bc-438a-494c-b119-1cd4a096bb58
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a467dca2697056235c1ac4584f6eea299d5f0e17
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: d8552b0a4e59e1eed892dae11b37daa18e85288b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlserverdatabasemetadata-members"></a>SQLServerDatabaseMetaData-Elemente
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -51,7 +52,7 @@ ms.lasthandoff: 11/18/2017
 |[dataDefinitionIgnoredInTransactions](../../../connect/jdbc/reference/datadefinitionignoredintransactions-method-sqlserverdatabasemetadata.md)|Ruft ab, ob von dieser Datenbank eine Datendefinitionsanweisung innerhalb einer Transaktion ignoriert wird.|  
 |[deletesAreDetected](../../../connect/jdbc/reference/deletesaredetected-method-sqlserverdatabasemetadata.md)|Abgerufen, und zwar unabhängig davon, ob eine sichtbare Zeile löschen, können erkannt werden, durch Aufrufen der [RowDeleted](../../../connect/jdbc/reference/rowdeleted-method-sqlserverresultset.md) Methode der [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) Klasse.|  
 |[doesMaxRowSizeIncludeBlobs](../../../connect/jdbc/reference/doesmaxrowsizeincludeblobs-method-sqlserverdatabasemetadata.md)|Ruft ab, ob der Rückgabewert für die [GetMaxRowSize](../../../connect/jdbc/reference/getmaxrowsize-method-sqlserverdatabasemetadata.md) Methode enthält die SQL-Datentypen LONGVARCHAR und LONGVARBINARY.|  
-|[getAttributes](../../../connect/jdbc/reference/getattributes-method-sqlserverdatabasemetadata.md)|Ruft eine Beschreibung des angegebenen Attributs vom angegebenen Typ für einen benutzerdefinierten Typ ab, der im angegebenen Schema und Katalog verfügbar ist.|  
+|[GetAttributes](../../../connect/jdbc/reference/getattributes-method-sqlserverdatabasemetadata.md)|Ruft eine Beschreibung des angegebenen Attributs vom angegebenen Typ für einen benutzerdefinierten Typ ab, der im angegebenen Schema und Katalog verfügbar ist.|  
 |[getBestRowIdentifier](../../../connect/jdbc/reference/getbestrowidentifier-method-sqlserverdatabasemetadata.md)|Ruft eine Beschreibung der optimalen Gruppe von Spalten einer Tabelle ab, durch die eine Zeile eindeutig identifiziert wird.|  
 |[getCatalogs](../../../connect/jdbc/reference/getcatalogs-method-sqlserverdatabasemetadata.md)|Ruft die Katalognamen ab, die auf dem Server verfügbar sind, mit dem eine Verbindung besteht.|  
 |[getCatalogSeparator](../../../connect/jdbc/reference/getcatalogseparator-method-sqlserverdatabasemetadata.md)|Ruft die **Zeichenfolge** , die diese Datenbank wird als Trennzeichen zwischen einem Katalog- und Tabellenname verwendet.|  
@@ -116,13 +117,13 @@ ms.lasthandoff: 11/18/2017
 |[getSuperTypes](../../../connect/jdbc/reference/getsupertypes-method-sqlserverdatabasemetadata.md)|Ruft eine Beschreibung der benutzerdefinierten Typhierarchien ab, die in einem bestimmten Schema in dieser Datenbank definiert sind.|  
 |[getSystemFunctions](../../../connect/jdbc/reference/getsystemfunctions-method-sqlserverdatabasemetadata.md)|Ruft eine durch Trennzeichen getrennte Liste mit Systemfunktionen ab, die für diese Datenbank verfügbar sind.|  
 |[getTablePrivileges](../../../connect/jdbc/reference/gettableprivileges-method-sqlserverdatabasemetadata.md)|Ruft eine Beschreibung der Zugriffsrechte für die einzelnen Tabellen ab, die im angegebenen Katalog, Schema oder Tabellennamenmuster verfügbar sind.|  
-|[getTables](../../../connect/jdbc/reference/gettables-method-sqlserverdatabasemetadata.md)|Ruft eine Beschreibung der Tabellen ab, die im angegebenen Katalog, Schema oder Tabellennamenmuster verfügbar sind.|  
+|[GetTables](../../../connect/jdbc/reference/gettables-method-sqlserverdatabasemetadata.md)|Ruft eine Beschreibung der Tabellen ab, die im angegebenen Katalog, Schema oder Tabellennamenmuster verfügbar sind.|  
 |[getTableTypes](../../../connect/jdbc/reference/gettabletypes-method-sqlserverdatabasemetadata.md)|Ruft die Tabellentypen ab, die in der aktuellen Datenbank verfügbar sind.|  
 |[getTimeDateFunctions](../../../connect/jdbc/reference/gettimedatefunctions-method-sqlserverdatabasemetadata.md)|Ruft eine durch Trennzeichen getrennte Liste mit den Uhrzeit- und Datumsfunktionen ab, die für diese Datenbank verfügbar sind.|  
-|[getTypeInfo](../../../connect/jdbc/reference/gettypeinfo-method-sqlserverdatabasemetadata.md)|Ruft eine Beschreibung aller standardmäßigen SQL-Typen ab, die von der aktuellen Datenbank unterstützt werden.|  
+|[GetTypeInfo](../../../connect/jdbc/reference/gettypeinfo-method-sqlserverdatabasemetadata.md)|Ruft eine Beschreibung aller standardmäßigen SQL-Typen ab, die von der aktuellen Datenbank unterstützt werden.|  
 |[getUDTs](../../../connect/jdbc/reference/getudts-method-sqlserverdatabasemetadata.md)|Ruft eine Beschreibung der benutzerdefinierten Typen ab, die in einem bestimmten Schema definiert sind.|  
-|["getURL"](../../../connect/jdbc/reference/geturl-method-sqlserverdatabasemetadata.md)|Ruft die URL für diese Datenbank ab.|  
-|[getUserName](../../../connect/jdbc/reference/getusername-method-sqlserverdatabasemetadata.md)|Ruft den Benutzernamen gemäß der Angabe für diese Datenbank ab.|  
+|[getURL](../../../connect/jdbc/reference/geturl-method-sqlserverdatabasemetadata.md)|Ruft die URL für diese Datenbank ab.|  
+|[GetUserName](../../../connect/jdbc/reference/getusername-method-sqlserverdatabasemetadata.md)|Ruft den Benutzernamen gemäß der Angabe für diese Datenbank ab.|  
 |[getVersionColumns](../../../connect/jdbc/reference/getversioncolumns-method-sqlserverdatabasemetadata.md)|Ruft eine Beschreibung der Spalten einer Tabelle ab, die automatisch aktualisiert wird, wenn ein Wert in einer Zeile aktualisiert wird.|  
 |[insertsAreDetected](../../../connect/jdbc/reference/insertsaredetected-method-sqlserverdatabasemetadata.md)|Ruft ob Einfügen einer sichtbaren Zeile durch Aufrufen der Methode erkannt werden kann [RowInserted](../../../connect/jdbc/reference/rowinserted-method-sqlserverresultset.md) Methode der [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) Klasse.|  
 |[isCatalogAtStart](../../../connect/jdbc/reference/iscatalogatstart-method-sqlserverdatabasemetadata.md)|Ruft ab, ob sich ein Katalog am Beginn eines vollqualifizierten Tabellennamens befindet.|  

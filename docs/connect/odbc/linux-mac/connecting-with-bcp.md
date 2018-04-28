@@ -2,7 +2,7 @@
 title: Herstellen einer Verbindung mit "bcp" | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: 3eca5717-e50f-40db-be16-a1cebbdfee70
 caps.latest.revision: 33
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f7e9db6a1ea636975a3f5719d9a1b3e9d5721eb6
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: badff319d1ae969d14fc14fc68d40fdd57b776eb
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="connecting-with-bcp"></a>Herstellen einer Verbindung mit bcp
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -40,7 +40,7 @@ Die [Bcp](http://go.microsoft.com/fwlink/?LinkID=190626) Dienstprogramm finden S
 > [!NOTE]  
 > Ein umgekehrter Schrägstrich "\\" auf ein Befehlszeilenargument muss entweder in Anführungszeichen oder mit Escapezeichen versehen. Beispielsweise müssen ein Zeilenumbruch als benutzerdefiniertes Zeilenabschlusszeichen angeben, Sie einen der folgenden Mechanismen verwenden:  
 >   
-> -   -r\\\n  
+> -   -R\\\n  
 > -   -r"\n"  
 > -   -r'\n'  
   
@@ -53,7 +53,7 @@ bcp AdventureWorks2008R2.Person.Address out test.dat -Usa -Pxxxx -Sxxx.xxx.xxx.x
 ## <a name="available-options"></a>Verfügbare Optionen
 In der aktuellen Version sind die folgende Syntax und Optionen verfügbar:  
 
-[*database***.**]*schema***.***table* **in** *data_file* | **out** *data_file*
+[*Datenbank ***.**]* Schema ***.*** Tabelle * **in** *Data_file* | **out** *Data_file*
 
 - -a *packet_size*  
 Gibt an, wie viele Bytes pro Netzwerkpaket an den Server bzw. vom Server gesendet werden.  
@@ -149,7 +149,7 @@ Gibt den Namen einer Datei an, in die die Ausgabe geschrieben wird, die von der 
 - -V (80 | 90 | 100)  
 Verwendet Datentypen aus einer früheren Version von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)].  
   
-- -x  
+- -X  
 Bei Verwendung mit den Optionen Format und -f format_file wird anstelle der standardmäßigen Nicht-XML-Formatdatei eine XML-basierte Formatdatei generiert.  
   
 ## <a name="see-also"></a>Siehe auch

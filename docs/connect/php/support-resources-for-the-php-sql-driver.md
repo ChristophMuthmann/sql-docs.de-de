@@ -2,7 +2,7 @@
 title: Supportressourcen für die Microsoft-Treiber für PHP für SQLServer | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: php
@@ -15,16 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - support
 ms.assetid: 6f35a38f-b260-44cb-a8ac-0a979aa2c218
-caps.latest.revision: ''
+caps.latest.revision: 39
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: de9154bc6b863da818d086e1e8614bb83b6463a9
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
-ms.translationtype: MT
+ms.openlocfilehash: cee70e18e9708e67c9f09ed204c3d2e59a4c6870
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="support-resources-for-the-microsoft-drivers-for-php-for-sql-server"></a>Supportressourcen Sie für die Microsoft-Treiber für PHP für SQLServer
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

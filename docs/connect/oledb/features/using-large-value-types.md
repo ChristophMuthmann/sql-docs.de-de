@@ -3,7 +3,7 @@ title: Große Werttypen mit | Microsoft Docs
 description: Verwenden von Datentypen mit umfangreichen Werten mit OLE DB-Treiber für SQL Server
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: oledb|features
@@ -21,13 +21,13 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, large value data types
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 252670fd1231efde3e9840ce28ab2ed2c4c42227
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: 8366d4ea0b307600f2e13a456dac8a437fd6ca45
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-large-value-types"></a>Verwenden von Datentypen mit umfangreichen Werten
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -68,11 +68,11 @@ ms.lasthandoff: 04/06/2018
   
  Wenn Sie die maximale Größe einer Spalte zu melden, meldet der OLE DB-Treiber für SQL Server:  
   
--   Die definierte maximale Größe, z. B. 2000 für ist eine **Varchar (**2000**)** Spalte, oder  
+-   Die definierte maximale Größe, z. B. 2000 für ist eine **Varchar (** 2000 **)** Spalte, oder  
   
 -   Der Wert "unlimited", der im Fall einer **varchar(max)** Spalte gleich ~ 0. Dieser Wert wird für die DBCOLUMN_COLUMNSIZE-Metadateneigenschaft festgelegt.  
   
- Die Standardkonvertierungsregeln gilt für das ein **varchar(max)** Spalte für jede Konvertierung, die für gültig ist, d. h. eine **Varchar (**2000**)** Spalte werden ebenfalls gültig für eine **varchar(max)** Spalte. Dasselbe gilt für **nvarchar(max)** und **varbinary(max)** Spalten.  
+ Die Standardkonvertierungsregeln gilt für das ein **varchar(max)** Spalte für jede Konvertierung, die für gültig ist, d. h. eine **Varchar (** 2000 **)** Spalte werden ebenfalls gültig für eine **varchar(max)** Spalte. Dasselbe gilt für **nvarchar(max)** und **varbinary(max)** Spalten.  
   
  Beim Abrufen von Datentypen mit umfangreichen Werten besteht der effizienteste Ansatz im Binden als DBTYPE_IUNKNOWN und Festlegen der Rowseteigenschaft DBPROP_ACCESSORDER auf DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS. Dadurch wird der Wert direkt ohne Zwischenspeichern aus dem Netzwerkdatenstrom übertragen, wie im folgenden Beispiel gezeigt:  
   

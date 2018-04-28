@@ -1,30 +1,33 @@
 ---
 title: GetProcedureColumns-Methode (SQLServerDatabaseMetaData) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerDatabaseMetaData.getProcedureColumns
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerDatabaseMetaData.getProcedureColumns
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 4f0df8fe-3cd6-46e4-ae3c-dc23c35676b2
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2d8fa1fbb84392dba636c8aa5649f45cd54e397d
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 457eb19095b87983e72b082f6b67945fa0f0cd31
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="getprocedurecolumns-method-sqlserverdatabasemetadata"></a>getProcedureColumns-Methode (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -75,14 +78,14 @@ public java.sql.ResultSet getProcedureColumns(java.lang.String sCatalog,
 |PROCEDURE_SCHEM|**String**|Das Schema für die gespeicherte Prozedur.|  
 |PROCEDURE_NAME|**String**|Der Name der gespeicherten Prozedur.|  
 |COLUMN_NAME|**String**|Name der Spalte.|  
-|COLUMN_TYPE|**kurze**|Der Typ der Spalte. Mögliche Werte:<br /><br /> procedureColumnUnknown (0)<br /><br /> procedureColumnIn (1)<br /><br /> procedureColumnInOut (2)<br /><br /> procedureColumnOut (4)<br /><br /> procedureColumnReturn (5)<br /><br /> procedureColumnResult (3)|  
+|COLUMN_TYPE|**short**|Der Typ der Spalte. Mögliche Werte:<br /><br /> procedureColumnUnknown (0)<br /><br /> procedureColumnIn (1)<br /><br /> procedureColumnInOut (2)<br /><br /> procedureColumnOut (4)<br /><br /> procedureColumnReturn (5)<br /><br /> procedureColumnResult (3)|  
 |DATA_TYPE|**smallint**|Der SQL-Datentyp aus "java.sql.Types".|  
 |TYPE_NAME|**String**|Der Name des Datentyps.|  
 |PRECISION|**int**|Die Gesamtanzahl von signifikanten Stellen.|  
 |LENGTH|**int**|Die Länge der Daten in Bytes.|  
-|SCALE|**kurze**|Die Anzahl der Ziffern rechts vom Dezimaltrennzeichen.|  
-|RADIX|**kurze**|Die Basis für numerische Typen.|  
-|NULLABLE|**kurze**|Gibt an, ob die Spalte einen NULL-Wert enthalten kann. Mögliche Werte:<br /><br /> procedureNoNulls (0)<br /><br /> procedureNullable (1)<br /><br /> procedureNullableUnknown (2)|  
+|SCALE|**short**|Die Anzahl der Ziffern rechts vom Dezimaltrennzeichen.|  
+|RADIX|**short**|Die Basis für numerische Typen.|  
+|NULLABLE|**short**|Gibt an, ob die Spalte einen NULL-Wert enthalten kann. Mögliche Werte:<br /><br /> procedureNoNulls (0)<br /><br /> procedureNullable (1)<br /><br /> procedureNullableUnknown (2)|  
 |REMARKS|**String**|Die Beschreibung der Prozedurspalte.<br /><br /> <br /><br /> **Hinweis:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] keinen Wert für diese Spalte zurückgibt.|  
 |COLUMN_DEF|**String**|Der Standardwert der Spalte.|  
 |SQL_DATA_TYPE|**smallint**|Diese Spalte ist identisch mit der **DATA_TYPE** Spalte, mit Ausnahme der **"DateTime"** und ISO **Intervall** Datentypen.|  

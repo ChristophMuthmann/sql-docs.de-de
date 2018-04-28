@@ -1,26 +1,27 @@
 ---
-title: "Aktualisieren von großen Datenbeispiel | Microsoft Docs"
-ms.custom: 
+title: Aktualisieren von großen Datenbeispiel | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 76ecc05f-a77d-40a2-bab9-91a7fcf17347
-caps.latest.revision: "27"
+caps.latest.revision: 27
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.openlocfilehash: 4820063233abe12d59ec961ee9b05a63c6547112
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+manager: craigg
+ms.openlocfilehash: a202f518bb743eb8a97369bc19c2f892b006a8cb
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="updating-large-data-sample"></a>Beispiel zum Aktualisieren umfangreicher Daten
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

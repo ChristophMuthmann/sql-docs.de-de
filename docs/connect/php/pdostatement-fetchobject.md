@@ -20,7 +20,7 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: b215ca5237230d497aad4d8779c3ec23ce3e4bea
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 04/16/2018
 ---
@@ -37,14 +37,14 @@ mixed PDOStatement::fetchObject([ $class_name[,$ctor_args ]] )
 ```  
   
 #### <a name="parameters"></a>Parameter  
-$class*name*: Eine optionale Zeichenfolge, die den Namen der zu erstellenden Klasse angibt. Der Standardwert ist „stdClass“.  
+$*CLASS_NAME*: eine optionale Zeichenfolge, die den Namen der zu erstellenden Klasse angibt. Der Standardwert ist „stdClass“.  
   
-$ctor*args*: Ein optionales Array mit Argumenten für einen benutzerdefinierten Klassenkonstruktor.  
+$*Ctor_args*: ein optionales Array mit Argumenten für einen benutzerdefinierten Klassenkonstruktor.  
   
 ## <a name="return-value"></a>Rückgabewert  
 Bei Erfolg wird ein Objekt mit einer Instanz der Klasse zurückgegeben. Eigenschaften sind Spalten zugeordnet. Gibt bei einem Fehler „false“ zurück.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Hinweise  
 Unterstützung für PDO wurde in Version 2.0 von [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]hinzugefügt.  
   
 ## <a name="example"></a>Beispiel  
@@ -61,7 +61,7 @@ Unterstützung für PDO wurde in Version 2.0 von [!INCLUDE[ssDriverPHP](../../in
 ?>  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Siehe auch  
 [PDOStatement-Klasse](../../connect/php/pdostatement-class.md)
 
 [PDO](http://php.net/manual/book.pdo.php)  

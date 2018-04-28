@@ -20,7 +20,7 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 8431546d6a92ec8e3e2814c851603280bddcb234
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 04/16/2018
 ---
@@ -37,12 +37,12 @@ array PDOStatement::getColumnMeta ( $column );
 ```  
   
 #### <a name="parameters"></a>Parameter  
-*: (Ganze Zahl) Die nullbasierte Nummer der Spalte, deren Metadaten Sie abrufen wollen.  
+*$conn*: (ganze Zahl) die nullbasierte Nummer der Spalte, deren Metadaten Sie abrufen möchten.  
   
 ## <a name="return-value"></a>Rückgabewert  
 Ein assoziatives Array (Schlüssel und Wert), das die Metadaten für die Spalte enthält. Im Abschnitt „Anmerkungen“ finden Sie eine Beschreibung für die Felder im Array.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Hinweise  
 Die folgende Tabelle beschreibt die Felder im durch „getColumnMeta“ zurückgegebenen Array.  
   
 |NAME|VALUES|  
@@ -51,7 +51,7 @@ Die folgende Tabelle beschreibt die Felder im durch „getColumnMeta“ zurückg
 |driver:decl_type|Gibt den SQL-Typ an, der verwendet wird, um den Spaltenwert in der Datenbank darzustellen Falls die Spalte im Resultset das Ergebnis einer Funktion ist, wird dieser Wert nicht von PDOStatement::getColumnMeta zurückgegeben.|  
 |flags|Gibt die Flags (Kennzeichnungen), die für diese Spalte eingerichtet wurden, an Immer 0.|  
 |NAME|Gibt den Namen der Spalte in der Datenbank an|  
-|-Tabelle|Gibt den Namen derjenigen Tabelle in der Datenbank an, welche die Spalte enthält Immer leer.|  
+|table|Gibt den Namen derjenigen Tabelle in der Datenbank an, welche die Spalte enthält Immer leer.|  
 |Länge|Gibt die Länge der Spalte an|  
 |precision|Gibt die numerische Genauigkeit dieser Spalte an|  
 |pdo_type|Gibt den Typ dieser Spalte an, wie durch die PDO::PARAM_* Konstanten widergespiegelt. Immer PDO::PARAM_STR (2).|  
@@ -76,7 +76,7 @@ print $metadata['name'];
 ?>  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Siehe auch  
 [PDOStatement-Klasse](../../connect/php/pdostatement-class.md)
 
 [PDO](http://php.net/manual/book.pdo.php)  

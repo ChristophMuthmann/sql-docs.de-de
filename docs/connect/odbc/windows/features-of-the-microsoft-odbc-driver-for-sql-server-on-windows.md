@@ -1,27 +1,28 @@
 ---
 title: Funktionen von Microsoft ODBC Driver for SQLServer on Windows | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 204b8ba3c81bae77c6a663e93f2b541c8aca0727
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 3ed744446edb7141a8a4b3b970ad7ec866dea794
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="features-of-the-microsoft-odbc-driver-for-sql-server-on-windows"></a>Funktionen von Microsoft ODBC Driver for SQL Server on Windows
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -49,7 +50,7 @@ Die Option "– i" gibt die Anzahl der Sekunden, bevor ein `bcp.exe` Anmeldung [
 Der ODBC-Treiber für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] unterstützt [Treiberfähiges Verbindungspooling](http://msdn.microsoft.com/library/hh405031(VS.85).aspx). Weitere Informationen finden Sie unter [Driver-Aware Connection Pooling in the ODBC Driver for SQL Server](../../../connect/odbc/windows/driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server.md).  
   
 ### <a name="asynchronous-execution-notification-method"></a>Asynchrone Ausführung (Benachrichtigungsmethode)  
-Der ODBC-Treiber für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] unterstützt [asynchrone Ausführung (Benachrichtigungsmethode)](http://msdn.microsoft.com/library/hh405038(VS.85).aspx). Ein Beispiel zur Verwendung finden Sie unter [asynchrone Ausführung &#40; Benachrichtigungsmethode &#41; Beispiel](../../../connect/odbc/windows/asynchronous-execution-notification-method-sample.md).  
+Der ODBC-Treiber für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] unterstützt [asynchrone Ausführung (Benachrichtigungsmethode)](http://msdn.microsoft.com/library/hh405038(VS.85).aspx). Ein Beispiel zur Verwendung finden Sie unter [asynchrone Ausführung &#40;Benachrichtigungsmethode&#41; Beispiel](../../../connect/odbc/windows/asynchronous-execution-notification-method-sample.md).  
   
 ### <a name="connection-resiliency"></a>Verbindungsstabilität
 Um sicherzustellen, dass die Anwendungen mit einer Microsoft Azure SQL-Datenbank verbunden sind, kann der ODBC-Treiber unter Windows Verbindungen im Leerlauf wiederherstellen. Weitere Informationen finden Sie unter [Connection Resiliency in the Windows ODBC Driver](../../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md).  
@@ -58,7 +59,7 @@ Um sicherzustellen, dass die Anwendungen mit einer Microsoft Azure SQL-Datenbank
 
 In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Native Client die `-y0` option `sqlcmd.exe` verursacht die Ausgabe bei 1 MB abgeschnitten wird, wenn die Anzeigebreite 0 wurde.
   
-Ab der ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)], besteht keine Einschränkung hinsichtlich der Datenmenge, die in einer einzelnen Spalte abgerufen werden können beim `–y0` angegeben ist. `sqlcmd.exe`streamt jetzt Spalten bis zu 2 GB ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Datentyp-Maximum).  
+Ab der ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)], besteht keine Einschränkung hinsichtlich der Datenmenge, die in einer einzelnen Spalte abgerufen werden können beim `–y0` angegeben ist. `sqlcmd.exe` streamt jetzt Spalten bis zu 2 GB ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Datentyp-Maximum).  
   
 Ein weiterer Unterschied ist, dass die Angabe sowohl `-h` und `-y0` erzeugt nun einen Fehler meldet, dass die Optionen inkompatibel sind. `-h`, die gibt die Anzahl der Zeilen an, zwischen den Spaltenüberschriften gedruckt und war noch nie mit kompatibel `-y0`, wurde ignoriert, obwohl keine Überschriften gedruckt wurden.
   

@@ -2,7 +2,7 @@
 title: Konfigurieren von IIS für die Microsoft-Treiber für PHP für SQLServer | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: php
@@ -15,16 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - configuring, Internet Information Services
 ms.assetid: d2dc75d3-9bf7-481c-85f2-8b6310b21461
-caps.latest.revision: ''
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a6d655f379963362779cb90a4f5090aa239adea4
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
-ms.translationtype: MT
+ms.openlocfilehash: 047a1af6d22d7f28f27ccc2b8f6172964d8d831d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="configuring-iis-for-the-microsoft-drivers-for-php-for-sql-server"></a>Konfigurieren von IIS für die Microsoft-Treiber für PHP für SQLServer
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -48,7 +48,7 @@ Die folgenden Links führen zu Videopräsentationen zum Einrichten von FastCGI f
 ## <a name="support-resources"></a>Supportressourcen  
 Die folgenden Foren bieten Communityunterstützung für FastCGI unter IIS:  
   
--   [FastCGI Handler](https://forums.iis.net/1103.aspx)  
+-   [FastCGI-Handler](https://forums.iis.net/1103.aspx)  
 -   [IIS 7 – FastCGI-Modul](https://forums.iis.net/1104.aspx)  
   
 ## <a name="see-also"></a>Siehe auch  

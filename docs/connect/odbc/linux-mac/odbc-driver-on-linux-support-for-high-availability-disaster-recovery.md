@@ -2,7 +2,7 @@
 title: ODBC-Treiber unter Linux und Mac OS - High Availability and Disaster Recovery | Microsoft Docs
 ms.custom: ''
 ms.date: 04/04/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -16,13 +16,13 @@ ms.assetid: fa656c5b-a935-40bf-bc20-e517ca5cd0ba
 caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e69df64ad4e5c5e5319719fe14f380c745b0aeba
-ms.sourcegitcommit: 094c46e7fa6de44735ed0040c65a40ec3d951b75
-ms.translationtype: MT
+ms.openlocfilehash: 60f3022334ca505f5ae2d3ddadba623de292f418
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="odbc-driver-on-linux-and-macos-support-for-high-availability-and-disaster-recovery"></a>ODBC-Treiber unter Linux und MacOS Unterstützung für hohe Verfügbarkeit und Wiederherstellung im Notfall
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]

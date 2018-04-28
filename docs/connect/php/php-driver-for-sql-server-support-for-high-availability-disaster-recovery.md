@@ -2,7 +2,7 @@
 title: Unterstützung für hohe Verfügbarkeit, Notfallwiederherstellung für Microsoft Drivers for PHP for SQLServer | Microsoft Docs
 ms.custom: ''
 ms.date: 04/04/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: php
@@ -16,13 +16,13 @@ ms.assetid: 73a80821-d345-4fea-b076-f4aabeb4af3e
 caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6cb7f145f14861720d11401a3d60db0ce0efcfd9
-ms.sourcegitcommit: 094c46e7fa6de44735ed0040c65a40ec3d951b75
-ms.translationtype: MT
+ms.openlocfilehash: 9d7faa964558281c21b3a5ee92736d26d8def56a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="support-for-high-availability-disaster-recovery"></a>Unterstützung für hohe Verfügbarkeit bei Notfallwiederherstellung
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

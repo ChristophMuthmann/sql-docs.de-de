@@ -1,27 +1,28 @@
 ---
-title: "Schritt 2: Erstellen eine SQL-Datenbank für die Entwicklung von ADO.NET | Microsoft Docs"
-ms.custom: 
+title: 'Schritt 2: Erstellen eine SQL-Datenbank für die Entwicklung von ADO.NET | Microsoft Docs'
+ms.custom: ''
 ms.date: 08/08/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado-net
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: dd0f6329-d379-458e-aba1-7b0b9e7277ae
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1e5c344cbe7aef66bab9b4812427b747962e46e7
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: b1c25e6c25d0ee7056e86377ab44b5f3cbf9ff5b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="step-2-create-a-sql-database-for-adonet-development"></a>Schritt 2: Erstellen einer SQL-Datenbank für die Entwicklung von ADO.NET
 

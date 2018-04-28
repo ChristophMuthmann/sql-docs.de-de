@@ -1,30 +1,33 @@
 ---
 title: GetIndexInfo-Methode (SQLServerDatabaseMetaData) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerDatabaseMetaData.getIndexInfo
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerDatabaseMetaData.getIndexInfo
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 8a677cc6-8e33-4e57-8678-0849345aa8d0
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0400e9241fa1856a33a6c483734b3f87e7285758
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 7ae3de9c4d636d27b802437b1787e6b28c31387b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="getindexinfo-method-sqlserverdatabasemetadata"></a>getIndexInfo-Methode (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +50,7 @@ public java.sql.ResultSet getIndexInfo(java.lang.String cat,
   
  Ein **Zeichenfolge** , enthält der Name des Katalogs.  
   
- *Schema*  
+ *schema*  
   
  Ein **Zeichenfolge** , die den Schemanamen enthält.  
   
@@ -55,7 +58,7 @@ public java.sql.ResultSet getIndexInfo(java.lang.String cat,
   
  Ein **Zeichenfolge** , die den Tabellennamen enthält.  
   
- *eindeutige*  
+ *Eindeutige*  
   
  **"true"** Wenn nur Indizes für individuelle Werte zurückgegeben werden. **"false"** , wenn alle Indizes zurückgegeben werden.  
   
@@ -78,12 +81,12 @@ public java.sql.ResultSet getIndexInfo(java.lang.String cat,
 |----------|----------|-----------------|  
 |TABLE_CAT|**String**|Der Name der Datenbank, in der die angegebene Tabelle befindet.|  
 |TABLE_SCHEM|**String**|Das Schema der Tabelle.|  
-|TABLE_NAME|**String**|Der Name der Tabelle.|  
+|table_name|**String**|Der Name der Tabelle.|  
 |NON_UNIQUE|**boolean**|Gibt an, ob die Indexwerte nicht eindeutig sein können.|  
 |INDEX_QUALIFIER|**String**|Der Name des Indexbesitzers. Wenn für TYPE das tableIndexStatistic-Objekt eingetragen wird, entspricht er NULL.|  
 |INDEX_NAME|**String**|Der Name des Index.|  
-|TYPE|**kurze**|Der Typ des Indexes. Mögliche Werte:<br /><br /> tableIndexStatistic (0)<br /><br /> tableIndexClustered (1)<br /><br /> tableIndexHashed (2)<br /><br /> tableIndexOther (3)|  
-|ORDINAL_POSITION|**kurze**|Die Ordinalposition der Spalte innerhalb des Indexes. Die erste Spalte im Index hat den Wert 1.|  
+|TYPE|**short**|Der Typ des Indexes. Mögliche Werte:<br /><br /> tableIndexStatistic (0)<br /><br /> tableIndexClustered (1)<br /><br /> tableIndexHashed (2)<br /><br /> tableIndexOther (3)|  
+|ORDINAL_POSITION|**short**|Die Ordinalposition der Spalte innerhalb des Indexes. Die erste Spalte im Index hat den Wert 1.|  
 |COLUMN_NAME|**String**|Name der Spalte.|  
 |ASC_OR_DESC|**String**|Der in der Indexsortierung verwendete Befehl. Mögliche Werte:<br /><br /> A (aufsteigend)<br /><br /> D (absteigend)<br /><br /> NULL (nicht anwendbar)<br /><br /> **Hinweis:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] gibt immer "A" zurück.|  
 |CARDINALITY|**int**|Die Anzahl der Zeilen in der Tabelle oder der eindeutigen Werte im Index|  

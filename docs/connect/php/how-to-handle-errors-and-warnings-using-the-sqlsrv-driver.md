@@ -2,7 +2,7 @@
 title: 'Vorgehensweise: Behandeln von Fehlern und Warnungen bei Verwendung des SQLSRV-Treibers | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: php
@@ -15,16 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - errors and warnings
 ms.assetid: fa231d60-4c06-4137-89e8-097c28638c5d
-caps.latest.revision: ''
+caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4b7e2c9157cf37ab35987ebc9bb6a4d6615f80ba
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
-ms.translationtype: MT
+ms.openlocfilehash: 7ab9bf4da5113780b66299e761eba3e58e2f98d5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-handle-errors-and-warnings-using-the-sqlsrv-driver"></a>Vorgehensweise: Fehlerbehandlung und Warnungen bei Verwendung des SQLSRV-Treibers
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

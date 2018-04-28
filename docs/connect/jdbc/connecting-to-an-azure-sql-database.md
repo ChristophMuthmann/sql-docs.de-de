@@ -1,27 +1,28 @@
 ---
 title: Herstellen einer Verbindung mit einer Azure SQL-Datenbank | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 49645b1f-39b1-4757-bda1-c51ebc375c34
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: bc0a49d5758b4e7160ecf5e9e374d4c460755161
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 7e7452a001f96b38b8e2a6047a144a82b5f957a9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="connecting-to-an-azure-sql-database"></a>Herstellen einer Verbindung mit einer Azure SQL-Datenbank
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -38,7 +39,7 @@ ms.lasthandoff: 11/18/2017
   
 ## <a name="details"></a>Details  
  Beim Herstellen einer Verbindung mit einem [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], Sie müssen eine Verbindung mit der master-Datenbank aufrufen **SQLServerDatabaseMetaData.getCatalogs**.  
- [!INCLUDE[ssAzure](../../includes/ssazure_md.md)]die Rückgabe sämtlicher Kataloge aus einer Benutzerdatenbank unterstützt nicht. **SQLServerDatabaseMetaData.getCatalogs** verwendet die sys.databases-Sicht, um die Kataloge abzurufen. Finden Sie in der Beschreibung der Berechtigungen in [sys.databases (SQL Azure-Datenbank)](http://go.microsoft.com/fwlink/?LinkId=217396) verstehen **SQLServerDatabaseMetaData.getCatalogs** Verhalten auf ein [!INCLUDE[ssAzure](../../includes/ssazure_md.md)].  
+ [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] die Rückgabe sämtlicher Kataloge aus einer Benutzerdatenbank unterstützt nicht. **SQLServerDatabaseMetaData.getCatalogs** verwendet die sys.databases-Sicht, um die Kataloge abzurufen. Finden Sie in der Beschreibung der Berechtigungen in [sys.databases (SQL Azure-Datenbank)](http://go.microsoft.com/fwlink/?LinkId=217396) verstehen **SQLServerDatabaseMetaData.getCatalogs** Verhalten auf ein [!INCLUDE[ssAzure](../../includes/ssazure_md.md)].  
   
  Getrennte Verbindungen  
  Beim Herstellen einer Verbindung mit einem [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], Verbindungen im Leerlauf können nach einem Zeitraum der Inaktivität durch eine Netzwerkkomponente (z. B. eine Firewall) getrennt werden. In diesem Kontext werden zwei Arten von inaktiven Verbindungen behandelt:  

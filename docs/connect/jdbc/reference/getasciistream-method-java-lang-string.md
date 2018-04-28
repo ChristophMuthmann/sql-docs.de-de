@@ -1,30 +1,33 @@
 ---
 title: GetAsciiStream-Methode (java.lang.String) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerResultSet.getAsciiStream (java.lang.String)
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerResultSet.getAsciiStream (java.lang.String)
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: b2d24a6b-f029-4691-981b-125c690b8ba5
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 478cf4bb8f5914024c2de383dbb59a6c13d938c5
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: b5faa3d9a3c46b8db702620a351b4a330854789f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="getasciistream-method-javalangstring"></a>getAsciiStream-Methode (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -53,7 +56,7 @@ public java.io.InputStream getAsciiStream(java.lang.String columnName)
  Diese GetAsciiStream-Methode wird von der GetAsciiStream-Methode in der java.sql.ResultSet-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Siehe auch  
- [GetAsciiStream-Methode &#40; SQLServerResultSet &#41;](../../../connect/jdbc/reference/getasciistream-method-sqlserverresultset.md)   
+ [GetAsciiStream-Methode &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getasciistream-method-sqlserverresultset.md)   
  [SQLServerResultSet-Elemente](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet-Klasse](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

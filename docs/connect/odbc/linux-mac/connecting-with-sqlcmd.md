@@ -2,7 +2,7 @@
 title: Herstellen einer Verbindung mit Sqlcmd | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: 61a2ec0d-1bcb-4231-bea0-cff866c21463
 caps.latest.revision: 45
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c08f390860a35ccbd5dd743317a52df80c05ef52
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: a1f7b720841ac3392af027a6bc23869ff832ba48
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="connecting-with-sqlcmd"></a>Herstellen einer Verbindung mit sqlcmd
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -70,7 +70,7 @@ In der aktuellen Version sind die folgenden Optionen verfügbar:
   
 - -k entfernen oder Ersetzen von Zeichen.  
   
-- **-K***application_intent*  
+- **K-*** Anwendungszweck*  
 Deklariert den Arbeitsauslastungstyp der Anwendung beim Herstellen einer Verbindung mit einem Server. Der einzige derzeit unterstützte Wert ist **ReadOnly**. Wenn **-K** nicht angegeben ist, `sqlcmd` unterstützt keine Konnektivität zu einem sekundären Replikat in einer AlwaysOn-verfügbarkeitsgruppe. Weitere Informationen finden Sie unter [ODBC-Treiber unter Linux und Mac OS - High Availability and Disaster Recovery](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md).  
   
 > [!NOTE]  
@@ -80,7 +80,7 @@ Deklariert den Arbeitsauslastungstyp der Anwendung beim Herstellen einer Verbind
 
 - m - *Error_level* Steuerung, welche Fehlermeldungen an Stdout gesendet werden.  
   
-- **-M***multisubnet_failover*  
+- **-M *** Multisubnet_failover*  
 Geben Sie immer **-M** an, wenn Sie eine Verbindung mit dem Verfügbarkeitsgruppenlistener einer [!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)]-Verfügbarkeitsgruppe oder einer [!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)]-Failoverclusterinstanz herstellen. **M -** für schnellere Erkennung von Failover und die Verbindung mit dem (gerade) aktiven Server enthält. Wenn **-M** nicht angegeben ist, ist **-M** deaktiviert. Weitere Informationen zu [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)], finden Sie unter [ODBC-Treiber unter Linux und Mac OS - High Availability and Disaster Recovery](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md).  
   
 > [!NOTE]  
@@ -96,7 +96,7 @@ Geben Sie immer **-M** an, wenn Sie eine Verbindung mit dem Verfügbarkeitsgrupp
   
 - -q: *Commandline_query* Ausführen einer Abfrage bei `sqlcmd` startet, aber nicht beendet, wenn die Abfrage ausgeführt wurde.  
 
-- -Q: *Commandline_query* Ausführen einer Abfrage bei `sqlcmd` gestartet wird. `sqlcmd`wird beendet, wenn die Abfrage abgeschlossen ist.  
+- -Q: *Commandline_query* Ausführen einer Abfrage bei `sqlcmd` gestartet wird. `sqlcmd` wird beendet, wenn die Abfrage abgeschlossen ist.  
 
 - -R leitet die Fehlermeldungen an Stderr.
 
@@ -104,7 +104,7 @@ Geben Sie immer **-M** an, wenn Sie eine Verbindung mit dem Verfügbarkeitsgrupp
   
 - -s *Column_separator_char* der Spaltentrennzeichen angeben.  
 
-- -S [*protocol*:] *server*[**,***port*]  
+- -S [*Protokoll*:] *Server*[**, *** Port*]  
 Geben Sie die Instanz des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] für die Verbindung, oder -D wird verwendet, einen DSN. Der ODBC-Treiber unter Linux und MacOS erfordert -S. Beachten Sie, dass **Tcp** ist das einzige gültige Protokoll.  
   
 - t - *Query_timeout* Geben Sie die Anzahl der Sekunden bis zum Timeout einer Befehlsklasse (oder eine SQL-Anweisung).  
@@ -216,13 +216,13 @@ Die folgenden Einträge werden in einem DSN unter Linux oder MacOS unterstützt:
 
 -   **ApplicationIntent = ReadOnly**  
 
--   **Datenbank =***Database_name*  
+-   **Datenbank = *** Database_name*  
   
 -   **Treiber Odbcdriver 11 für SQLServer =** oder **Treiber = Odbcdriver 13 für SQLServer**
   
 -   **MultiSubnetFailover = Yes**  
   
--   **Server =***Server_name_or_IP_address*  
+-   **Server = *** Server_name_or_IP_address*  
   
 -   **Trusted_Connection=yes**|**no**  
   

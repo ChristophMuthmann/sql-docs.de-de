@@ -1,30 +1,33 @@
 ---
 title: SetNull-Methode (Int, Int) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerPreparedStatement.setNull (int, int)
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerPreparedStatement.setNull (int, int)
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 7e7f08e9-278a-495a-8ce3-ca173d055021
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7b0c220199ea686774fa320fda5d0a7af977620e
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 88bb9fa892c2d6063770bf06b8d3f087ddcbf9d6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="setnull-method-int-int"></a>setNull-MethodE (int, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,7 +43,7 @@ public final void setNull(int index,
 ```  
   
 #### <a name="parameters"></a>Parameter  
- *Index*  
+ *index*  
   
  Ein **Int** , der die Parameteranzahl angibt.  
   
@@ -55,7 +58,7 @@ public final void setNull(int index,
  Diese SetNull-Methode wird von der SetNull-Methode in der java.sql.PreparedStatement-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Siehe auch  
- [SetNull-Methode &#40; SQLServerPreparedStatement &#41;](../../../connect/jdbc/reference/setnull-method-sqlserverpreparedstatement.md)   
+ [SetNull-Methode &#40;sqlserverpreparedstatement-Klasse&#41;](../../../connect/jdbc/reference/setnull-method-sqlserverpreparedstatement.md)   
  [SQLServerPreparedStatement-Elemente](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   
  [SQLServerPreparedStatement-Klasse](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)  
   

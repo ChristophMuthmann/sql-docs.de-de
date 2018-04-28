@@ -2,7 +2,7 @@
 title: Datenquellen (Assistentenbildschirm 2) (Odbcdriver for SQLServer) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/21/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -16,13 +16,13 @@ ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 caps.latest.revision: 22
 author: MightyPen
 ms.author: v-jizho2
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 624888902e260baa03ad30aee8608f921deb73a4
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
-ms.translationtype: MT
+ms.openlocfilehash: d8b1aedf25af40b9b910506afacb1a43e1c779a2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="data-source-wizard-screen-2"></a>Datenquellen-Assistent (Bildschirm 2)
 

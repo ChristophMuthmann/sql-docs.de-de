@@ -1,27 +1,27 @@
 ---
 title: Microsoft ADO.NET for SQLServer | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/08/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.component: ado-net
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 5e467fce-7237-4678-bafa-a16f32323d0c
-caps.latest.revision: 
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d43cb61fc711624a4989d37565e1a6575ccfcb17
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
-ms.translationtype: MT
+ms.openlocfilehash: feb504123320c52654088b59f290be982f0bd281
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="microsoft-adonet-for-sql-server"></a>Microsoft ADO.NET for SQL Server
 

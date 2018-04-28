@@ -1,27 +1,28 @@
 ---
 title: 'Schritt 1: Konfigurieren von Pymssql Python-Entwicklungsumgebung | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: python
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 6d392a5e-b08e-4b35-9e99-61260888fc41
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 91916f56a4bbdad46c7fc391257c4575886c28dc
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 73ebcc99421ef0afcc15d13241c6fb6ffffd10c9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="step-1-configure-development-environment-for-pymssql-python-development"></a>Schritt 1: Konfigurieren der Entwicklungsumgebung für Pymssql Python-Entwicklung
 Sie müssen Ihre Entwicklungsumgebung mit den Voraussetzungen zu konfigurieren, um die Entwicklung einer Anwendung mithilfe der Python-Treiber für SQL Server.    
@@ -31,8 +32,8 @@ Beachten Sie, dass die Python-SQL-Treiber das TDS-Protokoll verwenden, die stand
 ## <a name="windows"></a>Windows  
   
 1. **Installieren Sie Python-Laufzeit und pip-Paket-manager**  
-a. Wechseln Sie zu ["Python.org"](https://www.python.org/downloads/)  
-b. Klicken Sie auf den entsprechenden Windows Installer-Msi-Link.   
+A. Wechseln Sie zu ["Python.org"](https://www.python.org/downloads/)  
+B. Klicken Sie auf den entsprechenden Windows Installer-Msi-Link.   
 c. Einmal heruntergeladenen führen Sie die MSI-Datei zum Installieren von Python-Laufzeit  
   
 2. **Herunterladen von Pymssql Modul** aus [hier](http://www.lfd.uci.edu/~gohlke/pythonlibs/#pymssql)  
@@ -68,8 +69,8 @@ c. Einmal heruntergeladenen führen Sie die MSI-Datei zum Installieren von Pytho
 ## <a name="mac"></a>Mac  
   
 1. **Installieren Sie Python-Laufzeit und pip-Paket-manager**  
-a. Wechseln Sie zu ["Python.org"](https://www.python.org/downloads/)  
-b. Klicken Sie auf den entsprechenden Mac Installer Pkg-Link.   
+A. Wechseln Sie zu ["Python.org"](https://www.python.org/downloads/)  
+B. Klicken Sie auf den entsprechenden Mac Installer Pkg-Link.   
 c. Einmal heruntergeladenen Ausführen der Pkg Python-Laufzeit installieren  
   
 2.  **Geöffneten Terminaldienste**  

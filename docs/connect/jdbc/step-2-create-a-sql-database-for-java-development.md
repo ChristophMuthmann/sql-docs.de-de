@@ -1,27 +1,28 @@
 ---
-title: "Schritt 2: Erstellen eine SQL-Datenbank für Java Development | Microsoft Docs"
-ms.custom: 
+title: 'Schritt 2: Erstellen eine SQL-Datenbank für Java Development | Microsoft Docs'
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 7c9bfbc8-3ba6-491f-a7eb-380bb3d98b86
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: bb2c34c12189082dd7f9b96689f96cfd8da0c182
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: df0ff0260bcbabb78c497aace395448f1c44598c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="step-2-create-a-sql-database-for-java-development"></a>Schritt 2: Erstellen einer SQL-Datenbank für die Entwicklung mit Java
 [!INCLUDE[CreateDatabase](../../includes/createdatabase.md)]

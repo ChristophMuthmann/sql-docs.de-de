@@ -2,7 +2,7 @@
 title: Unterstützung von Richtlinien für OLE DB-Treiber für SQLServer | Microsoft Docs
 description: Unterstützung von Richtlinien für die OLE DB-Treiber für SQL Server
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: oledb|applications
@@ -15,16 +15,18 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 374660fdba66e5c445ae441d988a3701de548427
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: dfac5b5acd86c71787e3ee5052927d7d59969f8b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="support-policies-for-ole-db-driver-for-sql-server"></a>Richtlinien zur Unterstützung für OLE DB-Treiber für SQLServer
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   Dieser Artikel beschreibt die Verwendung verschiedener Datenzugriffskomponenten mit OLE DB-Treiber für SQL Server verwendet werden können.  
 

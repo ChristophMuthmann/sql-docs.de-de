@@ -1,30 +1,33 @@
 ---
 title: ExecuteUpdate-Methode (java.lang.String) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 02/07/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerPreparedStatement.executeUpdate (java.lang.String)
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerPreparedStatement.executeUpdate (java.lang.String)
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 91ecb1cd-001d-4ac9-9ae8-5db05c3c2959
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7a78fe10c14c54b5e2bea1cc4030a4f5d8d83fa1
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: aa8aef31d1df6798bc209fb1dbb95ef8c58cb3ce
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="executeupdate-method-javalangstring"></a>executeUpdate-Methode (java.lang.String)
 
@@ -37,7 +40,7 @@ public final int executeUpdate(java.lang.String sql)
 ```
 
 #### <a name="parameters"></a>Parameter
-*SQL*
+*sql*
 
 Ein **Zeichenfolge** , die die SQL-Anweisung enthält.
 
@@ -54,7 +57,7 @@ Beim Aufrufen dieser Methode führt eine Ausnahme ausgelöst, da die SQL-Anweisu
 
 ## <a name="see-also"></a>Siehe auch
 
-[ExecuteUpdate-Methode &#40; SQLServerPreparedStatement &#41;](./executeupdate-method-sqlserverpreparedstatement.md)
+[ExecuteUpdate-Methode &#40;sqlserverpreparedstatement-Klasse&#41;](./executeupdate-method-sqlserverpreparedstatement.md)
 
 [SQLServerPreparedStatement-Elemente](./sqlserverpreparedstatement-members.md)
 

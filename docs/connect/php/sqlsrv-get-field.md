@@ -2,7 +2,7 @@
 title: Sqlsrv_get_field | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: php
@@ -20,16 +20,16 @@ helpviewer_keywords:
 - API Reference, sqlsrv_get_field
 - retrieving data, as a single field
 ms.assetid: fa17cc56-fb38-433b-a40d-65642f04dc23
-caps.latest.revision: ''
+caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ff8f669772a8bd2ef0920992e9375c8795a7467b
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
-ms.translationtype: MT
+ms.openlocfilehash: 8822d43919fb4f6d78ebad4825b52b55c022c779
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlsrvgetfield"></a>sqlsrv_get_field
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -48,7 +48,7 @@ sqlsrv_get_field( resource $stmt, int $fieldIndex [, int $getAsType])
   
 *$fieldIndex*: Der Index des abzurufenden Felds. Indizes beginnen mit 0.  
   
-*$getAsType* [OPTIONAL]: A **SQLSRV** constant (**SQLSRV_PHPTYPE_\***) that determines the PHP data type for the returned data. Informationen zu unterstützten Datentypen finden Sie unter [Konstanten &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md). Wenn kein Rückgabetyp spezifiziert ist, wird ein PHP-Typ zurückgegeben. Informationen zu PHP-Standardtypen finden Sie unter [Default PHP Data Types](../../connect/php/default-php-data-types.md). Informationen zum Spezifizieren von PHP-Datentypen finden Sie unter [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md).  
+*$getAsType* [OPTIONAL]: ein **SQLSRV** Konstanten (**SQLSRV_PHPTYPE_\***), die den PHP-Datentyp für die zurückgegebenen Daten bestimmt. Informationen zu unterstützten Datentypen finden Sie unter [Konstanten &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md). Wenn kein Rückgabetyp spezifiziert ist, wird ein PHP-Typ zurückgegeben. Informationen zu PHP-Standardtypen finden Sie unter [Default PHP Data Types](../../connect/php/default-php-data-types.md). Informationen zum Spezifizieren von PHP-Datentypen finden Sie unter [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md).  
   
 ## <a name="return-value"></a>Rückgabewert  
 Die Felddaten. Sie können den PHP-Datentyp der zurückgegebenen Daten festlegen, indem Sie den *$getAsType* -Parameter verwenden. Falls kein Rückgabedatentyp festgelegt ist, wird der PHP-Standarddatentyp zurückgegeben. Informationen zu PHP-Standardtypen finden Sie unter [Default PHP Data Types](../../connect/php/default-php-data-types.md). Informationen zum Spezifizieren von PHP-Datentypen finden Sie unter [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md).  

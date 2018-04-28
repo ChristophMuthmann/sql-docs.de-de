@@ -2,7 +2,7 @@
 title: Systemanforderungen für die Microsoft-Treiber für PHP für SQLServer | Microsoft Docs
 ms.custom: ''
 ms.date: 03/23/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: php
@@ -15,16 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - requirements
 ms.assetid: 5db4b75f-c605-4785-9560-399a533c0fc9
-caps.latest.revision: ''
+caps.latest.revision: 93
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: f616a439b737e3228321247edab187975790bdde
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
-ms.translationtype: MT
+ms.openlocfilehash: 44a18257abc758ee910fb9c4953cbdef02239fbd
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="system-requirements-for-the-microsoft-drivers-for-php-for-sql-server"></a>Systemanforderungen für die Microsoft-Treiber für PHP für SQLServer
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -37,16 +37,16 @@ Versionen 3.1 und höher die Microsoft PHP-Treiber für SQL Server werden offizi
 
 Informationen zum Herunterladen und installieren die neueste stabilen PHP-Binärdateien finden Sie unter [der PHP-Website](http://php.net).  Microsoft Drivers for PHP for SQL Server erfordern die folgenden Versionen von PHP:
 
-|PHP für SQL Server-Treiberversion&#8594;<br />&#8595; PHP version|5.2<br />&nbsp;|4.3<br />&nbsp;|4.0<br />&nbsp;|3.2<br />&nbsp;|3.1<br />&nbsp;|
+|PHP für SQL Server-Treiberversion&#8594;<br />&#8595;PHP-version|5.2<br />&nbsp;|4.3<br />&nbsp;|4.0<br />&nbsp;|3.2<br />&nbsp;|3.1<br />&nbsp;|
 |---|---|---|---|---|---|
 |7.2|7.2.1+ unter Windows<br/>7.2.0+ auf anderen Plattformen | | | | |
 |7.1|7.1.0+ |7.1.0+ |       |        |        |
 |7.0|7.0.0+ |7.0.0+ |7.0.0+ |        |        |
-|5.6|       |       |       |5.6.4+  |        |
-|5.5|       |       |       |5.5.16+ |5.5.16+ |
+|5.6|       |       |       |5.6.4 +  |        |
+|5.5|       |       |       |5.5.16 + |5.5.16 + |
 |5.4|       |       |       |5.4.32  |5.4.32  |
 
--   Eine Version der Treiberdatei muss sich in Ihrem PHP-Erweiterungsverzeichnis befinden. Finden Sie unter [Treiberversionen](#driver-versions) Informationen zu den verschiedenen Treiberdateien.  Zum Herunterladen der Treiber, gehen Sie zu [Microsoft Drivers for PHP for SQL Server](http://www.microsoft.com/download/details.aspx?id=20098). Informationen zur Konfiguration der Treiber für PHP finden Sie unter [Loading the Microsoft Drivers for PHP for SQL Server](../../connect/php/loading-the-php-sql-driver.md).
+-   Eine Version der Treiberdatei muss sich in Ihrem PHP-Erweiterungsverzeichnis befinden. Finden Sie unter [Treiberversionen](#driver-versions) Informationen zu den verschiedenen Treiberdateien.  Zum Herunterladen der Treiber finden Sie unter [Herunterladen von Microsoft Drivers for PHP for SQL Server](download-drivers-php-sql-server.md). Informationen zur Konfiguration der Treiber für PHP finden Sie unter [Loading the Microsoft Drivers for PHP for SQL Server](../../connect/php/loading-the-php-sql-driver.md).
 
 -   Ein Webserver ist erforderlich. Ihr Webserver muss für die Ausführung von PHP konfiguriert sein. Informationen zum Hosten von PHP-Anwendungen mit IIS finden Sie unter der [Lernprogramm auf PHPs-Website](http://php.net/manual/fa/install.windows.iis.php).  
 
@@ -223,4 +223,4 @@ Unter Windows werden die folgenden Versionen des Treibers enthalten:
 
 [API-Referenz für den SQLSRV-Treiber](../../connect/php/sqlsrv-driver-api-reference.md)
 
-[PDO_SQLSRV Driver API Reference](../../connect/php/pdo-sqlsrv-driver-reference.md)  
+[API-Referenz zum Treiber PDO_SQLSRV](../../connect/php/pdo-sqlsrv-driver-reference.md)  

@@ -1,5 +1,5 @@
 ---
-title: 'Schritt 3: Machbarkeitsnachweis für Verbindungen mit SQL mithilfe von Node.js'
+title: 'Schritt 3: Machbarkeitsnachweis Herstellen einer Verbindung mit SQL mit Node.js | Microsoft Docs'
 ms.custom: ''
 ms.date: 08/08/2017
 ms.prod: sql
@@ -20,11 +20,11 @@ manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 87a0721ba0ca4448ad6f47670f315ea0877f0a71
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 04/16/2018
 ---
-# <a name="step-3-proof-of-concept-connecting-to-sql-using-nodejs"></a>Schritt 3: Machbarkeitsnachweis für Verbindungen mit SQL mithilfe von Node.js
+# <a name="step-3-proof-of-concept-connecting-to-sql-using-nodejs"></a>Schritt 3: Machbarkeitsnachweis Herstellen einer Verbindung mit SQL mit Node.js
 
 ![Download-nach-unten-Eingekreister](../../ssdt/media/download.png)[zum Herunterladen der Node.js SQL-Treiber](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
@@ -52,7 +52,7 @@ Die **neue Verbindung** Funktion dient zum Herstellen einer SQL-Datenbank.
     });  
 ```  
   
-## <a name="step-2--execute-a-query"></a>Abfrage ausführen.  
+## <a name="step-2--execute-a-query"></a>Schritt 2: Ausführen einer Abfrage  
   
   
 Alle SQL-Anweisungen werden ausgeführt, mit der **neue Request()** Funktion. Wenn die Anweisung Zeilen, z. B. eine select-Anweisung zurückgegeben werden können Sie abrufen, diese mithilfe der **request.on()** Funktion. Wenn keine Zeilen vorhanden sind, gibt die Funktion request.on() leere Listen zurück.  

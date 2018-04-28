@@ -1,28 +1,28 @@
 ---
-title: "Abhängigkeiten von Microsoft JDBC Driver für SQLServer Feature | Microsoft Docs"
-ms.custom: 
+title: Abhängigkeiten von Microsoft JDBC Driver für SQLServer Feature | Microsoft Docs
+ms.custom: ''
 ms.date: 02/28/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 939a8773-2583-49a4-bf00-6b892fbe39dc
-caps.latest.revision: 
+caps.latest.revision: 57
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 703a27220a80744c46ca0bc7667756cec1ab6596
-ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
-ms.translationtype: MT
+ms.openlocfilehash: 953e727ed3a4c05907895006c232e36a39bfa62d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="feature-dependencies-of-microsoft-jdbc-driver-for-sql-server"></a>Featureabhängigkeiten von Microsoft JDBC Driver für SQLServer
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -77,7 +77,7 @@ Bestimmte Projekte, die eine der oben genannten zwei Funktionen erfordern müsse
  ## <a name="dependency-requirements-for-the-jdbc-driver"></a>Abhängigkeitsanforderungen für den JDBC-Treiber
 
  ### <a name="azure-keyvault-feature"></a>Azure Keyvault-Feature:
-- JDBC Driver version 6.0.0 
+- JDBC Driver, Version 6.0.0 
     - Abhängigkeit-Versionen: Azure-Keyvault (Version 0.9.7), Adal4j (Version 1.3.0) herunter, und die zugehörigen Abhängigkeiten ( [Beispielanwendung](../../connect/jdbc/azure-key-vault-sample-version-6.0.0.md))
 - JDBC Driver, Version 6.2.2 und höher (einschließlich der neuesten 6.4.0)
     - Abhängigkeit-Versionen: Azure-Keyvault (Version 1.0.0), Adal4j (Version 1.4.0) herunter, und die zugehörigen Abhängigkeiten ([Beispielanwendung](../../connect/jdbc/azure-key-vault-sample-version-6.2.2.md))
@@ -87,10 +87,10 @@ Bestimmte Projekte, die eine der oben genannten zwei Funktionen erfordern müsse
 
   
  ### <a name="azure-active-directory-authentication"></a>Azure Active Directory-Authentifizierung:
-- JDBC Driver version 6.0.0 
+- JDBC Driver, Version 6.0.0 
     - Abhängigkeit-Versionen: Adal4j (Version 1.3.0), und seine Abhängigkeiten
         - In dieser Version des Treibers, Sie können eine Verbindung herstellen mit *ActiveDirectoryIntegrated* Authentifizierungsmodus nur auf ein Windows-Betriebssystem und die Verwendung von "sqljdbc_auth.dll" und Active Directory-Authentifizierungsbibliothek für SQL Server ( ADALSQL. (DLL). 
-- JDBC Driver version 6.4.0
+- JDBC Driver, Version 6.4.0
     - Abhängigkeit-Versionen: Adal4j (Version 1.4.0) und seine Abhängigkeiten
         - In dieser Version des Treibers erfordert die Anwendung keine ADALSQL verwenden. DLL. Abhängig vom Betriebsystem. Für **nicht-Windows-Betriebssystemen**, der Treiber erfordert Kerberos-Ticket mit ActiveDirectoryIntegrated Authentifizierung arbeiten. Finden Sie unter [legen Sie Kerberos-Ticket unter Windows, Linux und Macintosh](https://docs.microsoft.com/sql/connect/jdbc/connecting-using-azure-active-directory-authentication#set-kerberos-ticket-on-windows-linux-and-mac) Weitere Details. Für **Windows-Betriebssystemen**, Treiber standardmäßig überprüft, ob es sich bei "sqljdbc_auth.dll" wird geladen und erfordert keine Kerberos-Ticket Setup- oder adal4j Abhängigkeit. Wenn jedoch "sqljdbc_auth.dll" nicht geladen wurde, Treiber verhält sich genauso wie nicht-Windows-Betriebssystemen und Setup, die im folgenden Beispiel beschrieben ist, müsste: eine beispielanwendung, die mit dieser Funktion verwendbaren [hier](../../connect/jdbc/connecting-using-azure-active-directory-authentication.md) .
 

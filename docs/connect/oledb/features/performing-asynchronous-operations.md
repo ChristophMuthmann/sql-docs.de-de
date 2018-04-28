@@ -3,7 +3,7 @@ title: Ausführen von asynchronen Vorgängen | Microsoft Docs
 description: Ausführen von asynchronen Vorgängen mit OLE DB-Treiber für SQL Server
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: oledb|features
@@ -24,13 +24,13 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, asynchronous operations
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4a5cf6573afb8fc12edbc8dda425037b48c6e77f
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: 8632878f1bb3d49abc2b9a1a41d575ffb8e755e1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="performing-asynchronous-operations"></a>Ausführen asynchroner Vorgänge
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -71,7 +71,7 @@ ms.lasthandoff: 04/06/2018
  Wenn der Befehl ausgeführt hat, **IMultipleResults** genutzt werden wie gewohnt mit einer Ausnahme, die den synchronen Fall: möglicherweise wird DB_S_ASYNCHRONOUS zurückgegeben, in diesem Fall **IDBAsynchStatus** oder **ISSAsynchStatus** können verwendet werden, um zu bestimmen, wann der Vorgang abgeschlossen ist.  
   
 ## <a name="examples"></a>Beispiele  
- Im folgenden Beispiel ruft die Anwendung eine nicht blockierende Methode auf, führt andere Verarbeitungsvorgänge aus und kehrt dann zur Verarbeitung der Ergebnisse zurück. **ISSAsynchStatus::WaitForAsynchCompletion** waits on the internal event object until the asynchronously executing operation is done or the amount of time specified by *dwMilisecTimeOut* is passed.  
+ Im folgenden Beispiel ruft die Anwendung eine nicht blockierende Methode auf, führt andere Verarbeitungsvorgänge aus und kehrt dann zur Verarbeitung der Ergebnisse zurück. **Issasynchstatus:: Waitforasynchcompletion** wartet auf das interne Ereignisobjekt, bis der asynchrone Vorgang abgeschlossen ist und die Menge des angegebenen Zeitintervalls *DwMilisecTimeOut* übergeben wird.  
   
 ```  
 // Set the DBPROPVAL_ASYNCH_INITIALIZE bit in the   
@@ -112,7 +112,7 @@ if (hr == DB_S_ASYNCHRONOUS)
 }  
 ```  
   
- **ISSAsynchStatus::WaitForAsynchCompletion** waits on the internal event object until the asynchronously executing operation is done or the *dwMilisecTimeOut* value is passed.  
+ **Issasynchstatus:: Waitforasynchcompletion** wartet auf das interne Ereignisobjekt, bis der asynchrone Vorgang abgeschlossen ist oder die *DwMilisecTimeOut* Wert übergeben wird.  
   
  Im folgenden Beispiel wird die asynchrone Verarbeitung mit mehreren Resultsets veranschaulicht:  
   

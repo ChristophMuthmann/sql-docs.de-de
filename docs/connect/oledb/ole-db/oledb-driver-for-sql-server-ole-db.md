@@ -26,10 +26,10 @@ ms.author: Pedro.Lopes
 manager: jhubbard
 ms.workload: On Demand
 ms.openlocfilehash: e14bb0a5154101c8d7bc90db91e0c1d0d34f1ccf
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="ole-db-driver-for-sql-server-ole-db"></a>OLE DB-Treiber für SQLServer (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

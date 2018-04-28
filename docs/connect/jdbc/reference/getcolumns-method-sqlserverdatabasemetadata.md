@@ -1,30 +1,33 @@
 ---
 title: GetColumns-Methode (SQLServerDatabaseMetaData) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerDatabaseMetaData.getColumns
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerDatabaseMetaData.getColumns
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: f173fa5d-e114-4a37-a5c4-2baad9ff3af1
-caps.latest.revision: "39"
+caps.latest.revision: 39
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8d13702e93a5979c53a9bf8fa7e6d7beec161f83
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 7d6b0df43a82b288f475c1325c66670cf6290933
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="getcolumns-method-sqlserverdatabasemetadata"></a>getColumns-Methode (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,11 +45,11 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
 ```  
   
 #### <a name="parameters"></a>Parameter  
- *Katalog*  
+ *catalog*  
   
  Ein **Zeichenfolge** , enthält der Name des Katalogs.  
   
- *Schema*  
+ *schema*  
   
  Ein **Zeichenfolge** , die dem schemanamenmuster enthält.  
   
@@ -73,7 +76,7 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
 |----------|----------|-----------------|  
 |TABLE_CAT|**String**|Der Katalogname.|  
 |TABLE_SCHEM|**String**|Der Tabellenschemaname.|  
-|TABLE_NAME|**String**|Der Tabellenname.|  
+|table_name|**String**|Der Tabellenname.|  
 |COLUMN_NAME|**String**|Der Spaltenname.|  
 |DATA_TYPE|**smallint**|Der SQL-Datentyp aus "java.sql.Types".|  
 |TYPE_NAME|**String**|Der Name des Datentyps.|  
@@ -110,7 +113,7 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
   
  Die DATA_TYPE-Spalte wurde folgendermaßen geändert:  
   
-|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]Datentyp|Rückgabetyp in JDBC Driver 2.0 (oder, wenn es sich bei einer Verbindung mit [!INCLUDE[ssVersion2005](../../../includes/ssversion2005_md.md)]) und zugeordnete numerische Konstante|Rückgabetyp in JDBC Driver 3.0 beim Verbinden mit [!INCLUDE[ssKatmai](../../../includes/sskatmai_md.md)] oder höher|  
+|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Datentyp|Rückgabetyp in JDBC Driver 2.0 (oder, wenn es sich bei einer Verbindung mit [!INCLUDE[ssVersion2005](../../../includes/ssversion2005_md.md)]) und zugeordnete numerische Konstante|Rückgabetyp in JDBC Driver 3.0 beim Verbinden mit [!INCLUDE[ssKatmai](../../../includes/sskatmai_md.md)] oder höher|  
 |-------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------|  
 |benutzerdefinierter, 8 KB überschreitender Typ|LONGVARBINARY (-4)|VARBINARY (-3)|  
 |geography|LONGVARBINARY (-4)|VARBINARY (-3)|  
@@ -125,7 +128,7 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
   
  Die COLUMN_SIZE-Spalte wurde folgendermaßen geändert:  
   
-|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]Datentyp|Rückgabetyp in JDBC Driver 2.0|Rückgabetyp in JDBC Driver 3.0|  
+|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Datentyp|Rückgabetyp in JDBC Driver 2.0|Rückgabetyp in JDBC Driver 3.0|  
 |-------------------------------------------------------------------|------------------------------------|------------------------------------|  
 |nvarchar(max)|1073741823|2147483647 (Datenbankmetadaten)|  
 |xml|1073741823|2147483647 (Datenbankmetadaten)|  
@@ -137,13 +140,13 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
   
  Die BUFFER_LENGTH-Spalte wurde folgendermaßen geändert:  
   
-|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]Datentyp|Rückgabetyp in JDBC Driver 2.0|Rückgabetyp in JDBC Driver 3.0|  
+|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Datentyp|Rückgabetyp in JDBC Driver 2.0|Rückgabetyp in JDBC Driver 3.0|  
 |-------------------------------------------------------------------|------------------------------------|------------------------------------|  
 |benutzerdefinierter, 8 KB überschreitender Typ||2147483647|  
   
  Die TYPE_NAME-Spalte wurde folgendermaßen geändert:  
   
-|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]Datentyp|Rückgabetyp in JDBC Driver 2.0|Rückgabetyp in JDBC Driver 3.0|  
+|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Datentyp|Rückgabetyp in JDBC Driver 2.0|Rückgabetyp in JDBC Driver 3.0|  
 |-------------------------------------------------------------------|------------------------------------|------------------------------------|  
 |varchar(max)|text|varchar|  
 |varbinary(max)|image|varbinary|  
@@ -159,7 +162,7 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
   
  Die SQL_DATA_TYPE-Spalte wurde folgendermaßen geändert:  
   
-|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]Datentyp|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]2008-Datenwert in JDBC Driver 2.0|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]2008-Datenwert in JDBC Driver 3.0|  
+|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Datentyp|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 2008-Datenwert in JDBC Driver 2.0|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 2008-Datenwert in JDBC Driver 3.0|  
 |-------------------------------------------------------------------|--------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------|  
 |varchar(max)|-10|-9|  
 |nvarchar(max)|-1|-9|  

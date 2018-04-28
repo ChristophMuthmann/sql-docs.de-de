@@ -3,7 +3,7 @@ title: SSVARIANT-Struktur | Microsoft Docs
 description: SSVARIANT-Struktur in OLE DB-Treiber für SQL Server
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: ole-db-data-types
@@ -19,13 +19,13 @@ helpviewer_keywords:
 - SSVARIANT struct
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 797c10dfeabd1361395c5416f65c88a0d6c82176
-ms.sourcegitcommit: 9f4330a4b067deea396b8567747a6771f35e6eee
-ms.translationtype: MT
+ms.openlocfilehash: 1d960b83b4ad000af919c76e98b30476fb2a9ec2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ssvariant-structure"></a>SSVARIANT-Struktur
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -64,8 +64,8 @@ V_SS_DATETIMEOFFSET(pssVar).bScale = bScale;
 |------------|---------------------------|------------------------|--------------|--------------|  
 |VT|SSVARTYPE|||Gibt den Typ des Werts in der **SSVARIANT** Struktur.|  
 |bTinyIntVal|DBTYPE_UI1|**BYTE**|**VT_SS_UI1**|Unterstützt die **"tinyint"** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Datentyp.|  
-|sShortIntVal|DBTYPE_I2|**SHORT**|**VT_SS_I2**|Unterstützt die **"smallint"** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Datentyp.|  
-|lIntVal|DBTYPE_I4|**LONG**|**VT_SS_I4**|Unterstützt die **Int** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Datentyp.|  
+|sShortIntVal|DBTYPE_I2|**KURZE**|**VT_SS_I2**|Unterstützt die **"smallint"** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Datentyp.|  
+|lIntVal|DBTYPE_I4|**LANGE**|**VT_SS_I4**|Unterstützt die **Int** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Datentyp.|  
 |llBigIntVal|DBTYPE_I8|**LARGE_INTEGER**|**VT_SS_I8**|Unterstützt die **"bigint"** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Datentyp.|  
 |fltRealVal|DBTYPE_R4|**float**|**VT_SS_R4**|Unterstützt die **echte** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Datentyp.|  
 |dblFloatVal|DBTYPE_R8|**double**|**VT_SS_R8**|Unterstützt die **"float"** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Datentyp.|  
@@ -79,12 +79,12 @@ V_SS_DATETIMEOFFSET(pssVar).bScale = bScale;
 |DateTimeVal|DBTYPE_DBTIMESTAMP|**DBTIMESTAMP**|**VT_SS_DATETIME2**|Unterstützt die **datetime2** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Datentyp.<br /><br /> Beinhaltet die folgenden Member:<br /><br /> *TsDataTimeVal* (DBTIMESTAMP)<br /><br /> *bScale* (**BYTE**) gibt den Maßstab für *TsDataTimeVal* Wert.|  
 |DateTimeOffsetVal|DBTYPE_DBTIMESTAMPOFSET|**DBTIMESTAMPOFFSET**|**VT_SS_DATETIMEOFFSET**|Unterstützt die **"DateTimeOffset"** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Datentyp.<br /><br /> Beinhaltet die folgenden Member:<br /><br /> *tsoDateTimeOffsetVal* (**DBTIMESTAMPOFFSET**)<br /><br /> *bScale* (**BYTE**) gibt den Maßstab für *TsoDateTimeOffsetVal* Wert.|  
 |NCharVal|Kein entsprechender OLE DB-Typindikator.|**Struktur _NCharVal**|**VT_SS_WVARSTRING,**<br /><br /> **VT_SS_WSTRING**|Unterstützt die **Nchar** und **Nvarchar** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Datentypen.<br /><br /> Beinhaltet die folgenden Member:<br /><br /> *sActualLength* (**kurze**) gibt an, die tatsächliche Länge der Zeichenfolge an, auf dem *PwchNCharVal* Punkte. Beinhaltet nicht den abschließenden Nullwert.<br /><br /> *sMaxLength* (**kurze**) gibt die maximale Länge für die Zeichenfolge an, auf die *PwchNCharVal* Punkte.<br /><br /> *PwchNCharVal* (**WCHAR** \*) Zeiger auf die Zeichenfolge.<br /><br /> Nicht verwendete Member: *RgbReserved*, *DwReserved*, und *PwchReserved*.|  
-|CharVal|Kein entsprechender OLE DB-Typindikator.|**struct _CharVal**|**VT_SS_STRING,**<br /><br /> **VT_SS_VARSTRING**|Unterstützt die **Char** und **Varchar** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Datentypen.<br /><br /> Beinhaltet die folgenden Member:<br /><br /> *sActualLength* (**kurze**) gibt die tatsächliche Länge der Zeichenfolge an, auf dem *PchCharVal* Punkte. Beinhaltet nicht den abschließenden Nullwert.<br /><br /> *sMaxLength* (**kurze**) gibt die maximale Länge der Zeichenfolge an, auf dem *PchCharVal* Punkte.<br /><br /> *PchCharVal* (**CHAR** \*) Zeiger auf die Zeichenfolge.<br /><br /> Nicht verwendete Member:<br /><br /> *RgbReserved*, *DwReserved*, und *PwchReserved*.|  
+|CharVal|Kein entsprechender OLE DB-Typindikator.|**Struktur _CharVal**|**VT_SS_STRING,**<br /><br /> **VT_SS_VARSTRING**|Unterstützt die **Char** und **Varchar** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Datentypen.<br /><br /> Beinhaltet die folgenden Member:<br /><br /> *sActualLength* (**kurze**) gibt die tatsächliche Länge der Zeichenfolge an, auf dem *PchCharVal* Punkte. Beinhaltet nicht den abschließenden Nullwert.<br /><br /> *sMaxLength* (**kurze**) gibt die maximale Länge der Zeichenfolge an, auf dem *PchCharVal* Punkte.<br /><br /> *PchCharVal* (**CHAR** \*) Zeiger auf die Zeichenfolge.<br /><br /> Nicht verwendete Member:<br /><br /> *RgbReserved*, *DwReserved*, und *PwchReserved*.|  
 |BinaryVal|Kein entsprechender OLE DB-Typindikator.|**struct _BinaryVal**|**VT_SS_VARBINARY,**<br /><br /> **VT_SS_BINARY**|Unterstützt die **binäre** und **Varbinary** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Datentypen.<br /><br /> Beinhaltet die folgenden Member:<br /><br /> *sActualLength* (**kurze**) gibt die tatsächliche Länge für die Daten auf die *PrgbBinaryVal* Punkte.<br /><br /> *sMaxLength* (**kurze**) gibt die maximale Länge für die Daten auf die *PrgbBinaryVal* Punkte.<br /><br /> *PrgbBinaryVal* (**BYTE** \*) Zeiger auf die Binärdaten.<br /><br /> Nicht verwendete Member: *DwReserved*.|  
 |UnknownType|NICHT VERWENDET|NICHT VERWENDET|NICHT VERWENDET|NICHT VERWENDET|  
 |BLOBType|NICHT VERWENDET|NICHT VERWENDET|NICHT VERWENDET|NICHT VERWENDET|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datentypen &#40; OLE DB &#41;](../../oledb/ole-db-data-types/data-types-ole-db.md)  
+ [Datentypen & #40; OLE DB & #41;](../../oledb/ole-db-data-types/data-types-ole-db.md)  
   
   

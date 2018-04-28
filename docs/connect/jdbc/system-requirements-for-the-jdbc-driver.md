@@ -1,28 +1,28 @@
 ---
-title: "Systemanforderungen für JDBC Driver | Microsoft Docs"
-ms.custom: 
+title: Systemanforderungen für JDBC Driver | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 447792bb-f39b-49b4-9fd0-1ef4154c74ab
-caps.latest.revision: 
+caps.latest.revision: 73
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: e6a4aa824e50fd10add0b40c483b74b674e56a6e
-ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
-ms.translationtype: MT
+ms.openlocfilehash: a7ad308b0ca7ea617ab9f6e2882f800e6aa92d58
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="system-requirements-for-the-jdbc-driver"></a>Systemanforderungen für den JDBC-Treiber
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -45,7 +45,7 @@ ms.lasthandoff: 03/02/2018
 
  Ab Version 4.2 des Microsoft JDBC-Treibers für SQL Server werden das Sun Java SE Development Kit (JDK) 8.0 und die Java-Laufzeitumgebung (JRE) 8.0 unterstützt. Die Unterstützung für die Java Database Connectivity (JDBC) Spec-API wurde nun auf die JDBC 4.1 und 4.2-API ausgeweitet.  
   
- Ab Microsoft JDBC Driver 4.1 für SQL Server werden Sun Java SE Development Kit (JDK) 7.0 und Java Runtime Environment (JRE) 7.0 unterstützt.  
+ Ab dem Microsoft JDBC-Treiber 4.1 für SQL Server werden Sun Java SE Development Kit (JDK) 7.0 und Java Runtime Environment (JRE) 7.0 unterstützt.  
   
  Beginnend mit der [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)], die JDBC-treiberunterstützung für Java Database Connectivity (JDBC) Spec-API wurde erweitert, damit die JDBC 4.0-API erweitert. Die JDBC 4.0-API wurde als Bestandteil des Sun Java SE Development Kits (JDK) 6.0 und der Java Runtime Environment (JRE) 6.0 eingeführt. JDBC 4.0 ist eine Obermenge der JDBC 3.0-API.  
   
@@ -128,7 +128,7 @@ ms.lasthandoff: 03/02/2018
 |sqljdbc41.jar|4|7|7 6 5|  
   
 ## <a name="sql-server-requirements"></a>SQL Server-Anforderungen  
- Der JDBC-Treiber unterstützt Verbindungen mit Azure SQL-Datenbank und SQL Server. Microsoft JDBC Driver 4.2 und 4.1 für SQL Server werden beginnend mit SQL Server 2008 unterstützt.
+ Der JDBC-Treiber unterstützt Verbindungen mit Azure SQL-Datenbank und SQL Server. Die Microsoft JDBC-Treiber 4.2 und 4.1 für SQL Server werden beginnend mit SQL Server 2008 unterstützt.
   
 ## <a name="operating-system-requirements"></a>Betriebssystemanforderungen  
  Der JDBC-Treiber ist für die Verwendung mit einem Betriebssystem konzipiert, das die Java Virtual Machine (JVM) unterstützt. Allerdings wurden nur die Betriebssysteme Sun Solaris, SUSE Linux und Windows offiziell getestet.  

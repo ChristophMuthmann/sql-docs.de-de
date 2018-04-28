@@ -1,36 +1,37 @@
 ---
-title: "JDBC 4.1-Kompatibilität für JDBC Driver | Microsoft Docs"
-ms.custom: 
+title: JDBC 4.1-Kompatibilität für JDBC Driver | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f087fd40-8451-478e-b465-43112c711515
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a66318e837094f3558cceba29755dff913f3cb3a
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 51ddab1b033b30f7aacde2ca28f0cf8cc93e4ce2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="jdbc-41-compliance-for-the-jdbc-driver"></a>JDBC 4.1-Kompatibilität für den JDBC-Treiber
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
     
 > [!NOTE]  
->  Versionen von Microsoft JDBC Driver für SQL Server vor Version 4.2 sind mit der Java Database Connectivity API 4.0-Spezifikation kompatibel. Dieser Abschnitt trifft auf Versionen vor der Version 4.2 nicht zu.  
+>  Versionen des Microsoft JDBC-Treibers für SQL Server vor Version 4.2 sind mit der Java Database Connectivity API 4.0-Spezifikation kompatibel. Dieser Abschnitt trifft auf Versionen vor der Version 4.2 nicht zu.  
   
- Die Java Database Connectivity API 4.1-Spezifikation wird von Microsoft JDBC Driver 4.2 für SQL Server mit den folgenden API-Methoden unterstützt.  
+ Die Java Database Connectivity API 4.1-Spezifikation wird vom Microsoft JDBC-Treiber 4.2 für SQL Server mit den folgenden API-Methoden unterstützt.  
   
  **SQLServerConnection-Klasse**  
   
@@ -54,13 +55,13 @@ ms.lasthandoff: 11/18/2017
 |void closeOnCompletion()|Gibt an, dass diese Anweisung geschlossen wird, wenn alle ihre abhängigen Resultsets geschlossen werden.|Wird wie unter der java.sql.Statement-Schnittstelle beschrieben implementiert. Weitere Informationen finden Sie unter [java.sql.Statement](http://docs.oracle.com/javase/7/docs/api/java/sql/Statement.html).|  
 |boolean isCloseOnCompletion()|Gibt einen Wert zurück, der anzeigt, ob diese Anweisung geschlossen wird, wenn alle ihre abhängigen Resultsets geschlossen werden.|Wird wie unter der java.sql.Statement-Schnittstelle beschrieben implementiert. Weitere Informationen finden Sie unter [java.sql.Statement](http://docs.oracle.com/javase/7/docs/api/java/sql/Statement.html).|  
   
- Die Java Database Connectivity API 4.1-Spezifikation wird von Microsoft JDBC Driver 4.2 für SQL Server mit den folgenden Funktionen unterstützt.  
+ Die Java Database Connectivity API 4.1-Spezifikation wird vom Microsoft JDBC-Treiber 4.2 für SQL Server mit den folgenden Funktionen unterstützt.  
   
 |Neue Funktion|Description|  
 |-----------------|-----------------|  
 |Neue Escape-Funktion<br /><br /> Limited Return Rows Escape|Teilweise unterstützt<br /><br /> Escape-Syntax: LIMIT \<Zeilen > [OFFSET < Row_offset >](using-sql-escape-sequences.md).|  
   
- Die Java Database Connectivity API 4.1-Spezifikation wird von Microsoft JDBC Driver 4.2 für SQL Server mit den folgenden Datentypzuordnungen unterstützt.  
+ Die Java Database Connectivity API 4.1-Spezifikation wird vom Microsoft JDBC-Treiber 4.2 für SQL Server mit den folgenden Datentypzuordnungen unterstützt.  
   
 |Datentypzuordnungen|Description|  
 |------------------------|-----------------|  

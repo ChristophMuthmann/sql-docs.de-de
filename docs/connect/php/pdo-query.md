@@ -2,7 +2,7 @@
 title: 'PDO:: Query | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: php
@@ -13,16 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f6f5e6d4-8ca9-4f06-89ed-de65ad3952a2
-caps.latest.revision: ''
+caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b0ca9c3ffb50dc24d70f4db143d665a20794f65d
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
-ms.translationtype: MT
+ms.openlocfilehash: 93485e84b2e65ecbf7ab28ee23d8422e889b4554
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="pdoquery"></a>PDO::query
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -39,7 +39,7 @@ PDOStatement PDO::query ($statement[, $fetch_style);
 #### <a name="parameters"></a>Parameter  
 *$statement*: Die SQL-Anweisung, die Sie ausführen möchten.  
   
-*$Fetch_style*: die optionalen Anweisungen zum Ausführen der Abfrage. Weitere Details finden Sie im Abschnitt „Anmerkungen“. $*fetch_style* in PDO::query can be overridden with $*fetch_style* in PDO::fetch.  
+*$Fetch_style*: die optionalen Anweisungen zum Ausführen der Abfrage. Weitere Details finden Sie im Abschnitt „Anmerkungen“. $*Fetch_style* in PDO:: Query kann mit $ überschrieben werden*Fetch_style* in PDO:: Fetch.  
   
 ## <a name="return-value"></a>Rückgabewert  
 Wenn der Aufruf erfolgreich ist, gibt PDO::query ein PDOStatement-Objekt zurück. Wenn der Aufruf fehlschlägt, löst PDO::query ein PDOException-Objekt aus oder gibt „false“ zurück, abhängig von der Einstellung für PDO::ATTR_ERRMODE.  
@@ -58,7 +58,7 @@ Sie können die folgenden Optionen angeben, für die $*Fetch_style*.
 |---------|---------------|  
 |PDO::FETCH_COLUMN, *num*|Abfragen von Daten in der angegebenen Spalte. Die erste Spalte in der Tabelle ist die Spalte „0“.|  
 |PDO:: fetch_class, '*Classname*', Array ( *Arglist* )|Erstellt eine Instanz einer Klasse und weist Eigenschaften in der Klasse Spaltennamen zu. Wenn der Konstruktor der Klasse einen oder mehrere Parameter akzeptiert, können Sie auch eine *arglist*übergeben.|  
-|PDO::FETCH_CLASS, '*classname*'|Weist Eigenschaften in einer vorhandenen Klasse Spaltennamen zu|  
+|PDO:: fetch_class, '*Classname*"|Weist Eigenschaften in einer vorhandenen Klasse Spaltennamen zu|  
   
 Rufen Sie vor dem erneuten Aufrufen von PDO::query das PDOStatement::closeCursor auf, um zum PDOSTATEMENT-Objekt gehörende Datenbankressourcen freizugeben.  
   

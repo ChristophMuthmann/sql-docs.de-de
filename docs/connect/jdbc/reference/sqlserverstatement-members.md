@@ -1,27 +1,28 @@
 ---
 title: SQLServerStatement-Elemente | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 828cbaa9-ea7a-4986-95c3-5ba0d7d01d83
-caps.latest.revision: "28"
+caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5cdce6c1ac993fc36b861e9ec6d87926e1a7661a
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 07071e2e84736ba7014c72e62f054af3829c4458
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlserverstatement-members"></a>SQLServerStatement-Elemente
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -45,11 +46,11 @@ ms.lasthandoff: 11/18/2017
 |Name|Description|  
 |----------|-----------------|  
 |[addBatch](../../../connect/jdbc/reference/addbatch-method-sqlserverstatement.md)|Fügt den angegebenen SQL-Befehl der aktuellen Liste mit Befehlen für dieses [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) Objekt.|  
-|[Abbrechen](../../../connect/jdbc/reference/cancel-method-sqlserverstatement.md)|Bricht die SQL-Anweisung, die derzeit von diesem ausgeführt wird [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) Objekt.|  
+|[cancel](../../../connect/jdbc/reference/cancel-method-sqlserverstatement.md)|Bricht die SQL-Anweisung, die derzeit von diesem ausgeführt wird [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) Objekt.|  
 |[clearBatch](../../../connect/jdbc/reference/clearbatch-method-sqlserverstatement.md)|Leert die aktuelle Liste der SQL-Befehlen für dieses [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) Objekt.|  
 |[clearWarnings](../../../connect/jdbc/reference/clearwarnings-method-sqlserverstatement.md)|Löscht alle Warnungen, die für dieses gemeldet werden [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) Objekt.|  
-|[Schließen Sie](../../../connect/jdbc/reference/close-method-sqlserverstatement.md)|Dies frei [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) objektspezifischen Datenbank- und JDBC-Ressourcen sofort gewartet, sondern deren automatische Freigabe sein.|  
-|[Führen Sie](../../../connect/jdbc/reference/execute-method-sqlserverstatement.md)|Führt die angegebene SQL-Anweisung aus. Hierbei können mehrere Ergebnisse zurückgegeben werden.|  
+|[close](../../../connect/jdbc/reference/close-method-sqlserverstatement.md)|Dies frei [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) objektspezifischen Datenbank- und JDBC-Ressourcen sofort gewartet, sondern deren automatische Freigabe sein.|  
+|[execute](../../../connect/jdbc/reference/execute-method-sqlserverstatement.md)|Führt die angegebene SQL-Anweisung aus. Hierbei können mehrere Ergebnisse zurückgegeben werden.|  
 |[executeBatch](../../../connect/jdbc/reference/executebatch-method-sqlserverstatement.md)|Übermittelt einen Befehlsbatch zur Ausführung an die Datenbank. Werden alle Befehle erfolgreich ausgeführt, wird ein Array mit Updatezählungen zurückgegeben.|  
 |[executeQuery](../../../connect/jdbc/reference/executequery-method-sqlserverstatement.md)|Führt die angegebene SQL-Anweisung und gibt ein einzelnes [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) Objekt.|  
 |[executeUpdate](../../../connect/jdbc/reference/executeupdate-method-sqlserverstatement.md)|Führt die angegebene SQL-Anweisung aus. Hierbei kann es sich um eine Anweisung vom Typ "INSERT", "UPDATE", "MERGE" oder "DELETE" oder um eine SQL-Anweisung handeln, von der nichts zurückgegeben wird (beispielsweise eine SQL-DDL-Anweisung).|  
@@ -80,7 +81,7 @@ ms.lasthandoff: 11/18/2017
 |[setPoolable](../../../connect/jdbc/reference/setpoolable-method-sqlserverstatement.md)|Sendet eine Anforderung, dass dem Pool eine Anweisung hinzugefügt bzw. nicht hinzugefügt werden soll.|  
 |[setQueryTimeout](../../../connect/jdbc/reference/setquerytimeout-method-sqlserverstatement.md)|Legt die Anzahl der Sekunden, die der Treiber wartet eine [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) -Objekt, auf die angegebene Anzahl von Sekunden ausgeführt.|  
 |[setResponseBuffering](../../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md)|Legt den antwortpuffermodus für dieses [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) -Objekt, Groß-/Kleinschreibung **vollständige Zeichenfolge** oder **adaptive**.|  
-|[Entpacken](../../../connect/jdbc/reference/unwrap-method-sqlserverstatement.md)|Gibt ein Objekt, das für den Zugriff auf die angegebene Schnittstelle implementiert die [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]-spezifischen Methoden.|  
+|[unwrap](../../../connect/jdbc/reference/unwrap-method-sqlserverstatement.md)|Gibt ein Objekt, das für den Zugriff auf die angegebene Schnittstelle implementiert die [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]-spezifischen Methoden.|  
   
 ## <a name="inherited-methods"></a>Geerbte Methoden  
   

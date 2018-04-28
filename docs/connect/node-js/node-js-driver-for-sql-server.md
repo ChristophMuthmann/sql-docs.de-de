@@ -2,7 +2,7 @@
 title: Node.js-Treiber für SQLServer | Microsoft Docs
 ms.custom: ''
 ms.date: 08/08/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.component: node-js
 ms.reviewer: ''
@@ -12,16 +12,16 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: c4cdbfa6-9b73-4b72-a1a6-e1b45d8a773d
-caps.latest.revision: ''
+caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 5cf72af4ebd9b00c06b80a64cd6f3017d9cd4a63
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
-ms.translationtype: MT
+ms.openlocfilehash: 66682188467eaac9305a991765166532877f0050
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="nodejs-driver-for-sql-server"></a>Node.js-Treiber für SQLServer
 

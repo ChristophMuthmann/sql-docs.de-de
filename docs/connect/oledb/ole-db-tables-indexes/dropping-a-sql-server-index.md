@@ -3,7 +3,7 @@ title: Löschen eines SQL Server-Index | Microsoft Docs
 description: Löschen eines Sql Server-Index mithilfe von OLE DB-Treiber für SQL Server
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: ole-db-tables-indexes
@@ -22,13 +22,13 @@ helpviewer_keywords:
 - indexes [OLE DB]
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b16b3ece0b28951beee1800216897468e21e87ab
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: cb7ae86dd4b4398a8fc683158bc92ff03f3872f8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="dropping-a-sql-server-index"></a>Löschen eines SQL Server-Index
 

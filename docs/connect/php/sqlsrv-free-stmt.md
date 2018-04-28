@@ -2,7 +2,7 @@
 title: Sqlsrv_free_stmt | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: php
@@ -19,16 +19,16 @@ helpviewer_keywords:
 - sqlsrv_free_stmt
 - API Reference, sqlsrv_free_stmt
 ms.assetid: 3c71f432-36ad-41e1-8ac7-587c82539448
-caps.latest.revision: ''
+caps.latest.revision: 21
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2debeb602c6432a273ae194dd2715a8e8d5239bd
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
-ms.translationtype: MT
+ms.openlocfilehash: 5d5f997eafd07cfb59c3825f672a10e1bf94c084
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlsrvfreestmt"></a>sqlsrv_free_stmt
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

@@ -2,7 +2,7 @@
 title: Verbindungsoptionen | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: php
@@ -13,16 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 6d1ea295-8e34-438e-8468-4bbc0f76192c
-caps.latest.revision: ''
+caps.latest.revision: 37
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e9e8d87f7c1da0574264744459070a04b9b959e2
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
-ms.translationtype: MT
+ms.openlocfilehash: 9a8047220d7f09f9a3dea6e750886c13138bdf58
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="connection-options"></a>Verbindungsoptionen
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -40,7 +40,7 @@ Dieses Thema enthält die Optionen, die im assoziativen Array zulässig sind (be
 |ColumnEncryption<br /><br />(nur in Windows unterstützt)|**Aktiviert** oder **deaktiviert**|Gibt an, ob die Funktion Always Encrypted oder nicht aktiviert ist. |Disabled|  
 |ConnectionPooling|1 oder **true** , um Verbindungspooling zu aktivieren.<br /><br />0 oder **false** , um Verbindungspooling zu deaktivieren.|Gibt an, ob die Verbindung aus einem Verbindungspool zugewiesen wird (1 oder **"true"**) oder nicht (0 oder **"false"**).<sup> 1</sup>|**"true"** (1)|  
 |ConnectRetryCount|Ganze Zahl zwischen 0 und 255 (inklusiv)|Die maximale Anzahl der Versuche vor dem Allgemeinheit eine unterbrochene Verbindung her. Standardmäßig wird ein einzelner Versuch unternommen, bei unterteilt eine Verbindung her. Der Wert 0 bedeutet, dass keine erneute Verbindung erneut versucht wird.|1|  
-|ConnectRetryInterval|Ganze Zahl zwischen 1 und 60 (inklusiv)|Die Zeit in Sekunden zwischen den versuchen, eine Verbindung wiederherzustellen. Die Anwendung versucht, die sofort erneut eine Verbindung herzustellen, eine unterbrochene Verbindung wird erkannt, und wartet dann Connectionretryinterval Sekunden, bevor Sie es erneut zu versuchen. Dieses Schlüsselwort wird ignoriert, wenn ConnectRetryCount gleich 0 ist.|1|  
+|Connectionretryinterval|Ganze Zahl zwischen 1 und 60 (inklusiv)|Die Zeit in Sekunden zwischen den versuchen, eine Verbindung wiederherzustellen. Die Anwendung versucht, die sofort erneut eine Verbindung herzustellen, eine unterbrochene Verbindung wird erkannt, und wartet dann Connectionretryinterval Sekunden, bevor Sie es erneut zu versuchen. Dieses Schlüsselwort wird ignoriert, wenn ConnectRetryCount gleich 0 ist.|1|  
 |Datenbank|String|Gibt den Namen der Datenbank in der Verwendung für die herzustellende Verbindung<sup>2</sup>.|Die Standarddatenbank, die für die Anmeldung verwendet wird.|  
 |Treiber|String|Gibt den Microsoft ODBC-Treiber, die zur Kommunikation mit SQL Server verwendet.<br /><br />Folgende Werte sind möglich:<br />ODBC-Treiber 17 für SQLServer<br />Odbcdriver 13 for SQLServer<br />Odbcdriver 11 für SQLServer (nur Windows).|Wenn das Driver-Schlüsselwort nicht angegeben ist, versucht Microsoft Drivers for PHP for SQL Server im System, das Vorhandensein der unterstützten Microsoft ODBC-Treiber suchen beginnend mit der neuesten Version von ODBC und so weiter.|  
 |Encrypt|1 oder **true** , um Verschlüsselung zu aktivieren.<br /><br />0 oder **false** , um Verschlüsselung zu deaktivieren.|Gibt an, ob die Kommunikation mit SQL Server verschlüsselt (1 oder **"true"**) oder unverschlüsselt (0 oder **"false"**)<sup>3</sup>.|**"false"** (0)|  

@@ -2,7 +2,7 @@
 title: Installieren von Microsoft ODBC Driver für SQL Server unter Linux und MacOS | Microsoft Docs
 ms.custom: ''
 ms.date: 04/04/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
 caps.latest.revision: 69
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 44afb66dfdc98ea2160f54d394f48e1ce03df1cd
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
-ms.translationtype: MT
+ms.openlocfilehash: 9819122fd8a0ca50a31d3a97465aaa2f32e37b56
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="installing-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>Installieren von Microsoft ODBC Driver for SQL Server unter Linux und macOS
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -374,7 +374,7 @@ Jedes dieser Pakete wiederum ihre eigenen Abhängigkeiten aufweist, die nicht un
 
 Es ist auch für alle abhängigen Pakete manuell herunterladen gemeinsam auf dem Installationscomputer zu platzieren, und installieren jedes Paket manuell wiederum Schlichten mit der [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13-Paket.
 
-#### <a name="redhat-linux-enterprise-server-7"></a>Redhat Linux Enterprise Server 7
+#### <a name="redhat-linux-enterprise-server-7"></a>RedHat Linux Enterprise Server 7
   - Laden Sie das aktuelle `msodbcsql` `.rpm` von hier aus: http://packages.microsoft.com/rhel/7/prod/
   - Installieren von Abhängigkeiten und der Treiber
   

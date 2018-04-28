@@ -1,30 +1,33 @@
 ---
 title: SetDouble-Methode (SQLServerCallableStatement) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerCallableStatement.setDouble
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerCallableStatement.setDouble
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: c054bb84-1292-4b70-b574-2ae189cd4e68
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8577c12fa02dae5c44b93f96493e760d0a6e39b0
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: d3456f8ddf7d3ebd724c2b3d7814f66bfc40b7d8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="setdouble-method-sqlservercallablestatement"></a>setDouble-Methode (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +47,7 @@ public void setDouble(java.lang.String sCol,
   
  Ein **Zeichenfolge** , die den Namen des Parameters enthält.  
   
- *d*  
+ *D*  
   
  Ein **doppelte** Wert.  
   

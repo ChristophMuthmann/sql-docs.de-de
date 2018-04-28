@@ -1,5 +1,5 @@
 ---
-title: 'Schritt 3: Machbarkeitsnachweis für Verbindungen mit SQL mithilfe von Ruby'
+title: 'Schritt 3: Machbarkeitsnachweis Herstellen einer Verbindung mit SQL Ruby mit | Microsoft Docs'
 ms.custom: ''
 ms.date: 08/08/2017
 ms.prod: sql
@@ -20,11 +20,11 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 925c3385ce112d8aa86381e8d5ea6924e4173a3b
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 04/16/2018
 ---
-# <a name="step-3-proof-of-concept-connecting-to-sql-using-ruby"></a>Schritt 3: Machbarkeitsnachweis für Verbindungen mit SQL mithilfe von Ruby
+# <a name="step-3-proof-of-concept-connecting-to-sql-using-ruby"></a>Schritt 3: Machbarkeitsnachweis Herstellen einer Verbindung mit SQL mit Ruby
 
 In diesem Beispiel soll ein Proof of Concept nur berücksichtigt werden.  Der Beispielcode ist aus Gründen der Übersichtlichkeit vereinfacht und von Microsoft empfohlene bewährte Methoden stellt nicht notwendigerweise dar.  
   
@@ -39,7 +39,7 @@ Die [TinyTDS::Client](https://github.com/rails-sqlserver/tiny_tds) Funktion dien
     database: 'AdventureWorks', azure:true  
 ```  
   
-## <a name="step-2--execute-a-query"></a>Abfrage ausführen.  
+## <a name="step-2--execute-a-query"></a>Schritt 2: Ausführen einer Abfrage  
   
 Kopieren Sie den folgenden Code in eine leere Datei. Rufen Sie diese test.rb. Dann führen sie durch Eingabe des folgenden Befehls von der Befehlszeile aus:  
   

@@ -1,28 +1,28 @@
 ---
-title: "Grundlegendes zur Java EE-Unterstützung | Microsoft Docs"
-ms.custom: 
+title: Grundlegendes zur Java EE-Unterstützung | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a9448b80-b7a3-49cf-8bb4-322c73676005
-caps.latest.revision: 
+caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cb98529d22b17ad21bfcab786064a8c8882f3b5b
-ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
-ms.translationtype: MT
+ms.openlocfilehash: ff6d631ec236a861fb00d4107cc9f04078449c53
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="understanding-java-ee-support"></a>Grundlegendes zur Java EE-Unterstützung
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

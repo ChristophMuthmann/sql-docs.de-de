@@ -1,27 +1,28 @@
 ---
 title: GetNClob-Methode (SQLServerCallableStatement) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 9a86daeb-03b2-45ef-82d3-495f33fb0113
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5a6043db54e9c22b96aa47a9f713b8a2f579f1e9
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 63743c8dcab04e0311f6d970d27ccb03a1299d74
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="getnclob-method-sqlservercallablestatement"></a>getNClob-Methode (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -32,8 +33,8 @@ ms.lasthandoff: 11/18/2017
   
 |Name|Description|  
 |----------|-----------------|  
-|[GetNClob-Methode &#40; Int &#41;](../../../connect/jdbc/reference/getnclob-method-int.md)|Ruft den Wert des angegebenen JDBC **NCLOB** Parameter als ein **NClob** Objekt in der Programmiersprache Java ab.|  
-|[GetNClob-Methode, #40;java.lang.String &#41;](../../../connect/jdbc/reference/getnclob-method-java-lang-string.md)|Ruft den Wert des einem JDBC **NCLOB** Parameter als ein **NClob** Objekt in der Programmiersprache Java ab.|  
+|[GetNClob-Methode &#40;Int&#41;](../../../connect/jdbc/reference/getnclob-method-int.md)|Ruft den Wert des angegebenen JDBC **NCLOB** Parameter als ein **NClob** Objekt in der Programmiersprache Java ab.|  
+|[GetNClob-Methode &#40;java.lang.String&#41;](../../../connect/jdbc/reference/getnclob-method-java-lang-string.md)|Ruft den Wert des einem JDBC **NCLOB** Parameter als ein **NClob** Objekt in der Programmiersprache Java ab.|  
   
 ## <a name="see-also"></a>Siehe auch  
  [SQLServerCallableStatement-Elemente](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   

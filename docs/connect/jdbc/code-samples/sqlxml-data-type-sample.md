@@ -1,26 +1,27 @@
 ---
-title: "Beispiel für SQLXML-Datentyp | Microsoft Docs"
-ms.custom: 
+title: Beispiel für SQLXML-Datentyp | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 8f2ff25b-71fd-46d7-b6de-d656095d2aad
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.openlocfilehash: ffd9ba36871ff40eca7b61b02503f979d9aa30c7
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+manager: craigg
+ms.openlocfilehash: f801dc34c49036154479625e1cae98ade83ca684
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlxml-data-type-sample"></a>SQLXML Datenbeispiel-Typ
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -61,6 +62,6 @@ ms.lasthandoff: 11/18/2017
  [!code[JDBC#UsingSQLXML1](../../../connect/jdbc/codesnippet/Java/sqlxml-data-type-sample_1.java)]  
   
 ## <a name="see-also"></a>Siehe auch  
- [Arbeiten mit Datentypen &#40; JDBC &#41;](../../../connect/jdbc/working-with-data-types-jdbc.md)  
+ [Arbeiten mit Datentypen &#40;JDBC&#41;](../../../connect/jdbc/working-with-data-types-jdbc.md)  
   
   

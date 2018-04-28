@@ -1,5 +1,5 @@
 ---
-title: 'Schritt 1: Konfigurieren der Entwicklungsumgebung für PHP-Entwicklung'
+title: 'Schritt 1: Konfigurieren der Entwicklungsumgebung für PHP-Entwicklung | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -20,7 +20,7 @@ manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 962d90c76bfbb6022fa7b9fff05d721c03ed8fce
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 04/16/2018
 ---

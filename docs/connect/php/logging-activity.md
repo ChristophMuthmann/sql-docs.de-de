@@ -22,7 +22,7 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: ec9c672009668d8320380dd6163de7e5ccc61270
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 04/16/2018
 ---
@@ -43,7 +43,7 @@ pdo_sqlsrv.log_severity = <number>
   
 Für**log_severity** sind die folgenden Werte möglich.  
   
-|value|Description|  
+|Wert|Beschreibung|  
 |---------|---------------|  
 |0|Die Protokollierung ist deaktiviert (Standardeinstellung, wenn nichts definiert ist).|  
 |-1|Gibt an, dass Fehler, Warnungen und Hinweise protokolliert werden.|  
@@ -51,18 +51,18 @@ Für**log_severity** sind die folgenden Werte möglich.
 |2|Gibt an, dass Warnungen protokolliert werden.|  
 |4|Gibt an, dass Hinweise protokolliert werden.|  
   
-Protokollierungsinformationen werden der „phperrors.log“-Datei hinzugefügt.  
+Protokollieren von Informationen wird der "phperrors.log"-Datei hinzugefügt.  
   
 PHP liest die Konfigurationsdatei bei der Initialisierung und speichert die Daten in einem Cache. Außerdem stellt es eine API bereit, um die Einstellungen, die in die Konfigurationsdatei geschrieben werden, zu updaten und sofort zu verwenden. Mit dieser API können Anwendungsskripts die Einstellungen auch nach der PHP-Initialisierung ändern.  
   
 ## <a name="logging-activity-using-the-sqlsrv-driver"></a>Protokollieren von Aktivitäten mit dem SQLSRV-Treiber  
-Um die Protokollierung zu aktivieren, können Sie die [sqlsrv_configure](../../connect/php/sqlsrv-configure.md) -Funktion verwenden oder die „php.ini“-Datei ändern. Sie können Aktivitäten protokollieren, die in Initialisierungen, Verbindungen, Anweisungen oder Fehlerfunktionen auftreten. Sie können auch angeben, ob Fehler, Warnungen, Hinweise oder alle drei protokolliert werden sollen.  
+Um die Protokollierung aktivieren, können Sie die [Sqlsrv_configure](../../connect/php/sqlsrv-configure.md) -Funktion verwenden oder die "PHP.ini"-Datei ändern. Sie können Aktivitäten protokollieren, die in Initialisierungen, Verbindungen, Anweisungen oder Fehlerfunktionen auftreten. Sie können auch angeben, ob Fehler, Warnungen, Hinweise oder alle drei protokolliert werden sollen.  
   
 > [!NOTE]  
 > Sie können den Speicherort der Protokolldatei in der Datei „php.ini“ konfigurieren.  
   
 ### <a name="turning-logging-on"></a>Aktivieren der Protokollierung  
-Sie können die Protokollierung mit der [sqlsrv_configure](../../connect/php/sqlsrv-configure.md) -Funktion aktivieren, um einen Wert für die **LogSubsystems** -Einstellung anzugeben. Zum Beispiel konfiguriert die folgende Codezeile den Treiber zur Protokollierung von Aktivitäten bei Verbindungen:  
+Protokollierung aktiviert, mithilfe der [Sqlsrv_configure](../../connect/php/sqlsrv-configure.md) Funktion an einen Wert für die **LogSubsystems** Einstellung. Zum Beispiel konfiguriert die folgende Codezeile den Treiber zur Protokollierung von Aktivitäten bei Verbindungen:  
   
 `sqlsrv_configure("LogSubsystems", SQLSRV_LOG_SYSTEM_CONN);`  
   
@@ -77,25 +77,25 @@ Die folgende Tabelle beschreibt die Konstanten, die als Wert für die **LogSubsy
 |SQLSRV_LOG_SYSTEM_STMT (4)|Aktiviert die Protokollierung der Anweisungsaktivität.|  
 |SQLSRV_LOG_SYSTEM_UTIL (8)|Aktiviert die Protokollierung der Fehlerfunktionsaktivität (z. B. Handle_error und Handle_warning).|  
   
-Sie können mehr als einen Wert gleichzeitig für die **LogSubsystems**-Einstellung mithilfe des logischen OR-Operators () festlegen. Die folgende Codezeile aktiviert z. B. die Protokollierung der Aktivität für Verbindungen und Anweisungen:  
+Sie können mehr als einen Wert festlegen, zu einem Zeitpunkt für die **LogSubsystems** mithilfe des logischen OR-Operators (|) festlegen. Die folgende Codezeile aktiviert z. B. die Protokollierung der Aktivität für Verbindungen und Anweisungen:  
   
 `sqlsrv_configure("LogSubsystems", SQLSRV_LOG_SYSTEM_CONN | SQLSRV_LOG_SYSTEM_STMT);`  
   
-Sie können auch die Protokollierung durch Angeben eines ganzzahligen Werts für die **LogSubsystems** -Einstellung in der Datei „php.ini“ aktivieren. Zum Beispiel wird durch Hinzufügen der folgenden Zeile des `[sqlsrv]` -Abschnitts der „php.ini“-Datei die Protokollierung der Verbindungsaktivität aktiviert.  
+Sie können auch auf die Protokollierung aktivieren, durch Angeben eines ganzzahligen Werts für die **LogSubsystems** in der Datei "PHP.ini" festlegen. Z. B. die folgende Zeile zum Hinzufügen der `[sqlsrv]` -Abschnitts der "PHP.ini"-Datei die Protokollierung der Verbindungsaktivität aktiviert:  
   
 `sqlsrv.LogSubsystems = 2`  
   
-Durch die Addition von ganzzahligen Werten können Sie mehrere Optionen gleichzeitig angeben. Zum Beispiel wird durch Hinzufügen der folgenden Zeile des `[sqlsrv]` -Abschnitts der „php.ini“-Datei die Protokollierung der Verbindungs- und Anweisungsaktivität aktiviert.  
+Durch die Addition von ganzzahligen Werten können Sie mehrere Optionen gleichzeitig angeben. Z. B. die folgende Zeile zum Hinzufügen der `[sqlsrv]` Abschnitt der Datei "PHP.ini" aktiviert die Protokollierung der Verbindungs-und:  
   
 `sqlsrv.LogSubsystems = 6`  
   
 ### <a name="logging-errors-warnings-and-notices"></a>Protokollieren von Fehlern, Warnungen und Hinweisen  
-Nachdem die Protokollierung aktiviert wurde, müssen Sie angeben, was protokolliert werden soll. Sie können eine oder mehrere der folgenden Möglichkeiten protokollieren: Fehler, Warnungen und Hinweise. Die folgende Codezeile gibt z. B. an, dass nur Warnungen protokolliert werden:  
+Nachdem die Protokollierung aktiviert wurde, müssen Sie angeben, was protokolliert werden soll. Sie können eine oder mehrere der folgenden Möglichkeiten protokollieren: Fehler, Warnungen und Hinweise. Die folgende Codezeile gibt z. B., dass nur Warnungen protokolliert werden:  
   
 `sqlsrv_configure("LogSeverity", SQLSRV_LOG_SEVERITY_WARNING);`  
   
 > [!NOTE]  
-> Die Standardeinstellung für LogSeverity **ist SQLSRV_LOG_SEVERITY_ERROR**. Wenn die Protokollierung aktiviert ist und keine Einstellung für die **LogSeverity** angegeben ist, werden nur Fehler protokolliert.  
+> Die Standardeinstellung für **LogSeverity** ist **SQLSRV_LOG_SEVERITY_ERROR**. Wenn die Protokollierung aktiviert ist und keine Einstellung für die **LogSeverity** angegeben ist, werden nur Fehler protokolliert.  
   
 Die folgende Tabelle beschreibt die Konstanten, die als Wert für die **LogSeverity** -Einstellung verwendet werden können:  
   
@@ -106,22 +106,22 @@ Die folgende Tabelle beschreibt die Konstanten, die als Wert für die **LogSever
 |SQLSRV_LOG_SEVERITY_WARNING (2)|Gibt an, dass Warnungen protokolliert werden.|  
 |SQLSRV_LOG_SEVERITY_NOTICE (4)|Gibt an, dass Hinweise protokolliert werden.|  
   
-Sie können mehr als einen Wert gleichzeitig für die **LogSeverity**-Einstellung mithilfe des logischen OR-Operators () festlegen. Die folgende Codezeile gibt z. B. an, dass Fehler und Warnungen protokolliert werden sollten:  
+Sie können mehr als einen Wert festlegen, zu einem Zeitpunkt für die **LogSeverity** mithilfe des logischen OR-Operators (|) festlegen. Die folgende Codezeile gibt z. B. an, dass Fehler und Warnungen protokolliert werden sollten:  
   
 `sqlsrv_configure("LogSeverity", SQLSRV_LOG_SEVERITY_ERROR | SQLSRV_LOG_SEVERITY_WARNING);`  
   
 > [!NOTE]  
-> Die Angabe eines Werts für die **LogSeverity** -Einstellung aktiviert nicht die Protokollierung. Aktivieren Sie die Protokollierung durch Angabe eines Werts für die **LogSubsystems** -Einstellung und geben Sie dann den Schweregrad an, der protokolliert werden soll, indem Sie einen Wert für **LogSeverity**angeben.  
+> Angeben eines Werts für die **LogSeverity** Einstellung Protokollierung nicht aktiviert ist. Schalten Sie die Protokollierung durch Angabe eines Werts für die **LogSubsystems** festlegen, dann legen Sie den Schweregrad der protokolliert werden durch Festlegen eines Werts für **LogSeverity**.  
   
 Sie können auch eine Einstellung für die **LogSeverity** -Einstellung mithilfe von ganzzahligen Werten in der Datei „php.ini“ festlegen. Zum Beispiel wird durch Hinzufügen der folgende Zeile des `[sqlsrv]` -Abschnitts der „php.ini“-Datei nur die Protokollierung von Warnungen aktiviert.  
   
 `sqlsrv.LogSeverity = 2`  
   
-Durch die Addition von ganzzahligen Werten können Sie mehrere Optionen gleichzeitig angeben. Zum Beispiel wird durch Hinzufügen der folgende Zeile des `[sqlsrv]` -Abschnitts der „php.ini“-Datei nur die Protokollierung von Fehlern und Warnungen aktiviert.  
+Durch die Addition von ganzzahligen Werten können Sie mehrere Optionen gleichzeitig angeben. Z. B. die folgende Zeile zum Hinzufügen der `[sqlsrv]` Abschnitt der Datei "PHP.ini" ermöglicht die Protokollierung von Fehlern und Warnungen:  
   
 `sqlsrv.LogSeverity = 3`  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Siehe auch  
 [Programmierhandbuch für den Microsoft-Treiber für PHP für SQLServer](../../connect/php/programming-guide-for-php-sql-driver.md)
 
 [Konstanten &#40;Microsoft-Treiber für PHP für SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)

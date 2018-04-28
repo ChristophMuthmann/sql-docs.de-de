@@ -1,8 +1,8 @@
 ---
 title: 'Pdostatement:: Bindparam | Microsoft Docs'
 ms.custom: ''
-ms.date: 10/24/2017
-ms.prod: sql-non-specified
+ms.date: 04/11/2017
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: php
@@ -13,16 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 65212058-2632-47a4-ba7d-2206883abf09
-caps.latest.revision: ''
+caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0d4dea9ea34f0a2b41db42f641b89ea074139643
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
-ms.translationtype: MT
+ms.openlocfilehash: b8e94697c15648853f01f7fd525d7e4319ba3476
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="pdostatementbindparam"></a>PDOStatement::bindParam
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -105,6 +105,9 @@ echo $input1;
 ?>  
 ```  
   
+> [!NOTE]
+> Beim Binden von eines Output-Parameters an einen Typ "bigint", wenn der Wert außerhalb des Bereichs der annehmen kann ein [Ganzzahl](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md), PDO:: param_int mit PDO::SQLSRV_PARAM_OUT_DEFAULT_SIZE möglicherweise ergeben eine Ausnahme "der Wert außerhalb des gültigen Bereichs". Daher verwenden Sie stattdessen den Standard-PDO:: param_str, und geben Sie die Größe der resultierenden Zeichenfolge, die höchstens 21 ist. Es ist die maximale Anzahl von Ziffern, z. B. die negativen Vorzeichen ausnahmslos "bigint". 
+
 ## <a name="example"></a>Beispiel  
 In diesem Codebeispiel wird veranschaulicht, wie ein Input/Output-Parameter verwendet wird.  
   
@@ -125,7 +128,7 @@ In diesem Codebeispiel wird veranschaulicht, wie ein Input/Output-Parameter verw
 ```  
 
 > [!NOTE]
-> Es wird empfohlen, die Zeichenfolgen als Eingaben zu verwenden, wenn Werte zum Binden einer [decimal oder numeric-Spalte](https://docs.microsoft.com/en-us/sql/t-sql/data-types/decimal-and-numeric-transact-sql) und Genauigkeit sichergestellt werden, wie Sie PHP mit eingeschränkter Genauigkeit für [Gleitkommazahlen](http://php.net/manual/en/language.types.float.php).
+> Es wird empfohlen, die Zeichenfolgen als Eingaben zu verwenden, wenn Werte zum Binden einer [decimal oder numeric-Spalte](../../t-sql/data-types/decimal-and-numeric-transact-sql.md) und Genauigkeit sichergestellt werden, wie Sie PHP mit eingeschränkter Genauigkeit für [Gleitkommazahlen](http://php.net/manual/en/language.types.float.php).
 
 ## <a name="example"></a>Beispiel  
 In diesem Codebeispiel wird gezeigt, wie einen decimal-Wert als Eingabeparameter gebunden werden.  

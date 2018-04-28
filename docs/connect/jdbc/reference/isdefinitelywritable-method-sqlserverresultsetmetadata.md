@@ -1,30 +1,33 @@
 ---
 title: IsDefinitelyWritable-Methode (SQLServerResultSetMetaData) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerResultSetMetaData.isDefinitelyWritable
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerResultSetMetaData.isDefinitelyWritable
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 7650e89a-dc8e-43ca-8eb2-f962f1a4b4ae
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fe24b286c63c5e56b0b63ce64e7c3f94afb7ac96
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 185490bc90513aa117b94d5a09d7e2ab9b013d9b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="isdefinitelywritable-method-sqlserverresultsetmetadata"></a>isDefinitelyWritable-Methode (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +42,7 @@ public boolean isDefinitelyWritable(int column)
 ```  
   
 #### <a name="parameters"></a>Parameter  
- *Spalte*  
+ *column*  
   
  Ein **Int** , der den Spaltenindex angibt.  
   

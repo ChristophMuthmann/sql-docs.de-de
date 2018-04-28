@@ -1,26 +1,27 @@
 ---
-title: "Beispielanwendungen für JDBC-Treiber | Microsoft Docs"
-ms.custom: 
+title: Beispielanwendungen für JDBC-Treiber | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e136b87c-a138-45d6-8c3e-bcef94b7e483
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.openlocfilehash: 29439d8929fc7eee4c74ef29fac5260986728a43
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+manager: craigg
+ms.openlocfilehash: daca915d7553d62a543487d048cbef025283c89c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sample-jdbc-driver-applications"></a>Beispiele für JDBC-Treiberanwendungen
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,7 +39,7 @@ ms.lasthandoff: 11/18/2017
 |Thema|Description|  
 |-----------|-----------------|  
 |[Verbinden und Abrufen von Daten](../../../connect/jdbc/connecting-and-retrieving-data.md)|Diese Beispielanwendungen zeigen, Herstellen einer Verbindung mit einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Datenbank. Sie veranschaulichen weiterhin verschiedene Möglichkeiten, um das Abrufen von Daten aus einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Datenbank.|  
-|[Arbeiten mit Datentypen &#40; JDBC &#41;](../../../connect/jdbc/working-with-data-types-jdbc.md)|Diese Beispielanwendungen veranschaulichen, wie Sie Datentypmethoden des JDBC-Treiber zu verwenden, um die Arbeit mit Daten in einem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Datenbank.|  
+|[Arbeiten mit Datentypen &#40;JDBC&#41;](../../../connect/jdbc/working-with-data-types-jdbc.md)|Diese Beispielanwendungen veranschaulichen, wie Sie Datentypmethoden des JDBC-Treiber zu verwenden, um die Arbeit mit Daten in einem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Datenbank.|  
 |[Arbeiten mit Resultsets](../../../connect/jdbc/working-with-result-sets.md)|Diese Beispielanwendungen zeigen, wie Sie Resultsets verarbeiten von Daten in einem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Datenbank.|  
 |[Arbeiten mit umfangreichen Daten](../../../connect/jdbc/working-with-large-data.md)|Diese Beispielanwendungen veranschaulichen die Verwendung der adaptiven Pufferung zum Abrufen von Daten mit umfangreichen Werten aus einem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] -Datenbank ohne den Aufwand von Servercursorn.|  
   

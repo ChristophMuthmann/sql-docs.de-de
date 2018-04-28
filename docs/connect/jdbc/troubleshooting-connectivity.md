@@ -1,27 +1,28 @@
 ---
 title: Behandlung von Verbindungsproblemen | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: bfba0b49-2e1f-411d-a625-d25fad9ea12d
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1566b30797b45a0eaa40491658f4fc3381c683f9
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: b213cb9d2a3527b967afef5dc28aa11d82fd0f9d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="troubleshooting-connectivity"></a>Behandlung von Verbindungsproblemen
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -32,7 +33,7 @@ ms.lasthandoff: 11/18/2017
   
 -   TCP/IP ist nicht aktiviert für [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], oder die angegebene Server oder Port-Nummer ist falsch. Überprüfen Sie, ob [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] auf dem angegebenen Server und Port mit TCP/IP lauscht. In diesem Fall wird eine ähnliche Ausnahme wie die folgende gemeldet: "Fehler bei der Anmeldung. Es konnte keine TCP/IP-Verbindung zum Host hergestellt werden." die auf einen der folgenden Fehler hinweist:  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]ist installiert, aber TCP/IP wurde nicht als Netzwerkprotokoll für installiert [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] mithilfe der [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Netzwerkkonfiguration für [!INCLUDE[ssVersion2000](../../includes/ssversion2000_md.md)], oder die [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Konfigurations-Manager für [!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)] und höher.  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ist installiert, aber TCP/IP wurde nicht als Netzwerkprotokoll für installiert [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] mithilfe der [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Netzwerkkonfiguration für [!INCLUDE[ssVersion2000](../../includes/ssversion2000_md.md)], oder die [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Konfigurations-Manager für [!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)] und höher.  
   
     -   TCP/IP als installiert ist ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Protokoll, aber es nicht auf den in der JDBC-Verbindungs-URL angegebenen Port überwacht. Der Standardport ist 1433, aber [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] kann bei der Produktinstallation an einen beliebigen Port Lauschen konfiguriert werden. Stellen Sie sicher, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Port 1433 lauscht. Sollte der Port geändert worden sein, vergewissern Sie sich, dass der in der JDBC-Verbindungs-URL angegebene Port dem geänderten Port entspricht. Weitere Informationen zur JDBC-Verbindungs-URL finden Sie unter [Erstellen der Verbindungs-URL](../../connect/jdbc/building-the-connection-url.md).  
   

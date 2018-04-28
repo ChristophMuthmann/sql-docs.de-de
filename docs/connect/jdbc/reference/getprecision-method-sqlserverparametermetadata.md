@@ -1,30 +1,33 @@
 ---
 title: GetPrecision-Methode (SQLServerParameterMetaData) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerParameterMetaData.getPrecision
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerParameterMetaData.getPrecision
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 8bd79484-bab6-423b-978f-d7ec7132ebeb
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 24ae94a05a20750fbfb8b80a9ab905753070ecbb
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: d61849b2a73f55bb06472aed14590895b4e0eeec
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="getprecision-method-sqlserverparametermetadata"></a>getPrecision-Methode (SQLServerParameterMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

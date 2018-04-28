@@ -1,30 +1,33 @@
 ---
 title: SetServerName-Methode (SQLServerDataSource) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerDataSource.setServerName
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerDataSource.setServerName
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 70920828-eda0-4064-be9f-c1e460db8f00
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2dcdf0aa279e1627cd6d2d60b96c92f88471076f
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 8f0aa01bdb30a13d65ed1348a20be08215e17ff9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="setservername-method-sqlserverdatasource"></a>setServerName-Methode (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +42,7 @@ public void setServerName(java.lang.String serverName)
 ```  
   
 #### <a name="parameters"></a>Parameter  
- *serverName*  
+ *ServerName*  
   
  Ein **Zeichenfolge** , die den Namen des Servers enthält.  
   

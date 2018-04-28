@@ -1,8 +1,8 @@
 ---
-title: PDO::commit | Microsoft Docs
+title: 'PDO:: Commit | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: php
@@ -13,16 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a0db4a00-9700-4f49-ab16-6522dd1101d3
-caps.latest.revision: ''
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f734c30d7b4577229f9e69e05291ab8305b19407
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
-ms.translationtype: MT
+ms.openlocfilehash: cf60044e9a1d448df64b41f95bce1ae3cdd3b0c7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="pdocommit"></a>PDO::commit
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

@@ -1,27 +1,28 @@
 ---
 title: Herstellen einer Verbindung mit SQLServer mit der JDBC-Treiber | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 94bcfbe3-f00e-4774-bda8-bb7577518fec
-caps.latest.revision: "30"
+caps.latest.revision: 30
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 624a6874931cb8af32bb69ea3ac0f8b395ef8915
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 7950bb8bd50efbd9b4c0190fb4f696487e44d2a6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="connecting-to-sql-server-with-the-jdbc-driver"></a>Verbinden von SQL Server mit dem JDBC-Treiber
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -45,7 +46,7 @@ System.setProperty("java.net.preferIPv6Addresses", "true");
 |[Festlegen der Datenquelleneigenschaften](../../connect/jdbc/setting-the-data-source-properties.md)|Beschreibt die Verwendung von Datenquellen auf einer Java-Plattform, Enterprise Edition (Java EE).|  
 |[Arbeiten mit einer Verbindung](../../connect/jdbc/working-with-a-connection.md)|Beschreibt die verschiedenen Möglichkeiten zum Erstellen einer Instanz einer Verbindung mit einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Datenbank.|  
 |[Verwenden von Verbindungspools](../../connect/jdbc/using-connection-pooling.md)|Beschreibt die Unterstützung von Verbindungspools durch den JDBC-Treiber.|  
-|[Verwenden der Datenbankspiegelung &#40; JDBC &#41;](../../connect/jdbc/using-database-mirroring-jdbc.md)|Beschreibt die Unterstützung der Datenbankspiegelung durch den JDBC-Treiber.|  
+|[Die Verwendung der Datenbankspiegelung &#40;JDBC&#41;](../../connect/jdbc/using-database-mirroring-jdbc.md)|Beschreibt die Unterstützung der Datenbankspiegelung durch den JDBC-Treiber.|  
 |[JDBC Driver-Unterstützung für hohe Verfügbarkeit, Notfallwiederherstellung](../../connect/jdbc/jdbc-driver-support-for-high-availability-disaster-recovery.md)|Beschreibt das Entwickeln einer Anwendung, die eine Verbindung mit einer AlwaysOn-Verfügbarkeitsgruppe herstellt.|  
 |[Verwenden der integrierten Kerberos-Authentifizierung für Verbindungen mit SQL Server](../../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md)|Erläutert eine Java-Implementierung für Anwendungen für die Verbindung eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Datenbank mithilfe der integrierten Kerberos-Authentifizierung.|  
 |[Herstellen einer Verbindung mit einer Azure SQL-Datenbank](../../connect/jdbc/connecting-to-an-azure-sql-database.md)|Erläutert Verbindungsprobleme für Datenbanken in SQL Azure.|  

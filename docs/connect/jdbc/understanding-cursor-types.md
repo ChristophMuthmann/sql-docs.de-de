@@ -1,27 +1,28 @@
 ---
 title: Grundlegendes zu Cursortypen | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 4f4d3db7-4f76-450d-ab63-141237a4f034
-caps.latest.revision: "51"
+caps.latest.revision: 51
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dfd697881fbde24c797707990d53c2cc33576a24
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 1611575b0f0401b47cf468837f39a6a8dd36aa49
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="understanding-cursor-types"></a>Grundlegendes zu Cursortypen
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -82,7 +83,7 @@ ms.lasthandoff: 11/18/2017
  Bei dynamischen Cursorn behalten aktualisierte Zeilen ihre Position im Fetchpuffer bei, bis das vom Fetchpuffer definierte Fenster verlassen wird. Aktualisierte Zeilen werden möglicherweise anschließend an anderen Positionen im Resultset erneut angezeigt oder überhaupt nicht mehr angezeigt. In Anwendungen, in denen temporäre Inkonsistenzen im Resultset vermieden werden sollen, sollte eine Fetchgröße von 1 verwendet werden. (Der Standardwert beträgt 8 Zeilen bei CONCUR_SS_SCROLL_LOCKS-Parallelität und 128 Zeilen bei anderen Parallelitäten.)  
   
 ## <a name="cursor-conversion"></a>Cursorkonvertierung  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]kann in einigen Fällen einen Cursortyp als der angeforderte implementiert, dies wird als implizite cursorkonvertierung (oder cursordegradierung) bezeichnet. Weitere Informationen zur impliziten cursorkonvertierung finden Sie unter dem Thema "Verwenden impliziter Cursorkonvertierungen" in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Books Online.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] kann in einigen Fällen einen Cursortyp als der angeforderte implementiert, dies wird als implizite cursorkonvertierung (oder cursordegradierung) bezeichnet. Weitere Informationen zur impliziten cursorkonvertierung finden Sie unter dem Thema "Verwenden impliziter Cursorkonvertierungen" in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Books Online.  
   
  Mit [!INCLUDE[ssVersion2000](../../includes/ssversion2000_md.md)], bei der Aktualisierung der Daten über das Ergebnis ResultSet.TYPE_SCROLL_SENSITIVE und ResultSet.CONCUR_UPDATABLE festgelegt, wird eine Ausnahme mit einer Meldung "der Cursor ist schreibgeschützt," ausgelöst. Diese Ausnahme tritt auf, weil die [!INCLUDE[ssVersion2000](../../includes/ssversion2000_md.md)] verfügt über eine implizite cursorkonvertierung für das Resultset ausgeführt und den aktualisierbaren Cursor, der angefordert wurde, hat nicht zurückgegeben.  
   

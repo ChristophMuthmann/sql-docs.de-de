@@ -3,7 +3,7 @@ title: Unterstützung für verteilte Abfragen in Schemarowsets | Microsoft Docs
 description: Unterstützung für verteilte Abfragen in Schemarowsets
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: ole-db
@@ -22,20 +22,20 @@ helpviewer_keywords:
 - rowsets [OLE DB], schema
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 26cf4847d1d4f9e6799b2751e81a44e9cc4bcc72
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: aa604a66d953a4e25c3df3f20fb32218e179451b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="schema-rowsets---distributed-query-support"></a>Schemarowsets - Unterstützung für verteilte Abfragen
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   Zur Unterstützung [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] verteilte Abfragen, die OLE DB-Treiber für SQL Server **IDBSchemaRowset** Schnittstelle gibt Metadaten zu Verbindungsservern auf.  
   
- Wenn die DBPROPSET_SQLSERVERSESSION-Eigenschaft SSPROP_QUOTEDCATALOGNAMES auf VARIANT_TRUE festgelegt wurde, kann für den Katalognamen ein Bezeichner in Anführungszeichen angegeben werden (beispielsweise "my.catalog"). Bei der Ausgabe eines Schemarowsets anhand des Katalogs zu beschränken, erkennt der OLE DB-Treiber für SQL Server einen zweiteiligen Namen mit dem Verbindungsserver und der Name des Katalogs. Angeben von für die Schemarowsets in der folgenden Tabelle, eine mit dem zweiteiligen Katalognamens in Form *Linked_server***.*** Katalog* Ausgabe an den betreffenden Katalog des genannten Verbindungsservers beschränkt.  
+ Wenn die DBPROPSET_SQLSERVERSESSION-Eigenschaft SSPROP_QUOTEDCATALOGNAMES auf VARIANT_TRUE festgelegt wurde, kann für den Katalognamen ein Bezeichner in Anführungszeichen angegeben werden (beispielsweise "my.catalog"). Bei der Ausgabe eines Schemarowsets anhand des Katalogs zu beschränken, erkennt der OLE DB-Treiber für SQL Server einen zweiteiligen Namen mit dem Verbindungsserver und der Name des Katalogs. Angeben von für die Schemarowsets in der folgenden Tabelle, eine mit dem zweiteiligen Katalognamens in Form *Linked_server ***.*** Katalog* Ausgabe an den betreffenden Katalog des genannten Verbindungsservers beschränkt.  
   
 |Schemarowset|Katalogeinschränkung|  
 |-------------------|-------------------------|  

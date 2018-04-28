@@ -2,7 +2,7 @@
 title: Sicherheitsüberlegungen für die Microsoft-Treiber für PHP für SQLServer | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: php
@@ -15,16 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - security considerations
 ms.assetid: a8c1a570-9204-454f-b94c-ba34f54d487c
-caps.latest.revision: ''
+caps.latest.revision: 37
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ad90c4e05168e54ce9be6b8324539db67d1ccb7e
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
-ms.translationtype: MT
+ms.openlocfilehash: 069ec5c79baf66c985c52894be848caddf5fad7c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="security-considerations-for-the-microsoft-drivers-for-php-for-sql-server"></a>Sicherheitsüberlegungen für die Microsoft-Treiber für PHP für SQLServer
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

@@ -1,27 +1,28 @@
 ---
 title: Grundlegendes zu Datentypkonvertierungen | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 98fa7488-aac3-45b4-8aa4-83ed6ab638b4
-caps.latest.revision: "34"
+caps.latest.revision: 34
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8ba1a10fc33dc5e80fb300eaa31e849692c55041
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: e18bd56e110cccab17488de752ba5ab4c8666fa9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="understanding-data-type-conversions"></a>Grundlegendes zu Datentypkonvertierungen
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -83,7 +84,7 @@ ms.lasthandoff: 11/18/2017
   
 -   **Data Dependent (Z)**: Konvertierungen eines-Java **Zeichenfolge** zu den zugrunde liegenden Typ [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Datentyp unterliegen den folgenden Bedingungen: der Treiber sendet die **Zeichenfolge** Wert [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] und [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] führt Konvertierungen, bei Bedarf. Wenn SendStringParametersAsUnicode auf "true" und dem zugrunde liegenden festgelegt ist [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Datentyp **Image**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] lässt keine Konvertierung von **Nvarchar** auf **Image** und löst eine SQLServerException aus. Wenn SendStringParametersAsUnicode auf "false" und dem zugrunde liegenden festgelegt ist [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Datentyp **Image**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ermöglicht das Konvertieren von **Varchar** auf **Image**und löst keine Ausnahme.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]führt die Konvertierungen aus und übergibt Fehler bei Problemen wieder an den JDBC-Treiber.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] führt die Konvertierungen aus und übergibt Fehler bei Problemen wieder an den JDBC-Treiber.  
   
  Wenn die [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Spaltendatentyp ist **XML**, das dem Datenwert muss ein gültiger **XML**. Beim UpdateBytes, UpdateBinaryStream oder UpdateBlob-Methoden aufrufen, sollte der Datenwert die hexadezimale Zeichenfolgendarstellung der XML-Zeichen sein. Beispiel:  
   
@@ -112,7 +113,7 @@ ms.lasthandoff: 11/18/2017
   
 -   **Data Dependent (Z)**: Konvertierungen eines-Java **Zeichenfolge** zu den zugrunde liegenden Typ [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Datentyp unterliegen den folgenden Bedingungen: der Treiber sendet die **Zeichenfolge** Wert [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] und [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] führt Konvertierungen, bei Bedarf. Wenn die SendStringParametersAsUnicode-Verbindungseigenschaft auf "true" und dem zugrunde liegenden festgelegt ist [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Datentyp **Image**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] lässt keine Konvertierung von in **Nvarchar** auf **Image** und löst eine SQLServerException aus. Wenn SendStringParametersAsUnicode auf "false" und dem zugrunde liegenden festgelegt ist [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Datentyp **Image**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ermöglicht das Konvertieren von **Varchar** auf **Image**und löst keine Ausnahme.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]Führt den Großteil der festlegungskonvertierungen aus und übergibt Fehler bei Problemen wieder an den JDBC-Treiber. Clientseitige Konvertierungen sind die Ausnahme und werden nur im Fall von ausgeführt **Datum**, **Zeit**, **Zeitstempel**, **booleschen**, und  **Zeichenfolge** Werte.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Führt den Großteil der festlegungskonvertierungen aus und übergibt Fehler bei Problemen wieder an den JDBC-Treiber. Clientseitige Konvertierungen sind die Ausnahme und werden nur im Fall von ausgeführt **Datum**, **Zeit**, **Zeitstempel**, **booleschen**, und  **Zeichenfolge** Werte.  
   
  Wenn die [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Spaltendatentyp ist **XML**, das dem Datenwert muss ein gültiger **XML**. Beim Aufrufen der Methoden setObject(byte[], SQLXML), setObject(inputStream, SQLXML) oder setObject(Blob, SQLXML) sollte der Datenwert die hexadezimale Zeichenfolgendarstellung der XML-Zeichen sein. Beispiel:  
   

@@ -1,30 +1,33 @@
 ---
 title: InsertsAreDetected-Methode (SQLServerDatabaseMetaData) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerDatabaseMetaData.insertsAreDetected
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerDatabaseMetaData.insertsAreDetected
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: f296cc42-9d26-48c3-a360-bcf51c31f7fb
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 46ee8da85734c79f7d7e01806387a68e8010abdf
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 9f2546e3db1e6d145655f311e43a32b2a8d48113
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="insertsaredetected-method-sqlserverdatabasemetadata"></a>insertsAreDetected-Methode (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -71,7 +74,7 @@ public boolean insertsAreDetected(int type)
  Diese InsertsAreDetected-Methode wird von der InsertsAreDetected-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]eingefügte Zeilen für jeden Cursortyp wird nicht erkannt werden.  
+>  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] eingefügte Zeilen für jeden Cursortyp wird nicht erkannt werden.  
   
 ## <a name="see-also"></a>Siehe auch  
  [SQLServerDatabaseMetaData-Methoden](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

@@ -3,7 +3,7 @@ title: Große benutzerdefinierte CLR-Typen (OLE DB) | Microsoft Docs
 description: Große benutzerdefinierte CLR-Typen (OLE DB)
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: ole-db
@@ -17,13 +17,13 @@ helpviewer_keywords:
 - large CLR user-defined types [OLE DB]
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6f4ba8559525b2b0b7a174a7160e7d3daf138f30
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: e3aaddc3ac658c0a7d713933b6594c1c3a27e88f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="large-clr-user-defined-types-ole-db"></a>Große benutzerdefinierte CLR-Typen (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,7 +39,7 @@ ms.lasthandoff: 04/06/2018
   
 |SQL Server-Datentyp|OLE DB-Datentyp|Speicherlayout|Wert|  
 |--------------------------|----------------------|-------------------|-----------|  
-|CLR-UDT|DBTYPE_UDT|BYTE[](byte array\)|132 ("OleDb.h")|  
+|CLR-UDT|DBTYPE_UDT|BYTE [] (Byte-array\)|132 ("OleDb.h")|  
   
  UDT-Werte werden als Bytearrays dargestellt. Konvertierungen zu und von hexadezimalen Zeichenfolgen werden unterstützt. Literalwerte werden mit dem Präfix 0x als hexadezimale Zeichenfolgen dargestellt. Eine Hexadezimalzeichenfolge ist die Textdarstellung der Binärdaten zur Basis 16. Ein Beispiel ist eine Konvertierung vom Servertyp **varbinary(10)** an DBTYPE_STR, was dazu führt, in hexadezimaler Darstellung von 20 Zeichen, wobei jedes Zeichenpaar ein einzelnes Byte darstellt.  
   
@@ -59,7 +59,7 @@ ms.lasthandoff: 04/06/2018
 ## <a name="icommandwithparametersgetparameterinfo"></a>ICommandWithParameters::GetParameterInfo  
  Informationen zurückgegeben, in der DBPARAMINFO-Struktur durch **PrgParamInfo** lautet wie folgt:  
   
-|Parametertyp|*wType*|*ulParamSize*|*bPrecision*|*bScale*|*dwFlags* DBPARAMFLAGS_ISLONG|  
+|Parametertyp|*wType*|*ulParamSize*|*bPrecision*|*bScale*|*DwFlags* DBPARAMFLAGS_ISLONG|  
 |--------------------|-------------|-------------------|------------------|--------------|------------------------------------|  
 |DBTYPE_UDT<br /><br /> (Länge kleiner oder gleich 8.000 Bytes)|"DBTYPE_UDT"|*n*|nicht definiert|nicht definiert|Deaktivieren|  
 |DBTYPE_UDT<br /><br /> (Länge größer als 8.000 Bytes)|"DBTYPE_UDT"|~0|nicht definiert|nicht definiert|Menge|  
@@ -67,7 +67,7 @@ ms.lasthandoff: 04/06/2018
 ## <a name="icommandwithparameterssetparameterinfo"></a>ICommandWithParameters::SetParameterInfo  
  Die in der DBPARAMBINDINFO-Struktur bereitgestellten Informationen müssen Folgendem entsprechen:  
   
-|Parametertyp|*pwszDataSourceType*|*ulParamSize*|*bPrecision*|*bScale*|*dwFlags* DBPARAMFLAGS_ISLONG|  
+|Parametertyp|*pwszDataSourceType*|*ulParamSize*|*bPrecision*|*bScale*|*DwFlags* DBPARAMFLAGS_ISLONG|  
 |--------------------|--------------------------|-------------------|------------------|--------------|------------------------------------|  
 |DBTYPE_UDT<br /><br /> (Länge kleiner oder gleich 8.000 Bytes)|DBTYPE_UDT|*n*|wird ignoriert.|wird ignoriert.|Muss festgelegt werden, wenn der Parameter mit DBTYPE_IUNKNOWN übergeben werden soll.|  
 |DBTYPE_UDT<br /><br /> (Länge größer als 8.000 Bytes)|DBTYPE_UDT|~0|wird ignoriert.|wird ignoriert.|wird ignoriert.|  

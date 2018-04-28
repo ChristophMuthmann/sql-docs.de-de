@@ -1,27 +1,28 @@
 ---
 title: Grundlegendes zu Isolationsstufen | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 2c41e23a-da6c-4650-b5fc-b5fe53ba65c3
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5acd91539652aefd7eee0049bb2e1ccc277c16a0
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 0115d8c16c63882990a462c0fde8d146e91dbf88
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="understanding-isolation-levels"></a>Grundlegendes zu Isolationsstufen
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -52,10 +53,10 @@ ms.lasthandoff: 11/18/2017
 |Isolationsebene|"Unsauberen" Lesevorgang|Non Repeatable Read|Phantom|  
 |---------------------|----------------|-------------------------|-------------|  
 |Read Uncommitted|ja|ja|ja|  
-|Read Committed|Nein|Ja|ja|  
-|Repeatable Read|Nein|Nein|ja|  
-|Momentaufnahme|Nein|Nein|Nein|  
-|Serializable|Nein|Nein|Nein|  
+|Read Committed|nein|ja|ja|  
+|Repeatable Read|nein|Nein|ja|  
+|Momentaufnahme|nein|Nein|nein|  
+|Serializable|nein|Nein|nein|  
   
  Transaktionen müssen mindestens auf der Isolationsstufe „Repeatable Read“ ausgeführt werden, um den Verlust von Updates zu verhindern. Dies kann auftreten, wenn zwei Transaktionen jeweils die gleiche Zeile abrufen und sie später auf Grundlage der zunächst abgerufenen Werte aktualisieren. Wenn die beiden Transaktionen Zeilen mit einer einzigen UPDATE-Anweisung aktualisieren und die Aktualisierung nicht auf Grundlage der zuvor abgerufenen Werte erfolgt, können bei der Standardisolationsstufe „Read Committed“ keine verlorenen Aktualisierungen auftreten.  
   

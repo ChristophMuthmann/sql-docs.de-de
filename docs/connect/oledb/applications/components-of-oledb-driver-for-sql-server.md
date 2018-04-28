@@ -3,7 +3,7 @@ title: Komponenten des OLE DB-Treiber für SQLServer | Microsoft Docs
 description: Komponenten des OLE DB-Treiber für SQLServer
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: oledb|applications
@@ -19,16 +19,18 @@ helpviewer_keywords:
 - MSOLEDBSQL, about OLE DB Driver for SQL Server
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 82a3a0999b2d04b699a7b8b9b0299fefc04628de
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: 982790c72cd4179c78305ac76bf7178b8af80896
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="components-of-ole-db-driver-for-sql-server"></a>Komponenten des OLE DB-Treiber für SQLServer
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   OLE DB-Treiber für SQL Server enthält die folgenden Komponenten:  
 

@@ -2,7 +2,7 @@
 title: 'Schritt 3: Machbarkeitsnachweis Herstellen einer Verbindung mit SQL mithilfe von PHP | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: php
@@ -13,16 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a7451a85-18e5-4fd0-bbcb-2f15a1117290
-caps.latest.revision: ''
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3ea9f1bce66da904f5587a9c21bd672818bc4423
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
-ms.translationtype: MT
+ms.openlocfilehash: 4f26ccc9a84038cf7ab1233dc2a503c678d1f90c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-php"></a>Schritt 3: Machbarkeitsnachweis für Verbindungen mit SQL mithilfe von PHP
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

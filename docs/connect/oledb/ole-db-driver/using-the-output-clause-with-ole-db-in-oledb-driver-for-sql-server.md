@@ -3,7 +3,7 @@ title: Mithilfe der OUTPUT-Klausel mit OLE DB in OLE DB-Treiber für SQLServer |
 description: Mithilfe der OUTPUT-Klausel mit OLE DB in OLE DB-Treiber für SQL Server
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: oledb-driver-for-sql-server
@@ -15,13 +15,13 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f253352e2cd014cda9d88144dd01795b0d048de0
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: 5c6fa6d4dcd1b567df5e763c42501aaa82bb280f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-the-output-clause-with-ole-db-in-ole-db-driver-for-sql-server"></a>Mithilfe der OUTPUT-Klausel mit OLE DB in OLE DB-Treiber für SQLServer
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

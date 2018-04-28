@@ -1,32 +1,32 @@
 ---
 title: Programmierrichtlinien (Odbcdriver for SQLServer) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/11/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: fd8952f28f389fa5f1b8f82072998676c5a4196e
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
-ms.translationtype: MT
+ms.openlocfilehash: e30ed328931cc33b62dd9d65301dee8921e1cc3f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="programming-guidelines"></a>Programmierrichtlinien
 
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-Die Features für die Programmierung von der [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC-Treiber für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] unter Mac OS und Linux basieren auf ODBC in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Native Client ([SQL Server Native Client (ODBC)](http://go.microsoft.com/fwlink/?LinkID=134151)). [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]Native Client basiert auf ODBC in Windows Data Access Components ([ODBC Programmer's Reference](http://go.microsoft.com/fwlink/?LinkID=45250)).  
+Die Features für die Programmierung von der [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC-Treiber für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] unter Mac OS und Linux basieren auf ODBC in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Native Client ([SQL Server Native Client (ODBC)](http://go.microsoft.com/fwlink/?LinkID=134151)). [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Native Client basiert auf ODBC in Windows Data Access Components ([ODBC Programmer's Reference](http://go.microsoft.com/fwlink/?LinkID=45250)).  
 
 Eine ODBC-Anwendung verwenden kann, Multiple Active Result Sets (MARS) und andere [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Besonderheiten dazu `/usr/local/include/msodbcsql.h` nach einschließlich der UnixODBC-Header (`sql.h`, `sqlext.h`, `sqltypes.h`, und `sqlucode.h`). Verwenden Sie die gleichen symbolischen Namen für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]-konkreter Elemente, die Sie in Ihrer Windows-ODBC-Anwendungen verwenden würden.
 
@@ -85,7 +85,7 @@ Für ODBC-Treiber 17 werden die SQLCHAR-Daten in einem der folgenden Sätze/zeic
 |UTF-8|Unicode|
 |CP437|MS-DOS-Lateinisch USA|
 |CP850|MS-DOS-Latin 1|
-|CP874|Latin/Thai|
+|CP874|Lateinisch/Thai|
 |CP932|Shift-JIS Japanisch|
 |CP936|Vereinfachtes Chinesisch, GBK|
 |CP949|Koreanisch, EUC-KR|
@@ -95,7 +95,7 @@ Für ODBC-Treiber 17 werden die SQLCHAR-Daten in einem der folgenden Sätze/zeic
 |CP1256|Arabisch|
 |CP1257|Baltisch|
 |CP1258|Vietnamesisch|
-|ISO-8859-1 / CP1252|Latin-1|
+|ISO-8859-1 / CP1252|Latein-1|
 |ISO-8859-2 / CP1250|Latein-2|
 |ISO-8859-3|Latin-3|
 |ISO-8859-4|Latin-4|
@@ -105,7 +105,7 @@ Für ODBC-Treiber 17 werden die SQLCHAR-Daten in einem der folgenden Sätze/zeic
 |ISO-8859-8 / CP1255|Hebräisch|
 |ISO-8859-9 / CP1254|Türkisch|
 |ISO-8859-13|Latin-7|
-|ISO-8859-15|Latin-9|
+|ISO-8859-15|Lateinisch 9|
 
 Beim Herstellen der Verbindung erkennt der Treiber das aktuelle Gebietsschema des Prozesses, der in der Sie geladen wird. Wenn eines der oben genannten Codierungen verwendet wird, verwendet der Treiber mit der Codierung für Daten in SQLCHAR (schmale-Zeichen); Andernfalls wird standardmäßig in UTF-8. Da alle Prozesse im Gebietsschema "C" in der Standardeinstellung starten (und daher dazu führen, den Treiber standardmäßig in UTF-8 dass), wenn eine Anwendung eine der oben genannten Codierungen verwenden muss, sollten Sie verwenden die **Setlocale** Funktion zum entsprechend vor dem Festlegen des Gebietsschemas Herstellen einer Verbindung; entweder indem Sie das gewünschte Gebietsschema explizit angeben oder eine leere Zeichenfolge z. B. `setlocale(LC_ALL, "")` die gebietsschemaeinstellungen der Umgebung zu verwenden.
 
@@ -119,7 +119,7 @@ Um diese Datenverluste zu vermeiden, wenn Eingabeparameter gebunden, geben Sie e
 
 Weitere Informationen zu Sortierungen und Codierungen finden Sie unter [Collation and Unicode Support](../../../relational-databases/collations/collation-and-unicode-support.md).
 
-Es gibt einige Codierung Konvertierung Unterschiede zwischen Windows und mehrere Versionen der Iconv-Bibliothek unter Linux und MacOS. Textdaten in der Codepage 1255 (Hebräisch) verfügt über einen Codepunkt (0xCA), die bei der Konvertierung in Unicode anders verhält. Unter Windows konvertiert dieses Zeichen in den UTF-16-Codepunkt des Werts 0x05BA aus. Unter Mac OS und Linux mit Libiconv-Versionen vor 1.15 konvertiert in Werts 0x00CA. Unter Linux mit Iconv-Bibliotheken, die nicht über die 2003-Version des Big5/CP950 unterstützen (mit dem Namen `BIG5-2003`), Zeichen hinzugefügt, die mit dieser Revision nicht ordnungsgemäß konvertiert werden.
+Es gibt einige Codierung Konvertierung Unterschiede zwischen Windows und mehrere Versionen der Iconv-Bibliothek unter Linux und MacOS. Textdaten in der Codepage 1255 (Hebräisch) verfügt über einen Codepunkt (0xCA), die bei der Konvertierung in Unicode anders verhält. Unter Windows konvertiert dieses Zeichen in den UTF-16-Codepunkt des Werts 0x05BA aus. Unter Mac OS und Linux mit Libiconv-Versionen vor 1.15 konvertiert in Werts 0x00CA. Unter Linux mit Iconv-Bibliotheken, die nicht über die 2003-Version des Big5/CP950 unterstützen (mit dem Namen `BIG5-2003`), Zeichen hinzugefügt, die mit dieser Revision nicht ordnungsgemäß konvertiert werden. In Codepage 932 (Japanisch, Shift-JIS) unterscheidet sich auch das Ergebnis der Decodierung von Zeichen, die ursprünglich nicht in die Codierung aus. Beispielsweise das Byte 0 x 80 konvertiert, U + 0080 unter Windows jedoch möglicherweise U + 30FB auf Linux- und MacOS, je nach Iconv-Version.
 
 In ODBC Driver 13 und 13.1 können bei UTF-8-Mehrbytezeichen oder UTF-16-Ersatzzeichen auf SQLPutData-Puffer aufgeteilt werden führt dies zu beschädigten Daten. Für das Streamen von SQLPutData, verwenden Sie Puffer, die nicht in partiellen Zeichencodierungen enden. Diese Einschränkung wurde mit ODBC-Treiber 17 entfernt.
 

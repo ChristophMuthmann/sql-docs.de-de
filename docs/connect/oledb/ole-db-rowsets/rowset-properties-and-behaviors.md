@@ -3,7 +3,7 @@ title: Rowset-Eigenschaften und Verhaltensweisen | Microsoft Docs
 description: Rowset-Eigenschaften und Verhaltensweisen in OLE DB-Treiber für SQL Server
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: ole-db-rowsets
@@ -20,13 +20,13 @@ helpviewer_keywords:
 - OLE DB rowsets, properties
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6724a1f7123be2040fd87d4a14ca4b45b7eb99ee
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: 09b5ad3e392be5ae28511a94068d030eb6c50aaf
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="rowset-properties-and-behaviors"></a>Eigenschaften und Verhaltensweisen von Rowsets
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -74,8 +74,8 @@ ms.lasthandoff: 04/06/2018
 |DBPROP_MAYWRITECOLUMN|Diese Rowseteigenschaft wird nicht vom OLE DB-Treiber für SQL Server implementiert. Beim Versuch, den Eigenschaftswert zu lesen oder zu schreiben, wird ein Fehler generiert.|  
 |DBPROP_MEMORYUSAGE|Diese Rowseteigenschaft wird nicht vom OLE DB-Treiber für SQL Server implementiert. Beim Versuch, den Eigenschaftswert zu lesen oder zu schreiben, wird ein Fehler generiert.|  
 |DBPROP_NOTIFICATIONGRANULARITY|Diese Rowseteigenschaft wird nicht vom OLE DB-Treiber für SQL Server implementiert. Beim Versuch, den Eigenschaftswert zu lesen oder zu schreiben, wird ein Fehler generiert.|  
-|DBPROP_NOTIFICATIONPHASES|R/w: schreibgeschützt<br /><br /> Default: DBPROPVAL_NP_OKTODO &#124; DBPROPVAL_NP_ABOUTTODO &#124;  DBPROPVAL_NP_SYNCHAFTER &#124; DBPROPVAL_NP_FAILEDTODO &#124;  DBPROPVAL_NP_DIDEVENT<br /><br /> Beschreibung: Der OLE DB-Treiber für SQL Server unterstützt alle benachrichtigungsphasen.|  
-|DBPROP_NOTIFYCOLUMNSET DBPROP_NOTIFYROWDELETE DBPROP_NOTIFYROWFIRSTCHANGE DBPROP_NOTIFYROWINSERT DBPROP_NOTIFYROWRESYNCH DBPROP_NOTIFYROWSETRELEASE DBPROP_NOTIFYROWSETFETCH-POSITIONCHANGE DBPROP_NOTIFYROWUNDOCHANGE DBPROP_NOTIFYROWUNDODELETE DBPROP_NOTIFYROWUNDOINSERT DBPROP_NOTIFYROWUPDATE|R/w: schreibgeschützt<br /><br /> Default: DBPROPVAL_NP_OKTODO &#124;  DBPROPVAL_NP_ABOUTTODO<br /><br /> Beschreibung: Der OLE DB-Treiber für SQL Server Notification Phasen werden abgebrochen werden, vor dem Versuch, eine Änderung des Rowsets vorzunehmen angegeben. Der OLE DB-Treiber für SQL Server unterstützt keine Phase Abbruch, nachdem der Versuch abgeschlossen wurde.|  
+|DBPROP_NOTIFICATIONPHASES|R/w: schreibgeschützt<br /><br /> Standard: DBPROPVAL_NP_OKTODO &#124; DBPROPVAL_NP_ABOUTTODO &#124; DBPROPVAL_NP_SYNCHAFTER &#124; DBPROPVAL_NP_FAILEDTODO &#124; DBPROPVAL_NP_DIDEVENT<br /><br /> Beschreibung: Der OLE DB-Treiber für SQL Server unterstützt alle benachrichtigungsphasen.|  
+|DBPROP_NOTIFYCOLUMNSET DBPROP_NOTIFYROWDELETE DBPROP_NOTIFYROWFIRSTCHANGE DBPROP_NOTIFYROWINSERT DBPROP_NOTIFYROWRESYNCH DBPROP_NOTIFYROWSETRELEASE DBPROP_NOTIFYROWSETFETCH-POSITIONCHANGE DBPROP_NOTIFYROWUNDOCHANGE DBPROP_NOTIFYROWUNDODELETE DBPROP_NOTIFYROWUNDOINSERT DBPROP_NOTIFYROWUPDATE|R/w: schreibgeschützt<br /><br /> Standard: DBPROPVAL_NP_OKTODO &#124; DBPROPVAL_NP_ABOUTTODO<br /><br /> Beschreibung: Der OLE DB-Treiber für SQL Server Notification Phasen werden abgebrochen werden, vor dem Versuch, eine Änderung des Rowsets vorzunehmen angegeben. Der OLE DB-Treiber für SQL Server unterstützt keine Phase Abbruch, nachdem der Versuch abgeschlossen wurde.|  
 |DBPROP_ORDEREDBOOKMARKS|Diese Rowseteigenschaft wird nicht vom OLE DB-Treiber für SQL Server implementiert. Beim Versuch, den Eigenschaftswert zu lesen oder zu schreiben, wird ein Fehler generiert.|  
 |DBPROP_OTHERINSERT DBPROP_OTHERUPDATEDELETE DBPROP_OWNINSERT DBPROP_OWNUPDATEDELETE|R/w: Lesen/Schreiben<br /><br /> Standard: VARIANT_FALSE<br /><br /> Beschreibung: Die Einstellungseigenschaften für das Change-Sichtbarkeit führt dazu, dass der OLE DB-Treiber für SQL Server verwenden [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Cursor zur Unterstützung des Rowsets. Weitere Informationen finden Sie unter [Rowsets und SQL Server-Cursor](../../oledb/ole-db-rowsets/rowsets-and-sql-server-cursors.md).|  
 |DBPROP_QUICKRESTART|R/w: Lesen/Schreiben<br /><br /> Standard: VARIANT_FALSE<br /><br /> Beschreibung: Wenn auf VARIANT_TRUE festgelegt ist, versucht der OLE DB-Treiber für SQL Server, einen Servercursor für das Rowset zu verwenden.|  
@@ -97,7 +97,7 @@ ms.lasthandoff: 04/06/2018
   
 |Eigenschafts-ID|Description|  
 |-----------------|-----------------|  
-|SSPROP_COLUMN_ID|Spalte: ColumnID<br /><br /> R/w: schreibgeschützt<br /><br /> Type: VT_U12 &#124; VT_ARRAY<br /><br /> Standard: VT_EMPTY<br /><br /> Beschreibung: Ein Array von ganzzahligen Werten, die die Ordnungsposition (1-basiert) der Ergebnisspalte einer COMPUTE-Klausel innerhalb der aktuellen [!INCLUDE[tsql](../../../includes/tsql-md.md)] SELECT-Anweisung darstellen. Dies ist der OLE DB-Treiber für SQL Server-Entsprechung des ODBC SQL_CA_SS_COLUMN_ID-Attributs.|  
+|SSPROP_COLUMN_ID|Spalte: ColumnID<br /><br /> R/w: schreibgeschützt<br /><br /> Typ: VT_U12 &#124; VT_ARRAY<br /><br /> Standard: VT_EMPTY<br /><br /> Beschreibung: Ein Array von ganzzahligen Werten, die die Ordnungsposition (1-basiert) der Ergebnisspalte einer COMPUTE-Klausel innerhalb der aktuellen [!INCLUDE[tsql](../../../includes/tsql-md.md)] SELECT-Anweisung darstellen. Dies ist der OLE DB-Treiber für SQL Server-Entsprechung des ODBC SQL_CA_SS_COLUMN_ID-Attributs.|  
 |SSPROP_DEFERPREPARE|Spalte: No<br /><br /> R/w: Lesen/Schreiben<br /><br /> Typ: VT_BOOL<br /><br /> Standard: VARIANT_TRUE<br /><br /> Beschreibung: VARIANT_TRUE: bei der vorbereiteten Ausführung die befehlsvorbereitung verzögert, bis **ICommand:: Execute** aufgerufen wird oder ein metaeigenschaftsvorgang durchgeführt wird. Wenn die Eigenschaft festgelegt ist auf<br /><br /> VARIANT_FALSE: Die Anweisung wird vorbereitet, wenn **ICommandPrepare:: Prepare** ausgeführt wird.|  
 |SSPROP_IRowsetFastLoad|Spalte: No<br /><br /> R/w: Lesen/Schreiben<br /><br /> Typ: VT_BOOL<br /><br /> Standard: VARIANT_FALSE<br /><br /> Beschreibung: Legen Sie diese Eigenschaft auf VARIANT_TRUE fest, zum Öffnen eines Fastload-Rowsets durch **IOpenRowset:: OPENROWSET**. Diese Eigenschaft kann nicht festgelegt werden, **ICommandProperties:: SetProperties**.|  
 |SSPROP_ISSAsynchStatus|Spalte: No.<br /><br /> R/w: Lesen/Schreiben<br /><br /> Typ: VT_BOOL<br /><br /> Standard: VARIANT_FALSE<br /><br /> Beschreibung: Legen Sie diese Eigenschaft auf VARIANT_TRUE fest, um asynchrone Vorgänge unter Verwendung ermöglichen der [ISSAsynchStatus](../../oledb/ole-db-interfaces/issasynchstatus-ole-db.md) Schnittstelle.|  

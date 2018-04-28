@@ -27,14 +27,14 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 4115270329837b33ecd336067bc2699fc5e04d58
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlsrvsendstreamdata"></a>sqlsrv_send_stream_data
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Sendet Daten aus Parameterstreams an den Server. Mit jedem Aufruf werden bis zu acht Kilobyte (8 KB) Daten an sqlsrv_send_stream_data** gesendet.  
+Sendet Daten aus Parameterstreams an den Server. Bis zu acht Kilobyte (8 KB) Daten mit jedem Aufruf gesendet **Sqlsrv_send_stream_data**.  
   
 > [!NOTE]  
 > In der Standardeinstellung werden alle Streamdaten an den Server gesendet, wenn eine Abfrage ausgeführt wird. Wenn dieses Standardverhalten nicht geändert wird, müssen Sie **sqlsrv_send_stream_data** nicht verwenden, um Datenstromdaten an den Server zu senden. Informationen zum Ändern des Standardverhaltens finden Sie im Parameter-Abschnitt [sqlsrv_query](../../connect/php/sqlsrv-query.md) oder [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md).  
@@ -101,7 +101,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Siehe auch  
 [API-Referenz für den SQLSRV-Treiber](../../connect/php/sqlsrv-driver-api-reference.md)  
 
 [Aktualisieren von Daten &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)  

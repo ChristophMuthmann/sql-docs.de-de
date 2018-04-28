@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Abrufen von Eingabe-/Ausgabeparametern mit dem SQLSRV-Treiber'
+title: 'Vorgehensweise: Abrufen von Ausgabeparametern mit dem SQLSRV-Treiber | Microsoft Docs'
 ms.custom: ''
 ms.date: 04/11/2018
 ms.prod: sql
@@ -22,14 +22,14 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 1a2b1f2e0a01456065ffc6af03d4e05a55492b2b
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-retrieve-output-parameters-using-the-sqlsrv-driver"></a>Vorgehensweise: Abrufen von Eingabe-/Ausgabeparametern mit dem SQLSRV-Treiber
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-In diesem Thema wird veranschaulicht, wie eine gespeicherten Prozedur aufgerufen wird, in der ein Parameter als Ausgabeparameter definiert wurde. Beachten Sie, dass beim Abrufen eines Ausgabe- oder Eingabe-/Ausgabeparameters alle von der gespeicherten Prozedur zurückgegebenen Ergebnisse verarbeitet werden müssen, bevor auf den Wert des zurückgegebenen Parameters zugegriffen werden kann.  
+In diesem Thema wird veranschaulicht, wie eine gespeicherten Prozedur aufgerufen wird, in der ein Parameter als Ausgabeparameter definiert wurde. Beim Abrufen eines Ausgabe- oder Eingabe-/Ausgabeparameter, müssen alle von der gespeicherten Prozedur zurückgegebenen Ergebnisse genutzt werden, bevor der Wert des zurückgegebenen Parameters zugegriffen werden kann.  
   
 > [!NOTE]  
 > Variablen, die auf **NULL**, **DateTime**oder Streamtypen aktualisiert oder initialisiert werden, können nicht als Ausgabeparameter verwendet werden.  
@@ -157,7 +157,7 @@ sqlsrv_close($conn);
 ?>
 ```
 
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Siehe auch  
 [Gewusst wie: Angeben der Parameterrichtung mit dem SQLSRV-Treiber](../../connect/php/how-to-specify-parameter-direction-using-the-sqlsrv-driver.md)
 
 [Gewusst wie: Abrufen von Eingabe- und Ausgabeparametern mit dem SQLSRV-Treiber](../../connect/php/how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver.md)

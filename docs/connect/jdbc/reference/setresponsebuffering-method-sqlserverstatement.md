@@ -1,30 +1,33 @@
 ---
 title: SetResponseBuffering-Methode (SQLServerStatement) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerStatement.setResponseBuffering(String responseBufferingValue)
-apilocation: SQLServerStatement.setResponseBuffering(String responseBufferingValue)
+apiname:
+- SQLServerStatement.setResponseBuffering(String responseBufferingValue)
+apilocation:
+- SQLServerStatement.setResponseBuffering(String responseBufferingValue)
 apitype: Assembly
 ms.assetid: 9f489835-6cda-4c8c-b139-079639a169cf
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7a8a3eb698ac0de46e3ffe88b36222bc5d618659
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: b6aed715661a2c3e189562778cec7a6e82fefba4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="setresponsebuffering-method-sqlserverstatement"></a>setResponseBuffering-Methode (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

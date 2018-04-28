@@ -2,7 +2,7 @@
 title: Versionshinweise (Odbcdriver for SQLServer) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/04/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -16,12 +16,12 @@ ms.assetid: b8459ed8-625e-4d8b-891c-e7e78c9977cc
 caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.openlocfilehash: 3bf3ac3b378cc5e3c55892860c45e5e5d6463cce
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
-ms.translationtype: MT
+manager: craigg
+ms.openlocfilehash: 415678df5facba955549980fb3af5e9c1725a17b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="release-notes"></a>Versionsanmerkungen
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]

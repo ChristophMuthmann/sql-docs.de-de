@@ -1,27 +1,28 @@
 ---
-title: "Schritt 1: Konfigurieren der Entwicklungsumgebung für die Entwicklung von Node.js | Microsoft Docs"
-ms.custom: 
+title: 'Schritt 1: Konfigurieren der Entwicklungsumgebung für die Entwicklung von Node.js | Microsoft Docs'
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: node-js
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 2dad01f1-fadf-4ac9-9b4d-26be3d301886
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7d723913fbc63e65a28031421da004e942f49f6e
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 8d64b53947882f1883d034fde8da24f1b83dabfa
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="step-1--configure-development-environment-for-nodejs-development"></a>Schritt 1: Konfigurieren der Entwicklungsumgebung für Node.js-Entwicklung
 Sie müssen Ihre Entwicklungsumgebung mit den Voraussetzungen zu konfigurieren, um die Entwicklung einer Anwendung mithilfe der Node.js-Treiber für SQL Server.  Die häufigste Methode ist die Verwendung den Knoten-Paket-Manager (Npm) das mühsame-Modul installieren, jedoch mühsam Moduls direkt zum download [Github](https://github.com/pekim/tedious) Falls gewünscht.  
@@ -31,8 +32,8 @@ Beachten Sie, dass der Treiber für Node.js TDS-Protokolls, die standardmäßig 
 ## <a name="windows"></a>Windows  
   
 1. **Node.js-Laufzeit und Npm-Paket-Manager installieren**  
-a. Wechseln Sie zu [Node.js](https://nodejs.org/en/download/)  
-b. Klicken Sie auf den entsprechenden Windows Installer-Msi-Link.   
+A. Wechseln Sie zu [Node.js](https://nodejs.org/en/download/)  
+B. Klicken Sie auf den entsprechenden Windows Installer-Msi-Link.   
 c. Nachdem das Download abgeschlossen ist, führen Sie die MSI-Datei zum Installieren von Node.js  
   
 2. **Öffnen von cmd.exe**  
@@ -83,8 +84,8 @@ c. Nachdem das Download abgeschlossen ist, führen Sie die MSI-Datei zum Install
 ## <a name="mac"></a>Mac  
   
 1. **Node.js-Laufzeit und Npm-Paket-Manager installieren**  
-a. Wechseln Sie zu [Node.js](https://nodejs.org/en/download/)  
-b. Klicken Sie auf den entsprechenden Link für die Mac OS-Installer.  
+A. Wechseln Sie zu [Node.js](https://nodejs.org/en/download/)  
+B. Klicken Sie auf den entsprechenden Link für die Mac OS-Installer.  
 c. Nachdem das Download abgeschlossen ist, führen Sie die Dmg zum Installieren von Node.js  
   
 2. **Geöffneten Terminaldienste**  

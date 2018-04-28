@@ -1,28 +1,28 @@
 ---
 title: Odbcdriver for SQLServer herunterladen | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/13/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 53b09784-bb9d-4fd4-99d3-0492b3308ac4
-caps.latest.revision: 
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: afd906dfbfe11310747cb8876e8e0e217854d5e3
-ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
-ms.translationtype: MT
+ms.openlocfilehash: c8ccbb5940ac3818e4f7977ff101f6f56d50371a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="download-odbc-driver-for-sql-server"></a>Odbcdriver for SQLServer herunterladen
 
@@ -51,7 +51,7 @@ ms.lasthandoff: 03/15/2018
 - [Ubuntu 16.04 .deb Pakete](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/msodbcsql17/)
 - [Ubuntu 14.04 .deb Pakete](https://packages.microsoft.com/ubuntu/14.04/prod/pool/main/m/msodbcsql17/) 
 
-#### <a name="macos"></a>macOS
+#### <a name="macos"></a>MacOS
 - [OS X 10.11 und MacOS 10.12, 10.13 Homebrew Formeln](https://github.com/Microsoft/homebrew-mssql-release)
 
 Siehe auch [Installieren des Treibers](linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md).
@@ -83,7 +83,7 @@ Siehe auch [Installieren des Treibers](linux-mac/installing-the-microsoft-odbc-d
 - [Ubuntu 15.10 .deb Pakete](https://packages.microsoft.com/ubuntu/15.10/prod/pool/main/m/msodbcsql/)
 - [Ubuntu 14.04 .deb Pakete](https://packages.microsoft.com/ubuntu/14.04/prod/pool/main/m/msodbcsql/) 
 
-#### <a name="macos"></a>macOS
+#### <a name="macos"></a>MacOS
 - [OS X 10.11 und MacOS 10.12, 10.13 Homebrew Formeln](https://github.com/Microsoft/homebrew-mssql-release)
 
 Siehe auch [Installieren des Treibers](linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md).

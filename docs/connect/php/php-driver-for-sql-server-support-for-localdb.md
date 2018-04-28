@@ -19,7 +19,7 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 34fe16235f924c020c69b4e58cb485e0c7ff1e4b
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 04/16/2018
 ---
@@ -29,7 +29,7 @@ ms.lasthandoff: 04/16/2018
 
 LocalDB ist eine vereinfachte Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] die ist seit verfügbaren [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)]. In diesem Thema wird erläutert, wie in einer LocalDB-Instanz eine Verbindung mit einer Datenbank hergestellt wird.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Hinweise
 
 Weitere Informationen zu LocalDB, z. B. wie Sie LocalDB installieren und Konfigurieren der LocalDB-Instanz finden Sie unter der [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] onlinedokumentationsthema auf [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)] Express LocalDB.
 
@@ -39,7 +39,7 @@ Kurz gesagt, erlaubt LocalDB Ihnen Folgendes:
 
 -   Verwenden Sie das Schlüsselwort der **AttachDBFilename** -Verbindungszeichenfolge, um anzugeben, welche Datenbankdatei der Server anfügen soll. Wenn Sie **AttachDBFilename**verwenden und den Namen der Datenbank nicht mit dem Schlüsselwort der **Database** -Verbindungszeichenfolge angeben, wird die Datenbank aus der LocalDB-Instanz entfernt, wenn die Anwendung geschlossen wird.
 
--   Geben Sie in der Verbindungszeichenfolge eine LocalDB-Instanz an: Hier ist z. B. eine Beispielverbindungszeichenfolge für den SQLSRV:
+-   Geben Sie in der Verbindungszeichenfolge eine LocalDB-Instanz. Hier ist z. B. eine Beispielverbindungszeichenfolge für den SQLSRV:
 
     ```php
     $conn = sqlsrv_connect( '(localdb)\\v11.0',
@@ -84,6 +84,6 @@ $conn = new PDO( 'sqlsrv:server=(localdb)\\myInstance;'
 
 Anleitungen zum Installieren von LocalDB finden Sie unter der [LocalDB Dokumentation](../../database-engine/configure-windows/sql-server-2016-express-localdb.md). Wenn Sie sqlcmd.exe verwenden, um Daten in der LocalDB-Instanz zu ändern, müssen Sie die [Hilfsprogramms "Sqlcmd"](../../tools/sqlcmd-utility.md).
 
-## <a name="see-also"></a>Weitere Informationen finden Sie unter
+## <a name="see-also"></a>Siehe auch
 
 [Verbinden mit dem Server](../../connect/php/connecting-to-the-server.md)

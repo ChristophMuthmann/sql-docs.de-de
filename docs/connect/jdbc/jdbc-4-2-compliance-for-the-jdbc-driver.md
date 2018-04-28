@@ -1,36 +1,37 @@
 ---
-title: "JDBC 4.2-Kompatibilität für JDBC Driver | Microsoft Docs"
-ms.custom: 
+title: JDBC 4.2-Kompatibilität für JDBC Driver | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 36025ec0-3c72-4e68-8083-58b38e42d03b
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 01a193158158bcc4d86c090acc302984b015bc7d
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: adf7cfaf908fc9ffc0e9f1f664e9a84a385e97fd
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="jdbc-42-compliance-for-the-jdbc-driver"></a>JDBC 4.2-Kompatibilität für den JDBC-Treiber
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
     
 > [!NOTE]  
->  Versionen von Microsoft JDBC Driver für SQL Server vor Version 4.2 sind mit der Java Database Connectivity API 4.0-Spezifikation kompatibel. Dieser Abschnitt trifft auf Versionen vor Version 4.2 nicht zu.  
+>  Versionen des Microsoft JDBC-Treibers für SQL Server vor Version 4.2 sind mit der Java Database Connectivity API 4.0-Spezifikation kompatibel. Dieser Abschnitt trifft auf Versionen vor Version 4.2 nicht zu.  
   
- Die Java Database Connectivity API 4.2-Spezifikation wird von Microsoft JDBC Driver 4.2 für SQL Server mit den folgenden API-Methoden unterstützt.  
+ Die Java Database Connectivity API 4.2-Spezifikation wird vom Microsoft JDBC-Treiber 4.2 für SQL Server mit den folgenden API-Methoden unterstützt.  
   
  **SQLServerStatement-Klasse**  
   
@@ -70,7 +71,7 @@ ms.lasthandoff: 11/18/2017
 |Neue Methoden|Description|Bemerkenswerte Implementierungsdetails|  
 ||Aktualisiert die bezeichnete Spalte mit einem Object-Wert. Es sind 4 neue (überladene) Methoden zum Unterstützen der neuen SQLType-Schnittstelle vorhanden.|Wird wie unter der java.sql.ResultSet-Schnittstelle beschrieben implementiert. Weitere Informationen finden Sie unter [java.sql.ResultSet](https://docs.oracle.com/javase/8/docs/api/java/sql/ResultSet.html).|  
   
- Die Java Database Connectivity API 4.2-Spezifikation wird von Microsoft JDBC Driver 4.2 für SQL Server mit den folgenden Datentypzuordnungen unterstützt.  
+ Die Java Database Connectivity API 4.2-Spezifikation wird vom Microsoft JDBC-Treiber 4.2 für SQL Server mit den folgenden Datentypzuordnungen unterstützt.  
   
 |||  
 |-|-|  

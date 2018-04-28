@@ -1,27 +1,28 @@
 ---
-title: "Grundlegendes zur Parallelitätssteuerung | Microsoft Docs"
-ms.custom: 
+title: Grundlegendes zur Parallelitätssteuerung | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 98b7dabe-9b12-4e1d-adeb-e5b5cb0c96f3
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1d56f2e4266bdae1a51325bc540fe38af5908721
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 9a414c6d5fe2ee18fb83e168fe33fef53a0ac02c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="understanding-concurrency-control"></a>Grundlegendes zur Parallelitätssteuerung
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -36,11 +37,11 @@ ms.lasthandoff: 11/18/2017
   
 |Parallelitätstyp|Merkmale|Sperren auf Zeilenebene|Description|  
 |----------------------|---------------------|---------------|-----------------|  
-|CONCUR_READ_ONLY|Read Only|Nein|Updates über den Cursor sind nicht zulässig; es werden keine Sperren für die Zeilen aufrechterhalten, aus denen das Resultset besteht.|  
-|CONCUR_UPDATABLE|Optimistic Read Write|Nein|Die Datenbank geht davon aus, dass Zeilenkonflikte unwahrscheinlich, aber möglich sind. Zeilenintegrität wird mit einem Timestampvergleich geprüft.|  
+|CONCUR_READ_ONLY|Read Only|nein|Updates über den Cursor sind nicht zulässig; es werden keine Sperren für die Zeilen aufrechterhalten, aus denen das Resultset besteht.|  
+|CONCUR_UPDATABLE|Optimistic Read Write|nein|Die Datenbank geht davon aus, dass Zeilenkonflikte unwahrscheinlich, aber möglich sind. Zeilenintegrität wird mit einem Timestampvergleich geprüft.|  
 |CONCUR_SS_SCROLL_LOCKS|Pessimistic Read Write|ja|Die Datenbank geht davon aus, dass Zeilenkonflikte wahrscheinlich sind. Zeilenintegrität wird mit Zeilensperren sichergestellt.|  
-|CONCUR_SS_OPTIMISTIC_CC|Optimistic Read Write|Nein|Die Datenbank geht davon aus, dass Zeilenkonflikte unwahrscheinlich, aber möglich sind. Zeilenintegrität wird mit einem Timestampvergleich überprüft.<br /><br /> Für [!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)] und höher, der Server ändert sich dies in CONCUR_SS_OPTIMISTIC_CCVAL, wenn die Tabelle keine Timestamp-Spalte enthält.<br /><br /> Für [!INCLUDE[ssVersion2000](../../includes/ssversion2000_md.md)], wenn die zugrunde liegende Tabelle eine Timestamp-Spalte verfügt, wird OPTIMISTIC WITH ROW VERSIONING verwendet, auch wenn OPTIMISTIC WITH VALUES angegeben ist. Wenn OPTIMISTIC WITH ROW VERSIONING angegeben wurde und die Tabelle keine Timestamps aufweist, wird OPTIMISTIC WITH VALUES verwendet.|  
-|CONCUR_SS_OPTIMISTIC_CCVAL|Optimistic Read Write|Nein|Die Datenbank geht davon aus, dass Zeilenkonflikte unwahrscheinlich, aber möglich sind. Zeilenintegrität wird mit einem Zeilendatenvergleich geprüft.|  
+|CONCUR_SS_OPTIMISTIC_CC|Optimistic Read Write|nein|Die Datenbank geht davon aus, dass Zeilenkonflikte unwahrscheinlich, aber möglich sind. Zeilenintegrität wird mit einem Timestampvergleich überprüft.<br /><br /> Für [!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)] und höher, der Server ändert sich dies in CONCUR_SS_OPTIMISTIC_CCVAL, wenn die Tabelle keine Timestamp-Spalte enthält.<br /><br /> Für [!INCLUDE[ssVersion2000](../../includes/ssversion2000_md.md)], wenn die zugrunde liegende Tabelle eine Timestamp-Spalte verfügt, wird OPTIMISTIC WITH ROW VERSIONING verwendet, auch wenn OPTIMISTIC WITH VALUES angegeben ist. Wenn OPTIMISTIC WITH ROW VERSIONING angegeben wurde und die Tabelle keine Timestamps aufweist, wird OPTIMISTIC WITH VALUES verwendet.|  
+|CONCUR_SS_OPTIMISTIC_CCVAL|Optimistic Read Write|nein|Die Datenbank geht davon aus, dass Zeilenkonflikte unwahrscheinlich, aber möglich sind. Zeilenintegrität wird mit einem Zeilendatenvergleich geprüft.|  
   
 ## <a name="result-sets-that-are-not-updateable"></a>Nicht aktualisierbare Resultsets  
  Ein aktualisierbares Resultset ist ein Resultset, in dem Zeilen eingefügt, aktualisiert und gelöscht werden können. In den folgenden Fällen [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] keinen aktualisierbaren Cursor kann nicht erstellt werden. Die generierte Ausnahme lautet "Das Resultset kann nicht aktualisiert werden".  
@@ -48,7 +49,7 @@ ms.lasthandoff: 11/18/2017
 |Ursache|Description|Remedy|  
 |-----------|-----------------|------------|  
 |Anweisung wurde nicht mit JDBC 2.0-Syntax (oder neuer) erstellt|In JDBC 2.0 wurden neue Methoden eingeführt, um Anweisungen zu erstellen. Bei der Verwendung von JDBC 1.0-Syntax ist das Resultset standardmäßig schreibgeschützt.|Geben Sie den Resultsettyp und die Parallelität beim Erstellen der Anweisung an.|  
-|Anweisung wurde mit TYPE_SCROLL_INSENSITIVE erstellt|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]erstellt einen statischen momentaufnahmencursor. Dieser ist von den zugrunde liegenden Tabellenzeilen getrennt, um den Cursor vor Zeilenudpates durch andere Benutzer zu schützen.|Verwenden Sie TYPE_SCROLL_SENSITIVE, TYPE_SS_SCROLL_KEYSET, TYPE_SS_SCROLL_DYNAMIC oder TYPE_FORWARD_ONLY mit CONCUR_UPDATABLE, um das Erstellen eines statischen Cursors zu vermeiden.|  
+|Anweisung wurde mit TYPE_SCROLL_INSENSITIVE erstellt|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] erstellt einen statischen momentaufnahmencursor. Dieser ist von den zugrunde liegenden Tabellenzeilen getrennt, um den Cursor vor Zeilenudpates durch andere Benutzer zu schützen.|Verwenden Sie TYPE_SCROLL_SENSITIVE, TYPE_SS_SCROLL_KEYSET, TYPE_SS_SCROLL_DYNAMIC oder TYPE_FORWARD_ONLY mit CONCUR_UPDATABLE, um das Erstellen eines statischen Cursors zu vermeiden.|  
 |Tabellenentwurf schließt einen KEYSET-Cursor oder einen DYNAMIC-Cursor aus|Die zugrunde liegende Tabelle keinen eindeutigen Schlüssel aktivieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] zur eindeutigen Identifizierung eine Zeile.|Fügen Sie der Tabelle eindeutige Schlüssel hinzu, um eine eindeutige Identifikation jeder Zeile bereitzustellen.|  
   
 ## <a name="see-also"></a>Siehe auch  
