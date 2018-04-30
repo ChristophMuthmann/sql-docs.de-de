@@ -1,27 +1,28 @@
 ---
-title: "SQL Server Management Studio – Lizenzbestimmungen | Microsoft-Dokumentation"
-ms.custom: 
+title: SQL Server Management Studio – Lizenzbestimmungen | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 8f3d273c-c663-4341-aa2f-5ed8ebcba5b0
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c718bbcd3df4d304f0e14cb1a5a01f46d77fe857
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 3690381b8c1b539bf4f30c8508cd927964e40f1e
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sql-server-management-studio---license-terms"></a>SQL Server Management Studio – Lizenzbestimmungen
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -78,7 +79,7 @@ von Microsoft für diese Software, sofern diese Elemente nicht von anderen Bedin
   
 **3.    INTERNETBASIERTE DIENSTE.** Microsoft stellt mit der Software internetbasierte Dienste bereit. Microsoft ist berechtigt, diese jederzeit zu ändern oder zu kündigen.  
   
-&nbsp;&nbsp;**a.    Zustimmung für internetbasierte Dienste.** Die nachfolgend und in der Datenschutzerklärung von SQL Server beschriebene Funktion der Software stellt über das Internet eine Verbindung mit Computersystemen von Microsoft oder von Dienstanbietern her. In einigen Fällen erhalten Sie keinen gesonderten Hinweis, wenn die Verbindung hergestellt wird. Sie können diese Funktion abschalten oder nicht verwenden. Weitere Informationen über diese Funktion finden Sie unter [http://go.microsoft.com/fwlink/?LinkID=398120](http://go.microsoft.com/fwlink/?LinkID=398120). **Durch die Verwendung dieser Funktion erklären Sie sich mit der Übertragung dieser Informationen einverstanden**. Microsoft verwendet die Informationen nicht, um Sie zu identifizieren oder Kontakt mit Ihnen aufzunehmen.  
+&nbsp;&nbsp;**a.    Zustimmung für internetbasierte Dienste.** Die nachfolgend und in der Datenschutzerklärung von SQL Server beschriebene Funktion der Software stellt über das Internet eine Verbindung mit Computersystemen von Microsoft oder von Dienstanbietern her. In einigen Fällen erhalten Sie keinen gesonderten Hinweis, wenn die Verbindung hergestellt wird. Sie können diese Funktion abschalten oder nicht verwenden. Weitere Informationen zu diesem Feature finden Sie unter [http://go.microsoft.com/fwlink/?LinkID=398120](http://go.microsoft.com/fwlink/?LinkID=398120). **Durch die Verwendung dieser Funktion erklären Sie sich mit der Übertragung dieser Informationen einverstanden**. Microsoft verwendet die Informationen nicht, um Sie zu identifizieren oder Kontakt mit Ihnen aufzunehmen.  
   
 &nbsp;&nbsp;**i.    Computerinformationen.** Die folgende Funktion verwendet Internetprotokolle, die an die entsprechenden Systeme Computerinformationen senden, wie z. B. Ihre Internetprotokolladresse, den Typ des Betriebssystems, den Typ des Browsers, Name und Version der von Ihnen verwendeten Software sowie den Sprachcode des Geräts, auf dem Sie die Software installiert haben. Microsoft verwendet diese Informationen, um Ihnen den internetbasierten Dienst zur Verfügung zu stellen.  
   

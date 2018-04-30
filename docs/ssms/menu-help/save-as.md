@@ -2,7 +2,7 @@
 title: Speichern unter | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms-menu
@@ -22,14 +22,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 16e9002516156238be7eac9faa203b64f0d23318
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: d3414012f6873feba14c1701ea72cdd9f998ff2b
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="save-as"></a>Speichern unter
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Wird verwendet, um eine Instanz des aktuellen Elements an einem angegebenen Speicherort in einem angegebenen Dateiformat zu speichern. Klicken Sie auf **Speichern** *<file>* **unter** im Menü **Datei** (wobei *<file>* der Name des aktuellen Elements ist), oder drücken Sie ALT+F, A im Code-Editor.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Wird verwendet, um eine Instanz des aktuellen Elements an einem angegebenen Speicherort in einem angegebenen Dateiformat zu speichern. Klicken Sie auf **Speichern** *<file>* **unter** im Menü **Datei** (wobei *<file>* der Name des aktuellen Elements ist), oder drücken Sie ALT+F, A im Code-Editor.  
   
 ## <a name="central-panel"></a>Zentraler Bereich  
 **Speichern in**  
@@ -39,7 +40,7 @@ Suchen Sie den vorhandenen Projektordner aus dieser Dropdownliste aus. Nach der 
 Mithilfe dieser Option können Sie den aktuellen Dateinamen anzeigen, den Dateinamen ändern sowie die angezeigten Dateien und Ordner filtern. Zum Filtern der angezeigten Dateien und Ordner geben Sie einen vollständigen oder teilweisen Dateinamen als Filterkriterium ein. Sie können das Sternchen (`*`) als Platzhalter verwenden.  
   
 > [!TIP]  
-> Um Dateien an Speicherorten im Web oder Netzwerk anzuzeigen, geben Sie eine URL oder Netzwerkpfad in das Feld **Dateiname** ein. Beispielsweise werden mit „http://meinewebsite“ alle Dateien angezeigt, die unter der Webadresse „meinewebsite“ verfügbar sind, während mit „\\\meinserver\meinefreigabe“ alle Dateien aufgeführt werden, die im Ordner „meinefreigabe“ des Servers „meinserver“ gespeichert sind.  
+> Um Dateien an Speicherorten im Web oder Netzwerk anzuzeigen, geben Sie eine URL oder Netzwerkpfad in das Feld **Dateiname** ein. Beispielsweise werden mit http://mywebsite alle Dateien angezeigt, die unter der Webadresse „mywebsite“ verfügbar sind, während mit „\\\myserver\myshare“ alle Dateien angezeigt werden, die im Ordner „myshare“ des Servers „myserver“ gespeichert sind.  
   
 **Dateityp**  
 Mithilfe dieser Option wählen Sie einen neuen Dateityp für das ausgewählte Element aus. Die angezeigten Dateitypen beinhalten alle verfügbaren Dateitypen, in die das ausgewählte Element konvertiert werden kann.  

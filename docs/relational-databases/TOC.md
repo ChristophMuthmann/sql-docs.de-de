@@ -3,15 +3,16 @@
 
 # [SQL Server Guides (Handbücher für SQL-Server)](sql-server-guides.md)
 ## Handbuch zur Problembehandlung und Überwachung von Always On-Verfügbarkeitsgruppen
-## [Indexentwurf](sql-server-index-design-guide.md)
+## [Architektur und Entwurf von Indizes](sql-server-index-design-guide.md)
 ## [Memory Management Architecture (Architektur der Speicherverwaltung)](memory-management-architecture-guide.md)
 ### [Lesen von Seiten](reading-pages.md)  
 ### [Schreiben von Seiten](writing-pages.md)
 ## [Pages and Extents Architecture (Architektur von Seiten und Blöcken)](pages-and-extents-architecture-guide.md)
 ## [Post-migration Validation and Optimization (Überprüfung und Optimierung nach der Migration)](post-migration-validation-and-optimization-guide.md)
+## [Leistung](../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md) 
 ## [Query Processing Architecture (Architektur der Abfrageverarbeitung)](query-processing-architecture-guide.md)
 ## [Thread and Task Architecture (Thread- und Taskarchitektur)](thread-and-task-architecture-guide.md)
-## [Transaction Log Architecture and Management (Architektur und Verwaltung von Transaktionsprotokollen)](sql-server-transaction-log-architecture-and-management-guide.md)
+## [Transaction Log Architecture and Management Guide (Handbuch zur Architektur und Verwaltung von Transaktionsprotokollen)](sql-server-transaction-log-architecture-and-management-guide.md)
 ## [Handbuch zu Transaktionssperren und Zeilenversionsverwaltung](sql-server-transaction-locking-and-row-versioning-guide.md)
 
 # [Sichern und Wiederherstellen](../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)
@@ -57,7 +58,6 @@
 
 # [Joins](../relational-databases/performance/joins.md)
 # [Partitionen](../relational-databases/partitions/partitioned-tables-and-indexes.md)
-# [Leistung](../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)
 # [Richtlinienbasierte Verwaltung](../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)
 # [PolyBase](../relational-databases/polybase/polybase-guide.md)
 # [Replikation](../relational-databases/replication/sql-server-replication.md)

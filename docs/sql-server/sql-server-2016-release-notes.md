@@ -1,8 +1,8 @@
 ---
 title: Versionsanmerkungen zu SQL Server 2016|Microsoft-Dokumente
-ms.date: 03/14/2018
+ms.date: 04/24/2018
 ms.prod: sql
-ms.prod_service: sql-non-specified
+ms.prod_service: sql
 ms.reviewer: ''
 ms.suite: sql
 ms.custom: ''
@@ -18,24 +18,29 @@ ms.author: craigg
 manager: jhubbard
 ms.workload: Active
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 20cd775d23caae5f4f833b95e9a4bc7c1a257612
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: d3e8962771c634f3cf606606beaac1b0604623e6
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sql-server-2016-release-notes"></a>Versionsanmerkungen zu SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
   Im folgenden Artikel werden Einschränkungen und Probleme mit Releases von SQL Server 2016, Service Packs inbegriffen, beschrieben. Informationen zu Neuerungen finden Sie unter [Neues im Berichts-Generator für SQL Server 2016](https://docs.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-2016).
 
-> [![Download aus dem Evaluation Center](../includes/media/download2.png)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) Laden Sie SQL Server 2016 aus dem **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)** herunter.
->
-> [![Azure Virtual Machine (klein)](../includes/media/azure-vm.png)](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/) Haben Sie ein Azure-Konto?  Wechseln Sie anschließend **[hierhin](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/)** , um einen virtuellen Computer zu starten, auf dem SQL Server 2016 SP1 bereits installiert ist.
->
-> [![SSMS herunterladen](../includes/media/download2.png)](../ssms/download-sql-server-management-studio-ssms.md) Wechseln Sie zu **[Herunterladen von SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)**, um die neueste Version von SQL Server Management Studio (SSMS) abzurufen.
+- [![Download aus dem Evaluation Center](../includes/media/download2.png)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) Laden Sie SQL Server 2016 aus dem **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)** herunter.
+- [![Azure Virtual Machine (klein)](../includes/media/azure-vm.png)](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/) Haben Sie ein Azure-Konto?  Wechseln Sie anschließend **[hierhin](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/)** , um einen virtuellen Computer zu starten, auf dem SQL Server 2016 SP1 bereits installiert ist.
+- [![SSMS herunterladen](../includes/media/download2.png)](../ssms/download-sql-server-management-studio-ssms.md) Wechseln Sie zu **[Herunterladen von SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)**, um die neueste Version von SQL Server Management Studio (SSMS) abzurufen.
+
+## <a name="bkmk_2016sp2"></a>SQL Server 2016 Service Pack 2 (SP2)
+
+![info_tip](../sql-server/media/info-tip.png) SQL Server 2016 SP2 enthält alle kumulativen Updates bis einschließlich CU8, die nach SQL Server 2016 SP1 veröffentlicht wurden. 
+
+- [![Microsoft Download Center](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?linkid=869608) [Herunterladen von SQL Server 2016 Service Pack 2 (SP2)](https://go.microsoft.com/fwlink/?linkid=869608)
+- Eine vollständige Liste der Updates finden Sie unter [SQL Server 2016 Service Pack 2 release information (Releaseinformationen zu SQL Server 2016 Service Pack 2)](https://support.microsoft.com/en-us/help/4052908/sql-server-2016-service-pack-2-release-information).
 
 ## <a name="bkmk_2016sp1"></a>SQL Server 2016 Service Pack 1 (SP1)
-![info_tip](../sql-server/media/info-tip.png) SQL Server 2016 SP1 umfasst alle Problembehebungen bis zu SQL Server 2016 RTM CU3 Security einschließlich des Sicherheitsupdates MS16-136. Es enthält ein Rollup der in den kumulativen Updates von SQL Server 2016 bereitgestellten Lösungen und umfasst das aktuelle kumulative Update CU3 sowie das Sicherheitsupdate MS16-136 mit Veröffentlichungsdatum am 8. November 2016. 
+![info_tip](../sql-server/media/info-tip.png) SQL Server 2016 SP1 umfasst alle kumulativen Updates bis SQL Server 2016 RTM CU3 Security einschließlich des Sicherheitsupdates MS16-136. Es enthält ein Rollup der in den kumulativen Updates von SQL Server 2016 bereitgestellten Lösungen und umfasst das aktuelle kumulative Update CU3 sowie das Sicherheitsupdate MS16-136 mit Veröffentlichungsdatum am 8. November 2016.
 
 Die folgenden Features sind in der Standard, Web, Express und Local DB Edition von SQL Server SP1 verfügbar (sofern nicht anders angegeben):
 - Always Encrypted
@@ -159,24 +164,22 @@ Führen Sie außerdem die folgenden gespeicherten Prozeduren des Abfragespeicher
 -   Verwenden Sie die Option **Onlinehilfe oder lokale Hilfe auswählen** , und konfigurieren Sie die Hilfe für „Ich möchte Onlinehilfe verwenden“.    
     
 -   Verwenden Sie die Option **Inhalt von Onlinespeicherort installieren** , und laden Sie den Inhalt von SQL Server 2014 herunter.    
-    
+
  **F1-Hilfe:** Beim Drücken von F1 in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] wird standardmäßig die Onlineversion des F1-Hilfeartikels im Browser angezeigt. Für die Probleme wird browserbasierte Hilfe angeboten, auch wenn Sie die lokale Hilfe konfiguriert und installiert haben. 
-     
-**Aktualisieren von Inhalten:**    
-In SQL Server Management Studio und Visual Studio kann die Anwendung Help Viewer während des Hinzufügens der Dokumentation einfrieren (hängenbleiben). Führen Sie zur Lösung des Problems folgende Schritte aus. Weitere Informationen zu diesem Problem finden Sie unter [Visual Studio Help Viewer friert beim Begrüßungsbildschirm ein](https://msdn.microsoft.com/library/mt654096.aspx).    
+
+**Aktualisieren von Inhalt:** In SQL Server Management Studio und Visual Studio kann die Anwendung Help Viewer während des Hinzufügens der Dokumentation einfrieren (hängen bleiben). Führen Sie zur Lösung des Problems folgende Schritte aus. Weitere Informationen zu diesem Problem finden Sie unter [Visual Studio Help Viewer friert beim Begrüßungsbildschirm ein](https://msdn.microsoft.com/library/mt654096.aspx).    
     
-* Öffnen Sie die Datei „%LOCALAPPDATA%\Microsoft\HelpViewer2.2\HlpViewer_SSMS16_en-US.settings“ | „HlpViewer_VisualStudio14_en-US.settings“ im Editor, und ändern Sie das Datum im folgenden Code in einen Zeitpunkt in der Zukunft.    
-    
-     
-```    
+* Öffnen Sie die Datei „%LOCALAPPDATA%\Microsoft\HelpViewer2.2\HlpViewer_SSMS16_en-US.settings“ | „HlpViewer_VisualStudio14_en-US.settings“ im Editor, und ändern Sie das Datum im folgenden Code in einen Zeitpunkt in der Zukunft.
+
      Cache LastRefreshed="12/31/2017 00:00:00"    
-``` 
+```
 
-## <a name="additional-information"></a>Zusätzliche Informationen
-+ [SQL Server 2016-Installation](../database-engine/install-windows/installation-for-sql-server-2016.md)
-+ [SQL Server-Update Center – Links und Informationen zu allen unterstützten Versionen](https://msdn.microsoft.com/library/ff803383.aspx)
+## Additional Information
++ [SQL Server 2016 installation](../database-engine/install-windows/installation-for-sql-server-2016.md)
++ [SQL Server Update Center - links and information for all supported versions](https://msdn.microsoft.com/library/ff803383.aspx)
 
+[!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
 
-[!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]    
+[!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]
 
-![MS_Logo_X-Small](../sql-server/media/ms-logo-x-small.png "MS_Logo_X-Small")    
+![MS_Logo_X-Small](../sql-server/media/ms-logo-x-small.png "MS_Logo_X-Small")
