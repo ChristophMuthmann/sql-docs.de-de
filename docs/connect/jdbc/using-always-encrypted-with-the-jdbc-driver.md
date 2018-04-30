@@ -2,7 +2,7 @@
 title: Always Encrypted mit dem JDBC-Treiber verwenden | Microsoft Docs
 ms.custom: ''
 ms.date: 3/14/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: jdbc
@@ -13,16 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 271c0438-8af1-45e5-b96a-4b1cabe32707
-caps.latest.revision: ''
+caps.latest.revision: 64
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 425f965c37e1d148a267566bd1980eb345cadfc6
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
-ms.translationtype: MT
+ms.openlocfilehash: 02a0be7375eafcd3ba54dbdf83f3e55e73b13a91
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-always-encrypted-with-the-jdbc-driver"></a>Always Encrypted verwenden mit dem JDBC-Treiber
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -107,7 +107,7 @@ SQLServerConnection.registerColumnEncryptionKeyStoreProviders(keyStoreMap);
 >
 >  [azure-sdk-for-java](https://github.com/Azure/azure-sdk-for-java)
 >
->  [azure-activedirectory-library-for-java libraries](https://github.com/AzureAD/azure-activedirectory-library-for-java)
+>  [Azure-Active Directory-Bibliothek-für-Java-Bibliotheken](https://github.com/AzureAD/azure-activedirectory-library-for-java)
 >
 > Ein Beispiel dafür, wie diese Abhängigkeiten in einem Projekt Maven eingeschlossen werden sollen, finden Sie unter [herunterladen ADAL4J und AKV Abhängigkeiten mit Apache Maven](https://github.com/Microsoft/mssql-jdbc/wiki/Download-ADAL4J-And-AKV-Dependencies-with-Apache-Maven)
 
@@ -178,7 +178,7 @@ Wenn Keystore PKCS12-Typ aufweist, das Hilfsprogramm Keytool fordert nicht für 
 
 Sie können auch ein Zertifikat aus dem Windows-Zertifikatspeicher im PFX-Format exportieren und verwenden, die mit der SQLServerColumnEncryptionJavaKeyStoreProvider. Das exportierte Zertifikat kann auch auf die Java-Schlüsselspeicher als JKS Keystore Typ importiert werden.
 
-Erstellen Sie nach dem Erstellen des Keytool-Eintrags, der spaltenhauptschlüssel-Metadaten in die Datenbank, die den Anbieternamen Keystore und dem Schlüsselpfad erforderlich ist. Weitere Informationen zum Erstellen von Hauptschlüssel-Spaltenmetadaten finden Sie unter [CREATE COLUMN MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md). For SQLServerColumnEncryptionJavaKeyStoreProvider, the key path is just the alias of the key and the name of the SQLServerColumnEncryptionJavaKeyStoreProvider is 'MSSQL_JAVA_KEYSTORE'. Sie können auch diesen Namen, die mit der öffentlichen getName()-API der Klasse SQLServerColumnEncryptionJavaKeyStoreProvider Abfragen. 
+Erstellen Sie nach dem Erstellen des Keytool-Eintrags, der spaltenhauptschlüssel-Metadaten in die Datenbank, die den Anbieternamen Keystore und dem Schlüsselpfad erforderlich ist. Weitere Informationen zum Erstellen von Hauptschlüssel-Spaltenmetadaten finden Sie unter [CREATE COLUMN MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md). Für SQLServerColumnEncryptionJavaKeyStoreProvider Schlüsselpfad ist nur der Alias des Schlüssels und der Name der SQLServerColumnEncryptionJavaKeyStoreProvider ist "MSSQL_JAVA_KEYSTORE". Sie können auch diesen Namen, die mit der öffentlichen getName()-API der Klasse SQLServerColumnEncryptionJavaKeyStoreProvider Abfragen. 
 
 Die T-SQL-Syntax zum Erstellen des spaltenhauptschlüssels ist:
 
@@ -402,7 +402,7 @@ Always Encrypted kann auch für einzelne Abfragen aktiviert werden. Weitere Info
 ### <a name="configuring-how-javasqltime-values-are-sent-to-the-server"></a>Konfigurieren, wie java.sql.Time-Werte an den Server gesendet werden
 Die **SendTimeAsDatetime** Verbindungseigenschaft dient zum Konfigurieren, wie der java.sql.Time-Wert an den Server gesendet wird. Auf "false" festgelegt, wird der Zeitwert als Time-Typ SQL Server gesendet. Wenn festgelegt, die Zeit "true", die als Datentyp "DateTime"-Wert gesendet wird. Wenn eine Time-Spalte verschlüsselt wird, die **SendTimeAsDatetime** -Eigenschaft muss "false" sein, wie Sie verschlüsselte Spalten nicht die Konvertierung von Zeit in "DateTime" unterstützen. Beachten Sie außerdem, dass diese Eigenschaft von der Standardeinstellung "true", damit bei Verwendung von verschlüsselten Spalten Sie sie auf "false" festgelegt müssen. Andernfalls wird der Treiber eine Ausnahme ausgelöst. Ab Version 6.0 des Treibers, die SQLServerConnection-Klasse verfügt über zwei Methoden, um den Wert dieser Eigenschaft programmgesteuert zu konfigurieren:
  
-* public void setSendTimeAsDatetime(boolean sendTimeAsDateTimeValue)
+* Öffentliche void SetSendTimeAsDatetime (boolesche SendTimeAsDateTimeValue)
 * öffentlicher boolescher Wert getSendTimeAsDatetime()
 
 Weitere Informationen zu dieser Eigenschaft finden Sie unter [konfigurieren wie java.sql.Time-Werte werden an den Server gesendet](configuring-how-java-sql-time-values-are-sent-to-the-server.md).

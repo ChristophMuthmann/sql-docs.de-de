@@ -1,7 +1,7 @@
 ---
 title: WideWorldImporters OLTP Datenbankkatalog - SQL | Microsoft Docs
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod: sql
+ms.prod_service: sql
 ms.service: ''
 ms.component: samples
 ms.technology:
@@ -17,11 +17,11 @@ ms.author: barbkess
 manager: craigg
 robots: noindex,nofollow
 ms.workload: On Demand
-ms.openlocfilehash: 9f4cabeaa5dafe2de26d760b1c03377ba10c2890
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: d7240025e36f64ac6a11194d81ba563d4e7c49b0
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="wideworldimporters-database-catalog"></a>Datenbankkatalog "wideworldimporters"
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ Diese Schemas werden für externe Anwendungen verwendet, die nicht direkt auf di
 |-----------------------------|---------------------|
 |Website|Alle Zugriffe auf die Datenbank von der Unternehmensportal-Website wird über dieses Schema.|
 |Berichte|Alle Zugriffe auf die Datenbank von Reporting Services-Berichte erfolgt über dieses Schema.|
-|PowerBI|Alle Zugriffe auf die Datenbank aus der Power BI-Dashboards über das Enterprise-Gateway ist über dieses Schema.|
+|Power BI|Alle Zugriffe auf die Datenbank aus der Power BI-Dashboards über das Enterprise-Gateway ist über dieses Schema.|
 
 Beachten Sie, dass die Berichte und PowerBI Schemas werden nicht in der ursprünglichen Version der Beispieldatenbank verwendet. Allerdings werden alle Reporting Services und Power BI-Beispiele baut auf den dieser Datenbank aufgefordert, diese Schemas verwendet.
 
@@ -91,7 +91,7 @@ Details des Lieferanten und der Lagerartikel Käufe.
 |Suppliers|Main Entitätstabelle für Lieferanten (Organisationen)|
 |SupplierCategories|Kategorien für Lieferanten (z. B. Novelties, Toys, clothing, Verpackung usw.)|
 |SupplierTransactions|Alle finanzielle Transaktionen, die Lieferanten-bezogene (Rechnungen, Zahlungen) sind.|
-|PurchaseOrders|Details des Lieferanten Bestellungen|
+|Aufträge|Details des Lieferanten Bestellungen|
 |PurchaseOrderLines|Detailzeilen vom Lieferanten Bestellungen|
 
  
@@ -217,7 +217,7 @@ Diese Prozeduren werden zum Konfigurieren des Beispiels verwendet. Sie werden ve
 |CreateRoleIfNonExistant|Erstellt eine Datenbankrolle aus, wenn er nicht bereits vorhanden.|
 
 
-### <a name="sequences-schema"></a>Sequences Schema
+### <a name="sequences-schema"></a>Sequenzen-Schema
 
 Verfahren zum Konfigurieren von Sequenzen in der Datenbank.
 
