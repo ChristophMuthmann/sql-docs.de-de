@@ -3,16 +3,16 @@ layout: HubPage
 hide_bc: true
 title: Microsoft SQL-Dokumentation | Microsoft-Dokumentation
 description: Erfahren Sie mehr über SQL
-author: barbkess
-ms.author: barbkess
+author: craigg-msft
+ms.author: craigg
 ms.topic: hub-page
-ms.technology:
-- database-engine
-ms.openlocfilehash: bb2801c057770c2dc96c0e69208d7f04463e60e3
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.prod: sql
+ms.technology: install
+ms.openlocfilehash: dcb91e3b5e4f59da44bf76d618dc17bb93abb6bf
+ms.sourcegitcommit: 9f61aa4d556bb5726b1e49d619ae2bbccf1590e3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/29/2018
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -39,7 +39,7 @@ ms.lasthandoff: 04/18/2018
                                                 <ul class="noBullet">
                                                     <li><a class="barLink" href="/sql/sql-server/sql-server-technical-documentation">SQL Server (2016, 2017)</a></li>
                                                     <li><a class="barLink" href="https://msdn.microsoft.com/library/dn197878(v=sql.10).aspx">SQL Server 2014</a></li>
-                                                    <li><a class="barLink" href="https://msdn.microsoft.com/library/hh278312(v=sql.10).aspx">SQL Server 2012</a></li>
+                                                    <li><a class="barLink" href="https://docs.microsoft.com/en-us/previous-versions/sql/">Vorgängerversionen (2005–2012)</a></li>
                                                     <li><a class="barLink" href="/azure/sql-database/sql-database-design-first-database">Azure SQL-Datenbank</a></li>
                                                     <li><a class="barLink" href="/azure/sql-data-warehouse/sql-data-warehouse-get-started-tutorial">Azure SQL Data Warehouse</a></li>
                                                     <li><a class="barLink" href="/sql/analytics-platform-system/index">Analyseplattformsystem – Parallel Data Warehouse</a><li>
