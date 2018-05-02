@@ -14,11 +14,11 @@ author: yualan
 ms.author: alayu
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7ec3ddc85512f0ae071865f4806358a5da28ff09
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
-ms.translationtype: HT
+ms.openlocfilehash: bbabb96b46a7054ed22daf034413df05c903e553
+ms.sourcegitcommit: 31df356f89c4cd91ba90dac609a7eb50b13836de
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="user-and-workspace-settings"></a>Arbeitsbereichseinstellungen für Benutzerzustand und
 
@@ -35,7 +35,7 @@ Der Menübefehl **Datei** > **Voreinstellungen** > **Einstellungen** (**Code**  
 
 Sie können auch die Einstellungen für Benutzerzustand und Arbeitsbereich aus öffnen die **Befehl Palette** (**STRG + UMSCHALT + P**) mit **Voreinstellungen: Öffnen von Benutzereinstellungen** und  **Voreinstellungen: Öffnen von Arbeitsbereichseinstellungen** oder verwenden Sie die Tastenkombination (**STRG +**).
 
-Das folgende Beispiel deaktiviert die Zeilennummern im Editor und konfiguriert Zeilen Text automatisch basierend auf der Größe des Editors zu umschließen.
+Das folgende Beispiel deaktiviert die Zeilennummern im Editor und Codezeilen automatisch eingezogen werden konfiguriert.
 
 ![Beispieleinstellungen](media/settings/sample-settings.png)
 
