@@ -1,24 +1,25 @@
 ---
-title: "Homepage für SQL Client-Programmierung | Microsoft Docs"
-description: "Hubseite mit Anmerkungen Links zu Downloads und der Dokumentation für zahlreiche Kombinationen von Sprachen und Betriebssysteme, zum Herstellen einer Verbindung mit SQL Server oder Azure SQL-Datenbank."
+title: Homepage für SQL Client-Programmierung | Microsoft Docs
+description: Hubseite mit Anmerkungen Links zu Downloads und der Dokumentation für zahlreiche Kombinationen von Sprachen und Betriebssysteme, zum Herstellen einer Verbindung mit SQL Server oder Azure SQL-Datenbank.
 author: MightyPen
-ms.date: 11/29/2017
-ms.prod: sql-non-specified
+ms.date: 04/16/2018
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: connect
 ms.suite: sql
-ms.custom: 
-ms.technology: drivers
+ms.custom: ''
+ms.technology:
+- drivers
 ms.topic: article
 ms.reviewer: meetb
 ms.author: genemi
 ms.workload: Inactive
-ms.openlocfilehash: 804a1f1e27e531d2282775db63628ed02fb50829
-ms.sourcegitcommit: 61fc9f81c295c2b93781ef194e9a2ebd475f800d
-ms.translationtype: MT
+ms.openlocfilehash: 886cf05cf5d52d4f4619047f43f1f78449441a9d
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/29/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="homepage-for-client-programming-to-microsoft-sql-server"></a>Startseite für den Client für Microsoft SQL Server-Programmierung
 
@@ -31,7 +32,7 @@ Willkommen Sie bei unserem Homepage zur Clientprogrammierung für die Interaktio
 - Zeigt an, der Bereiche und Unterbereiche der hierarchischen Dokumentation für bestimmte Sprachen, falls zutreffend.
 
 
-#### <a name="azure-sql-database"></a>Azure SQL-Datenbank
+#### <a name="azure-sql-database"></a>Azure SQL Database
 
 In einer beliebigen angegebenen Sprache wird der Code, der mit SQL Server verbunden ist fast identisch mit der Code für die Verbindung mit Azure SQL-Datenbank.
 
@@ -56,9 +57,9 @@ In der folgenden Tabelle wird jede Sprache Bild einen Link zu den Details zu SQL
 
 | &nbsp; | &nbsp; | &nbsp; |
 | :-- | :-- | :-- |
-| &nbsp;[ ![C#-Logo][image-ref-320-csharp]](#an-110-ado-net-docu) | &nbsp;[ ![ORM-Entity Framework von .NET Framework][image-ref-333-ef]](#an-116-csharp-ef-orm) | &nbsp;[ ![Java-Logo][image-ref-330-java]](#an-130-jdbc-docu) |
-| &nbsp;[ ![Node.js-Logo][image-ref-340-node]](#an-140-node-js-docu) | &nbsp; [**`ODBC for C++`**](#an-160-odbc-cpp-docu)<br/>[![Cpp-big-plus][image-ref-322-cpp]](#an-160-odbc-cpp-docu) | &nbsp;[ ![PHP-Logo][image-ref-360-php]](#an-170-php-docu) |
-| &nbsp;[ ![Python-Logo][image-ref-370-python]](#an-180-python-docu) | &nbsp;[ ![Ruby-Logo][image-ref-380-ruby]](#an-190-ruby-docu) | &nbsp; ... |
+| &nbsp; [![C#-logo][image-ref-320-csharp]](#an-110-ado-net-docu) | &nbsp; [![Verwendung von ORM Entity Framework von .NET Framework][image-ref-333-ef]](#an-116-csharp-ef-orm) | &nbsp; [![Java-logo][image-ref-330-java]](#an-130-jdbc-docu) |
+| &nbsp; [![Node.js-logo][image-ref-340-node]](#an-140-node-js-docu) | &nbsp; [**`ODBC for C++`**](#an-160-odbc-cpp-docu)<br/>[![Cpp-big-plus][image-ref-322-cpp]](#an-160-odbc-cpp-docu) | &nbsp; [![PHP-logo][image-ref-360-php]](#an-170-php-docu) |
+| &nbsp; [![Python-logo][image-ref-370-python]](#an-180-python-docu) | &nbsp; [![Ruby-logo][image-ref-380-ruby]](#an-190-ruby-docu) | &nbsp; ... |
 | &nbsp; | &nbsp; | <br />|
 
 
@@ -107,7 +108,7 @@ EF hat direkte oder indirekte Beziehungen mit den folgenden Technologien:
 
 - .NET Framework
 - [LINQ to SQL](http://docs.microsoft.com/dotnet/framework/data/adonet/sql/linq/), oder [LINQ to Entities](http://docs.microsoft.com/dotnet/framework/data/adonet/ef/language-reference/linq-to-entities)
-- Syntax-spracherweiterungen, wie z. B. die  **=>**  Operator in C# geschrieben.
+- Syntax-spracherweiterungen, wie z. B. die **=>** Operator in C# geschrieben.
 - Praktisch Programme, die Quellcode für Klassen zu generieren, die die Tabellen in der SQL-Datenbank zuordnen. Z. B. [EdmGen.exe](http://docs.microsoft.com/dotnet/framework/data/adonet/ef/edm-generator-edmgen-exe).
 
 

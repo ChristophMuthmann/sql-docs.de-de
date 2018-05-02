@@ -12,7 +12,7 @@ ms.component: connect
 ms.date: 02/03/2018
 ms.openlocfilehash: da7ff58d5930acb084220c8d0364147ae93ed963
 ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 04/08/2018
 ---
@@ -80,7 +80,7 @@ Diese kompakte Liste enthält Links zu den aktualisierten Artikeln, die im Absch
 
 ### <a name="1-nbsp-using-always-encrypted-with-the-odbc-driver-for-sql-serverodbcusing-always-encrypted-with-the-odbc-drivermd"></a>1. &nbsp; [Mit "immer verschlüsselt" mit dem ODBC-Treiber für SQLServer](odbc/using-always-encrypted-with-the-odbc-driver.md)
 
-*Aktualisiert: 2018-01-22* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+*Updated: 2018-01-22* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
 
 <!-- Source markdown line 524.  ms.author= "v-chojas".  -->
 

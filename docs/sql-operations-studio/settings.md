@@ -1,9 +1,9 @@
 ---
-title: SQL Operations Studio (preview) Benutzer und Arbeitsbereichseinstellungen | Microsoft Docs
-description: 'Vorgehensweise: Ändern von SQL Operations Studio (preview) Benutzer und Arbeitsbereichseinstellungen.'
+title: SQL-Vorgänge Studio (Vorschau) Benutzer und Arbeitsbereichseinstellungen | Microsoft Docs
+description: 'Vorgehensweise: Ändern von SQL-Vorgänge Studio (Vorschau) Benutzer und Arbeitsbereichseinstellungen.'
 ms.custom: tools|sos
 ms.date: 11/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
@@ -14,17 +14,17 @@ author: yualan
 ms.author: alayu
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6e87461fb2973bec630ed21975a80cdbc17cd1cd
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.openlocfilehash: 7ec3ddc85512f0ae071865f4806358a5da28ff09
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="user-and-workspace-settings"></a>Arbeitsbereichseinstellungen für Benutzerzustand und
 
 Es ist einfach zu konfigurieren [!INCLUDE[name-sos](../includes/name-sos-short.md)] nach Belieben über die Einstellungen. Nahezu jeder Teil [!INCLUDE[name-sos](../includes/name-sos-short.md)]des Editor-Benutzeroberfläche und funktionalen Verhalten bietet Optionen können Sie ändern.
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)]bietet zwei unterschiedliche Gültigkeitsbereiche für Einstellungen:
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] bietet zwei unterschiedliche Gültigkeitsbereiche für Einstellungen:
 
 * **Benutzer** diese Einstellungen gelten global für alle Instanzen der [!INCLUDE[name-sos](../includes/name-sos-short.md)] Sie öffnen.
 * **Arbeitsbereich** arbeitsbereichseinstellungen für die Einstellungen für einen Ordner auf Ihrem Computer spezifisch sind, und sind nur verfügbar, wenn der Ordner in der Randleiste Explorer geöffnet ist. In diesem Bereich definierte Einstellungen außer Kraft setzen den Benutzerbereich durchgeführt.
