@@ -3,7 +3,7 @@ title: Scale-Out-Unterstützung für SQL Server Integration Services (SSIS) für
 ms.description: This article describes how to configure SSIS Scale Out for high availability with SQL Server failover cluster instance
 ms.custom: ''
 ms.date: 04/10/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
 ms.service: ''
 ms.component: scale-out
@@ -18,11 +18,11 @@ author: haoqian
 ms.author: haoqian
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 355066afe7d45d291a5b9a9224b165d29cb377e2
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: b3e1784bc5edd3940e7db72aec85b40a25366f69
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="scale-out-support-for-high-availability-via-sql-server-failover-cluster-instance"></a>Scale-Out-Unterstützung für Hochverfügbarkeit über eine SQL Server-Failoverclusterinstanz
 
