@@ -13,12 +13,11 @@ ms.topic: tutorial
 author: erickangMSFT
 ms.author: erickang
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: baf76f3d403f74bc84ecafc4d2c84bce340a0e2e
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 0285535beb45cbc6ad207280c3152fb875ffc46c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="backup-and-restore-using-includename-sosincludesname-sos-shortmd"></a>Sicherung und Wiederherstellung verwendet [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 

@@ -32,12 +32,11 @@ caps.latest.revision: 43
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 77afa48b63dd145406cdead7e7b0b0bf675aedb5
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 315ab1f6f066cad8a0a6652bac5fb24617ac29c9
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="select-from-ltmodelgt-prediction-join-dmx"></a>SELECT FROM &lt;Modell&gt; PREDICTION JOIN (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -112,7 +111,7 @@ FROM <model> | <sub select> [NATURAL] PREDICTION JOIN
   
 -   Hat zwei Kinder, die zu Hause leben  
   
- Das TM Decision Tree-Miningmodell und die bekannten Merkmalen über das Subjekt verwenden, die Abfrage gibt einen booleschen Wert, der angibt, ob die Person das Fahrrad und einen Satz von tabellarischen zurückgegebenen Werte gekauft haben die ["PredictHistogram" &#40; DMX &#41;](../dmx/predicthistogram-dmx.md) Funktion, die beschreiben, wie die Vorhersage getroffen wurde.  
+ Das TM Decision Tree-Miningmodell und die bekannten Merkmalen über das Subjekt verwenden, die Abfrage gibt einen booleschen Wert, der angibt, ob die Person das Fahrrad und einen Satz von tabellarischen zurückgegebenen Werte gekauft haben die ["PredictHistogram" &#40;DMX &#41; ](../dmx/predicthistogram-dmx.md) Funktion, die beschreiben, wie die Vorhersage getroffen wurde.  
   
 ```  
 SELECT  
@@ -186,7 +185,7 @@ ORDER BY [LastName] ASC
   
 -   Mountain-200  
   
- Die [Predict &#40; DMX &#41;](../dmx/predict-dmx.md) Funktion ist polymorph und kann mit allen Modelltypen verwendet werden. Sie verwenden den Wert3 als Argument für die Funktion, um die Anzahl der Elemente zu begrenzen, die von der Abfrage zurückgegeben werden. Die **wählen** Liste, die die NATURAL PREDICTION JOIN-Klausel folgt bereitstellt, die Werte, die als Eingabe für die Vorhersage verwendet.  
+ Die [Predict &#40;DMX&#41; ](../dmx/predict-dmx.md) Funktion ist polymorph und kann mit allen Modelltypen verwendet werden. Sie verwenden den Wert3 als Argument für die Funktion, um die Anzahl der Elemente zu begrenzen, die von der Abfrage zurückgegeben werden. Die **wählen** Liste, die die NATURAL PREDICTION JOIN-Klausel folgt bereitstellt, die Werte, die als Eingabe für die Vorhersage verwendet.  
   
 ```  
 SELECT FLATTENED  
@@ -210,9 +209,9 @@ NATURAL PREDICTION JOIN
  Da die Spalte, die das vorhersagbare Attribut `[v Assoc Seq Line Items]` enthält, eine Tabellenspalte ist, gibt die Abfrage eine einzelne Spalte zurück, die eine geschachtelte Tabelle enthält. Die Spalte der geschachtelten Tabelle erhält standardmäßig den Namen `Expression`. Wenn Ihr Anbieter keine hierarchischen Rowsets unterstützt, können Sie mithilfe der **FLATTENED** Schlüsselwort, wie im folgenden Beispiel gezeigt, um die Ergebnisse übersichtlicher zu gestalten.  
   
 ## <a name="see-also"></a>Siehe auch  
- [SELECT &#40; DMX &#41;](../dmx/select-dmx.md)   
- [Datamining-Erweiterungen &#40; DMX &#41; Datendefinitionsanweisungen](../dmx/dmx-statements-data-definition.md)   
- [Datamining-Erweiterungen &#40; DMX &#41; Datenbearbeitungsanweisungen](../dmx/dmx-statements-data-manipulation.md)   
- [Data Mining-Erweiterungen &#40;DMX&#41; – Anweisungsreferenz](../dmx/data-mining-extensions-dmx-statements.md)  
+ [WÄHLEN SIE &AMP;#40;DMX&AMP;#41;](../dmx/select-dmx.md)   
+ [Datamining-Erweiterungen &#40;DMX&#41; -Datendefinitionsanweisungen](../dmx/dmx-statements-data-definition.md)   
+ [Datamining-Erweiterungen &#40;DMX&#41; -Datenbearbeitungsanweisungen](../dmx/dmx-statements-data-manipulation.md)   
+ [Datamining-Erweiterungen & #40; DMX & #41; -Anweisungsreferenz](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

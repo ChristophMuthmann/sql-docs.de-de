@@ -1,11 +1,9 @@
 ---
 title: Internet Explorer-Fehlercodes | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,12 +18,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 3865a413a0530e5d21b358b953adce5e5cc4c5f2
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 085303cd68087d882ff8c843b2dd5d12ebe37b96
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="internet-explorer-error-codes-for-remote-data-service"></a>Internet Explorer-Fehlercodes für den Remote Data Service
 Die folgende Tabelle enthält die Microsoft® Internet Explorer-Fehlercodes, die im Zusammenhang mit der Verwendung von Remote Data Service. Die positive decimal Übersetzung der niedrigen zwei Bytes, die negative dezimale Übersetzung von der vollständigen Fehlercode und die hexadezimale Werte werden angezeigt.

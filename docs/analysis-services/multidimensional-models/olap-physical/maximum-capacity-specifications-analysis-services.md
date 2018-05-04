@@ -1,36 +1,23 @@
 ---
-title: "Spezifikationen der maximalen Kapazität (Analysis Services) | Microsoft Docs"
-ms.custom: 
-ms.date: 07/27/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- objects [Analysis Services], maximum number
-- objects [Analysis Services], maximum size
-ms.assetid: 49fe1673-b908-4c7a-88ff-415efd294d27
-caps.latest.revision: 
-author: Minewiskan
+title: Spezifikationen der maximalen Kapazität (Analysis Services) | Microsoft Docs
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: olap
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 8e60e818b40d2aa7c266903a23d0fec908039b44
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 42cd2e4809ab91fbd672a20b8213dc9fb6d9727c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="maximum-capacity-specifications-analysis-services"></a>Spezifikationen der maximalen Kapazität (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-Die folgenden Tabellen geben die maximalen Größe und Anzahl verschiedener in [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]-Komponenten definierter Objekte unter unterschiedlichen Serverbereitstellungsmodi an.  
+  Die folgenden Tabellen geben die maximalen Größe und Anzahl verschiedener in [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]-Komponenten definierter Objekte unter unterschiedlichen Serverbereitstellungsmodi an.  
   
  Dieses Thema enthält folgende Abschnitte:  
   
@@ -38,9 +25,9 @@ Die folgenden Tabellen geben die maximalen Größe und Anzahl verschiedener in [
   
  [SharePoint (DeploymentMode = 1)](#bkmk_sharepoint)  
   
- [Tabular (DeploymentMode=2)](#bkmk_vertipaq)  
+ [Tabellarisch (DeploymentMode = 2)](#bkmk_vertipaq)  
   
-##  <a name="bkmk_OLAP">Mehrdimensionale und Datamining (DeploymentMode = 0)</a>  
+##  <a name="bkmk_OLAP"></a> Mehrdimensionale und Datamining (DeploymentMode = 0)  
  Der MOLAP-Speichermodus, der sowohl Daten als auch Metadaten speichert, verfügt über zusätzliche physische Grenzen für Dateigrößen. Zeichenfolgenspeicherdateien weisen standardmäßig eine maximale Größe von 4 GB auf. Wenn Sie größere Dateien für Zeichenfolgenspeicher benötigen, können Sie eine andere Zeichenfolgenspeicherarchitektur angeben. Weitere Informationen finden Sie unter [Zeichenfolgenspeicher für Dimensionen und Partitionen konfigurieren](../../../analysis-services/multidimensional-models/configure-string-storage-for-dimensions-and-partitions.md).  
   
 |Objekt|Maximale Größe/Anzahl|  
@@ -68,9 +55,9 @@ Die folgenden Tabellen geben die maximalen Größe und Anzahl verschiedener in [
   
  Weitere Informationen zu objektbenennungsrichtlinien finden Sie unter [ASSL-Objekte und-Objekteigenschaften](../../../analysis-services/multidimensional-models/scripting-language-assl/assl-objects-and-object-characteristics.md).  
   
- Weitere Informationen zu datenquellenbegrenzungen für online analytical Processing (OLAP) und Datamining finden Sie unter [unterstützte Datenquellen &#40; SSAS – mehrdimensional &#41; ](../../../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md), [Unterstützte Datenquellen &#40; SSAS – mehrdimensional &#41; ](../../../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md), und [ASSL-Objekte und-Objekteigenschaften](../../../analysis-services/multidimensional-models/scripting-language-assl/assl-objects-and-object-characteristics.md).  
+ Weitere Informationen zu datenquellenbegrenzungen für online analytical Processing (OLAP) und Datamining finden Sie unter [Datenquellen unterstützt &#40;SSAS – mehrdimensional&#41;](../../../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md), [unterstützt Datenquellen &#40;SSAS – mehrdimensional&#41;](../../../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md), und [ASSL-Objekte und-Objekteigenschaften](../../../analysis-services/multidimensional-models/scripting-language-assl/assl-objects-and-object-characteristics.md).  
   
-##  <a name="bkmk_sharepoint">SharePoint (DeploymentMode = 1)</a>  
+##  <a name="bkmk_sharepoint"></a> SharePoint (DeploymentMode = 1)  
   
 |Objekt|Maximale Größe/Anzahl|  
 |------------|----------------------------|  

@@ -3,15 +3,12 @@ title: Haupt-Schnittstelle Konformität | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - interface conformance levels [ODBC]
 - conformance levels [ODBC], interface
@@ -21,12 +18,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 37ee705f6ead5317fe206fc4da27c42387f50e04
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 7c45fdfe2b01ddfd34e7db391b799b95ce696da8
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="core-interface-conformance"></a>Core-Schnittstelle Konformität
 Alle ODBC-Treiber müssen mindestens ein Hauptebenen-aufweisen Schnittstelle-Konformität. Da die Funktionen in die Core-Ebene diejenigen, die von interoperablen Anwendungen ausführen können die meisten generischen erforderlich sind, kann der Treiber mit solchen Anwendungen arbeiten. Die Funktionen in der Core-Ebene entsprechen auch auf die Funktionen, die in der ISO-CLI-Spezifikation definiert und auf die nonoptional Funktionen, die in der Open Group-CLI-Spezifikation definiert. Ein Hauptebenen-Benutzeroberfläche – konforme ODBC-Treiber kann die Anwendung die folgenden vornehmen:  

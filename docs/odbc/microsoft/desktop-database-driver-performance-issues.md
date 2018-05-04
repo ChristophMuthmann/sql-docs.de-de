@@ -3,15 +3,12 @@ title: Desktop-Datenbank-Treiber-Leistungsprobleme | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ODBC desktop database drivers [ODBC], performance
 - desktop database drivers [ODBC], performance
@@ -21,12 +18,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 6d13ef42e9658a24de65947fcb9aa85ffb854181
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 73261681421546dcec4cd37d73b1cdf55968038e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="desktop-database-driver-performance-issues"></a>Treiber-Leistungsprobleme Desktop-Datenbank
 Um Kompatibilität mit vorhandenen ANSI-Anwendungen zu gewährleisten, werden die Datentypen SQL_WCHAR, SQL_WVARCHAR oder SQL_WLONGVARCHAR als SQL_CHAR, SQL_VARCHAR oder SQL_LONGVARCHAR für Microsoft Access 4.0 oder höher Datenquellen verfügbar gemacht. Die Datenquellen keine WIDE CHAR-Datentypen zurückgeben, sondern die Daten noch müssen an gesendet werden Jet im Formular Wide Char. Es ist wichtig zu verstehen, dass die Konvertierung ausgeführt wird, wenn eine Spalte SQL_C_CHAR, Parameter oder ein Ergebnis in einen Datentyp SQL_CHAR in eine ANSI-Anwendung gebunden ist.  

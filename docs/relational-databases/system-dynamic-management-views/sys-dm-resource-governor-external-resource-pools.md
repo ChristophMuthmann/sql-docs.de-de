@@ -6,7 +6,6 @@ ms.suite: sql
 ms.prod: sql
 ms.prod_service: database-engine
 ms.technology: machine-learning
-ms.service: ''
 ms.component: dmv's
 ms.reviewer: ''
 ms.tgt_pltfrm: ''
@@ -24,9 +23,9 @@ helpviewer_keywords:
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: e6b46c15eb13c6d738abc28b32816ab690fb9abf
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 7a499aaa0c1377d1f64df4a5aed645c31ca3ebbf
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
 ---

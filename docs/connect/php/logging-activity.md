@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - logging activity
 ms.assetid: a777b3d9-2262-4e82-bc82-b62ad60d0e55
@@ -19,12 +19,11 @@ caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ec9c672009668d8320380dd6163de7e5ccc61270
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: fc425ab4034715c158799b731016373ce2c16caa
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="logging-activity"></a>Protokollieren von Aktivitäten
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

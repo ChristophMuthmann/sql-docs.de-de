@@ -1,27 +1,27 @@
 ---
-title: "Konfigurieren verteilter Verfügbarkeitsgruppen (Always On-Verfügbarkeitsgruppe) | Microsoft-Dokumentation"
-ms.custom: 
+title: Konfigurieren verteilter Verfügbarkeitsgruppen (Always On-Verfügbarkeitsgruppe) | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 08/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: availability-groups
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f7c7acc5-a350-4a17-95e1-e689c78a0900
-caps.latest.revision: 
+caps.latest.revision: 28
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0306d075998380efc599e82386e49496db3cdaaa
-ms.sourcegitcommit: 6e819406554efbd17bbf84cf210d8ebeddcf772d
+ms.openlocfilehash: d39e9c1decf1f41c47b7dfc9e161996bfa9b9951
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="configure-distributed-availability-group"></a>Konfigurieren verteilter Verfügbarkeitsgruppen  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -183,7 +183,7 @@ GO
 ```  
   
 > [!NOTE]  
->  Die **LISTENER_URL** gibt den Listener für jede Verfügbarkeitsgruppe zusammen mit dem Datenbankspiegelungs-Endpunkt der Verfügbarkeitsgruppe an. In diesem Beispiel ist das Port `5022` (nicht Port `60173` , der zum Erstellen des Listeners verwendet wurde).  
+>  Die **LISTENER_URL** gibt den Listener für jede Verfügbarkeitsgruppe zusammen mit dem Datenbankspiegelungs-Endpunkt der Verfügbarkeitsgruppe an. In diesem Beispiel ist das Port `5022` (nicht Port `60173` , der zum Erstellen des Listeners verwendet wurde). Wenn Sie beispielsweise in Azure einen Lastenausgleich verwenden, [fügen Sie eine Regel für den Lastenausgleich für den Port der verteilten Verfügbarkeitsgruppe hinzu](http://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-alwayson-int-listener#add-load-balancing-rule-for-distributed-availability-group). Fügen Sie zusätzlich zum SQL Server-Instanzport die Regel für den Listenerport hinzu. 
   
 ## <a name="join-distributed-availability-group-on-second-cluster"></a>Verknüpfen der verteilten Verfügbarkeitsgruppe auf dem zweiten Cluster  
  Verknüpfen Sie anschließend die verteilte Veerfügbarkeitsgruppe auf dem zweiten WSFC.  

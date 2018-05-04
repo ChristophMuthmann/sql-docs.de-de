@@ -6,23 +6,20 @@ authors: MightyPen
 manager: craigg
 editor: ''
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.suite: sql
 ms.technology: dbe-data-tier-apps
 ms.devlang: C++
-ms.topic: article
+ms.topic: conceptual
 ms.custom: ''
 ms.tgt_pltfrm: NA
-ms.workload: Inactive
 ms.date: 07/13/2017
 ms.author: genemi
-ms.openlocfilehash: 93ad9a2ba28414134f271060eef2c142ce5ba16a
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 57bd5ffbe1adb9c0ecbefda8d99434767ed6c3e0
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="retrieve-numeric-data-with-sqlnumericstruct"></a>Abrufen von numerischen Daten mit SQL\_numerischen\_Struktur
 

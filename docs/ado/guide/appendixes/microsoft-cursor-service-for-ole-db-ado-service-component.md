@@ -1,11 +1,9 @@
 ---
 title: Microsoft Cursordiensts für OLE DB (ADO-Dienstkomponente) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,12 +18,11 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 17bf332ec692bbcaaafaaf5a491d47b360064f56
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: a829fa8510054489bdc8f310941d9526f25b82a9
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="microsoft-cursor-service-for-ole-db-overview"></a>Microsoft Cursor Service für OLE DB-Übersicht
 Der Microsoft Cursor Service für OLE DB ergänzt die Cursorfunktionen der Unterstützung von Datenanbietern. Daher nimmt der Benutzer relativ einheitliche Funktionalität von allen Datenanbietern.

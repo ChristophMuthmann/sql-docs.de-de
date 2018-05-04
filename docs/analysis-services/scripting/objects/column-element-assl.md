@@ -27,15 +27,15 @@ caps.latest.revision: 28
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 60a0c8bd38d280d267b85148e3d40f2bac4967cb
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: e0c23c170fafdecf8223bc477abc93eda7e678da
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="column-element-assl"></a>Column-Element (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Beschreibt eine Spalte in der Auflistung der Spalten mit dem übergeordneten Element verknüpft sind.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Beschreibt eine Spalte in der Auflistung der Spalten, die mit dem übergeordneten Element verknüpft ist.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -68,7 +68,7 @@ ms.lasthandoff: 01/08/2018
   
  **Kardinalität**  
   
-|Vorgänger oder übergeordnetes Element|Cardinality|  
+|Vorgänger oder übergeordnetes Element|Kardinalität|  
 |------------------------|-----------------|  
 |[Ereignis](../../../analysis-services/scripting/objects/event-element-assl.md)|1-n: Erforderliches Element, das mehr als einmal auftreten kann.|  
 |Alle sonstigen|0-1: Optionales Element, das nur einmal auftreten kann.|  
@@ -78,9 +78,9 @@ ms.lasthandoff: 01/08/2018
 |Beziehung|Element|  
 |------------------|-------------|  
 |Übergeordnete Elemente|[Spalten](../../../analysis-services/scripting/collections/columns-element-assl.md)|  
-|Untergeordnete Elemente|InclusionThresholdSetting|  
+|Untergeordnete Elemente|Keine|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Objekte &#40; ASSL &#41;](../../../analysis-services/scripting/objects/objects-assl.md)  
+ [Objekte & #40; ASSL & #41;](../../../analysis-services/scripting/objects/objects-assl.md)  
   
   

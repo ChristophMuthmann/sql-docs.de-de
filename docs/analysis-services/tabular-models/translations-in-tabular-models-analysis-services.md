@@ -1,27 +1,26 @@
 ---
-title: "Übersetzungen in tabellarischen Modellen (Analysis Services) | Microsoft Docs"
-ms.custom: 
+title: Übersetzungen in tabellarischen Modellen (Analysis Services) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: e67f88f5-9f0c-4f19-ab09-558c56ca9335
-caps.latest.revision: 
+caps.latest.revision: 13
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 2b5e88e9a77c1d192709bde2fe6dcc9be3887aa3
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
-ms.translationtype: MT
+ms.openlocfilehash: 0ae0639cf8a07e585ed0fe256466a478c5e02ab9
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="translations-in-tabular-models-analysis-services"></a>Übersetzungen in Tabellenmodellen (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -56,7 +55,7 @@ ms.lasthandoff: 02/23/2018
   
 4.  Klicken Sie auf **Sprachdatei exportieren**.  Geben Sie einen Dateinamen und einen Speicherort an.  
   
- ![ssas-tabular-translate-export](../../analysis-services/tabular-models/media/ssas-tabular-translate-export.png "ssas-tabular-translate-export")  
+ ![SSAS-tabular-übersetzen-Export](../../analysis-services/tabular-models/media/ssas-tabular-translate-export.png "Ssas-tabular-übersetzen-Export")  
   
 ## <a name="add-translations"></a>Hinzufügen von Übersetzungen  
  Eine leere JSON-Übersetzungsdatei enthält Metadaten für Übersetzungen in einer bestimmten Sprache. Übersetzungsplatzhalter für Objektnamen und Beschreibungen sind im Abschnitt **Culture** am Ende der Modelldefinition angegeben. Übersetzungen können für folgende Elemente hinzugefügt werden:  

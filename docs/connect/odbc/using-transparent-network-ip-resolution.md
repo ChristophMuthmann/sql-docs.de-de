@@ -11,18 +11,17 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d255208f-d486-4ad3-8080-61c6e0261825
 caps.latest.revision: 2
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e7249d00dc4f3d71b7c3245e2939be7e541f5b39
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 6e4414da0babbeca3bc8a6f271923613f823248e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-transparent-network-ip-resolution"></a>Mithilfe des transparenten Netzwerk-IP-Auflösung
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]

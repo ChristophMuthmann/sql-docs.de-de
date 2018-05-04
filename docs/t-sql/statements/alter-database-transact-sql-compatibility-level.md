@@ -1,8 +1,8 @@
 ---
 title: ALTER DATABASE-Kompatibilitätsgrad (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 01/30/2018
-ms.prod: sql-non-specified
+ms.date: 04/18/2018
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.service: ''
 ms.component: t-sql|statements
@@ -26,16 +26,16 @@ helpviewer_keywords:
 - db compatibility level
 - db compat level
 ms.assetid: ca5fd220-d5ea-4182-8950-55d4101a86f6
-caps.latest.revision: ''
+caps.latest.revision: 89
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: d22ee796f75c4c4736c983801a63293b8a44e7cb
-ms.sourcegitcommit: 3ed9be04cc7fb9ab1a9ec230c298ad2932acc71b
+ms.openlocfilehash: 4fba23a746773bf24f8d2e130bd7e445f8f796df
+ms.sourcegitcommit: beaad940c348ab22d4b4a279ced3137ad30c658a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/17/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>ALTER DATABASE-Kompatibilitätsgrad (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -73,13 +73,11 @@ SET COMPATIBILITY_LEVEL = { 140 | 130 | 120 | 110 | 100 | 90 }
 |SQL Server 2000|8|80|80|  
   
 > [!NOTE]  
-> **Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)]** V12 wurde im Dezember 2014 veröffentlicht. Ein Aspekt in diesem Release war, dass der Kompatibilitätsgrad der neu erstellten Datenbanken auf 120 festgelegt war. In SQL-Datenbank 2015 wurde erstmalig der Kompatibilitätsgrad 130 unterstützt, auch wenn der Standardwert in Höhe von 120 beibehalten wurde.  
+> Seit **Januar 2018** lautet der Standardkompatibilitätsgrad für neu erstellte Datenbanken in SQL-Datenbank 140. Für vorhandene Datenbanken wird der Datenbank-Kompatibilitätsgrad nicht angepasst. Kunden können diesen nach Ihren eigenen Bedürfnissen anpassen. Dennoch wird dringend empfohlen, zum aktuellen Kompatibilitätsgrad zu wechseln, um von den neuesten Verbesserungen profitieren zu können.
 > 
-> Seit **Mitte Juni 2016** beträgt der Standardkompatibilitätsgrad in [!INCLUDE[ssSDS](../../includes/sssds-md.md)] für **neu erstellte** Datenbanken 130 statt 120. Dies hat keine Auswirkungen auf Datenbanken, die vor Mitte Juni 2016 erstellt wurden. Diese behalten ihren aktuellen Kompatibilitätsgrad (100, 110 oder 120). 
-> 
-> Wenn Sie für Ihre Datenbanken gerne generell den Kompatibilitätsgrad 130 festlegen würden, den Algorithmus der **Kardinalitätsschätzung** in Höhe von 110 jedoch bevorzugen, finden Sie unter [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) und insbesondere unter dem zugehörigen Schlüsselwort `LEGACY_CARDINALITY_ESTIMATION = ON` weitere Informationen.  
+> Wenn Sie für Ihre Datenbanken generell den Kompatibilitätsgrad 140 festlegen möchten, den Algorithmus der **Kardinalitätsschätzung** in Höhe von 110 jedoch bevorzugen, finden Sie unter [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) und insbesondere unter dem zugehörigen Schlüsselwort `LEGACY_CARDINALITY_ESTIMATION = ON` weitere Informationen.
 >  
->  Weitere Einzelheiten zur Bewertung der Leistungsunterschiede bei Ihren wichtigsten Abfragen zwischen zwei Kompatibilitätsgraden in [!INCLUDE[ssSDS](../../includes/sssds-md.md)] finden Sie unter [Improved Query Performance with Compatibility Level 130 in Azure SQL Database](http://azure.microsoft.com/documentation/articles/sql-database-compatibility-level-query-performance-130/) (Verbesserte Abfrageleistung bei Kompatibilitätsgrad 130 in Azure SQL-Datenbank).
+>  Weitere Einzelheiten zur Bewertung der Leistungsunterschiede bei Ihren wichtigsten Abfragen zwischen zwei Kompatibilitätsgraden in [!INCLUDE[ssSDS](../../includes/sssds-md.md)] finden Sie unter [Improved Query Performance with Compatibility Level 130 in Azure SQL Database](http://azure.microsoft.com/documentation/articles/sql-database-compatibility-level-query-performance-130/) (Verbesserte Abfrageleistung bei Kompatibilitätsgrad 130 in Azure SQL-Datenbank). Beachten Sie, dass dieser Artikel sich auf Kompatibilitätsgrad 130 und SQL Server bezieht. Es gelten jedoch die gleichen Vorgehensweisen für den Wechsel zu 140 für SQL Server und Azure SQL-Datenbank.
 
 
  Führen Sie die folgende Abfrage aus, um die [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Version zu bestimmen, mit der Sie verbunden sind.  
@@ -99,6 +97,9 @@ SELECT name, compatibility_level FROM sys.databases;
   
 ## <a name="remarks"></a>Remarks  
 Bei allen Installationen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ist der Standardkompatibilitätsgrad auf die Version der [!INCLUDE[ssDE](../../includes/ssde-md.md)] festgelegt. Datenbanken sind auf diesen Grad festgelegt, sofern der Kompatibilitätsgrad der **model**-Datenbank nicht niedriger ist. Wenn für eine Datenbank ein Upgrade von einer früheren Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt wird, behält die Datenbank ihren vorhandenen Kompatibilitätsgrad, wenn es sich dabei zumindest um die zulässigen Mindestwert für die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] handelt. Beim Ausführen eines Upgrades für eine Datenbank, deren Kompatibilitätsgrad unterhalb des zulässigen Grads liegt, wird die Datenbank auf den niedrigsten zulässigen Kompatibilitätsgrad festgelegt. Dies gilt sowohl für die System- als auch für die Benutzerdatenbanken. Verwenden Sie **ALTER DATABASE**, um den Kompatibilitätsgrad der Datenbank zu ändern. Fragen Sie die Spalte **compatibility_level** in der Katalogsicht [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) ab, um den aktuellen Kompatibilitätsgrad einer Datenbank anzuzeigen.  
+
+> [!NOTE]  
+> Eine [Verteilungsdatenbank](../../relational-databases/replication/distribution-database.md), die in einer früheren Version von SQL Server erstellt wurde und auf [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] RTM oder Service Pack 1 aktualisiert wurde, verfügt über einen Kompatibilitätsgrad von 90, was für andere Datenbanken nicht unterstützt wird. Dies wirkt sich nicht auf die Funktionstüchtigkeit der Replikation aus. Das Upgrade auf ein späteres Service Pack oder eine spätere Version führt dazu, dass der Kompatibilitätsgrad der Verteilungsdatenbank auf denjenigen der **Hauptdatenbank** erhöht wird.
   
 ## <a name="using-compatibility-level-for-backward-compatibility"></a>Verwenden des Kompatibilitätsgrads für die Abwärtskompatibilität  
  Der Kompatibilitätsgrad wirkt sich nicht auf den gesamten Server, sondern nur auf das Verhalten der angegebenen Datenbank aus. Der Kompatibilitätsgrad bietet nur partielle Abwärtskompatibilität mit früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Beginnend mit dem Kompatibilitätsmodus 130 wurden sämtliche neue Features, die Auswirkungen auf den Abfrageplan haben, nur zum neuen Kompatibilitätsmodus hinzugefügt. Dadurch sollte das Risiko während der Upgrades minimiert werden, die durch Leistungseinbußen aufgrund von Abfrageplanänderungen entstanden sind. Aus Sicht einer Anwendung besteht das Ziel weiterhin darin, über den neuesten Kompatibilitätsgrad zu verfügen, damit einige der neuen Features übernommen werden können und im Bereich des Abfrageoptimierers auf kontrollierte Weise Leistungssteigerungen erzielt werden können. Verwenden Sie den Kompatibilitätsgrad als vorläufige Migrationshilfe, um versionsbedingte Unterschiede in den Verhaltensweisen zu umgehen, die über die jeweilige Einstellung für den Kompatibilitätsgrad gesteuert werden. Weitere Informationen finden Sie unter „Upgrade – Bewährte Methoden“ weiter unten im Artikel.  

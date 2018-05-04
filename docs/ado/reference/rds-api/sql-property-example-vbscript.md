@@ -1,7 +1,6 @@
 ---
 title: SQL-Eigenschaft-Beispiel (VBScript) | Microsoft Docs
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,12 +19,11 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 562a1d58bbf4414d13445140898e846f44adab14
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: a64946744e552a0dd8dc086f2f95deb7d2827bcf
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sql-property-example-vbscript"></a>SQL-Eigenschaft-Beispiel (VBScript)
 > [!IMPORTANT]

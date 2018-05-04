@@ -1,29 +1,27 @@
 ---
 title: Definieren einer Datenquelle | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 5a3e83c9-8788-431e-85b0-a68c79377ff3
-caps.latest.revision: 
+caps.latest.revision: 28
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 81bdb79296ca864999d31c487cabf490ba0e0659
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 98af0d465fb2d22946b46425a2ce498521c880be
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-1-2---defining-a-data-source"></a>Lektion 1-2: Definieren einer Datenquelle
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -40,7 +38,7 @@ In der folgenden Aufgabe definieren Sie die AdventureWorksDWSQLServer2012-Beispi
   
 3.  Auf der Seite **Wählen Sie aus, wie die Verbindung definiert werden soll** können Sie eine Datenquelle basierend auf einer neuen Verbindung, basierend auf einer vorhandenen Verbindung oder basierend auf einem vorher definierten Datenquellenobjekt definieren. Im Rahmen dieses Lernprogramms definieren Sie eine Datenquelle auf der Basis einer neuen Verbindung. Überprüfen Sie, ob die Option **Eine neue Datenquelle basierend auf einer vorhandenen oder neuen Verbindung erstellen** ausgewählt ist, und klicken Sie anschließend auf **Neu**.  
   
-4.  Im Dialogfeld **Verbindungs-Manager** definieren Sie Verbindungseigenschaften für die Datenquelle. Überprüfen Sie im Listenfeld **Anbieter**, ob **Native OLE DB\SQL Server Native Client 11.0** ausgewählt ist.  
+4.  Im Dialogfeld **Verbindungs-Manager** definieren Sie Verbindungseigenschaften für die Datenquelle. Überprüfen Sie im Listenfeld **Anbieter** , ob **Native OLE DB\SQL Server Native Client 11.0** ausgewählt ist.  
   
     [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] unterstützt auch andere Anbieter, die in der **Anbieter** -Liste angezeigt werden.  
   

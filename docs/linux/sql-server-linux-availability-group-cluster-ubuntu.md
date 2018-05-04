@@ -4,7 +4,7 @@ description: ''
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.date: 01/30/2018
+ms.date: 04/30/2018
 ms.topic: article
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,12 +14,11 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: dd0d6fb9-df0a-41b9-9f22-9b558b2b2233
-ms.workload: Inactive
-ms.openlocfilehash: 842e09ffd1a9d219f3d39362f51f18187446a9b2
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
-ms.translationtype: MT
+ms.openlocfilehash: 37008fbf209bbdc8a610e5a21bbd599e9783c423
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-ubuntu-cluster-and-availability-group-resource"></a>Ubuntu-Cluster und die Verfügbarkeitsgruppenressource konfigurieren
 
@@ -148,19 +147,30 @@ sudo pcs property set stonith-enabled=false
 >[!IMPORTANT]
 >Deaktivieren von STONITH ist nur für Testzwecke verwenden. Wenn Sie Schrittmacher in einer produktiven Umgebung verwenden möchten, sollten Sie eine Implementierung STONITH je nach Umgebung planen und bewahren Sie ihn der aktiviert. Beachten Sie, dass an diesem Punkt gibt es keine Fencing-Agents für alle Cloud-Umgebungen (einschließlich Azure) oder Hyper-V. Die Cluster-Hersteller bietet Unterstützung für die Ausführung von produktionsclustern in diesen Umgebungen, nicht. 
 
-## <a name="set-cluster-property-start-failure-is-fatal-to-false"></a>Festlegen Sie Clustereigenschaft auf "false" Start-Fehler-ist--Schwerwiegender
+## <a name="set-cluster-property-cluster-recheck-interval"></a>Legen Sie Cluster Eigenschaft Cluster-erneut prüfen-Intervall
 
-`start-failure-is-fatal` Gibt an, ob ein Fehler beim Starten einer Ressource auf einem Knoten weiter Start Versuche auf diesem Knoten verhindert. Bei Festlegung auf `false`, der Cluster entscheidet, ob auf demselben Knoten erneut basierend auf der Ressource aktuelle Anzahl und Migration Fehlerschwellenwert starten. Daher nach dem Failover gruppieren Schrittmacher Wiederholungen starten die Verfügbarkeit Ressource auf dem ehemaligen primären sobald die SQL-Instanz verfügbar ist. Schrittmacher stuft das sekundäre Replikat, und automatisch wieder verbunden, der verfügbarkeitsgruppe. 
+`cluster-recheck-interval` Gibt an, das Abrufintervall für Änderungen in der Ressourcenparameter, Einschränkungen oder andere Clusteroptionen in dem Cluster abfragt. Wenn ein Replikat ausfällt, versucht der Cluster, das Replikat in einem Intervall neu zu starten, die durch gebunden ist die `failure-timeout` Wert und die `cluster-recheck-interval` Wert. Z. B. wenn `failure-timeout` auf 60 Sekunden festgelegt ist und `cluster-recheck-interval` festgelegt ist auf 120 Sekunden wird versucht, der Neustart in einem Intervall, das größer als 60 Sekunden, aber weniger als 120 Sekunden ist. Es wird empfohlen, dass Sie Fehler-Timeout auf 60 s und Cluster erneut prüfen Wiederherstellungsintervall auf einen Wert, der größer als 60 Sekunden festgelegt. Cluster-erneut prüfen-Intervall auf einen niedrigen Wert festlegen, wird nicht empfohlen.
 
-Aktualisieren Sie den Eigenschaftswert an `false` führen Sie das folgende Skript aus:
+Aktualisieren Sie den Eigenschaftswert an `2 minutes` ausführen:
 
 ```bash
-sudo pcs property set start-failure-is-fatal=false
+sudo pcs property set cluster-recheck-interval=2min
 ```
 
-
->[!WARNING]
->Nach der ein automatisches Failover bei `start-failure-is-fatal = true` der Ressourcen-Manager versucht, die Ressource zu starten. Wenn sie beim ersten Versuch fehlschlägt, müssen Sie manuell ausführen, `pcs resource cleanup <resourceName>` bereinigen Sie die Anzahl der Ressourcen-Fehler, und setzen Sie die Konfiguration zurück.
+> [!IMPORTANT] 
+> Wenn Sie bereits eine verfügbarkeitsgruppenressource, die von einem Cluster Schrittmacher verwaltet haben, beachten Sie, dass alle Verteilungen, die die neuesten verfügbaren Schrittmacher Paket 1.1.18-11.el7 verwenden eine verhaltensänderung für den Start-Fehler-ist--Schwerwiegender-Einstellung, wenn Cluster einführen seiner Wert ist "false". Diese Änderung wirkt sich auf den Failover-Workflow. Wenn ein primäres Replikat ein Ausfall auftritt, muss der Cluster Failover auf eines der sekundären Replikate verfügbar. Stattdessen werden Benutzer feststellen, dass der Cluster immer wieder versucht, um das primäre Replikat mit fehlgeschlagenem zu starten. Wenn dieser primären nie (aufgrund einer dauerhaften Ausfall) online geschaltet wird, ein Cluster nie Failover an ein anderes verfügbares sekundäres Replikat. Aufgrund dieser Änderung eine zuvor empfohlene Konfiguration festzulegende Start Fehler-ist-schwerwiegend ist nicht mehr gültig und die Einstellung muss auf den Standardwert zurückgesetzt werden `true`. Darüber hinaus muss die AG-Ressource auf Einbeziehung aktualisiert werden die `failover-timeout` Eigenschaft. 
+>
+>Aktualisieren Sie den Eigenschaftswert an `true` ausführen:
+>
+>```bash
+>sudo pcs property set start-failure-is-fatal=true
+>```
+>
+>Aktualisieren Ihrer vorhandenen AG Ressourceneigenschaft `failure-timeout` auf `60s` ausführen (ersetzen Sie `ag1` durch den Namen des Ihre verfügbarkeitsgruppenressource):
+>
+>```bash
+>pcs resource update ag1 meta failure-timeout=60s
+>```
 
 ## <a name="install-sql-server-resource-agent-for-integration-with-pacemaker"></a>Installieren von SQL Server-Agent-Ressource für die Integration mit Schrittmacher
 
@@ -179,7 +189,7 @@ sudo apt-get install mssql-server-ha
 Verwenden Sie zum Erstellen der verfügbarkeitsgruppenressource `pcs resource create` Befehl, und legen Sie die Ressourceneigenschaften. Im folgenden Befehl erstellt eine `ocf:mssql:ag` Master/Slave Typ der Ressource für die verfügbarkeitsgruppe mit dem Namen `ag1`. 
 
 ```bash
-sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 --master meta notify=true
+sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 meta failure-timeout=30s --master meta notify=true
 
 ```
 

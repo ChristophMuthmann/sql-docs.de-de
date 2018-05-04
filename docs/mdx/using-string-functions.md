@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: ''
 ms.component: ''
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -20,12 +19,11 @@ caps.latest.revision: 24
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 5b260cc6523f0e9938eaff8e98207fe7dbe739c3
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 73fb6856069a3b5492ddb83bd8afc0121843d9d2
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-string-functions"></a>Verwenden von Zeichenfolgenfunktionen
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -112,13 +110,13 @@ ms.lasthandoff: 01/08/2018
 > [!NOTE]  
 >  Die **StrToMember** und **StrToSet** Funktionen sollte mit Vorsicht verwendet werden. Sie können zu schlechter Abfrageleistung führen, wenn sie innerhalb von Berechnungsdefinitionen verwendet werden.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [Generieren von &#40; MDX &#41;](../mdx/generate-mdx.md)   
- [Name der &#40; MDX &#41;](../mdx/name-mdx.md)   
- [UniqueName &#40; MDX &#41;](../mdx/uniquename-mdx.md)   
- [Funktionen &#40; MDX-Syntax &#41;](../mdx/functions-mdx-syntax.md)   
- [Verwenden gespeicherte Prozeduren &#40; MDX &#41;](../mdx/using-stored-procedures-mdx.md)   
- [StrToMember &#40; MDX &#41;](../mdx/strtomember-mdx.md)   
- [StrToSet &#40; MDX &#41;](../mdx/strtoset-mdx.md)  
+## <a name="see-also"></a>Siehe auch  
+ [Generieren von &#40;MDX&#41;](../mdx/generate-mdx.md)   
+ [Namen &#40;MDX&#41;](../mdx/name-mdx.md)   
+ [UniqueName &#40;MDX&#41;](../mdx/uniquename-mdx.md)   
+ [Funktionen &#40;MDX-Syntax&#41;](../mdx/functions-mdx-syntax.md)   
+ [Verwenden von gespeicherten Prozeduren &#40;MDX&#41;](../mdx/using-stored-procedures-mdx.md)   
+ [StrToMember &#40;MDX&#41;](../mdx/strtomember-mdx.md)   
+ [StrToSet &#40;MDX&#41;](../mdx/strtoset-mdx.md)  
   
   

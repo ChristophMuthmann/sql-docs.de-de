@@ -1,11 +1,9 @@
 ---
 title: BOF, EOF und Lesezeichen Eigenschaften (VC++-Beispiel) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -23,12 +21,11 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 89252c7e318bc80a08734bc18b0f304e99393d43
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 309c33960737c855c4399832db5275461c5bf513
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="bof-eof-and-bookmark-properties-example-vc"></a>BOF, EOF und Lesezeichen Eigenschaften (VC++-Beispiel)
 Die erste Funktion in diesem Beispiel verwendet die [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) und [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) eine Meldung angezeigt, wenn ein Benutzer versucht, verschieben Sie nach der ersten oder letzten Datensatz mit den Eigenschaften einer [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md). Verwendet die [Lesezeichen](../../../ado/reference/ado-api/bookmark-property-ado.md) Eigenschaft der Benutzer einen Datensatz in ein flag einer **Recordset** und später zu ihr zurückkehren.  

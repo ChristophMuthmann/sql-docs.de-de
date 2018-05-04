@@ -1,11 +1,9 @@
 ---
 title: Verwenden von ADO mit Skriptsprachen | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,12 +18,11 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d3187ca8ddc47f4a48e982a5061d429a7f7a5738
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 070cfacfad680fbf0664ad5dc6bc3a01aed99520
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-ado-with-scripting-languages"></a>Verwenden von ADO mit Skriptsprachen
 Innerhalb einer skriptumgebung können mit ADO Daten über die serverseitigen Skripts verfügbar machen. In diesem Szenario ADO, die zugrunde liegenden OLE DB-Anbieter, die es verwendet, und beliebige andere Komponenten, die erforderlich sind, um auf einen bestimmten Datenspeicher verweisen auf einem Server mit Internetinformationsdienste (Internet Information Services, IIS) installiert sind. ADO ist mithilfe von Active Server Pages (ASP), ist eine Komponente, die in ein Skript, das HTML-Daten, z. B. generieren kann verwiesen wird. Diese HTML-Inhalt kann über HTTP auf einen Webbrowser für den Client übergeben werden. Mithilfe von Skripts können auf der Webseite Aktionen zurück an das serverseitige Skript gestattet aktualisieren, durchsuchen und anzeigen bestimmte Daten gesendet.  

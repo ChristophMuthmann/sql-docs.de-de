@@ -1,11 +1,9 @@
 ---
 title: Row-Eigenschaft (ADO) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -26,12 +24,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 4f1ca970989bf39162bfb7cc037d354aa7bcfb8e
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 8b62cd50996a98c94261454e069a8f8a2d2bb9ba
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="row-property-ado"></a>Row-Eigenschaft (ADO)
 Ruft ab oder legt einen OLE DB- **Zeile** Objekt aus, oder auf eine [ADORecordConstruction Schnittstelle](../../../ado/reference/ado-api/adorecordconstruction-interface.md) Objekt. Bei Verwendung von **Put_Row** festzulegende eine **Zeile** -Objekt, eine Zeile in einer ADO umgewandelt ist **Datensatz** Objekt.  

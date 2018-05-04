@@ -1,16 +1,16 @@
 ---
 title: Erste Schritte mit PolyBase | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 08/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: polybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine-polybase
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 helpviewer_keywords:
 - PolyBase
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - Azure blob storage export
 - Hadoop import, PolyBase getting started
 - Hadoop export, Polybase getting started
-caps.latest.revision: 
+caps.latest.revision: 78
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9b28ca40643cec6661564c439657e1a3454929be
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 7c406a55361eb8a948f385f3bf7e76257c216720
+ms.sourcegitcommit: f3aa02a0f27cc1d3d5450f65cc114d6228dd9d49
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/23/2018
 ---
 # <a name="get-started-with-polybase"></a>Erste Schritte mit PolyBase
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,33 +45,10 @@ ms.lasthandoff: 02/12/2018
   
 -   Grundkenntnisse zum Verwalten von PolyBase-Objekten in SQL Server Management Studio (SSMS)  
   
--   Beispiele für Abfragen, die PolyBase-Objekte verwenden  
-  
-## <a name="prerequisites"></a>Voraussetzungen  
- Eine Instanz von [SQL Server (64-Bit)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016), die folgendes enthält:  
-  
--   Microsoft .NET Framework 4.5.  
-  
--   Oracle Java SE RunTime Environment (JRE), Version 7.51 oder höher (64-Bit). (Entweder [JRE](http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html) oder [Server JRE](http://www.oracle.com/technetwork/java/javase/downloads/server-jre8-downloads-2133154.html) funktioniert). Wechseln Sie zu [Java SE-Downloads](http://www.oracle.com/technetwork/java/javase/downloads/index.html). Das Installationsprogramm schlägt fehl, wenn JRE nicht vorhanden ist.   
-  
--   Minimaler Arbeitsspeicher: 4 GB  
-  
--   Mindestfestplattenspeicher: 2 GB    
-
--   TCP/IP-Konnektivität muss aktiviert sein. (Weitere Informationen finden Sie unter [Aktivieren oder Deaktivieren eines Servernetzwerkprotokolls](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md).) In den Versionen SQL Server Developer und SQL Server Express ist TCP/IP standardmäßig deaktiviert. PolyBase kann installiert werden, lässt sich jedoch erst vollständig ausführen, wenn TCP/IP aktiviert ist. TCP/IP muss manuell aktiviert werden, damit Sie die PolyBase-Funktionen nutzen können. 
-  
- 
- Eine der folgenden externen Datenquellen:  
-  
--   Hadoop-Cluster. Unterstützte Versionen finden Sie unter [Konfigurieren von PolyBase](#supported).  
-
--   Azure BLOB-Speicher
-
-> [!NOTE]
->   Wenn Sie die Berechnungsfunktionalität Pushdown für Hadoop verwenden möchten, müssen Sie sicherstellen, dass der Hadoop-Zielcluster über Kernkomponenten von HDFS, Yarn/MapReduce mit einem aktivierten Jobhistory-Server verfügt. PolyBase reicht die Pushdown-Abfrage über MapReduce ein und ruft den Status aus dem JobHistory-Server ab. Die Abfrage wird ohne eine der Komponenten fehlschlagen. 
+-   Beispiele für Abfragen, die PolyBase-Objekte verwenden    
 
 ## <a name="install-polybase"></a>Installieren von PolyBase  
- Wenn Sie PolyBase nicht installiert haben, lesen Sie [PolyBaseinstallation (Installieren von PolyBase)](../../relational-databases/polybase/polybase-installation.md).  
+Wenn Sie PolyBase nicht installiert haben, finden Sie weitere Informationen unter [PolyBase installation (Installieren von PolyBase)](../../relational-databases/polybase/polybase-installation.md). Die Voraussetzungen für die Installation werden im entsprechenden Artikel erläutert.
   
 ### <a name="how-to-confirm-installation"></a>So bestätigen Sie die Installation  
  Führen Sie nach der Installation den folgenden Befehl aus, um zu bestätigen, dass PolyBase erfolgreich installiert wurde. Wenn PolyBase installiert ist, wird 1 zurückgegeben, andernfalls 0.  

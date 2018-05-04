@@ -3,15 +3,12 @@ title: SQLFreeHandle-Funktion | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLFreeHandle
 apilocation:
@@ -26,12 +23,11 @@ caps.latest.revision: 35
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 601d1257b99e3c3a9713730ef1ea110905d0143f
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 94b40ad74f4925b0e5c2b1cbfa4795e85a2bbb15
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlfreehandle-function"></a>SQLFreeHandle-Funktion
 **Konformität**  
@@ -41,7 +37,7 @@ ms.lasthandoff: 04/16/2018
  **SQLFreeHandle** gibt eine bestimmte Umgebung, Verbindung, Anweisung oder Deskriptor Handle zugeordneten Ressourcen frei.  
   
 > [!NOTE]  
->  Diese Funktion ist eine generische Funktion für die Freigabe des Handles. Er ersetzt die Funktionen der ODBC 2.0 **SQLFreeConnect** (für die Freigabe ein Verbindungshandle) und **SQLFreeEnv** (für die Freigabe ein Umgebungshandle). **SQLFreeConnect** und **SQLFreeEnv** sind in ODBC 3. veraltet*.x*. **SQLFreeHandle** ersetzt auch die ODBC 2.0-Funktion **SQLFreeStmt** (mit der SQL_DROP *Option*) für das Freigeben eines Anweisungshandles. Weitere Informationen finden Sie unter "Kommentare". Weitere Informationen, was der Treiber-Manager diese Funktion auf, wenn eine ODBC 3. ordnet*.x* Anwendung arbeitet mit einer ODBC 2.*.x* -Treiber verwenden, finden Sie unter [Ersatzfunktionen für rückwärts zuordnen Die Kompatibilität der Anwendungen](../../../odbc/reference/develop-app/mapping-replacement-functions-for-backward-compatibility-of-applications.md).  
+>  Diese Funktion ist eine generische Funktion für die Freigabe des Handles. Er ersetzt die Funktionen der ODBC 2.0 **SQLFreeConnect** (für die Freigabe ein Verbindungshandle) und **SQLFreeEnv** (für die Freigabe ein Umgebungshandle). **SQLFreeConnect** und **SQLFreeEnv** sind in ODBC 3. veraltet *.x*. **SQLFreeHandle** ersetzt auch die ODBC 2.0-Funktion **SQLFreeStmt** (mit der SQL_DROP *Option*) für das Freigeben eines Anweisungshandles. Weitere Informationen finden Sie unter "Kommentare". Weitere Informationen, was der Treiber-Manager diese Funktion auf, wenn eine ODBC 3. ordnet *.x* Anwendung arbeitet mit einer ODBC 2.*.x* -Treiber verwenden, finden Sie unter [Ersatzfunktionen für rückwärts zuordnen Die Kompatibilität der Anwendungen](../../../odbc/reference/develop-app/mapping-replacement-functions-for-backward-compatibility-of-applications.md).  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -103,7 +99,7 @@ SQLRETURN SQLFreeHandle(
  Wenn die Umgebung auf einer freigegebenen Umgebung ist, ruft die Anwendung, die **SQLFreeHandle** mit einem *HandleType* SQL_HANDLE_ENV auf, nicht mehr hat Zugriff auf die Umgebung nach dem Aufruf, sondern der Umgebung Ressourcen sind nicht unbedingt freigegeben. Der Aufruf von **SQLFreeHandle** dekrementiert den Verweiszähler der Umgebung. Der Verweiszähler wird vom Treiber-Manager verwaltet. Wenn es nicht 0 (null) erreicht, wird die freigegebene Umgebung nicht freigegeben, da er noch von einer anderen Komponente verwendet wird. Wenn der Verweiszähler auf 0 (null) erreicht, werden die Ressourcen der freigegebenen Umgebung freigegeben.  
   
 ## <a name="freeing-a-connection-handle"></a>Freigeben eines Verbindungshandles  
- Vor dem Aufrufen **SQLFreeHandle** mit einem *HandleType* SQL_HANDLE_DBC auf, muss eine Anwendung aufrufen **SQLDisconnect** für die Verbindung, wenn eine Verbindung zu diesem vorhanden ist behandeln*.* Andernfalls, den Aufruf von **SQLFreeHandle** gibt SQL_ERROR zurück, und die Verbindung bleibt gültig.  
+ Vor dem Aufrufen **SQLFreeHandle** mit einem *HandleType* SQL_HANDLE_DBC auf, muss eine Anwendung aufrufen **SQLDisconnect** für die Verbindung, wenn eine Verbindung zu diesem vorhanden ist behandeln *.* Andernfalls, den Aufruf von **SQLFreeHandle** gibt SQL_ERROR zurück, und die Verbindung bleibt gültig.  
   
  Weitere Informationen finden Sie unter [Verbindungshandles](../../../odbc/reference/develop-app/connection-handles.md) und [Trennen von einer Datenquelle oder Treiber](../../../odbc/reference/develop-app/disconnecting-from-a-data-source-or-driver.md).  
   

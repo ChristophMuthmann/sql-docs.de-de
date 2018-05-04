@@ -11,18 +11,17 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b39461d3-48d6-4048-8300-1a886c00756d
 caps.latest.revision: 58
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: df610dec98d98d497b21b5e297781fa0a3375bf8
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: e3e3a8a4a767402cc866a8f7d7566a26ca6a3907
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-advanced-data-types"></a>Verwenden von erweiterten Datentypen
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

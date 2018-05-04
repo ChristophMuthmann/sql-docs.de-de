@@ -3,15 +3,12 @@ title: SQLExtendedFetch Funktion | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLExtendedFetch
 apilocation:
@@ -26,12 +23,11 @@ caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 08611c1a798f9c25ae57d518e46d94193239ca1f
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 1a02b1c2e050b6fc7a0724286c7f023cb376e7bb
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlextendedfetch-function"></a>SQLExtendedFetch-Funktion
 **Konformität**  
@@ -41,7 +37,7 @@ ms.lasthandoff: 04/16/2018
  **SQLExtendedFetch** angegebene Rowset von Daten aus dem Resultset abruft, und gibt Daten für alle gebundenen Spalten zurück. Rowsets können eine absolute oder relative Position oder durch Lesezeichen angegeben werden.  
   
 > [!NOTE]  
->  In ODBC 3.*.x*, **SQLExtendedFetch** wurde ersetzt durch **SQLFetchScroll**. ODBC 3.*.x* Anwendungen sollten nicht aufrufen, **SQLExtendedFetch**; sie sollten stattdessen Aufrufen **SQLFetchScroll**. Der Treiber-Manager ordnet **SQLFetchScroll** auf **SQLExtendedFetch** bei der Arbeit mit einer ODBC 2.*.x* Treiber. ODBC 3.*.x* Treiber unterstützen sollte **SQLExtendedFetch** , die mit ODBC 2. arbeiten sollen*.x* Anwendungen, die sie aufrufen. Weitere Informationen finden Sie unter "Kommentare" und [Blockcursor, scrollfähige Cursor und Abwärtskompatibilität](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md) in Anhang G: Treiber Richtlinien für die Abwärtskompatibilität.  
+>  In ODBC 3.*.x*, **SQLExtendedFetch** wurde ersetzt durch **SQLFetchScroll**. ODBC 3.*.x* Anwendungen sollten nicht aufrufen, **SQLExtendedFetch**; sie sollten stattdessen Aufrufen **SQLFetchScroll**. Der Treiber-Manager ordnet **SQLFetchScroll** auf **SQLExtendedFetch** bei der Arbeit mit einer ODBC 2.*.x* Treiber. ODBC 3.*.x* Treiber unterstützen sollte **SQLExtendedFetch** , die mit ODBC 2. arbeiten sollen *.x* Anwendungen, die sie aufrufen. Weitere Informationen finden Sie unter "Kommentare" und [Blockcursor, scrollfähige Cursor und Abwärtskompatibilität](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md) in Anhang G: Treiber Richtlinien für die Abwärtskompatibilität.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -129,7 +125,7 @@ SQLRETURN SQLExtendedFetch(
   
 -   Aufrufe von **SQLExtendedFetch** kann nicht kombiniert werden, durch Aufrufe von **SQLFetch** oder **SQLFetchScroll**, und wenn **SQLBulkOperations** wird aufgerufen Bevor eine Fetch-Funktion aufgerufen wird, **SQLExtendedFetch** kann nicht aufgerufen werden, bis der Cursor geschlossen und erneut geöffnet wird. D. h. **SQLExtendedFetch** kann nur in der Anweisung Status S7 aufgerufen werden. Weitere Informationen finden Sie unter [Anweisung Übergänge](../../../odbc/reference/appendixes/statement-transitions.md) in Anhang B: ODBC-Übergang-Statustabellen.  
   
- Wenn eine Anwendung ruft **SQLFetchScroll** beim Verwenden einer ODBC 2.*.x* Treiber, der Treiber-Manager ordnet diesen Aufruf an **SQLExtendedFetch**. Weitere Informationen finden Sie unter "SQLFetchScroll und ODBC 2*.x* Treiber" im [SQLFetchScroll](../../../odbc/reference/syntax/sqlfetchscroll-function.md).  
+ Wenn eine Anwendung ruft **SQLFetchScroll** beim Verwenden einer ODBC 2.*.x* Treiber, der Treiber-Manager ordnet diesen Aufruf an **SQLExtendedFetch**. Weitere Informationen finden Sie unter "SQLFetchScroll und ODBC 2 *.x* Treiber" im [SQLFetchScroll](../../../odbc/reference/syntax/sqlfetchscroll-function.md).  
   
  In ODBC 2.*.x*, **SQLExtendedFetch** wurde aufgerufen, um mehrere Zeilen abzurufen und **SQLFetch** wurde aufgerufen, um eine einzelne Zeile abgerufen werden. In ODBC 3.*.x*, andererseits, **SQLFetch** aufgerufen werden, um mehrere Zeilen abzurufen.  
   

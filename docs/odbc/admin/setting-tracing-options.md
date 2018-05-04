@@ -3,15 +3,12 @@ title: Festlegen von Ablaufverfolgungsoptionen | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Visual Studio Analyzer tracing [ODBC]
 - ODBC data source administrator [ODBC], tracing options
@@ -21,12 +18,11 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 82a6dd15ba2872ed365c41f5d6e8856da6bc94ce
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 224832615cbbfb20d61240015fed9b683da6e6c5
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="setting-tracing-options"></a>Festlegen von Ablaufverfolgungsoptionen
 Die **Ablaufverfolgung** auf der Registerkarte die **ODBC-Datenquellenadministrator** Dialogfeld können Sie konfigurieren ODBC-Funktionsaufrufe werden nachverfolgt.  

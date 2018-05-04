@@ -3,15 +3,12 @@ title: Zeile Statusarray | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - row status array [ODBC]
 - cursors [ODBC], block
@@ -24,12 +21,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ca7e0ea939c925d935a969469f1e14810ccdd387
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: b2c45b2dc5ea9326b5ae3b229a17c13207edcabc
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="row-status-array"></a>Zeilenstatusarray
 Zusätzlich zu den Daten **SQLFetch** und **SQLFetchScroll** kann ein Array, das den Status der einzelnen Zeilen im Rowset bietet zurückgeben. Dieses Array wird durch das SQL_ATTR_ROW_STATUS_PTR-Anweisungsattribut festgelegt. Dieses Array muss wird von der Anwendung zugeordnet und so viele Elemente wie vom Attribut SQL_ATTR_ROW_ARRAY_SIZE-Anweisung angegeben werden. Die vom festgelegten Werte im Array **SQLBulkOperations**, **SQLFetch**, **SQLFetchScroll**, und **SQLSetPos.** Die Werte beschreibt den Status der Zeile und gibt an, ob dieser Status seit dem letzten Abruf geändert hat.  

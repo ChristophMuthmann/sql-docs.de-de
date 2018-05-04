@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: ''
 ms.component: ''
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -20,12 +19,11 @@ caps.latest.revision: 24
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: c0afa99103cbb10c29c66bc375dc10d206560fd8
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: bdc98dee4f56d940042e57620ea94ebf7611197a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-set-functions"></a>Verwenden von Mengenfunktionen
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -34,7 +32,7 @@ ms.lasthandoff: 01/08/2018
   
  Mengenfunktionen sind, wie Elementfunktionen und Tupelfunktionen, wesentlich für das Aushandeln mehrdimensionaler Strukturen, die in Analysis Services zu finden sind. Mengenfunktionen sind außerdem unverzichtbar zum Erzielen von Ergebnissen aus MDX-Abfragen (Multidimensional Expressions), weil Mengenausdrücke die Achsen einer MDX-Abfrage definieren.  
   
- Eine der meistverwendeten Mengenfunktionen ist die [Mitglieder &#40; Set &#41; &#40; MDX &#41; ](../mdx/members-set-mdx.md) -Funktion, die eine Menge aller Elemente aus einer Dimension, Hierarchie oder Ebene mit abgerufen. Das folgende Beispiel veranschaulicht ihre Verwendung in einer Abfrage:  
+ Eine der meistverwendeten Mengenfunktionen ist die [Elemente &#40;festgelegt&#41; &#40;MDX&#41; ](../mdx/members-set-mdx.md) -Funktion, die eine Menge aller Elemente aus einer Dimension, Hierarchie oder Ebene mit abgerufen. Das folgende Beispiel veranschaulicht ihre Verwendung in einer Abfrage:  
   
  `SELECT`  
   
@@ -54,7 +52,7 @@ ms.lasthandoff: 01/08/2018
   
  `FROM [Adventure Works]`  
   
- Eine andere häufig verwendete Funktion ist die [Crossjoin &#40; MDX &#41; ](../mdx/crossjoin-mdx.md) Funktion. Sie gibt eine Menge von Tupeln zurück, die dem kartesischen Produkt der Mengen entspricht, die ihr als Parameter übergeben werden. Mit dieser Funktion können Sie in Abfragen Achsen geschachtelt oder in Kreuztabellen erstellen:  
+ Eine andere häufig verwendete Funktion ist die [Crossjoin &#40;MDX&#41; ](../mdx/crossjoin-mdx.md) Funktion. Sie gibt eine Menge von Tupeln zurück, die dem kartesischen Produkt der Mengen entspricht, die ihr als Parameter übergeben werden. Mit dieser Funktion können Sie in Abfragen Achsen geschachtelt oder in Kreuztabellen erstellen:  
   
  `SELECT`  
   
@@ -82,7 +80,7 @@ ms.lasthandoff: 01/08/2018
   
  `FROM [Adventure Works]`  
   
- Die [Nachfolger &#40; MDX &#41; ](../mdx/descendants-mdx.md) -Funktion gleicht der **Kinder** funktionsfähig, jedoch ist somit leistungsstärker. Es gibt die Nachfolger eines beliebigen Elements auf einer oder mehreren Ebenen in einer Hierarchie zurück:  
+ Die [Nachfolger &#40;MDX&#41; ](../mdx/descendants-mdx.md) -Funktion gleicht der **Kinder** funktionsfähig, jedoch ist somit leistungsstärker. Es gibt die Nachfolger eines beliebigen Elements auf einer oder mehreren Ebenen in einer Hierarchie zurück:  
   
  SELECT  
   
@@ -104,7 +102,7 @@ ms.lasthandoff: 01/08/2018
   
  FROM [Adventure Works]  
   
- Die [Reihenfolge &#40; MDX &#41; ](../mdx/order-mdx.md) -Funktion können Sie den Inhalt einer Menge in aufsteigender oder absteigender Reihenfolge nach einem bestimmten numerischen Ausdruck zu sortieren. Die folgende Abfrage gibt dieselben Elemente in Zeilen zurück wie die vorherige Abfrage, ordnet diese aber nach dem Internet Sales Amount-Measure:  
+ Die [Reihenfolge &#40;MDX&#41; ](../mdx/order-mdx.md) -Funktion können Sie den Inhalt einer Menge in aufsteigender oder absteigender Reihenfolge nach einem bestimmten numerischen Ausdruck zu sortieren. Die folgende Abfrage gibt dieselben Elemente in Zeilen zurück wie die vorherige Abfrage, ordnet diese aber nach dem Internet Sales Amount-Measure:  
   
  `SELECT`  
   
@@ -134,7 +132,7 @@ ms.lasthandoff: 01/08/2018
   
  Diese Abfrage veranschaulicht, wie die von einer Mengenfunktion (DESCENDANTS) zurückgegebene Menge als Parameter an eine andere Mengenfunktion, (ORDER) übergeben wird.  
   
- Filtert eine Menge nach bestimmten Kriterien ist sehr nützlich, beim Schreiben von Abfragen und zu diesem Zweck können Sie die [Filters &#40; MDX &#41; ](../mdx/filter-mdx.md) Funktion, wie im folgenden Beispiel dargestellt:  
+ Filtert eine Menge nach bestimmten Kriterien ist sehr nützlich, beim Schreiben von Abfragen und zu diesem Zweck können Sie die [Filter &#40;MDX&#41; ](../mdx/filter-mdx.md) Funktion, wie im folgenden Beispiel dargestellt:  
   
  `SELECT`  
   
@@ -162,7 +160,7 @@ ms.lasthandoff: 01/08/2018
   
  `FROM [Adventure Works]`  
   
- Es gibt weitere verfeinerte Funktionen, mit denen Sie eine Menge auf andere Weise filtern können. Z. B. die folgende Abfrage zeigt die [TopCount &#40; MDX &#41; ](../mdx/topcount-mdx.md) Funktion gibt die obersten n Elemente einer Menge zurück:  
+ Es gibt weitere verfeinerte Funktionen, mit denen Sie eine Menge auf andere Weise filtern können. Z. B. die folgende Abfrage zeigt die [TopCount &#40;MDX&#41; ](../mdx/topcount-mdx.md) Funktion gibt die obersten n Elemente einer Menge zurück:  
   
  `SELECT`  
   
@@ -188,7 +186,7 @@ ms.lasthandoff: 01/08/2018
   
  `FROM [Adventure Works]`  
   
- Schließlich ist es möglich, eine Reihe logischer Mengenoperationen, z. B. ausführen [Intersect &#40; MDX &#41; ](../mdx/intersect-mdx.md), [Union &#40; MDX &#41; ](../mdx/union-mdx.md) und [außer &#40; MDX &#41; ](../mdx/except-mdx-function.md) Funktionen. Die folgende Abfrage enthält Beispiele für die letzten beiden Funktionen:  
+ Schließlich ist es möglich, eine Reihe logischer Mengenoperationen, z. B. ausführen [Intersect &#40;MDX&#41;](../mdx/intersect-mdx.md), [Union &#40;MDX&#41; ](../mdx/union-mdx.md) und [außer &#40;MDX&#41; ](../mdx/except-mdx-function.md) Funktionen. Die folgende Abfrage enthält Beispiele für die letzten beiden Funktionen:  
   
  `SELECT`  
   
@@ -227,7 +225,7 @@ ms.lasthandoff: 01/08/2018
  `FROM [Adventure Works]`  
   
 ## <a name="see-also"></a>Siehe auch  
- [Funktionen &#40; MDX-Syntax &#41;](../mdx/functions-mdx-syntax.md)   
+ [Funktionen &#40;MDX-Syntax&#41;](../mdx/functions-mdx-syntax.md)   
  [Verwenden von Elementfunktionen](../mdx/using-member-functions.md)   
  [Using Tuple Functions (Verwenden von Tupelfunktionen)](../mdx/using-tuple-functions.md)  
   

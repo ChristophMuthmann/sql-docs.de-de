@@ -20,15 +20,15 @@ caps.latest.revision: 14
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 573b41cb848ee7a8e93bfdc4625b8a05857f2d61
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 158813efe442c094cd4c0aca343636f8c6a94af0
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="discoverobjectactivity-rowset"></a>DISCOVER_OBJECT_ACTIVITY-Rowset
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Stellt die Ressourcenverwendung pro Objekt seit dem Start des Diensts bereit.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Stellt die Ressourcenverwendung pro Objekt seit dem Start des Diensts bereit.  
   
 ## <a name="rowset-columns"></a>Rowsetspalten  
  Das **DISCOVER_OBJECT_ACTIVITY** -Rowset enthält die folgenden Spalten.  
@@ -62,6 +62,6 @@ ms.lasthandoff: 01/08/2018
 |OBJECT_ID|DBTYPE_WSTR|Optional.|  
   
 ## <a name="see-also"></a>Siehe auch  
- [XML for Analysis – Schemarowsets](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
+ [XML for Analysis-Schemarowsets](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
   
   

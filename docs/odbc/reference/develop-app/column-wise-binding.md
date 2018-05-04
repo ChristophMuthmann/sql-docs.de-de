@@ -3,15 +3,12 @@ title: Spaltenweises binden | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - column-wise binding [ODBC]
 - result sets [ODBC], binding columns
@@ -21,12 +18,11 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 5bd05626aeb421bbe0b671a20b76f544f9a0f425
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 77b82a8ab37f4da51801f860638b5c03e6c499aa
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="column-wise-binding"></a>Spaltenweises binden
 Wenn Sie spaltenbezogene Bindungen verwenden, bindet eine Anwendung eine oder zwei, oder in einigen Fällen drei Arrays auf jede Spalte, die für die Daten zurückgegeben werden. Das erste Array enthält die Datenwerte und das zweite Array enthält Längenindikator/Puffer. Indikatoren und Längenwerte können in separaten Puffer gespeichert werden, durch die deskriptorfelder SQL_DESC_INDICATOR_PTR und SQL_DESC_OCTET_LENGTH_PTR auf unterschiedliche Werte festlegen; Wenn dies geschehen ist, wird ein drittes Array gebunden. Jedes Array enthält, so viele Elemente als Zeilen im Rowset vorhanden sind.  

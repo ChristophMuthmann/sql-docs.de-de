@@ -1,11 +1,9 @@
 ---
 title: View-Objekt (ADOX) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -22,12 +20,11 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 4879da6079965d72f27e581ec9d14a71e544849e
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: a55d77b7bb7f79ee5871445d5169a4dfd2de5f5d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="view-object-adox"></a>View-Objekt (ADOX)
 Stellt einen gefilterten Satz von Datensätzen oder eine virtuelle Tabelle dar. Bei der Verwendung in Verbindung mit dem ADO [Befehl](../../../ado/reference/ado-api/command-object-ado.md) -Objekt, das **Ansicht** Objekt kann zum Hinzufügen, löschen oder Ändern von Sichten verwendet werden.  

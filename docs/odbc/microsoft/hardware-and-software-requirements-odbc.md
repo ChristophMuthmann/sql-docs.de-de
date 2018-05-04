@@ -3,15 +3,12 @@ title: Hardware and Software Requirements (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - hardware requirements [ODBC], desktop database drivers
 - software requirements [ODBC], desktop database drivers
@@ -22,12 +19,11 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 164ad4c1ac1c93367291046c2e74986e7b6dc6c2
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 389492c377105614c60c127041354786cabbd5ba
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="hardware-and-software-requirements-odbc"></a>Hardware and Software Requirements (ODBC)
 In diesem Thema werden die Anforderungen für die Verwendung der ODBC-Datenbanktreiber Desktop aufgelistet.  

@@ -1,11 +1,9 @@
 ---
 title: Grundlegendes zu Cursorn und Sperren | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,12 +18,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 3d409dd8f667a39ecd9faa5ce77b4fde2c43b37d
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: b9c31b958efd4510fc7def4c15294c674ee031b5
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="understanding-cursors-and-locks"></a>Grundlegendes zu Cursorn und Sperren
 Es ist wichtig zu verstehen, wie Cursor ausgeführt werden, damit Sie die beste und effizienteste Cursortyp für eine Anwendung Datenzugriffs-Anforderungen auswählen können. Eine kleiner als optimale Konfiguration der Cursor kann Datenzugriff Datenzugriffsvorgänge extrem langsam werden.  

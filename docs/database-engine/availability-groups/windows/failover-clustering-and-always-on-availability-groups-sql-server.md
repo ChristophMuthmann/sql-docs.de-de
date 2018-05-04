@@ -1,15 +1,16 @@
 ---
-title: "Failoverclustering und Always On-Verfügbarkeitsgruppen (SQL Server) | Microsoft-Dokumentation"
-ms.custom: 
+title: Failoverclustering und Always On-Verfügbarkeitsgruppen (SQL Server) | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 07/02/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: availability-groups
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - clustering [SQL Server]
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - failover clustering [SQL Server], AlwaysOn Availability Groups
 - Availability Groups [SQL Server], Failover Cluster Instances
 ms.assetid: 613bfbf1-9958-477b-a6be-c6d4f18785c3
-caps.latest.revision: "48"
+caps.latest.revision: 48
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: dd664120017d7e498fd2930281380c718e98aaa9
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 9b7cccf79efb654ddb9c49a6ed43751f00654908
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="failover-clustering-and-always-on-availability-groups-sql-server"></a>Failoverclustering und AlwaysOn-Verfügbarkeitsgruppen (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -60,11 +61,6 @@ ms.lasthandoff: 01/18/2018
   
  Informationen zum Ausführen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] auf Windows Server-Failoverclustering (WSFC)-Knoten sowie zum WSFC-Quorum finden Sie unter [Windows Server-Failoverclustering &#40;WSFC&#41; mit SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md).  
   
-### <a name="cross-cluster-migration-of-always-on-availability-groups-for-os-upgrade"></a>Clusterübergreifende Migration von AlwaysOn-Verfügbarkeitsgruppen für Betriebssystemupgrade  
- Ab [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)]unterstützt [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] die clusterübergreifende Migration von Verfügbarkeitsgruppen für Bereitstellungen in einem neuen WSFC-Cluster (Windows Server Failover Clustering). Über die clusterübergreifende Migration wird eine Verfügbarkeitsgruppe oder ein Batch von Verfügbarkeitsgruppen bei minimaler Downtime in das neue Ziel-WSFC-Cluster verschoben. Durch das Verfahren der clusterübergreifenden Migration können Sie beim Aktualisieren auf einen [!INCLUDE[win8srv](../../../includes/win8srv-md.md)] -Cluster Ihre Vereinbarungen zum Servicelevel (SLAs) einhalten. [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] (oder eine höhere Version) muss auf dem Ziel-WSFC-Cluster installiert und für AlwaysOn aktiviert sein. Der Erfolg einer Kreuzclustermigration hängt von gründlicher Planung und Vorbereitung des Ziel-WSFC-Clusters ab.  
-  
- Weitere Informationen finden Sie unter [Lösungen mit hoher Verfügbarkeit (SQL Server)](http://msdn.microsoft.com/library/jj873730.aspx).  
-  
 ##  <a name="SQLServerFC"></a> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Failoverclusterinstanzen (FCIs) und Verfügbarkeitsgruppen  
  Sie können auf Serverinstanzebene eine zweite Failoverebene einrichten, indem Sie das [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Failoverclustering zusammen mit dem WSFC-Cluster implementieren. Ein Verfügbarkeitsreplikat kann von einer eigenständigen Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] oder einer FCI-Instanz gehostet werden. Ein Replikat für eine Verfügbarkeitsgruppe kann jeweils nur von einem FCI-Partner gehostet werden. Bei Ausführung eines Verfügbarkeitsreplikats in einer FCI enthält die Liste möglicher Besitzer für die Verfügbarkeitsgruppe nur den aktiven FCI-Knoten.  
   
@@ -90,7 +86,7 @@ ms.lasthandoff: 01/18/2018
  **Failoverrichtlinieneinstellungen für die Verfügbarkeitsgruppe gelten für alle Replikate, unabhängig davon, ob sie in einer eigenständigen Instanz oder einer FCI-Instanz gehostet werden.  
   
 > [!NOTE]  
->  Weitere Informationen zur **Anzahl der Knoten** innerhalb des Failoverclusterings sowie zu **AlwaysOn-Verfügbarkeitsgruppen** für verschiedene [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Editionen finden Sie unter [Von den SQL Server 2012-Editionen unterstützte Funktionen](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473).  
+>  Weitere Informationen zur **Anzahl der Knoten** innerhalb des Failoverclusterings sowie zu **Always On-Verfügbarkeitsgruppen** für verschiedene [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Editionen finden Sie unter [Von den SQL Server 2012-Editionen unterstützte Features](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473)).  
   
 ### <a name="considerations-for-hosting-an-availability-replica-on-an-fci"></a>Überlegungen zum Hosten eines Verfügbarkeitsreplikats auf einer FCI  
   

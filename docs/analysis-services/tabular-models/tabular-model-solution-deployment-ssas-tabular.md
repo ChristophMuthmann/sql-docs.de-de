@@ -1,31 +1,30 @@
 ---
-title: "Tabellenmodelllösungsbereitstellung | Microsoft Docs"
-ms.custom: 
+title: Tabellenmodelllösungsbereitstellung | Microsoft Docs
+ms.custom: ''
 ms.date: 02/13/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: aff96558-e5e5-4b95-8ddf-ee0709c842fb
-caps.latest.revision: 
+caps.latest.revision: 22
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 276ff67a2c3dac1e557d782616bf9096349d3246
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
-ms.translationtype: MT
+ms.openlocfilehash: 88dd3a99ff8cac488a74fa42533f40b8118e45c3
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tabular-model-solution-deployment"></a>Tabellenmodelllösungsbereitstellung 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-Nachdem Sie eine Projektmappe für ein tabellarisches Modellprojekt erstellt haben, müssen Sie sie bereitstellen, damit Benutzer das Modell mit einer Berichterstellungsclientanwendung durchsuchen können. Dieser Artikel beschreibt die verschiedenen Eigenschaften und Methoden, die Sie verwenden können, wenn Sie Projektmappen für tabellarische Modelle in Ihrer Umgebung bereitstellen.  
+  Nachdem Sie eine Projektmappe für ein tabellarisches Modellprojekt erstellt haben, müssen Sie sie bereitstellen, damit Benutzer das Modell mit einer Berichterstellungsclientanwendung durchsuchen können. Dieser Artikel beschreibt die verschiedenen Eigenschaften und Methoden, die Sie verwenden können, wenn Sie Projektmappen für tabellarische Modelle in Ihrer Umgebung bereitstellen.  
   
 ##  <a name="bkmk_benefits"></a> Vorteile  
  Beim Bereitstellen eines tabellarischen Modells wird eine Modelldatenbank in einer Test-, Staging- oder Produktionsumgebung erstellt. Benutzer können dann eine Verbindung mit dem bereitgestellten Modell über eine BISM-Verbindungsdatei in SharePoint herstellen, oder indem sie eine Datenverbindung direkt in Berichtserstellungsclientanwendungen wie Microsoft Excel, [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]oder einer benutzerdefinierten Anwendung verwenden. Die Arbeitsbereichsdatenbank des Modells, die beim Erstellen eines neuen Projekts für tabellarische Modelle in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]erstellt wird und mit der Sie das Modell erstellen, verbleibt in der Arbeitsbereichsserverinstanz, sodass Sie Änderungen am Modellprojekt vornehmen und es dann bei Bedarf erneut für die Test-, Staging- oder Produktionsumgebung bereitstellen können.  
@@ -54,7 +53,7 @@ Nachdem Sie eine Projektmappe für ein tabellarisches Modellprojekt erstellt hab
 |--------------|---------------------|-----------------|  
 |**Server**<br /><br /> Wird bei der Projekterstellung festgelegt.|**localhost**|Diese Eigenschaft wird bei der Projekterstellung festgelegt und gibt den Namen der Analysis Services-Instanz an, für die das Modell bereitgestellt wird. Standardmäßig wird das Modell in der Standardinstanz von Analysis Services auf dem lokalen Computer bereitgestellt. Sie können diese Einstellung jedoch ändern und eine benannte Instanz auf dem lokalen Computer bzw. eine beliebige Instanz auf einem Remotecomputer angeben, auf dem Sie über die Berechtigung zum Erstellen von Analysis Services-Objekten verfügen.|  
 |**Edition**|Die gleiche Edition wie die Instanz, in der sich der Arbeitsbereichsserver befindet.|Diese Eigenschaft gibt die Edition des Analysis Services-Servers an, auf dem das Modell bereitgestellt wird. In der Serveredition sind verschiedene Funktionen definiert, die in das Projekt eingebunden werden können. Standardmäßig ist die Edition die des lokalen Analysis Services-Servers. Wenn Sie einen anderen Analysis Services-Server angeben, z. B. einen Analysis Services-Produktionsserver, müssen Sie die Edition dieses Analysis Services-Servers angeben.|  
-|**Datenbank**|**\<projectname>**|Diese Eigenschaft gibt den Namen der Analysis Services-Datenbank an, in der die Modellobjekte nach der Bereitstellung instanziiert werden. Dieser Name wird auch in einer Datenverbindung eines Berichterstellungsclients oder einer BISM-Datenverbindungsdatei angegeben.<br /><br /> Beim Erstellen des Modells können Sie diesen Namen jederzeit ändern. Wenn Sie den Namen nach dem Bereitstellen des Modells ändern, wirken sich nach der Bereitstellung vorgenommene Änderungen nicht auf das zuvor bereitgestellte Modell aus. Wenn Sie z. B. eine Projektmappe mit dem Namen **TestDB** öffnen, die Projektmappe mit dem Standardnamen der Modelldatenbank "Model" bereitstellen und dann die Projektmappe ändern und die Modelldatenbank in **Sales**umbenennen, werden in der Analysis Services-Instanz, für die die Projektmappen bereitgestellt wurden, die separaten Datenbanken "Model" und "Sales" angezeigt.|  
+|**Datenbank**|**\<Projektname >**|Diese Eigenschaft gibt den Namen der Analysis Services-Datenbank an, in der die Modellobjekte nach der Bereitstellung instanziiert werden. Dieser Name wird auch in einer Datenverbindung eines Berichterstellungsclients oder einer BISM-Datenverbindungsdatei angegeben.<br /><br /> Beim Erstellen des Modells können Sie diesen Namen jederzeit ändern. Wenn Sie den Namen nach dem Bereitstellen des Modells ändern, wirken sich nach der Bereitstellung vorgenommene Änderungen nicht auf das zuvor bereitgestellte Modell aus. Wenn Sie z. B. eine Projektmappe mit dem Namen **TestDB** öffnen, die Projektmappe mit dem Standardnamen der Modelldatenbank "Model" bereitstellen und dann die Projektmappe ändern und die Modelldatenbank in **Sales**umbenennen, werden in der Analysis Services-Instanz, für die die Projektmappen bereitgestellt wurden, die separaten Datenbanken "Model" und "Sales" angezeigt.|  
 |**Cubename**|**Model**|Diese Eigenschaft gibt den Cubenamen an, wie in Clienttools (z. B. Excel) und AMO (Analysis Management Objects) angezeigt.|  
   
 ### <a name="directquery-options-properties"></a>Eigenschaften für DirectQuery-Optionen  
@@ -70,7 +69,7 @@ Nachdem Sie eine Projektmappe für ein tabellarisches Modellprojekt erstellt hab
 |Methode|Description|Link|  
 |------------|-----------------|----------|  
 |**Bereitstellungsbefehl in SQL Server-Datentools**|Der Bereitstellungsbefehl stellt eine einfache und intuitive Methode für die Bereitstellung eines tabellarischen Modellprojekts über die [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] -Erstellungsumgebung bereit.<br /><br /> **Vorsicht** diese Methode sollte nicht verwendet werden, um auf Produktionsservern bereitstellen. Mit dieser Methode kann bestimmte Eigenschaften in einer bereits bereitgestellten überschreiben vorhandene Modell; beispielsweise bei der Verwendung von Skripts oder SSMS, um Eigenschaften zu ändern.|[Bereitstellen über SQL Server Data Tools](../../analysis-services/tabular-models/deploy-from-sql-server-data-tools-ssas-tabular.md)|  
-|**Analysis Management Objects (AMO)-Automatisierung**|AMO stellt eine programmgesteuerte Schnittstelle für den vollständigen Befehlssatz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]bereit, einschließlich Befehlen zur Bereitstellung von Projektmappen. Die AMO-Automatisierung bietet die flexibelste Möglichkeit zur Bereitstellung von Projektmappen, impliziert jedoch gleichzeitig einen gewissen Programmieraufwand.  Ein wichtiger Vorteil bei der Verwendung von AMO besteht darin, dass der SQL Server-Agent mit der AMO-Anwendung zum Ausführen einer Bereitstellung nach einem festgelegten Zeitplan verwendet werden kann.|[Entwickeln mit Analysis Management Objects &#40; AMO &#41;](../../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)|  
+|**Analysis Management Objects (AMO)-Automatisierung**|AMO stellt eine programmgesteuerte Schnittstelle für den vollständigen Befehlssatz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]bereit, einschließlich Befehlen zur Bereitstellung von Projektmappen. Die AMO-Automatisierung bietet die flexibelste Möglichkeit zur Bereitstellung von Projektmappen, impliziert jedoch gleichzeitig einen gewissen Programmieraufwand.  Ein wichtiger Vorteil bei der Verwendung von AMO besteht darin, dass der SQL Server-Agent mit der AMO-Anwendung zum Ausführen einer Bereitstellung nach einem festgelegten Zeitplan verwendet werden kann.|[Entwickeln mit Analysis Management Objects & #40; AMO & #41;](../../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)|  
 |**XMLA**|Verwenden Sie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , um ein XMLA-Skript der Metadaten einer vorhandenen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank zu erstellen, und führen Sie dieses Skript dann auf einem anderen Server aus, um die ursprüngliche Datenbank erneut zu erstellen. XMLA-Skripts können in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] einfach erstellt werden, indem Sie den Bereitstellungsprozess definieren, anschließend codieren und in einem XMLA-Skript speichern. Nachdem Sie das XMLA-Skript in einer Datei gespeichert haben, können Sie das Skript einfach gemäß einem Zeitplan ausführen oder das Skript in eine Anwendung einbetten, die eine direkte Verbindung mit einer Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]herstellt.<br /><br /> Sie können auch XMLA-Skripts auf einer vordefinierten Basis mithilfe des SQL Server-Agents ausführen, aber dabei bieten Ihnen XMLA-Skripts nicht dieselbe Flexibilität wie AMO. AMO stellt eine größere Bandbreite an Funktionalität bereit, indem es das gesamte Spektrum von Verwaltungsbefehlen hostet.|[Bereitstellen von Modelllösungen mit XMLA](../../analysis-services/multidimensional-models/deploy-model-solutions-using-xmla.md)|  
 |**Bereitstellungs-Assistent**|Verwenden Sie den Bereitstellungs-Assistenten, um mithilfe der durch ein [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt generierten XML-Ausgabedateien die Metadaten des Projekts auf einem Zielserver bereitzustellen. Mit dem Bereitstellungs-Assistenten können Sie die Bereitstellung direkt in der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datei ausführen, die während der Projekterstellung im Ausgabeverzeichnis erstellt wurde.<br /><br /> Der Hauptvorteil bei der Verwendung des Bereitstellungs-Assistenten von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] besteht in der Benutzerfreundlichkeit. Genauso wie ein XMLA-Skript zur späteren Verwendung in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]gespeichert werden kann, können Skripts des Bereitstellungs-Assistenten gespeichert werden. Der Bereitstellungs-Assistent kann sowohl interaktiv als auch mit dem Bereitstellungshilfsprogramm über die Eingabeaufforderung ausgeführt werden.|[Bereitstellen von Modelllösungen mithilfe des Bereitstellungs-Assistenten](../../analysis-services/multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md)|  
 |**Bereitstellungshilfsprogramm**|Mit dem Bereitstellungshilfsprogramm kann das Analysis Services-Bereitstellungsmodul über die Eingabeaufforderung gestartet werden.|[Bereitstellen von Modelllösungen mit dem Bereitstellungshilfsprogramm](../../analysis-services/multidimensional-models/deploy-model-solutions-with-the-deployment-utility.md)|  

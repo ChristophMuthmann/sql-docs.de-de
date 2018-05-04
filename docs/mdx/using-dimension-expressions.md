@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: ''
 ms.component: ''
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -21,19 +20,18 @@ caps.latest.revision: 28
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 1417fd747df92c84fe66e2c69996f57ab51875e1
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 75675a727fbbbbdcd46e8dd2903c893f33bb971a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-dimension-expressions"></a>Verwenden von Dimensionsausdrücken
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Dimensions- und Hierarchieausdrücke werden in MDX (Multidimensional Expressions) üblicherweise zur Übergabe von Parametern an Funktionen verwendet, um Elemente, Mengen oder Tupel einer Hierarchie zurückzugeben.  
   
- Dimensionsausdrücke können nur einfache Ausdrücke sein, da sie Objektbezeichner sind. Finden Sie unter [Ausdrücke &#40; MDX &#41; ](../mdx/expressions-mdx.md) eine Erläuterung der einfachen und komplexen Ausdrücken.  
+ Dimensionsausdrücke können nur einfache Ausdrücke sein, da sie Objektbezeichner sind. Finden Sie unter [Ausdrücke &#40;MDX&#41; ](../mdx/expressions-mdx.md) eine Erläuterung der einfachen und komplexen Ausdrücken.  
   
 ## <a name="dimension-expressions"></a>Dimensionsausdrücke  
  Ein Dimensionsausdruck enthält entweder einen Dimensionsbezeichner oder eine Dimensionsfunktion.  
@@ -71,9 +69,9 @@ ms.lasthandoff: 01/08/2018
   
  `FROM [Adventure Works]`  
   
- Ein hierarchiebezeichner wird als *Dimension_Name**.* *Hierarchiename* in der BNF-Schreibweise zur Beschreibung von MDX-Anweisungen.  
+ Ein hierarchiebezeichner wird als *Dimension_Name **.** Hierarchiename* in der BNF-Schreibweise zur Beschreibung von MDX-Anweisungen.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Ausdrücke &#40; MDX &#41;](../mdx/expressions-mdx.md)  
+ [Ausdrücke &#40;MDX&#41;](../mdx/expressions-mdx.md)  
   
   

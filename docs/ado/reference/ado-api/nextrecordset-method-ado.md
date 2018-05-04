@@ -1,11 +1,9 @@
 ---
 title: NextRecordset-Methode (ADO) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 03/20/2018
 ms.reviewer: ''
@@ -24,12 +22,11 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 8fa92f2d14f270f31a44e3512b78b905debbc90c
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 1773c2bd8709a429a2e388b8a38a192107f2e7f3
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="nextrecordset-method-ado"></a>NextRecordset-Methode (ADO)
 Löscht die aktuelle [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) -Objekt und gibt die nächste **Recordset** durch eine Reihe von Befehlen gelangt.  

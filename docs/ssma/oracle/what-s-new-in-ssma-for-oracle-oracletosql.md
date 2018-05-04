@@ -8,21 +8,19 @@ ms.custom: ''
 ms.date: 03/01/2018
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- sql-ssma
+ms.technology: ssma
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f305ebb6-7393-4a43-abb3-6332b739d690
 caps.latest.revision: 24
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 39d030541bbfd12503078542f97bfc8cd780af12
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
-ms.translationtype: MT
+ms.openlocfilehash: 3071e64cfeb6abac76f223407899100b4e8d31a0
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="whats-new-in-ssma-for-oracle-oracletosql"></a>Was ist neu in SSMA für Oracle (OracleToSQL)
 In diesem Thema werden die SSMA für Oracle-Änderungen in jeder Version aufgelistet.  

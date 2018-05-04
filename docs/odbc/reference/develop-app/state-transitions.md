@@ -3,15 +3,12 @@ title: Statusübergänge | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - state transitions [ODBC]
 - unallocated state [ODBC]
@@ -23,12 +20,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c94806fae462803c3323c3e3c5768751e53a5467
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 424c421b29dce6bedad9a73c1d27acb01b6e77c1
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="state-transitions"></a>Statusübergänge
 ODBC definiert diskrete *Zustände* für jede Umgebung, jede Verbindung und jede Anweisung. Die Umgebung verfügt beispielsweise über drei mögliche Zustände: verfügbaren (in dem keine Umgebung zugeordnet ist), zugewiesenem (in der eine Umgebung erhält jedoch keine Verbindungen zugeordnet sind) und die Verbindung (in der Umgebung und eine oder mehrere Verbindungen sind reserviert). Verbindungen werden sieben mögliche Zustände aufweisen; -Anweisungen verfügen über 13 mögliche Zustände.  

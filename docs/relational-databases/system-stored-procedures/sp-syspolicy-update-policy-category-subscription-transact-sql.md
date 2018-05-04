@@ -24,12 +24,11 @@ caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 8461d1d883bde3315a11861b9951c477c797ce93
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: e56a51063d97ae2f5ac2c528f594c11938b18310
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spsyspolicyupdatepolicycategorysubscription-transact-sql"></a>sp_syspolicy_update_policy_category_subscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,15 +51,15 @@ sp_syspolicy_update_policy_category_subscription [ @policy_category_subscription
  [ **@policy_category_subscription_id=** ] *policy_category_subscription_id*  
  Der Bezeichner des Richtlinienkategorieabonnements, das Sie aktualisieren möchten. *Policy_category_subscription_id* ist **Int**, und es ist erforderlich.  
   
- [ **@target_type=** ] **'**target_type**'**  
+ [ **@target_type=** ] **'** target_type **'**  
  Der Zieltyp des Kategorieabonnements. *Target_type* ist **Sysname**, hat den Standardwert NULL.  
   
  Bei Angabe von *Target_type*, der Wert muss auf 'DATABASE' festgelegt werden.  
   
- [  **@target_object=** ] **"**Target_object**"**  
+ [  **@target_object=** ] **"** Target_object **"**  
  Ist der Name der Datenbank, die die Richtlinienkategorie abonniert. *Target_object* ist **Sysname**, hat den Standardwert NULL.  
   
- [ **@policy_category=** ] **'**policy_category**'**  
+ [ **@policy_category=** ] **'** policy_category **'**  
  Der Name der Richtlinienkategorie, die die Datenbank abonnieren soll. *Policy_category* ist **Sysname**, hat den Standardwert NULL.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  

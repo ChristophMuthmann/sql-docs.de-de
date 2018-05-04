@@ -1,11 +1,9 @@
 ---
 title: Aufrufen einer gespeicherten Prozedur als Methode für ein Verbindungsobjekt | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,12 +19,11 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 6fc8b02ae7390a4ab86b04a501a2e9902f99c25e
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: e8ee4412d5eba44d324cd11432c2bbe33e3310b9
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="calling-a-stored-procedure-as-a-method-on-a-connection-object"></a>Aufrufen einer gespeicherten Prozedur als Methode für ein Verbindungsobjekt
 Sie können eine gespeicherte Prozedur aufrufen, als wäre er einer nativen Methode zugeordneten öffnen **Verbindung** Objekt. Dies ist vergleichbar mit einen benannten Befehl aufrufen, auf die **Verbindung** Objekt.  

@@ -1,32 +1,23 @@
 ---
 title: Übersetzungen in mehrdimensionalen Modellen (Analysis Services) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/04/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-f1_keywords:
-- sql13.asvs.dimensiondesigner.deletelanguagefirm.f1
-ms.assetid: 5521f8ef-b10a-4861-9df7-1e43e0a1fb3f
-caps.latest.revision: 11
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: e0f767ae138a66bd1237bcac1cfc64ce5998a824
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: cc30acc4714029cd91a4c35028835ae99d561140
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="translations-in-multidimensional-models-analysis-services"></a>Übersetzungen in mehrdimensionalen Modellen (Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Definieren Sie Übersetzungen in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] mit den entsprechenden Designer für die [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Objekt übersetzt werden. Durch Definieren einer Übersetzung wird ein **Translation** -Objekt erstellt, das dem entsprechenden [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Objekt zugewiesen ist. Dieses verfügt über die angegebenen Literalwerte in der angegebenen Sprache für die Eigenschaften des zugewiesenen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Objekts.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  Sie können Übersetzungen in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] definieren, indem Sie den entsprechenden Designer für das zu übersetzende [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Objekt verwenden. Durch Definieren einer Übersetzung wird ein **Translation** -Objekt erstellt, das dem entsprechenden [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Objekt zugewiesen ist. Dieses verfügt über die angegebenen Literalwerte in der angegebenen Sprache für die Eigenschaften des zugewiesenen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Objekts.  
   
 ## <a name="elements-of-a-multi-lingual-data-model"></a>Elemente eines mehrsprachigen Datenmodells  
  Ein in einer mehrsprachigen Lösung verwendetes Datenmodell benötigt mehr als übersetzte Beschriftungen (Feldnamen und Beschreibungen). Es muss auch Datenwerte bereitstellen, die in verschiedenen Sprachskripts formuliert sind. Für eine mehrsprachige Lösung müssen einzelne Attribute vorhanden sein, die an Spalten in einer externen Datenbank gebunden sind, die die Daten zurückgeben.  
@@ -127,6 +118,6 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="see-also"></a>Siehe auch  
  [Globalisierungsszenarien für Analysis Services](../../analysis-services/globalization-scenarios-for-analysis-services.md)   
- [Sprachen und Sortierungen &#40; Analysis Services &#41;](../../analysis-services/languages-and-collations-analysis-services.md)  
+ [Sprachen und Sortierungen &#40;Analysis Services&#41;](../../analysis-services/languages-and-collations-analysis-services.md)  
   
   

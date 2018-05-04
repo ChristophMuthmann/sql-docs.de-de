@@ -22,12 +22,11 @@ caps.latest.revision: 12
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: b58b0d983008fadb96ce5b527ec2283a5dd34367
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 980d214f31a955e73cd2362f41b8d3b84f1f4726
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="istrainingcase-dmx"></a>IsTrainingCase (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -52,7 +51,7 @@ IsTrainingCase()
 > [!NOTE]  
 >  Drillthrough muss für das Modell aktiviert werden, wenn Sie die IsTrainingCase oder IsTestCase-Funktion zu verwenden, um die Details der Fälle im Modell zurückgeben möchten. Weitere Informationen finden Sie unter [Aktivieren von Drillthrough für ein Miningmodell](../analysis-services/data-mining/enable-drillthrough-for-a-mining-model.md).  
   
- Um Fälle zurückzugeben, die Teil des testdatasets sind, verwenden Sie die Funktion [IsTestCase &#40; DMX &#41;](../dmx/istestcase-dmx.md).  
+ Um Fälle zurückzugeben, die Teil des testdatasets sind, verwenden Sie die Funktion [IsTestCase &#40;DMX&#41;](../dmx/istestcase-dmx.md).  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird clustering Datamining-Modell aus der targeted mailing-Szenario, in dem [Data Mining-Grundlagen](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c). Die Abfrage gibt nur die Fälle zurück, die zum Trainieren des Miningmodells verwendet wurden. Darüber hinaus werden die Trainingsfälle auf Kunden unter 40 eingeschränkt.  
@@ -64,11 +63,11 @@ WHERE IsTrainingCase()
 AND [Age] <40  
 ```  
   
- Weitere Beispiele zum Abfragen von Fällen in Datamining verwendet, finden Sie unter [SELECT FROM &#60; Modell &#62;. Fällen &#40; DMX &#41; ](../dmx/select-from-model-cases-dmx.md) und [SELECT FROM &#60; Struktur &#62;. Fällen](../dmx/select-from-structure-cases.md).  
+ Weitere Beispiele zum Abfragen von Fällen in Datamining verwendet, finden Sie unter [SELECT FROM &#60;Modell&#62;. Fällen &#40;DMX&#41; ](../dmx/select-from-model-cases-dmx.md) und [SELECT FROM &#60;Struktur&#62;. Fällen](../dmx/select-from-structure-cases.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Trainings- und Testdatasets](../analysis-services/data-mining/training-and-testing-data-sets.md)   
- [Funktionen &#40; DMX &#41;](../dmx/functions-dmx.md)   
+ [Funktionen &#40;DMX&#41;](../dmx/functions-dmx.md)   
  [Datamining-Abfragen](../analysis-services/data-mining/data-mining-queries.md)  
   
   

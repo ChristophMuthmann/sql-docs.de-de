@@ -1,31 +1,29 @@
 ---
 title: Bidirektionale kreuzfilter in tabellarischen Modellen | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 02/21/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
 ms.component: multidimensional-tabular
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 5e810707-f58d-4581-8f99-7371fa75b6ac
-caps.latest.revision: 
+caps.latest.revision: 14
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: b3d4854a602dc3eb7b02a50dc760409243a64313
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 72a14c23993a3e18c4ca804fab04247090f10596
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="bi-directional-cross-filters-in-tabular-models"></a>Bidirektionale kreuzfilter in tabellarischen Modellen
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-Neu in SQL Server 2016 ist eine integrierte Methode zum Aktivieren *bidirektionaler Kreuzfilter* in tabellarischen Modellen, durch die keine Notwendigkeit für manuell erstellte DAX-Umgehungen für die Tabellenbeziehungen übergreifende Weitergabe des Filterkontexts mehr besteht.  
+  Neu in SQL Server 2016 ist eine integrierte Methode zum Aktivieren *bidirektionaler Kreuzfilter* in tabellarischen Modellen, durch die keine Notwendigkeit für manuell erstellte DAX-Umgehungen für die Tabellenbeziehungen übergreifende Weitergabe des Filterkontexts mehr besteht.  
   
  Das Konzept lässt sich wie folgt in seine Komponenten unterteilen: Die *Kreuzfilterung* ist die Möglichkeit, einen Filterkontext für eine Tabelle basierend auf Werten in einer verknüpften Tabelle festzulegen, und *bidirektional* ist die Übertragung eines Filterkontexts an eine zweite verknüpfte Tabelle auf der anderen Seite einer Tabellenbeziehung. Wie der Name schon sagt, ist eine Segmentierung in beide Richtungen der Beziehung und nicht bloß in eine möglich.  Intern wird bei der bidirektionalen Filterung der Filterkontext so erweitert, dass eine Obermenge Ihrer Daten abgefragt wird.  
   
@@ -73,7 +71,7 @@ Neu in SQL Server 2016 ist eine integrierte Methode zum Aktivieren *bidirektiona
   
  Beachten Sie, dass die Filterrichtung von Dimensionstabellen zur Faktentabelle ist. Werbeaktionen, Produkte, Datumsangaben, Kunde und Kundenregion sind allesamt gültige Filter, die erfolgreich eine bestimmte Aggregation eines Measures liefern. Dabei variiert der Istwert basierend auf den verwendeten Dimensionen.  
   
- ![ssas-bidi-3-defaultrelationships](../../analysis-services/tabular-models/media/ssas-bidi-3-defaultrelationships.PNG "ssas-bidi-3-defaultrelationships")  
+ ![SSAS-Bidi-3-Defaultrelationships](../../analysis-services/tabular-models/media/ssas-bidi-3-defaultrelationships.PNG "Ssas-Bidi-3-Defaultrelationships")  
   
  Für dieses einfache Sternschema ergibt ein Test in Excel, dass Daten wie gewünscht segmentiert werden, wenn die Filterung von Dimensionstabellen für Zeilen und Spalten zu aggregierten Daten erfolgt, die vom Measure **Sum of Sales** erfolgt, dass sich in der zentralen Tabelle **FactOnlineSales** befindet.  
   
@@ -83,11 +81,11 @@ Neu in SQL Server 2016 ist eine integrierte Methode zum Aktivieren *bidirektiona
   
  Versuchen Sie es, indem Sie eine diskrete Anzahl aus **DimProducts** der PivotTable hinzufügen. Beachten Sie die sich wiederholenden Werte für **Count Products**. Auf den ersten Blick sieht es so aus, als fehle eine Tabellenbeziehung. Doch in unserem Modell können wir erkennen, dass alle Beziehungen vollständig definiert und aktiv sind. In diesem Fall treten die sich wiederholenden Werte auf, da es für die Zeilen in der Produkttabelle keinen Datumsfilter gibt.  
   
- ![ssas-bidi-5-prodcount-nofilter](../../analysis-services/tabular-models/media/ssas-bidi-5-prodcount-nofilter.png "ssas-bidi-5-prodcount-nofilter")  
+ ![SSAS-Bidi-5-Prodcount-Nofilter](../../analysis-services/tabular-models/media/ssas-bidi-5-prodcount-nofilter.png "Ssas-Bidi-5-Prodcount-Nofilter")  
   
  Nach Hinzufügen eines bidirektionalen Kreuzfilters zwischen **FactOnlineSales** und **DimProduct**werden die Zeilen in der Produkttabelle nun ordnungsgemäß nach Hersteller und Datum gefiltert.  
   
- ![ssas-bidi-6-prodcount-withfilter](../../analysis-services/tabular-models/media/ssas-bidi-6-prodcount-withfilter.png "ssas-bidi-6-prodcount-withfilter")  
+ ![SSAS-Bidi-6-Prodcount-Withfilter](../../analysis-services/tabular-models/media/ssas-bidi-6-prodcount-withfilter.png "Ssas-Bidi-6-Prodcount-Withfilter")  
   
 ## <a name="learn-step-by-step"></a>Schrittweises lernen  
  Sie können bidirektionale Kreuzfilter durch schrittweises Durchlaufen dieser exemplarischen Vorgehensweise ausprobieren. Um folgen zu können, benötigen Sie Folgendes:  
@@ -138,7 +136,7 @@ Neu in SQL Server 2016 ist eine integrierte Methode zum Aktivieren *bidirektiona
   
      Sie können an dieser Stelle die Namen bearbeiten, wenn Sie im Modell einfacher lesbar sein sollen.  
   
-     ![ssas-bidi-7-ImportData](../../analysis-services/tabular-models/media/ssas-bidi-7-importdata.PNG "ssas-bidi-7-ImportData")  
+     ![SSAS-Bidi-7-Importdaten](../../analysis-services/tabular-models/media/ssas-bidi-7-importdata.PNG "Ssas-Bidi-7-Importdaten")  
   
 6.  Importieren Sie die Daten.  
   
@@ -151,7 +149,7 @@ Neu in SQL Server 2016 ist eine integrierte Methode zum Aktivieren *bidirektiona
   
  Klicken Sie alternativ auf **Tabelle** > **Beziehungen verwalten** , um die gleichen Informationen in einem Tabellenlayout anzeigen.  
   
- ![ssas-bidi-3-defaultrelationships](../../analysis-services/tabular-models/media/ssas-bidi-3-defaultrelationships.PNG "ssas-bidi-3-defaultrelationships")  
+ ![SSAS-Bidi-3-Defaultrelationships](../../analysis-services/tabular-models/media/ssas-bidi-3-defaultrelationships.PNG "Ssas-Bidi-3-Defaultrelationships")  
   
 ### <a name="create-measures"></a>Erstellen von Measures  
  Sie benötigen eine Aggregation zum Summieren von Umsatzbeträgen anhand verschiedener Facets von Dimensionsdaten. In **DimProduct** können Sie ein Measure erstellen, das Produkte zählt. Dieses können Sie anschließend in einer Analyse der Produktvermarktung nutzen, die zeigt, wie viele Produkte für ein bestimmtes Jahr, eine bestimmte Region oder einen Kundentyp am Umsatz beteiligt waren.  

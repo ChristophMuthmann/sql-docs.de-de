@@ -1,43 +1,23 @@
 ---
 title: Erteilen von benutzerdefiniertem Zugriff auf dimensiondaten (Analysis Services) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-f1_keywords:
-- sql13.asvs.roledesignerdialog.dimensiondata.f1
-helpviewer_keywords:
-- dimensions [Analysis Services], security
-- AllowedSet property
-- IsAllowed property
-- DeniedSet property
-- user access rights [Analysis Services], dimensions
-- custom dimension data access [Analysis Services]
-- permissions [Analysis Services], dimensions
-- DefaultMember property
-- VisualTotals property
-- ApplyDenied property
-ms.assetid: b028720d-3785-4381-9572-157d13ec4291
-caps.latest.revision: 40
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 95cd49cfac7e318e427a4944182bf21cb16f8c3b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: f6a10ec3bab74c2bd5c540b1816d77c2dcbd104c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="grant-custom-access-to-dimension-data-analysis-services"></a>Erteilen eines benutzerdefinierten Zugriffs auf Dimensiondaten (Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Nach Aktivierung des Lesezugriffs auf einen Cube, können Sie zusätzliche Berechtigungen festlegen, die explizit zulassen oder Verweigern des Zugriffs auf Dimensionselemente (einschließlich der enthaltenen Measures in der Measures-Dimension, die alle in einem Cube verwendeten Measures enthält). Wenn Sie beispielsweise mehrere Kategorien von Resellern haben, möchten Sie möglicherweise Berechtigungen festlegen, um Daten für einen bestimmten Unternehmenstyp auszuschließen. In der folgenden Abbildung ist die Vorher-und-Nachher-Auswirkung des Verweigerns des Zugriffs auf den Unternehmenstyp "Warehouse" in der Dimension "Reseller" dargestellt.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  Nach der Aktivierung des Lesezugriffs auf einen Cube können Sie zusätzliche Berechtigungen festlegen, die den Zugriff auf Dimensionselemente ausdrücklich zulassen oder verweigern (einschließlich der Measures, die in der Measuredimension enthalten sind, die alle in einem Cube verwendeten Measures enthält). Wenn Sie beispielsweise mehrere Kategorien von Resellern haben, möchten Sie möglicherweise Berechtigungen festlegen, um Daten für einen bestimmten Unternehmenstyp auszuschließen. In der folgenden Abbildung ist die Vorher-und-Nachher-Auswirkung des Verweigerns des Zugriffs auf den Unternehmenstyp "Warehouse" in der Dimension "Reseller" dargestellt.  
   
  ![PivotTables mit und ohne Dimensionselement](../../analysis-services/multidimensional-models/media/ssas-permsdimdenied.png "PivotTables mit und ohne Dimensionselement")  
   
@@ -50,7 +30,7 @@ ms.lasthandoff: 01/08/2018
 > [!NOTE]  
 >  Die folgenden Anweisungen setzen eine Clientverbindung voraus, die Abfragen in MDX ausgibt. Wenn der Client DAX verwendet, wie z.B. Power View in Power BI, ist die Dimensionssicherheit in den Abfrageergebnissen nicht ersichtlich. Weitere Informationen finden Sie unter [Grundlegendes zu Power View für mehrdimensionale Modelle](understanding-power-view-for-multidimensional-models.md) .
       
-## <a name="prerequisites"></a>Voraussetzungen  
+## <a name="prerequisites"></a>Erforderliche Komponenten  
  Nicht alle Measures oder Dimensionselemente können in benutzerdefinierten Zugriffsszenarien verwendet werden. Eine Verbindung schlägt fehl, wenn eine Rolle den Zugriff auf ein Standardmeasure oder -element oder auf Measures einschränkt, die Teil von Measureausdrücken sind.  
   
  **Prüfen Sie, ob Hindernisse für die Dimensionssicherheit vorhanden sind: Standardmeasures, Standardelemente und in Measureausdrücken verwendete Measures.**  
@@ -106,7 +86,7 @@ ms.lasthandoff: 01/08/2018
  Die Erstellung von AllowedSet wirkt sich wellenartig aus, wenn das Attribut Teil einer Hierarchie mit mehreren Ebenen ist. Nehmen wir beispielsweise an, eine Rolle gewährt den Zugriff auf den Staat Washington (gehen Sie von einem Szenario aus, in dem die Rolle Berechtigungen für die Vertriebsabteilung eines Unternehmens im Staat Washington gewährt). Für Personen, die eine Verbindung über diese Rolle herstellen, werden bei Anfragen, die Vorgänger (USA) oder Nachfolger (Seattle und Redmond) enthalten, nur Elemente in einer Kette angezeigt, die den Staat Washington enthält. Da andere Staaten ausdrücklich nicht zulässig sind, ist die Wirkung dieselbe, als wären sie verweigert.  
   
 > [!NOTE]  
->  Wenn Sie eine leere Gruppe ({}) von Attributelementen definieren, sind keine Elemente des Attributs für die Datenbankrolle sichtbar. Eine fehlende zulässige Gruppe wird nicht als leere Gruppe interpretiert.  
+>  Wenn Sie eine leere Menge definieren ({}) von Attributelementen, werden keine Elemente des Attributs für die Datenbankrolle sichtbar werden. Eine fehlende zulässige Gruppe wird nicht als leere Gruppe interpretiert.  
   
  **Verweigerte Elementgruppe**  
  Die Eigenschaft DeniedSet kann zu keinen Elementen, allen Elementen (Standard) oder einigen Attributelementen aufgelöst werden. Wenn die verweigerte Gruppe nur eine bestimmte Gruppe von Attributelementen enthält, wird der Datenbankrolle der Zugriff nur auf diese bestimmten Elemente sowie auf Nachfolger verweigert, wenn sich das Attribut in einer Hierarchie mit mehreren Ebenen befindet. Denken Sie an das Beispiel der Vertriebsabteilung im Staat Washington. Wenn Washington in DeniedSet platziert wird, werden den Personen, die eine Verbindung über diese Rolle herstellen, alle Staaten außer Washington und seinen Nachfolgerattributen angezeigt.  
@@ -136,8 +116,8 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="see-also"></a>Siehe auch  
  [Erteilen von Cube- oder Modellberechtigungen &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md)   
- [Erteilen von benutzerdefiniertem Zugriff auf die Zelle von Daten &#40; Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md)   
- [Erteilen von Berechtigungen für Datamining-Strukturen und Modelle &#40; Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
- [Erteilen von Berechtigungen für ein Datenquellenobjekt &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-permissions-on-a-data-source-object-analysis-services.md)  
+ [Erteilen von benutzerdefiniertem Zugriff auf Zellendaten &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md)   
+ [Erteilen von Berechtigungen für Datamining-Strukturen und Modelle &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
+ [Erteilen von Berechtigungen für ein Datenquellenobjekt & #40; Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-permissions-on-a-data-source-object-analysis-services.md)  
   
   

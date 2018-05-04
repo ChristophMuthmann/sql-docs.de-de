@@ -1,11 +1,9 @@
 ---
 title: Befehl Objektparameter | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -19,12 +17,11 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d55af0ad3553a9129ff9e54308b68b14a622c154
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: fa60d076d6c4a3d4eea2092db92c3006d4fd0905
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="command-object-parameters"></a>Befehlsobjekt-Parameter
 Im vorherigen Thema erläutert [erstellen und Ausführen einer einfachen Befehl](../../../ado/guide/data/creating-and-executing-a-simple-command.md). Verwenden Sie eine weitere interessante für die [Befehl](../../../ado/reference/ado-api/command-object-ado.md) Objekt wird im nächsten Beispiel, in dem der SQL-Befehl parametrisiert wurde angezeigt. Diese Änderung ermöglicht den Befehl ein, und übergeben einen anderen Wert für den Parameter jedes Mal erneut verwenden. Da die [vorbereitet Eigenschaft](../../../ado/reference/ado-api/prepared-property-ado.md) Eigenschaft auf die **Befehl** -Objekts festgelegt wird, um **"true"**, ADO wird der Anbieter gezwungen, kompilieren Sie den Befehl, der im angegebenen [ CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) vor der ersten Ausführung. Es wird auch den kompilierte Befehl im Arbeitsspeicher beibehalten. Dies verlangsamt die Ausführung des Befehls etwas er, aufgrund des Mehraufwands ausgeführt wird für vorbereiten, jedoch führt zu einer Leistungssteigerung jedes Mal, wenn der Befehl, das anschließend aufgerufen wird zum ersten Mal. Aus diesem Grund sollten Befehle darauf vorbereitet sein, nur dann, wenn sie mehr als einmal verwendet werden sollen.  

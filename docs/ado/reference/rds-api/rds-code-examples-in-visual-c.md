@@ -1,7 +1,6 @@
 ---
 title: RDS-Codebeispiele in Visual C++ | Microsoft Docs
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,12 +20,11 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 8d6105f873d19af36fc5e60d1ca35d909bf5bead
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: bfb9b2699b70f2459aac022266b0e437a1291ce4
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="rds-code-examples-in-visual-c"></a>RDS-Codebeispiele in Visual C++
 Verwenden Sie die folgenden Codebeispielen, wie Sie RDS-Eigenschaften verwenden, wenn in Microsoft Visual C++ geschrieben.  
