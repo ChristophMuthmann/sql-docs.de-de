@@ -3,15 +3,12 @@ title: Vertikale Anwendungen | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - interoperability [ODBC], vertical applications
 - vertical applications [ODBC]
@@ -21,12 +18,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c53a7541757bb1f9dc6c9c21cf2fd56461ffa1c7
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: f71f960043a843c2aad5f7e3a7eb5cc997b0a6ed
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="vertical-applications"></a>Vertikale Anwendungen
 Vertikale Anwendungen führen in der Regel eine klar definierte Aufgabe für eine einzelnes DBMS. Beispielsweise wird in eine Anwendung die Bestellungen in einem Unternehmen nachverfolgt. Was diese Anwendungstypen Gemeinsamkeit aufweisen, darin, dass das Datenbankschema in der Regel vom Anwendungsentwickler entwickelt wurde und die Anwendung mit einer Reihe von verschiedenen DBMS funktioniert, zwar möglicherweise generische Vergleich mit einer einzelnen DBMS für einen einzelnen Kunden funktioniert.  

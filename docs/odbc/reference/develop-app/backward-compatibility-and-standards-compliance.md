@@ -3,15 +3,12 @@ title: Abwärtskompatibilität und zur Einhaltung von Standards | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - backward compatibility [ODBC], standards compliance
 - compatibility [ODBC], standards compliance
@@ -21,15 +18,14 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 796491fa284113d350cd7f0233ce95a4f3ceb37a
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 88fc4b4461c4b91ea4135976800e0dba7b792bbd
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="backward-compatibility-and-standards-compliance"></a>Abwärtskompatibilität und zur Einhaltung von Standards
-Abwärtskompatibilität ist die Fähigkeit eines neuere ODBC-Komponenten, die mit alten ODBC-Komponenten funktionieren. Den folgenden Abschnitten wird erläutert, wie diese Komponenten durch die Änderungen in ODBC 3. betroffen sind*.x*. Die in erster Linie in ihnen enthaltenen Informationen behandelt das Schreiben von einer ODBC 3.*.x* Anwendung und wie rückwärts Kompatibilitätsprobleme vom ODBC-Treiber verarbeitet werden. Bestimmte Richtlinien dazu, wie Abwärtskompatibilität Probleme betreffen das Schreiben von einer ODBC 3.*.x* -Treiber verwenden, finden Sie unter [Anhang G: Treiber Richtlinien für die Abwärtskompatibilität](../../../odbc/reference/appendixes/appendix-g-driver-guidelines-for-backward-compatibility.md).  
+Abwärtskompatibilität ist die Fähigkeit eines neuere ODBC-Komponenten, die mit alten ODBC-Komponenten funktionieren. Den folgenden Abschnitten wird erläutert, wie diese Komponenten durch die Änderungen in ODBC 3. betroffen sind *.x*. Die in erster Linie in ihnen enthaltenen Informationen behandelt das Schreiben von einer ODBC 3.*.x* Anwendung und wie rückwärts Kompatibilitätsprobleme vom ODBC-Treiber verarbeitet werden. Bestimmte Richtlinien dazu, wie Abwärtskompatibilität Probleme betreffen das Schreiben von einer ODBC 3.*.x* -Treiber verwenden, finden Sie unter [Anhang G: Treiber Richtlinien für die Abwärtskompatibilität](../../../odbc/reference/appendixes/appendix-g-driver-guidelines-for-backward-compatibility.md).  
   
  Dieser Abschnitt enthält die folgenden Themen.  
   

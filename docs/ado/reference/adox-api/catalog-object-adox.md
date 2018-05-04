@@ -1,11 +1,9 @@
 ---
 title: Catalog-Objekt (ADOX) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -22,12 +20,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ca653196f3f56508351d376ba48b4e7f737439b7
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: b30a6725a58c96fc414f9ac4c15cc86fc9599329
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="catalog-object-adox"></a>Katalogobjekt (ADOX)
 Enthält Auflistungen ([Tabellen](../../../ado/reference/adox-api/tables-collection-adox.md), [Ansichten](../../../ado/reference/adox-api/views-collection-adox.md), [Benutzer](../../../ado/reference/adox-api/users-collection-adox.md), [Gruppen](../../../ado/reference/adox-api/groups-collection-adox.md), und [Prozeduren](../../../ado/reference/adox-api/procedures-collection-adox.md)), Beschreiben Sie den Katalog Schema mit einer Datenquelle.  

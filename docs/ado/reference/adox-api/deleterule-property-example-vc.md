@@ -1,11 +1,9 @@
 ---
 title: DeleteRule-Eigenschaft (VC++-Beispiel) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,12 +19,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: db13f8a97921fe725e7f7771c5b4664b1f6bde88
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: f42d9f926498e09b5dce0e4e4a0dcf2a4d4ed5d5
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="deleterule-property-example-vc"></a>DeleteRule-Eigenschaft (VC++-Beispiel)
 Dieses Beispiel zeigt die [DeleteRule](../../../ado/reference/adox-api/deleterule-property-adox.md) Eigenschaft eine [Schlüssel](../../../ado/reference/adox-api/key-object-adox.md) Objekt. Der Code Fügt eine neue [Tabelle](../../../ado/reference/adox-api/table-object-adox.md) und definiert dann einen neuen Primärschlüssel festlegen **DeleteRule** auf **AdRICascade**.  

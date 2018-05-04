@@ -2,26 +2,22 @@
 title: Installieren und konfigurieren Sie die Beispieldatenbank "WideWorldImporters"-SQL | Microsoft Docs
 ms.prod: sql
 ms.prod_service: sql
-ms.service: ''
-ms.component: samples
-ms.technology:
-- samples
+ms.technology: samples
 ms.custom: ''
 ms.date: 04/04/2018
 ms.reviewer: ''
 ms.suite: sql
 ms.tgt_pltfrm: ''
-ms.topic: article
-author: BarbKess
-ms.author: barbkess
+ms.topic: conceptual
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 robots: noindex,nofollow
-ms.workload: On Demand
-ms.openlocfilehash: 04fe03ecffa717de838642006764c9b82f2341d3
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
-ms.translationtype: MT
+ms.openlocfilehash: 970a645fb3dbcf45c2da2f59d894893c8a3b1a39
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="installation-and-configuration"></a>Installation und Konfiguration
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

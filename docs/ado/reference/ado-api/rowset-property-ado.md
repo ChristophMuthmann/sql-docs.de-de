@@ -1,11 +1,9 @@
 ---
 title: Rowset-Eigenschaft (ADO) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -26,12 +24,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 60931973564e129fdc97a7d579302f2106ca4157
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: c9e5310f52345537b5062e8bb497589ceb61da9e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="rowset-property-ado"></a>Rowset-Eigenschaft (ADO)
 Ruft ab oder legt einen OLE DB- **Rowset** Objekt vom bzw. auf eine **ADORecordsetConstruction** Objekt. Bei Verwendung von Put_Rowset wird das Rowset in eine ADO umgewandelt **Recordset** Objekt.  

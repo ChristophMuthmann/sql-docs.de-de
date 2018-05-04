@@ -1,16 +1,15 @@
 ---
-title: "Fehlende Werte (Analysis Services – Datamining) | Microsoft Docs"
-ms.custom: 
+title: Fehlende Werte (Analysis Services – Datamining) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - attributes [data mining]
 - MISSING_VALUE_SUBSTITUTION
@@ -19,20 +18,19 @@ helpviewer_keywords:
 - null values [Analysis Services]
 - coding [Data Mining]
 ms.assetid: 2b34abdc-7ed4-4ec1-8780-052a704d6dbe
-caps.latest.revision: 
+caps.latest.revision: 17
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 78f57e86acdbcf9292e462854c97ebf4c91f79b1
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 9703fb1b4f491f01a698582af7190974cc7afe33
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="missing-values-analysis-services---data-mining"></a>Fehlende Werte (Analysis Services - Data Mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Die Behandlung  *fehlender Werte* ist ein wichtiger Teil der effektiven Modellierung. In diesem Abschnitt wird erläutert, was fehlende Werte sind, und es werden die Funktionen beschrieben, die in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] für die Arbeit mit fehlenden Werten bereitgestellt werden, wenn Sie Data Mining-Strukturen und Miningmodelle erstellen.  
+  Die Behandlung  *fehlender Werte* ist ein wichtiger Teil der effektiven Modellierung. In diesem Abschnitt wird erläutert, was fehlende Werte sind, und es werden die Funktionen beschrieben, die in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] für die Arbeit mit fehlenden Werten bereitgestellt werden, wenn Sie Data Mining-Strukturen und Miningmodelle erstellen.  
   
 ## <a name="definition-of-missing-values-in-data-mining"></a>Definition fehlender Werte in Data Mining  
  Ein fehlender Wert kann Verschiedenes bedeuten. Vielleicht war das Feld nicht zutreffend, oder das Ereignis trat nicht ein, oder die Daten waren nicht verfügbar. Möglicherweise kannte die Person, die die Daten eingegeben hat, den richtigen Wert nicht, oder sie hat nicht darauf geachtet, dass alle Felder ausgefüllt sind.  
@@ -115,13 +113,13 @@ Der Decision Trees-Algorithmus bietet eine zusätzliche Anpassung des Algorithmu
   
 |Aufgaben|Links|  
 |-----------|-----------|  
-|Hinzufügen von Flags zu einzelnen Modellspalten, um die Behandlung fehlender Werte zu steuern|[Zeigen Sie an oder ändern Sie die Modellierung von Ablaufverfolgungsflags &#40; Datamining &#41;](../../analysis-services/data-mining/view-or-change-modeling-flags-data-mining.md)|  
+|Hinzufügen von Flags zu einzelnen Modellspalten, um die Behandlung fehlender Werte zu steuern|[Zeigen Sie an oder ändern Sie die Modellierung von Ablaufverfolgungsflags & #40; Datamining & #41;](../../analysis-services/data-mining/view-or-change-modeling-flags-data-mining.md)|  
 |Festlegen von Eigenschaften für ein Miningmodell, um die Behandlung fehlender Werte zu steuern|[Ändern der Eigenschaften eines Miningmodells](../../analysis-services/data-mining/change-the-properties-of-a-mining-model.md)|  
-|Informationen zum Angeben der Modellierungsflags in DMX|[Modellierungsflags &#40; DMX &#41;](../../dmx/modeling-flags-dmx.md)|  
+|Informationen zum Angeben der Modellierungsflags in DMX|[Modellierungsflags & #40; DMX & #41;](../../dmx/modeling-flags-dmx.md)|  
 |Ändern der Methode, die von der Miningstruktur zur Behandlung fehlender Werte verwendet wird|[Ändern der Eigenschaften einer Miningstruktur](../../analysis-services/data-mining/change-the-properties-of-a-mining-structure.md)|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Miningmodellinhalt &#40; Analysis Services – Datamining &#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
- [Modellieren von Ablaufverfolgungsflags &#40; Datamining &#41;](../../analysis-services/data-mining/modeling-flags-data-mining.md)  
+ [Miningmodellinhalt & #40; Analysis Services – Datamining & #41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
+ [Modellieren von Ablaufverfolgungsflags & #40; Datamining & #41;](../../analysis-services/data-mining/modeling-flags-data-mining.md)  
   
   

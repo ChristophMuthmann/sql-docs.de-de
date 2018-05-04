@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 06/15/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: ''
 ms.component: multidimensional-tabular
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -16,9 +15,9 @@ caps.latest.revision: 49
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.openlocfilehash: 4f7e75c9a5f31d37b32bade54dd9bd108de21e9a
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 630cd3fe8ee4bf06e8e1f13c3bfab129d1c98cc5
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
 ---

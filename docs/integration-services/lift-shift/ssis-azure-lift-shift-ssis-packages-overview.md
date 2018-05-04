@@ -1,8 +1,8 @@
 ---
 title: Migration von SQL Server Integration Services-Workloads in die Cloud per Lift & Shift | Microsoft-Dokumentation
-ms.date: 10/31/2017
+ms.date: 04/13/2018
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
 ms.service: ''
 ms.component: lift-shift
@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 82a6ab09504edd0a5df17a05de62ae5fd44a1c18
-ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
+ms.openlocfilehash: 10870216c2abc826a72bb16715701a794e651610
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="lift-and-shift-sql-server-integration-services-workloads-to-the-cloud"></a>Migration von SQL Server Integration Services-Workloads in die Cloud per Lift & Shift
 Sie können Ihre SQL Server Integration Services-Pakete und -Workloads (SSIS) nun in die Azure-Cloud verschieben.
@@ -85,7 +85,7 @@ Informationen dazu, wie Sie eine Verbindung zu Dateien und Dateifreigaben herste
 
 Wenn Sie eine Instanz von SQL-Datenbank bereitstellen, um SSISDB zu hosten, werden auch das Azure Feature Pack für SSIS und die weitervertreibbare Komponente von Access installiert. Diese Komponenten stellen zusätzlich zu den Datenquellen, die von den integrierten Komponenten unterstützt werden, die Konnektivität zu **Excel- und Access-Dateien** und zu verschiedenen **Azure**-Datenquellen bereit.
 
-Sie können derzeit keine **Drittanbieterkomponenten** für SSIS (einschließlich der Drittanbieterkomponenten von Microsoft, z.B. Oracle- und Teradata-Komponenten von Attunity- und SAP BI-Komponenten) installieren oder verwenden.
+Sie können ebenfalls zusätzliche Komponenten installieren. Weitere Informationen finden Sie unter [Custom setup for the Azure-SSIS integration runtime (Benutzerdefiniertes Setup von Azure SSIS Integration Runtime)](/azure/articles/data-factory/how-to-configure-azure-ssis-ir-custom-setup.md).
 
 ## <a name="deploy-and-run-packages"></a>Bereitstellen und Ausführen von Paketen
 Sie müssen das **Projektbereitstellungsmodell** verwenden und nicht das Paketbereitstellungsmodell, wenn Sie Projekte für SSISDB in Azure bereitstellen.
